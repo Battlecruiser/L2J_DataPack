@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="1217" levels="33" name="Greater Heal"> 
+
+  <table name="#mpConsume"> 58 60 62 64 65 68 72 74 77 80 80 83 87 89 90 93 95 97 98 98 100 102 104 105 108 109 112 113 114 115 117 119 120</table> 
+  <table name="#power"> 371.0 384.0 398.0 426.0 441.0 455.0 484.0 499.0 514.0 544.0 559.0 574.0 603.0 618.0 633.0 647.0 662.0 676.0 690.0 704.0 718.0 731.0 745.0 758.0 770.0 783.0 795.0 806.0 817.0 828.0 839.0 849.0 858.0 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="5000"/> 
+  <set name="reuseDelay" val="10000"/> 
+  <set name="skillTime" val="5000"/> 
+  <set name="skillType" val="HEAL"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="600"/> 
+  <for> 
+
+  </for> 
+
+</skill>

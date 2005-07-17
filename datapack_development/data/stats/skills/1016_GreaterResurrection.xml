@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="1016" levels="5" name="Greater Resurrection">
+
+  <table name="#mpConsume"> 59 88 122 152 180 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_CORPSE_PLAYER"/>
+  <set name="hitTime" val="6000"/>
+  <set name="reuseDelay" val="120000"/>
+  <set name="skillTime" val="6000"/>
+  <set name="skillType" val="RESURRECT"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <for>
+
+  </for>
+
+</skill>

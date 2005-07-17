@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="4039" levels="7" name="Absorb MP">
+
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
+  <table name="#power"> 34.0 57.0 78.0 105.0 134.0 165.0 194.0 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="MANADAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <for>
+
+  </for>
+
+</skill>

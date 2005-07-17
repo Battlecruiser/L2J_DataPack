@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="1176" levels="15" name="Tempest"> 
+
+  <table name="#mpConsume"> 62 65 68 70 74 77 80 83 87 89 93 95 98 100 103 </table> 
+  <table name="#power"> 31.0 33.0 34.0 36.0 38.0 39.0 41.0 43.0 45.0 46.0 48.0 
+   50.0 51.0 53.0 54.0 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_AREA"/> 
+  <set name="hitTime" val="5000"/> 
+  <set name="element" val="1"/> 
+  <set name="reuseDelay" val="15000"/> 
+  <set name="skillTime" val="5000"/> 
+  <set name="skillType" val="MDAM"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="500"/> 
+  <for> 
+
+  </for> 
+
+</skill>

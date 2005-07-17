@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="4067" levels="7" name="NPC Blow">
+
+  <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
+  <table name="#power"> 137.0 314.0 656.0 1249.0 2164.0 3408.0 4878.0 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1000"/>
+  <set name="condition" val="16"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <for>
+
+  </for>
+
+</skill>

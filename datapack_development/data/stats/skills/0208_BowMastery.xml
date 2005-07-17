@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="208" levels="52" name="Bow Mastery">
+
+  <table name="#pAtk">
+    10.3  11.4  27.6  32.8  35.6  38.6  45.2  48.9  52.7  61.1
+    65.6  70.4  80.9  86.5  92.4 105.1 111.9 178.8 189.9 201.4
+   213.5 226.0 239.1 252.7 266.7 281.3 296.4 311.9 328.0 344.5
+   361.6 379.1 397.0 415.4 434.3 453.5 473.6 494.8 517.1 540.5
+   565.0 590.6 617.3 644.1 673.0 703.2 734.5 766.9 800.4 835.0
+   870.7 907.5
+  </table>
+
+  <set name="weaponsAllowed" val="32"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+    <add order="0x40" stat="pAtk" val="#pAtk">
+      <using kind="Bow"/>
+    </add>
+  </for>
+
+</skill>

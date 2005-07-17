@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="4103" levels="2" name="NPC Ultimate Evasion">
+
+  <table name="#mpConsume"> 28 52 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="30000"/>
+  <set name="castRange" val="-1"/>
+<!-- Done by dc -->
+
+<table name="#Tab-rEvas"> 20 25 </table>
+<for>
+  <effect name="Buff" time="30" count="1" val="0">
+    <add  order='0x40' stat='rEvas' val="#Tab-rEvas"/>
+ </effect>
+</for>
+
+</skill>

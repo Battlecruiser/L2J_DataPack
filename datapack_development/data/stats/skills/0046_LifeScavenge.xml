@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="46" levels="15" name="Life Scavenge">
+
+  <table name="#mpConsume"> 35 38 42 44 48 50 54 55 57 58 60 61 63 64 66 </table>
+  <table name="#HPget"> 105 113 122 131 140 150 159 169 180 190 201 211 222 232 243 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_CORPSE_MOB"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="DRAIN"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+
+  <!-- Drain-specific: absorb from a mob's corpse --> 
+  <set name="absorbPart" val="0." /> <!-- no damage, it's dead --> 
+  <set name="absorbAbs" val="#HPget" /> <!-- absorbs absolute value -->
+  <for>
+
+  </for>
+
+</skill>

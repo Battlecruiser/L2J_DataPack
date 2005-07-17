@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="190" levels="37" name="Fatal Strike"> 
+<table name="#mpConsume"> 
+ 40 41 43 43 44 45 47 48 49 51 
+ 52 54 55 55 56 58 59 61 62 63 
+ 65 66 68 68 69 70 72 73 74 75 
+ 77 78 79 80 81 82 83 
+</table> 
+<table name="#power"> 
+  369.0  392.0  417.0  442.0  469.0  496.0  525.0  555.0  586.0  618.0 
+  651.0  686.0  722.0  758.0  796.0  835.0  875.0  916.0  959.0 1002.0 
+ 1046.0 1091.0 1136.0 1183.0 1230.0 1278.0 1327.0 1376.0 1425.0 1475.0 
+ 1525.0 1576.0 1626.0 1677.0 1727.0 1777.0 1827.0 
+</table> 
+<set name="weaponsAllowed" val="12"/> 
+<set name="mpConsume" val="#mpConsume"/> 
+<set name="power" val="#power"/> 
+<set name="target" val="TARGET_ONE"/> 
+<set name="hitTime" val="1000"/> 
+<set name="overHit" val="true"/> 
+<set name="reuseDelay" val="13000"/> 
+<set name="skillTime" val="1080"/> 
+<set name="skillType" val="PDAM"/> 
+<set name="operateType" val="OP_ACTIVE"/> 
+<set name="castRange" val="50"/> 
+</skill>

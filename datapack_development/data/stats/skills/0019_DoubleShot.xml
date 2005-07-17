@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<skill id="19" levels="37" name="Double Shot"> 
+<table name="#mpConsume">
+  80  82  85  85  87  90 
+  93  95  98 101 104 107 
+ 109 110 112 115 118 121 
+ 124 126 129 132 135 135 
+ 138 140 143 145 148 150 
+ 153 155 157 160 162 164 
+ 166
+</table> 
+<table name="#power">
+  984.0 1046.0 1110.0 1178.0 1249.0 1322.0 
+ 1399.0 1479.0 1562.0 1647.0 1736.0 1828.0 
+ 1923.0 2021.0 2123.0 2227.0 2333.0 2443.0 
+ 2555.0 2670.0 2788.0 2908.0 3030.0 3154.0 
+ 3280.0 3408.0 3537.0 3668.0 3800.0 3933.0 
+ 4067.0 4201.0 4336.0 4470.0 4604.0 4738.0 
+ 4870.0
+</table> 
+<set name="weaponsAllowed" val="32" /> 
+<set name="mpConsume" val="#mpConsume" /> 
+<set name="power" val="#power" /> 
+<set name="target" val="TARGET_ONE" /> 
+<set name="hitTime" val="3000" /> 
+<set name="overHit" val="true" /> 
+<set name="reuseDelay" val="25000" /> 
+<set name="skillTime" val="3000" /> 
+<set name="skillType" val="PDAM" /> 
+<set name="operateType" val="OP_ACTIVE" /> 
+<set name="castRange" val="700" /> 
+</skill>

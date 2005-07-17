@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?> 
+<item id='358' name="blue_wolve's_breastplate"> 
+  <for> 
+    <add val='166' order='0x10' stat='pDef' /> 
+    <add val='7' order='0x40' stat='runSpd'> 
+    <and> 
+     <using slotitem="2380;11"/> 
+     <using slotitem="2416;6"/>      
+     <using slotitem="5734;12"/> 
+     <using slotitem="5718;9"/> 
+    </and> 
+    </add> 
+    <mul val='1.05' order='0x40' stat='regHp'> 
+    <and> 
+     <using slotitem="2380;11"/> 
+     <using slotitem="2416;6"/>      
+     <using slotitem="5734;12"/> 
+     <using slotitem="5718;9"/> 
+    </and> 
+    </mul> 
+       <add val='3' order='0x10' stat='STR'> 
+    <and> 
+     <using slotitem="2380;11"/> 
+     <using slotitem="2416;6"/>      
+     <using slotitem="5734;12"/> 
+     <using slotitem="5718;9"/> 
+    </and> 
+    </add> 
+    <add val='-1' order='0x10' stat='CON'> 
+    <and> 
+     <using slotitem="2380;11"/> 
+     <using slotitem="2416;6"/>      
+     <using slotitem="5734;12"/> 
+     <using slotitem="5718;9"/> 
+    </and> 
+    </add> 
+        <add val='-2' order='0x10' stat='DEX'> 
+    <and> 
+     <using slotitem="2380;11"/> 
+     <using slotitem="2416;6"/>      
+     <using slotitem="5734;12"/> 
+     <using slotitem="5718;9"/> 
+    </and> 
+    </add> 
+  <enchant val='0' order='0x0C' stat='pDef' /> 
+</for> 
+</item>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="4106" levels="1" name="Antharas Jump">
+
+  <set name="power" val="11000.0"/>
+  <set name="target" val="TARGET_AURA_CLOSE"/>
+  <set name="hitTime" val="6000"/>
+  <set name="overHit" val="true"/>
+  <set name="skillTime" val="6000"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="9000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+	<effect count="1" name="Stun" time="9" val="0"/>
+  </for>
+
+</skill>

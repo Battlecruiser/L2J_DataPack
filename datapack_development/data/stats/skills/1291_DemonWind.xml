@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="1291" levels="1" name="Demon Wind"> 
+
+<!--- 
+  Automatically generated from C3 client files. 
+  Need to be checked/fixed. 
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability. 
+  Descriptions: 
+  1: A devastating double-wind attack. Temporarily reduces cursed enemy's HP regeneration. Power 350. 
+  created 2005-05-29 23:34:29 
+--> 
+
+  <table name="#charges"> 1</table> 
+
+
+  <set name="mpConsume" val="250"/> 
+  <set name="power" val="350.0"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="element" val="1"/> 
+  <set name="skillTime" val="7000"/> 
+  <set name="skillType" val="MDAM"/> 
+  <set name="reuseDelay" val="15000"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="900"/> 
+
+  <!-- charge values --> 
+  <set name="num_charges" val="1"/> 
+  <set name="charge_skill_id" val="1287"/> <!-- Seed of Wind is the charger --> 
+  <for> 
+
+  </for> 
+
+</skill>

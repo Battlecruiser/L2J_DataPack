@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="1168" levels="5" name="Curse:Poison">
+
+<table name="#dmg"> 8 18 24 31 38 </table>
+
+  <table name="#mpConsume"> 10 20 27 39 48 </table>
+  <table name="#power"> 1.0 3.0 4.0 5.0 6.0 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="save" val="3"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="12000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="POISON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="30000"/>
+  <set name="castRange" val="600"/>
+  <for>
+    <effect count="6" name="DamOverTime" time="5" val="#dmg"/>
+  </for>
+
+</skill>

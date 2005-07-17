@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="4077" levels="7" name="NPC Aura Burn">
+
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
+  <table name="#power"> 14.0 21.0 30.0 42.0 55.0 68.0 82.0 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="150"/>
+  <for>
+
+  </for>
+
+</skill>

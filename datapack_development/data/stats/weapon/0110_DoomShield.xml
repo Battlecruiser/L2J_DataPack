@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<item id='110' name="doom_shield">
+
+  <for>
+
+    <add val='-8' order='0x10' stat='rEvas' />
+    <set val='230' order='0x08' stat='sDef' />
+    <set val='20' order='0x08' stat='rShld' />
+    <mul val='1.24' order='0x40' stat='sDef'>
+     <and>
+      <using slotitem="2381;10"/>
+      <using slotitem="2417;6"/>
+      <using slotitem="601;12"/>
+      <using slotitem="2475;9"/>
+     </and>
+    </mul>
+
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+
+</item>

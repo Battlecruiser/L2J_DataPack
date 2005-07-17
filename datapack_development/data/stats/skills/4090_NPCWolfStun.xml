@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="4090" levels="1" name="NPC Wolf Stun">
+
+  <set name="mpConsume" val="14"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="600000"/>
+  <set name="castRange" val="-1"/>
+
+ <!-- Done by dc -->
+ <table name="#Tab-runSpd"> 1.4 </table>
+ <for>
+  <effect name="Buff" time="600" count="1" val="0">
+    <mul  order='0x50' stat='runSpd' val="#Tab-runSpd"/>
+  </effect>
+</for>
+</skill>

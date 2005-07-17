@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="234" levels="41" name="Robe Mastery">
+
+  <table name="#pDef">
+     1.7   2.7   4.3   5.4   7.2   8.5  10.6  12.1  14.5  15.3
+    16.2  17.9  18.8  19.8  21.7  22.7  23.7  25.8  26.8  27.9
+    30.1  31.2  32.4  33.6  35.0  36.5  38.1  39.9  41.9  44.1
+    46.4  48.8  51.3  53.9  56.6  59.4  62.3  65.3  68.4  71.6
+    74.9
+  </table>
+
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+    <add order="0x40" stat="pDef" val="#pDef">
+      <and>
+        <using kind="Magic"/>
+        <not>
+<using kind="Light,Heavy"/>
+</not>
+      </and>
+    </add>
+  </for>
+
+</skill>

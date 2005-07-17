@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="1108" levels="2" name="Seal of Flame">
+
+<table name="#dmg"> 77 94 </table>
+
+  <table name="#mpConsume"> 97 115 </table>
+  <table name="#power"> 5.0 6.0 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="save" val="2"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AURA_CLOSE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="element" val="2"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="DOT"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="15000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+    <effect count="15" name="DamOverTime" time="1" val="#dmg"/>
+  </for>
+
+</skill>

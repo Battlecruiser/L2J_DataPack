@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="1171" levels="19" name="Blazing Circle"> 
+
+  <table name="#mpConsume"> 
+     50 53 55 59 62 65 68  70  74 77 
+   80 83 87 89 93 95 98 100 103 
+  </table> 
+  <table name="#power"> 
+     29.0 30.0 32.0 34.0 36.0 38.0 40.0 42.0 44.0 46.0 
+   48.0 50.0 52.0 55.0 57.0 58.0 60.0 62.0 64.0 
+  </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_AURA_CLOSE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="element" val="2"/> 
+  <set name="reuseDelay" val="15000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="MDAM"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+
+  </for> 
+
+</skill>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="113" levels="2" name="Long Shot">
+
+  <table name="#dist"> 200 400 </table>
+
+  <set name="weaponsAllowed" val="32"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+    <add order="0x10" stat="pAtkRange" val="#dist">
+      <using kind="Bow"/>
+    </add>
+  </for>
+
+</skill>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="315" levels="16" name="Crush of Doom">
+
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Strong attack that consumes user's HP. Usable when a two-handed weapon is equipped Power 2120. Over-hit is possible.
+  16: Strong attack that consumes user's HP. Usable when a two-handed weapon is equipped Power 3551. Over-hit is possible.
+  created 2005-05-29 23:34:27
+-->
+
+  <table name="#power"> 2120.0 2209.0 2300.0 2392.0 2485.0 2580.0 2675.0 2771.0 2868.0 2966.0 3064.0 3162.0 3260.0 3357.0 3455.0 3551.0 </table>
+  <set name="weaponsAllowed" val="2048"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="100000"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+
+  <for>
+
+  </for>
+
+</skill>

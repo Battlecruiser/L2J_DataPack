@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?> 
+<item id='2398' name="blue_wolve's_tunic"> 
+
+  <for> 
+
+    <add val='83' order='0x10' stat='pDef' /> 
+    <add val='377' order='0x10' stat='maxMp' /> 
+    <add val='206' order='0x40' stat='maxMp'> 
+     <and> 
+      <using slotitem="2403;11"/>          
+      <using slotitem="2416;6"/>      
+      <using slotitem="5736;12"/> 
+      <using slotitem="5720;9"/> 
+     </and> 
+    </add> 
+        <add val='3' order='0x10' stat='WIT'> 
+    <and> 
+     <using slotitem="2403;11"/>          
+     <using slotitem="2416;6"/>      
+     <using slotitem="5736;12"/> 
+     <using slotitem="5720;9"/> 
+    </and> 
+    </add> 
+            <add val='-2' order='0x10' stat='INT'> 
+    <and> 
+     <using slotitem="2403;11"/>          
+     <using slotitem="2416;6"/>      
+     <using slotitem="5736;12"/> 
+     <using slotitem="5720;9"/> 
+    </and> 
+    </add> 
+            <add val='-1' order='0x10' stat='MEN'> 
+    <and> 
+     <using slotitem="2403;11"/>          
+     <using slotitem="2416;6"/>      
+     <using slotitem="5736;12"/> 
+     <using slotitem="5720;9"/> 
+    </and> 
+    </add> 
+
+    <mul val='1.05' order='0x40' stat='regMp'> 
+     <and> 
+      <using slotitem="2403;11"/>              
+      <using slotitem="2416;6"/>      
+      <using slotitem="5736;12"/> 
+      <using slotitem="5720;9"/> 
+     </and> 
+    </mul> 
+  <enchant val='0' order='0x0C' stat='pDef' /> 
+</for> 
+
+</item>

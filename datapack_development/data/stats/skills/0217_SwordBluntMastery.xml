@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="217" levels="45" name="Sword Blunt Mastery">
+
+  <table name="#pAtk">
+     1.5   3.1   4.1   5.2   6.5   7.9   9.4  11.1  13.0  14.0
+    15.1  16.2  17.3  18.5  19.8  21.1  22.4  23.8  25.3  26.8
+    28.3  29.9  31.6  33.3  35.0  36.8  38.6  40.5  42.4  44.4
+    46.5  51.0  53.4  58.5  61.2  66.9  69.9  76.2  79.5  86.4
+    90.0  97.5 101.4 109.5 113.7
+  </table>
+
+  <set name="weaponsAllowed" val="12"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+    <add order="0x40" stat="pAtk" val="#pAtk">
+      <using kind="Sword, Blunt"/>
+    </add>
+  </for>
+
+</skill>

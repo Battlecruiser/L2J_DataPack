@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="1181" levels="3" name="Flame Strike">
+
+  <table name="#mpConsume"> 29 34 40 </table>
+  <table name="#power"> 13.0 16.0 19.0 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="hitTime" val="4000"/>
+  <set name="element" val="2"/>
+  <set name="reuseDelay" val="15000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="500"/>
+  <for>
+
+  </for>
+
+</skill>

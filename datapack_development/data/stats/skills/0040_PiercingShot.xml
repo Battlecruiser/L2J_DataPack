@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="40" levels="3" name="Piercing Shot">
+
+  <table name="#mpConsume"> 98 112 129 </table>
+  <set name="weaponsAllowed" val="32"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="3000"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="skillTime" val="3000"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="700"/>
+  <for>
+
+  </for>
+
+</skill>

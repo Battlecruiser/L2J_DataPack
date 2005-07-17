@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="4165" levels="9" name="Icy Air">
+
+  <table name="#power"> 18 26 38 52 68 85 102 119 136 </table>
+  <set name="save" val="3"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="3000"/>
+  <set name="reuseDelay" val="120000"/>
+  <set name="skillTime" val="3000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="120000"/>
+  <set name="castRange" val="400"/>
+  <for>
+    <effect count="6" name="DamOverTime" time="5" val="18" abnormal="poison"/>
+  </for>
+
+</skill>

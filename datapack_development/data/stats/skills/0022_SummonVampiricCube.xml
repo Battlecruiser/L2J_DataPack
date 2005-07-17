@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="22" levels="7" name="Summon Vampiric Cube"> 
+
+  <table name="#mpConsume"> 38 44 50 55 60 64 67 </table> 
+  <table name="#itemConsumeCount"> 6 7 8 9 11 12 13 </table> 
+  
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="itemConsumeId" val="1458" /> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="hitTime" val="6000"/> 
+  <set name="reuseDelay" val="20000"/> 
+  <set name="skillTime" val="6000"/> 
+  <set name="skillType" val="SUMMON"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="-1"/> 
+  
+  <!-- Summon-specific --> 
+  <set name="npcId" val="2" /> 
+  <set name="expPenalty" val="0.0" /> 
+  <set name="isCubic" val="true" /> 
+
+  <for> 
+
+  </for> 
+
+</skill>

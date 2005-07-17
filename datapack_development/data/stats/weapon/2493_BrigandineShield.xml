@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<item id='2493' name="brigandine_shield">
+
+ <for>
+  <add val='-8' order='0x10' stat='rEvas' />
+  <set val='142' order='0x08' stat='sDef' />
+  <set val='20' order='0x08' stat='rShld' />
+  <add val='20' order='0x60' stat='maxHp'>
+   <and>
+	<using slotitem="2378;11"/>
+	<using slotitem="2411;6"/>
+	<using slotitem="352;10"/>
+   </and>
+  </add>
+ <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+
+</item>

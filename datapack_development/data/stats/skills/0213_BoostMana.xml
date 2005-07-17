@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="213" levels="5" name="Boost Mana">
+<!-- Done by Znabty -->
+
+  <table name="#mp"> 30 50 70 100 140 </table>
+
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+    <add stat='maxMp' order='0x40' val='#mp' />
+  </for>
+
+</skill>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="4088" levels="7" name="Bleeding">
+	<table name="#damage">2 3 5 6 8 9 10</table>
+  <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
+  <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="save" val="4"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="BLEED"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="120000"/>
+  <set name="castRange" val="50"/>
+  <for>
+	<effect count="24" name="DamOverTime" time="5" val="#damage"/>
+  </for>
+
+</skill>

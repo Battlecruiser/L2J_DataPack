@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="96" levels="4" name="Bleed">
+
+  <table name="#dmg"> 13 17 22 27 </table>
+
+  <table name="#mpConsume"> 32 41 67 81 </table>
+  <table name="#power"> 3.0 4.0 5.0 6.0 </table>
+  <set name="weaponsAllowed" val="16"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="save" val="4"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="13000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="BLEED"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="20000"/>
+  <set name="castRange" val="50"/>
+  <for>
+    <effect count="4" name="DamOverTime" time="5" val="#dmg"/>
+  </for>
+
+
+</skill>

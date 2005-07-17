@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="131" levels="3" name="Hawk Eye"> 
+
+  <table name="#mpConsume"> 18 23 28 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="hitTime" val="1000"/> 
+  <set name="reuseDelay" val="10000"/> 
+  <set name="skillTime" val="1000"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="300000"/> 
+  <set name="castRange" val="-1"/> 
+
+<!-- Done by dc --> 
+
+<table name="#Tab-accCombat"> 6 8 10 </table> 
+<table name="#Tab-pDef"> 0.9 0.9 0.9 </table> 
+
+
+<for> 
+  <effect name="Buff" time="300" count="1" val="0"> 
+    <add  order='0x40' stat='accCombat' val="#Tab-accCombat"/> 
+    <mul  order='0x50' stat='pDef' val="#Tab-pDef"/> 
+ </effect> 
+</for> 
+
+</skill>

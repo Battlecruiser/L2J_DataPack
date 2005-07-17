@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="1229" levels="9" name="Chant of Life">
+	<table name="#hot">12 15 18 23 27 31 35 39 43</table>
+  <table name="#mpConsume"> 59 72 88 103 122 134 152 164 180 </table>
+  <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="hitTime" val="7000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="7000"/>
+  <set name="skillType" val="HOT"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="15000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+	<effect count="3" name="HealOverTime" time="5" val="#hot"/>
+  </for>
+
+</skill>

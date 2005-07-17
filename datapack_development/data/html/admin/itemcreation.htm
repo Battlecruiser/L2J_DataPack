@@ -1,0 +1,35 @@
+<html>
+<body>
+<table width=260>
+<tr>
+<td width=40>
+<button value="Main" action="bypass -h admin_admin" width=40 height=15 back="sek.cbui94" fore="sek.cbui92">
+</td>
+<td width=180>
+<center>
+Item Creation Menu
+</center>
+</td>
+<td width=40>
+<button value="Back" action="bypass -h admin_admin" width=40 height=15 back="sek.cbui94" fore="sek.cbui92">
+</td>
+</tr>
+</table>
+<br><br>
+<table width=270>
+<tr><td>Fill the id number in item-id to create the item that</td></tr>
+<tr><td>you want, use amount if you need more then one.</td></tr>
+<tr><td><br></td></tr>
+<tr><td>Caution:</td></tr>
+<tr><td>Do not use amount with non-stackable items.</td></tr>
+<tr><td><br></td></tr>
+</table>
+<center>
+<table>
+<tr>
+<td>Item-id: <edit var="itemid" width=50></td><td>Amount: <edit var="itemnum" width=50></td><td>&nbsp;<button value="Create Item" action="bypass -h admin_create_item $itemid $itemnum" width=70 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+</tr>
+</table>
+</center>
+</body>
+</html>

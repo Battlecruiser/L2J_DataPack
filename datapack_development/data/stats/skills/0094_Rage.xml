@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="94" levels="2" name="Rage">
+  <table name="#mpConsume"> 9 20 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="180000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="60000"/>
+  <set name="castRange" val="-1"/>
+ 
+<!-- Done by dc -->
+
+<table name="#Tab-pAtk"> 1.45 1.55 </table>
+<table name="#Tab-pDef"> 1.2 1.2 </table>
+<table name="#Tab-rEvas"> 3 3 </table>
+
+
+<for>
+  <effect name="Buff" time="60" count="1" val="0">
+    <mul  order='0x50' stat='pAtk' val="#Tab-pAtk"/>
+    <div  order='0x50' stat='pDef' val="#Tab-pDef"/>
+    <sub  order='0x40' stat='rEvas' val="#Tab-rEvas"/>
+ </effect>
+</for>
+
+</skill>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="1277" levels="14" name="Summon Unicorn Merrow"> 
+
+<!--- 
+  Automatically generated from C3 client files. 
+  Need to be checked/fixed. 
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability. 
+  Descriptions: 
+  1: Summons Unicorn Merrow, a servitor. Requires 5 Crystals: D Grade. 30% of acquired Exp will be consumed. Afterwards, 1 additional crystal will be consumed at a regular interval. 
+  14: Summons Unicorn Merrow, a servitor. Requires 8 Crystals: D Grade. 30% of acquired Exp will be consumed. Afterwards, 6 additional crystals will be consumed at a regular interval. 
+  created 2005-05-29 23:34:29 
+--> 
+
+
+  <table name="#itemConsumeCount"> 
+       5  3  4  4 
+    5  6  6  6 
+    6  6  7  9 
+    7  8 
+  </table> 
+
+<!--- Need to be implemented the continuous crystal consumement --> 
+<table name="#continuousitemConsumeCount"> 
+1 2 2 3 3 3 4 4 4 5 5 5 6 6 
+</table> 
+
+
+  <table name="#mpConsume"> 70 78 87 94 103 107 110 115 119 123 127 130 133 137 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="itemConsumeId" val="1458"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="hitTime" val="6000"/> 
+  <set name="itemConsumeCount" val="#itemConsumeCount"/> 
+  <set name="reuseDelay" val="20000"/> 
+  <set name="skillTime" val="6000"/> 
+  <set name="skillType" val="SUMMON"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="-1"/> 
+
+ <table name="#npcIds"> 
+   12490 12491 12492 12493 12494 
+   12495 12496 12497 12498 12499 
+   12500 12501 12502 12530 
+  </table> --> 
+    
+  <set name="npcId" val="#npcIds" /> 
+  <set name="expPenalty" val="0.3" /> 
+  <set name="isCubic" val="false" /> 
+
+  <for> 
+
+  </for> 
+
+</skill>

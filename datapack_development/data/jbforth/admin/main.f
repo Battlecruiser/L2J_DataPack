@@ -1,0 +1,2 @@
+admin/Coords
+admin/Teleports

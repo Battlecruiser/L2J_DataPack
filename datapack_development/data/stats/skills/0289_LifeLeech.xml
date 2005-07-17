@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="289" levels="7" name="Life Leech">
+
+  <table name="#mpConsume"> 27 29 32 34 35 38 40 </table>
+  <table name="#power"> 26 29 31 33 36 39 41 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="3000"/>
+  <set name="reuseDelay" val="15000"/>
+  <set name="skillTime" val="3000"/>
+  <set name="skillType" val="DRAIN"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+
+  <!-- Drain-specific: absorb from a mob's corpse --> 
+  <set name="absorbPart" val="0." /> <!-- no damage, it's dead --> 
+  <set name="absorbAbs" val="#power" /> <!-- absorbs absolute value -->
+  <for>
+
+  </for>
+
+</skill>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="1210" levels="2" name="Seal of Gloom">
+
+  <table name="#mpConsume"> 55 57 </table>
+  <table name="#power"> 5.0 6.0 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="save" val="3"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AURA_CLOSE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="MDOT"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="30000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+
+  </for>
+
+</skill>

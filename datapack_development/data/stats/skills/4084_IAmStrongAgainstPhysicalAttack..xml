@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="4084" levels="1" name="I am strong against physical attack.">
+
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+ <!-- Done by dc -->
+ <table name="#Tab-pDef"> 1.2 </table>
+
+ <for>
+    <mul  order='0x50' stat='pDef' val="#Tab-pDef"/>
+ </for>
+
+</skill>

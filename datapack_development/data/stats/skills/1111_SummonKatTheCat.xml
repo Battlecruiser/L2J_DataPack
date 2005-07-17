@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="1111" levels="18" name="Summon Kat the Cat">
+
+  <table name="#mpConsume">
+  	  39  44  53  60  70
+  	  78  87  94 103 107
+  	 110 115 119 123 127
+  	 130 133 137
+  </table>
+  <table name="#itemConsumeCount">
+       3  4  5  7  9
+      11 12 16 17 20
+      21 25 26 29 30
+      33 34 36
+  </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="itemConsumeId" val="1458"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="6000"/>
+  <set name="reuseDelay" val="21600000"/>
+  <set name="skillTime" val="6000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  
+  <!-- Summon-specific -->
+  <table name="#npcIds">
+      12006 12007 12008 12411 12412 
+      12413 12414 12415 12416 12417 
+      12418 12419 12344 12345 12346 
+      12347 12175 12176      
+  </table>
+  <set name="npcId" val="#npcIds" />
+  <set name="expPenalty" val="0.3" />
+  <set name="isCubic" val="false" />
+  
+  <for>
+
+  </for>
+
+</skill>

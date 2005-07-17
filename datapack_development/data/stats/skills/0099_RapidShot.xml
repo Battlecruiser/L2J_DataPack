@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="99" levels="2" name="Rapid Shot"> 
+  <table name="#mpConsume"> 28 50 </table> 
+  <table name="#rate"> 1.08 1.12 </table> 
+  <set name="weaponsAllowed" val="32"/> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="hitTime" val="1000"/> 
+  <set name="reuseDelay" val="10000"/> 
+  <set name="skillTime" val="1000"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+    <effect count="1" name="Buff" time="1200" val="0"> 
+      <mul order="0x50" stat="pAtkSpd" val="#rate"> 
+        <using kind="Bow"/> 
+      </mul> 
+    </effect> 
+  </for> 
+</skill>

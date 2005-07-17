@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="146" levels="45" name="Anti Magic">
+
+
+  <table name="#mDef">
+   10  12  14  16  18 20 23 25 28 30
+   34  36  40  42  43 46 47 49 52 54
+   56  59  61  63  66 68 70 72 74 76
+   78  80  82  84  86 88 90 92 94 96
+   98 100 102 104 106
+  </table>
+
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+    <add order="0x10" stat="mDef" val="#mDef"/>
+  </for>
+
+</skill>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?> 
+<item id='2406' name="avadon_robe"> 
+
+  <for> 
+
+    <add val='127' order='0x10' stat='pDef' /> 
+    <add val='561' order='0x10' stat='maxMp' /> 
+    <mul val='1.05' order='0x40' stat='pDef'> 
+     <and> 
+      <using slotitem="2415;6"/> 
+      <using slotitem="5732;12"/> 
+      <using slotitem="5716;9"/> 
+     </and> 
+    </mul> 
+    <mul val='1.15' order='0x40' stat='mAtkSpd'> 
+     <and> 
+      <using slotitem="2415;6"/> 
+      <using slotitem="5732;12"/> 
+      <using slotitem="5716;9"/> 
+     </and> 
+    </mul> 
+  <enchant val='0' order='0x0C' stat='pDef' /> 
+</for> 
+
+</item>

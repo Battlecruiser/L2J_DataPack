@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="1246" levels="2" name="Seal of Silence">
+
+  <table name="#mpConsume"> 65 77 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="save" val="2"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_AURA_CLOSE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="MUTE"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="120000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+
+  </for>
+
+</skill>

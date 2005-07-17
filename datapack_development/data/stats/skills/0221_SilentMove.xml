@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="221" levels="1" name="Silent Move"> 
+
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="skillType" val="CONT"/> 
+  <set name="operateType" val="OP_TOGGLE"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+    <effect count="0x7fffffff" name="SilentMove" time="5" val="5"/> 
+  </for> 
+
+</skill>

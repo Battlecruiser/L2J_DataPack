@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="1276" levels="14" name="Summon Kai the Cat">
+
+<!-- Done by Aradel --> 
+<table name="#mpConsume">
+70 78 87 94 103 107 110 115 119 123 127 130 133 137
+</table>
+<table name="#itemConsumeCount"> 
+5 3 4 4 5 6 6 7 5 6 7 9 7 8
+</table> 
+<table name="#continuousitemConsumeCount">
+1 2 2 3 3 3 4 4 5 5 5 5 6 6
+</table>
+<set name="mpConsume" val="#mpConsume"/> 
+<set name="itemConsumeId" val="1458" /> 
+<set name="itemConsumeCount" val="#itemConsumeCount" /> 
+<set name="power" val="0.0"/> 
+<set name="target" val="TARGET_SELF"/> 
+<set name="hitTime" val="6000"/> 
+<set name="reuseDelay" val="20000"/> 
+<set name="skillTime" val="6000"/> 
+<set name="skillType" val="SUMMON"/> 
+<set name="isMagic" val="true"/> 
+<set name="operateType" val="OP_ACTIVE"/> 
+<set name="castRange" val="-1"/> 
+
+<!-- Summon-specific --> 
+<table name="#npcIds"> 
+12477 12478 12479 12480 12481 
+12482 12483 12484 12485 12486 
+12487 12488 12489 12529 12536 
+</table> 
+<set name="npcId" val="#npcIds" /> 
+<set name="expPenalty" val="0.3" /> 
+<set name="isCubic" val="false" /> 
+
+</skill>

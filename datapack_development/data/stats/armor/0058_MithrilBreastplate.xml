@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<item id='58' name="mithril_breastplate">
+
+<for>
+ <add val='95' order='0x10' stat='pDef' />
+ <add val='20' order='0x40' stat='poisonRes'>
+  <and>
+	<using slotitem="59;11"/>
+	<using slotitem="47;6"/>
+  </and>
+  </add>
+<enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>

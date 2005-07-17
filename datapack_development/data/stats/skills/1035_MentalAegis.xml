@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="1035" levels="4" name="Mental Aegis">
+
+  <table name="#mpConsume"> 23 35 44 52 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+  <for>
+
+  </for>
+
+</skill>

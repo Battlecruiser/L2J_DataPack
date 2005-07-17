@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="102" levels="5" name="Entangle"> 
+
+<!-- Done by dc --> 
+<table name="#Tab-runSpd"> 0.85 0.7 0.5 0.35 0.2 </table> 
+
+<table name="#mpConsume"> 17 23 28 26 30 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="save" val="5"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="3000"/> 
+  <set name="reuseDelay" val="7000"/> 
+  <set name="skillTime" val="3000"/> 
+  <set name="skillType" val="DEBUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="120000"/> 
+  <set name="castRange" val="600"/> 
+  <for> 
+  <effect count="1" name="Buff" time="120" val="0"> 
+    <mul order="0x50" stat="runSpd" val="#Tab-runSpd"/> 
+ </effect> 
+</for> 
+
+</skill>

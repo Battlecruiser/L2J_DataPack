@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="4002" levels="7" name="Steel Blood"> 
+
+  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table> 
+  <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="8000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="DRAIN"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="600"/> 
+  <set name="absorbPart" val="0.2" /><!-- absorbs 20% of damage --> 
+  <for> 
+
+  </for> 
+
+</skill> 

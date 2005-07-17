@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?> 
+<item id='2390' name="avadon_leather_mail"> 
+
+  <for> 
+
+    <add val='191' order='0x10' stat='pDef' /> 
+    <mul val='1.0525' order='0x40' stat='mDef'> 
+     <and> 
+      <using slotitem="2415;6"/> 
+      <using slotitem="5731;12"/> 
+      <using slotitem="5715;9"/> 
+     </and> 
+    </mul> 
+
+  <enchant val='0' order='0x0C' stat='pDef' /> 
+</for> 
+
+</item>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="4109" levels="1" name="Curse of Antharas">
+
+  <set name="save" val="2"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="2000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="120000"/>
+  <set name="castRange" val="-1"/>
+
+<!-- Done by dc -->
+<table name="#Tab-mAtk"> 1.15 </table>
+<table name="#Tab-rCrit"> 1.9 </table>
+<table name="#Tab-mDef"> 1.4 </table>
+<table name="#Tab-pAtkSpd"> 1.25 </table>
+<table name="#Tab-rEvas"> 19 </table>
+<table name="#Tab-runSpd"> 1.5 </table>
+<table name="#Tab-accCombat"> 19 </table>
+<table name="#Tab-pAtk"> 1.15 </table>
+<table name="#Tab-pDef"> 1.4 </table>
+<table name="#Tab-mAtkSpd"> 1.25 </table>
+
+
+<for>
+  <effect name="Buff" time="120" count="1" val="0">
+    <div  order='0x50' stat='mAtk' val="#Tab-mAtk"/>
+    <div  order='0x50' stat='rCrit' val="#Tab-rCrit"/>
+    <div  order='0x50' stat='mDef' val="#Tab-mDef"/>
+    <div  order='0x50' stat='pAtkSpd' val="#Tab-pAtkSpd"/>
+    <sub  order='0x40' stat='rEvas' val="#Tab-rEvas"/>
+    <div  order='0x50' stat='runSpd' val="#Tab-runSpd"/>
+    <sub  order='0x40' stat='accCombat' val="#Tab-accCombat"/>
+    <div  order='0x50' stat='pAtk' val="#Tab-pAtk"/>
+    <div  order='0x50' stat='pDef' val="#Tab-pDef"/>
+    <div  order='0x50' stat='mAtkSpd' val="#Tab-mAtkSpd"/>
+ </effect>
+</for>
+
+</skill>

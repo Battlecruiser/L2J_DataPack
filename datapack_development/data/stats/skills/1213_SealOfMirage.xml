@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="1213" levels="2" name="Seal of Mirage">
+
+  <table name="#mpConsume"> 59 70 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_AURA_CLOSE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="CONFUSION"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+
+  </for>
+
+</skill>

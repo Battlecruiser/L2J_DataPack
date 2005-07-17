@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="1177" levels="5" name="Wind Strike">
+
+  <table name="#mpConsume"> 9 9 10 14 15 </table>
+  <table name="#power"> 12.0 13.0 15.0 18.0 21.0 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="element" val="1"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <for>
+
+  </for>
+
+</skill>

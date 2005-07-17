@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="45" levels="9" name="Divine Heal">
+
+  <table name="#mpConsume"> 75 79 83 88 88 92 99 103 107 </table>
+  <table name="#power"> 143.0 150.0 157.0 171.0 179.0 187.0 203.0 211.0 219.0 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="HEAL"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+
+  </for>
+
+</skill>

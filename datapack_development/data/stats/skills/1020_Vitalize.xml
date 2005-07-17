@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="1020" levels="27" name="Vitalize"> 
+
+  <table name="#mpConsume"> 
+     88  90  93  97  98 101 105 108 111 112 
+    115 117 119 121 124 125 128 129 132 134 
+    136 138 140 142 143 145 147 
+  </table> 
+  <table name="#power"> 
+    440.0 454.0 467.0 494.0 508.0 521.0 548.0 562.0 575.0 588.0 
+    602.0 615.0 627.0 640.0 653.0 665.0 677.0 689.0 700.0 711.0 
+    722.0 733.0 743.0 753.0 763.0 772.0 780.0 
+  </table> 
+  <table name="#negatePower"> 
+    3.0 3.0 3.0 3.0 3.0 7.0 7.0 7.0 7.0 7.0 
+    7.0 7.0 7.0 7.0 7.0 7.0 7.0 7.0 9.0 9.0 
+    9.0 9.0 9.0 9.0 9.0 9.0 9.0 
+  </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="5000"/> 
+  <set name="reuseDelay" val="10000"/> 
+  <set name="skillTime" val="5000"/> 
+  <set name="skillType" val="NEGATE"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="600"/> 
+  <set name="negateStats" val="HEAL POISON BLEED"/> 
+  <set name="negatePower" val="#negatePower"/> 
+  <for> 
+
+  </for> 
+
+</skill>

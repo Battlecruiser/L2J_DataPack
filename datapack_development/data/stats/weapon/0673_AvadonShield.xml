@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<item id='673' name="avadon_shield">
+
+  <for>
+
+    <add val='-8' order='0x10' stat='rEvas' />
+    <set val='216' order='0x08' stat='sDef' />
+    <set val='20' order='0x08' stat='rShld' />
+    <mul val='1.24' order='0x40' stat='sDef'>
+     <and>
+      <using slotitem="2376;10"/>
+      <using slotitem="2379;11"/>
+      <using slotitem="2415;6"/>
+      <using slotitem="600;12"/>
+      <using slotitem="2464;9"/>
+     </and>
+    </mul>
+
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+
+</item>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="261" levels="6" name="Triple Sonic Slash">
+
+  <table name="#charges"> 1 2 3 4 5 6 </table>
+
+  <table name="#mpConsume"> 114 117 120 123 125 128 </table>
+  <table name="#power"> 1948.0 2042.0 2138.0 2236.0 2337.0 2439.0 </table>
+  <set name="weaponsAllowed" val="512"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="conditionValue" val="3"/>
+  <set name="hitTime" val="1000"/>
+  <set name="condition" val="128"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="CHARGEDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="50"/>
+
+  <!-- charge values -->
+  <set name="num_charges" val="#charges"/>
+  <set name="charge_skill_id" val="8"/> <!-- Focus Sonic is the charger -->
+
+  <for>
+
+  </for>
+
+</skill>

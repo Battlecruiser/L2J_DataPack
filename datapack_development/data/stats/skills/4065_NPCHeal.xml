@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="4065" levels="7" name="NPC Heal">
+
+  <table name="#mpConsume"> 17 30 44 62 80 98 114 </table>
+  <table name="#power"> 83.0 151.0 245.0 362.0 494.0 627.0 743.0 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="2000"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillTime" val="2000"/>
+  <set name="skillType" val="HEAL"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <for>
+
+  </for>
+
+</skill>

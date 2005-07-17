@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<item id='352' name="brigandine">
+
+ <for>
+  <add val='108' order='0x10' stat='pDef' />
+  <add stat='maxHp' order='0x60' val='153'>
+   <and>
+	<using slotitem="2378;11"/>
+	<using slotitem="2411;6"/>
+   </and>
+  </add>
+   <mul stat='pDef' order='0x60' val='1.05'>
+    <and>
+     <using slotitem="2378;11"/>
+     <using slotitem="2411;6"/>
+    </and>
+   </mul>
+ <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+
+</item>

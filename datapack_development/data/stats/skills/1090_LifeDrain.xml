@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="1090" levels="3" name="Life Drain"> 
+
+  <table name="#mpConsume"> 20 30 39 </table> 
+  <table name="#power"> 15.0 21.0 26.0 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="6000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="DRAIN"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="600"/> 
+  <set name="absorbPart" val="0.8" /> <!-- absorbs 80% of damage --> 
+  <for> 
+
+  </for> 
+
+</skill> 

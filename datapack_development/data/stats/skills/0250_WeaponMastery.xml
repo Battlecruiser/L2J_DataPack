@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="250" levels="24" name="Weapon Mastery">
+
+  <table name="#pAtk"> 1.5 2.8 4.5 5.7 6.7 8.3 9.5 11.6 13.3 16. 17. 18.1 20.4 21.6 22.8 25.5 26.9 28.3 31.4 33. 34.6 38. 39.8 41.7 </table>
+  <table name="#mAtk"> 1.9 3.5 5.7 7.2 8.3 10.3 11.9 14.6 16.6 20 21.3 22.6 25.4 26.9 28.5 31.8 33.6 35.4 39.2 41.2 43.2 47.5 49.8 52.1 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+    <add order="0x40" stat="pAtk" val="#pAtk"/>
+    <add order="0x40" stat="mAtk" val="#mAtk"/>
+  </for>
+
+</skill>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="1256" levels="4" name="Heart of Paagrio">
+	<table name="#hot">31 35 39 43</table>
+  <table name="#mpConsume"> 202 224 239 260 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="6.0"/>
+  <set name="target" val="TARGET_CLAN"/>
+  <set name="hitTime" val="2000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="2000"/>
+  <set name="skillType" val="HOT"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="15000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+	<effect count="6" name="HealOverTime" time="5" val="#hot"/>	
+  </for>
+
+</skill>

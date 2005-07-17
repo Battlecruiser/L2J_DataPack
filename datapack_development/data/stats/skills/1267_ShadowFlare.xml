@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="1267" levels="14" name="Shadow Flare"> 
+
+<!--- 
+  Automatically generated from C3 client files. 
+  Need to be checked/fixed. 
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability. 
+  Descriptions: 
+  1: Launches a dark magical attack. Over-hit is possible. Power 65. 
+  14: Launches a dark magical attack. Over-hit is possible. Power 135. 
+  created 2005-05-29 23:34:29 
+--> 
+
+  <table name="#mpConsume"> 44 49 54 59 64 67 69 73 74 77 79 82 84 85 </table> 
+  <table name="#power"> 65.0 73.0 81.0 89.0 98.0 102.0 107.0 111.0 115.0 119.0 123.0 127.0 131.0 135.0 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="skillTime" val="5000"/> 
+  <set name="reuseDelay" val="6000"/> 
+  <set name="skillType" val="MDAM"/> 
+  <set name="overHit" val="true"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="900"/> 
+
+  <for> 
+
+  </for> 
+
+</skill>

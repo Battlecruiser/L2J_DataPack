@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="1257" levels="3" name="Decrease Weight">
+
+  <table name="#mpConsume"> 15 20 23 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1800000"/>
+  <set name="castRange" val="400"/>
+  <for>
+
+  </for>
+
+</skill>

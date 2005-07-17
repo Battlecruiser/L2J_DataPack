@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="27" levels="14" name="Unlock"> 
+
+  <table name="#mpConsume"> 20 22 25 28 32 35 39 44 48 52 55 60 64 67 </table> 
+  <table name="#itemConsumeCount"> 2 2 3 3 4 5 6 7 8 10 11 13 15 17 </table> 
+  
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="itemConsumeId" val="1661"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_UNLOCKABLE"/> 
+  <set name="hitTime" val="2000"/> 
+  <set name="reuseDelay" val="120000"/> 
+  <set name="skillTime" val="2000"/> 
+  <set name="skillType" val="UNLOCK"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="50"/> 
+  <for> 
+
+  </for> 
+
+</skill>

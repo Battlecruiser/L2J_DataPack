@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="44" levels="2" name="Remedy"> 
+
+  <table name="#mpConsume"> 35 44 </table> 
+  <table name="#power"> 3 7 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="6000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="UNBLEED"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+
+  </for> 
+
+</skill>

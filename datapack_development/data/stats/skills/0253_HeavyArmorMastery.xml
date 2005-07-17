@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="253" levels="43" name="Heavy Armor Mastery">
+
+  <table name="#pDef">
+    11.6  13.3  15.2  17.2  19.5  21.1  23.7  25.6  28.7  30.8
+    34.3  35.5  36.7  39.3  40.6  41.9  44.7  46.1  47.6  50.6
+    52.1  53.7  56.9  58.6  60.2  61.9  63.7  65.6  67.6  69.7
+    71.9  74.2  76.6  79.1  81.7  83.4  86.2  89.1  92.1  95.2
+    98.4 101.7 105.1
+  </table>
+
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+    <add order="0x40" stat="pDef" val="#pDef">
+      <and>
+        <using kind="Heavy"/>
+        <not>
+		  <using kind="Light,Magic"/>
+		</not>
+      </and>
+    </add>
+    <mul order="0x50" stat="mAtkSpd" val="1.71">
+      <and>
+        <using kind="Heavy"/>
+        <not>
+		  <using kind="Light,Magic"/>
+		</not>
+      </and>
+    </mul>
+    <mul order="0x50" stat="pAtkSpd" val="1.25">
+      <and>
+        <using kind="Heavy"/>
+        <not>
+		  <using kind="Light,Magic"/>
+		</not>
+      </and>
+    </mul>
+  </for>
+
+</skill>

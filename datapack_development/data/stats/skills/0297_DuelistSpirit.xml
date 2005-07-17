@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="297" levels="2" name="Duelist Spirit"> 
+  
+  <table name="#Tab-pAtkSpd"> 5 9 </table> 
+  
+  <table name="#mpConsume"> 30 44 </table> 
+  <set name="weaponsAllowed" val="512"/> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="6000"/> 
+  <set name="skillTime" val="1500"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="-1"/> 
+  
+  <for> 
+    <effect count="1" name="Buff" time="1200" val="0"> 
+       <add  order='0x10' stat='pAtkSpd' val="#Tab-pAtkSpd"/> 
+    </effect> 
+  </for>  
+  
+</skill>

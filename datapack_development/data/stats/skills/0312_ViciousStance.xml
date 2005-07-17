@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="312" levels="20" name="Vicious Stance">
+ 
+  <table name="#crit"> 4 8 12 16 20 24 28 32 36 40 44 46 50 54 58 64 68 72 76 80 </table>
+ 
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_TOGGLE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="5">
+      <add order="0x10" stat="cAtk" val="#crit"/>
+    </effect>
+  </for>
+  
+</skill>
+ 

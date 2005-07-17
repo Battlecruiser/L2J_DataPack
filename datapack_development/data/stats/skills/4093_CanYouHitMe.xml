@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="4093" levels="1" name="Can you hit me?">
+
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+ <!-- Done by dc -->
+<for>
+    <add  order='0x40' stat='rEvas' val="4"/>
+</for>
+
+</skill>

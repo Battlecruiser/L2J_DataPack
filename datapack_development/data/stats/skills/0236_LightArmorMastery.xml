@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="236" levels="41" name="Light Armor Mastery">
+
+  <table name="#pDef">
+    5.4   6.3   7.8   8.8  10.9  12.5  15.0  16.9  19.8  20.8
+   21.8  24.0  25.1  26.3  28.6  29.8  31.0  33.6  34.9  36.2
+   38.9  40.3  41.7  43.1  44.6  46.2  47.9  49.7  51.6  53.6
+   55.7  57.9  60.2  62.6  65.1  67.7  70.4  73.2  76.1  79.1
+   82.2
+  </table>
+
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+    <add order="0x40" stat="pDef" val="#pDef">
+	  <and>
+		<using kind="Light"/>
+        <not>
+		  <using kind="Heavy,Magic"/>
+		</not>
+      </and>
+    </add>
+	<mul order="0x50" stat="mAtkSpd" val="1.91">
+	  <and>
+		<using kind="Light"/>
+        <not>
+          <using kind="Heavy,Magic"/>
+		</not>
+      </and>
+    </mul>
+	<mul order="0x50" stat="pAtkSpd" val="1.25">
+	  <and>
+		<using kind="Light"/>
+        <not>
+		  <using kind="Heavy,Magic"/>
+		</not>
+      </and>
+    </mul>
+	<mul order="0x50" stat="regMp" val="1.2">
+	  <and>
+		<using kind="Light"/>
+        <not>
+		  <using kind="Heavy,Magic"/>
+		</not>
+      </and>
+    </mul>
+  </for>
+
+</skill>

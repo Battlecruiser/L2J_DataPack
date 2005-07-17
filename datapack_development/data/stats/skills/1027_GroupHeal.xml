@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="1027" levels="15" name="Group Heal">
+
+  <table name="#mpConsume"> 33 38 43 48 53 59 65 69 72 83 87 88 95 99 103 </table>
+  <table name="#power"> 66.0 76.0 86.0 97.0 108.0 121.0 141.0 148.0 156.0 179.0 188.0 196.0 222.0 231.0 241.0 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="hitTime" val="7000"/>
+  <set name="reuseDelay" val="25000"/>
+  <set name="skillTime" val="7000"/>
+  <set name="skillType" val="HEAL"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+
+  </for>
+
+</skill>

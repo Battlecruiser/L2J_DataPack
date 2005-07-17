@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2001" levels="1" name="Red potion">
+	<table name="#hot">2</table>
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="HOT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="15000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+	<effect count="3" name="HealOverTime" time="5" val="#hot"/>
+  </for>
+
+</skill>

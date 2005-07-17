@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="144" levels="37" name="Dual Weapon Mastery">
+
+  <table name="#pAtk"> 
+    23.7  25.4  27.1  29.0  30.9  32.9  35.0  37.1  39.4  41.7
+    44.1  46.6  49.2  51.9  54.6  57.5  60.4  63.3  66.4  69.5
+    72.7  76.0  79.3  86.0  89.4  96.3  99.8 106.9 110.5 117.8
+   121.5 129.0 132.9 140.8 144.8 152.9 157.0
+  </table>
+
+  <set name="weaponsAllowed" val="512"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+    <add order="0x40" stat="pAtk" val="#pAtk">
+    	<using kind="Dual Sword" />
+    </add>
+  </for>
+
+</skill>

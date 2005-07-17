@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<item id='442' name="divine_tunic">
+
+  <for>
+
+    <add val='74' order='0x10' stat='pDef' />
+    <add val='314' order='0x10' stat='maxMp' />
+   <add stat='maxMp' order='0x40' val='170'>
+     <and>
+       <using slotitem="473;11"/>
+       <using slotitem="2468;9"/>
+     </and>
+   </add>
+   <add stat='WIT' order='0x10' val='1'>
+     <and>
+       <using slotitem="473;11"/>
+       <using slotitem="2468;9"/>
+     </and>
+   </add>   
+   <sub stat='INT' order='0x10' val='1'>
+     <and>
+       <using slotitem="473;11"/>
+       <using slotitem="2468;9"/>
+     </and>
+   </sub>
+   <mul stat='pDef' order='0x40' val='1.05'>
+     <and>
+       <using slotitem="473;11"/>
+       <using slotitem="2468;9"/>
+     </and>
+   </mul>
+   
+ <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>

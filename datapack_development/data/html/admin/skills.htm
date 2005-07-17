@@ -1,0 +1,35 @@
+<html>
+<body>
+<table width=260>
+<tr>
+<td width=40>
+<button value="Main" action="bypass -h admin_admin" width=40 height=15 back="sek.cbui94" fore="sek.cbui92">
+</td>
+<td width=180>
+<center>
+Skills Menu
+</center>
+</td>
+<td width=40>
+<button value="Back" action="bypass -h admin_show_skills" width=40 height=15 back="sek.cbui94" fore="sek.cbui92">
+</td>
+</tr>
+</table>
+<br>
+<table width=200>
+<tr><td><a action="bypass -h admin_help skills/delf.htm"><font color="LEVEL">Dark Elf Skills</font></a></td></tr>
+<tr><td><a action="bypass -h admin_help skills/dwarf.htm"><font color="LEVEL">Dwarf Skills</font></a></td></tr>
+<tr><td><a action="bypass -h admin_help skills/elf.htm"><font color="LEVEL">Elf Skills</font></a></td></tr>
+<tr><td><a action="bypass -h admin_help skills/human.htm"><font color="LEVEL">Human Skills</font></a></td></tr>
+<tr><td><a action="bypass -h admin_help skills/orc.htm"><font color="LEVEL">Orc Skills</font></a></td></tr>
+</table>
+<br>
+<center>Add Skill through ID:</center>
+<br>
+<center>
+<table>
+<tr><td>Id:<edit var="id" width=40></td><td>Level:<edit var="level" width=40></td><td>&nbsp;<button value="Add" action="bypass -h admin_add_skill $id $level" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+</table>
+</center>
+</body>
+</html>

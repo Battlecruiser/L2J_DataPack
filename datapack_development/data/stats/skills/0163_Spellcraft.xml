@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="163" levels="1" name="Spellcraft">
+
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+
+  <for>
+    <mul order="0x50" stat="mAtkSpd" val="2"> 
+      <and> 
+        <using kind="Magic"/> 
+        <not> 
+         <using kind="Light,Heavy"/> 
+        </not> 
+      </and> 
+    </mul> 
+  </for>
+</skill>

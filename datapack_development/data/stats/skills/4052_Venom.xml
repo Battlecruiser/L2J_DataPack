@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="4052" levels="2" name="Venom">
+
+  <table name="#dmg"> 31 38 </table>
+  <set name="save" val="3"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="POISON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="30000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+    <effect count="6" name="DamOverTime" time="5" val="#dmg" abnormal="poison"/>
+  </for>
+
+</skill>

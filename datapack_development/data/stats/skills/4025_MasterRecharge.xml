@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="4025" levels="7" name="Master Recharge">
+
+  <table name="#mpConsume"> 24 39 53 70 90 110 130 </table>
+  <table name="#power"> 23.0 38.0 52.0 70.0 90.0 110.0 129.0 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="2000"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillTime" val="2000"/>
+  <set name="skillType" val="MANAHEAL"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <for>
+
+  </for>
+
+</skill>

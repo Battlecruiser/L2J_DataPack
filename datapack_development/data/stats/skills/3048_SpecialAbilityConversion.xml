@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="3048" levels="2" name="Special Ability: Conversion">
+
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Increases the maximum MP by a certain success rate and decreases the maximum HP by a certain success rate.
+  2: Reduces maximum HP and increases maximum MP. Increases damage inflicted during PvP.
+  created 2005-05-29 23:34:31
+-->
+
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+
+  <for>
+
+  </for>
+
+</skill>

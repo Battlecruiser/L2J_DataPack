@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2034" levels="1" name="Enchant haste potion">
+
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="600000"/>
+  <set name="castRange" val="-1"/>
+<!-- Done by dc -->
+<table name="#Tab-runSpd"> 33 </table>
+<for>
+  <effect name="Buff" time="600" count="1" val="0">
+    <add  order='0x40' stat='runSpd' val="#Tab-runSpd"/>
+ </effect>
+</for>
+
+</skill>
