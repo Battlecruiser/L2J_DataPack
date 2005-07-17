@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
+<list>
 <skill id="1200" levels="6" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -15,7 +16,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1201" levels="24" name="Dryad Root">
   <table name="#mpConsume"> 22 22 23 25 27 27 29 30 30 34 34 35 38 38 39 42 43 44 45 47 48 49 50 52 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -34,7 +34,6 @@
     <effect count="1" name="Root" time="30" val="0"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1202" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -51,7 +50,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1203" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -68,7 +66,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1204" levels="2" name="Wind Walk">
 <!-- Done by dc -->
 <table name="#Tab-runSpd"> 20 40 </table>
@@ -90,7 +87,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1205" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -107,7 +103,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1206" levels="7" name="Wind Shackle">
 <!-- Done by dc -->
 <table name="#Tab-pAtkSpd"> 1.1 1.2 1.3 1.4 1.5 1.6 1.7 </table>
@@ -130,7 +125,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1207" levels="1" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -147,7 +141,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1208" levels="4" name="Seal of Binding">
   <table name="#mpConsume"> 34 45 59 70 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -166,7 +159,6 @@
 	<effect count="1" name="Root" time="30" val="0"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1209" levels="4" name="Seal of Poison">
 <table name="#dmg"> 18 24 31 38 </table>
   <table name="#mpConsume"> 29 40 53 70 </table>
@@ -187,7 +179,6 @@
     <effect count="3" name="DamOverTime" time="5" val="#dmg"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1210" levels="2" name="Seal of Gloom">
   <table name="#mpConsume"> 55 57 </table>
   <table name="#power"> 5.0 6.0 </table>
@@ -206,7 +197,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1211" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -221,7 +211,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1212" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -236,7 +225,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1213" levels="2" name="Seal of Mirage">
   <table name="#mpConsume"> 59 70 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -252,7 +240,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1214" levels="5" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -267,7 +254,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1215" levels="5" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -282,7 +268,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1216" levels="1" name="Self Heal">
   <set name="mpConsume" val="9"/>
   <set name="power" val="42.0"/>
@@ -297,7 +282,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1217" levels="33" name="Greater Heal"> 
   <table name="#mpConsume"> 58 60 62 64 65 68 72 74 77 80 80 83 87 89 90 93 95 97 98 98 100 102 104 105 108 109 112 113 114 115 117 119 120</table> 
   <table name="#power"> 371.0 384.0 398.0 426.0 441.0 455.0 484.0 499.0 514.0 544.0 559.0 574.0 603.0 618.0 633.0 647.0 662.0 676.0 690.0 704.0 718.0 731.0 745.0 758.0 770.0 783.0 795.0 806.0 817.0 828.0 839.0 849.0 858.0 </table> 
@@ -314,7 +298,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1218" levels="33" name="Greater Battle Heal">
   <table name="#mpConsume"> 87 90 92 95 98 102 108 110 114 120 121 123 129 133 135 139 142 145 147 147 150 153 155 158 160 164 167 168 170 173 175 178 179 </table>
   <table name="#power"> 371.0 384.0 398.0 426.0 441.0 455.0 484.0 499.0 514.0 544.0 559.0 574.0 603.0 618.0 633.0 647.0 662.0 676.0 690.0 704.0 718.0 731.0 745.0 758.0 770.0 783.0 795.0 806.0 817.0 828.0 839.0 849.0 858.0 </table>
@@ -331,7 +314,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1219" levels="15" name="Greater Group Heal"> 
   <table name="#mpConsume"> 115 119 122 127 130 134 143 148 152 159 159 164 173 177 180 185 189 193 195 195 199 203 207 210 214 218 222 224 228 230 233 237 239 </table> 
   <table name="#power"> 287.0 308.0 319.0 341.0 353.0 364.0 388.0 399.0 411.0 435.0 447.0 459.0 483.0 495.0 506.0 518.0 529.0 541.0 552.0 563.0 574.0 585.0 596.0 606.0 616.0 626.0 636.0 645.0 654.0 663.0 671.0 679.0 687.0 </table> 
@@ -348,7 +330,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1220" levels="8" name="Blaze">
   <table name="#mpConsume"> 18 20 22 23 25 27 29 30 </table>
   <table name="#power"> 23.0 26.0 29.0 32.0 35.0 38.0 42.0 44.0 </table>
@@ -366,7 +347,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1221" levels="3" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -381,7 +361,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1222" levels="3" name="Curse Chaos">
   <table name="#mpConsume"> 30 35 39 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -399,7 +378,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1223" levels="2" name="Surrender To Earth">
 <table name="#Tab-earthRes"> 30 60 </table>
   <table name="#mpConsume"> 30 44 </table>
@@ -421,7 +399,6 @@
 	</effect>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1224" levels="2" name="Surrender To Poison">
 <table name="#Tab-poisonRes"> 30 60 </table>
   <table name="#mpConsume"> 23 40 </table>
@@ -443,7 +420,6 @@
 	</effect>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1225" levels="9" name="Summon Mew the Cat">
   <table name="#mpConsume">
 	  39  44  53  60  70
@@ -477,7 +453,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1226" levels="9" name="Summon Unicorn Boxer">
   <table name="#mpConsume">
       39  44  53  60  70
@@ -526,7 +501,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1227" levels="9" name="Summon Unicorn Mirage">
   <table name="#mpConsume">
       39  44  53  60  70
@@ -575,7 +549,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1228" levels="9" name="Summon Silhouette">
   <table name="#mpConsume">
       39  44  53  60  70
@@ -624,7 +597,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1229" levels="9" name="Chant of Life">
 	<table name="#hot">12 15 18 23 27 31 35 39 43</table>
   <table name="#mpConsume"> 59 72 88 103 122 134 152 164 180 </table>
@@ -644,7 +616,6 @@
 	<effect count="3" name="HealOverTime" time="5" val="#hot"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1230" levels="28" name="Prominence"> 
   <table name="#mpConsume"> 
      34 35 38 39 42 44 45 48 49 52 
@@ -670,7 +641,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1231" levels="28" name="Aura Flare"> 
   <table name="#mpConsume"> 
      34 35 38 39 42 44 45 48 49 52 
@@ -695,7 +665,6 @@
   <for> 
   </for> 
 </skill> 
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1232" levels="3" name="Blazing Skin"> 
   <table name="#mpConsume"> 35 43 52 </table> 
   <table name="#power"> 10.0 15.0 20.0 </table> 
@@ -716,7 +685,6 @@
   </effect> 
   </for> 
 </skill> 
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1233" levels="2" name="Decay">
 <table name="#dmg"> 77 94 </table>
   <table name="#mpConsume"> 65 77 </table>
@@ -738,7 +706,6 @@
     <effect count="15" name="DamOverTime" time="1" val="#dmg"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1234" levels="28" name="Vampiric Claw"> 
   <table name="#mpConsume"> 50 53 55 59 62 65 68 70 74 77 79 80 82 83 85 
  87 88 89 90 93 94 95 97 98 99 100 102 103</table> 
@@ -759,7 +726,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1235" levels="28" name="Hydro Blast"> 
   <table name="#mpConsume"> 
      34 35 38 39 42 44 45 48 49 52 
@@ -785,7 +751,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1236" levels="19" name="Frost Bolt"> 
   <table name="#mpConsume"> 34 35 38 39 42 44 45 48 49 52 54 55 58 60 62 
     64 65 67 69 </table> 
@@ -810,7 +775,6 @@
     </effect> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1237" levels="8" name="Ice Dagger">
   <table name="#mpConsume"> 38 40 43 45 48 49 52 54 </table>
   <table name="#power"> 5.0 5.0 5.0 5.0 6.0 6.0 6.0 6.0 </table>
@@ -830,7 +794,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1238" levels="3" name="Freezing Skin"> 
   <table name="#mpConsume"> 35 44 52 </table> 
   <table name="#power"> 10.0 15.0 20.0 </table> 
@@ -851,7 +814,6 @@
   </effect> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1239" levels="28" name="Hurricane"> 
   <table name="#mpConsume"> 
      34 35 38 39 42 44 45 48 49 52 
@@ -877,7 +839,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1240" levels="3" name="Guidance"> 
   <table name="#mpConsume"> 35 44 52 </table> 
   <table name="#Tab-accCombat"> 2 3 4 </table> 
@@ -898,7 +859,6 @@
     </effect> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1241" levels="1" name="none">
 <!-- Done by dc -->
 <set name="mpConsume" val="15"/>
@@ -919,7 +879,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1242" levels="3" name="Death Whisper">
 <!-- Done by dc -->
 <table name="#Tab-cAtk"> 1.3 1.4 1.5 </table>
@@ -941,7 +900,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1243" levels="3" name="Bless Shield">
 <!-- Done by dc -->
 <table name="#Tab-sDef"> 1.3 1.4 1.5 </table>
@@ -963,7 +921,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1244" levels="2" name="Freezing Flame">
  <table name="#dmg"> 77 94 </table>
   <table name="#mpConsume"> 53 70 </table>
@@ -985,7 +942,6 @@
     <effect count="15" name="DamOverTime" time="1" val="#dmg"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1245" levels="5" name="Steal Essence"> 
   <table name="#mpConsume"> 70 78 87 94 103 </table> 
   <table name="#power"> 52.0 58.0 65.0 72.0 78.0 </table> 
@@ -1003,7 +959,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1246" levels="2" name="Seal of Silence">
   <table name="#mpConsume"> 65 77 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1021,7 +976,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1247" levels="2" name="Seal of Scourge">
 <!-- Done by dc -->
 <table name="#Tab-regHp"> 2 2 </table>
@@ -1043,7 +997,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1248" levels="2" name="Seal of Suspension">
   <table name="#mpConsume"> 65 77 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1060,7 +1013,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1249" levels="3" name="Sight of Paagrio"> 
   <table name="#mpConsume"> 232 280 305 </table> 
   <table name="#Tab-accCombat"> 2 3 4 </table> 
@@ -1081,7 +1033,6 @@
     </effect> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1250" levels="3" name="Shield of Paagrio"> 
 <!-- Done by dc --> 
 <table name="#Tab-sDef"> 30 40 50 </table> 
@@ -1103,7 +1054,6 @@
  </effect> 
 </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1251" levels="2" name="Chant of Fury">
 <!-- Done by dc -->
 <table name="#Tab-pAtkSpd"> 1.15 1.33 </table>
@@ -1125,7 +1075,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1252" levels="3" name="Chant of Evasion">
 <!-- Done by dc -->
 <table name="#Tab-rEvas"> 4 6 8 </table>
@@ -1147,7 +1096,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1253" levels="3" name="Chant of Rage">
 <!-- Done by dc -->
 <table name="#Tab-cAtk"> 1.3 1.4 1.5 </table>
@@ -1169,7 +1117,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1254" levels="4" name="Mass Resurrection">
   <table name="#mpConsume"> 364 402 485 528 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1185,7 +1132,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1255" levels="2" name="Party Recall">
   <table name="#mpConsume"> 257 297 </table>
   <table name="#hitTime"> 20000 3000 </table>
@@ -1203,7 +1149,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1256" levels="4" name="Heart of Paagrio">
 	<table name="#hot">31 35 39 43</table>
   <table name="#mpConsume"> 202 224 239 260 </table>
@@ -1222,7 +1167,6 @@
 	<effect count="6" name="HealOverTime" time="5" val="#hot"/>	
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1257" levels="3" name="Decrease Weight">
   <table name="#mpConsume"> 15 20 23 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1239,7 +1183,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1258" levels="4" name="Restore Life">
   <table name="#mpConsume"> 80 107 133 159 </table>
   <table name="#power"> 15.0 20.0 25.0 30.0 </table>
@@ -1256,7 +1199,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1259" levels="2" name="Resist Shock">
   <table name="#mpConsume"> 36 44 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1273,7 +1215,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1260" levels="3" name="Tact of Paagrio"> 
 <!-- Done by dc --> 
 <table name="#Tab-rEvas"> 4 6 8 </table> 
@@ -1295,7 +1236,6 @@
  </effect> 
 </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1261" levels="2" name="Rage of Paagrio"> 
 <!-- Done by dc --> 
 <table name="#Tab-mAtk"> 1.1 1.16 </table> 
@@ -1325,7 +1265,6 @@
  </effect> 
 </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1262" levels="5" name="Transfer Pain">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1335,7 +1274,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1263" levels="4" name="Curse Gloom">
 <!-- Done by dc -->
 <table name="#Tab-mDef"> 1.23 1.23 1.23 1.23 </table>
@@ -1358,7 +1296,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1264" levels="3" name="Solar Spark"> 
 <!--- 
   Automatically generated from C3 client files. 
@@ -1382,7 +1319,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1265" levels="14" name="Solar Flare"> 
 <!--- 
   Automatically generated from C3 client files. 
@@ -1408,7 +1344,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1266" levels="3" name="Shadow Spark"> 
 <!--- 
   Automatically generated from C3 client files. 
@@ -1432,7 +1367,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1267" levels="14" name="Shadow Flare"> 
 <!--- 
   Automatically generated from C3 client files. 
@@ -1458,7 +1392,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1268" levels="4" name="Vampiric Rage">
 <!---
   Automatically generated from C3 client files.
@@ -1482,7 +1415,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1269" levels="9" name="Curse Disease">
 <!---
   Automatically generated from C3 client files.
@@ -1504,7 +1436,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1271" levels="1" name="Benediction">
 <!---
   Automatically generated from C3 client files.
@@ -1524,7 +1455,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1272" levels="13" name="Word of Fear">
 <!---
   Automatically generated from C3 client files.
@@ -1546,7 +1476,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1273" levels="13" name="Serenade of Eva">
 <!---
   Automatically generated from C3 client files.
@@ -1568,7 +1497,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1274" levels="4" name="Energy Bolt">
   <table name="#mpConsume"> 10 12 14 15 </table>
   <table name="#power"> 13.0 16.0 19.0 22.0 </table>
@@ -1585,7 +1513,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1275" levels="14" name="Aura Bolt">
  
   <table name="#mpConsume"> 
@@ -1611,7 +1538,6 @@
   </for>
  
 </skill> 
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1276" levels="14" name="Summon Kai the Cat">
 <!-- Done by Aradel --> 
 <table name="#mpConsume">
@@ -1645,7 +1571,6 @@
 <set name="expPenalty" val="0.3" /> 
 <set name="isCubic" val="false" /> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1277" levels="14" name="Summon Unicorn Merrow"> 
 <!--- 
   Automatically generated from C3 client files. 
@@ -1691,7 +1616,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1278" levels="14" name="Summon Soulless">
 <!---
   Automatically generated from C3 client files.
@@ -1712,7 +1636,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1279" levels="9" name="Summon Binding Cubic"> 
   <table name="#mpConsume"> 35 39 44 48 52 55 60 64 67 </table> 
   <table name="#itemConsumeCount"> 5 6 7 8 9 9 11 12 13 </table> 
@@ -1736,7 +1659,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1280" levels="9" name="Summon Aqua Cubic"> 
   <table name="#mpConsume"> 35 39 44 48 52 58 62 65 69 </table> 
   <table name="#itemConsumeCount"> 2 3 3 4 4 5 6 6 7 </table> 
@@ -1760,7 +1682,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1281" levels="9" name="Summon Spark Cubic"> 
   <table name="#mpConsume"> 35 39 44 48 52 55 60 64 67 </table> 
   <table name="#itemConsumeCount"> 5 6 7 8 9 9 11 12 13 </table> 
@@ -1784,7 +1705,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1282" levels="2" name="Speed of Paagrio">
 <!---
   Automatically generated from C3 client files.
@@ -1808,7 +1728,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1283" levels="13" name="Soul Guard">
 <!---
   Automatically generated from C3 client files.
@@ -1828,7 +1747,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1284" levels="3" name="Chant of Revenge">
 <!---
   Automatically generated from C3 client files.
@@ -1852,7 +1770,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1285" levels="1" name="Seed of Fire"> 
 <!--- 
   Automatically generated from C3 client files. 
@@ -1876,7 +1793,6 @@
    <effect count="1" name="Charge" time="5000" val="#charges"/> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1286" levels="1" name="Seed of Water"> 
 <!--- 
   Automatically generated from C3 client files. 
@@ -1905,7 +1821,6 @@
    <effect count="1" name="Charge" time="5000" val="#charges"/> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1287" levels="1" name="Seed of Wind"> 
 <!--- 
   Automatically generated from C3 client files. 
@@ -1929,7 +1844,6 @@
    <effect count="1" name="Charge" time="5000" val="#charges"/> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1288" levels="1" name="Aura Symphony">
 <!---
   Automatically generated from C3 client files.
@@ -1950,7 +1864,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1289" levels="1" name="Inferno"> 
 <!--- 
   Automatically generated from C3 client files. 
@@ -1977,7 +1890,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1290" levels="1" name="Blizzard"> 
 <!--- 
   Automatically generated from C3 client files. 
@@ -2007,7 +1919,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1291" levels="1" name="Demon Wind"> 
 <!--- 
   Automatically generated from C3 client files. 
@@ -2034,7 +1945,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1292" levels="1" name="Elemental Assault">
 <!---
   Automatically generated from C3 client files.
@@ -2055,7 +1965,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1293" levels="1" name="Elemental Symphony">
 <!---
   Automatically generated from C3 client files.
@@ -2076,7 +1985,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1294" levels="1" name="Elemental Storm">
 <!---
   Automatically generated from C3 client files.
@@ -2097,7 +2005,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1295" levels="9" name="Aqua Splash"> 
 <!--- 
   Automatically generated from C3 client files. 
@@ -2123,7 +2030,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1296" levels="9" name="Rain of Fire"> 
 <!--- 
   Automatically generated from C3 client files. 
@@ -2149,7 +2055,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1297" levels="6" name="Clear Mind">
 <!---
   Automatically generated from C3 client files.
@@ -2167,7 +2072,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1298" levels="14" name="Mass Slow">
 <!---
   Automatically generated from C3 client files.
@@ -2189,7 +2093,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1299" levels="2" name="Servitor Empower"> 
   <table name="#rate"> 1.55 1.65 </table> 
   <table name="#mpConsume"> 48 65 </table> 
@@ -2209,3 +2112,4 @@
   </effect> 
   </for> 
 </skill>
+</list>

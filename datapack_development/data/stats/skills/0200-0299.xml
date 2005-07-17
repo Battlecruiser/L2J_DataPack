@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
+<list>
 <skill id="200" levels="1" name="none">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -8,7 +9,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="201" levels="2" name="none">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -18,7 +18,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="202" levels="4" name="none">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -28,7 +27,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="203" levels="1" name="none">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -38,7 +36,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="204" levels="1" name="none">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -48,7 +45,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="205" levels="45" name="Blunt Mastery">
   <table name="#pAtk">
     4.5   7.3   8.9  10.7  12.8  15.1  17.7  20.5  23.7  25.4
@@ -69,7 +65,6 @@
     </add>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="206" levels="1" name="none">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -79,7 +74,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="207" levels="6" name="none">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -89,7 +83,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="208" levels="52" name="Bow Mastery">
   <table name="#pAtk">
     10.3  11.4  27.6  32.8  35.6  38.6  45.2  48.9  52.7  61.1
@@ -111,7 +104,6 @@
     </add>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="209" levels="45" name="Dagger Mastery">
   <table name="#pAtk"> 3.6 6 7.4 9 10.8 12.8 15.1 17.6 20.3 21.8
 	23.4 25 26.6 28.4 30.2 32.1 34.1 36.1 38.2 40.4 42.7 45 47.4
@@ -130,7 +122,6 @@
     </add>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="210" levels="45" name="Fist Mastery">
   <table name="#pAtk">
      4.5   7.3   8.9  10.7  12.8  15.1  17.7  20.5  23.7  25.4
@@ -151,7 +142,6 @@
     </add>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="211" levels="6" name="Boost HP">
   <table name="#hp"> 60 100 150 200 250 300 </table>
   <set name="power" val="0.0"/>
@@ -163,7 +153,6 @@
     <add order="0x40" stat="maxHp" val="#hp"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="212" levels="8" name="Fast HP Recovery"> 
   <table name="#hp"> 1.0 1.4 1.7 2.0 2.3 2.6 2.9 3.2 </table> 
   <set name="power" val="0.0"/> 
@@ -175,7 +164,6 @@
     <mul order="0x50" stat="regHp" val="#hp"/> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="213" levels="5" name="Boost Mana">
 <!-- Done by Znabty -->
   <table name="#mp"> 30 50 70 100 140 </table>
@@ -188,7 +176,6 @@
     <add stat='maxMp' order='0x40' val='#mp' />
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="214" levels="1" name="Mana Recovery">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -207,7 +194,6 @@
         </and> 
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="215" levels="1" name="none">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -217,7 +203,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="216" levels="45" name="Polearm Mastery">
   <table name="#pAtk">
      4.5   7.3   8.9  10.7  12.8  15.1  17.7  20.5  23.7  25.4
@@ -238,7 +223,6 @@
     </add>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="217" levels="45" name="Sword Blunt Mastery">
   <table name="#pAtk">
      1.5   3.1   4.1   5.2   6.5   7.9   9.4  11.1  13.0  14.0
@@ -259,7 +243,6 @@
     </add>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="218" levels="2" name="none">
   <set name="mpConsume" val="10"/>
   <set name="power" val="0.0"/>
@@ -270,7 +253,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="219" levels="1" name="none">
   <set name="mpConsume" val="10"/>
   <set name="power" val="0.0"/>
@@ -281,7 +263,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="220" levels="3" name="none">
   <set name="mpConsume" val="10"/>
   <set name="power" val="0.0"/>
@@ -292,7 +273,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="221" levels="1" name="Silent Move"> 
   <set name="power" val="0.0"/> 
   <set name="target" val="TARGET_SELF"/> 
@@ -303,7 +283,6 @@
     <effect count="0x7fffffff" name="SilentMove" time="5" val="5"/> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="222" levels="1" name="Fist Fury"> 
   <table name="#pAtkSpd"> 1.25 </table> 
   <table name="#HP"> 13 </table> 
@@ -318,7 +297,6 @@
     </effect> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="223" levels="33" name="Sting">
   <table name="#mpConsume"> 23 24 25 27 29 30 31 31 33 35 36 37 40 41 43 43 44 45 47 48 49 51 52 54 55 55 56 58 59 61 62 63 65 </table>
   <table name="#power"> 3.0 3.0 3.0 3.0 3.0 3.0 4.0 4.0 4.0 4.0 4.0 4.0 4.0 4.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 </table>
@@ -338,7 +316,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="224" levels="1" name="none">
   <set name="mpConsume" val="10"/>
   <set name="power" val="0.0"/>
@@ -349,7 +326,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="225" levels="3" name="Acrobatic Move"> 
   <table name="#gain"> 4 5 6 </table> 
   <set name="power" val="0.0"/> 
@@ -364,7 +340,6 @@
     </add> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="226" levels="1" name="Relax">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -377,7 +352,6 @@
     </effect>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="227" levels="50" name="Light Armor Mastery">
   <table name="#pDef">
 	4.2 5.3 6.5 7.7 9 9.9 10.8 12.7 13.7 14.8
@@ -416,7 +390,6 @@
     </add>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="228" levels="3" name="Fast Spell Casting">
   <table name="#rate"> 1.05 1.07 1.1 </table>
   <set name="power" val="0.0"/>
@@ -428,7 +401,6 @@
     <mul order="0x50" stat="mAtkSpd" val="#rate"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="229" levels="7" name="Fast Mana Recovery">
   <table name="#regMp"> 1.1 1.4 1.8 2.2 2.8 3.8 5.3 </table>
   <set name="power" val="0.0"/>
@@ -440,7 +412,6 @@
     <add order="0x40" stat="regMp" val="#regMp"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="230" levels="2" name="Sprint">
 <!-- Done by dc -->
 <table name="#Tab-runSpd"> 20 33 </table>
@@ -462,7 +433,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="231" levels="50" name="Heavy Armor Mastery">
   <table name="#pDef">
       1.9   3.3   4.8   6.4   8.1   8.9   9.8  11.7  12.7  13.7
@@ -488,7 +458,6 @@
     </add>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="232" levels="52" name="Heavy Armor Mastery">
   <table name="#pDef">
      17.7  19.1  20.5  23.5  25.0  26.7  30.0  31.8  33.6  37.4
@@ -514,7 +483,6 @@
     </add>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="233" levels="47" name="Light Armor Mastery">
   <table name="#pDef">
 	1.3 2.2 3.2 4.2 5.3 6.8 8.4 10.1 11.9 13.7
@@ -552,7 +520,6 @@
     </add>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="234" levels="41" name="Robe Mastery">
   <table name="#pDef">
      1.7   2.7   4.3   5.4   7.2   8.5  10.6  12.1  14.5  15.3
@@ -577,7 +544,6 @@
     </add>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="235" levels="41" name="Robe Mastery">
   <table name="#pDef">
      7.2   8.6  11.0  12.7  15.4  17.4  20.5  22.7  26.3  27.6
@@ -602,7 +568,6 @@
     </add>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="236" levels="41" name="Light Armor Mastery">
   <table name="#pDef">
     5.4   6.3   7.8   8.8  10.9  12.5  15.0  16.9  19.8  20.8
@@ -651,7 +616,6 @@
     </mul>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="237" levels="4" name="none">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -661,7 +625,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="238" levels="4" name="none">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -671,7 +634,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="239" levels="5" name="Expertise S">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -684,7 +646,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="240" levels="1" name="none">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -694,7 +655,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="241" levels="1" name="none">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -704,7 +664,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="242" levels="1" name="none">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -714,7 +673,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="243" levels="1" name="none">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -724,7 +682,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="244" levels="3" name="Armor Mastery">
   <table name="#pDef"> 6.7 8 9.2 </table>
   <set name="power" val="0.0"/>
@@ -736,7 +693,6 @@
     <add order="0x40" stat="pDef" val="#pDef"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="245" levels="15" name="Wild Sweep">
   <table name="#mpConsume"> 22 22 22 23 24 25 27 29 30 31 31 33 35 36 37 </table>
   <table name="#power"> 90.0 97.0 105.0 123.0 132.0 143.0 165.0 177.0 191.0 219.0 235.0 251.0 287.0 306.0 326.0 </table>
@@ -754,7 +710,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="246" levels="1" name="Seal of Ruler">
   <set name="mpConsume" val="50"/>
   <set name="power" val="0.0"/>
@@ -767,7 +722,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="247" levels="1" name="Build Headquarters">
   <set name="mpConsume" val="30"/>
   <set name="power" val="0.0"/>
@@ -781,7 +735,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="248" levels="3" name="Crystallize">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -791,7 +744,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="249" levels="42" name="Weapon Mastery">
   <table name="#pAtk"> 1.5 2.8 4.5 5.7 6.7 8.3 9.5 11.6 13.3 16 17 18.1 20.4 21.6 22.8 25.5 26.9 28.3 31.4 33 34.6 38 39.8 41.7 43.7 45.8 48 50.3 52.7 55.2 57.8 60.5 63.3 66.2 69.2 72.3 75.5 78.8 82.2 85.7 89.3 93 </table>
   <table name="#mAtk"> 1.9 3.5 5.7 7.2 8.3 10.3 11.9 14.6 16.6 20 21.3 22.6 25.4 26.9 28.5 31.8 33.6 35.4 39.2 41.2 43.2 47.5 49.8 52.1 52.5 55 57.6 60.3 63.1 66 69 72.1 75.3 78.6 82 85.5 89.1 92.8 96.6 100.5 104.5 108.6 </table>
@@ -805,7 +757,6 @@
     <add order="0x40" stat="mAtk" val="#mAtk"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="250" levels="24" name="Weapon Mastery">
   <table name="#pAtk"> 1.5 2.8 4.5 5.7 6.7 8.3 9.5 11.6 13.3 16. 17. 18.1 20.4 21.6 22.8 25.5 26.9 28.3 31.4 33. 34.6 38. 39.8 41.7 </table>
   <table name="#mAtk"> 1.9 3.5 5.7 7.2 8.3 10.3 11.9 14.6 16.6 20 21.3 22.6 25.4 26.9 28.5 31.8 33.6 35.4 39.2 41.2 43.2 47.5 49.8 52.1 </table>
@@ -819,7 +770,6 @@
     <add order="0x40" stat="mAtk" val="#mAtk"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="251" levels="45" name="Robe Mastery">
   <table name="#pDef">
     11.6  13.4  16.1  18.4  20.9  23.8  26.9  29.1  32.8  35.4
@@ -844,7 +794,6 @@
     </add>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="252" levels="45" name="Light Armor Mastery">
   <table name="#pDef">
    12.6  14.5  17.5  19.3  21.2  23.2  25.5  27.0  30.1  32.5
@@ -893,7 +842,6 @@
     </mul>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="253" levels="43" name="Heavy Armor Mastery">
   <table name="#pDef">
     11.6  13.3  15.2  17.2  19.5  21.1  23.7  25.6  28.7  30.8
@@ -934,7 +882,6 @@
     </mul>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="254" levels="11" name="Spoil"> 
   <table name="#mpConsume"> 13 20 25 32 38 44 50 55 60 64 67 </table> 
   <set name="mpConsume" val="#mpConsume"/> 
@@ -949,7 +896,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="255" levels="15" name="Power Smash">
   <table name="#mpConsume"> 22 22 22 23 24 25 27 29 30 31 31 33 34 35 36 </table>
   <table name="#power"> 90.0 97.0 105.0 123.0 132.0 143.0 165.0 177.0 191.0 219.0 235.0 251.0 268.0 287.0 306.0 </table>
@@ -967,7 +913,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="256" levels="1" name="Accuracy">
   <table name="#acc"> 10 </table>
   <table name="#mana"> 0.2 </table>
@@ -986,7 +931,6 @@
     </effect>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="257" levels="45" name="Sword Blunt Mastery">
   <table name="#pAtk">
      4.5   7.3   8.9  10.7  12.8  15.1  17.7  20.5  23.7  25.4
@@ -1007,7 +951,6 @@
     </add>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="258" levels="33" name="Light Armor Mastery">
   <table name="#pDef">
    11.1  11.8  12.5  14.0  14.8  15.6  17.3  18.1  19.0  20.8
@@ -1055,7 +998,6 @@
     </mul>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="259" levels="33" name="Heavy Armor Mastery">
   <table name="#pDef">
     14.8  15.6  16.5  18.3  19.2  20.2  22.1  23.1  24.1  26.2
@@ -1095,7 +1037,6 @@
     </mul>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="260" levels="37" name="Hammer Crush"> 
 <table name="#mpConsume"> 
  40 41 43 43 44 45 47 48 49 51 
@@ -1126,7 +1067,6 @@
 <effect count="1" name="Stun" time="9" val="0"/> 
 </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="261" levels="6" name="Triple Sonic Slash">
   <table name="#charges"> 1 2 3 4 5 6 </table>
   <table name="#mpConsume"> 114 117 120 123 125 128 </table>
@@ -1149,7 +1089,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="262" levels="21" name="Holy Blessing"> 
   <table name="#mpConsume"> 115 119 122 122 127 130 134 139 143 148 152 157 159 159 164 168 173 177 180 185 189 193 195 195 199 203 207 210 214 218 222 224 228 230 233 237 239</table> 
   <table name="#power"> 236.0 245.0 254.0 262.0 271.0 281.0 290.0 299.0 308.0 318.0 327.0 337.0 346.0 356.0 365.0 375.0 384.0 393.0 403.0 412.0 421.0 430.0 439.0 448.0 457.0 466.0 474.0 482.0 490.0 498.0 506.0 513.0 520.0 527.0 534.0 540.0 546.0 </table> 
@@ -1166,7 +1105,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="263" levels="37" name="Deadly Blow"> 
 <!-- Done by lucl --> 
  <table name="#mpConsume"> 36 37 38 38 40 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 </table> 
@@ -1188,7 +1126,6 @@
    </add> 
  </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="264" levels="1" name="Song of Earth">
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
@@ -1208,7 +1145,6 @@
   </effect>
  </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="265" levels="1" name="Song of Life">
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
@@ -1228,7 +1164,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="266" levels="1" name="Song of Water">
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
@@ -1248,7 +1183,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="267" levels="1" name="Song of Warding">
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
@@ -1268,7 +1202,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="268" levels="1" name="Song of Wind">
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
@@ -1288,7 +1221,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="269" levels="1" name="Song of Hunter">
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
@@ -1308,7 +1240,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="270" levels="1" name="Song of Invocation">
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
@@ -1323,7 +1254,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="271" levels="1" name="Dance of Warrior">
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
@@ -1344,7 +1274,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="272" levels="1" name="Dance of Inspiration">
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
@@ -1365,7 +1294,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="273" levels="1" name="Dance of Mystic">
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
@@ -1386,7 +1314,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="274" levels="1" name="Dance of Fire">
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
@@ -1407,7 +1334,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="275" levels="1" name="Dance of Fury">
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
@@ -1428,7 +1354,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="276" levels="1" name="Dance of concentration">
 <!-- Done by lucl -->
  <set name="weaponsAllowed" val="512"/>
@@ -1449,7 +1374,6 @@
 </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="277" levels="1" name="Dance of Light">
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
@@ -1465,7 +1389,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="278" levels="6" name="Summon Viper Cubic"> 
   <table name="#mpConsume"> 44 50 55 60 64 67 </table> 
   <table name="#itemConsumeCount"> 3 4 5 6 6 6 </table> 
@@ -1489,7 +1412,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="279" levels="5" name="Lightning Strike">
   <table name="#mpConsume"> 11 15 20 25 30 </table>
   <table name="#power"> 82.0 123.0 164.0 205.0 246.0 </table>
@@ -1509,7 +1431,6 @@
 	<effect count="1" name="Stun" time="9" val="0"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="280" levels="37" name="Burning Fist"> 
   <table name="#mpConsume"> 47 48 50 50 51 53 54 56 57 59 61 62 64 64 66 67 69 71 72 74 76 77 79 79 81 82 84 85 86 88 89 91 92 93 95 96 97 </table> 
   <table name="#power"> 431.0 458.0 486.0 516.0 547.0 579.0 612.0 647.0 683.0 721.0 760.0 800.0 842.0 885.0 929.0 974.0 1021.0 1069.0 1118.0 1169.0 1220.0 1272.0 1326.0 1380.0 1435.0 1491.0 1548.0 1605.0 1663.0 1721.0 1780.0 1838.0 1897.0 1956.0 2015.0 2073.0 2131.0 </table> 
@@ -1528,7 +1449,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="281" levels="37" name="Soul Breaker"> 
   <table name="#mpConsume"> 
     40 41 43 43 44 45 47 48 49 51 
@@ -1559,7 +1479,6 @@
    <effect count="1" name="Stun" time="9" val="0"/> 
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="282" levels="1" name="Totem Spirit Puma"> 
   <set name="mpConsume" val="18"/> 
   <set name="power" val="0.0"/> 
@@ -1583,7 +1502,6 @@
  </effect> 
 </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="283" levels="7" name="Summon Dark Panther">
   <table name="#mpConsume">
       70  88 107 127 148
@@ -1617,7 +1535,6 @@
   <for>
   </for>
 </skill>
-﻿<?xml version="1.0" encoding="UTF-8"?>
 <skill id="284" levels="40" name="Hurricane Assault">
 	<table name="#mpConsume"> 49 50 52 56 58 59 59 61 63 65 67 69 71 73 75 77 77 79 81 83 85 87 89 91 93 94 95 97 98 100 102 104 105 107 109 110 112 113 115 116 </table>
 	<table name="#power"> 501.0 535.0 570.0 607.0 646.0 729.0 773.0 820.0 868.0 918.0 971.0 1025.0 1081.0 1140.0 1200.0 1262.0 1327.0 1393.0 1461.0 1531.0 1603.0 1677.0 1753.0 1830.0 1908.0 1988.0 2070.0 2153.0 2237.0 2322.0 2408.0 2494.0 2581.0 2669.0 2757.0 2846.0 2934.0 3022.0 3109.0 3196.0 </table>
@@ -1639,7 +1556,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="285" levels="18" name="Higher Mana Gain">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1649,7 +1565,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="286" levels="3" name="Provoke">
   <table name="#mpConsume"> 57 75 89 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1664,7 +1579,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="287" levels="3" name="Lionheart">
   <table name="#mpConsume"> 31 44 58 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1680,7 +1594,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="288" levels="4" name="Guard Stance">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1690,7 +1603,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="289" levels="7" name="Life Leech">
   <table name="#mpConsume"> 27 29 32 34 35 38 40 </table>
   <table name="#power"> 26 29 31 33 36 39 41 </table>
@@ -1710,7 +1622,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="290" levels="14" name="Final Frenzy">
 <!---
   Automatically generated from C3 client files.
@@ -1728,7 +1639,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="291" levels="11" name="Final Fortress">
 <!---
   Automatically generated from C3 client files.
@@ -1746,7 +1656,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="292" levels="1" name="Totem Spirit Bison">
 <!---
   Automatically generated from C3 client files.
@@ -1765,7 +1674,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="293" levels="20" name="Two-handed Weapon Mastery">
 <!---
   Automatically generated from C3 client files.
@@ -1784,7 +1692,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="294" levels="1" name="Shadow Sense">
 <!---
   Automatically generated from C3 client files.
@@ -1801,7 +1708,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="295" levels="1" name="Iron Body">
 <!---
   Automatically generated from C3 client files.
@@ -1818,7 +1724,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="296" levels="1" name="Rest of Chameleon">
 <!---
   Automatically generated from C3 client files.
@@ -1836,7 +1741,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="297" levels="2" name="Duelist Spirit"> 
   
   <table name="#Tab-pAtkSpd"> 5 9 </table> 
@@ -1862,7 +1766,6 @@
   </for>  
   
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="298" levels="1" name="Totem Spirit Rabbit">
 <!---
   Automatically generated from C3 client files.
@@ -1881,7 +1784,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="299" levels="1" name="Summon Wild Hog Cannon">
 <!---
   Automatically generated from C3 client files.
@@ -1900,3 +1802,4 @@
   <for>
   </for>
 </skill>
+</list>

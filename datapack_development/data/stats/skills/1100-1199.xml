@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
+<list>
 <skill id="1100" levels="2" name="Chill Flame">
   <table name="#dmg"> 20 30 </table>
   <table name="#mpConsume"> 15 23 </table>
@@ -20,7 +21,6 @@
     <effect count="15" name="DamOverTime" time="1" val="#dmg"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1101" levels="2" name="Blaze Quake">
 <table name="#dmg"> 44 60 </table>
   <table name="#mpConsume"> 50 68 </table>
@@ -42,7 +42,6 @@
     <effect count="15" name="DamOverTime" time="1" val="#dmg"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1102" levels="4" name="Aura Sink">
   <table name="#mpConsume"> 23 30 39 48 </table>
   <table name="#power"> 3.0 4.0 5.0 6.0 </table>
@@ -63,7 +62,6 @@
     <effect count="15" name="ManaDamOverTime" time="2" val="#dmg"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1103" levels="1" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -80,7 +78,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1104" levels="9" name="Seal of Winter">
 <!-- Done by dc -->
 <table name="#Tab-pAtkSpd"> 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 </table>
@@ -103,7 +100,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1105" levels="3" name="Madness">
   <table name="#mpConsume"> 20 30 44 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -120,7 +116,6 @@
 	<effect count="5" name="Confusion" time="6" val="0"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1106" levels="1" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -137,7 +132,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1107" levels="2" name="Frost Flame">
   <table name="#dmg"> 44 60 </table>
   <table name="#mpConsume"> 29 40 </table>
@@ -159,7 +153,6 @@
     <effect count="15" name="DamOverTime" time="1" val="#dmg"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1108" levels="2" name="Seal of Flame">
 <table name="#dmg"> 77 94 </table>
   <table name="#mpConsume"> 97 115 </table>
@@ -181,7 +174,6 @@
     <effect count="15" name="DamOverTime" time="1" val="#dmg"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1110" levels="4" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -196,7 +188,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1111" levels="18" name="Summon Kat the Cat">
   <table name="#mpConsume">
   	  39  44  53  60  70
@@ -237,7 +228,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1112" levels="4" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -252,7 +242,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1113" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -267,7 +256,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1114" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -282,7 +270,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1115" levels="3" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -297,7 +284,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1116" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -312,7 +298,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1117" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -327,7 +312,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1118" levels="5" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -342,7 +326,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1119" levels="5" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -357,7 +340,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1120" levels="1" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -372,7 +354,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1121" levels="5" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -387,7 +368,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1122" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -402,7 +382,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1123" levels="3" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -417,7 +396,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1124" levels="3" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -432,7 +410,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1125" levels="1" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -447,7 +424,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1126" levels="34" name="Servitor Recharge"> 
   <table name="#mpConsume"> 42 44 49 53 57 60 67 70 74 78 82 87 90 94 98 103 104 107 109 110 113 115 117 119 120 123 124 127 128 130 132 133 135 137 </table> 
   <table name="#power"> 41.0 44.0 49.0 52.0 57.0 60.0 66.0 70.0 73.0 77.0 81.0 86.0 90.0 94.0 98.0 102.0 104.0 106.0 108.0 110.0 113.0 115.0 116.0 118.0 120.0 122.0 124.0 126.0 128.0 129.0 131.0 133.0 134.0 136.0 </table> 
@@ -464,7 +440,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1127" levels="45" name="Servitor Heal"> 
   <table name="#mpConsume"> 24 27 30 33 35 37 42 44 44 48 50 52 58 60 62 64 65 68 72 74 77 80 80 83 87 89 90 93 95 97 98 98 100 102 104 105 108 109 112 113 114 115 117 119 120 </table> 
   <table name="#power"> 145.0 162.0 181.0 212.0 222.0 234.0 269.0 281.0 294.0 333.0 347.0 361.0 404.0 419.0 434.0 465.0 481.0 496.0 528.0 544.0 561.0 593.0 609.0 626.0 658.0 674.0 690.0 706.0 722.0 737.0 753.0 768.0 783.0 798.0 812.0 826.0 840.0 854.0 867.0 879.0 892.0 904.0 915.0 926.0 936.0 </table> 
@@ -481,7 +456,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1128" levels="9" name="Summon Shadow">
   <table name="#mpConsume">
       39  44  53  60  70
@@ -522,7 +496,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1129" levels="2" name="Summon Reanimated Man">
   <table name="#mpConsume">
       78  94
@@ -548,7 +521,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1130" levels="3" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -563,7 +535,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1131" levels="3" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -578,7 +549,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1132" levels="1" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -593,7 +563,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1133" levels="3" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -608,7 +577,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1134" levels="1" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -623,7 +591,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1135" levels="1" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -638,7 +605,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1136" levels="1" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -653,7 +619,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1137" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -668,7 +633,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1138" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -685,7 +649,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1139" levels="2" name="Servitor Magic Shield">
 <!-- Done by dc -->
 <table name="#Tab-mDef"> 1.23 1.3 </table>
@@ -707,7 +670,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1140" levels="3" name="Servitor Physical Shield">
 <!-- Done by dc -->
 <table name="#Tab-pDef"> 1.08 1.12 1.15 </table>
@@ -729,7 +691,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1141" levels="2" name="Servitor Haste">
 <!-- Done by dc -->
 <table name="#Tab-pAtkSpd"> 1.15 1.33 </table>
@@ -751,7 +712,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1142" levels="4" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -768,7 +728,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1143" levels="4" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -785,7 +744,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1144" levels="2" name="Fast Servitor">
 <!-- Done by dc -->
 <table name="#Tab-runSpd"> 20 33 </table>
@@ -807,7 +765,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1145" levels="3" name="Bright Servitor">
 <!-- Done by dc -->
 <table name="#Tab-mAtk"> 1.55 1.65 1.75 </table>
@@ -829,7 +786,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1146" levels="3" name="Mighty Servitor">
 <!-- Done by dc -->
 <table name="#Tab-pAtk"> 1.08 1.12 1.15 </table>
@@ -851,7 +807,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1147" levels="6" name="Vampiric Touch"> 
   <table name="#mpConsume"> 20 23 27 29 32 34 </table> 
   <table name="#power"> 18.0 21.0 23.0 26.0 29.0 32.0 </table> 
@@ -869,7 +824,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1148" levels="13" name="Death Spike"> 
   <table name="#mpConsume"> 24 28 31 35 37 39 41 42 44 46 47 48 50 </table> 
   <table name="#power"> 58.0 65.0 72.0 78.0 82.0 85.0 89.0 92.0 
@@ -889,7 +843,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1149" levels="1" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -904,7 +857,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1150" levels="4" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -919,7 +871,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1151" levels="7" name="Corpse Life Drain">
   <table name="#drain"> 260 299 347 384 426 467 509 </table>
   <table name="#mpConsume"> 14 15 18 20 23 24 27 </table>
@@ -941,7 +892,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1152" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -956,7 +906,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1153" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -971,7 +920,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1154" levels="3" name="Summon Corrupted Man">
   <table name="#mpConsume">
       70  87  103
@@ -997,7 +945,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1155" levels="6" name="Corpse Burst">
   <table name="#mpConsume"> 42 44 45 48 49 52 </table>
   <table name="#power"> 31.0 33.0 34.0 36.0 38.0 39.0 </table>
@@ -1014,7 +961,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1156" levels="1" name="Forget">
   <set name="mpConsume" val="39"/>
   <set name="power" val="40.0"/>
@@ -1029,7 +975,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1157" levels="3" name="Body To Mind">
   <table name="#hpConsume"> 131 209 280 </table>
   <table name="#power"> 22.0 35.0 47.0 </table>
@@ -1046,7 +991,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1158" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -1063,7 +1007,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1159" levels="22" name="Curse Death Link"> 
   <table name="#mpConsume"> 45 48 49 52 53 54 55 55 57 58 59 60 60 62 63 
     64 64 65 67 67 69 69</table> 
@@ -1082,7 +1025,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1160" levels="6" name="Slow"> 
 <!-- Done by dc --> 
 <table name="#Tab-runSpd"> 0.85 0.7 0.5 0.35 0.25 0.1 </table> 
@@ -1105,7 +1047,6 @@
  </effect> 
 </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1161" levels="1" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -1122,7 +1063,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1162" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -1139,7 +1079,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1163" levels="2" name="Curse Discord">
   <table name="#mpConsume"> 35 48 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1156,7 +1095,6 @@
 	<effect count="5" name="ConfuseMob" time="6" val="0"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1164" levels="2" name="Curse:Weakness">
 <!-- Done by dc -->
 <table name="#Tab-pAtk"> 1.15 1.3 </table>
@@ -1179,7 +1117,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1165" levels="3" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -1196,7 +1133,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1166" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -1213,7 +1149,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1167" levels="4" name="Poisonous Cloud">
 <table name="#dmg"> 18 24 31 38 </table>
   <table name="#mpConsume"> 34 45 65 77 </table>
@@ -1234,7 +1169,6 @@
     <effect count="6" name="DamOverTime" time="5" val="#dmg"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1168" levels="5" name="Curse:Poison">
 <table name="#dmg"> 8 18 24 31 38 </table>
   <table name="#mpConsume"> 10 20 27 39 48 </table>
@@ -1255,7 +1189,6 @@
     <effect count="6" name="DamOverTime" time="5" val="#dmg"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1169" levels="3" name="Curse Fear">
   <table name="#mpConsume"> 35 44 52 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1271,7 +1204,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1170" levels="2" name="Anchor">
   <table name="#mpConsume"> 39 52 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1290,7 +1222,6 @@
     <effect count="1" name="Stun" time="30" val="0"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1171" levels="19" name="Blazing Circle"> 
   <table name="#mpConsume"> 
      50 53 55 59 62 65 68  70  74 77 
@@ -1314,7 +1245,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1172" levels="8" name="Aura Burn">
   <table name="#mpConsume"> 18 20 22 23 25 27 29 30 </table>
   <table name="#power"> 19.0 21.0 24.0 25.0 28.0 30.0 33.0 36.0 </table>
@@ -1331,7 +1261,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1173" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -1346,7 +1275,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1174" levels="22" name="Frost Wall"> 
   <table name="#mpConsume"> 68 70 74 77 79 80 82 83 85 87 88 89 90 93 94 
     95 97 98 99 100 102 103</table> 
@@ -1366,7 +1294,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1175" levels="8" name="Aqua Swirl">
   <table name="#mpConsume"> 18 20 22 23 25 27 29 30 </table>
   <table name="#power"> 23.0 26.0 29.0 32.0 35.0 38.0 42.0 44.0 </table>
@@ -1384,7 +1311,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1176" levels="15" name="Tempest"> 
   <table name="#mpConsume"> 62 65 68 70 74 77 80 83 87 89 93 95 98 100 103 </table> 
   <table name="#power"> 31.0 33.0 34.0 36.0 38.0 39.0 41.0 43.0 45.0 46.0 48.0 
@@ -1403,7 +1329,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1177" levels="5" name="Wind Strike">
   <table name="#mpConsume"> 9 9 10 14 15 </table>
   <table name="#power"> 12.0 13.0 15.0 18.0 21.0 </table>
@@ -1421,7 +1346,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1178" levels="8" name="Twister">
   <table name="#mpConsume"> 18 20 22 23 25 27 29 30 </table>
   <table name="#power"> 23.0 26.0 29.0 32.0 35.0 38.0 42.0 44.0 </table>
@@ -1439,7 +1363,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1179" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -1454,7 +1377,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1180" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -1469,7 +1391,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1181" levels="3" name="Flame Strike">
   <table name="#mpConsume"> 29 34 40 </table>
   <table name="#power"> 13.0 16.0 19.0 </table>
@@ -1487,7 +1408,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1182" levels="3" name="Resist Aqua">
   <table name="#mpConsume"> 23 35 39 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1504,7 +1424,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1183" levels="2" name="Freezing Shackle">
 <table name="#dmg"> 77 94 </table>
   <table name="#mpConsume"> 59 70 </table>
@@ -1526,7 +1445,6 @@
     <effect count="15" name="DamOverTime" time="1" val="#dmg"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="1184" levels="6" name="Ice Bolt"> 
   <table name="#mpConsume"> 9 10 14 15 18 20 </table> 
   <table name="#power"> 8.0 9.0 11.0 13.0 14.0 16.0 </table> 
@@ -1549,7 +1467,6 @@
     </effect> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1185" levels="1" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -1566,7 +1483,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1186" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -1583,7 +1499,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1187" levels="3" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -1600,7 +1515,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1188" levels="5" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -1617,7 +1531,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1189" levels="3" name="Resist Wind">
   <table name="#mpConsume"> 30 35 39 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1634,7 +1547,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1190" levels="3" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -1651,7 +1563,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1191" levels="3" name="Resist Fire">
   <table name="#mpConsume"> 27 35 39 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1668,7 +1579,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1192" levels="3" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -1685,7 +1595,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1193" levels="1" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -1700,7 +1609,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1194" levels="6" name="none">
   <set name="mpConsume" val="11"/>
   <set name="power" val="0.0"/>
@@ -1715,7 +1623,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1195" levels="1" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -1730,7 +1637,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1196" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -1745,7 +1651,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1197" levels="3" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -1760,7 +1665,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1198" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
@@ -1775,7 +1679,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="1199" levels="2" name="none">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
@@ -1792,3 +1695,4 @@
   <for>
   </for>
 </skill>
+</list>

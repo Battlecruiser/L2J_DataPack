@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
+<list>
 <skill id="4001" levels="8" name="Mega Storm Strike">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 55 </table>
   <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 85.0 </table>
@@ -18,7 +19,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="4002" levels="7" name="Steel Blood"> 
   <table name="#mpConsume"> 18 29 40 53 68 83 98 </table> 
   <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 </table> 
@@ -36,7 +36,6 @@
   <for> 
   </for> 
 </skill> 
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4003" levels="1" name="Golem Body">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -46,7 +45,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4004" levels="1" name="Fragile Skull">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -56,7 +54,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4005" levels="1" name="Floating Target">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -66,7 +63,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4006" levels="1" name="Blazing Log">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -76,7 +72,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4007" levels="1" name="Immortal Life">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -86,7 +81,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4008" levels="1" name="Insect Skin">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -96,7 +90,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4009" levels="1" name="Resistance To Fire">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -106,7 +99,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4010" levels="1" name="Resistance To Wind">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -116,7 +108,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4011" levels="1" name="Resistance To Earth">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -126,7 +117,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4012" levels="1" name="Resistance To Water">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -136,7 +126,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4013" levels="1" name="Resistance To Fire, Vulnerable To Water">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -146,7 +135,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4014" levels="1" name="Resistance To Water, Vulnerable To Fire">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -156,7 +144,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4015" levels="1" name="Resistance To Wind, Vulnerable To Earth">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -166,7 +153,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4016" levels="1" name="Resistance To Earth, Vulnerable To Wind">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -176,7 +162,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4017" levels="1" name="Brandish Queen Ant">
   <set name="power" val="417.0"/>
   <set name="target" val="TARGET_AURA_CLOSE"/>
@@ -188,7 +173,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4018" levels="1" name="Decrease Speed">
   <set name="save" val="5"/>
   <set name="power" val="417.0"/>
@@ -202,7 +186,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4019" levels="1" name="Decrease Speed">
   <set name="save" val="5"/>
   <set name="power" val="0.0"/>
@@ -221,7 +204,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4020" levels="1" name="Heal Queen Ant 1">
   <set name="power" val="10845.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -234,7 +216,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4021" levels="1" name="Body Of Queent Ant">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -244,7 +225,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4022" levels="1" name="Body Of Nurse Ant">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -254,7 +234,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4023" levels="1" name="Body Of Royal Guard Ant">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -264,7 +243,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4024" levels="1" name="Heal Queen Ant 2">
   <set name="power" val="10845.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -277,7 +255,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4025" levels="7" name="Master Recharge">
   <table name="#mpConsume"> 24 39 53 70 90 110 130 </table>
   <table name="#power"> 23.0 38.0 52.0 70.0 90.0 110.0 129.0 </table>
@@ -294,7 +271,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4026" levels="1" name="Gludio Flame">
   <set name="mpConsume" val="83"/>
   <set name="power" val="43.0"/>
@@ -310,7 +286,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4027" levels="1" name="Gludio Heal">
   <set name="mpConsume" val="98"/>
   <set name="power" val="627.0"/>
@@ -325,7 +300,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4028" levels="3" name="Enhance P.Atk">
   <table name="#mpConsume"> 8 14 26 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -346,7 +320,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4029" levels="3" name="Enhance P.Def">
   <table name="#mpConsume"> 8 14 26 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -367,7 +340,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4030" levels="3" name="Enhance P.Atk">
 <!-- Done by dc -->
 <table name="#Tab-pAtk"> 1.08 1.12 1.15 </table>
@@ -390,7 +362,6 @@
 </for>
 <!--p_physical_attack;{all};15;per -->
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4031" levels="3" name="Enhance P.Def">
 <!-- Done by dc -->
 <table name="#Tab-pDef"> 1.08 1.12 1.15 </table>
@@ -412,7 +383,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4032" levels="7" name="Wield Temper">
   <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
   <table name="#power"> 46.0 105.0 219.0 417.0 722.0 1136.0 1626.0 </table>
@@ -428,7 +398,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4033" levels="7" name="NPC Burn">
   <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
   <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 </table>
@@ -445,7 +414,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4034" levels="7" name="Decrease Speed">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
   <table name="#power"> 11.0 16.0 23.0 31.0 41.0 51.0 61.0 </table>
@@ -465,7 +433,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4035" levels="7" name="Poison">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 </table>
@@ -485,7 +452,6 @@
     <effect count="4" name="DamOverTime" time="5" val="#power" abnormal="poison"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4036" levels="7" name="Toxic Smoke">
   <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 </table>
@@ -505,7 +471,6 @@
     <effect count="6" name="DamOverTime" time="5" val="#power" abnormal="poison"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4037" levels="2" name="Weaken P.Atk">
 <!-- Done by dc -->
 <table name="#Tab-pAtk"> 1.15 1.3 </table>
@@ -528,7 +493,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4038" levels="5" name="Decrease AtkSpd">
 <!-- Done by dc -->
 <table name="#Tab-pAtkSpd"> 1.1 1.2 1.3 1.4 1.5 </table>
@@ -551,7 +515,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4039" levels="7" name="Absorb MP">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
   <table name="#power"> 34.0 57.0 78.0 105.0 134.0 165.0 194.0 </table>
@@ -568,7 +531,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4040" levels="7" name="NPC Bow">
   <table name="#mpConsume"> 27 44 62 85 109 135 157 </table>
   <table name="#power"> 122.0 279.0 584.0 1110.0 1923.0 3030.0 4336.0 </table>
@@ -584,7 +546,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4041" levels="2" name="Cruma Blaze">
   <table name="#mpConsume"> 40 45 </table>
   <table name="#power"> 60.0 68.0 </table>
@@ -601,7 +562,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4042" levels="1" name="Nurka Blaze">
   <set name="mpConsume" val="40"/>
   <set name="power" val="60.0"/>
@@ -616,7 +576,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4043" levels="1" name="Partisan Flame">
   <set name="mpConsume" val="60"/>
   <set name="power" val="30.0"/>
@@ -632,7 +591,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4044" levels="1" name="Partisan Heal">
   <set name="mpConsume" val="70"/>
   <set name="power" val="427.0"/>
@@ -647,7 +605,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4045" levels="1" name="Various Magic Defenses Used by Boss">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -657,7 +614,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4046" levels="7" name="Sleep">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -676,7 +632,6 @@
     <effect count="1" name="Sleep" time="30" val="0"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4047" levels="7" name="Hold">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -694,7 +649,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4048" levels="3" name="NPC Dash">
   <set name="mpConsume" val="10"/>
   <set name="power" val="0.0"/>
@@ -711,7 +665,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4049" levels="3" name="Cubic Drain">
   <table name="#power"> 
    26.0 31.0 36.0
@@ -724,7 +677,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?> 
 <skill id="4050" levels="3" name="Cubic Drain"> 
   <table name="#power"> 15.0 21.0 26.0 </table> 
   <set name="power" val="#power"/> 
@@ -737,7 +689,6 @@
   <for> 
   </for> 
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4051" levels="3" name="Cubic Heal">
   <table name="#power"> 201.0 241.0 281.0 </table>
   <set name="power" val="#power"/>
@@ -749,7 +700,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4052" levels="2" name="Venom">
   <table name="#dmg"> 31 38 </table>
   <set name="save" val="3"/>
@@ -764,7 +714,6 @@
     <effect count="6" name="DamOverTime" time="5" val="#dmg" abnormal="poison"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4053" levels="3" name="Drop Attack Power">
   <table name="#Tab-pAtk"> 15.0 15.0 30.0 </table>
   <set name="save" val="6"/>
@@ -781,7 +730,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4054" levels="3" name="Drop defense">
   <table name="#Tab-pDef"> 15.0 20.0 20.0 </table>
   <set name="save" val="4"/>
@@ -798,7 +746,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4055" levels="3" name="Drop Attack Speed">
   <table name="#Tab-pAtkSpd"> 10 30 50 </table>
   <set name="save" val="5"/>
@@ -815,7 +762,6 @@
     </effect>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4056" levels="1" name="Immortal Attack">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -825,7 +771,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4057" levels="1" name="Insect Weak Point">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -835,7 +780,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4058" levels="1" name="Plant Weak Point">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -845,7 +789,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4059" levels="1" name="Animal Weak Point">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -855,7 +798,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4060" levels="1" name="Beast Weak Point">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -865,7 +807,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4061" levels="1" name="Dragon Weak Point">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -875,7 +816,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4062" levels="1" name="Orfen Body">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -885,7 +825,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4063" levels="1" name="Orfen Strike">
   <set name="save" val="3"/>
   <set name="power" val="3606.0"/>
@@ -900,7 +839,6 @@
 	<effect count="1" name="Stun" time="9" val="0"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4064" levels="1" name="Orfen Dispel">
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -916,7 +854,6 @@
 	<effect count="1" name="Stun" time="9" val="0"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4065" levels="7" name="NPC Heal">
   <table name="#mpConsume"> 17 30 44 62 80 98 114 </table>
   <table name="#power"> 83.0 151.0 245.0 362.0 494.0 627.0 743.0 </table>
@@ -933,7 +870,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4066" levels="7" name="NPC Twister">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
   <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 </table>
@@ -951,7 +887,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4067" levels="7" name="NPC Blow">
   <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
   <table name="#power"> 137.0 314.0 656.0 1249.0 2164.0 3408.0 4878.0 </table>
@@ -968,7 +903,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4068" levels="7" name="Mechanical Cannon">
   <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
   <table name="#power"> 46.0 105.0 219.0 417.0 722.0 1136.0 1626.0 </table>
@@ -984,7 +918,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4069" levels="7" name="Warping Beam Cannon">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
   <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 </table>
@@ -1001,7 +934,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4070" levels="1" name="Drop Attack Speed">
   <set name="save" val="5"/>
   <set name="power" val="0.0"/>
@@ -1020,7 +952,6 @@
 </for>
  
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4071" levels="1" name="Strong On">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1030,7 +961,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4072" levels="7" name="NPC Thunder Storm">
   <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
   <table name="#power"> 16.0 35.0 73.0 139.0 241.0 379.0 542.0 </table>
@@ -1050,7 +980,6 @@
 	<effect count="1" name="Stun" time="9" val="0"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4073" levels="7" name="NPC Stun Attack">
   <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
   <table name="#power"> 16.0 35.0 73.0 139.0 241.0 379.0 542.0 </table>
@@ -1070,7 +999,6 @@
 	<effect count="1" name="Stun" time="9" val="0"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4074" levels="2" name="NPC Haste">
 <!-- Done by dc -->
 <table name="#Tab-pAtkSpd"> 1.15 1.33 </table>
@@ -1092,7 +1020,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4075" levels="7" name="Shock">
   <table name="#mpConsume"> 14 23 32 43 55 68 79 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1109,7 +1036,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4076" levels="3" name="Reduction in movement speed">
 <!-- Done by dc -->
 <table name="#Tab-runSpd"> 1.15 1.3 1.5 </table>
@@ -1132,7 +1058,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4077" levels="7" name="NPC Aura Burn">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
   <table name="#power"> 14.0 21.0 30.0 42.0 55.0 68.0 82.0 </table>
@@ -1149,7 +1074,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4078" levels="7" name="NPC Flame">
   <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
   <table name="#power"> 9.0 13.0 19.0 26.0 34.0 43.0 51.0 </table>
@@ -1167,7 +1091,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4079" levels="1" name="Siege Golem Special Attack">
   <set name="power" val="266024.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1181,7 +1104,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4080" levels="1" name="Dark Heal">
   <set name="mpConsume" val="98"/>
   <set name="power" val="627.0"/>
@@ -1195,7 +1117,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4081" levels="1" name="Pretending to steal">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1208,7 +1129,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4082" levels="1" name="Poison of Death">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1220,7 +1140,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4083" levels="1" name="Die! You fool!">
   <set name="power" val="90000.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1234,7 +1153,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4084" levels="1" name="I am strong against physical attack.">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1247,7 +1165,6 @@
     <mul  order='0x50' stat='pDef' val="#Tab-pDef"/>
  </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4085" levels="1" name="My critical is really scary.">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1260,7 +1177,6 @@
     <mul  order='0x50' stat='cAtk' val="#Tab-cAtk"/>
  </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4086" levels="1" name="I'm good at using critical.">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1273,7 +1189,6 @@
      <mul  order='0x50' stat='rCrit' val="#Tab-rCrit"/>
  </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4087" levels="7" name="NPC Blaze">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
   <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 </table>
@@ -1291,7 +1206,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4088" levels="7" name="Bleeding">
 	<table name="#damage">2 3 5 6 8 9 10</table>
   <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
@@ -1312,7 +1226,6 @@
 	<effect count="24" name="DamOverTime" time="5" val="#damage"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4089" levels="1" name="NPC Bear Stun">
   <set name="mpConsume" val="14"/>
   <set name="power" val="0.0"/>
@@ -1336,7 +1249,6 @@
 </for>
  
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4090" levels="1" name="NPC Wolf Stun">
   <set name="mpConsume" val="14"/>
   <set name="power" val="0.0"/>
@@ -1356,7 +1268,6 @@
   </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4091" levels="1" name="NPC Ogre Stun">
   <set name="mpConsume" val="18"/>
   <set name="power" val="14.0"/>
@@ -1371,7 +1282,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4092" levels="1" name="NPC Puma Stun">
   <set name="mpConsume" val="14"/>
   <set name="power" val="0.0"/>
@@ -1395,7 +1305,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4093" levels="1" name="Can you hit me?">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1407,7 +1316,6 @@
     <add  order='0x40' stat='rEvas' val="4"/>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4094" levels="1" name="NPC Cancel">
   <set name="mpConsume" val="35"/>
   <set name="power" val="0.0"/>
@@ -1421,7 +1329,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4095" levels="1" name="Touch me and you'll get hurt too.">
   <set name="power" val="20.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1431,7 +1338,6 @@
   <for>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4096" levels="3" name="NPC Hawkeye">
   <table name="#mpConsume"> 8 14 26 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1454,7 +1360,6 @@
  </effect>
 </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4097" levels="7" name="Rapid Healing">
 	<table name="#hot">7 12 18 27 37 46 55</table>
   <table name="#mpConsume"> 33 59 88 122 159 195 228 </table>
@@ -1474,7 +1379,6 @@
 	<effect count="5" name="HealOverTime" time="3" val="#hot"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4098" levels="7" name="Silence">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1493,7 +1397,6 @@
 	<effect count="1" name="Mute" time="120" val="0"/>
   </for>
 </skill>
-<?xml version="1.0" encoding="UTF-8"?>
 <skill id="4099" levels="2" name="Berserker">
 <!-- Done by dc -->
 <table name="#Tab-pAtk"> 1.05 1.08 </table>
@@ -1519,3 +1422,4 @@
  </effect>
 </for>
 </skill>
+</list>
