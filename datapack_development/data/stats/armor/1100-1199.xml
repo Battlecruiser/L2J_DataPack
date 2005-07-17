@@ -1,0 +1,125 @@
+<item id='1100' name="cotton_tunic">
+  <for>
+    <add val='21' order='0x10' stat='pDef' />
+    <add val='38' order='0x10' stat='maxMp' />
+  </for>
+</item>
+<item id='1101' name="tunic_of_devotion">
+ <for>
+   <add stat='pDef' order='0x10'  val='30'/>
+   <add stat='maxMp' order='0x10' val='67' />
+   <mul stat='mAtkSpd' order='0x40' val='1.15'>
+     <and>
+     <using slotitem="1104;11"/>
+     <using slotitem="44;6"/> 
+     </and>
+   </mul>
+ </for>
+</item>
+<item id='1102' name="tunic_of_magicpower">
+  <for>
+    <add val='34' order='0x10' stat='pDef' />
+    <add val='86' order='0x10' stat='maxMp' />
+  </for>
+</item>
+<item id='1103' name="cotton_hose">
+  <for>
+    <add val='13' order='0x10' stat='pDef' />
+    <add val='23' order='0x10' stat='maxMp' />
+  </for>
+</item>
+<item id='1104' name="hose_of_devotion">
+  <for>
+    <add val='19' order='0x10' stat='pDef' />
+    <add val='42' order='0x10' stat='maxMp' />
+  </for>
+</item>
+<item id='1105' name="hose_of_magicpower">
+  <for>
+    <add val='21' order='0x10' stat='pDef' />
+    <add val='54' order='0x10' stat='maxMp' />
+  </for>
+</item>
+<item id='1119' name="short_leather_gloves">
+  <for>
+    <add val='11' order='0x10' stat='pDef' />
+  </for>
+</item>
+<item id='1120' name="paagrio_hand">
+  <for>
+    <add val='34' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='1121' name="apprentice's_shoes">
+  <for>
+    <add val='8' order='0x10' stat='pDef' />
+  </for>
+</item>
+<item id='1122' name="cotton_shoes">
+  <for>
+    <add val='11' order='0x10' stat='pDef' />
+  </for>
+</item>
+<item id='1123' name="blue_buckskin_boots">
+  <for>
+    <add val='22' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='1124' name="boots_of_power">
+  <for>
+    <add val='27' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='1125' name="assault_boots">
+  <for>
+    <add val='29' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='1126' name="crimson_boots">
+  <for>
+    <add val='34' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='1127' name="forgotten_boots">
+  <for>
+    <add val='36' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='1128' name="adamantite_boots">
+  <for>
+    <add val='39' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='1129' name="crude_leather_shoes">
+  <for>
+    <add val='11' order='0x10' stat='pDef' />
+  </for>
+</item>
+<item id='1146' name="squire's_shirt">
+  <for>
+    <add val='33' order='0x10' stat='pDef' />
+  </for>
+</item>
+<item id='1147' name="squire's_pants">
+  <for>
+    <add val='20' order='0x10' stat='pDef' />
+  </for>
+</item>
+<item id='1148' name="hard_leather_helmet">
+  <for>
+    <add val='26' order='0x10' stat='pDef' />
+  </for>
+</item>
+<item id='1149' name="shining_circlet">
+  <for>
+    <add val='54' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>

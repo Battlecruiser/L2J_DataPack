@@ -1,0 +1,81 @@
+<item id='2493' name="brigandine_shield">
+ <for>
+  <add val='-8' order='0x10' stat='rEvas' />
+  <set val='142' order='0x08' stat='sDef' />
+  <set val='20' order='0x08' stat='rShld' />
+  <add val='20' order='0x60' stat='maxHp'>
+   <and>
+	<using slotitem="2378;11"/>
+	<using slotitem="2411;6"/>
+	<using slotitem="352;10"/>
+   </and>
+  </add>
+ <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='2494' name="plate_shield">
+  <for>
+    <add val='-8' order='0x10' stat='rEvas' />
+    <set val='154' order='0x08' stat='sDef' />
+    <set val='20' order='0x08' stat='rShld' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='2495' name="chain_shield">
+  <for>
+    <add val='-8' order='0x10' stat='rEvas' />
+    <set val='166' order='0x08' stat='sDef' />
+    <set val='20' order='0x08' stat='rShld' />
+	<add val='198' order='0x60' stat='maxHp'>
+	 <and>
+	  <using slotitem="381;11"/>
+	  <using slotitem="2413;6"/>
+	  <using slotitem="354;10"/>
+    </and>
+    </add>
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='2496' name="dwarven_chain_shield">
+  <for>
+    <add val='-8' order='0x10' stat='rEvas' />
+    <set val='174' order='0x08' stat='sDef' />
+    <set val='20' order='0x08' stat='rShld' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='2497' name="full_plate_shield">
+  <for>
+    <add val='-8' order='0x10' stat='rEvas' />
+    <set val='203' order='0x08' stat='sDef' />
+    <set val='20' order='0x08' stat='rShld' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+  <for>  
+   <add stat='rShld' order='0x40' val='5'>
+     <and>
+       <using slotitem="2414;6"/>
+       <using slotitem="356;10"/>
+     </and>
+   </add> 
+ <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='2498' name="shield_of_nightmare">
+  <for>
+    <add val='-8' order='0x10' stat='rEvas' />
+    <set val='256' order='0x08' stat='sDef' />
+    <set val='20' order='0x08' stat='rShld' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='2499' name="elven_long_sword">
+  <for>
+    <set val='92' order='0x08' stat='pAtk' />
+    <set val='54' order='0x08' stat='mAtk' />
+    <set val='8' order='0x08' stat='rCrit' />
+    <set val='379' order='0x08' stat='pAtkSpd' />
+  <enchant val='0' order='0x0C' stat='pAtk' />
+<enchant val='0' order='0x0C' stat='mAtk' />
+</for>
+</item>

@@ -1,0 +1,430 @@
+<item id='347' name="ring_breastplate">
+  <for>
+    <add val='77' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='348' name="scale_mail">
+  <for>
+    <add val='87' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='349' name="compound_scale_mail">
+  <for>
+    <add val='95' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='350' name="dwarven_scale_mail">
+  <for>
+    <add val='95' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='351' name="blast_plate">
+  <for>
+    <add val='97' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='352' name="brigandine">
+ <for>
+  <add val='108' order='0x10' stat='pDef' />
+  <add stat='maxHp' order='0x60' val='153'>
+   <and>
+	<using slotitem="2378;11"/>
+	<using slotitem="2411;6"/>
+   </and>
+  </add>
+   <mul stat='pDef' order='0x60' val='1.05'>
+    <and>
+     <using slotitem="2378;11"/>
+     <using slotitem="2411;6"/>
+    </and>
+   </mul>
+ <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='353' name="half_plate">
+  <for>
+    <add val='111' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='354' name="chain_mail_shirt">
+  <for>
+    <add val='120' order='0x10' stat='pDef' />
+	<mul val='1.05' order='0x60' stat='pDef'>
+	<and>
+     <using slotitem="381;11"/>
+     <using slotitem="2413;6"/>
+     <target using="Dagger" />
+    </and>
+    </mul>
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='355' name="dwarven_chain_mail_shirt">
+  <for>
+    <add val='129' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='356' name="full_plate_armor">
+  <for>
+   <add stat='pDef' order='0x10'  val='239'/>
+   <add stat='maxHp' order='0x40' val='270'>
+     <and>
+       <using slotitem="2414;6"/>
+     </and>
+   </add>
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='357' name="shrnoen's_breastplate"> 
+  <for> 
+    <add val='157' order='0x10' stat='pDef' /> 
+  <enchant val='0' order='0x0C' stat='pDef' /> 
+</for> 
+  <for> 
+    <mul val='1.05' order='0x40' stat='pDef'> 
+     <and> 
+      <using slotitem="383;11"/> 
+      <using slotitem="503;6"/> 
+      <using slotitem="5726;12"/> 
+      <using slotitem="5710;9"/> 
+     </and> 
+    </mul> 
+    <add val='294' order='0x40' stat='maxHp'> 
+     <and> 
+      <using slotitem="383;11"/> 
+      <using slotitem="503;6"/> 
+      <using slotitem="5726;12"/> 
+      <using slotitem="5710;9"/> 
+     </and> 
+    </add> 
+  <enchant val='0' order='0x0C' stat='pDef' /> 
+</for> 
+</item>
+<item id='358' name="blue_wolve's_breastplate"> 
+  <for> 
+    <add val='166' order='0x10' stat='pDef' /> 
+    <add val='7' order='0x40' stat='runSpd'> 
+    <and> 
+     <using slotitem="2380;11"/> 
+     <using slotitem="2416;6"/>      
+     <using slotitem="5734;12"/> 
+     <using slotitem="5718;9"/> 
+    </and> 
+    </add> 
+    <mul val='1.05' order='0x40' stat='regHp'> 
+    <and> 
+     <using slotitem="2380;11"/> 
+     <using slotitem="2416;6"/>      
+     <using slotitem="5734;12"/> 
+     <using slotitem="5718;9"/> 
+    </and> 
+    </mul> 
+       <add val='3' order='0x10' stat='STR'> 
+    <and> 
+     <using slotitem="2380;11"/> 
+     <using slotitem="2416;6"/>      
+     <using slotitem="5734;12"/> 
+     <using slotitem="5718;9"/> 
+    </and> 
+    </add> 
+    <add val='-1' order='0x10' stat='CON'> 
+    <and> 
+     <using slotitem="2380;11"/> 
+     <using slotitem="2416;6"/>      
+     <using slotitem="5734;12"/> 
+     <using slotitem="5718;9"/> 
+    </and> 
+    </add> 
+        <add val='-2' order='0x10' stat='DEX'> 
+    <and> 
+     <using slotitem="2380;11"/> 
+     <using slotitem="2416;6"/>      
+     <using slotitem="5734;12"/> 
+     <using slotitem="5718;9"/> 
+    </and> 
+    </add> 
+  <enchant val='0' order='0x0C' stat='pDef' /> 
+</for> 
+</item>
+<item id='359' name="shining_dragon_armor">
+  <for>
+    <add val='301' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='360' name="armor_of_victory">
+  <for>
+    <add val='175' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='361' name="breastplate_of_valor">
+  <for>
+    <add val='185' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='362' name="glorious_armor">
+  <for>
+    <add val='284' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='363' name="red_flame_armor">
+  <for>
+    <add val='301' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='364' name="elven_crystal_breastplate">
+  <for>
+    <add val='175' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='365' name="dark_crystal_breastplate">
+  <for>
+    <add val='176' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='366' name="implosion_armor">
+  <for>
+    <add val='284' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='367' name="dark_dragon_armor">
+  <for>
+    <add val='301' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='368' name="elven_vagian_armor">
+  <for>
+    <add val='284' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='369' name="dark_vagian_armor">
+  <for>
+    <add val='301' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='370' name="complate_plate_armor">
+  <for>
+    <add val='284' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='371' name="hell_plate">
+  <for>
+    <add val='301' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='372' name="art_of_plate">
+  <for>
+    <add val='284' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='373' name="masterpiece_armor">
+  <for>
+    <add val='301' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='374' name="armor_of_nightmare">
+  <for>
+    <add val='301' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='375' name="dragon_scale_mail">
+  <for>
+    <add val='198' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='376' name="iron_plate_gaiters">
+  <for>
+    <add val='48' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='377' name="scale_gaiters">
+  <for>
+    <add val='54' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='378' name="compound_scale_gaiters">
+  <for>
+    <add val='61' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='379' name="dwarven_scale_gaiters">
+  <for>
+    <add val='61' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='380' name="plate_gaiters">
+  <for>
+    <add val='70' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='381' name="chain_gaiters">
+  <for>
+    <add val='75' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='382' name="dwarven_chain_gaiters">
+  <for>
+    <add val='80' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='383' name="shrnoen's_gaiters">
+  <for>
+    <add val='98' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='384' name="wolves's_gaiters">
+  <for>
+    <add val='109' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='385' name="gaiters_of_victory">
+  <for>
+    <add val='109' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='386' name="gaiters_of_valor">
+  <for>
+    <add val='116' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='387' name="elven_crystal_gaiters">
+  <for>
+    <add val='109' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='388' name="dark_crystal_gaiters">
+  <for>
+    <add val='110' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='389' name="dragon_scale_gaiters">
+  <for>
+    <add val='122' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='390' name="tights_shirt">
+  <for>
+    <add val='50' order='0x10' stat='pDef' />
+  </for>
+</item>
+<item id='391' name="puma_skin_shirt">
+  <for>
+    <add val='58' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='392' name="lion_skin_shirt">
+  <for>
+    <add val='65' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='393' name="mithril_banded_mail">
+  <for>
+    <add val='73' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='394' name="reinforce_leather_shirt">
+  <for>
+    <add val='73' order='0x10' stat='pDef' />
+    
+    <add stat='maxMp' order='0x40' val='80'>
+      <and>
+        <using slotitem="416;11"/>
+        <using slotitem="2422;12"/>
+      </and>
+    </add>
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='395' name="manticor_skin_shirt">
+ <for>
+   <add val='81' order='0x10' stat='pDef' />
+   <add stat='maxMp' order='0x40' val='91'>
+     <and>
+     <using slotitem="417;11"/>
+     <using slotitem="2424;12"/></and>
+   </add>
+ <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='396' name="slamander_skin_mail">
+  <for>
+    <add val='136' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='397' name="tempered_mithril_shirt">
+  <for>
+   <add stat='pDef' order='0x10'  val='90'/>
+   <add stat='rEvas' order='0x40' val='4'>
+     <and>
+       <using slotitem="1314;11"/>
+       <using slotitem="62;12"/>
+     </and>
+   </add>
+ <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='398' name="plate_leather">
+  <for>
+    <add val='94' order='0x10' stat='pDef' />
+   <add stat='STR' order='0x10' val='4'>
+     <and>
+       <using slotitem="418;11"/>
+       <using slotitem="2431;12"/>
+     </and>
+   </add>
+   <sub stat='CON' order='0x10' val='1'>
+     <and>
+       <using slotitem="418;11"/>
+       <using slotitem="2431;12"/>
+     </and>
+   </sub>
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>
+<item id='399' name="rind_leather_mail">
+  <for>
+    <add val='97' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+</item>

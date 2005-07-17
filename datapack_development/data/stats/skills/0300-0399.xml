@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="301" levels="5" name="Summon Big Boom">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Summons Big Boom, a servitor. Requires 1 Crystal: D Grade. 30% of acquired Exp will be consumed.
+  5: Summons Big Boom, a servitor. Requires 1 Crystal: D Grade. 30% of acquired Exp will be consumed.
+  created 2005-05-29 23:34:27
+-->
+  <table name="#mpConsume"> 74 82 88 94 100 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="6000"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="302" levels="9" name="Spoil Festival">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Throws multiple enemies into a state of Spoil.
+  9: Throws multiple enemies into a state of Spoil.
+  created 2005-05-29 23:34:27
+-->
+  <table name="#mpConsume"> 74 93 113 132 150 172 184 194 204 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="1800"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="303" levels="4" name="Soul of Sagittarius"> 
+  
+  <table name="#mp"> 185 271 316 364 </table> 
+  <table name="#hpConsume"> 185 271 316 364 </table> 
+  
+  <set name="weaponsAllowed" val="32"/> 
+  <set name="hpConsume" val="#hpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="20000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="-1"/> 
+  
+  <for> 
+    <effect count="1" name="Buff" time="1200" val="0"> 
+       <add stat='maxMp' order='0x40' val='#mp'> 
+         <using kind="Bow"/> 
+       </add> 
+    </effect> 
+  </for>  
+  
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="304" levels="1" name="Song of Vitality">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Instantly increases party members' maximum HP. Continuous singing consumes additional MP.
+  created 2005-05-29 23:34:27
+-->
+  <set name="mpConsume" val="60"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="2500"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="305" levels="1" name="Song of Vengeance">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Temporarily reflects damage received by party members back upon the enemy. Excludes damage received from skill or remote attack. Continuous singing consumes additional MP.
+  created 2005-05-29 23:34:27
+-->
+  <set name="mpConsume" val="60"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="2500"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="306" levels="1" name="Song of Flame Guard">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Temporarily increases party members' resistance to attacks by fire. Continuous singing consumes additional MP.
+  created 2005-05-29 23:34:27
+-->
+  <set name="mpConsume" val="60"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="2500"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="307" levels="1" name="Dance of Aqua Guard">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Temporarily increases party members' resistance to attacks by water. Continuous dancing consumes additional MP.
+  created 2005-05-29 23:34:27
+-->
+  <set name="mpConsume" val="60"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="2500"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="308" levels="1" name="Song of Storm Guard">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Temporarily increases party members' resistance to attacks by wind. Continuous singing consumes additional MP.
+  created 2005-05-29 23:34:27
+-->
+  <set name="mpConsume" val="60"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="2500"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="309" levels="1" name="Dance of Earth Guard">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Temporarily increases party members' resistance to earth attacks. Continuous dancing consumes additional MP. Used with a two-bladed weapon.
+  created 2005-05-29 23:34:27
+-->
+  <set name="weaponsAllowed" val="512"/>
+  <set name="mpConsume" val="60"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="2500"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="310" levels="1" name="Dance of Vampire">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Partially restores party members' HP by using damage inflicted upon the enemy. Damage inflicted by skill or remote attack is excluded. Continuous dancing consumes additional MP. Used with a two-bladed weapon.
+  created 2005-05-29 23:34:27
+-->
+  <set name="weaponsAllowed" val="512"/>
+  <set name="mpConsume" val="60"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="2500"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="311" levels="1" name="Dance of Protection">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Temporarily bestows one's party members resistance to terrain damage. Continuous dancing consumes additional MP. Used with a two-bladed weapon.
+  created 2005-05-29 23:34:27
+-->
+  <set name="weaponsAllowed" val="512"/>
+  <set name="mpConsume" val="60"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="2500"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="312" levels="20" name="Vicious Stance">
+ 
+  <table name="#crit"> 4 8 12 16 20 24 28 32 36 40 44 46 50 54 58 64 68 72 76 80 </table>
+ 
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_TOGGLE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="5">
+      <add order="0x10" stat="cAtk" val="#crit"/>
+    </effect>
+  </for>
+  
+</skill>
+ 
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="313" levels="8" name="Snipe">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Temporarily increases P. Atk., critical attack rate and Accuracy. Immobilizes while in effect. Effect 1.
+  8: Temporarily increases P. Atk., critical attack rate and Accuracy. Immobilizes while in effect. Effect 8.
+  created 2005-05-29 23:34:27
+-->
+  <table name="#mpConsume"> 55 58 60 62 64 65 67 69 </table>
+  <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="1500"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="314" levels="16" name="Fatal Counter">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Shoots an arrow containing pain of user. More powerful effect at low HP levels. Used with a bow. Power 2908.
+  16: Shoots an arrow containing pain of user. More powerful effect at low HP levels. Used with a bow. Power 4870.
+  created 2005-05-29 23:34:27
+-->
+  <table name="#mpConsume"> 129 132 135 135 138 140 143 145 148 150 153 155 157 160 162 164 </table>
+  <table name="#power"> 2908.0 3030.0 3154.0 3280.0 3408.0 3537.0 3668.0 3800.0 3933.0 4067.0 4201.0 4336.0 4470.0 4604.0 4738.0 4870.0 </table>
+  <set name="weaponsAllowed" val="32"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="3000"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="900"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="315" levels="16" name="Crush of Doom">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Strong attack that consumes user's HP. Usable when a two-handed weapon is equipped Power 2120. Over-hit is possible.
+  16: Strong attack that consumes user's HP. Usable when a two-handed weapon is equipped Power 3551. Over-hit is possible.
+  created 2005-05-29 23:34:27
+-->
+  <table name="#power"> 2120.0 2209.0 2300.0 2392.0 2485.0 2580.0 2675.0 2771.0 2868.0 2966.0 3064.0 3162.0 3260.0 3357.0 3455.0 3551.0 </table>
+  <set name="weaponsAllowed" val="2048"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="100000"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="316" levels="1" name="Aegis">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Provides defense from all directions when a shield is equipped.
+  created 2005-05-29 23:34:27
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="317" levels="1" name="Focus Attack">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Attacks one enemy at a time. Used with a spear. Increases Accuracy.
+  created 2005-05-29 23:34:27
+-->
+  <set name="weaponsAllowed" val="64"/>
+  <set name="mpConsume" val="7"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_TOGGLE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="318" levels="1" name="Aegis Stance">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Provides defense from all directions when a shield is equipped. Decreases one's shield defense strength.
+  created 2005-05-29 23:34:27
+-->
+  <set name="mpConsume" val="9"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_TOGGLE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="319" levels="2" name="Agile Movement">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Increases Accuracy and Speed while wearing light armor.
+  2: Increases Accuracy and Speed while wearing light armor.
+  created 2005-05-29 23:34:27
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="320" levels="10" name="Wrath">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Decreases CP of nearby enemies by 7%. Used with a spear.
+  10: Decreases CP of nearby enemies by 30%. Used with a spear.
+  created 2005-05-29 23:34:27
+-->
+  <table name="#mpConsume"> 73 74 75 77 78 79 80 81 82 83 </table>
+  <set name="weaponsAllowed" val="64"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="1080"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="321" levels="10" name="Blinding Blow">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Increases Speed when launching attack on enemy. Used with a dagger. Power 2751.
+  10: Increases Speed when launching attack on enemy. Used with a dagger. Power 3653.
+  created 2005-05-29 23:34:27
+-->
+  <table name="#mpConsume"> 133 135 137 139 141 143 145 147 149 151 </table>
+  <table name="#power"> 2751.0 2850.0 2950.0 3050.0 3151.0 3252.0 3353.0 3453.0 3553.0 3653.0 </table>
+  <set name="weaponsAllowed" val="16"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="1080"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="322" levels="6" name="Shield Fortress">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Increases personal shield defense rate. Continuously consumes MP.
+  6: Increases personal shield defense rate. Continuously consumes MP.
+  created 2005-05-29 23:34:27
+-->
+  <table name="#mpConsume"> 12 13 13 13 14 14 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_TOGGLE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="323" levels="1" name="Quiver of Arrow: Grade A">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Summons between 480 and 1800 mithril arrows. Consumes 1 Crystal: A Grade.
+  created 2005-05-29 23:34:27
+-->
+  <set name="mpConsume" val="130"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="3000"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="324" levels="1" name="Quiver of Arrow: Grade S">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Summons between 650 and 2600 mithril arrows. Consumes 1 Crystal: A Grade.
+  created 2005-05-29 23:34:27
+-->
+  <set name="mpConsume" val="200"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="3000"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>

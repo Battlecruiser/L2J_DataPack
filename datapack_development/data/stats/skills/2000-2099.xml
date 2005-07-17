@@ -1,0 +1,1343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2001" levels="1" name="Red potion">
+	<table name="#hot">2</table>
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="HOT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="15000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+	<effect count="3" name="HealOverTime" time="5" val="#hot"/>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2002" levels="1" name="Healing drug">
+	<table name="#hot">1.5</table>
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="HOT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="20000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+	<effect count="4" name="HealOverTime" time="5" val="#hot"/>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2003" levels="1" name="Mana drug">
+	<table name="#mot">1.5</table>
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="MHOT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="20000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+	<effect count="4" name="ManaHealOverTime" time="5" val="#mot"/>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2004" levels="1" name="Deleted">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2005" levels="1" name="Mana potion">
+  <set name="power" val="10000.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="MANAHEAL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2006" levels="1" name="Scroll of enchant weapon-A grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="ENCHANT_WEAPON"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2007" levels="1" name="Scroll of enchant armor-A grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="ENCHANT_ARMOR"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2008" levels="1" name="Crystal scroll of enchant weapon-A grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2009" levels="1" name="Crystal scroll of enchant armor-A grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2010" levels="1" name="Endeavor potion">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="300000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="2011" levels="1" name="Quick step potion"> 
+  
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="-1"/> 
+<!-- Done by dc --> 
+<table name="#Tab-runSpd"> 20 </table> 
+<for> 
+  <effect name="Buff" time="1200" count="1" val="0"> 
+    <add  order='0x40' stat='runSpd' val="#Tab-runSpd"/> 
+ </effect> 
+</for> 
+</skill>
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="2012" levels="1" name="Swift attack potion"> 
+  
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="-1"/> 
+<!-- Done by dc --> 
+<table name="#Tab-pAtkSpd"> 1.15 </table> 
+<for> 
+  <effect name="Buff" time="1200" count="1" val="0"> 
+    <mul  order='0x50' stat='pAtkSpd' val="#Tab-pAtkSpd"/> 
+ </effect> 
+</for> 
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2013" levels="1" name="Scroll of escape">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="20000"/>
+  <set name="skillTime" val="20000"/>
+  <set name="skillType" val="RECALL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2014" levels="1" name="Scroll of resurrection">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_CORPSE_PLAYER"/>
+  <set name="hitTime" val="15000"/>
+  <set name="skillTime" val="15000"/>
+  <set name="skillType" val="RESURRECT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2015" levels="1" name="Scroll of enchant weapon-B grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="ENCHANT_WEAPON"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2016" levels="1" name="Scroll of enchant armor-B grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="ENCHANT_ARMOR"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2017" levels="1" name="Scroll of enchant weapon-C grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="ENCHANT_WEAPON"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2018" levels="1" name="Scroll of enchant armor-C grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="ENCHANT_ARMOR"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2019" levels="1" name="Scroll of enchant weapon-D grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="ENCHANT_WEAPON"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2020" levels="1" name="Scroll of enchant armor-D grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="ENCHANT_ARMOR"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2021" levels="1" name="Scroll of enchant weapon-S grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="ENCHANT_WEAPON"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2022" levels="1" name="Scroll of enchant armor-S grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="ENCHANT_ARMOR"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2023" levels="1" name="Crystal scroll of enchant weapon-B grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2024" levels="1" name="Crystal scroll of enchant armor-B grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2025" levels="1" name="Crystal scroll of enchant weapon-C grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2026" levels="1" name="Crystal scroll of enchant armor-C grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2027" levels="1" name="Crystal scroll of enchant weapon-D grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2028" levels="1" name="Crystal scroll of enchant armor-D grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2029" levels="1" name="Crystal scroll of enchant weapon-S grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2030" levels="1" name="Crystal scroll of enchant armor-S grade">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2031" levels="1" name="Lesser healing potion">
+	<table name="#hot">12</table>
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="HOT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="15000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+	<effect count="5" name="HealOverTime" time="3" val="#hot"/>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2032" levels="1" name="Healing potion">
+	<table name="#hot">21</table>
+  <set name="power" val="2.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="HOT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="15000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+	<effect count="5" name="HealOverTime" time="3" val="#hot"/>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2033" levels="1" name="Haste potion">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="300000"/>
+  <set name="castRange" val="-1"/>
+<!-- Done by dc -->
+<table name="#Tab-runSpd"> 33 </table>
+<table name="#Tab-pAtkSpd"> 1.33 </table>
+<for>
+  <effect name="Buff" time="300" count="1" val="0">
+    <add  order='0x40' stat='runSpd' val="#Tab-runSpd"/>
+    <mul  order='0x50' stat='pAtkSpd' val="#Tab-pAtkSpd"/>
+ </effect>
+</for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2034" levels="1" name="Enchant haste potion">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="600000"/>
+  <set name="castRange" val="-1"/>
+<!-- Done by dc -->
+<table name="#Tab-runSpd"> 33 </table>
+<for>
+  <effect name="Buff" time="600" count="1" val="0">
+    <add  order='0x40' stat='runSpd' val="#Tab-runSpd"/>
+ </effect>
+</for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="2035" levels="1" name="Enchant attack speed potion"> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="-1"/> 
+<!-- Done by dc --> 
+<table name="#Tab-pAtkSpd"> 1.30 </table> 
+<for> 
+  <effect name="Buff" time="1200" count="1" val="0"> 
+    <mul  order='0x50' stat='pAtkSpd' val="#Tab-pAtkSpd"/> 
+ </effect> 
+</for> 
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2036" levels="1" name="Blessed scroll of escape">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="RECALL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2037" levels="1" name="Greater healing potion">
+	<table name="#hot">32</table>
+  <set name="power" val="3.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="HOT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="15000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+	<effect count="5" name="HealOverTime" time="3" val="#hot"/>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2038" levels="1" name="Quick healing potion">
+  <set name="power" val="435.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="HEAL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2039" levels="1" name="Soulshot">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="SOULSHOT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2040" levels="1" name="Scroll of escape to agit">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="20000"/>
+  <set name="skillTime" val="20000"/>
+  <set name="skillType" val="RECALL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2041" levels="1" name="Scroll of escape to castle">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="20000"/>
+  <set name="skillTime" val="20000"/>
+  <set name="skillType" val="RECALL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="2042" levels="1" name="Antidote"> 
+  <set name="power" val="3"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="skillType" val="UNPOISON"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+  </for> 
+</skill>
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="2043" levels="1" name="Advanced antidote"> 
+  <set name="power" val="7"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="skillType" val="UNPOISON"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+  </for> 
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2044" levels="1" name="Bandage">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="UNBLEED"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2045" levels="1" name="Emergency dressing">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="NEGATE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2046" levels="1" name="Wolves' necklace">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="5000"/>
+  <set name="skillTime" val="5000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2047" levels="1" name="Magic shot">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="SPIRITSHOT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2048" levels="1" name="Wolves' food">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="FEED_PET"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2049" levels="1" name="Blessed scroll of resurrection">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_CORPSE_PLAYER"/>
+  <set name="hitTime" val="15000"/>
+  <set name="skillTime" val="15000"/>
+  <set name="skillType" val="RESURRECT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2050" levels="1" name="Scroll of Guidance">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+<!-- Done by dc -->
+<table name="#Tab-accCombat"> 4 </table>
+<for>
+  <effect name="Buff" time="3600" count="1" val="0">
+    <add  order='0x40' stat='accCombat' val="#Tab-accCombat"/>
+ </effect>
+</for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2051" levels="1" name="Scroll of Death Whisper">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+<!-- Done by dc -->
+<table name="#Tab-cAtk"> 1.5 </table>
+<for>
+  <effect name="Buff" time="3600" count="1" val="0">
+    <mul  order='0x50' stat='cAtk' val="#Tab-cAtk"/>
+ </effect>
+</for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2052" levels="1" name="Scroll of Focus">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+<!-- Done by dc -->
+<table name="#Tab-rCrit"> 1.3 </table>
+<for>
+  <effect name="Buff" time="3600" count="1" val="0">
+    <mul  order='0x50' stat='rCrit' val="#Tab-rCrit"/>
+ </effect>
+</for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2053" levels="1" name="Scroll of Greater Acumen">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+ <!-- Done by dc -->
+<table name="#Tab-mAtkSpd"> 1.3 </table>
+<for>
+  <effect name="Buff" time="3600" count="1" val="0">
+    <mul  order='0x50' stat='mAtkSpd' val="#Tab-mAtkSpd"/>
+ </effect>
+</for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2054" levels="1" name="Scroll of Haste">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+<!-- Done by dc -->
+<table name="#Tab-pAtkSpd"> 1.33 </table>
+<for>
+  <effect name="Buff" time="3600" count="1" val="0">
+    <mul  order='0x50' stat='pAtkSpd' val="#Tab-pAtkSpd"/>
+ </effect>
+</for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2055" levels="1" name="Scroll of Agility">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+<!-- Done by dc -->
+<table name="#Tab-rEvas"> 8 </table>
+<for>
+  <effect name="Buff" time="3600" count="1" val="0">
+    <add  order='0x40' stat='rEvas' val="#Tab-rEvas"/>
+ </effect>
+</for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2056" levels="1" name="Scroll of Mystic Empower">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+<!-- Done by dc -->
+<table name="#Tab-mAtk"> 1.75 </table>
+<for>
+  <effect name="Buff" time="3600" count="1" val="0">
+    <mul  order='0x50' stat='mAtk' val="#Tab-mAtk"/>
+ </effect>
+</for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2057" levels="1" name="Scroll of Might">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+<!-- Done by dc -->
+<table name="#Tab-pAtk"> 1.15 </table>
+<for>
+  <effect name="Buff" time="3600" count="1" val="0">
+    <mul  order='0x50' stat='pAtk' val="#Tab-pAtk"/>
+ </effect>
+</for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2058" levels="1" name="Scroll of Wind Walk">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+<!-- Done by dc -->
+<table name="#Tab-runSpd"> 33 </table>
+<for>
+  <effect name="Buff" time="3600" count="1" val="0">
+    <add  order='0x40' stat='runSpd' val="#Tab-runSpd"/>
+ </effect>
+</for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2059" levels="1" name="Scroll of Shield">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+<!-- Done by dc -->
+<table name="#Tab-pDef"> 1.15 </table>
+<for>
+  <effect name="Buff" time="3600" count="1" val="0">
+    <mul  order='0x50' stat='pDef' val="#Tab-pDef"/>
+ </effect>
+</for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2060" levels="1" name="Healing Medicine">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="NEGATE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2061" levels="1" name="Blessed Spiritshot">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="SPIRITSHOT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2062" levels="1" name="none">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_CORPSE_PLAYER"/>
+  <set name="hitTime" val="15000"/>
+  <set name="skillTime" val="15000"/>
+  <set name="skillType" val="RESURRECT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2063" levels="1" name="Hatchling Food">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="FEED_PET"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2064" levels="1" name="Scroll of Mana Regeneration">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+<!-- Done by dc -->
+<table name="#Tab-regMp"> 1.82 </table>
+<for>
+  <effect name="Buff" time="3600" count="1" val="0">
+    <add  order='0x40' stat='regMp' val="#Tab-regMp"/>
+ </effect>
+</for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2065" levels="8" name="Box Key">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="500"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2066" levels="1" name="Echo Crystal">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2067" levels="1" name="Echo Crystal">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2068" levels="1" name="Echo Crystal">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2069" levels="1" name="Echo Crystal">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2070" levels="1" name="Echo Crystal">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2071" levels="1" name="Echo Crystal">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2072" levels="1" name="Echo Crystal">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2073" levels="1" name="Echo Crystal">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2074" levels="1" name="Potion of Critical Escape">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Misdirects enemy attack and slows Speed of user.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2075" levels="1" name="Decrease Hate Scroll">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2076" levels="1" name="Bless of Eva">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Increase lung capacity. Effect 1.
+  created 2005-05-29 23:34:30
+-->
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2077" levels="1" name="Potion of Revenge">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Lowers user's P. Def. and reflects a certain amount of damage back upon the enemy, excluding damage from skill use or remote attack. Effect 3.
+  created 2005-05-29 23:34:30
+-->
+  <set name="power" val="3.0"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2078" levels="1" name="Compressed Package of Soulshots: No Grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2079" levels="1" name="Compressed Package of Soulshots: D-grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2080" levels="1" name="Compressed Package of Soulshots: C-grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2081" levels="1" name="Compressed Package of Soulshots: B-grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2082" levels="1" name="Compressed Package of Soulshots: A-grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2083" levels="1" name="Compressed Package of Soulshots: S-grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2084" levels="1" name="Compressed Package of Spiritshots: No Grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2085" levels="1" name="Compressed Package of Spiritshots: D-grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2086" levels="1" name="Compressed Package of Spiritshots: C-grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2087" levels="1" name="Compressed Package of Spiritshots: B-grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2088" levels="1" name="Compressed Package of Spiritshots: A-grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2089" levels="1" name="Compressed Package of Spiritshots: S-grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2090" levels="1" name="Compressed Package of Blessed Spiritshots: No Grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2091" levels="1" name="Compressed Package of Blessed Spiritshots: D-grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2092" levels="1" name="Compressed Package of Blessed Spiritshots: C-grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2093" levels="1" name="Compressed Package of Blessed Spiritshots: B-grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2094" levels="1" name="Compressed Package of Blessed Spiritshots: A-grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2095" levels="1" name="Compressed Package of Blessed Spiritshots: S-grade">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2096" levels="1" name="Soul Crystal">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="mpConsume" val="26"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="1200"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="300"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2097" levels="3" name="Sowing">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Attempts to sow onto a monster.
+  3: Attempts to sow onto a monster.
+  created 2005-05-29 23:34:30
+-->
+  <table name="#mpConsume"> 4 6 8 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="1800"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="150"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2098" levels="1" name="Harvesting">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  Descriptions:
+  1: Attempts to harvest from a monster's corpse.
+  created 2005-05-29 23:34:30
+-->
+  <set name="mpConsume" val="3"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="500"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="20"/>
+  <for>
+  </for>
+</skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<skill id="2099" levels="1" name="Escape: 5 minutes">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:30
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="100000"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
