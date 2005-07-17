@@ -10,7 +10,7 @@ set mysqlBinPath=C:\mysql\bin
 REM MYSQL 4.1
 REM set mysqlBinPath=C:\Program Files\MySQL\MySQL Server 4.1\bin
 set user=root
-set pass=valheru
+set pass=
 set DBname=l2jdb
 
 REM ############################################
