@@ -1014,19 +1014,18 @@
   </effect> 
 </for> 
 </skill>
-<skill id="2170" levels="1" name="Scroll: Cancel Sleep">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:30
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="400"/>
-  <for>
-  </for>
+<skill id="2170" levels="1" name="Scroll of Waking"> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="skillType" val="NEGATE"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="600"/> 
+  <set name="negateStats" val="SLEEP"/> 
+  <set name="negatePower" val="9.0"/> 
+  <set name="itemConsumeId" val="6037" /> 
+  <set name="itemConsumeCount" val="1" /> 
+  <for> 
+  </for> 
 </skill>
 <skill id="2171" levels="1" name="Spellbook Paper">
 <!---
