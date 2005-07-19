@@ -854,7 +854,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x40" stat="maxload" val="#rate"/>
+    <mul order="0x40" stat="maxLoad" val="#rate"/>
   </for>
 </skill>
 <skill id="151" levels="1" name="none">
