@@ -91,27 +91,27 @@ class Quest (JQuest) :
               st.giveItems(BETRAYER_UMBAR_REPORT_ID,1)
           elif n1 == 9 :
               st.giveItems(BETRAYER_ZAKAN_REPORT_ID,1)
-          if n1 == 0 :
+          if n2 == 0 :
               st.giveItems(BETRAYER_SUE_REPORT_ID,1)
-          elif n1 == 1 :
+          elif n2 == 1 :
               st.giveItems(BETRAYER_WANUK_REPORT_ID,1)
-          elif n1 == 2 :
+          elif n2 == 2 :
               st.giveItems(BETRAYER_CHEWBA_REPORT_ID,1)
-          elif n1 == 3 :
+          elif n2 == 3 :
               st.giveItems(BETRAYER_HEITAFU_REPORT_ID,1)
-          elif n1 == 4 :
+          elif n2 == 4 :
               st.giveItems(BETRAYER_PICUBO_REPORT_ID,1)
-          elif n1 == 5 :
+          elif n2 == 5 :
               st.giveItems(BETRAYER_BUMBUM_REPORT_ID,1)
-          elif n1 == 6 :
+          elif n2 == 6 :
               st.giveItems(BETRAYER_MINSKU_REPORT_ID,1)
-          elif n1 == 7 :
+          elif n2 == 7 :
               st.giveItems(BETRAYER_CHUCHU_REPORT_ID,1)
-          elif n1 == 8 :
+          elif n2 == 8 :
               st.giveItems(BETRAYER_UMBAR_REPORT_ID,1)
-          elif n1 == 9 :
+          elif n2 == 9 :
               st.giveItems(BETRAYER_ZAKAN_REPORT_ID,1)
-   elif npcId == 7570 and int(st.get("cond"))==1 and ((st.getQuestItemsCount(BETRAYER_SUE_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHEWBA_REPORT_ID)+st.getQuestItemsCount(BETRAYER_WANUK_REPORT_ID)+st.getQuestItemsCount(BETRAYER_HEITAFU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_PICUBO_REPORT_ID)+st.getQuestItemsCount(BETRAYER_BUMBUM_REPORT_ID)+st.getQuestItemsCount(BETRAYER_MINSKU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHUCHU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID)+st.getQuestItemsCount(BETRAYER_ZAKAN_REPORT_ID))>0) or st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)>0 :
+   elif npcId == 7570 and int(st.get("cond"))==1 and ((st.getQuestItemsCount(BETRAYER_SUE_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHEWBA_REPORT_ID)+st.getQuestItemsCount(BETRAYER_WANUK_REPORT_ID)+st.getQuestItemsCount(BETRAYER_HEITAFU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_PICUBO_REPORT_ID)+st.getQuestItemsCount(BETRAYER_BUMBUM_REPORT_ID)+st.getQuestItemsCount(BETRAYER_MINSKU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHUCHU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID)+st.getQuestItemsCount(BETRAYER_ZAKAN_REPORT_ID))>0)  and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)>0 :
           htmltext = "7570-08.htm"
    elif npcId == 7501 and int(st.get("cond"))==1 and ((st.getQuestItemsCount(BETRAYER_SUE_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHEWBA_REPORT_ID)+st.getQuestItemsCount(BETRAYER_WANUK_REPORT_ID)+st.getQuestItemsCount(BETRAYER_HEITAFU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_PICUBO_REPORT_ID)+st.getQuestItemsCount(BETRAYER_BUMBUM_REPORT_ID)+st.getQuestItemsCount(BETRAYER_MINSKU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHUCHU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID)+st.getQuestItemsCount(BETRAYER_ZAKAN_REPORT_ID))==2) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)==0 :
         htmltext = "7501-01.htm"
