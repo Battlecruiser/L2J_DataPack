@@ -105,3 +105,6 @@ INSERT INTO teleport VALUES ('Dion -> Partisan Hideaway', 86, 46467, 126885, -37
 INSERT INTO teleport VALUES ('Dion -> Bee Hive', 87, 20505, 189036, -3344, 2500); 
 INSERT INTO teleport VALUES ('Gludio -> Windawood Manor', 88, -23789, 169683, -3424, 1000); 
 INSERT INTO teleport VALUES ('Gludio -> Southern Pathway to the Wasteland', 89, -16730, 209417, -3664, 2400);
+INSERT INTO teleport VALUES ('Gludin -> Abandoned Camp', 90, -46932, 140883, -2936, 900); 
+INSERT INTO teleport VALUES ('Gludin -> Fellmere Harvest Grounds', 91, -70387, 115501, -3472, 1000); 
+INSERT INTO teleport VALUES ('Gludin -> Langk Lizardman Dwelling', 92, -45210, 202654, -3592, 1700);
