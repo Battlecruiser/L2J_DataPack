@@ -1,5 +1,5 @@
 1204 CONSTANT Elven_knight_brooch
-15 CONSTANT eKnight_ClassId
+19 CONSTANT eKnight_ClassId
 
 : to_eKnight
     player@ level@ 20 < if

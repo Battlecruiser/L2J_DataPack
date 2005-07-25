@@ -1,5 +1,5 @@
 : adena?  ( n -- n f )
-	\ Возвращаем истину, если есть n адены и ложь - иначе
+	\ Have current player n adena or not?
 	player@ adena@ over >=
 ;
 

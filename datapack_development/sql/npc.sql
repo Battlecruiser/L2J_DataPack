@@ -1735,7 +1735,7 @@ INSERT INTO npc VALUES (7233,'Esmeralda','a_teleporter_FHuman',8.00,25.00,70,'fe
 INSERT INTO npc VALUES (7234,'trash','a_traderB_MHuman',8.00,24.00,70,'male','L2Merchant',40,2444,1345,490,10,689,296,470,217,253,0,253,0,0,0,80,120,NULL,NULL,0);
 INSERT INTO npc VALUES (7235,'trash','a_traderA_FHuman',7.00,23.00,70,'female','L2Merchant',40,2444,1345,490,10,689,296,470,217,253,0,253,0,0,0,80,120,NULL,NULL,0);
 INSERT INTO npc VALUES (7236,'trash','a_warehouse_keeper_MDwarf',8.00,17.00,70,'male','L2Warehouse',40,2444,1345,490,10,689,296,470,217,253,0,253,0,0,0,80,120,NULL,NULL,0);
-INSERT INTO npc VALUES (7237,'trash','a_teleporter_FHuman',8.00,25.00,70,'female','L2Teleporter',40,2444,1345,490,10,689,296,470,217,253,0,253,0,0,0,80,120,NULL,NULL,0);
+INSERT INTO npc VALUES (7237,'Anya','a_teleporter_FHuman','8.00', '25.00', '70', 'female', 'L2Teleporter',40,2444,1345,490,10,689,296,470,217,253,0,253,0,0,0,80,120,null,null, 0);
 INSERT INTO npc VALUES (7238,'trash','a_chamberlain_MHuman',9.50,22.50,70,'male','L2Npc',40,2444,1345,490,10,689,296,470,217,253,0,253,0,0,0,80,120,NULL,NULL,0);
 INSERT INTO npc VALUES (7239,'trash','a_guard_MHuman',8.00,24.00,70,'male','L2Npc',40,2444,1345,490,10,689,296,470,217,253,0,253,2,0,0,80,160,NULL,NULL,0);
 INSERT INTO npc VALUES (7240,'trash','a_guard_MHuman',8.00,24.00,70,'male','L2Trainer',40,2444,1345,490,10,689,296,470,217,253,0,253,0,0,0,80,120,NULL,NULL,0);

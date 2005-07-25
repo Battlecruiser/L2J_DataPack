@@ -108,3 +108,4 @@ INSERT INTO teleport VALUES ('Gludio -> Southern Pathway to the Wasteland', 89, 
 INSERT INTO teleport VALUES ('Gludin -> Abandoned Camp', 90, -46932, 140883, -2936, 900); 
 INSERT INTO teleport VALUES ('Gludin -> Fellmere Harvest Grounds', 91, -70387, 115501, -3472, 1000); 
 INSERT INTO teleport VALUES ('Gludin -> Langk Lizardman Dwelling', 92, -45210, 202654, -3592, 1700);
+INSERT INTO teleport VALUES ('Monster Derby Track -> Gludio Castl Town', 93, -12672, 122776, -3116, 0);

@@ -98,9 +98,8 @@ class Quest (JQuest) :
    elif npcId == 7469 and int(st.get("cond"))==1 and st.getQuestItemsCount(INGREDIENT_LIST_ID)==1 and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(HONEY_ID)+st.getQuestItemsCount(GOLDEN_HONEY_ID)+st.getQuestItemsCount(DIONIAN_POTATO_ID)+st.getQuestItemsCount(GREEN_MOSS_BUNDLE_ID)+st.getQuestItemsCount(BROWN_MOSS_BUNDLE_ID)+st.getQuestItemsCount(MONSTER_EYE_MEAT_ID))<5 :
         htmltext = "7469-04.htm"
    elif npcId == 7469 and int(st.get("cond"))==1 and st.getQuestItemsCount(INGREDIENT_LIST_ID)==1 and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(HONEY_ID)+st.getQuestItemsCount(GOLDEN_HONEY_ID)+st.getQuestItemsCount(DIONIAN_POTATO_ID)+st.getQuestItemsCount(GREEN_MOSS_BUNDLE_ID)+st.getQuestItemsCount(BROWN_MOSS_BUNDLE_ID)+st.getQuestItemsCount(MONSTER_EYE_MEAT_ID))>=5 :
-#        if GetCurrentTick() == int(st.get("id")) :
-#        else:
-          st.set("id","GetCurrentTick()")
+        if st.getGameTicks() != int(st.get("id")) :
+          st.set("id",str(st.getGameTicks()))
           if st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(GOLDEN_HONEY_ID)+st.getQuestItemsCount(BROWN_MOSS_BUNDLE_ID) == 0 :
             if st.getRandom(10)<1 :
               htmltext = "7469-05t2.htm"

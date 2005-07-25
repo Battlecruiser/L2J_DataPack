@@ -30,6 +30,7 @@ class Quest (JQuest) :
             st.setState(STARTED)
             st.playSound("ItemSound.quest_accept")
             st.giveItems(SEEDS_OF_DESPAIR_ID,1)
+            st.set("cond","1")
             htmltext = "7421-05.htm"
           elif st.getPlayer().getClassId().getId() != 0x26 :
               if st.getPlayer().getClassId().getId() == 0x27 :
@@ -79,7 +80,7 @@ class Quest (JQuest) :
         if int(st.get("cond"))<15 :
           if st.getQuestItemsCount(JEWEL_OF_DARKNESS_ID) == 0 :
             htmltext = "7421-01.htm"
-            st.set("cond","1")
+            st.set("cond","0")
             return htmltext
           else:
             htmltext = "7421-04.htm"
@@ -98,11 +99,11 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_finish")
         elif st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and st.getQuestItemsCount(FAMILYS_ASHES_ID) == 0 and st.getQuestItemsCount(LUCKY_KEY_ID) == 0 and st.getQuestItemsCount(CANDLE_ID) == 0 and st.getQuestItemsCount(HUB_SCENT_ID) == 0 and st.getQuestItemsCount(KNEE_BONE_ID) == 0 and st.getQuestItemsCount(HEART_OF_LUNACY_ID) == 0 :
           htmltext = "7421-17.htm"
-        elif st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and int(st.get("cond")) == 1 and st.getQuestItemsCount(SEEDS_OF_ANGER_ID) == 0 :
+        elif st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and int(st.get("id")) == 1 and st.getQuestItemsCount(SEEDS_OF_ANGER_ID) == 0 :
             htmltext = "7421-08.htm"
-        elif st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and int(st.get("cond")) == 2 and st.getQuestItemsCount(SEEDS_OF_HORROR_ID) :
+        elif st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and int(st.get("id")) == 2 and st.getQuestItemsCount(SEEDS_OF_HORROR_ID) :
             htmltext = "7421-19.htm"
-        elif st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and int(st.get("cond")) == 3 and st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 0 :
+        elif st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and int(st.get("id")) == 3 and st.getQuestItemsCount(HEART_OF_LUNACY_ID) == 0 :
             htmltext = "7421-13.htm"
    elif npcId == 7419 and int(st.get("cond"))==1 :
         if st.getQuestItemsCount(HUB_SCENT_ID) == 0 and st.getQuestItemsCount(HEART_OF_LUNACY_ID) == 0 :
@@ -127,7 +128,7 @@ class Quest (JQuest) :
             st.takeItems(LUCKY_KEY_ID,1)
    elif npcId == 7415 and int(st.get("cond"))==1 and st.getQuestItemsCount(SEEDS_OF_ANGER_ID)==1 :
         htmltext = "7415-06.htm"
-   elif npcId == 7418 and int(st.get("cond"))==1 and st.getQuestItemsCount(SEEDS_OF_HORROR_ID)==0 :
+   elif npcId == 7418 and int(st.get("cond"))>0 and st.getQuestItemsCount(SEEDS_OF_HORROR_ID)==0 :
         if st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and st.getQuestItemsCount(CANDLE_ID) == 0 and st.getQuestItemsCount(KNEE_BONE_ID) == 0 :
           htmltext = "7418-01.htm"
         elif st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and st.getQuestItemsCount(CANDLE_ID) == 1 and st.getQuestItemsCount(KNEE_BONE_ID)<2 :

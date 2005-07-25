@@ -34,8 +34,8 @@ class Quest (JQuest) :
           htmltext = "7434-03.htm"
           st.giveItems(ANATOMY_DIAGRAM_ID,1)
     elif event == "7434_3" :
-          if GetCurrentTick() != int(st.get("id")) :
-            st.set("id","GetCurrentTick()")
+          if st.getGameTicks() != int(st.get("id")) :
+            st.set("id",str(st.getGameTicks()))
             htmltext = "7434-06.htm"
             st.giveItems(ADENA_ID,30*st.getQuestItemsCount(ZOMBIE_HEAD1_ID)+20*st.getQuestItemsCount(ZOMBIE_HEART1_ID)+20*st.getQuestItemsCount(ZOMBIE_LIVER1_ID)+50*st.getQuestItemsCount(SKULL1_ID)+15*st.getQuestItemsCount(RIB_BONE1_ID)+10*st.getQuestItemsCount(SPINE1_ID)+10*st.getQuestItemsCount(ARM_BONE1_ID)+10*st.getQuestItemsCount(THIGH_BONE1_ID)+2000*st.getQuestItemsCount(COMPLETE_SKELETON_ID))
             st.takeItems(ZOMBIE_HEAD1_ID,st.getQuestItemsCount(ZOMBIE_HEAD1_ID))
@@ -52,8 +52,8 @@ class Quest (JQuest) :
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
     elif event == "7434_4" :
-#          if GetCurrentTick() != int(st.get("id")) :
-#            st.set("id","GetCurrentTick()")
+          if st.getGameTicks() != int(st.get("id")) :
+            st.set("id",str(st.getGameTicks()))
             htmltext = "7434-07.htm"
             st.giveItems(ADENA_ID,30*st.getQuestItemsCount(ZOMBIE_HEAD1_ID)+20*st.getQuestItemsCount(ZOMBIE_HEART1_ID)+20*st.getQuestItemsCount(ZOMBIE_LIVER1_ID)+50*st.getQuestItemsCount(SKULL1_ID)+15*st.getQuestItemsCount(RIB_BONE1_ID)+10*st.getQuestItemsCount(SPINE1_ID)+10*st.getQuestItemsCount(ARM_BONE1_ID)+10*st.getQuestItemsCount(THIGH_BONE1_ID)+2000*st.getQuestItemsCount(COMPLETE_SKELETON_ID))
             st.takeItems(ZOMBIE_HEAD1_ID,st.getQuestItemsCount(ZOMBIE_HEAD1_ID))
@@ -66,8 +66,8 @@ class Quest (JQuest) :
             st.takeItems(THIGH_BONE1_ID,st.getQuestItemsCount(THIGH_BONE1_ID))
             st.takeItems(COMPLETE_SKELETON_ID,st.getQuestItemsCount(COMPLETE_SKELETON_ID))
     elif event == "7434_5" :
-#          if GetCurrentTick() != int(st.get("id")) :
-#            st.set("id","GetCurrentTick()")
+          if st.getGameTicks() != int(st.get("id")) :
+            st.set("id",str(st.getGameTicks()))
             htmltext = "7434-09.htm"
             st.giveItems(ADENA_ID,2000*st.getQuestItemsCount(COMPLETE_SKELETON_ID))
             st.takeItems(COMPLETE_SKELETON_ID,st.getQuestItemsCount(COMPLETE_SKELETON_ID))

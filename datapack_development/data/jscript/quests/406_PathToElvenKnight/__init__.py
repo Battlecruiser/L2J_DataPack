@@ -34,6 +34,7 @@ class Quest (JQuest) :
                 htmltext = "7327-05.htm"
     elif event == "1" :
         st.set("id","0")
+        st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
         htmltext = "7327-06.htm"
@@ -42,6 +43,7 @@ class Quest (JQuest) :
             st.takeItems(SORIUS_LETTER1_ID,st.getQuestItemsCount(SORIUS_LETTER1_ID))
             if st.getQuestItemsCount(KLUTO_MEMO_ID) == 0 :
               st.giveItems(KLUTO_MEMO_ID,1)
+	      st.set("cond","4")
             htmltext = "7317-02.htm"
     return htmltext
 
@@ -63,6 +65,7 @@ class Quest (JQuest) :
    elif npcId == 7327 and int(st.get("cond"))!=0 and st.getQuestItemsCount(KLUTO_BOX_ID)==0 and st.getQuestItemsCount(TOPAZ_PIECE_ID)>=19 and st.getQuestItemsCount(SORIUS_LETTER1_ID)==0 and st.getQuestItemsCount(KLUTO_MEMO_ID)==0 :
         if st.getQuestItemsCount(SORIUS_LETTER1_ID) == 0 :
           st.giveItems(SORIUS_LETTER1_ID,1)
+          st.set("cond","3")
         htmltext = "7327-09.htm"
    elif npcId == 7327 and int(st.get("cond"))!=0 and st.getQuestItemsCount(KLUTO_BOX_ID)==0 and st.getQuestItemsCount(TOPAZ_PIECE_ID)>=19 and st.getQuestItemsCount(SORIUS_LETTER1_ID)!=0 :
         htmltext = "7327-11.htm"
@@ -80,6 +83,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(KLUTO_BOX_ID) == 0 :
           st.giveItems(KLUTO_BOX_ID,1)
           st.takeItems(KLUTO_MEMO_ID,1)
+          st.set("cond","6")
         htmltext = "7317-05.htm"
    elif npcId == 7317 and int(st.get("cond"))!=0 and st.getQuestItemsCount(KLUTO_BOX_ID)!=0 :
         htmltext = "7317-06.htm"
@@ -100,6 +104,7 @@ class Quest (JQuest) :
             st.giveItems(TOPAZ_PIECE_ID,1)
             if st.getQuestItemsCount(TOPAZ_PIECE_ID) == 20 :
               st.playSound("ItemSound.quest_middle")
+	      st.set("cond","2")
             else:
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 60 :
@@ -108,6 +113,7 @@ class Quest (JQuest) :
             st.giveItems(TOPAZ_PIECE_ID,1)
             if st.getQuestItemsCount(TOPAZ_PIECE_ID) == 20 :
               st.playSound("ItemSound.quest_middle")
+	      st.set("cond","2")
             else:
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 35 :
@@ -116,6 +122,7 @@ class Quest (JQuest) :
             st.giveItems(TOPAZ_PIECE_ID,1)
             if st.getQuestItemsCount(TOPAZ_PIECE_ID) == 20 :
               st.playSound("ItemSound.quest_middle")
+	      st.set("cond","2")
             else:
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 42 :
@@ -124,6 +131,7 @@ class Quest (JQuest) :
             st.giveItems(TOPAZ_PIECE_ID,1)
             if st.getQuestItemsCount(TOPAZ_PIECE_ID) == 20 :
               st.playSound("ItemSound.quest_middle")
+	      st.set("cond","2")
             else:
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 51 :
@@ -132,6 +140,7 @@ class Quest (JQuest) :
             st.giveItems(TOPAZ_PIECE_ID,1)
             if st.getQuestItemsCount(TOPAZ_PIECE_ID) == 20 :
               st.playSound("ItemSound.quest_middle")
+	      st.set("cond","2")
             else:
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 45 :
@@ -140,6 +149,7 @@ class Quest (JQuest) :
             st.giveItems(TOPAZ_PIECE_ID,1)
             if st.getQuestItemsCount(TOPAZ_PIECE_ID) == 20 :
               st.playSound("ItemSound.quest_middle")
+	      st.set("cond","2")
             else:
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 782 :
@@ -148,6 +158,7 @@ class Quest (JQuest) :
             st.giveItems(EMERALD_PIECE_ID,1)
             if st.getQuestItemsCount(EMERALD_PIECE_ID) == 20 :
               st.playSound("ItemSound.quest_middle")
+	      st.set("cond","5")
             else:
               st.playSound("ItemSound.quest_itemget")
    return

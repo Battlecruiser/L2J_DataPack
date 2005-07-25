@@ -6,6 +6,6 @@ games/Casino
 service/main
 events/main
 proof/main
-users-commands/main
+\ users-commands/main
 
 "all files loaded ok" .
