@@ -1,16 +1,7 @@
-/*
-MySQL Backup
-Source Host:           localhost
-Source Server Version: 4.1.9-max
-Source Database:       l2jdb
-Date:                  2005/07/24 18:38:14
-*/
+--
+-- Table structure for table `castle_guards`
+--
 
-SET FOREIGN_KEY_CHECKS=0;
-use l2jdb;
-#----------------------------
-# Table structure for castle_guards
-#----------------------------
 CREATE TABLE `castle_guards` (
   `object_id` decimal(11,0) NOT NULL default '0',
   `x` decimal(11,0) NOT NULL default '0',
@@ -39,22 +30,8 @@ CREATE TABLE `castle_guards` (
   `template_id` decimal(11,0) NOT NULL default '0',
   `group` varchar(35) NOT NULL default '',
   PRIMARY KEY  (`object_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-#----------------------------
-# No records for table castle_guards
-#----------------------------
+) TYPE=MyISAM;
 
-#----------------------------
-# Table structure for castle_guards_skills
-#----------------------------
-CREATE TABLE `castle_guards_skills` (
-  `npcid` int(11) NOT NULL default '0',
-  `skillid` int(11) NOT NULL default '0',
-  `level` int(11) NOT NULL default '0',
-  PRIMARY KEY  (`npcid`,`skillid`,`level`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-#----------------------------
-# No records for table castle_guards_skills
-#----------------------------
+
 
 

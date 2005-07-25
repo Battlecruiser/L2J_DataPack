@@ -8,6 +8,7 @@ mysql -u $USER --password=$PASS -D $DBNAME < ../sql/armor.sql
 mysql -u $USER --password=$PASS -D $DBNAME < ../sql/boxaccess.sql
 mysql -u $USER --password=$PASS -D $DBNAME < ../sql/boxes.sql
 mysql -u $USER --password=$PASS -D $DBNAME < ../sql/castle_guards.sql
+mysql -u $USER --password=$PASS -D $DBNAME < ../sql/castle_guards_skills.sql
 mysql -u $USER --password=$PASS -D $DBNAME < ../sql/char_templates.sql
 mysql -u $USER --password=$PASS -D $DBNAME < ../sql/character_friends.sql
 mysql -u $USER --password=$PASS -D $DBNAME < ../sql/character_macroses.sql

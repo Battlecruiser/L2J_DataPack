@@ -1,8 +1,9 @@
 DROP TABLE IF EXISTS accounts;
 DROP TABLE IF EXISTS armor;
-DROP TABLE IF EXISTS boxaccess
-DROP TABLE IF EXISTS boxes
-DROP TABLE IF EXISTS castle_guards
+DROP TABLE IF EXISTS boxaccess;
+DROP TABLE IF EXISTS boxes;
+DROP TABLE IF EXISTS castle_guards;
+DROP TABLE IF EXISTS castle_guards_skills;
 DROP TABLE IF EXISTS char_templates;
 DROP TABLE IF EXISTS character_friends;
 DROP TABLE IF EXISTS character_macroses;
