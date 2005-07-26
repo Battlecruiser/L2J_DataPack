@@ -1067,27 +1067,28 @@
 <effect count="1" name="Stun" time="9" val="0"/> 
 </for> 
 </skill>
-<skill id="261" levels="6" name="Triple Sonic Slash">
-  <table name="#charges"> 1 2 3 4 5 6 </table>
-  <table name="#mpConsume"> 114 117 120 123 125 128 </table>
-  <table name="#power"> 1948.0 2042.0 2138.0 2236.0 2337.0 2439.0 </table>
-  <set name="weaponsAllowed" val="512"/>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="conditionValue" val="3"/>
-  <set name="hitTime" val="1000"/>
-  <set name="condition" val="128"/>
-  <set name="reuseDelay" val="30000"/>
-  <set name="skillTime" val="1000"/>
-  <set name="skillType" val="CHARGEDAM"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="50"/>
-  <!-- charge values -->
-  <set name="num_charges" val="#charges"/>
-  <set name="charge_skill_id" val="8"/> <!-- Focus Sonic is the charger -->
-  <for>
-  </for>
+<skill id="261" levels="22" name="Triple Sonic Slash"> 
+  <table name="#mpConsume"> 114 117 120 123 125 128 131 134 134 137 139 142 144 147 149 152 154 156 158 161 163 165 </table> 
+  <table name="#power"> 1948.0 2042.0 2138.0 2236.0 2337.0 2439.0 2544.0 2651.0 2760.0 2870.0 2982.0 3095.0 3210.0 3325.0 3442.0 3559.0 3676.0 3794.0 3911.0 4029.0 4146.0 4262.0 </table> 
+  <set name="weaponsAllowed" val="512"/> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="conditionValue" val="3"/> 
+  <set name="hitTime" val="1000"/> 
+  <set name="condition" val="128"/> 
+  <set name="reuseDelay" val="30000"/> 
+  <set name="skillTime" val="1000"/> 
+  <set name="skillType" val="CHARGEDAM"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="50"/> 
+
+  <!-- charge values --> 
+  <set name="num_charges" val="3"/> 
+  <set name="charge_skill_id" val="8"/> <!-- Focus Sonic is the charger --> 
+
+  <for> 
+  </for> 
 </skill>
 <skill id="262" levels="21" name="Holy Blessing"> 
   <table name="#mpConsume"> 115 119 122 122 127 130 134 139 143 148 152 157 159 159 164 168 173 177 180 185 189 193 195 195 199 203 207 210 214 218 222 224 228 230 233 237 239</table> 
