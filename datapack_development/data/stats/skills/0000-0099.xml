@@ -173,25 +173,28 @@
   <for>
   </for>
 </skill>
-<skill id="8" levels="4" name="Focus Sonic">
-  <table name="#charges"> 1 2 3 4 </table>
-  <table name="#power"> 1 2 3 4 </table>
-  
-  <set name="mpConsume" val="10"/>
-  <set name="power" val="#power"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="reuseDelay" val="1000"/>
-  <set name="skillTime" val="1000"/>
-  <set name="skillType" val="CHARGE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  
-  <!-- charge values -->
-  <set name="num_charges" val="#charges"/>
-  
-  <for>
-    <effect count="1" name="Charge" time="1" val="#charges"/>
-  </for>
+<skill id="8" levels="7" name="Focus Sonic"> 
+
+<table name="#power"> 
+   1.0 2.0 3.0 4.0 5.0 6.0 7.0 
+</table> 
+<table name="#charges"> 
+   1 2 3 4 5 6 7 
+</table> 
+
+  <set name="mpConsume" val="10"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="reuseDelay" val="1000"/> 
+  <set name="skillTime" val="1000"/> 
+  <set name="skillType" val="CHARGE"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="-1"/> 
+  <set name="num_charges" val="#charges"/> 
+<for> 
+   <effect count="1" name="Charge" time="0x7fffffff" val="1"/> 
+</for> 
+
 </skill>
 <skill id="9" levels="34" name="Sonic Buster">
   <!-- Charge is always 1, not rising
@@ -947,9 +950,14 @@
   </for> 
 </skill>
 <skill id="50" levels="7" name="Focus Force"> 
-  <table name="#charges"> 1 2 3 4 5 6 7 </table> 
-  <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 </table> 
-  
+
+<table name="#power"> 
+   1.0 2.0 3.0 4.0 5.0 6.0 7.0 
+</table> 
+<table name="#charges"> 
+   1 2 3 4 5 6 7 
+</table> 
+
   <set name="mpConsume" val="7"/> 
   <set name="power" val="#power"/> 
   <set name="target" val="TARGET_SELF"/> 
@@ -959,10 +967,10 @@
   <set name="operateType" val="OP_ACTIVE"/> 
   <set name="castRange" val="-1"/> 
   <set name="num_charges" val="#charges"/> 
-  
-  <for> 
-    <effect count="1" name="Charge" time="0x7fffffff" val="#charges"/> 
-  </for> 
+<for> 
+   <effect count="1" name="Charge" time="0x7fffffff" val="1"/> 
+</for> 
+
 </skill>
 <skill id="51" levels="1" name="Lure">
   <set name="mpConsume" val="44"/>
