@@ -871,26 +871,27 @@
   <for>
   </for>
 </skill>
-<skill id="1151" levels="7" name="Corpse Life Drain">
-  <table name="#drain"> 260 299 347 384 426 467 509 </table>
-  <table name="#mpConsume"> 14 15 18 20 23 24 27 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_CORPSE_MOB"/>
-  <set name="hitTime" val="1000"/>
-  <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="1000"/>
-  <set name="skillType" val="DRAIN"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="400"/>
+<skill id="1151" levels="16" name="Corpse Life Drain"> 
+  <table name="#drain"> 260 299 347 384 426 467 509 554 600 647 695 744 794 845 897 950 </table> 
+  <table name="#mpConsume"> 14 15 18 20 23 24 27 28 30 31 33 34 36 37 39 40 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_CORPSE_MOB"/> 
+  <set name="hitTime" val="1000"/> 
+  <set name="reuseDelay" val="20000"/> 
+  <set name="skillTime" val="1500"/> 
+  <set name="skillType" val="DRAIN"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="400"/> 
+
   
-  <!-- Drain-specific: absorb from a mob's corpse -->
-  <set name="absorbPart" val="0."     /> <!-- no damage, it's dead -->
-  <set name="absorbAbs"  val="#drain" /> <!-- absorbs absolute value -->
+  <!-- Drain-specific: absorb from a mob's corpse --> 
+  <set name="absorbPart" val="0."     /> <!-- no damage, it's dead --> 
+  <set name="absorbAbs"  val="#drain" /> <!-- absorbs absolute value --> 
   
-  <for>
-  </for>
+  <for> 
+  </for> 
 </skill>
 <skill id="1152" levels="2" name="none">
   <set name="mpConsume" val="15"/>
@@ -975,21 +976,21 @@
   <for>
   </for>
 </skill>
-<skill id="1157" levels="3" name="Body To Mind">
-  <table name="#hpConsume"> 131 209 280 </table>
-  <table name="#power"> 22.0 35.0 47.0 </table>
-  <set name="hpConsume" val="#hpConsume"/>
-  <set name="power" val="#power"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="MANAHEAL"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<skill id="1157" levels="5" name="Body To Mind"> 
+  <table name="#hpConsume"> 131 209 280 330 370 </table> 
+  <table name="#power"> 22.0 35.0 47.0  60.0 80.0 </table> 
+  <set name="hpConsume" val="#hpConsume"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="20000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="MANAHEAL"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+  </for> 
 </skill>
 <skill id="1158" levels="2" name="none">
   <set name="mpConsume" val="15"/>

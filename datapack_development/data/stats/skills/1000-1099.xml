@@ -296,9 +296,9 @@
   <for>
   </for>
 </skill>
-<skill id="1018" levels="2" name="Purify"> 
-  <table name="#mpConsume"> 39 48 </table> 
-  <table name="#negatePower"> 3.0 7.0 </table> 
+<skill id="1018" levels="3" name="Purify"> 
+  <table name="#mpConsume"> 39 48 44 </table> 
+  <table name="#negatePower"> 3.0 7.0 9.0 </table> 
   <set name="mpConsume" val="#mpConsume"/> 
   <set name="power" val="0.0"/> 
   <set name="target" val="TARGET_ONE"/> 
@@ -309,7 +309,7 @@
   <set name="isMagic" val="true"/> 
   <set name="operateType" val="OP_ACTIVE"/> 
   <set name="castRange" val="600"/> 
-  <set name="negateStats" val="STUN POISON BLEED"/> 
+  <set name="negateStats" val="POISON BLEED ROOT"/> 
   <set name="negatePower" val="#negatePower"/> 
   <for> 
   </for> 
@@ -445,15 +445,16 @@
   <for>
   </for>
 </skill>
-<skill id="1028" levels="10" name="Might of Heaven"> 
-  <table name="#mpConsume"> 34 35 38 39 42 44 45 48 49 52 </table> 
-  <table name="#power"> 39.0 42.0 44.0 47.0 49.0 52.0 55.0 57.0 60.0 63.0 </table> 
+<skill id="1028" levels="19" name="Might of Heaven"> 
+  <table name="#mpConsume"> 34 35 38 39 42 44 45 48 49 52 54 55 58 60 62 64 65 67 69</table> 
+  <table name="#power"> 39.0 42.0 44.0 47.0 49.0 52.0 55.0 57.0 60.0 63.0 66.0 68.0 
+         71.0 74.0 77.0 79.0 82.0 84.0 87.0</table> 
   <set name="mpConsume" val="#mpConsume"/> 
   <set name="power" val="#power"/> 
   <set name="target" val="TARGET_UNDEAD"/> 
   <set name="hitTime" val="2000"/> 
   <set name="reuseDelay" val="4000"/> 
-  <set name="skillTime" val="2000"/> 
+  <set name="skillTime" val="2500"/> 
   <set name="skillType" val="MDAM"/> 
   <set name="isMagic" val="true"/> 
   <set name="operateType" val="OP_ACTIVE"/> 
