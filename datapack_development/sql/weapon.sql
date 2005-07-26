@@ -379,9 +379,9 @@ INSERT INTO weapon VALUES (674,'divine_shield','lhand','true',560,0,0,'adamantai
 INSERT INTO weapon VALUES (738,'sword_of_solidarity','rhand','false',1300,1,1,'bronze','none',12,10,'sword',8,0.00000,0,0,0,379,0,9,100,18500,0,'true');
 INSERT INTO weapon VALUES (743,'sword_of_sentinel','rhand','false',1300,1,1,'steel','none',14,10,'sword',8,0.00000,0,0,0,379,0,11,100,33600,0,'true');
 INSERT INTO weapon VALUES (744,'staff_of_sentinel','lrhand','false',1800,1,1,'wood','none',13,20,'blunt',4,4.75000,0,0,0,325,0,14,100,33600,0,'true');
-INSERT INTO weapon VALUES (747,'wand_of_adept','rhand','false',1300,1,1,'wood','none',11,20,'blunt',4,4.75000,0,0,0,379,0,13,100,25500,0,'true');
-INSERT INTO weapon VALUES (748,'gallins_oak_wand','rhand','false',1350,1,1,'wood','none',10,20,'blunt',4,4.75000,0,0,0,325,0,10,95,100,0,'true');
-INSERT INTO weapon VALUES (749,'gallins_oak_wand_spiritbound','lrhand','true',100,0,0,'wood','d',21,20,'blunt',4,4.75000,0,0,0,325,0,32,95,4990,0,'true');
+INSERT INTO weapon VALUES (747,'wand_of_adept','rhand','false',1300,1,1,'wood','none',11,20,'blunt',4,4.75000,0,0,0,379,0,13,100,25500,0,'false');
+INSERT INTO weapon VALUES (748,'gallins_oak_wand','rhand','false',1350,1,1,'wood','none',10,20,'blunt',4,4.75000,0,0,0,325,0,10,95,100,0,'false');
+INSERT INTO weapon VALUES (749,'gallins_oak_wand_spiritbound','lrhand','true',100,0,0,'wood','d',21,20,'blunt',4,4.75000,0,0,0,325,0,32,95,4990,0,'false');
 INSERT INTO weapon VALUES (754,'red_sunset_staff','lrhand','false',1700,1,1,'wood','none',13,20,'blunt',4,4.75000,0,0,0,325,0,13,100,25500,0,'true');
 INSERT INTO weapon VALUES (945,'skeleton_buckler','lhand','false',1400,0,0,'wood','none',0,0,'none',0,0.00000,-8,69,20,0,0,0,90,3440,0,'true');
 INSERT INTO weapon VALUES (946,'skeleton_dagger','rhand','false',1100,2,2,'steel','none',16,5,'dagger',12,-3.75000,0,0,0,433,0,13,95,66600,0,'true');

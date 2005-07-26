@@ -1,43 +1,55 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
-<skill id="301" levels="5" name="Summon Big Boom">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Summons Big Boom, a servitor. Requires 1 Crystal: D Grade. 30% of acquired Exp will be consumed.
-  5: Summons Big Boom, a servitor. Requires 1 Crystal: D Grade. 30% of acquired Exp will be consumed.
-  created 2005-05-29 23:34:27
--->
-  <table name="#mpConsume"> 74 82 88 94 100 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="6000"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<skill id="301" levels="5" name="Summon Big Boom"> 
+<!--- 
+  Automatically generated from C3 client files. 
+  Need to be checked/fixed. 
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability. 
+  Descriptions: 
+  1: Summons Big Boom, a servitor. Requires 1 Crystal: D Grade. 30% of acquired Exp will be consumed. 
+  5: Summons Big Boom, a servitor. Requires 1 Crystal: D Grade. 30% of acquired Exp will be consumed. 
+  created 2005-05-29 23:34:27 
+--> 
+  <table name="#mpConsume"> 74 82 88 94 100 </table> 
+  <table name="#itemConsumeCount"> 
+     1 1 1 1 1 
+  </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="itemConsumeId" val="1458"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="hitTime" val="6000"/> 
+  <set name="itemConsumeCount" val="#itemConsumeCount"/> 
+  <set name="reuseDelay" val="40000"/> 
+  <set name="skillTime" val="6000"/> 
+  <set name="skillType" val="SUMMON"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="-1"/> 
+
+  <!-- Summon-specific --> 
+  <table name="#npcIds"> 
+   12516 12517 12518 12519 12520 
+  </table> 
+  <set name="npcId" val="#npcIds"/> 
+  <set name="expPenalty" val="0.3"/> 
+  <set name="isCubic" val="false"/> 
+  <for> 
+  </for> 
 </skill>
-<skill id="302" levels="9" name="Spoil Festival">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Throws multiple enemies into a state of Spoil.
-  9: Throws multiple enemies into a state of Spoil.
-  created 2005-05-29 23:34:27
--->
-  <table name="#mpConsume"> 74 93 113 132 150 172 184 194 204 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="1800"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="40"/>
-  <for>
+<skill id="302" levels="9" name="Spoil Festival"> 
+  
+  <table name="#mpConsume"> 74 93 113 132 150 172 184 194 204 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_AREA"/> 
+  <set name="hitTime" val="1000"/> 
+  <set name="reuseDelay" val="10000"/> 
+  <set name="skillTime" val="1800"/> 
+  <set name="skillType" val="SPOIL"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="40"/> 
+  <for> 
   </for>
 </skill>
 <skill id="303" levels="4" name="Soul of Sagittarius"> 

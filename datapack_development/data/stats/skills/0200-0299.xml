@@ -1743,7 +1743,7 @@
 </skill>
 <skill id="297" levels="2" name="Duelist Spirit"> 
   
-  <table name="#Tab-pAtkSpd"> 5 9 </table> 
+  <table name="#Tab-pAtkSpd"> 1.05 1.09 </table> 
   
   <table name="#mpConsume"> 30 44 </table> 
   <set name="weaponsAllowed" val="512"/> 
@@ -1761,7 +1761,7 @@
   
   <for> 
     <effect count="1" name="Buff" time="1200" val="0"> 
-       <add  order='0x10' stat='pAtkSpd' val="#Tab-pAtkSpd"/> 
+       <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/> 
     </effect> 
   </for>  
   

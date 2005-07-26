@@ -1066,23 +1066,24 @@
   <for>
   </for>
 </skill>
-<skill id="1064" levels="3" name="Silence">
-  <table name="#mpConsume"> 35 39 44 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="save" val="2"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="15000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="MUTE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="600"/>
-  <for>
-	<effect count="1" name="Mute" time="120" val="0"/>
-  </for>
+<?xml version="1.0" encoding="UTF-8"?> 
+<skill id="1064" levels="14" name="Silence"> 
+  <table name="#mpConsume"> 35 39 44 48 52 54 55 58 60 62 64 65 67 69 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="save" val="2"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="15000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="MUTE"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="120000"/> 
+  <set name="castRange" val="600"/> 
+  <for> 
+   <effect count="1" name="Mute" time="120" val="0"/> 
+  </for> 
 </skill>
 <skill id="1065" levels="1" name="none">
   <set name="mpConsume" val="15"/>
