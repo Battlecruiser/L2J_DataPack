@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS character_shortcuts;
 DROP TABLE IF EXISTS character_skills;
 DROP TABLE IF EXISTS characters;
 DROP TABLE IF EXISTS clan_data;
-DROP TABLE IF EXISTS clan_wars
+DROP TABLE IF EXISTS clan_wars;
 DROP TABLE IF EXISTS class_list;
 DROP TABLE IF EXISTS droplist;
 DROP TABLE IF EXISTS etcitem;
