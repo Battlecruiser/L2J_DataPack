@@ -63,12 +63,55 @@
     <enchant val='0' order='0x0C' stat='pDef' /> 
   </for> 
 </item>
-<item id='2407' name="dark_crystal_robe">
-  <for>
-    <add val='143' order='0x10' stat='pDef' />
-    <add val='665' order='0x10' stat='maxMp' />
-    <enchant val='0' order='0x0C' stat='pDef' />
-  </for>
+<item id='2407' name="dark_crystal_robe"> 
+  <for> 
+    <add val='139' order='0x10' stat='pDef' /> 
+    <add val='665' order='0x10' stat='maxMp' /> 
+    <add val='7' order='0x40' stat='runSpd'> 
+     <and> 
+      <using slotitem="512;6"/>      
+      <using slotitem="5779;12"/> 
+      <using slotitem="5767;9"/>  
+     </and> 
+    </add> 
+    <add val='2' order='0x10' stat='WIT'> 
+     <and> 
+      <using slotitem="512;6"/>      
+      <using slotitem="5779;12"/> 
+      <using slotitem="5767;9"/>  
+     </and> 
+    </add> 
+    <add val='-2' order='0x10' stat='MEN'> 
+     <and> 
+      <using slotitem="512;6"/>      
+      <using slotitem="5779;12"/> 
+      <using slotitem="5767;9"/>  
+     </and> 
+    </add> 
+    <add val='1' order='0x50' stat='rootRes'> 
+     <and> 
+      <using slotitem="512;6"/>      
+      <using slotitem="5779;12"/> 
+      <using slotitem="5767;9"/> 
+     </and> 
+    </add> 
+    <mul val='1.15' order='0x40' stat='mAtkSpd'> 
+     <and> 
+      <using slotitem="512;6"/>      
+      <using slotitem="5779;12"/> 
+      <using slotitem="5767;9"/> 
+     </and> 
+    </mul> 
+    <mul val='1.08' order='0x40' stat='pDef'> 
+     <and> 
+      <using slotitem="512;6"/>      
+      <using slotitem="5779;12"/> 
+      <using slotitem="5767;9"/> 
+     </and> 
+    </mul> 
+  
+  <enchant val='0' order='0x0C' stat='pDef' /> 
+  </for> 
 </item>
 <item id='2408' name="robe_of_nightmare">
   <for>

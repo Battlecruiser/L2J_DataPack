@@ -92,11 +92,51 @@
   <enchant val='0' order='0x0C' stat='pDef' /> 
 </for> 
 </item>
-<item id='2385' name="dark_crystal_leather_mail">
-  <for>
-    <add val='132' order='0x10' stat='pDef' />
-  <enchant val='0' order='0x0C' stat='pDef' />
-</for>
+<item id='2385' name="dark_crystal_leather_mail"> 
+  <for> 
+    <add val='128' order='0x10' stat='pDef' /> 
+    <mul val='1.04' order='0x40' stat='pAtk'> 
+     <and> 
+      <using slotitem="2389;11"/> 
+      <using slotitem="512;6"/>      
+      <using slotitem="5778;12"/> 
+      <using slotitem="5766;9"/> 
+     </and> 
+    </mul> 
+    <add val='1' order='0x10' stat='STR'> 
+     <and> 
+      <using slotitem="2389;11"/> 
+      <using slotitem="512;6"/>      
+      <using slotitem="5778;12"/> 
+      <using slotitem="5766;9"/>  
+     </and> 
+    </add> 
+    <add val='1' order='0x50' stat='rootRes'> 
+     <and> 
+      <using slotitem="388;11"/> 
+      <using slotitem="512;6"/>      
+      <using slotitem="5777;12"/> 
+      <using slotitem="5765;9"/> 
+     </and> 
+    </add> 
+    <add val='-1' order='0x10' stat='CON'> 
+     <and> 
+      <using slotitem="2389;11"/> 
+      <using slotitem="512;6"/>      
+      <using slotitem="5778;12"/> 
+      <using slotitem="5766;9"/>  
+     </and> 
+    </add> 
+    <mul val='1.04' order='0x40' stat='pAtkSpd' /> 
+     <and> 
+      <using slotitem="2389;11"/> 
+      <using slotitem="512;6"/>      
+      <using slotitem="5778;12"/> 
+      <using slotitem="5766;9"/>  
+     </and> 
+    </mul> 
+  <enchant val='0' order='0x0C' stat='pDef' /> 
+  </for> 
 </item>
 <item id='2386' name="wooden_gaiters">
   <for>
