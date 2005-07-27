@@ -9,6 +9,7 @@
   Gaze_of_abyss player@ inventory? 0 > if
 		Gaze_of_abyss 1 player@ inventory-! drop
 		dePaulisKnight_ClassId player@ class!
+		2025 st
 		exit
 	then
   "You not have need items" .

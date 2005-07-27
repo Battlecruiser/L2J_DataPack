@@ -9,6 +9,7 @@
   Mark_of_faith player@ inventory? 0 > if
 		Mark_of_faith 1 player@ inventory-! drop
 		hCleric_ClassId player@ class!
+		2025 st
 		exit
 	then
 ;

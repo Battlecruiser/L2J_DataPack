@@ -9,6 +9,7 @@
   Jewel_of_darkness player@ inventory? 0 > if
 		Jewel_of_darkness 1 player@ inventory-! drop
 		deDarkWizard_ClassId player@ class!
+		2025 st
 		exit
 	then
 ;

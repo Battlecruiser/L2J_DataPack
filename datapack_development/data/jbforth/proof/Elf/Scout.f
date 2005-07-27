@@ -9,6 +9,7 @@
   Reoria_recommendation player@ inventory? 0 > if
 		Reoria_recommendation 1 player@ inventory-! drop
 		eScout_ClassId player@ class!
+		2025 st
 		exit
 	then
 ;

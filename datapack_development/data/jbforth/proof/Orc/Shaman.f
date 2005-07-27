@@ -9,6 +9,7 @@
   Mask_of_medium player@ inventory? 0 > if
 		Mask_of_medium 1 player@ inventory-! drop
 		oShaman_ClassId player@ class!
+		2025 st
 		exit
 	then
 ;

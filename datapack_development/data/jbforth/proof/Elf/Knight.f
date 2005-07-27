@@ -9,6 +9,7 @@
   Elven_knight_brooch player@ inventory? 0 > if
 		Elven_knight_brooch 1 player@ inventory-! drop
 		eKnight_ClassId player@ class!
+		2025 st
 		exit
 	then
 ;

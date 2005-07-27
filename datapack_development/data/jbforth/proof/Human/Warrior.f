@@ -9,6 +9,7 @@
   Medallion_of_Warrior player@ inventory? 0 > if
 		Medallion_of_Warrior 1 player@ inventory-! drop
 		hWarrior_ClassId player@ class!
+		2025 st
 		exit
 	then
 ;

@@ -9,6 +9,7 @@
   Bead_of_Season player@ inventory? 0 > if
 		Bead_of_Season 1 player@ inventory-! drop
 		hWizard_ClassId player@ class!
+		2025 st
 		exit
 	then
 ;

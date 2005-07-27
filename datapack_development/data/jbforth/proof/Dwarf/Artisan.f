@@ -9,6 +9,7 @@
   Final_Pass_Sertificate player@ inventory? 0 > if
 		Final_Pass_Sertificate 1 player@ inventory-! drop
 		dArtisan_ClassId player@ class!
+		2025 st
 		exit
 	then
 ;

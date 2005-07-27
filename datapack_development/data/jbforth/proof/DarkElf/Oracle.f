@@ -9,6 +9,7 @@
   Orb_of_abyss player@ inventory? 0 > if
 		Orb_of_abyss 1 player@ inventory-! drop
 		deShillienOracle_ClassId player@ class!
+		2025 st
 		exit
 	then
 ;

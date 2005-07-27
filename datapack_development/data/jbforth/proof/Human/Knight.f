@@ -9,6 +9,7 @@
   Sword_of_Ritual player@ inventory? 0 > if
 		Sword_of_Ritual 1 player@ inventory-! drop
 		hKnight_ClassId player@ class!
+		2025 st
 		exit
 	then
 ;

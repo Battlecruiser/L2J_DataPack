@@ -9,6 +9,7 @@
   Beziques_recommendation player@ inventory? 0 > if
 		Beziques_recommendation 1 player@ inventory-! drop
 		hRogue_ClassId player@ class!
+		2025 st
 		exit
 	then
 ;

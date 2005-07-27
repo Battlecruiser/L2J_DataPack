@@ -1,5 +1,5 @@
 1235 CONSTANT Leaf_of_oracle
-15 CONSTANT eOracle_ClassId
+29 CONSTANT eOracle_ClassId
 
 : to_eOracle
     player@ level@ 20 < if
@@ -9,6 +9,7 @@
   Leaf_of_oracle player@ inventory? 0 > if
 		Leaf_of_oracle 1 player@ inventory-! drop
 		eOracle_ClassId player@ class!
+		2025 st
 		exit
 	then
 ;

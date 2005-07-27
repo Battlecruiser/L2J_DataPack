@@ -10,7 +10,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="#hitTime"/>
   <set name="element" val="1"/>
-  <set name="reuseDelay" val="8000"/>
+  <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="#skillTime"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
@@ -34,6 +34,7 @@
   <set name="operateType" val="OP_ACTIVE"/> 
   <set name="castRange" val="600"/> 
   <set name="absorbPart" val="0.2" /><!-- absorbs 20% of damage --> 
+  <set name="displayId" val="1147"/>
   <for> 
   </for> 
 </skill> 
@@ -184,6 +185,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="500"/>
+  <set name="displayId" val="1206"/>
   <for>
   </for>
 </skill>
@@ -197,6 +199,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="800"/>
+  <set name="displayId" val="1206"/>
  <!-- Done by dc -->
 <table name="#Tab-runSpd"> 1.3 </table>
 <for>
@@ -510,6 +513,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
+  <set name="displayId" val="51"/>
   <for>
   <effect count="1" name="Buff" time="120" val="0">
     <div order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>

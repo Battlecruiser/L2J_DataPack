@@ -9,6 +9,7 @@
   Iron_heart player@ inventory? 0 > if
 		Iron_heart 1 player@ inventory-! drop
 		deAssassin_ClassId player@ class!
+		2025 st
 		exit
 	then
 ;

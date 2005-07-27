@@ -1,5 +1,5 @@
 1230 CONSTANT Eternity_diamond
-15 CONSTANT eWizard_ClassId
+26 CONSTANT eWizard_ClassId
 
 : to_eWizard
     player@ level@ 20 < if
@@ -9,6 +9,7 @@
   Eternity_diamond player@ inventory? 0 > if
 		Eternity_diamond 1 player@ inventory-! drop
 		eWizard_ClassId player@ class!
+		2025 st
 		exit
 	then
 ;

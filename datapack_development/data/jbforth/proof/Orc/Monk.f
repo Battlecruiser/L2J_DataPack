@@ -9,6 +9,7 @@
   Khavatari_totem player@ inventory? 0 > if
 		Khavatari_totem 1 player@ inventory-! drop
 		oMonk_ClassId player@ class!
+		2025 st
 		exit
 	then
 ;

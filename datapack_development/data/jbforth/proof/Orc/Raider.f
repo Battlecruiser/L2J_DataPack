@@ -9,6 +9,7 @@
   Mark_of_raider player@ inventory? 0 > if
 		Mark_of_raider 1 player@ inventory-! drop
 		oRaider_ClassId player@ class!
+		2025 st
 		exit
 	then
 ;
