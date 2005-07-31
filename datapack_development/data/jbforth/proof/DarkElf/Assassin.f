@@ -1,5 +1,5 @@
 1252 CONSTANT Iron_heart
-32 CONSTANT deAssassin_ClassId
+35 CONSTANT deAssassin_ClassId
 
 : to_deAssassin
   player@ level@ 20 < if
