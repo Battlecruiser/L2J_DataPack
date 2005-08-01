@@ -1,6 +1,6 @@
-\ Этот файл вызывает�?�? каждый раз, когда игрок входит в игру
+\ This file loaded on every player enter in game
 
-\ Загружаем переменные пользовател�?
+\ Load users vars. Not working now
 
 \ statement = con.prepareStatement("SELECT name,value FROM character_quests WHERE char_id=? AND var=?");
 
