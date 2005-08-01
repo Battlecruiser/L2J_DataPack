@@ -93,8 +93,10 @@ class Quest (JQuest) :
           htmltext = "7516-02.htm"
    elif npcId == 7516 and int(st.get("cond"))==1 and st.getQuestItemsCount(GOUPHS_CONTRACT_ID)==0 and st.getQuestItemsCount(REEPS_CONTRACT_ID)==0 :
           htmltext = "7516-03.htm"
-   elif npcId == 7555 and int(st.get("cond"))==1 and st.getQuestItemsCount(REEPS_CONTRACT_ID) and st.getQuestItemsCount(ELVEN_WINE_ID)==0 :
-          htmltext = "7555-01.htm"
+   elif npcId == 7555 and int(st.get("cond"))==1 and st.getQuestItemsCount(REEPS_CONTRACT_ID) and st.getQuestItemsCount(ELVEN_WINE_ID)==0 : 
+          htmltext = "7555-01.htm" 
+          st.giveItems(ELVEN_WINE_ID,1) 
+          st.takeItems(REEPS_CONTRACT_ID,1) 
    elif npcId == 7555 and int(st.get("cond"))==1 and st.getQuestItemsCount(REEPS_CONTRACT_ID)==0 and st.getQuestItemsCount(ELVEN_WINE_ID) :
           htmltext = "7555-03.htm"
    elif npcId == 7555 and int(st.get("cond"))==1 and st.getQuestItemsCount(GEM_BOX1_ID)==1 :
