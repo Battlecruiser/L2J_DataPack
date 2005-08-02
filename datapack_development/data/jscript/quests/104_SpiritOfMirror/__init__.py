@@ -74,35 +74,26 @@ class Quest (JQuest) :
 
  def onKill (self,npcId,st):
    if npcId == 5003 :
-      st.set("id","0") if int(st.get("cond")) == 1 and 
-      st.getQuestItemsCount(GALLINS_OAK_WAND_ID) > 0 and 
-      st.getQuestItemsCount(WAND_SPIRITBOUND1_ID) == 0 :
-      	
-      	st.takeItems(GALLINS_OAK_WAND_ID,1) 
-      	st.giveItems(WAND_SPIRITBOUND1_ID,1) 
-      	st.playSound("ItemSound?.quest_middle") 
-      	st.set("cond","2") 
-      	
+      st.set("id","0")
+      if int(st.get("cond")) == 1 and st.getQuestItemsCount(GALLINS_OAK_WAND_ID) > 0 and st.getQuestItemsCount(WAND_SPIRITBOUND1_ID) == 0 :
+        st.takeItems(GALLINS_OAK_WAND_ID,1)
+        st.giveItems(WAND_SPIRITBOUND1_ID,1)
+        st.playSound("ItemSound.quest_middle")
+        st.set("cond","2")
    elif npcId == 5004 :
-      st.set("id","0") if int(st.get("cond")) == 2 and 
-      st.getQuestItemsCount(GALLINS_OAK_WAND_ID) > 0 and 
-      st.getQuestItemsCount(WAND_SPIRITBOUND2_ID) == 0 : 
-
-		st.takeItems(GALLINS_OAK_WAND_ID,1) 
-		st.giveItems(WAND_SPIRITBOUND2_ID,1) 
-		st.playSound("ItemSound?.quest_middle") 
-		st.set("cond","3") 
-
+      st.set("id","0")
+      if int(st.get("cond")) == 1 and st.getQuestItemsCount(GALLINS_OAK_WAND_ID) > 0 and st.getQuestItemsCount(WAND_SPIRITBOUND2_ID) == 0 :
+        st.takeItems(GALLINS_OAK_WAND_ID,1)
+        st.giveItems(WAND_SPIRITBOUND2_ID,1)
+        st.playSound("ItemSound.quest_middle")
+        st.set("cond","2")
    elif npcId == 5005 :
-      st.set("id","0") if int(st.get("cond")) == 3 and 
-      st.getQuestItemsCount(GALLINS_OAK_WAND_ID) > 0 and 
-      st.getQuestItemsCount(WAND_SPIRITBOUND3_ID) == 0 : 
-
-		st.takeItems(GALLINS_OAK_WAND_ID,1) 
-		st.giveItems(WAND_SPIRITBOUND3_ID,1) 
-		st.playSound("ItemSound?.quest_middle") 
-		st.set("cond","4") 
-
+      st.set("id","0")
+      if int(st.get("cond")) == 1 and st.getQuestItemsCount(GALLINS_OAK_WAND_ID) > 0 and st.getQuestItemsCount(WAND_SPIRITBOUND3_ID) == 0 :
+        st.takeItems(GALLINS_OAK_WAND_ID,1)
+        st.giveItems(WAND_SPIRITBOUND3_ID,1)
+        st.playSound("ItemSound.quest_middle")
+        st.set("cond","2")
    return
 
 QUEST       = Quest(104,"104_SpiritOfMirror","Spirit Of Mirror")
