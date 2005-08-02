@@ -210,11 +210,17 @@
   <enchant val='0' order='0x0C' stat='pDef' />
 </for>
 </item>
-<item id='60' name="composite_armor">
-  <for>
-	<add val='224' order='0x10' stat='pDef' />
-  <enchant val='0' order='0x0C' stat='pDef' />
-</for>
+<?xml version='1.0' encoding='utf-8'?> 
+<item id='60' name="composite_armor"> 
+  <for> 
+   <add val='224' order='0x10' stat='pDef' /> 
+    <add val='5759' order='0x40' stat='maxLoad'> 
+    <and> 
+      <using slotitem="517;6"/>      
+    </and> 
+    </add> 
+  <enchant val='0' order='0x0C' stat='pDef' /> 
+ </for> 
 </item>
 <item id='61' name="mithril_glove">
   <for>

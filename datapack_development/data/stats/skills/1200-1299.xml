@@ -68,26 +68,26 @@
   <for>
   </for>
 </skill>
-<skill id="1204" levels="2" name="Wind Walk">
-<!-- Done by dc -->
-<table name="#Tab-runSpd"> 20 40 </table>
-<table name="#mpConsume"> 20 27 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
-  <set name="castRange" val="400"/>
-  <for>
-  <effect count="1" name="Buff" time="1200" val="0">
-    <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
- </effect>
-</for>
+<skill id="1204" levels="2" name="Wind Walk"> 
+<!-- Done by dc --> 
+<table name="#Tab-runSpd"> 20 40 </table> 
+<table name="#mpConsume"> 20 27 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="6000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="400"/> 
+  <for> 
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp"> 
+    <add order="0x40" stat="runSpd" val="#Tab-runSpd"/> 
+ </effect> 
+</for> 
 </skill>
 <skill id="1205" levels="2" name="none">
   <set name="mpConsume" val="15"/>
@@ -686,11 +686,11 @@
   <set name="buffDuration" val="1200000"/> 
   <set name="castRange" val="400"/> 
   <for> 
-  <effect count="1" name="Buff" time="1200" val="0"> 
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#power" stackType="DmgShield"> 
     <add order="0x50" stat="reflectDam" val="#power"/> 
   </effect> 
   </for> 
-</skill> 
+</skill>
 <skill id="1233" levels="2" name="Decay">
 <table name="#dmg"> 77 94 </table>
   <table name="#mpConsume"> 65 77 </table>
@@ -780,26 +780,29 @@
     </effect> 
   </for>
 </skill>  
+<?xml version="1.0" encoding="UTF-8"?> 
+<!-- Fixed by Pela -->  
 <skill id="1237" levels="17" name="Ice Dagger"> 
-  <table name="#mpConsume"> 38 40 43 45 48 49 52 54 57 58 60 62 64 67 68 70 72 </table> 
-  <table name="#power"> 28 29 31 33 34 36 38 39 41 43 45 46 48 50 51 53 54 </table> 
-    
-  <set name="mpConsume" val="#mpConsume"/> 
-  <set name="save" val="4"/> 
-  <set name="power" val="#power"/> 
-  <set name="target" val="TARGET_ONE"/> 
-  <set name="hitTime" val="2000"/> 
-  <set name="element" val="3"/> 
-  <set name="reuseDelay" val="8000"/> 
-  <set name="skillTime" val="2000"/> 
-  <set name="skillType" val="MDAM"/> 
-  <set name="isMagic" val="true"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="buffDuration" val="20000"/> 
-  <set name="castRange" val="900"/> 
-  <for> 
-   <effect count="4" name="DamOverTime" time="5" val="36"/> 
-  </for> 
+<table name="#mpConsume"> 38 40 43 45 48 49 52 54 57 57 58 60 62 64 67 68 70</table> 
+<table name="#effect"> 5.0 5.0 5.0 5.0 6.0 6.0 6.0 6.0 6.0 7.0 7.0 7.0 7.0 7.0 8.0 8.0 8.0 </table> 
+<table name="#power"> 28 31 33 34 36 38 39 41 43 45 46 48 50 51 53 54 55</table> 
+<table name="#bleeddmg"> 22 22 22 22 27 27 27 27 27 27 27 27 27 27 27 27 27 </table> 
+<set name="mpConsume" val="#mpConsume"/> 
+<set name="save" val="4"/> 
+<set name="power" val="#power"/> 
+<set name="target" val="TARGET_ONE"/> 
+<set name="hitTime" val="2000"/> 
+<set name="element" val="3"/> 
+<set name="reuseDelay" val="8000"/> 
+<set name="skillTime" val="2500"/> 
+<set name="skillType" val="MDAM"/> 
+<set name="isMagic" val="true"/> 
+<set name="operateType" val="OP_ACTIVE"/> 
+<set name="buffDuration" val="20000"/> 
+<set name="castRange" val="900"/> 
+<for> 
+           <effect count="4" name="DamOverTime" time="5" val="#bleeddmg" abnormal="bleeding"/> 
+</for> 
 </skill>
 <skill id="1238" levels="3" name="Freezing Skin"> 
   <table name="#mpConsume"> 35 44 52 </table> 
@@ -816,7 +819,7 @@
   <set name="buffDuration" val="1200000"/> 
   <set name="castRange" val="400"/> 
   <for> 
-  <effect count="1" name="Buff" time="1200" val="0"> 
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#power" stackType="DmgShield"> 
     <add order="0x50" stat="reflectDam" val="#power"/> 
   </effect> 
   </for> 
@@ -1061,26 +1064,26 @@
  </effect> 
 </for> 
 </skill>
-<skill id="1251" levels="2" name="Chant of Fury">
-<!-- Done by dc -->
-<table name="#Tab-pAtkSpd"> 1.15 1.33 </table>
-<table name="#mpConsume"> 172 204 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_PARTY"/>
-  <set name="hitTime" val="2000"/>
-  <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="2000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  <effect count="1" name="Buff" time="1200" val="0">
-    <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
- </effect>
-</for>
+<skill id="1251" levels="2" name="Chant of Fury"> 
+<!-- Done by dc --> 
+<table name="#Tab-pAtkSpd"> 1.15 1.33 </table> 
+<table name="#mpConsume"> 172 204 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_PARTY"/> 
+  <set name="hitTime" val="2000"/> 
+  <set name="reuseDelay" val="20000"/> 
+  <set name="skillTime" val="2000"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpeedUp"> 
+    <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/> 
+ </effect> 
+</for> 
 </skill>
 <skill id="1252" levels="3" name="Chant of Evasion">
 <!-- Done by dc -->
@@ -1174,21 +1177,26 @@
 	<effect count="6" name="HealOverTime" time="5" val="#hot"/>	
   </for>
 </skill>
-<skill id="1257" levels="3" name="Decrease Weight">
-  <table name="#mpConsume"> 15 20 23 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1800000"/>
-  <set name="castRange" val="400"/>
-  <for>
-  </for>
+<skill id="1257" levels="3" name="Decrease Weight"> 
+<table name="#mpConsume">15 20 23</table> 
+<table name="#Weight">1.5 2 2.5</table> 
+<set name="mpConsume" val="#mpConsume"/> 
+<set name="power" val="0.0"/> 
+<set name="target" val="TARGET_ONE"/> 
+<set name="hitTime" val="4000"/> 
+<set name="reuseDelay" val="6000"/> 
+<set name="skillTime" val="4000"/> 
+<set name="skillType" val="BUFF"/> 
+<set name="isMagic" val="true"/> 
+<set name="operateType" val="OP_ACTIVE"/> 
+<set name="buffDuration" val="1800000"/> 
+<set name="castRange" val="400"/> 
+<!-- Fixed by Pela -->  
+<for> 
+   <effect count="1" name="Buff" time="1200" val="0"> 
+   <mul order="0x50" stat="maxLoad" val="#Weight" /> 
+   </effect> 
+</for> 
 </skill>
 <skill id="1258" levels="4" name="Restore Life">
   <table name="#mpConsume"> 80 107 133 159 </table>
@@ -1206,21 +1214,26 @@
   <for>
   </for>
 </skill>
-<skill id="1259" levels="2" name="Resist Shock">
-  <table name="#mpConsume"> 36 44 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
-  <set name="castRange" val="400"/>
-  <for>
-  </for>
+<skill id="1259" levels="4" name="Resist Shock"> 
+<table name="#mpConsume">36 44 58 65 </table> 
+<table name="#res">1.2 1.25 1.3 1.35</table> 
+<set name="mpConsume" val="#mpConsume"/> 
+<set name="power" val="0.0"/> 
+<set name="target" val="TARGET_ONE"/> 
+<set name="hitTime" val="4000"/> 
+<set name="reuseDelay" val="6000"/> 
+<set name="skillTime" val="4000"/> 
+<set name="skillType" val="BUFF"/> 
+<set name="isMagic" val="true"/> 
+<set name="operateType" val="OP_ACTIVE"/> 
+<set name="buffDuration" val="1200000"/> 
+<set name="castRange" val="400"/> 
+<!-- Fixed by Pela -->  
+<for> 
+        <effect count="1" name="Buff" time="1200" val="0"> 
+        <mul stat="stunRes" val="#res" order="0x50"/> 
+        </effect> 
+</for> 
 </skill>
 <skill id="1260" levels="3" name="Tact of Paagrio"> 
 <!-- Done by dc --> 

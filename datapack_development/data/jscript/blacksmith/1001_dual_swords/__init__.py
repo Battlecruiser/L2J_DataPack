@@ -606,13 +606,13 @@ class Quest (JQuest) :
     if event == "40":
          if st.getQuestItemsCount(130) >= 1 and st.getQuestItemsCount(1458) >= 54:
             st.takeItems(130,1)
-            if st.getQuestItemsCount(127) >= 1:
-               st.takeItems(127,1)
+            if st.getQuestItemsCount(130) >= 1:
+               st.takeItems(130,1)
                st.takeItems(1458,54)
                st.giveItems(2555,1)
                htmltext = "Item has been succesfully created."
             else:
-               st.giveItems(127,1)
+               st.giveItems(130,1)
                htmltext = "You need one more sword."
          else:
              htmltext = "You do not have enough materials."

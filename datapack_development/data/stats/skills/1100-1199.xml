@@ -649,26 +649,26 @@
   <for>
   </for>
 </skill>
-<skill id="1139" levels="2" name="Servitor Magic Shield">
-<!-- Done by dc -->
-<table name="#Tab-mDef"> 1.23 1.3 </table>
-<table name="#mpConsume"> 40 48 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_PET"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
-  <set name="castRange" val="400"/>
-  <for>
-  <effect count="1" name="Buff" time="1200" val="0">
-    <mul order="0x50" stat="mDef" val="#Tab-mDef"/>
- </effect>
-</for>
+<skill id="1139" levels="2" name="Servitor Magic Shield"> 
+<!-- Done by dc --> 
+<table name="#Tab-mDef"> 1.23 1.3 </table> 
+<table name="#mpConsume"> 40 48 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_PET"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="6000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="400"/> 
+  <for> 
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mDef" stackType="MagicDefUp"> 
+    <mul order="0x50" stat="mDef" val="#Tab-mDef"/> 
+ </effect> 
+</for> 
 </skill>
 <skill id="1140" levels="3" name="Servitor Physical Shield">
 <!-- Done by dc -->
@@ -691,26 +691,26 @@
  </effect>
 </for>
 </skill>
-<skill id="1141" levels="2" name="Servitor Haste">
-<!-- Done by dc -->
-<table name="#Tab-pAtkSpd"> 1.15 1.33 </table>
-<table name="#mpConsume"> 40 48 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_PET"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
-  <set name="castRange" val="400"/>
-  <for>
-  <effect count="1" name="Buff" time="1200" val="0">
-    <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
- </effect>
-</for>
+<skill id="1141" levels="2" name="Servitor Haste"> 
+<!-- Done by dc --> 
+<table name="#Tab-pAtkSpd"> 1.15 1.33 </table> 
+<table name="#mpConsume"> 40 48 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_PET"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="6000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="400"/> 
+  <for> 
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpeedUp"> 
+    <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/> 
+ </effect> 
+</for> 
 </skill>
 <skill id="1142" levels="4" name="none">
   <set name="mpConsume" val="15"/>
@@ -744,26 +744,26 @@
   <for>
   </for>
 </skill>
-<skill id="1144" levels="2" name="Fast Servitor">
-<!-- Done by dc -->
-<table name="#Tab-runSpd"> 20 33 </table>
-<table name="#mpConsume"> 30 46 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_PET"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
-  <set name="castRange" val="400"/>
-  <for>
-  <effect count="1" name="Buff" time="1200" val="0">
-    <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
- </effect>
-</for>
+<skill id="1144" levels="2" name="Fast Servitor"> 
+<!-- Done by dc --> 
+<table name="#Tab-runSpd"> 20 33 </table> 
+<table name="#mpConsume"> 30 46 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_PET"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="6000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="400"/> 
+  <for> 
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp"> 
+    <add order="0x40" stat="runSpd" val="#Tab-runSpd"/> 
+ </effect> 
+</for> 
 </skill>
 <skill id="1145" levels="3" name="Bright Servitor">
 <!-- Done by dc -->
@@ -1409,21 +1409,26 @@
   <for>
   </for>
 </skill>
-<skill id="1182" levels="3" name="Resist Aqua">
-  <table name="#mpConsume"> 23 35 39 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
-  <set name="castRange" val="400"/>
-  <for>
-  </for>
+<skill id="1182" levels="3" name="Resist Aqua"> 
+<table name="#mpConsume">23 35 39</table> 
+<table name="#res">1.25 1.3 1.35</table> 
+<set name="mpConsume" val="#mpConsume"/> 
+<set name="power" val="0.0"/> 
+<set name="target" val="TARGET_ONE"/> 
+<set name="hitTime" val="4000"/> 
+<set name="reuseDelay" val="6000"/> 
+<set name="skillTime" val="4000"/> 
+<set name="skillType" val="BUFF"/> 
+<set name="isMagic" val="true"/> 
+<set name="operateType" val="OP_ACTIVE"/> 
+<set name="buffDuration" val="1200000"/> 
+<set name="castRange" val="400"/> 
+<!-- Fixed by Pela -->  
+<for> 
+        <effect count="1" name="Buff" time="1200" val="0"> 
+        <mul stat="waterRes" val="#res" order="0x50"/> 
+        </effect> 
+</for> 
 </skill>
 <skill id="1183" levels="2" name="Freezing Shackle">
 <table name="#dmg"> 77 94 </table>
@@ -1532,21 +1537,26 @@
   <for>
   </for>
 </skill>
-<skill id="1189" levels="3" name="Resist Wind">
-  <table name="#mpConsume"> 30 35 39 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
-  <set name="castRange" val="400"/>
-  <for>
-  </for>
+<skill id="1189" levels="3" name="Resist Wind"> 
+<table name="#mpConsume">30 35 39</table> 
+<table name="#res">1.25 1.3 1.35</table> 
+<set name="mpConsume" val="#mpConsume"/> 
+<set name="power" val="0.0"/> 
+<set name="target" val="TARGET_ONE"/> 
+<set name="hitTime" val="4000"/> 
+<set name="reuseDelay" val="6000"/> 
+<set name="skillTime" val="4000"/> 
+<set name="skillType" val="BUFF"/> 
+<set name="isMagic" val="true"/> 
+<set name="operateType" val="OP_ACTIVE"/> 
+<set name="buffDuration" val="1200000"/> 
+<set name="castRange" val="400"/> 
+<!-- Fixed by Pela -->  
+<for> 
+        <effect count="1" name="Buff" time="1200" val="0"> 
+        <mul stat="windRes" val="#res" order="0x50"/> 
+        </effect> 
+</for> 
 </skill>
 <skill id="1190" levels="3" name="none">
   <set name="mpConsume" val="15"/>
@@ -1564,21 +1574,26 @@
   <for>
   </for>
 </skill>
-<skill id="1191" levels="3" name="Resist Fire">
-  <table name="#mpConsume"> 27 35 39 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
-  <set name="castRange" val="400"/>
-  <for>
-  </for>
+<skill id="1191" levels="3" name="Resist Fire"> 
+<table name="#mpConsume">27 35 39</table> 
+<table name="#res">1.25 1.3 1.35</table> 
+<set name="mpConsume" val="#mpConsume"/> 
+<set name="power" val="0.0"/> 
+<set name="target" val="TARGET_ONE"/> 
+<set name="hitTime" val="4000"/> 
+<set name="reuseDelay" val="6000"/> 
+<set name="skillTime" val="4000"/> 
+<set name="skillType" val="BUFF"/> 
+<set name="isMagic" val="true"/> 
+<set name="operateType" val="OP_ACTIVE"/> 
+<set name="buffDuration" val="1200000"/> 
+<set name="castRange" val="400"/> 
+<!-- Fixed by Pela -->  
+<for> 
+        <effect count="1" name="Buff" time="1200" val="0"> 
+        <mul stat="fireRes" val="#res" order="0x50"/> 
+        </effect> 
+</for> 
 </skill>
 <skill id="1192" levels="3" name="none">
   <set name="mpConsume" val="15"/>

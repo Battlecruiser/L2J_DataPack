@@ -412,26 +412,26 @@
     <add order="0x40" stat="regMp" val="#regMp"/>
   </for>
 </skill>
-<skill id="230" levels="2" name="Sprint">
-<!-- Done by dc -->
-<table name="#Tab-runSpd"> 20 33 </table>
-<table name="#mpConsume"> 28 48 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="10000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  <effect count="1" name="Buff" time="1200" val="0">
-    <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
- </effect>
-</for>
+<skill id="230" levels="2" name="Sprint"> 
+<!-- Done by dc --> 
+<table name="#Tab-runSpd"> 20 33 </table> 
+<table name="#mpConsume"> 28 48 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="10000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp"> 
+    <add order="0x40" stat="runSpd" val="#Tab-runSpd"/> 
+ </effect> 
+</for> 
 </skill>
 <skill id="231" levels="50" name="Heavy Armor Mastery">
   <table name="#pDef">

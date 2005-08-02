@@ -21,7 +21,7 @@ L2J-Datapack version 3 dev/unstable:
 
 Sourceforge project page: http://sourceforge.net/projects/l2j-c2datapack
 Forum: http://l2j-c2datapack.sourceforge.net/bb/index.php
-Download: The forum contains a post linking to the latest build from the CVS repository.
+Download: The forum contains a post linking to the latest build from the SVN repository.
 IRC: irc.freenode.net #l2j-datapack
 
 L2J-Datapack is *NOT* L2J. L2J is NOT L2J-Datapack.

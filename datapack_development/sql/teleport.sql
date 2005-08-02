@@ -33,6 +33,8 @@ INSERT INTO teleport VALUES ('Dark Elven Town -> Southern part of dark elven for
 INSERT INTO teleport VALUES ('TI -> Village of Gludin',15,-80826,149775,-3043,18000);
 INSERT INTO teleport VALUES ('Dwarf Town & Orc Town -> Village of Gludin',16,-80826,149775,-3043,3000);
 INSERT INTO teleport VALUES ('Dwarf Town -> The Northeast Coast',17,169008,-208272,-3504,700);
+INSERT INTO teleport VALUES ('Dwarven Town -> Abandoned Coal Mines',418,155535,-173560,2495,290); 
+INSERT INTO teleport VALUES ('Dwarven Town -> Mithril Mines',419,179039,-184080,-319,680);
 INSERT INTO teleport VALUES ('Dion Town -> Town of Gludio',18,-12672,122776,-3116,4200);
 INSERT INTO teleport VALUES ('Dion Town -> Town of Giran',19,83400,147943,-3404,8100);
 INSERT INTO teleport VALUES ('Dion Town & Giran Town -> Entrance Giran',20,47942,186764,-3485,6500);
