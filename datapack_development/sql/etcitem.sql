@@ -622,11 +622,11 @@ INSERT INTO etcitem VALUES (1459,'crystal_c','false','none',0,'stackable','paper
 INSERT INTO etcitem VALUES (1460,'crystal_b','false','none',0,'stackable','paper','b',0,9000,0,'true');
 INSERT INTO etcitem VALUES (1461,'crystal_a','false','none',0,'stackable','paper','a',0,15000,0,'true');
 INSERT INTO etcitem VALUES (1462,'crystal_s','false','none',0,'stackable','paper','s',0,25000,0,'true');
-INSERT INTO etcitem VALUES (1463,'soulshot_d','false','none',3,'stackable','paper','d',0,10,0,'true');
-INSERT INTO etcitem VALUES (1464,'soulshot_c','false','none',3,'stackable','paper','c',0,15,0,'true');
-INSERT INTO etcitem VALUES (1465,'soulshot_b','false','none',2,'stackable','paper','b',0,50,0,'true');
-INSERT INTO etcitem VALUES (1466,'soulshot_a','false','none',2,'stackable','paper','a',0,80,0,'true');
-INSERT INTO etcitem VALUES (1467,'soulshot_s','false','none',2,'stackable','paper','s',0,150,0,'true');
+INSERT INTO etcitem VALUES (1463,'Soulshot: D-Grade','false','none',3,'stackable','paper','d',0,10,0,'true');
+INSERT INTO etcitem VALUES (1464,'Soulshot: C-Grade','false','none',3,'stackable','paper','c',0,15,0,'true');
+INSERT INTO etcitem VALUES (1465,'Soulshot: B-Grade','false','none',2,'stackable','paper','b',0,50,0,'true');
+INSERT INTO etcitem VALUES (1466,'Soulshot: A-Grade','false','none',2,'stackable','paper','a',0,80,0,'true');
+INSERT INTO etcitem VALUES (1467,'Soulshot: S-Grade','false','none',2,'stackable','paper','s',0,150,0,'true');
 INSERT INTO etcitem VALUES (1468,'gludin_panacen','false','none',0,'stackable','paper','s',0,0,0,'true');
 INSERT INTO etcitem VALUES (1469,'gludin_vermouth','false','none',0,'stackable','paper','s',0,0,0,'true');
 INSERT INTO etcitem VALUES (1470,'artemeter','false','none',0,'stackable','paper','s',0,0,0,'true');

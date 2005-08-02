@@ -1,4 +1,4 @@
-print "importing blacksmith data: dual swords"
+print "importing blacksmith data: 1001_dual_swords"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
