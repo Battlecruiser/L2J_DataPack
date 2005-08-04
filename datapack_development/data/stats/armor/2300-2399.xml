@@ -438,29 +438,37 @@
   <enchant val='0' order='0x0C' stat='pDef' /> 
  </for> 
 </item>
-<item id='2395' name="inferno_leather_mail">
- <for>
+<item id='2395' name="inferno_leather_mail"> 
+
+ <for> 
     <add val='193' order='0x10' stat='pDef' /> 
-    <mul val='1.08' order='0x40' stat='pAtk'>
-     <and>
-      <using kind='Bow' />
+   <mul val='1.08' order='0x40' stat='pAtk'> 
+     <and> 
+      <using kind='Bow' /> 
       <using slotitem="2419;6"/>      
       <using slotitem="5787;12"/> 
       <using slotitem="5775;9"/>  
      </and> 
     </mul> 
+    <add val='240' order='0x10' stat='maxMp'> 
+     <and> 
+      <using slotitem="2419;6"/>      
+      <using slotitem="5787;12"/> 
+      <using slotitem="5775;9"/> 
+     </and> 
+    </add> 
     <add val='1' order='0x10' stat='DEX'> 
      <and> 
       <using slotitem="2419;6"/>      
       <using slotitem="5787;12"/> 
-      <using slotitem="5775;9"/>
+      <using slotitem="5775;9"/> 
      </and> 
     </add> 
     <add val='-1' order='0x10' stat='CON'> 
      <and> 
       <using slotitem="2419;6"/>      
       <using slotitem="5787;12"/> 
-      <using slotitem="5775;9"/>   
+      <using slotitem="5775;9"/>    
      </and> 
     </add> 
     <mul val='1.50' order='0x40' stat='stunRes'> 
@@ -469,14 +477,14 @@
       <using slotitem="5787;12"/> 
       <using slotitem="5775;9"/>  
      </and> 
-    </mul>
-    <add val='5759' order='0x40' stat='maxLoad'>
+    </mul> 
+    <add val='5759' order='0x40' stat='maxLoad'> 
     <and> 
       <using slotitem="2419;6"/>      
       <using slotitem="5787;12"/> 
       <using slotitem="5775;9"/> 
     </and> 
-    </add>
+    </add> 
   <enchant val='0' order='0x0C' stat='pDef' /> 
  </for> 
 </item>
