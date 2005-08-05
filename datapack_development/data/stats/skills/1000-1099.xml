@@ -267,20 +267,21 @@
   <for>
   </for>
 </skill>
-<skill id="1016" levels="5" name="Greater Resurrection">
-  <table name="#mpConsume"> 59 88 122 152 180 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_CORPSE_PLAYER"/>
-  <set name="hitTime" val="6000"/>
-  <set name="reuseDelay" val="120000"/>
-  <set name="skillTime" val="6000"/>
-  <set name="skillType" val="RESURRECT"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="400"/>
-  <for>
-  </for>
+<skill id="1016" levels="7" name="Greater Resurrection"> 
+  <table name="#mpConsume"> 122 152 180 195 207 228 239</table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_CORPSE_PLAYER"/>  <!-- need this to work for party --> 
+  <set name="hitTime" val="6000"/> 
+  <set name="reuseDelay" val="120000"/> 
+  <set name="skillTime" val="6000"/> 
+  <set name="skillType" val="RESURRECT"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="400"/> 
+  <for> 
+
+  </for> 
 </skill>
 <skill id="1017" levels="3" name="none">
   <set name="mpConsume" val="15"/>
@@ -832,22 +833,23 @@
   <for>
   </for>
 </skill>
-<skill id="1050" levels="2" name="Return">
-  <table name="#mpConsume"> 105 153 </table>
-  <table name="#hitTime"> 20000 1000 </table>
-  <table name="#skillTime"> 20000 1000 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="#hitTime"/>
-  <set name="reuseDelay" val="120000"/>
-  <set name="skillTime" val="#skillTime"/>
-  <set name="skillType" val="RECALL"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<skill id="1050" levels="2" name="Return"> 
+  <table name="#mpConsume"> 105 153 </table> 
+  <table name="#hitTime"> 20000 1500 </table> 
+  <table name="#skillTime"> 20000 1500 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="hitTime" val="#hitTime"/> 
+  <set name="reuseDelay" val="120000"/> 
+  <set name="skillTime" val="#skillTime"/> 
+  <set name="skillType" val="RECALL"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+
+  </for> 
 </skill>
 <skill id="1051" levels="1" name="none">
   <set name="mpConsume" val="15"/>

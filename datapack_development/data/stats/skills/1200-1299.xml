@@ -1124,37 +1124,39 @@
  </effect>
 </for>
 </skill>
-<skill id="1254" levels="4" name="Mass Resurrection">
-  <table name="#mpConsume"> 364 402 485 528 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_CORPSE_CLAN"/>
-  <set name="hitTime" val="10000"/>
-  <set name="reuseDelay" val="600000"/>
-  <set name="skillTime" val="10000"/>
-  <set name="skillType" val="RESURRECT"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<skill id="1254" levels="6" name="Mass Resurrection"> 
+  <table name="#mpConsume"> 243 268 327 360 377 442 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_CORPSE_CLAN"/> 
+  <set name="hitTime" val="10000"/> 
+  <set name="reuseDelay" val="600000"/> 
+  <set name="skillTime" val="10000"/> 
+  <set name="skillType" val="RESURRECT"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="-1"/>  <!-- Needs range fix --> 
+  <for> 
+
+  </for> 
 </skill>
-<skill id="1255" levels="2" name="Party Recall">
-  <table name="#mpConsume"> 257 297 </table>
-  <table name="#hitTime"> 20000 3000 </table>
-  <table name="#skillTime"> 20000 3000 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_PARTY"/>
-  <set name="hitTime" val="#hitTime"/>
-  <set name="reuseDelay" val="300000"/>
-  <set name="skillTime" val="#skillTime"/>
-  <set name="skillType" val="RECALL"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<skill id="1255" levels="2" name="Party Recall"> 
+  <table name="#mpConsume"> 257 305 </table> 
+  <table name="#hitTime"> 20000 3500 </table> 
+  <table name="#skillTime"> 20000 3500 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_PARTY"/> 
+  <set name="hitTime" val="#hitTime"/> 
+  <set name="reuseDelay" val="300000"/> 
+  <set name="skillTime" val="#skillTime"/> 
+  <set name="skillType" val="RECALL"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="400"/> 
+  <for> 
+
+  </for> 
 </skill>
 <skill id="1256" levels="4" name="Heart of Paagrio">
 	<table name="#hot">31 35 39 43</table>
