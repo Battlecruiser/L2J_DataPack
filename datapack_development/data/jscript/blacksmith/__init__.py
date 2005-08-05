@@ -7,4 +7,3 @@ print ""
 print "importing blacksmith data ..."
 from data.jscript.blacksmith import *
 print "... done"
-print ""
