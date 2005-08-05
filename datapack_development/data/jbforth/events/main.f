@@ -19,7 +19,7 @@
 
 : jump-for-item ( x y z item_id -- )
     dup player@ inventory? 1 < if
-		"You nave not needed item!" .
+		"You have not needed item!" .
 		2drop 2drop
 		exit
 	then
