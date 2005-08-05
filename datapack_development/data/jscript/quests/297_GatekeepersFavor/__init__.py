@@ -1,5 +1,7 @@
-# Maked by Mr. Have fun! Version 0.2
-print "importing quests: 297: Gatekeepers Favor"
+# Made by Mr. Have fun! Version 0.2 								  #
+# Fixed by Pela Version 0.3	 								  #
+
+print "importing quests: 297: Gatekeepers Offering"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -38,10 +40,11 @@ class Quest (JQuest) :
             htmltext = "7540-02.htm"
             st.set("cond","1")
             return htmltext
-          else:
-            htmltext = "7540-02.htm"
    elif npcId == 7540 and int(st.get("cond"))==1 and st.getQuestItemsCount(STARSTONE2_ID)<20 :
-          htmltext = "7540-04.htm"
+	  if id == STARTING or id == COMPLETED :
+            htmltext = "7540-02.htm"
+          else:
+            htmltext = "7540-04.htm"
    elif npcId == 7540 and int(st.get("cond"))==1 and st.getQuestItemsCount(STARSTONE2_ID)>=20 :
           if int(st.get("id")) != 297 :
             st.set("id","297")
@@ -51,6 +54,8 @@ class Quest (JQuest) :
             st.set("cond","0")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
+          else:
+            htmltext = "7540-02.htm"
    return htmltext
 
  def onKill (self,npcId,st):
@@ -72,12 +77,9 @@ STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
-
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7540)
 
 STARTED.addTalkId(7540)
-
 STARTED.addKillId(521)
-
 STARTED.addQuestDrop(521,STARSTONE2_ID,1)
