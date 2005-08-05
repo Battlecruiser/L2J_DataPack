@@ -363,10 +363,13 @@
   <set name="operateType" val="OP_PASSIVE"/> 
   <set name="castRange" val="-1"/> 
   <for> 
-   <mul stat="pAtkSpd" order="0x50" val="0.8"> 
-     <not> 
-       <using kind="Magic" /> 
-     </not> 
+   <mul stat="pAtkSpd" order="0x50" val="1.2"> 
+     <and>
+		<using kind="Magic"/>
+          <not>
+        <using kind="Light,Magic"/>
+          </not>
+     </and>      
    </mul> 
   </for> 
 </skill>
