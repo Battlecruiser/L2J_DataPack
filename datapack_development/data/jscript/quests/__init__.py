@@ -37,10 +37,22 @@ __all__ = [
 '204_DelfTutorial',
 '205_OrcTutorial',
 '206_DwarfTutorial',
+'211_TrialOfChallenger',
+'212_TrialOfDuty',
 '213_TrialOfSeeker',
 '214_TrialOfScholar',
+'215_TrialOfPilgrim',
+'217_TestimoneyOfTrust',
+'219_TestimonyOfFate',
+'220_TestimonyOfGlory',
+'221_TestimonyOfProsperity',
 '222_TestOfDuelist',
+'223_TestOfChampion',
+'224_TestOfSagittarius',
+'226_TestOfHealer',
 '228_TestOfMagus',
+'230_TestOfSummoner',
+'231_TestOfMaestro',
 '233_TestOfWarspirit',
 '257_GuardIsBusy1',
 '258_BringWolfPelt1',
@@ -81,6 +93,7 @@ __all__ = [
 '329_CuriosityOfDwarf',
 '330_AdeptOfTaste',
 '331_ArrowForVengeance',
+'3_ReleaseDarkelfElder1',
 '401_PathToWarrior',
 '402_PathToKnight',
 '403_PathToRogue',
@@ -99,7 +112,8 @@ __all__ = [
 '416_PathToOrcShaman',
 '417_PathToScavenger',
 '418_PathToArtisan',
-'419_GetAPet'
+'419_GetAPet',
+'420_LittleWings'
 ]
 print ""
 print "importing quests ..."

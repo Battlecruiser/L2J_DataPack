@@ -11,5 +11,6 @@ CREATE TABLE items (
   loc_data decimal(10) ,  -- depending on location: equiped slot, npc id, pet id, etc   
   price_sell decimal(10) ,   
   price_buy decimal(10) ,   
-  PRIMARY KEY  (object_id)   
+  PRIMARY KEY  (object_id),
+  KEY `owner_id` (`owner_id`)
 ) ; 

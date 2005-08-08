@@ -44,7 +44,7 @@ class Quest (JQuest) :
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
-        st.giveItems(DUFNERS_LETTER_ID)
+        st.giveItems(DUFNERS_LETTER_ID,1)
     elif event == "7106_1" :
           htmltext = "7106-04.htm"
           st.set("cond","1")
