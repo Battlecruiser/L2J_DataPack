@@ -84,76 +84,76 @@
   <enchant val='0' order='0x0C' stat='pDef' />
 </for>
 </item>
-<item id='357' name="shrnoen's_breastplate"> 
-  <for> 
-    <add val='157' order='0x10' stat='pDef' /> 
-  <enchant val='0' order='0x0C' stat='pDef' /> 
-</for> 
-  <for> 
-    <mul val='1.05' order='0x40' stat='pDef'> 
-     <and> 
-      <using slotitem="383;11"/> 
-      <using slotitem="503;6"/> 
-      <using slotitem="5726;12"/> 
-      <using slotitem="5710;9"/> 
-     </and> 
-    </mul> 
-    <add val='294' order='0x40' stat='maxHp'> 
-     <and> 
-      <using slotitem="383;11"/> 
-      <using slotitem="503;6"/> 
-      <using slotitem="5726;12"/> 
-      <using slotitem="5710;9"/> 
-     </and> 
-    </add> 
-  <enchant val='0' order='0x0C' stat='pDef' /> 
-</for> 
+<item id='357' name="shrnoen's_breastplate">
+  <for>
+    <add val='157' order='0x10' stat='pDef' />
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
+  <for>
+    <mul val='1.05' order='0x40' stat='pDef'>
+     <and>
+      <using slotitem="383;11"/>
+      <using slotitem="503;6"/>
+      <using slotitem="5726;12"/>
+      <using slotitem="5710;9"/>
+     </and>
+    </mul>
+    <add val='294' order='0x40' stat='maxHp'>
+     <and>
+      <using slotitem="383;11"/>
+      <using slotitem="503;6"/>
+      <using slotitem="5726;12"/>
+      <using slotitem="5710;9"/>
+     </and>
+    </add>
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
 </item>
-<item id='358' name="blue_wolve's_breastplate"> 
-  <for> 
-    <add val='166' order='0x10' stat='pDef' /> 
-    <add val='7' order='0x40' stat='runSpd'> 
-    <and> 
-     <using slotitem="2380;11"/> 
-     <using slotitem="2416;6"/>      
-     <using slotitem="5734;12"/> 
-     <using slotitem="5718;9"/> 
-    </and> 
-    </add> 
-    <mul val='1.05' order='0x40' stat='regHp'> 
-    <and> 
-     <using slotitem="2380;11"/> 
-     <using slotitem="2416;6"/>      
-     <using slotitem="5734;12"/> 
-     <using slotitem="5718;9"/> 
-    </and> 
-    </mul> 
-       <add val='3' order='0x10' stat='STR'> 
-    <and> 
-     <using slotitem="2380;11"/> 
-     <using slotitem="2416;6"/>      
-     <using slotitem="5734;12"/> 
-     <using slotitem="5718;9"/> 
-    </and> 
-    </add> 
-    <add val='-1' order='0x10' stat='CON'> 
-    <and> 
-     <using slotitem="2380;11"/> 
-     <using slotitem="2416;6"/>      
-     <using slotitem="5734;12"/> 
-     <using slotitem="5718;9"/> 
-    </and> 
-    </add> 
-        <add val='-2' order='0x10' stat='DEX'> 
-    <and> 
-     <using slotitem="2380;11"/> 
-     <using slotitem="2416;6"/>      
-     <using slotitem="5734;12"/> 
-     <using slotitem="5718;9"/> 
-    </and> 
-    </add> 
-  <enchant val='0' order='0x0C' stat='pDef' /> 
-</for> 
+<item id='358' name="blue_wolve's_breastplate">
+  <for>
+    <add val='166' order='0x10' stat='pDef' />
+    <add val='7' order='0x40' stat='runSpd'>
+    <and>
+     <using slotitem="2380;11"/>
+     <using slotitem="2416;6"/>
+     <using slotitem="5734;12"/>
+     <using slotitem="5718;9"/>
+    </and>
+    </add>
+    <mul val='1.05' order='0x40' stat='regHp'>
+    <and>
+     <using slotitem="2380;11"/>
+     <using slotitem="2416;6"/>
+     <using slotitem="5734;12"/>
+     <using slotitem="5718;9"/>
+    </and>
+    </mul>
+       <add val='3' order='0x10' stat='STR'>
+    <and>
+     <using slotitem="2380;11"/>
+     <using slotitem="2416;6"/>
+     <using slotitem="5734;12"/>
+     <using slotitem="5718;9"/>
+    </and>
+    </add>
+    <add val='-1' order='0x10' stat='CON'>
+    <and>
+     <using slotitem="2380;11"/>
+     <using slotitem="2416;6"/>
+     <using slotitem="5734;12"/>
+     <using slotitem="5718;9"/>
+    </and>
+    </add>
+        <add val='-2' order='0x10' stat='DEX'>
+    <and>
+     <using slotitem="2380;11"/>
+     <using slotitem="2416;6"/>
+     <using slotitem="5734;12"/>
+     <using slotitem="5718;9"/>
+    </and>
+    </add>
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
 </item>
 <item id='359' name="shining_dragon_armor">
   <for>
@@ -193,41 +193,41 @@
 </item>
 <item id='365' name="dark_crystal_breastplate">
  <for>
-    <add val='171' order='0x10' stat='pDef' /> 
-    <mul val='1.04' order='0x40' stat='regHp'> 
-     <and> 
-      <using slotitem="388;11"/> 
-      <using slotitem="512;6"/>      
-      <using slotitem="5777;12"/> 
-      <using slotitem="5765;9"/> 
-     </and> 
-    </mul> 
-    <add val='-2' order='0x10' stat='STR'> 
-     <and> 
-      <using slotitem="388;11"/> 
-      <using slotitem="512;6"/>      
-      <using slotitem="5777;12"/> 
-      <using slotitem="5765;9"/>  
-     </and> 
-    </add> 
-    <add val='2' order='0x10' stat='CON'> 
-     <and> 
-      <using slotitem="388;11"/> 
-      <using slotitem="512;6"/>      
-      <using slotitem="5777;12"/> 
-      <using slotitem="5765;9"/>  
-     </and> 
-    </add> 
-    <mul val='1.50' order='0x40' stat='rootRes'> 
-     <and> 
-      <using slotitem="388;11"/> 
-      <using slotitem="512;6"/>      
-      <using slotitem="5777;12"/> 
-      <using slotitem="5765;9"/> 
-     </and> 
+    <add val='171' order='0x10' stat='pDef' />
+    <mul val='1.04' order='0x40' stat='regHp'>
+     <and>
+      <using slotitem="388;11"/>
+      <using slotitem="512;6"/>
+      <using slotitem="5777;12"/>
+      <using slotitem="5765;9"/>
+     </and>
     </mul>
-  <enchant val='0' order='0x0C' stat='pDef' /> 
- </for> 
+    <add val='-2' order='0x10' stat='STR'>
+     <and>
+      <using slotitem="388;11"/>
+      <using slotitem="512;6"/>
+      <using slotitem="5777;12"/>
+      <using slotitem="5765;9"/>
+     </and>
+    </add>
+    <add val='2' order='0x10' stat='CON'>
+     <and>
+      <using slotitem="388;11"/>
+      <using slotitem="512;6"/>
+      <using slotitem="5777;12"/>
+      <using slotitem="5765;9"/>
+     </and>
+    </add>
+    <mul val='1.50' order='0x40' stat='rootRes'>
+     <and>
+      <using slotitem="388;11"/>
+      <using slotitem="512;6"/>
+      <using slotitem="5777;12"/>
+      <using slotitem="5765;9"/>
+     </and>
+    </mul>
+  <enchant val='0' order='0x0C' stat='pDef' />
+ </for>
 </item>
 <item id='366' name="implosion_armor">
   <for>
@@ -280,43 +280,43 @@
 <item id='374' name="armor_of_nightmare">
   <for>
     <add val='293' order='0x10' stat='pDef' />
-    <mul val='1.04' order='0x40' stat='pAtk'> 
-     <and> 
-      <using slotitem="2418;6"/> 
-      <using slotitem="5783;12"/> 
-      <using slotitem="5771;9"/> 
-     </and> 
-   </mul> 
-           <add val='2' order='0x10' stat='CON'> 
-     <and> 
-      <using slotitem="2418;6"/> 
-      <using slotitem="5783;12"/> 
-      <using slotitem="5771;9"/> 
-     </and> 
-   </add> 
-            <add val='-2' order='0x10' stat='DEX'> 
-     <and> 
-      <using slotitem="2418;6"/> 
-      <using slotitem="5783;12"/> 
-      <using slotitem="5771;9"/> 
-     </and> 
-   </add> 
-    <mul val='1.80' order='0x40' stat='rootRes'> 
-     <and> 
-      <using slotitem="2418;6"/> 
-      <using slotitem="5783;12"/> 
-      <using slotitem="5771;9"/> 
-     </and> 
-   </mul> 
-    <mul val='1.80' order='0x40' stat='sleepRes'> 
-     <and> 
-      <using slotitem="2418;6"/> 
-      <using slotitem="5783;12"/> 
-      <using slotitem="5771;9"/> 
-     </and> 
-   </mul> 
-  <enchant val='0' order='0x0C' stat='pDef' /> 
-</for> 
+    <mul val='1.04' order='0x40' stat='pAtk'>
+     <and>
+      <using slotitem="2418;6"/>
+      <using slotitem="5783;12"/>
+      <using slotitem="5771;9"/>
+     </and>
+   </mul>
+           <add val='2' order='0x10' stat='CON'>
+     <and>
+      <using slotitem="2418;6"/>
+      <using slotitem="5783;12"/>
+      <using slotitem="5771;9"/>
+     </and>
+   </add>
+            <add val='-2' order='0x10' stat='DEX'>
+     <and>
+      <using slotitem="2418;6"/>
+      <using slotitem="5783;12"/>
+      <using slotitem="5771;9"/>
+     </and>
+   </add>
+    <mul val='1.80' order='0x40' stat='rootRes'>
+     <and>
+      <using slotitem="2418;6"/>
+      <using slotitem="5783;12"/>
+      <using slotitem="5771;9"/>
+     </and>
+   </mul>
+    <mul val='1.80' order='0x40' stat='sleepRes'>
+     <and>
+      <using slotitem="2418;6"/>
+      <using slotitem="5783;12"/>
+      <using slotitem="5771;9"/>
+     </and>
+   </mul>
+  <enchant val='0' order='0x0C' stat='pDef' />
+</for>
 </item>
 <item id='375' name="dragon_scale_mail">
   <for>
@@ -434,7 +434,7 @@
 <item id='394' name="reinforce_leather_shirt">
   <for>
     <add val='73' order='0x10' stat='pDef' />
-    
+
     <add stat='maxMp' order='0x40' val='80'>
       <and>
         <using slotitem="416;11"/>
@@ -461,17 +461,17 @@
   <enchant val='0' order='0x0C' stat='pDef' />
 </for>
 </item>
-<item id='397' name="tempered_mithril_shirt"> 
- <for> 
-   <add stat='pDef' order='0x10'  val='90'/> 
-   <add stat='rEvas' order='0x40' val='4'> 
-     <and> 
-       <using slotitem="2387;11"/> 
-       <using slotitem="62;12"/> 
-     </and> 
-   </add> 
- <enchant val='0' order='0x0C' stat='pDef' /> 
-</for> 
+<item id='397' name="tempered_mithril_shirt">
+  <for>
+   <add stat='pDef' order='0x10'  val='90'/>
+   <add stat='rEvas' order='0x40' val='4'>
+     <and>
+       <using slotitem="2387;11"/>
+       <using slotitem="62;12"/>
+     </and>
+   </add>
+ <enchant val='0' order='0x0C' stat='pDef' />
+</for>
 </item>
 <item id='398' name="plate_leather">
   <for>
