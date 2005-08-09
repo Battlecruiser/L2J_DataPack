@@ -22,14 +22,14 @@
   <table name="#power"> 46.0 105.0 219.0 417.0 722.0 1136.0 1626.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
-  <set name="target" val="TARGET_AURA_CLOSE"/>
+  <set name="target" val="TARGET_AREA"/>
   <set name="hitTime" val="1000"/>
   <set name="overHit" val="true"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="1000"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="40"/>
   <for>
   </for>
 </skill>
@@ -47,6 +47,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
+  <set name="displayId" val="1083"/>
   <for>
   </for>
 </skill>
@@ -62,6 +63,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
+  <set name="displayId" val="111"/>
 <!-- Done by dc -->
 <table name="#Tab-rEvas"> 20 25 </table>
 <for>
@@ -86,6 +88,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="90000"/>
   <set name="castRange" val="600"/>
+  <set name="displayId" val="1220"/>
   <for>
   </for>
 </skill>
@@ -107,28 +110,29 @@
 </skill>
 <skill id="4106" levels="1" name="Antharas Jump">
   <set name="power" val="11000.0"/>
-  <set name="target" val="TARGET_AURA_CLOSE"/>
+  <set name="target" val="TARGET_AREA"/>
   <set name="hitTime" val="6000"/>
   <set name="overHit" val="true"/>
   <set name="skillTime" val="6000"/>
+  <set name="reuseDelay" val="17000"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="9000"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="60"/>
   <for>
 	<effect count="1" name="Stun" time="9" val="0"/>
   </for>
 </skill>
 <skill id="4107" levels="1" name="Antharas Tail">
   <set name="power" val="11000.0"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="target" val="TARGET_AREA"/>
   <set name="hitTime" val="3000"/>
   <set name="overHit" val="true"/>
   <set name="skillTime" val="6000"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="9000"/>
-  <set name="castRange" val="-1"/>
+  <set name="reuseDelay" val="17000"/>
+  <set name="castRange" val="200"/>
   <for>
 	<effect count="1" name="Stun" time="9" val="0"/>
   </for>
@@ -136,12 +140,12 @@
 <skill id="4108" levels="1" name="Fear">
   <set name="save" val="2"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_AREA"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2000"/>
   <set name="skillTime" val="5000"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="FEAR"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="30000"/>
+  <set name="reuseDelay" val="17000"/>
   <set name="castRange" val="600"/>
   <for>
   </for>
@@ -149,13 +153,14 @@
 <skill id="4109" levels="1" name="Curse of Antharas">
   <set name="save" val="2"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="target" val="TARGET_AREA"/>
   <set name="hitTime" val="2000"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
+  <set name="reuseDelay" val="6000000"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="-1"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="1000"/>
 <!-- Done by dc -->
 <table name="#Tab-mAtk"> 1.15 </table>
 <table name="#Tab-rCrit"> 1.9 </table>
@@ -184,11 +189,12 @@
 </skill>
 <skill id="4110" levels="1" name="Mouth Odor Attack">
   <set name="power" val="250.0"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="target" val="TARGET_AREA"/>
   <set name="hitTime" val="2000"/>
   <set name="element" val="2"/>
   <set name="skillTime" val="5000"/>
   <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="17000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
   <for>
@@ -202,7 +208,7 @@
   <set name="element" val="4"/>
   <set name="overHit" val="true"/>
   <set name="skillTime" val="5000"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="STUN"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="1000"/>
@@ -342,6 +348,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="9000"/>
   <set name="castRange" val="700"/>
+  <set name="displayId" val="101"/>
   <for>
 	<effect count="1" name="Stun" time="9" val="0"/>
   </for>
@@ -393,18 +400,16 @@
   <for>
   </for>
 </skill>
-<skill id="4125" levels="4" name="Antharas Regeneration">
+<skill id="4125" levels="1" name="Antharas Regeneration">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="DEBUFF"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="buffDuration" val="1800000"/>
   <set name="castRange" val="-1"/>
-<!-- Done by dc -->
-<table name="#Tab-regHp"> 1.95 1.6 1.3 1 </table>
 <for>
   <effect name="Buff" time="1800" count="1" val="0">
-    <div  order='0x50' stat='regHp' val="#Tab-regHp"/>
+    <mul order='0x50' stat='regHp' val=" 1.95"/>
  </effect>
 </for>
 </skill>
@@ -431,57 +436,60 @@
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
-  <set name="target" val="TARGET_NONE"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="1500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="100"/>
   <for>
   </for>
 </skill>
 <skill id="4128" levels="1" name="Wind Of Force">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:32
--->
-  <set name="target" val="TARGET_NONE"/>
+  <set name="save" val="2"/>
+  <set name="power" val="500.0"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="hitTime" val="22000"/>
+  <set name="element" val="2"/>
   <set name="skillTime" val="2300"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="reuseDelay" val="17000"/>
+  <set name="buffDuration" val="2000"/>
+  <set name="castRange" val="200"/>
+  <set name="castRange" val="300"/>
   <for>
+
   </for>
 </skill>
 <skill id="4129" levels="1" name="Earthquake">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:32
--->
-  <set name="target" val="TARGET_NONE"/>
+
+  <set name="power" val="1250.0"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="hitTime" val="22000"/>
   <set name="skillTime" val="1500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="buffDuration" val="3000"/>
+  <set name="castRange" val="1000"/>
+  <set name="castRange" val="100"/>
   <for>
+
   </for>
 </skill>
 <skill id="4130" levels="1" name="Striking of Thunderbolt">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:32
--->
-  <set name="target" val="TARGET_NONE"/>
+
+  <set name="save" val="2"/>
+  <set name="power" val="300.0"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="hitTime" val="30000"/>
   <set name="skillTime" val="6000"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="900"/>
+  <set name="buffDuration" val="5000"/>
+  <set name="castRange" val="1500"/>
+  <set name="castRange" val="500"/>
   <for>
+
   </for>
 </skill>
 <skill id="4131" levels="1" name="Paralyze">
@@ -502,18 +510,16 @@
   </for>
 </skill>
 <skill id="4132" levels="1" name="Spear: Pound the Ground">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:32
--->
-  <set name="target" val="TARGET_NONE"/>
+
+  <set name="power" val="100.0"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="3000"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+
   <for>
+
   </for>
 </skill>
 <skill id="4133" levels="1" name="Angel Heal">
@@ -1036,22 +1042,25 @@
   <for>
   </for>
 </skill>
-<skill id="4163" levels="7" name="Self Shield">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:32
--->
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
+<skill id="4163" levels="3" name="Self Shield">
+
+<table name="#rate"> 1.08 1.12 1.15 </table>
+
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="1800"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-  </for>
+  <effect count="1" name="Buff" time="1200" val="0">
+    <mul order="0x50" stat="pDef" val="#rate"/>
+  </effect>
+</for>
 </skill>
 <skill id="4164" levels="9" name="Paralyze">
   <table name="#power"> 18 26 38 52 68 85 102 119 136 </table>
