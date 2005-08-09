@@ -7,8 +7,9 @@
     <set val='4' order='0x08' stat='rCrit' />
     <add val='4.75000' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
-  <enchant val='0' order='0x0C' stat='pAtk' />
-<enchant val='0' order='0x0C' stat='mAtk' />
+    <mul val='1.3' order='0x40' stat='maxMp' />
+   <enchant val='0' order='0x0C' stat='pAtk' />
+  <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
 </item>
 <item id='5597' name="dasparion's_staff_updown">
@@ -18,8 +19,10 @@
     <set val='4' order='0x08' stat='rCrit' />
     <add val='4.75000' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
-  <enchant val='0' order='0x0C' stat='pAtk' />
-<enchant val='0' order='0x0C' stat='mAtk' />
+    <mul val='0.6' order='0x40' stat='maxHp' />
+    <mul val='1.6' order='0x40' stat='maxMp' />
+   <enchant val='0' order='0x0C' stat='pAtk' />
+ <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
 </item>
 <item id='5598' name="dasparion's_staff_acumen">
@@ -29,8 +32,9 @@
     <set val='4' order='0x08' stat='rCrit' />
     <add val='4.75000' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
+    <mul val='1.15' order='0x40' stat='mAtkSpd' />
   <enchant val='0' order='0x0C' stat='pAtk' />
-<enchant val='0' order='0x0C' stat='mAtk' />
+ <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
 </item>
 <item id='5599' name="meteor_shower_focus">
@@ -40,8 +44,9 @@
     <set val='4' order='0x08' stat='rCrit' />
     <add val='4.75000' order='0x10' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
+    <add val='61' order='0x40' stat='rCrit' />
   <enchant val='0' order='0x0C' stat='pAtk' />
-<enchant val='0' order='0x0C' stat='mAtk' />
+ <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
 </item>
 </list>

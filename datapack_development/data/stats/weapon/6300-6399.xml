@@ -6,6 +6,7 @@
     <set val='76' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
     <set val='379' order='0x08' stat='pAtkSpd' />
+    <add val='5' order='0x40' stat='accCombat' />
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
@@ -26,6 +27,7 @@
     <set val='76' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
     <set val='379' order='0x08' stat='pAtkSpd' />
+    <mul val='1.25' order='0x40' stat='maxHp' />
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
@@ -36,6 +38,7 @@
     <set val='101' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
     <set val='379' order='0x08' stat='pAtkSpd' />
+    <add val='24' order='0x40' stat='mAtk' />
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
@@ -66,6 +69,7 @@
     <set val='101' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
     <set val='379' order='0x08' stat='pAtkSpd' />
+    <mul val='1.15' order='0x40' stat='mAtkSpd' />
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
@@ -76,6 +80,8 @@
     <set val='101' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
     <set val='379' order='0x08' stat='pAtkSpd' />
+    <mul val='1.6' order='0x40' stat='maxMp' />
+    <mul val='0.6' order='0x40' stat='maxHp' />
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
@@ -96,6 +102,7 @@
     <set val='83' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
     <set val='325' order='0x08' stat='pAtkSpd' />
+    <add val='73' order='0x40' stat='rCrit' />
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
@@ -116,6 +123,7 @@
     <set val='83' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
     <set val='325' order='0x08' stat='pAtkSpd' />
+    <mul val='1.07' order='0x40' stat='pAtkSpd' />
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
