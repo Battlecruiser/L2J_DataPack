@@ -1,20 +1,20 @@
---
+-- 
 -- Table structure for table `teleport`
---
+-- 
 
-CREATE TABLE `teleport` (
-  `Description` varchar(75) default NULL,
-  `id` decimal(11,0) NOT NULL default '0',
-  `loc_x` decimal(9,0) default NULL,
-  `loc_y` decimal(9,0) default NULL,
-  `loc_z` decimal(9,0) default NULL,
-  `price` decimal(5,0) default NULL,
-  PRIMARY KEY  (`id`)
+CREATE TABLE teleport (
+  Description varchar(75) default NULL,
+  id decimal(11,0) NOT NULL default '0',
+  loc_x decimal(9,0) default NULL,
+  loc_y decimal(9,0) default NULL,
+  loc_z decimal(9,0) default NULL,
+  price decimal(5,0) default NULL,
+  PRIMARY KEY  (id)
 ) TYPE=MyISAM;
 
---
+-- 
 -- Dumping data for table `teleport`
---
+-- 
 
 INSERT INTO teleport VALUES ('Elven Town & Dark Elven Town -> Village of Gludin',1,-80826,149775,-3043,6400);
 INSERT INTO teleport VALUES ('Elven Town & Dark Elven Town -> Town of Gludio',2,-12672,122776,-3116,3700);
@@ -33,7 +33,7 @@ INSERT INTO teleport VALUES ('Dark Elven Town -> Southern part of dark elven for
 INSERT INTO teleport VALUES ('TI -> Village of Gludin',15,-80826,149775,-3043,18000);
 INSERT INTO teleport VALUES ('Dwarf Town & Orc Town -> Village of Gludin',16,-80826,149775,-3043,3000);
 INSERT INTO teleport VALUES ('Dwarf Town -> The Northeast Coast',17,169008,-208272,-3504,700);
-INSERT INTO teleport VALUES ('Dwarven Town -> Abandoned Coal Mines',418,155535,-173560,2495,290); 
+INSERT INTO teleport VALUES ('Dwarven Town -> Abandoned Coal Mines',418,155535,-173560,2495,290);
 INSERT INTO teleport VALUES ('Dwarven Town -> Mithril Mines',419,179039,-184080,-319,680);
 INSERT INTO teleport VALUES ('Dion Town -> Town of Gludio',18,-12672,122776,-3116,4200);
 INSERT INTO teleport VALUES ('Dion Town -> Town of Giran',19,83400,147943,-3404,8100);
@@ -102,25 +102,120 @@ INSERT INTO teleport VALUES ('Aden -> Blazing Swamp',81,159455,-12931,-2872,5700
 INSERT INTO teleport VALUES ('Aden -> The Forbidden Gateway',82,185319,20218,-3264,5400);
 INSERT INTO teleport VALUES ('Aden -> The Front of Anghell Waterfall',83,163341,91374,-3320,9400);
 INSERT INTO teleport VALUES ('Aden -> Forsaken Plains',84,167285,37109,-4008,3400);
-INSERT INTO teleport VALUES ('Dion -> Heine', 85, 111409, 219364, -3545, 9800);
-INSERT INTO teleport VALUES ('Dion -> Partisan Hideaway', 86, 46467, 126885, -3720, 1900);
-INSERT INTO teleport VALUES ('Dion -> Bee Hive', 87, 20505, 189036, -3344, 2500);
-INSERT INTO teleport VALUES ('Gludio -> Windawood Manor', 88, -23789, 169683, -3424, 1000);
-INSERT INTO teleport VALUES ('Gludio -> Southern Pathway to the Wasteland', 89, -16730, 209417, -3664, 2400);
-INSERT INTO teleport VALUES ('Gludin -> Abandoned Camp', 90, -46932, 140883, -2936, 900);
-INSERT INTO teleport VALUES ('Gludin -> Fellmere Harvest Grounds', 91, -70387, 115501, -3472, 1000);
-INSERT INTO teleport VALUES ('Gludin -> Langk Lizardman Dwelling', 92, -45210, 202654, -3592, 1700);
-INSERT INTO teleport VALUES ('Orc Village -> Immortal Plateau, Central Region', 93, -8804, -114748, -3088, 510);
-INSERT INTO teleport VALUES ('Orc Village -> Immortal Plateau, Southern Region', 94, -17870, -90980, -2528, 490);
-INSERT INTO teleport VALUES ('Orc Village -> Immortal Plateau, Southeast Region', 95, 8209, -93524, -2312, 750);
-INSERT INTO teleport VALUES ('Orc Village -> Frozen Waterfall', 96, 7603, -138871, -920, 760);
-INSERT INTO teleport VALUES ('Oren -> Plains of Lizardmen', 97, 87252, 85514, -3056, 2700);
-INSERT INTO teleport VALUES ('Oren -> Sea of Spores', 98, 64328, 26803, -3768, 2700);
-INSERT INTO teleport VALUES ('Hunters -> Northern Pathway of Enchanted Valley', 99, 104426, 33746, -3800, 3700);
-INSERT INTO teleport VALUES ('Hunters -> Southern Pathway of Enchanted Valley', 100, 124904, 61992, -3920, 1400);
-INSERT INTO teleport VALUES ('Hunters -> Entrance to the Forest of Mirrors', 101, 142065, 81300, -3000, 2100);
-INSERT INTO teleport VALUES ('Hunters -> The Front of Anghel Waterfall', 102, 163341, 91374, -3320, 4000);
-INSERT INTO teleport VALUES ('Hunters -> Patriots Necropolis', 103, -25472, 77728, -3440, 11900);
-INSERT INTO teleport VALUES ('Hunters -> Ascetics Necropolis', 104, -55385, 78667, -3012, 14500);
-INSERT INTO teleport VALUES ('Hunters -> Saints Necropolis', 105, 79296, 209584, -3704, 11500);
-INSERT INTO teleport VALUES ('Hunters -> Catacomb of Dark Omens', 106, -23165, 13827, -3172, 12800);
+INSERT INTO teleport VALUES ('Dion -> Heine',85,111409,219364,-3545,9800);
+INSERT INTO teleport VALUES ('Dion -> Partisan Hideaway',86,46467,126885,-3720,1900);
+INSERT INTO teleport VALUES ('Dion -> Bee Hive',87,20505,189036,-3344,2500);
+INSERT INTO teleport VALUES ('Gludio -> Windawood Manor',88,-23789,169683,-3424,1000);
+INSERT INTO teleport VALUES ('Gludio -> Southern Pathway to the Wasteland',89,-16730,209417,-3664,2400);
+INSERT INTO teleport VALUES ('Gludin -> Abandoned Camp',90,-46932,140883,-2936,900);
+INSERT INTO teleport VALUES ('Gludin -> Fellmere Harvest Grounds',91,-70387,115501,-3472,1000);
+INSERT INTO teleport VALUES ('Gludin -> Langk Lizardman Dwelling',92,-45210,202654,-3592,1700);
+INSERT INTO teleport VALUES ('Orc Village -> Immortal Plateau,Central Region',93,-8804,-114748,-3088,510);
+INSERT INTO teleport VALUES ('Orc Village -> Immortal Plateau,Southern Region',94,-17870,-90980,-2528,490);
+INSERT INTO teleport VALUES ('Orc Village -> Immortal Plateau,Southeast Region',95,8209,-93524,-2312,750);
+INSERT INTO teleport VALUES ('Orc Village -> Frozen Waterfall',96,7603,-138871,-920,760);
+
+INSERT INTO teleport VALUES ('TOI - 1st Floor',201,115168,16022,-5100,100000);
+INSERT INTO teleport VALUES ('TOI - 2nd Floor',202,114649,18587,-3609,150000);
+INSERT INTO teleport VALUES ('TOI - 3rd Floor',203,117918,16039,-2127,200000);
+INSERT INTO teleport VALUES ('TOI - 4th Floor',204,114622,12946,-645,250000);
+INSERT INTO teleport VALUES ('TOI - 5th Floor',205,112209,16078,928,300000);
+INSERT INTO teleport VALUES ('TOI - 6th Floor',206,112376,16099,1947,350000);
+INSERT INTO teleport VALUES ('TOI - 7th Floor',207,114448,16175,2994,400000);
+INSERT INTO teleport VALUES ('TOI - 8th Floor',208,111063,16118,3967,450000);
+INSERT INTO teleport VALUES ('TOI - 9th Floor',209,117147,18415,4977,500000);
+INSERT INTO teleport VALUES ('TOI - 10th Floor',210,118374,15973,5987,550000);
+INSERT INTO teleport VALUES ('TOI - 11th Floor',211,112209,16078,7028,600000);
+INSERT INTO teleport VALUES ('TOI - 12th Floor',212,114809,18711,7996,650000);
+INSERT INTO teleport VALUES ('TOI - 13th Floor',213,115178,16989,9007,700000);
+INSERT INTO teleport VALUES ('TOI - 14th Floor Outside Door',214,112714,14111,10077,800000);
+INSERT INTO teleport VALUES ('TOI - 14th Floor Inside On Roof',215,113098,14532,10077,900000);
+INSERT INTO teleport VALUES ('Catacomb of the Apo',216,77637,78399,-5125,0);
+INSERT INTO teleport VALUES ('Dion(artifact -> out)',350,22967,157715,-2954,0);
+INSERT INTO teleport VALUES ('Dion(artifact -> hall)',351,22090,159871,-2711,0);
+INSERT INTO teleport VALUES ('Dion(artifact -> outofcastle)',352,22448,155798,-2958,0);
+INSERT INTO teleport VALUES ('Dion(in -> artifact)',353,22592,161530,-2775,0);
+INSERT INTO teleport VALUES ('Dion(in -> out)',354,22967,157715,-2954,0);
+INSERT INTO teleport VALUES ('Dion(in -> outofcastle)',355,22448,155798,-2958,0);
+INSERT INTO teleport VALUES ('Dion(out -> artifact)',356,22592,161530,-2775,0);
+INSERT INTO teleport VALUES ('Dion(out -> hall)',357,22090,159871,-2711,0);
+INSERT INTO teleport VALUES ('Dion(out -> outofcastle)',358,22448,155798,-2958,0);
+INSERT INTO teleport VALUES ('Dion(outofcastle -> artifact)',359,22592,161530,-2775,0);
+INSERT INTO teleport VALUES ('Dion(outofcastle -> out)',360,22967,157715,-2954,0);
+INSERT INTO teleport VALUES ('Dion(outofcastle -> hall)',361,22090,159871,-2711,0);
+INSERT INTO teleport VALUES ('Giran(artifact -> out)',362,113892,144175,-2714,0);
+INSERT INTO teleport VALUES ('Giran(artifact -> hall)',363,115984,145073,-2584,0);
+INSERT INTO teleport VALUES ('Giran(artifact -> outofcastle)',364,112016,144682,-2833,0);
+INSERT INTO teleport VALUES ('Giran(in -> artifact)',365,117619,144564,-2648,0);
+INSERT INTO teleport VALUES ('Giran(in -> out)',366,113892,144175,-2714,0);
+INSERT INTO teleport VALUES ('Giran(in -> outofcastle)',367,112016,144682,-2833,0);
+INSERT INTO teleport VALUES ('Giran(out -> artifact)',368,117619,144564,-2648,0);
+INSERT INTO teleport VALUES ('Giran(out -> hall)',369,115984,145073,-2584,0);
+INSERT INTO teleport VALUES ('Giran(out -> outofcastle)',370,112016,144682,-2833,0);
+INSERT INTO teleport VALUES ('Giran(outofcastle -> artifact)',371,117619,144564,-2648,0);
+INSERT INTO teleport VALUES ('Giran(outofcastle -> out)',372,113892,144175,-2714,0);
+INSERT INTO teleport VALUES ('Giran(outofcastle -> hall)',373,115984,145073,-2584,0);
+INSERT INTO teleport VALUES ('Oren(artifact -> out)',374,79956,36351,-2532,0);
+INSERT INTO teleport VALUES ('Oren(artifact -> hall)',375,82113,37217,-2311,0);
+INSERT INTO teleport VALUES ('Oren(artifact -> outofcastle)',376,78079,36809,-2566,0);
+INSERT INTO teleport VALUES ('Oren(in -> artifact)',377,83710,36713,-2375,0);
+INSERT INTO teleport VALUES ('Oren(in -> out)',378,79956,36351,-2532,0);
+INSERT INTO teleport VALUES ('Oren(in -> outofcastle)',379,78079,36809,-2566,0);
+INSERT INTO teleport VALUES ('Oren(out -> artifact)',380,83710,36713,-2375,0);
+INSERT INTO teleport VALUES ('Oren(out -> hall)',381,82113,37217,-2311,0);
+INSERT INTO teleport VALUES ('Oren(out -> outofcastle)',382,78079,36809,-2566,0);
+INSERT INTO teleport VALUES ('Oren(outofcastle -> artifact)',383,83710,36713,-2375,0);
+INSERT INTO teleport VALUES ('Oren(outofcastle -> out)',384,79956,36351,-2532,0);
+INSERT INTO teleport VALUES ('Oren(outofcastle -> hall)',385,82113,37217,-2311,0);
+INSERT INTO teleport VALUES ('Gludio(artifact -> out)',386,-18941,112085,-2762,0);
+INSERT INTO teleport VALUES ('Gludio(artifact -> hall)',387,-18129,109898,-2517,0);
+INSERT INTO teleport VALUES ('Gludio(artifact -> outofcastle)',388,-18484,113897,-2772,0);
+INSERT INTO teleport VALUES ('Gludio(in -> artifact)',389,-18592,108271,-2581,0);
+INSERT INTO teleport VALUES ('Gludio(in -> out)',390,-18941,112085,-2762,0);
+INSERT INTO teleport VALUES ('Gludio(in -> outofcastle)',391,-18484,113897,-2772,0);
+INSERT INTO teleport VALUES ('Gludio(out -> artifact)',392,-18592,108271,-2581,0);
+INSERT INTO teleport VALUES ('Gludio(out -> hall)',393,-18129,109898,-2517,0);
+INSERT INTO teleport VALUES ('Gludio(out -> outofcastle)',394,-18484,113897,-2772,0);
+INSERT INTO teleport VALUES ('Gludio(outofcastle -> artifact)',395,-18592,108271,-2581,0);
+INSERT INTO teleport VALUES ('Gludio(outofcastle -> out)',396,-18941,112085,-2762,0);
+INSERT INTO teleport VALUES ('Gludio(outofcastle -> hall)',397,-18129,109898,-2517,0);
+INSERT INTO teleport VALUES ('Aden(artifact -> out)',398,147723,7916,-475,0);
+INSERT INTO teleport VALUES ('Aden(artifact -> in)',399,148580,4578,-408,0);
+INSERT INTO teleport VALUES ('Aden(artifact -> outofcastle)',400,147582,8753,-496,0);
+INSERT INTO teleport VALUES ('Aden(artifact -> hall)',401,147520,6107,-409,0);
+INSERT INTO teleport VALUES ('Aden(in -> artifact)',402,1147499,2544,-473,0);
+INSERT INTO teleport VALUES ('Aden(in -> out)',403,147723,7916,-475,0);
+INSERT INTO teleport VALUES ('Aden(in -> outofcastle)',404,147582,8753,-496,0);
+INSERT INTO teleport VALUES ('Aden(in -> hall)',405,147520,6107,-409,0);
+INSERT INTO teleport VALUES ('Aden(out -> artifact)',406,147499,2544,-473,0);
+INSERT INTO teleport VALUES ('Aden(out -> in)',407,148580,4578,-408,0);
+INSERT INTO teleport VALUES ('Aden(out -> outofcastle)',408,147582,8753,-496,0);
+INSERT INTO teleport VALUES ('Aden(out -> hall)',409,147520,6107,-409,0);
+INSERT INTO teleport VALUES ('Aden(outofcastle -> artifact)',410,147499,2544,-473,0);
+INSERT INTO teleport VALUES ('Aden(outofcastle -> out)',411,147723,7916,-475,0);
+INSERT INTO teleport VALUES ('Aden(outofcastle -> in)',412,148580,4578,-408,0);
+INSERT INTO teleport VALUES ('Aden(outofcastle -> hall)',413,147520,6107,-409,0);
+INSERT INTO teleport VALUES ('Aden(hall -> artifact)',414,147499,2544,-473,0);
+INSERT INTO teleport VALUES ('Aden(hall -> out)',415,147723,7916,-475,0);
+INSERT INTO teleport VALUES ('Aden(hall -> in)',416,148580,4578,-408,0);
+INSERT INTO teleport VALUES ('Aden(hall -> outofcastle)',417,147582,8753,-496,0);
+INSERT INTO teleport VALUES ('Enter Necropolis',500,-41585,210129,-5087,0);
+INSERT INTO teleport VALUES ('Exit Necropolis',501,-41583,209337,-5087,0);
+INSERT INTO teleport VALUES ('Oren -> Plains of Lizardmen',97,87252,85514,-3056,2700);
+INSERT INTO teleport VALUES ('Oren -> Sea of Spores',98,64328,26803,-3768,2700);
+INSERT INTO teleport VALUES ('Hunters -> Northern Pathway of Enchanted Valley',99,104426,33746,-3800,3700);
+INSERT INTO teleport VALUES ('Hunters -> Southern Pathway of Enchanted Valley',100,124904,61992,-3920,1400);
+INSERT INTO teleport VALUES ('Hunters -> Entrance to the Forest of Mirrors',101,142065,81300,-3000,2100);
+INSERT INTO teleport VALUES ('Hunters -> The Front of Anghel Waterfall',102,163341,91374,-3320,4000);
+INSERT INTO teleport VALUES ('Hunters -> Patriots Necropolis',103,-25472,77728,-3440,11900);
+INSERT INTO teleport VALUES ('Hunters -> Ascetics Necropolis',104,-55385,78667,-3012,14500);
+INSERT INTO teleport VALUES ('Hunters -> Saints Necropolis',105,79296,209584,-3704,11500);
+INSERT INTO teleport VALUES ('Hunters -> Catacomb of Dark Omens',106,-23165,13827,-3172,12800);
+INSERT INTO teleport VALUES ('exit_necropolis1- > enter_necropolis1',502,-41567,209828,-5080,0);
+INSERT INTO teleport VALUES ('enter_necropolis1 - > exit_necropolis1',503,-41567,209463,-5080,0);
+INSERT INTO teleport VALUES ('enter_catacomb1- > exit_catacomb1',504,42599,143954,-5376,0);
+INSERT INTO teleport VALUES ('exit_catacomb1- >exit_catacomb1',505,42710,143930,-5376,0);
+INSERT INTO teleport VALUES ('enter_necropolis2 - > exit_necropolis2',506,45249,123848,-5408,0);
+INSERT INTO teleport VALUES ('exit_necropolis2 - > enter_necropolis2',507,45248,124223,-5408,0);
+INSERT INTO teleport VALUES ('enter_necropolis3 - > exit_necropolis3',508,77750,78398,-5120,0);
+INSERT INTO teleport VALUES ('exit_necropolis3- > enter_necropolis3',509,77147,78400,-5120,0);
