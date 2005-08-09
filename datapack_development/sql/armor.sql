@@ -19,9 +19,8 @@ CREATE TABLE armor (
   price int(11) NOT NULL default '0',
   crystal_count int(4) default NULL,
   sellable varchar(5) default NULL,
-  PRIMARY KEY  (item_id),
-  FULLTEXT KEY name (name)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  PRIMARY KEY  (item_id)
+) TYPE=MyISAM;
 
 -- 
 -- Dumping data for table `armor`
