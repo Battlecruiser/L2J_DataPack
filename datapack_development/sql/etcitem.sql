@@ -284,8 +284,8 @@ INSERT INTO etcitem VALUES (1056,'sb_curse:weakness','false','none',120,'normal'
 INSERT INTO etcitem VALUES (1057,'sb_summon_meal','false','none',120,'normal','paper','none',0,500,0,'true');
 INSERT INTO etcitem VALUES (1058,'sb_shield1','false','none',120,'normal','paper','none',0,500,0,'true');
 INSERT INTO etcitem VALUES (1059,'sb_know_enemy','false','none',120,'normal','paper','none',0,500,0,'true');
-INSERT INTO etcitem VALUES (1060,'lesser_healing_potion','false','potion',20,'stackable','liquid','none',0,90,0,'true');
-INSERT INTO etcitem VALUES (1061,'healing_potion','false','potion',20,'stackable','liquid','none',0,330,0,'true');
+INSERT INTO etcitem VALUES (1060,'lesser_healing_potion','false','potion',5,'stackable','liquid','none',0,90,0,'true');
+INSERT INTO etcitem VALUES (1061,'healing_potion','false','potion',5,'stackable','liquid','none',0,330,0,'true'); 
 INSERT INTO etcitem VALUES (1062,'haste_potion','false','potion',180,'stackable','liquid','none',0,5000,0,'true');
 INSERT INTO etcitem VALUES (1063,'_tutorial_parchment_01','false','none',0,'stackable','steel','none',100,0,0,'true');
 INSERT INTO etcitem VALUES (1064,'_tutorial_parchment_02','false','none',0,'stackable','steel','none',100,0,0,'true');
@@ -297,7 +297,7 @@ INSERT INTO etcitem VALUES (1069,'leaf_of_mothertree','false','none',0,'stackabl
 INSERT INTO etcitem VALUES (1070,'blood_of_jundin','false','none',0,'stackable','steel','none',100,0,0,'true');
 INSERT INTO etcitem VALUES (1071,'hyacinth_charm1','false','none',0,'stackable','steel','none',100,0,0,'true');
 INSERT INTO etcitem VALUES (1072,'hyacinth_charm2','false','none',0,'stackable','steel','none',100,0,0,'true');
-INSERT INTO etcitem VALUES (1073,'beginners_potion','false','potion',20,'stackable','liquid','none',0,0,0,'true');
+INSERT INTO etcitem VALUES (1073,'beginners_potion','false','potion',5,'stackable','liquid','none',0,0,0,'true'); 
 INSERT INTO etcitem VALUES (1074,'boat_ticket_talk_glu','false','none',20,'stackable','paper','none',0,2000,0,'true');
 INSERT INTO etcitem VALUES (1075,'boat_ticket_glu_talk','false','none',20,'stackable','paper','none',0,2000,0,'true');
 INSERT INTO etcitem VALUES (1076,'calculains_letter','false','none',0,'stackable','steel','none',100,0,0,'true');
@@ -690,7 +690,7 @@ INSERT INTO etcitem VALUES (1535,'sb_blaze_quake1','false','none',120,'normal','
 INSERT INTO etcitem VALUES (1536,'sb_bind_will1','false','none',120,'normal','paper','none',0,1250,0,'true');
 INSERT INTO etcitem VALUES (1537,'sb_pain_edge1','false','none',120,'normal','paper','none',0,800,0,'true');
 INSERT INTO etcitem VALUES (1538,'blessed_scroll_of_escape','false','scroll',120,'stackable','paper','none',0,150000,0,'true');
-INSERT INTO etcitem VALUES (1539,'greater_healing_potion','false','potion',20,'stackable','liquid','none',0,900,0,'true');
+INSERT INTO etcitem VALUES (1539,'greater_healing_potion','false','potion',5,'stackable','liquid','none',0,900,0,'true'); 
 INSERT INTO etcitem VALUES (1540,'quick_healing_potion','false','potion',180,'stackable','liquid','none',0,10000,0,'true');
 INSERT INTO etcitem VALUES (1541,'honey_khandar','false','none',0,'stackable','steel','none',0,0,0,'true');
 INSERT INTO etcitem VALUES (1542,'bear_fur_cloak','false','none',0,'stackable','steel','none',0,0,0,'true');

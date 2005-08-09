@@ -141,61 +141,63 @@
   <for>
   </for>
 </skill>
-<skill id="1208" levels="4" name="Seal of Binding">
-  <table name="#mpConsume"> 34 45 59 70 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="save" val="5"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_AURA_CLOSE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="DEBUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="30000"/>
-  <set name="castRange" val="-1"/>
-  <for>
-	<effect count="1" name="Root" time="30" val="0"/>
-  </for>
+<skill id="1208" levels="17" name="Seal of Binding"> 
+  <table name="#mpConsume"> 34 40 45 53 59 65 70 77 80 83 87 89 93 95 98 100 103 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="save" val="5"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_AURA_CLOSE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="20000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="DEBUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="3000"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+   <effect count="1" name="Root" time="30" val="0"/> 
+  </for> 
 </skill>
-<skill id="1209" levels="4" name="Seal of Poison">
-<table name="#dmg"> 18 24 31 38 </table>
-  <table name="#mpConsume"> 29 40 53 70 </table>
-  <table name="#power"> 3.0 4.0 5.0 6.0 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="save" val="3"/>
-  <set name="power" val="#power"/>
-  <set name="target" val="TARGET_AURA_CLOSE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="15000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="POISON"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="30000"/>
-  <set name="castRange" val="-1"/>
-  <for>
-    <effect count="3" name="DamOverTime" time="5" val="#dmg"/>
-  </for>
+<skill id="1209" levels="6" name="Seal of Poison"> 
+  <table name="#dmg"> 18 24 31 38 45 52 </table> 
+  <table name="#mpConsume"> 29 40 53 70 87 98</table> 
+  <table name="#power"> 3.0 4.0 5.0 6.0 7.0 8.0 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="save" val="3"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_AURA_CLOSE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="15000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="POISON"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="30000"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+    <effect count="3" name="DamOverTime" time="5" val="#dmg"/> 
+  </for> 
 </skill>
-<skill id="1210" levels="2" name="Seal of Gloom">
-  <table name="#mpConsume"> 55 57 </table>
-  <table name="#power"> 5.0 6.0 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="save" val="3"/>
-  <set name="power" val="#power"/>
-  <set name="target" val="TARGET_AURA_CLOSE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="MDOT"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="30000"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<skill id="1210" levels="4" name="Seal of Gloom"> 
+  <table name="#mpConsume"> 59 70 89 100 </table> 
+  <table name="#power"> 5.0 6.0 7.0 8.0 </table> 
+  <table name="#dmg"> 77 94 111 128 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="save" val="3"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_AURA_CLOSE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="20000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="MDOT"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="30000"/> 
+  <set name="castRange" val="-1"/> 
+<for> 
+   <effect count="15" name="ManaDamOverTime" time="1" val="#dmg"/> 
+</for> 
 </skill>
 <skill id="1211" levels="2" name="none">
   <set name="mpConsume" val="15"/>
@@ -225,20 +227,20 @@
   <for>
   </for>
 </skill>
-<skill id="1213" levels="2" name="Seal of Mirage">
-  <table name="#mpConsume"> 59 70 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_AURA_CLOSE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="CONFUSION"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<skill id="1213" levels="13" name="Seal of Mirage"> 
+  <table name="#mpConsume"> 59 65 70 77 80 83 87 89 93 95 98 100 103 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_AURA_CLOSE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="20000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="CONFUSION"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+  </for> 
 </skill>
 <skill id="1214" levels="5" name="none">
   <set name="mpConsume" val="15"/>
@@ -366,64 +368,64 @@
   <for>
   </for>
 </skill>
-<skill id="1222" levels="3" name="Curse Chaos">
-  <table name="#mpConsume"> 30 35 39 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="save" val="5"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="12000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="DEBUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="600"/>
-  <for>
-  </for>
+<skill id="1222" levels="15" name="Curse Chaos"> 
+  <table name="#mpConsume"> 30 35 39 44 48 52 54 55 58 60 62 64 65 67 69 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="save" val="5"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="12000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="DEBUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="120000"/> 
+  <set name="castRange" val="600"/> 
+  <for> 
+  </for> 
 </skill>
-<skill id="1223" levels="2" name="Surrender To Earth">
-<table name="#Tab-earthRes"> 30 60 </table>
-  <table name="#mpConsume"> 30 44 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="save" val="2"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="8000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="600"/>
-  <for>
-	<effect count="1" name="Buff" time="120" val="0">
-		<sub order="0x50" stat="earthRes" val="#Tab-earthRes"/>
-	</effect>
-  </for>
+<skill id="1223" levels="15" name="Surrender To Earth"> 
+  <table name="#Tab-earthRes"> 25 30 33 36 39 42 45 48 51 54 57 60 63 66 69 </table> 
+  <table name="#mpConsume"> 15 35 39 44 48 52 54 55 58 60 62 64 65 67 69 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="save" val="2"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="8000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="WEAKNESS"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="120000"/> 
+  <set name="castRange" val="600"/> 
+ <for> 
+ <effect count="1" name="Buff" time="120" val="0"> 
+   <sub order="0x50" stat="earthRes" val="#Tab-earthRes"/> 
+ </effect> 
+ </for> 
 </skill>
-<skill id="1224" levels="2" name="Surrender To Poison">
-<table name="#Tab-poisonRes"> 30 60 </table>
-  <table name="#mpConsume"> 23 40 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="save" val="3"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="8000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="600"/>
-  <for>
-	<effect count="1" name="Buff" time="120" val="0">
-		<sub order="0x50" stat="poisonRes" val="#Tab-poisonRes"/>
-	</effect>
-  </for>
+<skill id="1224" levels="17" name="Surrender To Poison"> 
+  <table name="#Tab-poisonRes"> 0.95 0.90 0.86 0.82 0.78 0.74 0.70 0.66 0.62 0.58 0.54 0.50 0.46 0.42 0.38 0.34 0.30 </table> 
+  <table name="#mpConsume"> 12 14 15 35 39 44 48 52 54 55 58 60 62 64 65 67 69 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="save" val="3"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="8000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="WEAKNESS"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="120000"/> 
+  <set name="castRange" val="600"/> 
+  <for> 
+   <effect count="1" name="Buff" time="120" val="0"> 
+      <mul order="0x50" stat="poisonRes" val="#Tab-poisonRes"/> 
+   </effect> 
+  </for> 
 </skill>
 <skill id="1225" levels="9" name="Summon Mew the Cat">
   <table name="#mpConsume">
@@ -602,24 +604,24 @@
   <for>
   </for>
 </skill>
-<skill id="1229" levels="9" name="Chant of Life">
-	<table name="#hot">12 15 18 23 27 31 35 39 43</table>
-  <table name="#mpConsume"> 59 72 88 103 122 134 152 164 180 </table>
-  <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
-  <set name="target" val="TARGET_PARTY"/>
-  <set name="hitTime" val="7000"/>
-  <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="7000"/>
-  <set name="skillType" val="HOT"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="15000"/>
-  <set name="castRange" val="-1"/>
-  <for>
-	<effect count="3" name="HealOverTime" time="5" val="#hot"/>
-  </for>
+<skill id="1229" levels="18" name="Chant of Life"> 
+  <table name="#hp"> 12 15 18 23 27 31 35 39 43 47 51 55 59 63 67 71 75 79 </table> 
+  <table name="#mpConsume"> 59 72 88 103 122 134 152 164 180 189 195 199 207 214 222 228 233 239 </table> 
+  <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_PARTY"/> 
+  <set name="hitTime" val="7000"/> 
+  <set name="reuseDelay" val="20000"/> 
+  <set name="skillTime" val="7000"/> 
+  <set name="skillType" val="HOT"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="15000"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+   <effect count="30" name="HealOverTime" time="5" val="#hp"/> 
+  </for> 
 </skill>
 <skill id="1230" levels="28" name="Prominence"> 
   <table name="#mpConsume"> 
@@ -690,26 +692,26 @@
   </effect> 
   </for> 
 </skill>
-<skill id="1233" levels="2" name="Decay">
-<table name="#dmg"> 77 94 </table>
-  <table name="#mpConsume"> 65 77 </table>
-  <table name="#power"> 5.0 6.0 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="save" val="2"/>
-  <set name="power" val="#power"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="element" val="4"/>
-  <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="DOT"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="15000"/>
-  <set name="castRange" val="600"/>
-  <for>
-    <effect count="15" name="DamOverTime" time="1" val="#dmg"/>
-  </for>
+<skill id="1233" levels="4" name="Decay"> 
+  <table name="#dmg"> 77 94 111 128 </table> 
+  <table name="#mpConsume"> 65 77 89 103 </table> 
+  <table name="#power"> 5.0 6.0 7.0 8.0</table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="save" val="2"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="element" val="4"/> 
+  <set name="reuseDelay" val="6000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="DOT"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="15000"/> 
+  <set name="castRange" val="600"/> 
+  <for> 
+    <effect count="15" name="DamOverTime" time="1" val="#dmg"/> 
+  </for> 
 </skill>
 <skill id="1234" levels="28" name="Vampiric Claw"> 
   <table name="#mpConsume"> 50 53 55 59 62 65 68 70 74 77 79 80 82 83 85 
@@ -907,26 +909,26 @@
  </effect>
 </for>
 </skill>
-<skill id="1243" levels="3" name="Bless Shield">
-<!-- Done by dc -->
-<table name="#Tab-sDef"> 1.3 1.4 1.5 </table>
-<table name="#mpConsume"> 35 44 52 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
-  <set name="castRange" val="400"/>
-  <for>
-  <effect count="1" name="Buff" time="1200" val="0">
-    <mul order="0x50" stat="sDef" val="#Tab-sDef"/>
- </effect>
-</for>
+<skill id="1243" levels="6" name="Bless Shield"> 
+<!-- Done by dc --> 
+  <table name="#Tab-sDef"> 1.3 1.4 1.5 1.6 1.7 1.8 </table> 
+  <table name="#mpConsume"> 35 44 52 58 62 65 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="6000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="400"/> 
+<for> 
+  <effect count="1" name="Buff" time="1200" val="0"> 
+    <mul order="0x50" stat="sDef" val="#Tab-sDef"/> 
+  </effect> 
+</for> 
 </skill>
 <skill id="1244" levels="2" name="Freezing Flame">
  <table name="#dmg"> 77 94 </table>
@@ -966,59 +968,62 @@
   <for> 
   </for> 
 </skill>
-<skill id="1246" levels="2" name="Seal of Silence">
-  <table name="#mpConsume"> 65 77 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="save" val="2"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_AURA_CLOSE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="MUTE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<skill id="1246" levels="12" name="Seal of Silence"> 
+  <table name="#mpConsume"> 65 70 77 80 83 87 89 93 95 98 100 103 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="save" val="2"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_AURA_CLOSE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="20000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="MUTE"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="120000"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+  </for> 
 </skill>
-<skill id="1247" levels="2" name="Seal of Scourge">
-<!-- Done by dc -->
-<table name="#Tab-regHp"> 2 2 </table>
-<table name="#mpConsume"> 53 59 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_AURA_CLOSE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="DEBUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  <effect count="1" name="Buff" time="120" val="0">
-    <div order="0x50" stat="regHp" val="#Tab-regHp"/>
- </effect>
-</for>
+<skill id="1247" levels="14" name="Seal of Scourge"> 
+  <table name="#Tab-regHp"> 2 2 3 3 4 4 5 5 6 6 7 7 8 8 </table> 
+  <table name="#mpConsume"> 53 59 65 70 77 80 83 87 89 93 95 98 100 103 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_AURA_CLOSE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="20000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="DEBUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="12000"/> 
+  <set name="castRange" val="-1"/> 
+<for> 
+   <effect count="1" name="Buff" time="120" val="0"> 
+      <div order="0x50" stat="regHp" val="#Tab-regHp"></div> 
+   </effect> 
+</for> 
 </skill>
-<skill id="1248" levels="2" name="Seal of Suspension">
-  <table name="#mpConsume"> 65 77 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_AURA_CLOSE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<skill id="1248" levels="12" name="Seal of Suspension"> 
+  <table name="#mpConsume"> 65 70 77 80 83 87 89 93 95 98 100 103 </table> 
+  <table name="#regHp"> 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0 2.1 2.2 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_AURA_CLOSE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="20000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="DEBUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="12000"/> 
+  <set name="castRange" val="-1"/> 
+<for> 
+   <effect count="1" name="Buff" time="120" val="0"> 
+      <mul stat="regHp" order="0x05" val="#regHp"/> 
+   </effect> 
+</for> 
 </skill>
 <skill id="1249" levels="3" name="Sight of Paagrio"> 
   <table name="#mpConsume"> 232 280 305 </table> 
@@ -1158,23 +1163,23 @@
 
   </for> 
 </skill>
-<skill id="1256" levels="4" name="Heart of Paagrio">
-	<table name="#hot">31 35 39 43</table>
-  <table name="#mpConsume"> 202 224 239 260 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="6.0"/>
-  <set name="target" val="TARGET_CLAN"/>
-  <set name="hitTime" val="2000"/>
-  <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="2000"/>
-  <set name="skillType" val="HOT"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="15000"/>
-  <set name="castRange" val="-1"/>
-  <for>
-	<effect count="6" name="HealOverTime" time="5" val="#hot"/>	
-  </for>
+<skill id="1256" levels="13" name="Heart of Paagrio"> 
+  <table name="#hot"> 31 35 39 43 47 51 55 59 63 67 71 75 79 </table> 
+  <table name="#mpConsume"> 134 152 164 180 189 195 199 207 214 222 228 233 239 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="6.0"/> 
+  <set name="target" val="TARGET_CLAN"/> 
+  <set name="hitTime" val="2000"/> 
+  <set name="reuseDelay" val="20000"/> 
+  <set name="skillTime" val="2000"/> 
+  <set name="skillType" val="HOT"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="15000"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+   <effect count="6" name="HealOverTime" time="5" val="#hot"/>    
+  </for> 
 </skill>
 <skill id="1257" levels="3" name="Decrease Weight"> 
 <table name="#mpConsume">15 20 23</table> 
@@ -1293,27 +1298,27 @@
   <for>
   </for>
 </skill>
-<skill id="1263" levels="4" name="Curse Gloom">
-<!-- Done by dc -->
-<table name="#Tab-mDef"> 1.23 1.23 1.23 1.23 </table>
-<table name="#mpConsume"> 39 48 55 64 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="save" val="3"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="2000"/>
-  <set name="reuseDelay" val="15000"/>
-  <set name="skillTime" val="2000"/>
-  <set name="skillType" val="DEBUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="600"/>
-  <for>
-  <effect count="1" name="Buff" time="120" val="0">
-    <div order="0x50" stat="mDef" val="#Tab-mDef"/>
- </effect>
-</for>
+<skill id="1263" levels="13" name="Curse Gloom"> 
+<!-- Done by dc --> 
+  <table name="#Tab-mDef"> 1.23 1.23 1.23 1.23 1.23 1.23 1.23 1.23 1.23 1.23 1.23 1.23 1.23 </table> 
+  <table name="#mpConsume"> 39 44 48 52 54 55 58 60 62 64 65 67 69 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="save" val="3"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="2000"/> 
+  <set name="reuseDelay" val="15000"/> 
+  <set name="skillTime" val="2000"/> 
+  <set name="skillType" val="DEBUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="120000"/> 
+  <set name="castRange" val="600"/> 
+  <for> 
+  <effect count="1" name="Buff" time="120" val="0"> 
+    <div order="0x50" stat="mDef" val="#Tab-mDef"/> 
+  </effect> 
+</for> 
 </skill>
 <skill id="1264" levels="3" name="Solar Spark"> 
 <!--- 
@@ -1411,28 +1416,32 @@
   <for> 
   </for> 
 </skill>
-<skill id="1268" levels="4" name="Vampiric Rage">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Partially restores HP using damage inflicted upon the enemy. Excludes damage from skill or remote attack. Effect 1.
-  4: Partially restores HP using damage inflicted upon the enemy. Excludes damage from skill or remote attack. Effect 4.
-  created 2005-05-29 23:34:29
--->
-  <table name="#mpConsume"> 27 39 54 67 </table>
-  <table name="#power"> 1.0 2.0 3.0 4.0 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="400"/>
-  <for>
-  </for>
+<skill id="1268" levels="4" name="Vampiric Rage"> 
+<table name="#mpConsume"> 
+   27 39 54 67 
+</table> 
+<table name="#power"> 
+   1.0 2.0 3.0 4.0 
+</table> 
+<table name="#abs"> 
+   15 20 25 35 
+</table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="6000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="400"/> 
+  <for> 
+   <effect name="Buff" time="120" count="1" val="0"> 
+   <add stat="absorbDam" val="#abs" order="0x50"/> 
+   </effect> 
+  </for> 
 </skill>
 <skill id="1269" levels="9" name="Curse Disease">
 <!---
@@ -1474,47 +1483,36 @@
   <for>
   </for>
 </skill>
-<skill id="1272" levels="13" name="Word of Fear">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Instills fear into one's enemies and causes them to flee.
-  13: Instills fear into one's enemies and causes them to flee.
-  created 2005-05-29 23:34:29
--->
-  <table name="#mpConsume"> 117 129 140 153 159 165 172 178 184 189 194 199 204 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<skill id="1272" levels="13" name="Word of Fear"> 
+  <table name="#mpConsume"> 117 129 140 153 159 165 172 178 184 189 194 199 204 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="3000"/> 
+  <set name="reuseDelay" val="90000"/> 
+  <set name="skillTime" val="3000"/> 
+  <set name="skillType" val="FEAR"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="600"/> 
+  <for> 
+  </for> 
 </skill>
-<skill id="1273" levels="13" name="Serenade of Eva">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Creates a peaceful mindset in the minds of one's surrounding enemies so that they will lose their will to attack you.
-  13: Creates a peaceful mindset in the minds of one's surrounding enemies so that they will lose their will to attack you.
-  created 2005-05-29 23:34:29
--->
-  <table name="#mpConsume"> 117 129 140 153 159 165 172 178 184 189 194 199 204 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<skill id="1273" levels="13" name="Serenade of Eva"> 
+  <table name="#mpConsume"> 117 129 140 153 159 165 172 178 184 189 194 199 204 </table> 
+  <table name="#power"> 30.0 50.0 70.0 90.0 110.0 130.0 150.0 170.0 190.0 210.0 230.0 250.0 300.0 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_AREA"/> 
+  <set name="hitTime" val="1000"/> 
+  <set name="reuseDelay" val="60000"/> 
+  <set name="skillTime" val="1000"/> 
+  <set name="skillType" val="AGGREDUCE"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+  </for> 
 </skill>
 <skill id="1274" levels="4" name="Energy Bolt">
   <table name="#mpConsume"> 10 12 14 15 </table>
@@ -1750,28 +1748,25 @@ Afterwards, 6 additional crystals will be consumed at a regular interval.
   <for> 
   </for> 
 </skill>
-<skill id="1282" levels="2" name="Speed of Paagrio">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases alliance members' Speed. Effect 1.
-  2: Temporarily increases alliance members' Speed. Effect 2.
-  created 2005-05-29 23:34:29
--->
-  <table name="#mpConsume"> 213 237 </table>
-  <table name="#power"> 1.0 2.0 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="2500"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<skill id="1282" levels="2" name="Speed of Paagrio"> 
+  <table name="#mpConsume"> 213 237 </table> 
+  <table name="#Tab-runSpd"> 21 43 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_CLAN"/> 
+  <set name="hitTime" val="2000"/> 
+  <set name="reuseDelay" val="20000"/> 
+  <set name="skillTime" val="2000"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+  <effect count="1" name="Buff" time="1200" val="0"> 
+    <add order="0x40" stat="runSpd" val="#Tab-runSpd"/> 
+  </effect> 
+  </for> 
 </skill>
 <skill id="1283" levels="13" name="Soul Guard">
 <!---
@@ -1792,40 +1787,29 @@ Afterwards, 6 additional crystals will be consumed at a regular interval.
   <for>
   </for>
 </skill>
-<skill id="1284" levels="3" name="Chant of Revenge">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily reflects damage received by party members back upon the enemy. Excludes damage received from skill or remote attack. Effect 1.
-  3: Temporarily reflects damage received by party members back upon the enemy. Excludes damage received from skill or remote attack. Effect 3.
-  created 2005-05-29 23:34:29
--->
-  <table name="#mpConsume"> 229 252 272 </table>
-  <table name="#power"> 1.0 2.0 3.0 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="2500"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<skill id="1284" levels="3" name="Chant of Revenge"> 
+  <table name="#mpConsume"> 229 252 272 </table> 
+  <table name="#power"> 10.0 20.0 30.0 </table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_PARTY"/> 
+  <set name="hitTime" val="2000"/> 
+  <set name="reuseDelay" val="20000"/> 
+  <set name="skillTime" val="2000"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="-1"/> 
+<for> 
+   <effect count="1" name="Buff" time="1200" val="0"> 
+      <add order="0x50" stat="reflectDam" val="#power"/> 
+   </effect> 
+</for> 
 </skill>
 <skill id="1285" levels="1" name="Seed of Fire"> 
-<!--- 
-  Automatically generated from C3 client files. 
-  Need to be checked/fixed. 
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability. 
-  Descriptions: 
-  1: Instills the force of fire. Unless a new force is instilled in 5 seconds, all forces will disappear. 
-  created 2005-05-29 23:34:29 
---> 
-  <table name="#charges"> 1 </table> 
-  <table name="#power"> 350 </table> 
+<table name="#charges"> 1 </table> 
+<table name="#power"> 350 </table> 
   <set name="mpConsume" val="250"/> 
   <set name="target" val="TARGET_ONE"/> 
   <set name="skillTime" val="4000"/> 
@@ -1839,42 +1823,21 @@ Afterwards, 6 additional crystals will be consumed at a regular interval.
   </for> 
 </skill>
 <skill id="1286" levels="1" name="Seed of Water"> 
-<!--- 
-  Automatically generated from C3 client files. 
-  Need to be checked/fixed. 
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability. 
-  Descriptions: 
-  1: Instills the force of water. Unless a new force is instilled in 5 seconds, all forces will disappear. 
-  created 2005-05-29 23:34:29 
---> 
   <table name="#charges"> 1 </table> 
   <table name="#power"> 350 </table> 
-  
   <set name="mpConsume" val="250"/> 
-  <set name="power" val="#power"/> 
   <set name="target" val="TARGET_ONE"/> 
-  <set name="reuseDelay" val="8000"/> 
   <set name="skillTime" val="4000"/> 
   <set name="skillType" val="CHARGE"/> 
   <set name="isMagic" val="true"/> 
   <set name="operateType" val="OP_ACTIVE"/> 
   <set name="castRange" val="600"/> 
-  
-  <!-- charge values --> 
   <set name="num_charges" val="#charges"/> 
   <for> 
    <effect count="1" name="Charge" time="5000" val="#charges"/> 
   </for> 
 </skill>
 <skill id="1287" levels="1" name="Seed of Wind"> 
-<!--- 
-  Automatically generated from C3 client files. 
-  Need to be checked/fixed. 
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability. 
-  Descriptions: 
-  1: Instills the force of wind. Unless a new force is instilled in 5 seconds, all forces will disappear. 
-  created 2005-05-29 23:34:29 
---> 
   <table name="#charges"> 1 </table> 
   <table name="#power"> 350 </table> 
   <set name="mpConsume" val="250"/> 
@@ -2119,26 +2082,26 @@ Afterwards, 6 additional crystals will be consumed at a regular interval.
     
  </for> 
 </skill>
-<skill id="1298" levels="14" name="Mass Slow">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily reduces Speed of nearby enemies. 505 HP is consumed. Effect 3.
-  14: Temporarily reduces Speed of nearby enemies. 610 HP is consumed. Effect 3.
-  created 2005-05-29 23:34:29
--->
-  <table name="#power"> 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 </table>
-  <set name="power" val="#power"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<skill id="1298" levels="14" name="Mass Slow"> 
+  <table name="#hpConsume"> 505 514 522 531 540 548 557 565 573 581 589 596 603 610 </table> 
+  <table name="#Tab-runSpd"> 0.85 0.82 0.79 0.72 0.66 0.60 0.54 0.48 0.42 0.36 0.28 0.22 0.16 0.10 </table> 
+  <set name="hpConsume" val="#hpConsume"/> 
+  <set name="power" val="0.0"/> 
+  <set name="save" val="5"/> 
+  <set name="target" val="TARGET_AREA"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="reuseDelay" val="7000"/> 
+  <set name="skillType" val="DEBUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="120000"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+   <effect count="1" name="Buff" time="120" val="0"> 
+      <mul order="0x50" stat="runSpd" val="#Tab-runSpd"/> 
+   </effect> 
+  </for> 
 </skill>
 <skill id="1299" levels="2" name="Servitor Empower"> 
   <table name="#rate"> 1.55 1.65 </table> 

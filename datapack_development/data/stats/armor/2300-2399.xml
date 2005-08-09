@@ -565,51 +565,59 @@
   <enchant val='0' order='0x0C' stat='pDef' />
 </for>
 </item>
-<item id='2399' name="tunic_of_doom">
-  <for>
-    <add val='83' order='0x10' stat='pDef' />
-    <add val='377' order='0x10' stat='maxMp' />
-    <add val='7' order='0x40' stat='runSpd'>
-     <and>
-      <using slotitem="2404;11"/>
-      <using slotitem="2417;6"/>
-      <using slotitem="5740;12"/>
-      <using slotitem="5724;9"/>
-     </and>
-    </add>
-    <add val='2' order='0x10' stat='INT'>
-    <and>
-     <using slotitem="2404;11"/>
-     <using slotitem="2417;6"/>
-     <using slotitem="5740;12"/>
-     <using slotitem="5724;9"/>
-    </and>
-    </add>
-        <add val='1' order='0x40' stat='MEN'>
-    <and>
-     <using slotitem="2404;11"/>
-     <using slotitem="2417;6"/>
-     <using slotitem="5740;12"/>
-     <using slotitem="5724;9"/>
-    </and>
-    </add>
-        <add val='-3' order='0x40' stat='WIT'>
-    <and>
-     <using slotitem="2404;11"/>
-     <using slotitem="2417;6"/>
-     <using slotitem="5740;12"/>
-     <using slotitem="5724;9"/>
-    </and>
-    </add>
-    <mul val='1.05' order='0x40' stat='regMp'>
-     <and>
-      <using slotitem="2404;11"/>
-      <using slotitem="2417;6"/>
-      <using slotitem="5740;12"/>
-      <using slotitem="5724;9"/>
-     </and>
-    </mul>
-  <enchant val='0' order='0x0C' stat='pDef' />
-</for>
+<item id='2399' name="tunic_of_doom"> 
+  <for> 
+    <add val='83' order='0x10' stat='pDef' /> 
+    <add val='377' order='0x10' stat='maxMp' /> 
+    <add val='7' order='0x40' stat='runSpd'> 
+     <and> 
+      <using slotitem="2404;11"/>    
+      <using slotitem="2417;6"/> 
+      <using slotitem="5740;12"/> 
+      <using slotitem="5724;9"/> 
+     </and> 
+    </add> 
+   <add val='2' order='0x10' stat='INT'> 
+    <and> 
+     <using slotitem="2404;11"/>    
+     <using slotitem="2417;6"/> 
+     <using slotitem="5740;12"/> 
+     <using slotitem="5724;9"/> 
+    </and> 
+   </add> 
+   <add val='1' order='0x10' stat='MEN'> 
+    <and> 
+     <using slotitem="2404;11"/>    
+     <using slotitem="2417;6"/> 
+     <using slotitem="5740;12"/> 
+     <using slotitem="5724;9"/> 
+    </and> 
+   </add> 
+   <add val='-3' order='0x10' stat='WIT'> 
+    <and> 
+     <using slotitem="2404;11"/>    
+     <using slotitem="2417;6"/> 
+     <using slotitem="5740;12"/> 
+     <using slotitem="5724;9"/> 
+    </and> 
+   </add> 
+   <mul val='1.05' order='0x40' stat='regMp'> 
+    <and> 
+     <using slotitem="2404;11"/>    
+     <using slotitem="2417;6"/> 
+     <using slotitem="5740;12"/> 
+     <using slotitem="5724;9"/> 
+    </and> 
+   </mul> 
+   <add val='3' order='0x50' stat='breath'> 
+    <and> 
+     <using slotitem="2404;11"/>    
+     <using slotitem="2417;6"/> 
+     <using slotitem="5740;12"/> 
+     <using slotitem="5724;9"/> 
+    </and> 
+   </add> 
+  <enchant val='0' order='0x0C' stat='pDef' /> 
+</for> 
 </item>
 </list>
