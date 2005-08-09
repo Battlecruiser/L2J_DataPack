@@ -21,24 +21,23 @@
   </for>
 </skill>
 <skill id="4201" levels="7" name="Sleep">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Causes one to fall asleep for a while.
-  7: Causes one to fall asleep for a while.
-  created 2005-05-29 23:34:33
--->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="2500"/>
-  <set name="skillType" val="NOTDONE"/>
+
+  <set name="save" val="2"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="2000"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillTime" val="2000"/>
+  <set name="skillType" val="SLEEP"/>
+  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="750"/>
+  <set name="buffDuration" val="30000"/>
+  <set name="castRange" val="600"/>
+  <set name="displayId" val="1069"/>
   <for>
+    <effect count="1" name="Sleep" time="30" val="0"/>
   </for>
+
 </skill>
 <skill id="4202" levels="7" name="Hold">
 <!---
@@ -265,22 +264,27 @@
   <for>
   </for>
 </skill>
-<skill id="4214" levels="7" name="BOSS Reflect Damage">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
-  <table name="#mpConsume"> 6 10 13 18 23 28 33 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
+<skill id="4214" levels="3" name="BOSS Reflect Damage">
+
+  <table name="#power"> 10.0 15.0 20.0 </table> 
+
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="6000"/> 
   <set name="skillTime" val="1500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="REFLECT"/>
+  <set name="isMagic" val="true"/> 
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="-1"/> 
+  <for> 
+  <effect count="1" name="Buff" time="1200" val="0"> 
+    <add order="0x50" stat="reflectDam" val="#power"/> 
+  </effect> 
+
+  </for> 
+
 </skill>
 <skill id="4215" levels="1" name="Silence">
 <!---

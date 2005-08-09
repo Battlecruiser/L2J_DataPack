@@ -225,21 +225,26 @@
   </for>
 </skill>
 <skill id="4314" levels="7" name="BOSS Holy Light Burst">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
-  <table name="#mpConsume"> 24 34 45 60 75 90 104 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="2000"/>
-  <set name="skillType" val="NOTDONE"/>
+
+<!--- by Phantom -->
+
+  <table name="#power"> 128.0 156.0 138.0 152.0 198.0 235.0 272.0 235.0 </table>
+  <table name="#hitTime"> 4000 4000 4000 4000 4000 4000 4000 1000 </table>
+  <table name="#skillTime"> 4000 4000 4000 4000 4000 4000 4000 1000 </table>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="#hitTime"/>
+  <set name="element" val="1"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillTime" val="#skillTime"/>
+  <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
+
   <for>
+
   </for>
+
 </skill>
 <skill id="4315" levels="7" name="Hold">
 <!---

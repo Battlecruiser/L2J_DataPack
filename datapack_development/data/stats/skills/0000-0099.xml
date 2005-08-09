@@ -784,17 +784,32 @@
   </for>
 </skill>
 <skill id="39" levels="1" name="Summon Spirit of Hawk">
-  <set name="mpConsume" val="15"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="3000"/>
-  <set name="reuseDelay" val="10000"/>
-  <set name="skillTime" val="3000"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="200"/>
-  <for>
-  </for>
+
+<table name="#itemConsumeCount"> 8 </table>
+<set name="itemConsumeId" val="1458"/>
+<set name="mpConsume" val="103"/>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="itemConsumeCount" val="#itemConsumeCount"/>
+<set name="hitTime" val="6000"/>
+<set name="reuseDelay" val="18600000"/>
+<set name="skillTime" val="8000"/>
+<set name="skillType" val="SUMMON"/>
+<set name="isMagic" val="true"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="castRange" val="-1"/>
+<!-- Summon-specific -->
+<table name="#npcIds">
+1080
+</table>
+<set name="npcId" val="#npcIds" />
+<set name="expPenalty" val="0.3" />
+<set name="isCubic" val="false" />
+
+<for>
+
+</for>
+
 </skill>
 <skill id="40" levels="3" name="Piercing Shot">
   <table name="#mpConsume"> 98 112 129 </table>

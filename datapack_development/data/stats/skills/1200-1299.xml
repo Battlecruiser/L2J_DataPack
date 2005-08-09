@@ -1392,17 +1392,16 @@
   </for> 
 </skill>
 <skill id="1267" levels="14" name="Shadow Flare"> 
-<!--- 
-  Automatically generated from C3 client files. 
-  Need to be checked/fixed. 
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability. 
-  Descriptions: 
-  1: Launches a dark magical attack. Over-hit is possible. Power 65. 
-  14: Launches a dark magical attack. Over-hit is possible. Power 135. 
-  created 2005-05-29 23:34:29 
---> 
-  <table name="#mpConsume"> 44 49 54 59 64 67 69 73 74 77 79 82 84 85 </table> 
-  <table name="#power"> 65.0 73.0 81.0 89.0 98.0 102.0 107.0 111.0 115.0 119.0 123.0 127.0 131.0 135.0 </table> 
+
+<table name="#mpConsume">
+	44 49 54 59 64 67 69 73 74 77
+	79 82 84 85
+</table> 
+<table name="#power">
+	65.0 73.0 81.0 89.0 98.0 102.0 107.0 111.0 115.0 119.0
+	123.0 127.0 131.0 135.0
+</table> 
+
   <set name="mpConsume" val="#mpConsume"/> 
   <set name="power" val="#power"/> 
   <set name="target" val="TARGET_ONE"/> 
@@ -1413,8 +1412,11 @@
   <set name="isMagic" val="true"/> 
   <set name="operateType" val="OP_ACTIVE"/> 
   <set name="castRange" val="900"/> 
+
   <for> 
+
   </for> 
+
 </skill>
 <skill id="1268" levels="4" name="Vampiric Rage"> 
 <table name="#mpConsume"> 
@@ -1465,23 +1467,25 @@
   </for>
 </skill>
 <skill id="1271" levels="1" name="Benediction">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Restores all party members' HP. Can be used when the remaining HP is 25% or less.
-  created 2005-05-29 23:34:29
--->
-  <set name="mpConsume" val="214"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="7000"/>
-  <set name="skillType" val="NOTDONE"/>
+
+<table name="#MP">
+	214
+</table>
+
+  <set name="mpConsume" val="#MP"/>
+  <set name="power" val="5000"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="hitTime" val="7000"/>
+  <set name="reuseDelay" val="100000"/>
+  <set name="skillTime" val="5000"/>
+  <set name="skillType" val="HEAL"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+
   </for>
+
 </skill>
 <skill id="1272" levels="13" name="Word of Fear"> 
   <table name="#mpConsume"> 117 129 140 153 159 165 172 178 184 189 194 199 204 </table> 
@@ -1589,26 +1593,14 @@
 <set name="isCubic" val="false" /> 
 </skill>
 <skill id="1277" levels="14" name="Summon Unicorn Merrow"> 
-<!--- 
-  Automatically generated from C3 client files. 
-  Need to be checked/fixed. 
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability. 
-  Descriptions: 
-  1: Summons Unicorn Merrow, a servitor. Requires 5 Crystals: D Grade. 30% of acquired Exp will be consumed. Afterwards, 1 additional crystal will be consumed at a regular interval. 
-  14: Summons Unicorn Merrow, a servitor. Requires 8 Crystals: D Grade. 30% of acquired Exp will be consumed. Afterwards, 6 additional crystals will be consumed at a regular interval. 
-  created 2005-05-29 23:34:29 
---> 
-  <table name="#itemConsumeCount"> 
-       5  3  4  4 
-    5  6  6  6 
-    6  6  7  9 
-    7  8 
-  </table> 
-<!--- Need to be implemented the continuous crystal consumement --> 
-<table name="#continuousitemConsumeCount"> 
-1 2 2 3 3 3 4 4 4 5 5 5 6 6 
-</table> 
-  <table name="#mpConsume"> 70 78 87 94 103 107 110 115 119 123 127 130 133 137 </table> 
+
+  <table name="#mpConsume">
+	70 78 87 94 103 107 110 115 119 123 127 130 133 137
+  </table>
+  <table name="#itemConsumeCount">
+	5 3 4 4 5 6 6 7 6 6 5 7 9 7 8
+  </table>
+
   <set name="mpConsume" val="#mpConsume"/> 
   <set name="itemConsumeId" val="1458"/> 
   <set name="power" val="0.0"/> 
@@ -1621,63 +1613,62 @@
   <set name="isMagic" val="true"/> 
   <set name="operateType" val="OP_ACTIVE"/> 
   <set name="castRange" val="-1"/> 
+
  <table name="#npcIds"> 
    12490 12491 12492 12493 12494 
    12495 12496 12497 12498 12499 
    12500 12501 12502 12530 
-  </table> --> 
-    
+  </table>
+  
   <set name="npcId" val="#npcIds" /> 
   <set name="expPenalty" val="0.3" /> 
   <set name="isCubic" val="false" /> 
+
   <for> 
+
   </for> 
+
 </skill>
-<skill id="1278" levels="14" name="Summon Soulless"> 
-<!--- 
-  Automatically generated from C3 client files. 
-  Need to be checked/fixed. 
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability. 
-  Descriptions: 
-  1: Summons Soulless, a servitor. Requires 5 Crystals: D Grade. 30% of acquired Exp will be consumed. 
+<skill id="1278" levels="15" name="Summon Soulless">
 
-Afterwards, 1 additional crystal will be consumed at a regular interval. 
-  14: Summons Soulless, a servitor. Requires 8 Crystals: D Grade. 30% of acquired Exp will be consumed. 
+<!---
+  1: Summons Soulless, a servitor. Requires 5 Crystals: D Grade. 30% of acquired Exp will be consumed. Afterwards, 1 additional crystal will be consumed at a regular interval. 
+  14: Summons Soulless, a servitor. Requires 8 Crystals: D Grade. 30% of acquired Exp will be consumed. Afterwards, 6 additional crystals will be consumed at a regular interval.
+  created 2005-05-29 23:34:29
+-->
 
-Afterwards, 6 additional crystals will be consumed at a regular interval. 
-  created 2005-05-29 23:34:29 
---> 
-
-  <table name="#mpConsume"> 70 78 87 94 103 107 110 115 119 123 127 130 133 137 </table> 
-  <set name="mpConsume" val="#mpConsume"/> 
-  <table name="#itemConsumeCount"> 
-       5 5 5 5 6 6 6 6 7 7 7 7 8 8 
-  </table> 
-  <set name="itemConsumeId" val="1458"/> 
-  <set name="power" val="0.0"/> 
-  <set name="target" val="TARGET_SELF"/> 
-  <set name="hitTime" val="6000"/> 
-  <set name="itemConsumeCount" val="#itemConsumeCount"/> 
+  <table name="#mpConsume"> 70 78 87 94 103 107 110 115 119 123 127 130 133 137 140 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <table name="#itemConsumeCount">
+       5 5 5 5 6 6 6 6 7 7 7 7 8 8 8
+  </table>
+  <set name="itemConsumeId" val="1458"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="6000"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="reuseDelay" val="18600000"/>  
-  <set name="skillTime" val="8000"/> 
-  <set name="skillType" val="SUMMON"/> 
-  <set name="isMagic" val="true"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="castRange" val="-1"/> 
+  <set name="skillTime" val="8000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
   
-  <!-- Summon-specific --> 
-  <table name="#npcIds"> 
-   12503 12504 12505 12506 12507 
-   12508 12509 12510 12511 12512 
-   12513 12514 12515 12531 
-  </table> 
+  <!-- Summon-specific -->
+  <table name="#npcIds">
+   12503 12504 12505 12506 12507
+   12508 12509 12510 12511 12512
+   12513 12514 12515 12531 12538
+  </table>
     
-  <set name="npcId" val="#npcIds"/> 
-  <set name="expPenalty" val="0.3"/> 
+  <set name="npcId" val="#npcIds"/>
+  <set name="expPenalty" val="0.3"/>
   <set name="isCubic" val="false"/>
   
   <for>
+
   </for>
+
 </skill>
 <skill id="1279" levels="9" name="Summon Binding Cubic"> 
   <table name="#mpConsume"> 35 39 44 48 52 55 60 64 67 </table> 
@@ -1769,23 +1760,29 @@ Afterwards, 6 additional crystals will be consumed at a regular interval.
   </for> 
 </skill>
 <skill id="1283" levels="13" name="Soul Guard">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Increases P. Def. MP gets consumed continuously.
-  13: Increases P. Def. MP gets consumed continuously.
-  created 2005-05-29 23:34:29
--->
-  <table name="#mpConsume"> 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
+
+<table name="#def">
+	1.05 1.08 1.11 1.14 1.17 1.2 1.23 1.26 1.29 1.32
+	1.35 1.38 1.42
+</table>
+<table name="#mpConsume">
+	8 9 10 11 11 11 12 12 13 13 13 14 14
+</table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+	<for>
+		<effect count="0x7fffffff" name="ManaDamOverTime" time="5">
+		<val>
+			<add val="$player_level"/>
+			<mul val="0.2"/>
+		</val>
+			<mul order="0x50" stat="pDef" val="#def"/>
+    	</effect>
+	</for>
+
 </skill>
 <skill id="1284" levels="3" name="Chant of Revenge"> 
   <table name="#mpConsume"> 229 252 272 </table> 
@@ -1905,15 +1902,14 @@ Afterwards, 6 additional crystals will be consumed at a regular interval.
   </for> 
 </skill>
 <skill id="1290" levels="1" name="Blizzard"> 
-<!--- 
-  Automatically generated from C3 client files. 
-  Need to be checked/fixed. 
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability. 
-  Descriptions: 
-  1: Devastating double wintry attack that reduces enemy's Speed. Effect 3. Power 350. 
-  created 2005-05-29 23:34:29 
---> 
-  <table name="#charges"> 1</table> 
+
+<table name="#Tab-runSpd">
+	1.6
+</table>
+<table name="#charges">
+	1
+</table> 
+
   <set name="mpConsume" val="250"/> 
   <set name="power" val="350.0"/> 
   <set name="target" val="TARGET_ONE"/> 
@@ -1927,11 +1923,18 @@ Afterwards, 6 additional crystals will be consumed at a regular interval.
   <set name="conditionValue" val="1"/> 
   <set name="hitTime" val="7000"/> 
   <set name="buffDuration" val="120000"/> 
+
   <!-- charge values --> 
   <set name="num_charges" val="1"/> 
   <set name="charge_skill_id" val="1286"/> <!-- Seed of Water is the charger --> 
-  <for> 
+
+  <for>
+	<effect count="1" name="Buff" time="120" val="0"> 
+		<div order="0x50" stat="runSpd" val="#Tab-runSpd">
+		</div> 
+	</effect> 
   </for> 
+
 </skill>
 <skill id="1291" levels="1" name="Demon Wind"> 
 <!--- 
@@ -2018,29 +2021,29 @@ Afterwards, 6 additional crystals will be consumed at a regular interval.
   </for>
 </skill>
 <skill id="1295" levels="9" name="Aqua Splash"> 
-<!--- 
-  Automatically generated from C3 client files. 
-  Need to be checked/fixed. 
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability. 
-  Descriptions: 
-  1: Powerful wave attack, useful against multiple enemies. Power 41. 
-  9: Powerful wave attack, useful against multiple enemies. Power 54. 
-  created 2005-05-29 23:34:29 
---> 
-  <table name="#mpConsume"> 80 83 87 89 93 95 98 100 103 </table> 
-  <table name="#power"> 41.0 43.0 45.0 46.0 48.0 50.0 51.0 53.0 54.0 </table> 
+
+<table name="#mpConsume">
+	80 83 87 89 93 95 98 100 103
+</table> 
+<table name="#power">
+	41.0 43.0 45.0 46.0 48.0 50.0 51.0 53.0 54.0
+</table> 
+
   <set name="mpConsume" val="#mpConsume"/> 
   <set name="power" val="#power"/> 
   <set name="target" val="TARGET_AREA"/> 
-  <set name="skillTime" val="5000"/> 
-  <set name="skillType" val="MDAM"/> 
-  <set name="reuseDelay" val="6000"/> 
-  <set name="element" val="3"/> 
-  <set name="isMagic" val="true"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="castRange" val="500"/> 
+  <set name="skillTime" val="5000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="element" val="3"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="500"/>
+
   <for> 
+
   </for> 
+
 </skill>
 <skill id="1296" levels="9" name="Rain of Fire"> 
 <!--- 

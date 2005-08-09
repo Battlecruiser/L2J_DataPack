@@ -1631,56 +1631,57 @@
   </for>
 </skill>
 <skill id="290" levels="14" name="Final Frenzy">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Automatically increases P. Atk when HP level falls.
-  14: Automatically increases P. Atk when HP level falls.
-  created 2005-05-29 23:34:27
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+
   <for>
+
   </for>
+
 </skill>
 <skill id="291" levels="11" name="Final Fortress">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Automatically increases P. Def. when HP level falls.
-  11: Automatically increases P. Def. when HP level falls.
-  created 2005-05-29 23:34:27
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  
+<table name="#final">
+	10 14 18 22 26 30 34 38 42 46
+	50
+</table>
+
   <for>
+	<add stat="pDef" order="0x04">
+		<val>
+			sub stat="maxHP" val="curHP" order="0x01
+			div order="0x02" val="100"
+			mul order="0x03" val="#final"
+		</val>
+	</add>
   </for>
+
 </skill>
 <skill id="292" levels="1" name="Totem Spirit Bison">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Increases P. Atk and critical attack rate if HP is low.
-  created 2005-05-29 23:34:27
--->
-  <set name="mpConsume" val="8"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="1500"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+
+  <set name="mpConsume" val="18"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="hitTime" val="1000"/> 
+  <set name="reuseDelay" val="600000"/> 
+  <set name="skillTime" val="1000"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="600000"/> 
   <set name="castRange" val="-1"/>
+  
   <for>
+
   </for>
+
 </skill>
 <skill id="293" levels="20" name="Two-handed Weapon Mastery"> 
 <table name="#Attack"> 
@@ -1702,20 +1703,18 @@
    </for> 
 </skill>
 <skill id="294" levels="1" name="Shadow Sense">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Increases Accuracy at night.
-  created 2005-05-29 23:34:27
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  
   <for>
+	<cond><game time="night"/></cond>
+	<add stat="accCombat" val="10" order="0x01"/>
   </for>
+
 </skill>
 <skill id="295" levels="1" name="Iron Body">
 <!---
@@ -1734,21 +1733,19 @@
   </for>
 </skill>
 <skill id="296" levels="1" name="Rest of Chameleon">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Allows one to sit and rest while being protected from a monster's pre-emptive attack. MP will continuously be consumed.
-  created 2005-05-29 23:34:27
--->
-  <set name="mpConsume" val="9"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<for>
+	<effect count="0x7fffffff" name="Relax" time="3" val="1">
+		<add order="0x10" stat="regHp" val="5"/>
+	</effect>
+	<effect count="0x7fffffff" name="SilentMove" time="5" val="5"/>
+</for>
+
 </skill>
 <skill id="297" levels="2" name="Duelist Spirit"> 
   
@@ -1776,22 +1773,24 @@
   
 </skill>
 <skill id="298" levels="1" name="Totem Spirit Rabbit">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Increases Speed and Evasion. Lowers P. Atk. significantly.
-  created 2005-05-29 23:34:27
--->
-  <set name="mpConsume" val="29"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="1500"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+
+  <set name="mpConsume" val="18"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="hitTime" val="1000"/> 
+  <set name="reuseDelay" val="600000"/> 
+  <set name="skillTime" val="1000"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="600000"/> 
   <set name="castRange" val="-1"/>
+
   <for>
+	<mul stat="pAtk" val="0.8" order="0x05"/>
+	<add stat="rEvas" val="10" order="0x05"/>
+	<add stat="runSpd" val="15" order="0x05"/>
   </for>
+
 </skill>
 <skill id="299" levels="1" name="Summon Wild Hog Cannon">
 <!---

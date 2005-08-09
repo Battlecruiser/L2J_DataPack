@@ -1337,13 +1337,20 @@
   </for>
 </skill>
 <skill id="195" levels="2" name="Boost Breath">
+
+<table name="#breath">
+	180 300
+</table>
+
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+	<add stat="breath" val="#breath" order="0x01"/>
   </for>
+
 </skill>
 <skill id="196" levels="1" name="Holy Blade">
   <set name="power" val="0.0"/>
