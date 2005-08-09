@@ -114,3 +114,13 @@ INSERT INTO teleport VALUES ('Orc Village -> Immortal Plateau, Central Region', 
 INSERT INTO teleport VALUES ('Orc Village -> Immortal Plateau, Southern Region', 94, -17870, -90980, -2528, 490);
 INSERT INTO teleport VALUES ('Orc Village -> Immortal Plateau, Southeast Region', 95, 8209, -93524, -2312, 750);
 INSERT INTO teleport VALUES ('Orc Village -> Frozen Waterfall', 96, 7603, -138871, -920, 760);
+INSERT INTO teleport VALUES ('Oren -> Plains of Lizardmen', 97, 87252, 85514, -3056, 2700);
+INSERT INTO teleport VALUES ('Oren -> Sea of Spores', 98, 64328, 26803, -3768, 2700);
+INSERT INTO teleport VALUES ('Hunters -> Northern Pathway of Enchanted Valley', 99, 104426, 33746, -3800, 3700);
+INSERT INTO teleport VALUES ('Hunters -> Southern Pathway of Enchanted Valley', 100, 124904, 61992, -3920, 1400);
+INSERT INTO teleport VALUES ('Hunters -> Entrance to the Forest of Mirrors', 101, 142065, 81300, -3000, 2100);
+INSERT INTO teleport VALUES ('Hunters -> The Front of Anghel Waterfall', 102, 163341, 91374, -3320, 4000);
+INSERT INTO teleport VALUES ('Hunters -> Patriots Necropolis', 103, -25472, 77728, -3440, 11900);
+INSERT INTO teleport VALUES ('Hunters -> Ascetics Necropolis', 104, -55385, 78667, -3012, 14500);
+INSERT INTO teleport VALUES ('Hunters -> Saints Necropolis', 105, 79296, 209584, -3704, 11500);
+INSERT INTO teleport VALUES ('Hunters -> Catacomb of Dark Omens', 106, -23165, 13827, -3172, 12800);

@@ -6746,6 +6746,3 @@ INSERT INTO merchant_buylists VALUES (4858,0,1030,5);
 INSERT INTO merchant_buylists VALUES (5626,0,1030,6);
 INSERT INTO merchant_buylists VALUES (5632,0,1030,7);	
 INSERT INTO merchant_buylists VALUES (5633,0,1030,8);
-
-
-
