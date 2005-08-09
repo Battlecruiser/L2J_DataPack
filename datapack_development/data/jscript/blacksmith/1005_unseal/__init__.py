@@ -293,9 +293,9 @@ class Quest (JQuest) :
 
 # Sealed Dark Crystal Breast Plate
     if event == "29":
-         if st.getQuestItemsCount(5287) >= 1 and st.getQuestItemsCount(5575) >= 100:
+         if st.getQuestItemsCount(5287) >= 1 and st.getQuestItemsCount(5575) >= 150:
              st.takeItems(5287,1)
-             st.takeItems(5575,100)
+             st.takeItems(5575,150)
              st.giveItems(365,1)
              htmltext = "Item has been succesfully unsealed."
          else:
@@ -303,9 +303,9 @@ class Quest (JQuest) :
 
 # Sealed Dark Crystal Leather Mail
     if event == "30":
-         if st.getQuestItemsCount(5297) >= 1 and st.getQuestItemsCount(5575) >= 100:
+         if st.getQuestItemsCount(5297) >= 1 and st.getQuestItemsCount(5575) >= 150:
              st.takeItems(5297,1)
-             st.takeItems(5575,100)
+             st.takeItems(5575,150)
              st.giveItems(2385,1)
              htmltext = "Item has been succesfully unsealed."
          else:
@@ -313,9 +313,9 @@ class Quest (JQuest) :
 
 # Sealed Dark Crystal Robe
     if event == "31":
-         if st.getQuestItemsCount(5308) >= 1 and st.getQuestItemsCount(5575) >= 100:
+         if st.getQuestItemsCount(5308) >= 1 and st.getQuestItemsCount(5575) >= 150:
              st.takeItems(5308,1)
-             st.takeItems(5575,100)
+             st.takeItems(5575,150)
              st.giveItems(2407,1)
              htmltext = "Item has been succesfully unsealed."
          else:
@@ -323,9 +323,9 @@ class Quest (JQuest) :
 
 # Sealed Tallum Plate Armor
     if event == "32":
-         if st.getQuestItemsCount(5293) >= 1 and st.getQuestItemsCount(5575) >= 100:
+         if st.getQuestItemsCount(5293) >= 1 and st.getQuestItemsCount(5575) >= 150:
              st.takeItems(5293,1)
-             st.takeItems(5575,100)
+             st.takeItems(5575,150)
              st.giveItems(2382,1)
              htmltext = "Item has been succesfully unsealed."
          else:
@@ -333,9 +333,9 @@ class Quest (JQuest) :
 
 # Sealed Tallum Leather Mail
     if event == "33":
-         if st.getQuestItemsCount(5301) >= 1 and st.getQuestItemsCount(5575) >= 100:
+         if st.getQuestItemsCount(5301) >= 1 and st.getQuestItemsCount(5575) >= 150:
              st.takeItems(5301,1)
-             st.takeItems(5575,100)
+             st.takeItems(5575,150)
              st.giveItems(2393,1)
              htmltext = "Item has been succesfully unsealed."
          else:
@@ -343,9 +343,9 @@ class Quest (JQuest) :
 
 # Sealed Tallum Robe
     if event == "34":
-         if st.getQuestItemsCount(5304) >= 1 and st.getQuestItemsCount(5575) >= 100:
+         if st.getQuestItemsCount(5304) >= 1 and st.getQuestItemsCount(5575) >= 150:
              st.takeItems(5304,1)
-             st.takeItems(5575,100)
+             st.takeItems(5575,150)
              st.giveItems(2400,1)
              htmltext = "Item has been succesfully unsealed."
          else:
@@ -353,9 +353,9 @@ class Quest (JQuest) :
 
 # Sealed Nightmare Armor
     if event == "35":
-         if st.getQuestItemsCount(5311) >= 1 and st.getQuestItemsCount(5575) >= 100:
+         if st.getQuestItemsCount(5311) >= 1 and st.getQuestItemsCount(5575) >= 350:
              st.takeItems(5311,1)
-             st.takeItems(5575,100)
+             st.takeItems(5575,350)
              st.giveItems(374,1)
              htmltext = "Item has been succesfully unsealed."
          else:
@@ -363,9 +363,9 @@ class Quest (JQuest) :
 
 # Sealed Nightmare Leather Armor
     if event == "36":
-         if st.getQuestItemsCount(5320) >= 1 and st.getQuestItemsCount(5575) >= 100:
+         if st.getQuestItemsCount(5320) >= 1 and st.getQuestItemsCount(5575) >= 350:
              st.takeItems(5320,1)
-             st.takeItems(5575,100)
+             st.takeItems(5575,550)
              st.giveItems(2394,1)
              htmltext = "Item has been succesfully unsealed."
          else:
@@ -373,9 +373,9 @@ class Quest (JQuest) :
 
 # Sealed Nightmare Robe
     if event == "37":
-         if st.getQuestItemsCount(5326) >= 1 and st.getQuestItemsCount(5575) >= 100:
+         if st.getQuestItemsCount(5326) >= 1 and st.getQuestItemsCount(5575) >= 350:
              st.takeItems(5326,1)
-             st.takeItems(5575,100)
+             st.takeItems(5575,350)
              st.giveItems(2408,1)
              htmltext = "Item has been succesfully unsealed."
          else:
@@ -383,9 +383,9 @@ class Quest (JQuest) :
 
 # Sealed Majestic Plate Armor
     if event == "38":
-         if st.getQuestItemsCount(5316) >= 1 and st.getQuestItemsCount(5575) >= 100:
+         if st.getQuestItemsCount(5316) >= 1 and st.getQuestItemsCount(5575) >= 350:
              st.takeItems(5316,1)
-             st.takeItems(5575,100)
+             st.takeItems(5575,350)
              st.giveItems(2383,1)
              htmltext = "Item has been succesfully unsealed."
          else:
@@ -393,9 +393,9 @@ class Quest (JQuest) :
 
 # Sealed Majestic Leather Armor
     if event == "39":
-         if st.getQuestItemsCount(5323) >= 1 and st.getQuestItemsCount(5575) >= 100:
+         if st.getQuestItemsCount(5323) >= 1 and st.getQuestItemsCount(5575) >= 350:
              st.takeItems(5323,1)
-             st.takeItems(5575,100)
+             st.takeItems(5575,350)
              st.giveItems(2395,1)
              htmltext = "Item has been succesfully unsealed."
          else:
@@ -403,9 +403,9 @@ class Quest (JQuest) :
 
 # Sealed Majestic Robe
     if event == "40":
-         if st.getQuestItemsCount(5329) >= 1 and st.getQuestItemsCount(5575) >= 100:
+         if st.getQuestItemsCount(5329) >= 1 and st.getQuestItemsCount(5575) >= 350:
              st.takeItems(5329,1)
-             st.takeItems(5575,100)
+             st.takeItems(5575,350)
              st.giveItems(2409,1)
              htmltext = "Item has been succesfully unsealed."
          else:
@@ -437,6 +437,66 @@ class Quest (JQuest) :
              st.takeItems(5305,1)
              st.takeItems(5575,100)
              st.giveItems(2405,1)
+             htmltext = "Item has been succesfully unsealed."
+         else:
+             htmltext = "You do not have enough materials."
+
+# Sealed Phoenix's Necklace
+    if event == "44":
+         if st.getQuestItemsCount(6323) >= 1 and st.getQuestItemsCount(5575) >= 100:
+             st.takeItems(6323,1)
+             st.takeItems(5575,100)
+             st.giveItems(933,1)
+             htmltext = "Item has been succesfully unsealed."
+         else:
+             htmltext = "You do not have enough materials."
+
+# Sealed Phoenix's Earing
+    if event == "45":
+         if st.getQuestItemsCount(6324) >= 1 and st.getQuestItemsCount(5575) >= 100:
+             st.takeItems(6324,1)
+             st.takeItems(5575,100)
+             st.giveItems(871,1)
+             htmltext = "Item has been succesfully unsealed."
+         else:
+             htmltext = "You do not have enough materials."
+
+# Sealed Phoenix's Ring
+    if event == "46":
+         if st.getQuestItemsCount(6325) >= 1 and st.getQuestItemsCount(5575) >= 100:
+             st.takeItems(6325,1)
+             st.takeItems(5575,100)
+             st.giveItems(902,1)
+             htmltext = "Item has been succesfully unsealed."
+         else:
+             htmltext = "You do not have enough materials."
+
+# Sealed Majestic Necklace
+    if event == "47":
+         if st.getQuestItemsCount(6326) >= 1 and st.getQuestItemsCount(5575) >= 100:
+             st.takeItems(6326,1)
+             st.takeItems(5575,100)
+             st.giveItems(924,1)
+             htmltext = "Item has been succesfully unsealed."
+         else:
+             htmltext = "You do not have enough materials."
+
+# Sealed Majestic Earing
+    if event == "48":
+         if st.getQuestItemsCount(6327) >= 1 and st.getQuestItemsCount(5575) >= 100:
+             st.takeItems(6327,1)
+             st.takeItems(5575,100)
+             st.giveItems(862,1)
+             htmltext = "Item has been succesfully unsealed."
+         else:
+             htmltext = "You do not have enough materials."
+
+# Sealed Majestic Ring
+    if event == "49":
+         if st.getQuestItemsCount(6328) >= 1 and st.getQuestItemsCount(5575) >= 100:
+             st.takeItems(6328,1)
+             st.takeItems(5575,100)
+             st.giveItems(893,1)
              htmltext = "Item has been succesfully unsealed."
          else:
              htmltext = "You do not have enough materials."
