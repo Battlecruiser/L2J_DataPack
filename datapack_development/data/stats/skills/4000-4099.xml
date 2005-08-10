@@ -987,14 +987,14 @@
   <set name="target" val="TARGET_AREA"/>
   <set name="hitTime" val="1000"/>
   <set name="overHit" val="true"/>
-  <set name="reuseDelay" val="6000"/>
+  <set name="reuseDelay" val="120000"/>
   <set name="skillTime" val="1000"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="9000"/>
+  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="40"/>
   <for>
-	<effect count="1" name="Stun" time="9" val="0"/>
+	<effect count="1" name="Paralyze" time="120" val="0"/>
   </for>
 </skill>
 <skill id="4073" levels="7" name="NPC Stun Attack">

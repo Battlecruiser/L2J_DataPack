@@ -208,11 +208,14 @@
   <set name="element" val="4"/>
   <set name="overHit" val="true"/>
   <set name="skillTime" val="5000"/>
-  <set name="skillType" val="STUN"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="120000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="1000"/>
+  <set name="displayId" val="1170">
   <for>
+	<effect count="1" name="Paralyze" time="120" val="0"/>
   </for>
 </skill>
 <skill id="4112" levels="1" name="Ordinary Attack">
@@ -288,14 +291,16 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="6000"/>
-  <set name="reuseDelay" val="8000"/>
+  <set name="reuseDelay" val="120000"/>
   <set name="skillTime" val="6000"/>
-  <set name="skillType" val="STUN"/>
+  <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="400"/>
-  <for>
+  <set name="displayId" val="1170"> 
+ <for>
+  <effect count="1" name="Paralyze" time="120" val="0"/>
   </for>
 </skill>
 <skill id="4118" levels="7" name="Paralysis">
@@ -305,14 +310,16 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="hitTime" val="6000"/>
-  <set name="reuseDelay" val="8000"/>
+  <set name="reuseDelay" val="120000"/>
   <set name="skillTime" val="6000"/>
-  <set name="skillType" val="STUN"/>
+  <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="300"/>
+  <set name="displayId" val="1170">
   <for>
+  <effect count="1" name="Paralyze" time="120" val="0"/>
   </for>
 </skill>
 <skill id="4119" levels="3" name="Fall in accuracy">
