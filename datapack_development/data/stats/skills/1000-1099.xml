@@ -684,24 +684,6 @@
   <for>
   </for>
 </skill>
-<<<<<<< .mine
-<skill id="1042" levels="12" name="Hold Undead"> 
-  <table name="#mpConsume"> 129 140 153 159 165 172 178 184 189 194 199 204 </table> 
-    <set name="mpConsume" val="#mpConsume"/> 
-   <set name="save" val="4"/> 
-   <set name="power" val="0.0"/> 
-   <set name="target" val="TARGET_UNDEAD"/> 
-   <set name="hitTime" val="6000"/> 
-   <set name="reuseDelay" val="180000"/> 
-   <set name="skillTime" val="6000"/> 
-   <set name="skillType" val="PDAM"/> 
-   <set name="isMagic" val="true"/> 
-   <set name="operateType" val="OP_ACTIVE"/> 
-   <set name="buffDuration" val="120000"/> 
-   <set name="castRange" val="400"/> 
- <for> 
- 	<effect count="1" name="Paralyze" time="120" val="0"/> 
-=======
 <skill id="1042" levels="12" name="Hold Undead">
   <table name="#mpConsume"> 129 140 153 159 165 172 178 184 189 194 199 204 </table>
     <set name="mpConsume" val="#mpConsume"/>
@@ -711,14 +693,13 @@
    <set name="hitTime" val="6000"/>
    <set name="reuseDelay" val="180000"/>
    <set name="skillTime" val="6000"/>
-   <set name="skillType" val="ROOT"/>
+   <set name="skillType" val="PDAM"/>
    <set name="isMagic" val="true"/>
    <set name="operateType" val="OP_ACTIVE"/>
    <set name="buffDuration" val="120000"/>
    <set name="castRange" val="400"/>
  <for>
  	<effect count="1" name="Paralyze" time="120" val="0"/>
->>>>>>> .r97
 </for>
 </skill>
 <skill id="1043" levels="1" name="Holy Weapon">
