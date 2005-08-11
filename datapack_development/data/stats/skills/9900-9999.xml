@@ -1,19 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
-<skill id="9999" levels="1" name="Greater Swift attack potion"> 
-  
-  <set name="power" val="0.0"/> 
-  <set name="target" val="TARGET_SELF"/> 
-  <set name="skillType" val="BUFF"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="buffDuration" val="600000"/> 
-  <set name="castRange" val="-1"/> 
-<!-- Done by dc --> 
-<table name="#Tab-pAtkSpd"> 1.30 </table> 
-<for> 
-  <effect name="Buff" time="600" count="1" val="0"> 
-    <mul  order='0x50' stat='pAtkSpd' val="#Tab-pAtkSpd"/> 
- </effect> 
-</for> 
+<skill id="9999" levels="1" name="Greater Swift attack potion">
+
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="600000"/>
+  <set name="castRange" val="-1"/>
+<!-- Done by dc -->
+<table name="#Tab-pAtkSpd"> 1.30 </table>
+<for>
+  <effect name="Buff" time="600" count="1" val="0">
+    <mul  order='0x50' stat='pAtkSpd' val="#Tab-pAtkSpd"/>
+ </effect>
+</for>
 </skill>
 </list>

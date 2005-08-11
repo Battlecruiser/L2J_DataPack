@@ -13,7 +13,7 @@ class Quest (JQuest) :
 
 # Braided Hemp
     if event == "1":
-        if st.getQuestItemsCount(2135) >= 1:
+        if st.getQuestItemsCount(2135) >= 1 and st.getQuestItemsCount(1864) >= 5 and st.getQuestItemsCount(57) >= 50 :
             st.takeItems(1864,5)
             st.takeItems(57,50)
             st.giveItems(1878,1)
@@ -23,7 +23,7 @@ class Quest (JQuest) :
 
 # Cokes
     if event == "2":
-        if st.getQuestItemsCount(2136) >= 1:
+        if st.getQuestItemsCount(2136) >= 1 and st.getQuestItemsCount(1870) >= 3 and st.getQuestItemsCount(1871) >= 3 and st.getQuestItemsCount(57) >= 50:
             st.takeItems(1870,3)
             st.takeItems(1871,3)
             st.takeItems(57,50)
@@ -33,7 +33,7 @@ class Quest (JQuest) :
              htmltext = "You do not have enough materials."
 # Steel
     if event == "3":
-        if st.getQuestItemsCount(2137) >= 1:
+        if st.getQuestItemsCount(2137) >= 1 and st.getQuestItemsCount(1865) >= 5 and st.getQuestItemsCount(1869) >= 5 and st.getQuestItemsCount(57) >= 50:
             st.takeItems(1865,5)
             st.takeItems(1869,5)
             st.takeItems(57,50)
@@ -44,7 +44,7 @@ class Quest (JQuest) :
 
 # Coarse Bone Powder
     if event == "4":
-        if st.getQuestItemsCount(2138) >= 1:
+        if st.getQuestItemsCount(2138) >= 1 and st.getQuestItemsCount(1872) >= 10 and st.getQuestItemsCount(57) >= 50:
             st.takeItems(1872,10)
             st.takeItems(57,50)
             st.giveItems(1881,1)
@@ -54,7 +54,7 @@ class Quest (JQuest) :
 
 # Leather
     if event == "5":
-        if st.getQuestItemsCount(1814) >= 1:
+        if st.getQuestItemsCount(1814) >= 1 and st.getQuestItemsCount(1867) >= 6 and st.getQuestItemsCount(57) >= 50:
             st.takeItems(1867,6)
             st.takeItems(57,50)
             st.giveItems(1882,1)
@@ -64,7 +64,7 @@ class Quest (JQuest) :
 
 # Steel Mold
     if event == "6":
-        if st.getQuestItemsCount(2139) >= 1:
+        if st.getQuestItemsCount(2139) >= 1 and st.getQuestItemsCount(1878) >= 5 and st.getQuestItemsCount(1869) >= 5 and st.getQuestItemsCount(1870) >= 5 and st.getQuestItemsCount(57) >= 500:
             st.takeItems(1878,5)
             st.takeItems(1869,5)
             st.takeItems(1870,5)   
@@ -76,7 +76,7 @@ class Quest (JQuest) :
 
 # Cord
     if event == "7":
-        if st.getQuestItemsCount(1817) >= 1:
+        if st.getQuestItemsCount(1817) >= 1 and st.getQuestItemsCount(1880) >= 2 and st.getQuestItemsCount(1868) >= 25 and st.getQuestItemsCount(57) >= 250:
             st.takeItems(1880,2)
             st.takeItems(1868,25)
             st.takeItems(57,250)
@@ -87,7 +87,7 @@ class Quest (JQuest) :
 
 # High Grade Suede
     if event == "8":
-        if st.getQuestItemsCount(2140) >= 1:
+        if st.getQuestItemsCount(2140) >= 1 and st.getQuestItemsCount(1881) >= 1 and st.getQuestItemsCount(1866) >= 3 and st.getQuestItemsCount(57) >= 250:
             st.takeItems(1881,1)
             st.takeItems(1866,3)
             st.takeItems(57,250)
@@ -98,7 +98,7 @@ class Quest (JQuest) :
 
 # Silver Mold
     if event == "9":
-        if st.getQuestItemsCount(2141) >= 1:
+        if st.getQuestItemsCount(2141) >= 1 and st.getQuestItemsCount(1878) >= 5 and st.getQuestItemsCount(1879) >= 5 and st.getQuestItemsCount(1873) >= 10 and st.getQuestItemsCount(57) >= 500:
             st.takeItems(1878,5)
             st.takeItems(1879,5)
             st.takeItems(1873,10)
@@ -110,7 +110,7 @@ class Quest (JQuest) :
 
 # Varnish of Purity
     if event == "10":
-        if st.getQuestItemsCount(2142) >= 1:
+        if st.getQuestItemsCount(2142) >= 1 and st.getQuestItemsCount(1875) >= 1 and st.getQuestItemsCount(1881) >= 3 and st.getQuestItemsCount(1865) >= 3 and st.getQuestItemsCount(57) >= 500:
             st.takeItems(1875,1)
             st.takeItems(1881,3)
             st.takeItems(1865,3)
@@ -122,7 +122,7 @@ class Quest (JQuest) :
 
 # Synthetic Cokes
     if event == "11":
-        if st.getQuestItemsCount(2143) >= 1:
+        if st.getQuestItemsCount(2143) >= 1 and st.getQuestItemsCount(1874) >= 1 and st.getQuestItemsCount(1879) >= 3 and st.getQuestItemsCount(57) >= 500:
             st.takeItems(1874,1)
             st.takeItems(1879,3)
             st.takeItems(57,500)
@@ -133,7 +133,7 @@ class Quest (JQuest) :
 
 # Compound Braid
     if event == "12":
-        if st.getQuestItemsCount(2144) >= 1:
+        if st.getQuestItemsCount(2144) >= 1 and st.getQuestItemsCount(1878) >= 5 and st.getQuestItemsCount(1868) >= 5 and st.getQuestItemsCount(57) >= 250:
             st.takeItems(1878,5)
             st.takeItems(1868,5)
             st.takeItems(57,250)
@@ -144,7 +144,7 @@ class Quest (JQuest) :
 
 # Mithril Alloy
     if event == "13":
-        if st.getQuestItemsCount(2145) >= 1:
+        if st.getQuestItemsCount(2145) >= 1 and st.getQuestItemsCount(1887) >= 1 and st.getQuestItemsCount(1876) >= 1 and st.getQuestItemsCount(1880) >= 2 and st.getQuestItemsCount(57) >= 500:
             st.takeItems(1887,1)
             st.takeItems(1876,1)
             st.takeItems(1880,2)
@@ -156,7 +156,7 @@ class Quest (JQuest) :
 
 # Artisans Frame
     if event == "14":
-        if st.getQuestItemsCount(2146) >= 1:
+        if st.getQuestItemsCount(2146) >= 1 and st.getQuestItemsCount(1883) >= 1 and st.getQuestItemsCount(1887) >= 3 and st.getQuestItemsCount(1877) >= 10 and st.getQuestItemsCount(57) >= 500:
             st.takeItems(1883,1)
             st.takeItems(1887,5)
             st.takeItems(1877,10)
@@ -168,7 +168,7 @@ class Quest (JQuest) :
 
 # Blacksmith Frame
     if event == "15":
-        if st.getQuestItemsCount(2147) >= 1:
+        if st.getQuestItemsCount(2147) >= 1 and st.getQuestItemsCount(1886) >= 1 and st.getQuestItemsCount(1887) >= 5 and st.getQuestItemsCount(1876) >= 10 and st.getQuestItemsCount(57) >= 500:
             st.takeItems(1886,1)
             st.takeItems(1887,5)
             st.takeItems(1876,10)
@@ -180,7 +180,7 @@ class Quest (JQuest) :
 
 # Oriharukon 
     if event == "16":
-        if st.getQuestItemsCount(1825) >= 1:
+        if st.getQuestItemsCount(1825) >= 1 and st.getQuestItemsCount(1888) >= 1 and st.getQuestItemsCount(1874) >= 4 and st.getQuestItemsCount(1873) >= 12 and st.getQuestItemsCount(57) >= 500:
             st.takeItems(1888,1)
             st.takeItems(1874,4)
             st.takeItems(1873,12)
@@ -192,7 +192,7 @@ class Quest (JQuest) :
 
 # Crafted Leather
     if event == "17":
-        if st.getQuestItemsCount(2148) >= 1:
+        if st.getQuestItemsCount(2148) >= 1 and st.getQuestItemsCount(1884) >= 4 and st.getQuestItemsCount(1882) >= 4 and st.getQuestItemsCount(1870) >= 4 and st.getQuestItemsCount(57) >= 250:
             st.takeItems(1884,4)
             st.takeItems(1882,4)
             st.takeItems(1870,4)
@@ -204,7 +204,7 @@ class Quest (JQuest) :
 
 # Metallic Fiber
     if event == "18":
-        if st.getQuestItemsCount(2149) >= 1:
+        if st.getQuestItemsCount(2149) >= 1 and st.getQuestItemsCount(1873) >= 15 and st.getQuestItemsCount(1884) >= 20 and st.getQuestItemsCount(57) >= 500:
             st.takeItems(1873,15)
             st.takeItems(1884,20)
             st.takeItems(57,500)
@@ -215,7 +215,7 @@ class Quest (JQuest) :
 
 # Metallic Thread
     if event == "19":
-        if st.getQuestItemsCount(5472) >= 1:
+        if st.getQuestItemsCount(5472) >= 1 and st.getQuestItemsCount(1868) >= 10 and st.getQuestItemsCount(1869) >= 10 and st.getQuestItemsCount(57) >= 250:
             st.takeItems(1868,10)
             st.takeItems(1869,10)
             st.takeItems(57,250)
@@ -226,7 +226,7 @@ class Quest (JQuest) :
 
 # Metal Hardner
     if event == "20":
-        if st.getQuestItemsCount(5231) >= 1:
+        if st.getQuestItemsCount(5231) >= 1 and st.getQuestItemsCount(1869) >= 10 and st.getQuestItemsCount(1865) >= 10 and st.getQuestItemsCount(1864) >= 10 and st.getQuestItemsCount(57) >= 250:
             st.takeItems(1869,10)
             st.takeItems(1865,10)
             st.takeItems(1864,10)
@@ -238,7 +238,7 @@ class Quest (JQuest) :
 
 # Reinforced Metal Plate
     if event == "21":
-        if st.getQuestItemsCount(5473) >= 1:
+        if st.getQuestItemsCount(5473) >= 1 and st.getQuestItemsCount(5549) >= 5 and st.getQuestItemsCount(1876) >= 5 and st.getQuestItemsCount(57) >= 500:
             st.takeItems(5549,5)
             st.takeItems(1876,5)
             st.takeItems(57,500)
@@ -250,7 +250,7 @@ class Quest (JQuest) :
 
 # Maestro Anvil Lock
     if event == "22":
-        if st.getQuestItemsCount(4123) >= 1:
+        if st.getQuestItemsCount(4123) >= 1 and st.getQuestItemsCount(1888) >= 4 and st.getQuestItemsCount(4039) >= 4 and st.getQuestItemsCount(4040) >= 4 and st.getQuestItemsCount(57) >= 2500:
             st.takeItems(1888,4)
             st.takeItems(4039,4)
             st.takeItems(4040,4)
@@ -262,7 +262,7 @@ class Quest (JQuest) :
 
 # Maestro Holder
     if event == "23":
-        if st.getQuestItemsCount(4122) >= 1:
+        if st.getQuestItemsCount(4122) >= 1 and st.getQuestItemsCount(1887) >= 10 and st.getQuestItemsCount(4041) >= 10 and st.getQuestItemsCount(4040) >= 10 and st.getQuestItemsCount(57) >= 2500:
             st.takeItems(1887,10)
             st.takeItems(4041,10)
             st.takeItems(4040,10)
@@ -274,7 +274,7 @@ class Quest (JQuest) :
 
 # Maestro Mold
     if event == "24":
-        if st.getQuestItemsCount(4125) >= 1:
+        if st.getQuestItemsCount(4125) >= 1 and st.getQuestItemsCount(1892) >= 1 and st.getQuestItemsCount(4043) >= 5 and st.getQuestItemsCount(4039) >= 10 and st.getQuestItemsCount(57) >= 2500:
             st.takeItems(1892,1)
             st.takeItems(4043,5)
             st.takeItems(4039,10)
@@ -286,7 +286,7 @@ class Quest (JQuest) :
 
 # Craftsman Mold
     if event == "25":
-        if st.getQuestItemsCount(4124) >= 1:
+        if st.getQuestItemsCount(4124) >= 1 and st.getQuestItemsCount(1891) >= 2 and st.getQuestItemsCount(4042) >= 5 and st.getQuestItemsCount(4041) >= 20 and st.getQuestItemsCount(57) >= 2500:
             st.takeItems(1891,2)
             st.takeItems(4042,5)
             st.takeItems(4041,20)
@@ -298,7 +298,7 @@ class Quest (JQuest) :
 
 # Leolins Mold
     if event == "26":
-        if st.getQuestItemsCount(5474) >= 1:
+        if st.getQuestItemsCount(5474) >= 1 and st.getQuestItemsCount(5549) >= 40 and st.getQuestItemsCount(5550) >= 10 and st.getQuestItemsCount(1877) >= 15 and st.getQuestItemsCount(57) >= 5000:
             st.takeItems(5549,40)
             st.takeItems(5550,10)
             st.takeItems(1877,15)
@@ -310,7 +310,7 @@ class Quest (JQuest) :
 
 # Warsmiths Mold
     if event == "27":
-        if st.getQuestItemsCount(5475) >= 1:
+        if st.getQuestItemsCount(5475) >= 1 and st.getQuestItemsCount(1891) >= 1 and st.getQuestItemsCount(4041) >= 10 and st.getQuestItemsCount(4042) >= 5 and st.getQuestItemsCount(57) >= 5000:
             st.takeItems(1891,1)
             st.takeItems(4041,10)
             st.takeItems(4042,5)
@@ -322,7 +322,7 @@ class Quest (JQuest) :
 
 # Archsmiths Anvil Lock
     if event == "28":
-        if st.getQuestItemsCount(5476) >= 1:
+        if st.getQuestItemsCount(5476) >= 1 and st.getQuestItemsCount(4046) >= 3 and st.getQuestItemsCount(4040) >= 20 and st.getQuestItemsCount(4044) >= 10 and st.getQuestItemsCount(57) >= 5000:
             st.takeItems(4046,3)
             st.takeItems(4040,20)
             st.takeItems(4044,10)
@@ -334,7 +334,7 @@ class Quest (JQuest) :
 
 # Warsmith Holder
     if event == "29":
-        if st.getQuestItemsCount(5477) >= 1:
+        if st.getQuestItemsCount(5477) >= 1 and st.getQuestItemsCount(4045) >= 2 and st.getQuestItemsCount(4039) >= 10 and st.getQuestItemsCount(1868) >= 20 and st.getQuestItemsCount(57) >= 5000:
             st.takeItems(4045,2)
             st.takeItems(4039,10)
             st.takeItems(1868,20)

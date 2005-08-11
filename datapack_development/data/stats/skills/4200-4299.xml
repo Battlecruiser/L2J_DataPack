@@ -266,24 +266,24 @@
 </skill>
 <skill id="4214" levels="3" name="BOSS Reflect Damage">
 
-  <table name="#power"> 10.0 15.0 20.0 </table> 
+  <table name="#power"> 10.0 15.0 20.0 </table>
 
-  <set name="power" val="#power"/> 
+  <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="4000"/> 
-  <set name="reuseDelay" val="6000"/> 
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="REFLECT"/>
-  <set name="isMagic" val="true"/> 
+  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/> 
-  <set name="castRange" val="-1"/> 
-  <for> 
-  <effect count="1" name="Buff" time="1200" val="0"> 
-    <add order="0x50" stat="reflectDam" val="#power"/> 
-  </effect> 
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  <effect count="1" name="Buff" time="1200" val="0">
+    <add order="0x50" stat="reflectDam" val="#power"/>
+  </effect>
 
-  </for> 
+  </for>
 
 </skill>
 <skill id="4215" levels="1" name="Silence">

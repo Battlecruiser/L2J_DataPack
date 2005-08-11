@@ -54,7 +54,7 @@ def do_RequestedEvent(event, st, giveItemId, giveItemQty, takeItem1Id, takeItem1
     if st.getQuestItemsCount(takeItem1Id) >= takeItem1Qty :
         st.takeItems(takeItem1Id, takeItem1Qty)
         st.giveItems(giveItemId, giveItemQty)
-        st.exitQuest(True)
+        st.exitQuest(1)
         return event + ".htm" 
     else :
         return "You do not have enough crystals."

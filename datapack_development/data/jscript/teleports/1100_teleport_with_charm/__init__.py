@@ -26,10 +26,10 @@ class Quest (JQuest) :
      if st.getQuestItemsCount(ORC_GATEKEEPER_CHARM) >= 1:
        st.takeItems(ORC_GATEKEEPER_CHARM,1)
        st.player.teleToLocation(-80826,149775,-3043)
-       st.exitQuest(True)
+       st.exitQuest(1)
        return
      else:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7576-01.htm"
 
    # DWARVEN_VILLAGE
@@ -37,10 +37,10 @@ class Quest (JQuest) :
      if st.getQuestItemsCount(DWARF_GATEKEEPER_TOKEN) >= 1:
        st.takeItems(DWARF_GATEKEEPER_TOKEN,1)
        st.player.teleToLocation(-80826,149775,-3043)
-       st.exitQuest(True)
+       st.exitQuest(1)
        return
      else:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7540-01.htm"
      
 

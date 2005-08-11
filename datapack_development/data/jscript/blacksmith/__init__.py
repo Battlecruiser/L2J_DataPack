@@ -3,7 +3,8 @@ __all__ = [
 '1002_unseal',
 '1003_reseal',
 '1004_create',
-'1005_unseal'
+'1005_unseal',
+'1006_duals'
 ]
 print ""
 print "importing blacksmith data ..."

@@ -86,49 +86,49 @@ class Quest (JQuest) :
    # back to Gludin Village
    if npcId == RACE_MANAGER and int(st.get("id")) == 1:
      st.player.teleToLocation(-80826,149775,-3043)
-     st.exitQuest(True)
+     st.exitQuest(1)
      return
    
    # back to Gludio Castle Town
    if npcId == RACE_MANAGER and int(st.get("id")) == 2:
      st.player.teleToLocation(-12672,122776,-3116)
-     st.exitQuest(True)
+     st.exitQuest(1)
      return
   
    # back to Dion Castle Town
    if npcId == RACE_MANAGER and int(st.get("id")) == 3:
      st.player.teleToLocation(15670,142983,-2705)
-     st.exitQuest(True)
+     st.exitQuest(1)
      return
 
    # back to Giran Castle Town
    if npcId == RACE_MANAGER and int(st.get("id")) == 4:
      st.player.teleToLocation(83400,147943,-3404)
-     st.exitQuest(True)
+     st.exitQuest(1)
      return
 
    # back to Heine
    if npcId == RACE_MANAGER and int(st.get("id")) == 5:
      st.player.teleToLocation(111409,219364,-3545)
-     st.exitQuest(True)
+     st.exitQuest(1)
      return
 
    # back to Town of Oren
    if npcId == RACE_MANAGER and int(st.get("id")) == 6:
      st.player.teleToLocation(82956,53162,-1495)
-     st.exitQuest(True)
+     st.exitQuest(1)
      return
 
    # back to Town of Aden
    if npcId == RACE_MANAGER and int(st.get("id")) == 7:
      st.player.teleToLocation(146331,25762,-2018)
-     st.exitQuest(True)
+     st.exitQuest(1)
      return
 
    # back to Hunter´s Village
    if npcId == RACE_MANAGER and int(st.get("id")) == 8:
      st.player.teleToLocation(116819,76994,-2714)
-     st.exitQuest(True)
+     st.exitQuest(1)
      return
 
 QUEST       = Quest(1101,"1101_teleport_to_race_track","Teleports")

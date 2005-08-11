@@ -3,10 +3,12 @@ __all__ = [
 'luxury_shop',
 'blacksmith',
 'custom',
-'teleports'
+'teleports',
+'seven_signs'
 ]
 import quests
 import luxury_shop
 import blacksmith
 import custom
 import teleports
+import seven_signs

@@ -1,21 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
-<skill id="1300" levels="3" name="Servitor Cure"> 
-<table name="#mpConsume"> 35 44 55 </table> 
-<table name="#power"> 3 7 9 </table> 
-  
-  <set name="mpConsume" val="#mpConsume"/> 
-  <set name="power" val="#power"/> 
-  <set name="target" val="TARGET_PET"/> 
-  <set name="skillTime" val="4000"/> 
-  <set name="reuseDelay" val="120000"/> 
-  <set name="skillType" val="NEGATE"/> 
-  <set name="isMagic" val="true"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="castRange" val="600"/> 
-  <set name="negateStats" val="POISON BLEED"/> 
-  <for> 
-  </for> 
+<skill id="1300" levels="3" name="Servitor Cure">
+<table name="#mpConsume"> 35 44 55 </table>
+<table name="#power"> 3 7 9 </table>
+
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_PET"/>
+  <set name="skillTime" val="4000"/>
+  <set name="reuseDelay" val="120000"/>
+  <set name="skillType" val="NEGATE"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="negateStats" val="POISON BLEED"/>
+  <for>
+  </for>
 </skill>
 <skill id="1301" levels="1" name="Servitor Blessing">
 <!---
@@ -36,65 +36,65 @@
   <for>
   </for>
 </skill>
-<skill id="1303" levels="2" name="Wild Magic"> 
-<table name="#mpConsume"> 
-   58 65 
-</table> 
-<table name="#power"> 
-   1.0 2.0 
-</table> 
-<table name="#mCrit"> 
-   1.30 1.40 
-</table> 
-  <set name="mpConsume" val="#mpConsume"/> 
-  <set name="power" val="#power"/> 
-  <set name="target" val="TARGET_ONE"/> 
-  <set name="skillTime" val="4000"/> 
-  <set name="skillType" val="BUFF"/> 
-  <set name="isMagic" val="true"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="castRange" val="400"/> 
-  <for> 
-   <effect name="Buff" time="1200" count="1" val="0"> 
-    <mul stat="mCritRate" val="#mCrit" order="0x50"/> 
-   </effect> 
-  </for> 
+<skill id="1303" levels="2" name="Wild Magic">
+<table name="#mpConsume">
+   58 65
+</table>
+<table name="#power">
+   1.0 2.0
+</table>
+<table name="#mCrit">
+   1.30 1.40
+</table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <for>
+   <effect name="Buff" time="1200" count="1" val="0">
+    <mul stat="mCritRate" val="#mCrit" order="0x50"/>
+   </effect>
+  </for>
 </skill>
-<skill id="1304" levels="3" name="Advanced Block"> 
-  <table name="#mpConsume"> 54 62 67 </table> 
-  <table name="#Tab-rShld"> 1.1 1.3 1.5 </table> 
-  <set name="mpConsume" val="#mpConsume"/> 
-  <set name="power" val="0.0"/> 
-  <set name="target" val="TARGET_ONE"/> 
-  <set name="hitTime" val="4000"/> 
-  <set name="reuseDelay" val="6000"/> 
-  <set name="skillTime" val="4000"/> 
-  <set name="skillType" val="BUFF"/> 
-  <set name="isMagic" val="true"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="buffDuration" val="1200000"/> 
-  <set name="castRange" val="400"/> 
-<for> 
-  <effect count="1" name="Buff" time="1200" val="0"> 
-    <mul order="0x50" stat="rShld" val="#Tab-rShld"/> 
-  </effect> 
-</for>> 
+<skill id="1304" levels="3" name="Advanced Block">
+  <table name="#mpConsume"> 54 62 67 </table>
+  <table name="#Tab-rShld"> 1.1 1.3 1.5 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+<for>
+  <effect count="1" name="Buff" time="1200" val="0">
+    <mul order="0x50" stat="rShld" val="#Tab-rShld"/>
+  </effect>
+</for>>
 </skill>
-<skill id="1305" levels="5" name="Honor of Paagrio"> 
-  <table name="#mpConsume"> 214 222 228 233 239 </table> 
-  <set name="mpConsume" val="#mpConsume"/> 
-  <set name="power" val="0.0"/> 
-  <set name="target" val="TARGET_CLAN"/> 
-  <set name="hitTime" val="2000"/> 
-  <set name="reuseDelay" val="20000"/> 
-  <set name="skillTime" val="2000"/> 
-  <set name="skillType" val="BUFF"/> 
-  <set name="isMagic" val="true"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="buffDuration" val="1200000"/> 
-  <set name="castRange" val="-1"/> 
-  <for> 
-  </for> 
+<skill id="1305" levels="5" name="Honor of Paagrio">
+  <table name="#mpConsume"> 214 222 228 233 239 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_CLAN"/>
+  <set name="hitTime" val="2000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="2000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
 </skill>
 <skill id="1306" levels="6" name="Ritual of Life">
 <!---
@@ -145,31 +145,31 @@
   </for>
 
 </skill>
-<skill id="1311" levels="6" name="Body Of Avatar"> 
-<table name="#mpConsume"> 
-   353 477 583 690 795 900 
-</table> 
-<table name="#power"> 
-   15 20 25 30 35 40 
-</table> 
-<table name="#hp"> 
-   1.15 1.2 1.25 1.3 1.35 1.4 
-</table> 
-  <set name="mpConsume" val="#mpConsume"/> 
-  <set name="power" val="0.0"/> 
-  <set name="target" val="TARGET_PARTY"/> 
-  <set name="hitTime" val="2000"/> 
-  <set name="reuseDelay" val="20000"/> 
-  <set name="skillTime" val="2000"/> 
-  <set name="skillType" val="HEAL_PERCENT"/> 
-  <set name="isMagic" val="true"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="buffDuration" val="1200000"/> 
-  <set name="castRange" val="400"/> 
-<for> 
-   <effect count="1" name="Buff" time="1200" val="0"> 
-      <mul order="0x50" stat="maxHp" val="#hp"/> 
-   </effect> 
-</for> 
+<skill id="1311" levels="6" name="Body Of Avatar">
+<table name="#mpConsume">
+   353 477 583 690 795 900
+</table>
+<table name="#power">
+   15 20 25 30 35 40
+</table>
+<table name="#hp">
+   1.15 1.2 1.25 1.3 1.35 1.4
+</table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="hitTime" val="2000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="2000"/>
+  <set name="skillType" val="HEAL_PERCENT"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+<for>
+   <effect count="1" name="Buff" time="1200" val="0">
+      <mul order="0x50" stat="maxHp" val="#hp"/>
+   </effect>
+</for>
 </skill>
 </list>

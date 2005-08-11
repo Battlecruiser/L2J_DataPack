@@ -21,10 +21,10 @@ class Quest (JQuest) :
      if st.getQuestItemsCount(RED_DIMENSION_STONE) >= 1:
        st.takeItems(RED_DIMENSION_STONE,1)
        st.player.teleToLocation(118558,16659,5987)
-       st.exitQuest(True)
+       st.exitQuest(1)
        return
      else:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "1.htm"
   
    # Dimension Vortex 2
@@ -32,10 +32,10 @@ class Quest (JQuest) :
      if st.getQuestItemsCount(RED_DIMENSION_STONE) >= 1:
        st.takeItems(RED_DIMENSION_STONE,1)
        st.player.teleToLocation(118558,16659,5987)
-       st.exitQuest(True)
+       st.exitQuest(1)
        return
      else:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "1.htm"
 
 QUEST       = Quest(1102,"1102_toivortex_red","Teleports")
