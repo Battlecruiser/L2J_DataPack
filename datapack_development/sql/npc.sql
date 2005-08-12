@@ -181,7 +181,7 @@ INSERT INTO npc VALUES (140,'Giant Leech','giant_leech',70.00,29.00,24,'male','L
 INSERT INTO npc VALUES (141,'Giant Wild Hog','giant_wild_hog',35.00,27.00,47,'male','L2Monster',40,1317,665,2651,190,270,193,179,137,253,500,253,0,0,0,35,120,'giant_wild_hog',300,0);
 INSERT INTO npc VALUES (142,'Griffon','griffin',20.00,44.00,20,'male','L2Monster',40,353,192,588,26,46,90,30,64,253,0,253,0,0,0,90,90,'griffin',300,0);
 INSERT INTO npc VALUES (143,'Grizzly','grizzly',21.00,40.00,12,'male','L2Monster',40,324,218,353,13,27,69,10,54,253,500,253,0,0,0,40,110,'grizzly',300,0);
-INSERT INTO npc VALUES (144,'Hangman Tree','hanged_man_ripper',35.00,80.00,35,'male','L2Monster',40,1252,705,1470,87,197,175,89,137,253,500,253,0,0,0,55,55,'hanged_man_ripper',300,0);
+INSERT INTO npc VALUES (144,'Hangman Tree','hanged_man_ripper',35.00,80.00,35,'male','L2Monster',40,1252,705,1470,87,197,175,89,137,253,500,253,0,0,0,55,55,'hanged_man_ripper',300,1);
 INSERT INTO npc VALUES (145,'Harpy','harpy',10.00,42.00,32,'female','L2Monster',40,1083,627,1229,69,158,156,69,123,253,500,253,0,0,0,60,100,NULL,NULL,0);
 INSERT INTO npc VALUES (146,'Headless Knight','headless_knight',21.00,31.00,50,'male','L2Monster',40,2231,1309,3000,226,508,306,264,226,253,500,253,124,0,0,70,110,'headless_knight',300,0);
 INSERT INTO npc VALUES (147,'Hobgoblin','hobgoblin',12.00,24.00,21,'male','L2Monster',40,590,359,631,29,64,101,25,80,253,0,253,4,0,0,45,110,'goblin_clan',300,0);
@@ -197,7 +197,7 @@ INSERT INTO npc VALUES (156,'Mandragora Blossom','mandragora_b',12.00,25.50,25,'
 INSERT INTO npc VALUES (157,'Marsh Stakato','marsh_stakato',10.00,20.00,29,'male','L2Monster',40,900,551,1135,61,134,135,53,110,253,500,253,0,0,0,21,120,'stakato_clan',300,0);
 INSERT INTO npc VALUES (158,'Medusa','medusa',10.00,25.00,34,'male','L2Monster',40,1194,679,1387,81,184,168,82,132,253,500,253,0,0,0,50,110,'medusa',300,0);
 INSERT INTO npc VALUES (159,'Minotaur','minotaur',21.00,45.50,43,'male','L2Monster',40,1094,557,2219,150,231,169,143,124,253,500,253,300,0,0,80,120,NULL,NULL,0);
-INSERT INTO npc VALUES (160,'Neer Crawler','neer_crawler',14.00,22.00,28,'male','L2Monster',40,854,527,972,51,123,130,49,106,253,500,253,0,0,0,50,90,'neer_crawler_clan',300,0);
+INSERT INTO npc VALUES (160,'Neer Crawler','neer_crawler',14.00,22.00,28,'male','L2Monster',40,854,527,972,51,123,130,49,106,253,500,253,0,0,0,50,90,'neer_crawler_clan',300,1);
 INSERT INTO npc VALUES (161,'Oel Mahum','oel_mahum',20.00,37.00,53,'male','L2Monster',40,2546,1457,3371,265,621,313,319,247,253,500,253,0,0,0,70,110,'oel_mahum_clan',300,0);
 INSERT INTO npc VALUES (162,'Ogre','ogre',21.00,44.00,41,'male','L2Monster',80,1008,504,2017,132,240,161,128,118,217,500,217,98,0,0,50,80,NULL,NULL,0);
 INSERT INTO npc VALUES (163,'Ol Mahum','ol_mahum',13.50,25.00,23,'male','L2Monster',40,410,231,725,35,61,96,38,70,253,0,253,2,0,0,50,110,'ol_mahum_clan',300,0);
@@ -215,7 +215,7 @@ INSERT INTO npc VALUES (174,'Two-Headed Giant','twin_headed_giant',17.00,39.00,3
 INSERT INTO npc VALUES (175,'Walking Fungus','walking_fungus',15.00,22.50,8,'male','L2Monster',40,128,92,235,8,17,59,11,42,253,0,253,0,0,0,70,110,'walking_fungus',300,0);
 INSERT INTO npc VALUES (176,'Wyrm','wyrm',29.00,72.00,35,'male','L2Monster',40,1213,705,1470,87,211,169,89,137,253,500,253,0,0,0,70,70,'wyrm',300,0);
 INSERT INTO npc VALUES (177,'Zombie','zombie',13.00,21.00,6,'male','L2Monster',40,152,77,176,5,14,52,5,41,253,0,253,0,0,0,15,15,'zombie',300,1);
-INSERT INTO npc VALUES (178,'Skeleton Knight','onyx_beast',14.00,14.50,1,'male','L2Monster',40,41,40,29,2,4,46,6,33,253,0,253,0,0,0,30,120,NULL,NULL,0);
+INSERT INTO npc VALUES (178,'Skeleton Knight','onyx_beast',14.00,14.50,1,'male','L2Monster',40,41,40,29,2,4,46,6,33,253,0,253,0,0,0,30,120,NULL,NULL,1);
 INSERT INTO npc VALUES (179,'Lichking Nassen','onyx_beast',14.00,14.50,1,'male','L2Monster',40,41,40,29,2,4,46,6,33,253,0,253,0,0,0,30,120,NULL,NULL,0);
 INSERT INTO npc VALUES (180,'Greater Stone Golem','onyx_beast',14.00,14.50,1,'male','L2Monster',40,41,40,29,2,4,46,6,33,253,0,253,0,0,0,30,120,NULL,NULL,0);
 INSERT INTO npc VALUES (181,'Grace Unicorn','onyx_beast',14.00,14.50,1,'male','L2Monster',40,41,40,29,2,4,46,6,33,253,0,253,0,0,0,30,120,NULL,NULL,0);
@@ -235,7 +235,7 @@ INSERT INTO npc VALUES (194,'Queen Undine','undine',12.00,27.00,50,'female','L2M
 INSERT INTO npc VALUES (195,'Pixy Murika','undine',12.00,27.00,50,'male','L2Npc',40,1563,747,3000,226,306,200,209,147,253,0,253,0,0,0,60,60,'all_elemental_clan',300,0);
 INSERT INTO npc VALUES (196,'Treant Bremec','undine',12.00,27.00,50,'male','L2Npc',40,2231,1309,3000,226,508,306,264,226,253,0,253,0,0,0,60,60,'all_elemental_clan',300,0);
 INSERT INTO npc VALUES (197,'Sorrow Maiden','sylph',11.00,35.00,27,'male','L2Monster',40,809,502,919,47,103,125,45,102,253,0,253,0,0,0,60,60,NULL,NULL,0);
-INSERT INTO npc VALUES (198,'Neer Ghoul Berserker','neer_crawler',14.00,22.00,29,'male','L2Monster',40,900,551,1026,55,134,135,53,110,253,500,253,0,0,0,50,90,'neer_crawler_clan',300,0);
+INSERT INTO npc VALUES (198,'Neer Ghoul Berserker','neer_crawler',14.00,22.00,29,'male','L2Monster',40,900,551,1026,55,134,135,53,110,253,500,253,0,0,0,50,90,'neer_crawler_clan',300,1);
 INSERT INTO npc VALUES (199,'Amber Basilisk','lesser_basilisk',34.00,25.00,30,'male','L2Monster',40,1043,576,1080,59,131,140,58,114,253,0,253,0,0,0,60,131,'lesser_basilisk',300,0);
 INSERT INTO npc VALUES (200,'Strain','hungry_spirit',21.00,40.00,31,'male','L2Monster',40,998,602,1153,64,156,146,64,118,253,0,253,0,0,0,15,120,NULL,NULL,1);
 INSERT INTO npc VALUES (201,'Ghoul','zombie',13.00,21.00,32,'male','L2Monster',40,1049,627,1229,69,168,151,69,123,253,0,253,0,0,0,15,15,NULL,NULL,1);
