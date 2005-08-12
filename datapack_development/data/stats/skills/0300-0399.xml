@@ -260,7 +260,8 @@
 <skill id="312" levels="20" name="Vicious Stance">
 
   <table name="#crit"> 4 8 12 16 20 24 28 32 36 40 44 46 50 54 58 64 68 72 76 80 </table>
-
+  <table name="#critMult"> 1.3 1.33 1.36 1.39 1.42 1.45 1.48 1.51 1.54 1.57 1.6 1.63 1.66 1.69 1.72 1.75 1.78 1.81 1.84 1.87 </table>
+ 
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
@@ -269,6 +270,7 @@
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="5">
       <add order="0x10" stat="cAtk" val="#crit"/>
+      <mul order="0x50" stat="cAtk" val="#critMult"/>
     </effect>
   </for>
 
@@ -296,7 +298,7 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1000"/>
-  <set name="reuseDelay" val="1800000"/>
+  <set name="reuseDelay" val="300000"/>
   <set name="skillTime" val="1000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -305,7 +307,7 @@
 
   <for>
   <cond><player state="stand"/></cond>
-  <effect count="1" name="Buff" time="30" val="0">
+  <effect count="1" name="Buff" time="120" val="0">
      <mul order="0x40" stat="pAtk" val="#pAtk"/>
      <add order="0x40" stat="accCombat" val="#Acc"/>
 	 <mul order="0x40" stat="rCrit" val="#CritChance"/>
