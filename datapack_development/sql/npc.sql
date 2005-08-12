@@ -860,13 +860,13 @@ INSERT INTO npc VALUES (819,'Archer of Abyss','fiend_archer',17.00,55.00,65,'mal
 INSERT INTO npc VALUES (820,'Hallate`s Knight','death_knight',12.00,31.00,65,'male','L2Monster',40,2193,1188,5070,471,641,272,398,199,253,0,253,0,0,0,80,120,NULL,NULL,0);
 INSERT INTO npc VALUES (821,'Erin Ediunce','banshee',9.00,23.00,66,'male','L2Monster',40,2244,1219,5793,546,604,304,412,202,253,0,253,0,0,0,80,120,NULL,NULL,0);
 INSERT INTO npc VALUES (822,'Hallate`s Maid','bloody_queen',14.00,40.00,66,'female','L2Monster',80,2244,1219,5793,546,604,304,412,202,253,0,253,0,0,0,80,120,NULL,NULL,0);
-INSERT INTO npc VALUES (823,'Platinum Tribe Soldier','kel_mahum',13.00,26.00,67,'male','L2Monster',40,2295,1251,5970,569,687,282,427,206,253,0,253,0,0,0,80,120,NULL,NULL,0);
+INSERT INTO npc VALUES (823,'Platinum Tribe Soldier','kel_mahum',13.00,26.00,67,'male','L2Monster',40,2295,1251,5970,569,687,282,427,306,253,0,253,0,0,0,80,120,'platinum_clan',300,0);
 INSERT INTO npc VALUES (824,'Hallate`s Commander','death_blader',15.00,45.00,67,'male','L2Monster',80,2295,1251,5970,569,687,282,427,206,253,0,253,0,0,0,80,120,NULL,NULL,0);
 INSERT INTO npc VALUES (825,'Hallate`s Inspector','karik_25_bi',31.00,110.00,68,'male','L2Monster',100,1421,747,3000,226,310,220,208,146,253,0,253,0,0,0,80,120,NULL,NULL,0);
-INSERT INTO npc VALUES (826,'Platinum Tribe Archer','kel_mahum_archer',13.00,27.00,68,'male','L2Monster',40,1421,747,3000,226,310,220,208,146,253,0,253,0,0,0,80,120,NULL,NULL,0);
-INSERT INTO npc VALUES (827,'Platinum Tribe Warrior','kel_mahum_warrior',13.00,28.00,69,'male','L2Monster',40,2395,1314,5713,559,734,291,456,213,253,0,253,0,0,0,80,120,NULL,NULL,0);
-INSERT INTO npc VALUES (828,'Platinum Tribe Shaman','kel_mahum_witch_doctor',13.00,25.00,70,'male','L2Monster',40,2444,1345,5880,583,758,296,470,217,253,0,253,0,0,0,80,120,NULL,NULL,0);
-INSERT INTO npc VALUES (829,'Platinum Tribe Overlord','kel_mahum_champion',13.00,32.00,71,'male','L2Monster',80,13710,1378,5880,583,710,301,470,217,253,0,253,0,0,0,80,120,NULL,NULL,0);
+INSERT INTO npc VALUES (826,'Platinum Tribe Archer','kel_mahum_archer',13.00,27.00,68,'male','L2Monster',500,1421,747,3000,226,310,220,208,246,253,0,253,274,0,0,80,120,'platinum_clan',300,0);
+INSERT INTO npc VALUES (827,'Platinum Tribe Warrior','kel_mahum_warrior',13.00,28.00,69,'male','L2Monster',40,2395,1314,5713,559,734,291,456,313,253,0,253,0,0,0,80,120,'platinum_clan',300,0);
+INSERT INTO npc VALUES (828,'Platinum Tribe Shaman','kel_mahum_witch_doctor',13.00,25.00,70,'male','L2Monster',40,2444,1345,5880,583,758,296,470,317,253,0,253,0,0,0,80,120,'platinum_clan',300,0);
+INSERT INTO npc VALUES (829,'Platinum Tribe Overlord','kel_mahum_champion',13.00,32.00,71,'male','L2Monster',80,13710,1378,5880,583,710,301,470,317,253,0,253,0,0,0,80,120,'platinum_clan',300,0);
 INSERT INTO npc VALUES (830,'Guardian Angel','angel',13.50,36.50,72,'male','L2Monster',80,5244,1410,5880,583,755,268,470,217,253,500,253,0,0,0,80,120,'angel',300,0);
 INSERT INTO npc VALUES (831,'Seal Angel','angel',13.50,36.50,73,'male','L2Monster',80,12933,1442,5880,583,753,341,470,217,253,500,253,0,0,0,80,120,'angel',300,0);
 INSERT INTO npc VALUES (832,'Zaken`s Pikeman','skeleton_pikeman',10.00,28.00,40,'male','L2Monster',40,966,478,1920,124,184,156,120,114,253,0,253,0,0,0,80,120,NULL,NULL,1);
@@ -2529,7 +2529,7 @@ INSERT INTO npc VALUES (8027,'Coffer of the Dead','coffer_b',12.00,9.00,40,'male
 INSERT INTO npc VALUES (8028,'Chest of Kernon','coffer_c',12.00,9.00,40,'male','L2Npc',40,966,478,1920,124,184,156,120,114,253,0,253,0,0,0,80,120,NULL,NULL,0);
 INSERT INTO npc VALUES (8029,'Chest of Golkonda','coffer_c',12.00,9.00,40,'male','L2Npc',40,966,478,1920,124,184,156,120,114,253,0,253,0,0,0,80,120,NULL,NULL,0);
 INSERT INTO npc VALUES (8030,'Chest of Hallate','coffer_c',12.00,9.00,40,'male','L2Npc',40,966,478,1920,124,184,156,120,114,253,0,253,0,0,0,80,120,NULL,NULL,0);
-INSERT INTO npc VALUES (8031,'Broadcasting Tower','broadcasting_tower',7.00,35.00,40,'male','L2Npc',40,966,478,1920,124,184,156,120,114,253,0,253,0,0,0,80,120,NULL,NULL,0);
+INSERT INTO npc VALUES (8031,'Broadcasting Tower','broadcasting_tower',7.00,35.00,40,'male','L2Observation',40,966,478,1920,124,184,156,120,114,253,0,253,0,0,0,80,120,NULL,NULL,0);
 INSERT INTO npc VALUES (8032,'Guard','a_guard_MHuman',8.00,24.00,40,'male','L2Npc',40,966,478,1920,124,184,156,120,114,253,0,253,0,0,0,80,120,NULL,NULL,0);
 INSERT INTO npc VALUES (8033,'Sentinel','a_guard_MElf',8.00,23.50,40,'male','L2Npc',40,966,478,1920,124,184,156,120,114,253,0,253,0,0,0,80,120,NULL,NULL,0);
 INSERT INTO npc VALUES (8034,'Sentry','a_guard_FDarkelf',7.00,25.00,40,'male','L2Npc',40,966,478,1920,124,184,156,120,114,253,0,253,0,0,0,80,120,NULL,NULL,0);
