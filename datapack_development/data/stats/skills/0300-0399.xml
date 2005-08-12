@@ -298,7 +298,7 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1000"/>
-  <set name="reuseDelay" val="300000"/>
+  <set name="reuseDelay" val="150000"/>
   <set name="skillTime" val="1000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -307,7 +307,7 @@
 
   <for>
   <cond><player state="stand"/></cond>
-  <effect count="1" name="Buff" time="120" val="0">
+  <effect count="1" name="ImobileBuff" time="120" val="0">
      <mul order="0x40" stat="pAtk" val="#pAtk"/>
      <add order="0x40" stat="accCombat" val="#Acc"/>
 	 <mul order="0x40" stat="rCrit" val="#CritChance"/>
