@@ -4733,3 +4733,6 @@ INSERT INTO etcitem VALUES (6346,'sealed_majestic_ring_gemstrone','false','mater
 INSERT INTO etcitem VALUES (6350,'sb_honor_of_paagrio1','false','none',120,'normal','paper','none',0,0,0,'true');
 INSERT INTO etcitem VALUES (6351,'sb_ritual_of_life1','false','none',120,'normal','paper','none',0,0,0,'true');
 INSERT INTO etcitem VALUES (6352,'sb_prayer1','false','none',120,'normal','paper','none',0,0,0,'true');
+INSERT INTO etcitem VALUES (6360,'blue_seal_stone','false','none',0,'stackable','liquid','none',100,0,0,'true');
+INSERT INTO etcitem VALUES (6361,'green_seal_stone','false','none',0,'stackable','liquid','none',100,0,0,'true');
+INSERT INTO etcitem VALUES (6362,'red_seal_stone','false','none',0,'stackable','liquid','none',100,0,0,'true');
