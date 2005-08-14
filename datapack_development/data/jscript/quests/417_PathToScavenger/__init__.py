@@ -35,7 +35,7 @@ class Quest (JQuest) :
             st.setState(STARTED)
             st.playSound("ItemSound.quest_accept")
             st.giveItems(PIPIS_LETTER_ID,1)
-	    st.set("cond",str(1))
+            st.set("cond",str(1))
             htmltext = "7524-05.htm"
           elif st.getPlayer().getClassId().getId() != 0x35 :
                 if st.getPlayer().getClassId().getId() == 0x36 :

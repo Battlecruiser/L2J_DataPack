@@ -157,7 +157,7 @@ class Quest (JQuest) :
    elif npcId == 262 :
       st.set("id","0")
       if int(st.get("cond")) and st.getQuestItemsCount(WANTED_BILL_ID)>0 :
-    	    n = st.getRandom(4);
+            n = st.getRandom(4);
             if st.getQuestItemsCount(STOLEN_JEWELRY_ID) == 0 and n == 0:
               st.giveItems(STOLEN_JEWELRY_ID,1)
               if st.getQuestItemsCount(STOLEN_JEWELRY_ID)+st.getQuestItemsCount(STOLEN_TOMES_ID)+st.getQuestItemsCount(STOLEN_RING_ID)+st.getQuestItemsCount(STOLEN_NECKLACE_ID) == 4 :

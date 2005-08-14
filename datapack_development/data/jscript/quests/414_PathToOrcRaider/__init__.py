@@ -69,8 +69,8 @@ class Quest (JQuest) :
           st.takeItems(GOBLIN_DWELLING_MAP_ID,1)
           n1 = st.getRandom(10)
           n2 = st.getRandom(10)
-	  while n1 == n2 :
-        	n2 = st.getRandom(10)
+          while n1 == n2 :
+            n2 = st.getRandom(10)
           if n1 == 0 :
               st.giveItems(BETRAYER_SUE_REPORT_ID,1)
           elif n1 == 1 :

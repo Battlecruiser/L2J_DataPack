@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Maked by Mr. Have fun! Version 0.2.1 cheked & fix by Ryo Saeba
 print "importing quests: 409: Path To Oracle"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
@@ -38,7 +38,7 @@ class Quest (JQuest) :
             htmltext = "7293-04.htm"
     elif event == "7424_1" :
           if int(st.get("cond")) == 1 :
-            st.set("cond","2")
+            st.set("cond","1")
             st.spawnNpc(5032)
             st.spawnNpc(5033)
             st.spawnNpc(5034)
@@ -121,6 +121,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(TAMATOS_NECKLACE_ID) == 1 :
           st.giveItems(MONEY_OF_SWINDLER_ID,1)
           st.takeItems(TAMATOS_NECKLACE_ID,1)
+          st.set("cond","1")
           htmltext = "7428-04.htm"
         else:
           if st.getQuestItemsCount(MONEY_OF_SWINDLER_ID)>0 :
@@ -138,22 +139,10 @@ class Quest (JQuest) :
         if int(st.get("cond")) == 1 and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER_ID) == 0 :
           st.giveItems(LIZARD_CAPTAIN_ORDER_ID,1)
           st.playSound("ItemSound.quest_middle")
-          st.set("cond","0")
-   elif npcId == 5033 :
-        st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER_ID) == 0 :
-          st.giveItems(LIZARD_CAPTAIN_ORDER_ID,1)
-          st.playSound("ItemSound.quest_middle")
-          st.set("cond","0")
-   elif npcId == 5034 :
-        st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER_ID) == 0 :
-          st.giveItems(LIZARD_CAPTAIN_ORDER_ID,1)
-          st.playSound("ItemSound.quest_middle")
-          st.set("cond","0")
+          st.set("cond","1")
    elif npcId == 5035 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(TAMATOS_NECKLACE_ID) == 0 :
+        if int(st.get("cond")) == 3 and st.getQuestItemsCount(TAMATOS_NECKLACE_ID) == 0 :
           st.giveItems(TAMATOS_NECKLACE_ID,1)
           st.playSound("ItemSound.quest_middle")
    return
@@ -185,3 +174,4 @@ STARTED.addQuestDrop(5034,LIZARD_CAPTAIN_ORDER_ID,1)
 STARTED.addQuestDrop(7293,CRYSTAL_MEDALLION_ID,1)
 STARTED.addQuestDrop(7424,HALF_OF_DAIRY_ID,1)
 STARTED.addQuestDrop(5035,TAMATOS_NECKLACE_ID,1)
+
