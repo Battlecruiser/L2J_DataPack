@@ -44,9 +44,11 @@ class Quest (JQuest) :
    elif npcId == 7958 and int(st.get("cond")) == 1 :
         st.giveItems(4316,1)
         htmltext = "7958_1.htm"
-   elif npcId == 7957 and int(st.get("cond")) == 1 and st.getQuestItemsCount(4316) == 1 :
+   elif npcId == 7957 and int(st.get("cond")) == 1 and st.getQuestItemsCount(4316) == 1 and st.getQuestItemsCount(4317) == 0 :
         st.giveItems(4317,1)
         htmltext = "7957_3.htm"
+   elif npcId == 7957 and int(st.get("cond")) == 1 and st.getQuestItemsCount(4316) == 1 and st.getQuestItemsCount(4317) == 1 :
+        htmltext = "7957_6.htm"
    elif npcId == 7956 and int(st.get("cond")) == 1 and st.getQuestItemsCount(4316) == 1 and st.getQuestItemsCount(4317) == 1 :
         st.takeItems(4316,1)
         st.takeItems(4317,1)
