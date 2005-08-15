@@ -196,7 +196,7 @@
 <set name="buffDuration" val="600000"/>
 <set name="castRange" val="-1"/>
 <for>
-<effect name="Buff" time="600" count="1" val="0">
+<effect name="Buff" time="600" count="1" val="0" stackOrder="1" stackType="possession">
   <mul order="0x50" stat="pAtk" val="#pAtk"/>
   <mul order="0x50" stat="pDef" val="#pDef"/>
   <mul order="0x50" stat="accCombat" val="#accCombat"/>
