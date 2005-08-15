@@ -1440,7 +1440,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pAtk">
         <mul order="0x50" stat="pAtk" val="#rate"/>
     </effect>
   </for>
@@ -1690,7 +1690,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pDef">
         <mul order="0x50" stat="pDef" val="#rate"/>
     </effect>
   </for>

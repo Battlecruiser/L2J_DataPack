@@ -688,7 +688,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0">
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pDef" stackType="pDef">
     <mul order="0x50" stat="pDef" val="#Tab-pDef"/>
  </effect>
 </for>
@@ -804,7 +804,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0">
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtk" stackType="pAtk">
     <mul order="0x50" stat="pAtk" val="#Tab-pAtk"/>
  </effect>
 </for>

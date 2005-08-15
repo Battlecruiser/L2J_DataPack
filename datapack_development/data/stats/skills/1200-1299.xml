@@ -863,7 +863,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0">
+    <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-accCombat" stackType="accuracyUp">
       <add order='0x50' stat='accCombat' val="#Tab-accCombat"/>
     </effect>
   </for>
@@ -925,7 +925,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
 <for>
-  <effect count="1" name="Buff" time="1200" val="0">
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-sDef" stackType="shieldDef">
     <mul order="0x50" stat="sDef" val="#Tab-sDef"/>
   </effect>
 </for>
@@ -1040,7 +1040,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0">
+    <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-accCombat" stackType="accuracyUp">
       <add order="0x50" stat="accCombat" val="#Tab-accCombat"/>
     </effect>
   </for>
@@ -1061,7 +1061,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0">
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-sDef" stackType="shieldDef">
     <add order="0x40" stat="sDef" val="#Tab-sDef"/>
  </effect>
 </for>
