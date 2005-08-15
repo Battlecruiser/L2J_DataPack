@@ -1643,11 +1643,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="60000"/>
   <set name="castRange" val="-1"/>
-  <for>
-    <mul stat="sleepRes" val="#sleepRes" order="0x05"/>
-	<mul stat="stunRes" val="#stunRes" order="0x05"/>
-	<mul stat="rootRes" val="#holdRes" order="0x05"/> 
-  </for>
+ <for>
+ </for>
 </skill>
 <skill id="288" levels="4" name="Guard Stance">
 <table name="#MP"> 8 10 12 13 </table>
@@ -1734,7 +1731,7 @@
   <set name="castRange" val="-1"/>
 
   <for>
-    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession"/>
   </for>
 
 </skill>
@@ -1841,7 +1838,7 @@
   <set name="castRange" val="-1"/>
 
   <for>
-    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession"/>
 	<mul stat="pAtk" val="0.8" order="0x05"/>
 	<add stat="rEvas" val="10" order="0x05"/>
 	<add stat="runSpd" val="15" order="0x05"/>
