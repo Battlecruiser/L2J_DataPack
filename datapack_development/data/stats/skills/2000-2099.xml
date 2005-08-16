@@ -26,14 +26,13 @@
 </skill>
 <skill id="2003" levels="1" name="Mana drug">
 	<table name="#mot">1.5</table>
-  <set name="power" val="1.0"/>
+  <set name="power" val="5000.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="MHOT"/>
+  <set name="skillType" val="MANAHEAL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="20000"/>
   <set name="castRange" val="-1"/>
   <for>
-	<effect count="4" name="ManaHealOverTime" time="5" val="#mot"/>
   </for>
 </skill>
 <skill id="2004" levels="1" name="Deleted">
@@ -46,7 +45,7 @@
   </for>
 </skill>
 <skill id="2005" levels="1" name="Mana potion">
-  <set name="power" val="10000.0"/>
+  <set name="power" val="100.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="MANAHEAL"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -326,13 +325,13 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="300000"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
 <!-- Done by dc -->
 <table name="#Tab-runSpd"> 33 </table>
 <table name="#Tab-pAtkSpd"> 1.33 </table>
 <for>
-  <effect name="Buff" time="300" count="1" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
+  <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
     <add  order='0x40' stat='runSpd' val="#Tab-runSpd"/>
     <mul  order='0x50' stat='pAtkSpd' val="#Tab-pAtkSpd"/>
  </effect>
@@ -343,12 +342,12 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="600000"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
 <!-- Done by dc -->
 <table name="#Tab-runSpd"> 33 </table>
 <for>
-  <effect name="Buff" time="600" count="1" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
+  <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
     <add  order='0x40' stat='runSpd' val="#Tab-runSpd"/>
  </effect>
 </for>

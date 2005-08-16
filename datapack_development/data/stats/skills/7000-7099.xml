@@ -1,32 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="7001" levels="1" name="Summon Spartoi">
-
-<table name="#itemConsumeCount"> 8 </table>
-<set name="itemConsumeId" val="1458"/>
-<set name="mpConsume" val="103"/>
-<set name="power" val="0.0"/>
-<set name="target" val="TARGET_SELF"/>
-<set name="itemConsumeCount" val="#itemConsumeCount"/>
-<set name="hitTime" val="6000"/>
-<set name="reuseDelay" val="18600000"/>
-<set name="skillTime" val="8000"/>
-<set name="skillType" val="SUMMON"/>
-<set name="isMagic" val="true"/>
-<set name="operateType" val="OP_ACTIVE"/>
-<set name="castRange" val="-1"/>
-<!-- Summon-specific -->
-<table name="#npcIds">
-170
-</table>
-<set name="npcId" val="#npcIds" />
-<set name="expPenalty" val="0.3" />
-<set name="isCubic" val="false" />
-
-<for>
-
-</for>
-
+  <set name="mpConsume" val="3"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="4000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
 </skill>
 <skill id="7002" levels="1" name="none">
   <set name="save" val="3"/>
@@ -297,87 +283,48 @@
 </for>
 </skill>
 <skill id="7030" levels="1" name="Summon King Bugbear">
-
-<table name="#itemConsumeCount"> 8 </table>
-<set name="itemConsumeId" val="1458"/>
-<set name="mpConsume" val="103"/>
-<set name="power" val="0.0"/>
-<set name="target" val="TARGET_SELF"/>
-<set name="itemConsumeCount" val="#itemConsumeCount"/>
-<set name="hitTime" val="6000"/>
-<set name="reuseDelay" val="18600000"/>
-<set name="skillTime" val="8000"/>
-<set name="skillType" val="SUMMON"/>
-<set name="isMagic" val="true"/>
-<set name="operateType" val="OP_ACTIVE"/>
-<set name="castRange" val="-1"/>
-<!-- Summon-specific -->
-<table name="#npcIds">
-150
-</table>
-<set name="npcId" val="#npcIds" />
-<set name="expPenalty" val="0.3" />
-<set name="isCubic" val="false" />
-
-<for>
-
-</for>
-
+  <set name="mpConsume" val="3"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="4000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
 </skill>
 <skill id="7031" levels="1" name="Summon Skeleton Royal Guard">
-
-<table name="#itemConsumeCount"> 8 </table>
-<set name="itemConsumeId" val="1458"/>
-<set name="mpConsume" val="103"/>
-<set name="power" val="0.0"/>
-<set name="target" val="TARGET_SELF"/>
-<set name="itemConsumeCount" val="#itemConsumeCount"/>
-<set name="hitTime" val="6000"/>
-<set name="reuseDelay" val="18600000"/>
-<set name="skillTime" val="8000"/>
-<set name="skillType" val="SUMMON"/>
-<set name="isMagic" val="true"/>
-<set name="operateType" val="OP_ACTIVE"/>
-<set name="castRange" val="-1"/>
-<!-- Summon-specific -->
-<table name="#npcIds">
-622
-</table>
-<set name="npcId" val="#npcIds" />
-<set name="expPenalty" val="0.3" />
-<set name="isCubic" val="false" />
-
-<for>
-
-</for>
-
+  <set name="mpConsume" val="3"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="4000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
 </skill>
 <skill id="7032" levels="1" name="Summon Hunter Gargoyle">
-
-<table name="#itemConsumeCount"> 8 </table>
-<set name="itemConsumeId" val="1458"/>
-<set name="mpConsume" val="103"/>
-<set name="power" val="0.0"/>
-<set name="target" val="TARGET_SELF"/>
-<set name="itemConsumeCount" val="#itemConsumeCount"/>
-<set name="hitTime" val="6000"/>
-<set name="reuseDelay" val="18600000"/>
-<set name="skillTime" val="8000"/>
-<set name="skillType" val="SUMMON"/>
-<set name="isMagic" val="true"/>
-<set name="operateType" val="OP_ACTIVE"/>
-<set name="castRange" val="-1"/>
-<!-- Summon-specific -->
-<table name="#npcIds">
-241
-</table>
-<set name="npcId" val="#npcIds" />
-<set name="expPenalty" val="0.3" />
-<set name="isCubic" val="false" />
-
-<for>
-
-</for>
-
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:35
+-->
+  <set name="mpConsume" val="3"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
 </skill>
 </list>
