@@ -52,26 +52,26 @@
 <effect count="1" name="Stun" time="9" val="0" />
 </for>
 </skill>
- <skill id="102" levels="16" name="Entangle"> 
- <table name="#Tab-runSpd"> 0.9 0.86 0.82 0.78 0.74 0.7 0.66 0.62 0.58 0.54 0.5 0.45 0.3 0.27 0.23 0.2 </table> 
- <table name="#mpConsume"> 17 18 19 22 23 24 25 28 28 29 30 32 33 33 34 35 </table> 
-   <set name="mpConsume" val="#mpConsume"/> 
-   <set name="save" val="5"/> 
-   <set name="power" val="0.0"/> 
-   <set name="target" val="TARGET_ONE"/> 
-   <set name="hitTime" val="3000"/> 
-   <set name="reuseDelay" val="7000"/> 
-   <set name="skillTime" val="3000"/> 
-   <set name="skillType" val="DEBUFF"/> 
-   <set name="isMagic" val="true"/> 
-   <set name="operateType" val="OP_ACTIVE"/> 
-   <set name="buffDuration" val="120000"/> 
-   <set name="castRange" val="600"/> 
-   <for> 
-   <effect count="1" name="Buff" time="120" val="0"> 
-     <mul order="0x50" stat="runSpd" val="#Tab-runSpd"/> 
-  </effect> 
-</for> 
+ <skill id="102" levels="16" name="Entangle">
+ <table name="#Tab-runSpd"> 0.9 0.86 0.82 0.78 0.74 0.7 0.66 0.62 0.58 0.54 0.5 0.45 0.3 0.27 0.23 0.2 </table>
+ <table name="#mpConsume"> 17 18 19 22 23 24 25 28 28 29 30 32 33 33 34 35 </table>
+   <set name="mpConsume" val="#mpConsume"/>
+   <set name="save" val="5"/>
+   <set name="power" val="0.0"/>
+   <set name="target" val="TARGET_ONE"/>
+   <set name="hitTime" val="3000"/>
+   <set name="reuseDelay" val="7000"/>
+   <set name="skillTime" val="3000"/>
+   <set name="skillType" val="DEBUFF"/>
+   <set name="isMagic" val="true"/>
+   <set name="operateType" val="OP_ACTIVE"/>
+   <set name="buffDuration" val="120000"/>
+   <set name="castRange" val="600"/>
+   <for>
+   <effect count="1" name="Buff" time="120" val="0">
+     <mul order="0x50" stat="runSpd" val="#Tab-runSpd"/>
+  </effect>
+</for>
 </skill>
 <skill id="103" levels="4" name="Corpse Plague">
   <table name="#dmg"> 31 38 45 52 </table>
@@ -149,7 +149,7 @@
   </for>
 </skill>
 <skill id="107" levels="9" name="Holy Aura">
- <table name="#mpConsume">80 83 87 89 93 95 98 100 103 </table> 
+ <table name="#mpConsume">80 83 87 89 93 95 98 100 103 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
   <set name="power" val="0.0"/>
@@ -224,8 +224,8 @@
   <set name="castRange" val="-1"/>
   <for>
   <effect count="1" name="ImobileBuff" time="30" val="0">
-     <add order="0x40" stat="pDef" val="#pDef"/>
-     <add order="0x40" stat="mDef" val="#mDef"/>
+   <add order="0x40" stat="pDef" val="#pDef"/>
+   <add order="0x40" stat="mDef" val="#mDef"/>
   </effect>
   </for>
 </skill>

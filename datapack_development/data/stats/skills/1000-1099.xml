@@ -236,14 +236,14 @@
   </for>
 </skill>
 <skill id="1013" levels="32" name="Recharge">
-<table name="#mpConsume"> 
-	49 53 57 60 67 70 74 78 82 87 
+<table name="#mpConsume">
+	49 53 57 60 67 70 74 78 82 87
 	90 94 98 103 104 107 109 110 113 115
 	117 119 120 123 124 127 128 130 132 133
 	135 137
 </table>
-<table name="#power"> 
-	49.0 52.0 57.0 60.0 66.0 70.0 73.0 77.0 81.0 86.0 
+<table name="#power">
+	49.0 52.0 57.0 60.0 66.0 70.0 73.0 77.0 81.0 86.0
 	90.0 94.0 98.0 102.0 104.0 106.0 108.0 110.0 113.0 115.0
 	116.0 118.0 120.0 122.0 124.0 126.0 128.0 129.0 131.0 133.0
 	134.0 136.0
@@ -734,8 +734,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
-	</effect>
+    <effect count="1" name="Buff" time="1200" val="0" />
   </for>
 </skill>
 <skill id="1044" levels="3" name="Regeneration">

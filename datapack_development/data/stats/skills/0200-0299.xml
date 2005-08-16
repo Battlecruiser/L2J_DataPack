@@ -1113,38 +1113,38 @@
   <for>
   </for>
 </skill>
-<skill id="262" levels="37" name="Holy Blessing"> 
-<table name="#mpConsume"> 
-	115 119 122 122 127 
-	130 134 139 143 148 
-	152 157 159 159 164 
-	168 173 177 180 185 
-	189 193 195 195 199 
-	203 207 210 214 218 
-	222 224 228 230 233 
+<skill id="262" levels="37" name="Holy Blessing">
+<table name="#mpConsume">
+	115 119 122 122 127
+	130 134 139 143 148
+	152 157 159 159 164
+	168 173 177 180 185
+	189 193 195 195 199
+	203 207 210 214 218
+	222 224 228 230 233
 	237 239
-</table> 
-<table name="#power"> 
-	236.0 245.0 254.0 262.0 271.0 
-	281.0 290.0 299.0 308.0 318.0 
-	327.0 337.0 346.0 356.0 365.0 
-	375.0 384.0 393.0 403.0 412.0 
-	421.0 430.0 439.0 448.0 457.0 
-	466.0 474.0 482.0 490.0 498.0 
-	506.0 513.0 520.0 527.0 534.0 
-	540.0 546.0 
-</table> 
-  <set name="mpConsume" val="#mpConsume"/> 
-  <set name="power" val="#power"/> 
-  <set name="target" val="TARGET_ONE"/> 
-  <set name="hitTime" val="5000"/> 
-  <set name="reuseDelay" val="10000"/> 
-  <set name="skillTime" val="5000"/> 
-  <set name="skillType" val="HEAL"/> 
-  <set name="isMagic" val="true"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="castRange" val="600"/> 
-  <for> 
+</table>
+<table name="#power">
+	236.0 245.0 254.0 262.0 271.0
+	281.0 290.0 299.0 308.0 318.0
+	327.0 337.0 346.0 356.0 365.0
+	375.0 384.0 393.0 403.0 412.0
+	421.0 430.0 439.0 448.0 457.0
+	466.0 474.0 482.0 490.0 498.0
+	506.0 513.0 520.0 527.0 534.0
+	540.0 546.0
+</table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="5000"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="skillTime" val="5000"/>
+  <set name="skillType" val="HEAL"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <for>
   </for>
 </skill>
 <skill id="263" levels="37" name="Deadly Blow">
@@ -1294,8 +1294,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect name="Buff" time="120" count="1" val="0">  
-	</effect>
+    <effect name="Buff" time="120" count="1" val="0" />
   </for>
 </skill>
 <skill id="271" levels="1" name="Dance of Warrior">
@@ -1644,8 +1643,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="60000"/>
   <set name="castRange" val="-1"/>
- <for>
- </for>
+  <for>
+  </for>
 </skill>
 <skill id="288" levels="4" name="Guard Stance">
 <table name="#MP"> 8 10 12 13 </table>
@@ -1844,6 +1843,8 @@
 	<add stat="rEvas" val="10" order="0x05"/>
 	<add stat="runSpd" val="15" order="0x05"/>
   </for>
+
+</skill>
 <skill id="299" levels="1" name="Summon Wild Hog Cannon">
  <table name="#mpConsume"> 530 </table>
  <table name="#itemConsumeCount"> 120 </table>
@@ -1868,6 +1869,5 @@
   <set name="isCubic" val="false" />
   <for>
   </for>
-</skill>
 </skill>
 </list>

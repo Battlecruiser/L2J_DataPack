@@ -20,24 +20,24 @@
   <for>
   </for>
 </skill>
-<skill id="4002" levels="7" name="Steel Blood"> 
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table> 
-  <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 </table> 
-  <set name="mpConsume" val="#mpConsume"/> 
-  <set name="power" val="#power"/> 
-  <set name="target" val="TARGET_ONE"/> 
-  <set name="hitTime" val="4000"/> 
-  <set name="reuseDelay" val="8000"/> 
-  <set name="skillTime" val="4000"/> 
-  <set name="skillType" val="DRAIN"/> 
-  <set name="isMagic" val="true"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="castRange" val="600"/> 
-  <set name="absorbPart" val="0.2" /><!-- absorbs 20% of damage --> 
+<skill id="4002" levels="7" name="Steel Blood">
+  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
+  <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="DRAIN"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="absorbPart" val="0.2" /><!-- absorbs 20% of damage -->
   <set name="displayId" val="1147"/>
-  <for> 
-  </for> 
-</skill> 
+  <for>
+  </for>
+</skill>
 <skill id="4003" levels="1" name="Golem Body">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -662,7 +662,7 @@
   <set name="castRange" val="600"/>
   <set name="displayId" val="1201"/>
   <for>
-  <effect count="1" name="Root" time="30" val="0"/> 
+    <effect count="1" name="Root" time="30" val="0"/>
   </for>
 </skill>
 <skill id="4048" levels="3" name="NPC Dash">
@@ -682,7 +682,7 @@
 </for>
 </skill>
 <skill id="4049" levels="3" name="Cubic Drain">
-  <table name="#power"> 
+  <table name="#power">
    26.0 31.0 36.0
   </table>
   <set name="power" val="#power"/>
@@ -690,21 +690,21 @@
   <set name="skillType" val="DRAIN"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="absorbPart" val="0.4" /><!-- absorbs 40% of damage --> 
+  <set name="absorbPart" val="0.4" /><!-- absorbs 40% of damage -->
   <for>
   </for>
 </skill>
-<skill id="4050" levels="3" name="Cubic Drain"> 
-  <table name="#power"> 15.0 21.0 26.0 </table> 
-  <set name="power" val="#power"/> 
-  <set name="target" val="TARGET_ONE"/> 
-  <set name="skillType" val="DRAIN"/> 
-  <set name="isMagic" val="true"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="castRange" val="-1"/> 
-  <set name="absorbPart" val="0.4" /><!-- absorbs 40% of damage --> 
-  <for> 
-  </for> 
+<skill id="4050" levels="3" name="Cubic Drain">
+  <table name="#power"> 15.0 21.0 26.0 </table>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="DRAIN"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="absorbPart" val="0.4" /><!-- absorbs 40% of damage -->
+  <for>
+  </for>
 </skill>
 <skill id="4051" levels="3" name="Cubic Heal">
   <table name="#power"> 201.0 241.0 281.0 </table>
@@ -867,7 +867,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
-   <set name="negateStats" val="STUN SLEEP MUTE FEAR CONFUSION POISON BLEED BUFF DEBUFF"/> 
+   <set name="negateStats" val="STUN SLEEP MUTE FEAR CONFUSION POISON BLEED BUFF DEBUFF"/>
   <set name="castRange" val="800"/>
   <for>
   </for>
@@ -960,7 +960,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
- 
+
  <!-- Done by dc -->
 <table name="#Tab-pAtkSpd"> 1.5 </table>
 <for>
@@ -968,7 +968,7 @@
     <div  order='0x50' stat='pAtkSpd' val="#Tab-pAtkSpd"/>
  </effect>
 </for>
- 
+
 </skill>
 <skill id="4071" levels="1" name="Strong On">
   <set name="power" val="0.0"/>
@@ -1033,7 +1033,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
-  <set name="displayId" val="1086"/> 
+  <set name="displayId" val="1086"/>
   <for>
   <effect count="1" name="Buff" time="1200" val="0">
     <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
@@ -1055,7 +1055,7 @@
   <set name="castRange" val="50"/>
   <set name="displayId" val="0279"/>
   <for>
-  <effect count="1" name="Stun" time="9" val="0"/>
+    <effect count="1" name="Stun" time="9" val="0"/>
   </for>
 </skill>
 <skill id="4076" levels="3" name="Reduction in movement speed">
@@ -1272,7 +1272,7 @@
     <mul  order='0x50' stat='pAtk' val="#Tab-pAtk"/>
  </effect>
 </for>
- 
+
 </skill>
 <skill id="4090" levels="1" name="NPC Wolf Stun">
   <set name="mpConsume" val="14"/>
@@ -1346,18 +1346,18 @@
 </skill>
 <skill id="4094" levels="1" name="NPC Cancel">
 
-  <set name="power" val="0.0"/> 
-  <set name="target" val="TARGET_ONE"/> 
-  <set name="hitTime" val="6000"/> 
-  <set name="reuseDelay" val="300000"/> 
-  <set name="skillTime" val="6000"/> 
-  <set name="skillType" val="NEGATE"/> 
-  <set name="isMagic" val="true"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="castRange" val="600"/> 
-  <set name="negateStats" val="STUN SLEEP MUTE FEAR CONFUSION POISON BLEED BUFF DEBUFF"/> 
-  <set name="negatePower" val="9.0"/> 
-  <for> 
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="6000"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="skillTime" val="6000"/>
+  <set name="skillType" val="NEGATE"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="negateStats" val="STUN SLEEP MUTE FEAR CONFUSION POISON BLEED BUFF DEBUFF"/>
+  <set name="negatePower" val="9.0"/>
+  <for>
 
   </for>
 </skill>

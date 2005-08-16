@@ -419,18 +419,17 @@
 </for>
 </skill>
 <skill id="4126" levels="1" name="Reduction in recovery time">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Skill recovery time is reduced temporarily.
-  created 2005-05-29 23:34:32
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+
+  <set name="save" val="2"/>
+  <set name="power" val="250.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="2000"/>
+  <set name="skillTime" val="0"/>
+  <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="600"/>
+  <set name="buffDuration" val="0"/>
+  <set name="castRange" val="800"/>
+
   <for>
   </for>
 </skill>
@@ -1320,18 +1319,17 @@
   <for>
   </for>
 </skill>
-<skill id="4179" levels="7" name="BOSS Power Strike">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:32
--->
-  <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
+<skill id="4179" levels="24" name="BOSS Power Strike">
+
+  <table name="#power"> 25.0 27.0 30.0 39.0 42.0 46.0 60.0 65.0 70.0 90.0 97.0 105.0 123.0 132.0 143.0 165.0 177.0 191.0 219.0 235.0 251.0 287.0 306.0 326.0 </table>
+
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1000"/>
+  <set name="overHit" val="true"/>
+  <set name="reuseDelay" val="13000"/>
   <set name="skillTime" val="830"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
