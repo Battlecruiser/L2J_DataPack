@@ -468,6 +468,7 @@
 
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="1458" />
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="6000"/>
@@ -681,6 +682,7 @@
 
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="1458" />
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="6000"/>
@@ -1249,6 +1251,7 @@
 
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="1458" />
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="6000"/>
@@ -1419,7 +1422,7 @@
 <table name="#Tab-runSpd"> 0.7 </table>
 <table name="#Tab-pAtk"> 1.2 </table>
 <for>
-  <effect name="Buff" time="600" count="1" val="0" stackOrder="1" stackType="possession">
+  <effect name="Buff" time="600" count="1" val="0">
     <mul  order='0x50' stat='runSpd' val="#Tab-runSpd"/>
     <mul  order='0x50' stat='pAtk' val="#Tab-pAtk"/>
  </effect>
@@ -1440,7 +1443,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pAtk">
+    <effect count="1" name="Buff" time="1200" val="0">
         <mul order="0x50" stat="pAtk" val="#rate"/>
     </effect>
   </for>
@@ -1553,7 +1556,7 @@
   <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="possession">
+    <effect count="1" name="Buff" time="600" val="0">
         <mul order="0x50" stat="runSpd" val="#rate"/>
     </effect>
   </for>
@@ -1690,7 +1693,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pDef">
+    <effect count="1" name="Buff" time="1200" val="0">
         <mul order="0x50" stat="pDef" val="#rate"/>
     </effect>
   </for>

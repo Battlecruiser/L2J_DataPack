@@ -100,8 +100,8 @@
    </effect>
 </for>
 </skill>
-<skill id="1105" levels="3" name="Madness">
-  <table name="#mpConsume"> 20 30 44 </table>
+<skill id="1105" levels="18" name="Madness">
+  <table name="#mpConsume"> 20 23 27 30 35 39 44 48 52 54 55 58 60 62 64 65 67 69 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -456,14 +456,26 @@
   <for>
   </for>
 </skill>
-<skill id="1128" levels="9" name="Summon Shadow">
+<skill id="1128" levels="18" name="Summon Shadow">
+
   <table name="#mpConsume">
-      39  44  53  60  70
-      78  87  94 103
+  	  39  44  53  60  70
+  	  78  87  94 103 107
+  	 110 115 119 123 127
+  	 130 133 137
   </table>
   <table name="#itemConsumeCount">
-       1  1  3  3  7
-       7  7  7  7
+       3  4  5  7  9
+      11 12 16 17 20
+      21 25 26 29 30
+      33 34 36
+  </table>
+  <table name="#reuseDelay">
+     21600000 21600000 21600000 21600000
+     21600000 21600000 21600000 21600000 
+     21600000    20000    20000    20000 
+        20000    20000    20000    20000 
+        20000    20000
   </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="1458"/>
@@ -471,30 +483,29 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="6000"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="reuseDelay" val="21600000"/>
+  <set name="reuseDelay" val="#reuseDelay"/>
   <set name="skillTime" val="6000"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+
   <!-- Summon-specific -->
-  <table name="#npcIds">
-   12070 12071 12072 12181 12182
-   12362 12363 12364 12365
-  </table>
-    <!-- C2/C3 info
+  <!-- C2/C3 info -->
   <table name="#npcIds">
    12070 12071 12072 12181 12182
    12362 12363 12364 12365 12447
    12448 12449 12450 12451 12452
    12453 12454 12455
-  </table> -->
+  </table> <!-- -->
   <set name="npcId" val="#npcIds" />
   <set name="expPenalty" val="0.3" />
   <set name="isCubic" val="false" />
-
+    
   <for>
+
   </for>
+
 </skill>
 <skill id="1129" levels="7" name="Summon Reanimated Man">
   <table name="#mpConsume">
@@ -947,9 +958,10 @@
 
   </for>
 </skill>
-<skill id="1155" levels="6" name="Corpse Burst">
-  <table name="#mpConsume"> 42 44 45 48 49 52 </table>
-  <table name="#power"> 31.0 33.0 34.0 36.0 38.0 39.0 </table>
+<skill id="1155" levels="15" name="Corpse Burst">
+
+  <table name="#mpConsume"> 42 44 45 48 49 52 54 55 58 60 62 64 65 67 69 </table>
+  <table name="#power"> 31.0 33.0 34.0 36.0 38.0 39.0 41.0 43.0 45.0 46.0 48.0 50.0 51.0 53.0 54.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_CORPSE_MOB"/>
@@ -961,6 +973,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <for>
+
   </for>
 </skill>
 <skill id="1156" levels="13" name="Forget">
@@ -1028,27 +1041,31 @@
   <for>
   </for>
 </skill>
-<skill id="1160" levels="6" name="Slow">
-<!-- Done by dc -->
-<table name="#Tab-runSpd"> 0.85 0.7 0.5 0.35 0.25 0.1 </table>
-<table name="#mpConsume"> 30 39 48 45 52 59 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="save" val="5"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="7000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="DEBUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="600"/>
-  <for>
-  <effect count="1" name="Buff" time="120" val="0">
-    <mul order="0x50" stat="runSpd" val="#Tab-runSpd"/>
- </effect>
-</for>
+<skill id="1160" levels="15" name="Slow"> 
+
+<table name="#Tab-runSpd">
+	1.1 1.15 1.17 1.2 1.25 1.3 1.32 1.35 1.38 1.4 1.44 1.48 1.52 1.56 1.6
+</table> 
+<table name="#mpConsume">
+	30 35 39 44 48 52 54 55 58 60 62 64 65 67 69
+</table> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="save" val="5"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="7000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="DEBUFF"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="120000"/> 
+  <set name="castRange" val="600"/> 
+  <for> 
+  <effect count="1" name="Buff" time="120" val="0"> 
+    <div order="0x50" stat="runSpd" val="#Tab-runSpd"/> 
+ </effect> 
+</for> 
 </skill>
 <skill id="1161" levels="1" name="none">
   <set name="mpConsume" val="15"/>

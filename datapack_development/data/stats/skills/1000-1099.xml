@@ -30,7 +30,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0">
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtkSpd" stackType="mAtkSpeedUp">
     <mul order="0x50" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
  </effect>
 </for>
@@ -72,7 +72,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0">
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtkSpd" stackType="mAtkSpeedUp">
     <mul order="0x50" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
  </effect>
 </for>
@@ -219,9 +219,9 @@
   <for>
   </for>
 </skill>
-<skill id="1012" levels="2" name="Cure Poison">
-  <table name="#mpConsume"> 10 30 </table>
-  <table name="#power"> 3 7 </table>
+<skill id="1012" levels="3" name="Cure Poison">
+  <table name="#mpConsume"> 10 30 55 </table>
+  <table name="#power"> 3 7 9 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -235,9 +235,19 @@
   <for>
   </for>
 </skill>
-<skill id="1013" levels="14" name="Recharge">
-  <table name="#mpConsume"> 49 53 57 60 67 70 74 78 82 87 90 94 98 103 </table>
-  <table name="#power"> 49.0 52.0 57.0 60.0 66.0 70.0 73.0 77.0 81.0 86.0 90.0 94.0 98.0 102.0 </table>
+<skill id="1013" levels="32" name="Recharge">
+<table name="#mpConsume"> 
+	49 53 57 60 67 70 74 78 82 87 
+	90 94 98 103 104 107 109 110 113 115
+	117 119 120 123 124 127 128 130 132 133
+	135 137
+</table>
+<table name="#power"> 
+	49.0 52.0 57.0 60.0 66.0 70.0 73.0 77.0 81.0 86.0 
+	90.0 94.0 98.0 102.0 104.0 106.0 108.0 110.0 113.0 115.0
+	116.0 118.0 120.0 122.0 124.0 126.0 128.0 129.0 131.0 133.0
+	134.0 136.0
+</table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -309,7 +319,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
-  <set name="negateStats" val="POISON BLEED ROOT"/>
+  <set name="negateStats" val="POISON BLEED ROOT STUN PARALYZE"/>
   <set name="negatePower" val="#negatePower"/>
   <for>
   </for>
@@ -508,7 +518,7 @@
 </skill>
 <skill id="1032" levels="3" name="Invigor">
   <table name="#mpConsume"> 35 44 52 </table>
-  <table name="#mDef"> 20 30 45 </table>
+  <table name="#bleedRes"> 20 30 45 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -522,7 +532,7 @@
   <set name="castRange" val="400"/>
   <for>
     <effect name="Buff" time="1200" count="1" val="0">
-      <add order="0x40" stat="mDef" val="#mDef"/>
+      <add order="0x40" stat="bleedRes" val="#bleedRes"/>
     </effect>
   </for>
 </skill>
@@ -564,18 +574,27 @@
 </skill>
 <skill id="1035" levels="4" name="Mental Aegis">
   <table name="#mpConsume"> 23 35 44 52 </table>
+  <table name="#sleepRes"> 1.1 1.2 1.3 1.4 </table>
+  <table name="#fearRes"> 1.1 1.2 1.3 1.4 </table>
+  <table name="#holdRes"> 1.1 1.2 1.3 1.4 </table>
+  <table name="#silenceRes"> 1.1 1.2 1.3 1.4 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="4000"/>
-  <set name="skillType" val="WEAKNESS"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0">
+	<mul stat="sleepRes" val="#sleepRes" order="0x05"/>
+	<mul stat="confusionRes" val="#fearRes" order="0x05"/>
+	<mul stat="rootRes" val="#holdRes" order="0x05"/>
+	</effect>
   </for>
 </skill>
 <skill id="1036" levels="2" name="Magic Barrier">
@@ -715,6 +734,8 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0">
+	</effect>
   </for>
 </skill>
 <skill id="1044" levels="3" name="Regeneration">
@@ -945,7 +966,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
-  <set name="negateStats" val="STUN SLEEP MUTE FEAR CONFUSION POISON BLEED"/>
+  <set name="negateStats" val="STUN SLEEP MUTE FEAR CONFUSION POISON BLEED BUFF DEBUFF WEAKNESS PARALYZE"/>
   <set name="negatePower" val="9.0"/>
   <for>
   </for>
@@ -1464,7 +1485,7 @@
 </skill>
 <skill id="1085" levels="3" name="Greater Acumen">
 <!-- Done by dc -->
-<table name="#rate"> 1.15 1.23 1.3 </table>
+<table name="#Tab-mAtkSpd"> 1.15 1.23 1.3 </table>
 <table name="#mpConsume"> 20 30 44 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -1478,8 +1499,8 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0">
-    <mul order="0x50" stat="mAtkSpd" val="#rate"/>
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtkSpd" stackType="mAtkSpeedUp">
+    <mul order="0x50" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
   </effect>
 </for>
 </skill>
