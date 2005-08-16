@@ -158,81 +158,81 @@ class Quest (JQuest) :
 
     #Bows
     if event == "2":
-        if st.getQuestItemsCount(281) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 250 :
+        if st.getQuestItemsCount(281) == 1 and st.getQuestItemsCount(4634) == 1 and st.getQuestItemsCount(2131) >= 250 :
             st.takeItems(281,1)
-            st.takeItems(4637,1)
+            st.takeItems(4634,1)
             st.takeItems(2131,250)
             st.giveItems(4810,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "3":
-        if st.getQuestItemsCount(281) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 250 :
+        if st.getQuestItemsCount(281) == 1 and st.getQuestItemsCount(4645) == 1 and st.getQuestItemsCount(2131) >= 250 :
             st.takeItems(281,1)
-            st.takeItems(4648,1)
+            st.takeItems(4645,1)
             st.takeItems(2131,250)
             st.giveItems(4811,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "4":
-        if st.getQuestItemsCount(281) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 250 :
+        if st.getQuestItemsCount(281) == 1 and st.getQuestItemsCount(4656) == 1 and st.getQuestItemsCount(2131) >= 250 :
             st.takeItems(281,1)
-            st.takeItems(4659,1)
+            st.takeItems(4656,1)
             st.takeItems(2131,250)
             st.giveItems(4812,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "5":
-        if st.getQuestItemsCount(285) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(285) == 1 and st.getQuestItemsCount(4635) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(285,1)
-            st.takeItems(4637,1)
+            st.takeItems(4635,1)
             st.takeItems(2131,350)
             st.giveItems(4816,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "6":
-        if st.getQuestItemsCount(285) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(285) == 1 and st.getQuestItemsCount(4646) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(285,1)
-            st.takeItems(4648,1)
+            st.takeItems(4646,1)
             st.takeItems(2131,350)
             st.giveItems(4817,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "7":
-        if st.getQuestItemsCount(285) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(285) == 1 and st.getQuestItemsCount(4657) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(285,1)
-            st.takeItems(4659,1)
+            st.takeItems(4657,1)
             st.takeItems(2131,350)
             st.giveItems(4818,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "8":
-        if st.getQuestItemsCount(283) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(283) == 1 and st.getQuestItemsCount(4636) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(283,1)
-            st.takeItems(4637,1)
+            st.takeItems(4636,1)
             st.takeItems(2131,450)
             st.giveItems(4819,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "9":
-        if st.getQuestItemsCount(283) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(283) == 1 and st.getQuestItemsCount(4647) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(283,1)
-            st.takeItems(4648,1)
+            st.takeItems(4647,1)
             st.takeItems(2131,450)
             st.giveItems(4820,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "10":
-        if st.getQuestItemsCount(283) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(283) == 1 and st.getQuestItemsCount(4658) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(283,1)
-            st.takeItems(4659,1)
+            st.takeItems(4658,1)
             st.takeItems(2131,450)
             st.giveItems(4821,1)
             htmltext = "Item has been succesfully enhanced!"
@@ -321,243 +321,243 @@ class Quest (JQuest) :
             htmltext = "You do not have enough materials."
     #Swords
     if event == "20":
-        if st.getQuestItemsCount(72) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 250 :
+        if st.getQuestItemsCount(72) == 1 and st.getQuestItemsCount(4634) == 1 and st.getQuestItemsCount(2131) >= 250 :
             st.takeItems(72,1)
-            st.takeItems(4637,1)
+            st.takeItems(4634,1)
             st.takeItems(2131,250)
             st.giveItems(4681,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "21":
-        if st.getQuestItemsCount(72) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 250 :
+        if st.getQuestItemsCount(72) == 1 and st.getQuestItemsCount(4645) == 1 and st.getQuestItemsCount(2131) >= 250 :
             st.takeItems(72,1)
-            st.takeItems(4648,1)
+            st.takeItems(4645,1)
             st.takeItems(2131,250)
             st.giveItems(4682,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "22":
-        if st.getQuestItemsCount(72) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 250 :
+        if st.getQuestItemsCount(72) == 1 and st.getQuestItemsCount(4656) == 1 and st.getQuestItemsCount(2131) >= 250 :
             st.takeItems(72,1)
-            st.takeItems(4659,1)
+            st.takeItems(4656,1)
             st.takeItems(2131,250)
             st.giveItems(4683,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "23":
-        if st.getQuestItemsCount(74) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(74) == 1 and st.getQuestItemsCount(4635) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(74,1)
-            st.takeItems(4637,1)
+            st.takeItems(4635,1)
             st.takeItems(2131,350)
             st.giveItems(4687,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "24":
-        if st.getQuestItemsCount(74) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(74) == 1 and st.getQuestItemsCount(4646) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(74,1)
-            st.takeItems(4648,1)
+            st.takeItems(4646,1)
             st.takeItems(2131,350)
             st.giveItems(4688,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "25":
-        if st.getQuestItemsCount(74) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(74) == 1 and st.getQuestItemsCount(4657) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(74,1)
-            st.takeItems(4659,1)
+            st.takeItems(4657,1)
             st.takeItems(2131,350)
             st.giveItems(4689,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "26":
-        if st.getQuestItemsCount(131) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(131) == 1 and st.getQuestItemsCount(4635) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(131,1)
-            st.takeItems(4637,1)
+            st.takeItems(4635,1)
             st.takeItems(2131,350)
             st.giveItems(4690,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "27":
-        if st.getQuestItemsCount(131) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(131) == 1 and st.getQuestItemsCount(4646) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(131,1)
-            st.takeItems(4648,1)
+            st.takeItems(4646,1)
             st.takeItems(2131,350)
             st.giveItems(4691,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "28":
-        if st.getQuestItemsCount(131) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(131) == 1 and st.getQuestItemsCount(4657) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(131,1)
-            st.takeItems(4659,1)
+            st.takeItems(4657,1)
             st.takeItems(2131,350)
             st.giveItems(4692,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "29":
-        if st.getQuestItemsCount(133) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(133) == 1 and st.getQuestItemsCount(4635) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(133,1)
-            st.takeItems(4637,1)
+            st.takeItems(4635,1)
             st.takeItems(2131,350)
             st.giveItems(4693,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "30":
-        if st.getQuestItemsCount(133) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(133) == 1 and st.getQuestItemsCount(4646) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(133,1)
-            st.takeItems(4648,1)
+            st.takeItems(4646,1)
             st.takeItems(2131,350)
             st.giveItems(4694,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "31":
-        if st.getQuestItemsCount(133) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(133) == 1 and st.getQuestItemsCount(4657) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(133,1)
-            st.takeItems(4659,1)
+            st.takeItems(4657,1)
             st.takeItems(2131,350)
             st.giveItems(4695,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "32":
-        if st.getQuestItemsCount(73) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(73) == 1 and st.getQuestItemsCount(4635) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(73,1)
-            st.takeItems(4637,1)
+            st.takeItems(4635,1)
             st.takeItems(2131,350)
             st.giveItems(4684,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "33":
-        if st.getQuestItemsCount(73) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(73) == 1 and st.getQuestItemsCount(4646) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(73,1)
-            st.takeItems(4648,1)
+            st.takeItems(4646,1)
             st.takeItems(2131,350)
             st.giveItems(4685,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "34":
-        if st.getQuestItemsCount(73) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(73) == 1 and st.getQuestItemsCount(4657) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(73,1)
-            st.takeItems(4659,1)
+            st.takeItems(4657,1)
             st.takeItems(2131,350)
             st.giveItems(4686,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "35":
-        if st.getQuestItemsCount(76) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(76) == 1 and st.getQuestItemsCount(4636) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(76,1)
-            st.takeItems(4637,1)
+            st.takeItems(4636,1)
             st.takeItems(2131,450)
             st.giveItems(4699,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "36":
-        if st.getQuestItemsCount(76) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(76) == 1 and st.getQuestItemsCount(4647) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(76,1)
-            st.takeItems(4648,1)
+            st.takeItems(4647,1)
             st.takeItems(2131,450)
             st.giveItems(4700,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "37":
-        if st.getQuestItemsCount(76) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(76) == 1 and st.getQuestItemsCount(4658) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(76,1)
-            st.takeItems(4659,1)
+            st.takeItems(4658,1)
             st.takeItems(2131,450)
             st.giveItems(4701,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "38":
-        if st.getQuestItemsCount(77) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(77) == 1 and st.getQuestItemsCount(4636) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(77,1)
-            st.takeItems(4637,1)
+            st.takeItems(4636,1)
             st.takeItems(2131,450)
             st.giveItems(4702,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "39":
-        if st.getQuestItemsCount(77) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(77) == 1 and st.getQuestItemsCount(4647) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(77,1)
-            st.takeItems(4648,1)
+            st.takeItems(4647,1)
             st.takeItems(2131,450)
             st.giveItems(4703,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "40":
-        if st.getQuestItemsCount(77) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(77) == 1 and st.getQuestItemsCount(4658) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(77,1)
-            st.takeItems(4659,1)
+            st.takeItems(4658,1)
             st.takeItems(2131,450)
             st.giveItems(4704,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "41":
-        if st.getQuestItemsCount(134) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(134) == 1 and st.getQuestItemsCount(4636) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(134,1)
-            st.takeItems(4637,1)
+            st.takeItems(4636,1)
             st.takeItems(2131,450)
             st.giveItems(4705,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "42":
-        if st.getQuestItemsCount(134) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(134) == 1 and st.getQuestItemsCount(4647) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(134,1)
-            st.takeItems(4648,1)
+            st.takeItems(4647,1)
             st.takeItems(2131,450)
             st.giveItems(4706,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "43":
-        if st.getQuestItemsCount(134) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(134) == 1 and st.getQuestItemsCount(4658) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(134,1)
-            st.takeItems(4659,1)
+            st.takeItems(4658,1)
             st.takeItems(2131,450)
             st.giveItems(4707,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "44":
-        if st.getQuestItemsCount(132) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(132) == 1 and st.getQuestItemsCount(4636) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(132,1)
-            st.takeItems(4637,1)
+            st.takeItems(4636,1)
             st.takeItems(2131,450)
             st.giveItems(6307,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "45":
-        if st.getQuestItemsCount(132) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(132) == 1 and st.getQuestItemsCount(4647) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(132,1)
-            st.takeItems(4648,1)
+            st.takeItems(4647,1)
             st.takeItems(2131,450)
             st.giveItems(6308,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "46":
-        if st.getQuestItemsCount(132) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(132) == 1 and st.getQuestItemsCount(4658) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(132,1)
-            st.takeItems(4659,1)
+            st.takeItems(4658,1)
             st.takeItems(2131,450)
             st.giveItems(6309,1)
             htmltext = "Item has been succesfully enhanced!"
@@ -591,54 +591,54 @@ class Quest (JQuest) :
         else :
             htmltext = "You do not have enough materials."
     if event == "50":
-        if st.getQuestItemsCount(142) == 1 and st.getQuestItemsCount(4639) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(142) == 1 and st.getQuestItemsCount(4638) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(142,1)
-            st.takeItems(4639,1)
+            st.takeItems(4638,1)
             st.takeItems(2132,222)
             st.giveItems(4714,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "51":
-        if st.getQuestItemsCount(142) == 1 and st.getQuestItemsCount(4650) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(142) == 1 and st.getQuestItemsCount(4649) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(142,1)
-            st.takeItems(4650,1)
+            st.takeItems(4649,1)
             st.takeItems(2132,222)
             st.giveItems(4715,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "52":
-        if st.getQuestItemsCount(142) == 1 and st.getQuestItemsCount(4661) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(142) == 1 and st.getQuestItemsCount(4660) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(142,1)
-            st.takeItems(4661,1)
+            st.takeItems(4660,1)
             st.takeItems(2132,222)
             st.giveItems(4716,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "53":
-        if st.getQuestItemsCount(78) == 1 and st.getQuestItemsCount(4639) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(78) == 1 and st.getQuestItemsCount(4638) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(78,1)
-            st.takeItems(4639,1)
+            st.takeItems(4638,1)
             st.takeItems(2132,222)
             st.giveItems(4723,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "54":
-        if st.getQuestItemsCount(78) == 1 and st.getQuestItemsCount(4650) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(78) == 1 and st.getQuestItemsCount(4649) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(78,1)
-            st.takeItems(4650,1)
+            st.takeItems(4649,1)
             st.takeItems(2132,222)
             st.giveItems(4724,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "55":
-        if st.getQuestItemsCount(78) == 1 and st.getQuestItemsCount(4661) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(78) == 1 and st.getQuestItemsCount(4660) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(78,1)
-            st.takeItems(4661,1)
+            st.takeItems(4660,1)
             st.takeItems(2132,222)
             st.giveItems(4725,1)
             htmltext = "Item has been succesfully enhanced!"
@@ -646,27 +646,27 @@ class Quest (JQuest) :
             htmltext = "You do not have enough materials."
     #Blunts
     if event == "56":
-        if st.getQuestItemsCount(162) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(162) == 1 and st.getQuestItemsCount(4636) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(162,1)
-            st.takeItems(4637,1)
+            st.takeItems(4636,1)
             st.takeItems(2131,450)
             st.giveItems(4741,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "57":
-        if st.getQuestItemsCount(162) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(162) == 1 and st.getQuestItemsCount(4647) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(162,1)
-            st.takeItems(4648,1)
+            st.takeItems(4647,1)
             st.takeItems(2131,450)
             st.giveItems(4742,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "58":
-        if st.getQuestItemsCount(162) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(162) == 1 and st.getQuestItemsCount(4658) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(162,1)
-            st.takeItems(4659,1)
+            st.takeItems(4658,1)
             st.takeItems(2131,450)
             st.giveItems(4743,1)
             htmltext = "Item has been succesfully enhanced!"
@@ -700,135 +700,135 @@ class Quest (JQuest) :
         else :
             htmltext = "You do not have enough materials."
     if event == "62":
-        if st.getQuestItemsCount(192) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 250 :
+        if st.getQuestItemsCount(192) == 1 and st.getQuestItemsCount(4634) == 1 and st.getQuestItemsCount(2131) >= 250 :
             st.takeItems(192,1)
-            st.takeItems(4637,1)
+            st.takeItems(4634,1)
             st.takeItems(2131,250)
             st.giveItems(4867,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "63":
-        if st.getQuestItemsCount(192) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 250 :
+        if st.getQuestItemsCount(192) == 1 and st.getQuestItemsCount(4645) == 1 and st.getQuestItemsCount(2131) >= 250 :
             st.takeItems(192,1)
-            st.takeItems(4648,1)
+            st.takeItems(4645,1)
             st.takeItems(2131,250)
             st.giveItems(4868,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "64":
-        if st.getQuestItemsCount(192) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 250 :
+        if st.getQuestItemsCount(192) == 1 and st.getQuestItemsCount(4656) == 1 and st.getQuestItemsCount(2131) >= 250 :
             st.takeItems(192,1)
-            st.takeItems(4659,1)
+            st.takeItems(4656,1)
             st.takeItems(2131,250)
             st.giveItems(4869,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "65":
-        if st.getQuestItemsCount(195) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(195) == 1 and st.getQuestItemsCount(4635) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(195,1)
-            st.takeItems(4637,1)
+            st.takeItems(4635,1)
             st.takeItems(2131,350)
             st.giveItems(4873,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "66":
-        if st.getQuestItemsCount(195) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(195) == 1 and st.getQuestItemsCount(4646) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(195,1)
-            st.takeItems(4648,1)
+            st.takeItems(4646,1)
             st.takeItems(2131,350)
             st.giveItems(4874,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "67":
-        if st.getQuestItemsCount(195) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(195) == 1 and st.getQuestItemsCount(4657) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(195,1)
-            st.takeItems(4659,1)
+            st.takeItems(4657,1)
             st.takeItems(2131,350)
             st.giveItems(4875,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "68":
-        if st.getQuestItemsCount(197) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(197) == 1 and st.getQuestItemsCount(4636) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(197,1)
-            st.takeItems(4637,1)
+            st.takeItems(4636,1)
             st.takeItems(2131,450)
             st.giveItems(4876,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "69":
-        if st.getQuestItemsCount(197) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(197) == 1 and st.getQuestItemsCount(4647) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(197,1)
-            st.takeItems(4648,1)
+            st.takeItems(4647,1)
             st.takeItems(2131,450)
             st.giveItems(4877,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "70":
-        if st.getQuestItemsCount(197) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(197) == 1 and st.getQuestItemsCount(4658) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(197,1)
-            st.takeItems(4659,1)
+            st.takeItems(4658,1)
             st.takeItems(2131,450)
             st.giveItems(4878,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "71":
-        if st.getQuestItemsCount(200) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(200) == 1 and st.getQuestItemsCount(4636) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(200,1)
-            st.takeItems(4637,1)
+            st.takeItems(4636,1)
             st.takeItems(2131,450)
             st.giveItems(4882,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "72":
-        if st.getQuestItemsCount(200) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(200) == 1 and st.getQuestItemsCount(4647) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(200,1)
-            st.takeItems(4648,1)
+            st.takeItems(4647,1)
             st.takeItems(2131,450)
             st.giveItems(4883,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "73":
-        if st.getQuestItemsCount(200) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(200) == 1 and st.getQuestItemsCount(4658) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(200,1)
-            st.takeItems(4659,1)
+            st.takeItems(4658,1)
             st.takeItems(57,600000)
             st.giveItems(4884,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "74":
-        if st.getQuestItemsCount(203) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(203) == 1 and st.getQuestItemsCount(4636) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(203,1)
-            st.takeItems(4637,1)
+            st.takeItems(4636,1)
             st.takeItems(2131,450)
             st.giveItems(4885,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "75":
-        if st.getQuestItemsCount(203) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(203) == 1 and st.getQuestItemsCount(4647) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(203,1)
-            st.takeItems(4648,1)
+            st.takeItems(4647,1)
             st.takeItems(2131,450)
             st.giveItems(4886,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "76":
-        if st.getQuestItemsCount(203) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(203) == 1 and st.getQuestItemsCount(4658) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(203,1)
-            st.takeItems(4659,1)
+            st.takeItems(4658,1)
             st.takeItems(2131,450)
             st.giveItems(4887,1)
             htmltext = "Item has been succesfully enhanced!"
@@ -916,27 +916,27 @@ class Quest (JQuest) :
         else :
             htmltext = "You do not have enough materials."
     if event == "86":
-        if st.getQuestItemsCount(92) == 1 and st.getQuestItemsCount(4639) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(92) == 1 and st.getQuestItemsCount(4638) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(92,1)
-            st.takeItems(4639,1)
+            st.takeItems(4638,1)
             st.takeItems(2132,222)
             st.giveItems(4897,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "87":
-        if st.getQuestItemsCount(92) == 1 and st.getQuestItemsCount(4650) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(92) == 1 and st.getQuestItemsCount(4649) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(92,1)
-            st.takeItems(4650,1)
+            st.takeItems(4649,1)
             st.takeItems(2132,222)
             st.giveItems(4898,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "88":
-        if st.getQuestItemsCount(92) == 1 and st.getQuestItemsCount(4661) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(92) == 1 and st.getQuestItemsCount(4660) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(92,1)
-            st.takeItems(4661,1)
+            st.takeItems(4660,1)
             st.takeItems(2132,222)
             st.giveItems(4899,1)
             htmltext = "Item has been succesfully enhanced!"
@@ -970,27 +970,27 @@ class Quest (JQuest) :
         else :
             htmltext = "You do not have enough materials."
     if event == "92":
-        if st.getQuestItemsCount(91) == 1 and st.getQuestItemsCount(4639) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(91) == 1 and st.getQuestItemsCount(4638) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(91,1)
-            st.takeItems(4639,1)
+            st.takeItems(4638,1)
             st.takeItems(2132,222)
             st.giveItems(4747,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "93":
-        if st.getQuestItemsCount(91) == 1 and st.getQuestItemsCount(4650) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(91) == 1 and st.getQuestItemsCount(4649) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(91,1)
-            st.takeItems(4650,1)
+            st.takeItems(4649,1)
             st.takeItems(2132,222)
             st.giveItems(4748,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "94":
-        if st.getQuestItemsCount(91) == 1 and st.getQuestItemsCount(4661) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(91) == 1 and st.getQuestItemsCount(4660) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(91,1)
-            st.takeItems(4661,1)
+            st.takeItems(4660,1)
             st.takeItems(2132,222)
             st.giveItems(4749,1)
             htmltext = "Item has been succesfully enhanced!"
@@ -1079,81 +1079,81 @@ class Quest (JQuest) :
         else :
             htmltext = "You do not have enough materials."
     if event == "104":
-        if st.getQuestItemsCount(233) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(233) == 1 and st.getQuestItemsCount(4636) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(233,1)
-            st.takeItems(4637,1)
+            st.takeItems(4636,1)
             st.takeItems(2131,450)
             st.giveItems(4771,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "105":
-        if st.getQuestItemsCount(233) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(233) == 1 and st.getQuestItemsCount(4647) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(233,1)
-            st.takeItems(4648,1)
+            st.takeItems(4647,1)
             st.takeItems(2131,450)
             st.giveItems(4772,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "106":
-        if st.getQuestItemsCount(233) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(233) == 1 and st.getQuestItemsCount(4658) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(233,1)
-            st.takeItems(4659,1)
+            st.takeItems(4658,1)
             st.takeItems(2131,450)
             st.giveItems(4773,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "107":
-        if st.getQuestItemsCount(231) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(231) == 1 and st.getQuestItemsCount(4636) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(231,1)
-            st.takeItems(4637,1)
+            st.takeItems(4636,1)
             st.takeItems(2131,450)
             st.giveItems(4768,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "108":
-        if st.getQuestItemsCount(231) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(231) == 1 and st.getQuestItemsCount(4647) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(231,1)
-            st.takeItems(4648,1)
+            st.takeItems(4647,1)
             st.takeItems(2131,450)
             st.giveItems(4769,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "109":
-        if st.getQuestItemsCount(231) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(231) == 1 and st.getQuestItemsCount(4658) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(231,1)
-            st.takeItems(4659,1)
+            st.takeItems(4658,1)
             st.takeItems(2131,450)
             st.giveItems(4770,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "110":
-        if st.getQuestItemsCount(229) == 1 and st.getQuestItemsCount(4639) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(229) == 1 and st.getQuestItemsCount(4638) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(229,1)
-            st.takeItems(4639,1)
+            st.takeItems(4638,1)
             st.takeItems(2132,222)
             st.giveItems(4777,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "111":
-        if st.getQuestItemsCount(229) == 1 and st.getQuestItemsCount(4650) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(229) == 1 and st.getQuestItemsCount(4649) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(229,1)
-            st.takeItems(4650,1)
+            st.takeItems(4649,1)
             st.takeItems(2132,222)
             st.giveItems(4778,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "112":
-        if st.getQuestItemsCount(229) == 1 and st.getQuestItemsCount(4661) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(229) == 1 and st.getQuestItemsCount(4660) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(229,1)
-            st.takeItems(4661,1)
+            st.takeItems(4660,1)
             st.takeItems(2132,222)
             st.giveItems(4779,1)
             htmltext = "Item has been succesfully enhanced!"
@@ -1188,25 +1188,25 @@ class Quest (JQuest) :
             htmltext = "You do not have enough materials."
     #PoleArms
     if event == "116":
-        if st.getQuestItemsCount(301) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(301) == 1 and st.getQuestItemsCount(4636) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(301,1)
-            st.takeItems(4637,1)
+            st.takeItems(4636,1)
             st.takeItems(2131,450)
             st.giveItems(4846,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "117":
-        if st.getQuestItemsCount(301) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(301) == 1 and st.getQuestItemsCount(4647) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(301,1)
-            st.takeItems(4648,1)
+            st.takeItems(4647,1)
             st.takeItems(2131,450)
             st.giveItems(4847,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "118":
-        if st.getQuestItemsCount(301) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(301) == 1 and st.getQuestItemsCount(4658) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(301,1)
             st.takeItems(4659,1)
             st.takeItems(2131,450)
@@ -1215,27 +1215,27 @@ class Quest (JQuest) :
         else :
             htmltext = "You do not have enough materials."
     if event == "119":
-        if st.getQuestItemsCount(303) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(303) == 1 and st.getQuestItemsCount(4636) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(303,1)
-            st.takeItems(4637,1)
+            st.takeItems(4636,1)
             st.takeItems(2131,450)
             st.giveItems(4849,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "120":
-        if st.getQuestItemsCount(303) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(303) == 1 and st.getQuestItemsCount(4647) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(303,1)
-            st.takeItems(4648,1)
+            st.takeItems(4647,1)
             st.takeItems(2131,450)
             st.giveItems(4850,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "121":
-        if st.getQuestItemsCount(303) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 450 :
+        if st.getQuestItemsCount(303) == 1 and st.getQuestItemsCount(4658) == 1 and st.getQuestItemsCount(2131) >= 450 :
             st.takeItems(303,1)
-            st.takeItems(4659,1)
+            st.takeItems(4658,1)
             st.takeItems(2131,450)
             st.giveItems(4851,1)
             htmltext = "Item has been succesfully enhanced!"
@@ -1269,27 +1269,27 @@ class Quest (JQuest) :
         else :
             htmltext = "You do not have enough materials."
     if event == "125":
-        if st.getQuestItemsCount(300) == 1 and st.getQuestItemsCount(4639) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(300) == 1 and st.getQuestItemsCount(4638) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(300,1)
-            st.takeItems(4639,1)
+            st.takeItems(4638,1)
             st.takeItems(2132,222)
             st.giveItems(4855,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "126":
-        if st.getQuestItemsCount(300) == 1 and st.getQuestItemsCount(4650) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(300) == 1 and st.getQuestItemsCount(4649) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(300,1)
-            st.takeItems(4650,1)
+            st.takeItems(4649,1)
             st.takeItems(2132,222)
             st.giveItems(4856,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "127":
-        if st.getQuestItemsCount(300) == 1 and st.getQuestItemsCount(4661) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(300) == 1 and st.getQuestItemsCount(4660) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(300,1)
-            st.takeItems(4661,1)
+            st.takeItems(4660,1)
             st.takeItems(2132,222)
             st.giveItems(4857,1)
             htmltext = "Item has been succesfully enhanced!"
@@ -1324,27 +1324,27 @@ class Quest (JQuest) :
             htmltext = "You do not have enough materials."
     #Fists
     if event == "131":
-        if st.getQuestItemsCount(265) == 1 and st.getQuestItemsCount(4637) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(265) == 1 and st.getQuestItemsCount(4635) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(265,1)
-            st.takeItems(4637,1)
+            st.takeItems(4635,1)
             st.takeItems(2131,350)
             st.giveItems(4792,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "132":
-        if st.getQuestItemsCount(265) == 1 and st.getQuestItemsCount(4648) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(265) == 1 and st.getQuestItemsCount(4646) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(265,1)
-            st.takeItems(4648,1)
+            st.takeItems(4646,1)
             st.takeItems(2131,350)
             st.giveItems(4793,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "133":
-        if st.getQuestItemsCount(265) == 1 and st.getQuestItemsCount(4659) == 1 and st.getQuestItemsCount(2131) >= 350 :
+        if st.getQuestItemsCount(265) == 1 and st.getQuestItemsCount(4657) == 1 and st.getQuestItemsCount(2131) >= 350 :
             st.takeItems(265,1)
-            st.takeItems(4659,1)
+            st.takeItems(4657,1)
             st.takeItems(2131,350)
             st.giveItems(4794,1)
             htmltext = "Item has been succesfully enhanced!"
@@ -1378,27 +1378,27 @@ class Quest (JQuest) :
         else :
             htmltext = "You do not have enough materials."
     if event == "137":
-        if st.getQuestItemsCount(267) == 1 and st.getQuestItemsCount(4639) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(267) == 1 and st.getQuestItemsCount(4638) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(267,1)
-            st.takeItems(4639,1)
+            st.takeItems(4638,1)
             st.takeItems(2132,222)
             st.giveItems(4801,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "138":
-        if st.getQuestItemsCount(267) == 1 and st.getQuestItemsCount(4650) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(267) == 1 and st.getQuestItemsCount(4649) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(267,1)
-            st.takeItems(4650,1)
+            st.takeItems(4649,1)
             st.takeItems(2132,222)
             st.giveItems(4802,1)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
     if event == "139":
-        if st.getQuestItemsCount(267) == 1 and st.getQuestItemsCount(4661) == 1 and st.getQuestItemsCount(2132) >= 222 :
+        if st.getQuestItemsCount(267) == 1 and st.getQuestItemsCount(4660) == 1 and st.getQuestItemsCount(2132) >= 222 :
             st.takeItems(267,1)
-            st.takeItems(4661,1)
+            st.takeItems(4660,1)
             st.takeItems(2132,222)
             st.giveItems(4803,1)
             htmltext = "Item has been succesfully enhanced!"
