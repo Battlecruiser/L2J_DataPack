@@ -67,8 +67,6 @@ class Quest (JQuest) :
    elif npcId == 7144 and int(st.get("cond"))==1 and st.getQuestItemsCount(CECKTINONS_VOUCHER2_ID)>=1 and st.getQuestItemsCount(BONE_FRAGMENT1_ID)<10 and int(st.get("onlyone"))==0 :
         htmltext = "7144-02.htm"
    elif npcId == 7144 and int(st.get("cond"))==1 and st.getQuestItemsCount(CECKTINONS_VOUCHER2_ID)==1 and st.getQuestItemsCount(BONE_FRAGMENT1_ID)>=10 and int(st.get("onlyone"))==0 :
-        if int(st.get("id")) != 103 :
-          st.set("id","103")
           htmltext = "7144-03.htm"
           st.takeItems(CECKTINONS_VOUCHER2_ID,1)
           st.takeItems(BONE_FRAGMENT1_ID,10)
@@ -76,8 +74,6 @@ class Quest (JQuest) :
    elif npcId == 7144 and int(st.get("cond"))==1 and st.getQuestItemsCount(SOUL_CATCHER_ID)==1 and int(st.get("onlyone"))==0 :
         htmltext = "7144-04.htm"
    elif npcId == 7132 and int(st.get("cond"))==1 and st.getQuestItemsCount(SOUL_CATCHER_ID)==1 and int(st.get("onlyone"))==0 :
-        if int(st.get("id")) != 103 :
-          st.set("id","103")
           htmltext = "7132-03.htm"
           st.takeItems(SOUL_CATCHER_ID,1)
           st.giveItems(PRESERVE_OIL_ID,1)
