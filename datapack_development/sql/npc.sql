@@ -3004,13 +3004,13 @@ INSERT INTO npc VALUES (12013,'Court Sorcerer','a_royal_guardA_MHuman',7.00,24.0
 INSERT INTO npc VALUES (12014,'Court Guard','a_royal_guardB_MHuman',7.00,24.00,58,'male','L2SiegeGuard',40,1828,977,336,1,797,238,436,174,325,300,325,1376,0,0,80,120,'gludio_siege_clan',1200,0);
 INSERT INTO npc VALUES (12015,'Guard','a_guard_MElf',8.00,27.00,56,'male','L2SiegeGuard',80,1724,918,314,1,731,228,399,167,325,300,325,16,0,0,80,120,'gludio_siege_clan',1200,0);
 INSERT INTO npc VALUES (12016,'Guard','a_guard_MElf',8.00,27.00,56,'male','L2SiegeGuard',40,1724,918,314,1,731,228,399,167,379,300,379,2,0,0,80,120,'gludio_siege_clan',1200,0);
-INSERT INTO npc VALUES (12017,'Guard','a_guard_MElf',8.00,27.00,56,'male','L2SiegeGuard',1100,1724,918,314,1,731,228,399,167,293,300,293,14,0,0,0,0,'gludio_siege_clan',1200,0);
+INSERT INTO npc VALUES (12017,'Guard','a_guard_MElf',8.00,27.00,56,'male','L2SiegeGuard',1100,1724,918,314,1,731,228,399,167,293,1010,293,14,0,0,0,0,'gludio_siege_clan',1200,0);
 INSERT INTO npc VALUES (12018,'Guard','a_guard_FDarkelf',7.00,25.00,56,'female','L2SiegeGuard',80,1724,918,314,1,731,228,399,167,325,300,325,16,0,0,80,120,'gludio_siege_clan',1200,0);
 INSERT INTO npc VALUES (12019,'Guard','a_guard_FDarkelf',7.00,25.00,56,'female','L2SiegeGuard',40,1724,918,314,1,731,228,399,167,379,300,379,2,0,0,80,120,'gludio_siege_clan',1200,0);
-INSERT INTO npc VALUES (12020,'Guard','a_guard_FDarkelf',7.00,25.00,56,'female','L2SiegeGuard',1100,1724,918,314,1,731,228,399,167,293,300,293,14,0,0,0,0,'gludio_siege_clan',1200,0);
+INSERT INTO npc VALUES (12020,'Guard','a_guard_FDarkelf',7.00,25.00,56,'female','L2SiegeGuard',1100,1724,918,314,1,731,228,399,167,293,1010,293,14,0,0,0,0,'gludio_siege_clan',1200,0);
 INSERT INTO npc VALUES (12021,'Guard','a_guard_MHuman',8.00,24.00,56,'male','L2SiegeGuard',80,1724,918,314,1,731,228,399,167,325,300,325,16,0,0,80,120,'gludio_siege_clan',1200,0);
 INSERT INTO npc VALUES (12022,'Guard','a_guard_MHuman',8.00,24.00,56,'male','L2SiegeGuard',40,1724,918,314,1,731,228,399,167,379,300,379,2,0,0,80,120,'gludio_siege_clan',1200,0);
-INSERT INTO npc VALUES (12023,'Gludio','a_guard_MHuman',8.00,24.00,56,'male','L2SiegeGuard',1100,1724,918,314,1,731,228,399,167,293,300,293,14,0,0,0,0,'gludio_siege_clan',1200,0);
+INSERT INTO npc VALUES (12023,'Gludio','a_guard_MHuman',8.00,24.00,56,'male','L2SiegeGuard',1100,1724,918,314,1,731,228,399,167,293,1010,293,14,0,0,0,0,'gludio_siege_clan',1200,0);
 INSERT INTO npc VALUES (12024,'Headquarters Headquarters','flag_a',15.00,58.00,1,'male','L2Npc',40,100000,891,0,0,604,837,674,296,385,0,385,0,0,0,80,120,NULL,NULL,0);
 INSERT INTO npc VALUES (12025,'Royal Knight','a_royal_guardA_MHuman',7.00,24.00,60,'male','L2SiegeGuard',40,1933,1036,360,1,866,248,473,181,379,300,379,2,0,0,80,120,'gludio_siege_clan',1200,0);
 INSERT INTO npc VALUES (12026,'Court Sorcerer','a_royal_guardA_MHuman',7.00,24.00,58,'male','L2SiegeGuard',40,1828,977,336,1,797,238,436,174,379,300,379,7,0,0,80,120,'gludio_siege_clan',1200,0);
