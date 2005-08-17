@@ -1561,10 +1561,10 @@
     </effect>
   </for>
 </skill>
-<skill id="84" levels="1" name="Poison Blade Dance">
+<skill id="84" levels="3" name="Poison Blade Dance">
   <table name="#mpConsume"> 105 117 140 </table>
   <table name="#poison-dmg"> 38 58 81 </table>
-  <set name="weaponsAllowed" val="#mpConsume"/>
+  <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="105"/>
   <set name="save" val="3"/>
   <set name="power" val="6.0"/>
