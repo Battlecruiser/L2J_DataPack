@@ -12,7 +12,7 @@
   <for>
    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="#mana">
    	   <mul order="0x10" stat="pAtk" val="#patk"/>
-       <add order="0x40" stat="patk-add" val="#patk"/>
+       <add order="0x40" stat="pAtk" val="#patk-add"/>
    </effect>
   </for>
 </skill>
