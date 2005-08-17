@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="1001" levels="10" name="Soul Cry">
-  <table name="#patk"> 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0 2.1 </table>
-  <table name="#mana"> 1 2 3 4 5 6 7 8 9 10 </table>
+  <table name="#patk"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 </table>
+  <table name="#patk-add"> 5 10 20 35 55 80 110 140 170 200 </table>
+  <table name="#mana"> 5 10 15 20 25 30 35 40 45 50 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
@@ -10,7 +11,8 @@
   <set name="castRange" val="-1"/>
   <for>
    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="#mana">
-   <mul order="0x10" stat="pAtk" val="#patk"/>
+   	   <mul order="0x10" stat="pAtk" val="#patk"/>
+       <add order="0x40" stat="patk-add" val="#patk"/>
    </effect>
   </for>
 </skill>
