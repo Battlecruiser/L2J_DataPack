@@ -57,6 +57,7 @@ CREATE TABLE characters (
   accesslevel decimal(4,0) default NULL,
   online decimal(1,0) default NULL,
   char_slot decimal(1) default NULL,
+  newbie decimal(1,0) default '1',
   lastAccess decimal(20,0) default NULL,
   PRIMARY KEY  (obj_Id)
 ) ;
