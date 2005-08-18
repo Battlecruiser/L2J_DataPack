@@ -40,3 +40,4 @@ DROP TABLE IF EXISTS skill_trees;
 DROP TABLE IF EXISTS spawnlist;
 DROP TABLE IF EXISTS teleport;
 DROP TABLE IF EXISTS weapon;
+DROP TABLE IF EXISTS seven_signs;

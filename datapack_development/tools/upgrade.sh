@@ -26,3 +26,4 @@ mysql -u $USER --password=$PASS -D $DBNAME < ../sql/skill_spellbooks.sql
 mysql -u $USER --password=$PASS -D $DBNAME < ../sql/spawnlist.sql
 mysql -u $USER --password=$PASS -D $DBNAME < ../sql/teleport.sql
 mysql -u $USER --password=$PASS -D $DBNAME < ../sql/weapon.sql
+mysql -u $USER --password=$PASS -D $DBNAME < ../sql/seven_signs.sql

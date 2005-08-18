@@ -67,4 +67,5 @@ echo Installling new content.
 %mysqlPath% -u %user% --password=%pass% -D %DBname% < ../sql/spawnlist.sql
 %mysqlPath% -u %user% --password=%pass% -D %DBname% < ../sql/teleport.sql
 %mysqlPath% -u %user% --password=%pass% -D %DBname% < ../sql/weapon.sql
+%mysqlPath% -u %user% --password=%pass% -D %DBname% < ../sql/seven_signs.sql
 pause

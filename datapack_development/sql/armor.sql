@@ -26,758 +26,760 @@ CREATE TABLE armor (
 -- Dumping data for table `armor`
 -- 
 
-INSERT INTO armor VALUES (21, 'Shirt', 'chest', 'false', 'light', 4830, 'cloth', 'none', 0, 90, 36, 0, 0, 147, 0, 'true');
-INSERT INTO armor VALUES (22, 'Leather Shirt', 'chest', 'false', 'light', 4830, 'leather', 'none', 0, 90, 43, 0, 0, 2430, 0, 'true');
-INSERT INTO armor VALUES (23, 'Wooden Breastplate', 'chest', 'false', 'light', 4820, 'wood', 'none', 0, 90, 47, 0, 0, 7960, 0, 'true');
-INSERT INTO armor VALUES (24, 'Bone Breastplate', 'chest', 'false', 'light', 4770, 'bone', 'none', 0, 85, 50, 0, 0, 20300, 0, 'true');
-INSERT INTO armor VALUES (25, 'Piece Bone Breastplate', 'chest', 'false', 'heavy', 8970, 'bone', 'none', 0, 85, 62, 0, 0, 31800, 0, 'true');
-INSERT INTO armor VALUES (26, 'Bronze Breastplate', 'chest', 'false', 'heavy', 8920, 'bronze', 'none', 0, 90, 68, 0, 0, 49200, 0, 'true');
-INSERT INTO armor VALUES (27, 'Hard Leather Shirt', 'chest', 'false', 'light', 4720, 'leather', 'none', 0, 90, 53, 0, 0, 36900, 0, 'true');
-INSERT INTO armor VALUES (28, 'Pants', 'legs', 'false', 'light', 1740, 'cloth', 'none', 0, 90, 22, 0, 0, 92, 0, 'true');
-INSERT INTO armor VALUES (29, 'Leather Pants', 'legs', 'false', 'light', 1730, 'leather', 'none', 0, 90, 27, 0, 0, 1520, 0, 'true');
-INSERT INTO armor VALUES (30, 'Hard Leather Pants', 'legs', 'false', 'light', 1700, 'leather', 'none', 0, 90, 29, 0, 0, 4970, 0, 'true');
-INSERT INTO armor VALUES (31, 'Bone Gaiters', 'legs', 'false', 'light', 1680, 'bone', 'none', 0, 85, 32, 0, 0, 12700, 0, 'true');
-INSERT INTO armor VALUES (32, 'Piece Bone Gaiters', 'legs', 'false', 'heavy', 4020, 'bone', 'none', 0, 85, 39, 0, 0, 19900, 0, 'true');
-INSERT INTO armor VALUES (33, 'Hard Leather Gaiters', 'legs', 'false', 'light', 1610, 'leather', 'none', 0, 90, 33, 0, 0, 23000, 0, 'true');
-INSERT INTO armor VALUES (34, 'Bronze Gaiters', 'legs', 'false', 'heavy', 3960, 'bronze', 'none', 0, 90, 43, 0, 0, 30700, 0, 'true');
-INSERT INTO armor VALUES (35, 'Cloth Shoes', 'feet', 'false', 'none', 1320, 'cloth', 'none', 0, 90, 9, 0, 0, 37, 0, 'true');
-INSERT INTO armor VALUES (36, 'Leather Sandals', 'feet', 'false', 'none', 1320, 'leather', 'none', 0, 90, 9, 0, 0, 37, 0, 'true');
-INSERT INTO armor VALUES (37, 'Leather Shoes', 'feet', 'false', 'none', 1320, 'leather', 'none', 0, 90, 13, 0, 0, 2650, 0, 'true');
-INSERT INTO armor VALUES (38, 'Low Boots', 'feet', 'false', 'none', 1320, 'leather', 'none', 0, 90, 15, 0, 0, 6770, 0, 'true');
-INSERT INTO armor VALUES (39, 'Boots', 'feet', 'false', 'none', 1310, 'cloth', 'none', 0, 90, 17, 0, 0, 12300, 0, 'true');
-INSERT INTO armor VALUES (40, 'Leather Boots', 'feet', 'true', 'none', 1300, 'leather', 'd', 0, 90, 19, 0, 0, 20900, 38, 'true');
-INSERT INTO armor VALUES (41, 'Cloth Cap', 'head', 'false', 'none', 660, 'cloth', 'none', 0, 90, 13, 0, 0, 55, 0, 'true');
-INSERT INTO armor VALUES (42, 'Leather Cap', 'head', 'false', 'none', 660, 'leather', 'none', 0, 90, 16, 0, 0, 911, 0, 'true');
-INSERT INTO armor VALUES (43, 'Wooden Helmet', 'head', 'false', 'none', 660, 'wood', 'none', 0, 90, 19, 0, 0, 3980, 0, 'true');
-INSERT INTO armor VALUES (44, 'Leather Helmet', 'head', 'false', 'none', 650, 'leather', 'none', 0, 90, 23, 0, 0, 10200, 0, 'true');
-INSERT INTO armor VALUES (45, 'Bone Helmet', 'head', 'true', 'none', 640, 'bone', 'd', 0, 90, 29, 0, 0, 31300, 56, 'true');
-INSERT INTO armor VALUES (46, 'Bronze Helmet', 'head', 'true', 'none', 630, 'bronze', 'd', 0, 90, 33, 0, 0, 50000, 90, 'true');
-INSERT INTO armor VALUES (47, 'Helmet', 'head', 'true', 'none', 640, 'fine_steel', 'd', 0, 90, 37, 0, 0, 76200, 138, 'true');
-INSERT INTO armor VALUES (48, 'Short Gloves', 'gloves', 'false', 'none', 660, 'cloth', 'none', 0, 90, 9, 0, 0, 37, 0, 'true');
-INSERT INTO armor VALUES (49, 'Gloves', 'gloves', 'false', 'none', 660, 'cloth', 'none', 0, 90, 13, 0, 0, 2650, 0, 'true');
-INSERT INTO armor VALUES (50, 'Leather Gloves', 'gloves', 'false', 'none', 650, 'leather', 'none', 0, 90, 15, 0, 0, 6770, 0, 'true');
-INSERT INTO armor VALUES (51, 'Bracer', 'gloves', 'false', 'none', 650, 'leather', 'none', 0, 90, 17, 0, 0, 12300, 0, 'true');
-INSERT INTO armor VALUES (52, 'Hemp Cloak', 'back', 'false', 'none', 260, 'cloth', 'none', 0, 90, 2, 0, 0, 37, 0, 'true');
-INSERT INTO armor VALUES (53, 'Cotton Cloak', 'back', 'false', 'none', 250, 'cloth', 'none', 0, 90, 3, 0, 0, 607, 0, 'true');
-INSERT INTO armor VALUES (54, 'Silk Cloak', 'back', 'false', 'none', 250, 'cloth', 'none', 0, 90, 4, 0, 0, 2650, 0, 'true');
-INSERT INTO armor VALUES (55, 'Cotton Undergarment', 'underwear', 'false', 'none', 170, 'cotton', 'none', 0, 90, 4, 0, 0, 18, 0, 'true');
-INSERT INTO armor VALUES (56, 'Wool Undergarment', 'underwear', 'false', 'none', 170, 'wood', 'none', 0, 90, 5, 0, 0, 304, 0, 'true');
-INSERT INTO armor VALUES (58, 'Mithril Breastplate', 'chest', 'true', 'heavy', 8670, 'mithril', 'd', 0, 95, 95, 0, 0, 183000, 332, 'true');
-INSERT INTO armor VALUES (59, 'Mithril Gaiters', 'legs', 'true', 'heavy', 3830, 'mithril', 'd', 0, 95, 61, 0, 0, 127000, 230, 'true');
-INSERT INTO armor VALUES (60, 'Composite Armor', 'CHEST', 'true', 'heavy', 10980, 'fine_steel', 'c', 0, 90, 224, 0, 0, 1440000, 576, 'true');
-INSERT INTO armor VALUES (61, 'Mithril Gloves', 'gloves', 'true', 'none', 630, 'mithril', 'd', 0, 90, 29, 0, 0, 97800, 177, 'true');
-INSERT INTO armor VALUES (62, 'Mithril Boots', 'feet', 'true', 'none', 1230, 'leather', 'c', 0, 90, 32, 0, 0, 45900, 83, 'true');
-INSERT INTO armor VALUES (63, 'Gauntlets', 'gloves', 'true', 'none', 640, 'cloth', 'd', 0, 90, 24, 0, 0, 50800, 92, 'true');
-INSERT INTO armor VALUES (64, 'Composite Boots', 'feet', 'true', 'none', 1220, 'fine_steel', 'c', 0, 90, 36, 0, 0, 245000, 98, 'true');
-INSERT INTO armor VALUES (112, 'Apprentice`s Earring', 'rear,lear', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 11, 0, 49, 0, 'true');
-INSERT INTO armor VALUES (113, 'Mystic`s Earring', 'rear,lear', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 13, 0, 811, 0, 'true');
-INSERT INTO armor VALUES (114, 'Earring of Strength', 'rear,lear', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 16, 0, 3510, 0, 'true');
-INSERT INTO armor VALUES (115, 'Earring of Wisdom', 'rear,lear', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 16, 0, 3510, 0, 'true');
-INSERT INTO armor VALUES (116, 'Magic Ring', 'rfinger,lfinger', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 7, 0, 33, 0, 'true');
-INSERT INTO armor VALUES (117, 'Ring of Mana', 'rfinger,lfinger', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 34, 0, 404000, 53, 'true');
-INSERT INTO armor VALUES (118, 'Necklace of Magic', 'neck', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 15, 0, 66, 0, 'true');
-INSERT INTO armor VALUES (119, 'Sage`s Necklace', 'neck', 'true', 'none', 150, 'adamantaite', 'c', 0, 95, 0, 64, 0, 565000, 226, 'true');
-INSERT INTO armor VALUES (347, 'Ring Mail Breastplate', 'chest', 'true', 'heavy', 8820, 'steel', 'd', 0, 90, 77, 0, 0, 83500, 151, 'true');
-INSERT INTO armor VALUES (348, 'Scale Mail', 'chest', 'true', 'heavy', 8720, 'steel', 'd', 0, 90, 87, 0, 0, 133000, 241, 'true');
-INSERT INTO armor VALUES (349, 'Compound Scale Mail', 'chest', 'true', 'heavy', 8620, 'fine_steel', 'd', 0, 98, 95, 0, 0, 183000, 332, 'true');
-INSERT INTO armor VALUES (350, 'Dwarven Scale Mail', 'chest', 'true', 'heavy', 8540, 'fine_steel', 'd', 0, 98, 95, 0, 0, 183000, 332, 'true');
-INSERT INTO armor VALUES (351, 'Blast Plate', 'chest', 'true', 'heavy', 8420, 'fine_steel', 'd', 0, 90, 97, 0, 0, 203000, 369, 'true');
-INSERT INTO armor VALUES (352, 'Brigandine Armor', 'chest', 'true', 'heavy', 8320, 'fine_steel', 'd', 0, 90, 108, 0, 0, 299000, 543, 'true');
-INSERT INTO armor VALUES (353, 'Half Plate Armor', 'chest', 'true', 'heavy', 8220, 'fine_steel', 'd', 0, 90, 111, 0, 0, 391000, 710, 'true');
-INSERT INTO armor VALUES (354, 'Chain Mail Shirt', 'chest', 'true', 'heavy', 8120, 'fine_steel', 'c', 0, 90, 120, 0, 0, 505000, 202, 'true');
-INSERT INTO armor VALUES (355, 'Dwarven Chain Mail Shirt', 'chest', 'true', 'heavy', 8070, 'fine_steel', 'c', 0, 98, 129, 0, 0, 644000, 257, 'true');
-INSERT INTO armor VALUES (356, 'Full Plate Armor', 'CHEST', 'true', 'heavy', 10480, 'fine_steel', 'c', 0, 90, 239, 0, 0, 2090000, 836, 'true');
-INSERT INTO armor VALUES (357, 'Zubei`s Breastplate', 'chest', 'true', 'heavy', 7970, 'mithril', 'b', 0, 90, 157, 0, 0, 2080000, 277, 'true');
-INSERT INTO armor VALUES (358, 'Blue Wolf Breastplate', 'chest', 'true', 'heavy', 7820, 'oriharukon', 'b', 0, 90, 166, 0, 0, 3220000, 429, 'true');
-INSERT INTO armor VALUES (359, 'Shining Dragon Armor', 'CHEST', 'true', 'heavy', 6400, 'mithril', 'b', 0, 90, 301, 0, 0, 6770000, 902, 'true');
-INSERT INTO armor VALUES (360, 'Armor of Victory', 'chest', 'true', 'heavy', 3360, 'oriharukon', 'b', 0, 90, 175, 0, 0, 3220000, 429, 'true');
-INSERT INTO armor VALUES (361, 'Breastplate of Valor', 'chest', 'true', 'heavy', 3360, 'blood_steel', 'b', 0, 90, 185, 0, 0, 4630000, 617, 'true');
-INSERT INTO armor VALUES (362, 'Glorious Armor', 'CHEST', 'true', 'heavy', 6720, 'fine_steel', 'b', 0, 90, 284, 0, 0, 4710000, 628, 'true');
-INSERT INTO armor VALUES (363, 'Red Flame Armor', 'CHEST', 'true', 'heavy', 6400, 'blood_steel', 'b', 0, 90, 301, 0, 0, 6770000, 902, 'true');
-INSERT INTO armor VALUES (364, 'Elven Crystal Breastplate', 'chest', 'true', 'heavy', 2400, 'crystal', 'b', 0, 95, 175, 0, 0, 3220000, 429, 'true');
-INSERT INTO armor VALUES (365, 'Dark Crystal Breastplate', 'chest', 'true', 'heavy', 7700, 'crystal', 'a', 0, 95, 171, 0, 0, 4630000, 617, 'true');
-INSERT INTO armor VALUES (366, 'Implosion Armor', 'CHEST', 'true', 'heavy', 6080, 'damascus', 'b', 0, 90, 284, 0, 0, 4710000, 628, 'true');
-INSERT INTO armor VALUES (367, 'Dark Dragon Armor', 'CHEST', 'true', 'heavy', 5760, 'damascus', 'b', 0, 90, 301, 0, 0, 6770000, 902, 'true');
-INSERT INTO armor VALUES (368, 'Elven Vagian Armor', 'CHEST', 'true', 'heavy', 2400, 'mithril', 'b', 0, 95, 284, 0, 0, 4710000, 628, 'true');
-INSERT INTO armor VALUES (369, 'Dark Vagian Armor', 'CHEST', 'true', 'heavy', 2400, 'mithril', 'b', 0, 95, 301, 0, 0, 6770000, 902, 'true');
-INSERT INTO armor VALUES (370, 'Complete Plate Armor', 'chest', 'true', 'heavy', 6400, 'fine_steel', 'b', 0, 98, 284, 0, 0, 4710000, 628, 'true');
-INSERT INTO armor VALUES (371, 'Hell Plate', 'CHEST', 'true', 'heavy', 6400, 'blood_steel', 'b', 0, 100, 301, 0, 0, 6770000, 902, 'true');
-INSERT INTO armor VALUES (372, 'Art of Plate', 'CHEST', 'true', 'heavy', 6720, 'chrysolite', 'b', 0, 98, 284, 0, 0, 4710000, 628, 'true');
-INSERT INTO armor VALUES (373, 'Masterpiece Armor', 'CHEST', 'true', 'heavy', 5600, 'oriharukon', 'b', 0, 100, 301, 0, 0, 6770000, 902, 'true');
-INSERT INTO armor VALUES (374, 'Armor of Nightmare', 'CHEST', 'true', 'heavy', 9580, 'blood_steel', 'a', 0, 90, 293, 0, 0, 10300000, 824, 'true');
-INSERT INTO armor VALUES (375, 'Dragon Scale Mail', 'chest', 'true', 'heavy', 7620, 'scale_of_dragon', 's', 0, 100, 200, 0, 0, 10500000, 525, 'true');
-INSERT INTO armor VALUES (376, 'Iron Plate Gaiters', 'legs', 'true', 'heavy', 3820, 'steel', 'd', 0, 90, 48, 0, 0, 52200, 94, 'true');
-INSERT INTO armor VALUES (377, 'Scale Gaiters', 'legs', 'true', 'heavy', 3860, 'fine_steel', 'd', 0, 90, 54, 0, 0, 83300, 151, 'true');
-INSERT INTO armor VALUES (378, 'Compound Scale Gaiters', 'legs', 'true', 'heavy', 3770, 'fine_steel', 'd', 0, 98, 61, 0, 0, 127000, 230, 'true');
-INSERT INTO armor VALUES (379, 'Dwarven Scale Gaiters', 'legs', 'true', 'heavy', 3840, 'fine_steel', 'd', 0, 98, 61, 0, 0, 127000, 230, 'true');
-INSERT INTO armor VALUES (380, 'Plate Gaiters', 'legs', 'true', 'heavy', 3770, 'fine_steel', 'd', 0, 90, 70, 0, 0, 244000, 443, 'true');
-INSERT INTO armor VALUES (381, 'Chain Gaiters', 'legs', 'true', 'heavy', 3680, 'fine_steel', 'c', 0, 90, 75, 0, 0, 316000, 126, 'true');
-INSERT INTO armor VALUES (382, 'Dwarven Chain Gaiters', 'legs', 'true', 'heavy', 3620, 'fine_steel', 'c', 0, 98, 80, 0, 0, 403000, 161, 'true');
-INSERT INTO armor VALUES (383, 'Zubei`s Gaiters', 'legs', 'true', 'heavy', 3570, 'mithril', 'b', 0, 90, 98, 0, 0, 1300000, 173, 'true');
-INSERT INTO armor VALUES (384, 'Wolf Gaiters', 'legs', 'true', 'heavy', 2560, 'oriharukon', 'b', 0, 90, 109, 0, 0, 2010000, 268, 'true');
-INSERT INTO armor VALUES (385, 'Gaiters of Victory', 'legs', 'true', 'heavy', 2240, 'oriharukon', 'b', 0, 90, 109, 0, 0, 2010000, 268, 'true');
-INSERT INTO armor VALUES (386, 'Gaiters of Valor', 'legs', 'true', 'heavy', 2240, 'blood_steel', 'b', 0, 90, 116, 0, 0, 2890000, 385, 'true');
-INSERT INTO armor VALUES (387, 'Elven Crystal Gaiters', 'legs', 'true', 'heavy', 2240, 'crystal', 'b', 0, 95, 109, 0, 0, 2010000, 268, 'true');
-INSERT INTO armor VALUES (388, 'Dark Crystal Gaiters', 'legs', 'true', 'heavy', 3320, 'crystal', 'a', 0, 95, 107, 0, 0, 2890000, 385, 'true');
-INSERT INTO armor VALUES (389, 'Dragon Scale Gaiters', 'legs', 'true', 'heavy', 3260, 'scale_of_dragon', 's', 0, 100, 150, 0, 0, 5980000, 299, 'true');
-INSERT INTO armor VALUES (390, 'Cotton Shirt', 'chest', 'false', 'light', 4770, 'cloth', 'none', 0, 90, 50, 0, 0, 20300, 0, 'true');
-INSERT INTO armor VALUES (391, 'Puma Skin Shirt', 'chest', 'true', 'light', 4700, 'leather', 'd', 0, 90, 58, 0, 0, 62600, 113, 'true');
-INSERT INTO armor VALUES (392, 'Lion Skin Shirt', 'chest', 'true', 'light', 4580, 'leather', 'd', 0, 90, 65, 0, 0, 99900, 181, 'true');
-INSERT INTO armor VALUES (393, 'Mithril Banded Mail', 'chest', 'true', 'light', 4570, 'mithril', 'd', 0, 90, 73, 0, 0, 152000, 276, 'true');
-INSERT INTO armor VALUES (394, 'Reinforced Leather Shirt', 'chest', 'true', 'light', 4570, 'leather', 'd', 0, 90, 73, 0, 0, 152000, 276, 'true');
-INSERT INTO armor VALUES (395, 'Manticore Skin Shirt', 'chest', 'true', 'light', 4520, 'leather', 'd', 0, 90, 81, 0, 0, 224000, 407, 'true');
-INSERT INTO armor VALUES (396, 'Salamander Skin Mail', 'CHEST', 'true', 'light', 6100, 'leather', 'd', 0, 90, 136, 0, 0, 429000, 780, 'true');
-INSERT INTO armor VALUES (397, 'Mithril Shirt', 'chest', 'true', 'light', 4470, 'mithril', 'c', 0, 98, 90, 0, 0, 379000, 151, 'true');
-INSERT INTO armor VALUES (398, 'Plated Leather', 'chest', 'true', 'light', 4450, 'leather', 'c', 0, 90, 94, 0, 0, 446000, 178, 'true');
-INSERT INTO armor VALUES (399, 'Rind Leather Armor', 'chest', 'true', 'light', 4420, 'leather', 'c', 0, 90, 97, 0, 0, 483000, 193, 'true');
-INSERT INTO armor VALUES (400, 'Theca Leather Armor', 'chest', 'true', 'light', 4370, 'leather', 'c', 0, 90, 106, 0, 0, 825000, 330, 'true');
-INSERT INTO armor VALUES (401, 'Drake Leather Armor', 'CHEST', 'true', 'light', 5800, 'leather', 'c', 0, 90, 179, 0, 0, 1570000, 628, 'true');
-INSERT INTO armor VALUES (402, 'Chain Mail of Silence', 'CHEST', 'true', 'light', 3200, 'damascus', 'b', 0, 90, 213, 0, 0, 3530000, 470, 'true');
-INSERT INTO armor VALUES (403, 'Gust Chain Mail', 'CHEST', 'true', 'light', 2720, 'blood_steel', 'b', 0, 90, 225, 0, 0, 5080000, 677, 'true');
-INSERT INTO armor VALUES (404, 'Prairie Leather Armor', 'chest', 'true', 'light', 8000, 'leather', 'b', 0, 95, 131, 0, 0, 2410000, 321, 'true');
-INSERT INTO armor VALUES (405, 'Leather Armor of The Underworld', 'chest', 'true', 'light', 8000, 'leather', 'b', 0, 95, 139, 0, 0, 3470000, 462, 'true');
-INSERT INTO armor VALUES (406, 'Leather Suit of Concentration', 'CHEST', 'true', 'light', 2400, 'leather', 'b', 0, 90, 213, 0, 0, 3530000, 470, 'true');
-INSERT INTO armor VALUES (407, 'Ace`s Leather Armor', 'CHEST', 'true', 'light', 2400, 'leather', 'b', 0, 90, 225, 0, 0, 5080000, 677, 'true');
-INSERT INTO armor VALUES (408, 'Guardian`s Leather Armor', 'chest', 'true', 'light', 8000, 'leather', 'b', 0, 95, 131, 0, 0, 2410000, 321, 'true');
-INSERT INTO armor VALUES (409, 'Marksman`s Leather Armor', 'chest', 'true', 'light', 4300, 'leather', 'b', 0, 95, 139, 0, 0, 3470000, 462, 'true');
-INSERT INTO armor VALUES (410, 'Unicorn Leather Armor', 'CHEST', 'true', 'light', 1280, 'leather', 'a', 0, 90, 238, 0, 0, 7730000, 618, 'true');
-INSERT INTO armor VALUES (411, 'Dragon Leather Armor', 'CHEST', 'true', 'light', 4950, 'leather', 's', 0, 100, 280, 0, 400, 10500000, 525, 'true');
-INSERT INTO armor VALUES (412, 'Cotton Pants', 'legs', 'false', 'light', 1630, 'cloth', 'none', 0, 90, 32, 0, 0, 12700, 0, 'true');
-INSERT INTO armor VALUES (413, 'Puma Skin Gaiters', 'legs', 'true', 'light', 1600, 'leather', 'd', 0, 90, 36, 0, 0, 39100, 71, 'true');
-INSERT INTO armor VALUES (414, 'Lion Skin Gaiters', 'legs', 'true', 'light', 1570, 'leather', 'd', 0, 90, 41, 0, 0, 62500, 113, 'true');
-INSERT INTO armor VALUES (415, 'Mithril Banded Gaiters', 'legs', 'true', 'light', 1580, 'mithril', 'd', 0, 98, 46, 0, 0, 95200, 173, 'true');
-INSERT INTO armor VALUES (416, 'Reinforced Leather Gaiters', 'legs', 'true', 'light', 1570, 'leather', 'd', 0, 90, 46, 0, 0, 95200, 173, 'true');
-INSERT INTO armor VALUES (417, 'Manticore Skin Gaiters', 'legs', 'true', 'light', 1550, 'leather', 'd', 0, 90, 51, 0, 0, 140000, 254, 'true');
-INSERT INTO armor VALUES (418, 'Plated Leather Gaiters', 'legs', 'true', 'light', 1560, 'leather', 'c', 0, 90, 59, 0, 0, 279000, 111, 'true');
-INSERT INTO armor VALUES (419, 'Rind Leather Gaiters', 'legs', 'true', 'light', 1550, 'leather', 'c', 0, 90, 60, 0, 0, 302000, 120, 'true');
-INSERT INTO armor VALUES (420, 'Theca Leather Gaiters', 'legs', 'true', 'light', 1530, 'leather', 'c', 0, 90, 66, 0, 0, 516000, 206, 'true');
-INSERT INTO armor VALUES (421, 'Prairie Leather Gaiters', 'legs', 'true', 'light', 4800, 'leather', 'b', 0, 95, 82, 0, 0, 1510000, 201, 'true');
-INSERT INTO armor VALUES (422, 'Gaiters of The Underworld', 'legs', 'true', 'light', 4800, 'leather', 'b', 0, 95, 87, 0, 0, 2170000, 289, 'true');
-INSERT INTO armor VALUES (423, 'Guardian`s Leather Gaiters', 'legs', 'true', 'light', 4800, 'leather', 'b', 0, 95, 82, 0, 0, 1510000, 201, 'true');
-INSERT INTO armor VALUES (424, 'Marksman`s Leather Gaiters', 'legs', 'true', 'light', 1490, 'leather', 'b', 0, 95, 87, 0, 0, 2170000, 289, 'true');
-INSERT INTO armor VALUES (425, 'Apprentice`s Tunic', 'chest', 'false', 'magic', 2150, 'cloth', 'none', 0, 90, 17, 0, 19, 26, 0, 'true');
-INSERT INTO armor VALUES (426, 'Tunic', 'chest', 'false', 'magic', 2150, 'cloth', 'none', 0, 90, 18, 0, 24, 147, 0, 'true');
-INSERT INTO armor VALUES (427, 'Cotton Robe', 'CHEST', 'false', 'magic', 2750, 'cotton', 'none', 0, 90, 35, 0, 61, 3550, 0, 'true');
-INSERT INTO armor VALUES (428, 'Feriotic Tunic', 'chest', 'false', 'magic', 2140, 'cloth', 'none', 0, 90, 21, 0, 38, 2430, 0, 'true');
-INSERT INTO armor VALUES (429, 'Leather Tunic', 'chest', 'false', 'magic', 2110, 'leather', 'none', 0, 90, 25, 0, 52, 7960, 0, 'true');
-INSERT INTO armor VALUES (430, 'Robe of Devotion', 'CHEST', 'false', 'magic', 2650, 'cloth', 'none', 0, 90, 49, 0, 109, 29700, 0, 'true');
-INSERT INTO armor VALUES (431, 'Robe of Magic', 'CHEST', 'false', 'magic', 2600, 'cloth', 'none', 0, 90, 56, 0, 140, 53900, 0, 'true');
-INSERT INTO armor VALUES (432, 'Cursed Tunic', 'chest', 'true', 'magic', 2090, 'cloth', 'd', 0, 90, 39, 0, 106, 62600, 113, 'true');
-INSERT INTO armor VALUES (433, 'Elven Tunic', 'chest', 'true', 'magic', 2080, 'cloth', 'd', 0, 95, 43, 0, 126, 99900, 181, 'true');
-INSERT INTO armor VALUES (434, 'White Tunic', 'chest', 'true', 'magic', 2040, 'cloth', 'd', 0, 90, 43, 0, 126, 99900, 181, 'true');
-INSERT INTO armor VALUES (435, 'Mystic`s Tunic', 'chest', 'true', 'magic', 2030, 'cloth', 'd', 0, 90, 43, 0, 126, 99900, 181, 'true');
-INSERT INTO armor VALUES (436, 'Tunic of Knowledge', 'chest', 'true', 'magic', 2020, 'cloth', 'd', 0, 90, 49, 0, 147, 152000, 276, 'true');
-INSERT INTO armor VALUES (437, 'Mithril Tunic', 'chest', 'true', 'magic', 2010, 'mithril', 'd', 0, 98, 54, 0, 169, 224000, 407, 'true');
-INSERT INTO armor VALUES (438, 'Sage`s Rag', 'CHEST', 'true', 'magic', 2580, 'cloth', 'd', 0, 90, 90, 0, 320, 429000, 780, 'true');
-INSERT INTO armor VALUES (439, 'Karmian Tunic', 'chest', 'true', 'magic', 1980, 'cloth', 'c', 0, 90, 60, 0, 225, 379000, 151, 'true');
-INSERT INTO armor VALUES (440, 'Robe of Seal', 'CHEST', 'true', 'magic', 2500, 'cloth', 'c', 0, 90, 105, 0, 413, 707000, 282, 'true');
-INSERT INTO armor VALUES (441, 'Demon`s Tunic', 'chest', 'true', 'magic', 1990, 'cloth', 'c', 0, 90, 69, 0, 284, 736000, 294, 'true');
-INSERT INTO armor VALUES (442, 'Divine Tunic', 'chest', 'true', 'magic', 1980, 'cloth', 'c', 0, 90, 74, 0, 314, 1070000, 428, 'true');
-INSERT INTO armor VALUES (443, 'Tunic of Mana', 'chest', 'true', 'magic', 2000, 'cloth', 'b', 0, 90, 87, 0, 377, 2410000, 321, 'true');
-INSERT INTO armor VALUES (444, 'Sage`s Robe', 'CHEST', 'true', 'magic', 1600, 'cloth', 'b', 0, 90, 150, 0, 665, 5080000, 677, 'true');
-INSERT INTO armor VALUES (445, 'Paradia Tunic', 'chest', 'true', 'magic', 1990, 'cloth', 'b', 0, 98, 87, 0, 377, 2410000, 321, 'true');
-INSERT INTO armor VALUES (446, 'Majestic Tunic', 'chest', 'true', 'magic', 1880, 'cloth', 'b', 0, 98, 92, 0, 409, 3470000, 462, 'true');
-INSERT INTO armor VALUES (447, 'Tunic of Solar Eclipse', 'chest', 'true', 'magic', 1960, 'cloth', 'b', 0, 90, 87, 0, 377, 2410000, 321, 'true');
-INSERT INTO armor VALUES (448, 'Robe of Black Ore', 'CHEST', 'true', 'magic', 1600, 'cloth', 'b', 0, 90, 150, 0, 665, 5080000, 677, 'true');
-INSERT INTO armor VALUES (449, 'Tunic of Summoning', 'chest', 'true', 'magic', 1950, 'cloth', 'b', 0, 90, 87, 0, 377, 2410000, 321, 'true');
-INSERT INTO armor VALUES (450, 'Otherworldly Robe', 'chest', 'true', 'magic', 1600, 'cloth', 'b', 0, 90, 150, 0, 665, 5080000, 677, 'true');
-INSERT INTO armor VALUES (451, 'Elemental Tunic', 'chest', 'true', 'magic', 1970, 'cloth', 'b', 0, 98, 87, 0, 377, 2410000, 321, 'true');
-INSERT INTO armor VALUES (452, 'Tunic of Phantom', 'chest', 'true', 'magic', 1890, 'cloth', 'b', 0, 98, 92, 0, 409, 3470000, 462, 'true');
-INSERT INTO armor VALUES (453, 'Tunic of Grace', 'chest', 'true', 'magic', 1930, 'cloth', 'b', 0, 90, 87, 0, 377, 2410000, 321, 'true');
-INSERT INTO armor VALUES (454, 'Robe of Holy Spirit', 'CHEST', 'true', 'magic', 1600, 'cloth', 'b', 0, 90, 150, 0, 665, 5080000, 677, 'true');
-INSERT INTO armor VALUES (455, 'Phoenix Tunic', 'chest', 'true', 'magic', 1950, 'cloth', 'b', 0, 90, 87, 0, 377, 2410000, 321, 'true');
-INSERT INTO armor VALUES (456, 'Cerberus Tunic', 'chest', 'true', 'magic', 1870, 'cloth', 'b', 0, 90, 92, 0, 409, 3470000, 462, 'true');
-INSERT INTO armor VALUES (457, 'Tunic of Aid', 'chest', 'true', 'magic', 1910, 'cloth', 'b', 0, 90, 87, 0, 377, 2410000, 321, 'true');
-INSERT INTO armor VALUES (458, 'Robe of Blessing', 'CHEST', 'true', 'magic', 1600, 'cloth', 'b', 0, 90, 150, 0, 665, 5080000, 677, 'true');
-INSERT INTO armor VALUES (459, 'Dasparion`s Robe', 'CHEST', 'true', 'magic', 1200, 'cloth', 'a', 0, 95, 158, 0, 718, 7730000, 618, 'true');
-INSERT INTO armor VALUES (460, 'The Robe', 'CHEST', 'true', 'magic', 2300, 'cloth', 's', 0, 100, 200, 0, 800, 10500000, 525, 'true');
-INSERT INTO armor VALUES (461, 'Apprentice`s Stockings', 'legs', 'false', 'magic', 1100, 'cloth', 'none', 0, 90, 10, 0, 10, 6, 0, 'true');
-INSERT INTO armor VALUES (462, 'Stockings', 'legs', 'false', 'magic', 1080, 'cloth', 'none', 0, 90, 11, 0, 15, 92, 0, 'true');
-INSERT INTO armor VALUES (463, 'Feriotic Stockings', 'legs', 'false', 'magic', 1070, 'cloth', 'none', 0, 90, 13, 0, 23, 1520, 0, 'true');
-INSERT INTO armor VALUES (464, 'Leather Stockings', 'legs', 'false', 'magic', 1020, 'leather', 'none', 0, 90, 16, 0, 33, 4970, 0, 'true');
-INSERT INTO armor VALUES (465, 'Cursed Stockings', 'legs', 'true', 'magic', 1020, 'cloth', 'd', 0, 90, 24, 0, 66, 39100, 71, 'true');
-INSERT INTO armor VALUES (466, 'Elven Stockings', 'legs', 'true', 'magic', 1010, 'cloth', 'd', 0, 95, 27, 0, 79, 62500, 113, 'true');
-INSERT INTO armor VALUES (467, 'Dark Stockings', 'legs', 'true', 'magic', 1000, 'cloth', 'd', 0, 90, 27, 0, 79, 62500, 113, 'true');
-INSERT INTO armor VALUES (468, 'Mystic`s Stockings', 'legs', 'true', 'magic', 990, 'cloth', 'd', 0, 90, 27, 0, 79, 62500, 113, 'true');
-INSERT INTO armor VALUES (469, 'Stockings of Knowledge', 'legs', 'true', 'magic', 1000, 'cloth', 'd', 0, 90, 30, 0, 92, 95200, 173, 'true');
-INSERT INTO armor VALUES (470, 'Mithril Stockings', 'legs', 'true', 'magic', 980, 'mithril', 'd', 0, 98, 34, 0, 105, 140000, 254, 'true');
-INSERT INTO armor VALUES (471, 'Karmian Stockings', 'legs', 'true', 'magic', 970, 'cloth', 'c', 0, 90, 37, 0, 141, 237000, 94, 'true');
-INSERT INTO armor VALUES (472, 'Demon`s Stockings', 'legs', 'true', 'magic', 980, 'cloth', 'c', 0, 90, 43, 0, 177, 460000, 184, 'true');
-INSERT INTO armor VALUES (473, 'Divine Stockings', 'legs', 'true', 'magic', 960, 'cloth', 'c', 0, 90, 46, 0, 196, 671000, 268, 'true');
-INSERT INTO armor VALUES (474, 'Stockings of Mana', 'legs', 'true', 'magic', 2400, 'cloth', 'b', 0, 90, 55, 0, 236, 1510000, 201, 'true');
-INSERT INTO armor VALUES (475, 'Paradia Stockings', 'legs', 'true', 'magic', 1600, 'cloth', 'b', 0, 98, 55, 0, 236, 1510000, 201, 'true');
-INSERT INTO armor VALUES (476, 'Majestic Stockings', 'legs', 'true', 'magic', 1600, 'cloth', 'b', 0, 98, 58, 0, 256, 2170000, 289, 'true');
-INSERT INTO armor VALUES (477, 'Stockings of Solar Eclipse', 'legs', 'true', 'magic', 2400, 'cloth', 'b', 0, 90, 55, 0, 236, 1510000, 201, 'true');
-INSERT INTO armor VALUES (478, 'Stockings of Summoning', 'legs', 'true', 'magic', 2400, 'cloth', 'b', 0, 90, 55, 0, 236, 1510000, 201, 'true');
-INSERT INTO armor VALUES (479, 'Elemental Stockings', 'legs', 'true', 'magic', 1600, 'cloth', 'b', 0, 98, 55, 0, 236, 1510000, 201, 'true');
-INSERT INTO armor VALUES (480, 'Stockings of Phantom', 'legs', 'true', 'magic', 1600, 'cloth', 'b', 0, 98, 58, 0, 256, 2170000, 289, 'true');
-INSERT INTO armor VALUES (481, 'Stockings of Grace', 'legs', 'true', 'magic', 2400, 'cloth', 'b', 0, 90, 55, 0, 236, 1510000, 201, 'true');
-INSERT INTO armor VALUES (482, 'Phoenix Stockings', 'legs', 'true', 'magic', 2400, 'cloth', 'b', 0, 90, 55, 0, 236, 1510000, 201, 'true');
-INSERT INTO armor VALUES (483, 'Cerberus Stockings', 'legs', 'true', 'magic', 6400, 'cloth', 'b', 0, 90, 58, 0, 256, 2170000, 289, 'true');
-INSERT INTO armor VALUES (484, 'Stockings of Aid', 'legs', 'true', 'magic', 2400, 'cloth', 'b', 0, 90, 55, 0, 236, 1510000, 201, 'true');
-INSERT INTO armor VALUES (485, 'Tattoo of Power', 'underwear', 'false', 'none', 4200, 'dyestuff', 'none', 0, 90, 53, 0, 0, 36900, 0, 'true');
-INSERT INTO armor VALUES (486, 'Tattoo of Fire', 'underwear', 'true', 'none', 4050, 'dyestuff', 'd', 0, 90, 73, 0, 0, 152000, 276, 'true');
-INSERT INTO armor VALUES (487, 'Tattoo of Resolve', 'underwear', 'true', 'none', 4000, 'dyestuff', 'd', 0, 90, 73, 0, 0, 152000, 276, 'true');
-INSERT INTO armor VALUES (488, 'Tattoo of Flame', 'underwear', 'true', 'none', 800, 'dyestuff', 'b', 0, 90, 139, 0, 0, 3470000, 462, 'true');
-INSERT INTO armor VALUES (489, 'Tattoo of Bravery', 'underwear', 'true', 'none', 4100, 'dyestuff', 'c', 0, 90, 110, 0, 0, 1070000, 428, 'true');
-INSERT INTO armor VALUES (490, 'Tattoo of Blood', 'underwear', 'true', 'none', 3800, 'dyestuff', 'a', 0, 90, 132, 0, 0, 3470000, 462, 'true');
-INSERT INTO armor VALUES (491, 'Tattoo of Absolute', 'underwear', 'true', 'none', 800, 'dyestuff', 'a', 0, 90, 146, 0, 0, 5280000, 422, 'true');
-INSERT INTO armor VALUES (492, 'Tattoo of Soul', 'underwear', 'true', 'none', 4150, 'dyestuff', 'd', 0, 90, 65, 0, 0, 99900, 181, 'true');
-INSERT INTO armor VALUES (493, 'Tattoo of Avadon', 'underwear', 'true', 'none', 4000, 'dyestuff', 'b', 0, 90, 117, 0, 0, 1560000, 208, 'true');
-INSERT INTO armor VALUES (494, 'Tattoo of Doom', 'underwear', 'true', 'none', 4100, 'dyestuff', 'b', 0, 90, 125, 0, 0, 2410000, 321, 'true');
-INSERT INTO armor VALUES (495, 'Tattoo of Pledge', 'underwear', 'true', 'none', 4000, 'dyestuff', 'b', 0, 90, 124, 0, 0, 1560000, 208, 'true');
-INSERT INTO armor VALUES (496, 'Tattoo of Divine', 'underwear', 'true', 'none', 4100, 'dyestuff', 'b', 0, 90, 131, 0, 0, 2410000, 321, 'true');
-INSERT INTO armor VALUES (497, 'Chain Helmet', 'head', 'true', 'none', 620, 'fine_steel', 'c', 0, 90, 45, 0, 0, 147000, 59, 'true');
-INSERT INTO armor VALUES (498, 'Steel Plate Helmet', 'head', 'true', 'none', 610, 'fine_steel', 'c', 0, 90, 49, 0, 0, 206000, 82, 'true');
-INSERT INTO armor VALUES (499, 'Mithril Helmet', 'head', 'true', 'none', 240, 'mithril', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true');
-INSERT INTO armor VALUES (500, 'Great Helmet', 'head', 'true', 'none', 610, 'fine_steel', 'c', 0, 90, 51, 0, 0, 242000, 96, 'true');
-INSERT INTO armor VALUES (501, 'Armet', 'head', 'true', 'none', 580, 'chrysolite', 'b', 0, 90, 62, 0, 0, 1030000, 4, 'true');
-INSERT INTO armor VALUES (502, 'Close Helmet', 'head', 'true', 'none', 570, 'oriharukon', 'a', 0, 90, 64, 0, 0, 1560000, 3, 'true');
-INSERT INTO armor VALUES (503, 'Zubei`s Helmet', 'head', 'true', 'none', 590, 'mithril', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true');
-INSERT INTO armor VALUES (504, 'Dragon Helmet', 'head', 'true', 'heavy', 550, 'bone', 's', 0, 90, 80, 0, 0, 3590000, 179, 'true');
-INSERT INTO armor VALUES (505, 'Wolf Helmet', 'head', 'true', 'none', 580, 'oriharukon', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true');
-INSERT INTO armor VALUES (506, 'Shining Dragon Helmet', 'head', 'true', 'none', 880, 'mithril', 'b', 0, 90, 69, 0, 0, 1740000, 232, 'true');
-INSERT INTO armor VALUES (507, 'Helmet of Victory', 'head', 'true', 'none', 640, 'oriharukon', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true');
-INSERT INTO armor VALUES (508, 'Helmet of Valor', 'head', 'true', 'none', 720, 'blood_steel', 'b', 0, 90, 69, 0, 0, 1740000, 232, 'true');
-INSERT INTO armor VALUES (509, 'Glorious Helmet', 'head', 'true', 'none', 800, 'fine_steel', 'a', 0, 90, 65, 0, 0, 2040000, 3, 'true');
-INSERT INTO armor VALUES (510, 'Red Flame Helmet', 'head', 'true', 'none', 960, 'blood_steel', 'a', 0, 90, 67, 0, 0, 2640000, 3, 'true');
-INSERT INTO armor VALUES (511, 'Elven Crystal Helmet', 'head', 'true', 'none', 580, 'crystal', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true');
-INSERT INTO armor VALUES (512, 'Dark Crystal Helmet', 'head', 'true', 'none', 570, 'crystal', 'a', 0, 90, 64, 0, 0, 1740000, 232, 'true');
-INSERT INTO armor VALUES (513, 'Implosion Helmet', 'head', 'true', 'none', 480, 'damascus', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true');
-INSERT INTO armor VALUES (514, 'Dark Dragon Helmet', 'head', 'true', 'none', 400, 'damascus', 'b', 0, 90, 69, 0, 0, 1740000, 232, 'true');
-INSERT INTO armor VALUES (515, 'Elven Vagian Helm', 'head', 'true', 'none', 560, 'mithril', 'a', 0, 90, 65, 0, 0, 2040000, 3, 'true');
-INSERT INTO armor VALUES (516, 'Dark Vagian Helm', 'head', 'true', 'none', 560, 'mithril', 'a', 0, 90, 67, 0, 0, 2640000, 3, 'true');
-INSERT INTO armor VALUES (517, 'Composite Helmet', 'head', 'true', 'none', 610, 'fine_steel', 'c', 0, 90, 54, 0, 0, 368000, 147, 'true');
-INSERT INTO armor VALUES (518, 'Hell Helm', 'head', 'true', 'none', 320, 'blood_steel', 'a', 0, 90, 67, 0, 0, 2640000, 3, 'true');
-INSERT INTO armor VALUES (519, 'Art of Helmet', 'head', 'true', 'none', 400, 'chrysolite', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true');
-INSERT INTO armor VALUES (520, 'Masterpiece Helm', 'head', 'true', 'none', 400, 'oriharukon', 'a', 0, 90, 67, 0, 0, 2640000, 3, 'true');
-INSERT INTO armor VALUES (521, 'Helmet of Silence', 'head', 'true', 'none', 320, 'damascus', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true');
-INSERT INTO armor VALUES (522, 'Gust Helmet', 'head', 'true', 'none', 570, 'blood_steel', 'b', 0, 90, 69, 0, 0, 1740000, 232, 'true');
-INSERT INTO armor VALUES (523, 'Prairie Helmet', 'head', 'true', 'none', 480, 'leather', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true');
-INSERT INTO armor VALUES (524, 'Helm of The Underworld', 'head', 'true', 'none', 320, 'damascus', 'b', 0, 90, 69, 0, 0, 1740000, 232, 'true');
-INSERT INTO armor VALUES (525, 'Helmet of Concentration', 'head', 'true', 'none', 320, 'oriharukon', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true');
-INSERT INTO armor VALUES (526, 'Ace`s Helmet', 'head', 'true', 'none', 320, 'oriharukon', 'b', 0, 90, 69, 0, 0, 1740000, 232, 'true');
-INSERT INTO armor VALUES (527, 'Guardian`s Helmet', 'head', 'true', 'none', 240, 'mithril', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true');
-INSERT INTO armor VALUES (528, 'Marksman Helmet', 'head', 'true', 'none', 240, 'leather', 'b', 0, 90, 69, 0, 0, 1740000, 232, 'true');
-INSERT INTO armor VALUES (529, 'Cap of Mana', 'head', 'true', 'none', 320, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true');
-INSERT INTO armor VALUES (530, 'Sage`s Cap', 'head', 'true', 'none', 320, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true');
-INSERT INTO armor VALUES (531, 'Paradia Hood', 'head', 'true', 'none', 320, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true');
-INSERT INTO armor VALUES (532, 'Inferno Hood', 'head', 'true', 'none', 320, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true');
-INSERT INTO armor VALUES (533, 'Hood of Solar Eclipse', 'head', 'true', 'none', 320, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true');
-INSERT INTO armor VALUES (534, 'Hood of Black Ore', 'head', 'true', 'none', 320, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true');
-INSERT INTO armor VALUES (535, 'Hood of Summoning', 'head', 'true', 'none', 320, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true');
-INSERT INTO armor VALUES (536, 'Otherworldly Hood', 'head', 'true', 'none', 320, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true');
-INSERT INTO armor VALUES (537, 'Elemental Hood', 'head', 'true', 'none', 320, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true');
-INSERT INTO armor VALUES (538, 'Hood of Phantom', 'head', 'true', 'none', 320, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true');
-INSERT INTO armor VALUES (539, 'Hood of Grace', 'head', 'true', 'none', 320, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true');
-INSERT INTO armor VALUES (540, 'Hood of Holy Spirit', 'head', 'true', 'none', 320, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true');
-INSERT INTO armor VALUES (541, 'Phoenix Hood', 'head', 'true', 'none', 590, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true');
-INSERT INTO armor VALUES (542, 'Cerberus Hood', 'head', 'true', 'none', 320, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true');
-INSERT INTO armor VALUES (543, 'Hood of Aid', 'head', 'true', 'none', 320, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true');
-INSERT INTO armor VALUES (544, 'Hood of Blessing', 'head', 'true', 'none', 320, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true');
-INSERT INTO armor VALUES (545, 'Flame Helm', 'head', 'true', 'none', 400, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true');
-INSERT INTO armor VALUES (546, 'Helm of Bravery', 'head', 'true', 'none', 400, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true');
-INSERT INTO armor VALUES (547, 'Tallum Helm', 'head', 'true', 'none', 570, 'cloth', 'a', 0, 90, 64, 0, 0, 1740000, 232, 'true');
-INSERT INTO armor VALUES (548, 'Absolute Helm', 'head', 'true', 'none', 400, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true');
-INSERT INTO armor VALUES (549, 'Helm of Avadon', 'head', 'true', 'none', 400, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true');
-INSERT INTO armor VALUES (550, 'Helm of Doom', 'head', 'true', 'none', 400, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true');
-INSERT INTO armor VALUES (551, 'Helmet of Pledge', 'head', 'true', 'none', 400, 'chrysolite', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true');
-INSERT INTO armor VALUES (552, 'Divine Helm', 'head', 'true', 'none', 400, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true');
-INSERT INTO armor VALUES (553, 'Iron Boots', 'feet', 'true', 'none', 1280, 'fine_steel', 'd', 0, 90, 24, 0, 0, 50800, 92, 'true');
-INSERT INTO armor VALUES (554, 'Sealed Zubei Boots', 'none', 'false', 'none', 1180, 'mithril', 'none', 0, 90, 41, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (555, 'Dragon Boots', 'feet', 'true', 'heavy', 1110, 'leather', 'a', 0, 90, 40, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (556, 'Wolf Boots', 'feet', 'true', 'none', 1180, 'oriharukon', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (557, 'Shining Dragon Boots', 'feet', 'true', 'none', 1150, 'mithril', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (558, 'Boots of Victory', 'feet', 'true', 'none', 1180, 'oriharukon', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (559, 'Boots of Valor', 'feet', 'true', 'none', 1150, 'blood_steel', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (560, 'Glorious Boots', 'feet', 'true', 'none', 1180, 'fine_steel', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (561, 'Red Flame Boots', 'feet', 'true', 'none', 1120, 'blood_steel', 'a', 0, 90, 46, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (562, 'Elven Crystal Boots', 'feet', 'true', 'none', 1180, 'crystal', 'b', 0, 95, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (563, 'Sealed Dark Crystal Boots', 'none', 'false', 'none', 1110, 'crystal', 'none', 0, 95, 46, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (564, 'Implosion Boots', 'feet', 'true', 'none', 1150, 'damascus', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (565, 'Dark Dragon Boots', 'feet', 'true', 'none', 1130, 'damascus', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (566, 'Elven Vagian Boots', 'feet', 'true', 'none', 1150, 'mithril', 'b', 0, 95, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (567, 'Dark Vagian Boots', 'feet', 'true', 'none', 1130, 'mithril', 'b', 0, 95, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (568, 'Composite Boots', 'feet', 'true', 'none', 200, 'fine_steel', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (569, 'Hell Boots', 'feet', 'true', 'none', 1130, 'blood_steel', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (570, 'Art of Boots', 'feet', 'true', 'none', 1150, 'chrysolite', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (571, 'Masterpiece Boots', 'feet', 'true', 'none', 1130, 'oriharukon', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (572, 'Boots of Silence', 'feet', 'true', 'none', 1190, 'damascus', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (573, 'Gust Boots', 'feet', 'true', 'none', 1120, 'blood_steel', 'a', 0, 90, 46, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (574, 'Prairie Boots', 'feet', 'true', 'none', 1140, 'leather', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (575, 'Boots of The Underworld', 'feet', 'true', 'none', 1110, 'leather', 'a', 0, 90, 46, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (576, 'Boots of Concentration', 'feet', 'true', 'none', 1170, 'oriharukon', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (577, 'Ace`s Boots', 'feet', 'true', 'none', 1150, 'oriharukon', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (578, 'Guardian`s Boots', 'feet', 'true', 'none', 1180, 'mithril', 'b', 0, 95, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (579, 'Marksman Boots', 'feet', 'true', 'none', 1150, 'leather', 'b', 0, 95, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (580, 'Boots of Mana', 'feet', 'true', 'none', 1180, 'leather', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (581, 'Sage`s Boots', 'feet', 'true', 'none', 1150, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (582, 'Paradia Boots', 'feet', 'true', 'none', 1140, 'chrysolite', 'b', 0, 95, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (583, 'Sealed Majestic Boots', 'none', 'false', 'none', 1110, 'blood_steel', 'none', 0, 95, 49, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (584, 'Boots of Solar Eclipse', 'feet', 'true', 'none', 1180, 'blood_steel', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (585, 'Boots of Black Ore', 'feet', 'true', 'none', 1200, 'damascus', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (586, 'Boots of Summoning', 'feet', 'true', 'none', 1170, 'leather', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (587, 'Otherworldly Boots', 'feet', 'true', 'none', 1200, 'adamantaite', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (588, 'Elemental Boots', 'feet', 'true', 'none', 1130, 'mithril', 'b', 0, 95, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (589, 'Boots of Phantom', 'feet', 'true', 'none', 1120, 'oriharukon', 'a', 0, 95, 49, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (590, 'Boots of Grace', 'feet', 'true', 'none', 1130, 'mithril', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (591, 'Boots of Holy Spirit', 'feet', 'true', 'none', 1200, 'chrysolite', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (592, 'Phoenix Boots', 'feet', 'true', 'none', 1120, 'blood_steel', 'a', 0, 90, 46, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (593, 'Cerberus Boots', 'feet', 'true', 'none', 1120, 'damascus', 'a', 0, 90, 49, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (594, 'Boots of Aid', 'feet', 'true', 'none', 1200, 'leather', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (595, 'Boots of Blessing', 'feet', 'true', 'none', 1160, 'adamantaite', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (596, 'Flame Boots', 'feet', 'true', 'none', 1020, 'blood_steel', 'b', 0, 90, 46, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (597, 'Boots of Bravery', 'feet', 'true', 'none', 1050, 'chrysolite', 'b', 0, 90, 46, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (598, 'Sealed Tallum Boots', 'none', 'false', 'none', 1130, 'blood_steel', 'none', 0, 90, 46, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (599, 'Absolute Boots', 'feet', 'true', 'none', 1130, 'mithril', 'b', 0, 90, 46, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (600, 'Sealed Avadon Boots', 'none', 'false', 'none', 1170, 'damascus', 'none', 0, 90, 41, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (601, 'Sealed Boots of Doom', 'none', 'false', 'none', 1130, 'mithril', 'none', 0, 90, 44, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (602, 'Boots of Pledge', 'feet', 'true', 'none', 1130, 'chrysolite', 'b', 0, 90, 46, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (603, 'Divine Boots', 'feet', 'true', 'none', 1200, 'adamantaite', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true');
-INSERT INTO armor VALUES (604, 'Excellent Leather Gloves', 'gloves', 'true', 'none', 650, 'leather', 'd', 0, 90, 19, 0, 0, 20900, 38, 'true');
-INSERT INTO armor VALUES (605, 'Leather Gauntlets', 'gloves', 'true', 'none', 640, 'leather', 'd', 0, 90, 22, 0, 0, 33300, 60, 'true');
-INSERT INTO armor VALUES (606, 'Rip Gauntlets', 'gloves', 'true', 'none', 630, 'leather', 'd', 0, 90, 27, 0, 0, 74700, 135, 'true');
-INSERT INTO armor VALUES (607, 'Ogre Power Gauntlets', 'gloves', 'true', 'none', 620, 'fine_steel', 'd', 0, 90, 29, 0, 0, 97800, 177, 'true');
-INSERT INTO armor VALUES (608, 'Mithril Gauntlets', 'gloves', 'true', 'none', 600, 'mithril', 'c', 0, 95, 36, 0, 0, 245000, 98, 'true');
-INSERT INTO armor VALUES (609, 'Gauntlets of Ghost', 'gloves', 'true', 'none', 1920, 'blood_steel', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true');
-INSERT INTO armor VALUES (610, 'Saint Knight`s Gauntlets', 'gloves', 'true', 'none', 6400, 'oriharukon', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (611, 'Soul Leech Gauntlets', 'gloves', 'true', 'none', 4800, 'blood_steel', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (612, 'Sealed Zubei`s Gauntlets', 'none', 'false', 'none', 590, 'mithril', 'none', 0, 90, 41, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (613, 'Sand Dragon Gloves', 'gloves', 'true', 'none', 3200, 'damascus', 'a', 0, 90, 49, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (614, 'Knight`s Cloak', 'back', 'true', 'none', 240, 'cloth', 'd', 0, 90, 7, 0, 0, 20900, 38, 'true');
-INSERT INTO armor VALUES (615, 'Cobweb Cloak', 'back', 'true', 'none', 240, 'cobweb', 'd', 0, 95, 8, 0, 0, 33300, 60, 'true');
-INSERT INTO armor VALUES (616, 'Cloak of Magic', 'back', 'true', 'none', 240, 'cloth', 'd', 0, 90, 11, 0, 0, 74700, 135, 'true');
-INSERT INTO armor VALUES (617, 'Mithril Cloak', 'back', 'true', 'none', 240, 'mithril', 'd', 0, 95, 11, 0, 0, 97800, 177, 'true');
-INSERT INTO armor VALUES (618, 'Cloak of Self Protection', 'back', 'true', 'none', 240, 'cloth', 'c', 0, 90, 13, 0, 0, 161000, 64, 'true');
-INSERT INTO armor VALUES (619, 'Ancient Cloak', 'back', 'true', 'none', 230, 'cloth', 'c', 0, 90, 15, 0, 0, 245000, 98, 'true');
-INSERT INTO armor VALUES (620, 'Cloak of Protection', 'back', 'true', 'none', 230, 'cloth', 'c', 0, 90, 16, 0, 0, 358000, 143, 'true');
-INSERT INTO armor VALUES (621, 'Cloak of Hell', 'back', 'true', 'none', 220, 'cloth', 'b', 0, 90, 18, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (622, 'Holy Spirit`s Cloak', 'back', 'true', 'none', 220, 'cloth', 'a', 0, 90, 18, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (623, 'Divine Cloak', 'back', 'true', 'none', 220, 'cloth', 'a', 0, 90, 19, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (624, 'Cloak of Invisibility', 'back', 'false', 'none', 260, 'cloth', 'none', 0, 90, 2, 0, 0, 37, 0, 'true');
-INSERT INTO armor VALUES (675, 'Silk Yarn Undergarment Set', 'underwear', 'false', 'none', 170, 'cloth', 'none', 0, 90, 6, 0, 0, 1330, 0, 'true');
-INSERT INTO armor VALUES (676, 'Pure White Undergarment Set', 'underwear', 'false', 'none', 160, 'cloth', 'none', 0, 90, 9, 0, 0, 6150, 0, 'true');
-INSERT INTO armor VALUES (677, 'One-Piece Swimsuit', 'underwear', 'true', 'none', 150, 'cloth', 'd', 0, 90, 10, 0, 0, 10400, 18, 'true');
-INSERT INTO armor VALUES (678, 'Bikini Set', 'underwear', 'true', 'none', 150, 'cloth', 'd', 0, 90, 11, 0, 0, 16700, 30, 'true');
-INSERT INTO armor VALUES (679, 'Cursed Undergarment Set', 'underwear', 'true', 'none', 150, 'cloth', 'd', 0, 90, 12, 0, 0, 25400, 46, 'true');
-INSERT INTO armor VALUES (680, 'Mithril Undergarment Set', 'underwear', 'true', 'none', 140, 'mithril', 'c', 0, 97, 16, 0, 0, 63100, 25, 'true');
-INSERT INTO armor VALUES (681, 'Fascination Undergarment Set', 'underwear', 'true', 'none', 140, 'cloth', 'c', 0, 90, 17, 0, 0, 80500, 32, 'true');
-INSERT INTO armor VALUES (682, 'Demon`s Undergarment Set', 'underwear', 'true', 'none', 140, 'cloth', 'c', 0, 90, 19, 0, 0, 179000, 71, 'true');
-INSERT INTO armor VALUES (683, 'Holy Undergarment Set', 'underwear', 'true', 'none', 140, 'cloth', 'b', 0, 95, 22, 0, 0, 402000, 53, 'true');
-INSERT INTO armor VALUES (684, 'Underwear of Rule', 'underwear', 'true', 'none', 140, 'cloth', 'a', 0, 90, 24, 0, 0, 880000, 70, 'true');
-INSERT INTO armor VALUES (685, 'Crystal Swimsuit Set', 'underwear', 'true', 'none', 130, 'crystal', 's', 0, 85, 26, 0, 0, 1310000, 65, 'true');
-INSERT INTO armor VALUES (845, 'Cat`s Eye Earring', 'rear,lear', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 19, 0, 8890, 0, 'true');
-INSERT INTO armor VALUES (846, 'Coral Earring', 'rear,lear', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 21, 0, 16000, 0, 'true');
-INSERT INTO armor VALUES (847, 'Red Crescent Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 24, 0, 26900, 48, 'true');
-INSERT INTO armor VALUES (848, 'Enchanted Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 27, 0, 42600, 77, 'true');
-INSERT INTO armor VALUES (849, 'Tiger`s Eye Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 30, 0, 64300, 116, 'true');
-INSERT INTO armor VALUES (850, 'Elven Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 34, 0, 93400, 169, 'true');
-INSERT INTO armor VALUES (851, 'Omen Beast`s Eye Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 36, 0, 121000, 220, 'true');
-INSERT INTO armor VALUES (852, 'Moonstone Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 39, 0, 155000, 62, 'true');
-INSERT INTO armor VALUES (853, 'Earring of Protection', 'rear,lear', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 42, 0, 196000, 78, 'true');
-INSERT INTO armor VALUES (854, 'Earring of Binding', 'rear,lear', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 45, 0, 295000, 118, 'true');
-INSERT INTO armor VALUES (855, 'Nassen`s Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 48, 0, 424000, 169, 'true');
-INSERT INTO armor VALUES (856, 'Adamantite Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 51, 0, 606000, 80, 'true');
-INSERT INTO armor VALUES (857, 'Blessed Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 48, 0, 424000, 169, 'true');
-INSERT INTO armor VALUES (858, 'Sand Dragon Earring', 'rear,lear', 'true', 'none', 150, 'silver', 's', 0, 95, 0, 63, 0, 2590000, 129, 'true');
-INSERT INTO armor VALUES (859, 'Earring of Mana', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 51, 0, 606000, 80, 'true');
-INSERT INTO armor VALUES (860, 'Sage`s Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 54, 0, 924000, 123, 'true');
-INSERT INTO armor VALUES (861, 'Paradia Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 54, 0, 924000, 123, 'true');
-INSERT INTO armor VALUES (862, 'Inferno Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'a', 0, 95, 0, 60, 0, 1950000, 156, 'true');
-INSERT INTO armor VALUES (863, 'Earring of Solar Eclipse', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 51, 0, 606000, 80, 'true');
-INSERT INTO armor VALUES (864, 'Earring of Black Ore', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 54, 0, 924000, 123, 'true');
-INSERT INTO armor VALUES (865, 'Earring of Summoning', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 51, 0, 606000, 80, 'true');
-INSERT INTO armor VALUES (866, 'Otherworldly Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 54, 0, 924000, 123, 'true');
-INSERT INTO armor VALUES (867, 'Elemental Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 54, 0, 924000, 123, 'true');
-INSERT INTO armor VALUES (868, 'Earring of Phantom', 'rear,lear', 'true', 'none', 150, 'silver', 'a', 0, 95, 0, 60, 0, 1950000, 156, 'true');
-INSERT INTO armor VALUES (869, 'Earring of Grace', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 51, 0, 606000, 80, 'true');
-INSERT INTO armor VALUES (870, 'Earring of Holy Spirit', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 54, 0, 924000, 123, 'true');
-INSERT INTO armor VALUES (871, 'Phoenix Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'a', 0, 95, 0, 57, 0, 1310000, 105, 'true');
-INSERT INTO armor VALUES (872, 'Cerberus Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'a', 0, 95, 0, 60, 0, 1950000, 156, 'true');
-INSERT INTO armor VALUES (873, 'Earring of Aid', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 51, 0, 606000, 80, 'true');
-INSERT INTO armor VALUES (874, 'Earring of Blessing', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 51, 0, 606000, 80, 'true');
-INSERT INTO armor VALUES (875, 'Ring of Knowledge', 'rfinger,lfinger', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 9, 0, 540, 0, 'true');
-INSERT INTO armor VALUES (876, 'Ring of Anguish', 'rfinger,lfinger', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 11, 0, 2340, 0, 'true');
-INSERT INTO armor VALUES (877, 'Ring of Wisdom', 'rfinger,lfinger', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 12, 0, 5920, 0, 'true');
-INSERT INTO armor VALUES (878, 'Blue Coral Ring', 'rfinger,lfinger', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 14, 0, 10700, 0, 'true');
-INSERT INTO armor VALUES (879, 'Enchanted Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'd', 0, 95, 0, 18, 0, 28400, 51, 'true');
-INSERT INTO armor VALUES (880, 'Black Pearl Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'd', 0, 95, 0, 20, 0, 42800, 77, 'true');
-INSERT INTO armor VALUES (881, 'Elven Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'd', 0, 95, 0, 22, 0, 62300, 113, 'true');
-INSERT INTO armor VALUES (882, 'Mithril Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'd', 0, 95, 0, 24, 0, 80800, 146, 'true');
-INSERT INTO armor VALUES (883, 'Aquastone Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'c', 0, 95, 0, 26, 0, 103000, 41, 'true');
-INSERT INTO armor VALUES (884, 'Ring of Protection', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'c', 0, 95, 0, 28, 0, 130000, 52, 'true');
-INSERT INTO armor VALUES (885, 'Ring of Ages', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'c', 0, 95, 0, 30, 0, 196000, 78, 'true');
-INSERT INTO armor VALUES (886, 'Ring of Binding', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'c', 0, 95, 0, 32, 0, 282000, 112, 'true');
-INSERT INTO armor VALUES (887, 'Adamantite Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 34, 0, 404000, 53, 'true');
-INSERT INTO armor VALUES (888, 'Blessed Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'c', 0, 95, 0, 32, 0, 282000, 112, 'true');
-INSERT INTO armor VALUES (889, 'Ring of Aurakyria', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 's', 0, 95, 0, 42, 0, 1730000, 86, 'true');
-INSERT INTO armor VALUES (890, 'Ring of Devotion', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'd', 0, 95, 0, 16, 0, 18000, 32, 'true');
-INSERT INTO armor VALUES (891, 'Sage`s Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 36, 0, 616000, 82, 'true');
-INSERT INTO armor VALUES (892, 'Paradia Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 36, 0, 616000, 82, 'true');
-INSERT INTO armor VALUES (893, 'Inferno Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'a', 0, 95, 0, 40, 0, 1300000, 104, 'true');
-INSERT INTO armor VALUES (894, 'Ring of Solar Eclipse', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 34, 0, 404000, 53, 'true');
-INSERT INTO armor VALUES (895, 'Ring of Black Ore', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 36, 0, 616000, 82, 'true');
-INSERT INTO armor VALUES (896, 'Ring of Summoning', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 34, 0, 404000, 53, 'true');
-INSERT INTO armor VALUES (897, 'Otherworldly Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 36, 0, 616000, 82, 'true');
-INSERT INTO armor VALUES (898, 'Elemental Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 36, 0, 616000, 82, 'true');
-INSERT INTO armor VALUES (899, 'Ring of Phantom', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'a', 0, 95, 0, 40, 0, 1300000, 104, 'true');
-INSERT INTO armor VALUES (900, 'Ring of Grace', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 34, 0, 404000, 53, 'true');
-INSERT INTO armor VALUES (901, 'Ring of Holy Spirit', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 36, 0, 616000, 82, 'true');
-INSERT INTO armor VALUES (902, 'Phoenix Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'a', 0, 95, 0, 38, 0, 871000, 70, 'true');
-INSERT INTO armor VALUES (903, 'Cerberus Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'a', 0, 95, 0, 40, 0, 1300000, 104, 'true');
-INSERT INTO armor VALUES (904, 'Ring of Aid', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 34, 0, 404000, 53, 'true');
-INSERT INTO armor VALUES (905, 'Ring of Blessing', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 34, 0, 404000, 53, 'true');
-INSERT INTO armor VALUES (906, 'Necklace of Knowledge', 'neck', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 18, 0, 1080, 0, 'true');
-INSERT INTO armor VALUES (907, 'Necklace of Anguish', 'neck', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 21, 0, 4680, 0, 'true');
-INSERT INTO armor VALUES (908, 'Necklace of Wisdom', 'neck', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 25, 0, 11900, 0, 'true');
-INSERT INTO armor VALUES (909, 'Blue Diamond Necklace', 'neck', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 28, 0, 21300, 0, 'true');
-INSERT INTO armor VALUES (910, 'Necklace of Devotion', 'neck', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 32, 0, 35900, 65, 'true');
-INSERT INTO armor VALUES (911, 'Enchanted Necklace', 'neck', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 36, 0, 56800, 103, 'true');
-INSERT INTO armor VALUES (912, 'Near Forest Necklace', 'neck', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 40, 0, 85700, 155, 'true');
-INSERT INTO armor VALUES (913, 'Elven Necklace', 'neck', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 45, 0, 125000, 227, 'true');
-INSERT INTO armor VALUES (914, 'Necklace of Darkness', 'neck', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 48, 0, 162000, 294, 'true');
-INSERT INTO armor VALUES (915, 'Aquastone Necklace', 'neck', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 52, 0, 207000, 82, 'true');
-INSERT INTO armor VALUES (916, 'Necklace of Protection', 'neck', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 56, 0, 261000, 104, 'true');
-INSERT INTO armor VALUES (917, 'Necklace of Mermaid', 'neck', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 60, 0, 393000, 157, 'true');
-INSERT INTO armor VALUES (918, 'Adamantite Necklace', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 68, 0, 808000, 107, 'true');
-INSERT INTO armor VALUES (919, 'Blessed Necklace', 'neck', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 64, 0, 565000, 226, 'true');
-INSERT INTO armor VALUES (920, 'Dragon Necklace', 'neck', 'true', 'none', 150, 'silver', 's', 0, 95, 0, 85, 0, 3450000, 172, 'true');
-INSERT INTO armor VALUES (921, 'Necklace of Mana', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 68, 0, 808000, 107, 'true');
-INSERT INTO armor VALUES (922, 'Sage`s Necklace', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 72, 0, 1230000, 164, 'true');
-INSERT INTO armor VALUES (923, 'Paradia Necklace', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 72, 0, 1230000, 164, 'true');
-INSERT INTO armor VALUES (924, 'Inferno Necklace', 'neck', 'true', 'none', 150, 'silver', 'a', 0, 95, 0, 80, 0, 2600000, 208, 'true');
-INSERT INTO armor VALUES (925, 'Necklace of Solar Eclipse', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 68, 0, 808000, 107, 'true');
-INSERT INTO armor VALUES (926, 'Necklace of Black Ore', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 72, 0, 1230000, 164, 'true');
-INSERT INTO armor VALUES (927, 'Necklace of Summoning', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 68, 0, 808000, 107, 'true');
-INSERT INTO armor VALUES (928, 'Otherworldly Necklace', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 72, 0, 1230000, 164, 'true');
-INSERT INTO armor VALUES (929, 'Elemental Necklace', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 72, 0, 1230000, 164, 'true');
-INSERT INTO armor VALUES (930, 'Necklace of Phantom', 'neck', 'true', 'none', 150, 'silver', 'a', 0, 95, 0, 80, 0, 2600000, 208, 'true');
-INSERT INTO armor VALUES (931, 'Necklace of Grace', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 68, 0, 808000, 107, 'true');
-INSERT INTO armor VALUES (932, 'Necklace of Holy Spirit', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 72, 0, 1230000, 164, 'true');
-INSERT INTO armor VALUES (933, 'Phoenix Necklace', 'neck', 'true', 'none', 150, 'silver', 'a', 0, 95, 0, 76, 0, 1740000, 139, 'true');
-INSERT INTO armor VALUES (934, 'Cerberus Necklace', 'neck', 'true', 'none', 150, 'silver', 'a', 0, 95, 0, 80, 0, 2600000, 208, 'true');
-INSERT INTO armor VALUES (935, 'Necklace of Aid', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 68, 0, 808000, 107, 'true');
-INSERT INTO armor VALUES (936, 'Necklace of Blessing', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 68, 0, 808000, 107, 'true');
-INSERT INTO armor VALUES (990, 'Mandragora Essence', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true');
-INSERT INTO armor VALUES (991, 'Royen`s Key', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true');
-INSERT INTO armor VALUES (992, 'Shilen`s 1st Mark', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true');
-INSERT INTO armor VALUES (993, 'Shilen`s 2nd Mark', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true');
-INSERT INTO armor VALUES (994, 'Eye of Abyss', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true');
-INSERT INTO armor VALUES (995, 'Wanted Poster', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true');
-INSERT INTO armor VALUES (996, 'Alex`s Dagger', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true');
-INSERT INTO armor VALUES (997, 'Pinter`s Bill', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true');
-INSERT INTO armor VALUES (998, 'Book of Aklantoth - Part 1', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true');
-INSERT INTO armor VALUES (999, 'Book of Aklantoth - Part 2', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true');
-INSERT INTO armor VALUES (1000, 'Book of Aklantoth - Part 3', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true');
-INSERT INTO armor VALUES (1100, 'Cotton Tunic', 'chest', 'false', 'magic', 2120, 'cloth', 'none', 0, 90, 21, 0, 38, 2430, 0, 'true');
-INSERT INTO armor VALUES (1101, 'Tunic of Devotion', 'chest', 'false', 'magic', 2090, 'cloth', 'none', 0, 90, 30, 0, 67, 20300, 0, 'true');
-INSERT INTO armor VALUES (1102, 'Tunic of Magic', 'chest', 'false', 'magic', 2080, 'cloth', 'none', 0, 90, 34, 0, 86, 36900, 0, 'true');
-INSERT INTO armor VALUES (1103, 'Cotton Stockings', 'legs', 'false', 'magic', 1060, 'cloth', 'none', 0, 90, 13, 0, 23, 1520, 0, 'true');
-INSERT INTO armor VALUES (1104, 'Stockings of Devotion', 'legs', 'false', 'magic', 1040, 'cloth', 'none', 0, 90, 19, 0, 42, 12700, 0, 'true');
-INSERT INTO armor VALUES (1105, 'Stockings of Magic', 'legs', 'false', 'magic', 1030, 'cloth', 'none', 0, 90, 21, 0, 54, 23000, 0, 'true');
-INSERT INTO armor VALUES (1119, 'Short Leather Gloves', 'gloves', 'false', 'none', 660, 'leather', 'none', 0, 90, 11, 0, 0, 607, 0, 'true');
-INSERT INTO armor VALUES (1120, 'Paagrio Hand', 'gloves', 'true', 'none', 1600, 'leather', 'c', 0, 90, 34, 0, 0, 161000, 64, 'true');
-INSERT INTO armor VALUES (1121, 'Apprentice`s Shoes', 'feet', 'false', 'none', 1320, 'leather', 'none', 0, 90, 8, 0, 0, 7, 0, 'true');
-INSERT INTO armor VALUES (1122, 'Cotton Shoes', 'feet', 'false', 'none', 1320, 'leather', 'none', 0, 90, 11, 0, 0, 607, 0, 'true');
-INSERT INTO armor VALUES (1123, 'Blue Buckskin Boots', 'feet', 'true', 'none', 1300, 'leather', 'd', 0, 90, 22, 0, 0, 33300, 60, 'true');
-INSERT INTO armor VALUES (1124, 'Boots of Power', 'feet', 'true', 'none', 1250, 'leather', 'd', 0, 90, 27, 0, 0, 74700, 135, 'true');
-INSERT INTO armor VALUES (1125, 'Assault Boots', 'feet', 'true', 'none', 1240, 'leather', 'd', 0, 90, 29, 0, 0, 97800, 177, 'true');
-INSERT INTO armor VALUES (1126, 'Crimson Boots', 'feet', 'true', 'none', 1210, 'leather', 'c', 0, 90, 34, 0, 0, 161000, 64, 'true');
-INSERT INTO armor VALUES (1127, 'Forgotten Boots', 'feet', 'true', 'none', 4000, 'leather', 'c', 0, 90, 36, 0, 0, 245000, 98, 'true');
-INSERT INTO armor VALUES (1128, 'Adamantite Boots', 'feet', 'true', 'none', 4000, 'adamantaite', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true');
-INSERT INTO armor VALUES (1129, 'Crude Leather Shoes', 'feet', 'false', 'none', 1320, 'leather', 'none', 0, 90, 11, 0, 0, 607, 0, 'true');
-INSERT INTO armor VALUES (1146, 'Squire`s Shirt', 'chest', 'false', 'light', 3301, 'cloth', 'none', 0, 90, 33, 0, 0, 26, 0, 'true');
-INSERT INTO armor VALUES (1147, 'Squire`s Pants', 'legs', 'false', 'light', 1750, 'cloth', 'none', 0, 90, 20, 0, 0, 6, 0, 'true');
-INSERT INTO armor VALUES (1148, 'Hard Leather Helmet', 'head', 'false', 'none', 640, 'leather', 'none', 0, 90, 26, 0, 0, 18400, 0, 'true');
-INSERT INTO armor VALUES (1149, 'Shining Circlet', 'head', 'true', 'none', 600, 'steel', 'c', 0, 90, 54, 0, 0, 368000, 147, 'true');
-INSERT INTO armor VALUES (1308, 'Compound Scale Mail', 'chest', 'false', 'heavy', 1400, 'fine_steel', 'none', 0, 98, 51, 0, 0, 368000, 0, 'true');
-INSERT INTO armor VALUES (1309, 'Mithril Breastplate', 'chest', 'false', 'heavy', 1000, 'mithril', 'none', 0, 95, 51, 0, 0, 368000, 0, 'true');
-INSERT INTO armor VALUES (1310, 'Tunic of Magic', 'chest', 'false', 'magic', 150, 'cloth', 'none', 0, 90, 51, 0, 96, 368000, 0, 'true');
-INSERT INTO armor VALUES (1311, 'Puma Skin Shirt', 'chest', 'false', 'light', 300, 'leather', 'none', 0, 90, 51, 0, 0, 368000, 0, 'true');
-INSERT INTO armor VALUES (1312, 'White Tunic', 'chest', 'false', 'magic', 150, 'cloth', 'none', 0, 90, 51, 0, 142, 368000, 0, 'true');
-INSERT INTO armor VALUES (1313, 'Compound Scale Gaiters', 'legs', 'false', 'heavy', 1000, 'fine_steel', 'none', 0, 98, 32, 0, 0, 368000, 0, 'true');
-INSERT INTO armor VALUES (1314, 'Mithril Gaiters', 'legs', 'false', 'heavy', 600, 'mithril', 'none', 0, 95, 32, 0, 0, 368000, 0, 'true');
-INSERT INTO armor VALUES (1315, 'Stockings of Magic', 'legs', 'false', 'magic', 150, 'cloth', 'none', 0, 90, 32, 0, 60, 368000, 0, 'true');
-INSERT INTO armor VALUES (1316, 'Puma Skin Gaiters', 'legs', 'false', 'light', 400, 'leather', 'none', 0, 90, 32, 0, 0, 368000, 0, 'true');
-INSERT INTO armor VALUES (1317, 'Dark Stockings', 'legs', 'false', 'magic', 150, 'cloth', 'none', 0, 90, 32, 0, 79, 368000, 0, 'true');
-INSERT INTO armor VALUES (1318, 'Gloves', 'gloves', 'false', 'none', 80, 'cloth', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true');
-INSERT INTO armor VALUES (1319, 'Leather Gloves', 'gloves', 'false', 'none', 100, 'leather', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true');
-INSERT INTO armor VALUES (1320, 'Excellent Leather Gloves', 'gloves', 'false', 'none', 100, 'leather', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true');
-INSERT INTO armor VALUES (1321, 'Rip Gauntlets', 'gloves', 'false', 'none', 150, 'leather', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true');
-INSERT INTO armor VALUES (1322, 'Bracer', 'gloves', 'false', 'none', 80, 'leather', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true');
-INSERT INTO armor VALUES (1323, 'Leather Shoes', 'feet', 'false', 'none', 120, 'leather', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true');
-INSERT INTO armor VALUES (1324, 'Low Boots', 'feet', 'false', 'none', 150, 'leather', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true');
-INSERT INTO armor VALUES (1325, 'Leather Boots', 'feet', 'false', 'none', 250, 'leather', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true');
-INSERT INTO armor VALUES (1326, 'Iron Boots', 'feet', 'false', 'none', 300, 'fine_steel', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true');
-INSERT INTO armor VALUES (1327, 'Boots', 'feet', 'false', 'none', 200, 'cloth', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true');
-INSERT INTO armor VALUES (1506, 'Necklace of Courage', 'neck', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 15, 0, 66, 0, 'true');
-INSERT INTO armor VALUES (1507, 'Necklace of Valor', 'neck', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 21, 0, 4680, 0, 'true');
-INSERT INTO armor VALUES (1508, 'Ring of Raccoon', 'rfinger,lfinger', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 11, 0, 2340, 0, 'true');
-INSERT INTO armor VALUES (1509, 'Ring of Firefly', 'rfinger,lfinger', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 11, 0, 2340, 0, 'true');
-INSERT INTO armor VALUES (2376, 'Avadon Breastplate', 'chest', 'true', 'heavy', 7920, 'leather', 'b', 0, 90, 157, 0, 0, 2080000, 277, 'true');
-INSERT INTO armor VALUES (2377, 'Mithril Scale Gaiters', 'legs', 'true', 'heavy', 3870, 'leather', 'd', 0, 90, 68, 0, 0, 187000, 340, 'true');
-INSERT INTO armor VALUES (2378, 'Brigandine Gaiters', 'legs', 'true', 'heavy', 3820, 'leather', 'd', 0, 90, 68, 0, 0, 187000, 340, 'true');
-INSERT INTO armor VALUES (2379, 'Avadon Gaiters', 'legs', 'true', 'heavy', 3520, 'leather', 'b', 0, 90, 98, 0, 0, 1300000, 173, 'true');
-INSERT INTO armor VALUES (2380, 'Blue Wolf Gaiters', 'legs', 'true', 'heavy', 3370, 'leather', 'b', 0, 90, 104, 0, 0, 2010000, 268, 'true');
-INSERT INTO armor VALUES (2381, 'Doom Plate Armor', 'CHEST', 'true', 'heavy', 9980, 'leather', 'b', 0, 90, 270, 0, 0, 4710000, 628, 'true');
-INSERT INTO armor VALUES (2382, 'Tallum Plate Armor', 'CHEST', 'true', 'heavy', 9780, 'leather', 'a', 0, 90, 278, 0, 0, 6770000, 902, 'true');
-INSERT INTO armor VALUES (2383, 'Majestic Plate Armor', 'CHEST', 'true', 'heavy', 9200, 'leather', 'a', 0, 90, 293, 0, 0, 10300000, 824, 'true');
-INSERT INTO armor VALUES (2384, 'Zubei`s Leather Shirt', 'chest', 'true', 'light', 4330, 'leather', 'b', 0, 90, 117, 0, 0, 1560000, 208, 'true');
-INSERT INTO armor VALUES (2385, 'Dark Crystal Leather Armor', 'chest', 'true', 'light', 4300, 'leather', 'a', 0, 90, 129, 0, 0, 3470000, 462, 'true');
-INSERT INTO armor VALUES (2386, 'Wooden Gaiters', 'legs', 'false', 'light', 1670, 'leather', 'none', 0, 90, 28, 0, 0, 4970, 0, 'true');
-INSERT INTO armor VALUES (2387, 'Tempered Mithril Gaiters', 'legs', 'true', 'light', 1530, 'leather', 'c', 0, 90, 56, 0, 0, 237000, 94, 'true');
-INSERT INTO armor VALUES (2388, 'Zubei`s Leather Gaiters', 'legs', 'true', 'light', 1480, 'leather', 'b', 0, 90, 73, 0, 0, 973000, 129, 'true');
-INSERT INTO armor VALUES (2389, 'Dark Crystalline Leggings', 'legs', 'true', 'light', 1480, 'leather', 'a', 0, 90, 80, 0, 0, 2170000, 289, 'true');
-INSERT INTO armor VALUES (2390, 'Avadon Leather Armor', 'CHEST', 'true', 'light', 5600, 'leather', 'b', 0, 90, 191, 0, 0, 2280000, 304, 'true');
-INSERT INTO armor VALUES (2391, 'Blue Wolf Leather Armor', 'CHEST', 'true', 'light', 5500, 'leather', 'b', 0, 90, 202, 0, 0, 3530000, 470, 'true');
-INSERT INTO armor VALUES (2392, 'Leather Armor of Doom', 'CHEST', 'true', 'light', 5500, 'leather', 'b', 0, 90, 202, 0, 0, 3530000, 470, 'true');
-INSERT INTO armor VALUES (2393, 'Tallum Leather Armor', 'CHEST', 'true', 'light', 5400, 'leather', 'a', 0, 90, 208, 0, 0, 5080000, 677, 'true');
-INSERT INTO armor VALUES (2394, 'Nightmarish Leather Armor', 'CHEST', 'true', 'light', 5300, 'leather', 'a', 0, 90, 220, 0, 0, 7730000, 618, 'true');
-INSERT INTO armor VALUES (2395, 'Majestic Leather Armor', 'CHEST', 'true', 'light', 5350, 'leather', 'a', 0, 90, 220, 0, 0, 7730000, 618, 'true');
-INSERT INTO armor VALUES (2396, 'Elven Mithril Tunic', 'chest', 'true', 'magic', 720, 'leather', 'd', 0, 90, 54, 0, 169, 224000, 407, 'true');
-INSERT INTO armor VALUES (2397, 'Tunic of Zubei', 'chest', 'true', 'magic', 1960, 'leather', 'b', 0, 90, 78, 0, 345, 1560000, 208, 'true');
-INSERT INTO armor VALUES (2398, 'Blue Wolf Tunic', 'chest', 'true', 'magic', 1920, 'leather', 'b', 0, 90, 83, 0, 377, 2410000, 321, 'true');
-INSERT INTO armor VALUES (2399, 'Tunic of Doom', 'chest', 'true', 'magic', 1900, 'leather', 'b', 0, 90, 83, 0, 377, 2410000, 321, 'true');
-INSERT INTO armor VALUES (2400, 'Tallum Tunic', 'chest', 'true', 'magic', 1860, 'leather', 'a', 0, 90, 85, 0, 409, 3470000, 462, 'true');
-INSERT INTO armor VALUES (2401, 'Elven Mithril Stockings', 'legs', 'true', 'magic', 2400, 'leather', 'd', 0, 90, 34, 0, 105, 140000, 254, 'true');
-INSERT INTO armor VALUES (2402, 'Stockings of Zubei', 'legs', 'true', 'magic', 940, 'leather', 'b', 0, 90, 49, 0, 216, 973000, 129, 'true');
-INSERT INTO armor VALUES (2403, 'Blue Wolf Stockings', 'legs', 'true', 'magic', 920, 'leather', 'b', 0, 90, 52, 0, 236, 1510000, 201, 'true');
-INSERT INTO armor VALUES (2404, 'Stockings of Doom', 'legs', 'true', 'magic', 910, 'leather', 'b', 0, 90, 52, 0, 236, 1510000, 201, 'true');
-INSERT INTO armor VALUES (2405, 'Tallum Stockings', 'legs', 'true', 'magic', 920, 'leather', 'a', 0, 90, 54, 0, 256, 2170000, 289, 'true');
-INSERT INTO armor VALUES (2406, 'Avadon Robe', 'CHEST', 'true', 'magic', 2540, 'leather', 'b', 0, 90, 127, 0, 561, 2280000, 304, 'true');
-INSERT INTO armor VALUES (2407, 'Dark Crystal Robe', 'CHEST', 'true', 'magic', 2450, 'leather', 'a', 0, 90, 139, 0, 665, 5080000, 677, 'true');
-INSERT INTO armor VALUES (2408, 'Robe of Nightmare', 'CHEST', 'true', 'magic', 2300, 'leather', 'a', 0, 90, 146, 0, 718, 7730000, 618, 'true');
-INSERT INTO armor VALUES (2409, 'Majestic Robe', 'CHEST', 'true', 'magic', 2330, 'leather', 'a', 0, 90, 146, 0, 718, 7730000, 618, 'true');
-INSERT INTO armor VALUES (2410, 'Nightmarish Tattoo', 'underwear', 'true', 'none', 3600, 'dyestuff', 'a', 0, 90, 139, 0, 0, 5280000, 422, 'true');
-INSERT INTO armor VALUES (2411, 'Brigandine Helmet', 'head', 'true', 'none', 630, 'leather', 'd', 0, 90, 41, 0, 0, 112000, 203, 'true');
-INSERT INTO armor VALUES (2412, 'Plate Helmet', 'head', 'true', 'none', 630, 'leather', 'd', 0, 90, 44, 0, 0, 147000, 267, 'true');
-INSERT INTO armor VALUES (2413, 'Chain Hood', 'head', 'true', 'none', 620, 'leather', 'c', 0, 90, 47, 0, 0, 189000, 75, 'true');
-INSERT INTO armor VALUES (2414, 'Full Plate Helmet', 'head', 'true', 'none', 600, 'leather', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true');
-INSERT INTO armor VALUES (2415, 'Avadon Circlet', 'head', 'true', 'none', 590, 'leather', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true');
-INSERT INTO armor VALUES (2416, 'Blue Wolf Helmet', 'head', 'true', 'none', 580, 'leather', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true');
-INSERT INTO armor VALUES (2417, 'Doom Helmet', 'head', 'true', 'none', 580, 'leather', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true');
-INSERT INTO armor VALUES (2418, 'Helm of Nightmare', 'head', 'true', 'none', 560, 'leather', 'a', 0, 90, 68, 0, 0, 2640000, 211, 'true');
-INSERT INTO armor VALUES (2419, 'Majestic Circlet', 'head', 'true', 'none', 550, 'leather', 'a', 0, 90, 68, 0, 0, 2640000, 211, 'true');
-INSERT INTO armor VALUES (2420, 'Dragon Headgear', 'head', 'true', 'light', 540, 'leather', 's', 0, 90, 80, 0, 0, 3590000, 179, 'true');
-INSERT INTO armor VALUES (2421, 'The Hood', 'head', 'true', 'magic', 540, 'leather', 's', 0, 90, 80, 0, 0, 3590000, 179, 'true');
-INSERT INTO armor VALUES (2422, 'Reinforced Leather Boots', 'feet', 'true', 'none', 1280, 'leather', 'd', 0, 90, 24, 0, 0, 50800, 92, 'true');
-INSERT INTO armor VALUES (2423, 'Boots of Knowledge', 'feet', 'true', 'none', 1270, 'leather', 'd', 0, 90, 24, 0, 0, 50800, 92, 'true');
-INSERT INTO armor VALUES (2424, 'Manticore Skin Boots', 'feet', 'true', 'none', 1260, 'leather', 'd', 0, 90, 27, 0, 0, 74700, 135, 'true');
-INSERT INTO armor VALUES (2425, 'Brigandine Boots', 'feet', 'true', 'none', 1250, 'leather', 'd', 0, 90, 27, 0, 0, 74700, 135, 'true');
-INSERT INTO armor VALUES (2426, 'Elven Mithril Boots', 'feet', 'true', 'none', 1250, 'leather', 'd', 0, 90, 27, 0, 0, 74700, 135, 'true');
-INSERT INTO armor VALUES (2427, 'Salamander Skin Boots', 'feet', 'true', 'none', 1230, 'leather', 'd', 0, 90, 29, 0, 0, 97800, 177, 'true');
-INSERT INTO armor VALUES (2428, 'Plate Boots', 'feet', 'true', 'none', 1240, 'leather', 'd', 0, 90, 29, 0, 0, 97800, 177, 'true');
-INSERT INTO armor VALUES (2429, 'Chain Boots', 'feet', 'true', 'none', 1220, 'leather', 'c', 0, 90, 32, 0, 0, 126000, 50, 'true');
-INSERT INTO armor VALUES (2430, 'Karmian Boots', 'feet', 'true', 'none', 1230, 'leather', 'c', 0, 90, 32, 0, 0, 126000, 50, 'true');
-INSERT INTO armor VALUES (2431, 'Plated Leather Boots', 'feet', 'true', 'none', 1220, 'leather', 'c', 0, 90, 32, 0, 0, 126000, 50, 'true');
-INSERT INTO armor VALUES (2432, 'Dwarven Chain Boots', 'feet', 'true', 'none', 1210, 'leather', 'c', 0, 90, 32, 0, 0, 126000, 50, 'true');
-INSERT INTO armor VALUES (2433, 'Boots of Seal', 'feet', 'true', 'none', 1220, 'leather', 'c', 0, 90, 32, 0, 0, 126000, 50, 'true');
-INSERT INTO armor VALUES (2434, 'Rind Leather Boots', 'feet', 'true', 'none', 1220, 'leather', 'c', 0, 90, 34, 0, 0, 161000, 64, 'true');
-INSERT INTO armor VALUES (2435, 'Demon`s Boots', 'feet', 'true', 'none', 1220, 'leather', 'c', 0, 90, 36, 0, 0, 245000, 98, 'true');
-INSERT INTO armor VALUES (2436, 'Theca Leather Boots', 'feet', 'true', 'none', 1210, 'leather', 'c', 0, 90, 37, 0, 0, 275000, 110, 'true');
-INSERT INTO armor VALUES (2437, 'Drake Leather Boots', 'feet', 'true', 'none', 1210, 'leather', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true');
-INSERT INTO armor VALUES (2438, 'Full Plate Boots', 'feet', 'true', 'none', 1200, 'leather', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true');
-INSERT INTO armor VALUES (2439, 'Sealed Blue Wolf Boots', 'none', 'false', 'none', 1130, 'leather', 'none', 0, 90, 44, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (2440, 'Sealed Boots of Nightmare', 'none', 'false', 'none', 1110, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (2441, 'Dark Legion Boots', 'feet', 'true', 'none', 1120, 'leather', 'a', 0, 90, 49, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (2442, 'Dasparion`s Boots', 'feet', 'true', 'none', 1100, 'leather', 'a', 0, 90, 49, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (2443, 'Dragon Leather Boots', 'feet', 'true', 'light', 1100, 'leather', 's', 0, 90, 55, 0, 0, 2390000, 119, 'true');
-INSERT INTO armor VALUES (2444, 'The Boots', 'feet', 'true', 'magic', 1100, 'leather', 's', 0, 90, 55, 0, 0, 2390000, 119, 'true');
-INSERT INTO armor VALUES (2445, 'Dragon Scale Boots', 'feet', 'true', 'heavy', 1100, 'leather', 's', 0, 90, 55, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (2446, 'Reinforced Leather Gloves', 'gloves', 'true', 'none', 640, 'leather', 'd', 0, 90, 24, 0, 0, 50800, 92, 'true');
-INSERT INTO armor VALUES (2447, 'Gloves of Knowledge', 'gloves', 'true', 'none', 640, 'leather', 'd', 0, 90, 24, 0, 0, 50800, 92, 'true');
-INSERT INTO armor VALUES (2448, 'Manticore Skin Gloves', 'gloves', 'true', 'none', 630, 'leather', 'd', 0, 90, 27, 0, 0, 74700, 135, 'true');
-INSERT INTO armor VALUES (2449, 'Brigandine Gauntlets', 'gloves', 'true', 'none', 630, 'leather', 'd', 0, 90, 27, 0, 0, 74700, 135, 'true');
-INSERT INTO armor VALUES (2450, 'Elven Mithril Gloves', 'gloves', 'true', 'none', 640, 'leather', 'd', 0, 90, 27, 0, 0, 74700, 135, 'true');
-INSERT INTO armor VALUES (2451, 'Sage`s Worn Gloves', 'gloves', 'true', 'none', 630, 'leather', 'd', 0, 90, 29, 0, 0, 97800, 177, 'true');
-INSERT INTO armor VALUES (2452, 'Reinforced Mithril Gloves', 'gloves', 'true', 'none', 620, 'leather', 'c', 0, 90, 32, 0, 0, 126000, 50, 'true');
-INSERT INTO armor VALUES (2453, 'Chain Gloves', 'gloves', 'true', 'none', 620, 'leather', 'c', 0, 90, 32, 0, 0, 126000, 50, 'true');
-INSERT INTO armor VALUES (2454, 'Karmian Gloves', 'gloves', 'true', 'none', 620, 'leather', 'c', 0, 90, 32, 0, 0, 126000, 50, 'true');
-INSERT INTO armor VALUES (2455, 'Plated Leather Gloves', 'gloves', 'true', 'none', 610, 'leather', 'c', 0, 90, 33, 0, 0, 149000, 59, 'true');
-INSERT INTO armor VALUES (2456, 'Dwarven Chain Gloves', 'gloves', 'true', 'none', 600, 'leather', 'c', 0, 90, 34, 0, 0, 161000, 64, 'true');
-INSERT INTO armor VALUES (2457, 'Gloves of Seal', 'gloves', 'true', 'none', 620, 'leather', 'c', 0, 90, 34, 0, 0, 161000, 64, 'true');
-INSERT INTO armor VALUES (2458, 'Rind Leather Gloves', 'gloves', 'true', 'none', 600, 'leather', 'c', 0, 90, 34, 0, 0, 161000, 64, 'true');
-INSERT INTO armor VALUES (2459, 'Demon`s Gloves', 'gloves', 'true', 'none', 610, 'leather', 'c', 0, 90, 36, 0, 0, 245000, 98, 'true');
-INSERT INTO armor VALUES (2460, 'Theca Leather Gloves', 'gloves', 'true', 'none', 600, 'leather', 'c', 0, 90, 37, 0, 0, 275000, 110, 'true');
-INSERT INTO armor VALUES (2461, 'Drake Leather Gloves', 'gloves', 'true', 'none', 600, 'leather', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true');
-INSERT INTO armor VALUES (2462, 'Full Plate Gauntlets', 'gloves', 'true', 'none', 600, 'leather', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true');
-INSERT INTO armor VALUES (2463, 'Divine Gloves', 'gloves', 'true', 'none', 610, 'leather', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true');
-INSERT INTO armor VALUES (2464, 'Sealed Avadon Gloves', 'none', 'false', 'none', 590, 'leather', 'none', 0, 90, 41, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (2465, 'Chain Gloves of Silence', 'gloves', 'true', 'none', 590, 'leather', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (2466, 'Guardian`s Gloves', 'gloves', 'true', 'none', 590, 'leather', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (2467, 'Gloves of Blessing', 'gloves', 'true', 'none', 590, 'leather', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (2468, 'Blessed Gloves', 'gloves', 'true', 'none', 600, 'leather', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true');
-INSERT INTO armor VALUES (2469, 'Gloves of The Underworld', 'gloves', 'true', 'none', 580, 'leather', 'a', 0, 90, 46, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (2470, 'Gloves of Phantom', 'gloves', 'true', 'none', 560, 'leather', 'a', 0, 90, 49, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (2471, 'Dark Legion Gloves', 'gloves', 'true', 'none', 560, 'leather', 'a', 0, 90, 49, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (2472, 'Sealed Dark Crystal Gloves', 'none', 'false', 'none', 580, 'leather', 'none', 0, 90, 46, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (2473, 'The Gloves', 'gloves', 'true', 'magic', 540, 'leather', 's', 0, 90, 55, 0, 0, 2390000, 119, 'true');
-INSERT INTO armor VALUES (2474, 'Dasparion`s Gloves', 'gloves', 'true', 'none', 550, 'leather', 'a', 0, 90, 49, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (2475, 'Sealed Doom Gloves', 'none', 'false', 'none', 580, 'leather', 'none', 0, 90, 44, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (2476, 'Dragon Gauntlets', 'gloves', 'true', 'heavy', 540, 'leather', 's', 0, 90, 55, 0, 0, 2610000, 130, 'true');
-INSERT INTO armor VALUES (2477, 'Dragon Leather Gloves', 'gloves', 'true', 'light', 540, 'leather', 's', 0, 90, 55, 0, 0, 2390000, 119, 'true');
-INSERT INTO armor VALUES (2478, 'Sealed Tallum Gloves', 'none', 'false', 'none', 580, 'leather', 'none', 0, 90, 46, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (2479, 'Sealed Gloves of Nightmare', 'none', 'false', 'none', 550, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (2480, 'Elemental Gloves', 'gloves', 'true', 'none', 580, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (2481, 'Gloves of Grace', 'gloves', 'true', 'none', 580, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (2482, 'Sealed Majestic Gloves', 'none', 'false', 'none', 540, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (2483, 'Gust Bracer', 'gloves', 'true', 'none', 580, 'leather', 'a', 0, 90, 46, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (2484, 'Cerberus Gloves', 'gloves', 'true', 'none', 540, 'leather', 'a', 0, 90, 49, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (2485, 'Implosion Gauntlets', 'gloves', 'true', 'none', 580, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (2486, 'Paradia Gloves', 'gloves', 'true', 'none', 580, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (2487, 'Sealed Blue Wolf Gloves', 'none', 'false', 'none', 590, 'leather', 'none', 0, 90, 44, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (2488, 'Phoenix Gloves', 'gloves', 'true', 'none', 570, 'leather', 'a', 0, 90, 46, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (2489, 'Gloves of Black Ore', 'gloves', 'true', 'none', 570, 'leather', 'a', 0, 90, 46, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (2490, 'Cloak of Silence', 'back', 'false', 'none', 250, 'leather', 'none', 0, 90, 5, 0, 0, 6770, 0, 'true');
-INSERT INTO armor VALUES (2491, 'Golden Yarn Cloak', 'back', 'false', 'none', 250, 'leather', 'none', 0, 90, 5, 0, 0, 12300, 0, 'true');
-INSERT INTO armor VALUES (2492, 'Shadow Cloak', 'back', 'true', 'none', 240, 'leather', 'c', 0, 90, 12, 0, 0, 126000, 50, 'true');
-INSERT INTO armor VALUES (2506, 'Wolf Leather Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 9, 14, 0, 6961, 0, 'true');
-INSERT INTO armor VALUES (3891, 'Wolf Hide Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 13, 16, 0, 17781, 0, 'true');
-INSERT INTO armor VALUES (3892, 'Wolf Hard Leather Mail', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 16, 18, 0, 32265, 0, 'true');
-INSERT INTO armor VALUES (3893, 'Wolf Wooden Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 19, 20, 0, 54779, 0, 'true');
-INSERT INTO armor VALUES (3894, 'Wolf Ring Mail', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 22, 23, 0, 87433, 0, 'true');
-INSERT INTO armor VALUES (3895, 'Wolf Bone Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 26, 26, 0, 133276, 0, 'true');
-INSERT INTO armor VALUES (3896, 'Wolf Scale Male', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 30, 29, 0, 195967, 0, 'true');
-INSERT INTO armor VALUES (3897, 'Wolf Bronze Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 33, 31, 0, 256642, 0, 'true');
-INSERT INTO armor VALUES (3898, 'Wolf Plate Mail', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 37, 33, 0, 331497, 0, 'true');
-INSERT INTO armor VALUES (3899, 'Wolf Steel Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 40, 36, 0, 422762, 0, 'true');
-INSERT INTO armor VALUES (3900, 'Wolf Luxury Plate', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 43, 38, 0, 644347, 0, 'true');
-INSERT INTO armor VALUES (3901, 'Wolf Mithril Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 47, 41, 0, 938705, 0, 'true');
-INSERT INTO armor VALUES (3912, 'Hatchling`s Soft Leather', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 26, 26, 0, 197143, 0, 'true');
-INSERT INTO armor VALUES (3913, 'Hatchling`s Scale Mail', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 29, 29, 0, 314456, 0, 'true');
-INSERT INTO armor VALUES (3914, 'Hatchling`s Brigandine', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 31, 31, 0, 422374, 0, 'true');
-INSERT INTO armor VALUES (3915, 'Hatchling`s Bronze Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 33, 33, 0, 567100, 0, 'true');
-INSERT INTO armor VALUES (3916, 'Hatchling`s Steel Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 36, 36, 0, 758241, 0, 'true');
-INSERT INTO armor VALUES (3917, 'Hatchling`s Shadowplate', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 38, 38, 0, 1098768, 0, 'true');
-INSERT INTO armor VALUES (3918, 'Hatchling`s Mithril Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 41, 41, 0, 1567803, 0, 'true');
-INSERT INTO armor VALUES (4224, 'Dream Armor', 'chest', 'true', 'heavy', 8920, 'bronze', 'none', 0, 90, 68, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (4225, 'Dream Gaiters', 'legs', 'true', 'heavy', 3960, 'bronze', 'none', 0, 90, 43, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (4226, 'Dream Gloves', 'gloves', 'true', 'heavy', 650, 'leather', 'none', 0, 90, 17, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (4227, 'Dream Boots', 'feet', 'true', 'heavy', 1310, 'cloth', 'none', 0, 90, 17, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (4228, 'Ubiquitous Armor', 'chest', 'true', 'heavy', 8920, 'bronze', 'none', 0, 90, 68, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (4229, 'Ubiquitous Stockings', 'legs', 'true', 'heavy', 3960, 'bronze', 'none', 0, 90, 43, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (4230, 'Ubiquitous Gloves', 'gloves', 'true', 'none', 650, 'leather', 'none', 0, 90, 17, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (4231, 'Ubiquitous Boots', 'feet', 'true', 'none', 1310, 'cloth', 'none', 0, 90, 17, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (4234, 'Hatchling`s Level 65 Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 50, 50, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (4235, 'Hatchling`s Level 75 Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 58, 58, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (4236, 'Gara Item', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 58, 58, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5170, 'Mithril Panzer Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 41, 41, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5171, 'Brigadine Panzer Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 44, 44, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5172, 'Draconic Panzer Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 46, 46, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5173, 'Blood Panzer Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 49, 49, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5174, 'Ophidian Panzer Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 52, 52, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5175, 'Inferno Panzer Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 54, 54, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5182, 'Hatchling`s Gorgon Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 44, 44, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5183, 'Hatchling`s Ophidian Plate', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 46, 46, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5184, 'Hatchling`s Crimson Plate', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 49, 49, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5185, 'Hatchling`s Draconic Plate', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 52, 52, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5186, 'Hatchling`s Inferno Plate', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 54, 54, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5216, 'Wolf Level 75 Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 71, 58, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5287, 'Sealed Dark Crystal Breastplate', 'none', 'false', 'none', 7700, 'crystal', 'none', 0, 95, 171, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5288, 'Sealed Dark Crystal Gaiters', 'none', 'false', 'none', 3320, 'crystal', 'none', 0, 95, 107, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5289, ' Sealed Dark Crystal Helmet', 'none', 'false', 'none', 570, 'crystal', 'none', 0, 90, 64, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5290, 'Sealed Dark Crystal Gloves', 'none', 'false', 'none', 580, 'leather', 'none', 0, 90, 43, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5291, 'Sealed Dark Crystal Boots', 'none', 'false', 'none', 1110, 'crystal', 'none', 0, 95, 43, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5293, 'Sealed Tallum Plate Armor', 'none', 'false', 'none', 9780, 'leather', 'none', 0, 90, 278, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5294, 'Sealed Tallum Bonnet', 'none', 'false', 'none', 570, 'cloth', 'none', 0, 90, 64, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5295, 'Sealed Tallum Gloves', 'none', 'false', 'none', 580, 'leather', 'none', 0, 90, 43, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5296, 'Sealed Tallum Boots', 'none', 'false', 'none', 1130, 'blood_steel', 'none', 0, 90, 43, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5297, ' Sealed Dark Crystal Leather Mail', 'none', 'false', 'none', 4300, 'leather', 'none', 0, 90, 129, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5298, 'Sealed Dark Crystal Leggings', 'none', 'false', 'none', 1480, 'leather', 'none', 0, 90, 80, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5299, 'Sealed Gloves of Underworld', 'none', 'false', 'none', 580, 'leather', 'none', 0, 90, 46, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5300, 'Sealed Boots of Underworld', 'none', 'false', 'none', 1110, 'leather', 'none', 0, 90, 46, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5301, 'Sealed Tallum Leather Mail', 'none', 'false', 'none', 5400, 'leather', 'none', 0, 90, 208, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5302, 'Sealed Gust Bracer', 'none', 'false', 'none', 580, 'leather', 'none', 0, 90, 46, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5303, 'Sealed Gust Boots', 'none', 'false', 'none', 1120, 'blood_steel', 'none', 0, 90, 46, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5304, 'Sealed Tallum Tunic', 'none', 'false', 'none', 1860, 'leather', 'none', 0, 85, 85, 0, 409, 0, 0, 'true');
-INSERT INTO armor VALUES (5305, 'Sealed Tallum Hose', 'none', 'false', 'none', 920, 'leather', 'none', 0, 90, 54, 0, 256, 0, 0, 'true');
-INSERT INTO armor VALUES (5306, 'Sealed Gloves of Black Ore', 'none', 'false', 'none', 570, 'leather', 'none', 0, 90, 46, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5307, 'Sealed Red Flame Boots', 'none', 'false', 'none', 1120, 'blood_steel', 'none', 0, 90, 46, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5308, 'Sealed Dark Crystal Robe', 'none', 'false', 'none', 2450, 'leather', 'none', 0, 90, 139, 0, 665, 0, 0, 'true');
-INSERT INTO armor VALUES (5309, 'Sealed Phoenix''s Gloves', 'none', 'false', 'none', 570, 'leather', 'none', 0, 90, 46, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5310, 'Sealed Phoenix''s Boots', 'none', 'false', 'none', 1120, 'blood_steel', 'none', 0, 90, 46, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5311, 'Sealed Armor of Nightmare', 'none', 'false', 'none', 9580, 'blood_steel', 'none', 0, 90, 293, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5312, 'Sealed Helm of Nightmare', 'none', 'false', 'none', 560, 'leather', 'none', 0, 90, 68, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5313, 'Sealed Gloves of Nightmare', 'none', 'false', 'none', 550, 'leather', 'none', 0, 90, 45, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5314, 'Sealed Boots of Nightmare', 'none', 'false', 'none', 1110, 'leather', 'none', 0, 90, 45, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5316, 'Sealed Majestic Plate Armor', 'none', 'false', 'none', 9200, 'leather', 'none', 0, 90, 293, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5317, 'Sealed Majestic Circlet', 'none', 'false', 'none', 550, 'leather', 'none', 0, 90, 68, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5318, 'Sealed Magestic Gloves', 'none', 'false', 'none', 540, 'leather', 'none', 0, 90, 45, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5319, 'Sealed Majestic Boots', 'none', 'false', 'none', 1110, 'blood_steel', 'none', 0, 95, 45, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5320, 'Sealed Leather Mail of Nightmare', 'none', 'false', 'none', 5300, 'leather', 'none', 0, 90, 220, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5321, 'Sealed Dark Legion Gloves', 'none', 'false', 'none', 560, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5322, 'Sealed Dark Legion Boots', 'none', 'false', 'none', 1120, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5323, 'Sealed Majestic Leather Mail', 'none', 'false', 'none', 5350, 'leather', 'none', 0, 90, 220, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5324, 'Sealed Gloves of Phantom', 'none', 'false', 'none', 560, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5325, 'Sealed Boots of Phantom', 'none', 'false', 'none', 1120, 'oriharukon', 'none', 0, 95, 49, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5326, 'Sealed Robe of Nightmare', 'none', 'false', 'none', 2300, 'leather', 'none', 0, 90, 146, 0, 718, 0, 0, 'true');
-INSERT INTO armor VALUES (5327, 'Sealed Cerberus''s Gloves', 'none', 'false', 'none', 540, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5328, 'Sealed Cerberus''s Boots', 'none', 'false', 'none', 1120, 'damascus', 'none', 0, 90, 49, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5329, 'Sealed Majestic Robe', 'none', 'false', 'none', 2330, 'leather', 'none', 0, 90, 146, 0, 718, 0, 0, 'true');
-INSERT INTO armor VALUES (5330, 'Sealed Desparion''s Gloves', 'none', 'false', 'none', 550, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5331, 'Sealed Desparion''s Boots', 'none', 'false', 'none', 1100, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5576, 'Sound Test Boots', 'feet', 'false', 'none', 50, 'cloth', 'none', 0, 90, 0, 0, 0, 100, 0, 'true');
-INSERT INTO armor VALUES (5590, 'noise_boots', 'feet', 'false', 'none', 50, 'cloth', 'none', 0, 90, 0, 0, 0, 100, 0, 'true');
-INSERT INTO armor VALUES (5709, 'Sealed Zubei Gauntlets', 'none', 'false', 'none', 590, 'mithril', 'none', 0, 90, 41, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5710, 'Zubei`s Gauntlets Heavy', 'gloves', 'true', 'heavy', 590, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (5711, 'Zubei`s Gauntlets Light', 'gloves', 'true', 'light', 590, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (5712, 'Zubei`s Gauntlets Robe', 'gloves', 'true', 'magic', 590, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (5713, 'Sealed Avadon Gloves', 'none', 'false', 'none', 590, 'mithril', 'none', 0, 90, 41, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5714, 'Avadon Gloves Heavy', 'gloves', 'true', 'heavy', 590, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (5715, 'Avadon Gloves Light', 'gloves', 'true', 'light', 590, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (5716, 'Avadon Gloves Robe', 'gloves', 'true', 'magic', 590, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (5717, 'Sealed Blue Wolf Gloves', 'none', 'false', 'none', 590, 'leather', 'none', 0, 90, 44, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5718, 'Blue Wolf Gloves Heavy', 'gloves', 'true', 'heavy', 590, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (5719, 'Blue Wolf Gloves Light', 'gloves', 'true', 'light', 590, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (5720, 'Blue Wolf Gloves Robe', 'gloves', 'true', 'magic', 590, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (5721, 'Sealed Doom Gloves', 'none', 'false', 'none', 580, 'leather', 'none', 0, 90, 44, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5722, 'Doom Gloves Heavy', 'gloves', 'true', 'heavy', 580, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (5723, 'Doom Gloves Light', 'gloves', 'true', 'light', 580, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (5724, 'Doom Gloves Robe', 'gloves', 'true', 'magic', 580, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (5725, 'Sealed Zubei Boots', 'none', 'false', 'none', 1180, 'mithril', 'none', 0, 90, 41, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5726, 'Zubei`s Boots Heavy', 'feet', 'true', 'heavy', 1180, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (5727, 'Zubei`s Boots Light', 'feet', 'true', 'light', 1180, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (5728, 'Zubei`s Boots Robe', 'feet', 'true', 'magic', 1180, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (5729, 'Sealed Avadon Boots', 'none', 'false', 'none', 1180, 'mithril', 'none', 0, 90, 41, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5730, 'Avadon Boots Heavy', 'feet', 'true', 'heavy', 1180, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (5731, 'Avadon Boots Light', 'feet', 'true', 'light', 1180, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (5732, 'Avadon Boots Robe', 'feet', 'true', 'magic', 1180, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true');
-INSERT INTO armor VALUES (5733, 'Sealed Blue Wolf Boots', 'none', 'false', 'none', 1130, 'leather', 'none', 0, 90, 44, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5734, 'Blue Wolf Boots Heavy', 'feet', 'true', 'heavy', 1130, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (5735, 'Blue Wolf Boots Light', 'feet', 'true', 'light', 1130, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (5736, 'Blue Wolf Boots Robe', 'feet', 'true', 'magic', 1130, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (5737, 'Sealed Doom Boots', 'none', 'false', 'none', 1130, 'mithril', 'none', 0, 90, 44, 0, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (5738, 'Doom Boots Heavy', 'feet', 'true', 'heavy', 1130, 'mithril', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (5739, 'Doom Boots Light', 'feet', 'true', 'light', 1130, 'mithril', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (5740, 'Doom Boots Robe', 'feet', 'true', 'magic', 1130, 'mithril', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true');
-INSERT INTO armor VALUES (5765, 'Dark Crystal Gloves Heavy', 'gloves', 'true', 'heavy', 580, 'leather', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (5766, 'Dark Crystal Gloves Light', 'gloves', 'true', 'light', 580, 'leather', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (5767, 'Dark Crystal Gloves Robe', 'gloves', 'true', 'magic', 580, 'leather', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (5768, 'Tallum Gloves Heavy', 'gloves', 'true', 'heavy', 580, 'leather', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (5769, 'Tallum Gloves Light', 'gloves', 'true', 'light', 580, 'leather', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (5770, 'Tallum Gloves Robe', 'gloves', 'true', 'magic', 580, 'leather', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (5771, 'Gloves of Nightmare Heavy', 'gloves', 'true', 'heavy', 550, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (5772, 'Gloves of Nightmare Light', 'gloves', 'true', 'light', 550, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (5773, 'Gloves of Nightmare Robe', 'gloves', 'true', 'magic', 550, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (5774, 'Magestic Gloves Heavy', 'gloves', 'true', 'heavy', 540, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (5775, 'Magestic Gloves Light', 'gloves', 'true', 'light', 540, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (5776, 'Magestic Gloves Robe', 'gloves', 'true', 'magic', 540, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (5777, 'Dark Crystal Boots Heavy', 'feet', 'true', 'heavy', 1110, 'crystal', 'a', 0, 95, 43, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (5778, 'Dark Crystal Boots Light', 'feet', 'true', 'light', 1110, 'crystal', 'a', 0, 95, 43, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (5779, 'Dark Crystal Boots Robe', 'feet', 'true', 'magic', 1110, 'crystal', 'a', 0, 95, 43, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (5780, 'Tallum Boots Heavy', 'feet', 'true', 'heavy', 1130, 'blood_steel', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (5781, 'Tallum Boots Light', 'feet', 'true', 'light', 1130, 'blood_steel', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (5782, 'Tallum Boots Robe', 'feet', 'true', 'magic', 1130, 'blood_steel', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true');
-INSERT INTO armor VALUES (5783, 'Boots of Nightmare Heavy', 'feet', 'true', 'heavy', 1110, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (5784, 'Boots of Nightmare Light', 'feet', 'true', 'light', 1110, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (5785, 'Boots of Nightmare Robe', 'feet', 'true', 'magic', 1110, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (5786, 'Majestic Boots Heavy', 'feet', 'true', 'heavy', 1110, 'blood_steel', 'a', 0, 95, 45, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (5787, 'Majestic Boots Light', 'feet', 'true', 'light', 1110, 'blood_steel', 'a', 0, 95, 45, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (5788, 'Magestic Boots Robe', 'feet', 'true', 'magic', 1110, 'blood_steel', 'a', 0, 95, 45, 0, 0, 1760000, 140, 'true');
-INSERT INTO armor VALUES (5808, 'party_mask', 'hair', 'false', 'none', 660, 'wood', 'none', 0, 90, 0, 0, 0, 100, 0, 'true');
-INSERT INTO armor VALUES (6323, 'Sealed Phoenix''s Necklace', 'none', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 60, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (6324, 'Sealed Phoenix''s Earing', 'none', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 57, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (6325, 'Sealed Phoenix''s Ring', 'none', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 40, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (6326, 'Sealed Majestic Necklace', 'none', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 38, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (6327, 'Sealed Majestic Earing', 'none', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 80, 0, 0, 0, 'true');
-INSERT INTO armor VALUES (6328, 'Sealed Majestic Ring', 'none', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 76, 0, 0, 0, 'true');
+insert  into armor values 
+(21, 'Shirt', 'chest', 'false', 'light', 4830, 'cloth', 'none', 0, 90, 36, 0, 0, 147, 0, 'true'), 
+(22, 'Leather Shirt', 'chest', 'false', 'light', 4830, 'leather', 'none', 0, 90, 43, 0, 0, 2430, 0, 'true'), 
+(23, 'Wooden Breastplate', 'chest', 'false', 'light', 4820, 'wood', 'none', 0, 90, 47, 0, 0, 7960, 0, 'true'), 
+(24, 'Bone Breastplate', 'chest', 'false', 'light', 4770, 'bone', 'none', 0, 85, 50, 0, 0, 20300, 0, 'true'), 
+(25, 'Piece Bone Breastplate', 'chest', 'false', 'heavy', 8970, 'bone', 'none', 0, 85, 62, 0, 0, 31800, 0, 'true'), 
+(26, 'Bronze Breastplate', 'chest', 'false', 'heavy', 8920, 'bronze', 'none', 0, 90, 68, 0, 0, 49200, 0, 'true'), 
+(27, 'Hard Leather Shirt', 'chest', 'false', 'light', 4720, 'leather', 'none', 0, 90, 53, 0, 0, 36900, 0, 'true'), 
+(28, 'Pants', 'legs', 'false', 'light', 1740, 'cloth', 'none', 0, 90, 22, 0, 0, 92, 0, 'true'), 
+(29, 'Leather Pants', 'legs', 'false', 'light', 1730, 'leather', 'none', 0, 90, 27, 0, 0, 1520, 0, 'true'), 
+(30, 'Hard Leather Pants', 'legs', 'false', 'light', 1700, 'leather', 'none', 0, 90, 29, 0, 0, 4970, 0, 'true'), 
+(31, 'Bone Gaiters', 'legs', 'false', 'light', 1680, 'bone', 'none', 0, 85, 32, 0, 0, 12700, 0, 'true'), 
+(32, 'Piece Bone Gaiters', 'legs', 'false', 'heavy', 4020, 'bone', 'none', 0, 85, 39, 0, 0, 19900, 0, 'true'), 
+(33, 'Hard Leather Gaiters', 'legs', 'false', 'light', 1610, 'leather', 'none', 0, 90, 33, 0, 0, 23000, 0, 'true'), 
+(34, 'Bronze Gaiters', 'legs', 'false', 'heavy', 3960, 'bronze', 'none', 0, 90, 43, 0, 0, 30700, 0, 'true'), 
+(35, 'Cloth Shoes', 'feet', 'false', 'none', 1320, 'cloth', 'none', 0, 90, 9, 0, 0, 37, 0, 'true'), 
+(36, 'Leather Sandals', 'feet', 'false', 'none', 1320, 'leather', 'none', 0, 90, 9, 0, 0, 37, 0, 'true'), 
+(37, 'Leather Shoes', 'feet', 'false', 'none', 1320, 'leather', 'none', 0, 90, 13, 0, 0, 2650, 0, 'true'), 
+(38, 'Low Boots', 'feet', 'false', 'none', 1320, 'leather', 'none', 0, 90, 15, 0, 0, 6770, 0, 'true'), 
+(39, 'Boots', 'feet', 'false', 'none', 1310, 'cloth', 'none', 0, 90, 17, 0, 0, 12300, 0, 'true'), 
+(40, 'Leather Boots', 'feet', 'true', 'none', 1300, 'leather', 'd', 0, 90, 19, 0, 0, 20900, 38, 'true'), 
+(41, 'Cloth Cap', 'head', 'false', 'none', 660, 'cloth', 'none', 0, 90, 13, 0, 0, 55, 0, 'true'), 
+(42, 'Leather Cap', 'head', 'false', 'none', 660, 'leather', 'none', 0, 90, 16, 0, 0, 911, 0, 'true'), 
+(43, 'Wooden Helmet', 'head', 'false', 'none', 660, 'wood', 'none', 0, 90, 19, 0, 0, 3980, 0, 'true'), 
+(44, 'Leather Helmet', 'head', 'false', 'none', 650, 'leather', 'none', 0, 90, 23, 0, 0, 10200, 0, 'true'), 
+(45, 'Bone Helmet', 'head', 'true', 'none', 640, 'bone', 'd', 0, 90, 29, 0, 0, 31300, 56, 'true'), 
+(46, 'Bronze Helmet', 'head', 'true', 'none', 630, 'bronze', 'd', 0, 90, 33, 0, 0, 50000, 90, 'true'), 
+(47, 'Helmet', 'head', 'true', 'none', 640, 'fine_steel', 'd', 0, 90, 37, 0, 0, 76200, 138, 'true'), 
+(48, 'Short Gloves', 'gloves', 'false', 'none', 660, 'cloth', 'none', 0, 90, 9, 0, 0, 37, 0, 'true'), 
+(49, 'Gloves', 'gloves', 'false', 'none', 660, 'cloth', 'none', 0, 90, 13, 0, 0, 2650, 0, 'true'), 
+(50, 'Leather Gloves', 'gloves', 'false', 'none', 650, 'leather', 'none', 0, 90, 15, 0, 0, 6770, 0, 'true'), 
+(51, 'Bracer', 'gloves', 'false', 'none', 650, 'leather', 'none', 0, 90, 17, 0, 0, 12300, 0, 'true'), 
+(52, 'Hemp Cloak', 'back', 'false', 'none', 260, 'cloth', 'none', 0, 90, 2, 0, 0, 37, 0, 'true'), 
+(53, 'Cotton Cloak', 'back', 'false', 'none', 250, 'cloth', 'none', 0, 90, 3, 0, 0, 607, 0, 'true'), 
+(54, 'Silk Cloak', 'back', 'false', 'none', 250, 'cloth', 'none', 0, 90, 4, 0, 0, 2650, 0, 'true'), 
+(55, 'Cotton Undergarment', 'underwear', 'false', 'none', 170, 'cotton', 'none', 0, 90, 4, 0, 0, 18, 0, 'true'), 
+(56, 'Wool Undergarment', 'underwear', 'false', 'none', 170, 'wood', 'none', 0, 90, 5, 0, 0, 304, 0, 'true'), 
+(58, 'Mithril Breastplate', 'chest', 'true', 'heavy', 8670, 'mithril', 'd', 0, 95, 95, 0, 0, 183000, 332, 'true'), 
+(59, 'Mithril Gaiters', 'legs', 'true', 'heavy', 3830, 'mithril', 'd', 0, 95, 61, 0, 0, 127000, 230, 'true'), 
+(60, 'Composite Armor', 'CHEST', 'true', 'heavy', 10980, 'fine_steel', 'c', 0, 90, 224, 0, 0, 1440000, 576, 'true'), 
+(61, 'Mithril Gloves', 'gloves', 'true', 'none', 630, 'mithril', 'd', 0, 90, 29, 0, 0, 97800, 177, 'true'), 
+(62, 'Mithril Boots', 'feet', 'true', 'none', 1230, 'leather', 'c', 0, 90, 32, 0, 0, 45900, 83, 'true'), 
+(63, 'Gauntlets', 'gloves', 'true', 'none', 640, 'cloth', 'd', 0, 90, 24, 0, 0, 50800, 92, 'true'), 
+(64, 'Composite Boots', 'feet', 'true', 'none', 1220, 'fine_steel', 'c', 0, 90, 36, 0, 0, 245000, 98, 'true'), 
+(112, 'Apprentice`s Earring', 'rear,lear', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 11, 0, 49, 0, 'true'), 
+(113, 'Mystic`s Earring', 'rear,lear', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 13, 0, 811, 0, 'true'), 
+(114, 'Earring of Strength', 'rear,lear', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 16, 0, 3510, 0, 'true'), 
+(115, 'Earring of Wisdom', 'rear,lear', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 16, 0, 3510, 0, 'true'), 
+(116, 'Magic Ring', 'rfinger,lfinger', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 7, 0, 33, 0, 'true'), 
+(117, 'Ring of Mana', 'rfinger,lfinger', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 34, 0, 404000, 53, 'true'), 
+(118, 'Necklace of Magic', 'neck', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 15, 0, 66, 0, 'true'), 
+(119, 'Sage`s Necklace', 'neck', 'true', 'none', 150, 'adamantaite', 'c', 0, 95, 0, 64, 0, 565000, 226, 'true'), 
+(347, 'Ring Mail Breastplate', 'chest', 'true', 'heavy', 8820, 'steel', 'd', 0, 90, 77, 0, 0, 83500, 151, 'true'), 
+(348, 'Scale Mail', 'chest', 'true', 'heavy', 8720, 'steel', 'd', 0, 90, 87, 0, 0, 133000, 241, 'true'), 
+(349, 'Compound Scale Mail', 'chest', 'true', 'heavy', 8620, 'fine_steel', 'd', 0, 98, 95, 0, 0, 183000, 332, 'true'), 
+(350, 'Dwarven Scale Mail', 'chest', 'true', 'heavy', 8540, 'fine_steel', 'd', 0, 98, 95, 0, 0, 183000, 332, 'true'), 
+(351, 'Blast Plate', 'chest', 'true', 'heavy', 8420, 'fine_steel', 'd', 0, 90, 97, 0, 0, 203000, 369, 'true'), 
+(352, 'Brigandine Armor', 'chest', 'true', 'heavy', 8320, 'fine_steel', 'd', 0, 90, 108, 0, 0, 299000, 543, 'true'), 
+(353, 'Half Plate Armor', 'chest', 'true', 'heavy', 8220, 'fine_steel', 'd', 0, 90, 111, 0, 0, 391000, 710, 'true'), 
+(354, 'Chain Mail Shirt', 'chest', 'true', 'heavy', 8120, 'fine_steel', 'c', 0, 90, 120, 0, 0, 505000, 202, 'true'), 
+(355, 'Dwarven Chain Mail Shirt', 'chest', 'true', 'heavy', 8070, 'fine_steel', 'c', 0, 98, 129, 0, 0, 644000, 257, 'true'), 
+(356, 'Full Plate Armor', 'CHEST', 'true', 'heavy', 10480, 'fine_steel', 'c', 0, 90, 239, 0, 0, 2090000, 836, 'true'), 
+(357, 'Zubei`s Breastplate', 'chest', 'true', 'heavy', 7970, 'mithril', 'b', 0, 90, 157, 0, 0, 2080000, 277, 'true'), 
+(358, 'Blue Wolf Breastplate', 'chest', 'true', 'heavy', 7820, 'oriharukon', 'b', 0, 90, 166, 0, 0, 3220000, 429, 'true'), 
+(359, 'Shining Dragon Armor', 'CHEST', 'true', 'heavy', 6400, 'mithril', 'b', 0, 90, 301, 0, 0, 6770000, 902, 'true'), 
+(360, 'Armor of Victory', 'chest', 'true', 'heavy', 3360, 'oriharukon', 'b', 0, 90, 175, 0, 0, 3220000, 429, 'true'), 
+(361, 'Breastplate of Valor', 'chest', 'true', 'heavy', 3360, 'blood_steel', 'b', 0, 90, 185, 0, 0, 4630000, 617, 'true'), 
+(362, 'Glorious Armor', 'CHEST', 'true', 'heavy', 6720, 'fine_steel', 'b', 0, 90, 284, 0, 0, 4710000, 628, 'true'), 
+(363, 'Red Flame Armor', 'CHEST', 'true', 'heavy', 6400, 'blood_steel', 'b', 0, 90, 301, 0, 0, 6770000, 902, 'true'), 
+(364, 'Elven Crystal Breastplate', 'chest', 'true', 'heavy', 2400, 'crystal', 'b', 0, 95, 175, 0, 0, 3220000, 429, 'true'), 
+(365, 'Dark Crystal Breastplate', 'chest', 'true', 'heavy', 7700, 'crystal', 'a', 0, 95, 171, 0, 0, 4630000, 617, 'true'), 
+(366, 'Implosion Armor', 'CHEST', 'true', 'heavy', 6080, 'damascus', 'b', 0, 90, 284, 0, 0, 4710000, 628, 'true'), 
+(367, 'Dark Dragon Armor', 'CHEST', 'true', 'heavy', 5760, 'damascus', 'b', 0, 90, 301, 0, 0, 6770000, 902, 'true'), 
+(368, 'Elven Vagian Armor', 'CHEST', 'true', 'heavy', 2400, 'mithril', 'b', 0, 95, 284, 0, 0, 4710000, 628, 'true'), 
+(369, 'Dark Vagian Armor', 'CHEST', 'true', 'heavy', 2400, 'mithril', 'b', 0, 95, 301, 0, 0, 6770000, 902, 'true'), 
+(370, 'Complete Plate Armor', 'chest', 'true', 'heavy', 6400, 'fine_steel', 'b', 0, 98, 284, 0, 0, 4710000, 628, 'true'), 
+(371, 'Hell Plate', 'CHEST', 'true', 'heavy', 6400, 'blood_steel', 'b', 0, 100, 301, 0, 0, 6770000, 902, 'true'), 
+(372, 'Art of Plate', 'CHEST', 'true', 'heavy', 6720, 'chrysolite', 'b', 0, 98, 284, 0, 0, 4710000, 628, 'true'), 
+(373, 'Masterpiece Armor', 'CHEST', 'true', 'heavy', 5600, 'oriharukon', 'b', 0, 100, 301, 0, 0, 6770000, 902, 'true'), 
+(374, 'Armor of Nightmare', 'CHEST', 'true', 'heavy', 9580, 'blood_steel', 'a', 0, 90, 293, 0, 0, 10300000, 824, 'true'), 
+(375, 'Dragon Scale Mail', 'chest', 'true', 'heavy', 7620, 'scale_of_dragon', 's', 0, 100, 200, 0, 0, 10500000, 525, 'true'), 
+(376, 'Iron Plate Gaiters', 'legs', 'true', 'heavy', 3820, 'steel', 'd', 0, 90, 48, 0, 0, 52200, 94, 'true'), 
+(377, 'Scale Gaiters', 'legs', 'true', 'heavy', 3860, 'fine_steel', 'd', 0, 90, 54, 0, 0, 83300, 151, 'true'), 
+(378, 'Compound Scale Gaiters', 'legs', 'true', 'heavy', 3770, 'fine_steel', 'd', 0, 98, 61, 0, 0, 127000, 230, 'true'), 
+(379, 'Dwarven Scale Gaiters', 'legs', 'true', 'heavy', 3840, 'fine_steel', 'd', 0, 98, 61, 0, 0, 127000, 230, 'true'), 
+(380, 'Plate Gaiters', 'legs', 'true', 'heavy', 3770, 'fine_steel', 'd', 0, 90, 70, 0, 0, 244000, 443, 'true'), 
+(381, 'Chain Gaiters', 'legs', 'true', 'heavy', 3680, 'fine_steel', 'c', 0, 90, 75, 0, 0, 316000, 126, 'true'), 
+(382, 'Dwarven Chain Gaiters', 'legs', 'true', 'heavy', 3620, 'fine_steel', 'c', 0, 98, 80, 0, 0, 403000, 161, 'true'), 
+(383, 'Zubei`s Gaiters', 'legs', 'true', 'heavy', 3570, 'mithril', 'b', 0, 90, 98, 0, 0, 1300000, 173, 'true'), 
+(384, 'Wolf Gaiters', 'legs', 'true', 'heavy', 2560, 'oriharukon', 'b', 0, 90, 109, 0, 0, 2010000, 268, 'true'), 
+(385, 'Gaiters of Victory', 'legs', 'true', 'heavy', 2240, 'oriharukon', 'b', 0, 90, 109, 0, 0, 2010000, 268, 'true'), 
+(386, 'Gaiters of Valor', 'legs', 'true', 'heavy', 2240, 'blood_steel', 'b', 0, 90, 116, 0, 0, 2890000, 385, 'true'), 
+(387, 'Elven Crystal Gaiters', 'legs', 'true', 'heavy', 2240, 'crystal', 'b', 0, 95, 109, 0, 0, 2010000, 268, 'true'), 
+(388, 'Dark Crystal Gaiters', 'legs', 'true', 'heavy', 3320, 'crystal', 'a', 0, 95, 107, 0, 0, 2890000, 385, 'true'), 
+(389, 'Dragon Scale Gaiters', 'legs', 'true', 'heavy', 3260, 'scale_of_dragon', 's', 0, 100, 150, 0, 0, 5980000, 299, 'true'), 
+(390, 'Cotton Shirt', 'chest', 'false', 'light', 4770, 'cloth', 'none', 0, 90, 50, 0, 0, 20300, 0, 'true'), 
+(391, 'Puma Skin Shirt', 'chest', 'true', 'light', 4700, 'leather', 'd', 0, 90, 58, 0, 0, 62600, 113, 'true'), 
+(392, 'Lion Skin Shirt', 'chest', 'true', 'light', 4580, 'leather', 'd', 0, 90, 65, 0, 0, 99900, 181, 'true'), 
+(393, 'Mithril Banded Mail', 'chest', 'true', 'light', 4570, 'mithril', 'd', 0, 90, 73, 0, 0, 152000, 276, 'true'), 
+(394, 'Reinforced Leather Shirt', 'chest', 'true', 'light', 4570, 'leather', 'd', 0, 90, 73, 0, 0, 152000, 276, 'true'), 
+(395, 'Manticore Skin Shirt', 'chest', 'true', 'light', 4520, 'leather', 'd', 0, 90, 81, 0, 0, 224000, 407, 'true'), 
+(396, 'Salamander Skin Mail', 'CHEST', 'true', 'light', 6100, 'leather', 'd', 0, 90, 136, 0, 0, 429000, 780, 'true'), 
+(397, 'Mithril Shirt', 'chest', 'true', 'light', 4470, 'mithril', 'c', 0, 98, 90, 0, 0, 379000, 151, 'true'), 
+(398, 'Plated Leather', 'chest', 'true', 'light', 4450, 'leather', 'c', 0, 90, 94, 0, 0, 446000, 178, 'true'), 
+(399, 'Rind Leather Armor', 'chest', 'true', 'light', 4420, 'leather', 'c', 0, 90, 97, 0, 0, 483000, 193, 'true'), 
+(400, 'Theca Leather Armor', 'chest', 'true', 'light', 4370, 'leather', 'c', 0, 90, 106, 0, 0, 825000, 330, 'true'), 
+(401, 'Drake Leather Armor', 'CHEST', 'true', 'light', 5800, 'leather', 'c', 0, 90, 179, 0, 0, 1570000, 628, 'true'), 
+(402, 'Chain Mail of Silence', 'CHEST', 'true', 'light', 3200, 'damascus', 'b', 0, 90, 213, 0, 0, 3530000, 470, 'true'), 
+(403, 'Gust Chain Mail', 'CHEST', 'true', 'light', 2720, 'blood_steel', 'b', 0, 90, 225, 0, 0, 5080000, 677, 'true'), 
+(404, 'Prairie Leather Armor', 'chest', 'true', 'light', 8000, 'leather', 'b', 0, 95, 131, 0, 0, 2410000, 321, 'true'), 
+(405, 'Leather Armor of The Underworld', 'chest', 'true', 'light', 8000, 'leather', 'b', 0, 95, 139, 0, 0, 3470000, 462, 'true'), 
+(406, 'Leather Suit of Concentration', 'CHEST', 'true', 'light', 2400, 'leather', 'b', 0, 90, 213, 0, 0, 3530000, 470, 'true'), 
+(407, 'Ace`s Leather Armor', 'CHEST', 'true', 'light', 2400, 'leather', 'b', 0, 90, 225, 0, 0, 5080000, 677, 'true'), 
+(408, 'Guardian`s Leather Armor', 'chest', 'true', 'light', 8000, 'leather', 'b', 0, 95, 131, 0, 0, 2410000, 321, 'true'), 
+(409, 'Marksman`s Leather Armor', 'chest', 'true', 'light', 4300, 'leather', 'b', 0, 95, 139, 0, 0, 3470000, 462, 'true'), 
+(410, 'Unicorn Leather Armor', 'CHEST', 'true', 'light', 1280, 'leather', 'a', 0, 90, 238, 0, 0, 7730000, 618, 'true'), 
+(411, 'Dragon Leather Armor', 'CHEST', 'true', 'light', 4950, 'leather', 's', 0, 100, 280, 0, 400, 10500000, 525, 'true'), 
+(412, 'Cotton Pants', 'legs', 'false', 'light', 1630, 'cloth', 'none', 0, 90, 32, 0, 0, 12700, 0, 'true'), 
+(413, 'Puma Skin Gaiters', 'legs', 'true', 'light', 1600, 'leather', 'd', 0, 90, 36, 0, 0, 39100, 71, 'true'), 
+(414, 'Lion Skin Gaiters', 'legs', 'true', 'light', 1570, 'leather', 'd', 0, 90, 41, 0, 0, 62500, 113, 'true'), 
+(415, 'Mithril Banded Gaiters', 'legs', 'true', 'light', 1580, 'mithril', 'd', 0, 98, 46, 0, 0, 95200, 173, 'true'), 
+(416, 'Reinforced Leather Gaiters', 'legs', 'true', 'light', 1570, 'leather', 'd', 0, 90, 46, 0, 0, 95200, 173, 'true'), 
+(417, 'Manticore Skin Gaiters', 'legs', 'true', 'light', 1550, 'leather', 'd', 0, 90, 51, 0, 0, 140000, 254, 'true'), 
+(418, 'Plated Leather Gaiters', 'legs', 'true', 'light', 1560, 'leather', 'c', 0, 90, 59, 0, 0, 279000, 111, 'true'), 
+(419, 'Rind Leather Gaiters', 'legs', 'true', 'light', 1550, 'leather', 'c', 0, 90, 60, 0, 0, 302000, 120, 'true'), 
+(420, 'Theca Leather Gaiters', 'legs', 'true', 'light', 1530, 'leather', 'c', 0, 90, 66, 0, 0, 516000, 206, 'true'), 
+(421, 'Prairie Leather Gaiters', 'legs', 'true', 'light', 4800, 'leather', 'b', 0, 95, 82, 0, 0, 1510000, 201, 'true'), 
+(422, 'Gaiters of The Underworld', 'legs', 'true', 'light', 4800, 'leather', 'b', 0, 95, 87, 0, 0, 2170000, 289, 'true'), 
+(423, 'Guardian`s Leather Gaiters', 'legs', 'true', 'light', 4800, 'leather', 'b', 0, 95, 82, 0, 0, 1510000, 201, 'true'), 
+(424, 'Marksman`s Leather Gaiters', 'legs', 'true', 'light', 1490, 'leather', 'b', 0, 95, 87, 0, 0, 2170000, 289, 'true'), 
+(425, 'Apprentice`s Tunic', 'chest', 'false', 'magic', 2150, 'cloth', 'none', 0, 90, 17, 0, 19, 26, 0, 'true'), 
+(426, 'Tunic', 'chest', 'false', 'magic', 2150, 'cloth', 'none', 0, 90, 18, 0, 24, 147, 0, 'true'), 
+(427, 'Cotton Robe', 'CHEST', 'false', 'magic', 2750, 'cotton', 'none', 0, 90, 35, 0, 61, 3550, 0, 'true'), 
+(428, 'Feriotic Tunic', 'chest', 'false', 'magic', 2140, 'cloth', 'none', 0, 90, 21, 0, 38, 2430, 0, 'true'), 
+(429, 'Leather Tunic', 'chest', 'false', 'magic', 2110, 'leather', 'none', 0, 90, 25, 0, 52, 7960, 0, 'true'), 
+(430, 'Robe of Devotion', 'CHEST', 'false', 'magic', 2650, 'cloth', 'none', 0, 90, 49, 0, 109, 29700, 0, 'true'), 
+(431, 'Robe of Magic', 'CHEST', 'false', 'magic', 2600, 'cloth', 'none', 0, 90, 56, 0, 140, 53900, 0, 'true'), 
+(432, 'Cursed Tunic', 'chest', 'true', 'magic', 2090, 'cloth', 'd', 0, 90, 39, 0, 106, 62600, 113, 'true'), 
+(433, 'Elven Tunic', 'chest', 'true', 'magic', 2080, 'cloth', 'd', 0, 95, 43, 0, 126, 99900, 181, 'true'), 
+(434, 'White Tunic', 'chest', 'true', 'magic', 2040, 'cloth', 'd', 0, 90, 43, 0, 126, 99900, 181, 'true'), 
+(435, 'Mystic`s Tunic', 'chest', 'true', 'magic', 2030, 'cloth', 'd', 0, 90, 43, 0, 126, 99900, 181, 'true'), 
+(436, 'Tunic of Knowledge', 'chest', 'true', 'magic', 2020, 'cloth', 'd', 0, 90, 49, 0, 147, 152000, 276, 'true'), 
+(437, 'Mithril Tunic', 'chest', 'true', 'magic', 2010, 'mithril', 'd', 0, 98, 54, 0, 169, 224000, 407, 'true'), 
+(438, 'Sage`s Rag', 'CHEST', 'true', 'magic', 2580, 'cloth', 'd', 0, 90, 90, 0, 320, 429000, 780, 'true'), 
+(439, 'Karmian Tunic', 'chest', 'true', 'magic', 1980, 'cloth', 'c', 0, 90, 60, 0, 225, 379000, 151, 'true'), 
+(440, 'Robe of Seal', 'CHEST', 'true', 'magic', 2500, 'cloth', 'c', 0, 90, 105, 0, 413, 707000, 282, 'true'), 
+(441, 'Demon`s Tunic', 'chest', 'true', 'magic', 1990, 'cloth', 'c', 0, 90, 69, 0, 284, 736000, 294, 'true'), 
+(442, 'Divine Tunic', 'chest', 'true', 'magic', 1980, 'cloth', 'c', 0, 90, 74, 0, 314, 1070000, 428, 'true'), 
+(443, 'Tunic of Mana', 'chest', 'true', 'magic', 2000, 'cloth', 'b', 0, 90, 87, 0, 377, 2410000, 321, 'true'), 
+(444, 'Sage`s Robe', 'CHEST', 'true', 'magic', 1600, 'cloth', 'b', 0, 90, 150, 0, 665, 5080000, 677, 'true'), 
+(445, 'Paradia Tunic', 'chest', 'true', 'magic', 1990, 'cloth', 'b', 0, 98, 87, 0, 377, 2410000, 321, 'true'), 
+(446, 'Majestic Tunic', 'chest', 'true', 'magic', 1880, 'cloth', 'b', 0, 98, 92, 0, 409, 3470000, 462, 'true'), 
+(447, 'Tunic of Solar Eclipse', 'chest', 'true', 'magic', 1960, 'cloth', 'b', 0, 90, 87, 0, 377, 2410000, 321, 'true'), 
+(448, 'Robe of Black Ore', 'CHEST', 'true', 'magic', 1600, 'cloth', 'b', 0, 90, 150, 0, 665, 5080000, 677, 'true'), 
+(449, 'Tunic of Summoning', 'chest', 'true', 'magic', 1950, 'cloth', 'b', 0, 90, 87, 0, 377, 2410000, 321, 'true'), 
+(450, 'Otherworldly Robe', 'chest', 'true', 'magic', 1600, 'cloth', 'b', 0, 90, 150, 0, 665, 5080000, 677, 'true'), 
+(451, 'Elemental Tunic', 'chest', 'true', 'magic', 1970, 'cloth', 'b', 0, 98, 87, 0, 377, 2410000, 321, 'true'), 
+(452, 'Tunic of Phantom', 'chest', 'true', 'magic', 1890, 'cloth', 'b', 0, 98, 92, 0, 409, 3470000, 462, 'true'), 
+(453, 'Tunic of Grace', 'chest', 'true', 'magic', 1930, 'cloth', 'b', 0, 90, 87, 0, 377, 2410000, 321, 'true'), 
+(454, 'Robe of Holy Spirit', 'CHEST', 'true', 'magic', 1600, 'cloth', 'b', 0, 90, 150, 0, 665, 5080000, 677, 'true'), 
+(455, 'Phoenix Tunic', 'chest', 'true', 'magic', 1950, 'cloth', 'b', 0, 90, 87, 0, 377, 2410000, 321, 'true'), 
+(456, 'Cerberus Tunic', 'chest', 'true', 'magic', 1870, 'cloth', 'b', 0, 90, 92, 0, 409, 3470000, 462, 'true'), 
+(457, 'Tunic of Aid', 'chest', 'true', 'magic', 1910, 'cloth', 'b', 0, 90, 87, 0, 377, 2410000, 321, 'true'), 
+(458, 'Robe of Blessing', 'CHEST', 'true', 'magic', 1600, 'cloth', 'b', 0, 90, 150, 0, 665, 5080000, 677, 'true'), 
+(459, 'Dasparion`s Robe', 'CHEST', 'true', 'magic', 1200, 'cloth', 'a', 0, 95, 158, 0, 718, 7730000, 618, 'true'), 
+(460, 'The Robe', 'CHEST', 'true', 'magic', 2300, 'cloth', 's', 0, 100, 200, 0, 800, 10500000, 525, 'true'), 
+(461, 'Apprentice`s Stockings', 'legs', 'false', 'magic', 1100, 'cloth', 'none', 0, 90, 10, 0, 10, 6, 0, 'true'), 
+(462, 'Stockings', 'legs', 'false', 'magic', 1080, 'cloth', 'none', 0, 90, 11, 0, 15, 92, 0, 'true'), 
+(463, 'Feriotic Stockings', 'legs', 'false', 'magic', 1070, 'cloth', 'none', 0, 90, 13, 0, 23, 1520, 0, 'true'), 
+(464, 'Leather Stockings', 'legs', 'false', 'magic', 1020, 'leather', 'none', 0, 90, 16, 0, 33, 4970, 0, 'true'), 
+(465, 'Cursed Stockings', 'legs', 'true', 'magic', 1020, 'cloth', 'd', 0, 90, 24, 0, 66, 39100, 71, 'true'), 
+(466, 'Elven Stockings', 'legs', 'true', 'magic', 1010, 'cloth', 'd', 0, 95, 27, 0, 79, 62500, 113, 'true'), 
+(467, 'Dark Stockings', 'legs', 'true', 'magic', 1000, 'cloth', 'd', 0, 90, 27, 0, 79, 62500, 113, 'true'), 
+(468, 'Mystic`s Stockings', 'legs', 'true', 'magic', 990, 'cloth', 'd', 0, 90, 27, 0, 79, 62500, 113, 'true'), 
+(469, 'Stockings of Knowledge', 'legs', 'true', 'magic', 1000, 'cloth', 'd', 0, 90, 30, 0, 92, 95200, 173, 'true'), 
+(470, 'Mithril Stockings', 'legs', 'true', 'magic', 980, 'mithril', 'd', 0, 98, 34, 0, 105, 140000, 254, 'true'), 
+(471, 'Karmian Stockings', 'legs', 'true', 'magic', 970, 'cloth', 'c', 0, 90, 37, 0, 141, 237000, 94, 'true'), 
+(472, 'Demon`s Stockings', 'legs', 'true', 'magic', 980, 'cloth', 'c', 0, 90, 43, 0, 177, 460000, 184, 'true'), 
+(473, 'Divine Stockings', 'legs', 'true', 'magic', 960, 'cloth', 'c', 0, 90, 46, 0, 196, 671000, 268, 'true'), 
+(474, 'Stockings of Mana', 'legs', 'true', 'magic', 2400, 'cloth', 'b', 0, 90, 55, 0, 236, 1510000, 201, 'true'), 
+(475, 'Paradia Stockings', 'legs', 'true', 'magic', 1600, 'cloth', 'b', 0, 98, 55, 0, 236, 1510000, 201, 'true'), 
+(476, 'Majestic Stockings', 'legs', 'true', 'magic', 1600, 'cloth', 'b', 0, 98, 58, 0, 256, 2170000, 289, 'true'), 
+(477, 'Stockings of Solar Eclipse', 'legs', 'true', 'magic', 2400, 'cloth', 'b', 0, 90, 55, 0, 236, 1510000, 201, 'true'), 
+(478, 'Stockings of Summoning', 'legs', 'true', 'magic', 2400, 'cloth', 'b', 0, 90, 55, 0, 236, 1510000, 201, 'true'), 
+(479, 'Elemental Stockings', 'legs', 'true', 'magic', 1600, 'cloth', 'b', 0, 98, 55, 0, 236, 1510000, 201, 'true'), 
+(480, 'Stockings of Phantom', 'legs', 'true', 'magic', 1600, 'cloth', 'b', 0, 98, 58, 0, 256, 2170000, 289, 'true'), 
+(481, 'Stockings of Grace', 'legs', 'true', 'magic', 2400, 'cloth', 'b', 0, 90, 55, 0, 236, 1510000, 201, 'true'), 
+(482, 'Phoenix Stockings', 'legs', 'true', 'magic', 2400, 'cloth', 'b', 0, 90, 55, 0, 236, 1510000, 201, 'true'), 
+(483, 'Cerberus Stockings', 'legs', 'true', 'magic', 6400, 'cloth', 'b', 0, 90, 58, 0, 256, 2170000, 289, 'true'), 
+(484, 'Stockings of Aid', 'legs', 'true', 'magic', 2400, 'cloth', 'b', 0, 90, 55, 0, 236, 1510000, 201, 'true'), 
+(485, 'Tattoo of Power', 'underwear', 'false', 'none', 4200, 'dyestuff', 'none', 0, 90, 53, 0, 0, 36900, 0, 'true'), 
+(486, 'Tattoo of Fire', 'underwear', 'true', 'none', 4050, 'dyestuff', 'd', 0, 90, 73, 0, 0, 152000, 276, 'true'), 
+(487, 'Tattoo of Resolve', 'underwear', 'true', 'none', 4000, 'dyestuff', 'd', 0, 90, 73, 0, 0, 152000, 276, 'true'), 
+(488, 'Tattoo of Flame', 'underwear', 'true', 'none', 800, 'dyestuff', 'b', 0, 90, 139, 0, 0, 3470000, 462, 'true'), 
+(489, 'Tattoo of Bravery', 'underwear', 'true', 'none', 4100, 'dyestuff', 'c', 0, 90, 110, 0, 0, 1070000, 428, 'true'), 
+(490, 'Tattoo of Blood', 'underwear', 'true', 'none', 3800, 'dyestuff', 'a', 0, 90, 132, 0, 0, 3470000, 462, 'true'), 
+(491, 'Tattoo of Absolute', 'underwear', 'true', 'none', 800, 'dyestuff', 'a', 0, 90, 146, 0, 0, 5280000, 422, 'true'), 
+(492, 'Tattoo of Soul', 'underwear', 'true', 'none', 4150, 'dyestuff', 'd', 0, 90, 65, 0, 0, 99900, 181, 'true'), 
+(493, 'Tattoo of Avadon', 'underwear', 'true', 'none', 4000, 'dyestuff', 'b', 0, 90, 117, 0, 0, 1560000, 208, 'true'), 
+(494, 'Tattoo of Doom', 'underwear', 'true', 'none', 4100, 'dyestuff', 'b', 0, 90, 125, 0, 0, 2410000, 321, 'true'), 
+(495, 'Tattoo of Pledge', 'underwear', 'true', 'none', 4000, 'dyestuff', 'b', 0, 90, 124, 0, 0, 1560000, 208, 'true'), 
+(496, 'Tattoo of Divine', 'underwear', 'true', 'none', 4100, 'dyestuff', 'b', 0, 90, 131, 0, 0, 2410000, 321, 'true'), 
+(497, 'Chain Helmet', 'head', 'true', 'none', 620, 'fine_steel', 'c', 0, 90, 45, 0, 0, 147000, 59, 'true'), 
+(498, 'Steel Plate Helmet', 'head', 'true', 'none', 610, 'fine_steel', 'c', 0, 90, 49, 0, 0, 206000, 82, 'true'), 
+(499, 'Mithril Helmet', 'head', 'true', 'none', 240, 'mithril', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true'), 
+(500, 'Great Helmet', 'head', 'true', 'none', 610, 'fine_steel', 'c', 0, 90, 51, 0, 0, 242000, 96, 'true'), 
+(501, 'Armet', 'head', 'true', 'none', 580, 'chrysolite', 'b', 0, 90, 62, 0, 0, 1030000, 4, 'true'), 
+(502, 'Close Helmet', 'head', 'true', 'none', 570, 'oriharukon', 'a', 0, 90, 64, 0, 0, 1560000, 3, 'true'), 
+(503, 'Zubei`s Helmet', 'head', 'true', 'none', 590, 'mithril', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true'), 
+(504, 'Dragon Helmet', 'head', 'true', 'heavy', 550, 'bone', 's', 0, 90, 80, 0, 0, 3590000, 179, 'true'), 
+(505, 'Wolf Helmet', 'head', 'true', 'none', 580, 'oriharukon', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true'), 
+(506, 'Shining Dragon Helmet', 'head', 'true', 'none', 880, 'mithril', 'b', 0, 90, 69, 0, 0, 1740000, 232, 'true'), 
+(507, 'Helmet of Victory', 'head', 'true', 'none', 640, 'oriharukon', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true'), 
+(508, 'Helmet of Valor', 'head', 'true', 'none', 720, 'blood_steel', 'b', 0, 90, 69, 0, 0, 1740000, 232, 'true'), 
+(509, 'Glorious Helmet', 'head', 'true', 'none', 800, 'fine_steel', 'a', 0, 90, 65, 0, 0, 2040000, 3, 'true'), 
+(510, 'Red Flame Helmet', 'head', 'true', 'none', 960, 'blood_steel', 'a', 0, 90, 67, 0, 0, 2640000, 3, 'true'), 
+(511, 'Elven Crystal Helmet', 'head', 'true', 'none', 580, 'crystal', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true'), 
+(512, 'Dark Crystal Helmet', 'head', 'true', 'none', 570, 'crystal', 'a', 0, 90, 64, 0, 0, 1740000, 232, 'true'), 
+(513, 'Implosion Helmet', 'head', 'true', 'none', 480, 'damascus', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true'), 
+(514, 'Dark Dragon Helmet', 'head', 'true', 'none', 400, 'damascus', 'b', 0, 90, 69, 0, 0, 1740000, 232, 'true'), 
+(515, 'Elven Vagian Helm', 'head', 'true', 'none', 560, 'mithril', 'a', 0, 90, 65, 0, 0, 2040000, 3, 'true'), 
+(516, 'Dark Vagian Helm', 'head', 'true', 'none', 560, 'mithril', 'a', 0, 90, 67, 0, 0, 2640000, 3, 'true'), 
+(517, 'Composite Helmet', 'head', 'true', 'none', 610, 'fine_steel', 'c', 0, 90, 54, 0, 0, 368000, 147, 'true'), 
+(518, 'Hell Helm', 'head', 'true', 'none', 320, 'blood_steel', 'a', 0, 90, 67, 0, 0, 2640000, 3, 'true'), 
+(519, 'Art of Helmet', 'head', 'true', 'none', 400, 'chrysolite', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true'), 
+(520, 'Masterpiece Helm', 'head', 'true', 'none', 400, 'oriharukon', 'a', 0, 90, 67, 0, 0, 2640000, 3, 'true'), 
+(521, 'Helmet of Silence', 'head', 'true', 'none', 320, 'damascus', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true'), 
+(522, 'Gust Helmet', 'head', 'true', 'none', 570, 'blood_steel', 'b', 0, 90, 69, 0, 0, 1740000, 232, 'true'), 
+(523, 'Prairie Helmet', 'head', 'true', 'none', 480, 'leather', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true'), 
+(524, 'Helm of The Underworld', 'head', 'true', 'none', 320, 'damascus', 'b', 0, 90, 69, 0, 0, 1740000, 232, 'true'), 
+(525, 'Helmet of Concentration', 'head', 'true', 'none', 320, 'oriharukon', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true'), 
+(526, 'Ace`s Helmet', 'head', 'true', 'none', 320, 'oriharukon', 'b', 0, 90, 69, 0, 0, 1740000, 232, 'true'), 
+(527, 'Guardian`s Helmet', 'head', 'true', 'none', 240, 'mithril', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true'), 
+(528, 'Marksman Helmet', 'head', 'true', 'none', 240, 'leather', 'b', 0, 90, 69, 0, 0, 1740000, 232, 'true'), 
+(529, 'Cap of Mana', 'head', 'true', 'none', 320, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true'), 
+(530, 'Sage`s Cap', 'head', 'true', 'none', 320, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true'), 
+(531, 'Paradia Hood', 'head', 'true', 'none', 320, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true'), 
+(532, 'Inferno Hood', 'head', 'true', 'none', 320, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true'), 
+(533, 'Hood of Solar Eclipse', 'head', 'true', 'none', 320, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true'), 
+(534, 'Hood of Black Ore', 'head', 'true', 'none', 320, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true'), 
+(535, 'Hood of Summoning', 'head', 'true', 'none', 320, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true'), 
+(536, 'Otherworldly Hood', 'head', 'true', 'none', 320, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true'), 
+(537, 'Elemental Hood', 'head', 'true', 'none', 320, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true'), 
+(538, 'Hood of Phantom', 'head', 'true', 'none', 320, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true'), 
+(539, 'Hood of Grace', 'head', 'true', 'none', 320, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true'), 
+(540, 'Hood of Holy Spirit', 'head', 'true', 'none', 320, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true'), 
+(541, 'Phoenix Hood', 'head', 'true', 'none', 590, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true'), 
+(542, 'Cerberus Hood', 'head', 'true', 'none', 320, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true'), 
+(543, 'Hood of Aid', 'head', 'true', 'none', 320, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true'), 
+(544, 'Hood of Blessing', 'head', 'true', 'none', 320, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true'), 
+(545, 'Flame Helm', 'head', 'true', 'none', 400, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true'), 
+(546, 'Helm of Bravery', 'head', 'true', 'none', 400, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true'), 
+(547, 'Tallum Helm', 'head', 'true', 'none', 570, 'cloth', 'a', 0, 90, 64, 0, 0, 1740000, 232, 'true'), 
+(548, 'Absolute Helm', 'head', 'true', 'none', 400, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true'), 
+(549, 'Helm of Avadon', 'head', 'true', 'none', 400, 'cloth', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true'), 
+(550, 'Helm of Doom', 'head', 'true', 'none', 400, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true'), 
+(551, 'Helmet of Pledge', 'head', 'true', 'none', 400, 'chrysolite', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true'), 
+(552, 'Divine Helm', 'head', 'true', 'none', 400, 'cloth', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true'), 
+(553, 'Iron Boots', 'feet', 'true', 'none', 1280, 'fine_steel', 'd', 0, 90, 24, 0, 0, 50800, 92, 'true'), 
+(554, 'Sealed Zubei Boots', 'none', 'false', 'none', 1180, 'mithril', 'none', 0, 90, 41, 0, 0, 0, 0, 'true'), 
+(555, 'Dragon Boots', 'feet', 'true', 'heavy', 1110, 'leather', 'a', 0, 90, 40, 0, 0, 1760000, 140, 'true'), 
+(556, 'Wolf Boots', 'feet', 'true', 'none', 1180, 'oriharukon', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(557, 'Shining Dragon Boots', 'feet', 'true', 'none', 1150, 'mithril', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(558, 'Boots of Victory', 'feet', 'true', 'none', 1180, 'oriharukon', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(559, 'Boots of Valor', 'feet', 'true', 'none', 1150, 'blood_steel', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(560, 'Glorious Boots', 'feet', 'true', 'none', 1180, 'fine_steel', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(561, 'Red Flame Boots', 'feet', 'true', 'none', 1120, 'blood_steel', 'a', 0, 90, 46, 0, 0, 1160000, 154, 'true'), 
+(562, 'Elven Crystal Boots', 'feet', 'true', 'none', 1180, 'crystal', 'b', 0, 95, 41, 0, 0, 519000, 69, 'true'), 
+(563, 'Sealed Dark Crystal Boots', 'none', 'false', 'none', 1110, 'crystal', 'none', 0, 95, 46, 0, 0, 0, 0, 'true'), 
+(564, 'Implosion Boots', 'feet', 'true', 'none', 1150, 'damascus', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(565, 'Dark Dragon Boots', 'feet', 'true', 'none', 1130, 'damascus', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(566, 'Elven Vagian Boots', 'feet', 'true', 'none', 1150, 'mithril', 'b', 0, 95, 41, 0, 0, 519000, 69, 'true'), 
+(567, 'Dark Vagian Boots', 'feet', 'true', 'none', 1130, 'mithril', 'b', 0, 95, 44, 0, 0, 804000, 107, 'true'), 
+(568, 'Composite Boots', 'feet', 'true', 'none', 200, 'fine_steel', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(569, 'Hell Boots', 'feet', 'true', 'none', 1130, 'blood_steel', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(570, 'Art of Boots', 'feet', 'true', 'none', 1150, 'chrysolite', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(571, 'Masterpiece Boots', 'feet', 'true', 'none', 1130, 'oriharukon', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(572, 'Boots of Silence', 'feet', 'true', 'none', 1190, 'damascus', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(573, 'Gust Boots', 'feet', 'true', 'none', 1120, 'blood_steel', 'a', 0, 90, 46, 0, 0, 1160000, 154, 'true'), 
+(574, 'Prairie Boots', 'feet', 'true', 'none', 1140, 'leather', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(575, 'Boots of The Underworld', 'feet', 'true', 'none', 1110, 'leather', 'a', 0, 90, 46, 0, 0, 1160000, 154, 'true'), 
+(576, 'Boots of Concentration', 'feet', 'true', 'none', 1170, 'oriharukon', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(577, 'Ace`s Boots', 'feet', 'true', 'none', 1150, 'oriharukon', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(578, 'Guardian`s Boots', 'feet', 'true', 'none', 1180, 'mithril', 'b', 0, 95, 41, 0, 0, 519000, 69, 'true'), 
+(579, 'Marksman Boots', 'feet', 'true', 'none', 1150, 'leather', 'b', 0, 95, 44, 0, 0, 804000, 107, 'true'), 
+(580, 'Boots of Mana', 'feet', 'true', 'none', 1180, 'leather', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(581, 'Sage`s Boots', 'feet', 'true', 'none', 1150, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(582, 'Paradia Boots', 'feet', 'true', 'none', 1140, 'chrysolite', 'b', 0, 95, 44, 0, 0, 804000, 107, 'true'), 
+(583, 'Sealed Majestic Boots', 'none', 'false', 'none', 1110, 'blood_steel', 'none', 0, 95, 49, 0, 0, 0, 0, 'true'), 
+(584, 'Boots of Solar Eclipse', 'feet', 'true', 'none', 1180, 'blood_steel', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(585, 'Boots of Black Ore', 'feet', 'true', 'none', 1200, 'damascus', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(586, 'Boots of Summoning', 'feet', 'true', 'none', 1170, 'leather', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(587, 'Otherworldly Boots', 'feet', 'true', 'none', 1200, 'adamantaite', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(588, 'Elemental Boots', 'feet', 'true', 'none', 1130, 'mithril', 'b', 0, 95, 44, 0, 0, 804000, 107, 'true'), 
+(589, 'Boots of Phantom', 'feet', 'true', 'none', 1120, 'oriharukon', 'a', 0, 95, 49, 0, 0, 1760000, 140, 'true'), 
+(590, 'Boots of Grace', 'feet', 'true', 'none', 1130, 'mithril', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(591, 'Boots of Holy Spirit', 'feet', 'true', 'none', 1200, 'chrysolite', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(592, 'Phoenix Boots', 'feet', 'true', 'none', 1120, 'blood_steel', 'a', 0, 90, 46, 0, 0, 1160000, 154, 'true'), 
+(593, 'Cerberus Boots', 'feet', 'true', 'none', 1120, 'damascus', 'a', 0, 90, 49, 0, 0, 1760000, 140, 'true'), 
+(594, 'Boots of Aid', 'feet', 'true', 'none', 1200, 'leather', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(595, 'Boots of Blessing', 'feet', 'true', 'none', 1160, 'adamantaite', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(596, 'Flame Boots', 'feet', 'true', 'none', 1020, 'blood_steel', 'b', 0, 90, 46, 0, 0, 1160000, 154, 'true'), 
+(597, 'Boots of Bravery', 'feet', 'true', 'none', 1050, 'chrysolite', 'b', 0, 90, 46, 0, 0, 1160000, 154, 'true'), 
+(598, 'Sealed Tallum Boots', 'none', 'false', 'none', 1130, 'blood_steel', 'none', 0, 90, 46, 0, 0, 0, 0, 'true'), 
+(599, 'Absolute Boots', 'feet', 'true', 'none', 1130, 'mithril', 'b', 0, 90, 46, 0, 0, 1160000, 154, 'true'), 
+(600, 'Sealed Avadon Boots', 'none', 'false', 'none', 1170, 'damascus', 'none', 0, 90, 41, 0, 0, 0, 0, 'true'), 
+(601, 'Sealed Boots of Doom', 'none', 'false', 'none', 1130, 'mithril', 'none', 0, 90, 44, 0, 0, 0, 0, 'true'), 
+(602, 'Boots of Pledge', 'feet', 'true', 'none', 1130, 'chrysolite', 'b', 0, 90, 46, 0, 0, 1160000, 154, 'true'), 
+(603, 'Divine Boots', 'feet', 'true', 'none', 1200, 'adamantaite', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true'), 
+(604, 'Excellent Leather Gloves', 'gloves', 'true', 'none', 650, 'leather', 'd', 0, 90, 19, 0, 0, 20900, 38, 'true'), 
+(605, 'Leather Gauntlets', 'gloves', 'true', 'none', 640, 'leather', 'd', 0, 90, 22, 0, 0, 33300, 60, 'true'), 
+(606, 'Rip Gauntlets', 'gloves', 'true', 'none', 630, 'leather', 'd', 0, 90, 27, 0, 0, 74700, 135, 'true'), 
+(607, 'Ogre Power Gauntlets', 'gloves', 'true', 'none', 620, 'fine_steel', 'd', 0, 90, 29, 0, 0, 97800, 177, 'true'), 
+(608, 'Mithril Gauntlets', 'gloves', 'true', 'none', 600, 'mithril', 'c', 0, 95, 36, 0, 0, 245000, 98, 'true'), 
+(609, 'Gauntlets of Ghost', 'gloves', 'true', 'none', 1920, 'blood_steel', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true'), 
+(610, 'Saint Knight`s Gauntlets', 'gloves', 'true', 'none', 6400, 'oriharukon', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(611, 'Soul Leech Gauntlets', 'gloves', 'true', 'none', 4800, 'blood_steel', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(612, 'Sealed Zubei`s Gauntlets', 'none', 'false', 'none', 590, 'mithril', 'none', 0, 90, 41, 0, 0, 0, 0, 'true'), 
+(613, 'Sand Dragon Gloves', 'gloves', 'true', 'none', 3200, 'damascus', 'a', 0, 90, 49, 0, 0, 1760000, 140, 'true'), 
+(614, 'Knight`s Cloak', 'back', 'true', 'none', 240, 'cloth', 'd', 0, 90, 7, 0, 0, 20900, 38, 'true'), 
+(615, 'Cobweb Cloak', 'back', 'true', 'none', 240, 'cobweb', 'd', 0, 95, 8, 0, 0, 33300, 60, 'true'), 
+(616, 'Cloak of Magic', 'back', 'true', 'none', 240, 'cloth', 'd', 0, 90, 11, 0, 0, 74700, 135, 'true'), 
+(617, 'Mithril Cloak', 'back', 'true', 'none', 240, 'mithril', 'd', 0, 95, 11, 0, 0, 97800, 177, 'true'), 
+(618, 'Cloak of Self Protection', 'back', 'true', 'none', 240, 'cloth', 'c', 0, 90, 13, 0, 0, 161000, 64, 'true'), 
+(619, 'Ancient Cloak', 'back', 'true', 'none', 230, 'cloth', 'c', 0, 90, 15, 0, 0, 245000, 98, 'true'), 
+(620, 'Cloak of Protection', 'back', 'true', 'none', 230, 'cloth', 'c', 0, 90, 16, 0, 0, 358000, 143, 'true'), 
+(621, 'Cloak of Hell', 'back', 'true', 'none', 220, 'cloth', 'b', 0, 90, 18, 0, 0, 804000, 107, 'true'), 
+(622, 'Holy Spirit`s Cloak', 'back', 'true', 'none', 220, 'cloth', 'a', 0, 90, 18, 0, 0, 1160000, 154, 'true'), 
+(623, 'Divine Cloak', 'back', 'true', 'none', 220, 'cloth', 'a', 0, 90, 19, 0, 0, 1760000, 140, 'true'), 
+(624, 'Cloak of Invisibility', 'back', 'false', 'none', 260, 'cloth', 'none', 0, 90, 2, 0, 0, 37, 0, 'true'), 
+(675, 'Silk Yarn Undergarment Set', 'underwear', 'false', 'none', 170, 'cloth', 'none', 0, 90, 6, 0, 0, 1330, 0, 'true'), 
+(676, 'Pure White Undergarment Set', 'underwear', 'false', 'none', 160, 'cloth', 'none', 0, 90, 9, 0, 0, 6150, 0, 'true'), 
+(677, 'One-Piece Swimsuit', 'underwear', 'true', 'none', 150, 'cloth', 'd', 0, 90, 10, 0, 0, 10400, 18, 'true'), 
+(678, 'Bikini Set', 'underwear', 'true', 'none', 150, 'cloth', 'd', 0, 90, 11, 0, 0, 16700, 30, 'true'), 
+(679, 'Cursed Undergarment Set', 'underwear', 'true', 'none', 150, 'cloth', 'd', 0, 90, 12, 0, 0, 25400, 46, 'true'), 
+(680, 'Mithril Undergarment Set', 'underwear', 'true', 'none', 140, 'mithril', 'c', 0, 97, 16, 0, 0, 63100, 25, 'true'), 
+(681, 'Fascination Undergarment Set', 'underwear', 'true', 'none', 140, 'cloth', 'c', 0, 90, 17, 0, 0, 80500, 32, 'true'), 
+(682, 'Demon`s Undergarment Set', 'underwear', 'true', 'none', 140, 'cloth', 'c', 0, 90, 19, 0, 0, 179000, 71, 'true'), 
+(683, 'Holy Undergarment Set', 'underwear', 'true', 'none', 140, 'cloth', 'b', 0, 95, 22, 0, 0, 402000, 53, 'true'), 
+(684, 'Underwear of Rule', 'underwear', 'true', 'none', 140, 'cloth', 'a', 0, 90, 24, 0, 0, 880000, 70, 'true'), 
+(685, 'Crystal Swimsuit Set', 'underwear', 'true', 'none', 130, 'crystal', 's', 0, 85, 26, 0, 0, 1310000, 65, 'true'), 
+(845, 'Cat`s Eye Earring', 'rear,lear', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 19, 0, 8890, 0, 'true'), 
+(846, 'Coral Earring', 'rear,lear', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 21, 0, 16000, 0, 'true'), 
+(847, 'Red Crescent Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 24, 0, 26900, 48, 'true'), 
+(848, 'Enchanted Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 27, 0, 42600, 77, 'true'), 
+(849, 'Tiger`s Eye Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 30, 0, 64300, 116, 'true'), 
+(850, 'Elven Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 34, 0, 93400, 169, 'true'), 
+(851, 'Omen Beast`s Eye Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 36, 0, 121000, 220, 'true'), 
+(852, 'Moonstone Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 39, 0, 155000, 62, 'true'), 
+(853, 'Earring of Protection', 'rear,lear', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 42, 0, 196000, 78, 'true'), 
+(854, 'Earring of Binding', 'rear,lear', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 45, 0, 295000, 118, 'true'), 
+(855, 'Nassen`s Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 48, 0, 424000, 169, 'true'), 
+(856, 'Adamantite Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 51, 0, 606000, 80, 'true'), 
+(857, 'Blessed Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 48, 0, 424000, 169, 'true'), 
+(858, 'Sand Dragon Earring', 'rear,lear', 'true', 'none', 150, 'silver', 's', 0, 95, 0, 63, 0, 2590000, 129, 'true'), 
+(859, 'Earring of Mana', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 51, 0, 606000, 80, 'true'), 
+(860, 'Sage`s Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 54, 0, 924000, 123, 'true'), 
+(861, 'Paradia Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 54, 0, 924000, 123, 'true'), 
+(862, 'Inferno Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'a', 0, 95, 0, 60, 0, 1950000, 156, 'true'), 
+(863, 'Earring of Solar Eclipse', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 51, 0, 606000, 80, 'true'), 
+(864, 'Earring of Black Ore', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 54, 0, 924000, 123, 'true'), 
+(865, 'Earring of Summoning', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 51, 0, 606000, 80, 'true'), 
+(866, 'Otherworldly Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 54, 0, 924000, 123, 'true'), 
+(867, 'Elemental Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 54, 0, 924000, 123, 'true'), 
+(868, 'Earring of Phantom', 'rear,lear', 'true', 'none', 150, 'silver', 'a', 0, 95, 0, 60, 0, 1950000, 156, 'true'), 
+(869, 'Earring of Grace', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 51, 0, 606000, 80, 'true'), 
+(870, 'Earring of Holy Spirit', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 54, 0, 924000, 123, 'true'), 
+(871, 'Phoenix Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'a', 0, 95, 0, 57, 0, 1310000, 105, 'true'), 
+(872, 'Cerberus Earring', 'rear,lear', 'true', 'none', 150, 'silver', 'a', 0, 95, 0, 60, 0, 1950000, 156, 'true'), 
+(873, 'Earring of Aid', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 51, 0, 606000, 80, 'true'), 
+(874, 'Earring of Blessing', 'rear,lear', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 51, 0, 606000, 80, 'true'), 
+(875, 'Ring of Knowledge', 'rfinger,lfinger', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 9, 0, 540, 0, 'true'), 
+(876, 'Ring of Anguish', 'rfinger,lfinger', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 11, 0, 2340, 0, 'true'), 
+(877, 'Ring of Wisdom', 'rfinger,lfinger', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 12, 0, 5920, 0, 'true'), 
+(878, 'Blue Coral Ring', 'rfinger,lfinger', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 14, 0, 10700, 0, 'true'), 
+(879, 'Enchanted Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'd', 0, 95, 0, 18, 0, 28400, 51, 'true'), 
+(880, 'Black Pearl Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'd', 0, 95, 0, 20, 0, 42800, 77, 'true'), 
+(881, 'Elven Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'd', 0, 95, 0, 22, 0, 62300, 113, 'true'), 
+(882, 'Mithril Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'd', 0, 95, 0, 24, 0, 80800, 146, 'true'), 
+(883, 'Aquastone Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'c', 0, 95, 0, 26, 0, 103000, 41, 'true'), 
+(884, 'Ring of Protection', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'c', 0, 95, 0, 28, 0, 130000, 52, 'true'), 
+(885, 'Ring of Ages', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'c', 0, 95, 0, 30, 0, 196000, 78, 'true'), 
+(886, 'Ring of Binding', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'c', 0, 95, 0, 32, 0, 282000, 112, 'true'), 
+(887, 'Adamantite Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 34, 0, 404000, 53, 'true'), 
+(888, 'Blessed Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'c', 0, 95, 0, 32, 0, 282000, 112, 'true'), 
+(889, 'Ring of Aurakyria', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 's', 0, 95, 0, 42, 0, 1730000, 86, 'true'), 
+(890, 'Ring of Devotion', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'd', 0, 95, 0, 16, 0, 18000, 32, 'true'), 
+(891, 'Sage`s Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 36, 0, 616000, 82, 'true'), 
+(892, 'Paradia Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 36, 0, 616000, 82, 'true'), 
+(893, 'Inferno Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'a', 0, 95, 0, 40, 0, 1300000, 104, 'true'), 
+(894, 'Ring of Solar Eclipse', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 34, 0, 404000, 53, 'true'), 
+(895, 'Ring of Black Ore', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 36, 0, 616000, 82, 'true'), 
+(896, 'Ring of Summoning', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 34, 0, 404000, 53, 'true'), 
+(897, 'Otherworldly Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 36, 0, 616000, 82, 'true'), 
+(898, 'Elemental Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 36, 0, 616000, 82, 'true'), 
+(899, 'Ring of Phantom', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'a', 0, 95, 0, 40, 0, 1300000, 104, 'true'), 
+(900, 'Ring of Grace', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 34, 0, 404000, 53, 'true'), 
+(901, 'Ring of Holy Spirit', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 36, 0, 616000, 82, 'true'), 
+(902, 'Phoenix Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'a', 0, 95, 0, 38, 0, 871000, 70, 'true'), 
+(903, 'Cerberus Ring', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'a', 0, 95, 0, 40, 0, 1300000, 104, 'true'), 
+(904, 'Ring of Aid', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 34, 0, 404000, 53, 'true'), 
+(905, 'Ring of Blessing', 'rfinger,lfinger', 'true', 'none', 150, 'gold', 'b', 0, 95, 0, 34, 0, 404000, 53, 'true'), 
+(906, 'Necklace of Knowledge', 'neck', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 18, 0, 1080, 0, 'true'), 
+(907, 'Necklace of Anguish', 'neck', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 21, 0, 4680, 0, 'true'), 
+(908, 'Necklace of Wisdom', 'neck', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 25, 0, 11900, 0, 'true'), 
+(909, 'Blue Diamond Necklace', 'neck', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 28, 0, 21300, 0, 'true'), 
+(910, 'Necklace of Devotion', 'neck', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 32, 0, 35900, 65, 'true'), 
+(911, 'Enchanted Necklace', 'neck', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 36, 0, 56800, 103, 'true'), 
+(912, 'Near Forest Necklace', 'neck', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 40, 0, 85700, 155, 'true'), 
+(913, 'Elven Necklace', 'neck', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 45, 0, 125000, 227, 'true'), 
+(914, 'Necklace of Darkness', 'neck', 'true', 'none', 150, 'silver', 'd', 0, 95, 0, 48, 0, 162000, 294, 'true'), 
+(915, 'Aquastone Necklace', 'neck', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 52, 0, 207000, 82, 'true'), 
+(916, 'Necklace of Protection', 'neck', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 56, 0, 261000, 104, 'true'), 
+(917, 'Necklace of Mermaid', 'neck', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 60, 0, 393000, 157, 'true'), 
+(918, 'Adamantite Necklace', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 68, 0, 808000, 107, 'true'), 
+(919, 'Blessed Necklace', 'neck', 'true', 'none', 150, 'silver', 'c', 0, 95, 0, 64, 0, 565000, 226, 'true'), 
+(920, 'Dragon Necklace', 'neck', 'true', 'none', 150, 'silver', 's', 0, 95, 0, 85, 0, 3450000, 172, 'true'), 
+(921, 'Necklace of Mana', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 68, 0, 808000, 107, 'true'), 
+(922, 'Sage`s Necklace', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 72, 0, 1230000, 164, 'true'), 
+(923, 'Paradia Necklace', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 72, 0, 1230000, 164, 'true'), 
+(924, 'Inferno Necklace', 'neck', 'true', 'none', 150, 'silver', 'a', 0, 95, 0, 80, 0, 2600000, 208, 'true'), 
+(925, 'Necklace of Solar Eclipse', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 68, 0, 808000, 107, 'true'), 
+(926, 'Necklace of Black Ore', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 72, 0, 1230000, 164, 'true'), 
+(927, 'Necklace of Summoning', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 68, 0, 808000, 107, 'true'), 
+(928, 'Otherworldly Necklace', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 72, 0, 1230000, 164, 'true'), 
+(929, 'Elemental Necklace', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 72, 0, 1230000, 164, 'true'), 
+(930, 'Necklace of Phantom', 'neck', 'true', 'none', 150, 'silver', 'a', 0, 95, 0, 80, 0, 2600000, 208, 'true'), 
+(931, 'Necklace of Grace', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 68, 0, 808000, 107, 'true'), 
+(932, 'Necklace of Holy Spirit', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 72, 0, 1230000, 164, 'true'), 
+(933, 'Phoenix Necklace', 'neck', 'true', 'none', 150, 'silver', 'a', 0, 95, 0, 76, 0, 1740000, 139, 'true'), 
+(934, 'Cerberus Necklace', 'neck', 'true', 'none', 150, 'silver', 'a', 0, 95, 0, 80, 0, 2600000, 208, 'true'), 
+(935, 'Necklace of Aid', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 68, 0, 808000, 107, 'true'), 
+(936, 'Necklace of Blessing', 'neck', 'true', 'none', 150, 'silver', 'b', 0, 95, 0, 68, 0, 808000, 107, 'true'), 
+(990, 'Mandragora Essence', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true'), 
+(991, 'Royen`s Key', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true'), 
+(992, 'Shilen`s 1st Mark', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true'), 
+(993, 'Shilen`s 2nd Mark', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true'), 
+(994, 'Eye of Abyss', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true'), 
+(995, 'Wanted Poster', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true'), 
+(996, 'Alex`s Dagger', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true'), 
+(997, 'Pinter`s Bill', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true'), 
+(998, 'Book of Aklantoth - Part 1', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true'), 
+(999, 'Book of Aklantoth - Part 2', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true'), 
+(1000, 'Book of Aklantoth - Part 3', 'gloves', 'false', 'none', 60, 'cloth', 'none', 0, 90, 9, 0, 0, 808000, 0, 'true'), 
+(1100, 'Cotton Tunic', 'chest', 'false', 'magic', 2120, 'cloth', 'none', 0, 90, 21, 0, 38, 2430, 0, 'true'), 
+(1101, 'Tunic of Devotion', 'chest', 'false', 'magic', 2090, 'cloth', 'none', 0, 90, 30, 0, 67, 20300, 0, 'true'), 
+(1102, 'Tunic of Magic', 'chest', 'false', 'magic', 2080, 'cloth', 'none', 0, 90, 34, 0, 86, 36900, 0, 'true'), 
+(1103, 'Cotton Stockings', 'legs', 'false', 'magic', 1060, 'cloth', 'none', 0, 90, 13, 0, 23, 1520, 0, 'true'), 
+(1104, 'Stockings of Devotion', 'legs', 'false', 'magic', 1040, 'cloth', 'none', 0, 90, 19, 0, 42, 12700, 0, 'true'), 
+(1105, 'Stockings of Magic', 'legs', 'false', 'magic', 1030, 'cloth', 'none', 0, 90, 21, 0, 54, 23000, 0, 'true'), 
+(1119, 'Short Leather Gloves', 'gloves', 'false', 'none', 660, 'leather', 'none', 0, 90, 11, 0, 0, 607, 0, 'true'), 
+(1120, 'Paagrio Hand', 'gloves', 'true', 'none', 1600, 'leather', 'c', 0, 90, 34, 0, 0, 161000, 64, 'true'), 
+(1121, 'Apprentice`s Shoes', 'feet', 'false', 'none', 1320, 'leather', 'none', 0, 90, 8, 0, 0, 7, 0, 'true'), 
+(1122, 'Cotton Shoes', 'feet', 'false', 'none', 1320, 'leather', 'none', 0, 90, 11, 0, 0, 607, 0, 'true'), 
+(1123, 'Blue Buckskin Boots', 'feet', 'true', 'none', 1300, 'leather', 'd', 0, 90, 22, 0, 0, 33300, 60, 'true'), 
+(1124, 'Boots of Power', 'feet', 'true', 'none', 1250, 'leather', 'd', 0, 90, 27, 0, 0, 74700, 135, 'true'), 
+(1125, 'Assault Boots', 'feet', 'true', 'none', 1240, 'leather', 'd', 0, 90, 29, 0, 0, 97800, 177, 'true'), 
+(1126, 'Crimson Boots', 'feet', 'true', 'none', 1210, 'leather', 'c', 0, 90, 34, 0, 0, 161000, 64, 'true'), 
+(1127, 'Forgotten Boots', 'feet', 'true', 'none', 4000, 'leather', 'c', 0, 90, 36, 0, 0, 245000, 98, 'true'), 
+(1128, 'Adamantite Boots', 'feet', 'true', 'none', 4000, 'adamantaite', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true'), 
+(1129, 'Crude Leather Shoes', 'feet', 'false', 'none', 1320, 'leather', 'none', 0, 90, 11, 0, 0, 607, 0, 'true'), 
+(1146, 'Squire`s Shirt', 'chest', 'false', 'light', 3301, 'cloth', 'none', 0, 90, 33, 0, 0, 26, 0, 'true'), 
+(1147, 'Squire`s Pants', 'legs', 'false', 'light', 1750, 'cloth', 'none', 0, 90, 20, 0, 0, 6, 0, 'true'), 
+(1148, 'Hard Leather Helmet', 'head', 'false', 'none', 640, 'leather', 'none', 0, 90, 26, 0, 0, 18400, 0, 'true'), 
+(1149, 'Shining Circlet', 'head', 'true', 'none', 600, 'steel', 'c', 0, 90, 54, 0, 0, 368000, 147, 'true'), 
+(1308, 'Compound Scale Mail', 'chest', 'false', 'heavy', 1400, 'fine_steel', 'none', 0, 98, 51, 0, 0, 368000, 0, 'true'), 
+(1309, 'Mithril Breastplate', 'chest', 'false', 'heavy', 1000, 'mithril', 'none', 0, 95, 51, 0, 0, 368000, 0, 'true'), 
+(1310, 'Tunic of Magic', 'chest', 'false', 'magic', 150, 'cloth', 'none', 0, 90, 51, 0, 96, 368000, 0, 'true'), 
+(1311, 'Puma Skin Shirt', 'chest', 'false', 'light', 300, 'leather', 'none', 0, 90, 51, 0, 0, 368000, 0, 'true'), 
+(1312, 'White Tunic', 'chest', 'false', 'magic', 150, 'cloth', 'none', 0, 90, 51, 0, 142, 368000, 0, 'true'), 
+(1313, 'Compound Scale Gaiters', 'legs', 'false', 'heavy', 1000, 'fine_steel', 'none', 0, 98, 32, 0, 0, 368000, 0, 'true'), 
+(1314, 'Mithril Gaiters', 'legs', 'false', 'heavy', 600, 'mithril', 'none', 0, 95, 32, 0, 0, 368000, 0, 'true'), 
+(1315, 'Stockings of Magic', 'legs', 'false', 'magic', 150, 'cloth', 'none', 0, 90, 32, 0, 60, 368000, 0, 'true'), 
+(1316, 'Puma Skin Gaiters', 'legs', 'false', 'light', 400, 'leather', 'none', 0, 90, 32, 0, 0, 368000, 0, 'true'), 
+(1317, 'Dark Stockings', 'legs', 'false', 'magic', 150, 'cloth', 'none', 0, 90, 32, 0, 79, 368000, 0, 'true'), 
+(1318, 'Gloves', 'gloves', 'false', 'none', 80, 'cloth', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true'), 
+(1319, 'Leather Gloves', 'gloves', 'false', 'none', 100, 'leather', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true'), 
+(1320, 'Excellent Leather Gloves', 'gloves', 'false', 'none', 100, 'leather', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true'), 
+(1321, 'Rip Gauntlets', 'gloves', 'false', 'none', 150, 'leather', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true'), 
+(1322, 'Bracer', 'gloves', 'false', 'none', 80, 'leather', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true'), 
+(1323, 'Leather Shoes', 'feet', 'false', 'none', 120, 'leather', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true'), 
+(1324, 'Low Boots', 'feet', 'false', 'none', 150, 'leather', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true'), 
+(1325, 'Leather Boots', 'feet', 'false', 'none', 250, 'leather', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true'), 
+(1326, 'Iron Boots', 'feet', 'false', 'none', 300, 'fine_steel', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true'), 
+(1327, 'Boots', 'feet', 'false', 'none', 200, 'cloth', 'none', 0, 90, 14, 0, 0, 368000, 0, 'true'), 
+(1506, 'Necklace of Courage', 'neck', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 15, 0, 66, 0, 'true'), 
+(1507, 'Necklace of Valor', 'neck', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 21, 0, 4680, 0, 'true'), 
+(1508, 'Ring of Raccoon', 'rfinger,lfinger', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 11, 0, 2340, 0, 'true'), 
+(1509, 'Ring of Firefly', 'rfinger,lfinger', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 11, 0, 2340, 0, 'true'), 
+(2376, 'Avadon Breastplate', 'chest', 'true', 'heavy', 7920, 'leather', 'b', 0, 90, 157, 0, 0, 2080000, 277, 'true'), 
+(2377, 'Mithril Scale Gaiters', 'legs', 'true', 'heavy', 3870, 'leather', 'd', 0, 90, 68, 0, 0, 187000, 340, 'true'), 
+(2378, 'Brigandine Gaiters', 'legs', 'true', 'heavy', 3820, 'leather', 'd', 0, 90, 68, 0, 0, 187000, 340, 'true'), 
+(2379, 'Avadon Gaiters', 'legs', 'true', 'heavy', 3520, 'leather', 'b', 0, 90, 98, 0, 0, 1300000, 173, 'true'), 
+(2380, 'Blue Wolf Gaiters', 'legs', 'true', 'heavy', 3370, 'leather', 'b', 0, 90, 104, 0, 0, 2010000, 268, 'true'), 
+(2381, 'Doom Plate Armor', 'CHEST', 'true', 'heavy', 9980, 'leather', 'b', 0, 90, 270, 0, 0, 4710000, 628, 'true'), 
+(2382, 'Tallum Plate Armor', 'CHEST', 'true', 'heavy', 9780, 'leather', 'a', 0, 90, 278, 0, 0, 6770000, 902, 'true'), 
+(2383, 'Majestic Plate Armor', 'CHEST', 'true', 'heavy', 9200, 'leather', 'a', 0, 90, 293, 0, 0, 10300000, 824, 'true'), 
+(2384, 'Zubei`s Leather Shirt', 'chest', 'true', 'light', 4330, 'leather', 'b', 0, 90, 117, 0, 0, 1560000, 208, 'true'), 
+(2385, 'Dark Crystal Leather Armor', 'chest', 'true', 'light', 4300, 'leather', 'a', 0, 90, 129, 0, 0, 3470000, 462, 'true'), 
+(2386, 'Wooden Gaiters', 'legs', 'false', 'light', 1670, 'leather', 'none', 0, 90, 28, 0, 0, 4970, 0, 'true'), 
+(2387, 'Tempered Mithril Gaiters', 'legs', 'true', 'light', 1530, 'leather', 'c', 0, 90, 56, 0, 0, 237000, 94, 'true'), 
+(2388, 'Zubei`s Leather Gaiters', 'legs', 'true', 'light', 1480, 'leather', 'b', 0, 90, 73, 0, 0, 973000, 129, 'true'), 
+(2389, 'Dark Crystalline Leggings', 'legs', 'true', 'light', 1480, 'leather', 'a', 0, 90, 80, 0, 0, 2170000, 289, 'true'), 
+(2390, 'Avadon Leather Armor', 'CHEST', 'true', 'light', 5600, 'leather', 'b', 0, 90, 191, 0, 0, 2280000, 304, 'true'), 
+(2391, 'Blue Wolf Leather Armor', 'CHEST', 'true', 'light', 5500, 'leather', 'b', 0, 90, 202, 0, 0, 3530000, 470, 'true'), 
+(2392, 'Leather Armor of Doom', 'CHEST', 'true', 'light', 5500, 'leather', 'b', 0, 90, 202, 0, 0, 3530000, 470, 'true'), 
+(2393, 'Tallum Leather Armor', 'CHEST', 'true', 'light', 5400, 'leather', 'a', 0, 90, 208, 0, 0, 5080000, 677, 'true'), 
+(2394, 'Nightmarish Leather Armor', 'CHEST', 'true', 'light', 5300, 'leather', 'a', 0, 90, 220, 0, 0, 7730000, 618, 'true'), 
+(2395, 'Majestic Leather Armor', 'CHEST', 'true', 'light', 5350, 'leather', 'a', 0, 90, 220, 0, 0, 7730000, 618, 'true'), 
+(2396, 'Elven Mithril Tunic', 'chest', 'true', 'magic', 720, 'leather', 'd', 0, 90, 54, 0, 169, 224000, 407, 'true'), 
+(2397, 'Tunic of Zubei', 'chest', 'true', 'magic', 1960, 'leather', 'b', 0, 90, 78, 0, 345, 1560000, 208, 'true'), 
+(2398, 'Blue Wolf Tunic', 'chest', 'true', 'magic', 1920, 'leather', 'b', 0, 90, 83, 0, 377, 2410000, 321, 'true'), 
+(2399, 'Tunic of Doom', 'chest', 'true', 'magic', 1900, 'leather', 'b', 0, 90, 83, 0, 377, 2410000, 321, 'true'), 
+(2400, 'Tallum Tunic', 'chest', 'true', 'magic', 1860, 'leather', 'a', 0, 90, 85, 0, 409, 3470000, 462, 'true'), 
+(2401, 'Elven Mithril Stockings', 'legs', 'true', 'magic', 2400, 'leather', 'd', 0, 90, 34, 0, 105, 140000, 254, 'true'), 
+(2402, 'Stockings of Zubei', 'legs', 'true', 'magic', 940, 'leather', 'b', 0, 90, 49, 0, 216, 973000, 129, 'true'), 
+(2403, 'Blue Wolf Stockings', 'legs', 'true', 'magic', 920, 'leather', 'b', 0, 90, 52, 0, 236, 1510000, 201, 'true'), 
+(2404, 'Stockings of Doom', 'legs', 'true', 'magic', 910, 'leather', 'b', 0, 90, 52, 0, 236, 1510000, 201, 'true'), 
+(2405, 'Tallum Stockings', 'legs', 'true', 'magic', 920, 'leather', 'a', 0, 90, 54, 0, 256, 2170000, 289, 'true'), 
+(2406, 'Avadon Robe', 'CHEST', 'true', 'magic', 2540, 'leather', 'b', 0, 90, 127, 0, 561, 2280000, 304, 'true'), 
+(2407, 'Dark Crystal Robe', 'CHEST', 'true', 'magic', 2450, 'leather', 'a', 0, 90, 139, 0, 665, 5080000, 677, 'true'), 
+(2408, 'Robe of Nightmare', 'CHEST', 'true', 'magic', 2300, 'leather', 'a', 0, 90, 146, 0, 718, 7730000, 618, 'true'), 
+(2409, 'Majestic Robe', 'CHEST', 'true', 'magic', 2330, 'leather', 'a', 0, 90, 146, 0, 718, 7730000, 618, 'true'), 
+(2410, 'Nightmarish Tattoo', 'underwear', 'true', 'none', 3600, 'dyestuff', 'a', 0, 90, 139, 0, 0, 5280000, 422, 'true'), 
+(2411, 'Brigandine Helmet', 'head', 'true', 'none', 630, 'leather', 'd', 0, 90, 41, 0, 0, 112000, 203, 'true'), 
+(2412, 'Plate Helmet', 'head', 'true', 'none', 630, 'leather', 'd', 0, 90, 44, 0, 0, 147000, 267, 'true'), 
+(2413, 'Chain Hood', 'head', 'true', 'none', 620, 'leather', 'c', 0, 90, 47, 0, 0, 189000, 75, 'true'), 
+(2414, 'Full Plate Helmet', 'head', 'true', 'none', 600, 'leather', 'c', 0, 90, 58, 0, 0, 536000, 214, 'true'), 
+(2415, 'Avadon Circlet', 'head', 'true', 'none', 590, 'leather', 'b', 0, 90, 62, 0, 0, 778000, 103, 'true'), 
+(2416, 'Blue Wolf Helmet', 'head', 'true', 'none', 580, 'leather', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true'), 
+(2417, 'Doom Helmet', 'head', 'true', 'none', 580, 'leather', 'b', 0, 90, 66, 0, 0, 1210000, 161, 'true'), 
+(2418, 'Helm of Nightmare', 'head', 'true', 'none', 560, 'leather', 'a', 0, 90, 68, 0, 0, 2640000, 211, 'true'), 
+(2419, 'Majestic Circlet', 'head', 'true', 'none', 550, 'leather', 'a', 0, 90, 68, 0, 0, 2640000, 211, 'true'), 
+(2420, 'Dragon Headgear', 'head', 'true', 'light', 540, 'leather', 's', 0, 90, 80, 0, 0, 3590000, 179, 'true'), 
+(2421, 'The Hood', 'head', 'true', 'magic', 540, 'leather', 's', 0, 90, 80, 0, 0, 3590000, 179, 'true'), 
+(2422, 'Reinforced Leather Boots', 'feet', 'true', 'none', 1280, 'leather', 'd', 0, 90, 24, 0, 0, 50800, 92, 'true'), 
+(2423, 'Boots of Knowledge', 'feet', 'true', 'none', 1270, 'leather', 'd', 0, 90, 24, 0, 0, 50800, 92, 'true'), 
+(2424, 'Manticore Skin Boots', 'feet', 'true', 'none', 1260, 'leather', 'd', 0, 90, 27, 0, 0, 74700, 135, 'true'), 
+(2425, 'Brigandine Boots', 'feet', 'true', 'none', 1250, 'leather', 'd', 0, 90, 27, 0, 0, 74700, 135, 'true'), 
+(2426, 'Elven Mithril Boots', 'feet', 'true', 'none', 1250, 'leather', 'd', 0, 90, 27, 0, 0, 74700, 135, 'true'), 
+(2427, 'Salamander Skin Boots', 'feet', 'true', 'none', 1230, 'leather', 'd', 0, 90, 29, 0, 0, 97800, 177, 'true'), 
+(2428, 'Plate Boots', 'feet', 'true', 'none', 1240, 'leather', 'd', 0, 90, 29, 0, 0, 97800, 177, 'true'), 
+(2429, 'Chain Boots', 'feet', 'true', 'none', 1220, 'leather', 'c', 0, 90, 32, 0, 0, 126000, 50, 'true'), 
+(2430, 'Karmian Boots', 'feet', 'true', 'none', 1230, 'leather', 'c', 0, 90, 32, 0, 0, 126000, 50, 'true'), 
+(2431, 'Plated Leather Boots', 'feet', 'true', 'none', 1220, 'leather', 'c', 0, 90, 32, 0, 0, 126000, 50, 'true'), 
+(2432, 'Dwarven Chain Boots', 'feet', 'true', 'none', 1210, 'leather', 'c', 0, 90, 32, 0, 0, 126000, 50, 'true'), 
+(2433, 'Boots of Seal', 'feet', 'true', 'none', 1220, 'leather', 'c', 0, 90, 32, 0, 0, 126000, 50, 'true'), 
+(2434, 'Rind Leather Boots', 'feet', 'true', 'none', 1220, 'leather', 'c', 0, 90, 34, 0, 0, 161000, 64, 'true'), 
+(2435, 'Demon`s Boots', 'feet', 'true', 'none', 1220, 'leather', 'c', 0, 90, 36, 0, 0, 245000, 98, 'true'), 
+(2436, 'Theca Leather Boots', 'feet', 'true', 'none', 1210, 'leather', 'c', 0, 90, 37, 0, 0, 275000, 110, 'true'), 
+(2437, 'Drake Leather Boots', 'feet', 'true', 'none', 1210, 'leather', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true'), 
+(2438, 'Full Plate Boots', 'feet', 'true', 'none', 1200, 'leather', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true'), 
+(2439, 'Sealed Blue Wolf Boots', 'none', 'false', 'none', 1130, 'leather', 'none', 0, 90, 44, 0, 0, 0, 0, 'true'), 
+(2440, 'Sealed Boots of Nightmare', 'none', 'false', 'none', 1110, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true'), 
+(2441, 'Dark Legion Boots', 'feet', 'true', 'none', 1120, 'leather', 'a', 0, 90, 49, 0, 0, 1760000, 140, 'true'), 
+(2442, 'Dasparion`s Boots', 'feet', 'true', 'none', 1100, 'leather', 'a', 0, 90, 49, 0, 0, 1760000, 140, 'true'), 
+(2443, 'Dragon Leather Boots', 'feet', 'true', 'light', 1100, 'leather', 's', 0, 90, 55, 0, 0, 2390000, 119, 'true'), 
+(2444, 'The Boots', 'feet', 'true', 'magic', 1100, 'leather', 's', 0, 90, 55, 0, 0, 2390000, 119, 'true'), 
+(2445, 'Dragon Scale Boots', 'feet', 'true', 'heavy', 1100, 'leather', 's', 0, 90, 55, 0, 0, 1760000, 140, 'true'), 
+(2446, 'Reinforced Leather Gloves', 'gloves', 'true', 'none', 640, 'leather', 'd', 0, 90, 24, 0, 0, 50800, 92, 'true'), 
+(2447, 'Gloves of Knowledge', 'gloves', 'true', 'none', 640, 'leather', 'd', 0, 90, 24, 0, 0, 50800, 92, 'true'), 
+(2448, 'Manticore Skin Gloves', 'gloves', 'true', 'none', 630, 'leather', 'd', 0, 90, 27, 0, 0, 74700, 135, 'true'), 
+(2449, 'Brigandine Gauntlets', 'gloves', 'true', 'none', 630, 'leather', 'd', 0, 90, 27, 0, 0, 74700, 135, 'true'), 
+(2450, 'Elven Mithril Gloves', 'gloves', 'true', 'none', 640, 'leather', 'd', 0, 90, 27, 0, 0, 74700, 135, 'true'), 
+(2451, 'Sage`s Worn Gloves', 'gloves', 'true', 'none', 630, 'leather', 'd', 0, 90, 29, 0, 0, 97800, 177, 'true'), 
+(2452, 'Reinforced Mithril Gloves', 'gloves', 'true', 'none', 620, 'leather', 'c', 0, 90, 32, 0, 0, 126000, 50, 'true'), 
+(2453, 'Chain Gloves', 'gloves', 'true', 'none', 620, 'leather', 'c', 0, 90, 32, 0, 0, 126000, 50, 'true'), 
+(2454, 'Karmian Gloves', 'gloves', 'true', 'none', 620, 'leather', 'c', 0, 90, 32, 0, 0, 126000, 50, 'true'), 
+(2455, 'Plated Leather Gloves', 'gloves', 'true', 'none', 610, 'leather', 'c', 0, 90, 33, 0, 0, 149000, 59, 'true'), 
+(2456, 'Dwarven Chain Gloves', 'gloves', 'true', 'none', 600, 'leather', 'c', 0, 90, 34, 0, 0, 161000, 64, 'true'), 
+(2457, 'Gloves of Seal', 'gloves', 'true', 'none', 620, 'leather', 'c', 0, 90, 34, 0, 0, 161000, 64, 'true'), 
+(2458, 'Rind Leather Gloves', 'gloves', 'true', 'none', 600, 'leather', 'c', 0, 90, 34, 0, 0, 161000, 64, 'true'), 
+(2459, 'Demon`s Gloves', 'gloves', 'true', 'none', 610, 'leather', 'c', 0, 90, 36, 0, 0, 245000, 98, 'true'), 
+(2460, 'Theca Leather Gloves', 'gloves', 'true', 'none', 600, 'leather', 'c', 0, 90, 37, 0, 0, 275000, 110, 'true'), 
+(2461, 'Drake Leather Gloves', 'gloves', 'true', 'none', 600, 'leather', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true'), 
+(2462, 'Full Plate Gauntlets', 'gloves', 'true', 'none', 600, 'leather', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true'), 
+(2463, 'Divine Gloves', 'gloves', 'true', 'none', 610, 'leather', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true'), 
+(2464, 'Sealed Avadon Gloves', 'none', 'false', 'none', 590, 'leather', 'none', 0, 90, 41, 0, 0, 0, 0, 'true'), 
+(2465, 'Chain Gloves of Silence', 'gloves', 'true', 'none', 590, 'leather', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(2466, 'Guardian`s Gloves', 'gloves', 'true', 'none', 590, 'leather', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(2467, 'Gloves of Blessing', 'gloves', 'true', 'none', 590, 'leather', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(2468, 'Blessed Gloves', 'gloves', 'true', 'none', 600, 'leather', 'c', 0, 90, 39, 0, 0, 358000, 143, 'true'), 
+(2469, 'Gloves of The Underworld', 'gloves', 'true', 'none', 580, 'leather', 'a', 0, 90, 46, 0, 0, 1160000, 154, 'true'), 
+(2470, 'Gloves of Phantom', 'gloves', 'true', 'none', 560, 'leather', 'a', 0, 90, 49, 0, 0, 1760000, 140, 'true'), 
+(2471, 'Dark Legion Gloves', 'gloves', 'true', 'none', 560, 'leather', 'a', 0, 90, 49, 0, 0, 1760000, 140, 'true'), 
+(2472, 'Sealed Dark Crystal Gloves', 'none', 'false', 'none', 580, 'leather', 'none', 0, 90, 46, 0, 0, 0, 0, 'true'), 
+(2473, 'The Gloves', 'gloves', 'true', 'magic', 540, 'leather', 's', 0, 90, 55, 0, 0, 2390000, 119, 'true'), 
+(2474, 'Dasparion`s Gloves', 'gloves', 'true', 'none', 550, 'leather', 'a', 0, 90, 49, 0, 0, 1760000, 140, 'true'), 
+(2475, 'Sealed Doom Gloves', 'none', 'false', 'none', 580, 'leather', 'none', 0, 90, 44, 0, 0, 0, 0, 'true'), 
+(2476, 'Dragon Gauntlets', 'gloves', 'true', 'heavy', 540, 'leather', 's', 0, 90, 55, 0, 0, 2610000, 130, 'true'), 
+(2477, 'Dragon Leather Gloves', 'gloves', 'true', 'light', 540, 'leather', 's', 0, 90, 55, 0, 0, 2390000, 119, 'true'), 
+(2478, 'Sealed Tallum Gloves', 'none', 'false', 'none', 580, 'leather', 'none', 0, 90, 46, 0, 0, 0, 0, 'true'), 
+(2479, 'Sealed Gloves of Nightmare', 'none', 'false', 'none', 550, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true'), 
+(2480, 'Elemental Gloves', 'gloves', 'true', 'none', 580, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(2481, 'Gloves of Grace', 'gloves', 'true', 'none', 580, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(2482, 'Sealed Majestic Gloves', 'none', 'false', 'none', 540, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true'), 
+(2483, 'Gust Bracer', 'gloves', 'true', 'none', 580, 'leather', 'a', 0, 90, 46, 0, 0, 1160000, 154, 'true'), 
+(2484, 'Cerberus Gloves', 'gloves', 'true', 'none', 540, 'leather', 'a', 0, 90, 49, 0, 0, 1760000, 140, 'true'), 
+(2485, 'Implosion Gauntlets', 'gloves', 'true', 'none', 580, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(2486, 'Paradia Gloves', 'gloves', 'true', 'none', 580, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(2487, 'Sealed Blue Wolf Gloves', 'none', 'false', 'none', 590, 'leather', 'none', 0, 90, 44, 0, 0, 0, 0, 'true'), 
+(2488, 'Phoenix Gloves', 'gloves', 'true', 'none', 570, 'leather', 'a', 0, 90, 46, 0, 0, 1160000, 154, 'true'), 
+(2489, 'Gloves of Black Ore', 'gloves', 'true', 'none', 570, 'leather', 'a', 0, 90, 46, 0, 0, 1160000, 154, 'true'), 
+(2490, 'Cloak of Silence', 'back', 'false', 'none', 250, 'leather', 'none', 0, 90, 5, 0, 0, 6770, 0, 'true'), 
+(2491, 'Golden Yarn Cloak', 'back', 'false', 'none', 250, 'leather', 'none', 0, 90, 5, 0, 0, 12300, 0, 'true'), 
+(2492, 'Shadow Cloak', 'back', 'true', 'none', 240, 'leather', 'c', 0, 90, 12, 0, 0, 126000, 50, 'true'), 
+(2506, 'Wolf Leather Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 9, 14, 0, 6961, 0, 'true'), 
+(3891, 'Wolf Hide Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 13, 16, 0, 17781, 0, 'true'), 
+(3892, 'Wolf Hard Leather Mail', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 16, 18, 0, 32265, 0, 'true'), 
+(3893, 'Wolf Wooden Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 19, 20, 0, 54779, 0, 'true'), 
+(3894, 'Wolf Ring Mail', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 22, 23, 0, 87433, 0, 'true'), 
+(3895, 'Wolf Bone Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 26, 26, 0, 133276, 0, 'true'), 
+(3896, 'Wolf Scale Male', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 30, 29, 0, 195967, 0, 'true'), 
+(3897, 'Wolf Bronze Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 33, 31, 0, 256642, 0, 'true'), 
+(3898, 'Wolf Plate Mail', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 37, 33, 0, 331497, 0, 'true'), 
+(3899, 'Wolf Steel Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 40, 36, 0, 422762, 0, 'true'), 
+(3900, 'Wolf Luxury Plate', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 43, 38, 0, 644347, 0, 'true'), 
+(3901, 'Wolf Mithril Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 47, 41, 0, 938705, 0, 'true'), 
+(3912, 'Hatchling`s Soft Leather', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 26, 26, 0, 197143, 0, 'true'), 
+(3913, 'Hatchling`s Scale Mail', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 29, 29, 0, 314456, 0, 'true'), 
+(3914, 'Hatchling`s Brigandine', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 31, 31, 0, 422374, 0, 'true'), 
+(3915, 'Hatchling`s Bronze Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 33, 33, 0, 567100, 0, 'true'), 
+(3916, 'Hatchling`s Steel Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 36, 36, 0, 758241, 0, 'true'), 
+(3917, 'Hatchling`s Shadowplate', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 38, 38, 0, 1098768, 0, 'true'), 
+(3918, 'Hatchling`s Mithril Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 41, 41, 0, 1567803, 0, 'true'), 
+(4224, 'Dream Armor', 'chest', 'true', 'heavy', 8920, 'bronze', 'none', 0, 90, 68, 0, 0, 0, 0, 'true'), 
+(4225, 'Dream Gaiters', 'legs', 'true', 'heavy', 3960, 'bronze', 'none', 0, 90, 43, 0, 0, 0, 0, 'true'), 
+(4226, 'Dream Gloves', 'gloves', 'true', 'heavy', 650, 'leather', 'none', 0, 90, 17, 0, 0, 0, 0, 'true'), 
+(4227, 'Dream Boots', 'feet', 'true', 'heavy', 1310, 'cloth', 'none', 0, 90, 17, 0, 0, 0, 0, 'true'), 
+(4228, 'Ubiquitous Armor', 'chest', 'true', 'heavy', 8920, 'bronze', 'none', 0, 90, 68, 0, 0, 0, 0, 'true'), 
+(4229, 'Ubiquitous Stockings', 'legs', 'true', 'heavy', 3960, 'bronze', 'none', 0, 90, 43, 0, 0, 0, 0, 'true'), 
+(4230, 'Ubiquitous Gloves', 'gloves', 'true', 'none', 650, 'leather', 'none', 0, 90, 17, 0, 0, 0, 0, 'true'), 
+(4231, 'Ubiquitous Boots', 'feet', 'true', 'none', 1310, 'cloth', 'none', 0, 90, 17, 0, 0, 0, 0, 'true'), 
+(4234, 'Hatchling`s Level 65 Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 50, 50, 0, 0, 0, 'true'), 
+(4235, 'Hatchling`s Level 75 Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 58, 58, 0, 0, 0, 'true'), 
+(4236, 'Gara Item', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 58, 58, 0, 0, 0, 'true'), 
+(5170, 'Mithril Panzer Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 41, 41, 0, 0, 0, 'true'), 
+(5171, 'Brigadine Panzer Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 44, 44, 0, 0, 0, 'true'), 
+(5172, 'Draconic Panzer Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 46, 46, 0, 0, 0, 'true'), 
+(5173, 'Blood Panzer Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 49, 49, 0, 0, 0, 'true'), 
+(5174, 'Ophidian Panzer Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 52, 52, 0, 0, 0, 'true'), 
+(5175, 'Inferno Panzer Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 54, 54, 0, 0, 0, 'true'), 
+(5182, 'Hatchling`s Gorgon Coat', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 44, 44, 0, 0, 0, 'true'), 
+(5183, 'Hatchling`s Ophidian Plate', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 46, 46, 0, 0, 0, 'true'), 
+(5184, 'Hatchling`s Crimson Plate', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 49, 49, 0, 0, 0, 'true'), 
+(5185, 'Hatchling`s Draconic Plate', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 52, 52, 0, 0, 0, 'true'), 
+(5186, 'Hatchling`s Inferno Plate', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 54, 54, 0, 0, 0, 'true'), 
+(5216, 'Wolf Level 75 Armor', 'chest', 'false', 'light', 160, 'leather', 'none', 0, 90, 71, 58, 0, 0, 0, 'true'), 
+(5287, 'Sealed Dark Crystal Breastplate', 'none', 'false', 'none', 7700, 'crystal', 'none', 0, 95, 171, 0, 0, 0, 0, 'true'), 
+(5288, 'Sealed Dark Crystal Gaiters', 'none', 'false', 'none', 3320, 'crystal', 'none', 0, 95, 107, 0, 0, 0, 0, 'true'), 
+(5289, ' Sealed Dark Crystal Helmet', 'none', 'false', 'none', 570, 'crystal', 'none', 0, 90, 64, 0, 0, 0, 0, 'true'), 
+(5290, 'Sealed Dark Crystal Gloves', 'none', 'false', 'none', 580, 'leather', 'none', 0, 90, 43, 0, 0, 0, 0, 'true'), 
+(5291, 'Sealed Dark Crystal Boots', 'none', 'false', 'none', 1110, 'crystal', 'none', 0, 95, 43, 0, 0, 0, 0, 'true'), 
+(5293, 'Sealed Tallum Plate Armor', 'none', 'false', 'none', 9780, 'leather', 'none', 0, 90, 278, 0, 0, 0, 0, 'true'), 
+(5294, 'Sealed Tallum Bonnet', 'none', 'false', 'none', 570, 'cloth', 'none', 0, 90, 64, 0, 0, 0, 0, 'true'), 
+(5295, 'Sealed Tallum Gloves', 'none', 'false', 'none', 580, 'leather', 'none', 0, 90, 43, 0, 0, 0, 0, 'true'), 
+(5296, 'Sealed Tallum Boots', 'none', 'false', 'none', 1130, 'blood_steel', 'none', 0, 90, 43, 0, 0, 0, 0, 'true'), 
+(5297, ' Sealed Dark Crystal Leather Mail', 'none', 'false', 'none', 4300, 'leather', 'none', 0, 90, 129, 0, 0, 0, 0, 'true'), 
+(5298, 'Sealed Dark Crystal Leggings', 'none', 'false', 'none', 1480, 'leather', 'none', 0, 90, 80, 0, 0, 0, 0, 'true'), 
+(5299, 'Sealed Gloves of Underworld', 'none', 'false', 'none', 580, 'leather', 'none', 0, 90, 46, 0, 0, 0, 0, 'true'), 
+(5300, 'Sealed Boots of Underworld', 'none', 'false', 'none', 1110, 'leather', 'none', 0, 90, 46, 0, 0, 0, 0, 'true'), 
+(5301, 'Sealed Tallum Leather Mail', 'none', 'false', 'none', 5400, 'leather', 'none', 0, 90, 208, 0, 0, 0, 0, 'true'), 
+(5302, 'Sealed Gust Bracer', 'none', 'false', 'none', 580, 'leather', 'none', 0, 90, 46, 0, 0, 0, 0, 'true'), 
+(5303, 'Sealed Gust Boots', 'none', 'false', 'none', 1120, 'blood_steel', 'none', 0, 90, 46, 0, 0, 0, 0, 'true'), 
+(5304, 'Sealed Tallum Tunic', 'none', 'false', 'none', 1860, 'leather', 'none', 0, 85, 85, 0, 409, 0, 0, 'true'), 
+(5305, 'Sealed Tallum Hose', 'none', 'false', 'none', 920, 'leather', 'none', 0, 90, 54, 0, 256, 0, 0, 'true'), 
+(5306, 'Sealed Gloves of Black Ore', 'none', 'false', 'none', 570, 'leather', 'none', 0, 90, 46, 0, 0, 0, 0, 'true'), 
+(5307, 'Sealed Red Flame Boots', 'none', 'false', 'none', 1120, 'blood_steel', 'none', 0, 90, 46, 0, 0, 0, 0, 'true'), 
+(5308, 'Sealed Dark Crystal Robe', 'none', 'false', 'none', 2450, 'leather', 'none', 0, 90, 139, 0, 665, 0, 0, 'true'), 
+(5309, 'Sealed Phoenix\'s Gloves', 'none', 'false', 'none', 570, 'leather', 'none', 0, 90, 46, 0, 0, 0, 0, 'true'), 
+(5310, 'Sealed Phoenix\'s Boots', 'none', 'false', 'none', 1120, 'blood_steel', 'none', 0, 90, 46, 0, 0, 0, 0, 'true'), 
+(5311, 'Sealed Armor of Nightmare', 'none', 'false', 'none', 9580, 'blood_steel', 'none', 0, 90, 293, 0, 0, 0, 0, 'true'), 
+(5312, 'Sealed Helm of Nightmare', 'none', 'false', 'none', 560, 'leather', 'none', 0, 90, 68, 0, 0, 0, 0, 'true'), 
+(5313, 'Sealed Gloves of Nightmare', 'none', 'false', 'none', 550, 'leather', 'none', 0, 90, 45, 0, 0, 0, 0, 'true'), 
+(5314, 'Sealed Boots of Nightmare', 'none', 'false', 'none', 1110, 'leather', 'none', 0, 90, 45, 0, 0, 0, 0, 'true'), 
+(5316, 'Sealed Majestic Plate Armor', 'none', 'false', 'none', 9200, 'leather', 'none', 0, 90, 293, 0, 0, 0, 0, 'true'), 
+(5317, 'Sealed Majestic Circlet', 'none', 'false', 'none', 550, 'leather', 'none', 0, 90, 68, 0, 0, 0, 0, 'true'), 
+(5318, 'Sealed Magestic Gloves', 'none', 'false', 'none', 540, 'leather', 'none', 0, 90, 45, 0, 0, 0, 0, 'true'), 
+(5319, 'Sealed Majestic Boots', 'none', 'false', 'none', 1110, 'blood_steel', 'none', 0, 95, 45, 0, 0, 0, 0, 'true'), 
+(5320, 'Sealed Leather Mail of Nightmare', 'none', 'false', 'none', 5300, 'leather', 'none', 0, 90, 220, 0, 0, 0, 0, 'true'), 
+(5321, 'Sealed Dark Legion Gloves', 'none', 'false', 'none', 560, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true'), 
+(5322, 'Sealed Dark Legion Boots', 'none', 'false', 'none', 1120, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true'), 
+(5323, 'Sealed Majestic Leather Mail', 'none', 'false', 'none', 5350, 'leather', 'none', 0, 90, 220, 0, 0, 0, 0, 'true'), 
+(5324, 'Sealed Gloves of Phantom', 'none', 'false', 'none', 560, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true'), 
+(5325, 'Sealed Boots of Phantom', 'none', 'false', 'none', 1120, 'oriharukon', 'none', 0, 95, 49, 0, 0, 0, 0, 'true'), 
+(5326, 'Sealed Robe of Nightmare', 'none', 'false', 'none', 2300, 'leather', 'none', 0, 90, 146, 0, 718, 0, 0, 'true'), 
+(5327, 'Sealed Cerberus\'s Gloves', 'none', 'false', 'none', 540, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true'), 
+(5328, 'Sealed Cerberus\'s Boots', 'none', 'false', 'none', 1120, 'damascus', 'none', 0, 90, 49, 0, 0, 0, 0, 'true'), 
+(5329, 'Sealed Majestic Robe', 'none', 'false', 'none', 2330, 'leather', 'none', 0, 90, 146, 0, 718, 0, 0, 'true'), 
+(5330, 'Sealed Desparion\'s Gloves', 'none', 'false', 'none', 550, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true'), 
+(5331, 'Sealed Desparion\'s Boots', 'none', 'false', 'none', 1100, 'leather', 'none', 0, 90, 49, 0, 0, 0, 0, 'true'), 
+(5576, 'Sound Test Boots', 'feet', 'false', 'none', 50, 'cloth', 'none', 0, 90, 0, 0, 0, 100, 0, 'true'), 
+(5590, 'noise_boots', 'feet', 'false', 'none', 50, 'cloth', 'none', 0, 90, 0, 0, 0, 100, 0, 'true'), 
+(5709, 'Sealed Zubei Gauntlets', 'none', 'false', 'none', 590, 'mithril', 'none', 0, 90, 41, 0, 0, 0, 0, 'true'), 
+(5710, 'Zubei`s Gauntlets Heavy', 'gloves', 'true', 'heavy', 590, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(5711, 'Zubei`s Gauntlets Light', 'gloves', 'true', 'light', 590, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(5712, 'Zubei`s Gauntlets Robe', 'gloves', 'true', 'magic', 590, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(5713, 'Sealed Avadon Gloves', 'none', 'false', 'none', 590, 'mithril', 'none', 0, 90, 41, 0, 0, 0, 0, 'true'), 
+(5714, 'Avadon Gloves Heavy', 'gloves', 'true', 'heavy', 590, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(5715, 'Avadon Gloves Light', 'gloves', 'true', 'light', 590, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(5716, 'Avadon Gloves Robe', 'gloves', 'true', 'magic', 590, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(5717, 'Sealed Blue Wolf Gloves', 'none', 'false', 'none', 590, 'leather', 'none', 0, 90, 44, 0, 0, 0, 0, 'true'), 
+(5718, 'Blue Wolf Gloves Heavy', 'gloves', 'true', 'heavy', 590, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(5719, 'Blue Wolf Gloves Light', 'gloves', 'true', 'light', 590, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(5720, 'Blue Wolf Gloves Robe', 'gloves', 'true', 'magic', 590, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(5721, 'Sealed Doom Gloves', 'none', 'false', 'none', 580, 'leather', 'none', 0, 90, 44, 0, 0, 0, 0, 'true'), 
+(5722, 'Doom Gloves Heavy', 'gloves', 'true', 'heavy', 580, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(5723, 'Doom Gloves Light', 'gloves', 'true', 'light', 580, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(5724, 'Doom Gloves Robe', 'gloves', 'true', 'magic', 580, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(5725, 'Sealed Zubei Boots', 'none', 'false', 'none', 1180, 'mithril', 'none', 0, 90, 41, 0, 0, 0, 0, 'true'), 
+(5726, 'Zubei`s Boots Heavy', 'feet', 'true', 'heavy', 1180, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(5727, 'Zubei`s Boots Light', 'feet', 'true', 'light', 1180, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(5728, 'Zubei`s Boots Robe', 'feet', 'true', 'magic', 1180, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(5729, 'Sealed Avadon Boots', 'none', 'false', 'none', 1180, 'mithril', 'none', 0, 90, 41, 0, 0, 0, 0, 'true'), 
+(5730, 'Avadon Boots Heavy', 'feet', 'true', 'heavy', 1180, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(5731, 'Avadon Boots Light', 'feet', 'true', 'light', 1180, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(5732, 'Avadon Boots Robe', 'feet', 'true', 'magic', 1180, 'mithril', 'b', 0, 90, 41, 0, 0, 519000, 69, 'true'), 
+(5733, 'Sealed Blue Wolf Boots', 'none', 'false', 'none', 1130, 'leather', 'none', 0, 90, 44, 0, 0, 0, 0, 'true'), 
+(5734, 'Blue Wolf Boots Heavy', 'feet', 'true', 'heavy', 1130, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(5735, 'Blue Wolf Boots Light', 'feet', 'true', 'light', 1130, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(5736, 'Blue Wolf Boots Robe', 'feet', 'true', 'magic', 1130, 'leather', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(5737, 'Sealed Doom Boots', 'none', 'false', 'none', 1130, 'mithril', 'none', 0, 90, 44, 0, 0, 0, 0, 'true'), 
+(5738, 'Doom Boots Heavy', 'feet', 'true', 'heavy', 1130, 'mithril', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(5739, 'Doom Boots Light', 'feet', 'true', 'light', 1130, 'mithril', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(5740, 'Doom Boots Robe', 'feet', 'true', 'magic', 1130, 'mithril', 'b', 0, 90, 44, 0, 0, 804000, 107, 'true'), 
+(5765, 'Dark Crystal Gloves Heavy', 'gloves', 'true', 'heavy', 580, 'leather', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true'), 
+(5766, 'Dark Crystal Gloves Light', 'gloves', 'true', 'light', 580, 'leather', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true'), 
+(5767, 'Dark Crystal Gloves Robe', 'gloves', 'true', 'magic', 580, 'leather', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true'), 
+(5768, 'Tallum Gloves Heavy', 'gloves', 'true', 'heavy', 580, 'leather', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true'), 
+(5769, 'Tallum Gloves Light', 'gloves', 'true', 'light', 580, 'leather', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true'), 
+(5770, 'Tallum Gloves Robe', 'gloves', 'true', 'magic', 580, 'leather', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true'), 
+(5771, 'Gloves of Nightmare Heavy', 'gloves', 'true', 'heavy', 550, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true'), 
+(5772, 'Gloves of Nightmare Light', 'gloves', 'true', 'light', 550, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true'), 
+(5773, 'Gloves of Nightmare Robe', 'gloves', 'true', 'magic', 550, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true'), 
+(5774, 'Magestic Gloves Heavy', 'gloves', 'true', 'heavy', 540, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true'), 
+(5775, 'Magestic Gloves Light', 'gloves', 'true', 'light', 540, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true'), 
+(5776, 'Magestic Gloves Robe', 'gloves', 'true', 'magic', 540, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true'), 
+(5777, 'Dark Crystal Boots Heavy', 'feet', 'true', 'heavy', 1110, 'crystal', 'a', 0, 95, 43, 0, 0, 1160000, 154, 'true'), 
+(5778, 'Dark Crystal Boots Light', 'feet', 'true', 'light', 1110, 'crystal', 'a', 0, 95, 43, 0, 0, 1160000, 154, 'true'), 
+(5779, 'Dark Crystal Boots Robe', 'feet', 'true', 'magic', 1110, 'crystal', 'a', 0, 95, 43, 0, 0, 1160000, 154, 'true'), 
+(5780, 'Tallum Boots Heavy', 'feet', 'true', 'heavy', 1130, 'blood_steel', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true'), 
+(5781, 'Tallum Boots Light', 'feet', 'true', 'light', 1130, 'blood_steel', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true'), 
+(5782, 'Tallum Boots Robe', 'feet', 'true', 'magic', 1130, 'blood_steel', 'a', 0, 90, 43, 0, 0, 1160000, 154, 'true'), 
+(5783, 'Boots of Nightmare Heavy', 'feet', 'true', 'heavy', 1110, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true'), 
+(5784, 'Boots of Nightmare Light', 'feet', 'true', 'light', 1110, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true'), 
+(5785, 'Boots of Nightmare Robe', 'feet', 'true', 'magic', 1110, 'leather', 'a', 0, 90, 45, 0, 0, 1760000, 140, 'true'), 
+(5786, 'Majestic Boots Heavy', 'feet', 'true', 'heavy', 1110, 'blood_steel', 'a', 0, 95, 45, 0, 0, 1760000, 140, 'true'), 
+(5787, 'Majestic Boots Light', 'feet', 'true', 'light', 1110, 'blood_steel', 'a', 0, 95, 45, 0, 0, 1760000, 140, 'true'), 
+(5788, 'Magestic Boots Robe', 'feet', 'true', 'magic', 1110, 'blood_steel', 'a', 0, 95, 45, 0, 0, 1760000, 140, 'true'), 
+(5808, 'party_mask', 'hair', 'false', 'none', 660, 'wood', 'none', 0, 90, 0, 0, 0, 100, 0, 'true'), 
+(6323, 'Sealed Phoenix\'s Necklace', 'none', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 60, 0, 0, 0, 'true'), 
+(6324, 'Sealed Phoenix\'s Earing', 'none', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 57, 0, 0, 0, 'true'), 
+(6325, 'Sealed Phoenix\'s Ring', 'none', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 40, 0, 0, 0, 'true'), 
+(6326, 'Sealed Majestic Necklace', 'none', 'false', 'none', 150, 'gold', 'none', 0, 95, 0, 38, 0, 0, 0, 'true'), 
+(6327, 'Sealed Majestic Earing', 'none', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 80, 0, 0, 0, 'true'), 
+(6328, 'Sealed Majestic Ring', 'none', 'false', 'none', 150, 'silver', 'none', 0, 95, 0, 76, 0, 0, 0, 'true'), 
+(6394, 'red_party_mask', 'hair', 'false', 'none', 660, 'wood', 'none', 0, 90, 0, 0, 0, 35000, 0, 'true');
