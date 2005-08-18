@@ -487,11 +487,11 @@
   <set name="castRange" val="40"/>
 
   <for>
-  <add order="0x10" stat="rCrit" val="45">
+   <effect count="1" name="Buff" time="10" val="0">
+	<add order="0x10" stat="rCrit" val="45">
       <using kind="Dagger" skill="0321"/>
     </add>
-   <effect count="1" name="Buff" time="10" val="0">
-	<mul order="0x50" stat="runSpd" val="#runSpeed"/>
+   	<mul order="0x50" stat="runSpd" val="#runSpeed"/>
    </effect>
   </for>
 

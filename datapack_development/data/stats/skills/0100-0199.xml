@@ -17,7 +17,7 @@
   <set name="buffDuration" val="9000"/>
   <set name="castRange" val="50"/>
   <for>
-<effect count="1" name="Stun" time="9" val="0"/>
+    <effect count="1" name="Stun" time="9" val="0"/>
   </for>
 </skill>
 <skill id="101" levels="40" name="Stun Shot">
@@ -49,7 +49,7 @@
 <set name="buffDuration" val="9000" />
 <set name="castRange" val="700" />
 <for>
-<effect count="1" name="Stun" time="9" val="0" />
+ <effect count="1" name="Stun" time="9" val="0" />
 </for>
 </skill>
  <skill id="102" levels="16" name="Entangle">
@@ -70,7 +70,7 @@
    <for>
    <effect count="1" name="Buff" time="120" val="0">
      <mul order="0x50" stat="runSpd" val="#Tab-runSpd"/>
-  </effect>
+   </effect>
 </for>
 </skill>
 <skill id="103" levels="4" name="Corpse Plague">
@@ -106,7 +106,7 @@
   <set name="castRange" val="-1"/>
   <for>
    <effect count="1" name="Buff" time="1200" val="0">
-   <mul order="0x50" stat="pAtk" val="1.2"/>
+      <mul order="0x50" stat="pAtk" val="1.2"/>
       <target kind="plant"/>
    </effect>
   </for>
@@ -128,9 +128,9 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
   <for>
-  <effect count="1" name="Buff" time="120" val="0">
-    <mul order="0x50" stat="runSpd" val="0.7"/>
-  </effect>
+    <effect count="1" name="Buff" time="120" val="0">
+       <mul order="0x50" stat="runSpd" val="0.7"/>
+    </effect>
   </for>
 </skill>
 <skill id="106" levels="14" name="Veil">
@@ -196,14 +196,14 @@
 <set name="buffDuration" val="120000"/>
 <set name="castRange" val="-1"/>
 <for>
-<effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
+ <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
   <mul order="0x50" stat="pAtk" val="#pAtk"/>
   <mul order="0x50" stat="pDef" val="#pDef"/>
   <mul order="0x50" stat="accCombat" val="#accCombat"/>
   <mul order="0x40" stat="maxHp" val="#maxHp"/>
   <mul order="0x50" stat="runSpd" val="#runSpd"/>
   <mul order="0x50" stat="rEvas" val="#rEvas"/>
-</effect>
+ </effect>
 </for>
 </skill>
 <skill id="110" levels="2" name="Ultimate Defense">
@@ -223,10 +223,10 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
   <for>
-  <effect count="1" name="ImobileBuff" time="30" val="0">
-   <add order="0x40" stat="pDef" val="#pDef"/>
-   <add order="0x40" stat="mDef" val="#mDef"/>
-  </effect>
+   <effect count="1" name="ImobileBuff" time="30" val="0">
+    <add order="0x40" stat="pDef" val="#pDef"/>
+    <add order="0x40" stat="mDef" val="#mDef"/>
+   </effect>
   </for>
 </skill>
 <skill id="111" levels="2" name="Ultimate Evasion">
@@ -244,9 +244,9 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
   <for>
-  <effect count="1" name="Buff" time="30" val="0">
+   <effect count="1" name="Buff" time="30" val="0">
     <add order="0x40" stat="rEvas" val="#Tab-rEvas"/>
-  </effect>
+   </effect>
   </for>
 </skill>
 <skill id="112" levels="4" name="Deflect Arrow">
@@ -319,9 +319,9 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
   <for>
-  <effect count="1" name="Buff" time="120" val="0">
-    <div order="0x50" stat="pAtk" val="#Tab-pAtk"/>
- </effect>
+   <effect count="1" name="Buff" time="120" val="0">
+     <div order="0x50" stat="pAtk" val="#Tab-pAtk"/>
+   </effect>
 </for>
 </skill>
 <skill id="116" levels="14" name="Howl">
@@ -339,9 +339,9 @@
  <set name="castRange" val="50"/>
 <table name="#Tab-pAtk"> 1.15 1.3 1.45 1.6 1.85 2.0 2.15 2.3 2.4 2.6 2.7 2.85 3.0 3.25 </table>
 <for>
-<effect name="Buff" time="120" count="1" val="0">
-<div order='0x50' stat='pAtk' val="#Tab-pAtk"/>
-</effect>
+ <effect name="Buff" time="120" count="1" val="0">
+   <div order='0x50' stat='pAtk' val="#Tab-pAtk"/>
+ </effect>
 </for>
 </skill>
 <skill id="117" levels="3" name="none">
@@ -368,10 +368,10 @@
   <for>
    <mul stat="pAtkSpd" order="0x50" val="1.2">
      <and>
-<using kind="Magic"/>
-          <not>
-        <using kind="Light,Magic"/>
-          </not>
+       <using kind="Magic"/>
+     <not>
+       <using kind="Light,Magic"/>
+     </not>
      </and>
    </mul>
   </for>
@@ -414,7 +414,7 @@
   <set name="buffDuration" val="9000"/>
   <set name="castRange" val="50"/>
   <for>
-<effect count="1" name="Stun" time="9" val="0"/>
+    <effect count="1" name="Stun" time="9" val="0"/>
   </for>
 </skill>
 <skill id="121" levels="6" name="Battle Roar">
@@ -459,9 +459,9 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
   <for>
-  <effect count="1" name="Buff" time="120" val="0">
-    <div order="0x50" stat="pDef" val="#Tab-pDef"/>
- </effect>
+   <effect count="1" name="Buff" time="120" val="0">
+     <div order="0x50" stat="pDef" val="#Tab-pDef"/>
+   </effect>
 </for>
 </skill>
 <skill id="123" levels="3" name="Spirit Barrier">
@@ -480,9 +480,9 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mDef" stackType="MagicDefUp">
-    <mul order="0x50" stat="mDef" val="#Tab-mDef"/>
- </effect>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mDef" stackType="MagicDefUp">
+       <mul order="0x50" stat="mDef" val="#Tab-mDef"/>
+    </effect>
 </for>
 </skill>
 <skill id="124" levels="4" name="none">
@@ -546,11 +546,11 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
-  <for>
-  <effect count="1" name="Buff" time="120" val="0">
+ <for>
+   <effect count="1" name="Buff" time="120" val="0">
     <div order="0x50" stat="runSpd" val="#Tab-runSpd"/>
- </effect>
-</for>
+   </effect>
+ </for>
 </skill>
 <skill id="128" levels="2" name="none">
   <set name="mpConsume" val="15"/>
@@ -603,13 +603,11 @@
 
 <table name="#Tab-runSpd"> 1.2 1.2 </table>
 <table name="#Tab-pAtkSpd"> 1.05 1.1 </table>
-
-
 <for>
   <effect name="Buff" time="300" count="1" val="0">
     <div  order='0x50' stat='runSpd' val="#Tab-runSpd"/>
     <mul  order='0x50' stat='pAtkSpd' val="#Tab-pAtkSpd"/>
- </effect>
+  </effect>
 </for>
 </skill>
 <skill id="131" levels="3" name="Hawk Eye">
@@ -631,7 +629,7 @@
   <effect name="Buff" time="300" count="1" val="0">
     <add  order='0x40' stat='accCombat' val="#Tab-accCombat"/>
     <mul  order='0x50' stat='pDef' val="#Tab-pDef"/>
- </effect>
+  </effect>
 </for>
 </skill>
 <skill id="132" levels="1" name="none">
@@ -732,7 +730,7 @@
 <for>
   <effect name="Buff" time="30" count="1" val="0">
     <mul  order='0x50' stat='pDef' val="#Tab-pDef"/>
- </effect>
+  </effect>
 </for>
 </skill>
 <skill id="140" levels="1" name="none">
@@ -763,17 +761,17 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-    <add order="0x40" stat="pDef" val="#pDef"/>
-<add order="0x40" stat="rEvas" val="#rEvas">
-  <and>
-<using kind="Light"/>
-        <not>
-<using kind="Heavy,Magic"/>
-</not>
-      </and>
+   <for>
+      <add order="0x40" stat="pDef" val="#pDef"/>
+      <add order="0x40" stat="rEvas" val="#rEvas">
+    <and>
+      <using kind="Light"/>
+    <not>
+      <using kind="Heavy,Magic"/>
+    </not>
+    </and>
     </add>
-  </for>
+   </for>
 </skill>
 <skill id="143" levels="2" name="Cubic Mastery">
   <set name="power" val="0.0"/>
@@ -1007,9 +1005,9 @@
         <not>
          <using kind="Light,Heavy"/>
         </not>
-      </and>
-    </mul>
-  </for>
+       </and>
+     </mul>
+   </for>
 </skill>
 <skill id="164" levels="3" name="Quick Recovery">
   <table name="#reuse"> 0.80 0.75 0.70 </table>
@@ -1301,6 +1299,8 @@
 <set name="skillType" val="PDAM"/>
 <set name="operateType" val="OP_ACTIVE"/>
 <set name="castRange" val="50"/>
+<for>
+</for>
 </skill>
 <skill id="191" levels="6" name="Focus Mind">
   <set name="power" val="0.0"/>
@@ -1359,7 +1359,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-<add stat="breath" val="#breath" order="0x01"/>
+   <add stat="breath" val="#breath" order="0x01"/>
   </for>
 
 </skill>

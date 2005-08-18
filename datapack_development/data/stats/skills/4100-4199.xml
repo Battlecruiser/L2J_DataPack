@@ -279,7 +279,9 @@
 <!-- Done by dc -->
 <table name="#Tab-mDef"> 1.2 </table>
 <for>
+   <effect name="Buff" time="120" count="1" val="0">
     <mul  order='0x50' stat='mDef' val="#Tab-mDef"/>
+   </effect>	
 </for>
 </skill>
 <skill id="4117" levels="7" name="Paralysis">
@@ -1068,13 +1070,13 @@
   <set name="hitTime" val="3000"/>
   <set name="reuseDelay" val="120000"/>
   <set name="skillTime" val="3000"/>
-  <set name="skillType" val="MDAM"/>
+  <set name="skillType" val="PARALYZE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
+  <set name="buffDuration" val="30000"/>
   <set name="castRange" val="400"/>
   <for>
-	<effect count="1" name="Stun" time="9" val="0"/>
+	<effect count="1" name="Paralyze" time="30" val="0"/>
   </for>
 </skill>
 <skill id="4165" levels="9" name="Icy Air">

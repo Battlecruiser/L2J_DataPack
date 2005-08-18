@@ -680,7 +680,7 @@
   <for>
   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mDef" stackType="MagicDefUp">
     <mul order="0x50" stat="mDef" val="#Tab-mDef"/>
- </effect>
+  </effect>
 </for>
 </skill>
 <skill id="1140" levels="3" name="Servitor Physical Shield">
@@ -701,7 +701,7 @@
   <for>
   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pDef" stackType="pDef">
     <mul order="0x50" stat="pDef" val="#Tab-pDef"/>
- </effect>
+  </effect>
 </for>
 </skill>
 <skill id="1141" levels="2" name="Servitor Haste">
@@ -722,7 +722,7 @@
   <for>
   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpeedUp">
     <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
- </effect>
+  </effect>
 </for>
 </skill>
 <skill id="1142" levels="4" name="none">
@@ -775,7 +775,7 @@
   <for>
   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
     <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
- </effect>
+  </effect>
 </for>
 </skill>
 <skill id="1145" levels="3" name="Bright Servitor">
@@ -796,7 +796,7 @@
   <for>
   <effect count="1" name="Buff" time="1200" val="0">
     <mul order="0x50" stat="mAtk" val="#Tab-mAtk"/>
- </effect>
+  </effect>
 </for>
 </skill>
 <skill id="1146" levels="3" name="Mighty Servitor">
@@ -817,7 +817,7 @@
   <for>
   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtk" stackType="pAtk">
     <mul order="0x50" stat="pAtk" val="#Tab-pAtk"/>
- </effect>
+  </effect>
 </for>
 </skill>
 <skill id="1147" levels="6" name="Vampiric Touch">
@@ -973,7 +973,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <for>
-
   </for>
 </skill>
 <skill id="1156" levels="13" name="Forget">
@@ -1042,7 +1041,6 @@
   </for>
 </skill>
 <skill id="1160" levels="15" name="Slow">
-
 <table name="#Tab-runSpd">
 	1.1 1.15 1.17 1.2 1.25 1.3 1.32 1.35 1.38 1.4 1.44 1.48 1.52 1.56 1.6
 </table>
@@ -1134,7 +1132,7 @@
   <for>
   <effect count="1" name="Buff" time="120" val="0">
     <div order="0x50" stat="pAtk" val="#Tab-pAtk"/>
- </effect>
+  </effect>
 </for>
 </skill>
 <skill id="1165" levels="3" name="none">
@@ -1445,8 +1443,8 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0">
-   <mul stat="waterRes" val="#res" order="0x05"/>
+   <effect count="1" name="Buff" time="1200" val="0">
+    <mul stat="waterRes" val="#res" order="0x05"/>
    </effect>
   </for>
 </skill>
@@ -1574,7 +1572,7 @@
   <for>
   <effect count="1" name="Buff" time="1200" val="0">
    <mul stat="windRes" val="#res" order="0x05"/>
-   </effect>
+  </effect>
   </for>
 </skill>
 <skill id="1190" levels="3" name="none">

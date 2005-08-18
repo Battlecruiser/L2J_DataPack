@@ -279,8 +279,9 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="SilentMove" time="5" val="5"/>
-	 <mul order="0x10" stat="runSpd" val="0.75"/>
+    <effect count="0x7fffffff" name="SilentMove" time="5" val="5">
+	  <mul order="0x10" stat="runSpd" val="0.75"/>
+    </effect>
   </for>
 </skill>
 <skill id="222" levels="1" name="Fist Fury">
@@ -450,10 +451,10 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
-    <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
- </effect>
-</for>
+   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
+      <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
+   </effect>
+  </for>
 </skill>
 <skill id="231" levels="50" name="Heavy Armor Mastery">
   <table name="#pDef">
@@ -730,7 +731,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="50"/>
   <for>
-
   </for>
 </skill>
 <skill id="246" levels="1" name="Seal of Ruler">
@@ -1838,10 +1838,11 @@
   <set name="castRange" val="-1"/>
 
   <for>
-    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession"/>
-	<mul stat="pAtk" val="0.8" order="0x05"/>
-	<add stat="rEvas" val="10" order="0x05"/>
-	<add stat="runSpd" val="15" order="0x05"/>
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
+	 <mul stat="pAtk" val="0.8" order="0x05"/>
+	 <add stat="rEvas" val="10" order="0x05"/>
+	 <add stat="runSpd" val="15" order="0x05"/>
+	</effect>
   </for>
 
 </skill>

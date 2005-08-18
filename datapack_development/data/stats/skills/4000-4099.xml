@@ -681,10 +681,8 @@
  </effect>
 </for>
 </skill>
-<skill id="4049" levels="3" name="Cubic Drain">
-  <table name="#power">
-   26.0 31.0 36.0
-  </table>
+<skill id="4049" levels="8" name="Cubic Drain">
+  <table name="#power"> 15.0 21.0 26.0 32.0 37.0 43.0 48.0 53.0 </table>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
@@ -694,8 +692,8 @@
   <for>
   </for>
 </skill>
-<skill id="4050" levels="3" name="Cubic Drain">
-  <table name="#power"> 15.0 21.0 26.0 </table>
+<skill id="4050" levels="7" name="Cubic Drain">
+  <table name="#power"> 26.0 31.0 36.0 41.0 46.0 51.0 56.0 </table>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
@@ -706,8 +704,8 @@
   <for>
   </for>
 </skill>
-<skill id="4051" levels="3" name="Cubic Heal">
-  <table name="#power"> 201.0 241.0 281.0 </table>
+<skill id="4051" levels="7" name="Cubic Heal">
+  <table name="#power"> 201.0 241.0 281.0 321.0 361.0 401.0 441.0 </table>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="HEAL"/>
@@ -717,8 +715,8 @@
   <for>
   </for>
 </skill>
-<skill id="4052" levels="2" name="Venom">
-  <table name="#dmg"> 31 38 </table>
+<skill id="4052" levels="6" name="Venom">
+  <table name="#dmg"> 31 38 45 52 59 66 </table>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -732,8 +730,8 @@
     <effect count="4" name="DamOverTime" time="15" val="#dmg" abnormal="poison"/>
   </for>
 </skill>
-<skill id="4053" levels="3" name="Drop Attack Power">
-  <table name="#Tab-pAtk"> 15.0 15.0 30.0 </table>
+<skill id="4053" levels="8" name="Drop Attack Power">
+  <table name="#Tab-pAtk"> 15.0 18.0 20.0 23.0 25.0 28.0 30.0 33.0 </table>
   <set name="save" val="6"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -748,8 +746,8 @@
  </effect>
 </for>
 </skill>
-<skill id="4054" levels="3" name="Drop defense">
-  <table name="#Tab-pDef"> 15.0 20.0 20.0 </table>
+<skill id="4054" levels="8" name="Drop defense">
+  <table name="#Tab-pDef"> 15.0 18.0 20.0 23.0 25.0 28.0 30.0 33.0 </table>
   <set name="save" val="4"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -764,8 +762,8 @@
  </effect>
 </for>
 </skill>
-<skill id="4055" levels="3" name="Drop Attack Speed">
-  <table name="#Tab-pAtkSpd"> 10 30 50 </table>
+<skill id="4055" levels="8" name="Drop Attack Speed">
+  <table name="#Tab-pAtkSpd"> 15 25 35 45 55 65 75 85 </table>
   <set name="save" val="5"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>

@@ -392,16 +392,16 @@
   <set name="save" val="2"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="8000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="skillTime" val="1000"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
  <for>
- <effect count="1" name="Buff" time="120" val="0">
+ <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
    <sub order="0x50" stat="earthRes" val="#Tab-earthRes"/>
  </effect>
  </for>
@@ -413,16 +413,16 @@
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="8000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="skillTime" val="1000"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
   <for>
-   <effect count="1" name="Buff" time="120" val="0">
+   <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
       <mul order="0x50" stat="poisonRes" val="#Tab-poisonRes"/>
    </effect>
   </for>
@@ -823,7 +823,7 @@
 <set name="buffDuration" val="20000"/>
 <set name="castRange" val="900"/>
 <for>
-           <effect count="4" name="DamOverTime" time="5" val="#bleeddmg" abnormal="bleeding"/>
+   <effect count="4" name="DamOverTime" time="5" val="#bleeddmg" abnormal="bleeding"/>
 </for>
 </skill>
 <skill id="1238" levels="3" name="Freezing Skin">
@@ -927,7 +927,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0">
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-cAtk" stackType="cAtk">
     <mul order="0x50" stat="cAtk" val="#Tab-cAtk"/>
  </effect>
 </for>
@@ -1126,7 +1126,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0">
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-rEvas" stackType="rEvas">
     <add order="0x40" stat="rEvas" val="#Tab-rEvas"/>
  </effect>
 </for>
@@ -1147,7 +1147,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0">
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-cAtk" stackType="cAtk">
     <mul order="0x50" stat="cAtk" val="#Tab-cAtk"/>
  </effect>
 </for>
@@ -1165,7 +1165,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>  <!-- Needs range fix -->
   <for>
-
   </for>
 </skill>
 <skill id="1255" levels="2" name="Party Recall">
@@ -1183,7 +1182,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <for>
-
   </for>
 </skill>
 <skill id="1256" levels="13" name="Heart of Paagrio">
@@ -1221,7 +1219,7 @@
 <!-- Fixed by Pela -->
 <for>
    <effect count="1" name="Buff" time="1200" val="0">
-   <mul order="0x50" stat="maxLoad" val="#Weight" />
+    <mul order="0x50" stat="maxLoad" val="#Weight" />
    </effect>
 </for>
 </skill>
@@ -1278,7 +1276,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0">
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-rEvas" stackType="rEvas">
     <add order="0x40" stat="rEvas" val="#Tab-rEvas"/>
  </effect>
 </for>
@@ -1303,7 +1301,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0">
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtk" stackType="mAtkSpeedUp">
     <mul order="0x50" stat="mAtk" val="#Tab-mAtk"/>
     <mul order="0x50" stat="pAtk" val="#Tab-pAtk"/>
     <mul order="0x50" stat="pDef" val="#Tab-pDef"/>
@@ -1411,11 +1409,8 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
-
   <for>
-
   </for>
-
 </skill>
 <skill id="1268" levels="4" name="Vampiric Rage">
 <table name="#mpConsume">
@@ -2002,7 +1997,6 @@
   <set name="castRange" val="500"/>
 
   <for>
-
   </for>
 
 </skill>

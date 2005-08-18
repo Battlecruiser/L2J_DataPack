@@ -516,7 +516,7 @@
   <set name="castRange" val="-1"/>
 <table name="#Tab-accCombat"> 45 </table>
 <for>
-  <effect count="1" name="Buff" time="1200" val="0">
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-accCombat" stackType="accuracyUp">
     <add  order='0x50' stat='accCombat' val="#Tab-accCombat"/>
   </effect>
 </for>
@@ -533,7 +533,7 @@
 <!-- Done by dc -->
 <table name="#Tab-cAtk"> 1.5 </table>
 <for>
-  <effect count="1" name="Buff" time="1200" val="0">
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-cAtk" stackType="cAtk">
     <mul  order='0x50' stat='cAtk' val="#Tab-cAtk"/>
  </effect>
 </for>
@@ -550,7 +550,7 @@
 <!-- Done by dc -->
 <table name="#Tab-rCrit"> 1.3 </table>
 <for>
-  <effect name="Buff" time="1200" count="1" val="0">
+  <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-rCrit" stackType="rCrit">
     <mul  order='0x50' stat='rCrit' val="#Tab-rCrit"/>
   </effect>
 </for>
@@ -568,7 +568,7 @@
 <table name="#Tab-mAtkSpd"> 1.3 </table>
 <table name="#reuse"> 0.90 </table>
 <for>
-  <effect name="Buff" time="1200" count="1" val="0">
+  <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-mAtkSpd" stackType="mAtkSpeedUp">
     <mul order='0x50' stat='mAtkSpd' val="#Tab-mAtkSpd"/>
     <mul order='0x20' stat='mReuse' val="#reuse"/>
  </effect>
@@ -603,7 +603,7 @@
 <!-- Done by dc -->
 <table name="#Tab-rEvas"> 8 </table>
 <for>
-  <effect name="Buff" time="1200" count="1" val="0">
+  <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-rEvas" stackType="rEvas">
     <add  order='0x40' stat='rEvas' val="#Tab-rEvas"/>
   </effect>
 </for>
@@ -620,7 +620,7 @@
 <!-- Done by dc -->
 <table name="#Tab-mAtk"> 1.75 </table>
 <for>
-  <effect name="Buff" time="1200" count="1" val="0">
+  <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-mAtk" stackType="mAtk">
     <mul  order='0x50' stat='mAtk' val="#Tab-mAtk"/>
  </effect>
 </for>
@@ -637,7 +637,7 @@
 <!-- Done by dc -->
 <table name="#Tab-pAtk"> 1.15 </table>
 <for>
-  <effect name="Buff" time="1200" count="1" val="0">
+  <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-pAtk" stackType="pAtk">
     <mul  order='0x50' stat='pAtk' val="#Tab-pAtk"/>
   </effect>
 </for>
@@ -671,7 +671,7 @@
 <!-- Done by dc -->
 <table name="#Tab-pDef"> 1.15 </table>
 <for>
-  <effect name="Buff" time="1200" count="1" val="0">
+  <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-pDef" stackType="pDef">
     <mul  order='0x50' stat='pDef' val="#Tab-pDef"/>
   </effect>
 </for>
@@ -1175,12 +1175,6 @@
   </for>
 </skill>
 <skill id="2096" levels="1" name="Soul Crystal">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:30
--->
   <set name="power" val="0.0"/>
   <set name="mpConsume" val="26"/>
   <set name="target" val="TARGET_ONE"/>
