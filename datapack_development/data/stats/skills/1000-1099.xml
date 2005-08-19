@@ -738,8 +738,8 @@
   <table name="#Tab-pAtk"> 1.3 </table>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-      <mul order='0x50' stat='pAtk-undead' val="#Tab-pAtk"/> 
-    </effect>   
+      <mul order='0x50' stat='pAtk-undead' val="#Tab-pAtk"/>
+    </effect>
   </for>
 </skill>
 <skill id="1044" levels="3" name="Regeneration">
@@ -1693,8 +1693,7 @@
   <set name="castRange" val="-1"/>
 <for>
    <effect count="1" name="Buff" time="120" val="0">
-      <sub order="0x01" stat="accCombat" val="#Acc" >
-	  </sub>
+      <sub order="0x01" stat="accCombat" val="#Acc" />
    </effect>
 </for>
 </skill>
