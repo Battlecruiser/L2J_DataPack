@@ -1434,7 +1434,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-   <effect name="Buff" time="120" count="1" val="0">
+   <effect name="Buff" time="1200" count="1" val="0">
    <add stat="absorbDam" val="#abs" order="0x50"/>
    </effect>
   </for>
