@@ -53,7 +53,7 @@ class Quest (JQuest) :
       st.set("cond","2")
       htmltext = "7610-05.htm"
     elif event == "7610_5" :
-      st.giveItems(Q_LIST_OF_STUFF_FOR_FS_IDd,1)
+      st.giveItems(Q_LIST_OF_STUFF_FOR_FSD_ID,1)
       st.set("cond","2")
       htmltext = "7610-06.htm"
     elif event == "7610_6" :
@@ -61,7 +61,7 @@ class Quest (JQuest) :
       st.set("cond","11")
       htmltext = "7610-12.htm"
     elif event == "7610_7" :
-      st.giveItems(Q_LIST_OF_STUFF_FOR_FS_IDd,1)
+      st.giveItems(Q_LIST_OF_STUFF_FOR_FSD_ID,1)
       st.set("cond","11")
       htmltext = "7610-13.htm"
     elif event == "7711_1" :
@@ -83,14 +83,14 @@ class Quest (JQuest) :
         st.giveItems(Q_FAIRY_STONE_ID,1)
         htmltext = "7608-03.htm"
     elif event == "7608_2" :
-        st.takeItems(Q_LIST_OF_STUFF_FOR_FS_IDd,1)
+        st.takeItems(Q_LIST_OF_STUFF_FOR_FSD_ID,1)
         st.takeItems(COAL_ID,10)
         st.takeItems(CHARCOAL_ID,10)
         st.takeItems(GEMSTONE_C_ID,1)
         st.takeItems(STONE_OF_PURITY_ID,1)
         st.takeItems(SILVER_NUGGET_ID,5)
         st.takeItems(Q_INPICIOS_BACK_SKIN_ID,st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID))
-        st.giveItems(Q_FAIRY_STONE_ID_delux,1)
+        st.giveItems(Q_FAIRY_STONE_DELUX_ID,1)
         htmltext = "7608-05.htm"
     elif event == "7747_1" :
         st.takeItems(Q_FAIRY_STONE_ID,1)
@@ -98,7 +98,7 @@ class Quest (JQuest) :
         htmltext = "7747-03.htm"
     elif event == "7747_3" :
       st.giveItems(Q_FAIRY_DUST_ID,1)
-      st.takeItems(Q_FAIRY_STONE_ID_delux,1)
+      st.takeItems(Q_FAIRY_STONE_DELUX_ID,1)
       st.set("cond","5")
       htmltext = "7747-05.htm"
     elif event == "7747_2" :
@@ -197,46 +197,46 @@ class Quest (JQuest) :
        htmltext = "7829-04.htm"
    elif npcId == 7610 and int(st.get("cond"))==1 :
        htmltext = "7610-01.htm"
-   elif npcId == 7610 and (int(st.get("cond"))==2 or int(st.get("cond"))==11) and st.getQuestItemsCount(Q_FAIRY_STONE_ID)==0 and st.getQuestItemsCount(Q_FAIRY_STONE_ID_delux)==0 :
+   elif npcId == 7610 and (int(st.get("cond"))==2 or int(st.get("cond"))==11) and st.getQuestItemsCount(Q_FAIRY_STONE_ID)==0 and st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==0 :
        htmltext = "7610-07.htm"
-   elif npcId == 7610 and int(st.get("cond"))==2 and (st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 or st.getQuestItemsCount(Q_FAIRY_STONE_ID_delux)==1) :
+   elif npcId == 7610 and int(st.get("cond"))==2 and (st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 or st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1) :
       st.set("cond","3")
       htmltext = "7610-08.htm"
-   elif npcId == 7610 and int(st.get("cond"))==11 and (st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 or st.getQuestItemsCount(Q_FAIRY_STONE_ID_delux)==1) :
+   elif npcId == 7610 and int(st.get("cond"))==11 and (st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 or st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1) :
       htmltext = "7610-14.htm"
    elif npcId == 7610 and int(st.get("cond"))==3 :
       htmltext = "7610-09.htm"
    elif npcId == 7610 and int(st.get("cond"))==10 :
       htmltext = "7610-10.htm"
-   elif npcId == 7610 and int(st.get("cond"))==4 and (st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 or st.getQuestItemsCount(Q_FAIRY_STONE_ID_delux)==1) :
+   elif npcId == 7610 and int(st.get("cond"))==4 and (st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 or st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1) :
       htmltext = "7610-11.htm"
-   elif npcId == 7711 and int(st.get("cond"))==3 and (st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 or st.getQuestItemsCount(Q_FAIRY_STONE_ID_delux)==1) :
+   elif npcId == 7711 and int(st.get("cond"))==3 and (st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 or st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1) :
       htmltext = "7711-01.htm"
    elif npcId == 7711 and int(st.get("cond"))==11 and st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 :
       st.set("cond","4")
       htmltext = "7711-05.htm"
-   elif npcId == 7711 and int(st.get("cond"))==11 and st.getQuestItemsCount(Q_FAIRY_STONE_ID_delux)==1 :
+   elif npcId == 7711 and int(st.get("cond"))==11 and st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1 :
       st.set("cond","4")
       htmltext = "7711-06.htm"
    elif npcId == 7711 and int(st.get("cond"))==4 and st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 :
       htmltext = "7711-07.htm"
-   elif npcId == 7711 and int(st.get("cond"))==4 and st.getQuestItemsCount(Q_FAIRY_STONE_ID_delux)==1 :
+   elif npcId == 7711 and int(st.get("cond"))==4 and st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1 :
       htmltext = "7711-08.htm"
    elif npcId == 7711 and int(st.get("cond"))==10 :
       htmltext = "7711-09.htm"
-   elif npcId == 7711 and int(st.get("cond"))==11 and st.getQuestItemsCount(Q_FAIRY_STONE_ID)==0 and st.getQuestItemsCount(Q_FAIRY_STONE_ID_delux)==0 and (st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_ID)==1 or st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_IDd)==1) :
+   elif npcId == 7711 and int(st.get("cond"))==11 and st.getQuestItemsCount(Q_FAIRY_STONE_ID)==0 and st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==0 and (st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_ID)==1 or st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FSD_ID)==1) :
       htmltext = "7711-10.htm"
-   elif npcId == 7608 and (int(st.get("cond"))==2 or int(st.get("cond"))==11) and ((st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_ID)==1 and (st.getQuestItemsCount(COAL_ID)<10 or st.getQuestItemsCount(CHARCOAL_ID)<10 or st.getQuestItemsCount(GEMSTONE_D_ID)==0 or st.getQuestItemsCount(SILVER_NUGGET_ID)<3 or st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID)<10)) or (st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_IDd)==1 and (st.getQuestItemsCount(COAL_ID)<10 or st.getQuestItemsCount(CHARCOAL_ID)<10 or st.getQuestItemsCount(GEMSTONE_C_ID)==0 or st.getQuestItemsCount(STONE_OF_PURITY_ID)==0 or st.getQuestItemsCount(SILVER_NUGGET_ID)<5 or st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID)<20))) :
+   elif npcId == 7608 and (int(st.get("cond"))==2 or int(st.get("cond"))==11) and ((st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_ID)==1 and ((st.getQuestItemsCount(COAL_ID)<10 or st.getQuestItemsCount(CHARCOAL_ID)<10 or st.getQuestItemsCount(GEMSTONE_D_ID)==0 or st.getQuestItemsCount(SILVER_NUGGET_ID)<3 or st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID)<10)) or (st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FSD_ID)==1 and (st.getQuestItemsCount(COAL_ID)<10 or st.getQuestItemsCount(CHARCOAL_ID)<10 or st.getQuestItemsCount(GEMSTONE_C_ID)==0 or st.getQuestItemsCount(STONE_OF_PURITY_ID)==0 or st.getQuestItemsCount(SILVER_NUGGET_ID)<5 or st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID)<20)))) :
       htmltext = "7608-01.htm"
    elif npcId == 7608 and (int(st.get("cond"))==2 or int(st.get("cond"))==11) and st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_ID)==1 and st.getQuestItemsCount(COAL_ID)>=10 and st.getQuestItemsCount(CHARCOAL_ID)>=10 and st.getQuestItemsCount(GEMSTONE_D_ID)>=1 and st.getQuestItemsCount(SILVER_NUGGET_ID)>=3 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID)>=10 :
       htmltext = "7608-02.htm"
-   elif npcId == 7608 and (int(st.get("cond"))==2 or int(st.get("cond"))==11) and st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_IDd)==1 and st.getQuestItemsCount(COAL_ID)>=10 and st.getQuestItemsCount(CHARCOAL_ID)>=10 and st.getQuestItemsCount(GEMSTONE_C_ID)>=1 and st.getQuestItemsCount(STONE_OF_PURITY_ID)>=1 and st.getQuestItemsCount(SILVER_NUGGET_ID)>=5 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID)>=20 :
+   elif npcId == 7608 and (int(st.get("cond"))==2 or int(st.get("cond"))==11) and st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FSD_ID)==1 and st.getQuestItemsCount(COAL_ID)>=10 and st.getQuestItemsCount(CHARCOAL_ID)>=10 and st.getQuestItemsCount(GEMSTONE_C_ID)>=1 and st.getQuestItemsCount(STONE_OF_PURITY_ID)>=1 and st.getQuestItemsCount(SILVER_NUGGET_ID)>=5 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID)>=20 :
       htmltext = "7608-04.htm"
-   elif npcId == 7608 and int(st.get("cond"))>=1 and st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 or st.getQuestItemsCount(Q_FAIRY_STONE_ID_delux)==1 :
+   elif npcId == 7608 and int(st.get("cond"))>=1 and st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 or st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1 :
       htmltext = "7608-06.htm"
    elif npcId == 7747 and int(st.get("cond"))>=1 and st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 :
       htmltext = "7747-02.htm"
-   elif npcId == 7747 and int(st.get("cond"))>=1 and st.getQuestItemsCount(Q_FAIRY_STONE_ID_delux)==1 :
+   elif npcId == 7747 and int(st.get("cond"))>=1 and st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1 :
       htmltext = "7747-04.htm"
    elif npcId == 7747 and int(st.get("cond"))==5 :
       htmltext = "7747-07.htm"
@@ -249,7 +249,7 @@ class Quest (JQuest) :
        htmltext = "7747-11.htm"
    elif npcId == 7747 and int(st.get("cond"))==8 :
      htmltext = "7747-12.htm"
-#   elif npcId == 7747 and int(st.get("cond"))==0 or (int(st.get("cond"))<4 or int(st.get("cond"))>8) and (st.getQuestItemsCount(Q_FAIRY_STONE_ID)==0 and st.getQuestItemsCount(Q_FAIRY_STONE_ID_delux)==0) :
+#   elif npcId == 7747 and int(st.get("cond"))==0 or (int(st.get("cond"))<4 or int(st.get("cond"))>8) and (st.getQuestItemsCount(Q_FAIRY_STONE_ID)==0 and st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==0) :
 #     n = n0+1
 #     n = n0%3
 #     if n0 == 0 :
@@ -315,7 +315,7 @@ class Quest (JQuest) :
 
  def onKill (self,npcId,st):
    if npcId == 231 :
-    if int(st.get("cond")) >= 1 and (st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_ID) == 1 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID) < 10) or st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_IDd) == 1 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID) < 20 :
+    if int(st.get("cond")) >= 1 and (st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_ID) == 1 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID) < 10) or st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FSD_ID) == 1 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID) < 20 :
       if st.getRandom(100) < 30 :
         st.giveItems(Q_INPICIOS_BACK_SKIN_ID,1)
    elif npcId == 580 :
@@ -387,12 +387,12 @@ STARTED.addKillId(598)
 STARTED.addKillId(599)
 
 STARTED.addQuestDrop(7610,Q_LIST_OF_STUFF_FOR_FS_ID,1)
-STARTED.addQuestDrop(7610,Q_LIST_OF_STUFF_FOR_FS_IDd,1)
+STARTED.addQuestDrop(7610,Q_LIST_OF_STUFF_FOR_FSD_ID,1)
 STARTED.addQuestDrop(231,Q_INPICIOS_BACK_SKIN_ID,1)
-STARTED.addQuestDrop(7610,Q_LIST_OF_STUFF_FOR_FS_IDd,1)
+STARTED.addQuestDrop(7610,Q_LIST_OF_STUFF_FOR_FSD_ID,1)
 STARTED.addQuestDrop(7608,Q_FAIRY_STONE_ID,1)
-STARTED.addQuestDrop(7608,Q_FAIRY_STONE_ID_delux,1)
-STARTED.addQuestDrop(7608,Q_FAIRY_STONE_ID_delux,1)
+STARTED.addQuestDrop(7608,Q_FAIRY_STONE_DELUX_ID,1)
+STARTED.addQuestDrop(7608,Q_FAIRY_STONE_DELUX_ID,1)
 STARTED.addQuestDrop(7747,Q_FAIRY_DUST_ID,1)
 STARTED.addQuestDrop(7748,Q_EGG_OF_DRAKE_EXARION_ID,1)
 STARTED.addQuestDrop(580,Q_EGG_OF_DRAKE_EXARION_ID,1)
