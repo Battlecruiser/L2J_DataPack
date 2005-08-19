@@ -16,206 +16,258 @@ CREATE TABLE teleport (
 -- Dumping data for table `teleport`
 -- 
 
-INSERT INTO teleport VALUES ('Elven Town & Dark Elven Town -> Village of Gludin',1,-80826,149775,-3043,6400);
-INSERT INTO teleport VALUES ('Elven Town & Dark Elven Town -> Town of Gludio',2,-12672,122776,-3116,3700);
-INSERT INTO teleport VALUES ('Town of gludio -> Elven village',3,46934,51467,-2977,3700);
-INSERT INTO teleport VALUES ('Town of gludio -> Dark Elven village',4,9745,15606,-4574,3700);
-INSERT INTO teleport VALUES ('Town of gludio -> Village of Gludin',5,-80826,149775,-3043,2900);
-INSERT INTO teleport VALUES ('Town of gludio -> Dion',6,15670,142983,-2705,4100);
-INSERT INTO teleport VALUES ('Town of gludio & Village of Gludin -> Orc village',7,-44836,-112524,-235,6000);
-INSERT INTO teleport VALUES ('Town of gludio & Village of Gludin -> Dwarven village',8,115113,-178212,-901,6000);
-INSERT INTO teleport VALUES ('Village of Gludin -> TI',9,-84318,244579,-3730,18000);
-INSERT INTO teleport VALUES ('Village of Gludin -> Elven Village',10,46934,51467,-2977,6400);
-INSERT INTO teleport VALUES ('Village of Gludin -> Dark Elven Village',11,9745,15606,-4574,6400);
-INSERT INTO teleport VALUES ('Village of Gludin -> Town of Gludio',12,-12672,122776,-3116,2900);
-INSERT INTO teleport VALUES ('Village of Gludin -> Southern entrance of wastelands',13,-16730,209417,-3664,2400);
-INSERT INTO teleport VALUES ('Dark Elven Town -> Southern part of dark elven forest',14,-61095,75104,-3356,1100);
-INSERT INTO teleport VALUES ('TI -> Village of Gludin',15,-80826,149775,-3043,18000);
-INSERT INTO teleport VALUES ('Dwarf Town & Orc Town -> Village of Gludin',16,-80826,149775,-3043,3000);
-INSERT INTO teleport VALUES ('Dwarf Town -> The Northeast Coast',17,169008,-208272,-3504,700);
-INSERT INTO teleport VALUES ('Dwarven Town -> Abandoned Coal Mines',418,155535,-173560,2495,290);
-INSERT INTO teleport VALUES ('Dwarven Town -> Mithril Mines',419,179039,-184080,-319,680);
-INSERT INTO teleport VALUES ('Dion Town -> Town of Gludio',18,-12672,122776,-3116,4200);
-INSERT INTO teleport VALUES ('Dion Town -> Town of Giran',19,83400,147943,-3404,8100);
-INSERT INTO teleport VALUES ('Dion Town & Giran Town -> Entrance Giran',20,47942,186764,-3485,6500);
-INSERT INTO teleport VALUES ('Cruma Tower Entrance -> Cruma Tower 1st floor',21,17724,114004,-11672,0);
-INSERT INTO teleport VALUES ('Cruma Tower 1st floor -> Cruma Tower Entrance',22,17192,114178,-3439,0);
-INSERT INTO teleport VALUES ('Cruma Tower 1st floor -> Cruma Tower 2nd floor',23,17730,108301,-9057,0);
-INSERT INTO teleport VALUES ('Cruma Tower 2nd floor -> Cruma Tower 1st floor',24,17714,107923,-11850,0);
-INSERT INTO teleport VALUES ('Town of Giran -> Dion Town',25,15670,142983,-2705,8100);
-INSERT INTO teleport VALUES ('Town of Giran -> Oren Town',26,82956,53162,-1495,11000);
-INSERT INTO teleport VALUES ('Town of Giran -> Hunter Village',27,116819,76994,-2714,9400);
-INSERT INTO teleport VALUES ('Town of Giran -> Hardin''s Private Academy',28,105918,109759,-3207,5300);
-INSERT INTO teleport VALUES ('TI Dungeon inside -> outside',29,-113329,235327,-3653,0);
-INSERT INTO teleport VALUES ('TI Dungeon outside -> inside',30,48736,248463,-6162,0);
-INSERT INTO teleport VALUES ('IvoryTower Basement',31,84915,15969,-4294,0);
-INSERT INTO teleport VALUES ('IvoryTower Ground Floor',32,85399,16197,-3679,0);
-INSERT INTO teleport VALUES ('IvoryTower 1st Floor',33,85399,16197,-2809,0);
-INSERT INTO teleport VALUES ('IvoryTower 2nd Floor',34,85399,16197,-2293,0);
-INSERT INTO teleport VALUES ('IvoryTower 3th Floor',35,85399,16197,-1776,0);
-INSERT INTO teleport VALUES ('IvoryTower Ground Floor -> Oren Castle Town',36,82956,53162,-1495,4400);
-INSERT INTO teleport VALUES ('IvoryTower Ground Floor -> Hunter''s Village',37,116819,76994,-2714,8200);
-INSERT INTO teleport VALUES ('IvoryTower Ground Floor -> Aden Castle Town',38,146331,25762,-2018,12000);
-INSERT INTO teleport VALUES ('Aden Town -> Ivory Tower',39,85339,16197,-3679,12000);
-INSERT INTO teleport VALUES ('Aden Town -> Oren Town',40,82956,53162,-1495,13000);
-INSERT INTO teleport VALUES ('Aden Town -> Hunter''s Village',41,116819,76994,-2714,11000);
-INSERT INTO teleport VALUES ('Hunter''s Village -> Giran Town',42,83400,147943,-3404,9400);
-INSERT INTO teleport VALUES ('Hunter''s Village -> Oren Town',43,82956,53162,-1495,4900);
-INSERT INTO teleport VALUES ('Hunter''s Village -> Ivory Tower',44,85339,16197,-3679,8200);
-INSERT INTO teleport VALUES ('Hunter''s Village -> Hardins Private Academy',45,105918,109759,-3207,4100);
-INSERT INTO teleport VALUES ('Hunter''s Village -> Aden Town',46,146331,25762,-2018,11000);
-INSERT INTO teleport VALUES ('Oren Town -> Giran Town',47,83400,147943,-3404,11000);
-INSERT INTO teleport VALUES ('Oren Town -> Ivory Tower',48,85339,16197,-3679,4400);
-INSERT INTO teleport VALUES ('Oren Town -> Hunter''s Village',49,116819,76994,-2714,4900);
-INSERT INTO teleport VALUES ('Oren Town -> Hardins Private Academy',50,105918,109759,-3207,7300);
-INSERT INTO teleport VALUES ('Oren Town -> Aden Town',51,146331,25762,-2018,13000);
-INSERT INTO teleport VALUES ('Hardin''s Private Academy -> Giran Town',52,83400,147943,-3404,5300);
-INSERT INTO teleport VALUES ('Hardin''s Private Academy -> Oren Town',53,82956,53162,-1495,7300);
-INSERT INTO teleport VALUES ('Hardin''s Private Academy -> Hunter''s Village',54,116819,76994,-2714,4100);
-INSERT INTO teleport VALUES ('Cruma level 2 -> Cruma level 3',55,17719,115590,-6584,0);
-INSERT INTO teleport VALUES ('Cruma level 3 -> Cruma Core',56,17692,112284,-6250,0);
-INSERT INTO teleport VALUES ('Cruma core -> Cruma level 3',57,17719,115590,-6584,0);
-INSERT INTO teleport VALUES ('Cruma Tower 3rd floor -> Cruma Tower 2nd Floor',58,17731,119465,-9067,0);
-INSERT INTO teleport VALUES ('Heine -> The Town of Giran',59,83400,147943,-3404,9200);
-INSERT INTO teleport VALUES ('Heine -> Entrance to Giran',60,47942,186764,-3485,8500);
-INSERT INTO teleport VALUES ('Lair end -> Antharas Nest',61,173826,115333,-7708,0);
-INSERT INTO teleport VALUES ('Antharas Nest - > Giran castle town',62,83400,147943,-3404,0);
-INSERT INTO teleport VALUES ('Giran Harbor -> Giran Town',63,83400,147943,-3404,6300);
-INSERT INTO teleport VALUES ('Giran Harbor -> Dion Town',64,15670,142983,-2705,6500);
-INSERT INTO teleport VALUES ('Heine -> The Town of Dion',65,15670,142983,-2705,9800);
-INSERT INTO teleport VALUES ('Heine -> Field of Silence',66,82684,183551,-3597,2400);
-INSERT INTO teleport VALUES ('Heine -> Field of Whispers',67,91186,217104,-3649,2400);
-INSERT INTO teleport VALUES ('Heine -> Entrance to Alligator Islands',68,126450,174774,-3079,3500);
-INSERT INTO teleport VALUES ('Giran -> Dragon Valley',69,122824,110836,-3720,6400);
-INSERT INTO teleport VALUES ('Giran -> Heine',70,111409,219364,-3545,9200);
-INSERT INTO teleport VALUES ('Giran -> Patriots Necropolis',71,-25472,77728,-3440,15500);
-INSERT INTO teleport VALUES ('Giran -> Ascetics Necropolis',72,-55385,78667,-3012,18600);
-INSERT INTO teleport VALUES ('Giran -> Saints Necropolis',73,79296,209584,-3704,9800);
-INSERT INTO teleport VALUES ('Giran -> Catacomb of Dark Omens',74,-23165,13827,-3172,20400);
-INSERT INTO teleport VALUES ('Monster Derby Track',75,12661,181687,-3560,0);
-INSERT INTO teleport VALUES ('Aden -> Coliseum',76,146440,46723,-3432,4000);
-INSERT INTO teleport VALUES ('Aden -> Patriots Necropolis',77,-25472,77728,-3440,35900);
-INSERT INTO teleport VALUES ('Aden -> Ascetics Necropolis',78,-55385,78667,-3012,41900);
-INSERT INTO teleport VALUES ('Aden -> Saints Necropolis',79,79296,209584,-3704,39100);
-INSERT INTO teleport VALUES ('Aden -> Catacomb of Dark Omens',80,-23165,13827,-3172,33900);
-INSERT INTO teleport VALUES ('Aden -> Blazing Swamp',81,159455,-12931,-2872,5700);
-INSERT INTO teleport VALUES ('Aden -> The Forbidden Gateway',82,185319,20218,-3264,5400);
-INSERT INTO teleport VALUES ('Aden -> The Front of Anghell Waterfall',83,163341,91374,-3320,9400);
-INSERT INTO teleport VALUES ('Aden -> Forsaken Plains',84,167285,37109,-4008,3400);
-INSERT INTO teleport VALUES ('Dion -> Heine',85,111409,219364,-3545,9800);
-INSERT INTO teleport VALUES ('Dion -> Partisan Hideaway',86,46467,126885,-3720,1900);
-INSERT INTO teleport VALUES ('Dion -> Bee Hive',87,20505,189036,-3344,2500);
-INSERT INTO teleport VALUES ('Gludio -> Windawood Manor',88,-23789,169683,-3424,1000);
-INSERT INTO teleport VALUES ('Gludio -> Southern Pathway to the Wasteland',89,-16730,209417,-3664,2400);
-INSERT INTO teleport VALUES ('Gludin -> Abandoned Camp',90,-46932,140883,-2936,900);
-INSERT INTO teleport VALUES ('Gludin -> Fellmere Harvest Grounds',91,-70387,115501,-3472,1000);
-INSERT INTO teleport VALUES ('Gludin -> Langk Lizardman Dwelling',92,-45210,202654,-3592,1700);
-INSERT INTO teleport VALUES ('Orc Village -> Immortal Plateau,Central Region',93,-8804,-114748,-3088,510);
-INSERT INTO teleport VALUES ('Orc Village -> Immortal Plateau,Southern Region',94,-17870,-90980,-2528,490);
-INSERT INTO teleport VALUES ('Orc Village -> Immortal Plateau,Southeast Region',95,8209,-93524,-2312,750);
-INSERT INTO teleport VALUES ('Orc Village -> Frozen Waterfall',96,7603,-138871,-920,760);
+insert  into teleport values 
+('Elven Town & Dark Elven Town -> Village of Gludin', '1', '-80826', '149775', '-3043', 
 
-INSERT INTO teleport VALUES ('TOI - 1st Floor',201,115168,16022,-5100,100000);
-INSERT INTO teleport VALUES ('TOI - 2nd Floor',202,114649,18587,-3609,150000);
-INSERT INTO teleport VALUES ('TOI - 3rd Floor',203,117918,16039,-2127,200000);
-INSERT INTO teleport VALUES ('TOI - 4th Floor',204,114622,12946,-645,250000);
-INSERT INTO teleport VALUES ('TOI - 5th Floor',205,112209,16078,928,300000);
-INSERT INTO teleport VALUES ('TOI - 6th Floor',206,112376,16099,1947,350000);
-INSERT INTO teleport VALUES ('TOI - 7th Floor',207,114448,16175,2994,400000);
-INSERT INTO teleport VALUES ('TOI - 8th Floor',208,111063,16118,3967,450000);
-INSERT INTO teleport VALUES ('TOI - 9th Floor',209,117147,18415,4977,500000);
-INSERT INTO teleport VALUES ('TOI - 10th Floor',210,118374,15973,5987,550000);
-INSERT INTO teleport VALUES ('TOI - 11th Floor',211,112209,16078,7028,600000);
-INSERT INTO teleport VALUES ('TOI - 12th Floor',212,114809,18711,7996,650000);
-INSERT INTO teleport VALUES ('TOI - 13th Floor',213,115178,16989,9007,700000);
-INSERT INTO teleport VALUES ('TOI - 14th Floor Outside Door',214,112714,14111,10077,800000);
-INSERT INTO teleport VALUES ('TOI - 14th Floor Inside On Roof',215,113098,14532,10077,900000);
-INSERT INTO teleport VALUES ('Catacomb of the Apo',216,77637,78399,-5125,0);
-INSERT INTO teleport VALUES ('Dion(artifact -> out)',350,22967,157715,-2954,0);
-INSERT INTO teleport VALUES ('Dion(artifact -> hall)',351,22090,159871,-2711,0);
-INSERT INTO teleport VALUES ('Dion(artifact -> outofcastle)',352,22448,155798,-2958,0);
-INSERT INTO teleport VALUES ('Dion(in -> artifact)',353,22592,161530,-2775,0);
-INSERT INTO teleport VALUES ('Dion(in -> out)',354,22967,157715,-2954,0);
-INSERT INTO teleport VALUES ('Dion(in -> outofcastle)',355,22448,155798,-2958,0);
-INSERT INTO teleport VALUES ('Dion(out -> artifact)',356,22592,161530,-2775,0);
-INSERT INTO teleport VALUES ('Dion(out -> hall)',357,22090,159871,-2711,0);
-INSERT INTO teleport VALUES ('Dion(out -> outofcastle)',358,22448,155798,-2958,0);
-INSERT INTO teleport VALUES ('Dion(outofcastle -> artifact)',359,22592,161530,-2775,0);
-INSERT INTO teleport VALUES ('Dion(outofcastle -> out)',360,22967,157715,-2954,0);
-INSERT INTO teleport VALUES ('Dion(outofcastle -> hall)',361,22090,159871,-2711,0);
-INSERT INTO teleport VALUES ('Giran(artifact -> out)',362,113892,144175,-2714,0);
-INSERT INTO teleport VALUES ('Giran(artifact -> hall)',363,115984,145073,-2584,0);
-INSERT INTO teleport VALUES ('Giran(artifact -> outofcastle)',364,112016,144682,-2833,0);
-INSERT INTO teleport VALUES ('Giran(in -> artifact)',365,117619,144564,-2648,0);
-INSERT INTO teleport VALUES ('Giran(in -> out)',366,113892,144175,-2714,0);
-INSERT INTO teleport VALUES ('Giran(in -> outofcastle)',367,112016,144682,-2833,0);
-INSERT INTO teleport VALUES ('Giran(out -> artifact)',368,117619,144564,-2648,0);
-INSERT INTO teleport VALUES ('Giran(out -> hall)',369,115984,145073,-2584,0);
-INSERT INTO teleport VALUES ('Giran(out -> outofcastle)',370,112016,144682,-2833,0);
-INSERT INTO teleport VALUES ('Giran(outofcastle -> artifact)',371,117619,144564,-2648,0);
-INSERT INTO teleport VALUES ('Giran(outofcastle -> out)',372,113892,144175,-2714,0);
-INSERT INTO teleport VALUES ('Giran(outofcastle -> hall)',373,115984,145073,-2584,0);
-INSERT INTO teleport VALUES ('Oren(artifact -> out)',374,79956,36351,-2532,0);
-INSERT INTO teleport VALUES ('Oren(artifact -> hall)',375,82113,37217,-2311,0);
-INSERT INTO teleport VALUES ('Oren(artifact -> outofcastle)',376,78079,36809,-2566,0);
-INSERT INTO teleport VALUES ('Oren(in -> artifact)',377,83710,36713,-2375,0);
-INSERT INTO teleport VALUES ('Oren(in -> out)',378,79956,36351,-2532,0);
-INSERT INTO teleport VALUES ('Oren(in -> outofcastle)',379,78079,36809,-2566,0);
-INSERT INTO teleport VALUES ('Oren(out -> artifact)',380,83710,36713,-2375,0);
-INSERT INTO teleport VALUES ('Oren(out -> hall)',381,82113,37217,-2311,0);
-INSERT INTO teleport VALUES ('Oren(out -> outofcastle)',382,78079,36809,-2566,0);
-INSERT INTO teleport VALUES ('Oren(outofcastle -> artifact)',383,83710,36713,-2375,0);
-INSERT INTO teleport VALUES ('Oren(outofcastle -> out)',384,79956,36351,-2532,0);
-INSERT INTO teleport VALUES ('Oren(outofcastle -> hall)',385,82113,37217,-2311,0);
-INSERT INTO teleport VALUES ('Gludio(artifact -> out)',386,-18941,112085,-2762,0);
-INSERT INTO teleport VALUES ('Gludio(artifact -> hall)',387,-18129,109898,-2517,0);
-INSERT INTO teleport VALUES ('Gludio(artifact -> outofcastle)',388,-18484,113897,-2772,0);
-INSERT INTO teleport VALUES ('Gludio(in -> artifact)',389,-18592,108271,-2581,0);
-INSERT INTO teleport VALUES ('Gludio(in -> out)',390,-18941,112085,-2762,0);
-INSERT INTO teleport VALUES ('Gludio(in -> outofcastle)',391,-18484,113897,-2772,0);
-INSERT INTO teleport VALUES ('Gludio(out -> artifact)',392,-18592,108271,-2581,0);
-INSERT INTO teleport VALUES ('Gludio(out -> hall)',393,-18129,109898,-2517,0);
-INSERT INTO teleport VALUES ('Gludio(out -> outofcastle)',394,-18484,113897,-2772,0);
-INSERT INTO teleport VALUES ('Gludio(outofcastle -> artifact)',395,-18592,108271,-2581,0);
-INSERT INTO teleport VALUES ('Gludio(outofcastle -> out)',396,-18941,112085,-2762,0);
-INSERT INTO teleport VALUES ('Gludio(outofcastle -> hall)',397,-18129,109898,-2517,0);
-INSERT INTO teleport VALUES ('Aden(artifact -> out)',398,147723,7916,-475,0);
-INSERT INTO teleport VALUES ('Aden(artifact -> in)',399,148580,4578,-408,0);
-INSERT INTO teleport VALUES ('Aden(artifact -> outofcastle)',400,147582,8753,-496,0);
-INSERT INTO teleport VALUES ('Aden(artifact -> hall)',401,147520,6107,-409,0);
-INSERT INTO teleport VALUES ('Aden(in -> artifact)',402,1147499,2544,-473,0);
-INSERT INTO teleport VALUES ('Aden(in -> out)',403,147723,7916,-475,0);
-INSERT INTO teleport VALUES ('Aden(in -> outofcastle)',404,147582,8753,-496,0);
-INSERT INTO teleport VALUES ('Aden(in -> hall)',405,147520,6107,-409,0);
-INSERT INTO teleport VALUES ('Aden(out -> artifact)',406,147499,2544,-473,0);
-INSERT INTO teleport VALUES ('Aden(out -> in)',407,148580,4578,-408,0);
-INSERT INTO teleport VALUES ('Aden(out -> outofcastle)',408,147582,8753,-496,0);
-INSERT INTO teleport VALUES ('Aden(out -> hall)',409,147520,6107,-409,0);
-INSERT INTO teleport VALUES ('Aden(outofcastle -> artifact)',410,147499,2544,-473,0);
-INSERT INTO teleport VALUES ('Aden(outofcastle -> out)',411,147723,7916,-475,0);
-INSERT INTO teleport VALUES ('Aden(outofcastle -> in)',412,148580,4578,-408,0);
-INSERT INTO teleport VALUES ('Aden(outofcastle -> hall)',413,147520,6107,-409,0);
-INSERT INTO teleport VALUES ('Aden(hall -> artifact)',414,147499,2544,-473,0);
-INSERT INTO teleport VALUES ('Aden(hall -> out)',415,147723,7916,-475,0);
-INSERT INTO teleport VALUES ('Aden(hall -> in)',416,148580,4578,-408,0);
-INSERT INTO teleport VALUES ('Aden(hall -> outofcastle)',417,147582,8753,-496,0);
-INSERT INTO teleport VALUES ('Enter Necropolis',500,-41585,210129,-5087,0);
-INSERT INTO teleport VALUES ('Exit Necropolis',501,-41583,209337,-5087,0);
-INSERT INTO teleport VALUES ('Oren -> Plains of Lizardmen',97,87252,85514,-3056,2700);
-INSERT INTO teleport VALUES ('Oren -> Sea of Spores',98,64328,26803,-3768,2700);
-INSERT INTO teleport VALUES ('Hunters -> Northern Pathway of Enchanted Valley',99,104426,33746,-3800,3700);
-INSERT INTO teleport VALUES ('Hunters -> Southern Pathway of Enchanted Valley',100,124904,61992,-3920,1400);
-INSERT INTO teleport VALUES ('Hunters -> Entrance to the Forest of Mirrors',101,142065,81300,-3000,2100);
-INSERT INTO teleport VALUES ('Hunters -> The Front of Anghel Waterfall',102,163341,91374,-3320,4000);
-INSERT INTO teleport VALUES ('Hunters -> Patriots Necropolis',103,-25472,77728,-3440,11900);
-INSERT INTO teleport VALUES ('Hunters -> Ascetics Necropolis',104,-55385,78667,-3012,14500);
-INSERT INTO teleport VALUES ('Hunters -> Saints Necropolis',105,79296,209584,-3704,11500);
-INSERT INTO teleport VALUES ('Hunters -> Catacomb of Dark Omens',106,-23165,13827,-3172,12800);
-INSERT INTO teleport VALUES ('exit_necropolis1- > enter_necropolis1',502,-41567,209828,-5080,0);
-INSERT INTO teleport VALUES ('enter_necropolis1 - > exit_necropolis1',503,-41567,209463,-5080,0);
-INSERT INTO teleport VALUES ('enter_catacomb1- > exit_catacomb1',504,42599,143954,-5376,0);
-INSERT INTO teleport VALUES ('exit_catacomb1- >exit_catacomb1',505,42710,143930,-5376,0);
-INSERT INTO teleport VALUES ('enter_necropolis2 - > exit_necropolis2',506,45249,123848,-5408,0);
-INSERT INTO teleport VALUES ('exit_necropolis2 - > enter_necropolis2',507,45248,124223,-5408,0);
-INSERT INTO teleport VALUES ('enter_necropolis3 - > exit_necropolis3',508,77750,78398,-5120,0);
-INSERT INTO teleport VALUES ('exit_necropolis3- > enter_necropolis3',509,77147,78400,-5120,0);
+'6400'), 
+('Elven Town & Dark Elven Town -> Town of Gludio', '2', '-12672', '122776', '-3116', 
+
+'3700'), 
+('Town of gludio -> Elven village', '3', '46934', '51467', '-2977', '3700'), 
+('Town of gludio -> Dark Elven village', '4', '9745', '15606', '-4574', '3700'), 
+('Town of gludio -> Village of Gludin', '5', '-80826', '149775', '-3043', '2900'), 
+('Town of gludio -> Dion', '6', '15670', '142983', '-2705', '4100'), 
+('Town of gludio & Village of Gludin -> Orc village', '7', '-44836', '-112524', '-235', 
+
+'6000'), 
+('Town of gludio & Village of Gludin -> Dwarven village', '8', '115113', '-178212', '-901', 
+
+'6000'), 
+('Village of Gludin -> TI', '9', '-84318', '244579', '-3730', '18000'), 
+('Village of Gludin -> Elven Village', '10', '46934', '51467', '-2977', '6400'), 
+('Village of Gludin -> Dark Elven Village', '11', '9745', '15606', '-4574', '6400'), 
+('Village of Gludin -> Town of Gludio', '12', '-12672', '122776', '-3116', '2900'), 
+('Village of Gludin -> Southern entrance of wastelands', '13', '-16730', '209417', '-3664', 
+
+'2400'), 
+('Dark Elven Town -> Southern part of dark elven forest', '14', '-61095', '75104', '-3356', 
+
+'1100'), 
+('TI -> Village of Gludin', '15', '-80826', '149775', '-3043', '18000'), 
+('Dwarf Town & Orc Town -> Village of Gludin', '16', '-80826', '149775', '-3043', '3000'), 
+('Dwarf Town -> The Northeast Coast', '17', '169008', '-208272', '-3504', '700'), 
+('Dwarven Town -> Abandoned Coal Mines', '418', '155535', '-173560', '2495', '290'), 
+('Dwarven Town -> Mithril Mines', '419', '179039', '-184080', '-319', '680'), 
+('Dion Town -> Town of Gludio', '18', '-12672', '122776', '-3116', '4200'), 
+('Dion Town -> Town of Giran', '19', '83400', '147943', '-3404', '8100'), 
+('Dion Town & Giran Town -> Entrance Giran', '20', '47942', '186764', '-3485', '6500'), 
+('Cruma Tower Entrance -> Cruma Tower 1st floor', '21', '17724', '114004', '-11672', '0'), 
+('Cruma Tower 1st floor -> Cruma Tower Entrance', '22', '17192', '114178', '-3439', '0'), 
+('Cruma Tower 1st floor -> Cruma Tower 2nd floor', '23', '17730', '108301', '-9057', '0'), 
+('Cruma Tower 2nd floor -> Cruma Tower 1st floor', '24', '17714', '107923', '-11850', '0'), 
+('Town of Giran -> Dion Town', '25', '15670', '142983', '-2705', '8100'), 
+('Town of Giran -> Oren Town', '26', '82956', '53162', '-1495', '11000'), 
+('Town of Giran -> Hunter Village', '27', '116819', '76994', '-2714', '9400'), 
+('Town of Giran -> Hardin\'s Private Academy', '28', '105918', '109759', '-3207', '5300'), 
+('TI Dungeon inside -> outside', '29', '-113329', '235327', '-3653', '0'), 
+('TI Dungeon outside -> inside', '30', '48736', '248463', '-6162', '0'), 
+('IvoryTower Basement', '31', '84915', '15969', '-4294', '0'), 
+('IvoryTower Ground Floor', '32', '85399', '16197', '-3679', '0'), 
+('IvoryTower 1st Floor', '33', '85399', '16197', '-2809', '0'), 
+('IvoryTower 2nd Floor', '34', '85399', '16197', '-2293', '0'), 
+('IvoryTower 3th Floor', '35', '85399', '16197', '-1776', '0'), 
+('IvoryTower Ground Floor -> Oren Castle Town', '36', '82956', '53162', '-1495', '4400'), 
+('IvoryTower Ground Floor -> Hunter\'s Village', '37', '116819', '76994', '-2714', '8200'), 
+('IvoryTower Ground Floor -> Aden Castle Town', '38', '146331', '25762', '-2018', '12000'), 
+('Aden Town -> Ivory Tower', '39', '85339', '16197', '-3679', '12000'), 
+('Aden Town -> Oren Town', '40', '82956', '53162', '-1495', '13000'), 
+('Aden Town -> Hunter\'s Village', '41', '116819', '76994', '-2714', '11000'), 
+('Hunter\'s Village -> Giran Town', '42', '83400', '147943', '-3404', '9400'), 
+('Hunter\'s Village -> Oren Town', '43', '82956', '53162', '-1495', '4900'), 
+('Hunter\'s Village -> Ivory Tower', '44', '85339', '16197', '-3679', '8200'), 
+('Hunter\'s Village -> Hardins Private Academy', '45', '105918', '109759', '-3207', '4100'), 
+('Hunter\'s Village -> Aden Town', '46', '146331', '25762', '-2018', '11000'), 
+('Oren Town -> Giran Town', '47', '83400', '147943', '-3404', '11000'), 
+('Oren Town -> Ivory Tower', '48', '85339', '16197', '-3679', '4400'), 
+('Oren Town -> Hunter\'s Village', '49', '116819', '76994', '-2714', '4900'), 
+('Oren Town -> Hardins Private Academy', '50', '105918', '109759', '-3207', '7300'), 
+('Oren Town -> Aden Town', '51', '146331', '25762', '-2018', '13000'), 
+('Hardin\'s Private Academy -> Giran Town', '52', '83400', '147943', '-3404', '5300'), 
+('Hardin\'s Private Academy -> Oren Town', '53', '82956', '53162', '-1495', '7300'), 
+('Hardin\'s Private Academy -> Hunter\'s Village', '54', '116819', '76994', '-2714', 
+
+'4100'), 
+('Cruma level 2 -> Cruma level 3', '55', '17719', '115590', '-6584', '0'), 
+('Cruma level 3 -> Cruma Core', '56', '17692', '112284', '-6250', '0'), 
+('Cruma core -> Cruma level 3', '57', '17719', '115590', '-6584', '0'), 
+('Cruma Tower 3rd floor -> Cruma Tower 2nd Floor', '58', '17731', '119465', '-9067', '0'), 
+('Heine -> The Town of Giran', '59', '83400', '147943', '-3404', '9200'), 
+('Heine -> Entrance to Giran', '60', '47942', '186764', '-3485', '8500'), 
+('Lair end -> Antharas Nest', '61', '173826', '115333', '-7708', '0'), 
+('Antharas Nest - > Giran castle town', '62', '83400', '147943', '-3404', '0'), 
+('Giran Harbor -> Giran Town', '63', '83400', '147943', '-3404', '6300'), 
+('Giran Harbor -> Dion Town', '64', '15670', '142983', '-2705', '6500'), 
+('Heine -> The Town of Dion', '65', '15670', '142983', '-2705', '9800'), 
+('Heine -> Field of Silence', '66', '82684', '183551', '-3597', '2400'), 
+('Heine -> Field of Whispers', '67', '91186', '217104', '-3649', '2400'), 
+('Heine -> Entrance to Alligator Islands', '68', '126450', '174774', '-3079', '3500'), 
+('Giran -> Dragon Valley', '69', '122824', '110836', '-3720', '6400'), 
+('Giran -> Heine', '70', '111409', '219364', '-3545', '9200'), 
+('Giran -> Patriots Necropolis', '71', '-25472', '77728', '-3440', '15500'), 
+('Giran -> Ascetics Necropolis', '72', '-55385', '78667', '-3012', '18600'), 
+('Giran -> Saints Necropolis', '73', '79296', '209584', '-3704', '9800'), 
+('Giran -> Catacomb of Dark Omens', '74', '-23165', '13827', '-3172', '20400'), 
+('Monster Derby Track', '75', '12661', '181687', '-3560', '0'), 
+('Aden -> Coliseum', '76', '146440', '46723', '-3432', '4000'), 
+('Aden -> Patriots Necropolis', '77', '-25472', '77728', '-3440', '35900'), 
+('Aden -> Ascetics Necropolis', '78', '-55385', '78667', '-3012', '41900'), 
+('Aden -> Saints Necropolis', '79', '79296', '209584', '-3704', '39100'), 
+('Aden -> Catacomb of Dark Omens', '80', '-23165', '13827', '-3172', '33900'), 
+('Aden -> Blazing Swamp', '81', '159455', '-12931', '-2872', '5700'), 
+('Aden -> The Forbidden Gateway', '82', '185319', '20218', '-3264', '5400'), 
+('Aden -> The Front of Anghell Waterfall', '83', '163341', '91374', '-3320', '9400'), 
+('Aden -> Forsaken Plains', '84', '167285', '37109', '-4008', '3400'), 
+('Dion -> Heine', '85', '111409', '219364', '-3545', '9800'), 
+('Dion -> Partisan Hideaway', '86', '46467', '126885', '-3720', '1900'), 
+('Dion -> Bee Hive', '87', '20505', '189036', '-3344', '2500'), 
+('Gludio -> Windawood Manor', '88', '-23789', '169683', '-3424', '1000'), 
+('Gludio -> Southern Pathway to the Wasteland', '89', '-16730', '209417', '-3664', '2400'), 
+('Gludin -> Abandoned Camp', '90', '-46932', '140883', '-2936', '900'), 
+('Gludin -> Fellmere Harvest Grounds', '91', '-70387', '115501', '-3472', '1000'), 
+('Gludin -> Langk Lizardman Dwelling', '92', '-45210', '202654', '-3592', '1700'), 
+('Orc Village -> Immortal Plateau,Central Region', '93', '-8804', '-114748', '-3088', 
+
+'510'), 
+('Orc Village -> Immortal Plateau,Southern Region', '94', '-17870', '-90980', '-2528', 
+
+'490'), 
+('Orc Village -> Immortal Plateau,Southeast Region', '95', '8209', '-93524', '-2312', 
+
+'750'), 
+('Orc Village -> Frozen Waterfall', '96', '7603', '-138871', '-920', '760'), 
+('TOI - 1st Floor', '201', '115168', '16022', '-5100', '100000'), 
+('TOI - 2nd Floor', '202', '114649', '18587', '-3609', '150000'), 
+('TOI - 3rd Floor', '203', '117918', '16039', '-2127', '200000'), 
+('TOI - 4th Floor', '204', '114622', '12946', '-645', '250000'), 
+('TOI - 5th Floor', '205', '112209', '16078', '928', '300000'), 
+('TOI - 6th Floor', '206', '112376', '16099', '1947', '350000'), 
+('TOI - 7th Floor', '207', '114448', '16175', '2994', '400000'), 
+('TOI - 8th Floor', '208', '111063', '16118', '3967', '450000'), 
+('TOI - 9th Floor', '209', '117147', '18415', '4977', '500000'), 
+('TOI - 10th Floor', '210', '118374', '15973', '5987', '550000'), 
+('TOI - 11th Floor', '211', '112209', '16078', '7028', '600000'), 
+('TOI - 12th Floor', '212', '114809', '18711', '7996', '650000'), 
+('TOI - 13th Floor', '213', '115178', '16989', '9007', '700000'), 
+('TOI - 14th Floor Outside Door', '214', '112714', '14111', '10077', '800000'), 
+('TOI - 14th Floor Inside On Roof', '215', '113098', '14532', '10077', '900000'), 
+('Catacomb of the Apo', '216', '77637', '78399', '-5125', '0'), 
+('Dion(artifact -> out)', '350', '22967', '157715', '-2954', '0'), 
+('Dion(artifact -> hall)', '351', '22090', '159871', '-2711', '0'), 
+('Dion(artifact -> outofcastle)', '352', '22448', '155798', '-2958', '0'), 
+('Dion(in -> artifact)', '353', '22592', '161530', '-2775', '0'), 
+('Dion(in -> out)', '354', '22967', '157715', '-2954', '0'), 
+('Dion(in -> outofcastle)', '355', '22448', '155798', '-2958', '0'), 
+('Dion(out -> artifact)', '356', '22592', '161530', '-2775', '0'), 
+('Dion(out -> hall)', '357', '22090', '159871', '-2711', '0'), 
+('Dion(out -> outofcastle)', '358', '22448', '155798', '-2958', '0'), 
+('Dion(outofcastle -> artifact)', '359', '22592', '161530', '-2775', '0'), 
+('Dion(outofcastle -> out)', '360', '22967', '157715', '-2954', '0'), 
+('Dion(outofcastle -> hall)', '361', '22090', '159871', '-2711', '0'), 
+('Giran(artifact -> out)', '362', '113892', '144175', '-2714', '0'), 
+('Giran(artifact -> hall)', '363', '115984', '145073', '-2584', '0'), 
+('Giran(artifact -> outofcastle)', '364', '112016', '144682', '-2833', '0'), 
+('Giran(in -> artifact)', '365', '117619', '144564', '-2648', '0'), 
+('Giran(in -> out)', '366', '113892', '144175', '-2714', '0'), 
+('Giran(in -> outofcastle)', '367', '112016', '144682', '-2833', '0'), 
+('Giran(out -> artifact)', '368', '117619', '144564', '-2648', '0'), 
+('Giran(out -> hall)', '369', '115984', '145073', '-2584', '0'), 
+('Giran(out -> outofcastle)', '370', '112016', '144682', '-2833', '0'), 
+('Giran(outofcastle -> artifact)', '371', '117619', '144564', '-2648', '0'), 
+('Giran(outofcastle -> out)', '372', '113892', '144175', '-2714', '0'), 
+('Giran(outofcastle -> hall)', '373', '115984', '145073', '-2584', '0'), 
+('Oren(artifact -> out)', '374', '79956', '36351', '-2532', '0'), 
+('Oren(artifact -> hall)', '375', '82113', '37217', '-2311', '0'), 
+('Oren(artifact -> outofcastle)', '376', '78079', '36809', '-2566', '0'), 
+('Oren(in -> artifact)', '377', '83710', '36713', '-2375', '0'), 
+('Oren(in -> out)', '378', '79956', '36351', '-2532', '0'), 
+('Oren(in -> outofcastle)', '379', '78079', '36809', '-2566', '0'), 
+('Oren(out -> artifact)', '380', '83710', '36713', '-2375', '0'), 
+('Oren(out -> hall)', '381', '82113', '37217', '-2311', '0'), 
+('Oren(out -> outofcastle)', '382', '78079', '36809', '-2566', '0'), 
+('Oren(outofcastle -> artifact)', '383', '83710', '36713', '-2375', '0'), 
+('Oren(outofcastle -> out)', '384', '79956', '36351', '-2532', '0'), 
+('Oren(outofcastle -> hall)', '385', '82113', '37217', '-2311', '0'), 
+('Gludio(artifact -> out)', '386', '-18941', '112085', '-2762', '0'), 
+('Gludio(artifact -> hall)', '387', '-18129', '109898', '-2517', '0'), 
+('Gludio(artifact -> outofcastle)', '388', '-18484', '113897', '-2772', '0'), 
+('Gludio(in -> artifact)', '389', '-18592', '108271', '-2581', '0'), 
+('Gludio(in -> out)', '390', '-18941', '112085', '-2762', '0'), 
+('Gludio(in -> outofcastle)', '391', '-18484', '113897', '-2772', '0'), 
+('Gludio(out -> artifact)', '392', '-18592', '108271', '-2581', '0'), 
+('Gludio(out -> hall)', '393', '-18129', '109898', '-2517', '0'), 
+('Gludio(out -> outofcastle)', '394', '-18484', '113897', '-2772', '0'), 
+('Gludio(outofcastle -> artifact)', '395', '-18592', '108271', '-2581', '0'), 
+('Gludio(outofcastle -> out)', '396', '-18941', '112085', '-2762', '0'), 
+('Gludio(outofcastle -> hall)', '397', '-18129', '109898', '-2517', '0'), 
+('Aden(artifact -> out)', '398', '147723', '7916', '-475', '0'), 
+('Aden(artifact -> in)', '399', '148580', '4578', '-408', '0'), 
+('Aden(artifact -> outofcastle)', '400', '147582', '8753', '-496', '0'), 
+('Aden(artifact -> hall)', '401', '147520', '6107', '-409', '0'), 
+('Aden(in -> artifact)', '402', '1147499', '2544', '-473', '0'), 
+('Aden(in -> out)', '403', '147723', '7916', '-475', '0'), 
+('Aden(in -> outofcastle)', '404', '147582', '8753', '-496', '0'), 
+('Aden(in -> hall)', '405', '147520', '6107', '-409', '0'), 
+('Aden(out -> artifact)', '406', '147499', '2544', '-473', '0'), 
+('Aden(out -> in)', '407', '148580', '4578', '-408', '0'), 
+('Aden(out -> outofcastle)', '408', '147582', '8753', '-496', '0'), 
+('Aden(out -> hall)', '409', '147520', '6107', '-409', '0'), 
+('Aden(outofcastle -> artifact)', '410', '147499', '2544', '-473', '0'), 
+('Aden(outofcastle -> out)', '411', '147723', '7916', '-475', '0'), 
+('Aden(outofcastle -> in)', '412', '148580', '4578', '-408', '0'), 
+('Aden(outofcastle -> hall)', '413', '147520', '6107', '-409', '0'), 
+('Aden(hall -> artifact)', '414', '147499', '2544', '-473', '0'), 
+('Aden(hall -> out)', '415', '147723', '7916', '-475', '0'), 
+('Aden(hall -> in)', '416', '148580', '4578', '-408', '0'), 
+('Aden(hall -> outofcastle)', '417', '147582', '8753', '-496', '0'), 
+('Enter Necropolis', '500', '-41585', '210129', '-5087', '0'), 
+('Exit Necropolis', '501', '-41583', '209337', '-5087', '0'), 
+('Oren -> Plains of Lizardmen', '97', '87252', '85514', '-3056', '2700'), 
+('Oren -> Sea of Spores', '98', '64328', '26803', '-3768', '2700'), 
+('Hunters -> Northern Pathway of Enchanted Valley', '99', '104426', '33746', '-3800', 
+
+'3700'), 
+('Hunters -> Southern Pathway of Enchanted Valley', '100', '124904', '61992', '-3920', 
+
+'1400'), 
+('Hunters -> Entrance to the Forest of Mirrors', '101', '142065', '81300', '-3000', '2100'), 
+('Hunters -> The Front of Anghel Waterfall', '102', '163341', '91374', '-3320', '4000'), 
+('Hunters -> Patriots Necropolis', '510', '-25472', '77728', '-3440', '11900'), 
+('Hunters -> Ascetics Necropolis', '511', '-55385', '78667', '-3012', '14500'), 
+('Hunters -> Saints Necropolis', '512', '79296', '209584', '-3704', '11500'), 
+('Hunters -> Catacomb of Dark Omens', '513', '-23165', '13827', '-3172', '12800'), 
+('exit_necropolis1- > enter_necropolis1', '502', '-41567', '209828', '-5080', '0'), 
+('enter_necropolis1 - > exit_necropolis1', '503', '-41567', '209463', '-5080', '0'), 
+('enter_catacomb1- > exit_catacomb1', '504', '42599', '143954', '-5376', '0'), 
+('exit_catacomb1- >exit_catacomb1', '505', '42710', '143930', '-5376', '0'), 
+('enter_necropolis2 - > exit_necropolis2', '506', '45249', '123848', '-5408', '0'), 
+('exit_necropolis2 - > enter_necropolis2', '507', '45248', '124223', '-5408', '0'), 
+('enter_necropolis3 - > exit_necropolis3', '508', '77750', '78398', '-5120', '0'), 
+('exit_necropolis3- > enter_necropolis3', '509', '77147', '78400', '-5120', '0'), 
+('HC ent', '103', '43050', '143933', '-5383', '0'), 
+('HC exit', '104', '42514', '143917', '-5385', '0'), 
+('BC ent', '105', '46217', '170290', '-4983', '0'), 
+('BC exit', '106', '45770', '170299', '-4985', '0'), 
+('CoTA ent', '107', '77152', '78407', '-5129', '0'), 
+('CoTA exit', '108', '77637', '78390', '-5129', '0'), 
+('CotW ent', '109', '140404', '79678', '-5431', '0'), 
+('CotW exit', '110', '139965', '79678', '-5433', '0'), 
+('CoDO ent', '111', '-19500', '13508', '-4905', '0'), 
+('CoDO exit', '112', '-19931', '13502', '-4905', '0'), 
+('CoFP ent', '113', '113865', '84543', '-6545', '0'), 
+('CoFP exit', '114', '113429', '84540', '-6545', '0'), 
+('NoS ent', '115', '-41570', '209785', '-5089', '0'), 
+('NoS exit', '116', '-41567', '209292', '-5091', '0'), 
+('PN ent', '117', '45251', '123890', '-5415', '0'), 
+('PN exit', '118', '45250', '124366', '-5417', '0'), 
+('WN ent', '119', '111273', '174015', '-5417', '0'), 
+('WN exit', '120', '110818', '174010', '-5443', '0'), 
+('PaN ent', '121', '-21726', '77385', '-5177', '0'), 
+('PaN exit', '122', '-22197', '77369', '-5177', '0'), 
+('AN ent', '123', '-52254', '79103', '-4743', '0'), 
+('AN exit', '124', '-52716', '79106', '-4745', '0'), 
+('MN ent', '125', '118308', '132800', '-4833', '0'), 
+('MN exit', '126', '117793', '132810', '-4835', '0'), 
+('SN ent', '127', '83000', '209213', '-5443', '0'), 
+('SN exit', '128', '82608', '209225', '-5443', '0'), 
+('DN ent', '129', '172251', '-17605', '-4903', '0'), 
+('DN exit', '130', '171902', '-17595', '-4905', '0');
