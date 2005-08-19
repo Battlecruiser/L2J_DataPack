@@ -8,4 +8,4 @@ CREATE TABLE `seven_signs` (
   `ancient_adena_amount` int(10) NOT NULL default '0',
   `contribution_score` int(10) NOT NULL default '0',
   PRIMARY KEY  (`char_obj_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+);
