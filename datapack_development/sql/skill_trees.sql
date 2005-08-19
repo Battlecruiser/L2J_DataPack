@@ -8845,6 +8845,7 @@ INSERT INTO skill_trees VALUES (39,234,6,'Robe Mastery',5500,30);
 INSERT INTO skill_trees VALUES (39,234,7,'Robe Mastery',9300,35);
 INSERT INTO skill_trees VALUES (39,234,8,'Robe Mastery',9300,35);
 INSERT INTO skill_trees VALUES (39,239,1,'Expertise D',0,20);
+INSERT INTO skill_trees VALUES (39,249,3,'Weapon Mastery',3300,20);
 INSERT INTO skill_trees VALUES (39,249,4,'Weapon Mastery',2900,25);
 INSERT INTO skill_trees VALUES (39,249,5,'Weapon Mastery',2900,25);
 INSERT INTO skill_trees VALUES (39,249,6,'Weapon Mastery',5500,30);
