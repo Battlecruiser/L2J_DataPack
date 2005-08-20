@@ -652,92 +652,111 @@
   <enchant val='0' order='0x0C' stat='pDef' />
 </for>
 </item>
-<item id='485' name="tattoo_o'_power"> 
-  <for> 
-    <add val='53' order='0x10' stat='pDef' /> 
-    <mul val='1.15' order='0x20' stat='pAtk' /> 
-  </for> 
+<item id='485' name="tattoo_o'_power">
+ <for>
+  <add val='53' order='0x10' stat='pDef'/>
+   <mul val='1.05' order='0x20' stat='pAtk'/>
+  <enchant val='0' order='0x0C' stat='pDef' />
+ </for>
 </item>
-<item id='486' name="tattoo_o'_fire"> 
-  <for> 
-    <add val='73' order='0x10' stat='pDef' /> 
-    <add val='1.15' order='0x50' stat='reflectDam'> 
-    </add> 
-  <enchant val='0' order='0x0C' stat='pDef' /> 
-</for> 
+<item id='486' name="tattoo_o'_fire">
+ <for>
+    <add val='73' order='0x10' stat='pDef'/>
+     <mul val='1.05' order='0x20' stat='mAtk'/>
+     <mul val='1.05' order='0x20' stat='mAtkSpd'/>
+    <enchant val='0' order='0x0C' stat='pDef' />
+ </for>
 </item>
-<item id='487' name="tattoo_o'_stout"> 
-  <for> 
-    <add val='73' order='0x10' stat='pDef' /> 
-    <add val='40' order='0x20' stat='runSpd' /> 
-  <enchant val='0' order='0x0C' stat='pDef' /> 
-</for> 
+<item id='487' name="tattoo_o'_stout">
+ <for>
+  <add val='73' order='0x10' stat='pDef'/>
+   <mul val='1.05' order='0x20' stat='pAtk'/>
+   <mul val='1.05' order='0x20' stat='pAtkSpd'/>
+  <enchant val='0' order='0x0C' stat='pDef' />
+ </for>
 </item>
-<item id='488' name="tattoo_o'_flame"> 
-  <for> 
-    <add val='139' order='0x10' stat='pDef' /> 
-    <mul val='1.10' order='0x20' stat='mAtk' /> 
-  <enchant val='0' order='0x0C' stat='pDef' /> 
-</for> 
+<item id='488' name="tattoo_o'_flame">
+ <for>
+  <add val='139' order='0x10' stat='pDef' />
+  <add val='1000' order='0x10' stat='maxMp'/>
+   <mul val='1.10' order='0x20' stat='mAtk'/>
+  <enchant val='0' order='0x0C' stat='pDef' />
+ </for>
 </item>
 <item id='489' name="tattoo_o'_braze">
-  <for>
-    <add val='110' order='0x10' stat='pDef' />
+ <for>
+  <add val='110' order='0x10' stat='pDef' />
+  <add val='1000' order='0x10' stat='maxHp'/>
+   <mul val='1.10' order='0x20' stat='pAtk'/>
   <enchant val='0' order='0x0C' stat='pDef' />
-</for>
+ </for>
 </item>
-<item id='490' name="tattoo_o'_blood"> 
-  <for> 
-    <add val='132' order='0x10' stat='pDef' /> 
-    <add stat='bleedRes' order='0x50' val='1.80'> 
-    </add> 
-  <enchant val='0' order='0x0C' stat='pDef' /> 
-</for> 
+<item id='490' name="tattoo_o'_blood">
+ <for>
+  <add val='132' order='0x10' stat='pDef' />
+   <mul val='1.15' order='0x20' stat='pAtkSpd'/>
+   <mul val='1.15' order='0x20' stat='mAtkSpd'/>
+  <add stat='bleedRes' order='0x50' val='0.1'>
+  </add>
+  <enchant val='0' order='0x0C' stat='pDef' />
+ </for>
 </item>
-<item id='491' name="tattoo_o'_absolute"> 
-  <for> 
-    <add val='146' order='0x10' stat='pDef' /> 
-        <add val='1250' order='0x10' stat='maxHp' /> 
-  <enchant val='0' order='0x0C' stat='pDef' /> 
-</for> 
+<item id='491' name="tattoo_o'_absolute">
+ <for>
+  <add val='146' order='0x10' stat='pDef' />
+  <add val='1250' order='0x10' stat='maxHp' />
+  <add val='1.25' order='0x50' stat='reflectDam'/>
+   <mul val='1.20' order='0x20' stat='pAtk'/>
+
+  <enchant val='0' order='0x0C' stat='pDef' />
+ </for>
 </item>
-<item id='492' name="tattoo_o'_soul"> 
-  <for> 
-   <add val='65' order='0x10' stat='pDef' /> 
-   <mul val='1.33' order='0x20' stat='pAtkSpd' /> 
-     <enchant val='0' order='0x0C' stat='pDef' /> 
-</for> 
+<item id='492' name="tattoo_o'_soul">
+ <for>
+  <add val='65' order='0x10' stat='pDef'/>
+   <mul val='1.05' order='0x20' stat='mAtk'/>
+  <enchant val='0' order='0x0C' stat='pDef' />
+ </for>
 </item>
-<item id='493' name="tattoo_o'_avadon"> 
-  <for> 
-    <add val='117' order='0x10' stat='pDef' /> 
-    <mul val='1.3' order='0x20' stat='mAtkSpd' /> 
-  <enchant val='0' order='0x0C' stat='pDef' /> 
-</for> 
+<item id='493' name="tattoo_o'_avadon">
+ <for>
+  <add val='117' order='0x10' stat='pDef'/>
+   <mul val='1.1' order='0x20' stat='pAtkSpd'/>
+   <mul val='1.1' order='0x20' stat='pAtk'/>
+    <enchant val='0' order='0x0C' stat='pDef' />
+ </for>
 </item>
 <item id='494' name="tattoo_o'_doom">
-  <for>
-    <add val='125' order='0x10' stat='pDef' />
-  <enchant val='0' order='0x0C' stat='pDef' />
-</for>
+ <for>
+  <add val='125' order='0x10' stat='pAtk' />
+  <add stat='sleepRes' order='0x50' val='1.10'>
+  </add>
+  <add stat='rootRes' order='0x50' val='1.10'>
+  </add>
+  <add stat='stunRes' order='0x50' val='1.10'>
+  </add>
+  <enchant val='0' order='0x0C' stat='pAtk' />
+ </for>
 </item>
 <item id='495' name="tattoo_o'_pledge">
-  <for>
-    <add val='124' order='0x10' stat='pDef' />
-  <enchant val='0' order='0x0C' stat='pDef' />
-</for>
+ <for>
+  <add val='124' order='0x10' stat='pDef'/>
+   <mul val='1.1' order='0x20' stat='mAtkSpd'/>
+   <mul val='1.1' order='0x20' stat='mAtk'/>
+   <enchant val='0' order='0x0C' stat='pDef' />
+ </for>
 </item>
-<item id='496' name="tattoo_o'_divine"> 
-  <for> 
-    <add val='131' order='0x10' stat='pDef' /> 
-    <add stat='sleepRes' order='0x50' val='1.90'> 
-    </add> 
-    <add stat='rootRes' order='0x50' val='1.90'> 
-    </add>    
-    <add stat='stunRes' order='0x50' val='1.90'>        
-    </add> 
-  <enchant val='0' order='0x0C' stat='pDef' /> 
-</for> 
+<item id='496' name="tattoo_o'_divine">
+ <for>
+  <add val='125' order='0x10' stat='mAtk' />
+  <add stat='sleepRes' order='0x50' val='1.10'>
+  </add>
+  <add stat='rootRes' order='0x50' val='1.10'>
+  </add>
+  <add stat='stunRes' order='0x50' val='1.10'>
+  </add>
+  <enchant val='0' order='0x0C' stat='mAtk' />
+ </for>
 </item>
 <item id='497' name="chain_helmet">
   <for>
