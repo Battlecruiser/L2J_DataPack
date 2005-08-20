@@ -49,147 +49,102 @@
   </for>
 </skill>
 <skill id="4303" levels="1" name="Strong Type">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Monster whose HP is twice higher than normal.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#maxHp">2</table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <mul order="0x40" stat="maxHp" val="#maxHp"/>
   </for>
 </skill>
 <skill id="4304" levels="1" name="Strong Type">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Monster whose HP is 3 times higher than normal.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#maxHp">3</table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <mul order="0x40" stat="maxHp" val="#maxHp"/>
   </for>
 </skill>
 <skill id="4305" levels="1" name="Strong Type">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Monster whose HP is 4 times higher than normal.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#maxHp">4</table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <mul order="0x40" stat="maxHp" val="#maxHp"/>
   </for>
 </skill>
 <skill id="4306" levels="1" name="Strong Type">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Monster whose HP is 5 times higher than normal.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#maxHp">5</table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <mul order="0x40" stat="maxHp" val="#maxHp"/>
   </for>
 </skill>
 <skill id="4307" levels="1" name="Strong Type">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Monster whose HP is 6 times higher than normal.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#maxHp">6</table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <mul order="0x40" stat="maxHp" val="#maxHp"/>
   </for>
 </skill>
 <skill id="4308" levels="1" name="Strong Type">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Monster whose HP is 7 times higher than normal.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#maxHp">7</table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <mul order="0x40" stat="maxHp" val="#maxHp"/>
   </for>
 </skill>
 <skill id="4309" levels="1" name="Strong Type">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Monster whose HP is 8 times higher than normal.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#maxHp">8</table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <mul order="0x40" stat="maxHp" val="#maxHp"/>
   </for>
 </skill>
 <skill id="4310" levels="1" name="Strong Type">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Monster whose HP is 9 times higher than normal.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#maxHp">9</table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <mul order="0x40" stat="maxHp" val="#maxHp"/>
   </for>
 </skill>
 <skill id="4311" levels="1" name="Feeble Type">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Monster whose HP is 1/2 of normal HP.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#maxHp">0.5</table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <mul order="0x40" stat="maxHp" val="#maxHp"/>
   </for>
 </skill>
 <skill id="4312" levels="1" name="Heavy Armor">
