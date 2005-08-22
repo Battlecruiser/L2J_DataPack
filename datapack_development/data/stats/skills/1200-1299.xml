@@ -953,10 +953,10 @@
   </effect>
 </for>
 </skill>
-<skill id="1244" levels="2" name="Freezing Flame">
- <table name="#dmg"> 77 94 </table>
-  <table name="#mpConsume"> 53 70 </table>
-  <table name="#power"> 5.0 6.0 </table>
+<skill id="1244" levels="4" name="Freezing Flame">
+ <table name="#dmg"> 77 94 111 128 </table>
+  <table name="#mpConsume"> 53 70 89 100 </table>
+  <table name="#power"> 5.0 6.0 7.0 8.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="2"/>
   <set name="power" val="#power"/>
@@ -1049,7 +1049,7 @@
 </for>
 </skill>
 <skill id="1249" levels="3" name="Sight of Paagrio">
-  <table name="#mpConsume"> 232 280 305 </table>
+  <table name="#mpConsume"> 154 188 204 </table>
   <table name="#Tab-accCombat"> 2 3 4 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>

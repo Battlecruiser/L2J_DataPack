@@ -1799,7 +1799,7 @@
   <set name="buffDuration" val="20000"/>
   <set name="castRange" val="50"/>
   <for>
-    <effect count="4" name="DamOverTime" time="5" val="#dmg"/>
+    <effect count="4" name="DamOverTime" time="5" val="#dmg" abnormal="bleeding"/>
   </for>
 </skill>
 <skill id="97" levels="4" name="Sanctuary">
