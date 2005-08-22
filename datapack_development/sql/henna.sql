@@ -1,6 +1,6 @@
--- 
+--
 -- Table structure for table `henna`
--- 
+--
 
 CREATE TABLE henna (
   symbol_id int(11) NOT NULL default '0',
@@ -17,9 +17,9 @@ CREATE TABLE henna (
   PRIMARY KEY  (symbol_id)
 ) TYPE=MyISAM;
 
--- 
+--
 -- Dumping data for table `henna`
--- 
+--
 
 INSERT INTO henna VALUES (1,'symbol_s1c3_d',4445,1,1,0,1,-3,0,0,0);
 INSERT INTO henna VALUES (2,'symbol_s1d3_d',4446,1,1,0,1,0,0,-3,0);

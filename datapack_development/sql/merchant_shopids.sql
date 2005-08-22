@@ -1,6 +1,6 @@
--- 
+--
 -- Table structure for table `merchant_shopids`
--- 
+--
 
 CREATE TABLE merchant_shopids (
   shop_id decimal(9,0) NOT NULL default '0',
@@ -8,9 +8,9 @@ CREATE TABLE merchant_shopids (
   PRIMARY KEY  (shop_id)
 ) TYPE=MyISAM;
 
--- 
+--
 -- Dumping data for table `merchant_shopids`
--- 
+--
 
 INSERT INTO merchant_shopids VALUES (1,'7001');
 INSERT INTO merchant_shopids VALUES (2,'7001');

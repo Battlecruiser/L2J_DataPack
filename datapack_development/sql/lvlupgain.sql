@@ -1,6 +1,6 @@
--- 
+--
 -- Table structure for table `lvlupgain`
--- 
+--
 
 CREATE TABLE lvlupgain (
   classid int(3) NOT NULL default '0',
@@ -14,9 +14,9 @@ CREATE TABLE lvlupgain (
   PRIMARY KEY  (classid)
 ) ENGINE=MyISAM;
 
--- 
+--
 -- Dumping data for table `lvlupgain`
--- 
+--
 
 INSERT INTO lvlupgain VALUES (0,80.0,11.70,0.13,30.0,5.40,0.06,1);
 INSERT INTO lvlupgain VALUES (1,327.0,32.70,0.30,144.0,9.81,0.09,20);

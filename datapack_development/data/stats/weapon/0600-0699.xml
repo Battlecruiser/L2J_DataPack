@@ -134,23 +134,23 @@
   <enchant val='0' order='0x0C' stat='pDef' />
 </for>
 </item>
-<item id='641' name="dark_crystal_shield"> 
- <for> 
-  <add val='-8' order='0x10' stat='rEvas'> 
-  <set val='243' order='0x30' stat='sDef' /> 
-  <set val='20' order='0x30' stat='rShld' /> 
-   <mul val='1.18' order='0x40' stat='sDef'> 
-    <and> 
-     <using slotitem="388;11"/> 
-     <using slotitem="512;6"/>      
-     <using slotitem="5777;12"/> 
-     <using slotitem="5765;9"/> 
-     <using slotitem="365;8"/>    
-    </and> 
-   </mul> 
-  </add> 
-  <enchant val='0' order='0x0C' stat='pDef' /> 
- </for> 
+<item id='641' name="dark_crystal_shield">
+ <for>
+  <add val='-8' order='0x10' stat='rEvas'>
+  <set val='243' order='0x30' stat='sDef' />
+  <set val='20' order='0x30' stat='rShld' />
+   <mul val='1.18' order='0x40' stat='sDef'>
+    <and>
+     <using slotitem="388;11"/>
+     <using slotitem="512;6"/>
+     <using slotitem="5777;12"/>
+     <using slotitem="5765;9"/>
+     <using slotitem="365;8"/>
+    </and>
+   </mul>
+  </add>
+  <enchant val='0' order='0x0C' stat='pDef' />
+ </for>
 </item>
 <item id='642' name="elven_vagian_shield">
   <for>

@@ -1,6 +1,6 @@
--- 
+--
 -- Table structure for table `armor`
--- 
+--
 
 CREATE TABLE armor (
   item_id int(11) NOT NULL default '0',
@@ -22,11 +22,11 @@ CREATE TABLE armor (
   PRIMARY KEY  (item_id)
 ) TYPE=MyISAM;
 
--- 
+--
 -- Dumping data for table `armor`
--- 
+--
 
-insert  into armor values 
+insert  into armor values
 (21,'Shirt','chest','false','light',4830,'cloth','none',0,90,36,0,0,147,0,'true'),
 (22,'Leather Shirt','chest','false','light',4830,'leather','none',0,90,43,0,0,2430,0,'true'),
 (23,'Wooden Breastplate','chest','false','light',4820,'wood','none',0,90,47,0,0,7960,0,'true'),

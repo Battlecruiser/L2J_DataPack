@@ -1,6 +1,6 @@
--- 
+--
 -- Table structure for table `skill_spellbooks`
--- 
+--
 
 CREATE TABLE `skill_spellbooks` (
   `skill_id` int(11) NOT NULL default '-1',
@@ -8,9 +8,9 @@ CREATE TABLE `skill_spellbooks` (
   KEY `skill_id` (`skill_id`,`item_id`)
 ) TYPE=MyISAM;
 
--- 
+--
 -- Dumping data for table `skill_spellbooks`
--- 
+--
 
 INSERT INTO `skill_spellbooks` VALUES (2,1512);
 INSERT INTO `skill_spellbooks` VALUES (10,3039);

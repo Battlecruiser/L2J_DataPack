@@ -53,32 +53,32 @@
     <set val='20' order='0x08' stat='rShld' />
   <enchant val='0' order='0x0C' stat='pDef' />
 </for>
-  <for>  
+  <for>
    <add stat='rShld' order='0x40' val='5'>
      <and>
        <using slotitem="2414;6"/>
        <using slotitem="356;10"/>
      </and>
-   </add> 
+   </add>
  <enchant val='0' order='0x0C' stat='pDef' />
 </for>
 </item>
-<item id='2498' name="shield_of_nightmare"> 
- <for> 
-  <add val='-8' order='0x10' stat='rEvas'> 
-  <set val='256' order='0x30' stat='sDef' /> 
-  <set val='20' order='0x30' stat='rShld' /> 
-   <mul val='1.05' order='0x40' stat='reflectDam'> 
-    <and> 
-     <using slotitem="2418;6"/> 
-     <using slotitem="5783;12"/>      
-     <using slotitem="5771;9"/> 
-     <using slotitem="374;10"/> 
-    </and> 
-   </mul> 
-  </add> 
-  <enchant val='0' order='0x0C' stat='pDef' /> 
- </for> 
+<item id='2498' name="shield_of_nightmare">
+ <for>
+  <add val='-8' order='0x10' stat='rEvas'>
+  <set val='256' order='0x30' stat='sDef' />
+  <set val='20' order='0x30' stat='rShld' />
+   <mul val='1.05' order='0x40' stat='reflectDam'>
+    <and>
+     <using slotitem="2418;6"/>
+     <using slotitem="5783;12"/>
+     <using slotitem="5771;9"/>
+     <using slotitem="374;10"/>
+    </and>
+   </mul>
+  </add>
+  <enchant val='0' order='0x0C' stat='pDef' />
+ </for>
 </item>
 <item id='2499' name="elven_long_sword">
   <for>

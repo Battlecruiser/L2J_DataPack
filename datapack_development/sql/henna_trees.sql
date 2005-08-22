@@ -1,7 +1,7 @@
 
--- 
+--
 -- Table structure for table `henna_trees`
--- 
+--
 
 CREATE TABLE `henna_trees` (
   `class_id` decimal(10,0) NOT NULL default '0',
@@ -9,9 +9,9 @@ CREATE TABLE `henna_trees` (
   PRIMARY KEY  (`class_id`,`symbol_id`)
 ) TYPE=MyISAM;
 
--- 
+--
 -- Dumping data for table `henna_trees`
--- 
+--
 
 INSERT INTO `henna_trees` VALUES (0,1),
 (0,2),

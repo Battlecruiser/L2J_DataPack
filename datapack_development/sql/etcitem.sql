@@ -1,6 +1,6 @@
--- 
+--
 -- Table structure for table `etcitem`
--- 
+--
 
 CREATE TABLE etcitem (
   item_id decimal(11,0) NOT NULL default '0',
@@ -18,12 +18,12 @@ CREATE TABLE etcitem (
   PRIMARY KEY  (item_id)
 ) TYPE=MyISAM;
 
--- 
+--
 -- Dumping data for table `etcitem`
--- 
+--
 
 
-insert  into etcitem values 
+insert  into etcitem values
 ('17','wooden_arrow','false','arrow','6','stackable','wood','none','0','2',0,'true'),
 ('57','adena','false','none','0','asset','gold','none','0','1',0,'false'),
 ('65','red_potion','false','potion','80','stackable','liquid','none','0','40',0,'true'),
@@ -1025,7 +1025,7 @@ insert  into etcitem values
 ('1870','coal','false','material','2','stackable','liquid','none','0','200',0,'true'),
 ('1871','charcoal','false','material','2','stackable','liquid','none','0','200',0,'true');
 
-insert  into etcitem values 
+insert  into etcitem values
 ('1872','animal_bone','false','material','2','stackable','liquid','none','0','150',0,'true'),
 ('1873','silver_nugget','false','material','2','stackable','liquid','none','0','500',0,'true'),
 ('1874','oriharukon_ore','false','material','2','stackable','liquid','none','0','3000',0,'true'),
@@ -2027,7 +2027,7 @@ insert  into etcitem values
 ('3125','normans_instructions','false','none','0','stackable','steel','none','100','0',0,'true'),
 ('3126','normans_receipt','false','none','0','stackable','steel','none','100','0',0,'true');
 
-insert  into etcitem values 
+insert  into etcitem values
 ('3127','dunings_instructions','false','none','0','stackable','steel','none','100','0',0,'true'),
 ('3128','dunings_key','false','none','0','stackable','steel','none','100','0',0,'true'),
 ('3129','normans_list','false','none','0','stackable','steel','none','100','0',0,'true'),
@@ -3029,7 +3029,7 @@ insert  into etcitem values
 ('4167','rp_blue_wolve\'s_boots','false','recipe','30','normal','liquid','none','0','16080',0,'true'),
 ('4168','rp_doom_gloves','false','recipe','30','normal','liquid','none','0','16080',0,'true');
 
-insert  into etcitem values 
+insert  into etcitem values
 ('4169','rp_elemental_gloves','false','recipe','30','normal','liquid','none','0','16080',0,'true'),
 ('4170','rp_gloves_of_grace','false','recipe','30','normal','liquid','none','0','16080',0,'true'),
 ('4171','rp_implosion_gauntlet','false','recipe','30','normal','liquid','none','0','16080',0,'true'),
@@ -4031,7 +4031,7 @@ insert  into etcitem values
 ('5493','majestic_ring_gemstone','false','material','60','stackable','liquid','none','0','0',0,'true'),
 ('5494','sealed_dark_crystal_shield_fragment','false','material','60','stackable','liquid','none','0','0',0,'true');
 
-insert  into etcitem values 
+insert  into etcitem values
 ('5495','sealed_shield_of_nightmare_fragment','false','material','60','stackable','liquid','none','0','0',0,'true'),
 ('5496','sealed_dark_crystal_boots_lining','false','material','60','stackable','liquid','none','0','0',0,'true'),
 ('5497','sealed_tallum_boots_lining','false','material','60','stackable','liquid','none','0','0',0,'true'),
