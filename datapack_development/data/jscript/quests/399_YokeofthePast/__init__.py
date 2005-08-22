@@ -50,7 +50,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npcId,st):
-    if npcId == 1208 or npcId == 1210 or npcId == 1212 or npcId == 1213 or npcId == 1214 or npcId == 1214 or npcId == 1215 or npcId == 1217 or npcId == 1219 or npcId == 1220 or npcId == 1221 or npcId == 1222 or npcId == 1223 or npcId == 1232 or npcId == 1234 or npcId == 1236 or npcId == 1237 or npcId == 1238 or npcId == 1239 or npcId == 1241 or npcId == 1243 or npcId == 1244 or npcId == 1245 or npcId == 1246 or npcId == 1247 :
+    if npcId == 1208 or npcId == 1210 or npcId == 1212 or npcId == 1213 or npcId == 1214 or npcId == 1214 or npcId == 1215 or npcId == 1217 or npcId == 1219 or npcId == 1220 or npcId == 1221 or npcId == 1222 or npcId == 1223 or npcId == 1232 or npcId == 1234 or npcId == 1236 or npcId == 1237 or npcId == 1238 or npcId == 1239 or npcId == 1241 or npcId == 1243 or npcId == 1244 or npcId == 1245 or npcId == 1246 or npcId == 1247 or npcId == 1248 or npcId == 1249 or npcId == 1250:
        st.set("id","0")
        if int(st.get("cond")) :
          if st.getRandom(10)>4 :
@@ -148,5 +148,8 @@ STARTED.addKillId(1244)
 STARTED.addKillId(1245)
 STARTED.addKillId(1246)
 STARTED.addKillId(1247)
+STARTED.addKillId(1248)
+STARTED.addKillId(1249)
+STARTED.addKillId(1250)
 
 STARTED.addQuestDrop(986,ANCIENT_SCROLL_ID,1)
