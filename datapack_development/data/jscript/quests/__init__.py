@@ -95,7 +95,7 @@ __all__ = [
 '331_ArrowForVengeance',
 '350_EnhanceYourWeapon',
 '362_BardsMandolin',
-'3_ReleaseDarkelfElder1',
+'399_YokeofthePast',
 '401_PathToWarrior',
 '402_PathToKnight',
 '403_PathToRogue',

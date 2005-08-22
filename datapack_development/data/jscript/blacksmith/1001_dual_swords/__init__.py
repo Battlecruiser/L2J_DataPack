@@ -1,4 +1,4 @@
-print "importing blacksmith data: 1001_dual_swords"
+print "importing blacksmith data: 1001_dual swords"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -612,7 +612,7 @@ class Quest (JQuest) :
                st.giveItems(2555,1)
                htmltext = "Item has been succesfully created."
             else:
-               st.giveItems(130,1)
+               st.giveItems(127,1)
                htmltext = "You need one more sword."
          else:
              htmltext = "You do not have enough materials."
@@ -911,7 +911,7 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
      st.setState(COMPLETED)
-#   if npcId == 7471 or npcId == 7300 or npcId == 7688 or npcId == 7458 or npcId == 7317 or npcId == 7298 or npcId == 7846 or npcId == 7678 :
+#   if npcId == 7471 or npcId == 7300 or npcId == 7688 or npcId == 7458 or npcId == 7317 or npcId == 7298 or npcId == 7846 or npcId == 7678 or npcId == 7898:
 #      htmltext = "dual.htm"
    return "1.htm"
 
@@ -936,6 +936,7 @@ QUEST.addStartNpc(7564)
 QUEST.addStartNpc(7678)
 QUEST.addStartNpc(7688)
 QUEST.addStartNpc(7846)
+QUEST.addStartNpc(7898)
 
 STARTED.addTalkId(7283)
 STARTED.addTalkId(7298)
@@ -951,3 +952,4 @@ STARTED.addTalkId(7564)
 STARTED.addTalkId(7678)
 STARTED.addTalkId(7688)
 STARTED.addTalkId(7846)
+STARTED.addTalkId(7898)

@@ -1,4 +1,5 @@
 __all__ = [
+'1000_topduals',
 '1001_dual_swords',
 '1002_unseal',
 '1003_reseal',
