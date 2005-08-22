@@ -1,5 +1,5 @@
 # Maked by Mr. Have fun! Version 0.2
-print "importing quests: 217: Testimoney Of Trust"
+print "importing quests: 217: Testimony Of Trust"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -388,7 +388,7 @@ class Quest (JQuest) :
           st.playSound("Itemsound.quest_itemget")
    return
 
-QUEST       = Quest(217,"217_TestimoneyOfTrust","Testimoney Of Trust")
+QUEST       = Quest(217,"217_TestimonyOfTrust","Testimony Of Trust")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

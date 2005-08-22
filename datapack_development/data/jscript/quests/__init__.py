@@ -42,7 +42,7 @@ __all__ = [
 '213_TrialOfSeeker',
 '214_TrialOfScholar',
 '215_TrialOfPilgrim',
-'217_TestimoneyOfTrust',
+'217_TestimonyOfTrust',
 '219_TestimonyOfFate',
 '220_TestimonyOfGlory',
 '221_TestimonyOfProsperity',
