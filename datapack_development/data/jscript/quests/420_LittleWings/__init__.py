@@ -30,6 +30,9 @@ Q_EGG_OF_WYRM_SUZET_ID = 3829
 Q_SCALE_OF_WYRM_SUZET_ID = 3828
 Q_EGG_OF_WYRM_SHAMHAI_ID = 3831
 Q_SCALE_OF_WYRM_SHAMHAI_ID = 3830
+DRAGONFLUTE_OF_WIND_ID = 3500
+DRAGONFLUTE_OF_STAR_ID = 3501
+DRAGONFLUTE_OF_TWILIGHT_ID = 3502
 
 class Quest (JQuest) :
 
@@ -113,6 +116,13 @@ class Quest (JQuest) :
       else:
         if st.getGameTicks() != int(st.get("id")) :
           st.set("id",str(st.getGameTicks()))
+	  n=st.getRandom(2)
+	  if (n == 0) :
+             st.giveItems(DRAGONFLUTE_OF_WIND_ID,1)
+          elif (n == 1) : 
+             st.giveItems(DRAGONFLUTE_OF_STAR_ID,1)
+          else :
+             st.giveItems(DRAGONFLUTE_OF_TWILIGHT_ID,1)
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
@@ -120,6 +130,13 @@ class Quest (JQuest) :
     elif event == "7747_7" :
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
+	n=st.getRandom(2)
+	if (n == 0) :
+            st.giveItems(DRAGONFLUTE_OF_WIND_ID,1)
+        elif (n == 1) : 
+            st.giveItems(DRAGONFLUTE_OF_STAR_ID,1)
+        else :
+            st.giveItems(DRAGONFLUTE_OF_TWILIGHT_ID,1)
       st.set("cond","0")
       st.setState(COMPLETED)
       st.playSound("ItemSound.quest_finish")
