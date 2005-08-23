@@ -1496,7 +1496,7 @@
   <set name="castRange" val="-1"/>
   <for>
    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="detect_weakness">
-      <mul order="0x50" stat="pAtk-monster" val="1.2"/>
+      <mul order="0x50" stat="pAtk-monsters" val="1.2"/>
       <target kind="monster"/>
    </effect>
   </for>
@@ -1628,7 +1628,7 @@
   <set name="castRange" val="-1"/>
   <for>
    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="detect_weakness">
-      <mul order="0x50" stat="pAtk-animal" val="1.2"/>
+      <mul order="0x50" stat="pAtk-animals" val="1.2"/>
       <target kind="animal"/>
    </effect>
   </for>
@@ -1646,7 +1646,7 @@
   <set name="castRange" val="-1"/>
   <for>
    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="detect_weakness">
-      <mul order="0x50" stat="pAtk-dragon" val="1.2"/>
+      <mul order="0x50" stat="pAtk-dragons" val="1.2"/>
       <target kind="dragon"/>
    </effect>
   </for>
