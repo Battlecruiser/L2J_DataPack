@@ -2,7 +2,7 @@
 # Created by DraX on 2005.08.08
 #
 
-print "importing village master data: 7290_xenos_occupation_change"
+print "importing village master data: Gludin Village         ...done"
 
 import sys
 

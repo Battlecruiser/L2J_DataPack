@@ -2,7 +2,7 @@
 # Created by DraX on 2005.08.08
 #
 
-print "importing village master data: 7154_asterios_occupation_change"
+print "importing village master data: Elven Village          ...done"
 
 import sys
 

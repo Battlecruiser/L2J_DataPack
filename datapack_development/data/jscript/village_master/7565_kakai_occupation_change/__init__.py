@@ -2,7 +2,7 @@
 # Created by DraX on 2005.08.08
 #
 
-print "importing village master data: 7565_kakai_occupation_change"
+print "importing village master data: Orc Village            ...done"
 
 import sys
 

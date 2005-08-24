@@ -2,8 +2,6 @@
 # Created by DraX on 2005.08.15
 #
 
-print "importing village master data: 7499_tapoy_occupation_change"
-
 import sys
 
 from net.sf.l2j.gameserver.model.quest        import State

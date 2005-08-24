@@ -2,7 +2,7 @@
 # Created by DraX on 2005.08.08
 #
 
-print "importing village master data: 7525_bronk_occupation_change"
+print "importing village master data: Dwarven Village        ...done"
 
 import sys
 

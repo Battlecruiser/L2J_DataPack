@@ -2,8 +2,6 @@
 # Created by DraX on 2005.08.15
 #
 
-print "importing village master data: 7498_moke_occupation_change"
-
 import sys
 
 from net.sf.l2j.gameserver.model.quest        import State
@@ -11,7 +9,7 @@ from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 RING_OF_RAVEN_ID        = 1642
-WAREHOUSE_CHIEF_Moke    = 7498
+WAREHOUSE_CHIEF_MOKE    = 7498
 
 class Quest (JQuest) :
 
@@ -65,7 +63,7 @@ class Quest (JQuest) :
    ClassId = st.getPlayer().getClassId()
    
    # Dwarf´s got accepted
-   if npcId == WAREHOUSE_CHIEF_Moke and Race in [Race.dwarf]:
+   if npcId == WAREHOUSE_CHIEF_MOKE and Race in [Race.dwarf]:
      if ClassId in [ClassId.dwarvenFighter]:
        st.exitQuest(True)
        return "7498-01.htm"
@@ -77,7 +75,7 @@ class Quest (JQuest) :
        return "7498-10.htm"
 
    # All other Races must be out
-   if npcId == WAREHOUSE_CHIEF_Moke and Race in [Race.elf, Race.darkelf, Race.orc, Race.human]:
+   if npcId == WAREHOUSE_CHIEF_MOKE and Race in [Race.elf, Race.darkelf, Race.orc, Race.human]:
      st.exitQuest(True)
      return "7498-11.htm"
 
