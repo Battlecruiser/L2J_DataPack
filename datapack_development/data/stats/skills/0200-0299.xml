@@ -1865,9 +1865,9 @@
 
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
-	 <mul stat="pAtk" val="0.8" order="0x05"/>
-	 <add stat="rEvas" val="10" order="0x05"/>
-	 <add stat="runSpd" val="15" order="0x05"/>
+	 <mul order='0x50' stat="pAtk" val="0.8"/>
+	 <add order='0x40' stat="rEvas" val="10"/>
+	 <add order='0x40' stat="runSpd" val="15"/>
 	</effect>
   </for>
 
