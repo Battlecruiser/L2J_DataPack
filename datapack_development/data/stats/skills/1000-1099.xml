@@ -1684,7 +1684,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="6" name="DamOverTime" time="5" val="#dmg"/>
+    <effect count="6" name="DamOverTime" time="5" val="#dmg" abnormal="poison"/>
   </for>
 </skill>
 <skill id="1096" levels="16" name="Seal of Chaos">

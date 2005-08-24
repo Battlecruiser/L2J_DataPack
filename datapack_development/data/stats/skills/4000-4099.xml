@@ -729,11 +729,11 @@
   <set name="skillType" val="POISON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="15000"/>
+  <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
   <set name="displayId" val="0129"/>
   <for>
-    <effect count="4" name="DamOverTime" time="15" val="#dmg" abnormal="poison"/>
+    <effect count="6" name="DamOverTime" time="5" val="#dmg" abnormal="poison"/>
   </for>
 </skill>
 <skill id="4053" levels="8" name="Drop Attack Power">
