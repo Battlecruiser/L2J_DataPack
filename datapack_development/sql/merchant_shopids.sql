@@ -179,3 +179,4 @@ INSERT INTO merchant_shopids VALUES (300522,'gm');
 INSERT INTO merchant_shopids VALUES (300523,'gm');
 INSERT INTO merchant_shopids VALUES (300524,'gm');
 INSERT INTO merchant_shopids VALUES (300525,'gm');
+INSERT INTO merchant_shopids VALUES (300526,'gm');
