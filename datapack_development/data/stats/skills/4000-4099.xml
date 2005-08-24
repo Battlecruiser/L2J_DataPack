@@ -166,7 +166,8 @@
 </skill>
 <skill id="4017" levels="1" name="Brandish Queen Ant">
   <set name="power" val="417.0"/>
-  <set name="target" val="TARGET_AURA_CLOSE"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="80"/>
   <set name="hitTime" val="1000"/>
   <set name="skillTime" val="1300"/>
   <set name="skillType" val="PDAM"/>
@@ -197,6 +198,7 @@
   <set name="save" val="5"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="1000"/>
   <set name="skillTime" val="2000"/>
   <set name="skillType" val="DEBUFF"/>
@@ -283,6 +285,7 @@
   <set name="mpConsume" val="83"/>
   <set name="power" val="43.0"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="4000"/>
   <set name="element" val="2"/>
   <set name="reuseDelay" val="15000"/>
@@ -411,7 +414,8 @@
   <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
-  <set name="target" val="TARGET_AURA_CLOSE"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="80"/>
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="8000"/>
   <set name="skillTime" val="4000"/>
@@ -468,6 +472,7 @@
   <set name="save" val="3"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="8000"/>
   <set name="skillTime" val="2000"/>
@@ -593,6 +598,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="30.0"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="4000"/>
   <set name="element" val="2"/>
   <set name="reuseDelay" val="15000"/>
@@ -859,6 +865,7 @@
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="5000"/>
   <set name="skillTime" val="5000"/>
   <set name="skillType" val="NEGATE"/>
@@ -984,7 +991,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="4"/>
   <set name="power" val="#power"/>
-  <set name="target" val="TARGET_AURA_CLOSE"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="80"/>
   <set name="hitTime" val="1000"/>
   <set name="overHit" val="true"/>
   <set name="reuseDelay" val="9000"/>
@@ -1101,6 +1109,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="4000"/>
   <set name="element" val="2"/>
   <set name="reuseDelay" val="8000"/>

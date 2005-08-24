@@ -22,7 +22,8 @@
   <table name="#power"> 46.0 105.0 219.0 417.0 722.0 1136.0 1626.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
-  <set name="target" val="TARGET_AURA_CLOSE"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="80"/>
   <set name="hitTime" val="1000"/>
   <set name="overHit" val="true"/>
   <set name="reuseDelay" val="6000"/>
@@ -111,6 +112,7 @@
 <skill id="4106" levels="1" name="Antharas Jump">
   <set name="power" val="11000.0"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="6000"/>
   <set name="overHit" val="true"/>
   <set name="skillTime" val="6000"/>
@@ -125,6 +127,7 @@
 <skill id="4107" levels="1" name="Antharas Tail">
   <set name="power" val="11000.0"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="3000"/>
   <set name="overHit" val="true"/>
   <set name="skillTime" val="6000"/>
@@ -152,6 +155,7 @@
   <set name="save" val="2"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="2000"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
@@ -188,6 +192,7 @@
 <skill id="4110" levels="1" name="Mouth Odor Attack">
   <set name="power" val="250.0"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="2000"/>
   <set name="element" val="2"/>
   <set name="skillTime" val="5000"/>
@@ -202,6 +207,7 @@
   <set name="save" val="4"/>
   <set name="power" val="10.0"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="3000"/>
   <set name="element" val="4"/>
   <set name="overHit" val="true"/>
@@ -219,6 +225,7 @@
 <skill id="4112" levels="1" name="Ordinary Attack">
   <set name="power" val="22000.0"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="2000"/>
   <set name="overHit" val="true"/>
   <set name="skillTime" val="2200"/>
@@ -231,6 +238,7 @@
 <skill id="4113" levels="1" name="Animal doing ordinary attack">
   <set name="power" val="22000.0"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="2000"/>
   <set name="overHit" val="true"/>
   <set name="skillTime" val="2200"/>
@@ -244,6 +252,7 @@
   <set name="mpConsume" val="90"/>
   <set name="power" val="47.0"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="4000"/>
   <set name="element" val="2"/>
   <set name="reuseDelay" val="15000"/>
@@ -309,6 +318,7 @@
   <set name="save" val="4"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="120000"/>
   <set name="skillTime" val="6000"/>
@@ -454,6 +464,7 @@
   <set name="save" val="2"/>
   <set name="power" val="500.0"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="22000"/>
   <set name="element" val="2"/>
   <set name="skillTime" val="2300"/>
@@ -470,6 +481,7 @@
 
   <set name="power" val="1250.0"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="22000"/>
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="PDAM"/>
@@ -486,6 +498,7 @@
   <set name="save" val="2"/>
   <set name="power" val="300.0"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="30000"/>
   <set name="skillTime" val="6000"/>
   <set name="skillType" val="PDAM"/>
@@ -499,6 +512,7 @@
 </skill>
 <skill id="4131" levels="1" name="Paralyze">
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="skillTime" val="3600"/>
   <set name="skillType" val="PARALYZE"/>
   <set name="operateType" val="OP_ACTIVE"/>

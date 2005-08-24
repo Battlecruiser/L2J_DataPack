@@ -723,6 +723,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="1000"/>
   <set name="overHit" val="true"/>
   <set name="reuseDelay" val="17000"/>
@@ -1172,6 +1173,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="900"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1191,6 +1193,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="900"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1210,6 +1213,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="900"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1229,6 +1233,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="900"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1248,6 +1253,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="900"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1267,6 +1273,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="900"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1286,6 +1293,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="900"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1302,6 +1310,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="900"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1322,6 +1331,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="900"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1342,6 +1352,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="900"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1362,6 +1373,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="900"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1382,6 +1394,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="900"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1403,6 +1416,7 @@
  <set name="mpConsume" val="60"/>
  <set name="power" val="0.0"/>
  <set name="target" val="TARGET_PARTY"/>
+ <set name="skillRadius" val="900"/>
  <set name="hitTime" val="2000"/>
  <set name="reuseDelay" val="10000"/>
  <set name="skillTime" val="2000"/>
@@ -1423,6 +1437,7 @@
  <set name="mpConsume" val="60"/>
  <set name="power" val="0.0"/>
  <set name="target" val="TARGET_PARTY"/>
+ <set name="skillRadius" val="900"/>
  <set name="hitTime" val="2000"/>
  <set name="reuseDelay" val="10000"/>
  <set name="skillTime" val="2000"/>
@@ -1478,7 +1493,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="400"/>
   <for>
-	<effect count="1" name="Paralyze" time="9" val="0"/>
+	<effect count="1" name="Paralyze" time="120" val="0"/>
   </for>
 </skill>
 <skill id="280" levels="37" name="Burning Fist">
@@ -1622,6 +1637,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="80"/>
   <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="15000"/>
   <set name="skillTime" val="1000"/>
