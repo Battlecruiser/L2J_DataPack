@@ -9,7 +9,7 @@ Q_FAIRY_STONE_ID = 3816
 Q_FAIRY_STONE_DELUX_ID = 3817
 Q_LIST_OF_STUFF_FOR_FS_ID = 3818
 Q_LIST_OF_STUFF_FOR_FSD_ID = 3819
-COAL_ID = 1567
+COAL_ID = 1870
 CHARCOAL_ID = 1871
 GEMSTONE_D_ID = 2130
 SILVER_NUGGET_ID = 1873
@@ -142,9 +142,16 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_finish")
       htmltext = "7747-14.htm"
     elif event == "7747_6" :
-#      if st.getGameTicks() != int(st.get("id")) :
-#        st.set("id",str(st.getGameTicks()))
+      if st.getGameTicks() != int(st.get("id")) :
+        st.set("id",str(st.getGameTicks()))
         st.set("cond","0")
+	n=st.getRandom(2)
+	if (n == 0) :
+            st.giveItems(DRAGONFLUTE_OF_WIND_ID,1)
+        elif (n == 1) : 
+            st.giveItems(DRAGONFLUTE_OF_STAR_ID,1)
+        else :
+            st.giveItems(DRAGONFLUTE_OF_TWILIGHT_ID,1)
         st.setState(COMPLETED)
         st.playSound("ItemSound.quest_finish")
         if st.getQuestItemsCount(Q_FAIRY_DUST_ID) == 0 :
