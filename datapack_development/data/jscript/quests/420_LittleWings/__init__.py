@@ -116,6 +116,7 @@ class Quest (JQuest) :
       else:
         if st.getGameTicks() != int(st.get("id")) :
           st.set("id",str(st.getGameTicks()))
+	  n=st.getRandom(2)
 	  if (n == 0) :
             st.giveItems(DRAGONFLUTE_OF_WIND_ID,1)
           elif (n == 1) : 
