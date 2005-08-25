@@ -116,13 +116,12 @@ class Quest (JQuest) :
       else:
         if st.getGameTicks() != int(st.get("id")) :
           st.set("id",str(st.getGameTicks()))
-	  n=st.getRandom(2)
 	  if (n == 0) :
-             st.giveItems(DRAGONFLUTE_OF_WIND_ID,1)
+            st.giveItems(DRAGONFLUTE_OF_WIND_ID,1)
           elif (n == 1) : 
-             st.giveItems(DRAGONFLUTE_OF_STAR_ID,1)
+            st.giveItems(DRAGONFLUTE_OF_STAR_ID,1)
           else :
-             st.giveItems(DRAGONFLUTE_OF_TWILIGHT_ID,1)
+            st.giveItems(DRAGONFLUTE_OF_TWILIGHT_ID,1)
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
@@ -145,13 +144,6 @@ class Quest (JQuest) :
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
         st.set("cond","0")
-	n=st.getRandom(2)
-	if (n == 0) :
-            st.giveItems(DRAGONFLUTE_OF_WIND_ID,1)
-        elif (n == 1) : 
-            st.giveItems(DRAGONFLUTE_OF_STAR_ID,1)
-        else :
-            st.giveItems(DRAGONFLUTE_OF_TWILIGHT_ID,1)
         st.setState(COMPLETED)
         st.playSound("ItemSound.quest_finish")
         if st.getQuestItemsCount(Q_FAIRY_DUST_ID) == 0 :
@@ -339,7 +331,7 @@ class Quest (JQuest) :
 
  def onKill (self,npcId,st):
    if npcId == 231 :
-    if int(st.get("cond")) >= 1 and (st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_ID) == 1 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID) < 10) or st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FSD_ID) == 1 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID) < 20 :
+    if int(st.get("cond")) >= 1 and ((st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_ID) == 1 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID) < 10) or (st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FSD_ID) == 1 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID) < 20)) :
       if st.getRandom(100) < 30 :
         st.giveItems(Q_INPICIOS_BACK_SKIN_ID,1)
    elif npcId == 580 :
@@ -348,9 +340,11 @@ class Quest (JQuest) :
          st.giveItems(Q_EGG_OF_DRAKE_EXARION_ID,1)
          st.playSound("ItemSound.quest_middle")
    elif npcId == 233 :
-     if int(st.get("cond")) >= 1:
-       st.giveItems(Q_SCALE_OF_DRAKE_ZWOV_ID,1)
-       st.giveItems(Q_EGG_OF_DRAKE_ZWOV_ID,1)
+     if int(st.get("cond")) >= 1 and st.getQuestItemsCount(Q_SCALE_OF_DRAKE_ZWOV_ID) == 1 :
+       if st.getQuestItemsCount(Q_EGG_OF_DRAKE_ZWOV_ID) < 20 and st.getRandom(100) < 50 :
+         #st.giveItems(Q_SCALE_OF_DRAKE_ZWOV_ID,1)
+         st.giveItems(Q_EGG_OF_DRAKE_ZWOV_ID,1)
+         st.playSound("ItemSound.quest_middle")
    elif npcId == 551 :
      if int(st.get("cond")) >= 1 and st.getQuestItemsCount(Q_SCALE_OF_DRAKE_KALIBRAN_ID) == 1 :
        if st.getQuestItemsCount(Q_EGG_OF_DRAKE_KALIBRAN_ID) < 20 and st.getRandom(100) < 50 :
@@ -362,9 +356,11 @@ class Quest (JQuest) :
          st.giveItems(Q_EGG_OF_WYRM_SUZET_ID,1)
          st.playSound("ItemSound.quest_middle")
    elif npcId == 202 :
-     if int(st.get("cond")) >= 1:
-       st.giveItems(Q_EGG_OF_WYRM_SHAMHAI_ID,1)
-       st.giveItems(Q_SCALE_OF_WYRM_SHAMHAI_ID,1)
+     if int(st.get("cond")) >= 1 and st.getQuestItemsCount(Q_SCALE_OF_WYRM_SHAMHAI_ID) == 1 :
+       if st.getQuestItemsCount(Q_EGG_OF_WYRM_SHAMHAI_ID) < 20 and st.getRandom(100) < 50 :
+         st.giveItems(Q_EGG_OF_WYRM_SHAMHAI_ID,1)
+         st.playSound("ItemSound.quest_middle")
+#         st.giveItems(Q_SCALE_OF_WYRM_SHAMHAI_ID,1)
 #   elif npcId == 589 or npcId == 590 or npcId == 591 or npcId == 592 or npcId == 593 or npcId == 594 or npcId == 595 or npcId == 596 or npcId == 597 or npcId == 598 or npcId == 599:
 #     if int(st.get("cond")) >= 1 :
 #       st.giveItems(,1)
