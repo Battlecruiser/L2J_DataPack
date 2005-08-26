@@ -86,7 +86,7 @@ class Quest (JQuest) :
         htmltext = "7531-02.htm"
    elif npcId == 7531 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7531 and int(st.get("cond"))==1 and GetMemoState>=1 and ((st.getQuestItemsCount(RECOMMENDATION_OF_BALANKI_ID)+st.getQuestItemsCount(RECOMMENDATION_OF_FILAUR_ID)+st.getQuestItemsCount(RECOMMENDATION_OF_ARIN_ID))<3) :
+   elif npcId == 7531 and int(st.get("cond"))>=1 and ((st.getQuestItemsCount(RECOMMENDATION_OF_BALANKI_ID)+st.getQuestItemsCount(RECOMMENDATION_OF_FILAUR_ID)+st.getQuestItemsCount(RECOMMENDATION_OF_ARIN_ID))<3) :
       htmltext = "7531-05.htm"
    elif npcId == 7531 and int(st.get("cond"))==1 and ((st.getQuestItemsCount(RECOMMENDATION_OF_BALANKI_ID)+st.getQuestItemsCount(RECOMMENDATION_OF_FILAUR_ID)+st.getQuestItemsCount(RECOMMENDATION_OF_ARIN_ID))==3) :
       if st.getGameTicks() != int(st.get("id")) :
@@ -102,18 +102,18 @@ class Quest (JQuest) :
       st.setState(COMPLETED)
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
-   elif npcId == 7533 and int(st.get("cond"))==1 and GetMemoState==1 and st.getQuestItemsCount(RECOMMENDATION_OF_BALANKI_ID)==0 :
+   elif npcId == 7533 and int(st.get("cond"))==1 and st.getQuestItemsCount(RECOMMENDATION_OF_BALANKI_ID)==0 :
       htmltext = "7533-01.htm"
-   elif npcId == 7533 and int(st.get("cond"))==1 and GetMemoState==2 and st.getQuestItemsCount(LETTER_OF_SOLDER_DETACHMENT_ID)==0 :
+   elif npcId == 7533 and int(st.get("cond"))==2 and st.getQuestItemsCount(LETTER_OF_SOLDER_DETACHMENT_ID)==0 :
       htmltext = "7533-03.htm"
-   elif npcId == 7533 and int(st.get("cond"))==1 and GetMemoState==2 and st.getQuestItemsCount(LETTER_OF_SOLDER_DETACHMENT_ID) :
+   elif npcId == 7533 and int(st.get("cond"))==2 and st.getQuestItemsCount(LETTER_OF_SOLDER_DETACHMENT_ID) :
       htmltext = "7533-04.htm"
       st.giveItems(RECOMMENDATION_OF_BALANKI_ID,1)
       st.takeItems(LETTER_OF_SOLDER_DETACHMENT_ID,1)
       st.set("cond","1")
    elif npcId == 7533 and int(st.get("cond"))==1 and st.getQuestItemsCount(RECOMMENDATION_OF_BALANKI_ID) :
       htmltext = "7533-05.htm"
-   elif npcId == 7671 and int(st.get("cond"))==1 and GetMemoState==2 and st.getQuestItemsCount(PAINT_OF_KAMURU_ID)==0 and st.getQuestItemsCount(NECKLACE_OF_KAMURU_ID)==0 and st.getQuestItemsCount(LETTER_OF_SOLDER_DETACHMENT_ID)==0 :
+   elif npcId == 7671 and int(st.get("cond"))==2 and st.getQuestItemsCount(PAINT_OF_KAMURU_ID)==0 and st.getQuestItemsCount(NECKLACE_OF_KAMURU_ID)==0 and st.getQuestItemsCount(LETTER_OF_SOLDER_DETACHMENT_ID)==0 :
       htmltext = "7671-01.htm"
    elif npcId == 7671 and int(st.get("cond"))==1 and st.getQuestItemsCount(PAINT_OF_KAMURU_ID) and st.getQuestItemsCount(NECKLACE_OF_KAMURU_ID)==0 :
       htmltext = "7671-03.htm"
@@ -126,47 +126,47 @@ class Quest (JQuest) :
       htmltext = "7671-05.htm"
    elif npcId == 7672 and int(st.get("cond"))==1 and st.getQuestItemsCount(PAINT_OF_KAMURU_ID) :
       htmltext = "7672-01.htm"
-   elif npcId == 7536 and int(st.get("cond"))==1 and GetMemoState==1 and st.getQuestItemsCount(RECOMMENDATION_OF_ARIN_ID)==0 :
+   elif npcId == 7536 and int(st.get("cond"))==1 and st.getQuestItemsCount(RECOMMENDATION_OF_ARIN_ID)==0 :
       htmltext = "7536-01.htm"
       st.giveItems(PAINT_OF_TELEPORT_DEVICE_ID,1)
       st.set("cond","3")
-   elif npcId == 7536 and int(st.get("cond"))==1 and GetMemoState==3 and st.getQuestItemsCount(PAINT_OF_TELEPORT_DEVICE_ID) and st.getQuestItemsCount(TELEPORT_DEVICE_ID)==0 :
+   elif npcId == 7536 and int(st.get("cond"))==3 and st.getQuestItemsCount(PAINT_OF_TELEPORT_DEVICE_ID) and st.getQuestItemsCount(TELEPORT_DEVICE_ID)==0 :
       htmltext = "7536-02.htm"
-   elif npcId == 7536 and int(st.get("cond"))==1 and GetMemoState==3 and st.getQuestItemsCount(TELEPORT_DEVICE_ID)==5 :
+   elif npcId == 7536 and int(st.get("cond"))==3 and st.getQuestItemsCount(TELEPORT_DEVICE_ID)==5 :
       htmltext = "7536-03.htm"
       st.giveItems(RECOMMENDATION_OF_ARIN_ID,1)
       st.takeItems(TELEPORT_DEVICE_ID,5)
       st.set("cond","1")
    elif npcId == 7536 and int(st.get("cond"))==1 and st.getQuestItemsCount(RECOMMENDATION_OF_ARIN_ID) :
       htmltext = "7536-04.htm"
-   elif npcId == 7556 and int(st.get("cond"))==1 and GetMemoState==3 and st.getQuestItemsCount(PAINT_OF_TELEPORT_DEVICE_ID) :
+   elif npcId == 7556 and int(st.get("cond"))==3 and st.getQuestItemsCount(PAINT_OF_TELEPORT_DEVICE_ID) :
       htmltext = "7556-01.htm"
-   elif npcId == 7556 and int(st.get("cond"))==1 and GetMemoState==3 and st.getQuestItemsCount(BROKEN_TELEPORT_DEVICE_ID) :
+   elif npcId == 7556 and int(st.get("cond"))==3 and st.getQuestItemsCount(BROKEN_TELEPORT_DEVICE_ID) :
       htmltext = "7556-06.htm"
       st.giveItems(TELEPORT_DEVICE_ID,5)
       st.takeItems(BROKEN_TELEPORT_DEVICE_ID,1)
-   elif npcId == 7556 and int(st.get("cond"))==1 and GetMemoState==3 and st.getQuestItemsCount(TELEPORT_DEVICE_ID)==5 :
+   elif npcId == 7556 and int(st.get("cond"))==3 and st.getQuestItemsCount(TELEPORT_DEVICE_ID)==5 :
       htmltext = "7556-07.htm"
-   elif npcId == 7535 and int(st.get("cond"))==1 and GetMemoState==1 and st.getQuestItemsCount(RECOMMENDATION_OF_FILAUR_ID)==0 :
+   elif npcId == 7535 and int(st.get("cond"))==1 and st.getQuestItemsCount(RECOMMENDATION_OF_FILAUR_ID)==0 :
       htmltext = "7535-01.htm"
       st.giveItems(ARCHITECTURE_OF_KRUMA_ID,1)
       st.set("cond","4")
-   elif npcId == 7535 and int(st.get("cond"))==1 and GetMemoState==4 and st.getQuestItemsCount(ARCHITECTURE_OF_KRUMA_ID) and st.getQuestItemsCount(REPORT_OF_KRUMA_ID)==0 :
+   elif npcId == 7535 and int(st.get("cond"))==4 and st.getQuestItemsCount(ARCHITECTURE_OF_KRUMA_ID) and st.getQuestItemsCount(REPORT_OF_KRUMA_ID)==0 :
       htmltext = "7535-02.htm"
-   elif npcId == 7535 and int(st.get("cond"))==1 and GetMemoState==4 and st.getQuestItemsCount(ARCHITECTURE_OF_KRUMA_ID)==0 and st.getQuestItemsCount(REPORT_OF_KRUMA_ID) :
+   elif npcId == 7535 and int(st.get("cond"))==4 and st.getQuestItemsCount(ARCHITECTURE_OF_KRUMA_ID)==0 and st.getQuestItemsCount(REPORT_OF_KRUMA_ID) :
       htmltext = "7535-03.htm"
       st.giveItems(RECOMMENDATION_OF_FILAUR_ID,1)
       st.takeItems(REPORT_OF_KRUMA_ID,1)
       st.set("cond","1")
    elif npcId == 7535 and int(st.get("cond"))==1 and st.getQuestItemsCount(RECOMMENDATION_OF_FILAUR_ID) :
       htmltext = "7535-04.htm"
-   elif npcId == 7673 and int(st.get("cond"))==1 and GetMemoState==4 and st.getQuestItemsCount(INGREDIENTS_OF_ANTIDOTE_ID)==0 and st.getQuestItemsCount(REPORT_OF_KRUMA_ID)==0 :
+   elif npcId == 7673 and int(st.get("cond"))==4 and st.getQuestItemsCount(INGREDIENTS_OF_ANTIDOTE_ID)==0 and st.getQuestItemsCount(REPORT_OF_KRUMA_ID)==0 :
       htmltext = "7673-01.htm"
       st.giveItems(INGREDIENTS_OF_ANTIDOTE_ID,1)
       st.takeItems(ARCHITECTURE_OF_KRUMA_ID,1)
-   elif npcId == 7673 and int(st.get("cond"))==1 and GetMemoState==4 and st.getQuestItemsCount(INGREDIENTS_OF_ANTIDOTE_ID) and ((st.getQuestItemsCount(WEIRD_BEES_NEEDLE_ID)+st.getQuestItemsCount(MARSH_SPIDERS_WEB_ID)+st.getQuestItemsCount(BLOOD_OF_LEECH_ID))<30) and st.getQuestItemsCount(REPORT_OF_KRUMA_ID)==0 :
+   elif npcId == 7673 and int(st.get("cond"))==4 and st.getQuestItemsCount(INGREDIENTS_OF_ANTIDOTE_ID) and ((st.getQuestItemsCount(WEIRD_BEES_NEEDLE_ID)+st.getQuestItemsCount(MARSH_SPIDERS_WEB_ID)+st.getQuestItemsCount(BLOOD_OF_LEECH_ID))<30) and st.getQuestItemsCount(REPORT_OF_KRUMA_ID)==0 :
       htmltext = "7673-02.htm"
-   elif npcId == 7673 and int(st.get("cond"))==1 and GetMemoState==4 and st.getQuestItemsCount(INGREDIENTS_OF_ANTIDOTE_ID) and ((st.getQuestItemsCount(WEIRD_BEES_NEEDLE_ID)+st.getQuestItemsCount(MARSH_SPIDERS_WEB_ID)+st.getQuestItemsCount(BLOOD_OF_LEECH_ID))==30) and st.getQuestItemsCount(REPORT_OF_KRUMA_ID)==0 :
+   elif npcId == 7673 and int(st.get("cond"))==4 and st.getQuestItemsCount(INGREDIENTS_OF_ANTIDOTE_ID) and ((st.getQuestItemsCount(WEIRD_BEES_NEEDLE_ID)+st.getQuestItemsCount(MARSH_SPIDERS_WEB_ID)+st.getQuestItemsCount(BLOOD_OF_LEECH_ID))==30) and st.getQuestItemsCount(REPORT_OF_KRUMA_ID)==0 :
       htmltext = "7673-03.htm"
    elif npcId == 7673 and int(st.get("cond"))==1 and st.getQuestItemsCount(REPORT_OF_KRUMA_ID) :
       htmltext = "7673-05.htm"

@@ -69,7 +69,7 @@ class Quest (JQuest) :
         htmltext = "7109-02.htm"
    elif npcId == 7109 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7109 and int(st.get("cond"))==1 and st.getQuestItemsCount(LETTER_OF_DUSTIN_ID) and GetMemoState==14 :
+   elif npcId == 7109 and int(st.get("cond"))==14  and st.getQuestItemsCount(LETTER_OF_DUSTIN_ID):
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
         st.getPlayer().addExpAndSp(21500,0)
@@ -81,53 +81,53 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
       st.set("cond","0")
-   elif npcId == 7109 and int(st.get("cond"))==1 and GetMemoState==1 :
+   elif npcId == 7109 and int(st.get("cond"))==1 :
       htmltext = "7109-04.htm"
-   elif npcId == 7653 and int(st.get("cond"))==1 and GetMemoState==1 :
+   elif npcId == 7653 and int(st.get("cond"))==1 :
       htmltext = "7653-01.htm"
       if st.getQuestItemsCount(OLD_KNIGHT_SWORD_ID) == 0 :
         st.giveItems(OLD_KNIGHT_SWORD_ID,1)
       st.set("cond","2")
-   elif npcId == 7653 and int(st.get("cond"))==1 and st.getQuestItemsCount(KNIGHTS_TEAR_ID)==0 and GetMemoState==2 :
+   elif npcId == 7653 and int(st.get("cond"))==2 and st.getQuestItemsCount(KNIGHTS_TEAR_ID)==0 :
       htmltext = "7653-02.htm"
-   elif npcId == 7653 and int(st.get("cond"))==1 and st.getQuestItemsCount(KNIGHTS_TEAR_ID) and GetMemoState==3 :
+   elif npcId == 7653 and int(st.get("cond"))==3 and st.getQuestItemsCount(KNIGHTS_TEAR_ID) :
       htmltext = "7653-03.htm"
       st.takeItems(KNIGHTS_TEAR_ID,1)
       st.takeItems(OLD_KNIGHT_SWORD_ID,1)
       st.set("cond","4")
-   elif npcId == 7653 and int(st.get("cond"))==1 and GetMemoState==4 :
+   elif npcId == 7653 and int(st.get("cond"))==4 :
       htmltext = "7653-04.htm"
-   elif npcId == 7654 and int(st.get("cond"))==1 and GetMemoState==4 :
+   elif npcId == 7654 and int(st.get("cond"))==4 :
       htmltext = "7654-01.htm"
       st.set("cond","5")
-   elif npcId == 7654 and int(st.get("cond"))==1 and GetMemoState==5 and st.getQuestItemsCount(TALIANUSS_REPORT_ID)==0 :
+   elif npcId == 7654 and int(st.get("cond"))==5 and st.getQuestItemsCount(TALIANUSS_REPORT_ID)==0 :
       htmltext = "7654-02.htm"
-   elif npcId == 7654 and int(st.get("cond"))==1 and GetMemoState==5 and st.getQuestItemsCount(TALIANUSS_REPORT_ID) :
+   elif npcId == 7654 and int(st.get("cond"))==5 and st.getQuestItemsCount(TALIANUSS_REPORT_ID) :
       htmltext = "7654-03.htm"
       st.set("cond","6")
       st.giveItems(MIRROR_OF_ORPIC_ID,1)
-   elif npcId == 7654 and int(st.get("cond"))==1 and GetMemoState==6 :
+   elif npcId == 7654 and int(st.get("cond"))==6 :
       htmltext = "7654-04.htm"
-   elif npcId == 7654 and int(st.get("cond"))==1 and GetMemoState==7 and st.getQuestItemsCount(TEAR_OF_CONFESSION_ID) :
+   elif npcId == 7654 and int(st.get("cond"))==7 and st.getQuestItemsCount(TEAR_OF_CONFESSION_ID) :
       htmltext = "7654-05.htm"
       st.takeItems(TEAR_OF_CONFESSION_ID,1)
       st.set("cond","8")
-   elif npcId == 7654 and int(st.get("cond"))==1 and GetMemoState==8 :
+   elif npcId == 7654 and int(st.get("cond"))==8 :
       htmltext = "7654-06.htm"
-   elif npcId == 7656 and int(st.get("cond"))==1 and GetMemoState==6 and st.getQuestItemsCount(MIRROR_OF_ORPIC_ID) :
+   elif npcId == 7656 and int(st.get("cond"))==6 and st.getQuestItemsCount(MIRROR_OF_ORPIC_ID) :
       htmltext = "7656-01.htm"
       st.takeItems(MIRROR_OF_ORPIC_ID,1)
       st.takeItems(TALIANUSS_REPORT_ID,1)
       st.giveItems(TEAR_OF_CONFESSION_ID,1)
       st.set("cond","7")
       st.despawnNpc(7656)
-   elif npcId == 7655 and int(st.get("cond"))==1 and GetMemoState==8 :
+   elif npcId == 7655 and int(st.get("cond"))==8 :
       if st.getPlayer().getLevel() >= 36 :
         htmltext = "7655-02.htm"
         st.set("cond","9")
       else:
         htmltext = "7655-01.htm"
-   elif npcId == 7655 and int(st.get("cond"))==1 and GetMemoState==9 :
+   elif npcId == 7655 and int(st.get("cond"))==9 :
       if st.getQuestItemsCount(MILITAS_ARTICLE_ID) < 20 :
         htmltext = "7655-03.htm"
       else:
@@ -135,35 +135,35 @@ class Quest (JQuest) :
         st.giveItems(TEAR_OF_LOYALTY_ID,1)
         st.takeItems(MILITAS_ARTICLE_ID,st.getQuestItemsCount(MILITAS_ARTICLE_ID))
         st.set("cond","10")
-   elif npcId == 7655 and int(st.get("cond"))==1 and GetMemoState==10 :
+   elif npcId == 7655 and int(st.get("cond"))==10 :
       htmltext = "7655-05.htm"
-   elif npcId == 7116 and int(st.get("cond"))==1 and GetMemoState==10 and st.getQuestItemsCount(TEAR_OF_LOYALTY_ID) :
+   elif npcId == 7116 and int(st.get("cond"))==10 and st.getQuestItemsCount(TEAR_OF_LOYALTY_ID) :
       htmltext = "7116-01.htm"
       st.set("cond","9")
-   elif npcId == 7116 and int(st.get("cond"))==1 and GetMemoState==11 and ~(st.getQuestItemsCount(ATEBALTS_SKULL_ID) and st.getQuestItemsCount(ATEBALTS_RIBS_ID) and st.getQuestItemsCount(ATEBALTS_SHIN_ID)) :
+   elif npcId == 7116 and int(st.get("cond"))==11 and ~(st.getQuestItemsCount(ATEBALTS_SKULL_ID) and st.getQuestItemsCount(ATEBALTS_RIBS_ID) and st.getQuestItemsCount(ATEBALTS_SHIN_ID)) :
       htmltext = "7116-06.htm"
-   elif npcId == 7116 and int(st.get("cond"))==1 and GetMemoState==11 and (st.getQuestItemsCount(ATEBALTS_SKULL_ID) and st.getQuestItemsCount(ATEBALTS_RIBS_ID) and st.getQuestItemsCount(ATEBALTS_SHIN_ID)) :
+   elif npcId == 7116 and int(st.get("cond"))==11 and (st.getQuestItemsCount(ATEBALTS_SKULL_ID) and st.getQuestItemsCount(ATEBALTS_RIBS_ID) and st.getQuestItemsCount(ATEBALTS_SHIN_ID)) :
       htmltext = "7116-07.htm"
       st.takeItems(ATEBALTS_SKULL_ID,1)
       st.takeItems(ATEBALTS_RIBS_ID,1)
       st.takeItems(ATEBALTS_SHIN_ID,1)
       st.giveItems(SAINTS_ASHES_URN_ID,1)
       st.set("cond","12")
-   elif npcId == 7116 and int(st.get("cond"))==1 and GetMemoState==13 and st.getQuestItemsCount(LETTER_OF_WINDAWOOD_ID) :
+   elif npcId == 7116 and int(st.get("cond"))==13 and st.getQuestItemsCount(LETTER_OF_WINDAWOOD_ID) :
       htmltext = "7116-08.htm"
       st.takeItems(LETTER_OF_WINDAWOOD_ID,1)
       st.giveItems(LETTER_OF_DUSTIN_ID,1)
       st.set("cond","14")
-   elif npcId == 7116 and int(st.get("cond"))==1 and GetMemoState==12 :
+   elif npcId == 7116 and int(st.get("cond"))==12 :
       htmltext = "7116-09.htm"
-   elif npcId == 7116 and int(st.get("cond"))==1 and GetMemoState==14 :
+   elif npcId == 7116 and int(st.get("cond"))==14 :
       htmltext = "7116-10.htm"
-   elif npcId == 7311 and int(st.get("cond"))==1 and GetMemoState==12 and st.getQuestItemsCount(SAINTS_ASHES_URN_ID) :
+   elif npcId == 7311 and int(st.get("cond"))==12 and st.getQuestItemsCount(SAINTS_ASHES_URN_ID) :
       htmltext = "7311-01.htm"
       st.takeItems(SAINTS_ASHES_URN_ID,1)
       st.giveItems(LETTER_OF_WINDAWOOD_ID,1)
       st.set("cond","13")
-   elif npcId == 7311 and int(st.get("cond"))==1 and GetMemoState==13 :
+   elif npcId == 7311 and int(st.get("cond"))==13 :
       htmltext = "7311-02.htm"
    return htmltext
 

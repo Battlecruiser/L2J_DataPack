@@ -39,7 +39,7 @@ class Quest (JQuest) :
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
-        st.giveItems(ORDER_GLUDIO_ID)
+        st.giveItems(ORDER_GLUDIO_ID,1)
         st.giveItems(ORDER_DION_ID,1)
         st.giveItems(ORDER_GIRAN_ID,1)
         st.giveItems(ORDER_OREN_ID,1)

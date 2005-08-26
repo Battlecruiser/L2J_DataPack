@@ -106,9 +106,9 @@ class Quest (JQuest) :
         htmltext = "7473-02.htm"
    elif npcId == 7473 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7473 and int(st.get("cond"))==1 and GetMemoState<10 and GetMemoState>=1 :
+   elif npcId == 7473 and int(st.get("cond"))<10 and int(st.get("cond"))>=1 :
       htmltext = "7473-05.htm"
-   elif npcId == 7473 and int(st.get("cond"))==1 and GetMemoState==10 and st.getQuestItemsCount(GOLDEN_STATUE_ID)==0 :
+   elif npcId == 7473 and int(st.get("cond"))==10 and st.getQuestItemsCount(GOLDEN_STATUE_ID)==0 :
       htmltext = "7473-06.htm"
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
@@ -119,15 +119,15 @@ class Quest (JQuest) :
       st.setState(COMPLETED)
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
-   elif npcId == 7473 and int(st.get("cond"))==1 and GetMemoState==10 and st.getQuestItemsCount(GOLDEN_STATUE_ID) :
+   elif npcId == 7473 and int(st.get("cond"))==10 and st.getQuestItemsCount(GOLDEN_STATUE_ID) :
       htmltext = "7473-07.htm"
-   elif npcId == 7428 and int(st.get("cond"))==1 and GetMemoState==1 and st.getQuestItemsCount(REPORT_OF_PERRIN_ID) :
+   elif npcId == 7428 and int(st.get("cond"))==1 and st.getQuestItemsCount(REPORT_OF_PERRIN_ID) :
       htmltext = "7428-01.htm"
-   elif npcId == 7428 and int(st.get("cond"))==1 and GetMemoState==2 :
+   elif npcId == 7428 and int(st.get("cond"))==2 :
       htmltext = "7428-03.htm"
       st.set("cond","3")
       st.takeItems(REPORT_OF_PERRIN_ID,1)
-   elif npcId == 7428 and int(st.get("cond"))==1 and GetMemoState==3 :
+   elif npcId == 7428 and int(st.get("cond"))==3 :
       htmltext = "7428-04.htm"
    elif npcId == 7659 and int(st.get("cond"))==1 :
       n = st.getRandom(5)
@@ -141,13 +141,13 @@ class Quest (JQuest) :
           htmltext = "7659-04.htm"
         if n == 4:
           htmltext = "7659-05.htm"
-   elif npcId == 7424 and int(st.get("cond"))==1 and GetMemoState==3 :
+   elif npcId == 7424 and int(st.get("cond"))==3 :
       htmltext = "7424-01.htm"
       st.set("cond","4")
-   elif npcId == 7424 and int(st.get("cond"))==1 and GetMemoState==4 :
+   elif npcId == 7424 and int(st.get("cond"))==4 :
       htmltext = "7424-02.htm"
       st.set("cond","4")
-   elif npcId == 7658 and int(st.get("cond"))==1 and GetMemoState==4 and st.getQuestItemsCount(PICTURE_OF_WINDY_ID)==0 and st.getQuestItemsCount(WINDYS_PEBBLES_ID)==0 and st.getQuestItemsCount(GOLDEN_STATUE_ID)==0 :
+   elif npcId == 7658 and int(st.get("cond"))==4 and st.getQuestItemsCount(PICTURE_OF_WINDY_ID)==0 and st.getQuestItemsCount(WINDYS_PEBBLES_ID)==0 and st.getQuestItemsCount(GOLDEN_STATUE_ID)==0 :
       htmltext = "7658-01.htm"
    elif npcId == 7658 and int(st.get("cond"))==1 and st.getQuestItemsCount(PICTURE_OF_WINDY_ID) :
       htmltext = "7658-04.htm"
@@ -156,67 +156,67 @@ class Quest (JQuest) :
       st.giveItems(GOLDEN_STATUE_ID,1)
       st.takeItems(WINDYS_PEBBLES_ID,1)
       st.set("cond","5")
-   elif npcId == 7658 and int(st.get("cond"))==1 and GetMemoState==5 :
+   elif npcId == 7658 and int(st.get("cond"))==5 :
       htmltext = "7658-07.htm"
    elif npcId == 7660 and int(st.get("cond"))==1 and st.getQuestItemsCount(PICTURE_OF_WINDY_ID) :
       htmltext = "7660-01.htm"
    elif npcId == 7660 and int(st.get("cond"))==1 and st.getQuestItemsCount(WINDYS_PEBBLES_ID) :
       htmltext = "7660-04.htm"
-   elif npcId == 7327 and int(st.get("cond"))==1 and GetMemoState==5 :
+   elif npcId == 7327 and int(st.get("cond"))==5 :
       htmltext = "7327-01.htm"
       st.giveItems(ORDER_OF_SORIUS_ID,1)
       st.set("cond","6")
-   elif npcId == 7327 and int(st.get("cond"))==1 and (GetMemoState>=6 and GetMemoState<9) :
+   elif npcId == 7327 and int(st.get("cond"))>=6 and int(st.get("cond"))<9 :
       htmltext = "7327-02.htm"
-   elif npcId == 7327 and int(st.get("cond"))==1 and GetMemoState==9 and st.getQuestItemsCount(CRISTINAS_LETTER_ID) :
+   elif npcId == 7327 and int(st.get("cond"))==9 and st.getQuestItemsCount(CRISTINAS_LETTER_ID) :
       htmltext = "7327-03.htm"
       st.takeItems(CRISTINAS_LETTER_ID,1)
       st.set("cond","10")
-   elif npcId == 7674 and int(st.get("cond"))==1 and GetMemoState==6 and st.getQuestItemsCount(ORDER_OF_SORIUS_ID) :
+   elif npcId == 7674 and int(st.get("cond"))==6 and st.getQuestItemsCount(ORDER_OF_SORIUS_ID) :
       htmltext = "7674-01.htm"
-   elif npcId == 7674 and int(st.get("cond"))==1 and GetMemoState==6 and st.getQuestItemsCount(SECRET_LETTER1_ID) :
+   elif npcId == 7674 and int(st.get("cond"))==6 and st.getQuestItemsCount(SECRET_LETTER1_ID) :
       htmltext = "7674-03.htm"
       st.set("cond","8")
-   elif npcId == 7662 and int(st.get("cond"))==1 and GetMemoState==8 and st.getQuestItemsCount(SECRET_LETTER1_ID) and st.getQuestItemsCount(SECRET_LETTER2_ID)==0 :
+   elif npcId == 7662 and int(st.get("cond"))==8 and st.getQuestItemsCount(SECRET_LETTER1_ID) and st.getQuestItemsCount(SECRET_LETTER2_ID)==0 :
       htmltext = "7662-01.htm"
    elif npcId == 7662 and int(st.get("cond"))==1 and st.getQuestItemsCount(SECRET_LETTER2_ID) :
       htmltext = "7662-02.htm"
    elif npcId == 7662 and int(st.get("cond"))==1 and st.getQuestItemsCount(SECRET_LETTER2_ID) and st.getQuestItemsCount(SECRET_LETTER3_ID) and st.getQuestItemsCount(SECRET_LETTER4_ID) :
       htmltext = "7662-03.htm"
-   elif npcId == 7663 and int(st.get("cond"))==1 and GetMemoState==8 and st.getQuestItemsCount(SECRET_LETTER1_ID) and st.getQuestItemsCount(SECRET_LETTER3_ID)==0 :
+   elif npcId == 7663 and int(st.get("cond"))==8 and st.getQuestItemsCount(SECRET_LETTER1_ID) and st.getQuestItemsCount(SECRET_LETTER3_ID)==0 :
       htmltext = "7663-01.htm"
    elif npcId == 7663 and int(st.get("cond"))==1 and st.getQuestItemsCount(SECRET_LETTER3_ID) :
       htmltext = "7663-02.htm"
    elif npcId == 7663 and int(st.get("cond"))==1 and st.getQuestItemsCount(SECRET_LETTER2_ID) and st.getQuestItemsCount(SECRET_LETTER3_ID) and st.getQuestItemsCount(SECRET_LETTER4_ID) :
       htmltext = "7663-03.htm"
-   elif npcId == 7664 and int(st.get("cond"))==1 and GetMemoState==8 and st.getQuestItemsCount(SECRET_LETTER1_ID) and st.getQuestItemsCount(SECRET_LETTER4_ID)==0 :
+   elif npcId == 7664 and int(st.get("cond"))==8 and st.getQuestItemsCount(SECRET_LETTER1_ID) and st.getQuestItemsCount(SECRET_LETTER4_ID)==0 :
       htmltext = "7664-01.htm"
    elif npcId == 7664 and int(st.get("cond"))==1 and st.getQuestItemsCount(SECRET_LETTER4_ID) :
       htmltext = "7664-02.htm"
    elif npcId == 7664 and int(st.get("cond"))==1 and st.getQuestItemsCount(SECRET_LETTER2_ID) and st.getQuestItemsCount(SECRET_LETTER3_ID) and st.getQuestItemsCount(SECRET_LETTER4_ID) :
       htmltext = "7664-03.htm"
-   elif npcId == 7661 and int(st.get("cond"))==1 and GetMemoState==8 and ((st.getQuestItemsCount(SECRET_LETTER2_ID)+st.getQuestItemsCount(SECRET_LETTER3_ID)+st.getQuestItemsCount(SECRET_LETTER4_ID)+st.getQuestItemsCount(SECRET_LETTER1_ID))==1) :
+   elif npcId == 7661 and int(st.get("cond"))==8 and ((st.getQuestItemsCount(SECRET_LETTER2_ID)+st.getQuestItemsCount(SECRET_LETTER3_ID)+st.getQuestItemsCount(SECRET_LETTER4_ID)+st.getQuestItemsCount(SECRET_LETTER1_ID))==1) :
       htmltext = "7661-01.htm"
       st.spawnNpc(5124)
       st.spawnNpc(5124)
       st.spawnNpc(5124)
       st.playSound("Itemsound.quest_before_battle")
       st.despawnNpc(7661)
-   elif npcId == 7661 and int(st.get("cond"))==1 and GetMemoState==8 and ((st.getQuestItemsCount(SECRET_LETTER2_ID)+st.getQuestItemsCount(SECRET_LETTER3_ID)+st.getQuestItemsCount(SECRET_LETTER4_ID)+st.getQuestItemsCount(SECRET_LETTER1_ID))==2) :
+   elif npcId == 7661 and int(st.get("cond"))==8 and ((st.getQuestItemsCount(SECRET_LETTER2_ID)+st.getQuestItemsCount(SECRET_LETTER3_ID)+st.getQuestItemsCount(SECRET_LETTER4_ID)+st.getQuestItemsCount(SECRET_LETTER1_ID))==2) :
       htmltext = "7661-02.htm"
       st.spawnNpc(5125)
       st.spawnNpc(5125)
       st.spawnNpc(5125)
       st.playSound("Itemsound.quest_before_battle")
       st.despawnNpc(7661)
-   elif npcId == 7661 and int(st.get("cond"))==1 and GetMemoState==8 and ((st.getQuestItemsCount(SECRET_LETTER2_ID)+st.getQuestItemsCount(SECRET_LETTER3_ID)+st.getQuestItemsCount(SECRET_LETTER4_ID)+st.getQuestItemsCount(SECRET_LETTER1_ID))==3) :
+   elif npcId == 7661 and int(st.get("cond"))==8 and ((st.getQuestItemsCount(SECRET_LETTER2_ID)+st.getQuestItemsCount(SECRET_LETTER3_ID)+st.getQuestItemsCount(SECRET_LETTER4_ID)+st.getQuestItemsCount(SECRET_LETTER1_ID))==3) :
       htmltext = "7661-03.htm"
       st.spawnNpc(5126)
       st.spawnNpc(5126)
       st.spawnNpc(5127)
       st.playSound("Itemsound.quest_before_battle")
       st.despawnNpc(7661)
-   elif npcId == 7661 and int(st.get("cond"))==1 and GetMemoState==8 and ((st.getQuestItemsCount(SECRET_LETTER2_ID)+st.getQuestItemsCount(SECRET_LETTER3_ID)+st.getQuestItemsCount(SECRET_LETTER4_ID)+st.getQuestItemsCount(SECRET_LETTER1_ID))==4) :
+   elif npcId == 7661 and int(st.get("cond"))==8 and ((st.getQuestItemsCount(SECRET_LETTER2_ID)+st.getQuestItemsCount(SECRET_LETTER3_ID)+st.getQuestItemsCount(SECRET_LETTER4_ID)+st.getQuestItemsCount(SECRET_LETTER1_ID))==4) :
       htmltext = "7661-04.htm"
    elif npcId == 7665 and int(st.get("cond"))==1 and ((st.getQuestItemsCount(SECRET_LETTER2_ID)+st.getQuestItemsCount(SECRET_LETTER3_ID)+st.getQuestItemsCount(SECRET_LETTER4_ID)+st.getQuestItemsCount(SECRET_LETTER1_ID))==4) :
       htmltext = "7665-01.htm"

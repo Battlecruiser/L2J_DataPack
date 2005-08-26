@@ -106,7 +106,7 @@ class Quest (JQuest) :
         htmltext = "7644-02.htm"
    elif npcId == 7644 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7644 and int(st.get("cond"))==1 and GetMemoState==1 :
+   elif npcId == 7644 and int(st.get("cond"))==1 :
       htmltext = "7644-06.htm"
    elif npcId == 7644 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCROLL_OF_SHYSLASSY_ID)==1 :
       htmltext = "7644-07.htm"
@@ -115,27 +115,27 @@ class Quest (JQuest) :
       st.set("cond","3")
    elif npcId == 7644 and int(st.get("cond"))==1 and st.getQuestItemsCount(LETTER_OF_KASH_ID)==1 :
       htmltext = "7644-08.htm"
-   elif npcId == 7644 and int(st.get("cond"))==1 and GetMemoState>=7 :
+   elif npcId == 7644 and int(st.get("cond"))>=7 :
       htmltext = "7644-09.htm"
    elif npcId == 7645 and int(st.get("cond"))==1 and st.getQuestItemsCount(LETTER_OF_KASH_ID)==1 :
       htmltext = "7645-01.htm"
-   elif npcId == 7645 and int(st.get("cond"))==1 and GetMemoState==4 and st.getQuestItemsCount(WATCHERS_EYE1_ID)==0 :
+   elif npcId == 7645 and int(st.get("cond"))==4 and st.getQuestItemsCount(WATCHERS_EYE1_ID)==0 :
       htmltext = "7645-03.htm"
    elif npcId == 7645 and int(st.get("cond"))==1 and st.getQuestItemsCount(WATCHERS_EYE1_ID) :
       htmltext = "7645-04.htm"
       st.takeItems(WATCHERS_EYE1_ID,1)
       st.set("cond","5")
-   elif npcId == 7645 and int(st.get("cond"))==1 and GetMemoState==5 :
+   elif npcId == 7645 and int(st.get("cond"))==5 :
       htmltext = "7645-05.htm"
-   elif npcId == 7645 and int(st.get("cond"))==1 and GetMemoState>=7 :
+   elif npcId == 7645 and int(st.get("cond"))>=7 :
       htmltext = "7645-06.htm"
    elif npcId == 7647 and int(st.get("cond"))==1 :
       htmltext = "7647-01.htm"
    elif npcId == 7646 and int(st.get("cond"))==1 and st.getQuestItemsCount(WATCHERS_EYE2_ID) :
       htmltext = "7646-01.htm"
-   elif npcId == 7646 and int(st.get("cond"))==1 and GetMemoState==7 :
+   elif npcId == 7646 and int(st.get("cond"))==7 :
       htmltext = "7646-06a.htm"
-   elif npcId == 7646 and int(st.get("cond"))==1 and GetMemoState==9 :
+   elif npcId == 7646 and int(st.get("cond"))==9 :
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
         st.getPlayer().addExpAndSp(26000,0)
@@ -147,14 +147,14 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
       st.set("cond","0")
-   elif npcId == 7535 and int(st.get("cond"))==1 and GetMemoState==7 :
+   elif npcId == 7535 and int(st.get("cond"))==7 :
       if st.getPlayer().getLevel() >= 36 :
         htmltext = "7535-01.htm"
         st.addRadar(176560,-184969,-3729);
         st.set("cond","8")
       else:
         htmltext = "7535-03.htm"
-   elif npcId == 7535 and int(st.get("cond"))==1 and GetMemoState==8 :
+   elif npcId == 7535 and int(st.get("cond"))==8 :
       htmltext = "7535-02.htm"
       st.addRadar(176560,-184969,-3729);
    return htmltext
