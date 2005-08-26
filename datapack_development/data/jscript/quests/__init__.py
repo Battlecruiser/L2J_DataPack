@@ -1,9 +1,4 @@
 __all__ = [
-'1_LettersOfLove1',
-'2_WhatWomenWant1',
-'3_ReleaseDarkelfElder1',
-'4_LongLiveLordOfFlame',
-'5_MinersFavor',
 '101_SwordOfSolidarityQuest',
 '102_FungusFever',
 '103_SpiritOfCraftsman',
@@ -31,6 +26,7 @@ __all__ = [
 '168_DeliverSupplies',
 '169_NightmareChildren',
 '170_DangerousAllure',
+'1_LettersOfLove1',
 '201_HfighterTutorial',
 '202_HmageTutorial',
 '203_ElfTutorial',
@@ -42,6 +38,7 @@ __all__ = [
 '213_TrialOfSeeker',
 '214_TrialOfScholar',
 '215_TrialOfPilgrim',
+'216_TrialOfGuildsman',
 '217_TestimonyOfTrust',
 '219_TestimonyOfFate',
 '220_TestimonyOfGlory',
@@ -79,6 +76,7 @@ __all__ = [
 '295_DreamsOfFlight',
 '296_SilkOfTarantula',
 '297_GatekeepersFavor',
+'2_WhatWomenWant1',
 '303_CollectArrowheads',
 '306_CrystalOfFireice',
 '313_CollectSpores',
@@ -96,6 +94,7 @@ __all__ = [
 '350_EnhanceYourWeapon',
 '362_BardsMandolin',
 '399_YokeofthePast',
+'3_ReleaseDarkelfElder1',
 '401_PathToWarrior',
 '402_PathToKnight',
 '403_PathToRogue',
@@ -115,9 +114,11 @@ __all__ = [
 '417_PathToScavenger',
 '418_PathToArtisan',
 '419_GetAPet',
-'420_LittleWings'
+'420_LittleWings',
+'4_LongLiveLordOfFlame',
+'5_MinersFavor'
 ]
 print ""
 print "importing quests ..."
 from data.jscript.quests import *
-print "... done"
+print"... done"
