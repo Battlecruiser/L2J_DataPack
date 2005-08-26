@@ -240,6 +240,7 @@ class Quest (JQuest) :
             st.playSound("Itemsound.quest_itemget")
    elif npcId == 90 :
       if int(st.get("cond")) and int(st.get("cond")) == 3 and st.getQuestItemsCount(HUNTERS_RUNE1_ID) < 10 :
+        if st.getRandom(2) == 1 :
           if st.getQuestItemsCount(HUNTERS_RUNE1_ID) == 9 :
             st.giveItems(HUNTERS_RUNE1_ID,1)
             st.set("cond","4")
