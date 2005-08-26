@@ -179,6 +179,7 @@ class Quest (JQuest) :
           st.playSound("Itemsound.quest_itemget")
    elif npcId == 145 :
       if int(st.get("cond")) and st.getQuestItemsCount(WHITE_ROSE_INSIGNIA_ID) and st.getQuestItemsCount(HARPYS_EGG1_ID) < 30 :
+        if st.getRandom(2) == 1 :
           if st.getQuestItemsCount(HARPYS_EGG1_ID) == 29 :
             st.giveItems(HARPYS_EGG1_ID,1)
             st.playSound("Itemsound.quest_middle")
