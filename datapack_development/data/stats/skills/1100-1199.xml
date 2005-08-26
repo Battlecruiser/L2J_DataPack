@@ -1493,10 +1493,9 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
-  <table name="#Tab-runSpd"> 0.7 </table>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
-      <mul order="0x50" stat="runSpd" val="#Tab-runSpd"/>
+    <effect count="1" name="Buff" time="120" val="0">
+      <mul order="0x50" stat="runSpd" val="0.7"/>
     </effect>
   </for>
 </skill>
