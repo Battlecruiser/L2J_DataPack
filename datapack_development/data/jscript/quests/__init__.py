@@ -51,6 +51,7 @@ __all__ = [
 '226_TestOfHealer',
 '227_TrialOfReformer',
 '228_TestOfMagus',
+'229_TestOfWitchcraft',
 '230_TestOfSummoner',
 '231_TestOfMaestro',
 '233_TestOfWarspirit',
