@@ -40,6 +40,7 @@ __all__ = [
 '215_TrialOfPilgrim',
 '216_TrialOfGuildsman',
 '217_TestimonyOfTrust',
+'218_TestimonyOfLife',
 '219_TestimonyOfFate',
 '220_TestimonyOfGlory',
 '221_TestimonyOfProsperity',
