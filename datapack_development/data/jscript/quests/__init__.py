@@ -54,6 +54,7 @@ __all__ = [
 '229_TestOfWitchcraft',
 '230_TestOfSummoner',
 '231_TestOfMaestro',
+'232_TestOfLord',
 '233_TestOfWarspirit',
 '257_GuardIsBusy1',
 '258_BringWolfPelt1',

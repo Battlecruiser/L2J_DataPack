@@ -49,6 +49,7 @@ class Quest (JQuest) :
           htmltext = "7556-05.htm"
           st.giveItems(BROKEN_TELEPORT_DEVICE_ID,1)
           st.takeItems(PAINT_OF_TELEPORT_DEVICE_ID,1)
+          st.getPlayer().teleToLocation(140352,-194133,-2028);
           st.spawnNpc(150,140402,-194133,-1950)
           st.spawnNpc(150,140352,-194183,-1950)
           st.spawnNpc(150,140352,-194183,-1950)
