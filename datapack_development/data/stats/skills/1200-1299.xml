@@ -649,7 +649,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="-1"/>
   <for>
-   <effect count="30" name="HealOverTime" time="5" val="#hp"/>
+   <effect count="15" name="HealOverTime" time="1" val="#hp"/>
   </for>
 </skill>
 <skill id="1230" levels="28" name="Prominence">
@@ -980,9 +980,9 @@
     <effect count="15" name="DamOverTime" time="1" val="#dmg"/>
   </for>
 </skill>
-<skill id="1245" levels="5" name="Steal Essence">
-  <table name="#mpConsume"> 70 78 87 94 103 </table>
-  <table name="#power"> 52.0 58.0 65.0 72.0 78.0 </table>
+<skill id="1245" levels="14" name="Steal Essence">
+  <table name="#mpConsume"> 70 78 87 94 103 107 110 115 119 123 127 130 133 137 </table>
+  <table name="#power"> 52 58 65 72 78 82 85 89 92 96 99 102 105 108 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>

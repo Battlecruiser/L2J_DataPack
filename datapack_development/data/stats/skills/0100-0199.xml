@@ -829,7 +829,7 @@
     <add order="0x10" stat="mDef" val="#mDef"/>
   </for>
 </skill>
-<skill id="147" levels="35" name="Magic Resistance">
+<skill id="147" levels="51" name="Magic Resistance">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1012,7 +1012,7 @@
    </for>
 </skill>
 <skill id="164" levels="3" name="Quick Recovery">
-  <table name="#reuse"> 0.80 0.75 0.70 </table>
+  <table name="#reuse"> 0.60 0.55 0.50 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="DEBUFF"/>

@@ -1619,21 +1619,21 @@
   <for>
   </for>
 </skill>
-<skill id="1092" levels="3" name="Fear">
-  <table name="#mpConsume"> 15 27 44 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="120000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="FEAR"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="600"/>
-  <for>
-	<effect count="5" name="Fear" time="6" val="0"/>
-  </for>
+<skill id="1092" levels="19" name="Fear">
+<table name="#mpConsume"> 10 15 20 23 27 30 35 39 44 48 52 54 55 58 60 62 64 67 69</table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_ONE"/>
+<set name="hitTime" val="4000"/>
+<set name="reuseDelay" val="120000"/>
+<set name="skillTime" val="4000"/>
+<set name="skillType" val="FEAR"/>
+<set name="isMagic" val="true"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="castRange" val="600"/>
+<for>
+<effect count="5" name="Fear" time="6" val="0"/>
+</for>
 </skill>
 <skill id="1093" levels="1" name="none">
   <set name="mpConsume" val="15"/>
