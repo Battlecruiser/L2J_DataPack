@@ -633,7 +633,7 @@
 
 </skill>
 <skill id="1229" levels="18" name="Chant of Life">
-  <table name="#hp"> 12 15 18 23 27 31 35 39 43 47 51 55 59 63 67 71 75 79 </table>
+  <table name="#hot"> 12 15 18 23 27 31 35 39 43 47 51 55 59 63 67 71 75 79 </table>
   <table name="#mpConsume"> 59 72 88 103 122 134 152 164 180 189 195 199 207 214 222 228 233 239 </table>
   <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -649,7 +649,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="-1"/>
   <for>
-   <effect count="15" name="HealOverTime" time="1" val="#hp"/>
+   <effect count="15" name="HealOverTime" time="1" val="#hot" stackOrder="#hot" stackType="HpRecover"/>
   </for>
 </skill>
 <skill id="1230" levels="28" name="Prominence">
@@ -804,9 +804,10 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="900"/>
+  <table name="#Tab-runSpd"> 0.7 </table>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
-      <sub order="0x50" stat="runSpd" val="0.7"/>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
+      <sub order="0x50" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>
 </skill>
@@ -1216,7 +1217,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="-1"/>
   <for>
-   <effect count="6" name="HealOverTime" time="5" val="#hot"/>
+   <effect count="6" name="HealOverTime" time="5" val="#hot" stackOrder="#hot" stackType="HpRecover"/>
   </for>
 </skill>
 <skill id="1257" levels="3" name="Decrease Weight">

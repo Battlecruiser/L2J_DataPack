@@ -1760,7 +1760,7 @@
   <set name="buffDuration" val="12000"/>
   <set name="castRange" val="-1"/>
 <for>
-   <effect count="1" name="Buff" time="120" val="0">
+   <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown" >
       <div order="0x50" stat="runSpd" val="#Tab-runSpd">
       </div>
    </effect>
