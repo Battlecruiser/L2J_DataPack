@@ -378,38 +378,71 @@ class Quest (JQuest) :
 
  def onKill (self,npcId,st):
    if npcId == 223 :
-    if int(st.get("cond")) == 20 and st.getQuestItemsCount() <= 30 :
+    st.set("id","0")
+    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :
+     if st.getQuestItemsCount(MANDRAGORA_PETAL_ID)<20 and st.getRandom(100)<30 :
       st.giveItems(MANDRAGORA_PETAL_ID,1)
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 154 :
-    if int(st.get("cond")) == 20 and st.getQuestItemsCount() <= 60 :
+    st.set("id","0")
+    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :
+     if st.getQuestItemsCount(MANDRAGORA_PETAL_ID)<20 and st.getRandom(100)<60 :
       st.giveItems(MANDRAGORA_PETAL_ID,1)
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 155 :
-    if int(st.get("cond")) == 20 and st.getQuestItemsCount() <= 80 :
+    st.set("id","0")
+    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :
+     if st.getQuestItemsCount(MANDRAGORA_PETAL_ID)<20 and st.getRandom(100)<80 :
       st.giveItems(MANDRAGORA_PETAL_ID,1)
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 156 :
-    if int(st.get("cond")) == 20 and st.getQuestItemsCount() <= 100 :
+    st.set("id","0")
+    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :
+     if st.getQuestItemsCount(MANDRAGORA_PETAL_ID)<20 :
       st.giveItems(MANDRAGORA_PETAL_ID,1)
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 228 :
-    if int(st.get("cond")) == 10 and st.getQuestItemsCount() <= 100 :
+    st.set("id","0")
+    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :
+     if st.getQuestItemsCount(CRIMSON_MOSS_ID)<10 :
       st.giveItems(CRIMSON_MOSS_ID,1)
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 157 :
-    if int(st.get("cond")) == 20 and st.getQuestItemsCount() <= 20  :
+    st.set("id","0")
+    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1  :
+     if st.getRandom(100)<20 :
       st.giveItems(STAKATO_SHELL_ID,1)
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 230 :
-    if int(st.get("cond")) == 30 and st.getQuestItemsCount() <= 30 :
+    st.set("id","0")
+    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1  :
+     if st.getRandom(100)<30 :
       st.giveItems(STAKATO_SHELL_ID,1)
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 232 :
-    if int(st.get("cond")) == 50 and st.getQuestItemsCount() <= 50 :
+    st.set("id","0")
+    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1  :
+     if st.getRandom(100)<50 :
       st.giveItems(STAKATO_SHELL_ID,1)
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 234 :
-    if int(st.get("cond")) == 60 and st.getQuestItemsCount() <= 60 :
+    st.set("id","0")
+    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1  :
+     if st.getRandom(100)<60 :
       st.giveItems(STAKATO_SHELL_ID,1)
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 231 :
-    if int(st.get("cond")) == 50 and st.getQuestItemsCount() <= 50 :
+    st.set("id","0")
+    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1  :
+     if st.getRandom(100)<50 :
       st.giveItems(INPICIO_SAC_ID,1)
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 233 :
-    if int(st.get("cond")) == 50 and st.getQuestItemsCount() <= 50 :
+    st.set("id","0")
+    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1  :
+     if st.getRandom(100)<50 :
       st.giveItems(SPIDER_THORN_ID,1)
+      st.playSound("ItemSound.quest_middle")
    return
 
 QUEST       = Quest(221,"221_TestimonyOfProsperity","Testimony Of Prosperity")
@@ -482,20 +515,9 @@ STARTED.addQuestDrop(7531,LOCKIRINS_NOTICE5_ID,1)
 STARTED.addQuestDrop(7556,CONTRIBUTION_OF_TOMA_ID,1)
 STARTED.addQuestDrop(7553,MARIFES_REQUEST_ID,1)
 STARTED.addQuestDrop(7005,CRYSTAL_BROOCH_ID,1)
-STARTED.addQuestDrop(223,MANDRAGORA_PETAL_ID,1)
-STARTED.addQuestDrop(154,MANDRAGORA_PETAL_ID,1)
-STARTED.addQuestDrop(155,MANDRAGORA_PETAL_ID,1)
-STARTED.addQuestDrop(156,MANDRAGORA_PETAL_ID,1)
-STARTED.addQuestDrop(228,CRIMSON_MOSS_ID,1)
 STARTED.addQuestDrop(7466,BRIGHTS_LIST_ID,1)
 STARTED.addQuestDrop(7466,MANDRAGORA_BOUQUET_ID,1)
 STARTED.addQuestDrop(7622,PATTERN_OF_KEYHOLE_ID,1)
 STARTED.addQuestDrop(7621,CLAY_DOUGH_ID,1)
 STARTED.addQuestDrop(7621,NIKOLAS_LIST_ID,1)
 STARTED.addQuestDrop(7621,RP_TITAN_KEY_ID,1)
-STARTED.addQuestDrop(157,STAKATO_SHELL_ID,1)
-STARTED.addQuestDrop(230,STAKATO_SHELL_ID,1)
-STARTED.addQuestDrop(232,STAKATO_SHELL_ID,1)
-STARTED.addQuestDrop(234,STAKATO_SHELL_ID,1)
-STARTED.addQuestDrop(231,INPICIO_SAC_ID,1)
-STARTED.addQuestDrop(233,SPIDER_THORN_ID,1)
