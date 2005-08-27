@@ -8,6 +8,8 @@ CREATE TABLE characters (
   `level` decimal(11,0) default NULL,
   maxHp decimal(11,0) default NULL,
   curHp decimal(18,0) default NULL,
+  maxCp decimal(11,0) default NULL, 
+  curCp decimal(18,0) default NULL,
   maxMp decimal(11,0) default NULL,
   curMp decimal(18,0) default NULL,
   acc decimal(11,0) default NULL,
