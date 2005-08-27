@@ -900,21 +900,19 @@
   <for>
   </for>
 </skill>
-<!---
 <skill id="153" levels="4" name="Shield Mastery">
-  <table name="#rShld"> 30 55 65 80 </table>
+  <table name="#rShld"> 1.5 1.7 1.85 2 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add order="0x50" stat="rShld" val="#rShld">
+    <mul order="0x50" stat="rShld" val="#rShld">
     <using kind="Shield" />
-    </add>
+    </mul>
   </for>
 </skill>
--->
 <skill id="154" levels="1" name="none">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
