@@ -307,7 +307,7 @@ INSERT INTO weapon VALUES (324,'tears_of_fairy','rhand','true',1600,2,2,'steel',
 INSERT INTO weapon VALUES (325,'horn_of_glory','rhand','true',540,2,2,'steel','c',98,10,'etc',8,0.00000,0,0,0,379,0,91,95,2870000,1148,'true');
 INSERT INTO weapon VALUES (326,'heathen\'s_book','rhand','true',560,3,3,'steel','c',111,10,'etc',8,0.00000,0,0,0,379,0,101,95,4300000,1720,'true');
 INSERT INTO weapon VALUES (327,'hex_doll','rhand','true',1600,3,3,'steel','c',111,10,'etc',8,0.00000,0,0,0,379,0,101,95,4300000,1720,'true');
-INSERT INTO weapon VALUES (328,'candle_of_wisdom','rhand','true',1600,3,3,'steel','c',125,10,'etc',8,0.00000,0,0,0,379,0,111,95,6130000,2452,'true');
+INSERT INTO weapon VALUES (328,'candle_of_wisdom','rhand','true',1600,3,3,'steel','c',125,10,'etc',8,0.00000,0,0,0,379,0,111,95,0,0,'false');
 INSERT INTO weapon VALUES (329,'blessed_branch','rhand','true',800,3,3,'steel','c',125,10,'etc',8,0.00000,0,0,0,379,0,111,95,6130000,2452,'true');
 INSERT INTO weapon VALUES (330,'phoenix\'s_feather','rhand','true',800,3,3,'steel','c',125,10,'etc',8,0.00000,0,0,0,379,0,111,95,6130000,2452,'true');
 INSERT INTO weapon VALUES (331,'cerberus\'s_eye','rhand','true',1600,3,3,'steel','c',125,10,'etc',8,0.00000,0,0,0,379,0,111,95,6130000,2452,'true');
