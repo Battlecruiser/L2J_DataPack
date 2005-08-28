@@ -7,7 +7,7 @@ CREATE TABLE lvlupgain (
   defaulthpbase decimal(4,1) NOT NULL default '0.0',
   defaulthpadd decimal(3,2) NOT NULL default '0.00',
   defaulthpmod decimal(3,2) NOT NULL default '0.00',
-  defaultcpbase decimal(4,1 NOT NULL default '0.0',
+  defaultcpbase decimal(4,1) NOT NULL default '0.0',
   defaultcpadd decimal(3,2) NOT NULL default '0.00',
   defaultcpmod decimal(3,2) NOT NULL default '0.00',
   defaultmpbase decimal(4,1) NOT NULL default '0.0',
