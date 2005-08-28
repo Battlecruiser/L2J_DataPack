@@ -306,13 +306,13 @@
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
 </item>
-<item id='4827' name="dark_elven_long_bow_haste">
+<item id='4827' name="dark_elven_long_bow_miser">
   <for>
     <set val='397' order='0x08' stat='pAtk' />
     <set val='100' order='0x08' stat='mAtk' />
     <set val='12' order='0x08' stat='rCrit' />
     <add val='-3.75' order='0x10' stat='accCombat' />
-    <set val='293' order='0x08' stat='pAtkSpd' />
+    <set val='227' order='0x08' stat='pAtkSpd' />
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
@@ -329,24 +329,24 @@
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
 </item>
-<item id='4829' name="hazard_bow_cheapshot">
-  <for>
-    <set val='400' order='0x08' stat='pAtk' />
-    <set val='99' order='0x08' stat='mAtk' />
-    <set val='12' order='0x08' stat='rCrit' />
-    <add val='-3.75' order='0x10' stat='accCombat' />
-    <set val='293' order='0x08' stat='pAtkSpd' />
-  <enchant val='0' order='0x0C' stat='pAtk' />
-<enchant val='0' order='0x0C' stat='mAtk' />
-</for>
-</item>
-<item id='4830' name="hazard_bow_haste">
+<item id='4829' name="hazard_bow_quickrecov">
   <for>
     <set val='400' order='0x08' stat='pAtk' />
     <set val='99' order='0x08' stat='mAtk' />
     <set val='12' order='0x08' stat='rCrit' />
     <add val='-3.75' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
+  <enchant val='0' order='0x0C' stat='pAtk' />
+<enchant val='0' order='0x0C' stat='mAtk' />
+</for>
+</item>
+<item id='4830' name="hazard_bow_cheapshot">
+  <for>
+    <set val='400' order='0x08' stat='pAtk' />
+    <set val='99' order='0x08' stat='mAtk' />
+    <set val='12' order='0x08' stat='rCrit' />
+    <add val='-3.75' order='0x10' stat='accCombat' />
+    <set val='293' order='0x08' stat='pAtkSpd' />
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
