@@ -142,6 +142,7 @@
     <set val='12' order='0x08' stat='rCrit' />
     <add val='-3.75' order='0x10' stat='accCombat' />
     <set val='293' order='0x08' stat='pAtkSpd' />
+    <mul val='0.93' order='0x40' stat='atkReuse' />
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
@@ -176,6 +177,7 @@
     <set val='12' order='0x08' stat='rCrit' />
     <add val='-3.75' order='0x10' stat='accCombat' />
     <set val='227' order='0x08' stat='pAtkSpd' />
+    <mul val='0.93' order='0x40' stat='atkReuse' />
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
@@ -279,6 +281,7 @@
     <set val='12' order='0x08' stat='rCrit' />
     <add val='-3.75' order='0x10' stat='accCombat' />
     <set val='293' order='0x08' stat='pAtkSpd' />
+    <mul val='0.93' order='0x40' stat='atkReuse' />
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
@@ -329,13 +332,14 @@
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
 </item>
-<item id='4829' name="hazard_bow_quickrecov">
+<item id='4829' name="hazard_bow_quickrecovery">
   <for>
     <set val='400' order='0x08' stat='pAtk' />
     <set val='99' order='0x08' stat='mAtk' />
     <set val='12' order='0x08' stat='rCrit' />
     <add val='-3.75' order='0x10' stat='accCombat' />
-    <set val='325' order='0x08' stat='pAtkSpd' />
+    <set val='293' order='0x08' stat='pAtkSpd' />
+    <mul val='0.93' order='0x40' stat='atkReuse' />
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
@@ -381,6 +385,7 @@
     <set val='12' order='0x08' stat='rCrit' />
     <add val='-3.75' order='0x10' stat='accCombat' />
     <set val='293' order='0x08' stat='pAtkSpd' />
+    <mul val='0.93' order='0x40' stat='atkReuse' />
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
