@@ -124,8 +124,7 @@ class Quest (JQuest) :
             st.takeItems(GRANDIS_SKIN_ID,st.getQuestItemsCount(GRANDIS_SKIN_ID))
             st.takeItems(TIMAK_ORCS_BELT_ID,st.getQuestItemsCount(TIMAK_ORCS_BELT_ID))
             st.takeItems(RAKINS_MACE_ID,st.getQuestItemsCount(RAKINS_MACE_ID))
-            st.getPlayer().addExpAndSp(24000,0)
-            st.getPlayer().addExpAndSp(0,3100)
+            st.addExpAndSp(24000,3100)
             st.giveItems(MARK_OF_DUELIST_ID,1)
             st.takeItems(FINAL_ORDER_ID,1)
             htmlfile = "7623-18.htm"

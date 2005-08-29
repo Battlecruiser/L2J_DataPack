@@ -138,8 +138,7 @@ class Quest (JQuest) :
    elif npcId == 7646 and int(st.get("cond"))==9 :
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
-        st.getPlayer().addExpAndSp(26000,0)
-        st.getPlayer().addExpAndSp(0,3100)
+        st.addExpAndSp(26000,3100)
       htmltext = "7646-07.htm"
       st.giveItems(MARK_OF_CHALLENGER_ID,1)
       st.takeItems(BROKEN_KEY_ID,1)

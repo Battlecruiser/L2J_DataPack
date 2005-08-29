@@ -127,13 +127,13 @@ class Quest (JQuest) :
       htmltext = "7476-10.htm"
    elif npcId == 7476 and int(st.get("cond"))==1 and st.getQuestItemsCount(REVELATIONS_MANUSCRIPT_ID) :
       htmltext = "7476-11.htm"
-   elif npcId == 7476 and int(st.get("cond"))==1 and st.getQuestItemsCount(KAIRAS_INSTRUCTIONS_ID) and talker.level<38 :
+   elif npcId == 7476 and int(st.get("cond"))==1 and st.getQuestItemsCount(KAIRAS_INSTRUCTIONS_ID) and st.getPlayer().getLevel()<38 :
       htmltext = "7476-14.htm"
-   elif npcId == 7476 and int(st.get("cond"))==1 and st.getQuestItemsCount(KAIRAS_INSTRUCTIONS_ID) and talker.level>=38 :
+   elif npcId == 7476 and int(st.get("cond"))==1 and st.getQuestItemsCount(KAIRAS_INSTRUCTIONS_ID) and st.getPlayer().getLevel()>=38 :
       htmltext = "7476-15.htm"
       st.giveItems(KAIRAS_RECOMMEND_ID,1)
       st.takeItems(KAIRAS_INSTRUCTIONS_ID,1)
-   elif npcId == 7476 and int(st.get("cond"))==1 and st.getQuestItemsCount(KAIRAS_RECOMMEND_ID) and talker.level>=38 :
+   elif npcId == 7476 and int(st.get("cond"))==1 and st.getQuestItemsCount(KAIRAS_RECOMMEND_ID) and st.getPlayer().getLevel()>=38 :
       htmltext = "7476-16.htm"
    elif npcId == 7476 and int(st.get("cond"))==1 and st.getQuestItemsCount(PALUS_CHARM_ID) :
       htmltext = "7476-17.htm"
@@ -200,8 +200,7 @@ class Quest (JQuest) :
    elif npcId == 7358 and int(st.get("cond"))==1 and st.getQuestItemsCount(PALUS_CHARM_ID) and st.getQuestItemsCount(ARKENIAS_LETTER_ID) :
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
-        st.getPlayer().addExpAndSp(35000,0)
-        st.getPlayer().addExpAndSp(0,4400)
+        st.addExpAndSp(35000,4400)
       htmltext = "7358-04.htm"
       st.giveItems(MARK_OF_FATE_ID,1)
       st.takeItems(ARKENIAS_LETTER_ID,1)

@@ -264,8 +264,7 @@ class Quest (JQuest) :
         else:
           if st.getGameTicks() != int(st.get("id")) :
             st.set("id",str(st.getGameTicks()))
-            st.addExpAndSp(45000,0)
-            st.addExpAndSp(0,5500)
+            st.addExpAndSp(45000,5500)
             htmlfile = "7461-14.htm"
             st.set("cond","0")
             st.set("onlyone","1")

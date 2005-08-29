@@ -193,8 +193,7 @@ class Quest (JQuest) :
    elif npcId == 7104 and int(st.get("cond"))==1 and st.getQuestItemsCount((RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID)) :
         if st.getGameTicks() != int(st.get("id")) :
           st.set("id",str(st.getGameTicks()))
-          st.getPlayer().addExpAndSp(25000,0)
-          st.getPlayer().addExpAndSp(0,3100)
+          st.addExpAndSp(25000,3100)
           st.takeItems(RING_OF_TESTIMONY2_ID,1)
           st.giveItems(MARK_OF_PROSPERITY_ID,1)
           st.takeItems(MAPHR_TABLET_FRAGMENT_ID,1)

@@ -112,8 +112,7 @@ class Quest (JQuest) :
             st.takeItems(TONE_OF_WIND_ID,1)
             st.takeItems(TONE_OF_EARTH_ID,1)
             st.giveItems(MARK_OF_MAGUS_ID,1)
-            st.addExpAndSp(50000,0)
-            st.addExpAndSp(0,6400)
+            st.addExpAndSp(50000,6400)
             htmlfile = "7629-12.htm"
             st.set("cond","0")
             st.set("onlyone","1")

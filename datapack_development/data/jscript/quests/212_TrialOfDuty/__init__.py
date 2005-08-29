@@ -72,8 +72,7 @@ class Quest (JQuest) :
    elif npcId == 7109 and int(st.get("cond"))==14  and st.getQuestItemsCount(LETTER_OF_DUSTIN_ID):
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
-        st.getPlayer().addExpAndSp(21500,0)
-        st.getPlayer().addExpAndSp(0,2600)
+        st.addExpAndSp(21500,2600)
       htmltext = "7109-05.htm"
       st.giveItems(MARK_OF_DUTY_ID,1)
       st.takeItems(LETTER_OF_DUSTIN_ID,1)

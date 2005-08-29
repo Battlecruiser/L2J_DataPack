@@ -92,8 +92,7 @@ class Quest (JQuest) :
    elif npcId == 7531 and int(st.get("cond"))==1 and ((st.getQuestItemsCount(RECOMMENDATION_OF_BALANKI_ID)+st.getQuestItemsCount(RECOMMENDATION_OF_FILAUR_ID)+st.getQuestItemsCount(RECOMMENDATION_OF_ARIN_ID))==3) :
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
-        st.getPlayer().addExpAndSp(46000,0)
-        st.getPlayer().addExpAndSp(0,5900)
+        st.addExpAndSp(46000,5900)
       htmltext = "7531-06.htm"
       st.giveItems(MARK_OF_MAESTRO_ID,1)
       st.takeItems(RECOMMENDATION_OF_BALANKI_ID,1)

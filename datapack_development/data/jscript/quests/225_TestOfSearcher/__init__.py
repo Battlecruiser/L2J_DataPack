@@ -114,8 +114,7 @@ class Quest (JQuest) :
         elif st.getQuestItemsCount(LUTHERS_LETTER_ID) == 0 and st.getQuestItemsCount(ALANKELLS_RECOMMEND_ID) == 1 :
           if st.getGameTicks() != int(st.get("id")) :
             st.set("id",str(st.getGameTicks()))
-            st.getPlayer().addExpAndSp(21000,0)
-            st.getPlayer().addExpAndSp(0,2600)
+            st.addExpAndSp(21000,2600)
             htmlfile = "7690-08.htm"
             st.set("cond","0")
             st.set("onlyone","1")

@@ -207,8 +207,7 @@ class Quest (JQuest) :
    elif npcId == 7634 and int(st.get("cond"))==1 and st.getQuestItemsCount(GALATEAS_LETTER_ID)==0 and (st.getQuestItemsCount(ALMORS_ARCANA_ID)+st.getQuestItemsCount(BASILLIA_ARCANA_ID)+st.getQuestItemsCount(CAMONIELL_ARCANA_ID)+st.getQuestItemsCount(CELESTIEL_ARCANA_ID)+st.getQuestItemsCount(BELTHUS_ARCANA_ID)+st.getQuestItemsCount(BRYNTHEA_ARCANA_ID))>=6 :
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
-        st.getPlayer().addExpAndSp(41000,0)
-        st.getPlayer().addExpAndSp(0,5000)
+        st.addExpAndSp(41000,5000)
       htmltext = "7634-12.htm"
       st.set("cond","0")
       st.setState(COMPLETED)

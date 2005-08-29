@@ -60,8 +60,7 @@ class Quest (JQuest) :
             st.set("onlyone","1")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
-            st.getPlayer().addExpAndSp(32000,0)
-            st.getPlayer().addExpAndSp(0,3900)
+            st.addExpAndSp(32000,3900)
             st.takeItems(JOURNEYMAN_RING_ID,st.getQuestItemsCount(JOURNEYMAN_RING_ID))
             st.takeItems(ALLTRANS_INSTRUCTIONS_ID,1)
             st.takeItems(RP_JOURNEYMAN_RING_ID,1)
@@ -69,8 +68,7 @@ class Quest (JQuest) :
     elif event == "7103_4" :
           if st.getGameTicks() != int(st.get("id")) :
             st.set("id",str(st.getGameTicks()))
-            st.getPlayer().addExpAndSp(32000,0)
-            st.getPlayer().addExpAndSp(0,3900)
+            st.addExpAndSp(32000,3900)
             htmlfile = "7103-09b.htm"
             st.set("cond","0")
             st.set("onlyone","1")

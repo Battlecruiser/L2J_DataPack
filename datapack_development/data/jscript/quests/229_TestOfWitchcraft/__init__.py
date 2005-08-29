@@ -88,8 +88,7 @@ class Quest (JQuest) :
             st.takeItems(SWORD_OF_BINDING_ID,1)
             st.takeItems(IKERS_AMULET_ID,1)
             st.takeItems(ORIMS_INSTRUCTIONS_ID,1)
-            st.getPlayer().addExpAndSp(50000,0)
-            st.getPlayer().addExpAndSp(0,6400)
+            st.addExpAndSp(50000,6400)
             st.giveItems(MARK_OF_WITCHCRAFT_ID,1)
             st.takeItems(ZERUEL_BIND_CRYSTAL_ID,1)
             htmlfile = "7630-22.htm"

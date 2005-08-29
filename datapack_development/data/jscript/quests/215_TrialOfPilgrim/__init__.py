@@ -101,8 +101,7 @@ class Quest (JQuest) :
    elif npcId == 7648 and int(st.get("cond"))==1 and st.getQuestItemsCount(BOOK_OF_SAGE_ID) :
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
-        st.getPlayer().addExpAndSp(31000,0)
-        st.getPlayer().addExpAndSp(0,3700)
+        st.addExpAndSp(31000,3700)
       htmltext = "7648-10.htm"
       st.giveItems(MARK_OF_PILGRIM_ID,1)
       st.takeItems(BOOK_OF_SAGE_ID,1)

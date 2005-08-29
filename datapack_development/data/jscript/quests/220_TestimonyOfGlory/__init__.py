@@ -329,8 +329,7 @@ class Quest (JQuest) :
    elif npcId == 7565 and int(st.get("cond"))==1 and st.getQuestItemsCount(RITUAL_BOX_ID) :
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
-        st.getPlayer().addExpAndSp(40000,0)
-        st.getPlayer().addExpAndSp(0,5000)
+        st.addExpAndSp(40000,5000)
       htmltext = "7565-02.htm"
       st.giveItems(MARK_OF_GLORY_ID,1)
       st.takeItems(RITUAL_BOX_ID,1)

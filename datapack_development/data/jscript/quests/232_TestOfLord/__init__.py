@@ -132,8 +132,7 @@ class Quest (JQuest) :
    elif npcId == 7565 and int(st.get("cond"))==1 and st.getQuestItemsCount(IMMORTAL_FLAME_ID)==1 :
         if st.getGameTicks() != int(st.get("id")) :
           st.set("id",str(st.getGameTicks()))
-          st.getPlayer().addExpAndSp(25000,0)
-          st.getPlayer().addExpAndSp(0,3000)
+          st.addExpAndSp(25000,3000)
           st.giveItems(MARK_OF_LORD_ID,1)
           st.takeItems(IMMORTAL_FLAME_ID,1)
           htmlfile = "7565-11.htm"

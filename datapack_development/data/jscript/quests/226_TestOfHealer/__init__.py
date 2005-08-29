@@ -38,8 +38,7 @@ class Quest (JQuest) :
           htmltext = "7473-09.htm"
           if st.getGameTicks() != int(st.get("id")) :
             st.set("id",str(st.getGameTicks()))
-            st.getPlayer().addExpAndSp(37000,0)
-            st.getPlayer().addExpAndSp(0,4500)
+            st.addExpAndSp(37000,4500)
           st.giveItems(MARK_OF_HEALER_ID,1)
           st.takeItems(GOLDEN_STATUE_ID,1)
           st.set("cond","0")
@@ -112,8 +111,7 @@ class Quest (JQuest) :
       htmltext = "7473-06.htm"
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
-        st.getPlayer().addExpAndSp(32000,0)
-        st.getPlayer().addExpAndSp(0,4100)
+        st.addExpAndSp(32000,4100)
       st.giveItems(MARK_OF_HEALER_ID,1)
       st.set("cond","0")
       st.setState(COMPLETED)

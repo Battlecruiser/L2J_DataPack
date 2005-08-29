@@ -115,8 +115,7 @@ class Quest (JQuest) :
         if st.getGameTicks() != int(st.get("id")) :
           st.set("id",str(st.getGameTicks()))
           st.giveItems(MARK_OF_REFORMER_ID,1)
-          st.getPlayer().addExpAndSp(28000,0)
-          st.getPlayer().addExpAndSp(0,3600)
+          st.addExpAndSp(28000,3600)
           htmlfile = "7666-07.htm"
           st.set("cond","0")
           st.set("onlyone","1")

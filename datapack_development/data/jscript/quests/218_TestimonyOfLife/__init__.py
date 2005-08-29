@@ -152,8 +152,7 @@ class Quest (JQuest) :
    elif npcId == 7460 and int(st.get("cond"))==1 and st.getQuestItemsCount(CAMOMILE_CHARM_ID)==1 :
         if st.getGameTicks() != int(st.get("id")) :
           st.set("id",str(st.getGameTicks()))
-          st.getPlayer().addExpAndSp(47000,0)
-          st.getPlayer().addExpAndSp(0,5800)
+          st.addExpAndSp(47000,5800)
           st.giveItems(MARK_OF_LIFE_ID,1)
           st.takeItems(CAMOMILE_CHARM_ID,1)
           htmlfile = "7460-07.htm"

@@ -86,8 +86,7 @@ class Quest (JQuest) :
             st.takeItems(HERMODTS_REMAINS2_ID,1)
             st.takeItems(KIRUNAS_REMAINS2_ID,1)
             st.takeItems(TAMLIN_ORC_HEAD_ID,st.getQuestItemsCount(TAMLIN_ORC_HEAD_ID))
-            st.addExpAndSp(23000,0)
-            st.addExpAndSp(0,2900)
+            st.addExpAndSp(23000,2900)
             st.giveItems(MARK_OF_WARSPIRIT_ID,1)
             st.takeItems(TONARS_REMAINS2_ID,1)
             htmlfile = "7649-03.htm"

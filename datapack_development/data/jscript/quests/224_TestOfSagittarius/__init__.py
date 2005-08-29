@@ -128,8 +128,7 @@ class Quest (JQuest) :
       st.takeItems(BLOOD_OF_LIZARDMAN_ID,st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID))
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
-        st.getPlayer().addExpAndSp(28000,0)
-        st.getPlayer().addExpAndSp(0,3600)
+        st.addExpAndSp(28000,3600)
       st.set("cond","0")
       st.setState(COMPLETED)
       st.playSound("ItemSound.quest_finish")

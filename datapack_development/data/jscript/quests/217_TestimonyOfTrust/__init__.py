@@ -220,8 +220,7 @@ class Quest (JQuest) :
    elif npcId == 7031 and int(st.get("cond"))==19 and st.getQuestItemsCount(RECOMMENDATION_OF_HOLLIN_ID) :
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
-        st.getPlayer().addExpAndSp(32600,0)
-        st.getPlayer().addExpAndSp(0,4000)
+        st.addExpAndSp(32600,4000)
       htmltext = "7031-01.htm"
       st.takeItems(RECOMMENDATION_OF_HOLLIN_ID,1)
       st.giveItems(MARK_OF_TRUST_ID,1)
