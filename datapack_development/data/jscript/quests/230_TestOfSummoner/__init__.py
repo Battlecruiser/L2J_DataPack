@@ -371,32 +371,32 @@ class Quest (JQuest) :
    if npcId == 5103 :
       if talker.master :
         c0 = talker.master
-        if int(st.get("cond"))(c0,quest_name) and OwnItemCount(c0,CRYSTAL_OF_INPROGRESS3_ID) :
+        if int(st.get("cond")) and st.getQuestItemsCount(CRYSTAL_OF_INPROGRESS3_ID) :
           st.playSound("Itemsound.quest_middle")
    elif npcId == 5102 :
       if talker.master :
         c0 = talker.master
-        if int(st.get("cond"))(c0,quest_name) and OwnItemCount(c0,CRYSTAL_OF_INPROGRESS1_ID) :
+        if int(st.get("cond")) and st.getQuestItemsCount(CRYSTAL_OF_INPROGRESS1_ID) :
           st.playSound("Itemsound.quest_middle")
    elif npcId == 5105 :
       if talker.master :
         c0 = talker.master
-        if int(st.get("cond"))(c0,quest_name) and OwnItemCount(c0,CRYSTAL_OF_INPROGRESS2_ID) :
+        if int(st.get("cond")) and st.getQuestItemsCount(CRYSTAL_OF_INPROGRESS2_ID) :
           st.playSound("Itemsound.quest_middle")
    elif npcId == 5106 :
       if talker.master :
         c0 = talker.master
-        if int(st.get("cond"))(c0,quest_name) and OwnItemCount(c0,CRYSTAL_OF_INPROGRESS4_ID) :
+        if int(st.get("cond")) and st.getQuestItemsCount(CRYSTAL_OF_INPROGRESS4_ID) :
           st.playSound("Itemsound.quest_middle")
    elif npcId == 5104 :
       if talker.master :
         c0 = talker.master
-        if int(st.get("cond"))(c0,quest_name) and OwnItemCount(c0,CRYSTAL_OF_INPROGRESS5_ID) :
+        if int(st.get("cond")) and st.getQuestItemsCount(CRYSTAL_OF_INPROGRESS5_ID) :
           st.playSound("Itemsound.quest_middle")
    elif npcId == 5107 :
       if talker.master :
         c0 = talker.master
-        if int(st.get("cond"))(c0,quest_name) and OwnItemCount(c0,CRYSTAL_OF_INPROGRESS6_ID) :
+        if int(st.get("cond")) and st.getQuestItemsCount(CRYSTAL_OF_INPROGRESS6_ID) :
           st.playSound("Itemsound.quest_middle")
    elif npcId == 12062 :
       c0 = GetLastAttacker()

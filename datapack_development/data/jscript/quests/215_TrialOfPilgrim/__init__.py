@@ -84,11 +84,11 @@ class Quest (JQuest) :
      st.set("id","0")
    if npcId == 7648 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
       if int(st.get("cond")) < 15 :
-        if IsInCategory(@heal_group,talker.occupation) and st.getPlayer().getLevel() >= 35 :
+        if (st.getPlayer().getClassId()==0x0f or st.getPlayer().getClassId()==0x1d or st.getPlayer().getClassId()==0x2a or st.getPlayer().getClassId()==0x32) and st.getPlayer().getLevel() >= 35 :
           htmltext = "7648-03.htm"
           st.set("cond","1")
           return htmltext
-        elif IsInCategory(@heal_group,talker.occupation) :
+        elif st.getPlayer().getClassId()==0x0f or st.getPlayer().getClassId()==0x1d or st.getPlayer().getClassId()==0x2a or st.getPlayer().getClassId()==0x32 :
           htmltext = "7648-01.htm"
         else:
           htmltext = "7648-02.htm"

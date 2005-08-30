@@ -57,11 +57,11 @@ class Quest (JQuest) :
      st.set("id","0")
    if npcId == 7109 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
       if int(st.get("cond")) < 15 :
-        if IsInCategory(@knight_group,talker.occupation) and st.getPlayer().getLevel() >= 35 :
+        if (st.getPlayer().getClassId()==0x04 or st.getPlayer().getClassId()==0x13 or st.getPlayer().getClassId()==0x20) and st.getPlayer().getLevel() >= 35 :
           htmltext = "7109-03.htm"
           st.set("cond","1")
           return htmltext
-        elif IsInCategory(@knight_group,talker.occupation) :
+        elif st.getPlayer().getClassId()==0x04 or st.getPlayer().getClassId()==0x13 or st.getPlayer().getClassId()==0x20 :
           htmltext = "7109-01.htm"
         else:
           htmltext = "7109-02.htm"
@@ -172,15 +172,13 @@ class Quest (JQuest) :
         if st.getRandom(100)<((int(st.get("id"))-40)*10) :
           st.spawnNpc(5119)
           st.playSound("Itemsound.quest_before_battle")
-          st.set("cond",str(0))
-        else:
+#          st.set("cond",str(0))
    elif npcId == 191 :
       if int(st.get("cond")) and int(st.get("cond")) == 2 :
         if st.getRandom(100)<((int(st.get("id"))-40)*10) :
           st.spawnNpc(5119)
           st.playSound("Itemsound.quest_before_battle")
-          st.set("cond",str(0))
-        else:
+#          st.set("cond",str(0))
    elif npcId == 5119 :
       if int(st.get("cond")) and int(st.get("cond")) == 2 and st.getQuestItemsCount(OLD_KNIGHT_SWORD_ID) > 0 :
         st.giveItems(KNIGHTS_TEAR_ID,1)
@@ -211,8 +209,7 @@ class Quest (JQuest) :
         if st.getRandom(100)<((int(st.get("id"))-3)*33) :
           st.spawnNpc(7656)
           st.playSound("ItemSound.quest_middle")
-          st.set("cond",str(0))
-        else:
+#          st.set("cond",str(0))
    elif npcId == 577 :
       if int(st.get("cond")) and int(st.get("cond")) == 9 and st.getQuestItemsCount(MILITAS_ARTICLE_ID) < 20 :
         if st.getQuestItemsCount(MILITAS_ARTICLE_ID) == 19 :

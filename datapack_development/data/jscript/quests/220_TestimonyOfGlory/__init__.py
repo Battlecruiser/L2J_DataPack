@@ -184,7 +184,7 @@ class Quest (JQuest) :
       if int(st.get("cond")) < 15 :
         if st.getPlayer().getRace().ordinal() == 3 and st.getPlayer().getLevel() >= 37 :
           htmltext = "7514-03.htm"
-        elif IsInCategory(@white_magic_group,talker.occupation) :
+        elif st.getPlayer().getRace().getClassId() == 0x0f or st.getPlayer().getRace().getClassId() == 0x1d or st.getPlayer().getRace().getClassId() == 0x13 :
           htmltext = "7514-01.htm"
         else:
           htmltext = "7514-02.htm"
