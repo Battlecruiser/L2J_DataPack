@@ -21,43 +21,43 @@ class Quest (JQuest) :
    htmltext = event
 
    if event == "7358-01.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7358-01.htm"
 
    if event == "7358-02.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7358-02.htm"
 
    if event == "7358-03.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7358-03.htm"
 
    if event == "7358-04.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7358-04.htm"
 
    if event == "7358-05.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7358-05.htm"
    
    if event == "7358-06.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7358-06.htm"
 
    if event == "7358-07.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7358-07.htm"
 
    if event == "7358-08.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7358-08.htm"
 
    if event == "7358-09.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7358-09.htm"
 
    if event == "7358-10.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7358-10.htm"
 
  def onTalk (Self,npcId,st):
@@ -68,21 +68,21 @@ class Quest (JQuest) :
    # DarkElf´s got accepted
    if npcId == TETRARCH_THIFIELL and Race in [Race.darkelf]:
      if ClassId in [ClassId.darkFighter]: 
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7358-01.htm"
      if ClassId in [ClassId.darkMage]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7358-02.htm"
      if ClassId in [ClassId.darkWizard, ClassId.shillienOracle, ClassId.palusKnight, ClassId.assassin]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7358-12.htm"
      else:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7358-13.htm"
 
    # All other Races must be out
    if npcId == TETRARCH_THIFIELL and Race in [Race.dwarf, Race.human, Race.elf, Race.orc]:
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7358-11.htm"
 
 QUEST   = Quest(7358,"7358_thifiell_occupation_change","village_master")

@@ -26,137 +26,137 @@ class Quest (JQuest) :
    Level    = st.getPlayer().getLevel()
 
    if event == "7037-01.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7037-01.htm"
 
    if event == "7037-02.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7037-02.htm"
 
    if event == "7037-03.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7037-03.htm"
 
    if event == "7037-04.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7037-04.htm"
 
    if event == "7037-05.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7037-05.htm"
 
    if event == "7037-06.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7037-06.htm"
 
    if event == "7037-07.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7037-07.htm"
 
    if event == "7037-08.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7037-08.htm"
 
    if event == "7037-09.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7037-09.htm"
 
    if event == "7037-10.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7037-10.htm"
 
    if event == "7037-11.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7037-11.htm"
 
    if event == "7037-12.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7037-12.htm"
 
    if event == "7037-13.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7037-13.htm"
 
    if event == "7037-14.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7037-14.htm"
 
    if event == "class_change_26":
      if ClassId in [ClassId.elvenMage]:
         if Level <= 19 and st.getQuestItemsCount(ETERNITY_DIAMOND_ID) == 0:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7037-15.htm"
         if Level <= 19 and st.getQuestItemsCount(ETERNITY_DIAMOND_ID) >= 1:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7037-16.htm"
         if Level >= 20 and st.getQuestItemsCount(ETERNITY_DIAMOND_ID) == 0:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7037-17.htm"
         if Level >= 20 and st.getQuestItemsCount(ETERNITY_DIAMOND_ID) >= 1:
           st.takeItems(ETERNITY_DIAMOND_ID,1)
           st.player.setClassId(26)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7037-18.htm"
 
    if event == "class_change_29":
      if ClassId in [ClassId.elvenMage]:
         if Level <= 19 and st.getQuestItemsCount(LEAF_OF_ORACLE_ID) == 0:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7037-19.htm"
         if Level <= 19 and st.getQuestItemsCount(LEAF_OF_ORACLE_ID) >= 1:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7037-20.htm"
         if Level >= 20 and st.getQuestItemsCount(LEAF_OF_ORACLE_ID) == 0:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7037-21.htm"
         if Level >= 20 and st.getQuestItemsCount(LEAF_OF_ORACLE_ID) >= 1:
           st.takeItems(LEAF_OF_ORACLE_ID,1)
           st.player.setClassId(29)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7037-22.htm"
 
    if event == "class_change_11":
      # ClassId.mage seems buggy !?
      if ClassId not in [ClassId.fighter]:
         if Level <= 19 and st.getQuestItemsCount(BEAD_OF_SEASON_ID) == 0:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7037-23.htm"
         if Level <= 19 and st.getQuestItemsCount(BEAD_OF_SEASON_ID) >= 1:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7037-24.htm"
         if Level >= 20 and st.getQuestItemsCount(BEAD_OF_SEASON_ID) == 0:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7037-25.htm"
         if Level >= 20 and st.getQuestItemsCount(BEAD_OF_SEASON_ID) >= 1:
           st.takeItems(BEAD_OF_SEASON_ID,1)
           st.player.setClassId(11)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7037-26.htm"
 
    if event == "class_change_15":
      # ClassId.mage seems buggy !?
      if ClassId not in [ClassId.fighter]:
         if Level <= 19 and st.getQuestItemsCount(MARK_OF_FAITH_ID) == 0:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7037-27.htm"
         if Level <= 19 and st.getQuestItemsCount(MARK_OF_FAITH_ID) >= 1:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7037-28.htm"
         if Level >= 20 and st.getQuestItemsCount(MARK_OF_FAITH_ID) == 0:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7037-29.htm"
         if Level >= 20 and st.getQuestItemsCount(MARK_OF_FAITH_ID) >= 1:
           st.takeItems(MARK_OF_FAITH_ID,1)
           st.player.setClassId(15)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7037-30.htm"
 
 
@@ -168,34 +168,34 @@ class Quest (JQuest) :
    # Elf´s and Humans´s got accepted
    if npcId == HIGH_PRIESTESS_LEVIAN and Race in [Race.elf, Race.human]:
      if ClassId in [ClassId.elvenMage]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7037-01.htm"
      if ClassId in [ClassId.wizard, ClassId.cleric, ClassId.elvenWizard, ClassId.oracle]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7037-31.htm"
      if ClassId in [ClassId.sorceror, ClassId.necromancer, ClassId.bishop, ClassId.warlock, ClassId.prophet]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7037-32.htm"
      if ClassId in [ClassId.spellsinger, ClassId.elder, ClassId.elementalSummoner]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7037-32.htm"
      if ClassId in [ClassId.warrior, ClassId.knight, ClassId.rogue, ClassId.warlord, ClassId.paladin]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7037-33.htm"
      if ClassId in [ClassId.treasureHunter, ClassId.gladiator, ClassId.darkAvenger, ClassId.hawkeye]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7037-33.htm"
      # ClassId.mage seems buggy !?
      if ClassId not in [ClassId.fighter]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7037-08.htm"
      else:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7037-33.htm"
 
    # All other Races must be out
    if npcId == HIGH_PRIESTESS_LEVIAN and Race in [Race.dwarf, Race.darkelf, Race.orc]:
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7037-33.htm"
 
 QUEST   = Quest(7037,"7037_levian_occupation_change","village_master")

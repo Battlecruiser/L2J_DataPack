@@ -35,63 +35,63 @@ class Quest (JQuest) :
    Level    = st.getPlayer().getLevel()
 
    if event == "7513-01.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7513-01.htm"
 
    if event == "7513-02.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7513-02.htm"
 
    if event == "7513-03.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7513-03.htm"
 
    if event == "7513-04.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7513-04.htm"
 
    if event == "7513-05.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7513-05.htm"
 
    if event == "7513-06.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7513-06.htm"
 
    if event == "7513-07.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7513-07.htm"
 
    if event == "7513-08.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7513-08.htm"
 
    if event == "7513-09.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7513-09.htm"
 
    if event == "7513-10.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7513-10.htm"
 
    if event == "7513-11.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7513-11.htm"
 
    if event == "7513-12.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7513-12.htm"
 
    if event == "7513-13.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7513-13.htm"
 
    if event == "7513-14.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7513-14.htm"
 
    if event == "7513-15.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7513-15.htm"
 
 
@@ -99,14 +99,14 @@ class Quest (JQuest) :
      if ClassId in [ClassId.orcMonk]:
         if Level <= 39:
           if st.getQuestItemsCount(MARK_OF_CHALLENGER_ID) == 0 or st.getQuestItemsCount(MARK_OF_GLORY_ID) == 0 or st.getQuestItemsCount(MARK_OF_DUELIST_ID) == 0:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7513-16.htm"
           else:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7513-17.htm"
         elif Level >= 40:
           if st.getQuestItemsCount(MARK_OF_CHALLENGER_ID) == 0 or st.getQuestItemsCount(MARK_OF_GLORY_ID) == 0 or st.getQuestItemsCount(MARK_OF_DUELIST_ID) == 0:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7513-18.htm"
           else:
             st.takeItems(MARK_OF_CHALLENGER_ID,1)
@@ -115,7 +115,7 @@ class Quest (JQuest) :
             st.player.setClassId(48)
             st.player.broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7513-19.htm"
 
 
@@ -123,14 +123,14 @@ class Quest (JQuest) :
      if ClassId in [ClassId.orcRaider]:
         if Level <= 39:
           if st.getQuestItemsCount(MARK_OF_CHALLENGER_ID) == 0 or st.getQuestItemsCount(MARK_OF_GLORY_ID) == 0 or st.getQuestItemsCount(MARK_OF_CHAMPION_ID) == 0:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7513-20.htm"
           else:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7513-21.htm"
         elif Level >= 40:
           if st.getQuestItemsCount(MARK_OF_CHALLENGER_ID) == 0 or st.getQuestItemsCount(MARK_OF_GLORY_ID) == 0 or st.getQuestItemsCount(MARK_OF_CHAMPION_ID) == 0:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7513-22.htm"
           else:
             st.takeItems(MARK_OF_CHALLENGER_ID,1)
@@ -139,7 +139,7 @@ class Quest (JQuest) :
             st.player.setClassId(46)
             st.player.broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7513-23.htm"
 
 
@@ -147,14 +147,14 @@ class Quest (JQuest) :
      if ClassId in [ClassId.orcShaman]:
         if Level <= 39:
           if st.getQuestItemsCount(MARK_OF_PILGRIM_ID) == 0 or st.getQuestItemsCount(MARK_OF_GLORY_ID) == 0 or st.getQuestItemsCount(MARK_OF_LORD_ID) == 0:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7513-24.htm"
           else:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7513-25.htm"
         elif Level >= 40:
           if st.getQuestItemsCount(MARK_OF_PILGRIM_ID) == 0 or st.getQuestItemsCount(MARK_OF_GLORY_ID) == 0 or st.getQuestItemsCount(MARK_OF_LORD_ID) == 0:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7513-26.htm"
           else:
             st.takeItems(MARK_OF_PILGRIM_ID,1)
@@ -163,7 +163,7 @@ class Quest (JQuest) :
             st.player.setClassId(51)
             st.player.broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7513-27.htm"
 
 
@@ -171,14 +171,14 @@ class Quest (JQuest) :
      if ClassId in [ClassId.orcShaman]:
         if Level <= 39:
           if st.getQuestItemsCount(MARK_OF_PILGRIM_ID) == 0 or st.getQuestItemsCount(MARK_OF_GLORY_ID) == 0 or st.getQuestItemsCount(MARK_OF_WARSPIRIT_ID) == 0:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7513-28.htm"
           else:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7513-29.htm"
         elif Level >= 40:
           if st.getQuestItemsCount(MARK_OF_PILGRIM_ID) == 0 or st.getQuestItemsCount(MARK_OF_GLORY_ID) == 0 or st.getQuestItemsCount(MARK_OF_WARSPIRIT_ID) == 0:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7513-30.htm"
           else:
             st.takeItems(MARK_OF_PILGRIM_ID,1)
@@ -187,7 +187,7 @@ class Quest (JQuest) :
             st.player.setClassId(52)
             st.player.broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7513-31.htm"
 
 
@@ -199,27 +199,27 @@ class Quest (JQuest) :
    # orc´s got accepted
    if npcId == HIGH_PREFECT_PENATUS or HIGH_PREFECT_GARVARENTZ or HIGH_PREFECT_KARIA or HIGH_PREFECT_LADANZA or HIGH_PREFECT_TUSHKU and Race in [Race.orc]:
      if ClassId in [ClassId.orcMonk]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7513-01.htm"
      elif ClassId in [ClassId.orcRaider]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7513-05.htm"
      elif ClassId in [ClassId.orcShaman]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7513-09.htm"
      elif ClassId in [ClassId.destroyer, ClassId.tyrant, ClassId.overlord, ClassId.warcryer]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7513-32.htm"
      elif ClassId in [ClassId.orcFighter, ClassId.orcMage]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7513-33.htm"
      else:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7513-34.htm"
 
    # All other Races must be out
    else:
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7513-34.htm"
 
 QUEST   = Quest(7513,"7513_penatus_occupation_change","village_master")

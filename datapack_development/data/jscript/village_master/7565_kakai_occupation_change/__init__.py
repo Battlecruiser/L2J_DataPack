@@ -21,35 +21,35 @@ class Quest (JQuest) :
    htmltext = event
 
    if event == "7565-01.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7565-01.htm"
 
    if event == "7565-02.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7565-02.htm"
 
    if event == "7565-03.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7565-03.htm"
 
    if event == "7565-04.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7565-04.htm"
 
    if event == "7565-05.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7565-05.htm"
 
    if event == "7565-06.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7565-06.htm"
 
    if event == "7565-07.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7565-07.htm"
 
    if event == "7565-08.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7565-08.htm"
 
  def onTalk (Self,npcId,st):
@@ -60,21 +60,21 @@ class Quest (JQuest) :
    # Orc´s got accepted
    if npcId == KAKAI_LORD_OF_FLAME and Race in [Race.orc]:
      if ClassId in [ClassId.orcFighter]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7565-01.htm"
      if ClassId in [ClassId.orcRaider, ClassId.orcMonk, ClassId.orcShaman]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7565-09.htm"
      if ClassId in [ClassId.destroyer, ClassId.tyrant, ClassId.overlord, ClassId.warcryer]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7565-10.htm"
      if ClassId in [ClassId.orcMage]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7565-06.htm"
 
    # All other Races must be out
    if npcId == KAKAI_LORD_OF_FLAME and Race in [Race.dwarf, Race.darkelf, Race.elf, Race.human]:
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7565-11.htm"
 
 QUEST   = Quest(7565,"7565_kakai_occupation_change","village_master")

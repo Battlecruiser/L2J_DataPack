@@ -32,61 +32,61 @@ class Quest (JQuest) :
    Level    = st.getPlayer().getLevel()
 
    if event == "7120-01.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7120-01.htm"
 
    if event == "7120-02.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7120-02.htm"
 
    if event == "7120-03.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7120-03.htm"
 
    if event == "7120-04.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7120-04.htm"
 
    if event == "7120-05.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7120-05.htm"
 
    if event == "7120-06.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7120-06.htm"
 
    if event == "7120-07.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7120-07.htm"
 
    if event == "7120-08.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7120-08.htm"
 
    if event == "7120-09.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7120-09.htm"
 
    if event == "7120-10.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7120-10.htm"
 
    if event == "7120-11.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7120-11.htm"
 
    if event == "class_change_30":
      if ClassId in [ClassId.oracle]:
         if Level <= 39:
           if st.getQuestItemsCount(MARK_OF_PILGRIM_ID) == 0 or st.getQuestItemsCount(MARK_OF_LIFE_ID) == 0 or st.getQuestItemsCount(MARK_OF_HEALER_ID) == 0:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7120-12.htm"
           else:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7120-13.htm"
         else:
           if st.getQuestItemsCount(MARK_OF_PILGRIM_ID) == 0 or st.getQuestItemsCount(MARK_OF_LIFE_ID) == 0 or st.getQuestItemsCount(MARK_OF_HEALER_ID) == 0:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7120-14.htm"
           else:
             st.takeItems(MARK_OF_PILGRIM_ID,1)
@@ -95,21 +95,21 @@ class Quest (JQuest) :
             st.player.setClassId(30)
             st.player.broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7120-15.htm"
 
    if event == "class_change_16":
      if ClassId in [ClassId.cleric]:
         if Level <= 39:
           if st.getQuestItemsCount(MARK_OF_PILGRIM_ID) == 0 or st.getQuestItemsCount(MARK_OF_TRUST_ID) == 0 or st.getQuestItemsCount(MARK_OF_HEALER_ID) == 0:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7120-16.htm"
           else:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7120-17.htm"
         else:
           if st.getQuestItemsCount(MARK_OF_PILGRIM_ID) == 0 or st.getQuestItemsCount(MARK_OF_TRUST_ID) == 0 or st.getQuestItemsCount(MARK_OF_HEALER_ID) == 0:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7120-18.htm"
           else:
             st.takeItems(MARK_OF_PILGRIM_ID,1)
@@ -118,21 +118,21 @@ class Quest (JQuest) :
             st.player.setClassId(16)
             st.player.broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7120-19.htm"
 
    if event == "class_change_17":
      if ClassId in [ClassId.cleric]:
         if Level <= 39:
           if st.getQuestItemsCount(MARK_OF_PILGRIM_ID) == 0 or st.getQuestItemsCount(MARK_OF_TRUST_ID) == 0 or st.getQuestItemsCount(MARK_OF_REFORMER_ID) == 0:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7120-20.htm"
           else:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7120-21.htm"
         else:
           if st.getQuestItemsCount(MARK_OF_PILGRIM_ID) == 0 or st.getQuestItemsCount(MARK_OF_TRUST_ID) == 0 or st.getQuestItemsCount(MARK_OF_REFORMER_ID) == 0:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7120-22.htm"
           else:
             st.takeItems(MARK_OF_PILGRIM_ID,1)
@@ -141,7 +141,7 @@ class Quest (JQuest) :
             st.player.setClassId(17)
             st.player.broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7120-23.htm"
 
  def onTalk (Self,npcId,st):
@@ -152,42 +152,42 @@ class Quest (JQuest) :
    # Elf´s and Humans´s got accepted
    if npcId == HIGH_PRIEST_MAXIMILIAN or HIGH_PRIEST_HOLLINT or HIGH_PRIEST_ORVEN or HIGH_PRIEST_SQUILLARI and Race in [Race.elf, Race.human]:
      if ClassId in [ClassId.oracle]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7120-01.htm"
      elif ClassId in [ClassId.cleric]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7120-05.htm"
      elif ClassId in [ClassId.elder, ClassId.bishop, ClassId.prophet]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7120-25.htm"
      elif ClassId in [ClassId.wizard, ClassId.elvenWizard, ClassId.swordSinger, ClassId.silverRanger]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7120-26.htm"
      elif ClassId in [ClassId.sorceror, ClassId.necromancer, ClassId.warlock, ClassId.elvenKnight]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7120-26.htm"
      elif ClassId in [ClassId.spellsinger, ClassId.elementalSummoner, ClassId.plainsWalker]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7120-26.htm"
      elif ClassId in [ClassId.warrior, ClassId.knight, ClassId.rogue, ClassId.warlord, ClassId.paladin]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7120-26.htm"
      elif ClassId in [ClassId.treasureHunter, ClassId.gladiator, ClassId.darkAvenger, ClassId.hawkeye]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7120-26.htm"
      elif ClassId in [ClassId.fighter, ClassId.elvenFighter, ClassId.elvenScout, ClassId.templeKnight]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7120-26.htm"
      elif ClassId in [ClassId.elvenMage] or Race not in [Race.darkelf, Race.orc, Race.dwarf]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7120-24.htm"
      else:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7120-26.htm"
 
    # All other Races must be out
    else:
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7120-26.htm"
 
 QUEST   = Quest(7120,"7120_maximilian_occupation_change","village_master")

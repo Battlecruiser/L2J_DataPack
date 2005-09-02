@@ -81,50 +81,50 @@ class Quest (JQuest) :
    PlayerinClan = st.player.getClanId()
 
    if event == "9000-01.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "9000-01.htm"
 
    # Player must be Level 10 or above! (so cannot create clan)
    if event == "9000-02.htm" and Level <= 9:
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "9000-06.htm"
 
    # player is always clanleader! (so cannot create clan)
    if event == "9000-02.htm" and ClanLeader == 1:
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "9000-07.htm"
 
    # player is always in a clan! (so cannot create clan)
    if event == "9000-02.htm" and PlayerinClan != 0:
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "9000-09.htm"
    
    # always shown the clan raise page!
    if event == "9000-03.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "9000-03.htm"
 
    # player must be clanleader to dissolve clan!
    if event == "9000-04.htm" and ClanLeader == 1:
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "9000-04.htm"
 
    # player must be clanleader to dissolve clan! 
    if event == "9000-04.htm" and PlayerinClan != 0:
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "9000-08.htm"
 
    # player must be in a clan to dissolve clan! 
    if event == "9000-04.htm" and PlayerinClan == 0:
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "9000-11.htm"
 
    if event == "9000-05.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "9000-05.htm"
 
    else:
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "9000-02.htm"
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -132,7 +132,7 @@ class Quest (JQuest) :
  def onTalk (Self,npcId,st):
    
    if npcId == GRAND_MASTER_TOBIAS or GRAND_MASTER_BITZ or HIGH_PRIEST_BIOTIN or HIERARCH_ASTERIOS or TETRARCH_THIFIELL or WAREHOUSE_CHIEF_REED or HEAD_BLACKSMITH_BRONK or KAKAI_LORD_OF_FLAME or GRAND_MASTER_RAINS or HIGH_PRIEST_RAYMOND or WAREHOUSE_CHIEF_RIKADIO or HEAD_BLACKSMITH_MENDIO or HIGH_PREFECT_DRIKUS or GRAND_MASTER_XENOS or GRAND_MASTER_RAMOS or HIGH_PRIESTESS_LEVIAN or WAREHOUSE_CHIEF_MOKE or HEAD_BLACKSMITH_TAPOY or HIGH_PREFECT_OSBORN or HIGH_PRIEST_SYLVAIN or GRAND_MASTER_TRONIX or GRAND_MASTER_PABRIS or HIGH_PREFECT_CASTOR or HEAD_BLACKSMITH_OPIX or WAREHOUSE_CHIEF_RANSPO or GRAND_MASTER_ANGUS or GRAND_MASTER_BRECSON or GRAND_MASTER_MEDOWN or GRAND_MASTER_OLTLIN or GRAND_MASTER_XAIRAKIN or HIGH_PREFECT_PENATUS or HIGH_PREFECT_GARVARENTZ or HIGH_PREFECT_KARIA or HIGH_PREFECT_LADANZA or HIGH_PREFECT_TUSHKU or WAREHOUSE_CHIEF_GESTO or WAREHOUSE_CHIEF_BRAXT or WAREHOUSE_CHIEF_CROOP or WAREHOUSE_CHIEF_KLUMP or WAREHOUSE_CHIEF_NATOOLS or HEAD_BLACKSMITH_KUSTO or HEAD_BLACKSMITH_VERGARA or HEAD_BLACKSMITH_FLUTTER or HEAD_BLACKSMITH_FERRIS or HEAD_BLACKSMITH_ROMAN or GRAND_MASTER_HANNAVALT or GRAND_MASTER_SIRIA or GRAND_MASTER_BLACKBIRD or GRAND_MASTER_SEDRICK or GRAND_MASTER_MARCUS or HIGH_PRIEST_MAXIMILIAN or HIGH_PRIEST_HOLLINT or HIGH_PRIEST_ORVEN or HIGH_PRIEST_SQUILLARI or GRAND_MAGISTER_JUREK or GRAND_MAGISTER_SCRAIDE or GRAND_MAGISTER_DRIKIYAN or GRAND_MAGISTER_VALLERIA or GRAND_MAGISTER_FAIREN or GRAND_MAGISTER_ARKENIAS:
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "9000-01.htm"
 
 QUEST   = Quest(9000,"9000_clan","village_master")

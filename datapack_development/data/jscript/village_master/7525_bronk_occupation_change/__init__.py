@@ -21,19 +21,19 @@ class Quest (JQuest) :
    htmltext = event
 
    if event == "7525-01.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7525-01.htm"
 
    if event == "7525-02.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7525-02.htm"
 
    if event == "7525-03.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7525-03.htm"
 
    if event == "7525-04.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7525-04.htm"
 
  def onTalk (Self,npcId,st):
@@ -44,21 +44,21 @@ class Quest (JQuest) :
    # Dwarf´s got accepted
    if npcId == HEAD_BLACKSMITH_BRONK and Race in [Race.dwarf]:
      if ClassId in [ClassId.dwarvenFighter]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7525-01.htm"
      if ClassId in [ClassId.artisan]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7525-05.htm"
      if ClassId in [ClassId.warsmith]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7525-06.htm"
      if ClassId in [ClassId.scavenger, ClassId.bountyHunter]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7525-07.htm"
 
    # All other Races must be out
    if npcId == HEAD_BLACKSMITH_BRONK and Race in [Race.orc, Race.darkelf, Race.elf, Race.human]:
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7525-07.htm"
 
 QUEST   = Quest(7525,"7525_bronk_occupation_change","village_master")

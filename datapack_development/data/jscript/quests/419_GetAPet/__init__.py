@@ -91,7 +91,7 @@ def slayed(st) :
 def completed(st) :
   st.setState(COMPLETED)
   st.giveItems(WOLF_COLLAR,1)
-  st.exitQuest(True)
+  st.exitQuest(1)
   st.playSound("ItemSound.quest_finish")
   return
 
@@ -134,13 +134,13 @@ def accepted(st) :
 
 
 def cancelled(st) :
-  st.exitQuest(True)
+  st.exitQuest(1)
   return "419_cancelled.htm"
 
 
 def check_level(st) :
   if st.getPlayer().getLevel() < 15 :
-    st.exitQuest(True)
+    st.exitQuest(1)
     return "419_low_level.htm"
   return "419_start.htm"
 

@@ -31,33 +31,33 @@ class Quest (JQuest) :
    Level    = st.getPlayer().getLevel()
 
    if event == "7511-01.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7511-01.htm"
 
    if event == "7511-02.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7511-02.htm"
 
    if event == "7511-03.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7511-03.htm"
 
    if event == "7511-04.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7511-04.htm"
 
    if event == "class_change_55":
      if ClassId in [ClassId.scavenger]:
         if Level <= 39:
           if st.getQuestItemsCount(MARK_OF_SEARCHER_ID) == 0 or st.getQuestItemsCount(MARK_OF_GUILDSMAN_ID) == 0 or st.getQuestItemsCount(MARK_OF_PROSPERITY_ID) == 0:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7511-05.htm"
           else:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7511-06.htm"
         else:
           if st.getQuestItemsCount(MARK_OF_SEARCHER_ID) == 0 or st.getQuestItemsCount(MARK_OF_GUILDSMAN_ID) == 0 or st.getQuestItemsCount(MARK_OF_PROSPERITY_ID) == 0:
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7511-07.htm"
           else:
             st.takeItems(MARK_OF_SEARCHER_ID,1)
@@ -66,7 +66,7 @@ class Quest (JQuest) :
             st.player.setClassId(55)
             st.player.broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
-            st.exitQuest(True)
+            st.exitQuest(1)
             return "7511-08.htm"
 
  def onTalk (Self,npcId,st):
@@ -77,21 +77,21 @@ class Quest (JQuest) :
    # Dwarf´s got accepted
    if npcId == WAREHOUSE_CHIEF_GESTO or WAREHOUSE_CHIEF_BRAXT or WAREHOUSE_CHIEF_CROOP or WAREHOUSE_CHIEF_KLUMP or WAREHOUSE_CHIEF_NATOOLS and Race in [Race.dwarf]:
      if ClassId in [ClassId.scavenger]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7511-01.htm"
      elif ClassId in [ClassId.dwarvenFighter]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7511-09.htm"
      elif ClassId in [ClassId.bountyHunter, ClassId.warsmith]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7511-10.htm"
      else:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7511-11.htm"
 
    # All other Races must be out
    else:
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7511-11.htm"
 
 QUEST   = Quest(7511,"7511_gesto_occupation_change","village_master")

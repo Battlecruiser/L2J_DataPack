@@ -28,135 +28,135 @@ class Quest (JQuest) :
    Level    = st.getPlayer().getLevel()
 
    if event == "7462-01.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7462-01.htm"
 
    if event == "7462-02.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7462-02.htm"
 
    if event == "7462-03.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7462-03.htm"
 
    if event == "7462-04.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7462-04.htm"
 
    if event == "7462-05.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7462-05.htm"
 
    if event == "7462-06.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7462-06.htm"
 
    if event == "7462-07.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7462-07.htm"
 
    if event == "7462-08.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7462-08.htm"
 
    if event == "7462-09.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7462-09.htm"
 
    if event == "7462-10.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7462-10.htm"
 
    if event == "7462-11.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7462-11.htm"
 
    if event == "7462-12.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7462-12.htm"
 
    if event == "7462-13.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7462-13.htm"
 
    if event == "7462-14.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7462-14.htm"
 
    if event == "class_change_32":
      if ClassId in [ClassId.darkFighter]:
         if Level <= 19 and st.getQuestItemsCount(GAZE_OF_ABYSS_ID) == 0:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7462-15.htm"
         if Level <= 19 and st.getQuestItemsCount(GAZE_OF_ABYSS_ID) >= 1:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7462-16.htm"
         if Level >= 20 and st.getQuestItemsCount(GAZE_OF_ABYSS_ID) == 0:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7462-17.htm"
         if Level >= 20 and st.getQuestItemsCount(GAZE_OF_ABYSS_ID) >= 1:
           st.takeItems(GAZE_OF_ABYSS_ID,1)
           st.player.setClassId(32)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7462-18.htm"
 
    if event == "class_change_35":
      if ClassId in [ClassId.darkFighter]:
         if Level <= 19 and st.getQuestItemsCount(IRON_HEART_ID) == 0:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7462-19.htm"
         if Level <= 19 and st.getQuestItemsCount(IRON_HEART_ID) >= 1:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7462-20.htm"
         if Level >= 20 and st.getQuestItemsCount(IRON_HEART_ID) == 0:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7462-21.htm"
         if Level >= 20 and st.getQuestItemsCount(IRON_HEART_ID) >= 1:
           st.takeItems(IRON_HEART_ID,1)
           st.player.setClassId(35)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7462-22.htm"
 
    if event == "class_change_39":
      if ClassId in [ClassId.darkMage]:
         if Level <= 19 and st.getQuestItemsCount(JEWEL_OF_DARKNESS_ID) == 0:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7462-23.htm"
         if Level <= 19 and st.getQuestItemsCount(JEWEL_OF_DARKNESS_ID) >= 1:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7462-24.htm"
         if Level >= 20 and st.getQuestItemsCount(JEWEL_OF_DARKNESS_ID) == 0:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7462-25.htm"
         if Level >= 20 and st.getQuestItemsCount(JEWEL_OF_DARKNESS_ID) >= 1:
           st.takeItems(JEWEL_OF_DARKNESS_ID,1)
           st.player.setClassId(39)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7462-26.htm"
 
    if event == "class_change_42":
      if ClassId in [ClassId.darkMage]:
         if Level <= 19 and st.getQuestItemsCount(ORB_OF_ABYSS_ID) == 0:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7462-27.htm"
         if Level <= 19 and st.getQuestItemsCount(ORB_OF_ABYSS_ID) >= 1:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7462-28.htm"
         if Level >= 20 and st.getQuestItemsCount(ORB_OF_ABYSS_ID) == 0:
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7462-29.htm"
         if Level >= 20 and st.getQuestItemsCount(ORB_OF_ABYSS_ID) >= 1:
           st.takeItems(ORB_OF_ABYSS_ID,1)
           st.player.setClassId(42)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
-          st.exitQuest(True)
+          st.exitQuest(1)
           return "7462-30.htm"
 
 
@@ -168,24 +168,24 @@ class Quest (JQuest) :
    # DarkElf´s got accepted
    if npcId == GRAND_MASTER_TRONIX and Race in [Race.darkelf]:
      if ClassId in [ClassId.darkFighter]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7462-01.htm"
      if ClassId in [ClassId.darkMage]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7462-08.htm"
      if ClassId in [ClassId.palusKnight, ClassId.assassin, ClassId.darkWizard, ClassId.shillienOracle]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7462-31.htm"
      if ClassId in [ClassId.shillienKnight, ClassId.abyssWalker, ClassId.bladedancer, ClassId.phantomRanger]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7462-32.htm"
      if ClassId in [ClassId.spellhowler, ClassId.shillenElder, ClassId.phantomSummoner]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7462-32.htm"
 
    # All other Races must be out
    if npcId == GRAND_MASTER_TRONIX and Race in [Race.dwarf, Race.human, Race.elf, Race.orc]:
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7462-33.htm"
 
 QUEST   = Quest(7462,"7462_tronix_occupation_change","village_master")

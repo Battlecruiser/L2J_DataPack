@@ -19,19 +19,19 @@ class Quest (JQuest) :
    htmltext = event
 
    if event == "7520-01.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7520-01.htm"
 
    if event == "7520-02.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7520-02.htm"
 
    if event == "7520-03.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7520-03.htm"
 
    if event == "7520-04.htm":
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7520-04.htm"
 
  def onTalk (Self,npcId,st):
@@ -42,18 +42,18 @@ class Quest (JQuest) :
    # Dwarf´s got accepted
    if npcId == WAREHOUSE_CHIEF_REED and Race in [Race.dwarf]:
      if ClassId in [ClassId.dwarvenFighter]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7520-01.htm"
      if ClassId in [ClassId.scavenger, ClassId.artisan]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7520-05.htm"
      if ClassId in [ClassId.bountyHunter, ClassId.warsmith]:
-       st.exitQuest(True)
+       st.exitQuest(1)
        return "7520-06.htm"
 
    # All other Races must be out
    if npcId == WAREHOUSE_CHIEF_REED and Race in [Race.orc, Race.darkelf, Race.elf, Race.human]:
-     st.exitQuest(True)
+     st.exitQuest(1)
      return "7520-07.htm"
 
 QUEST   = Quest(7520,"7520_reed_occupation_change","village_master")
