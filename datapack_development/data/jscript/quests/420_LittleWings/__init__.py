@@ -116,10 +116,10 @@ class Quest (JQuest) :
       else:
         if st.getGameTicks() != int(st.get("id")) :
           st.set("id",str(st.getGameTicks()))
-	  n=st.getRandom(2)
-	  if (n == 0) :
+          n=st.getRandom(2)
+          if (n == 0) :
             st.giveItems(DRAGONFLUTE_OF_WIND_ID,1)
-          elif (n == 1) : 
+          elif (n == 1) :
             st.giveItems(DRAGONFLUTE_OF_STAR_ID,1)
           else :
             st.giveItems(DRAGONFLUTE_OF_TWILIGHT_ID,1)
@@ -130,10 +130,10 @@ class Quest (JQuest) :
     elif event == "7747_7" :
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
-	n=st.getRandom(2)
-	if (n == 0) :
+        n=st.getRandom(2)
+        if (n == 0) :
             st.giveItems(DRAGONFLUTE_OF_WIND_ID,1)
-        elif (n == 1) : 
+        elif (n == 1) :
             st.giveItems(DRAGONFLUTE_OF_STAR_ID,1)
         else :
             st.giveItems(DRAGONFLUTE_OF_TWILIGHT_ID,1)
@@ -249,7 +249,7 @@ class Quest (JQuest) :
       htmltext = "7608-02.htm"
    elif npcId == 7608 and (int(st.get("cond"))==2 or int(st.get("cond"))==11) and st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FSD_ID)==1 and st.getQuestItemsCount(COAL_ID)>=10 and st.getQuestItemsCount(CHARCOAL_ID)>=10 and st.getQuestItemsCount(GEMSTONE_C_ID)>=1 and st.getQuestItemsCount(STONE_OF_PURITY_ID)>=1 and st.getQuestItemsCount(SILVER_NUGGET_ID)>=5 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID)>=20 :
       htmltext = "7608-04.htm"
-   elif npcId == 7608 and int(st.get("cond"))>=1 and st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 or st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1 :
+   elif npcId == 7608 and int(st.get("cond"))>=1 and (st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 or st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1) :
       htmltext = "7608-06.htm"
    elif npcId == 7747 and int(st.get("cond"))>=1 and st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 :
       htmltext = "7747-02.htm"
@@ -335,6 +335,7 @@ class Quest (JQuest) :
     if int(st.get("cond")) >= 1 and ((st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_ID) == 1 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID) < 10) or (st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FSD_ID) == 1 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID) < 20)) :
       if st.getRandom(100) < 30 :
         st.giveItems(Q_INPICIOS_BACK_SKIN_ID,1)
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 580 :
      if int(st.get("cond")) >= 1 and st.getQuestItemsCount(Q_SCALE_OF_DRAKE_EXARION_ID) == 1 :
        if st.getQuestItemsCount(Q_EGG_OF_DRAKE_EXARION_ID) < 20 and st.getRandom(100) < 50 :
