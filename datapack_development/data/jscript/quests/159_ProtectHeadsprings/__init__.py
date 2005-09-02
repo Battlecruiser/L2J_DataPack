@@ -18,6 +18,7 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
+        st.set("cond","1")
         st.set("id","0")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
@@ -28,7 +29,7 @@ class Quest (JQuest) :
 
 
  def onTalk (Self,npcId,st):
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   htmltext = "<html><head><body>I have nothing to say you.</body></html>"
    id = st.getState()
    if id == CREATED :
      st.setState(STARTING)
@@ -41,7 +42,6 @@ class Quest (JQuest) :
             htmltext = "7154-00.htm"
           elif st.getPlayer().getLevel() >= 12 :
             htmltext = "7154-03.htm"
-            st.set("cond","1")
             return htmltext
           else:
             htmltext = "7154-02.htm"
@@ -106,4 +106,4 @@ STARTED.addQuestDrop(5017,PLAGUE_DUST_ID,1)
 STARTED.addQuestDrop(5017,PLAGUE_DUST_ID,1)
 STARTED.addQuestDrop(5017,PLAGUE_DUST_ID,1)
 STARTED.addQuestDrop(7154,HYACINTH_CHARM1_ID,1)
-STARTED.addQuestDrop(7154,HYACINTH_CHARM2_ID,1)
+STARTED.addQuestDrop(7154,HYACINTH_CHARM2_ID,1) 
