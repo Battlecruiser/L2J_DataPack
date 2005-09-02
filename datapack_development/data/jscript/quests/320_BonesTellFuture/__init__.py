@@ -17,6 +17,7 @@ class Quest (JQuest) :
     if event == "1" :
         st.set("id","0")
         htmltext = "7359-04.htm"
+        st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
     return htmltext
@@ -36,7 +37,6 @@ class Quest (JQuest) :
           htmltext = "7359-00.htm"
         elif st.getPlayer().getLevel() >= 10 :
           htmltext = "7359-03.htm"
-          st.set("cond","1")
           return htmltext
         else:
           htmltext = "7359-02.htm"
