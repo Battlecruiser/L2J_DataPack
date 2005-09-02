@@ -246,9 +246,9 @@ class Quest (JQuest) :
       htmltext = "7615-02.htm"
    elif npcId == 7615 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(GLOVE_OF_VOLTAR_ID) and ((st.getQuestItemsCount(PASHIKAS_HEAD_ID)+st.getQuestItemsCount(VULTUS_HEAD_ID))<2) and st.getQuestItemsCount(SCEPTER_OF_BREKA_ID)==0 :
       htmltext = "7615-05.htm"
-      if Maker_GetNpcCount() < 3 :
-        st.spawnNpc(5080)
-        st.spawnNpc(5081)
+#      if Maker_GetNpcCount() < 3 :
+      st.spawnNpc(5080)
+      st.spawnNpc(5081)
    elif npcId == 7615 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(PASHIKAS_HEAD_ID) and st.getQuestItemsCount(VULTUS_HEAD_ID) :
       htmltext = "7615-06.htm"
       st.giveItems(SCEPTER_OF_BREKA_ID,1)
@@ -264,8 +264,8 @@ class Quest (JQuest) :
       htmltext = "7616-02.htm"
    elif npcId == 7616 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(GLOVE_OF_KEPRA_ID) and st.getQuestItemsCount(ENKU_OVERLORD_HEAD_ID)<4 :
       htmltext = "7616-05.htm"
-      if Maker_GetNpcCount() < 5 :
-        st.spawnNpc(5082)
+#      if Maker_GetNpcCount() < 5 :
+      st.spawnNpc(5082)
    elif npcId == 7616 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(ENKU_OVERLORD_HEAD_ID)>=4 :
       htmltext = "7616-06.htm"
       st.giveItems(SCEPTER_OF_ENKU_ID,1)
@@ -280,9 +280,9 @@ class Quest (JQuest) :
       htmltext = "7617-02.htm"
    elif npcId == 7617 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(GLOVE_OF_BURAI_ID) :
       htmltext = "7617-04.htm"
-      if Maker_GetNpcCount() < 3 :
-        st.spawnNpc(5083)
-        st.spawnNpc(5083)
+#      if Maker_GetNpcCount() < 3 :
+      st.spawnNpc(5083)
+      st.spawnNpc(5083)
    elif npcId == 7617 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(MAKUM_BUGBEAR_HEAD_ID)>=2 :
       htmltext = "7617-05.htm"
       st.giveItems(SCEPTER_OF_TUREK_ID,1)

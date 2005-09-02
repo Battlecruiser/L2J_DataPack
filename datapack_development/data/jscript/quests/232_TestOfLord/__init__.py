@@ -85,8 +85,8 @@ class Quest (JQuest) :
           st.takeItems(BEAR_FANG_NECKLACE_ID,1)
     elif event == "7649_4" :
           htmltext = "7649-07.htm"
-          if Maker_GetNpcCount() == 1 :
-            st.spawnNpc(7643,21036,-107690,-3038)
+#          if Maker_GetNpcCount() == 1 :
+          st.spawnNpc(7643,21036,-107690,-3038)
     elif event == "7643_1" :
           htmltext = "7643-02.htm"
     elif event == "7643_2" :
@@ -255,8 +255,8 @@ class Quest (JQuest) :
         st.takeItems(RAGNA_CHIEF_NOTICE_ID,1)
    elif npcId == 7649 and int(st.get("cond"))==1 and st.getQuestItemsCount(IMMORTAL_FLAME_ID)==1 :
         htmltext = "7649-08.htm"
-        if Maker_GetNpcCount() == 1 :
-          st.spawnNpc(7643,21036,-107690,-3038)
+#        if Maker_GetNpcCount() == 1 :
+        st.spawnNpc(7643,21036,-107690,-3038)
    elif npcId == 7643 and int(st.get("cond"))==1 and st.getQuestItemsCount((MARTANKUS_CHARM_ID) or st.getQuestItemsCount(IMMORTAL_FLAME_ID)) :
         htmltext = "7643-01.htm"
    return htmltext

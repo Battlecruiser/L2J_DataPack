@@ -177,16 +177,16 @@ class Quest (JQuest) :
             st.giveItems(WATCHERS_EYE2_ID,1)
             st.playSound("ItemSound.quest_middle")
             st.set("cond","6")
-          if Maker_GetNpcCount() < 2 :
-            st.spawnNpc(7646)
+#          if Maker_GetNpcCount() < 2 :
+          st.spawnNpc(7646)
    elif npcId == 5114 :
         if int(st.get("cond")) :
           if int(st.get("cond")) == 8 :
             st.set("cond","9")
             st.playSound("ItemSound.quest_middle")
             st.removeRadar(176560,-184969,-3729);
-          if Maker_GetNpcCount() == 1 :
-            st.spawnNpc(7646)
+#          if Maker_GetNpcCount() == 1 :
+	  st.spawnNpc(7646)
    return
 
 QUEST       = Quest(211,"211_TrialOfChallenger","Trial Of Challenger")

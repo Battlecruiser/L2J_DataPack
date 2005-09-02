@@ -60,16 +60,16 @@ class Quest (JQuest) :
           htmltext = "7669-02.htm"
     elif event == "7669_2" :
           htmltext = "7669-03.htm"
-          if Maker_GetNpcCount() == 1 :
-            st.spawnNpc(7732,-9282,-89975,-2331)
-            st.spawnNpc(5131,-9382,-89852,-2333)
+#          if Maker_GetNpcCount() == 1 :
+          st.spawnNpc(7732,-9282,-89975,-2331)
+          st.spawnNpc(5131,-9382,-89852,-2333)
     elif event == "7669_3" :
           htmltext = "7669-05.htm"
     elif event == "7670_1" :
           htmltext = "7670-03.htm"
-          if Maker_GetNpcCount() == 1 :
-            st.spawnNpc(7732,125947,-180049,-1778)
-            st.spawnNpc(5132,126019,-179983,-1781)
+#          if Maker_GetNpcCount() == 1 :
+          st.spawnNpc(7732,125947,-180049,-1778)
+          st.spawnNpc(5132,126019,-179983,-1781)
     elif event == "7670_2" :
           htmltext = "7670-02.htm"
     return htmltext
@@ -129,13 +129,13 @@ class Quest (JQuest) :
         htmltext = "7668-01.htm"
         st.set("cond","6")
         st.takeItems(SLAS_LETTER_ID,1)
-        if Maker_GetNpcCount() == 1 :
-          st.spawnNpc(7732,-4015,40141,-3664)
-          st.spawnNpc(5129,-4034,40201,-3665)
+#        if Maker_GetNpcCount() == 1 :
+        st.spawnNpc(7732,-4015,40141,-3664)
+        st.spawnNpc(5129,-4034,40201,-3665)
    elif npcId == 7668 and int(st.get("cond"))==8 and st.getQuestItemsCount(OLMAHUMS_MONEY_ID)>=1 :
         htmltext = "7668-02.htm"
-        if Maker_GetNpcCount() < 3 :
-          st.spawnNpc(5130,-4106,40174,-3660)
+#        if Maker_GetNpcCount() < 3 :
+        st.spawnNpc(5130,-4106,40174,-3660)
    elif npcId == 7668 and int(st.get("cond"))==9 :
         htmltext = "7668-03.htm"
         st.set("cond","10")

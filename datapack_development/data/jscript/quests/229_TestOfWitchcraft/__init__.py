@@ -134,8 +134,8 @@ class Quest (JQuest) :
     elif event == "7633_1" :
           htmltext = "7633-02.htm"
           st.giveItems(BRIMSTONE2_ID,1)
-          if Maker_GetNpcCount() == 1 :
-            st.spawnNpc(5101,13395,169807,-3708)
+#          if Maker_GetNpcCount() == 1 :
+          st.spawnNpc(5101,13395,169807,-3708)
     return htmltext
 
 
@@ -266,8 +266,8 @@ class Quest (JQuest) :
         htmltext = "7633-01.htm"
    elif npcId == 7633 and int(st.get("cond"))==1 and st.getQuestItemsCount((ORIMS_INSTRUCTIONS_ID) and st.getQuestItemsCount(SOULTRAP_CRYSTAL_ID) and st.getQuestItemsCount(BRIMSTONE2_ID)) and st.getQuestItemsCount(ZERUEL_BIND_CRYSTAL_ID)==0 :
         htmltext = "7633-02.htm"
-        if Maker_GetNpcCount() == 1 :
-          st.spawnNpc(5101,13395,169807,-3708)
+#        if Maker_GetNpcCount() == 1 :
+        st.spawnNpc(5101,13395,169807,-3708)
    elif npcId == 7633 and int(st.get("cond"))==1 and st.getQuestItemsCount((ORIMS_INSTRUCTIONS_ID) and st.getQuestItemsCount(ZERUEL_BIND_CRYSTAL_ID)) and st.getQuestItemsCount((SOULTRAP_CRYSTAL_ID) == 0 and st.getQuestItemsCount(BRIMSTONE2_ID)) == 0 :
         htmltext = "7633-03.htm"
    return htmltext

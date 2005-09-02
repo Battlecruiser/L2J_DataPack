@@ -47,8 +47,8 @@ class Quest (JQuest) :
           st.set("onlyone","1")
     elif event == "7428_1" :
           htmltext = "7428-02.htm"
-          if Maker_GetNpcCount() == 1 :
-            st.spawnNpc(5134)
+#          if Maker_GetNpcCount() == 1 :
+          st.spawnNpc(5134)
     elif event == "7658_1" :
           if st.getQuestItemsCount(ADENA_ID) >= 100000 :
             htmltext = "7658-02.htm"
