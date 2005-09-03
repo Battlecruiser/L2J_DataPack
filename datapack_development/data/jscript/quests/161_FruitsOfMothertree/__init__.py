@@ -19,6 +19,7 @@ class Quest (JQuest) :
       st.set("id","0")
       htmltext = "7362-04.htm"
       st.giveItems(ANDELLRIAS_LETTER_ID,1)
+      st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
     return htmltext
@@ -38,7 +39,6 @@ class Quest (JQuest) :
           htmltext = "7362-00.htm"
         elif st.getPlayer().getLevel() >= 3 :
           htmltext = "7362-03.htm"
-          st.set("cond","1")
           return htmltext
         else:
           htmltext = "7362-02.htm"

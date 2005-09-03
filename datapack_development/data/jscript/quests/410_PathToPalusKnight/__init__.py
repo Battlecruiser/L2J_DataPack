@@ -22,6 +22,7 @@ class Quest (JQuest) :
     htmltext = event
     if event == "1" :
         st.set("id","0")
+        st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
         htmltext = "7329-06.htm"
@@ -29,7 +30,6 @@ class Quest (JQuest) :
     elif event == "410_1" :
           if st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x1f and st.getQuestItemsCount(GAZE_OF_ABYSS_ID) == 0 :
             htmltext = "7329-05.htm"
-            st.set("cond","1")
             return htmltext
           elif st.getPlayer().getClassId().getId() != 0x1f :
               if st.getPlayer().getClassId().getId() == 0x20 :

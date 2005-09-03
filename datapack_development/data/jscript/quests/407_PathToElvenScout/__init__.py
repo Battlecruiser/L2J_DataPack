@@ -58,7 +58,6 @@ class Quest (JQuest) :
    if npcId == 7328 and int(st.get("cond"))==0 :
         if int(st.get("cond"))<15 :
           htmltext = "7328-01.htm"
-          st.set("cond","1")
           return htmltext
         else:
           htmltext = "7328-01.htm"

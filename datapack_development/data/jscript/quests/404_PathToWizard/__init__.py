@@ -33,6 +33,7 @@ class Quest (JQuest) :
             htmltext = "7391-03.htm"
           else:
             htmltext = "7391-08.htm"
+            st.set("cond","1")
             st.setState(STARTED)
             st.playSound("ItemSound.quest_accept")
         else:
@@ -60,7 +61,6 @@ class Quest (JQuest) :
    if npcId == 7391 and int(st.get("cond"))==0 :
       if int(st.get("cond"))<15 :
         htmltext = "7391-04.htm"
-        st.set("cond","1")
         return htmltext
       else:
         htmltext = "7391-04.htm"

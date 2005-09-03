@@ -67,7 +67,6 @@ class Quest (JQuest) :
         if int(st.get("cond"))<15 :
           if st.getQuestItemsCount(LEAF_OF_ORACLE_ID) == 0 :
             htmltext = "7293-01.htm"
-            st.set("cond","1")
             return htmltext
           else:
             htmltext = "7293-04.htm"

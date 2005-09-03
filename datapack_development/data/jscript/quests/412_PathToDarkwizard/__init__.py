@@ -27,10 +27,10 @@ class Quest (JQuest) :
         st.set("id","0")
         if int(st.get("cond")) == 0 :
           if st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x26 and st.getQuestItemsCount(JEWEL_OF_DARKNESS_ID) == 0 :
+            st.set("cond","1")
             st.setState(STARTED)
             st.playSound("ItemSound.quest_accept")
             st.giveItems(SEEDS_OF_DESPAIR_ID,1)
-            st.set("cond","1")
             htmltext = "7421-05.htm"
           elif st.getPlayer().getClassId().getId() != 0x26 :
               if st.getPlayer().getClassId().getId() == 0x27 :

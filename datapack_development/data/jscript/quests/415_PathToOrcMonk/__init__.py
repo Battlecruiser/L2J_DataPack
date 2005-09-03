@@ -49,10 +49,10 @@ class Quest (JQuest) :
                 htmltext = "7587-04.htm"
               else:
                 htmltext = "7587-05.htm"
-                st.set("cond","1")
                 return htmltext
     elif event == "1" :
         st.set("id","0")
+        st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
         htmltext = "7587-06.htm"

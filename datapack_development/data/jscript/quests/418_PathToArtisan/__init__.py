@@ -38,7 +38,6 @@ class Quest (JQuest) :
                 htmltext = "7527-04.htm"
               else:
                 htmltext = "7527-05.htm"
-                st.set("cond","1")
                 return htmltext
     elif event == "7527_2" :
           htmltext = "7527-11.htm"
@@ -46,6 +45,7 @@ class Quest (JQuest) :
           st.giveItems(TATARUS_LETTER_ID,1)
     elif event == "1" :
         st.set("id","0")
+        st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
         htmltext = "7527-06.htm"

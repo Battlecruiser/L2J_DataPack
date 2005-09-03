@@ -24,13 +24,13 @@ class Quest (JQuest) :
     if event == "1" :
         st.set("id","0")
         htmltext = "7330-06.htm"
+        st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(SIDRAS_LETTER1_ID,1)
     elif event == "413_1" :
           if st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x26 and st.getQuestItemsCount(ORB_OF_ABYSS_ID) == 0 :
             htmltext = "7330-05.htm"
-            st.set("cond","1")
             return htmltext
           elif st.getPlayer().getClassId().getId() != 0x26 :
               if st.getPlayer().getClassId().getId() == 0x2a :

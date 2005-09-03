@@ -40,6 +40,7 @@ class Quest (JQuest) :
             if st.getQuestItemsCount(ETERNITY_DIAMOND_ID) != 0 :
               htmltext = "7414-05.htm"
             else:
+              st.set("cond","0")
               st.setState(STARTED)
               st.playSound("ItemSound.quest_accept")
               if st.getQuestItemsCount(FERTILITY_PERIDOT_ID) == 0 :

@@ -46,10 +46,10 @@ class Quest (JQuest) :
               htmltext = "7417-03.htm"
     elif event == "7417_2" :
           htmltext = "7417-07.htm"
-          st.set("cond","1")
           return htmltext
     elif event == "1" :
         st.set("id","0")
+        st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(MARK_OF_ESQUIRE_ID,1)

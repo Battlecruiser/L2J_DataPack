@@ -22,11 +22,11 @@ class Quest (JQuest) :
         st.set("id","0")
         htmltext = "7358-05.htm"
         st.giveItems(ONYX_TALISMAN1_ID,1)
+        st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
     elif event == "7358_1" :
             htmltext = "7358-04.htm"
-            st.set("cond","1")
             return htmltext
     return htmltext
 

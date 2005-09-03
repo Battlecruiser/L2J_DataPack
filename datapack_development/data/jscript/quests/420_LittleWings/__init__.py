@@ -41,6 +41,7 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
+      st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
       htmltext = "7829-02.htm"
@@ -204,7 +205,6 @@ class Quest (JQuest) :
    if npcId == 7829 and int(st.get("cond"))==0 and st.getPlayer().getLevel() >= 35 :
      if int(st.get("cond")) < 15 :
        htmltext = "7829-01.htm"
-       st.set("cond","1")
        return htmltext
      else:
        htmltext = "7829-01.htm"

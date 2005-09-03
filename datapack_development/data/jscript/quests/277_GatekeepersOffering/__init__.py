@@ -20,6 +20,7 @@ class Quest (JQuest) :
           st.set("id","0") 
           if st.getPlayer().getLevel() >= 15 : 
             htmltext = "7576-03.htm" 
+            st.set("cond","1") 
             st.setState(STARTED) 
             st.playSound("ItemSound.quest_accept") 
           else: 
@@ -38,7 +39,6 @@ class Quest (JQuest) :
    if npcId == 7576 and int(st.get("cond"))==0 : 
           if int(st.get("cond")) < 15 : 
             htmltext = "7576-02.htm" 
-            st.set("cond","1") 
             return htmltext 
    elif npcId == 7576 and int(st.get("cond"))==1 and st.getQuestItemsCount(STARSTONE1_ID)<20 : 
      if id == STARTING or id == COMPLETED : 

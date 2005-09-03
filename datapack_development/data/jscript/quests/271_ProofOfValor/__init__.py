@@ -17,6 +17,7 @@ class Quest (JQuest) :
     htmltext = event
     if event == "1" :
       st.set("id","0")
+      st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
       if st.getQuestItemsCount(NECKLACE_OF_COURAGE_ID) and st.getQuestItemsCount(NECKLACE_OF_VALOR_ID) > 0 :

@@ -25,6 +25,7 @@ class Quest (JQuest) :
         st.set("id","0")
         htmltext = "7307-05.htm"
         st.giveItems(KAROYDS_LETTER_ID,1)
+        st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
     return htmltext
@@ -44,7 +45,6 @@ class Quest (JQuest) :
             htmltext = "7307-00.htm"
           elif st.getPlayer().getLevel() >= 11 :
             htmltext = "7307-03.htm"
-            st.set("cond","1")
             return htmltext
           else:
             htmltext = "7307-02.htm"

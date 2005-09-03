@@ -16,12 +16,12 @@ class Quest (JQuest) :
     htmltext = event
     if event == "1" :
         st.set("id","0")
+        st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
         htmltext = "7150-05.htm"
     elif event == "313_1" :
             htmltext = "7150-04.htm"
-            st.set("cond","1")
             return htmltext
     return htmltext
 

@@ -27,7 +27,6 @@ class Quest (JQuest) :
                 htmltext = "7010-04.htm"
               else:
                 htmltext = "7010-05.htm"
-                st.set("cond","1")
                 return htmltext
           else:
             if st.getPlayer().getClassId().getId() == 0x01 :
@@ -44,6 +43,7 @@ class Quest (JQuest) :
     elif event == "1" :
       st.set("id","0")
       if st.getQuestItemsCount(EINS_LETTER_ID) == 0 :
+        st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(EINS_LETTER_ID,1)

@@ -30,6 +30,7 @@ class Quest (JQuest) :
     if event == "1" :
           st.set("id","0")
           if st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x2c and st.getQuestItemsCount(MARK_OF_RAIDER_ID) == 0 and st.getQuestItemsCount(GOBLIN_DWELLING_MAP_ID) == 0 :
+            st.set("cond","1")
             st.setState(STARTED)
             st.playSound("ItemSound.quest_accept")
             st.giveItems(GOBLIN_DWELLING_MAP_ID,1)
@@ -57,7 +58,6 @@ class Quest (JQuest) :
    if npcId == 7570 and int(st.get("cond"))==0 :
           if int(st.get("cond"))<15 :
             htmltext = "7570-01.htm"
-            st.set("cond","1")
             return htmltext
           else:
             htmltext = "7570-01.htm"

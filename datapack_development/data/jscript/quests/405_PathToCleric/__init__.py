@@ -26,6 +26,7 @@ class Quest (JQuest) :
     if event == "1" :
         st.set("id","0")
         if st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x0a and st.getQuestItemsCount(MARK_OF_FAITH_ID) == 0 :
+          st.set("cond","1")
           st.setState(STARTED)
           st.playSound("ItemSound.quest_accept")
           st.giveItems(LETTER_OF_ORDER1_ID,1)
@@ -54,7 +55,6 @@ class Quest (JQuest) :
         if int(st.get("cond"))<15 :
           if st.getQuestItemsCount(MARK_OF_FAITH_ID) == 0 :
             htmltext = "7022-01.htm"
-            st.set("cond","1")
             return htmltext
           else:
             htmltext = "7022-04.htm"

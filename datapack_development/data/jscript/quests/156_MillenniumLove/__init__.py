@@ -21,6 +21,7 @@ class Quest (JQuest) :
         if st.getPlayer().getLevel() >= 15 :
           htmltext = "7368-06.htm"
           st.giveItems(RYLITHS_LETTER_ID,1)
+          st.set("cond","1")
           st.setState(STARTED)
           st.playSound("ItemSound.quest_accept")
         else:
@@ -54,7 +55,6 @@ class Quest (JQuest) :
    if npcId == 7368 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
         if int(st.get("cond"))<15 :
           htmltext = "7368-04.htm"
-          st.set("cond","1")
           htmltext = "7368-02.htm"
         else:
           htmltext = "7368-02.htm"

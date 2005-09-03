@@ -32,6 +32,7 @@ class Quest (JQuest) :
           st.set("id","0")
           if st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x35 and st.getQuestItemsCount(RING_OF_RAVEN_ID) == 0 :
             st.set("cond",str(0))
+            st.set("cond","1")
             st.setState(STARTED)
             st.playSound("ItemSound.quest_accept")
             st.giveItems(PIPIS_LETTER_ID,1)
@@ -134,7 +135,6 @@ class Quest (JQuest) :
    if npcId == 7524 and int(st.get("cond"))==0 :
           if int(st.get("cond")) < 15 :
             htmltext = "7524-01.htm"
-            st.set("cond","1")
             return htmltext
           else:
             htmltext = "7524-01.htm"
