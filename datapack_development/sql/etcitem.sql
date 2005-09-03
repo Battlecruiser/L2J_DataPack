@@ -4746,4 +4746,9 @@ insert  into etcitem values
 ('6360','blue_seal_stone','false','none','0','stackable','liquid','none','100','0',0,'true'),
 ('6361','green_seal_stone','false','none','0','stackable','liquid','none','100','0',0,'true'),
 ('6362','red_seal_stone','false','none','0','stackable','liquid','none','100','0',0,'true'),
-('6387','blessed_scroll_of_resurrection_for_pet','false','scroll','120','stackable','paper','none','0','45000',0,'true');
+('6387','blessed_scroll_of_resurrection_for_pet','false','scroll','120','stackable','paper','none','0','45000',0,'true'),
+('6403','elven_firecracker','false','none','20','stackable','paper','none','0','0','0','true'),
+('6404','gunpowder','false','none','20','normal','steel','none','0','0','0','true'),
+('6405','magnesium','false','none','20','normal','steel','none','0','0','0','true'),
+('6406','firework','false','none','20','stackable','paper','none','0','0','0','true'),
+('6407','large_firework','false','none','20','stackable','paper','none','0','0','0','true');

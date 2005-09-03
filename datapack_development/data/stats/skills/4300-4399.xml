@@ -1077,43 +1077,45 @@
   </for>
 </skill>
 <skill id="4361" levels="2" name="Curse of Destruction">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Curse of the Preacher of Doom. Temporarily decreases Accuracy. Effect 1.
-  2: Curse of the Preacher of Doom. Temporarily decreases Accuracy and resistance to Sleep/Hold/Shock attacks. Effect 2.
-  created 2005-05-29 23:34:34
--->
   <table name="#power"> 1.0 2.0 </table>
   <set name="power" val="#power"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="600"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
   <for>
+   <effect count="1" name="Buff" time="1200" val="0">
+     <sub order="0x50" stat="accCombat" val="5"/>
+     <mul order="0x50" stat="sleepRes" val="0.75"/>
+     <mul order="0x50" stat="rootRes" val="0.75"/>
+     <mul order="0x50" stat="stunRes" val="0.75"/>
+   </effect>
   </for>
 </skill>
 <skill id="4362" levels="2" name="Curse of Destruction">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Curse of the Preacher of Doom. Temporarily decreases Casting Spd. Effect 2.
-  2: Curse of the Preacher of Doom. Temporarily decreases Casting Spd. and resistance to Sleep/Hold/Shock attacks. Effect 2.
-  created 2005-05-29 23:34:34
--->
-  <table name="#power"> 2.0 2.0 </table>
+  <table name="#power"> 1.0 2.0 </table>
   <set name="power" val="#power"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="600"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
   <for>
+   <effect count="1" name="Buff" time="1200" val="0">
+     <mul order="0x50" stat="mAtkSpd" val="0.75"/>
+     <mul order="0x50" stat="sleepRes" val="0.75"/>
+     <mul order="0x50" stat="rootRes" val="0.75"/>
+     <mul order="0x50" stat="stunRes" val="0.75"/>
+   </effect>
   </for>
 </skill>
 <skill id="4363" levels="1" name="Curse of Destruction">
@@ -1126,8 +1128,8 @@
   created 2005-05-29 23:34:34
 -->
   <set name="power" val="1.0"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
@@ -1135,43 +1137,49 @@
   </for>
 </skill>
 <skill id="4364" levels="2" name="Blessing of Prophecy">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Blessing of the Orator of Revelations. Temporarily decreases body weight and increases resistance to Poison/Bleed attacks. Effect 1.
-  2: Blessing of the Orator of Revelations. Temporarily decreases body weight and increases resistance to Poison/Bleed/Hold/Shock/Paralysis attacks. Effect 2.
-  created 2005-05-29 23:34:34
--->
   <table name="#power"> 1.0 2.0 </table>
   <set name="power" val="#power"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
+   <effect count="1" name="Buff" time="1200" val="0">
+     <mul order="0x40" stat="maxLoad" val="1.25"/>
+     <mul order="0x50" stat="poisonRes" val="1.25"/>
+     <mul order="0x50" stat="bleedRes" val="1.25"/>
+     <mul order="0x50" stat="rootRes" val="1.25"/>
+     <mul order="0x50" stat="stunRes" val="1.25"/>
+     <mul order="0x50" stat="earthRes" val="1.25"/>
+   </effect>
   </for>
 </skill>
 <skill id="4365" levels="2" name="Blessing of Prophecy">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Blessing of the Orator of Revelations. Temporarily lowers probability of magic cancellation due to damage and increases resistance to Hold/Silence attacks. Effect 1.
-  2: Blessing of the Orator of Revelations. Temporarily lowers probability of magic cancellation due to damage and increases resistance to Hold/Silence/Shock/Paralysis attacks. Effect 2.
-  created 2005-05-29 23:34:34
--->
   <table name="#power"> 1.0 2.0 </table>
   <set name="power" val="#power"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
+   <effect count="1" name="Buff" time="1200" val="0">
+     <sub order="0x40" stat="cancel" val="36"/>
+     <mul order="0x50" stat="poisonRes" val="1.25"/>
+     <mul order="0x50" stat="bleedRes" val="1.25"/>
+     <mul order="0x50" stat="rootRes" val="1.25"/>
+     <mul order="0x50" stat="stunRes" val="1.25"/>
+     <mul order="0x50" stat="earthRes" val="1.25"/>
+   </effect>
   </for>
 </skill>
 <skill id="4366" levels="1" name="Blessing of Prophecy">
