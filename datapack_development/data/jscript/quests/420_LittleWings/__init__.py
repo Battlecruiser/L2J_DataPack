@@ -1,434 +1,615 @@
-# Maked by Mr. Have fun! Version 0.2
+# version 0.1 
+# by DrLecter
+
 print "importing quests: 420: Little Wings"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-Q_FAIRY_STONE_ID = 3816
-Q_FAIRY_STONE_DELUX_ID = 3817
-Q_LIST_OF_STUFF_FOR_FS_ID = 3818
-Q_LIST_OF_STUFF_FOR_FSD_ID = 3819
-COAL_ID = 1870
-CHARCOAL_ID = 1871
-GEMSTONE_D_ID = 2130
-SILVER_NUGGET_ID = 1873
-Q_INPICIOS_BACK_SKIN_ID = 3820
-GEMSTONE_C_ID = 2131
-STONE_OF_PURITY_ID = 1875
-Q_FAIRY_DUST_ID = 3499
-Q_JUICE_OF_MONKSHOOD_ID = 3821
-HATCHLINGS_SOFT_LEATHER_ID = 3912
-FOOD_FOR_HATCHLING_ID = 4038
-Q_EGG_OF_DRAKE_EXARION_ID = 3823
-Q_SCALE_OF_DRAKE_EXARION_ID = 3822
-Q_EGG_OF_DRAKE_ZWOV_ID = 3825
-Q_SCALE_OF_DRAKE_ZWOV_ID = 3824
-Q_SCALE_OF_DRAKE_KALIBRAN_ID = 3826
-Q_EGG_OF_DRAKE_KALIBRAN_ID = 3827
-Q_EGG_OF_WYRM_SUZET_ID = 3829
-Q_SCALE_OF_WYRM_SUZET_ID = 3828
-Q_EGG_OF_WYRM_SHAMHAI_ID = 3831
-Q_SCALE_OF_WYRM_SHAMHAI_ID = 3830
-DRAGONFLUTE_OF_WIND_ID = 3500
-DRAGONFLUTE_OF_STAR_ID = 3501
-DRAGONFLUTE_OF_TWILIGHT_ID = 3502
+# variables section
+REQUIRED_EGGS = 20
 
-class Quest (JQuest) :
+#Drop rates in %
+BACK_DROP = 30
+EGG_DROP  = 50
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+#Quest items
+FRY_STN      = 3816 
+FRY_STN_DLX  = 3817
+FSN_LIST     = 3818
+FSN_LIST_DLX = 3819
+TD_BCK_SKN   = 3820
+FRY_DUST     = 3499
+JUICE        = 3821 
 
- def onEvent (self,event,st) :
-    htmltext = event
-    if event == "1" :
-      st.set("cond","1")
-      st.setState(STARTED)
-      st.playSound("ItemSound.quest_accept")
-      htmltext = "7829-02.htm"
-      st.set("cond","1")
-    elif event == "7610_1" :
-      htmltext = "7610-02.htm"
-    elif event == "7610_2" :
-      htmltext = "7610-03.htm"
-    elif event == "7610_3" :
-      htmltext = "7610-04.htm"
-    elif event == "7610_4" :
-      st.giveItems(Q_LIST_OF_STUFF_FOR_FS_ID,1)
-      st.set("cond","2")
-      htmltext = "7610-05.htm"
-    elif event == "7610_5" :
-      st.giveItems(Q_LIST_OF_STUFF_FOR_FSD_ID,1)
-      st.set("cond","2")
-      htmltext = "7610-06.htm"
-    elif event == "7610_6" :
-      st.giveItems(Q_LIST_OF_STUFF_FOR_FS_ID,1)
-      st.set("cond","11")
-      htmltext = "7610-12.htm"
-    elif event == "7610_7" :
-      st.giveItems(Q_LIST_OF_STUFF_FOR_FSD_ID,1)
-      st.set("cond","11")
-      htmltext = "7610-13.htm"
-    elif event == "7711_1" :
-      htmltext = "7711-02.htm"
-    elif event == "7711_2" :
-      if st.getQuestItemsCount(Q_FAIRY_STONE_ID) == 1 :
-        st.set("cond","4")
-        htmltext = "7711-03.htm"
-      else:
-        st.set("cond","4")
-        htmltext = "7711-04.htm"
-    elif event == "7608_1" :
-        st.takeItems(Q_LIST_OF_STUFF_FOR_FS_ID,1)
-        st.takeItems(COAL_ID,10)
-        st.takeItems(CHARCOAL_ID,10)
-        st.takeItems(GEMSTONE_D_ID,1)
-        st.takeItems(SILVER_NUGGET_ID,3)
-        st.takeItems(Q_INPICIOS_BACK_SKIN_ID,st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID))
-        st.giveItems(Q_FAIRY_STONE_ID,1)
-        htmltext = "7608-03.htm"
-    elif event == "7608_2" :
-        st.takeItems(Q_LIST_OF_STUFF_FOR_FSD_ID,1)
-        st.takeItems(COAL_ID,10)
-        st.takeItems(CHARCOAL_ID,10)
-        st.takeItems(GEMSTONE_C_ID,1)
-        st.takeItems(STONE_OF_PURITY_ID,1)
-        st.takeItems(SILVER_NUGGET_ID,5)
-        st.takeItems(Q_INPICIOS_BACK_SKIN_ID,st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID))
-        st.giveItems(Q_FAIRY_STONE_DELUX_ID,1)
-        htmltext = "7608-05.htm"
-    elif event == "7747_1" :
-        st.takeItems(Q_FAIRY_STONE_ID,1)
-        st.set("cond","5")
-        htmltext = "7747-03.htm"
-    elif event == "7747_3" :
-      st.giveItems(Q_FAIRY_DUST_ID,1)
-      st.takeItems(Q_FAIRY_STONE_DELUX_ID,1)
-      st.set("cond","5")
-      htmltext = "7747-05.htm"
-    elif event == "7747_2" :
-      htmltext = "7747-06.htm"
-    elif event == "7747_4" :
-      st.giveItems(Q_JUICE_OF_MONKSHOOD_ID,1)
-      st.set("cond","6")
-      htmltext = "7747-08.htm"
-    elif event == "7747_5" :
-      if st.getQuestItemsCount(Q_FAIRY_DUST_ID) == 1 :
-        htmltext = "7747-13.htm"
-      else:
-        if st.getGameTicks() != int(st.get("id")) :
-          st.set("id",str(st.getGameTicks()))
-          n=st.getRandom(2)
-          if (n == 0) :
-            st.giveItems(DRAGONFLUTE_OF_WIND_ID,1)
-          elif (n == 1) :
-            st.giveItems(DRAGONFLUTE_OF_STAR_ID,1)
-          else :
-            st.giveItems(DRAGONFLUTE_OF_TWILIGHT_ID,1)
-          st.set("cond","0")
-          st.setState(COMPLETED)
-          st.playSound("ItemSound.quest_finish")
-          htmltext = "7747-16.htm"
-    elif event == "7747_7" :
-      if st.getGameTicks() != int(st.get("id")) :
-        st.set("id",str(st.getGameTicks()))
-        n=st.getRandom(2)
-        if (n == 0) :
-            st.giveItems(DRAGONFLUTE_OF_WIND_ID,1)
-        elif (n == 1) :
-            st.giveItems(DRAGONFLUTE_OF_STAR_ID,1)
-        else :
-            st.giveItems(DRAGONFLUTE_OF_TWILIGHT_ID,1)
-      st.set("cond","0")
-      st.setState(COMPLETED)
-      st.playSound("ItemSound.quest_finish")
-      htmltext = "7747-14.htm"
-    elif event == "7747_6" :
-      if st.getGameTicks() != int(st.get("id")) :
-        st.set("id",str(st.getGameTicks()))
-        st.set("cond","0")
-        st.setState(COMPLETED)
-        st.playSound("ItemSound.quest_finish")
-        if st.getQuestItemsCount(Q_FAIRY_DUST_ID) == 0 :
-          htmltext = "7747-14.htm"
-        else:
-          if int(st.get("id")) < 5 :
-            htmltext = "7747-15.htm"
-            st.giveItems(HATCHLINGS_SOFT_LEATHER_ID,1)
-          else:
-            htmltext = "7747-15t.htm"
-            st.giveItems(FOOD_FOR_HATCHLING_ID,20)
-            st.takeItems(Q_FAIRY_DUST_ID,1)
-    elif event == "7748_1" :
-        st.giveItems(Q_SCALE_OF_DRAKE_EXARION_ID,1)
-        st.takeItems(Q_JUICE_OF_MONKSHOOD_ID,1)
-        st.set("cond","7")
-        htmltext = "7748-03.htm"
-    elif event == "7749_1" :
-        st.giveItems(Q_SCALE_OF_DRAKE_ZWOV_ID,1)
-        st.takeItems(Q_JUICE_OF_MONKSHOOD_ID,1)
-        st.set("cond","7")
-        htmltext = "7749-03.htm"
-    elif event == "7750_1" :
-        st.giveItems(Q_SCALE_OF_DRAKE_KALIBRAN_ID,1)
-        st.takeItems(Q_JUICE_OF_MONKSHOOD_ID,1)
-        st.set("cond","7")
-        htmltext = "7750-03.htm"
-    elif event == "7750_2" :
-        st.takeItems(Q_EGG_OF_DRAKE_KALIBRAN_ID,st.getQuestItemsCount(Q_EGG_OF_DRAKE_KALIBRAN_ID))
-        st.takeItems(Q_SCALE_OF_DRAKE_KALIBRAN_ID,1)
-        st.giveItems(Q_EGG_OF_DRAKE_KALIBRAN_ID,1)
-        st.set("cond","8")
-        htmltext = "7750-06.htm"
-    elif event == "7751_1" :
-        htmltext = "7751-03.htm"
-    elif event == "7751_2" :
-        st.giveItems(Q_SCALE_OF_WYRM_SUZET_ID,1)
-        st.takeItems(Q_JUICE_OF_MONKSHOOD_ID,1)
-        st.set("cond","7")
-        htmltext = "7751-04.htm"
-    elif event == "7752_1" :
-        st.giveItems(Q_SCALE_OF_WYRM_SHAMHAI_ID,1)
-        st.takeItems(Q_JUICE_OF_MONKSHOOD_ID,1)
-        st.set("cond","7")
-        htmltext = "7752-03.htm"
-    return htmltext
+EX_EGG = 3823
+ZW_EGG = 3825
+KA_EGG = 3827
+SU_EGG = 3829
+SH_EGG = 3831
+
+SCALE_1 = 3822
+SCALE_2 = 3824
+SCALE_3 = 3826
+SCALE_4 = 3828
+SCALE_5 = 3830
 
 
- def onTalk (Self,npcId,st):
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   id = st.getState()
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
-   if npcId == 7829 and int(st.get("cond"))==0 and st.getPlayer().getLevel() >= 35 :
-     if int(st.get("cond")) < 15 :
-       htmltext = "7829-01.htm"
-       return htmltext
-     else:
-       htmltext = "7829-01.htm"
-   elif npcId == 7829 and int(st.get("cond"))==0 and st.getPlayer().getLevel() < 35 :
-       htmltext = "7829-03.htm"
-   elif npcId == 7829 and int(st.get("cond"))==1 :
-       htmltext = "7829-04.htm"
-   elif npcId == 7610 and int(st.get("cond"))==1 :
-       htmltext = "7610-01.htm"
-   elif npcId == 7610 and (int(st.get("cond"))==2 or int(st.get("cond"))==11) and st.getQuestItemsCount(Q_FAIRY_STONE_ID)==0 and st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==0 :
-       htmltext = "7610-07.htm"
-   elif npcId == 7610 and int(st.get("cond"))==2 and (st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 or st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1) :
-      st.set("cond","3")
-      htmltext = "7610-08.htm"
-   elif npcId == 7610 and int(st.get("cond"))==11 and (st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 or st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1) :
-      htmltext = "7610-14.htm"
-   elif npcId == 7610 and int(st.get("cond"))==3 :
-      htmltext = "7610-09.htm"
-   elif npcId == 7610 and int(st.get("cond"))==10 :
-      htmltext = "7610-10.htm"
-   elif npcId == 7610 and int(st.get("cond"))==4 and (st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 or st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1) :
-      htmltext = "7610-11.htm"
-   elif npcId == 7711 and int(st.get("cond"))==3 and (st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 or st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1) :
-      htmltext = "7711-01.htm"
-   elif npcId == 7711 and int(st.get("cond"))==11 and st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 :
-      st.set("cond","4")
-      htmltext = "7711-05.htm"
-   elif npcId == 7711 and int(st.get("cond"))==11 and st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1 :
-      st.set("cond","4")
-      htmltext = "7711-06.htm"
-   elif npcId == 7711 and int(st.get("cond"))==4 and st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 :
-      htmltext = "7711-07.htm"
-   elif npcId == 7711 and int(st.get("cond"))==4 and st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1 :
-      htmltext = "7711-08.htm"
-   elif npcId == 7711 and int(st.get("cond"))==10 :
-      htmltext = "7711-09.htm"
-   elif npcId == 7711 and int(st.get("cond"))==11 and st.getQuestItemsCount(Q_FAIRY_STONE_ID)==0 and st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==0 and (st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_ID)==1 or st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FSD_ID)==1) :
-      htmltext = "7711-10.htm"
-   elif npcId == 7608 and (int(st.get("cond"))==2 or int(st.get("cond"))==11) and ((st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_ID)==1 and (st.getQuestItemsCount(COAL_ID)<10 or st.getQuestItemsCount(CHARCOAL_ID)<10 or st.getQuestItemsCount(GEMSTONE_D_ID)==0 or st.getQuestItemsCount(SILVER_NUGGET_ID)<3 or st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID)<10)) or (st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FSD_ID)==1 and (st.getQuestItemsCount(COAL_ID)<10 or st.getQuestItemsCount(CHARCOAL_ID)<10 or st.getQuestItemsCount(GEMSTONE_C_ID)==0 or st.getQuestItemsCount(STONE_OF_PURITY_ID)==0 or st.getQuestItemsCount(SILVER_NUGGET_ID)<5 or st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID)<20))) :
-      htmltext = "7608-01.htm"
-   elif npcId == 7608 and (int(st.get("cond"))==2 or int(st.get("cond"))==11) and st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_ID)==1 and st.getQuestItemsCount(COAL_ID)>=10 and st.getQuestItemsCount(CHARCOAL_ID)>=10 and st.getQuestItemsCount(GEMSTONE_D_ID)>=1 and st.getQuestItemsCount(SILVER_NUGGET_ID)>=3 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID)>=10 :
-      htmltext = "7608-02.htm"
-   elif npcId == 7608 and (int(st.get("cond"))==2 or int(st.get("cond"))==11) and st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FSD_ID)==1 and st.getQuestItemsCount(COAL_ID)>=10 and st.getQuestItemsCount(CHARCOAL_ID)>=10 and st.getQuestItemsCount(GEMSTONE_C_ID)>=1 and st.getQuestItemsCount(STONE_OF_PURITY_ID)>=1 and st.getQuestItemsCount(SILVER_NUGGET_ID)>=5 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID)>=20 :
-      htmltext = "7608-04.htm"
-   elif npcId == 7608 and int(st.get("cond"))>=1 and (st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 or st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1) :
-      htmltext = "7608-06.htm"
-   elif npcId == 7747 and int(st.get("cond"))>=1 and st.getQuestItemsCount(Q_FAIRY_STONE_ID)==1 :
-      htmltext = "7747-02.htm"
-   elif npcId == 7747 and int(st.get("cond"))>=1 and st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==1 :
-      htmltext = "7747-04.htm"
-   elif npcId == 7747 and int(st.get("cond"))==5 :
-      htmltext = "7747-07.htm"
-   elif npcId == 7747 and int(st.get("cond"))==6 and st.getQuestItemsCount(Q_JUICE_OF_MONKSHOOD_ID)==1 :
-      htmltext = "7747-09.htm"
-   elif npcId == 7747 and int(st.get("cond"))==7 :
-     if st.getQuestItemsCount(Q_EGG_OF_DRAKE_EXARION_ID) < 20 and st.getQuestItemsCount(Q_EGG_OF_DRAKE_ZWOV_ID) < 20 and st.getQuestItemsCount(Q_EGG_OF_DRAKE_KALIBRAN_ID) < 20 and st.getQuestItemsCount(Q_EGG_OF_WYRM_SUZET_ID) < 20 and st.getQuestItemsCount(Q_EGG_OF_WYRM_SHAMHAI_ID) < 20 :
-       htmltext = "7747-10.htm"
-     else:
-       htmltext = "7747-11.htm"
-   elif npcId == 7747 and int(st.get("cond"))==8 :
-     htmltext = "7747-12.htm"
-#   elif npcId == 7747 and int(st.get("cond"))==0 or (int(st.get("cond"))<4 or int(st.get("cond"))>8) and (st.getQuestItemsCount(Q_FAIRY_STONE_ID)==0 and st.getQuestItemsCount(Q_FAIRY_STONE_DELUX_ID)==0) :
-#     n = n0+1
-#     n = n0%3
-#     if n0 == 0 :
-#     elif n0 == 1 :
-#     else:
-   elif npcId == 7748 and int(st.get("cond"))==6 and st.getQuestItemsCount(Q_JUICE_OF_MONKSHOOD_ID)==1 :
-       htmltext = "7748-02.htm"
-   elif npcId == 7748 and int(st.get("cond"))==7 and st.getQuestItemsCount(Q_EGG_OF_DRAKE_EXARION_ID)<20 and st.getQuestItemsCount(Q_SCALE_OF_DRAKE_EXARION_ID)==1 :
-     htmltext = "7748-04.htm"
-   elif npcId == 7748 and int(st.get("cond"))>=1 and st.getQuestItemsCount(Q_EGG_OF_DRAKE_EXARION_ID)==20 :
-     st.takeItems(Q_EGG_OF_DRAKE_EXARION_ID,st.getQuestItemsCount(Q_EGG_OF_DRAKE_EXARION_ID))
-     st.takeItems(Q_SCALE_OF_DRAKE_EXARION_ID,1)
-     st.giveItems(Q_EGG_OF_DRAKE_EXARION_ID,1)
-     st.set("cond","8")
-     htmltext = "7748-05.htm"
-   elif npcId == 7748 and int(st.get("cond"))==8 and st.getQuestItemsCount(Q_EGG_OF_DRAKE_EXARION_ID)==1 :
-     htmltext = "7748-06.htm"
-   elif npcId == 7749 and int(st.get("cond"))==6 and st.getQuestItemsCount(Q_JUICE_OF_MONKSHOOD_ID)==1 :
-     htmltext = "7749-02.htm"
-   elif npcId == 7749 and int(st.get("cond"))==7 and st.getQuestItemsCount(Q_EGG_OF_DRAKE_ZWOV_ID)<20 and st.getQuestItemsCount(Q_SCALE_OF_DRAKE_ZWOV_ID)==1 :
-     htmltext = "7749-04.htm"
-   elif npcId == 7749 and int(st.get("cond"))>=1 and st.getQuestItemsCount(Q_EGG_OF_DRAKE_ZWOV_ID)==20 :
-     st.takeItems(Q_EGG_OF_DRAKE_ZWOV_ID,st.getQuestItemsCount(Q_EGG_OF_DRAKE_ZWOV_ID))
-     st.takeItems(Q_SCALE_OF_DRAKE_ZWOV_ID,1)
-     st.giveItems(Q_EGG_OF_DRAKE_ZWOV_ID,1)
-     st.set("cond","8")
-     htmltext = "7749-05.htm"
-   elif npcId == 7749 and int(st.get("cond"))==8 and st.getQuestItemsCount(Q_EGG_OF_DRAKE_ZWOV_ID)==1 :
-     htmltext = "7749-06.htm"
-   elif npcId == 7750 and int(st.get("cond"))==6 and st.getQuestItemsCount(Q_JUICE_OF_MONKSHOOD_ID)==1 :
-     htmltext = "7750-02.htm"
-   elif npcId == 7750 and int(st.get("cond"))==7 and st.getQuestItemsCount(Q_EGG_OF_DRAKE_KALIBRAN_ID)<20 and st.getQuestItemsCount(Q_SCALE_OF_DRAKE_KALIBRAN_ID)==1 :
-     htmltext = "7750-04.htm"
-   elif npcId == 7750 and int(st.get("cond"))>=1 and st.getQuestItemsCount(Q_EGG_OF_DRAKE_KALIBRAN_ID)==20 :
-     htmltext = "7750-05.htm"
-   elif npcId == 7750 and int(st.get("cond"))==8 and st.getQuestItemsCount(Q_EGG_OF_DRAKE_KALIBRAN_ID)==1 :
-     htmltext = "7750-07.htm"
-   elif npcId == 7751 and int(st.get("cond"))==6 and st.getQuestItemsCount(Q_JUICE_OF_MONKSHOOD_ID)==1 :
-     htmltext = "7751-02.htm"
-   elif npcId == 7751 and int(st.get("cond"))==7 and st.getQuestItemsCount(Q_EGG_OF_WYRM_SUZET_ID)<20 and st.getQuestItemsCount(Q_SCALE_OF_WYRM_SUZET_ID)==1 :
-     htmltext = "7751-05.htm"
-   elif npcId == 7751 and int(st.get("cond"))>=1 and st.getQuestItemsCount(Q_EGG_OF_WYRM_SUZET_ID)==20 :
-     st.takeItems(Q_EGG_OF_WYRM_SUZET_ID,st.getQuestItemsCount(Q_EGG_OF_WYRM_SUZET_ID))
-     st.takeItems(Q_SCALE_OF_WYRM_SUZET_ID,1)
-     st.giveItems(Q_EGG_OF_WYRM_SUZET_ID,1)
-     st.set("cond","8")
-     htmltext = "7751-06.htm"
-   elif npcId == 7751 and int(st.get("cond"))==8 and st.getQuestItemsCount(Q_EGG_OF_WYRM_SUZET_ID)==1 :
-     htmltext = "7751-07.htm"
-   elif npcId == 7752 and int(st.get("cond"))==6 and st.getQuestItemsCount(Q_JUICE_OF_MONKSHOOD_ID)==1 :
-     htmltext = "7752-02.htm"
-   elif npcId == 7752 and int(st.get("cond"))==7 and st.getQuestItemsCount(Q_EGG_OF_WYRM_SHAMHAI_ID)<20 and st.getQuestItemsCount(Q_SCALE_OF_WYRM_SHAMHAI_ID)==1 :
-     htmltext = "7752-04.htm"
-   elif npcId == 7752 and int(st.get("cond"))>=1 and st.getQuestItemsCount(Q_EGG_OF_WYRM_SHAMHAI_ID)==20 :
-     st.takeItems(Q_EGG_OF_WYRM_SHAMHAI_ID,st.getQuestItemsCount(Q_EGG_OF_WYRM_SHAMHAI_ID))
-     st.takeItems(Q_SCALE_OF_WYRM_SHAMHAI_ID,1)
-     st.giveItems(Q_EGG_OF_WYRM_SHAMHAI_ID,1)
-     st.set("cond","8")
-     htmltext = "7752-05.htm"
-   elif npcId == 7752 and int(st.get("cond"))==8 and st.getQuestItemsCount(Q_EGG_OF_WYRM_SHAMHAI_ID)==1 :
-     htmltext = "7752-06.htm"
-   return htmltext
+#NPCs
+PM_COOPER = 7829
+SG_CRONOS = 7610
+GD_BYRON  = 7711
+MC_MARIA  = 7608
+FR_MYMYU  = 7747
 
- def onKill (self,npcId,st):
-   if npcId == 231 :
-    if int(st.get("cond")) >= 1 and ((st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FS_ID) == 1 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID) < 10) or (st.getQuestItemsCount(Q_LIST_OF_STUFF_FOR_FSD_ID) == 1 and st.getQuestItemsCount(Q_INPICIOS_BACK_SKIN_ID) < 20)) :
-      if st.getRandom(100) < 30 :
-        st.giveItems(Q_INPICIOS_BACK_SKIN_ID,1)
-        st.playSound("ItemSound.quest_middle")
-   elif npcId == 580 :
-     if int(st.get("cond")) >= 1 and st.getQuestItemsCount(Q_SCALE_OF_DRAKE_EXARION_ID) == 1 :
-       if st.getQuestItemsCount(Q_EGG_OF_DRAKE_EXARION_ID) < 20 and st.getRandom(100) < 50 :
-         st.giveItems(Q_EGG_OF_DRAKE_EXARION_ID,1)
-         st.playSound("ItemSound.quest_middle")
-   elif npcId == 233 :
-     if int(st.get("cond")) >= 1 and st.getQuestItemsCount(Q_SCALE_OF_DRAKE_ZWOV_ID) == 1 :
-       if st.getQuestItemsCount(Q_EGG_OF_DRAKE_ZWOV_ID) < 20 and st.getRandom(100) < 50 :
-         #st.giveItems(Q_SCALE_OF_DRAKE_ZWOV_ID,1)
-         st.giveItems(Q_EGG_OF_DRAKE_ZWOV_ID,1)
-         st.playSound("ItemSound.quest_middle")
-   elif npcId == 551 :
-     if int(st.get("cond")) >= 1 and st.getQuestItemsCount(Q_SCALE_OF_DRAKE_KALIBRAN_ID) == 1 :
-       if st.getQuestItemsCount(Q_EGG_OF_DRAKE_KALIBRAN_ID) < 20 and st.getRandom(100) < 50 :
-         st.giveItems(Q_EGG_OF_DRAKE_KALIBRAN_ID,1)
-         st.playSound("ItemSound.quest_middle")
-   elif npcId == 270 :
-     if int(st.get("cond")) >= 1 and st.getQuestItemsCount(Q_SCALE_OF_WYRM_SUZET_ID) == 1 :
-       if st.getQuestItemsCount(Q_EGG_OF_WYRM_SUZET_ID) < 20 and st.getRandom(100) < 50 :
-         st.giveItems(Q_EGG_OF_WYRM_SUZET_ID,1)
-         st.playSound("ItemSound.quest_middle")
-   elif npcId == 202 :
-     if int(st.get("cond")) >= 1 and st.getQuestItemsCount(Q_SCALE_OF_WYRM_SHAMHAI_ID) == 1 :
-       if st.getQuestItemsCount(Q_EGG_OF_WYRM_SHAMHAI_ID) < 20 and st.getRandom(100) < 50 :
-         st.giveItems(Q_EGG_OF_WYRM_SHAMHAI_ID,1)
-         st.playSound("ItemSound.quest_middle")
-#         st.giveItems(Q_SCALE_OF_WYRM_SHAMHAI_ID,1)
-#   elif npcId == 589 or npcId == 590 or npcId == 591 or npcId == 592 or npcId == 593 or npcId == 594 or npcId == 595 or npcId == 596 or npcId == 597 or npcId == 598 or npcId == 599:
-#     if int(st.get("cond")) >= 1 :
-#       st.giveItems(,1)
-   return
+DK_EXARION  = 7748
+DK_ZWOV     = 7749
+DK_KALIBRAN = 7750
+WM_SUZET    = 7751
+WM_SHAMHAI  = 7752
 
-QUEST       = Quest(420,"420_LittleWings","Little Wings")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
+#mobs
+TD_LORD   = 231 #toad lord
+LO_LZRD_W = 580 #exarion's
+MS_SPIDER = 233 #zwov's
+RD_SCVNGR = 551 #kalibran's
+BO_OVERLD = 270 #suzet's
+DD_SEEKER = 202 #shamhai's
+
+#enchant valley 
+FLINE     = 589
+FLINE_LDR = 595
+LIELE     = 590
+LIELE_LDR = 596
+FORST_RNR = 594
+SATYR     = 592
+UNICORN   = 593
+VLY_TRNT  = 591
+VLY_T_LDR = 597
+SATYR_LDR = 598
+UNICO_LDR = 599
+FRY_QN    = 719
+
+#Rewards
+FLT_OF_WIND = 3500
+FLT_OF_STAR = 3501
+FLT_OF_TWIL = 3502
+FOOD        = 4038
+ARMOR       = 3912
+
+# helper functions section
+def check_level(st) :
+  if st.getPlayer().getLevel() < 35 :
+    st.exitQuest(True)
+    return "420_low_level.htm"
+  return "Start.htm"
+
+def check_stone(st) :
+    progress = int(st.get("progress"))
+    if st.getQuestItemsCount(FRY_STN) == 1 :
+       st.set("cond","3") 
+       if progress == 1 :
+          st.set("progress","3")
+          return "420_cronos_8.htm"
+       elif progress == 8 :
+          st.set("progress","10")
+          return "420_cronos_14.htm"
+    elif st.getQuestItemsCount(FRY_STN_DLX) == 1 :
+       if progress == 2 :
+          st.set("progress","4")
+          return "420_cronos_8.htm"
+       elif progress == 9 :
+          st.set("progress","11")
+          return "420_cronos_14.htm"
+    else :
+       return "420_cronos_7.htm"
+
+def check_elements(st) :
+  progress  = int(st.get("progress"))
+  coal  = st.getQuestItemsCount(1870)
+  char  = st.getQuestItemsCount(1871)
+  gemd  = st.getQuestItemsCount(2130)
+  gemc  = st.getQuestItemsCount(2131)
+  snug  = st.getQuestItemsCount(1873)
+  sofp  = st.getQuestItemsCount(1875)
+  tdbk  = st.getQuestItemsCount(TD_BCK_SKN)
+  
+  if progress == 1 or progress == 8 :
+     if coal >= 10 and char >= 10 and gemd >= 1 and snug >= 3 and tdbk >= 10 :
+        return "420_maria_2.htm"
+     else :
+        return "420_maria_1.htm"
+  elif progress == 2 or progress == 9 :
+     if coal >= 10 and char >= 10 and gemc >= 1 and snug >= 5 and sofp >= 1 and tdbk >= 20 :
+        return "420_maria_4.htm"
+     else :
+        return "420_maria_1.htm"
+
+
+def craft_stone(st) :
+    progress = int(st.get("progress"))
+    if progress == 1 or progress == 8:
+       st.takeItems(1870,10)
+       st.takeItems(1871,10)
+       st.takeItems(2130,1)
+       st.takeItems(1873,3)
+       st.takeItems(TD_BCK_SKN,10)
+       st.takeItems(FSN_LIST,1) 
+       st.giveItems(FRY_STN,1)
+       st.playSound("ItemSound.quest_itemget")
+       return "420_maria_3.htm"
+    elif progress == 2 or progress == 9:
+       st.takeItems(1870,10)
+       st.takeItems(1871,10)
+       st.takeItems(2131,1)
+       st.takeItems(1873,5)
+       st.takeItems(1875,1)
+       st.takeItems(TD_BCK_SKN,20)
+       st.takeItems(FSN_LIST_DLX,1) 
+       st.giveItems(FRY_STN_DLX,1)
+       st.playSound("ItemSound.quest_itemget")
+       return "420_maria_5.htm"
+
+def check_eggs(st, npc) :
+    progress = int(st.get("progress"))
+    whom = int(st.get("dragon"))
+    if   whom == 1 : eggs = EX_EGG
+    elif whom == 2 : eggs = ZW_EGG
+    elif whom == 3 : eggs = KA_EGG
+    elif whom == 4 : eggs = SU_EGG
+    elif whom == 5 : eggs = SH_EGG
+    if npc == "mymyu" :
+       if progress == 19 or progress == 20 and st.getQuestItemsCount(eggs) == 1 :
+          return "420_"+npc+"_10.htm"
+       else :
+          if st.getQuestItemsCount(eggs) >= 20 :
+             return "420_"+npc+"_9.htm"
+          else : 
+             return "420_"+npc+"_8.htm"
+    elif npc == "exarion" and whom == 1 :
+       if st.getQuestItemsCount(eggs) < 20 :
+          return "420_"+npc+"_3.htm"
+       else :
+          st.takeItems(eggs,20)
+          st.takeItems(SCALE_1,1)
+          if progress == 14 or progress == 21 :
+             st.set("progress","19")
+          elif progress == 15 or progress == 22 :
+             st.set("progress","20") 
+          st.giveItems(eggs,1)
+          st.playSound("ItemSound.quest_itemget")
+          st.set("cond","7")
+          return "420_"+npc+"_4.htm"
+    elif npc == "zwov" and whom == 2 :
+       if st.getQuestItemsCount(eggs) < 20 :
+          return "420_"+npc+"_3.htm"
+       else :
+          st.takeItems(eggs,20)
+          st.takeItems(SCALE_2,1)
+          if progress == 14 or progress == 21 :
+             st.set("progress","19")
+          elif progress == 15 or progress == 22 :
+             st.set("progress","20") 
+          st.giveItems(eggs,1)
+          st.set("cond","7")
+          st.playSound("ItemSound.quest_itemget")
+          return "420_"+npc+"_4.htm"
+    elif npc == "kalibran" and whom == 3 :
+       if st.getQuestItemsCount(eggs) < 20 :
+          return "420_"+npc+"_3.htm"
+       else :
+          st.takeItems(eggs,20)
+          st.takeItems(SCALE_3,1)
+          return "420_"+npc+"_4.htm"
+    elif npc == "suzet" and whom == 4 :
+       if st.getQuestItemsCount(eggs) < 20 :
+          return "420_"+npc+"_4.htm"
+       else :
+          st.takeItems(eggs,20)
+          st.takeItems(SCALE_4,1)
+          if progress == 14 or progress == 21 :
+             st.set("progress","19")
+          elif progress == 15 or progress == 22 :
+             st.set("progress","20") 
+          st.giveItems(eggs,1)
+          st.set("cond","7")
+          st.playSound("ItemSound.quest_itemget")
+          return "420_"+npc+"_5.htm"
+    elif npc == "shamhai" and whom == 5 :
+       if st.getQuestItemsCount(eggs) < 20 :
+          return "420_"+npc+"_3.htm"
+       else :
+          st.takeItems(eggs,20)
+          st.takeItems(SCALE_5,1)
+          if progress == 14 or progress == 21 :
+             st.set("progress","19")
+          elif progress == 15 or progress == 22 :
+             st.set("progress","20") 
+          st.giveItems(eggs,1)
+          st.set("cond","7")
+          st.playSound("ItemSound.quest_itemget")
+          return "420_"+npc+"_4.htm"
+    return "check_eggs sux"
+
+def random_flute(st) :
+    luck = st.getRandom(2)
+    if   luck == 0 : flute = FLT_OF_WIND
+    elif luck == 1 : flute = FLT_OF_TWIL
+    elif luck == 2 : flute = FLT_OF_STAR
+    return flute
+
+
+# Main Quest Code
+class Quest (JQuest):
+  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+  
+  def onEvent (self,event,st):
+    id   = st.getState()
+    if id != CREATED : progress = int(st.get("progress"))
+    if id == CREATED :
+      if event == "ido" :
+         st.setState(STARTING)
+         st.set("progress","0")
+         st.set("cond","1")
+         st.set("dragon","0")
+         st.playSound("ItemSound.quest_accept")
+         return "Starting.htm"
+    elif id == STARTING :
+         if event == "wait" :
+            return craft_stone(st)
+         elif event == "cronos_2" :
+            return "420_cronos_2.htm" 
+         elif event == "cronos_3" :
+            return "420_cronos_3.htm" 
+         elif event == "cronos_4" :
+            return "420_cronos_4.htm" 
+         elif event == "fsn" :
+            st.set("cond","2") 
+            if progress == 0:
+               st.set("progress","1")
+               st.giveItems(FSN_LIST,1)
+               st.playSound("ItemSound.quest_itemget")
+               return "420_cronos_5.htm"
+            elif progress == 7:
+               st.set("progress","8")
+               st.giveItems(FSN_LIST,1)
+               st.playSound("ItemSound.quest_itemget")
+               return "420_cronos_12.htm"
+         elif event == "fsn_dlx" :
+            st.set("cond","2") 
+            if progress == 0:
+               st.set("progress","2")
+               st.giveItems(FSN_LIST_DLX,1)
+               st.playSound("ItemSound.quest_itemget")
+               return "420_cronos_6.htm"
+            if progress == 7:
+               st.set("progress","9")
+               st.giveItems(FSN_LIST_DLX,1)
+               st.playSound("ItemSound.quest_itemget")
+               return "420_cronos_13.htm"
+         elif event == "showfsn" :
+            return "420_byron_2.htm"
+         elif event == "askmore" :
+            st.set("cond","4") 
+            if progress == 3 :
+               st.set("progress","5")
+               return "420_byron_3.htm"
+            elif progress == 4 :
+               st.set("progress","6")
+               return "420_byron_4.htm"
+         elif event == "give_fsn" :
+            st.takeItems(FRY_STN,1)
+            return "420_mymyu_2.htm"
+         elif event == "give_fsn_dlx" :
+            st.takeItems(FRY_STN_DLX,1)
+            st.giveItems(FRY_DUST,1)
+            st.playSound("ItemSound.quest_itemget")
+            return "420_mymyu_4.htm"
+         elif event == "fry_ask" :
+            return "420_mymyu_5.htm"
+         elif event == "ask_abt" :
+            st.setState(STARTED)
+            st.set("cond","5")
+            st.giveItems(JUICE,1)
+            st.playSound("ItemSound.quest_itemget")
+            return "420_mymyu_6.htm"
+    elif id == STARTED :
+         if event == "exarion_1" :
+             st.giveItems(SCALE_1,1)
+             st.playSound("ItemSound.quest_itemget")
+             st.set("dragon","1")
+             st.set("cond","6")
+             st.set("progress",str(progress+9)) 
+             return "420_exarion_2.htm"
+         elif event == "kalibran_1" :
+             st.set("dragon","3")
+             st.set("cond","6")
+             st.giveItems(SCALE_3,1)
+             st.playSound("ItemSound.quest_itemget")
+             st.set("progress",str(progress+9))
+             return "420_kalibran_2.htm"
+         elif event == "kalibran_2" :
+             if progress == 14 or progress == 21 :
+                st.set("progress","19")
+             elif progress == 15 or progress == 22 :
+                st.set("progress","20")
+             st.takeItems(SCALE_3,1)   
+             st.giveItems(KA_EGG,1)
+             st.set("cond","7")
+             st.playSound("ItemSound.quest_itemget")
+             return "420_kalibran_5.htm"
+         elif event == "zwov_1" :
+             st.set("dragon","2")
+             st.set("cond","6")
+             st.giveItems(SCALE_2,1)
+             st.playSound("ItemSound.quest_itemget")
+             st.set("progress",str(progress+9))
+             return "420_zwov_2.htm"
+         elif event == "shamhai_1" :
+             st.set("dragon","5")
+             st.set("cond","6")
+             st.giveItems(SCALE_5,1)
+             st.playSound("ItemSound.quest_itemget")
+             st.set("progress",str(progress+9))
+             return "420_shamhai_2.htm"
+         elif event == "suzet_1" :
+             return "420_suzet_2.htm"
+         elif event == "suzet_2" :
+             st.set("dragon","4")
+             st.set("cond","6")
+             st.giveItems(SCALE_4,1)
+             st.playSound("ItemSound.quest_itemget")
+             st.set("progress",str(progress+9))
+             return "420_suzet_3.htm"
+         elif event == "hatch" :
+              st.set("cond","8")
+              whom = int(st.get("dragon"))
+              if   whom == 1 : eggs = EX_EGG
+              elif whom == 2 : eggs = ZW_EGG
+              elif whom == 3 : eggs = KA_EGG
+              elif whom == 4 : eggs = SU_EGG
+              elif whom == 5 : eggs = SH_EGG
+              st.takeItems(eggs,1)
+              flute = random_flute(st)
+              if progress == 19 :
+                 st.giveItems(flute,1)
+                 st.setState(COMPLETED)
+                 st.clearQuestDrops()
+                 st.exitQuest(True)
+                 st.playSound("ItemSound.quest_finish")
+                 return "420_mymyu_15.htm"
+              elif progress == 20 :
+                 return "420_mymyu_11.htm"
+         elif event == "give_dust" :
+              st.takeItems(FRY_DUST,1)
+              flute = random_flute(st)
+              luck = st.getRandom(2)
+              if luck == 0 :
+                 extra = ARMOR
+                 htmltext = "420_mymyu_13.htm"
+              else :
+                 extra = FOOD
+                 htmltext = "420_mymyu_14.htm"
+              st.giveItems(flute,1)
+              st.giveItems(extra,1)
+              st.setState(COMPLETED)
+              st.clearQuestDrops()
+              st.exitQuest(True)
+              st.playSound("ItemSound.quest_finish")
+              return htmltext
+         elif event == "no_dust" :
+              flute = random_flute(st)
+              st.giveItems(flute,1)
+              st.setState(COMPLETED)
+              st.clearQuestDrops()
+              st.exitQuest(True)
+              st.playSound("ItemSound.quest_finish")
+              return "420_mymyu_12.htm"
+
+
+  def onTalk (self,npcid,st):
+    id   = st.getState()
+    if id != CREATED : progress = int(st.get("progress"))
+    if npcid == PM_COOPER :
+      if id == CREATED :
+        return check_level(st)
+      elif id == STARTING and progress == 0 :
+        return "Starting.htm"
+      else :
+        return "Started.htm"
+    elif npcid == SG_CRONOS :
+      if id == STARTING :
+         if progress == 0 :
+            return "420_cronos_1.htm"
+         elif progress in [ 1,2,8,9 ] :
+            return check_stone(st)
+         elif progress in [ 3,4,10,11 ] :
+            return "420_cronos_9.htm"
+         elif progress in  [5,6,12,13 ]:
+            return "420_cronos_11.htm"
+         elif progress == 7 :
+            return "420_cronos_10.htm"
+
+    elif npcid == MC_MARIA :
+      if id == STARTING :
+         if ((progress in [ 1,8 ] )  and st.getQuestItemsCount(FSN_LIST)==1) or ((progress in [ 2,9 ] ) and st.getQuestItemsCount(FSN_LIST_DLX)==1):
+            return check_elements(st)
+         elif progress in [ 3,4,5,6,7,10,11 ] :
+            return "420_maria_6.htm"
+    elif npcid == GD_BYRON :
+       if id == STARTING :
+          if ((progress in [ 1,8 ] )  and st.getQuestItemsCount(FSN_LIST)==1) or ((progress in [ 2,9 ] ) and st.getQuestItemsCount(FSN_LIST_DLX)==1):
+             return "420_byron_10.htm"
+          elif progress == 7 :
+             return "420_byron_9.htm"
+          elif (progress == 3 and st.getQuestItemsCount(FRY_STN)==1) or (progress == 4  and st.getQuestItemsCount(FRY_STN_DLX)==1):
+             return "420_byron_1.htm"
+          elif progress == 10  and st.getQuestItemsCount(FRY_STN)==1 :
+              st.set("progress","12")
+              return "420_byron_5.htm"
+          elif progress == 11  and st.getQuestItemsCount(FRY_STN_DLX)==1 :
+              st.set("progress","13")
+              return "420_byron_6.htm"
+          elif progress == 5 or progress == 12 :
+             return "420_byron_7.htm"
+          elif progress == 6 or progress == 13 :
+             return "420_byron_8.htm"
+    elif npcid == FR_MYMYU :
+       if id == STARTING :
+          if ( progress == 5 or progress == 12 ) and st.getQuestItemsCount(FRY_STN) == 1 :
+             return "420_mymyu_1.htm"
+          elif ( progress == 6 or progress == 13 ) and st.getQuestItemsCount(FRY_STN_DLX) == 1 :
+             return "420_mymyu_3.htm"
+       elif id == STARTED :
+          if progress < 14 and st.getQuestItemsCount(JUICE) == 1  :
+             return "420_mymyu_7.htm"
+          elif progress > 13 :
+             return check_eggs(st,"mymyu")
+    elif npcid == DK_EXARION :
+       if id == STARTED :
+          if progress in [ 5,6,12,13 ] and st.getQuestItemsCount(JUICE) == 1:
+             st.takeItems(JUICE,1) 
+             return "420_exarion_1.htm"
+          elif progress > 13 and st.getQuestItemsCount(SCALE_1) == 1:
+              return check_eggs(st,"exarion")
+          elif progress in [ 19,20 ] and st.getQuestItemsCount(EX_EGG) == 1 :
+              return "420_exarion_5.htm"
+    elif npcid == DK_ZWOV :
+       if id == STARTED :
+          if progress in [ 5,6,12,13 ]  and st.getQuestItemsCount(JUICE) == 1:
+             st.takeItems(JUICE,1)  
+             return "420_zwov_1.htm"
+          elif progress > 13 and st.getQuestItemsCount(SCALE_2) == 1:
+              return check_eggs(st,"zwov")
+          elif progress in [ 19,20 ] and st.getQuestItemsCount(ZW_EGG) == 1 :
+              return "420_zwov_5.htm"
+    elif npcid == DK_KALIBRAN :
+       if id == STARTED :
+          if progress in [ 5,6,12,13 ] and st.getQuestItemsCount(JUICE) == 1:
+             st.takeItems(JUICE,1)  
+             return "420_kalibran_1.htm"
+          elif progress > 13 and st.getQuestItemsCount(SCALE_3) == 1:
+              return check_eggs(st,"kalibran")
+          elif progress in [ 19,20 ] and st.getQuestItemsCount(KA_EGG) == 1 :
+              return "420_kalibran_6.htm"
+    elif npcid == WM_SUZET :
+       if id == STARTED :
+          if progress in [ 5,6,12,13 ] and st.getQuestItemsCount(JUICE) == 1:
+             st.takeItems(JUICE,1)  
+             return "420_suzet_1.htm"
+          elif progress > 13 and st.getQuestItemsCount(SCALE_4) == 1:
+              return check_eggs(st,"suzet")
+          elif progress in [ 19,20 ] and st.getQuestItemsCount(SU_EGG) == 1 :
+              return "420_suzet_6.htm"
+    elif npcid == WM_SHAMHAI :
+       if id == STARTED :
+          if progress in [ 5,6,12,13 ] and st.getQuestItemsCount(JUICE) == 1:
+             st.takeItems(JUICE,1)  
+             return "420_shamhai_1.htm"
+          elif progress > 13 and st.getQuestItemsCount(SCALE_5) == 1:
+              return check_eggs(st,"shamhai")
+          elif progress in [ 19,20 ] and st.getQuestItemsCount(SH_EGG) == 1 :
+              return "420_shamhai_5.htm"
+    return "<html><head><body>I have nothing to say to you</body></html>"
+
+  def onKill (self,npcid,st):
+    id   = st.getState()
+  #incipios drop
+    if id == STARTING and (st.getQuestItemsCount(FSN_LIST) == 1 and st.getQuestItemsCount(TD_BCK_SKN) < 10) or (st.getQuestItemsCount(FSN_LIST_DLX) == 1 and st.getQuestItemsCount(TD_BCK_SKN) < 20) :
+      if npcid ==  TD_LORD :
+        if st.getRandom(100) < BACK_DROP :
+           st.giveItems(TD_BCK_SKN,1)
+           st.playSound("ItemSound.quest_middle")
+  #dragon detection
+    elif id == STARTED and (st.get("progress") in [ "14","15","21","22" ]) :
+      whom = int(st.get("dragon"))
+      if whom == 1 :
+         eggs = EX_EGG
+         scale = SCALE_1
+         eggdropper = LO_LZRD_W
+      elif whom == 2 :
+         eggs = ZW_EGG
+         scale = SCALE_2
+         eggdropper = MS_SPIDER
+      elif whom == 3 :
+         eggs = KA_EGG
+         scale = SCALE_3
+         eggdropper = RD_SCVNGR
+      elif whom == 4 :
+         eggs = SU_EGG
+         scale = SCALE_4
+         eggdropper = BO_OVERLD
+      elif whom == 5 :
+         eggs = SH_EGG
+         scale = SCALE_5
+         eggdropper = DD_SEEKER
+      if st.getQuestItemsCount(scale) == 1 and st.getQuestItemsCount(eggs) < REQUIRED_EGGS :
+         if npcid == eggdropper :
+            if st.getRandom(100) < EGG_DROP :
+               st.giveItems(eggs,1)
+               st.playSound("ItemSound.quest_middle")
+  #fairy stone destruction    
+    elif id == STARTING and st.getQuestItemsCount(FRY_STN_DLX) == 1 :
+      if (589 <= npcid <= 599) or npcid == FRY_QN :
+         st.takeItems(FRY_STN_DLX,1)
+         st.set("progress","7")
+         return "you lost fairy stone deluxe!"
+            
+
+
+# Quest class and state definition
+QUEST       = Quest(420, "420_LittleWings", "Little Wings")
+CREATED     = State('Start',     QUEST)
+STARTING    = State('Starting',  QUEST)
+STARTED     = State('Started',   QUEST)
 COMPLETED   = State('Completed', QUEST)
 
-
+# Quest initialization
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7829)
-QUEST.addStartNpc(7747)
+# Quest NPC starter initialization
+QUEST.addStartNpc(PM_COOPER)
+# Quest Item Drop initialization
+STARTING.addQuestDrop(TD_LORD,TD_BCK_SKN,1)
 
-STARTED.addTalkId(7608)
-STARTED.addTalkId(7610)
-STARTED.addTalkId(7711)
-STARTED.addTalkId(7747)
-STARTED.addTalkId(7748)
-STARTED.addTalkId(7749)
-STARTED.addTalkId(7750)
-STARTED.addTalkId(7751)
-STARTED.addTalkId(7752)
-STARTED.addTalkId(7829)
+STARTED.addQuestDrop(LO_LZRD_W,EX_EGG,1)
+STARTED.addQuestDrop(RD_SCVNGR,KA_EGG,1)
+STARTED.addQuestDrop(MS_SPIDER,ZW_EGG,1)
+STARTED.addQuestDrop(DD_SEEKER,SH_EGG,1)
+STARTED.addQuestDrop(BO_OVERLD,SU_EGG,1)
+# Quest mob initialization
+#back skins
+STARTING.addKillId(TD_LORD)
+#fairy stone dlx destroyers
+STARTING.addKillId(FLINE)
+STARTING.addKillId(FLINE_LDR)
+STARTING.addKillId(LIELE)
+STARTING.addKillId(LIELE_LDR)
+STARTING.addKillId(FORST_RNR)
+STARTING.addKillId(SATYR)
+STARTING.addKillId(SATYR_LDR)
+STARTING.addKillId(UNICORN)
+STARTING.addKillId(UNICO_LDR)
+STARTING.addKillId(VLY_TRNT)
+STARTING.addKillId(VLY_T_LDR)
+STARTING.addKillId(FRY_QN)
+#eggs
+STARTED.addKillId(LO_LZRD_W)
+STARTED.addKillId(RD_SCVNGR)
+STARTED.addKillId(MS_SPIDER)
+STARTED.addKillId(DD_SEEKER)
+STARTED.addKillId(BO_OVERLD)
 
-STARTED.addKillId(202)
-STARTED.addKillId(231)
-STARTED.addKillId(233)
-STARTED.addKillId(270)
-STARTED.addKillId(551)
-STARTED.addKillId(580)
-STARTED.addKillId(589)
-STARTED.addKillId(590)
-STARTED.addKillId(591)
-STARTED.addKillId(592)
-STARTED.addKillId(593)
-STARTED.addKillId(594)
-STARTED.addKillId(595)
-STARTED.addKillId(596)
-STARTED.addKillId(597)
-STARTED.addKillId(598)
-STARTED.addKillId(599)
+# Quest NPC initialization
+STARTING.addTalkId(PM_COOPER)
+STARTING.addTalkId(SG_CRONOS)
+STARTING.addTalkId(GD_BYRON)
+STARTING.addTalkId(MC_MARIA)
+STARTING.addTalkId(FR_MYMYU)
 
-STARTED.addQuestDrop(7610,Q_LIST_OF_STUFF_FOR_FS_ID,1)
-STARTED.addQuestDrop(7610,Q_LIST_OF_STUFF_FOR_FSD_ID,1)
-STARTED.addQuestDrop(231,Q_INPICIOS_BACK_SKIN_ID,1)
-STARTED.addQuestDrop(7610,Q_LIST_OF_STUFF_FOR_FSD_ID,1)
-STARTED.addQuestDrop(7608,Q_FAIRY_STONE_ID,1)
-STARTED.addQuestDrop(7608,Q_FAIRY_STONE_DELUX_ID,1)
-STARTED.addQuestDrop(7608,Q_FAIRY_STONE_DELUX_ID,1)
-STARTED.addQuestDrop(7747,Q_FAIRY_DUST_ID,1)
-STARTED.addQuestDrop(7748,Q_EGG_OF_DRAKE_EXARION_ID,1)
-STARTED.addQuestDrop(580,Q_EGG_OF_DRAKE_EXARION_ID,1)
-STARTED.addQuestDrop(7748,Q_SCALE_OF_DRAKE_EXARION_ID,1)
-STARTED.addQuestDrop(7747,Q_JUICE_OF_MONKSHOOD_ID,1)
-STARTED.addQuestDrop(7749,Q_EGG_OF_DRAKE_ZWOV_ID,1)
-STARTED.addQuestDrop(7749,Q_SCALE_OF_DRAKE_ZWOV_ID,1)
-STARTED.addQuestDrop(233,Q_SCALE_OF_DRAKE_ZWOV_ID,1)
-STARTED.addQuestDrop(7750,Q_EGG_OF_DRAKE_KALIBRAN_ID,1)
-STARTED.addQuestDrop(551,Q_EGG_OF_DRAKE_KALIBRAN_ID,1)
-STARTED.addQuestDrop(7750,Q_SCALE_OF_DRAKE_KALIBRAN_ID,1)
-STARTED.addQuestDrop(7751,Q_EGG_OF_WYRM_SUZET_ID,1)
-STARTED.addQuestDrop(270,Q_EGG_OF_WYRM_SUZET_ID,1)
-STARTED.addQuestDrop(7751,Q_SCALE_OF_WYRM_SUZET_ID,1)
-STARTED.addQuestDrop(7752,Q_EGG_OF_WYRM_SHAMHAI_ID,1)
-STARTED.addQuestDrop(7752,Q_SCALE_OF_WYRM_SHAMHAI_ID,1)
-STARTED.addQuestDrop(202,Q_SCALE_OF_WYRM_SHAMHAI_ID,1)
+STARTED.addTalkId(FR_MYMYU)
+STARTED.addTalkId(DK_EXARION)
+STARTED.addTalkId(DK_ZWOV)
+STARTED.addTalkId(DK_KALIBRAN)
+STARTED.addTalkId(WM_SUZET)
+STARTED.addTalkId(WM_SHAMHAI)
