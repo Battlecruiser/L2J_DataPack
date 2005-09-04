@@ -161,7 +161,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add order="0x50" stat="regHp" val="#hp"/>
+    <mul order="0x50" stat="regHp" val="#hp"/>
   </for>
 </skill>
 <skill id="213" levels="8" name="Boost Mana">
@@ -364,6 +364,7 @@
   </for>
 </skill>
 <skill id="226" levels="1" name="Relax">
+  <set name="mpConsume" val="2"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
@@ -432,7 +433,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add order="0x40" stat="regMp" val="#regMp"/>
+    <mul order="0x40" stat="regMp" val="#regMp"/>
   </for>
 </skill>
 <skill id="230" levels="2" name="Sprint">

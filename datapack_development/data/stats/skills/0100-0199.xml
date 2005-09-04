@@ -854,12 +854,12 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add order="0x50" stat="regHp" val="#hp">
+    <mul order="0x50" stat="regHp" val="#hp">
       <player resting="true"/>
-    </add>
-    <add order="0x50" stat="regMp" val="#mp">
+    </mul>
+    <mul order="0x50" stat="regMp" val="#mp">
       <player resting="true"/>
-    </add>
+    </mul>
   </for>
 </skill>
 <skill id="149" levels="1" name="none">
@@ -1090,12 +1090,12 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add order="0x50" stat="regHp" val="#hp">
+    <mul order="0x50" stat="regHp" val="#hp">
       <player running="true"/>
-    </add>
-    <add order="0x50" stat="regMp" val="#mp">
+    </mul>
+    <mul order="0x50" stat="regMp" val="#mp">
       <player running="true"/>
-    </add>
+    </mul>
   </for>
 </skill>
 <skill id="172" levels="8" name="Create Item">
