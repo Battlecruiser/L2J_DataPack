@@ -47,6 +47,7 @@ class Quest (JQuest) :
           if st.getQuestItemsCount(WIND_FEATHER_ID) == 0 :
             htmltext = "7410-03.htm"
             st.giveItems(WIND_FEATHER_ID,1)
+            st.set("cond","6")
     return htmltext
 
 
@@ -70,6 +71,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(MAP_OF_LUSTER_ID) == 0 :
           st.giveItems(MAP_OF_LUSTER_ID,1)
         htmltext = "7411-01.htm"
+        st.set("cond","2")
    elif npcId == 7411 and int(st.get("cond"))!=0 and st.getQuestItemsCount(MAP_OF_LUSTER_ID)!=0 and st.getQuestItemsCount(KEY_OF_FLAME_ID)==0 :
         htmltext = "7411-02.htm"
    elif npcId == 7411 and int(st.get("cond"))!=0 and st.getQuestItemsCount(MAP_OF_LUSTER_ID)!=0 and st.getQuestItemsCount(KEY_OF_FLAME_ID)!=0 :
@@ -78,12 +80,14 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(FLAME_EARING_ID) == 0 :
           st.giveItems(FLAME_EARING_ID,1)
         htmltext = "7411-03.htm"
+        st.set("cond","4")
    elif npcId == 7411 and int(st.get("cond"))!=0 and st.getQuestItemsCount(FLAME_EARING_ID)!=0 :
         htmltext = "7411-04.htm"
    elif npcId == 7412 and int(st.get("cond"))!=0 and st.getQuestItemsCount(FLAME_EARING_ID)!=0 and st.getQuestItemsCount(BROKEN_BRONZE_MIRROR_ID)==0 and st.getQuestItemsCount(WIND_BANGEL_ID)==0 :
         if st.getQuestItemsCount(BROKEN_BRONZE_MIRROR_ID) == 0 :
           st.giveItems(BROKEN_BRONZE_MIRROR_ID,1)
         htmltext = "7412-01.htm"
+        st.set("cond","5")
    elif npcId == 7412 and int(st.get("cond"))!=0 and st.getQuestItemsCount(BROKEN_BRONZE_MIRROR_ID)!=0 and st.getQuestItemsCount(WIND_FEATHER_ID)==0 :
         htmltext = "7412-02.htm"
    elif npcId == 7412 and int(st.get("cond"))!=0 and st.getQuestItemsCount(BROKEN_BRONZE_MIRROR_ID)!=0 and st.getQuestItemsCount(WIND_FEATHER_ID)!=0 :
@@ -92,6 +96,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(WIND_BANGEL_ID) == 0 :
           st.giveItems(WIND_BANGEL_ID,1)
         htmltext = "7412-03.htm"
+        st.set("cond","7")
    elif npcId == 7412 and int(st.get("cond"))!=0 and st.getQuestItemsCount(WIND_BANGEL_ID)!=0 :
         htmltext = "7412-04.htm"
    elif npcId == 7410 and int(st.get("cond"))!=0 and st.getQuestItemsCount(BROKEN_BRONZE_MIRROR_ID)!=0 and st.getQuestItemsCount(WIND_FEATHER_ID)==0 :
@@ -102,6 +107,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(RAMAS_DIARY_ID) == 0 :
           st.giveItems(RAMAS_DIARY_ID,1)
         htmltext = "7413-01.htm"
+        st.set("cond","8")
    elif npcId == 7413 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RAMAS_DIARY_ID)!=0 and st.getQuestItemsCount(SPARKLE_PEBBLE_ID)<2 :
         htmltext = "7413-02.htm"
    elif npcId == 7413 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RAMAS_DIARY_ID)!=0 and st.getQuestItemsCount(SPARKLE_PEBBLE_ID)>=2 :
@@ -110,12 +116,14 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(WATER_NECKLACE_ID) == 0 :
           st.giveItems(WATER_NECKLACE_ID,1)
         htmltext = "7413-03.htm"
+        st.set("cond","10")
    elif npcId == 7413 and int(st.get("cond"))!=0 and st.getQuestItemsCount(WATER_NECKLACE_ID)!=0 :
         htmltext = "7413-04.htm"
    elif npcId == 7409 and int(st.get("cond"))!=0 and st.getQuestItemsCount(WATER_NECKLACE_ID)!=0 and st.getQuestItemsCount(RUST_GOLD_COIN_ID)==0 and st.getQuestItemsCount(EARTH_RING_ID)==0 :
         if st.getQuestItemsCount(RUST_GOLD_COIN_ID) == 0 :
           st.giveItems(RUST_GOLD_COIN_ID,1)
         htmltext = "7409-01.htm"
+        st.set("cond","11")
    elif npcId == 7409 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RUST_GOLD_COIN_ID)!=0 and st.getQuestItemsCount(RED_SOIL_ID)==0 :
         htmltext = "7409-02.htm"
    elif npcId == 7409 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RUST_GOLD_COIN_ID)!=0 and st.getQuestItemsCount(RED_SOIL_ID)!=0 :
@@ -124,6 +132,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(EARTH_RING_ID) == 0 :
           st.giveItems(EARTH_RING_ID,1)
         htmltext = "7409-03.htm"
+        st.set("cond","13")
    elif npcId == 7409 and int(st.get("cond"))!=0 and st.getQuestItemsCount(EARTH_RING_ID)!=0 :
         htmltext = "7409-03.htm"
    elif npcId == 7391 and int(st.get("cond"))!=0 and st.getQuestItemsCount(FLAME_EARING_ID)!=0 and st.getQuestItemsCount(WIND_BANGEL_ID)!=0 and st.getQuestItemsCount(WATER_NECKLACE_ID)!=0 and st.getQuestItemsCount(EARTH_RING_ID)!=0 :
@@ -140,17 +149,19 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npcId,st):
-   if npcId == 32 :
+   if npcId == 359 :
         st.set("id","0")
         if int(st.get("cond")) != 0 :
             st.giveItems(KEY_OF_FLAME_ID,1)
             st.playSound("ItemSound.quest_middle")
+            st.set("cond","3")
    elif npcId == 5030 :
         st.set("id","0")
         if int(st.get("cond")) != 0 :
             st.giveItems(SPARKLE_PEBBLE_ID,1)
-            if st.getQuestItemsCount(SPARKLE_PEBBLE_ID) == 10 :
+            if st.getQuestItemsCount(SPARKLE_PEBBLE_ID) == 2 :
               st.playSound("ItemSound.quest_middle")
+              st.set("cond","9")
             else:
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 21 :
@@ -158,6 +169,7 @@ class Quest (JQuest) :
         if int(st.get("cond")) != 0 :
             st.giveItems(RED_SOIL_ID,1)
             st.playSound("ItemSound.quest_middle")
+            st.set("cond","12")
    return
 
 QUEST       = Quest(404,"404_PathToWizard","Path To Wizard")
@@ -178,10 +190,10 @@ STARTED.addTalkId(7412)
 STARTED.addTalkId(7413)
 
 STARTED.addKillId(21)
-STARTED.addKillId(32)
+STARTED.addKillId(359)
 STARTED.addKillId(5030)
 
-STARTED.addQuestDrop(32,KEY_OF_FLAME_ID,1)
+STARTED.addQuestDrop(359,KEY_OF_FLAME_ID,1)
 STARTED.addQuestDrop(7411,MAP_OF_LUSTER_ID,1)
 STARTED.addQuestDrop(7410,WIND_FEATHER_ID,1)
 STARTED.addQuestDrop(7412,BROKEN_BRONZE_MIRROR_ID,1)

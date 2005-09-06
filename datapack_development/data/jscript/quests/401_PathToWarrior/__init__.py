@@ -40,6 +40,7 @@ class Quest (JQuest) :
             st.takeItems(SIMPLONS_LETTER_ID,1)
             st.takeItems(RUSTED_BRONZE_SWORD2_ID,1)
             st.giveItems(RUSTED_BRONZE_SWORD3_ID,1)
+            st.set("cond","5")
     elif event == "1" :
       st.set("id","0")
       if st.getQuestItemsCount(EINS_LETTER_ID) == 0 :
@@ -52,6 +53,7 @@ class Quest (JQuest) :
           htmltext = "7253-02.htm"
           st.takeItems(EINS_LETTER_ID,1)
           st.giveItems(WARRIOR_GUILD_MARK_ID,1)
+          st.set("cond","2")
     return htmltext
 
 
@@ -68,13 +70,13 @@ class Quest (JQuest) :
           htmltext = "7010-01.htm"
         else:
           htmltext = "7010-01.htm"
-   elif npcId == 7010 and int(st.get("cond"))==1 and st.getQuestItemsCount(EINS_LETTER_ID)>0 :
+   elif npcId == 7010 and int(st.get("cond")) and st.getQuestItemsCount(EINS_LETTER_ID)>0 :
       htmltext = "7010-07.htm"
-   elif npcId == 7010 and int(st.get("cond"))==1 and st.getQuestItemsCount(WARRIOR_GUILD_MARK_ID)==1 :
+   elif npcId == 7010 and int(st.get("cond")) and st.getQuestItemsCount(WARRIOR_GUILD_MARK_ID)==1 :
       htmltext = "7010-08.htm"
-   elif npcId == 7253 and int(st.get("cond"))==1 and st.getQuestItemsCount(EINS_LETTER_ID) :
+   elif npcId == 7253 and int(st.get("cond")) and st.getQuestItemsCount(EINS_LETTER_ID) :
       htmltext = "7253-01.htm"
-   elif npcId == 7253 and int(st.get("cond"))==1 and st.getQuestItemsCount(WARRIOR_GUILD_MARK_ID) :
+   elif npcId == 7253 and int(st.get("cond")) and st.getQuestItemsCount(WARRIOR_GUILD_MARK_ID) :
       if st.getQuestItemsCount(RUSTED_BRONZE_SWORD1_ID)<1 :
         htmltext = "7253-03.htm"
       elif st.getQuestItemsCount(RUSTED_BRONZE_SWORD1_ID)<10 :
@@ -84,12 +86,13 @@ class Quest (JQuest) :
         st.takeItems(RUSTED_BRONZE_SWORD1_ID,st.getQuestItemsCount(RUSTED_BRONZE_SWORD1_ID))
         st.giveItems(RUSTED_BRONZE_SWORD2_ID,1)
         st.giveItems(SIMPLONS_LETTER_ID,1)
+        st.set("cond","4")
         htmltext = "7253-05.htm"
-   elif npcId == 7253 and int(st.get("cond"))==1 and st.getQuestItemsCount(SIMPLONS_LETTER_ID) :
+   elif npcId == 7253 and int(st.get("cond")) and st.getQuestItemsCount(SIMPLONS_LETTER_ID) :
         htmltext = "7253-06.htm"
-   elif npcId == 7010 and int(st.get("cond"))==1 and st.getQuestItemsCount(SIMPLONS_LETTER_ID) and st.getQuestItemsCount(RUSTED_BRONZE_SWORD2_ID) and st.getQuestItemsCount(WARRIOR_GUILD_MARK_ID)==0 and st.getQuestItemsCount(EINS_LETTER_ID)==0 :
+   elif npcId == 7010 and int(st.get("cond")) and st.getQuestItemsCount(SIMPLONS_LETTER_ID) and st.getQuestItemsCount(RUSTED_BRONZE_SWORD2_ID) and st.getQuestItemsCount(WARRIOR_GUILD_MARK_ID)==0 and st.getQuestItemsCount(EINS_LETTER_ID)==0 :
         htmltext = "7010-09.htm"
-   elif npcId == 7010 and int(st.get("cond"))==1 and st.getQuestItemsCount(RUSTED_BRONZE_SWORD3_ID) and st.getQuestItemsCount(WARRIOR_GUILD_MARK_ID)==0 and st.getQuestItemsCount(EINS_LETTER_ID)==0 :
+   elif npcId == 7010 and int(st.get("cond")) and st.getQuestItemsCount(RUSTED_BRONZE_SWORD3_ID) and st.getQuestItemsCount(WARRIOR_GUILD_MARK_ID)==0 and st.getQuestItemsCount(EINS_LETTER_ID)==0 :
         if st.getQuestItemsCount(POISON_SPIDER_LEG2_ID)<20 :
           htmltext = "7010-12.htm"
         elif st.getQuestItemsCount(POISON_SPIDER_LEG2_ID)>19 :
@@ -105,20 +108,22 @@ class Quest (JQuest) :
  def onKill (self,npcId,st):
    if npcId == 35 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(RUSTED_BRONZE_SWORD1_ID)<10 :
+        if int(st.get("cond")) == 2 and st.getQuestItemsCount(RUSTED_BRONZE_SWORD1_ID)<10 :
           if st.getRandom(10)<4 :
             st.giveItems(RUSTED_BRONZE_SWORD1_ID,1)
             if st.getQuestItemsCount(RUSTED_BRONZE_SWORD1_ID) == 10 :
               st.playSound("ItemSound.quest_middle")
+              st.set("cond","3")
             else:
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 42 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(RUSTED_BRONZE_SWORD1_ID)<10 :
+        if int(st.get("cond")) == 2 and st.getQuestItemsCount(RUSTED_BRONZE_SWORD1_ID)<10 :
           if st.getRandom(10)<4 :
             st.giveItems(RUSTED_BRONZE_SWORD1_ID,1)
             if st.getQuestItemsCount(RUSTED_BRONZE_SWORD1_ID) == 10 :
               st.playSound("ItemSound.quest_middle")
+              st.set("cond","3")
             else:
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 43 :
@@ -127,6 +132,7 @@ class Quest (JQuest) :
         st.giveItems(POISON_SPIDER_LEG2_ID,1)
         if st.getQuestItemsCount(POISON_SPIDER_LEG2_ID) == 20 :
           st.playSound("ItemSound.quest_middle")
+          st.set("cond","6")
         else:
           st.playSound("ItemSound.quest_itemget")
    elif npcId == 38 :
@@ -135,6 +141,7 @@ class Quest (JQuest) :
         st.giveItems(POISON_SPIDER_LEG2_ID,1)
         if st.getQuestItemsCount(POISON_SPIDER_LEG2_ID) == 20 :
           st.playSound("ItemSound.quest_middle")
+          st.set("cond","6")
         else:
           st.playSound("ItemSound.quest_itemget")
    return
