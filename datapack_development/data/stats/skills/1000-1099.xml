@@ -830,7 +830,7 @@
   <set name="castRange" val="-1"/>
   <for>
   <effect count="1" name="Buff" time="1200" val="0">
-    <add order="0x40" stat="regMp" val="#Tab-regMp"/>
+    <mul order="0x40" stat="regMp" val="#Tab-regMp"/>
   </effect>
   </for>
 </skill>

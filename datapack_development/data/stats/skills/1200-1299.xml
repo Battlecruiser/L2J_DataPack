@@ -2051,13 +2051,13 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <table name="#Tab-regMp"> 1 1.4 1.8 2.2 2.6 3 </table>
+  <table name="#Tab-regMp"> 1.2 1.4 1.8 2.2 2.6 3 </table>
 
   <for>
-   <add order='0x40' stat='regMp' val="#Tab-regMp"/>
+   <mul order='0x40' stat='regMp' val="#Tab-regMp">
    <player resting="true"/>
    <player walking="true"/>
-
+   </mul>
  </for>
 </skill>
 <skill id="1298" levels="14" name="Mass Slow">
