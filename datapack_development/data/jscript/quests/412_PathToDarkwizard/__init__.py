@@ -14,7 +14,7 @@ KNEE_BONE_ID = 1259
 HEART_OF_LUNACY_ID = 1260
 JEWEL_OF_DARKNESS_ID = 1261
 LUCKY_KEY_ID = 1277
-CANDLE_ID = 328
+CANDLE_ID = 1278
 HUB_SCENT_ID = 1279
 
 class Quest (JQuest) :
@@ -46,20 +46,17 @@ class Quest (JQuest) :
             htmltext = "7421-06.htm"
           else:
             htmltext = "7421-07.htm"
-            st.set("cond","1")
     elif event == "412_2" :
             if st.getQuestItemsCount(SEEDS_OF_HORROR_ID) :
               htmltext = "7421-09.htm"
             else:
               htmltext = "7421-10.htm"
-              st.set("cond","2")
     elif event == "412_3" :
             if st.getQuestItemsCount(SEEDS_OF_LUNACY_ID) :
               htmltext = "7421-12.htm"
             elif st.getQuestItemsCount(SEEDS_OF_LUNACY_ID) == 0 and st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) :
                 htmltext = "7421-13.htm"
                 st.giveItems(HUB_SCENT_ID,1)
-                st.set("cond","1")
     elif event == "412_4" :
           htmltext = "7415-03.htm"
           st.giveItems(LUCKY_KEY_ID,1)

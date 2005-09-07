@@ -45,6 +45,7 @@ class Quest (JQuest) :
           htmltext = "7377-02.htm"
           st.takeItems(SIDRAS_LETTER1_ID,1)
           st.giveItems(BLANK_SHEET1_ID,5)
+          st.set("cond","2")
     elif event == "7375_1" :
           htmltext = "7375-02.htm"
     elif event == "7375_2" :
@@ -53,6 +54,7 @@ class Quest (JQuest) :
             htmltext = "7375-04.htm"
             st.takeItems(PRAYER_OF_ADON_ID,1)
             st.giveItems(PENITENTS_MARK_ID,1)
+            st.set("cond","5")
     return htmltext
 
 
@@ -69,7 +71,7 @@ class Quest (JQuest) :
           htmltext = "7330-01.htm"
         else:
           htmltext = "7330-01.htm"
-   elif npcId == 7330 and int(st.get("cond"))==1 :
+   elif npcId == 7330 and int(st.get("cond")) :
         if st.getQuestItemsCount(SIDRAS_LETTER1_ID) == 1 :
           htmltext = "7330-07.htm"
         elif st.getQuestItemsCount(BLANK_SHEET1_ID)>0 or st.getQuestItemsCount(BLOODY_RUNE1_ID) == 1 :
@@ -84,7 +86,7 @@ class Quest (JQuest) :
             st.set("cond","0")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
-   elif npcId == 7377 and int(st.get("cond"))==1 :
+   elif npcId == 7377 and int(st.get("cond")) :
         if st.getQuestItemsCount(SIDRAS_LETTER1_ID) == 1 :
           htmltext = "7377-01.htm"
         elif st.getQuestItemsCount(BLANK_SHEET1_ID) == 5 and st.getQuestItemsCount(BLOODY_RUNE1_ID) == 0 :
@@ -96,11 +98,12 @@ class Quest (JQuest) :
             st.takeItems(BLOODY_RUNE1_ID,st.getQuestItemsCount(BLOODY_RUNE1_ID))
             st.giveItems(GARMIEL_BOOK_ID,1)
             st.giveItems(PRAYER_OF_ADON_ID,1)
+            st.set("cond","4")
         elif st.getQuestItemsCount(PRAYER_OF_ADON_ID)+st.getQuestItemsCount(PENITENTS_MARK_ID)+st.getQuestItemsCount(ASHEN_BONES_ID)>0 :
             htmltext = "7377-06.htm"
         elif st.getQuestItemsCount(ANDARIEL_BOOK_ID) == 1 and st.getQuestItemsCount(GARMIEL_BOOK_ID) == 1 :
             htmltext = "7377-07.htm"
-   elif npcId == 7375 and int(st.get("cond"))==1 :
+   elif npcId == 7375 and int(st.get("cond")) :
       if st.getQuestItemsCount(PRAYER_OF_ADON_ID) == 1 :
         htmltext = "7375-01.htm"
       elif st.getQuestItemsCount(PENITENTS_MARK_ID) == 1 and st.getQuestItemsCount(ASHEN_BONES_ID) == 0 and st.getQuestItemsCount(ANDARIEL_BOOK_ID) == 0 :
@@ -112,6 +115,7 @@ class Quest (JQuest) :
           st.takeItems(ASHEN_BONES_ID,st.getQuestItemsCount(ASHEN_BONES_ID))
           st.takeItems(PENITENTS_MARK_ID,st.getQuestItemsCount(PENITENTS_MARK_ID))
           st.giveItems(ANDARIEL_BOOK_ID,1)
+          st.set("cond","7")
       elif st.getQuestItemsCount(ANDARIEL_BOOK_ID) == 1 :
           htmltext = "7375-08.htm"
    return htmltext
@@ -119,43 +123,48 @@ class Quest (JQuest) :
  def onKill (self,npcId,st):
    if npcId == 776 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(BLANK_SHEET1_ID)>0 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BLANK_SHEET1_ID)>0 :
           st.giveItems(BLOODY_RUNE1_ID,1)
+          st.takeItems(BLANK_SHEET1_ID,1)
           if st.getQuestItemsCount(BLANK_SHEET1_ID) == 0 :
             st.playSound("ItemSound.quest_middle")
+            st.set("cond","3")
           else:
             st.playSound("ItemSound.quest_itemget")
-          st.takeItems(BLANK_SHEET1_ID,1)
    elif npcId == 514 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(PENITENTS_MARK_ID) == 1 and st.getQuestItemsCount(ASHEN_BONES_ID)<10 :
+        if int(st.get("cond")) and st.getQuestItemsCount(PENITENTS_MARK_ID) == 1 and st.getQuestItemsCount(ASHEN_BONES_ID)<10 :
           st.giveItems(ASHEN_BONES_ID,1)
           if st.getQuestItemsCount(ASHEN_BONES_ID) == 10 :
             st.playSound("ItemSound.quest_middle")
+            st.set("cond","6")
           else:
             st.playSound("ItemSound.quest_itemget")
    elif npcId == 515 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(PENITENTS_MARK_ID) == 1 and st.getQuestItemsCount(ASHEN_BONES_ID)<10 :
+        if int(st.get("cond")) and st.getQuestItemsCount(PENITENTS_MARK_ID) == 1 and st.getQuestItemsCount(ASHEN_BONES_ID)<10 :
           st.giveItems(ASHEN_BONES_ID,1)
           if st.getQuestItemsCount(ASHEN_BONES_ID) == 10 :
             st.playSound("ItemSound.quest_middle")
+            st.set("cond","6")
           else:
             st.playSound("ItemSound.quest_itemget")
    elif npcId == 457 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(PENITENTS_MARK_ID) == 1 and st.getQuestItemsCount(ASHEN_BONES_ID)<10 :
+        if int(st.get("cond")) and st.getQuestItemsCount(PENITENTS_MARK_ID) == 1 and st.getQuestItemsCount(ASHEN_BONES_ID)<10 :
           st.giveItems(ASHEN_BONES_ID,1)
           if st.getQuestItemsCount(ASHEN_BONES_ID) == 10 :
             st.playSound("ItemSound.quest_middle")
+            st.set("cond","6")
           else:
             st.playSound("ItemSound.quest_itemget")
    elif npcId == 458 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(PENITENTS_MARK_ID) == 1 and st.getQuestItemsCount(ASHEN_BONES_ID)<10 :
+        if int(st.get("cond")) and st.getQuestItemsCount(PENITENTS_MARK_ID) == 1 and st.getQuestItemsCount(ASHEN_BONES_ID)<10 :
           st.giveItems(ASHEN_BONES_ID,1)
           if st.getQuestItemsCount(ASHEN_BONES_ID) == 10 :
             st.playSound("ItemSound.quest_middle")
+            st.set("cond","6")
           else:
             st.playSound("ItemSound.quest_itemget")
    return

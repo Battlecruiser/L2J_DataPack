@@ -42,7 +42,7 @@ class Quest (JQuest) :
           htmltext = "7328-02.htm"
     elif event == "7337_1" :
           st.takeItems(REORIA_LETTER2_ID,1)
-          st.set("cond","1")
+          st.set("cond","2")
           htmltext = "7337-03.htm"
     return htmltext
 
@@ -61,11 +61,11 @@ class Quest (JQuest) :
           return htmltext
         else:
           htmltext = "7328-01.htm"
-   elif npcId == 7328 and int(st.get("cond"))==1 and st.getQuestItemsCount(REORIA_LETTER2_ID)>0 :
+   elif npcId == 7328 and int(st.get("cond")) and st.getQuestItemsCount(REORIA_LETTER2_ID)>0 :
         htmltext = "7328-06.htm"
-   elif npcId == 7328 and int(st.get("cond"))==1 and st.getQuestItemsCount(REORIA_LETTER2_ID)==0 and st.getQuestItemsCount(HONORARY_GUARD_ID)==0 :
+   elif npcId == 7328 and int(st.get("cond")) and st.getQuestItemsCount(REORIA_LETTER2_ID)==0 and st.getQuestItemsCount(HONORARY_GUARD_ID)==0 :
         htmltext = "7328-08.htm"
-   elif npcId == 7337 and int(st.get("cond"))==1 and st.getQuestItemsCount(REORIA_LETTER2_ID)>0 and st.getQuestItemsCount(PRIGUNS_TEAR_LETTER1_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER2_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER3_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER4_ID)==0 :
+   elif npcId == 7337 and int(st.get("cond")) and st.getQuestItemsCount(REORIA_LETTER2_ID)>0 and st.getQuestItemsCount(PRIGUNS_TEAR_LETTER1_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER2_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER3_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER4_ID)==0 :
         htmltext = "7337-01.htm"
    elif npcId == 7337 and st.getQuestItemsCount(MORETTIS_LETTER_ID)<1 and st.getQuestItemsCount(PRIGUNS_LETTER_ID)==0 and st.getQuestItemsCount(HONORARY_GUARD_ID)==0 :
         if st.getQuestItemsCount(PRIGUNS_TEAR_LETTER1_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER2_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER3_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER4_ID)<1 :
@@ -80,29 +80,33 @@ class Quest (JQuest) :
           st.takeItems(PRIGUNS_TEAR_LETTER4_ID,1)
           st.giveItems(MORETTIS_HERB_ID,1)
           st.giveItems(MORETTIS_LETTER_ID,1)
-   elif npcId == 7334 and int(st.get("cond"))==1 :
+          st.set("cond","4")
+   elif npcId == 7334 and int(st.get("cond")) :
         htmltext = "7334-01.htm"
-   elif npcId == 7426 and int(st.get("cond"))==1 and st.getQuestItemsCount(MORETTIS_LETTER_ID) and st.getQuestItemsCount(MORETTIS_HERB_ID) :
+   elif npcId == 7426 and int(st.get("cond")) and st.getQuestItemsCount(MORETTIS_LETTER_ID) and st.getQuestItemsCount(MORETTIS_HERB_ID) :
         if st.getQuestItemsCount(RUSTED_KEY_ID)<1 :
           htmltext = "7426-01.htm"
+          st.set("cond","5")
         else:
           htmltext = "7426-02.htm"
           st.takeItems(RUSTED_KEY_ID,1)
           st.takeItems(MORETTIS_HERB_ID,1)
           st.takeItems(MORETTIS_LETTER_ID,1)
           st.giveItems(PRIGUNS_LETTER_ID,1)
-   elif npcId == 7426 and int(st.get("cond"))==1 and st.getQuestItemsCount(PRIGUNS_LETTER_ID) :
+          st.set("cond","7")
+   elif npcId == 7426 and int(st.get("cond")) and st.getQuestItemsCount(PRIGUNS_LETTER_ID) :
         htmltext = "7426-04.htm"
-   elif npcId == 7337 and int(st.get("cond"))==1 and st.getQuestItemsCount(PRIGUNS_LETTER_ID)>0 :
+   elif npcId == 7337 and int(st.get("cond")) and st.getQuestItemsCount(PRIGUNS_LETTER_ID)>0 :
         if st.getQuestItemsCount(MORETTIS_HERB_ID) :
           htmltext = "7337-09.htm"
         else:
           htmltext = "7337-07.htm"
           st.takeItems(PRIGUNS_LETTER_ID,1)
           st.giveItems(HONORARY_GUARD_ID,1)
-   elif npcId == 7337 and int(st.get("cond"))==1 and st.getQuestItemsCount(HONORARY_GUARD_ID)>0 :
+          st.set("cond","8")
+   elif npcId == 7337 and int(st.get("cond")) and st.getQuestItemsCount(HONORARY_GUARD_ID)>0 :
         htmltext = "7337-08.htm"
-   elif npcId == 7328 and int(st.get("cond"))==1 and st.getQuestItemsCount(HONORARY_GUARD_ID)>0 :
+   elif npcId == 7328 and int(st.get("cond")) and st.getQuestItemsCount(HONORARY_GUARD_ID)>0 :
         htmltext = "7328-07.htm"
         st.takeItems(HONORARY_GUARD_ID,1)
         st.giveItems(REORIA_RECOMMENDATION_ID,1)
@@ -120,6 +124,7 @@ class Quest (JQuest) :
             st.giveItems(PRIGUNS_TEAR_LETTER1_ID,1)
             if st.getQuestItemsCount(PRIGUNS_TEAR_LETTER1_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER2_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER3_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER4_ID) == 4 :
               st.playSound("ItemSound.quest_middle")
+              st.set("cond","3")
             else:
               st.playSound("ItemSound.quest_itemget")
           else:
@@ -127,6 +132,7 @@ class Quest (JQuest) :
               st.giveItems(PRIGUNS_TEAR_LETTER2_ID,1)
               if st.getQuestItemsCount(PRIGUNS_TEAR_LETTER1_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER2_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER3_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER4_ID) == 4 :
                 st.playSound("ItemSound.quest_middle")
+                st.set("cond","3")
               else:
                 st.playSound("ItemSound.quest_itemget")
             else:
@@ -134,6 +140,7 @@ class Quest (JQuest) :
                 st.giveItems(PRIGUNS_TEAR_LETTER3_ID,1)
                 if st.getQuestItemsCount(PRIGUNS_TEAR_LETTER1_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER2_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER3_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER4_ID) == 4 :
                   st.playSound("ItemSound.quest_middle")
+                  st.set("cond","3")
                 else:
                   st.playSound("ItemSound.quest_itemget")
               else:
@@ -141,13 +148,15 @@ class Quest (JQuest) :
                   st.giveItems(PRIGUNS_TEAR_LETTER4_ID,1)
                   if st.getQuestItemsCount(PRIGUNS_TEAR_LETTER1_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER2_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER3_ID)+st.getQuestItemsCount(PRIGUNS_TEAR_LETTER4_ID) == 4 :
                     st.playSound("ItemSound.quest_middle")
+                    st.set("cond","3")
                   else:
                     st.playSound("ItemSound.quest_itemget")
    elif npcId == 5031 :
       st.set("id","0")
-      if int(st.get("cond")) == 1 and st.getQuestItemsCount(MORETTIS_HERB_ID) == 1 and st.getQuestItemsCount(MORETTIS_LETTER_ID) == 1 and st.getQuestItemsCount(RUSTED_KEY_ID) == 0 and st.getRandom(10)<6 :
+      if int(st.get("cond")) and st.getQuestItemsCount(MORETTIS_HERB_ID) == 1 and st.getQuestItemsCount(MORETTIS_LETTER_ID) == 1 and st.getQuestItemsCount(RUSTED_KEY_ID) == 0 and st.getRandom(10)<6 :
         st.giveItems(RUSTED_KEY_ID,1)
         st.playSound("ItemSound.quest_middle")
+        st.set("cond","6")
    return
 
 QUEST       = Quest(407,"407_PathToElvenScout","Path To Elven Scout")

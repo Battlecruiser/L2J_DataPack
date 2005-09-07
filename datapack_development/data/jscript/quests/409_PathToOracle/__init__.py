@@ -37,21 +37,20 @@ class Quest (JQuest) :
         elif st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x19 and st.getQuestItemsCount(LEAF_OF_ORACLE_ID) == 1 :
             htmltext = "7293-04.htm"
     elif event == "7424_1" :
-          if int(st.get("cond")) == 1 :
-            st.set("cond","1")
+          if int(st.get("cond")) :
             st.spawnNpc(5032)
             st.spawnNpc(5033)
             st.spawnNpc(5034)
+            st.set("cond","2")
     elif event == "7428_1" :
-          if int(st.get("cond")) == 2 :
+          if int(st.get("cond")) :
             htmltext = "7428-02.htm"
     elif event == "7428_2" :
-            if int(st.get("cond")) == 2 :
+            if int(st.get("cond")) :
               htmltext = "7428-03.htm"
     elif event == "7428_3" :
-            if int(st.get("cond")) == 2 :
+            if int(st.get("cond")) :
               st.spawnNpc(5035)
-              st.set("cond","3")
     return htmltext
 
 
@@ -72,13 +71,11 @@ class Quest (JQuest) :
             htmltext = "7293-04.htm"
         else:
           htmltext = "7293-04.htm"
-   elif npcId == 7293 and int(st.get("cond"))==1 and st.getQuestItemsCount(CRYSTAL_MEDALLION_ID) :
+   elif npcId == 7293 and int(st.get("cond")) and st.getQuestItemsCount(CRYSTAL_MEDALLION_ID) :
     if st.getQuestItemsCount(MONEY_OF_SWINDLER_ID) == 0 and st.getQuestItemsCount(DAIRY_OF_ALLANA_ID) == 0 and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER_ID) == 0 and st.getQuestItemsCount(HALF_OF_DAIRY_ID) == 0 :
-        if int(st.get("cond")) == 2 :
-            st.set("cond","1")
+        if int(st.get("cond")) :
             htmltext = "7293-09.htm"
         else:
-            st.set("cond","1")
             htmltext = "7293-06.htm"
     else:
           if st.getQuestItemsCount(MONEY_OF_SWINDLER_ID) == 1 and st.getQuestItemsCount(DAIRY_OF_ALLANA_ID) == 1 and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER_ID) == 1 and st.getQuestItemsCount(HALF_OF_DAIRY_ID) == 0 :
@@ -93,19 +90,18 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_finish")
           else:
             htmltext = "7293-07.htm"
-   elif npcId == 7424 and int(st.get("cond"))==1 and st.getQuestItemsCount(CRYSTAL_MEDALLION_ID) :
+   elif npcId == 7424 and int(st.get("cond")) and st.getQuestItemsCount(CRYSTAL_MEDALLION_ID) :
         if st.getQuestItemsCount(MONEY_OF_SWINDLER_ID) == 0 and st.getQuestItemsCount(DAIRY_OF_ALLANA_ID) == 0 and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER_ID) == 0 and st.getQuestItemsCount(HALF_OF_DAIRY_ID) == 0 :
-          if int(st.get("cond")) == 2 :
+          if int(st.get("cond")) > 2:
             htmltext = "7424-05.htm"
           else:
             htmltext = "7424-01.htm"
         elif st.getQuestItemsCount(MONEY_OF_SWINDLER_ID) == 0 and st.getQuestItemsCount(DAIRY_OF_ALLANA_ID) == 0 and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER_ID) == 1 and st.getQuestItemsCount(HALF_OF_DAIRY_ID) == 0 :
-            st.set("cond","2")
             htmltext = "7424-02.htm"
             st.giveItems(HALF_OF_DAIRY_ID,1)
+            st.set("cond","4")
         elif st.getQuestItemsCount(MONEY_OF_SWINDLER_ID) == 0 and st.getQuestItemsCount(DAIRY_OF_ALLANA_ID) == 0 and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER_ID) == 1 and st.getQuestItemsCount(HALF_OF_DAIRY_ID) == 1 :
-              if int(st.get("cond")) == 3 and st.getQuestItemsCount(TAMATOS_NECKLACE_ID) == 0 :
-                st.set("cond","2")
+              if int(st.get("cond")) and st.getQuestItemsCount(TAMATOS_NECKLACE_ID) == 0 :
                 htmltext = "7424-06.htm"
               else:
                 htmltext = "7424-03.htm"
@@ -113,6 +109,7 @@ class Quest (JQuest) :
                 htmltext = "7424-04.htm"
                 st.takeItems(HALF_OF_DAIRY_ID,1)
                 st.giveItems(DAIRY_OF_ALLANA_ID,1)
+                st.set("cond","7")
         else:
                 if st.getQuestItemsCount(MONEY_OF_SWINDLER_ID) == 1 and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER_ID) == 1 and st.getQuestItemsCount(HALF_OF_DAIRY_ID) == 0 and st.getQuestItemsCount(DAIRY_OF_ALLANA_ID) :
                   htmltext = "7424-05.htm"
@@ -120,13 +117,13 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(TAMATOS_NECKLACE_ID) == 1 :
           st.giveItems(MONEY_OF_SWINDLER_ID,1)
           st.takeItems(TAMATOS_NECKLACE_ID,1)
-          st.set("cond","1")
+          st.set("cond","6")
           htmltext = "7428-04.htm"
         else:
           if st.getQuestItemsCount(MONEY_OF_SWINDLER_ID)>0 :
             htmltext = "7428-05.htm"
           else:
-            if int(st.get("cond")) == 3 :
+            if int(st.get("cond")) > 4 :
               htmltext = "7428-06.htm"
             else:
               htmltext = "7428-01.htm"
@@ -135,20 +132,21 @@ class Quest (JQuest) :
  def onKill (self,npcId,st):
    if npcId == 5032 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER_ID) == 0 :
+        if int(st.get("cond")) and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER_ID) == 0 :
           st.giveItems(LIZARD_CAPTAIN_ORDER_ID,1)
           st.playSound("ItemSound.quest_middle")
-          st.set("cond","1")
+          st.set("cond","3")
    elif npcId == 5035 :
         st.set("id","0")
-        if int(st.get("cond")) == 3 and st.getQuestItemsCount(TAMATOS_NECKLACE_ID) == 0 :
+        if int(st.get("cond")) and st.getQuestItemsCount(TAMATOS_NECKLACE_ID) == 0 :
           st.giveItems(TAMATOS_NECKLACE_ID,1)
           st.playSound("ItemSound.quest_middle")
+          st.set("cond","5")
    return
 
 QUEST       = Quest(409,"409_PathToOracle","Path To Oracle")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
+STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 

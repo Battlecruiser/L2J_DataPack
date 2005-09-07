@@ -45,15 +45,19 @@ class Quest (JQuest) :
             st.takeItems(PALLUS_TALISMAN_ID,1)
             st.takeItems(LYCANTHROPE_SKULL_ID,st.getQuestItemsCount(LYCANTHROPE_SKULL_ID))
             st.giveItems(VIRGILS_LETTER_ID,1)
+            st.set("cond","3")
     elif event == "7422_1" :
           htmltext = "7422-02.htm"
           st.takeItems(VIRGILS_LETTER_ID,1)
           st.giveItems(MORTE_TALISMAN_ID,1)
+          st.set("cond","4")
     elif event == "7422_2" :
             htmltext = "7422-06.htm"
+            st.takeItems(MORTE_TALISMAN_ID,1)
             st.takeItems(TRIMDEN_SILK_ID,st.getQuestItemsCount(TRIMDEN_SILK_ID))
             st.takeItems(PREDATOR_CARAPACE_ID,st.getQuestItemsCount(PREDATOR_CARAPACE_ID))
             st.giveItems(COFFIN_ETERNAL_REST_ID,1)
+            st.set("cond","6")
     return htmltext
 
 
@@ -70,7 +74,7 @@ class Quest (JQuest) :
           htmltext = "7329-01.htm"
         else:
           htmltext = "7329-01.htm"
-   elif npcId == 7329 and int(st.get("cond"))==1 :
+   elif npcId == 7329 and int(st.get("cond")) :
         if st.getQuestItemsCount(PALLUS_TALISMAN_ID) == 1 and st.getQuestItemsCount(LYCANTHROPE_SKULL_ID) == 0 :
           htmltext = "7329-07.htm"
         elif st.getQuestItemsCount(PALLUS_TALISMAN_ID) == 1 and st.getQuestItemsCount(LYCANTHROPE_SKULL_ID)>0 and st.getQuestItemsCount(LYCANTHROPE_SKULL_ID)<13 :
@@ -80,14 +84,13 @@ class Quest (JQuest) :
         elif st.getQuestItemsCount(COFFIN_ETERNAL_REST_ID) == 1 :
             htmltext = "7329-11.htm"
             st.takeItems(COFFIN_ETERNAL_REST_ID,1)
-            st.takeItems(MORTE_TALISMAN_ID,1)
             st.giveItems(GAZE_OF_ABYSS_ID,1)
             st.set("cond","0")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
         elif st.getQuestItemsCount(MORTE_TALISMAN_ID) or st.getQuestItemsCount(VIRGILS_LETTER_ID) :
             htmltext = "7329-12.htm"
-   elif npcId == 7422 and int(st.get("cond"))==1 :
+   elif npcId == 7422 and int(st.get("cond")) :
         if st.getQuestItemsCount(VIRGILS_LETTER_ID) :
           htmltext = "7422-01.htm"
         elif st.getQuestItemsCount(MORTE_TALISMAN_ID) and st.getQuestItemsCount(TRIMDEN_SILK_ID) == 0 and st.getQuestItemsCount(PREDATOR_CARAPACE_ID) == 0 :
@@ -103,23 +106,28 @@ class Quest (JQuest) :
  def onKill (self,npcId,st):
    if npcId == 49 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(PALLUS_TALISMAN_ID) == 1 and st.getQuestItemsCount(LYCANTHROPE_SKULL_ID)<13 :
+        if int(st.get("cond")) and st.getQuestItemsCount(PALLUS_TALISMAN_ID) == 1 and st.getQuestItemsCount(LYCANTHROPE_SKULL_ID)<13 :
           st.giveItems(LYCANTHROPE_SKULL_ID,1)
           if st.getQuestItemsCount(LYCANTHROPE_SKULL_ID) == 13 :
             st.playSound("ItemSound.quest_middle")
+            st.set("cond","2")
           else:
             st.playSound("ItemSound.quest_itemget")
    elif npcId == 38 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(MORTE_TALISMAN_ID) == 1 and st.getQuestItemsCount(PREDATOR_CARAPACE_ID)<1 :
+        if int(st.get("cond")) and st.getQuestItemsCount(MORTE_TALISMAN_ID) == 1 and st.getQuestItemsCount(PREDATOR_CARAPACE_ID)<1 :
           st.giveItems(PREDATOR_CARAPACE_ID,1)
           st.playSound("ItemSound.quest_middle")
+          if st.getQuestItemsCount(TRIMDEN_SILK_ID) >= 5 and st.getQuestItemsCount(PREDATOR_CARAPACE_ID)>0 :
+            st.set("cond","5")
    elif npcId == 43 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(MORTE_TALISMAN_ID) == 1 and st.getQuestItemsCount(TRIMDEN_SILK_ID)<5 :
+        if int(st.get("cond")) and st.getQuestItemsCount(MORTE_TALISMAN_ID) == 1 and st.getQuestItemsCount(TRIMDEN_SILK_ID)<5 :
           st.giveItems(TRIMDEN_SILK_ID,1)
           if st.getQuestItemsCount(TRIMDEN_SILK_ID) == 5 :
             st.playSound("ItemSound.quest_middle")
+            if st.getQuestItemsCount(TRIMDEN_SILK_ID) >= 5 and st.getQuestItemsCount(PREDATOR_CARAPACE_ID)>0 :
+              st.set("cond","5")
           else:
             st.playSound("ItemSound.quest_itemget")
    return

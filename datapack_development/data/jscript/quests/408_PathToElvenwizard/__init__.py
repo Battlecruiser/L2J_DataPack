@@ -40,7 +40,7 @@ class Quest (JQuest) :
             if st.getQuestItemsCount(ETERNITY_DIAMOND_ID) != 0 :
               htmltext = "7414-05.htm"
             else:
-              st.set("cond","0")
+              st.set("cond","1")
               st.setState(STARTED)
               st.playSound("ItemSound.quest_accept")
               if st.getQuestItemsCount(FERTILITY_PERIDOT_ID) == 0 :
@@ -53,6 +53,7 @@ class Quest (JQuest) :
             if st.getQuestItemsCount(ROGELLIAS_LETTER_ID) == 0 :
               st.giveItems(ROGELLIAS_LETTER_ID,1)
             htmltext = "7414-07.htm"
+            st.set("cond","2")
     elif event == "408_4" :
           if int(st.get("cond")) != 0 and st.getQuestItemsCount(ROGELLIAS_LETTER_ID) != 0 :
             st.takeItems(ROGELLIAS_LETTER_ID,st.getQuestItemsCount(ROGELLIAS_LETTER_ID))
