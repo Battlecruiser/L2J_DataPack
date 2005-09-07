@@ -389,8 +389,8 @@ INSERT INTO weapon VALUES (975,'bloodsaber','rhand','false',1450,1,1,'oriharukon
 INSERT INTO weapon VALUES (981,'red_sunset_sword','lrhand','false',1300,1,1,'steel','none',16,10,'sword',8,0.00000,0,0,0,325,0,10,100,25500,0,'true');
 INSERT INTO weapon VALUES (989,'eldritch_dagger','rhand','false',1130,1,1,'steel','none',11,5,'dagger',12,-3.75000,0,0,0,433,0,10,100,25500,0,'true');
 INSERT INTO weapon VALUES (1142,'rusted_bronze_sword3','rhand','false',1400,2,2,'steel','none',18,10,'sword',8,0.00000,0,0,0,379,0,21,100,116000,0,'true');
-INSERT INTO weapon VALUES (1181,'netis_bow','lrhand','false',1850,7,2,'wood','none',45,5,'bow',12,-3.75000,0,0,0,293,2,16,100,116000,0,'true');
-INSERT INTO weapon VALUES (1182,'netis_dagger','rhand','false',1000,2,2,'steel','none',19,5,'dagger',12,-3.75000,0,0,0,433,0,16,100,116000,0,'true');
+INSERT INTO weapon VALUES (1181,'netis_bow','lrhand','false',1850,7,2,'wood','none',45,5,'bow',12,-3.75000,0,0,0,293,2,16,100,0,0,'false');
+INSERT INTO weapon VALUES (1182,'netis_dagger','rhand','false',1000,2,2,'steel','none',19,5,'dagger',12,-3.75000,0,0,0,433,0,16,100,0,0,'false');
 INSERT INTO weapon VALUES (1213,'guards_bow','lrhand','false',1800,7,2,'steel','none',49,5,'bow',12,-3.75000,0,0,0,293,3,17,100,136000,0,'true');
 INSERT INTO weapon VALUES (1295,'Kamex_sw01','rhand','false',200,2,2,'fine_steel','none',22,10,'sword',8,0.00000,0,0,0,379,0,6,95,136000,0,'true');
 INSERT INTO weapon VALUES (1296,'Kamex_sw02','rhand','false',300,2,2,'steel','none',22,10,'sword',8,0.00000,0,0,0,379,0,6,95,136000,0,'true');
