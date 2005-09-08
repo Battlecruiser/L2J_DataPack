@@ -112,36 +112,36 @@ class Quest (JQuest) :
           htmltext = "7527-01.htm"
         else:
           htmltext = "7527-01.htm"
-   elif npcId == 7527 and int(st.get("cond"))==1 and st.getQuestItemsCount(SILVERYS_RING_ID)==1 and (st.getQuestItemsCount(RATMAN_TOOTH_ID)+st.getQuestItemsCount(BIG_RATMAN_TOOTH_ID))<12 :
+   elif npcId == 7527 and int(st.get("cond"))>=1 and st.getQuestItemsCount(SILVERYS_RING_ID)==1 and (st.getQuestItemsCount(RATMAN_TOOTH_ID)+st.getQuestItemsCount(BIG_RATMAN_TOOTH_ID))<12 :
         htmltext = "7527-07.htm"
-   elif npcId == 7527 and int(st.get("cond"))==1 and st.getQuestItemsCount(SILVERYS_RING_ID)==1 and st.getQuestItemsCount(RATMAN_TOOTH_ID)>=10 and st.getQuestItemsCount(BIG_RATMAN_TOOTH_ID)>=2 :
+   elif npcId == 7527 and int(st.get("cond"))>=1 and st.getQuestItemsCount(SILVERYS_RING_ID)==1 and st.getQuestItemsCount(RATMAN_TOOTH_ID)>=10 and st.getQuestItemsCount(BIG_RATMAN_TOOTH_ID)>=2 :
         htmltext = "7527-08.htm"
         st.takeItems(SILVERYS_RING_ID,st.getQuestItemsCount(SILVERYS_RING_ID))
         st.takeItems(RATMAN_TOOTH_ID,st.getQuestItemsCount(RATMAN_TOOTH_ID))
         st.takeItems(BIG_RATMAN_TOOTH_ID,st.getQuestItemsCount(BIG_RATMAN_TOOTH_ID))
         st.giveItems(PASS_1ST_ID,1)
-   elif npcId == 7527 and int(st.get("cond"))==1 and st.getQuestItemsCount(PASS_1ST_ID)==1 :
+   elif npcId == 7527 and int(st.get("cond"))>=1 and st.getQuestItemsCount(PASS_1ST_ID)==1 :
         htmltext = "7527-09.htm"
-   elif npcId == 7317 and int(st.get("cond"))==1 and st.getQuestItemsCount(KLUTOS_LETTER_ID)==0 and st.getQuestItemsCount(PASS_1ST_ID) and st.getQuestItemsCount(PASS_2ND_ID)==0 and st.getQuestItemsCount(SECRET_BOX2_ID)==0 :
+   elif npcId == 7317 and int(st.get("cond"))>=1 and st.getQuestItemsCount(KLUTOS_LETTER_ID)==0 and st.getQuestItemsCount(PASS_1ST_ID) and st.getQuestItemsCount(PASS_2ND_ID)==0 and st.getQuestItemsCount(SECRET_BOX2_ID)==0 :
         htmltext = "7317-01.htm"
-   elif npcId == 7317 and int(st.get("cond"))==1 and st.getQuestItemsCount(PASS_1ST_ID) and (st.getQuestItemsCount(KLUTOS_LETTER_ID) or st.getQuestItemsCount(FOOTPRINT_ID)) :
+   elif npcId == 7317 and int(st.get("cond"))>=1 and st.getQuestItemsCount(PASS_1ST_ID) and (st.getQuestItemsCount(KLUTOS_LETTER_ID) or st.getQuestItemsCount(FOOTPRINT_ID)) :
         htmltext = "7317-08.htm"
-   elif npcId == 7317 and int(st.get("cond"))==1 and st.getQuestItemsCount(PASS_1ST_ID) and st.getQuestItemsCount(PASS_2ND_ID) and st.getQuestItemsCount(SECRET_BOX2_ID) :
+   elif npcId == 7317 and int(st.get("cond"))>=1 and st.getQuestItemsCount(PASS_1ST_ID) and st.getQuestItemsCount(PASS_2ND_ID) and st.getQuestItemsCount(SECRET_BOX2_ID) :
         htmltext = "7317-09.htm"
-   elif npcId == 7298 and int(st.get("cond"))==1 and st.getQuestItemsCount(PASS_1ST_ID) and st.getQuestItemsCount(KLUTOS_LETTER_ID) :
+   elif npcId == 7298 and int(st.get("cond"))>=1 and st.getQuestItemsCount(PASS_1ST_ID) and st.getQuestItemsCount(KLUTOS_LETTER_ID) :
         htmltext = "7298-01.htm"
-   elif npcId == 7298 and int(st.get("cond"))==1 and st.getQuestItemsCount(PASS_1ST_ID) and st.getQuestItemsCount(FOOTPRINT_ID) and st.getQuestItemsCount(SECRET_BOX1_ID)==0 :
+   elif npcId == 7298 and int(st.get("cond"))>=1 and st.getQuestItemsCount(PASS_1ST_ID) and st.getQuestItemsCount(FOOTPRINT_ID) and st.getQuestItemsCount(SECRET_BOX1_ID)==0 :
         htmltext = "7298-04.htm"
-   elif npcId == 7298 and int(st.get("cond"))==1 and st.getQuestItemsCount(PASS_1ST_ID) and st.getQuestItemsCount(FOOTPRINT_ID) and st.getQuestItemsCount(SECRET_BOX1_ID) :
+   elif npcId == 7298 and int(st.get("cond"))>=1 and st.getQuestItemsCount(PASS_1ST_ID) and st.getQuestItemsCount(FOOTPRINT_ID) and st.getQuestItemsCount(SECRET_BOX1_ID) :
         htmltext = "7298-05.htm"
-   elif npcId == 7298 and int(st.get("cond"))==1 and st.getQuestItemsCount(PASS_1ST_ID) and st.getQuestItemsCount(PASS_2ND_ID) and st.getQuestItemsCount(SECRET_BOX2_ID) :
+   elif npcId == 7298 and int(st.get("cond"))>=1 and st.getQuestItemsCount(PASS_1ST_ID) and st.getQuestItemsCount(PASS_2ND_ID) and st.getQuestItemsCount(SECRET_BOX2_ID) :
         htmltext = "7298-07.htm"
    return htmltext
 
  def onKill (self,npcId,st):
    if npcId == 389 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(SILVERYS_RING_ID) == 1 and st.getQuestItemsCount(RATMAN_TOOTH_ID)<10 :
+        if int(st.get("cond")) >= 1 and st.getQuestItemsCount(SILVERYS_RING_ID) == 1 and st.getQuestItemsCount(RATMAN_TOOTH_ID)<10 :
           if st.getRandom(10)<7 :
             if st.getQuestItemsCount(RATMAN_TOOTH_ID) == 9 :
               st.giveItems(RATMAN_TOOTH_ID,1)
@@ -151,7 +151,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 390 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(SILVERYS_RING_ID) == 1 and st.getQuestItemsCount(BIG_RATMAN_TOOTH_ID)<2 :
+        if int(st.get("cond")) >= 1 and st.getQuestItemsCount(SILVERYS_RING_ID) == 1 and st.getQuestItemsCount(BIG_RATMAN_TOOTH_ID)<2 :
           if st.getRandom(10)<5 :
             if st.getQuestItemsCount(BIG_RATMAN_TOOTH_ID) == 1 :
               st.giveItems(BIG_RATMAN_TOOTH_ID,1)
@@ -161,7 +161,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 17 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(FOOTPRINT_ID) == 1 and st.getQuestItemsCount(SECRET_BOX1_ID)<1 :
+        if int(st.get("cond")) >= 1 and st.getQuestItemsCount(FOOTPRINT_ID) == 1 and st.getQuestItemsCount(SECRET_BOX1_ID)<1 :
           if st.getRandom(10)<2 :
             st.giveItems(SECRET_BOX1_ID,1)
             st.playSound("ItemSound.quest_middle")
