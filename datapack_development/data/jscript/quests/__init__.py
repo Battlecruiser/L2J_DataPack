@@ -123,7 +123,8 @@ __all__ = [
 '417_PathToScavenger',
 '418_PathToArtisan',
 '419_GetAPet',
-'420_LittleWings'
+'420_LittleWings',
+'999_C3Tutorial'
 ]
 print ""
 print "importing quests ..."
