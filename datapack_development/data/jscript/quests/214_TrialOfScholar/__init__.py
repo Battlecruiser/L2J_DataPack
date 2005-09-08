@@ -63,7 +63,7 @@ class Quest (JQuest) :
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
-        st.giveItems(MIRIENS_SIGIL1_ID)
+        st.giveItems(MIRIENS_SIGIL1_ID,1)
     elif event == "7461_1" :
           if st.getPlayer().getLevel()<36 :
             htmltext = "7461-09.htm"
@@ -79,31 +79,37 @@ class Quest (JQuest) :
           htmltext = "7070-02.htm"
           st.giveItems(HIGHPRIESTS_SIGIL_ID,1)
           st.giveItems(SYLVAINS_LETTER_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7608_1" :
           htmltext = "7608-02.htm"
           st.giveItems(MARYAS_LETTER1_ID,1)
           st.takeItems(SYLVAINS_LETTER_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7608_2" :
           htmltext = "7608-07.htm"
     elif event == "7608_3" :
           htmltext = "7608-08.htm"
           st.giveItems(LUCILLAS_HANDBAG_ID,1)
           st.takeItems(CRETAS_LETTER1_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7608_4" :
           htmltext = "7608-14.htm"
           st.takeItems(BROWN_SCROLL_SCRAP_ID,st.getQuestItemsCount(BROWN_SCROLL_SCRAP_ID))
           st.giveItems(CRYSTAL_OF_PURITY1_ID,1)
           st.takeItems(CRETAS_PAINTING3_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7115_1" :
           htmltext = "7115-02.htm"
     elif event == "7115_2" :
           htmltext = "7115-03.htm"
           st.giveItems(JUREKS_LIST_ID,1)
           st.giveItems(GMAGISTERS_SIGIL_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7071_1" :
           htmltext = "7071-04.htm"
           st.giveItems(CRETAS_PAINTING3_ID,1)
           st.takeItems(CRETAS_PAINTING2_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7609_1" :
           htmltext = "7609-02.htm"
     elif event == "7609_2" :
@@ -114,18 +120,21 @@ class Quest (JQuest) :
           htmltext = "7609-05.htm"
           st.giveItems(CRETAS_LETTER1_ID,1)
           st.takeItems(MARYAS_LETTER2_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7609_5" :
           htmltext = "7609-08.htm"
     elif event == "7609_6" :
           htmltext = "7609-09.htm"
           st.giveItems(CRETAS_PAINTING1_ID,1)
           st.takeItems(LUCILLAS_HANDBAG_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7609_7" :
           htmltext = "7609-13.htm"
     elif event == "7609_8" :
           htmltext = "7609-14.htm"
           st.giveItems(CRETAS_LETTER2_ID,1)
           st.takeItems(DIETERS_KEY_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7610_1" :
           htmltext = "7610-02.htm"
     elif event == "7610_2" :
@@ -146,6 +155,7 @@ class Quest (JQuest) :
           htmltext = "7610-10.htm"
           st.giveItems(CRONOS_SIGIL_ID,1)
           st.giveItems(CRONOS_LETTER_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7610_10" :
           htmltext = "7610-13.htm"
     elif event == "7610_11" :
@@ -158,6 +168,7 @@ class Quest (JQuest) :
           st.takeItems(TREAFS_RING_ID,1)
           st.giveItems(SYMBOL_OF_CRONOS_ID,1)
           st.takeItems(DIETERS_DIARY_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7111_1" :
           htmltext = "7111-02.htm"
     elif event == "7111_2" :
@@ -168,24 +179,29 @@ class Quest (JQuest) :
           htmltext = "7111-05.htm"
           st.giveItems(DIETERS_KEY_ID,1)
           st.takeItems(CRONOS_LETTER_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7111_5" :
           htmltext = "7111-08.htm"
           st.giveItems(DIETERS_KEY_ID,1)
           st.takeItems(CRONOS_LETTER_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7111_6" :
           htmltext = "7111-09.htm"
           st.giveItems(DIETERS_LETTER_ID,1)
           st.takeItems(CRETAS_LETTER2_ID,1)
           st.giveItems(DIETERS_DIARY_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7230_1" :
           htmltext = "7230-02.htm"
           st.giveItems(RAUTS_LETTER_ENVELOPE_ID,1)
           st.takeItems(DIETERS_LETTER_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7316_1" :
           htmltext = "7316-02.htm"
           st.giveItems(SCRIPTURE_CHAPTER_1_ID,1)
           st.takeItems(RAUTS_LETTER_ENVELOPE_ID,1)
           st.giveItems(STRONG_LIQUOR_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7611_1" :
           htmltext = "7611-02.htm"
     elif event == "7611_2" :
@@ -194,6 +210,7 @@ class Quest (JQuest) :
           htmltext = "7611-04.htm"
           st.giveItems(TREAFS_RING_ID,1)
           st.takeItems(STRONG_LIQUOR_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7103_1" :
           htmltext = "7103-02.htm"
     elif event == "7103_2" :
@@ -201,11 +218,13 @@ class Quest (JQuest) :
     elif event == "7103_3" :
           htmltext = "7103-04.htm"
           st.giveItems(VALKONS_REQUEST_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7612_1" :
           htmltext = "7612-03.htm"
     elif event == "7612_2" :
           htmltext = "7612-04.htm"
           st.giveItems(KASIANS_LIST_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7612_3" :
           htmltext = "7612-07.htm"
           st.giveItems(SCRIPTURE_CHAPTER_4_ID,1)
@@ -215,6 +234,7 @@ class Quest (JQuest) :
           st.takeItems(CRIMSONBINDS_ICHOR_ID,st.getQuestItemsCount(CRIMSONBINDS_ICHOR_ID))
           st.takeItems(ENCHT_GARGOYLES_NAIL_ID,st.getQuestItemsCount(ENCHT_GARGOYLES_NAIL_ID))
           st.takeItems(POITANS_NOTES_ID,1)
+          st.playSound("ItemSound.quest_middle")
     return htmltext
 
 
@@ -247,6 +267,7 @@ class Quest (JQuest) :
         st.takeItems(SYMBOL_OF_SYLVAIN_ID,1)
         st.giveItems(MIRIENS_SIGIL2_ID,1)
         st.takeItems(MIRIENS_SIGIL1_ID,1)
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 7461 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL2_ID)==1 and st.getQuestItemsCount(SYMBOL_OF_JUREK_ID)==0 :
         htmltext = "7461-07.htm"
    elif npcId == 7461 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL2_ID)==1 and st.getQuestItemsCount(SYMBOL_OF_JUREK_ID)==1 :
@@ -258,6 +279,7 @@ class Quest (JQuest) :
           htmltext = "7461-12.htm"
           st.giveItems(MIRIENS_SIGIL3_ID,1)
           st.takeItems(MIRIENS_INSTRUCTION_ID,1)
+          st.playSound("ItemSound.quest_middle")
    elif npcId == 7461 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL3_ID)==1 :
         if st.getQuestItemsCount(SYMBOL_OF_CRONOS_ID) == 0 :
           htmltext = "7461-13.htm"
@@ -273,46 +295,49 @@ class Quest (JQuest) :
             st.takeItems(SYMBOL_OF_CRONOS_ID,1)
             st.giveItems(MARK_OF_SCHOLAR_ID,1)
             st.takeItems(MIRIENS_SIGIL3_ID,1)
-   elif npcId == 7070 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL1_ID)==1 and st.getQuestItemsCount((HIGHPRIESTS_SIGIL_ID) == 0 and st.getQuestItemsCount(SYMBOL_OF_SYLVAIN_ID)) == 0 :
+   elif npcId == 7070 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL1_ID)==1 and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) == 0 and st.getQuestItemsCount(SYMBOL_OF_SYLVAIN_ID) == 0 :
         htmltext = "7070-01.htm"
-   elif npcId == 7070 and int(st.get("cond"))==1 and st.getQuestItemsCount(CRYSTAL_OF_PURITY1_ID)==0 and st.getQuestItemsCount((HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(MIRIENS_SIGIL1_ID)) :
+   elif npcId == 7070 and int(st.get("cond"))==1 and st.getQuestItemsCount(CRYSTAL_OF_PURITY1_ID)==0 and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(MIRIENS_SIGIL1_ID) :
         htmltext = "7070-03.htm"
-   elif npcId == 7070 and int(st.get("cond"))==1 and st.getQuestItemsCount((HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(CRYSTAL_OF_PURITY1_ID)) :
+   elif npcId == 7070 and int(st.get("cond"))==1 and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(CRYSTAL_OF_PURITY1_ID) :
         htmltext = "7070-04.htm"
         st.giveItems(SYMBOL_OF_SYLVAIN_ID,1)
         st.takeItems(HIGHPRIESTS_SIGIL_ID,1)
         st.takeItems(CRYSTAL_OF_PURITY1_ID,1)
-   elif npcId == 7070 and int(st.get("cond"))==1 and st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(SYMBOL_OF_SYLVAIN_ID)) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID)==0 :
+        st.playSound("ItemSound.quest_middle")
+   elif npcId == 7070 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(SYMBOL_OF_SYLVAIN_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID)==0 :
         htmltext = "7070-05.htm"
-   elif npcId == 7070 and int(st.get("cond"))==1 and st.getQuestItemsCount((MIRIENS_SIGIL2_ID) or st.getQuestItemsCount(MIRIENS_SIGIL3_ID)) :
+   elif npcId == 7070 and int(st.get("cond"))==1 and (st.getQuestItemsCount(MIRIENS_SIGIL2_ID) or st.getQuestItemsCount(MIRIENS_SIGIL3_ID)) :
         htmltext = "7070-06.htm"
-   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(SYLVAINS_LETTER_ID))) :
+   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(SYLVAINS_LETTER_ID)) :
         htmltext = "7608-01.htm"
-   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(MARYAS_LETTER1_ID))) :
+   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(MARYAS_LETTER1_ID)) :
         htmltext = "7608-03.htm"
-   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(LUKAS_LETTER_ID))) :
+   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(LUKAS_LETTER_ID)) :
         htmltext = "7608-04.htm"
         st.giveItems(MARYAS_LETTER2_ID,1)
         st.takeItems(LUKAS_LETTER_ID,1)
-   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(MARYAS_LETTER2_ID))) :
+        st.playSound("ItemSound.quest_middle")
+   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(MARYAS_LETTER2_ID)) :
         htmltext = "7608-05.htm"
-   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_LETTER1_ID))) :
+   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_LETTER1_ID)) :
         htmltext = "7608-06.htm"
-   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(LUCILLAS_HANDBAG_ID))) :
+   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(LUCILLAS_HANDBAG_ID)) :
         htmltext = "7608-09.htm"
-   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_PAINTING1_ID))) :
+   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_PAINTING1_ID)) :
         htmltext = "7608-10.htm"
         st.giveItems(CRETAS_PAINTING2_ID,1)
         st.takeItems(CRETAS_PAINTING1_ID,1)
-   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_PAINTING2_ID))) :
+        st.playSound("ItemSound.quest_middle")
+   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_PAINTING2_ID)) :
         htmltext = "7608-11.htm"
-   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_PAINTING3_ID))) and st.getQuestItemsCount(BROWN_SCROLL_SCRAP_ID)<5 :
+   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_PAINTING3_ID)) and st.getQuestItemsCount(BROWN_SCROLL_SCRAP_ID)<5 :
         htmltext = "7608-12.htm"
-   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_PAINTING3_ID))) and st.getQuestItemsCount(BROWN_SCROLL_SCRAP_ID)>=5 :
+   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_PAINTING3_ID)) and st.getQuestItemsCount(BROWN_SCROLL_SCRAP_ID)>=5 :
         htmltext = "7608-13.htm"
-   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRYSTAL_OF_PURITY1_ID))) :
+   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRYSTAL_OF_PURITY1_ID)) :
         htmltext = "7608-15.htm"
-   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount((SYMBOL_OF_SYLVAIN_ID) or st.getQuestItemsCount(MIRIENS_SIGIL2_ID))) :
+   elif npcId == 7608 and int(st.get("cond"))==1 and (st.getQuestItemsCount(SYMBOL_OF_SYLVAIN_ID) or st.getQuestItemsCount(MIRIENS_SIGIL2_ID)) :
         htmltext = "7608-16.htm"
    elif npcId == 7608 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL3_ID)==1 and st.getQuestItemsCount(VALKONS_REQUEST_ID)==0 :
         htmltext = "7608-17.htm"
@@ -320,6 +345,7 @@ class Quest (JQuest) :
         htmltext = "7608-18.htm"
         st.giveItems(CRYSTAL_OF_PURITY2_ID,1)
         st.takeItems(VALKONS_REQUEST_ID,1)
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 7115 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL2_ID)==1 and st.getQuestItemsCount(GMAGISTERS_SIGIL_ID)==0 and st.getQuestItemsCount(SYMBOL_OF_JUREK_ID)==0 :
         htmltext = "7115-01.htm"
    elif npcId == 7115 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL2_ID)==1 and st.getQuestItemsCount(JUREKS_LIST_ID)==1 :
@@ -333,80 +359,82 @@ class Quest (JQuest) :
           st.takeItems(SHACKLES_SCALP_ID,st.getQuestItemsCount(SHACKLES_SCALP_ID))
           st.giveItems(SYMBOL_OF_JUREK_ID,1)
           st.takeItems(GMAGISTERS_SIGIL_ID,1)
-   elif npcId == 7115 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL2_ID) and st.getQuestItemsCount(SYMBOL_OF_JUREK_ID))) and st.getQuestItemsCount(GMAGISTERS_SIGIL_ID)==0 :
+          st.playSound("ItemSound.quest_middle")
+   elif npcId == 7115 and int(st.get("cond"))==1 and (st.getQuestItemsCount(MIRIENS_SIGIL2_ID) and st.getQuestItemsCount(SYMBOL_OF_JUREK_ID)) and st.getQuestItemsCount(GMAGISTERS_SIGIL_ID)==0 :
         htmltext = "7115-06.htm"
-   elif npcId == 7115 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL1_ID) or st.getQuestItemsCount(MIRIENS_SIGIL3_ID))) :
+   elif npcId == 7115 and int(st.get("cond"))==1 and (st.getQuestItemsCount(MIRIENS_SIGIL1_ID) or st.getQuestItemsCount(MIRIENS_SIGIL3_ID)) :
         htmltext = "7115-07.htm"
-   elif npcId == 7071 and int(st.get("cond"))==1 and st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(MARYAS_LETTER1_ID)) :
+   elif npcId == 7071 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(MARYAS_LETTER1_ID) :
         htmltext = "7071-01.htm"
         st.giveItems(LUKAS_LETTER_ID,1)
         st.takeItems(MARYAS_LETTER1_ID,1)
-   elif npcId == 7071 and int(st.get("cond"))==1 and st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID)) and st.getQuestItemsCount((MARYAS_LETTER2_ID) or st.getQuestItemsCount(CRETAS_LETTER1_ID) or st.getQuestItemsCount(LUCILLAS_HANDBAG_ID) or st.getQuestItemsCount(CRETAS_PAINTING1_ID) or st.getQuestItemsCount(LUKAS_LETTER_ID)) :
+        st.playSound("ItemSound.quest_middle")
+   elif npcId == 7071 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and (st.getQuestItemsCount(MARYAS_LETTER2_ID) or st.getQuestItemsCount(CRETAS_LETTER1_ID) or st.getQuestItemsCount(LUCILLAS_HANDBAG_ID) or st.getQuestItemsCount(CRETAS_PAINTING1_ID) or st.getQuestItemsCount(LUKAS_LETTER_ID)) :
         htmltext = "7071-02.htm"
-   elif npcId == 7071 and int(st.get("cond"))==1 and st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_PAINTING2_ID)) :
+   elif npcId == 7071 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_PAINTING2_ID) :
         htmltext = "7071-03.htm"
-   elif npcId == 7071 and int(st.get("cond"))==1 and st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_PAINTING3_ID)) :
+   elif npcId == 7071 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_PAINTING3_ID) :
         if st.getQuestItemsCount(BROWN_SCROLL_SCRAP_ID)<5 :
           htmltext = "7071-05.htm"
         else:
           htmltext = "7071-06.htm"
-   elif npcId == 7071 and int(st.get("cond"))==1 and st.getQuestItemsCount((SYMBOL_OF_SYLVAIN_ID) or st.getQuestItemsCount(MIRIENS_SIGIL2_ID) or st.getQuestItemsCount(MIRIENS_SIGIL3_ID) or st.getQuestItemsCount(CRYSTAL_OF_PURITY1_ID)) :
+   elif npcId == 7071 and int(st.get("cond"))==1 and (st.getQuestItemsCount(SYMBOL_OF_SYLVAIN_ID) or st.getQuestItemsCount(MIRIENS_SIGIL2_ID) or st.getQuestItemsCount(MIRIENS_SIGIL3_ID) or st.getQuestItemsCount(CRYSTAL_OF_PURITY1_ID)) :
         htmltext = "7071-07.htm"
-   elif npcId == 7609 and int(st.get("cond"))==1 and st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(MARYAS_LETTER2_ID)) :
+   elif npcId == 7609 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(MARYAS_LETTER2_ID) :
         htmltext = "7609-01.htm"
-   elif npcId == 7609 and int(st.get("cond"))==1 and st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_LETTER1_ID)) :
+   elif npcId == 7609 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_LETTER1_ID) :
         htmltext = "7609-06.htm"
-   elif npcId == 7609 and int(st.get("cond"))==1 and st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(LUCILLAS_HANDBAG_ID)) :
+   elif npcId == 7609 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(LUCILLAS_HANDBAG_ID) :
         htmltext = "7609-07.htm"
-   elif npcId == 7609 and int(st.get("cond"))==1 and st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID)) and st.getQuestItemsCount((CRETAS_PAINTING1_ID) or st.getQuestItemsCount(CRETAS_PAINTING2_ID) or st.getQuestItemsCount(CRETAS_PAINTING3_ID)) :
+   elif npcId == 7609 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and (st.getQuestItemsCount(CRETAS_PAINTING1_ID) or st.getQuestItemsCount(CRETAS_PAINTING2_ID) or st.getQuestItemsCount(CRETAS_PAINTING3_ID)) :
         htmltext = "7609-10.htm"
-   elif npcId == 7609 and int(st.get("cond"))==1 and st.getQuestItemsCount((CRYSTAL_OF_PURITY1_ID) or st.getQuestItemsCount(SYMBOL_OF_SYLVAIN_ID) or st.getQuestItemsCount(MIRIENS_SIGIL2_ID)) :
+   elif npcId == 7609 and int(st.get("cond"))==1 and (st.getQuestItemsCount(CRYSTAL_OF_PURITY1_ID) or st.getQuestItemsCount(SYMBOL_OF_SYLVAIN_ID) or st.getQuestItemsCount(MIRIENS_SIGIL2_ID)) :
         htmltext = "7609-11.htm"
-   elif npcId == 7609 and int(st.get("cond"))==1 and st.getQuestItemsCount((MIRIENS_SIGIL3_ID) and st.getQuestItemsCount(DIETERS_KEY_ID)) :
+   elif npcId == 7609 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL3_ID) and st.getQuestItemsCount(DIETERS_KEY_ID) :
         htmltext = "7609-12.htm"
    elif npcId == 7609 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL3_ID)==1 and st.getQuestItemsCount(DIETERS_KEY_ID)==0 :
         htmltext = "7609-15.htm"
    elif npcId == 7610 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL3_ID)==1 and st.getQuestItemsCount(CRONOS_SIGIL_ID)==0 and st.getQuestItemsCount(SYMBOL_OF_CRONOS_ID)==0 :
         htmltext = "7610-01.htm"
-   elif npcId == 7610 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL3_ID) or st.getQuestItemsCount(CRONOS_SIGIL_ID))) :
-        if st.getQuestItemsCount((SCRIPTURE_CHAPTER_1_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_2_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_3_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_4_ID)) :
+   elif npcId == 7610 and int(st.get("cond"))==1 and (st.getQuestItemsCount(MIRIENS_SIGIL3_ID) or st.getQuestItemsCount(CRONOS_SIGIL_ID)) :
+        if st.getQuestItemsCount(SCRIPTURE_CHAPTER_1_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_2_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_3_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_4_ID) :
           htmltext = "7610-12.htm"
         else:
           htmltext = "7610-11.htm"
    elif npcId == 7610 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL3_ID)==1 and st.getQuestItemsCount(SYMBOL_OF_CRONOS_ID)==1 and st.getQuestItemsCount(CRONOS_SIGIL_ID)==0 :
         htmltext = "7610-15.htm"
-   elif npcId == 7111 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL3_ID) and st.getQuestItemsCount(CRONOS_SIGIL_ID) and st.getQuestItemsCount(CRONOS_LETTER_ID))) :
+   elif npcId == 7111 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL3_ID) and st.getQuestItemsCount(CRONOS_SIGIL_ID) and st.getQuestItemsCount(CRONOS_LETTER_ID) :
         htmltext = "7111-01.htm"
-   elif npcId == 7111 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL3_ID) and st.getQuestItemsCount(CRONOS_SIGIL_ID) and st.getQuestItemsCount(DIETERS_KEY_ID))) :
+   elif npcId == 7111 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL3_ID) and st.getQuestItemsCount(CRONOS_SIGIL_ID) and st.getQuestItemsCount(DIETERS_KEY_ID) :
           htmltext = "7111-06.htm"
-   elif npcId == 7111 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL3_ID) and st.getQuestItemsCount(CRONOS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_LETTER2_ID))) :
+   elif npcId == 7111 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL3_ID) and st.getQuestItemsCount(CRONOS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_LETTER2_ID) :
           htmltext = "7111-07.htm"
-   elif npcId == 7111 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL3_ID) and st.getQuestItemsCount(CRONOS_SIGIL_ID) and st.getQuestItemsCount(DIETERS_DIARY_ID) and st.getQuestItemsCount(DIETERS_LETTER_ID))) :
+   elif npcId == 7111 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL3_ID) and st.getQuestItemsCount(CRONOS_SIGIL_ID) and st.getQuestItemsCount(DIETERS_DIARY_ID) and st.getQuestItemsCount(DIETERS_LETTER_ID) :
           htmltext = "7111-10.htm"
-   elif npcId == 7111 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL3_ID) and st.getQuestItemsCount(CRONOS_SIGIL_ID) and st.getQuestItemsCount(DIETERS_DIARY_ID) and st.getQuestItemsCount(RAUTS_LETTER_ENVELOPE_ID))) :
+   elif npcId == 7111 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL3_ID) and st.getQuestItemsCount(CRONOS_SIGIL_ID) and st.getQuestItemsCount(DIETERS_DIARY_ID) and st.getQuestItemsCount(RAUTS_LETTER_ENVELOPE_ID) :
           htmltext = "7111-11.htm"
-   elif npcId == 7111 and int(st.get("cond"))==1 and (st.getQuestItemsCount((MIRIENS_SIGIL3_ID) and st.getQuestItemsCount(CRONOS_SIGIL_ID) and st.getQuestItemsCount(DIETERS_DIARY_ID))) and st.getQuestItemsCount(DIETERS_LETTER_ID)==0 and st.getQuestItemsCount(RAUTS_LETTER_ENVELOPE_ID)==0 :
-          if st.getQuestItemsCount((SCRIPTURE_CHAPTER_1_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_2_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_3_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_4_ID)) :
+   elif npcId == 7111 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL3_ID) and st.getQuestItemsCount(CRONOS_SIGIL_ID) and st.getQuestItemsCount(DIETERS_DIARY_ID) and st.getQuestItemsCount(DIETERS_LETTER_ID)==0 and st.getQuestItemsCount(RAUTS_LETTER_ENVELOPE_ID)==0 :
+          if st.getQuestItemsCount(SCRIPTURE_CHAPTER_1_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_2_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_3_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_4_ID) :
             htmltext = "7111-13.htm"
           else:
             htmltext = "7111-12.htm"
    elif npcId == 7111 and int(st.get("cond"))==1 and st.getQuestItemsCount(SYMBOL_OF_CRONOS_ID)==1 :
           htmltext = "7111-15.htm"
-   elif npcId == 7230 and int(st.get("cond"))==1 and (st.getQuestItemsCount((DIETERS_DIARY_ID) and st.getQuestItemsCount(DIETERS_LETTER_ID))) :
+   elif npcId == 7230 and int(st.get("cond"))==1 and st.getQuestItemsCount(DIETERS_DIARY_ID) and st.getQuestItemsCount(DIETERS_LETTER_ID) :
         htmltext = "7230-01.htm"
-   elif npcId == 7230 and int(st.get("cond"))==1 and (st.getQuestItemsCount((DIETERS_DIARY_ID) and st.getQuestItemsCount(RAUTS_LETTER_ENVELOPE_ID))) :
+   elif npcId == 7230 and int(st.get("cond"))==1 and st.getQuestItemsCount(DIETERS_DIARY_ID) and st.getQuestItemsCount(RAUTS_LETTER_ENVELOPE_ID) :
         htmltext = "7230-03.htm"
-   elif npcId == 7230 and int(st.get("cond"))==1 and st.getQuestItemsCount(DIETERS_DIARY_ID)==1 and (st.getQuestItemsCount((STRONG_LIQUOR_ID) or st.getQuestItemsCount(TREAFS_RING_ID))) :
+   elif npcId == 7230 and int(st.get("cond"))==1 and st.getQuestItemsCount(DIETERS_DIARY_ID)==1 and (st.getQuestItemsCount(STRONG_LIQUOR_ID) or st.getQuestItemsCount(TREAFS_RING_ID)) :
         htmltext = "7230-04.htm"
-   elif npcId == 7316 and int(st.get("cond"))==1 and (st.getQuestItemsCount((DIETERS_DIARY_ID) and st.getQuestItemsCount(RAUTS_LETTER_ENVELOPE_ID))) :
+   elif npcId == 7316 and int(st.get("cond"))==1 and st.getQuestItemsCount(DIETERS_DIARY_ID) and st.getQuestItemsCount(RAUTS_LETTER_ENVELOPE_ID) :
         htmltext = "7316-01.htm"
-   elif npcId == 7316 and int(st.get("cond"))==1 and (st.getQuestItemsCount((DIETERS_DIARY_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_1_ID) and st.getQuestItemsCount(STRONG_LIQUOR_ID))) :
+   elif npcId == 7316 and int(st.get("cond"))==1 and st.getQuestItemsCount(DIETERS_DIARY_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_1_ID) and st.getQuestItemsCount(STRONG_LIQUOR_ID) :
         htmltext = "7316-04.htm"
-   elif npcId == 7316 and int(st.get("cond"))==1 and (st.getQuestItemsCount((DIETERS_DIARY_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_1_ID) and st.getQuestItemsCount(TREAFS_RING_ID))) :
+   elif npcId == 7316 and int(st.get("cond"))==1 and st.getQuestItemsCount(DIETERS_DIARY_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_1_ID) and st.getQuestItemsCount(TREAFS_RING_ID) :
         htmltext = "7316-05.htm"
-   elif npcId == 7611 and int(st.get("cond"))==1 and (st.getQuestItemsCount((DIETERS_DIARY_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_1_ID) and st.getQuestItemsCount(STRONG_LIQUOR_ID))) :
+   elif npcId == 7611 and int(st.get("cond"))==1 and st.getQuestItemsCount(DIETERS_DIARY_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_1_ID) and st.getQuestItemsCount(STRONG_LIQUOR_ID) :
         htmltext = "7611-01.htm"
-   elif npcId == 7611 and int(st.get("cond"))==1 and (st.getQuestItemsCount((TREAFS_RING_ID) or st.getQuestItemsCount(SYMBOL_OF_CRONOS_ID))) :
+   elif npcId == 7611 and int(st.get("cond"))==1 and (st.getQuestItemsCount(TREAFS_RING_ID) or st.getQuestItemsCount(SYMBOL_OF_CRONOS_ID)) :
         htmltext = "7611-05.htm"
    elif npcId == 7103 and int(st.get("cond"))==1 and st.getQuestItemsCount(TREAFS_RING_ID)==1 and st.getQuestItemsCount(VALKONS_REQUEST_ID)==0 and st.getQuestItemsCount(CRYSTAL_OF_PURITY2_ID)==0 and st.getQuestItemsCount(SCRIPTURE_CHAPTER_2_ID)==0 :
         htmltext = "7103-01.htm"
@@ -416,67 +444,98 @@ class Quest (JQuest) :
         htmltext = "7103-06.htm"
         st.giveItems(SCRIPTURE_CHAPTER_2_ID,1)
         st.takeItems(CRYSTAL_OF_PURITY2_ID,1)
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 7103 and int(st.get("cond"))==1 and st.getQuestItemsCount(TREAFS_RING_ID)==1 and st.getQuestItemsCount(VALKONS_REQUEST_ID)==0 and st.getQuestItemsCount(CRYSTAL_OF_PURITY2_ID)==0 and st.getQuestItemsCount(SCRIPTURE_CHAPTER_2_ID)==1 :
         htmltext = "7103-07.htm"
-   elif npcId == 7458 and int(st.get("cond"))==1 and st.getQuestItemsCount(TREAFS_RING_ID)==1 and st.getQuestItemsCount((POITANS_NOTES_ID) == 0 and st.getQuestItemsCount(KASIANS_LIST_ID) == 0 and st.getQuestItemsCount(SCRIPTURE_CHAPTER_4_ID)) == 0 :
+   elif npcId == 7458 and int(st.get("cond"))==1 and st.getQuestItemsCount(TREAFS_RING_ID)==1 and st.getQuestItemsCount(POITANS_NOTES_ID) == 0 and st.getQuestItemsCount(KASIANS_LIST_ID) == 0 and st.getQuestItemsCount(SCRIPTURE_CHAPTER_4_ID) == 0 :
         htmltext = "7458-01.htm"
         st.giveItems(POITANS_NOTES_ID,1)
-   elif npcId == 7458 and int(st.get("cond"))==1 and st.getQuestItemsCount((TREAFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID)) and st.getQuestItemsCount((KASIANS_LIST_ID) == 0 and st.getQuestItemsCount(SCRIPTURE_CHAPTER_4_ID)) == 0 :
+        st.playSound("ItemSound.quest_middle")
+   elif npcId == 7458 and int(st.get("cond"))==1 and st.getQuestItemsCount(TREAFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(KASIANS_LIST_ID) == 0 and st.getQuestItemsCount(SCRIPTURE_CHAPTER_4_ID) == 0 :
         htmltext = "7458-02.htm"
-   elif npcId == 7458 and int(st.get("cond"))==1 and st.getQuestItemsCount((TREAFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(KASIANS_LIST_ID)) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_4_ID)==0 :
+   elif npcId == 7458 and int(st.get("cond"))==1 and st.getQuestItemsCount(TREAFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(KASIANS_LIST_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_4_ID)==0 :
         htmltext = "7458-03.htm"
-   elif npcId == 7458 and int(st.get("cond"))==1 and st.getQuestItemsCount((TREAFS_RING_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_4_ID)) and st.getQuestItemsCount((POITANS_NOTES_ID) == 0 and st.getQuestItemsCount(KASIANS_LIST_ID)) == 0 :
+   elif npcId == 7458 and int(st.get("cond"))==1 and st.getQuestItemsCount(TREAFS_RING_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_4_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) == 0 and st.getQuestItemsCount(KASIANS_LIST_ID) == 0 :
         htmltext = "7458-04.htm"
-   elif npcId == 7612 and int(st.get("cond"))==1 and st.getQuestItemsCount((TREAFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID)) and st.getQuestItemsCount(KASIANS_LIST_ID)==0 :
-        if st.getQuestItemsCount((SCRIPTURE_CHAPTER_1_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_2_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_3_ID)) :
+   elif npcId == 7612 and int(st.get("cond"))==1 and st.getQuestItemsCount(TREAFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(KASIANS_LIST_ID)==0 :
+        if st.getQuestItemsCount(SCRIPTURE_CHAPTER_1_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_2_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_3_ID) :
           htmltext = "7612-02.htm"
         else:
           htmltext = "7612-01.htm"
-   elif npcId == 7612 and int(st.get("cond"))==1 and st.getQuestItemsCount((TREAFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(KASIANS_LIST_ID)) :
+   elif npcId == 7612 and int(st.get("cond"))==1 and st.getQuestItemsCount(TREAFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(KASIANS_LIST_ID) :
         if st.getQuestItemsCount(GHOULS_SKIN_ID)+st.getQuestItemsCount(MEDUSAS_BLOOD_ID)+st.getQuestItemsCount(CRIMSONBINDS_ICHOR_ID)+st.getQuestItemsCount(ENCHT_GARGOYLES_NAIL_ID)<32 :
           htmltext = "7612-05.htm"
         else:
           htmltext = "7612-06.htm"
-   elif npcId == 7612 and int(st.get("cond"))==1 and st.getQuestItemsCount((st.getQuestItemsCount(POITANS_NOTES_ID) == 0) == 0 and st.getQuestItemsCount(POITANS_NOTES_ID) == 0 and st.getQuestItemsCount(KASIANS_LIST_ID)) == 0 and st.getQuestItemsCount(TREAFS_RING_ID)==1 and (st.getQuestItemsCount((SCRIPTURE_CHAPTER_1_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_2_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_3_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_4_ID))) :
+   elif npcId == 7612 and int(st.get("cond"))==1 and st.getQuestItemsCount(POITANS_NOTES_ID) == 0 and st.getQuestItemsCount(KASIANS_LIST_ID) == 0 and st.getQuestItemsCount(TREAFS_RING_ID)==1 and st.getQuestItemsCount(SCRIPTURE_CHAPTER_1_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_2_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_3_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_4_ID) :
         htmltext = "7612-08.htm"
    return htmltext
 
  def onKill (self,npcId,st):
    if npcId == 580 :
-    if int(st.get("cond")) and st.getQuestItemsCount((MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_PAINTING3_ID)) and st.getQuestItemsCount(BROWN_SCROLL_SCRAP_ID)<5 :
+    if int(st.get("cond")) and st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_PAINTING3_ID) and st.getQuestItemsCount(BROWN_SCROLL_SCRAP_ID)<5 :
       if st.getRandom(100) < 50 :
         st.giveItems(BROWN_SCROLL_SCRAP_ID,1)
+      if st.getQuestItemsCount(BROWN_SCROLL_SCRAP_ID) < 5 :
+	st.playSound("ItemSound.quest_itemget")
+      else:
+	st.playSound("ItemSound.quest_middle")
    elif npcId == 68 :
-    if int(st.get("cond")) and st.getQuestItemsCount((MIRIENS_SIGIL2_ID) and st.getQuestItemsCount(GMAGISTERS_SIGIL_ID) and st.getQuestItemsCount(JUREKS_LIST_ID)) and st.getQuestItemsCount(BEAMERS_SKIN_ID)<5 :
+    if int(st.get("cond")) and st.getQuestItemsCount(MIRIENS_SIGIL2_ID) and st.getQuestItemsCount(GMAGISTERS_SIGIL_ID) and st.getQuestItemsCount(JUREKS_LIST_ID) and st.getQuestItemsCount(BEAMERS_SKIN_ID)<5 :
       if st.getRandom(100) < 50 :
         st.giveItems(BEAMERS_SKIN_ID,1)
+      if st.getQuestItemsCount(BEAMERS_SKIN_ID) < 5 :
+	st.playSound("ItemSound.quest_itemget")
+      else:
+	st.playSound("ItemSound.quest_middle")
    elif npcId == 269 :
-    if int(st.get("cond")) and st.getQuestItemsCount((MIRIENS_SIGIL2_ID) and st.getQuestItemsCount(GMAGISTERS_SIGIL_ID) and st.getQuestItemsCount(JUREKS_LIST_ID)) and st.getQuestItemsCount(SHAMANS_NECKLACE_ID)<5 :
+    if int(st.get("cond")) and st.getQuestItemsCount(MIRIENS_SIGIL2_ID) and st.getQuestItemsCount(GMAGISTERS_SIGIL_ID) and st.getQuestItemsCount(JUREKS_LIST_ID) and st.getQuestItemsCount(SHAMANS_NECKLACE_ID)<5 :
       if st.getRandom(100) < 50 :
         st.giveItems(SHAMANS_NECKLACE_ID,1)
+      if st.getQuestItemsCount(SHAMANS_NECKLACE_ID) < 5 :
+	st.playSound("ItemSound.quest_itemget")
+      else:
+	st.playSound("ItemSound.quest_middle")
    elif npcId == 235 :
-    if int(st.get("cond")) and st.getQuestItemsCount((MIRIENS_SIGIL2_ID) and st.getQuestItemsCount(GMAGISTERS_SIGIL_ID) and st.getQuestItemsCount(JUREKS_LIST_ID)) and st.getQuestItemsCount(SHACKLES_SCALP_ID)<2 :
+    if int(st.get("cond")) and st.getQuestItemsCount(MIRIENS_SIGIL2_ID) and st.getQuestItemsCount(GMAGISTERS_SIGIL_ID) and st.getQuestItemsCount(JUREKS_LIST_ID) and st.getQuestItemsCount(SHACKLES_SCALP_ID)<2 :
       st.giveItems(SHACKLES_SCALP_ID,1)
+      if st.getQuestItemsCount(SHACKLES_SCALP_ID) < 2 :
+	st.playSound("ItemSound.quest_itemget")
+      else:
+	st.playSound("ItemSound.quest_middle")
    elif npcId == 554 :
-    if int(st.get("cond")) and st.getQuestItemsCount((MIRIENS_SIGIL3_ID) and st.getQuestItemsCount(CRONOS_SIGIL_ID) and st.getQuestItemsCount(TREAFS_RING_ID)) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_3_ID) == 0 :
+    if int(st.get("cond")) and st.getQuestItemsCount(MIRIENS_SIGIL3_ID) and st.getQuestItemsCount(CRONOS_SIGIL_ID) and st.getQuestItemsCount(TREAFS_RING_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_3_ID) == 0 :
       if st.getRandom(100) < 30 :
         st.giveItems(SCRIPTURE_CHAPTER_3_ID,1)
+	st.playSound("ItemSound.quest_middle")
    elif npcId == 201 :
-    if int(st.get("cond")) and st.getQuestItemsCount((TREAFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(KASIANS_LIST_ID)) and st.getQuestItemsCount(GHOULS_SKIN_ID)<10 :
+    if int(st.get("cond")) and st.getQuestItemsCount(TREAFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(KASIANS_LIST_ID) and st.getQuestItemsCount(GHOULS_SKIN_ID)<10 :
       st.giveItems(GHOULS_SKIN_ID,1)
-      st.playSound("ItemSound.quest_middle")
+      if st.getQuestItemsCount(GHOULS_SKIN_ID) < 10 :
+	st.playSound("ItemSound.quest_itemget")
+      else:
+	st.playSound("ItemSound.quest_middle")
    elif npcId == 158 :
-    if int(st.get("cond")) and st.getQuestItemsCount((TREAFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(KASIANS_LIST_ID)) and st.getQuestItemsCount(MEDUSAS_BLOOD_ID)<12 :
+    if int(st.get("cond")) and st.getQuestItemsCount(TREAFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(KASIANS_LIST_ID) and st.getQuestItemsCount(MEDUSAS_BLOOD_ID)<12 :
       st.giveItems(MEDUSAS_BLOOD_ID,1)
-      st.playSound("ItemSound.quest_middle")
+      if st.getQuestItemsCount(MEDUSAS_BLOOD_ID) < 12 :
+	st.playSound("ItemSound.quest_itemget")
+      else:
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 552 :
-    if int(st.get("cond")) and st.getQuestItemsCount((TREAFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(KASIANS_LIST_ID)) and st.getQuestItemsCount(CRIMSONBINDS_ICHOR_ID)<5 :
+    if int(st.get("cond")) and st.getQuestItemsCount(TREAFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(KASIANS_LIST_ID) and st.getQuestItemsCount(CRIMSONBINDS_ICHOR_ID)<5 :
       st.giveItems(CRIMSONBINDS_ICHOR_ID,1)
-      st.playSound("ItemSound.quest_middle")
+      if st.getQuestItemsCount(CRIMSONBINDS_ICHOR_ID) < 5 :
+	st.playSound("ItemSound.quest_itemget")
+      else:
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 567 :
-    if int(st.get("cond")) and st.getQuestItemsCount((TREAFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(KASIANS_LIST_ID)) and st.getQuestItemsCount(ENCHT_GARGOYLES_NAIL_ID)<5 :
+    if int(st.get("cond")) and st.getQuestItemsCount(TREAFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(KASIANS_LIST_ID) and st.getQuestItemsCount(ENCHT_GARGOYLES_NAIL_ID)<5 :
       st.giveItems(ENCHT_GARGOYLES_NAIL_ID,1)
-      st.playSound("ItemSound.quest_middle")
+      if st.getQuestItemsCount(ENCHT_GARGOYLES_NAIL_ID) < 5 :
+	st.playSound("ItemSound.quest_itemget")
+      else:
+        st.playSound("ItemSound.quest_middle")
    return
 
 QUEST       = Quest(214,"214_TrialOfScholar","Trial Of Scholar")

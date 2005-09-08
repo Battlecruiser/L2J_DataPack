@@ -51,7 +51,6 @@ class Quest (JQuest) :
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
       st.giveItems(KAIRAS_LETTER1_ID,1)
-      st.set("cond",str(0))
     elif event == "7476_1" :
           htmltext = "7476-04.htm"
           st.set("cond","1")
@@ -137,7 +136,7 @@ class Quest (JQuest) :
       htmltext = "7476-16.htm"
    elif npcId == 7476 and int(st.get("cond"))==1 and st.getQuestItemsCount(PALUS_CHARM_ID) :
       htmltext = "7476-17.htm"
-   elif npcId == 7614 and int(st.get("cond"))==1 and st.getQuestItemsCount(KAIRAS_LETTER1_ID) :
+   elif npcId == 7614 and int(st.get("cond"))>=1 and st.getQuestItemsCount(KAIRAS_LETTER1_ID) :
       htmltext = "7614-01.htm"
       st.giveItems(METHEUS_FUNERAL_JAR_ID,1)
       st.takeItems(KAIRAS_LETTER1_ID,1)
@@ -388,6 +387,7 @@ STARTED.addTalkId(7419)
 STARTED.addTalkId(7463)
 STARTED.addTalkId(7476)
 STARTED.addTalkId(7613)
+STARTED.addTalkId(7614)
 
 STARTED.addKillId(144)
 STARTED.addKillId(157)

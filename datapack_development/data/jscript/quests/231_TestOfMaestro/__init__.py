@@ -30,11 +30,9 @@ class Quest (JQuest) :
     htmltext = event
     if event == "1" :
       htmlfile = "7531-04.htm"
-      st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
       st.set("cond","1")
-      st.set("cond",str(0))
     elif event == "7533_1" :
           htmltext = "7533-02.htm"
           st.set("cond","2")
@@ -47,8 +45,8 @@ class Quest (JQuest) :
           htmltext = "7556-03.htm"
     elif event == "7556_3" :
           htmltext = "7556-05.htm"
-          st.giveItems(BROKEN_TELEPORT_DEVICE_ID,1)
           st.takeItems(PAINT_OF_TELEPORT_DEVICE_ID,1)
+	  st.set("id","0")
           st.getPlayer().teleToLocation(140352,-194133,-2028);
           st.spawnNpc(150,140402,-194133,-1950)
           st.spawnNpc(150,140352,-194183,-1950)
@@ -115,16 +113,16 @@ class Quest (JQuest) :
       htmltext = "7533-05.htm"
    elif npcId == 7671 and int(st.get("cond"))==2 and st.getQuestItemsCount(PAINT_OF_KAMURU_ID)==0 and st.getQuestItemsCount(NECKLACE_OF_KAMURU_ID)==0 and st.getQuestItemsCount(LETTER_OF_SOLDER_DETACHMENT_ID)==0 :
       htmltext = "7671-01.htm"
-   elif npcId == 7671 and int(st.get("cond"))==1 and st.getQuestItemsCount(PAINT_OF_KAMURU_ID) and st.getQuestItemsCount(NECKLACE_OF_KAMURU_ID)==0 :
+   elif npcId == 7671 and int(st.get("cond"))==2 and st.getQuestItemsCount(PAINT_OF_KAMURU_ID) and st.getQuestItemsCount(NECKLACE_OF_KAMURU_ID)==0 :
       htmltext = "7671-03.htm"
-   elif npcId == 7671 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_KAMURU_ID) :
+   elif npcId == 7671 and int(st.get("cond"))==2 and st.getQuestItemsCount(NECKLACE_OF_KAMURU_ID) :
       htmltext = "7671-04.htm"
       st.giveItems(LETTER_OF_SOLDER_DETACHMENT_ID,1)
       st.takeItems(NECKLACE_OF_KAMURU_ID,1)
       st.takeItems(PAINT_OF_KAMURU_ID,1)
-   elif npcId == 7671 and int(st.get("cond"))==1 and st.getQuestItemsCount(LETTER_OF_SOLDER_DETACHMENT_ID) :
+   elif npcId == 7671 and int(st.get("cond"))==2 and st.getQuestItemsCount(LETTER_OF_SOLDER_DETACHMENT_ID) :
       htmltext = "7671-05.htm"
-   elif npcId == 7672 and int(st.get("cond"))==1 and st.getQuestItemsCount(PAINT_OF_KAMURU_ID) :
+   elif npcId == 7672 and int(st.get("cond"))==2 and st.getQuestItemsCount(PAINT_OF_KAMURU_ID) :
       htmltext = "7672-01.htm"
    elif npcId == 7536 and int(st.get("cond"))==1 and st.getQuestItemsCount(RECOMMENDATION_OF_ARIN_ID)==0 :
       htmltext = "7536-01.htm"
@@ -183,6 +181,12 @@ class Quest (JQuest) :
         else:
           st.giveItems(BLOOD_OF_LEECH_ID,1)
           st.playSound("Itemsound.quest_itemget")
+   elif npcId == 150 :
+	if int(st.get("cond"))>=1 and int(st.get("id")) < 3 :
+	  st.set("id",int(st.get("id"))+1)
+	  if int(st.get("id")) == 3 :
+            st.giveItems(BROKEN_TELEPORT_DEVICE_ID,1)
+            st.playSound("Itemsound.quest_middle")
    elif npcId == 229 :
       if int(st.get("cond")) and int(st.get("cond")) == 4 and st.getQuestItemsCount(WEIRD_BEES_NEEDLE_ID) < 10 :
         if st.getQuestItemsCount(WEIRD_BEES_NEEDLE_ID) == 9 :

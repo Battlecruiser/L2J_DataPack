@@ -41,7 +41,7 @@ class Quest (JQuest) :
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
-        st.giveItems(RUKALS_LETTER_ID)
+        st.giveItems(RUKALS_LETTER_ID,1)
     elif event == "7629_1" :
           htmltext = "7629-09.htm"
     elif event == "7629_2" :
@@ -51,22 +51,27 @@ class Quest (JQuest) :
           st.takeItems(GOLDEN_SEED2_ID,1)
           st.giveItems(SCORE_OF_ELEMENTS_ID,1)
           st.takeItems(GOLDEN_SEED3_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7391_1" :
           htmltext = "7391-02.htm"
           st.giveItems(PARINAS_LETTER_ID,1)
           st.takeItems(RUKALS_LETTER_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7612_1" :
           htmltext = "7612-02.htm"
           st.giveItems(LILAC_CHARM_ID,1)
           st.takeItems(PARINAS_LETTER_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7412_1" :
           htmltext = "7412-02.htm"
           st.giveItems(SYLPH_CHARM_ID,1)
+          st.playSound("ItemSound.quest_middle")
     elif event == "7409_1" :
           htmltext = "7409-02.htm"
     elif event == "7409_2" :
           htmltext = "7409-03.htm"
           st.giveItems(SERPENT_CHARM_ID,1)
+          st.playSound("ItemSound.quest_middle")
     return htmltext
 
 
@@ -98,12 +103,12 @@ class Quest (JQuest) :
    elif npcId == 7629 and int(st.get("cond"))==1 and st.getQuestItemsCount(PARINAS_LETTER_ID)==1 :
         htmltext = "7629-06.htm"
    elif npcId == 7629 and int(st.get("cond"))==1 and st.getQuestItemsCount(LILAC_CHARM_ID)==1 :
-        if st.getQuestItemsCount((GOLDEN_SEED1_ID) and st.getQuestItemsCount(GOLDEN_SEED2_ID) and st.getQuestItemsCount(GOLDEN_SEED3_ID)) :
+        if st.getQuestItemsCount(GOLDEN_SEED1_ID) and st.getQuestItemsCount(GOLDEN_SEED2_ID) and st.getQuestItemsCount(GOLDEN_SEED3_ID) :
           htmltext = "7629-08.htm"
         else:
           htmltext = "7629-07.htm"
    elif npcId == 7629 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 :
-        if st.getQuestItemsCount((TONE_OF_WATER_ID) and st.getQuestItemsCount(TONE_OF_FIRE_ID) and st.getQuestItemsCount(TONE_OF_WIND_ID) and st.getQuestItemsCount(TONE_OF_EARTH_ID)) :
+        if st.getQuestItemsCount(TONE_OF_WATER_ID) and st.getQuestItemsCount(TONE_OF_FIRE_ID) and st.getQuestItemsCount(TONE_OF_WIND_ID) and st.getQuestItemsCount(TONE_OF_EARTH_ID) :
           if st.getGameTicks() != int(st.get("id")) :
             st.set("id",str(st.getGameTicks()))
             st.takeItems(SCORE_OF_ELEMENTS_ID,1)
@@ -131,7 +136,7 @@ class Quest (JQuest) :
    elif npcId == 7612 and int(st.get("cond"))==1 and st.getQuestItemsCount(PARINAS_LETTER_ID)==1 :
         htmltext = "7612-01.htm"
    elif npcId == 7612 and int(st.get("cond"))==1 and st.getQuestItemsCount(LILAC_CHARM_ID)==1 :
-        if st.getQuestItemsCount((GOLDEN_SEED1_ID) and st.getQuestItemsCount(GOLDEN_SEED2_ID) and st.getQuestItemsCount(GOLDEN_SEED3_ID)) :
+        if st.getQuestItemsCount(GOLDEN_SEED1_ID) and st.getQuestItemsCount(GOLDEN_SEED2_ID) and st.getQuestItemsCount(GOLDEN_SEED3_ID) :
           htmltext = "7612-04.htm"
         else:
           htmltext = "7612-03.htm"
@@ -148,11 +153,13 @@ class Quest (JQuest) :
           st.takeItems(DAZZLING_DROP_ID,st.getQuestItemsCount(DAZZLING_DROP_ID))
           st.giveItems(TONE_OF_WATER_ID,1)
           st.takeItems(UNDINE_CHARM_ID,1)
+          st.playSound("ItemSound.quest_middle")
    elif npcId == 7413 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WATER_ID)==1 and st.getQuestItemsCount(UNDINE_CHARM_ID)==0 :
         htmltext = "7413-04.htm"
    elif npcId == 7411 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_FIRE_ID)==0 and st.getQuestItemsCount(SALAMANDER_CHARM_ID)==0 :
         htmltext = "7411-01.htm"
         st.giveItems(SALAMANDER_CHARM_ID,1)
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 7411 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(SALAMANDER_CHARM_ID)==1 :
         if st.getQuestItemsCount(FLAME_CRYSTAL_ID) < 5 :
           htmltext = "7411-02.htm"
@@ -161,6 +168,7 @@ class Quest (JQuest) :
           st.takeItems(FLAME_CRYSTAL_ID,st.getQuestItemsCount(FLAME_CRYSTAL_ID))
           st.giveItems(TONE_OF_FIRE_ID,1)
           st.takeItems(SALAMANDER_CHARM_ID,1)
+          st.playSound("ItemSound.quest_middle")
    elif npcId == 7411 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_FIRE_ID)==1 and st.getQuestItemsCount(SALAMANDER_CHARM_ID)==0 :
         htmltext = "7411-04.htm"
    elif npcId == 7412 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WIND_ID)==0 and st.getQuestItemsCount(SYLPH_CHARM_ID)==0 :
@@ -175,6 +183,7 @@ class Quest (JQuest) :
           st.takeItems(WINDSUS_MANE_ID,st.getQuestItemsCount(WINDSUS_MANE_ID))
           st.giveItems(TONE_OF_WIND_ID,1)
           st.takeItems(SYLPH_CHARM_ID,1)
+          st.playSound("ItemSound.quest_middle")
    elif npcId == 7412 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WIND_ID)==1 and st.getQuestItemsCount(SYLPH_CHARM_ID)==0 :
         htmltext = "7412-05.htm"
    elif npcId == 7409 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_EARTH_ID)==0 and st.getQuestItemsCount(SERPENT_CHARM_ID)==0 :
@@ -189,6 +198,7 @@ class Quest (JQuest) :
           st.takeItems(EN_IRONGOLEM_SCRAP_ID,st.getQuestItemsCount(EN_IRONGOLEM_SCRAP_ID))
           st.giveItems(TONE_OF_EARTH_ID,1)
           st.takeItems(SERPENT_CHARM_ID,1)
+          st.playSound("ItemSound.quest_middle")
    elif npcId == 7409 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_EARTH_ID)==1 and st.getQuestItemsCount(SERPENT_CHARM_ID)==0 :
         htmltext = "7409-06.htm"
    return htmltext
