@@ -1,4 +1,5 @@
-#Make by GreenHope
+
+#Make by GreenHope and fix by Prograsso (Baghak)
 print "importing quests: 1006: Blacksmith"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
@@ -13,20 +14,26 @@ class Quest (JQuest) :
     htmltext = event
 
     if event == "1":
-         if st.getQuestItemsCount(142)>=2 and st.getQuestItemsCount(5126)>=1 and st.getQuestItemsCount(5575)>=100000:
-	     st.takeItems(142,2)
-             st.takeItems(5126,1)
-             st.takeItems(5575,100000)
-             st.giveItems(5233,1)
-             htmltext = "Done."
+         if st.getQuestItemsCount(142)>=1 and st.getQuestItemsCount(5126)>=1 and st.getQuestItemsCount(5575)>=100000:
+            st.takeItems(142,1)
+            if st.getQuestItemsCount(142)>=1:
+               st.takeItems(142,1)
+               st.takeItems(5126,1)
+               st.takeItems(5575,100000)
+               st.giveItems(5233,1)
+               htmltext = "Item has been succesfully created."
+            else:
+               st.giveItems(142,1)
+               htmltext = "You need one more sword."
          else:
-             htmltext = "Not enough materials."
-
+             htmltext = "You do not have enough materials."
+   
+   
     if event == "2":
          if st.getQuestItemsCount(79)>=1 and st.getQuestItemsCount(142)>=1 and st.getQuestItemsCount(5126)>=1 and st.getQuestItemsCount(5575)>=150000:
-	     st.takeItems(79,1)
+             st.takeItems(79,1)
              st.takeItems(142,1)
-	     st.takeItems(5126,1)
+             st.takeItems(5126,1)
              st.takeItems(5575,150000)
              st.giveItems(5704,1)
              htmltext = "Done."
@@ -34,17 +41,22 @@ class Quest (JQuest) :
              htmltext = "Not enough materials."
 
     if event == "3":
-         if st.getQuestItemsCount(79)>=2 and st.getQuestItemsCount(5126)>=1 and st.getQuestItemsCount(5575)>=200000:
-	     st.takeItems(79,2)
-             st.takeItems(5126,1)
-             st.takeItems(5575,200000)
-             st.giveItems(5706,1)
-             htmltext = "Done."
+         if st.getQuestItemsCount(79)>=1 and st.getQuestItemsCount(5126)>=1 and st.getQuestItemsCount(5575)>=200000:
+            st.takeItems(79,1)
+            if st.getQuestItemsCount(79)>=1:
+               st.takeItems(79,1)
+               st.takeItems(5126,1)
+               st.takeItems(5575,200000)
+               st.giveItems(5706,1)
+               htmltext = "Item has been succesfully created."
+            else:
+               st.giveItems(79,1)
+               htmltext = "You need one more sword."
          else:
-             htmltext = "Not enough materials."
+             htmltext = "You do not have enough materials."
 
     if event == "0":
-	htmltext = "Cancel."
+           htmltext = "Cancel."
     return htmltext
 
  def onTalk (Self,npcId,st):
@@ -66,4 +78,4 @@ QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(8126)
 
-STARTED.addTalkId(8126)
+STARTED.addTalkId(8126) 
