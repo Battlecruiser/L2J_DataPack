@@ -1,5 +1,6 @@
 # version 0.2
-# by DrLecter, with fixes from Ryo_Saeba
+# by DrLecter, with fixes from Ryo_Saeba
+
 print "importing quests: 419: Get a Pet"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
@@ -23,7 +24,7 @@ SPIDER_LEG2 = 3424
 SPIDER_LEG3 = 3425
 SPIDER_LEG4 = 3426
 SPIDER_LEG5 = 3427
-#Chance of drop in %
+#Chance of drop in %
 SPIDER_LEG_DROP = 100
 #mobs
 #1 humans
@@ -86,6 +87,7 @@ def check_questions(st) :
     st.playSound("ItemSound.quest_finish")
     htmltext="Completed.htm"
   return htmltext
+  
 # Main Quest Code
 class Quest (JQuest):
 
