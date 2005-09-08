@@ -4,7 +4,7 @@
 CREATE TABLE characters (
   account_name varchar(45) default NULL,
   obj_Id decimal(11,0) NOT NULL default '0',
-  char_name varchar(35) default NULL,
+  char_name varchar(35) NOT NULL,
   `level` decimal(11,0) default NULL,
   maxHp decimal(11,0) default NULL,
   curHp decimal(18,0) default NULL,
