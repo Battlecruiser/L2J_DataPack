@@ -1010,7 +1010,7 @@ class Quest (JQuest) :
 # Caliburs*Sword of Limit
     if event == "67":
          if st.getQuestItemsCount(75)>=1 and st.getQuestItemsCount(132)>=1 and st.getQuestItemsCount(5126)>=1:
-            st.takeItems(133,1)
+            st.takeItems(75,1)
             if st.getQuestItemsCount(132)>=1:
                st.takeItems(132,1)
                st.takeItems(5126,1)
