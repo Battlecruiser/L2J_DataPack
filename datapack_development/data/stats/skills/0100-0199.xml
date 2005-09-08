@@ -180,11 +180,12 @@
   <for>
   </for>
 </skill>
-<skill id="109" levels="1" name="Spirit of Orge">
+<skill id="109" levels="1" name="Spirit of Ogre">
 <set name="mpConsume" val="22"/>
 <table name="#pAtk">1.07</table>
 <table name="#pDef">1.15</table>
 <table name="#accCombat">1.03</table>
+<table name="#regHp">1.2</table>
 <table name="#maxHp">1.2</table>
 <table name="#runSpd">0.7</table>
 <table name="#rEvas">0.9</table>
@@ -198,6 +199,7 @@
 <set name="castRange" val="-1"/>
 <for>
  <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
+  <mul order="0x50" stat="regHp" val="#regHp"/>
   <mul order="0x50" stat="pAtk" val="#pAtk"/>
   <mul order="0x50" stat="pDef" val="#pDef"/>
   <mul order="0x50" stat="accCombat" val="#accCombat"/>
