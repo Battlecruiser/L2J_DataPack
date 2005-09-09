@@ -5,10 +5,12 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+LEAF_OF_MOTHERTREE_ID = 1069
 BLOOD_OF_JUNDIN_ID = 1070
 LICENSE_OF_MINER_ID = 1498
 VOUCHER_OF_FLAME_ID = 1496
-SOULSHOOT_NOVICE_ID = 5789
+SOULSHOT_NOVICE_ID = 5789
+SPIRITSHOT_NOVICE_ID = 5790
 BLUE_GEM_ID=6353
 
 class Quest (JQuest) :
@@ -17,35 +19,56 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
+#elf
+    if event == "7370_02" :
+#      st.showRadar(2,46112,41200,-3504)
+      htmltext = "7370-03.htm"
+      if st.getQuestItemsCount(LEAF_OF_MOTHERTREE_ID) and int(st.get("onlyone")) == 0 :
+        st.addExpAndSp(0,50)
+        st.takeItems(LEAF_OF_MOTHERTREE_ID,1)
+	if st.getPlayer().getClassId().getId() == 0x19 :
+          st.giveItems(SPIRITSHOT_NOVICE_ID,100)
+	else :
+          st.giveItems(SOULSHOT_NOVICE_ID,200)
+        st.set("cond","0")
+        st.set("onlyone","1")
+        st.setState(COMPLETED)
+        st.playSound("ItemSound.quest_finish")
+#darkelf
     if event == "7129_02" :
 #      st.showRadar(2,28384,11056,-4233)
       htmltext = "7129-03.htm"
       if st.getQuestItemsCount(BLOOD_OF_JUNDIN_ID) and int(st.get("onlyone")) == 0 :
         st.addExpAndSp(0,50)
         st.takeItems(BLOOD_OF_JUNDIN_ID,1)
-        st.giveItems(SOULSHOOT_NOVICE_ID,200)
+	if st.getPlayer().getClassId().getId() == 0x26 :
+          st.giveItems(SPIRITSHOT_NOVICE_ID,100)
+	else :
+          st.giveItems(SOULSHOT_NOVICE_ID,200)
         st.set("cond","0")
         st.set("onlyone","1")
         st.setState(COMPLETED)
         st.playSound("ItemSound.quest_finish")
+#dwarf
     if event == "7528_02" :
 #      st.showRadar(2,108567,-173994,-406)
       htmltext = "7573-03.htm"
       if st.getQuestItemsCount(LICENSE_OF_MINER_ID) and int(st.get("onlyone")) == 0 :
         st.addExpAndSp(0,50)
         st.takeItems(LICENSE_OF_MINER_ID,1)
-        st.giveItems(SOULSHOOT_NOVICE_ID,200)
+        st.giveItems(SOULSHOT_NOVICE_ID,200)
         st.set("cond","0")
         st.set("onlyone","1")
         st.setState(COMPLETED)
         st.playSound("ItemSound.quest_finish")
+#orc
     if event == "7573_02" :
 #      st.showRadar(2,-56736,-113680,-672)
       htmltext = "7573-03.htm"
       if st.getQuestItemsCount(VOUCHER_OF_FLAME_ID) and int(st.get("onlyone")) == 0 :
         st.addExpAndSp(0,50)
         st.takeItems(VOUCHER_OF_FLAME_ID,1)
-        st.giveItems(SOULSHOOT_NOVICE_ID,200)
+        st.giveItems(SOULSHOT_NOVICE_ID,200)
         st.set("cond","0")
         st.set("onlyone","1")
         st.setState(COMPLETED)
@@ -62,6 +85,18 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if int(st.get("onlyone")) == 0 and int(st.get("cond")) == 0 and st.getPlayer().getLevel() < 10 :
+#elf
+     if st.getPlayer().getRace().ordinal() == 1 :
+     	if npcId == 7370 :
+          htmltext = "7370-01.htm"
+	if npcId == 7400 :
+	  if st.getPlayer().getClassId().getId() == 0x19 :
+            htmltext = "7131-01.htm"
+	  else:
+            htmltext = "7530-01.htm"
+          st.set("cond","1")
+          st.setState(STARTED)
+          st.playSound("ItemSound.quest_tutorial")
 #darkelf
      if st.getPlayer().getRace().ordinal() == 2 :
      	if npcId == 7129 :
@@ -100,7 +135,7 @@ class Quest (JQuest) :
       if st.getQuestItemsCount(BLUE_GEM_ID) :
           st.takeItems(BLUE_GEM_ID,st.getQuestItemsCount(BLUE_GEM_ID))
           st.giveItems(LICENSE_OF_MINER_ID,1)
-          st.giveItems(SOULSHOOT_NOVICE_ID,200)
+          st.giveItems(SOULSHOT_NOVICE_ID,200)
           htmltext = "7530-03.htm"
           st.set("cond","2")
       else :
@@ -110,7 +145,7 @@ class Quest (JQuest) :
       if st.getQuestItemsCount(BLUE_GEM_ID) :
           st.takeItems(BLUE_GEM_ID,st.getQuestItemsCount(BLUE_GEM_ID))
           st.giveItems(VOUCHER_OF_FLAME_ID,1)
-          st.giveItems(SOULSHOOT_NOVICE_ID,200)
+          st.giveItems(SOULSHOT_NOVICE_ID,200)
           htmltext = "7575-03.htm"
           st.set("cond","2")
       else :
@@ -120,11 +155,32 @@ class Quest (JQuest) :
       if st.getQuestItemsCount(BLUE_GEM_ID) :
           st.takeItems(BLUE_GEM_ID,st.getQuestItemsCount(BLUE_GEM_ID))
           st.giveItems(BLOOD_OF_JUNDIN_ID,1)
-          st.giveItems(SOULSHOOT_NOVICE_ID,200)
-          htmltext = "7131-03.htm"
+	  if st.getPlayer().getClassId().getId() == 0x26 :
+            st.giveItems(SPIRITSHOT_NOVICE_ID,100)
+            htmltext = "7131-03.htm"
+	  else :
+            st.giveItems(SOULSHOT_NOVICE_ID,200)
+            htmltext = "7131-03a.htm"
           st.set("cond","2")
       else :
 	  if st.getPlayer().getClassId().getId() == 0x26 :
+            htmltext = "7131-02.htm"
+	  else:
+            htmltext = "7530-02.htm"
+#elf
+   elif npcId == 7400 and int(st.get("cond"))==1 and st.getQuestItemsCount(LEAF_OF_MOTHERTREE_ID)==0 :
+      if st.getQuestItemsCount(BLUE_GEM_ID) :
+          st.takeItems(BLUE_GEM_ID,st.getQuestItemsCount(BLUE_GEM_ID))
+          st.giveItems(LEAF_OF_MOTHERTREE_ID,1)
+	  if st.getPlayer().getClassId().getId() == 0x19 :
+            st.giveItems(SPIRITSHOT_NOVICE_ID,100)
+            htmltext = "7400-03.htm"
+	  else :
+            st.giveItems(SOULSHOT_NOVICE_ID,200)
+            htmltext = "7400-03a.htm"
+          st.set("cond","2")
+      else :
+	  if st.getPlayer().getClassId().getId() == 0x19 :
             htmltext = "7131-02.htm"
 	  else:
             htmltext = "7530-02.htm"
@@ -150,12 +206,21 @@ class Quest (JQuest) :
 #darkelf
    elif npcId == 7131 and int(st.get("cond"))==2 and st.getQuestItemsCount(BLOOD_OF_JUNDIN_ID) :
       htmltext = "7131-04.htm"
-   elif npcId == 7131 and  int(st.get("cond"))==1 :
-      htmltext = "7131-01.htm"
+   elif npcId == 7129 and  int(st.get("cond"))==1 :
+      htmltext = "7129-01.htm"
    elif npcId == 7129 and  int(st.get("cond"))==2 and st.getQuestItemsCount(BLOOD_OF_JUNDIN_ID) :
       htmltext = "7129-02.htm"
    elif npcId == 7129 and  int(st.get("cond"))==3 :
       htmltext = "7129-04.htm"
+#elf
+   elif npcId == 7400 and int(st.get("cond"))==2 and st.getQuestItemsCount(LEAF_OF_MOTHERTREE_ID) :
+      htmltext = "7400-04.htm"
+   elif npcId == 7370 and  int(st.get("cond"))==1 :
+      htmltext = "7370-01.htm"
+   elif npcId == 7370 and  int(st.get("cond"))==2 and st.getQuestItemsCount(LEAF_OF_MOTHERTREE_ID) :
+      htmltext = "7370-02.htm"
+   elif npcId == 7370 and  int(st.get("cond"))==3 :
+      htmltext = "7370-04.htm"
    return htmltext
 
  def onKill (self,npcId,st):
@@ -177,6 +242,8 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7129)
 QUEST.addStartNpc(7131)
+QUEST.addStartNpc(7370)
+QUEST.addStartNpc(7400)
 QUEST.addStartNpc(7528)
 QUEST.addStartNpc(7530)
 QUEST.addStartNpc(7573)
@@ -184,6 +251,8 @@ QUEST.addStartNpc(7575)
 
 STARTED.addTalkId(7129)
 STARTED.addTalkId(7131)
+STARTED.addTalkId(7370)
+STARTED.addTalkId(7400)
 STARTED.addTalkId(7528)
 STARTED.addTalkId(7530)
 STARTED.addTalkId(7573)
