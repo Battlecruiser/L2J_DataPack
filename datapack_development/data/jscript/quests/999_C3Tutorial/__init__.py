@@ -159,7 +159,10 @@ class Quest (JQuest) :
      	if npcId == 7573 :
           htmltext = "7573-01.htm"
 	if npcId == 7575 :
-          htmltext = "7575-01.htm"
+	  if st.getPlayer().getClassId().getId() == 0x31 :
+            htmltext = "7575-01.htm"
+	  else:
+            htmltext = "7530-01.htm"
           st.set("cond","1")
           st.setState(STARTED)
           st.playSound("ItemSound.quest_tutorial")
@@ -194,7 +197,10 @@ class Quest (JQuest) :
           htmltext = "7575-03.htm"
           st.set("cond","2")
       else :
-          htmltext = "7575-02.htm"
+	  if st.getPlayer().getClassId().getId() == 0x31 :
+            htmltext = "7575-02.htm"
+	  else :
+            htmltext = "7530-02.htm"
 #darkelf
    elif npcId == 7131 and int(st.get("cond"))==1 and st.getQuestItemsCount(BLOOD_OF_JUNDIN_ID)==0 :
       if st.getQuestItemsCount(BLUE_GEM_ID) :
