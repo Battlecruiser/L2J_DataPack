@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+RECOMMENDATION_01_ID = 1067
+RECOMMENDATION_02_ID = 1068
 LEAF_OF_MOTHERTREE_ID = 1069
 BLOOD_OF_JUNDIN_ID = 1070
 LICENSE_OF_MINER_ID = 1498
@@ -19,6 +21,31 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
+#humanfight
+    if event == "7008_02" :
+#      st.showRadar(2,-71424,258336,-3109)
+      htmltext = "7008-03.htm"
+      if st.getQuestItemsCount(RECOMMENDATION_01_ID) and int(st.get("onlyone")) == 0 :
+        st.addExpAndSp(0,50)
+        st.takeItems(RECOMMENDATION_01_ID,1)
+        st.giveItems(SOULSHOT_NOVICE_ID,200)
+        st.set("cond","0")
+        st.set("onlyone","1")
+        st.setState(COMPLETED)
+        st.playSound("ItemSound.quest_finish")
+#humanmage
+    if event == "7017_02" :
+#      st.showRadar(2,-91036,248044,-3568)
+      htmltext = "7017-03.htm"
+      if st.getQuestItemsCount(RECOMMENDATION_02_ID) and int(st.get("onlyone")) == 0 :
+        st.addExpAndSp(0,50)
+        st.takeItems(RECOMMENDATION_02_ID,1)
+        st.giveItems(SPIRITSHOT_NOVICE_ID,100)
+        st.set("cond","0")
+        st.set("onlyone","1")
+        st.setState(COMPLETED)
+        st.playSound("ItemSound.quest_finish")
+
 #elf
     if event == "7370_02" :
 #      st.showRadar(2,46112,41200,-3504)
@@ -85,6 +112,24 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if int(st.get("onlyone")) == 0 and int(st.get("cond")) == 0 and st.getPlayer().getLevel() < 10 :
+#humanmage
+     if st.getPlayer().getClassId().getId() == 0x0a :
+     	if npcId == 7017 :
+          htmltext = "7017-01.htm"
+	if npcId == 7019 :
+          htmltext = "7131-01.htm"
+          st.set("cond","1")
+          st.setState(STARTED)
+          st.playSound("ItemSound.quest_tutorial")
+#humanfight
+     if st.getPlayer().getClassId().getId() == 0x00 :
+     	if npcId == 7008 :
+          htmltext = "7008-01.htm"
+	if npcId == 7009 :
+          htmltext = "7530-01.htm"
+          st.set("cond","1")
+          st.setState(STARTED)
+          st.playSound("ItemSound.quest_tutorial")
 #elf
      if st.getPlayer().getRace().ordinal() == 1 :
      	if npcId == 7370 :
@@ -128,7 +173,7 @@ class Quest (JQuest) :
           st.setState(STARTED)
           st.playSound("ItemSound.quest_tutorial")
    elif st.getPlayer().getLevel() >= 10 or int(st.get("onlyone")):
-	if npcId == 7530 or npcId == 7575 :
+	if npcId == 7009 or npcId == 7019 or npcId == 7317 or npcId == 7400 or npcId == 7575 :
           htmltext = "7575-05.htm"
 #dwarf
    elif npcId == 7530 and int(st.get("cond"))==1 and st.getQuestItemsCount(LICENSE_OF_MINER_ID)==0 :
@@ -184,6 +229,26 @@ class Quest (JQuest) :
             htmltext = "7131-02.htm"
 	  else:
             htmltext = "7530-02.htm"
+#humanmage
+   elif npcId == 7019 and int(st.get("cond"))==1 and st.getQuestItemsCount(RECOMMENDATION_02_ID)==0 :
+      if st.getQuestItemsCount(BLUE_GEM_ID) :
+          st.takeItems(BLUE_GEM_ID,st.getQuestItemsCount(BLUE_GEM_ID))
+          st.giveItems(RECOMMENDATION_02_ID,1)
+          st.giveItems(SPIRITSHOT_NOVICE_ID,100)
+          htmltext = "7019-03.htm"
+          st.set("cond","2")
+      else :
+          htmltext = "7131-02.htm"
+#humanfight
+   elif npcId == 7009 and int(st.get("cond"))==1 and st.getQuestItemsCount(RECOMMENDATION_01_ID)==0 :
+      if st.getQuestItemsCount(BLUE_GEM_ID) :
+          st.takeItems(BLUE_GEM_ID,st.getQuestItemsCount(BLUE_GEM_ID))
+          st.giveItems(RECOMMENDATION_01_ID,1)
+          st.giveItems(SOULSHOT_NOVICE_ID,200)
+          htmltext = "7009-03.htm"
+          st.set("cond","2")
+      else :
+          htmltext = "7530-02.htm"
 
 #dwarf
    elif npcId == 7530 and int(st.get("cond"))==2 and st.getQuestItemsCount(LICENSE_OF_MINER_ID) :
@@ -221,6 +286,24 @@ class Quest (JQuest) :
       htmltext = "7370-02.htm"
    elif npcId == 7370 and  int(st.get("cond"))==3 :
       htmltext = "7370-04.htm"
+#humanmage
+   elif npcId == 7019 and int(st.get("cond"))==2 and st.getQuestItemsCount(RECOMMENDATION_02_ID) :
+      htmltext = "7019-04.htm"
+   elif npcId == 7017 and  int(st.get("cond"))==1 :
+      htmltext = "7017-01.htm"
+   elif npcId == 7017 and  int(st.get("cond"))==2 and st.getQuestItemsCount(RECOMMENDATION_02_ID) :
+      htmltext = "7017-02.htm"
+   elif npcId == 7017 and  int(st.get("cond"))==3 :
+      htmltext = "7017-04.htm"
+#humanmage
+   elif npcId == 7009 and int(st.get("cond"))==2 and st.getQuestItemsCount(RECOMMENDATION_01_ID) :
+      htmltext = "7009-04.htm"
+   elif npcId == 7008 and  int(st.get("cond"))==1 :
+      htmltext = "7008-01.htm"
+   elif npcId == 7008 and  int(st.get("cond"))==2 and st.getQuestItemsCount(RECOMMENDATION_01_ID) :
+      htmltext = "7008-02.htm"
+   elif npcId == 7008 and  int(st.get("cond"))==3 :
+      htmltext = "7008-04.htm"
    return htmltext
 
  def onKill (self,npcId,st):
@@ -240,6 +323,10 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
+QUEST.addStartNpc(7008)
+QUEST.addStartNpc(7009)
+QUEST.addStartNpc(7017)
+QUEST.addStartNpc(7019)
 QUEST.addStartNpc(7129)
 QUEST.addStartNpc(7131)
 QUEST.addStartNpc(7370)
@@ -249,6 +336,10 @@ QUEST.addStartNpc(7530)
 QUEST.addStartNpc(7573)
 QUEST.addStartNpc(7575)
 
+STARTED.addTalkId(7008)
+STARTED.addTalkId(7009)
+STARTED.addTalkId(7017)
+STARTED.addTalkId(7019)
 STARTED.addTalkId(7129)
 STARTED.addTalkId(7131)
 STARTED.addTalkId(7370)
