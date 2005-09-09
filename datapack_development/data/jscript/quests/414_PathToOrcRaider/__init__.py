@@ -61,9 +61,9 @@ class Quest (JQuest) :
             return htmltext
           else:
             htmltext = "7570-01.htm"
-   elif npcId == 7570 and int(st.get("cond"))==1 and st.getQuestItemsCount(GOBLIN_DWELLING_MAP_ID)==1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID)<10 :
+   elif npcId == 7570 and int(st.get("cond")) and st.getQuestItemsCount(GOBLIN_DWELLING_MAP_ID)==1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID)<10 :
           htmltext = "7570-06.htm"
-   elif npcId == 7570 and int(st.get("cond"))==1 and st.getQuestItemsCount(GOBLIN_DWELLING_MAP_ID)==1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID)>=10 and ((st.getQuestItemsCount(BETRAYER_SUE_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHEWBA_REPORT_ID)+st.getQuestItemsCount(BETRAYER_WANUK_REPORT_ID)+st.getQuestItemsCount(BETRAYER_HEITAFU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_PICUBO_REPORT_ID)+st.getQuestItemsCount(BETRAYER_BUMBUM_REPORT_ID)+st.getQuestItemsCount(BETRAYER_MINSKU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHUCHU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID)+st.getQuestItemsCount(BETRAYER_ZAKAN_REPORT_ID))==0) :
+   elif npcId == 7570 and int(st.get("cond")) and st.getQuestItemsCount(GOBLIN_DWELLING_MAP_ID)==1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID)>=10 and ((st.getQuestItemsCount(BETRAYER_SUE_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHEWBA_REPORT_ID)+st.getQuestItemsCount(BETRAYER_WANUK_REPORT_ID)+st.getQuestItemsCount(BETRAYER_HEITAFU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_PICUBO_REPORT_ID)+st.getQuestItemsCount(BETRAYER_BUMBUM_REPORT_ID)+st.getQuestItemsCount(BETRAYER_MINSKU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHUCHU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID)+st.getQuestItemsCount(BETRAYER_ZAKAN_REPORT_ID))==0) :
           htmltext = "7570-07.htm"
           st.takeItems(KURUKA_RATMAN_TOOTH_ID,st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID))
           st.takeItems(GOBLIN_DWELLING_MAP_ID,1)
@@ -111,13 +111,14 @@ class Quest (JQuest) :
               st.giveItems(BETRAYER_UMBAR_REPORT_ID,1)
           elif n2 == 9 :
               st.giveItems(BETRAYER_ZAKAN_REPORT_ID,1)
-   elif npcId == 7570 and int(st.get("cond"))==1 and ((st.getQuestItemsCount(BETRAYER_SUE_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHEWBA_REPORT_ID)+st.getQuestItemsCount(BETRAYER_WANUK_REPORT_ID)+st.getQuestItemsCount(BETRAYER_HEITAFU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_PICUBO_REPORT_ID)+st.getQuestItemsCount(BETRAYER_BUMBUM_REPORT_ID)+st.getQuestItemsCount(BETRAYER_MINSKU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHUCHU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID)+st.getQuestItemsCount(BETRAYER_ZAKAN_REPORT_ID))>0)  and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)>0 :
+          st.set("cond","3")
+   elif npcId == 7570 and int(st.get("cond")) and ((st.getQuestItemsCount(BETRAYER_SUE_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHEWBA_REPORT_ID)+st.getQuestItemsCount(BETRAYER_WANUK_REPORT_ID)+st.getQuestItemsCount(BETRAYER_HEITAFU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_PICUBO_REPORT_ID)+st.getQuestItemsCount(BETRAYER_BUMBUM_REPORT_ID)+st.getQuestItemsCount(BETRAYER_MINSKU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHUCHU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID)+st.getQuestItemsCount(BETRAYER_ZAKAN_REPORT_ID))>0)  and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)>0 :
           htmltext = "7570-08.htm"
-   elif npcId == 7501 and int(st.get("cond"))==1 and ((st.getQuestItemsCount(BETRAYER_SUE_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHEWBA_REPORT_ID)+st.getQuestItemsCount(BETRAYER_WANUK_REPORT_ID)+st.getQuestItemsCount(BETRAYER_HEITAFU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_PICUBO_REPORT_ID)+st.getQuestItemsCount(BETRAYER_BUMBUM_REPORT_ID)+st.getQuestItemsCount(BETRAYER_MINSKU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHUCHU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID)+st.getQuestItemsCount(BETRAYER_ZAKAN_REPORT_ID))==2) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)==0 :
+   elif npcId == 7501 and int(st.get("cond")) and ((st.getQuestItemsCount(BETRAYER_SUE_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHEWBA_REPORT_ID)+st.getQuestItemsCount(BETRAYER_WANUK_REPORT_ID)+st.getQuestItemsCount(BETRAYER_HEITAFU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_PICUBO_REPORT_ID)+st.getQuestItemsCount(BETRAYER_BUMBUM_REPORT_ID)+st.getQuestItemsCount(BETRAYER_MINSKU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHUCHU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID)+st.getQuestItemsCount(BETRAYER_ZAKAN_REPORT_ID))==2) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)==0 :
         htmltext = "7501-01.htm"
-   elif npcId == 7501 and int(st.get("cond"))==1 and (st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)>0 and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2) :
+   elif npcId == 7501 and int(st.get("cond")) and (st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)>0 and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2) :
         htmltext = "7501-02.htm"
-   elif npcId == 7501 and int(st.get("cond"))==1 and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)==2 :
+   elif npcId == 7501 and int(st.get("cond")) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)==2 :
         htmltext = "7501-03.htm"
         st.takeItems(HEAD_OF_BETRAYER_ID,st.getQuestItemsCount(HEAD_OF_BETRAYER_ID))
         st.takeItems(BETRAYER_SUE_REPORT_ID,1)
@@ -139,7 +140,7 @@ class Quest (JQuest) :
  def onKill (self,npcId,st):
    if npcId == 319 :
           st.set("id","0")
-          if int(st.get("cond")) == 1 and st.getQuestItemsCount(GOBLIN_DWELLING_MAP_ID) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID)<10 and st.getQuestItemsCount(GREEN_BLOOD_ID)<40 :
+          if int(st.get("cond")) and st.getQuestItemsCount(GOBLIN_DWELLING_MAP_ID) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID)<10 and st.getQuestItemsCount(GREEN_BLOOD_ID)<40 :
             if st.getQuestItemsCount(GREEN_BLOOD_ID)>20 :
               if st.getRandom(100)<((st.getQuestItemsCount(GREEN_BLOOD_ID)-20)*5) :
                 st.takeItems(GREEN_BLOOD_ID,st.getQuestItemsCount(GREEN_BLOOD_ID))
@@ -152,7 +153,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 320 :
           st.set("id","0")
-          if int(st.get("cond")) == 1 and st.getQuestItemsCount(GOBLIN_DWELLING_MAP_ID) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID)<10 and st.getQuestItemsCount(GREEN_BLOOD_ID)<40 :
+          if int(st.get("cond")) and st.getQuestItemsCount(GOBLIN_DWELLING_MAP_ID) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID)<10 and st.getQuestItemsCount(GREEN_BLOOD_ID)<40 :
             if st.getQuestItemsCount(GREEN_BLOOD_ID)>20 :
               if st.getRandom(100)<((st.getQuestItemsCount(GREEN_BLOOD_ID)-20)*5) :
                 st.takeItems(GREEN_BLOOD_ID,st.getQuestItemsCount(GREEN_BLOOD_ID))
@@ -165,74 +166,95 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 5045 :
           st.set("id","0")
-          if int(st.get("cond")) == 1 and st.getQuestItemsCount(GOBLIN_DWELLING_MAP_ID) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID)<10 :
+          if int(st.get("cond")) and st.getQuestItemsCount(GOBLIN_DWELLING_MAP_ID) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID)<10 :
             st.takeItems(GREEN_BLOOD_ID,st.getQuestItemsCount(GREEN_BLOOD_ID))
             if st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID) == 9 :
               st.giveItems(KURUKA_RATMAN_TOOTH_ID,1)
               st.playSound("ItemSound.quest_middle")
+              st.set("cond","2")
             else:
               st.giveItems(KURUKA_RATMAN_TOOTH_ID,1)
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 5046 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(BETRAYER_SUE_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_SUE_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_SUE_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
+          if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1
+            st.set("cond","4")
    elif npcId == 5047 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(BETRAYER_WANUK_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_WANUK_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_WANUK_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
+          if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1
+            st.set("cond","4")
    elif npcId == 5048 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(BETRAYER_CHEWBA_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_CHEWBA_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_CHEWBA_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
+          if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1
+            st.set("cond","4")
    elif npcId == 5049 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(BETRAYER_HEITAFU_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_HEITAFU_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_HEITAFU_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
+          if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1
+            st.set("cond","4")
    elif npcId == 5050 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(BETRAYER_PICUBO_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_PICUBO_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_PICUBO_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
+          if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1
+            st.set("cond","4")
    elif npcId == 5051 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(BETRAYER_BUMBUM_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_BUMBUM_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_BUMBUM_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
+          if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1
+            st.set("cond","4")
    elif npcId == 5052 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(BETRAYER_MINSKU_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_MINSKU_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_MINSKU_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
+          if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1
+            st.set("cond","4")
    elif npcId == 5053 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(BETRAYER_CHUCHU_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_CHUCHU_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_CHUCHU_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
+          if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1
+            st.set("cond","4")
    elif npcId == 5054 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_UMBAR_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
+          if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1
+            st.set("cond","4")
    elif npcId == 5055 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(BETRAYER_ZAKAN_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_ZAKAN_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_ZAKAN_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
+          if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1
+            st.set("cond","4")
    return
 
 QUEST       = Quest(414,"414_PathToOrcRaider","Path To Orc Raider")

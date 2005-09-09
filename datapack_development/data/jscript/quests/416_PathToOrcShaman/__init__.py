@@ -57,6 +57,7 @@ class Quest (JQuest) :
           htmltext = "7585-11.htm"
           st.takeItems(TOTEM_SPIRIT_CLAW_ID,1)
           st.giveItems(TATARUS_LETTER_ID,1)
+          st.set("cond","5")
     elif event == "7592_1" :
           htmltext = "7592-02.htm"
     elif event == "7592_2" :
@@ -64,6 +65,7 @@ class Quest (JQuest) :
           st.takeItems(HESTUI_MASK_ID,1)
           st.takeItems(FIERY_EGG2_ID,1)
           st.giveItems(TOTEM_SPIRIT_CLAW_ID,1)
+          st.set("cond","4")
     elif event == "7502_2" :
           htmltext = "7502-07.htm"
           st.takeItems(TOTEM_SPIRIT_BLOOD_ID,st.getQuestItemsCount(TOTEM_SPIRIT_BLOOD_ID))
@@ -77,6 +79,7 @@ class Quest (JQuest) :
           htmltext = "7593-03.htm"
           st.takeItems(BLOOD_CAULDRON_ID,1)
           st.giveItems(SPIRIT_NET_ID,1)
+          st.set("cond","9")
     return htmltext
 
 
@@ -93,9 +96,9 @@ class Quest (JQuest) :
           htmltext = "7585-01.htm"
         else:
           htmltext = "7585-01.htm"
-   elif npcId == 7585 and int(st.get("cond"))==1 and st.getQuestItemsCount(FIRE_CHARM_ID)==1 and ((st.getQuestItemsCount(KASHA_BEAR_PELT_ID)+st.getQuestItemsCount(KASHA_BSPIDER_HUSK_ID)+st.getQuestItemsCount(FIERY_EGG1_ID))<3) :
+   elif npcId == 7585 and int(st.get("cond")) and st.getQuestItemsCount(FIRE_CHARM_ID)==1 and ((st.getQuestItemsCount(KASHA_BEAR_PELT_ID)+st.getQuestItemsCount(KASHA_BSPIDER_HUSK_ID)+st.getQuestItemsCount(FIERY_EGG1_ID))<3) :
         htmltext = "7585-07.htm"
-   elif npcId == 7585 and int(st.get("cond"))==1 and st.getQuestItemsCount(FIRE_CHARM_ID)==1 and ((st.getQuestItemsCount(KASHA_BEAR_PELT_ID)+st.getQuestItemsCount(KASHA_BSPIDER_HUSK_ID)+st.getQuestItemsCount(FIERY_EGG1_ID))>=3) :
+   elif npcId == 7585 and int(st.get("cond")) and st.getQuestItemsCount(FIRE_CHARM_ID)==1 and ((st.getQuestItemsCount(KASHA_BEAR_PELT_ID)+st.getQuestItemsCount(KASHA_BSPIDER_HUSK_ID)+st.getQuestItemsCount(FIERY_EGG1_ID))>=3) :
         htmltext = "7585-08.htm"
         st.takeItems(FIRE_CHARM_ID,1)
         st.takeItems(KASHA_BEAR_PELT_ID,1)
@@ -103,45 +106,49 @@ class Quest (JQuest) :
         st.takeItems(FIERY_EGG1_ID,1)
         st.giveItems(HESTUI_MASK_ID,1)
         st.giveItems(FIERY_EGG2_ID,1)
-   elif npcId == 7585 and int(st.get("cond"))==1 and st.getQuestItemsCount(HESTUI_MASK_ID)==1 and st.getQuestItemsCount(FIERY_EGG2_ID)==1 :
+        st.set("cond","3")
+   elif npcId == 7585 and int(st.get("cond")) and st.getQuestItemsCount(HESTUI_MASK_ID)==1 and st.getQuestItemsCount(FIERY_EGG2_ID)==1 :
         htmltext = "7585-09.htm"
-   elif npcId == 7585 and int(st.get("cond"))==1 and st.getQuestItemsCount(TOTEM_SPIRIT_CLAW_ID)==1 :
+   elif npcId == 7585 and int(st.get("cond")) and st.getQuestItemsCount(TOTEM_SPIRIT_CLAW_ID)==1 :
         htmltext = "7585-10.htm"
-   elif npcId == 7585 and int(st.get("cond"))==1 and st.getQuestItemsCount(TATARUS_LETTER_ID)==1 :
+   elif npcId == 7585 and int(st.get("cond")) and st.getQuestItemsCount(TATARUS_LETTER_ID)==1 :
         htmltext = "7585-12.htm"
-   elif npcId == 7585 and int(st.get("cond"))==1 and (st.getQuestItemsCount(GRIZZLY_BLOOD_ID) or st.getQuestItemsCount(FLAME_CHARM_ID) or st.getQuestItemsCount(BLOOD_CAULDRON_ID) or st.getQuestItemsCount(SPIRIT_NET_ID) or st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID) or st.getQuestItemsCount(TOTEM_SPIRIT_BLOOD_ID)) :
+   elif npcId == 7585 and int(st.get("cond")) and (st.getQuestItemsCount(GRIZZLY_BLOOD_ID) or st.getQuestItemsCount(FLAME_CHARM_ID) or st.getQuestItemsCount(BLOOD_CAULDRON_ID) or st.getQuestItemsCount(SPIRIT_NET_ID) or st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID) or st.getQuestItemsCount(TOTEM_SPIRIT_BLOOD_ID)) :
         htmltext = "7585-13.htm"
-   elif npcId == 7592 and int(st.get("cond"))==1 and st.getQuestItemsCount(HESTUI_MASK_ID) and st.getQuestItemsCount(FIERY_EGG2_ID) :
+   elif npcId == 7592 and int(st.get("cond")) and st.getQuestItemsCount(HESTUI_MASK_ID) and st.getQuestItemsCount(FIERY_EGG2_ID) :
         htmltext = "7592-01.htm"
-   elif npcId == 7592 and int(st.get("cond"))==1 and st.getQuestItemsCount(TOTEM_SPIRIT_CLAW_ID) :
+   elif npcId == 7592 and int(st.get("cond")) and st.getQuestItemsCount(TOTEM_SPIRIT_CLAW_ID) :
         htmltext = "7592-04.htm"
-   elif npcId == 7592 and int(st.get("cond"))==1 and (st.getQuestItemsCount(GRIZZLY_BLOOD_ID) or st.getQuestItemsCount(FLAME_CHARM_ID) or st.getQuestItemsCount(BLOOD_CAULDRON_ID) or st.getQuestItemsCount(SPIRIT_NET_ID) or st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID) or st.getQuestItemsCount(TOTEM_SPIRIT_BLOOD_ID)) or st.getQuestItemsCount(TATARUS_LETTER_ID) :
+   elif npcId == 7592 and int(st.get("cond")) and (st.getQuestItemsCount(GRIZZLY_BLOOD_ID) or st.getQuestItemsCount(FLAME_CHARM_ID) or st.getQuestItemsCount(BLOOD_CAULDRON_ID) or st.getQuestItemsCount(SPIRIT_NET_ID) or st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID) or st.getQuestItemsCount(TOTEM_SPIRIT_BLOOD_ID) or st.getQuestItemsCount(TATARUS_LETTER_ID)) :
         htmltext = "7592-05.htm"
-   elif npcId == 7502 and int(st.get("cond"))==1 and st.getQuestItemsCount(TATARUS_LETTER_ID) :
+   elif npcId == 7502 and int(st.get("cond")) and st.getQuestItemsCount(TATARUS_LETTER_ID) :
         htmltext = "7502-01.htm"
         st.giveItems(FLAME_CHARM_ID,1)
         st.takeItems(TATARUS_LETTER_ID,1)
-   elif npcId == 7502 and int(st.get("cond"))==1 and st.getQuestItemsCount(FLAME_CHARM_ID)==1 and st.getQuestItemsCount(GRIZZLY_BLOOD_ID)<3 :
+        st.set("cond","6")
+   elif npcId == 7502 and int(st.get("cond")) and st.getQuestItemsCount(FLAME_CHARM_ID)==1 and st.getQuestItemsCount(GRIZZLY_BLOOD_ID)<3 :
         htmltext = "7502-02.htm"
-   elif npcId == 7502 and int(st.get("cond"))==1 and st.getQuestItemsCount(FLAME_CHARM_ID)==1 and st.getQuestItemsCount(GRIZZLY_BLOOD_ID)>=3 :
+   elif npcId == 7502 and int(st.get("cond")) and st.getQuestItemsCount(FLAME_CHARM_ID)==1 and st.getQuestItemsCount(GRIZZLY_BLOOD_ID)>=3 :
         htmltext = "7502-03.htm"
         st.takeItems(FLAME_CHARM_ID,1)
         st.takeItems(GRIZZLY_BLOOD_ID,st.getQuestItemsCount(GRIZZLY_BLOOD_ID))
         st.giveItems(BLOOD_CAULDRON_ID,1)
-   elif npcId == 7502 and int(st.get("cond"))==1 and st.getQuestItemsCount(BLOOD_CAULDRON_ID)==1 :
+        st.set("cond","8")
+   elif npcId == 7502 and int(st.get("cond")) and st.getQuestItemsCount(BLOOD_CAULDRON_ID)==1 :
         htmltext = "7502-04.htm"
-   elif npcId == 7502 and int(st.get("cond"))==1 and (st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID)==1 or st.getQuestItemsCount(SPIRIT_NET_ID)==1) :
+   elif npcId == 7502 and int(st.get("cond")) and (st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID)==1 or st.getQuestItemsCount(SPIRIT_NET_ID)==1) :
         htmltext = "7502-05.htm"
-   elif npcId == 7502 and int(st.get("cond"))==1 and st.getQuestItemsCount(TOTEM_SPIRIT_BLOOD_ID)==1 :
+   elif npcId == 7502 and int(st.get("cond")) and st.getQuestItemsCount(TOTEM_SPIRIT_BLOOD_ID)==1 :
         htmltext = "7502-06.htm"
-   elif npcId == 7593 and int(st.get("cond"))==1 and st.getQuestItemsCount(BLOOD_CAULDRON_ID) :
+   elif npcId == 7593 and int(st.get("cond")) and st.getQuestItemsCount(BLOOD_CAULDRON_ID) :
         htmltext = "7593-01.htm"
-   elif npcId == 7593 and int(st.get("cond"))==1 and st.getQuestItemsCount(SPIRIT_NET_ID) and st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID)==0 :
+   elif npcId == 7593 and int(st.get("cond")) and st.getQuestItemsCount(SPIRIT_NET_ID) and st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID)==0 :
         htmltext = "7593-04.htm"
-   elif npcId == 7593 and int(st.get("cond"))==1 and st.getQuestItemsCount(SPIRIT_NET_ID)==0 and st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID) :
+   elif npcId == 7593 and int(st.get("cond")) and st.getQuestItemsCount(SPIRIT_NET_ID)==0 and st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID) :
         htmltext = "7593-05.htm"
         st.takeItems(BOUND_DURKA_SPIRIT_ID,1)
         st.giveItems(TOTEM_SPIRIT_BLOOD_ID,1)
+        st.set("cond","11")
    elif npcId == 7593 and int(st.get("cond"))==1 and st.getQuestItemsCount(TOTEM_SPIRIT_BLOOD_ID) :
         htmltext = "7593-06.htm"
    return htmltext
@@ -149,39 +156,47 @@ class Quest (JQuest) :
  def onKill (self,npcId,st):
    if npcId == 479 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(FIRE_CHARM_ID) == 1 and st.getQuestItemsCount(KASHA_BEAR_PELT_ID)<1 :
+        if int(st.get("cond")) and st.getQuestItemsCount(FIRE_CHARM_ID) == 1 and st.getQuestItemsCount(KASHA_BEAR_PELT_ID)<1 :
           if st.getQuestItemsCount(KASHA_BEAR_PELT_ID)+st.getQuestItemsCount(KASHA_BSPIDER_HUSK_ID)+st.getQuestItemsCount(FIERY_EGG1_ID) == 2 :
             st.giveItems(KASHA_BEAR_PELT_ID,1)
             st.playSound("ItemSound.quest_middle")
+            st.set("cond","2")
           else:
             st.giveItems(KASHA_BEAR_PELT_ID,1)
             st.playSound("ItemSound.quest_itemget")
    elif npcId == 478 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(FIRE_CHARM_ID) == 1 and st.getQuestItemsCount(KASHA_BSPIDER_HUSK_ID)<1 :
+        if int(st.get("cond")) and st.getQuestItemsCount(FIRE_CHARM_ID) == 1 and st.getQuestItemsCount(KASHA_BSPIDER_HUSK_ID)<1 :
           if st.getQuestItemsCount(KASHA_BEAR_PELT_ID)+st.getQuestItemsCount(KASHA_BSPIDER_HUSK_ID)+st.getQuestItemsCount(FIERY_EGG1_ID) == 2 :
             st.giveItems(KASHA_BSPIDER_HUSK_ID,1)
             st.playSound("ItemSound.quest_middle")
+            st.set("cond","2")
           else:
             st.giveItems(KASHA_BSPIDER_HUSK_ID,1)
             st.playSound("ItemSound.quest_itemget")
    elif npcId == 415 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(FIRE_CHARM_ID) == 1 and st.getQuestItemsCount(FIERY_EGG1_ID)<1 :
+        if int(st.get("cond")) and st.getQuestItemsCount(FIRE_CHARM_ID) == 1 and st.getQuestItemsCount(FIERY_EGG1_ID)<1 :
           if st.getQuestItemsCount(KASHA_BEAR_PELT_ID)+st.getQuestItemsCount(KASHA_BSPIDER_HUSK_ID)+st.getQuestItemsCount(FIERY_EGG1_ID) == 2 :
             st.giveItems(FIERY_EGG1_ID,1)
             st.playSound("ItemSound.quest_middle")
+            st.set("cond","2")
           else:
             st.giveItems(FIERY_EGG1_ID,1)
             st.playSound("ItemSound.quest_itemget")
    elif npcId == 335 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(FLAME_CHARM_ID) == 1 and st.getQuestItemsCount(GRIZZLY_BLOOD_ID)<3 :
-          st.giveItems(GRIZZLY_BLOOD_ID,1)
-          st.playSound("ItemSound.quest_itemget")
+        if int(st.get("cond")) and st.getQuestItemsCount(FLAME_CHARM_ID) == 1 and st.getQuestItemsCount(GRIZZLY_BLOOD_ID)<3 :
+          if st.getQuestItemsCount(GRIZZLY_BLOOD_ID) == 2 :
+            st.giveItems(GRIZZLY_BLOOD_ID,1)
+            st.playSound("ItemSound.quest_middle")
+            st.set("cond","7")
+          else:
+            st.giveItems(GRIZZLY_BLOOD_ID,1)
+            st.playSound("ItemSound.quest_itemget")
    elif npcId == 38 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(SPIRIT_NET_ID) == 1 and st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID) == 0 and st.getQuestItemsCount(DURKA_PARASITE_ID)<8 :
+        if int(st.get("cond")) and st.getQuestItemsCount(SPIRIT_NET_ID) == 1 and st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID) == 0 and st.getQuestItemsCount(DURKA_PARASITE_ID)<8 :
           n = st.getRandom(10)
           if st.getQuestItemsCount(DURKA_PARASITE_ID) == 5 and n<1 :
             st.takeItems(DURKA_PARASITE_ID,st.getQuestItemsCount(DURKA_PARASITE_ID))
@@ -202,7 +217,7 @@ class Quest (JQuest) :
             st.giveItems(DURKA_PARASITE_ID,1)
    elif npcId == 43 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(SPIRIT_NET_ID) == 1 and st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID) == 0 and st.getQuestItemsCount(DURKA_PARASITE_ID)<8 :
+        if int(st.get("cond")) and st.getQuestItemsCount(SPIRIT_NET_ID) == 1 and st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID) == 0 and st.getQuestItemsCount(DURKA_PARASITE_ID)<8 :
           n = st.getRandom(10)
           if st.getQuestItemsCount(DURKA_PARASITE_ID) == 5 and n<1 :
             st.takeItems(DURKA_PARASITE_ID,st.getQuestItemsCount(DURKA_PARASITE_ID))
@@ -223,11 +238,12 @@ class Quest (JQuest) :
             st.giveItems(DURKA_PARASITE_ID,1)
    elif npcId == 5056 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(SPIRIT_NET_ID) == 1 and st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID) == 0 :
+        if int(st.get("cond")) and st.getQuestItemsCount(SPIRIT_NET_ID) == 1 and st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID) == 0 :
           st.giveItems(BOUND_DURKA_SPIRIT_ID,1)
           st.takeItems(SPIRIT_NET_ID,1)
           st.takeItems(DURKA_PARASITE_ID,st.getQuestItemsCount(DURKA_PARASITE_ID))
           st.playSound("ItemSound.quest_middle")
+          st.set("cond","10")
    return
 
 QUEST       = Quest(416,"416_PathToOrcShaman","Path To Orc Shaman")
