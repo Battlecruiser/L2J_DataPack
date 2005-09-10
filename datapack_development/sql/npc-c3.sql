@@ -1529,7 +1529,7 @@ INSERT INTO `npc` VALUES
 (7018,'Newbie Helper Guprang','a_mageguild_teacher_MHuman',8.00,23.00,70,'male','L2Npc',40,2444,1345,40,43,30,21,20,10,490,10,689,296,470,217,253,0,253,0,0,0,80,120,NULL,NULL,0),
 (7019,'Newbie Helper Daefian','a_mageguild_teacher_MHuman',8.00,23.00,70,'male','L2Npc',40,2444,1345,40,43,30,21,20,10,490,10,689,296,470,217,253,0,253,0,0,0,80,120,NULL,NULL,0),
 (7020,'Newbie Helper Rianon','a_mageguild_teacher_MHuman',8.00,23.00,70,'male','L2Npc',40,2444,1345,40,43,30,21,20,10,490,10,689,296,470,217,253,0,253,0,0,0,80,120,NULL,NULL,0),
-(7021,'Newbie Helper Riak','a_mageguild_teacher_MHuman',8.00,23.00,70,'male','L2Trainer',40,2444,1345,40,43,30,21,20,10,490,10,689,296,470,217,253,0,253,0,0,0,80,120,NULL,NULL,0),
+(7021,'Newbie Helper Riak','a_mageguild_teacher_MHuman',8.00,23.00,70,'male','L2Npc',40,2444,1345,40,43,30,21,20,10,490,10,689,296,470,217,253,0,253,0,0,0,80,120,NULL,NULL,0),
 (7022,'Zigaunt','a_sanctuary_teacher_MHuman',8.00,23.00,70,'male','L2Trainer',40,2444,1345,40,43,30,21,20,10,490,10,689,296,470,217,253,0,253,0,0,0,80,120,NULL,NULL,0),
 (7023,'Trash','a_trader_FElf',8.00,24.00,70,'female','L2Npc',40,2444,1345,40,43,30,21,20,10,490,10,689,296,470,217,253,0,253,0,0,0,80,120,NULL,NULL,0),
 (7024,'Trash','a_mageguild_teacher_FHuman',8.00,23.50,70,'female','L2Npc',40,2444,1345,40,43,30,21,20,10,490,10,689,296,470,217,253,0,253,0,0,0,80,120,NULL,NULL,0),
