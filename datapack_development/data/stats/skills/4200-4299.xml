@@ -1218,16 +1218,17 @@
   4: HP/MP Regeneration is greatly decreased. Move and quest are suspended due to excess weight.
   created 2005-05-29 23:34:33
 -->
-  <table name="#rate">2 2 2 2</table>
-  <table name="#rateSpd">1 2 2 2</table>
+  <table name="#rate">0.5 0.5 0.5 0.5</table>
+  <table name="#rateSpd">1 0.5 0.5 0</table>
   <set name="power" val="0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <div order="0x50" stat="regHp" val="#rate"/>
-    <div order="0x50" stat="runSpd" val="#rateSpd"/>
+	<mul order="0x10" stat="regHp" val="#rate"/>
+	<mul order="0x10" stat="regMp" val="#rate"/>
+	<mul order="0x10" stat="runSpd" val="#rateSpd"/>
   </for>
 </skill>
 <skill id="4271" levels="7" name="Increase Force">
