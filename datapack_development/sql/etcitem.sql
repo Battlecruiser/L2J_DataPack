@@ -580,7 +580,7 @@ insert  into etcitem values
 ('1416','sb_curse_bleary1','false','none','120','normal','paper','none','0','2450',0,'true'),
 ('1417','sb_surrender_to_earth1','false','none','120','normal','paper','none','0','1250',0,'true'),
 ('1418','sb_surrender_to_poison1','false','none','120','normal','paper','none','0','1250',0,'true'),
-('1419','proof_of_blood','false','none','0','stackable','liquid','none','0','0',0,'true'),
+('1419','proof_of_blood','false','none','10','stackable','liquid','none','0','0',0,'true'),
 ('1420','ingredient_list','false','none','0','stackable','steel','none','0','0',0,'true'),
 ('1421','sonias_botanybook','false','none','0','stackable','steel','none','0','0',0,'true'),
 ('1422','red_mandragora_root','false','none','0','stackable','steel','none','0','0',0,'true'),
