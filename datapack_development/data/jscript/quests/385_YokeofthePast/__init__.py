@@ -1,4 +1,4 @@
-print "importing quests: 399: Yoke of the Past"
+print "importing quests: 385: Yoke of the Past"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -60,7 +60,7 @@ class Quest (JQuest) :
     return
 
 
-QUEST       = Quest(399,"399_YokeofthePast","Yoke of the Past")
+QUEST       = Quest(385,"385_YokeofthePast","Yoke of the Past")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
