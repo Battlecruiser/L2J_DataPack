@@ -183,7 +183,7 @@ class Quest (JQuest) :
           st.playSound("Itemsound.quest_itemget")
    elif npcId == 150 :
 	if int(st.get("cond"))>=1 and int(st.get("id")) < 3 :
-	  st.set("id",int(st.get("id"))+1)
+	  st.set("id",str(int(st.get("id"))+1))
 	  if int(st.get("id")) == 3 :
             st.giveItems(BROKEN_TELEPORT_DEVICE_ID,1)
             st.playSound("Itemsound.quest_middle")
@@ -229,6 +229,7 @@ STARTED.addTalkId(7671)
 STARTED.addTalkId(7672)
 STARTED.addTalkId(7673)
 
+STARTED.addKillId(150)
 STARTED.addKillId(225)
 STARTED.addKillId(229)
 STARTED.addKillId(233)
