@@ -10,5 +10,7 @@ CREATE TABLE clan_data (
   ally_id decimal(9) ,
   ally_name varchar(45) ,
   leader_id decimal(11) ,
-  PRIMARY KEY  (clan_id)
+  PRIMARY KEY  (clan_id),
+  KEY `leader_id` (`leader_id`),
+  KEY `ally_id` (`ally_id`)
 );

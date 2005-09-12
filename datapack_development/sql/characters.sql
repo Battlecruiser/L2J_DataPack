@@ -8,7 +8,7 @@ CREATE TABLE characters (
   `level` decimal(11,0) default NULL,
   maxHp decimal(11,0) default NULL,
   curHp decimal(18,0) default NULL,
-  maxCp decimal(11,0) default NULL, 
+  maxCp decimal(11,0) default NULL,
   curCp decimal(18,0) default NULL,
   maxMp decimal(11,0) default NULL,
   curMp decimal(18,0) default NULL,
@@ -61,5 +61,6 @@ CREATE TABLE characters (
   char_slot decimal(1) default NULL,
   newbie decimal(1,0) default '1',
   lastAccess decimal(20,0) default NULL,
-  PRIMARY KEY  (obj_Id)
+  PRIMARY KEY  (obj_Id),
+  KEY `clanid` (`clanid`)
 ) ;
