@@ -96,7 +96,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-      <add order="0x50" stat="regCp" val="#rateCp"/>
+      <add order="0x50" stat="curCp" val="#rateCp"/>
   </for>
 </skill>
 <skill id="1306" levels="6" name="Ritual of Life">
@@ -111,7 +111,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <for>
-      <add order="0x50" stat="regCp" val="#rateCp"/>
+      <add order="0x50" stat="curCp" val="#rateCp"/>
   </for>
 </skill>
 <skill id="1307" levels="3" name="Prayer">
