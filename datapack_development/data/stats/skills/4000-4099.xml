@@ -1440,6 +1440,7 @@
 <skill id="4099" levels="2" name="Berserker">
 <!-- Done by dc -->
 <table name="#Tab-pAtk"> 1.05 1.08 </table>
+<table name="#Tab-mAtk"> 1.1 1.16 </table>
 <table name="#Tab-pDef"> 1.12 1.15 </table>
 <table name="#Tab-pAtkSpd"> 1.05 1.08 </table>
 <table name="#mpConsume"> 18 33 </table>
@@ -1458,8 +1459,10 @@
   <for>
   <effect count="1" name="Buff" time="1200" val="0">
     <mul order="0x50" stat="pAtk" val="#Tab-pAtk"/>
+    <mul order="0x50" stat="mAtk" val="#Tab-mAtk"/>
     <div order="0x50" stat="pDef" val="#Tab-pDef"/>
     <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+    <mul order="0x50" stat="mAtkSpd" val="#Tab-pAtkSpd"/>
  </effect>
 </for>
 </skill>
