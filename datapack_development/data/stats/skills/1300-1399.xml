@@ -81,6 +81,7 @@
 </for>>
 </skill>
 <skill id="1305" levels="5" name="Honor of Paagrio">
+  <table name="#rateCp"> 616 633 651 669 687 </table>
   <table name="#mpConsume"> 214 222 228 233 239 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -95,27 +96,22 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
+      <add order="0x50" stat="regCp" val="#rateCp"/>
   </for>
 </skill>
 <skill id="1306" levels="6" name="Ritual of Life">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Restores CP by 745.
-  6: Restores CP by 858.
-  created 2005-05-29 23:34:29
--->
+  <table name="#rateCp"> 745 767 789 811 834 858 </table>
   <table name="#mpConsume"> 104 108 112 114 117 120 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="power" val="0"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="skillTime" val="5000"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <for>
+      <add order="0x50" stat="regCp" val="#rateCp"/>
   </for>
 </skill>
 <skill id="1307" levels="3" name="Prayer">
