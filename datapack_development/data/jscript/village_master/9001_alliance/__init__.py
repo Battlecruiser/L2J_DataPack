@@ -18,17 +18,19 @@ class Quest (JQuest) :
    htmltext = event
    if event == "9001-01.htm": htmltext = "9001-01.htm"
    elif event == "9001-02.htm": htmltext = "9001-02.htm"
-   st.exitQuest(1) 
+   #st.exitQuest(1) 
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onTalk (Self,npcId,st):
    if npcId in NPC:
-     st.exitQuest(1)
+     #st.exitQuest(1)
+     st.setState(STARTED)
      return "9001-01.htm"
 
 QUEST   = Quest(9001,"9001_alliance","village_master")
 CREATED = State('Start',QUEST)
+STARTED = State('Started',QUEST)
 
 QUEST.setInitialState(CREATED)
 

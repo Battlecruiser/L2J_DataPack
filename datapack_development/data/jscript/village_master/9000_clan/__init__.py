@@ -2,7 +2,7 @@
 # Created by DraX on 2005.08.12
 # minor fixes by DrLecter 2005.09.10
 
-print "importing village master data: clan                   ...done"
+print "importing village master data: Clan                   ...done"
 
 import sys
 
@@ -38,18 +38,20 @@ class Quest (JQuest) :
    elif event == "9000-04.htm" and PlayerinClan == 0: htmltext = "9000-11.htm"
    elif event == "9000-05.htm": htmltext = "9000-05.htm"
    else: htmltext = "9000-02.htm"
-   st.exitQuest(1)
+   #st.exitQuest(1)
    return htmltext
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onTalk (Self,npcId,st):
    if npcId in NPC:
-     st.exitQuest(1)
+     #st.exitQuest(1)
+     st.setState(STARTED)
      return "9000-01.htm"
 
 QUEST   = Quest(9000,"9000_clan","village_master")
 CREATED = State('Start',QUEST)
+STARTED = State('Started',QUEST)
 
 QUEST.setInitialState(CREATED)
 
