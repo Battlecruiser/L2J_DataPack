@@ -1,7 +1,7 @@
 1642 CONSTANT Ring_Of_Riven
 54 CONSTANT dScavenger_ClassId
 
-: to_dScavenger
+: bypass_to_dScavenger
     player@ level@ 20 < if
         "You have not enough level" .
         exit

@@ -1,7 +1,7 @@
 1217 CONSTANT Reoria_recommendation
 22 CONSTANT eScout_ClassId
 
-: to_eScout
+: bypass_to_eScout
     player@ level@ 20 < if
         "You have not enough level" .
         exit

@@ -1,7 +1,7 @@
 1190 CONSTANT Beziques_recommendation
 7 CONSTANT hRogue_ClassId
 
-: to_hRogue
+: bypass_to_hRogue
     player@ level@ 20 < if
         "You have not enough level" .
         exit

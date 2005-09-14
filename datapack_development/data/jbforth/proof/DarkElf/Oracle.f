@@ -1,7 +1,7 @@
 1270 CONSTANT Orb_of_abyss
 42 CONSTANT deShillienOracle_ClassId
 
-: to_deShillienOracle
+: bypass_to_deShillienOracle
     player@ level@ 20 < if
         "You have not enough level" .
         exit

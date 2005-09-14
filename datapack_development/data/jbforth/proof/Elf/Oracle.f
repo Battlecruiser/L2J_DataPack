@@ -1,7 +1,7 @@
 1235 CONSTANT Leaf_of_oracle
 29 CONSTANT eOracle_ClassId
 
-: to_eOracle
+: bypass_to_eOracle
     player@ level@ 20 < if
         "You have not enough level" .
         exit

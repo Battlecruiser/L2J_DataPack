@@ -1,7 +1,7 @@
 1292 CONSTANT Bead_of_Season 
 11 CONSTANT hWizard_ClassId 
 
-: to_hWizard 
+: bypass_to_hWizard 
     player@ level@ 20 < if 
         "You have not enough level" . 
         exit 

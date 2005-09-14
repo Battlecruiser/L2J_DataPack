@@ -1,7 +1,7 @@
 1230 CONSTANT Eternity_diamond
 26 CONSTANT eWizard_ClassId
 
-: to_eWizard
+: bypass_to_eWizard
     player@ level@ 20 < if
         "You have not enough level" .
         exit

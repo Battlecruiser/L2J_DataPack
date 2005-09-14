@@ -1,7 +1,7 @@
 1615 CONSTANT Khavatari_totem
 47 CONSTANT oMonk_ClassId
 
-: to_oMonk
+: bypass_to_oMonk
     player@ level@ 20 < if
         "You have not enough level" .
         exit

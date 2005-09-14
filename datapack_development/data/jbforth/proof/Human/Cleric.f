@@ -1,7 +1,7 @@
 1201 CONSTANT Mark_of_faith 
 15 CONSTANT hCleric_ClassId 
 
-: to_hCleric 
+: bypass_to_hCleric 
     player@ level@ 20 < if 
         "You have not enough level" . 
         exit 

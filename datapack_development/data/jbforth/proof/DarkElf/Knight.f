@@ -1,7 +1,7 @@
 1244 CONSTANT Gaze_of_abyss
 32 CONSTANT dePaulisKnight_ClassId
 
-: to_dePaulusKnight
+: bypass_to_dePaulusKnight
     player@ level@ 20 < if
         "You have not enough level" .
         exit

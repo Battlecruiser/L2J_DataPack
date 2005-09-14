@@ -1,7 +1,7 @@
 1161 CONSTANT Sword_of_Ritual
 4 CONSTANT hKnight_ClassId
 
-: to_hKnight
+: bypass_to_hKnight
     player@ level@ 20 < if
         "You have not enough level" .
         exit

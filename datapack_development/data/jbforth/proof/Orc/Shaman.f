@@ -1,7 +1,7 @@
 1631 CONSTANT Mask_of_medium
 50 CONSTANT oShaman_ClassId
 
-: to_oShaman
+: bypass_to_oShaman
     player@ level@ 20 < if
         "You have not enough level" .
         exit

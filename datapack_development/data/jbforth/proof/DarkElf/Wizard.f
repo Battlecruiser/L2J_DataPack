@@ -1,7 +1,7 @@
 1261 CONSTANT Jewel_of_darkness
 39 CONSTANT deDarkWizard_ClassId
 
-: to_deDarkWizard
+: bypass_to_deDarkWizard
     player@ level@ 20 < if
         "You have not enough level" .
         exit

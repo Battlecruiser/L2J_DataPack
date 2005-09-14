@@ -1,7 +1,7 @@
 1635 CONSTANT Final_Pass_Sertificate
 56 CONSTANT dArtisan_ClassId
 
-: to_dArtisan
+: bypass_to_dArtisan
     player@ level@ 20 < if
         "You have not enough level" .
         exit

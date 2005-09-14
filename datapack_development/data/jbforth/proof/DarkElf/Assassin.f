@@ -1,7 +1,7 @@
 1252 CONSTANT Iron_heart
 35 CONSTANT deAssassin_ClassId
 
-: to_deAssassin
+: bypass_to_deAssassin
   player@ level@ 20 < if
        "You have not enough level" .
        exit
