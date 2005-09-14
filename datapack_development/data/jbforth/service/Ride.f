@@ -1,4 +1,4 @@
-\ Покатушки на вайверне
+\ Ride on wyvern or strider
 
 : ride-over ( -- )
 	\ Ссаживаем с вайверна с предупреждением
@@ -26,4 +26,22 @@
 	dup player@ adena-!
 	"You loose" . . "adena." .
 	"Good ride!" .
+;
+
+\ bypass handlers
+
+: bypass_ride  ( pet time -- )
+	over wyvern <> if
+		over strider <> if
+			drop
+			"Unknown pet " . .
+			exit
+		then
+	then
+
+	over >r
+	dup
+	dup * ( price is time^2 )
+	r> wyvern = if 2 * then ( double price for wyvern )
+	temporary-ride
 ;
