@@ -1,1 +1,1 @@
-\ Этот файл вызывается когда сервер полностью проинициализирован
+\ This file loaded after full server initialization

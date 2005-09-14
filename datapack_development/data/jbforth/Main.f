@@ -8,4 +8,6 @@ events/main
 proof/main
 \ users-commands/main
 
+disablers
+
 "all files loaded ok" .

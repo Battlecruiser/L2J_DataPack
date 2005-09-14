@@ -1,4 +1,4 @@
-\ Этот файл вызывается каждый раз, когда игрок покидает игру
+\ This file loaded at every player logout
 
 "Bye-bye!" .
 

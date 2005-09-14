@@ -48,6 +48,6 @@
     player@ adena-!
 ;
 
-: rename: ( price -- / new name to end of string )
-	tail rename_for_price
+: bypass_rename_5kk ( new_name -- )
+	5000000 swap rename_for_price
 ;
