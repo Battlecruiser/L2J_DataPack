@@ -28,9 +28,10 @@ class Quest (JQuest) :
      st.setState(STARTED)
      return "9001-01.htm"
 
-QUEST   = Quest(9001,"9001_alliance","village_master")
-CREATED = State('Start',QUEST)
-STARTED = State('Started',QUEST)
+QUEST      = Quest(9001,"9001_alliance","village_master")
+CREATED    = State('Start',     QUEST)
+STARTED    = State('Started',   QUEST)
+COMPLETED  = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 

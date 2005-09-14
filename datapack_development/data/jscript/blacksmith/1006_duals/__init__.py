@@ -57,13 +57,16 @@ class Quest (JQuest) :
 
     if event == "0":
            htmltext = "Cancel."
+    
+    if htmltext != event:
+      st.setState(COMPLETED)
+      st.exitQuest(1)
+
     return htmltext
 
  def onTalk (Self,npcId,st):
    htmltext = "<html><head><body>I have nothing to say to you</body></html>"
-   id = st.getState()
-   if id == CREATED :
-     st.setState(COMPLETED)
+   st.setState(STARTED)
    if npcId == 8126 :
       htmltext = "dual.htm"
    return htmltext

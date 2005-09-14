@@ -74,18 +74,18 @@ class Quest (JQuest) :
     else:
              htmltext = "You do not have the right materials."
 
-
     if event == "0":
            htmltext = "Trade has been canceled."
+    
+    if htmltext != event:
+      st.setState(COMPLETED)
+      st.exitQuest(1)
+
     return htmltext
 
  def onTalk (Self,npcId,st):
    htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
-   id = st.getState()
-   if id == CREATED :
-     st.setState(COMPLETED)
-#   if npcId == 8042 or npcId == 8043 :
-#      htmltext = "1.htm"
+   st.setState(STARTED)
    return "1.htm"
 
 QUEST       = Quest(1000,"1000_makeecho","Custom")

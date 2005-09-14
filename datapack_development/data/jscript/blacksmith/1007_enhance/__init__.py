@@ -1785,15 +1785,16 @@ class Quest (JQuest) :
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
+    
+    if htmltext != event:
+      st.setState(COMPLETED)
+      st.exitQuest(1)
+
     return htmltext
 
  def onTalk (Self,npcId,st):
    htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
-   id = st.getState()
-   if id == CREATED :
-     st.setState(COMPLETED)
-#   if npcId == 7471 or npcId == 7300 or npcId == 7688 or npcId == 7458 or npcId == 7317 or npcId == 7298 or npcId == 7846 or npcId == 7678 :
-#      htmltext = "1.htm"
+   st.setState(STARTED)
    return "1.htm"
 
 QUEST       = Quest(1007,"1007_enhance","Blacksmith")

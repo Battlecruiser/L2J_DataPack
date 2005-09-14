@@ -502,16 +502,17 @@ class Quest (JQuest) :
              htmltext = "You do not have enough materials."
 
     if event == "0":
-	htmltext = "Trade has been canceled."
+      htmltext = "Trade has been canceled."
+    
+    if htmltext != event:
+      st.setState(COMPLETED)
+      st.exitQuest(1)
+
     return htmltext
 
  def onTalk (Self,npcId,st):
    htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
-   id = st.getState()
-   if id == CREATED :
-     st.setState(COMPLETED)
-#   if npcId == 8126 :
-#      htmltext = "1.htm"
+   st.setState(STARTED)
    return "1.htm"
 
 QUEST       = Quest(1005,"1005_unseal","Blacksmith")

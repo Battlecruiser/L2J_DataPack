@@ -346,16 +346,17 @@ class Quest (JQuest) :
 
 
     if event == "0":
-	htmltext = "Trade has been canceled."
+      htmltext = "Trade has been canceled."
+    
+    if htmltext != event:
+      st.setState(COMPLETED)
+      st.exitQuest(1)
+
     return htmltext
 
  def onTalk (Self,npcId,st):
    htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
-   id = st.getState()
-   if id == CREATED :
-     st.setState(COMPLETED)
-#   if npcId == 7300 or npcId == 7471 or npcId == 7458 or npcId == 7298 or npcId == 7317 or npcId ==7898 or npcId ==7688 or npcId ==7678 or npcId ==7846 or npcId ==7307 or npcId ==7526 or npcId ==7527 or npcId ==7363 or npcId ==7564 or npcId ==7283:
-#      htmltext = "1.htm"
+   st.setState(STARTED)
    return "1.htm"
 
 QUEST       = Quest(1004,"1004_create","Blacksmith")

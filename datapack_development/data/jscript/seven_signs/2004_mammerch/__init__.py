@@ -695,21 +695,23 @@ class Quest (JQuest) :
              htmltext = "You do not have enough ancient adena."
 
     if event == "0":
-	htmltext = "Cancel."
+      htmltext = "Cancel."
+    
+    if htmltext != event:
+      st.setState(COMPLETED)
+      st.exitQuest(1)
+
     return htmltext
 
  def onTalk (Self,npcId,st):
    htmltext = "<html><head><body>I have nothing to say with you</body></html>"
-   id = st.getState()
-   if id == CREATED :
-     st.setState(COMPLETED)
+   st.setState(STARTED)
    if npcId == 8113 :
       htmltext = "1.htm"
    return htmltext
 
 QUEST       = Quest(2004,"2004_mammerch","Seven_signs")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 

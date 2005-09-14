@@ -15,6 +15,8 @@ NPC=[7026,7031,7037,7066,7070,7109,7115,7120,7154,7174,7175,7176,7187,7191,7195,
 
 class Quest (JQuest) :
 
+ def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+
  def onEvent (self,event,st):
    htmltext     = event
    Level        = st.getPlayer().getLevel()
@@ -41,17 +43,15 @@ class Quest (JQuest) :
    #st.exitQuest(1)
    return htmltext
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
-
  def onTalk (Self,npcId,st):
    if npcId in NPC:
-     #st.exitQuest(1)
      st.setState(STARTED)
      return "9000-01.htm"
 
-QUEST   = Quest(9000,"9000_clan","village_master")
-CREATED = State('Start',QUEST)
-STARTED = State('Started',QUEST)
+QUEST       = Quest(9000,"9000_clan","village_master")
+CREATED     = State('Start',     QUEST)
+STARTED     = State('Started',   QUEST)
+COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 

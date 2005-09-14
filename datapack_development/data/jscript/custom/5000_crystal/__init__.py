@@ -54,7 +54,6 @@ def do_RequestedEvent(event, st, giveItemId, giveItemQty, takeItem1Id, takeItem1
     if st.getQuestItemsCount(takeItem1Id) >= takeItem1Qty :
         st.takeItems(takeItem1Id, takeItem1Qty)
         st.giveItems(giveItemId, giveItemQty)
-        st.exitQuest(1)
         return event + ".htm" 
     else :
         return "You do not have enough crystals."
@@ -73,14 +72,16 @@ class Quest (JQuest) :
     for item in Items:
         if event == str(item[1]):
             htmltext = do_RequestedEvent(event, st, item[2], item[3], item[4], item[5])
+    
+    if htmltext != event:
+      st.setState(COMPLETED)
+      st.exitQuest(1)
 
     return htmltext
 
  def onTalk (Self,npcId,st):
    htmltext = "<html><head><body>I have nothing to say with you</body></html>"
-   id = st.getState()
-   if id == CREATED :
-     st.setState(COMPLETED)
+   st.setState(STARTED)
    return InitialHtml
 
 ### Quest class and state definition
