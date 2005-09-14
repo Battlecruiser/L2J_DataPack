@@ -43,7 +43,7 @@ class Quest (JQuest) :
    elif npcId == 7576 and int(st.get("cond"))==1 and st.getQuestItemsCount(STARSTONE1_ID)<20 : 
      if id == STARTING or id == COMPLETED : 
             htmltext = "7576-02.htm" 
-          else: 
+     else : 
             htmltext = "7576-04.htm" 
    elif npcId == 7576 and int(st.get("cond"))==1 and st.getQuestItemsCount(STARSTONE1_ID)>=20 : 
           if int(st.get("id")) != 277 : 
