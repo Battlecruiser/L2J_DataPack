@@ -6,8 +6,11 @@
     <set val='107' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
     <set val='325' order='0x08' stat='pAtkSpd' />
+  <enchant val='4' order='0x0C' stat='pAtkSpd'>
+  	<mul val='1.08' order='0x40' stat='pAtkSpd' />
+  </enchant>
   <enchant val='0' order='0x0C' stat='pAtk' />
-<enchant val='0' order='0x0C' stat='mAtk' />
+  <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
 </item>
 <item id='5705' name="kshanberk*sword_of_damascus">
@@ -16,8 +19,11 @@
     <set val='112' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
     <set val='325' order='0x08' stat='pAtkSpd' />
-  <enchant val='0' order='0x0C' stat='pAtk' />
-<enchant val='0' order='0x0C' stat='mAtk' />
+  	<enchant val='4' order='0x0C' stat='maxHp'>
+  		<mul val='1.25' order='0x40' stat='maxHp' />
+  	</enchant>
+	<enchant val='0' order='0x0C' stat='pAtkSpd' />
+	<enchant val='0' order='0x0C' stat='mAtk' />
 </for>
 </item>
 <item id='5706' name="sword_of_damascus*sword_of_damascus">
@@ -26,8 +32,11 @@
     <set val='114' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
     <set val='325' order='0x08' stat='pAtkSpd' />
-  <enchant val='0' order='0x0C' stat='pAtk' />
-<enchant val='0' order='0x0C' stat='mAtk' />
+	<enchant val='4' order='0x0C' stat='accCombat'>
+  		<add val='6' order='0x40' stat='accCombat' />
+  	</enchant>
+  	<enchant val='0' order='0x0C' stat='pAtk' />
+  	<enchant val='0' order='0x0C' stat='mAtk' />
 </for>
 </item>
 <item id='5791' name="tomb_cudgel">

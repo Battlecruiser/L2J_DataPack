@@ -14,8 +14,11 @@
     <set val='107' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
     <set val='325' order='0x08' stat='pAtkSpd' />
-  <enchant val='0' order='0x0C' stat='pAtk' />
-<enchant val='0' order='0x0C' stat='mAtk' />
+	<enchant val='4' order='0x0C' stat='pAtkSpd'>
+  		<mul val='1.08' order='0x40' stat='pAtkSpd' />
+  	</enchant>
+  	<enchant val='0' order='0x0C' stat='pAtk' />
+	<enchant val='0' order='0x0C' stat='mAtk' />
 </for>
 </item>
 <item id='5284' name="zweihander">
