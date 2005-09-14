@@ -31,8 +31,9 @@
 \ bypass handlers
 
 : bypass_ride  ( pet time -- )
-	over wyvern <> if
-		over strider <> if
+	0 + swap 0 + swap \ dirty integer convert
+	over 12621 <> if
+		over 12526 <> if
 			drop
 			"Unknown pet " . .
 			exit
@@ -42,6 +43,6 @@
 	over >r
 	dup
 	dup * ( price is time^2 )
-	r> wyvern = if 2 * then ( double price for wyvern )
+	r> 12621 = if 2 * then ( double price for wyvern )
 	temporary-ride
 ;
