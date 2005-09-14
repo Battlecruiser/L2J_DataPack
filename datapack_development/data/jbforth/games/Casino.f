@@ -33,3 +33,10 @@
 
      player@ ADENA+!
 ;
+
+\ bypass handlers
+: bypass_casino_100   	100 casino ;
+: bypass_casino_1k  	1000 casino ;
+: bypass_casino_10k  	10000 casino ;
+: bypass_casino_100k  	100000 casino ;
+: bypass_casino_1km 	1000000 casino ;
