@@ -29,3 +29,4 @@
 ;
 
 games/CurrentEvent
+events/steal-kamilla

@@ -4,3 +4,4 @@
 ;
 
 l2j/var-load
+l2j/doors
