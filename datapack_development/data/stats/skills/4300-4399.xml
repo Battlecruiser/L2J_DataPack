@@ -147,6 +147,7 @@
     <mul order="0x40" stat="maxHp" val="#maxHp"/>
   </for>
 </skill>
+
 <skill id="4312" levels="1" name="Heavy Armor">
 <!---
   Automatically generated from C3 client files.
@@ -156,13 +157,23 @@
   1: Monster equipped with heavy armor.
   created 2005-05-29 23:34:33
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#pDef"> 20 </table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-  </for>
+     <add order="0x40" stat="pDef" val="#pDef">
+   <and>
+     <using kind="Heavy"/>
+   <not>
+     <using kind="Magic,Light"/>
+   </not>
+   </and>
+  </add>
+</for>
 </skill>
+
 <skill id="4313" levels="1" name="Light Armor">
 <!---
   Automatically generated from C3 client files.
@@ -172,13 +183,23 @@
   1: Monster equipped with light armor.
   created 2005-05-29 23:34:33
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#pDef"> 20 </table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-  </for>
+     <add order="0x40" stat="pDef" val="#pDef">
+   <and>
+     <using kind="Light"/>
+   <not>
+     <using kind="Magic,Heavy"/>
+   </not>
+   </and>
+  </add>
+</for>
 </skill>
+
 <skill id="4314" levels="8" name="BOSS Holy Light Burst">
 
 <!--- by Phantom -->
