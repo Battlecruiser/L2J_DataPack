@@ -10,4 +10,9 @@ proof/main
 
 disablers
 
+: test   "npc" player@ target@ -1 (polymorph) ;
+: unp   null null "npc" player@ target@ 0 (polymorph) ;
+
+events.f
+
 "all files loaded ok" .

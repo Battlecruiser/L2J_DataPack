@@ -5,3 +5,10 @@
 
 l2j/var-load
 l2j/doors
+
+
+variable _world
+: world		_world @ ;
+: world!	_world ! ;
+
+: find_player  ( "name" -- player )  world "Player" get(s) ; \ Find player by his name
