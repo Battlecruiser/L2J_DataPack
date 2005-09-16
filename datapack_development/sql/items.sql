@@ -12,5 +12,6 @@ CREATE TABLE items (
   price_sell decimal(10) ,
   price_buy decimal(10) ,
   PRIMARY KEY  (object_id),
-  KEY `owner_id` (`owner_id`)
+  KEY `owner_id` (`owner_id`),
+  KEY `loc` (`loc`)
 ) ;
