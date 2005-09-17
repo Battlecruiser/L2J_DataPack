@@ -3,18 +3,18 @@
 : so player@ PLAY-SOUND ;
 : ga 3000 swap player@ gauge ;
 
-: s0 "ItemSound2.race_start" so ; \ выстрел + колокол
-: s1 "ItemSound.quest_accept" so ; \ дзинь
-: s2 "Itemsound.quest_before_battle" so ; \ короткий, фанфарный
-: s3 "ItemSound.quest_fanfare_1" so ; \ долгий торжественный, с хором
-: s4 "ItemSound.quest_fanfare_2" so ; \ покороче, торжественный
-: s5 "ItemSound.quest_finish" so ; \ финиш
-: s6 "ItemSound.quest_getitem" so ; \ 
-: s7 "ItemSound.quest_giveup" so ;
-: s8 "ItemSound.quest_itemget" so ;
-: s9 "ItemSound.quest_jackpot" so ;
-: sa "ItemSound.quest_midddle" so ;
-: sb "ItemSound.quest_tutorial" so ;
+: s0 "'ItemSound2.race_start' so" do-players ; \ выстрел + колокол
+: s1 "'ItemSound.quest_accept' so" do-players ; \ дзинь
+: s2 "'Itemsound.quest_before_battle' so" do-players ; \ короткий, фанфарный
+: s3 "'ItemSound.quest_fanfare_1' so" do-players ; \ долгий торжественный, с хором
+: s4 "'ItemSound.quest_fanfare_2' so" do-players ; \ покороче, торжественный
+: s5 "'ItemSound.quest_finish' so" do-players ; \ финиш
+: s6 "'ItemSound.quest_getitem' so" do-players ; \ 
+: s7 "'ItemSound.quest_giveup' so" do-players ;
+: s8 "'ItemSound.quest_itemget' so" do-players ;
+: s9 "'ItemSound.quest_jackpot' so" do-players ;
+: sa "'ItemSound.quest_midddle' so" do-players ;
+: sb "'ItemSound.quest_tutorial' so" do-players ;
 
 : adena?  ( n -- n f )
 	\ Возвращаем истину, если есть n адены и ложь - иначе

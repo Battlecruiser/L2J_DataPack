@@ -21,6 +21,7 @@ false value spell-given
 \ ========= Begin of main code ============
 
 : run? theft-of-kamilla:running ;
+: run! true to theft-of-kamilla:running ;
 
 \ : run? not if exit then  ( -- ) \ if not running show message and exit from called word
 \ 	run? not if

@@ -16,3 +16,9 @@
 	SWAP 100 + SWAP
 	TELEPORT_PLAYER_TO
 ;
+
+0 value x   0 value y   0 value z
+: gm_all_to_me \ move all player in world to calling GM
+	player@ coords@ to z to y to z
+	"x y z player@ jump" do-players
+;
