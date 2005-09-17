@@ -1,4 +1,5 @@
 \ Change name of current player
+
 : player_rename ( "new_name" player -- )
 
     >R \ идентификатор игрока сохраняем в стек возврата. Будет считывать по R@
@@ -46,9 +47,4 @@
 
 	\ Отнимаем адену
     player@ adena-!
-;
-
-\ Bypass packets
-: bypass_rename_5kk ( new_name -- )
-	5000000 swap rename_for_price
 ;

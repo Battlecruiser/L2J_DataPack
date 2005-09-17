@@ -29,3 +29,5 @@
 ;
 
 games/CurrentEvent
+
+events/theft-of-kamilla
