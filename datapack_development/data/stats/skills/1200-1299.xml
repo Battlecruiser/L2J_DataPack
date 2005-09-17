@@ -433,204 +433,97 @@
   </for>
 </skill>
 <skill id="1225" levels="18" name="Summon Mew the Cat">
-  <table name="#mpConsume">
-	  39  44  53  60  70
-	  78  87  94 103 107
-	  110 115 119 123 127
-	  130 133 137
-  </table>
-<!-- unneeded if all the same
-  <table name="#itemConsumeCount">
-      1 1 1 1 1
-      1 1 1 1 1
-	  1 1 1 1 1
-	  1 1 1
-  </table>
--->
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="itemConsumeId" val="1458"/>
-  <set name="itemConsumeCount" val="1"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="6000"/>
-  <set name="reuseDelay" val="1200000"/>
-  <set name="skillTime" val="6000"/>
-  <set name="skillType" val="SUMMON"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <!-- Summon-specific -->
-  <table name="#npcIds">
-      12061 12062 12063 12177 12348 12349 12350 12351 12352 12420 12421 12422 12423 12424 12425 12426 12427 12428
-  </table>
-  <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="0.9" />
-  <set name="isCubic" val="false" />
-  <for>
-  </for>
+<table name="#mpConsume"> 39 44 53 60 70 78 87 94 103 107 110 115 119 123 127 130 133 137 </table>
+<table name="#reuseDelay"> 21600000 21600000 21600000 21600000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 </table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="itemConsumeId" val="1458"/>
+<set name="itemConsumeCount" val="1"/>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="hitTime" val="6000"/>
+<set name="reuseDelay" val="#reuseDelay"/>
+<set name="skillTime" val="6000"/>
+<set name="skillType" val="SUMMON"/>
+<set name="isMagic" val="true"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="castRange" val="-1"/>
+<!-- Summon-specific -->
+<table name="#npcIds"> 12348 12061 12349 12062 12350 12063 12351 12177 12352 12420 12421 12422 12423 12424 12425 12426 12427 12428 </table>
+<set name="npcId" val="#npcIds" />
+<set name="expPenalty" val="0.9" />
+<set name="isCubic" val="false" />
+<for>
+</for>
 </skill>
 <skill id="1226" levels="18" name="Summon Unicorn Boxer">
-
-  <table name="#mpConsume">
-  	  39  44  53  60  70
-  	  78  87  94 103 107
-  	 110 115 119 123 127
-  	 130 133 137
-  </table>
-  <table name="#itemConsumeCount">
-       3  4  5  7  9
-      11 12 16 17 20
-      21 25 26 29 30
-      33 34 36
-  </table>
-  <table name="#reuseDelay">
-     21600000 21600000 21600000 21600000
-     21600000 21600000 21600000 21600000
-     21600000    20000    20000    20000
-        20000    20000    20000    20000
-        20000    20000
-  </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="itemConsumeId" val="1458"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="6000"/>
-  <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="reuseDelay" val="#reuseDelay"/>
-  <set name="skillTime" val="6000"/>
-  <set name="skillType" val="SUMMON"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-
-  <!-- Summon-specific -->
-  <!-- C2/C3 info -->
-  <table name="#npcIds">
-   12064 12065 12066 12178 12179
-   12353 12354 12355 12356 12438
-   12439 12440 12441 12442 12443
-   12444 12445 12446
-  </table> <!-- -->
-
-  <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="0.3" />
-  <set name="isCubic" val="false" />
-
-  <for>
-
-  </for>
-
+<table name="#mpConsume"> 39 44 53 60 70 78 87 94 103 107 110 115 119 123 127 130 133 137 </table>
+<table name="#itemConsumeCount"> 3 4 5 7 9 11 12 16 17 20 21 25 26 29 30 33 34 36 </table>
+<table name="#reuseDelay"> 21600000 21600000 21600000 21600000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 </table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="itemConsumeId" val="1458"/>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="hitTime" val="6000"/>
+<set name="itemConsumeCount" val="#itemConsumeCount"/>
+<set name="reuseDelay" val="#reuseDelay"/>
+<set name="skillTime" val="6000"/>
+<set name="skillType" val="SUMMON"/>
+<set name="isMagic" val="true"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="castRange" val="-1"/>
+<!-- Summon-specific -->
+<table name="#npcIds"> 12064 12353 12065 12354 12066 12355 12178 12356 12179 12438 12439 12440 12441 12442 12443 12444 12445 12446 </table>
+<set name="npcId" val="#npcIds" />
+<set name="expPenalty" val="0.3" />
+<set name="isCubic" val="false" />
+<for>
+</for>
 </skill>
 <skill id="1227" levels="18" name="Summon Unicorn Mirage">
-
-  <table name="#mpConsume">
-  	  39  44  53  60  70
-  	  78  87  94 103 107
-  	 110 115 119 123 127
-  	 130 133 137
-  </table>
-  <table name="#itemConsumeCount">
-       3  4  5  7  9
-      11 12 16 17 20
-      21 25 26 29 30
-      33 34 36
-  </table>
-  <table name="#reuseDelay">
-     21600000 21600000 21600000 21600000
-        20000    20000    20000    20000
-        20000    20000    20000    20000
-        20000    20000    20000    20000
-        20000    20000
-  </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="itemConsumeId" val="1458"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="6000"/>
-  <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="reuseDelay" val="#reuseDelay"/>
-  <set name="skillTime" val="6000"/>
-  <set name="skillType" val="SUMMON"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-
-  <!-- Summon-specific -->
-  <!-- C2/C3 info -->
-  <table name="#npcIds">
-   12067 12068 12069 12180 12357
-   12358 12359 12360 12361 12429
-   12430 12431 12432 12433 12434
-   12435 12436 12437
-  </table>
-
-  <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="0.9" />
-  <set name="isCubic" val="false" />
-
-  <for>
-
-  </for>
-
+<table name="#mpConsume"> 39 44 53 60 70 78 87 94 103 107 110 115 119 123 127 130 133 137 </table>
+<table name="#reuseDelay"> 21600000 21600000 21600000 21600000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 </table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="itemConsumeId" val="1458"/>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="hitTime" val="6000"/>
+<set name="itemConsumeCount" val="1"/>
+<set name="reuseDelay" val="#reuseDelay"/>
+<set name="skillTime" val="6000"/>
+<set name="skillType" val="SUMMON"/>
+<set name="isMagic" val="true"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="castRange" val="-1"/>
+<!-- Summon-specific -->
+<table name="#npcIds"> 12067 12068 12069 12180 12357 12358 12359 12360 12361 12429 12430 12431 12432 12433 12434 12435 12436 12437 </table>
+<set name="npcId" val="#npcIds" />
+<set name="expPenalty" val="0.9" />
+<set name="isCubic" val="false" />
+<for>
+</for>
 </skill>
 <skill id="1228" levels="18" name="Summon Silhouette">
-
-  <table name="#mpConsume">
-  	  39  44  53  60  70
-  	  78  87  94 103 107
-  	 110 115 119 123 127
-  	 130 133 137
-  </table>
-  <table name="#itemConsumeCount">
-       3  4  5  7  9
-      11 12 16 17 20
-      21 25 26 29 30
-      33 34 36
-  </table>
-  <table name="#reuseDelay">
-     21600000 21600000 21600000 21600000
-     21600000 21600000 21600000 21600000
-     21600000    20000    20000    20000
-        20000    20000    20000    20000
-        20000    20000
-  </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="itemConsumeId" val="1458"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="6000"/>
-  <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="reuseDelay" val="#reuseDelay"/>
-  <set name="skillTime" val="6000"/>
-  <set name="skillType" val="SUMMON"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-
-  <!-- Summon-specific -->
-
-  <!-- C1
-  <table name="#npcIds">
-   12073 12074 12075 12183 12366
-   12367 12368 12369 12370
-  </table> -->
-
-  <!-- C2/C3 info -->
-  <table name="#npcIds">
-   12073 12074 12075 12183 12366
-   12367 12368 12369 12370 12456
-   12457 12458 12459 12460 12461
-   12462 12463 12464
-  </table> <!-- -->
-
-  <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="0.9" />
-  <set name="isCubic" val="false" />
-
-  <for>
-
-  </for>
-
+<table name="#mpConsume"> 39 44 53 60 70 78 87 94 103 107 110 115 119 123 127 130 133 137 </table>
+<table name="#reuseDelay"> 21600000 21600000 21600000 21600000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 </table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="itemConsumeId" val="1458"/>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="hitTime" val="6000"/>
+<set name="itemConsumeCount" val="1"/>
+<set name="reuseDelay" val="#reuseDelay"/>
+<set name="skillTime" val="6000"/>
+<set name="skillType" val="SUMMON"/>
+<set name="isMagic" val="true"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="castRange" val="-1"/>
+<!-- Summon-specific -->
+<table name="#npcIds"> 12073 12074 12075 12183 12366 12367 12368 12369 12370 12456 12457 12458 12459 12460 12461 12462 12463 12464 </table>
+<set name="npcId" val="#npcIds" />
+<set name="expPenalty" val="0.9" />
+<set name="isCubic" val="false" />
+<for>
+</for>
 </skill>
 <skill id="1229" levels="18" name="Chant of Life">
   <table name="#hot"> 12 15 18 23 27 31 35 39 43 47 51 55 59 63 67 71 75 79 </table>
