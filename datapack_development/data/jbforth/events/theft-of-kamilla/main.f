@@ -1,7 +1,7 @@
 \ 2005-09-15, (c) Balancer
 \ Event of steal lady Kamilla
 
-"hallelujah" constant password
+"halleluyah" constant password
 
 variable stealed_player		"Kamilla" stealed_player !
 
