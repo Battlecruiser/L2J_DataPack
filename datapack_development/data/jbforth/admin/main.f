@@ -1,6 +1,13 @@
-admin/Coords
-admin/Teleports
+\ GM commands handlers
 
-: gm_ur player@ target@ unride ;
-: gm_sr gm_ur strider player@ target@ ride ;
-: gm_wr gm_ur wyvern player@ target@ ride ;
+admin/teleports
+admin/polymorph
+
+\ unride selected player
+: gm_ur   "ride" check-access   player@ target@ unride ;
+
+\ ride strider selected player
+: gm_sr   "ride" check-access   gm_ur strider player@ target@ ride ;
+
+\ ride wyvern selected player
+: gm_wr   "ride" check-access   gm_ur wyvern player@ target@ ride ;

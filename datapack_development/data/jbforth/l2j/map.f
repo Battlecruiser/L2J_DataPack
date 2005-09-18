@@ -1,3 +1,5 @@
+\ Work with map
+
 : loc@  ( -- x y z ) \ read current player coords
 	player@ "X" p@
 	player@ "Y" p@
@@ -27,15 +29,4 @@
 	swap
 	559420.12 f+ 12191.92  f/
 	swap
-;
-
-: jump ( x y z -- ) \ teleport current player to x,y,z
-	player@ teleport-player-to
-;
-
-: jm ( map_x map_y -- ) \ teleport current player
-    \ to map-coordinates
-	map>loc
-	3500 \ highest geodata z-coordinat
-	jump
 ;

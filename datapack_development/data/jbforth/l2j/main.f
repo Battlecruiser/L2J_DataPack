@@ -20,11 +20,14 @@
 
 
 l2j/var-load
+l2j/map
+l2j/teleports
 l2j/doors
-
 
 variable _world
 : world		_world @ ;
 : world!	_world ! ;
+
+0 value server_config
 
 : find_player  ( "name" -- player )  world "Player" get(s) ; \ Find player by his name
