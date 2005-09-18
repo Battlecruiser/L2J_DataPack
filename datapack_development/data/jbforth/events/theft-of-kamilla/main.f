@@ -58,7 +58,7 @@ false value spell-given
 	password = if
 		~MercenaryPostingTicket 1 player@ inventory-!
 		"Password matches!" .
-		"s4" do-players
+		s4
 		
 		302 ( spoil festival ) 5000 5000 player@  "Kamilla" find_player  MAGIC-SKILL-TARGET
 
@@ -76,8 +76,8 @@ false value spell-given
 		"Password matches! You can enter now." show
 		22170001 door-open
 		22170002 door-open
-		"Event: Gate opened!" announce
-		"s4" do-players
+\		"Event: Gate opened!" announce
+\ 		s4
    	else
    		"Password not matches. Try again." show
    	then
@@ -175,7 +175,7 @@ false value spell-given
 	"Event begins!" announce
 	"Event begins!" announce
 	"Event begins!" announce
-	"s4" do-players
+	s4
 	true to theft-of-kamilla:running
 	false to MarlukKnight-killed
 	false to PytanKnight-killed
