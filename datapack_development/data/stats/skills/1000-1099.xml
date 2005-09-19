@@ -603,9 +603,9 @@
   <set name="castRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-	 <mul stat="sleepRes" val="#sleepRes" order="0x05"/>
-	 <mul stat="confusionRes" val="#fearRes" order="0x05"/>
-	 <mul stat="rootRes" val="#holdRes" order="0x05"/>
+	 <mul stat="sleepRes" val="#sleepRes" order="0x50"/>
+	 <mul stat="confusionRes" val="#fearRes" order="0x50"/>
+	 <mul stat="rootRes" val="#holdRes" order="0x50"/>
 	</effect>
   </for>
 </skill>

@@ -191,15 +191,14 @@
 </skill>
 <skill id="4110" levels="1" name="Mouth Odor Attack">
   <set name="power" val="250.0"/>
-  <set name="target" val="TARGET_AREA"/>
-  <set name="skillRadius" val="205"/>
-  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="23000"/>
   <set name="element" val="2"/>
-  <set name="skillTime" val="5000"/>
+  <set name="skillTime" val="2500"/>
   <set name="skillType" val="MDAM"/>
   <set name="reuseDelay" val="17000"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="500"/>
+  <set name="castRange" val="700"/>
   <for>
   </for>
 </skill>
@@ -217,7 +216,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="1000"/>
-  <set name="displayId" val="1170"/>
   <for>
 	<effect count="1" name="Paralyze" time="120" val="0"/>
   </for>
@@ -601,7 +599,9 @@
  <table name="#power"> 49.0 56.0 63.0 70.0 77.0 84.0 91.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
+  <set name="hitTime" val="1000"/> 
   <set name="element" val="3"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="4000"/>
@@ -613,20 +613,18 @@
   </for>
 </skill>
 <skill id="4138" levels="7" name="Parasite Burst">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:32
--->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
+<table name="#mpConsume"> 42 44 45 48 49 52 54 </table>
+  <table name="#power"> 31.0 33.0 34.0 36.0 38.0 39.0 41.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="900"/>
+  <set name="castRange" val="400"/>
   <for>
   </for>
 </skill>
