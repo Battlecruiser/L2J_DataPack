@@ -9,7 +9,9 @@ CREATE TABLE `droplist` (
   `max` int(5) NOT NULL default '0',
   `sweep` int(1) NOT NULL default '0',
   `chance` int(7) NOT NULL default '0',
-  PRIMARY KEY  (`mobId`,`itemId`)
+  PRIMARY KEY  (`mobId`,`itemId`),
+  KEY `key_mobId` (`mobId`)
+  
 ) TYPE=MyISAM;
 
 -- 
