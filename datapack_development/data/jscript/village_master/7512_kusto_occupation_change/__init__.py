@@ -1,5 +1,5 @@
 #
-# Created by DraX on 2005.08.22
+# Created by DraX on 2005.08.22 modified by Ariakas on 2005.09.19
 #
 
 print "importing village master data: Hunters Village        ...done"
@@ -24,41 +24,35 @@ class Quest (JQuest) :
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onEvent (self,event,st):
-   
-   htmltext = event
+
+   htmltext = "No Quest"
+
    Race     = st.getPlayer().getRace()
    ClassId  = st.getPlayer().getClassId()
    Level    = st.getPlayer().getLevel()
 
    if event == "7512-01.htm":
-     st.exitQuest(1)
      return "7512-01.htm"
 
    if event == "7512-02.htm":
-     st.exitQuest(1)
      return "7512-02.htm"
 
    if event == "7512-03.htm":
-     st.exitQuest(1)
      return "7512-03.htm"
 
    if event == "7512-04.htm":
-     st.exitQuest(1)
      return "7512-04.htm"
 
    if event == "class_change_57":
      if ClassId in [ClassId.artisan]:
         if Level <= 39:
           if st.getQuestItemsCount(MARK_OF_MAESTRO_ID) == 0 or st.getQuestItemsCount(MARK_OF_GUILDSMAN_ID) == 0 or st.getQuestItemsCount(MARK_OF_PROSPERITY_ID) == 0:
-            st.exitQuest(1)
-            return "7512-05.htm"
+            htmltext = "7512-05.htm"
           else:
-            st.exitQuest(1)
-            return "7512-06.htm"
+            htmltext = "7512-06.htm"
         else:
           if st.getQuestItemsCount(MARK_OF_MAESTRO_ID) == 0 or st.getQuestItemsCount(MARK_OF_GUILDSMAN_ID) == 0 or st.getQuestItemsCount(MARK_OF_PROSPERITY_ID) == 0:
-            st.exitQuest(1)
-            return "7512-07.htm"
+            htmltext = "7512-07.htm"
           else:
             st.takeItems(MARK_OF_MAESTRO_ID,1)
             st.takeItems(MARK_OF_GUILDSMAN_ID,1)
@@ -66,36 +60,49 @@ class Quest (JQuest) :
             st.player.setClassId(57)
             st.player.broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
-            st.exitQuest(1)
-            return "7512-08.htm"
+            htmltext = "7512-08.htm"
+
+   st.setState(COMPLETED)
+   st.exitQuest(1)
+   return htmltext
 
  def onTalk (Self,npcId,st):
-   
+
    Race    = st.getPlayer().getRace()
    ClassId = st.getPlayer().getClassId()
-   
+
    # Dwarf´s got accepted
    if npcId == HEAD_BLACKSMITH_KUSTO or HEAD_BLACKSMITH_VERGARA or HEAD_BLACKSMITH_FLUTTER or HEAD_BLACKSMITH_FERRIS or HEAD_BLACKSMITH_ROMAN and Race in [Race.dwarf]:
      if ClassId in [ClassId.artisan]:
-       st.exitQuest(1)
-       return "7512-01.htm"
+       htmltext = "7512-01.htm"
+       st.setState(STARTED)
+       return htmltext
      elif ClassId in [ClassId.dwarvenFighter]:
+       htmltext = "7512-09.htm"
+       st.setState(COMPLETED)
        st.exitQuest(1)
-       return "7512-09.htm"
+       return htmltext
      elif ClassId in [ClassId.warsmith, ClassId.bountyHunter]:
+       htmltext = "7512-10.htm"
+       st.setState(COMPLETED)
        st.exitQuest(1)
-       return "7512-10.htm"
+       return htmltext
      else:
+       htmltext = "7512-11.htm"
+       st.setState(COMPLETED)
        st.exitQuest(1)
-       return "7512-11.htm"
+       return htmltext
 
    # All other Races must be out
    else:
+     st.setState(COMPLETED)
      st.exitQuest(1)
      return "7512-11.htm"
 
 QUEST   = Quest(7512,"7512_kusto_occupation_change","village_master")
-CREATED = State('Start',QUEST)
+CREATED   = State('Start',     QUEST)
+STARTED   = State('Started',   QUEST)
+COMPLETED = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 

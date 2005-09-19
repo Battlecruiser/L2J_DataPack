@@ -18,48 +18,39 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st):
    
-   htmltext = event
+   htmltext = "No Quest"
 
    if event == "7154-01.htm":
-     st.exitQuest(1)
-     return "7154-01.htm"
+     htmltext = event
 
    if event == "7154-02.htm":
-     st.exitQuest(1)
-     return "7154-02.htm"
+     htmltext = event
 
    if event == "7154-03.htm":
-     st.exitQuest(1)
-     return "7154-03.htm"
+     htmltext = event
 
    if event == "7154-04.htm":
-     st.exitQuest(1)
-     return "7154-04.htm"
+     htmltext = event
 
    if event == "7154-05.htm":
-     st.exitQuest(1)
-     return "7154-05.htm"
+     htmltext = event
    
    if event == "7154-06.htm":
-     st.exitQuest(1)
-     return "7154-06.htm"
+     htmltext = event
 
    if event == "7154-07.htm":
-     st.exitQuest(1)
-     return "7154-07.htm"
+     htmltext = event
 
    if event == "7154-08.htm":
-     st.exitQuest(1)
-     return "7154-08.htm"
+     htmltext = event
 
    if event == "7154-09.htm":
-     st.exitQuest(1)
-     return "7154-09.htm"
+     htmltext = event
 
    if event == "7154-10.htm":
-     st.exitQuest(1)
-     return "7154-10.htm"
-
+     htmltext = event
+   
+ 
  def onTalk (Self,npcId,st):
    
    Race    = st.getPlayer().getRace()
@@ -68,25 +59,30 @@ class Quest (JQuest) :
    # Elf´s got accepted
    if npcId == HIERARCH_ASTERIOS and Race in [Race.elf]:
      if ClassId in [ClassId.elvenFighter]: 
-       st.exitQuest(1)
+       st.setState(STARTED)
        return "7154-01.htm"
      if ClassId in [ClassId.elvenMage]:
-       st.exitQuest(1)
+       st.setState(STARTED)
        return "7154-02.htm"
      if ClassId in [ClassId.elvenWizard, ClassId.oracle, ClassId.elvenKnight, ClassId.elvenScout]:
+       st.setState(COMPLETED)
        st.exitQuest(1)
        return "7154-12.htm"
      else:
+       st.setState(COMPLETED)
        st.exitQuest(1)
        return "7154-13.htm"
 
    # All other Races must be out
    if npcId == HIERARCH_ASTERIOS and Race in [Race.dwarf, Race.human, Race.darkelf, Race.orc]:
+     st.setState(COMPLETED)
      st.exitQuest(1)
      return "7154-11.htm"
 
-QUEST   = Quest(7154,"7154_asterios_occupation_change","village_master")
-CREATED = State('Start',QUEST)
+QUEST     = Quest(7154,"7154_asterios_occupation_change","village_master")
+CREATED   = State('Start',     QUEST)
+STARTED   = State('Started',   QUEST)
+COMPLETED = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 

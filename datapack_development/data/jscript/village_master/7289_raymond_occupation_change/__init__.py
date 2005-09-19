@@ -20,144 +20,119 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st):
    
-   htmltext = event
+   htmltext = "No Quest"
+   
    Race     = st.getPlayer().getRace()
    ClassId  = st.getPlayer().getClassId()
    Level    = st.getPlayer().getLevel()
 
    if event == "7289-01.htm":
-     st.exitQuest(1)
      return "7289-01.htm"
 
    if event == "7289-02.htm":
-     st.exitQuest(1)
      return "7289-02.htm"
 
    if event == "7289-03.htm":
-     st.exitQuest(1)
      return "7289-03.htm"
 
    if event == "7289-04.htm":
-     st.exitQuest(1)
      return "7289-04.htm"
 
    if event == "7289-05.htm":
-     st.exitQuest(1)
      return "7289-05.htm"
 
    if event == "7289-06.htm":
-     st.exitQuest(1)
      return "7289-06.htm"
 
    if event == "7289-07.htm":
-     st.exitQuest(1)
      return "7289-07.htm"
 
    if event == "7289-08.htm":
-     st.exitQuest(1)
      return "7289-08.htm"
 
    if event == "7289-09.htm":
-     st.exitQuest(1)
      return "7289-09.htm"
 
    if event == "7289-10.htm":
-     st.exitQuest(1)
      return "7289-10.htm"
 
    if event == "7289-11.htm":
-     st.exitQuest(1)
      return "7289-11.htm"
 
    if event == "7289-12.htm":
-     st.exitQuest(1)
      return "7289-12.htm"
 
    if event == "7289-13.htm":
-     st.exitQuest(1)
      return "7289-13.htm"
 
    if event == "7289-14.htm":
-     st.exitQuest(1)
      return "7289-14.htm"
 
    if event == "class_change_26":
      if ClassId in [ClassId.elvenMage]:
         if Level <= 19 and st.getQuestItemsCount(ETERNITY_DIAMOND_ID) == 0:
-          st.exitQuest(1)
-          return "7289-15.htm"
+          htmltext = "7289-15.htm"
         if Level <= 19 and st.getQuestItemsCount(ETERNITY_DIAMOND_ID) >= 1:
-          st.exitQuest(1)
-          return "7289-16.htm"
+          htmltext = "7289-16.htm"
         if Level >= 20 and st.getQuestItemsCount(ETERNITY_DIAMOND_ID) == 0:
-          st.exitQuest(1)
-          return "7289-17.htm"
+          htmltext = "7289-17.htm"
         if Level >= 20 and st.getQuestItemsCount(ETERNITY_DIAMOND_ID) >= 1:
           st.takeItems(ETERNITY_DIAMOND_ID,1)
           st.player.setClassId(26)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
-          st.exitQuest(1)
-          return "7289-18.htm"
+          htmltext = "7289-18.htm"
 
    if event == "class_change_29":
      if ClassId in [ClassId.elvenMage]:
         if Level <= 19 and st.getQuestItemsCount(LEAF_OF_ORACLE_ID) == 0:
-          st.exitQuest(1)
-          return "7289-19.htm"
+          htmltext = "7289-19.htm"
         if Level <= 19 and st.getQuestItemsCount(LEAF_OF_ORACLE_ID) >= 1:
-          st.exitQuest(1)
-          return "7289-20.htm"
+          htmltext = "7289-20.htm"
         if Level >= 20 and st.getQuestItemsCount(LEAF_OF_ORACLE_ID) == 0:
-          st.exitQuest(1)
-          return "7289-21.htm"
+          htmltext = "7289-21.htm"
         if Level >= 20 and st.getQuestItemsCount(LEAF_OF_ORACLE_ID) >= 1:
           st.takeItems(LEAF_OF_ORACLE_ID,1)
           st.player.setClassId(29)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
-          st.exitQuest(1)
-          return "7289-22.htm"
+          htmltext = "7289-22.htm"
 
    if event == "class_change_11":
      # ClassId.mage seems buggy !?
      if ClassId not in [ClassId.fighter]:
         if Level <= 19 and st.getQuestItemsCount(BEAD_OF_SEASON_ID) == 0:
-          st.exitQuest(1)
-          return "7289-23.htm"
+          htmltext = "7289-23.htm"
         if Level <= 19 and st.getQuestItemsCount(BEAD_OF_SEASON_ID) >= 1:
-          st.exitQuest(1)
-          return "7289-24.htm"
+          htmltext = "7289-24.htm"
         if Level >= 20 and st.getQuestItemsCount(BEAD_OF_SEASON_ID) == 0:
-          st.exitQuest(1)
-          return "7289-25.htm"
+          htmltext = "7289-25.htm"
         if Level >= 20 and st.getQuestItemsCount(BEAD_OF_SEASON_ID) >= 1:
           st.takeItems(BEAD_OF_SEASON_ID,1)
           st.player.setClassId(11)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
-          st.exitQuest(1)
-          return "7289-26.htm"
+          htmltext = "7289-26.htm"
 
    if event == "class_change_15":
      # ClassId.mage seems buggy !?
      if ClassId not in [ClassId.fighter]:
         if Level <= 19 and st.getQuestItemsCount(MARK_OF_FAITH_ID) == 0:
-          st.exitQuest(1)
-          return "7289-27.htm"
+          htmltext = "7289-27.htm"
         if Level <= 19 and st.getQuestItemsCount(MARK_OF_FAITH_ID) >= 1:
-          st.exitQuest(1)
-          return "7289-28.htm"
+          htmltext = "7289-28.htm"
         if Level >= 20 and st.getQuestItemsCount(MARK_OF_FAITH_ID) == 0:
-          st.exitQuest(1)
-          return "7289-29.htm"
+          htmltext = "7289-29.htm"
         if Level >= 20 and st.getQuestItemsCount(MARK_OF_FAITH_ID) >= 1:
           st.takeItems(MARK_OF_FAITH_ID,1)
           st.player.setClassId(15)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
-          st.exitQuest(1)
-          return "7289-30.htm"
+          htmltext = "7289-30.htm"
+          
+   st.setState(COMPLETED)
+   st.exitQuest(1)
+   return htmltext
 
 
  def onTalk (Self,npcId,st):
@@ -168,38 +143,47 @@ class Quest (JQuest) :
    # Elf´s and Humans´s got accepted
    if npcId == HIGH_PRIEST_RAYMOND and Race in [Race.elf, Race.human]:
      if ClassId in [ClassId.elvenMage]:
-       st.exitQuest(1)
+       st.setState(STARTED)
        return "7289-01.htm"
      if ClassId in [ClassId.wizard, ClassId.cleric, ClassId.elvenWizard, ClassId.oracle]:
+       st.setState(COMPLETED)
        st.exitQuest(1)
        return "7289-31.htm"
      if ClassId in [ClassId.sorceror, ClassId.necromancer, ClassId.bishop, ClassId.warlock, ClassId.prophet]:
+       st.setState(COMPLETED)
        st.exitQuest(1)
        return "7289-32.htm"
      if ClassId in [ClassId.spellsinger, ClassId.elder, ClassId.elementalSummoner]:
+       st.setState(COMPLETED)
        st.exitQuest(1)
        return "7289-32.htm"
      if ClassId in [ClassId.warrior, ClassId.knight, ClassId.rogue, ClassId.warlord, ClassId.paladin]:
+       st.setState(COMPLETED)
        st.exitQuest(1)
        return "7289-33.htm"
      if ClassId in [ClassId.treasureHunter, ClassId.gladiator, ClassId.darkAvenger, ClassId.hawkeye]:
+       st.setState(COMPLETED)
        st.exitQuest(1)
        return "7289-33.htm"
      # ClassId.mage seems buggy !?
      if ClassId not in [ClassId.fighter]:
-       st.exitQuest(1)
+       st.setState(STARTED)
        return "7289-08.htm"
      else:
+       st.setState(COMPLETED)
        st.exitQuest(1)
        return "7289-33.htm"
 
    # All other Races must be out
    if npcId == HIGH_PRIEST_RAYMOND and Race in [Race.dwarf, Race.darkelf, Race.orc]:
+     st.setState(COMPLETED)
      st.exitQuest(1)
      return "7289-33.htm"
 
-QUEST   = Quest(7289,"7289_raymond_occupation_change","village_master")
-CREATED = State('Start',QUEST)
+QUEST     = Quest(7289,"7289_raymond_occupation_change","village_master")
+CREATED   = State('Start',     QUEST)
+STARTED   = State('Started',   QUEST)
+COMPLETED = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 
