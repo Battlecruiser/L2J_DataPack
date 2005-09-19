@@ -601,6 +601,8 @@ STARTED.addKillId(DD_SEEKER)
 STARTED.addKillId(BO_OVERLD)
 
 # Quest NPC initialization
+CREATED.addTalkId(PM_COOPER)
+
 STARTING.addTalkId(PM_COOPER)
 STARTING.addTalkId(SG_CRONOS)
 STARTING.addTalkId(GD_BYRON)
