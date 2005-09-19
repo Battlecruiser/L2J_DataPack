@@ -1233,54 +1233,36 @@
   </for>
 </skill>
 <skill id="4272" levels="1" name="Greater Resist Archery Attack">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Possesses great resistance to an archery attack.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-bowRes"> 70 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+	<add order="0x50" stat="bowWpnRes" val="#Tab-bowRes"/>
   </for>
 </skill>
 <skill id="4273" levels="6" name="Resist Dagger">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Provides resistance against dagger attack.
-  6: Provides very powerful resistance against dagger attack.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-daggerRes"> 40 50 60 70 80 90 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+	<add order="0x50" stat="daggerWpnRes" val="#Tab-daggerRes"/>
   </for>
 </skill>
 <skill id="4274" levels="5" name="Blunt Attack Weak Point">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Is vulnerable to an attack by blunt weapons.
-  5: Is vulnerable to an attack by blunt weapons.
-  created 2005-05-29 23:34:33
--->
-  <set name="weaponsAllowed" val="8"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-bluntRes"> 10 15 20 25 30 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+	<sub order="0x50" stat="bluntWpnRes" val="#Tab-bluntRes"/>
   </for>
 </skill>
 <skill id="4275" levels="5" name="Sacred Attack Weak Point">
@@ -1301,37 +1283,25 @@
   </for>
 </skill>
 <skill id="4276" levels="5" name="Archery Attack Weak Point">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Is vulnerable to an archery attack.
-  5: Is vulnerable to an archery attack.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-bowRes"> 10 15 20 25 30 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+	<sub order="0x50" stat="bowWpnRes" val="#Tab-bowRes"/>
   </for>
 </skill>
 <skill id="4277" levels="6" name="Resist Poison">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Provides resistance against poison attack.
-  6: Provides very powerful resistance against poison attack.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-poisonRes"> 40 50 60 70 80 90 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+	<add order="0x50" stat="poisonRes" val="#Tab-poisonRes"/>
   </for>
 </skill>
 <skill id="4278" levels="1" name="Dark Attack">
@@ -1351,185 +1321,126 @@
   </for>
 </skill>
 <skill id="4279" levels="5" name="Fire Attack Weak Point">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Is vulnerable to a fire attack.
-  5: Is vulnerable to a fire attack.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-fireRes"> 10 15 20 25 30 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+     <sub order="0x50" stat="fireRes" val="#Tab-fireRes"/>
   </for>
 </skill>
 <skill id="4280" levels="5" name="Water Attack Weak Point">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Is vulnerable to a water attack.
-  5: Is vulnerable to a water attack.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-waterRes"> 10 15 20 25 30 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+     <sub order="0x50" stat="waterRes" val="#Tab-waterRes"/>
   </for>
 </skill>
 <skill id="4281" levels="5" name="Wind Attack Weak Point">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Is vulnerable to a wind attack.
-  5: Is vulnerable to a wind attack.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-windRes"> 10 15 20 25 30 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+     <sub order="0x50" stat="windRes" val="#Tab-windRes"/>
   </for>
 </skill>
 <skill id="4282" levels="5" name="Earth Attack Weak Point">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Is vulnerable to a earth attack.
-  5: Is vulnerable to a earth attack.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-earthRes"> 10 15 20 25 30 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+     <sub order="0x50" stat="earthRes" val="#Tab-earthRes"/>
   </for>
 </skill>
 <skill id="4283" levels="1" name="Greater Resist Magic Attack">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Provides very strong resistance against magic attack.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
+  <table name="#Tab-mDef"> 55 </table> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="operateType" val="OP_PASSIVE"/> 
+  < set name="castRange" val="-1"/> 
+  <for> 
+     <add  order='0x40' stat='mDef' val="#Tab-mDef"/> 
+  </for> 
+</skill> 
 <skill id="4284" levels="6" name="Resist Bleeding">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Provides resistance against Bleed attack.
-  6: Provides very powerful resistance against Bleed attack.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-bleedRes"> 40 50 60 70 80 90 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+     <add order="0x50" stat="bleedRes" val="#Tab-bleedRes"/>
   </for>
 </skill>
+
 <skill id="4285" levels="6" name="Resist Sleep">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Provides powerful resistance againstttacks that cause sleeping.
-  6: Provides very powerful resistance against Sleep attack.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-sleepRes"> 40 50 60 70 80 90 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+     <add order="0x50" stat="sleepRes" val="#Tab-sleepRes"/>
   </for>
 </skill>
 <skill id="4286" levels="1" name="Great Resist Sleep">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Provides very powerful resistance against Sleep attack.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-sleepRes"> 95 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+     <add order="0x50" stat="sleepRes" val="#Tab-sleepRes"/>
   </for>
 </skill>
 <skill id="4287" levels="6" name="Resist Hold">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Provides resistance against Hold attack.
-  6: Provides very powerful resistance against Hold attack.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-rootRes"> 40 50 60 70 80 90 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+     <add order="0x50" stat="rootRes" val="#Tab-rootRes"/>
   </for>
 </skill>
+
 <skill id="4288" levels="1" name="Greater Resist Hold">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Provides very strong resistance against Hold attack.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-holdRes"> 95 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+     <add order="0x50" stat="rootRes" val="#Tab-rootRes"/>
   </for>
 </skill>
 <skill id="4289" levels="1" name="Wyvern Breath">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
+  <set name="power" val="250.0"/>
   <set name="mpConsume" val="500"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="3600"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="700"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="castRange" val="900"/>
   <for>
   </for>
 </skill>

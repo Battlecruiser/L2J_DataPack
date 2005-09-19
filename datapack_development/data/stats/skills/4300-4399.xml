@@ -359,10 +359,10 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1800000"/>
+  <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="1800" val="0">
+  <effect count="1" name="Buff" time="3600" val="0">
     <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
  </effect>
 </for>
@@ -375,10 +375,10 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1800000"/>
+  <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="1800" val="0">
+  <effect count="1" name="Buff" time="3600" val="0">
     <mul order="0x50" stat="pDef" val="#rate"/>
   </effect>
 </for>
@@ -391,10 +391,10 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1800000"/>
+  <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="1800" val="0">
+  <effect count="1" name="Buff" time="3600" val="0">
     <mul order="0x50" stat="maxHp" val="#Tab-maxHp"/>
  </effect>
 </for>
@@ -405,11 +405,11 @@
   <set name="skillTime" val="1400"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1800000"/>
+  <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
  <table name="#abs"> 20 </table>
 <for>
- <effect count="1" name="Buff" time="1800" val="0">
+ <effect count="1" name="Buff" time="3600" val="0">
     <add stat="absorbDam" val="#abs" order="0x50"/>
  </effect>
 </for>
@@ -423,10 +423,10 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1800000"/>
+  <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="1800" val="0">
+  <effect count="1" name="Buff" time="3600" val="0">
     <mul order="0x50" stat="regHp" val="#rate"/>
   </effect>
 </for>
@@ -439,10 +439,10 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1800000"/>
+  <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="1800" val="0">
+  <effect count="1" name="Buff" time="3600" val="0">
     <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
  </effect>
 </for>
@@ -455,10 +455,10 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1800000"/>
+  <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="1800" val="0">
+  <effect count="1" name="Buff" time="3600" val="0">
     <mul order="0x50" stat="maxMp" val="#Tab-maxMp"/>
  </effect>
 </for>
@@ -471,10 +471,10 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1800000"/>
+  <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="1800" val="0">
+  <effect count="1" name="Buff" time="3600" val="0">
     <mul order="0x50" stat="mAtkSpd" val="#rate"/>
   </effect>
 </for>
@@ -487,11 +487,10 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1800000"/>
+  <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
- 
   <for>
-    <effect count="1" name="Buff" time="1800" val="0">
+    <effect count="1" name="Buff" time="3600" val="0">
       <sub order='0x40' stat='cancel' val="#cancel"/>
     </effect>
   </for>
@@ -504,10 +503,10 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1800000"/>
+  <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="1800" val="0">
+  <effect count="1" name="Buff" time="3600" val="0">
     <mul order="0x50" stat="mAtk" val="#rate"/>
   </effect>
 </for>
@@ -1391,20 +1390,14 @@
   </for>
 </skill>
 <skill id="4379" levels="6" name="Resist Pole Arm">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Provides resistance against pole arm attack.
-  6: Provides very powerful resistance against pole arm attack.
-  created 2005-05-29 23:34:34
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-poleRes"> 40 50 60 70 80 90 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+	<add order="0x50" stat="poleWpnRes" val="#Tab-poleRes"/>
   </for>
 </skill>
 <skill id="4380" levels="1" name="Not used">
