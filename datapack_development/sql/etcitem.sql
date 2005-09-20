@@ -1523,7 +1523,7 @@ insert  into etcitem values
 ('2366','rp_claws_of_blackdragon','false','recipe','30','normal','liquid','none','0','122600',0,'true'),
 ('2367','rp_three_eye_crow\'s_feather','false','recipe','30','normal','liquid','none','0','122600',0,'true'),
 ('2375','wolf_collar','false','pet_collar','10','normal','leather','none','0','0',0,'true'),
-('2508','cursed_bone','false','material','3','stackable','liquid','none','0','240',0,'true'),
+('2508','cursed_bone','false','material','3','stackable','liquid','none','0','300',0,'true'),
 ('2509','spiritshot_none','false','none','5','stackable','paper','none','0','15',0,'true'),
 ('2510','spiritshot_d','false','none','5','stackable','paper','d','0','18',0,'true'),
 ('2511','spiritshot_c','false','none','3','stackable','paper','c','0','35',0,'true'),

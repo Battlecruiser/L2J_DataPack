@@ -375,6 +375,7 @@
 </skill>
 <skill id="1222" levels="15" name="Curse Chaos">
   <table name="#mpConsume"> 30 35 39 44 48 52 54 55 58 60 62 64 65 67 69 </table>
+  <table name="#Tab-accCombat"> 4 7 9 11 14 18 21 23 25 28 30 32 34 36 38 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
   <set name="power" val="0.0"/>
@@ -388,6 +389,9 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
   <for>
+   <effect name="Buff" time="120" count="1" val="0">
+     <sub  order='0x40' stat='accCombat' val="#Tab-accCombat"/>
+   </effect> 
   </for>
 </skill>
 <skill id="1223" levels="15" name="Surrender To Earth">
@@ -1262,7 +1266,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="5000"/>
   <set name="skillType" val="MDAM"/>
-  <set name="reuseDelay" val="6000"/>
+  <set name="reuseDelay" val="30000"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="750"/>
@@ -1278,7 +1282,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="5000"/>
   <set name="skillType" val="MDAM"/>
-  <set name="reuseDelay" val="6000"/>
+  <set name="reuseDelay" val="30000"/>
   <set name="isMagic" val="true"/>
   <set name="overHit" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1295,7 +1299,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="5000"/>
   <set name="skillType" val="MDAM"/>
-  <set name="reuseDelay" val="6000"/>
+  <set name="reuseDelay" val="30000"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="750"/>
@@ -1320,7 +1324,7 @@
   <set name="reuseDelay" val="6000"/>
   <set name="skillType" val="MDAM"/>
   <set name="overHit" val="true"/>
-  <set name="reuseDelay" val="6000"/>
+  <set name="reuseDelay" val="30000"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
