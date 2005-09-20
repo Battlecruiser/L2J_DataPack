@@ -131,6 +131,8 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7568)
 
+STARTING.addTalkId(7568)
+
 STARTED.addTalkId(7568)
 STARTED.addTalkId(7580)
 

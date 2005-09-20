@@ -313,7 +313,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npcId,st):
-   if npcId == 5198 :
+   if npcId == 1 :
       if int(st.get("cond"))==1 and st.getRandom(100) < 50 :
         if st.getQuestItemsCount(BLUE_GEM_ID) == 0 :
             st.giveItems(BLUE_GEM_ID,1)
@@ -342,6 +342,19 @@ QUEST.addStartNpc(7530)
 QUEST.addStartNpc(7573)
 QUEST.addStartNpc(7575)
 
+STARTING.addTalkId(7008)
+STARTING.addTalkId(7009)
+STARTING.addTalkId(7017)
+STARTING.addTalkId(7019)
+STARTING.addTalkId(7129)
+STARTING.addTalkId(7131)
+STARTING.addTalkId(7370)
+STARTING.addTalkId(7400)
+STARTING.addTalkId(7528)
+STARTING.addTalkId(7530)
+STARTING.addTalkId(7573)
+STARTING.addTalkId(7575)
+
 STARTED.addTalkId(7008)
 STARTED.addTalkId(7009)
 STARTED.addTalkId(7017)
@@ -355,9 +368,9 @@ STARTED.addTalkId(7530)
 STARTED.addTalkId(7573)
 STARTED.addTalkId(7575)
 
-STARTED.addKillId(5198)
+STARTED.addKillId(1)
 
-STARTED.addQuestDrop(5198,BLUE_CRYSTAL,1)
+STARTED.addQuestDrop(5198,BLUE_GEM_ID,1)
 STARTED.addQuestDrop(7131,BLOOD_OF_JUNDIN_ID,1)
 STARTED.addQuestDrop(7530,LICENSE_OF_MINER_ID,1)
 STARTED.addQuestDrop(7575,VOUCHER_OF_FLAME_ID,1)
