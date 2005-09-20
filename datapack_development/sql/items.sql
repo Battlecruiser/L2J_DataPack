@@ -3,7 +3,7 @@
 -- ----------------------------
 CREATE TABLE items (
   `owner_id` INT, -- object id of the player or clan,owner of this item
-  `object_id` INT,-- object id of the item
+  `object_id` INT NOT NULL DEFAULT 0,-- object id of the item
   `item_id` INT,   -- item id
   `count` INT,
   `enchant_level` INT,

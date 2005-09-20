@@ -1,8 +1,8 @@
 -- ---------------------------- 
 -- Table structure for character_friends
 -- ---------------------------- 
-CREATE TABLE character_friends ( 
-  char_id int(11),
-  friend_name varchar(35) ,
-  PRIMARY KEY  (char_id,friend_name) 
+CREATE TABLE `character_friends` ( 
+  `char_id` INT NOT NULL default 0,
+  `friend_name` VARCHAR(35) NOT NULL DEFAULT '',
+  PRIMARY KEY  (`char_id`,`friend_name`) 
 );

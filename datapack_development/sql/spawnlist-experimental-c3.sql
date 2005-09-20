@@ -3,18 +3,18 @@
 -- 
 
 CREATE TABLE `spawnlist` (
-  `id` int(11) NOT NULL auto_increment,
+  `id` INT NOT NULL auto_increment,
   `location` varchar(30) NOT NULL default '',
-  `count` int(9) NOT NULL default '0',
+  `count` INT NOT NULL default '0',
   `npc_templateid` int(9) NOT NULL default '0',
-  `locx` int(9) NOT NULL default '0',
-  `locy` int(9) NOT NULL default '0',
-  `locz` int(9) NOT NULL default '0',
-  `randomx` int(9) NOT NULL default '0',
-  `randomy` int(9) NOT NULL default '0',
-  `heading` int(9) NOT NULL default '0',
-  `respawn_delay` int(9) NOT NULL default '0',
-  `loc_id` int(9) NOT NULL default '0',
+  `locx` INT NOT NULL DEFAULT '0',
+  `locy` INT NOT NULL DEFAULT '0',
+  `locz` INT NOT NULL DEFAULT '0',
+  `randomx` INT NOT NULL DEFAULT '0',
+  `randomy` INT NOT NULL DEFAULT '0',
+  `heading` INT NOT NULL DEFAULT '0',
+  `respawn_delay` INT NOT NULL default '0',
+  `loc_id` INT NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `loc_id` (`loc_id`)
 ) TYPE=MyISAM COMMENT='InnoDB free: 8192 kB' AUTO_INCREMENT=13492 ;

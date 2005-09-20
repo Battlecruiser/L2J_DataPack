@@ -2,7 +2,7 @@
 -- Table structure for pets
 -- ---------------------------
 CREATE TABLE pets (
-  item_obj_id decimal(11) ,
+  item_obj_id decimal(11) NOT NULL default 0,
   objId decimal(11) ,
   name varchar(12) ,
   level decimal(11) ,

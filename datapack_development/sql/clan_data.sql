@@ -2,14 +2,14 @@
 -- Table structure for clan_data
 -- ---------------------------
 CREATE TABLE clan_data (
-  clan_id decimal(11) ,
+  clan_id INT NOT NULL default 0,
   clan_name varchar(45) ,
-  clan_level decimal(1) ,
-  hasCastle decimal(1) ,
-  hasHideout decimal(1) ,
-  ally_id decimal(9) ,
+  clan_level INT,
+  hasCastle INT,
+  hasHideout INT,
+  ally_id INT,
   ally_name varchar(45) ,
-  leader_id decimal(11) ,
+  leader_id INT,
   PRIMARY KEY  (clan_id),
   KEY `leader_id` (`leader_id`),
   KEY `ally_id` (`ally_id`)
