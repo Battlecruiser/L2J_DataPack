@@ -33,3 +33,22 @@
 	SWAP 100 + SWAP
 	TELEPORT_PLAYER_TO
 ;
+
+: s>coords  ( "xxx yyy zz" - xxx yyy zz success-flag )
+	explode
+	list-rev> 3 <> if
+		"Unknown problem while coordinates decode" .
+		0
+	else
+			rot 0 +
+			rot 0 +
+			rot 0 +
+		-1
+	then
+;
+
+: coords>s  ( xxx yyy zz -- "xxx yyy zz" )
+	rot " " s+
+	rot s+ " " s+
+	swap s+
+;

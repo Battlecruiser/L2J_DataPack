@@ -26,6 +26,10 @@ l2j/doors
 
 0 value world
 0 value server_config
+0 value event-coordinates
+false value event?
+
+0 uvalue back-coordinates
 
 0 uvalue killer
 0 uvalue self
@@ -36,6 +40,7 @@ l2j/doors
 0 uvalue skill
 0 uvalue level
 0 uvalue caller
+
 
 : find_player  ( "name" -- player )  world "Player" get(s) ; \ Find player by his name
 

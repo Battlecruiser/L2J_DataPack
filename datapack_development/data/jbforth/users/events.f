@@ -1,0 +1,36 @@
+\ Player jump to event and back
+
+\ called as ".to_event"
+
+: user_to_event
+	tail drop \ drop tail of command. Antihack.
+
+	event? not if
+		"Not any events now" show
+		exit
+	then
+	
+	back-coordinates 0= if
+		player@ coords@ coords>s to back-coordinates
+	then
+	
+	event-coordinates s>coords if jump then
+;
+
+
+: user_back
+	tail drop \ drop tail of command. Antihack.
+
+	back-coordinates if
+		back-coordinates s>coords if jump then
+	else
+		"You already teleported back" show
+	then
+	
+	0 to back-coordinates
+;
+
+: gm_event-is-here
+	player@ coords@ coords>s to event-coordinates
+;
+	

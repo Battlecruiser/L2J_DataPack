@@ -13,10 +13,7 @@
 
 : gm_bm+ \ bookmark current location by name: //bm+ cool place
 	"teleport" check-access
-	player@ coords@
-	rot " " s+
-	rot s+ " " s+
-	swap s+
+	player@ coords@	coords>s
 	"bookmark-" tail s+ uv-save
 ;
 
@@ -27,14 +24,6 @@
 		drop "Not found bookmark '" r> s+ "'." s+
 	else
 		rdrop
-		explode
-		list-rev> 3 <> if
-			"Unknown problem while load bookmark" .
-		else
-			rot 0 +
-			rot 0 +
-			rot 0 +
-			jump
-		then
+		s>coords if	jump else drop then
 	then
 ;
