@@ -35,7 +35,7 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-        htmlfile = "7623-07.htm"
+        htmltext = "7623-07.htm"
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
@@ -44,15 +44,12 @@ class Quest (JQuest) :
         st.giveItems(ORDER_GIRAN_ID,1)
         st.giveItems(ORDER_OREN_ID,1)
         st.giveItems(ORDER_ADEN_ID,1)
-        st.set("cond","1")
     elif event == "7623_1" :
           if st.getPlayer().getRace().ordinal() != 3 :
             htmltext = "7623-05.htm"
             htmltext = "7623-04.htm"
     elif event == "7623_2" :
           htmltext = "7623-06.htm"
-          st.set("cond","1")
-          return htmltext
     elif event == "7623_3" :
           htmltext = "7623-08.htm"
     elif event == "7623_4" :
@@ -127,7 +124,7 @@ class Quest (JQuest) :
             st.addExpAndSp(24000,3100)
             st.giveItems(MARK_OF_DUELIST_ID,1)
             st.takeItems(FINAL_ORDER_ID,1)
-            htmlfile = "7623-18.htm"
+            htmltext = "7623-18.htm"
             st.set("cond","0")
             st.set("onlyone","1")
             st.setState(COMPLETED)

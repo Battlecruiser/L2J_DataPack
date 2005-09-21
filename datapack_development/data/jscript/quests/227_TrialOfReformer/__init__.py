@@ -33,12 +33,11 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-        htmlfile = "7118-04.htm"
+        htmltext = "7118-04.htm"
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
-        st.giveItems(BOOK_OF_REFORM_ID)
-        st.set("cond","1")
+        st.giveItems(BOOK_OF_REFORM_ID,1)
     elif event == "7118_1" :
           htmltext = "7118-06.htm"
           st.giveItems(LETTER_OF_INTRODUCTION_ID,1)
@@ -88,8 +87,6 @@ class Quest (JQuest) :
           if (st.getPlayer().getClassId().getId() == 0x0f or st.getPlayer().getClassId().getId() == 0x2a) :
             if st.getPlayer().getLevel() >= 39 :
               htmltext = "7118-03.htm"
-              st.set("cond","1")
-              return htmltext
             else:
               htmltext = "7118-01.htm"
           else:
@@ -116,7 +113,7 @@ class Quest (JQuest) :
           st.set("id",str(st.getGameTicks()))
           st.giveItems(MARK_OF_REFORMER_ID,1)
           st.addExpAndSp(28000,3600)
-          htmlfile = "7666-07.htm"
+          htmltext = "7666-07.htm"
           st.set("cond","0")
           st.set("onlyone","1")
           st.setState(COMPLETED)

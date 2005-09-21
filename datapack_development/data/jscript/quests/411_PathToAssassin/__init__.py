@@ -63,8 +63,6 @@ class Quest (JQuest) :
         if int(st.get("cond"))<15 :
           if st.getQuestItemsCount(IRON_HEART_ID) == 0 :
             htmltext = "7416-01.htm"
-            st.set("cond","1")
-            return htmltext
           else:
             htmltext = "7416-04.htm"
         else:

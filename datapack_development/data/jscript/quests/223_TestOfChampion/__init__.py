@@ -30,16 +30,13 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-      htmlfile = "7624-06.htm"
+      htmltext = "7624-06.htm"
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
       st.giveItems(ASCALONS_LETTER1_ID,1)
-      st.set("cond",str(0))
     elif event == "7624_1" :
           htmltext = "7624-05.htm"
-          st.set("cond","1")
-          return htmltext
     elif event == "7624_2" :
           htmltext = "7624-10.htm"
           st.giveItems(ASCALONS_LETTER2_ID,1)

@@ -20,7 +20,7 @@ class Quest (JQuest) :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-      if st.getQuestItemsCount(NECKLACE_OF_COURAGE_ID) and st.getQuestItemsCount(NECKLACE_OF_VALOR_ID) > 0 :
+      if st.getQuestItemsCount(NECKLACE_OF_COURAGE_ID) or st.getQuestItemsCount(NECKLACE_OF_VALOR_ID) :
         htmltext = "7577-07.htm"
       else:
         htmltext = "7577-03.htm"
@@ -43,12 +43,8 @@ class Quest (JQuest) :
           htmltext = "7577-01.htm"
         elif st.getQuestItemsCount(NECKLACE_OF_COURAGE_ID) or st.getQuestItemsCount(NECKLACE_OF_VALOR_ID) :
           htmltext = "7577-06.htm"
-          st.set("cond","1")
-          return htmltext
         else:
           htmltext = "7577-02.htm"
-          st.set("cond","1")
-          return htmltext
       else:
         htmltext = "7577-02.htm"
    elif npcId == 7577 and int(st.get("cond")) :

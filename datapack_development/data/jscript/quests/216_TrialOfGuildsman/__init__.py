@@ -36,7 +36,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     if event == "1" :
-        htmlfile = "7103-06.htm"
+        htmltext = "7103-06.htm"
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
@@ -47,14 +47,12 @@ class Quest (JQuest) :
     elif event == "7103_2" :
           if st.getQuestItemsCount(ADENA_ID) >= 2000 :
             htmltext = "7103-05.htm"
-            st.set("cond","1")
-            return htmltext
           else:
             htmltext = "7103-05a.htm"
     elif event == "7103_3" :
           if st.getGameTicks() != int(st.get("id")) :
             st.set("id",str(st.getGameTicks()))
-            htmlfile = "7103-09a.htm"
+            htmltext = "7103-09a.htm"
             st.set("cond","0")
             st.set("onlyone","1")
             st.setState(COMPLETED)
@@ -68,7 +66,7 @@ class Quest (JQuest) :
           if st.getGameTicks() != int(st.get("id")) :
             st.set("id",str(st.getGameTicks()))
             st.addExpAndSp(32000,3900)
-            htmlfile = "7103-09b.htm"
+            htmltext = "7103-09b.htm"
             st.set("cond","0")
             st.set("onlyone","1")
             st.setState(COMPLETED)

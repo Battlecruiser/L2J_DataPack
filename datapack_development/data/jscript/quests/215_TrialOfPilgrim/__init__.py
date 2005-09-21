@@ -27,13 +27,11 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-      htmlfile = "7648-04.htm"
+      htmltext = "7648-04.htm"
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-      st.set("cond","1")
       st.giveItems(VOUCHER_OF_TRIAL_ID,1)
-      st.set("cond",str(0))
     elif event == "7648_1" :
           htmltext = "7648-05.htm"
     elif event == "7648_2" :
@@ -86,8 +84,6 @@ class Quest (JQuest) :
       if int(st.get("cond")) < 15 :
         if (st.getPlayer().getClassId().getId()==0x0f or st.getPlayer().getClassId().getId()==0x1d or st.getPlayer().getClassId().getId()==0x2a or st.getPlayer().getClassId().getId()==0x32) and st.getPlayer().getLevel() >= 35 :
           htmltext = "7648-03.htm"
-          st.set("cond","1")
-          return htmltext
         elif st.getPlayer().getClassId().getId()==0x0f or st.getPlayer().getClassId().getId()==0x1d or st.getPlayer().getClassId().getId()==0x2a or st.getPlayer().getClassId().getId()==0x32 :
           htmltext = "7648-01.htm"
         else:

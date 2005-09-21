@@ -57,7 +57,7 @@ class Quest (JQuest) :
     htmltext = event
     print "221: QuestEvent: " + event
     if event == "1" :
-        htmlfile = "7104-04.htm"
+        htmltext = "7104-04.htm"
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
@@ -173,8 +173,6 @@ class Quest (JQuest) :
               htmltext = "7104-02.htm"
             else:
               htmltext = "7104-03.htm"
-              st.set("cond","1")
-              return htmltext
         else:
           htmltext = "7104-03.htm"
    elif npcId == 7104 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
@@ -205,7 +203,7 @@ class Quest (JQuest) :
           st.takeItems(RING_OF_TESTIMONY2_ID,1)
           st.giveItems(MARK_OF_PROSPERITY_ID,1)
           st.takeItems(MAPHR_TABLET_FRAGMENT_ID,1)
-          htmlfile = "7104-13.htm"
+          htmltext = "7104-13.htm"
           st.set("cond","0")
           st.set("onlyone","1")
           st.setState(COMPLETED)

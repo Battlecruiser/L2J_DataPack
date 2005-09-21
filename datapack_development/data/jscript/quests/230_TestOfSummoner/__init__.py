@@ -67,7 +67,7 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-      htmlfile = "7634-08.htm"
+      htmltext = "7634-08.htm"
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -80,8 +80,6 @@ class Quest (JQuest) :
           htmltext = "7634-06.htm"
     elif event == "7634_4" :
           htmltext = "7634-07.htm"
-          st.set("cond","1")
-          return htmltext
     elif event == "7063_1" :
           htmltext = "7063-02.htm"
           n = st.getRandom(5)

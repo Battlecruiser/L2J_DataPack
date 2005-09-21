@@ -37,7 +37,7 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-        htmlfile = "7629-04.htm"
+        htmltext = "7629-04.htm"
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
@@ -90,8 +90,6 @@ class Quest (JQuest) :
               htmltext = "7629-02.htm"
             else:
               htmltext = "7629-03.htm"
-              st.set("cond","1")
-              return htmltext
           else:
             htmltext = "7629-01.htm"
         else:
@@ -118,7 +116,7 @@ class Quest (JQuest) :
             st.takeItems(TONE_OF_EARTH_ID,1)
             st.giveItems(MARK_OF_MAGUS_ID,1)
             st.addExpAndSp(50000,6400)
-            htmlfile = "7629-12.htm"
+            htmltext = "7629-12.htm"
             st.set("cond","0")
             st.set("onlyone","1")
             st.setState(COMPLETED)

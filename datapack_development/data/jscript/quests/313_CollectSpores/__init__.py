@@ -38,11 +38,8 @@ class Quest (JQuest) :
         if int(st.get("cond"))<15 :
           if st.getPlayer().getLevel() >= 8 :
             htmltext = "7150-03.htm"
-            st.set("cond","1")
-            return htmltext
           else:
             htmltext = "7150-02.htm"
-          htmltext = "7150-02.htm"
    elif npcId == 7150 and int(st.get("cond"))!=0 and st.getQuestItemsCount(FUNGUS_SAC1_ID)<10 :
         htmltext = "7150-06.htm"
    elif npcId == 7150 and int(st.get("cond"))!=0 and st.getQuestItemsCount(FUNGUS_SAC1_ID)>=10 :

@@ -42,11 +42,11 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-        htmlfile = "7565-05.htm"
+        htmltext = "7565-05.htm"
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
-        st.giveItems(ORDEAL_NECKLACE_ID)
+        st.giveItems(ORDEAL_NECKLACE_ID,1)
     elif event == "7565_1" :
           htmltext = "7565-08.htm"
           st.takeItems(SWORD_INTO_SKULL_ID,1)
@@ -114,8 +114,6 @@ class Quest (JQuest) :
                 htmltext = "7565-03.htm"
               else:
                 htmltext = "7565-04.htm"
-                st.set("cond","1")
-                return htmltext
         else:
           htmltext = "7565-04.htm"
    elif npcId == 7565 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
@@ -135,7 +133,7 @@ class Quest (JQuest) :
           st.addExpAndSp(25000,3000)
           st.giveItems(MARK_OF_LORD_ID,1)
           st.takeItems(IMMORTAL_FLAME_ID,1)
-          htmlfile = "7565-11.htm"
+          htmltext = "7565-11.htm"
           st.set("cond","0")
           st.set("onlyone","1")
           st.setState(COMPLETED)

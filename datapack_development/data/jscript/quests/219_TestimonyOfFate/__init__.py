@@ -46,15 +46,13 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-      htmlfile = "7476-05.htm"
+      htmltext = "7476-05.htm"
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
       st.giveItems(KAIRAS_LETTER1_ID,1)
     elif event == "7476_1" :
           htmltext = "7476-04.htm"
-          st.set("cond","1")
-          return htmltext
     elif event == "7476_2" :
           if st.getPlayer().getLevel() >= 38 :
             htmltext = "7476-12.htm"

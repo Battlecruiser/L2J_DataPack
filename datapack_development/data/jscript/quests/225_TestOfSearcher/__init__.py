@@ -39,11 +39,11 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-        htmlfile = "7690-05.htm"
+        htmltext = "7690-05.htm"
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
-        st.giveItems(LUTHERS_LETTER_ID)
+        st.giveItems(LUTHERS_LETTER_ID,1)
     elif event == "7291_1" :
           htmltext = "7291-05.htm"
     elif event == "7291_2" :
@@ -100,8 +100,6 @@ class Quest (JQuest) :
               htmltext = "7690-04.htm"
             else:
               htmltext = "7690-03.htm"
-            st.set("cond","1")
-            return htmltext
         else:
           htmltext = "7690-03.htm"
    elif npcId == 7690 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
@@ -115,7 +113,7 @@ class Quest (JQuest) :
           if st.getGameTicks() != int(st.get("id")) :
             st.set("id",str(st.getGameTicks()))
             st.addExpAndSp(21000,2600)
-            htmlfile = "7690-08.htm"
+            htmltext = "7690-08.htm"
             st.set("cond","0")
             st.set("onlyone","1")
             st.setState(COMPLETED)

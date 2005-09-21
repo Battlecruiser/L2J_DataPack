@@ -43,19 +43,17 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-        htmlfile = "7630-08.htm"
+        htmltext = "7630-08.htm"
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
-        st.giveItems(ORIMS_DIAGRAM_ID)
+        st.giveItems(ORIMS_DIAGRAM_ID,1)
     elif event == "7630_1" :
           htmltext = "7630-04.htm"
     elif event == "7630_2" :
           htmltext = "7630-06.htm"
     elif event == "7630_3" :
           htmltext = "7630-07.htm"
-          st.set("cond","1")
-          return htmltext
     elif event == "7630_4" :
           htmltext = "7630-12.htm"
     elif event == "7630_5" :
@@ -91,7 +89,7 @@ class Quest (JQuest) :
             st.addExpAndSp(50000,6400)
             st.giveItems(MARK_OF_WITCHCRAFT_ID,1)
             st.takeItems(ZERUEL_BIND_CRYSTAL_ID,1)
-            htmlfile = "7630-22.htm"
+            htmltext = "7630-22.htm"
             st.set("cond","0")
             st.set("onlyone","1")
             st.setState(COMPLETED)

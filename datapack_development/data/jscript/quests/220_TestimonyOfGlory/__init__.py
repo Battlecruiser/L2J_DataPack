@@ -48,15 +48,13 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-      htmlfile = "7514-05.htm"
+      htmltext = "7514-05.htm"
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
       st.giveItems(VOKIYANS_ORDER1_ID,1)
     elif event == "7514_1" :
           htmltext = "7514-04.htm"
-          st.set("cond","1")
-          return htmltext
     elif event == "7642_1" :
           htmltext = "7642-02.htm"
     elif event == "7642_2" :
