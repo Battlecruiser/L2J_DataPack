@@ -6,12 +6,12 @@ l2j
 effects
 games/CurrentEvent
 service
-events
 proof
 
 admin
 users
 
+skills
 actions
 events
 disablers

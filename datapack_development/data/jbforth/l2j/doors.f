@@ -1,7 +1,6 @@
 variable _doors_table
 
-: doors-table   _doors_table @ ;
-: doors-table!	_doors_table ! ;
+0 value doors-table
 
 : id>door  ( door_id -- door_object )
 	doors-table "Door" get(i)
