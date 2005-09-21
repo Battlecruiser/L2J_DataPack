@@ -40,8 +40,8 @@ class Quest (JQuest) :
 
 # TattooOflame
     if event == "4":
-        if st.getQuestItemsCount(1459) >= 428:
-            st.takeItems(1459,462)
+        if st.getQuestItemsCount(1460) >= 462:
+            st.takeItems(1460,462)
             st.giveItems(488,1)
             htmltext = "Enjoy your new tattoo."
     	else:
@@ -58,8 +58,8 @@ class Quest (JQuest) :
 
 # TatooOblood
     if event == "6":
-         if st.getQuestItemsCount(1461) >= 277:
-            st.takeItems(1461,277)
+         if st.getQuestItemsCount(1461) >= 462:
+            st.takeItems(1461,462)
             st.giveItems(490,1)
             htmltext = "Enjoy your new tattoo."
          else:
