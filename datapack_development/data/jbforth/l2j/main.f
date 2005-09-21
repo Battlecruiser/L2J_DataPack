@@ -35,6 +35,7 @@ l2j/doors
 0 uvalue target
 0 uvalue skill
 0 uvalue level
+0 uvalue caller
 
 : find_player  ( "name" -- player )  world "Player" get(s) ; \ Find player by his name
 
