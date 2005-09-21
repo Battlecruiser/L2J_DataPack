@@ -1,5 +1,6 @@
 \ GM commands handlers
 
+admin/help
 admin/teleports
 admin/polymorph
 
