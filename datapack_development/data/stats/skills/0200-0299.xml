@@ -935,18 +935,13 @@
 </skill>
 <skill id="256" levels="1" name="Accuracy">
   <table name="#acc"> 10 </table>
-  <table name="#mana"> 0.2 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="5">
-      <val>
-        <add val="$player_level"/>
-        <mul val="#mana"/>
-      </val>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="5">
       <add order="0x10" stat="accCombat" val="#acc"/>
     </effect>
   </for>
