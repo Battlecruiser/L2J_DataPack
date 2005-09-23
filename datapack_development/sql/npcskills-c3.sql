@@ -4672,7 +4672,7 @@ INSERT INTO npcskills VALUES (12721,4285,6);
 INSERT INTO npcskills VALUES (12721,4287,6);
 INSERT INTO npcskills VALUES (12721,4295,1);
 
------------- SUMMON SKILLS --------------
+-- ---------- SUMMON SKILLS --------------
 
 INSERT INTO npcskills VALUES (12503,4259,1);
 INSERT INTO npcskills VALUES (12504,4259,1);
@@ -4841,7 +4841,7 @@ INSERT INTO npcskills VALUES (12525,4068,7);
 INSERT INTO npcskills VALUES (12251,4079,1);
 INSERT INTO npcskills VALUES (12375,4230,1);
 
------------ Newbie Guide Skills ------------
+-- --------- Newbie Guide Skills ------------
 
 INSERT INTO npcskills VALUES (7602,4322,1);
 INSERT INTO npcskills VALUES (7602,4323,1);
