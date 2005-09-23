@@ -941,7 +941,7 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="5">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="1">
       <add order="0x10" stat="accCombat" val="#acc"/>
     </effect>
   </for>
