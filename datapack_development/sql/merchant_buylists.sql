@@ -2667,7 +2667,6 @@ INSERT INTO merchant_buylists VALUES (736,480,64,20);
 INSERT INTO merchant_buylists VALUES (737,2400,64,21);
 INSERT INTO merchant_buylists VALUES (1829,600,64,22);
 INSERT INTO merchant_buylists VALUES (2130,1200,64,23);
-INSERT INTO merchant_buylists VALUES (1250,5000,64,24);
 INSERT INTO merchant_buylists VALUES (5192,120,64,25);
 INSERT INTO merchant_buylists VALUES (5146,13860,64,26);
 INSERT INTO merchant_buylists VALUES (5140,5940,64,27);
