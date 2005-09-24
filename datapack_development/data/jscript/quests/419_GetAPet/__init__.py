@@ -225,7 +225,7 @@ class Quest (JQuest):
          if npcId in npcs :
             if st.getRandom(100) < SPIDER_LEG_DROP :
                st.giveItems(item,1)
-               if collected < REQUIRED_SPIDER_LEGS :
+               if collected + 1 < REQUIRED_SPIDER_LEGS :
                   st.playSound("ItemSound.quest_itemget")
                else :
                   st.playSound("ItemSound.quest_middle")

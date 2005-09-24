@@ -1,4 +1,6 @@
 # Maked by Mr. Have fun! Version 0.2
+# Updated by ElgarL
+
 print "importing quests: 401: Path To Warrior"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
@@ -106,7 +108,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npcId,st):
-   if npcId == 35 :
+   if npcId == 35 or npcId == 42 :
         st.set("id","0")
         if int(st.get("cond")) == 2 and st.getQuestItemsCount(RUSTED_BRONZE_SWORD1_ID)<10 :
           if st.getRandom(10)<4 :
@@ -116,34 +118,16 @@ class Quest (JQuest) :
               st.set("cond","3")
             else:
               st.playSound("ItemSound.quest_itemget")
-   elif npcId == 42 :
-        st.set("id","0")
-        if int(st.get("cond")) == 2 and st.getQuestItemsCount(RUSTED_BRONZE_SWORD1_ID)<10 :
-          if st.getRandom(10)<4 :
-            st.giveItems(RUSTED_BRONZE_SWORD1_ID,1)
-            if st.getQuestItemsCount(RUSTED_BRONZE_SWORD1_ID) == 10 :
-              st.playSound("ItemSound.quest_middle")
-              st.set("cond","3")
-            else:
-              st.playSound("ItemSound.quest_itemget")
-   elif npcId == 43 :
+   elif npcId == 43 or npcId == 38 :
       st.set("id","0")
-      if int(st.get("cond")) and st.getQuestItemsCount(POISON_SPIDER_LEG2_ID)<20 :
+      if int(st.get("cond")) and st.getQuestItemsCount(POISON_SPIDER_LEG2_ID)<20 and st.getQuestItemsCount(RUSTED_BRONZE_SWORD3_ID) == 1 and st.getItemEquipped(7) == RUSTED_BRONZE_SWORD3_ID:
         st.giveItems(POISON_SPIDER_LEG2_ID,1)
         if st.getQuestItemsCount(POISON_SPIDER_LEG2_ID) == 20 :
           st.playSound("ItemSound.quest_middle")
           st.set("cond","6")
         else:
           st.playSound("ItemSound.quest_itemget")
-   elif npcId == 38 :
-      st.set("id","0")
-      if int(st.get("cond")) and st.getQuestItemsCount(POISON_SPIDER_LEG2_ID)<20 :
-        st.giveItems(POISON_SPIDER_LEG2_ID,1)
-        if st.getQuestItemsCount(POISON_SPIDER_LEG2_ID) == 20 :
-          st.playSound("ItemSound.quest_middle")
-          st.set("cond","6")
-        else:
-          st.playSound("ItemSound.quest_itemget")
+
    return
 
 QUEST       = Quest(401,"401_PathToWarrior","Path To Warrior")
@@ -155,8 +139,6 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7010)
-
-STARTING.addTalkId(7010)
 
 STARTED.addTalkId(7010)
 STARTED.addTalkId(7253)
