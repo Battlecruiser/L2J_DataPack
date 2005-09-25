@@ -143,6 +143,8 @@ QUEST.addStartNpc(7010)
 STARTED.addTalkId(7010)
 STARTED.addTalkId(7253)
 
+STARTING.addTalkId(7010) 
+
 STARTED.addKillId(35)
 STARTED.addKillId(38)
 STARTED.addKillId(42)
