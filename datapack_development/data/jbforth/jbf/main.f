@@ -1,6 +1,6 @@
 jbf/Flow
 jbf/L2j
-jbf/find
+\ jbf/find
 
 \ jbf/JBF
 \ jbf/Core

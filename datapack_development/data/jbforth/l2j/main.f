@@ -24,12 +24,12 @@ l2j/map
 l2j/teleports
 l2j/doors
 
-0 value world
-0 value server_config
-0 value event-coordinates
+null value world
+null value server_config
+null value event-coordinates
 false value event?
 
-0 uvalue back-coordinates
+null uvalue back-coordinates
 
 0 uvalue killer
 0 uvalue self
