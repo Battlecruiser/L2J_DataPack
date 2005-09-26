@@ -1036,7 +1036,7 @@ insert  into etcitem values
 ('1879','cokes','false','material','2','stackable','liquid','none','0','1200',0,'true'),
 ('1880','steel','false','material','2','stackable','liquid','none','0','2000',0,'true'),
 ('1881','coarse_bone_powder','false','material','2','stackable','liquid','none','0','1500',0,'true'),
-('1882','leather','false','material','2','stackable','liquid','none','0','900',0,'true'),
+('1882','leather','false','material','2','stackable','liquid','none','0','300',0,'true'),
 ('1883','steel_mold','false','material','2','stackable','liquid','none','0','4500',0,'true'),
 ('1884','cord','false','material','2','stackable','liquid','none','0','325',0,'true'),
 ('1885','high_grade_suede','false','material','2','stackable','liquid','none','0','2400',0,'true'),
