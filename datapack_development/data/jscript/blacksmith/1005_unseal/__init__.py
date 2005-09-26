@@ -501,6 +501,26 @@ class Quest (JQuest) :
          else:
              htmltext = "You do not have enough materials."
 
+# Sealed Dark Crystal Shield
+    if event == "50":
+         if st.getQuestItemsCount(5292) >= 1 and st.getQuestItemsCount(5575) >= 100000:
+             st.takeItems(5292,1)
+             st.takeItems(5575,100000)
+             st.giveItems(641,1)
+             htmltext = "Item has been succesfully unsealed."
+         else:
+             htmltext = "You do not have enough materials."
+
+# Sealed Shield of Nightmare
+    if event == "51":
+         if st.getQuestItemsCount(5315) >= 1 and st.getQuestItemsCount(5575) >= 100000:
+             st.takeItems(5315,1)
+             st.takeItems(5575,100000)
+             st.giveItems(2498,1)
+             htmltext = "Item has been succesfully unsealed."
+         else:
+             htmltext = "You do not have enough materials."
+
     if event == "0":
       htmltext = "Trade has been canceled."
     
