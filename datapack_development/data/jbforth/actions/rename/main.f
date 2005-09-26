@@ -1,6 +1,7 @@
 \ Bypass packets
 : bypass_rename_5kk ( new_name -- )
-	5000000 swap rename_for_price
+	5000000 swap 
+	rename_for_price
 ;
 
 

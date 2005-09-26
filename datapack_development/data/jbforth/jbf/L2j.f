@@ -28,3 +28,10 @@ new-hashmap value access-map
 		exit
   	then
 ;
+
+: args  ( "arg1 arg2 arg3 .. argn .. argx" n -- arg1 arg2 .. argn )
+	swap explode swap 0 do
+		list-shift
+  	loop
+  	drop \ drop list
+;

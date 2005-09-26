@@ -3,8 +3,6 @@
 \ called as ".to_event"
 
 : user_to_event
-	tail drop \ drop tail of command. Antihack.
-
 	event? not if
 		"Not any events now" show
 		exit
@@ -19,8 +17,6 @@
 
 
 : user_back
-	tail drop \ drop tail of command. Antihack.
-
 	back-coordinates if
 		back-coordinates s>coords if jump then
 	else
@@ -33,4 +29,3 @@
 : gm_event-is-here
 	player@ coords@ coords>s to event-coordinates
 ;
-	

@@ -52,3 +52,12 @@ false value event?
 : unparalyze ( target -- )
 	0 swap "Paralyzed" set(b)
 ;
+
+: gm_xtest 	"gm_xtest:" . . ;
+: user_test 	"user_test:" . . ;
+: bypass_test 	"bypass_test:" . . ;
+: gm_stest
+	'<a action="bypass -h gm_xtest">gm_xtest</a><br>'
+	'<a action="bypass -h jbf_test">jbf_test</a><br>' s+
+	show
+;

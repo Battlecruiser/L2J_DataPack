@@ -1,8 +1,8 @@
 \ Polymorph selected char to NPC with the code, undertaken from the input flow: //poly 10110
 
-: gm_poly  ( -- / type )  
+: gm_poly  ( "npc_id" -- )  
 	"polymorph" check-access  
-	tail player@ target@ poly 
+	player@ target@ poly 
 ;
 
 \ Unpolymorph char: //unpoly

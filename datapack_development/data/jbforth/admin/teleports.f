@@ -14,12 +14,12 @@
 : gm_bm+ \ bookmark current location by name: //bm+ cool place
 	"teleport" check-access
 	player@ coords@	coords>s
-	"bookmark-" tail s+ uv-save
+	"bookmark-" rot s+ uv-save
 ;
 
 : gm_bm \ jump to stored place: //bm cool place
 	"teleport" check-access
-	"bookmark-" tail s+ dup >r uv-load
+	"bookmark-" swap s+ dup >r uv-load
 	dup null? if
 		drop "Not found bookmark '" r> s+ "'." s+
 	else

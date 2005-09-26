@@ -2,7 +2,9 @@
 
 \ bypass handlers
 
-: bypass_ride  ( pet time -- )
+: bypass_ride  ( "pet time" -- )
+	2 args
+
     players-can-ride-hair not if
     	"Can't ride now" .
     	2drop

@@ -4,5 +4,4 @@
 
 : user_help
 	"jbforth/users/help.htm" show
-	tail drop
 ;

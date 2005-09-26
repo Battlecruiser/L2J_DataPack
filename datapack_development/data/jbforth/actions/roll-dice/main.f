@@ -1,11 +1,11 @@
 \ Roll dice
 
 \ bypass handlers
-: bypass_casino_100   	100 roll-dice ;
-: bypass_casino_1k  	1000 roll-dice ;
-: bypass_casino_10k  	10000 roll-dice ;
-: bypass_casino_100k  	100000 roll-dice ;
-: bypass_casino_1km 	1000000 roll-dice ;
+: bypass_casino_100  100 roll-dice ;
+: bypass_casino_1k   1000 roll-dice ;
+: bypass_casino_10k  10000 roll-dice ;
+: bypass_casino_100k 100000 roll-dice ;
+: bypass_casino_1km  1000000 roll-dice ;
 
 
 : npc-7785-dialog-append 

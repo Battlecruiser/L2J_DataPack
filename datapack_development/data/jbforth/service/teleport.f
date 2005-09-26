@@ -1,7 +1,7 @@
 \ Teleport current player to x y z coords for adena
 
 : gatekeeper-jump ( x y z adena -- )
-	10 /    ( temporary price is 1/10 of original )
+	5 /    ( temporary price is 1/10 of original )
 	adena? not if
 		"You have not adena!" .
 		drop 2drop

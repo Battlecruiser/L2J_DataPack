@@ -2,7 +2,9 @@
 
 \ called as ".password new-password new-password"
 
-: bypass_change_user_password
+: bypass_change_user_password  ( "pass1 pass2" -- )
+	2 args
+
 	over <> if
 		drop
 		"Passwords not match" show
@@ -37,5 +39,4 @@
 	'<td><edit var="password2" width=80 height=15></td>' s+
 	'<td><button value="Change" action="bypass -h jbf_change_user_password $password1 $password2" width=50 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr></table>' s+
 	show
-	tail drop \ drop tail of command. Antihack.
 ;

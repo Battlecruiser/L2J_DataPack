@@ -11,6 +11,4 @@
 	"Map coordinates is " .
     "%.1f/" .f \ print x-coord with 1/10 precision
     "%.1f" .f \ Y-coord.
-
-	tail drop \ drop tail of command. Antihack.
 ;
