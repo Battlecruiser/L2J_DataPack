@@ -78,7 +78,7 @@ insert  into teleport values
 ('Hunter\'s Village -> Hardins Private Academy','45','105918','109759','-3207','4100'),
 ('Hunter\'s Village -> Aden Town','46','146331','25762','-2018','11000'),
 ('Oren Town -> Giran Town','47','83400','147943','-3404','11000'),
-('Oren Town -> Ivory Tower','48','85348','16142','-3679','4400'),
+('Oren Town -> Ivory Tower','48','85348','16142','-3699','4400'),
 ('Oren Town -> Hunter\'s Village','49','116819','76994','-2714','4900'),
 ('Oren Town -> Hardins Private Academy','50','105918','109759','-3207','7300'),
 ('Oren Town -> Aden Town','51','146331','25762','-2018','13000'),
