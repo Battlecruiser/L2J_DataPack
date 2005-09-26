@@ -31,4 +31,4 @@
 games/CurrentEvent
 
 \ events/theft-of-kamilla
-events/tests
+\ events/tests
