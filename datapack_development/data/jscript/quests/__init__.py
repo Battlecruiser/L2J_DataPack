@@ -48,7 +48,7 @@ __all__ = [
 '224_TestOfSagittarius',
 '225_TestOfSearcher',
 '226_TestOfHealer',
-'227_TrialOfReformer',
+'227_TestOfReformer',
 '228_TestOfMagus',
 '229_TestOfWitchcraft',
 '230_TestOfSummoner',
