@@ -14,9 +14,11 @@
     <set val='107' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
     <set val='325' order='0x08' stat='pAtkSpd' />
-	<enchant val='4' order='0x0C' stat='pAtkSpd'>
-  		<mul val='1.08' order='0x40' stat='pAtkSpd' />
-  	</enchant>
+	<mul val='1.08' order='0x40' stat='pAtkSpd'>
+  	 <and>
+  	  <using slotitem="5223;14;4"/>
+  	 </and>
+  	</mul>
   	<enchant val='0' order='0x0C' stat='pAtk' />
 	<enchant val='0' order='0x0C' stat='mAtk' />
 </for>
