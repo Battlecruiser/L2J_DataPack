@@ -2790,7 +2790,7 @@ insert  into etcitem values
 ('3888','alphabet_ii','false','none','0','stackable','steel','none','0','0',0,'true'),
 ('3889','q_potion_of_recovery','false','potion','180','stackable','liquid','none','100','0',0,'false'),
 ('3890','q_herald_of_slayer','false','none','0','stackable','steel','none','100','0',0,'false'),
-('3926','l2day_scroll_of_guidance','false','scroll','120','stackable','paper','none','0','0',0,'false'),
+('3926','l2day_scroll_of_guidance','false','scroll','120','stackable','paper','none','0','0',0,'true'),
 ('3927','l2day_scroll_of_death_whisper','false','scroll','120','stackable','paper','none','0','0',0,'true'),
 ('3928','l2day_scroll_of_focus','false','scroll','120','stackable','paper','none','0','0',0,'true'),
 ('3929','l2day_scroll_of_greater_acumen','false','scroll','120','stackable','paper','none','0','0',0,'true'),
