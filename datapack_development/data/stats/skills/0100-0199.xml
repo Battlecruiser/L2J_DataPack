@@ -165,7 +165,7 @@
   <for>
   </for>
 </skill>
-<skill id="108" levels="3" name="none">
+<skill id="108" levels="3" name="Union">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -285,7 +285,7 @@
     </add>
   </for>
 </skill>
-<skill id="114" levels="2" name="none">
+<skill id="114" levels="2" name="Martyrdom">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -348,7 +348,7 @@
  </effect>
 </for>
 </skill>
-<skill id="117" levels="3" name="none">
+<skill id="117" levels="3" name="hide">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -380,7 +380,7 @@
    </mul>
   </for>
 </skill>
-<skill id="119" levels="6" name="none">
+<skill id="119" levels="6" name="Gear Tuning">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -489,7 +489,7 @@
     </effect>
 </for>
 </skill>
-<skill id="124" levels="4" name="none">
+<skill id="124" levels="4" name="Tiger Chant">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -504,7 +504,7 @@
   <for>
   </for>
 </skill>
-<skill id="125" levels="4" name="none">
+<skill id="125" levels="4" name="Bear Chant">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -519,7 +519,7 @@
   <for>
   </for>
 </skill>
-<skill id="126" levels="3" name="none">
+<skill id="126" levels="3" name="Fox Chant">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -556,7 +556,7 @@
    </effect>
  </for>
 </skill>
-<skill id="128" levels="2" name="none">
+<skill id="128" levels="2" name="Transfer Bleeding">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -636,7 +636,7 @@
   </effect>
 </for>
 </skill>
-<skill id="132" levels="1" name="none">
+<skill id="132" levels="1" name="Spot Strike">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -651,7 +651,7 @@
   <for>
   </for>
 </skill>
-<skill id="133" levels="1" name="none">
+<skill id="133" levels="1" name="Riposte">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -673,12 +673,12 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul stat="rootRes" val="1.3" order="0x05"/>
-  	<mul stat="sleepRes" val="1.3" order="0x05"/>
-	<mul stat="stunRes" val="1.3" order="0x05"/>
+    <mul stat="rootRes" val="1.2" order="0x05"/>
+  	<mul stat="sleepRes" val="1.2" order="0x05"/>
+	<mul stat="stunRes" val="1.2" order="0x05"/>
   </for>
 </skill>
-<skill id="135" levels="2" name="none">
+<skill id="135" levels="2" name="Heroism">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -687,7 +687,7 @@
   <for>
   </for>
 </skill>
-<skill id="136" levels="1" name="none">
+<skill id="136" levels="1" name="Day Walk">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -707,7 +707,7 @@
     <mul order="0x10" stat="rCrit" val="#rate"/>
   </for>
 </skill>
-<skill id="138" levels="4" name="none">
+<skill id="138" levels="4" name="Melee Evasion">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -737,7 +737,7 @@
   </effect>
 </for>
 </skill>
-<skill id="140" levels="1" name="none">
+<skill id="140" levels="1" name="Big Pocket">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -805,7 +805,7 @@
     </add>
   </for>
 </skill>
-<skill id="145" levels="2" name="none">
+<skill id="145" levels="2" name="Robe Mastery">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -865,7 +865,7 @@
     </mul>
   </for>
 </skill>
-<skill id="149" levels="1" name="none">
+<skill id="149" levels="1" name="Finishing Blow">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -885,7 +885,7 @@
     <set order="0x40" stat="maxLoad" val="#rate"/>
   </for>
 </skill>
-<skill id="151" levels="1" name="none">
+<skill id="151" levels="1" name="Mithril Weapon Mastery">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -894,7 +894,7 @@
   <for>
   </for>
 </skill>
-<skill id="152" levels="1" name="none">
+<skill id="152" levels="1" name="Mithril Armor Mastery">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -916,7 +916,7 @@
     </mul>
   </for>
 </skill>
-<skill id="154" levels="1" name="none">
+<skill id="154" levels="1" name="White Magic Mastery">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -925,7 +925,7 @@
   <for>
   </for>
 </skill>
-<skill id="155" levels="2" name="none">
+<skill id="155" levels="2" name="Enlarge White Magic">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -934,7 +934,7 @@
   <for>
   </for>
 </skill>
-<skill id="156" levels="4" name="none">
+<skill id="156" levels="4" name="Focus White Magic">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -943,7 +943,7 @@
   <for>
   </for>
 </skill>
-<skill id="157" levels="1" name="none">
+<skill id="157" levels="1" name="Advanced White Magic">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -952,7 +952,7 @@
   <for>
   </for>
 </skill>
-<skill id="158" levels="1" name="none">
+<skill id="158" levels="1" name="Support Magic Mastery">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -961,7 +961,7 @@
   <for>
   </for>
 </skill>
-<skill id="159" levels="2" name="none">
+<skill id="159" levels="2" name="Enlarge Support Magic">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -970,7 +970,7 @@
   <for>
   </for>
 </skill>
-<skill id="160" levels="4" name="none">
+<skill id="160" levels="4" name="Focus Support Magic">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -979,7 +979,7 @@
   <for>
   </for>
 </skill>
-<skill id="161" levels="1" name="none">
+<skill id="161" levels="1" name="Advanced Support Magic">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -988,7 +988,7 @@
   <for>
   </for>
 </skill>
-<skill id="162" levels="2" name="none">
+<skill id="162" levels="2" name="Achilles Punch">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1034,7 +1034,7 @@
   <for>
   </for>
 </skill>
-<skill id="166" levels="1" name="none">
+<skill id="166" levels="1" name="Repair Castle">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1043,7 +1043,7 @@
   <for>
   </for>
 </skill>
-<skill id="167" levels="4" name="none">
+<skill id="167" levels="4" name="Focus Summon Magic">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1074,7 +1074,7 @@
     <add order="0x40" stat="runSpd" val="#spd"/>
   </for>
 </skill>
-<skill id="170" levels="1" name="none">
+<skill id="170" levels="1" name="Forest Walk">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1119,7 +1119,7 @@
   <for>
   </for>
 </skill>
-<skill id="174" levels="1" name="none">
+<skill id="174" levels="1" name="Night Stalk">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1128,7 +1128,7 @@
   <for>
   </for>
 </skill>
-<skill id="175" levels="1" name="none">
+<skill id="175" levels="1" name="Night Rest">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1167,7 +1167,7 @@
   <for>
   </for>
 </skill>
-<skill id="178" levels="2" name="none">
+<skill id="178" levels="2" name="Elemental Magic Mastery">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1176,7 +1176,7 @@
   <for>
   </for>
 </skill>
-<skill id="179" levels="4" name="none">
+<skill id="179" levels="4" name="Enlarge Elemental Magic">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1185,7 +1185,7 @@
   <for>
   </for>
 </skill>
-<skill id="180" levels="1" name="none">
+<skill id="180" levels="1" name="Focus Elemental Magic">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1208,7 +1208,7 @@
   <for>
   </for>
 </skill>
-<skill id="182" levels="4" name="none">
+<skill id="182" levels="4" name="Enlarge Inventory">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1217,7 +1217,7 @@
   <for>
   </for>
 </skill>
-<skill id="183" levels="1" name="none">
+<skill id="183" levels="1" name="Day Rest">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1226,7 +1226,7 @@
   <for>
   </for>
 </skill>
-<skill id="184" levels="1" name="none">
+<skill id="184" levels="1" name="Spirit Magic Mastery">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1235,7 +1235,7 @@
   <for>
   </for>
 </skill>
-<skill id="185" levels="2" name="none">
+<skill id="185" levels="2" name="Enlarge Spirit Magic">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1244,7 +1244,7 @@
   <for>
   </for>
 </skill>
-<skill id="186" levels="4" name="none">
+<skill id="186" levels="4" name="Focus Spirit Magic">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1253,7 +1253,7 @@
   <for>
   </for>
 </skill>
-<skill id="187" levels="1" name="none">
+<skill id="187" levels="1" name="Advanced Spirit Magic">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1262,7 +1262,7 @@
   <for>
   </for>
 </skill>
-<skill id="188" levels="1" name="none">
+<skill id="188" levels="1" name="Control Transporter">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1271,7 +1271,7 @@
   <for>
   </for>
 </skill>
-<skill id="189" levels="3" name="none">
+<skill id="189" levels="3" name="Fast Recovery">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1319,7 +1319,7 @@
      <mul order='0x40' stat='regMp' val="#Tab-regMp"/>
  </for>
 </skill>
-<skill id="192" levels="9" name="none">
+<skill id="192" levels="9" name="Plate Mastery">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1399,7 +1399,7 @@
    <add order="0x40" stat="rEvas" val="#rEvas"/>
   </for>
 </skill>
-<skill id="199" levels="4" name="none">
+<skill id="199" levels="4" name="Black Magic Resist">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>

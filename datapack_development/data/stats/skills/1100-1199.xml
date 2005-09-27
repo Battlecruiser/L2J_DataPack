@@ -60,10 +60,10 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="15" name="ManaDamOverTime" time="1" val="#dmg"/>
+    <effect count="15" name="ManaDamOverTime" time="5" val="#dmg"/>
   </for>
 </skill>
-<skill id="1103" levels="1" name="none">
+<skill id="1103" levels="1" name="Lazy Swarm">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -118,7 +118,7 @@
 	<effect count="5" name="Confusion" time="6" val="0"/>
   </for>
 </skill>
-<skill id="1106" levels="1" name="none">
+<skill id="1106" levels="1" name="Entice Wind">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -177,7 +177,7 @@
    <effect count="15" name="DamOverTime" time="1" val="#dmg"/>
 </for>
 </skill>
-<skill id="1110" levels="4" name="none">
+<skill id="1110" levels="4" name="Summon Golem">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -215,7 +215,7 @@
 <for>
 </for>
 </skill> 
-<skill id="1112" levels="4" name="none">
+<skill id="1112" levels="4" name="Summon Nymph">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -229,7 +229,7 @@
   <for>
   </for>
 </skill>
-<skill id="1113" levels="2" name="none">
+<skill id="1113" levels="2" name="Summon Fire">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -243,7 +243,7 @@
   <for>
   </for>
 </skill>
-<skill id="1114" levels="2" name="none">
+<skill id="1114" levels="2" name="Summon Magic Shield">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -257,7 +257,7 @@
   <for>
   </for>
 </skill>
-<skill id="1115" levels="3" name="none">
+<skill id="1115" levels="3" name="Summon Magic Arrow">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -271,7 +271,7 @@
   <for>
   </for>
 </skill>
-<skill id="1116" levels="2" name="none">
+<skill id="1116" levels="2" name="Summmon Attacker">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -285,7 +285,7 @@
   <for>
   </for>
 </skill>
-<skill id="1117" levels="2" name="none">
+<skill id="1117" levels="2" name="Summon Physical Shield">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -299,7 +299,7 @@
   <for>
   </for>
 </skill>
-<skill id="1118" levels="5" name="none">
+<skill id="1118" levels="5" name="Summon Undine">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -313,7 +313,7 @@
   <for>
   </for>
 </skill>
-<skill id="1119" levels="5" name="none">
+<skill id="1119" levels="5" name="Summon Sylph">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -327,7 +327,7 @@
   <for>
   </for>
 </skill>
-<skill id="1120" levels="1" name="none">
+<skill id="1120" levels="1" name="Summon Valkyrie">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -341,7 +341,7 @@
   <for>
   </for>
 </skill>
-<skill id="1121" levels="5" name="none">
+<skill id="1121" levels="5" name="Summon Salamander">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -355,7 +355,7 @@
   <for>
   </for>
 </skill>
-<skill id="1122" levels="2" name="none">
+<skill id="1122" levels="2" name="Summon Evil Eye">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -369,7 +369,7 @@
   <for>
   </for>
 </skill>
-<skill id="1123" levels="3" name="none">
+<skill id="1123" levels="3" name="Summon Nimbus">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -383,7 +383,7 @@
   <for>
   </for>
 </skill>
-<skill id="1124" levels="3" name="none">
+<skill id="1124" levels="3" name="Summon Sandman">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -397,7 +397,7 @@
   <for>
   </for>
 </skill>
-<skill id="1125" levels="1" name="none">
+<skill id="1125" levels="1" name="Servitor Cancellation">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -490,7 +490,7 @@
 <for>
 </for> 
 </skill>
-<skill id="1130" levels="3" name="none">
+<skill id="1130" levels="3" name="Summon Dark Spider">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -504,7 +504,7 @@
   <for>
   </for>
 </skill>
-<skill id="1131" levels="3" name="none">
+<skill id="1131" levels="3" name="Summon Dark Soldier">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -518,7 +518,7 @@
   <for>
   </for>
 </skill>
-<skill id="1132" levels="1" name="none">
+<skill id="1132" levels="1" name="Summon Meal">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -532,7 +532,7 @@
   <for>
   </for>
 </skill>
-<skill id="1133" levels="3" name="none">
+<skill id="1133" levels="3" name="Summon Bomber">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -546,7 +546,7 @@
   <for>
   </for>
 </skill>
-<skill id="1134" levels="1" name="none">
+<skill id="1134" levels="1" name="Summon Hieros">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -560,7 +560,7 @@
   <for>
   </for>
 </skill>
-<skill id="1135" levels="1" name="none">
+<skill id="1135" levels="1" name="Charge Cubic">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -574,7 +574,7 @@
   <for>
   </for>
 </skill>
-<skill id="1136" levels="1" name="none">
+<skill id="1136" levels="1" name="Cubic Cancellation">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -588,7 +588,7 @@
   <for>
   </for>
 </skill>
-<skill id="1137" levels="2" name="none">
+<skill id="1137" levels="2" name="Summon Holy Eye">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -602,7 +602,7 @@
   <for>
   </for>
 </skill>
-<skill id="1138" levels="2" name="none">
+<skill id="1138" levels="2" name="Concentration Summon">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -681,7 +681,7 @@
   </effect>
 </for>
 </skill>
-<skill id="1142" levels="4" name="none">
+<skill id="1142" levels="4" name="Servitor Physical Enchant">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -697,7 +697,7 @@
   <for>
   </for>
 </skill>
-<skill id="1143" levels="4" name="none">
+<skill id="1143" levels="4" name="Servitor Magic Enchant">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -812,7 +812,7 @@
   <for>
   </for>
 </skill>
-<skill id="1149" levels="1" name="none">
+<skill id="1149" levels="1" name="Vacuum">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -826,7 +826,7 @@
   <for>
   </for>
 </skill>
-<skill id="1150" levels="4" name="none">
+<skill id="1150" levels="4" name="Corpse Mana Drain">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -859,7 +859,7 @@
   <for>
   </for>
 </skill>
-<skill id="1152" levels="2" name="none">
+<skill id="1152" levels="2" name="Curse Betrayer">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -873,7 +873,7 @@
   <for>
   </for>
 </skill>
-<skill id="1153" levels="2" name="none">
+<skill id="1153" levels="2" name="Invisible Spear">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -957,7 +957,7 @@
   <for>
   </for>
 </skill>
-<skill id="1158" levels="2" name="none">
+<skill id="1158" levels="2" name="Curse Blind">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -1013,7 +1013,7 @@
  </effect>
 </for>
 </skill>
-<skill id="1161" levels="1" name="none">
+<skill id="1161" levels="1" name="Concentration Black Magic">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -1029,7 +1029,7 @@
   <for>
   </for>
 </skill>
-<skill id="1162" levels="2" name="none">
+<skill id="1162" levels="2" name="Extra Damage">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -1083,7 +1083,7 @@
   </effect>
 </for>
 </skill>
-<skill id="1165" levels="3" name="none">
+<skill id="1165" levels="3" name="Curse Disease">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -1099,7 +1099,7 @@
   <for>
   </for>
 </skill>
-<skill id="1166" levels="2" name="none">
+<skill id="1166" levels="2" name="Curse Confuse">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -1230,7 +1230,7 @@
   <for>
   </for>
 </skill>
-<skill id="1173" levels="2" name="none">
+<skill id="1173" levels="2" name="Aqua Storm">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1334,7 +1334,7 @@
   <for>
   </for>
 </skill>
-<skill id="1179" levels="2" name="none">
+<skill id="1179" levels="2" name="Fire Storm">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1348,7 +1348,7 @@
   <for>
   </for>
 </skill>
-<skill id="1180" levels="2" name="none">
+<skill id="1180" levels="2" name="Fire Wall">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1444,7 +1444,7 @@
     </effect>
   </for>
 </skill>
-<skill id="1185" levels="1" name="none">
+<skill id="1185" levels="1" name="Water Walk">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -1460,7 +1460,7 @@
   <for>
   </for>
 </skill>
-<skill id="1186" levels="2" name="none">
+<skill id="1186" levels="2" name="Water Breath">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -1476,7 +1476,7 @@
   <for>
   </for>
 </skill>
-<skill id="1187" levels="3" name="none">
+<skill id="1187" levels="3" name="Memorize Element Magic">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -1492,7 +1492,7 @@
   <for>
   </for>
 </skill>
-<skill id="1188" levels="5" name="none">
+<skill id="1188" levels="5" name="Intensive Element Magic">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -1528,7 +1528,7 @@
   </effect>
   </for>
 </skill>
-<skill id="1190" levels="3" name="none">
+<skill id="1190" levels="3" name="Wind Scar">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -1565,7 +1565,7 @@
         </effect>
 </for>
 </skill>
-<skill id="1192" levels="3" name="none">
+<skill id="1192" levels="3" name="Fire Scar">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -1581,7 +1581,7 @@
   <for>
   </for>
 </skill>
-<skill id="1193" levels="1" name="none">
+<skill id="1193" levels="1" name="Clear Vision">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1595,7 +1595,7 @@
   <for>
   </for>
 </skill>
-<skill id="1194" levels="6" name="none">
+<skill id="1194" levels="6" name="Earth Hands">
   <set name="mpConsume" val="11"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1609,7 +1609,7 @@
   <for>
   </for>
 </skill>
-<skill id="1195" levels="1" name="none">
+<skill id="1195" levels="1" name="Animal Mind">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1623,7 +1623,7 @@
   <for>
   </for>
 </skill>
-<skill id="1196" levels="2" name="none">
+<skill id="1196" levels="2" name="Counter Fire">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1637,7 +1637,7 @@
   <for>
   </for>
 </skill>
-<skill id="1197" levels="3" name="none">
+<skill id="1197" levels="3" name="Earthquake">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1651,7 +1651,7 @@
   <for>
   </for>
 </skill>
-<skill id="1198" levels="2" name="none">
+<skill id="1198" levels="2" name="Cure Mind">
   <set name="mpConsume" val="15"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1665,7 +1665,7 @@
   <for>
   </for>
 </skill>
-<skill id="1199" levels="2" name="none">
+<skill id="1199" levels="2" name="Animal Life">
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>

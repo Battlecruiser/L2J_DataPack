@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
-<skill id="200" levels="1" name="none">
+<skill id="200" levels="1" name="Black Magic Mastery">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -9,7 +9,7 @@
   <for>
   </for>
 </skill>
-<skill id="201" levels="2" name="none">
+<skill id="201" levels="2" name="Enlarge Black Magic">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -18,7 +18,7 @@
   <for>
   </for>
 </skill>
-<skill id="202" levels="4" name="none">
+<skill id="202" levels="4" name="Focus Black Magic">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -27,7 +27,7 @@
   <for>
   </for>
 </skill>
-<skill id="203" levels="1" name="none">
+<skill id="203" levels="1" name="Advanced Black Magic">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -36,7 +36,7 @@
   <for>
   </for>
 </skill>
-<skill id="204" levels="1" name="none">
+<skill id="204" levels="1" name="Blunt Expert">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -65,7 +65,7 @@
     </add>
   </for>
 </skill>
-<skill id="206" levels="1" name="none">
+<skill id="206" levels="1" name="Blunt Dagger Mastery">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -74,7 +74,7 @@
   <for>
   </for>
 </skill>
-<skill id="207" levels="6" name="none">
+<skill id="207" levels="6" name="Blunt Fist Mastery">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -193,7 +193,7 @@
         </and>
   </for>
 </skill>
-<skill id="215" levels="1" name="none">
+<skill id="215" levels="1" name="Polearm Range Mastery">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -242,7 +242,7 @@
     </add>
   </for>
 </skill>
-<skill id="218" levels="2" name="none">
+<skill id="218" levels="2" name="Fist King">
   <set name="mpConsume" val="10"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -252,7 +252,7 @@
   <for>
   </for>
 </skill>
-<skill id="219" levels="1" name="none">
+<skill id="219" levels="1" name="Sprint">
   <set name="mpConsume" val="10"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -262,7 +262,7 @@
   <for>
   </for>
 </skill>
-<skill id="220" levels="3" name="none">
+<skill id="220" levels="3" name="Mana Shot">
   <set name="mpConsume" val="10"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -340,7 +340,7 @@
      <effect count="4" name="DamOverTime" time="5" val="#bleedpower" abnormal="bleeding"/>
   </for>
 </skill>
-<skill id="224" levels="1" name="none">
+<skill id="224" levels="1" name="See Invisibility">
   <set name="mpConsume" val="10"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -641,7 +641,7 @@
     </mul>
   </for>
 </skill>
-<skill id="237" levels="4" name="none">
+<skill id="237" levels="4" name="Blunt Mastery M">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -650,7 +650,7 @@
   <for>
   </for>
 </skill>
-<skill id="238" levels="4" name="none">
+<skill id="238" levels="4" name="Dagger Mastery M">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -671,7 +671,7 @@
   <for>
   </for>
 </skill>
-<skill id="240" levels="1" name="none">
+<skill id="240" levels="1" name="Expertise C Deleted">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -680,7 +680,7 @@
   <for>
   </for>
 </skill>
-<skill id="241" levels="1" name="none">
+<skill id="241" levels="1" name="Expertise B Deleted">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -689,7 +689,7 @@
   <for>
   </for>
 </skill>
-<skill id="242" levels="1" name="none">
+<skill id="242" levels="1" name="Expertise A Deleted">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -698,7 +698,7 @@
   <for>
   </for>
 </skill>
-<skill id="243" levels="1" name="none">
+<skill id="243" levels="1" name="Expertise S Deleted">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -749,7 +749,10 @@
   </for>
 </skill>
 <skill id="247" levels="1" name="Build Headquarters">
+  <table name="#itemConsumeCount"> 300 </table>
   <set name="mpConsume" val="30"/>
+  <set name="itemConsumeId" val="2131"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="30000"/>
