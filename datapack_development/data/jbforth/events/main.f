@@ -31,4 +31,6 @@
 games/CurrentEvent
 
 \ events/theft-of-kamilla
+\ events/050925-Gillians_Way
+\ events/tests
 \ events/tests
