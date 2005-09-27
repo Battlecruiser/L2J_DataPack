@@ -36,17 +36,19 @@ class Quest (JQuest) :
     htmltext = event
     if event == "1" :
         htmltext = "7623-07.htm"
-        st.set("cond","1")
-        st.setState(STARTED)
-        st.playSound("ItemSound.quest_accept")
-        st.giveItems(ORDER_GLUDIO_ID,1)
-        st.giveItems(ORDER_DION_ID,1)
-        st.giveItems(ORDER_GIRAN_ID,1)
-        st.giveItems(ORDER_OREN_ID,1)
-        st.giveItems(ORDER_ADEN_ID,1)
+        if int(st.get("cond"))==0 :
+           st.set("cond","1")
+           st.setState(STARTED)
+           st.playSound("ItemSound.quest_accept")
+           st.giveItems(ORDER_GLUDIO_ID,1)
+           st.giveItems(ORDER_DION_ID,1)
+           st.giveItems(ORDER_GIRAN_ID,1)
+           st.giveItems(ORDER_OREN_ID,1)
+           st.giveItems(ORDER_ADEN_ID,1)
     elif event == "7623_1" :
-          if st.getPlayer().getRace().ordinal() != 3 :
+          if st.getPlayer().getRace().ordinal() == 3 :
             htmltext = "7623-05.htm"
+          else:
             htmltext = "7623-04.htm"
     elif event == "7623_2" :
           htmltext = "7623-06.htm"
@@ -65,24 +67,28 @@ class Quest (JQuest) :
     elif event == "7623_9" :
           htmltext = "7623-15.htm"
     elif event == "7623_10" :
-          htmltext = "7623-16.htm"
-          st.takeItems(PUNCHERS_SHARD_ID,st.getQuestItemsCount(PUNCHERS_SHARD_ID))
-          st.takeItems(NOBLE_ANTS_FEELER_ID,st.getQuestItemsCount(NOBLE_ANTS_FEELER_ID))
-          st.takeItems(DEADSEEKER_FANG_ID,st.getQuestItemsCount(DEADSEEKER_FANG_ID))
-          st.takeItems(DRONES_CHITIN_ID,st.getQuestItemsCount(DRONES_CHITIN_ID))
-          st.takeItems(OVERLORD_NECKLACE_ID,st.getQuestItemsCount(OVERLORD_NECKLACE_ID))
-          st.takeItems(CRIMSONBINDS_CHAIN_ID,st.getQuestItemsCount(CRIMSONBINDS_CHAIN_ID))
-          st.takeItems(CHIEFS_AMULET_ID,st.getQuestItemsCount(CHIEFS_AMULET_ID))
-          st.takeItems(TEMPERED_EYE_MEAT_ID,st.getQuestItemsCount(TEMPERED_EYE_MEAT_ID))
-          st.takeItems(TAMRIN_ORCS_RING_ID,st.getQuestItemsCount(TAMRIN_ORCS_RING_ID))
-          st.takeItems(TAMRIN_ORCS_ARROW_ID,st.getQuestItemsCount(TAMRIN_ORCS_ARROW_ID))
-          st.takeItems(ORDER_GLUDIO_ID,1)
-          st.takeItems(ORDER_DION_ID,1)
-          st.takeItems(ORDER_GIRAN_ID,1)
-          st.takeItems(ORDER_OREN_ID,1)
-          st.takeItems(ORDER_ADEN_ID,1)
-          st.set("cond","2")
-          st.giveItems(FINAL_ORDER_ID,1)
+        htmltext = "7623-16.htm"
+        if st.getQuestItemsCount(FINAL_ORDER_ID)==0:
+            for i in [
+            PUNCHERS_SHARD_ID,
+            NOBLE_ANTS_FEELER_ID,
+            DEADSEEKER_FANG_ID,
+            DRONES_CHITIN_ID,
+            OVERLORD_NECKLACE_ID,
+            CRIMSONBINDS_CHAIN_ID,
+            CHIEFS_AMULET_ID,
+            TEMPERED_EYE_MEAT_ID,
+            TAMRIN_ORCS_RING_ID,
+            TAMRIN_ORCS_ARROW_ID,
+            ORDER_GLUDIO_ID,
+            ORDER_DION_ID,
+            ORDER_GIRAN_ID,
+            ORDER_OREN_ID,
+            ORDER_ADEN_ID
+            ]:
+             st.takeItems(i,st.getQuestItemsCount(i))
+            st.set("cond","2")
+            st.giveItems(FINAL_ORDER_ID,1)
     return htmltext
 
 
@@ -106,16 +112,20 @@ class Quest (JQuest) :
         else:
           htmltext = "7623-02.htm"
    elif npcId == 7623 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
-      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7623 and int(st.get("cond"))==1 and st.getQuestItemsCount((ORDER_GLUDIO_ID) and st.getQuestItemsCount(ORDER_DION_ID) and st.getQuestItemsCount(ORDER_GIRAN_ID) and st.getQuestItemsCount(ORDER_OREN_ID) and st.getQuestItemsCount(ORDER_ADEN_ID)) :
+      htmltext = "<html><head><body>This quest has already been completed.</body></html>"
+   elif npcId == 7623 and int(st.get("cond"))==1 :
+      if st.getQuestItemsCount(ORDER_GLUDIO_ID)>0 and st.getQuestItemsCount(ORDER_DION_ID)>0 and st.getQuestItemsCount(ORDER_GIRAN_ID)>0 and st.getQuestItemsCount(ORDER_OREN_ID)>0 and st.getQuestItemsCount(ORDER_ADEN_ID)>0 :
         if st.getQuestItemsCount(PUNCHERS_SHARD_ID) == 10 and st.getQuestItemsCount(NOBLE_ANTS_FEELER_ID) == 10 and st.getQuestItemsCount(DRONES_CHITIN_ID) == 10 and st.getQuestItemsCount(DEADSEEKER_FANG_ID) == 10 and st.getQuestItemsCount(OVERLORD_NECKLACE_ID) == 10 and st.getQuestItemsCount(CRIMSONBINDS_CHAIN_ID) == 10 and st.getQuestItemsCount(CHIEFS_AMULET_ID) == 10 and st.getQuestItemsCount(TEMPERED_EYE_MEAT_ID) == 10 and st.getQuestItemsCount(TAMRIN_ORCS_RING_ID) == 10 and st.getQuestItemsCount(TAMRIN_ORCS_ARROW_ID) == 10 :
           htmltext = "7623-13.htm"
         else:
           htmltext = "7623-14.htm"
-   elif npcId == 7623 and int(st.get("cond"))==1 and st.getQuestItemsCount(FINAL_ORDER_ID)==1 :
-        if st.getQuestItemsCount(EXCUROS_SKIN_ID) >= 3 and st.getQuestItemsCount(KRATORS_SHARD_ID) >= 3 and st.getQuestItemsCount(RAKINS_MACE_ID) >= 3 and st.getQuestItemsCount(GRANDIS_SKIN_ID) >= 3 and st.getQuestItemsCount(TIMAK_ORCS_BELT_ID) >= 3 :
-          if st.getGameTicks() != int(st.get("id")) :
-            st.set("id",str(st.getGameTicks()))
+      else:
+          htmltext = "7623-14.htm"
+          for i in [ORDER_GLUDIO_ID,ORDER_DION_ID,ORDER_GIRAN_ID,ORDER_OREN_ID,ORDER_ADEN_ID]:
+            if st.getQuestItemsCount(i)==0:
+                st.giveItems(i,1) 
+   elif npcId == 7623 and int(st.get("cond"))==2 and st.getQuestItemsCount(FINAL_ORDER_ID)>0 :
+        if st.getQuestItemsCount(EXCUROS_SKIN_ID)>2 and st.getQuestItemsCount(KRATORS_SHARD_ID)>2 and st.getQuestItemsCount(RAKINS_MACE_ID)>2 and st.getQuestItemsCount(GRANDIS_SKIN_ID)>2 and st.getQuestItemsCount(TIMAK_ORCS_BELT_ID)>2 :
             st.takeItems(EXCUROS_SKIN_ID,st.getQuestItemsCount(EXCUROS_SKIN_ID))
             st.takeItems(KRATORS_SHARD_ID,st.getQuestItemsCount(KRATORS_SHARD_ID))
             st.takeItems(GRANDIS_SKIN_ID,st.getQuestItemsCount(GRANDIS_SKIN_ID))
@@ -134,86 +144,31 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npcId,st):
-   if npcId == 85 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(PUNCHERS_SHARD_ID)<10 and int(st.get("cond")) == 1 :
-     st.giveItems(PUNCHERS_SHARD_ID,1)
-     st.playSound("ItemSound.quest_middle")
-   elif npcId == 90 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(NOBLE_ANTS_FEELER_ID)<10 and int(st.get("cond")) == 1 :
-     st.giveItems(NOBLE_ANTS_FEELER_ID,1)
-     st.playSound("ItemSound.quest_middle")
-   elif npcId == 234 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(DRONES_CHITIN_ID)<10 and int(st.get("cond")) == 1 :
-     st.giveItems(DRONES_CHITIN_ID,1)
-     st.playSound("ItemSound.quest_middle")
-   elif npcId == 202 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(DEADSEEKER_FANG_ID)<10 and int(st.get("cond")) == 1 :
-     st.giveItems(DEADSEEKER_FANG_ID,1)
-     st.playSound("ItemSound.quest_middle")
-   elif npcId == 217 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(KRATORS_SHARD_ID)<3 and int(st.get("cond")) == 2 :
-     st.giveItems(KRATORS_SHARD_ID,1)
-     st.playSound("ItemSound.quest_middle")
-   elif npcId == 270 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(OVERLORD_NECKLACE_ID)<10 and int(st.get("cond")) == 1 :
-     st.giveItems(OVERLORD_NECKLACE_ID,1)
-     st.playSound("ItemSound.quest_middle")
-   elif npcId == 552 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(CRIMSONBINDS_CHAIN_ID)<10 and int(st.get("cond")) == 1 :
-     st.giveItems(CRIMSONBINDS_CHAIN_ID,1)
-     st.playSound("ItemSound.quest_middle")
-   elif npcId == 554 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(GRANDIS_SKIN_ID)<3 and int(st.get("cond")) == 2 :
-     st.giveItems(GRANDIS_SKIN_ID,1)
-     st.playSound("ItemSound.quest_middle")
-   elif npcId == 582 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(CHIEFS_AMULET_ID)<10 and int(st.get("cond")) == 1 :
-     st.giveItems(CHIEFS_AMULET_ID,1)
-     st.playSound("ItemSound.quest_middle")
-   elif npcId == 564 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(TEMPERED_EYE_MEAT_ID)<10 and int(st.get("cond")) == 1 :
-     st.giveItems(TEMPERED_EYE_MEAT_ID,1)
-     st.playSound("ItemSound.quest_middle")
-   elif npcId == 588 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(TIMAK_ORCS_BELT_ID)<3 and int(st.get("cond")) == 2 :
-     st.giveItems(TIMAK_ORCS_BELT_ID,1)
-     st.playSound("ItemSound.quest_middle")
-   elif npcId == 601 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(TAMRIN_ORCS_RING_ID)<10 and int(st.get("cond")) == 1 :
-     st.giveItems(TAMRIN_ORCS_RING_ID,1)
-     st.playSound("ItemSound.quest_middle")
-   elif npcId == 602 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(TAMRIN_ORCS_ARROW_ID)<10 and int(st.get("cond")) == 1 :
-     st.giveItems(TAMRIN_ORCS_ARROW_ID,1)
-     st.playSound("ItemSound.quest_middle")
-   elif npcId == 604 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(RAKINS_MACE_ID)<3 and int(st.get("cond")) == 2 :
-     st.giveItems(RAKINS_MACE_ID,1)
-     st.playSound("ItemSound.quest_middle")
-   elif npcId == 214 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(EXCUROS_SKIN_ID)<3 and int(st.get("cond")) == 2 :
-     st.giveItems(EXCUROS_SKIN_ID,1)
-     st.playSound("ItemSound.quest_middle")
-   return
+  i={
+85:(1,10,PUNCHERS_SHARD_ID),
+90:(1,10,NOBLE_ANTS_FEELER_ID),
+234:(1,10,DRONES_CHITIN_ID),
+202:(1,10,DEADSEEKER_FANG_ID),
+270:(1,10,OVERLORD_NECKLACE_ID),
+552:(1,10,CRIMSONBINDS_CHAIN_ID),
+582:(1,10,CHIEFS_AMULET_ID),
+564:(1,10,TEMPERED_EYE_MEAT_ID),
+601:(1,10,TAMRIN_ORCS_RING_ID),
+602:(1,10,TAMRIN_ORCS_ARROW_ID),
+604:(2,3,RAKINS_MACE_ID),
+214:(2,3,EXCUROS_SKIN_ID),
+217:(2,3,KRATORS_SHARD_ID),
+588:(2,3,TIMAK_ORCS_BELT_ID),
+554:(2,3,GRANDIS_SKIN_ID)
+}
+  if int(st.get("cond"))==i[npcId][0] and st.getQuestItemsCount(i[npcId][2])<i[npcId][1]:
+   st.giveItems(i[npcId][2],1)
+   st.playSound("ItemSound.quest_middle")
+  return
 
 QUEST       = Quest(222,"222_TestOfDuelist","Test Of Duelist")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
+STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
@@ -225,25 +180,5 @@ STARTING.addTalkId(7623)
 
 STARTED.addTalkId(7623)
 
-STARTED.addKillId(202)
-STARTED.addKillId(214)
-STARTED.addKillId(217)
-STARTED.addKillId(234)
-STARTED.addKillId(270)
-STARTED.addKillId(552)
-STARTED.addKillId(554)
-STARTED.addKillId(564)
-STARTED.addKillId(582)
-STARTED.addKillId(588)
-STARTED.addKillId(601)
-STARTED.addKillId(602)
-STARTED.addKillId(604)
-STARTED.addKillId(85)
-STARTED.addKillId(90)
-
-STARTED.addQuestDrop(7623,ORDER_GLUDIO_ID,1)
-STARTED.addQuestDrop(7623,ORDER_DION_ID,1)
-STARTED.addQuestDrop(7623,ORDER_GIRAN_ID,1)
-STARTED.addQuestDrop(7623,ORDER_OREN_ID,1)
-STARTED.addQuestDrop(7623,ORDER_ADEN_ID,1)
-STARTED.addQuestDrop(7623,FINAL_ORDER_ID,1)
+for i in [202,214,217,234,270,552,554,564,582,588,601,602,604,85,90]:
+    STARTED.addKillId(i)
