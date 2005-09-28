@@ -1,6 +1,8 @@
 #
 # Created by DraX on 2005.08.08
 #
+# Updated by ElgarL on 28.09.2005
+#
 
 print "importing village master data: Talking Island Village ...done"
 
@@ -47,21 +49,27 @@ class Quest (JQuest) :
  def onTalk (Self,npcId,st):
    
    Race    = st.getPlayer().getRace()
-   ClassId = st.getPlayer().getClassId()
+   pcId = st.getPlayer().getClassId().getId()
    
    # Human´s got accepted
    if npcId == GRAND_MASTER_BITZ and Race in [Race.human]:
-     if ClassId in [ClassId.fighter]:
+#fighter
+     if pcId == 0x00:
        htmltext = "7026-01.htm"
-     if ClassId in [ClassId.warrior, ClassId.knight, ClassId.rogue]:
+#warrior, knight, rogue
+     if pcId == 0x01 or pcId == 0x04 or pcId == 0x07:
        htmltext = "7026-08.htm"
-     if ClassId in [ClassId.warlord, ClassId.paladin, ClassId.treasureHunter]:
+#warlord, paladin, treasureHunter
+     if pcId == 0x03 or pcId == 0x05 or pcId == 0x08:
        htmltext = "7026-09.htm"
-     if ClassId in [ClassId.gladiator, ClassId.darkAvenger, ClassId.hawkeye]:
+#gladiator, darkAvenger, hawkeye
+     if pcId == 0x02 or pcId == 0x06 or pcId == 0x09:
        htmltext = "7026-09.htm"
-     if ClassId in [ClassId.wizard, ClassId.cleric]:
+#mage, wizard, cleric]:
+     if pcId == 0x0a or pcId == 0x0b or pcId == 0x0f:
        htmltext = "7026-10.htm"
-     if ClassId in [ClassId.sorceror, ClassId.necromancer, ClassId.warlock, ClassId.bishop, ClassId.prophet]:
+#sorceror, necromancer, warlock, bishop, prophet
+     if pcId == 0x0c or pcId == 0x0d or pcId == 0x0e or pcId == 0x10 or pcId == 0x11:
        htmltext = "7026-10.htm"
        
      st.setState(STARTED)
