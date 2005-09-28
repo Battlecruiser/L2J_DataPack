@@ -1565,14 +1565,8 @@
 </for>
 </skill>
 <skill id="283" levels="7" name="Summon Dark Panther">
-  <table name="#mpConsume">
-      70  88 107 127 148
-     170 193
-  </table>
-  <table name="#itemConsumeCount">
-      13  19  25  40  55
-      60  75
-  </table>
+  <table name="#mpConsume"> 70 88 107 127 148 170 193 </table>
+  <table name="#itemConsumeCount"> 13 19 25 40 55 60 75 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="1458" />
   <set name="itemConsumeCount" val="#itemConsumeCount" />
@@ -1586,10 +1580,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <!-- Summon-specific -->
-  <table name="#npcIds">
-      12184 12185 12186 12473 12474
-      12475 12476
-  </table>
+  <table name="#npcIds"> 12184 12185 12186 12473 12474 12475 12476 </table>
   <set name="npcId" val="#npcIds" />
   <set name="expPenalty" val="0.3" />
   <set name="isCubic" val="false" />
