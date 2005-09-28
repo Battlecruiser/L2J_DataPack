@@ -1,4 +1,6 @@
 # Maked by Mr. Have fun! Version 0.2
+# Quest: Test Of Searcher (betta)
+# Fixed by Artful (http://L2PLanet.ru Lineage2 C3 Server)
 print "importing quests: 225: Test Of Searcher"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
@@ -50,15 +52,15 @@ class Quest (JQuest) :
           htmltext = "7291-06.htm"
     elif event == "7291_3" :
           htmltext = "7291-07.htm"
-          st.giveItems(LAMBERTS_MAP_ID,1)
+#          st.giveItems(LAMBERTS_MAP_ID,1)
           st.takeItems(LEIRYNNS_REPORT_ID,1)
-          st.giveItems(ALANKELLS_LETTER_ID,1)
           st.takeItems(STRANGE_MAP_ID,1)
+          st.giveItems(ALANKELLS_LETTER_ID,1)
           st.giveItems(ALANKELLS_ORDER_ID,1)
     elif event == "7420_1" :
           htmltext = "7420-01a.htm"
-          st.giveItems(TWEETYS_CONTRACT_ID,1)
           st.takeItems(WINE_CATALOG_ID,1)
+          st.giveItems(TWEETYS_CONTRACT_ID,1)
     elif event == "7730_1" :
           htmltext = "7730-01a.htm"
     elif event == "7730_2" :
@@ -67,17 +69,18 @@ class Quest (JQuest) :
           htmltext = "7730-01c.htm"
     elif event == "7730_4" :
           htmltext = "7730-01d.htm"
-          st.giveItems(REXS_DIARY_ID,1)
           st.takeItems(OLD_ORDER_ID,1)
-    elif event == "7627_1" :
+          st.giveItems(REXS_DIARY_ID,1)
+#    elif event == "7627_1" :
+    elif event == "7627_1" and int(st.get("cond"))==1 and st.getQuestItemsCount(COMBINED_MAP_ID)==1 and st.getQuestItemsCount(RUSTED_KEY1_ID)==0 and st.getQuestItemsCount(GOLD_BAR_ID)==0 :
           htmltext = "7627-01a.htm"
           st.giveItems(RUSTED_KEY1_ID,1)
           st.spawnNpc(7628)
-    elif event == "7628_1" :
+    elif event == "7628_1" and int(st.get("cond"))==1 and st.getQuestItemsCount(RUSTED_KEY1_ID)==1 :
           htmltext = "7628-01a.htm"
-          st.giveItems(GOLD_BAR_ID,20)
           st.takeItems(RUSTED_KEY1_ID,1)
-          st.despawnNpc(7628)
+          st.giveItems(GOLD_BAR_ID,20)
+#          st.despawnNpc(7628)
     return htmltext
 
 
@@ -100,6 +103,8 @@ class Quest (JQuest) :
               htmltext = "7690-04.htm"
             else:
               htmltext = "7690-03.htm"
+            st.set("cond","1")
+            return htmltext
         else:
           htmltext = "7690-03.htm"
    elif npcId == 7690 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
@@ -112,23 +117,25 @@ class Quest (JQuest) :
         elif st.getQuestItemsCount(LUTHERS_LETTER_ID) == 0 and st.getQuestItemsCount(ALANKELLS_RECOMMEND_ID) == 1 :
           if st.getGameTicks() != int(st.get("id")) :
             st.set("id",str(st.getGameTicks()))
-            st.addExpAndSp(21000,2600)
             htmltext = "7690-08.htm"
+            st.takeItems(ALANKELLS_RECOMMEND_ID,1)
+            st.giveItems(MARK_OF_SEARCHER_ID,1)
+            st.addExpAndSp(21000,2600)
             st.set("cond","0")
             st.set("onlyone","1")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
-            st.giveItems(MARK_OF_SEARCHER_ID,1)
-            st.takeItems(ALANKELLS_RECOMMEND_ID,1)
    elif npcId == 7291 and int(st.get("cond"))==1 and st.getQuestItemsCount(LUTHERS_LETTER_ID)==1 :
         htmltext = "7291-01.htm"
-        st.giveItems(ALANKELLS_WARRANT_ID,1)
         st.takeItems(LUTHERS_LETTER_ID,1)
+        st.giveItems(ALANKELLS_WARRANT_ID,1)
    elif npcId == 7291 and int(st.get("cond"))==1 and st.getQuestItemsCount(ALANKELLS_WARRANT_ID)==1 :
         htmltext = "7291-02.htm"
    elif npcId == 7291 and int(st.get("cond"))==1 and (st.getQuestItemsCount(LEIRYNNS_ORDER1_ID)==1 or st.getQuestItemsCount(LEIRYNNS_ORDER2_ID)==1) :
         htmltext = "7291-03.htm"
    elif npcId == 7291 and int(st.get("cond"))==1 and st.getQuestItemsCount(LEIRYNNS_REPORT_ID)==1 :
+        htmltext = "7291-05.htm"
+   elif npcId == 7291 and int(st.get("cond"))==1 and st.getQuestItemsCount(ALANKELLS_LETTER_ID)==1 :
         htmltext = "7291-04.htm"
    elif npcId == 7291 and int(st.get("cond"))==1 and st.getQuestItemsCount(ALANKELLS_ORDER_ID)==1 and st.getQuestItemsCount(ALANKELLS_LETTER_ID)==1 :
         htmltext = "7291-08.htm"
@@ -138,17 +145,17 @@ class Quest (JQuest) :
         htmltext = "7291-10.htm"
    elif npcId == 7291 and int(st.get("cond"))==1 and st.getQuestItemsCount(ALANKELLS_ORDER_ID)==1 and st.getQuestItemsCount(COMBINED_MAP_ID)==1 and st.getQuestItemsCount(GOLD_BAR_ID)==20 :
         htmltext = "7291-11.htm"
-        st.giveItems(ALANKELLS_RECOMMEND_ID,1)
         st.takeItems(ALANKELLS_ORDER_ID,1)
         st.takeItems(COMBINED_MAP_ID,1)
         st.takeItems(GOLD_BAR_ID,st.getQuestItemsCount(GOLD_BAR_ID))
+        st.giveItems(ALANKELLS_RECOMMEND_ID,1)
         st.removeRadar(10133,157155,-2383);
    elif npcId == 7291 and int(st.get("cond"))==1 and st.getQuestItemsCount(ALANKELLS_RECOMMEND_ID)==1 :
         htmltext = "7291-12.htm"
    elif npcId == 7728 and int(st.get("cond"))==1 and st.getQuestItemsCount(ALANKELLS_WARRANT_ID)==1 :
         htmltext = "7728-01.htm"
-        st.giveItems(LEIRYNNS_ORDER1_ID,1)
         st.takeItems(ALANKELLS_WARRANT_ID,1)
+        st.giveItems(LEIRYNNS_ORDER1_ID,1)
    elif npcId == 7728 and int(st.get("cond"))==1 and st.getQuestItemsCount(LEIRYNNS_ORDER1_ID)==1 and st.getQuestItemsCount(DELU_TOTEM_ID)<10 :
         htmltext = "7728-02.htm"
    elif npcId == 7728 and int(st.get("cond"))==1 and st.getQuestItemsCount(LEIRYNNS_ORDER1_ID)==1 and st.getQuestItemsCount(DELU_TOTEM_ID)>=10 :
@@ -160,24 +167,24 @@ class Quest (JQuest) :
         htmltext = "7728-04.htm"
    elif npcId == 7728 and int(st.get("cond"))==1 and st.getQuestItemsCount(LEIRYNNS_ORDER2_ID)==1 and st.getQuestItemsCount(CHIEF_KALKIS_FANG_ID)>=1 :
         htmltext = "7728-05.htm"
-        st.giveItems(LEIRYNNS_REPORT_ID,1)
         st.takeItems(CHIEF_KALKIS_FANG_ID,1)
         st.takeItems(LEIRYNNS_ORDER2_ID,1)
+        st.giveItems(LEIRYNNS_REPORT_ID,1)
    elif npcId == 7728 and int(st.get("cond"))==1 and st.getQuestItemsCount(LEIRYNNS_REPORT_ID)==1 :
         htmltext = "7728-06.htm"
    elif npcId == 7728 and int(st.get("cond"))==1 and (st.getQuestItemsCount(ALANKELLS_RECOMMEND_ID)==1 or st.getQuestItemsCount(ALANKELLS_ORDER_ID)==1) :
         htmltext = "7728-07.htm"
    elif npcId == 7729 and int(st.get("cond"))==1 and st.getQuestItemsCount(ALANKELLS_LETTER_ID)==1 :
         htmltext = "7729-01.htm"
-        st.giveItems(WINE_CATALOG_ID,1)
         st.takeItems(ALANKELLS_LETTER_ID,1)
+        st.giveItems(WINE_CATALOG_ID,1)
    elif npcId == 7729 and int(st.get("cond"))==1 and st.getQuestItemsCount(WINE_CATALOG_ID)==1 and st.getQuestItemsCount(MALRUKIAN_WINE_ID)==0 :
         htmltext = "7729-02.htm"
    elif npcId == 7729 and int(st.get("cond"))==1 and st.getQuestItemsCount(WINE_CATALOG_ID)==0 and st.getQuestItemsCount(MALRUKIAN_WINE_ID)==1 :
         htmltext = "7729-03.htm"
-        st.giveItems(OLD_ORDER_ID,1)
         st.takeItems(WINE_CATALOG_ID,1)
         st.takeItems(MALRUKIAN_WINE_ID,1)
+        st.giveItems(OLD_ORDER_ID,1)
    elif npcId == 7729 and int(st.get("cond"))==1 and st.getQuestItemsCount(OLD_ORDER_ID)==1 :
         htmltext = "7729-04.htm"
    elif npcId == 7729 and int(st.get("cond"))==1 and (st.getQuestItemsCount(REXS_DIARY_ID)==1 or st.getQuestItemsCount(COMBINED_MAP_ID)==1 or st.getQuestItemsCount(ALANKELLS_RECOMMEND_ID)==1) :
@@ -189,9 +196,9 @@ class Quest (JQuest) :
           htmltext = "7420-02.htm"
         else:
           htmltext = "7420-03.htm"
-          st.giveItems(MALRUKIAN_WINE_ID,1)
           st.takeItems(TWEETYS_CONTRACT_ID,1)
           st.takeItems(RED_SPORE_DUST_ID,st.getQuestItemsCount(RED_SPORE_DUST_ID))
+          st.giveItems(MALRUKIAN_WINE_ID,1)
    elif npcId == 7420 and int(st.get("cond"))==1 and (st.getQuestItemsCount(REXS_DIARY_ID)==1 or st.getQuestItemsCount(OLD_ORDER_ID)==1 or st.getQuestItemsCount(COMBINED_MAP_ID)==1 or st.getQuestItemsCount(ALANKELLS_RECOMMEND_ID)==1 or st.getQuestItemsCount(MALRUKIAN_WINE_ID)==1) :
         htmltext = "7420-04.htm"
    elif npcId == 7730 and int(st.get("cond"))==1 and st.getQuestItemsCount(OLD_ORDER_ID)==1 :
@@ -202,8 +209,8 @@ class Quest (JQuest) :
         htmltext = "7730-03.htm"
         st.takeItems(REXS_DIARY_ID,1)
         st.takeItems(SOLTS_MAP_ID,1)
-        st.giveItems(COMBINED_MAP_ID,1)
         st.takeItems(MAKELS_MAP_ID,1)
+        st.giveItems(COMBINED_MAP_ID,1)
         st.addRadar(10133,157155,-2383);
    elif npcId == 7730 and int(st.get("cond"))==1 and st.getQuestItemsCount(COMBINED_MAP_ID)==1 and st.getQuestItemsCount(ALANKELLS_RECOMMEND_ID)==1 :
         htmltext = "7730-04.htm"
@@ -260,8 +267,6 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7690)
-
-STARTING.addTalkId(7690)
 
 STARTED.addTalkId(7291)
 STARTED.addTalkId(7420)

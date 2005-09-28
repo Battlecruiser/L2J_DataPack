@@ -1,4 +1,7 @@
 # Maked by Mr. Have fun! Version 0.2
+# Quest: Trial Of Duty
+# Fixed by Artful (http://L2PLanet.ru Lineage2 C3 Server)
+
 print "importing quests: 212: Trial Of Duty"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
@@ -29,9 +32,9 @@ class Quest (JQuest) :
     htmltext = event
     if event == "1" :
       htmltext = "7109-04.htm"
-      st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
+      st.set("cond","1")
     elif event == "7116_1" :
           htmltext = "7116-02.htm"
     elif event == "7116_2" :
@@ -55,9 +58,9 @@ class Quest (JQuest) :
      st.set("id","0")
    if npcId == 7109 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
       if int(st.get("cond")) < 15 :
-        if (st.getPlayer().getClassId()==0x04 or st.getPlayer().getClassId()==0x13 or st.getPlayer().getClassId()==0x20) and st.getPlayer().getLevel() >= 35 :
+        if (st.getPlayer().getClassId().ordinal()==0x04 or st.getPlayer().getClassId().ordinal()==0x13 or st.getPlayer().getClassId().ordinal()==0x20) and st.getPlayer().getLevel() >= 35 :
           htmltext = "7109-03.htm"
-        elif st.getPlayer().getClassId()==0x04 or st.getPlayer().getClassId()==0x13 or st.getPlayer().getClassId()==0x20 :
+        elif st.getPlayer().getClassId().ordinal()==0x04 or st.getPlayer().getClassId().ordinal()==0x13 or st.getPlayer().getClassId().ordinal()==0x20 :
           htmltext = "7109-01.htm"
         else:
           htmltext = "7109-02.htm"
@@ -70,8 +73,8 @@ class Quest (JQuest) :
         st.set("id",str(st.getGameTicks()))
         st.addExpAndSp(21500,2600)
       htmltext = "7109-05.htm"
-      st.giveItems(MARK_OF_DUTY_ID,1)
       st.takeItems(LETTER_OF_DUSTIN_ID,1)
+      st.giveItems(MARK_OF_DUTY_ID,1)
       st.setState(COMPLETED)
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
@@ -115,7 +118,7 @@ class Quest (JQuest) :
       st.takeItems(TALIANUSS_REPORT_ID,1)
       st.giveItems(TEAR_OF_CONFESSION_ID,1)
       st.set("cond","7")
-      st.despawnNpc(7656)
+#      st.despawnNpc(7656)
    elif npcId == 7655 and int(st.get("cond"))==8 :
       if st.getPlayer().getLevel() >= 36 :
         htmltext = "7655-02.htm"
@@ -127,8 +130,8 @@ class Quest (JQuest) :
         htmltext = "7655-03.htm"
       else:
         htmltext = "7655-04.htm"
-        st.giveItems(TEAR_OF_LOYALTY_ID,1)
         st.takeItems(MILITAS_ARTICLE_ID,st.getQuestItemsCount(MILITAS_ARTICLE_ID))
+        st.giveItems(TEAR_OF_LOYALTY_ID,1)
         st.set("cond","10")
    elif npcId == 7655 and int(st.get("cond"))==10 :
       htmltext = "7655-05.htm"
@@ -137,7 +140,7 @@ class Quest (JQuest) :
       st.set("cond","9")
    elif npcId == 7116 and int(st.get("cond"))==11 and ~(st.getQuestItemsCount(ATEBALTS_SKULL_ID) and st.getQuestItemsCount(ATEBALTS_RIBS_ID) and st.getQuestItemsCount(ATEBALTS_SHIN_ID)) :
       htmltext = "7116-06.htm"
-   elif npcId == 7116 and int(st.get("cond"))==11 and (st.getQuestItemsCount(ATEBALTS_SKULL_ID) and st.getQuestItemsCount(ATEBALTS_RIBS_ID) and st.getQuestItemsCount(ATEBALTS_SHIN_ID)) :
+   elif npcId == 7116 and int(st.get("cond"))==50 :
       htmltext = "7116-07.htm"
       st.takeItems(ATEBALTS_SKULL_ID,1)
       st.takeItems(ATEBALTS_RIBS_ID,1)
@@ -165,13 +168,13 @@ class Quest (JQuest) :
  def onKill (self,npcId,st):
    if npcId == 190 :
       if int(st.get("cond")) and int(st.get("cond")) == 2 :
-        if st.getRandom(100)<((int(st.get("id"))-40)*10) :
+        if st.getRandom(50)<2 :
           st.spawnNpc(5119)
           st.playSound("Itemsound.quest_before_battle")
 #          st.set("cond",str(0))
    elif npcId == 191 :
       if int(st.get("cond")) and int(st.get("cond")) == 2 :
-        if st.getRandom(100)<((int(st.get("id"))-40)*10) :
+        if st.getRandom(50)<2 :
           st.spawnNpc(5119)
           st.playSound("Itemsound.quest_before_battle")
 #          st.set("cond",str(0))
@@ -184,8 +187,8 @@ class Quest (JQuest) :
       if int(st.get("cond")) and int(st.get("cond")) == 5 and st.getQuestItemsCount(REPORT_PIECE_ID) < 10 and st.getQuestItemsCount(TALIANUSS_REPORT_ID) == 0 :
         if st.getQuestItemsCount(REPORT_PIECE_ID) == 9 :
           if st.getRandom(2) == 1 :
-            st.giveItems(TALIANUSS_REPORT_ID,1)
             st.takeItems(REPORT_PIECE_ID,st.getQuestItemsCount(REPORT_PIECE_ID))
+            st.giveItems(TALIANUSS_REPORT_ID,1)
             st.playSound("ItemSound.quest_middle")
         elif st.getRandom(2) == 1 :
           st.giveItems(REPORT_PIECE_ID,1)
@@ -194,18 +197,17 @@ class Quest (JQuest) :
       if int(st.get("cond")) and int(st.get("cond")) == 5 and st.getQuestItemsCount(REPORT_PIECE_ID) < 10 and st.getQuestItemsCount(TALIANUSS_REPORT_ID) == 0 :
         if st.getQuestItemsCount(REPORT_PIECE_ID) == 9 :
           if st.getRandom(2) == 1 :
-            st.giveItems(TALIANUSS_REPORT_ID,1)
             st.takeItems(REPORT_PIECE_ID,st.getQuestItemsCount(REPORT_PIECE_ID))
+            st.giveItems(TALIANUSS_REPORT_ID,1)
             st.playSound("ItemSound.quest_middle")
         elif st.getRandom(2) == 1 :
           st.giveItems(REPORT_PIECE_ID,1)
           st.playSound("ItemSound.quest_itemget")
    elif npcId == 144 :
       if int(st.get("cond")) and int(st.get("cond")) == 6 :
-        if st.getRandom(100)<((int(st.get("id"))-3)*33) :
-          st.spawnNpc(7656)
-          st.playSound("ItemSound.quest_middle")
-#          st.set("cond",str(0))
+        if st.getRandom(75)<2 :
+           st.spawnNpc(7656)
+           st.playSound("ItemSound.quest_middle")
    elif npcId == 577 :
       if int(st.get("cond")) and int(st.get("cond")) == 9 and st.getQuestItemsCount(MILITAS_ARTICLE_ID) < 20 :
         if st.getQuestItemsCount(MILITAS_ARTICLE_ID) == 19 :
@@ -265,6 +267,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_itemget")
           elif st.getQuestItemsCount(ATEBALTS_SHIN_ID) == 0 :
             st.giveItems(ATEBALTS_SHIN_ID,1)
+            st.set("cond","50")
             st.playSound("ItemSound.quest_itemget")
    return
 
@@ -277,8 +280,6 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7109)
-
-STARTING.addTalkId(7109)
 
 STARTED.addTalkId(7109)
 STARTED.addTalkId(7116)

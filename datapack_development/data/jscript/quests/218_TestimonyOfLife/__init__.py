@@ -1,4 +1,7 @@
 # Maked by Mr. Have fun! Version 0.2
+# Quest: Testimony Of Life
+# Fixed by Artful (http://L2PLanet.ru Lineage2 C3 Server)
+
 print "importing quests: 218: Testimony Of Life"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
@@ -45,7 +48,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "1" :
+    if event == "1":
         htmltext = "7460-04.htm"
         st.set("cond","1")
         st.setState(STARTED)
@@ -63,24 +66,24 @@ class Quest (JQuest) :
           htmltext = "7154-06.htm"
     elif event == "7154_6" :
           htmltext = "7154-07.htm"
-          st.giveItems(MOONFLOWER_CHARM_ID,1)
           st.takeItems(CARDIENS_LETTER_ID,1)
+          st.giveItems(MOONFLOWER_CHARM_ID,1)
           st.giveItems(HIERARCHS_LETTER_ID,1)
     elif event == "7371_1" :
           htmltext = "7371-02.htm"
     elif event == "7371_2" :
           htmltext = "7371-03.htm"
-          st.giveItems(GRAIL_DIAGRAM_ID,1)
           st.takeItems(HIERARCHS_LETTER_ID,1)
+          st.giveItems(GRAIL_DIAGRAM_ID,1)
     elif event == "7371_3" :
           if st.getPlayer().getLevel() < 38 :
             htmltext = "7371-10.htm"
-            st.giveItems(THALYAS_INSTRUCTIONS_ID,1)
             st.takeItems(STARDUST_ID,1)
+            st.giveItems(THALYAS_INSTRUCTIONS_ID,1)
           else:
             htmltext = "7371-11.htm"
-            st.giveItems(THALYAS_LETTER2_ID,1)
             st.takeItems(STARDUST_ID,1)
+            st.giveItems(THALYAS_LETTER2_ID,1)
     elif event == "7300_1" :
           htmltext = "7300-02.htm"
     elif event == "7300_2" :
@@ -91,8 +94,8 @@ class Quest (JQuest) :
           htmltext = "7300-05.htm"
     elif event == "7300_5" :
           htmltext = "7300-06.htm"
-          st.giveItems(PUSHKINS_LIST_ID,1)
           st.takeItems(GRAIL_DIAGRAM_ID,1)
+          st.giveItems(PUSHKINS_LIST_ID,1)
     elif event == "7300_6" :
           htmltext = "7300-09.htm"
     elif event == "7300_7" :
@@ -100,25 +103,25 @@ class Quest (JQuest) :
           st.takeItems(PURE_MITHRIL_ORE_ID,st.getQuestItemsCount(PURE_MITHRIL_ORE_ID))
           st.takeItems(ANT_SOLDIER_ACID_ID,st.getQuestItemsCount(ANT_SOLDIER_ACID_ID))
           st.takeItems(WYRMS_TALON1_ID,st.getQuestItemsCount(WYRMS_TALON1_ID))
-          st.giveItems(PURE_MITHRIL_CUP_ID,1)
           st.takeItems(PUSHKINS_LIST_ID,1)
+          st.giveItems(PURE_MITHRIL_CUP_ID,1)
     elif event == "7419_1" :
           htmltext = "7419-02.htm"
     elif event == "7419_2" :
           htmltext = "7419-03.htm"
     elif event == "7419_3" :
           htmltext = "7419-04.htm"
-          st.giveItems(ARKENIAS_CONTRACT_ID,1)
           st.takeItems(THALYAS_LETTER1_ID,1)
+          st.giveItems(ARKENIAS_CONTRACT_ID,1)
           st.giveItems(ARKENIAS_INSTRUCTIONS_ID,1)
     elif event == "7375_1" :
           htmltext = "7375-02.htm"
-          st.giveItems(ADONIUS_LIST_ID,1)
           st.takeItems(ARKENIAS_INSTRUCTIONS_ID,1)
+          st.giveItems(ADONIUS_LIST_ID,1)
     elif event == "7655_1" :
           htmltext = "7655-02.htm"
-          st.giveItems(ISAELS_INSTRUCTIONS_ID,1)
           st.takeItems(THALYAS_LETTER2_ID,1)
+          st.giveItems(ISAELS_INSTRUCTIONS_ID,1)
     return htmltext
 
 
@@ -139,6 +142,8 @@ class Quest (JQuest) :
               htmltext = "7460-02.htm"
             else:
               htmltext = "7460-03.htm"
+              st.set("cond","1")
+              return htmltext
         else:
           htmltext = "7460-03.htm"
    elif npcId == 7460 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
@@ -162,95 +167,95 @@ class Quest (JQuest) :
         htmltext = "7154-01.htm"
    elif npcId == 7154 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID)==1 and st.getQuestItemsCount(WATER_OF_LIFE_ID)==0 :
         htmltext = "7154-08.htm"
-   elif npcId == 7154 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(WATER_OF_LIFE_ID)) :
+   elif npcId == 7154 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(WATER_OF_LIFE_ID) :
         htmltext = "7154-09.htm"
         st.takeItems(WATER_OF_LIFE_ID,1)
-        st.giveItems(CAMOMILE_CHARM_ID,1)
         st.takeItems(MOONFLOWER_CHARM_ID,1)
+        st.giveItems(CAMOMILE_CHARM_ID,1)
    elif npcId == 7154 and int(st.get("cond"))==1 and st.getQuestItemsCount(CAMOMILE_CHARM_ID)==1 :
         htmltext = "7154-10.htm"
-   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(HIERARCHS_LETTER_ID)) :
+   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(HIERARCHS_LETTER_ID) :
         htmltext = "7371-01.htm"
-   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(GRAIL_DIAGRAM_ID)) :
+   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(GRAIL_DIAGRAM_ID) :
         htmltext = "7371-04.htm"
-   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(PUSHKINS_LIST_ID)) :
+   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(PUSHKINS_LIST_ID) :
         htmltext = "7371-05.htm"
-   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(PURE_MITHRIL_CUP_ID)) :
+   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(PURE_MITHRIL_CUP_ID) :
         htmltext = "7371-06.htm"
-        st.giveItems(THALYAS_LETTER1_ID,1)
         st.takeItems(PURE_MITHRIL_CUP_ID,1)
-   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(THALYAS_LETTER1_ID)) :
+        st.giveItems(THALYAS_LETTER1_ID,1)
+   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(THALYAS_LETTER1_ID) :
         htmltext = "7371-07.htm"
-   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(ARKENIAS_CONTRACT_ID)) :
+   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(ARKENIAS_CONTRACT_ID) :
         htmltext = "7371-08.htm"
-   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(STARDUST_ID)) :
+   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(STARDUST_ID) :
         htmltext = "7371-09.htm"
-   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(THALYAS_INSTRUCTIONS_ID)) :
+   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(THALYAS_INSTRUCTIONS_ID) :
         if st.getPlayer().getLevel() < 38 :
           htmltext = "7371-12.htm"
         else:
           htmltext = "7371-13.htm"
-          st.giveItems(THALYAS_LETTER2_ID,1)
           st.takeItems(THALYAS_INSTRUCTIONS_ID,1)
-   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(THALYAS_LETTER2_ID)) :
+          st.giveItems(THALYAS_LETTER2_ID,1)
+   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(THALYAS_LETTER2_ID) :
         htmltext = "7371-14.htm"
-   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(ISAELS_INSTRUCTIONS_ID)) :
+   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(ISAELS_INSTRUCTIONS_ID) :
         htmltext = "7371-15.htm"
-   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(TALINS_SPEAR_ID) and st.getQuestItemsCount(ISAELS_LETTER_ID)) :
+   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(TALINS_SPEAR_ID) and st.getQuestItemsCount(ISAELS_LETTER_ID) :
         htmltext = "7371-16.htm"
-        st.giveItems(GRAIL_OF_PURITY_ID,1)
         st.takeItems(ISAELS_LETTER_ID,1)
-   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(TALINS_SPEAR_ID) and st.getQuestItemsCount(GRAIL_OF_PURITY_ID)) :
+        st.giveItems(GRAIL_OF_PURITY_ID,1)
+   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(TALINS_SPEAR_ID) and st.getQuestItemsCount(GRAIL_OF_PURITY_ID) :
         htmltext = "7371-17.htm"
-   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(TEARS_OF_UNICORN_ID)) :
+   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(TEARS_OF_UNICORN_ID) :
         htmltext = "7371-18.htm"
-        st.giveItems(WATER_OF_LIFE_ID,1)
         st.takeItems(TEARS_OF_UNICORN_ID,1)
-   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount((CAMOMILE_CHARM_ID) or st.getQuestItemsCount(WATER_OF_LIFE_ID)) and st.getQuestItemsCount(MOONFLOWER_CHARM_ID)==1 :
+        st.giveItems(WATER_OF_LIFE_ID,1)
+   elif npcId == 7371 and int(st.get("cond"))==1 and st.getQuestItemsCount(CAMOMILE_CHARM_ID) or st.getQuestItemsCount(WATER_OF_LIFE_ID) and st.getQuestItemsCount(MOONFLOWER_CHARM_ID)==1 :
         htmltext = "7371-19.htm"
-   elif npcId == 7300 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(GRAIL_DIAGRAM_ID)) :
+   elif npcId == 7300 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(GRAIL_DIAGRAM_ID) :
         htmltext = "7300-01.htm"
-   elif npcId == 7300 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(PUSHKINS_LIST_ID)) :
+   elif npcId == 7300 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(PUSHKINS_LIST_ID) :
         if st.getQuestItemsCount(PURE_MITHRIL_ORE_ID) >= 10 and st.getQuestItemsCount(ANT_SOLDIER_ACID_ID) >= 20 and st.getQuestItemsCount(WYRMS_TALON1_ID) >= 20 :
           htmltext = "7300-08.htm"
         else:
           htmltext = "7300-07.htm"
-   elif npcId == 7300 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(PURE_MITHRIL_CUP_ID)) :
+   elif npcId == 7300 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(PURE_MITHRIL_CUP_ID) :
         htmltext = "7300-11.htm"
-   elif npcId == 7300 and int(st.get("cond"))==1 and st.getQuestItemsCount((GRAIL_DIAGRAM_ID) == 0 and st.getQuestItemsCount(PUSHKINS_LIST_ID) == 0 and st.getQuestItemsCount(PURE_MITHRIL_CUP_ID)) == 0 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID)==1 :
+   elif npcId == 7300 and int(st.get("cond"))==1 and st.getQuestItemsCount(GRAIL_DIAGRAM_ID) == 0 and st.getQuestItemsCount(PUSHKINS_LIST_ID) == 0 and st.getQuestItemsCount(PURE_MITHRIL_CUP_ID) == 0 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID)==1 :
         htmltext = "7300-12.htm"
-   elif npcId == 7419 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(THALYAS_LETTER1_ID)) :
+   elif npcId == 7419 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(THALYAS_LETTER1_ID) :
         htmltext = "7419-01.htm"
-   elif npcId == 7419 and int(st.get("cond"))==1 and st.getQuestItemsCount((ARKENIAS_INSTRUCTIONS_ID) or st.getQuestItemsCount(ADONIUS_LIST_ID)) and st.getQuestItemsCount(MOONFLOWER_CHARM_ID)==1 :
+   elif npcId == 7419 and int(st.get("cond"))==1 and (st.getQuestItemsCount(ARKENIAS_INSTRUCTIONS_ID) or st.getQuestItemsCount(ADONIUS_LIST_ID)) and st.getQuestItemsCount(MOONFLOWER_CHARM_ID)==1 :
         htmltext = "7419-05.htm"
-   elif npcId == 7419 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(ANDARIEL_SCRIPTURE_COPY_ID)) :
+   elif npcId == 7419 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(ANDARIEL_SCRIPTURE_COPY_ID) :
         htmltext = "7419-06.htm"
         st.takeItems(ARKENIAS_CONTRACT_ID,1)
-        st.giveItems(STARDUST_ID,1)
         st.takeItems(ANDARIEL_SCRIPTURE_COPY_ID,1)
-   elif npcId == 7419 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(STARDUST_ID)) :
+        st.giveItems(STARDUST_ID,1)
+   elif npcId == 7419 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(STARDUST_ID) :
         htmltext = "7419-07.htm"
-   elif npcId == 7419 and int(st.get("cond"))==1 and st.getQuestItemsCount((THALYAS_LETTER1_ID) == 0 and st.getQuestItemsCount(ARKENIAS_CONTRACT_ID) == 0 and st.getQuestItemsCount(ANDARIEL_SCRIPTURE_COPY_ID) == 0 and st.getQuestItemsCount(STARDUST_ID)) == 0 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID)==1 :
+   elif npcId == 7419 and int(st.get("cond"))==1 and st.getQuestItemsCount(THALYAS_LETTER1_ID) == 0 and st.getQuestItemsCount(ARKENIAS_CONTRACT_ID) == 0 and st.getQuestItemsCount(ANDARIEL_SCRIPTURE_COPY_ID) == 0 and st.getQuestItemsCount(STARDUST_ID) == 0 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID)==1 :
         htmltext = "7419-08.htm"
-   elif npcId == 7375 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(ARKENIAS_INSTRUCTIONS_ID)) :
+   elif npcId == 7375 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(ARKENIAS_INSTRUCTIONS_ID) :
         htmltext = "7375-01.htm"
-   elif npcId == 7375 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(ADONIUS_LIST_ID)) :
+   elif npcId == 7375 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(ADONIUS_LIST_ID) :
         if st.getQuestItemsCount(SPIDER_ICHOR_ID) >= 20 and st.getQuestItemsCount(HARPYS_DOWN_ID) >= 20 :
           htmltext = "7375-04.htm"
           st.takeItems(SPIDER_ICHOR_ID,st.getQuestItemsCount(SPIDER_ICHOR_ID))
           st.takeItems(HARPYS_DOWN_ID,st.getQuestItemsCount(HARPYS_DOWN_ID))
-          st.giveItems(ANDARIEL_SCRIPTURE_COPY_ID,1)
           st.takeItems(ADONIUS_LIST_ID,1)
+          st.giveItems(ANDARIEL_SCRIPTURE_COPY_ID,1)
         else:
           htmltext = "7375-03.htm"
-   elif npcId == 7375 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(ANDARIEL_SCRIPTURE_COPY_ID)) :
+   elif npcId == 7375 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(ANDARIEL_SCRIPTURE_COPY_ID) :
         htmltext = "7375-05.htm"
-   elif npcId == 7375 and int(st.get("cond"))==1 and st.getQuestItemsCount((ARKENIAS_INSTRUCTIONS_ID) == 0 and st.getQuestItemsCount(ADONIUS_LIST_ID) == 0 and st.getQuestItemsCount(ANDARIEL_SCRIPTURE_COPY_ID)) == 0 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID)==1 :
+   elif npcId == 7375 and int(st.get("cond"))==1 and st.getQuestItemsCount(ARKENIAS_INSTRUCTIONS_ID) == 0 and st.getQuestItemsCount(ADONIUS_LIST_ID) == 0 and st.getQuestItemsCount(ANDARIEL_SCRIPTURE_COPY_ID) == 0 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID)==1 :
         htmltext = "7375-06.htm"
-   elif npcId == 7655 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(THALYAS_LETTER2_ID)) :
+   elif npcId == 7655 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(THALYAS_LETTER2_ID) :
         htmltext = "7655-01.htm"
-   elif npcId == 7655 and int(st.get("cond"))==1 and st.getQuestItemsCount((MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(ISAELS_INSTRUCTIONS_ID)) :
-        if st.getQuestItemsCount((TALINS_SPEAR_BLADE_ID) and st.getQuestItemsCount(TALINS_SPEAR_SHAFT_ID) and st.getQuestItemsCount(TALINS_RUBY_ID)) and st.getQuestItemsCount((TALINS_AQUAMARINE_ID) and st.getQuestItemsCount(TALINS_AMETHYST_ID) and st.getQuestItemsCount(TALINS_PERIDOT_ID)) :
+   elif npcId == 7655 and int(st.get("cond"))==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(ISAELS_INSTRUCTIONS_ID) :
+        if st.getQuestItemsCount(TALINS_SPEAR_BLADE_ID) and st.getQuestItemsCount(TALINS_SPEAR_SHAFT_ID) and st.getQuestItemsCount(TALINS_RUBY_ID) and st.getQuestItemsCount(TALINS_AQUAMARINE_ID) and st.getQuestItemsCount(TALINS_AMETHYST_ID) and st.getQuestItemsCount(TALINS_PERIDOT_ID) :
           htmltext = "7655-04.htm"
           st.takeItems(TALINS_SPEAR_BLADE_ID,1)
           st.takeItems(TALINS_SPEAR_SHAFT_ID,1)
@@ -258,14 +263,14 @@ class Quest (JQuest) :
           st.takeItems(TALINS_AQUAMARINE_ID,1)
           st.takeItems(TALINS_AMETHYST_ID,1)
           st.takeItems(TALINS_PERIDOT_ID,1)
-          st.giveItems(ISAELS_LETTER_ID,1)
           st.takeItems(ISAELS_INSTRUCTIONS_ID,1)
+          st.giveItems(ISAELS_LETTER_ID,1)
           st.giveItems(TALINS_SPEAR_ID,1)
         else:
           htmltext = "7655-03.htm"
-   elif npcId == 7655 and int(st.get("cond"))==1 and st.getQuestItemsCount((TALINS_SPEAR_ID) and st.getQuestItemsCount(ISAELS_LETTER_ID)) :
+   elif npcId == 7655 and int(st.get("cond"))==1 and st.getQuestItemsCount(TALINS_SPEAR_ID) and st.getQuestItemsCount(ISAELS_LETTER_ID) :
         htmltext = "7655-05.htm"
-   elif npcId == 7655 and int(st.get("cond"))==1 and st.getQuestItemsCount((GRAIL_OF_PURITY_ID) or st.getQuestItemsCount(WATER_OF_LIFE_ID) or st.getQuestItemsCount(CAMOMILE_CHARM_ID)) and st.getQuestItemsCount(MOONFLOWER_CHARM_ID)==1 :
+   elif npcId == 7655 and int(st.get("cond"))==1 and st.getQuestItemsCount(GRAIL_OF_PURITY_ID) or st.getQuestItemsCount(WATER_OF_LIFE_ID) or st.getQuestItemsCount(CAMOMILE_CHARM_ID) and st.getQuestItemsCount(MOONFLOWER_CHARM_ID)==1 :
         htmltext = "7655-06.htm"
    return htmltext
 
@@ -309,9 +314,9 @@ class Quest (JQuest) :
    elif npcId == 5077 :
     if int(st.get("cond")) and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) == 1 and st.getQuestItemsCount(TALINS_SPEAR_ID) == 1 and st.getQuestItemsCount(GRAIL_OF_PURITY_ID) == 1 and st.getQuestItemsCount(TEARS_OF_UNICORN_ID) == 0 :
       if st.getQuestItemsCount(TALINS_SPEAR_ID) > 0 :
-        st.giveItems(TEARS_OF_UNICORN_ID,1)
         st.takeItems(GRAIL_OF_PURITY_ID,1)
         st.takeItems(TALINS_SPEAR_ID,1)
+        st.giveItems(TEARS_OF_UNICORN_ID,1)
    elif npcId == 581 or npcId == 582 :
     st.set("id","0")
     if int(st.get("cond")) and st.getQuestItemsCount(ISAELS_INSTRUCTIONS_ID) == 1 and st.getRandom(100) < 50 :
@@ -335,7 +340,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_middle")
    return
 
-QUEST       = Quest(218,"218_TestimonyOfLife","Testimony Of Life")
+QUEST       = Quest(218,"218_TestimonyOfLife","Testimony of Life")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
@@ -345,7 +350,6 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7460)
 
-STARTING.addTalkId(7460)
 
 STARTED.addTalkId(7154)
 STARTED.addTalkId(7300)
