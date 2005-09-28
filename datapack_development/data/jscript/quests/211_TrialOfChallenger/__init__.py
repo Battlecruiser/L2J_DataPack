@@ -35,17 +35,15 @@ class Quest (JQuest) :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-      st.set("cond","1")
     elif event == "7644_1" :
           htmltext = "7644-04.htm"
-          st.set("cond","1")
-          return htmltext
     elif event == "7645_1" :
           htmltext = "7645-02.htm"
           st.takeItems(LETTER_OF_KASH_ID,1)
           st.set("cond","4")
     elif event == "7647_1" :
           if st.getQuestItemsCount(BROKEN_KEY_ID) == 1 :
+            st.giveItems(SCROLL_OF_SHYSLASSY_ID,1)
             if st.getRandom(10) < 2 :
               htmltext = "7647-03.htm"
               st.takeItems(BROKEN_KEY_ID,1)
@@ -124,7 +122,7 @@ class Quest (JQuest) :
       htmltext = "7645-01.htm"
    elif npcId == 7645 and int(st.get("cond"))==4 and st.getQuestItemsCount(WATCHERS_EYE1_ID)==0 :
       htmltext = "7645-03.htm"
-   elif npcId == 7645 and int(st.get("cond"))==1 and st.getQuestItemsCount(WATCHERS_EYE1_ID) :
+   elif npcId == 7645 and int(st.get("cond"))==4 and st.getQuestItemsCount(WATCHERS_EYE1_ID) :
       htmltext = "7645-04.htm"
       st.takeItems(WATCHERS_EYE1_ID,1)
       st.set("cond","5")
@@ -165,7 +163,6 @@ class Quest (JQuest) :
    if npcId == 5110 :
         if int(st.get("cond")) and int(st.get("cond")) == 1 and st.getQuestItemsCount(SCROLL_OF_SHYSLASSY_ID) == 0 and st.getQuestItemsCount(BROKEN_KEY_ID) == 0 :
           st.giveItems(BROKEN_KEY_ID,1)
-          st.giveItems(SCROLL_OF_SHYSLASSY_ID,1)
           st.spawnNpc(7647)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","2")
@@ -173,7 +170,6 @@ class Quest (JQuest) :
         if int(st.get("cond")) and int(st.get("cond")) == 4 and st.getQuestItemsCount(WATCHERS_EYE1_ID) == 0 :
           st.giveItems(WATCHERS_EYE1_ID,1)
           st.playSound("ItemSound.quest_middle")
-          st.set("cond","5")
    elif npcId == 5113 :
         if int(st.get("cond")) :
           if int(st.get("cond")) == 5 and st.getQuestItemsCount(WATCHERS_EYE2_ID) == 0 :
@@ -214,7 +210,7 @@ STARTED.addKillId(5112)
 STARTED.addKillId(5113)
 STARTED.addKillId(5114)
 
-STARTED.addQuestDrop(5110,SCROLL_OF_SHYSLASSY_ID,1)
+STARTED.addQuestDrop(7647,SCROLL_OF_SHYSLASSY_ID,1)
 STARTED.addQuestDrop(7644,LETTER_OF_KASH_ID,1)
 STARTED.addQuestDrop(5112,WATCHERS_EYE1_ID,1)
 STARTED.addQuestDrop(5110,BROKEN_KEY_ID,1)
