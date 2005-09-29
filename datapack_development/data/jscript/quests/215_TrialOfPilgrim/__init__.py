@@ -1,4 +1,8 @@
 # Maked by Mr. Have fun! Version 0.2
+#
+# Updated by ElgarL
+#
+
 print "importing quests: 215: Trial Of Pilgrim"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
@@ -94,7 +98,7 @@ class Quest (JQuest) :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7648 and int(st.get("cond"))==1 and st.getQuestItemsCount(VOUCHER_OF_TRIAL_ID) :
       htmltext = "7648-09.htm"
-   elif npcId == 7648 and int(st.get("cond"))==1 and st.getQuestItemsCount(BOOK_OF_SAGE_ID) :
+   elif npcId == 7648 and int(st.get("cond"))==17 and st.getQuestItemsCount(BOOK_OF_SAGE_ID) :
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
         st.addExpAndSp(31000,3700)
@@ -128,7 +132,7 @@ class Quest (JQuest) :
       htmltext = "7550-02.htm"
    elif npcId == 7650 and int(st.get("cond"))==6 and st.getQuestItemsCount(TAG_OF_RUMOR_ID) :
       htmltext = "7650-01.htm"
-   elif npcId == 7650 and int(st.get("cond"))==1 and st.getQuestItemsCount(GREY_BADGE_ID) and st.getQuestItemsCount(BOOK_OF_GERALD_ID) :
+   elif npcId == 7650 and int(st.get("cond"))>=8 and st.getQuestItemsCount(GREY_BADGE_ID) and st.getQuestItemsCount(BOOK_OF_GERALD_ID) :
       htmltext = "7650-04.htm"
       st.giveItems(ADENA_ID,100000)
       st.takeItems(BOOK_OF_GERALD_ID,1)
@@ -149,7 +153,6 @@ class Quest (JQuest) :
       st.set("cond","9")
    elif npcId == 7117 and int(st.get("cond"))==9 :
       htmltext = "7117-02.htm"
-      st.set("cond","9")
    elif npcId == 7036 and int(st.get("cond"))==9 :
       htmltext = "7036-01.htm"
       st.giveItems(PICTURE_OF_NAHIR_ID,1)
