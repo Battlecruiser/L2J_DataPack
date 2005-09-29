@@ -37,6 +37,47 @@ ST_BOWSTRING_ID = 3304
 MANASHENS_HORN_ID = 3305
 WOODEN_ARROW_ID = 17
 
+#This adds all Info to a Mobs ->npcId:(cond,dropcond,maxcount,chance,item)
+HUNTERS = (3,1,10,50,HUNTERS_RUNE1_ID)
+LETO=(13,2,141,100,BLOOD_OF_LIZARDMAN_ID)
+
+DROPLIST={
+   79:HUNTERS,
+   80:HUNTERS,
+   81:HUNTERS,
+   82:HUNTERS,
+   84:HUNTERS,
+   86:HUNTERS,
+   89:HUNTERS,
+   90:HUNTERS,
+   578:LETO,
+   577:LETO,
+   579:LETO,
+   580:LETO,
+   581:LETO,
+   582:LETO,
+   269:(6,1,10,50,HUNTERS_RUNE2_ID),
+   270:(6,1,10,60,HUNTERS_RUNE2_ID),
+   5090:(13,3,1,100,TALISMAN_OF_KADESH_ID),
+   230:(10,4,1,10,STAKATO_CHITIN_ID),
+   232:(10,4,1,10,STAKATO_CHITIN_ID),
+   234:(10,4,1,10,STAKATO_CHITIN_ID),
+   563:(10,5,1,10,MANASHENS_HORN_ID),
+   233:(10,5,1,10,ST_BOWSTRING_ID),
+   551:(10,5,1,10,MITHRIL_CLIP_ID)
+}
+def giveMiddle(st,itemid,condition):
+  st.giveItems(itemid,1)
+  st.playSound("Itemsound.quest_middle")
+  st.set("cond",str(condition+1))
+  return
+
+def giveNormal(st,itemid):
+  st.giveItems(itemid,1)
+  st.playSound("Itemsound.quest_itemget")
+  return
+
+
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -44,11 +85,11 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-      htmltext = "7702-04.htm"
-      st.set("cond","1")
-      st.setState(STARTED)
-      st.playSound("ItemSound.quest_accept")
-      st.giveItems(BERNARDS_INTRODUCTION_ID,1)
+       htmltext = "7702-04.htm"
+       st.set("cond","1")
+       st.setState(STARTED)
+       st.playSound("ItemSound.quest_accept")
+       st.giveItems(BERNARDS_INTRODUCTION_ID,1)
     elif event == "7626_1" :
           htmltext = "7626-02.htm"
     elif event == "7626_2" :
@@ -84,16 +125,18 @@ class Quest (JQuest) :
      st.set("id","0")
    if npcId == 7702 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
       if int(st.get("cond")) < 15 :
-        if (st.getPlayer().getClassId().getId() == 0x07 or st.getPlayer().getClassId().getId() == 0x16 or st.getPlayer().getClassId().getId() == 0x23) and st.getPlayer().getLevel() >= 3 :
+        if (st.getPlayer().getClassId().getId() == 0x07 or st.getPlayer().getClassId().getId() == 0x16 or st.getPlayer().getClassId().getId() == 0x23) and st.getPlayer().getLevel() >= 39 :
           htmltext = "7702-03.htm"
         elif st.getPlayer().getClassId().getId() == 0x07 or st.getPlayer().getClassId().getId() == 0x16 or st.getPlayer().getClassId().getId() == 0x23 :
           htmltext = "7702-01.htm"
         else:
           htmltext = "7702-02.htm"
+          st.exitQuest(1)
       else:
         htmltext = "7702-02.htm"
+        st.exitQuest(1)
    elif npcId == 7702 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
-      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
+      htmltext = "<html><head><body>This quest has already been completed.</body></html>"
    elif npcId == 7702 and int(st.get("cond"))==1 and st.getQuestItemsCount(BERNARDS_INTRODUCTION_ID) :
       htmltext = "7702-05.htm"
    elif npcId == 7626 and int(st.get("cond"))==1 and st.getQuestItemsCount(BERNARDS_INTRODUCTION_ID) :
@@ -116,15 +159,13 @@ class Quest (JQuest) :
       st.set("cond","13")
    elif npcId == 7626 and int(st.get("cond"))==13 :
       htmltext = "7626-12.htm"
-   elif npcId == 7626 and int(st.get("cond"))==14 and st.getQuestItemsCount(TALISMAN_OF_KADESH_ID) :
+   elif npcId == 7626 and int(st.get("cond"))==14 :
       htmltext = "7626-13.htm"
       st.giveItems(MARK_OF_SAGITTARIUS_ID,1)
       st.takeItems(CRESCENT_MOON_BOW_ID,1)
       st.takeItems(TALISMAN_OF_KADESH_ID,1)
       st.takeItems(BLOOD_OF_LIZARDMAN_ID,st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID))
-      if st.getGameTicks() != int(st.get("id")) :
-        st.set("id",str(st.getGameTicks()))
-        st.addExpAndSp(28000,3600)
+      st.addExpAndSp(28000,3600)
       st.set("cond","0")
       st.setState(COMPLETED)
       st.playSound("ItemSound.quest_finish")
@@ -163,242 +204,47 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npcId,st):
-   if npcId == 79 :
-      if int(st.get("cond")) and int(st.get("cond")) == 3 and st.getQuestItemsCount(HUNTERS_RUNE1_ID) < 10 :
-        if st.getRandom(2) == 1 :
-          if st.getQuestItemsCount(HUNTERS_RUNE1_ID) == 9 :
-            st.giveItems(HUNTERS_RUNE1_ID,1)
-            st.set("cond","4")
-            st.playSound("Itemsound.quest_middle")
-          else:
-            st.giveItems(HUNTERS_RUNE1_ID,1)
-            st.playSound("Itemsound.quest_itemget")
-   elif npcId == 80 :
-      if int(st.get("cond")) and int(st.get("cond")) == 3 and st.getQuestItemsCount(HUNTERS_RUNE1_ID) < 10 :
-        if st.getRandom(2) == 1 :
-          if st.getQuestItemsCount(HUNTERS_RUNE1_ID) == 9 :
-            st.giveItems(HUNTERS_RUNE1_ID,1)
-            st.set("cond","4")
-            st.playSound("Itemsound.quest_middle")
-          else:
-            st.giveItems(HUNTERS_RUNE1_ID,1)
-            st.playSound("Itemsound.quest_itemget")
-   elif npcId == 81 :
-      if int(st.get("cond")) and int(st.get("cond")) == 3 and st.getQuestItemsCount(HUNTERS_RUNE1_ID) < 10 :
-        if st.getRandom(2) == 1 :
-          if st.getQuestItemsCount(HUNTERS_RUNE1_ID) == 9 :
-            st.giveItems(HUNTERS_RUNE1_ID,1)
-            st.set("cond","4")
-            st.playSound("Itemsound.quest_middle")
-          else:
-            st.giveItems(HUNTERS_RUNE1_ID,1)
-            st.playSound("Itemsound.quest_itemget")
-   elif npcId == 82 :
-      if int(st.get("cond")) and int(st.get("cond")) == 3 and st.getQuestItemsCount(HUNTERS_RUNE1_ID) < 10 :
-        if st.getRandom(2) == 1 :
-          if st.getQuestItemsCount(HUNTERS_RUNE1_ID) == 9 :
-            st.giveItems(HUNTERS_RUNE1_ID,1)
-            st.set("cond","4")
-            st.playSound("Itemsound.quest_middle")
-          else:
-            st.giveItems(HUNTERS_RUNE1_ID,1)
-            st.playSound("Itemsound.quest_itemget")
-   elif npcId == 84 :
-      if int(st.get("cond")) and int(st.get("cond")) == 3 and st.getQuestItemsCount(HUNTERS_RUNE1_ID) < 10 :
-        if st.getRandom(2) == 1 :
-          if st.getQuestItemsCount(HUNTERS_RUNE1_ID) == 9 :
-            st.giveItems(HUNTERS_RUNE1_ID,1)
-            st.set("cond","4")
-            st.playSound("Itemsound.quest_middle")
-          else:
-            st.giveItems(HUNTERS_RUNE1_ID,1)
-            st.playSound("Itemsound.quest_itemget")
-   elif npcId == 86 :
-      if int(st.get("cond")) and int(st.get("cond")) == 3 and st.getQuestItemsCount(HUNTERS_RUNE1_ID) < 10 :
-        if st.getRandom(2) == 1 :
-          if st.getQuestItemsCount(HUNTERS_RUNE1_ID) == 9 :
-            st.giveItems(HUNTERS_RUNE1_ID,1)
-            st.set("cond","4")
-            st.playSound("Itemsound.quest_middle")
-          else:
-            st.giveItems(HUNTERS_RUNE1_ID,1)
-            st.playSound("Itemsound.quest_itemget")
-   elif npcId == 89 :
-      if int(st.get("cond")) and int(st.get("cond")) == 3 and st.getQuestItemsCount(HUNTERS_RUNE1_ID) < 10 :
-        if st.getRandom(2) == 1 :
-          if st.getQuestItemsCount(HUNTERS_RUNE1_ID) == 9 :
-            st.giveItems(HUNTERS_RUNE1_ID,1)
-            st.set("cond","4")
-            st.playSound("Itemsound.quest_middle")
-          else:
-            st.giveItems(HUNTERS_RUNE1_ID,1)
-            st.playSound("Itemsound.quest_itemget")
-   elif npcId == 90 :
-      if int(st.get("cond")) and int(st.get("cond")) == 3 and st.getQuestItemsCount(HUNTERS_RUNE1_ID) < 10 :
-        if st.getRandom(2) == 1 :
-          if st.getQuestItemsCount(HUNTERS_RUNE1_ID) == 9 :
-            st.giveItems(HUNTERS_RUNE1_ID,1)
-            st.set("cond","4")
-            st.playSound("Itemsound.quest_middle")
-          else:
-            st.giveItems(HUNTERS_RUNE1_ID,1)
-            st.playSound("Itemsound.quest_itemget")
-   elif npcId == 577 :
-      if int(st.get("cond")) and int(st.get("cond")) == 13 and st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID) < 140 :
-        if ((st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID)-120)*5) > st.getRandom(100) :
-          st.spawnNpc(5090)
-          st.takeItems(BLOOD_OF_LIZARDMAN_ID,st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID))
-          st.playSound("Itemsound.quest_before_battle")
-        else:
-          st.giveItems(BLOOD_OF_LIZARDMAN_ID,1)
-          st.playSound("Itemsound.quest_itemget")
-   elif npcId == 578 :
-      if int(st.get("cond")) and int(st.get("cond")) == 13 and st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID) < 140 :
-        if ((st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID)-120)*5) > st.getRandom(100) :
-          st.spawnNpc(5090)
-          st.takeItems(BLOOD_OF_LIZARDMAN_ID,st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID))
-          st.playSound("Itemsound.quest_before_battle")
-        else:
-          st.giveItems(BLOOD_OF_LIZARDMAN_ID,1)
-          st.playSound("Itemsound.quest_itemget")
-   elif npcId == 579 :
-      if int(st.get("cond")) and int(st.get("cond")) == 13 and st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID) < 140 :
-        if ((st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID)-120)*5) > st.getRandom(100) :
-          st.spawnNpc(5090)
-          st.takeItems(BLOOD_OF_LIZARDMAN_ID,st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID))
-          st.playSound("Itemsound.quest_before_battle")
-        else:
-          st.giveItems(BLOOD_OF_LIZARDMAN_ID,1)
-          st.playSound("Itemsound.quest_itemget")
-   elif npcId == 580 :
-      if int(st.get("cond")) and int(st.get("cond")) == 13 and st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID) < 140 :
-        if ((st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID)-120)*5) > st.getRandom(100) :
-          st.spawnNpc(5090)
-          st.takeItems(BLOOD_OF_LIZARDMAN_ID,st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID))
-          st.playSound("Itemsound.quest_before_battle")
-        else:
-          st.giveItems(BLOOD_OF_LIZARDMAN_ID,1)
-          st.playSound("Itemsound.quest_itemget")
-   elif npcId == 581 :
-      if int(st.get("cond")) and int(st.get("cond")) == 13 and st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID) < 140 :
-        if ((st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID)-120)*5) > st.getRandom(100) :
-          st.spawnNpc(5090)
-          st.takeItems(BLOOD_OF_LIZARDMAN_ID,st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID))
-          st.playSound("Itemsound.quest_before_battle")
-        else:
-          st.giveItems(BLOOD_OF_LIZARDMAN_ID,1)
-          st.playSound("Itemsound.quest_itemget")
-   elif npcId == 582 :
-      if int(st.get("cond")) and int(st.get("cond")) == 13 and st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID) < 140 :
-        if ((st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID)-120)*5) > st.getRandom(100) :
-          st.spawnNpc(5090)
-          st.takeItems(BLOOD_OF_LIZARDMAN_ID,st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID))
-          st.playSound("Itemsound.quest_before_battle")
-        else:
-          st.giveItems(BLOOD_OF_LIZARDMAN_ID,1)
-          st.playSound("Itemsound.quest_itemget")
-   elif npcId == 230 :
-      if int(st.get("cond")) and int(st.get("cond")) == 10 and st.getQuestItemsCount(STAKATO_CHITIN_ID) == 0 :
-        if st.getRandom(10) == 1 :
-          if st.getQuestItemsCount(MITHRIL_CLIP_ID) and st.getQuestItemsCount(ST_BOWSTRING_ID) and st.getQuestItemsCount(MANASHENS_HORN_ID) :
-            st.giveItems(STAKATO_CHITIN_ID,1)
-            st.set("cond","11")
-            st.playSound("Itemsound.quest_middle")
-          else:
-            st.giveItems(STAKATO_CHITIN_ID,1)
-            st.playSound("Itemsound.quest_itemget")
-   elif npcId == 232 :
-      if int(st.get("cond")) and int(st.get("cond")) == 10 and st.getQuestItemsCount(STAKATO_CHITIN_ID) == 0 :
-        if st.getRandom(10) == 1 :
-          if st.getQuestItemsCount(MITHRIL_CLIP_ID) and st.getQuestItemsCount(ST_BOWSTRING_ID) and st.getQuestItemsCount(MANASHENS_HORN_ID) :
-            st.giveItems(STAKATO_CHITIN_ID,1)
-            st.set("cond","11")
-            st.playSound("Itemsound.quest_middle")
-          else:
-            st.giveItems(STAKATO_CHITIN_ID,1)
-            st.playSound("Itemsound.quest_itemget")
-   elif npcId == 234 :
-      if int(st.get("cond")) and int(st.get("cond")) == 10 and st.getQuestItemsCount(STAKATO_CHITIN_ID) == 0 :
-        if st.getRandom(10) == 1 :
-          if st.getQuestItemsCount(MITHRIL_CLIP_ID) and st.getQuestItemsCount(ST_BOWSTRING_ID) and st.getQuestItemsCount(MANASHENS_HORN_ID) :
-            st.giveItems(STAKATO_CHITIN_ID,1)
-            st.set("cond","11")
-            st.playSound("Itemsound.quest_middle")
-          else:
-            st.giveItems(STAKATO_CHITIN_ID,1)
-            st.playSound("Itemsound.quest_itemget")
-   elif npcId == 563 :
-      if int(st.get("cond")) and int(st.get("cond")) == 10 and st.getQuestItemsCount(MANASHENS_HORN_ID) == 0 :
-        if st.getRandom(10) == 1 :
-          if st.getQuestItemsCount(MITHRIL_CLIP_ID) and st.getQuestItemsCount(ST_BOWSTRING_ID) and st.getQuestItemsCount(STAKATO_CHITIN_ID) :
-            st.giveItems(MANASHENS_HORN_ID,1)
-            st.set("cond","11")
-            st.playSound("Itemsound.quest_middle")
-          else:
-            st.giveItems(MANASHENS_HORN_ID,1)
-            st.playSound("Itemsound.quest_itemget")
-   elif npcId == 233 :
-      if int(st.get("cond")) and int(st.get("cond")) == 10 and st.getQuestItemsCount(ST_BOWSTRING_ID) == 0 :
-        if st.getRandom(10) == 1 :
-          if st.getQuestItemsCount(MITHRIL_CLIP_ID) and st.getQuestItemsCount(MANASHENS_HORN_ID) and st.getQuestItemsCount(STAKATO_CHITIN_ID) :
-            st.giveItems(ST_BOWSTRING_ID,1)
-            st.set("cond","11")
-            st.playSound("Itemsound.quest_middle")
-          else:
-            st.giveItems(ST_BOWSTRING_ID,1)
-            st.playSound("Itemsound.quest_itemget")
-   elif npcId == 551 :
-      if int(st.get("cond")) and int(st.get("cond")) == 10 and st.getQuestItemsCount(MITHRIL_CLIP_ID) == 0 :
-        if st.getRandom(10) == 1 :
-          if st.getQuestItemsCount(ST_BOWSTRING_ID) and st.getQuestItemsCount(MANASHENS_HORN_ID) and st.getQuestItemsCount(STAKATO_CHITIN_ID) :
-            st.giveItems(MITHRIL_CLIP_ID,1)
-            st.set("cond","11")
-            st.playSound("Itemsound.quest_middle")
-          else:
-            st.giveItems(MITHRIL_CLIP_ID,1)
-            st.playSound("Itemsound.quest_itemget")
-   elif npcId == 269 :
-      if int(st.get("cond")) and int(st.get("cond")) == 6 and st.getQuestItemsCount(HUNTERS_RUNE2_ID) < 10 :
-        if st.getRandom(2) == 1 :
-          if st.getQuestItemsCount(HUNTERS_RUNE2_ID) == 9 :
-            st.giveItems(HUNTERS_RUNE2_ID,1)
-            st.giveItems(TALISMAN_OF_SNAKE_ID,1)
-            st.set("cond","7")
-            st.playSound("Itemsound.quest_middle")
-          else:
-            st.giveItems(HUNTERS_RUNE2_ID,1)
-            st.playSound("Itemsound.quest_itemget")
-   elif npcId == 270 :
-      if int(st.get("cond")) and int(st.get("cond")) == 6 and st.getQuestItemsCount(HUNTERS_RUNE2_ID) < 10 :
-        if st.getRandom(2) == 1 :
-          if st.getQuestItemsCount(HUNTERS_RUNE2_ID) == 9 :
-            st.giveItems(HUNTERS_RUNE2_ID,1)
-            st.giveItems(TALISMAN_OF_SNAKE_ID,1)
-            st.set("cond","7")
-            st.playSound("Itemsound.quest_middle")
-          else:
-            st.giveItems(HUNTERS_RUNE2_ID,1)
-            st.playSound("Itemsound.quest_itemget")
-   elif npcId == 5090 :
-      if int(st.get("cond")) and int(st.get("cond")) == 13 and st.getQuestItemsCount(TALISMAN_OF_KADESH_ID) == 0 :
-        if st.getQuestItemsCount(CRESCENT_MOON_BOW_ID) > 0 :
-          st.giveItems(TALISMAN_OF_KADESH_ID,1)
-          st.set("cond","14")
-          st.playSound("Itemsound.quest_middle")
-        else:
-          st.spawnNpc(5090)
-   elif npcId == 551 :
-      if int(st.get("cond")) and int(st.get("cond")) == 10 and st.getQuestItemsCount(MITHRIL_CLIP_ID) == 0 :
-        if st.getRandom(10) == 1 :
-          if st.getQuestItemsCount(ST_BOWSTRING_ID) and st.getQuestItemsCount(MANASHENS_HORN_ID) and st.getQuestItemsCount(STAKATO_CHITIN_ID) :
-            st.giveItems(MITHRIL_CLIP_ID,1)
-            st.set("cond","11")
-            st.playSound("Itemsound.quest_middle")
-          else:
-            st.giveItems(MITHRIL_CLIP_ID,1)
-            st.playSound("Itemsound.quest_itemget")
+   condition, dropcondition, maxcount, chance, itemid = DROPLIST[npcId]
+   random = st.getRandom(100)
+   
+   if int(st.get("cond")) == condition and st.getQuestItemsCount(itemid)<maxcount and random < chance:
+    if dropcondition == 1:
+     if st.getQuestItemsCount(itemid)== maxcount-1 : 
+      giveMiddle(st,itemid,condition)
+      if npcId==269 or npcId == 270:
+       st.giveItems(TALISMAN_OF_SNAKE_ID,1)
+     else:
+      giveNormal(st,itemid)
+    elif dropcondition == 2 :
+     if ((st.getQuestItemsCount(itemid)-120)*5)> st.getRandom(100) :
+      st.spawnNpc(5090)
+      st.takeItems(itemid, st.getQuestItemsCount(itemid))
+      st.playSound("Itemsound.quest_before_battle")
+     else:
+      giveNormal(st,itemid)
+    elif dropcondition == 3 :
+     if st.getItemEquipped(7)==CRESCENT_MOON_BOW_ID:
+      giveMiddle(st,itemid,condition)
+     else:
+      st.spawnNpc(5090)
+    elif dropcondition == 4 :
+     if st.getQuestItemsCount(MITHRIL_CLIP_ID) and st.getQuestItemsCount(ST_BOWSTRING_ID) and st.getQuestItemsCount(MANASHENS_HORN_ID) : 
+      giveMiddle(st,itemid,condition)
+     else:
+      giveNormal(st,itemid)
+    elif dropcondition == 5:
+     if st.getQuestItemsCount(MITHRIL_CLIP_ID) and st.getQuestItemsCount(ST_BOWSTRING_ID) and st.getQuestItemsCount(STAKATO_CHITIN_ID) :
+      giveMiddle(st,itemid,condition)
+     elif st.getQuestItemsCount(MITHRIL_CLIP_ID) and st.getQuestItemsCount(MANASHENS_HORN_ID) and st.getQuestItemsCount(STAKATO_CHITIN_ID) :
+      giveMiddle(st,itemid,condition)
+     elif st.getQuestItemsCount(ST_BOWSTRING_ID) and st.getQuestItemsCount(MANASHENS_HORN_ID) and st.getQuestItemsCount(STAKATO_CHITIN_ID) :
+      giveMiddle(st,itemid,condition)
+     else:
+      giveNormal(st,itemid)
    return
+   
 
+  
 QUEST       = Quest(224,"224_TestOfSagittarius","Test Of Sagittarius")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
@@ -411,63 +257,8 @@ QUEST.addStartNpc(7702)
 
 STARTING.addTalkId(7702)
 
-STARTED.addTalkId(7514)
-STARTED.addTalkId(7626)
-STARTED.addTalkId(7653)
-STARTED.addTalkId(7702)
-STARTED.addTalkId(7717)
+for npcId in [7514,7626,7653,7702,7717]:
+    STARTED.addTalkId(npcId)
 
-STARTED.addKillId(230)
-STARTED.addKillId(232)
-STARTED.addKillId(233)
-STARTED.addKillId(234)
-STARTED.addKillId(269)
-STARTED.addKillId(270)
-STARTED.addKillId(5090)
-STARTED.addKillId(551)
-STARTED.addKillId(563)
-STARTED.addKillId(577)
-STARTED.addKillId(578)
-STARTED.addKillId(579)
-STARTED.addKillId(580)
-STARTED.addKillId(581)
-STARTED.addKillId(582)
-STARTED.addKillId(79)
-STARTED.addKillId(80)
-STARTED.addKillId(81)
-STARTED.addKillId(82)
-STARTED.addKillId(84)
-STARTED.addKillId(86)
-STARTED.addKillId(89)
-STARTED.addKillId(90)
-
-STARTED.addQuestDrop(269,HUNTERS_RUNE2_ID,1)
-STARTED.addQuestDrop(270,HUNTERS_RUNE2_ID,1)
-STARTED.addQuestDrop(7717,CRESCENT_MOON_BOW_ID,1)
-STARTED.addQuestDrop(5090,TALISMAN_OF_KADESH_ID,1)
-STARTED.addQuestDrop(577,BLOOD_OF_LIZARDMAN_ID,1)
-STARTED.addQuestDrop(578,BLOOD_OF_LIZARDMAN_ID,1)
-STARTED.addQuestDrop(579,BLOOD_OF_LIZARDMAN_ID,1)
-STARTED.addQuestDrop(580,BLOOD_OF_LIZARDMAN_ID,1)
-STARTED.addQuestDrop(581,BLOOD_OF_LIZARDMAN_ID,1)
-STARTED.addQuestDrop(582,BLOOD_OF_LIZARDMAN_ID,1)
-STARTED.addQuestDrop(7702,BERNARDS_INTRODUCTION_ID,1)
-STARTED.addQuestDrop(79,HUNTERS_RUNE1_ID,1)
-STARTED.addQuestDrop(80,HUNTERS_RUNE1_ID,1)
-STARTED.addQuestDrop(81,HUNTERS_RUNE1_ID,1)
-STARTED.addQuestDrop(82,HUNTERS_RUNE1_ID,1)
-STARTED.addQuestDrop(84,HUNTERS_RUNE1_ID,1)
-STARTED.addQuestDrop(86,HUNTERS_RUNE1_ID,1)
-STARTED.addQuestDrop(89,HUNTERS_RUNE1_ID,1)
-STARTED.addQuestDrop(90,HUNTERS_RUNE1_ID,1)
-STARTED.addQuestDrop(7626,LETTER_OF_HAMIL1_ID,1)
-STARTED.addQuestDrop(269,TALISMAN_OF_SNAKE_ID,1)
-STARTED.addQuestDrop(270,TALISMAN_OF_SNAKE_ID,1)
-STARTED.addQuestDrop(7626,LETTER_OF_HAMIL2_ID,1)
-STARTED.addQuestDrop(7626,LETTER_OF_HAMIL3_ID,1)
-STARTED.addQuestDrop(551,MITHRIL_CLIP_ID,1)
-STARTED.addQuestDrop(230,STAKATO_CHITIN_ID,1)
-STARTED.addQuestDrop(232,STAKATO_CHITIN_ID,1)
-STARTED.addQuestDrop(234,STAKATO_CHITIN_ID,1)
-STARTED.addQuestDrop(233,ST_BOWSTRING_ID,1)
-STARTED.addQuestDrop(563,MANASHENS_HORN_ID,1)
+for mobId in [230,232,233,234,269,270,5090,551,563,577,578,579,580,581,582,79,80,81,82,84,86,89,90]:
+    STARTED.addKillId(mobId)

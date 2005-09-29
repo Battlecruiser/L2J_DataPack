@@ -198,7 +198,7 @@ class Quest (JQuest) :
    elif npcId == 5132 :
     if int(st.get("cond")) == 13 :
       st.set("cond","14")
-   elif npcId == 105 :
+   elif npcId == 404 :
     if int(st.get("cond")) == 16 and st.getQuestItemsCount(BONE_FRAGMENT4_ID) == 0 :
       st.giveItems(BONE_FRAGMENT4_ID,1)
    elif npcId == 104 :
@@ -239,7 +239,7 @@ STARTED.addTalkId(7668)
 STARTED.addKillId(100)
 STARTED.addKillId(102)
 STARTED.addKillId(104)
-STARTED.addKillId(105)
+STARTED.addKillId(404)
 STARTED.addKillId(22)
 STARTED.addKillId(5099)
 STARTED.addKillId(5128)
@@ -260,7 +260,7 @@ STARTED.addQuestDrop(7667,RAMUSS_LETTER_ID,1)
 STARTED.addQuestDrop(7666,SLAS_LETTER_ID,1)
 STARTED.addQuestDrop(5130,LETTER_OF_BETRAYER_ID,1)
 STARTED.addQuestDrop(7666,GREETINGS_ID,1)
-STARTED.addQuestDrop(105,BONE_FRAGMENT4_ID,1)
+STARTED.addQuestDrop(404,BONE_FRAGMENT4_ID,1)
 STARTED.addQuestDrop(104,BONE_FRAGMENT5_ID,1)
 STARTED.addQuestDrop(102,BONE_FRAGMENT6_ID,1)
 STARTED.addQuestDrop(22,BONE_FRAGMENT7_ID,1)
