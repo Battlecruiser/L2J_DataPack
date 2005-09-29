@@ -1795,6 +1795,7 @@ class Quest (JQuest) :
  def onTalk (Self,npcId,st):
    htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
    st.setState(STARTED)
+   st.set("cond","0")
    return "1.htm"
 
 QUEST       = Quest(1007,"1007_enhance","Blacksmith")
