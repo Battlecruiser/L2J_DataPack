@@ -104,7 +104,11 @@ class Quest (JQuest) :
           htmltext = "7157-03.htm"
         elif st.getQuestItemsCount(ARUJIENS_LETTER1_ID) or st.getQuestItemsCount(ARUJIENS_LETTER2_ID) or st.getQuestItemsCount(ARUJIENS_LETTER3_ID) :
           htmltext = "7157-01.htm"
-   return htmltext
+        elif event == "7223-03.htm" :
+          htmltext = "7223-03.htm"
+        return htmltext
+
+
 
 QUEST       = Quest(2,"2_WhatWomenWant1","What Women Want1")
 CREATED     = State('Start', QUEST)
