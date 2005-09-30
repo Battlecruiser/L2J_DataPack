@@ -2,6 +2,7 @@
 -1 constant true
 
 "config/access.f" INCLUDED
+"config/server-specific.f" INCLUDED
 
 constants/items
 constants/pets

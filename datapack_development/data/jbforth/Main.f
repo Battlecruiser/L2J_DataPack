@@ -16,4 +16,6 @@ actions
 events
 disablers
 
+l2j/jbf-load-end
+
 "all JBForth files loaded" .

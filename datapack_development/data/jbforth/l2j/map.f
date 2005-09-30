@@ -5,31 +5,3 @@
 	player@ "Y" p@
 	player@ "Z" p@
 ;
-
-: map>loc  ( map_x map_y -- loc_x loc_y )
-	\ map-coordinates to server-coordinates.
-	dup 39 < if
-		12198.6   f* 539062.8  f- \ Elmor
-	else
-		12178.364 f* 505265.57 f- \ Aden
-	then
-
-	swap
-
-	12191.92  f* 559420.12 f-
-
-	0 +
-	swap 0 +
-;
-
-: loc>map  ( loc_x loc_y -- map_x map_y )
-	\ server-coordinates to map-coordinates
-    dup -30500 < if
-    	539062.8  f+ 12198.6   f/
-   	else
-		505265.57 f+ 12178.364 f/
-	then
-	swap
-	559420.12 f+ 12191.92  f/
-	swap
-;

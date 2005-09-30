@@ -1,3 +1,8 @@
+null value jbf_restarted?
+
+: jbf_restart_check  ( -- )  jbf_restarted? null? not to jbf_restarted? ;
+jbf_restart_check
+
 : MYTARGET@  ( -- my_target_oid )
 	PLAYER@ TARGET@
 ;

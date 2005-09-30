@@ -1,6 +1,16 @@
+: adena#  ( -- count )
+	\ Get adena for curent player
+	player@ adena@
+;
+
 : adena?  ( n -- n f )
 	\ Have current player n adena or not?
-	player@ adena@ over >=
+	adena# over >=
+;
+
+: items#  ( item_id -- count )
+	\ Return count of items for curent player
+	player@ inventory?
 ;
 
 : item_add  ( count item_id -- ) \ add count items to current player
@@ -18,6 +28,18 @@
 	%adena swap player@ inventory-!
 ;
 
+: items_remove  ( count_to_remove item_id -- ) 
+	\ remove count items from inventory. Exit from calling word if not have.
+	2dup items# (  count_to_remove  item_id  count_to_remove have_count  )
+	> if \ not enough items
+		"Not enough items. Need " .
+		over .						\ print count
+		.							\ print item name
+		1 > if "s" . then			\ print "s" if multiple items
+		rdrop exit					\ exit from calling word
+	then
+	swap player@ inventory-! drop
+;
 
 l2j/var-load
 l2j/map
@@ -51,13 +73,4 @@ null uvalue back-coordinates
 
 : unparalyze ( target -- )
 	0 swap "Paralyzed" set(b)
-;
-
-: gm_xtest 	"gm_xtest:" . . ;
-: user_test 	"user_test:" . . ;
-: bypass_test 	"bypass_test:" . . ;
-: gm_stest
-	'<a action="bypass -h gm_xtest">gm_xtest</a><br>'
-	'<a action="bypass -h jbf_test">jbf_test</a><br>' s+
-	show
 ;
