@@ -10,3 +10,8 @@
 	"polymorph" check-access  
 	player@ target@ unpoly 
 ;
+
+: gm_ipoly  ( "item_id" -- )  
+	"polymorph" check-access  
+	player@ target@ ipoly 
+;

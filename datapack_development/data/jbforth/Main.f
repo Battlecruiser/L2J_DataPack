@@ -19,3 +19,6 @@ disablers
 l2j/jbf-load-end
 
 "all JBForth files loaded" .
+
+true to event?
+0 value name

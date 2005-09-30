@@ -4,21 +4,3 @@
 player@ "Name" p@    " is online " S+  "System" shout
 
 suv-load-all	\	load saveable user vars
-
-
-
-
-
-
-\ ================================
-\ Load users vars. Not working now
-\ ================================
-
-\ statement = con.prepareStatement("SELECT name,value FROM character_quests WHERE char_id=? AND var=?");
-
-\ "SELECT `name`, `value` FROM `character_quests` WHERE `char_id`=" 
-\ 	player@ "ObjectId" p@ +
-\	" AND `var`='jbforth_user_var';" +
-
-\ query
-

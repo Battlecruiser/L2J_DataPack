@@ -6,21 +6,21 @@
   REPEAT DROP
 ;
 
-: IsDelimiter ( char -- flag )
+: IsDelimiter  ( char -- flag )
   BL 1+ <
 ;
 
-: GetChar ( -- char flag )
+: GetChar  ( -- char flag )
   EndOfChunk
   IF 0 FALSE
   ELSE PeekChar TRUE THEN
 ;
 
-: OnDelimiter ( -- flag )
+: OnDelimiter  ( -- flag )
   GetChar SWAP IsDelimiter AND
 ;
 
-: SkipDelimiters ( -- ) \ пропустить пробельные символы
+: SkipDelimiters  ( -- ) \ пропустить пробельные символы
   BEGIN
     OnDelimiter
   WHILE
@@ -28,7 +28,7 @@
   REPEAT
 ;
 
-: NextWord ( -- c-addr u )
+: NextWord  ( -- c-addr u )
   \ это слово теперь будем использовать в INTERPRET
   \ - удобнее: не использует WORD и, соответственно, не мусорит в HERE;
   \ и разделителями считает все что <=BL, в том числе TAB и CRLF

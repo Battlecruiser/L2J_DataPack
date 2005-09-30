@@ -1,5 +1,3 @@
-variable _doors_table
-
 null value doors-table
 
 : id>door  ( door_id -- door_object )

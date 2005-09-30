@@ -8,7 +8,8 @@
 		exit
 	then
 	
-	back-coordinates 0= if
+	back-coordinates if
+	else
 		player@ coords@ coords>s to back-coordinates
 	then
 	

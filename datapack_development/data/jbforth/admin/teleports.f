@@ -1,14 +1,12 @@
 \ GM teleport commands
 
-0 value x   0 value y   0 value z
-
-: gm_all_to_me \ move all player in world to calling GM
+: gm_all-to-me \ move all player in world to calling GM
 
 	"teleport" check-access			\ check access level
 	
-	player@ coords@ to z to y to z	\ save coordinates of caller
+	player@ coords@ coords>s
 
-	"x y z player@ jump" do-players	\ jump (teleport) to saved coordinates all players
+	" player@ jump" s+ do-players	\ jump (teleport) to saved coordinates all players
 ;
 
 : gm_bm+ \ bookmark current location by name: //bm+ cool place
@@ -26,4 +24,15 @@
 		rdrop
 		s>coords if	jump else drop then
 	then
+;
+
+: gm_rcl-tp	\ Recall target player to GM position: //rcl-tp
+	"spawn" check-access
+	player@ coords@
+	player@ target@ teleport-player-to
+;
+
+: gm_to-npc  ( npc-id -- )
+	"teleport" check-access
+	find-by-npc_id coords@ jump
 ;

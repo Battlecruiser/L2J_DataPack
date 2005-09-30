@@ -8,6 +8,13 @@ true value players-can-ride-hair
 	"Ride time is over.<br><br>Welcome back again!" show
 ;
 
+: do-limited-ride  ( pet time -- flag )
+	swap player@ ride 0= if rdrop exit then
+	1000 *  dup
+	3  player@ gauge
+	"ride-over"  swap  timer-start
+;
+
 : temporary-ride ( pet time price -- )
 	players-can-ride-hair not if 3 ndrop "Can't ride now" . exit then
 
@@ -20,12 +27,9 @@ true value players-can-ride-hair
 	
 	( pet time adena )
 
-	rot player@ ride 0= if 2drop exit then
-	over 1000 *  3  player@ gauge
-	
-	( time adena )
+	rot rot do-limited-ride
 
-	swap  1000 *  "ride-over"  swap  timer-start
+	( adena )
 
 	dup player@ adena-!
 	"You loose" . . "adena." .

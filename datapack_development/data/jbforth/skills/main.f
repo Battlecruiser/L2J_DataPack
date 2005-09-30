@@ -74,7 +74,7 @@ make-skill
 : calc-modif-success ( modifier -- rate )
 	self level@    target level@    modifyer	\ rate = (activeChar.getLevel()-target.getLevel())/(activeChar.getLevel()+target.getLevel());
 	skill "Power" p@   sqrt   1 f+   f* 		\ rate *= 1. + Math.sqrt(skill.getPower())
-	skill level@ f*					\ rate *= skill.getLevel()
+	skill level@ f*								\ rate *= skill.getLevel()
 
 	norm	\ 0.5 + Math.atan(rate)/Math.Pi
 	
@@ -86,21 +86,17 @@ make-skill
 
 0 uvalue calc-stat-modif
 
-: calc-success  ( -- flag )
-	self target skill matk
-	self target skill mdef
-	f/									\ matk/mdef
-	self level@  f* target level@ f/	\ my_lev/targ_lev
-	dup f* 								\ sqr
+: calc-success  ( coeff -- flag )
+	self level@   target level@   f/ 
 	
 	skill "Power" p@ dup 0. f> if
 		f*
 		3. f*
-		calc-stat-modif f/
+		calc-stat-modif f*
 	else
 		drop 
 		skill level@ 3. f+ f*
-		calc-stat-modif	f/					\ *= (skill_level+2)*10/targetWit
+		calc-stat-modif	f*					\ *= (skill_level+2)*10/targetWit
 	then
 
 	atan pi f/ 2. f*
@@ -109,17 +105,28 @@ make-skill
 	rnd f>
 ;
 
-: calc-modif  ( modify "type" -- flag )
-	target swap p@	swap f/ to calc-stat-modif
+: calc-matk-modif  ( modify "type" -- flag )
+	target swap p@	f/ 
+	self target skill matk
+	target self skill mdef
+	f/	sqrt							\ matk/mdef
+	f*
+	to calc-stat-modif
 	calc-success
 ;	
 
-: calc-PARALYZE-success	( -- flag )	   2. "WIT" calc-modif ;
-: calc-SLEEP-success	( -- flag )  100. "WIT" calc-modif ;
+: calc-patk-modif  ( modify "type" -- flag )
+	target swap p@	f/ 
+	to calc-stat-modif
+	calc-success
+;	
+
+: calc-PARALYZE-success	( -- flag )	 0.5 "WIT" calc-matk-modif ;
+: calc-SLEEP-success	( -- flag )   2 "WIT" calc-matk-modif ;
 
 : calc-PDAM-success
-	skill "Id" p@ 100 = if
-		1 "CON" calc-modif
+	skill "Id" p@ { 48 81 92 100 101 120 4063 4072 4073 4075 260 281 4120 } in-list? if
+		0.3 "CON" calc-patk-modif
 		exit
 	then
 
