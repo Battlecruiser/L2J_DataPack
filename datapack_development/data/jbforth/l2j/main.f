@@ -51,7 +51,7 @@ null value server_config
 null value event-coordinates
 false value event?
 
-null uvalue back-coordinates
+false suvalue back-coordinates
 
 0 uvalue killer
 0 uvalue self

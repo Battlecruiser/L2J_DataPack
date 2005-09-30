@@ -14,7 +14,7 @@ false 	suvalue jailed?
 
 	loc@ coords>s to jail-coords-back
 
-	"You are jailed! To free you must collect " jail-to-collect s+ " item(s) from killed mobs" s+ "Jail system" player@ tell
+	"You are jailed! To free you must collect " jail-to-collect s+ " item(s) from killed mobs" s+ "Jail system" player@ .tell
 	jail-coords list-rev> drop jump
 ;
 
@@ -22,7 +22,7 @@ false 	suvalue jailed?
 	0 		to jail-to-collect
 	false 	to jailed
 	
-	"You are freed!" "Jail system" player@ tell
+	"You are freed!" "Jail system" player@ .tell
 	jail-coords-back s>coords drop jump
 ;
 
@@ -38,8 +38,8 @@ false 	suvalue jailed?
 ;
 
 : on-player-escape
-	jailed? if 
-		"You are jailed yet." "Jail system" player@ tell
+	jailed? -1 = if 
+		"You are jailed yet." "Jail system" player@ .tell
 		jail-coords list-rev> drop
 	else
 		0 0 0
@@ -50,5 +50,5 @@ false 	suvalue jailed?
 	jail-check
 ;
 
-: jt	1 "jail-me" player@ do-player ;
-: js	1 "jail-stop" player@ do-player ;
+: to-jail	1 "jail-me" player@ target@ do-player ;
+: from-jail	1 "jail-stop" player@ target@ do-player ;

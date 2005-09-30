@@ -1,12 +1,26 @@
 \ GM teleport commands
 
+: coords-randomize ( x y z n -- )
+	swap >r >r
+	r@ 2 * choose + r@ -
+	swap
+	r@ 2 * choose + r@ -
+	swap
+	rdrop
+	r>
+;
+
+: all-to-me-notify
+	"You moved by admin. You can return to previous place by '.back' command." "Jump system" player@ .tell
+;
+
 : gm_all-to-me \ move all player in world to calling GM
 
 	"teleport" check-access			\ check access level
 	
 	player@ coords@ coords>s
 
-	" player@ jump" s+ do-players	\ jump (teleport) to saved coordinates all players
+	" player@ coords@ coords>s to back-coordinates all-to-me-notify 100 coords-randomize jump" s+ do-players	\ jump (teleport) to saved coordinates all players
 ;
 
 : gm_bm+ \ bookmark current location by name: //bm+ cool place
