@@ -1622,7 +1622,7 @@ insert  into etcitem values
 ('2715','kasians_list','false','none','0','stackable','steel','none','100','0',0,'false'),
 ('2716','ghouls_skin','false','none','0','stackable','steel','none','100','0',0,'false'),
 ('2717','medusas_blood','false','none','0','stackable','steel','none','100','0',0,'false'),
-('2718','crimsonbinds_ichor','false','none','0','stackable','steel','none','100','0',0,'false'),
+('2718','fetteredsouls_ichor','false','none','0','stackable','steel','none','100','0',0,'false'),
 ('2719','encht_gargoyles_nail','false','none','0','stackable','steel','none','100','0',0,'false'),
 ('2720','symbol_of_cronos','false','none','0','stackable','steel','none','100','0',0,'false'),
 ('2721','mark_of_pilgrim','false','none','0','stackable','steel','none','100','0',0,'false'),
