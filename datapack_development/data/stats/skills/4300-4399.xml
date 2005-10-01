@@ -362,7 +362,7 @@
   <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="3600" val="0">
+  <effect count="1" name="Buff" time="3600" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
     <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
  </effect>
 </for>
@@ -378,7 +378,7 @@
   <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="3600" val="0">
+  <effect count="1" name="Buff" time="3600" val="0" stackOrder="#rate" stackType="pDef">
     <mul order="0x50" stat="pDef" val="#rate"/>
   </effect>
 </for>
@@ -442,7 +442,7 @@
   <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="3600" val="0">
+  <effect count="1" name="Buff" time="3600" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpeedUp">
     <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
  </effect>
 </for>
@@ -474,7 +474,7 @@
   <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="3600" val="0">
+  <effect count="1" name="Buff" time="3600" val="0" stackOrder="#Tab-mAtkSpd" stackType="mAtkSpeedUp">
     <mul order="0x50" stat="mAtkSpd" val="#rate"/>
   </effect>
 </for>
@@ -496,7 +496,7 @@
   </for>
 </skill>
 <skill id="4331" levels="1" name="Empower For Novice">
-  <table name="#rate"> 1.55 </table>
+  <table name="#Tab-mAtk"> 1.55 </table>
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="12"/>
@@ -506,8 +506,8 @@
   <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="3600" val="0">
-    <mul order="0x50" stat="mAtk" val="#rate"/>
+  <effect count="1" name="Buff" time="3600" val="0" stackOrder="#Tab-mAtk" stackType="mAtk">
+    <mul order="0x50" stat="mAtk" val="#Tab-mAtk"/>
   </effect>
 </for>
 </skill>
