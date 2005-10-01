@@ -5,12 +5,22 @@ false 	suvalue jailed?
 0 		suvalue jail-total-collected
 "0 0 0"	suvalue	jail-coords-back
 
+: items:remove-all ( item-id -- )
+	dup items# ?dup if
+		swap items_remove
+	else
+		drop
+	then
+;
+
 : jail-me ( items_count -- )
 	int to jail-to-collect
 
-	jail-to-collect jail-total-collected +  to jail-total-collected
+	jail-to-collect jail-total-collected + to jail-total-collected
 	
 	true to jailed?
+
+	{ 736 1538 1829 1830 3958 4677 5858 5859 } "items:remove-all" do-list
 
 	loc@ coords>s to jail-coords-back
 
@@ -38,7 +48,7 @@ false 	suvalue jailed?
 ;
 
 : on-player-escape
-	jailed? -1 = if 
+	jailed? -1 = 0 and if 
 		"You are jailed yet." "Jail system" player@ .tell
 		jail-coords list-rev> drop
 	else
@@ -50,5 +60,5 @@ false 	suvalue jailed?
 	jail-check
 ;
 
-: to-jail	1 "jail-me" player@ target@ do-player ;
-: from-jail	1 "jail-stop" player@ target@ do-player ;
+: jail	1 "jail-me" player@ target@ do-player ;
+: unjail	1 "jail-stop" player@ target@ do-player ;

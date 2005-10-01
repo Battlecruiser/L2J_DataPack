@@ -1,2 +1,2 @@
 service/teleport
-service/jail
+\ service/jail
