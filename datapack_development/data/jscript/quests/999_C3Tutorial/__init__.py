@@ -313,7 +313,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npcId,st):
-   if npcId == 1 :
+   if npcId == 5198 :
       if int(st.get("cond"))==1 and st.getRandom(100) < 50 :
         if st.getQuestItemsCount(BLUE_GEM_ID) == 0 :
             st.giveItems(BLUE_GEM_ID,1)
