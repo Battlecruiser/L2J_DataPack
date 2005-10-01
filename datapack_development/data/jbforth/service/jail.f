@@ -20,7 +20,7 @@ false 	suvalue jailed?
 
 : jail-stop ( -- )
 	0 		to jail-to-collect
-	false 	to jailed
+	false 	to jailed?
 	
 	"You are freed!" "Jail system" player@ .tell
 	jail-coords-back s>coords drop jump

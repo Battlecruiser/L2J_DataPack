@@ -1,6 +1,13 @@
 \ Word to loads user-defined vars from character_quests table
 
 : uv@ ( var-name -- value )
+	
+	player@ null? if
+		drop
+		.rs
+		null exit
+	then
+
 	"select value from character_quests where char_id = " player@ "ObjectId" p@ s+
 	" and name='user-var' and var='" s+
 	swap >slashes s+
@@ -27,6 +34,7 @@ new-list value suv-list
 : suvalue  ( val -- \ name )
 	value
 	last-word suv-list list+
+	player@ null? if exit then
 	last-word uv@  dup null? if
 		drop
 	else
@@ -55,4 +63,3 @@ new-list value suv-list
 		"suv-load-all" do-players
 	then
 ; suv-jbf-restart-check
-	
