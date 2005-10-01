@@ -30,6 +30,7 @@ echo Installling new content.
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/armor.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/boxaccess.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/boxes.sql
+%mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/castle.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/castle_guards.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/castle_guards_skills.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/char_templates.sql
