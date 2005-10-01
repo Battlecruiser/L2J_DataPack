@@ -464,7 +464,7 @@
 </for>
 </skill>
 <skill id="4329" levels="1" name="Acumen For Novice">
-  <table name="#rate"> 1.15 </table>
+  <table name="#Tab-mAtkSpd"> 1.15 </table>
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="10"/>
@@ -475,7 +475,7 @@
   <set name="castRange" val="400"/>
   <for>
   <effect count="1" name="Buff" time="3600" val="0" stackOrder="#Tab-mAtkSpd" stackType="mAtkSpeedUp">
-    <mul order="0x50" stat="mAtkSpd" val="#rate"/>
+    <mul order="0x50" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
   </effect>
 </for>
 </skill>
