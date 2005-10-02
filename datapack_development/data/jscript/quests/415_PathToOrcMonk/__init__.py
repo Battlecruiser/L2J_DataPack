@@ -39,8 +39,10 @@ class Quest (JQuest) :
           if st.getPlayer().getClassId().getId() != 0x2c :
             if st.getPlayer().getClassId().getId() == 0x2f :
               htmltext = "7587-02a.htm"
+              st.exitQuest(1)
             else:
               htmltext = "7587-02.htm"
+              st.exitQuest(1)
           else:
             if st.getPlayer().getLevel()<19 :
               htmltext = "7587-03.htm"
@@ -68,11 +70,10 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 7587 and int(st.get("cond"))==0 :
-        if int(st.get("cond"))<15 :
-          htmltext = "7587-01.htm"
-        else:
-          htmltext = "7587-01.htm"
+   if npcId == 7587 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+        htmltext = "7587-01.htm"
+   elif npcId == 7587 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+      htmltext = "7587-04.htm"
    elif npcId == 7587 and int(st.get("cond")) and st.getQuestItemsCount(SCROLL_FIERY_SPIRIT_ID)==0 and st.getQuestItemsCount(POMEGRANATE_ID)==1 and st.getQuestItemsCount(GANTAKIS_LETTER_ID)==0 and st.getQuestItemsCount(ROSHEEKS_LETTER_ID)==0 and ((st.getQuestItemsCount(LEATHER_POUCH1_ID)+st.getQuestItemsCount(LEATHER_POUCH2_ID)+st.getQuestItemsCount(LEATHER_POUCH3_ID)+st.getQuestItemsCount(LEATHER_POUCH1FULL_ID)+st.getQuestItemsCount(LEATHER_POUCH2FULL_ID)+st.getQuestItemsCount(LEATHER_POUCH3FULL_ID))==0) :
         htmltext = "7587-07.htm"
    elif npcId == 7587 and int(st.get("cond")) and st.getQuestItemsCount(SCROLL_FIERY_SPIRIT_ID)==0 and st.getQuestItemsCount(POMEGRANATE_ID)==0 and st.getQuestItemsCount(GANTAKIS_LETTER_ID)==0 and st.getQuestItemsCount(ROSHEEKS_LETTER_ID)==0 and ((st.getQuestItemsCount(LEATHER_POUCH1_ID)+st.getQuestItemsCount(LEATHER_POUCH2_ID)+st.getQuestItemsCount(LEATHER_POUCH3_ID)+st.getQuestItemsCount(LEATHER_POUCH1FULL_ID)+st.getQuestItemsCount(LEATHER_POUCH2FULL_ID)+st.getQuestItemsCount(LEATHER_POUCH3FULL_ID))==1) :
@@ -133,6 +134,7 @@ class Quest (JQuest) :
         st.takeItems(TORUKUS_LETTER_ID,1)
         st.giveItems(KHAVATARI_TOTEM_ID,1)
         st.set("cond","0")
+        st.set("onlyone","1")
         st.setState(COMPLETED)
         st.playSound("ItemSound.quest_finish")
    elif npcId == 7591 and int(st.get("cond")) and st.getQuestItemsCount(FIG_ID) :
@@ -275,26 +277,3 @@ STARTED.addKillId(359)
 STARTED.addKillId(415)
 STARTED.addKillId(478)
 STARTED.addKillId(479)
-
-STARTED.addQuestDrop(7590,ROSHEEKS_LETTER_ID,1)
-STARTED.addQuestDrop(7587,POMEGRANATE_ID,1)
-STARTED.addQuestDrop(479,LEATHER_POUCH1FULL_ID,1)
-STARTED.addQuestDrop(478,LEATHER_POUCH2FULL_ID,1)
-STARTED.addQuestDrop(415,LEATHER_POUCH3FULL_ID,1)
-STARTED.addQuestDrop(479,KASHA_BEAR_CLAW_ID,1)
-STARTED.addQuestDrop(415,S_SALAMANDER_SCALE_ID,1)
-STARTED.addQuestDrop(478,KASHA_BSPIDER_TALON_ID,1)
-STARTED.addQuestDrop(7587,GANTAKIS_LETTER_ID,1)
-STARTED.addQuestDrop(7591,SCROLL_IRON_WILL_ID,1)
-STARTED.addQuestDrop(7590,SCROLL_FIERY_SPIRIT_ID,1)
-STARTED.addQuestDrop(7591,TORUKUS_LETTER_ID,1)
-STARTED.addQuestDrop(7501,FIG_ID,1)
-STARTED.addQuestDrop(17,LEATHER_POUCH4FULL_ID,1)
-STARTED.addQuestDrop(359,LEATHER_POUCH4FULL_ID,1)
-STARTED.addQuestDrop(24,LEATHER_POUCH4FULL_ID,1)
-STARTED.addQuestDrop(14,LEATHER_POUCH4FULL_ID,1)
-STARTED.addQuestDrop(17,VUKU_TUSK_ID,1)
-STARTED.addQuestDrop(359,RATMAN_FANG_ID,1)
-STARTED.addQuestDrop(24,LANGK_TOOTH_ID,1)
-STARTED.addQuestDrop(14,FELIM_TOOTH_ID,1)
-STARTED.addQuestDrop(7591,LEATHER_PURSE4_ID,1)
