@@ -10,6 +10,7 @@ mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/boxaccess.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/boxes.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/castle.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/castle_door.sql
+mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/castle_doorupgrade.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/castle_guards.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/castle_guards_skills.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/char_templates.sql
