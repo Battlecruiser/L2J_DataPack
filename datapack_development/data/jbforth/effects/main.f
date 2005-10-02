@@ -36,3 +36,7 @@ effects/dice
 : .trade  ( "text" "sender" -- )
 	2 >list "list> drop 'trade' swap 0 self say2" p-do-players
 ;
+
+: .to-caller ( "text" -- )
+	self "Name" p@ caller .tell
+;
