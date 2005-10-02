@@ -1,6 +1,3 @@
-true value player-online-notify
-true value player-offline-notify
-
 : adena#  ( -- count )
 	\ Get adena for curent player
 	player@ adena@
@@ -45,26 +42,12 @@ true value player-offline-notify
 ;
 
 l2j/var-load
-l2j/map
-l2j/teleports
-l2j/doors
-
-null value world
-null value server_config
-null value event-coordinates
-false value event?
 
 false suvalue back-coordinates
 
-0 uvalue killer
-0 uvalue self
-0 uvalue player
-0 uvalue char
-0 uvalue object
-0 uvalue target
-0 uvalue skill
-0 uvalue level
-0 uvalue caller
+l2j/map
+l2j/teleports
+l2j/doors
 
 
 : find_player  ( "name" -- player )  world "Player" get(s) ; \ Find player by his name
