@@ -38,7 +38,7 @@ false 	suvalue jailed?
 	0 		to jail-to-collect
 	false 	to jailed?
 	
-	jail-item dup items# swap items_remove
+	jail-item dup items# ?dup if swap items_remove else drop then
 	"You are freed!" "Jail system" player@ .tell
 	jail-coords-back s>coords drop jump
 ;
@@ -86,7 +86,7 @@ false 	suvalue jailed?
 	"log/game/jail.log" file-append
 
 
-	int "jail-me" player@ target@ do-player 
+	int "jail-me" player@ target@ p-do-player 
 ;
 
 : gm_unjail
@@ -98,5 +98,5 @@ false 	suvalue jailed?
 " s+
 	"log/game/jail.log" file-append
 
-	0 "jail-stop" player@ target@ do-player 
+	"jail-stop" player@ target@ do-player 
 ;

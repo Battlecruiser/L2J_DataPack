@@ -45,7 +45,7 @@
 new-list value suv-list
 
 : suvalue  ( val -- \ name )
-	value
+	uvalue
 	last-word suv-list list+
 	player@ null? if exit then
 	last-word uv@  dup null? if
