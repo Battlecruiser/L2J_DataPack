@@ -1,4 +1,10 @@
+\ Jail system by Balancer, (c) 2005
+
+\ You may change it properties
 { -78930 109530 -4895 } value jail-coords
+6353 constant	~BlueGemstone
+
+~BlueGemstone	constant jail-item
 
 false 	suvalue jailed?
 0 		suvalue jail-to-collect
@@ -32,23 +38,31 @@ false 	suvalue jailed?
 	0 		to jail-to-collect
 	false 	to jailed?
 	
+	jail-item dup items# swap items_remove
 	"You are freed!" "Jail system" player@ .tell
 	jail-coords-back s>coords drop jump
 ;
 
 : jail-check ( -- )
-	self "Level" p@ 10 *
-	killer "Level" p@ /
+	jailed? int 0= if rdrop rdrop exit then
+	
+	killer "Level" p@
+	self "Level" p@ /
 	choose 0 > if exit then
 	jail-to-collect 1- to jail-to-collect
-	1 57 item_add
+	1 jail-item item_add
 	jail-to-collect 0 > if exit then
-	57 dup items# swap items_remove
+
+	"Player " player@ target@ "Name" p@ s+
+	" collect all jail items and freed
+" s+
+	"log/game/jail.log" file-append
+
 	jail-stop
 ;
 
 : on-player-escape
-	jailed? -1 = 0 and if 
+	jailed? int if 
 		"You are jailed yet." "Jail system" player@ .tell
 		jail-coords list-rev> drop
 	else
@@ -56,9 +70,33 @@ false 	suvalue jailed?
 	then
 ;
 
-: on-npc-653-die
-	jail-check
+: on-npc-653-die	jail-check ;
+: on-npc-172-die	jail-check ;
+
+: gm_jail
+	"jail" check-access
+	dup 0= if
+		drop 100
+	then
+
+	"Player " player@ target@ "Name" p@ s+
+	" jailed by " s+ player@ "Name" p@ s+
+	" for " s+ over s+ " items
+" s+
+	"log/game/jail.log" file-append
+
+
+	int "jail-me" player@ target@ do-player 
 ;
 
-: jail	1 "jail-me" player@ target@ do-player ;
-: unjail	1 "jail-stop" player@ target@ do-player ;
+: gm_unjail
+	"jail" check-access
+	drop 
+
+	"Player " player@ target@ "Name" p@ s+
+	" unjailed by " s+ player@ "Name" p@ s+ "
+" s+
+	"log/game/jail.log" file-append
+
+	0 "jail-stop" player@ target@ do-player 
+;

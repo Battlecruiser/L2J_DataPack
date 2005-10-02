@@ -1,6 +1,7 @@
 \ Word to loads user-defined vars from character_quests table
 
 : uv@ ( var-name -- value )
+\	"Load " over s+ .
 	
 	player@ null? if
 		drop
@@ -17,9 +18,21 @@
 	?dup 0= if null exit then
 	1- ?dup if ndrop then
 	"value" m@
+\	" = " over s+ .
+;
+
+: uv-del ( var-name -- )
+	"delete from character_quests where char_id = "	player@ "ObjectId" p@ s+
+	" and name='user-var' and var='" s+
+	swap >slashes s+
+	"';" s+
+	update ?dup if . else drop then
 ;
 
 : uv! ( value var-name -- )
+\	2dup "Save " swap s+ "=" s+ swap s+ .
+	over null? if  nip uv-del exit	then
+		
 	"replace character_quests set name='user-var', char_id = "	player@ "ObjectId" p@ s+
 	", var='" s+
 	swap >slashes s+
@@ -63,3 +76,5 @@ new-list value suv-list
 		"suv-load-all" do-players
 	then
 ; suv-jbf-restart-check
+
+7 uvalue xt

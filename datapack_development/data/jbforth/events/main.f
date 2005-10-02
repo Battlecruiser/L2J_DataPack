@@ -34,3 +34,13 @@ games/CurrentEvent
 \ events/050925-Gillians_Way
 \ events/tests
 \ events/050928-kill-observer
+
+: gm_ptf
+	"admin" check-access
+	"{ "
+	player@ coords@ coords>s s+
+	" }" s+
+	"
+" s+
+	"data/jbforth/points.f" file-append
+;

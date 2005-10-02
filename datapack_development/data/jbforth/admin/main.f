@@ -12,3 +12,23 @@ admin/ride
 	'<button value="Unparalyze" action="bypass -h forth player@ target@ unparalyze" width=90 height=15 back="sek.cbui94" fore="sek.cbui92">' S+
 	show
 ;
+
+: gm_set-hp
+	\ Set target HP
+
+	"char-modify" check-access
+	
+	float
+	player@ target@
+	"CurrentHp" set(d)
+;
+
+: gm_set-mp
+	\ Set target HP
+
+	"char-modify" check-access
+	
+	float
+	player@ target@
+	"CurrentMp" set(d)
+;

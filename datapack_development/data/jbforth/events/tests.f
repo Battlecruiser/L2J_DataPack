@@ -1,13 +1,3 @@
-: gm_ptf
-	"admin" check-access
-	"{ "
-	player@ coords@ coords>s s+
-	" }" s+
-	"
-" s+
-	"data/jbforth/points.f" file-append
-;
-
 {
 { 115285 -182680 -1467 }
 { 115575 -182670 -1474 }

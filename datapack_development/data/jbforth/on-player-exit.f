@@ -1,5 +1,7 @@
 \ This file loaded at every player logout
 
 suv-save-all	\	save saveable user vars
-\ player@ "Name" p@    " is offline " S+  "System" .shout
+
+offline-notify
+
 sleep 1000

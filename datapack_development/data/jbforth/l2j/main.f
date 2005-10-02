@@ -1,3 +1,6 @@
+true value player-online-notify
+true value player-offline-notify
+
 : adena#  ( -- count )
 	\ Get adena for curent player
 	player@ adena@
