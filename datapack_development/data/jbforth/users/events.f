@@ -7,6 +7,8 @@
 		"Not any events now" show
 		exit
 	then
+
+	can-teleport? not if "You cannot be teleported" show exit then
 	
 	back-coordinates if
 	else
@@ -18,6 +20,8 @@
 
 
 : user_back
+	can-teleport? not if "You cannot be teleported" show exit then
+
 	back-coordinates if
 		back-coordinates s>coords if jump then
 	else

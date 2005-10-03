@@ -24,7 +24,8 @@ false 	suvalue jailed?
 
 	jail-to-collect jail-total-collected + to jail-total-collected
 	
-	true to jailed?
+	true 	to jailed?
+	false	to can-teleport?
 
 	{ 736 1538 1829 1830 3958 4677 5858 5859 } "items:remove-all" do-list
 
@@ -37,6 +38,7 @@ false 	suvalue jailed?
 : jail-stop ( -- )
 	0 		to jail-to-collect
 	false 	to jailed?
+	true	to can-teleport?
 	
 	jail-item dup items# ?dup if swap items_remove else drop then
 	"You are freed!" "Jail system" player@ .tell

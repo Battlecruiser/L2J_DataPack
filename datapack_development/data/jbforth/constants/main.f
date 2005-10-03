@@ -1,8 +1,8 @@
  0 constant false
 -1 constant true
 
-true value player-online-notify
-true value player-offline-notify
+false value player-online-notify
+false value player-offline-notify
 null value world
 null value server_config
 null value event-coordinates
@@ -20,6 +20,7 @@ false value event?
 0 uvalue level
 0 uvalue caller
 
+true uvalue can-teleport?
 
 "config/access.f" INCLUDED
 "config/version-specific.f" INCLUDED
