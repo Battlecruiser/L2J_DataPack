@@ -212,9 +212,11 @@ class Quest (JQuest) :
             st.spawnNpc(5056)
           elif st.getQuestItemsCount(DURKA_PARASITE_ID) >= 7 :
             st.spawnNpc(5056)
+            st.playSound("ItemSound.quest_itemget")
             st.takeItems(DURKA_PARASITE_ID,st.getQuestItemsCount(DURKA_PARASITE_ID))
           else:
             st.giveItems(DURKA_PARASITE_ID,1)
+            st.playSound("ItemSound.quest_itemget")
    elif npcId == 43 :
         st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(SPIRIT_NET_ID) == 1 and st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID) == 0 and st.getQuestItemsCount(DURKA_PARASITE_ID)<8 :
@@ -233,9 +235,11 @@ class Quest (JQuest) :
             st.spawnNpc(5056)
           elif st.getQuestItemsCount(DURKA_PARASITE_ID) >= 7 :
             st.spawnNpc(5056)
+            st.playSound("ItemSound.quest_itemget")
             st.takeItems(DURKA_PARASITE_ID,st.getQuestItemsCount(DURKA_PARASITE_ID))
           else:
             st.giveItems(DURKA_PARASITE_ID,1)
+            st.playSound("ItemSound.quest_itemget")
    elif npcId == 5056 :
         st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(SPIRIT_NET_ID) == 1 and st.getQuestItemsCount(BOUND_DURKA_SPIRIT_ID) == 0 :

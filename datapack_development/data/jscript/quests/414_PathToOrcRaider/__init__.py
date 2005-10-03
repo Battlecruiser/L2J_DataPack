@@ -177,83 +177,93 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 5046 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_SUE_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_SUE_REPORT_ID)>0 and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_SUE_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
           if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1:
+            st.playSound("ItemSound.quest_middle")
             st.set("cond","4")
    elif npcId == 5047 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_WANUK_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_WANUK_REPORT_ID)>0 and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_WANUK_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
           if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1:
+            st.playSound("ItemSound.quest_middle")
             st.set("cond","4")
    elif npcId == 5048 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_CHEWBA_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_CHEWBA_REPORT_ID)>0 and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_CHEWBA_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
           if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1 :
+            st.playSound("ItemSound.quest_middle")
             st.set("cond","4")                             
    elif npcId == 5049 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_HEITAFU_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_HEITAFU_REPORT_ID)>0 and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_HEITAFU_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
           if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1 :
+            st.playSound("ItemSound.quest_middle")
             st.set("cond","4")
    elif npcId == 5050 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_PICUBO_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_PICUBO_REPORT_ID)>0 and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_PICUBO_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
           if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1 :
+            st.playSound("ItemSound.quest_middle")
             st.set("cond","4")
    elif npcId == 5051 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_BUMBUM_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_BUMBUM_REPORT_ID)>0 and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_BUMBUM_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
           if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1 :
+            st.playSound("ItemSound.quest_middle")
             st.set("cond","4")
    elif npcId == 5052 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_MINSKU_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_MINSKU_REPORT_ID)>0 and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_MINSKU_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
           if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1 :
+            st.playSound("ItemSound.quest_middle")
             st.set("cond","4")
    elif npcId == 5053 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_CHUCHU_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_CHUCHU_REPORT_ID)>0 and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_CHUCHU_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
           if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1 :
+            st.playSound("ItemSound.quest_middle")
             st.set("cond","4")
    elif npcId == 5054 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID)>0 and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_UMBAR_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
           if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1 :
+            st.playSound("ItemSound.quest_middle")
             st.set("cond","4")
    elif npcId == 5055 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_ZAKAN_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_ZAKAN_REPORT_ID)>0 and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_ZAKAN_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
           if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1 :
+            st.playSound("ItemSound.quest_middle")
             st.set("cond","4")
    return
 

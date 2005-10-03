@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
-<skill id="4001" levels="8" name="Mega Storm Strike">
+<skill id="4001" levels="8" name="NPC Wind Strike">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 55 </table>
   <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 85.0 </table>
   <table name="#hitTime"> 4000 4000 4000 4000 4000 4000 4000 1000 </table>
@@ -20,7 +20,7 @@
   <for>
   </for>
 </skill>
-<skill id="4002" levels="7" name="Steal Blood">
+<skill id="4002" levels="7" name="Absorb NPC HP">
   <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
   <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -465,7 +465,7 @@
     <effect count="6" name="DamOverTime" time="5" val="#power" abnormal="poison"/>
   </for>
 </skill>
-<skill id="4036" levels="7" name="Toxic Smoke">
+<skill id="4036" levels="7" name="Poison">
   <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 </table>
   <set name="mpConsume" val="#mpConsume"/>

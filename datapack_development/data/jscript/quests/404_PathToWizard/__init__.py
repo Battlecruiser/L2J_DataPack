@@ -208,7 +208,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npcId,st):
-   if npcId == 359 :    #Ratmen
+   if npcId == 32 :    #PirnulSpider
         st.set("id","0")
         #Only get a KEY_OF_FLAME_ID if we are on the quest for the Fire Salamander
         if int(st.get("cond")) == 2 :
@@ -258,7 +258,7 @@ STARTED.addKillId(21)
 STARTED.addKillId(359)
 STARTED.addKillId(5030)
 
-STARTED.addQuestDrop(359,KEY_OF_FLAME_ID,1)
+STARTED.addQuestDrop(32,KEY_OF_FLAME_ID,1)
 STARTED.addQuestDrop(7411,MAP_OF_LUSTER_ID,1)
 STARTED.addQuestDrop(7410,WIND_FEATHER_ID,1)
 STARTED.addQuestDrop(7412,BROKEN_BRONZE_MIRROR_ID,1)

@@ -258,18 +258,17 @@ class Quest (JQuest) :
 
  def onKill (self,npcId,st):
    if npcId == 777 :
-#        st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(BEAR_PIC_ID) == 1 and st.getQuestItemsCount(HONEY_JAR_ID) < 5 :
           if int(st.get("id") > 20) :
             n = ((int(st.get("id"))-20)*10)
             if st.getRandom(100) <= n :
               st.spawnNpc(5058)
+              st.set("id","0")
             else:
               st.set("id",str(int(st.get("id"))+1))
           else:
             st.set("id",str(int(st.get("id"))+1))
    elif npcId == 5058 :
-        st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(BEAR_PIC_ID) == 1 and st.getQuestItemsCount(HONEY_JAR_ID) < 5 :
           if st.getQuestItemsCount(HONEY_JAR_ID) == 4 :
             st.giveItems(HONEY_JAR_ID,1)
@@ -279,7 +278,6 @@ class Quest (JQuest) :
             st.giveItems(HONEY_JAR_ID,1)
             st.playSound("ItemSound.quest_itemget")
    elif npcId == 403 :
-#        st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(TARANTULA_PIC_ID) == 1 and st.getQuestItemsCount(BEAD_ID) < 20 :
           if st.getRandom(2) == 0 :
             if st.getQuestItemsCount(BEAD_ID) == 19 :
@@ -290,7 +288,6 @@ class Quest (JQuest) :
               st.giveItems(BEAD_ID,1)
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 508 :
-#        st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(TARANTULA_PIC_ID) == 1 and st.getQuestItemsCount(BEAD_ID) < 20 :
           if st.getRandom(10) < 6 :
             if st.getQuestItemsCount(BEAD_ID) == 19 :
