@@ -13579,7 +13579,7 @@ INSERT INTO `spawnlist` VALUES (112535,'event_t21_22_tempest_02',1,689,0,0,0,0,0
 INSERT INTO `spawnlist` VALUES (112536,'event_t21_22_tempest_03',1,689,0,0,0,0,0,0,10800,3799);
 INSERT INTO `spawnlist` VALUES (112537,'event_oren_h_01',1,715,0,0,0,0,0,0,7200,3800);
 INSERT INTO `spawnlist` VALUES (112538,'event_oren_h_02',1,715,0,0,0,0,0,0,7200,3801);
-INSERT INTO `spawnlist` VALUES (112539,'event_aden_2319',1,719,0,0,0,0,0,0,18000,3802);
+INSERT INTO `spawnlist` VALUES (112539,'event_aden_2319',1,719,0,0,0,0,0,0,10800,3802);
 INSERT INTO `spawnlist` VALUES (112540,'event_orc_2013',1,721,0,0,0,0,0,0,7200,3803);
 INSERT INTO `spawnlist` VALUES (112541,'event_dwarf_2311',1,738,0,0,0,0,0,0,10800,3804);
 INSERT INTO `spawnlist` VALUES (112542,'event_dwarf_2511',1,740,0,0,0,0,0,0,18000,3805);
