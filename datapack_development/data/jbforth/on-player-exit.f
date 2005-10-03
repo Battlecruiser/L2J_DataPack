@@ -2,6 +2,7 @@
 
 suv-save-all	\	save saveable user vars
 
-\ offline-notify
+\ To disable offline notify use 'true to player-offline-notify` in config/server.f
+offline-notify
 
 sleep 1000
