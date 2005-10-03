@@ -1,5 +1,5 @@
 \ This file loaded on every player enter in game
 
-online-notify
+\ online-notify
 
 suv-load-all	\	load saveable user vars

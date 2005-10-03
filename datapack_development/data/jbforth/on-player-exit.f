@@ -2,6 +2,6 @@
 
 suv-save-all	\	save saveable user vars
 
-offline-notify
+\ offline-notify
 
 sleep 1000
