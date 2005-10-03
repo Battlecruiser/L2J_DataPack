@@ -258,6 +258,12 @@ QUEST.addStartNpc(7176)
 QUEST.addStartNpc(7694)
 QUEST.addStartNpc(7854)
 
+STARTING.addTalkId(7115)
+STARTING.addTalkId(7174)
+STARTING.addTalkId(7176)
+STARTING.addTalkId(7694)
+STARTING.addTalkId(7854)
+
 STARTED.addTalkId(7115)
 STARTED.addTalkId(7174)
 STARTED.addTalkId(7176)
