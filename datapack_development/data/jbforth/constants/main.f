@@ -8,6 +8,8 @@ null value server_config
 null value event-coordinates
 false value event?
 
+0 value self
+
 0 uvalue killer
 0 uvalue self
 0 uvalue player

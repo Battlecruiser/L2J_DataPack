@@ -30,17 +30,6 @@
 
 games/CurrentEvent
 
-\ events/theft-of-kamilla
-\ events/050925-Gillians_Way
-\ events/tests
-\ events/050928-kill-observer
-
-: gm_ptf
-	"admin" check-access
-	"{ "
-	player@ coords@ coords>s s+
-	" }" s+
-	"
-" s+
-	"data/jbforth/points.f" file-append
-;
+events/tests
+events/tools
+\ events/051002-Mirror

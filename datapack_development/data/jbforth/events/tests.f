@@ -131,3 +131,36 @@ new-hashmap value walk:curr-path
 	dup list# choose list@
 	list-rev> drop r> teleport-char-to
 ;
+
+: max  ( a b -- max_a,b )
+	2dup < if swap then
+	drop
+;
+
+: drop-avoid  ( item count player -- {items-list} )
+	new-list rot ( item player {list} count )
+	0 max 0 ?do
+		( item player {list} )
+		>r >r
+		dup 1 r@ r@ coords@ 100 + 100 coords-randomize item_spawn
+		( item_id new_item_obj; R: player list )
+		r> swap r@ list+ r>
+	loop nip nip
+;
+
+: decay-by-list  ( {items-list} -- )
+	list> 0 max 0 ?do
+		item_unspawn
+	loop
+;
+
+\ { } uvalue ttitems
+\ : t1 57 swap  player@ drop-avoid to ttitems ;
+\ : t2 ttitems decay-by-list ;
+
+
+{
+{ 656 149518 46630 -3438 0 0 false } \ Lesser Giant Scout
+{ 209 149788 46911 -3438 0 0 false } \ Ol Mahum Marksman
+{ 5060 149514 46670 -3438 0 0 false } \ Kracha
+} value npc-for-spawn-test

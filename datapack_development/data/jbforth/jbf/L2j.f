@@ -40,3 +40,5 @@ new-hashmap value access-map
   	loop
   	drop \ drop list
 ;
+
+: reload	jbf_reload ;

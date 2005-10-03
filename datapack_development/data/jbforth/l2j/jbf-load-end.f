@@ -1,5 +1,5 @@
 : reload  ( -- )
 	"suv-save-all" do-players
-	jbf_reload
+	reload
 \	"suv-load-all" do-players
 ;
