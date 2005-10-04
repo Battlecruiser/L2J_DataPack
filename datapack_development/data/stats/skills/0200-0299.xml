@@ -279,7 +279,7 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="SilentMove" time="5" val="5">
+    <effect count="0x7fffffff" name="SilentMove" time="5" val="7">
 	  <mul order="0x10" stat="runSpd" val="0.75"/>
     </effect>
   </for>
