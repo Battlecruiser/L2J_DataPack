@@ -248,6 +248,7 @@ class Quest (JQuest):
     id   = st.getState()
     if id != CREATED : progress = int(st.get("progress"))
     if id == CREATED :
+      st.set("cond","0")
       if event == "ido" :
          st.setState(STARTING)
          st.set("progress","0")

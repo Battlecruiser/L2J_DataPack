@@ -96,6 +96,7 @@ class Quest (JQuest):
   def onEvent (self,event,st):
     id = st.getState()
     if id == CREATED :
+      st.set("cond","0")
       if event == "details" :
         return "419_confirm.htm"
       elif event == "agree" :
