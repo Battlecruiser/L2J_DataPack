@@ -1,11 +1,17 @@
 <html>
 <head>
 <body>
-Sir Raybell:
+Sir Tyron:
 <br>
-Your clan has already registered for this siege!
-<br>
-<a action="bypass -h npc_%objectId%_siege_unsign 6">Withdraw siege application</a>
-<br>
+You are registering on the defending side of the %castlename% siege.<br>
+Do you want to continue?
+<center>
+<table>
+<tr>
+<td><button value="Yes" action="bypass -h npc_%objectId%_siege_defender_signup 6" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td><button value="No" action="bypass -h npc_%objectId%_requestservice 6" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+</tr>
+</table>
+</center>
 </body>
 </html>
