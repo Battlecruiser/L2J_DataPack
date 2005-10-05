@@ -15,7 +15,9 @@
 		player@ coords@ coords>s to back-coordinates
 	then
 	
-	event-coordinates s>coords if jump then
+	event-coordinates s>coords if 
+		100 coords-randomize jump 
+	then
 ;
 
 
