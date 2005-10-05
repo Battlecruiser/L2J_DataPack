@@ -3645,7 +3645,7 @@ INSERT INTO `npc` VALUES
 (12641,'Apostates Offering Saint','batur_orc_overlord_20_bi',14.00,28.80,75,'male','L2Monster',40,16667,5000,40,21,30,20,43,10,0,0,1000,1667,1000,1429,253,0,253,0,0,0,80,120,NULL,NULL,0),
 (12642,'Witchs Offering Elder','batur_orc_warrior_20_bi',12.00,24.00,75,'male','L2Monster',40,16667,5000,40,21,30,20,43,10,0,0,1000,1667,1000,1429,253,0,253,0,0,0,80,120,NULL,NULL,0),
 (12643,'Witchs Offering','batur_orc',9.00,21.50,75,'male','L2Monster',40,16667,5000,40,21,30,20,43,10,0,0,1000,1667,1000,1429,253,0,253,0,0,0,80,120,NULL,NULL,0),
-(12644,'Witchs Offering Archer','batur_orc_archer',11.00,21.50,75,'male','L2Monster',500,16667,5000,500,21,30,20,43,10,0,0,1000,1667,1000,1429,253,0,253,0,0,0,80,120,NULL,NULL,0),
+(12644,'Witchs Offering Archer','batur_orc_archer',11.00,21.50,75,'male','L2Monster',500,16667,5000,40,21,30,20,43,10,0,0,1000,1667,1000,1429,253,0,253,0,0,0,80,120,NULL,NULL,0),
 (12645,'Witchs Offering Warrior','batur_orc_warrior',10.00,20.00,75,'male','L2Monster',40,16667,5000,40,21,30,20,43,10,0,0,1000,1667,1000,1429,253,0,253,0,0,0,80,120,NULL,NULL,0),
 (12646,'Witchs Offering Follower','batur_orc',9.00,21.50,75,'male','L2Monster',40,16667,5000,40,21,30,20,43,10,0,0,1000,1667,1000,1429,253,0,253,0,0,0,80,120,NULL,NULL,0),
 (12647,'Witchs Offering Berserker','batur_orc_warrior_20_bi',12.00,24.00,75,'male','L2Monster',40,16667,5000,40,21,30,20,43,10,0,0,1000,1667,1000,1429,253,0,253,0,0,0,80,120,NULL,NULL,0),
