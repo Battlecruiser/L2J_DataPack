@@ -30,6 +30,26 @@ EN_MONSTEREYE_SHELL_ID = 2853
 EN_STONEGOLEM_POWDER_ID = 2854
 EN_IRONGOLEM_SCRAP_ID = 2855
 
+#This handels all drops from mobs.   npcId:[condition,maxcount,chance,item,part]
+DROPLIST={
+5095:[3,1,100,GOLDEN_SEED1_ID,1],
+5096:[3,1,100,GOLDEN_SEED2_ID,1],
+5097:[3,1,100,GOLDEN_SEED3_ID,1],
+5098:[7,5,50,FLAME_CRYSTAL_ID,2],
+230:[7,20,30,DAZZLING_DROP_ID,2],
+231:[7,20,30,DAZZLING_DROP_ID,2],
+157:[7,20,30,DAZZLING_DROP_ID,2],
+232:[7,20,40,DAZZLING_DROP_ID,2],
+234:[7,20,50,DAZZLING_DROP_ID,2],
+145:[7,20,50,HARPYS_FEATHER_ID,2],
+176:[7,10,50,WYRMS_WINGBONE_ID,2],
+553:[7,10,50,WINDSUS_MANE_ID,2],
+564:[7,10,100,EN_MONSTEREYE_SHELL_ID,2],
+565:[7,10,100,EN_STONEGOLEM_POWDER_ID,2],
+566:[7,10,100,EN_IRONGOLEM_SCRAP_ID,2]
+}
+
+
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -52,63 +72,68 @@ class Quest (JQuest) :
           st.giveItems(SCORE_OF_ELEMENTS_ID,1)
           st.takeItems(GOLDEN_SEED3_ID,1)
           st.playSound("ItemSound.quest_middle")
+          st.set("cond","6")
     elif event == "7391_1" :
           htmltext = "7391-02.htm"
           st.giveItems(PARINAS_LETTER_ID,1)
           st.takeItems(RUKALS_LETTER_ID,1)
           st.playSound("ItemSound.quest_middle")
+          st.set("cond","2")
     elif event == "7612_1" :
           htmltext = "7612-02.htm"
           st.giveItems(LILAC_CHARM_ID,1)
           st.takeItems(PARINAS_LETTER_ID,1)
           st.playSound("ItemSound.quest_middle")
+          st.set("cond","3")
     elif event == "7412_1" :
           htmltext = "7412-02.htm"
           st.giveItems(SYLPH_CHARM_ID,1)
           st.playSound("ItemSound.quest_middle")
+          st.set("cond","7")
     elif event == "7409_1" :
           htmltext = "7409-02.htm"
     elif event == "7409_2" :
           htmltext = "7409-03.htm"
           st.giveItems(SERPENT_CHARM_ID,1)
           st.playSound("ItemSound.quest_middle")
+          st.set("cond","7")
     return htmltext
 
 
- def onTalk (Self,npcId,st):
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+ def onTalk (self,npcId,st):
+   htmltext = "<html><head><body>I have nothing to say to you</body></html>"
    id = st.getState()
    if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 7629 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+   if npcId == 7629 :
+     if int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
         if int(st.get("cond")) < 15 :
-          if (st.getPlayer().getClassId().getId() == 0x0b or st.getPlayer().getClassId().getId() == 0x1a or st.getPlayer().getClassId().getId() == 0x27) :
+          if st.getPlayer().getClassId().getId() == 0x0b or st.getPlayer().getClassId().getId() == 0x1a or st.getPlayer().getClassId().getId() == 0x27 :
             if st.getPlayer().getLevel() < 39 :
               htmltext = "7629-02.htm"
             else:
               htmltext = "7629-03.htm"
           else:
             htmltext = "7629-01.htm"
+            st.exitQuest(1)
         else:
           htmltext = "7629-01.htm"
-   elif npcId == 7629 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
-      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7629 and int(st.get("cond"))==1 and st.getQuestItemsCount(RUKALS_LETTER_ID)==1 :
+          st.exitQuest(1)
+     elif int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+      htmltext = "<html><head><body>This quest has already been completed.</body></html>"
+     elif int(st.get("cond"))==1:
         htmltext = "7629-05.htm"
-   elif npcId == 7629 and int(st.get("cond"))==1 and st.getQuestItemsCount(PARINAS_LETTER_ID)==1 :
+     elif int(st.get("cond"))==2:
         htmltext = "7629-06.htm"
-   elif npcId == 7629 and int(st.get("cond"))==1 and st.getQuestItemsCount(LILAC_CHARM_ID)==1 :
-        if st.getQuestItemsCount(GOLDEN_SEED1_ID) and st.getQuestItemsCount(GOLDEN_SEED2_ID) and st.getQuestItemsCount(GOLDEN_SEED3_ID) :
-          htmltext = "7629-08.htm"
-        else:
-          htmltext = "7629-07.htm"
-   elif npcId == 7629 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 :
-        if st.getQuestItemsCount(TONE_OF_WATER_ID) and st.getQuestItemsCount(TONE_OF_FIRE_ID) and st.getQuestItemsCount(TONE_OF_WIND_ID) and st.getQuestItemsCount(TONE_OF_EARTH_ID) :
-          if st.getGameTicks() != int(st.get("id")) :
-            st.set("id",str(st.getGameTicks()))
+     elif int(st.get("cond"))==3:
+        htmltext = "7629-07.htm"
+     elif int(st.get("cond"))==5:
+        htmltext = "7629-08.htm"
+     elif int(st.get("cond"))>5:
+        if int(st.get("cond"))==12:
             st.takeItems(SCORE_OF_ELEMENTS_ID,1)
             st.takeItems(TONE_OF_WATER_ID,1)
             st.takeItems(TONE_OF_FIRE_ID,1)
@@ -123,27 +148,30 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_finish")
         else:
           htmltext = "7629-11.htm"
-   elif npcId == 7391 and int(st.get("cond"))==1 and st.getQuestItemsCount(RUKALS_LETTER_ID)==1 :
+   elif npcId == 7391:
+     if int(st.get("cond"))==1:
         htmltext = "7391-01.htm"
-   elif npcId == 7391 and int(st.get("cond"))==1 and st.getQuestItemsCount(PARINAS_LETTER_ID)==1 :
+     elif int(st.get("cond"))==2:
         htmltext = "7391-03.htm"
-   elif npcId == 7391 and int(st.get("cond"))==1 and st.getQuestItemsCount(LILAC_CHARM_ID)==1 :
+     elif int(st.get("cond"))<6 and int(st.get("cond"))>2:
         htmltext = "7391-04.htm"
-   elif npcId == 7391 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 :
+     elif int(st.get("cond"))>5 :
         htmltext = "7391-05.htm"
-   elif npcId == 7612 and int(st.get("cond"))==1 and st.getQuestItemsCount(PARINAS_LETTER_ID)==1 :
+   elif npcId == 7612:
+     if int(st.get("cond"))==2 :
         htmltext = "7612-01.htm"
-   elif npcId == 7612 and int(st.get("cond"))==1 and st.getQuestItemsCount(LILAC_CHARM_ID)==1 :
-        if st.getQuestItemsCount(GOLDEN_SEED1_ID) and st.getQuestItemsCount(GOLDEN_SEED2_ID) and st.getQuestItemsCount(GOLDEN_SEED3_ID) :
-          htmltext = "7612-04.htm"
-        else:
-          htmltext = "7612-03.htm"
-   elif npcId == 7612 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 :
+     elif int(st.get("cond"))<5 and int(st.get("cond"))>2:
+        htmltext = "7612-03.htm"
+     elif int(st.get("cond"))==5:
+        htmltext = "7612-04.htm"
+     elif int(st.get("cond"))>5:
         htmltext = "7612-05.htm"
-   elif npcId == 7413 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WATER_ID)==0 and st.getQuestItemsCount(UNDINE_CHARM_ID)==0 :
+   elif npcId == 7413:
+     if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WATER_ID)==0 and st.getQuestItemsCount(UNDINE_CHARM_ID)==0 :
         htmltext = "7413-01.htm"
         st.giveItems(UNDINE_CHARM_ID,1)
-   elif npcId == 7413 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(UNDINE_CHARM_ID)==1 :
+        st.set("cond","7")
+     elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(UNDINE_CHARM_ID)==1 :
         if st.getQuestItemsCount(DAZZLING_DROP_ID) < 20 :
           htmltext = "7413-02.htm"
         else:
@@ -152,13 +180,16 @@ class Quest (JQuest) :
           st.giveItems(TONE_OF_WATER_ID,1)
           st.takeItems(UNDINE_CHARM_ID,1)
           st.playSound("ItemSound.quest_middle")
-   elif npcId == 7413 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WATER_ID)==1 and st.getQuestItemsCount(UNDINE_CHARM_ID)==0 :
+          st.set("cond",str(int(st.get("cond"))+1))
+     elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WATER_ID)==1 and st.getQuestItemsCount(UNDINE_CHARM_ID)==0 :
         htmltext = "7413-04.htm"
-   elif npcId == 7411 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_FIRE_ID)==0 and st.getQuestItemsCount(SALAMANDER_CHARM_ID)==0 :
+   elif npcId == 7411 :
+     if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_FIRE_ID)==0 and st.getQuestItemsCount(SALAMANDER_CHARM_ID)==0 :
         htmltext = "7411-01.htm"
         st.giveItems(SALAMANDER_CHARM_ID,1)
         st.playSound("ItemSound.quest_middle")
-   elif npcId == 7411 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(SALAMANDER_CHARM_ID)==1 :
+        st.set("cond","7")
+     elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(SALAMANDER_CHARM_ID)==1 :
         if st.getQuestItemsCount(FLAME_CRYSTAL_ID) < 5 :
           htmltext = "7411-02.htm"
         else:
@@ -167,11 +198,13 @@ class Quest (JQuest) :
           st.giveItems(TONE_OF_FIRE_ID,1)
           st.takeItems(SALAMANDER_CHARM_ID,1)
           st.playSound("ItemSound.quest_middle")
-   elif npcId == 7411 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_FIRE_ID)==1 and st.getQuestItemsCount(SALAMANDER_CHARM_ID)==0 :
+          st.set("cond",str(int(st.get("cond"))+1))
+     elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_FIRE_ID)==1 and st.getQuestItemsCount(SALAMANDER_CHARM_ID)==0 :
         htmltext = "7411-04.htm"
-   elif npcId == 7412 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WIND_ID)==0 and st.getQuestItemsCount(SYLPH_CHARM_ID)==0 :
+   elif npcId == 7412 :
+     if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WIND_ID)==0 and st.getQuestItemsCount(SYLPH_CHARM_ID)==0 :
         htmltext = "7412-01.htm"
-   elif npcId == 7412 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(SYLPH_CHARM_ID)==1 :
+     elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(SYLPH_CHARM_ID)==1 :
         if st.getQuestItemsCount(HARPYS_FEATHER_ID)+st.getQuestItemsCount(WYRMS_WINGBONE_ID)+st.getQuestItemsCount(WINDSUS_MANE_ID) < 40 :
           htmltext = "7412-03.htm"
         else:
@@ -182,11 +215,13 @@ class Quest (JQuest) :
           st.giveItems(TONE_OF_WIND_ID,1)
           st.takeItems(SYLPH_CHARM_ID,1)
           st.playSound("ItemSound.quest_middle")
-   elif npcId == 7412 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WIND_ID)==1 and st.getQuestItemsCount(SYLPH_CHARM_ID)==0 :
+          st.set("cond",str(int(st.get("cond"))+1))
+     elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WIND_ID)==1 and st.getQuestItemsCount(SYLPH_CHARM_ID)==0 :
         htmltext = "7412-05.htm"
-   elif npcId == 7409 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_EARTH_ID)==0 and st.getQuestItemsCount(SERPENT_CHARM_ID)==0 :
+   elif npcId == 7409 :
+     if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_EARTH_ID)==0 and st.getQuestItemsCount(SERPENT_CHARM_ID)==0 :
         htmltext = "7409-01.htm"
-   elif npcId == 7409 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(SERPENT_CHARM_ID)==1 :
+     elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(SERPENT_CHARM_ID)==1 :
         if st.getQuestItemsCount(EN_MONSTEREYE_SHELL_ID)+st.getQuestItemsCount(EN_STONEGOLEM_POWDER_ID)+st.getQuestItemsCount(EN_IRONGOLEM_SCRAP_ID) < 30 :
           htmltext = "7409-04.htm"
         else:
@@ -197,80 +232,36 @@ class Quest (JQuest) :
           st.giveItems(TONE_OF_EARTH_ID,1)
           st.takeItems(SERPENT_CHARM_ID,1)
           st.playSound("ItemSound.quest_middle")
-   elif npcId == 7409 and int(st.get("cond"))==1 and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_EARTH_ID)==1 and st.getQuestItemsCount(SERPENT_CHARM_ID)==0 :
+          st.set("cond",str(int(st.get("cond"))+1))
+     elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_EARTH_ID)==1 and st.getQuestItemsCount(SERPENT_CHARM_ID)==0 :
         htmltext = "7409-06.htm"
    return htmltext
-
+                             
  def onKill (self,npcId,st):
-   if npcId == 5095 :
-    if int(st.get("cond")) and st.getQuestItemsCount(LILAC_CHARM_ID) == 1 and st.getQuestItemsCount(GOLDEN_SEED1_ID) == 0 :
-      st.giveItems(GOLDEN_SEED1_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 5096 :
-    if int(st.get("cond")) and st.getQuestItemsCount(LILAC_CHARM_ID) == 1 and st.getQuestItemsCount(GOLDEN_SEED2_ID) == 0 :
-      st.giveItems(GOLDEN_SEED2_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 5097 :
-    if int(st.get("cond")) and st.getQuestItemsCount(LILAC_CHARM_ID) == 1 and st.getQuestItemsCount(GOLDEN_SEED3_ID) == 0 :
-      st.giveItems(GOLDEN_SEED3_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 230 or npcId == 231 or npcId == 157 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID) == 1 and st.getQuestItemsCount(UNDINE_CHARM_ID) == 1  and st.getQuestItemsCount(DAZZLING_DROP_ID) < 20 :
-     if st.getRandom(100)<30 :
-      st.giveItems(DAZZLING_DROP_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 232 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID) == 1 and st.getQuestItemsCount(UNDINE_CHARM_ID) == 1  and st.getQuestItemsCount(DAZZLING_DROP_ID) < 20 :
-     if st.getRandom(100)<40 :
-      st.giveItems(DAZZLING_DROP_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 234 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID) == 1 and st.getQuestItemsCount(UNDINE_CHARM_ID) == 1  and st.getQuestItemsCount(DAZZLING_DROP_ID) < 20 :
-     if st.getRandom(100)<50 :
-      st.giveItems(DAZZLING_DROP_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 145 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID) == 1 and st.getQuestItemsCount(SYLPH_CHARM_ID) == 1  and st.getQuestItemsCount(HARPYS_FEATHER_ID) < 20 :
-      st.giveItems(HARPYS_FEATHER_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 176 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID) == 1 and st.getQuestItemsCount(SYLPH_CHARM_ID) == 1  and st.getQuestItemsCount(WYRMS_WINGBONE_ID) < 10 :
-     if st.getRandom(100)<50 :
-      st.giveItems(WYRMS_WINGBONE_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 553 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID) == 1 and st.getQuestItemsCount(SYLPH_CHARM_ID) == 1  and st.getQuestItemsCount(WINDSUS_MANE_ID) < 10 :
-     if st.getRandom(100)<50 :
-      st.giveItems(WINDSUS_MANE_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 564 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID) == 1 and st.getQuestItemsCount(SERPENT_CHARM_ID) == 1  and st.getQuestItemsCount(EN_MONSTEREYE_SHELL_ID) < 10 :
-      st.giveItems(EN_MONSTEREYE_SHELL_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 565 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID) == 1 and st.getQuestItemsCount(SERPENT_CHARM_ID) == 1  and st.getQuestItemsCount(EN_STONEGOLEM_POWDER_ID) < 10 :
-      st.giveItems(EN_STONEGOLEM_POWDER_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 566 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID) == 1 and st.getQuestItemsCount(SERPENT_CHARM_ID) == 1  and st.getQuestItemsCount(EN_IRONGOLEM_SCRAP_ID) < 10 :
-      st.giveItems(EN_IRONGOLEM_SCRAP_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 5098 :
-    st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID) == 1 and st.getQuestItemsCount(SALAMANDER_CHARM_ID) == 1  and st.getQuestItemsCount(FLAME_CRYSTAL_ID) < 5 :
-     if st.getRandom(100)<50 :
-      st.giveItems(FLAME_CRYSTAL_ID,1)
-      st.playSound("ItemSound.quest_middle")
+   condition,maxcount,chance,item,part = DROPLIST[npcId]
+   random = st.getRandom(100)
+   itemcount = st.getQuestItemsCount(item)
+   if int(st.get("cond")) == condition and itemcount < maxcount and random < chance :
+    if itemcount == maxcount-1:
+     st.giveItems(item,1)
+     st.playSound("ItemSound.quest_middle")
+     if part==1:
+       count=0
+       for items in [GOLDEN_SEED1_ID,GOLDEN_SEED2_ID,GOLDEN_SEED3_ID]:
+        count+=st.getQuestItemsCount(items)
+       if count>2:
+        st.set("cond","5")
+     elif part==2 :
+       count=0
+       for items in [DAZZLING_DROP_ID,HARPYS_FEATHER_ID,WYRMS_WINGBONE_ID,WINDSUS_MANE_ID,EN_MONSTEREYE_SHELL_ID,EN_STONEGOLEM_POWDER_ID,EN_IRONGOLEM_SCRAP_ID,FLAME_CRYSTAL_ID]:
+        count+=st.getQuestItemsCount(items)
+       if count>94:
+        st.set("cond","8")
+    else:
+     st.giveItems(item,1)
+     st.playSound("ItemSound.quest_itemget")
    return
+
 
 QUEST       = Quest(228,"228_TestOfMagus","Test Of Magus")
 CREATED     = State('Start', QUEST)
@@ -284,42 +275,9 @@ QUEST.addStartNpc(7629)
 
 STARTING.addTalkId(7629)
 
-STARTED.addTalkId(7391)
-STARTED.addTalkId(7409)
-STARTED.addTalkId(7411)
-STARTED.addTalkId(7412)
-STARTED.addTalkId(7413)
-STARTED.addTalkId(7612)
-STARTED.addTalkId(7629)
-
-STARTED.addKillId(145)
-STARTED.addKillId(157)
-STARTED.addKillId(176)
-STARTED.addKillId(230)
-STARTED.addKillId(231)
-STARTED.addKillId(232)
-STARTED.addKillId(234)
-STARTED.addKillId(5095)
-STARTED.addKillId(5096)
-STARTED.addKillId(5097)
-STARTED.addKillId(5098)
-STARTED.addKillId(553)
-STARTED.addKillId(564)
-STARTED.addKillId(565)
-STARTED.addKillId(566)
-
-STARTED.addQuestDrop(7612,LILAC_CHARM_ID,1)
-STARTED.addQuestDrop(5095,GOLDEN_SEED1_ID,1)
-STARTED.addQuestDrop(5096,GOLDEN_SEED2_ID,1)
-STARTED.addQuestDrop(5097,GOLDEN_SEED3_ID,1)
-STARTED.addQuestDrop(7629,SCORE_OF_ELEMENTS_ID,1)
-STARTED.addQuestDrop(7413,TONE_OF_WATER_ID,1)
-STARTED.addQuestDrop(7411,TONE_OF_FIRE_ID,1)
-STARTED.addQuestDrop(7412,TONE_OF_WIND_ID,1)
-STARTED.addQuestDrop(7409,TONE_OF_EARTH_ID,1)
-STARTED.addQuestDrop(7629,RUKALS_LETTER_ID,1)
-STARTED.addQuestDrop(7391,PARINAS_LETTER_ID,1)
-STARTED.addQuestDrop(7413,UNDINE_CHARM_ID,1)
-STARTED.addQuestDrop(7411,SALAMANDER_CHARM_ID,1)
-STARTED.addQuestDrop(7412,SYLPH_CHARM_ID,1)
-STARTED.addQuestDrop(7409,SERPENT_CHARM_ID,1)
+for npcId in [7391,7409,7411,7412,7413,7612,7629]:
+   STARTED.addTalkId(npcId)
+  
+for mobId in [145,157,176,230,231,232,234,5095,5096,5097,5098,553,564,565,566]:
+   STARTED.addKillId(mobId)
+  

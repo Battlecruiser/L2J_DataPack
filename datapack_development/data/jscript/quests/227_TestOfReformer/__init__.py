@@ -89,8 +89,10 @@ class Quest (JQuest) :
               htmltext = "7118-01.htm"
           else:
             htmltext = "7118-02.htm"
+            st.exitQuest(1)
         else:
           htmltext = "7118-02.htm"
+          st.exitQuest(1)
    elif npcId == 7118 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest has already been completed.</body></html>"
    elif npcId == 7118 and int(st.get("cond"))==3 and st.getQuestItemsCount(HUGE_NAIL_ID)>=1:
@@ -107,8 +109,6 @@ class Quest (JQuest) :
         st.takeItems(OLMAHUMS_MONEY_ID,1)
         st.giveItems(GREETINGS_ID,3)
    elif npcId == 7666 and int(st.get("cond"))==18 and st.getQuestItemsCount(KATARIS_LETTER_ID)>0 and st.getQuestItemsCount(KAKANS_LETTER_ID)>0 and st.getQuestItemsCount(NYAKURIS_LETTER_ID)>0 and st.getQuestItemsCount(RAMUSS_LETTER_ID)>0 :
-        if st.getGameTicks() != int(st.get("id")) :
-          st.set("id",str(st.getGameTicks()))
           st.giveItems(MARK_OF_REFORMER_ID,1)
           st.addExpAndSp(28000,3600)
           htmltext = "7666-07.htm"
@@ -127,7 +127,7 @@ class Quest (JQuest) :
 #        if Maker_GetNpcCount() == 1 :
         st.spawnNpc(7732,-4015,40141,-3664)
         st.spawnNpc(5129,-4034,40201,-3665)
-   elif npcId == 7668 and int(st.get("cond"))==7:
+   elif npcId == 7668 and int(st.get("cond"))==8:
         htmltext = "7668-02.htm"
 #        if Maker_GetNpcCount() < 3 :
         st.spawnNpc(5130,-4106,40174,-3660)
@@ -136,9 +136,9 @@ class Quest (JQuest) :
         st.set("cond","10")
         st.giveItems(KATARIS_LETTER_ID,1)
         st.takeItems(LETTER_OF_BETRAYER_ID,1)
-   elif npcId == 7732 and int(st.get("cond"))==8 :
+   elif npcId == 7732 and int(st.get("cond"))==7 :
         htmltext = "7732-01.htm"
-        st.set("cond","9")
+        st.set("cond","8")
         st.giveItems(OLMAHUMS_MONEY_ID,1)
    elif npcId == 7669 and int(st.get("cond"))==11 and st.getQuestItemsCount(GREETINGS_ID)>0 :
         htmltext = "7669-01.htm"
@@ -189,8 +189,8 @@ class Quest (JQuest) :
    elif npcId == 5129:
       st.set("cond","7")
    elif npcId == 5130 :
-    if int(st.get("cond")) == 7 :
-      st.set("cond","8")
+    if int(st.get("cond")) == 8 :
+      st.set("cond","9")
       st.giveItems(LETTER_OF_BETRAYER_ID,1)
    elif npcId == 5131 :
     if int(st.get("cond")) == 11 :
@@ -227,43 +227,7 @@ QUEST.addStartNpc(7118)
 
 STARTING.addTalkId(7118)
 
-STARTED.addTalkId(7118)
-STARTED.addTalkId(7666)
-STARTED.addTalkId(7667)
-STARTED.addTalkId(7669)
-STARTED.addTalkId(7670)
-STARTED.addTalkId(7732)
-STARTED.addTalkId(7668)
-
-
-STARTED.addKillId(100)
-STARTED.addKillId(102)
-STARTED.addKillId(104)
-STARTED.addKillId(404)
-STARTED.addKillId(22)
-STARTED.addKillId(5099)
-STARTED.addKillId(5128)
-STARTED.addKillId(5130)
-STARTED.addKillId(5129)
-STARTED.addKillId(5132)
-STARTED.addKillId(5131)
-
-
-STARTED.addQuestDrop(7118,BOOK_OF_REFORM_ID,1)
-STARTED.addQuestDrop(5128,HUGE_NAIL_ID,1)
-STARTED.addQuestDrop(7118,LETTER_OF_INTRODUCTION_ID,1)
-STARTED.addQuestDrop(7732,OLMAHUMS_MONEY_ID,1)
-STARTED.addQuestDrop(7668,KATARIS_LETTER_ID,1)
-STARTED.addQuestDrop(7669,KAKANS_LETTER_ID,1)
-STARTED.addQuestDrop(7670,NYAKURIS_LETTER_ID,1)
-STARTED.addQuestDrop(7667,RAMUSS_LETTER_ID,1)
-STARTED.addQuestDrop(7666,SLAS_LETTER_ID,1)
-STARTED.addQuestDrop(5130,LETTER_OF_BETRAYER_ID,1)
-STARTED.addQuestDrop(7666,GREETINGS_ID,1)
-STARTED.addQuestDrop(404,BONE_FRAGMENT4_ID,1)
-STARTED.addQuestDrop(104,BONE_FRAGMENT5_ID,1)
-STARTED.addQuestDrop(102,BONE_FRAGMENT6_ID,1)
-STARTED.addQuestDrop(22,BONE_FRAGMENT7_ID,1)
-STARTED.addQuestDrop(100,BONE_FRAGMENT8_ID,1)
-STARTED.addQuestDrop(7667,UNDEAD_LIST_ID,1)
-STARTED.addQuestDrop(5099,RIPPED_DIARY_ID,1)
+for npcId in [7118,7666,7667,7669,7670,7732,7668]:
+ STARTED.addTalkId(npcId)
+for mobId in [100,102,104,404,22,5099,5128,5130,5129,5132,5131]:
+ STARTED.addKillId(mobId)
