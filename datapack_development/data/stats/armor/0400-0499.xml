@@ -309,12 +309,12 @@
   <for>
     <add val='69' order='0x10' stat='pDef' />
     <add val='284' order='0x10' stat='maxMp' />
-   <add stat='maxHp' order='0x40' val='-269'>
+   <sub stat='maxHp' order='0x40' val='270'>
    <and>
      <using slotitem="472;11"/>
      <using slotitem="2459;9"/>
    </and>
-  </add>
+  </sub>
    <add stat='INT' order='0x10' val='4'>
    <and>
      <using slotitem="472;11"/>

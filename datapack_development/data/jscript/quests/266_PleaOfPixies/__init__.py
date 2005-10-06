@@ -6,9 +6,9 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 PREDATORS_FANG_ID = 1334
-EMERALD_ID = 1206
+EMERALD_ID = 1337
 BLUE_ONYX_ID = 1338
-ONYX_ID = 695
+ONYX_ID = 1339
 GLASS_SHARD_ID = 1336
 
 class Quest (JQuest) :
