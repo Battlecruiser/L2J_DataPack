@@ -229,14 +229,14 @@ class Quest (JQuest) :
  def onKill (self,npcId,st):
    if npcId == 36 or npcId == 44:
       if int(st.get("cond")) and int(st.get("cond")) == 2 :
-        st.set("ID",str(int(st.get("id"))+1))
+        st.set("id",str(int(st.get("id"))+1))
         if st.getRandom(100)<(int(st.get("id"))*33) :
           st.spawnNpc(5120)
           st.playSound("Itemsound.quest_before_battle")
           st.set("cond",str(0))
    elif npcId == 13 or npcId == 19:
       if int(st.get("cond")) and int(st.get("cond")) == 2 :
-        st.set("ID",str(int(st.get("id"))+1))
+        st.set("id",str(int(st.get("id"))+1))
         if st.getRandom(100)<(int(st.get("id"))*33) :
           st.spawnNpc(5121)
           st.playSound("Itemsound.quest_before_battle")
