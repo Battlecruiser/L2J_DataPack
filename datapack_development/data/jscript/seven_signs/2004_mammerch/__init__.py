@@ -18,8 +18,8 @@ class Quest (JQuest) :
             st.takeItems(5965,480)
             st.giveItems(730,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Enchant Armor B
     if event == "2":
@@ -28,8 +28,8 @@ class Quest (JQuest) :
             st.takeItems(5965,160)
             st.giveItems(948,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Enchant Armor C
     if event == "3":
@@ -38,8 +38,8 @@ class Quest (JQuest) :
             st.takeItems(5965,30)
             st.giveItems(952,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Enchant Armor D
     if event == "4":
@@ -48,8 +48,8 @@ class Quest (JQuest) :
             st.takeItems(5965,12)
             st.giveItems(956,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Enchant Weapon A
     if event == "5":
@@ -58,8 +58,8 @@ class Quest (JQuest) :
             st.takeItems(5965,3600)
             st.giveItems(729,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Enchant Weapon B
     if event == "6":
@@ -68,8 +68,8 @@ class Quest (JQuest) :
             st.takeItems(5965,1000)
             st.giveItems(947,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Enchant Weapon C
     if event == "7":
@@ -78,8 +78,8 @@ class Quest (JQuest) :
             st.takeItems(5965,220)
             st.giveItems(951,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Enchant Weapon D
     if event == "8":
@@ -88,8 +88,8 @@ class Quest (JQuest) :
             st.takeItems(5965,100)
             st.giveItems(955,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Gemstone A x 1
     if event == "9":
@@ -97,8 +97,8 @@ class Quest (JQuest) :
             st.takeItems(5575,30000)
             st.giveItems(2133,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Gemstone A x 10
     if event == "10":
@@ -106,8 +106,8 @@ class Quest (JQuest) :
             st.takeItems(5575,300000)
             st.giveItems(2133,10)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Gemstone A x 100
     if event == "11":
@@ -115,8 +115,8 @@ class Quest (JQuest) :
             st.takeItems(5575,3000000)
             st.giveItems(2133,100)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Crystal A Grade x 1
     if event == "12":
@@ -124,8 +124,8 @@ class Quest (JQuest) :
             st.takeItems(5575,21000)
             st.giveItems(1461,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Crystal A Grade x 10
     if event == "13":
@@ -133,8 +133,8 @@ class Quest (JQuest) :
             st.takeItems(5575,210000)
             st.giveItems(1461,10)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Crystal A Grade x 100
     if event == "14":
@@ -142,8 +142,8 @@ class Quest (JQuest) :
             st.takeItems(5575,2100000)
             st.giveItems(1461,100)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Blessed Scroll of Escape
     if event == "15":
@@ -151,8 +151,8 @@ class Quest (JQuest) :
             st.takeItems(5575,150000)
             st.giveItems(1538,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of Strenght
     if event == "16":
@@ -160,8 +160,8 @@ class Quest (JQuest) :
             st.takeItems(5575,42000)
             st.giveItems(4469,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of Strenght
     if event == "17":
@@ -169,8 +169,8 @@ class Quest (JQuest) :
             st.takeItems(5575,42000)
             st.giveItems(4470,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of Constitution
     if event == "18":
@@ -178,8 +178,8 @@ class Quest (JQuest) :
             st.takeItems(5575,42000)
             st.giveItems(4471,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of Constitution
     if event == "19":
@@ -187,8 +187,8 @@ class Quest (JQuest) :
             st.takeItems(5575,42000)
             st.giveItems(4472,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of Dexterity
     if event == "20":
@@ -196,8 +196,8 @@ class Quest (JQuest) :
             st.takeItems(5575,42000)
             st.giveItems(4473,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of Dexterity
     if event == "21":
@@ -205,8 +205,8 @@ class Quest (JQuest) :
             st.takeItems(5575,42000)
             st.giveItems(4474,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of Inteligence
     if event == "22":
@@ -214,8 +214,8 @@ class Quest (JQuest) :
             st.takeItems(5575,42000)
             st.giveItems(4475,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of Inteligence
     if event == "23":
@@ -223,8 +223,8 @@ class Quest (JQuest) :
             st.takeItems(5575,42000)
             st.giveItems(4476,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of Mental Strenght
     if event == "24":
@@ -232,8 +232,8 @@ class Quest (JQuest) :
             st.takeItems(5575,42000)
             st.giveItems(4477,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of Mental Strenght
     if event == "25":
@@ -241,8 +241,8 @@ class Quest (JQuest) :
             st.takeItems(5575,42000)
             st.giveItems(4478,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of Wit
     if event == "26":
@@ -250,8 +250,8 @@ class Quest (JQuest) :
             st.takeItems(5575,42000)
             st.giveItems(4479,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of Wit
     if event == "27":
@@ -259,8 +259,8 @@ class Quest (JQuest) :
             st.takeItems(5575,42000)
             st.giveItems(4480,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Strenght
     if event == "28":
@@ -268,8 +268,8 @@ class Quest (JQuest) :
             st.takeItems(5575,60000)
             st.giveItems(4553,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Strenght
     if event == "29":
@@ -277,8 +277,8 @@ class Quest (JQuest) :
             st.takeItems(5575,60000)
             st.giveItems(4554,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Constitution
     if event == "30":
@@ -286,8 +286,8 @@ class Quest (JQuest) :
             st.takeItems(5575,60000)
             st.giveItems(4555,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Constitution
     if event == "31":
@@ -295,8 +295,8 @@ class Quest (JQuest) :
             st.takeItems(5575,60000)
             st.giveItems(4556,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Dexterity
     if event == "32":
@@ -304,8 +304,8 @@ class Quest (JQuest) :
             st.takeItems(5575,60000)
             st.giveItems(4557,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Dexterity
     if event == "33":
@@ -313,8 +313,8 @@ class Quest (JQuest) :
             st.takeItems(5575,60000)
             st.giveItems(4558,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Inteligence
     if event == "34":
@@ -322,8 +322,8 @@ class Quest (JQuest) :
             st.takeItems(5575,60000)
             st.giveItems(4559,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Inteligence
     if event == "35":
@@ -331,8 +331,8 @@ class Quest (JQuest) :
             st.takeItems(5575,60000)
             st.giveItems(4560,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Mental Strenght
     if event == "36":
@@ -340,8 +340,8 @@ class Quest (JQuest) :
             st.takeItems(5575,60000)
             st.giveItems(4561,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Mental Strenght
     if event == "37":
@@ -349,8 +349,8 @@ class Quest (JQuest) :
             st.takeItems(5575,60000)
             st.giveItems(4562,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Wit
     if event == "38":
@@ -358,8 +358,8 @@ class Quest (JQuest) :
             st.takeItems(5575,60000)
             st.giveItems(4563,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Wit
     if event == "39":
@@ -367,8 +367,8 @@ class Quest (JQuest) :
             st.takeItems(5575,60000)
             st.giveItems(4564,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Strenght
     if event == "40":
@@ -376,8 +376,8 @@ class Quest (JQuest) :
             st.takeItems(5575,72000)
             st.giveItems(4589,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Strenght
     if event == "41":
@@ -385,8 +385,8 @@ class Quest (JQuest) :
             st.takeItems(5575,72000)
             st.giveItems(4590,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Constitution
     if event == "42":
@@ -394,8 +394,8 @@ class Quest (JQuest) :
             st.takeItems(5575,72000)
             st.giveItems(4591,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Constitution
     if event == "43":
@@ -403,8 +403,8 @@ class Quest (JQuest) :
             st.takeItems(5575,72000)
             st.giveItems(4592,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Dexterity
     if event == "44":
@@ -412,8 +412,8 @@ class Quest (JQuest) :
             st.takeItems(5575,72000)
             st.giveItems(4593,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Dexterity
     if event == "45":
@@ -421,8 +421,8 @@ class Quest (JQuest) :
             st.takeItems(5575,72000)
             st.giveItems(4594,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Inteligence
     if event == "46":
@@ -430,8 +430,8 @@ class Quest (JQuest) :
             st.takeItems(5575,72000)
             st.giveItems(4595,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Inteligence
     if event == "47":
@@ -439,8 +439,8 @@ class Quest (JQuest) :
             st.takeItems(5575,72000)
             st.giveItems(4596,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Mental Strenght
     if event == "48":
@@ -448,8 +448,8 @@ class Quest (JQuest) :
             st.takeItems(5575,72000)
             st.giveItems(4597,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Mental Strenght
     if event == "49":
@@ -457,8 +457,8 @@ class Quest (JQuest) :
             st.takeItems(5575,72000)
             st.giveItems(4598,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Wit
     if event == "50":
@@ -466,8 +466,8 @@ class Quest (JQuest) :
             st.takeItems(5575,72000)
             st.giveItems(4599,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Wit
     if event == "51":
@@ -475,8 +475,8 @@ class Quest (JQuest) :
             st.takeItems(5575,72000)
             st.giveItems(4600,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Strenght
     if event == "52":
@@ -484,8 +484,8 @@ class Quest (JQuest) :
             st.takeItems(5575,108000)
             st.giveItems(4601,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Strenght
     if event == "53":
@@ -493,8 +493,8 @@ class Quest (JQuest) :
             st.takeItems(5575,108000)
             st.giveItems(4602,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Constitution
     if event == "54":
@@ -502,8 +502,8 @@ class Quest (JQuest) :
             st.takeItems(5575,108000)
             st.giveItems(4603,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Constitution
     if event == "55":
@@ -511,8 +511,8 @@ class Quest (JQuest) :
             st.takeItems(5575,108000)
             st.giveItems(4604,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Dexterity
     if event == "56":
@@ -520,8 +520,8 @@ class Quest (JQuest) :
             st.takeItems(5575,108000)
             st.giveItems(4605,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Dexterity
     if event == "57":
@@ -529,8 +529,8 @@ class Quest (JQuest) :
             st.takeItems(5575,108000)
             st.giveItems(4606,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Inteligence
     if event == "58":
@@ -538,8 +538,8 @@ class Quest (JQuest) :
             st.takeItems(5575,108000)
             st.giveItems(4607,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Inteligence
     if event == "59":
@@ -547,8 +547,8 @@ class Quest (JQuest) :
             st.takeItems(5575,108000)
             st.giveItems(4608,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Mental Strenght
     if event == "60":
@@ -556,8 +556,8 @@ class Quest (JQuest) :
             st.takeItems(5575,108000)
             st.giveItems(4609,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Mental Strenght
     if event == "61":
@@ -565,8 +565,8 @@ class Quest (JQuest) :
             st.takeItems(5575,108000)
             st.giveItems(4610,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Wit
     if event == "62":
@@ -574,8 +574,8 @@ class Quest (JQuest) :
             st.takeItems(5575,108000)
             st.giveItems(4611,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Wit
     if event == "63":
@@ -583,8 +583,8 @@ class Quest (JQuest) :
             st.takeItems(5575,108000)
             st.giveItems(4612,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Strenght
     if event == "64":
@@ -592,8 +592,8 @@ class Quest (JQuest) :
             st.takeItems(5575,174000)
             st.giveItems(4613,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Strenght
     if event == "65":
@@ -601,8 +601,8 @@ class Quest (JQuest) :
             st.takeItems(5575,174000)
             st.giveItems(4614,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Constitution
     if event == "66":
@@ -610,8 +610,8 @@ class Quest (JQuest) :
             st.takeItems(5575,174000)
             st.giveItems(4615,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Constitution
     if event == "67":
@@ -619,8 +619,8 @@ class Quest (JQuest) :
             st.takeItems(5575,174000)
             st.giveItems(4616,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Dexterity
     if event == "68":
@@ -628,8 +628,8 @@ class Quest (JQuest) :
             st.takeItems(5575,174000)
             st.giveItems(4617,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Dexterity
     if event == "69":
@@ -637,8 +637,8 @@ class Quest (JQuest) :
             st.takeItems(5575,174000)
             st.giveItems(4618,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Inteligence
     if event == "70":
@@ -646,8 +646,8 @@ class Quest (JQuest) :
             st.takeItems(5575,174000)
             st.giveItems(4619,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Inteligence
     if event == "71":
@@ -655,8 +655,8 @@ class Quest (JQuest) :
             st.takeItems(5575,174000)
             st.giveItems(4620,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Mental Strenght
     if event == "72":
@@ -664,8 +664,8 @@ class Quest (JQuest) :
             st.takeItems(5575,174000)
             st.giveItems(4621,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Mental Strenght
     if event == "73":
@@ -673,8 +673,8 @@ class Quest (JQuest) :
             st.takeItems(5575,174000)
             st.giveItems(4622,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Wit
     if event == "74":
@@ -682,8 +682,8 @@ class Quest (JQuest) :
             st.takeItems(5575,174000)
             st.giveItems(4623,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
 # Dye of High Degree of Wit
     if event == "75":
@@ -691,8 +691,8 @@ class Quest (JQuest) :
             st.takeItems(5575,174000)
             st.giveItems(4624,1)
             htmltext = "Item has been succesfully purchased."
-	else:
-             htmltext = "You do not have enough ancient adena."
+        else:
+            htmltext = "You do not have enough ancient adena."
 
     if event == "0":
       htmltext = "Cancel."
@@ -718,7 +718,5 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(8113)
-
-STARTING.addTalkId(8113)
 
 STARTED.addTalkId(8113)
