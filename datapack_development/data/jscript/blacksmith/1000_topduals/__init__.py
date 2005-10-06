@@ -1332,6 +1332,4 @@ QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(7846)
 
-STARTING.addTalkId(7846)
-
 STARTED.addTalkId(7846)
