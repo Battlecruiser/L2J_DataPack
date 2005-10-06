@@ -132,8 +132,8 @@ class Quest (JQuest) :
         htmltext = "7629-07.htm"
      elif int(st.get("cond"))==5:
         htmltext = "7629-08.htm"
-     elif int(st.get("cond"))>5:
-        if int(st.get("cond"))==12:
+     elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 :
+        if st.getQuestItemsCount(TONE_OF_WATER_ID) and st.getQuestItemsCount(TONE_OF_FIRE_ID) and st.getQuestItemsCount(TONE_OF_WIND_ID) and st.getQuestItemsCount(TONE_OF_EARTH_ID) :
             st.takeItems(SCORE_OF_ELEMENTS_ID,1)
             st.takeItems(TONE_OF_WATER_ID,1)
             st.takeItems(TONE_OF_FIRE_ID,1)
@@ -180,7 +180,6 @@ class Quest (JQuest) :
           st.giveItems(TONE_OF_WATER_ID,1)
           st.takeItems(UNDINE_CHARM_ID,1)
           st.playSound("ItemSound.quest_middle")
-          st.set("cond",str(int(st.get("cond"))+1))
      elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WATER_ID)==1 and st.getQuestItemsCount(UNDINE_CHARM_ID)==0 :
         htmltext = "7413-04.htm"
    elif npcId == 7411 :
@@ -198,7 +197,6 @@ class Quest (JQuest) :
           st.giveItems(TONE_OF_FIRE_ID,1)
           st.takeItems(SALAMANDER_CHARM_ID,1)
           st.playSound("ItemSound.quest_middle")
-          st.set("cond",str(int(st.get("cond"))+1))
      elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_FIRE_ID)==1 and st.getQuestItemsCount(SALAMANDER_CHARM_ID)==0 :
         htmltext = "7411-04.htm"
    elif npcId == 7412 :
@@ -215,7 +213,6 @@ class Quest (JQuest) :
           st.giveItems(TONE_OF_WIND_ID,1)
           st.takeItems(SYLPH_CHARM_ID,1)
           st.playSound("ItemSound.quest_middle")
-          st.set("cond",str(int(st.get("cond"))+1))
      elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WIND_ID)==1 and st.getQuestItemsCount(SYLPH_CHARM_ID)==0 :
         htmltext = "7412-05.htm"
    elif npcId == 7409 :
@@ -232,7 +229,6 @@ class Quest (JQuest) :
           st.giveItems(TONE_OF_EARTH_ID,1)
           st.takeItems(SERPENT_CHARM_ID,1)
           st.playSound("ItemSound.quest_middle")
-          st.set("cond",str(int(st.get("cond"))+1))
      elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_EARTH_ID)==1 and st.getQuestItemsCount(SERPENT_CHARM_ID)==0 :
         htmltext = "7409-06.htm"
    return htmltext
@@ -251,12 +247,6 @@ class Quest (JQuest) :
         count+=st.getQuestItemsCount(items)
        if count>2:
         st.set("cond","5")
-     elif part==2 :
-       count=0
-       for items in [DAZZLING_DROP_ID,HARPYS_FEATHER_ID,WYRMS_WINGBONE_ID,WINDSUS_MANE_ID,EN_MONSTEREYE_SHELL_ID,EN_STONEGOLEM_POWDER_ID,EN_IRONGOLEM_SCRAP_ID,FLAME_CRYSTAL_ID]:
-        count+=st.getQuestItemsCount(items)
-       if count>94:
-        st.set("cond","8")
     else:
      st.giveItems(item,1)
      st.playSound("ItemSound.quest_itemget")
