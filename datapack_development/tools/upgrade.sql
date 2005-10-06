@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS armor;
+DROP TABLE IF EXISTS castle_door;
 DROP TABLE IF EXISTS char_templates;
 DROP TABLE IF EXISTS class_list;
 DROP TABLE IF EXISTS droplist;

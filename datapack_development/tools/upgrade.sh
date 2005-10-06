@@ -5,6 +5,7 @@ DBHOST=localhost
 mysqldump --add-drop-table -h $DBHOST -u $USER --password=$PASS $DBNAME > l2jdb_backup.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < upgrade.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/armor.sql
+mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/castle_door.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/char_templates.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/class_list.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/droplist.sql
