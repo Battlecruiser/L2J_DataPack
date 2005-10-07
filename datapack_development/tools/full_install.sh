@@ -50,3 +50,4 @@ mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/spawnlist.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/teleport.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/weapon.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/seven_signs.sql
+mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/zone.sql
