@@ -228,21 +228,20 @@ class Quest (JQuest) :
 
  def onKill (self,npcId,st):
    if npcId == 36 or npcId == 44:
-      if int(st.get("cond")) and int(st.get("cond")) == 2 :
+      if int(st.get("cond")) and int(st.get("cond")) == 2 and st.getQuestItemsCount(BREATH_OF_WINDS_ID) == 0 :
         st.set("id",str(int(st.get("id"))+1))
         if st.getRandom(100)<(int(st.get("id"))*33) :
           st.spawnNpc(5120)
           st.playSound("Itemsound.quest_before_battle")
-          st.set("cond",str(0))
    elif npcId == 13 or npcId == 19:
-      if int(st.get("cond")) and int(st.get("cond")) == 2 :
+      if int(st.get("cond")) and int(st.get("cond")) == 2 and st.getQuestItemsCount(SEED_OF_VERDURE_ID) == 0 :
         st.set("id",str(int(st.get("id"))+1))
         if st.getRandom(100)<(int(st.get("id"))*33) :
           st.spawnNpc(5121)
           st.playSound("Itemsound.quest_before_battle")
-          st.set("cond",str(0))
+
    elif npcId == 5120 :
-      if int(st.get("cond")) and int(st.get("cond")) == 0 and st.getQuestItemsCount(BREATH_OF_WINDS_ID) == 0 :
+      if int(st.get("cond")) and int(st.get("cond")) == 2 and st.getQuestItemsCount(BREATH_OF_WINDS_ID) == 0 :
         if st.getQuestItemsCount(SEED_OF_VERDURE_ID) :
           st.giveItems(BREATH_OF_WINDS_ID,1)
           st.set("cond","3")
@@ -251,7 +250,7 @@ class Quest (JQuest) :
           st.giveItems(BREATH_OF_WINDS_ID,1)
           st.playSound("Itemsound.quest_itemget")
    elif npcId == 5121 :
-      if int(st.get("cond")) and int(st.get("cond")) == 0 and st.getQuestItemsCount(SEED_OF_VERDURE_ID) == 0 :
+      if int(st.get("cond")) and int(st.get("cond")) == 2 and st.getQuestItemsCount(SEED_OF_VERDURE_ID) == 0 :
         if st.getQuestItemsCount(BREATH_OF_WINDS_ID) :
           st.giveItems(SEED_OF_VERDURE_ID,1)
           st.set("cond","3")
