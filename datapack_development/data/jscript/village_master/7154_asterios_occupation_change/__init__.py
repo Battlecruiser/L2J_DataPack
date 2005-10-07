@@ -49,7 +49,7 @@ class Quest (JQuest) :
 
    if event == "7154-10.htm":
      htmltext = event
-   return htmltext
+   
  
  def onTalk (Self,npcId,st):
    
