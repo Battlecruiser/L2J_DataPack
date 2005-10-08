@@ -281,9 +281,11 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="1" val="7"/>
+    <and>
     <effect count="0x7fffffff" name="SilentMove" time="5" val="1">
 	  <mul order="0x10" stat="runSpd" val="0.75"/>
     </effect>
+    </and>  
   </for>
 </skill>
 <skill id="222" levels="1" name="Fist Fury">
@@ -375,9 +377,11 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="1" val="2"/>
+    <and>
     <effect count="0x7fffffff" name="Relax" time="3" val="1">
       <add order="0x10" stat="regHp" val="5"/>
     </effect>
+    </and>
   </for>
 </skill>
 <skill id="227" levels="50" name="Light Armor Mastery">
