@@ -906,7 +906,6 @@ class Quest (JQuest) :
       htmltext = "Trade has been canceled."
     
     if htmltext != event:
-      st.set("cond","0")
       st.setState(COMPLETED)
       st.exitQuest(1)
 
@@ -914,6 +913,7 @@ class Quest (JQuest) :
 
  def onTalk (Self,npcId,st):
    htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
+   st.set("cond","0")
    st.setState(STARTED)
    return "1.htm"
 
