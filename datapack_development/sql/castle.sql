@@ -7,13 +7,15 @@ CREATE TABLE castle (
   taxPercent INT NOT NULL default 15,
   treasury INT NOT NULL default 0,
   siegeDate DECIMAL(20,0) NOT NULL default 0,
+  siegeDayOfWeek INT NOT NULL default 7,
+  siegeHourOfDay INT NOT NULL default 20,
   PRIMARY KEY  (name),
   KEY id (id)
 );
 
-Insert Into castle Values (1, 'Gludio', 15, 0, 0);
-Insert Into castle Values (2, 'Dion', 15, 0, 0);
-Insert Into castle Values (3, 'Giran', 15, 0, 0);
-Insert Into castle Values (4, 'Oren', 15, 0, 0);
-Insert Into castle Values (5, 'Aden', 15, 0, 0);
-Insert Into castle Values (6, 'Innadril', 15, 0, 0);
+Insert Into castle Values (1, 'Gludio', 15, 0, 0, 7, 20);
+Insert Into castle Values (2, 'Dion', 15, 0, 0, 7, 20);
+Insert Into castle Values (3, 'Giran', 15, 0, 0, 1, 16);
+Insert Into castle Values (4, 'Oren', 15, 0, 0, 1, 16);
+Insert Into castle Values (5, 'Aden', 15, 0, 0, 7, 20);
+Insert Into castle Values (6, 'Innadril', 15, 0, 0, 1, 16);
