@@ -1,4 +1,3 @@
-
 #Make by GreenHope and fix by Prograsso (Baghak)
 print "importing quests: 1006: Blacksmith"
 import sys
@@ -73,7 +72,6 @@ class Quest (JQuest) :
 
 QUEST       = Quest(1006,"1006_duals","Blacksmith")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 

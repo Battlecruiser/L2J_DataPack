@@ -906,6 +906,7 @@ class Quest (JQuest) :
       htmltext = "Trade has been canceled."
     
     if htmltext != event:
+      st.set("cond","0")
       st.setState(COMPLETED)
       st.exitQuest(1)
 

@@ -181,7 +181,7 @@ class Quest (JQuest) :
       st.set("cond","14")
    elif npcId == 7565 and int(st.get("cond"))==14 :
       htmltext = "7565-05.htm"
-   elif npcId == 7515 and int(st.get("cond"))==1 and st.getQuestItemsCount(LETTER_TO_MANAKIA_ID) :
+   elif npcId == 7515 and int(st.get("cond"))==10 and st.getQuestItemsCount(LETTER_TO_MANAKIA_ID) :
       htmltext = "7515-01.htm"
    elif npcId == 7515 and int(st.get("cond"))==11 :
       htmltext = "7515-03.htm"
