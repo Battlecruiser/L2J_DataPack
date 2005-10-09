@@ -280,12 +280,9 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="1" val="7"/>
-    <and>
-    <effect count="0x7fffffff" name="SilentMove" time="5" val="1">
+    <effect count="0x7fffffff" name="SilentMove" time="5" val="35">
 	  <mul order="0x10" stat="runSpd" val="0.75"/>
     </effect>
-    </and>  
   </for>
 </skill>
 <skill id="222" levels="1" name="Fist Fury">
@@ -298,7 +295,7 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-   <effect count="0x7fffffff" name="DamOverTime" time="2" val="#HP">
+   <effect count="0x7fffffff" name="DamOverTime" time="1" val="#HP">
       <mul order="0x10" stat="pAtkSpd" val="#pAtkSpd"/>
     </effect>
   </for>
@@ -376,13 +373,10 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="1" val="2"/>
-    <and>
-    <effect count="0x7fffffff" name="Relax" time="3" val="1">
+    <effect count="0x7fffffff" name="Relax" time="2" val="4">
       <add order="0x10" stat="regHp" val="5"/>
     </effect>
-    </and>
-  </for>
+   </for>
 </skill>
 <skill id="227" levels="50" name="Light Armor Mastery">
   <table name="#pDef">
@@ -1806,19 +1800,19 @@
   </for>
 </skill>
 <skill id="296" levels="1" name="Rest of Chameleon">
-
+ <table name="#mpConsume"> 9 </table> 
   <set name="power" val="0.0"/>
+  <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
-<for>
-	<effect count="0x7fffffff" name="Relax" time="3" val="1">
+ <for>
+	<effect count="0x7fffffff" name="Relax" time="1" val="1">
 		<add order="0x10" stat="regHp" val="5"/>
 	</effect>
-	<effect count="0x7fffffff" name="SilentMove" time="5" val="5"/>
-</for>
-
+	<effect count="0x7fffffff" name="SilentMove" time="1" val="8"/>
+ </for>
 </skill>
 <skill id="297" levels="2" name="Duelist Spirit">
 
