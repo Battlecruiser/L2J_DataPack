@@ -248,24 +248,22 @@
 
 </skill>
 <skill id="312" levels="20" name="Vicious Stance">
-
-  <table name="#crit"> 4 8 12 16 20 24 28 32 36 40 44 46 50 54 58 64 68 72 76 80 </table>
-  <table name="#critMult"> 1.3 1.33 1.36 1.39 1.42 1.45 1.48 1.51 1.54 1.57 1.6 1.63 1.66 1.69 1.72 1.75 1.78 1.81 1.84 1.87 </table>
-
+ <table name="#mpConsume"> 4 5 5 6 7 7 8 9 9 10 10 11 11 12 12 13 13 13 14 14 </table>
+ <table name="#crit"> 4 8 12 16 20 24 28 32 36 40 44 46 50 54 58 64 68 72 76 80 </table>
+ <table name="#critMult"> 1.3 1.33 1.36 1.39 1.42 1.45 1.48 1.51 1.54 1.57 1.6 1.63 1.66 1.69 1.72 1.75 1.78 1.81 1.84 1.87 </table>
   <set name="power" val="0.0"/>
+  <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="5">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="1" val="#mpConsume">
       <add order="0x10" stat="cAtk" val="#crit"/>
       <mul order="0x50" stat="cAtk" val="#critMult"/>
     </effect>
   </for>
-
 </skill>
-
 <skill id="313" levels="8" name="Snipe">
 
 <table name="#mpConsume">
@@ -378,38 +376,31 @@
   </for>
 </skill>
 <skill id="317" levels="1" name="Focus Attack">
-
-  <table name="#acc"> 15 </table>
-  <table name="#mana"> 0.2 </table>
-
+ <table name="#acc"> 15 </table>
+ <table name="#mpConsume"> 7 </table>
   <set name="weaponsAllowed" val="64"/>
-  <set name="mpConsume" val="7"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="CONT"/>
-  <set name="operateType" val="OP_TOGGLE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="5">
-      <val>
-        <add val="$player_level"/>
-        <mul val="#mana"/>
-      </val>
-      <add order="0x10" stat="accCombat" val="#acc"/>
-    </effect>
-  </for>
-
-</skill>
-<skill id="318" levels="1" name="Aegis Stance">
-<table name="#mpConsume"> 9 </table>
-<table name="#ShieldDef"> 0.7 </table>
-<table name="#Tab-pDef"> 1.35 </table>
-  <set name="mpConsume" val="#mpConsume"/>
+  <set name="mpConsume" val="val="#mpConsume""/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="#mpConsume">
+      <add order="0x10" stat="accCombat" val="#acc"/>
+    </effect>
+  </for>
+</skill>
+<skill id="318" levels="1" name="Aegis Stance">
+ <table name="#mpConsume"> 9 </table>
+ <table name="#ShieldDef"> 0.7 </table>
+ <table name="#Tab-pDef"> 1.35 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_TOGGLE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="1" val="#mpConsume">
       <mul stat="sDef" val="#ShieldDef" order="0x50"/>
       <mul stat="pDef" val="#Tab-pDef" order="0x50"/>
     </effect>
@@ -506,26 +497,18 @@
 
 </skill>
 <skill id="322" levels="6" name="Shield Fortress">
-
-<table name="#mpConsume">
-	12 13 13 13 14 14
-</table>
-<table name="#ShieldDefRate">
-	1.1 1.2 1.3 1.4 1.5 1.6
-</table>
-
+ <table name="#mpConsume"> 12 13 13 13 14 14 </table>
+ <table name="#ShieldDefRate"> 1.1 1.2 1.3 1.4 1.5 1.6 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
-
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="#mpConsume">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="1" val="#mpConsume">
       <mul stat="rShld" val="#ShieldDefRate" order="0x01"/>
     </effect>
   </for>
-
 </skill>
 <skill id="323" levels="1" name="Quiver of Arrow: Grade A">
 <!---

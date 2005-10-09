@@ -2,14 +2,15 @@
 <list>
 <skill id="1001" levels="10" name="Soul Cry">
   <table name="#patk-add"> 4.5 14 33.5 66.5 90.5 141.5 208.5 295.5 402.5 529.5 </table>
-  <table name="#mana"> 2 3 5 6 7 9 11 11 13 14 </table>
+  <table name="#mpConsume"> 2 3 5 6 7 9 11 11 13 14 </table>
   <set name="power" val="0.0"/>
+  <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-   <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="#mana">
+   <effect count="0x7fffffff" name="ManaDamOverTime" time="1" val="#mpConsume">
    	   <add order="0x10" stat="pAtk" val="#patk-add"/>
    </effect>
   </for>

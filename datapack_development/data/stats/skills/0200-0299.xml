@@ -944,14 +944,16 @@
   </for>
 </skill>
 <skill id="256" levels="1" name="Accuracy">
-  <table name="#acc"> 10 </table>
+ <table name="#mpConsume"> 1 </table>
+ <table name="#acc"> 10 </table>
   <set name="power" val="0.0"/>
+  <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="1">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="1" val="#mpConsume">
       <add order="0x10" stat="accCombat" val="#acc"/>
     </effect>
   </for>
@@ -1666,17 +1668,17 @@
   </for>
 </skill>
 <skill id="288" levels="4" name="Guard Stance">
-<table name="#MP"> 8 10 12 13 </table>
+<table name="#mpConsume"> 8 10 12 13 </table>
 <table name="#pDef"> 1.20 1.25 1.30 1.35 </table>
 <table name="#ShieldRate"> 15 20 25 30 </table>
-  <set name="mpConsume" val="#MP"/>
+  <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-	<effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="#MP">
+	<effect count="0x7fffffff" name="ManaDamOverTime" time="1" val="#mpConsume">
       <mul order="0x50" stat="pDef" val="#pDef"/>
 	  <add order="0x10" stat="rShld" val="#ShieldRate"/>
     </effect>
