@@ -13,9 +13,9 @@ CREATE TABLE castle (
   KEY id (id)
 );
 
-Insert Into castle Values (1, 'Gludio', 15, 0, 0, 7, 20);
-Insert Into castle Values (2, 'Dion', 15, 0, 0, 7, 20);
-Insert Into castle Values (3, 'Giran', 15, 0, 0, 1, 16);
-Insert Into castle Values (4, 'Oren', 15, 0, 0, 1, 16);
-Insert Into castle Values (5, 'Aden', 15, 0, 0, 7, 20);
-Insert Into castle Values (6, 'Innadril', 15, 0, 0, 1, 16);
+Insert Into castle Values (1, 'Gludio', 0, 0, 0, 7, 20);
+Insert Into castle Values (2, 'Dion', 0, 0, 0, 7, 20);
+Insert Into castle Values (3, 'Giran', 0, 0, 0, 1, 16);
+Insert Into castle Values (4, 'Oren', 0, 0, 0, 1, 16);
+Insert Into castle Values (5, 'Aden', 0, 0, 0, 7, 20);
+Insert Into castle Values (6, 'Innadril', 0, 0, 0, 1, 16);
