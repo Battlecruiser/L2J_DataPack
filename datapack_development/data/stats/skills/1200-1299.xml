@@ -1217,7 +1217,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtk" stackType="mAtkSpeedUp">
+  <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="berserk">
     <mul order="0x50" stat="mAtk" val="#Tab-mAtk"/>
     <mul order="0x50" stat="pAtk" val="#Tab-pAtk"/>
     <mul order="0x50" stat="pDef" val="#Tab-pDef"/>
