@@ -3342,7 +3342,7 @@ INSERT INTO `npc` VALUES
 (12338,'Gatekeeper','a_guard_MHuman',8.00,24.00,56,'male','L2Teleporter',40,1724,918,40,43,30,21,20,10,314,10,406,228,277,167,257,0,257,0,0,0,80,120,NULL,NULL,0),
 (12339,'Gatekeeper','a_guard_MHuman',8.00,24.00,56,'male','L2Teleporter',40,1724,918,40,43,30,21,20,10,314,10,406,228,277,167,257,0,257,0,0,0,80,120,NULL,NULL,0),
 (12340,'Gatekeeper','a_guard_MHuman',8.00,24.00,56,'male','L2Teleporter',40,1724,918,40,43,30,21,20,10,314,10,406,228,277,167,257,0,257,0,0,0,80,120,NULL,NULL,0),
-(12341,'Gatekeeper','a_guard_MHuman',8.00,24.00,56,'male','L2Teleporter',40,1724,918,40,43,30,21,20,10,314,10,406,228,277,167,257,0,257,0,0,0,80,120,'NULL,NULL,0),
+(12341,'Gatekeeper','a_guard_MHuman',8.00,24.00,56,'male','L2Teleporter',40,1724,918,40,43,30,21,20,10,314,10,406,228,277,167,257,0,257,0,0,0,80,120,NULL,NULL,0),
 (12342,'Flame Control Tower','alive_castle_aden_controltower_jewel',7.00,35.00,20,'male','L2Npc',40,5000,192,40,43,30,21,20,10,40,10,44,500,30,64,257,0,257,0,0,0,0,0,NULL,NULL,0),
 (12343,'Flame Control Tower','dead_castle_aden_controltower_jewel',7.00,35.00,20,'male','L2Npc',40,5000,192,40,43,30,21,20,10,40,10,44,500,30,64,257,0,257,0,0,0,0,0,NULL,NULL,0),
 (12344,'Kat the Cat','cat_the_cat',9.00,16.00,46,'male','L2Pet',40,3008,816,40,43,30,21,20,25,73,1,414,253,202,229,282,0,333,0,0,0,80,154,NULL,NULL,0),
