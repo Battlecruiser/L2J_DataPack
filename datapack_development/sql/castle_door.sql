@@ -24,7 +24,6 @@ insert into castle_door values (1, 19210006, 'inner_002', -17982, 110520, -2289,
 insert into castle_door values (1, 19210007, 'gate_001', -19235, 108276, -2289, 79125, 644, 518);
 insert into castle_door values (1, 19210008, 'gate_002', -18997, 108062, -1817, 158250, 644, 518);
 insert into castle_door values (1, 19210009, 'gate_003', -17939, 107109, -2289, 79125, 644, 518);
-insert into castle_door values (1, 19210010, '#throne', -18112, 108761, -2492, 158250, 644, 518);
 insert into castle_door values (2, 20220001, 'outer_001', 22441, 156685, -2670, 316500, 644, 518);
 insert into castle_door values (2, 20220002, 'outer_002', 22179, 156685, -2670, 316500, 644, 518);
 insert into castle_door values (2, 20220003, 'wall_001', 23873, 158368, -2882, 633000, 644, 518);
@@ -34,7 +33,6 @@ insert into castle_door values (2, 20220006, 'inner_002', 21943, 159230, -2476, 
 insert into castle_door values (2, 20220007, 'gate_001', 23195, 161470, -2483, 79125, 644, 518);
 insert into castle_door values (2, 20220008, 'gate_002', 22906, 161548, -2006, 158250, 644, 518);
 insert into castle_door values (2, 20220009, 'gate_003', 21899, 162738, -2483, 79125, 644, 518);
-insert into castle_door values (2, 20220010, '#throne', 22073, 160989, -2686, 158250, 644, 518);
 insert into castle_door values (3, 23220001, 'outer_001', 112857, 144729, -2540, 316500, 644, 518);
 insert into castle_door values (3, 23220002, 'outer_002', 112857, 144990, -2540, 316500, 644, 518);
 insert into castle_door values (3, 23220003, 'wall_001', 114540, 143297, -2755, 633000, 644, 518);
@@ -44,7 +42,6 @@ insert into castle_door values (3, 23220006, 'inner_002', 115402, 145227, -2349,
 insert into castle_door values (3, 23220007, 'gate_001', 117643, 143974, -2356, 79125, 644, 518);
 insert into castle_door values (3, 23220008, 'gate_002', 117720, 144242, -1877, 158250, 644, 518);
 insert into castle_door values (3, 23220009, 'gate_003', 118811, 145270, -2356, 79125, 644, 518);
-insert into castle_door values (3, 23220010, '#throne', 117161, 145097, -2559, 158250, 644, 518);
 insert into castle_door values (4, 22190001, 'outer_001', 78925, 36824, -2267, 316500, 644, 518);
 insert into castle_door values (4, 22190002, 'outer_002', 78925, 37085, -2267, 316500, 644, 518);
 insert into castle_door values (4, 22190003, 'wall_001', 80616, 35392, -2482, 633000, 644, 518);
@@ -54,7 +51,6 @@ insert into castle_door values (4, 22190006, 'inner_002', 81470, 37322, -2076, 1
 insert into castle_door values (4, 22190007, 'gate_001', 83719, 36069, -2083, 79125, 644, 518);
 insert into castle_door values (4, 22190008, 'gate_002', 83796, 36337, -1604, 158250, 644, 518);
 insert into castle_door values (4, 22190009, 'gate_003', 84887, 37365, -2083, 79125, 644, 518);
-insert into castle_door values (4, 22190010, '#throne', 83237, 37192, -2286, 158250, 644, 518);
 insert into castle_door values (5, 24180001, 'outer_001', 147278, 8483, -241, 339420, 837, 674);
 insert into castle_door values (5, 24180002, 'outer_002', 147634, 8483, -241, 339420, 837, 674);
 insert into castle_door values (5, 24180003, 'wall_in', 146770, 6977, -271, 678840, 837, 674);
@@ -71,7 +67,6 @@ insert into castle_door values (5, 24180013, 'left_004', 146002, 4493, -256, 113
 insert into castle_door values (5, 24180014, 'right_003', 148909, 4721, -256, 113140, 837, 674);
 insert into castle_door values (5, 24180015, 'right_004', 148909, 4493, -256, 113140, 837, 674);
 insert into castle_door values (5, 24180016, 'terrace', 147512, 2240, 322, 113140, 837, 674);
-insert into castle_door values (5, 24180017, '#throne', 147456, 3272, -42, 158250, 644, 518);
 insert into castle_door values (5, 24180018, 'gate_001', 150044, 3784, 21, 84855, 837, 674);
 insert into castle_door values (5, 24180019, 'gate_002', 149209, 3077, 1357, 84855, 837, 674);
 insert into castle_door values (5, 24180020, 'gate_003', 144859, 3784, 21, 84855, 837, 674);
@@ -85,4 +80,3 @@ insert into castle_door values (6, 23250006, 'inner_002', 115894, 248008, -572, 
 insert into castle_door values (6, 23250007, 'gate_001', 117146, 250249, -579, 79125, 644, 518);
 insert into castle_door values (6, 23250008, 'gate_002', 116857, 250327, -102, 158250, 644, 518);
 insert into castle_door values (6, 23250009, 'gate_003', 115850, 251517, -579, 79125, 644, 518);
-insert into castle_door values (6, 23250010, '#throne', 116024, 249768, -782, 158250, 644, 518);
