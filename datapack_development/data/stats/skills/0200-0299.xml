@@ -373,7 +373,7 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="Relax" time="2" val="4">
+    <effect count="0x7fffffff" name="Relax" time="1" val="2">
       <add order="0x10" stat="regHp" val="5"/>
     </effect>
    </for>
