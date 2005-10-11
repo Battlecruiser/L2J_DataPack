@@ -1100,7 +1100,7 @@
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
+  <set name="buffDuration" val="30000"/>
   <set name="castRange" val="400"/>
   <for>
     <effect count="6" name="DamOverTime" time="5" val="18" abnormal="poison"/>
@@ -1114,12 +1114,11 @@
   <set name="hitTime" val="3000"/>
   <set name="reuseDelay" val="120000"/>
   <set name="skillTime" val="3000"/>
-  <set name="skillType" val="MDAM"/>
-  <set name="isMagic" val="true"/>
+  <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="400"/>
   <for>
+    <effect count="1" name="Stun" time="9" val="0"/>
   </for>
 </skill>
 <skill id="4167" levels="1" name="Curse of Fairy Mymyu">
@@ -1156,25 +1155,21 @@
   </for>
 </skill>
 <skill id="4169" levels="7" name="Shock">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily throws one's enemy into a state of shock, preventing him from moving.
-  7: Temporarily throws one's enemy into a state of shock, preventing him from moving.
-  created 2005-05-29 23:34:32
--->
-  <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
+ <table name="#power"> 18 26 38 52 68 85 102 </table>
+ <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="830"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="save" val="3"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="3000"/>
+  <set name="reuseDelay" val="120000"/>
+  <set name="skillTime" val="3000"/>
+  <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="40"/>
+  <set name="castRange" val="400"/>
   <for>
+    <effect count="1" name="Stun" time="9" val="0"/>
   </for>
-</skill>
 <skill id="4170" levels="7" name="BOSS Mortal Blow">
 <!---
   Automatically generated from C3 client files.
