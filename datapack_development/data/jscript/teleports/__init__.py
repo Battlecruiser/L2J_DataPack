@@ -3,7 +3,8 @@ __all__ = [
 '1101_teleport_to_race_track',
 '1102_toivortex_green',
 '1102_toivortex_blue',
-'1102_toivortex_red'
+'1102_toivortex_red',
+'1103_OracleTeleport'
 ]
 print ""
 print "importing teleport data ..."
