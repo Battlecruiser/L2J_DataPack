@@ -1166,10 +1166,11 @@
   <set name="skillTime" val="3000"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="400"/>
+  <set name="castRange" val="40"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0"/>
   </for>
+</skill>  
 <skill id="4170" levels="7" name="BOSS Mortal Blow">
 <!---
   Automatically generated from C3 client files.
