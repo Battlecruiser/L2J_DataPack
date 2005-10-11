@@ -1,39 +1,45 @@
 # Maked by Mr. Have fun! Version 0.2
-print "importing quests: 232: Test Of Lord"
+print "importing quests: 231: Test Of Maestro"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-MARK_OF_LORD_ID = 3390
-ORDEAL_NECKLACE_ID = 3391
-VARKEES_CHARM_ID = 3392
-TANTUS_CHARM_ID = 3393
-HATOS_CHARM_ID = 3394
-TAKUNA_CHARM_ID = 3395
-CHIANTA_CHARM_ID = 3396
-MANAKIAS_ORDERS_ID = 3397
-BREKA_ORC_FANG_ID = 3398
-MANAKIAS_AMULET_ID = 3399
-HUGE_ORC_FANG_ID = 3400
-SUMARIS_LETTER_ID = 3401
-URUTU_BLADE_ID = 3402
-TIMAK_ORC_SKULL_ID = 3403
-SWORD_INTO_SKULL_ID = 3404
-NERUGA_AXE_BLADE_ID = 3405
-AXE_OF_CEREMONY_ID = 3406
-MARSH_SPIDER_FEELER_ID = 3407
-MARSH_SPIDER_FEET_ID = 3408
-HANDIWORK_SPIDER_BROOCH_ID = 3409
-CORNEA_OF_EN_MONSTEREYE_ID = 3410
-MONSTEREYE_WOODCARVING_ID = 3411
-BEAR_FANG_NECKLACE_ID = 3412
-MARTANKUS_CHARM_ID = 3413
-RAGNA_ORC_HEAD_ID = 3414
-RAGNA_CHIEF_NOTICE_ID = 3415
-IMMORTAL_FLAME_ID = 3416
-BONE_ARROW_ID = 1341
-ADENA_ID = 57
+
+#item definition
+RECOMMENDATION_OF_BALANKI_ID = 2864
+RECOMMENDATION_OF_FILAUR_ID = 2865
+RECOMMENDATION_OF_ARIN_ID = 2866
+MARK_OF_MAESTRO_ID = 2867
+LETTER_OF_SOLDER_DETACHMENT_ID = 2868
+PAINT_OF_KAMURU_ID = 2869
+NECKLACE_OF_KAMURU_ID = 2870
+PAINT_OF_TELEPORT_DEVICE_ID = 2871
+TELEPORT_DEVICE_ID = 2872
+ARCHITECTURE_OF_KRUMA_ID = 2873
+REPORT_OF_KRUMA_ID = 2874
+INGREDIENTS_OF_ANTIDOTE_ID = 2875
+WEIRD_BEES_NEEDLE_ID = 2876
+MARSH_SPIDERS_WEB_ID = 2877
+BLOOD_OF_LEECH_ID = 2878
+BROKEN_TELEPORT_DEVICE_ID = 2916
+
+#This Handels all Mob Drop Data.  npcId:[condition,maxcount,item]
+DROPLIST={
+225:[13,10,BLOOD_OF_LEECH_ID],
+229:[13,10,WEIRD_BEES_NEEDLE_ID],
+233:[13,10,MARSH_SPIDERS_WEB_ID],
+5133:[4,1,NECKLACE_OF_KAMURU_ID]
+}
+
+#if you have all three recommendation it sets a end cond
+def recommendationCount(st):
+  count=0
+  for device in [RECOMMENDATION_OF_ARIN_ID,RECOMMENDATION_OF_FILAUR_ID,RECOMMENDATION_OF_BALANKI_ID]:
+    count+=st.getQuestItemsCount(device)
+  if count == 3:
+    st.set("cond","17")
+
 
 class Quest (JQuest) :
 
@@ -42,59 +48,41 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-        htmltext = "7565-05.htm"
-        st.set("cond","1")
-        st.setState(STARTED)
-        st.playSound("ItemSound.quest_accept")
-        st.giveItems(ORDEAL_NECKLACE_ID,1)
-    elif event == "7565_1" :
-          htmltext = "7565-08.htm"
-          st.takeItems(SWORD_INTO_SKULL_ID,1)
-          st.takeItems(AXE_OF_CEREMONY_ID,1)
-          st.takeItems(MONSTEREYE_WOODCARVING_ID,1)
-          st.takeItems(HANDIWORK_SPIDER_BROOCH_ID,1)
-          st.takeItems(ORDEAL_NECKLACE_ID,1)
-          st.giveItems(BEAR_FANG_NECKLACE_ID,1)
-          st.takeItems(HUGE_ORC_FANG_ID,1)
-    elif event == "7566_1" :
-          htmltext = "7566-02.htm"
-          st.giveItems(VARKEES_CHARM_ID,1)
-    elif event == "7567_1" :
-          htmltext = "7567-02.htm"
-          st.giveItems(TANTUS_CHARM_ID,1)
-    elif event == "7558_1" :
-          htmltext = "7558-02.htm"
-          st.giveItems(NERUGA_AXE_BLADE_ID,1)
-          st.takeItems(ADENA_ID,1000)
-    elif event == "7568_1" :
-          htmltext = "7568-02.htm"
-          st.giveItems(HATOS_CHARM_ID,1)
-    elif event == "7641_1" :
-          htmltext = "7641-02.htm"
-          st.giveItems(TAKUNA_CHARM_ID,1)
-    elif event == "7642_1" :
-          htmltext = "7642-02.htm"
-          st.giveItems(CHIANTA_CHARM_ID,1)
-    elif event == "7649_1" :
-          htmltext = "7649-02.htm"
-    elif event == "7649_2" :
-          htmltext = "7649-03.htm"
-    elif event == "7649_3" :
-          htmltext = "7649-04.htm"
-          st.giveItems(MARTANKUS_CHARM_ID,1)
-          st.takeItems(BEAR_FANG_NECKLACE_ID,1)
-    elif event == "7649_4" :
-          htmltext = "7649-07.htm"
-#          if Maker_GetNpcCount() == 1 :
-          st.spawnNpc(7643,21036,-107690,-3038)
-    elif event == "7643_1" :
-          htmltext = "7643-02.htm"
-    elif event == "7643_2" :
-          htmltext = "7643-03.htm"
+          htmltext = "7531-04.htm"
+          st.setState(STARTED)
+          st.playSound("ItemSound.quest_accept")
+          st.set("cond","1")
+    elif event == "7533_1" :
+          htmltext = "7533-02.htm"
+          st.set("cond","2")
+    elif event == "7671_1" :
+          htmltext = "7671-02.htm"
+          st.giveItems(PAINT_OF_KAMURU_ID,1)
+          st.set("cond","3")
+    elif event == "7556_1" :
+          htmltext = "7556-02.htm"
+    elif event == "7556_2" :
+          htmltext = "7556-03.htm"
+    elif event == "7556_3" :
+          htmltext = "7556-05.htm"
+          st.takeItems(PAINT_OF_TELEPORT_DEVICE_ID,1)
+          st.getPlayer().teleToLocation(140352,-194133,-2028);
+          st.giveItems(BROKEN_TELEPORT_DEVICE_ID,1)
+          st.set("cond","9")
+    elif event == "7556_4" :
+          htmltext = "7556-04.htm"
+    elif event == "7673_1" :
+          htmltext = "7673-04.htm"
+          st.giveItems(REPORT_OF_KRUMA_ID,1)
+          st.takeItems(WEIRD_BEES_NEEDLE_ID,st.getQuestItemsCount(WEIRD_BEES_NEEDLE_ID))
+          st.takeItems(MARSH_SPIDERS_WEB_ID,st.getQuestItemsCount(MARSH_SPIDERS_WEB_ID))
+          st.takeItems(BLOOD_OF_LEECH_ID,st.getQuestItemsCount(BLOOD_OF_LEECH_ID))
+          st.takeItems(INGREDIENTS_OF_ANTIDOTE_ID,st.getQuestItemsCount(INGREDIENTS_OF_ANTIDOTE_ID))
+          st.set("cond","15")
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (self,npcId,st):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
@@ -102,217 +90,135 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 7565 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-        if int(st.get("cond")) < 15 :
-          if st.getPlayer().getRace().ordinal() != 3 :
-            htmltext = "7565-01.htm"
-          else:
-            if st.getPlayer().getClassId().getId() != 0x32 :
-              htmltext = "7565-02.htm"
-            else:
-              if st.getPlayer().getLevel() < 39 :
-                htmltext = "7565-03.htm"
-              else:
-                htmltext = "7565-04.htm"
+   if npcId == 7531:
+     if int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+        if st.getPlayer().getClassId().getId() == 0x38 and st.getPlayer().getLevel() >38 :
+          htmltext = "7531-03.htm"
+        elif st.getPlayer().getClassId().getId() == 0x38 :
+          htmltext = "7531-01.htm"
+          st.exitQuest(1)
         else:
-          htmltext = "7565-04.htm"
-   elif npcId == 7565 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
-      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7565 and int(st.get("cond"))==1 and st.getQuestItemsCount(ORDEAL_NECKLACE_ID)==1 :
-        if st.getQuestItemsCount((HUGE_ORC_FANG_ID) and st.getQuestItemsCount(SWORD_INTO_SKULL_ID)) and st.getQuestItemsCount((AXE_OF_CEREMONY_ID) and st.getQuestItemsCount(MONSTEREYE_WOODCARVING_ID) and st.getQuestItemsCount(HANDIWORK_SPIDER_BROOCH_ID)) :
-          htmltext = "7565-07.htm"
-        else:
-          htmltext = "7565-06.htm"
-   elif npcId == 7565 and int(st.get("cond"))==1 and st.getQuestItemsCount(BEAR_FANG_NECKLACE_ID)==1 :
-        htmltext = "7565-09.htm"
-   elif npcId == 7565 and int(st.get("cond"))==1 and st.getQuestItemsCount(MARTANKUS_CHARM_ID)==1 :
-        htmltext = "7565-10.htm"
-   elif npcId == 7565 and int(st.get("cond"))==1 and st.getQuestItemsCount(IMMORTAL_FLAME_ID)==1 :
-        if st.getGameTicks() != int(st.get("id")) :
-          st.set("id",str(st.getGameTicks()))
-          st.addExpAndSp(25000,3000)
-          st.giveItems(MARK_OF_LORD_ID,1)
-          st.takeItems(IMMORTAL_FLAME_ID,1)
-          htmltext = "7565-11.htm"
-          st.set("cond","0")
-          st.set("onlyone","1")
-          st.setState(COMPLETED)
-          st.playSound("ItemSound.quest_finish")
-   elif npcId == 7566 and int(st.get("cond"))==1 and st.getQuestItemsCount(ORDEAL_NECKLACE_ID)==1 and st.getQuestItemsCount((HUGE_ORC_FANG_ID) == 0 and st.getQuestItemsCount(VARKEES_CHARM_ID)) == 0 :
-        htmltext = "7566-01.htm"
-   elif npcId == 7566 and int(st.get("cond"))==1 and st.getQuestItemsCount((HUGE_ORC_FANG_ID) == 0 and st.getQuestItemsCount(MANAKIAS_AMULET_ID)) == 0 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(VARKEES_CHARM_ID)) :
-        htmltext = "7566-03.htm"
-   elif npcId == 7566 and int(st.get("cond"))==1 and st.getQuestItemsCount(HUGE_ORC_FANG_ID)==0 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(VARKEES_CHARM_ID) and st.getQuestItemsCount(MANAKIAS_AMULET_ID)) :
-        htmltext = "7566-04.htm"
-        st.takeItems(VARKEES_CHARM_ID,1)
-        st.giveItems(HUGE_ORC_FANG_ID,1)
-        st.takeItems(MANAKIAS_AMULET_ID,1)
-   elif npcId == 7566 and int(st.get("cond"))==1 and st.getQuestItemsCount(VARKEES_CHARM_ID)==0 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(HUGE_ORC_FANG_ID)) :
-        htmltext = "7566-05.htm"
-   elif npcId == 7515 and int(st.get("cond"))==1 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(VARKEES_CHARM_ID)) and st.getQuestItemsCount((HUGE_ORC_FANG_ID) == 0 and st.getQuestItemsCount(MANAKIAS_AMULET_ID) == 0 and st.getQuestItemsCount(MANAKIAS_ORDERS_ID)) == 0 :
-        htmltext = "7515-01.htm"
-        st.giveItems(MANAKIAS_ORDERS_ID,1)
-   elif npcId == 7515 and int(st.get("cond"))==1 and st.getQuestItemsCount((VARKEES_CHARM_ID) and st.getQuestItemsCount(ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(MANAKIAS_ORDERS_ID)) and st.getQuestItemsCount((HUGE_ORC_FANG_ID) == 0 and st.getQuestItemsCount(MANAKIAS_AMULET_ID)) == 0 :
-        if st.getQuestItemsCount(BREKA_ORC_FANG_ID) < 20 :
-          htmltext = "7515-02.htm"
-        else:
-          htmltext = "7515-03.htm"
-          st.giveItems(MANAKIAS_AMULET_ID,1)
-          st.takeItems(MANAKIAS_ORDERS_ID,1)
-          st.takeItems(BREKA_ORC_FANG_ID,st.getQuestItemsCount(BREKA_ORC_FANG_ID))
-   elif npcId == 7515 and int(st.get("cond"))==1 and st.getQuestItemsCount((HUGE_ORC_FANG_ID) == 0 and st.getQuestItemsCount(MANAKIAS_ORDERS_ID)) == 0 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(VARKEES_CHARM_ID) and st.getQuestItemsCount(MANAKIAS_AMULET_ID)) :
-        htmltext = "7515-04.htm"
-   elif npcId == 7515 and int(st.get("cond"))==1 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(HUGE_ORC_FANG_ID)) and st.getQuestItemsCount((VARKEES_CHARM_ID) == 0 and st.getQuestItemsCount(MANAKIAS_AMULET_ID) == 0 and st.getQuestItemsCount(MANAKIAS_ORDERS_ID)) == 0 :
-        htmltext = "7515-05.htm"
-   elif npcId == 7567 and int(st.get("cond"))==1 and st.getQuestItemsCount(ORDEAL_NECKLACE_ID)==1 and st.getQuestItemsCount((AXE_OF_CEREMONY_ID) == 0 and st.getQuestItemsCount(TANTUS_CHARM_ID)) == 0 :
-        htmltext = "7567-01.htm"
-   elif npcId == 7567 and int(st.get("cond"))==1 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(TANTUS_CHARM_ID)) and st.getQuestItemsCount(AXE_OF_CEREMONY_ID)==0 :
-        if st.getQuestItemsCount(BONE_ARROW_ID) < 1000 or st.getQuestItemsCount(NERUGA_AXE_BLADE_ID) == 0 :
-          htmltext = "7567-03.htm"
-        else:
-          htmltext = "7567-04.htm"
-          st.takeItems(NERUGA_AXE_BLADE_ID,1)
-          st.takeItems(BONE_ARROW_ID,1000)
-          st.giveItems(AXE_OF_CEREMONY_ID,1)
-          st.takeItems(TANTUS_CHARM_ID,1)
-   elif npcId == 7567 and int(st.get("cond"))==1 and st.getQuestItemsCount(TANTUS_CHARM_ID)==0 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(AXE_OF_CEREMONY_ID)) :
-        htmltext = "7567-05.htm"
-   elif npcId == 7558 and int(st.get("cond"))==1 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(TANTUS_CHARM_ID)) and st.getQuestItemsCount((AXE_OF_CEREMONY_ID) == 0 and st.getQuestItemsCount(NERUGA_AXE_BLADE_ID)) == 0 :
-        if st.getQuestItemsCount(ADENA_ID) >= 1000 :
-          htmltext = "7558-01.htm"
-        else:
-          htmltext = "7558-03.htm"
-   elif npcId == 7558 and int(st.get("cond"))==1 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(TANTUS_CHARM_ID) and st.getQuestItemsCount(NERUGA_AXE_BLADE_ID)) and st.getQuestItemsCount(AXE_OF_CEREMONY_ID)==0 :
-        htmltext = "7558-04.htm"
-   elif npcId == 7558 and int(st.get("cond"))==1 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(AXE_OF_CEREMONY_ID)) and st.getQuestItemsCount(TANTUS_CHARM_ID)==0 :
-        htmltext = "7558-05.htm"
-   elif npcId == 7568 and int(st.get("cond"))==1 and st.getQuestItemsCount(ORDEAL_NECKLACE_ID)==1 and st.getQuestItemsCount((SWORD_INTO_SKULL_ID) == 0 and st.getQuestItemsCount(HATOS_CHARM_ID)) == 0 :
-        htmltext = "7568-01.htm"
-   elif npcId == 7568 and int(st.get("cond"))==1 and st.getQuestItemsCount(SWORD_INTO_SKULL_ID)==0 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(HATOS_CHARM_ID)) :
-        if st.getQuestItemsCount(URUTU_BLADE_ID) == 1 and st.getQuestItemsCount(TIMAK_ORC_SKULL_ID) >= 10 :
-          htmltext = "7568-04.htm"
-          st.takeItems(HATOS_CHARM_ID,1)
-          st.takeItems(URUTU_BLADE_ID,1)
-          st.takeItems(TIMAK_ORC_SKULL_ID,st.getQuestItemsCount(TIMAK_ORC_SKULL_ID))
-          st.giveItems(SWORD_INTO_SKULL_ID,1)
-        else:
-          htmltext = "7568-03.htm"
-   elif npcId == 7568 and int(st.get("cond"))==1 and st.getQuestItemsCount(HATOS_CHARM_ID)==0 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(SWORD_INTO_SKULL_ID)) :
-        htmltext = "7568-05.htm"
-   elif npcId == 7564 and int(st.get("cond"))==1 and st.getQuestItemsCount((HATOS_CHARM_ID) and st.getQuestItemsCount(ORDEAL_NECKLACE_ID)) and st.getQuestItemsCount((SWORD_INTO_SKULL_ID) == 0 and st.getQuestItemsCount(URUTU_BLADE_ID) == 0 and st.getQuestItemsCount(SUMARIS_LETTER_ID)) == 0 :
-        htmltext = "7564-01.htm"
-        st.giveItems(SUMARIS_LETTER_ID,1)
-   elif npcId == 7564 and int(st.get("cond"))==1 and st.getQuestItemsCount((SWORD_INTO_SKULL_ID) == 0 and st.getQuestItemsCount(URUTU_BLADE_ID)) == 0 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(HATOS_CHARM_ID) and st.getQuestItemsCount(SUMARIS_LETTER_ID)) :
-        htmltext = "7564-02.htm"
-   elif npcId == 7564 and int(st.get("cond"))==1 and st.getQuestItemsCount((SUMARIS_LETTER_ID) == 0 and st.getQuestItemsCount(SWORD_INTO_SKULL_ID)) == 0 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(HATOS_CHARM_ID) and st.getQuestItemsCount(URUTU_BLADE_ID)) :
-        htmltext = "7564-03.htm"
-   elif npcId == 7564 and int(st.get("cond"))==1 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(SWORD_INTO_SKULL_ID)) and st.getQuestItemsCount((HATOS_CHARM_ID) == 0 and st.getQuestItemsCount(URUTU_BLADE_ID) == 0 and st.getQuestItemsCount(SUMARIS_LETTER_ID)) == 0 :
-        htmltext = "7564-04.htm"
-   elif npcId == 7510 and int(st.get("cond"))==1 and st.getQuestItemsCount((SWORD_INTO_SKULL_ID) == 0 and st.getQuestItemsCount(URUTU_BLADE_ID)) == 0 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(HATOS_CHARM_ID) and st.getQuestItemsCount(SUMARIS_LETTER_ID)) :
-        htmltext = "7510-01.htm"
-        st.giveItems(URUTU_BLADE_ID,1)
-        st.takeItems(SUMARIS_LETTER_ID,1)
-   elif npcId == 7510 and int(st.get("cond"))==1 and st.getQuestItemsCount((SWORD_INTO_SKULL_ID) == 0 and st.getQuestItemsCount(SUMARIS_LETTER_ID)) == 0 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(HATOS_CHARM_ID) and st.getQuestItemsCount(URUTU_BLADE_ID)) :
-        htmltext = "7510-02.htm"
-   elif npcId == 7510 and int(st.get("cond"))==1 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(SWORD_INTO_SKULL_ID)) and st.getQuestItemsCount((HATOS_CHARM_ID) == 0 and st.getQuestItemsCount(URUTU_BLADE_ID) == 0 and st.getQuestItemsCount(SUMARIS_LETTER_ID)) == 0 :
-        htmltext = "7510-03.htm"
-   elif npcId == 7641 and int(st.get("cond"))==1 and st.getQuestItemsCount((HANDIWORK_SPIDER_BROOCH_ID) == 0 and st.getQuestItemsCount(TAKUNA_CHARM_ID)) == 0 and st.getQuestItemsCount(ORDEAL_NECKLACE_ID)==1 :
-        htmltext = "7641-01.htm"
-   elif npcId == 7641 and int(st.get("cond"))==1 and st.getQuestItemsCount((TAKUNA_CHARM_ID) and st.getQuestItemsCount(ORDEAL_NECKLACE_ID)) and st.getQuestItemsCount(HANDIWORK_SPIDER_BROOCH_ID)==0 :
-        if st.getQuestItemsCount(MARSH_SPIDER_FEELER_ID) >= 10 and st.getQuestItemsCount(MARSH_SPIDER_FEET_ID) >= 10 :
-          htmltext = "7641-04.htm"
-          st.takeItems(MARSH_SPIDER_FEELER_ID,st.getQuestItemsCount(MARSH_SPIDER_FEELER_ID))
-          st.takeItems(MARSH_SPIDER_FEET_ID,st.getQuestItemsCount(MARSH_SPIDER_FEET_ID))
-          st.giveItems(HANDIWORK_SPIDER_BROOCH_ID,1)
-          st.takeItems(TAKUNA_CHARM_ID,1)
-        else:
-          htmltext = "7641-03.htm"
-   elif npcId == 7641 and int(st.get("cond"))==1 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(HANDIWORK_SPIDER_BROOCH_ID)) and st.getQuestItemsCount(TAKUNA_CHARM_ID)==0 :
-        htmltext = "7641-05.htm"
-   elif npcId == 7642 and int(st.get("cond"))==1 and st.getQuestItemsCount((MONSTEREYE_WOODCARVING_ID) == 0 and st.getQuestItemsCount(CHIANTA_CHARM_ID)) == 0 and st.getQuestItemsCount(ORDEAL_NECKLACE_ID)==1 :
-        htmltext = "7642-01.htm"
-   elif npcId == 7642 and int(st.get("cond"))==1 and st.getQuestItemsCount((CHIANTA_CHARM_ID) and st.getQuestItemsCount(ORDEAL_NECKLACE_ID)) and st.getQuestItemsCount(MONSTEREYE_WOODCARVING_ID)==0 :
-        if st.getQuestItemsCount(CORNEA_OF_EN_MONSTEREYE_ID) < 20 :
-          htmltext = "7642-03.htm"
-        else:
-          htmltext = "7642-04.htm"
-          st.takeItems(CORNEA_OF_EN_MONSTEREYE_ID,st.getQuestItemsCount(CORNEA_OF_EN_MONSTEREYE_ID))
-          st.giveItems(MONSTEREYE_WOODCARVING_ID,1)
-          st.takeItems(CHIANTA_CHARM_ID,1)
-   elif npcId == 7642 and int(st.get("cond"))==1 and st.getQuestItemsCount((ORDEAL_NECKLACE_ID) and st.getQuestItemsCount(MONSTEREYE_WOODCARVING_ID)) and st.getQuestItemsCount(CHIANTA_CHARM_ID)==0 :
-        htmltext = "7642-05.htm"
-   elif npcId == 7649 and int(st.get("cond"))==1 and st.getQuestItemsCount(BEAR_FANG_NECKLACE_ID)==1 :
-        htmltext = "7649-01.htm"
-   elif npcId == 7649 and int(st.get("cond"))==1 and st.getQuestItemsCount(MARTANKUS_CHARM_ID)==1 and st.getQuestItemsCount((RAGNA_CHIEF_NOTICE_ID) == 0 and st.getQuestItemsCount(RAGNA_ORC_HEAD_ID)) == 0 :
-        htmltext = "7649-05.htm"
-   elif npcId == 7649 and int(st.get("cond"))==1 and st.getQuestItemsCount((MARTANKUS_CHARM_ID) and st.getQuestItemsCount(RAGNA_CHIEF_NOTICE_ID) and st.getQuestItemsCount(RAGNA_ORC_HEAD_ID)) :
-        htmltext = "7649-06.htm"
-        st.takeItems(MARTANKUS_CHARM_ID,1)
-        st.takeItems(RAGNA_ORC_HEAD_ID,1)
-        st.giveItems(IMMORTAL_FLAME_ID,1)
-        st.takeItems(RAGNA_CHIEF_NOTICE_ID,1)
-   elif npcId == 7649 and int(st.get("cond"))==1 and st.getQuestItemsCount(IMMORTAL_FLAME_ID)==1 :
-        htmltext = "7649-08.htm"
-#        if Maker_GetNpcCount() == 1 :
-        st.spawnNpc(7643,21036,-107690,-3038)
-   elif npcId == 7643 and int(st.get("cond"))==1 and st.getQuestItemsCount((MARTANKUS_CHARM_ID) or st.getQuestItemsCount(IMMORTAL_FLAME_ID)) :
-        htmltext = "7643-01.htm"
+          htmltext = "7531-02.htm"
+          st.exitQuest(1)
+     elif int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+       htmltext = "<html><head><body>This quest has already been completed.</body></html>"
+     elif int(st.get("cond"))>0 and int(st.get("cond"))<17 :
+       htmltext = "7531-05.htm"
+     elif int(st.get("cond"))==17 :
+       st.addExpAndSp(46000,5900)
+       htmltext = "7531-06.htm"
+       st.giveItems(MARK_OF_MAESTRO_ID,1)
+       st.takeItems(RECOMMENDATION_OF_BALANKI_ID,1)
+       st.takeItems(RECOMMENDATION_OF_FILAUR_ID,1)
+       st.takeItems(RECOMMENDATION_OF_ARIN_ID,1)
+       st.set("cond","0")
+       st.setState(COMPLETED)
+       st.playSound("ItemSound.quest_finish")
+       st.set("onlyone","1")
+   elif npcId == 7533:
+     if (int(st.get("cond"))==1 or int(st.get("cond"))==11 or int(st.get("cond"))==16) and st.getQuestItemsCount(RECOMMENDATION_OF_BALANKI_ID)==0:
+       htmltext = "7533-01.htm"
+     elif int(st.get("cond"))==2:
+       htmltext = "7533-03.htm"
+     elif int(st.get("cond"))==6 :
+       htmltext = "7533-04.htm"
+       st.giveItems(RECOMMENDATION_OF_BALANKI_ID,1)
+       st.takeItems(LETTER_OF_SOLDER_DETACHMENT_ID,1)
+       st.set("cond","7")
+       recommendationCount(st)
+     elif int(st.get("cond"))==7 or int(st.get("cond"))==17 :
+       htmltext = "7533-05.htm"
+   elif npcId == 7671:
+     if int(st.get("cond"))==2 :
+       htmltext = "7671-01.htm"
+     elif int(st.get("cond"))==3:
+       htmltext = "7671-03.htm"
+     elif int(st.get("cond"))==5 :
+       htmltext = "7671-04.htm"
+       st.giveItems(LETTER_OF_SOLDER_DETACHMENT_ID,1)
+       st.takeItems(NECKLACE_OF_KAMURU_ID,1)
+       st.takeItems(PAINT_OF_KAMURU_ID,1)
+       st.set("cond","6")
+     elif int(st.get("cond"))==6 :
+       htmltext = "7671-05.htm"
+   elif npcId == 7672 and int(st.get("cond"))==3 :
+       htmltext = "7672-01.htm"
+   elif npcId == 7675 and int(st.get("cond"))==3:
+       st.set("cond","4")
+       htmltext="7675-01.htm"
+   elif npcId == 7536:
+     if (int(st.get("cond"))==1 or int(st.get("cond"))==7 or int(st.get("cond"))==16) and st.getQuestItemsCount(RECOMMENDATION_OF_ARIN_ID)==0:
+       htmltext = "7536-01.htm"
+       st.giveItems(PAINT_OF_TELEPORT_DEVICE_ID,1)
+       st.set("cond","8")
+     elif int(st.get("cond"))==8 :
+       htmltext = "7536-02.htm"
+     elif int(st.get("cond"))==10:
+       htmltext = "7536-03.htm"
+       st.giveItems(RECOMMENDATION_OF_ARIN_ID,1)
+       st.takeItems(TELEPORT_DEVICE_ID,5)
+       st.set("cond","11")
+       recommendationCount(st)
+     elif int(st.get("cond"))==11 or int(st.get("cond"))==17:
+       htmltext = "7536-04.htm"
+   elif npcId==7556:
+     if int(st.get("cond"))==8:
+       htmltext = "7556-01.htm"
+     elif int(st.get("cond"))==9:
+       htmltext = "7556-06.htm"
+       st.giveItems(TELEPORT_DEVICE_ID,5)
+       st.takeItems(BROKEN_TELEPORT_DEVICE_ID,1)
+       st.set("cond","10")
+     elif int(st.get("cond"))==10 :
+       htmltext = "7556-07.htm"
+   elif npcId==7535:  
+     if (int(st.get("cond"))==1 or int(st.get("cond"))==7 or int(st.get("cond"))==11) and st.getQuestItemsCount(RECOMMENDATION_OF_FILAUR_ID)==0 :
+       htmltext = "7535-01.htm"
+       st.giveItems(ARCHITECTURE_OF_KRUMA_ID,1)
+       st.set("cond","12")
+     elif int(st.get("cond"))==12 :
+       htmltext = "7535-02.htm"
+     elif int(st.get("cond"))==15 :
+       htmltext = "7535-03.htm"
+       st.giveItems(RECOMMENDATION_OF_FILAUR_ID,1)
+       st.takeItems(REPORT_OF_KRUMA_ID,1)
+       st.set("cond","16")
+       recommendationCount(st)
+     elif int(st.get("cond"))>15:
+       htmltext = "7535-04.htm"
+   elif npcId == 7673:
+     if int(st.get("cond"))==12 :
+       htmltext = "7673-01.htm"
+       st.giveItems(INGREDIENTS_OF_ANTIDOTE_ID,1)
+       st.takeItems(ARCHITECTURE_OF_KRUMA_ID,1)
+       st.set("cond","13")
+     elif int(st.get("cond"))==14 :
+       htmltext = "7673-03.htm"
+     elif int(st.get("cond"))==15:
+       htmltext = "7673-05.htm"
+     elif int(st.get("cond"))==13 :
+       htmltext = "7673-02.htm"
+   elif npcId==7532 and int(st.get("cond")) :
+      htmltext = "7532-01.htm"
    return htmltext
 
  def onKill (self,npcId,st):
-   if npcId == 583 or npcId == 584 or npcId == 585 :
-    st.set("id","0")
-    if int(st.get("cond")) == 1 and st.getQuestItemsCount(ORDEAL_NECKLACE_ID) == 1 and st.getQuestItemsCount(HATOS_CHARM_ID) == 1 and st.getQuestItemsCount(SWORD_INTO_SKULL_ID) == 0 :
-     if st.getQuestItemsCount(TIMAK_ORC_SKULL_ID) < 10 and st.getRandom(100) <= 70 :
-      st.giveItems(TIMAK_ORC_SKULL_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 586 :
-    st.set("id","0")
-    if int(st.get("cond")) == 1 and st.getQuestItemsCount(ORDEAL_NECKLACE_ID) == 1 and st.getQuestItemsCount(HATOS_CHARM_ID) == 1 and st.getQuestItemsCount(SWORD_INTO_SKULL_ID) == 0 :
-     if st.getQuestItemsCount(TIMAK_ORC_SKULL_ID) < 10 and st.getRandom(100) <= 80 :
-      st.giveItems(TIMAK_ORC_SKULL_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 587 or npcId == 588 :
-    st.set("id","0")
-    if int(st.get("cond")) == 1 and st.getQuestItemsCount(ORDEAL_NECKLACE_ID) == 1 and st.getQuestItemsCount(HATOS_CHARM_ID) == 1 and st.getQuestItemsCount(SWORD_INTO_SKULL_ID) == 0 :
-     if st.getQuestItemsCount(TIMAK_ORC_SKULL_ID) < 10 :
-      st.giveItems(TIMAK_ORC_SKULL_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 269 :
-    st.set("id","0")
-    if int(st.get("cond")) == 1 and st.getQuestItemsCount(ORDEAL_NECKLACE_ID) == 1 and st.getQuestItemsCount(VARKEES_CHARM_ID) == 1 and st.getQuestItemsCount(MANAKIAS_ORDERS_ID) == 1  :
-     if st.getQuestItemsCount(BREKA_ORC_FANG_ID) < 20 and st.getRandom(100) <= 40 :
-      st.giveItems(BREKA_ORC_FANG_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 270 :
-    st.set("id","0")
-    if int(st.get("cond")) == 1 and st.getQuestItemsCount(ORDEAL_NECKLACE_ID) == 1 and st.getQuestItemsCount(VARKEES_CHARM_ID) == 1 and st.getQuestItemsCount(MANAKIAS_ORDERS_ID) == 1  :
-     if st.getQuestItemsCount(BREKA_ORC_FANG_ID) < 20 and st.getRandom(100) <= 50 :
-      st.giveItems(BREKA_ORC_FANG_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 778 or npcId == 779 :
-    st.set("id","0")
-    if int(st.get("cond")) == 1 and st.getQuestItemsCount(MARTANKUS_CHARM_ID) == 1 :
-     if st.getQuestItemsCount(RAGNA_CHIEF_NOTICE_ID) == 0 :
-      st.giveItems(RAGNA_CHIEF_NOTICE_ID,1)
-      st.playSound("ItemSound.quest_middle")
-     elif st.getQuestItemsCount(RAGNA_ORC_HEAD_ID) == 0 :
-      st.giveItems(RAGNA_ORC_HEAD_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 233 :
-    if int(st.get("cond")) == 1 and st.getQuestItemsCount(ORDEAL_NECKLACE_ID) == 1 and st.getQuestItemsCount(TAKUNA_CHARM_ID) == 1  :
-      if st.getRandom(100) < 50 :
-        if st.getQuestItemsCount(MARSH_SPIDER_FEELER_ID) < 10 :
-          st.giveItems(MARSH_SPIDER_FEELER_ID,1)
-        elif st.getQuestItemsCount(MARSH_SPIDER_FEET_ID) < 10 :
-          st.giveItems(MARSH_SPIDER_FEET_ID,1)
-   elif npcId == 564 :
-    if int(st.get("cond")) == 1 and st.getQuestItemsCount(ORDEAL_NECKLACE_ID) == 1 and st.getQuestItemsCount(CHIANTA_CHARM_ID) == 1  :
-      if st.getQuestItemsCount(CORNEA_OF_EN_MONSTEREYE_ID) < 20 :
-        st.giveItems(CORNEA_OF_EN_MONSTEREYE_ID,1)
+   condition,maxcount,item=DROPLIST[npcId]
+   count=st.getQuestItemsCount(item)
+   if int(st.get("cond")) == condition and count < maxcount :
+        st.giveItems(item,1)
+        if count == maxcount-1 :
+          st.playSound("Itemsound.quest_middle")
+          itemcount=0
+          for id in [WEIRD_BEES_NEEDLE_ID,MARSH_SPIDERS_WEB_ID,BLOOD_OF_LEECH_ID]:
+           itemcount+=st.getQuestItemsCount(id)
+          if npcId==5133 or itemcount>29:          
+            st.set("cond",str(int(st.get("cond"))+1))
+        else:
+          st.playSound("Itemsound.quest_itemget")
    return
 
-QUEST       = Quest(232,"232_TestOfLord","Test Of Lord")
+QUEST       = Quest(231,"231_TestOfMaestro","Test Of Maestro")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
@@ -320,67 +226,13 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7565)
+QUEST.addStartNpc(7531)
 
-STARTING.addTalkId(7565)
+STARTING.addTalkId(7531)
 
-STARTED.addTalkId(7510)
-STARTED.addTalkId(7515)
-STARTED.addTalkId(7558)
-STARTED.addTalkId(7564)
-STARTED.addTalkId(7565)
-STARTED.addTalkId(7566)
-STARTED.addTalkId(7567)
-STARTED.addTalkId(7568)
-STARTED.addTalkId(7641)
-STARTED.addTalkId(7642)
-STARTED.addTalkId(7643)
-STARTED.addTalkId(7649)
+for npcId in [7531,7532,7533,7535,7536,7556,7671,7672,7673,7675]:
+  STARTED.addTalkId(npcId)
 
-STARTED.addKillId(233)
-STARTED.addKillId(269)
-STARTED.addKillId(270)
-STARTED.addKillId(564)
-STARTED.addKillId(583)
-STARTED.addKillId(584)
-STARTED.addKillId(585)
-STARTED.addKillId(586)
-STARTED.addKillId(587)
-STARTED.addKillId(588)
-STARTED.addKillId(778)
-STARTED.addKillId(779)
-
-STARTED.addQuestDrop(7568,SWORD_INTO_SKULL_ID,1)
-STARTED.addQuestDrop(7567,AXE_OF_CEREMONY_ID,1)
-STARTED.addQuestDrop(7642,MONSTEREYE_WOODCARVING_ID,1)
-STARTED.addQuestDrop(7641,HANDIWORK_SPIDER_BROOCH_ID,1)
-STARTED.addQuestDrop(7565,ORDEAL_NECKLACE_ID,1)
-STARTED.addQuestDrop(7566,HUGE_ORC_FANG_ID,1)
-STARTED.addQuestDrop(7649,IMMORTAL_FLAME_ID,1)
-STARTED.addQuestDrop(7566,VARKEES_CHARM_ID,1)
-STARTED.addQuestDrop(7515,MANAKIAS_AMULET_ID,1)
-STARTED.addQuestDrop(7515,MANAKIAS_ORDERS_ID,1)
-STARTED.addQuestDrop(269,BREKA_ORC_FANG_ID,1)
-STARTED.addQuestDrop(270,BREKA_ORC_FANG_ID,1)
-STARTED.addQuestDrop(7558,NERUGA_AXE_BLADE_ID,1)
-STARTED.addQuestDrop(7567,TANTUS_CHARM_ID,1)
-STARTED.addQuestDrop(7568,HATOS_CHARM_ID,1)
-STARTED.addQuestDrop(7510,URUTU_BLADE_ID,1)
-STARTED.addQuestDrop(583,TIMAK_ORC_SKULL_ID,1)
-STARTED.addQuestDrop(584,TIMAK_ORC_SKULL_ID,1)
-STARTED.addQuestDrop(585,TIMAK_ORC_SKULL_ID,1)
-STARTED.addQuestDrop(586,TIMAK_ORC_SKULL_ID,1)
-STARTED.addQuestDrop(587,TIMAK_ORC_SKULL_ID,1)
-STARTED.addQuestDrop(588,TIMAK_ORC_SKULL_ID,1)
-STARTED.addQuestDrop(7564,SUMARIS_LETTER_ID,1)
-STARTED.addQuestDrop(233,MARSH_SPIDER_FEELER_ID,1)
-STARTED.addQuestDrop(233,MARSH_SPIDER_FEET_ID,1)
-STARTED.addQuestDrop(7641,TAKUNA_CHARM_ID,1)
-STARTED.addQuestDrop(564,CORNEA_OF_EN_MONSTEREYE_ID,1)
-STARTED.addQuestDrop(7642,CHIANTA_CHARM_ID,1)
-STARTED.addQuestDrop(7565,BEAR_FANG_NECKLACE_ID,1)
-STARTED.addQuestDrop(7649,MARTANKUS_CHARM_ID,1)
-STARTED.addQuestDrop(778,RAGNA_ORC_HEAD_ID,1)
-STARTED.addQuestDrop(779,RAGNA_ORC_HEAD_ID,1)
-STARTED.addQuestDrop(778,RAGNA_CHIEF_NOTICE_ID,1)
-STARTED.addQuestDrop(779,RAGNA_CHIEF_NOTICE_ID,1)
+for mobId in [225,229,233,5133]:
+  STARTED.addKillId(mobId)
+  
