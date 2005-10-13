@@ -265,7 +265,7 @@ class Quest (JQuest) :
       st.playSound("Itemsound.quest_itemget")
       if npcId==781 and random<30:
        st.spawnNpc(5094)
-   elif int(st.get("cond"))==15 and random<chance and st.getQuestItemsCount(itemid)==maxcount:
+    elif int(st.get("cond"))==15 and st.getQuestItemsCount(itemid)==maxcount:
     if npcId == 144 and st.getQuestItemsCount(MAKELS_MAP_ID)==0:
      st.giveItems(MAKELS_MAP_ID,1)
      st.takeItems(TORN_MAP_PIECE2_ID,4)

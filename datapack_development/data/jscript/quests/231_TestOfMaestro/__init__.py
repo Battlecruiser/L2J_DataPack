@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+
+#item definition
 RECOMMENDATION_OF_BALANKI_ID = 2864
 RECOMMENDATION_OF_FILAUR_ID = 2865
 RECOMMENDATION_OF_ARIN_ID = 2866
@@ -22,6 +24,23 @@ MARSH_SPIDERS_WEB_ID = 2877
 BLOOD_OF_LEECH_ID = 2878
 BROKEN_TELEPORT_DEVICE_ID = 2916
 
+#This Handels all Mob Drop Data.  npcId:[condition,maxcount,item]
+DROPLIST={
+225:[13,10,BLOOD_OF_LEECH_ID],
+229:[13,10,WEIRD_BEES_NEEDLE_ID],
+233:[13,10,MARSH_SPIDERS_WEB_ID],
+5133:[4,1,NECKLACE_OF_KAMURU_ID]
+}
+
+#if you have all three recommendation it sets a end cond
+def recommendationCount(st):
+  count=0
+  for device in [RECOMMENDATION_OF_ARIN_ID,RECOMMENDATION_OF_FILAUR_ID,RECOMMENDATION_OF_BALANKI_ID]:
+    count+=st.getQuestItemsCount(device)
+  if count == 3:
+    st.set("cond","17")
+
+
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -29,16 +48,17 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-      htmltext = "7531-04.htm"
-      st.setState(STARTED)
-      st.playSound("ItemSound.quest_accept")
-      st.set("cond","1")
+          htmltext = "7531-04.htm"
+          st.setState(STARTED)
+          st.playSound("ItemSound.quest_accept")
+          st.set("cond","1")
     elif event == "7533_1" :
           htmltext = "7533-02.htm"
           st.set("cond","2")
     elif event == "7671_1" :
           htmltext = "7671-02.htm"
           st.giveItems(PAINT_OF_KAMURU_ID,1)
+          st.set("cond","3")
     elif event == "7556_1" :
           htmltext = "7556-02.htm"
     elif event == "7556_2" :
@@ -46,11 +66,9 @@ class Quest (JQuest) :
     elif event == "7556_3" :
           htmltext = "7556-05.htm"
           st.takeItems(PAINT_OF_TELEPORT_DEVICE_ID,1)
-	  st.set("id","0")
           st.getPlayer().teleToLocation(140352,-194133,-2028);
-          st.spawnNpc(150,140402,-194133,-1950)
-          st.spawnNpc(150,140352,-194183,-1950)
-          st.spawnNpc(150,140352,-194183,-1950)
+          st.giveItems(BROKEN_TELEPORT_DEVICE_ID,1)
+          st.set("cond","9")
     elif event == "7556_4" :
           htmltext = "7556-04.htm"
     elif event == "7673_1" :
@@ -60,10 +78,11 @@ class Quest (JQuest) :
           st.takeItems(MARSH_SPIDERS_WEB_ID,st.getQuestItemsCount(MARSH_SPIDERS_WEB_ID))
           st.takeItems(BLOOD_OF_LEECH_ID,st.getQuestItemsCount(BLOOD_OF_LEECH_ID))
           st.takeItems(INGREDIENTS_OF_ANTIDOTE_ID,st.getQuestItemsCount(INGREDIENTS_OF_ANTIDOTE_ID))
+          st.set("cond","15")
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (self,npcId,st):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
@@ -71,140 +90,132 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 7531 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-      if int(st.get("cond")) < 15 :
-        if st.getPlayer().getClassId().getId() == 0x38 and st.getPlayer().getLevel() >= 39 :
+   if npcId == 7531:
+     if int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+        if st.getPlayer().getClassId().getId() == 0x38 and st.getPlayer().getLevel() >38 :
           htmltext = "7531-03.htm"
         elif st.getPlayer().getClassId().getId() == 0x38 :
           htmltext = "7531-01.htm"
+          st.exitQuest(1)
         else:
           htmltext = "7531-02.htm"
-      else:
-        htmltext = "7531-02.htm"
-   elif npcId == 7531 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
-      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7531 and int(st.get("cond"))>=1 and ((st.getQuestItemsCount(RECOMMENDATION_OF_BALANKI_ID)+st.getQuestItemsCount(RECOMMENDATION_OF_FILAUR_ID)+st.getQuestItemsCount(RECOMMENDATION_OF_ARIN_ID))<3) :
-      htmltext = "7531-05.htm"
-   elif npcId == 7531 and int(st.get("cond"))==1 and ((st.getQuestItemsCount(RECOMMENDATION_OF_BALANKI_ID)+st.getQuestItemsCount(RECOMMENDATION_OF_FILAUR_ID)+st.getQuestItemsCount(RECOMMENDATION_OF_ARIN_ID))==3) :
-      if st.getGameTicks() != int(st.get("id")) :
-        st.set("id",str(st.getGameTicks()))
-        st.addExpAndSp(46000,5900)
-      htmltext = "7531-06.htm"
-      st.giveItems(MARK_OF_MAESTRO_ID,1)
-      st.takeItems(RECOMMENDATION_OF_BALANKI_ID,1)
-      st.takeItems(RECOMMENDATION_OF_FILAUR_ID,1)
-      st.takeItems(RECOMMENDATION_OF_ARIN_ID,1)
-      st.set("cond","0")
-      st.setState(COMPLETED)
-      st.playSound("ItemSound.quest_finish")
-      st.set("onlyone","1")
-   elif npcId == 7533 and int(st.get("cond"))==1 and st.getQuestItemsCount(RECOMMENDATION_OF_BALANKI_ID)==0 :
-      htmltext = "7533-01.htm"
-   elif npcId == 7533 and int(st.get("cond"))==2 and st.getQuestItemsCount(LETTER_OF_SOLDER_DETACHMENT_ID)==0 :
-      htmltext = "7533-03.htm"
-   elif npcId == 7533 and int(st.get("cond"))==2 and st.getQuestItemsCount(LETTER_OF_SOLDER_DETACHMENT_ID) :
-      htmltext = "7533-04.htm"
-      st.giveItems(RECOMMENDATION_OF_BALANKI_ID,1)
-      st.takeItems(LETTER_OF_SOLDER_DETACHMENT_ID,1)
-      st.set("cond","1")
-   elif npcId == 7533 and int(st.get("cond"))==1 and st.getQuestItemsCount(RECOMMENDATION_OF_BALANKI_ID) :
-      htmltext = "7533-05.htm"
-   elif npcId == 7671 and int(st.get("cond"))==2 and st.getQuestItemsCount(PAINT_OF_KAMURU_ID)==0 and st.getQuestItemsCount(NECKLACE_OF_KAMURU_ID)==0 and st.getQuestItemsCount(LETTER_OF_SOLDER_DETACHMENT_ID)==0 :
-      htmltext = "7671-01.htm"
-   elif npcId == 7671 and int(st.get("cond"))==2 and st.getQuestItemsCount(PAINT_OF_KAMURU_ID) and st.getQuestItemsCount(NECKLACE_OF_KAMURU_ID)==0 :
-      htmltext = "7671-03.htm"
-   elif npcId == 7671 and int(st.get("cond"))==2 and st.getQuestItemsCount(NECKLACE_OF_KAMURU_ID) :
-      htmltext = "7671-04.htm"
-      st.giveItems(LETTER_OF_SOLDER_DETACHMENT_ID,1)
-      st.takeItems(NECKLACE_OF_KAMURU_ID,1)
-      st.takeItems(PAINT_OF_KAMURU_ID,1)
-   elif npcId == 7671 and int(st.get("cond"))==2 and st.getQuestItemsCount(LETTER_OF_SOLDER_DETACHMENT_ID) :
-      htmltext = "7671-05.htm"
-   elif npcId == 7672 and int(st.get("cond"))==2 and st.getQuestItemsCount(PAINT_OF_KAMURU_ID) :
-      htmltext = "7672-01.htm"
-   elif npcId == 7536 and int(st.get("cond"))==1 and st.getQuestItemsCount(RECOMMENDATION_OF_ARIN_ID)==0 :
-      htmltext = "7536-01.htm"
-      st.giveItems(PAINT_OF_TELEPORT_DEVICE_ID,1)
-      st.set("cond","3")
-   elif npcId == 7536 and int(st.get("cond"))==3 and st.getQuestItemsCount(PAINT_OF_TELEPORT_DEVICE_ID) and st.getQuestItemsCount(TELEPORT_DEVICE_ID)==0 :
-      htmltext = "7536-02.htm"
-   elif npcId == 7536 and int(st.get("cond"))==3 and st.getQuestItemsCount(TELEPORT_DEVICE_ID)==5 :
-      htmltext = "7536-03.htm"
-      st.giveItems(RECOMMENDATION_OF_ARIN_ID,1)
-      st.takeItems(TELEPORT_DEVICE_ID,5)
-      st.set("cond","1")
-   elif npcId == 7536 and int(st.get("cond"))==1 and st.getQuestItemsCount(RECOMMENDATION_OF_ARIN_ID) :
-      htmltext = "7536-04.htm"
-   elif npcId == 7556 and int(st.get("cond"))==3 and st.getQuestItemsCount(PAINT_OF_TELEPORT_DEVICE_ID) :
-      htmltext = "7556-01.htm"
-   elif npcId == 7556 and int(st.get("cond"))==3 and st.getQuestItemsCount(BROKEN_TELEPORT_DEVICE_ID) :
-      htmltext = "7556-06.htm"
-      st.giveItems(TELEPORT_DEVICE_ID,5)
-      st.takeItems(BROKEN_TELEPORT_DEVICE_ID,1)
-   elif npcId == 7556 and int(st.get("cond"))==3 and st.getQuestItemsCount(TELEPORT_DEVICE_ID)==5 :
-      htmltext = "7556-07.htm"
-   elif npcId == 7535 and int(st.get("cond"))==1 and st.getQuestItemsCount(RECOMMENDATION_OF_FILAUR_ID)==0 :
-      htmltext = "7535-01.htm"
-      st.giveItems(ARCHITECTURE_OF_KRUMA_ID,1)
-      st.set("cond","4")
-   elif npcId == 7535 and int(st.get("cond"))==4 and st.getQuestItemsCount(ARCHITECTURE_OF_KRUMA_ID) and st.getQuestItemsCount(REPORT_OF_KRUMA_ID)==0 :
-      htmltext = "7535-02.htm"
-   elif npcId == 7535 and int(st.get("cond"))==4 and st.getQuestItemsCount(ARCHITECTURE_OF_KRUMA_ID)==0 and st.getQuestItemsCount(REPORT_OF_KRUMA_ID) :
-      htmltext = "7535-03.htm"
-      st.giveItems(RECOMMENDATION_OF_FILAUR_ID,1)
-      st.takeItems(REPORT_OF_KRUMA_ID,1)
-      st.set("cond","1")
-   elif npcId == 7535 and int(st.get("cond"))==1 and st.getQuestItemsCount(RECOMMENDATION_OF_FILAUR_ID) :
-      htmltext = "7535-04.htm"
-   elif npcId == 7673 and int(st.get("cond"))==4 and st.getQuestItemsCount(INGREDIENTS_OF_ANTIDOTE_ID)==0 and st.getQuestItemsCount(REPORT_OF_KRUMA_ID)==0 :
-      htmltext = "7673-01.htm"
-      st.giveItems(INGREDIENTS_OF_ANTIDOTE_ID,1)
-      st.takeItems(ARCHITECTURE_OF_KRUMA_ID,1)
-   elif npcId == 7673 and int(st.get("cond"))==4 and st.getQuestItemsCount(INGREDIENTS_OF_ANTIDOTE_ID) and ((st.getQuestItemsCount(WEIRD_BEES_NEEDLE_ID)+st.getQuestItemsCount(MARSH_SPIDERS_WEB_ID)+st.getQuestItemsCount(BLOOD_OF_LEECH_ID))<30) and st.getQuestItemsCount(REPORT_OF_KRUMA_ID)==0 :
-      htmltext = "7673-02.htm"
-   elif npcId == 7673 and int(st.get("cond"))==4 and st.getQuestItemsCount(INGREDIENTS_OF_ANTIDOTE_ID) and ((st.getQuestItemsCount(WEIRD_BEES_NEEDLE_ID)+st.getQuestItemsCount(MARSH_SPIDERS_WEB_ID)+st.getQuestItemsCount(BLOOD_OF_LEECH_ID))==30) and st.getQuestItemsCount(REPORT_OF_KRUMA_ID)==0 :
-      htmltext = "7673-03.htm"
-   elif npcId == 7673 and int(st.get("cond"))==1 and st.getQuestItemsCount(REPORT_OF_KRUMA_ID) :
-      htmltext = "7673-05.htm"
-   elif npcId == 7532 and int(st.get("cond"))==1 :
+          st.exitQuest(1)
+     elif int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+       htmltext = "<html><head><body>This quest has already been completed.</body></html>"
+     elif int(st.get("cond"))>0 and int(st.get("cond"))<17 :
+       htmltext = "7531-05.htm"
+     elif int(st.get("cond"))==17 :
+       st.addExpAndSp(46000,5900)
+       htmltext = "7531-06.htm"
+       st.giveItems(MARK_OF_MAESTRO_ID,1)
+       st.takeItems(RECOMMENDATION_OF_BALANKI_ID,1)
+       st.takeItems(RECOMMENDATION_OF_FILAUR_ID,1)
+       st.takeItems(RECOMMENDATION_OF_ARIN_ID,1)
+       st.set("cond","0")
+       st.setState(COMPLETED)
+       st.playSound("ItemSound.quest_finish")
+       st.set("onlyone","1")
+   elif npcId == 7533:
+     if (int(st.get("cond"))==1 or int(st.get("cond"))==11 or int(st.get("cond"))==16) and st.getQuestItemsCount(RECOMMENDATION_OF_BALANKI_ID)==0:
+       htmltext = "7533-01.htm"
+     elif int(st.get("cond"))==2:
+       htmltext = "7533-03.htm"
+     elif int(st.get("cond"))==6 :
+       htmltext = "7533-04.htm"
+       st.giveItems(RECOMMENDATION_OF_BALANKI_ID,1)
+       st.takeItems(LETTER_OF_SOLDER_DETACHMENT_ID,1)
+       st.set("cond","7")
+       recommendationCount(st)
+     elif int(st.get("cond"))==7 or int(st.get("cond"))==17 :
+       htmltext = "7533-05.htm"
+   elif npcId == 7671:
+     if int(st.get("cond"))==2 :
+       htmltext = "7671-01.htm"
+     elif int(st.get("cond"))==3:
+       htmltext = "7671-03.htm"
+     elif int(st.get("cond"))==5 :
+       htmltext = "7671-04.htm"
+       st.giveItems(LETTER_OF_SOLDER_DETACHMENT_ID,1)
+       st.takeItems(NECKLACE_OF_KAMURU_ID,1)
+       st.takeItems(PAINT_OF_KAMURU_ID,1)
+       st.set("cond","6")
+     elif int(st.get("cond"))==6 :
+       htmltext = "7671-05.htm"
+   elif npcId == 7672 and int(st.get("cond"))==3 :
+       htmltext = "7672-01.htm"
+   elif npcId == 7675 and int(st.get("cond"))==3:
+       st.set("cond","4")
+       htmltext="7675-01.htm"
+   elif npcId == 7536:
+     if (int(st.get("cond"))==1 or int(st.get("cond"))==7 or int(st.get("cond"))==16) and st.getQuestItemsCount(RECOMMENDATION_OF_ARIN_ID)==0:
+       htmltext = "7536-01.htm"
+       st.giveItems(PAINT_OF_TELEPORT_DEVICE_ID,1)
+       st.set("cond","8")
+     elif int(st.get("cond"))==8 :
+       htmltext = "7536-02.htm"
+     elif int(st.get("cond"))==10:
+       htmltext = "7536-03.htm"
+       st.giveItems(RECOMMENDATION_OF_ARIN_ID,1)
+       st.takeItems(TELEPORT_DEVICE_ID,5)
+       st.set("cond","11")
+       recommendationCount(st)
+     elif int(st.get("cond"))==11 or int(st.get("cond"))==17:
+       htmltext = "7536-04.htm"
+   elif npcId==7556:
+     if int(st.get("cond"))==8:
+       htmltext = "7556-01.htm"
+     elif int(st.get("cond"))==9:
+       htmltext = "7556-06.htm"
+       st.giveItems(TELEPORT_DEVICE_ID,5)
+       st.takeItems(BROKEN_TELEPORT_DEVICE_ID,1)
+       st.set("cond","10")
+     elif int(st.get("cond"))==10 :
+       htmltext = "7556-07.htm"
+   elif npcId==7535:  
+     if (int(st.get("cond"))==1 or int(st.get("cond"))==7 or int(st.get("cond"))==11) and st.getQuestItemsCount(RECOMMENDATION_OF_FILAUR_ID)==0 :
+       htmltext = "7535-01.htm"
+       st.giveItems(ARCHITECTURE_OF_KRUMA_ID,1)
+       st.set("cond","12")
+     elif int(st.get("cond"))==12 :
+       htmltext = "7535-02.htm"
+     elif int(st.get("cond"))==15 :
+       htmltext = "7535-03.htm"
+       st.giveItems(RECOMMENDATION_OF_FILAUR_ID,1)
+       st.takeItems(REPORT_OF_KRUMA_ID,1)
+       st.set("cond","16")
+       recommendationCount(st)
+     elif int(st.get("cond"))>15:
+       htmltext = "7535-04.htm"
+   elif npcId == 7673:
+     if int(st.get("cond"))==12 :
+       htmltext = "7673-01.htm"
+       st.giveItems(INGREDIENTS_OF_ANTIDOTE_ID,1)
+       st.takeItems(ARCHITECTURE_OF_KRUMA_ID,1)
+       st.set("cond","13")
+     elif int(st.get("cond"))==14 :
+       htmltext = "7673-03.htm"
+     elif int(st.get("cond"))==15:
+       htmltext = "7673-05.htm"
+     elif int(st.get("cond"))==13 :
+       htmltext = "7673-02.htm"
+   elif npcId==7532 and int(st.get("cond")) :
       htmltext = "7532-01.htm"
    return htmltext
 
  def onKill (self,npcId,st):
-   if npcId == 225 :
-      if int(st.get("cond")) and int(st.get("cond")) == 4 and st.getQuestItemsCount(BLOOD_OF_LEECH_ID) < 10 :
-        if st.getQuestItemsCount(BLOOD_OF_LEECH_ID) == 9 :
-          st.giveItems(BLOOD_OF_LEECH_ID,1)
+   condition,maxcount,item=DROPLIST[npcId]
+   count=st.getQuestItemsCount(item)
+   if int(st.get("cond")) == condition and count < maxcount :
+        st.giveItems(item,1)
+        if count == maxcount-1 :
           st.playSound("Itemsound.quest_middle")
+          itemcount=0
+          for id in [WEIRD_BEES_NEEDLE_ID,MARSH_SPIDERS_WEB_ID,BLOOD_OF_LEECH_ID]:
+           itemcount+=st.getQuestItemsCount(id)
+          if npcId==5133 or itemcount>29:          
+            st.set("cond",str(int(st.get("cond"))+1))
         else:
-          st.giveItems(BLOOD_OF_LEECH_ID,1)
           st.playSound("Itemsound.quest_itemget")
-   elif npcId == 150 :
-	if int(st.get("cond"))>=1 and int(st.get("id")) < 3 :
-	  st.set("id",str(int(st.get("id"))+1))
-	  if int(st.get("id")) == 3 :
-            st.giveItems(BROKEN_TELEPORT_DEVICE_ID,1)
-            st.playSound("Itemsound.quest_middle")
-   elif npcId == 229 :
-      if int(st.get("cond")) and int(st.get("cond")) == 4 and st.getQuestItemsCount(WEIRD_BEES_NEEDLE_ID) < 10 :
-        if st.getQuestItemsCount(WEIRD_BEES_NEEDLE_ID) == 9 :
-          st.giveItems(WEIRD_BEES_NEEDLE_ID,1)
-          st.playSound("Itemsound.quest_middle")
-        else:
-          st.giveItems(WEIRD_BEES_NEEDLE_ID,1)
-          st.playSound("Itemsound.quest_itemget")
-   elif npcId == 233 :
-      if int(st.get("cond")) and int(st.get("cond")) == 4 and st.getQuestItemsCount(MARSH_SPIDERS_WEB_ID) < 10 :
-        if st.getQuestItemsCount(MARSH_SPIDERS_WEB_ID) == 9 :
-          st.giveItems(MARSH_SPIDERS_WEB_ID,1)
-          st.playSound("Itemsound.quest_middle")
-        else:
-          st.giveItems(MARSH_SPIDERS_WEB_ID,1)
-          st.playSound("Itemsound.quest_itemget")
-   elif npcId == 5133 :
-      if int(st.get("cond")) and int(st.get("cond")) == 2 and st.getQuestItemsCount(NECKLACE_OF_KAMURU_ID) == 0 and st.getQuestItemsCount(PAINT_OF_KAMURU_ID) :
-        st.giveItems(NECKLACE_OF_KAMURU_ID,1)
-        st.playSound("Itemsound.quest_middle")
    return
 
 QUEST       = Quest(231,"231_TestOfMaestro","Test Of Maestro")
@@ -219,36 +230,9 @@ QUEST.addStartNpc(7531)
 
 STARTING.addTalkId(7531)
 
-STARTED.addTalkId(7531)
-STARTED.addTalkId(7532)
-STARTED.addTalkId(7533)
-STARTED.addTalkId(7535)
-STARTED.addTalkId(7536)
-STARTED.addTalkId(7556)
-STARTED.addTalkId(7671)
-STARTED.addTalkId(7672)
-STARTED.addTalkId(7673)
+for npcId in [7531,7532,7533,7535,7536,7556,7671,7672,7673,7675]:
+  STARTED.addTalkId(npcId)
 
-STARTED.addKillId(150)
-STARTED.addKillId(225)
-STARTED.addKillId(229)
-STARTED.addKillId(233)
-STARTED.addKillId(5133)
-
-STARTED.addQuestDrop(7533,RECOMMENDATION_OF_BALANKI_ID,1)
-STARTED.addQuestDrop(7535,RECOMMENDATION_OF_FILAUR_ID,1)
-STARTED.addQuestDrop(7536,RECOMMENDATION_OF_ARIN_ID,1)
-STARTED.addQuestDrop(7671,LETTER_OF_SOLDER_DETACHMENT_ID,1)
-STARTED.addQuestDrop(5133,NECKLACE_OF_KAMURU_ID,1)
-STARTED.addQuestDrop(7671,PAINT_OF_KAMURU_ID,1)
-STARTED.addQuestDrop(7536,PAINT_OF_TELEPORT_DEVICE_ID,1)
-STARTED.addQuestDrop(7556,BROKEN_TELEPORT_DEVICE_ID,1)
-STARTED.addQuestDrop(7556,TELEPORT_DEVICE_ID,1)
-STARTED.addQuestDrop(7536,PAINT_OF_TELEPORT_DEVICE_ID,1)
-STARTED.addQuestDrop(7556,BROKEN_TELEPORT_DEVICE_ID,1)
-STARTED.addQuestDrop(7673,REPORT_OF_KRUMA_ID,1)
-STARTED.addQuestDrop(7535,ARCHITECTURE_OF_KRUMA_ID,1)
-STARTED.addQuestDrop(229,WEIRD_BEES_NEEDLE_ID,1)
-STARTED.addQuestDrop(233,MARSH_SPIDERS_WEB_ID,1)
-STARTED.addQuestDrop(225,BLOOD_OF_LEECH_ID,1)
-STARTED.addQuestDrop(7673,INGREDIENTS_OF_ANTIDOTE_ID,1)
+for mobId in [225,229,233,5133]:
+  STARTED.addKillId(mobId)
+  

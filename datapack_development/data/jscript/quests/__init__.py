@@ -97,6 +97,8 @@ __all__ = [
 '331_ArrowForVengeance',
 '350_EnhanceYourWeapon',
 '362_BardsMandolin',
+'376_GiantsExploration1',
+'377_GiantsExploration2',
 '385_YokeofthePast',
 '386_StolenDignity',
 '401_PathToWarrior',
