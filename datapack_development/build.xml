@@ -29,53 +29,46 @@
     <property name="build" location="build"/>
     <property name="build.dist" location="${build}/dist"/>
 
-    <target name="init"
-            description="Create the output directories.">
+    <target name="dist">
+
+    	<delete dir="${build}"/>
 
         <mkdir dir="${build}"/>
         <mkdir dir="${build.dist}" />
-        <mkdir dir="${build.dist}/data"/>
-    	<mkdir dir="${build.dist}/sql"/>
-        <mkdir dir="${build.dist}/tools"/>
-    </target>
 
-    <target name="dist" depends="init">
-        
 		<copy todir="${build.dist}">
 			<fileset dir="${basedir}">
-				<include name="*.txt"/>
-			</fileset>
-		</copy>
-        
-		<copy todir="${build.dist}/data">
-			<fileset dir="data">
+                <exclude name=".project"/>
+                <exclude name="build.xml"/>
+                <exclude name="build/**"/>
+                <exclude name="log/**"/>
+                <exclude name="data/clans/**"/>
+                <exclude name="data/crests/**"/>
+                <exclude name="**.svn**"/>
+                <exclude name="**/*.class"/>
                 <include name="**/*.*"/>
 	        </fileset>
         </copy>
         
-        <copy todir="${build.dist}/sql">
-            <fileset dir="sql">
-                <include name="**/*.*"/>
-            </fileset>
-        </copy>
-    	
-        <copy todir="${build.dist}/tools">
-            <fileset dir="tools">
-                <include name="**/*.*"/>
-            </fileset>
-        </copy>
+		<copy file=".svn/entries" tofile="${build.dist}/data/datapack.revision">
+			<filterchain>
+				<headfilter lines="5" skip="4"/>
+			</filterchain>
+		</copy>
 
     	<delete file="${build}/L2J_DataPack.zip"/>
     	
     	<zip destfile="${build}/L2J_DataPack.zip"
              basedir="${build.dist}"/>
+
+        <delete dir="${build.dist}"/>
     	
     </target>
  
     <target name="clean"
-            description="Remove the output directories">
-    	
-        <delete dir="${build}"/>
+            description="Deletes the zip file">
+
+    	<delete dir="${build}"/>
     </target>
 
 </project>
