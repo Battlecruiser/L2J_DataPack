@@ -19,7 +19,7 @@
 		then
 	then
 
-	dup 86400 > if
+	dup 32000 > if
 		"Too long time to ride" show
 		exit
 	then
