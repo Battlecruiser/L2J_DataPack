@@ -19,6 +19,11 @@
 		then
 	then
 
+	dup 86400 > if
+		"Too long time to ride" show
+		exit
+	then
+
 	over >r
 	dup
 	dup * ( price is time^2 )
