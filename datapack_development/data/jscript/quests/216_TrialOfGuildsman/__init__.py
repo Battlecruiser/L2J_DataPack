@@ -277,12 +277,13 @@ class Quest (JQuest) :
       if st.getRandom(100) < 50 and st.getPlayer().getClassId().getId() == 0x36: #and IsSpoiled() == 1 :
         st.giveItems(AMBER_BEAD_ID,1)
         st.playSound("Itemsound.quest_itemget")
-      if st.getRandom(100) < 50 and st.getQuestItemsCount(AMBER_BEAD_ID) < 69 :
-        st.giveItems(AMBER_BEAD_ID,1)
-        st.playSound("Itemsound.quest_itemget")
-      else:
-        st.giveItems(AMBER_BEAD_ID,1)
-	st.playSound("ItemSound.quest_middle")
+      if st.getRandom(100) < 50 :
+        if st.getQuestItemsCount(AMBER_BEAD_ID) < 69 :
+          st.giveItems(AMBER_BEAD_ID,1)
+          st.playSound("Itemsound.quest_itemget")
+        else:
+          st.giveItems(AMBER_BEAD_ID,1)
+          st.playSound("ItemSound.quest_middle")
 
    return
 
