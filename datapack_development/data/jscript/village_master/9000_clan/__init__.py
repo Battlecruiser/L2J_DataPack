@@ -45,6 +45,7 @@ class Quest (JQuest) :
 
  def onTalk (Self,npcId,st):
    if npcId in NPC:
+     st.set("cond","0")
      st.setState(STARTED)
      return "9000-01.htm"
 
