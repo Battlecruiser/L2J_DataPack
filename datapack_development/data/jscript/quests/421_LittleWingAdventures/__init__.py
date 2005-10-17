@@ -17,6 +17,7 @@ event_1 = "<html><head><body>Sage Cronos:<br>Then go and see <font color=\"LEVEL
 error_1 = "<html><head><body>You're suppossed to own a hatchling to complete this quest.</body></html>"
 error_2 = "<html><head><body>Hey! What happened with the other hatchling you had? This one is different.</body></html>"
 error_3 = "<html><head><body>Sage Cronos:<br>You need to be level 55 to complete this quest.</body></html>"
+error_3_1 = "<html><head><body>Sage Cronos:<br>Your pet need to be level 55 to complete this quest.</body></html>"
 qston_1 = "<html><head><body>Sage Cronos:<br>So, you want to turn your hatchling into a more powerful creature?<br><br><a action=\"bypass -h Quest "+str(QUEST_NUMBER)+"_"+QUEST_NAME+" 16\">Yes, please tell me how</a><br></body></html>"
 error_4 = "<html><head><body>Sage Cronos:<br>I've said you need to talk to <font color=\"LEVEL\">Fairy Mymyu</font>!!!. Am i clear???</body></html>"
 error_5 = "<html><head><body>Fairy Mymyu:<br>You weren't yet able to find the <font color=\"LEVEL\">Fairy Trees of Wind, Star, Twilight and Abyss</font>? Don't give up! They are all in <font color=\"LEVEL\">Hunter's Valley</font></body></html>"
@@ -102,7 +103,11 @@ class Quest (JQuest) :
          if st.getPlayer().getLevel() < 55 :
             st.exitQuest(1)
             htmltext = error_3
-         htmltext = qston_1
+	 elif st.getPlayer().getPet().getLevel() < 55 :
+            st.exitQuest(1)
+            htmltext = error_3_1
+	 else :
+            htmltext = qston_1
       else :  htmltext = error_4
    elif npcid == FY_MYMYU :
      if id == STARTING :
