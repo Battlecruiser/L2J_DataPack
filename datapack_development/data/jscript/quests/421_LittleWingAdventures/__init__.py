@@ -9,7 +9,7 @@ QUEST_DESCRIPTION = "Little Wings Big Adventures"
 #Variables
 #Quest items
 FT_LEAF = 4325
-CONTROL_ITEMS = [ [3500,4422],[3501,4423],[3502,4423] ]
+CONTROL_ITEMS = [ [3500,4422],[3501,4423],[3502,4424] ]
 
 #Messages
 default = "<html><head><body>I have nothing to say to you.</body></html>"
