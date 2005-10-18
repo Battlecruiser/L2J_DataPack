@@ -258,7 +258,7 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume">
       <add order="0x10" stat="cAtk" val="#crit"/>
       <mul order="0x50" stat="cAtk" val="#critMult"/>
     </effect>
