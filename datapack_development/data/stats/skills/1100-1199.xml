@@ -1439,8 +1439,8 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
-      <mul order="0x50" stat="runSpd" val="0.7"/>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="1.4" stackType="RunSpeedDown">
+      <div order="0x50" stat="runSpd" val="1.4"/>
     </effect>
   </for>
 </skill>
