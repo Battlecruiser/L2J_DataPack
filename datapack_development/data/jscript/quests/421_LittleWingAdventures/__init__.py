@@ -103,6 +103,9 @@ class Quest (JQuest) :
          if st.getPlayer().getLevel() < 55 :
             st.exitQuest(1)
             htmltext = error_3
+	 elif st.getPlayer().getPet() == Null :
+            st.exitQuest(1)
+	    htmltext = "Please spawn pet first."
 	 elif st.getPlayer().getPet().getLevel() < 55 :
             st.exitQuest(1)
             htmltext = error_3_1
