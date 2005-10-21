@@ -55,7 +55,6 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    print "221: QuestEvent: " + event
     if event == "1" :
         htmltext = "7104-04.htm"
         st.set("cond","1")
@@ -150,14 +149,11 @@ class Quest (JQuest) :
           st.takeItems(SPIDER_THORN_ID,st.getQuestItemsCount(SPIDER_THORN_ID))
           st.giveItems(MAPHR_TABLET_FRAGMENT_ID,1)
           st.takeItems(KEY_OF_TITAN_ID,1)
-    print htmltext
     return htmltext
 
 
  def onTalk (Self,npcId,st):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   print "221: QuestTalk w NPC " 
-   print npcId
    id = st.getState()
    if id == CREATED :
      st.setState(STARTING)
@@ -195,8 +191,6 @@ class Quest (JQuest) :
    elif npcId == 7104 and int(st.get("cond"))>=1 and (st.getQuestItemsCount(CLAY_DOUGH_ID) or st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) or st.getQuestItemsCount(NIKOLAS_LIST_ID)) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
         htmltext = "7104-12.htm"
    elif npcId == 7104 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) :
-	print st.getGameTicks()
-	print st.get("id")
         if st.getGameTicks() != int(st.get("id")) :
           st.set("id",str(st.getGameTicks()))
           st.addExpAndSp(25000,3100)
@@ -379,12 +373,9 @@ class Quest (JQuest) :
         htmltext = "7622-01.htm"
    elif npcId == 7622 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(KEY_OF_TITAN_ID) and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID)==0 :
         htmltext = "7622-03.htm"
-   print htmltext
    return htmltext
 
  def onKill (self,npcId,st):
-   print "221: QuestKill:"
-   print npcId
    if npcId == 223 :
     st.set("id","0")
     if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :

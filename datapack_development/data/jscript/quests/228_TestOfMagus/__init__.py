@@ -69,8 +69,8 @@ class Quest (JQuest) :
           st.takeItems(LILAC_CHARM_ID,1)
           st.takeItems(GOLDEN_SEED1_ID,1)
           st.takeItems(GOLDEN_SEED2_ID,1)
-          st.giveItems(SCORE_OF_ELEMENTS_ID,1)
           st.takeItems(GOLDEN_SEED3_ID,1)
+          st.giveItems(SCORE_OF_ELEMENTS_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","6")
     elif event == "7391_1" :
@@ -177,8 +177,8 @@ class Quest (JQuest) :
         else:
           htmltext = "7413-03.htm"
           st.takeItems(DAZZLING_DROP_ID,st.getQuestItemsCount(DAZZLING_DROP_ID))
-          st.giveItems(TONE_OF_WATER_ID,1)
           st.takeItems(UNDINE_CHARM_ID,1)
+          st.giveItems(TONE_OF_WATER_ID,1)
           st.playSound("ItemSound.quest_middle")
      elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WATER_ID)==1 and st.getQuestItemsCount(UNDINE_CHARM_ID)==0 :
         htmltext = "7413-04.htm"
