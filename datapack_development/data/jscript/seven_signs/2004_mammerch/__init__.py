@@ -13,8 +13,8 @@ class Quest (JQuest) :
 
 # Enchant Armor A
     if event == "1":
-        if st.getQuestItemsCount(5575)>=480000 and st.getQuestItemsCount(5965)>=480:
-            st.takeItems(5575,480000)
+        if st.getQuestItemsCount(5575)>=240000 and st.getQuestItemsCount(5965)>=480:
+            st.takeItems(5575,240000)
             st.takeItems(5965,480)
             st.giveItems(730,1)
             htmltext = "Item has been succesfully purchased."
@@ -23,8 +23,8 @@ class Quest (JQuest) :
 
 # Enchant Armor B
     if event == "2":
-        if st.getQuestItemsCount(5575)>=160000 and st.getQuestItemsCount(5965)>=160:
-            st.takeItems(5575,160000)
+        if st.getQuestItemsCount(5575)>=80000 and st.getQuestItemsCount(5965)>=160:
+            st.takeItems(5575,80000)
             st.takeItems(5965,160)
             st.giveItems(948,1)
             htmltext = "Item has been succesfully purchased."
@@ -33,8 +33,8 @@ class Quest (JQuest) :
 
 # Enchant Armor C
     if event == "3":
-        if st.getQuestItemsCount(5575)>=30000 and st.getQuestItemsCount(5965)>=30:
-            st.takeItems(5575,30000)
+        if st.getQuestItemsCount(5575)>=15000 and st.getQuestItemsCount(5965)>=30:
+            st.takeItems(5575,15000)
             st.takeItems(5965,30)
             st.giveItems(952,1)
             htmltext = "Item has been succesfully purchased."
@@ -43,8 +43,8 @@ class Quest (JQuest) :
 
 # Enchant Armor D
     if event == "4":
-        if st.getQuestItemsCount(5575)>=12000 and st.getQuestItemsCount(5965)>=12:
-            st.takeItems(5575,12000)
+        if st.getQuestItemsCount(5575)>=6000 and st.getQuestItemsCount(5965)>=12:
+            st.takeItems(5575,6000)
             st.takeItems(5965,12)
             st.giveItems(956,1)
             htmltext = "Item has been succesfully purchased."
@@ -52,29 +52,13 @@ class Quest (JQuest) :
             htmltext = "You do not have enough ancient adena."
 
 # Enchant Weapon A
-    if event == "5":
-        if st.getQuestItemsCount(5575)>=3600000 and st.getQuestItemsCount(5965)>=3600:
-            st.takeItems(5575,3600000)
-            st.takeItems(5965,3600)
-            st.giveItems(729,1)
-            htmltext = "Item has been succesfully purchased."
-        else:
-            htmltext = "You do not have enough ancient adena."
 
 # Enchant Weapon B
-    if event == "6":
-        if st.getQuestItemsCount(5575)>=1000000 and st.getQuestItemsCount(5965)>=1000:
-            st.takeItems(5575,1000000)
-            st.takeItems(5965,1000)
-            st.giveItems(947,1)
-            htmltext = "Item has been succesfully purchased."
-        else:
-            htmltext = "You do not have enough ancient adena."
 
 # Enchant Weapon C
     if event == "7":
-        if st.getQuestItemsCount(5575)>=220000 and st.getQuestItemsCount(5965)>=220:
-            st.takeItems(5575,220000)
+        if st.getQuestItemsCount(5575)>=110000 and st.getQuestItemsCount(5965)>=220:
+            st.takeItems(5575,110000)
             st.takeItems(5965,220)
             st.giveItems(951,1)
             htmltext = "Item has been succesfully purchased."
@@ -83,8 +67,8 @@ class Quest (JQuest) :
 
 # Enchant Weapon D
     if event == "8":
-        if st.getQuestItemsCount(5575)>=100000 and st.getQuestItemsCount(5965)>=100:
-            st.takeItems(5575,100000)
+        if st.getQuestItemsCount(5575)>=50000 and st.getQuestItemsCount(5965)>=100:
+            st.takeItems(5575,50000)
             st.takeItems(5965,100)
             st.giveItems(955,1)
             htmltext = "Item has been succesfully purchased."
@@ -120,8 +104,8 @@ class Quest (JQuest) :
 
 # Crystal A Grade x 1
     if event == "12":
-        if st.getQuestItemsCount(5575)>=21000:
-            st.takeItems(5575,21000)
+        if st.getQuestItemsCount(5575)>=15000:
+            st.takeItems(5575,15000)
             st.giveItems(1461,1)
             htmltext = "Item has been succesfully purchased."
         else:
@@ -129,8 +113,8 @@ class Quest (JQuest) :
 
 # Crystal A Grade x 10
     if event == "13":
-        if st.getQuestItemsCount(5575)>=210000:
-            st.takeItems(5575,210000)
+        if st.getQuestItemsCount(5575)>=150000:
+            st.takeItems(5575,150000)
             st.giveItems(1461,10)
             htmltext = "Item has been succesfully purchased."
         else:
@@ -138,8 +122,8 @@ class Quest (JQuest) :
 
 # Crystal A Grade x 100
     if event == "14":
-        if st.getQuestItemsCount(5575)>=2100000:
-            st.takeItems(5575,2100000)
+        if st.getQuestItemsCount(5575)>=1500000:
+            st.takeItems(5575,1500000)
             st.giveItems(1461,100)
             htmltext = "Item has been succesfully purchased."
         else:
@@ -154,7 +138,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of Strenght
+# Dye of Strength
     if event == "16":
         if st.getQuestItemsCount(5575)>=42000:
             st.takeItems(5575,42000)
@@ -163,7 +147,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of Strenght
+# Dye of Strength
     if event == "17":
         if st.getQuestItemsCount(5575)>=42000:
             st.takeItems(5575,42000)
@@ -226,7 +210,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of Mental Strenght
+# Dye of Mental Strength
     if event == "24":
         if st.getQuestItemsCount(5575)>=42000:
             st.takeItems(5575,42000)
@@ -235,7 +219,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of Mental Strenght
+# Dye of Mental Strength
     if event == "25":
         if st.getQuestItemsCount(5575)>=42000:
             st.takeItems(5575,42000)
@@ -262,7 +246,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of High Degree of Strenght
+# Dye of High Degree of Strength
     if event == "28":
         if st.getQuestItemsCount(5575)>=60000:
             st.takeItems(5575,60000)
@@ -271,7 +255,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of High Degree of Strenght
+# Dye of High Degree of Strength
     if event == "29":
         if st.getQuestItemsCount(5575)>=60000:
             st.takeItems(5575,60000)
@@ -334,7 +318,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of High Degree of Mental Strenght
+# Dye of High Degree of Mental Strength
     if event == "36":
         if st.getQuestItemsCount(5575)>=60000:
             st.takeItems(5575,60000)
@@ -343,7 +327,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of High Degree of Mental Strenght
+# Dye of High Degree of Mental Strength
     if event == "37":
         if st.getQuestItemsCount(5575)>=60000:
             st.takeItems(5575,60000)
@@ -370,7 +354,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of High Degree of Strenght
+# Dye of High Degree of Strength
     if event == "40":
         if st.getQuestItemsCount(5575)>=72000:
             st.takeItems(5575,72000)
@@ -379,7 +363,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of High Degree of Strenght
+# Dye of High Degree of Strength
     if event == "41":
         if st.getQuestItemsCount(5575)>=72000:
             st.takeItems(5575,72000)
@@ -442,7 +426,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of High Degree of Mental Strenght
+# Dye of High Degree of Mental Strength
     if event == "48":
         if st.getQuestItemsCount(5575)>=72000:
             st.takeItems(5575,72000)
@@ -451,7 +435,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of High Degree of Mental Strenght
+# Dye of High Degree of Mental Strength
     if event == "49":
         if st.getQuestItemsCount(5575)>=72000:
             st.takeItems(5575,72000)
@@ -478,7 +462,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of High Degree of Strenght
+# Dye of High Degree of Strength
     if event == "52":
         if st.getQuestItemsCount(5575)>=108000:
             st.takeItems(5575,108000)
@@ -487,7 +471,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of High Degree of Strenght
+# Dye of High Degree of Strength
     if event == "53":
         if st.getQuestItemsCount(5575)>=108000:
             st.takeItems(5575,108000)
@@ -550,7 +534,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of High Degree of Mental Strenght
+# Dye of High Degree of Mental Strength
     if event == "60":
         if st.getQuestItemsCount(5575)>=108000:
             st.takeItems(5575,108000)
@@ -559,7 +543,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of High Degree of Mental Strenght
+# Dye of High Degree of Mental Strength
     if event == "61":
         if st.getQuestItemsCount(5575)>=108000:
             st.takeItems(5575,108000)
@@ -586,7 +570,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of High Degree of Strenght
+# Dye of High Degree of Strength
     if event == "64":
         if st.getQuestItemsCount(5575)>=174000:
             st.takeItems(5575,174000)
@@ -595,7 +579,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of High Degree of Strenght
+# Dye of High Degree of Strength
     if event == "65":
         if st.getQuestItemsCount(5575)>=174000:
             st.takeItems(5575,174000)
@@ -658,7 +642,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of High Degree of Mental Strenght
+# Dye of High Degree of Mental Strength
     if event == "72":
         if st.getQuestItemsCount(5575)>=174000:
             st.takeItems(5575,174000)
@@ -667,7 +651,7 @@ class Quest (JQuest) :
         else:
             htmltext = "You do not have enough ancient adena."
 
-# Dye of High Degree of Mental Strenght
+# Dye of High Degree of Mental Strength
     if event == "73":
         if st.getQuestItemsCount(5575)>=174000:
             st.takeItems(5575,174000)
