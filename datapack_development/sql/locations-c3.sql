@@ -1,4 +1,4 @@
--- 
+﻿--
 -- Table structure for table `locations`
 -- 
 
@@ -18306,7 +18306,7 @@ INSERT INTO `locations` VALUES (3953,114788,-178826,-888,-688,0);
 INSERT INTO `locations` VALUES (3953,114988,-178826,-888,-688,0);
 INSERT INTO `locations` VALUES (3953,114988,-178626,-888,-688,0);
 INSERT INTO `locations` VALUES (3953,114788,-178626,-888,-688,0);
---tut gremlins
+-- tut gremlins
 INSERT INTO `locations` VALUES (10000,-55730,-113250,-750,-550,0);
 INSERT INTO `locations` VALUES (10000,-55730,-113950,-750,-550,0);
 INSERT INTO `locations` VALUES (10000,-56810,-113950,-750,-550,0);

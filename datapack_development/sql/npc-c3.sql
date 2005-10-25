@@ -1,4 +1,4 @@
---
+﻿--
 -- Table structure for table `npc`
 --
 
@@ -11,7 +11,7 @@ CREATE TABLE `npc` (
   `level` decimal(2,0) default NULL,
   `sex` varchar(6) default NULL,
   `type` varchar(20) default NULL,
-  `attackrange` decimal(3,0) default NULL,
+  `attackrange` decimal(4,0) default NULL,
   `hp` decimal(7,0) default NULL,
   `mp` decimal(4,0) default NULL,
   `str` decimal(7,0) default NULL,
@@ -3803,4 +3803,4 @@ INSERT INTO `npc` VALUES
 (12770,'Treasures Of the Festival','coffer_a',12.00,9.50,75,'male','L2FestivalMonster',40,16667,5000,40,43,30,21,20,10,0,0,1000,1667,1000,2358,253,0,253,0,0,0,80,120,NULL,NULL,0), 
 (12771,'Treasures Of the Festival','coffer_a',12.00,9.50,75,'male','L2FestivalMonster',40,16667,5000,40,43,30,21,20,10,0,0,1000,1667,1000,2358,253,0,253,0,0,0,80,120,NULL,NULL,0), 
 (12772,'Treasures Of the Festival','coffer_a',12.00,9.50,75,'male','L2FestivalMonster',40,16667,5000,40,43,30,21,20,10,0,0,1000,1667,1000,2358,253,0,253,0,0,0,80,120,NULL,NULL,0), 
-(12773,'Treasures Of the Festival','coffer_a',12.00,9.50,75,'male','L2FestivalMonster',40,16667,5000,40,43,30,21,20,10,0,0,1000,1667,1000,2358,253,0,253,0,0,0,80,120,NULL,NULL,0); 
+(12773,'Treasures Of the Festival','coffer_a',12.00,9.50,75,'male','L2FestivalMonster',40,16667,5000,40,43,30,21,20,10,0,0,1000,1667,1000,2358,253,0,253,0,0,0,80,120,NULL,NULL,0);

@@ -1,4 +1,4 @@
--- 
+﻿--
 -- Table structure for table `npc`
 -- 
 
@@ -11,7 +11,7 @@ CREATE TABLE `npc` (
   `level` decimal(2,0) default NULL,
   `sex` varchar(6) default NULL,
   `type` varchar(20) default NULL,
-  `attackrange` decimal(3,0) default NULL,
+  `attackrange` decimal(4,0) default NULL,
   `hp` decimal(7,0) default NULL,
   `mp` decimal(4,0) default NULL,
   `str` decimal(7,0) default NULL,

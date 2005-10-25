@@ -1,18 +1,18 @@
---
+﻿--
 -- Table structure for table `lvlupgain`
 --
 
 CREATE TABLE lvlupgain (
   classid int(3) NOT NULL default '0',
-  defaulthpbase decimal(4,1) NOT NULL default '0.0',
-  defaulthpadd decimal(3,2) NOT NULL default '0.00',
-  defaulthpmod decimal(3,2) NOT NULL default '0.00',
-  defaultcpbase decimal(4,1) NOT NULL default '0.0',
-  defaultcpadd decimal(3,2) NOT NULL default '0.00',
-  defaultcpmod decimal(3,2) NOT NULL default '0.00',
-  defaultmpbase decimal(4,1) NOT NULL default '0.0',
-  defaultmpadd decimal(3,2) NOT NULL default '0.00',
-  defaultmpmod decimal(3,2) NOT NULL default '0.00',
+  defaulthpbase decimal(5,1) NOT NULL default '0.0',
+  defaulthpadd decimal(4,2) NOT NULL default '0.00',
+  defaulthpmod decimal(4,2) NOT NULL default '0.00',
+  defaultcpbase decimal(5,1) NOT NULL default '0.0',
+  defaultcpadd decimal(4,2) NOT NULL default '0.00',
+  defaultcpmod decimal(4,2) NOT NULL default '0.00',
+  defaultmpbase decimal(5,1) NOT NULL default '0.0',
+  defaultmpadd decimal(4,2) NOT NULL default '0.00',
+  defaultmpmod decimal(4,2) NOT NULL default '0.00',
   class_lvl int(3) NOT NULL default '0',
   PRIMARY KEY  (classid)
 ) TYPE=MyISAM;
