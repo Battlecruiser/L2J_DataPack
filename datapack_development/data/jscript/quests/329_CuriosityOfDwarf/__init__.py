@@ -52,7 +52,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(BROKEN_HEARTSTONE_ID)+st.getQuestItemsCount(GOLEM_HEARTSTONE_ID)>0 :
           if int(st.get("id")) != 329 :
             st.set("id","329")
-            st.giveItems(ADENA_ID,40*st.getQuestItemsCount(BROKEN_HEARTSTONE_ID)+800*st.getQuestItemsCount(GOLEM_HEARTSTONE_ID))
+            st.giveItems(ADENA_ID,50*st.getQuestItemsCount(BROKEN_HEARTSTONE_ID)+1000*st.getQuestItemsCount(GOLEM_HEARTSTONE_ID))
             st.takeItems(BROKEN_HEARTSTONE_ID,st.getQuestItemsCount(BROKEN_HEARTSTONE_ID))
             st.takeItems(GOLEM_HEARTSTONE_ID,st.getQuestItemsCount(GOLEM_HEARTSTONE_ID))
             htmltext = "7437-05.htm"

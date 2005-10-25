@@ -108,9 +108,9 @@ class Quest (JQuest) :
    if npcId == 7473 :
      if int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
       if int(st.get("cond")) < 15 :
-        if (st.getPlayer().getClassId().getId()==0x0f or st.getPlayer().getClassId().getId()==0x1d or st.getPlayer().getClassId().getId()==0x13) and st.getPlayer().getLevel() > 38 :
+        if (st.getPlayer().getClassId().getId()==0x04 or st.getPlayer().getClassId().getId()==0x0f or st.getPlayer().getClassId().getId()==0x1d or st.getPlayer().getClassId().getId()==0x13) and st.getPlayer().getLevel() > 38 :
           htmltext = "7473-03.htm"
-        elif st.getPlayer().getClassId().getId()==0x0f or st.getPlayer().getClassId().getId()==0x1d or st.getPlayer().getClassId().getId()==0x13 :
+        elif st.getPlayer().getClassId().getId()==0x04 or st.getPlayer().getClassId().getId()==0x0f or st.getPlayer().getClassId().getId()==0x1d or st.getPlayer().getClassId().getId()==0x13 :
           htmltext = "7473-01.htm"
         else:
           htmltext = "7473-02.htm"

@@ -288,8 +288,9 @@
 </skill>
 <skill id="1016" levels="9" name="Greater Resurrection">
   <table name="#mpConsume"> 59 88 122 152 180 195 207 228 239 </table>
+  <table name="#power"> 0.0 20.0 30.0 40.0 50.0 55.0 60.0 65.0 70.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="#power"/>
   <set name="target" val="TARGET_CORPSE_PLAYER"/>
   <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="120000"/>

@@ -1940,7 +1940,7 @@ INSERT INTO etcitem VALUES
 (3038,'Blueprint: Summon Mechanic Golem','false','spellbook',120,'normal','paper','none',0,1550,0,'true','sb_summon_mechanic_golem1','none'),
 (3039,'Spellbook: Summon Storm Cubic','false','spellbook',120,'normal','paper','none',0,3200,0,'true','sb_summon_storm_cubic1','none'),
 (3040,'Spellbook: Summon Vampiric Cubic','false','spellbook',120,'normal','paper','none',0,3700,0,'true','sb_summon_vampiric_cubic1','none'),
-(3041,'Spellbook: Summon Phantom Cubic','false','spellbook',120,'normal','paper','none',0,3200,0,'true','sb_summon_poltergeist_cubic1','none'),
+(3041,'Spellbook: Summon Poltergeist Cubic','false','spellbook',120,'normal','paper','none',0,3200,0,'true','sb_summon_poltergeist_cubic1','none'),
 (3042,'Spellbook: Life Scavenge','false','spellbook',120,'normal','paper','none',0,3200,0,'true','sb_life_scavenge1','none'),
 (3043,'Spellbook: Holy Strike','false','spellbook',120,'normal','paper','none',0,4250,0,'true','sb_holy_strike1','none'),
 (3044,'Spellbook: Horror','false','spellbook',120,'normal','paper','none',0,4250,0,'true','sb_horror1','none'),

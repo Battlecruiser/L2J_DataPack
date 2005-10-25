@@ -95,6 +95,7 @@ __all__ = [
 '329_CuriosityOfDwarf',
 '330_AdeptOfTaste',
 '331_ArrowForVengeance',
+'333_BlackLionHunt',
 '350_EnhanceYourWeapon',
 '362_BardsMandolin',
 '376_GiantsExploration1',
