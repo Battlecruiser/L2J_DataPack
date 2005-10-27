@@ -3,13 +3,13 @@
 -- 
 
 CREATE TABLE `droplist` (
-  `mobId` int(5) NOT NULL default '0',
-  `itemId` int(4) NOT NULL default '0',
-  `min` int(5) NOT NULL default '0',
-  `max` int(5) NOT NULL default '0',
-  `sweep` int(1) NOT NULL default '0',
-  `chance` int(7) NOT NULL default '0',
-  PRIMARY KEY  (`mobId`,`itemId`),
+  `mobId` INT NOT NULL DEFAULT '0',
+  `itemId` INT NOT NULL DEFAULT '0',
+  `min` INT NOT NULL DEFAULT '0',
+  `max` INT NOT NULL DEFAULT '0',
+  `sweep` INT NOT NULL DEFAULT '0',
+  `chance` INT NOT NULL DEFAULT '0',
+  PRIMARY KEY  (`mobId`,`itemId`,`sweep`),
   KEY `key_mobId` (`mobId`)
   
 ) TYPE=MyISAM;

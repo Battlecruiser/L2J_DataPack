@@ -61,6 +61,7 @@ CREATE TABLE characters (
   char_slot decimal(1) default NULL,
   newbie decimal(1,0) default '1',
   lastAccess decimal(20,0) default NULL,
+  clan_privs INT DEFAULT 0,
   PRIMARY KEY  (obj_Id),
   KEY `clanid` (`clanid`)
 ) ;
