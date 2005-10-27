@@ -66,7 +66,7 @@ class Quest (JQuest) :
 		if int(st.get("phase"))==0:
 			if event=="1":
 				st.setState(STARTED)
-				st.giveItems(ORDEAL_NECKLACE_ID,1,1)
+				st.giveItems(ORDEAL_NECKLACE_ID,1)
 				st.playSound("ItemSound.quest_accept")
 				htmltext="7565-05.htm"
 				for var in STATS[0]:
