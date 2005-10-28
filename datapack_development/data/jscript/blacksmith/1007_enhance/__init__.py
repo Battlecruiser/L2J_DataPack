@@ -1786,7 +1786,7 @@ class Quest (JQuest) :
         else :
             htmltext = "You do not have enough materials."
     
-    if htmltext != event:
+    if htmltext != event and event != "1":
       st.setState(COMPLETED)
       st.exitQuest(1)
 
