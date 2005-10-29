@@ -238,6 +238,8 @@ class Quest (JQuest) :
 			st.set("cond","1")
 			st.setState(STARTED)
 			st.playSound("ItemSound.quest_accept")
+			#just to go with the official, until we have the option to make the take part invisible, like on officials.
+			st.takeItems(BLACK_LION_MARK,1)
 			st.giveItems(BLACK_LION_MARK,1)
 			return start_explain
 		elif event == "p1_t":
@@ -499,7 +501,6 @@ class Quest (JQuest) :
 			if npcId == NPC[0]:
 				if st.getQuestItemsCount(BLACK_LION_MARK) :
 					if st.getPlayer().getLevel() >24 :
-						st.takeItems(BLACK_LION_MARK,1)
 						return  start_start
 					else:
 						st.exitQuest(1)
