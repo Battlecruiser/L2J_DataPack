@@ -37,13 +37,16 @@ class Quest (JQuest) :
       if int(st.get("cond"))<15 :
         if st.getPlayer().getRace().ordinal() != 2 :
           htmltext = "7141-00.htm"
+          st.exitQuest(1)
         elif st.getPlayer().getLevel() >= 16 :
           htmltext = "7141-02.htm"
           return htmltext
         else:
           htmltext = "7141-01.htm"
+          st.exitQuest(1)
       else:
         htmltext = "7141-01.htm"
+        st.exitQuest(1)
    elif npcId == 7141 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7141 and int(st.get("cond"))==1 and int(st.get("onlyone"))==0 :

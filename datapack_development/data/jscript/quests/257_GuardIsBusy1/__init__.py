@@ -50,8 +50,10 @@ class Quest (JQuest) :
             return htmltext
           else:
             htmltext = "7039-01.htm"
+            st.exitQuest(1)
         else:
           htmltext = "7039-01.htm"
+          st.exitQuest(1)
    elif npcId == 7039 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7039 and int(st.get("cond"))==1 and (st.getQuestItemsCount(ORC_AMULET_ID)<1) and (st.getQuestItemsCount(ORC_NECKLACE_ID)<1) and (st.getQuestItemsCount(WEREWOLF_FANG_ID)<1) :

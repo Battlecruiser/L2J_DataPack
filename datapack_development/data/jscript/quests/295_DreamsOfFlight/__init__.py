@@ -39,8 +39,10 @@ class Quest (JQuest) :
           return htmltext
         else:
           htmltext = "7536-01.htm"
+          st.exitQuest(1)
       else:
         htmltext = "7536-01.htm"
+        st.exitQuest(1)
    elif npcId == 7536 and int(st.get("cond"))==1 and st.getQuestItemsCount(FLOATING_STONE_ID)<50 :
       htmltext = "7536-04.htm"
    elif npcId == 7536 and int(st.get("cond"))==1 and st.getQuestItemsCount(FLOATING_STONE_ID)>=50 :

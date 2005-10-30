@@ -40,13 +40,16 @@ class Quest (JQuest) :
       if int(st.get("cond")) < 15 :
         if st.getPlayer().getRace().ordinal() != 3 :
           htmltext = "7578-00.htm"
+          st.exitQuest(1)
         elif st.getPlayer().getLevel() >= 2 :
           htmltext = "7578-02.htm"
           return htmltext
         else:
           htmltext = "7578-01.htm"
+          st.exitQuest(1)
       else:
         htmltext = "7578-01.htm"
+        st.exitQuest(1)
    elif npcId == 7578 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7578 and int(st.get("cond"))==1 and st.getQuestItemsCount(HONEY_KHANDAR_ID)+st.getQuestItemsCount(BEAR_FUR_CLOAK_ID)+st.getQuestItemsCount(BLOODY_AXE_ID)+st.getQuestItemsCount(ANCESTOR_SKULL_ID)+st.getQuestItemsCount(SPIDER_DUST_ID)+st.getQuestItemsCount(DEEP_SEA_ORB_ID)<6 :

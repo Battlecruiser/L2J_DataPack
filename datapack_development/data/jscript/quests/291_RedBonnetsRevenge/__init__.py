@@ -38,11 +38,13 @@ class Quest (JQuest) :
       if int(st.get("cond")) < 15 :
         if st.getPlayer().getLevel() < 4 :
           htmltext = "7553-01.htm"
+          st.exitQuest(1)
         else:
           htmltext = "7553-02.htm"
           return htmltext
       else:
-        htmltext = "7553-02.htm"
+        htmltext = "7553-01.htm"
+        st.exitQuest(1)
    elif npcId == 7553 and int(st.get("cond")) :
       if st.getQuestItemsCount(BLACK_WOLF_PELT_ID) < 40 :
         htmltext = "7553-04.htm"

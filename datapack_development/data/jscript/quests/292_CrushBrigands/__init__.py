@@ -47,13 +47,16 @@ class Quest (JQuest) :
       if int(st.get("cond")) < 15 :
         if st.getPlayer().getRace().ordinal() != 4 :
           htmltext = "7532-00.htm"
+          st.exitQuest(1)
         elif st.getPlayer().getLevel() >= 5 :
           htmltext = "7532-02.htm"
           return htmltext
         else:
           htmltext = "7532-01.htm"
+          st.exitQuest(1)
       else:
         htmltext = "7532-01.htm"
+        st.exitQuest(1)
    elif npcId == 7532 and int(st.get("cond"))==1 and st.getQuestItemsCount(GOBLIN_NECKLACE_ID)<1 and st.getQuestItemsCount(GOBLIN_PENDANT_ID)<1 and st.getQuestItemsCount(GOBLIN_LORD_PENDANT_ID)<1 and st.getQuestItemsCount(SUSPICIOUS_MEMO_ID)==0 and st.getQuestItemsCount(SUSPICIOUS_CONTRACT_ID)==0 :
       htmltext = "7532-04.htm"
    elif npcId == 7532 and int(st.get("cond"))==1 and st.getQuestItemsCount(GOBLIN_NECKLACE_ID)+st.getQuestItemsCount(GOBLIN_PENDANT_ID)+st.getQuestItemsCount(GOBLIN_LORD_PENDANT_ID)>=1 and st.getQuestItemsCount(SUSPICIOUS_MEMO_ID)==0 and st.getQuestItemsCount(SUSPICIOUS_CONTRACT_ID)==0 :

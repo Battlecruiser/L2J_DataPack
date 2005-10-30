@@ -35,13 +35,16 @@ class Quest (JQuest) :
       if int(st.get("cond")) < 15 :
         if st.getPlayer().getRace().ordinal() != 3 :
           htmltext = "7572-00.htm"
+          st.exitQuest(1)
         elif st.getPlayer().getLevel() < 5 :
           htmltext = "7572-01.htm"
+          st.exitQuest(1)
         else:
           htmltext = "7572-02.htm"
           return htmltext
       else:
-        htmltext = "7572-02.htm"
+        htmltext = "7572-01.htm"
+        st.exitQuest(1)
    elif npcId == 7572 and int(st.get("cond")) :
       if st.getQuestItemsCount(GRAVE_ROBBERS_HEAD_ID) < 50 :
         htmltext = "7572-04.htm"

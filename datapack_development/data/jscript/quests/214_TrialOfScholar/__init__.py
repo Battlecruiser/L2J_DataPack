@@ -249,10 +249,13 @@ class Quest (JQuest) :
             htmltext = "7461-01.htm"
           elif (st.getPlayer().getClassId().getId() == 0x0b or st.getPlayer().getClassId().getId() == 0x1a or st.getPlayer().getClassId().getId() == 0x27) and st.getPlayer().getLevel()<35 :
             htmltext = "7461-02.htm"
+            st.exitQuest(1)
           else:
             htmltext = "7461-03.htm"
+            st.exitQuest(1)
         else:
           htmltext = "7461-03.htm"
+          st.exitQuest(1)
    elif npcId == 7461 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7461 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL1_ID)==1 and st.getQuestItemsCount(SYMBOL_OF_SYLVAIN_ID)==0 :

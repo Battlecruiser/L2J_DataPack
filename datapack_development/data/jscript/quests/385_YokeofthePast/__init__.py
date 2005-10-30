@@ -22,6 +22,7 @@ class Quest (JQuest) :
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
+          st.exitQuest(1)
           
     return htmltext
 

@@ -38,8 +38,10 @@ class Quest (JQuest) :
             return htmltext
           else:
             htmltext = "7137-01.htm"
+            st.exitQuest(1)
         else:
           htmltext = "7137-01.htm"
+          st.exitQuest(1)
    elif npcId == 7137 and int(st.get("cond"))==1 and st.getQuestItemsCount(FUNGUS_SAC_ID)<10 :
         htmltext = "7137-04.htm"
    elif npcId == 7137 and int(st.get("cond"))==1 and st.getQuestItemsCount(FUNGUS_SAC_ID)>=10 :

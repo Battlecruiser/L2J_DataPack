@@ -140,10 +140,13 @@ class Quest (JQuest) :
               htmltext = "7103-02.htm"
             else:
               htmltext = "7103-03.htm"
+              st.exitQuest(1)
           else:
             htmltext = "7103-01.htm"
+            st.exitQuest(1)
         else:
           htmltext = "7103-01.htm"
+          st.exitQuest(1)
    elif npcId == 7103 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7103 and int(st.get("cond"))>=1 and st.getQuestItemsCount(VALKONS_RECOMMEND_ID)==1 :

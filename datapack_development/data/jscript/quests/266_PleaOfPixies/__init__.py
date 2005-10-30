@@ -41,10 +41,13 @@ class Quest (JQuest) :
           return htmltext
         elif st.getPlayer().getRace().ordinal() != 1 :
           htmltext = "12091-00.htm"
+          st.exitQuest(1)
         elif st.getPlayer().getLevel()<3 :
           htmltext = "12091-01.htm"
+          st.exitQuest(1)
       else:
         htmltext = "12091-01.htm"
+        st.exitQuest(1)
    elif npcId == 12091 and int(st.get("cond"))==1 and st.getQuestItemsCount(PREDATORS_FANG_ID)<100 :
       htmltext = "12091-04.htm"
    elif npcId == 12091 and (int(st.get("cond"))==1) and (st.getQuestItemsCount(PREDATORS_FANG_ID)>=100) :

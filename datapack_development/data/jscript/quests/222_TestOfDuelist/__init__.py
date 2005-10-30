@@ -107,6 +107,7 @@ class Quest (JQuest) :
               htmltext = "7623-03.htm"
             else:
               htmltext = "7623-01.htm"
+              st.exitQuest(1)
           else:
             htmltext = "7623-02.htm"
             st.exitQuest(1)

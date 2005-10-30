@@ -45,10 +45,13 @@ class Quest (JQuest) :
             return htmltext
           elif st.getPlayer().getRace().ordinal() != 1 :
             htmltext = "12092-00.htm"
+            st.exitQuest(1)
           elif st.getPlayer().getLevel()<4 :
             htmltext = "12092-01.htm"
+            st.exitQuest(1)
         else:
           htmltext = "12092-01.htm"
+          st.exitQuest(1)
    elif npcId == 12092 and int(st.get("cond"))==1 :
         if st.getQuestItemsCount(GOBLIN_CLUB_ID)>0 :
           if int(st.get("id")) != 267 :

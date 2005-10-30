@@ -47,8 +47,10 @@ class Quest (JQuest) :
             return htmltext
           else:
             htmltext = "7125-01.htm"
+            st.exitQuest(1)
         else:
           htmltext = "7125-01.htm"
+          st.exitQuest(1)
    elif npcId == 7125 and int(st.get("cond"))==1 :
         if st.getQuestItemsCount(HARPY_FEATHER_ID)+st.getQuestItemsCount(MEDUSA_VENOM_ID)+st.getQuestItemsCount(WYRMS_TOOTH_ID)>0 :
           if int(st.get("id")) != 331 :

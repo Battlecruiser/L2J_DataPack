@@ -184,10 +184,13 @@ class Quest (JQuest) :
           htmltext = "7514-03.htm"
         elif st.getPlayer().getClassId().getId() == 0x0f or st.getPlayer().getClassId().getId() == 0x1d or st.getPlayer().getClassId().getId() == 0x13 :
           htmltext = "7514-01.htm"
+          st.exitQuest(1)
         else:
           htmltext = "7514-02.htm"
+          st.exitQuest(1)
       else:
         htmltext = "7514-02.htm"
+        st.exitQuest(1)
    elif npcId == 7514 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7514 and int(st.get("cond"))==1 and st.getQuestItemsCount(VOKIYANS_ORDER1_ID) and (st.getQuestItemsCount(MANASHEN_SHARD_ID)<10 or st.getQuestItemsCount(MANASHEN_SHARD_ID)<10 or st.getQuestItemsCount(TYRANT_TALON_ID)<10 or st.getQuestItemsCount(GUARDIAN_BASILISK_FANG_ID)<10) :

@@ -58,5 +58,6 @@ For existing L2J databases where you want to keep character and account informat
 
 **NOTE:	There may be multiple sql files for the same table, they are often mutually exclusive, that is you must choose one or the other, not both.
 		Usually the default file will have the same name as the table and be listed in the tools files.
+		Read readme in the sql folder.
 
 -the l2j-datapack team

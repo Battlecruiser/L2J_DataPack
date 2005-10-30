@@ -170,11 +170,13 @@ class Quest (JQuest) :
       if int(st.get("cond")) < 15 :
         if st.getPlayer().getLevel() < 25 :
           htmltext = "7597-01.htm"
+          st.exitQuest(1)
         else:
           htmltext = "7597-02.htm"
           return htmltext
       else:
         htmltext = "7597-02.htm"
+        st.exitQuest(1)
    elif npcId == 7597 and int(st.get("cond")) :
       if st.getQuestItemsCount(TUREK_DOGTAG_ID)+st.getQuestItemsCount(TUREK_MEDALLION_ID) < 1 :
         htmltext = "7597-04.htm"

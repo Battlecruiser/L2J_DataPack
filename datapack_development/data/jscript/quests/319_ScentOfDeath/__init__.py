@@ -39,8 +39,10 @@ class Quest (JQuest) :
           return htmltext
         else:
           htmltext = "7138-02.htm"
+          st.exitQuest(1)
       else:
         htmltext = "7138-02.htm"
+        st.exitQuest(1)
    elif npcId == 7138 and int(st.get("cond")) :
       if st.getQuestItemsCount(ZOMBIE_SKIN_ID)<5 :
         htmltext = "7138-05.htm"

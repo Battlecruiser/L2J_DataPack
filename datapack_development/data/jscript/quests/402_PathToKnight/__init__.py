@@ -135,10 +135,7 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 7417 and int(st.get("cond"))==0 :
-        if int(st.get("cond"))<15 :
-          htmltext = "7417-01.htm"
-        else:
-          htmltext = "7417-01.htm"
+        htmltext = "7417-01.htm"
    elif npcId == 7417 and int(st.get("cond"))==1 and st.getQuestItemsCount(MARK_OF_ESQUIRE_ID)>0 and (st.getQuestItemsCount(COIN_OF_LORDS1_ID)+st.getQuestItemsCount(COIN_OF_LORDS2_ID)+st.getQuestItemsCount(COIN_OF_LORDS3_ID)+st.getQuestItemsCount(COIN_OF_LORDS4_ID)+st.getQuestItemsCount(COIN_OF_LORDS5_ID)+st.getQuestItemsCount(COIN_OF_LORDS6_ID))<3 :
         htmltext = "7417-09.htm"
    elif npcId == 7332 and int(st.get("cond"))==1 and st.getQuestItemsCount(GLUDIO_GUARDS_MARK1_ID)==0 and st.getQuestItemsCount(MARK_OF_ESQUIRE_ID) and st.getQuestItemsCount(COIN_OF_LORDS1_ID)==0 :

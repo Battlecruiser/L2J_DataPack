@@ -38,8 +38,10 @@ class Quest (JQuest) :
       if int(st.get("cond")) < 15 :
         if st.getPlayer().getRace().ordinal() != 3 :
           htmltext = "7569-00.htm"
+          st.exitQuest(1)
         elif st.getPlayer().getLevel() < 9 :
           htmltext = "7569-01.htm"
+          st.exitQuest(1)
         elif st.getQuestItemsCount(NECKLACE_OF_VALOR_ID) or st.getQuestItemsCount(NECKLACE_OF_COURAGE_ID) :
           htmltext = "7569-02.htm"
           return htmltext
@@ -47,6 +49,7 @@ class Quest (JQuest) :
           htmltext = "7569-07.htm"
       else:
         htmltext = "7569-07.htm"
+        st.exitQuest(1)
    elif npcId == 7569 and int(st.get("cond")) :
       if int(st.get("id")) != 274 :
         st.set("id","274")

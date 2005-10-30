@@ -47,8 +47,10 @@ class Quest (JQuest) :
             return htmltext
           else:
             htmltext = "7436-01.htm"
+            st.exitQuest(1)
         else:
           htmltext = "7436-01.htm"
+          st.exitQuest(1)
    elif npcId == 7436 and int(st.get("cond"))==1 :
         if st.getQuestItemsCount(MONSTER_EYE_CARCASS_ID)+st.getQuestItemsCount(MONSTER_EYE_LENS_ID)+st.getQuestItemsCount(BASILISK_GIZZARD_ID) > 0 :
           if int(st.get("id")) != 328 :

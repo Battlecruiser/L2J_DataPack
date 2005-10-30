@@ -90,10 +90,13 @@ class Quest (JQuest) :
           htmltext = "7648-03.htm"
         elif st.getPlayer().getClassId().getId()==0x0f or st.getPlayer().getClassId().getId()==0x1d or st.getPlayer().getClassId().getId()==0x2a or st.getPlayer().getClassId().getId()==0x32 :
           htmltext = "7648-01.htm"
+          st.exitQuest(1)
         else:
           htmltext = "7648-02.htm"
+          st.exitQuest(1)
       else:
         htmltext = "7648-02.htm"
+        st.exitQuest(1)
    elif npcId == 7648 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7648 and int(st.get("cond"))==1 and st.getQuestItemsCount(VOUCHER_OF_TRIAL_ID) :

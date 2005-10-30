@@ -25,6 +25,7 @@ class Quest (JQuest) :
         st.set("cond","0")
         st.setState(COMPLETED)
         htmltext = "7957_5.htm"
+        st.exitQuest(1)
         
     return htmltext
 

@@ -36,13 +36,16 @@ class Quest (JQuest) :
       if int(st.get("cond")) < 15 :
         if st.getPlayer().getRace().ordinal() != 3 :
           htmltext = "7571-00.htm"
+          st.exitQuest(1)
         elif st.getPlayer().getLevel() < 15 :
           htmltext = "7571-01.htm"
+          st.exitQuest(1)
         else:
           htmltext = "7571-02.htm"
           return htmltext
       else:
         htmltext = "7571-02.htm"
+        st.exitQuest(1)
    elif npcId == 7571 and int(st.get("cond")) :
       if st.getQuestItemsCount(KASHA_CRYSTAL_ID) < 1 :
         htmltext = "7571-04.htm"

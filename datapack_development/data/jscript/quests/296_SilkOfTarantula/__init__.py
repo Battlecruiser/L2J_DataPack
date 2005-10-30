@@ -54,13 +54,16 @@ class Quest (JQuest) :
         if st.getPlayer().getLevel() >= 15 :
           if st.getQuestItemsCount(RING_OF_RACCOON_ID) < 1 and st.getQuestItemsCount(RING_OF_FIREFLY_ID) < 1 :
             htmltext = "7519-08.htm"
+            st.exitQuest(1)
           else:
             htmltext = "7519-02.htm"
             return htmltext
         else:
           htmltext = "7519-01.htm"
+          st.exitQuest(1)
       else:
         htmltext = "7519-01.htm"
+        st.exitQuest(1)
    elif npcId == 7519 and int(st.get("cond"))==1 and st.getQuestItemsCount(TARANTULA_SPIDER_SILK_ID)<1 :
       htmltext = "7519-04.htm"
    elif npcId == 7519 and int(st.get("cond"))==1 and st.getQuestItemsCount(TARANTULA_SPIDER_SILK_ID)>=1 :

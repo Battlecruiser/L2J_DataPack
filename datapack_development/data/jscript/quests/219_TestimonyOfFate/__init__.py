@@ -103,10 +103,13 @@ class Quest (JQuest) :
           htmltext = "7476-03.htm"
         elif st.getPlayer().getRace().ordinal() == 2 :
           htmltext = "7476-02.htm"
+          st.exitQuest(1)
         else:
           htmltext = "7476-01.htm"
+          st.exitQuest(1)
       else:
         htmltext = "7476-01.htm"
+        st.exitQuest(1)
    elif npcId == 7476 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7476 and int(st.get("cond"))==1 and st.getQuestItemsCount(KAIRAS_LETTER1_ID) :

@@ -38,8 +38,10 @@ class Quest (JQuest) :
           return htmltext
         else:
           htmltext = "7222-01.htm"
+          st.exitQuest(1)
       else:
         htmltext = "7222-01.htm"
+        st.exitQuest(1)
    elif npcId == 7222 and int(st.get("cond"))==1 :
       if st.getQuestItemsCount(GIANT_SPIDER_LEG_ID) >= 8 :
         if int(st.get("id")) != 261 :

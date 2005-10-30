@@ -46,13 +46,16 @@ class Quest (JQuest) :
       if int(st.get("cond")) < 15 :
         if st.getPlayer().getRace().ordinal() != 3 :
           htmltext = "7566-00.htm"
+          st.exitQuest(1)
         elif st.getPlayer().getLevel() < 6 :
           htmltext = "7566-01.htm"
+          st.exitQuest(1)
         else:
           htmltext = "7566-02.htm"
           return htmltext
       else:
-        htmltext = "7566-02.htm"
+        htmltext = "7566-01.htm"
+        st.exitQuest(1)
    elif npcId == 7566 and int(st.get("cond")) :
       if int(st.get("id")) != 273 :
         st.set("id","273")

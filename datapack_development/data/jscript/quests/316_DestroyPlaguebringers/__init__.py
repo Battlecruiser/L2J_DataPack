@@ -43,13 +43,16 @@ class Quest (JQuest) :
       if int(st.get("cond"))<15 :
         if st.getPlayer().getRace().ordinal() != 1 :
           htmltext = "7155-00.htm"
+          st.exitQuest(1)
         elif st.getPlayer().getLevel() >= 18 :
           htmltext = "7155-03.htm"
           return htmltext
         else:
           htmltext = "7155-02.htm"
+          st.exitQuest(1)
       else:
         htmltext = "7155-02.htm"
+        st.exitQuest(1)
    elif npcId == 7155 and int(st.get("cond")) :
       if st.getQuestItemsCount(WERERAT_FANG_ID) >= 1 or st.getQuestItemsCount(VAROOL_FOULCLAWS_FANG_ID) >= 1 :
         if int(st.get("id")) != 316 :

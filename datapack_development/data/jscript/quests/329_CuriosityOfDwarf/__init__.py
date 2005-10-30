@@ -46,8 +46,10 @@ class Quest (JQuest) :
             return htmltext
           else:
             htmltext = "7437-01.htm"
+            st.exitQuest(1)
         else:
           htmltext = "7437-01.htm"
+          st.exitQuest(1)
    elif npcId == 7437 and int(st.get("cond"))==1 :
         if st.getQuestItemsCount(BROKEN_HEARTSTONE_ID)+st.getQuestItemsCount(GOLEM_HEARTSTONE_ID)>0 :
           if int(st.get("id")) != 329 :

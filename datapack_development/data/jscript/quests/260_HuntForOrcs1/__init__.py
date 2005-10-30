@@ -46,10 +46,13 @@ class Quest (JQuest) :
           return htmltext
         elif st.getPlayer().getRace().ordinal() != 1 :
           htmltext = "7221-00.htm"
+          st.exitQuest(1)
         elif st.getPlayer().getLevel()<6 :
           htmltext = "7221-01.htm"
+          st.exitQuest(1)
       else:
         htmltext = "7221-01.htm"
+        st.exitQuest(1)
    elif npcId == 7221 and int(st.get("cond"))==1 and st.getQuestItemsCount(ORC_AMULET1_ID)==0 and st.getQuestItemsCount(ORC_NECKLACE1_ID)==0 :
       htmltext = "7221-04.htm"
    elif npcId == 7221 and int(st.get("cond"))==1 and (st.getQuestItemsCount(ORC_AMULET1_ID)>0 or st.getQuestItemsCount(ORC_NECKLACE1_ID)>0) :

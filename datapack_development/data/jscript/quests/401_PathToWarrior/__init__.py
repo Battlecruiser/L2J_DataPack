@@ -68,10 +68,7 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 7010 and int(st.get("cond"))==0 :
-        if int(st.get("cond"))<15 :
-          htmltext = "7010-01.htm"
-        else:
-          htmltext = "7010-01.htm"
+      htmltext = "7010-01.htm"
    elif npcId == 7010 and int(st.get("cond")) and st.getQuestItemsCount(EINS_LETTER_ID)>0 :
       htmltext = "7010-07.htm"
    elif npcId == 7010 and int(st.get("cond")) and st.getQuestItemsCount(WARRIOR_GUILD_MARK_ID)==1 :

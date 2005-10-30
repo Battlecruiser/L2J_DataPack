@@ -44,8 +44,10 @@ class Quest (JQuest) :
           return htmltext
         else:
           htmltext = "7004-02.htm"
+          st.exitQuest(1)
       else:
         htmltext = "7004-02.htm"
+        st.exitQuest(1)
    elif npcId == 7004 and int(st.get("cond"))==1 and st.getQuestItemsCount(FLAME_SHARD_ID)==0 and st.getQuestItemsCount(ICE_SHARD_ID)==0 :
       htmltext = "7004-05.htm"
    elif npcId == 7004 and int(st.get("cond"))==1 and (st.getQuestItemsCount(FLAME_SHARD_ID)>0 or st.getQuestItemsCount(ICE_SHARD_ID)>0) :

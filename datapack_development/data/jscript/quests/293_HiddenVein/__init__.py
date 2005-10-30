@@ -51,13 +51,16 @@ class Quest (JQuest) :
       if int(st.get("cond")) < 15 :
         if st.getPlayer().getRace().ordinal() != 4 :
           htmltext = "7535-00.htm"
+          st.exitQuest(1)
         elif st.getPlayer().getLevel() >= 6 :
           htmltext = "7535-02.htm"
           return htmltext
         else:
           htmltext = "7535-01.htm"
+          st.exitQuest(1)
       else:
         htmltext = "7535-01.htm"
+        st.exitQuest(1)
    elif npcId == 7535 and int(st.get("cond"))==1 and st.getQuestItemsCount(ORIHARUKON_ORE_1_ID)<1 and st.getQuestItemsCount(HIDDEN_VEIN_MAP_ID)<1 :
       htmltext = "7535-04.htm"
    elif npcId == 7535 and int(st.get("cond"))==1 and st.getQuestItemsCount(ORIHARUKON_ORE_1_ID)<1 and st.getQuestItemsCount(HIDDEN_VEIN_MAP_ID)>=1 :

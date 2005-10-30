@@ -46,8 +46,10 @@ class Quest (JQuest) :
           return htmltext
         else:
           htmltext = "7017-06.htm"
+          st.exitQuest(1)
       else:
         htmltext = "7017-06.htm"
+        st.exitQuest(1)
    elif npcId == 7017 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7017 and int(st.get("cond")) and st.getQuestItemsCount(GALLINS_OAK_WAND_ID)>=1 and (st.getQuestItemsCount(WAND_SPIRITBOUND1_ID)==1 and st.getQuestItemsCount(WAND_SPIRITBOUND2_ID)==1 and st.getQuestItemsCount(WAND_SPIRITBOUND3_ID)==1)==0 :

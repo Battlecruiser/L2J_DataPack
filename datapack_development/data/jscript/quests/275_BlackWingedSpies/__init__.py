@@ -36,13 +36,16 @@ class Quest (JQuest) :
       if int(st.get("cond")) < 15 :
         if st.getPlayer().getRace().ordinal() != 3 :
           htmltext = "7567-00.htm"
+          st.exitQuest(1)
         elif st.getPlayer().getLevel() < 11 :
           htmltext = "7567-01.htm"
+          st.exitQuest(1)
         else:
           htmltext = "7567-02.htm"
           return htmltext
       else:
         htmltext = "7567-02.htm"
+        st.exitQuest(1)
    elif npcId == 7567 and int(st.get("cond")) :
       if st.getQuestItemsCount(DARKWING_BAT_FANG_ID) < 70 :
         htmltext = "7567-04.htm"

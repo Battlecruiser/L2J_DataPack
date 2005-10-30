@@ -38,15 +38,19 @@ class Quest (JQuest) :
    if npcId == 7577 and int(st.get("cond"))==0 :
       if int(st.get("cond")) < 15 :
         if st.getPlayer().getRace().ordinal() != 3 :
+          st.exitQuest(1)
           htmltext = "7577-00.htm"
         elif st.getPlayer().getLevel() < 4 :
+          st.exitQuest(1)
           htmltext = "7577-01.htm"
         elif st.getQuestItemsCount(NECKLACE_OF_COURAGE_ID) or st.getQuestItemsCount(NECKLACE_OF_VALOR_ID) :
           htmltext = "7577-06.htm"
+          st.exitQuest(1)
         else:
           htmltext = "7577-02.htm"
       else:
         htmltext = "7577-02.htm"
+        st.exitQuest(1)
    elif npcId == 7577 and int(st.get("cond")) :
       if st.getQuestItemsCount(KASHA_WOLF_FANG_ID) < 50 :
         htmltext = "7577-04.htm"

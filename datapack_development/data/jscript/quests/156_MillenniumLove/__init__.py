@@ -53,11 +53,7 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 7368 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-        if int(st.get("cond"))<15 :
-          htmltext = "7368-04.htm"
-          htmltext = "7368-02.htm"
-        else:
-          htmltext = "7368-02.htm"
+      htmltext = "7368-04.htm"
    elif npcId == 7368 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7368 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RYLITHS_LETTER_ID)!=0 :

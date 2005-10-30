@@ -109,8 +109,10 @@ class Quest (JQuest) :
           return htmltext
         else:
           htmltext = "7336-01.htm"
+          st.exitQuest(1)
       else:
         htmltext = "7336-01.htm"
+        st.exitQuest(1)
    elif npcId == 7336 and int(st.get("cond"))==1 and st.getQuestItemsCount(ANATOMY_DIAGRAM_ID)==0 :
       htmltext = "7336-04.htm"
    elif npcId == 7336 and int(st.get("cond"))==1 and st.getQuestItemsCount(ANATOMY_DIAGRAM_ID)==1 :
