@@ -21,6 +21,7 @@ mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/character_quests.
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/character_recipebook.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/character_shortcuts.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/character_skills.sql
+mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/character_skills_save.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/characters.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/clan_data.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/clan_wars.sql

@@ -15,6 +15,7 @@ DROP TABLE IF EXISTS character_quests;
 DROP TABLE IF EXISTS character_recipebook;
 DROP TABLE IF EXISTS character_shortcuts;
 DROP TABLE IF EXISTS character_skills;
+DROP TABLE IF EXISTS character_skills_save;
 DROP TABLE IF EXISTS characters;
 DROP TABLE IF EXISTS clan_data;
 DROP TABLE IF EXISTS clan_wars;

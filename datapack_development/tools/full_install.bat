@@ -43,6 +43,7 @@ echo Installling new content.
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/character_recipebook.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/character_shortcuts.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/character_skills.sql
+%mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/character_skills_save.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/characters.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/clan_data.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/clan_wars.sql
