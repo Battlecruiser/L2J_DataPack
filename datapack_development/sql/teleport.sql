@@ -83,6 +83,7 @@ insert  into teleport values
 ('Antharas Nest - > Giran castle town','62','83400','147943','-3404','0'),
 ('Giran Harbor -> Giran Town','63','83400','147943','-3404','6300'),
 ('Giran Harbor -> Dion Town','64','15670','142983','-2705','6500'),
+('Giran Harbor -> Heine','107','111409','219364','-3545','8500'),
 ('Heine -> The Town of Dion','65','15670','142983','-2705','9800'),
 ('Heine -> Field of Silence','66','82684','183551','-3597','2400'),
 ('Heine -> Field of Whispers','67','91186','217104','-3649','2400'),
