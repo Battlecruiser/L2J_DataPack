@@ -29,6 +29,13 @@ insert into zone values (4, 'Castle Area', 'Oren Castle', 72876, 32336, 87556, 4
 insert into zone values (5, 'Castle Area', 'Aden Castle', 134790, -2552, 154760, 20850, 0, 0);
 insert into zone values (6, 'Castle Area', 'Innadril Castle', 0, 0, 0, 0, 0, 5);
 
+insert into zone values (1, 'Castle Defender Spawn', 'Gludio Defender Spawn', -18105, 110303, 0, 0, -2146, 0);
+insert into zone values (2, 'Castle Defender Spawn', 'Dion Defender Spawn', 22080, 159450, 0, 0, -2441, 0);
+insert into zone values (3, 'Castle Defender Spawn', 'Giran Defender Spawn', 115621, 145097, 0, 0, -2214, 0);
+insert into zone values (4, 'Castle Defender Spawn', 'Oren Defender Spawn', 81707, 37208, 0, 0, -1941, 0);
+insert into zone values (5, 'Castle Defender Spawn', 'Aden Defender Spawn', 147456, 6048, 0, 0, 253, 0);
+insert into zone values (6, 'Castle Defender Spawn', 'Innadril Defender Spawn', 0, 0, 0, 0, 0, 5);
+
 insert into zone values (1, 'Town', 'DE Village', 6063, 19664, 17248, 14019, 0, 4);
 insert into zone values (2, 'Town', 'Talking Island', -87312, 240096, -81129, 246345, 0, 1);
 insert into zone values (3, 'Town', 'Elven Village', 48294, 52995, 43193, 45911, 0, 4);
