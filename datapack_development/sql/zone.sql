@@ -3,7 +3,7 @@
 -- ---------------------------
 CREATE TABLE zone (
   id INT NOT NULL default 0,
-  type varchar(20) NOT NULL,
+  type varchar(25) NOT NULL,
   name varchar(40) NOT NULL,
   x1 INT NOT NULL default 0,
   y1 INT NOT NULL default 0,
