@@ -388,12 +388,14 @@ class Quest (JQuest):
               luck = st.getRandom(2)
               if luck == 0 :
                  extra = ARMOR
+                 qty = 1
                  htmltext = "420_mymyu_13.htm"
               else :
                  extra = FOOD
+                 qty = 100
                  htmltext = "420_mymyu_14.htm"
               st.giveItems(flute,1)
-              st.giveItems(extra,1)
+              st.giveItems(extra,qty)
               st.setState(COMPLETED)
               st.clearQuestDrops()
               st.exitQuest(True)
@@ -521,7 +523,10 @@ class Quest (JQuest):
       if npcid ==  TD_LORD :
         if st.getRandom(100) < BACK_DROP :
            st.giveItems(TD_BCK_SKN,1)
-           st.playSound("ItemSound.quest_middle")
+           if (st.getQuestItemsCount(FSN_LIST) and st.getQuestItemsCount(TD_BCK_SKN) == 10) or (st.getQuestItemsCount(FSN_LIST_DLX) and st.getQuestItemsCount(TD_BCK_SKN) == 20) :
+              st.playSound("ItemSound.quest_middle")
+           else :
+              st.playSound("ItemSound.quest_itemget")
   #dragon detection
     elif id == STARTED and (st.get("progress") in [ "14","15","21","22" ]) :
       whom = int(st.get("dragon"))
@@ -549,7 +554,10 @@ class Quest (JQuest):
          if npcid == eggdropper :
             if st.getRandom(100) < EGG_DROP :
                st.giveItems(eggs,1)
-               st.playSound("ItemSound.quest_middle")
+               if st.getQuestItemsCount(eggs) < REQUIRED_EGGS :
+                  st.playSound("ItemSound.quest_itemget")
+               else :
+                  st.playSound("ItemSound.quest_middle")
   #fairy stone destruction    
     elif id == STARTING and st.getQuestItemsCount(FRY_STN_DLX) == 1 :
       if (589 <= npcid <= 599) or npcid == FRY_QN :
