@@ -35,7 +35,6 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 ### doRequestedEvent
 def do_RequestedEvent(event, st, giveItemId, giveItemQty, takeItem1Id, takeItem1Qty, takeItem2Id, takeItem2Qty) :
     if st.getQuestItemsCount(takeItem1Id) >= takeItem1Qty and st.getQuestItemsCount(takeItem2Id) >= takeItem2Qty :
-        st.takeItems(takeItem1Id, takeItem1Qty)
         st.giveItems(giveItemId, giveItemQty)
         return "Echo Crystal Created"
     else :
