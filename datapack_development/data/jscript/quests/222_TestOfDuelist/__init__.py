@@ -1,4 +1,5 @@
 # Maked by Mr. Have fun! Version 0.2
+# rewritten by Rolarga Version 0.3
 print "importing quests: 222: Test Of Duelist"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
@@ -36,8 +37,9 @@ class Quest (JQuest) :
     htmltext = event
     if event == "1" :
         htmltext = "7623-07.htm"
-        if int(st.get("cond"))==0 :
+        if int(st.get("step"))==0 :
            st.set("cond","1")
+           st.set("step","1")
            st.setState(STARTED)
            st.playSound("ItemSound.quest_accept")
            st.giveItems(ORDER_GLUDIO_ID,1)
@@ -87,7 +89,7 @@ class Quest (JQuest) :
             ORDER_ADEN_ID
             ]:
              st.takeItems(i,st.getQuestItemsCount(i))
-            st.set("cond","2")
+            st.set("step","2")
             st.giveItems(FINAL_ORDER_ID,1)
     return htmltext
 
@@ -97,10 +99,10 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
      st.setState(STARTING)
-     st.set("cond","0")
+     st.set("step","0")
      st.set("onlyone","0")
-     st.set("id","0")
-   if npcId == 7623 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+     st.set("cond","0")
+   if npcId == 7623 and int(st.get("step"))==0 and int(st.get("onlyone"))==0 :
         if int(st.get("cond")) < 15 :
           if (st.getPlayer().getClassId().getId() == 0x01 or st.getPlayer().getClassId().getId() == 0x2f or st.getPlayer().getClassId().getId() == 0x13 or st.getPlayer().getClassId().getId() == 0x20) :
             if st.getPlayer().getLevel() >= 39 :
@@ -116,7 +118,7 @@ class Quest (JQuest) :
           st.exitQuest(1)
    elif npcId == 7623 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest has already been completed.</body></html>"
-   elif npcId == 7623 and int(st.get("cond"))==1 :
+   elif npcId == 7623 and int(st.get("step"))==1 :
       if st.getQuestItemsCount(ORDER_GLUDIO_ID)>0 and st.getQuestItemsCount(ORDER_DION_ID)>0 and st.getQuestItemsCount(ORDER_GIRAN_ID)>0 and st.getQuestItemsCount(ORDER_OREN_ID)>0 and st.getQuestItemsCount(ORDER_ADEN_ID)>0 :
         if st.getQuestItemsCount(PUNCHERS_SHARD_ID) == 10 and st.getQuestItemsCount(NOBLE_ANTS_FEELER_ID) == 10 and st.getQuestItemsCount(DRONES_CHITIN_ID) == 10 and st.getQuestItemsCount(DEADSEEKER_FANG_ID) == 10 and st.getQuestItemsCount(OVERLORD_NECKLACE_ID) == 10 and st.getQuestItemsCount(CRIMSONBINDS_CHAIN_ID) == 10 and st.getQuestItemsCount(CHIEFS_AMULET_ID) == 10 and st.getQuestItemsCount(TEMPERED_EYE_MEAT_ID) == 10 and st.getQuestItemsCount(TAMRIN_ORCS_RING_ID) == 10 and st.getQuestItemsCount(TAMRIN_ORCS_ARROW_ID) == 10 :
           htmltext = "7623-13.htm"
@@ -127,7 +129,7 @@ class Quest (JQuest) :
           for i in [ORDER_GLUDIO_ID,ORDER_DION_ID,ORDER_GIRAN_ID,ORDER_OREN_ID,ORDER_ADEN_ID]:
             if st.getQuestItemsCount(i)==0:
                 st.giveItems(i,1) 
-   elif npcId == 7623 and int(st.get("cond"))==2 and st.getQuestItemsCount(FINAL_ORDER_ID)>0 :
+   elif npcId == 7623 and int(st.get("step"))==2 and st.getQuestItemsCount(FINAL_ORDER_ID)>0 :
         if st.getQuestItemsCount(EXCUROS_SKIN_ID)>2 and st.getQuestItemsCount(KRATORS_SHARD_ID)>2 and st.getQuestItemsCount(RAKINS_MACE_ID)>2 and st.getQuestItemsCount(GRANDIS_SKIN_ID)>2 and st.getQuestItemsCount(TIMAK_ORCS_BELT_ID)>2 :
             st.takeItems(EXCUROS_SKIN_ID,st.getQuestItemsCount(EXCUROS_SKIN_ID))
             st.takeItems(KRATORS_SHARD_ID,st.getQuestItemsCount(KRATORS_SHARD_ID))
@@ -138,6 +140,7 @@ class Quest (JQuest) :
             st.giveItems(MARK_OF_DUELIST_ID,1)
             st.takeItems(FINAL_ORDER_ID,1)
             htmltext = "7623-18.htm"
+            st.unset("step")
             st.set("cond","0")
             st.set("onlyone","1")
             st.setState(COMPLETED)
@@ -164,7 +167,7 @@ class Quest (JQuest) :
 588:(2,3,TIMAK_ORCS_BELT_ID),
 554:(2,3,GRANDIS_SKIN_ID)
 }
-  if int(st.get("cond"))==i[npcId][0] and st.getQuestItemsCount(i[npcId][2])<i[npcId][1]:
+  if int(st.get("step"))==i[npcId][0] and st.getQuestItemsCount(i[npcId][2])<i[npcId][1]:
    st.giveItems(i[npcId][2],1)
    st.playSound("ItemSound.quest_middle")
   return
