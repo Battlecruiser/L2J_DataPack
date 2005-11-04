@@ -1,5 +1,4 @@
 # Maked by Mr. Have fun! Version 0.2
-print "importing quests: 330: Adept Of Taste"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -609,3 +608,5 @@ STARTED.addQuestDrop(228,BROWN_MARSH_MOSS_ID,1)
 STARTED.addQuestDrop(7069,ROLANTS_CREATUREBOOK_ID,1)
 STARTED.addQuestDrop(265,MONSTER_EYE_BODY_ID,1)
 STARTED.addQuestDrop(266,MONSTER_EYE_BODY_ID,1)
+
+print "importing quests: 330: Adept Of Taste"
