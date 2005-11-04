@@ -1705,8 +1705,17 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 
-  <for>
+<table name="#final">
+	10 14 18 22 26 30 34 38 42 46
+	50
+</table>
 
+  <for>
+	<add order="0x40" stat="pAtk" val="#final">
+		<and>
+			<player hp="20"/>
+		</and>
+	</add>
   </for>
 
 </skill>
@@ -1723,12 +1732,10 @@
 </table>
 
   <for>
-	<add stat="pDef" order="0x04">
-		<val>
-			sub stat="maxHP" val="curHP" order="0x01
-			div order="0x02" val="100"
-			mul order="0x03" val="#final"
-		</val>
+	<add order="0x40" stat="pDef" val="#final">
+		<and>
+			<player hp="20"/>
+		</and>
 	</add>
   </for>
 
