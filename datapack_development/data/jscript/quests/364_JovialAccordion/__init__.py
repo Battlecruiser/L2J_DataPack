@@ -1,5 +1,5 @@
 # Maked by Mr. Have fun! Version 0.2
-print "importing quests: 364: Ask What You Need to Do"
+# fixed by Elektra and Rolarga Version 0.3
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -23,12 +23,12 @@ class Quest (JQuest) :
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
-        st.giveItems(KEY_1,1)
-        st.giveItems(KEY_2,1)
         htmltext = "7959-02.htm"
     elif event == "2" :
         st.set("cond","2")
-        htmltext = "7957-02.htm"
+        st.giveItems(KEY_1,1)
+        st.giveItems(KEY_2,1)
+        htmltext = "7957-02.htm" 
     elif event == "3" :
       if st.getQuestItemsCount(KEY_1)>0 :
         st.takeItems(KEY_1,1)
@@ -49,25 +49,26 @@ class Quest (JQuest) :
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
-     st.setState(STARTING)
      st.set("cond","0")
-   if npcId == 7959 and int(st.get("cond"))==0 :
+   if npcId == 7959 :
+     if int(st.get("cond"))==0 :
         htmltext = "7959-01.htm"
-   elif npcId == 7959 and int(st.get("cond"))==3 :
+     elif int(st.get("cond"))==3 :
         st.playSound("ItemSound.quest_finish")
         st.giveItems(ECHO_ID,1)
-	st.exitQuest(1)
+        st.exitQuest(1)
         htmltext = "7959-03.htm"
-   elif npcId == 7959 and int(st.get("cond"))>=1 :
+     elif int(st.get("cond"))>=1 :
         htmltext = "7959-02.htm"
-   elif npcId == 7957 and int(st.get("cond"))==1 :
+   elif npcId == 7957 :
+     if int(st.get("cond"))==1 :
         htmltext = "7957-01.htm"
-   elif npcId == 7957 and int(st.get("cond"))==2 and st.getQuestItemsCount(KEY_1)==0 and st.getQuestItemsCount(KEY_2)==0 and st.getQuestItemsCount(BEER_ID)==0 :
+     elif int(st.get("cond"))==2 and st.getQuestItemsCount(KEY_1)==0 and st.getQuestItemsCount(KEY_2)==0 and st.getQuestItemsCount(BEER_ID)==0 :
         st.set("cond","3")
         htmltext = "7957-04.htm"
-   elif npcId == 7957 and int(st.get("cond"))==3 :
+     elif int(st.get("cond"))==3 :
         htmltext = "7957-05.htm"
-   elif npcId == 7957 and int(st.get("cond"))==2 :
+     elif int(st.get("cond"))==2 :
         htmltext = "7957-03.htm"
    elif npcId == 7960 and int(st.get("cond"))>1 :
         htmltext = "7960-01.htm"
@@ -78,7 +79,7 @@ class Quest (JQuest) :
         htmltext = "7060-01.htm"
    return htmltext
 
-QUEST       = Quest(364,"364_AskWhatYouNeedToDo","Ask What You Need to Do")
+QUEST       = Quest(364,"364_JovialAccordion","Jovial Accordion")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
@@ -88,16 +89,12 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7959)
 
-STARTING.addTalkId(7959)
-
-STARTED.addTalkId(7959)
-STARTED.addTalkId(7957)
-STARTED.addTalkId(7060)
-
-STARTED.addTalkId(7961)
-STARTED.addTalkId(7960)
+for npcId in [7959,7957,7060,7961,7960]:
+ STARTED.addTalkId(npcId)
 
 
 STARTED.addQuestDrop(7959,KEY_1,1)
 STARTED.addQuestDrop(7959,KEY_2,1)
 STARTED.addQuestDrop(7960,BEER_ID,1)
+
+print "importing quests: 364: Jovial Accordion"
