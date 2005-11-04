@@ -98,6 +98,7 @@ __all__ = [
 '333_BlackLionHunt',
 '350_EnhanceYourWeapon',
 '362_BardsMandolin',
+'363_SorrowfulSoundofFlute',
 '364_JovialAccordion',
 '376_GiantsExploration1',
 '377_GiantsExploration2',
