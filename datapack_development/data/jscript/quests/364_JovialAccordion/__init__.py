@@ -1,11 +1,11 @@
 # Maked by Mr. Have fun! Version 0.2
 # fixed by Elektra and Rolarga Version 0.3
+# fixed by Mr
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-#KEY_1 = 4100
 KEY_1 = 4323
 KEY_2 = 4324
 BEER_ID = 4321
@@ -79,7 +79,7 @@ class Quest (JQuest) :
         htmltext = "7060-01.htm"
    return htmltext
 
-QUEST       = Quest(364,"364_JovialAccordion","Jovial Accordion")
+QUEST       = Quest(364,"364_JovialAccordion","Ask What You Need to Do")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
@@ -90,7 +90,7 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7959)
 
 for npcId in [7959,7957,7060,7961,7960]:
- STARTED.addTalkId(npcId)
+  STARTED.addTalkId(npcId)
 
 
 STARTED.addQuestDrop(7959,KEY_1,1)
