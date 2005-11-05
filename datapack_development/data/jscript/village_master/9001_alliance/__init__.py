@@ -15,16 +15,23 @@ NPC=[7026,7031,7037,7066,7070,7109,7115,7120,7154,7174,7175,7176,7187,7191,7195,
 class Quest (JQuest) :
 
  def onEvent (self,event,st):
+   ClanLeader = st.player.isClanLeader();
+   Clan = st.player.getClanId();
    htmltext = event
    if event == "9001-01.htm": htmltext = "9001-01.htm"
+   elif (Clan == 0):
+	st.exitQuest(1);
+	htmltext = "<html><body>You must be in Clan.</body></html";
    elif event == "9001-02.htm": htmltext = "9001-02.htm"
-   #st.exitQuest(1) 
+   return htmltext
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onTalk (Self,npcId,st):
+   ClanLeader = st.player.isClanLeader();
+   Clan = st.player.getClan();
    if npcId in NPC:
-     #st.exitQuest(1)
+     st.set("cond","0")
      st.setState(STARTED)
      return "9001-01.htm"
 
