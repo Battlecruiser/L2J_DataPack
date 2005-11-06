@@ -11,7 +11,7 @@ RING_OF_TESTIMONY2_ID = 3240
 OLD_ACCOUNT_BOOK_ID = 3241
 BLESSED_SEED_ID = 3242
 RECIPE_OF_EMILLY_ID = 3243
-RYLITH_ELVEN_WAFER_ID = 3244
+LILITH_ELVEN_WAFER_ID = 3244
 MAPHR_TABLET_FRAGMENT_ID = 3245
 COLLECTION_LICENSE_ID = 3246
 LOCKIRINS_NOTICE1_ID = 3247
@@ -68,7 +68,7 @@ class Quest (JQuest) :
             st.takeItems(OLD_ACCOUNT_BOOK_ID,1)
             st.takeItems(BLESSED_SEED_ID,1)
             st.takeItems(RECIPE_OF_EMILLY_ID,1)
-            st.takeItems(RYLITH_ELVEN_WAFER_ID,1)
+            st.takeItems(LILITH_ELVEN_WAFER_ID,1)
             st.giveItems(PARMANS_INSTRUCTIONS_ID,1)
           else:
             htmltext = "7104-08.htm"
@@ -76,7 +76,7 @@ class Quest (JQuest) :
             st.takeItems(OLD_ACCOUNT_BOOK_ID,1)
             st.takeItems(BLESSED_SEED_ID,1)
             st.takeItems(RECIPE_OF_EMILLY_ID,1)
-            st.takeItems(RYLITH_ELVEN_WAFER_ID,1)
+            st.takeItems(LILITH_ELVEN_WAFER_ID,1)
             st.giveItems(RING_OF_TESTIMONY2_ID,1)
             st.giveItems(PARMANS_LETTER_ID,1)
     elif event == "7531_1" and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
@@ -116,7 +116,7 @@ class Quest (JQuest) :
           htmltext = "7368-02.htm"
     elif event == "7368_2" :
           htmltext = "7368-03.htm"
-          st.giveItems(RYLITH_ELVEN_WAFER_ID,1)
+          st.giveItems(LILITH_ELVEN_WAFER_ID,1)
           st.takeItems(CRYSTAL_BROOCH_ID,1)
     elif event == "7466_1" :
           htmltext = "7466-02.htm"
@@ -161,23 +161,19 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 7104 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-        if int(st.get("cond")) < 15 :
-          if st.getPlayer().getRace().ordinal() != 4 :
-            htmltext = "7104-01.htm"
-          else:
-            if st.getPlayer().getLevel() < 37 :
-              htmltext = "7104-02.htm"
-              st.exitQuest(1)
-            else:
-              htmltext = "7104-03.htm"
-              st.exitQuest(1)
-        else:
-          htmltext = "7104-03.htm"
+        if st.getPlayer().getRace().ordinal() != 4 :
+          htmltext = "7104-01.htm"
           st.exitQuest(1)
+        else:
+          if st.getPlayer().getLevel() < 37 :
+            htmltext = "7104-02.htm"
+            st.exitQuest(1)
+          else:
+            htmltext = "7104-03.htm"
    elif npcId == 7104 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7104 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 :
-        if st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) and st.getQuestItemsCount(BLESSED_SEED_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) and st.getQuestItemsCount(RYLITH_ELVEN_WAFER_ID) :
+        if st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) and st.getQuestItemsCount(BLESSED_SEED_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) :
           htmltext = "7104-06.htm"
         else:
           htmltext = "7104-05.htm"
@@ -320,17 +316,17 @@ class Quest (JQuest) :
         htmltext = "7597-03.htm"
    elif npcId == 7597 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
         htmltext = "7597-04.htm"
-   elif npcId == 7005 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 and st.getQuestItemsCount(RYLITH_ELVEN_WAFER_ID) == 0 and st.getQuestItemsCount(CRYSTAL_BROOCH_ID) == 0 :
+   elif npcId == 7005 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) == 0 and st.getQuestItemsCount(CRYSTAL_BROOCH_ID) == 0 :
         htmltext = "7005-01.htm"
-   elif npcId == 7005 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RYLITH_ELVEN_WAFER_ID)==0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(CRYSTAL_BROOCH_ID) :
+   elif npcId == 7005 and int(st.get("cond"))>=1 and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID)==0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(CRYSTAL_BROOCH_ID) :
         htmltext = "7005-05.htm"
-   elif npcId == 7005 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(RYLITH_ELVEN_WAFER_ID) :
+   elif npcId == 7005 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) :
         htmltext = "7005-06.htm"
    elif npcId == 7005 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
         htmltext = "7005-07.htm"
-   elif npcId == 7368 and int(st.get("cond"))>=1 and st.getQuestItemsCount(CRYSTAL_BROOCH_ID) and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(RYLITH_ELVEN_WAFER_ID)==0 :
+   elif npcId == 7368 and int(st.get("cond"))>=1 and st.getQuestItemsCount(CRYSTAL_BROOCH_ID) and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID)==0 :
         htmltext = "7368-01.htm"
-   elif npcId == 7368 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(RYLITH_ELVEN_WAFER_ID) and st.getQuestItemsCount(CRYSTAL_BROOCH_ID)==0 :
+   elif npcId == 7368 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) and st.getQuestItemsCount(CRYSTAL_BROOCH_ID)==0 :
         htmltext = "7368-04.htm"
    elif npcId == 7368 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
         htmltext = "7368-05.htm"
@@ -499,7 +495,7 @@ STARTED.addQuestDrop(7104,RING_OF_TESTIMONY1_ID,1)
 STARTED.addQuestDrop(7531,OLD_ACCOUNT_BOOK_ID,1)
 STARTED.addQuestDrop(7597,BLESSED_SEED_ID,1)
 STARTED.addQuestDrop(7620,RECIPE_OF_EMILLY_ID,1)
-STARTED.addQuestDrop(7368,RYLITH_ELVEN_WAFER_ID,1)
+STARTED.addQuestDrop(7368,LILITH_ELVEN_WAFER_ID,1)
 STARTED.addQuestDrop(7104,PARMANS_INSTRUCTIONS_ID,1)
 STARTED.addQuestDrop(7104,RING_OF_TESTIMONY2_ID,1)
 STARTED.addQuestDrop(7622,MAPHR_TABLET_FRAGMENT_ID,1)
