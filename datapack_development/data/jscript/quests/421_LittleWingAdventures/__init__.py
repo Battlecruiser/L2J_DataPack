@@ -53,8 +53,6 @@ FAIRY_TREES = [ [5185,1,128091,90400,-1998,ftm_11,ftm_12],
 #Mobs
 GUARDIAN = 5189
 
-
-print "importing quests: "+str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -69,14 +67,14 @@ def get_control_item(st) :
   return item  
 
 def get_distance(st) :
-    is_near = False
+    is_far = False
     if abs(st.getPlayer().getPet().getX() - st.getPlayer().getX()) > MAX_DISTANCE :
-        is_near = True
+        is_far = True
     if abs(st.getPlayer().getPet().getY() - st.getPlayer().getY()) > MAX_DISTANCE :
-        is_near = True
+        is_far = True
     if abs(st.getPlayer().getPet().getZ() - st.getPlayer().getZ()) > MAX_DISTANCE :
-        is_near = True
-    return is_near
+        is_far = True
+    return is_far
 
 class Quest (JQuest) :
 
@@ -189,3 +187,4 @@ STARTING.addQuestDrop(SG_CRONOS,FT_LEAF,1)
 for i in range(4) :
   STARTING.addTalkId(FAIRY_TREES[i][0])
 
+print "importing quests: "+str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

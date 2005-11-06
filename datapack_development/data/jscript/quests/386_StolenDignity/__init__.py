@@ -148,7 +148,8 @@ class Quest (JQuest) :
       if st.getPlayer().getLevel() < 58 :
          st.exitQuest(1)
          htmltext = error_1
-      htmltext = start
+      else :
+         htmltext = start
    elif id == STARTED :
       if st.getQuestItemsCount(SI_ORE) >= REQUIRED_ORE :
          htmltext = bingo
