@@ -174,9 +174,9 @@ class Quest (JQuest) :
   if int(st.get("step"))==step and count<maxcount:
    st.giveItems(item,1)
    if count == maxcount-1:
-    st.playSound("ItemSound.quest_middle")
+     st.playSound("ItemSound.quest_middle")
    else:
-	st.playSound("ItemSound.quest_itemget")
+     st.playSound("ItemSound.quest_itemget")
   return
 
 QUEST       = Quest(222,"222_TestOfDuelist","Test Of Duelist")
