@@ -244,18 +244,15 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 7461 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-        if int(st.get("cond"))<15 :
-          if (st.getPlayer().getClassId().getId() == 0x0b or st.getPlayer().getClassId().getId() == 0x1a or st.getPlayer().getClassId().getId() == 0x27) == 0 :
-            htmltext = "7461-01.htm"
-          elif (st.getPlayer().getClassId().getId() == 0x0b or st.getPlayer().getClassId().getId() == 0x1a or st.getPlayer().getClassId().getId() == 0x27) and st.getPlayer().getLevel()<35 :
-            htmltext = "7461-02.htm"
-            st.exitQuest(1)
-          else:
-            htmltext = "7461-03.htm"
-            st.exitQuest(1)
-        else:
-          htmltext = "7461-03.htm"
-          st.exitQuest(1)
+     if st.getPlayer().getClassId().getId() == 0x0b or st.getPlayer().getClassId().getId() == 0x1a or st.getPlayer().getClassId().getId() == 0x27 :
+       if st.getPlayer().getLevel() >= 35 :
+         htmltext = "7461-03.htm"
+       else:
+         htmltext = "7461-02.htm"
+         st.exitQuest(1)
+     else:
+       htmltext = "7461-01.htm"
+       st.exitQuest(1)
    elif npcId == 7461 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7461 and int(st.get("cond"))==1 and st.getQuestItemsCount(MIRIENS_SIGIL1_ID)==1 and st.getQuestItemsCount(SYMBOL_OF_SYLVAIN_ID)==0 :
@@ -475,63 +472,63 @@ class Quest (JQuest) :
       if st.getRandom(100) < 50 :
         st.giveItems(BROWN_SCROLL_SCRAP_ID,1)
         if st.getQuestItemsCount(BROWN_SCROLL_SCRAP_ID) < 5 :
-	  st.playSound("ItemSound.quest_itemget")
+          st.playSound("ItemSound.quest_itemget")
         else:
-	  st.playSound("ItemSound.quest_middle")
+          st.playSound("ItemSound.quest_middle")
    elif npcId == 68 :
     if int(st.get("cond")) and st.getQuestItemsCount(MIRIENS_SIGIL2_ID) and st.getQuestItemsCount(GMAGISTERS_SIGIL_ID) and st.getQuestItemsCount(JUREKS_LIST_ID) and st.getQuestItemsCount(MEYEDESTROYERS_SKIN_ID)<5 :
       if st.getRandom(100) < 50 :
         st.giveItems(MEYEDESTROYERS_SKIN_ID,1)
         if st.getQuestItemsCount(MEYEDESTROYERS_SKIN_ID) < 5 :
-	  st.playSound("ItemSound.quest_itemget")
+          st.playSound("ItemSound.quest_itemget")
         else:
-	  st.playSound("ItemSound.quest_middle")
+          st.playSound("ItemSound.quest_middle")
    elif npcId == 269 :
     if int(st.get("cond")) and st.getQuestItemsCount(MIRIENS_SIGIL2_ID) and st.getQuestItemsCount(GMAGISTERS_SIGIL_ID) and st.getQuestItemsCount(JUREKS_LIST_ID) and st.getQuestItemsCount(SHAMANS_NECKLACE_ID)<5 :
       if st.getRandom(100) < 50 :
         st.giveItems(SHAMANS_NECKLACE_ID,1)
         if st.getQuestItemsCount(SHAMANS_NECKLACE_ID) < 5 :
-	  st.playSound("ItemSound.quest_itemget")
+          st.playSound("ItemSound.quest_itemget")
         else:
-	  st.playSound("ItemSound.quest_middle")
+          st.playSound("ItemSound.quest_middle")
    elif npcId == 235 :
     if int(st.get("cond")) and st.getQuestItemsCount(MIRIENS_SIGIL2_ID) and st.getQuestItemsCount(GMAGISTERS_SIGIL_ID) and st.getQuestItemsCount(JUREKS_LIST_ID) and st.getQuestItemsCount(SHACKLES_SCALP_ID)<2 :
       st.giveItems(SHACKLES_SCALP_ID,1)
       if st.getQuestItemsCount(SHACKLES_SCALP_ID) < 2 :
-	st.playSound("ItemSound.quest_itemget")
+        st.playSound("ItemSound.quest_itemget")
       else:
-	st.playSound("ItemSound.quest_middle")
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 554 :
     if int(st.get("cond")) and st.getQuestItemsCount(MIRIENS_SIGIL3_ID) and st.getQuestItemsCount(CRONOS_SIGIL_ID) and st.getQuestItemsCount(TRIFFS_RING_ID) and st.getQuestItemsCount(SCRIPTURE_CHAPTER_3_ID) == 0 :
       if st.getRandom(100) < 30 :
         st.giveItems(SCRIPTURE_CHAPTER_3_ID,1)
-	st.playSound("ItemSound.quest_middle")
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 201 :
     if int(st.get("cond")) and st.getQuestItemsCount(TRIFFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(CASIANS_LIST_ID) and st.getQuestItemsCount(GHOULS_SKIN_ID)<10 :
       st.giveItems(GHOULS_SKIN_ID,1)
       if st.getQuestItemsCount(GHOULS_SKIN_ID) < 10 :
-	st.playSound("ItemSound.quest_itemget")
+        st.playSound("ItemSound.quest_itemget")
       else:
-	st.playSound("ItemSound.quest_middle")
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 158 :
     if int(st.get("cond")) and st.getQuestItemsCount(TRIFFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(CASIANS_LIST_ID) and st.getQuestItemsCount(MEDUSAS_BLOOD_ID)<12 :
       st.giveItems(MEDUSAS_BLOOD_ID,1)
       if st.getQuestItemsCount(MEDUSAS_BLOOD_ID) < 12 :
-	st.playSound("ItemSound.quest_itemget")
+        st.playSound("ItemSound.quest_itemget")
       else:
         st.playSound("ItemSound.quest_middle")
    elif npcId == 552 :
     if int(st.get("cond")) and st.getQuestItemsCount(TRIFFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(CASIANS_LIST_ID) and st.getQuestItemsCount(FETTEREDSOULS_ICHOR_ID)<5 :
       st.giveItems(FETTEREDSOULS_ICHOR_ID,1)
       if st.getQuestItemsCount(FETTEREDSOULS_ICHOR_ID) < 5 :
-	st.playSound("ItemSound.quest_itemget")
+        st.playSound("ItemSound.quest_itemget")
       else:
         st.playSound("ItemSound.quest_middle")
    elif npcId == 567 :
     if int(st.get("cond")) and st.getQuestItemsCount(TRIFFS_RING_ID) and st.getQuestItemsCount(POITANS_NOTES_ID) and st.getQuestItemsCount(CASIANS_LIST_ID) and st.getQuestItemsCount(ENCHT_GARGOYLES_NAIL_ID)<5 :
       st.giveItems(ENCHT_GARGOYLES_NAIL_ID,1)
       if st.getQuestItemsCount(ENCHT_GARGOYLES_NAIL_ID) < 5 :
-	st.playSound("ItemSound.quest_itemget")
+        st.playSound("ItemSound.quest_itemget")
       else:
         st.playSound("ItemSound.quest_middle")
    return
