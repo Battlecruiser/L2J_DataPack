@@ -13,6 +13,7 @@ mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/castle_door.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/castle_doorupgrade.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/castle_guards.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/castle_guards_skills.sql
+mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/castle_siege_guards.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/char_templates.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/character_friends.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/character_hennas.sql
