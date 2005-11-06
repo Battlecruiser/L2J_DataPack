@@ -38,7 +38,6 @@ class Quest (JQuest) :
         if int(st.get("cond"))<15 :
           if st.getPlayer().getLevel() >= 8 :
             htmltext = "7150-03.htm"
-            st.exitQuest(1)
           else:
             htmltext = "7150-02.htm"
             st.exitQuest(1)
@@ -53,6 +52,7 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_finish")
           st.giveItems(ADENA_ID,2000)
           htmltext = "7150-07.htm"
+          st.exitQuest(1)
    return htmltext
 
  def onKill (self,npcId,st):

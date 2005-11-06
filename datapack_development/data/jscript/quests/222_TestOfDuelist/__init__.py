@@ -29,6 +29,25 @@ GRANDIS_SKIN_ID = 2781
 TIMAK_ORCS_BELT_ID = 2782
 RAKINS_MACE_ID = 2783
 
+DROPLIST={
+85:(1,10,PUNCHERS_SHARD_ID),
+90:(1,10,NOBLE_ANTS_FEELER_ID),
+234:(1,10,DRONES_CHITIN_ID),
+202:(1,10,DEADSEEKER_FANG_ID),
+270:(1,10,OVERLORD_NECKLACE_ID),
+552:(1,10,CRIMSONBINDS_CHAIN_ID),
+582:(1,10,CHIEFS_AMULET_ID),
+564:(1,10,TEMPERED_EYE_MEAT_ID),
+601:(1,10,TAMRIN_ORCS_RING_ID),
+602:(1,10,TAMRIN_ORCS_ARROW_ID),
+604:(2,3,RAKINS_MACE_ID),
+214:(2,3,EXCUROS_SKIN_ID),
+217:(2,3,KRATORS_SHARD_ID),
+588:(2,3,TIMAK_ORCS_BELT_ID),
+554:(2,3,GRANDIS_SKIN_ID)
+}
+
+
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -116,7 +135,7 @@ class Quest (JQuest) :
         else:
           htmltext = "7623-02.htm"
           st.exitQuest(1)
-   elif npcId == 7623 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 7623 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest has already been completed.</body></html>"
    elif npcId == 7623 and int(st.get("step"))==1 :
       if st.getQuestItemsCount(ORDER_GLUDIO_ID)>0 and st.getQuestItemsCount(ORDER_DION_ID)>0 and st.getQuestItemsCount(ORDER_GIRAN_ID)>0 and st.getQuestItemsCount(ORDER_OREN_ID)>0 and st.getQuestItemsCount(ORDER_ADEN_ID)>0 :
@@ -150,26 +169,14 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npcId,st):
-  i={
-85:(1,10,PUNCHERS_SHARD_ID),
-90:(1,10,NOBLE_ANTS_FEELER_ID),
-234:(1,10,DRONES_CHITIN_ID),
-202:(1,10,DEADSEEKER_FANG_ID),
-270:(1,10,OVERLORD_NECKLACE_ID),
-552:(1,10,CRIMSONBINDS_CHAIN_ID),
-582:(1,10,CHIEFS_AMULET_ID),
-564:(1,10,TEMPERED_EYE_MEAT_ID),
-601:(1,10,TAMRIN_ORCS_RING_ID),
-602:(1,10,TAMRIN_ORCS_ARROW_ID),
-604:(2,3,RAKINS_MACE_ID),
-214:(2,3,EXCUROS_SKIN_ID),
-217:(2,3,KRATORS_SHARD_ID),
-588:(2,3,TIMAK_ORCS_BELT_ID),
-554:(2,3,GRANDIS_SKIN_ID)
-}
-  if int(st.get("step"))==i[npcId][0] and st.getQuestItemsCount(i[npcId][2])<i[npcId][1]:
-   st.giveItems(i[npcId][2],1)
-   st.playSound("ItemSound.quest_middle")
+  step,maxcount,item=DROPLIST[npcId]
+  count=st.getQuestItemsCount(item)
+  if int(st.get("step"))==step and count<maxcount:
+   st.giveItems(item,1)
+   if count == maxcount-1:
+    st.playSound("ItemSound.quest_middle")
+   else:
+	st.playSound("ItemSound.quest_itemget")
   return
 
 QUEST       = Quest(222,"222_TestOfDuelist","Test Of Duelist")
