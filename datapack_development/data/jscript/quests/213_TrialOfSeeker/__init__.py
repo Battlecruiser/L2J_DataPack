@@ -40,86 +40,86 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-        htmltext = "7106-05.htm"
-        st.set("cond","1")
-        st.setState(STARTED)
-        st.playSound("ItemSound.quest_accept")
-        st.giveItems(DUFNERS_LETTER_ID,1)
+      htmltext = "7106-05.htm"
+      st.set("cond","1")
+      st.setState(STARTED)
+      st.playSound("ItemSound.quest_accept")
+      st.giveItems(DUFNERS_LETTER_ID,1)
     elif event == "7106_1" :
-          htmltext = "7106-04.htm"
+      htmltext = "7106-04.htm"
     elif event == "7064_1" :
-          htmltext = "7064-02.htm"
+      htmltext = "7064-02.htm"
     elif event == "7064_2" :
-          htmltext = "7064-03.htm"
-          st.giveItems(TERYS_ORDER1_ID,1)
-          st.takeItems(DUFNERS_LETTER_ID,1)
+      htmltext = "7064-03.htm"
+      st.giveItems(TERYS_ORDER1_ID,1)
+      st.takeItems(DUFNERS_LETTER_ID,1)
     elif event == "7064_3" :
-          htmltext = "7064-06.htm"
-          st.takeItems(MYSTERIOUS_RUNESTONE_ID,1)
-          st.giveItems(TERYS_ORDER2_ID,1)
-          st.takeItems(TERYS_ORDER1_ID,1)
+      htmltext = "7064-06.htm"
+      st.takeItems(MYSTERIOUS_RUNESTONE_ID,1)
+      st.giveItems(TERYS_ORDER2_ID,1)
+      st.takeItems(TERYS_ORDER1_ID,1)
     elif event == "7064_4" :
-          htmltext = "7064-10.htm"
-          st.takeItems(OL_MAHUM_RUNESTONE_ID,1)
-          st.takeItems(TUREK_RUNESTONE_ID,1)
-          st.takeItems(ANT_RUNESTONE_ID,1)
-          st.takeItems(TURAK_BUGBEAR_RUNESTONE_ID,1)
-          st.takeItems(TERYS_ORDER2_ID,1)
-          st.giveItems(TERYS_LETTER_ID,1)
-          st.giveItems(TERYS_BOX_ID,1)
+      htmltext = "7064-10.htm"
+      st.takeItems(OL_MAHUM_RUNESTONE_ID,1)
+      st.takeItems(TUREK_RUNESTONE_ID,1)
+      st.takeItems(ANT_RUNESTONE_ID,1)
+      st.takeItems(TURAK_BUGBEAR_RUNESTONE_ID,1)
+      st.takeItems(TERYS_ORDER2_ID,1)
+      st.giveItems(TERYS_LETTER_ID,1)
+      st.giveItems(TERYS_BOX_ID,1)
     elif event == "7064_5" :
-          htmltext = "7064-16.htm"
+      htmltext = "7064-16.htm"
     elif event == "7064_6" :
-          if st.getPlayer().getLevel()<36 :
-            htmltext = "7064-17.htm"
-            st.giveItems(TERYS_ORDER3_ID,1)
-            st.takeItems(ANALYSIS_RESULT_ID,1)
-          else:
-            htmltext = "7064-18.htm"
-            st.giveItems(LIST_OF_HOST_ID,1)
-            st.takeItems(ANALYSIS_RESULT_ID,1)
+      if st.getPlayer().getLevel()<36 :
+        htmltext = "7064-17.htm"
+        st.giveItems(TERYS_ORDER3_ID,1)
+        st.takeItems(ANALYSIS_RESULT_ID,1)
+      else:
+        htmltext = "7064-18.htm"
+        st.giveItems(LIST_OF_HOST_ID,1)
+        st.takeItems(ANALYSIS_RESULT_ID,1)
     elif event == "7684_1" :
-          htmltext = "7684-02.htm"
+      htmltext = "7684-02.htm"
     elif event == "7684_2" :
-          htmltext = "7684-03.htm"
+      htmltext = "7684-03.htm"
     elif event == "7684_3" :
-          htmltext = "7684-04.htm"
+      htmltext = "7684-04.htm"
     elif event == "7684_4" :
-          htmltext = "7684-05.htm"
-          st.giveItems(VIKTORS_LETTER_ID,1)
-          st.takeItems(TERYS_LETTER_ID,1)
+      htmltext = "7684-05.htm"
+      st.giveItems(VIKTORS_LETTER_ID,1)
+      st.takeItems(TERYS_LETTER_ID,1)
     elif event == "7684_5" :
-          htmltext = "7684-06.htm"
+      htmltext = "7684-06.htm"
     elif event == "7684_6" :
-          htmltext = "7684-07.htm"
+      htmltext = "7684-07.htm"
     elif event == "7684_7" :
-          htmltext = "7684-08.htm"
+      htmltext = "7684-08.htm"
     elif event == "7684_8" :
-          htmltext = "7684-09.htm"
+      htmltext = "7684-09.htm"
     elif event == "7684_9" :
-          htmltext = "7684-10.htm"
+      htmltext = "7684-10.htm"
     elif event == "7684_10" :
-          htmltext = "7684-11.htm"
-          st.giveItems(VIKTORS_REQUEST_ID,1)
-          st.takeItems(TERYS_LETTER_ID,1)
-          st.takeItems(TERYS_BOX_ID,1)
-          st.takeItems(HAWKEYES_LETTER_ID,1)
-          st.takeItems(VIKTORS_LETTER_ID,st.getQuestItemsCount(VIKTORS_LETTER_ID))
+      htmltext = "7684-11.htm"
+      st.giveItems(VIKTORS_REQUEST_ID,1)
+      st.takeItems(TERYS_LETTER_ID,1)
+      st.takeItems(TERYS_BOX_ID,1)
+      st.takeItems(HAWKEYES_LETTER_ID,1)
+      st.takeItems(VIKTORS_LETTER_ID,st.getQuestItemsCount(VIKTORS_LETTER_ID))
     elif event == "7684_11" :
-          htmltext = "7684-15.htm"
-          st.takeItems(VIKTORS_REQUEST_ID,1)
-          st.takeItems(MEDUSAS_SCALES_ID,st.getQuestItemsCount(MEDUSAS_SCALES_ID))
-          st.giveItems(SILENS_RUNESTONE_ID,1)
-          st.giveItems(ANALYSIS_REQUEST_ID,1)
+      htmltext = "7684-15.htm"
+      st.takeItems(VIKTORS_REQUEST_ID,1)
+      st.takeItems(MEDUSAS_SCALES_ID,st.getQuestItemsCount(MEDUSAS_SCALES_ID))
+      st.giveItems(SILENS_RUNESTONE_ID,1)
+      st.giveItems(ANALYSIS_REQUEST_ID,1)
     elif event == "7715_1" :
-          htmltext = "7715-02.htm"
-          st.takeItems(SILENS_RUNESTONE_ID,1)
-          st.takeItems(ANALYSIS_REQUEST_ID,1)
-          st.giveItems(MARINAS_LETTER_ID,1)
+      htmltext = "7715-02.htm"
+      st.takeItems(SILENS_RUNESTONE_ID,1)
+      st.takeItems(ANALYSIS_REQUEST_ID,1)
+      st.giveItems(MARINAS_LETTER_ID,1)
     elif event == "7715_2" :
-          htmltext = "7715-05.htm"
-          st.takeItems(EXPERIMENT_TOOLS_ID,1)
-          st.giveItems(ANALYSIS_RESULT_ID,1)
+      htmltext = "7715-05.htm"
+      st.takeItems(EXPERIMENT_TOOLS_ID,1)
+      st.giveItems(ANALYSIS_RESULT_ID,1)
     return htmltext
 
 
@@ -132,20 +132,18 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 7106 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-        if int(st.get("cond"))<15 :
-          if (st.getPlayer().getClassId().getId() == 0x07 or st.getPlayer().getClassId().getId() == 0x16 or st.getPlayer().getClassId().getId() == 0x23) == 0 :
-            htmltext = "7106-00.htm"
-          elif (st.getPlayer().getClassId().getId() == 0x07 or st.getPlayer().getClassId().getId() == 0x16 or st.getPlayer().getClassId().getId() == 0x23) and st.getPlayer().getLevel()<35 :
-            htmltext = "7106-02.htm"
-          else:
-            htmltext = "7106-03.htm"
-            st.exitQuest(1)
-        else:
-          htmltext = "7106-03.htm"
-          st.exitQuest(1)
+     if st.getPlayer().getClassId().getId() == 0x07 or st.getPlayer().getClassId().getId() == 0x16 or st.getPlayer().getClassId().getId() == 0x23 :
+       if st.getPlayer().getLevel() >= 35 :
+         htmltext = "7106-01.htm"
+       else:
+         htmltext = "7106-02.htm"
+         st.exitQuest(1)
+     else:
+       htmltext = "7106-03.htm"
+       st.exitQuest(1)
    elif npcId == 7106 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7106 and int(st.get("cond"))==1 :
+   elif npcId == 7106 and int(st.get("cond")) == 1 and int(st.get("onlyone")) == 0:
           if st.getQuestItemsCount(DUFNERS_LETTER_ID) == 1 and st.getQuestItemsCount(TERYS_REPORT_ID) == 0 :
             htmltext = "7106-06.htm"
           elif st.getQuestItemsCount(DUFNERS_LETTER_ID) == 0 and st.getQuestItemsCount(TERYS_REPORT_ID) == 0 :
