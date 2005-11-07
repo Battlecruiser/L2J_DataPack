@@ -48,45 +48,45 @@ class Quest (JQuest) :
       st.giveItems(LETTER_TO_ELF_ID,1)
       st.giveItems(LETTER_TO_DARKELF_ID,1)
     elif event == "7154_1" :
-          htmltext = "7154-02.htm"
+      htmltext = "7154-02.htm"
     elif event == "7154_2" :
-          htmltext = "7154-03.htm"
-          st.giveItems(ORDER_OF_OZZY_ID,1)
-          st.takeItems(LETTER_TO_ELF_ID,1)
-          st.set("cond","2")
+      htmltext = "7154-03.htm"
+      st.takeItems(LETTER_TO_ELF_ID,1)
+      st.giveItems(ORDER_OF_OZZY_ID,1)
+      st.set("cond","2")
     elif event == "7358_1" :
-          htmltext = "7358-02.htm"
-          st.giveItems(LETTER_OF_THIFIELL_ID,1)
-          st.takeItems(LETTER_TO_DARKELF_ID,1)
-          st.set("cond","5")
+      htmltext = "7358-02.htm"
+      st.takeItems(LETTER_TO_DARKELF_ID,1)
+      st.giveItems(LETTER_OF_THIFIELL_ID,1)
+      st.set("cond","5")
     elif event == "7657_1" :
-          if st.getPlayer().getLevel() >= 38 :
-            htmltext = "7657-03.htm"
-            st.giveItems(LETTER_TO_ORC_ID,1)
-            st.giveItems(LETTER_TO_DWARF_ID,1)
-            st.takeItems(LETTER_TO_SERESIN_ID,1)
-            st.set("cond","9")
-          else:
-            htmltext = "7657-02.htm"
+      if st.getPlayer().getLevel() >= 38 :
+        htmltext = "7657-03.htm"
+        st.takeItems(LETTER_TO_SERESIN_ID,1)
+        st.giveItems(LETTER_TO_ORC_ID,1)
+        st.giveItems(LETTER_TO_DWARF_ID,1)
+        st.set("cond","9")
+      else:
+        htmltext = "7657-02.htm"
     elif event == "7565_1" :
-          htmltext = "7565-02.htm"
-          st.giveItems(LETTER_TO_MANAKIA_ID,1)
-          st.takeItems(LETTER_TO_ORC_ID,1)
-          st.set("cond","10")
+      htmltext = "7565-02.htm"
+      st.takeItems(LETTER_TO_ORC_ID,1)
+      st.giveItems(LETTER_TO_MANAKIA_ID,1)
+      st.set("cond","10")
     elif event == "7515_1" :
-          htmltext = "7515-02.htm"
-          st.takeItems(LETTER_TO_MANAKIA_ID,1)
-          st.set("cond","11")
+      htmltext = "7515-02.htm"
+      st.takeItems(LETTER_TO_MANAKIA_ID,1)
+      st.set("cond","11")
     elif event == "7531_1" :
-          htmltext = "7531-02.htm"
-          st.giveItems(LETTER_TO_NICHOLA_ID,1)
-          st.takeItems(LETTER_TO_DWARF_ID,1)
-          st.set("cond","15")
+      htmltext = "7531-02.htm"
+      st.takeItems(LETTER_TO_DWARF_ID,1)
+      st.giveItems(LETTER_TO_NICHOLA_ID,1)
+      st.set("cond","15")
     elif event == "7621_1" :
-          htmltext = "7621-02.htm"
-          st.giveItems(ORDER_OF_NICHOLA_ID,1)
-          st.takeItems(LETTER_TO_NICHOLA_ID,1)
-          st.set("cond","16")
+      htmltext = "7621-02.htm"
+      st.takeItems(LETTER_TO_NICHOLA_ID,1)
+      st.giveItems(ORDER_OF_NICHOLA_ID,1)
+      st.set("cond","16")
     return htmltext
 
 
@@ -99,31 +99,28 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 7191 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-      if int(st.get("cond")) < 15 :
-        if st.getPlayer().getRace().ordinal() == 0 and st.getPlayer().getLevel() >= 37 :
-          htmltext = "7191-03.htm"
-        elif st.getPlayer().getRace().ordinal() == 0 :
-          htmltext = "7191-01.htm"
-          st.exitQuest(1)
-        else:
-          htmltext = "7191-02.htm"
-          st.exitQuest(1)
-      else:
-        htmltext = "7191-02.htm"
-        st.exitQuest(1)
-   elif npcId == 7191 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+     if st.getPlayer().getRace().ordinal() == 0 :
+       if st.getPlayer().getLevel() >= 37 :
+         htmltext = "7191-03.htm"
+       else:
+         htmltext = "7191-01.htm"
+         st.exitQuest(1)
+     else:
+       htmltext = "7191-02.htm"
+       st.exitQuest(1)
+   elif npcId == 7191 and int(st.get("cond"))==0 and int(st.get("onlyone")) == 1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7191 and int(st.get("cond"))==7 and st.getQuestItemsCount(SCROLL_OF_ELF_TRUST_ID) and st.getQuestItemsCount(SCROLL_OF_DARKELF_TRUST_ID) :
       htmltext = "7191-05.htm"
-      st.giveItems(LETTER_TO_SERESIN_ID,1)
       st.takeItems(SCROLL_OF_DARKELF_TRUST_ID,1)
       st.takeItems(SCROLL_OF_ELF_TRUST_ID,1)
+      st.giveItems(LETTER_TO_SERESIN_ID,1)
       st.set("cond","8")
    elif npcId == 7191 and int(st.get("cond"))==18 and st.getQuestItemsCount(SCROLL_OF_DWARF_TRUST_ID) and st.getQuestItemsCount(SCROLL_OF_ORC_TRUST_ID) :
       htmltext = "7191-06.htm"
-      st.giveItems(RECOMMENDATION_OF_HOLLIN_ID,1)
       st.takeItems(SCROLL_OF_DWARF_TRUST_ID,1)
       st.takeItems(SCROLL_OF_ORC_TRUST_ID,1)
+      st.giveItems(RECOMMENDATION_OF_HOLLIN_ID,1)
       st.set("cond","19")
    elif npcId == 7191 and int(st.get("cond"))==19 :
       htmltext = "7191-07.htm"
@@ -137,10 +134,10 @@ class Quest (JQuest) :
       htmltext = "7154-04.htm"
    elif npcId == 7154 and int(st.get("cond"))==3 and st.getQuestItemsCount(BREATH_OF_WINDS_ID) and st.getQuestItemsCount(SEED_OF_VERDURE_ID) :
       htmltext = "7154-05.htm"
-      st.giveItems(SCROLL_OF_ELF_TRUST_ID,1)
       st.takeItems(BREATH_OF_WINDS_ID,1)
       st.takeItems(SEED_OF_VERDURE_ID,1)
       st.takeItems(ORDER_OF_OZZY_ID,1)
+      st.giveItems(SCROLL_OF_ELF_TRUST_ID,1)
       st.set("cond","4")
    elif npcId == 7154 and int(st.get("cond"))==4 :
       htmltext = "7154-06.htm"
@@ -148,11 +145,11 @@ class Quest (JQuest) :
       htmltext = "7358-01.htm"
    elif npcId == 7358 and int(st.get("cond"))==6 and st.getQuestItemsCount(ORDER_OF_CLAYTON_ID) and ((st.getQuestItemsCount(STAKATO_ICHOR_ID)+st.getQuestItemsCount(HONEY_DEW_ID)+st.getQuestItemsCount(BASILISK_PLASMA_ID))==3) :
       htmltext = "7358-03.htm"
-      st.giveItems(SCROLL_OF_DARKELF_TRUST_ID,1)
       st.takeItems(ORDER_OF_CLAYTON_ID,1)
       st.takeItems(BASILISK_PLASMA_ID,1)
       st.takeItems(STAKATO_ICHOR_ID,1)
       st.takeItems(HONEY_DEW_ID,1)
+      st.giveItems(SCROLL_OF_DARKELF_TRUST_ID,1)
       st.set("cond","7")
    elif npcId == 7358 and int(st.get("cond"))==7 :
       htmltext = "7358-04.htm"
@@ -160,8 +157,8 @@ class Quest (JQuest) :
       htmltext = "7358-05.htm"
    elif npcId == 7464 and int(st.get("cond"))==5 and st.getQuestItemsCount(LETTER_OF_THIFIELL_ID) :
       htmltext = "7464-01.htm"
-      st.giveItems(ORDER_OF_CLAYTON_ID,1)
       st.takeItems(LETTER_OF_THIFIELL_ID,1)
+      st.giveItems(ORDER_OF_CLAYTON_ID,1)
       st.set("cond","6")
    elif npcId == 7464 and int(st.get("cond"))==6 and st.getQuestItemsCount(ORDER_OF_CLAYTON_ID) and ((st.getQuestItemsCount(STAKATO_ICHOR_ID)+st.getQuestItemsCount(HONEY_DEW_ID)+st.getQuestItemsCount(BASILISK_PLASMA_ID))<3) :
       htmltext = "7464-02.htm"
@@ -179,8 +176,8 @@ class Quest (JQuest) :
       htmltext = "7565-03.htm"
    elif npcId == 7565 and int(st.get("cond"))==13 :
       htmltext = "7565-04.htm"
-      st.giveItems(SCROLL_OF_ORC_TRUST_ID,1)
       st.takeItems(LETTER_OF_MANAKIA_ID,1)
+      st.giveItems(SCROLL_OF_ORC_TRUST_ID,1)
       st.set("cond","14")
    elif npcId == 7565 and int(st.get("cond"))==14 :
       htmltext = "7565-05.htm"
@@ -190,8 +187,8 @@ class Quest (JQuest) :
       htmltext = "7515-03.htm"
    elif npcId == 7515 and int(st.get("cond"))==12 and st.getQuestItemsCount(PARASITE_OF_LOTA_ID)==10 :
       htmltext = "7515-04.htm"
-      st.giveItems(LETTER_OF_MANAKIA_ID,1)
       st.takeItems(PARASITE_OF_LOTA_ID,st.getQuestItemsCount(PARASITE_OF_LOTA_ID))
+      st.giveItems(LETTER_OF_MANAKIA_ID,1)
       st.set("cond","13")
    elif npcId == 7515 and int(st.get("cond"))==13 :
       htmltext = "7515-05.htm"
@@ -216,7 +213,7 @@ class Quest (JQuest) :
       st.set("cond","17")
    elif npcId == 7621 and int(st.get("cond"))==17 :
       htmltext = "7621-05.htm"
-   elif npcId == 7031 and int(st.get("cond"))==19 and st.getQuestItemsCount(RECOMMENDATION_OF_HOLLIN_ID) :
+   elif npcId == 7031 and int(st.get("cond"))==19 and st.getQuestItemsCount(RECOMMENDATION_OF_HOLLIN_ID) and int(st.get("onlyone")) == 0:
       if st.getGameTicks() != int(st.get("id")) :
         st.set("id",str(st.getGameTicks()))
         st.addExpAndSp(32600,4000)
@@ -264,8 +261,8 @@ class Quest (JQuest) :
    elif npcId == 550 :
       if int(st.get("cond")) and int(st.get("cond")) == 6 and st.getQuestItemsCount(BLOOD_OF_GUARDIAN_BASILISK_ID) < 10 and st.getQuestItemsCount(ORDER_OF_CLAYTON_ID) and st.getQuestItemsCount(BASILISK_PLASMA_ID) == 0 :
         if st.getQuestItemsCount(BLOOD_OF_GUARDIAN_BASILISK_ID) == 9 :
-          st.giveItems(BASILISK_PLASMA_ID,1)
           st.takeItems(BLOOD_OF_GUARDIAN_BASILISK_ID,st.getQuestItemsCount(BLOOD_OF_GUARDIAN_BASILISK_ID))
+          st.giveItems(BASILISK_PLASMA_ID,1)
           st.playSound("Itemsound.quest_middle")
         else:
           st.giveItems(BLOOD_OF_GUARDIAN_BASILISK_ID,1)
@@ -273,8 +270,8 @@ class Quest (JQuest) :
    elif npcId == 157 :
       if int(st.get("cond")) and int(st.get("cond")) == 6 and st.getQuestItemsCount(STAKATOS_FLUIDS_ID) < 10 and st.getQuestItemsCount(ORDER_OF_CLAYTON_ID) and st.getQuestItemsCount(STAKATO_ICHOR_ID) == 0 :
         if st.getQuestItemsCount(STAKATOS_FLUIDS_ID) == 9 :
-          st.giveItems(STAKATO_ICHOR_ID,1)
           st.takeItems(STAKATOS_FLUIDS_ID,st.getQuestItemsCount(STAKATOS_FLUIDS_ID))
+          st.giveItems(STAKATO_ICHOR_ID,1)
           st.playSound("Itemsound.quest_middle")
         else:
           st.giveItems(STAKATOS_FLUIDS_ID,1)
@@ -282,8 +279,8 @@ class Quest (JQuest) :
    elif npcId == 230 :
       if int(st.get("cond")) and int(st.get("cond")) == 6 and st.getQuestItemsCount(STAKATOS_FLUIDS_ID) < 10 and st.getQuestItemsCount(ORDER_OF_CLAYTON_ID) and st.getQuestItemsCount(STAKATO_ICHOR_ID) == 0 :
         if st.getQuestItemsCount(STAKATOS_FLUIDS_ID) == 9 :
-          st.giveItems(STAKATO_ICHOR_ID,1)
           st.takeItems(STAKATOS_FLUIDS_ID,st.getQuestItemsCount(STAKATOS_FLUIDS_ID))
+          st.giveItems(STAKATO_ICHOR_ID,1)
           st.playSound("Itemsound.quest_middle")
         else:
           st.giveItems(STAKATOS_FLUIDS_ID,1)
@@ -291,8 +288,8 @@ class Quest (JQuest) :
    elif npcId == 232 :
       if int(st.get("cond")) and int(st.get("cond")) == 6 and st.getQuestItemsCount(STAKATOS_FLUIDS_ID) < 10 and st.getQuestItemsCount(ORDER_OF_CLAYTON_ID) and st.getQuestItemsCount(STAKATO_ICHOR_ID) == 0 :
         if st.getQuestItemsCount(STAKATOS_FLUIDS_ID) == 9 :
-          st.giveItems(STAKATO_ICHOR_ID,1)
           st.takeItems(STAKATOS_FLUIDS_ID,st.getQuestItemsCount(STAKATOS_FLUIDS_ID))
+          st.giveItems(STAKATO_ICHOR_ID,1)
           st.playSound("Itemsound.quest_middle")
         else:
           st.giveItems(STAKATOS_FLUIDS_ID,1)
@@ -300,8 +297,8 @@ class Quest (JQuest) :
    elif npcId == 234 :
       if int(st.get("cond")) and int(st.get("cond")) == 6 and st.getQuestItemsCount(STAKATOS_FLUIDS_ID) < 10 and st.getQuestItemsCount(ORDER_OF_CLAYTON_ID) and st.getQuestItemsCount(STAKATO_ICHOR_ID) == 0 :
         if st.getQuestItemsCount(STAKATOS_FLUIDS_ID) == 9 :
-          st.giveItems(STAKATO_ICHOR_ID,1)
           st.takeItems(STAKATOS_FLUIDS_ID,st.getQuestItemsCount(STAKATOS_FLUIDS_ID))
+          st.giveItems(STAKATO_ICHOR_ID,1)
           st.playSound("Itemsound.quest_middle")
         else:
           st.giveItems(STAKATOS_FLUIDS_ID,1)
@@ -309,8 +306,8 @@ class Quest (JQuest) :
    elif npcId == 82 :
       if int(st.get("cond")) and int(st.get("cond")) == 6 and st.getQuestItemsCount(GIANT_APHID_ID) < 10 and st.getQuestItemsCount(ORDER_OF_CLAYTON_ID) and st.getQuestItemsCount(HONEY_DEW_ID) == 0 :
         if st.getQuestItemsCount(GIANT_APHID_ID) == 9 :
-          st.giveItems(HONEY_DEW_ID,1)
           st.takeItems(GIANT_APHID_ID,st.getQuestItemsCount(GIANT_APHID_ID))
+          st.giveItems(HONEY_DEW_ID,1)
           st.playSound("Itemsound.quest_middle")
         else:
           st.giveItems(GIANT_APHID_ID,1)
@@ -318,8 +315,8 @@ class Quest (JQuest) :
    elif npcId == 86 :
       if int(st.get("cond")) and int(st.get("cond")) == 6 and st.getQuestItemsCount(GIANT_APHID_ID) < 10 and st.getQuestItemsCount(ORDER_OF_CLAYTON_ID) and st.getQuestItemsCount(HONEY_DEW_ID) == 0 :
         if st.getQuestItemsCount(GIANT_APHID_ID) == 9 :
-          st.giveItems(HONEY_DEW_ID,1)
           st.takeItems(GIANT_APHID_ID,st.getQuestItemsCount(GIANT_APHID_ID))
+          st.giveItems(HONEY_DEW_ID,1)
           st.playSound("Itemsound.quest_middle")
         else:
           st.giveItems(GIANT_APHID_ID,1)
@@ -327,8 +324,8 @@ class Quest (JQuest) :
    elif npcId == 87 :
       if int(st.get("cond")) and int(st.get("cond")) == 6 and st.getQuestItemsCount(GIANT_APHID_ID) < 10 and st.getQuestItemsCount(ORDER_OF_CLAYTON_ID) and st.getQuestItemsCount(HONEY_DEW_ID) == 0 :
         if st.getQuestItemsCount(GIANT_APHID_ID) == 9 :
-          st.giveItems(HONEY_DEW_ID,1)
           st.takeItems(GIANT_APHID_ID,st.getQuestItemsCount(GIANT_APHID_ID))
+          st.giveItems(HONEY_DEW_ID,1)
           st.playSound("Itemsound.quest_middle")
         else:
           st.giveItems(GIANT_APHID_ID,1)
@@ -336,8 +333,8 @@ class Quest (JQuest) :
    elif npcId == 84 :
       if int(st.get("cond")) and int(st.get("cond")) == 6 and st.getQuestItemsCount(GIANT_APHID_ID) < 10 and st.getQuestItemsCount(ORDER_OF_CLAYTON_ID) and st.getQuestItemsCount(HONEY_DEW_ID) == 0 :
         if st.getQuestItemsCount(GIANT_APHID_ID) == 9 :
-          st.giveItems(HONEY_DEW_ID,1)
           st.takeItems(GIANT_APHID_ID,st.getQuestItemsCount(GIANT_APHID_ID))
+          st.giveItems(HONEY_DEW_ID,1)
           st.playSound("Itemsound.quest_middle")
         else:
           st.giveItems(GIANT_APHID_ID,1)
@@ -345,8 +342,8 @@ class Quest (JQuest) :
    elif npcId == 88 :
       if int(st.get("cond")) and int(st.get("cond")) == 6 and st.getQuestItemsCount(GIANT_APHID_ID) < 10 and st.getQuestItemsCount(ORDER_OF_CLAYTON_ID) and st.getQuestItemsCount(HONEY_DEW_ID) == 0 :
         if st.getQuestItemsCount(GIANT_APHID_ID) == 9 :
-          st.giveItems(HONEY_DEW_ID,1)
           st.takeItems(GIANT_APHID_ID,st.getQuestItemsCount(GIANT_APHID_ID))
+          st.giveItems(HONEY_DEW_ID,1)
           st.playSound("Itemsound.quest_middle")
         else:
           st.giveItems(GIANT_APHID_ID,1)
