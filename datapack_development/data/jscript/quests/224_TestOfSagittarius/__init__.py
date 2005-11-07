@@ -126,17 +126,14 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("step","0")
    if npcId == 7702 and int(st.get("step"))==0 and int(st.get("onlyone"))==0 :
-      if int(st.get("cond")) < 15 :
         if (st.getPlayer().getClassId().getId() == 0x07 or st.getPlayer().getClassId().getId() == 0x16 or st.getPlayer().getClassId().getId() == 0x23) and st.getPlayer().getLevel() >= 39 :
           htmltext = "7702-03.htm"
         elif st.getPlayer().getClassId().getId() == 0x07 or st.getPlayer().getClassId().getId() == 0x16 or st.getPlayer().getClassId().getId() == 0x23 :
           htmltext = "7702-01.htm"
+          st.exitQuest(1)
         else:
           htmltext = "7702-02.htm"
           st.exitQuest(1)
-      else:
-        htmltext = "7702-02.htm"
-        st.exitQuest(1)
    elif npcId == 7702 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest has already been completed.</body></html>"
    elif npcId == 7702 and int(st.get("step"))==1 and st.getQuestItemsCount(BERNARDS_INTRODUCTION_ID) :
@@ -152,7 +149,6 @@ class Quest (JQuest) :
    elif npcId == 7626 and int(st.get("step"))==8 :
       htmltext = "7626-09.htm"
       st.giveItems(LETTER_OF_HAMIL3_ID,1)
-      st.takeItems(HUNTERS_RUNE2_ID,10)
       st.set("step","9")
    elif npcId == 7626 and int(st.get("step"))==9 and st.getQuestItemsCount(LETTER_OF_HAMIL3_ID) :
       htmltext = "7626-10.htm"
@@ -216,6 +212,7 @@ class Quest (JQuest) :
       giveMiddle(st,itemid,step)
       if npcId==269 or npcId == 270:
        st.giveItems(TALISMAN_OF_SNAKE_ID,1)
+       st.takeItems(HUNTERS_RUNE2_ID,10)
      else:
       giveNormal(st,itemid)
     elif dropcondition == 2 :

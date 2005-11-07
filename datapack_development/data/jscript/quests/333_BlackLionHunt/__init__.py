@@ -206,6 +206,11 @@ m_reward			= html+morgan+"Is there anything I can do for you...?<br><a action=\"
 
 
 #This Put all Mob Ids from dictionari in a list. So its possible to add new mobs, to one of this 4 Areas, without modification on the addKill Part.
+import sys
+from net.sf.l2j.gameserver.model.quest import State
+from net.sf.l2j.gameserver.model.quest import QuestState
+from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+
 MOBS=DROPLIST.keys()
 
 def giveRewards(st,item,count):
@@ -220,12 +225,6 @@ def giveRewards(st,item,count):
 	else:
 		st.giveItems(LIONS_CLAW,3)
 	return
-
-
-import sys
-from net.sf.l2j.gameserver.model.quest import State
-from net.sf.l2j.gameserver.model.quest import QuestState
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 
 class Quest (JQuest) :
@@ -331,6 +330,7 @@ class Quest (JQuest) :
 			if st.getQuestItemsCount(CARGO_BOX1) :
 				if st.getQuestItemsCount(ADENA_ID)>=OPEN_BOX_PRICE:
 					st.takeItems(CARGO_BOX1,1)
+					st.takeItems(ADENA_ID,650)
 					random = st.getRandom(162)
 					standart = "All right, let’s go ahead and open this box…  Opening a padlock like this one is a piece of cake…  Here we go!  There… that was too easy.  Now, let’s see what’s in the box.<br>"
 					statue = "What’s this…?  A fragment of a stone statue?  Hmm… it looks like a Statue of Shilen, the goddess…  Isn’t she the goddess of death?  For some reason, I don’t have a good feeling about this.  But, if this was not a fragment but the complete statue, it could have fetched a large amount of money…  There is someone who can put together a broken relic like this… He’s Blacksmith Rupio.  If you collect all the fragments of the statue and take them to him, he will put them together to restore it and make it complete.<br>" 
