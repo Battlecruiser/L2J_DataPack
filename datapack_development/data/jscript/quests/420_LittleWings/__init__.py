@@ -233,7 +233,7 @@ def check_eggs(st, npc) :
     return "check_eggs sux"
 
 def random_flute(st) :
-    luck = st.getRandom(2)
+    luck = st.getRandom(3)
     if   luck == 0 : flute = FLT_OF_WIND
     elif luck == 1 : flute = FLT_OF_TWIL
     elif luck == 2 : flute = FLT_OF_STAR
