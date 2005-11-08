@@ -57,7 +57,8 @@ class Quest (JQuest) :
        htmltext = "7525-05.htm"
        st.setState(COMPLETED)
        st.exitQuest(1)
-       return htmltext     if ClassId in [ClassId.warsmith]:
+       return htmltext
+     if ClassId in [ClassId.warsmith]:
        htmltext = "7525-06.htm"
        st.setState(COMPLETED)
        st.exitQuest(1)
