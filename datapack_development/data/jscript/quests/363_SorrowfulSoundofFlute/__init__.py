@@ -30,7 +30,9 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say to you</body></html>"
    id = st.getState()
    if id == CREATED :

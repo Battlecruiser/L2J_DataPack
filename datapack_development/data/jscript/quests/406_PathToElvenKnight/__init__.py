@@ -48,7 +48,9 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
@@ -97,7 +99,9 @@ class Quest (JQuest) :
         htmltext = "7327-10.htm"
    return htmltext
 
- def onKill (self,npcId,st):
+ def onKill (self,npc,st):
+
+   npcId = npc.getNpcId()
    if npcId == 54 :
         st.set("id","0")
         if int(st.get("cond")) != 0 and st.getQuestItemsCount(KLUTO_BOX_ID) == 0 and st.getQuestItemsCount(TOPAZ_PIECE_ID)<20 and st.getRandom(100)<70 :

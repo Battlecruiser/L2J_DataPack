@@ -35,7 +35,9 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
@@ -92,7 +94,9 @@ class Quest (JQuest) :
       st.takeItems(SUSPICIOUS_CONTRACT_ID,st.getQuestItemsCount(SUSPICIOUS_CONTRACT_ID))
    return htmltext
 
- def onKill (self,npcId,st):
+ def onKill (self,npc,st):
+
+   npcId = npc.getNpcId()
    if npcId == 327 :
       st.set("id","0")
       if int(st.get("cond")) :

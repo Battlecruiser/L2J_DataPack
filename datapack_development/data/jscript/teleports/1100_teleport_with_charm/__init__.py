@@ -20,7 +20,9 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    # ORC_VILLAGE
    if npcId == TAMIL: 
      if st.getQuestItemsCount(ORC_GATEKEEPER_CHARM) >= 1:

@@ -50,12 +50,14 @@ class Quest (JQuest) :
    if event == "7358-10.htm":
      return "7358-10.htm"
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    
    Race    = st.getPlayer().getRace()
    ClassId = st.getPlayer().getClassId()
    
-   # DarkElf´s got accepted
+   # DarkElfs got accepted
    if npcId == TETRARCH_THIFIELL and Race in [Race.darkelf]:
      if ClassId in [ClassId.darkFighter]: 
        st.setState(STARTED)

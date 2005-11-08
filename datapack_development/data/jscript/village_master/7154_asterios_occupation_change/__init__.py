@@ -51,12 +51,14 @@ class Quest (JQuest) :
      htmltext = event
    return htmltext
  
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    
    Race    = st.getPlayer().getRace()
    ClassId = st.getPlayer().getClassId()
    
-   # Elf´s got accepted
+   # Elfs got accepted
    if npcId == HIERARCH_ASTERIOS and Race in [Race.elf]:
      if ClassId in [ClassId.elvenFighter]: 
        st.setState(STARTED)

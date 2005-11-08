@@ -77,7 +77,9 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
@@ -344,7 +346,9 @@ class Quest (JQuest) :
         htmltext = "7069-04.htm"
    return htmltext
 
- def onKill (self,npcId,st):
+ def onKill (self,npc,st):
+
+   npcId = npc.getNpcId()
    if npcId == 265 :
         st.set("id","0")
         if int(st.get("cond")) == 1 and st.getQuestItemsCount(INGREDIENT_LIST_ID) == 1 and st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(HONEY_ID)+st.getQuestItemsCount(GOLDEN_HONEY_ID)+st.getQuestItemsCount(DIONIAN_POTATO_ID)+st.getQuestItemsCount(GREEN_MOSS_BUNDLE_ID)+st.getQuestItemsCount(BROWN_MOSS_BUNDLE_ID)+st.getQuestItemsCount(MONSTER_EYE_MEAT_ID)<5 and st.getQuestItemsCount(ROLANTS_CREATUREBOOK_ID) == 1 and st.getQuestItemsCount(MONSTER_EYE_BODY_ID)<30 :

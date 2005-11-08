@@ -82,7 +82,9 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (self,npcId,st):
+ def onTalk (self,npc,st):
+
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
@@ -202,7 +204,9 @@ class Quest (JQuest) :
       htmltext = "7532-01.htm"
    return htmltext
 
- def onKill (self,npcId,st):
+ def onKill (self,npc,st):
+
+   npcId = npc.getNpcId()
    condition,maxcount,item=DROPLIST[npcId]
    count=st.getQuestItemsCount(item)
    if int(st.get("cond")) == condition and count < maxcount :

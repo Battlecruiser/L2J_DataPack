@@ -26,7 +26,9 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
@@ -55,7 +57,9 @@ class Quest (JQuest) :
           st.exitQuest(1)
    return htmltext
 
- def onKill (self,npcId,st):
+ def onKill (self,npc,st):
+
+   npcId = npc.getNpcId()
    if npcId == 509 :
         st.set("id","0")
         if int(st.get("cond")) != 0 and st.getQuestItemsCount(FUNGUS_SAC1_ID)<10 :

@@ -82,7 +82,9 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have no tasks for you right now.</body></html>"
    raceId,htmlfiles,npcTyp,item = TALKS[npcId]
    id = st.getState()
@@ -140,7 +142,9 @@ class Quest (JQuest) :
        st.exitQuest(1)
    return htmltext
 
- def onKill (self,npcId,st):
+ def onKill (self,npc,st):
+
+   npcId = npc.getNpcId()
    if npcId == 5198 :
       if int(st.get("cond"))==1 and st.getRandom(100) < 50 and st.getQuestItemsCount(BLUE_GEM_ID) == 0 :
             st.giveItems(BLUE_GEM_ID,1)

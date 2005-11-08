@@ -26,7 +26,6 @@ EXCHANGE = [
 #Messages
 default   = "<html><head><body>I have nothing to say to you.</body></html>"
 error_1   = "<html><head><body>Head Researcher Sobling:<br><br>I think it is too early for you to help me. Come back after you have gained some more experience. <br><font color=\"LEVEL\">(Quest for characters level 57 and above.)</font></body></html>"
-error_2   = "<html><head><body>Head Researcher Sobling:<br><br>I think it is too late for you to help me.<br><font color=\"LEVEL\">(Quest for characters level greater than 56, lesser than 70)</font></body></html>"
 start     = "<html><head><body>Head Researcher Sobling:<br><br>So Cliff sent us this dictionary, i can see clearly now. It's very impressive... There are more relics for we to find out and maybe you will help us as a future member of our excavation team. We should look for <font color=\"LEVEL\">The book of the Titan's science, and the Book of the Titan's Culture.</font><br><br>Our payment for such a discovery cannot be rejected so easily, <font color=\"LEVEL\">A grade recipes</font> used in the manufacture of top level armors... Of course i won't give you anything just for fragments, you will have to gather every piece of a given book.<br><br><a action=\"bypass -h Quest 377_GiantsExploration2 yes\">I will search for ancient books</a><br><a action=\"bypass -h Quest 377_GiantsExploration2 0\">I won't help you this time</a><br></body></html>"
 starting  = "Starting.htm"
 checkout  = "<html><head><body>Head Researcher Sobling:<br><br>Excellent! You came back! Was it difficult to collect ancient books?<br><br>Let me see what you've found thus far...<br><br><a action=\"bypass -h Quest 377_GiantsExploration2 show\">Show him the books you collected</a></body></html>"
@@ -85,7 +84,7 @@ class Quest (JQuest) :
               st.giveItems(item,1)
     return htmltext
 
- def onTalk (self,npcid,st):
+ def onTalk (self,npc,st):
    htmltext = default
    id = st.getState()
    if st.getQuestItemsCount(DICT2) != 1 :
@@ -96,9 +95,6 @@ class Quest (JQuest) :
       if st.getPlayer().getLevel() < 57 :
          st.exitQuest(1)
          htmltext = error_1
-#      if st.getPlayer().getLevel() > 69 : #does this restriction really apply?
-#         st.exitQuest(1)
-#         htmltext = error_2
    elif id == STARTED :
       if st.getQuestItemsCount(ANC_BOOK) == 0 :
          htmltext = checkout
@@ -106,7 +102,7 @@ class Quest (JQuest) :
          htmltext = checkout2
    return htmltext
 
- def onKill (self,npcId,st) :
+ def onKill (self,npc,st) :
      drop = st.getRandom(100)
      if drop < DROP_RATE :
         st.giveItems(ANC_BOOK,1)

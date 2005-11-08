@@ -411,8 +411,9 @@ class Quest (JQuest):
               return "420_mymyu_12.htm"
 
 
-  def onTalk (self,npcid,st):
+  def onTalk (self,npc,st):
     id   = st.getState()
+    npcid = npc.getNpcId()
     if id != CREATED : progress = int(st.get("progress"))
     if npcid == PM_COOPER :
       if id == CREATED :
@@ -516,8 +517,9 @@ class Quest (JQuest):
               return "420_shamhai_5.htm"
     return "<html><head><body>I have nothing to say to you</body></html>"
 
-  def onKill (self,npcid,st):
+  def onKill (self,npc,st):
     id   = st.getState()
+    npcid = npc.getNpcId()
   #incipios drop
     if id == STARTING and (st.getQuestItemsCount(FSN_LIST) == 1 and st.getQuestItemsCount(TD_BCK_SKN) < 10) or (st.getQuestItemsCount(FSN_LIST_DLX) == 1 and st.getQuestItemsCount(TD_BCK_SKN) < 20) :
       if npcid ==  TD_LORD :

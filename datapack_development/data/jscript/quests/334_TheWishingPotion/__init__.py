@@ -235,8 +235,8 @@ class Quest (JQuest) :
        htmltext = "7738-14.htm"
    return htmltext
 
- def onTalk (Self,npcId,st):
-   
+ def onTalk (Self,npc,st):
+   npcId = npc.getNpcId()
    if npcId == TORAI:
      if st.get("cond") == None or int(st.get("cond")) == 0:
        st.exitQuest(1)
@@ -306,10 +306,9 @@ class Quest (JQuest) :
        else:
          return "7738-01.htm"
 
- def onKill (self,npcId,st):
-
+ def onKill (self,npc,st):
+   npcId = npc.getNpcId()
    id = st.getState()
-
    # hm, you already collected all items. but now you have lost one (destroyed maybe). will give you a second try 
    if id == END:
      if npcId in [AMBER_BASILISK, WHISPERING_WIND, GLASS_JAGUAR, HORROR_MIST_RIPPER, SILENOS, ANT_RECRUIT, ANT_WARRIOR_CAPTAIN, TYRANT, TYRANT_KINGPIN, TURAK_BUGBEAR, TURAK_BUGBEAR_WARRIOR]:

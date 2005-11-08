@@ -102,9 +102,10 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_accept")
     return htmltext
 
- def onTalk (self,npcid,st):
+ def onTalk (self,npc,st):
    htmltext = default
    id = st.getState()
+   npcid = npc.getNpcId()
    if st.getPlayer().getPet() == None :
        htmltext = error_1
        st.exitQuest(1)
@@ -160,7 +161,7 @@ class Quest (JQuest) :
               htmltext = FAIRY_TREES[i][5]
    return htmltext
 
- def onKill (self,npcId,st) :
+ def onKill (self,npc,st) :
    return  
 
 # Quest class and state definition
