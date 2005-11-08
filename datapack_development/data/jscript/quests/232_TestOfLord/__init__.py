@@ -1,38 +1,39 @@
 #completly rewritten by Rolarga, original from mr
+
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-MARK_OF_LORD_ID = 3390
-ORDEAL_NECKLACE_ID = 3391
-VARKEES_CHARM_ID = 3392
-TANTUS_CHARM_ID = 3393
-HATOS_CHARM_ID = 3394
-TAKUNA_CHARM_ID = 3395
-CHIANTA_CHARM_ID = 3396
-MANAKIAS_ORDERS_ID = 3397
-BREKA_ORC_FANG_ID = 3398
-MANAKIAS_AMULET_ID = 3399
-HUGE_ORC_FANG_ID = 3400
-SUMARIS_LETTER_ID = 3401
-URUTU_BLADE_ID = 3402
-TIMAK_ORC_SKULL_ID = 3403
-SWORD_INTO_SKULL_ID = 3404
-NERUGA_AXE_BLADE_ID = 3405
-AXE_OF_CEREMONY_ID = 3406
-MARSH_SPIDER_FEELER_ID = 3407
-MARSH_SPIDER_FEET_ID = 3408
+MARK_OF_LORD_ID            = 3390
+ORDEAL_NECKLACE_ID         = 3391
+VARKEES_CHARM_ID           = 3392
+TANTUS_CHARM_ID            = 3393
+HATOS_CHARM_ID             = 3394
+TAKUNA_CHARM_ID            = 3395
+CHIANTA_CHARM_ID           = 3396
+MANAKIAS_ORDERS_ID         = 3397
+BREKA_ORC_FANG_ID          = 3398
+MANAKIAS_AMULET_ID         = 3399
+HUGE_ORC_FANG_ID           = 3400
+SUMARIS_LETTER_ID          = 3401
+URUTU_BLADE_ID             = 3402
+TIMAK_ORC_SKULL_ID         = 3403
+SWORD_INTO_SKULL_ID        = 3404
+NERUGA_AXE_BLADE_ID        = 3405
+AXE_OF_CEREMONY_ID         = 3406
+MARSH_SPIDER_FEELER_ID     = 3407
+MARSH_SPIDER_FEET_ID       = 3408
 HANDIWORK_SPIDER_BROOCH_ID = 3409
 CORNEA_OF_EN_MONSTEREYE_ID = 3410
-MONSTEREYE_WOODCARVING_ID = 3411
-BEAR_FANG_NECKLACE_ID = 3412
-MARTANKUS_CHARM_ID = 3413
-RAGNA_ORC_HEAD_ID = 3414
-RAGNA_CHIEF_NOTICE_ID = 3415
-IMMORTAL_FLAME_ID = 3416
-BONE_ARROW_ID = 1341
-ADENA_ID = 57
+MONSTEREYE_WOODCARVING_ID  = 3411
+BEAR_FANG_NECKLACE_ID      = 3412
+MARTANKUS_CHARM_ID         = 3413
+RAGNA_ORC_HEAD_ID          = 3414
+RAGNA_CHIEF_NOTICE_ID      = 3415
+IMMORTAL_FLAME_ID          = 3416
+BONE_ARROW_ID              = 1341
+ADENA_ID                   = 57
 
 NPC=[7510,7515,7558,7564,7565,7566,7567,7568,7641,7642,7643,7649]
 
@@ -143,7 +144,7 @@ class Quest (JQuest) :
 		
 	def onTalk (self,npc,st):
 
-        npcId = npc.getNpcId()
+                npcId = npc.getNpcId()
 		htmltext = "<html><head><body>I have nothing to say you</body></html>"
 		id = st.getState()
 		if id == CREATED:
@@ -270,7 +271,9 @@ class Quest (JQuest) :
 						st.set("dudaStat","4")
 						htmltext = "7641-04.htm"
 						st.takeItems(DROPLIST[233][5],DROPLIST[233][4])
-						st.takeItems(MARSH_SPIDER_FEET_ID,st.getQuestItemsCount(MARSH_SPIDER_FEET_ID))
+						
+
+st.takeItems(MARSH_SPIDER_FEET_ID,st.getQuestItemsCount(MARSH_SPIDER_FEET_ID))
 						st.giveItems(HANDIWORK_SPIDER_BROOCH_ID,1)
 						st.takeItems(TAKUNA_CHARM_ID,1)
 					elif duda==4:
@@ -329,23 +332,25 @@ class Quest (JQuest) :
 
 	def onKill (self,npc,st):
 
-        npcId = npc.getNpcId()
+                npcId = npc.getNpcId()
 		var,value,newValue,chance,maxcount,item=DROPLIST[npcId]
 		random=st.getRandom(100)
 		count=st.getQuestItemsCount(item)
 		spiderCount=st.getQuestItemsCount(MARSH_SPIDER_FEET_ID)
 		
-		if int(st.get(var))==value and random<chance and count<maxcount:
+		if int(st.get(var)) == value and random < chance and count < maxcount:
 			st.giveItems(item,1)
 			if count == maxcount-1:
 				st.playSound("ItemSound.quest_middle")
-				if newValue==1 and st.getQuestItemsCount(RAGNA_ORC_HEAD_ID) and st.getQuestItemsCount(RAGNA_CHIEF_NOTICE_ID):
+				if newValue == 1 and st.getQuestItemsCount(RAGNA_ORC_HEAD_ID) and 
+
+st.getQuestItemsCount(RAGNA_CHIEF_NOTICE_ID):
 					st.set(var,"2")
 				else:
 					st.set(var,str(newValue))
 			else:
 				st.playSound("ItemSound.quest_itemget")
-		elif item == MARSH_SPIDER_FEELER_ID and int(st.get(var))==newValue and spiderCount<10:
+		elif item == MARSH_SPIDER_FEELER_ID and int(st.get(var)) == newValue and spiderCount < 10:
 			st.giveItems(MARSH_SPIDER_FEET_ID,1)
 			if spiderCount==9:
 				st.playSound("ItemSound.quest_middle")
@@ -356,11 +361,11 @@ class Quest (JQuest) :
 	
 	
 	
-QUEST       = Quest(232,"232_TestOfLord","Test Of Lord")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
+QUEST     = Quest(232,"232_TestOfLord","Test Of Lord")
+CREATED   = State('Start', QUEST)
+STARTING  = State('Starting', QUEST)
+STARTED   = State('Started', QUEST)
+COMPLETED = State('Completed', QUEST)
 	
 
 QUEST.setInitialState(CREATED)
