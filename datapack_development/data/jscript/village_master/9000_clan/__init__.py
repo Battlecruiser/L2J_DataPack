@@ -43,7 +43,9 @@ class Quest (JQuest) :
    #st.exitQuest(1)
    return htmltext
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    if npcId in NPC:
      st.set("cond","0")
      st.setState(STARTED)

@@ -83,7 +83,9 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
@@ -153,7 +155,9 @@ class Quest (JQuest) :
         htmltext = "7593-06.htm"
    return htmltext
 
- def onKill (self,npcId,st):
+ def onKill (self,npc,st):
+
+   npcId = npc.getNpcId()
    if npcId == 479 :
         st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(FIRE_CHARM_ID) == 1 and st.getQuestItemsCount(KASHA_BEAR_PELT_ID)<1 :

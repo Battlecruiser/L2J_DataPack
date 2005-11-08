@@ -99,12 +99,14 @@ class Quest (JQuest) :
    st.exitQuest(1)
    return htmltext
  
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
 
    Race    = st.getPlayer().getRace()
    ClassId = st.getPlayer().getClassId()
    
-   # orc´s got accepted
+   # orcs got accepted
    if npcId == HIGH_PREFECT_DRIKUS and Race in [Race.orc]:
      if ClassId in [ClassId.orcFighter]:
        htmltext = "7505-01.htm"

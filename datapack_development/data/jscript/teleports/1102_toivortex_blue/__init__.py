@@ -15,7 +15,9 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    # Dimension Vortex 1
    if npcId == DIMENSION_VORTEX_1: 
      if st.getQuestItemsCount(BLUE_DIMENSION_STONE) >= 1:

@@ -72,7 +72,9 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
@@ -174,7 +176,9 @@ class Quest (JQuest) :
         htmltext = "7667-02.htm"
    return htmltext
 
- def onKill (self,npcId,st):
+ def onKill (self,npc,st):
+
+   npcId = npc.getNpcId()
    if npcId == 5099 :
     if int(st.get("cond")) == 1 and st.getQuestItemsCount(RIPPED_DIARY_ID) < 7 and st.getQuestItemsCount(BOOK_OF_REFORM_ID) >= 1 :
       if st.getQuestItemsCount(RIPPED_DIARY_ID) == 6 :

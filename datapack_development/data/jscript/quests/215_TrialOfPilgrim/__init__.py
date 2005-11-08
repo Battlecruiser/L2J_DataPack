@@ -76,7 +76,9 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
@@ -198,7 +200,9 @@ class Quest (JQuest) :
       htmltext = "7612-02.htm"
    return htmltext
 
- def onKill (self,npcId,st):
+ def onKill (self,npc,st):
+
+   npcId = npc.getNpcId()
    if npcId == 5116 :
       if int(st.get("cond")) and int(st.get("cond")) == 3 and st.getQuestItemsCount(ESSENSE_OF_FLAME_ID) == 0 :
         if st.getRandom(5) == 1 :

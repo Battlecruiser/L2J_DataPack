@@ -66,12 +66,14 @@ class Quest (JQuest) :
    st.exitQuest(1)
    return htmltext
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
 
    Race    = st.getPlayer().getRace()
    ClassId = st.getPlayer().getClassId()
 
-   # Dwarf´s got accepted
+   # Dwarfs got accepted
    if npcId == HEAD_BLACKSMITH_KUSTO or HEAD_BLACKSMITH_VERGARA or HEAD_BLACKSMITH_FLUTTER or HEAD_BLACKSMITH_FERRIS or HEAD_BLACKSMITH_ROMAN and Race in [Race.dwarf]:
      if ClassId in [ClassId.artisan]:
        htmltext = "7512-01.htm"

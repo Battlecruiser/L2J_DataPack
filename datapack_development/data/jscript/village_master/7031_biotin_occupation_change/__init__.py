@@ -36,12 +36,14 @@ class Quest (JQuest) :
    return htmltext
 
  
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    
    Race    = st.getPlayer().getRace()
    ClassId = st.getPlayer().getClassId()
    
-   # Human´s got accepted
+   # Humans got accepted
    if npcId == HIGH_PRIEST_BIOTIN and Race in [Race.human]:
      if ClassId in [ClassId.fighter, ClassId.warrior, ClassId.knight, ClassId.rogue]:
        htmltext = "7031-08.htm"

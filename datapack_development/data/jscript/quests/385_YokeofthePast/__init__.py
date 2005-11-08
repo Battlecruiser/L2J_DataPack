@@ -27,7 +27,9 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say to you</body></html>"
    id = st.getState()
    if id == CREATED :
@@ -50,7 +52,9 @@ class Quest (JQuest) :
         
    return htmltext
 
- def onKill (self,npcId,st):
+ def onKill (self,npc,st):
+
+   npcId = npc.getNpcId()
     if npcId == 1208 or npcId == 1209 or npcId == 1210 or npcId == 1211 or npcId == 1212 or npcId == 1213 or npcId == 1214 or npcId == 1215 or npcId == 1216 or npcId == 1217 or npcId == 1218 or npcId == 1219 or npcId == 1220 or npcId == 1221 or npcId == 1222 or npcId == 1223 or npcId == 1224 or npcId == 1225 or npcId == 1226 or npcId == 1227 or npcId == 1228 or npcId == 1229 or npcId == 1230 or npcId == 1231 or npcId == 1232 or npcId == 1233 or npcId == 1234 or npcId == 1235 or npcId == 1236 or npcId == 1237 or npcId == 1238 or npcId == 1239 or npcId == 1240 or npcId == 1241 or npcId == 1242 or npcId == 1243 or npcId == 1244 or npcId == 1245 or npcId == 1246 or npcId == 1247 or npcId == 1248 or npcId == 1249 or npcId == 1250 or npcId == 1251 or npcId == 1252 or npcId == 1253 or npcId == 1254 or npcId == 1255:
        st.set("id","0")
        if int(st.get("cond")) :

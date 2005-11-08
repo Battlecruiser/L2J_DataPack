@@ -90,7 +90,9 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
@@ -226,7 +228,9 @@ class Quest (JQuest) :
       st.set("onlyone","1")
    return htmltext
 
- def onKill (self,npcId,st):
+ def onKill (self,npc,st):
+
+   npcId = npc.getNpcId()
    if npcId == 36 or npcId == 44:
       if int(st.get("cond")) and int(st.get("cond")) == 2 and st.getQuestItemsCount(BREATH_OF_WINDS_ID) == 0 :
         st.set("id",str(int(st.get("id"))+1))

@@ -1318,7 +1318,9 @@ class Quest (JQuest) :
 
     return htmltext
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
    st.set("cond","0")
    st.setState(STARTED)

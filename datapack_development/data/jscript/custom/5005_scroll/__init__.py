@@ -9,35 +9,89 @@ NPC         = [7097]
 QuestId     = 5005
 QuestName   = "scroll"
 QuestDesc   = "custom"
+#QuestDesc   = "Buy scroll with crystals"
 InitialHtml = "1.htm"
+SuccessMsg  = ""
+FailureMsg  = "You do not have enough materials."
+CancelMsg   = "1.htm"
 
-### Items - Format [name, giveItemId, giveItemQty, takeItem1Id, takeItem1Qty, takeItem2Id, takeItem2Qty]
+### Items - Format [name, eventId, [giveItems], [takeitems], [teleLocation x, teleLocation y, teleLocation z]]
+### giveItems - Format [itemId, qty]
+### takeItems - Format [itemId, qty]
+### example: 
+### Items = [
+###     ["MyItem1", 1001, [[ 234,   10], [ 333,    1]], [[ 563,  100], [ 363,  150]], [-80826,149775,-3043]],
+###     ["MyItem2", 1002, [[ 453,    1], [  63,    1]], [[  23,   10], [ 774,  100]], [-80826,149775,-3043]]
+### ]
 Items       = [
-["Scroll of Enchant Armor C grade", 952, 1, 1459, 60, 1458, 0],
-["Scroll of Enchant Weapon C grade", 951, 1, 1459, 100, 1458, 0],
-["Scroll of Enchant Armor D grade", 956, 1, 1459, 0, 1458, 80],
-["Scroll of Enchant Weapon D grade", 955, 1, 1459, 0, 1458, 120]
+    ["Scroll of Enchant Armor C grade", 952, [[952, 1]], [[1459, 60]], []],
+    ["Scroll of Enchant Weapon C grade", 951, [[951, 1]], [[1459, 100]], []],
+    ["Scroll of Enchant Armor D grade", 956, [[956, 1]], [[1458, 80]], []],
+    ["Scroll of Enchant Weapon D grade", 955, [[955, 1]], [[1458, 120]], []]
 ]
 
 ### ---------------------------------------------------------------------------
 ### DO NOT MODIFY BELOW THIS LINE
 ### ---------------------------------------------------------------------------
 
-print "importing " + QuestDesc + ": " + str(QuestId) + ": " + QuestName + ": " + str(len(Items)) + " item(s)",
+print "importing " + str(QuestId) + ": " + QuestDesc,
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-### doRequestedEvent
-def do_RequestedEvent(event, st, giveItemId, giveItemQty, takeItem1Id, takeItem1Qty, takeItem2Id, takeItem2Qty) :
-    if st.getQuestItemsCount(takeItem1Id) >= takeItem1Qty and st.getQuestItemsCount(takeItem2Id) >= takeItem2Qty :
-        st.takeItems(takeItem1Id, takeItem1Qty)
-        st.takeItems(takeItem2Id, takeItem2Qty)
-        st.giveItems(giveItemId, giveItemQty)
-        return event + ".htm" 
+### Events
+def do_Validate(st, items) :
+    if len(items) > 0 :
+        for item in items:
+            if st.getQuestItemsCount(item[0]) < item[1] :
+                return False
+    return True
+
+def do_GiveItems(st, items) :
+    if len(items) > 0 :
+        for item in items:
+            st.giveItems(item[0], item[1])
+
+def do_TakeItems(st, items) :
+    if len(items) > 0 :
+        for item in items:
+            st.takeItems(item[0], item[1])
+
+def do_Teleport(st, items) :
+    if len(items) > 0 :
+        st.player.teleToLocation(items[0], items[1], items[2])
+
+def do_RequestedEvent(event, st, item) :
+    if do_Validate(st, item[3]) :
+        do_TakeItems(st, item[3])
+        do_GiveItems(st, item[2])
+        do_Teleport(st, item[4])
+        if SuccessMsg != "" :
+            return SuccessMsg
+        return event + ".htm"
     else :
-        return "You do not have enough crystals."
+        if FailureMsg != "" :
+            return FailureMsg
+        return event + "-0.htm"
+
+def do_RequestEvent(event,st) :
+    htmltext = event
+
+    if event == "0":
+        if CancelMsg != "" :
+            return CancelMsg
+        return "Transaction has been canceled."
+
+    for item in Items:
+        if event == str(item[1]):
+            return do_RequestedEvent(event, st, item)
+
+	if htmltext != event:
+		st.setState(COMPLETED)
+		st.exitQuest(1)
+
+    return htmltext
 
 ### main code
 class Quest (JQuest) :
@@ -45,28 +99,22 @@ class Quest (JQuest) :
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onEvent (self,event,st) :
-    htmltext = event
+    return do_RequestEvent(event,st)
 
-    if event == "0":
-        return InitialHtml
+ def onTalk (Self,npc,st):
 
-    for item in Items:
-        if event == str(item[1]):
-            htmltext = do_RequestedEvent(event, st, item[1], item[2], item[3], item[4], item[5], item[6])
-    
-    if htmltext != event:
-      st.setState(COMPLETED)
-      st.exitQuest(1)
-
-    return htmltext
-
- def onTalk (Self,npcId,st):
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say with you</body></html>"
+   id = st.getState()
    st.setState(STARTED)
-   return InitialHtml
+   if InitialHtml == "onEvent" :
+     return do_RequestEvent(str(npcId),st)
+   elif InitialHtml != "" :
+     return InitialHtml
+   return htmltext
 
 ### Quest class and state definition
-QUEST       = Quest(QuestId,str(QuestId) + "_" + QuestName,QuestDesc)
+QUEST       = Quest(QuestId, str(QuestId) + "_" + QuestName, QuestDesc)
 CREATED     = State('Start',     QUEST)
 STARTED     = State('Started',   QUEST)
 COMPLETED   = State('Completed', QUEST)
@@ -81,4 +129,4 @@ for item in NPC:
 ### Quest NPC initialization
    STARTED.addTalkId(item)
 
-print "...done"
+print  ": Loaded " + str(len(Items)) + " item(s)"

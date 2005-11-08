@@ -87,7 +87,9 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
@@ -161,7 +163,9 @@ class Quest (JQuest) :
       st.addRadar(176560,-184969,-3729);
    return htmltext
 
- def onKill (self,npcId,st):
+ def onKill (self,npc,st):
+
+   npcId = npc.getNpcId()
    if npcId == 5110 :
         if int(st.get("cond")) and int(st.get("cond")) == 1 and st.getQuestItemsCount(SCROLL_OF_SHYSLASSY_ID) == 0 and st.getQuestItemsCount(BROKEN_KEY_ID) == 0 :
           st.giveItems(BROKEN_KEY_ID,1)

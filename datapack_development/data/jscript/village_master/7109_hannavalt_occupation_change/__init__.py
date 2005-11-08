@@ -338,12 +338,14 @@ class Quest (JQuest) :
    return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    
    Race    = st.getPlayer().getRace()
    ClassId = st.getPlayer().getClassId()
    
-   # Human´s and Elf´s got accepted
+   # Humans and Elfs got accepted
    if npcId == GRAND_MASTER_HANNAVALT or GRAND_MASTER_SIRIA or GRAND_MASTER_BLACKBIRD or GRAND_MASTER_SEDRICK or GRAND_MASTER_MARCUS and Race in [Race.elf, Race.human]:
      if ClassId in [ClassId.elvenKnight]:
        st.setState(STARTED)

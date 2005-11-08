@@ -25,7 +25,9 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
 
    ###################
    # Start Locations #
@@ -80,7 +82,7 @@ class Quest (JQuest) :
      st.set("id","7")     
      return
 
-   # Hunter´s Village
+   # Hunters Village
    if npcId == ESMERALDA: 
      st.player.teleToLocation(12661,181687,-3560)
      st.setState(STARTED)
@@ -140,7 +142,7 @@ class Quest (JQuest) :
      st.exitQuest(1)
      return
 
-   # back to Hunter´s Village
+   # back to Hunters Village
    if npcId == RACE_MANAGER and int(st.get("id")) == 8:
      st.player.teleToLocation(116819,76994,-2714)
      st.setState(COMPLETED)

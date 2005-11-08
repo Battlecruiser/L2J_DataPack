@@ -27,7 +27,9 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    ClanLeader = st.player.isClanLeader();
    Clan = st.player.getClan();
    if npcId in NPC:

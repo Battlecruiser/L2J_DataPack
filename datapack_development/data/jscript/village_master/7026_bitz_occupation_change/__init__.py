@@ -46,12 +46,14 @@ class Quest (JQuest) :
    return htmltext
 
  
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    
    Race    = st.getPlayer().getRace()
    pcId = st.getPlayer().getClassId().getId()
    
-   # Human´s got accepted
+   # Humans got accepted
    if npcId == GRAND_MASTER_BITZ and Race in [Race.human]:
 #fighter
      if pcId == 0x00:

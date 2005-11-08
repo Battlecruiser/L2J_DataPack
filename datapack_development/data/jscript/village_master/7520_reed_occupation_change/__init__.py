@@ -38,12 +38,14 @@ class Quest (JQuest) :
    st.exitQuest(1)
    return htmltext
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
 
    Race    = st.getPlayer().getRace()
    ClassId = st.getPlayer().getClassId()
    
-   # Dwarf´s got accepted
+   # Dwarfs got accepted
    if npcId == WAREHOUSE_CHIEF_REED and Race in [Race.dwarf]:
      if ClassId in [ClassId.dwarvenFighter]:
        htmltext = "7520-01.htm"

@@ -107,9 +107,10 @@ class Quest (JQuest) :
            htmltext = no_part2
     return htmltext
 
- def onTalk (self,npcid,st):
+ def onTalk (self,npc,st):
    htmltext = default
    id = st.getState()
+   npcid = npc.getNpcId()
    if npcid == HR_SOBLING:
       if id == CREATED :
          st.set("cond","0")
@@ -134,7 +135,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_middle")
    return htmltext
 
- def onKill (self,npcId,st) :
+ def onKill (self,npc,st) :
      drop = st.getRandom(100)
      if drop < DROP_RATE :
         st.giveItems(ANC_SCROLL,1)

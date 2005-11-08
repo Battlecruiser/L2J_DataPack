@@ -26,7 +26,9 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
@@ -67,7 +69,9 @@ class Quest (JQuest) :
             st.giveItems(GRANDMAS_HAIRPIN_ID,1)
    return htmltext
 
- def onKill (self,npcId,st):
+ def onKill (self,npc,st):
+
+   npcId = npc.getNpcId()
    if npcId == 317 :
       st.set("id","0")
       if int(st.get("cond")) and st.getQuestItemsCount(BLACK_WOLF_PELT_ID) < 40 :

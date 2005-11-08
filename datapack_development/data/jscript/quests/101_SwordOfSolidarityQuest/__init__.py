@@ -33,7 +33,9 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
@@ -103,7 +105,9 @@ class Quest (JQuest) :
         st.set("onlyone","1")
    return htmltext
 
- def onKill (self,npcId,st):
+ def onKill (self,npc,st):
+
+   npcId = npc.getNpcId()
    if npcId == 362 :
         st.set("id","0")
         if st.getQuestItemsCount(HOWTOGO_RUINS_ID)>0 :

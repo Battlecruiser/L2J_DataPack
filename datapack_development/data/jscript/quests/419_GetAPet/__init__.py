@@ -153,7 +153,8 @@ class Quest (JQuest):
         return check_questions(st)
     return
 
-  def onTalk (self,npcid,st):
+  def onTalk (self,npc,st):
+    npcid = npc.getNpcId()
     id = st.getState()
     if npcid == PET_MANAGER_MARTIN :
       if id == CREATED  :
@@ -204,7 +205,9 @@ class Quest (JQuest):
          return "419_metty_1.htm"
     return
 
-  def onKill (self,npcId,st):
+  def onKill (self,npc,st):
+
+      npcId = npc.getNpcId()
       collected = getCount_proof(st)
       if collected < REQUIRED_SPIDER_LEGS:
          race = st.getPlayer().getRace().ordinal()

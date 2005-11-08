@@ -28,7 +28,9 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
+
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you.</body></html>"
    id = st.getState()
    if id == CREATED :
@@ -74,7 +76,9 @@ class Quest (JQuest) :
           st.set("onlyone","1")
    return htmltext
 
- def onKill (self,npcId,st):
+ def onKill (self,npc,st):
+
+   npcId = npc.getNpcId()
    if npcId == 5017 :
         st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(HYACINTH_CHARM2_ID) and st.getRandom(100)<40 and st.getQuestItemsCount(PLAGUE_DUST_ID)<5 :
