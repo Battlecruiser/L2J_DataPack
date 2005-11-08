@@ -172,7 +172,7 @@ class Quest (JQuest) :
 
  def onKill (self,npc,st):
 
-   npcId = npc.getNpcId()
+  npcId = npc.getNpcId()
   step,maxcount,item=DROPLIST[npcId]
   count=st.getQuestItemsCount(item)
   if int(st.get("step"))==step and count<maxcount:
