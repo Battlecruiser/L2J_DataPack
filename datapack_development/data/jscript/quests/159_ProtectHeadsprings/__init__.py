@@ -50,24 +50,16 @@ class Quest (JQuest) :
           st.exitQuest(1)
    elif npcId == 7154 and int(st.get("cond")) == 0 and int(st.get("onlyone")) == 1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7154 and int(st.get("cond")) != 0 and st.getQuestItemsCount(HYACINTH_CHARM1_ID) != 0 and 
-
-st.getQuestItemsCount(PLAGUE_DUST_ID) == 0 :
+   elif npcId == 7154 and int(st.get("cond")) != 0 and st.getQuestItemsCount(HYACINTH_CHARM1_ID) != 0 and st.getQuestItemsCount(PLAGUE_DUST_ID) == 0 :
         htmltext = "7154-05.htm"
-   elif npcId == 7154 and int(st.get("cond")) != 0 and st.getQuestItemsCount(HYACINTH_CHARM1_ID) != 0 and 
-
-st.getQuestItemsCount(PLAGUE_DUST_ID) != 0 :
+   elif npcId == 7154 and int(st.get("cond")) != 0 and st.getQuestItemsCount(HYACINTH_CHARM1_ID) != 0 and st.getQuestItemsCount(PLAGUE_DUST_ID) != 0 :
         st.takeItems(PLAGUE_DUST_ID,st.getQuestItemsCount(PLAGUE_DUST_ID))
         st.takeItems(HYACINTH_CHARM1_ID,st.getQuestItemsCount(HYACINTH_CHARM1_ID))
         if st.getQuestItemsCount(HYACINTH_CHARM2_ID) == 0 : st.giveItems(HYACINTH_CHARM2_ID,1)
         htmltext = "7154-06.htm"
-   elif npcId == 7154 and int(st.get("cond")) != 0 and st.getQuestItemsCount(HYACINTH_CHARM2_ID) != 0 and 
-
-st.getQuestItemsCount(PLAGUE_DUST_ID) < 5 :
+   elif npcId == 7154 and int(st.get("cond")) != 0 and st.getQuestItemsCount(HYACINTH_CHARM2_ID) != 0 and st.getQuestItemsCount(PLAGUE_DUST_ID) < 5 :
         htmltext = "7154-07.htm"
-   elif npcId == 7154 and int(st.get("cond")) != 0 and st.getQuestItemsCount(HYACINTH_CHARM2_ID) != 0 and 
-
-st.getQuestItemsCount(PLAGUE_DUST_ID) >= 5 and int(st.get("onlyone")) == 0 :
+   elif npcId == 7154 and int(st.get("cond")) != 0 and st.getQuestItemsCount(HYACINTH_CHARM2_ID) != 0 and st.getQuestItemsCount(PLAGUE_DUST_ID) >= 5 and int(st.get("onlyone")) == 0 :
         if int(st.get("id")) != 159 :
           st.set("id","159")
           st.takeItems(PLAGUE_DUST_ID,st.getQuestItemsCount(PLAGUE_DUST_ID))
@@ -86,18 +78,14 @@ st.getQuestItemsCount(PLAGUE_DUST_ID) >= 5 and int(st.get("onlyone")) == 0 :
    npcId = npc.getNpcId()
    if npcId == 5017 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(HYACINTH_CHARM2_ID) and st.getRandom(100) < 40 and 
-
-st.getQuestItemsCount(PLAGUE_DUST_ID) < 5 :
+        if int(st.get("cond")) and st.getQuestItemsCount(HYACINTH_CHARM2_ID) and st.getRandom(100) < 40 and st.getQuestItemsCount(PLAGUE_DUST_ID) < 5 :
             if st.getQuestItemsCount(PLAGUE_DUST_ID) == 4 :
               st.giveItems(PLAGUE_DUST_ID,1)
               st.playSound("ItemSound.quest_middle")
             else:
               st.giveItems(PLAGUE_DUST_ID,1)
               st.playSound("ItemSound.quest_itemget")
-        if int(st.get("cond")) and st.getQuestItemsCount(HYACINTH_CHARM1_ID) and st.getRandom(100) < 40 and 
-
-st.getQuestItemsCount(PLAGUE_DUST_ID) == 0 :
+        if int(st.get("cond")) and st.getQuestItemsCount(HYACINTH_CHARM1_ID) and st.getRandom(100) < 40 and st.getQuestItemsCount(PLAGUE_DUST_ID) == 0 :
             st.giveItems(PLAGUE_DUST_ID,1)
             st.playSound("ItemSound.quest_middle")
    return

@@ -271,9 +271,7 @@ class Quest (JQuest) :
 						st.set("dudaStat","4")
 						htmltext = "7641-04.htm"
 						st.takeItems(DROPLIST[233][5],DROPLIST[233][4])
-						
-
-st.takeItems(MARSH_SPIDER_FEET_ID,st.getQuestItemsCount(MARSH_SPIDER_FEET_ID))
+                                                st.takeItems(MARSH_SPIDER_FEET_ID,st.getQuestItemsCount(MARSH_SPIDER_FEET_ID))
 						st.giveItems(HANDIWORK_SPIDER_BROOCH_ID,1)
 						st.takeItems(TAKUNA_CHARM_ID,1)
 					elif duda==4:
@@ -342,9 +340,7 @@ st.takeItems(MARSH_SPIDER_FEET_ID,st.getQuestItemsCount(MARSH_SPIDER_FEET_ID))
 			st.giveItems(item,1)
 			if count == maxcount-1:
 				st.playSound("ItemSound.quest_middle")
-				if newValue == 1 and st.getQuestItemsCount(RAGNA_ORC_HEAD_ID) and 
-
-st.getQuestItemsCount(RAGNA_CHIEF_NOTICE_ID):
+				if newValue == 1 and st.getQuestItemsCount(RAGNA_ORC_HEAD_ID) and st.getQuestItemsCount(RAGNA_CHIEF_NOTICE_ID):
 					st.set(var,"2")
 				else:
 					st.set(var,str(newValue))
