@@ -2350,7 +2350,7 @@ INSERT INTO etcitem VALUES
 (3449,'Spidersilk Rope','false','none',20,'normal','steel','none',0,1500,0,'true','q_loot_6','none'),
 (3450,'Alexandrite','false','none',20,'stackable','steel','none',0,2000,0,'true','q_loot_7','none'),
 (3451,'Silver Tea Service','false','none',20,'normal','steel','none',0,2000,0,'true','q_loot_8','none'),
-(3452,'Mechanic Golem Spare Parts','none','quest',20,'normal','steel','none',0,2000,0,'true','q_loot_9','none'),
+(3452,'Mechanic Golem Spare Parts','false','none',20,'normal','steel','none',0,2000,0,'true','q_loot_9','none'),
 (3453,'Fire Emerald','false','none',20,'stackable','steel','none',0,5000,0,'true','q_loot_10','none'),
 (3454,'Avellan Silk Frock','false','none',20,'normal','steel','none',0,5000,0,'true','q_loot_11','none'),
 (3455,'Feriotic Porcelain Urn','false','none',20,'normal','steel','none',0,5000,0,'true','q_loot_12','none'),
