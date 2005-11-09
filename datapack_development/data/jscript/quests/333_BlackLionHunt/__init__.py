@@ -136,7 +136,7 @@ p2_explanation		= html+sophia+"This mission is to drive out the remnants of the 
 p2_take				= html+sophia+"The enemies that you will have to defeat are <font color=\"LEVEL\">ol mahum guerillas, ol mahum raiders, ol mahum marksman, ol mahum sergeants and ol mahum captains</font>.<br>As a proof that you have defeated the enemy, bring me back the <font color=\"LEVEL\">bloodyaxe insignia</font> the symbol of the partisan army.  The more proofs you bring, the greater your reward will be.  Well, since you once worked under Captain Leopold, you already know the rule about proofs and rewards, dont you?<br>Now then, hurry up and leave for the Partisan Hideaway. Show them the wrath of the Black Lion troop to those rampaging ol mahums!"+htmlend
 #-Part 3
 p3_explanation		= html+sophia+"The headquarters of delu lizardmen was originally located at the shore area in the southern part of Giran.  However, lately, many of them are infiltrating into Dion territory.  We dont know yet whether they are entering Dion just to find food or to prepare some large scale invasion.  But what is clear is that they are making their movements with some clear goal.  Our mission is to smash their units one by one and instill fear in them thereby discouraging them from settling down in this area.<br><a action=\"bypass -h Quest 333_BlackLionHunt p3_t\">Take on the mission.</a> <br> <a action=\"bypass -h Quest 333_BlackLionHunt start_chose_parts\">Listen to the explanation about another mission.</a>"+htmlend
-p3_take				= html+sophia+"The enemies that you will deal with are <font color=\"LEVEL\"delu lizardmen, delu lizardman scouts and delu lizardman warriors</font>. As a proof that you slayed them, bring back the <font color=\"LEVEL\"delu lizardmens teeth</font>. But be careful.  Comparing with the felim tribe in Gludio or langk lizardman, they are much more violent and hostile.<br>The more proofs of victory you bring, the greater your reward will be.  Well, since you once worked under Captain Leopold, you should already know the rule about proofs and rewards, dont you? <br>Well then, leave for the battleground.  Trample down and destroy those lizards that are running amok without knowing their proper place!"+htmlend
+p3_take				= html+sophia+"The enemies that you will deal with are <font color=\"LEVEL\">delu lizardmen, delu lizardman scouts and delu lizardman warriors</font>. As a proof that you slayed them, bring back the <font color=\"LEVEL\"delu lizardmens teeth</font>. But be careful.  Comparing with the felim tribe in Gludio or langk lizardman, they are much more violent and hostile.<br>The more proofs of victory you bring, the greater your reward will be.  Well, since you once worked under Captain Leopold, you should already know the rule about proofs and rewards, dont you? <br>Well then, leave for the battleground.  Trample down and destroy those lizards that are running amok without knowing their proper place!"+htmlend
 #-Part 4
 p4_explanation		= html+sophia+"This mission has to deal with weird evil creatures called stacato that are infesting the Cruma Marshlands.  Have you ever seen a stacato?  It looks like an insect.  Its a sinister race that gives you a creepy feeling.  Their body is covered by a tight stakato chitin and they have sharp claws instead of hands.  They also have surprisingly fast movements.  You should never underestimate them. <br>To make matters worse, the Marshlands are inhabited by giant leeches, spiders and strange evil spirits hovering around the Tower of Giants.  This makes the place very treacherous when one has to carry out military operations.<br><a action=\"bypass -h Quest 333_BlackLionHunt p4_t\">Take on the mission.</a><br><a action=\"bypass -h Quest 333_BlackLionHunt start_chose_parts\">Listen to the explanation about another mission.</a>"+htmlend
 p4_take				= html+sophia+"The enemies you will have to destroy are <font color=\"LEVEL\">marsh stakatos, marsh stakato workers, marsh stakato soldiers and marsh stakato drones</font>. As a proof of your victory, bring me the claws of the stakatos you kill.  As always, The more proofs of victory you bring, the greater your reward will be. <br>Now, get ready for combat and leave for the Cruma Marshlands immediately.  This time, make sure to teach those stakatos the fearful lesson of the Black Lion troop!"+htmlend
@@ -489,9 +489,11 @@ class Quest (JQuest) :
 			return p4_explanation
 		elif event == "f_more_help":
 			return f_more_help
+		elif event == "r_exit":
+			return r_exit
 		
 	def onTalk (self,npc,st):
-		npcId = npc.getNpcId()
+        npcId = npc.getNpcId()
 		htmltext = "<html><head><body>I have nothing to say you</body></html>"
 		id = st.getState()
 		if id == CREATED :
@@ -582,7 +584,7 @@ class Quest (JQuest) :
 					return m_no_box
 					
 	def onKill (self,npc,st):
-		npcId = npc.getNpcId()
+        npcId = npc.getNpcId()
 		part,allowDrop,chancePartItem,chanceBox,partItem=DROPLIST[npcId]
 		random1 = st.getRandom(101)
 		random2 = st.getRandom(101)
