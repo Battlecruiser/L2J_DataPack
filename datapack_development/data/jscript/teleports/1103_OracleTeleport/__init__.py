@@ -1,6 +1,4 @@
 # Originally created by DraX on 2005.07.27, modified by Tempy #
-print "importing teleport data: 1103_OracleTeleport"
-
 import sys
 
 from net.sf.l2j.gameserver.model            import L2PcInstance
@@ -27,12 +25,12 @@ class Quest (JQuest) :
 
  def __init__(self, id, name, descr): JQuest.__init__(self, id, name, descr)
 
- def onTalk (Self, npcId, st):
-
+ def onTalk (Self, npc, st):
+    npcId = npc.getNpcId()
    #############
    # Dawn Locations #
    #############
-    if npcId == GLUDIN_DAWN:
+    if npcId == GLUDIN_DAWN :
      st.player.teleToLocation(-80157, 111344, -4901)
      st.setState(STARTED)
      st.set("id", "1")
@@ -194,43 +192,9 @@ COMPLETED    = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 
-QUEST.addStartNpc(8078)
-QUEST.addStartNpc(8079)
-QUEST.addStartNpc(8080)
-QUEST.addStartNpc(8081)
-QUEST.addStartNpc(8082)
-QUEST.addStartNpc(8083)
-QUEST.addStartNpc(8084)
-QUEST.addStartNpc(8085)
-QUEST.addStartNpc(8086)
-QUEST.addStartNpc(8087)
-QUEST.addStartNpc(8088)
-QUEST.addStartNpc(8089)
-QUEST.addStartNpc(8090)
-QUEST.addStartNpc(8091)
-    
-CREATED.addTalkId(8078)
-CREATED.addTalkId(8079)
-CREATED.addTalkId(8080)
-CREATED.addTalkId(8081)
-CREATED.addTalkId(8082)
-CREATED.addTalkId(8083)
-CREATED.addTalkId(8084)
-CREATED.addTalkId(8085)
-CREATED.addTalkId(8086)
-CREATED.addTalkId(8087)
-CREATED.addTalkId(8088)
-CREATED.addTalkId(8089)
-CREATED.addTalkId(8090)
-CREATED.addTalkId(8091)
+for i in range(8078,8090) :
+    QUEST.addStartNpc(i)
+    CREATED.addTalkId(i)
+    STARTED.addTalkId(i)
 
-STARTED.addTalkId(8127)
-STARTED.addTalkId(8128)
-STARTED.addTalkId(8129)
-STARTED.addTalkId(8130)
-STARTED.addTalkId(8131)
-STARTED.addTalkId(8137)
-STARTED.addTalkId(8138)
-STARTED.addTalkId(8139)
-STARTED.addTalkId(8140)
-STARTED.addTalkId(8141)
+print "importing teleport data: 1103_OracleTeleport"
