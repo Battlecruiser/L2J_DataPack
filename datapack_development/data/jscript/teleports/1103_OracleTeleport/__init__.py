@@ -197,4 +197,7 @@ for i in range(8078,8090) :
     CREATED.addTalkId(i)
     STARTED.addTalkId(i)
 
+for j in range(8127,8142) :
+    STARTED.addTalkId(j)
+
 print "importing teleport data: 1103_OracleTeleport"
