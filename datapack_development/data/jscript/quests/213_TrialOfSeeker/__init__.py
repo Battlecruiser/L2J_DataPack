@@ -136,12 +136,12 @@ class Quest (JQuest) :
    if npcId == 7106 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
      if st.getPlayer().getClassId().getId() == 0x07 or st.getPlayer().getClassId().getId() == 0x16 or st.getPlayer().getClassId().getId() == 0x23 :
        if st.getPlayer().getLevel() >= 35 :
-         htmltext = "7106-01.htm"
+         htmltext = "7106-03.htm"
        else:
          htmltext = "7106-02.htm"
          st.exitQuest(1)
      else:
-       htmltext = "7106-03.htm"
+       htmltext = "7106-00.htm"
        st.exitQuest(1)
    elif npcId == 7106 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
