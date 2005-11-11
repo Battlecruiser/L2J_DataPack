@@ -143,8 +143,7 @@ class Quest (JQuest) :
 		return htmltext
 		
 	def onTalk (self,npc,st):
-
-                npcId = npc.getNpcId()
+		npcId = npc.getNpcId()
 		htmltext = "<html><head><body>I have nothing to say you</body></html>"
 		id = st.getState()
 		if id == CREATED:
@@ -329,8 +328,7 @@ class Quest (JQuest) :
 		return htmltext			
 
 	def onKill (self,npc,st):
-
-                npcId = npc.getNpcId()
+		npcId = npc.getNpcId()
 		var,value,newValue,chance,maxcount,item=DROPLIST[npcId]
 		random=st.getRandom(100)
 		count=st.getQuestItemsCount(item)
