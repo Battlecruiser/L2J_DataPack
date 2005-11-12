@@ -67,6 +67,11 @@
     <set val='68' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
     <set val='379' order='0x08' stat='pAtkSpd' />
+    <add order="0x40" stat="rEvas" val="7">
+    <and>
+    <player hp="60" />
+    </and>
+    </add>
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
