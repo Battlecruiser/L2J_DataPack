@@ -18,6 +18,11 @@
     <set val='4' order='0x08' stat='rCrit' />
     <add val='4.75000' order='0x10' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
+    <mul val='1.11' order='0x40' stat='pAtkSpd'>
+    <and>
+    <player hp="60" />
+    </and>
+    </mul>
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
@@ -58,7 +63,7 @@
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
 </item>
-<item id='5605' name="worldtree's_branch_updown">
+<item id='5605' name="branch_of_the_mother_tree_updown">
   <for>
     <set val='226' order='0x08' stat='pAtk' />
     <set val='152' order='0x08' stat='mAtk' />
@@ -71,7 +76,7 @@
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
 </item>
-<item id='5606' name="worldtree's_branch_magicdamage">
+<item id='5606' name="branch_of_the_mother_tree_magicdamage">
   <for>
     <set val='226' order='0x08' stat='pAtk' />
     <set val='152' order='0x08' stat='mAtk' />
@@ -82,7 +87,7 @@
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
 </item>
-<item id='5607' name="worldtree's_branch_acumen">
+<item id='5607' name="branch_of_the_mother_tree_acumen">
   <for>
     <set val='226' order='0x08' stat='pAtk' />
     <set val='152' order='0x08' stat='mAtk' />
@@ -146,6 +151,7 @@
     <set val='12' order='0x08' stat='rCrit' />
     <add val='-3.75000' order='0x10' stat='accCombat' />
     <set val='293' order='0x08' stat='pAtkSpd' />
+    <mul val='0.85' order='0x40' stat='atkReuse' />
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
@@ -214,6 +220,7 @@
     <set val='12' order='0x08' stat='rCrit' />
     <add val='-3.75000' order='0x10' stat='accCombat' />
     <set val='433' order='0x08' stat='pAtkSpd' />
+    <add val='200' order='0x40' stat='cAtk' />
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
@@ -225,6 +232,11 @@
     <set val='12' order='0x08' stat='rCrit' />
     <add val='-3.75000' order='0x10' stat='accCombat' />
     <set val='433' order='0x08' stat='pAtkSpd' />
+    <mul val='1.11' order='0x40' stat='pAtkSpd'>
+    <and>
+    <player hp="60" />
+    </and>
+    </mul>
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
@@ -273,6 +285,11 @@
     <set val='4' order='0x08' stat='rCrit' />
     <add val='4.75000' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
+    <add order="0x40" stat="rEvas" val="6">
+    <and>
+    <player hp="60" />
+    </and>
+    </add>
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
@@ -535,6 +552,7 @@
     <set val='114' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
     <set val='379' order='0x08' stat='pAtkSpd' />
+    <add val='632' order='0x40' stat='cAtk' />
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
@@ -556,6 +574,11 @@
     <set val='114' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
     <set val='379' order='0x08' stat='pAtkSpd' />
+    <add order="0x40" stat="rCrit" val="130">
+    <and>
+    <player hp="60" />
+    </and>
+    </add>
   <enchant val='0' order='0x0C' stat='pAtk' />
 <enchant val='0' order='0x0C' stat='mAtk' />
 </for>
