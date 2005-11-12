@@ -50,7 +50,7 @@ CREATE TABLE characters (
   maxload decimal(11,0) default NULL,
   race decimal(11,0) default NULL,
   classid decimal(11,0) default NULL,
-  deletetime decimal(11,0) default NULL,
+  deletetime decimal(20,0) default NULL,
   cancraft decimal(11,0) default NULL,
   title varchar(15) default NULL,
   allyId decimal(11,0) default NULL,
