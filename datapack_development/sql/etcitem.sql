@@ -504,7 +504,7 @@ INSERT INTO etcitem VALUES
 (1337,'Emerald','false','none',80,'stackable','liquid','none',0,10000,0,'true','emerald','none'),
 (1338,'Blue Onyx','false','none',80,'stackable','liquid','none',0,1000,0,'true','blue_onyx','none'),
 (1339,'Onyx','false','none',80,'stackable','liquid','none',0,600,0,'true','onyx','none'),
-(1340,'Silvery Leaf','false','none',3,'stackable','liquid','none',0,20,0,'false','silvery_leaf','none'),
+(1340,'Silvery Leaf','false','none',3,'stackable','liquid','none',0,20,0,'true','silvery_leaf','none'),
 (1341,'Bone Arrow','false','arrow',5,'stackable','bone','d',0,3,0,'true','bone_arrow','arrow'),
 (1342,'Fine Steel Arrow','false','arrow',4,'stackable','fine_steel','c',0,5,0,'true','fine_steel_arrow','arrow'),
 (1343,'Silver Arrow','false','arrow',4,'stackable','silver','b',0,7,0,'true','silver_arrow','arrow'),
