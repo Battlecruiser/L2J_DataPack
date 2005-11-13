@@ -274,30 +274,33 @@ class Quest (JQuest) :
             st.set("id",str(int(st.get("id"))+1))
    elif npcId == 5058 :
         if int(st.get("cond")) and st.getQuestItemsCount(BEAR_PIC_ID) == 1 and st.getQuestItemsCount(HONEY_JAR_ID) < 5 :
-          st.giveItems(HONEY_JAR_ID,1)
-          if st.getQuestItemsCount(HONEY_JAR_ID) == 4 and npc.isSpoil() :
-            st.playSound("ItemSound.quest_middle")
-            st.set("cond","6")
-          else:
-            st.playSound("ItemSound.quest_itemget")
+          if npc.isSpoil() :
+            st.giveItems(HONEY_JAR_ID,1)
+            if st.getQuestItemsCount(HONEY_JAR_ID) == 4 :
+              st.playSound("ItemSound.quest_middle")
+              st.set("cond","6")
+            else:
+              st.playSound("ItemSound.quest_itemget")
    elif npcId == 403 :
         if int(st.get("cond")) and st.getQuestItemsCount(TARANTULA_PIC_ID) == 1 and st.getQuestItemsCount(BEAD_ID) < 20 :
-          if npc.isSpoil() and st.getRandom(2) == 0 :
-            st.giveItems(BEAD_ID,1)
-            if st.getQuestItemsCount(BEAD_ID) == 19 :
-              st.playSound("ItemSound.quest_middle")
-              st.set("cond","8")
-            else:
-              st.playSound("ItemSound.quest_itemget")
+          if npc.isSpoil() :
+            if st.getRandom(2) == 0 :
+              st.giveItems(BEAD_ID,1)
+              if st.getQuestItemsCount(BEAD_ID) == 19 :
+                st.playSound("ItemSound.quest_middle")
+                st.set("cond","8")
+              else:
+                st.playSound("ItemSound.quest_itemget")
    elif npcId == 508 :
         if int(st.get("cond")) and st.getQuestItemsCount(TARANTULA_PIC_ID) == 1 and st.getQuestItemsCount(BEAD_ID) < 20 :
-          if npc.isSpoil() and st.getRandom(10) < 6 :
-            st.giveItems(BEAD_ID,1)
-            if st.getQuestItemsCount(BEAD_ID) == 19 :
-              st.playSound("ItemSound.quest_middle")
-              st.set("cond","8")
-            else:
-              st.playSound("ItemSound.quest_itemget")
+          if npc.isSpoil() :
+            if st.getRandom(10) < 6 :
+              st.giveItems(BEAD_ID,1)
+              if st.getQuestItemsCount(BEAD_ID) == 19 :
+                st.playSound("ItemSound.quest_middle")
+                st.set("cond","8")
+              else:
+                st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST       = Quest(417,"417_PathToScavenger","Path To Scavenger")
