@@ -336,7 +336,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="20000"/>
-  <set name="castRange" val="50"/>
+  <set name="castRange" val="40"/>
   <for>
      <effect count="4" name="DamOverTime" time="5" val="#bleedpower" abnormal="bleeding"/>
   </for>
@@ -733,7 +733,7 @@
   <set name="skillTime" val="1080"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="50"/>
+  <set name="castRange" val="40"/>
   <for>
   </for>
 </skill>
@@ -933,7 +933,7 @@
   <set name="skillTime" val="1080"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="50"/>
+  <set name="castRange" val="40"/>
   <for>
   </for>
 </skill>
