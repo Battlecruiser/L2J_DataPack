@@ -15,7 +15,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="9000"/>
-  <set name="castRange" val="50"/>
+  <set name="castRange" val="40"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0"/>
   </for>
@@ -47,7 +47,7 @@
 <set name="skillType" val="PDAM" />
 <set name="operateType" val="OP_ACTIVE" />
 <set name="buffDuration" val="9000" />
-<set name="castRange" val="700" />
+<set name="castRange" val="900" />
 <for>
  <effect count="1" name="Stun" time="9" val="0" />
 </for>
@@ -258,7 +258,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="1000"/>
+  <set name="hitTime" val="1500"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="1000"/>
   <set name="skillType" val="BUFF"/>
@@ -416,7 +416,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="9000"/>
-  <set name="castRange" val="50"/>
+  <set name="castRange" val="40"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0"/>
   </for>
@@ -425,10 +425,11 @@
 <!-- Done by lucl -->
  <table name="#mpConsume"> 13 18 23 28 30 33 </table>
  <table name="#Tab-maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35</table>
+ <table name="#reg-HP"> 1.091 1.13 1.166 1.2 1.23 </table>
  <set name="mpConsume" val="#mpConsume"/>
  <set name="power" val="0.0"/>
  <set name="target" val="TARGET_SELF"/>
- <set name="hitTime" val="1000"/>
+ <set name="hitTime" val="1500"/>
  <set name="reuseDelay" val="600000"/>
  <set name="skillTime" val="1000"/>
  <set name="skillType" val="BUFF"/>
@@ -438,6 +439,9 @@
  <for>
     <effect count="1" name="Buff" time="600" val="0">
        <mul order="0x50" stat="maxHp" val="#Tab-maxHp" />
+    </effect>
+    <effect count="1" name="Buff" time="1" val="0">
+       <mul order="0x50" stat="regHp" val="#reg-HP" />
     </effect>
  </for>
 </skill>

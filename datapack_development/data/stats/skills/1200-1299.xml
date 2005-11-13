@@ -403,12 +403,12 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="8000"/>
-  <set name="skillTime" val="1000"/>
+  <set name="skillTime" val="1500"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="600"/>
+  <set name="castRange" val="900"/>
  <for>
  <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
    <sub order="0x50" stat="earthRes" val="#Tab-earthRes"/>
@@ -429,7 +429,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="600"/>
+  <set name="castRange" val="900"/>
   <for>
    <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
       <mul order="0x50" stat="poisonRes" val="#Tab-poisonRes"/>

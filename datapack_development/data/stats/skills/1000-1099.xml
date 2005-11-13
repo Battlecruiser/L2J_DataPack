@@ -1476,7 +1476,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="600"/>
+  <set name="castRange" val="900"/>
   <for>
    <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
       <sub order="0x50" stat="fireRes" val="#Tab-fireRes"/>
@@ -1592,9 +1592,9 @@
   <for>
   </for>
 </skill>
-<skill id="1090" levels="3" name="Life Drain">
-  <table name="#mpConsume"> 20 30 39 </table>
-  <table name="#power"> 15.0 21.0 26.0 </table>
+<skill id="1090" levels="6" name="Life Drain">
+  <table name="#mpConsume"> 20 30 39 44 53 60</table>
+  <table name="#power"> 15.0 21.0 26.0 32 38 44 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
