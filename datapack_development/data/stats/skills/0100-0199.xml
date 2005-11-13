@@ -717,7 +717,7 @@
   </for>
 </skill>
 <skill id="139" levels="3" name="Guts">
-  <table name="#mpConsume"> 13 17 22 </table>
+  <table name="#mpConsume"> 17 19 24 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -729,11 +729,13 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
-<!-- Done by dc -->
+<!-- Done by dc, completed by NewAge -->
 <table name="#Tab-pDef"> 2 2.5 3 </table>
 <for>
-  <effect name="Buff" time="30" count="1" val="0">
-    <mul  order='0x50' stat='pDef' val="#Tab-pDef"/>
+  <effect name="Buff" time="90" count="1" val="0">
+    <mul  order='0x50' stat='pDef' val="#Tab-pDef">
+	<player hp="30"/>
+	</mul>
   </effect>
 </for>
 </skill>
@@ -1138,7 +1140,7 @@
   </for>
 </skill>
 <skill id="176" levels="3" name="Frenzy">
-  <table name="#mpConsume"> 11 15 20 </table>
+  <table name="#mpConsume"> 14 22 25 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1151,10 +1153,12 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
 <table name="#Tab-pAtk"> 2 2.5 3 </table>
-<!-- Done by dc -->
+<!-- Done by dc, completed by NewAge -->
 <for>
-  <effect name="Buff" time="30" count="1" val="0">
-    <mul  order='0x50' stat='pAtk' val="#Tab-pAtk"/>
+  <effect name="Buff" time="90" count="1" val="0">
+    <mul  order='0x50' stat='pAtk' val="#Tab-pAtk">
+    <player hp="30"/>
+    </mul>
  </effect>
 </for>
 </skill>
