@@ -70,7 +70,7 @@ DROPLIST={
 def giveMiddle(st,itemid,step):
   st.giveItems(itemid,1)
   st.playSound("Itemsound.quest_middle")
-  st.set("cond",str(step+1))
+  st.set("step",str(step+1))
   return
 
 def giveNormal(st,itemid):
@@ -118,7 +118,6 @@ class Quest (JQuest) :
 
 
  def onTalk (Self,npc,st):
-
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
@@ -205,7 +204,6 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-
    npcId = npc.getNpcId()
    step, dropcondition, maxcount, chance, itemid = DROPLIST[npcId]
    random = st.getRandom(100)
