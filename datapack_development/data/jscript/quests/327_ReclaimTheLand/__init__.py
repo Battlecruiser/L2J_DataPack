@@ -125,6 +125,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_itemget")
     elif event == "7034_6" and st.getGameTicks() != int(st.get("id")) :
           st.set("id",str(st.getGameTicks()))
+          n1 = 0
           if st.getQuestItemsCount(ANCIENT_CLAY_URN_ID) :
 	    n1 = 1
 	    n=st.getQuestItemsCount(ANCIENT_CLAY_URN_ID)
@@ -164,21 +165,15 @@ class Quest (JQuest) :
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
-     st.setState(STARTING)
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 7597 and int(st.get("cond"))==0 :
-      if int(st.get("cond")) < 15 :
-        if st.getPlayer().getLevel() < 25 :
-          htmltext = "7597-01.htm"
-          st.exitQuest(1)
-        else:
-          htmltext = "7597-02.htm"
-          return htmltext
-      else:
-        htmltext = "7597-02.htm"
-        st.exitQuest(1)
+      if st.getPlayer().getLevel() < 25 :
+         htmltext = "7597-01.htm"
+         st.exitQuest(1)
+      else :
+         htmltext = "7597-02.htm"
    elif npcId == 7597 and int(st.get("cond")) :
       if st.getQuestItemsCount(TUREK_DOGTAG_ID)+st.getQuestItemsCount(TUREK_MEDALLION_ID) < 1 :
         htmltext = "7597-04.htm"
@@ -197,7 +192,6 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-
    npcId = npc.getNpcId()
    if npcId == 500 :
     st.set("id","0")
@@ -315,7 +309,6 @@ class Quest (JQuest) :
 
 QUEST       = Quest(327,"327_ReclaimTheLand","Reclaim The Land")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
@@ -323,7 +316,7 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7597)
 
-STARTING.addTalkId(7597)
+CREATED.addTalkId(7597)
 
 STARTED.addTalkId(7034)
 STARTED.addTalkId(7313)
@@ -337,31 +330,8 @@ STARTED.addKillId(499)
 STARTED.addKillId(500)
 STARTED.addKillId(501)
 
-STARTED.addQuestDrop(500,CLAY_URN_FRAGMENT_ID,1)
-STARTED.addQuestDrop(499,CLAY_URN_FRAGMENT_ID,1)
-STARTED.addQuestDrop(496,CLAY_URN_FRAGMENT_ID,1)
-STARTED.addQuestDrop(498,CLAY_URN_FRAGMENT_ID,1)
-STARTED.addQuestDrop(497,CLAY_URN_FRAGMENT_ID,1)
-STARTED.addQuestDrop(501,CLAY_URN_FRAGMENT_ID,1)
-STARTED.addQuestDrop(495,CLAY_URN_FRAGMENT_ID,1)
-STARTED.addQuestDrop(500,BRASS_TRINKET_PIECE_ID,1)
-STARTED.addQuestDrop(499,BRASS_TRINKET_PIECE_ID,1)
-STARTED.addQuestDrop(496,BRASS_TRINKET_PIECE_ID,1)
-STARTED.addQuestDrop(498,BRASS_TRINKET_PIECE_ID,1)
-STARTED.addQuestDrop(497,BRASS_TRINKET_PIECE_ID,1)
-STARTED.addQuestDrop(501,BRASS_TRINKET_PIECE_ID,1)
-STARTED.addQuestDrop(495,BRASS_TRINKET_PIECE_ID,1)
-STARTED.addQuestDrop(500,BRONZE_MIRROR_PIECE_ID,1)
-STARTED.addQuestDrop(499,BRONZE_MIRROR_PIECE_ID,1)
-STARTED.addQuestDrop(496,BRONZE_MIRROR_PIECE_ID,1)
-STARTED.addQuestDrop(498,BRONZE_MIRROR_PIECE_ID,1)
-STARTED.addQuestDrop(497,BRONZE_MIRROR_PIECE_ID,1)
-STARTED.addQuestDrop(501,BRONZE_MIRROR_PIECE_ID,1)
-STARTED.addQuestDrop(495,BRONZE_MIRROR_PIECE_ID,1)
-STARTED.addQuestDrop(500,JADE_NECKLACE_BEAD_ID,1)
-STARTED.addQuestDrop(499,JADE_NECKLACE_BEAD_ID,1)
-STARTED.addQuestDrop(496,JADE_NECKLACE_BEAD_ID,1)
-STARTED.addQuestDrop(498,JADE_NECKLACE_BEAD_ID,1)
-STARTED.addQuestDrop(497,JADE_NECKLACE_BEAD_ID,1)
-STARTED.addQuestDrop(501,JADE_NECKLACE_BEAD_ID,1)
-STARTED.addQuestDrop(495,JADE_NECKLACE_BEAD_ID,1)
+for i in range(495,502) :
+    STARTED.addQuestDrop(i,CLAY_URN_FRAGMENT_ID,1)
+    STARTED.addQuestDrop(i,BRASS_TRINKET_PIECE_ID,1)
+    STARTED.addQuestDrop(i,BRONZE_MIRROR_PIECE_ID,1)
+    STARTED.addQuestDrop(i,JADE_NECKLACE_BEAD_ID,1)
