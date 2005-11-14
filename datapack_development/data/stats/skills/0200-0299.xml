@@ -1560,7 +1560,7 @@
 <table name="#Tab-pAtkSpd"> 1.25 </table>
 <table name="#Tab-rEvas"> 3 </table>
 <for>
-  <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
+  <effect name="Buff" time="600" count="1" val="0" stackOrder="1" stackType="possession">
     <mul  order='0x50' stat='pDef' val="#Tab-pDef"/>
     <mul  order='0x50' stat='pAtkSpd' val="#Tab-pAtkSpd"/>
     <add  order='0x40' stat='rEvas' val="#Tab-rEvas"/>
@@ -1750,7 +1750,7 @@
   <set name="castRange" val="-1"/>
 
   <for>
-    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession"/>
+    <effect name="Buff" time="600" count="1" val="0" stackOrder="1" stackType="possession"/>
   </for>
 
 </skill>
@@ -1857,7 +1857,7 @@
   <set name="castRange" val="-1"/>
 
   <for>
-    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
+    <effect name="Buff" time="600" count="1" val="0" stackOrder="1" stackType="possession">
 	 <mul order='0x50' stat="pAtk" val="0.8"/>
 	 <add order='0x40' stat="rEvas" val="10"/>
 	 <add order='0x40' stat="runSpd" val="15"/>
