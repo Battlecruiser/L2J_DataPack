@@ -904,3 +904,14 @@ INSERT INTO skill_learn VALUES (7861,27);
 INSERT INTO skill_learn VALUES (7861,28);
 INSERT INTO skill_learn VALUES (7861,29);
 INSERT INTO skill_learn VALUES (7861,30);
+--Fix for dwarfen village 7521,7522
+INSERT INTO skill_learn VALUES (7521,53);
+INSERT INTO skill_learn VALUES (7521,54);
+INSERT INTO skill_learn VALUES (7521,55);
+INSERT INTO skill_learn VALUES (7521,56);
+INSERT INTO skill_learn VALUES (7521,57);
+INSERT INTO skill_learn VALUES (7522,53);
+INSERT INTO skill_learn VALUES (7522,54);
+INSERT INTO skill_learn VALUES (7522,55);
+INSERT INTO skill_learn VALUES (7522,56);
+INSERT INTO skill_learn VALUES (7522,57);
