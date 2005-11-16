@@ -21,3 +21,29 @@ https://opensvn.csie.org/traccgi/L2J_Datapack/trac.cgi/browser/trunk/datapack_de
 
 Link to Revision 687 /sql/ folder for reference:
 https://opensvn.csie.org/traccgi/L2J_Datapack/trac.cgi/browser/trunk/datapack_development/sql/?rev=687
+
+
+
+	Notes:
+	(by no means extensive final or accurate but better than nothing, other devs feel free to add comments - warrax)
+
+		LOCATIONS
+/sql/locations.sql    -> fewer entries
+/sql/experimental/locations.sql    -> more entries, should work better with /sql/experimental/spawnlist-experimental.sql
+
+		NPC
+/sql/npc.sql    -> better stats
+/sql/experimental/npc.sql    -> better `type` field entries
+
+		NPCSKILLS
+/sql/npcskills.sql    -> fewer entries
+/sql/experimental/npcskills.sql    -> more entries
+
+		SPAWNLIST
+/sql/spawnlist.sql    -> old spawnlist (no usage of loc_id?)
+/sql/experimental/spawnlist-experimental.sql    -> newer spawnlist, more raidbosses, more usage of loc_id (locations.sql)
+/sql/experimental/spawnlist-loc_id.sql   -> initial implementation of loc_id, old, not maintained
+
+
+	*i would reccomend /sql/experimental/locations.sql, /sql/experimental/npcskills.sql, /sql/experimental/spawnlist-experimental.sql
+		and /sql/npc.sql with the `type` field entries from /sql/experimental/npc.sql (warrax)
