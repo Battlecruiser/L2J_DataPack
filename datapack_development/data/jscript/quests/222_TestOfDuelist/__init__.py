@@ -1,6 +1,5 @@
 # Maked by Mr. Have fun! Version 0.2
 # rewritten by Rolarga Version 0.3
-print "importing quests: 222: Test Of Duelist"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -171,7 +170,6 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-
   npcId = npc.getNpcId()
   step,maxcount,item=DROPLIST[npcId]
   count=st.getQuestItemsCount(item)
@@ -197,5 +195,7 @@ STARTING.addTalkId(7623)
 
 STARTED.addTalkId(7623)
 
-for i in [202,214,217,234,270,552,554,564,582,588,601,602,604,85,90]:
+for i in DROPLIST.keys():
     STARTED.addKillId(i)
+    
+print "importing quests: 222: Test Of Duelist"
