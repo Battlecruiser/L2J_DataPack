@@ -1560,7 +1560,7 @@
 <table name="#Tab-pAtkSpd"> 1.25 </table>
 <table name="#Tab-rEvas"> 3 </table>
 <for>
-  <effect name="Buff" time="600" count="1" val="0" stackOrder="1" stackType="possession">
+  <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
     <mul  order='0x50' stat='pDef' val="#Tab-pDef"/>
     <mul  order='0x50' stat='pAtkSpd' val="#Tab-pAtkSpd"/>
     <add  order='0x40' stat='rEvas' val="#Tab-rEvas"/>
@@ -1738,19 +1738,24 @@
 </skill>
 <skill id="292" levels="1" name="Totem Spirit Bison">
 
-  <set name="mpConsume" val="18"/>
+  <set name="mpConsume" val="8"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1000"/>
-  <set name="reuseDelay" val="600000"/>
+  <set name="reuseDelay" val="120000"/>
   <set name="skillTime" val="1000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="600000"/>
+  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
 
   <for>
-    <effect name="Buff" time="600" count="1" val="0" stackOrder="1" stackType="possession"/>
+    <player hp="60">
+         <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
+                <mul order="0x50" stat="pAtk" val="1.125"/>
+                <add order="0x40" stat="rCrit" val="200"/>
+	 </effect>
+    </player> 
   </for>
 
 </skill>
@@ -1845,22 +1850,22 @@
 </skill>
 <skill id="298" levels="1" name="Totem Spirit Rabbit">
 
-  <set name="mpConsume" val="18"/>
+  <set name="mpConsume" val="29"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1000"/>
-  <set name="reuseDelay" val="600000"/>
+  <set name="reuseDelay" val="120000"/>
   <set name="skillTime" val="1000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="600000"/>
+  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
 
   <for>
-    <effect name="Buff" time="600" count="1" val="0" stackOrder="1" stackType="possession">
-	 <mul order='0x50' stat="pAtk" val="0.8"/>
-	 <add order='0x40' stat="rEvas" val="10"/>
-	 <add order='0x40' stat="runSpd" val="15"/>
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
+	 <mul order='0x50' stat="pAtk" val="0.2"/>
+	 <add order='0x40' stat="rEvas" val="25"/>
+	 <add order='0x40' stat="runSpd" val="65"/>
 	</effect>
   </for>
 
