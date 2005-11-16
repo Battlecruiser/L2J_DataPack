@@ -113,7 +113,6 @@ class Quest (JQuest) :
 
 
  def onTalk (Self,npc,st):
-
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
@@ -123,23 +122,19 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("cond","0")
    if npcId == 7623 and int(st.get("step"))==0 and int(st.get("onlyone"))==0 :
-        if int(st.get("cond")) < 15 :
-          if (st.getPlayer().getClassId().getId() == 0x01 or st.getPlayer().getClassId().getId() == 0x2f or st.getPlayer().getClassId().getId() == 0x13 or st.getPlayer().getClassId().getId() == 0x20) :
-            if st.getPlayer().getLevel() >= 39 :
-              htmltext = "7623-03.htm"
-            else:
-              htmltext = "7623-01.htm"
-              st.exitQuest(1)
-          else:
-            htmltext = "7623-02.htm"
+      if st.getPlayer().getClassId().getId() in [0x01,0x2f,0x13,0x20] :
+         if st.getPlayer().getLevel() >= 39 :
+            htmltext = "7623-03.htm"
+         else:
+            htmltext = "7623-01.htm"
             st.exitQuest(1)
-        else:
-          htmltext = "7623-02.htm"
-          st.exitQuest(1)
+      else:
+         htmltext = "7623-02.htm"
+         st.exitQuest(1)
    elif npcId == 7623 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest has already been completed.</body></html>"
    elif npcId == 7623 and int(st.get("step"))==1 :
-      if st.getQuestItemsCount(ORDER_GLUDIO_ID)>0 and st.getQuestItemsCount(ORDER_DION_ID)>0 and st.getQuestItemsCount(ORDER_GIRAN_ID)>0 and st.getQuestItemsCount(ORDER_OREN_ID)>0 and st.getQuestItemsCount(ORDER_ADEN_ID)>0 :
+      if st.getQuestItemsCount(ORDER_GLUDIO_ID) and st.getQuestItemsCount(ORDER_DION_ID) and st.getQuestItemsCount(ORDER_GIRAN_ID) and st.getQuestItemsCount(ORDER_OREN_ID) and st.getQuestItemsCount(ORDER_ADEN_ID) :
         if st.getQuestItemsCount(PUNCHERS_SHARD_ID) == 10 and st.getQuestItemsCount(NOBLE_ANTS_FEELER_ID) == 10 and st.getQuestItemsCount(DRONES_CHITIN_ID) == 10 and st.getQuestItemsCount(DEADSEEKER_FANG_ID) == 10 and st.getQuestItemsCount(OVERLORD_NECKLACE_ID) == 10 and st.getQuestItemsCount(CRIMSONBINDS_CHAIN_ID) == 10 and st.getQuestItemsCount(CHIEFS_AMULET_ID) == 10 and st.getQuestItemsCount(TEMPERED_EYE_MEAT_ID) == 10 and st.getQuestItemsCount(TAMRIN_ORCS_RING_ID) == 10 and st.getQuestItemsCount(TAMRIN_ORCS_ARROW_ID) == 10 :
           htmltext = "7623-13.htm"
         else:
@@ -197,5 +192,5 @@ STARTED.addTalkId(7623)
 
 for i in DROPLIST.keys():
     STARTED.addKillId(i)
-    
+
 print "importing quests: 222: Test Of Duelist"
