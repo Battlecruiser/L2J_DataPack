@@ -166,11 +166,11 @@ INSERT INTO weapon VALUES (183,'Mystic Staff','lrhand','true',1040,2,2,'wood','d
 INSERT INTO weapon VALUES (184,'Conjuror''s Staff','lrhand','true',1030,2,2,'oriharukon','d',50,20,'blunt',4,4.00000,0,0,0,325,0,43,95,644000,1170,'true');
 INSERT INTO weapon VALUES (185,'Staff of Mana','lrhand','true',1040,2,2,'wood','d',50,20,'blunt',4,4.00000,0,0,0,325,0,43,95,644000,1170,'true');
 INSERT INTO weapon VALUES (186,'Staff of Magic','lrhand','true',1020,2,2,'wood','d',62,20,'blunt',4,4.00000,0,0,0,325,0,52,95,967000,1758,'true');
-INSERT INTO weapon VALUES (187,'Atuba Hammer','rhand','true',1010,3,3,'fine_steel','d',90,20,'blunt',4,4.00000,0,0,0,325,0,72,95,1800000,3272,'true');
+INSERT INTO weapon VALUES (187,'Atuba Hammer','lrhand','true',1010,3,3,'fine_steel','d',90,20,'blunt',4,4.00000,0,0,0,325,0,72,95,1800000,3272,'true');
 INSERT INTO weapon VALUES (188,'Ghost Staff','lrhand','true',1000,3,3,'wood','d',90,20,'blunt',4,4.00000,0,0,0,325,0,72,95,1800000,3272,'true');
 INSERT INTO weapon VALUES (189,'Staff of Life','rhand','true',1180,3,3,'wood','d',74,20,'blunt',4,4.00000,0,0,0,379,0,72,85,1800000,3272,'true');
 INSERT INTO weapon VALUES (190,'Atuba Mace','lrhand','true',1010,3,3,'fine_steel','d',90,20,'blunt',4,4.00000,0,0,0,325,0,72,95,1800000,3272,'true');
-INSERT INTO weapon VALUES (191,'Heavy Doom Hammer','rhand','true',1020,2,2,'fine_steel','c',103,20,'blunt',4,4.00000,0,0,0,325,0,81,95,2290000,916,'true');
+INSERT INTO weapon VALUES (191,'Heavy Doom Hammer','lrhand','true',1020,2,2,'fine_steel','c',103,20,'blunt',4,4.00000,0,0,0,325,0,81,95,2290000,916,'true');
 INSERT INTO weapon VALUES (192,'Crystal Staff','lrhand','true',1020,2,2,'crystal','c',103,20,'blunt',4,4.00000,0,0,0,325,0,81,95,2290000,916,'true');
 INSERT INTO weapon VALUES (193,'Stick of Faith','rhand','true',1160,2,2,'wood','c',85,20,'blunt',4,4.00000,0,0,0,379,0,81,85,2290000,916,'true');
 INSERT INTO weapon VALUES (194,'Heavy Doom Axe','lrhand','true',1010,2,2,'fine_steel','c',103,20,'blunt',4,4.00000,0,0,0,325,0,81,95,2290000,916,'true');
