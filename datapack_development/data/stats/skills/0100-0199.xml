@@ -1156,9 +1156,9 @@
 <table name="#Tab-pAtk"> 2 2.5 3 </table>
 <!-- Done by dc, completed by NewAge -->
 <for>
-  <effect name="Buff" time="90" count="1" val="0">
+  <effect name="Buff" time="30" count="1" val="0">
     <mul  order='0x50' stat='pAtk' val="#Tab-pAtk">
-    <player hp="30"/>
+    <player hp="20"/>
     </mul>
  </effect>
 </for>
