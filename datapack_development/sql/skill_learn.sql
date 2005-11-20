@@ -927,3 +927,14 @@ INSERT INTO skill_learn VALUES (7522,54);
 INSERT INTO skill_learn VALUES (7522,55);
 INSERT INTO skill_learn VALUES (7522,56);
 INSERT INTO skill_learn VALUES (7522,57);
+--fix for dion 
+INSERT INTO skill_learn VALUES (7057,53);
+INSERT INTO skill_learn VALUES (7057,54);
+INSERT INTO skill_learn VALUES (7057,55);
+INSERT INTO skill_learn VALUES (7057,56);
+INSERT INTO skill_learn VALUES (7057,57);
+INSERT INTO skill_learn VALUES (7058,53);
+INSERT INTO skill_learn VALUES (7058,54);
+INSERT INTO skill_learn VALUES (7058,55);
+INSERT INTO skill_learn VALUES (7058,56);
+INSERT INTO skill_learn VALUES (7058,57);
