@@ -7891,3 +7891,63 @@ INSERT INTO merchant_buylists VALUES (5262,44275,85,33);
 INSERT INTO merchant_buylists VALUES (5256,18975,85,34);
 INSERT INTO merchant_buylists VALUES (5250,8855,85,35);
 INSERT INTO merchant_buylists VALUES (5589,115,85,36); 
+
+-- Merc Manager Greenspan - Gludio
+INSERT INTO merchant_buylists VALUES (3960,30000,123161,1); 
+INSERT INTO merchant_buylists VALUES (3960,40000,123161,2); 
+INSERT INTO merchant_buylists VALUES (3960,50000,123161,3); 
+INSERT INTO merchant_buylists VALUES (3960,150000,123161,4); 
+INSERT INTO merchant_buylists VALUES (3960,150000,123161,5); 
+INSERT INTO merchant_buylists VALUES (3960,30000,123161,6); 
+INSERT INTO merchant_buylists VALUES (3960,40000,123161,7); 
+INSERT INTO merchant_buylists VALUES (3960,50000,123161,8); 
+INSERT INTO merchant_buylists VALUES (3960,150000,123161,9); 
+INSERT INTO merchant_buylists VALUES (3960,150000,123161,10); 
+
+-- Merc Manager Sanford - Dion
+INSERT INTO merchant_buylists VALUES (3973,30000,123171,1); 
+INSERT INTO merchant_buylists VALUES (3974,40000,123171,2); 
+INSERT INTO merchant_buylists VALUES (3975,50000,123171,3); 
+INSERT INTO merchant_buylists VALUES (3976,150000,123171,4); 
+INSERT INTO merchant_buylists VALUES (3977,150000,123171,5); 
+INSERT INTO merchant_buylists VALUES (3978,30000,123171,6); 
+INSERT INTO merchant_buylists VALUES (3979,40000,123171,7); 
+INSERT INTO merchant_buylists VALUES (3980,50000,123171,8); 
+INSERT INTO merchant_buylists VALUES (3981,150000,123171,9); 
+INSERT INTO merchant_buylists VALUES (3982,150000,123171,10); 
+
+-- Merc Manager Morrison - Oren
+INSERT INTO merchant_buylists VALUES (3999,30000,123181,1); 
+INSERT INTO merchant_buylists VALUES (4000,40000,123181,2); 
+INSERT INTO merchant_buylists VALUES (4001,50000,123181,3); 
+INSERT INTO merchant_buylists VALUES (4002,150000,123181,4); 
+INSERT INTO merchant_buylists VALUES (4003,150000,123181,5); 
+INSERT INTO merchant_buylists VALUES (4004,30000,123181,6); 
+INSERT INTO merchant_buylists VALUES (4005,40000,123181,7); 
+INSERT INTO merchant_buylists VALUES (4006,50000,123181,8); 
+INSERT INTO merchant_buylists VALUES (4007,150000,123181,9); 
+INSERT INTO merchant_buylists VALUES (4008,150000,123181,10); 
+
+-- Merc Manager Arvid - Giran
+INSERT INTO merchant_buylists VALUES (3986,30000,123191,1); 
+INSERT INTO merchant_buylists VALUES (3987,40000,123191,2); 
+INSERT INTO merchant_buylists VALUES (3988,50000,123191,3); 
+INSERT INTO merchant_buylists VALUES (3989,150000,123191,4); 
+INSERT INTO merchant_buylists VALUES (3990,150000,123191,5); 
+INSERT INTO merchant_buylists VALUES (3991,30000,123191,6); 
+INSERT INTO merchant_buylists VALUES (3992,40000,123191,7); 
+INSERT INTO merchant_buylists VALUES (3993,50000,123191,8); 
+INSERT INTO merchant_buylists VALUES (3994,150000,123191,9); 
+INSERT INTO merchant_buylists VALUES (3995,150000,123191,10); 
+
+-- Merc Manager Eldon - Aden
+INSERT INTO merchant_buylists VALUES (4012,30000,123201,1); 
+INSERT INTO merchant_buylists VALUES (4013,40000,123201,2); 
+INSERT INTO merchant_buylists VALUES (4014,50000,123201,3); 
+INSERT INTO merchant_buylists VALUES (4015,150000,123201,4); 
+INSERT INTO merchant_buylists VALUES (4016,150000,123201,5); 
+INSERT INTO merchant_buylists VALUES (4017,30000,123201,6); 
+INSERT INTO merchant_buylists VALUES (4018,40000,123201,7); 
+INSERT INTO merchant_buylists VALUES (4019,50000,123201,8); 
+INSERT INTO merchant_buylists VALUES (4020,150000,123201,9); 
+INSERT INTO merchant_buylists VALUES (4021,150000,123201,10); 
