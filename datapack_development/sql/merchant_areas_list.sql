@@ -27,4 +27,5 @@ INSERT INTO `merchant_areas_list` VALUES (10,'Oren',0.15,0);
 INSERT INTO `merchant_areas_list` VALUES (11,'Ivory Tower',0.15,0);
 INSERT INTO `merchant_areas_list` VALUES (12,'Harden\'s Ac.',0.20,0);
 INSERT INTO `merchant_areas_list` VALUES (13,'Aden',0.20,0);
+INSERT INTO `merchant_areas_list` VALUES (14,'Castle',0.0,0);
 
