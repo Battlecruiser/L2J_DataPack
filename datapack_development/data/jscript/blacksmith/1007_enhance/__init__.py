@@ -169,8 +169,7 @@ class Quest (JQuest) :
             st.takeItems(281,1)
             st.takeItems(4634,1)
             st.takeItems(2131,250)
-            st.giveItems(4810,1)
-            st.setEnchantLevel(4810,EnchantLevel2)
+            st.giveItems(4810,1,EnchantLevel2)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -180,8 +179,7 @@ class Quest (JQuest) :
             st.takeItems(281,1)
             st.takeItems(4645,1)
             st.takeItems(2131,250)
-            st.giveItems(4811,1)
-            st.setEnchantLevel(4811,EnchantLevel3)
+            st.giveItems(4811,1,EnchantLevel3)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -191,8 +189,7 @@ class Quest (JQuest) :
             st.takeItems(281,1)
             st.takeItems(4656,1)
             st.takeItems(2131,250)
-            st.giveItems(4812,1)
-            st.setEnchantLevel(4812,EnchantLevel4)
+            st.giveItems(4812,1,EnchantLevel4)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -202,8 +199,7 @@ class Quest (JQuest) :
             st.takeItems(285,1)
             st.takeItems(4635,1)
             st.takeItems(2131,350)
-            st.giveItems(4816,1)
-            st.setEnchantLevel(4816,EnchantLevel5)
+            st.giveItems(4816,1,EnchantLevel5)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -213,8 +209,7 @@ class Quest (JQuest) :
             st.takeItems(285,1)
             st.takeItems(4646,1)
             st.takeItems(2131,350)
-            st.giveItems(4817,1)
-            st.setEnchantLevel(4817,EnchantLevel6)
+            st.giveItems(4817,1,EnchantLevel6)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -224,8 +219,7 @@ class Quest (JQuest) :
             st.takeItems(285,1)
             st.takeItems(4657,1)
             st.takeItems(2131,350)
-            st.giveItems(4818,1)
-            st.setEnchantLevel(4818,EnchantLevel7)
+            st.giveItems(4818,1,EnchantLevel7)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -235,8 +229,7 @@ class Quest (JQuest) :
             st.takeItems(283,1)
             st.takeItems(4636,1)
             st.takeItems(2131,450)
-            st.giveItems(4819,1)
-            st.setEnchantLevel(4819,EnchantLevel8)
+            st.giveItems(4819,1,EnchantLevel8)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -246,8 +239,7 @@ class Quest (JQuest) :
             st.takeItems(283,1)
             st.takeItems(4647,1)
             st.takeItems(2131,450)
-            st.giveItems(4820,1)
-            st.setEnchantLevel(4820,EnchantLevel9)
+            st.giveItems(4820,1,EnchantLevel9)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -257,8 +249,7 @@ class Quest (JQuest) :
             st.takeItems(283,1)
             st.takeItems(4658,1)
             st.takeItems(2131,450)
-            st.giveItems(4821,1)
-            st.setEnchantLevel(4821,EnchantLevel10)
+            st.giveItems(4821,1,EnchantLevel10)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -268,8 +259,7 @@ class Quest (JQuest) :
             st.takeItems(286,1)
             st.takeItems(4637,1)
             st.takeItems(2131,550)
-            st.giveItems(4822,1)
-            st.setEnchantLevel(4822,EnchantLevel11)
+            st.giveItems(4822,1,EnchantLevel11)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -279,8 +269,7 @@ class Quest (JQuest) :
             st.takeItems(286,1)
             st.takeItems(4648,1)
             st.takeItems(2131,550)
-            st.giveItems(4823,1)
-            st.setEnchantLevel(4823,EnchantLevel12)
+            st.giveItems(4823,1,EnchantLevel12)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -290,8 +279,7 @@ class Quest (JQuest) :
             st.takeItems(286,1)
             st.takeItems(4659,1)
             st.takeItems(2131,550)
-            st.giveItems(4824,1)
-            st.setEnchantLevel(4824,EnchantLevel13)
+            st.giveItems(4824,1,EnchantLevel13)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -301,8 +289,7 @@ class Quest (JQuest) :
             st.takeItems(284,1)
             st.takeItems(4639,1)
             st.takeItems(2132,222)
-            st.giveItems(4825,1)
-            st.setEnchantLevel(4825,EnchantLevel14)
+            st.giveItems(4825,1,EnchantLevel14)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -312,8 +299,7 @@ class Quest (JQuest) :
             st.takeItems(284,1)
             st.takeItems(4650,1)
             st.takeItems(2132,222)
-            st.giveItems(4826,1)
-            st.setEnchantLevel(4826,EnchantLevel15)
+            st.giveItems(4826,1,EnchantLevel15)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -323,8 +309,7 @@ class Quest (JQuest) :
             st.takeItems(284,1)
             st.takeItems(4661,1)
             st.takeItems(2132,222)
-            st.giveItems(4827,1)
-            st.setEnchantLevel(4827,EnchantLevel16)
+            st.giveItems(4827,1,EnchantLevel16)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -334,8 +319,7 @@ class Quest (JQuest) :
             st.takeItems(287,1)
             st.takeItems(4639,1)
             st.takeItems(2132,339)
-            st.giveItems(4828,1)
-            st.setEnchantLevel(4828,EnchantLevel17)
+            st.giveItems(4828,1,EnchantLevel17)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -345,8 +329,7 @@ class Quest (JQuest) :
             st.takeItems(287,1)
             st.takeItems(4650,1)
             st.takeItems(2132,339)
-            st.giveItems(4829,1)
-            st.setEnchantLevel(4829,EnchantLevel18)
+            st.giveItems(4829,1,EnchantLevel18)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -356,8 +339,7 @@ class Quest (JQuest) :
             st.takeItems(287,1)
             st.takeItems(4661,1)
             st.takeItems(2132,339)
-            st.giveItems(4830,1)
-            st.setEnchantLevel(4830,EnchantLevel19)
+            st.giveItems(4830,1,EnchantLevel19)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -368,8 +350,7 @@ class Quest (JQuest) :
             st.takeItems(72,1)
             st.takeItems(4634,1)
             st.takeItems(2131,250)
-            st.giveItems(4681,1)
-            st.setEnchantLevel(4681,EnchantLevel20)
+            st.giveItems(4681,1,EnchantLevel20)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -379,8 +360,7 @@ class Quest (JQuest) :
             st.takeItems(72,1)
             st.takeItems(4645,1)
             st.takeItems(2131,250)
-            st.giveItems(4682,1)
-            st.setEnchantLevel(4682,EnchantLevel21)
+            st.giveItems(4682,1,EnchantLevel21)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -390,8 +370,7 @@ class Quest (JQuest) :
             st.takeItems(72,1)
             st.takeItems(4656,1)
             st.takeItems(2131,250)
-            st.giveItems(4683,1)
-            st.setEnchantLevel(4683,EnchantLevel22)
+            st.giveItems(4683,1,EnchantLevel22)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -401,8 +380,7 @@ class Quest (JQuest) :
             st.takeItems(74,1)
             st.takeItems(4635,1)
             st.takeItems(2131,350)
-            st.giveItems(4687,1)
-            st.setEnchantLevel(4687,EnchantLevel23)
+            st.giveItems(4687,1,EnchantLevel23)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -412,8 +390,7 @@ class Quest (JQuest) :
             st.takeItems(74,1)
             st.takeItems(4646,1)
             st.takeItems(2131,350)
-            st.giveItems(4688,1)
-            st.setEnchantLevel(4688,EnchantLevel24)
+            st.giveItems(4688,1,EnchantLevel24)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -423,8 +400,7 @@ class Quest (JQuest) :
             st.takeItems(74,1)
             st.takeItems(4657,1)
             st.takeItems(2131,350)
-            st.giveItems(4689,1)
-            st.setEnchantLevel(4689,EnchantLevel25)
+            st.giveItems(4689,1,EnchantLevel25)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -434,8 +410,7 @@ class Quest (JQuest) :
             st.takeItems(131,1)
             st.takeItems(4635,1)
             st.takeItems(2131,350)
-            st.giveItems(4690,1)
-            st.setEnchantLevel(4690,EnchantLevel26)
+            st.giveItems(4690,1,EnchantLevel26)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -445,8 +420,7 @@ class Quest (JQuest) :
             st.takeItems(131,1)
             st.takeItems(4646,1)
             st.takeItems(2131,350)
-            st.giveItems(4691,1)
-            st.setEnchantLevel(4691,EnchantLevel27)
+            st.giveItems(4691,1,EnchantLevel27)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -456,8 +430,7 @@ class Quest (JQuest) :
             st.takeItems(131,1)
             st.takeItems(4657,1)
             st.takeItems(2131,350)
-            st.giveItems(4692,1)
-            st.setEnchantLevel(4692,EnchantLevel28)
+            st.giveItems(4692,1,EnchantLevel28)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -467,8 +440,7 @@ class Quest (JQuest) :
             st.takeItems(133,1)
             st.takeItems(4635,1)
             st.takeItems(2131,350)
-            st.giveItems(4693,1)
-            st.setEnchantLevel(4693,EnchantLevel29)
+            st.giveItems(4693,1,EnchantLevel29)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -478,8 +450,7 @@ class Quest (JQuest) :
             st.takeItems(133,1)
             st.takeItems(4646,1)
             st.takeItems(2131,350)
-            st.giveItems(4694,1)
-            st.setEnchantLevel(4694,EnchantLevel30)
+            st.giveItems(4694,1,EnchantLevel30)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -489,8 +460,7 @@ class Quest (JQuest) :
             st.takeItems(133,1)
             st.takeItems(4657,1)
             st.takeItems(2131,350)
-            st.giveItems(4695,1)
-            st.setEnchantLevel(4695,EnchantLevel31)
+            st.giveItems(4695,1,EnchantLevel31)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -500,8 +470,7 @@ class Quest (JQuest) :
             st.takeItems(73,1)
             st.takeItems(4635,1)
             st.takeItems(2131,350)
-            st.giveItems(4684,1)
-            st.setEnchantLevel(4684,EnchantLevel32)
+            st.giveItems(4684,1,EnchantLevel32)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -511,8 +480,7 @@ class Quest (JQuest) :
             st.takeItems(73,1)
             st.takeItems(4646,1)
             st.takeItems(2131,350)
-            st.giveItems(4685,1)
-            st.setEnchantLevel(4685,EnchantLevel33)
+            st.giveItems(4685,1,EnchantLevel33)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -522,8 +490,7 @@ class Quest (JQuest) :
             st.takeItems(73,1)
             st.takeItems(4657,1)
             st.takeItems(2131,350)
-            st.giveItems(4686,1)
-            st.setEnchantLevel(4686,EnchantLevel34)
+            st.giveItems(4686,1,EnchantLevel34)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -533,8 +500,7 @@ class Quest (JQuest) :
             st.takeItems(76,1)
             st.takeItems(4636,1)
             st.takeItems(2131,450)
-            st.giveItems(4699,1)
-            st.setEnchantLevel(4699,EnchantLevel35)
+            st.giveItems(4699,1,EnchantLevel35)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -544,8 +510,7 @@ class Quest (JQuest) :
             st.takeItems(76,1)
             st.takeItems(4647,1)
             st.takeItems(2131,450)
-            st.giveItems(4700,1)
-            st.setEnchantLevel(4700,EnchantLevel36)
+            st.giveItems(4700,1,EnchantLevel36)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -555,8 +520,7 @@ class Quest (JQuest) :
             st.takeItems(76,1)
             st.takeItems(4658,1)
             st.takeItems(2131,450)
-            st.giveItems(4701,1)
-            st.setEnchantLevel(4701,EnchantLevel37)
+            st.giveItems(4701,1,EnchantLevel37)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -566,8 +530,7 @@ class Quest (JQuest) :
             st.takeItems(77,1)
             st.takeItems(4636,1)
             st.takeItems(2131,450)
-            st.giveItems(4702,1)
-            st.setEnchantLevel(4702,EnchantLevel38)
+            st.giveItems(4702,1,EnchantLevel38)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -577,8 +540,7 @@ class Quest (JQuest) :
             st.takeItems(77,1)
             st.takeItems(4647,1)
             st.takeItems(2131,450)
-            st.giveItems(4703,1)
-            st.setEnchantLevel(4703,EnchantLevel39)
+            st.giveItems(4703,1,EnchantLevel39)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -588,8 +550,7 @@ class Quest (JQuest) :
             st.takeItems(77,1)
             st.takeItems(4658,1)
             st.takeItems(2131,450)
-            st.giveItems(4704,1)
-            st.setEnchantLevel(4704,EnchantLevel40)
+            st.giveItems(4704,1,EnchantLevel40)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -599,8 +560,7 @@ class Quest (JQuest) :
             st.takeItems(134,1)
             st.takeItems(4636,1)
             st.takeItems(2131,450)
-            st.giveItems(4705,1)
-            st.setEnchantLevel(4705,EnchantLevel41)
+            st.giveItems(4705,1,EnchantLevel41)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -610,8 +570,7 @@ class Quest (JQuest) :
             st.takeItems(134,1)
             st.takeItems(4647,1)
             st.takeItems(2131,450)
-            st.giveItems(4706,1)
-            st.setEnchantLevel(4706,EnchantLevel42)
+            st.giveItems(4706,1,EnchantLevel42)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -621,8 +580,7 @@ class Quest (JQuest) :
             st.takeItems(134,1)
             st.takeItems(4658,1)
             st.takeItems(2131,450)
-            st.giveItems(4707,1)
-            st.setEnchantLevel(4707,EnchantLevel43)
+            st.giveItems(4707,1,EnchantLevel43)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -632,8 +590,7 @@ class Quest (JQuest) :
             st.takeItems(132,1)
             st.takeItems(4636,1)
             st.takeItems(2131,450)
-            st.giveItems(6307,1)
-            st.setEnchantLevel(6307,EnchantLevel44)
+            st.giveItems(6307,1,EnchantLevel44)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -643,8 +600,7 @@ class Quest (JQuest) :
             st.takeItems(132,1)
             st.takeItems(4647,1)
             st.takeItems(2131,450)
-            st.giveItems(6308,1)
-            st.setEnchantLevel(6308,EnchantLevel45)
+            st.giveItems(6308,1,EnchantLevel45)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -654,8 +610,7 @@ class Quest (JQuest) :
             st.takeItems(132,1)
             st.takeItems(4658,1)
             st.takeItems(2131,450)
-            st.giveItems(6309,1)
-            st.setEnchantLevel(6309,EnchantLevel46)
+            st.giveItems(6309,1,EnchantLevel46)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -665,8 +620,7 @@ class Quest (JQuest) :
             st.takeItems(79,1)
             st.takeItems(4639,1)
             st.takeItems(2132,339)
-            st.giveItems(4717,1)
-            st.setEnchantLevel(4717,EnchantLevel47)
+            st.giveItems(4717,1,EnchantLevel47)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -676,8 +630,7 @@ class Quest (JQuest) :
             st.takeItems(79,1)
             st.takeItems(4650,1)
             st.takeItems(2132,339)
-            st.giveItems(4718,1)
-            st.setEnchantLevel(4718,EnchantLevel48)
+            st.giveItems(4718,1,EnchantLevel48)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -687,8 +640,7 @@ class Quest (JQuest) :
             st.takeItems(79,1)
             st.takeItems(4661,1)
             st.takeItems(2132,339)
-            st.giveItems(4719,1)
-            st.setEnchantLevel(4719,EnchantLevel49)
+            st.giveItems(4719,1,EnchantLevel49)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -698,8 +650,7 @@ class Quest (JQuest) :
             st.takeItems(142,1)
             st.takeItems(4638,1)
             st.takeItems(2132,222)
-            st.giveItems(4714,1)
-            st.setEnchantLevel(4714,EnchantLevel50)
+            st.giveItems(4714,1,EnchantLevel50)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -709,8 +660,7 @@ class Quest (JQuest) :
             st.takeItems(142,1)
             st.takeItems(4649,1)
             st.takeItems(2132,222)
-            st.giveItems(4715,1)
-            st.setEnchantLevel(4715,EnchantLevel51)
+            st.giveItems(4715,1,EnchantLevel51)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -720,8 +670,7 @@ class Quest (JQuest) :
             st.takeItems(142,1)
             st.takeItems(4660,1)
             st.takeItems(2132,222)
-            st.giveItems(4716,1)
-            st.setEnchantLevel(4716,EnchantLevel52)
+            st.giveItems(4716,1,EnchantLevel52)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -731,8 +680,7 @@ class Quest (JQuest) :
             st.takeItems(78,1)
             st.takeItems(4638,1)
             st.takeItems(2132,222)
-            st.giveItems(4723,1)
-            st.setEnchantLevel(4723,EnchantLevel53)
+            st.giveItems(4723,1,EnchantLevel53)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -742,8 +690,7 @@ class Quest (JQuest) :
             st.takeItems(78,1)
             st.takeItems(4649,1)
             st.takeItems(2132,222)
-            st.giveItems(4724,1)
-            st.setEnchantLevel(4724,EnchantLevel54)
+            st.giveItems(4724,1,EnchantLevel54)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -753,8 +700,7 @@ class Quest (JQuest) :
             st.takeItems(78,1)
             st.takeItems(4660,1)
             st.takeItems(2132,222)
-            st.giveItems(4725,1)
-            st.setEnchantLevel(4725,EnchantLevel55)
+            st.giveItems(4725,1,EnchantLevel55)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -765,8 +711,7 @@ class Quest (JQuest) :
             st.takeItems(162,1)
             st.takeItems(4636,1)
             st.takeItems(2131,450)
-            st.giveItems(4741,1)
-            st.setEnchantLevel(4741,EnchantLevel56)
+            st.giveItems(4741,1,EnchantLevel56)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -776,8 +721,7 @@ class Quest (JQuest) :
             st.takeItems(162,1)
             st.takeItems(4647,1)
             st.takeItems(2131,450)
-            st.giveItems(4742,1)
-            st.setEnchantLevel(4742,EnchantLevel57)
+            st.giveItems(4742,1,EnchantLevel57)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -787,8 +731,7 @@ class Quest (JQuest) :
             st.takeItems(162,1)
             st.takeItems(4658,1)
             st.takeItems(2131,450)
-            st.giveItems(4743,1)
-            st.setEnchantLevel(4732,EnchantLevel58)
+            st.giveItems(4743,1,EnchantLevel58)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -798,8 +741,7 @@ class Quest (JQuest) :
             st.takeItems(2503,1)
             st.takeItems(4637,1)
             st.takeItems(2131,550)
-            st.giveItems(4744,1)
-            st.setEnchantLevel(4744,EnchantLevel59)
+            st.giveItems(4744,1,EnchantLevel59)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -809,8 +751,7 @@ class Quest (JQuest) :
             st.takeItems(2503,1)
             st.takeItems(4648,1)
             st.takeItems(2131,550)
-            st.giveItems(4745,1)
-            st.setEnchantLevel(4745,EnchantLevel60)
+            st.giveItems(4745,1,EnchantLevel60)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -820,8 +761,7 @@ class Quest (JQuest) :
             st.takeItems(2503,1)
             st.takeItems(4659,1)
             st.takeItems(2131,550)
-            st.giveItems(4746,1)
-            st.setEnchantLevel(4746,EnchantLevel61)
+            st.giveItems(4746,1,EnchantLevel61)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -831,8 +771,7 @@ class Quest (JQuest) :
             st.takeItems(192,1)
             st.takeItems(4634,1)
             st.takeItems(2131,250)
-            st.giveItems(4867,1)
-            st.setEnchantLevel(4867,EnchantLevel62)
+            st.giveItems(4867,1,EnchantLevel62)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -842,8 +781,7 @@ class Quest (JQuest) :
             st.takeItems(192,1)
             st.takeItems(4645,1)
             st.takeItems(2131,250)
-            st.giveItems(4868,1)
-            st.setEnchantLevel(4868,EnchantLevel63)
+            st.giveItems(4868,1,EnchantLevel63)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -853,8 +791,7 @@ class Quest (JQuest) :
             st.takeItems(192,1)
             st.takeItems(4656,1)
             st.takeItems(2131,250)
-            st.giveItems(4869,1)
-            st.setEnchantLevel(4869,EnchantLevel64)
+            st.giveItems(4869,1,EnchantLevel64)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -864,8 +801,7 @@ class Quest (JQuest) :
             st.takeItems(195,1)
             st.takeItems(4635,1)
             st.takeItems(2131,350)
-            st.giveItems(4873,1)
-            st.setEnchantLevel(4873,EnchantLevel65)
+            st.giveItems(4873,1,EnchantLevel65)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -875,8 +811,7 @@ class Quest (JQuest) :
             st.takeItems(195,1)
             st.takeItems(4646,1)
             st.takeItems(2131,350)
-            st.giveItems(4874,1)
-            st.setEnchantLevel(4874,EnchantLevel66)
+            st.giveItems(4874,1,EnchantLevel66)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -886,8 +821,7 @@ class Quest (JQuest) :
             st.takeItems(195,1)
             st.takeItems(4657,1)
             st.takeItems(2131,350)
-            st.giveItems(4875,1)
-            st.setEnchantLevel(4875,EnchantLevel67)
+            st.giveItems(4875,1,EnchantLevel67)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -897,8 +831,7 @@ class Quest (JQuest) :
             st.takeItems(197,1)
             st.takeItems(4636,1)
             st.takeItems(2131,450)
-            st.giveItems(4876,1)
-            st.setEnchantLevel(4876,EnchantLevel68)
+            st.giveItems(4876,1,EnchantLevel68)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -908,8 +841,7 @@ class Quest (JQuest) :
             st.takeItems(197,1)
             st.takeItems(4647,1)
             st.takeItems(2131,450)
-            st.giveItems(4877,1)
-            st.setEnchantLevel(4877,EnchantLevel69)
+            st.giveItems(4877,1,EnchantLevel69)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -919,8 +851,7 @@ class Quest (JQuest) :
             st.takeItems(197,1)
             st.takeItems(4658,1)
             st.takeItems(2131,450)
-            st.giveItems(4878,1)
-            st.setEnchantLevel(4878,EnchantLevel70)
+            st.giveItems(4878,1,EnchantLevel70)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -930,8 +861,7 @@ class Quest (JQuest) :
             st.takeItems(200,1)
             st.takeItems(4636,1)
             st.takeItems(2131,450)
-            st.giveItems(4882,1)
-            st.setEnchantLevel(4882,EnchantLevel71)
+            st.giveItems(4882,1,EnchantLevel71)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -941,8 +871,7 @@ class Quest (JQuest) :
             st.takeItems(200,1)
             st.takeItems(4647,1)
             st.takeItems(2131,450)
-            st.giveItems(4883,1)
-            st.setEnchantLevel(4883,EnchantLevel72)
+            st.giveItems(4883,1,EnchantLevel72)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -951,9 +880,8 @@ class Quest (JQuest) :
             EnchantLevel73 = st.getEnchantLevel(200)
             st.takeItems(200,1)
             st.takeItems(4658,1)
-            st.takeItems(57,600000)
-            st.giveItems(4884,1)
-            st.setEnchantLevel(4884,EnchantLevel73)
+            st.takeItems(2131,450)
+            st.giveItems(4884,1,EnchantLevel73)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -963,8 +891,7 @@ class Quest (JQuest) :
             st.takeItems(203,1)
             st.takeItems(4636,1)
             st.takeItems(2131,450)
-            st.giveItems(4885,1)
-            st.setEnchantLevel(4885,EnchantLevel74)
+            st.giveItems(4885,1,EnchantLevel74)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -974,8 +901,7 @@ class Quest (JQuest) :
             st.takeItems(203,1)
             st.takeItems(4647,1)
             st.takeItems(2131,450)
-            st.giveItems(4886,1)
-            st.setEnchantLevel(4886,EnchantLevel75)
+            st.giveItems(4886,1,EnchantLevel75)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -985,8 +911,7 @@ class Quest (JQuest) :
             st.takeItems(203,1)
             st.takeItems(4658,1)
             st.takeItems(2131,450)
-            st.giveItems(4887,1)
-            st.setEnchantLevel(4887,EnchantLevel76)
+            st.giveItems(4887,1,EnchantLevel76)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -996,8 +921,7 @@ class Quest (JQuest) :
             st.takeItems(205,1)
             st.takeItems(4637,1)
             st.takeItems(2131,550)
-            st.giveItems(4891,1)
-            st.setEnchantLevel(4891,EnchantLevel77)
+            st.giveItems(4891,1,EnchantLevel77)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1007,8 +931,7 @@ class Quest (JQuest) :
             st.takeItems(205,1)
             st.takeItems(4648,1)
             st.takeItems(2131,550)
-            st.giveItems(4892,1)
-            st.setEnchantLevel(4892,EnchantLevel78)
+            st.giveItems(4892,1,EnchantLevel78)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1018,8 +941,7 @@ class Quest (JQuest) :
             st.takeItems(205,1)
             st.takeItems(4659,1)
             st.takeItems(2131,550)
-            st.giveItems(4893,1)
-            st.setEnchantLevel(4893,EnchantLevel79)
+            st.giveItems(4893,1,EnchantLevel79)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1029,8 +951,7 @@ class Quest (JQuest) :
             st.takeItems(206,1)
             st.takeItems(4637,1)
             st.takeItems(2131,550)
-            st.giveItems(4894,1)
-            st.setEnchantLevel(4894,EnchantLevel80)
+            st.giveItems(4894,1,EnchantLevel80)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1040,8 +961,7 @@ class Quest (JQuest) :
             st.takeItems(206,1)
             st.takeItems(4648,1)
             st.takeItems(2131,550)
-            st.giveItems(4895,1)
-            st.setEnchantLevel(4895,EnchantLevel81)
+            st.giveItems(4895,1,EnchantLevel81)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1051,8 +971,7 @@ class Quest (JQuest) :
             st.takeItems(206,1)
             st.takeItems(4659,1)
             st.takeItems(2131,550)
-            st.giveItems(4896,1)
-            st.setEnchantLevel(4896,EnchantLevel82)
+            st.giveItems(4896,1,EnchantLevel82)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1062,8 +981,7 @@ class Quest (JQuest) :
             st.takeItems(204,1)
             st.takeItems(4637,1)
             st.takeItems(2131,550)
-            st.giveItems(4888,1)
-            st.setEnchantLevel(4888,EnchantLevel83)
+            st.giveItems(4888,1,EnchantLevel83)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1073,8 +991,7 @@ class Quest (JQuest) :
             st.takeItems(204,1)
             st.takeItems(4648,1)
             st.takeItems(2131,550)
-            st.giveItems(4889,1)
-            st.setEnchantLevel(4889,EnchantLevel84)
+            st.giveItems(4889,1,EnchantLevel84)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1084,8 +1001,7 @@ class Quest (JQuest) :
             st.takeItems(204,1)
             st.takeItems(4659,1)
             st.takeItems(2131,550)
-            st.giveItems(4890,1)
-            st.setEnchantLevel(4890,EnchantLevel85)
+            st.giveItems(4890,1,EnchantLevel85)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1095,8 +1011,7 @@ class Quest (JQuest) :
             st.takeItems(92,1)
             st.takeItems(4638,1)
             st.takeItems(2132,222)
-            st.giveItems(4897,1)
-            st.setEnchantLevel(4897,EnchantLevel86)
+            st.giveItems(4897,1,EnchantLevel86)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1106,8 +1021,7 @@ class Quest (JQuest) :
             st.takeItems(92,1)
             st.takeItems(4649,1)
             st.takeItems(2132,222)
-            st.giveItems(4898,1)
-            st.setEnchantLevel(4898,EnchantLevel87)
+            st.giveItems(4898,1,EnchantLevel87)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1117,8 +1031,7 @@ class Quest (JQuest) :
             st.takeItems(92,1)
             st.takeItems(4660,1)
             st.takeItems(2132,222)
-            st.giveItems(4899,1)
-            st.setEnchantLevel(4899,EnchantLevel88)
+            st.giveItems(4899,1,EnchantLevel88)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1128,8 +1041,7 @@ class Quest (JQuest) :
             st.takeItems(210,1)
             st.takeItems(4639,1)
             st.takeItems(2132,339)
-            st.giveItems(4900,1)
-            st.setEnchantLevel(4900,EnchantLevel89)
+            st.giveItems(4900,1,EnchantLevel89)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1139,8 +1051,7 @@ class Quest (JQuest) :
             st.takeItems(210,1)
             st.takeItems(4650,1)
             st.takeItems(2132,339)
-            st.giveItems(4901,1)
-            st.setEnchantLevel(4901,EnchantLevel90)
+            st.giveItems(4901,1,EnchantLevel90)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1150,8 +1061,7 @@ class Quest (JQuest) :
             st.takeItems(210,1)
             st.takeItems(4661,1)
             st.takeItems(2132,339)
-            st.giveItems(4902,1)
-            st.setEnchantLevel(4902,EnchantLevel91)
+            st.giveItems(4902,1,EnchantLevel91)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1161,8 +1071,7 @@ class Quest (JQuest) :
             st.takeItems(91,1)
             st.takeItems(4638,1)
             st.takeItems(2132,222)
-            st.giveItems(4747,1)
-            st.setEnchantLevel(4747,EnchantLevel92)
+            st.giveItems(4747,1,EnchantLevel92)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1172,8 +1081,7 @@ class Quest (JQuest) :
             st.takeItems(91,1)
             st.takeItems(4649,1)
             st.takeItems(2132,222)
-            st.giveItems(4748,1)
-            st.setEnchantLevel(4748,EnchantLevel93)
+            st.giveItems(4748,1,EnchantLevel93)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1183,8 +1091,7 @@ class Quest (JQuest) :
             st.takeItems(91,1)
             st.takeItems(4660,1)
             st.takeItems(2132,222)
-            st.giveItems(4749,1)
-            st.setEnchantLevel(4749,EnchantLevel94)
+            st.giveItems(4749,1,EnchantLevel94)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1194,8 +1101,7 @@ class Quest (JQuest) :
             st.takeItems(175,1)
             st.takeItems(4639,1)
             st.takeItems(2132,339)
-            st.giveItems(4753,1)
-            st.setEnchantLevel(4753,EnchantLevel95)
+            st.giveItems(4753,1,EnchantLevel95)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1205,8 +1111,7 @@ class Quest (JQuest) :
             st.takeItems(175,1)
             st.takeItems(4650,1)
             st.takeItems(2132,339)
-            st.giveItems(4754,1)
-            st.setEnchantLevel(4754,EnchantLevel96)
+            st.giveItems(4754,1,EnchantLevel96)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1216,8 +1121,7 @@ class Quest (JQuest) :
             st.takeItems(175,1)
             st.takeItems(4661,1)
             st.takeItems(2132,339)
-            st.giveItems(4755,1)
-            st.setEnchantLevel(4755,EnchantLevel97)
+            st.giveItems(4755,1,EnchantLevel97)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1227,8 +1131,7 @@ class Quest (JQuest) :
             st.takeItems(171,1)
             st.takeItems(4639,1)
             st.takeItems(2132,339)
-            st.giveItems(4750,1)
-            st.setEnchantLevel(4750,EnchantLevel98)
+            st.giveItems(4750,1,EnchantLevel98)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1238,8 +1141,7 @@ class Quest (JQuest) :
             st.takeItems(171,1)
             st.takeItems(4650,1)
             st.takeItems(2132,339)
-            st.giveItems(4751,1)
-            st.setEnchantLevel(4751,EnchantLevel99)
+            st.giveItems(4751,1,EnchantLevel99)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1249,8 +1151,7 @@ class Quest (JQuest) :
             st.takeItems(171,1)
             st.takeItems(4661,1)
             st.takeItems(2132,339)
-            st.giveItems(4752,1)
-            st.setEnchantLevel(4752,EnchantLevel100)
+            st.giveItems(4752,1,EnchantLevel100)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1261,8 +1162,7 @@ class Quest (JQuest) :
             st.takeItems(228,1)
             st.takeItems(4637,1)
             st.takeItems(2131,550)
-            st.giveItems(4774,1)
-            st.setEnchantLevel(4774,EnchantLevel101)
+            st.giveItems(4774,1,EnchantLevel101)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1272,8 +1172,7 @@ class Quest (JQuest) :
             st.takeItems(228,1)
             st.takeItems(4648,1)
             st.takeItems(2131,550)
-            st.giveItems(4775,1)
-            st.setEnchantLevel(4775,EnchantLevel102)
+            st.giveItems(4775,1,EnchantLevel102)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1283,8 +1182,7 @@ class Quest (JQuest) :
             st.takeItems(228,1)
             st.takeItems(4659,1)
             st.takeItems(2131,550)
-            st.giveItems(4776,1)
-            st.setEnchantLevel(4776,EnchantLevel103)
+            st.giveItems(4776,1,EnchantLevel103)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1294,8 +1192,7 @@ class Quest (JQuest) :
             st.takeItems(233,1)
             st.takeItems(4636,1)
             st.takeItems(2131,450)
-            st.giveItems(4771,1)
-            st.setEnchantLevel(4771,EnchantLevel104)
+            st.giveItems(4771,1,EnchantLevel104)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1305,8 +1202,7 @@ class Quest (JQuest) :
             st.takeItems(233,1)
             st.takeItems(4647,1)
             st.takeItems(2131,450)
-            st.giveItems(4772,1)
-            st.setEnchantLevel(4772,EnchantLevel105)
+            st.giveItems(4772,1,EnchantLevel105)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1316,8 +1212,7 @@ class Quest (JQuest) :
             st.takeItems(233,1)
             st.takeItems(4658,1)
             st.takeItems(2131,450)
-            st.giveItems(4773,1)
-            st.setEnchantLevel(4773,EnchantLevel106)
+            st.giveItems(4773,1,EnchantLevel106)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1327,8 +1222,7 @@ class Quest (JQuest) :
             st.takeItems(231,1)
             st.takeItems(4636,1)
             st.takeItems(2131,450)
-            st.giveItems(4768,1)
-            st.setEnchantLevel(4768,EnchantLevel107)
+            st.giveItems(4768,1,EnchantLevel107)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1338,8 +1232,7 @@ class Quest (JQuest) :
             st.takeItems(231,1)
             st.takeItems(4647,1)
             st.takeItems(2131,450)
-            st.giveItems(4769,1)
-            st.setEnchantLevel(4769,EnchantLevel108)
+            st.giveItems(4769,1,EnchantLevel108)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1349,8 +1242,7 @@ class Quest (JQuest) :
             st.takeItems(231,1)
             st.takeItems(4658,1)
             st.takeItems(2131,450)
-            st.giveItems(4770,1)
-            st.setEnchantLevel(4770,EnchantLevel109)
+            st.giveItems(4770,1,EnchantLevel109)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1360,8 +1252,7 @@ class Quest (JQuest) :
             st.takeItems(229,1)
             st.takeItems(4638,1)
             st.takeItems(2132,222)
-            st.giveItems(4777,1)
-            st.setEnchantLevel(4777,EnchantLevel110)
+            st.giveItems(4777,1,EnchantLevel110)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1371,8 +1262,7 @@ class Quest (JQuest) :
             st.takeItems(229,1)
             st.takeItems(4649,1)
             st.takeItems(2132,222)
-            st.giveItems(4778,1)
-            st.setEnchantLevel(4778,EnchantLevel111)
+            st.giveItems(4778,1,EnchantLevel111)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1382,8 +1272,7 @@ class Quest (JQuest) :
             st.takeItems(229,1)
             st.takeItems(4660,1)
             st.takeItems(2132,222)
-            st.giveItems(4779,1)
-            st.setEnchantLevel(4779,EnchantLevel112)
+            st.giveItems(4779,1,EnchantLevel112)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1393,8 +1282,7 @@ class Quest (JQuest) :
             st.takeItems(234,1)
             st.takeItems(4639,1)
             st.takeItems(2132,339)
-            st.giveItems(4780,1)
-            st.setEnchantLevel(4780,EnchantLevel113)
+            st.giveItems(4780,1,EnchantLevel113)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1404,8 +1292,7 @@ class Quest (JQuest) :
             st.takeItems(234,1)
             st.takeItems(4650,1)
             st.takeItems(2132,339)
-            st.giveItems(4781,1)
-            st.setEnchantLevel(4781,EnchantLevel114)
+            st.giveItems(4781,1,EnchantLevel114)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1415,8 +1302,7 @@ class Quest (JQuest) :
             st.takeItems(234,1)
             st.takeItems(4661,1)
             st.takeItems(2132,339)
-            st.giveItems(4782,1)
-            st.setEnchantLevel(4782,EnchantLevel115)
+            st.giveItems(4782,1,EnchantLevel115)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1427,8 +1313,7 @@ class Quest (JQuest) :
             st.takeItems(301,1)
             st.takeItems(4636,1)
             st.takeItems(2131,450)
-            st.giveItems(4846,1)
-            st.setEnchantLevel(4846,EnchantLevel116)
+            st.giveItems(4846,1,EnchantLevel116)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1438,8 +1323,7 @@ class Quest (JQuest) :
             st.takeItems(301,1)
             st.takeItems(4647,1)
             st.takeItems(2131,450)
-            st.giveItems(4847,1)
-            st.setEnchantLevel(4847,EnchantLevel117)
+            st.giveItems(4847,1,EnchantLevel117)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1449,8 +1333,7 @@ class Quest (JQuest) :
             st.takeItems(301,1)
             st.takeItems(4659,1)
             st.takeItems(2131,450)
-            st.giveItems(4848,1)
-            st.setEnchantLevel(4848,EnchantLevel118)
+            st.giveItems(4848,1,EnchantLevel118)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1460,8 +1343,7 @@ class Quest (JQuest) :
             st.takeItems(303,1)
             st.takeItems(4636,1)
             st.takeItems(2131,450)
-            st.giveItems(4849,1)
-            st.setEnchantLevel(4849,EnchantLevel119)
+            st.giveItems(4849,1,EnchantLevel119)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1471,8 +1353,7 @@ class Quest (JQuest) :
             st.takeItems(303,1)
             st.takeItems(4647,1)
             st.takeItems(2131,450)
-            st.giveItems(4850,1)
-            st.setEnchantLevel(4850,EnchantLevel120)
+            st.giveItems(4850,1,EnchantLevel120)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1482,8 +1363,7 @@ class Quest (JQuest) :
             st.takeItems(303,1)
             st.takeItems(4658,1)
             st.takeItems(2131,450)
-            st.giveItems(4851,1)
-            st.setEnchantLevel(4851,EnchantLevel121)
+            st.giveItems(4851,1,EnchantLevel121)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1493,8 +1373,7 @@ class Quest (JQuest) :
             st.takeItems(299,1)
             st.takeItems(4637,1)
             st.takeItems(2131,550)
-            st.giveItems(4852,1)
-            st.setEnchantLevel(4852,EnchantLevel122)
+            st.giveItems(4852,1,EnchantLevel122)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1504,8 +1383,7 @@ class Quest (JQuest) :
             st.takeItems(299,1)
             st.takeItems(4648,1)
             st.takeItems(2131,550)
-            st.giveItems(4853,1)
-            st.setEnchantLevel(4853,EnchantLevel123)
+            st.giveItems(4853,1,EnchantLevel123)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1515,8 +1393,7 @@ class Quest (JQuest) :
             st.takeItems(299,1)
             st.takeItems(4659,1)
             st.takeItems(2131,550)
-            st.giveItems(4854,1)
-            st.setEnchantLevel(4854,EnchantLevel124)
+            st.giveItems(4854,1,EnchantLevel124)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1526,8 +1403,7 @@ class Quest (JQuest) :
             st.takeItems(300,1)
             st.takeItems(4638,1)
             st.takeItems(2132,222)
-            st.giveItems(4855,1)
-            st.setEnchantLevel(4855,EnchantLevel125)
+            st.giveItems(4855,1,EnchantLevel125)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1537,8 +1413,7 @@ class Quest (JQuest) :
             st.takeItems(300,1)
             st.takeItems(4649,1)
             st.takeItems(2132,222)
-            st.giveItems(4856,1)
-            st.setEnchantLevel(4856,EnchantLevel126)
+            st.giveItems(4856,1,EnchantLevel126)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1548,8 +1423,7 @@ class Quest (JQuest) :
             st.takeItems(300,1)
             st.takeItems(4660,1)
             st.takeItems(2132,222)
-            st.giveItems(4857,1)
-            st.setEnchantLevel(4857,EnchantLevel127)
+            st.giveItems(4857,1,EnchantLevel127)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1559,8 +1433,7 @@ class Quest (JQuest) :
             st.takeItems(97,1)
             st.takeItems(4639,1)
             st.takeItems(2132,339)
-            st.giveItems(4858,1)
-            st.setEnchantLevel(4858,EnchantLevel128)
+            st.giveItems(4858,1,EnchantLevel128)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1570,8 +1443,7 @@ class Quest (JQuest) :
             st.takeItems(97,1)
             st.takeItems(4650,1)
             st.takeItems(2132,339)
-            st.giveItems(4859,1)
-            st.setEnchantLevel(4859,EnchantLevel129)
+            st.giveItems(4859,1,EnchantLevel129)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1581,8 +1453,7 @@ class Quest (JQuest) :
             st.takeItems(97,1)
             st.takeItems(4661,1)
             st.takeItems(2132,339)
-            st.giveItems(4860,1)
-            st.setEnchantLevel(4860,EnchantLevel130)
+            st.giveItems(4860,1,EnchantLevel130)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1593,8 +1464,7 @@ class Quest (JQuest) :
             st.takeItems(265,1)
             st.takeItems(4635,1)
             st.takeItems(2131,350)
-            st.giveItems(4792,1)
-            st.setEnchantLevel(4792,EnchantLevel131)
+            st.giveItems(4792,1,EnchantLevel131)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1604,8 +1474,7 @@ class Quest (JQuest) :
             st.takeItems(265,1)
             st.takeItems(4646,1)
             st.takeItems(2131,350)
-            st.giveItems(4793,1)
-            st.setEnchantLevel(4793,EnchantLevel132)
+            st.giveItems(4793,1,EnchantLevel132)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1615,8 +1484,7 @@ class Quest (JQuest) :
             st.takeItems(265,1)
             st.takeItems(4657,1)
             st.takeItems(2131,350)
-            st.giveItems(4794,1)
-            st.setEnchantLevel(4794,EnchantLevel133)
+            st.giveItems(4794,1,EnchantLevel133)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1626,8 +1494,7 @@ class Quest (JQuest) :
             st.takeItems(266,1)
             st.takeItems(4637,1)
             st.takeItems(2131,550)
-            st.giveItems(4795,1)
-            st.setEnchantLevel(4795,EnchantLevel134)
+            st.giveItems(4795,1,EnchantLevel134)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1637,8 +1504,7 @@ class Quest (JQuest) :
             st.takeItems(266,1)
             st.takeItems(4648,1)
             st.takeItems(2131,550)
-            st.giveItems(4796,1)
-            st.setEnchantLevel(4796,EnchantLevel135)
+            st.giveItems(4796,1,EnchantLevel135)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1648,8 +1514,7 @@ class Quest (JQuest) :
             st.takeItems(266,1)
             st.takeItems(4659,1)
             st.takeItems(2131,550)
-            st.giveItems(4797,1)
-            st.setEnchantLevel(4797,EnchantLevel136)
+            st.giveItems(4797,1,EnchantLevel136)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1659,8 +1524,7 @@ class Quest (JQuest) :
             st.takeItems(267,1)
             st.takeItems(4638,1)
             st.takeItems(2132,222)
-            st.giveItems(4801,1)
-            st.setEnchantLevel(4801,EnchantLevel137)
+            st.giveItems(4801,1,EnchantLevel137)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1670,8 +1534,7 @@ class Quest (JQuest) :
             st.takeItems(267,1)
             st.takeItems(4649,1)
             st.takeItems(2132,222)
-            st.giveItems(4802,1)
-            st.setEnchantLevel(4802,EnchantLevel138)
+            st.giveItems(4802,1,EnchantLevel138)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1681,8 +1544,7 @@ class Quest (JQuest) :
             st.takeItems(267,1)
             st.takeItems(4660,1)
             st.takeItems(2132,222)
-            st.giveItems(4803,1)
-            st.setEnchantLevel(4803,EnchantLevel139)
+            st.giveItems(4803,1,EnchantLevel139)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1692,8 +1554,7 @@ class Quest (JQuest) :
             st.takeItems(268,1)
             st.takeItems(4639,1)
             st.takeItems(2132,339)
-            st.giveItems(4804,1)
-            st.setEnchantLevel(4804,EnchantLevel140)
+            st.giveItems(4804,1,EnchantLevel140)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1703,8 +1564,7 @@ class Quest (JQuest) :
             st.takeItems(268,1)
             st.takeItems(4650,1)
             st.takeItems(2132,339)
-            st.giveItems(4805,1)
-            st.setEnchantLevel(4805,EnchantLevel141)
+            st.giveItems(4805,1,EnchantLevel141)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1714,8 +1574,7 @@ class Quest (JQuest) :
             st.takeItems(268,1)
             st.takeItems(4661,1)
             st.takeItems(2132,339)
-            st.giveItems(4806,1)
-            st.setEnchantLevel(4806,EnchantLevel142)
+            st.giveItems(4806,1,EnchantLevel142)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1725,8 +1584,7 @@ class Quest (JQuest) :
             st.takeItems(145,1)
             st.takeItems(4636,1)
             st.takeItems(2131,450)
-            st.giveItems(6310,1)
-            st.setEnchantLevel(6310,EnchantLevel143)
+            st.giveItems(6310,1,EnchantLevel143)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1736,8 +1594,7 @@ class Quest (JQuest) :
             st.takeItems(145,1)
             st.takeItems(4647,1)
             st.takeItems(2131,450)
-            st.giveItems(6311,1)
-            st.setEnchantLevel(6311,EnchantLevel144)
+            st.giveItems(6311,1,EnchantLevel144)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1747,8 +1604,7 @@ class Quest (JQuest) :
             st.takeItems(145,1)
             st.takeItems(4658,1)
             st.takeItems(2131,450)
-            st.giveItems(6312,1)
-            st.setEnchantLevel(6312,EnchantLevel145)
+            st.giveItems(6312,1,EnchantLevel145)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1758,8 +1614,7 @@ class Quest (JQuest) :
             st.takeItems(84,1)
             st.takeItems(4636,1)
             st.takeItems(2131,450)
-            st.giveItems(6313,1)
-            st.setEnchantLevel(6313,EnchantLevel146)
+            st.giveItems(6313,1,EnchantLevel146)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1769,8 +1624,7 @@ class Quest (JQuest) :
             st.takeItems(84,1)
             st.takeItems(4647,1)
             st.takeItems(2131,450)
-            st.giveItems(6314,1)
-            st.setEnchantLevel(6314,EnchantLevel147)
+            st.giveItems(6314,1,EnchantLevel147)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
@@ -1780,8 +1634,7 @@ class Quest (JQuest) :
             st.takeItems(84,1)
             st.takeItems(4658,1)
             st.takeItems(2131,450)
-            st.giveItems(6315,1)
-            st.setEnchantLevel(6315,EnchantLevel148)
+            st.giveItems(6315,1,EnchantLevel148)
             htmltext = "Item has been succesfully enhanced!"
         else :
             htmltext = "You do not have enough materials."
