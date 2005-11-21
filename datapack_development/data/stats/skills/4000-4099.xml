@@ -446,6 +446,7 @@
   </for>
 </skill>
 <skill id="4035" levels="7" name="Poison">
+  <table name="#dmg"> 18 29 40 53 68 83 98 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -462,10 +463,11 @@
   <set name="castRange" val="600"/>
   <set name="displayId" val="0129"/>
   <for>
-    <effect count="6" name="DamOverTime" time="5" val="#power" abnormal="poison"/>
+    <effect count="6" name="DamOverTime" time="5" val="#dmg" abnormal="poison"/>
   </for>
 </skill>
 <skill id="4036" levels="7" name="Poison">
+  <table name="#dmg"> 29 44 59 74 89 104 119 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -483,7 +485,7 @@
   <set name="castRange" val="500"/>
   <set name="displayId" val="0129"/>
   <for>
-    <effect count="6" name="DamOverTime" time="5" val="#power" abnormal="poison"/>
+    <effect count="6" name="DamOverTime" time="5" val="#dmg" abnormal="poison"/>
   </for>
 </skill>
 <skill id="4037" levels="2" name="Weaken P.Atk">
