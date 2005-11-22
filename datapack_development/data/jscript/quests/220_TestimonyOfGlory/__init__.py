@@ -18,7 +18,7 @@ SCEPTER_OF_BREKA_ID = 3211
 SCEPTER_OF_ENKU_ID = 3212
 SCEPTER_OF_VUKU_ID = 3213
 SCEPTER_OF_TUREK_ID = 3214
-SCEPTER_OF_LENNUNT_ID = 3215
+SCEPTER_OF_TUNATH_ID = 3215
 MANAKIAS_LETTER1_ID = 3228
 MANAKIAS_LETTER2_ID = 3229
 KASMANS_LETTER1_ID = 3230
@@ -69,7 +69,7 @@ class Quest (JQuest) :
             st.takeItems(SCEPTER_OF_ENKU_ID,1)
             st.takeItems(SCEPTER_OF_VUKU_ID,1)
             st.takeItems(SCEPTER_OF_TUREK_ID,1)
-            st.takeItems(SCEPTER_OF_LENNUNT_ID,1)
+            st.takeItems(SCEPTER_OF_TUNATH_ID,1)
             st.takeItems(CHIANTAS_ORDER1_ID,1)
             st.takeItems(MANAKIAS_LETTER1_ID,st.getQuestItemsCount(MANAKIAS_LETTER1_ID))
             st.takeItems(MANAKIAS_LETTER2_ID,st.getQuestItemsCount(MANAKIAS_LETTER2_ID))
@@ -81,7 +81,7 @@ class Quest (JQuest) :
             st.takeItems(SCEPTER_OF_ENKU_ID,1)
             st.takeItems(SCEPTER_OF_VUKU_ID,1)
             st.takeItems(SCEPTER_OF_TUREK_ID,1)
-            st.takeItems(SCEPTER_OF_LENNUNT_ID,1)
+            st.takeItems(SCEPTER_OF_TUNATH_ID,1)
             st.takeItems(CHIANTAS_ORDER1_ID,1)
             st.takeItems(MANAKIAS_LETTER1_ID,st.getQuestItemsCount(MANAKIAS_LETTER1_ID))
             st.takeItems(MANAKIAS_LETTER2_ID,st.getQuestItemsCount(MANAKIAS_LETTER2_ID))
@@ -122,12 +122,12 @@ class Quest (JQuest) :
           elif st.getQuestItemsCount(SCEPTER_OF_TUREK_ID) == 0 and st.getQuestItemsCount(KASMANS_LETTER2_ID) :
             htmltext = "7501-07.htm"
     elif event == "7501_3" :
-          if st.getQuestItemsCount(SCEPTER_OF_LENNUNT_ID) :
+          if st.getQuestItemsCount(SCEPTER_OF_TUNATH_ID) :
             htmltext = "7501-08.htm"
-          elif st.getQuestItemsCount(SCEPTER_OF_LENNUNT_ID) == 0 and st.getQuestItemsCount(KASMANS_LETTER3_ID) == 0 :
+          elif st.getQuestItemsCount(SCEPTER_OF_TUNATH_ID) == 0 and st.getQuestItemsCount(KASMANS_LETTER3_ID) == 0 :
             htmltext = "7501-09.htm"
             st.giveItems(KASMANS_LETTER3_ID,1)
-          elif st.getQuestItemsCount(SCEPTER_OF_LENNUNT_ID) == 0 and st.getQuestItemsCount(KASMANS_LETTER3_ID) :
+          elif st.getQuestItemsCount(SCEPTER_OF_TUNATH_ID) == 0 and st.getQuestItemsCount(KASMANS_LETTER3_ID) :
             htmltext = "7501-10.htm"
     elif event == "7615_1" :
           htmltext = "7615-03.htm"
@@ -155,7 +155,7 @@ class Quest (JQuest) :
           st.takeItems(KASMANS_LETTER2_ID,1)
     elif event == "7618_1" :
           htmltext = "7618-03.htm"
-          st.giveItems(SCEPTER_OF_LENNUNT_ID,1)
+          st.giveItems(SCEPTER_OF_TUNATH_ID,1)
           st.takeItems(KASMANS_LETTER3_ID,1)
     elif event == "7619_1" :
           htmltext = "7619-03.htm"
@@ -211,9 +211,9 @@ class Quest (JQuest) :
       htmltext = "7514-10.htm"
    elif npcId == 7642 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(VOKIYANS_ORDER2_ID) :
       htmltext = "7642-01.htm"
-   elif npcId == 7642 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and ((st.getQuestItemsCount(SCEPTER_OF_BREKA_ID)+st.getQuestItemsCount(SCEPTER_OF_VUKU_ID)+st.getQuestItemsCount(SCEPTER_OF_TUREK_ID)+st.getQuestItemsCount(SCEPTER_OF_LENNUNT_ID)+st.getQuestItemsCount(SCEPTER_OF_ENKU_ID))<5) :
+   elif npcId == 7642 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and ((st.getQuestItemsCount(SCEPTER_OF_BREKA_ID)+st.getQuestItemsCount(SCEPTER_OF_VUKU_ID)+st.getQuestItemsCount(SCEPTER_OF_TUREK_ID)+st.getQuestItemsCount(SCEPTER_OF_TUNATH_ID)+st.getQuestItemsCount(SCEPTER_OF_ENKU_ID))<5) :
       htmltext = "7642-04.htm"
-   elif npcId == 7642 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(SCEPTER_OF_BREKA_ID) and st.getQuestItemsCount(SCEPTER_OF_VUKU_ID) and st.getQuestItemsCount(SCEPTER_OF_TUREK_ID) and st.getQuestItemsCount(SCEPTER_OF_LENNUNT_ID) and st.getQuestItemsCount(SCEPTER_OF_ENKU_ID) :
+   elif npcId == 7642 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(SCEPTER_OF_BREKA_ID) and st.getQuestItemsCount(SCEPTER_OF_VUKU_ID) and st.getQuestItemsCount(SCEPTER_OF_TUREK_ID) and st.getQuestItemsCount(SCEPTER_OF_TUNATH_ID) and st.getQuestItemsCount(SCEPTER_OF_ENKU_ID) :
       htmltext = "7642-05.htm"
    elif npcId == 7642 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER2_ID) :
       if st.getPlayer().getLevel() < 38 :
@@ -294,11 +294,11 @@ class Quest (JQuest) :
       htmltext = "7617-06.htm"
    elif npcId == 7617 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and (st.getQuestItemsCount(CHIANTAS_ORDER2_ID) or st.getQuestItemsCount(CHIANTAS_ORDER3_ID) or st.getQuestItemsCount(SCEPTER_BOX_ID)) :
       htmltext = "7617-07.htm"
-   elif npcId == 7618 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(SCEPTER_OF_LENNUNT_ID)==0 and st.getQuestItemsCount(KASMANS_LETTER3_ID)==0 :
+   elif npcId == 7618 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(SCEPTER_OF_TUNATH_ID)==0 and st.getQuestItemsCount(KASMANS_LETTER3_ID)==0 :
       htmltext = "7618-01.htm"
-   elif npcId == 7618 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(SCEPTER_OF_LENNUNT_ID)==0 and st.getQuestItemsCount(KASMANS_LETTER3_ID) :
+   elif npcId == 7618 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(SCEPTER_OF_TUNATH_ID)==0 and st.getQuestItemsCount(KASMANS_LETTER3_ID) :
       htmltext = "7618-02.htm"
-   elif npcId == 7618 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(SCEPTER_OF_LENNUNT_ID) :
+   elif npcId == 7618 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(SCEPTER_OF_TUNATH_ID) :
       htmltext = "7618-04.htm"
    elif npcId == 7618 and int(st.get("cond"))==1 and (st.getQuestItemsCount(CHIANTAS_ORDER2_ID) or st.getQuestItemsCount(CHIANTAS_ORDER3_ID) or st.getQuestItemsCount(SCEPTER_BOX_ID)) :
       htmltext = "7618-05.htm"
@@ -564,7 +564,7 @@ STARTED.addQuestDrop(7615,SCEPTER_OF_BREKA_ID,1)
 STARTED.addQuestDrop(7616,SCEPTER_OF_ENKU_ID,1)
 STARTED.addQuestDrop(7619,SCEPTER_OF_VUKU_ID,1)
 STARTED.addQuestDrop(7617,SCEPTER_OF_TUREK_ID,1)
-STARTED.addQuestDrop(7618,SCEPTER_OF_LENNUNT_ID,1)
+STARTED.addQuestDrop(7618,SCEPTER_OF_TUNATH_ID,1)
 STARTED.addQuestDrop(7642,CHIANTAS_ORDER1_ID,1)
 STARTED.addQuestDrop(7515,MANAKIAS_LETTER1_ID,1)
 STARTED.addQuestDrop(7515,MANAKIAS_LETTER2_ID,1)
