@@ -1,5 +1,6 @@
 # Maked by Mr. Have fun! Version 0.2
-print "importing quests: 233: Test Of Warspirit"
+# rewritten by Rolarga, Version 0.3
+
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -42,381 +43,324 @@ KIRUNAS_THIGH_BONE_ID = 2909
 INSECT_DIAGRAM_BOOK_ID = 2904
 VIVIANTES_LETTER_ID = 2903
 
+NPC=[7030,7436,7507,7510,7515,7630,7649,7682]
+
+STATS=["cond","step","Orim","Racoy","Perkiron","Manakia","Manakia_Queen"]
+
+
+#npcId=[[accepted values for this part],variable for the current part from the mob,maxcount,chance in %, items to give(one per kill max)]
+DROPLIST={
+213:	[[2,3,4],"Orim",10,100,[PORTAS_EYE_ID]],
+214:	[[2,3,4],"Orim",10,100,[EXCUROS_SCALE_ID]],
+215:	[[2,3,4],"Orim",10,100,[MORDEOS_TALON_ID]],
+601:	[[1],"step",13,50,[TAMLIN_ORC_HEAD_ID]],
+602:	[[1],"step",13,50,[TAMLIN_ORC_HEAD_ID]],
+5108:	[[2],"Manakia_Queen",1,100,[HERMODTS_SKULL_ID]],
+581:	[[2,3,4,5,6],"Perkiron",1,50,[TONARS_RIB_BONE_ID,TONARS_SPINE_ID,TONARS_ARM_BONE_ID,TONARS_SKULL_ID,TONARS_THIGH_BONE_ID]],
+582:	[[2,3,4,5,6],"Perkiron",1,50,[TONARS_SKULL_ID,TONARS_ARM_BONE_ID,TONARS_RIB_BONE_ID,TONARS_SPINE_ID,TONARS_THIGH_BONE_ID]],
+158:	[[2,3,4,5],"Manakia",1,50,[HERMODTS_RIB_BONE_ID,HERMODTS_SPINE_ID,HERMODTS_ARM_BONE_ID,HERMODTS_THIGH_BONE_ID]],
+89:		[[4,5,6,7,8,9],"Racoy",1,100,[[KIRUNAS_THIGH_BONE_ID,KIRUNAS_ARM_BONE_ID],[KIRUNAS_SPINE_ID,KIRUNAS_RIB_BONE_ID],[KIRUNAS_SKULL_ID]]],
+90:		[[4,5,6,7,8,9],"Racoy",1,100,[[KIRUNAS_THIGH_BONE_ID,KIRUNAS_ARM_BONE_ID],[KIRUNAS_SPINE_ID,KIRUNAS_RIB_BONE_ID],[KIRUNAS_SKULL_ID]]]
+}
+
+# Mob List initialisation for the different Parts
+PART2_MOBS = [601,602]
+PART1_MOBS = []
+
+for mob in DROPLIST.keys():
+	if mob in PART2_MOBS:
+		continue
+	PART1_MOBS.append(mob)
+
+
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+	def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+	
+	def onEvent (self,event,st) :
+		htmltext = event
+		if event == "1" :
+			htmltext = "7510-05.htm"
+			for var in STATS:
+				st.set(var,"1")
+			st.setState(PART1)
+			st.playSound("ItemSound.quest_accept")
+		elif event == "7630_1" :
+			htmltext = "7630-02.htm"
+		elif event == "7630_2" :
+			htmltext = "7630-03.htm"
+		elif event == "7630_3" :
+			htmltext = "7630-04.htm"
+			st.giveItems(ORIMS_CONTRACT_ID,1)
+			st.set("Orim","2")
+		elif event == "7682_1" :
+			htmltext = "7682-02.htm"
+			st.giveItems(PEKIRONS_TOTEM_ID,1)
+			st.set("Perkiron","2")
+		elif event == "7515_1" :
+			htmltext = "7515-02.htm"
+			st.giveItems(MANAKIAS_TOTEM_ID,1)
+			st.set("Manakia","2")
+			st.set("Manakia_Queen","2")
+		elif event == "7507_1" :
+			htmltext = "7507-02.htm"
+			st.giveItems(RACOYS_TOTEM_ID,1)
+			st.set("Racoy","2")
+		elif event == "7030_1" :
+			htmltext = "7030-02.htm"
+		elif event == "7030_2" :
+			htmltext = "7030-03.htm"
+		elif event == "7030_3" :
+			htmltext = "7030-04.htm"
+			st.giveItems(VIVIANTES_LETTER_ID,1)
+			st.set("Racoy","3")
+		elif event == "7649_1" :
+			htmltext = "7649-02.htm"
+		elif event == "7649_2" :
+			st.takeItems(WARSPIRIT_TOTEM_ID,-1)
+			st.takeItems(BRAKIS_REMAINS2_ID,-1)
+			st.takeItems(HERMODTS_REMAINS2_ID,-1)
+			st.takeItems(KIRUNAS_REMAINS2_ID,-1)
+			st.addExpAndSp(23000,2900)
+			st.takeItems(TONARS_REMAINS2_ID,-1)
+			st.giveItems(MARK_OF_WARSPIRIT_ID,1)
+			htmltext = "7649-03.htm"
+			for var in STATS:
+				st.unset(var)
+			st.setState(COMPLETED)
+			st.playSound("ItemSound.quest_finish")
+		return htmltext
 
- def onEvent (self,event,st) :
-    htmltext = event
-    if event == "1" :
-        htmltext = "7510-05.htm"
-        st.set("cond","1")
-        st.setState(STARTED)
-        st.playSound("ItemSound.quest_accept")
-    elif event == "7630_1" :
-          htmltext = "7630-02.htm"
-    elif event == "7630_2" :
-          htmltext = "7630-03.htm"
-    elif event == "7630_3" :
-          htmltext = "7630-04.htm"
-          st.giveItems(ORIMS_CONTRACT_ID,1)
-    elif event == "7682_1" :
-          htmltext = "7682-02.htm"
-          st.giveItems(PEKIRONS_TOTEM_ID,1)
-    elif event == "7515_1" :
-          htmltext = "7515-02.htm"
-          st.giveItems(MANAKIAS_TOTEM_ID,1)
-    elif event == "7507_1" :
-          htmltext = "7507-02.htm"
-          st.giveItems(RACOYS_TOTEM_ID,1)
-    elif event == "7030_1" :
-          htmltext = "7030-02.htm"
-    elif event == "7030_2" :
-          htmltext = "7030-03.htm"
-    elif event == "7030_3" :
-          htmltext = "7030-04.htm"
-          st.giveItems(VIVIANTES_LETTER_ID,1)
-    elif event == "7649_1" :
-          htmltext = "7649-02.htm"
-    elif event == "7649_2" :
-          if st.getGameTicks() != int(st.get("id")) :
-            st.set("id",str(st.getGameTicks()))
-            st.takeItems(WARSPIRIT_TOTEM_ID,1)
-            st.takeItems(BRAKIS_REMAINS2_ID,1)
-            st.takeItems(HERMODTS_REMAINS2_ID,1)
-            st.takeItems(KIRUNAS_REMAINS2_ID,1)
-            st.takeItems(TAMLIN_ORC_HEAD_ID,st.getQuestItemsCount(TAMLIN_ORC_HEAD_ID))
-            st.addExpAndSp(23000,2900)
-            st.giveItems(MARK_OF_WARSPIRIT_ID,1)
-            st.takeItems(TONARS_REMAINS2_ID,1)
-            htmltext = "7649-03.htm"
-            st.set("cond","0")
-            st.set("onlyone","1")
-            st.setState(COMPLETED)
-            st.playSound("ItemSound.quest_finish")
-    return htmltext
 
 
- def onTalk (Self,npc,st):
+	def onTalk(self,npc,st):
+		npcId=npc.getNpcId()
+		id =  st.getState()
+		htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
+		# first time when a player join the quest
+		if id == CREATED:
+			for var in STATS:
+				st.set(var,"0")
+			if st.getPlayer().getClassId().getId() == 0x32:
+				if st.getPlayer().getLevel() > 38:
+					htmltext = "7510-04.htm"
+				else :
+					htmltext = "7510-03.htm"
+					st.exitQuest(1)
+			elif st.getPlayer().getRace().ordinal() == 3:
+				htmltext = "7510-02.htm"
+				st.exitQuest(1)
+			else:
+				htmltext = "7510-01.htm"
+				st.exitQuest(1)
+			return htmltext
+		# if quest is already completed
+		elif id == COMPLETED:
+			return "<html><head><body>This quest has already been completed.</body></html>"
+		# if quest is accepted and in progress
+		elif id == PART1:
+				step=int(st.get("step"))
+				Orim=int(st.get("Orim"))
+				Racoy=int(st.get("Racoy"))
+				Perkiron=int(st.get("Perkiron"))
+				Manakia=int(st.get("Manakia"))
+				#Somak 
+				if npcId == NPC[3]:
+					if Orim == 6 and Racoy == 11 and Perkiron == 8 and Manakia == 7:  				# Step 1 finished
+						htmltext = "7510-07.htm"
+						st.takeItems(BRAKIS_REMAINS1_ID,1)
+						st.takeItems(HERMODTS_REMAINS1_ID,1)
+						st.takeItems(KIRUNAS_REMAINS1_ID,1)
+						st.takeItems(TONARS_REMAINS1_ID,1)
+						st.giveItems(VENDETTA_TOTEM_ID,1)
+						st.setState(PART2)
+					else:																				# shows you again his List
+						htmltext = "7510-06.htm"
+				# Orim and his Part, he sends you out to hunt Portas, Mordeos and Excuros
+				elif npcId == NPC[5]:
+					if Orim == 1:
+						htmltext = "7630-01.htm"
+					elif Orim in [2,3,4]:
+						htmltext = "7630-05.htm"
+					elif Orim == 5:
+						htmltext = "7630-06.htm"
+						st.takeItems(ORIMS_CONTRACT_ID,-1)
+						st.takeItems(PORTAS_EYE_ID,-1)
+						st.takeItems(EXCUROS_SCALE_ID,-1)
+						st.takeItems(MORDEOS_TALON_ID,-1)
+						st.giveItems(BRAKIS_REMAINS1_ID,1)
+						st.set("Orim","6")
+					else:
+						htmltext = "7630-07.htm"
+				# Racyos Part he sends you into the church and then to the wastelands... after wastelands he give you his item			
+				elif npcId == NPC[2]:
+					if Racoy == 1:
+						htmltext = "7507-01.htm"
+					elif Racoy == 2:
+						htmltext = "7507-03.htm"
+					elif Racoy == 3:
+						htmltext = "7507-04.htm"
+					elif 10 > Racoy > 3:
+						htmltext = "7507-05.htm"
+					elif Racoy == 10:
+						htmltext = "7507-06.htm"
+						st.takeItems(RACOYS_TOTEM_ID,-1)
+						st.takeItems(KIRUNAS_SKULL_ID,-1)
+						st.takeItems(KIRUNAS_RIB_BONE_ID,-1)
+						st.takeItems(KIRUNAS_SPINE_ID,-1)
+						st.takeItems(KIRUNAS_ARM_BONE_ID,-1)
+						st.takeItems(KIRUNAS_THIGH_BONE_ID,-1)
+						st.takeItems(INSECT_DIAGRAM_BOOK_ID,-1)
+						st.giveItems(KIRUNAS_REMAINS1_ID,1)
+						st.set("Racoy","11")
+					else:
+						htmltext = "7507-07.htm"
+				# Racoy Part, lady in the church (Viviana)
+				elif npcId == NPC[0]:
+					if Racoy == 2:								# explainations
+						htmltext = "7030-01.htm"
+					elif Racoy == 3:							# go to sarien, hurry up
+						htmltext = "7030-05.htm"
+					elif 10 > Racoy > 3: 						# bring more
+						htmltext = "7030-06.htm"
+					elif Racoy in [10,11]: 					# this part is finished, for this npc
+						htmltext = "7030-07.htm"
+				# Racoy Part, Wastelands Trader Sarien tells: "Hunt noble ant leaders and bring the items to Racoy"
+				elif npcId == NPC[1]:
+					if Racoy == 3:								# explanation about hunting noble ants
+						htmltext = "7436-01.htm"
+						st.giveItems(INSECT_DIAGRAM_BOOK_ID,1)
+						st.takeItems(VIVIANTES_LETTER_ID,1)
+						st.set("Racoy","4")
+					elif 10 > Racoy > 3: 						# bring more
+						htmltext = "7436-02.htm"
+					elif Racoy in [10,11]: 					# this part is finished, for this npc
+						htmltext = "7436-03.htm"
+				# Perkirons Part, just hunt Lizzardsman near Oren		
+				elif npcId == NPC[7]:
+					if Perkiron == 1:							# explanation
+						htmltext = "7682-01.htm"
+					elif Perkiron in [2,3,4,5,6]:				# bring more
+						htmltext = "7682-03.htm"
+					elif Perkiron == 7:						# ah you got anything i need
+						htmltext = "7682-04.htm"
+						st.takeItems(PEKIRONS_TOTEM_ID,1)
+						st.takeItems(TONARS_SKULL_ID,1)
+						st.takeItems(TONARS_RIB_BONE_ID,1)
+						st.takeItems(TONARS_SPINE_ID,1)
+						st.takeItems(TONARS_ARM_BONE_ID,1)
+						st.takeItems(TONARS_THIGH_BONE_ID,1)
+						st.giveItems(TONARS_REMAINS1_ID,1)
+						st.set("Perkiron","8")
+					else:										# part is finished for this npc
+						htmltext = "7682-05.htm"
+				# Manakias Part, hunt Medusas Steona Gorgogon Queen
+				elif npcId == NPC[4]:
+						if Manakia == 1:														# explanation
+							htmltext = "7515-01.htm"
+						elif Manakia == 7:														# this part is finished for this npc
+							htmltext = "7515-05.htm"
+						elif Manakia == 6 and int(st.get("Manakia_Queen"))==3:				# ah you got both items i need
+							htmltext = "7515-04.htm"
+							st.takeItems(MANAKIAS_TOTEM_ID,1)
+							st.takeItems(HERMODTS_SKULL_ID,1)
+							st.takeItems(HERMODTS_RIB_BONE_ID,1)
+							st.takeItems(HERMODTS_SPINE_ID,1)
+							st.takeItems(HERMODTS_ARM_BONE_ID,1)
+							st.takeItems(HERMODTS_THIGH_BONE_ID,1)
+							st.giveItems(HERMODTS_REMAINS1_ID,1)
+							st.set("Manakia","7")	
+						else:																	# bring me more, because two vars are required , Manakia and Manakia_Queen
+							htmltext = "7515-03.htm"
+		elif id == PART2:
+				step=int(st.get("step"))
+				if npcId == NPC[3]:																
+					if step == 1:																# explain Part 2 again or bring more skulls
+						htmltext = "7510-08.htm"
+					elif step == 2:																# ah you got the items i need
+						htmltext = "7510-09.htm"
+						st.takeItems(VENDETTA_TOTEM_ID,1)
+						st.takeItems(TAMLIN_ORC_HEAD_ID,st.getQuestItemsCount(TAMLIN_ORC_HEAD_ID))
+						st.giveItems(WARSPIRIT_TOTEM_ID,1)
+						st.giveItems(BRAKIS_REMAINS2_ID,1)
+						st.giveItems(HERMODTS_REMAINS2_ID,1)
+						st.giveItems(KIRUNAS_REMAINS2_ID,1)
+						st.giveItems(TONARS_REMAINS2_ID,1)
+						st.set("step","3")
+					else:															# this part is finished for this npc
+						htmltext = "7510-10.htm"
+				elif npcId == NPC[6] and step == 3:
+					htmltext = "7649-01.htm"										# ah thx.. i will give you the mark of War Spirit
+		return htmltext		
+				
+	def onKill (self,npc,st):
+		npcId=npc.getNpcId()
+#		[accepted values for this part],variable for the current part from the mob,maxcount,chance in %, items to give(one per kill max)=DROPLIST[npcId]
+		value,var,maxcount,chance,itemList=DROPLIST[npcId]
+		random=st.getRandom(100)
+#		return the current value of the var
+		isValue = int(st.get(var))
+		if int(st.get(var)) in value and random<chance:
+			# special part for Noble Ants
+			if npcId in [89,90]:
+				if random>70:
+					list=0
+				elif random>40:
+					list=1
+				elif random>10 and st.getQuestItemsCount(KIRUNAS_SKULL_ID)==0:
+					list=2
+				else:
+					return
+				for item in itemList[list]:
+					count = st.getQuestItemsCount(item)
+					st.giveItems(item,1)
+					if int(st.get(var)) < 9:
+						st.set(var,str(isValue+1))
+					if st.getQuestItemsCount(KIRUNAS_SKULL_ID) and int(st.get(var))>6:
+						st.set(var,"10")
+						st.playSound("ItemdSound.quest_middle")
+						return
+					st.playSound("ItemSound.quest_itemget")
+				return
+			# Drop part for any other mobs
+			else:		
+				for item in itemList:
+					count = st.getQuestItemsCount(item)
+					if count<maxcount:
+						st.giveItems(item,1)
+						# spawns 5 new medusas around the dead queen *muha*
+						if npcId == 5108:
+							for i in range(5):
+								st.spawnNpc(158)
+						if count == maxcount-1:
+							st.playSound("ItemSound.quest_middle")
+							st.set(var,str(isValue+1))
+						else:
+							st.playSound("ItemSound.quest_itemget")
+						return
 
-   npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   id = st.getState()
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
-   if npcId == 7510 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-        if int(st.get("cond"))<15 :
-          if st.getPlayer().getRace().ordinal() != 3 :
-            htmltext = "7510-01.htm"
-          elif st.getPlayer().getRace().ordinal() == 3 and st.getPlayer().getClassId().getId() != 0x32 :
-            htmltext = "7510-02.htm"
-          elif st.getPlayer().getRace().ordinal() == 3 and st.getPlayer().getClassId().getId() == 0x32 :
-            if st.getPlayer().getLevel()<39 :
-              htmltext = "7510-03.htm"
-            else:
-              htmltext = "7510-04.htm"
-        else:
-          htmltext = "7510-04.htm"
-   elif npcId == 7510 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
-      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7510 and int(st.get("cond"))==1 and st.getQuestItemsCount((VENDETTA_TOTEM_ID) == 0 and st.getQuestItemsCount(WARSPIRIT_TOTEM_ID)) == 0 :
-        if st.getQuestItemsCount((BRAKIS_REMAINS1_ID) and st.getQuestItemsCount(HERMODTS_REMAINS1_ID) and st.getQuestItemsCount(KIRUNAS_REMAINS1_ID) and st.getQuestItemsCount(TONARS_REMAINS1_ID)) :
-          htmltext = "7510-07.htm"
-          st.takeItems(BRAKIS_REMAINS1_ID,1)
-          st.takeItems(HERMODTS_REMAINS1_ID,1)
-          st.takeItems(KIRUNAS_REMAINS1_ID,1)
-          st.giveItems(VENDETTA_TOTEM_ID,1)
-          st.takeItems(TONARS_REMAINS1_ID,1)
-        else:
-          htmltext = "7510-06.htm"
-   elif npcId == 7510 and int(st.get("cond"))==1 and st.getQuestItemsCount(VENDETTA_TOTEM_ID)==1 :
-        if st.getQuestItemsCount(TAMLIN_ORC_HEAD_ID)<13 :
-          htmltext = "7510-08.htm"
-        else:
-          htmltext = "7510-09.htm"
-          st.giveItems(WARSPIRIT_TOTEM_ID,1)
-          st.takeItems(VENDETTA_TOTEM_ID,1)
-          st.giveItems(BRAKIS_REMAINS2_ID,1)
-          st.giveItems(HERMODTS_REMAINS2_ID,1)
-          st.giveItems(KIRUNAS_REMAINS2_ID,1)
-          st.giveItems(TONARS_REMAINS2_ID,1)
-   elif npcId == 7510 and int(st.get("cond"))==1 and st.getQuestItemsCount(WARSPIRIT_TOTEM_ID)==1 :
-        htmltext = "7510-10.htm"
-   elif npcId == 7630 and int(st.get("cond"))==1 and st.getQuestItemsCount((ORIMS_CONTRACT_ID) == 0 and st.getQuestItemsCount(BRAKIS_REMAINS1_ID) == 0 and st.getQuestItemsCount(BRAKIS_REMAINS2_ID) == 0 and st.getQuestItemsCount(VENDETTA_TOTEM_ID)) == 0 :
-        htmltext = "7630-01.htm"
-   elif npcId == 7630 and int(st.get("cond"))==1 and st.getQuestItemsCount(ORIMS_CONTRACT_ID)==1 :
-        if st.getQuestItemsCount(PORTAS_EYE_ID)+st.getQuestItemsCount(EXCUROS_SCALE_ID)+st.getQuestItemsCount(MORDEOS_TALON_ID)<30 :
-          htmltext = "7630-05.htm"
-        else:
-          htmltext = "7630-06.htm"
-          st.takeItems(ORIMS_CONTRACT_ID,st.getQuestItemsCount(ORIMS_CONTRACT_ID))
-          st.takeItems(PORTAS_EYE_ID,st.getQuestItemsCount(PORTAS_EYE_ID))
-          st.takeItems(EXCUROS_SCALE_ID,st.getQuestItemsCount(EXCUROS_SCALE_ID))
-          st.takeItems(MORDEOS_TALON_ID,st.getQuestItemsCount(MORDEOS_TALON_ID))
-          st.giveItems(BRAKIS_REMAINS1_ID,1)
-   elif npcId == 7630 and int(st.get("cond"))==1 and st.getQuestItemsCount(ORIMS_CONTRACT_ID)==0 and st.getQuestItemsCount((BRAKIS_REMAINS1_ID) or st.getQuestItemsCount(BRAKIS_REMAINS2_ID) or st.getQuestItemsCount(VENDETTA_TOTEM_ID)) :
-        htmltext = "7630-07.htm"
-   elif npcId == 7682 and int(st.get("cond"))==1 and st.getQuestItemsCount((PEKIRONS_TOTEM_ID) == 0 and st.getQuestItemsCount(TONARS_REMAINS1_ID) == 0 and st.getQuestItemsCount(TONARS_REMAINS2_ID) == 0 and st.getQuestItemsCount(VENDETTA_TOTEM_ID)) == 0 :
-        htmltext = "7682-01.htm"
-   elif npcId == 7682 and int(st.get("cond"))==1 and st.getQuestItemsCount(PEKIRONS_TOTEM_ID)==1 :
-        if st.getQuestItemsCount((TONARS_SKULL_ID) and st.getQuestItemsCount(TONARS_RIB_BONE_ID) and st.getQuestItemsCount(TONARS_SPINE_ID) and st.getQuestItemsCount(TONARS_ARM_BONE_ID) and st.getQuestItemsCount(TONARS_THIGH_BONE_ID)) :
-          htmltext = "7682-04.htm"
-          st.takeItems(PEKIRONS_TOTEM_ID,1)
-          st.takeItems(TONARS_SKULL_ID,1)
-          st.takeItems(TONARS_RIB_BONE_ID,1)
-          st.takeItems(TONARS_SPINE_ID,1)
-          st.takeItems(TONARS_ARM_BONE_ID,1)
-          st.giveItems(TONARS_REMAINS1_ID,1)
-          st.takeItems(TONARS_THIGH_BONE_ID,1)
-        else:
-          htmltext = "7682-03.htm"
-   elif npcId == 7682 and int(st.get("cond"))==1 and st.getQuestItemsCount(PEKIRONS_TOTEM_ID)==0 and st.getQuestItemsCount((TONARS_REMAINS1_ID) or st.getQuestItemsCount(TONARS_REMAINS2_ID) or st.getQuestItemsCount(VENDETTA_TOTEM_ID)) :
-        htmltext = "7682-05.htm"
-   elif npcId == 7515 and int(st.get("cond"))==1 and st.getQuestItemsCount((MANAKIAS_TOTEM_ID) == 0 and st.getQuestItemsCount(HERMODTS_REMAINS2_ID) == 0 and st.getQuestItemsCount(VENDETTA_TOTEM_ID)) == 0 and st.getQuestItemsCount(HERMODTS_REMAINS1_ID)==0 :
-        htmltext = "7515-01.htm"
-   elif npcId == 7515 and int(st.get("cond"))==1 and st.getQuestItemsCount(MANAKIAS_TOTEM_ID)==1 :
-        if st.getQuestItemsCount((HERMODTS_SKULL_ID) and st.getQuestItemsCount(HERMODTS_RIB_BONE_ID) and st.getQuestItemsCount(HERMODTS_SPINE_ID) and st.getQuestItemsCount(HERMODTS_ARM_BONE_ID) and st.getQuestItemsCount(HERMODTS_THIGH_BONE_ID)) :
-          htmltext = "7515-04.htm"
-          st.takeItems(MANAKIAS_TOTEM_ID,st.getQuestItemsCount(MANAKIAS_TOTEM_ID))
-          st.takeItems(HERMODTS_SKULL_ID,st.getQuestItemsCount(HERMODTS_SKULL_ID))
-          st.takeItems(HERMODTS_RIB_BONE_ID,st.getQuestItemsCount(HERMODTS_RIB_BONE_ID))
-          st.takeItems(HERMODTS_SPINE_ID,st.getQuestItemsCount(HERMODTS_SPINE_ID))
-          st.takeItems(HERMODTS_ARM_BONE_ID,st.getQuestItemsCount(HERMODTS_ARM_BONE_ID))
-          st.giveItems(HERMODTS_REMAINS1_ID,1)
-          st.takeItems(HERMODTS_THIGH_BONE_ID,1)
-        else:
-          htmltext = "7515-03.htm"
-   elif npcId == 7515 and int(st.get("cond"))==1 and st.getQuestItemsCount(RACOYS_TOTEM_ID)==0 and st.getQuestItemsCount((KIRUNAS_REMAINS1_ID) or st.getQuestItemsCount(KIRUNAS_REMAINS2_ID) or st.getQuestItemsCount(VENDETTA_TOTEM_ID)) :
-        htmltext = "7515-05.htm"
-   elif npcId == 7507 and int(st.get("cond"))==1 and st.getQuestItemsCount((RACOYS_TOTEM_ID) == 0 and st.getQuestItemsCount(KIRUNAS_REMAINS1_ID) == 0 and st.getQuestItemsCount(KIRUNAS_REMAINS2_ID) == 0 and st.getQuestItemsCount(VENDETTA_TOTEM_ID)) == 0 :
-        htmltext = "7507-01.htm"
-   elif npcId == 7507 and int(st.get("cond"))==1 and st.getQuestItemsCount(RACOYS_TOTEM_ID)==1 and st.getQuestItemsCount((VIVIANTES_LETTER_ID) == 0 and st.getQuestItemsCount(INSECT_DIAGRAM_BOOK_ID)) == 0 :
-        htmltext = "7507-03.htm"
-   elif npcId == 7507 and int(st.get("cond"))==1 and st.getQuestItemsCount(INSECT_DIAGRAM_BOOK_ID)==0 and st.getQuestItemsCount((RACOYS_TOTEM_ID) and st.getQuestItemsCount(VIVIANTES_LETTER_ID)) :
-        htmltext = "7507-04.htm"
-   elif npcId == 7507 and int(st.get("cond"))==1 and st.getQuestItemsCount(VIVIANTES_LETTER_ID)==0 and st.getQuestItemsCount((RACOYS_TOTEM_ID) and st.getQuestItemsCount(INSECT_DIAGRAM_BOOK_ID)) :
-        if st.getQuestItemsCount((KIRUNAS_SKULL_ID) and st.getQuestItemsCount(KIRUNAS_RIB_BONE_ID) and st.getQuestItemsCount(KIRUNAS_SPINE_ID) and st.getQuestItemsCount(KIRUNAS_ARM_BONE_ID) and st.getQuestItemsCount(KIRUNAS_THIGH_BONE_ID)) :
-          htmltext = "7507-06.htm"
-          st.takeItems(RACOYS_TOTEM_ID,1)
-          st.takeItems(KIRUNAS_SKULL_ID,1)
-          st.takeItems(KIRUNAS_RIB_BONE_ID,1)
-          st.takeItems(KIRUNAS_SPINE_ID,1)
-          st.takeItems(KIRUNAS_ARM_BONE_ID,1)
-          st.takeItems(KIRUNAS_THIGH_BONE_ID,1)
-          st.giveItems(KIRUNAS_REMAINS1_ID,1)
-          st.takeItems(INSECT_DIAGRAM_BOOK_ID,1)
-        else:
-          htmltext = "7507-05.htm"
-   elif npcId == 7507 and int(st.get("cond"))==1 and st.getQuestItemsCount(RACOYS_TOTEM_ID)==0 and st.getQuestItemsCount((KIRUNAS_REMAINS1_ID) or st.getQuestItemsCount(KIRUNAS_REMAINS2_ID) or st.getQuestItemsCount(VENDETTA_TOTEM_ID)) :
-        htmltext = "7507-07.htm"
-   elif npcId == 7030 and int(st.get("cond"))==1 and st.getQuestItemsCount(RACOYS_TOTEM_ID)==1 and st.getQuestItemsCount((VIVIANTES_LETTER_ID) == 0 and st.getQuestItemsCount(INSECT_DIAGRAM_BOOK_ID)) == 0 :
-        htmltext = "7030-01.htm"
-   elif npcId == 7030 and int(st.get("cond"))==1 and st.getQuestItemsCount(INSECT_DIAGRAM_BOOK_ID)==0 and st.getQuestItemsCount((RACOYS_TOTEM_ID) and st.getQuestItemsCount(VIVIANTES_LETTER_ID)) :
-        htmltext = "7030-05.htm"
-   elif npcId == 7030 and int(st.get("cond"))==1 and st.getQuestItemsCount(VIVIANTES_LETTER_ID)==0 and st.getQuestItemsCount((RACOYS_TOTEM_ID) and st.getQuestItemsCount(INSECT_DIAGRAM_BOOK_ID)) :
-        htmltext = "7030-06.htm"
-   elif npcId == 7030 and int(st.get("cond"))==1 and st.getQuestItemsCount(RACOYS_TOTEM_ID)==0 and st.getQuestItemsCount((KIRUNAS_REMAINS1_ID) or st.getQuestItemsCount(KIRUNAS_REMAINS2_ID) or st.getQuestItemsCount(VENDETTA_TOTEM_ID)) :
-        htmltext = "7030-07.htm"
-   elif npcId == 7436 and int(st.get("cond"))==1 and st.getQuestItemsCount(INSECT_DIAGRAM_BOOK_ID)==0 and st.getQuestItemsCount((RACOYS_TOTEM_ID) and st.getQuestItemsCount(VIVIANTES_LETTER_ID)) :
-        htmltext = "7436-01.htm"
-        st.giveItems(INSECT_DIAGRAM_BOOK_ID,1)
-        st.takeItems(VIVIANTES_LETTER_ID,1)
-   elif npcId == 7436 and int(st.get("cond"))==1 and st.getQuestItemsCount(VIVIANTES_LETTER_ID)==0 and st.getQuestItemsCount((RACOYS_TOTEM_ID) and st.getQuestItemsCount(INSECT_DIAGRAM_BOOK_ID)) :
-        htmltext = "7436-02.htm"
-   elif npcId == 7436 and int(st.get("cond"))==1 and st.getQuestItemsCount(RACOYS_TOTEM_ID)==0 and st.getQuestItemsCount((KIRUNAS_REMAINS1_ID) or st.getQuestItemsCount(KIRUNAS_REMAINS2_ID) or st.getQuestItemsCount(VENDETTA_TOTEM_ID)) :
-        htmltext = "7436-03.htm"
-   elif npcId == 7649 and int(st.get("cond"))==1 and st.getQuestItemsCount(WARSPIRIT_TOTEM_ID)==1 :
-        htmltext = "7649-01.htm"
-   return htmltext
 
- def onKill (self,npc,st):
 
-   npcId = npc.getNpcId()
-   if npcId == 213 :
-    if int(st.get("cond")) and st.getQuestItemsCount(ORIMS_CONTRACT_ID) == 1 and st.getQuestItemsCount(PORTAS_EYE_ID)<10 :
-      st.giveItems(PORTAS_EYE_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 214 :
-    if int(st.get("cond")) and st.getQuestItemsCount(ORIMS_CONTRACT_ID) == 1 and st.getQuestItemsCount(EXCUROS_SCALE_ID)<10 :
-      st.giveItems(EXCUROS_SCALE_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 215 :
-    if int(st.get("cond")) and st.getQuestItemsCount(ORIMS_CONTRACT_ID) == 1 and st.getQuestItemsCount(MORDEOS_TALON_ID)<10 :
-      st.giveItems(MORDEOS_TALON_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 89 :
-    if int(st.get("cond")) and st.getQuestItemsCount(RACOYS_TOTEM_ID) == 1 and st.getQuestItemsCount(INSECT_DIAGRAM_BOOK_ID) == 1 :
-      n = st.getRandom(100)
-      if n>70 :
-                st.giveItems(KIRUNAS_THIGH_BONE_ID,1)
-                st.giveItems(KIRUNAS_ARM_BONE_ID,1)
-      elif n>40 :
-                st.giveItems(KIRUNAS_SPINE_ID,1)
-                st.giveItems(KIRUNAS_RIB_BONE_ID,1)
-      elif n>10 :
-        if st.getQuestItemsCount(KIRUNAS_SKULL_ID) == 0 :
-          st.giveItems(KIRUNAS_SKULL_ID,1)
-          st.playSound("ItemSound.quest_middle")
-   elif npcId == 90 :
-    if int(st.get("cond")) and st.getQuestItemsCount(RACOYS_TOTEM_ID) == 1 and st.getQuestItemsCount(INSECT_DIAGRAM_BOOK_ID) == 1 :
-      n = st.getRandom(100)
-      if n>70 :
-                st.giveItems(KIRUNAS_THIGH_BONE_ID,1)
-                st.giveItems(KIRUNAS_ARM_BONE_ID,1)
-      elif n>40 :
-                st.giveItems(KIRUNAS_SPINE_ID,1)
-                st.giveItems(KIRUNAS_RIB_BONE_ID,1)
-      elif n>10 :
-        if st.getQuestItemsCount(KIRUNAS_SKULL_ID) == 0 :
-          st.giveItems(KIRUNAS_SKULL_ID,1)
-          st.playSound("ItemSound.quest_middle")
-   elif npcId == 581 :
-    if int(st.get("cond")) and st.getQuestItemsCount(PEKIRONS_TOTEM_ID) == 1 :
-      n = st.getRandom(100)
-      if n>50 :
-        if st.getQuestItemsCount(TONARS_SKULL_ID) == 0 :
-          st.giveItems(TONARS_SKULL_ID,1)
-          st.playSound("ItemSound.quest_middle")
-        elif st.getQuestItemsCount(TONARS_RIB_BONE_ID) == 0 :
-          st.giveItems(TONARS_RIB_BONE_ID,1)
-          st.playSound("ItemSound.quest_middle")
-        elif st.getQuestItemsCount(TONARS_SPINE_ID) == 0 :
-          st.giveItems(TONARS_SPINE_ID,1)
-          st.playSound("ItemSound.quest_middle")
-        elif st.getQuestItemsCount(TONARS_ARM_BONE_ID) == 0 :
-          st.giveItems(TONARS_ARM_BONE_ID,1)
-          st.playSound("ItemSound.quest_middle")
-        elif st.getQuestItemsCount(TONARS_THIGH_BONE_ID) == 0 :
-          st.giveItems(TONARS_THIGH_BONE_ID,1)
-          st.playSound("ItemSound.quest_middle")
-   elif npcId == 582 :
-    if int(st.get("cond")) and st.getQuestItemsCount(PEKIRONS_TOTEM_ID) == 1 :
-      n = st.getRandom(100)
-      if n>50 :
-        if st.getQuestItemsCount(TONARS_SKULL_ID) == 0 :
-          st.giveItems(TONARS_SKULL_ID,1)
-          st.playSound("ItemSound.quest_middle")
-        elif st.getQuestItemsCount(TONARS_RIB_BONE_ID) == 0 :
-          st.giveItems(TONARS_RIB_BONE_ID,1)
-          st.playSound("ItemSound.quest_middle")
-        elif st.getQuestItemsCount(TONARS_SPINE_ID) == 0 :
-          st.giveItems(TONARS_SPINE_ID,1)
-          st.playSound("ItemSound.quest_middle")
-        elif st.getQuestItemsCount(TONARS_ARM_BONE_ID) == 0 :
-          st.giveItems(TONARS_ARM_BONE_ID,1)
-          st.playSound("ItemSound.quest_middle")
-        elif st.getQuestItemsCount(TONARS_THIGH_BONE_ID) == 0 :
-          st.giveItems(TONARS_THIGH_BONE_ID,1)
-          st.playSound("ItemSound.quest_middle")
-   elif npcId == 601 :
-    if int(st.get("cond")) and st.getQuestItemsCount(VENDETTA_TOTEM_ID) == 1 and st.getQuestItemsCount(TAMLIN_ORC_HEAD_ID)<13 :
-      if st.getRandom(100) < 50 :
-        st.giveItems(TAMLIN_ORC_HEAD_ID,1)
-   elif npcId == 602 :
-    if int(st.get("cond")) and st.getQuestItemsCount(VENDETTA_TOTEM_ID) == 1 and st.getQuestItemsCount(TAMLIN_ORC_HEAD_ID)<13 :
-      if st.getRandom(100) < 50 :
-        st.giveItems(TAMLIN_ORC_HEAD_ID,1)
-   elif npcId == 5108 :
-    if int(st.get("cond")) and st.getQuestItemsCount(MANAKIAS_TOTEM_ID) == 1 and st.getQuestItemsCount(HERMODTS_SKULL_ID) == 0 :
-      st.giveItems(HERMODTS_SKULL_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 158 :
-    if int(st.get("cond")) and st.getQuestItemsCount(MANAKIAS_TOTEM_ID) == 1 :
-      n = st.getRandom(100)
-      if n>50 :
-        if st.getQuestItemsCount(HERMODTS_RIB_BONE_ID) == 0 :
-          st.giveItems(HERMODTS_RIB_BONE_ID,1)
-          st.playSound("ItemSound.quest_middle")
-        elif st.getQuestItemsCount(HERMODTS_SPINE_ID) == 0 :
-          st.giveItems(HERMODTS_SPINE_ID,1)
-          st.playSound("ItemSound.quest_middle")
-        elif st.getQuestItemsCount(HERMODTS_ARM_BONE_ID) == 0 :
-          st.giveItems(HERMODTS_ARM_BONE_ID,1)
-          st.playSound("ItemSound.quest_middle")
-        elif st.getQuestItemsCount(HERMODTS_THIGH_BONE_ID) == 0 :
-          st.giveItems(HERMODTS_THIGH_BONE_ID,1)
-          st.playSound("ItemSound.quest_middle")
-   return
 
-QUEST       = Quest(233,"233_TestOfWarspirit","Test Of Warspirit")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
+QUEST		= Quest(233,"233_TestOfWarspirit","Test Of Warspirit")
+CREATED		= State('Start', QUEST)
+PART1		= State('Part1', QUEST)
+PART2		= State('Part2', QUEST)
+COMPLETED	= State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7510)
 
-STARTING.addTalkId(7510)
 
-STARTED.addTalkId(7030)
-STARTED.addTalkId(7436)
-STARTED.addTalkId(7507)
-STARTED.addTalkId(7510)
-STARTED.addTalkId(7515)
-STARTED.addTalkId(7630)
-STARTED.addTalkId(7649)
-STARTED.addTalkId(7682)
+for npcId in NPC:
+	PART1.addTalkId(npcId)
+	PART2.addTalkId(npcId)
 
-STARTED.addKillId(158)
-STARTED.addKillId(213)
-STARTED.addKillId(214)
-STARTED.addKillId(215)
-STARTED.addKillId(5108)
-STARTED.addKillId(581)
-STARTED.addKillId(582)
-STARTED.addKillId(601)
-STARTED.addKillId(602)
-STARTED.addKillId(89)
-STARTED.addKillId(90)
+for mobId in PART1_MOBS:
+	PART1.addKillId(mobId)
+	
+for mobId in PART2_MOBS:
+	PART2.addKillId(mobId)
 
-STARTED.addQuestDrop(7630,BRAKIS_REMAINS1_ID,1)
-STARTED.addQuestDrop(7515,HERMODTS_REMAINS1_ID,1)
-STARTED.addQuestDrop(7507,KIRUNAS_REMAINS1_ID,1)
-STARTED.addQuestDrop(7682,TONARS_REMAINS1_ID,1)
-STARTED.addQuestDrop(7510,VENDETTA_TOTEM_ID,1)
-STARTED.addQuestDrop(7630,ORIMS_CONTRACT_ID,1)
-STARTED.addQuestDrop(213,PORTAS_EYE_ID,1)
-STARTED.addQuestDrop(214,EXCUROS_SCALE_ID,1)
-STARTED.addQuestDrop(215,MORDEOS_TALON_ID,1)
-STARTED.addQuestDrop(7682,PEKIRONS_TOTEM_ID,1)
-STARTED.addQuestDrop(581,TONARS_SKULL_ID,1)
-STARTED.addQuestDrop(582,TONARS_SKULL_ID,1)
-STARTED.addQuestDrop(581,TONARS_RIB_BONE_ID,1)
-STARTED.addQuestDrop(582,TONARS_RIB_BONE_ID,1)
-STARTED.addQuestDrop(581,TONARS_SPINE_ID,1)
-STARTED.addQuestDrop(582,TONARS_SPINE_ID,1)
-STARTED.addQuestDrop(581,TONARS_ARM_BONE_ID,1)
-STARTED.addQuestDrop(582,TONARS_ARM_BONE_ID,1)
-STARTED.addQuestDrop(581,TONARS_THIGH_BONE_ID,1)
-STARTED.addQuestDrop(582,TONARS_THIGH_BONE_ID,1)
-STARTED.addQuestDrop(7515,MANAKIAS_TOTEM_ID,1)
-STARTED.addQuestDrop(5108,HERMODTS_SKULL_ID,1)
-STARTED.addQuestDrop(158,HERMODTS_RIB_BONE_ID,1)
-STARTED.addQuestDrop(158,HERMODTS_SPINE_ID,1)
-STARTED.addQuestDrop(158,HERMODTS_ARM_BONE_ID,1)
-STARTED.addQuestDrop(158,HERMODTS_THIGH_BONE_ID,1)
-STARTED.addQuestDrop(7507,RACOYS_TOTEM_ID,1)
-STARTED.addQuestDrop(89,KIRUNAS_SKULL_ID,1)
-STARTED.addQuestDrop(90,KIRUNAS_SKULL_ID,1)
-STARTED.addQuestDrop(89,KIRUNAS_RIB_BONE_ID,1)
-STARTED.addQuestDrop(90,KIRUNAS_RIB_BONE_ID,1)
-STARTED.addQuestDrop(89,KIRUNAS_SPINE_ID,1)
-STARTED.addQuestDrop(90,KIRUNAS_SPINE_ID,1)
-STARTED.addQuestDrop(89,KIRUNAS_ARM_BONE_ID,1)
-STARTED.addQuestDrop(90,KIRUNAS_ARM_BONE_ID,1)
-STARTED.addQuestDrop(89,KIRUNAS_THIGH_BONE_ID,1)
-STARTED.addQuestDrop(90,KIRUNAS_THIGH_BONE_ID,1)
-STARTED.addQuestDrop(7436,INSECT_DIAGRAM_BOOK_ID,1)
-STARTED.addQuestDrop(7030,VIVIANTES_LETTER_ID,1)
-STARTED.addQuestDrop(7510,WARSPIRIT_TOTEM_ID,1)
-STARTED.addQuestDrop(7510,BRAKIS_REMAINS2_ID,1)
-STARTED.addQuestDrop(7510,HERMODTS_REMAINS2_ID,1)
-STARTED.addQuestDrop(7510,KIRUNAS_REMAINS2_ID,1)
-STARTED.addQuestDrop(601,TAMLIN_ORC_HEAD_ID,1)
-STARTED.addQuestDrop(602,TAMLIN_ORC_HEAD_ID,1)
-STARTED.addQuestDrop(7510,TONARS_REMAINS2_ID,1)
+print "importing quests: 233: Test Of Warspirit"
