@@ -295,7 +295,7 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-   <effect count="0x7fffffff" name="DamOverTime" time="1" val="#HP">
+   <effect count="0x7fffffff" name="DamOverTime" time="3" val="#HP">
       <mul order="0x10" stat="pAtkSpd" val="#pAtkSpd"/>
     </effect>
   </for>
