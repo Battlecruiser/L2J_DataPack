@@ -184,7 +184,7 @@
   <!-- Done by dc -->
   <table name="#Tab-regMp"> 1.2 </table>
   <for>
-    <add order='0x50' stat='regMp' val="#Tab-regMp"/>
+    <mul order='0x50' stat='regMp' val="#Tab-regMp"/>
   	<and>
           <using kind="Magic"/>
           <not>
@@ -1620,7 +1620,9 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x40" stat="regMp" val="#Tab-regMp"/>
+    <mul order="0x40" stat="regMp" val="#Tab-regMp">
+	<using skill="1013"/>
+    </mul>
   </for>
 </skill>
 <skill id="286" levels="3" name="Provoke">
