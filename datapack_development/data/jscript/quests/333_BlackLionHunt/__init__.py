@@ -588,12 +588,19 @@ class Quest (JQuest) :
 		part,allowDrop,chancePartItem,chanceBox,partItem=DROPLIST[npcId]
 		random1 = st.getRandom(101)
 		random2 = st.getRandom(101)
+		mobLevel = npc.getLevel()
+		playerLevel = st.getPlayer().getLevel()
+		if playerLevel - mobLevel > 8:
+			chancePartItem/=3
+			chanceBox/=3
 		if allowDrop and int(st.get("part"))==part :
 			if random1<chancePartItem :
 				st.giveItems(partItem,1)
+				st.playSound("ItemSound.quest_itemget")
 			if random2<chanceBox :
 				st.giveItems(CARGO_BOX1,1)
-			st.playSound("ItemSound.quest_itemget") 
+				if not random1<chancePartItem:
+					st.playSound("ItemSound.quest_itemget") 
 		return
 
 
