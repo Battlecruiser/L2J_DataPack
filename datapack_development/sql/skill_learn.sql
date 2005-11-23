@@ -940,7 +940,7 @@ INSERT INTO skill_learn VALUES (7864,40);
 INSERT INTO skill_learn VALUES (7864,41);
 INSERT INTO skill_learn VALUES (7864,42);
 INSERT INTO skill_learn VALUES (7864,43);
---Fix for dwarfen village 7521,7522
+-- Fix for dwarfen village 7521,7522
 INSERT INTO skill_learn VALUES (7521,53);
 INSERT INTO skill_learn VALUES (7521,54);
 INSERT INTO skill_learn VALUES (7521,55);
@@ -951,13 +951,13 @@ INSERT INTO skill_learn VALUES (7522,54);
 INSERT INTO skill_learn VALUES (7522,55);
 INSERT INTO skill_learn VALUES (7522,56);
 INSERT INTO skill_learn VALUES (7522,57);
---fix for giran
+-- fix for giran
 INSERT INTO skill_learn VALUES (7471,53);
 INSERT INTO skill_learn VALUES (7471,54);
 INSERT INTO skill_learn VALUES (7471,55);
 INSERT INTO skill_learn VALUES (7471,56);
 INSERT INTO skill_learn VALUES (7471,57);
---fix for dion 
+-- fix for dion 
 INSERT INTO skill_learn VALUES (7057,53);
 INSERT INTO skill_learn VALUES (7057,54);
 INSERT INTO skill_learn VALUES (7057,55);
@@ -968,7 +968,7 @@ INSERT INTO skill_learn VALUES (7058,54);
 INSERT INTO skill_learn VALUES (7058,55);
 INSERT INTO skill_learn VALUES (7058,56);
 INSERT INTO skill_learn VALUES (7058,57);
---fix for gludin
+-- fix for gludin
 INSERT INTO skill_learn VALUES (7378,31);
 INSERT INTO skill_learn VALUES (7378,32);
 INSERT INTO skill_learn VALUES (7378,33);
@@ -986,7 +986,7 @@ INSERT INTO skill_learn VALUES (7210,54);
 INSERT INTO skill_learn VALUES (7210,55);
 INSERT INTO skill_learn VALUES (7210,56);
 INSERT INTO skill_learn VALUES (7210,57);
---fix for gludio
+-- fix for gludio
 INSERT INTO skill_learn VALUES (7322,53);
 INSERT INTO skill_learn VALUES (7322,54);
 INSERT INTO skill_learn VALUES (7322,55);
