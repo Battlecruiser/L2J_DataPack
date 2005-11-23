@@ -1,5 +1,5 @@
 # Maked by Mr. Have fun! Version 0.2
-print "importing quests: 229: Test Of Witchcraft"
+# rewritten by Rolarga Version 0.3
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -36,341 +36,365 @@ ZERUEL_BIND_CRYSTAL_ID = 3334
 BRIMSTONE2_ID = 3335
 SWORD_OF_BINDING_ID = 3029
 
-#This handels all Mob Drop relatet Datas npcId:[condition,maxcount,chance,giveList,takeList]
+NPC = [7063,7098,7110,7188,7314,7417,7435,7476,7630,7631,7632,7633]
+
+STATS = ["cond","step","gem1","gem2","gem3","gem456"] 
+
+#This handels all Mob Drop relatet Datas npcId:[var,value,maxcount,chance,giveList,takeList]
 DROPLIST={
-5101:[24,1,100,[ZERUEL_BIND_CRYSTAL_ID,PURGATORY_KEY_ID],[BRIMSTONE2_ID,SOULTRAP_CRYSTAL_ID]],
-5100:[10,1,100,[AKLANTOS_GEM4_ID,AKLANTOS_GEM5_ID,AKLANTOS_GEM6_ID],[LEOPOLDS_JOURNAL1_ID]],
-601:[19,20,50,[TAMLIN_ORC_AMULET_ID],0],
-602:[19,20,55,[TAMLIN_ORC_AMULET_ID],0],
-5099:[7,1,100,[AKLANTOS_GEM3_ID],0],
-557:[3,20,100,[DIRE_WYRM_FANG_ID],0],
-565:[3,20,80,[EN_GOLEM_HEARTSTONE_ID],0],
-577:[3,20,50,[LETO_LIZARDMAN_CHARM_ID],0],
-578:[3,20,50,[LETO_LIZARDMAN_CHARM_ID],0],
-579:[3,20,60,[LETO_LIZARDMAN_CHARM_ID],0],
-580:[3,20,60,[LETO_LIZARDMAN_CHARM_ID],0],
-581:[3,20,70,[LETO_LIZARDMAN_CHARM_ID],0],
-582:[3,20,70,[LETO_LIZARDMAN_CHARM_ID],0]
+5101:	["step",	[3,14],	1,100,[ZERUEL_BIND_CRYSTAL_ID,PURGATORY_KEY_ID],[BRIMSTONE2_ID,SOULTRAP_CRYSTAL_ID]],
+5100:	["gem456",	[3,4,5],1,100,[AKLANTOS_GEM4_ID,AKLANTOS_GEM5_ID,AKLANTOS_GEM6_ID],[LEOPOLDS_JOURNAL1_ID]],
+601:	["step",	[9],20,50,[TAMLIN_ORC_AMULET_ID],0],
+602:	["step",	[9],20,55,[TAMLIN_ORC_AMULET_ID],0],
+5099:	["gem3",	[2],1,100,[AKLANTOS_GEM3_ID],[LARS_MEMO1_ID]],
+557:	["gem1",	[2,3,4],20,100,[DIRE_WYRM_FANG_ID],0],
+565:	["gem1",	[2,3,4],20,80,[EN_GOLEM_HEARTSTONE_ID],0],
+577:	["gem1",	[2,3,4],20,50,[LETO_LIZARDMAN_CHARM_ID],0],
+578:	["gem1",	[2,3,4],20,50,[LETO_LIZARDMAN_CHARM_ID],0],
+579:	["gem1",	[2,3,4],20,60,[LETO_LIZARDMAN_CHARM_ID],0],
+580:	["gem1",	[2,3,4],20,60,[LETO_LIZARDMAN_CHARM_ID],0],
+581:	["gem1",	[2,3,4],20,70,[LETO_LIZARDMAN_CHARM_ID],0],
+582:	["gem1",	[2,3,4],20,70,[LETO_LIZARDMAN_CHARM_ID],0]
 }
 
-def countGem(st):
- count=0
- for gem in [AKLANTOS_GEM1_ID,AKLANTOS_GEM2_ID,AKLANTOS_GEM3_ID,AKLANTOS_GEM4_ID,AKLANTOS_GEM5_ID,AKLANTOS_GEM6_ID]:
-  count+=st.getQuestItemsCount(gem)
- if count>5:
-  st.set("cond","12")
- return 
- 
+
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+	def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onEvent (self,event,st) :
-    htmltext = event
-    if event == "1" :
-          htmltext = "7630-08.htm"
-          st.set("cond","1")
-          st.setState(STARTED)
-          st.playSound("ItemSound.quest_accept")
-          st.giveItems(ORIMS_DIAGRAM_ID,1)
-    elif event == "7630_1" :
-          htmltext = "7630-04.htm"
-    elif event == "7630_2" :
-          htmltext = "7630-06.htm"
-    elif event == "7630_3" :
-          htmltext = "7630-07.htm"
-    elif event == "7630_4" :
-          htmltext = "7630-12.htm"
-    elif event == "7630_5" :
-          htmltext = "7630-13.htm"
-    elif event == "7630_6" :
-          htmltext = "7630-14.htm"
-          st.giveItems(BRIMSTONE1_ID,1)
-          st.takeItems(ALEXANDRIAS_BOOK_ID,1)
-          st.takeItems(AKLANTOS_GEM1_ID,1)
-          st.takeItems(AKLANTOS_GEM2_ID,1)
-          st.takeItems(AKLANTOS_GEM3_ID,1)
-          st.takeItems(AKLANTOS_GEM4_ID,1)
-          st.takeItems(AKLANTOS_GEM5_ID,1)
-          st.takeItems(AKLANTOS_GEM6_ID,1)
-          st.set("cond","14")
-          st.spawnNpc(5101)
-    elif event == "7630_7" :
-          htmltext = "7630-16.htm"
-          st.giveItems(ORIMS_INSTRUCTIONS_ID,1)
-          st.takeItems(BRIMSTONE1_ID,1)
-          st.giveItems(ORIMS_LETTER1_ID,1)
-          st.giveItems(ORIMS_LETTER2_ID,1)
-          st.set("cond","15")
-    elif event == "7630_8" :
-          htmltext = "7630-20.htm"
-    elif event == "7630_9" :
-          htmltext = "7630-21.htm"
-    elif event == "7630_10" :
-          st.takeItems(LARS_MEMO1_ID,1)
-          st.takeItems(PURGATORY_KEY_ID,1)
-          st.takeItems(SWORD_OF_BINDING_ID,1)
-          st.takeItems(IKERS_AMULET_ID,1)
-          st.takeItems(ORIMS_INSTRUCTIONS_ID,1)
-          st.addExpAndSp(50000,6400)
-          st.giveItems(MARK_OF_WITCHCRAFT_ID,1)
-          st.takeItems(ZERUEL_BIND_CRYSTAL_ID,1)
-          htmltext = "7630-22.htm"
-          st.set("cond","0")
-          st.set("onlyone","1")
-          st.setState(COMPLETED)
-          st.playSound("ItemSound.quest_finish")
-    elif event == "7098_1" :
-          htmltext = "7098-02.htm"
-    elif event == "7098_2" :
-          htmltext = "7098-03.htm"
-          st.giveItems(ALEXANDRIAS_BOOK_ID,1)
-          st.takeItems(ORIMS_DIAGRAM_ID,1)
-          st.set("cond","2")
-    elif event == "7110_1" :
-          htmltext = "7110-02.htm"
-    elif event == "7110_2" :
-          htmltext = "7110-03.htm"
-          st.giveItems(IKERS_LIST_ID,1)
-          st.set("cond","3")
-    elif event == "7110_3" :
-          htmltext = "7110-08.htm"
-          st.giveItems(SOULTRAP_CRYSTAL_ID,1)
-          st.giveItems(IKERS_AMULET_ID,1)
-          st.takeItems(ORIMS_LETTER2_ID,1)
-          st.set("cond",str(int(st.get("cond"))+1))
-    elif event == "7476_1" :
-          htmltext = "7476-02.htm"
-          st.giveItems(AKLANTOS_GEM2_ID,1)
-          st.set("cond","6")
-          countGem(st)
-    elif event == "7063_1" :
-          htmltext = "7063-02.htm"
-          st.giveItems(LARS_MEMO1_ID,1)
-          st.set("cond","7")
-    elif event == "7314_1" :
-          htmltext = "7314-02.htm"
-          st.giveItems(NESTLE_MEMO1_ID,1)
-          st.set("cond","9")
-    elif event == "7435_1" :
-          htmltext = "7435-02.htm"
-          st.giveItems(LEOPOLDS_JOURNAL1_ID,1)
-          st.takeItems(NESTLE_MEMO1_ID,1)
-          st.set("cond","10")
-    elif event == "7417_1" :
-          htmltext = "7417-02.htm"
-    elif event == "7417_2" :
-          htmltext = "7417-03.htm"
-          st.giveItems(SIR_VASPERS_LETTER_ID,1)
-          st.takeItems(ORIMS_LETTER1_ID,1)
-          st.set("cond",str(int(st.get("cond"))+2))
-    elif event == "7633_1" :
-          htmltext = "7633-02.htm"
-          st.giveItems(BRIMSTONE2_ID,1)
-          st.spawnNpc(5101,13395,169807,-3708)
-    return htmltext
+	def onEvent (self,event,st) :
+		htmltext = event
+		# Orims Events
+		if event == "1":
+			htmltext = "7630-08.htm"
+			st.setState(STARTED)
+			st.playSound("ItemSound.quest_accept")
+			st.giveItems(ORIMS_DIAGRAM_ID,1)
+			for var in STATS:
+				st.set(var,"1")
+		elif event == "7630_1" :
+			htmltext = "7630-04.htm"
+		elif event == "7630_2" :
+			htmltext = "7630-06.htm"
+		elif event == "7630_3" :
+			htmltext = "7630-07.htm"
+		elif event == "7630_4" :
+			htmltext = "7630-12.htm"
+		elif event == "7630_5" :
+			htmltext = "7630-13.htm"
+		elif event == "7630_6" :
+			htmltext = "7630-14.htm"
+			st.giveItems(BRIMSTONE1_ID,1)
+			st.takeItems(ALEXANDRIAS_BOOK_ID,1)
+			st.takeItems(AKLANTOS_GEM1_ID,1)
+			st.takeItems(AKLANTOS_GEM2_ID,1)
+			st.takeItems(AKLANTOS_GEM3_ID,1)
+			st.takeItems(AKLANTOS_GEM4_ID,1)
+			st.takeItems(AKLANTOS_GEM5_ID,1)
+			st.takeItems(AKLANTOS_GEM6_ID,1)
+			st.set("step","3")
+			st.spawnNpc(5101)
+		elif event == "7630_7" :
+			htmltext = "7630-16.htm"
+			st.takeItems(BRIMSTONE1_ID,1)
+			st.giveItems(ORIMS_INSTRUCTIONS_ID,1)
+			st.giveItems(ORIMS_LETTER1_ID,1)
+			st.giveItems(ORIMS_LETTER2_ID,1)
+			st.set("step","5")
+		elif event == "7630_8" :
+			htmltext = "7630-20.htm"
+			st.takeItems(ZERUEL_BIND_CRYSTAL_ID,1)
+		elif event == "7630_9" :
+			htmltext = "7630-21.htm"
+			st.takeItems(PURGATORY_KEY_ID,1)
+		elif event == "7630_10" :
+			st.takeItems(SWORD_OF_BINDING_ID,1)
+			st.takeItems(IKERS_AMULET_ID,1)
+			st.takeItems(ORIMS_INSTRUCTIONS_ID,1)
+			st.addExpAndSp(50000,6400)
+			st.giveItems(MARK_OF_WITCHCRAFT_ID,1)
+			htmltext = "7630-22.htm"
+			for var in STATS:
+				st.unset(var)
+			st.setState(COMPLETED)
+			st.playSound("ItemSound.quest_finish")
+		# Alexandrias Events
+		elif event == "7098_1" :
+			htmltext = "7098-02.htm"
+		elif event == "7098_2" :
+			htmltext = "7098-03.htm"
+			st.giveItems(ALEXANDRIAS_BOOK_ID,1)
+			st.takeItems(ORIMS_DIAGRAM_ID,1)
+			st.set("step","2")
+		# Ikers Events
+		elif event == "7110_1" :
+			htmltext = "7110-02.htm"
+		elif event == "7110_2" :
+			htmltext = "7110-03.htm"
+			st.giveItems(IKERS_LIST_ID,1)
+			st.set("gem1","2")
+		elif event == "7110_3" :
+			htmltext = "7110-08.htm"
+			st.giveItems(SOULTRAP_CRYSTAL_ID,1)
+			st.giveItems(IKERS_AMULET_ID,1)
+			st.takeItems(ORIMS_LETTER2_ID,1)
+			st.set("step",str(int(st.get("step"))+1))
+		# Kairas Events
+		elif event == "7476_1" :
+			htmltext = "7476-02.htm"
+			st.giveItems(AKLANTOS_GEM2_ID,1)
+			st.set("gem2","2")
+		# Laras Events
+		elif event == "7063_1" :
+			htmltext = "7063-02.htm"
+			st.giveItems(LARS_MEMO1_ID,1)
+			st.set("gem3","2")
+		# Nestles Events
+		elif event == "7314_1" :
+			htmltext = "7314-02.htm"
+			st.giveItems(NESTLE_MEMO1_ID,1)
+			st.set("gem456","2")
+		# Leopolds Events
+		elif event == "7435_1" :
+			htmltext = "7435-02.htm"
+			st.giveItems(LEOPOLDS_JOURNAL1_ID,1)
+			st.takeItems(NESTLE_MEMO1_ID,1)
+			st.set("gem456","3")
+		# (Vasper) Klaus Events
+		elif event == "7417_1" :
+			htmltext = "7417-02.htm"
+		elif event == "7417_2" :
+			htmltext = "7417-03.htm"
+			st.giveItems(SIR_VASPERS_LETTER_ID,1)
+			st.takeItems(ORIMS_LETTER1_ID,1)
+			st.set("step",str(int(st.get("step"))+2))
+		# Everts Events
+		elif event == "7633_1" :
+			htmltext = "7633-02.htm"
+			st.giveItems(BRIMSTONE2_ID,1)
+			st.spawnNpc(5101)
+		return htmltext
 
 
- def onTalk (self,npc,st):
+	def onTalk (self,npc,st):
+		npcId = npc.getNpcId()
+		htmltext = "<html><head><body>I have nothing to say you</body></html>"
+		id = st.getState()
+		# Start the Quest, initialisation and check if the player can take it
+		if id == CREATED:
+			for var in STATS:
+				st.set(var,"0")
+			if st.getPlayer().getClassId().getId() in [0x0b, 0x04, 0x20] :
+				if st.getPlayer().getLevel() < 39:
+					htmltext = "7630-02.htm"
+					st.exitQuest(1)
+				else:
+					if st.getPlayer().getClassId() == 0x0b :
+						htmltext = "7630-03.htm"
+					else:
+						htmltext = "7630-05.htm"
+			else:
+				htmltext = "7630-01.htm"
+				st.exitQuest(1)
+			return htmltext
+		# already done
+		elif id == COMPLETED:
+			return "<html><head><body>This quest has already been completed.</body></html>"
+		# in progress, player is working on the quest
+		else:
+			step = int(st.get("step"))				# var init for easier working with it
+			gem1 = int(st.get("gem1"))
+			gem2 = int(st.get("gem2"))
+			gem3 = int(st.get("gem3"))
+			gem456 = int(st.get("gem456"))
+			
+			if npcId == NPC[8]: # orim
+				if step == 1:
+					htmltext = "7630-09.htm"
+				elif step == 2:
+					if gem1 == 6 and gem2 == 2 and gem3 == 3 and gem456 == 6:
+						htmltext = "7630-11.htm"
+					else:
+						htmltext = "7630-10.htm"
+				elif step == 3:
+					htmltext = "7630-14.htm"
+				elif step == 4:
+					htmltext = "7630-15.htm"
+				elif 4 < step < 13:
+					htmltext = "7630-17.htm"
+				elif step == 13 :
+					htmltext = "7630-18.htm"
+				elif step == 15 :
+					htmltext = "7630-19.htm"
+				
+			elif npcId == NPC[1]: # alexandria
+				if step == 1:
+					htmltext = "7098-01.htm"
+				elif step == 2:
+					htmltext = "7098-04.htm"
+				else:
+					htmltext = "7098-05.htm"
+				
+			elif npcId == NPC[7]: #kaira
+				if step == 2:
+					if gem2 == 1:
+						htmltext = "7476-01.htm"
+					else :
+						htmltext = "7476-03.htm"
+				else:
+					htmltext = "7476-04.htm"
+				
+			elif npcId == NPC[2]: # iker
+				if step == 2:
+					if gem1 == 1:
+						htmltext = "7110-01.htm"
+					elif gem1 in [2,3,4]:
+						htmltext = "7110-04.htm"
+					elif gem1 == 5:
+						st.giveItems(AKLANTOS_GEM1_ID,1)
+						st.takeItems(IKERS_LIST_ID,-1)
+						st.takeItems(DIRE_WYRM_FANG_ID,-1)
+						st.takeItems(LETO_LIZARDMAN_CHARM_ID,-1)
+						st.takeItems(EN_GOLEM_HEARTSTONE_ID,-1)
+						htmltext = "7110-05.htm"
+						st.set("gem1","6")
+					elif gem1 == 6:
+						htmltext = "7110-06.htm"
+				elif step in [5,12]:
+					htmltext = "7110-07.htm"
+				elif step == 13 :
+					htmltext = "7110-09.htm"
+				elif step == 14 :
+					htmltext = "7110-10.htm"
+				
+			elif npcId == NPC[0]: # lara
+				if step == 2 :
+					if gem3 == 1:
+						htmltext = "7063-01.htm"
+					elif gem3 == 2:
+						htmltext = "7063-03.htm"
+					elif gem3 == 3:
+						htmltext = "7063-04.htm"
+				elif step in [3,4]:
+					htmltext = "7063-05.htm"
+				
+			elif npcId == NPC[9] and gem3 == 2 : #roderik
+				htmltext = "7631-01.htm"
+				
+			elif npcId == NPC[10] and gem3 == 2 : # endrigo
+				htmltext = "7632-01.htm"
+				
+			elif npcId == NPC[4]: # nestle
+				if step == 2 :
+					if gem456 == 1:
+						htmltext = "7314-01.htm"
+					elif gem456 == 2:
+						htmltext = "7314-03.htm"
+					else:
+						htmltext = "7314-04.htm"
+				
+			elif npcId == NPC[6]: # leopold
+				if step == 2:
+					if gem456 == 2:
+						htmltext = "7435-01.htm"
+					elif gem456 in [3,4,5] :
+						htmltext = "7435-03.htm"
+					elif gem456 == 6:
+						htmltext = "7435-04.htm"
+				else:
+					htmltext = "7435-05.htm"	
+			
+			elif npcId == NPC[5]: # klaus
+				if step in [5,6]:
+					htmltext = "7417-01.htm"
+				elif step in [7,8]:
+					htmltext = "7417-04.htm"
+				elif step == 11:
+					htmltext = "7417-05.htm"
+					st.giveItems(SWORD_OF_BINDING_ID,1)
+					st.takeItems(VADINS_SANCTIONS_ID,1)
+					if st.getQuestItemsCount(SOULTRAP_CRYSTAL_ID) :
+						st.set("step","13")
+					else:
+						st.set("step","12")
+				elif step in [12,13]:
+					htmltext = "7417-06.htm"
+				
+			elif npcId == NPC[3]: # vadin
+				if step in [7,8]:
+					htmltext = "7188-01.htm"
+					st.giveItems(VADINS_CRUCIFIX_ID,1)
+					st.takeItems(SIR_VASPERS_LETTER_ID,1)
+					st.set("step","9")
+				elif step == 9:
+					htmltext = "7188-02.htm"
+				elif step == 10:
+					htmltext = "7188-03.htm"
+					st.takeItems(TAMLIN_ORC_AMULET_ID,-1)
+					st.giveItems(VADINS_SANCTIONS_ID,1)
+					st.takeItems(VADINS_CRUCIFIX_ID,-1)
+					st.set("step","11")
+				elif step == 11:
+					htmltext = "7188-04.htm"
+				elif step == 12:
+					htmltext = "7188-05.htm"
+				
+			elif npcId == NPC[11]: # evert
+				if step == 13 and st.getQuestItemsCount(BRIMSTONE2_ID)==0:
+					htmltext = "7633-01.htm"
+				elif step in [13,14]:
+					htmltext = "7633-02.htm"
+					st.spawnNpc(5101)
+					st.set("step","14")
+				elif step == 15 :
+					htmltext = "7633-03.htm"
+			return htmltext	
 
-   npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   id = st.getState()
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
-   if npcId == 7630:
-     if int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-        if int(st.get("cond")) < 15 :
-          if (st.getPlayer().getClassId().getId() == 0x0b or st.getPlayer().getClassId().getId() == 0x04 or st.getPlayer().getClassId().getId() == 0x20) :
-            if st.getPlayer().getLevel() < 39 :
-              htmltext = "7630-02.htm"
-            else:
-              if st.getPlayer().getClassId().getId() == 0x0b :
-                htmltext = "7630-03.htm"
-              else:
-                htmltext = "7630-05.htm"
-          else:
-            htmltext = "7630-01.htm"
-            st.exitQuest(1)
-        else:
-          htmltext = "7630-01.htm"
-          st.exitQuest(1)
-     elif int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
-        htmltext = "<html><head><body>This quest has already been completed.</body></html>"
-     elif int(st.get("cond"))==1:
-        htmltext = "7630-09.htm"
-     elif int(st.get("cond"))==2:
-        htmltext = "7630-10.htm"
-     elif int(st.get("cond"))==12 :
-        htmltext = "7630-11.htm"
-     elif int(st.get("cond"))==14:
-        htmltext = "7630-15.htm"
-     elif int(st.get("cond"))==15 :
-        htmltext = "7630-17.htm"
-     elif int(st.get("cond"))==23 :
-        htmltext = "7630-18.htm"
-     elif int(st.get("cond"))==25 :
-        htmltext = "7630-19.htm"
-   elif npcId == 7098:
-     if int(st.get("cond"))==1 :
-        htmltext = "7098-01.htm"
-     elif int(st.get("cond"))==2 :
-        htmltext = "7098-04.htm"
-     elif int(st.get("cond"))==14 :
-        htmltext = "7098-05.htm"
-   elif npcId == 7110:
-     if int(st.get("cond"))==2 or int(st.get("cond"))==6 or int(st.get("cond"))==8 or int(st.get("cond"))==11:
-        htmltext = "7110-01.htm"
-     elif int(st.get("cond"))==3 :
-        htmltext = "7110-04.htm"
-     elif int(st.get("cond"))==4 :
-          htmltext = "7110-05.htm"
-          st.giveItems(AKLANTOS_GEM1_ID,1)
-          st.takeItems(IKERS_LIST_ID,1)
-          st.takeItems(DIRE_WYRM_FANG_ID,st.getQuestItemsCount(DIRE_WYRM_FANG_ID))
-          st.takeItems(LETO_LIZARDMAN_CHARM_ID,st.getQuestItemsCount(LETO_LIZARDMAN_CHARM_ID))
-          st.takeItems(EN_GOLEM_HEARTSTONE_ID,st.getQuestItemsCount(EN_GOLEM_HEARTSTONE_ID))
-          st.set("cond","5")
-          countGem(st)
-     elif int(st.get("cond"))>4 and int(st.get("cond"))<15 :
-        htmltext = "7110-06.htm"
-     elif int(st.get("cond"))==15 or int(st.get("cond"))==22 :
-        htmltext = "7110-07.htm"
-     elif int(st.get("cond"))==23 :
-        htmltext = "7110-09.htm"
-     elif int(st.get("cond"))==24 :
-        htmltext = "7110-10.htm"
-   elif npcId == 7476:
-     if int(st.get("cond"))==2 or int(st.get("cond"))==5 or int(st.get("cond"))==8 or int(st.get("cond"))==11:
-        htmltext = "7476-01.htm"
-     elif int(st.get("cond"))==6 :
-        htmltext = "7476-03.htm"
-     elif int(st.get("cond"))==14 or int(st.get("cond"))==15 :
-        htmltext = "7476-04.htm"
-   elif npcId == 7063:
-     if int(st.get("cond"))==6 or int(st.get("cond"))==2 or int(st.get("cond"))==5 or int(st.get("cond"))==11:
-        htmltext = "7063-01.htm"
-     elif int(st.get("cond"))==7 :
-        htmltext = "7063-03.htm"
-     elif int(st.get("cond"))==8 :
-        htmltext = "7063-04.htm"
-     elif int(st.get("cond"))==14 or int(st.get("cond"))==15:
-        htmltext = "7063-05.htm"
-   elif npcId == 7314:
-     if int(st.get("cond"))==2 or int(st.get("cond"))==5 or int(st.get("cond"))==6 or int(st.get("cond"))==8:
-        htmltext = "7314-01.htm"
-     elif int(st.get("cond"))==9 :
-        htmltext = "7314-03.htm"
-     elif int(st.get("cond"))==10 or int(st.get("cond"))==13 :
-        htmltext = "7314-04.htm"
-   elif npcId == 7435 :
-     if int(st.get("cond"))==9 :
-        htmltext = "7435-01.htm"
-     elif int(st.get("cond"))==10 :
-        htmltext = "7435-03.htm"
-     elif int(st.get("cond"))==13 :
-        htmltext = "7435-04.htm"
-     elif int(st.get("cond"))==14 or int(st.get("cond"))==15 :
-        htmltext = "7435-05.htm"
-   elif npcId == 7631 and int(st.get("cond"))==7 :
-        htmltext = "7631-01.htm"
-   elif npcId == 7632 and int(st.get("cond"))==7 :
-        htmltext = "7632-01.htm"
-   elif npcId == 7417  :
-     if int(st.get("cond"))==15 or int(st.get("cond"))==16 :
-        htmltext = "7417-01.htm"
-     elif int(st.get("cond"))==17 or int(st.get("cond"))==18 :
-        htmltext = "7417-04.htm"
-     elif int(st.get("cond"))==21 :
-        htmltext = "7417-05.htm"
-        st.giveItems(SWORD_OF_BINDING_ID,1)
-        st.takeItems(VADINS_SANCTIONS_ID,1)
-        if st.getQuestItemsCount(SOULTRAP_CRYSTAL_ID) :
-         st.set("cond","23")
-        else:
-         st.set("cond","22")
-     elif int(st.get("cond"))==22 or int(st.get("cond"))==23 :
-        htmltext = "7417-06.htm"
-   elif npcId == 7188:
-     if int(st.get("cond"))==17 or int(st.get("cond"))==18 :
-        htmltext = "7188-01.htm"
-        st.giveItems(VADINS_CRUCIFIX_ID,1)
-        st.takeItems(SIR_VASPERS_LETTER_ID,1)
-        st.set("cond","19")
-     elif int(st.get("cond"))==19:
-        htmltext = "7188-02.htm"
-     elif int(st.get("cond"))==20:
-          htmltext = "7188-03.htm"
-          st.takeItems(TAMLIN_ORC_AMULET_ID,st.getQuestItemsCount(TAMLIN_ORC_AMULET_ID))
-          st.giveItems(VADINS_SANCTIONS_ID,1)
-          st.takeItems(VADINS_CRUCIFIX_ID,1)
-          st.set("cond","21")
-     elif int(st.get("cond"))==21 :
-        htmltext = "7188-04.htm"
-     elif int(st.get("cond"))==22 :
-        htmltext = "7188-05.htm"
-   elif npcId == 7633 :
-     if int(st.get("cond"))==23 and st.getQuestItemsCount(BRIMSTONE2_ID)==0 :
-        htmltext = "7633-01.htm"
-     elif int(st.get("cond"))==23 or int(st.get("cond"))==24:
-        htmltext = "7633-02.htm"
-        st.spawnNpc(5101,13395,169807,-3708)
-        st.set("cond","24")
-     elif int(st.get("cond"))==25 :
-        htmltext = "7633-03.htm"
-   return htmltext
-
- def onKill (self,npc,st):
-
-   npcId = npc.getNpcId()
-   condition,maxcount,chance,giveList,takeList=DROPLIST[npcId]
-   random=st.getRandom(100)
-   if int(st.get("cond"))==condition and random<chance:
-     if takeList==0:
-      for give in giveList:
-       if st.getQuestItemsCount(give)<maxcount:
-        if st.getQuestItemsCount(give)==maxcount-1:
-         st.giveItems(give,1)
-         st.playSound("ItemSound.quest_middle")
-         count=0
-         if condition==3:
-          for item in [DIRE_WYRM_FANG_ID,EN_GOLEM_HEARTSTONE_ID,LETO_LIZARDMAN_CHARM_ID]:
-           count+=st.getQuestItemsCount(item)
-          if count>59:
-           st.set("cond","4")
-         else:
-          st.set("cond",str(condition+1)) 
-          countGem(st)
-        else:
-         st.giveItems(give,1)
-         st.playSound("ItemSound.quest_itemget")
-     elif takeList>0:
-      if npcId==5101 :
-       if st.getItemEquipped(7)==SWORD_OF_BINDING_ID:
-        for give in giveList:
-         st.giveItems(give,1)
-         for take in takeList:
-          st.takeItems(take,1)
-        st.set("cond",str(int(st.get("cond"))+1))
-        return "You trapped the Seal of Drevanul Prince Zeruel"
-      else:
-       for give in giveList:
-        if st.getQuestItemsCount(give)!=maxcount:
-         st.giveItems(give,1)
-         for take in takeList:
-          st.takeItems(take,1)
-         if st.getQuestItemsCount(AKLANTOS_GEM4_ID) and st.getQuestItemsCount(AKLANTOS_GEM5_ID) and st.getQuestItemsCount(AKLANTOS_GEM6_ID):
-          st.set("cond","11")
-          countGem(st)
-         return 
-   return
+	def onKill (self,npc,st):
+		npcId = npc.getNpcId()
+		var,value,maxcount,chance,giveList,takeList=DROPLIST[npcId]
+		random=st.getRandom(100)
+		isValue = int(st.get(var))
+		if int(st.get(var)) in value and random<chance:
+			if takeList:
+				if npcId == 5101 :
+					if st.getItemEquipped(7) == SWORD_OF_BINDING_ID:
+						for give in giveList:
+							st.giveItems(give,1)
+						for take in takeList:
+							st.takeItems(take,1)
+							st.set(var,str(isValue+1))
+						st.playSound("ItemSound.quest_middle")
+						return "You trapped the Seal of Drevanul Prince Zeruel"
+					else:
+						st.set(var,str(isValue+1))
+				else:
+					for give in giveList:
+						count = st.getQuestItemsCount(give)
+						if count == 0:
+							st.giveItems(give,1)
+							st.playSound("ItemSound.quest_middle")
+							for take in takeList:
+								st.takeItems(take,1)
+							st.set(var,str(isValue+1))
+							return 
+			else:
+				for give in giveList:
+					count = st.getQuestItemsCount(give)
+					if count < maxcount:
+						st.giveItems(give,1)
+						if count == maxcount-1:
+							st.playSound("ItemSound.quest_middle")
+							st.set(var,str(isValue+1)) 
+						else:
+							st.playSound("ItemSound.quest_itemget")
+						return
+		return
+						
+						
 
 QUEST       = Quest(229,"229_TestOfWitchcraft","Test Of Witchcraft")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
@@ -378,10 +402,11 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7630)
 
-STARTING.addTalkId(7630)
 
-for npcId in [7063,7098,7110,7188,7314,7417,7435,7476,7630,7631,7632,7633]:
- STARTED.addTalkId(npcId)
+for npcId in NPC:
+	STARTED.addTalkId(npcId)
 
-for mobId in [5099,5100,5101,557,565,577,578,579,580,581,582,601,602]:
- STARTED.addKillId(mobId)
+for mobId in DROPLIST.keys():
+	STARTED.addKillId(mobId)
+ 
+print "importing quests: 229: Test Of Witchcraft"
