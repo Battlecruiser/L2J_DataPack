@@ -5,10 +5,8 @@ REM ## You can change here your own DB params ##
 REM ############################################
 
 
-REM MYSQL 4.0
-set mysqlBinPath=C:\mysql\bin
 REM MYSQL 4.1
-REM set mysqlBinPath=C:\Program Files\MySQL\MySQL Server 4.1\bin
+set mysqlBinPath=C:\Program Files\MySQL\MySQL Server 4.1\bin
 set user=root
 set pass=
 set DBname=l2jdb
