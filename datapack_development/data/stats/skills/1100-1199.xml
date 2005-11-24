@@ -1084,6 +1084,7 @@
 </for>
 </skill>
 <skill id="1165" levels="3" name="Curse Disease">
+  <table name="#regHp">  1.40 1.55 1.70 </table>
   <set name="mpConsume" val="15"/>
   <set name="save" val="3"/>
   <set name="power" val="0.0"/>
@@ -1091,12 +1092,15 @@
   <set name="hitTime" val="3000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="3000"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="300000"/>
   <set name="castRange" val="200"/>
   <for>
+  <effect count="1" name="Buff" time="300" val="0">
+    <div order="0x50" stat="regHp" val="#regHp"/>
+  </effect>
   </for>
 </skill>
 <skill id="1166" levels="2" name="Curse Confuse">
@@ -1162,7 +1166,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="120000"/>
+  <set name="reuseDelay" val="12000"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="FEAR"/>
   <set name="isMagic" val="true"/>
@@ -1179,7 +1183,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="6000"/>
-  <set name="reuseDelay" val="180000"/>
+  <set name="reuseDelay" val="15000"/>
   <set name="skillTime" val="6000"/>
   <set name="skillType" val="PARALYZE"/>
   <set name="isMagic" val="true"/>
