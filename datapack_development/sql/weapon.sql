@@ -39,11 +39,11 @@ INSERT INTO weapon VALUES (2,'Long Sword','rhand','false',1560,2,2,'fine_steel',
 INSERT INTO weapon VALUES (3,'Broadsword','rhand','false',1590,1,1,'steel','none',11,10,'sword',8,0.00000,0,0,0,379,0,9,95,12500,0,'true');
 INSERT INTO weapon VALUES (4,'Club','rhand','false',1870,1,1,'wood','none',8,20,'blunt',4,4.00000,0,0,0,379,0,6,95,768,0,'true');
 INSERT INTO weapon VALUES (5,'Mace','rhand','false',1880,1,1,'steel','none',11,20,'blunt',4,4.00000,0,0,0,379,0,9,95,12500,0,'true');
-INSERT INTO weapon VALUES (6,'Apprentice''s Wand','rhand','false',1350,1,1,'steel','none',5,20,'blunt',4,4.00000,0,0,0,379,0,7,95,138,0,'true');
+INSERT INTO weapon VALUES (6,'Apprentice''s Wand','rhand','false',1350,1,1,'steel','none',5,20,'blunt',4,4.00000,0,0,0,379,0,7,95,138,0,'false');
 INSERT INTO weapon VALUES (7,'Apprentice''s Rod','rhand','false',1330,1,1,'wood','none',6,20,'blunt',4,4.00000,0,0,0,379,0,8,95,768,0,'true');
 INSERT INTO weapon VALUES (8,'Willow Staff','lrhand','false',1080,1,1,'wood','none',11,20,'blunt',4,4.00000,0,0,0,325,0,12,95,12500,0,'true');
 INSERT INTO weapon VALUES (9,'Cedar Staff','lrhand','false',1090,2,2,'wood','none',16,20,'blunt',4,4.00000,0,0,0,325,0,16,95,54100,0,'true');
-INSERT INTO weapon VALUES (10,'Dagger','rhand','false',1160,1,1,'steel','none',5,5,'dagger',12,-3.00000,0,0,0,433,0,5,95,138,0,'true');
+INSERT INTO weapon VALUES (10,'Dagger','rhand','false',1160,1,1,'steel','none',5,5,'dagger',12,-3.00000,0,0,0,433,0,5,95,138,0,'false');
 INSERT INTO weapon VALUES (11,'Bone Dagger','rhand','false',1150,1,1,'bone','none',7,5,'dagger',12,-3.00000,0,0,0,433,0,6,95,768,0,'true');
 INSERT INTO weapon VALUES (12,'Knife','rhand','false',1140,1,1,'bronze','none',10,5,'dagger',12,-3.00000,0,0,0,433,0,9,95,12500,0,'true');
 INSERT INTO weapon VALUES (13,'Short Bow','lrhand','false',1950,1,1,'wood','none',16,5,'bow',12,-3.00000,0,0,0,293,1,6,95,768,0,'true');
@@ -418,7 +418,7 @@ INSERT INTO weapon VALUES (1510,'Butcher''s Sword','rhand','false',1450,1,1,'ste
 INSERT INTO weapon VALUES (1511,'Silversmith Hammer','rhand','false',1860,1,1,'steel','none',13,20,'blunt',4,4.00000,0,0,0,379,0,10,100,25500,0,'true');
 INSERT INTO weapon VALUES (1660,'Cursed Maingauche','rhand','true',1070,3,3,'fine_steel','d',62,5,'dagger',12,-3.00000,0,0,0,433,0,42,95,1400000,2545,'true');
 INSERT INTO weapon VALUES (2368,'Training Gloves','lrhand','false',1580,1,1,'cloth','none',7,5,'dualfist',4,4.00000,0,0,0,325,0,5,95,138,0,'true');
-INSERT INTO weapon VALUES (2369,'Squire''s Sword','rhand','false',1600,1,1,'steel','none',6,10,'sword',8,0.00000,0,0,0,379,0,5,95,138,0,'true');
+INSERT INTO weapon VALUES (2369,'Squire''s Sword','rhand','false',1600,1,1,'steel','none',6,10,'sword',8,0.00000,0,0,0,379,0,5,95,138,0,'false');
 INSERT INTO weapon VALUES (2370,'Guild Member''s Club','rhand','false',1910,1,1,'wood','none',6,20,'blunt',4,4.00000,0,0,0,379,0,5,95,138,0,'true');
 INSERT INTO weapon VALUES (2371,'Fist of Butcher','lrhand','false',1400,1,1,'steel','none',16,5,'dualfist',4,4.00000,0,0,0,325,0,10,95,25500,0,'true');
 INSERT INTO weapon VALUES (2372,'Dagger of Adept','rhand','false',1050,1,1,'steel','none',11,5,'dagger',12,-3.00000,0,0,0,433,0,10,100,25500,0,'true');
