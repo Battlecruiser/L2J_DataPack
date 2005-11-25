@@ -5,7 +5,7 @@
 CREATE TABLE weapon (
   item_id decimal(11,0) NOT NULL default '0',
   name varchar(39) default NULL,
-  bodypart varchar(6) default NULL,
+  bodypart varchar(15) default NULL,
   crystallizable varchar(5) default NULL,
   weight decimal(4,0) default NULL,
   soulshots decimal(2,0) default NULL,
