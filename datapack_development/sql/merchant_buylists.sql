@@ -7894,15 +7894,15 @@ INSERT INTO merchant_buylists VALUES (5589,115,85,36);
 
 -- Merc Manager Greenspan - Gludio
 INSERT INTO merchant_buylists VALUES (3960,30000,123161,1); 
-INSERT INTO merchant_buylists VALUES (3960,40000,123161,2); 
-INSERT INTO merchant_buylists VALUES (3960,50000,123161,3); 
-INSERT INTO merchant_buylists VALUES (3960,150000,123161,4); 
-INSERT INTO merchant_buylists VALUES (3960,150000,123161,5); 
-INSERT INTO merchant_buylists VALUES (3960,30000,123161,6); 
-INSERT INTO merchant_buylists VALUES (3960,40000,123161,7); 
-INSERT INTO merchant_buylists VALUES (3960,50000,123161,8); 
-INSERT INTO merchant_buylists VALUES (3960,150000,123161,9); 
-INSERT INTO merchant_buylists VALUES (3960,150000,123161,10); 
+INSERT INTO merchant_buylists VALUES (3961,40000,123161,2); 
+INSERT INTO merchant_buylists VALUES (3962,50000,123161,3); 
+INSERT INTO merchant_buylists VALUES (3963,150000,123161,4); 
+INSERT INTO merchant_buylists VALUES (3964,150000,123161,5); 
+INSERT INTO merchant_buylists VALUES (3965,30000,123161,6); 
+INSERT INTO merchant_buylists VALUES (3966,40000,123161,7); 
+INSERT INTO merchant_buylists VALUES (3967,50000,123161,8); 
+INSERT INTO merchant_buylists VALUES (3968,150000,123161,9); 
+INSERT INTO merchant_buylists VALUES (3969,150000,123161,10); 
 
 -- Merc Manager Sanford - Dion
 INSERT INTO merchant_buylists VALUES (3973,30000,123171,1); 
