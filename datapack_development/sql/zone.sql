@@ -17,10 +17,12 @@ CREATE TABLE zone (
 insert into zone values (1, 'Arena', 'Giran Arena', 73482, 142269, 72507, 143247, 0, 0);
 insert into zone values (2, 'Arena', 'Gudin Arena', -88412, 142709, -87392, 141696, 0, 0);
 insert into zone values (3, 'Arena', 'Collusieum', 148089, 48067, 150938, 45359, 0, 0);
+insert into zone values (4, 'Arena', 'Monster Track', 12942, 183021, 11953, 184009, 0, 0);
 
 insert into zone values (1, 'Arena Spawn', 'Giran Arena Spawn', 73890, 142656, 0, 0, -3778, 0);
 insert into zone values (2, 'Arena Spawn', 'Gludin Arena Spawn', -86979, 142402, 0, 0, -3643, 0);
 insert into zone values (3, 'Arena Spawn', 'Collusieum Spawn', 147451, 46728, 0, 0, -3410, 0);
+insert into zone values (4, 'Arena Spawn', 'Monster Track', 12312, 182752, 0, 0, -3558, 0);
 
 insert into zone values (1, 'Castle Area', 'Gludio Castle', -22900, 104000, -14567, 116513, 0, 5);
 insert into zone values (2, 'Castle Area', 'Dion Castle', 18438, 152343, 25757, 164097, 0, 5);
@@ -53,3 +55,4 @@ insert into zone values (14, 'Town', 'Collusieum 2', 150945, 47214, 151895, 4622
 insert into zone values (15, 'Town', 'Heine/K Spawn', 103598, 216010, 118991, 225905, 0, 6);
 insert into zone values (16, 'Town', 'Floran Village', 0, 0, 0, 0, 0, 2);
 insert into zone values (17, 'Town', 'Ivory Tower', 0, 0, 0, 0, 0, 4);
+insert into zone values (18, 'Town', 'Monster Track', 14500, 181250, 11700, 182700, 0, 2);
