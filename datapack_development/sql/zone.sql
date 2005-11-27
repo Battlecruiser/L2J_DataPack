@@ -24,12 +24,18 @@ insert into zone values (2, 'Arena Spawn', 'Gludin Arena Spawn', -86979, 142402,
 insert into zone values (3, 'Arena Spawn', 'Collusieum Spawn', 147451, 46728, 0, 0, -3410, 0);
 insert into zone values (4, 'Arena Spawn', 'Monster Track', 12312, 182752, 0, 0, -3558, 0);
 
-insert into zone values (1, 'Castle Area', 'Gludio Castle', -22900, 104000, -14567, 116513, 0, 5);
-insert into zone values (2, 'Castle Area', 'Dion Castle', 18438, 152343, 25757, 164097, 0, 5);
-insert into zone values (3, 'Castle Area', 'Giran Castle', 105737, 140128, 121331, 149842, 0, 5);
-insert into zone values (4, 'Castle Area', 'Oren Castle', 72876, 32336, 87556, 40457, 0, 5);
-insert into zone values (5, 'Castle Area', 'Aden Castle', 134790, -2552, 154760, 20850, 0, 0);
+-- insert into zone values (1, 'Castle Area', 'Gludio Castle', -22900, 104000, -14567, 116513, 0, 5);
+-- insert into zone values (2, 'Castle Area', 'Dion Castle', 18438, 152343, 25757, 164097, 0, 5);
+-- insert into zone values (3, 'Castle Area', 'Giran Castle', 105737, 140128, 121331, 149842, 0, 5);
+-- insert into zone values (4, 'Castle Area', 'Oren Castle', 72876, 32336, 87556, 40457, 0, 5);
+-- insert into zone values (5, 'Castle Area', 'Aden Castle', 134790, -2552, 154760, 20850, 0, 0);
 insert into zone values (6, 'Castle Area', 'Innadril Castle', 0, 0, 0, 0, 0, 5);
+
+insert into zone values (1, 'Castle Area', 'Gludio Castle', -20394, 106804, -15708, 113862, 0, 5);
+insert into zone values (2, 'Castle Area', 'Dion Castle', 19679, 155959, 24365, 163101, 0, 5);
+insert into zone values (3, 'Castle Area', 'Giran Castle', 112064, 142760, 119112, 147446, 0, 5);
+insert into zone values (4, 'Castle Area', 'Oren Castle', 78142, 34908, 85284, 39594, 0, 5);
+insert into zone values (5, 'Castle Area', 'Aden Castle', 144599, 577, 150295, 8521, 0, 0);
 
 insert into zone values (1, 'Castle Defender Spawn', 'Gludio Defender Spawn', -18105, 110303, 0, 0, -2146, 0);
 insert into zone values (2, 'Castle Defender Spawn', 'Dion Defender Spawn', 22080, 159450, 0, 0, -2441, 0);
