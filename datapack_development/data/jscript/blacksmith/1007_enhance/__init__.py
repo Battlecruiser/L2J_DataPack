@@ -1,0 +1,207 @@
+# Written by Advi
+import sys
+from net.sf.l2j.gameserver.model.quest import State
+from net.sf.l2j.gameserver.model.quest import QuestState
+from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver import ItemTable
+
+
+############################## Feel Free to add more Weapons ##########################################################################################################3
+
+# Weapon enhancement definition  WeaponID:[Icon, [Enhancement, newWeaponID, CrystalID, MaterialID, MaterialQuant], ...]
+
+
+EnhanceList={
+#Bows
+281:["weapon_crystallized_ice_bow_i01", [["Guidance", 4810, 4634, 2131, 250], ["Evasion", 4811, 4645, 2131, 250], ["Quick Recovery", 4812, 4656, 2131, 250]]], 
+285:["weapon_elven_bow_of_nobility_i01", [["Evasion", 4816, 4635, 2131, 350], ["Miser", 4817, 4646, 2131, 350], ["Cheap Shot", 4818, 4657, 2131, 350]]], 
+283:["weapon_akat_long_bow_i01", [["Guidance", 4819, 4636, 2131, 450], ["Evasion", 4820, 4647, 2131, 450], ["Miser", 4821, 4658, 2131, 450]]], 
+286:["weapon_eminence_bow_i01", [["Guidance", 4822, 4637, 2131, 550], ["Miser", 4823, 4648, 2131, 550], ["Cheap Shot", 4824, 4659, 2131, 550]]], 
+284:["weapon_dark_elven_long_bow_i01", [["Evasion", 4825, 4639, 2132, 222], ["Critical Bleed", 4826, 4650, 2132, 222], ["Miser", 4827, 4661, 2132, 222]]], 
+287:["weapon_hazard_bow_i01", [["Guidance", 4828, 4639, 2132, 339], ["Quick Recovery", 4829, 4650, 2132, 339], ["Cheap Shot", 4830, 4661, 2132, 339]]], 
+# Swords
+72: ["weapon_stormbringer_i01", [["Critical Anger", 4681, 4634, 2131, 250], ["Focus", 4682, 4645, 2131, 250], ["Light", 4683, 4656, 2131, 250]]], 
+73: ["weapon_shamshir_i01", [["Guidance", 4684, 4635, 2131, 350], ["Back Blow", 4685, 4646, 2131, 350], ["Rsk. Evasion", 4686, 4657, 2131, 350]]], 
+74: ["weapon_katana_i01", [["Focus", 4687, 4635, 2131, 350], ["Critical Damage", 4688, 4646, 2131, 350], ["Haste", 4689, 4657, 2131, 350]]], 
+131:["weapon_spirit_sword_i01", [["Critical Damage", 4690, 4635, 2131, 350], ["Critical Poison", 4691, 4646, 2131, 350], ["Haste", 4692, 4657, 2131, 350]]], 
+133:["weapon_raid_sword_i01", [["Focus", 4693, 4635, 2131, 350], ["Critical Drain", 4694, 4646, 2131, 350], ["Critical Poison", 4695, 4657, 2131, 350]]], 
+76: ["weapon_sword_of_delusion_i01", [["Focus", 4699, 4636, 2131, 450], ["Health", 4700, 4647, 2131, 450], ["Rsk. Haste", 4701, 4658, 2131, 450]]], 
+77: ["weapon_tsurugi_i01", [["Focus", 4702, 4636, 2131, 450], ["Critical Damage", 4703, 4647, 2131, 450], ["Haste", 4704, 4658, 2131, 450]]], 
+134:["weapon_sword_of_nightmare_i01", [["Health", 4705, 4636, 2131, 450], ["Focus", 4706, 4647, 2131, 450], ["Light", 4707, 4658, 2131, 450]]], 
+142:["weapon_keshanberk_i01", [["Guidance", 4714, 4638, 2132, 222], ["Focus", 4715, 4649, 2132, 222], ["Back Blow", 4716, 4660, 2132, 222]]], 
+79: ["weapon_sword_of_damascus_i01", [["Focus", 4717, 4639, 2132, 339], ["Critical Damage", 4718, 4650, 2132, 339], ["Haste", 4719, 4661, 2132, 339]]], 
+78: ["weapon_great_sword_i01", [["Health", 4723, 4638, 2132, 222], ["Critical Damage", 4724, 4649, 2132, 222], ["Focus", 4725, 4660, 2132, 222]]], 
+132:["weapon_sword_of_limit_i01", [["Guidance", 6307, 4636, 2131, 450], ["Critical Drain", 6308, 4647, 2131, 450], ["Health", 6309, 4658, 2131, 450]]], 
+# Blunts
+162:["weapon_war_axe_i01", [["Anger", 4741, 4636, 2131, 450], ["Health", 4742, 4647, 2131, 450], ["Haste", 4743, 4658, 2131, 450]]], 
+2503:["weapon_yaksa_mace_i01", [["Anger", 4744, 4637, 2131, 550], ["Health", 4745, 4648, 2131, 550], ["Rsk. Focus", 4746, 4659, 2131, 550]]], 
+91: ["weapon_heavy_war_axe_i01", [["Anger", 4747, 4638, 2132, 222], ["Health", 4748, 4649, 2132, 222], ["Rsk. Focus", 4749, 4660, 2132, 222]]], 
+171:["weapon_deadmans_glory_i01", [["Anger", 4750, 4639, 2132, 339], ["Health", 4751, 4650, 2132, 339], ["Haste", 4752, 4661, 2132, 339]]], 
+175:["weapon_art_of_battle_axe_i01", [["Health", 4753, 4639, 2132, 339], ["Rsk. Focus", 4754, 4650, 2132, 339], ["Haste", 4755, 4661, 2132, 339]]], 
+192:["weapon_crystal_staff_i01", [["Rsk. Evasion", 4867, 4634, 2131, 250], ["Mana Up", 4868, 4645, 2131, 250], ["Bodily Blessing", 4869, 4656, 2131, 250]]], 
+195:["weapon_cursed_staff_i01", [["Magic Hold", 4873, 4635, 2131, 350], ["Magic Poison", 4874, 4646, 2131, 350], ["Magic Weakness", 4875, 4657, 2131, 350]]], 
+197:["weapon_paradia_staff_i01", [["Magic Regeneration", 4876, 4636, 2131, 450], ["Mental Shield", 4877, 4647, 2131, 450], ["Magic Hold", 4878, 4658, 2131, 450]]], 
+200:["weapon_sages_staff_i01", [["Magic Hold", 4882, 4636, 2131, 450], ["Magic Poison", 4883, 4647, 2131, 450], ["Magic Weakness", 4884, 4658, 2131, 450]]], 
+203:["weapon_paagrio_axe_i01", [["Mana Up", 4885, 4636, 2131, 450], ["Magic Weakness", 4886, 4647, 2131, 450], ["Magic Chaos", 4887, 4658, 2131, 450]]], 
+204:["weapon_deadmans_staff_i01", [["Magic Regeneration", 4888, 4637, 2131, 550], ["Mental Shield", 4889, 4648, 2131, 550], ["Magic Hold", 4890, 4659, 2131, 550]]], 
+205:["weapon_ghouls_staff_i01", [["Rsk. Evasion", 4891, 4637, 2131, 550], ["Mana Up", 4892, 4648, 2131, 550], ["Bodily Blessing", 4893, 4659, 2131, 550]]], 
+206:["weapon_demons_staff_i01", [["Magic Poison", 4894, 4637, 2131, 550], ["Magic Weakness", 4895, 4648, 2131, 550], ["Magic Chaos", 4896, 4659, 2131, 550]]], 
+92: ["weapon_sprites_staff_i01", [["Magic Regeneration", 4897, 4638, 2132, 222], ["Mental Shield", 4898, 4649, 2132, 222], ["Magic Hold", 4899, 4660, 2132, 222]]], 
+210:["weapon_staff_of_evil_spirit_magic_i01", [["Magic Focus", 4900, 4639, 2132, 339], ["Bodily Blessing", 4901, 4650, 2132, 339], ["Magic Poison", 4902, 4661, 2132, 339]]], 
+# Dagger'
+231:["weapon_grace_dagger_i01", [["Evasion", 4768, 4636, 2131, 450], ["Focus", 4769, 4647, 2131, 450], ["Back Blow", 4770, 4658, 2131, 450]]], 
+233:["weapon_dark_screamer_i01", [["Evasion", 4771, 4636, 2131, 450], ["Focus", 4772, 4647, 2131, 450], ["Critical Bleed", 4773, 4658, 2131, 450]]], 
+228:["weapon_crystal_dagger_i01", [["Critical Bleed", 4774, 4637, 2131, 550], ["Critical Poison", 4775, 4648, 2131, 550], ["Might Mortal", 4776, 4659, 2131, 550]]], 
+229:["weapon_kris_i01", [["Evasion", 4777, 4638, 2132, 222], ["Focus", 4778, 4649, 2132, 222], ["Back Blow", 4779, 4660, 2132, 222]]], 
+234:["weapon_demons_sword_i01", [["Critical Bleed", 4780, 4639, 2132, 339], ["Critical Poison", 4781, 4650, 2132, 339], ["Might Mortal", 4782, 4661, 2132, 339]]], 
+# Poleaxe'
+301:["weapon_scorpion_i01", [["Anger", 4846, 4636, 2131, 450], ["Critical Stun", 4847, 4647, 2131, 450], ["Long Blow", 4848, 4659, 2131, 450]]], 
+303:["weapon_widow_maker_critical_stun", [["Critical Stun", 4849, 4636, 2131, 450], ["Long Blow", 4850, 4647, 2131, 450], ["Wide Blow", 4851, 4658, 2131, 450]]], 
+299:["weapon_orcish_poleaxe_critical_stun", [["Critical Stun", 4852, 4637, 2131, 550], ["Long Blow", 4853, 4648, 2131, 550], ["Wide Blow", 4854, 4659, 2131, 550]]], 
+300:["weapon_great_axe_i01", [["Anger", 4855, 4638, 2132, 222], ["Critical Stun", 4856, 4649, 2132, 222], ["Light", 4857, 4660, 2132, 222]]], 
+97: ["weapon_lance_i01", [["Anger", 4858, 4639, 2132, 339], ["Critical Stun", 4859, 4650, 2132, 339], ["Long Blow", 4860, 4661, 2132, 339]]], 
+# Bigsword'
+265:["weapon_fist_blade_i01", [["Rsk. Evasion", 4792, 4635, 2131, 350], ["Rsk. Haste", 4793, 4646, 2131, 350], ["Haste", 4794, 4657, 2131, 350]]], 
+266:["weapon_great_pata_i01", [["Critical Drain", 4795, 4637, 2131, 550], ["Critical Poison", 4796, 4648, 2131, 550], ["Rsk. Haste", 4797, 4659, 2131, 550]]], 
+267:["weapon_arthro_nail_i01", [["Critical Poison", 4801, 4638, 2132, 222], ["Rsk. Evasion", 4802, 4649, 2132, 222], ["Rsk. Haste", 4803, 4660, 2132, 222]]], 
+268:["weapon_bellion_cestus_i01", [["Critical Drain", 4804, 4639, 2132, 339], ["Critical Poison", 4805, 4650, 2132, 339], ["Rsk. Haste", 4806, 4661, 2132, 339]]], 
+145:["weapon_sword_of_whispering_death_empower", [["Empower", 6310, 4636, 2131, 450], ["Magic Power", 6311, 4647, 2131, 450], ["Magic Silence", 6312, 4658, 2131, 450]]], 
+84: ["weapon_homunkuluss_sword_acumen", [["Acumen", 6313, 4636, 2131, 450], ["Conversion", 6314, 4647, 2131, 450], ["Magic Paralyze", 6315, 4658, 2131, 450]]]
+}
+
+
+############################################################## DO NOT MODIFY BELOW THIS LINE #####################################################################################
+
+
+def getItemName(Item):
+    ItemName = Item.getItem().getName()
+    if Item.getEnchantLevel() > 0: 
+        ItemName = "+" + str(Item.getEnchantLevel()) + " " + ItemName
+    return ItemName
+
+
+def getMaterialName(MaterialID):
+    if MaterialID in range(2131, 2134):
+        return "Gemstone " + chr(ord('A') + 2133 - MaterialID)
+    if MaterialID in range(4629, 4640):
+        return "Red Soul Crystal - Stage " + str(MaterialID - 4629)
+    if MaterialID in range(4640, 4651):
+        return "Green Soul Crystal - Stage " + str(MaterialID - 4640)
+    if MaterialID in range(4651, 4662):
+        return "Blue Soul Crystal - Stage " + str(MaterialID - 4651)
+    return "Unknown material"
+  
+    
+def getMaterialIcon(MaterialID):
+    if MaterialID in range(2131, 2134):
+        return "etc_crystal_ball_green_i00"
+    if MaterialID in range(4629, 4640):
+        return "etc_crystal_red_i00"
+    if MaterialID in range(4640, 4651):
+        return "etc_crystal_green_i00"
+    if MaterialID in range(4651, 4662):
+        return "etc_crystal_blue_i00"
+    return "etc_unknown_material_i00"
+
+
+# Main Code
+class Quest (JQuest) :
+
+ def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+
+ def onEvent (self,event,st) :
+    htmltext = event
+    
+    # Creates a List to chose a weapon
+    if event == "1":
+        htmltext = ""
+        for Item in st.getPlayer().getInventory().getItems():
+            if Item.getItemId() in EnhanceList and not Item.isEquipped():
+                Icon, Enhancements = EnhanceList[Item.getItemId()]
+                EnhancID = 0
+                for Name, WeaponID, CrystalID, MaterialID, MaterialQuant in Enhancements:
+                    htmltext += "<tr>\n<td width=35><img src=\"icon." + Icon + "\" width=32 height=32 align=\"left\"></td>\n" \
+                        "<td width=835><table border=0 width=\"835\">\n<tr><td><a action=\"bypass -h Quest 1007_enhance 2_" + str(Item.getObjectId()) + "." + str(EnhancID) + "\">" + getItemName(Item) + ": " + Name + "</a></td></tr>\n" \
+                        "<tr><td><font color=\"B09878\">Enhance</font></td></tr></table></td>\n</tr>"
+                    EnhancID += 1
+        if htmltext == "": 
+            htmltext = "<tr><td>You have no enhancable weapon in your inventory</td></tr>"
+        htmltext = "<html><body>\nList:\n<left>\n<table width=870 border=0>\n" + htmltext + "</table>\n<br></left></body></html>"
+        return htmltext
+	
+	# shows you how much materials you need to enhance, ok button to go forward, too
+    elif event.startswith("2_"):
+        reqEnh = event.replace("2_", "").split(".")
+        ObjectID = int(reqEnh[0])
+        EnhancID = int(reqEnh[1])
+        Item = st.getPlayer().getInventory().getItemByObjectId(ObjectID)
+        if Item.getItemId() in EnhanceList:
+            Icon, Enhancements = EnhanceList[Item.getItemId()]
+            Name, WeaponID, CrystalID, MaterialID, MaterialQuant = Enhancements[EnhancID]
+            htmltext = st.showHtmlFile("2.htm")
+            return htmltext.replace("<WeaponName>", getItemName(Item) + ": " + Name)\
+                .replace("<WeaponIcon>", Icon)\
+                .replace("<CrystalName>", getMaterialName(CrystalID))\
+                .replace("<CrystalIcon>", getMaterialIcon(CrystalID))\
+                .replace("<MaterialName>", getMaterialName(MaterialID))\
+                .replace("<MaterialIcon>", getMaterialIcon(MaterialID))\
+                .replace("<MaterialQuantity>", str(MaterialQuant))\
+                .replace("<EventOK>", "3_" + str(Item.getObjectId()) + "." + str(EnhancID))
+    
+    # this handels the whole enhance stuff with objectIds, not ItemIds... no html shows up.. just work and socket return
+    elif event.startswith("3_"):
+        reqEnh = event.replace("3_", "").split(".")
+        ObjectID = int(reqEnh[0])
+        EnhancID = int(reqEnh[1])
+        Item = st.getPlayer().getInventory().getItemByObjectId(ObjectID)
+        if Item.getItemId() in EnhanceList:
+            Icon, Enhancements = EnhanceList[Item.getItemId()]
+            Name, WeaponID, CrystalID, MaterialID, MaterialQuant = Enhancements[EnhancID]
+
+            if st.getQuestItemsCount(CrystalID) >= 1 and st.getQuestItemsCount(MaterialID) >= MaterialQuant :
+                EnchantLevel = Item.getEnchantLevel()
+                st.getPlayer().getInventory().destroyItem(ObjectID, 1)
+                NewItem = ItemTable.getInstance().createItem(WeaponID)
+                NewItem.setEnchantLevel(EnchantLevel)
+                st.getPlayer().getInventory().addItem(NewItem)
+                st.takeItems(CrystalID, 1)
+                st.takeItems(MaterialID, MaterialQuant)
+                htmltext = "Item has been succesfully enhanced!"
+            else :
+                htmltext = "You do not have enough materials."
+    
+    # if event is 0, or has a bug... trade is canceled
+    else :
+        htmltext = "Trade has been cancelled."
+
+    
+    st.setState(COMPLETED)
+    st.exitQuest(1)
+    return htmltext
+    
+    
+# this just return new html, if the player can talk with this npc about that enhance stuff
+ def onTalk (self,npc,st):
+   npcId = npc.getNpcId()
+   htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
+   st.set("cond","0")
+   st.setState(STARTED)
+   return "1.htm"
+
+
+QUEST       = Quest(1007,"1007_enhance","Blacksmith")
+CREATED     = State('Start',     QUEST)
+STARTED     = State('Started',   QUEST)
+COMPLETED   = State('Completed', QUEST)
+
+
+QUEST.setInitialState(CREATED)
+
+
+# init all npc to the correct stats
+for npcId in [7300,7471,7678,7688,7846]:
+	QUEST.addStartNpc(npcId)
+	STARTED.addTalkId(npcId)
+	
+# always at the end, then it shows only up if anything is correct in the code.. no jython error.. because we cant check jython errors with idle
+print "importing blacksmith data: 1007_enhance"
