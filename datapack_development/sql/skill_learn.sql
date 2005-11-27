@@ -1018,3 +1018,17 @@ insert into skill_learn values (7896,54);
 insert into skill_learn values (7896,55);
 insert into skill_learn values (7896,56);
 insert into skill_learn values (7896,57);
+-- fix DE Guild Oren
+INSERT INTO skill_learn VALUES (7192,31);
+INSERT INTO skill_learn VALUES (7192,32);
+INSERT INTO skill_learn VALUES (7192,33);
+INSERT INTO skill_learn VALUES (7192,34);
+INSERT INTO skill_learn VALUES (7192,35);
+INSERT INTO skill_learn VALUES (7192,36);
+INSERT INTO skill_learn VALUES (7192,37);
+INSERT INTO skill_learn VALUES (7194,38);
+INSERT INTO skill_learn VALUES (7194,39);
+INSERT INTO skill_learn VALUES (7194,40);
+INSERT INTO skill_learn VALUES (7194,41);
+INSERT INTO skill_learn VALUES (7194,42);
+INSERT INTO skill_learn VALUES (7194,43);
