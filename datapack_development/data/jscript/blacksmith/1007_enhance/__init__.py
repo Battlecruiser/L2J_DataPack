@@ -1,4 +1,5 @@
 # Written by Advi
+# v1.2, NewAge: Removed 'Might Mortal' from daggers, no longer available in C3, added rest of weapons, replaced 'Bigsword' with 'Fist'
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -19,6 +20,7 @@ EnhanceList={
 286:["weapon_eminence_bow_i01", [["Guidance", 4822, 4637, 2131, 550], ["Miser", 4823, 4648, 2131, 550], ["Cheap Shot", 4824, 4659, 2131, 550]]], 
 284:["weapon_dark_elven_long_bow_i01", [["Evasion", 4825, 4639, 2132, 222], ["Critical Bleed", 4826, 4650, 2132, 222], ["Miser", 4827, 4661, 2132, 222]]], 
 287:["weapon_hazard_bow_i01", [["Guidance", 4828, 4639, 2132, 339], ["Quick Recovery", 4829, 4650, 2132, 339], ["Cheap Shot", 4830, 4661, 2132, 339]]], 
+282:["weapon_elemental_bow_i01", [["Guidance", 4813, 4634, 2131, 250], ["Miser", 4814, 4645, 2131, 250], ["Quick Recovery", 4815, 4656, 2131, 250]]], 
 # Swords
 72: ["weapon_stormbringer_i01", [["Critical Anger", 4681, 4634, 2131, 250], ["Focus", 4682, 4645, 2131, 250], ["Light", 4683, 4656, 2131, 250]]], 
 73: ["weapon_shamshir_i01", [["Guidance", 4684, 4635, 2131, 350], ["Back Blow", 4685, 4646, 2131, 350], ["Rsk. Evasion", 4686, 4657, 2131, 350]]], 
@@ -32,8 +34,19 @@ EnhanceList={
 79: ["weapon_sword_of_damascus_i01", [["Focus", 4717, 4639, 2132, 339], ["Critical Damage", 4718, 4650, 2132, 339], ["Haste", 4719, 4661, 2132, 339]]], 
 78: ["weapon_great_sword_i01", [["Health", 4723, 4638, 2132, 222], ["Critical Damage", 4724, 4649, 2132, 222], ["Focus", 4725, 4660, 2132, 222]]], 
 132:["weapon_sword_of_limit_i01", [["Guidance", 6307, 4636, 2131, 450], ["Critical Drain", 6308, 4647, 2131, 450], ["Health", 6309, 4658, 2131, 450]]], 
+145:["weapon_deathbreath_sword_i01", [["Empower", 6310, 4636, 2131, 450], ["Magic Power", 6311, 4647, 2131, 450], ["Magic Silence", 6312, 4658, 2131, 450]]], 
+84:["weapon_homunkuluss_sword_i01", [["Acumen", 6313, 4636, 2131, 450], ["Conversion", 6314, 4647, 2131, 450], ["Magic Paralyze", 6315, 4658, 2131, 450]]], 
+85:["weapon_caliburs_i01", [["Guidance", 4696, 4636, 2131, 350], ["Focus", 4697, 4647, 2131, 350], ["Critical Damage", 4698, 4658, 2131, 350]]], 
+135:["weapon_samurai_longsword_i01", [["Focus", 4708, 4637, 2131, 450], ["Critical Damage", 4709, 4648, 2131, 450], ["Haste", 4710, 4659, 2131, 450]]], 
+71:["weapon_flamberge_i01", [["Critical Damage", 4711, 4634, 2131, 222], ["Focus", 4712, 4645, 2131, 222], ["Light", 4713, 4656, 2131, 222]]], 
+5286:["weapon_berserker_blade_i01", [["Focus", 6347, 4637, 2131, 350], ["Critical Damage", 6348, 4648, 2131, 350], ["Haste", 6349, 4659, 2131, 350]]], 
 # Blunts
+89:["weapon_big_hammer_i01", [["Health", 4726, 4634, 2131, 250], ["Rsk. Focus", 4727, 4645, 2131, 250], ["Haste", 4728, 4656, 2131, 250]]], 
+160:["weapon_battle_axe_i01", [["Anger", 4729, 4634, 2131, 250], ["Rsk. Focus", 4730, 4645, 2131, 250], ["Haste", 4731, 4656, 2131, 250]]], 
+161:["weapon_war_pick_i01", [["Anger", 4732, 4634, 2131, 250], ["Rsk. Focus", 4733, 4645, 2131, 250], ["Haste", 4734, 4656, 2131, 250]]], 
 162:["weapon_war_axe_i01", [["Anger", 4741, 4636, 2131, 450], ["Health", 4742, 4647, 2131, 450], ["Haste", 4743, 4658, 2131, 450]]], 
+173:["weapon_skull_graver_i01", [["Anger", 4735, 4634, 2131, 250], ["Health", 4736, 4645, 2131, 250], ["Rsk. Focus", 4737, 4656, 2131, 250]]], 
+2502:["weapon_dwarven_warhammer_i01", [["Anger", 4738, 4635, 2131, 350], ["Health", 4739, 4646, 2131, 350], ["Haste", 4740, 4657, 2131, 350]]], 
 2503:["weapon_yaksa_mace_i01", [["Anger", 4744, 4637, 2131, 550], ["Health", 4745, 4648, 2131, 550], ["Rsk. Focus", 4746, 4659, 2131, 550]]], 
 91: ["weapon_heavy_war_axe_i01", [["Anger", 4747, 4638, 2132, 222], ["Health", 4748, 4649, 2132, 222], ["Rsk. Focus", 4749, 4660, 2132, 222]]], 
 171:["weapon_deadmans_glory_i01", [["Anger", 4750, 4639, 2132, 339], ["Health", 4751, 4650, 2132, 339], ["Haste", 4752, 4661, 2132, 339]]], 
@@ -48,25 +61,35 @@ EnhanceList={
 206:["weapon_demons_staff_i01", [["Magic Poison", 4894, 4637, 2131, 550], ["Magic Weakness", 4895, 4648, 2131, 550], ["Magic Chaos", 4896, 4659, 2131, 550]]], 
 92: ["weapon_sprites_staff_i01", [["Magic Regeneration", 4897, 4638, 2132, 222], ["Mental Shield", 4898, 4649, 2132, 222], ["Magic Hold", 4899, 4660, 2132, 222]]], 
 210:["weapon_staff_of_evil_spirit_magic_i01", [["Magic Focus", 4900, 4639, 2132, 339], ["Bodily Blessing", 4901, 4650, 2132, 339], ["Magic Poison", 4902, 4661, 2132, 339]]], 
+191:["weapon_heavy_doom_hammer_i01", [["Magic Regeneration", 4864, 4634, 2132, 250], ["Mental Shield", 4865, 4645, 2132, 250], ["Magic Hold", 4866, 4656, 2132, 250]]], 
+194:["weapon_heavy_doom_axe_i01", [["Magic Poison", 4870, 4634, 2132, 250], ["Magic Weakness", 4871, 4645, 2132, 250], ["Magic Chaos", 4872, 4656, 2132, 250]]], 
+199:["weapon_paagrio_hammer_i01", [["Rsk. Evasion", 4879, 4636, 2132, 350], ["Magic Poison", 4880, 4647, 2132, 350], ["Magic Weakness", 4881, 4658, 2132, 350]]], 
 # Dagger'
 231:["weapon_grace_dagger_i01", [["Evasion", 4768, 4636, 2131, 450], ["Focus", 4769, 4647, 2131, 450], ["Back Blow", 4770, 4658, 2131, 450]]], 
 233:["weapon_dark_screamer_i01", [["Evasion", 4771, 4636, 2131, 450], ["Focus", 4772, 4647, 2131, 450], ["Critical Bleed", 4773, 4658, 2131, 450]]], 
-228:["weapon_crystal_dagger_i01", [["Critical Bleed", 4774, 4637, 2131, 550], ["Critical Poison", 4775, 4648, 2131, 550], ["Might Mortal", 4776, 4659, 2131, 550]]], 
+228:["weapon_crystal_dagger_i01", [["Critical Bleed", 4774, 4637, 2131, 550], ["Critical Poison", 4775, 4648, 2131, 550], ["Critical Damage", 6358, 4659, 2131, 550]]], 
 229:["weapon_kris_i01", [["Evasion", 4777, 4638, 2132, 222], ["Focus", 4778, 4649, 2132, 222], ["Back Blow", 4779, 4660, 2132, 222]]], 
-234:["weapon_demons_sword_i01", [["Critical Bleed", 4780, 4639, 2132, 339], ["Critical Poison", 4781, 4650, 2132, 339], ["Might Mortal", 4782, 4661, 2132, 339]]], 
+234:["weapon_demons_sword_i01", [["Critical Bleed", 4780, 4639, 2132, 339], ["Critical Poison", 4781, 4650, 2132, 339], ["Critical Damage", 6359, 4661, 2132, 339]]], 
+226:["weapon_cursed_dagger_i01", [["Critical Bleed", 4759, 4634, 2132, 250], ["Critical Poison", 4760, 4645, 2132, 250], ["Rsk. Haste", 4761, 4656, 2132, 250]]], 
+232:["weapon_darkelven_dagger_i01", [["Focus", 4762, 4634, 2132, 250], ["Back Blow", 4763, 4645, 2132, 250], ["Rsk. Haste", 6356, 4656, 2132, 250]]], 
+227:["weapon_stiletto_i01", [["Critical Bleed", 4765, 4635, 2132, 250], ["Critical Poison", 4766, 4646, 2132, 250], ["Rsk. Haste", 6357, 4657, 2132, 250]]], 
 # Poleaxe'
 301:["weapon_scorpion_i01", [["Anger", 4846, 4636, 2131, 450], ["Critical Stun", 4847, 4647, 2131, 450], ["Long Blow", 4848, 4659, 2131, 450]]], 
 303:["weapon_widow_maker_critical_stun", [["Critical Stun", 4849, 4636, 2131, 450], ["Long Blow", 4850, 4647, 2131, 450], ["Wide Blow", 4851, 4658, 2131, 450]]], 
 299:["weapon_orcish_poleaxe_critical_stun", [["Critical Stun", 4852, 4637, 2131, 550], ["Long Blow", 4853, 4648, 2131, 550], ["Wide Blow", 4854, 4659, 2131, 550]]], 
 300:["weapon_great_axe_i01", [["Anger", 4855, 4638, 2132, 222], ["Critical Stun", 4856, 4649, 2132, 222], ["Light", 4857, 4660, 2132, 222]]], 
 97: ["weapon_lance_i01", [["Anger", 4858, 4639, 2132, 339], ["Critical Stun", 4859, 4650, 2132, 339], ["Long Blow", 4860, 4661, 2132, 339]]], 
-# Bigsword'
+96:["weapon_scythe_i01", [["Anger", 4834, 4634, 2132, 250], ["Critical Stun", 4835, 4645, 2132, 250], ["Light", 4836, 4656, 2132, 250]]], 
+298:["weapon_orcish_glaive_i01", [["Anger", 4837, 4634, 2132, 250], ["Critical Stun", 4838, 4645, 2132, 250], ["Long Blow", 4839, 4656, 2132, 250]]], 
+302:["weapon_body_slasher_i01", [["Critical Stun", 4840, 4634, 2132, 250], ["Long Blow", 4841, 4645, 2132, 250], ["Wide Blow", 4842, 4656, 2132, 250]]], 
+94:["weapon_bech_de_corbin_i01", [["Critical Stun", 4843, 4635, 2132, 350], ["Long Blow", 4844, 4646, 2132, 350], ["Light", 4845, 4657, 2132, 350]]], 
+# Fist'
+263:["weapon_chakram_i01", [["Critical Drain", 4789, 4634, 2131, 250], ["Critical Poison", 4790, 4645, 2131, 250], ["Rsk. Haste", 4791, 4656, 2131, 250]]], 
 265:["weapon_fist_blade_i01", [["Rsk. Evasion", 4792, 4635, 2131, 350], ["Rsk. Haste", 4793, 4646, 2131, 350], ["Haste", 4794, 4657, 2131, 350]]], 
 266:["weapon_great_pata_i01", [["Critical Drain", 4795, 4637, 2131, 550], ["Critical Poison", 4796, 4648, 2131, 550], ["Rsk. Haste", 4797, 4659, 2131, 550]]], 
 267:["weapon_arthro_nail_i01", [["Critical Poison", 4801, 4638, 2132, 222], ["Rsk. Evasion", 4802, 4649, 2132, 222], ["Rsk. Haste", 4803, 4660, 2132, 222]]], 
 268:["weapon_bellion_cestus_i01", [["Critical Drain", 4804, 4639, 2132, 339], ["Critical Poison", 4805, 4650, 2132, 339], ["Rsk. Haste", 4806, 4661, 2132, 339]]], 
-145:["weapon_sword_of_whispering_death_empower", [["Empower", 6310, 4636, 2131, 450], ["Magic Power", 6311, 4647, 2131, 450], ["Magic Silence", 6312, 4658, 2131, 450]]], 
-84: ["weapon_homunkuluss_sword_acumen", [["Acumen", 6313, 4636, 2131, 450], ["Conversion", 6314, 4647, 2131, 450], ["Magic Paralyze", 6315, 4658, 2131, 450]]]
+4233:["weapon_knuckle_dust_i01", [["Rsk. Evasion", 4798, 4637, 2131, 550], ["Rsk. Haste", 4799, 4648, 2131, 550], ["Haste", 4800, 4659, 2131, 550]]], 
 }
 
 
