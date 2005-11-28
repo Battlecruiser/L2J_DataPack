@@ -24,7 +24,6 @@ echo Deleting tables for new content.
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < full_install.sql
 echo.
 echo Installling new content.
-%mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/accounts.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/armor.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/boxaccess.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/boxes.sql
