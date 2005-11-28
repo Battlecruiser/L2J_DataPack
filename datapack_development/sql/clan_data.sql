@@ -10,6 +10,8 @@ CREATE TABLE clan_data (
   ally_id INT,
   ally_name varchar(45) ,
   leader_id INT,
+  crest_id INT,
+  ally_crest_id INT,
   PRIMARY KEY  (clan_id),
   KEY `leader_id` (`leader_id`),
   KEY `ally_id` (`ally_id`)
