@@ -16,6 +16,8 @@ DROP TABLE IF EXISTS merchants;
 DROP TABLE IF EXISTS minions;
 DROP TABLE IF EXISTS npc;
 DROP TABLE IF EXISTS npcskills;
+DROP TABLE IF EXISTS random_spawn;
+DROP TABLE IF EXISTS random_spawn_loc;
 DROP TABLE IF EXISTS skill_learn;
 DROP TABLE IF EXISTS skill_trees;
 DROP TABLE IF EXISTS skill_spellbooks;

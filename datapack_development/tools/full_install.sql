@@ -35,6 +35,8 @@ DROP TABLE IF EXISTS minions;
 DROP TABLE IF EXISTS npc;
 DROP TABLE IF EXISTS npcskills;
 DROP TABLE IF EXISTS pets;
+DROP TABLE IF EXISTS random_spawn;
+DROP TABLE IF EXISTS random_spawn_loc;
 DROP TABLE IF EXISTS seven_signs;
 DROP TABLE IF EXISTS seven_signs_festival;
 DROP TABLE IF EXISTS siege_clans;
