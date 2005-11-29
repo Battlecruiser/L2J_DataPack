@@ -21,7 +21,7 @@ echo Making a backup of the original database.
 %mysqldumpPath% --add-drop-table -h %DBHost% -u %user% --password=%pass% %DBname% > l2jdb_backup.sql
 echo.
 echo Deleting tables for new content.
-%mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < full_install.sql
+%mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < login_install.sql
 echo.
 echo Installling new content.
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/accounts.sql
