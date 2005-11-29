@@ -61,6 +61,8 @@ echo Installling new content.
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/npc.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/npcskills.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/pets.sql
+%mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/random_spawn.sql
+%mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/random_spawn_loc.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/seven_signs.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/seven_signs_festival.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/siege_clans.sql
