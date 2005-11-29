@@ -276,8 +276,7 @@ class Quest (JQuest) :
        st.exitQuest(1)
        return "7738-21.htm"
      else:
-       if st.getState() == None and st.get("cond") == None:
-         st.setState(STARTED)
+       if st.getState() == CREATED:
          st.set("cond","0")
        if st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and check_ingredients(st,0,0,0,0,0,0,0,0) and st.getState() != MIDDLE:
          if st.get("cond") == None:
@@ -291,7 +290,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(POTION_RECIPE_1_ID) == 0: st.giveItems(POTION_RECIPE_1_ID,1)
          if st.getQuestItemsCount(POTION_RECIPE_2_ID) == 0: st.giveItems(POTION_RECIPE_2_ID,1)
          return "7738-12.htm"
-       elif st.getState() == END and ~check_ingredients(st,1,1,1,1,1,1,1,1):
+       elif st.getState() == END and not check_ingredients(st,1,1,1,1,1,1,1,1):
          return "7738-07.htm"       
        elif check_ingredients(st,1,1,1,1,1,1,1,1):
          return "7738-08.htm"
@@ -312,7 +311,7 @@ class Quest (JQuest) :
    # hm, you already collected all items. but now you have lost one (destroyed maybe). will give you a second try 
    if id == END:
      if npcId in [AMBER_BASILISK, WHISPERING_WIND, GLASS_JAGUAR, HORROR_MIST_RIPPER, SILENOS, ANT_RECRUIT, ANT_WARRIOR_CAPTAIN, TYRANT, TYRANT_KINGPIN, TURAK_BUGBEAR, TURAK_BUGBEAR_WARRIOR]:
-       if ~check_ingredients(st,1,1,1,1,1,1,1,1): st.setState(MIDDLE)
+       if not check_ingredients(st,1,1,1,1,1,1,1,1): st.setState(MIDDLE)
    elif id == STARTED:
      if npcId == SECRET_KEEPER_TREE:
        if st.getQuestItemsCount(SECRET_BOOK_ID) == 0:
