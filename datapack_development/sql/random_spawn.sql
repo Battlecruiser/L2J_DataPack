@@ -11,4 +11,4 @@ CREATE TABLE random_spawn (
   PRIMARY KEY  (groupId)
 );
 
-Insert Into random_spawn Values (1, 7556, 1, 3600000, 0, 0);
+Insert Into random_spawn Values (1, 7556, 1, 1800000, 0, 0);
