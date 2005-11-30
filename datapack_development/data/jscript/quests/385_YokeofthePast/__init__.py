@@ -45,7 +45,7 @@ class Quest (JQuest) :
 
  def onKill (self,npc,st):
     npcId = npc.getNpcId()
-    if npcId range(1208,1256) :
+    if npcId in range(1208,1256) :
          if st.getRandom(10)<6 :
            st.giveItems(ANCIENT_SCROLL_ID,1)
            st.playSound("ItemSound.quest_itemget")
@@ -61,15 +61,15 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 
-for npcId in range(8095,8125)
+for npcId in range(8095,8125):
 	if npcId in [8100,8111,8112,8113]:
 		continue
 	STARTED.addTalkId(npcId)
 	CREATED.addTalkId(npcId)
 	QUEST.addStartNpc(npcId)
 
-for mobs in range(1208,1256)
-	STARTED.addKillId(mob)
+for mobs in range(1208,1256):
+	STARTED.addKillId(mobs)
 	
 STARTED.addQuestDrop(986,ANCIENT_SCROLL_ID,1)
 
