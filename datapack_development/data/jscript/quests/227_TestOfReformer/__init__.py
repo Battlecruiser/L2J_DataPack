@@ -117,7 +117,7 @@ class Quest (JQuest) :
           htmltext = "7666-07.htm"
           st.set("cond","0")
           st.set("onlyone","1")
-          st.getPcSpawn().removeAllSpawns()
+          st.getPcSpawn().removeAllSpawn()
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
           st.takeItems(KATARIS_LETTER_ID,1)

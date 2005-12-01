@@ -1,5 +1,4 @@
 # Maked by Mr. Have fun! Version 0.2
-print "importing quests: 220: Testimony Of Glory"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -133,24 +132,24 @@ class Quest (JQuest) :
           htmltext = "7615-03.htm"
     elif event == "7615_2" :
           htmltext = "7615-04.htm"
-          st.spawnNpc(5080)
-          st.spawnNpc(5081)
+          st.getPcSpawn().addSpawn(5080)
+          st.getPcSpawn().addSpawn(5081)
           st.giveItems(GLOVE_OF_VOLTAR_ID,1)
           st.takeItems(MANAKIAS_LETTER1_ID,1)
     elif event == "7616_1" :
           htmltext = "7616-03.htm"
     elif event == "7616_2" :
           htmltext = "7616-04.htm"
-          st.spawnNpc(5082)
-          st.spawnNpc(5082)
-          st.spawnNpc(5082)
-          st.spawnNpc(5082)
+          st.getPcSpawn().addSpawn(5082)
+          st.getPcSpawn().addSpawn(5082)
+          st.getPcSpawn().addSpawn(5082)
+          st.getPcSpawn().addSpawn(5082)
           st.giveItems(GLOVE_OF_KEPRA_ID,1)
           st.takeItems(MANAKIAS_LETTER2_ID,1)
     elif event == "7617_1" :
           htmltext = "7617-03.htm"
-          st.spawnNpc(5083)
-          st.spawnNpc(5083)
+          st.getPcSpawn().addSpawn(5083)
+          st.getPcSpawn().addSpawn(5083)
           st.giveItems(GLOVE_OF_BURAI_ID,1)
           st.takeItems(KASMANS_LETTER2_ID,1)
     elif event == "7618_1" :
@@ -250,8 +249,8 @@ class Quest (JQuest) :
    elif npcId == 7615 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(GLOVE_OF_VOLTAR_ID) and ((st.getQuestItemsCount(PASHIKAS_HEAD_ID)+st.getQuestItemsCount(VULTUS_HEAD_ID))<2) and st.getQuestItemsCount(SCEPTER_OF_BREKA_ID)==0 :
       htmltext = "7615-05.htm"
 #      if Maker_GetNpcCount() < 3 :
-      st.spawnNpc(5080)
-      st.spawnNpc(5081)
+      st.getPcSpawn().addSpawn(5080)
+      st.getPcSpawn().addSpawn(5081)
    elif npcId == 7615 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(PASHIKAS_HEAD_ID) and st.getQuestItemsCount(VULTUS_HEAD_ID) :
       htmltext = "7615-06.htm"
       st.giveItems(SCEPTER_OF_BREKA_ID,1)
@@ -267,8 +266,7 @@ class Quest (JQuest) :
       htmltext = "7616-02.htm"
    elif npcId == 7616 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(GLOVE_OF_KEPRA_ID) and st.getQuestItemsCount(ENKU_OVERLORD_HEAD_ID)<4 :
       htmltext = "7616-05.htm"
-#      if Maker_GetNpcCount() < 5 :
-      st.spawnNpc(5082)
+      st.getPcSpawn().addSpawn(5082)
    elif npcId == 7616 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(ENKU_OVERLORD_HEAD_ID)>=4 :
       htmltext = "7616-06.htm"
       st.giveItems(SCEPTER_OF_ENKU_ID,1)
@@ -283,9 +281,8 @@ class Quest (JQuest) :
       htmltext = "7617-02.htm"
    elif npcId == 7617 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(GLOVE_OF_BURAI_ID) :
       htmltext = "7617-04.htm"
-#      if Maker_GetNpcCount() < 3 :
-      st.spawnNpc(5083)
-      st.spawnNpc(5083)
+      st.getPcSpawn().addSpawn(5083)
+      st.getPcSpawn().addSpawn(5083)
    elif npcId == 7617 and int(st.get("cond"))==1 and st.getQuestItemsCount(NECKLACE_OF_AUTHORITY_ID) and st.getQuestItemsCount(CHIANTAS_ORDER1_ID) and st.getQuestItemsCount(MAKUM_BUGBEAR_HEAD_ID)>=2 :
       htmltext = "7617-05.htm"
       st.giveItems(SCEPTER_OF_TUREK_ID,1)
@@ -383,10 +380,10 @@ class Quest (JQuest) :
           st.playSound("Itemsound.quest_itemget")
    elif npcId == 778 :
       if int(st.get("cond")) and st.getQuestItemsCount(TANAPIS_ORDER1_ID) and st.getQuestItemsCount(SCEPTER_OF_TANTOS_ID) == 0 :
-        st.spawnNpc(5086)
+        st.getPcSpawn().addSpawn(5086)
    elif npcId == 779 :
       if int(st.get("cond")) and st.getQuestItemsCount(TANAPIS_ORDER1_ID) and st.getQuestItemsCount(SCEPTER_OF_TANTOS_ID) == 0 :
-        st.spawnNpc(5086)
+        st.getPcSpawn().addSpawn(5086)
    elif npcId == 5086 :
       if int(st.get("cond")) and st.getQuestItemsCount(TANAPIS_ORDER1_ID) and st.getQuestItemsCount(SCEPTER_OF_TANTOS_ID) == 0 :
         st.giveItems(SCEPTER_OF_TANTOS_ID,1)
@@ -594,3 +591,5 @@ STARTED.addQuestDrop(7619,DRIKOS_CONTRACT_ID,1)
 STARTED.addQuestDrop(5086,SCEPTER_OF_TANTOS_ID,1)
 STARTED.addQuestDrop(7642,SCEPTER_BOX_ID,1)
 STARTED.addQuestDrop(7571,RITUAL_BOX_ID,1)
+
+print "importing quests: 220: Testimony Of Glory"

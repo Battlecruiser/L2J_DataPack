@@ -117,7 +117,7 @@ class Quest (JQuest) :
 			for var in STATS:
 				st.unset(var)
 			st.setState(COMPLETED)
-			st.getPcSpawn().removeAllSpawns()
+			st.getPcSpawn().removeAllSpawn()
 			st.playSound("ItemSound.quest_finish")
 		# Alexandrias Events
 		elif event == "7098_1" :
