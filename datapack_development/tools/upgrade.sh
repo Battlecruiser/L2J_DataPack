@@ -2,8 +2,11 @@ USER=root
 PASS=
 DBNAME=l2jdb
 DBHOST=localhost
+echo Making a backup of the original database
 mysqldump --add-drop-table -h $DBHOST -u $USER --password=$PASS $DBNAME > l2jdb_backup.sql
+echo Deleting table for new content
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < upgrade.sql
+echo Installing new content
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/armor.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/castle_door.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/char_templates.sql
@@ -32,11 +35,11 @@ mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/teleport.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/weapon.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/zone.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/gameservers.sql
-echo.
-echo if you got an error 1050 about 'gameservers' table, anything is ok. 
+echo
+echo if you got an error 1050 about 'gameservers' table, anything is ok 
 echo This is only if you dont have a gameservers table already, it will create one
-echo and it will leave it allone, if you have one, we dont want delete your hex ids.
-echo.
-echo If you read that, anything is upgraded and ready to work. 
-echo Enojoy ure new database.
-echo.
+echo and it will leave it allone, if you have one, we dont want delete your hex ids
+echo
+echo If you read that, anything is upgraded and ready to work 
+echo Enojoy ure new database
+echo
