@@ -60,13 +60,13 @@ class Quest (JQuest) :
     elif event == "7669_2" :
           htmltext = "7669-03.htm"
 #          if Maker_GetNpcCount() == 1 :
-          st.spawnNpc(5131,-9382,-89852,-2333)
+          st.getPcSpawn().addSpawn(5131,-9382,-89852,-2333)
     elif event == "7669_3" :
           htmltext = "7669-05.htm"
     elif event == "7670_1" :
           htmltext = "7670-03.htm"
 #          if Maker_GetNpcCount() == 1 :
-          st.spawnNpc(5132,126019,-179983,-1781)
+          st.getPcSpawn().addSpawn(5132,126019,-179983,-1781)
     elif event == "7670_2" :
           htmltext = "7670-02.htm"
     return htmltext
@@ -117,6 +117,7 @@ class Quest (JQuest) :
           htmltext = "7666-07.htm"
           st.set("cond","0")
           st.set("onlyone","1")
+          st.getPcSpawn().removeAllSpawns()
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
           st.takeItems(KATARIS_LETTER_ID,1)
@@ -128,12 +129,12 @@ class Quest (JQuest) :
         st.set("cond","6")
         st.takeItems(SLAS_LETTER_ID,1)
 #        if Maker_GetNpcCount() == 1 :
-        st.spawnNpc(7732,-4015,40141,-3664)
-        st.spawnNpc(5129,-4034,40201,-3665)
+        st.getPcSpawn().addSpawn(7732,-4015,40141,-3664)
+        st.getPcSpawn().addSpawn(5129,-4034,40201,-3665)
    elif npcId == 7668 and int(st.get("cond"))==8:
         htmltext = "7668-02.htm"
 #        if Maker_GetNpcCount() < 3 :
-        st.spawnNpc(5130,-4106,40174,-3660)
+        st.getPcSpawn().addSpawn(5130,-4106,40174,-3660)
    elif npcId == 7668 and int(st.get("cond"))==9 :
         htmltext = "7668-03.htm"
         st.set("cond","10")
@@ -183,7 +184,7 @@ class Quest (JQuest) :
     if int(st.get("cond")) == 1 and st.getQuestItemsCount(RIPPED_DIARY_ID) < 7 and st.getQuestItemsCount(BOOK_OF_REFORM_ID) >= 1 :
       if st.getQuestItemsCount(RIPPED_DIARY_ID) == 6 :
         st.set("cond","2")
-        st.spawnNpc(5128)
+        st.getPcSpawn().addSpawn(5128)
         st.takeItems(RIPPED_DIARY_ID,st.getQuestItemsCount(RIPPED_DIARY_ID))
       else:
         st.giveItems(RIPPED_DIARY_ID,1)

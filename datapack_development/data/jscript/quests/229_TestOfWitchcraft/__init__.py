@@ -93,7 +93,7 @@ class Quest (JQuest) :
 			st.takeItems(AKLANTOS_GEM5_ID,1)
 			st.takeItems(AKLANTOS_GEM6_ID,1)
 			st.set("step","3")
-			st.spawnNpc(5101)
+			st.getPcSpawn().addSpawn(5101)
 		elif event == "7630_7" :
 			htmltext = "7630-16.htm"
 			st.takeItems(BRIMSTONE1_ID,1)
@@ -117,6 +117,7 @@ class Quest (JQuest) :
 			for var in STATS:
 				st.unset(var)
 			st.setState(COMPLETED)
+			st.getPcSpawn().removeAllSpawns()
 			st.playSound("ItemSound.quest_finish")
 		# Alexandrias Events
 		elif event == "7098_1" :
@@ -172,7 +173,7 @@ class Quest (JQuest) :
 		elif event == "7633_1" :
 			htmltext = "7633-02.htm"
 			st.giveItems(BRIMSTONE2_ID,1)
-			st.spawnNpc(5101)
+			st.getPcSpawn().addSpawn(5101)
 		return htmltext
 
 
@@ -344,7 +345,7 @@ class Quest (JQuest) :
 					htmltext = "7633-01.htm"
 				elif step in [13,14]:
 					htmltext = "7633-02.htm"
-					st.spawnNpc(5101)
+					st.getPcSpawn().addSpawn(5101)
 					st.set("step","14")
 				elif step == 15 :
 					htmltext = "7633-03.htm"
