@@ -54,11 +54,11 @@ echo Installing new content.
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/zone.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/gameservers.sql
 echo.
-echo if you got an error 1050 about 'gameservers' table, anything is ok. 
-echo This is only if you dont have a gameservers table already, it will create one
-echo and it will leave it allone, if you have one, we dont want delete your hex ids.
+echo If you got an error 1050 about 'gameservers' table, anything is ok. 
+echo This is only if you don't have a gameservers table already, it will create one
+echo and leave it alone, if you had one already, we don't delete your hex ids.
 echo.
-echo If you read that, anything is upgraded and ready to work. 
-echo Enojoy ure new database.
+echo If you can read this, anything is upgraded and ready to work. 
+echo Enjoy your new database.
 echo.
 pause
