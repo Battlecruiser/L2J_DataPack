@@ -170,11 +170,11 @@ class Quest (JQuest) :
        st.takeItems(WISH_POTION_ID,1)
        WISH_CHANCE = st.getRandom(100)
        if WISH_CHANCE <= 50:
-         st.spawnNpc(SUCCUBUS_OF_SEDUCTION)
-         st.spawnNpc(SUCCUBUS_OF_SEDUCTION)
-         st.spawnNpc(SUCCUBUS_OF_SEDUCTION)
+         st.getPcSpawn().addSpawn(SUCCUBUS_OF_SEDUCTION)
+         st.getPcSpawn().addSpawn(SUCCUBUS_OF_SEDUCTION)
+         st.getPcSpawn().addSpawn(SUCCUBUS_OF_SEDUCTION)
        else:
-         st.spawnNpc(RUPINA)
+         st.getPcSpawn().addSpawn(RUPINA)
        htmltext = "7738-16.htm"
      else:
        htmltext = "7738-14.htm"
@@ -186,18 +186,18 @@ class Quest (JQuest) :
        st.takeItems(WISH_POTION_ID,1)
        WISH_CHANCE = st.getRandom(100)
        if WISH_CHANCE <= 33:
-         st.spawnNpc(GRIMA)
-         st.spawnNpc(GRIMA)
-         st.spawnNpc(GRIMA)
+         st.getPcSpawn().addSpawn(GRIMA)
+         st.getPcSpawn().addSpawn(GRIMA)
+         st.getPcSpawn().addSpawn(GRIMA)
        elif WISH_CHANCE >= 66:
          st.giveItems(ADENA_ID,10000)
        else:
          if st.getRandom(100) <= 1:
            st.giveItems(ADENA_ID,((st.getRandom(9)+1)*1000000))
          else:
-           st.spawnNpc(GRIMA)
-           st.spawnNpc(GRIMA)
-           st.spawnNpc(GRIMA)
+           st.getPcSpawn().addSpawn(GRIMA)
+           st.getPcSpawn().addSpawn(GRIMA)
+           st.getPcSpawn().addSpawn(GRIMA)
        htmltext = "7738-17.htm"
      else:
        htmltext = "7738-14.htm"
@@ -213,7 +213,7 @@ class Quest (JQuest) :
        elif WISH_CHANCE >= 66:
          st.giveItems(ANCIENT_CROWN_ID,1)
        else:
-         st.spawnNpc(SANCHES)
+         st.getPcSpawn().addSpawn(SANCHES)
        htmltext = "7738-18.htm"
      else:
        htmltext = "7738-14.htm"
@@ -229,7 +229,7 @@ class Quest (JQuest) :
        elif WISH_CHANCE >= 66:
          st.giveItems(SPELLBOOK_BATTLEHEAL_ID,1)
        else:
-         st.spawnNpc(WISDOM_CHEST)
+         st.getPcSpawn().addSpawn(WISDOM_CHEST)
        htmltext = "7738-19.htm"
      else:
        htmltext = "7738-14.htm"
@@ -387,13 +387,13 @@ class Quest (JQuest) :
          st.giveItems(GOLD_BAR_ID,st.getRandom(4)+1)
      elif npcId == SANCHES:
        if st.getRandom(100) <= 50:
-         st.spawnNpc(BONAPARTERIUS)
+         st.getPcSpawn().addSpawn(BONAPARTERIUS)
      elif npcId == BONAPARTERIUS:
        if st.getRandom(100) <= 50:
-         st.spawnNpc(RAMSEBALIUS)
+         st.getPcSpawn().addSpawn(RAMSEBALIUS)
      elif npcId == RAMSEBALIUS:
        if st.getRandom(100) <= 50:
-         st.spawnNpc(GREAT_DEMON_KING)
+         st.getPcSpawn().addSpawn(GREAT_DEMON_KING)
      elif npcId == GREAT_DEMON_KING:
        if st.getRandom(100) <= 50:
          DEMON_DROP_CHANCE = st.getRandom(100)

@@ -38,9 +38,9 @@ class Quest (JQuest) :
             htmltext = "7293-04.htm"
     elif event == "7424_1" :
           if int(st.get("cond")) :
-            st.spawnNpc(5032)
-            st.spawnNpc(5033)
-            st.spawnNpc(5034)
+            st.getPcSpawn().addSpawn(5032)
+            st.getPcSpawn().addSpawn(5033)
+            st.getPcSpawn().addSpawn(5034)
             st.set("cond","2")
     elif event == "7428_1" :
           if int(st.get("cond")) :
@@ -50,7 +50,7 @@ class Quest (JQuest) :
               htmltext = "7428-03.htm"
     elif event == "7428_3" :
             if int(st.get("cond")) :
-              st.spawnNpc(5035)
+              st.getPcSpawn().addSpawn(5035)
     return htmltext
 
 

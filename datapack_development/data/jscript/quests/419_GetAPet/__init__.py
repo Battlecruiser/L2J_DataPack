@@ -1,7 +1,6 @@
 # version 0.2
 # by DrLecter, with fixes from Ryo_Saeba
 
-print "importing quests: 419: Get a Pet"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -297,3 +296,5 @@ TALKED.addTalkId(PET_MANAGER_MARTIN)
 SLAYED.addTalkId(GK_BELLA)
 SLAYED.addTalkId(MC_ELLIE)
 SLAYED.addTalkId(GD_METTY)
+
+print "importing quests: 419: Get a Pet"

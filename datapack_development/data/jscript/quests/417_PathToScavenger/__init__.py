@@ -124,7 +124,7 @@ class Quest (JQuest) :
           st.takeItems(ROUTS_TP_SCROLL_ID,1)
           st.giveItems(SUCCUBUS_UNDIES_ID,1)
           st.set("cond","11")
-#          st.despawnNpc(7557)
+          st.getPcSpawn().removeAllSpawns()
     return htmltext
 
 
@@ -266,7 +266,7 @@ class Quest (JQuest) :
           if int(st.get("id") > 20) :
             n = ((int(st.get("id"))-20)*10)
             if st.getRandom(100) <= n :
-              st.spawnNpc(5058)
+              st.getPcSpawn().addSpawn(5058)
               st.set("id","0")
             else:
               st.set("id",str(int(st.get("id"))+1))
