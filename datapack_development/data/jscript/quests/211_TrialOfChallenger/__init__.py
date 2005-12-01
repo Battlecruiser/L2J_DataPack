@@ -169,7 +169,7 @@ class Quest (JQuest) :
    if npcId == 5110 :
         if int(st.get("cond")) and int(st.get("cond")) == 1 and st.getQuestItemsCount(SCROLL_OF_SHYSLASSY_ID) == 0 and st.getQuestItemsCount(BROKEN_KEY_ID) == 0 :
           st.giveItems(BROKEN_KEY_ID,1)
-          st.spawnNpc(7647)
+          st.getPcSpawn().addSpawn(7647)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","2")
    elif npcId == 5112 :
@@ -182,16 +182,14 @@ class Quest (JQuest) :
             st.giveItems(WATCHERS_EYE2_ID,1)
             st.playSound("ItemSound.quest_middle")
             st.set("cond","6")
-            st.spawnNpc(7646)
-#          if Maker_GetNpcCount() < 2 :
+            st.getPcSpawn().addSpawn(7646)
    elif npcId == 5114 :
         if int(st.get("cond")) :
           if int(st.get("cond")) == 8 :
             st.set("cond","9")
             st.playSound("ItemSound.quest_middle")
             st.removeRadar(176560,-184969,-3729);
-            st.spawnNpc(7646)
-#          if Maker_GetNpcCount() == 1 :
+            st.getPcSpawn().addSpawn(7646)
 
    return
 
