@@ -8,7 +8,7 @@ REM ############################################
 REM MYSQL 4.1
 set mysqlBinPath=C:\Program Files\MySQL\MySQL Server 4.1\bin
 set user=root
-set pass=
+set pass=lnu74tellur
 set DBname=l2jdb
 set DBHost=localhost
 
@@ -52,4 +52,13 @@ echo Installing new content.
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/teleport.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/weapon.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/zone.sql
+%mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/gameservers.sql
+echo.
+echo if you got an error 1050 about 'gameservers' table, anything is ok. 
+echo This is only if you dont have a gameservers table already, it will create one
+echo and it will leave it allone, if you have one, we dont want delete your hex ids.
+echo.
+echo If you read that, anything is upgraded and ready to work. 
+echo Enojoy ure new database.
+echo.
 pause
