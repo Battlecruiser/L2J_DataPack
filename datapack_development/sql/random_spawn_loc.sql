@@ -5,7 +5,7 @@ CREATE TABLE random_spawn_loc (
   groupId INT NOT NULL default 0,
   x INT NOT NULL default 0,
   y INT NOT NULL default 0,
-  z INT NOT NULL default 0
+  z INT NOT NULL default 0,
   PRIMARY KEY (groupId, x, y, z)
 );
 
