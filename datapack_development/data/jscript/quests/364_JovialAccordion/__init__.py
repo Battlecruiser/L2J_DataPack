@@ -1,6 +1,6 @@
 # Maked by Mr. Have fun! Version 0.2
 # fixed by Elektra and Rolarga Version 0.3
-# fixed by Mr
+# fixed by Mr and Drlecter
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -46,7 +46,6 @@ class Quest (JQuest) :
 
 
  def onTalk (Self,npc,st):
-
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
@@ -83,13 +82,14 @@ class Quest (JQuest) :
 
 QUEST       = Quest(364,"364_JovialAccordion","Ask What You Need to Do")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7959)
+
+CREATED.addTalkId(7959)
 
 for npcId in [7959,7957,7060,7961,7960]:
   STARTED.addTalkId(npcId)
