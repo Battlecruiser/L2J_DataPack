@@ -6,6 +6,7 @@ CREATE TABLE random_spawn_loc (
   x INT NOT NULL default 0,
   y INT NOT NULL default 0,
   z INT NOT NULL default 0
+  PRIMARY KEY (groupId, x, y, z)
 );
 
 Insert Into random_spawn_loc Values (1, 178834, -184336, -355);
