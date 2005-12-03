@@ -109,7 +109,7 @@ class Quest (JQuest) :
         else:
           htmltext = "7476-01.htm"
           st.exitQuest(1)
-      else:
+      else:    
         htmltext = "7476-01.htm"
         st.exitQuest(1)
    elif npcId == 7476 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
@@ -124,7 +124,7 @@ class Quest (JQuest) :
       htmltext = "7476-09.htm"
       st.giveItems(ALDERS_SKULL2_ID,1)
       st.takeItems(ALDERS_SKULL1_ID,1)
-      st.spawnNpc(7613,78977,149036,-3597)
+      st.getPcSpawn.addSpawn(7613,78977,149036,-3597)
    elif npcId == 7476 and int(st.get("cond"))==1 and (st.getQuestItemsCount(ALDERS_SKULL2_ID) or st.getQuestItemsCount(ALDERS_RECEIPT_ID)) :
       htmltext = "7476-10.htm"
    elif npcId == 7476 and int(st.get("cond"))==1 and st.getQuestItemsCount(REVELATIONS_MANUSCRIPT_ID) :

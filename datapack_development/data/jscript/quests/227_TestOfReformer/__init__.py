@@ -128,12 +128,10 @@ class Quest (JQuest) :
         htmltext = "7668-01.htm"
         st.set("cond","6")
         st.takeItems(SLAS_LETTER_ID,1)
-#        if Maker_GetNpcCount() == 1 :
         st.getPcSpawn().addSpawn(7732,-4015,40141,-3664)
         st.getPcSpawn().addSpawn(5129,-4034,40201,-3665)
    elif npcId == 7668 and int(st.get("cond"))==8:
         htmltext = "7668-02.htm"
-#        if Maker_GetNpcCount() < 3 :
         st.getPcSpawn().addSpawn(5130,-4106,40174,-3660)
    elif npcId == 7668 and int(st.get("cond"))==9 :
         htmltext = "7668-03.htm"

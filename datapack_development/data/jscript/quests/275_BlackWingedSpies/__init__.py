@@ -76,7 +76,7 @@ class Quest (JQuest) :
         st.giveItems(DARKWING_BAT_FANG_ID,1)
         n = st.getRandom(100)
         if st.getQuestItemsCount(DARKWING_BAT_FANG_ID) > 10 and st.getQuestItemsCount(DARKWING_BAT_FANG_ID) < 66 and n < 10 :
-          st.spawnNpc(5043)
+          st.getPcSpawn.addSpawn(5043)
           st.giveItems(VARANGKAS_PARASITE_ID,1)
    elif npcId == 5043 :
       st.set("id","0")

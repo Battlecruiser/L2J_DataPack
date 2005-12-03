@@ -83,6 +83,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
       st.set("cond","0")
+      st.getPcSpawn.removeAllSpawn()
    elif npcId == 7109 and int(st.get("cond"))==1 :
       htmltext = "7109-04.htm"
    elif npcId == 7653 and int(st.get("cond"))==1 :
@@ -122,7 +123,6 @@ class Quest (JQuest) :
       st.takeItems(TALIANUSS_REPORT_ID,1)
       st.giveItems(TEAR_OF_CONFESSION_ID,1)
       st.set("cond","7")
-#      st.despawnNpc(7656)
    elif npcId == 7655 and int(st.get("cond"))==8 :
       if st.getPlayer().getLevel() >= 36 :
         htmltext = "7655-02.htm"
@@ -175,15 +175,13 @@ class Quest (JQuest) :
    if npcId == 190 :
       if int(st.get("cond")) and int(st.get("cond")) == 2 :
         if st.getRandom(50)<2 :
-          st.spawnNpc(5119)
+          st.getPcSpawn.addSpawn(5119)
           st.playSound("Itemsound.quest_before_battle")
-#          st.set("cond",str(0))
    elif npcId == 191 :
       if int(st.get("cond")) and int(st.get("cond")) == 2 :
         if st.getRandom(50)<2 :
           st.spawnNpc(5119)
           st.playSound("Itemsound.quest_before_battle")
-#          st.set("cond",str(0))
    elif npcId == 5119 :
       if int(st.get("cond")) and int(st.get("cond")) == 2 and st.getQuestItemsCount(OLD_KNIGHT_SWORD_ID) > 0 :
         st.giveItems(KNIGHTS_TEAR_ID,1)
@@ -212,7 +210,7 @@ class Quest (JQuest) :
    elif npcId == 144 :
       if int(st.get("cond")) and int(st.get("cond")) == 6 :
         if st.getRandom(75)<2 :
-           st.spawnNpc(7656)
+           st.getPcSpawn.addSpawn(7656)
            st.playSound("ItemSound.quest_middle")
    elif npcId == 577 :
       if int(st.get("cond")) and int(st.get("cond")) == 9 and st.getQuestItemsCount(MILITAS_ARTICLE_ID) < 20 :
