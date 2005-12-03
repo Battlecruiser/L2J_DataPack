@@ -62,7 +62,7 @@ class Quest (JQuest) :
           st.set("onlyone","1")
     elif event == "7428_1" :
           htmltext = "7428-02.htm"
-          st.spawnNpc(5134)
+          st.getPcSpawn.addSpawn(5134)
     elif event == "7658_1" :
           if st.getQuestItemsCount(ADENA_ID) >= 100000 :
             htmltext = "7658-02.htm"
@@ -82,9 +82,9 @@ class Quest (JQuest) :
     elif event == "7674_1" :
           htmltext = "7674-02.htm"
           st.takeItems(ORDER_OF_SORIUS_ID,1)
-          st.spawnNpc(5122)
-          st.spawnNpc(5122)
-          st.spawnNpc(5123)
+          st.getPcSpawn.addSpawn(5122)
+          st.getPcSpawn.addSpawn(5122)
+          st.getPcSpawn.addSpawn(5123)
           st.playSound("Itemsound.quest_before_battle")
     elif event == "7665_1" :
           htmltext = "7665-02.htm"
@@ -244,23 +244,23 @@ class Quest (JQuest) :
    elif npcId == 7661:
      if int(st.get("cond"))==8 :
       htmltext = "7661-01.htm"
-      st.spawnNpc(5124)
-      st.spawnNpc(5124)
-      st.spawnNpc(5124)
+      st.getPcSpawn.addSpawn(5124)
+      st.getPcSpawn.addSpawn(5124)
+      st.getPcSpawn.addSpawn(5124)
       st.playSound("Itemsound.quest_before_battle")
       st.set("cond","9")
      elif int(st.get("cond"))==10:
       htmltext = "7661-02.htm"
-      st.spawnNpc(5125)
-      st.spawnNpc(5125)
-      st.spawnNpc(5125)
+      st.getPcSpawn.addSpawn(5125)
+      st.getPcSpawn.addSpawn(5125)
+      st.getPcSpawn.addSpawn(5125)
       st.playSound("Itemsound.quest_before_battle")
       st.set("cond","11")
      elif int(st.get("cond"))==12:
       htmltext = "7661-03.htm"
-      st.spawnNpc(5126)
-      st.spawnNpc(5126)
-      st.spawnNpc(5127)
+      st.getPcSpawn.addSpawn(5126)
+      st.getPcSpawn.addSpawn(5126)
+      st.getPcSpawn.addSpawn(5127)
       st.playSound("Itemsound.quest_before_battle")
       st.set("cond","13")
      elif int(st.get("cond")) == 13 :
