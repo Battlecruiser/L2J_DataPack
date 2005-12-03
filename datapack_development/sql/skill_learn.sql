@@ -928,12 +928,12 @@ INSERT INTO skill_learn VALUES (7861,27);
 INSERT INTO skill_learn VALUES (7861,28);
 INSERT INTO skill_learn VALUES (7861,29);
 INSERT INTO skill_learn VALUES (7861,30);
-INSERT INTO skill_learn VALUES (7863,38);
-INSERT INTO skill_learn VALUES (7863,39);
-INSERT INTO skill_learn VALUES (7863,40);
-INSERT INTO skill_learn VALUES (7863,41);
-INSERT INTO skill_learn VALUES (7863,42);
-INSERT INTO skill_learn VALUES (7863,43);
+INSERT INTO skill_learn VALUES (7863,32);
+INSERT INTO skill_learn VALUES (7863,33);
+INSERT INTO skill_learn VALUES (7863,34);
+INSERT INTO skill_learn VALUES (7863,35);
+INSERT INTO skill_learn VALUES (7863,36);
+INSERT INTO skill_learn VALUES (7863,37);
 INSERT INTO skill_learn VALUES (7864,38);
 INSERT INTO skill_learn VALUES (7864,39);
 INSERT INTO skill_learn VALUES (7864,40);
@@ -986,7 +986,7 @@ INSERT INTO skill_learn VALUES (7210,54);
 INSERT INTO skill_learn VALUES (7210,55);
 INSERT INTO skill_learn VALUES (7210,56);
 INSERT INTO skill_learn VALUES (7210,57);
--- fix for gludio
+-- fix dwarfs in gludio
 INSERT INTO skill_learn VALUES (7322,53);
 INSERT INTO skill_learn VALUES (7322,54);
 INSERT INTO skill_learn VALUES (7322,55);
@@ -1018,7 +1018,7 @@ insert into skill_learn values (7896,54);
 insert into skill_learn values (7896,55);
 insert into skill_learn values (7896,56);
 insert into skill_learn values (7896,57);
--- fix DE Guild Oren
+-- ifx DE Guild Oren
 INSERT INTO skill_learn VALUES (7192,31);
 INSERT INTO skill_learn VALUES (7192,32);
 INSERT INTO skill_learn VALUES (7192,33);
