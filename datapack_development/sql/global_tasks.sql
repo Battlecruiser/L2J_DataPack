@@ -3,7 +3,7 @@
 --
 
 CREATE TABLE global_tasks (
-  task_name int(11) NOT NULL default 0,
-  last_activation int(11) NOT NULL default 0,
+  task_name char(50) NOT NULL default '',
+  last_activation decimal(20,0) NOT NULL default 0,
   PRIMARY KEY  (task_name)
 );
