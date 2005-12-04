@@ -13,6 +13,7 @@ mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/char_templates.sq
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/class_list.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/droplist.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/etcitem.sql
+mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/global_tasks.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/henna_trees.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/henna.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/locations.sql
