@@ -1,12 +1,4 @@
-CREATE TABLE `character_subclasses` (
-	`char_obj_id` decimal(11,0) NOT NULL default '0',
-	`class_id` int(2) NOT NULL default '0',
-	`exp` decimal(11,0) NOT NULL default '0',
-	`sp` decimal(11,0) NOT NULL default '0',
-	`level` int(2) NOT NULL default '40',
-	PRIMARY KEY  (`char_obj_id`,`class_id`)
-) TYPE=MyISAM;
-
+-- Needed only if your character tables are needed to be preserved.
 ALTER TABLE `character_hennas` ADD `class_index` int(1) NOT NULL default '0', DROP PRIMARY KEY, ADD PRIMARY KEY (`char_obj_id`,`slot`,`class_index`);
 
 ALTER TABLE `character_quests` ADD `class_index` int(1) NOT NULL default '0';
