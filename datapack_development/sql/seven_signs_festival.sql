@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `seven_signs_festival` (
 	`members` varchar(255) NOT NULL default '',
 	PRIMARY KEY (`festivalId`,`cabal`,`cycle`));
 
-INSERT INTO `seven_signs_festival` VALUES 
+INSERT IGNORE INTO `seven_signs_festival` VALUES 
 (0, "dawn", 1, 0, 0, ""),
 (1, "dawn", 1, 0, 0, ""),
 (2, "dawn", 1, 0, 0, ""),
