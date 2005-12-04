@@ -6,5 +6,6 @@ CREATE TABLE character_skills (
   skill_id INT NOT NULL default 0,
   skill_level varchar(5) ,
   skill_name varchar(24),
+  `class_index` INT(1) NOT NULL DEFAULT 0,
   PRIMARY KEY  (char_obj_id,skill_id)
 ) ;
