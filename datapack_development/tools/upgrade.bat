@@ -6,9 +6,9 @@ REM ############################################
 
 
 REM MYSQL 4.1
-set mysqlBinPath=C:\Program Files\MySQL\MySQL Server 4.1\bin
+set mysqlBinPath=F:\Program Files\MySQL\MySQL Server 4.1\bin
 set user=root
-set pass=
+set pass=root
 set DBname=l2jdb
 set DBHost=localhost
 
@@ -31,6 +31,7 @@ echo Installing new content.
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/class_list.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/droplist.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/etcitem.sql
+%mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/global_tasks.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/henna_trees.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/henna.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/locations.sql
