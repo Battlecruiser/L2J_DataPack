@@ -8,7 +8,7 @@ CREATE TABLE character_shortcuts (
   type decimal(3) ,
   shortcut_id decimal(16) ,
   level varchar(4) ,
-  unknown decimal(3) ,
+  `class_index` int(1) NOT NULL default '0',
   PRIMARY KEY  (char_obj_id,slot,page),
   KEY `shortcut_id` (`shortcut_id`)
 ) ;
