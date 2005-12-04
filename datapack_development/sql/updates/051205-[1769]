@@ -1,0 +1,1 @@
+UPDATE `characters` set `base_class` = `classid`;
