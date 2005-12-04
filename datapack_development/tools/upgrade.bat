@@ -6,9 +6,9 @@ REM ############################################
 
 
 REM MYSQL 4.1
-set mysqlBinPath=F:\Program Files\MySQL\MySQL Server 4.1\bin
+set mysqlBinPath=C:\Program Files\MySQL\MySQL Server 4.1\bin
 set user=root
-set pass=root
+set pass=
 set DBname=l2jdb
 set DBHost=localhost
 
