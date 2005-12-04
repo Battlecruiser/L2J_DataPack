@@ -1,7 +1,7 @@
 --
 -- Table structure for table `skill_spellbooks`
 --
-
+DROP TABLE IF EXISTS skill_spellbooks;
 CREATE TABLE `skill_spellbooks` (
   `skill_id` int(11) NOT NULL default '-1',
   `item_id` int(11) NOT NULL default '-1',

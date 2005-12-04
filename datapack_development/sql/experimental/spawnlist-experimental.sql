@@ -1,7 +1,7 @@
 --
 -- Table structure for table `spawnlist`
 --
-
+DROP TABLE IF EXISTS spawnlist;
 CREATE TABLE spawnlist (
   id int(11) NOT NULL auto_increment,
   location varchar(26) NOT NULL default '',

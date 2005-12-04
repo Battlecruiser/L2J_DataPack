@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS skill_trees;
 CREATE TABLE skill_trees (
   class_id int(10) unsigned NOT NULL default '0',
   skill_id int(10) unsigned NOT NULL default '0',

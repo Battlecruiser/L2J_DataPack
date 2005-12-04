@@ -1,6 +1,7 @@
 -- ---------------------------
 -- Table structure for zone
 -- ---------------------------
+DROP TABLE IF EXISTS zone;
 CREATE TABLE zone (
   id INT NOT NULL default 0,
   type varchar(25) NOT NULL,

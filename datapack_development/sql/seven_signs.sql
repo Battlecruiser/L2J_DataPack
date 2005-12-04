@@ -1,4 +1,4 @@
-CREATE TABLE `seven_signs` (
+CREATE TABLE IF NOT EXISTS `seven_signs` (
   `char_obj_id` int(11) NOT NULL default '0',
   `cabal` varchar(4) NOT NULL default '',
   `seal` int(1) NOT NULL default '-1',

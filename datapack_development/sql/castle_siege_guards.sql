@@ -1,7 +1,7 @@
 -- ---------------------------
 -- Table structure for castle_siege_guards
 -- ---------------------------
-CREATE TABLE castle_siege_guards (
+CREATE TABLE IF NOT EXISTS castle_siege_guards (
   castleId INT NOT NULL default 0,
   id int(11) NOT NULL auto_increment,
   npcId INT NOT NULL default 0,

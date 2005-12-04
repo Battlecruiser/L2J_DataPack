@@ -1,7 +1,7 @@
 --
 -- Table structure for table `merchant_buylists`
 --
-
+DROP TABLE IF EXISTS merchant_buylists;
 CREATE TABLE merchant_buylists (
   item_id decimal(9,0) NOT NULL default '0',
   price decimal(11,0) NOT NULL default '0',

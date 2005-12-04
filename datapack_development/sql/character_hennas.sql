@@ -1,4 +1,4 @@
-CREATE TABLE `character_hennas` (
+CREATE TABLE IF NOT EXISTS `character_hennas` (
   `char_obj_id` INT NOT NULL DEFAULT 0,
   `symbol_id` INT,
   `slot` INT NOT NULL DEFAULT 0,

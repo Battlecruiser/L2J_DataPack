@@ -1,7 +1,7 @@
 --
 -- Table structure for table `npc`
 --
-
+DROP TABLE IF EXISTS npc;
 CREATE TABLE `npc` (
   `id` decimal(11,0) NOT NULL default '0',
   `name` varchar(40) default NULL,

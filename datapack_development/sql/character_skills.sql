@@ -1,7 +1,7 @@
 -- ---------------------------
 -- Table structure for character_skills
 -- ---------------------------
-CREATE TABLE character_skills (
+CREATE TABLE IF NOT EXISTS character_skills (
   char_obj_id INT NOT NULL default 0,
   skill_id INT NOT NULL default 0,
   skill_level varchar(5) ,

@@ -1,7 +1,7 @@
 -- ---------------------------
 -- Table structure for characters
 -- ---------------------------
-CREATE TABLE characters (
+CREATE TABLE IF NOT EXISTS characters (
   account_name varchar(45) default NULL,
   obj_Id decimal(11,0) NOT NULL default '0',
   char_name varchar(35) NOT NULL,

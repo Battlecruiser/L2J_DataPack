@@ -1,7 +1,7 @@
 --
 -- Table structure for table `etcitem`
 --
-
+DROP TABLE IF EXISTS etcitem;
 CREATE TABLE etcitem (
   item_id decimal(11,0) NOT NULL default '0',
   name varchar(100) default NULL,

@@ -1,7 +1,7 @@
 -- 
 -- Table structure for table `minions`
 -- 
-
+DROP TABLE IF EXISTS minions;
 CREATE TABLE minions (
   boss_id int(11) NOT NULL default '0',
   minion_id int(11) NOT NULL default '0',
