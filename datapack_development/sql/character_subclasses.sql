@@ -8,4 +8,4 @@ CREATE TABLE `character_subclasses` (
 	`sp` decimal(11,0) NOT NULL default '0',
 	`level` int(2) NOT NULL default '40',
 	PRIMARY KEY  (`char_obj_id`,`class_id`)
-) TYPE=MyISAM;
+)
