@@ -1,7 +1,7 @@
 --
 -- Table structure for table `mapregion`
 --
-
+DROP TABLE IF EXISTS mapregion;
 CREATE TABLE `mapregion` (
   `region` int(11) NOT NULL default '0',
   `sec0` int(2) NOT NULL default '0',

@@ -2,8 +2,11 @@ USER=root
 PASS=
 DBNAME=l2jdb
 DBHOST=localhost
+echo Making a backup of the original database
 mysqldump --add-drop-table -h $DBHOST -u $USER --password=$PASS $DBNAME > l2jdb_backup.sql
+echo Deleting tables for new content.
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < full_install.sql
+echo Installing new content
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/armor.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/boxaccess.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/boxes.sql
@@ -27,7 +30,6 @@ mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/clan_wars.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/class_list.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/droplist.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/etcitem.sql
-mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/gameservers.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/global_tasks.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/henna.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/henna_trees.sql
@@ -56,3 +58,4 @@ mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/spawnlist.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/teleport.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/weapon.sql
 mysql -h $DBHOST -u $USER --password=$PASS -D $DBNAME < ../sql/zone.sql
+echo

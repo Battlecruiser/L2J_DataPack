@@ -1,7 +1,7 @@
 -- ---------------------------
 -- Table structure for pets
 -- ---------------------------
-CREATE TABLE pets (
+CREATE TABLE IF NOT EXISTS pets (
   item_obj_id decimal(11) NOT NULL default 0,
   objId decimal(11) ,
   name varchar(12) ,

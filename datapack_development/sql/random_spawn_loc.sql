@@ -1,6 +1,7 @@
 -- ---------------------------
 -- Table structure for random_spawn_loc
 -- ---------------------------
+DROP TABLE IF EXISTS random_spawn_loc;
 CREATE TABLE random_spawn_loc (
   groupId INT NOT NULL default 0,
   x INT NOT NULL default 0,

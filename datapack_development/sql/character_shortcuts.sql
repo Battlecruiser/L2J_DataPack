@@ -1,7 +1,7 @@
 -- ---------------------------
 -- Table structure for character_shortcuts
 -- ---------------------------
-CREATE TABLE character_shortcuts (
+CREATE TABLE IF NOT EXISTS character_shortcuts (
   char_obj_id decimal(11) NOT NULL default 0,
   slot decimal(3) NOT NULL default 0,
   page decimal(3) NOT NULL default 0,

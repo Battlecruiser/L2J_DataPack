@@ -1,7 +1,7 @@
 --
 -- Table structure for table `weapon`
 --
-
+DROP TABLE IF EXISTS weapon;
 CREATE TABLE weapon (
   item_id decimal(11,0) NOT NULL default '0',
   name varchar(39) default NULL,

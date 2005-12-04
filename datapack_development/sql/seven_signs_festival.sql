@@ -1,7 +1,7 @@
 -- ----------------------------
 -- Table structure for seven_signs_festival
 -- ----------------------------
-CREATE TABLE `seven_signs_festival` (
+CREATE TABLE IF NOT EXISTS `seven_signs_festival` (
 	`festivalId` int(1) NOT NULL default '0',
 	`cabal` varchar(4) NOT NULL default '',
 	`cycle` int(4) NOT NULL default '0',

@@ -21,9 +21,6 @@ echo.
 echo Making a backup of the original tables.
 %mysqldumpPath% --add-drop-table -h %DBHost% -u %user% --password=%pass% %DBname% > l2jdb_experimental-backup.sql
 echo.
-echo Deleting table for new content.
-%mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < experimental-upgrade.sql
-echo.
 echo Installing new content.
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/experimental/locations.sql
 %mysqlPath% -h %DBHost% -u %user% --password=%pass% -D %DBname% < ../sql/experimental/npc.sql

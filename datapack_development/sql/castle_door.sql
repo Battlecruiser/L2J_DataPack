@@ -1,6 +1,7 @@
 -- ---------------------------
 -- Table structure for castle_door
 -- ---------------------------
+DROP TABLE IF EXISTS castle_door;
 CREATE TABLE castle_door (
   castleId INT NOT NULL default 0,
   id INT NOT NULL default 0,

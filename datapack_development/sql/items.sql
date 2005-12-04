@@ -1,7 +1,7 @@
 -- ----------------------------
 -- Table structure for items
 -- ----------------------------
-CREATE TABLE items (
+CREATE TABLE IF NOT EXISTS items (
   `owner_id` INT, -- object id of the player or clan,owner of this item
   `object_id` INT NOT NULL DEFAULT 0,-- object id of the item
   `item_id` INT,   -- item id

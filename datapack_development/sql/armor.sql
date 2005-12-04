@@ -1,7 +1,7 @@
 --
 -- Table structure for table `armor`
 --
-
+DROP TABLE IF EXISTS armor;
 CREATE TABLE armor (
   item_id int(11) NOT NULL default '0',
   name varchar(70) default NULL,

@@ -1,7 +1,7 @@
 --
 -- Table structure for table `henna`
 --
-
+DROP TABLE IF EXISTS henna;
 CREATE TABLE henna (
   symbol_id int(11) NOT NULL default '0',
   symbol_name varchar(45) default NULL,

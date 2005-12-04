@@ -1,7 +1,7 @@
 --
 -- Table structure for table `char_templates`
 --
-
+DROP TABLE IF EXISTS char_templates;
 CREATE TABLE `char_templates` (
   `ClassId` int(11) NOT NULL default '0',
   `ClassName` varchar(20) NOT NULL default '',

@@ -1,7 +1,7 @@
 -- 
 -- Table structure for table `droplist`
 -- 
-
+DROP TABLE IF EXISTS droplist;
 CREATE TABLE `droplist` (
   `mobId` INT NOT NULL DEFAULT '0',
   `itemId` INT NOT NULL DEFAULT '0',
