@@ -38,20 +38,17 @@ This readme is for the sole purpose of providing a brief overview of how to eith
 Installation:
 
 All users:
-	Copy all content to your server dir, you know if you are doing it right if you are being asked 
-	if you want to overwrite the data folder, sellect yes to all at that stage.
+	Copy all content to your server dir, you know if you are doing it right if you are being asked if you want to overwrite the data folder, sellect yes to all at that stage.
 
 For new L2J databases or existing databases where you want to delete character and account information:
-	Create a database to match the one in your L2J server.cfg (the default is l2jdb)
-	Select your database
-	Now run all the batch scripts in the sql folder**
-	Or just run the full_install.bat for windows users, or the full_install.sh for linux/unix users.
+	Create your loginserver and gameserver databases to match the ones in loginserver.properties and server.properties respectively (the default for both is l2jdb.)
+	Method 1: Select your database and run all the batch scripts in the sql folder**
+	Method 2: Edit and run login_install.bat then full_install.bat for windows users, or edit and run login_install.sh then full_install.sh for linux/unix users.
 
 For existing L2J databases where you want to keep character and account information:
-	Select your database
-	Run upgrade.sql in the tools folder
-	Now run all the batch scripts in the sql folder** that correspond to tables that no longer exist in your database.
-	Or just run the upgrade.bat for windows users, or the upgrade.sh for linux/unix users.
+	Method 1: Select your database and run all the batch scripts in the sql folder** that correspond to tables in your database that are missing or you want to upgrade.
+	Method 2: Edit and run upgrade.bat for windows users, or the upgrade.sh for linux/unix users.
+
 		IMPORTANT: 	There may also be changes to character data tables, to update these tables run the relevant batch scripts in /sql/updates/
 					Files in /sql/updates/ have the following naming convention (L2J revision date and L2J revision number): YYMMDD-[REVISION].sql
 
