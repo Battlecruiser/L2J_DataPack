@@ -1,9 +1,6 @@
 #
 # Created by DraX on 2005.07.20
 #
-
-print "importing teleport data: 1100_teleport_with_charm"
-
 import sys
 
 from net.sf.l2j.gameserver.model              import L2PcInstance
@@ -21,7 +18,6 @@ class Quest (JQuest) :
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onTalk (Self,npc,st):
-
    npcId = npc.getNpcId()
    # ORC_VILLAGE
    if npcId == TAMIL: 
@@ -33,7 +29,6 @@ class Quest (JQuest) :
      else:
        st.exitQuest(1)
        return "7576-01.htm"
-
    # DWARVEN_VILLAGE
    elif npcId == WHIRPY: 
      if st.getQuestItemsCount(DWARF_GATEKEEPER_TOKEN) >= 1:
@@ -44,15 +39,14 @@ class Quest (JQuest) :
      else:
        st.exitQuest(1)
        return "7540-01.htm"
-     
 
 QUEST       = Quest(1100,"1100_teleport_with_charm","Teleports")
 CREATED     = State('Start',QUEST)
 
 QUEST.setInitialState(CREATED)
 
-QUEST.addStartNpc(7540)
-QUEST.addStartNpc(7576)
+for i in [ WHIRPY, TAMIL ] :
+    QUEST.addStartNpc(i)
+    CREATED.addTalkId(i)
 
-STARTED.addTalkId(7540)
-STARTED.addTalkId(7576)
+print "importing teleport data: 1100_teleport_with_charm"
