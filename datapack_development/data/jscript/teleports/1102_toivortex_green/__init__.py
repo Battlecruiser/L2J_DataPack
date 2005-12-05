@@ -1,5 +1,3 @@
-print "importing teleport data: 1102_toivortex_green"
-
 import sys
 
 from net.sf.l2j.gameserver.model              import L2PcInstance
@@ -16,21 +14,8 @@ class Quest (JQuest) :
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onTalk (Self,npc,st):
-
    npcId = npc.getNpcId()
- # Dimension Vortex 2
-   if npcId == DIMENSION_VORTEX_2:
-     if st.getQuestItemsCount(GREEN_DIMENSION_STONE) >= 1:
-       st.takeItems(GREEN_DIMENSION_STONE,1)
-       st.player.teleToLocation(110930,15963,-4378)
-       st.exitQuest(1)
-       return
-     else:
-       st.exitQuest(1)
-       return "1.htm"
-
- # Dimension Vortex 3
-   if npcId == DIMENSION_VORTEX_3: 
+   if npcId in [ DIMENSION_VORTEX_2, DIMENSION_VORTEX_3 ] :
      if st.getQuestItemsCount(GREEN_DIMENSION_STONE) >= 1:
        st.takeItems(GREEN_DIMENSION_STONE,1)
        st.player.teleToLocation(110930,15963,-4378)
@@ -45,8 +30,8 @@ CREATED     = State('Start',QUEST)
 
 QUEST.setInitialState(CREATED)
 
-QUEST.addStartNpc(7953)
-QUEST.addStartNpc(7954)
+for i in [DIMENSION_VORTEX_2,DIMENSION_VORTEX_3] :
+   QUEST.addStartNpc(i)
+   CREATED.addTalkId(i)
 
-STARTED.addTalkId(7953)
-STARTED.addTalkId(7954)
+print "importing teleport data: 1102_toivortex_green"
