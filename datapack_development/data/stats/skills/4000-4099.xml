@@ -1164,14 +1164,21 @@
   </for>
 </skill>
 <skill id="4082" levels="1" name="Poison of Death">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
+  <set name="power" val="90000.0"/>
+  <set name="hitTime" val="50"/>
+  <set name="save" val="2"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="reuseDelay" val="50"/>
+  <set name="skillTime" val="50"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="false"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="4200000"/>
-  <set name="castRange" val="600"/>
+  <set name="castRange" val="-1"/>
   <for>
+   <effect count="1" name="ImobileBuff" time="4200" val="0"/>
+   <effect count="1" name="Root" time="4200" val="0"/>
+   <effect count="1400" name="DamOverTime" time="3" val="50" abnormal="poison"/>
   </for>
 </skill>
 <skill id="4083" levels="1" name="Die! You fool!">

@@ -126,6 +126,7 @@ __all__ = [
 '419_GetAPet',
 '420_LittleWings',
 '421_LittleWingAdventures',
+'501_ProofOfClanAlliance',
 '999_C3Tutorial'
 ]
 print ""
