@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 print "importing quests: 417: Path To Scavenger"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
@@ -129,7 +129,6 @@ class Quest (JQuest) :
 
 
  def onTalk (Self,npc,st):
-
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
@@ -259,7 +258,6 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-
    npcId = npc.getNpcId()
    if npcId == 777 :
         if int(st.get("cond")) and st.getQuestItemsCount(BEAR_PIC_ID) == 1 and st.getQuestItemsCount(HONEY_JAR_ID) < 5 :
@@ -276,7 +274,7 @@ class Quest (JQuest) :
         if int(st.get("cond")) and st.getQuestItemsCount(BEAR_PIC_ID) == 1 and st.getQuestItemsCount(HONEY_JAR_ID) < 5 :
           if npc.isSpoil() :
             st.giveItems(HONEY_JAR_ID,1)
-            if st.getQuestItemsCount(HONEY_JAR_ID) == 4 :
+            if st.getQuestItemsCount(HONEY_JAR_ID) == 5 :
               st.playSound("ItemSound.quest_middle")
               st.set("cond","6")
             else:
@@ -286,7 +284,7 @@ class Quest (JQuest) :
           if npc.isSpoil() :
             if st.getRandom(2) == 0 :
               st.giveItems(BEAD_ID,1)
-              if st.getQuestItemsCount(BEAD_ID) == 19 :
+              if st.getQuestItemsCount(BEAD_ID) == 20 :
                 st.playSound("ItemSound.quest_middle")
                 st.set("cond","8")
               else:
@@ -296,7 +294,7 @@ class Quest (JQuest) :
           if npc.isSpoil() :
             if st.getRandom(10) < 6 :
               st.giveItems(BEAD_ID,1)
-              if st.getQuestItemsCount(BEAD_ID) == 19 :
+              if st.getQuestItemsCount(BEAD_ID) == 20 :
                 st.playSound("ItemSound.quest_middle")
                 st.set("cond","8")
               else:
