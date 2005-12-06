@@ -74,27 +74,27 @@ class Quest (JQuest) :
         n = st.getRandom(100)
         n2 = 1
         if n >= 79 :
-          st.getPcSpawn.addSpawn(5044)
+          st.getPcSpawn().addSpawn(5044)
           st.takeItems(KASHA_PARASITE_ID,n0)
           n2 = 0
         elif n >= 69 :
           if n0 <= 20 :
-            st.getPcSpawn.addSpawn(5044)
+            st.getPcSpawn().addSpawn(5044)
             st.takeItems(KASHA_PARASITE_ID,n0)
             n2 = 0
         elif n >= 59 :
           if n0 <= 15 :
-            st.getPcSpawn.addSpawn(5044)
+            st.getPcSpawn().addSpawn(5044)
             st.takeItems(KASHA_PARASITE_ID,n0)
             n2 = 0
         elif n >= 49 :
           if n0 <= 10 :
-            st.getPcSpawn.addSpawn(5044)
+            st.getPcSpawn().addSpawn(5044)
             st.takeItems(KASHA_PARASITE_ID,n0)
             n2 = 0
         elif n >= 39 :
           if n0 <= 2 :
-            st.getPcSpawn.addSpawn(5044)
+            st.getPcSpawn().addSpawn(5044)
             st.takeItems(KASHA_PARASITE_ID,n0)
             n2 = 0
         if n2 :

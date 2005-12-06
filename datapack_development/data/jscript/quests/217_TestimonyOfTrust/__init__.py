@@ -235,13 +235,13 @@ class Quest (JQuest) :
       if int(st.get("cond")) and int(st.get("cond")) == 2 and st.getQuestItemsCount(BREATH_OF_WINDS_ID) == 0 :
         st.set("id",str(int(st.get("id"))+1))
         if st.getRandom(100)<(int(st.get("id"))*33) :
-          st.getPcSpawn.addSpawn(5120)
+          st.getPcSpawn().addSpawn(5120)
           st.playSound("Itemsound.quest_before_battle")
    elif npcId == 13 or npcId == 19:
       if int(st.get("cond")) and int(st.get("cond")) == 2 and st.getQuestItemsCount(SEED_OF_VERDURE_ID) == 0 :
         st.set("id",str(int(st.get("id"))+1))
         if st.getRandom(100)<(int(st.get("id"))*33) :
-          st.getPcSpawn.addSpawn(5121)
+          st.getPcSpawn().addSpawn(5121)
           st.playSound("Itemsound.quest_before_battle")
 
    elif npcId == 5120 :
