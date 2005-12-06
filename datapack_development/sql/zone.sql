@@ -70,3 +70,7 @@ insert into zone values (15, 'Town', 'Heine/K Spawn', 103598, 216010, 118991, 22
 insert into zone values (16, 'Town', 'Floran Village', 0, 0, 0, 0, 0, 2);
 insert into zone values (17, 'Town', 'Ivory Tower', 0, 0, 0, 0, 0, 4);
 insert into zone values (18, 'Town', 'Monster Track', 14500, 181250, 11700, 182700, 0, 2);
+
+insert into zone values (1, 'Underground', 'ascetics necropolis', 0, 0, 0, 0, -4844, 0);
+insert into zone values (1, 'Water', 'ascetics necropolis', -56190, 78595, -55175, 79600, -3061, 0);
+
