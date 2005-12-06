@@ -70,4 +70,4 @@ STARTED.addTalkId(7540)
 STARTED.addKillId(521)
 STARTED.addQuestDrop(521,STARSTONE2_ID,1)
 
-print "importing quests: 297: Gatekeepers Offering"
+print "importing quests: 297: Gatekeepers Favor"
