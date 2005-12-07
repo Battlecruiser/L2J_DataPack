@@ -1,5 +1,4 @@
-# Made by Mr. Have fun! - Version 0.3 by DrLecter
-
+# Made by Mr. Have fun! - Version 0.4 by kmarty
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -11,6 +10,20 @@ WAND_SPIRITBOUND2_ID = 1136
 WAND_SPIRITBOUND3_ID = 1137
 WAND_OF_ADEPT_ID = 747
 
+DROPLIST = {
+5003: (WAND_SPIRITBOUND1_ID),
+5004: (WAND_SPIRITBOUND2_ID),
+5005: (WAND_SPIRITBOUND3_ID)
+}
+
+# Helper function - If player have all quest items returns 1, otherwise 0
+def HaveAllQuestItems (st) :
+  for mobId in DROPLIST.keys() :
+    if st.getQuestItemsCount(DROPLIST[mobId]) == 0 :
+      return 0
+  return 1
+
+# Main Quest code
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -45,12 +58,11 @@ class Quest (JQuest) :
         st.exitQuest(1)
    elif npcId == 7017 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7017 and int(st.get("cond")) and st.getQuestItemsCount(GALLINS_OAK_WAND_ID)>=1 and (st.getQuestItemsCount(WAND_SPIRITBOUND1_ID) and st.getQuestItemsCount(WAND_SPIRITBOUND2_ID) and st.getQuestItemsCount(WAND_SPIRITBOUND3_ID))==0 :
+   elif npcId == 7017 and int(st.get("cond")) and st.getQuestItemsCount(GALLINS_OAK_WAND_ID)>=1 and not HaveAllQuestItems(st) :
       htmltext = "7017-04.htm"
-   elif npcId == 7017 and int(st.get("cond"))==3 and st.getQuestItemsCount(WAND_SPIRITBOUND1_ID) and st.getQuestItemsCount(WAND_SPIRITBOUND2_ID) and st.getQuestItemsCount(WAND_SPIRITBOUND3_ID) :
-      st.takeItems(WAND_SPIRITBOUND1_ID,1)
-      st.takeItems(WAND_SPIRITBOUND2_ID,1)
-      st.takeItems(WAND_SPIRITBOUND3_ID,1)
+   elif npcId == 7017 and int(st.get("cond"))==3 and HaveAllQuestItems(st) :
+      for mobId in DROPLIST.keys() :
+        st.takeItems(DROPLIST[mobId],-1)
       st.giveItems(WAND_OF_ADEPT_ID,1)
       htmltext = "7017-05.htm"
       st.set("cond","0")
@@ -70,24 +82,14 @@ class Quest (JQuest) :
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
-   if npcId == 5003 :
-      if int(st.get("cond")) >= 1 and st.getQuestItemsCount(GALLINS_OAK_WAND_ID) > 0 and st.getQuestItemsCount(WAND_SPIRITBOUND1_ID) == 0 :
-        st.takeItems(GALLINS_OAK_WAND_ID,1)
-        st.giveItems(WAND_SPIRITBOUND1_ID,1)
-        st.playSound("ItemSound.quest_itemget")
-   elif npcId == 5004 :
-      if int(st.get("cond")) >= 1 and st.getQuestItemsCount(GALLINS_OAK_WAND_ID) > 0 and st.getQuestItemsCount(WAND_SPIRITBOUND2_ID) == 0 :
-        st.takeItems(GALLINS_OAK_WAND_ID,1)
-        st.giveItems(WAND_SPIRITBOUND2_ID,1)
-        st.playSound("ItemSound.quest_itemget")
-   elif npcId == 5005 :
-      if int(st.get("cond")) >= 1 and st.getQuestItemsCount(GALLINS_OAK_WAND_ID) > 0 and st.getQuestItemsCount(WAND_SPIRITBOUND3_ID) == 0 :
-        st.takeItems(GALLINS_OAK_WAND_ID,1)
-        st.giveItems(WAND_SPIRITBOUND3_ID,1)
-        st.playSound("ItemSound.quest_itemget")
-   if st.getQuestItemsCount(GALLINS_OAK_WAND_ID) == 0 and (st.getQuestItemsCount(WAND_SPIRITBOUND3_ID) + st.getQuestItemsCount(WAND_SPIRITBOUND2_ID) + st.getQuestItemsCount(WAND_SPIRITBOUND3_ID)) ==3 :
-      st.set("cond","3")
-      st.playSound("ItemSound.quest_middle")
+   if int(st.get("cond")) >= 1 and st.getItemEquipped(7) == GALLINS_OAK_WAND_ID and not st.getQuestItemsCount(DROPLIST[npcId]) : # (7) means weapon slot
+     st.takeItems(GALLINS_OAK_WAND_ID,1)
+     st.giveItems(DROPLIST[npcId],1)
+     if HaveAllQuestItems(st) :
+       st.set("cond","3")
+       st.playSound("ItemSound.quest_middle")
+     else :
+       st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST       = Quest(104,"104_SpiritOfMirror","Spirit Of Mirror")
@@ -106,13 +108,10 @@ STARTED.addTalkId(7041)
 STARTED.addTalkId(7043)
 STARTED.addTalkId(7045)
 
-STARTED.addKillId(5003)
-STARTED.addKillId(5004)
-STARTED.addKillId(5005)
+for mobId in DROPLIST.keys():
+  STARTED.addKillId(mobId)
+  STARTED.addQuestDrop(mobId,DROPLIST[mobId],1)
 
-STARTED.addQuestDrop(5003,WAND_SPIRITBOUND1_ID,1)
-STARTED.addQuestDrop(5004,WAND_SPIRITBOUND2_ID,1)
-STARTED.addQuestDrop(5005,WAND_SPIRITBOUND3_ID,1)
 STARTED.addQuestDrop(7017,GALLINS_OAK_WAND_ID,1)
 STARTED.addQuestDrop(7017,GALLINS_OAK_WAND_ID,1)
 STARTED.addQuestDrop(7017,GALLINS_OAK_WAND_ID,1)
