@@ -1,8 +1,5 @@
--- ---------------------------
--- Table structure for random_spawn
--- ---------------------------
-DROP TABLE IF EXISTS random_spawn;
-CREATE TABLE random_spawn (
+DROP TABLE IF EXISTS `random_spawn`;
+CREATE TABLE `random_spawn` (
   groupId INT NOT NULL default 0,
   npcId INT NOT NULL default 0,
   count INT NOT NULL default 0,
