@@ -3,12 +3,18 @@
 ## Writen by DrLecter                     ##
 ## License: GNU GPL                       ##
 ## Based on Tiago Tagliaferri's script    ##
-## E-mail: tiago_tagliaferri@msn.com	##
+## E-mail: tiago_tagliaferri@msn.com      ##
 ## From "L2J-DataPack"                    ##
 ############################################
 trap finish 2
 
 configure() {
+echo "#############################################"
+echo "# You entered script configuration area     #"
+echo "# No change will be performed in your DB    #"
+echo "# I will just ask you some questions about  #"
+echo "# your hosts and DB.                        #"
+echo "#############################################"
 MYSQLDUMPPATH=`which mysqldump 2>/dev/null`
 MYSQLPATH=`which mysql 2>/dev/null`
 if [ $? -ne 0 ]; then
@@ -54,20 +60,20 @@ elif [ "$LSUSER" == "$LSPASS" ]; then
   echo "You're not too brilliant choosing passwords huh?"
 fi
 #GS
-echo -ne "\nPlease enter MySQL Game Server hostname (default localhost): "
+echo -ne "\nPlease enter MySQL Game Server hostname (default $LSDBHOST): "
 read GSDBHOST
 if [ -z "$GSDBHOST" ]; then
-  GSDBHOST="localhost"
+  GSDBHOST="$LSDBHOST"
 fi
-echo -ne "\nPlease enter MySQL Game Server database name (default l2jdb): "
+echo -ne "\nPlease enter MySQL Game Server database name (default $LSDB): "
 read GSDB
 if [ -z "$GSDB" ]; then
-  GSDB="l2jdb"
+  GSDB="$LSDB"
 fi
-echo -ne "\nPlease enter MySQL Game Server user (default root): "
+echo -ne "\nPlease enter MySQL Game Server user (default $LSUSER): "
 read GSUSER
 if [ -z "$GSUSER" ]; then
-  GSUSER="root"
+  GSUSER="$LSUSER"
 fi
 echo -ne "\nPlease enter MySQL Game Server $GSUSER's password (won't be displayed): "
 stty -echo
@@ -79,17 +85,22 @@ if [ -z "$GSPASS" ]; then
 elif [ "$GSUSER" == "$GSPASS" ]; then
   echo "You're not too brilliant choosing passwords huh?"
 fi
-save_config
+save_config $1
 }
 
 save_config() {
+if [ -n "$1" ]; then
+CONF="$1"
+else 
+CONF="database_installer.rc"
+fi
 echo ""
 echo "With these data i can generate a configuration file which can be read"
 echo "on future updates. WARNING: this file will contain clear text passwords!"
-echo -ne "Shall i generate config file? (Y/n):"
+echo -ne "Shall i generate config file $CONF? (Y/n):"
 read SAVE
-if [ "$SAVE" == "y" -o "$SAVE"=="Y" -o "$SAVE"=="" ];then 
-cat <<EOF>database_installer.rc
+if [ "$SAVE" == "y" -o "$SAVE" == "Y" -o "$SAVE" == "" ];then 
+cat <<EOF>$CONF
 #Configuration settings for L2J-Datapack database installer script
 MYSQLDUMPPATH=$MYSQLDUMPPATH
 MYSQLPATH=$MYSQLPATH
@@ -102,27 +113,42 @@ GSDB=$GSDB
 GSUSER=$GSUSER
 GSPASS=$GSPASS
 EOF
-chmod 600 database_installer.rc
-echo "Configuration saved as ./database_installer.rc"
+chmod 600 $CONF
+echo "Configuration saved as $CONF"
 echo "Permissions changed to 600 (rw- --- ---)"
-elif [ "$SAVE" != "n" -o "$SAVE"!="N" ]; then
+elif [ "$SAVE" != "n" -a "$SAVE" != "N" ]; then
   save_config
 fi
 }
 
 load_config() {
-if [ -e database_installer.rc ] && [ -f database_installer.rc ]; then
-. database_installer.rc
+if [ -n "$1" ]; then
+CONF="$1"
+else 
+CONF="database_installer.rc"
+fi
+if [ -e "$CONF" ] && [ -f "$CONF" ]; then
+. $CONF
 else
-echo "Saved settings file not found"
-configure
+echo "Settings file not found: $CONF"
+echo "You can specify an alternate settings filename:"
+echo $0 config_filename
+echo ""
+echo "If file doesn't exist it can be created"
+echo "If nothing is specified script will try to work with ./database_installer.rc"
+echo ""
+configure $CONF
 fi
 }
 
 asklogin(){
+echo "#############################################"
+echo "# WARNING: This section of the script CAN   #"
+echo "# destroy your characters and accounts      #"
+echo "# information. Read questions carefully     #"
+echo "# before you reply.                         #"
+echo "#############################################"
 echo ""
-echo "WARNING: A full install (f) will destroy data in your"
-echo "'accounts' and 'gameserver' tables."
 echo "Choose upgrade (u) if you already have an 'accounts' table but no"
 echo "'gameserver' table (ie. your server is a pre LS/GS split version.)"
 echo "Choose skip (s) to skip loginserver DB installation and go to"
@@ -150,25 +176,45 @@ $MYL < ../sql/gameservers.sql &> /dev/null
 }
 
 gsbackup(){
-echo ""
-echo "Making a backup of the original gameserver database."
-$MYSQLDUMPPATH --add-drop-table -h $GSDBHOST -u $GSUSER --password=$GSPASS $GSDB > gameserver_backup.sql
-if [ $? -ne 0 ];then
- echo ""
- echo "There was a problem accesing your GS database, either it wasnt created or authentication data is incorrect."
- exit 1
-fi
+while :
+  do
+   echo ""
+   echo -ne "Do you want to make a backup copy of your GSDB? (y/n): "
+   read LSB
+   if [ "$LSB" == "Y" -o "$LSB" == "y" ]; then
+     echo "Making a backup of the original gameserver database."
+     $MYSQLDUMPPATH --add-drop-table -h $GSDBHOST -u $GSUSER --password=$GSPASS $GSDB > gameserver_backup.sql
+     if [ $? -ne 0 ];then
+     echo ""
+     echo "There was a problem accesing your GS database, either it wasnt created or authentication data is incorrect."
+     exit 1
+     fi
+     break
+   elif [ "$LSB" == "n" -o "$LSB" == "N" ]; then 
+     break
+   fi
+  done 
 }
 
 lsbackup(){
-echo ""
-echo "Making a backup of the original loginserver database."
-$MYSQLDUMPPATH --add-drop-table -h $LSDBHOST -u $LSUSER --password=$LSPASS $LSDB > loginserver_backup.sql
-if [ $? -ne 0 ];then
- echo ""
- echo "There was a problem accesing your LS database, either it wasnt created or authentication data is incorrect."
- exit 1
-fi
+while :
+  do
+   echo ""
+   echo -ne "Do you want to make a backup copy of your LSDB? (y/n): "
+   read LSB
+   if [ "$LSB" == "Y" -o "$LSB" == "y" ]; then
+     echo "Making a backup of the original loginserver database."
+     $MYSQLDUMPPATH --add-drop-table -h $LSDBHOST -u $LSUSER --password=$LSPASS $LSDB > loginserver_backup.sql
+     if [ $? -ne 0 ];then
+        echo ""
+        echo "There was a problem accesing your LS database, either it wasnt created or authentication data is incorrect."
+        exit 1
+     fi
+     break
+   elif [ "$LSB" == "n" -o "$LSB" == "N" ]; then 
+     break
+   fi
+  done 
 }
 
 asktype(){
@@ -178,8 +224,8 @@ echo "WARNING: A full install (f) will destroy all existing character data."
 echo -ne "GAMESERVER DB install type: (f) full install or (u) upgrade or (s) skip or (q) quit?"
 read INSTALLTYPE
 case "$INSTALLTYPE" in
-	"f"|"F") fullinstall; upgradeinstall; experimental; expinstall;;
-	"u"|"U") upgradeinstall; experimental; expinstall;;
+	"f"|"F") fullinstall; upgradeinstall I; experimental; expinstall;;
+	"u"|"U") upgradeinstall U; experimental; expinstall;;
 	"s"|"S") experimental; expinstall;;
 	"q"|"Q") finish;;
 	*) asktype;;
@@ -192,7 +238,11 @@ $MYG < full_install.sql &> /dev/null
 }
 
 upgradeinstall(){
+if [ "$1" == "I" ]; then 
 echo "Installling new gameserver content."
+else
+echo "Upgrading gameserver content"
+fi
 $MYG < ../sql/armor.sql &> /dev/null
 $MYG < ../sql/boxaccess.sql &> /dev/null
 $MYG < ../sql/boxes.sql &> /dev/null
@@ -261,9 +311,25 @@ esac
 }
 
 expinstall(){
-echo "Making a backup of the default gameserver tables."
-$MYSQLDUMPPATH --add-drop-table -h $GSDBHOST -u $GSUSER --password=$GSPASS $LSDB > experimental_backup.sql &> /dev/null
-echo "Installing new content."
+while :
+  do
+   echo ""
+   echo -ne "Do you want to make another backup of GSDB before applying experimental? (y/N): "
+   read LSB
+   if [ "$LSB" == "Y" -o "$LSB" == "y" ]; then
+     echo "Making a backup of the default gameserver tables."
+     $MYSQLDUMPPATH --add-drop-table -h $GSDBHOST -u $GSUSER --password=$GSPASS $LSDB > experimental_backup.sql &> /dev/null
+     if [ $? -ne 0 ];then
+     echo ""
+     echo "There was a problem accesing your GS database, server down?."
+     exit 1
+     fi
+     break
+   elif [ "$LSB" == "n" -o "$LSB" == "N" -o "$LSB" == "" ]; then 
+     break
+   fi
+  done 
+echo "Installing experimental content."
 $MYG < ../sql/experimental/locations.sql &> /dev/null
 $MYG < ../sql/experimental/npc.sql &> /dev/null
 $MYG < ../sql/experimental/npcskills.sql &> /dev/null
@@ -278,7 +344,7 @@ exit 0
 }
 
 clear
-load_config
+load_config $1
 MYL="$MYSQLPATH -h $LSDBHOST -u $LSUSER --password=$LSPASS -D $LSDB"
 MYG="$MYSQLPATH -h $GSDBHOST -u $GSUSER --password=$GSPASS -D $GSDB"
 lsbackup
