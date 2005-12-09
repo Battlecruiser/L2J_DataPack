@@ -79,4 +79,7 @@ insert into zone values (4, 'Underground', 'school of dark arts2', -47150, 41782
 insert into zone values (5, 'Underground', 'school of dark arts3', -38741, 55152, -55186, 62474, -6000, 0);
 insert into zone values (6, 'Underground', 'ants nest', 917, 165166, -45452, 201937, -6000, 0);
 insert into zone values (7, 'Underground', 'elven fortress', 6068, 88790, 36734, 69188, -6000, 0);
+insert into zone values (8, 'Underground', 'ivory tower', 76563, 27040, 98577, 7238, -6000, 0);
+insert into zone values (9, 'Underground', 'hunter village', 1234573, 68112, 98542, 92245, -6000, 0);
+insert into zone values (10, 'Underground', 'de village', 34061, 8905, -7877, 26384, -6000, 0);
 
