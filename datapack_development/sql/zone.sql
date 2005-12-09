@@ -74,4 +74,7 @@ insert into zone values (18, 'Town', 'Monster Track', 14500, 181250, 11700, 1827
 insert into zone values (1, 'Underground', 'ascetics necropolis', 0, 0, 0, 0, -4844, 0);
 insert into zone values (1, 'Water', 'ascetics necropolis', -56190, 78595, -55175, 79600, -3061, 0);
 insert into zone values (2, 'Underground', 'elven ruins', 43100, 246500, 49400, 249200, -6614, 0);
+insert into zone values (3, 'Underground', 'school of dark arts1', -49800, 56879, -35311, 43790, -6000, 0);
+insert into zone values (4, 'Underground', 'school of dark arts2', -47150, 41782, -54659, 53065, -6000, 0);
+insert into zone values (5, 'Underground', 'school of dark arts3', -38741, 55152, -55186, 62474, -6000, 0);
 
