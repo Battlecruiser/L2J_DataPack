@@ -14,9 +14,9 @@ CREATE TABLE zone (
   taxById INT NOT NULL default 0
 );
 
-insert into zone values (1, 'Arena', 'Giran Arena', 73482, 142269, 72507, 143247, 0, 0);
-insert into zone values (2, 'Arena', 'Gudin Arena', -88412, 142709, -87392, 141696, 0, 0);
-insert into zone values (3, 'Arena', 'Collusieum', 148089, 48067, 150938, 45359, 0, 0);
+insert into zone values (1, 'Arena', 'Giran Arena', 72498, 142271, 73495, 143255, -3774, 0);
+insert into zone values (2, 'Arena', 'Gudin Arena', -88410, 142728, -87421, 142715, -3648, 0);
+insert into zone values (3, 'Arena', 'Collusieum', 148014, 45304, 150976, 48020, -3410, 0);
 insert into zone values (4, 'Arena', 'Monster Track', 11955, 183017, 12937, 184008, -3565, 0);
 
 insert into zone values (1, 'Arena Spawn', 'Giran Arena Spawn', 73890, 142656, 0, 0, -3778, 0);
@@ -49,12 +49,24 @@ insert into zone values (2, 'Clan Hall', 'Gludio 2', -16405, 123275, -15551, 123
 insert into zone values (3, 'Clan Hall', 'Gludio 3', -14172, 125045, -13661, 125830, -3143, 1);
 insert into zone values (4, 'Clan Hall', 'Gludio 4', -15137, 125284, -14705, 125845, -3143, 1);
 
-insert into zone values (1, 'Peace', 'Collusieum', 147121, 46232, 148016, 47213, 0, 0);
-insert into zone values (1, 'Peace', 'Collusieum', 150945, 47214, 151895, 46225, 0, 0);
-insert into zone values (2, 'Peace', 'Monster Track', 11703, 181289, 14574, 183017, -3564, 0);
-insert into zone values (2, 'Peace', 'Monster Track', 11703, 183017, 11955, 184260, -3564, 0);
-insert into zone values (2, 'Peace', 'Monster Track', 11955, 184008, 12937, 184260, -3564, 0);
-insert into zone values (2, 'Peace', 'Monster Track', 12937, 183017, 13192, 184260, -3564, 0);
+insert into zone values (1, 'Peace', 'Giran Arena', 72249, 142018, 72498, 143510, -3774, 0);
+insert into zone values (1, 'Peace', 'Giran Arena', 73495, 142018, 73738, 143510, -3774, 0);
+insert into zone values (1, 'Peace', 'Giran Arena', 72498, 142018, 73495, 142271, -3774, 0);
+insert into zone values (1, 'Peace', 'Giran Arena', 72498, 143255, 73495, 143510, -3774, 0);
+insert into zone values (2, 'Peace', 'Gudin Arena', -88654, 141479, -88410, 142960, -3648, 0);
+insert into zone values (2, 'Peace', 'Gudin Arena', -87421, 141479, -87172, 142960, -3648, 0);
+insert into zone values (2, 'Peace', 'Gudin Arena', -88410, 141479, -87421, 141728, -3648, 0);
+insert into zone values (2, 'Peace', 'Gudin Arena', -88410, 142715, -87421, 142960, -3648, 0);
+insert into zone values (3, 'Peace', 'Collusieum', 147117, 46230, 148014, 47217, -3410, 0);
+insert into zone values (3, 'Peace', 'Collusieum', 147771, 45304, 148014, 46230, -3410, 0);
+insert into zone values (3, 'Peace', 'Collusieum', 147771, 47217, 148014, 48020, -3410, 0);
+insert into zone values (3, 'Peace', 'Collusieum', 150976, 46228, 151885, 47217, -3410, 0);
+insert into zone values (3, 'Peace', 'Collusieum', 150976, 45304, 151218, 46228, -3410, 0);
+insert into zone values (3, 'Peace', 'Collusieum', 150976, 47217, 151218, 48020, -3410, 0);
+insert into zone values (4, 'Peace', 'Monster Track', 11703, 181289, 14574, 183017, -3564, 0);
+insert into zone values (4, 'Peace', 'Monster Track', 11703, 183017, 11955, 184260, -3564, 0);
+insert into zone values (4, 'Peace', 'Monster Track', 11955, 184008, 12937, 184260, -3564, 0);
+insert into zone values (4, 'Peace', 'Monster Track', 12937, 183017, 13192, 184260, -3564, 0);
 
 insert into zone values (1, 'Siege Battlefield', 'Gludio', -22900, 104000, -14567, 116513, 0, 0);
 insert into zone values (2, 'Siege Battlefield', 'Dion', 18438, 152343, 25757, 164097, 0, 0);
