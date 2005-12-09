@@ -17,7 +17,7 @@ CREATE TABLE zone (
 insert into zone values (1, 'Arena', 'Giran Arena', 73482, 142269, 72507, 143247, 0, 0);
 insert into zone values (2, 'Arena', 'Gudin Arena', -88412, 142709, -87392, 141696, 0, 0);
 insert into zone values (3, 'Arena', 'Collusieum', 148089, 48067, 150938, 45359, 0, 0);
-insert into zone values (4, 'Arena', 'Monster Track', 12942, 183021, 11953, 184009, 0, 0);
+insert into zone values (4, 'Arena', 'Monster Track', 11955, 183017, 12937, 184008, -3565, 0);
 
 insert into zone values (1, 'Arena Spawn', 'Giran Arena Spawn', 73890, 142656, 0, 0, -3778, 0);
 insert into zone values (2, 'Arena Spawn', 'Gludin Arena Spawn', -86979, 142402, 0, 0, -3643, 0);
@@ -51,7 +51,10 @@ insert into zone values (4, 'Clan Hall', 'Gludio 4', -15137, 125284, -14705, 125
 
 insert into zone values (1, 'Peace', 'Collusieum', 147121, 46232, 148016, 47213, 0, 0);
 insert into zone values (1, 'Peace', 'Collusieum', 150945, 47214, 151895, 46225, 0, 0);
-insert into zone values (2, 'Peace', 'Monster Track', 14500, 181250, 11700, 182700, 0, 2);
+insert into zone values (2, 'Peace', 'Monster Track', 11703, 181289, 14574, 183017, -3564, 0);
+insert into zone values (2, 'Peace', 'Monster Track', 11703, 183017, 11955, 184260, -3564, 0);
+insert into zone values (2, 'Peace', 'Monster Track', 11955, 184008, 12937, 184260, -3564, 0);
+insert into zone values (2, 'Peace', 'Monster Track', 12937, 183017, 13192, 184260, -3564, 0);
 
 insert into zone values (1, 'Siege Battlefield', 'Gludio', -22900, 104000, -14567, 116513, 0, 0);
 insert into zone values (2, 'Siege Battlefield', 'Dion', 18438, 152343, 25757, 164097, 0, 0);
