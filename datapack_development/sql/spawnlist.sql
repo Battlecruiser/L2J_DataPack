@@ -4,7 +4,7 @@
 DROP TABLE IF EXISTS spawnlist;
 CREATE TABLE spawnlist (
   id int(11) NOT NULL auto_increment,
-  location varchar(19) NOT NULL default '',
+  location varchar(40) NOT NULL default '',
   count int(9) NOT NULL default '0',
   npc_templateid int(9) NOT NULL default '0',
   locx int(9) NOT NULL default '0',
