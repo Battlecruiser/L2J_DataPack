@@ -64,22 +64,22 @@ insert into zone values (9, 'Town', 'Giran Castle Town', 76995, 141424, 90565, 1
 insert into zone values (10, 'Town', 'Town of Oren', 76696, 57199, 84511, 50120, 0, 4);
 insert into zone values (11, 'Town', 'Hunter Village', 121308, 73941, 114667, 80383, 0, 5);
 insert into zone values (12, 'Town', 'Town of Aden', 142312, 32317, 152163, 19708, 0, 5);
-insert into zone values (13, 'Town', 'Collusieum 1', 147121, 46232, 148016, 47213, 0, 0);
-insert into zone values (14, 'Town', 'Collusieum 2', 150945, 47214, 151895, 46225, 0, 0);
+insert into zone values (13, 'Town', 'Collusieum', 147121, 46232, 148016, 47213, 0, 0);
+insert into zone values (14, 'Town', 'Collusieum', 150945, 47214, 151895, 46225, 0, 0);
 insert into zone values (15, 'Town', 'Heine/K Spawn', 103598, 216010, 118991, 225905, 0, 6);
 insert into zone values (16, 'Town', 'Floran Village', 0, 0, 0, 0, 0, 2);
 insert into zone values (17, 'Town', 'Ivory Tower', 0, 0, 0, 0, 0, 4);
 insert into zone values (18, 'Town', 'Monster Track', 14500, 181250, 11700, 182700, 0, 2);
 
-insert into zone values (1, 'Underground', 'ascetics necropolis', 0, 0, 0, 0, -4844, 0);
-insert into zone values (1, 'Water', 'ascetics necropolis', -56190, 78595, -55175, 79600, -3061, 0);
-insert into zone values (2, 'Underground', 'elven ruins', 43100, 246500, 49400, 249200, -6614, 0);
-insert into zone values (3, 'Underground', 'school of dark arts1', -49800, 56879, -35311, 43790, -6000, 0);
-insert into zone values (4, 'Underground', 'school of dark arts2', -47150, 41782, -54659, 53065, -6000, 0);
-insert into zone values (5, 'Underground', 'school of dark arts3', -38741, 55152, -55186, 62474, -6000, 0);
-insert into zone values (6, 'Underground', 'ants nest', 917, 165166, -45452, 201937, -6000, 0);
-insert into zone values (7, 'Underground', 'elven fortress', 6068, 88790, 36734, 69188, -6000, 0);
-insert into zone values (8, 'Underground', 'ivory tower', 76563, 27040, 98577, 7238, -6000, 0);
-insert into zone values (9, 'Underground', 'hunter village', 1234573, 68112, 98542, 92245, -6000, 0);
-insert into zone values (10, 'Underground', 'de village', 34061, 8905, -7877, 26384, -6000, 0);
+insert into zone values (1, 'Underground', 'Ascetics Necropolis', 0, 0, 0, 0, -4844, 0);
+insert into zone values (2, 'Underground', 'Elven Ruins', 43100, 246500, 49400, 249200, -6614, 0);
+insert into zone values (3, 'Underground', 'School of Dark Arts', -49800, 56879, -35311, 43790, -6000, 0);
+insert into zone values (4, 'Underground', 'School of Dark Arts', -47150, 41782, -54659, 53065, -6000, 0);
+insert into zone values (5, 'Underground', 'School of Dark Arts', -38741, 55152, -55186, 62474, -6000, 0);
+insert into zone values (6, 'Underground', 'Ants Nest', 917, 165166, -45452, 201937, -6000, 0);
+insert into zone values (7, 'Underground', 'Elven Fortress', 6068, 88790, 36734, 69188, -6000, 0);
+insert into zone values (8, 'Underground', 'Ivory Tower', 76563, 27040, 98577, 7238, -6000, 0);
+insert into zone values (9, 'Underground', 'Hunter Village', 1234573, 68112, 98542, 92245, -6000, 0);
+insert into zone values (10, 'Underground', 'DE Village', 34061, 8905, -7877, 26384, -6000, 0);
 
+insert into zone values (1, 'Water', 'ascetics necropolis', -56190, 78595, -55175, 79600, -3061, 0);
