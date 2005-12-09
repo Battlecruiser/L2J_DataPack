@@ -11,8 +11,7 @@ CREATE TABLE zone (
   x2 INT NOT NULL default 0,
   y2 INT NOT NULL default 0,
   z INT NOT NULL default 0,
-  taxById INT NOT NULL default 0,
-  PRIMARY KEY  (id, type)
+  taxById INT NOT NULL default 0
 );
 
 insert into zone values (1, 'Arena', 'Giran Arena', 73482, 142269, 72507, 143247, 0, 0);
@@ -45,6 +44,15 @@ insert into zone values (4, 'Castle Defender Spawn', 'Oren', 81707, 37208, 0, 0,
 insert into zone values (5, 'Castle Defender Spawn', 'Aden', 147456, 6048, 0, 0, 253, 0);
 insert into zone values (6, 'Castle Defender Spawn', 'Innadril', 0, 0, 0, 0, 0, 5);
 
+insert into zone values (1, 'Clan Hall', 'Gludio 1', -12954, 123785, -12291, 124264, -3117, 1);
+insert into zone values (2, 'Clan Hall', 'Gludio 2', -16405, 123275, -15551, 123886, -3117, 1);
+insert into zone values (3, 'Clan Hall', 'Gludio 3', -14172, 125045, -13661, 125830, -3143, 1);
+insert into zone values (4, 'Clan Hall', 'Gludio 4', -15137, 125284, -14705, 125845, -3143, 1);
+
+insert into zone values (1, 'Peace', 'Collusieum', 147121, 46232, 148016, 47213, 0, 0);
+insert into zone values (1, 'Peace', 'Collusieum', 150945, 47214, 151895, 46225, 0, 0);
+insert into zone values (2, 'Peace', 'Monster Track', 14500, 181250, 11700, 182700, 0, 2);
+
 insert into zone values (1, 'Siege Battlefield', 'Gludio', -22900, 104000, -14567, 116513, 0, 0);
 insert into zone values (2, 'Siege Battlefield', 'Dion', 18438, 152343, 25757, 164097, 0, 0);
 insert into zone values (3, 'Siege Battlefield', 'Giran', 105737, 140128, 121331, 149842, 0, 0);
@@ -64,12 +72,9 @@ insert into zone values (9, 'Town', 'Giran Castle Town', 76995, 141424, 90565, 1
 insert into zone values (10, 'Town', 'Town of Oren', 76696, 57199, 84511, 50120, 0, 4);
 insert into zone values (11, 'Town', 'Hunter Village', 121308, 73941, 114667, 80383, 0, 5);
 insert into zone values (12, 'Town', 'Town of Aden', 142312, 32317, 152163, 19708, 0, 5);
-insert into zone values (13, 'Town', 'Collusieum', 147121, 46232, 148016, 47213, 0, 0);
-insert into zone values (14, 'Town', 'Collusieum', 150945, 47214, 151895, 46225, 0, 0);
 insert into zone values (15, 'Town', 'Heine/K Spawn', 103598, 216010, 118991, 225905, 0, 6);
 insert into zone values (16, 'Town', 'Floran Village', 0, 0, 0, 0, 0, 2);
 insert into zone values (17, 'Town', 'Ivory Tower', 0, 0, 0, 0, 0, 4);
-insert into zone values (18, 'Town', 'Monster Track', 14500, 181250, 11700, 182700, 0, 2);
 
 insert into zone values (1, 'Underground', 'Ascetics Necropolis', 0, 0, 0, 0, -4844, 0);
 insert into zone values (2, 'Underground', 'Elven Ruins', 43100, 246500, 49400, 249200, -6614, 0);
