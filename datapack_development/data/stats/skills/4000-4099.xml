@@ -695,7 +695,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="400"/>
   <set name="absorbPart" val="0.4" /><!-- absorbs 40% of damage -->
   <for>
   </for>
@@ -707,7 +707,7 @@
   <set name="skillType" val="DRAIN"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="400"/>
   <set name="absorbPart" val="0.4" /><!-- absorbs 40% of damage -->
   <for>
   </for>
@@ -719,7 +719,7 @@
   <set name="skillType" val="HEAL"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="400"/>
   <for>
   </for>
 </skill>
@@ -732,7 +732,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="30000"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="400"/>
   <set name="displayId" val="0129"/>
   <for>
     <effect count="6" name="DamOverTime" time="5" val="#dmg" abnormal="poison"/>
@@ -747,7 +747,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="400"/>
   <for>
   <effect count="1" name="Buff" time="120" val="0">
     <sub order="0x50" stat="pAtk" val="#Tab-pAtk"/>
@@ -763,7 +763,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="400"/>
   <for>
   <effect count="1" name="Buff" time="120" val="0">
     <sub order="0x50" stat="pDef" val="#Tab-pDef"/>
@@ -779,7 +779,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
        <sub  order='0x10' stat='pAtkSpd' val="#Tab-pAtkSpd"/>
