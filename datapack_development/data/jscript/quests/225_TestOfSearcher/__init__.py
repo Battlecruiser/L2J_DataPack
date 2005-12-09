@@ -1,4 +1,5 @@
-#completly rewritten by Rolarga, original from Mr
+# completely rewritten by Rolarga, original from Mr
+# modified by Ariakas 08.12.2005
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -33,7 +34,8 @@ TORN_MAP_PIECE2_ID = 2802
 
 #This handle all mob drops   npcId:[condition,maxcount,chance,itemid]
 DROPLIST={
-781:["phase",3,10,100,DELU_TOTEM_ID],
+781:["phase",0,10,100,DELU_TOTEM_ID],
+5094:["phase",3,10,100,DELU_TOTEM_ID],
 5093:["phase",5,1,100,CHIEF_KALKIS_FANG_ID],
 555:["phase",10,10,100,RED_SPORE_DUST_ID],
 551:["soltsMap",1,4,50,TORN_MAP_PIECE1_ID],
@@ -42,7 +44,7 @@ DROPLIST={
 
 NPC=[7291,7420,7628,7690,7728,7729,7730,7627]
 
-MOB=[144,5093,551,555,781,]
+MOB=[144,5093,551,555,781,5094]
 
 STATS=[["phase","cond"],["makelsMap","soltsMap"]]
 
@@ -100,22 +102,21 @@ class Quest (JQuest) :
           htmltext = "7628-01a.htm"
           st.giveItems(GOLD_BAR_ID,20)
           st.takeItems(RUSTED_KEY1_ID,1)
+	  st.getPcSpawn().removeAllSpawn()
           st.set("phase","21")
     return htmltext
 
 
  def onTalk (Self,npc,st):
-
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
-     st.setState(STARTING)
      st.set("cond","0")
      st.set("phase","0")
      if npcId == NPC[3]:
-          if (st.getPlayer().getClassId().getId() == 0x07 or st.getPlayer().getClassId().getId() == 0x16 or st.getPlayer().getClassId().getId() == 0x23 or st.getPlayer().getClassId().getId() == 0x36) :
-           if st.getPlayer().getLevel()> 38:
+          if st.getPlayer().getClassId().getId() in [ 0x07, 0x16, 0x23, 0x36] :
+           if st.getPlayer().getLevel() > 38 :
             if st.getPlayer().getClassId().getId() == 0x36 :
               htmltext = "7690-04.htm"
             else:
@@ -259,16 +260,12 @@ class Quest (JQuest) :
         else:
           htmltext = "<html><head><body>You haven't got a Key for this Chest.</body></html>"	
    return htmltext
-   
 
  def onKill (self,npc,st):
-
    npcId = npc.getNpcId()
-   
    var,status,maxcount,chance,itemid=DROPLIST[npcId]
    random = st.getRandom(100)
    count=st.getQuestItemsCount(itemid)
-   
    if int(st.get(var))==status and count<maxcount and random<chance :
      st.giveItems(itemid,1)
      if count==maxcount-1:
@@ -284,14 +281,13 @@ class Quest (JQuest) :
        st.takeItems(TORN_MAP_PIECE1_ID,4)
      else:
       st.playSound("Itemsound.quest_itemget")
-      if npcId==781 and random<30:
-       st.getPcSpawn().addSpawn(5094)
+   if npcId==781 and random<30 and count<maxcount:
+     st.getPcSpawn().addSpawn(5094)
    return
 
 
 QUEST       = Quest(225,"225_TestOfSearcher","Test Of Searcher")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
@@ -299,7 +295,7 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7690)
 
-STARTING.addTalkId(7690)
+CREATED.addTalkId(7690)
 
 for npcId in NPC:
  STARTED.addTalkId(npcId)
