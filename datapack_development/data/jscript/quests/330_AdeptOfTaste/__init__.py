@@ -42,7 +42,7 @@ JONAS_SAUCE_RECIPE_ID = 1456
 JONAS_STEAK_RECIPE_ID = 1457
 
 def has_list(st) :
-    return st.getQuestItemsCount(INGREDIENT_LIST_ID2)
+    return st.getQuestItemsCount(INGREDIENT_LIST_ID)
 
 def has_review(st) :
     return st.getQuestItemsCount(MIRIENS_REVIEW1_ID)+\
