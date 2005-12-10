@@ -81,11 +81,11 @@
 </for>>
 </skill>
 <skill id="1305" levels="5" name="Honor of Paagrio">
-  <table name="#rateCp"> 616 633 651 669 687 </table>
+  <table name="#rateCp"> 616 636 654 671 687 </table>
   <table name="#mpConsume"> 214 222 228 233 239 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#rateCp"/>
-  <set name="target" val="TARGET_CLAN"/>
+  <set name="target" val="TARGET_ALLY"/>
   <set name="skillRadius" val="600"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="20000"/>
