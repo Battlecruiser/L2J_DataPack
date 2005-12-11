@@ -92,7 +92,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if (st.getPlayer().getLevel() >= 10 or int(st.get("onlyone"))) and npcTyp==1:
+   if (st.getPlayer().getLevel() >= 10 or int(st.get("onlyone"))) and npcTyp == 1:
        htmltext = "7575-05.htm"
    elif int(st.get("onlyone")) == 0 and st.getPlayer().getLevel() < 10 :
     if st.getPlayer().getRace().ordinal() == raceId :
@@ -138,7 +138,7 @@ class Quest (JQuest) :
           htmltext = htmlfiles[2] 
    else:
        htmltext = "<html><head><body>You are too experienced now.</body></html>"
-       st.exitQuest(1)
+       #st.exitQuest(1)
    return htmltext
 
  def onKill (self,npc,st):
