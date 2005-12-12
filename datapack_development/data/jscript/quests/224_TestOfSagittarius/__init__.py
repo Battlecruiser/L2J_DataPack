@@ -1,6 +1,5 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # rewritten by Rolarga, Version 0.3
-print "importing quests: 224: Test Of Sagittarius"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -122,7 +121,6 @@ class Quest (JQuest) :
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
-     st.setState(STARTING)
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("step","0")
@@ -219,7 +217,7 @@ class Quest (JQuest) :
       giveNormal(st,itemid)
     elif dropcondition == 2 :
      if ((st.getQuestItemsCount(itemid)-120)*5)> st.getRandom(100) :
-      st.spawnNpc(5090)
+      st.getPcSpawn().addSpawn(5090)
       st.takeItems(itemid, st.getQuestItemsCount(itemid))
       st.playSound("Itemsound.quest_before_battle")
      else:
@@ -228,7 +226,7 @@ class Quest (JQuest) :
      if st.getItemEquipped(7)==CRESCENT_MOON_BOW_ID:
       giveMiddle(st,itemid,step)
      else:
-      st.spawnNpc(5090)
+      st.getPcSpawn().addSpawn(5090)
     elif dropcondition == 4 :
      if st.getQuestItemsCount(MITHRIL_CLIP_ID) and st.getQuestItemsCount(ST_BOWSTRING_ID) and st.getQuestItemsCount(MANASHENS_HORN_ID) : 
       giveMiddle(st,itemid,step)
@@ -249,7 +247,6 @@ class Quest (JQuest) :
   
 QUEST       = Quest(224,"224_TestOfSagittarius","Test Of Sagittarius")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
@@ -257,10 +254,13 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7702)
 
-STARTING.addTalkId(7702)
+CREATED.addTalkId(7702)
+COMPLETED.addTalkId(7702)
 
 for npcId in [7514,7626,7653,7702,7717]:
     STARTED.addTalkId(npcId)
 
 for mobId in [230,232,233,234,269,270,5090,551,563,577,578,579,580,581,582,79,80,81,82,84,86,89,90]:
     STARTED.addKillId(mobId)
+
+print "importing quests: 224: Test Of Sagittarius"
