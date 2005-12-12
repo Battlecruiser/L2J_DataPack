@@ -1,4 +1,4 @@
-#completly rewritten by Rolarga, original from mr
+#completely rewritten by Rolarga, original from mr
 
 import sys
 from net.sf.l2j.gameserver.model.quest import State
@@ -41,7 +41,7 @@ MOBS=[233,269,270,564,583,584,585,586,587,588,778,779]
 
 STATS=[["atubaStat","nerugaStat","urutuStat","urutuDrop","dudaStat","gandiStat","markantusStat"],["cond","phase"]]
 
-#This handels all Dropdata for the Mobs in this Quest    npcId:[var,value,newValue,chance,maxcount,item]
+#This handle all Dropdata for the Mobs in this Quest    npcId:[var,value,newValue,chance,maxcount,item]
 DROPLIST={
 269:["atubaStat",2,3,40,20,BREKA_ORC_FANG_ID],
 270:["atubaStat",2,3,50,20,BREKA_ORC_FANG_ID],
@@ -134,7 +134,7 @@ class Quest (JQuest) :
 				st.takeItems(BEAR_FANG_NECKLACE_ID,1)
 			elif event == "7649_4" :
 				htmltext = "7649-07.htm"
-				st.spawnNpc(7643,21036,-107690,-3038)
+				st.getPcSpawn().addSpawn(7643,21036,-107690,-3038)
 				st.set("markantusStat","4")
 			elif event == "7643_1" :
 				htmltext = "7643-02.htm"
@@ -311,7 +311,7 @@ class Quest (JQuest) :
 						st.takeItems(RAGNA_CHIEF_NOTICE_ID,1)
 					elif markantus==3:
 						htmltext = "7649-07.htm"
-						st.spawnNpc(7643,21036,-107690,-3038)
+						st.getPcSpawn().addSpawn(7643,21036,-107690,-3038)
 						st.set("markantusStat","4")
 					elif markantus>3:
 						htmltext = "7649-08.htm"
@@ -357,7 +357,6 @@ class Quest (JQuest) :
 	
 QUEST     = Quest(232,"232_TestOfLord","Test Of Lord")
 CREATED   = State('Start', QUEST)
-STARTING  = State('Starting', QUEST)
 STARTED   = State('Started', QUEST)
 COMPLETED = State('Completed', QUEST)
 	
@@ -367,7 +366,7 @@ QUEST.addStartNpc(NPC[4])
 
 CREATED.addTalkId(NPC[4])
 
-STARTING.addTalkId(NPC[4])
+COMPLETED.addTalkId(NPC[4])
 
 for npcId in NPC:
 	STARTED.addTalkId(npcId)

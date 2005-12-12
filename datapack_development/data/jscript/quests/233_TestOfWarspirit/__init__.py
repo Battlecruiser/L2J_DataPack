@@ -50,17 +50,17 @@ STATS=["cond","step","Orim","Racoy","Perkiron","Manakia","Manakia_Queen"]
 
 #npcId=[[accepted values for this part],variable for the current part from the mob,maxcount,chance in %, items to give(one per kill max)]
 DROPLIST={
-213:	[[2,3,4],"Orim",10,100,[PORTAS_EYE_ID]],
-214:	[[2,3,4],"Orim",10,100,[EXCUROS_SCALE_ID]],
-215:	[[2,3,4],"Orim",10,100,[MORDEOS_TALON_ID]],
-601:	[[1],"step",13,50,[TAMLIN_ORC_HEAD_ID]],
-602:	[[1],"step",13,50,[TAMLIN_ORC_HEAD_ID]],
-5108:	[[2],"Manakia_Queen",1,100,[HERMODTS_SKULL_ID]],
-581:	[[2,3,4,5,6],"Perkiron",1,50,[TONARS_RIB_BONE_ID,TONARS_SPINE_ID,TONARS_ARM_BONE_ID,TONARS_SKULL_ID,TONARS_THIGH_BONE_ID]],
-582:	[[2,3,4,5,6],"Perkiron",1,50,[TONARS_SKULL_ID,TONARS_ARM_BONE_ID,TONARS_RIB_BONE_ID,TONARS_SPINE_ID,TONARS_THIGH_BONE_ID]],
-158:	[[2,3,4,5],"Manakia",1,50,[HERMODTS_RIB_BONE_ID,HERMODTS_SPINE_ID,HERMODTS_ARM_BONE_ID,HERMODTS_THIGH_BONE_ID]],
-89:		[[4,5,6,7,8,9],"Racoy",1,100,[[KIRUNAS_THIGH_BONE_ID,KIRUNAS_ARM_BONE_ID],[KIRUNAS_SPINE_ID,KIRUNAS_RIB_BONE_ID],[KIRUNAS_SKULL_ID]]],
-90:		[[4,5,6,7,8,9],"Racoy",1,100,[[KIRUNAS_THIGH_BONE_ID,KIRUNAS_ARM_BONE_ID],[KIRUNAS_SPINE_ID,KIRUNAS_RIB_BONE_ID],[KIRUNAS_SKULL_ID]]]
+213: [[2,3,4],"Orim",10,100,[PORTAS_EYE_ID]],
+214: [[2,3,4],"Orim",10,100,[EXCUROS_SCALE_ID]],
+215: [[2,3,4],"Orim",10,100,[MORDEOS_TALON_ID]],
+601: [[1],"step",13,50,[TAMLIN_ORC_HEAD_ID]],
+602: [[1],"step",13,50,[TAMLIN_ORC_HEAD_ID]],
+5108:[[2],"Manakia_Queen",1,100,[HERMODTS_SKULL_ID]],
+581: [[2,3,4,5,6],"Perkiron",1,50,[TONARS_RIB_BONE_ID,TONARS_SPINE_ID,TONARS_ARM_BONE_ID,TONARS_SKULL_ID,TONARS_THIGH_BONE_ID]],
+582: [[2,3,4,5,6],"Perkiron",1,50,[TONARS_SKULL_ID,TONARS_ARM_BONE_ID,TONARS_RIB_BONE_ID,TONARS_SPINE_ID,TONARS_THIGH_BONE_ID]],
+158: [[2,3,4,5],"Manakia",1,50,[HERMODTS_RIB_BONE_ID,HERMODTS_SPINE_ID,HERMODTS_ARM_BONE_ID,HERMODTS_THIGH_BONE_ID]],
+89:  [[4,5,6,7,8,9],"Racoy",1,100,[[KIRUNAS_THIGH_BONE_ID,KIRUNAS_ARM_BONE_ID],[KIRUNAS_SPINE_ID,KIRUNAS_RIB_BONE_ID],[KIRUNAS_SKULL_ID]]],
+90:  [[4,5,6,7,8,9],"Racoy",1,100,[[KIRUNAS_THIGH_BONE_ID,KIRUNAS_ARM_BONE_ID],[KIRUNAS_SPINE_ID,KIRUNAS_RIB_BONE_ID],[KIRUNAS_SKULL_ID]]]
 }
 
 # Mob List initialisation for the different Parts
@@ -331,7 +331,7 @@ class Quest (JQuest) :
 						# spawns 5 new medusas around the dead queen *muha*
 						if npcId == 5108:
 							for i in range(5):
-								st.spawnNpc(158)
+								st.getPcSpawn().addSpawn(158)
 						if count == maxcount-1:
 							st.playSound("ItemSound.quest_middle")
 							st.set(var,str(isValue+1))
