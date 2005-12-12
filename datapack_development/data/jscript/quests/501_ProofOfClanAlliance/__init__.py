@@ -32,7 +32,7 @@ POTION_OF_RECOVERY= 3889
 
 #Quest mobs, drop, rates and prices
 CHESTS=range(1042,1058)
-MOBS=[[685,HERB_OF_VANOR],[644,HERB_OF_HARIT],[161,HERB_OF_OEL_MAHUM]]
+MOBS=[[685,HERB_OF_VANOR],[644,HERB_OF_HARIT],[576,HERB_OF_OEL_MAHUM]]
 RATE=35
 #stackable items paid to retry chest game: (default 10k adena)
 RETRY_ITEMS=57
