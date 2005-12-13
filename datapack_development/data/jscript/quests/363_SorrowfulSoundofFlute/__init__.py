@@ -1,6 +1,5 @@
 # Jovial Accordian Written By Elektra
 # Fixed by mr
-print "importing quests: 363: Sorrowful Sound of Flute"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -18,25 +17,20 @@ class Quest (JQuest) :
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
         htmltext = "7956_2.htm"
-    
     elif event == "5" :
         st.giveItems(57,1000)
         st.giveItems(4420,1)
-        st.set("cond","0")
         st.playSound("ItemSound.quest_finish")
-        st.setState(COMPLETED)
+        st.exitQuest(1)
         htmltext = "7956_5.htm"
-        
     return htmltext
 
 
  def onTalk (Self,npc,st):
-
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say to you</body></html>"
    id = st.getState()
    if id == CREATED :
-     st.setState(STARTING)
      st.set("cond","0")
    if npcId == 7956 and int(st.get("cond")) == 0 :
         htmltext = "7956_1.htm"
@@ -66,16 +60,18 @@ class Quest (JQuest) :
 
 QUEST       = Quest(363,"363_SorrowfulSoundofFlute","Sorrowful Sounds of Flute")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7956)
+CREATED.addTalkId(7956)
 
 STARTED.addTalkId(7595)
 STARTED.addTalkId(7959)
 STARTED.addTalkId(7956)
 
 STARTED.addQuestDrop(7959,4319,1)
+
+print "importing quests: 363: Sorrowful Sound of Flute"

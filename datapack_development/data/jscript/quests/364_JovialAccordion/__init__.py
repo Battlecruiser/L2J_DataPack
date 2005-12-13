@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # fixed by Elektra and Rolarga Version 0.3
 # fixed by Mr and Drlecter
 import sys
