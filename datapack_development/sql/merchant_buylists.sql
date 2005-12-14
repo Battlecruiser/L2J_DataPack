@@ -14,7944 +14,7935 @@ CREATE TABLE merchant_buylists (
 -- Dumping data for table `merchant_buylists`
 --
 
-INSERT INTO merchant_buylists VALUES (1,883,1,1);
-INSERT INTO merchant_buylists VALUES (4,883,1,2);
-INSERT INTO merchant_buylists VALUES (11,883,1,3);
-INSERT INTO merchant_buylists VALUES (13,883,1,4);
-INSERT INTO merchant_buylists VALUES (3,14375,1,5);
-INSERT INTO merchant_buylists VALUES (152,9280,1,6);
-INSERT INTO merchant_buylists VALUES (12,14375,1,7);
-INSERT INTO merchant_buylists VALUES (215,14375,1,8);
-INSERT INTO merchant_buylists VALUES (14,14375,1,9);
-INSERT INTO merchant_buylists VALUES (5,14375,1,10);
-INSERT INTO merchant_buylists VALUES (153,21275,1,11);
-INSERT INTO merchant_buylists VALUES (1333,62215,1,12);
-INSERT INTO merchant_buylists VALUES (66,62215,1,13);
-INSERT INTO merchant_buylists VALUES (67,62215,1,14);
-INSERT INTO merchant_buylists VALUES (122,62215,1,15);
-INSERT INTO merchant_buylists VALUES (154,62215,1,16);
-INSERT INTO merchant_buylists VALUES (216,62215,1,17);
-INSERT INTO merchant_buylists VALUES (271,62215,1,18);
-INSERT INTO merchant_buylists VALUES (2,156400,1,19);
-INSERT INTO merchant_buylists VALUES (218,156400,1,20);
-INSERT INTO merchant_buylists VALUES (272,156400,1,21);
-INSERT INTO merchant_buylists VALUES (15,156400,1,22);
-INSERT INTO merchant_buylists VALUES (28,106,1,23);
-INSERT INTO merchant_buylists VALUES (21,169,1,24);
-INSERT INTO merchant_buylists VALUES (29,1748,1,25);
-INSERT INTO merchant_buylists VALUES (22,2794,1,26);
-INSERT INTO merchant_buylists VALUES (30,5716,1,27);
-INSERT INTO merchant_buylists VALUES (2386,5716,1,28);
-INSERT INTO merchant_buylists VALUES (23,9154,1,29);
-INSERT INTO merchant_buylists VALUES (412,14605,1,30);
-INSERT INTO merchant_buylists VALUES (390,23345,1,31);
-INSERT INTO merchant_buylists VALUES (24,23345,1,32);
-INSERT INTO merchant_buylists VALUES (31,14605,1,33);
-INSERT INTO merchant_buylists VALUES (18,45,1,34);
-INSERT INTO merchant_buylists VALUES (19,734,1,35);
-INSERT INTO merchant_buylists VALUES (20,3197,1,36);
-INSERT INTO merchant_buylists VALUES (102,8176,1,37);
-INSERT INTO merchant_buylists VALUES (48,43,1,38);
-INSERT INTO merchant_buylists VALUES (1119,698,1,39);
-INSERT INTO merchant_buylists VALUES (49,3047,1,40);
-INSERT INTO merchant_buylists VALUES (50,7785,1,41);
-INSERT INTO merchant_buylists VALUES (1121,8,1,42);
-INSERT INTO merchant_buylists VALUES (35,43,1,43);
-INSERT INTO merchant_buylists VALUES (36,43,1,44);
-INSERT INTO merchant_buylists VALUES (1129,698,1,45);
-INSERT INTO merchant_buylists VALUES (1122,698,1,46);
-INSERT INTO merchant_buylists VALUES (37,3047,1,47);
-INSERT INTO merchant_buylists VALUES (38,7785,1,48);
-INSERT INTO merchant_buylists VALUES (41,63,1,49);
-INSERT INTO merchant_buylists VALUES (42,1048,1,50);
-INSERT INTO merchant_buylists VALUES (43,4577,1,51);
-INSERT INTO merchant_buylists VALUES (44,11730,1,52);
-INSERT INTO merchant_buylists VALUES (17,2,1,53);
-INSERT INTO merchant_buylists VALUES (1341,3,1,54);
-INSERT INTO merchant_buylists VALUES (7,883,2,1);
-INSERT INTO merchant_buylists VALUES (308,883,2,2);
-INSERT INTO merchant_buylists VALUES (8,14375,2,3);
-INSERT INTO merchant_buylists VALUES (99,14375,2,4);
-INSERT INTO merchant_buylists VALUES (9,62215,2,5);
-INSERT INTO merchant_buylists VALUES (176,156400,2,6);
-INSERT INTO merchant_buylists VALUES (310,156400,2,7);
-INSERT INTO merchant_buylists VALUES (462,106,2,8);
-INSERT INTO merchant_buylists VALUES (426,169,2,9);
-INSERT INTO merchant_buylists VALUES (1103,1748,2,10);
-INSERT INTO merchant_buylists VALUES (1100,2794,2,11);
-INSERT INTO merchant_buylists VALUES (463,1748,2,12);
-INSERT INTO merchant_buylists VALUES (428,2794,2,13);
-INSERT INTO merchant_buylists VALUES (464,5716,2,14);
-INSERT INTO merchant_buylists VALUES (429,9154,2,15);
-INSERT INTO merchant_buylists VALUES (1104,14605,2,16);
-INSERT INTO merchant_buylists VALUES (1101,23345,2,17);
-INSERT INTO merchant_buylists VALUES (18,45,2,18);
-INSERT INTO merchant_buylists VALUES (19,734,2,19);
-INSERT INTO merchant_buylists VALUES (20,3197,2,20);
-INSERT INTO merchant_buylists VALUES (102,8176,2,21);
-INSERT INTO merchant_buylists VALUES (48,43,2,22);
-INSERT INTO merchant_buylists VALUES (1119,698,2,23);
-INSERT INTO merchant_buylists VALUES (49,3047,2,24);
-INSERT INTO merchant_buylists VALUES (50,7785,2,25);
-INSERT INTO merchant_buylists VALUES (1121,8,2,26);
-INSERT INTO merchant_buylists VALUES (35,43,2,27);
-INSERT INTO merchant_buylists VALUES (36,43,2,28);
-INSERT INTO merchant_buylists VALUES (1129,698,2,29);
-INSERT INTO merchant_buylists VALUES (1122,698,2,30);
-INSERT INTO merchant_buylists VALUES (37,3047,2,31);
-INSERT INTO merchant_buylists VALUES (38,7785,2,32);
-INSERT INTO merchant_buylists VALUES (41,63,2,33);
-INSERT INTO merchant_buylists VALUES (42,1048,2,34);
-INSERT INTO merchant_buylists VALUES (43,4577,2,35);
-INSERT INTO merchant_buylists VALUES (44,11730,2,36);
-INSERT INTO merchant_buylists VALUES (17,2,2,37);
-INSERT INTO merchant_buylists VALUES (1341,3,2,38);
-INSERT INTO merchant_buylists VALUES (412,13970,3,1);
-INSERT INTO merchant_buylists VALUES (390,22330,3,2);
-INSERT INTO merchant_buylists VALUES (24,22330,3,3);
-INSERT INTO merchant_buylists VALUES (31,13970,3,4);
-INSERT INTO merchant_buylists VALUES (25,34980,3,5);
-INSERT INTO merchant_buylists VALUES (26,54120,3,6);
-INSERT INTO merchant_buylists VALUES (33,25300,3,7);
-INSERT INTO merchant_buylists VALUES (32,21890,3,8);
-INSERT INTO merchant_buylists VALUES (27,40590,3,9);
-INSERT INTO merchant_buylists VALUES (34,33770,3,10);
-INSERT INTO merchant_buylists VALUES (413,43010,3,11);
-INSERT INTO merchant_buylists VALUES (347,91850,3,12);
-INSERT INTO merchant_buylists VALUES (391,68860,3,13);
-INSERT INTO merchant_buylists VALUES (376,57420,3,14);
-INSERT INTO merchant_buylists VALUES (414,68750,3,15);
-INSERT INTO merchant_buylists VALUES (392,109890,3,16);
-INSERT INTO merchant_buylists VALUES (348,146300,3,17);
-INSERT INTO merchant_buylists VALUES (349,201300,3,18);
-INSERT INTO merchant_buylists VALUES (350,201300,3,19);
-INSERT INTO merchant_buylists VALUES (58,201300,3,20);
-INSERT INTO merchant_buylists VALUES (415,104720,3,21);
-INSERT INTO merchant_buylists VALUES (416,104720,3,22);
-INSERT INTO merchant_buylists VALUES (377,91630,3,23);
-INSERT INTO merchant_buylists VALUES (351,223300,3,24);
-INSERT INTO merchant_buylists VALUES (378,139700,3,25);
-INSERT INTO merchant_buylists VALUES (379,139700,3,26);
-INSERT INTO merchant_buylists VALUES (59,139700,3,27);
-INSERT INTO merchant_buylists VALUES (394,167200,3,28);
-INSERT INTO merchant_buylists VALUES (2378,205700,3,29);
-INSERT INTO merchant_buylists VALUES (352,328900,3,30);
-INSERT INTO merchant_buylists VALUES (395,246400,3,31);
-INSERT INTO merchant_buylists VALUES (417,154000,3,32);
-INSERT INTO merchant_buylists VALUES (102,7821,3,33);
-INSERT INTO merchant_buylists VALUES (625,14190,3,34);
-INSERT INTO merchant_buylists VALUES (626,24090,3,35);
-INSERT INTO merchant_buylists VALUES (627,38500,3,36);
-INSERT INTO merchant_buylists VALUES (628,58630,3,37);
-INSERT INTO merchant_buylists VALUES (629,86240,3,38);
-INSERT INTO merchant_buylists VALUES (50,7447,3,39);
-INSERT INTO merchant_buylists VALUES (51,13530,3,40);
-INSERT INTO merchant_buylists VALUES (604,22990,3,41);
-INSERT INTO merchant_buylists VALUES (605,36630,3,42);
-INSERT INTO merchant_buylists VALUES (63,55880,3,43);
-INSERT INTO merchant_buylists VALUES (606,82170,3,44);
-INSERT INTO merchant_buylists VALUES (38,7447,3,45);
-INSERT INTO merchant_buylists VALUES (39,13530,3,46);
-INSERT INTO merchant_buylists VALUES (40,22990,3,47);
-INSERT INTO merchant_buylists VALUES (1123,36630,3,48);
-INSERT INTO merchant_buylists VALUES (553,55880,3,49);
-INSERT INTO merchant_buylists VALUES (1124,82170,3,50);
-INSERT INTO merchant_buylists VALUES (44,11220,3,51);
-INSERT INTO merchant_buylists VALUES (1148,20240,3,52);
-INSERT INTO merchant_buylists VALUES (45,34430,3,53);
-INSERT INTO merchant_buylists VALUES (46,55000,3,54);
-INSERT INTO merchant_buylists VALUES (47,83820,3,55);
-INSERT INTO merchant_buylists VALUES (1104,13970,4,1);
-INSERT INTO merchant_buylists VALUES (1101,22330,4,2);
-INSERT INTO merchant_buylists VALUES (1105,25300,4,3);
-INSERT INTO merchant_buylists VALUES (1102,40590,4,4);
-INSERT INTO merchant_buylists VALUES (465,43010,4,5);
-INSERT INTO merchant_buylists VALUES (432,68860,4,6);
-INSERT INTO merchant_buylists VALUES (467,68750,4,7);
-INSERT INTO merchant_buylists VALUES (434,109890,4,8);
-INSERT INTO merchant_buylists VALUES (468,68750,4,9);
-INSERT INTO merchant_buylists VALUES (435,109890,4,10);
-INSERT INTO merchant_buylists VALUES (469,104720,4,11);
-INSERT INTO merchant_buylists VALUES (436,167200,4,12);
-INSERT INTO merchant_buylists VALUES (470,154000,4,13);
-INSERT INTO merchant_buylists VALUES (437,246400,4,14);
-INSERT INTO merchant_buylists VALUES (102,7821,4,15);
-INSERT INTO merchant_buylists VALUES (625,14190,4,16);
-INSERT INTO merchant_buylists VALUES (626,24090,4,17);
-INSERT INTO merchant_buylists VALUES (627,38500,4,18);
-INSERT INTO merchant_buylists VALUES (628,58630,4,19);
-INSERT INTO merchant_buylists VALUES (629,86240,4,20);
-INSERT INTO merchant_buylists VALUES (50,7447,4,21);
-INSERT INTO merchant_buylists VALUES (51,13530,4,22);
-INSERT INTO merchant_buylists VALUES (604,22990,4,23);
-INSERT INTO merchant_buylists VALUES (605,36630,4,24);
-INSERT INTO merchant_buylists VALUES (63,55880,4,25);
-INSERT INTO merchant_buylists VALUES (606,82170,4,26);
-INSERT INTO merchant_buylists VALUES (38,7447,4,27);
-INSERT INTO merchant_buylists VALUES (39,13530,4,28);
-INSERT INTO merchant_buylists VALUES (40,22990,4,29);
-INSERT INTO merchant_buylists VALUES (1123,36630,4,30);
-INSERT INTO merchant_buylists VALUES (553,55880,4,31);
-INSERT INTO merchant_buylists VALUES (1124,82170,4,32);
-INSERT INTO merchant_buylists VALUES (44,11220,4,33);
-INSERT INTO merchant_buylists VALUES (1148,20240,4,34);
-INSERT INTO merchant_buylists VALUES (45,34430,4,35);
-INSERT INTO merchant_buylists VALUES (46,55000,4,36);
-INSERT INTO merchant_buylists VALUES (47,83820,4,37);
-INSERT INTO merchant_buylists VALUES (412,13970,5,1);
-INSERT INTO merchant_buylists VALUES (390,22330,5,2);
-INSERT INTO merchant_buylists VALUES (24,22330,5,3);
-INSERT INTO merchant_buylists VALUES (31,13970,5,4);
-INSERT INTO merchant_buylists VALUES (25,34980,5,5);
-INSERT INTO merchant_buylists VALUES (26,54120,5,6);
-INSERT INTO merchant_buylists VALUES (33,25300,5,7);
-INSERT INTO merchant_buylists VALUES (32,21890,5,8);
-INSERT INTO merchant_buylists VALUES (27,40590,5,9);
-INSERT INTO merchant_buylists VALUES (34,33770,5,10);
-INSERT INTO merchant_buylists VALUES (413,43010,5,11);
-INSERT INTO merchant_buylists VALUES (347,91850,5,12);
-INSERT INTO merchant_buylists VALUES (391,68860,5,13);
-INSERT INTO merchant_buylists VALUES (376,57420,5,14);
-INSERT INTO merchant_buylists VALUES (414,68750,5,15);
-INSERT INTO merchant_buylists VALUES (392,109890,5,16);
-INSERT INTO merchant_buylists VALUES (348,146300,5,17);
-INSERT INTO merchant_buylists VALUES (349,201300,5,18);
-INSERT INTO merchant_buylists VALUES (350,201300,5,19);
-INSERT INTO merchant_buylists VALUES (58,201300,5,20);
-INSERT INTO merchant_buylists VALUES (415,104720,5,21);
-INSERT INTO merchant_buylists VALUES (416,104720,5,22);
-INSERT INTO merchant_buylists VALUES (377,91630,5,23);
-INSERT INTO merchant_buylists VALUES (351,223300,5,24);
-INSERT INTO merchant_buylists VALUES (378,139700,5,25);
-INSERT INTO merchant_buylists VALUES (379,139700,5,26);
-INSERT INTO merchant_buylists VALUES (59,139700,5,27);
-INSERT INTO merchant_buylists VALUES (394,167200,5,28);
-INSERT INTO merchant_buylists VALUES (2378,205700,5,29);
-INSERT INTO merchant_buylists VALUES (352,328900,5,30);
-INSERT INTO merchant_buylists VALUES (395,246400,5,31);
-INSERT INTO merchant_buylists VALUES (417,154000,5,32);
-INSERT INTO merchant_buylists VALUES (102,7821,5,33);
-INSERT INTO merchant_buylists VALUES (625,14190,5,34);
-INSERT INTO merchant_buylists VALUES (626,24090,5,35);
-INSERT INTO merchant_buylists VALUES (627,38500,5,36);
-INSERT INTO merchant_buylists VALUES (628,58630,5,37);
-INSERT INTO merchant_buylists VALUES (629,86240,5,38);
-INSERT INTO merchant_buylists VALUES (50,7447,5,39);
-INSERT INTO merchant_buylists VALUES (51,13530,5,40);
-INSERT INTO merchant_buylists VALUES (604,22990,5,41);
-INSERT INTO merchant_buylists VALUES (605,36630,5,42);
-INSERT INTO merchant_buylists VALUES (63,55880,5,43);
-INSERT INTO merchant_buylists VALUES (606,82170,5,44);
-INSERT INTO merchant_buylists VALUES (38,7447,5,45);
-INSERT INTO merchant_buylists VALUES (39,13530,5,46);
-INSERT INTO merchant_buylists VALUES (40,22990,5,47);
-INSERT INTO merchant_buylists VALUES (1123,36630,5,48);
-INSERT INTO merchant_buylists VALUES (553,55880,5,49);
-INSERT INTO merchant_buylists VALUES (1124,82170,5,50);
-INSERT INTO merchant_buylists VALUES (44,11220,5,51);
-INSERT INTO merchant_buylists VALUES (1148,20240,5,52);
-INSERT INTO merchant_buylists VALUES (45,34430,5,53);
-INSERT INTO merchant_buylists VALUES (46,55000,5,54);
-INSERT INTO merchant_buylists VALUES (47,83820,5,55);
-INSERT INTO merchant_buylists VALUES (1104,13970,6,1);
-INSERT INTO merchant_buylists VALUES (1101,22330,6,2);
-INSERT INTO merchant_buylists VALUES (1105,25300,6,3);
-INSERT INTO merchant_buylists VALUES (1102,40590,6,4);
-INSERT INTO merchant_buylists VALUES (465,43010,6,5);
-INSERT INTO merchant_buylists VALUES (432,68860,6,6);
-INSERT INTO merchant_buylists VALUES (467,68750,6,7);
-INSERT INTO merchant_buylists VALUES (434,109890,6,8);
-INSERT INTO merchant_buylists VALUES (468,68750,6,9);
-INSERT INTO merchant_buylists VALUES (435,109890,6,10);
-INSERT INTO merchant_buylists VALUES (469,104720,6,11);
-INSERT INTO merchant_buylists VALUES (436,167200,6,12);
-INSERT INTO merchant_buylists VALUES (470,154000,6,13);
-INSERT INTO merchant_buylists VALUES (437,246400,6,14);
-INSERT INTO merchant_buylists VALUES (102,7821,6,15);
-INSERT INTO merchant_buylists VALUES (625,14190,6,16);
-INSERT INTO merchant_buylists VALUES (626,24090,6,17);
-INSERT INTO merchant_buylists VALUES (627,38500,6,18);
-INSERT INTO merchant_buylists VALUES (628,58630,6,19);
-INSERT INTO merchant_buylists VALUES (629,86240,6,20);
-INSERT INTO merchant_buylists VALUES (50,7447,6,21);
-INSERT INTO merchant_buylists VALUES (51,13530,6,22);
-INSERT INTO merchant_buylists VALUES (604,22990,6,23);
-INSERT INTO merchant_buylists VALUES (605,36630,6,24);
-INSERT INTO merchant_buylists VALUES (63,55880,6,25);
-INSERT INTO merchant_buylists VALUES (606,82170,6,26);
-INSERT INTO merchant_buylists VALUES (38,7447,6,27);
-INSERT INTO merchant_buylists VALUES (39,13530,6,28);
-INSERT INTO merchant_buylists VALUES (40,22990,6,29);
-INSERT INTO merchant_buylists VALUES (1123,36630,6,30);
-INSERT INTO merchant_buylists VALUES (553,55880,6,31);
-INSERT INTO merchant_buylists VALUES (1124,82170,6,32);
-INSERT INTO merchant_buylists VALUES (44,11220,6,33);
-INSERT INTO merchant_buylists VALUES (1148,20240,6,34);
-INSERT INTO merchant_buylists VALUES (45,34430,6,35);
-INSERT INTO merchant_buylists VALUES (46,55000,6,36);
-INSERT INTO merchant_buylists VALUES (47,83820,6,37);
-INSERT INTO merchant_buylists VALUES (908,13090,7,1);
-INSERT INTO merchant_buylists VALUES (909,23430,7,2);
-INSERT INTO merchant_buylists VALUES (910,39490,7,3);
-INSERT INTO merchant_buylists VALUES (911,62480,7,4);
-INSERT INTO merchant_buylists VALUES (912,94270,7,5);
-INSERT INTO merchant_buylists VALUES (913,137500,7,6);
-INSERT INTO merchant_buylists VALUES (845,9779,7,7);
-INSERT INTO merchant_buylists VALUES (846,17600,7,8);
-INSERT INTO merchant_buylists VALUES (847,29590,7,9);
-INSERT INTO merchant_buylists VALUES (848,46860,7,10);
-INSERT INTO merchant_buylists VALUES (849,70730,7,11);
-INSERT INTO merchant_buylists VALUES (850,102740,7,12);
-INSERT INTO merchant_buylists VALUES (877,6512,7,13);
-INSERT INTO merchant_buylists VALUES (878,11770,7,14);
-INSERT INTO merchant_buylists VALUES (890,19800,7,15);
-INSERT INTO merchant_buylists VALUES (879,31240,7,16);
-INSERT INTO merchant_buylists VALUES (880,47080,7,17);
-INSERT INTO merchant_buylists VALUES (881,68530,7,18);
-INSERT INTO merchant_buylists VALUES (908,13090,8,1);
-INSERT INTO merchant_buylists VALUES (909,23430,8,2);
-INSERT INTO merchant_buylists VALUES (910,39490,8,3);
-INSERT INTO merchant_buylists VALUES (911,62480,8,4);
-INSERT INTO merchant_buylists VALUES (912,94270,8,5);
-INSERT INTO merchant_buylists VALUES (913,137500,8,6);
-INSERT INTO merchant_buylists VALUES (845,9779,8,7);
-INSERT INTO merchant_buylists VALUES (846,17600,8,8);
-INSERT INTO merchant_buylists VALUES (847,29590,8,9);
-INSERT INTO merchant_buylists VALUES (848,46860,8,10);
-INSERT INTO merchant_buylists VALUES (849,70730,8,11);
-INSERT INTO merchant_buylists VALUES (850,102740,8,12);
-INSERT INTO merchant_buylists VALUES (877,6512,8,13);
-INSERT INTO merchant_buylists VALUES (878,11770,8,14);
-INSERT INTO merchant_buylists VALUES (890,19800,8,15);
-INSERT INTO merchant_buylists VALUES (879,31240,8,16);
-INSERT INTO merchant_buylists VALUES (880,47080,8,17);
-INSERT INTO merchant_buylists VALUES (881,68530,8,18);
-INSERT INTO merchant_buylists VALUES (1370,825,9,1);
-INSERT INTO merchant_buylists VALUES (1401,825,9,2);
-INSERT INTO merchant_buylists VALUES (1411,825,9,3);
-INSERT INTO merchant_buylists VALUES (1372,825,9,4);
-INSERT INTO merchant_buylists VALUES (1513,880,9,5);
-INSERT INTO merchant_buylists VALUES (1399,825,9,6);
-INSERT INTO merchant_buylists VALUES (1386,825,9,7);
-INSERT INTO merchant_buylists VALUES (1856,1760,9,8);
-INSERT INTO merchant_buylists VALUES (1377,825,9,9);
-INSERT INTO merchant_buylists VALUES (1383,825,9,10);
-INSERT INTO merchant_buylists VALUES (1514,880,9,11);
-INSERT INTO merchant_buylists VALUES (1405,825,9,12);
-INSERT INTO merchant_buylists VALUES (1403,825,9,13);
-INSERT INTO merchant_buylists VALUES (1371,825,9,14);
-INSERT INTO merchant_buylists VALUES (1515,880,9,15);
-INSERT INTO merchant_buylists VALUES (1667,880,9,16);
-INSERT INTO merchant_buylists VALUES (1669,880,9,17);
-INSERT INTO merchant_buylists VALUES (1671,880,9,18);
-INSERT INTO merchant_buylists VALUES (1512,1265,9,19);
-INSERT INTO merchant_buylists VALUES (1379,1265,9,20);
-INSERT INTO merchant_buylists VALUES (1402,1375,9,21);
-INSERT INTO merchant_buylists VALUES (1517,1375,9,22);
-INSERT INTO merchant_buylists VALUES (1415,1375,9,23);
-INSERT INTO merchant_buylists VALUES (1391,1375,9,24);
-INSERT INTO merchant_buylists VALUES (1398,1375,9,25);
-INSERT INTO merchant_buylists VALUES (1389,1375,9,26);
-INSERT INTO merchant_buylists VALUES (1388,1375,9,27);
-INSERT INTO merchant_buylists VALUES (1410,1375,9,28);
-INSERT INTO merchant_buylists VALUES (1404,1375,9,29);
-INSERT INTO merchant_buylists VALUES (1417,1375,9,30);
-INSERT INTO merchant_buylists VALUES (1400,1375,9,31);
-INSERT INTO merchant_buylists VALUES (1418,1375,9,32);
-INSERT INTO merchant_buylists VALUES (1668,1375,9,33);
-INSERT INTO merchant_buylists VALUES (1670,1375,9,34);
-INSERT INTO merchant_buylists VALUES (3038,1705,9,35);
-INSERT INTO merchant_buylists VALUES (1378,1760,9,36);
-INSERT INTO merchant_buylists VALUES (1516,1980,9,37);
-INSERT INTO merchant_buylists VALUES (1414,1980,9,38);
-INSERT INTO merchant_buylists VALUES (1385,1980,9,39);
-INSERT INTO merchant_buylists VALUES (1394,1980,9,40);
-INSERT INTO merchant_buylists VALUES (1412,2695,9,41);
-INSERT INTO merchant_buylists VALUES (3944,2695,9,42);
-INSERT INTO merchant_buylists VALUES (1392,2695,9,43);
-INSERT INTO merchant_buylists VALUES (1407,2695,9,44);
-INSERT INTO merchant_buylists VALUES (1416,2695,9,45);
-INSERT INTO merchant_buylists VALUES (1397,2695,9,46);
-INSERT INTO merchant_buylists VALUES (1406,2695,9,47);
-INSERT INTO merchant_buylists VALUES (1408,2695,9,48);
-INSERT INTO merchant_buylists VALUES (1390,2695,9,49);
-INSERT INTO merchant_buylists VALUES (1387,2695,9,50);
-INSERT INTO merchant_buylists VALUES (1409,2695,9,51);
-INSERT INTO merchant_buylists VALUES (1413,2695,9,52);
-INSERT INTO merchant_buylists VALUES (1381,2860,9,53);
-INSERT INTO merchant_buylists VALUES (1382,2860,9,54);
-INSERT INTO merchant_buylists VALUES (1384,2860,9,55);
-INSERT INTO merchant_buylists VALUES (1380,550,9,56);
-INSERT INTO merchant_buylists VALUES (1535,880,9,57);
-INSERT INTO merchant_buylists VALUES (1521,880,9,58);
-INSERT INTO merchant_buylists VALUES (1523,880,9,59);
-INSERT INTO merchant_buylists VALUES (1534,880,9,60);
-INSERT INTO merchant_buylists VALUES (1537,880,9,61);
-INSERT INTO merchant_buylists VALUES (1533,1375,9,62);
-INSERT INTO merchant_buylists VALUES (1536,1375,9,63);
-INSERT INTO merchant_buylists VALUES (1532,1375,9,64);
-INSERT INTO merchant_buylists VALUES (1528,1980,9,65);
-INSERT INTO merchant_buylists VALUES (1519,1980,9,66);
-INSERT INTO merchant_buylists VALUES (1518,1980,9,67);
-INSERT INTO merchant_buylists VALUES (1520,2695,9,68);
-INSERT INTO merchant_buylists VALUES (1530,2695,9,69);
-INSERT INTO merchant_buylists VALUES (4916,895,9,70);
-INSERT INTO merchant_buylists VALUES (4906,1375,9,71);
-INSERT INTO merchant_buylists VALUES (4908,1375,9,72);
-INSERT INTO merchant_buylists VALUES (4910,1985,9,73);
-INSERT INTO merchant_buylists VALUES (4457,13200,9,74);
-INSERT INTO merchant_buylists VALUES (4458,13200,9,75);
-INSERT INTO merchant_buylists VALUES (4459,13200,9,76);
-INSERT INTO merchant_buylists VALUES (4460,13200,9,77);
-INSERT INTO merchant_buylists VALUES (4461,13200,9,78);
-INSERT INTO merchant_buylists VALUES (4462,13200,9,79);
-INSERT INTO merchant_buylists VALUES (4463,13200,9,80);
-INSERT INTO merchant_buylists VALUES (4464,13200,9,81);
-INSERT INTO merchant_buylists VALUES (4465,13200,9,82);
-INSERT INTO merchant_buylists VALUES (4466,13200,9,83);
-INSERT INTO merchant_buylists VALUES (4467,13200,9,84);
-INSERT INTO merchant_buylists VALUES (4468,13200,9,85);
-INSERT INTO merchant_buylists VALUES (4481,13200,9,86);
-INSERT INTO merchant_buylists VALUES (4482,13200,9,87);
-INSERT INTO merchant_buylists VALUES (4483,13200,9,88);
-INSERT INTO merchant_buylists VALUES (4484,13200,9,89);
-INSERT INTO merchant_buylists VALUES (4485,13200,9,90);
-INSERT INTO merchant_buylists VALUES (4486,13200,9,91);
-INSERT INTO merchant_buylists VALUES (4487,13200,9,92);
-INSERT INTO merchant_buylists VALUES (4488,13200,9,93);
-INSERT INTO merchant_buylists VALUES (4489,13200,9,94);
-INSERT INTO merchant_buylists VALUES (4490,13200,9,95);
-INSERT INTO merchant_buylists VALUES (4491,13200,9,96);
-INSERT INTO merchant_buylists VALUES (4492,13200,9,97);
-INSERT INTO merchant_buylists VALUES (4493,23100,9,98);
-INSERT INTO merchant_buylists VALUES (4494,23100,9,99);
-INSERT INTO merchant_buylists VALUES (4495,23100,9,100);
-INSERT INTO merchant_buylists VALUES (4496,23100,9,101);
-INSERT INTO merchant_buylists VALUES (4497,23100,9,102);
-INSERT INTO merchant_buylists VALUES (4498,23100,9,103);
-INSERT INTO merchant_buylists VALUES (4499,23100,9,104);
-INSERT INTO merchant_buylists VALUES (4500,23100,9,105);
-INSERT INTO merchant_buylists VALUES (4501,23100,9,106);
-INSERT INTO merchant_buylists VALUES (4502,23100,9,107);
-INSERT INTO merchant_buylists VALUES (4503,23100,9,108);
-INSERT INTO merchant_buylists VALUES (4504,23100,9,109);
-INSERT INTO merchant_buylists VALUES (17,2,10,1);
-INSERT INTO merchant_buylists VALUES (1341,3,10,2);
-INSERT INTO merchant_buylists VALUES (177,268400,10,3);
-INSERT INTO merchant_buylists VALUES (311,268400,10,4);
-INSERT INTO merchant_buylists VALUES (100,268400,10,5);
-INSERT INTO merchant_buylists VALUES (178,449900,10,6);
-INSERT INTO merchant_buylists VALUES (101,449900,10,7);
-INSERT INTO merchant_buylists VALUES (312,449900,10,8);
-INSERT INTO merchant_buylists VALUES (314,449900,10,9);
-INSERT INTO merchant_buylists VALUES (182,708400,10,10);
-INSERT INTO merchant_buylists VALUES (183,708400,10,11);
-INSERT INTO merchant_buylists VALUES (185,708400,10,12);
-INSERT INTO merchant_buylists VALUES (315,708400,10,13);
-INSERT INTO merchant_buylists VALUES (83,787600,10,14);
-INSERT INTO merchant_buylists VALUES (143,787600,10,15);
-INSERT INTO merchant_buylists VALUES (144,787600,10,16);
-INSERT INTO merchant_buylists VALUES (238,1063700,10,17);
-INSERT INTO merchant_buylists VALUES (239,1063700,10,18);
-INSERT INTO merchant_buylists VALUES (240,1063700,10,19);
-INSERT INTO merchant_buylists VALUES (1105,25300,10,20);
-INSERT INTO merchant_buylists VALUES (1102,40590,10,21);
-INSERT INTO merchant_buylists VALUES (465,43010,10,22);
-INSERT INTO merchant_buylists VALUES (432,68860,10,23);
-INSERT INTO merchant_buylists VALUES (467,68750,10,24);
-INSERT INTO merchant_buylists VALUES (4457,13140,10,25);
-INSERT INTO merchant_buylists VALUES (4458,13140,10,26);
-INSERT INTO merchant_buylists VALUES (4459,13140,10,27);
-INSERT INTO merchant_buylists VALUES (4460,13140,10,28);
-INSERT INTO merchant_buylists VALUES (4461,13140,10,29);
-INSERT INTO merchant_buylists VALUES (4462,13140,10,30);
-INSERT INTO merchant_buylists VALUES (4463,13140,10,31);
-INSERT INTO merchant_buylists VALUES (4464,13140,10,32);
-INSERT INTO merchant_buylists VALUES (4465,13140,10,33);
-INSERT INTO merchant_buylists VALUES (4466,13140,10,34);
-INSERT INTO merchant_buylists VALUES (4467,13140,10,35);
-INSERT INTO merchant_buylists VALUES (4468,13140,10,36);
-INSERT INTO merchant_buylists VALUES (4481,13140,10,37);
-INSERT INTO merchant_buylists VALUES (4482,13140,10,38);
-INSERT INTO merchant_buylists VALUES (4483,13140,10,39);
-INSERT INTO merchant_buylists VALUES (4484,13140,10,40);
-INSERT INTO merchant_buylists VALUES (4485,13140,10,41);
-INSERT INTO merchant_buylists VALUES (4486,13140,10,42);
-INSERT INTO merchant_buylists VALUES (4487,13140,10,43);
-INSERT INTO merchant_buylists VALUES (4488,13140,10,44);
-INSERT INTO merchant_buylists VALUES (4489,13140,10,45);
-INSERT INTO merchant_buylists VALUES (4490,13140,10,46);
-INSERT INTO merchant_buylists VALUES (4491,13140,10,47);
-INSERT INTO merchant_buylists VALUES (4492,13140,10,48);
-INSERT INTO merchant_buylists VALUES (4493,23000,10,49);
-INSERT INTO merchant_buylists VALUES (4494,23000,10,50);
-INSERT INTO merchant_buylists VALUES (4495,23000,10,51);
-INSERT INTO merchant_buylists VALUES (4496,23000,10,52);
-INSERT INTO merchant_buylists VALUES (4497,23000,10,53);
-INSERT INTO merchant_buylists VALUES (4498,23000,10,54);
-INSERT INTO merchant_buylists VALUES (4499,23000,10,55);
-INSERT INTO merchant_buylists VALUES (4500,23000,10,56);
-INSERT INTO merchant_buylists VALUES (4501,23000,10,57);
-INSERT INTO merchant_buylists VALUES (4502,23000,10,58);
-INSERT INTO merchant_buylists VALUES (4503,23000,10,59);
-INSERT INTO merchant_buylists VALUES (4504,23000,10,60);
-INSERT INTO merchant_buylists VALUES (1,883,11,1);
-INSERT INTO merchant_buylists VALUES (4,883,11,2);
-INSERT INTO merchant_buylists VALUES (11,883,11,3);
-INSERT INTO merchant_buylists VALUES (13,883,11,4);
-INSERT INTO merchant_buylists VALUES (3,14375,11,5);
-INSERT INTO merchant_buylists VALUES (152,9280,11,6);
-INSERT INTO merchant_buylists VALUES (12,14375,11,7);
-INSERT INTO merchant_buylists VALUES (215,14375,11,8);
-INSERT INTO merchant_buylists VALUES (14,14375,11,9);
-INSERT INTO merchant_buylists VALUES (5,14375,11,10);
-INSERT INTO merchant_buylists VALUES (153,21275,11,11);
-INSERT INTO merchant_buylists VALUES (1333,62215,11,12);
-INSERT INTO merchant_buylists VALUES (66,62215,11,13);
-INSERT INTO merchant_buylists VALUES (67,62215,11,14);
-INSERT INTO merchant_buylists VALUES (122,62215,11,15);
-INSERT INTO merchant_buylists VALUES (154,62215,11,16);
-INSERT INTO merchant_buylists VALUES (216,62215,11,17);
-INSERT INTO merchant_buylists VALUES (271,62215,11,18);
-INSERT INTO merchant_buylists VALUES (2,156400,11,19);
-INSERT INTO merchant_buylists VALUES (218,156400,11,20);
-INSERT INTO merchant_buylists VALUES (272,156400,11,21);
-INSERT INTO merchant_buylists VALUES (15,156400,11,22);
-INSERT INTO merchant_buylists VALUES (28,106,11,23);
-INSERT INTO merchant_buylists VALUES (21,169,11,24);
-INSERT INTO merchant_buylists VALUES (29,1748,11,25);
-INSERT INTO merchant_buylists VALUES (22,2794,11,26);
-INSERT INTO merchant_buylists VALUES (30,5716,11,27);
-INSERT INTO merchant_buylists VALUES (2386,5716,11,28);
-INSERT INTO merchant_buylists VALUES (23,9154,11,29);
-INSERT INTO merchant_buylists VALUES (412,14605,11,30);
-INSERT INTO merchant_buylists VALUES (390,23345,11,31);
-INSERT INTO merchant_buylists VALUES (24,23345,11,32);
-INSERT INTO merchant_buylists VALUES (31,14605,11,33);
-INSERT INTO merchant_buylists VALUES (18,45,11,34);
-INSERT INTO merchant_buylists VALUES (19,734,11,35);
-INSERT INTO merchant_buylists VALUES (20,3197,11,36);
-INSERT INTO merchant_buylists VALUES (102,8176,11,37);
-INSERT INTO merchant_buylists VALUES (48,43,11,38);
-INSERT INTO merchant_buylists VALUES (1119,698,11,39);
-INSERT INTO merchant_buylists VALUES (49,3047,11,40);
-INSERT INTO merchant_buylists VALUES (50,7785,11,41);
-INSERT INTO merchant_buylists VALUES (1121,8,11,42);
-INSERT INTO merchant_buylists VALUES (35,43,11,43);
-INSERT INTO merchant_buylists VALUES (36,43,11,44);
-INSERT INTO merchant_buylists VALUES (1129,698,11,45);
-INSERT INTO merchant_buylists VALUES (1122,698,11,46);
-INSERT INTO merchant_buylists VALUES (37,3047,11,47);
-INSERT INTO merchant_buylists VALUES (38,7785,11,48);
-INSERT INTO merchant_buylists VALUES (41,63,11,49);
-INSERT INTO merchant_buylists VALUES (42,1048,11,50);
-INSERT INTO merchant_buylists VALUES (43,4577,11,51);
-INSERT INTO merchant_buylists VALUES (44,11730,11,52);
-INSERT INTO merchant_buylists VALUES (17,2,11,53);
-INSERT INTO merchant_buylists VALUES (1341,3,11,54);
-INSERT INTO merchant_buylists VALUES (7,883,12,1);
-INSERT INTO merchant_buylists VALUES (308,883,12,2);
-INSERT INTO merchant_buylists VALUES (8,14375,12,3);
-INSERT INTO merchant_buylists VALUES (99,14375,12,4);
-INSERT INTO merchant_buylists VALUES (9,62215,12,5);
-INSERT INTO merchant_buylists VALUES (176,156400,12,6);
-INSERT INTO merchant_buylists VALUES (310,156400,12,7);
-INSERT INTO merchant_buylists VALUES (462,106,12,8);
-INSERT INTO merchant_buylists VALUES (426,169,12,9);
-INSERT INTO merchant_buylists VALUES (1103,1748,12,10);
-INSERT INTO merchant_buylists VALUES (1100,2794,12,11);
-INSERT INTO merchant_buylists VALUES (463,1748,12,12);
-INSERT INTO merchant_buylists VALUES (428,2794,12,13);
-INSERT INTO merchant_buylists VALUES (464,5716,12,14);
-INSERT INTO merchant_buylists VALUES (429,9154,12,15);
-INSERT INTO merchant_buylists VALUES (1104,14605,12,16);
-INSERT INTO merchant_buylists VALUES (1101,23345,12,17);
-INSERT INTO merchant_buylists VALUES (18,45,12,18);
-INSERT INTO merchant_buylists VALUES (19,734,12,19);
-INSERT INTO merchant_buylists VALUES (20,3197,12,20);
-INSERT INTO merchant_buylists VALUES (102,8176,12,21);
-INSERT INTO merchant_buylists VALUES (48,43,12,22);
-INSERT INTO merchant_buylists VALUES (1119,698,12,23);
-INSERT INTO merchant_buylists VALUES (49,3047,12,24);
-INSERT INTO merchant_buylists VALUES (50,7785,12,25);
-INSERT INTO merchant_buylists VALUES (1121,8,12,26);
-INSERT INTO merchant_buylists VALUES (35,43,12,27);
-INSERT INTO merchant_buylists VALUES (36,43,12,28);
-INSERT INTO merchant_buylists VALUES (1129,698,12,29);
-INSERT INTO merchant_buylists VALUES (1122,698,12,30);
-INSERT INTO merchant_buylists VALUES (37,3047,12,31);
-INSERT INTO merchant_buylists VALUES (38,7785,12,32);
-INSERT INTO merchant_buylists VALUES (41,63,12,33);
-INSERT INTO merchant_buylists VALUES (42,1048,12,34);
-INSERT INTO merchant_buylists VALUES (43,4577,12,35);
-INSERT INTO merchant_buylists VALUES (44,11730,12,36);
-INSERT INTO merchant_buylists VALUES (17,2,12,37);
-INSERT INTO merchant_buylists VALUES (1341,3,12,38);
-INSERT INTO merchant_buylists VALUES (118,76,13,1);
-INSERT INTO merchant_buylists VALUES (906,1242,13,2);
-INSERT INTO merchant_buylists VALUES (907,5382,13,3);
-INSERT INTO merchant_buylists VALUES (908,13685,13,4);
-INSERT INTO merchant_buylists VALUES (112,56,13,5);
-INSERT INTO merchant_buylists VALUES (113,933,13,6);
-INSERT INTO merchant_buylists VALUES (114,4036,13,7);
-INSERT INTO merchant_buylists VALUES (115,4036,13,8);
-INSERT INTO merchant_buylists VALUES (845,10224,13,9);
-INSERT INTO merchant_buylists VALUES (116,38,13,10);
-INSERT INTO merchant_buylists VALUES (875,621,13,11);
-INSERT INTO merchant_buylists VALUES (876,2691,13,12);
-INSERT INTO merchant_buylists VALUES (877,6808,13,13);
-INSERT INTO merchant_buylists VALUES (17,2,13,14);
-INSERT INTO merchant_buylists VALUES (1341,3,13,15);
-INSERT INTO merchant_buylists VALUES (1665,575,13,16);
-INSERT INTO merchant_buylists VALUES (1661,1150,13,17);
-INSERT INTO merchant_buylists VALUES (3031,460,13,18);
-INSERT INTO merchant_buylists VALUES (1785,288,13,19);
-INSERT INTO merchant_buylists VALUES (3947,40,13,20);
-INSERT INTO merchant_buylists VALUES (2509,17,13,21);
-INSERT INTO merchant_buylists VALUES (1835,8,13,22);
-INSERT INTO merchant_buylists VALUES (736,460,13,23);
-INSERT INTO merchant_buylists VALUES (1060,103,13,24);
-INSERT INTO merchant_buylists VALUES (1831,86,13,25);
-INSERT INTO merchant_buylists VALUES (1833,86,13,26);
-INSERT INTO merchant_buylists VALUES (734,1380,13,27);
-INSERT INTO merchant_buylists VALUES (735,2760,13,28);
-INSERT INTO merchant_buylists VALUES (1294,86,14,1);
-INSERT INTO merchant_buylists VALUES (1095,86,14,2);
-INSERT INTO merchant_buylists VALUES (1050,115,14,3);
-INSERT INTO merchant_buylists VALUES (1152,115,14,4);
-INSERT INTO merchant_buylists VALUES (1049,115,14,5);
-INSERT INTO merchant_buylists VALUES (1048,115,14,6);
-INSERT INTO merchant_buylists VALUES (1051,115,14,7);
-INSERT INTO merchant_buylists VALUES (1099,575,14,8);
-INSERT INTO merchant_buylists VALUES (1053,575,14,9);
-INSERT INTO merchant_buylists VALUES (1055,575,14,10);
-INSERT INTO merchant_buylists VALUES (1056,575,14,11);
-INSERT INTO merchant_buylists VALUES (1052,575,14,12);
-INSERT INTO merchant_buylists VALUES (1054,575,14,13);
-INSERT INTO merchant_buylists VALUES (1058,575,14,14);
-INSERT INTO merchant_buylists VALUES (1098,575,14,15);
-INSERT INTO merchant_buylists VALUES (1097,632,14,16);
-INSERT INTO merchant_buylists VALUES (1096,632,14,17);
-INSERT INTO merchant_buylists VALUES (1370,862,14,18);
-INSERT INTO merchant_buylists VALUES (1401,862,14,19);
-INSERT INTO merchant_buylists VALUES (1411,862,14,20);
-INSERT INTO merchant_buylists VALUES (1372,862,14,21);
-INSERT INTO merchant_buylists VALUES (1513,920,14,22);
-INSERT INTO merchant_buylists VALUES (1399,862,14,23);
-INSERT INTO merchant_buylists VALUES (1386,862,14,24);
-INSERT INTO merchant_buylists VALUES (1377,862,14,25);
-INSERT INTO merchant_buylists VALUES (1383,862,14,26);
-INSERT INTO merchant_buylists VALUES (1514,920,14,27);
-INSERT INTO merchant_buylists VALUES (1405,862,14,28);
-INSERT INTO merchant_buylists VALUES (1403,862,14,29);
-INSERT INTO merchant_buylists VALUES (1371,862,14,30);
-INSERT INTO merchant_buylists VALUES (1515,920,14,31);
-INSERT INTO merchant_buylists VALUES (1333,64920,15,1);
-INSERT INTO merchant_buylists VALUES (66,64920,15,2);
-INSERT INTO merchant_buylists VALUES (67,64920,15,3);
-INSERT INTO merchant_buylists VALUES (122,64920,15,4);
-INSERT INTO merchant_buylists VALUES (154,64920,15,5);
-INSERT INTO merchant_buylists VALUES (216,64920,15,6);
-INSERT INTO merchant_buylists VALUES (271,64920,15,7);
-INSERT INTO merchant_buylists VALUES (2,163200,15,8);
-INSERT INTO merchant_buylists VALUES (218,163200,15,9);
-INSERT INTO merchant_buylists VALUES (272,163200,15,10);
-INSERT INTO merchant_buylists VALUES (15,163200,15,11);
-INSERT INTO merchant_buylists VALUES (68,292800,15,12);
-INSERT INTO merchant_buylists VALUES (219,292800,15,13);
-INSERT INTO merchant_buylists VALUES (273,292800,15,14);
-INSERT INTO merchant_buylists VALUES (155,292800,15,15);
-INSERT INTO merchant_buylists VALUES (87,292800,15,16);
-INSERT INTO merchant_buylists VALUES (16,292800,15,17);
-INSERT INTO merchant_buylists VALUES (123,490800,15,18);
-INSERT INTO merchant_buylists VALUES (220,490800,15,19);
-INSERT INTO merchant_buylists VALUES (221,490800,15,20);
-INSERT INTO merchant_buylists VALUES (274,490800,15,21);
-INSERT INTO merchant_buylists VALUES (156,490800,15,22);
-INSERT INTO merchant_buylists VALUES (166,490800,15,23);
-INSERT INTO merchant_buylists VALUES (168,490800,15,24);
-INSERT INTO merchant_buylists VALUES (291,490800,15,25);
-INSERT INTO merchant_buylists VALUES (256,163200,15,26);
-INSERT INTO merchant_buylists VALUES (257,292800,15,27);
-INSERT INTO merchant_buylists VALUES (258,490800,15,28);
-INSERT INTO merchant_buylists VALUES (30,5964,15,29);
-INSERT INTO merchant_buylists VALUES (23,9552,15,30);
-INSERT INTO merchant_buylists VALUES (412,15240,15,31);
-INSERT INTO merchant_buylists VALUES (390,24360,15,32);
-INSERT INTO merchant_buylists VALUES (24,24360,15,33);
-INSERT INTO merchant_buylists VALUES (31,15240,15,34);
-INSERT INTO merchant_buylists VALUES (25,38160,15,35);
-INSERT INTO merchant_buylists VALUES (26,59040,15,36);
-INSERT INTO merchant_buylists VALUES (33,27600,15,37);
-INSERT INTO merchant_buylists VALUES (32,23880,15,38);
-INSERT INTO merchant_buylists VALUES (27,44280,15,39);
-INSERT INTO merchant_buylists VALUES (34,36840,15,40);
-INSERT INTO merchant_buylists VALUES (413,46920,15,41);
-INSERT INTO merchant_buylists VALUES (347,100200,15,42);
-INSERT INTO merchant_buylists VALUES (20,3336,15,43);
-INSERT INTO merchant_buylists VALUES (102,8532,15,44);
-INSERT INTO merchant_buylists VALUES (625,15480,15,45);
-INSERT INTO merchant_buylists VALUES (626,26280,15,46);
-INSERT INTO merchant_buylists VALUES (49,3180,15,47);
-INSERT INTO merchant_buylists VALUES (50,8124,15,48);
-INSERT INTO merchant_buylists VALUES (51,14760,15,49);
-INSERT INTO merchant_buylists VALUES (604,25080,15,50);
-INSERT INTO merchant_buylists VALUES (37,3180,15,51);
-INSERT INTO merchant_buylists VALUES (38,8124,15,52);
-INSERT INTO merchant_buylists VALUES (39,14760,15,53);
-INSERT INTO merchant_buylists VALUES (40,25080,15,54);
-INSERT INTO merchant_buylists VALUES (43,4776,15,55);
-INSERT INTO merchant_buylists VALUES (44,12240,15,56);
-INSERT INTO merchant_buylists VALUES (1148,22080,15,57);
-INSERT INTO merchant_buylists VALUES (45,37560,15,58);
-INSERT INTO merchant_buylists VALUES (17,2,15,59);
-INSERT INTO merchant_buylists VALUES (1341,4,15,60);
-INSERT INTO merchant_buylists VALUES (9,64920,16,1);
-INSERT INTO merchant_buylists VALUES (176,163200,16,2);
-INSERT INTO merchant_buylists VALUES (310,163200,16,3);
-INSERT INTO merchant_buylists VALUES (177,292800,16,4);
-INSERT INTO merchant_buylists VALUES (311,292800,16,5);
-INSERT INTO merchant_buylists VALUES (100,292800,16,6);
-INSERT INTO merchant_buylists VALUES (178,490800,16,7);
-INSERT INTO merchant_buylists VALUES (101,490800,16,8);
-INSERT INTO merchant_buylists VALUES (312,490800,16,9);
-INSERT INTO merchant_buylists VALUES (314,490800,16,10);
-INSERT INTO merchant_buylists VALUES (179,772800,16,11);
-INSERT INTO merchant_buylists VALUES (182,772800,16,12);
-INSERT INTO merchant_buylists VALUES (464,5964,16,13);
-INSERT INTO merchant_buylists VALUES (429,9552,16,14);
-INSERT INTO merchant_buylists VALUES (1104,15240,16,15);
-INSERT INTO merchant_buylists VALUES (1101,24360,16,16);
-INSERT INTO merchant_buylists VALUES (1105,27600,16,17);
-INSERT INTO merchant_buylists VALUES (1102,44280,16,18);
-INSERT INTO merchant_buylists VALUES (465,46920,16,19);
-INSERT INTO merchant_buylists VALUES (432,75120,16,20);
-INSERT INTO merchant_buylists VALUES (20,3336,16,21);
-INSERT INTO merchant_buylists VALUES (102,8532,16,22);
-INSERT INTO merchant_buylists VALUES (625,15480,16,23);
-INSERT INTO merchant_buylists VALUES (626,26280,16,24);
-INSERT INTO merchant_buylists VALUES (49,3180,16,25);
-INSERT INTO merchant_buylists VALUES (50,8124,16,26);
-INSERT INTO merchant_buylists VALUES (51,14760,16,27);
-INSERT INTO merchant_buylists VALUES (604,25080,16,28);
-INSERT INTO merchant_buylists VALUES (37,3180,16,29);
-INSERT INTO merchant_buylists VALUES (38,8124,16,30);
-INSERT INTO merchant_buylists VALUES (39,14760,16,31);
-INSERT INTO merchant_buylists VALUES (40,25080,16,32);
-INSERT INTO merchant_buylists VALUES (43,4776,16,33);
-INSERT INTO merchant_buylists VALUES (44,12240,16,34);
-INSERT INTO merchant_buylists VALUES (1148,22080,16,35);
-INSERT INTO merchant_buylists VALUES (45,37560,16,36);
-INSERT INTO merchant_buylists VALUES (17,2,16,37);
-INSERT INTO merchant_buylists VALUES (1341,4,16,38);
-INSERT INTO merchant_buylists VALUES (1333,64920,17,1);
-INSERT INTO merchant_buylists VALUES (66,64920,17,2);
-INSERT INTO merchant_buylists VALUES (67,64920,17,3);
-INSERT INTO merchant_buylists VALUES (122,64920,17,4);
-INSERT INTO merchant_buylists VALUES (154,64920,17,5);
-INSERT INTO merchant_buylists VALUES (216,64920,17,6);
-INSERT INTO merchant_buylists VALUES (271,64920,17,7);
-INSERT INTO merchant_buylists VALUES (2,163200,17,8);
-INSERT INTO merchant_buylists VALUES (218,163200,17,9);
-INSERT INTO merchant_buylists VALUES (272,163200,17,10);
-INSERT INTO merchant_buylists VALUES (15,163200,17,11);
-INSERT INTO merchant_buylists VALUES (68,292800,17,12);
-INSERT INTO merchant_buylists VALUES (219,292800,17,13);
-INSERT INTO merchant_buylists VALUES (273,292800,17,14);
-INSERT INTO merchant_buylists VALUES (155,292800,17,15);
-INSERT INTO merchant_buylists VALUES (87,292800,17,16);
-INSERT INTO merchant_buylists VALUES (16,292800,17,17);
-INSERT INTO merchant_buylists VALUES (123,490800,17,18);
-INSERT INTO merchant_buylists VALUES (220,490800,17,19);
-INSERT INTO merchant_buylists VALUES (221,490800,17,20);
-INSERT INTO merchant_buylists VALUES (274,490800,17,21);
-INSERT INTO merchant_buylists VALUES (156,490800,17,22);
-INSERT INTO merchant_buylists VALUES (166,490800,17,23);
-INSERT INTO merchant_buylists VALUES (168,490800,17,24);
-INSERT INTO merchant_buylists VALUES (291,490800,17,25);
-INSERT INTO merchant_buylists VALUES (256,163200,17,26);
-INSERT INTO merchant_buylists VALUES (257,292800,17,27);
-INSERT INTO merchant_buylists VALUES (258,490800,17,28);
-INSERT INTO merchant_buylists VALUES (30,5964,17,29);
-INSERT INTO merchant_buylists VALUES (23,9552,17,30);
-INSERT INTO merchant_buylists VALUES (412,15240,17,31);
-INSERT INTO merchant_buylists VALUES (390,24360,17,32);
-INSERT INTO merchant_buylists VALUES (24,24360,17,33);
-INSERT INTO merchant_buylists VALUES (31,15240,17,34);
-INSERT INTO merchant_buylists VALUES (25,38160,17,35);
-INSERT INTO merchant_buylists VALUES (26,59040,17,36);
-INSERT INTO merchant_buylists VALUES (33,27600,17,37);
-INSERT INTO merchant_buylists VALUES (32,23880,17,38);
-INSERT INTO merchant_buylists VALUES (27,44280,17,39);
-INSERT INTO merchant_buylists VALUES (34,36840,17,40);
-INSERT INTO merchant_buylists VALUES (413,46920,17,41);
-INSERT INTO merchant_buylists VALUES (347,100200,17,42);
-INSERT INTO merchant_buylists VALUES (20,3336,17,43);
-INSERT INTO merchant_buylists VALUES (102,8532,17,44);
-INSERT INTO merchant_buylists VALUES (625,15480,17,45);
-INSERT INTO merchant_buylists VALUES (626,26280,17,46);
-INSERT INTO merchant_buylists VALUES (49,3180,17,47);
-INSERT INTO merchant_buylists VALUES (50,8124,17,48);
-INSERT INTO merchant_buylists VALUES (51,14760,17,49);
-INSERT INTO merchant_buylists VALUES (604,25080,17,50);
-INSERT INTO merchant_buylists VALUES (37,3180,17,51);
-INSERT INTO merchant_buylists VALUES (38,8124,17,52);
-INSERT INTO merchant_buylists VALUES (39,14760,17,53);
-INSERT INTO merchant_buylists VALUES (40,25080,17,54);
-INSERT INTO merchant_buylists VALUES (43,4776,17,55);
-INSERT INTO merchant_buylists VALUES (44,12240,17,56);
-INSERT INTO merchant_buylists VALUES (1148,22080,17,57);
-INSERT INTO merchant_buylists VALUES (45,37560,17,58);
-INSERT INTO merchant_buylists VALUES (17,2,17,59);
-INSERT INTO merchant_buylists VALUES (1341,4,17,60);
-INSERT INTO merchant_buylists VALUES (9,64920,18,1);
-INSERT INTO merchant_buylists VALUES (176,163200,18,2);
-INSERT INTO merchant_buylists VALUES (310,163200,18,3);
-INSERT INTO merchant_buylists VALUES (177,292800,18,4);
-INSERT INTO merchant_buylists VALUES (311,292800,18,5);
-INSERT INTO merchant_buylists VALUES (100,292800,18,6);
-INSERT INTO merchant_buylists VALUES (178,490800,18,7);
-INSERT INTO merchant_buylists VALUES (101,490800,18,8);
-INSERT INTO merchant_buylists VALUES (312,490800,18,9);
-INSERT INTO merchant_buylists VALUES (314,490800,18,10);
-INSERT INTO merchant_buylists VALUES (179,772800,18,11);
-INSERT INTO merchant_buylists VALUES (182,772800,18,12);
-INSERT INTO merchant_buylists VALUES (464,5964,18,13);
-INSERT INTO merchant_buylists VALUES (429,9552,18,14);
-INSERT INTO merchant_buylists VALUES (1104,15240,18,15);
-INSERT INTO merchant_buylists VALUES (1101,24360,18,16);
-INSERT INTO merchant_buylists VALUES (1105,27600,18,17);
-INSERT INTO merchant_buylists VALUES (1102,44280,18,18);
-INSERT INTO merchant_buylists VALUES (465,46920,18,19);
-INSERT INTO merchant_buylists VALUES (432,75120,18,20);
-INSERT INTO merchant_buylists VALUES (20,3336,18,21);
-INSERT INTO merchant_buylists VALUES (102,8532,18,22);
-INSERT INTO merchant_buylists VALUES (625,15480,18,23);
-INSERT INTO merchant_buylists VALUES (626,26280,18,24);
-INSERT INTO merchant_buylists VALUES (49,3180,18,25);
-INSERT INTO merchant_buylists VALUES (50,8124,18,26);
-INSERT INTO merchant_buylists VALUES (51,14760,18,27);
-INSERT INTO merchant_buylists VALUES (604,25080,18,28);
-INSERT INTO merchant_buylists VALUES (37,3180,18,29);
-INSERT INTO merchant_buylists VALUES (38,8124,18,30);
-INSERT INTO merchant_buylists VALUES (39,14760,18,31);
-INSERT INTO merchant_buylists VALUES (40,25080,18,32);
-INSERT INTO merchant_buylists VALUES (43,4776,18,33);
-INSERT INTO merchant_buylists VALUES (44,12240,18,34);
-INSERT INTO merchant_buylists VALUES (1148,22080,18,35);
-INSERT INTO merchant_buylists VALUES (45,37560,18,36);
-INSERT INTO merchant_buylists VALUES (17,2,18,37);
-INSERT INTO merchant_buylists VALUES (1341,4,18,38);
-INSERT INTO merchant_buylists VALUES (907,5616,19,1);
-INSERT INTO merchant_buylists VALUES (908,14280,19,2);
-INSERT INTO merchant_buylists VALUES (114,4212,19,3);
-INSERT INTO merchant_buylists VALUES (115,4212,19,4);
-INSERT INTO merchant_buylists VALUES (845,10668,19,5);
-INSERT INTO merchant_buylists VALUES (876,2808,19,6);
-INSERT INTO merchant_buylists VALUES (877,7104,19,7);
-INSERT INTO merchant_buylists VALUES (1099,600,19,8);
-INSERT INTO merchant_buylists VALUES (1053,600,19,9);
-INSERT INTO merchant_buylists VALUES (1055,600,19,10);
-INSERT INTO merchant_buylists VALUES (1056,600,19,11);
-INSERT INTO merchant_buylists VALUES (1052,600,19,12);
-INSERT INTO merchant_buylists VALUES (1054,600,19,13);
-INSERT INTO merchant_buylists VALUES (1058,600,19,14);
-INSERT INTO merchant_buylists VALUES (1098,600,19,15);
-INSERT INTO merchant_buylists VALUES (1097,660,19,16);
-INSERT INTO merchant_buylists VALUES (1096,660,19,17);
-INSERT INTO merchant_buylists VALUES (1370,900,19,18);
-INSERT INTO merchant_buylists VALUES (1401,900,19,19);
-INSERT INTO merchant_buylists VALUES (1411,900,19,20);
-INSERT INTO merchant_buylists VALUES (1372,900,19,21);
-INSERT INTO merchant_buylists VALUES (1513,960,19,22);
-INSERT INTO merchant_buylists VALUES (1399,900,19,23);
-INSERT INTO merchant_buylists VALUES (1386,900,19,24);
-INSERT INTO merchant_buylists VALUES (1856,1920,19,25);
-INSERT INTO merchant_buylists VALUES (1377,900,19,26);
-INSERT INTO merchant_buylists VALUES (1383,900,19,27);
-INSERT INTO merchant_buylists VALUES (1514,960,19,28);
-INSERT INTO merchant_buylists VALUES (1405,900,19,29);
-INSERT INTO merchant_buylists VALUES (1403,900,19,30);
-INSERT INTO merchant_buylists VALUES (1371,900,19,31);
-INSERT INTO merchant_buylists VALUES (1515,960,19,32);
-INSERT INTO merchant_buylists VALUES (1667,960,19,33);
-INSERT INTO merchant_buylists VALUES (1669,960,19,34);
-INSERT INTO merchant_buylists VALUES (1671,960,19,35);
-INSERT INTO merchant_buylists VALUES (1512,1380,19,36);
-INSERT INTO merchant_buylists VALUES (1379,1380,19,37);
-INSERT INTO merchant_buylists VALUES (1402,1500,19,38);
-INSERT INTO merchant_buylists VALUES (1517,1500,19,39);
-INSERT INTO merchant_buylists VALUES (1415,1500,19,40);
-INSERT INTO merchant_buylists VALUES (1391,1500,19,41);
-INSERT INTO merchant_buylists VALUES (1398,1500,19,42);
-INSERT INTO merchant_buylists VALUES (1389,1500,19,43);
-INSERT INTO merchant_buylists VALUES (1388,1500,19,44);
-INSERT INTO merchant_buylists VALUES (1410,1500,19,45);
-INSERT INTO merchant_buylists VALUES (1404,1500,19,46);
-INSERT INTO merchant_buylists VALUES (1417,1500,19,47);
-INSERT INTO merchant_buylists VALUES (1400,1500,19,48);
-INSERT INTO merchant_buylists VALUES (1418,1500,19,49);
-INSERT INTO merchant_buylists VALUES (1668,1500,19,50);
-INSERT INTO merchant_buylists VALUES (1670,1500,19,51);
-INSERT INTO merchant_buylists VALUES (3038,1860,19,52);
-INSERT INTO merchant_buylists VALUES (1378,1920,19,53);
-INSERT INTO merchant_buylists VALUES (1516,2160,19,54);
-INSERT INTO merchant_buylists VALUES (1414,2160,19,55);
-INSERT INTO merchant_buylists VALUES (1385,2160,19,56);
-INSERT INTO merchant_buylists VALUES (1394,2160,19,57);
-INSERT INTO merchant_buylists VALUES (1526,480,19,58);
-INSERT INTO merchant_buylists VALUES (1522,900,19,59);
-INSERT INTO merchant_buylists VALUES (1535,960,19,60);
-INSERT INTO merchant_buylists VALUES (1521,960,19,61);
-INSERT INTO merchant_buylists VALUES (1523,960,19,62);
-INSERT INTO merchant_buylists VALUES (1534,960,19,63);
-INSERT INTO merchant_buylists VALUES (1537,960,19,64);
-INSERT INTO merchant_buylists VALUES (1533,1500,19,65);
-INSERT INTO merchant_buylists VALUES (1536,1500,19,66);
-INSERT INTO merchant_buylists VALUES (1532,1500,19,67);
-INSERT INTO merchant_buylists VALUES (1528,2160,19,68);
-INSERT INTO merchant_buylists VALUES (1519,2160,19,69);
-INSERT INTO merchant_buylists VALUES (1518,2160,19,70);
-INSERT INTO merchant_buylists VALUES (17,2,19,71);
-INSERT INTO merchant_buylists VALUES (1341,4,19,72);
-INSERT INTO merchant_buylists VALUES (1665,600,19,73);
-INSERT INTO merchant_buylists VALUES (1661,1200,19,74);
-INSERT INTO merchant_buylists VALUES (3031,480,19,75);
-INSERT INTO merchant_buylists VALUES (1785,300,19,76);
-INSERT INTO merchant_buylists VALUES (1831,90,19,77);
-INSERT INTO merchant_buylists VALUES (1833,90,19,78);
-INSERT INTO merchant_buylists VALUES (734,1440,19,79);
-INSERT INTO merchant_buylists VALUES (735,2880,19,80);
-INSERT INTO merchant_buylists VALUES (1061,396,19,81);
-INSERT INTO merchant_buylists VALUES (1832,216,19,82);
-INSERT INTO merchant_buylists VALUES (736,480,19,83);
-INSERT INTO merchant_buylists VALUES (737,2400,19,84);
-INSERT INTO merchant_buylists VALUES (1829,600,19,85);
-INSERT INTO merchant_buylists VALUES (2130,1200,19,86);
-INSERT INTO merchant_buylists VALUES (4916,960,19,87);
-INSERT INTO merchant_buylists VALUES (4906,1500,19,88);
-INSERT INTO merchant_buylists VALUES (4908,1500,19,89);
-INSERT INTO merchant_buylists VALUES (4445,6120,19,90);
-INSERT INTO merchant_buylists VALUES (4446,6120,19,91);
-INSERT INTO merchant_buylists VALUES (4447,6120,19,92);
-INSERT INTO merchant_buylists VALUES (4448,6120,19,93);
-INSERT INTO merchant_buylists VALUES (4449,6120,19,94);
-INSERT INTO merchant_buylists VALUES (4450,6120,19,95);
-INSERT INTO merchant_buylists VALUES (4451,6120,19,96);
-INSERT INTO merchant_buylists VALUES (4452,6120,19,97);
-INSERT INTO merchant_buylists VALUES (4453,6120,19,98);
-INSERT INTO merchant_buylists VALUES (4454,6120,19,99);
-INSERT INTO merchant_buylists VALUES (4455,6120,19,100);
-INSERT INTO merchant_buylists VALUES (4456,6120,19,101);
-INSERT INTO merchant_buylists VALUES (4910,2160,19,102);
-INSERT INTO merchant_buylists VALUES (4457,14400,19,103);
-INSERT INTO merchant_buylists VALUES (4458,14400,19,104);
-INSERT INTO merchant_buylists VALUES (4459,14400,19,105);
-INSERT INTO merchant_buylists VALUES (4460,14400,19,106);
-INSERT INTO merchant_buylists VALUES (4461,14400,19,107);
-INSERT INTO merchant_buylists VALUES (4462,14400,19,108);
-INSERT INTO merchant_buylists VALUES (4463,14400,19,109);
-INSERT INTO merchant_buylists VALUES (4464,14400,19,110);
-INSERT INTO merchant_buylists VALUES (4465,14400,19,111);
-INSERT INTO merchant_buylists VALUES (4466,14400,19,112);
-INSERT INTO merchant_buylists VALUES (4467,14400,19,113);
-INSERT INTO merchant_buylists VALUES (4481,14400,19,114);
-INSERT INTO merchant_buylists VALUES (4482,14400,19,115);
-INSERT INTO merchant_buylists VALUES (4483,14400,19,116);
-INSERT INTO merchant_buylists VALUES (4484,14400,19,117);
-INSERT INTO merchant_buylists VALUES (4485,14400,19,118);
-INSERT INTO merchant_buylists VALUES (4486,14400,19,119);
-INSERT INTO merchant_buylists VALUES (4487,14400,19,120);
-INSERT INTO merchant_buylists VALUES (4488,14400,19,121);
-INSERT INTO merchant_buylists VALUES (4489,14400,19,122);
-INSERT INTO merchant_buylists VALUES (4490,14400,19,123);
-INSERT INTO merchant_buylists VALUES (4491,14400,19,124);
-INSERT INTO merchant_buylists VALUES (4492,14400,19,125);
-INSERT INTO merchant_buylists VALUES (4493,14400,19,126);
-INSERT INTO merchant_buylists VALUES (4625,600,19,127);
-INSERT INTO merchant_buylists VALUES (4626,600,19,128);
-INSERT INTO merchant_buylists VALUES (4627,600,19,129);
-INSERT INTO merchant_buylists VALUES (4628,600,19,130);
-INSERT INTO merchant_buylists VALUES (5192,120,19,131);
-INSERT INTO merchant_buylists VALUES (5193,180,19,132);
-INSERT INTO merchant_buylists VALUES (5194,300,19,133);
-INSERT INTO merchant_buylists VALUES (5146,13860,19,134);
-INSERT INTO merchant_buylists VALUES (5140,5940,19,135);
-INSERT INTO merchant_buylists VALUES (5134,2760,19,136);
-INSERT INTO merchant_buylists VALUES (5262,46200,19,137);
-INSERT INTO merchant_buylists VALUES (5256,19800,19,138);
-INSERT INTO merchant_buylists VALUES (5250,9240,19,139);
-INSERT INTO merchant_buylists VALUES (6037,120,19,140);
-INSERT INTO merchant_buylists VALUES (5589,120,19,141);
-INSERT INTO merchant_buylists VALUES (6035,2880,19,142);
-INSERT INTO merchant_buylists VALUES (907,5616,20,1);
-INSERT INTO merchant_buylists VALUES (908,14280,20,2);
-INSERT INTO merchant_buylists VALUES (114,4212,20,3);
-INSERT INTO merchant_buylists VALUES (115,4212,20,4);
-INSERT INTO merchant_buylists VALUES (845,10668,20,5);
-INSERT INTO merchant_buylists VALUES (876,2808,20,6);
-INSERT INTO merchant_buylists VALUES (877,7104,20,7);
-INSERT INTO merchant_buylists VALUES (1099,600,20,8);
-INSERT INTO merchant_buylists VALUES (1053,600,20,9);
-INSERT INTO merchant_buylists VALUES (1055,600,20,10);
-INSERT INTO merchant_buylists VALUES (1056,600,20,11);
-INSERT INTO merchant_buylists VALUES (1052,600,20,12);
-INSERT INTO merchant_buylists VALUES (1054,600,20,13);
-INSERT INTO merchant_buylists VALUES (1058,600,20,14);
-INSERT INTO merchant_buylists VALUES (1098,600,20,15);
-INSERT INTO merchant_buylists VALUES (1097,660,20,16);
-INSERT INTO merchant_buylists VALUES (1096,660,20,17);
-INSERT INTO merchant_buylists VALUES (1370,900,20,18);
-INSERT INTO merchant_buylists VALUES (1401,900,20,19);
-INSERT INTO merchant_buylists VALUES (1411,900,20,20);
-INSERT INTO merchant_buylists VALUES (1372,900,20,21);
-INSERT INTO merchant_buylists VALUES (1513,960,20,22);
-INSERT INTO merchant_buylists VALUES (1399,900,20,23);
-INSERT INTO merchant_buylists VALUES (1386,900,20,24);
-INSERT INTO merchant_buylists VALUES (1856,1920,20,25);
-INSERT INTO merchant_buylists VALUES (1377,900,20,26);
-INSERT INTO merchant_buylists VALUES (1383,900,20,27);
-INSERT INTO merchant_buylists VALUES (1514,960,20,28);
-INSERT INTO merchant_buylists VALUES (1405,900,20,29);
-INSERT INTO merchant_buylists VALUES (1403,900,20,30);
-INSERT INTO merchant_buylists VALUES (1371,900,20,31);
-INSERT INTO merchant_buylists VALUES (1515,960,20,32);
-INSERT INTO merchant_buylists VALUES (1667,960,20,33);
-INSERT INTO merchant_buylists VALUES (1669,960,20,34);
-INSERT INTO merchant_buylists VALUES (1671,960,20,35);
-INSERT INTO merchant_buylists VALUES (1512,1380,20,36);
-INSERT INTO merchant_buylists VALUES (1379,1380,20,37);
-INSERT INTO merchant_buylists VALUES (1402,1500,20,38);
-INSERT INTO merchant_buylists VALUES (1517,1500,20,39);
-INSERT INTO merchant_buylists VALUES (1415,1500,20,40);
-INSERT INTO merchant_buylists VALUES (1391,1500,20,41);
-INSERT INTO merchant_buylists VALUES (1398,1500,20,42);
-INSERT INTO merchant_buylists VALUES (1389,1500,20,43);
-INSERT INTO merchant_buylists VALUES (1388,1500,20,44);
-INSERT INTO merchant_buylists VALUES (1410,1500,20,45);
-INSERT INTO merchant_buylists VALUES (1404,1500,20,46);
-INSERT INTO merchant_buylists VALUES (1417,1500,20,47);
-INSERT INTO merchant_buylists VALUES (1400,1500,20,48);
-INSERT INTO merchant_buylists VALUES (1418,1500,20,49);
-INSERT INTO merchant_buylists VALUES (1668,1500,20,50);
-INSERT INTO merchant_buylists VALUES (1670,1500,20,51);
-INSERT INTO merchant_buylists VALUES (3038,1860,20,52);
-INSERT INTO merchant_buylists VALUES (1378,1920,20,53);
-INSERT INTO merchant_buylists VALUES (1516,2160,20,54);
-INSERT INTO merchant_buylists VALUES (1414,2160,20,55);
-INSERT INTO merchant_buylists VALUES (1385,2160,20,56);
-INSERT INTO merchant_buylists VALUES (1394,2160,20,57);
-INSERT INTO merchant_buylists VALUES (1526,480,20,58);
-INSERT INTO merchant_buylists VALUES (1522,900,20,59);
-INSERT INTO merchant_buylists VALUES (1535,960,20,60);
-INSERT INTO merchant_buylists VALUES (1521,960,20,61);
-INSERT INTO merchant_buylists VALUES (1523,960,20,62);
-INSERT INTO merchant_buylists VALUES (1534,960,20,63);
-INSERT INTO merchant_buylists VALUES (1537,960,20,64);
-INSERT INTO merchant_buylists VALUES (1533,1500,20,65);
-INSERT INTO merchant_buylists VALUES (1536,1500,20,66);
-INSERT INTO merchant_buylists VALUES (1532,1500,20,67);
-INSERT INTO merchant_buylists VALUES (1528,2160,20,68);
-INSERT INTO merchant_buylists VALUES (1519,2160,20,69);
-INSERT INTO merchant_buylists VALUES (1518,2160,20,70);
-INSERT INTO merchant_buylists VALUES (17,2,20,71);
-INSERT INTO merchant_buylists VALUES (1341,4,20,72);
-INSERT INTO merchant_buylists VALUES (1665,600,20,73);
-INSERT INTO merchant_buylists VALUES (1661,1200,20,74);
-INSERT INTO merchant_buylists VALUES (3031,480,20,75);
-INSERT INTO merchant_buylists VALUES (1785,300,20,76);
-INSERT INTO merchant_buylists VALUES (1831,90,20,77);
-INSERT INTO merchant_buylists VALUES (1833,90,20,78);
-INSERT INTO merchant_buylists VALUES (734,1440,20,79);
-INSERT INTO merchant_buylists VALUES (735,2880,20,80);
-INSERT INTO merchant_buylists VALUES (1061,396,20,81);
-INSERT INTO merchant_buylists VALUES (1832,216,20,82);
-INSERT INTO merchant_buylists VALUES (736,480,20,83);
-INSERT INTO merchant_buylists VALUES (737,2400,20,84);
-INSERT INTO merchant_buylists VALUES (1829,600,20,85);
-INSERT INTO merchant_buylists VALUES (2130,1200,20,86);
-INSERT INTO merchant_buylists VALUES (4916,960,20,87);
-INSERT INTO merchant_buylists VALUES (4906,1500,20,88);
-INSERT INTO merchant_buylists VALUES (4908,1500,20,89);
-INSERT INTO merchant_buylists VALUES (4445,6120,20,90);
-INSERT INTO merchant_buylists VALUES (4446,6120,20,91);
-INSERT INTO merchant_buylists VALUES (4447,6120,20,92);
-INSERT INTO merchant_buylists VALUES (4448,6120,20,93);
-INSERT INTO merchant_buylists VALUES (4449,6120,20,94);
-INSERT INTO merchant_buylists VALUES (4450,6120,20,95);
-INSERT INTO merchant_buylists VALUES (4451,6120,20,96);
-INSERT INTO merchant_buylists VALUES (4452,6120,20,97);
-INSERT INTO merchant_buylists VALUES (4453,6120,20,98);
-INSERT INTO merchant_buylists VALUES (4454,6120,20,99);
-INSERT INTO merchant_buylists VALUES (4455,6120,20,100);
-INSERT INTO merchant_buylists VALUES (4456,6120,20,101);
-INSERT INTO merchant_buylists VALUES (4910,2160,20,102);
-INSERT INTO merchant_buylists VALUES (4457,14400,20,103);
-INSERT INTO merchant_buylists VALUES (4458,14400,20,104);
-INSERT INTO merchant_buylists VALUES (4459,14400,20,105);
-INSERT INTO merchant_buylists VALUES (4460,14400,20,106);
-INSERT INTO merchant_buylists VALUES (4461,14400,20,107);
-INSERT INTO merchant_buylists VALUES (4462,14400,20,108);
-INSERT INTO merchant_buylists VALUES (4463,14400,20,109);
-INSERT INTO merchant_buylists VALUES (4464,14400,20,110);
-INSERT INTO merchant_buylists VALUES (4465,14400,20,111);
-INSERT INTO merchant_buylists VALUES (4466,14400,20,112);
-INSERT INTO merchant_buylists VALUES (4467,14400,20,113);
-INSERT INTO merchant_buylists VALUES (4481,14400,20,114);
-INSERT INTO merchant_buylists VALUES (4482,14400,20,115);
-INSERT INTO merchant_buylists VALUES (4483,14400,20,116);
-INSERT INTO merchant_buylists VALUES (4484,14400,20,117);
-INSERT INTO merchant_buylists VALUES (4485,14400,20,118);
-INSERT INTO merchant_buylists VALUES (4486,14400,20,119);
-INSERT INTO merchant_buylists VALUES (4487,14400,20,120);
-INSERT INTO merchant_buylists VALUES (4488,14400,20,121);
-INSERT INTO merchant_buylists VALUES (4489,14400,20,122);
-INSERT INTO merchant_buylists VALUES (4490,14400,20,123);
-INSERT INTO merchant_buylists VALUES (4491,14400,20,124);
-INSERT INTO merchant_buylists VALUES (4492,14400,20,125);
-INSERT INTO merchant_buylists VALUES (4493,14400,20,126);
-INSERT INTO merchant_buylists VALUES (4625,600,20,127);
-INSERT INTO merchant_buylists VALUES (4626,600,20,128);
-INSERT INTO merchant_buylists VALUES (4627,600,20,129);
-INSERT INTO merchant_buylists VALUES (4628,600,20,130);
-INSERT INTO merchant_buylists VALUES (5192,120,20,131);
-INSERT INTO merchant_buylists VALUES (5193,180,20,132);
-INSERT INTO merchant_buylists VALUES (5194,300,20,133);
-INSERT INTO merchant_buylists VALUES (5146,13860,20,134);
-INSERT INTO merchant_buylists VALUES (5140,5940,20,135);
-INSERT INTO merchant_buylists VALUES (5134,2760,20,136);
-INSERT INTO merchant_buylists VALUES (5262,46200,20,137);
-INSERT INTO merchant_buylists VALUES (5256,19800,20,138);
-INSERT INTO merchant_buylists VALUES (5250,9240,20,139);
-INSERT INTO merchant_buylists VALUES (6037,120,20,140);
-INSERT INTO merchant_buylists VALUES (5589,120,20,141);
-INSERT INTO merchant_buylists VALUES (6035,2880,20,142);
-INSERT INTO merchant_buylists VALUES (123,613500,21,1);
-INSERT INTO merchant_buylists VALUES (220,613500,21,2);
-INSERT INTO merchant_buylists VALUES (221,613500,21,3);
-INSERT INTO merchant_buylists VALUES (156,613500,21,4);
-INSERT INTO merchant_buylists VALUES (166,613500,21,5);
-INSERT INTO merchant_buylists VALUES (168,613500,21,6);
-INSERT INTO merchant_buylists VALUES (291,613500,21,7);
-INSERT INTO merchant_buylists VALUES (69,966000,21,8);
-INSERT INTO merchant_buylists VALUES (222,966000,21,9);
-INSERT INTO merchant_buylists VALUES (275,966000,21,10);
-INSERT INTO merchant_buylists VALUES (34,46050,21,11);
-INSERT INTO merchant_buylists VALUES (347,125250,21,12);
-INSERT INTO merchant_buylists VALUES (391,93900,21,13);
-INSERT INTO merchant_buylists VALUES (376,78300,21,14);
-INSERT INTO merchant_buylists VALUES (1105,34500,21,15);
-INSERT INTO merchant_buylists VALUES (1102,55350,21,16);
-INSERT INTO merchant_buylists VALUES (465,58650,21,17);
-INSERT INTO merchant_buylists VALUES (432,93900,21,18);
-INSERT INTO merchant_buylists VALUES (17,3,22,1);
-INSERT INTO merchant_buylists VALUES (1341,4,22,2);
-INSERT INTO merchant_buylists VALUES (1061,495,22,3);
-INSERT INTO merchant_buylists VALUES (1060,135,22,4);
-INSERT INTO merchant_buylists VALUES (907,7020,22,5);
-INSERT INTO merchant_buylists VALUES (908,17850,22,6);
-INSERT INTO merchant_buylists VALUES (114,5265,22,7);
-INSERT INTO merchant_buylists VALUES (115,5265,22,8);
-INSERT INTO merchant_buylists VALUES (845,13335,22,9);
-INSERT INTO merchant_buylists VALUES (876,3510,22,10);
-INSERT INTO merchant_buylists VALUES (877,8880,22,11);
-INSERT INTO merchant_buylists VALUES (5192,150,22,12);
-INSERT INTO merchant_buylists VALUES (5146,17337,22,13);
-INSERT INTO merchant_buylists VALUES (5140,7430,22,14);
-INSERT INTO merchant_buylists VALUES (5134,3452,22,15);
-INSERT INTO merchant_buylists VALUES (5262,57788,22,16);
-INSERT INTO merchant_buylists VALUES (5256,24766,22,17);
-INSERT INTO merchant_buylists VALUES (5250,11529,22,18);
-INSERT INTO merchant_buylists VALUES (908,13090,23,1);
-INSERT INTO merchant_buylists VALUES (909,23430,23,2);
-INSERT INTO merchant_buylists VALUES (910,39490,23,3);
-INSERT INTO merchant_buylists VALUES (911,62480,23,4);
-INSERT INTO merchant_buylists VALUES (912,94270,23,5);
-INSERT INTO merchant_buylists VALUES (913,137500,23,6);
-INSERT INTO merchant_buylists VALUES (845,9779,23,7);
-INSERT INTO merchant_buylists VALUES (846,17600,23,8);
-INSERT INTO merchant_buylists VALUES (847,29590,23,9);
-INSERT INTO merchant_buylists VALUES (848,46860,23,10);
-INSERT INTO merchant_buylists VALUES (849,70730,23,11);
-INSERT INTO merchant_buylists VALUES (850,102740,23,12);
-INSERT INTO merchant_buylists VALUES (877,6512,23,13);
-INSERT INTO merchant_buylists VALUES (878,11770,23,14);
-INSERT INTO merchant_buylists VALUES (890,19800,23,15);
-INSERT INTO merchant_buylists VALUES (879,31240,23,16);
-INSERT INTO merchant_buylists VALUES (880,47080,23,17);
-INSERT INTO merchant_buylists VALUES (881,68530,23,18);
-INSERT INTO merchant_buylists VALUES (1661,1100,23,19);
-INSERT INTO merchant_buylists VALUES (3031,440,23,20);
-INSERT INTO merchant_buylists VALUES (1785,275,23,21);
-INSERT INTO merchant_buylists VALUES (1341,3,23,22);
-INSERT INTO merchant_buylists VALUES (1342,6,23,23);
-INSERT INTO merchant_buylists VALUES (734,1320,23,24);
-INSERT INTO merchant_buylists VALUES (735,2640,23,25);
-INSERT INTO merchant_buylists VALUES (1061,363,23,26);
-INSERT INTO merchant_buylists VALUES (1832,198,23,27);
-INSERT INTO merchant_buylists VALUES (1834,198,23,28);
-INSERT INTO merchant_buylists VALUES (737,2200,23,29);
-INSERT INTO merchant_buylists VALUES (1829,550,23,30);
-INSERT INTO merchant_buylists VALUES (1830,550,23,31);
-INSERT INTO merchant_buylists VALUES (2130,1100,23,32);
-INSERT INTO merchant_buylists VALUES (2131,3300,23,33);
-INSERT INTO merchant_buylists VALUES (2132,11000,23,34);
-INSERT INTO merchant_buylists VALUES (4625,550,23,35);
-INSERT INTO merchant_buylists VALUES (4626,550,23,36);
-INSERT INTO merchant_buylists VALUES (4627,550,23,37);
-INSERT INTO merchant_buylists VALUES (4628,550,23,38);
-INSERT INTO merchant_buylists VALUES (5192,110,23,39);
-INSERT INTO merchant_buylists VALUES (5193,165,23,40);
-INSERT INTO merchant_buylists VALUES (5194,275,23,41);
-INSERT INTO merchant_buylists VALUES (5195,440,23,42);
-INSERT INTO merchant_buylists VALUES (5146,12700,23,43);
-INSERT INTO merchant_buylists VALUES (5140,5445,23,44);
-INSERT INTO merchant_buylists VALUES (5134,2530,23,45);
-INSERT INTO merchant_buylists VALUES (5262,42333,23,46);
-INSERT INTO merchant_buylists VALUES (5256,18145,23,47);
-INSERT INTO merchant_buylists VALUES (5250,8470,23,48);
-INSERT INTO merchant_buylists VALUES (6037,110,23,49);
-INSERT INTO merchant_buylists VALUES (5589,110,23,50);
-INSERT INTO merchant_buylists VALUES (6035,2640,23,51);
-INSERT INTO merchant_buylists VALUES (908,13090,24,1);
-INSERT INTO merchant_buylists VALUES (909,23430,24,2);
-INSERT INTO merchant_buylists VALUES (910,39490,24,3);
-INSERT INTO merchant_buylists VALUES (911,62480,24,4);
-INSERT INTO merchant_buylists VALUES (912,94270,24,5);
-INSERT INTO merchant_buylists VALUES (913,137500,24,6);
-INSERT INTO merchant_buylists VALUES (845,9779,24,7);
-INSERT INTO merchant_buylists VALUES (846,17600,24,8);
-INSERT INTO merchant_buylists VALUES (847,29590,24,9);
-INSERT INTO merchant_buylists VALUES (848,46860,24,10);
-INSERT INTO merchant_buylists VALUES (849,70730,24,11);
-INSERT INTO merchant_buylists VALUES (850,102740,24,12);
-INSERT INTO merchant_buylists VALUES (877,6512,24,13);
-INSERT INTO merchant_buylists VALUES (878,11770,24,14);
-INSERT INTO merchant_buylists VALUES (890,19800,24,15);
-INSERT INTO merchant_buylists VALUES (879,31240,24,16);
-INSERT INTO merchant_buylists VALUES (880,47080,24,17);
-INSERT INTO merchant_buylists VALUES (881,68530,24,18);
-INSERT INTO merchant_buylists VALUES (1661,1100,24,19);
-INSERT INTO merchant_buylists VALUES (3031,440,24,20);
-INSERT INTO merchant_buylists VALUES (1785,275,24,21);
-INSERT INTO merchant_buylists VALUES (1341,3,24,22);
-INSERT INTO merchant_buylists VALUES (1342,6,24,23);
-INSERT INTO merchant_buylists VALUES (734,1320,24,24);
-INSERT INTO merchant_buylists VALUES (735,2640,24,25);
-INSERT INTO merchant_buylists VALUES (1061,363,24,26);
-INSERT INTO merchant_buylists VALUES (1832,198,24,27);
-INSERT INTO merchant_buylists VALUES (1834,198,24,28);
-INSERT INTO merchant_buylists VALUES (737,2200,24,29);
-INSERT INTO merchant_buylists VALUES (1829,550,24,30);
-INSERT INTO merchant_buylists VALUES (1830,550,24,31);
-INSERT INTO merchant_buylists VALUES (2130,1100,24,32);
-INSERT INTO merchant_buylists VALUES (2131,3300,24,33);
-INSERT INTO merchant_buylists VALUES (2132,11000,24,34);
-INSERT INTO merchant_buylists VALUES (4625,550,24,35);
-INSERT INTO merchant_buylists VALUES (4626,550,24,36);
-INSERT INTO merchant_buylists VALUES (4627,550,24,37);
-INSERT INTO merchant_buylists VALUES (4628,550,24,38);
-INSERT INTO merchant_buylists VALUES (5192,110,24,39);
-INSERT INTO merchant_buylists VALUES (5193,165,24,40);
-INSERT INTO merchant_buylists VALUES (5194,275,24,41);
-INSERT INTO merchant_buylists VALUES (5195,440,24,42);
-INSERT INTO merchant_buylists VALUES (5146,12700,24,43);
-INSERT INTO merchant_buylists VALUES (5140,5445,24,44);
-INSERT INTO merchant_buylists VALUES (5134,2530,24,45);
-INSERT INTO merchant_buylists VALUES (5262,42333,24,46);
-INSERT INTO merchant_buylists VALUES (5256,18145,24,47);
-INSERT INTO merchant_buylists VALUES (5250,8470,24,48);
-INSERT INTO merchant_buylists VALUES (6037,110,24,49);
-INSERT INTO merchant_buylists VALUES (5589,110,24,50);
-INSERT INTO merchant_buylists VALUES (6035,2640,24,51);
-INSERT INTO merchant_buylists VALUES (2,149600,25,1);
-INSERT INTO merchant_buylists VALUES (218,149600,25,2);
-INSERT INTO merchant_buylists VALUES (272,149600,25,3);
-INSERT INTO merchant_buylists VALUES (15,149600,25,4);
-INSERT INTO merchant_buylists VALUES (68,268400,25,5);
-INSERT INTO merchant_buylists VALUES (219,268400,25,6);
-INSERT INTO merchant_buylists VALUES (273,268400,25,7);
-INSERT INTO merchant_buylists VALUES (155,268400,25,8);
-INSERT INTO merchant_buylists VALUES (87,268400,25,9);
-INSERT INTO merchant_buylists VALUES (16,268400,25,10);
-INSERT INTO merchant_buylists VALUES (123,449900,25,11);
-INSERT INTO merchant_buylists VALUES (220,449900,25,12);
-INSERT INTO merchant_buylists VALUES (221,449900,25,13);
-INSERT INTO merchant_buylists VALUES (274,449900,25,14);
-INSERT INTO merchant_buylists VALUES (156,449900,25,15);
-INSERT INTO merchant_buylists VALUES (166,449900,25,16);
-INSERT INTO merchant_buylists VALUES (168,449900,25,17);
-INSERT INTO merchant_buylists VALUES (291,449900,25,18);
-INSERT INTO merchant_buylists VALUES (69,708400,25,19);
-INSERT INTO merchant_buylists VALUES (126,708400,25,20);
-INSERT INTO merchant_buylists VALUES (222,708400,25,21);
-INSERT INTO merchant_buylists VALUES (275,708400,25,22);
-INSERT INTO merchant_buylists VALUES (276,708400,25,23);
-INSERT INTO merchant_buylists VALUES (277,708400,25,24);
-INSERT INTO merchant_buylists VALUES (86,708400,25,25);
-INSERT INTO merchant_buylists VALUES (292,708400,25,26);
-INSERT INTO merchant_buylists VALUES (295,708400,25,27);
-INSERT INTO merchant_buylists VALUES (124,1063700,25,28);
-INSERT INTO merchant_buylists VALUES (127,1063700,25,29);
-INSERT INTO merchant_buylists VALUES (130,1063700,25,30);
-INSERT INTO merchant_buylists VALUES (223,1063700,25,31);
-INSERT INTO merchant_buylists VALUES (278,1063700,25,32);
-INSERT INTO merchant_buylists VALUES (157,1063700,25,33);
-INSERT INTO merchant_buylists VALUES (293,1063700,25,34);
-INSERT INTO merchant_buylists VALUES (296,1063700,25,35);
-INSERT INTO merchant_buylists VALUES (129,1540000,25,36);
-INSERT INTO merchant_buylists VALUES (224,1540000,25,37);
-INSERT INTO merchant_buylists VALUES (1660,1540000,25,38);
-INSERT INTO merchant_buylists VALUES (279,1540000,25,39);
-INSERT INTO merchant_buylists VALUES (158,1540000,25,40);
-INSERT INTO merchant_buylists VALUES (172,1540000,25,41);
-INSERT INTO merchant_buylists VALUES (294,1540000,25,42);
-INSERT INTO merchant_buylists VALUES (93,1540000,25,43);
-INSERT INTO merchant_buylists VALUES (256,149600,25,44);
-INSERT INTO merchant_buylists VALUES (257,268400,25,45);
-INSERT INTO merchant_buylists VALUES (258,449900,25,46);
-INSERT INTO merchant_buylists VALUES (259,708400,25,47);
-INSERT INTO merchant_buylists VALUES (260,1063700,25,48);
-INSERT INTO merchant_buylists VALUES (261,1540000,25,49);
-INSERT INTO merchant_buylists VALUES (17,2,25,50);
-INSERT INTO merchant_buylists VALUES (1341,3,25,51);
-INSERT INTO merchant_buylists VALUES (1342,6,25,52);
-INSERT INTO merchant_buylists VALUES (176,149600,26,1);
-INSERT INTO merchant_buylists VALUES (310,149600,26,2);
-INSERT INTO merchant_buylists VALUES (177,268400,26,3);
-INSERT INTO merchant_buylists VALUES (311,268400,26,4);
-INSERT INTO merchant_buylists VALUES (100,268400,26,5);
-INSERT INTO merchant_buylists VALUES (178,449900,26,6);
-INSERT INTO merchant_buylists VALUES (101,449900,26,7);
-INSERT INTO merchant_buylists VALUES (312,449900,26,8);
-INSERT INTO merchant_buylists VALUES (314,449900,26,9);
-INSERT INTO merchant_buylists VALUES (179,708400,26,10);
-INSERT INTO merchant_buylists VALUES (182,708400,26,11);
-INSERT INTO merchant_buylists VALUES (183,708400,26,12);
-INSERT INTO merchant_buylists VALUES (185,708400,26,13);
-INSERT INTO merchant_buylists VALUES (315,708400,26,14);
-INSERT INTO merchant_buylists VALUES (83,787600,26,15);
-INSERT INTO merchant_buylists VALUES (143,787600,26,16);
-INSERT INTO merchant_buylists VALUES (144,787600,26,17);
-INSERT INTO merchant_buylists VALUES (238,1063700,26,18);
-INSERT INTO merchant_buylists VALUES (239,1063700,26,19);
-INSERT INTO merchant_buylists VALUES (240,1063700,26,20);
-INSERT INTO merchant_buylists VALUES (241,1063700,26,21);
-INSERT INTO merchant_buylists VALUES (186,1063700,26,22);
-INSERT INTO merchant_buylists VALUES (316,1063700,26,23);
-INSERT INTO merchant_buylists VALUES (317,1063700,26,24);
-INSERT INTO merchant_buylists VALUES (90,1540000,26,25);
-INSERT INTO merchant_buylists VALUES (318,1540000,26,26);
-INSERT INTO merchant_buylists VALUES (321,1672000,26,27);
-INSERT INTO merchant_buylists VALUES (17,2,26,28);
-INSERT INTO merchant_buylists VALUES (1341,3,26,29);
-INSERT INTO merchant_buylists VALUES (1342,6,26,30);
-INSERT INTO merchant_buylists VALUES (2,149600,27,1);
-INSERT INTO merchant_buylists VALUES (218,149600,27,2);
-INSERT INTO merchant_buylists VALUES (272,149600,27,3);
-INSERT INTO merchant_buylists VALUES (15,149600,27,4);
-INSERT INTO merchant_buylists VALUES (68,268400,27,5);
-INSERT INTO merchant_buylists VALUES (219,268400,27,6);
-INSERT INTO merchant_buylists VALUES (273,268400,27,7);
-INSERT INTO merchant_buylists VALUES (155,268400,27,8);
-INSERT INTO merchant_buylists VALUES (87,268400,27,9);
-INSERT INTO merchant_buylists VALUES (16,268400,27,10);
-INSERT INTO merchant_buylists VALUES (123,449900,27,11);
-INSERT INTO merchant_buylists VALUES (220,449900,27,12);
-INSERT INTO merchant_buylists VALUES (221,449900,27,13);
-INSERT INTO merchant_buylists VALUES (274,449900,27,14);
-INSERT INTO merchant_buylists VALUES (156,449900,27,15);
-INSERT INTO merchant_buylists VALUES (166,449900,27,16);
-INSERT INTO merchant_buylists VALUES (168,449900,27,17);
-INSERT INTO merchant_buylists VALUES (291,449900,27,18);
-INSERT INTO merchant_buylists VALUES (69,708400,27,19);
-INSERT INTO merchant_buylists VALUES (126,708400,27,20);
-INSERT INTO merchant_buylists VALUES (222,708400,27,21);
-INSERT INTO merchant_buylists VALUES (275,708400,27,22);
-INSERT INTO merchant_buylists VALUES (276,708400,27,23);
-INSERT INTO merchant_buylists VALUES (277,708400,27,24);
-INSERT INTO merchant_buylists VALUES (86,708400,27,25);
-INSERT INTO merchant_buylists VALUES (292,708400,27,26);
-INSERT INTO merchant_buylists VALUES (295,708400,27,27);
-INSERT INTO merchant_buylists VALUES (124,1063700,27,28);
-INSERT INTO merchant_buylists VALUES (127,1063700,27,29);
-INSERT INTO merchant_buylists VALUES (130,1063700,27,30);
-INSERT INTO merchant_buylists VALUES (223,1063700,27,31);
-INSERT INTO merchant_buylists VALUES (278,1063700,27,32);
-INSERT INTO merchant_buylists VALUES (157,1063700,27,33);
-INSERT INTO merchant_buylists VALUES (293,1063700,27,34);
-INSERT INTO merchant_buylists VALUES (296,1063700,27,35);
-INSERT INTO merchant_buylists VALUES (129,1540000,27,36);
-INSERT INTO merchant_buylists VALUES (224,1540000,27,37);
-INSERT INTO merchant_buylists VALUES (1660,1540000,27,38);
-INSERT INTO merchant_buylists VALUES (279,1540000,27,39);
-INSERT INTO merchant_buylists VALUES (158,1540000,27,40);
-INSERT INTO merchant_buylists VALUES (172,1540000,27,41);
-INSERT INTO merchant_buylists VALUES (294,1540000,27,42);
-INSERT INTO merchant_buylists VALUES (93,1540000,27,43);
-INSERT INTO merchant_buylists VALUES (256,149600,27,44);
-INSERT INTO merchant_buylists VALUES (257,268400,27,45);
-INSERT INTO merchant_buylists VALUES (258,449900,27,46);
-INSERT INTO merchant_buylists VALUES (259,708400,27,47);
-INSERT INTO merchant_buylists VALUES (260,1063700,27,48);
-INSERT INTO merchant_buylists VALUES (261,1540000,27,49);
-INSERT INTO merchant_buylists VALUES (17,2,27,50);
-INSERT INTO merchant_buylists VALUES (1341,3,27,51);
-INSERT INTO merchant_buylists VALUES (1342,6,27,52);
-INSERT INTO merchant_buylists VALUES (176,149600,28,1);
-INSERT INTO merchant_buylists VALUES (310,149600,28,2);
-INSERT INTO merchant_buylists VALUES (177,268400,28,3);
-INSERT INTO merchant_buylists VALUES (311,268400,28,4);
-INSERT INTO merchant_buylists VALUES (100,268400,28,5);
-INSERT INTO merchant_buylists VALUES (178,449900,28,6);
-INSERT INTO merchant_buylists VALUES (101,449900,28,7);
-INSERT INTO merchant_buylists VALUES (312,449900,28,8);
-INSERT INTO merchant_buylists VALUES (314,449900,28,9);
-INSERT INTO merchant_buylists VALUES (179,708400,28,10);
-INSERT INTO merchant_buylists VALUES (182,708400,28,11);
-INSERT INTO merchant_buylists VALUES (183,708400,28,12);
-INSERT INTO merchant_buylists VALUES (185,708400,28,13);
-INSERT INTO merchant_buylists VALUES (315,708400,28,14);
-INSERT INTO merchant_buylists VALUES (83,787600,28,15);
-INSERT INTO merchant_buylists VALUES (143,787600,28,16);
-INSERT INTO merchant_buylists VALUES (144,787600,28,17);
-INSERT INTO merchant_buylists VALUES (238,1063700,28,18);
-INSERT INTO merchant_buylists VALUES (239,1063700,28,19);
-INSERT INTO merchant_buylists VALUES (240,1063700,28,20);
-INSERT INTO merchant_buylists VALUES (241,1063700,28,21);
-INSERT INTO merchant_buylists VALUES (186,1063700,28,22);
-INSERT INTO merchant_buylists VALUES (316,1063700,28,23);
-INSERT INTO merchant_buylists VALUES (317,1063700,28,24);
-INSERT INTO merchant_buylists VALUES (90,1540000,28,25);
-INSERT INTO merchant_buylists VALUES (318,1540000,28,26);
-INSERT INTO merchant_buylists VALUES (321,1672000,28,27);
-INSERT INTO merchant_buylists VALUES (17,2,28,28);
-INSERT INTO merchant_buylists VALUES (1341,3,28,29);
-INSERT INTO merchant_buylists VALUES (1342,6,28,30);
-INSERT INTO merchant_buylists VALUES (1370,825,29,1);
-INSERT INTO merchant_buylists VALUES (1401,825,29,2);
-INSERT INTO merchant_buylists VALUES (1411,825,29,3);
-INSERT INTO merchant_buylists VALUES (1372,825,29,4);
-INSERT INTO merchant_buylists VALUES (1513,880,29,5);
-INSERT INTO merchant_buylists VALUES (1399,825,29,6);
-INSERT INTO merchant_buylists VALUES (1386,825,29,7);
-INSERT INTO merchant_buylists VALUES (1856,1760,29,8);
-INSERT INTO merchant_buylists VALUES (1377,825,29,9);
-INSERT INTO merchant_buylists VALUES (1383,825,29,10);
-INSERT INTO merchant_buylists VALUES (1514,880,29,11);
-INSERT INTO merchant_buylists VALUES (1405,825,29,12);
-INSERT INTO merchant_buylists VALUES (1403,825,29,13);
-INSERT INTO merchant_buylists VALUES (1371,825,29,14);
-INSERT INTO merchant_buylists VALUES (1515,880,29,15);
-INSERT INTO merchant_buylists VALUES (1667,880,29,16);
-INSERT INTO merchant_buylists VALUES (1669,880,29,17);
-INSERT INTO merchant_buylists VALUES (1671,880,29,18);
-INSERT INTO merchant_buylists VALUES (1512,1265,29,19);
-INSERT INTO merchant_buylists VALUES (1379,1265,29,20);
-INSERT INTO merchant_buylists VALUES (1402,1375,29,21);
-INSERT INTO merchant_buylists VALUES (1517,1375,29,22);
-INSERT INTO merchant_buylists VALUES (1415,1375,29,23);
-INSERT INTO merchant_buylists VALUES (1391,1375,29,24);
-INSERT INTO merchant_buylists VALUES (1398,1375,29,25);
-INSERT INTO merchant_buylists VALUES (1389,1375,29,26);
-INSERT INTO merchant_buylists VALUES (1388,1375,29,27);
-INSERT INTO merchant_buylists VALUES (1410,1375,29,28);
-INSERT INTO merchant_buylists VALUES (1404,1375,29,29);
-INSERT INTO merchant_buylists VALUES (1417,1375,29,30);
-INSERT INTO merchant_buylists VALUES (1400,1375,29,31);
-INSERT INTO merchant_buylists VALUES (1418,1375,29,32);
-INSERT INTO merchant_buylists VALUES (1668,1375,29,33);
-INSERT INTO merchant_buylists VALUES (1670,1375,29,34);
-INSERT INTO merchant_buylists VALUES (3038,1705,29,35);
-INSERT INTO merchant_buylists VALUES (1378,1760,29,36);
-INSERT INTO merchant_buylists VALUES (1516,1980,29,37);
-INSERT INTO merchant_buylists VALUES (1414,1980,29,38);
-INSERT INTO merchant_buylists VALUES (1385,1980,29,39);
-INSERT INTO merchant_buylists VALUES (1394,1980,29,40);
-INSERT INTO merchant_buylists VALUES (1412,2695,29,41);
-INSERT INTO merchant_buylists VALUES (3944,2695,29,42);
-INSERT INTO merchant_buylists VALUES (1392,2695,29,43);
-INSERT INTO merchant_buylists VALUES (1407,2695,29,44);
-INSERT INTO merchant_buylists VALUES (1416,2695,29,45);
-INSERT INTO merchant_buylists VALUES (1397,2695,29,46);
-INSERT INTO merchant_buylists VALUES (1406,2695,29,47);
-INSERT INTO merchant_buylists VALUES (1408,2695,29,48);
-INSERT INTO merchant_buylists VALUES (1390,2695,29,49);
-INSERT INTO merchant_buylists VALUES (1387,2695,29,50);
-INSERT INTO merchant_buylists VALUES (1409,2695,29,51);
-INSERT INTO merchant_buylists VALUES (1413,2695,29,52);
-INSERT INTO merchant_buylists VALUES (1381,2860,29,53);
-INSERT INTO merchant_buylists VALUES (1382,2860,29,54);
-INSERT INTO merchant_buylists VALUES (1384,2860,29,55);
-INSERT INTO merchant_buylists VALUES (1380,550,29,56);
-INSERT INTO merchant_buylists VALUES (1535,880,29,57);
-INSERT INTO merchant_buylists VALUES (1521,880,29,58);
-INSERT INTO merchant_buylists VALUES (1523,880,29,59);
-INSERT INTO merchant_buylists VALUES (1534,880,29,60);
-INSERT INTO merchant_buylists VALUES (1537,880,29,61);
-INSERT INTO merchant_buylists VALUES (1533,1375,29,62);
-INSERT INTO merchant_buylists VALUES (1536,1375,29,63);
-INSERT INTO merchant_buylists VALUES (1532,1375,29,64);
-INSERT INTO merchant_buylists VALUES (1528,1980,29,65);
-INSERT INTO merchant_buylists VALUES (1519,1980,29,66);
-INSERT INTO merchant_buylists VALUES (1518,1980,29,67);
-INSERT INTO merchant_buylists VALUES (1520,2695,29,68);
-INSERT INTO merchant_buylists VALUES (1530,2695,29,69);
-INSERT INTO merchant_buylists VALUES (4916,895,29,70);
-INSERT INTO merchant_buylists VALUES (4906,1375,29,71);
-INSERT INTO merchant_buylists VALUES (4908,1375,29,72);
-INSERT INTO merchant_buylists VALUES (4910,1985,29,73);
-INSERT INTO merchant_buylists VALUES (4457,13200,29,74);
-INSERT INTO merchant_buylists VALUES (4458,13200,29,75);
-INSERT INTO merchant_buylists VALUES (4459,13200,29,76);
-INSERT INTO merchant_buylists VALUES (4460,13200,29,77);
-INSERT INTO merchant_buylists VALUES (4461,13200,29,78);
-INSERT INTO merchant_buylists VALUES (4462,13200,29,79);
-INSERT INTO merchant_buylists VALUES (4463,13200,29,80);
-INSERT INTO merchant_buylists VALUES (4464,13200,29,81);
-INSERT INTO merchant_buylists VALUES (4465,13200,29,82);
-INSERT INTO merchant_buylists VALUES (4466,13200,29,83);
-INSERT INTO merchant_buylists VALUES (4467,13200,29,84);
-INSERT INTO merchant_buylists VALUES (4468,13200,29,85);
-INSERT INTO merchant_buylists VALUES (4481,13200,29,86);
-INSERT INTO merchant_buylists VALUES (4482,13200,29,87);
-INSERT INTO merchant_buylists VALUES (4483,13200,29,88);
-INSERT INTO merchant_buylists VALUES (4484,13200,29,89);
-INSERT INTO merchant_buylists VALUES (4485,13200,29,90);
-INSERT INTO merchant_buylists VALUES (4486,13200,29,91);
-INSERT INTO merchant_buylists VALUES (4487,13200,29,92);
-INSERT INTO merchant_buylists VALUES (4488,13200,29,93);
-INSERT INTO merchant_buylists VALUES (4489,13200,29,94);
-INSERT INTO merchant_buylists VALUES (4490,13200,29,95);
-INSERT INTO merchant_buylists VALUES (4491,13200,29,96);
-INSERT INTO merchant_buylists VALUES (4492,13200,29,97);
-INSERT INTO merchant_buylists VALUES (4493,23100,29,98);
-INSERT INTO merchant_buylists VALUES (4494,23100,29,99);
-INSERT INTO merchant_buylists VALUES (4495,23100,29,100);
-INSERT INTO merchant_buylists VALUES (4496,23100,29,101);
-INSERT INTO merchant_buylists VALUES (4497,23100,29,102);
-INSERT INTO merchant_buylists VALUES (4498,23100,29,103);
-INSERT INTO merchant_buylists VALUES (4499,23100,29,104);
-INSERT INTO merchant_buylists VALUES (4500,23100,29,105);
-INSERT INTO merchant_buylists VALUES (4501,23100,29,106);
-INSERT INTO merchant_buylists VALUES (4502,23100,29,107);
-INSERT INTO merchant_buylists VALUES (4503,23100,29,108);
-INSERT INTO merchant_buylists VALUES (4504,23100,29,109);
-INSERT INTO merchant_buylists VALUES (17,2,30,1);
-INSERT INTO merchant_buylists VALUES (1341,3,30,2);
-INSERT INTO merchant_buylists VALUES (177,268400,30,3);
-INSERT INTO merchant_buylists VALUES (311,268400,30,4);
-INSERT INTO merchant_buylists VALUES (100,268400,30,5);
-INSERT INTO merchant_buylists VALUES (178,449900,30,6);
-INSERT INTO merchant_buylists VALUES (101,449900,30,7);
-INSERT INTO merchant_buylists VALUES (312,449900,30,8);
-INSERT INTO merchant_buylists VALUES (314,449900,30,9);
-INSERT INTO merchant_buylists VALUES (182,708400,30,10);
-INSERT INTO merchant_buylists VALUES (183,708400,30,11);
-INSERT INTO merchant_buylists VALUES (185,708400,30,12);
-INSERT INTO merchant_buylists VALUES (315,708400,30,13);
-INSERT INTO merchant_buylists VALUES (83,787600,30,14);
-INSERT INTO merchant_buylists VALUES (143,787600,30,15);
-INSERT INTO merchant_buylists VALUES (144,787600,30,16);
-INSERT INTO merchant_buylists VALUES (238,1063700,30,17);
-INSERT INTO merchant_buylists VALUES (239,1063700,30,18);
-INSERT INTO merchant_buylists VALUES (240,1063700,30,19);
-INSERT INTO merchant_buylists VALUES (1105,25300,30,20);
-INSERT INTO merchant_buylists VALUES (1102,40590,30,21);
-INSERT INTO merchant_buylists VALUES (465,43010,30,22);
-INSERT INTO merchant_buylists VALUES (432,68860,30,23);
-INSERT INTO merchant_buylists VALUES (467,68750,30,24);
-INSERT INTO merchant_buylists VALUES (1,883,31,1);
-INSERT INTO merchant_buylists VALUES (4,883,31,2);
-INSERT INTO merchant_buylists VALUES (11,883,31,3);
-INSERT INTO merchant_buylists VALUES (13,883,31,4);
-INSERT INTO merchant_buylists VALUES (3,14375,31,5);
-INSERT INTO merchant_buylists VALUES (152,9280,31,6);
-INSERT INTO merchant_buylists VALUES (12,14375,31,7);
-INSERT INTO merchant_buylists VALUES (215,14375,31,8);
-INSERT INTO merchant_buylists VALUES (14,14375,31,9);
-INSERT INTO merchant_buylists VALUES (5,14375,31,10);
-INSERT INTO merchant_buylists VALUES (153,21275,31,11);
-INSERT INTO merchant_buylists VALUES (1333,62215,31,12);
-INSERT INTO merchant_buylists VALUES (66,62215,31,13);
-INSERT INTO merchant_buylists VALUES (67,62215,31,14);
-INSERT INTO merchant_buylists VALUES (122,62215,31,15);
-INSERT INTO merchant_buylists VALUES (154,62215,31,16);
-INSERT INTO merchant_buylists VALUES (216,62215,31,17);
-INSERT INTO merchant_buylists VALUES (271,62215,31,18);
-INSERT INTO merchant_buylists VALUES (2,156400,31,19);
-INSERT INTO merchant_buylists VALUES (218,156400,31,20);
-INSERT INTO merchant_buylists VALUES (272,156400,31,21);
-INSERT INTO merchant_buylists VALUES (15,156400,31,22);
-INSERT INTO merchant_buylists VALUES (28,106,31,23);
-INSERT INTO merchant_buylists VALUES (21,169,31,24);
-INSERT INTO merchant_buylists VALUES (29,1748,31,25);
-INSERT INTO merchant_buylists VALUES (22,2794,31,26);
-INSERT INTO merchant_buylists VALUES (30,5716,31,27);
-INSERT INTO merchant_buylists VALUES (23,9154,31,28);
-INSERT INTO merchant_buylists VALUES (2386,5716,31,29);
-INSERT INTO merchant_buylists VALUES (412,14605,31,30);
-INSERT INTO merchant_buylists VALUES (390,23345,31,31);
-INSERT INTO merchant_buylists VALUES (24,23345,31,32);
-INSERT INTO merchant_buylists VALUES (31,14605,31,33);
-INSERT INTO merchant_buylists VALUES (18,45,31,34);
-INSERT INTO merchant_buylists VALUES (19,734,31,35);
-INSERT INTO merchant_buylists VALUES (20,3197,31,36);
-INSERT INTO merchant_buylists VALUES (102,8176,31,37);
-INSERT INTO merchant_buylists VALUES (48,43,31,38);
-INSERT INTO merchant_buylists VALUES (1119,698,31,39);
-INSERT INTO merchant_buylists VALUES (49,3047,31,40);
-INSERT INTO merchant_buylists VALUES (50,7785,31,41);
-INSERT INTO merchant_buylists VALUES (1121,8,31,42);
-INSERT INTO merchant_buylists VALUES (35,43,31,43);
-INSERT INTO merchant_buylists VALUES (36,43,31,44);
-INSERT INTO merchant_buylists VALUES (1129,698,31,45);
-INSERT INTO merchant_buylists VALUES (1122,698,31,46);
-INSERT INTO merchant_buylists VALUES (37,3047,31,47);
-INSERT INTO merchant_buylists VALUES (38,7785,31,48);
-INSERT INTO merchant_buylists VALUES (41,63,31,49);
-INSERT INTO merchant_buylists VALUES (42,1048,31,50);
-INSERT INTO merchant_buylists VALUES (43,4577,31,51);
-INSERT INTO merchant_buylists VALUES (44,11730,31,52);
-INSERT INTO merchant_buylists VALUES (17,2,31,53);
-INSERT INTO merchant_buylists VALUES (1341,3,31,54);
-INSERT INTO merchant_buylists VALUES (7,883,32,1);
-INSERT INTO merchant_buylists VALUES (308,883,32,2);
-INSERT INTO merchant_buylists VALUES (8,14375,32,3);
-INSERT INTO merchant_buylists VALUES (99,14375,32,4);
-INSERT INTO merchant_buylists VALUES (9,62215,32,5);
-INSERT INTO merchant_buylists VALUES (176,156400,32,6);
-INSERT INTO merchant_buylists VALUES (310,156400,32,7);
-INSERT INTO merchant_buylists VALUES (462,106,32,8);
-INSERT INTO merchant_buylists VALUES (426,169,32,9);
-INSERT INTO merchant_buylists VALUES (1103,1748,32,10);
-INSERT INTO merchant_buylists VALUES (1100,2794,32,11);
-INSERT INTO merchant_buylists VALUES (463,1748,32,12);
-INSERT INTO merchant_buylists VALUES (428,2794,32,13);
-INSERT INTO merchant_buylists VALUES (464,5716,32,14);
-INSERT INTO merchant_buylists VALUES (429,9154,32,15);
-INSERT INTO merchant_buylists VALUES (1104,14605,32,16);
-INSERT INTO merchant_buylists VALUES (1101,23345,32,17);
-INSERT INTO merchant_buylists VALUES (18,45,32,18);
-INSERT INTO merchant_buylists VALUES (19,734,32,19);
-INSERT INTO merchant_buylists VALUES (20,3197,32,20);
-INSERT INTO merchant_buylists VALUES (102,8176,32,21);
-INSERT INTO merchant_buylists VALUES (48,43,32,22);
-INSERT INTO merchant_buylists VALUES (1119,698,32,23);
-INSERT INTO merchant_buylists VALUES (49,3047,32,24);
-INSERT INTO merchant_buylists VALUES (50,7785,32,25);
-INSERT INTO merchant_buylists VALUES (1121,8,32,26);
-INSERT INTO merchant_buylists VALUES (35,43,32,27);
-INSERT INTO merchant_buylists VALUES (36,43,32,28);
-INSERT INTO merchant_buylists VALUES (1129,698,32,29);
-INSERT INTO merchant_buylists VALUES (1122,698,32,30);
-INSERT INTO merchant_buylists VALUES (37,3047,32,31);
-INSERT INTO merchant_buylists VALUES (38,7785,32,32);
-INSERT INTO merchant_buylists VALUES (41,63,32,33);
-INSERT INTO merchant_buylists VALUES (42,1048,32,34);
-INSERT INTO merchant_buylists VALUES (43,4577,32,35);
-INSERT INTO merchant_buylists VALUES (44,11730,32,36);
-INSERT INTO merchant_buylists VALUES (17,2,32,37);
-INSERT INTO merchant_buylists VALUES (1341,3,32,38);
-INSERT INTO merchant_buylists VALUES (1,883,33,1);
-INSERT INTO merchant_buylists VALUES (4,883,33,2);
-INSERT INTO merchant_buylists VALUES (11,883,33,3);
-INSERT INTO merchant_buylists VALUES (13,883,33,4);
-INSERT INTO merchant_buylists VALUES (3,14375,33,5);
-INSERT INTO merchant_buylists VALUES (152,9280,33,6);
-INSERT INTO merchant_buylists VALUES (12,14375,33,7);
-INSERT INTO merchant_buylists VALUES (215,14375,33,8);
-INSERT INTO merchant_buylists VALUES (14,14375,33,9);
-INSERT INTO merchant_buylists VALUES (5,14375,33,10);
-INSERT INTO merchant_buylists VALUES (153,21275,33,11);
-INSERT INTO merchant_buylists VALUES (1333,62215,33,12);
-INSERT INTO merchant_buylists VALUES (66,62215,33,13);
-INSERT INTO merchant_buylists VALUES (67,62215,33,14);
-INSERT INTO merchant_buylists VALUES (122,62215,33,15);
-INSERT INTO merchant_buylists VALUES (154,62215,33,16);
-INSERT INTO merchant_buylists VALUES (216,62215,33,17);
-INSERT INTO merchant_buylists VALUES (271,62215,33,18);
-INSERT INTO merchant_buylists VALUES (2,156400,33,19);
-INSERT INTO merchant_buylists VALUES (218,156400,33,20);
-INSERT INTO merchant_buylists VALUES (272,156400,33,21);
-INSERT INTO merchant_buylists VALUES (15,156400,33,22);
-INSERT INTO merchant_buylists VALUES (28,106,33,23);
-INSERT INTO merchant_buylists VALUES (21,169,33,24);
-INSERT INTO merchant_buylists VALUES (29,1748,33,25);
-INSERT INTO merchant_buylists VALUES (22,2794,33,26);
-INSERT INTO merchant_buylists VALUES (30,5716,33,27);
-INSERT INTO merchant_buylists VALUES (23,9154,33,28);
-INSERT INTO merchant_buylists VALUES (2386,5716,33,29);
-INSERT INTO merchant_buylists VALUES (412,14605,33,30);
-INSERT INTO merchant_buylists VALUES (390,23345,33,31);
-INSERT INTO merchant_buylists VALUES (24,23345,33,32);
-INSERT INTO merchant_buylists VALUES (31,14605,33,33);
-INSERT INTO merchant_buylists VALUES (18,45,33,34);
-INSERT INTO merchant_buylists VALUES (19,734,33,35);
-INSERT INTO merchant_buylists VALUES (20,3197,33,36);
-INSERT INTO merchant_buylists VALUES (102,8176,33,37);
-INSERT INTO merchant_buylists VALUES (48,43,33,38);
-INSERT INTO merchant_buylists VALUES (1119,698,33,39);
-INSERT INTO merchant_buylists VALUES (49,3047,33,40);
-INSERT INTO merchant_buylists VALUES (50,7785,33,41);
-INSERT INTO merchant_buylists VALUES (1121,8,33,42);
-INSERT INTO merchant_buylists VALUES (35,43,33,43);
-INSERT INTO merchant_buylists VALUES (36,43,33,44);
-INSERT INTO merchant_buylists VALUES (1129,698,33,45);
-INSERT INTO merchant_buylists VALUES (1122,698,33,46);
-INSERT INTO merchant_buylists VALUES (37,3047,33,47);
-INSERT INTO merchant_buylists VALUES (38,7785,33,48);
-INSERT INTO merchant_buylists VALUES (41,63,33,49);
-INSERT INTO merchant_buylists VALUES (42,1048,33,50);
-INSERT INTO merchant_buylists VALUES (43,4577,33,51);
-INSERT INTO merchant_buylists VALUES (44,11730,33,52);
-INSERT INTO merchant_buylists VALUES (17,2,33,53);
-INSERT INTO merchant_buylists VALUES (1341,3,33,54);
-INSERT INTO merchant_buylists VALUES (7,883,34,1);
-INSERT INTO merchant_buylists VALUES (308,883,34,2);
-INSERT INTO merchant_buylists VALUES (8,14375,34,3);
-INSERT INTO merchant_buylists VALUES (99,14375,34,4);
-INSERT INTO merchant_buylists VALUES (9,62215,34,5);
-INSERT INTO merchant_buylists VALUES (176,156400,34,6);
-INSERT INTO merchant_buylists VALUES (310,156400,34,7);
-INSERT INTO merchant_buylists VALUES (462,106,34,8);
-INSERT INTO merchant_buylists VALUES (426,169,34,9);
-INSERT INTO merchant_buylists VALUES (1103,1748,34,10);
-INSERT INTO merchant_buylists VALUES (1100,2794,34,11);
-INSERT INTO merchant_buylists VALUES (463,1748,34,12);
-INSERT INTO merchant_buylists VALUES (428,2794,34,13);
-INSERT INTO merchant_buylists VALUES (464,5716,34,14);
-INSERT INTO merchant_buylists VALUES (429,9154,34,15);
-INSERT INTO merchant_buylists VALUES (1104,14605,34,16);
-INSERT INTO merchant_buylists VALUES (1101,23345,34,17);
-INSERT INTO merchant_buylists VALUES (18,45,34,18);
-INSERT INTO merchant_buylists VALUES (19,734,34,19);
-INSERT INTO merchant_buylists VALUES (20,3197,34,20);
-INSERT INTO merchant_buylists VALUES (102,8176,34,21);
-INSERT INTO merchant_buylists VALUES (48,43,34,22);
-INSERT INTO merchant_buylists VALUES (1119,698,34,23);
-INSERT INTO merchant_buylists VALUES (49,3047,34,24);
-INSERT INTO merchant_buylists VALUES (50,7785,34,25);
-INSERT INTO merchant_buylists VALUES (1121,8,34,26);
-INSERT INTO merchant_buylists VALUES (35,43,34,27);
-INSERT INTO merchant_buylists VALUES (36,43,34,28);
-INSERT INTO merchant_buylists VALUES (1129,698,34,29);
-INSERT INTO merchant_buylists VALUES (1122,698,34,30);
-INSERT INTO merchant_buylists VALUES (37,3047,34,31);
-INSERT INTO merchant_buylists VALUES (38,7785,34,32);
-INSERT INTO merchant_buylists VALUES (41,63,34,33);
-INSERT INTO merchant_buylists VALUES (42,1048,34,34);
-INSERT INTO merchant_buylists VALUES (43,4577,34,35);
-INSERT INTO merchant_buylists VALUES (44,11730,34,36);
-INSERT INTO merchant_buylists VALUES (17,2,34,37);
-INSERT INTO merchant_buylists VALUES (1341,3,34,38);
-INSERT INTO merchant_buylists VALUES (118,76,35,1);
-INSERT INTO merchant_buylists VALUES (906,1242,35,2);
-INSERT INTO merchant_buylists VALUES (907,5382,35,3);
-INSERT INTO merchant_buylists VALUES (908,13685,35,4);
-INSERT INTO merchant_buylists VALUES (112,56,35,5);
-INSERT INTO merchant_buylists VALUES (113,933,35,6);
-INSERT INTO merchant_buylists VALUES (114,4036,35,7);
-INSERT INTO merchant_buylists VALUES (115,4036,35,8);
-INSERT INTO merchant_buylists VALUES (845,10224,35,9);
-INSERT INTO merchant_buylists VALUES (116,38,35,10);
-INSERT INTO merchant_buylists VALUES (875,621,35,11);
-INSERT INTO merchant_buylists VALUES (876,2691,35,12);
-INSERT INTO merchant_buylists VALUES (877,6808,35,13);
-INSERT INTO merchant_buylists VALUES (17,2,35,14);
-INSERT INTO merchant_buylists VALUES (1341,3,35,15);
-INSERT INTO merchant_buylists VALUES (1665,575,35,16);
-INSERT INTO merchant_buylists VALUES (1661,1150,35,17);
-INSERT INTO merchant_buylists VALUES (3031,460,35,18);
-INSERT INTO merchant_buylists VALUES (1785,288,35,19);
-INSERT INTO merchant_buylists VALUES (3947,40,35,20);
-INSERT INTO merchant_buylists VALUES (2509,17,35,21);
-INSERT INTO merchant_buylists VALUES (1835,8,35,22);
-INSERT INTO merchant_buylists VALUES (736,460,35,23);
-INSERT INTO merchant_buylists VALUES (1060,103,35,24);
-INSERT INTO merchant_buylists VALUES (1831,86,35,25);
-INSERT INTO merchant_buylists VALUES (1833,86,35,26);
-INSERT INTO merchant_buylists VALUES (734,1380,35,27);
-INSERT INTO merchant_buylists VALUES (735,2760,35,28);
-INSERT INTO merchant_buylists VALUES (1294,86,36,1);
-INSERT INTO merchant_buylists VALUES (1095,86,36,2);
-INSERT INTO merchant_buylists VALUES (1050,115,36,3);
-INSERT INTO merchant_buylists VALUES (1152,115,36,4);
-INSERT INTO merchant_buylists VALUES (1049,115,36,5);
-INSERT INTO merchant_buylists VALUES (1048,115,36,6);
-INSERT INTO merchant_buylists VALUES (1051,115,36,7);
-INSERT INTO merchant_buylists VALUES (1099,575,36,8);
-INSERT INTO merchant_buylists VALUES (1053,575,36,9);
-INSERT INTO merchant_buylists VALUES (1055,575,36,10);
-INSERT INTO merchant_buylists VALUES (1056,575,36,11);
-INSERT INTO merchant_buylists VALUES (1052,575,36,12);
-INSERT INTO merchant_buylists VALUES (1054,575,36,13);
-INSERT INTO merchant_buylists VALUES (1058,575,36,14);
-INSERT INTO merchant_buylists VALUES (1098,575,36,15);
-INSERT INTO merchant_buylists VALUES (1097,632,36,16);
-INSERT INTO merchant_buylists VALUES (1096,632,36,17);
-INSERT INTO merchant_buylists VALUES (1370,862,36,18);
-INSERT INTO merchant_buylists VALUES (1401,862,36,19);
-INSERT INTO merchant_buylists VALUES (1411,862,36,20);
-INSERT INTO merchant_buylists VALUES (1372,862,36,21);
-INSERT INTO merchant_buylists VALUES (1513,920,36,22);
-INSERT INTO merchant_buylists VALUES (1399,862,36,23);
-INSERT INTO merchant_buylists VALUES (1386,862,36,24);
-INSERT INTO merchant_buylists VALUES (1377,862,36,25);
-INSERT INTO merchant_buylists VALUES (1383,862,36,26);
-INSERT INTO merchant_buylists VALUES (1514,920,36,27);
-INSERT INTO merchant_buylists VALUES (1405,862,36,28);
-INSERT INTO merchant_buylists VALUES (1403,862,36,29);
-INSERT INTO merchant_buylists VALUES (1371,862,36,30);
-INSERT INTO merchant_buylists VALUES (1515,920,36,31);
-INSERT INTO merchant_buylists VALUES (1,883,37,1);
-INSERT INTO merchant_buylists VALUES (4,883,37,2);
-INSERT INTO merchant_buylists VALUES (11,883,37,3);
-INSERT INTO merchant_buylists VALUES (13,883,37,4);
-INSERT INTO merchant_buylists VALUES (3,14375,37,5);
-INSERT INTO merchant_buylists VALUES (152,9280,37,6);
-INSERT INTO merchant_buylists VALUES (12,14375,37,7);
-INSERT INTO merchant_buylists VALUES (215,14375,37,8);
-INSERT INTO merchant_buylists VALUES (14,14375,37,9);
-INSERT INTO merchant_buylists VALUES (5,14375,37,10);
-INSERT INTO merchant_buylists VALUES (153,21275,37,11);
-INSERT INTO merchant_buylists VALUES (1333,62215,37,12);
-INSERT INTO merchant_buylists VALUES (66,62215,37,13);
-INSERT INTO merchant_buylists VALUES (67,62215,37,14);
-INSERT INTO merchant_buylists VALUES (122,62215,37,15);
-INSERT INTO merchant_buylists VALUES (154,62215,37,16);
-INSERT INTO merchant_buylists VALUES (216,62215,37,17);
-INSERT INTO merchant_buylists VALUES (271,62215,37,18);
-INSERT INTO merchant_buylists VALUES (2,156400,37,19);
-INSERT INTO merchant_buylists VALUES (218,156400,37,20);
-INSERT INTO merchant_buylists VALUES (272,156400,37,21);
-INSERT INTO merchant_buylists VALUES (15,156400,37,22);
-INSERT INTO merchant_buylists VALUES (28,106,37,23);
-INSERT INTO merchant_buylists VALUES (21,169,37,24);
-INSERT INTO merchant_buylists VALUES (29,1748,37,25);
-INSERT INTO merchant_buylists VALUES (22,2794,37,26);
-INSERT INTO merchant_buylists VALUES (30,5716,37,27);
-INSERT INTO merchant_buylists VALUES (23,9154,37,28);
-INSERT INTO merchant_buylists VALUES (2386,5716,37,29);
-INSERT INTO merchant_buylists VALUES (412,14605,37,30);
-INSERT INTO merchant_buylists VALUES (390,23345,37,31);
-INSERT INTO merchant_buylists VALUES (24,23345,37,32);
-INSERT INTO merchant_buylists VALUES (31,14605,37,33);
-INSERT INTO merchant_buylists VALUES (18,45,37,34);
-INSERT INTO merchant_buylists VALUES (19,734,37,35);
-INSERT INTO merchant_buylists VALUES (20,3197,37,36);
-INSERT INTO merchant_buylists VALUES (102,8176,37,37);
-INSERT INTO merchant_buylists VALUES (48,43,37,38);
-INSERT INTO merchant_buylists VALUES (1119,698,37,39);
-INSERT INTO merchant_buylists VALUES (49,3047,37,40);
-INSERT INTO merchant_buylists VALUES (50,7785,37,41);
-INSERT INTO merchant_buylists VALUES (1121,8,37,42);
-INSERT INTO merchant_buylists VALUES (35,43,37,43);
-INSERT INTO merchant_buylists VALUES (36,43,37,44);
-INSERT INTO merchant_buylists VALUES (1129,698,37,45);
-INSERT INTO merchant_buylists VALUES (1122,698,37,46);
-INSERT INTO merchant_buylists VALUES (37,3047,37,47);
-INSERT INTO merchant_buylists VALUES (38,7785,37,48);
-INSERT INTO merchant_buylists VALUES (41,63,37,49);
-INSERT INTO merchant_buylists VALUES (42,1048,37,50);
-INSERT INTO merchant_buylists VALUES (43,4577,37,51);
-INSERT INTO merchant_buylists VALUES (44,11730,37,52);
-INSERT INTO merchant_buylists VALUES (17,2,37,53);
-INSERT INTO merchant_buylists VALUES (1341,3,37,54);
-INSERT INTO merchant_buylists VALUES (7,883,38,1);
-INSERT INTO merchant_buylists VALUES (308,883,38,2);
-INSERT INTO merchant_buylists VALUES (8,14375,38,3);
-INSERT INTO merchant_buylists VALUES (99,14375,38,4);
-INSERT INTO merchant_buylists VALUES (9,62215,38,5);
-INSERT INTO merchant_buylists VALUES (176,156400,38,6);
-INSERT INTO merchant_buylists VALUES (310,156400,38,7);
-INSERT INTO merchant_buylists VALUES (462,106,38,8);
-INSERT INTO merchant_buylists VALUES (426,169,38,9);
-INSERT INTO merchant_buylists VALUES (1103,1748,38,10);
-INSERT INTO merchant_buylists VALUES (1100,2794,38,11);
-INSERT INTO merchant_buylists VALUES (463,1748,38,12);
-INSERT INTO merchant_buylists VALUES (428,2794,38,13);
-INSERT INTO merchant_buylists VALUES (464,5716,38,14);
-INSERT INTO merchant_buylists VALUES (429,9154,38,15);
-INSERT INTO merchant_buylists VALUES (1104,14605,38,16);
-INSERT INTO merchant_buylists VALUES (1101,23345,38,17);
-INSERT INTO merchant_buylists VALUES (18,45,38,18);
-INSERT INTO merchant_buylists VALUES (19,734,38,19);
-INSERT INTO merchant_buylists VALUES (20,3197,38,20);
-INSERT INTO merchant_buylists VALUES (102,8176,38,21);
-INSERT INTO merchant_buylists VALUES (48,43,38,22);
-INSERT INTO merchant_buylists VALUES (1119,698,38,23);
-INSERT INTO merchant_buylists VALUES (49,3047,38,24);
-INSERT INTO merchant_buylists VALUES (50,7785,38,25);
-INSERT INTO merchant_buylists VALUES (1121,8,38,26);
-INSERT INTO merchant_buylists VALUES (35,43,38,27);
-INSERT INTO merchant_buylists VALUES (36,43,38,28);
-INSERT INTO merchant_buylists VALUES (1129,698,38,29);
-INSERT INTO merchant_buylists VALUES (1122,698,38,30);
-INSERT INTO merchant_buylists VALUES (37,3047,38,31);
-INSERT INTO merchant_buylists VALUES (38,7785,38,32);
-INSERT INTO merchant_buylists VALUES (41,63,38,33);
-INSERT INTO merchant_buylists VALUES (42,1048,38,34);
-INSERT INTO merchant_buylists VALUES (43,4577,38,35);
-INSERT INTO merchant_buylists VALUES (44,11730,38,36);
-INSERT INTO merchant_buylists VALUES (17,2,38,37);
-INSERT INTO merchant_buylists VALUES (1341,3,38,38);
-INSERT INTO merchant_buylists VALUES (1,883,39,1);
-INSERT INTO merchant_buylists VALUES (4,883,39,2);
-INSERT INTO merchant_buylists VALUES (11,883,39,3);
-INSERT INTO merchant_buylists VALUES (13,883,39,4);
-INSERT INTO merchant_buylists VALUES (3,14375,39,5);
-INSERT INTO merchant_buylists VALUES (152,9280,39,6);
-INSERT INTO merchant_buylists VALUES (12,14375,39,7);
-INSERT INTO merchant_buylists VALUES (215,14375,39,8);
-INSERT INTO merchant_buylists VALUES (14,14375,39,9);
-INSERT INTO merchant_buylists VALUES (5,14375,39,10);
-INSERT INTO merchant_buylists VALUES (153,21275,39,11);
-INSERT INTO merchant_buylists VALUES (1333,62215,39,12);
-INSERT INTO merchant_buylists VALUES (66,62215,39,13);
-INSERT INTO merchant_buylists VALUES (67,62215,39,14);
-INSERT INTO merchant_buylists VALUES (122,62215,39,15);
-INSERT INTO merchant_buylists VALUES (154,62215,39,16);
-INSERT INTO merchant_buylists VALUES (216,62215,39,17);
-INSERT INTO merchant_buylists VALUES (271,62215,39,18);
-INSERT INTO merchant_buylists VALUES (2,156400,39,19);
-INSERT INTO merchant_buylists VALUES (218,156400,39,20);
-INSERT INTO merchant_buylists VALUES (272,156400,39,21);
-INSERT INTO merchant_buylists VALUES (15,156400,39,22);
-INSERT INTO merchant_buylists VALUES (28,106,39,23);
-INSERT INTO merchant_buylists VALUES (21,169,39,24);
-INSERT INTO merchant_buylists VALUES (29,1748,39,25);
-INSERT INTO merchant_buylists VALUES (22,2794,39,26);
-INSERT INTO merchant_buylists VALUES (30,5716,39,27);
-INSERT INTO merchant_buylists VALUES (23,9154,39,28);
-INSERT INTO merchant_buylists VALUES (2386,5716,39,29);
-INSERT INTO merchant_buylists VALUES (412,14605,39,30);
-INSERT INTO merchant_buylists VALUES (390,23345,39,31);
-INSERT INTO merchant_buylists VALUES (24,23345,39,32);
-INSERT INTO merchant_buylists VALUES (31,14605,39,33);
-INSERT INTO merchant_buylists VALUES (18,45,39,34);
-INSERT INTO merchant_buylists VALUES (19,734,39,35);
-INSERT INTO merchant_buylists VALUES (20,3197,39,36);
-INSERT INTO merchant_buylists VALUES (102,8176,39,37);
-INSERT INTO merchant_buylists VALUES (48,43,39,38);
-INSERT INTO merchant_buylists VALUES (1119,698,39,39);
-INSERT INTO merchant_buylists VALUES (49,3047,39,40);
-INSERT INTO merchant_buylists VALUES (50,7785,39,41);
-INSERT INTO merchant_buylists VALUES (1121,8,39,42);
-INSERT INTO merchant_buylists VALUES (35,43,39,43);
-INSERT INTO merchant_buylists VALUES (36,43,39,44);
-INSERT INTO merchant_buylists VALUES (1129,698,39,45);
-INSERT INTO merchant_buylists VALUES (1122,698,39,46);
-INSERT INTO merchant_buylists VALUES (37,3047,39,47);
-INSERT INTO merchant_buylists VALUES (38,7785,39,48);
-INSERT INTO merchant_buylists VALUES (41,63,39,49);
-INSERT INTO merchant_buylists VALUES (42,1048,39,50);
-INSERT INTO merchant_buylists VALUES (43,4577,39,51);
-INSERT INTO merchant_buylists VALUES (44,11730,39,52);
-INSERT INTO merchant_buylists VALUES (17,2,39,53);
-INSERT INTO merchant_buylists VALUES (1341,3,39,54);
-INSERT INTO merchant_buylists VALUES (7,883,40,1);
-INSERT INTO merchant_buylists VALUES (308,883,40,2);
-INSERT INTO merchant_buylists VALUES (8,14375,40,3);
-INSERT INTO merchant_buylists VALUES (99,14375,40,4);
-INSERT INTO merchant_buylists VALUES (9,62215,40,5);
-INSERT INTO merchant_buylists VALUES (176,156400,40,6);
-INSERT INTO merchant_buylists VALUES (310,156400,40,7);
-INSERT INTO merchant_buylists VALUES (462,106,40,8);
-INSERT INTO merchant_buylists VALUES (426,169,40,9);
-INSERT INTO merchant_buylists VALUES (1103,1748,40,10);
-INSERT INTO merchant_buylists VALUES (1100,2794,40,11);
-INSERT INTO merchant_buylists VALUES (463,1748,40,12);
-INSERT INTO merchant_buylists VALUES (428,2794,40,13);
-INSERT INTO merchant_buylists VALUES (464,5716,40,14);
-INSERT INTO merchant_buylists VALUES (429,9154,40,15);
-INSERT INTO merchant_buylists VALUES (1104,14605,40,16);
-INSERT INTO merchant_buylists VALUES (1101,23345,40,17);
-INSERT INTO merchant_buylists VALUES (18,45,40,18);
-INSERT INTO merchant_buylists VALUES (19,734,40,19);
-INSERT INTO merchant_buylists VALUES (20,3197,40,20);
-INSERT INTO merchant_buylists VALUES (102,8176,40,21);
-INSERT INTO merchant_buylists VALUES (48,43,40,22);
-INSERT INTO merchant_buylists VALUES (1119,698,40,23);
-INSERT INTO merchant_buylists VALUES (49,3047,40,24);
-INSERT INTO merchant_buylists VALUES (50,7785,40,25);
-INSERT INTO merchant_buylists VALUES (1121,8,40,26);
-INSERT INTO merchant_buylists VALUES (35,43,40,27);
-INSERT INTO merchant_buylists VALUES (36,43,40,28);
-INSERT INTO merchant_buylists VALUES (1129,698,40,29);
-INSERT INTO merchant_buylists VALUES (1122,698,40,30);
-INSERT INTO merchant_buylists VALUES (37,3047,40,31);
-INSERT INTO merchant_buylists VALUES (38,7785,40,32);
-INSERT INTO merchant_buylists VALUES (41,63,40,33);
-INSERT INTO merchant_buylists VALUES (42,1048,40,34);
-INSERT INTO merchant_buylists VALUES (43,4577,40,35);
-INSERT INTO merchant_buylists VALUES (44,11730,40,36);
-INSERT INTO merchant_buylists VALUES (17,2,40,37);
-INSERT INTO merchant_buylists VALUES (1341,3,40,38);
-INSERT INTO merchant_buylists VALUES (118,76,41,1);
-INSERT INTO merchant_buylists VALUES (906,1242,41,2);
-INSERT INTO merchant_buylists VALUES (907,5382,41,3);
-INSERT INTO merchant_buylists VALUES (908,13685,41,4);
-INSERT INTO merchant_buylists VALUES (112,56,41,5);
-INSERT INTO merchant_buylists VALUES (113,933,41,6);
-INSERT INTO merchant_buylists VALUES (114,4036,41,7);
-INSERT INTO merchant_buylists VALUES (115,4036,41,8);
-INSERT INTO merchant_buylists VALUES (845,10224,41,9);
-INSERT INTO merchant_buylists VALUES (116,38,41,10);
-INSERT INTO merchant_buylists VALUES (875,621,41,11);
-INSERT INTO merchant_buylists VALUES (876,2691,41,12);
-INSERT INTO merchant_buylists VALUES (877,6808,41,13);
-INSERT INTO merchant_buylists VALUES (17,2,41,14);
-INSERT INTO merchant_buylists VALUES (1341,3,41,15);
-INSERT INTO merchant_buylists VALUES (1665,575,41,16);
-INSERT INTO merchant_buylists VALUES (1661,1150,41,17);
-INSERT INTO merchant_buylists VALUES (3031,460,41,18);
-INSERT INTO merchant_buylists VALUES (1785,288,41,19);
-INSERT INTO merchant_buylists VALUES (3947,40,41,20);
-INSERT INTO merchant_buylists VALUES (2509,17,41,21);
-INSERT INTO merchant_buylists VALUES (1835,8,41,22);
-INSERT INTO merchant_buylists VALUES (736,460,41,23);
-INSERT INTO merchant_buylists VALUES (1060,103,41,24);
-INSERT INTO merchant_buylists VALUES (1831,86,41,25);
-INSERT INTO merchant_buylists VALUES (1833,86,41,26);
-INSERT INTO merchant_buylists VALUES (734,1380,41,27);
-INSERT INTO merchant_buylists VALUES (735,2760,41,28);
-INSERT INTO merchant_buylists VALUES (1294,86,42,1);
-INSERT INTO merchant_buylists VALUES (1095,86,42,2);
-INSERT INTO merchant_buylists VALUES (1050,115,42,3);
-INSERT INTO merchant_buylists VALUES (1152,115,42,4);
-INSERT INTO merchant_buylists VALUES (1049,115,42,5);
-INSERT INTO merchant_buylists VALUES (1048,115,42,6);
-INSERT INTO merchant_buylists VALUES (1051,115,42,7);
-INSERT INTO merchant_buylists VALUES (1099,575,42,8);
-INSERT INTO merchant_buylists VALUES (1053,575,42,9);
-INSERT INTO merchant_buylists VALUES (1055,575,42,10);
-INSERT INTO merchant_buylists VALUES (1056,575,42,11);
-INSERT INTO merchant_buylists VALUES (1052,575,42,12);
-INSERT INTO merchant_buylists VALUES (1054,575,42,13);
-INSERT INTO merchant_buylists VALUES (1058,575,42,14);
-INSERT INTO merchant_buylists VALUES (1098,575,42,15);
-INSERT INTO merchant_buylists VALUES (1097,632,42,16);
-INSERT INTO merchant_buylists VALUES (1096,632,42,17);
-INSERT INTO merchant_buylists VALUES (1370,862,42,18);
-INSERT INTO merchant_buylists VALUES (1401,862,42,19);
-INSERT INTO merchant_buylists VALUES (1411,862,42,20);
-INSERT INTO merchant_buylists VALUES (1372,862,42,21);
-INSERT INTO merchant_buylists VALUES (1513,920,42,22);
-INSERT INTO merchant_buylists VALUES (1399,862,42,23);
-INSERT INTO merchant_buylists VALUES (1386,862,42,24);
-INSERT INTO merchant_buylists VALUES (1377,862,42,25);
-INSERT INTO merchant_buylists VALUES (1383,862,42,26);
-INSERT INTO merchant_buylists VALUES (1514,920,42,27);
-INSERT INTO merchant_buylists VALUES (1405,862,42,28);
-INSERT INTO merchant_buylists VALUES (1403,862,42,29);
-INSERT INTO merchant_buylists VALUES (1371,862,42,30);
-INSERT INTO merchant_buylists VALUES (1515,920,42,31);
-INSERT INTO merchant_buylists VALUES (179,740600,43,1);
-INSERT INTO merchant_buylists VALUES (182,740600,43,2);
-INSERT INTO merchant_buylists VALUES (183,740600,43,3);
-INSERT INTO merchant_buylists VALUES (185,740600,43,4);
-INSERT INTO merchant_buylists VALUES (315,740600,43,5);
-INSERT INTO merchant_buylists VALUES (83,823400,43,6);
-INSERT INTO merchant_buylists VALUES (143,823400,43,7);
-INSERT INTO merchant_buylists VALUES (144,823400,43,8);
-INSERT INTO merchant_buylists VALUES (238,1112050,43,9);
-INSERT INTO merchant_buylists VALUES (239,1112050,43,10);
-INSERT INTO merchant_buylists VALUES (240,1112050,43,11);
-INSERT INTO merchant_buylists VALUES (241,1112050,43,12);
-INSERT INTO merchant_buylists VALUES (186,1112050,43,13);
-INSERT INTO merchant_buylists VALUES (316,1112050,43,14);
-INSERT INTO merchant_buylists VALUES (317,1112050,43,15);
-INSERT INTO merchant_buylists VALUES (1341,3,43,16);
-INSERT INTO merchant_buylists VALUES (1342,6,43,17);
-INSERT INTO merchant_buylists VALUES (432,71990,44,1);
-INSERT INTO merchant_buylists VALUES (467,71875,44,2);
-INSERT INTO merchant_buylists VALUES (434,114885,44,3);
-INSERT INTO merchant_buylists VALUES (468,71875,44,4);
-INSERT INTO merchant_buylists VALUES (435,114885,44,5);
-INSERT INTO merchant_buylists VALUES (469,109480,44,6);
-INSERT INTO merchant_buylists VALUES (436,174800,44,7);
-INSERT INTO merchant_buylists VALUES (626,25185,44,8);
-INSERT INTO merchant_buylists VALUES (627,40250,44,9);
-INSERT INTO merchant_buylists VALUES (628,61295,44,10);
-INSERT INTO merchant_buylists VALUES (604,24035,44,11);
-INSERT INTO merchant_buylists VALUES (605,38295,44,12);
-INSERT INTO merchant_buylists VALUES (63,58420,44,13);
-INSERT INTO merchant_buylists VALUES (40,24035,44,14);
-INSERT INTO merchant_buylists VALUES (1123,38295,44,15);
-INSERT INTO merchant_buylists VALUES (553,58420,44,16);
-INSERT INTO merchant_buylists VALUES (45,35995,44,17);
-INSERT INTO merchant_buylists VALUES (46,57500,44,18);
-INSERT INTO merchant_buylists VALUES (910,41285,45,1);
-INSERT INTO merchant_buylists VALUES (911,65320,45,2);
-INSERT INTO merchant_buylists VALUES (912,98555,45,3);
-INSERT INTO merchant_buylists VALUES (847,30935,45,4);
-INSERT INTO merchant_buylists VALUES (848,48990,45,5);
-INSERT INTO merchant_buylists VALUES (849,73945,45,6);
-INSERT INTO merchant_buylists VALUES (879,32660,45,7);
-INSERT INTO merchant_buylists VALUES (880,49220,45,8);
-INSERT INTO merchant_buylists VALUES (1341,3,45,9);
-INSERT INTO merchant_buylists VALUES (3031,460,45,10);
-INSERT INTO merchant_buylists VALUES (1785,288,45,11);
-INSERT INTO merchant_buylists VALUES (1061,379,45,12);
-INSERT INTO merchant_buylists VALUES (1832,207,45,13);
-INSERT INTO merchant_buylists VALUES (1834,207,45,14);
-INSERT INTO merchant_buylists VALUES (737,2300,45,15);
-INSERT INTO merchant_buylists VALUES (1829,575,45,16);
-INSERT INTO merchant_buylists VALUES (1516,2070,46,1);
-INSERT INTO merchant_buylists VALUES (1414,2070,46,2);
-INSERT INTO merchant_buylists VALUES (1385,2070,46,3);
-INSERT INTO merchant_buylists VALUES (1382,2990,46,4);
-INSERT INTO merchant_buylists VALUES (1384,2990,46,5);
-INSERT INTO merchant_buylists VALUES (3944,2818,46,6);
-INSERT INTO merchant_buylists VALUES (1392,2818,46,7);
-INSERT INTO merchant_buylists VALUES (1407,2818,46,8);
-INSERT INTO merchant_buylists VALUES (1416,2818,46,9);
-INSERT INTO merchant_buylists VALUES (1397,2818,46,10);
-INSERT INTO merchant_buylists VALUES (1406,2818,46,11);
-INSERT INTO merchant_buylists VALUES (1408,2818,46,12);
-INSERT INTO merchant_buylists VALUES (1390,2818,46,13);
-INSERT INTO merchant_buylists VALUES (1387,2818,46,14);
-INSERT INTO merchant_buylists VALUES (1409,2818,46,15);
-INSERT INTO merchant_buylists VALUES (1413,2818,46,16);
-INSERT INTO merchant_buylists VALUES (1381,2990,46,17);
-INSERT INTO merchant_buylists VALUES (1380,575,46,18);
-INSERT INTO merchant_buylists VALUES (1528,2070,46,19);
-INSERT INTO merchant_buylists VALUES (1519,2070,46,20);
-INSERT INTO merchant_buylists VALUES (1518,2070,46,21);
-INSERT INTO merchant_buylists VALUES (1520,2818,46,22);
-INSERT INTO merchant_buylists VALUES (1530,2818,46,23);
-INSERT INTO merchant_buylists VALUES (1333,62215,47,1);
-INSERT INTO merchant_buylists VALUES (66,62215,47,2);
-INSERT INTO merchant_buylists VALUES (67,62215,47,3);
-INSERT INTO merchant_buylists VALUES (122,62215,47,4);
-INSERT INTO merchant_buylists VALUES (154,62215,47,5);
-INSERT INTO merchant_buylists VALUES (216,62215,47,6);
-INSERT INTO merchant_buylists VALUES (271,62215,47,7);
-INSERT INTO merchant_buylists VALUES (2,156400,47,8);
-INSERT INTO merchant_buylists VALUES (218,156400,47,9);
-INSERT INTO merchant_buylists VALUES (272,156400,47,10);
-INSERT INTO merchant_buylists VALUES (15,156400,47,11);
-INSERT INTO merchant_buylists VALUES (68,280600,47,12);
-INSERT INTO merchant_buylists VALUES (219,280600,47,13);
-INSERT INTO merchant_buylists VALUES (273,280600,47,14);
-INSERT INTO merchant_buylists VALUES (155,280600,47,15);
-INSERT INTO merchant_buylists VALUES (87,280600,47,16);
-INSERT INTO merchant_buylists VALUES (16,280600,47,17);
-INSERT INTO merchant_buylists VALUES (123,470350,47,18);
-INSERT INTO merchant_buylists VALUES (220,470350,47,19);
-INSERT INTO merchant_buylists VALUES (221,470350,47,20);
-INSERT INTO merchant_buylists VALUES (274,470350,47,21);
-INSERT INTO merchant_buylists VALUES (156,470350,47,22);
-INSERT INTO merchant_buylists VALUES (166,470350,47,23);
-INSERT INTO merchant_buylists VALUES (168,470350,47,24);
-INSERT INTO merchant_buylists VALUES (291,470350,47,25);
-INSERT INTO merchant_buylists VALUES (256,156400,47,26);
-INSERT INTO merchant_buylists VALUES (257,280600,47,27);
-INSERT INTO merchant_buylists VALUES (258,470350,47,28);
-INSERT INTO merchant_buylists VALUES (17,2,47,29);
-INSERT INTO merchant_buylists VALUES (1341,3,47,30);
-INSERT INTO merchant_buylists VALUES (9,62215,48,1);
-INSERT INTO merchant_buylists VALUES (176,156400,48,2);
-INSERT INTO merchant_buylists VALUES (310,156400,48,3);
-INSERT INTO merchant_buylists VALUES (177,280600,48,4);
-INSERT INTO merchant_buylists VALUES (311,280600,48,5);
-INSERT INTO merchant_buylists VALUES (100,280600,48,6);
-INSERT INTO merchant_buylists VALUES (178,470350,48,7);
-INSERT INTO merchant_buylists VALUES (101,470350,48,8);
-INSERT INTO merchant_buylists VALUES (312,470350,48,9);
-INSERT INTO merchant_buylists VALUES (314,470350,48,10);
-INSERT INTO merchant_buylists VALUES (179,740600,48,11);
-INSERT INTO merchant_buylists VALUES (182,740600,48,12);
-INSERT INTO merchant_buylists VALUES (17,2,48,13);
-INSERT INTO merchant_buylists VALUES (1341,3,48,14);
-INSERT INTO merchant_buylists VALUES (30,5716,49,1);
-INSERT INTO merchant_buylists VALUES (23,9154,49,2);
-INSERT INTO merchant_buylists VALUES (412,14605,49,3);
-INSERT INTO merchant_buylists VALUES (390,23345,49,4);
-INSERT INTO merchant_buylists VALUES (24,23345,49,5);
-INSERT INTO merchant_buylists VALUES (31,14605,49,6);
-INSERT INTO merchant_buylists VALUES (25,36570,49,7);
-INSERT INTO merchant_buylists VALUES (26,56580,49,8);
-INSERT INTO merchant_buylists VALUES (33,26450,49,9);
-INSERT INTO merchant_buylists VALUES (32,22885,49,10);
-INSERT INTO merchant_buylists VALUES (27,42435,49,11);
-INSERT INTO merchant_buylists VALUES (34,35305,49,12);
-INSERT INTO merchant_buylists VALUES (413,44965,49,13);
-INSERT INTO merchant_buylists VALUES (347,96025,49,14);
-INSERT INTO merchant_buylists VALUES (20,3197,49,15);
-INSERT INTO merchant_buylists VALUES (102,8176,49,16);
-INSERT INTO merchant_buylists VALUES (625,14835,49,17);
-INSERT INTO merchant_buylists VALUES (626,25185,49,18);
-INSERT INTO merchant_buylists VALUES (49,3047,49,19);
-INSERT INTO merchant_buylists VALUES (50,7785,49,20);
-INSERT INTO merchant_buylists VALUES (51,14145,49,21);
-INSERT INTO merchant_buylists VALUES (604,24035,49,22);
-INSERT INTO merchant_buylists VALUES (37,3047,49,23);
-INSERT INTO merchant_buylists VALUES (38,7785,49,24);
-INSERT INTO merchant_buylists VALUES (39,14145,49,25);
-INSERT INTO merchant_buylists VALUES (40,24035,49,26);
-INSERT INTO merchant_buylists VALUES (43,4577,49,27);
-INSERT INTO merchant_buylists VALUES (44,11730,49,28);
-INSERT INTO merchant_buylists VALUES (1148,21160,49,29);
-INSERT INTO merchant_buylists VALUES (45,35995,49,30);
-INSERT INTO merchant_buylists VALUES (464,5716,50,1);
-INSERT INTO merchant_buylists VALUES (429,9154,50,2);
-INSERT INTO merchant_buylists VALUES (1104,14605,50,3);
-INSERT INTO merchant_buylists VALUES (1101,23345,50,4);
-INSERT INTO merchant_buylists VALUES (1105,26450,50,5);
-INSERT INTO merchant_buylists VALUES (1102,42435,50,6);
-INSERT INTO merchant_buylists VALUES (465,44965,50,7);
-INSERT INTO merchant_buylists VALUES (432,71990,50,8);
-INSERT INTO merchant_buylists VALUES (20,3197,50,9);
-INSERT INTO merchant_buylists VALUES (102,8176,50,10);
-INSERT INTO merchant_buylists VALUES (625,14835,50,11);
-INSERT INTO merchant_buylists VALUES (626,25185,50,12);
-INSERT INTO merchant_buylists VALUES (49,3047,50,13);
-INSERT INTO merchant_buylists VALUES (50,7785,50,14);
-INSERT INTO merchant_buylists VALUES (51,14145,50,15);
-INSERT INTO merchant_buylists VALUES (604,24035,50,16);
-INSERT INTO merchant_buylists VALUES (37,3047,50,17);
-INSERT INTO merchant_buylists VALUES (38,7785,50,18);
-INSERT INTO merchant_buylists VALUES (39,14145,50,19);
-INSERT INTO merchant_buylists VALUES (40,24035,50,20);
-INSERT INTO merchant_buylists VALUES (43,4577,50,21);
-INSERT INTO merchant_buylists VALUES (44,11730,50,22);
-INSERT INTO merchant_buylists VALUES (1148,21160,50,23);
-INSERT INTO merchant_buylists VALUES (45,35995,50,24);
-INSERT INTO merchant_buylists VALUES (17,2,50,25);
-INSERT INTO merchant_buylists VALUES (1341,3,50,26);
-INSERT INTO merchant_buylists VALUES (907,5382,51,1);
-INSERT INTO merchant_buylists VALUES (908,13685,51,2);
-INSERT INTO merchant_buylists VALUES (114,4036,51,3);
-INSERT INTO merchant_buylists VALUES (115,4036,51,4);
-INSERT INTO merchant_buylists VALUES (845,10224,51,5);
-INSERT INTO merchant_buylists VALUES (876,2691,51,6);
-INSERT INTO merchant_buylists VALUES (877,6808,51,7);
-INSERT INTO merchant_buylists VALUES (17,2,51,8);
-INSERT INTO merchant_buylists VALUES (1341,3,51,9);
-INSERT INTO merchant_buylists VALUES (1665,575,51,10);
-INSERT INTO merchant_buylists VALUES (1661,1150,51,11);
-INSERT INTO merchant_buylists VALUES (3031,460,51,12);
-INSERT INTO merchant_buylists VALUES (1785,288,51,13);
-INSERT INTO merchant_buylists VALUES (1831,86,51,14);
-INSERT INTO merchant_buylists VALUES (1833,86,51,15);
-INSERT INTO merchant_buylists VALUES (734,1380,51,16);
-INSERT INTO merchant_buylists VALUES (735,2760,51,17);
-INSERT INTO merchant_buylists VALUES (1061,379,51,18);
-INSERT INTO merchant_buylists VALUES (1832,207,51,19);
-INSERT INTO merchant_buylists VALUES (736,460,51,20);
-INSERT INTO merchant_buylists VALUES (737,2300,51,21);
-INSERT INTO merchant_buylists VALUES (1829,575,51,22);
-INSERT INTO merchant_buylists VALUES (2130,1150,51,23);
-INSERT INTO merchant_buylists VALUES (1099,575,52,1);
-INSERT INTO merchant_buylists VALUES (1053,575,52,2);
-INSERT INTO merchant_buylists VALUES (1055,575,52,3);
-INSERT INTO merchant_buylists VALUES (1056,575,52,4);
-INSERT INTO merchant_buylists VALUES (1052,575,52,5);
-INSERT INTO merchant_buylists VALUES (1054,575,52,6);
-INSERT INTO merchant_buylists VALUES (1058,575,52,7);
-INSERT INTO merchant_buylists VALUES (1098,575,52,8);
-INSERT INTO merchant_buylists VALUES (1097,632,52,9);
-INSERT INTO merchant_buylists VALUES (1096,632,52,10);
-INSERT INTO merchant_buylists VALUES (1370,862,52,11);
-INSERT INTO merchant_buylists VALUES (1401,862,52,12);
-INSERT INTO merchant_buylists VALUES (1411,862,52,13);
-INSERT INTO merchant_buylists VALUES (1372,862,52,14);
-INSERT INTO merchant_buylists VALUES (1513,920,52,15);
-INSERT INTO merchant_buylists VALUES (1399,862,52,16);
-INSERT INTO merchant_buylists VALUES (1386,862,52,17);
-INSERT INTO merchant_buylists VALUES (1856,1840,52,18);
-INSERT INTO merchant_buylists VALUES (1377,862,52,19);
-INSERT INTO merchant_buylists VALUES (1383,862,52,20);
-INSERT INTO merchant_buylists VALUES (1514,920,52,21);
-INSERT INTO merchant_buylists VALUES (1405,862,52,22);
-INSERT INTO merchant_buylists VALUES (1403,862,52,23);
-INSERT INTO merchant_buylists VALUES (1371,862,52,24);
-INSERT INTO merchant_buylists VALUES (1515,920,52,25);
-INSERT INTO merchant_buylists VALUES (1667,920,52,26);
-INSERT INTO merchant_buylists VALUES (1669,920,52,27);
-INSERT INTO merchant_buylists VALUES (1671,920,52,28);
-INSERT INTO merchant_buylists VALUES (1512,1322,52,29);
-INSERT INTO merchant_buylists VALUES (1379,1322,52,30);
-INSERT INTO merchant_buylists VALUES (1402,1438,52,31);
-INSERT INTO merchant_buylists VALUES (1517,1438,52,32);
-INSERT INTO merchant_buylists VALUES (1415,1438,52,33);
-INSERT INTO merchant_buylists VALUES (1391,1438,52,34);
-INSERT INTO merchant_buylists VALUES (1398,1438,52,35);
-INSERT INTO merchant_buylists VALUES (1389,1438,52,36);
-INSERT INTO merchant_buylists VALUES (1388,1438,52,37);
-INSERT INTO merchant_buylists VALUES (1410,1438,52,38);
-INSERT INTO merchant_buylists VALUES (1404,1438,52,39);
-INSERT INTO merchant_buylists VALUES (1417,1438,52,40);
-INSERT INTO merchant_buylists VALUES (1400,1438,52,41);
-INSERT INTO merchant_buylists VALUES (1418,1438,52,42);
-INSERT INTO merchant_buylists VALUES (1668,1438,52,43);
-INSERT INTO merchant_buylists VALUES (1670,1438,52,44);
-INSERT INTO merchant_buylists VALUES (3038,1782,52,45);
-INSERT INTO merchant_buylists VALUES (1378,1840,52,46);
-INSERT INTO merchant_buylists VALUES (1516,2070,52,47);
-INSERT INTO merchant_buylists VALUES (1414,2070,52,48);
-INSERT INTO merchant_buylists VALUES (1385,2070,52,49);
-INSERT INTO merchant_buylists VALUES (1394,2070,52,50);
-INSERT INTO merchant_buylists VALUES (1526,460,52,51);
-INSERT INTO merchant_buylists VALUES (1522,862,52,52);
-INSERT INTO merchant_buylists VALUES (1535,920,52,53);
-INSERT INTO merchant_buylists VALUES (1521,920,52,54);
-INSERT INTO merchant_buylists VALUES (1523,920,52,55);
-INSERT INTO merchant_buylists VALUES (1534,920,52,56);
-INSERT INTO merchant_buylists VALUES (1537,920,52,57);
-INSERT INTO merchant_buylists VALUES (1533,1438,52,58);
-INSERT INTO merchant_buylists VALUES (1536,1438,52,59);
-INSERT INTO merchant_buylists VALUES (1532,1438,52,60);
-INSERT INTO merchant_buylists VALUES (1528,2070,52,61);
-INSERT INTO merchant_buylists VALUES (1519,2070,52,62);
-INSERT INTO merchant_buylists VALUES (1518,2070,52,63);
-INSERT INTO merchant_buylists VALUES (3,15000,53,1);
-INSERT INTO merchant_buylists VALUES (152,9684,53,2);
-INSERT INTO merchant_buylists VALUES (12,15000,53,3);
-INSERT INTO merchant_buylists VALUES (215,15000,53,4);
-INSERT INTO merchant_buylists VALUES (14,15000,53,5);
-INSERT INTO merchant_buylists VALUES (5,15000,53,6);
-INSERT INTO merchant_buylists VALUES (153,22200,53,7);
-INSERT INTO merchant_buylists VALUES (1333,64920,53,8);
-INSERT INTO merchant_buylists VALUES (66,64920,53,9);
-INSERT INTO merchant_buylists VALUES (67,64920,53,10);
-INSERT INTO merchant_buylists VALUES (122,64920,53,11);
-INSERT INTO merchant_buylists VALUES (154,64920,53,12);
-INSERT INTO merchant_buylists VALUES (216,64920,53,13);
-INSERT INTO merchant_buylists VALUES (271,64920,53,14);
-INSERT INTO merchant_buylists VALUES (2,163200,53,15);
-INSERT INTO merchant_buylists VALUES (218,163200,53,16);
-INSERT INTO merchant_buylists VALUES (272,163200,53,17);
-INSERT INTO merchant_buylists VALUES (15,163200,53,18);
-INSERT INTO merchant_buylists VALUES (68,292800,53,19);
-INSERT INTO merchant_buylists VALUES (219,292800,53,20);
-INSERT INTO merchant_buylists VALUES (273,292800,53,21);
-INSERT INTO merchant_buylists VALUES (155,292800,53,22);
-INSERT INTO merchant_buylists VALUES (87,292800,53,23);
-INSERT INTO merchant_buylists VALUES (16,292800,53,24);
-INSERT INTO merchant_buylists VALUES (123,490800,53,25);
-INSERT INTO merchant_buylists VALUES (220,490800,53,26);
-INSERT INTO merchant_buylists VALUES (221,490800,53,27);
-INSERT INTO merchant_buylists VALUES (274,490800,53,28);
-INSERT INTO merchant_buylists VALUES (156,490800,53,29);
-INSERT INTO merchant_buylists VALUES (166,490800,53,30);
-INSERT INTO merchant_buylists VALUES (168,490800,53,31);
-INSERT INTO merchant_buylists VALUES (291,490800,53,32);
-INSERT INTO merchant_buylists VALUES (254,15000,53,33);
-INSERT INTO merchant_buylists VALUES (255,64920,53,34);
-INSERT INTO merchant_buylists VALUES (256,163200,53,35);
-INSERT INTO merchant_buylists VALUES (257,292800,53,36);
-INSERT INTO merchant_buylists VALUES (258,490800,53,37);
-INSERT INTO merchant_buylists VALUES (17,2,53,38);
-INSERT INTO merchant_buylists VALUES (1341,4,53,39);
-INSERT INTO merchant_buylists VALUES (8,15000,54,1);
-INSERT INTO merchant_buylists VALUES (99,15000,54,2);
-INSERT INTO merchant_buylists VALUES (9,64920,54,3);
-INSERT INTO merchant_buylists VALUES (176,163200,54,4);
-INSERT INTO merchant_buylists VALUES (310,163200,54,5);
-INSERT INTO merchant_buylists VALUES (177,292800,54,6);
-INSERT INTO merchant_buylists VALUES (311,292800,54,7);
-INSERT INTO merchant_buylists VALUES (100,292800,54,8);
-INSERT INTO merchant_buylists VALUES (178,490800,54,9);
-INSERT INTO merchant_buylists VALUES (101,490800,54,10);
-INSERT INTO merchant_buylists VALUES (312,490800,54,11);
-INSERT INTO merchant_buylists VALUES (314,490800,54,12);
-INSERT INTO merchant_buylists VALUES (17,2,54,13);
-INSERT INTO merchant_buylists VALUES (1341,4,54,14);
-INSERT INTO merchant_buylists VALUES (29,1824,55,1);
-INSERT INTO merchant_buylists VALUES (22,2916,55,2);
-INSERT INTO merchant_buylists VALUES (30,5964,55,3);
-INSERT INTO merchant_buylists VALUES (23,9552,55,4);
-INSERT INTO merchant_buylists VALUES (2386,5964,55,5);
-INSERT INTO merchant_buylists VALUES (412,15240,55,6);
-INSERT INTO merchant_buylists VALUES (390,24360,55,7);
-INSERT INTO merchant_buylists VALUES (24,24360,55,8);
-INSERT INTO merchant_buylists VALUES (31,15240,55,9);
-INSERT INTO merchant_buylists VALUES (26,59040,55,10);
-INSERT INTO merchant_buylists VALUES (33,27600,55,11);
-INSERT INTO merchant_buylists VALUES (27,44280,55,12);
-INSERT INTO merchant_buylists VALUES (34,36840,55,13);
-INSERT INTO merchant_buylists VALUES (347,100200,55,14);
-INSERT INTO merchant_buylists VALUES (18,47,55,15);
-INSERT INTO merchant_buylists VALUES (19,766,55,16);
-INSERT INTO merchant_buylists VALUES (20,3336,55,17);
-INSERT INTO merchant_buylists VALUES (102,8532,55,18);
-INSERT INTO merchant_buylists VALUES (625,15480,55,19);
-INSERT INTO merchant_buylists VALUES (626,26280,55,20);
-INSERT INTO merchant_buylists VALUES (1119,728,55,21);
-INSERT INTO merchant_buylists VALUES (49,3180,55,22);
-INSERT INTO merchant_buylists VALUES (50,8124,55,23);
-INSERT INTO merchant_buylists VALUES (51,14760,55,24);
-INSERT INTO merchant_buylists VALUES (604,25080,55,25);
-INSERT INTO merchant_buylists VALUES (1129,728,55,26);
-INSERT INTO merchant_buylists VALUES (1122,728,55,27);
-INSERT INTO merchant_buylists VALUES (37,3180,55,28);
-INSERT INTO merchant_buylists VALUES (38,8124,55,29);
-INSERT INTO merchant_buylists VALUES (39,14760,55,30);
-INSERT INTO merchant_buylists VALUES (40,25080,55,31);
-INSERT INTO merchant_buylists VALUES (42,1093,55,32);
-INSERT INTO merchant_buylists VALUES (43,4776,55,33);
-INSERT INTO merchant_buylists VALUES (44,12240,55,34);
-INSERT INTO merchant_buylists VALUES (1148,22080,55,35);
-INSERT INTO merchant_buylists VALUES (45,37560,55,36);
-INSERT INTO merchant_buylists VALUES (17,2,55,37);
-INSERT INTO merchant_buylists VALUES (1341,4,55,38);
-INSERT INTO merchant_buylists VALUES (1100,2916,56,1);
-INSERT INTO merchant_buylists VALUES (463,1824,56,2);
-INSERT INTO merchant_buylists VALUES (428,2916,56,3);
-INSERT INTO merchant_buylists VALUES (464,5964,56,4);
-INSERT INTO merchant_buylists VALUES (429,9552,56,5);
-INSERT INTO merchant_buylists VALUES (1104,15240,56,6);
-INSERT INTO merchant_buylists VALUES (1101,24360,56,7);
-INSERT INTO merchant_buylists VALUES (1105,27600,56,8);
-INSERT INTO merchant_buylists VALUES (1102,44280,56,9);
-INSERT INTO merchant_buylists VALUES (465,46920,56,10);
-INSERT INTO merchant_buylists VALUES (432,75120,56,11);
-INSERT INTO merchant_buylists VALUES (18,47,56,12);
-INSERT INTO merchant_buylists VALUES (19,766,56,13);
-INSERT INTO merchant_buylists VALUES (20,3336,56,14);
-INSERT INTO merchant_buylists VALUES (102,8532,56,15);
-INSERT INTO merchant_buylists VALUES (625,15480,56,16);
-INSERT INTO merchant_buylists VALUES (626,26280,56,17);
-INSERT INTO merchant_buylists VALUES (1119,728,56,18);
-INSERT INTO merchant_buylists VALUES (49,3180,56,19);
-INSERT INTO merchant_buylists VALUES (50,8124,56,20);
-INSERT INTO merchant_buylists VALUES (51,14760,56,21);
-INSERT INTO merchant_buylists VALUES (604,25080,56,22);
-INSERT INTO merchant_buylists VALUES (1129,728,56,23);
-INSERT INTO merchant_buylists VALUES (1122,728,56,24);
-INSERT INTO merchant_buylists VALUES (37,3180,56,25);
-INSERT INTO merchant_buylists VALUES (38,8124,56,26);
-INSERT INTO merchant_buylists VALUES (39,14760,56,27);
-INSERT INTO merchant_buylists VALUES (40,25080,56,28);
-INSERT INTO merchant_buylists VALUES (42,1093,56,29);
-INSERT INTO merchant_buylists VALUES (43,4776,56,30);
-INSERT INTO merchant_buylists VALUES (44,12240,56,31);
-INSERT INTO merchant_buylists VALUES (1148,22080,56,32);
-INSERT INTO merchant_buylists VALUES (45,37560,56,33);
-INSERT INTO merchant_buylists VALUES (17,2,56,34);
-INSERT INTO merchant_buylists VALUES (1341,4,56,35);
-INSERT INTO merchant_buylists VALUES (1099,600,57,1);
-INSERT INTO merchant_buylists VALUES (1053,600,57,2);
-INSERT INTO merchant_buylists VALUES (1055,600,57,3);
-INSERT INTO merchant_buylists VALUES (1056,600,57,4);
-INSERT INTO merchant_buylists VALUES (1052,600,57,5);
-INSERT INTO merchant_buylists VALUES (1054,600,57,6);
-INSERT INTO merchant_buylists VALUES (1058,600,57,7);
-INSERT INTO merchant_buylists VALUES (1098,600,57,8);
-INSERT INTO merchant_buylists VALUES (1097,660,57,9);
-INSERT INTO merchant_buylists VALUES (1096,660,57,10);
-INSERT INTO merchant_buylists VALUES (1370,900,57,11);
-INSERT INTO merchant_buylists VALUES (1401,900,57,12);
-INSERT INTO merchant_buylists VALUES (1411,900,57,13);
-INSERT INTO merchant_buylists VALUES (1372,900,57,14);
-INSERT INTO merchant_buylists VALUES (1513,960,57,15);
-INSERT INTO merchant_buylists VALUES (1399,900,57,16);
-INSERT INTO merchant_buylists VALUES (1386,900,57,17);
-INSERT INTO merchant_buylists VALUES (1856,1920,57,18);
-INSERT INTO merchant_buylists VALUES (1377,900,57,19);
-INSERT INTO merchant_buylists VALUES (1383,900,57,20);
-INSERT INTO merchant_buylists VALUES (1514,960,57,21);
-INSERT INTO merchant_buylists VALUES (1405,900,57,22);
-INSERT INTO merchant_buylists VALUES (1403,900,57,23);
-INSERT INTO merchant_buylists VALUES (1371,900,57,24);
-INSERT INTO merchant_buylists VALUES (1515,960,57,25);
-INSERT INTO merchant_buylists VALUES (1667,960,57,26);
-INSERT INTO merchant_buylists VALUES (1669,960,57,27);
-INSERT INTO merchant_buylists VALUES (1671,960,57,28);
-INSERT INTO merchant_buylists VALUES (1512,1380,57,29);
-INSERT INTO merchant_buylists VALUES (1379,1380,57,30);
-INSERT INTO merchant_buylists VALUES (1402,1500,57,31);
-INSERT INTO merchant_buylists VALUES (1517,1500,57,32);
-INSERT INTO merchant_buylists VALUES (1415,1500,57,33);
-INSERT INTO merchant_buylists VALUES (1391,1500,57,34);
-INSERT INTO merchant_buylists VALUES (1398,1500,57,35);
-INSERT INTO merchant_buylists VALUES (1389,1500,57,36);
-INSERT INTO merchant_buylists VALUES (1388,1500,57,37);
-INSERT INTO merchant_buylists VALUES (1410,1500,57,38);
-INSERT INTO merchant_buylists VALUES (1404,1500,57,39);
-INSERT INTO merchant_buylists VALUES (1417,1500,57,40);
-INSERT INTO merchant_buylists VALUES (1400,1500,57,41);
-INSERT INTO merchant_buylists VALUES (1418,1500,57,42);
-INSERT INTO merchant_buylists VALUES (1668,1500,57,43);
-INSERT INTO merchant_buylists VALUES (1670,1500,57,44);
-INSERT INTO merchant_buylists VALUES (3038,1860,57,45);
-INSERT INTO merchant_buylists VALUES (1378,1920,57,46);
-INSERT INTO merchant_buylists VALUES (1516,2160,57,47);
-INSERT INTO merchant_buylists VALUES (1414,2160,57,48);
-INSERT INTO merchant_buylists VALUES (1385,2160,57,49);
-INSERT INTO merchant_buylists VALUES (1394,2160,57,50);
-INSERT INTO merchant_buylists VALUES (1526,480,57,51);
-INSERT INTO merchant_buylists VALUES (1522,900,57,52);
-INSERT INTO merchant_buylists VALUES (1535,960,57,53);
-INSERT INTO merchant_buylists VALUES (1521,960,57,54);
-INSERT INTO merchant_buylists VALUES (1523,960,57,55);
-INSERT INTO merchant_buylists VALUES (1534,960,57,56);
-INSERT INTO merchant_buylists VALUES (1537,960,57,57);
-INSERT INTO merchant_buylists VALUES (1533,1500,57,58);
-INSERT INTO merchant_buylists VALUES (1536,1500,57,59);
-INSERT INTO merchant_buylists VALUES (1532,1500,57,60);
-INSERT INTO merchant_buylists VALUES (1528,2160,57,61);
-INSERT INTO merchant_buylists VALUES (1519,2160,57,62);
-INSERT INTO merchant_buylists VALUES (1518,2160,57,63);
-INSERT INTO merchant_buylists VALUES (1333,70330,58,1);
-INSERT INTO merchant_buylists VALUES (66,70330,58,2);
-INSERT INTO merchant_buylists VALUES (67,70330,58,3);
-INSERT INTO merchant_buylists VALUES (122,70330,58,4);
-INSERT INTO merchant_buylists VALUES (154,70330,58,5);
-INSERT INTO merchant_buylists VALUES (216,70330,58,6);
-INSERT INTO merchant_buylists VALUES (271,70330,58,7);
-INSERT INTO merchant_buylists VALUES (2,176800,58,8);
-INSERT INTO merchant_buylists VALUES (218,176800,58,9);
-INSERT INTO merchant_buylists VALUES (272,176800,58,10);
-INSERT INTO merchant_buylists VALUES (15,176800,58,11);
-INSERT INTO merchant_buylists VALUES (68,317200,58,12);
-INSERT INTO merchant_buylists VALUES (219,317200,58,13);
-INSERT INTO merchant_buylists VALUES (273,317200,58,14);
-INSERT INTO merchant_buylists VALUES (155,317200,58,15);
-INSERT INTO merchant_buylists VALUES (87,317200,58,16);
-INSERT INTO merchant_buylists VALUES (16,317200,58,17);
-INSERT INTO merchant_buylists VALUES (123,531700,58,18);
-INSERT INTO merchant_buylists VALUES (220,531700,58,19);
-INSERT INTO merchant_buylists VALUES (221,531700,58,20);
-INSERT INTO merchant_buylists VALUES (274,531700,58,21);
-INSERT INTO merchant_buylists VALUES (156,531700,58,22);
-INSERT INTO merchant_buylists VALUES (166,531700,58,23);
-INSERT INTO merchant_buylists VALUES (168,531700,58,24);
-INSERT INTO merchant_buylists VALUES (291,531700,58,25);
-INSERT INTO merchant_buylists VALUES (256,176800,58,26);
-INSERT INTO merchant_buylists VALUES (257,317200,58,27);
-INSERT INTO merchant_buylists VALUES (258,531700,58,28);
-INSERT INTO merchant_buylists VALUES (17,3,58,29);
-INSERT INTO merchant_buylists VALUES (1341,4,58,30);
-INSERT INTO merchant_buylists VALUES (9,70330,59,1);
-INSERT INTO merchant_buylists VALUES (176,176800,59,2);
-INSERT INTO merchant_buylists VALUES (310,176800,59,3);
-INSERT INTO merchant_buylists VALUES (177,317200,59,4);
-INSERT INTO merchant_buylists VALUES (311,317200,59,5);
-INSERT INTO merchant_buylists VALUES (100,317200,59,6);
-INSERT INTO merchant_buylists VALUES (178,531700,59,7);
-INSERT INTO merchant_buylists VALUES (101,531700,59,8);
-INSERT INTO merchant_buylists VALUES (312,531700,59,9);
-INSERT INTO merchant_buylists VALUES (314,531700,59,10);
-INSERT INTO merchant_buylists VALUES (179,837200,59,11);
-INSERT INTO merchant_buylists VALUES (182,837200,59,12);
-INSERT INTO merchant_buylists VALUES (17,3,59,13);
-INSERT INTO merchant_buylists VALUES (1341,4,59,14);
-INSERT INTO merchant_buylists VALUES (1099,650,60,1);
-INSERT INTO merchant_buylists VALUES (1053,650,60,2);
-INSERT INTO merchant_buylists VALUES (1055,650,60,3);
-INSERT INTO merchant_buylists VALUES (1056,650,60,4);
-INSERT INTO merchant_buylists VALUES (1052,650,60,5);
-INSERT INTO merchant_buylists VALUES (1054,650,60,6);
-INSERT INTO merchant_buylists VALUES (1058,650,60,7);
-INSERT INTO merchant_buylists VALUES (1098,650,60,8);
-INSERT INTO merchant_buylists VALUES (1097,715,60,9);
-INSERT INTO merchant_buylists VALUES (1096,715,60,10);
-INSERT INTO merchant_buylists VALUES (1370,975,60,11);
-INSERT INTO merchant_buylists VALUES (1401,975,60,12);
-INSERT INTO merchant_buylists VALUES (1411,975,60,13);
-INSERT INTO merchant_buylists VALUES (1372,975,60,14);
-INSERT INTO merchant_buylists VALUES (1513,1040,60,15);
-INSERT INTO merchant_buylists VALUES (1399,975,60,16);
-INSERT INTO merchant_buylists VALUES (1386,975,60,17);
-INSERT INTO merchant_buylists VALUES (1856,2080,60,18);
-INSERT INTO merchant_buylists VALUES (1377,975,60,19);
-INSERT INTO merchant_buylists VALUES (1383,975,60,20);
-INSERT INTO merchant_buylists VALUES (1514,1040,60,21);
-INSERT INTO merchant_buylists VALUES (1405,975,60,22);
-INSERT INTO merchant_buylists VALUES (1403,975,60,23);
-INSERT INTO merchant_buylists VALUES (1371,975,60,24);
-INSERT INTO merchant_buylists VALUES (1515,1040,60,25);
-INSERT INTO merchant_buylists VALUES (1667,1040,60,26);
-INSERT INTO merchant_buylists VALUES (1669,1040,60,27);
-INSERT INTO merchant_buylists VALUES (1671,1040,60,28);
-INSERT INTO merchant_buylists VALUES (1512,1495,60,29);
-INSERT INTO merchant_buylists VALUES (1379,1495,60,30);
-INSERT INTO merchant_buylists VALUES (1402,1625,60,31);
-INSERT INTO merchant_buylists VALUES (1517,1625,60,32);
-INSERT INTO merchant_buylists VALUES (1415,1625,60,33);
-INSERT INTO merchant_buylists VALUES (1391,1625,60,34);
-INSERT INTO merchant_buylists VALUES (1398,1625,60,35);
-INSERT INTO merchant_buylists VALUES (1389,1625,60,36);
-INSERT INTO merchant_buylists VALUES (1388,1625,60,37);
-INSERT INTO merchant_buylists VALUES (1410,1625,60,38);
-INSERT INTO merchant_buylists VALUES (1404,1625,60,39);
-INSERT INTO merchant_buylists VALUES (1417,1625,60,40);
-INSERT INTO merchant_buylists VALUES (1400,1625,60,41);
-INSERT INTO merchant_buylists VALUES (1418,1625,60,42);
-INSERT INTO merchant_buylists VALUES (1668,1625,60,43);
-INSERT INTO merchant_buylists VALUES (1670,1625,60,44);
-INSERT INTO merchant_buylists VALUES (3038,2015,60,45);
-INSERT INTO merchant_buylists VALUES (1378,2080,60,46);
-INSERT INTO merchant_buylists VALUES (1516,2340,60,47);
-INSERT INTO merchant_buylists VALUES (1414,2340,60,48);
-INSERT INTO merchant_buylists VALUES (1385,2340,60,49);
-INSERT INTO merchant_buylists VALUES (1394,2340,60,50);
-INSERT INTO merchant_buylists VALUES (1526,520,60,51);
-INSERT INTO merchant_buylists VALUES (1522,975,60,52);
-INSERT INTO merchant_buylists VALUES (1535,1040,60,53);
-INSERT INTO merchant_buylists VALUES (1521,1040,60,54);
-INSERT INTO merchant_buylists VALUES (1523,1040,60,55);
-INSERT INTO merchant_buylists VALUES (1534,1040,60,56);
-INSERT INTO merchant_buylists VALUES (1537,1040,60,57);
-INSERT INTO merchant_buylists VALUES (1533,1625,60,58);
-INSERT INTO merchant_buylists VALUES (1536,1625,60,59);
-INSERT INTO merchant_buylists VALUES (1532,1625,60,60);
-INSERT INTO merchant_buylists VALUES (1528,2340,60,61);
-INSERT INTO merchant_buylists VALUES (1519,2340,60,62);
-INSERT INTO merchant_buylists VALUES (1518,2340,60,63);
-INSERT INTO merchant_buylists VALUES (2,163200,61,1);
-INSERT INTO merchant_buylists VALUES (218,163200,61,2);
-INSERT INTO merchant_buylists VALUES (272,163200,61,3);
-INSERT INTO merchant_buylists VALUES (15,163200,61,4);
-INSERT INTO merchant_buylists VALUES (68,292800,61,5);
-INSERT INTO merchant_buylists VALUES (219,292800,61,6);
-INSERT INTO merchant_buylists VALUES (273,292800,61,7);
-INSERT INTO merchant_buylists VALUES (155,292800,61,8);
-INSERT INTO merchant_buylists VALUES (87,292800,61,9);
-INSERT INTO merchant_buylists VALUES (16,292800,61,10);
-INSERT INTO merchant_buylists VALUES (123,490800,61,11);
-INSERT INTO merchant_buylists VALUES (220,490800,61,12);
-INSERT INTO merchant_buylists VALUES (221,490800,61,13);
-INSERT INTO merchant_buylists VALUES (274,490800,61,14);
-INSERT INTO merchant_buylists VALUES (156,490800,61,15);
-INSERT INTO merchant_buylists VALUES (166,490800,61,16);
-INSERT INTO merchant_buylists VALUES (168,490800,61,17);
-INSERT INTO merchant_buylists VALUES (291,490800,61,18);
-INSERT INTO merchant_buylists VALUES (69,772800,61,19);
-INSERT INTO merchant_buylists VALUES (222,772800,61,20);
-INSERT INTO merchant_buylists VALUES (275,772800,61,21);
-INSERT INTO merchant_buylists VALUES (277,772800,61,22);
-INSERT INTO merchant_buylists VALUES (292,772800,61,23);
-INSERT INTO merchant_buylists VALUES (295,772800,61,24);
-INSERT INTO merchant_buylists VALUES (256,163200,61,25);
-INSERT INTO merchant_buylists VALUES (257,292800,61,26);
-INSERT INTO merchant_buylists VALUES (258,490800,61,27);
-INSERT INTO merchant_buylists VALUES (259,772800,61,28);
-INSERT INTO merchant_buylists VALUES (412,15240,61,29);
-INSERT INTO merchant_buylists VALUES (390,24360,61,30);
-INSERT INTO merchant_buylists VALUES (24,24360,61,31);
-INSERT INTO merchant_buylists VALUES (31,15240,61,32);
-INSERT INTO merchant_buylists VALUES (25,38160,61,33);
-INSERT INTO merchant_buylists VALUES (26,59040,61,34);
-INSERT INTO merchant_buylists VALUES (33,27600,61,35);
-INSERT INTO merchant_buylists VALUES (32,23880,61,36);
-INSERT INTO merchant_buylists VALUES (27,44280,61,37);
-INSERT INTO merchant_buylists VALUES (34,36840,61,38);
-INSERT INTO merchant_buylists VALUES (413,46920,61,39);
-INSERT INTO merchant_buylists VALUES (347,100200,61,40);
-INSERT INTO merchant_buylists VALUES (391,75120,61,41);
-INSERT INTO merchant_buylists VALUES (414,75000,61,42);
-INSERT INTO merchant_buylists VALUES (392,119880,61,43);
-INSERT INTO merchant_buylists VALUES (58,219600,61,44);
-INSERT INTO merchant_buylists VALUES (415,114240,61,45);
-INSERT INTO merchant_buylists VALUES (102,8532,61,46);
-INSERT INTO merchant_buylists VALUES (625,15480,61,47);
-INSERT INTO merchant_buylists VALUES (626,26280,61,48);
-INSERT INTO merchant_buylists VALUES (627,42000,61,49);
-INSERT INTO merchant_buylists VALUES (50,8124,61,50);
-INSERT INTO merchant_buylists VALUES (51,14760,61,51);
-INSERT INTO merchant_buylists VALUES (604,25080,61,52);
-INSERT INTO merchant_buylists VALUES (605,39960,61,53);
-INSERT INTO merchant_buylists VALUES (38,8124,61,54);
-INSERT INTO merchant_buylists VALUES (39,14760,61,55);
-INSERT INTO merchant_buylists VALUES (40,25080,61,56);
-INSERT INTO merchant_buylists VALUES (1123,39960,61,57);
-INSERT INTO merchant_buylists VALUES (44,12240,61,58);
-INSERT INTO merchant_buylists VALUES (1148,22080,61,59);
-INSERT INTO merchant_buylists VALUES (45,37560,61,60);
-INSERT INTO merchant_buylists VALUES (46,60000,61,61);
-INSERT INTO merchant_buylists VALUES (17,2,61,62);
-INSERT INTO merchant_buylists VALUES (1341,4,61,63);
-INSERT INTO merchant_buylists VALUES (176,163200,62,1);
-INSERT INTO merchant_buylists VALUES (310,163200,62,2);
-INSERT INTO merchant_buylists VALUES (177,292800,62,3);
-INSERT INTO merchant_buylists VALUES (311,292800,62,4);
-INSERT INTO merchant_buylists VALUES (100,292800,62,5);
-INSERT INTO merchant_buylists VALUES (178,490800,62,6);
-INSERT INTO merchant_buylists VALUES (101,490800,62,7);
-INSERT INTO merchant_buylists VALUES (312,490800,62,8);
-INSERT INTO merchant_buylists VALUES (314,490800,62,9);
-INSERT INTO merchant_buylists VALUES (179,772800,62,10);
-INSERT INTO merchant_buylists VALUES (182,772800,62,11);
-INSERT INTO merchant_buylists VALUES (183,772800,62,12);
-INSERT INTO merchant_buylists VALUES (185,772800,62,13);
-INSERT INTO merchant_buylists VALUES (315,772800,62,14);
-INSERT INTO merchant_buylists VALUES (83,859200,62,15);
-INSERT INTO merchant_buylists VALUES (143,859200,62,16);
-INSERT INTO merchant_buylists VALUES (144,859200,62,17);
-INSERT INTO merchant_buylists VALUES (238,1160400,62,18);
-INSERT INTO merchant_buylists VALUES (239,1160400,62,19);
-INSERT INTO merchant_buylists VALUES (240,1160400,62,20);
-INSERT INTO merchant_buylists VALUES (1104,15240,62,21);
-INSERT INTO merchant_buylists VALUES (1101,24360,62,22);
-INSERT INTO merchant_buylists VALUES (1105,27600,62,23);
-INSERT INTO merchant_buylists VALUES (1102,44280,62,24);
-INSERT INTO merchant_buylists VALUES (465,46920,62,25);
-INSERT INTO merchant_buylists VALUES (432,75120,62,26);
-INSERT INTO merchant_buylists VALUES (467,75000,62,27);
-INSERT INTO merchant_buylists VALUES (434,119880,62,28);
-INSERT INTO merchant_buylists VALUES (468,75000,62,29);
-INSERT INTO merchant_buylists VALUES (435,119880,62,30);
-INSERT INTO merchant_buylists VALUES (469,114240,62,31);
-INSERT INTO merchant_buylists VALUES (436,182400,62,32);
-INSERT INTO merchant_buylists VALUES (102,8532,62,33);
-INSERT INTO merchant_buylists VALUES (625,15480,62,34);
-INSERT INTO merchant_buylists VALUES (626,26280,62,35);
-INSERT INTO merchant_buylists VALUES (627,42000,62,36);
-INSERT INTO merchant_buylists VALUES (50,8124,62,37);
-INSERT INTO merchant_buylists VALUES (51,14760,62,38);
-INSERT INTO merchant_buylists VALUES (604,25080,62,39);
-INSERT INTO merchant_buylists VALUES (605,39960,62,40);
-INSERT INTO merchant_buylists VALUES (38,8124,62,41);
-INSERT INTO merchant_buylists VALUES (39,14760,62,42);
-INSERT INTO merchant_buylists VALUES (40,25080,62,43);
-INSERT INTO merchant_buylists VALUES (1123,39960,62,44);
-INSERT INTO merchant_buylists VALUES (44,12240,62,45);
-INSERT INTO merchant_buylists VALUES (1148,22080,62,46);
-INSERT INTO merchant_buylists VALUES (45,37560,62,47);
-INSERT INTO merchant_buylists VALUES (46,60000,62,48);
-INSERT INTO merchant_buylists VALUES (17,2,62,49);
-INSERT INTO merchant_buylists VALUES (1341,4,62,50);
-INSERT INTO merchant_buylists VALUES (1370,900,63,1);
-INSERT INTO merchant_buylists VALUES (1401,900,63,2);
-INSERT INTO merchant_buylists VALUES (1411,900,63,3);
-INSERT INTO merchant_buylists VALUES (1372,900,63,4);
-INSERT INTO merchant_buylists VALUES (1513,960,63,5);
-INSERT INTO merchant_buylists VALUES (1399,900,63,6);
-INSERT INTO merchant_buylists VALUES (1386,900,63,7);
-INSERT INTO merchant_buylists VALUES (1856,1920,63,8);
-INSERT INTO merchant_buylists VALUES (1377,900,63,9);
-INSERT INTO merchant_buylists VALUES (1383,900,63,10);
-INSERT INTO merchant_buylists VALUES (1514,960,63,11);
-INSERT INTO merchant_buylists VALUES (1405,900,63,12);
-INSERT INTO merchant_buylists VALUES (1403,900,63,13);
-INSERT INTO merchant_buylists VALUES (1371,900,63,14);
-INSERT INTO merchant_buylists VALUES (1515,960,63,15);
-INSERT INTO merchant_buylists VALUES (1667,960,63,16);
-INSERT INTO merchant_buylists VALUES (1669,960,63,17);
-INSERT INTO merchant_buylists VALUES (1671,960,63,18);
-INSERT INTO merchant_buylists VALUES (1512,1380,63,19);
-INSERT INTO merchant_buylists VALUES (1379,1380,63,20);
-INSERT INTO merchant_buylists VALUES (1402,1500,63,21);
-INSERT INTO merchant_buylists VALUES (1517,1500,63,22);
-INSERT INTO merchant_buylists VALUES (1415,1500,63,23);
-INSERT INTO merchant_buylists VALUES (1391,1500,63,24);
-INSERT INTO merchant_buylists VALUES (1398,1500,63,25);
-INSERT INTO merchant_buylists VALUES (1389,1500,63,26);
-INSERT INTO merchant_buylists VALUES (1388,1500,63,27);
-INSERT INTO merchant_buylists VALUES (1410,1500,63,28);
-INSERT INTO merchant_buylists VALUES (1404,1500,63,29);
-INSERT INTO merchant_buylists VALUES (1417,1500,63,30);
-INSERT INTO merchant_buylists VALUES (1400,1500,63,31);
-INSERT INTO merchant_buylists VALUES (1418,1500,63,32);
-INSERT INTO merchant_buylists VALUES (1668,1500,63,33);
-INSERT INTO merchant_buylists VALUES (1670,1500,63,34);
-INSERT INTO merchant_buylists VALUES (3038,1860,63,35);
-INSERT INTO merchant_buylists VALUES (1378,1920,63,36);
-INSERT INTO merchant_buylists VALUES (1516,2160,63,37);
-INSERT INTO merchant_buylists VALUES (1414,2160,63,38);
-INSERT INTO merchant_buylists VALUES (1385,2160,63,39);
-INSERT INTO merchant_buylists VALUES (1394,2160,63,40);
-INSERT INTO merchant_buylists VALUES (1412,2940,63,41);
-INSERT INTO merchant_buylists VALUES (3944,2940,63,42);
-INSERT INTO merchant_buylists VALUES (1392,2940,63,43);
-INSERT INTO merchant_buylists VALUES (1407,2940,63,44);
-INSERT INTO merchant_buylists VALUES (1416,2940,63,45);
-INSERT INTO merchant_buylists VALUES (1397,2940,63,46);
-INSERT INTO merchant_buylists VALUES (1406,2940,63,47);
-INSERT INTO merchant_buylists VALUES (1408,2940,63,48);
-INSERT INTO merchant_buylists VALUES (1390,2940,63,49);
-INSERT INTO merchant_buylists VALUES (1387,2940,63,50);
-INSERT INTO merchant_buylists VALUES (1409,2940,63,51);
-INSERT INTO merchant_buylists VALUES (1413,2940,63,52);
-INSERT INTO merchant_buylists VALUES (1381,3120,63,53);
-INSERT INTO merchant_buylists VALUES (1382,3120,63,54);
-INSERT INTO merchant_buylists VALUES (1384,3120,63,55);
-INSERT INTO merchant_buylists VALUES (1380,600,63,56);
-INSERT INTO merchant_buylists VALUES (1535,960,63,57);
-INSERT INTO merchant_buylists VALUES (1521,960,63,58);
-INSERT INTO merchant_buylists VALUES (1523,960,63,59);
-INSERT INTO merchant_buylists VALUES (1534,960,63,60);
-INSERT INTO merchant_buylists VALUES (1537,960,63,61);
-INSERT INTO merchant_buylists VALUES (1533,1500,63,62);
-INSERT INTO merchant_buylists VALUES (1536,1500,63,63);
-INSERT INTO merchant_buylists VALUES (1532,1500,63,64);
-INSERT INTO merchant_buylists VALUES (1528,2160,63,65);
-INSERT INTO merchant_buylists VALUES (1519,2160,63,66);
-INSERT INTO merchant_buylists VALUES (1518,2160,63,67);
-INSERT INTO merchant_buylists VALUES (1520,2940,63,68);
-INSERT INTO merchant_buylists VALUES (1530,2940,63,69);
-INSERT INTO merchant_buylists VALUES (4908,1500,63,70);
-INSERT INTO merchant_buylists VALUES (4445,6120,63,71);
-INSERT INTO merchant_buylists VALUES (4446,6120,63,72);
-INSERT INTO merchant_buylists VALUES (4447,6120,63,73);
-INSERT INTO merchant_buylists VALUES (4448,6120,63,74);
-INSERT INTO merchant_buylists VALUES (4449,6120,63,75);
-INSERT INTO merchant_buylists VALUES (4450,6120,63,76);
-INSERT INTO merchant_buylists VALUES (4451,6120,63,77);
-INSERT INTO merchant_buylists VALUES (4452,6120,63,78);
-INSERT INTO merchant_buylists VALUES (4453,6120,63,79);
-INSERT INTO merchant_buylists VALUES (4454,6120,63,80);
-INSERT INTO merchant_buylists VALUES (4455,6120,63,81);
-INSERT INTO merchant_buylists VALUES (4456,6120,63,82);
-INSERT INTO merchant_buylists VALUES (4910,2160,63,83);
-INSERT INTO merchant_buylists VALUES (908,14280,64,1);
-INSERT INTO merchant_buylists VALUES (909,25560,64,2);
-INSERT INTO merchant_buylists VALUES (910,43080,64,3);
-INSERT INTO merchant_buylists VALUES (845,10668,64,4);
-INSERT INTO merchant_buylists VALUES (846,19200,64,5);
-INSERT INTO merchant_buylists VALUES (847,32280,64,6);
-INSERT INTO merchant_buylists VALUES (877,7104,64,7);
-INSERT INTO merchant_buylists VALUES (878,12840,64,8);
-INSERT INTO merchant_buylists VALUES (890,21600,64,9);
-INSERT INTO merchant_buylists VALUES (1661,1200,64,10);
-INSERT INTO merchant_buylists VALUES (3031,480,64,11);
-INSERT INTO merchant_buylists VALUES (1785,300,64,12);
-INSERT INTO merchant_buylists VALUES (17,2,64,13);
-INSERT INTO merchant_buylists VALUES (1341,4,64,14);
-INSERT INTO merchant_buylists VALUES (734,1440,64,15);
-INSERT INTO merchant_buylists VALUES (735,2880,64,16);
-INSERT INTO merchant_buylists VALUES (1061,396,64,17);
-INSERT INTO merchant_buylists VALUES (1832,216,64,18);
-INSERT INTO merchant_buylists VALUES (1834,216,64,19);
-INSERT INTO merchant_buylists VALUES (736,480,64,20);
-INSERT INTO merchant_buylists VALUES (737,2400,64,21);
-INSERT INTO merchant_buylists VALUES (1829,600,64,22);
-INSERT INTO merchant_buylists VALUES (2130,1200,64,23);
-INSERT INTO merchant_buylists VALUES (5192,120,64,25);
-INSERT INTO merchant_buylists VALUES (5146,13860,64,26);
-INSERT INTO merchant_buylists VALUES (5140,5940,64,27);
-INSERT INTO merchant_buylists VALUES (5134,2760,64,28);
-INSERT INTO merchant_buylists VALUES (5262,46200,64,29);
-INSERT INTO merchant_buylists VALUES (5256,19800,64,30);
-INSERT INTO merchant_buylists VALUES (5250,9240,64,31);
-INSERT INTO merchant_buylists VALUES (6037,120,64,32);
-INSERT INTO merchant_buylists VALUES (5589,120,64,33);
-INSERT INTO merchant_buylists VALUES (6035,2880,64,34);
-INSERT INTO merchant_buylists VALUES (908,15470,65,1);
-INSERT INTO merchant_buylists VALUES (909,27690,65,2);
-INSERT INTO merchant_buylists VALUES (910,46670,65,3);
-INSERT INTO merchant_buylists VALUES (845,11557,65,4);
-INSERT INTO merchant_buylists VALUES (846,20800,65,5);
-INSERT INTO merchant_buylists VALUES (847,34970,65,6);
-INSERT INTO merchant_buylists VALUES (877,7696,65,7);
-INSERT INTO merchant_buylists VALUES (878,13910,65,8);
-INSERT INTO merchant_buylists VALUES (890,23400,65,9);
-INSERT INTO merchant_buylists VALUES (1665,650,65,10);
-INSERT INTO merchant_buylists VALUES (1661,1300,65,11);
-INSERT INTO merchant_buylists VALUES (3031,520,65,12);
-INSERT INTO merchant_buylists VALUES (1785,325,65,13);
-INSERT INTO merchant_buylists VALUES (17,3,65,14);
-INSERT INTO merchant_buylists VALUES (1341,4,65,15);
-INSERT INTO merchant_buylists VALUES (734,1560,65,16);
-INSERT INTO merchant_buylists VALUES (735,3120,65,17);
-INSERT INTO merchant_buylists VALUES (1061,429,65,18);
-INSERT INTO merchant_buylists VALUES (1832,234,65,19);
-INSERT INTO merchant_buylists VALUES (1834,234,65,20);
-INSERT INTO merchant_buylists VALUES (736,520,65,21);
-INSERT INTO merchant_buylists VALUES (737,2600,65,22);
-INSERT INTO merchant_buylists VALUES (1829,650,65,23);
-INSERT INTO merchant_buylists VALUES (2130,1300,65,24);
-INSERT INTO merchant_buylists VALUES (1099,600,66,1);
-INSERT INTO merchant_buylists VALUES (1053,600,66,2);
-INSERT INTO merchant_buylists VALUES (1055,600,66,3);
-INSERT INTO merchant_buylists VALUES (1056,600,66,4);
-INSERT INTO merchant_buylists VALUES (1052,600,66,5);
-INSERT INTO merchant_buylists VALUES (1054,600,66,6);
-INSERT INTO merchant_buylists VALUES (1058,600,66,7);
-INSERT INTO merchant_buylists VALUES (1098,600,66,8);
-INSERT INTO merchant_buylists VALUES (1097,660,66,9);
-INSERT INTO merchant_buylists VALUES (1096,660,66,10);
-INSERT INTO merchant_buylists VALUES (1370,900,66,11);
-INSERT INTO merchant_buylists VALUES (1401,900,66,12);
-INSERT INTO merchant_buylists VALUES (1411,900,66,13);
-INSERT INTO merchant_buylists VALUES (1372,900,66,14);
-INSERT INTO merchant_buylists VALUES (1513,960,66,15);
-INSERT INTO merchant_buylists VALUES (1399,900,66,16);
-INSERT INTO merchant_buylists VALUES (1386,900,66,17);
-INSERT INTO merchant_buylists VALUES (1856,1920,66,18);
-INSERT INTO merchant_buylists VALUES (1377,900,66,19);
-INSERT INTO merchant_buylists VALUES (1383,900,66,20);
-INSERT INTO merchant_buylists VALUES (1514,960,66,21);
-INSERT INTO merchant_buylists VALUES (1405,900,66,22);
-INSERT INTO merchant_buylists VALUES (1403,900,66,23);
-INSERT INTO merchant_buylists VALUES (1371,900,66,24);
-INSERT INTO merchant_buylists VALUES (1515,960,66,25);
-INSERT INTO merchant_buylists VALUES (1667,960,66,26);
-INSERT INTO merchant_buylists VALUES (1669,960,66,27);
-INSERT INTO merchant_buylists VALUES (1671,960,66,28);
-INSERT INTO merchant_buylists VALUES (1512,1380,66,29);
-INSERT INTO merchant_buylists VALUES (1379,1380,66,30);
-INSERT INTO merchant_buylists VALUES (1402,1500,66,31);
-INSERT INTO merchant_buylists VALUES (1517,1500,66,32);
-INSERT INTO merchant_buylists VALUES (1415,1500,66,33);
-INSERT INTO merchant_buylists VALUES (1391,1500,66,34);
-INSERT INTO merchant_buylists VALUES (1398,1500,66,35);
-INSERT INTO merchant_buylists VALUES (1389,1500,66,36);
-INSERT INTO merchant_buylists VALUES (1388,1500,66,37);
-INSERT INTO merchant_buylists VALUES (1410,1500,66,38);
-INSERT INTO merchant_buylists VALUES (1404,1500,66,39);
-INSERT INTO merchant_buylists VALUES (1417,1500,66,40);
-INSERT INTO merchant_buylists VALUES (1400,1500,66,41);
-INSERT INTO merchant_buylists VALUES (1418,1500,66,42);
-INSERT INTO merchant_buylists VALUES (1668,1500,66,43);
-INSERT INTO merchant_buylists VALUES (1670,1500,66,44);
-INSERT INTO merchant_buylists VALUES (3038,1860,66,45);
-INSERT INTO merchant_buylists VALUES (1378,1920,66,46);
-INSERT INTO merchant_buylists VALUES (1516,2160,66,47);
-INSERT INTO merchant_buylists VALUES (1414,2160,66,48);
-INSERT INTO merchant_buylists VALUES (1385,2160,66,49);
-INSERT INTO merchant_buylists VALUES (1394,2160,66,50);
-INSERT INTO merchant_buylists VALUES (1526,480,66,51);
-INSERT INTO merchant_buylists VALUES (1522,900,66,52);
-INSERT INTO merchant_buylists VALUES (1535,960,66,53);
-INSERT INTO merchant_buylists VALUES (1521,960,66,54);
-INSERT INTO merchant_buylists VALUES (1523,960,66,55);
-INSERT INTO merchant_buylists VALUES (1534,960,66,56);
-INSERT INTO merchant_buylists VALUES (1537,960,66,57);
-INSERT INTO merchant_buylists VALUES (1533,1500,66,58);
-INSERT INTO merchant_buylists VALUES (1536,1500,66,59);
-INSERT INTO merchant_buylists VALUES (1532,1500,66,60);
-INSERT INTO merchant_buylists VALUES (1528,2160,66,61);
-INSERT INTO merchant_buylists VALUES (1519,2160,66,62);
-INSERT INTO merchant_buylists VALUES (1518,2160,66,63);
-INSERT INTO merchant_buylists VALUES (906,1296,67,1);
-INSERT INTO merchant_buylists VALUES (907,5616,67,2);
-INSERT INTO merchant_buylists VALUES (908,14280,67,3);
-INSERT INTO merchant_buylists VALUES (909,25560,67,4);
-INSERT INTO merchant_buylists VALUES (910,43080,67,5);
-INSERT INTO merchant_buylists VALUES (113,973,67,6);
-INSERT INTO merchant_buylists VALUES (114,4212,67,7);
-INSERT INTO merchant_buylists VALUES (115,4212,67,8);
-INSERT INTO merchant_buylists VALUES (845,10668,67,9);
-INSERT INTO merchant_buylists VALUES (846,19200,67,10);
-INSERT INTO merchant_buylists VALUES (847,32280,67,11);
-INSERT INTO merchant_buylists VALUES (875,648,67,12);
-INSERT INTO merchant_buylists VALUES (876,2808,67,13);
-INSERT INTO merchant_buylists VALUES (877,7104,67,14);
-INSERT INTO merchant_buylists VALUES (878,12840,67,15);
-INSERT INTO merchant_buylists VALUES (890,21600,67,16);
-INSERT INTO merchant_buylists VALUES (1665,600,67,17);
-INSERT INTO merchant_buylists VALUES (1661,1200,67,18);
-INSERT INTO merchant_buylists VALUES (3031,480,67,19);
-INSERT INTO merchant_buylists VALUES (1785,300,67,20);
-INSERT INTO merchant_buylists VALUES (17,2,67,21);
-INSERT INTO merchant_buylists VALUES (1341,4,67,22);
-INSERT INTO merchant_buylists VALUES (1060,108,67,23);
-INSERT INTO merchant_buylists VALUES (1831,90,67,24);
-INSERT INTO merchant_buylists VALUES (1833,90,67,25);
-INSERT INTO merchant_buylists VALUES (734,1440,67,26);
-INSERT INTO merchant_buylists VALUES (735,2880,67,27);
-INSERT INTO merchant_buylists VALUES (1061,396,67,28);
-INSERT INTO merchant_buylists VALUES (1832,216,67,29);
-INSERT INTO merchant_buylists VALUES (1834,216,67,30);
-INSERT INTO merchant_buylists VALUES (736,480,67,31);
-INSERT INTO merchant_buylists VALUES (737,2400,67,32);
-INSERT INTO merchant_buylists VALUES (1829,600,67,33);
-INSERT INTO merchant_buylists VALUES (2130,1200,67,34);
-INSERT INTO merchant_buylists VALUES (906,1296,68,1);
-INSERT INTO merchant_buylists VALUES (907,5616,68,2);
-INSERT INTO merchant_buylists VALUES (908,14280,68,3);
-INSERT INTO merchant_buylists VALUES (909,25560,68,4);
-INSERT INTO merchant_buylists VALUES (910,43080,68,5);
-INSERT INTO merchant_buylists VALUES (113,973,68,6);
-INSERT INTO merchant_buylists VALUES (114,4212,68,7);
-INSERT INTO merchant_buylists VALUES (115,4212,68,8);
-INSERT INTO merchant_buylists VALUES (845,10668,68,9);
-INSERT INTO merchant_buylists VALUES (846,19200,68,10);
-INSERT INTO merchant_buylists VALUES (847,32280,68,11);
-INSERT INTO merchant_buylists VALUES (875,648,68,12);
-INSERT INTO merchant_buylists VALUES (876,2808,68,13);
-INSERT INTO merchant_buylists VALUES (877,7104,68,14);
-INSERT INTO merchant_buylists VALUES (878,12840,68,15);
-INSERT INTO merchant_buylists VALUES (890,21600,68,16);
-INSERT INTO merchant_buylists VALUES (1665,600,68,17);
-INSERT INTO merchant_buylists VALUES (1661,1200,68,18);
-INSERT INTO merchant_buylists VALUES (3031,480,68,19);
-INSERT INTO merchant_buylists VALUES (1785,300,68,20);
-INSERT INTO merchant_buylists VALUES (17,2,68,21);
-INSERT INTO merchant_buylists VALUES (1341,4,68,22);
-INSERT INTO merchant_buylists VALUES (1060,108,68,23);
-INSERT INTO merchant_buylists VALUES (1831,90,68,24);
-INSERT INTO merchant_buylists VALUES (1833,90,68,25);
-INSERT INTO merchant_buylists VALUES (734,1440,68,26);
-INSERT INTO merchant_buylists VALUES (735,2880,68,27);
-INSERT INTO merchant_buylists VALUES (1061,396,68,28);
-INSERT INTO merchant_buylists VALUES (1832,216,68,29);
-INSERT INTO merchant_buylists VALUES (1834,216,68,30);
-INSERT INTO merchant_buylists VALUES (736,480,68,31);
-INSERT INTO merchant_buylists VALUES (737,2400,68,32);
-INSERT INTO merchant_buylists VALUES (1829,600,68,33);
-INSERT INTO merchant_buylists VALUES (2130,1200,68,34);
-INSERT INTO merchant_buylists VALUES (2,163200,69,1);
-INSERT INTO merchant_buylists VALUES (218,163200,69,2);
-INSERT INTO merchant_buylists VALUES (272,163200,69,3);
-INSERT INTO merchant_buylists VALUES (15,163200,69,4);
-INSERT INTO merchant_buylists VALUES (68,292800,69,5);
-INSERT INTO merchant_buylists VALUES (219,292800,69,6);
-INSERT INTO merchant_buylists VALUES (273,292800,69,7);
-INSERT INTO merchant_buylists VALUES (155,292800,69,8);
-INSERT INTO merchant_buylists VALUES (87,292800,69,9);
-INSERT INTO merchant_buylists VALUES (16,292800,69,10);
-INSERT INTO merchant_buylists VALUES (123,490800,69,11);
-INSERT INTO merchant_buylists VALUES (220,490800,69,12);
-INSERT INTO merchant_buylists VALUES (221,490800,69,13);
-INSERT INTO merchant_buylists VALUES (274,490800,69,14);
-INSERT INTO merchant_buylists VALUES (156,490800,69,15);
-INSERT INTO merchant_buylists VALUES (166,490800,69,16);
-INSERT INTO merchant_buylists VALUES (168,490800,69,17);
-INSERT INTO merchant_buylists VALUES (291,490800,69,18);
-INSERT INTO merchant_buylists VALUES (69,772800,69,19);
-INSERT INTO merchant_buylists VALUES (222,772800,69,20);
-INSERT INTO merchant_buylists VALUES (275,772800,69,21);
-INSERT INTO merchant_buylists VALUES (277,772800,69,22);
-INSERT INTO merchant_buylists VALUES (292,772800,69,23);
-INSERT INTO merchant_buylists VALUES (295,772800,69,24);
-INSERT INTO merchant_buylists VALUES (256,163200,69,25);
-INSERT INTO merchant_buylists VALUES (257,292800,69,26);
-INSERT INTO merchant_buylists VALUES (258,490800,69,27);
-INSERT INTO merchant_buylists VALUES (259,772800,69,28);
-INSERT INTO merchant_buylists VALUES (412,15240,69,29);
-INSERT INTO merchant_buylists VALUES (390,24360,69,30);
-INSERT INTO merchant_buylists VALUES (24,24360,69,31);
-INSERT INTO merchant_buylists VALUES (31,15240,69,32);
-INSERT INTO merchant_buylists VALUES (25,38160,69,33);
-INSERT INTO merchant_buylists VALUES (26,59040,69,34);
-INSERT INTO merchant_buylists VALUES (33,27600,69,35);
-INSERT INTO merchant_buylists VALUES (32,23880,69,36);
-INSERT INTO merchant_buylists VALUES (27,44280,69,37);
-INSERT INTO merchant_buylists VALUES (34,36840,69,38);
-INSERT INTO merchant_buylists VALUES (413,46920,69,39);
-INSERT INTO merchant_buylists VALUES (347,100200,69,40);
-INSERT INTO merchant_buylists VALUES (391,75120,69,41);
-INSERT INTO merchant_buylists VALUES (414,75000,69,42);
-INSERT INTO merchant_buylists VALUES (392,119880,69,43);
-INSERT INTO merchant_buylists VALUES (58,219600,69,44);
-INSERT INTO merchant_buylists VALUES (415,114240,69,45);
-INSERT INTO merchant_buylists VALUES (102,8532,69,46);
-INSERT INTO merchant_buylists VALUES (625,15480,69,47);
-INSERT INTO merchant_buylists VALUES (626,26280,69,48);
-INSERT INTO merchant_buylists VALUES (627,42000,69,49);
-INSERT INTO merchant_buylists VALUES (50,8124,69,50);
-INSERT INTO merchant_buylists VALUES (51,14760,69,51);
-INSERT INTO merchant_buylists VALUES (604,25080,69,52);
-INSERT INTO merchant_buylists VALUES (605,39960,69,53);
-INSERT INTO merchant_buylists VALUES (38,8124,69,54);
-INSERT INTO merchant_buylists VALUES (39,14760,69,55);
-INSERT INTO merchant_buylists VALUES (40,25080,69,56);
-INSERT INTO merchant_buylists VALUES (1123,39960,69,57);
-INSERT INTO merchant_buylists VALUES (44,12240,69,58);
-INSERT INTO merchant_buylists VALUES (1148,22080,69,59);
-INSERT INTO merchant_buylists VALUES (45,37560,69,60);
-INSERT INTO merchant_buylists VALUES (46,60000,69,61);
-INSERT INTO merchant_buylists VALUES (17,2,69,62);
-INSERT INTO merchant_buylists VALUES (1341,4,69,63);
-INSERT INTO merchant_buylists VALUES (176,163200,70,1);
-INSERT INTO merchant_buylists VALUES (310,163200,70,2);
-INSERT INTO merchant_buylists VALUES (177,292800,70,3);
-INSERT INTO merchant_buylists VALUES (311,292800,70,4);
-INSERT INTO merchant_buylists VALUES (100,292800,70,5);
-INSERT INTO merchant_buylists VALUES (178,490800,70,6);
-INSERT INTO merchant_buylists VALUES (101,490800,70,7);
-INSERT INTO merchant_buylists VALUES (312,490800,70,8);
-INSERT INTO merchant_buylists VALUES (314,490800,70,9);
-INSERT INTO merchant_buylists VALUES (179,772800,70,10);
-INSERT INTO merchant_buylists VALUES (182,772800,70,11);
-INSERT INTO merchant_buylists VALUES (183,772800,70,12);
-INSERT INTO merchant_buylists VALUES (185,772800,70,13);
-INSERT INTO merchant_buylists VALUES (315,772800,70,14);
-INSERT INTO merchant_buylists VALUES (83,859200,70,15);
-INSERT INTO merchant_buylists VALUES (143,859200,70,16);
-INSERT INTO merchant_buylists VALUES (144,859200,70,17);
-INSERT INTO merchant_buylists VALUES (238,1160400,70,18);
-INSERT INTO merchant_buylists VALUES (239,1160400,70,19);
-INSERT INTO merchant_buylists VALUES (240,1160400,70,20);
-INSERT INTO merchant_buylists VALUES (1104,15240,70,21);
-INSERT INTO merchant_buylists VALUES (1101,24360,70,22);
-INSERT INTO merchant_buylists VALUES (1105,27600,70,23);
-INSERT INTO merchant_buylists VALUES (1102,44280,70,24);
-INSERT INTO merchant_buylists VALUES (465,46920,70,25);
-INSERT INTO merchant_buylists VALUES (432,75120,70,26);
-INSERT INTO merchant_buylists VALUES (467,75000,70,27);
-INSERT INTO merchant_buylists VALUES (434,119880,70,28);
-INSERT INTO merchant_buylists VALUES (468,75000,70,29);
-INSERT INTO merchant_buylists VALUES (435,119880,70,30);
-INSERT INTO merchant_buylists VALUES (469,114240,70,31);
-INSERT INTO merchant_buylists VALUES (436,182400,70,32);
-INSERT INTO merchant_buylists VALUES (102,8532,70,33);
-INSERT INTO merchant_buylists VALUES (625,15480,70,34);
-INSERT INTO merchant_buylists VALUES (626,26280,70,35);
-INSERT INTO merchant_buylists VALUES (627,42000,70,36);
-INSERT INTO merchant_buylists VALUES (50,8124,70,37);
-INSERT INTO merchant_buylists VALUES (51,14760,70,38);
-INSERT INTO merchant_buylists VALUES (604,25080,70,39);
-INSERT INTO merchant_buylists VALUES (605,39960,70,40);
-INSERT INTO merchant_buylists VALUES (38,8124,70,41);
-INSERT INTO merchant_buylists VALUES (39,14760,70,42);
-INSERT INTO merchant_buylists VALUES (40,25080,70,43);
-INSERT INTO merchant_buylists VALUES (1123,39960,70,44);
-INSERT INTO merchant_buylists VALUES (44,12240,70,45);
-INSERT INTO merchant_buylists VALUES (1148,22080,70,46);
-INSERT INTO merchant_buylists VALUES (45,37560,70,47);
-INSERT INTO merchant_buylists VALUES (46,60000,70,48);
-INSERT INTO merchant_buylists VALUES (17,2,70,49);
-INSERT INTO merchant_buylists VALUES (1341,4,70,50);
-INSERT INTO merchant_buylists VALUES (118,99,71,1);
-INSERT INTO merchant_buylists VALUES (906,1620,71,2);
-INSERT INTO merchant_buylists VALUES (907,7020,71,3);
-INSERT INTO merchant_buylists VALUES (908,17850,71,4);
-INSERT INTO merchant_buylists VALUES (112,74,71,5);
-INSERT INTO merchant_buylists VALUES (113,1216,71,6);
-INSERT INTO merchant_buylists VALUES (114,5265,71,7);
-INSERT INTO merchant_buylists VALUES (115,5265,71,8);
-INSERT INTO merchant_buylists VALUES (845,13335,71,9);
-INSERT INTO merchant_buylists VALUES (116,50,71,10);
-INSERT INTO merchant_buylists VALUES (875,810,71,11);
-INSERT INTO merchant_buylists VALUES (876,3510,71,12);
-INSERT INTO merchant_buylists VALUES (877,8880,71,13);
-INSERT INTO merchant_buylists VALUES (17,3,71,14);
-INSERT INTO merchant_buylists VALUES (1341,4,71,15);
-INSERT INTO merchant_buylists VALUES (1831,112,71,16);
-INSERT INTO merchant_buylists VALUES (1833,112,71,17);
-INSERT INTO merchant_buylists VALUES (734,1800,71,18);
-INSERT INTO merchant_buylists VALUES (735,3600,71,19);
-INSERT INTO merchant_buylists VALUES (1061,495,71,20);
-INSERT INTO merchant_buylists VALUES (1832,270,71,21);
-INSERT INTO merchant_buylists VALUES (66,81150,72,1);
-INSERT INTO merchant_buylists VALUES (67,81150,72,2);
-INSERT INTO merchant_buylists VALUES (216,81150,72,3);
-INSERT INTO merchant_buylists VALUES (271,81150,72,4);
-INSERT INTO merchant_buylists VALUES (2,204000,72,5);
-INSERT INTO merchant_buylists VALUES (15,204000,72,6);
-INSERT INTO merchant_buylists VALUES (68,366000,72,7);
-INSERT INTO merchant_buylists VALUES (273,366000,72,8);
-INSERT INTO merchant_buylists VALUES (123,613500,72,9);
-INSERT INTO merchant_buylists VALUES (221,613500,72,10);
-INSERT INTO merchant_buylists VALUES (156,613500,72,11);
-INSERT INTO merchant_buylists VALUES (291,613500,72,12);
-INSERT INTO merchant_buylists VALUES (412,19050,72,13);
-INSERT INTO merchant_buylists VALUES (390,30450,72,14);
-INSERT INTO merchant_buylists VALUES (26,73800,72,15);
-INSERT INTO merchant_buylists VALUES (33,34500,72,16);
-INSERT INTO merchant_buylists VALUES (27,55350,72,17);
-INSERT INTO merchant_buylists VALUES (34,46050,72,18);
-INSERT INTO merchant_buylists VALUES (347,125250,72,19);
-INSERT INTO merchant_buylists VALUES (102,10665,72,20);
-INSERT INTO merchant_buylists VALUES (626,32850,72,21);
-INSERT INTO merchant_buylists VALUES (50,10155,72,22);
-INSERT INTO merchant_buylists VALUES (51,18450,72,23);
-INSERT INTO merchant_buylists VALUES (37,3975,72,24);
-INSERT INTO merchant_buylists VALUES (39,18450,72,25);
-INSERT INTO merchant_buylists VALUES (43,5970,72,26);
-INSERT INTO merchant_buylists VALUES (1148,27600,72,27);
-INSERT INTO merchant_buylists VALUES (17,3,72,28);
-INSERT INTO merchant_buylists VALUES (1341,4,72,29);
-INSERT INTO merchant_buylists VALUES (9,81150,73,1);
-INSERT INTO merchant_buylists VALUES (310,204000,73,2);
-INSERT INTO merchant_buylists VALUES (177,366000,73,3);
-INSERT INTO merchant_buylists VALUES (100,366000,73,4);
-INSERT INTO merchant_buylists VALUES (178,613500,73,5);
-INSERT INTO merchant_buylists VALUES (314,613500,73,6);
-INSERT INTO merchant_buylists VALUES (464,7455,73,7);
-INSERT INTO merchant_buylists VALUES (429,11940,73,8);
-INSERT INTO merchant_buylists VALUES (1105,34500,73,9);
-INSERT INTO merchant_buylists VALUES (1102,55350,73,10);
-INSERT INTO merchant_buylists VALUES (465,58650,73,11);
-INSERT INTO merchant_buylists VALUES (432,93900,73,12);
-INSERT INTO merchant_buylists VALUES (102,10665,73,13);
-INSERT INTO merchant_buylists VALUES (626,32850,73,14);
-INSERT INTO merchant_buylists VALUES (50,10155,73,15);
-INSERT INTO merchant_buylists VALUES (51,18450,73,16);
-INSERT INTO merchant_buylists VALUES (37,3975,73,17);
-INSERT INTO merchant_buylists VALUES (39,18450,73,18);
-INSERT INTO merchant_buylists VALUES (43,5970,73,19);
-INSERT INTO merchant_buylists VALUES (1148,27600,73,20);
-INSERT INTO merchant_buylists VALUES (17,3,73,21);
-INSERT INTO merchant_buylists VALUES (1341,4,73,22);
-INSERT INTO merchant_buylists VALUES (118,99,74,1);
-INSERT INTO merchant_buylists VALUES (906,1620,74,2);
-INSERT INTO merchant_buylists VALUES (907,7020,74,3);
-INSERT INTO merchant_buylists VALUES (908,17850,74,4);
-INSERT INTO merchant_buylists VALUES (112,74,74,5);
-INSERT INTO merchant_buylists VALUES (113,1216,74,6);
-INSERT INTO merchant_buylists VALUES (114,5265,74,7);
-INSERT INTO merchant_buylists VALUES (115,5265,74,8);
-INSERT INTO merchant_buylists VALUES (845,13335,74,9);
-INSERT INTO merchant_buylists VALUES (116,50,74,10);
-INSERT INTO merchant_buylists VALUES (875,810,74,11);
-INSERT INTO merchant_buylists VALUES (876,3510,74,12);
-INSERT INTO merchant_buylists VALUES (877,8880,74,13);
-INSERT INTO merchant_buylists VALUES (17,3,74,14);
-INSERT INTO merchant_buylists VALUES (1341,4,74,15);
-INSERT INTO merchant_buylists VALUES (1831,112,74,16);
-INSERT INTO merchant_buylists VALUES (1833,112,74,17);
-INSERT INTO merchant_buylists VALUES (734,1800,74,18);
-INSERT INTO merchant_buylists VALUES (735,3600,74,19);
-INSERT INTO merchant_buylists VALUES (1061,495,74,20);
-INSERT INTO merchant_buylists VALUES (1832,270,74,21);
-INSERT INTO merchant_buylists VALUES (1,883,75,1);
-INSERT INTO merchant_buylists VALUES (4,883,75,2);
-INSERT INTO merchant_buylists VALUES (11,883,75,3);
-INSERT INTO merchant_buylists VALUES (13,883,75,4);
-INSERT INTO merchant_buylists VALUES (3,14375,75,5);
-INSERT INTO merchant_buylists VALUES (152,9280,75,6);
-INSERT INTO merchant_buylists VALUES (12,14375,75,7);
-INSERT INTO merchant_buylists VALUES (215,14375,75,8);
-INSERT INTO merchant_buylists VALUES (14,14375,75,9);
-INSERT INTO merchant_buylists VALUES (5,14375,75,10);
-INSERT INTO merchant_buylists VALUES (153,21275,75,11);
-INSERT INTO merchant_buylists VALUES (1333,62215,75,12);
-INSERT INTO merchant_buylists VALUES (66,62215,75,13);
-INSERT INTO merchant_buylists VALUES (67,62215,75,14);
-INSERT INTO merchant_buylists VALUES (122,62215,75,15);
-INSERT INTO merchant_buylists VALUES (154,62215,75,16);
-INSERT INTO merchant_buylists VALUES (216,62215,75,17);
-INSERT INTO merchant_buylists VALUES (271,62215,75,18);
-INSERT INTO merchant_buylists VALUES (2,156400,75,19);
-INSERT INTO merchant_buylists VALUES (218,156400,75,20);
-INSERT INTO merchant_buylists VALUES (272,156400,75,21);
-INSERT INTO merchant_buylists VALUES (15,156400,75,22);
-INSERT INTO merchant_buylists VALUES (28,106,75,23);
-INSERT INTO merchant_buylists VALUES (21,169,75,24);
-INSERT INTO merchant_buylists VALUES (29,1748,75,25);
-INSERT INTO merchant_buylists VALUES (22,2794,75,26);
-INSERT INTO merchant_buylists VALUES (30,5716,75,27);
-INSERT INTO merchant_buylists VALUES (2386,5716,75,28);
-INSERT INTO merchant_buylists VALUES (23,9154,75,29);
-INSERT INTO merchant_buylists VALUES (412,14605,75,30);
-INSERT INTO merchant_buylists VALUES (390,23345,75,31);
-INSERT INTO merchant_buylists VALUES (24,23345,75,32);
-INSERT INTO merchant_buylists VALUES (31,14605,75,33);
-INSERT INTO merchant_buylists VALUES (18,45,75,34);
-INSERT INTO merchant_buylists VALUES (19,734,75,35);
-INSERT INTO merchant_buylists VALUES (20,3197,75,36);
-INSERT INTO merchant_buylists VALUES (102,8176,75,37);
-INSERT INTO merchant_buylists VALUES (48,43,75,38);
-INSERT INTO merchant_buylists VALUES (1119,698,75,39);
-INSERT INTO merchant_buylists VALUES (49,3047,75,40);
-INSERT INTO merchant_buylists VALUES (50,7785,75,41);
-INSERT INTO merchant_buylists VALUES (1121,8,75,42);
-INSERT INTO merchant_buylists VALUES (35,43,75,43);
-INSERT INTO merchant_buylists VALUES (36,43,75,44);
-INSERT INTO merchant_buylists VALUES (1129,698,75,45);
-INSERT INTO merchant_buylists VALUES (1122,698,75,46);
-INSERT INTO merchant_buylists VALUES (37,3047,75,47);
-INSERT INTO merchant_buylists VALUES (38,7785,75,48);
-INSERT INTO merchant_buylists VALUES (41,63,75,49);
-INSERT INTO merchant_buylists VALUES (42,1048,75,50);
-INSERT INTO merchant_buylists VALUES (43,4577,75,51);
-INSERT INTO merchant_buylists VALUES (44,11730,75,52);
-INSERT INTO merchant_buylists VALUES (17,2,75,53);
-INSERT INTO merchant_buylists VALUES (1341,3,75,54);
-INSERT INTO merchant_buylists VALUES (7,883,76,1);
-INSERT INTO merchant_buylists VALUES (308,883,76,2);
-INSERT INTO merchant_buylists VALUES (8,14375,76,3);
-INSERT INTO merchant_buylists VALUES (99,14375,76,4);
-INSERT INTO merchant_buylists VALUES (9,62215,76,5);
-INSERT INTO merchant_buylists VALUES (176,156400,76,6);
-INSERT INTO merchant_buylists VALUES (310,156400,76,7);
-INSERT INTO merchant_buylists VALUES (462,106,76,8);
-INSERT INTO merchant_buylists VALUES (426,169,76,9);
-INSERT INTO merchant_buylists VALUES (1103,1748,76,10);
-INSERT INTO merchant_buylists VALUES (1100,2794,76,11);
-INSERT INTO merchant_buylists VALUES (463,1748,76,12);
-INSERT INTO merchant_buylists VALUES (428,2794,76,13);
-INSERT INTO merchant_buylists VALUES (464,5716,76,14);
-INSERT INTO merchant_buylists VALUES (429,9154,76,15);
-INSERT INTO merchant_buylists VALUES (1104,14605,76,16);
-INSERT INTO merchant_buylists VALUES (1101,23345,76,17);
-INSERT INTO merchant_buylists VALUES (18,45,76,18);
-INSERT INTO merchant_buylists VALUES (19,734,76,19);
-INSERT INTO merchant_buylists VALUES (20,3197,76,20);
-INSERT INTO merchant_buylists VALUES (102,8176,76,21);
-INSERT INTO merchant_buylists VALUES (48,43,76,22);
-INSERT INTO merchant_buylists VALUES (1119,698,76,23);
-INSERT INTO merchant_buylists VALUES (49,3047,76,24);
-INSERT INTO merchant_buylists VALUES (50,7785,76,25);
-INSERT INTO merchant_buylists VALUES (1121,8,76,26);
-INSERT INTO merchant_buylists VALUES (35,43,76,27);
-INSERT INTO merchant_buylists VALUES (36,43,76,28);
-INSERT INTO merchant_buylists VALUES (1129,698,76,29);
-INSERT INTO merchant_buylists VALUES (1122,698,76,30);
-INSERT INTO merchant_buylists VALUES (37,3047,76,31);
-INSERT INTO merchant_buylists VALUES (38,7785,76,32);
-INSERT INTO merchant_buylists VALUES (41,63,76,33);
-INSERT INTO merchant_buylists VALUES (42,1048,76,34);
-INSERT INTO merchant_buylists VALUES (43,4577,76,35);
-INSERT INTO merchant_buylists VALUES (44,11730,76,36);
-INSERT INTO merchant_buylists VALUES (17,2,76,37);
-INSERT INTO merchant_buylists VALUES (1341,3,76,38);
-INSERT INTO merchant_buylists VALUES (1,883,77,1);
-INSERT INTO merchant_buylists VALUES (4,883,77,2);
-INSERT INTO merchant_buylists VALUES (11,883,77,3);
-INSERT INTO merchant_buylists VALUES (13,883,77,4);
-INSERT INTO merchant_buylists VALUES (3,14375,77,5);
-INSERT INTO merchant_buylists VALUES (152,9280,77,6);
-INSERT INTO merchant_buylists VALUES (12,14375,77,7);
-INSERT INTO merchant_buylists VALUES (215,14375,77,8);
-INSERT INTO merchant_buylists VALUES (14,14375,77,9);
-INSERT INTO merchant_buylists VALUES (5,14375,77,10);
-INSERT INTO merchant_buylists VALUES (153,21275,77,11);
-INSERT INTO merchant_buylists VALUES (1333,62215,77,12);
-INSERT INTO merchant_buylists VALUES (66,62215,77,13);
-INSERT INTO merchant_buylists VALUES (67,62215,77,14);
-INSERT INTO merchant_buylists VALUES (122,62215,77,15);
-INSERT INTO merchant_buylists VALUES (154,62215,77,16);
-INSERT INTO merchant_buylists VALUES (216,62215,77,17);
-INSERT INTO merchant_buylists VALUES (271,62215,77,18);
-INSERT INTO merchant_buylists VALUES (2,156400,77,19);
-INSERT INTO merchant_buylists VALUES (218,156400,77,20);
-INSERT INTO merchant_buylists VALUES (272,156400,77,21);
-INSERT INTO merchant_buylists VALUES (15,156400,77,22);
-INSERT INTO merchant_buylists VALUES (28,106,77,23);
-INSERT INTO merchant_buylists VALUES (21,169,77,24);
-INSERT INTO merchant_buylists VALUES (29,1748,77,25);
-INSERT INTO merchant_buylists VALUES (22,2794,77,26);
-INSERT INTO merchant_buylists VALUES (30,5716,77,27);
-INSERT INTO merchant_buylists VALUES (2386,5716,77,28);
-INSERT INTO merchant_buylists VALUES (23,9154,77,29);
-INSERT INTO merchant_buylists VALUES (412,14605,77,30);
-INSERT INTO merchant_buylists VALUES (390,23345,77,31);
-INSERT INTO merchant_buylists VALUES (24,23345,77,32);
-INSERT INTO merchant_buylists VALUES (31,14605,77,33);
-INSERT INTO merchant_buylists VALUES (18,45,77,34);
-INSERT INTO merchant_buylists VALUES (19,734,77,35);
-INSERT INTO merchant_buylists VALUES (20,3197,77,36);
-INSERT INTO merchant_buylists VALUES (102,8176,77,37);
-INSERT INTO merchant_buylists VALUES (48,43,77,38);
-INSERT INTO merchant_buylists VALUES (1119,698,77,39);
-INSERT INTO merchant_buylists VALUES (49,3047,77,40);
-INSERT INTO merchant_buylists VALUES (50,7785,77,41);
-INSERT INTO merchant_buylists VALUES (1121,8,77,42);
-INSERT INTO merchant_buylists VALUES (35,43,77,43);
-INSERT INTO merchant_buylists VALUES (36,43,77,44);
-INSERT INTO merchant_buylists VALUES (1129,698,77,45);
-INSERT INTO merchant_buylists VALUES (1122,698,77,46);
-INSERT INTO merchant_buylists VALUES (37,3047,77,47);
-INSERT INTO merchant_buylists VALUES (38,7785,77,48);
-INSERT INTO merchant_buylists VALUES (41,63,77,49);
-INSERT INTO merchant_buylists VALUES (42,1048,77,50);
-INSERT INTO merchant_buylists VALUES (43,4577,77,51);
-INSERT INTO merchant_buylists VALUES (44,11730,77,52);
-INSERT INTO merchant_buylists VALUES (17,2,77,53);
-INSERT INTO merchant_buylists VALUES (1341,3,77,54);
-INSERT INTO merchant_buylists VALUES (7,883,78,1);
-INSERT INTO merchant_buylists VALUES (308,883,78,2);
-INSERT INTO merchant_buylists VALUES (8,14375,78,3);
-INSERT INTO merchant_buylists VALUES (99,14375,78,4);
-INSERT INTO merchant_buylists VALUES (9,62215,78,5);
-INSERT INTO merchant_buylists VALUES (176,156400,78,6);
-INSERT INTO merchant_buylists VALUES (310,156400,78,7);
-INSERT INTO merchant_buylists VALUES (462,106,78,8);
-INSERT INTO merchant_buylists VALUES (426,169,78,9);
-INSERT INTO merchant_buylists VALUES (1103,1748,78,10);
-INSERT INTO merchant_buylists VALUES (1100,2794,78,11);
-INSERT INTO merchant_buylists VALUES (463,1748,78,12);
-INSERT INTO merchant_buylists VALUES (428,2794,78,13);
-INSERT INTO merchant_buylists VALUES (464,5716,78,14);
-INSERT INTO merchant_buylists VALUES (429,9154,78,15);
-INSERT INTO merchant_buylists VALUES (1104,14605,78,16);
-INSERT INTO merchant_buylists VALUES (1101,23345,78,17);
-INSERT INTO merchant_buylists VALUES (18,45,78,18);
-INSERT INTO merchant_buylists VALUES (19,734,78,19);
-INSERT INTO merchant_buylists VALUES (20,3197,78,20);
-INSERT INTO merchant_buylists VALUES (102,8176,78,21);
-INSERT INTO merchant_buylists VALUES (48,43,78,22);
-INSERT INTO merchant_buylists VALUES (1119,698,78,23);
-INSERT INTO merchant_buylists VALUES (49,3047,78,24);
-INSERT INTO merchant_buylists VALUES (50,7785,78,25);
-INSERT INTO merchant_buylists VALUES (1121,8,78,26);
-INSERT INTO merchant_buylists VALUES (35,43,78,27);
-INSERT INTO merchant_buylists VALUES (36,43,78,28);
-INSERT INTO merchant_buylists VALUES (1129,698,78,29);
-INSERT INTO merchant_buylists VALUES (1122,698,78,30);
-INSERT INTO merchant_buylists VALUES (37,3047,78,31);
-INSERT INTO merchant_buylists VALUES (38,7785,78,32);
-INSERT INTO merchant_buylists VALUES (41,63,78,33);
-INSERT INTO merchant_buylists VALUES (42,1048,78,34);
-INSERT INTO merchant_buylists VALUES (43,4577,78,35);
-INSERT INTO merchant_buylists VALUES (44,11730,78,36);
-INSERT INTO merchant_buylists VALUES (17,2,78,37);
-INSERT INTO merchant_buylists VALUES (1341,3,78,38);
-INSERT INTO merchant_buylists VALUES (118,76,79,1);
-INSERT INTO merchant_buylists VALUES (906,1242,79,2);
-INSERT INTO merchant_buylists VALUES (907,5382,79,3);
-INSERT INTO merchant_buylists VALUES (908,13685,79,4);
-INSERT INTO merchant_buylists VALUES (112,56,79,5);
-INSERT INTO merchant_buylists VALUES (113,933,79,6);
-INSERT INTO merchant_buylists VALUES (114,4036,79,7);
-INSERT INTO merchant_buylists VALUES (115,4036,79,8);
-INSERT INTO merchant_buylists VALUES (845,10224,79,9);
-INSERT INTO merchant_buylists VALUES (116,38,79,10);
-INSERT INTO merchant_buylists VALUES (875,621,79,11);
-INSERT INTO merchant_buylists VALUES (876,2691,79,12);
-INSERT INTO merchant_buylists VALUES (877,6808,79,13);
-INSERT INTO merchant_buylists VALUES (17,2,79,14);
-INSERT INTO merchant_buylists VALUES (1341,3,79,15);
-INSERT INTO merchant_buylists VALUES (1661,1150,79,16);
-INSERT INTO merchant_buylists VALUES (3031,460,79,17);
-INSERT INTO merchant_buylists VALUES (1785,288,79,18);
-INSERT INTO merchant_buylists VALUES (3947,40,79,19);
-INSERT INTO merchant_buylists VALUES (2509,17,79,20);
-INSERT INTO merchant_buylists VALUES (1835,8,79,21);
-INSERT INTO merchant_buylists VALUES (736,460,79,22);
-INSERT INTO merchant_buylists VALUES (1060,103,79,23);
-INSERT INTO merchant_buylists VALUES (1831,86,79,24);
-INSERT INTO merchant_buylists VALUES (1833,86,79,25);
-INSERT INTO merchant_buylists VALUES (734,1380,79,26);
-INSERT INTO merchant_buylists VALUES (735,2760,79,27);
-INSERT INTO merchant_buylists VALUES (1863,575,79,28);
-INSERT INTO merchant_buylists VALUES (2130,1150,79,29);
-INSERT INTO merchant_buylists VALUES (118,76,80,1);
-INSERT INTO merchant_buylists VALUES (906,1242,80,2);
-INSERT INTO merchant_buylists VALUES (907,5382,80,3);
-INSERT INTO merchant_buylists VALUES (908,13685,80,4);
-INSERT INTO merchant_buylists VALUES (112,56,80,5);
-INSERT INTO merchant_buylists VALUES (113,933,80,6);
-INSERT INTO merchant_buylists VALUES (114,4036,80,7);
-INSERT INTO merchant_buylists VALUES (115,4036,80,8);
-INSERT INTO merchant_buylists VALUES (845,10224,80,9);
-INSERT INTO merchant_buylists VALUES (116,38,80,10);
-INSERT INTO merchant_buylists VALUES (875,621,80,11);
-INSERT INTO merchant_buylists VALUES (876,2691,80,12);
-INSERT INTO merchant_buylists VALUES (877,6808,80,13);
-INSERT INTO merchant_buylists VALUES (17,2,80,14);
-INSERT INTO merchant_buylists VALUES (1341,3,80,15);
-INSERT INTO merchant_buylists VALUES (1661,1150,80,16);
-INSERT INTO merchant_buylists VALUES (3031,460,80,17);
-INSERT INTO merchant_buylists VALUES (1785,288,80,18);
-INSERT INTO merchant_buylists VALUES (3947,40,80,19);
-INSERT INTO merchant_buylists VALUES (2509,17,80,20);
-INSERT INTO merchant_buylists VALUES (1835,8,80,21);
-INSERT INTO merchant_buylists VALUES (736,460,80,22);
-INSERT INTO merchant_buylists VALUES (1060,103,80,23);
-INSERT INTO merchant_buylists VALUES (1831,86,80,24);
-INSERT INTO merchant_buylists VALUES (1833,86,80,25);
-INSERT INTO merchant_buylists VALUES (734,1380,80,26);
-INSERT INTO merchant_buylists VALUES (735,2760,80,27);
-INSERT INTO merchant_buylists VALUES (1863,575,80,28);
-INSERT INTO merchant_buylists VALUES (2130,1150,80,29);
-INSERT INTO merchant_buylists VALUES (1,883,81,1);
-INSERT INTO merchant_buylists VALUES (4,883,81,2);
-INSERT INTO merchant_buylists VALUES (11,883,81,3);
-INSERT INTO merchant_buylists VALUES (13,883,81,4);
-INSERT INTO merchant_buylists VALUES (3,14375,81,5);
-INSERT INTO merchant_buylists VALUES (152,9280,81,6);
-INSERT INTO merchant_buylists VALUES (12,14375,81,7);
-INSERT INTO merchant_buylists VALUES (215,14375,81,8);
-INSERT INTO merchant_buylists VALUES (14,14375,81,9);
-INSERT INTO merchant_buylists VALUES (5,14375,81,10);
-INSERT INTO merchant_buylists VALUES (153,21275,81,11);
-INSERT INTO merchant_buylists VALUES (1333,62215,81,12);
-INSERT INTO merchant_buylists VALUES (66,62215,81,13);
-INSERT INTO merchant_buylists VALUES (67,62215,81,14);
-INSERT INTO merchant_buylists VALUES (122,62215,81,15);
-INSERT INTO merchant_buylists VALUES (154,62215,81,16);
-INSERT INTO merchant_buylists VALUES (216,62215,81,17);
-INSERT INTO merchant_buylists VALUES (271,62215,81,18);
-INSERT INTO merchant_buylists VALUES (2,156400,81,19);
-INSERT INTO merchant_buylists VALUES (218,156400,81,20);
-INSERT INTO merchant_buylists VALUES (272,156400,81,21);
-INSERT INTO merchant_buylists VALUES (15,156400,81,22);
-INSERT INTO merchant_buylists VALUES (253,883,81,23);
-INSERT INTO merchant_buylists VALUES (254,14375,81,24);
-INSERT INTO merchant_buylists VALUES (255,62215,81,25);
-INSERT INTO merchant_buylists VALUES (256,156400,81,26);
-INSERT INTO merchant_buylists VALUES (28,106,81,27);
-INSERT INTO merchant_buylists VALUES (21,169,81,28);
-INSERT INTO merchant_buylists VALUES (29,1748,81,29);
-INSERT INTO merchant_buylists VALUES (22,2794,81,30);
-INSERT INTO merchant_buylists VALUES (30,5716,81,31);
-INSERT INTO merchant_buylists VALUES (2386,5716,81,32);
-INSERT INTO merchant_buylists VALUES (23,9154,81,33);
-INSERT INTO merchant_buylists VALUES (412,14605,81,34);
-INSERT INTO merchant_buylists VALUES (390,23345,81,35);
-INSERT INTO merchant_buylists VALUES (24,23345,81,36);
-INSERT INTO merchant_buylists VALUES (31,14605,81,37);
-INSERT INTO merchant_buylists VALUES (18,45,81,38);
-INSERT INTO merchant_buylists VALUES (19,734,81,39);
-INSERT INTO merchant_buylists VALUES (20,3197,81,40);
-INSERT INTO merchant_buylists VALUES (102,8176,81,41);
-INSERT INTO merchant_buylists VALUES (48,43,81,42);
-INSERT INTO merchant_buylists VALUES (1119,698,81,43);
-INSERT INTO merchant_buylists VALUES (49,3047,81,44);
-INSERT INTO merchant_buylists VALUES (50,7785,81,45);
-INSERT INTO merchant_buylists VALUES (1121,8,81,46);
-INSERT INTO merchant_buylists VALUES (35,43,81,47);
-INSERT INTO merchant_buylists VALUES (36,43,81,48);
-INSERT INTO merchant_buylists VALUES (1129,698,81,49);
-INSERT INTO merchant_buylists VALUES (1122,698,81,50);
-INSERT INTO merchant_buylists VALUES (37,3047,81,51);
-INSERT INTO merchant_buylists VALUES (38,7785,81,52);
-INSERT INTO merchant_buylists VALUES (41,63,81,53);
-INSERT INTO merchant_buylists VALUES (42,1048,81,54);
-INSERT INTO merchant_buylists VALUES (43,4577,81,55);
-INSERT INTO merchant_buylists VALUES (44,11730,81,56);
-INSERT INTO merchant_buylists VALUES (17,2,81,57);
-INSERT INTO merchant_buylists VALUES (1341,3,81,58);
-INSERT INTO merchant_buylists VALUES (7,883,82,1);
-INSERT INTO merchant_buylists VALUES (308,883,82,2);
-INSERT INTO merchant_buylists VALUES (8,14375,82,3);
-INSERT INTO merchant_buylists VALUES (99,14375,82,4);
-INSERT INTO merchant_buylists VALUES (9,62215,82,5);
-INSERT INTO merchant_buylists VALUES (176,156400,82,6);
-INSERT INTO merchant_buylists VALUES (310,156400,82,7);
-INSERT INTO merchant_buylists VALUES (462,106,82,8);
-INSERT INTO merchant_buylists VALUES (426,169,82,9);
-INSERT INTO merchant_buylists VALUES (1103,1748,82,10);
-INSERT INTO merchant_buylists VALUES (1100,2794,82,11);
-INSERT INTO merchant_buylists VALUES (463,1748,82,12);
-INSERT INTO merchant_buylists VALUES (428,2794,82,13);
-INSERT INTO merchant_buylists VALUES (464,5716,82,14);
-INSERT INTO merchant_buylists VALUES (429,9154,82,15);
-INSERT INTO merchant_buylists VALUES (1104,14605,82,16);
-INSERT INTO merchant_buylists VALUES (1101,23345,82,17);
-INSERT INTO merchant_buylists VALUES (18,45,82,18);
-INSERT INTO merchant_buylists VALUES (19,734,82,19);
-INSERT INTO merchant_buylists VALUES (20,3197,82,20);
-INSERT INTO merchant_buylists VALUES (102,8176,82,21);
-INSERT INTO merchant_buylists VALUES (48,43,82,22);
-INSERT INTO merchant_buylists VALUES (1119,698,82,23);
-INSERT INTO merchant_buylists VALUES (49,3047,82,24);
-INSERT INTO merchant_buylists VALUES (50,7785,82,25);
-INSERT INTO merchant_buylists VALUES (1121,8,82,26);
-INSERT INTO merchant_buylists VALUES (35,43,82,27);
-INSERT INTO merchant_buylists VALUES (36,43,82,28);
-INSERT INTO merchant_buylists VALUES (1129,698,82,29);
-INSERT INTO merchant_buylists VALUES (1122,698,82,30);
-INSERT INTO merchant_buylists VALUES (37,3047,82,31);
-INSERT INTO merchant_buylists VALUES (38,7785,82,32);
-INSERT INTO merchant_buylists VALUES (41,63,82,33);
-INSERT INTO merchant_buylists VALUES (42,1048,82,34);
-INSERT INTO merchant_buylists VALUES (43,4577,82,35);
-INSERT INTO merchant_buylists VALUES (44,11730,82,36);
-INSERT INTO merchant_buylists VALUES (17,2,82,37);
-INSERT INTO merchant_buylists VALUES (1341,3,82,38);
-INSERT INTO merchant_buylists VALUES (1,883,83,1);
-INSERT INTO merchant_buylists VALUES (4,883,83,2);
-INSERT INTO merchant_buylists VALUES (11,883,83,3);
-INSERT INTO merchant_buylists VALUES (13,883,83,4);
-INSERT INTO merchant_buylists VALUES (3,14375,83,5);
-INSERT INTO merchant_buylists VALUES (152,9280,83,6);
-INSERT INTO merchant_buylists VALUES (12,14375,83,7);
-INSERT INTO merchant_buylists VALUES (215,14375,83,8);
-INSERT INTO merchant_buylists VALUES (14,14375,83,9);
-INSERT INTO merchant_buylists VALUES (5,14375,83,10);
-INSERT INTO merchant_buylists VALUES (153,21275,83,11);
-INSERT INTO merchant_buylists VALUES (1333,62215,83,12);
-INSERT INTO merchant_buylists VALUES (66,62215,83,13);
-INSERT INTO merchant_buylists VALUES (67,62215,83,14);
-INSERT INTO merchant_buylists VALUES (122,62215,83,15);
-INSERT INTO merchant_buylists VALUES (154,62215,83,16);
-INSERT INTO merchant_buylists VALUES (216,62215,83,17);
-INSERT INTO merchant_buylists VALUES (271,62215,83,18);
-INSERT INTO merchant_buylists VALUES (2,156400,83,19);
-INSERT INTO merchant_buylists VALUES (218,156400,83,20);
-INSERT INTO merchant_buylists VALUES (272,156400,83,21);
-INSERT INTO merchant_buylists VALUES (15,156400,83,22);
-INSERT INTO merchant_buylists VALUES (253,883,83,23);
-INSERT INTO merchant_buylists VALUES (254,14375,83,24);
-INSERT INTO merchant_buylists VALUES (255,62215,83,25);
-INSERT INTO merchant_buylists VALUES (256,156400,83,26);
-INSERT INTO merchant_buylists VALUES (28,106,83,27);
-INSERT INTO merchant_buylists VALUES (21,169,83,28);
-INSERT INTO merchant_buylists VALUES (29,1748,83,29);
-INSERT INTO merchant_buylists VALUES (22,2794,83,30);
-INSERT INTO merchant_buylists VALUES (30,5716,83,31);
-INSERT INTO merchant_buylists VALUES (2386,5716,83,32);
-INSERT INTO merchant_buylists VALUES (23,9154,83,33);
-INSERT INTO merchant_buylists VALUES (412,14605,83,34);
-INSERT INTO merchant_buylists VALUES (390,23345,83,35);
-INSERT INTO merchant_buylists VALUES (24,23345,83,36);
-INSERT INTO merchant_buylists VALUES (31,14605,83,37);
-INSERT INTO merchant_buylists VALUES (18,45,83,38);
-INSERT INTO merchant_buylists VALUES (19,734,83,39);
-INSERT INTO merchant_buylists VALUES (20,3197,83,40);
-INSERT INTO merchant_buylists VALUES (102,8176,83,41);
-INSERT INTO merchant_buylists VALUES (48,43,83,42);
-INSERT INTO merchant_buylists VALUES (1119,698,83,43);
-INSERT INTO merchant_buylists VALUES (49,3047,83,44);
-INSERT INTO merchant_buylists VALUES (50,7785,83,45);
-INSERT INTO merchant_buylists VALUES (1121,8,83,46);
-INSERT INTO merchant_buylists VALUES (35,43,83,47);
-INSERT INTO merchant_buylists VALUES (36,43,83,48);
-INSERT INTO merchant_buylists VALUES (1129,698,83,49);
-INSERT INTO merchant_buylists VALUES (1122,698,83,50);
-INSERT INTO merchant_buylists VALUES (37,3047,83,51);
-INSERT INTO merchant_buylists VALUES (38,7785,83,52);
-INSERT INTO merchant_buylists VALUES (41,63,83,53);
-INSERT INTO merchant_buylists VALUES (42,1048,83,54);
-INSERT INTO merchant_buylists VALUES (43,4577,83,55);
-INSERT INTO merchant_buylists VALUES (44,11730,83,56);
-INSERT INTO merchant_buylists VALUES (17,2,83,57);
-INSERT INTO merchant_buylists VALUES (1341,3,83,58);
-INSERT INTO merchant_buylists VALUES (7,883,84,1);
-INSERT INTO merchant_buylists VALUES (308,883,84,2);
-INSERT INTO merchant_buylists VALUES (8,14375,84,3);
-INSERT INTO merchant_buylists VALUES (99,14375,84,4);
-INSERT INTO merchant_buylists VALUES (9,62215,84,5);
-INSERT INTO merchant_buylists VALUES (176,156400,84,6);
-INSERT INTO merchant_buylists VALUES (310,156400,84,7);
-INSERT INTO merchant_buylists VALUES (462,106,84,8);
-INSERT INTO merchant_buylists VALUES (426,169,84,9);
-INSERT INTO merchant_buylists VALUES (1103,1748,84,10);
-INSERT INTO merchant_buylists VALUES (1100,2794,84,11);
-INSERT INTO merchant_buylists VALUES (463,1748,84,12);
-INSERT INTO merchant_buylists VALUES (428,2794,84,13);
-INSERT INTO merchant_buylists VALUES (464,5716,84,14);
-INSERT INTO merchant_buylists VALUES (429,9154,84,15);
-INSERT INTO merchant_buylists VALUES (1104,14605,84,16);
-INSERT INTO merchant_buylists VALUES (1101,23345,84,17);
-INSERT INTO merchant_buylists VALUES (18,45,84,18);
-INSERT INTO merchant_buylists VALUES (19,734,84,19);
-INSERT INTO merchant_buylists VALUES (20,3197,84,20);
-INSERT INTO merchant_buylists VALUES (102,8176,84,21);
-INSERT INTO merchant_buylists VALUES (48,43,84,22);
-INSERT INTO merchant_buylists VALUES (1119,698,84,23);
-INSERT INTO merchant_buylists VALUES (49,3047,84,24);
-INSERT INTO merchant_buylists VALUES (50,7785,84,25);
-INSERT INTO merchant_buylists VALUES (1121,8,84,26);
-INSERT INTO merchant_buylists VALUES (35,43,84,27);
-INSERT INTO merchant_buylists VALUES (36,43,84,28);
-INSERT INTO merchant_buylists VALUES (1129,698,84,29);
-INSERT INTO merchant_buylists VALUES (1122,698,84,30);
-INSERT INTO merchant_buylists VALUES (37,3047,84,31);
-INSERT INTO merchant_buylists VALUES (38,7785,84,32);
-INSERT INTO merchant_buylists VALUES (41,63,84,33);
-INSERT INTO merchant_buylists VALUES (42,1048,84,34);
-INSERT INTO merchant_buylists VALUES (43,4577,84,35);
-INSERT INTO merchant_buylists VALUES (44,11730,84,36);
-INSERT INTO merchant_buylists VALUES (17,2,84,37);
-INSERT INTO merchant_buylists VALUES (1341,3,84,38);
-INSERT INTO merchant_buylists VALUES (118,76,85,1);
-INSERT INTO merchant_buylists VALUES (906,1242,85,2);
-INSERT INTO merchant_buylists VALUES (907,5382,85,3);
-INSERT INTO merchant_buylists VALUES (908,13685,85,4);
-INSERT INTO merchant_buylists VALUES (112,56,85,5);
-INSERT INTO merchant_buylists VALUES (113,933,85,6);
-INSERT INTO merchant_buylists VALUES (114,4036,85,7);
-INSERT INTO merchant_buylists VALUES (115,4036,85,8);
-INSERT INTO merchant_buylists VALUES (845,10224,85,9);
-INSERT INTO merchant_buylists VALUES (116,38,85,10);
-INSERT INTO merchant_buylists VALUES (875,621,85,11);
-INSERT INTO merchant_buylists VALUES (876,2691,85,12);
-INSERT INTO merchant_buylists VALUES (877,6808,85,13);
-INSERT INTO merchant_buylists VALUES (17,2,85,14);
-INSERT INTO merchant_buylists VALUES (1341,3,85,15);
-INSERT INTO merchant_buylists VALUES (1661,1150,85,16);
-INSERT INTO merchant_buylists VALUES (3031,460,85,17);
-INSERT INTO merchant_buylists VALUES (1785,288,85,18);
-INSERT INTO merchant_buylists VALUES (3947,40,85,19);
-INSERT INTO merchant_buylists VALUES (2509,17,85,20);
-INSERT INTO merchant_buylists VALUES (1835,8,85,21);
-INSERT INTO merchant_buylists VALUES (736,460,85,22);
-INSERT INTO merchant_buylists VALUES (1060,103,85,23);
-INSERT INTO merchant_buylists VALUES (1831,86,85,24);
-INSERT INTO merchant_buylists VALUES (1833,86,85,25);
-INSERT INTO merchant_buylists VALUES (734,1380,85,26);
-INSERT INTO merchant_buylists VALUES (735,2760,85,27);
-INSERT INTO merchant_buylists VALUES (1863,575,85,28);
-INSERT INTO merchant_buylists VALUES (1525,115,86,1);
-INSERT INTO merchant_buylists VALUES (1531,115,86,2);
-INSERT INTO merchant_buylists VALUES (1524,115,86,3);
-INSERT INTO merchant_buylists VALUES (1529,115,86,4);
-INSERT INTO merchant_buylists VALUES (1527,115,86,5);
-INSERT INTO merchant_buylists VALUES (1526,460,86,6);
-INSERT INTO merchant_buylists VALUES (1522,862,86,7);
-INSERT INTO merchant_buylists VALUES (1856,1840,86,8);
-INSERT INTO merchant_buylists VALUES (1535,920,86,9);
-INSERT INTO merchant_buylists VALUES (1521,920,86,10);
-INSERT INTO merchant_buylists VALUES (1523,920,86,11);
-INSERT INTO merchant_buylists VALUES (1534,920,86,12);
-INSERT INTO merchant_buylists VALUES (1537,920,86,13);
-INSERT INTO merchant_buylists VALUES (1661,1150,86,14);
-INSERT INTO merchant_buylists VALUES (3031,460,86,15);
-INSERT INTO merchant_buylists VALUES (1785,288,86,16);
-INSERT INTO merchant_buylists VALUES (1863,575,86,17);
-INSERT INTO merchant_buylists VALUES (30,6461,87,1);
-INSERT INTO merchant_buylists VALUES (23,10348,87,2);
-INSERT INTO merchant_buylists VALUES (412,16510,87,3);
-INSERT INTO merchant_buylists VALUES (390,26390,87,4);
-INSERT INTO merchant_buylists VALUES (24,26390,87,5);
-INSERT INTO merchant_buylists VALUES (31,16510,87,6);
-INSERT INTO merchant_buylists VALUES (25,41340,87,7);
-INSERT INTO merchant_buylists VALUES (26,63960,87,8);
-INSERT INTO merchant_buylists VALUES (33,29900,87,9);
-INSERT INTO merchant_buylists VALUES (32,25870,87,10);
-INSERT INTO merchant_buylists VALUES (27,47970,87,11);
-INSERT INTO merchant_buylists VALUES (34,39910,87,12);
-INSERT INTO merchant_buylists VALUES (413,50830,87,13);
-INSERT INTO merchant_buylists VALUES (347,108550,87,14);
-INSERT INTO merchant_buylists VALUES (20,3614,87,15);
-INSERT INTO merchant_buylists VALUES (102,9243,87,16);
-INSERT INTO merchant_buylists VALUES (625,16770,87,17);
-INSERT INTO merchant_buylists VALUES (626,28470,87,18);
-INSERT INTO merchant_buylists VALUES (49,3445,87,19);
-INSERT INTO merchant_buylists VALUES (50,8801,87,20);
-INSERT INTO merchant_buylists VALUES (51,15990,87,21);
-INSERT INTO merchant_buylists VALUES (604,27170,87,22);
-INSERT INTO merchant_buylists VALUES (37,3445,87,23);
-INSERT INTO merchant_buylists VALUES (38,8801,87,24);
-INSERT INTO merchant_buylists VALUES (39,15990,87,25);
-INSERT INTO merchant_buylists VALUES (40,27170,87,26);
-INSERT INTO merchant_buylists VALUES (43,5174,87,27);
-INSERT INTO merchant_buylists VALUES (44,13260,87,28);
-INSERT INTO merchant_buylists VALUES (1148,23920,87,29);
-INSERT INTO merchant_buylists VALUES (45,40690,87,30);
-INSERT INTO merchant_buylists VALUES (464,6461,88,1);
-INSERT INTO merchant_buylists VALUES (429,10348,88,2);
-INSERT INTO merchant_buylists VALUES (1104,16510,88,3);
-INSERT INTO merchant_buylists VALUES (1101,26390,88,4);
-INSERT INTO merchant_buylists VALUES (1105,29900,88,5);
-INSERT INTO merchant_buylists VALUES (1102,47970,88,6);
-INSERT INTO merchant_buylists VALUES (465,50830,88,7);
-INSERT INTO merchant_buylists VALUES (432,81380,88,8);
-INSERT INTO merchant_buylists VALUES (20,3614,88,9);
-INSERT INTO merchant_buylists VALUES (102,9243,88,10);
-INSERT INTO merchant_buylists VALUES (625,16770,88,11);
-INSERT INTO merchant_buylists VALUES (626,28470,88,12);
-INSERT INTO merchant_buylists VALUES (49,3445,88,13);
-INSERT INTO merchant_buylists VALUES (50,8801,88,14);
-INSERT INTO merchant_buylists VALUES (51,15990,88,15);
-INSERT INTO merchant_buylists VALUES (604,27170,88,16);
-INSERT INTO merchant_buylists VALUES (37,3445,88,17);
-INSERT INTO merchant_buylists VALUES (38,8801,88,18);
-INSERT INTO merchant_buylists VALUES (39,15990,88,19);
-INSERT INTO merchant_buylists VALUES (40,27170,88,20);
-INSERT INTO merchant_buylists VALUES (43,5174,88,21);
-INSERT INTO merchant_buylists VALUES (44,13260,88,22);
-INSERT INTO merchant_buylists VALUES (1148,23920,88,23);
-INSERT INTO merchant_buylists VALUES (45,40690,88,24);
-INSERT INTO merchant_buylists VALUES (17,3,88,25);
-INSERT INTO merchant_buylists VALUES (1341,4,88,26);
-INSERT INTO merchant_buylists VALUES (2505,16220,89,1);
-INSERT INTO merchant_buylists VALUES (3439,40880,89,2);
-INSERT INTO merchant_buylists VALUES (3902,73301,89,3);
-INSERT INTO merchant_buylists VALUES (3903,122838,89,4);
-INSERT INTO merchant_buylists VALUES (3904,193273,89,5);
-INSERT INTO merchant_buylists VALUES (3905,289986,89,6);
-INSERT INTO merchant_buylists VALUES (3906,418964,89,7);
-INSERT INTO merchant_buylists VALUES (2506,8353,89,8);
-INSERT INTO merchant_buylists VALUES (3891,21337,89,9);
-INSERT INTO merchant_buylists VALUES (3892,38718,89,10);
-INSERT INTO merchant_buylists VALUES (3893,65735,89,11);
-INSERT INTO merchant_buylists VALUES (3894,104920,89,12);
-INSERT INTO merchant_buylists VALUES (3895,159931,89,13);
-INSERT INTO merchant_buylists VALUES (3896,235160,89,14);
-INSERT INTO merchant_buylists VALUES (2515,120,89,15);
-INSERT INTO merchant_buylists VALUES (3920,377347,89,16);
-INSERT INTO merchant_buylists VALUES (3921,506849,89,17);
-INSERT INTO merchant_buylists VALUES (3922,680520,89,18);
-INSERT INTO merchant_buylists VALUES (3923,909889,89,19);
-INSERT INTO merchant_buylists VALUES (3913,377347,89,20);
-INSERT INTO merchant_buylists VALUES (3914,506849,89,21);
-INSERT INTO merchant_buylists VALUES (3915,680520,89,22);
-INSERT INTO merchant_buylists VALUES (3916,909889,89,23);
-INSERT INTO merchant_buylists VALUES (4038,180,89,24);
-INSERT INTO merchant_buylists VALUES (2505,16220,90,1);
-INSERT INTO merchant_buylists VALUES (3439,40880,90,2);
-INSERT INTO merchant_buylists VALUES (3902,73301,90,3);
-INSERT INTO merchant_buylists VALUES (3903,122838,90,4);
-INSERT INTO merchant_buylists VALUES (3904,193273,90,5);
-INSERT INTO merchant_buylists VALUES (3905,289986,90,6);
-INSERT INTO merchant_buylists VALUES (3906,418964,90,7);
-INSERT INTO merchant_buylists VALUES (2506,8353,90,8);
-INSERT INTO merchant_buylists VALUES (3891,21337,90,9);
-INSERT INTO merchant_buylists VALUES (3892,38718,90,10);
-INSERT INTO merchant_buylists VALUES (3893,65735,90,11);
-INSERT INTO merchant_buylists VALUES (3894,104920,90,12);
-INSERT INTO merchant_buylists VALUES (3895,159931,90,13);
-INSERT INTO merchant_buylists VALUES (3896,235160,90,14);
-INSERT INTO merchant_buylists VALUES (2515,120,90,15);
-INSERT INTO merchant_buylists VALUES (3920,377347,90,16);
-INSERT INTO merchant_buylists VALUES (3921,506849,90,17);
-INSERT INTO merchant_buylists VALUES (3922,680520,90,18);
-INSERT INTO merchant_buylists VALUES (3923,909889,90,19);
-INSERT INTO merchant_buylists VALUES (3913,377347,90,20);
-INSERT INTO merchant_buylists VALUES (3914,506849,90,21);
-INSERT INTO merchant_buylists VALUES (3915,680520,90,22);
-INSERT INTO merchant_buylists VALUES (3916,909889,90,23);
-INSERT INTO merchant_buylists VALUES (4038,180,90,24);
-INSERT INTO merchant_buylists VALUES (2505,16220,91,1);
-INSERT INTO merchant_buylists VALUES (3439,40880,91,2);
-INSERT INTO merchant_buylists VALUES (3902,73301,91,3);
-INSERT INTO merchant_buylists VALUES (3903,122838,91,4);
-INSERT INTO merchant_buylists VALUES (3904,193273,91,5);
-INSERT INTO merchant_buylists VALUES (3905,289986,91,6);
-INSERT INTO merchant_buylists VALUES (3906,418964,91,7);
-INSERT INTO merchant_buylists VALUES (2506,8353,91,8);
-INSERT INTO merchant_buylists VALUES (3891,21337,91,9);
-INSERT INTO merchant_buylists VALUES (3892,38718,91,10);
-INSERT INTO merchant_buylists VALUES (3893,65735,91,11);
-INSERT INTO merchant_buylists VALUES (3894,104920,91,12);
-INSERT INTO merchant_buylists VALUES (3895,159931,91,13);
-INSERT INTO merchant_buylists VALUES (3896,235160,91,14);
-INSERT INTO merchant_buylists VALUES (2515,120,91,15);
-INSERT INTO merchant_buylists VALUES (3920,377347,91,16);
-INSERT INTO merchant_buylists VALUES (3921,506849,91,17);
-INSERT INTO merchant_buylists VALUES (3922,680520,91,18);
-INSERT INTO merchant_buylists VALUES (3923,909889,91,19);
-INSERT INTO merchant_buylists VALUES (3913,377347,91,20);
-INSERT INTO merchant_buylists VALUES (3914,506849,91,21);
-INSERT INTO merchant_buylists VALUES (3915,680520,91,22);
-INSERT INTO merchant_buylists VALUES (3916,909889,91,23);
-INSERT INTO merchant_buylists VALUES (4038,180,91,24);
-INSERT INTO merchant_buylists VALUES (2505,14869,92,1);
-INSERT INTO merchant_buylists VALUES (3439,37474,92,2);
-INSERT INTO merchant_buylists VALUES (3902,67192,92,3);
-INSERT INTO merchant_buylists VALUES (3903,112602,92,4);
-INSERT INTO merchant_buylists VALUES (3904,177167,92,5);
-INSERT INTO merchant_buylists VALUES (3905,265820,92,6);
-INSERT INTO merchant_buylists VALUES (3906,384051,92,7);
-INSERT INTO merchant_buylists VALUES (2506,7657,92,8);
-INSERT INTO merchant_buylists VALUES (3891,19559,92,9);
-INSERT INTO merchant_buylists VALUES (3892,35492,92,10);
-INSERT INTO merchant_buylists VALUES (3893,60257,92,11);
-INSERT INTO merchant_buylists VALUES (3894,96176,92,12);
-INSERT INTO merchant_buylists VALUES (3895,146604,92,13);
-INSERT INTO merchant_buylists VALUES (3896,215564,92,14);
-INSERT INTO merchant_buylists VALUES (2515,110,92,15);
-INSERT INTO merchant_buylists VALUES (3920,345902,92,16);
-INSERT INTO merchant_buylists VALUES (3921,464611,92,17);
-INSERT INTO merchant_buylists VALUES (3922,623810,92,18);
-INSERT INTO merchant_buylists VALUES (3923,834065,92,19);
-INSERT INTO merchant_buylists VALUES (3913,345902,92,20);
-INSERT INTO merchant_buylists VALUES (3914,464611,92,21);
-INSERT INTO merchant_buylists VALUES (3915,623810,92,22);
-INSERT INTO merchant_buylists VALUES (3916,834065,92,23);
-INSERT INTO merchant_buylists VALUES (4038,165,92,24);
-INSERT INTO merchant_buylists VALUES (2505,15545,93,1);
-INSERT INTO merchant_buylists VALUES (3439,39177,93,2);
-INSERT INTO merchant_buylists VALUES (3902,70247,93,3);
-INSERT INTO merchant_buylists VALUES (3903,117720,93,4);
-INSERT INTO merchant_buylists VALUES (3904,185220,93,5);
-INSERT INTO merchant_buylists VALUES (3905,277903,93,6);
-INSERT INTO merchant_buylists VALUES (3906,401508,93,7);
-INSERT INTO merchant_buylists VALUES (2506,8005,93,8);
-INSERT INTO merchant_buylists VALUES (3891,20448,93,9);
-INSERT INTO merchant_buylists VALUES (3892,37105,93,10);
-INSERT INTO merchant_buylists VALUES (3893,62996,93,11);
-INSERT INTO merchant_buylists VALUES (3894,100548,93,12);
-INSERT INTO merchant_buylists VALUES (3895,153267,93,13);
-INSERT INTO merchant_buylists VALUES (3896,225362,93,14);
-INSERT INTO merchant_buylists VALUES (2515,115,93,15);
-INSERT INTO merchant_buylists VALUES (3920,361624,93,16);
-INSERT INTO merchant_buylists VALUES (3921,485730,93,17);
-INSERT INTO merchant_buylists VALUES (3922,652165,93,18);
-INSERT INTO merchant_buylists VALUES (3923,871977,93,19);
-INSERT INTO merchant_buylists VALUES (3913,361624,93,20);
-INSERT INTO merchant_buylists VALUES (3914,485730,93,21);
-INSERT INTO merchant_buylists VALUES (3915,652165,93,22);
-INSERT INTO merchant_buylists VALUES (3916,871977,93,23);
-INSERT INTO merchant_buylists VALUES (4038,172,93,24);
-INSERT INTO merchant_buylists VALUES (2505,17572,94,1);
-INSERT INTO merchant_buylists VALUES (3439,44287,94,2);
-INSERT INTO merchant_buylists VALUES (3902,79409,94,3);
-INSERT INTO merchant_buylists VALUES (3903,133074,94,4);
-INSERT INTO merchant_buylists VALUES (3904,209379,94,5);
-INSERT INTO merchant_buylists VALUES (3905,314152,94,6);
-INSERT INTO merchant_buylists VALUES (3906,453878,94,7);
-INSERT INTO merchant_buylists VALUES (2506,9049,94,8);
-INSERT INTO merchant_buylists VALUES (3891,23115,94,9);
-INSERT INTO merchant_buylists VALUES (3892,41944,94,10);
-INSERT INTO merchant_buylists VALUES (3893,71213,94,11);
-INSERT INTO merchant_buylists VALUES (3894,113663,94,12);
-INSERT INTO merchant_buylists VALUES (3895,173259,94,13);
-INSERT INTO merchant_buylists VALUES (3896,254757,94,14);
-INSERT INTO merchant_buylists VALUES (2515,130,94,15);
-INSERT INTO merchant_buylists VALUES (3920,408793,94,16);
-INSERT INTO merchant_buylists VALUES (3921,549086,94,17);
-INSERT INTO merchant_buylists VALUES (3922,737230,94,18);
-INSERT INTO merchant_buylists VALUES (3923,985713,94,19);
-INSERT INTO merchant_buylists VALUES (3913,408793,94,20);
-INSERT INTO merchant_buylists VALUES (3914,549086,94,21);
-INSERT INTO merchant_buylists VALUES (3915,737230,94,22);
-INSERT INTO merchant_buylists VALUES (3916,985713,94,23);
-INSERT INTO merchant_buylists VALUES (4038,195,94,24);
-INSERT INTO merchant_buylists VALUES (179,772800,95,1);
-INSERT INTO merchant_buylists VALUES (182,772800,95,2);
-INSERT INTO merchant_buylists VALUES (183,772800,95,3);
-INSERT INTO merchant_buylists VALUES (185,772800,95,4);
-INSERT INTO merchant_buylists VALUES (315,772800,95,5);
-INSERT INTO merchant_buylists VALUES (83,859200,95,6);
-INSERT INTO merchant_buylists VALUES (143,859200,95,7);
-INSERT INTO merchant_buylists VALUES (144,859200,95,8);
-INSERT INTO merchant_buylists VALUES (238,1160400,95,9);
-INSERT INTO merchant_buylists VALUES (239,1160400,95,10);
-INSERT INTO merchant_buylists VALUES (240,1160400,95,11);
-INSERT INTO merchant_buylists VALUES (241,1160400,95,12);
-INSERT INTO merchant_buylists VALUES (186,1160400,95,13);
-INSERT INTO merchant_buylists VALUES (316,1160400,95,14);
-INSERT INTO merchant_buylists VALUES (317,1160400,95,15);
-INSERT INTO merchant_buylists VALUES (432,75120,95,16);
-INSERT INTO merchant_buylists VALUES (467,75000,95,17);
-INSERT INTO merchant_buylists VALUES (434,119880,95,18);
-INSERT INTO merchant_buylists VALUES (468,75000,95,19);
-INSERT INTO merchant_buylists VALUES (435,119880,95,20);
-INSERT INTO merchant_buylists VALUES (469,114240,95,21);
-INSERT INTO merchant_buylists VALUES (436,182400,95,22);
-INSERT INTO merchant_buylists VALUES (626,26280,95,23);
-INSERT INTO merchant_buylists VALUES (627,42000,95,24);
-INSERT INTO merchant_buylists VALUES (628,63960,95,25);
-INSERT INTO merchant_buylists VALUES (604,25080,95,26);
-INSERT INTO merchant_buylists VALUES (605,39960,95,27);
-INSERT INTO merchant_buylists VALUES (63,60960,95,28);
-INSERT INTO merchant_buylists VALUES (40,25080,95,29);
-INSERT INTO merchant_buylists VALUES (1123,39960,95,30);
-INSERT INTO merchant_buylists VALUES (553,60960,95,31);
-INSERT INTO merchant_buylists VALUES (45,37560,95,32);
-INSERT INTO merchant_buylists VALUES (46,60000,95,33);
-INSERT INTO merchant_buylists VALUES (2508,300,95,34);
-INSERT INTO merchant_buylists VALUES (1333,64920,96,1);
-INSERT INTO merchant_buylists VALUES (66,64920,96,2);
-INSERT INTO merchant_buylists VALUES (67,64920,96,3);
-INSERT INTO merchant_buylists VALUES (122,64920,96,4);
-INSERT INTO merchant_buylists VALUES (154,64920,96,5);
-INSERT INTO merchant_buylists VALUES (216,64920,96,6);
-INSERT INTO merchant_buylists VALUES (271,64920,96,7);
-INSERT INTO merchant_buylists VALUES (2,163200,96,8);
-INSERT INTO merchant_buylists VALUES (218,163200,96,9);
-INSERT INTO merchant_buylists VALUES (272,163200,96,10);
-INSERT INTO merchant_buylists VALUES (15,163200,96,11);
-INSERT INTO merchant_buylists VALUES (68,292800,96,12);
-INSERT INTO merchant_buylists VALUES (219,292800,96,13);
-INSERT INTO merchant_buylists VALUES (273,292800,96,14);
-INSERT INTO merchant_buylists VALUES (155,292800,96,15);
-INSERT INTO merchant_buylists VALUES (87,292800,96,16);
-INSERT INTO merchant_buylists VALUES (16,292800,96,17);
-INSERT INTO merchant_buylists VALUES (123,490800,96,18);
-INSERT INTO merchant_buylists VALUES (220,490800,96,19);
-INSERT INTO merchant_buylists VALUES (221,490800,96,20);
-INSERT INTO merchant_buylists VALUES (274,490800,96,21);
-INSERT INTO merchant_buylists VALUES (156,490800,96,22);
-INSERT INTO merchant_buylists VALUES (166,490800,96,23);
-INSERT INTO merchant_buylists VALUES (168,490800,96,24);
-INSERT INTO merchant_buylists VALUES (291,490800,96,25);
-INSERT INTO merchant_buylists VALUES (256,163200,96,26);
-INSERT INTO merchant_buylists VALUES (257,292800,96,27);
-INSERT INTO merchant_buylists VALUES (258,490800,96,28);
-INSERT INTO merchant_buylists VALUES (17,2,96,29);
-INSERT INTO merchant_buylists VALUES (1341,4,96,30);
-INSERT INTO merchant_buylists VALUES (1342,6,96,31);
-INSERT INTO merchant_buylists VALUES (9,64920,97,1);
-INSERT INTO merchant_buylists VALUES (176,163200,97,2);
-INSERT INTO merchant_buylists VALUES (310,163200,97,3);
-INSERT INTO merchant_buylists VALUES (177,292800,97,4);
-INSERT INTO merchant_buylists VALUES (311,292800,97,5);
-INSERT INTO merchant_buylists VALUES (100,292800,97,6);
-INSERT INTO merchant_buylists VALUES (178,490800,97,7);
-INSERT INTO merchant_buylists VALUES (101,490800,97,8);
-INSERT INTO merchant_buylists VALUES (312,490800,97,9);
-INSERT INTO merchant_buylists VALUES (314,490800,97,10);
-INSERT INTO merchant_buylists VALUES (179,772800,97,11);
-INSERT INTO merchant_buylists VALUES (182,772800,97,12);
-INSERT INTO merchant_buylists VALUES (17,2,97,13);
-INSERT INTO merchant_buylists VALUES (1341,4,97,14);
-INSERT INTO merchant_buylists VALUES (1342,6,97,15);
-INSERT INTO merchant_buylists VALUES (30,5964,98,1);
-INSERT INTO merchant_buylists VALUES (23,9552,98,2);
-INSERT INTO merchant_buylists VALUES (412,15240,98,3);
-INSERT INTO merchant_buylists VALUES (390,24360,98,4);
-INSERT INTO merchant_buylists VALUES (24,24360,98,5);
-INSERT INTO merchant_buylists VALUES (31,15240,98,6);
-INSERT INTO merchant_buylists VALUES (25,38160,98,7);
-INSERT INTO merchant_buylists VALUES (26,59040,98,8);
-INSERT INTO merchant_buylists VALUES (33,27600,98,9);
-INSERT INTO merchant_buylists VALUES (32,23880,98,10);
-INSERT INTO merchant_buylists VALUES (27,44280,98,11);
-INSERT INTO merchant_buylists VALUES (34,36840,98,12);
-INSERT INTO merchant_buylists VALUES (413,46920,98,13);
-INSERT INTO merchant_buylists VALUES (347,100200,98,14);
-INSERT INTO merchant_buylists VALUES (20,3336,98,15);
-INSERT INTO merchant_buylists VALUES (102,8532,98,16);
-INSERT INTO merchant_buylists VALUES (625,15480,98,17);
-INSERT INTO merchant_buylists VALUES (626,26280,98,18);
-INSERT INTO merchant_buylists VALUES (49,3180,98,19);
-INSERT INTO merchant_buylists VALUES (50,8124,98,20);
-INSERT INTO merchant_buylists VALUES (51,14760,98,21);
-INSERT INTO merchant_buylists VALUES (604,25080,98,22);
-INSERT INTO merchant_buylists VALUES (37,3180,98,23);
-INSERT INTO merchant_buylists VALUES (38,8124,98,24);
-INSERT INTO merchant_buylists VALUES (39,14760,98,25);
-INSERT INTO merchant_buylists VALUES (40,25080,98,26);
-INSERT INTO merchant_buylists VALUES (43,4776,98,27);
-INSERT INTO merchant_buylists VALUES (44,12240,98,28);
-INSERT INTO merchant_buylists VALUES (1148,22080,98,29);
-INSERT INTO merchant_buylists VALUES (45,37560,98,30);
-INSERT INTO merchant_buylists VALUES (17,2,98,31);
-INSERT INTO merchant_buylists VALUES (1341,4,98,32);
-INSERT INTO merchant_buylists VALUES (1342,6,98,33);
-INSERT INTO merchant_buylists VALUES (464,5964,99,1);
-INSERT INTO merchant_buylists VALUES (429,9552,99,2);
-INSERT INTO merchant_buylists VALUES (1104,15240,99,3);
-INSERT INTO merchant_buylists VALUES (1101,24360,99,4);
-INSERT INTO merchant_buylists VALUES (1105,27600,99,5);
-INSERT INTO merchant_buylists VALUES (1102,44280,99,6);
-INSERT INTO merchant_buylists VALUES (465,46920,99,7);
-INSERT INTO merchant_buylists VALUES (432,75120,99,8);
-INSERT INTO merchant_buylists VALUES (20,3336,99,9);
-INSERT INTO merchant_buylists VALUES (102,8532,99,10);
-INSERT INTO merchant_buylists VALUES (625,15480,99,11);
-INSERT INTO merchant_buylists VALUES (626,26280,99,12);
-INSERT INTO merchant_buylists VALUES (49,3180,99,13);
-INSERT INTO merchant_buylists VALUES (50,8124,99,14);
-INSERT INTO merchant_buylists VALUES (51,14760,99,15);
-INSERT INTO merchant_buylists VALUES (604,25080,99,16);
-INSERT INTO merchant_buylists VALUES (37,3180,99,17);
-INSERT INTO merchant_buylists VALUES (38,8124,99,18);
-INSERT INTO merchant_buylists VALUES (39,14760,99,19);
-INSERT INTO merchant_buylists VALUES (40,25080,99,20);
-INSERT INTO merchant_buylists VALUES (43,4776,99,21);
-INSERT INTO merchant_buylists VALUES (44,12240,99,22);
-INSERT INTO merchant_buylists VALUES (1148,22080,99,23);
-INSERT INTO merchant_buylists VALUES (45,37560,99,24);
-INSERT INTO merchant_buylists VALUES (17,2,99,25);
-INSERT INTO merchant_buylists VALUES (1341,4,99,26);
-INSERT INTO merchant_buylists VALUES (1342,6,99,27);
-INSERT INTO merchant_buylists VALUES (1099,600,100,1);
-INSERT INTO merchant_buylists VALUES (1053,600,100,2);
-INSERT INTO merchant_buylists VALUES (1055,600,100,3);
-INSERT INTO merchant_buylists VALUES (1056,600,100,4);
-INSERT INTO merchant_buylists VALUES (1052,600,100,5);
-INSERT INTO merchant_buylists VALUES (1054,600,100,6);
-INSERT INTO merchant_buylists VALUES (1058,600,100,7);
-INSERT INTO merchant_buylists VALUES (1098,600,100,8);
-INSERT INTO merchant_buylists VALUES (1097,660,100,9);
-INSERT INTO merchant_buylists VALUES (1096,660,100,10);
-INSERT INTO merchant_buylists VALUES (1370,900,100,11);
-INSERT INTO merchant_buylists VALUES (1401,900,100,12);
-INSERT INTO merchant_buylists VALUES (1411,900,100,13);
-INSERT INTO merchant_buylists VALUES (1372,900,100,14);
-INSERT INTO merchant_buylists VALUES (1513,960,100,15);
-INSERT INTO merchant_buylists VALUES (1399,900,100,16);
-INSERT INTO merchant_buylists VALUES (1386,900,100,17);
-INSERT INTO merchant_buylists VALUES (1856,1920,100,18);
-INSERT INTO merchant_buylists VALUES (1377,900,100,19);
-INSERT INTO merchant_buylists VALUES (1383,900,100,20);
-INSERT INTO merchant_buylists VALUES (1514,960,100,21);
-INSERT INTO merchant_buylists VALUES (1405,900,100,22);
-INSERT INTO merchant_buylists VALUES (1403,900,100,23);
-INSERT INTO merchant_buylists VALUES (1371,900,100,24);
-INSERT INTO merchant_buylists VALUES (1515,960,100,25);
-INSERT INTO merchant_buylists VALUES (1667,960,100,26);
-INSERT INTO merchant_buylists VALUES (1669,960,100,27);
-INSERT INTO merchant_buylists VALUES (1671,960,100,28);
-INSERT INTO merchant_buylists VALUES (1512,1380,100,29);
-INSERT INTO merchant_buylists VALUES (1379,1380,100,30);
-INSERT INTO merchant_buylists VALUES (1402,1500,100,31);
-INSERT INTO merchant_buylists VALUES (1517,1500,100,32);
-INSERT INTO merchant_buylists VALUES (1415,1500,100,33);
-INSERT INTO merchant_buylists VALUES (1391,1500,100,34);
-INSERT INTO merchant_buylists VALUES (1398,1500,100,35);
-INSERT INTO merchant_buylists VALUES (1389,1500,100,36);
-INSERT INTO merchant_buylists VALUES (1388,1500,100,37);
-INSERT INTO merchant_buylists VALUES (1410,1500,100,38);
-INSERT INTO merchant_buylists VALUES (1404,1500,100,39);
-INSERT INTO merchant_buylists VALUES (1417,1500,100,40);
-INSERT INTO merchant_buylists VALUES (1400,1500,100,41);
-INSERT INTO merchant_buylists VALUES (1418,1500,100,42);
-INSERT INTO merchant_buylists VALUES (1668,1500,100,43);
-INSERT INTO merchant_buylists VALUES (1670,1500,100,44);
-INSERT INTO merchant_buylists VALUES (3038,1860,100,45);
-INSERT INTO merchant_buylists VALUES (1378,1920,100,46);
-INSERT INTO merchant_buylists VALUES (1516,2160,100,47);
-INSERT INTO merchant_buylists VALUES (1414,2160,100,48);
-INSERT INTO merchant_buylists VALUES (1385,2160,100,49);
-INSERT INTO merchant_buylists VALUES (1394,2160,100,50);
-INSERT INTO merchant_buylists VALUES (1526,480,100,51);
-INSERT INTO merchant_buylists VALUES (1522,900,100,52);
-INSERT INTO merchant_buylists VALUES (1535,960,100,53);
-INSERT INTO merchant_buylists VALUES (1521,960,100,54);
-INSERT INTO merchant_buylists VALUES (1523,960,100,55);
-INSERT INTO merchant_buylists VALUES (1534,960,100,56);
-INSERT INTO merchant_buylists VALUES (1537,960,100,57);
-INSERT INTO merchant_buylists VALUES (1533,1500,100,58);
-INSERT INTO merchant_buylists VALUES (1536,1500,100,59);
-INSERT INTO merchant_buylists VALUES (1532,1500,100,60);
-INSERT INTO merchant_buylists VALUES (1528,2160,100,61);
-INSERT INTO merchant_buylists VALUES (1519,2160,100,62);
-INSERT INTO merchant_buylists VALUES (1518,2160,100,63);
-INSERT INTO merchant_buylists VALUES (17,2,101,1);
-INSERT INTO merchant_buylists VALUES (1341,4,101,2);
-INSERT INTO merchant_buylists VALUES (1342,6,101,3);
-INSERT INTO merchant_buylists VALUES (1665,600,101,4);
-INSERT INTO merchant_buylists VALUES (1661,1200,101,5);
-INSERT INTO merchant_buylists VALUES (3031,480,101,6);
-INSERT INTO merchant_buylists VALUES (1785,300,101,7);
-INSERT INTO merchant_buylists VALUES (1831,90,101,8);
-INSERT INTO merchant_buylists VALUES (1833,90,101,9);
-INSERT INTO merchant_buylists VALUES (734,1440,101,10);
-INSERT INTO merchant_buylists VALUES (735,2880,101,11);
-INSERT INTO merchant_buylists VALUES (1061,396,101,12);
-INSERT INTO merchant_buylists VALUES (1832,216,101,13);
-INSERT INTO merchant_buylists VALUES (736,480,101,14);
-INSERT INTO merchant_buylists VALUES (737,2400,101,15);
-INSERT INTO merchant_buylists VALUES (1829,600,101,16);
-INSERT INTO merchant_buylists VALUES (2130,1200,101,17);
-INSERT INTO merchant_buylists VALUES (907,5616,102,1);
-INSERT INTO merchant_buylists VALUES (908,14280,102,2);
-INSERT INTO merchant_buylists VALUES (114,4212,102,3);
-INSERT INTO merchant_buylists VALUES (115,4212,102,4);
-INSERT INTO merchant_buylists VALUES (845,10668,102,5);
-INSERT INTO merchant_buylists VALUES (876,2808,102,6);
-INSERT INTO merchant_buylists VALUES (877,7104,102,7);
-INSERT INTO merchant_buylists VALUES (17,2,102,8);
-INSERT INTO merchant_buylists VALUES (1341,3,102,9);
-INSERT INTO merchant_buylists VALUES (1342,6,102,10);
-INSERT INTO merchant_buylists VALUES (1665,575,102,11);
-INSERT INTO merchant_buylists VALUES (1661,1150,102,12);
-INSERT INTO merchant_buylists VALUES (3031,460,102,13);
-INSERT INTO merchant_buylists VALUES (1785,288,102,14);
-INSERT INTO merchant_buylists VALUES (1831,86,102,15);
-INSERT INTO merchant_buylists VALUES (1833,86,102,16);
-INSERT INTO merchant_buylists VALUES (734,1380,102,17);
-INSERT INTO merchant_buylists VALUES (735,2760,102,18);
-INSERT INTO merchant_buylists VALUES (1061,379,102,19);
-INSERT INTO merchant_buylists VALUES (1832,207,102,20);
-INSERT INTO merchant_buylists VALUES (736,460,102,21);
-INSERT INTO merchant_buylists VALUES (737,2300,102,22);
-INSERT INTO merchant_buylists VALUES (1829,575,102,23);
-INSERT INTO merchant_buylists VALUES (2130,1150,102,24);
-INSERT INTO merchant_buylists VALUES (907,5616,103,1);
-INSERT INTO merchant_buylists VALUES (908,14280,103,2);
-INSERT INTO merchant_buylists VALUES (114,4212,103,3);
-INSERT INTO merchant_buylists VALUES (115,4212,103,4);
-INSERT INTO merchant_buylists VALUES (845,10668,103,5);
-INSERT INTO merchant_buylists VALUES (876,2808,103,6);
-INSERT INTO merchant_buylists VALUES (877,7104,103,7);
-INSERT INTO merchant_buylists VALUES (2505,16220,104,1);
-INSERT INTO merchant_buylists VALUES (3439,40880,104,2);
-INSERT INTO merchant_buylists VALUES (3902,73301,104,3);
-INSERT INTO merchant_buylists VALUES (3903,122838,104,4);
-INSERT INTO merchant_buylists VALUES (3904,193273,104,5);
-INSERT INTO merchant_buylists VALUES (3905,289986,104,6);
-INSERT INTO merchant_buylists VALUES (3906,418964,104,7);
-INSERT INTO merchant_buylists VALUES (2506,8353,104,8);
-INSERT INTO merchant_buylists VALUES (3891,21337,104,9);
-INSERT INTO merchant_buylists VALUES (3892,38718,104,10);
-INSERT INTO merchant_buylists VALUES (3893,65735,104,11);
-INSERT INTO merchant_buylists VALUES (3894,104920,104,12);
-INSERT INTO merchant_buylists VALUES (3895,159931,104,13);
-INSERT INTO merchant_buylists VALUES (3896,235160,104,14);
-INSERT INTO merchant_buylists VALUES (2515,120,104,15);
-INSERT INTO merchant_buylists VALUES (3920,377347,104,16);
-INSERT INTO merchant_buylists VALUES (3921,506849,104,17);
-INSERT INTO merchant_buylists VALUES (3922,680520,104,18);
-INSERT INTO merchant_buylists VALUES (3923,909889,104,19);
-INSERT INTO merchant_buylists VALUES (3913,377347,104,20);
-INSERT INTO merchant_buylists VALUES (3914,506849,104,21);
-INSERT INTO merchant_buylists VALUES (3915,680520,104,22);
-INSERT INTO merchant_buylists VALUES (3916,909889,104,23);
-INSERT INTO merchant_buylists VALUES (4038,180,104,24);
-INSERT INTO merchant_buylists VALUES (21,0,1001,1);
-INSERT INTO merchant_buylists VALUES (22,0,1001,2);
-INSERT INTO merchant_buylists VALUES (23,0,1001,3);
-INSERT INTO merchant_buylists VALUES (24,0,1001,4);
-INSERT INTO merchant_buylists VALUES (25,0,1001,5);
-INSERT INTO merchant_buylists VALUES (26,0,1001,6);
-INSERT INTO merchant_buylists VALUES (27,0,1001,7);
-INSERT INTO merchant_buylists VALUES (58,0,1001,8);
-INSERT INTO merchant_buylists VALUES (60,0,1001,9);
-INSERT INTO merchant_buylists VALUES (347,0,1001,10);
-INSERT INTO merchant_buylists VALUES (348,0,1001,11);
-INSERT INTO merchant_buylists VALUES (349,0,1001,12);
-INSERT INTO merchant_buylists VALUES (350,0,1001,13);
-INSERT INTO merchant_buylists VALUES (351,0,1001,14);
-INSERT INTO merchant_buylists VALUES (352,0,1001,15);
-INSERT INTO merchant_buylists VALUES (353,0,1001,16);
-INSERT INTO merchant_buylists VALUES (354,0,1001,17);
-INSERT INTO merchant_buylists VALUES (355,0,1001,18);
-INSERT INTO merchant_buylists VALUES (356,0,1001,19);
-INSERT INTO merchant_buylists VALUES (357,0,1001,20);
-INSERT INTO merchant_buylists VALUES (358,0,1001,21);
-INSERT INTO merchant_buylists VALUES (359,0,1001,22);
-INSERT INTO merchant_buylists VALUES (360,0,1001,23);
-INSERT INTO merchant_buylists VALUES (361,0,1001,24);
-INSERT INTO merchant_buylists VALUES (362,0,1001,25);
-INSERT INTO merchant_buylists VALUES (363,0,1001,26);
-INSERT INTO merchant_buylists VALUES (364,0,1001,27);
-INSERT INTO merchant_buylists VALUES (365,0,1001,28);
-INSERT INTO merchant_buylists VALUES (366,0,1001,29);
-INSERT INTO merchant_buylists VALUES (367,0,1001,30);
-INSERT INTO merchant_buylists VALUES (368,0,1001,31);
-INSERT INTO merchant_buylists VALUES (369,0,1001,32);
-INSERT INTO merchant_buylists VALUES (370,0,1001,33);
-INSERT INTO merchant_buylists VALUES (371,0,1001,34);
-INSERT INTO merchant_buylists VALUES (372,0,1001,35);
-INSERT INTO merchant_buylists VALUES (373,0,1001,36);
-INSERT INTO merchant_buylists VALUES (374,0,1001,37);
-INSERT INTO merchant_buylists VALUES (375,0,1001,38);
-INSERT INTO merchant_buylists VALUES (390,0,1001,39);
-INSERT INTO merchant_buylists VALUES (391,0,1001,40);
-INSERT INTO merchant_buylists VALUES (392,0,1001,41);
-INSERT INTO merchant_buylists VALUES (393,0,1001,42);
-INSERT INTO merchant_buylists VALUES (394,0,1001,43);
-INSERT INTO merchant_buylists VALUES (395,0,1001,44);
-INSERT INTO merchant_buylists VALUES (396,0,1001,45);
-INSERT INTO merchant_buylists VALUES (397,0,1001,46);
-INSERT INTO merchant_buylists VALUES (398,0,1001,47);
-INSERT INTO merchant_buylists VALUES (399,0,1001,48);
-INSERT INTO merchant_buylists VALUES (400,0,1001,49);
-INSERT INTO merchant_buylists VALUES (401,0,1001,50);
-INSERT INTO merchant_buylists VALUES (402,0,1001,51);
-INSERT INTO merchant_buylists VALUES (403,0,1001,52);
-INSERT INTO merchant_buylists VALUES (404,0,1001,53);
-INSERT INTO merchant_buylists VALUES (405,0,1001,54);
-INSERT INTO merchant_buylists VALUES (406,0,1001,55);
-INSERT INTO merchant_buylists VALUES (407,0,1001,56);
-INSERT INTO merchant_buylists VALUES (408,0,1001,57);
-INSERT INTO merchant_buylists VALUES (409,0,1001,58);
-INSERT INTO merchant_buylists VALUES (410,0,1001,59);
-INSERT INTO merchant_buylists VALUES (411,0,1001,60);
-INSERT INTO merchant_buylists VALUES (425,0,1001,61);
-INSERT INTO merchant_buylists VALUES (426,0,1001,62);
-INSERT INTO merchant_buylists VALUES (427,0,1001,63);
-INSERT INTO merchant_buylists VALUES (428,0,1001,64);
-INSERT INTO merchant_buylists VALUES (429,0,1001,65);
-INSERT INTO merchant_buylists VALUES (430,0,1001,66);
-INSERT INTO merchant_buylists VALUES (431,0,1001,67);
-INSERT INTO merchant_buylists VALUES (432,0,1001,68);
-INSERT INTO merchant_buylists VALUES (433,0,1001,69);
-INSERT INTO merchant_buylists VALUES (434,0,1001,70);
-INSERT INTO merchant_buylists VALUES (435,0,1001,71);
-INSERT INTO merchant_buylists VALUES (436,0,1001,72);
-INSERT INTO merchant_buylists VALUES (437,0,1001,73);
-INSERT INTO merchant_buylists VALUES (438,0,1001,74);
-INSERT INTO merchant_buylists VALUES (439,0,1001,75);
-INSERT INTO merchant_buylists VALUES (440,0,1001,76);
-INSERT INTO merchant_buylists VALUES (441,0,1001,77);
-INSERT INTO merchant_buylists VALUES (442,0,1001,78);
-INSERT INTO merchant_buylists VALUES (443,0,1001,79);
-INSERT INTO merchant_buylists VALUES (444,0,1001,80);
-INSERT INTO merchant_buylists VALUES (445,0,1001,81);
-INSERT INTO merchant_buylists VALUES (446,0,1001,82);
-INSERT INTO merchant_buylists VALUES (447,0,1001,83);
-INSERT INTO merchant_buylists VALUES (448,0,1001,84);
-INSERT INTO merchant_buylists VALUES (449,0,1001,85);
-INSERT INTO merchant_buylists VALUES (450,0,1001,86);
-INSERT INTO merchant_buylists VALUES (451,0,1001,87);
-INSERT INTO merchant_buylists VALUES (452,0,1001,88);
-INSERT INTO merchant_buylists VALUES (453,0,1001,89);
-INSERT INTO merchant_buylists VALUES (454,0,1001,90);
-INSERT INTO merchant_buylists VALUES (455,0,1001,91);
-INSERT INTO merchant_buylists VALUES (456,0,1001,92);
-INSERT INTO merchant_buylists VALUES (457,0,1001,93);
-INSERT INTO merchant_buylists VALUES (458,0,1001,94);
-INSERT INTO merchant_buylists VALUES (459,0,1001,95);
-INSERT INTO merchant_buylists VALUES (460,0,1001,96);
-INSERT INTO merchant_buylists VALUES (1100,0,1001,97);
-INSERT INTO merchant_buylists VALUES (1101,0,1001,98);
-INSERT INTO merchant_buylists VALUES (1102,0,1001,99);
-INSERT INTO merchant_buylists VALUES (1146,0,1001,100);
-INSERT INTO merchant_buylists VALUES (1308,0,1001,101);
-INSERT INTO merchant_buylists VALUES (1309,0,1001,102);
-INSERT INTO merchant_buylists VALUES (1310,0,1001,103);
-INSERT INTO merchant_buylists VALUES (1311,0,1001,104);
-INSERT INTO merchant_buylists VALUES (1312,0,1001,105);
-INSERT INTO merchant_buylists VALUES (2376,0,1001,106);
-INSERT INTO merchant_buylists VALUES (2381,0,1001,107);
-INSERT INTO merchant_buylists VALUES (2382,0,1001,108);
-INSERT INTO merchant_buylists VALUES (2383,0,1001,109);
-INSERT INTO merchant_buylists VALUES (2384,0,1001,110);
-INSERT INTO merchant_buylists VALUES (2385,0,1001,111);
-INSERT INTO merchant_buylists VALUES (2390,0,1001,112);
-INSERT INTO merchant_buylists VALUES (2391,0,1001,113);
-INSERT INTO merchant_buylists VALUES (2392,0,1001,114);
-INSERT INTO merchant_buylists VALUES (2393,0,1001,115);
-INSERT INTO merchant_buylists VALUES (2394,0,1001,116);
-INSERT INTO merchant_buylists VALUES (2395,0,1001,117);
-INSERT INTO merchant_buylists VALUES (2396,0,1001,118);
-INSERT INTO merchant_buylists VALUES (2397,0,1001,119);
-INSERT INTO merchant_buylists VALUES (2398,0,1001,120);
-INSERT INTO merchant_buylists VALUES (2399,0,1001,121);
-INSERT INTO merchant_buylists VALUES (2400,0,1001,122);
-INSERT INTO merchant_buylists VALUES (2406,0,1001,123);
-INSERT INTO merchant_buylists VALUES (2407,0,1001,124);
-INSERT INTO merchant_buylists VALUES (2408,0,1001,125);
-INSERT INTO merchant_buylists VALUES (2409,0,1001,126);
-INSERT INTO merchant_buylists VALUES (4224,0,1001,127);
-INSERT INTO merchant_buylists VALUES (4228,0,1001,128);
-INSERT INTO merchant_buylists VALUES (28,0,1002,1);
-INSERT INTO merchant_buylists VALUES (29,0,1002,2);
-INSERT INTO merchant_buylists VALUES (30,0,1002,3);
-INSERT INTO merchant_buylists VALUES (31,0,1002,4);
-INSERT INTO merchant_buylists VALUES (32,0,1002,5);
-INSERT INTO merchant_buylists VALUES (33,0,1002,6);
-INSERT INTO merchant_buylists VALUES (34,0,1002,7);
-INSERT INTO merchant_buylists VALUES (59,0,1002,8);
-INSERT INTO merchant_buylists VALUES (376,0,1002,9);
-INSERT INTO merchant_buylists VALUES (377,0,1002,10);
-INSERT INTO merchant_buylists VALUES (378,0,1002,11);
-INSERT INTO merchant_buylists VALUES (379,0,1002,12);
-INSERT INTO merchant_buylists VALUES (380,0,1002,13);
-INSERT INTO merchant_buylists VALUES (381,0,1002,14);
-INSERT INTO merchant_buylists VALUES (382,0,1002,15);
-INSERT INTO merchant_buylists VALUES (383,0,1002,16);
-INSERT INTO merchant_buylists VALUES (384,0,1002,17);
-INSERT INTO merchant_buylists VALUES (385,0,1002,18);
-INSERT INTO merchant_buylists VALUES (386,0,1002,19);
-INSERT INTO merchant_buylists VALUES (387,0,1002,20);
-INSERT INTO merchant_buylists VALUES (388,0,1002,21);
-INSERT INTO merchant_buylists VALUES (389,0,1002,22);
-INSERT INTO merchant_buylists VALUES (412,0,1002,23);
-INSERT INTO merchant_buylists VALUES (413,0,1002,24);
-INSERT INTO merchant_buylists VALUES (414,0,1002,25);
-INSERT INTO merchant_buylists VALUES (415,0,1002,26);
-INSERT INTO merchant_buylists VALUES (416,0,1002,27);
-INSERT INTO merchant_buylists VALUES (417,0,1002,28);
-INSERT INTO merchant_buylists VALUES (418,0,1002,29);
-INSERT INTO merchant_buylists VALUES (419,0,1002,30);
-INSERT INTO merchant_buylists VALUES (420,0,1002,31);
-INSERT INTO merchant_buylists VALUES (421,0,1002,32);
-INSERT INTO merchant_buylists VALUES (422,0,1002,33);
-INSERT INTO merchant_buylists VALUES (423,0,1002,34);
-INSERT INTO merchant_buylists VALUES (424,0,1002,35);
-INSERT INTO merchant_buylists VALUES (461,0,1002,36);
-INSERT INTO merchant_buylists VALUES (462,0,1002,37);
-INSERT INTO merchant_buylists VALUES (463,0,1002,38);
-INSERT INTO merchant_buylists VALUES (464,0,1002,39);
-INSERT INTO merchant_buylists VALUES (465,0,1002,40);
-INSERT INTO merchant_buylists VALUES (466,0,1002,41);
-INSERT INTO merchant_buylists VALUES (467,0,1002,42);
-INSERT INTO merchant_buylists VALUES (468,0,1002,43);
-INSERT INTO merchant_buylists VALUES (469,0,1002,44);
-INSERT INTO merchant_buylists VALUES (470,0,1002,45);
-INSERT INTO merchant_buylists VALUES (471,0,1002,46);
-INSERT INTO merchant_buylists VALUES (472,0,1002,47);
-INSERT INTO merchant_buylists VALUES (473,0,1002,48);
-INSERT INTO merchant_buylists VALUES (474,0,1002,49);
-INSERT INTO merchant_buylists VALUES (475,0,1002,50);
-INSERT INTO merchant_buylists VALUES (476,0,1002,51);
-INSERT INTO merchant_buylists VALUES (477,0,1002,52);
-INSERT INTO merchant_buylists VALUES (478,0,1002,53);
-INSERT INTO merchant_buylists VALUES (479,0,1002,54);
-INSERT INTO merchant_buylists VALUES (480,0,1002,55);
-INSERT INTO merchant_buylists VALUES (481,0,1002,56);
-INSERT INTO merchant_buylists VALUES (482,0,1002,57);
-INSERT INTO merchant_buylists VALUES (483,0,1002,58);
-INSERT INTO merchant_buylists VALUES (484,0,1002,59);
-INSERT INTO merchant_buylists VALUES (1103,0,1002,60);
-INSERT INTO merchant_buylists VALUES (1104,0,1002,61);
-INSERT INTO merchant_buylists VALUES (1105,0,1002,62);
-INSERT INTO merchant_buylists VALUES (1147,0,1002,63);
-INSERT INTO merchant_buylists VALUES (1313,0,1002,64);
-INSERT INTO merchant_buylists VALUES (1314,0,1002,65);
-INSERT INTO merchant_buylists VALUES (1315,0,1002,66);
-INSERT INTO merchant_buylists VALUES (1316,0,1002,67);
-INSERT INTO merchant_buylists VALUES (1317,0,1002,68);
-INSERT INTO merchant_buylists VALUES (2377,0,1002,69);
-INSERT INTO merchant_buylists VALUES (2378,0,1002,70);
-INSERT INTO merchant_buylists VALUES (2379,0,1002,71);
-INSERT INTO merchant_buylists VALUES (2380,0,1002,72);
-INSERT INTO merchant_buylists VALUES (2386,0,1002,73);
-INSERT INTO merchant_buylists VALUES (2387,0,1002,74);
-INSERT INTO merchant_buylists VALUES (2388,0,1002,75);
-INSERT INTO merchant_buylists VALUES (2389,0,1002,76);
-INSERT INTO merchant_buylists VALUES (2401,0,1002,77);
-INSERT INTO merchant_buylists VALUES (2402,0,1002,78);
-INSERT INTO merchant_buylists VALUES (2403,0,1002,79);
-INSERT INTO merchant_buylists VALUES (2404,0,1002,80);
-INSERT INTO merchant_buylists VALUES (2405,0,1002,81);
-INSERT INTO merchant_buylists VALUES (4225,0,1002,82);
-INSERT INTO merchant_buylists VALUES (4229,0,1002,83);
-INSERT INTO merchant_buylists VALUES (35,0,1003,1);
-INSERT INTO merchant_buylists VALUES (36,0,1003,2);
-INSERT INTO merchant_buylists VALUES (37,0,1003,3);
-INSERT INTO merchant_buylists VALUES (38,0,1003,4);
-INSERT INTO merchant_buylists VALUES (39,0,1003,5);
-INSERT INTO merchant_buylists VALUES (40,0,1003,6);
-INSERT INTO merchant_buylists VALUES (62,0,1003,7);
-INSERT INTO merchant_buylists VALUES (64,0,1003,8);
-INSERT INTO merchant_buylists VALUES (553,0,1003,9);
-INSERT INTO merchant_buylists VALUES (554,0,1003,10);
-INSERT INTO merchant_buylists VALUES (555,0,1003,11);
-INSERT INTO merchant_buylists VALUES (556,0,1003,12);
-INSERT INTO merchant_buylists VALUES (557,0,1003,13);
-INSERT INTO merchant_buylists VALUES (558,0,1003,14);
-INSERT INTO merchant_buylists VALUES (559,0,1003,15);
-INSERT INTO merchant_buylists VALUES (560,0,1003,16);
-INSERT INTO merchant_buylists VALUES (561,0,1003,17);
-INSERT INTO merchant_buylists VALUES (562,0,1003,18);
-INSERT INTO merchant_buylists VALUES (563,0,1003,19);
-INSERT INTO merchant_buylists VALUES (564,0,1003,20);
-INSERT INTO merchant_buylists VALUES (565,0,1003,21);
-INSERT INTO merchant_buylists VALUES (566,0,1003,22);
-INSERT INTO merchant_buylists VALUES (567,0,1003,23);
-INSERT INTO merchant_buylists VALUES (568,0,1003,24);
-INSERT INTO merchant_buylists VALUES (569,0,1003,25);
-INSERT INTO merchant_buylists VALUES (570,0,1003,26);
-INSERT INTO merchant_buylists VALUES (571,0,1003,27);
-INSERT INTO merchant_buylists VALUES (572,0,1003,28);
-INSERT INTO merchant_buylists VALUES (573,0,1003,29);
-INSERT INTO merchant_buylists VALUES (574,0,1003,30);
-INSERT INTO merchant_buylists VALUES (575,0,1003,31);
-INSERT INTO merchant_buylists VALUES (576,0,1003,32);
-INSERT INTO merchant_buylists VALUES (577,0,1003,33);
-INSERT INTO merchant_buylists VALUES (578,0,1003,34);
-INSERT INTO merchant_buylists VALUES (579,0,1003,35);
-INSERT INTO merchant_buylists VALUES (580,0,1003,36);
-INSERT INTO merchant_buylists VALUES (581,0,1003,37);
-INSERT INTO merchant_buylists VALUES (582,0,1003,38);
-INSERT INTO merchant_buylists VALUES (583,0,1003,39);
-INSERT INTO merchant_buylists VALUES (584,0,1003,40);
-INSERT INTO merchant_buylists VALUES (585,0,1003,41);
-INSERT INTO merchant_buylists VALUES (586,0,1003,42);
-INSERT INTO merchant_buylists VALUES (587,0,1003,43);
-INSERT INTO merchant_buylists VALUES (588,0,1003,44);
-INSERT INTO merchant_buylists VALUES (589,0,1003,45);
-INSERT INTO merchant_buylists VALUES (590,0,1003,46);
-INSERT INTO merchant_buylists VALUES (591,0,1003,47);
-INSERT INTO merchant_buylists VALUES (592,0,1003,48);
-INSERT INTO merchant_buylists VALUES (593,0,1003,49);
-INSERT INTO merchant_buylists VALUES (594,0,1003,50);
-INSERT INTO merchant_buylists VALUES (595,0,1003,51);
-INSERT INTO merchant_buylists VALUES (596,0,1003,52);
-INSERT INTO merchant_buylists VALUES (597,0,1003,53);
-INSERT INTO merchant_buylists VALUES (598,0,1003,54);
-INSERT INTO merchant_buylists VALUES (599,0,1003,55);
-INSERT INTO merchant_buylists VALUES (600,0,1003,56);
-INSERT INTO merchant_buylists VALUES (601,0,1003,57);
-INSERT INTO merchant_buylists VALUES (602,0,1003,58);
-INSERT INTO merchant_buylists VALUES (603,0,1003,59);
-INSERT INTO merchant_buylists VALUES (1121,0,1003,60);
-INSERT INTO merchant_buylists VALUES (1122,0,1003,61);
-INSERT INTO merchant_buylists VALUES (1123,0,1003,62);
-INSERT INTO merchant_buylists VALUES (1124,0,1003,63);
-INSERT INTO merchant_buylists VALUES (1125,0,1003,64);
-INSERT INTO merchant_buylists VALUES (1126,0,1003,65);
-INSERT INTO merchant_buylists VALUES (1127,0,1003,66);
-INSERT INTO merchant_buylists VALUES (1128,0,1003,67);
-INSERT INTO merchant_buylists VALUES (1129,0,1003,68);
-INSERT INTO merchant_buylists VALUES (1323,0,1003,69);
-INSERT INTO merchant_buylists VALUES (1324,0,1003,70);
-INSERT INTO merchant_buylists VALUES (1325,0,1003,71);
-INSERT INTO merchant_buylists VALUES (1326,0,1003,72);
-INSERT INTO merchant_buylists VALUES (1327,0,1003,73);
-INSERT INTO merchant_buylists VALUES (2422,0,1003,74);
-INSERT INTO merchant_buylists VALUES (2423,0,1003,75);
-INSERT INTO merchant_buylists VALUES (2424,0,1003,76);
-INSERT INTO merchant_buylists VALUES (2425,0,1003,77);
-INSERT INTO merchant_buylists VALUES (2426,0,1003,78);
-INSERT INTO merchant_buylists VALUES (2427,0,1003,79);
-INSERT INTO merchant_buylists VALUES (2428,0,1003,80);
-INSERT INTO merchant_buylists VALUES (2429,0,1003,81);
-INSERT INTO merchant_buylists VALUES (2430,0,1003,82);
-INSERT INTO merchant_buylists VALUES (2431,0,1003,83);
-INSERT INTO merchant_buylists VALUES (2432,0,1003,84);
-INSERT INTO merchant_buylists VALUES (2433,0,1003,85);
-INSERT INTO merchant_buylists VALUES (2434,0,1003,86);
-INSERT INTO merchant_buylists VALUES (2435,0,1003,87);
-INSERT INTO merchant_buylists VALUES (2436,0,1003,88);
-INSERT INTO merchant_buylists VALUES (2437,0,1003,89);
-INSERT INTO merchant_buylists VALUES (2438,0,1003,90);
-INSERT INTO merchant_buylists VALUES (2439,0,1003,91);
-INSERT INTO merchant_buylists VALUES (2440,0,1003,92);
-INSERT INTO merchant_buylists VALUES (2441,0,1003,93);
-INSERT INTO merchant_buylists VALUES (2442,0,1003,94);
-INSERT INTO merchant_buylists VALUES (2443,0,1003,95);
-INSERT INTO merchant_buylists VALUES (2444,0,1003,96);
-INSERT INTO merchant_buylists VALUES (2445,0,1003,97);
-INSERT INTO merchant_buylists VALUES (4227,0,1003,98);
-INSERT INTO merchant_buylists VALUES (4231,0,1003,99);
-INSERT INTO merchant_buylists VALUES (41,0,1004,1);
-INSERT INTO merchant_buylists VALUES (42,0,1004,2);
-INSERT INTO merchant_buylists VALUES (43,0,1004,3);
-INSERT INTO merchant_buylists VALUES (44,0,1004,4);
-INSERT INTO merchant_buylists VALUES (45,0,1004,5);
-INSERT INTO merchant_buylists VALUES (46,0,1004,6);
-INSERT INTO merchant_buylists VALUES (47,0,1004,7);
-INSERT INTO merchant_buylists VALUES (497,0,1004,8);
-INSERT INTO merchant_buylists VALUES (498,0,1004,9);
-INSERT INTO merchant_buylists VALUES (499,0,1004,10);
-INSERT INTO merchant_buylists VALUES (500,0,1004,11);
-INSERT INTO merchant_buylists VALUES (501,0,1004,12);
-INSERT INTO merchant_buylists VALUES (502,0,1004,13);
-INSERT INTO merchant_buylists VALUES (503,0,1004,14);
-INSERT INTO merchant_buylists VALUES (504,0,1004,15);
-INSERT INTO merchant_buylists VALUES (505,0,1004,16);
-INSERT INTO merchant_buylists VALUES (506,0,1004,17);
-INSERT INTO merchant_buylists VALUES (507,0,1004,18);
-INSERT INTO merchant_buylists VALUES (508,0,1004,19);
-INSERT INTO merchant_buylists VALUES (509,0,1004,20);
-INSERT INTO merchant_buylists VALUES (510,0,1004,21);
-INSERT INTO merchant_buylists VALUES (511,0,1004,22);
-INSERT INTO merchant_buylists VALUES (512,0,1004,23);
-INSERT INTO merchant_buylists VALUES (513,0,1004,24);
-INSERT INTO merchant_buylists VALUES (514,0,1004,25);
-INSERT INTO merchant_buylists VALUES (515,0,1004,26);
-INSERT INTO merchant_buylists VALUES (516,0,1004,27);
-INSERT INTO merchant_buylists VALUES (517,0,1004,28);
-INSERT INTO merchant_buylists VALUES (518,0,1004,29);
-INSERT INTO merchant_buylists VALUES (519,0,1004,30);
-INSERT INTO merchant_buylists VALUES (520,0,1004,31);
-INSERT INTO merchant_buylists VALUES (521,0,1004,32);
-INSERT INTO merchant_buylists VALUES (522,0,1004,33);
-INSERT INTO merchant_buylists VALUES (523,0,1004,34);
-INSERT INTO merchant_buylists VALUES (524,0,1004,35);
-INSERT INTO merchant_buylists VALUES (525,0,1004,36);
-INSERT INTO merchant_buylists VALUES (526,0,1004,37);
-INSERT INTO merchant_buylists VALUES (527,0,1004,38);
-INSERT INTO merchant_buylists VALUES (528,0,1004,39);
-INSERT INTO merchant_buylists VALUES (529,0,1004,40);
-INSERT INTO merchant_buylists VALUES (530,0,1004,41);
-INSERT INTO merchant_buylists VALUES (531,0,1004,42);
-INSERT INTO merchant_buylists VALUES (532,0,1004,43);
-INSERT INTO merchant_buylists VALUES (533,0,1004,44);
-INSERT INTO merchant_buylists VALUES (534,0,1004,45);
-INSERT INTO merchant_buylists VALUES (535,0,1004,46);
-INSERT INTO merchant_buylists VALUES (536,0,1004,47);
-INSERT INTO merchant_buylists VALUES (537,0,1004,48);
-INSERT INTO merchant_buylists VALUES (538,0,1004,49);
-INSERT INTO merchant_buylists VALUES (539,0,1004,50);
-INSERT INTO merchant_buylists VALUES (540,0,1004,51);
-INSERT INTO merchant_buylists VALUES (541,0,1004,52);
-INSERT INTO merchant_buylists VALUES (542,0,1004,53);
-INSERT INTO merchant_buylists VALUES (543,0,1004,54);
-INSERT INTO merchant_buylists VALUES (544,0,1004,55);
-INSERT INTO merchant_buylists VALUES (545,0,1004,56);
-INSERT INTO merchant_buylists VALUES (546,0,1004,57);
-INSERT INTO merchant_buylists VALUES (547,0,1004,58);
-INSERT INTO merchant_buylists VALUES (548,0,1004,59);
-INSERT INTO merchant_buylists VALUES (549,0,1004,60);
-INSERT INTO merchant_buylists VALUES (550,0,1004,61);
-INSERT INTO merchant_buylists VALUES (551,0,1004,62);
-INSERT INTO merchant_buylists VALUES (552,0,1004,63);
-INSERT INTO merchant_buylists VALUES (1148,0,1004,64);
-INSERT INTO merchant_buylists VALUES (1149,0,1004,65);
-INSERT INTO merchant_buylists VALUES (2411,0,1004,66);
-INSERT INTO merchant_buylists VALUES (2412,0,1004,67);
-INSERT INTO merchant_buylists VALUES (2413,0,1004,68);
-INSERT INTO merchant_buylists VALUES (2414,0,1004,69);
-INSERT INTO merchant_buylists VALUES (2415,0,1004,70);
-INSERT INTO merchant_buylists VALUES (2416,0,1004,71);
-INSERT INTO merchant_buylists VALUES (2417,0,1004,72);
-INSERT INTO merchant_buylists VALUES (2418,0,1004,73);
-INSERT INTO merchant_buylists VALUES (2419,0,1004,74);
-INSERT INTO merchant_buylists VALUES (2420,0,1004,75);
-INSERT INTO merchant_buylists VALUES (2421,0,1004,76);
-INSERT INTO merchant_buylists VALUES (48,0,1005,1);
-INSERT INTO merchant_buylists VALUES (49,0,1005,2);
-INSERT INTO merchant_buylists VALUES (50,0,1005,3);
-INSERT INTO merchant_buylists VALUES (51,0,1005,4);
-INSERT INTO merchant_buylists VALUES (61,0,1005,5);
-INSERT INTO merchant_buylists VALUES (63,0,1005,6);
-INSERT INTO merchant_buylists VALUES (604,0,1005,7);
-INSERT INTO merchant_buylists VALUES (605,0,1005,8);
-INSERT INTO merchant_buylists VALUES (606,0,1005,9);
-INSERT INTO merchant_buylists VALUES (607,0,1005,10);
-INSERT INTO merchant_buylists VALUES (608,0,1005,11);
-INSERT INTO merchant_buylists VALUES (609,0,1005,12);
-INSERT INTO merchant_buylists VALUES (610,0,1005,13);
-INSERT INTO merchant_buylists VALUES (611,0,1005,14);
-INSERT INTO merchant_buylists VALUES (612,0,1005,15);
-INSERT INTO merchant_buylists VALUES (613,0,1005,16);
-INSERT INTO merchant_buylists VALUES (990,0,1005,17);
-INSERT INTO merchant_buylists VALUES (991,0,1005,18);
-INSERT INTO merchant_buylists VALUES (992,0,1005,19);
-INSERT INTO merchant_buylists VALUES (993,0,1005,20);
-INSERT INTO merchant_buylists VALUES (994,0,1005,21);
-INSERT INTO merchant_buylists VALUES (995,0,1005,22);
-INSERT INTO merchant_buylists VALUES (996,0,1005,23);
-INSERT INTO merchant_buylists VALUES (997,0,1005,24);
-INSERT INTO merchant_buylists VALUES (998,0,1005,25);
-INSERT INTO merchant_buylists VALUES (999,0,1005,26);
-INSERT INTO merchant_buylists VALUES (1000,0,1005,27);
-INSERT INTO merchant_buylists VALUES (1119,0,1005,28);
-INSERT INTO merchant_buylists VALUES (1120,0,1005,29);
-INSERT INTO merchant_buylists VALUES (1318,0,1005,30);
-INSERT INTO merchant_buylists VALUES (1319,0,1005,31);
-INSERT INTO merchant_buylists VALUES (1320,0,1005,32);
-INSERT INTO merchant_buylists VALUES (1321,0,1005,33);
-INSERT INTO merchant_buylists VALUES (1322,0,1005,34);
-INSERT INTO merchant_buylists VALUES (2446,0,1005,35);
-INSERT INTO merchant_buylists VALUES (2447,0,1005,36);
-INSERT INTO merchant_buylists VALUES (2448,0,1005,37);
-INSERT INTO merchant_buylists VALUES (2449,0,1005,38);
-INSERT INTO merchant_buylists VALUES (2450,0,1005,39);
-INSERT INTO merchant_buylists VALUES (2451,0,1005,40);
-INSERT INTO merchant_buylists VALUES (2452,0,1005,41);
-INSERT INTO merchant_buylists VALUES (2453,0,1005,42);
-INSERT INTO merchant_buylists VALUES (2454,0,1005,43);
-INSERT INTO merchant_buylists VALUES (2455,0,1005,44);
-INSERT INTO merchant_buylists VALUES (2456,0,1005,45);
-INSERT INTO merchant_buylists VALUES (2457,0,1005,46);
-INSERT INTO merchant_buylists VALUES (2458,0,1005,47);
-INSERT INTO merchant_buylists VALUES (2459,0,1005,48);
-INSERT INTO merchant_buylists VALUES (2460,0,1005,49);
-INSERT INTO merchant_buylists VALUES (2461,0,1005,50);
-INSERT INTO merchant_buylists VALUES (2462,0,1005,51);
-INSERT INTO merchant_buylists VALUES (2463,0,1005,52);
-INSERT INTO merchant_buylists VALUES (2464,0,1005,53);
-INSERT INTO merchant_buylists VALUES (2465,0,1005,54);
-INSERT INTO merchant_buylists VALUES (2466,0,1005,55);
-INSERT INTO merchant_buylists VALUES (2467,0,1005,56);
-INSERT INTO merchant_buylists VALUES (2468,0,1005,57);
-INSERT INTO merchant_buylists VALUES (2469,0,1005,58);
-INSERT INTO merchant_buylists VALUES (2470,0,1005,59);
-INSERT INTO merchant_buylists VALUES (2471,0,1005,60);
-INSERT INTO merchant_buylists VALUES (2472,0,1005,61);
-INSERT INTO merchant_buylists VALUES (2473,0,1005,62);
-INSERT INTO merchant_buylists VALUES (2474,0,1005,63);
-INSERT INTO merchant_buylists VALUES (2475,0,1005,64);
-INSERT INTO merchant_buylists VALUES (2476,0,1005,65);
-INSERT INTO merchant_buylists VALUES (2477,0,1005,66);
-INSERT INTO merchant_buylists VALUES (2478,0,1005,67);
-INSERT INTO merchant_buylists VALUES (2479,0,1005,68);
-INSERT INTO merchant_buylists VALUES (2480,0,1005,69);
-INSERT INTO merchant_buylists VALUES (2481,0,1005,70);
-INSERT INTO merchant_buylists VALUES (2482,0,1005,71);
-INSERT INTO merchant_buylists VALUES (2483,0,1005,72);
-INSERT INTO merchant_buylists VALUES (2484,0,1005,73);
-INSERT INTO merchant_buylists VALUES (2485,0,1005,74);
-INSERT INTO merchant_buylists VALUES (2486,0,1005,75);
-INSERT INTO merchant_buylists VALUES (2487,0,1005,76);
-INSERT INTO merchant_buylists VALUES (2488,0,1005,77);
-INSERT INTO merchant_buylists VALUES (2489,0,1005,78);
-INSERT INTO merchant_buylists VALUES (4226,0,1005,79);
-INSERT INTO merchant_buylists VALUES (4230,0,1005,80);
-INSERT INTO merchant_buylists VALUES (52,0,1006,1);
-INSERT INTO merchant_buylists VALUES (53,0,1006,2);
-INSERT INTO merchant_buylists VALUES (54,0,1006,3);
-INSERT INTO merchant_buylists VALUES (614,0,1006,4);
-INSERT INTO merchant_buylists VALUES (615,0,1006,5);
-INSERT INTO merchant_buylists VALUES (616,0,1006,6);
-INSERT INTO merchant_buylists VALUES (617,0,1006,7);
-INSERT INTO merchant_buylists VALUES (618,0,1006,8);
-INSERT INTO merchant_buylists VALUES (619,0,1006,9);
-INSERT INTO merchant_buylists VALUES (620,0,1006,10);
-INSERT INTO merchant_buylists VALUES (621,0,1006,11);
-INSERT INTO merchant_buylists VALUES (622,0,1006,12);
-INSERT INTO merchant_buylists VALUES (623,0,1006,13);
-INSERT INTO merchant_buylists VALUES (624,0,1006,14);
-INSERT INTO merchant_buylists VALUES (2490,0,1006,15);
-INSERT INTO merchant_buylists VALUES (2491,0,1006,16);
-INSERT INTO merchant_buylists VALUES (2492,0,1006,17);
-INSERT INTO merchant_buylists VALUES (55,0,1007,1);
-INSERT INTO merchant_buylists VALUES (56,0,1007,2);
-INSERT INTO merchant_buylists VALUES (675,0,1007,3);
-INSERT INTO merchant_buylists VALUES (676,0,1007,4);
-INSERT INTO merchant_buylists VALUES (677,0,1007,5);
-INSERT INTO merchant_buylists VALUES (678,0,1007,6);
-INSERT INTO merchant_buylists VALUES (679,0,1007,7);
-INSERT INTO merchant_buylists VALUES (680,0,1007,8);
-INSERT INTO merchant_buylists VALUES (681,0,1007,9);
-INSERT INTO merchant_buylists VALUES (682,0,1007,10);
-INSERT INTO merchant_buylists VALUES (683,0,1007,11);
-INSERT INTO merchant_buylists VALUES (684,0,1007,12);
-INSERT INTO merchant_buylists VALUES (685,0,1007,13);
-INSERT INTO merchant_buylists VALUES (112,0,1008,1);
-INSERT INTO merchant_buylists VALUES (113,0,1008,2);
-INSERT INTO merchant_buylists VALUES (114,0,1008,3);
-INSERT INTO merchant_buylists VALUES (115,0,1008,4);
-INSERT INTO merchant_buylists VALUES (845,0,1008,5);
-INSERT INTO merchant_buylists VALUES (846,0,1008,6);
-INSERT INTO merchant_buylists VALUES (847,0,1008,7);
-INSERT INTO merchant_buylists VALUES (848,0,1008,8);
-INSERT INTO merchant_buylists VALUES (849,0,1008,9);
-INSERT INTO merchant_buylists VALUES (850,0,1008,10);
-INSERT INTO merchant_buylists VALUES (851,0,1008,11);
-INSERT INTO merchant_buylists VALUES (852,0,1008,12);
-INSERT INTO merchant_buylists VALUES (853,0,1008,13);
-INSERT INTO merchant_buylists VALUES (854,0,1008,14);
-INSERT INTO merchant_buylists VALUES (855,0,1008,15);
-INSERT INTO merchant_buylists VALUES (856,0,1008,16);
-INSERT INTO merchant_buylists VALUES (857,0,1008,17);
-INSERT INTO merchant_buylists VALUES (858,0,1008,18);
-INSERT INTO merchant_buylists VALUES (859,0,1008,19);
-INSERT INTO merchant_buylists VALUES (860,0,1008,20);
-INSERT INTO merchant_buylists VALUES (861,0,1008,21);
-INSERT INTO merchant_buylists VALUES (862,0,1008,22);
-INSERT INTO merchant_buylists VALUES (863,0,1008,23);
-INSERT INTO merchant_buylists VALUES (864,0,1008,24);
-INSERT INTO merchant_buylists VALUES (865,0,1008,25);
-INSERT INTO merchant_buylists VALUES (866,0,1008,26);
-INSERT INTO merchant_buylists VALUES (867,0,1008,27);
-INSERT INTO merchant_buylists VALUES (868,0,1008,28);
-INSERT INTO merchant_buylists VALUES (869,0,1008,29);
-INSERT INTO merchant_buylists VALUES (870,0,1008,30);
-INSERT INTO merchant_buylists VALUES (871,0,1008,31);
-INSERT INTO merchant_buylists VALUES (872,0,1008,32);
-INSERT INTO merchant_buylists VALUES (873,0,1008,33);
-INSERT INTO merchant_buylists VALUES (874,0,1008,34);
-INSERT INTO merchant_buylists VALUES (116,0,1009,1);
-INSERT INTO merchant_buylists VALUES (117,0,1009,2);
-INSERT INTO merchant_buylists VALUES (875,0,1009,3);
-INSERT INTO merchant_buylists VALUES (876,0,1009,4);
-INSERT INTO merchant_buylists VALUES (877,0,1009,5);
-INSERT INTO merchant_buylists VALUES (878,0,1009,6);
-INSERT INTO merchant_buylists VALUES (879,0,1009,7);
-INSERT INTO merchant_buylists VALUES (880,0,1009,8);
-INSERT INTO merchant_buylists VALUES (881,0,1009,9);
-INSERT INTO merchant_buylists VALUES (882,0,1009,10);
-INSERT INTO merchant_buylists VALUES (883,0,1009,11);
-INSERT INTO merchant_buylists VALUES (884,0,1009,12);
-INSERT INTO merchant_buylists VALUES (885,0,1009,13);
-INSERT INTO merchant_buylists VALUES (886,0,1009,14);
-INSERT INTO merchant_buylists VALUES (887,0,1009,15);
-INSERT INTO merchant_buylists VALUES (888,0,1009,16);
-INSERT INTO merchant_buylists VALUES (889,0,1009,17);
-INSERT INTO merchant_buylists VALUES (890,0,1009,18);
-INSERT INTO merchant_buylists VALUES (891,0,1009,19);
-INSERT INTO merchant_buylists VALUES (892,0,1009,20);
-INSERT INTO merchant_buylists VALUES (893,0,1009,21);
-INSERT INTO merchant_buylists VALUES (894,0,1009,22);
-INSERT INTO merchant_buylists VALUES (895,0,1009,23);
-INSERT INTO merchant_buylists VALUES (896,0,1009,24);
-INSERT INTO merchant_buylists VALUES (897,0,1009,25);
-INSERT INTO merchant_buylists VALUES (898,0,1009,26);
-INSERT INTO merchant_buylists VALUES (899,0,1009,27);
-INSERT INTO merchant_buylists VALUES (900,0,1009,28);
-INSERT INTO merchant_buylists VALUES (901,0,1009,29);
-INSERT INTO merchant_buylists VALUES (902,0,1009,30);
-INSERT INTO merchant_buylists VALUES (903,0,1009,31);
-INSERT INTO merchant_buylists VALUES (904,0,1009,32);
-INSERT INTO merchant_buylists VALUES (905,0,1009,33);
-INSERT INTO merchant_buylists VALUES (1508,0,1009,34);
-INSERT INTO merchant_buylists VALUES (1509,0,1009,35);
-INSERT INTO merchant_buylists VALUES (118,0,1010,1);
-INSERT INTO merchant_buylists VALUES (119,0,1010,2);
-INSERT INTO merchant_buylists VALUES (906,0,1010,3);
-INSERT INTO merchant_buylists VALUES (907,0,1010,4);
-INSERT INTO merchant_buylists VALUES (908,0,1010,5);
-INSERT INTO merchant_buylists VALUES (909,0,1010,6);
-INSERT INTO merchant_buylists VALUES (910,0,1010,7);
-INSERT INTO merchant_buylists VALUES (911,0,1010,8);
-INSERT INTO merchant_buylists VALUES (912,0,1010,9);
-INSERT INTO merchant_buylists VALUES (913,0,1010,10);
-INSERT INTO merchant_buylists VALUES (914,0,1010,11);
-INSERT INTO merchant_buylists VALUES (915,0,1010,12);
-INSERT INTO merchant_buylists VALUES (916,0,1010,13);
-INSERT INTO merchant_buylists VALUES (917,0,1010,14);
-INSERT INTO merchant_buylists VALUES (918,0,1010,15);
-INSERT INTO merchant_buylists VALUES (919,0,1010,16);
-INSERT INTO merchant_buylists VALUES (920,0,1010,17);
-INSERT INTO merchant_buylists VALUES (921,0,1010,18);
-INSERT INTO merchant_buylists VALUES (922,0,1010,19);
-INSERT INTO merchant_buylists VALUES (923,0,1010,20);
-INSERT INTO merchant_buylists VALUES (924,0,1010,21);
-INSERT INTO merchant_buylists VALUES (925,0,1010,22);
-INSERT INTO merchant_buylists VALUES (926,0,1010,23);
-INSERT INTO merchant_buylists VALUES (927,0,1010,24);
-INSERT INTO merchant_buylists VALUES (928,0,1010,25);
-INSERT INTO merchant_buylists VALUES (929,0,1010,26);
-INSERT INTO merchant_buylists VALUES (930,0,1010,27);
-INSERT INTO merchant_buylists VALUES (931,0,1010,28);
-INSERT INTO merchant_buylists VALUES (932,0,1010,29);
-INSERT INTO merchant_buylists VALUES (933,0,1010,30);
-INSERT INTO merchant_buylists VALUES (934,0,1010,31);
-INSERT INTO merchant_buylists VALUES (935,0,1010,32);
-INSERT INTO merchant_buylists VALUES (936,0,1010,33);
-INSERT INTO merchant_buylists VALUES (1506,0,1010,34);
-INSERT INTO merchant_buylists VALUES (1507,0,1010,35);
-INSERT INTO merchant_buylists VALUES (485,0,1011,1);
-INSERT INTO merchant_buylists VALUES (486,0,1011,2);
-INSERT INTO merchant_buylists VALUES (487,0,1011,3);
-INSERT INTO merchant_buylists VALUES (488,0,1011,4);
-INSERT INTO merchant_buylists VALUES (489,0,1011,5);
-INSERT INTO merchant_buylists VALUES (490,0,1011,6);
-INSERT INTO merchant_buylists VALUES (491,0,1011,7);
-INSERT INTO merchant_buylists VALUES (492,0,1011,8);
-INSERT INTO merchant_buylists VALUES (493,0,1011,9);
-INSERT INTO merchant_buylists VALUES (494,0,1011,10);
-INSERT INTO merchant_buylists VALUES (495,0,1011,11);
-INSERT INTO merchant_buylists VALUES (496,0,1011,12);
-INSERT INTO merchant_buylists VALUES (2410,0,1011,13);
-INSERT INTO merchant_buylists VALUES (2506,0,1012,1);
-INSERT INTO merchant_buylists VALUES (3891,0,1012,2);
-INSERT INTO merchant_buylists VALUES (3892,0,1012,3);
-INSERT INTO merchant_buylists VALUES (3893,0,1012,4);
-INSERT INTO merchant_buylists VALUES (3894,0,1012,5);
-INSERT INTO merchant_buylists VALUES (3895,0,1012,6);
-INSERT INTO merchant_buylists VALUES (3896,0,1012,7);
-INSERT INTO merchant_buylists VALUES (3897,0,1012,8);
-INSERT INTO merchant_buylists VALUES (3898,0,1012,9);
-INSERT INTO merchant_buylists VALUES (3899,0,1012,10);
-INSERT INTO merchant_buylists VALUES (3900,0,1012,11);
-INSERT INTO merchant_buylists VALUES (3901,0,1012,12);
-INSERT INTO merchant_buylists VALUES (4236,0,1012,13);
-INSERT INTO merchant_buylists VALUES (5216,0,1012,14);
-INSERT INTO merchant_buylists VALUES (3912,0,1013,1);
-INSERT INTO merchant_buylists VALUES (3913,0,1013,2);
-INSERT INTO merchant_buylists VALUES (3914,0,1013,3);
-INSERT INTO merchant_buylists VALUES (3915,0,1013,4);
-INSERT INTO merchant_buylists VALUES (3916,0,1013,5);
-INSERT INTO merchant_buylists VALUES (3917,0,1013,6);
-INSERT INTO merchant_buylists VALUES (3918,0,1013,7);
-INSERT INTO merchant_buylists VALUES (5182,0,1013,8);
-INSERT INTO merchant_buylists VALUES (5183,0,1013,9);
-INSERT INTO merchant_buylists VALUES (5184,0,1013,10);
-INSERT INTO merchant_buylists VALUES (4234,0,1013,11);
-INSERT INTO merchant_buylists VALUES (5185,0,1013,12);
-INSERT INTO merchant_buylists VALUES (5186,0,1013,13);
-INSERT INTO merchant_buylists VALUES (4235,0,1013,14);
-INSERT INTO merchant_buylists VALUES (5170,0,1014,1);
-INSERT INTO merchant_buylists VALUES (5171,0,1014,2);
-INSERT INTO merchant_buylists VALUES (5172,0,1014,3);
-INSERT INTO merchant_buylists VALUES (5173,0,1014,4);
-INSERT INTO merchant_buylists VALUES (5174,0,1014,5);
-INSERT INTO merchant_buylists VALUES (5175,0,1014,6);
-INSERT INTO merchant_buylists VALUES (5287,0,1015,1);
-INSERT INTO merchant_buylists VALUES (5288,0,1015,2);
-INSERT INTO merchant_buylists VALUES (5289,0,1015,3);
-INSERT INTO merchant_buylists VALUES (5290,0,1015,4);
-INSERT INTO merchant_buylists VALUES (5291,0,1015,5);
-INSERT INTO merchant_buylists VALUES (5293,0,1015,6);
-INSERT INTO merchant_buylists VALUES (5294,0,1015,7);
-INSERT INTO merchant_buylists VALUES (5295,0,1015,8);
-INSERT INTO merchant_buylists VALUES (5296,0,1015,9);
-INSERT INTO merchant_buylists VALUES (5297,0,1015,10);
-INSERT INTO merchant_buylists VALUES (5298,0,1015,11);
-INSERT INTO merchant_buylists VALUES (5299,0,1015,12);
-INSERT INTO merchant_buylists VALUES (5300,0,1015,13);
-INSERT INTO merchant_buylists VALUES (5301,0,1015,14);
-INSERT INTO merchant_buylists VALUES (5302,0,1015,15);
-INSERT INTO merchant_buylists VALUES (5303,0,1015,16);
-INSERT INTO merchant_buylists VALUES (5304,0,1015,17);
-INSERT INTO merchant_buylists VALUES (5305,0,1015,18);
-INSERT INTO merchant_buylists VALUES (5306,0,1015,19);
-INSERT INTO merchant_buylists VALUES (5307,0,1015,20);
-INSERT INTO merchant_buylists VALUES (5308,0,1015,21);
-INSERT INTO merchant_buylists VALUES (5309,0,1015,22);
-INSERT INTO merchant_buylists VALUES (5310,0,1015,23);
-INSERT INTO merchant_buylists VALUES (5311,0,1015,24);
-INSERT INTO merchant_buylists VALUES (5312,0,1015,25);
-INSERT INTO merchant_buylists VALUES (5313,0,1015,26);
-INSERT INTO merchant_buylists VALUES (5314,0,1015,27);
-INSERT INTO merchant_buylists VALUES (5316,0,1015,28);
-INSERT INTO merchant_buylists VALUES (5317,0,1015,29);
-INSERT INTO merchant_buylists VALUES (5318,0,1015,30);
-INSERT INTO merchant_buylists VALUES (5319,0,1015,31);
-INSERT INTO merchant_buylists VALUES (5320,0,1015,32);
-INSERT INTO merchant_buylists VALUES (5321,0,1015,33);
-INSERT INTO merchant_buylists VALUES (5322,0,1015,34);
-INSERT INTO merchant_buylists VALUES (5323,0,1015,35);
-INSERT INTO merchant_buylists VALUES (5324,0,1015,36);
-INSERT INTO merchant_buylists VALUES (5325,0,1015,37);
-INSERT INTO merchant_buylists VALUES (5326,0,1015,38);
-INSERT INTO merchant_buylists VALUES (5327,0,1015,39);
-INSERT INTO merchant_buylists VALUES (5328,0,1015,40);
-INSERT INTO merchant_buylists VALUES (5329,0,1015,41);
-INSERT INTO merchant_buylists VALUES (5330,0,1015,42);
-INSERT INTO merchant_buylists VALUES (5331,0,1015,43);
-INSERT INTO merchant_buylists VALUES (5576,0,1015,44);
-INSERT INTO merchant_buylists VALUES (5590,0,1015,45);
-INSERT INTO merchant_buylists VALUES (5709,0,1015,46);
-INSERT INTO merchant_buylists VALUES (5710,0,1015,47);
-INSERT INTO merchant_buylists VALUES (5711,0,1015,48);
-INSERT INTO merchant_buylists VALUES (5712,0,1015,49);
-INSERT INTO merchant_buylists VALUES (5713,0,1015,50);
-INSERT INTO merchant_buylists VALUES (5714,0,1015,51);
-INSERT INTO merchant_buylists VALUES (5715,0,1015,52);
-INSERT INTO merchant_buylists VALUES (5716,0,1015,53);
-INSERT INTO merchant_buylists VALUES (5717,0,1015,54);
-INSERT INTO merchant_buylists VALUES (5718,0,1015,55);
-INSERT INTO merchant_buylists VALUES (5719,0,1015,56);
-INSERT INTO merchant_buylists VALUES (5720,0,1015,57);
-INSERT INTO merchant_buylists VALUES (5721,0,1015,58);
-INSERT INTO merchant_buylists VALUES (5722,0,1015,59);
-INSERT INTO merchant_buylists VALUES (5723,0,1015,60);
-INSERT INTO merchant_buylists VALUES (5724,0,1015,61);
-INSERT INTO merchant_buylists VALUES (5725,0,1015,62);
-INSERT INTO merchant_buylists VALUES (5726,0,1015,63);
-INSERT INTO merchant_buylists VALUES (5727,0,1015,64);
-INSERT INTO merchant_buylists VALUES (5728,0,1015,65);
-INSERT INTO merchant_buylists VALUES (5729,0,1015,66);
-INSERT INTO merchant_buylists VALUES (5730,0,1015,67);
-INSERT INTO merchant_buylists VALUES (5731,0,1015,68);
-INSERT INTO merchant_buylists VALUES (5732,0,1015,69);
-INSERT INTO merchant_buylists VALUES (5733,0,1015,70);
-INSERT INTO merchant_buylists VALUES (5734,0,1015,71);
-INSERT INTO merchant_buylists VALUES (5735,0,1015,72);
-INSERT INTO merchant_buylists VALUES (5736,0,1015,73);
-INSERT INTO merchant_buylists VALUES (5737,0,1015,74);
-INSERT INTO merchant_buylists VALUES (5738,0,1015,75);
-INSERT INTO merchant_buylists VALUES (5739,0,1015,76);
-INSERT INTO merchant_buylists VALUES (5740,0,1015,77);
-INSERT INTO merchant_buylists VALUES (5765,0,1015,78);
-INSERT INTO merchant_buylists VALUES (5766,0,1015,79);
-INSERT INTO merchant_buylists VALUES (5767,0,1015,80);
-INSERT INTO merchant_buylists VALUES (5768,0,1015,81);
-INSERT INTO merchant_buylists VALUES (5769,0,1015,82);
-INSERT INTO merchant_buylists VALUES (5770,0,1015,83);
-INSERT INTO merchant_buylists VALUES (5771,0,1015,84);
-INSERT INTO merchant_buylists VALUES (5772,0,1015,85);
-INSERT INTO merchant_buylists VALUES (5773,0,1015,86);
-INSERT INTO merchant_buylists VALUES (5774,0,1015,87);
-INSERT INTO merchant_buylists VALUES (5775,0,1015,88);
-INSERT INTO merchant_buylists VALUES (5776,0,1015,89);
-INSERT INTO merchant_buylists VALUES (5777,0,1015,90);
-INSERT INTO merchant_buylists VALUES (5778,0,1015,91);
-INSERT INTO merchant_buylists VALUES (5779,0,1015,92);
-INSERT INTO merchant_buylists VALUES (5780,0,1015,93);
-INSERT INTO merchant_buylists VALUES (5781,0,1015,94);
-INSERT INTO merchant_buylists VALUES (5782,0,1015,95);
-INSERT INTO merchant_buylists VALUES (5783,0,1015,96);
-INSERT INTO merchant_buylists VALUES (5784,0,1015,97);
-INSERT INTO merchant_buylists VALUES (5785,0,1015,98);
-INSERT INTO merchant_buylists VALUES (5786,0,1015,99);
-INSERT INTO merchant_buylists VALUES (5787,0,1015,100);
-INSERT INTO merchant_buylists VALUES (5788,0,1015,101);
-INSERT INTO merchant_buylists VALUES (5808,0,1015,102);
-INSERT INTO merchant_buylists VALUES (6323,0,1015,103);
-INSERT INTO merchant_buylists VALUES (6324,0,1015,104);
-INSERT INTO merchant_buylists VALUES (6325,0,1015,105);
-INSERT INTO merchant_buylists VALUES (6326,0,1015,106);
-INSERT INTO merchant_buylists VALUES (6327,0,1015,107);
-INSERT INTO merchant_buylists VALUES (6328,0,1015,108);
-INSERT INTO merchant_buylists VALUES (1,0,2001,1);
-INSERT INTO merchant_buylists VALUES (2,0,2001,2);
-INSERT INTO merchant_buylists VALUES (3,0,2001,3);
-INSERT INTO merchant_buylists VALUES (66,0,2001,4);
-INSERT INTO merchant_buylists VALUES (67,0,2001,5);
-INSERT INTO merchant_buylists VALUES (68,0,2001,6);
-INSERT INTO merchant_buylists VALUES (69,0,2001,7);
-INSERT INTO merchant_buylists VALUES (72,0,2001,8);
-INSERT INTO merchant_buylists VALUES (73,0,2001,9);
-INSERT INTO merchant_buylists VALUES (74,0,2001,10);
-INSERT INTO merchant_buylists VALUES (75,0,2001,11);
-INSERT INTO merchant_buylists VALUES (76,0,2001,12);
-INSERT INTO merchant_buylists VALUES (77,0,2001,13);
-INSERT INTO merchant_buylists VALUES (79,0,2001,14);
-INSERT INTO merchant_buylists VALUES (80,0,2001,15);
-INSERT INTO merchant_buylists VALUES (82,0,2001,16);
-INSERT INTO merchant_buylists VALUES (83,0,2001,17);
-INSERT INTO merchant_buylists VALUES (84,0,2001,18);
-INSERT INTO merchant_buylists VALUES (85,0,2001,19);
-INSERT INTO merchant_buylists VALUES (120,0,2001,20);
-INSERT INTO merchant_buylists VALUES (121,0,2001,21);
-INSERT INTO merchant_buylists VALUES (122,0,2001,22);
-INSERT INTO merchant_buylists VALUES (123,0,2001,23);
-INSERT INTO merchant_buylists VALUES (125,0,2001,24);
-INSERT INTO merchant_buylists VALUES (126,0,2001,25);
-INSERT INTO merchant_buylists VALUES (127,0,2001,26);
-INSERT INTO merchant_buylists VALUES (128,0,2001,27);
-INSERT INTO merchant_buylists VALUES (129,0,2001,28);
-INSERT INTO merchant_buylists VALUES (130,0,2001,29);
-INSERT INTO merchant_buylists VALUES (131,0,2001,30);
-INSERT INTO merchant_buylists VALUES (132,0,2001,31);
-INSERT INTO merchant_buylists VALUES (133,0,2001,32);
-INSERT INTO merchant_buylists VALUES (134,0,2001,33);
-INSERT INTO merchant_buylists VALUES (135,0,2001,34);
-INSERT INTO merchant_buylists VALUES (136,0,2001,35);
-INSERT INTO merchant_buylists VALUES (137,0,2001,36);
-INSERT INTO merchant_buylists VALUES (138,0,2001,37);
-INSERT INTO merchant_buylists VALUES (139,0,2001,38);
-INSERT INTO merchant_buylists VALUES (140,0,2001,39);
-INSERT INTO merchant_buylists VALUES (141,0,2001,40);
-INSERT INTO merchant_buylists VALUES (142,0,2001,41);
-INSERT INTO merchant_buylists VALUES (143,0,2001,42);
-INSERT INTO merchant_buylists VALUES (144,0,2001,43);
-INSERT INTO merchant_buylists VALUES (145,0,2001,44);
-INSERT INTO merchant_buylists VALUES (146,0,2001,45);
-INSERT INTO merchant_buylists VALUES (147,0,2001,46);
-INSERT INTO merchant_buylists VALUES (148,0,2001,47);
-INSERT INTO merchant_buylists VALUES (149,0,2001,48);
-INSERT INTO merchant_buylists VALUES (150,0,2001,49);
-INSERT INTO merchant_buylists VALUES (151,0,2001,50);
-INSERT INTO merchant_buylists VALUES (738,0,2001,51);
-INSERT INTO merchant_buylists VALUES (743,0,2001,52);
-INSERT INTO merchant_buylists VALUES (975,0,2001,53);
-INSERT INTO merchant_buylists VALUES (1142,0,2001,54);
-INSERT INTO merchant_buylists VALUES (1295,0,2001,55);
-INSERT INTO merchant_buylists VALUES (1296,0,2001,56);
-INSERT INTO merchant_buylists VALUES (1297,0,2001,57);
-INSERT INTO merchant_buylists VALUES (1298,0,2001,58);
-INSERT INTO merchant_buylists VALUES (1510,0,2001,59);
-INSERT INTO merchant_buylists VALUES (2369,0,2001,60);
-INSERT INTO merchant_buylists VALUES (2499,0,2001,61);
-INSERT INTO merchant_buylists VALUES (2500,0,2001,62);
-INSERT INTO merchant_buylists VALUES (2915,0,2001,63);
-INSERT INTO merchant_buylists VALUES (3029,0,2001,64);
-INSERT INTO merchant_buylists VALUES (4027,0,2001,65);
-INSERT INTO merchant_buylists VALUES (4202,0,2001,66);
-INSERT INTO merchant_buylists VALUES (4219,0,2001,67);
-INSERT INTO merchant_buylists VALUES (4681,0,2001,68);
-INSERT INTO merchant_buylists VALUES (4682,0,2001,69);
-INSERT INTO merchant_buylists VALUES (4683,0,2001,70);
-INSERT INTO merchant_buylists VALUES (4684,0,2001,71);
-INSERT INTO merchant_buylists VALUES (4685,0,2001,72);
-INSERT INTO merchant_buylists VALUES (4686,0,2001,73);
-INSERT INTO merchant_buylists VALUES (4687,0,2001,74);
-INSERT INTO merchant_buylists VALUES (4688,0,2001,75);
-INSERT INTO merchant_buylists VALUES (4689,0,2001,76);
-INSERT INTO merchant_buylists VALUES (4690,0,2001,77);
-INSERT INTO merchant_buylists VALUES (4691,0,2001,78);
-INSERT INTO merchant_buylists VALUES (4692,0,2001,79);
-INSERT INTO merchant_buylists VALUES (4693,0,2001,80);
-INSERT INTO merchant_buylists VALUES (4694,0,2001,81);
-INSERT INTO merchant_buylists VALUES (4695,0,2001,82);
-INSERT INTO merchant_buylists VALUES (4696,0,2001,83);
-INSERT INTO merchant_buylists VALUES (4697,0,2001,84);
-INSERT INTO merchant_buylists VALUES (4698,0,2001,85);
-INSERT INTO merchant_buylists VALUES (4699,0,2001,86);
-INSERT INTO merchant_buylists VALUES (4700,0,2001,87);
-INSERT INTO merchant_buylists VALUES (4701,0,2001,88);
-INSERT INTO merchant_buylists VALUES (4702,0,2001,89);
-INSERT INTO merchant_buylists VALUES (4703,0,2001,90);
-INSERT INTO merchant_buylists VALUES (4704,0,2001,91);
-INSERT INTO merchant_buylists VALUES (4705,0,2001,92);
-INSERT INTO merchant_buylists VALUES (4706,0,2001,93);
-INSERT INTO merchant_buylists VALUES (4707,0,2001,94);
-INSERT INTO merchant_buylists VALUES (4708,0,2001,95);
-INSERT INTO merchant_buylists VALUES (4709,0,2001,96);
-INSERT INTO merchant_buylists VALUES (4710,0,2001,97);
-INSERT INTO merchant_buylists VALUES (4714,0,2001,98);
-INSERT INTO merchant_buylists VALUES (4715,0,2001,99);
-INSERT INTO merchant_buylists VALUES (4716,0,2001,100);
-INSERT INTO merchant_buylists VALUES (4717,0,2001,101);
-INSERT INTO merchant_buylists VALUES (4718,0,2001,102);
-INSERT INTO merchant_buylists VALUES (4719,0,2001,103);
-INSERT INTO merchant_buylists VALUES (4720,0,2001,104);
-INSERT INTO merchant_buylists VALUES (4721,0,2001,105);
-INSERT INTO merchant_buylists VALUES (4722,0,2001,106);
-INSERT INTO merchant_buylists VALUES (6354,0,2001,107);
-INSERT INTO merchant_buylists VALUES (70,0,2002,1);
-INSERT INTO merchant_buylists VALUES (71,0,2002,2);
-INSERT INTO merchant_buylists VALUES (78,0,2002,3);
-INSERT INTO merchant_buylists VALUES (81,0,2002,4);
-INSERT INTO merchant_buylists VALUES (124,0,2002,5);
-INSERT INTO merchant_buylists VALUES (981,0,2002,6);
-INSERT INTO merchant_buylists VALUES (1333,0,2002,7);
-INSERT INTO merchant_buylists VALUES (3027,0,2002,8);
-INSERT INTO merchant_buylists VALUES (4711,0,2002,9);
-INSERT INTO merchant_buylists VALUES (4712,0,2002,10);
-INSERT INTO merchant_buylists VALUES (4713,0,2002,11);
-INSERT INTO merchant_buylists VALUES (4723,0,2002,12);
-INSERT INTO merchant_buylists VALUES (4724,0,2002,13);
-INSERT INTO merchant_buylists VALUES (4725,0,2002,14);
-INSERT INTO merchant_buylists VALUES (1299,0,2003,1);
-INSERT INTO merchant_buylists VALUES (2516,0,2003,2);
-INSERT INTO merchant_buylists VALUES (2517,0,2003,3);
-INSERT INTO merchant_buylists VALUES (2518,0,2003,4);
-INSERT INTO merchant_buylists VALUES (2519,0,2003,5);
-INSERT INTO merchant_buylists VALUES (2520,0,2003,6);
-INSERT INTO merchant_buylists VALUES (2521,0,2003,7);
-INSERT INTO merchant_buylists VALUES (2522,0,2003,8);
-INSERT INTO merchant_buylists VALUES (2523,0,2003,9);
-INSERT INTO merchant_buylists VALUES (2524,0,2003,10);
-INSERT INTO merchant_buylists VALUES (2525,0,2003,11);
-INSERT INTO merchant_buylists VALUES (2526,0,2003,12);
-INSERT INTO merchant_buylists VALUES (2527,0,2003,13);
-INSERT INTO merchant_buylists VALUES (2528,0,2003,14);
-INSERT INTO merchant_buylists VALUES (2529,0,2003,15);
-INSERT INTO merchant_buylists VALUES (2530,0,2003,16);
-INSERT INTO merchant_buylists VALUES (2531,0,2003,17);
-INSERT INTO merchant_buylists VALUES (2532,0,2003,18);
-INSERT INTO merchant_buylists VALUES (2533,0,2003,19);
-INSERT INTO merchant_buylists VALUES (2534,0,2003,20);
-INSERT INTO merchant_buylists VALUES (2535,0,2003,21);
-INSERT INTO merchant_buylists VALUES (2536,0,2003,22);
-INSERT INTO merchant_buylists VALUES (2537,0,2003,23);
-INSERT INTO merchant_buylists VALUES (2538,0,2003,24);
-INSERT INTO merchant_buylists VALUES (2539,0,2003,25);
-INSERT INTO merchant_buylists VALUES (2540,0,2003,26);
-INSERT INTO merchant_buylists VALUES (2541,0,2003,27);
-INSERT INTO merchant_buylists VALUES (2542,0,2003,28);
-INSERT INTO merchant_buylists VALUES (2543,0,2003,29);
-INSERT INTO merchant_buylists VALUES (2544,0,2003,30);
-INSERT INTO merchant_buylists VALUES (2545,0,2003,31);
-INSERT INTO merchant_buylists VALUES (2546,0,2003,32);
-INSERT INTO merchant_buylists VALUES (2547,0,2003,33);
-INSERT INTO merchant_buylists VALUES (2548,0,2003,34);
-INSERT INTO merchant_buylists VALUES (2549,0,2003,35);
-INSERT INTO merchant_buylists VALUES (2550,0,2003,36);
-INSERT INTO merchant_buylists VALUES (2551,0,2003,37);
-INSERT INTO merchant_buylists VALUES (2552,0,2003,38);
-INSERT INTO merchant_buylists VALUES (2553,0,2003,39);
-INSERT INTO merchant_buylists VALUES (2554,0,2003,40);
-INSERT INTO merchant_buylists VALUES (2555,0,2003,41);
-INSERT INTO merchant_buylists VALUES (2556,0,2003,42);
-INSERT INTO merchant_buylists VALUES (2557,0,2003,43);
-INSERT INTO merchant_buylists VALUES (2558,0,2003,44);
-INSERT INTO merchant_buylists VALUES (2559,0,2003,45);
-INSERT INTO merchant_buylists VALUES (2560,0,2003,46);
-INSERT INTO merchant_buylists VALUES (2561,0,2003,47);
-INSERT INTO merchant_buylists VALUES (2562,0,2003,48);
-INSERT INTO merchant_buylists VALUES (2563,0,2003,49);
-INSERT INTO merchant_buylists VALUES (2564,0,2003,50);
-INSERT INTO merchant_buylists VALUES (2565,0,2003,51);
-INSERT INTO merchant_buylists VALUES (2566,0,2003,52);
-INSERT INTO merchant_buylists VALUES (2567,0,2003,53);
-INSERT INTO merchant_buylists VALUES (2568,0,2003,54);
-INSERT INTO merchant_buylists VALUES (2569,0,2003,55);
-INSERT INTO merchant_buylists VALUES (2570,0,2003,56);
-INSERT INTO merchant_buylists VALUES (2571,0,2003,57);
-INSERT INTO merchant_buylists VALUES (2572,0,2003,58);
-INSERT INTO merchant_buylists VALUES (2573,0,2003,59);
-INSERT INTO merchant_buylists VALUES (2574,0,2003,60);
-INSERT INTO merchant_buylists VALUES (2575,0,2003,61);
-INSERT INTO merchant_buylists VALUES (2576,0,2003,62);
-INSERT INTO merchant_buylists VALUES (2577,0,2003,63);
-INSERT INTO merchant_buylists VALUES (2578,0,2003,64);
-INSERT INTO merchant_buylists VALUES (2579,0,2003,65);
-INSERT INTO merchant_buylists VALUES (2580,0,2003,66);
-INSERT INTO merchant_buylists VALUES (2581,0,2003,67);
-INSERT INTO merchant_buylists VALUES (2582,0,2003,68);
-INSERT INTO merchant_buylists VALUES (2583,0,2003,69);
-INSERT INTO merchant_buylists VALUES (2584,0,2003,70);
-INSERT INTO merchant_buylists VALUES (2585,0,2003,71);
-INSERT INTO merchant_buylists VALUES (2586,0,2003,72);
-INSERT INTO merchant_buylists VALUES (2587,0,2003,73);
-INSERT INTO merchant_buylists VALUES (2588,0,2003,74);
-INSERT INTO merchant_buylists VALUES (2589,0,2003,75);
-INSERT INTO merchant_buylists VALUES (2590,0,2003,76);
-INSERT INTO merchant_buylists VALUES (2591,0,2003,77);
-INSERT INTO merchant_buylists VALUES (2592,0,2003,78);
-INSERT INTO merchant_buylists VALUES (2593,0,2003,79);
-INSERT INTO merchant_buylists VALUES (2594,0,2003,80);
-INSERT INTO merchant_buylists VALUES (2595,0,2003,81);
-INSERT INTO merchant_buylists VALUES (2596,0,2003,82);
-INSERT INTO merchant_buylists VALUES (2597,0,2003,83);
-INSERT INTO merchant_buylists VALUES (2598,0,2003,84);
-INSERT INTO merchant_buylists VALUES (2599,0,2003,85);
-INSERT INTO merchant_buylists VALUES (2600,0,2003,86);
-INSERT INTO merchant_buylists VALUES (2601,0,2003,87);
-INSERT INTO merchant_buylists VALUES (2602,0,2003,88);
-INSERT INTO merchant_buylists VALUES (2603,0,2003,89);
-INSERT INTO merchant_buylists VALUES (2604,0,2003,90);
-INSERT INTO merchant_buylists VALUES (2605,0,2003,91);
-INSERT INTO merchant_buylists VALUES (2606,0,2003,92);
-INSERT INTO merchant_buylists VALUES (2607,0,2003,93);
-INSERT INTO merchant_buylists VALUES (2608,0,2003,94);
-INSERT INTO merchant_buylists VALUES (2609,0,2003,95);
-INSERT INTO merchant_buylists VALUES (2610,0,2003,96);
-INSERT INTO merchant_buylists VALUES (2611,0,2003,97);
-INSERT INTO merchant_buylists VALUES (2612,0,2003,98);
-INSERT INTO merchant_buylists VALUES (2613,0,2003,99);
-INSERT INTO merchant_buylists VALUES (2614,0,2003,100);
-INSERT INTO merchant_buylists VALUES (2615,0,2003,101);
-INSERT INTO merchant_buylists VALUES (2616,0,2003,102);
-INSERT INTO merchant_buylists VALUES (2617,0,2003,103);
-INSERT INTO merchant_buylists VALUES (2618,0,2003,104);
-INSERT INTO merchant_buylists VALUES (2619,0,2003,105);
-INSERT INTO merchant_buylists VALUES (2620,0,2003,106);
-INSERT INTO merchant_buylists VALUES (2621,0,2003,107);
-INSERT INTO merchant_buylists VALUES (2622,0,2003,108);
-INSERT INTO merchant_buylists VALUES (2623,0,2003,109);
-INSERT INTO merchant_buylists VALUES (2624,0,2003,110);
-INSERT INTO merchant_buylists VALUES (2625,0,2003,111);
-INSERT INTO merchant_buylists VALUES (2626,0,2003,112);
-INSERT INTO merchant_buylists VALUES (5129,0,2003,113);
-INSERT INTO merchant_buylists VALUES (5233,0,2003,114);
-INSERT INTO merchant_buylists VALUES (10,0,2004,1);
-INSERT INTO merchant_buylists VALUES (11,0,2004,2);
-INSERT INTO merchant_buylists VALUES (12,0,2004,3);
-INSERT INTO merchant_buylists VALUES (215,0,2004,4);
-INSERT INTO merchant_buylists VALUES (216,0,2004,5);
-INSERT INTO merchant_buylists VALUES (217,0,2004,6);
-INSERT INTO merchant_buylists VALUES (218,0,2004,7);
-INSERT INTO merchant_buylists VALUES (219,0,2004,8);
-INSERT INTO merchant_buylists VALUES (220,0,2004,9);
-INSERT INTO merchant_buylists VALUES (221,0,2004,10);
-INSERT INTO merchant_buylists VALUES (222,0,2004,11);
-INSERT INTO merchant_buylists VALUES (223,0,2004,12);
-INSERT INTO merchant_buylists VALUES (224,0,2004,13);
-INSERT INTO merchant_buylists VALUES (225,0,2004,14);
-INSERT INTO merchant_buylists VALUES (226,0,2004,15);
-INSERT INTO merchant_buylists VALUES (227,0,2004,16);
-INSERT INTO merchant_buylists VALUES (228,0,2004,17);
-INSERT INTO merchant_buylists VALUES (229,0,2004,18);
-INSERT INTO merchant_buylists VALUES (230,0,2004,19);
-INSERT INTO merchant_buylists VALUES (231,0,2004,20);
-INSERT INTO merchant_buylists VALUES (232,0,2004,21);
-INSERT INTO merchant_buylists VALUES (233,0,2004,22);
-INSERT INTO merchant_buylists VALUES (234,0,2004,23);
-INSERT INTO merchant_buylists VALUES (235,0,2004,24);
-INSERT INTO merchant_buylists VALUES (236,0,2004,25);
-INSERT INTO merchant_buylists VALUES (237,0,2004,26);
-INSERT INTO merchant_buylists VALUES (238,0,2004,27);
-INSERT INTO merchant_buylists VALUES (239,0,2004,28);
-INSERT INTO merchant_buylists VALUES (240,0,2004,29);
-INSERT INTO merchant_buylists VALUES (241,0,2004,30);
-INSERT INTO merchant_buylists VALUES (242,0,2004,31);
-INSERT INTO merchant_buylists VALUES (243,0,2004,32);
-INSERT INTO merchant_buylists VALUES (946,0,2004,33);
-INSERT INTO merchant_buylists VALUES (989,0,2004,34);
-INSERT INTO merchant_buylists VALUES (1182,0,2004,35);
-INSERT INTO merchant_buylists VALUES (1305,0,2004,36);
-INSERT INTO merchant_buylists VALUES (1306,0,2004,37);
-INSERT INTO merchant_buylists VALUES (1471,0,2004,38);
-INSERT INTO merchant_buylists VALUES (1660,0,2004,39);
-INSERT INTO merchant_buylists VALUES (2372,0,2004,40);
-INSERT INTO merchant_buylists VALUES (2374,0,2004,41);
-INSERT INTO merchant_buylists VALUES (2507,0,2004,42);
-INSERT INTO merchant_buylists VALUES (3471,0,2004,43);
-INSERT INTO merchant_buylists VALUES (4028,0,2004,44);
-INSERT INTO merchant_buylists VALUES (4220,0,2004,45);
-INSERT INTO merchant_buylists VALUES (4665,0,2004,46);
-INSERT INTO merchant_buylists VALUES (4759,0,2004,47);
-INSERT INTO merchant_buylists VALUES (4760,0,2004,48);
-INSERT INTO merchant_buylists VALUES (4761,0,2004,49);
-INSERT INTO merchant_buylists VALUES (4762,0,2004,50);
-INSERT INTO merchant_buylists VALUES (4763,0,2004,51);
-INSERT INTO merchant_buylists VALUES (4764,0,2004,52);
-INSERT INTO merchant_buylists VALUES (4765,0,2004,53);
-INSERT INTO merchant_buylists VALUES (4766,0,2004,54);
-INSERT INTO merchant_buylists VALUES (4767,0,2004,55);
-INSERT INTO merchant_buylists VALUES (4768,0,2004,56);
-INSERT INTO merchant_buylists VALUES (4769,0,2004,57);
-INSERT INTO merchant_buylists VALUES (4770,0,2004,58);
-INSERT INTO merchant_buylists VALUES (4771,0,2004,59);
-INSERT INTO merchant_buylists VALUES (4772,0,2004,60);
-INSERT INTO merchant_buylists VALUES (4773,0,2004,61);
-INSERT INTO merchant_buylists VALUES (4774,0,2004,62);
-INSERT INTO merchant_buylists VALUES (4775,0,2004,63);
-INSERT INTO merchant_buylists VALUES (4776,0,2004,64);
-INSERT INTO merchant_buylists VALUES (4777,0,2004,65);
-INSERT INTO merchant_buylists VALUES (4778,0,2004,66);
-INSERT INTO merchant_buylists VALUES (4779,0,2004,67);
-INSERT INTO merchant_buylists VALUES (4780,0,2004,68);
-INSERT INTO merchant_buylists VALUES (4781,0,2004,69);
-INSERT INTO merchant_buylists VALUES (4782,0,2004,70);
-INSERT INTO merchant_buylists VALUES (4783,0,2004,71);
-INSERT INTO merchant_buylists VALUES (4784,0,2004,72);
-INSERT INTO merchant_buylists VALUES (4785,0,2004,73);
-INSERT INTO merchant_buylists VALUES (4786,0,2004,74);
-INSERT INTO merchant_buylists VALUES (4787,0,2004,75);
-INSERT INTO merchant_buylists VALUES (4788,0,2004,76);
-INSERT INTO merchant_buylists VALUES (5127,0,2004,77);
-INSERT INTO merchant_buylists VALUES (5128,0,2004,78);
-INSERT INTO merchant_buylists VALUES (5130,0,2004,79);
-INSERT INTO merchant_buylists VALUES (5131,0,2004,80);
-INSERT INTO merchant_buylists VALUES (5132,0,2004,81);
-INSERT INTO merchant_buylists VALUES (13,0,2005,1);
-INSERT INTO merchant_buylists VALUES (14,0,2005,2);
-INSERT INTO merchant_buylists VALUES (271,0,2005,3);
-INSERT INTO merchant_buylists VALUES (272,0,2005,4);
-INSERT INTO merchant_buylists VALUES (273,0,2005,5);
-INSERT INTO merchant_buylists VALUES (274,0,2005,6);
-INSERT INTO merchant_buylists VALUES (275,0,2005,7);
-INSERT INTO merchant_buylists VALUES (276,0,2005,8);
-INSERT INTO merchant_buylists VALUES (277,0,2005,9);
-INSERT INTO merchant_buylists VALUES (278,0,2005,10);
-INSERT INTO merchant_buylists VALUES (279,0,2005,11);
-INSERT INTO merchant_buylists VALUES (280,0,2005,12);
-INSERT INTO merchant_buylists VALUES (281,0,2005,13);
-INSERT INTO merchant_buylists VALUES (282,0,2005,14);
-INSERT INTO merchant_buylists VALUES (283,0,2005,15);
-INSERT INTO merchant_buylists VALUES (284,0,2005,16);
-INSERT INTO merchant_buylists VALUES (285,0,2005,17);
-INSERT INTO merchant_buylists VALUES (286,0,2005,18);
-INSERT INTO merchant_buylists VALUES (287,0,2005,19);
-INSERT INTO merchant_buylists VALUES (288,0,2005,20);
-INSERT INTO merchant_buylists VALUES (289,0,2005,21);
-INSERT INTO merchant_buylists VALUES (290,0,2005,22);
-INSERT INTO merchant_buylists VALUES (1181,0,2005,23);
-INSERT INTO merchant_buylists VALUES (1213,0,2005,24);
-INSERT INTO merchant_buylists VALUES (1307,0,2005,25);
-INSERT INTO merchant_buylists VALUES (3028,0,2005,26);
-INSERT INTO merchant_buylists VALUES (4810,0,2005,27);
-INSERT INTO merchant_buylists VALUES (4811,0,2005,28);
-INSERT INTO merchant_buylists VALUES (4812,0,2005,29);
-INSERT INTO merchant_buylists VALUES (4813,0,2005,30);
-INSERT INTO merchant_buylists VALUES (4814,0,2005,31);
-INSERT INTO merchant_buylists VALUES (4815,0,2005,32);
-INSERT INTO merchant_buylists VALUES (4816,0,2005,33);
-INSERT INTO merchant_buylists VALUES (4817,0,2005,34);
-INSERT INTO merchant_buylists VALUES (4818,0,2005,35);
-INSERT INTO merchant_buylists VALUES (4819,0,2005,36);
-INSERT INTO merchant_buylists VALUES (4820,0,2005,37);
-INSERT INTO merchant_buylists VALUES (4821,0,2005,38);
-INSERT INTO merchant_buylists VALUES (4822,0,2005,39);
-INSERT INTO merchant_buylists VALUES (4823,0,2005,40);
-INSERT INTO merchant_buylists VALUES (4824,0,2005,41);
-INSERT INTO merchant_buylists VALUES (4825,0,2005,42);
-INSERT INTO merchant_buylists VALUES (4826,0,2005,43);
-INSERT INTO merchant_buylists VALUES (4827,0,2005,44);
-INSERT INTO merchant_buylists VALUES (4828,0,2005,45);
-INSERT INTO merchant_buylists VALUES (4829,0,2005,46);
-INSERT INTO merchant_buylists VALUES (4830,0,2005,47);
-INSERT INTO merchant_buylists VALUES (4831,0,2005,48);
-INSERT INTO merchant_buylists VALUES (4832,0,2005,49);
-INSERT INTO merchant_buylists VALUES (4833,0,2005,50);
-INSERT INTO merchant_buylists VALUES (17,0,2005,51);
-INSERT INTO merchant_buylists VALUES (1341,0,2005,52);
-INSERT INTO merchant_buylists VALUES (1342,0,2005,53);
-INSERT INTO merchant_buylists VALUES (1343,0,2005,54);
-INSERT INTO merchant_buylists VALUES (1344,0,2005,55);
-INSERT INTO merchant_buylists VALUES (1345,0,2005,56);
-INSERT INTO merchant_buylists VALUES (244,0,2006,1);
-INSERT INTO merchant_buylists VALUES (245,0,2006,2);
-INSERT INTO merchant_buylists VALUES (246,0,2006,3);
-INSERT INTO merchant_buylists VALUES (247,0,2006,4);
-INSERT INTO merchant_buylists VALUES (248,0,2006,5);
-INSERT INTO merchant_buylists VALUES (249,0,2006,6);
-INSERT INTO merchant_buylists VALUES (250,0,2006,7);
-INSERT INTO merchant_buylists VALUES (251,0,2006,8);
-INSERT INTO merchant_buylists VALUES (252,0,2006,9);
-INSERT INTO merchant_buylists VALUES (253,0,2007,1);
-INSERT INTO merchant_buylists VALUES (254,0,2007,2);
-INSERT INTO merchant_buylists VALUES (255,0,2007,3);
-INSERT INTO merchant_buylists VALUES (256,0,2007,4);
-INSERT INTO merchant_buylists VALUES (257,0,2007,5);
-INSERT INTO merchant_buylists VALUES (258,0,2007,6);
-INSERT INTO merchant_buylists VALUES (259,0,2007,7);
-INSERT INTO merchant_buylists VALUES (260,0,2007,8);
-INSERT INTO merchant_buylists VALUES (261,0,2007,9);
-INSERT INTO merchant_buylists VALUES (262,0,2007,10);
-INSERT INTO merchant_buylists VALUES (263,0,2007,11);
-INSERT INTO merchant_buylists VALUES (264,0,2007,12);
-INSERT INTO merchant_buylists VALUES (265,0,2007,13);
-INSERT INTO merchant_buylists VALUES (266,0,2007,14);
-INSERT INTO merchant_buylists VALUES (267,0,2007,15);
-INSERT INTO merchant_buylists VALUES (268,0,2007,16);
-INSERT INTO merchant_buylists VALUES (269,0,2007,17);
-INSERT INTO merchant_buylists VALUES (270,0,2007,18);
-INSERT INTO merchant_buylists VALUES (2368,0,2007,19);
-INSERT INTO merchant_buylists VALUES (2371,0,2007,20);
-INSERT INTO merchant_buylists VALUES (4233,0,2007,21);
-INSERT INTO merchant_buylists VALUES (4789,0,2007,22);
-INSERT INTO merchant_buylists VALUES (4790,0,2007,23);
-INSERT INTO merchant_buylists VALUES (4791,0,2007,24);
-INSERT INTO merchant_buylists VALUES (4792,0,2007,25);
-INSERT INTO merchant_buylists VALUES (4793,0,2007,26);
-INSERT INTO merchant_buylists VALUES (4794,0,2007,27);
-INSERT INTO merchant_buylists VALUES (4795,0,2007,28);
-INSERT INTO merchant_buylists VALUES (4796,0,2007,29);
-INSERT INTO merchant_buylists VALUES (4797,0,2007,30);
-INSERT INTO merchant_buylists VALUES (4798,0,2007,31);
-INSERT INTO merchant_buylists VALUES (4799,0,2007,32);
-INSERT INTO merchant_buylists VALUES (4800,0,2007,33);
-INSERT INTO merchant_buylists VALUES (4801,0,2007,34);
-INSERT INTO merchant_buylists VALUES (4802,0,2007,35);
-INSERT INTO merchant_buylists VALUES (4803,0,2007,36);
-INSERT INTO merchant_buylists VALUES (4804,0,2007,37);
-INSERT INTO merchant_buylists VALUES (4805,0,2007,38);
-INSERT INTO merchant_buylists VALUES (4806,0,2007,39);
-INSERT INTO merchant_buylists VALUES (4807,0,2007,40);
-INSERT INTO merchant_buylists VALUES (4808,0,2007,41);
-INSERT INTO merchant_buylists VALUES (4809,0,2007,42);
-INSERT INTO merchant_buylists VALUES (5133,0,2007,43);
-INSERT INTO merchant_buylists VALUES (15,0,2008,1);
-INSERT INTO merchant_buylists VALUES (16,0,2008,2);
-INSERT INTO merchant_buylists VALUES (93,0,2008,3);
-INSERT INTO merchant_buylists VALUES (94,0,2008,4);
-INSERT INTO merchant_buylists VALUES (95,0,2008,5);
-INSERT INTO merchant_buylists VALUES (96,0,2008,6);
-INSERT INTO merchant_buylists VALUES (97,0,2008,7);
-INSERT INTO merchant_buylists VALUES (98,0,2008,8);
-INSERT INTO merchant_buylists VALUES (291,0,2008,9);
-INSERT INTO merchant_buylists VALUES (292,0,2008,10);
-INSERT INTO merchant_buylists VALUES (293,0,2008,11);
-INSERT INTO merchant_buylists VALUES (294,0,2008,12);
-INSERT INTO merchant_buylists VALUES (295,0,2008,13);
-INSERT INTO merchant_buylists VALUES (296,0,2008,14);
-INSERT INTO merchant_buylists VALUES (297,0,2008,15);
-INSERT INTO merchant_buylists VALUES (298,0,2008,16);
-INSERT INTO merchant_buylists VALUES (299,0,2008,17);
-INSERT INTO merchant_buylists VALUES (300,0,2008,18);
-INSERT INTO merchant_buylists VALUES (301,0,2008,19);
-INSERT INTO merchant_buylists VALUES (302,0,2008,20);
-INSERT INTO merchant_buylists VALUES (303,0,2008,21);
-INSERT INTO merchant_buylists VALUES (304,0,2008,22);
-INSERT INTO merchant_buylists VALUES (305,0,2008,23);
-INSERT INTO merchant_buylists VALUES (306,0,2008,24);
-INSERT INTO merchant_buylists VALUES (307,0,2008,25);
-INSERT INTO merchant_buylists VALUES (1302,0,2008,26);
-INSERT INTO merchant_buylists VALUES (1303,0,2008,27);
-INSERT INTO merchant_buylists VALUES (1376,0,2008,28);
-INSERT INTO merchant_buylists VALUES (1472,0,2008,29);
-INSERT INTO merchant_buylists VALUES (3026,0,2008,30);
-INSERT INTO merchant_buylists VALUES (3937,0,2008,31);
-INSERT INTO merchant_buylists VALUES (3938,0,2008,32);
-INSERT INTO merchant_buylists VALUES (3939,0,2008,33);
-INSERT INTO merchant_buylists VALUES (4834,0,2008,34);
-INSERT INTO merchant_buylists VALUES (4835,0,2008,35);
-INSERT INTO merchant_buylists VALUES (4836,0,2008,36);
-INSERT INTO merchant_buylists VALUES (4837,0,2008,37);
-INSERT INTO merchant_buylists VALUES (4838,0,2008,38);
-INSERT INTO merchant_buylists VALUES (4839,0,2008,39);
-INSERT INTO merchant_buylists VALUES (4840,0,2008,40);
-INSERT INTO merchant_buylists VALUES (4841,0,2008,41);
-INSERT INTO merchant_buylists VALUES (4842,0,2008,42);
-INSERT INTO merchant_buylists VALUES (4843,0,2008,43);
-INSERT INTO merchant_buylists VALUES (4844,0,2008,44);
-INSERT INTO merchant_buylists VALUES (4845,0,2008,45);
-INSERT INTO merchant_buylists VALUES (4846,0,2008,46);
-INSERT INTO merchant_buylists VALUES (4847,0,2008,47);
-INSERT INTO merchant_buylists VALUES (4848,0,2008,48);
-INSERT INTO merchant_buylists VALUES (4849,0,2008,49);
-INSERT INTO merchant_buylists VALUES (4850,0,2008,50);
-INSERT INTO merchant_buylists VALUES (4851,0,2008,51);
-INSERT INTO merchant_buylists VALUES (4852,0,2008,52);
-INSERT INTO merchant_buylists VALUES (4853,0,2008,53);
-INSERT INTO merchant_buylists VALUES (4854,0,2008,54);
-INSERT INTO merchant_buylists VALUES (4855,0,2008,55);
-INSERT INTO merchant_buylists VALUES (4856,0,2008,56);
-INSERT INTO merchant_buylists VALUES (4857,0,2008,57);
-INSERT INTO merchant_buylists VALUES (4858,0,2008,58);
-INSERT INTO merchant_buylists VALUES (4859,0,2008,59);
-INSERT INTO merchant_buylists VALUES (4860,0,2008,60);
-INSERT INTO merchant_buylists VALUES (4861,0,2008,61);
-INSERT INTO merchant_buylists VALUES (4862,0,2008,62);
-INSERT INTO merchant_buylists VALUES (4863,0,2008,63);
-INSERT INTO merchant_buylists VALUES (4,0,2009,1);
-INSERT INTO merchant_buylists VALUES (5,0,2009,2);
-INSERT INTO merchant_buylists VALUES (6,0,2009,3);
-INSERT INTO merchant_buylists VALUES (7,0,2009,4);
-INSERT INTO merchant_buylists VALUES (86,0,2009,5);
-INSERT INTO merchant_buylists VALUES (87,0,2009,6);
-INSERT INTO merchant_buylists VALUES (88,0,2009,7);
-INSERT INTO merchant_buylists VALUES (89,0,2009,8);
-INSERT INTO merchant_buylists VALUES (91,0,2009,9);
-INSERT INTO merchant_buylists VALUES (152,0,2009,10);
-INSERT INTO merchant_buylists VALUES (153,0,2009,11);
-INSERT INTO merchant_buylists VALUES (154,0,2009,12);
-INSERT INTO merchant_buylists VALUES (155,0,2009,13);
-INSERT INTO merchant_buylists VALUES (156,0,2009,14);
-INSERT INTO merchant_buylists VALUES (157,0,2009,15);
-INSERT INTO merchant_buylists VALUES (158,0,2009,16);
-INSERT INTO merchant_buylists VALUES (159,0,2009,17);
-INSERT INTO merchant_buylists VALUES (160,0,2009,18);
-INSERT INTO merchant_buylists VALUES (161,0,2009,19);
-INSERT INTO merchant_buylists VALUES (162,0,2009,20);
-INSERT INTO merchant_buylists VALUES (163,0,2009,21);
-INSERT INTO merchant_buylists VALUES (164,0,2009,22);
-INSERT INTO merchant_buylists VALUES (165,0,2009,23);
-INSERT INTO merchant_buylists VALUES (166,0,2009,24);
-INSERT INTO merchant_buylists VALUES (167,0,2009,25);
-INSERT INTO merchant_buylists VALUES (168,0,2009,26);
-INSERT INTO merchant_buylists VALUES (169,0,2009,27);
-INSERT INTO merchant_buylists VALUES (170,0,2009,28);
-INSERT INTO merchant_buylists VALUES (171,0,2009,29);
-INSERT INTO merchant_buylists VALUES (172,0,2009,30);
-INSERT INTO merchant_buylists VALUES (173,0,2009,31);
-INSERT INTO merchant_buylists VALUES (174,0,2009,32);
-INSERT INTO merchant_buylists VALUES (175,0,2009,33);
-INSERT INTO merchant_buylists VALUES (179,0,2009,34);
-INSERT INTO merchant_buylists VALUES (180,0,2009,35);
-INSERT INTO merchant_buylists VALUES (181,0,2009,36);
-INSERT INTO merchant_buylists VALUES (182,0,2009,37);
-INSERT INTO merchant_buylists VALUES (189,0,2009,38);
-INSERT INTO merchant_buylists VALUES (193,0,2009,39);
-INSERT INTO merchant_buylists VALUES (196,0,2009,40);
-INSERT INTO merchant_buylists VALUES (201,0,2009,41);
-INSERT INTO merchant_buylists VALUES (202,0,2009,42);
-INSERT INTO merchant_buylists VALUES (747,0,2009,43);
-INSERT INTO merchant_buylists VALUES (1300,0,2009,44);
-INSERT INTO merchant_buylists VALUES (1301,0,2009,45);
-INSERT INTO merchant_buylists VALUES (1511,0,2009,46);
-INSERT INTO merchant_buylists VALUES (2370,0,2009,47);
-INSERT INTO merchant_buylists VALUES (2501,0,2009,48);
-INSERT INTO merchant_buylists VALUES (2502,0,2009,49);
-INSERT INTO merchant_buylists VALUES (2503,0,2009,50);
-INSERT INTO merchant_buylists VALUES (2504,0,2009,51);
-INSERT INTO merchant_buylists VALUES (4221,0,2009,52);
-INSERT INTO merchant_buylists VALUES (4726,0,2009,53);
-INSERT INTO merchant_buylists VALUES (4727,0,2009,54);
-INSERT INTO merchant_buylists VALUES (4728,0,2009,55);
-INSERT INTO merchant_buylists VALUES (4729,0,2009,56);
-INSERT INTO merchant_buylists VALUES (4730,0,2009,57);
-INSERT INTO merchant_buylists VALUES (4731,0,2009,58);
-INSERT INTO merchant_buylists VALUES (4732,0,2009,59);
-INSERT INTO merchant_buylists VALUES (4733,0,2009,60);
-INSERT INTO merchant_buylists VALUES (4734,0,2009,61);
-INSERT INTO merchant_buylists VALUES (4735,0,2009,62);
-INSERT INTO merchant_buylists VALUES (4736,0,2009,63);
-INSERT INTO merchant_buylists VALUES (4737,0,2009,64);
-INSERT INTO merchant_buylists VALUES (4738,0,2009,65);
-INSERT INTO merchant_buylists VALUES (4739,0,2009,66);
-INSERT INTO merchant_buylists VALUES (4740,0,2009,67);
-INSERT INTO merchant_buylists VALUES (4741,0,2009,68);
-INSERT INTO merchant_buylists VALUES (4742,0,2009,69);
-INSERT INTO merchant_buylists VALUES (4743,0,2009,70);
-INSERT INTO merchant_buylists VALUES (4744,0,2009,71);
-INSERT INTO merchant_buylists VALUES (4745,0,2009,72);
-INSERT INTO merchant_buylists VALUES (4746,0,2009,73);
-INSERT INTO merchant_buylists VALUES (4747,0,2009,74);
-INSERT INTO merchant_buylists VALUES (4748,0,2009,75);
-INSERT INTO merchant_buylists VALUES (4749,0,2009,76);
-INSERT INTO merchant_buylists VALUES (4750,0,2009,77);
-INSERT INTO merchant_buylists VALUES (4751,0,2009,78);
-INSERT INTO merchant_buylists VALUES (4752,0,2009,79);
-INSERT INTO merchant_buylists VALUES (4753,0,2009,80);
-INSERT INTO merchant_buylists VALUES (4754,0,2009,81);
-INSERT INTO merchant_buylists VALUES (4755,0,2009,82);
-INSERT INTO merchant_buylists VALUES (4756,0,2009,83);
-INSERT INTO merchant_buylists VALUES (4757,0,2009,84);
-INSERT INTO merchant_buylists VALUES (4758,0,2009,85);
-INSERT INTO merchant_buylists VALUES (8,0,2010,1);
-INSERT INTO merchant_buylists VALUES (9,0,2010,2);
-INSERT INTO merchant_buylists VALUES (90,0,2010,3);
-INSERT INTO merchant_buylists VALUES (92,0,2010,4);
-INSERT INTO merchant_buylists VALUES (176,0,2010,5);
-INSERT INTO merchant_buylists VALUES (177,0,2010,6);
-INSERT INTO merchant_buylists VALUES (178,0,2010,7);
-INSERT INTO merchant_buylists VALUES (183,0,2010,8);
-INSERT INTO merchant_buylists VALUES (184,0,2010,9);
-INSERT INTO merchant_buylists VALUES (185,0,2010,10);
-INSERT INTO merchant_buylists VALUES (186,0,2010,11);
-INSERT INTO merchant_buylists VALUES (187,0,2010,12);
-INSERT INTO merchant_buylists VALUES (188,0,2010,13);
-INSERT INTO merchant_buylists VALUES (190,0,2010,14);
-INSERT INTO merchant_buylists VALUES (191,0,2010,15);
-INSERT INTO merchant_buylists VALUES (192,0,2010,16);
-INSERT INTO merchant_buylists VALUES (194,0,2010,17);
-INSERT INTO merchant_buylists VALUES (195,0,2010,18);
-INSERT INTO merchant_buylists VALUES (197,0,2010,19);
-INSERT INTO merchant_buylists VALUES (198,0,2010,20);
-INSERT INTO merchant_buylists VALUES (199,0,2010,21);
-INSERT INTO merchant_buylists VALUES (200,0,2010,22);
-INSERT INTO merchant_buylists VALUES (203,0,2010,23);
-INSERT INTO merchant_buylists VALUES (204,0,2010,24);
-INSERT INTO merchant_buylists VALUES (205,0,2010,25);
-INSERT INTO merchant_buylists VALUES (206,0,2010,26);
-INSERT INTO merchant_buylists VALUES (207,0,2010,27);
-INSERT INTO merchant_buylists VALUES (208,0,2010,28);
-INSERT INTO merchant_buylists VALUES (209,0,2010,29);
-INSERT INTO merchant_buylists VALUES (210,0,2010,30);
-INSERT INTO merchant_buylists VALUES (211,0,2010,31);
-INSERT INTO merchant_buylists VALUES (212,0,2010,32);
-INSERT INTO merchant_buylists VALUES (213,0,2010,33);
-INSERT INTO merchant_buylists VALUES (214,0,2010,34);
-INSERT INTO merchant_buylists VALUES (744,0,2010,35);
-INSERT INTO merchant_buylists VALUES (748,0,2010,36);
-INSERT INTO merchant_buylists VALUES (749,0,2010,37);
-INSERT INTO merchant_buylists VALUES (754,0,2010,38);
-INSERT INTO merchant_buylists VALUES (1304,0,2010,39);
-INSERT INTO merchant_buylists VALUES (2373,0,2010,40);
-INSERT INTO merchant_buylists VALUES (4864,0,2010,41);
-INSERT INTO merchant_buylists VALUES (4865,0,2010,42);
-INSERT INTO merchant_buylists VALUES (4866,0,2010,43);
-INSERT INTO merchant_buylists VALUES (4867,0,2010,44);
-INSERT INTO merchant_buylists VALUES (4868,0,2010,45);
-INSERT INTO merchant_buylists VALUES (4869,0,2010,46);
-INSERT INTO merchant_buylists VALUES (4870,0,2010,47);
-INSERT INTO merchant_buylists VALUES (4871,0,2010,48);
-INSERT INTO merchant_buylists VALUES (4872,0,2010,49);
-INSERT INTO merchant_buylists VALUES (4873,0,2010,50);
-INSERT INTO merchant_buylists VALUES (4874,0,2010,51);
-INSERT INTO merchant_buylists VALUES (4875,0,2010,52);
-INSERT INTO merchant_buylists VALUES (4876,0,2010,53);
-INSERT INTO merchant_buylists VALUES (4877,0,2010,54);
-INSERT INTO merchant_buylists VALUES (4878,0,2010,55);
-INSERT INTO merchant_buylists VALUES (4879,0,2010,56);
-INSERT INTO merchant_buylists VALUES (4880,0,2010,57);
-INSERT INTO merchant_buylists VALUES (4881,0,2010,58);
-INSERT INTO merchant_buylists VALUES (4882,0,2010,59);
-INSERT INTO merchant_buylists VALUES (4883,0,2010,60);
-INSERT INTO merchant_buylists VALUES (4884,0,2010,61);
-INSERT INTO merchant_buylists VALUES (4885,0,2010,62);
-INSERT INTO merchant_buylists VALUES (4886,0,2010,63);
-INSERT INTO merchant_buylists VALUES (4887,0,2010,64);
-INSERT INTO merchant_buylists VALUES (4888,0,2010,65);
-INSERT INTO merchant_buylists VALUES (4889,0,2010,66);
-INSERT INTO merchant_buylists VALUES (4890,0,2010,67);
-INSERT INTO merchant_buylists VALUES (4891,0,2010,68);
-INSERT INTO merchant_buylists VALUES (4892,0,2010,69);
-INSERT INTO merchant_buylists VALUES (4893,0,2010,70);
-INSERT INTO merchant_buylists VALUES (4894,0,2010,71);
-INSERT INTO merchant_buylists VALUES (4895,0,2010,72);
-INSERT INTO merchant_buylists VALUES (4896,0,2010,73);
-INSERT INTO merchant_buylists VALUES (4897,0,2010,74);
-INSERT INTO merchant_buylists VALUES (4898,0,2010,75);
-INSERT INTO merchant_buylists VALUES (4899,0,2010,76);
-INSERT INTO merchant_buylists VALUES (4900,0,2010,77);
-INSERT INTO merchant_buylists VALUES (4901,0,2010,78);
-INSERT INTO merchant_buylists VALUES (4902,0,2010,79);
-INSERT INTO merchant_buylists VALUES (4903,0,2010,80);
-INSERT INTO merchant_buylists VALUES (4904,0,2010,81);
-INSERT INTO merchant_buylists VALUES (4905,0,2010,82);
-INSERT INTO merchant_buylists VALUES (6355,0,2010,83);
-INSERT INTO merchant_buylists VALUES (18,0,2011,1);
-INSERT INTO merchant_buylists VALUES (19,0,2011,2);
-INSERT INTO merchant_buylists VALUES (20,0,2011,3);
-INSERT INTO merchant_buylists VALUES (102,0,2011,4);
-INSERT INTO merchant_buylists VALUES (103,0,2011,5);
-INSERT INTO merchant_buylists VALUES (104,0,2011,6);
-INSERT INTO merchant_buylists VALUES (105,0,2011,7);
-INSERT INTO merchant_buylists VALUES (106,0,2011,8);
-INSERT INTO merchant_buylists VALUES (107,0,2011,9);
-INSERT INTO merchant_buylists VALUES (108,0,2011,10);
-INSERT INTO merchant_buylists VALUES (109,0,2011,11);
-INSERT INTO merchant_buylists VALUES (110,0,2011,12);
-INSERT INTO merchant_buylists VALUES (111,0,2011,13);
-INSERT INTO merchant_buylists VALUES (625,0,2011,14);
-INSERT INTO merchant_buylists VALUES (626,0,2011,15);
-INSERT INTO merchant_buylists VALUES (627,0,2011,16);
-INSERT INTO merchant_buylists VALUES (628,0,2011,17);
-INSERT INTO merchant_buylists VALUES (629,0,2011,18);
-INSERT INTO merchant_buylists VALUES (630,0,2011,19);
-INSERT INTO merchant_buylists VALUES (631,0,2011,20);
-INSERT INTO merchant_buylists VALUES (632,0,2011,21);
-INSERT INTO merchant_buylists VALUES (633,0,2011,22);
-INSERT INTO merchant_buylists VALUES (634,0,2011,23);
-INSERT INTO merchant_buylists VALUES (635,0,2011,24);
-INSERT INTO merchant_buylists VALUES (636,0,2011,25);
-INSERT INTO merchant_buylists VALUES (637,0,2011,26);
-INSERT INTO merchant_buylists VALUES (638,0,2011,27);
-INSERT INTO merchant_buylists VALUES (639,0,2011,28);
-INSERT INTO merchant_buylists VALUES (640,0,2011,29);
-INSERT INTO merchant_buylists VALUES (641,0,2011,30);
-INSERT INTO merchant_buylists VALUES (642,0,2011,31);
-INSERT INTO merchant_buylists VALUES (643,0,2011,32);
-INSERT INTO merchant_buylists VALUES (644,0,2011,33);
-INSERT INTO merchant_buylists VALUES (645,0,2011,34);
-INSERT INTO merchant_buylists VALUES (646,0,2011,35);
-INSERT INTO merchant_buylists VALUES (647,0,2011,36);
-INSERT INTO merchant_buylists VALUES (648,0,2011,37);
-INSERT INTO merchant_buylists VALUES (649,0,2011,38);
-INSERT INTO merchant_buylists VALUES (650,0,2011,39);
-INSERT INTO merchant_buylists VALUES (651,0,2011,40);
-INSERT INTO merchant_buylists VALUES (652,0,2011,41);
-INSERT INTO merchant_buylists VALUES (653,0,2011,42);
-INSERT INTO merchant_buylists VALUES (654,0,2011,43);
-INSERT INTO merchant_buylists VALUES (655,0,2011,44);
-INSERT INTO merchant_buylists VALUES (656,0,2011,45);
-INSERT INTO merchant_buylists VALUES (657,0,2011,46);
-INSERT INTO merchant_buylists VALUES (658,0,2011,47);
-INSERT INTO merchant_buylists VALUES (659,0,2011,48);
-INSERT INTO merchant_buylists VALUES (660,0,2011,49);
-INSERT INTO merchant_buylists VALUES (661,0,2011,50);
-INSERT INTO merchant_buylists VALUES (662,0,2011,51);
-INSERT INTO merchant_buylists VALUES (663,0,2011,52);
-INSERT INTO merchant_buylists VALUES (664,0,2011,53);
-INSERT INTO merchant_buylists VALUES (665,0,2011,54);
-INSERT INTO merchant_buylists VALUES (666,0,2011,55);
-INSERT INTO merchant_buylists VALUES (667,0,2011,56);
-INSERT INTO merchant_buylists VALUES (668,0,2011,57);
-INSERT INTO merchant_buylists VALUES (669,0,2011,58);
-INSERT INTO merchant_buylists VALUES (670,0,2011,59);
-INSERT INTO merchant_buylists VALUES (671,0,2011,60);
-INSERT INTO merchant_buylists VALUES (672,0,2011,61);
-INSERT INTO merchant_buylists VALUES (673,0,2011,62);
-INSERT INTO merchant_buylists VALUES (674,0,2011,63);
-INSERT INTO merchant_buylists VALUES (945,0,2011,64);
-INSERT INTO merchant_buylists VALUES (1328,0,2011,65);
-INSERT INTO merchant_buylists VALUES (1329,0,2011,66);
-INSERT INTO merchant_buylists VALUES (1330,0,2011,67);
-INSERT INTO merchant_buylists VALUES (1331,0,2011,68);
-INSERT INTO merchant_buylists VALUES (1332,0,2011,69);
-INSERT INTO merchant_buylists VALUES (2493,0,2011,70);
-INSERT INTO merchant_buylists VALUES (2494,0,2011,71);
-INSERT INTO merchant_buylists VALUES (2495,0,2011,72);
-INSERT INTO merchant_buylists VALUES (2496,0,2011,73);
-INSERT INTO merchant_buylists VALUES (2497,0,2011,74);
-INSERT INTO merchant_buylists VALUES (2498,0,2011,75);
-INSERT INTO merchant_buylists VALUES (4222,0,2011,76);
-INSERT INTO merchant_buylists VALUES (4223,0,2011,77);
-INSERT INTO merchant_buylists VALUES (99,0,2012,1);
-INSERT INTO merchant_buylists VALUES (100,0,2012,2);
-INSERT INTO merchant_buylists VALUES (101,0,2012,3);
-INSERT INTO merchant_buylists VALUES (308,0,2012,4);
-INSERT INTO merchant_buylists VALUES (309,0,2012,5);
-INSERT INTO merchant_buylists VALUES (310,0,2012,6);
-INSERT INTO merchant_buylists VALUES (311,0,2012,7);
-INSERT INTO merchant_buylists VALUES (312,0,2012,8);
-INSERT INTO merchant_buylists VALUES (313,0,2012,9);
-INSERT INTO merchant_buylists VALUES (314,0,2012,10);
-INSERT INTO merchant_buylists VALUES (315,0,2012,11);
-INSERT INTO merchant_buylists VALUES (316,0,2012,12);
-INSERT INTO merchant_buylists VALUES (317,0,2012,13);
-INSERT INTO merchant_buylists VALUES (318,0,2012,14);
-INSERT INTO merchant_buylists VALUES (319,0,2012,15);
-INSERT INTO merchant_buylists VALUES (320,0,2012,16);
-INSERT INTO merchant_buylists VALUES (321,0,2012,17);
-INSERT INTO merchant_buylists VALUES (322,0,2012,18);
-INSERT INTO merchant_buylists VALUES (323,0,2012,19);
-INSERT INTO merchant_buylists VALUES (324,0,2012,20);
-INSERT INTO merchant_buylists VALUES (325,0,2012,21);
-INSERT INTO merchant_buylists VALUES (326,0,2012,22);
-INSERT INTO merchant_buylists VALUES (327,0,2012,23);
-INSERT INTO merchant_buylists VALUES (328,0,2012,24);
-INSERT INTO merchant_buylists VALUES (329,0,2012,25);
-INSERT INTO merchant_buylists VALUES (330,0,2012,26);
-INSERT INTO merchant_buylists VALUES (331,0,2012,27);
-INSERT INTO merchant_buylists VALUES (332,0,2012,28);
-INSERT INTO merchant_buylists VALUES (333,0,2012,29);
-INSERT INTO merchant_buylists VALUES (334,0,2012,30);
-INSERT INTO merchant_buylists VALUES (335,0,2012,31);
-INSERT INTO merchant_buylists VALUES (336,0,2012,32);
-INSERT INTO merchant_buylists VALUES (337,0,2012,33);
-INSERT INTO merchant_buylists VALUES (338,0,2012,34);
-INSERT INTO merchant_buylists VALUES (339,0,2012,35);
-INSERT INTO merchant_buylists VALUES (340,0,2012,36);
-INSERT INTO merchant_buylists VALUES (341,0,2012,37);
-INSERT INTO merchant_buylists VALUES (342,0,2012,38);
-INSERT INTO merchant_buylists VALUES (343,0,2012,39);
-INSERT INTO merchant_buylists VALUES (344,0,2012,40);
-INSERT INTO merchant_buylists VALUES (345,0,2012,41);
-INSERT INTO merchant_buylists VALUES (346,0,2012,42);
-INSERT INTO merchant_buylists VALUES (2505,0,2013,1);
-INSERT INTO merchant_buylists VALUES (3439,0,2013,2);
-INSERT INTO merchant_buylists VALUES (3902,0,2013,3);
-INSERT INTO merchant_buylists VALUES (3903,0,2013,4);
-INSERT INTO merchant_buylists VALUES (3904,0,2013,5);
-INSERT INTO merchant_buylists VALUES (3905,0,2013,6);
-INSERT INTO merchant_buylists VALUES (3906,0,2013,7);
-INSERT INTO merchant_buylists VALUES (3907,0,2013,8);
-INSERT INTO merchant_buylists VALUES (3908,0,2013,9);
-INSERT INTO merchant_buylists VALUES (3909,0,2013,10);
-INSERT INTO merchant_buylists VALUES (3910,0,2013,11);
-INSERT INTO merchant_buylists VALUES (3911,0,2013,12);
-INSERT INTO merchant_buylists VALUES (5217,0,2013,13);
-INSERT INTO merchant_buylists VALUES (3919,0,2014,1);
-INSERT INTO merchant_buylists VALUES (3920,0,2014,2);
-INSERT INTO merchant_buylists VALUES (3921,0,2014,3);
-INSERT INTO merchant_buylists VALUES (3922,0,2014,4);
-INSERT INTO merchant_buylists VALUES (3923,0,2014,5);
-INSERT INTO merchant_buylists VALUES (3924,0,2014,6);
-INSERT INTO merchant_buylists VALUES (3925,0,2014,7);
-INSERT INTO merchant_buylists VALUES (5187,0,2014,8);
-INSERT INTO merchant_buylists VALUES (5188,0,2014,9);
-INSERT INTO merchant_buylists VALUES (5189,0,2014,10);
-INSERT INTO merchant_buylists VALUES (4237,0,2014,11);
-INSERT INTO merchant_buylists VALUES (5190,0,2014,12);
-INSERT INTO merchant_buylists VALUES (5191,0,2014,13);
-INSERT INTO merchant_buylists VALUES (4238,0,2014,14);
-INSERT INTO merchant_buylists VALUES (5176,0,2015,1);
-INSERT INTO merchant_buylists VALUES (5177,0,2015,2);
-INSERT INTO merchant_buylists VALUES (5178,0,2015,3);
-INSERT INTO merchant_buylists VALUES (5179,0,2015,4);
-INSERT INTO merchant_buylists VALUES (5180,0,2015,5);
-INSERT INTO merchant_buylists VALUES (5181,0,2015,6);
-INSERT INTO merchant_buylists VALUES (65,0,3001,1);
-INSERT INTO merchant_buylists VALUES (725,0,3001,2);
-INSERT INTO merchant_buylists VALUES (726,0,3001,3);
-INSERT INTO merchant_buylists VALUES (727,0,3001,4);
-INSERT INTO merchant_buylists VALUES (728,0,3001,5);
-INSERT INTO merchant_buylists VALUES (733,0,3001,6);
-INSERT INTO merchant_buylists VALUES (734,0,3001,7);
-INSERT INTO merchant_buylists VALUES (735,0,3001,8);
-INSERT INTO merchant_buylists VALUES (1060,0,3001,9);
-INSERT INTO merchant_buylists VALUES (1061,0,3001,10);
-INSERT INTO merchant_buylists VALUES (1062,0,3001,11);
-INSERT INTO merchant_buylists VALUES (1073,0,3001,12);
-INSERT INTO merchant_buylists VALUES (1374,0,3001,13);
-INSERT INTO merchant_buylists VALUES (1375,0,3001,14);
-INSERT INTO merchant_buylists VALUES (1539,0,3001,15);
-INSERT INTO merchant_buylists VALUES (1540,0,3001,16);
-INSERT INTO merchant_buylists VALUES (1831,0,3001,17);
-INSERT INTO merchant_buylists VALUES (1832,0,3001,18);
-INSERT INTO merchant_buylists VALUES (1833,0,3001,19);
-INSERT INTO merchant_buylists VALUES (1834,0,3001,20);
-INSERT INTO merchant_buylists VALUES (3889,0,3001,21);
-INSERT INTO merchant_buylists VALUES (4677,0,3001,22);
-INSERT INTO merchant_buylists VALUES (4678,0,3001,23);
-INSERT INTO merchant_buylists VALUES (4679,0,3001,24);
-INSERT INTO merchant_buylists VALUES (4680,0,3001,25);
-INSERT INTO merchant_buylists VALUES (5234,0,3001,26);
-INSERT INTO merchant_buylists VALUES (5235,0,3001,27);
-INSERT INTO merchant_buylists VALUES (5236,0,3001,28);
-INSERT INTO merchant_buylists VALUES (5237,0,3001,29);
-INSERT INTO merchant_buylists VALUES (5238,0,3001,30);
-INSERT INTO merchant_buylists VALUES (5239,0,3001,31);
-INSERT INTO merchant_buylists VALUES (5240,0,3001,32);
-INSERT INTO merchant_buylists VALUES (5241,0,3001,33);
-INSERT INTO merchant_buylists VALUES (5242,0,3001,34);
-INSERT INTO merchant_buylists VALUES (5243,0,3001,35);
-INSERT INTO merchant_buylists VALUES (5244,0,3001,36);
-INSERT INTO merchant_buylists VALUES (5245,0,3001,37);
-INSERT INTO merchant_buylists VALUES (5246,0,3001,38);
-INSERT INTO merchant_buylists VALUES (5247,0,3001,39);
-INSERT INTO merchant_buylists VALUES (5248,0,3001,40);
-INSERT INTO merchant_buylists VALUES (5283,0,3001,41);
-INSERT INTO merchant_buylists VALUES (5560,0,3001,42);
-INSERT INTO merchant_buylists VALUES (5561,0,3001,43);
-INSERT INTO merchant_buylists VALUES (729,0,3002,1);
-INSERT INTO merchant_buylists VALUES (730,0,3002,2);
-INSERT INTO merchant_buylists VALUES (731,0,3002,3);
-INSERT INTO merchant_buylists VALUES (732,0,3002,4);
-INSERT INTO merchant_buylists VALUES (736,0,3002,5);
-INSERT INTO merchant_buylists VALUES (737,0,3002,6);
-INSERT INTO merchant_buylists VALUES (947,0,3002,7);
-INSERT INTO merchant_buylists VALUES (948,0,3002,8);
-INSERT INTO merchant_buylists VALUES (949,0,3002,9);
-INSERT INTO merchant_buylists VALUES (950,0,3002,10);
-INSERT INTO merchant_buylists VALUES (951,0,3002,11);
-INSERT INTO merchant_buylists VALUES (952,0,3002,12);
-INSERT INTO merchant_buylists VALUES (953,0,3002,13);
-INSERT INTO merchant_buylists VALUES (954,0,3002,14);
-INSERT INTO merchant_buylists VALUES (955,0,3002,15);
-INSERT INTO merchant_buylists VALUES (956,0,3002,16);
-INSERT INTO merchant_buylists VALUES (957,0,3002,17);
-INSERT INTO merchant_buylists VALUES (958,0,3002,18);
-INSERT INTO merchant_buylists VALUES (959,0,3002,19);
-INSERT INTO merchant_buylists VALUES (960,0,3002,20);
-INSERT INTO merchant_buylists VALUES (961,0,3002,21);
-INSERT INTO merchant_buylists VALUES (962,0,3002,22);
-INSERT INTO merchant_buylists VALUES (1538,0,3002,23);
-INSERT INTO merchant_buylists VALUES (1829,0,3002,24);
-INSERT INTO merchant_buylists VALUES (1830,0,3002,25);
-INSERT INTO merchant_buylists VALUES (3926,0,3002,26);
-INSERT INTO merchant_buylists VALUES (3927,0,3002,27);
-INSERT INTO merchant_buylists VALUES (3928,0,3002,28);
-INSERT INTO merchant_buylists VALUES (3929,0,3002,29);
-INSERT INTO merchant_buylists VALUES (3930,0,3002,30);
-INSERT INTO merchant_buylists VALUES (3931,0,3002,31);
-INSERT INTO merchant_buylists VALUES (3932,0,3002,32);
-INSERT INTO merchant_buylists VALUES (3933,0,3002,33);
-INSERT INTO merchant_buylists VALUES (3934,0,3002,34);
-INSERT INTO merchant_buylists VALUES (3935,0,3002,35);
-INSERT INTO merchant_buylists VALUES (3936,0,3002,36);
-INSERT INTO merchant_buylists VALUES (3958,0,3002,37);
-INSERT INTO merchant_buylists VALUES (3959,0,3002,38);
-INSERT INTO merchant_buylists VALUES (4218,0,3002,39);
-INSERT INTO merchant_buylists VALUES (4629,0,3002,40);
-INSERT INTO merchant_buylists VALUES (4630,0,3002,41);
-INSERT INTO merchant_buylists VALUES (4631,0,3002,42);
-INSERT INTO merchant_buylists VALUES (4632,0,3002,43);
-INSERT INTO merchant_buylists VALUES (4633,0,3002,44);
-INSERT INTO merchant_buylists VALUES (4634,0,3002,45);
-INSERT INTO merchant_buylists VALUES (4635,0,3002,46);
-INSERT INTO merchant_buylists VALUES (4636,0,3002,47);
-INSERT INTO merchant_buylists VALUES (4637,0,3002,48);
-INSERT INTO merchant_buylists VALUES (4638,0,3002,49);
-INSERT INTO merchant_buylists VALUES (4639,0,3002,50);
-INSERT INTO merchant_buylists VALUES (4640,0,3002,51);
-INSERT INTO merchant_buylists VALUES (4641,0,3002,52);
-INSERT INTO merchant_buylists VALUES (4642,0,3002,53);
-INSERT INTO merchant_buylists VALUES (4643,0,3002,54);
-INSERT INTO merchant_buylists VALUES (4644,0,3002,55);
-INSERT INTO merchant_buylists VALUES (4645,0,3002,56);
-INSERT INTO merchant_buylists VALUES (4646,0,3002,57);
-INSERT INTO merchant_buylists VALUES (4647,0,3002,58);
-INSERT INTO merchant_buylists VALUES (4648,0,3002,59);
-INSERT INTO merchant_buylists VALUES (4649,0,3002,60);
-INSERT INTO merchant_buylists VALUES (4650,0,3002,61);
-INSERT INTO merchant_buylists VALUES (4651,0,3002,62);
-INSERT INTO merchant_buylists VALUES (4652,0,3002,63);
-INSERT INTO merchant_buylists VALUES (4653,0,3002,64);
-INSERT INTO merchant_buylists VALUES (4654,0,3002,65);
-INSERT INTO merchant_buylists VALUES (4655,0,3002,66);
-INSERT INTO merchant_buylists VALUES (4656,0,3002,67);
-INSERT INTO merchant_buylists VALUES (4657,0,3002,68);
-INSERT INTO merchant_buylists VALUES (4658,0,3002,69);
-INSERT INTO merchant_buylists VALUES (4659,0,3002,70);
-INSERT INTO merchant_buylists VALUES (4660,0,3002,71);
-INSERT INTO merchant_buylists VALUES (4661,0,3002,72);
-INSERT INTO merchant_buylists VALUES (4662,0,3002,73);
-INSERT INTO merchant_buylists VALUES (4663,0,3002,74);
-INSERT INTO merchant_buylists VALUES (4664,0,3002,75);
-INSERT INTO merchant_buylists VALUES (2375,0,3003,1);
-INSERT INTO merchant_buylists VALUES (3500,0,3003,2);
-INSERT INTO merchant_buylists VALUES (3501,0,3003,3);
-INSERT INTO merchant_buylists VALUES (3502,0,3003,4);
-INSERT INTO merchant_buylists VALUES (4422,0,3003,5);
-INSERT INTO merchant_buylists VALUES (4423,0,3003,6);
-INSERT INTO merchant_buylists VALUES (4424,0,3003,7);
-INSERT INTO merchant_buylists VALUES (4425,0,3003,8);
-INSERT INTO merchant_buylists VALUES (1666,0,30040,1);
-INSERT INTO merchant_buylists VALUES (1786,0,30040,2);
-INSERT INTO merchant_buylists VALUES (1787,0,30040,3);
-INSERT INTO merchant_buylists VALUES (1788,0,30040,4);
-INSERT INTO merchant_buylists VALUES (1789,0,30040,5);
-INSERT INTO merchant_buylists VALUES (1790,0,30040,6);
-INSERT INTO merchant_buylists VALUES (1791,0,30040,7);
-INSERT INTO merchant_buylists VALUES (1792,0,30040,8);
-INSERT INTO merchant_buylists VALUES (1793,0,30040,9);
-INSERT INTO merchant_buylists VALUES (1794,0,30040,10);
-INSERT INTO merchant_buylists VALUES (1795,0,30040,11);
-INSERT INTO merchant_buylists VALUES (1796,0,30040,12);
-INSERT INTO merchant_buylists VALUES (1797,0,30040,13);
-INSERT INTO merchant_buylists VALUES (1798,0,30040,14);
-INSERT INTO merchant_buylists VALUES (1799,0,30040,15);
-INSERT INTO merchant_buylists VALUES (1800,0,30040,16);
-INSERT INTO merchant_buylists VALUES (1801,0,30040,17);
-INSERT INTO merchant_buylists VALUES (1802,0,30040,18);
-INSERT INTO merchant_buylists VALUES (1803,0,30040,19);
-INSERT INTO merchant_buylists VALUES (1804,0,30040,20);
-INSERT INTO merchant_buylists VALUES (1805,0,30040,21);
-INSERT INTO merchant_buylists VALUES (1806,0,30040,22);
-INSERT INTO merchant_buylists VALUES (1807,0,30040,23);
-INSERT INTO merchant_buylists VALUES (1808,0,30040,24);
-INSERT INTO merchant_buylists VALUES (1809,0,30040,25);
-INSERT INTO merchant_buylists VALUES (1810,0,30040,26);
-INSERT INTO merchant_buylists VALUES (1811,0,30040,27);
-INSERT INTO merchant_buylists VALUES (1812,0,30040,28);
-INSERT INTO merchant_buylists VALUES (1813,0,30040,29);
-INSERT INTO merchant_buylists VALUES (1814,0,30040,30);
-INSERT INTO merchant_buylists VALUES (1815,0,30040,31);
-INSERT INTO merchant_buylists VALUES (1816,0,30040,32);
-INSERT INTO merchant_buylists VALUES (1817,0,30040,33);
-INSERT INTO merchant_buylists VALUES (1818,0,30040,34);
-INSERT INTO merchant_buylists VALUES (1819,0,30040,35);
-INSERT INTO merchant_buylists VALUES (1820,0,30040,36);
-INSERT INTO merchant_buylists VALUES (1821,0,30040,37);
-INSERT INTO merchant_buylists VALUES (1822,0,30040,38);
-INSERT INTO merchant_buylists VALUES (1823,0,30040,39);
-INSERT INTO merchant_buylists VALUES (1824,0,30040,40);
-INSERT INTO merchant_buylists VALUES (1825,0,30040,41);
-INSERT INTO merchant_buylists VALUES (1826,0,30040,42);
-INSERT INTO merchant_buylists VALUES (1827,0,30040,43);
-INSERT INTO merchant_buylists VALUES (1828,0,30040,44);
-INSERT INTO merchant_buylists VALUES (2135,0,30040,45);
-INSERT INTO merchant_buylists VALUES (2136,0,30040,46);
-INSERT INTO merchant_buylists VALUES (2137,0,30040,47);
-INSERT INTO merchant_buylists VALUES (2138,0,30040,48);
-INSERT INTO merchant_buylists VALUES (2139,0,30040,49);
-INSERT INTO merchant_buylists VALUES (2140,0,30040,50);
-INSERT INTO merchant_buylists VALUES (2141,0,30041,1);
-INSERT INTO merchant_buylists VALUES (2142,0,30041,2);
-INSERT INTO merchant_buylists VALUES (2143,0,30041,3);
-INSERT INTO merchant_buylists VALUES (2144,0,30041,4);
-INSERT INTO merchant_buylists VALUES (2145,0,30041,5);
-INSERT INTO merchant_buylists VALUES (2146,0,30041,6);
-INSERT INTO merchant_buylists VALUES (2147,0,30041,7);
-INSERT INTO merchant_buylists VALUES (2148,0,30041,8);
-INSERT INTO merchant_buylists VALUES (2149,0,30041,9);
-INSERT INTO merchant_buylists VALUES (2150,0,30041,10);
-INSERT INTO merchant_buylists VALUES (2151,0,30041,11);
-INSERT INTO merchant_buylists VALUES (2152,0,30041,12);
-INSERT INTO merchant_buylists VALUES (2153,0,30041,13);
-INSERT INTO merchant_buylists VALUES (2154,0,30041,14);
-INSERT INTO merchant_buylists VALUES (2155,0,30041,15);
-INSERT INTO merchant_buylists VALUES (2156,0,30041,16);
-INSERT INTO merchant_buylists VALUES (2157,0,30041,17);
-INSERT INTO merchant_buylists VALUES (2158,0,30041,18);
-INSERT INTO merchant_buylists VALUES (2159,0,30041,19);
-INSERT INTO merchant_buylists VALUES (2160,0,30041,20);
-INSERT INTO merchant_buylists VALUES (2161,0,30041,21);
-INSERT INTO merchant_buylists VALUES (2162,0,30041,22);
-INSERT INTO merchant_buylists VALUES (2163,0,30041,23);
-INSERT INTO merchant_buylists VALUES (2164,0,30041,24);
-INSERT INTO merchant_buylists VALUES (2165,0,30041,25);
-INSERT INTO merchant_buylists VALUES (2166,0,30041,26);
-INSERT INTO merchant_buylists VALUES (2167,0,30041,27);
-INSERT INTO merchant_buylists VALUES (2168,0,30041,28);
-INSERT INTO merchant_buylists VALUES (2169,0,30041,29);
-INSERT INTO merchant_buylists VALUES (2170,0,30041,30);
-INSERT INTO merchant_buylists VALUES (2171,0,30041,31);
-INSERT INTO merchant_buylists VALUES (2172,0,30041,32);
-INSERT INTO merchant_buylists VALUES (2173,0,30041,33);
-INSERT INTO merchant_buylists VALUES (2174,0,30041,34);
-INSERT INTO merchant_buylists VALUES (2175,0,30041,35);
-INSERT INTO merchant_buylists VALUES (2176,0,30041,36);
-INSERT INTO merchant_buylists VALUES (2177,0,30041,37);
-INSERT INTO merchant_buylists VALUES (2178,0,30041,38);
-INSERT INTO merchant_buylists VALUES (2179,0,30041,39);
-INSERT INTO merchant_buylists VALUES (2180,0,30041,40);
-INSERT INTO merchant_buylists VALUES (2181,0,30041,41);
-INSERT INTO merchant_buylists VALUES (2182,0,30041,42);
-INSERT INTO merchant_buylists VALUES (2183,0,30041,43);
-INSERT INTO merchant_buylists VALUES (2184,0,30041,44);
-INSERT INTO merchant_buylists VALUES (2185,0,30041,45);
-INSERT INTO merchant_buylists VALUES (2186,0,30041,46);
-INSERT INTO merchant_buylists VALUES (2187,0,30041,47);
-INSERT INTO merchant_buylists VALUES (2188,0,30041,48);
-INSERT INTO merchant_buylists VALUES (2189,0,30041,49);
-INSERT INTO merchant_buylists VALUES (2190,0,30041,50);
-INSERT INTO merchant_buylists VALUES (2191,0,30042,1);
-INSERT INTO merchant_buylists VALUES (2192,0,30042,2);
-INSERT INTO merchant_buylists VALUES (2193,0,30042,3);
-INSERT INTO merchant_buylists VALUES (2194,0,30042,4);
-INSERT INTO merchant_buylists VALUES (2195,0,30042,5);
-INSERT INTO merchant_buylists VALUES (2196,0,30042,6);
-INSERT INTO merchant_buylists VALUES (2197,0,30042,7);
-INSERT INTO merchant_buylists VALUES (2198,0,30042,8);
-INSERT INTO merchant_buylists VALUES (2199,0,30042,9);
-INSERT INTO merchant_buylists VALUES (2200,0,30042,10);
-INSERT INTO merchant_buylists VALUES (2201,0,30042,11);
-INSERT INTO merchant_buylists VALUES (2202,0,30042,12);
-INSERT INTO merchant_buylists VALUES (2203,0,30042,13);
-INSERT INTO merchant_buylists VALUES (2204,0,30042,14);
-INSERT INTO merchant_buylists VALUES (2205,0,30042,15);
-INSERT INTO merchant_buylists VALUES (2206,0,30042,16);
-INSERT INTO merchant_buylists VALUES (2207,0,30042,17);
-INSERT INTO merchant_buylists VALUES (2208,0,30042,18);
-INSERT INTO merchant_buylists VALUES (2209,0,30042,19);
-INSERT INTO merchant_buylists VALUES (2210,0,30042,20);
-INSERT INTO merchant_buylists VALUES (2211,0,30042,21);
-INSERT INTO merchant_buylists VALUES (2212,0,30042,22);
-INSERT INTO merchant_buylists VALUES (2213,0,30042,23);
-INSERT INTO merchant_buylists VALUES (2214,0,30042,24);
-INSERT INTO merchant_buylists VALUES (2215,0,30042,25);
-INSERT INTO merchant_buylists VALUES (2216,0,30042,26);
-INSERT INTO merchant_buylists VALUES (2217,0,30042,27);
-INSERT INTO merchant_buylists VALUES (2218,0,30042,28);
-INSERT INTO merchant_buylists VALUES (2219,0,30042,29);
-INSERT INTO merchant_buylists VALUES (2220,0,30042,30);
-INSERT INTO merchant_buylists VALUES (2221,0,30042,31);
-INSERT INTO merchant_buylists VALUES (2222,0,30042,32);
-INSERT INTO merchant_buylists VALUES (2223,0,30042,33);
-INSERT INTO merchant_buylists VALUES (2224,0,30042,34);
-INSERT INTO merchant_buylists VALUES (2225,0,30042,35);
-INSERT INTO merchant_buylists VALUES (2226,0,30042,36);
-INSERT INTO merchant_buylists VALUES (2227,0,30042,37);
-INSERT INTO merchant_buylists VALUES (2228,0,30042,38);
-INSERT INTO merchant_buylists VALUES (2229,0,30042,39);
-INSERT INTO merchant_buylists VALUES (2230,0,30042,40);
-INSERT INTO merchant_buylists VALUES (2231,0,30042,41);
-INSERT INTO merchant_buylists VALUES (2232,0,30042,42);
-INSERT INTO merchant_buylists VALUES (2233,0,30042,43);
-INSERT INTO merchant_buylists VALUES (2234,0,30042,44);
-INSERT INTO merchant_buylists VALUES (2235,0,30042,45);
-INSERT INTO merchant_buylists VALUES (2236,0,30042,46);
-INSERT INTO merchant_buylists VALUES (2237,0,30042,47);
-INSERT INTO merchant_buylists VALUES (2238,0,30042,48);
-INSERT INTO merchant_buylists VALUES (2239,0,30042,49);
-INSERT INTO merchant_buylists VALUES (2240,0,30042,50);
-INSERT INTO merchant_buylists VALUES (2241,0,30043,1);
-INSERT INTO merchant_buylists VALUES (2242,0,30043,2);
-INSERT INTO merchant_buylists VALUES (2243,0,30043,3);
-INSERT INTO merchant_buylists VALUES (2244,0,30043,4);
-INSERT INTO merchant_buylists VALUES (2245,0,30043,5);
-INSERT INTO merchant_buylists VALUES (2246,0,30043,6);
-INSERT INTO merchant_buylists VALUES (2247,0,30043,7);
-INSERT INTO merchant_buylists VALUES (2248,0,30043,8);
-INSERT INTO merchant_buylists VALUES (2249,0,30043,9);
-INSERT INTO merchant_buylists VALUES (2250,0,30043,10);
-INSERT INTO merchant_buylists VALUES (2251,0,30043,11);
-INSERT INTO merchant_buylists VALUES (2252,0,30043,12);
-INSERT INTO merchant_buylists VALUES (2253,0,30043,13);
-INSERT INTO merchant_buylists VALUES (2254,0,30043,14);
-INSERT INTO merchant_buylists VALUES (2255,0,30043,15);
-INSERT INTO merchant_buylists VALUES (2256,0,30043,16);
-INSERT INTO merchant_buylists VALUES (2257,0,30043,17);
-INSERT INTO merchant_buylists VALUES (2258,0,30043,18);
-INSERT INTO merchant_buylists VALUES (2259,0,30043,19);
-INSERT INTO merchant_buylists VALUES (2260,0,30043,20);
-INSERT INTO merchant_buylists VALUES (2261,0,30043,21);
-INSERT INTO merchant_buylists VALUES (2262,0,30043,22);
-INSERT INTO merchant_buylists VALUES (2263,0,30043,23);
-INSERT INTO merchant_buylists VALUES (2264,0,30043,24);
-INSERT INTO merchant_buylists VALUES (2265,0,30043,25);
-INSERT INTO merchant_buylists VALUES (2266,0,30043,26);
-INSERT INTO merchant_buylists VALUES (2267,0,30043,27);
-INSERT INTO merchant_buylists VALUES (2268,0,30043,28);
-INSERT INTO merchant_buylists VALUES (2269,0,30043,29);
-INSERT INTO merchant_buylists VALUES (2270,0,30043,30);
-INSERT INTO merchant_buylists VALUES (2271,0,30043,31);
-INSERT INTO merchant_buylists VALUES (2272,0,30043,32);
-INSERT INTO merchant_buylists VALUES (2273,0,30043,33);
-INSERT INTO merchant_buylists VALUES (2274,0,30043,34);
-INSERT INTO merchant_buylists VALUES (2275,0,30043,35);
-INSERT INTO merchant_buylists VALUES (2276,0,30043,36);
-INSERT INTO merchant_buylists VALUES (2277,0,30043,37);
-INSERT INTO merchant_buylists VALUES (2278,0,30043,38);
-INSERT INTO merchant_buylists VALUES (2279,0,30043,39);
-INSERT INTO merchant_buylists VALUES (2280,0,30043,40);
-INSERT INTO merchant_buylists VALUES (2281,0,30043,41);
-INSERT INTO merchant_buylists VALUES (2282,0,30043,42);
-INSERT INTO merchant_buylists VALUES (2283,0,30043,43);
-INSERT INTO merchant_buylists VALUES (2284,0,30043,44);
-INSERT INTO merchant_buylists VALUES (2285,0,30043,45);
-INSERT INTO merchant_buylists VALUES (2286,0,30043,46);
-INSERT INTO merchant_buylists VALUES (2287,0,30043,47);
-INSERT INTO merchant_buylists VALUES (2288,0,30043,48);
-INSERT INTO merchant_buylists VALUES (2289,0,30043,49);
-INSERT INTO merchant_buylists VALUES (2290,0,30043,50);
-INSERT INTO merchant_buylists VALUES (2291,0,30044,1);
-INSERT INTO merchant_buylists VALUES (2292,0,30044,2);
-INSERT INTO merchant_buylists VALUES (2293,0,30044,3);
-INSERT INTO merchant_buylists VALUES (2294,0,30044,4);
-INSERT INTO merchant_buylists VALUES (2295,0,30044,5);
-INSERT INTO merchant_buylists VALUES (2296,0,30044,6);
-INSERT INTO merchant_buylists VALUES (2297,0,30044,7);
-INSERT INTO merchant_buylists VALUES (2298,0,30044,8);
-INSERT INTO merchant_buylists VALUES (2299,0,30044,9);
-INSERT INTO merchant_buylists VALUES (2300,0,30044,10);
-INSERT INTO merchant_buylists VALUES (2301,0,30044,11);
-INSERT INTO merchant_buylists VALUES (2302,0,30044,12);
-INSERT INTO merchant_buylists VALUES (2303,0,30044,13);
-INSERT INTO merchant_buylists VALUES (2304,0,30044,14);
-INSERT INTO merchant_buylists VALUES (2305,0,30044,15);
-INSERT INTO merchant_buylists VALUES (2306,0,30044,16);
-INSERT INTO merchant_buylists VALUES (2307,0,30044,17);
-INSERT INTO merchant_buylists VALUES (2308,0,30044,18);
-INSERT INTO merchant_buylists VALUES (2309,0,30044,19);
-INSERT INTO merchant_buylists VALUES (2310,0,30044,20);
-INSERT INTO merchant_buylists VALUES (2311,0,30044,21);
-INSERT INTO merchant_buylists VALUES (2312,0,30044,22);
-INSERT INTO merchant_buylists VALUES (2313,0,30044,23);
-INSERT INTO merchant_buylists VALUES (2314,0,30044,24);
-INSERT INTO merchant_buylists VALUES (2315,0,30044,25);
-INSERT INTO merchant_buylists VALUES (2316,0,30044,26);
-INSERT INTO merchant_buylists VALUES (2317,0,30044,27);
-INSERT INTO merchant_buylists VALUES (2318,0,30044,28);
-INSERT INTO merchant_buylists VALUES (2319,0,30044,29);
-INSERT INTO merchant_buylists VALUES (2320,0,30044,30);
-INSERT INTO merchant_buylists VALUES (2321,0,30044,31);
-INSERT INTO merchant_buylists VALUES (2322,0,30044,32);
-INSERT INTO merchant_buylists VALUES (2323,0,30044,33);
-INSERT INTO merchant_buylists VALUES (2324,0,30044,34);
-INSERT INTO merchant_buylists VALUES (2325,0,30044,35);
-INSERT INTO merchant_buylists VALUES (2326,0,30044,36);
-INSERT INTO merchant_buylists VALUES (2327,0,30044,37);
-INSERT INTO merchant_buylists VALUES (2328,0,30044,38);
-INSERT INTO merchant_buylists VALUES (2329,0,30044,39);
-INSERT INTO merchant_buylists VALUES (2330,0,30044,40);
-INSERT INTO merchant_buylists VALUES (2331,0,30044,41);
-INSERT INTO merchant_buylists VALUES (2332,0,30044,42);
-INSERT INTO merchant_buylists VALUES (2333,0,30044,43);
-INSERT INTO merchant_buylists VALUES (2334,0,30044,44);
-INSERT INTO merchant_buylists VALUES (2335,0,30044,45);
-INSERT INTO merchant_buylists VALUES (2336,0,30044,46);
-INSERT INTO merchant_buylists VALUES (2337,0,30044,47);
-INSERT INTO merchant_buylists VALUES (2338,0,30044,48);
-INSERT INTO merchant_buylists VALUES (2339,0,30044,49);
-INSERT INTO merchant_buylists VALUES (2340,0,30044,50);
-INSERT INTO merchant_buylists VALUES (2341,0,30045,1);
-INSERT INTO merchant_buylists VALUES (2342,0,30045,2);
-INSERT INTO merchant_buylists VALUES (2343,0,30045,3);
-INSERT INTO merchant_buylists VALUES (2344,0,30045,4);
-INSERT INTO merchant_buylists VALUES (2345,0,30045,5);
-INSERT INTO merchant_buylists VALUES (2346,0,30045,6);
-INSERT INTO merchant_buylists VALUES (2347,0,30045,7);
-INSERT INTO merchant_buylists VALUES (2348,0,30045,8);
-INSERT INTO merchant_buylists VALUES (2349,0,30045,9);
-INSERT INTO merchant_buylists VALUES (2350,0,30045,10);
-INSERT INTO merchant_buylists VALUES (2351,0,30045,11);
-INSERT INTO merchant_buylists VALUES (2352,0,30045,12);
-INSERT INTO merchant_buylists VALUES (2353,0,30045,13);
-INSERT INTO merchant_buylists VALUES (2354,0,30045,14);
-INSERT INTO merchant_buylists VALUES (2355,0,30045,15);
-INSERT INTO merchant_buylists VALUES (2356,0,30045,16);
-INSERT INTO merchant_buylists VALUES (2357,0,30045,17);
-INSERT INTO merchant_buylists VALUES (2358,0,30045,18);
-INSERT INTO merchant_buylists VALUES (2359,0,30045,19);
-INSERT INTO merchant_buylists VALUES (2360,0,30045,20);
-INSERT INTO merchant_buylists VALUES (2361,0,30045,21);
-INSERT INTO merchant_buylists VALUES (2362,0,30045,22);
-INSERT INTO merchant_buylists VALUES (2363,0,30045,23);
-INSERT INTO merchant_buylists VALUES (2364,0,30045,24);
-INSERT INTO merchant_buylists VALUES (2365,0,30045,25);
-INSERT INTO merchant_buylists VALUES (2366,0,30045,26);
-INSERT INTO merchant_buylists VALUES (2367,0,30045,27);
-INSERT INTO merchant_buylists VALUES (2970,0,30045,28);
-INSERT INTO merchant_buylists VALUES (2971,0,30045,29);
-INSERT INTO merchant_buylists VALUES (2972,0,30045,30);
-INSERT INTO merchant_buylists VALUES (2973,0,30045,31);
-INSERT INTO merchant_buylists VALUES (2974,0,30045,32);
-INSERT INTO merchant_buylists VALUES (2975,0,30045,33);
-INSERT INTO merchant_buylists VALUES (2976,0,30045,34);
-INSERT INTO merchant_buylists VALUES (2977,0,30045,35);
-INSERT INTO merchant_buylists VALUES (2978,0,30045,36);
-INSERT INTO merchant_buylists VALUES (2979,0,30045,37);
-INSERT INTO merchant_buylists VALUES (2980,0,30045,38);
-INSERT INTO merchant_buylists VALUES (2981,0,30045,39);
-INSERT INTO merchant_buylists VALUES (2982,0,30045,40);
-INSERT INTO merchant_buylists VALUES (2983,0,30045,41);
-INSERT INTO merchant_buylists VALUES (2984,0,30045,42);
-INSERT INTO merchant_buylists VALUES (2985,0,30045,43);
-INSERT INTO merchant_buylists VALUES (2986,0,30045,44);
-INSERT INTO merchant_buylists VALUES (2987,0,30045,45);
-INSERT INTO merchant_buylists VALUES (2988,0,30045,46);
-INSERT INTO merchant_buylists VALUES (2989,0,30045,47);
-INSERT INTO merchant_buylists VALUES (2990,0,30045,48);
-INSERT INTO merchant_buylists VALUES (2991,0,30045,49);
-INSERT INTO merchant_buylists VALUES (2992,0,30045,50);
-INSERT INTO merchant_buylists VALUES (2993,0,30046,1);
-INSERT INTO merchant_buylists VALUES (2994,0,30046,2);
-INSERT INTO merchant_buylists VALUES (2995,0,30046,3);
-INSERT INTO merchant_buylists VALUES (2996,0,30046,4);
-INSERT INTO merchant_buylists VALUES (2997,0,30046,5);
-INSERT INTO merchant_buylists VALUES (2998,0,30046,6);
-INSERT INTO merchant_buylists VALUES (2999,0,30046,7);
-INSERT INTO merchant_buylists VALUES (3000,0,30046,8);
-INSERT INTO merchant_buylists VALUES (3001,0,30046,9);
-INSERT INTO merchant_buylists VALUES (3002,0,30046,10);
-INSERT INTO merchant_buylists VALUES (3003,0,30046,11);
-INSERT INTO merchant_buylists VALUES (3004,0,30046,12);
-INSERT INTO merchant_buylists VALUES (3005,0,30046,13);
-INSERT INTO merchant_buylists VALUES (3006,0,30046,14);
-INSERT INTO merchant_buylists VALUES (3007,0,30046,15);
-INSERT INTO merchant_buylists VALUES (3008,0,30046,16);
-INSERT INTO merchant_buylists VALUES (3009,0,30046,17);
-INSERT INTO merchant_buylists VALUES (3010,0,30046,18);
-INSERT INTO merchant_buylists VALUES (3011,0,30046,19);
-INSERT INTO merchant_buylists VALUES (3012,0,30046,20);
-INSERT INTO merchant_buylists VALUES (3013,0,30046,21);
-INSERT INTO merchant_buylists VALUES (3014,0,30046,22);
-INSERT INTO merchant_buylists VALUES (3015,0,30046,23);
-INSERT INTO merchant_buylists VALUES (3016,0,30046,24);
-INSERT INTO merchant_buylists VALUES (3017,0,30046,25);
-INSERT INTO merchant_buylists VALUES (3018,0,30046,26);
-INSERT INTO merchant_buylists VALUES (3019,0,30046,27);
-INSERT INTO merchant_buylists VALUES (3020,0,30046,28);
-INSERT INTO merchant_buylists VALUES (3021,0,30046,29);
-INSERT INTO merchant_buylists VALUES (3022,0,30046,30);
-INSERT INTO merchant_buylists VALUES (3023,0,30046,31);
-INSERT INTO merchant_buylists VALUES (3024,0,30046,32);
-INSERT INTO merchant_buylists VALUES (3025,0,30046,33);
-INSERT INTO merchant_buylists VALUES (3032,0,30046,34);
-INSERT INTO merchant_buylists VALUES (3033,0,30046,35);
-INSERT INTO merchant_buylists VALUES (3034,0,30046,36);
-INSERT INTO merchant_buylists VALUES (3035,0,30046,37);
-INSERT INTO merchant_buylists VALUES (3036,0,30046,38);
-INSERT INTO merchant_buylists VALUES (3838,0,30046,39);
-INSERT INTO merchant_buylists VALUES (3953,0,30046,40);
-INSERT INTO merchant_buylists VALUES (3954,0,30046,41);
-INSERT INTO merchant_buylists VALUES (3955,0,30046,42);
-INSERT INTO merchant_buylists VALUES (3956,0,30046,43);
-INSERT INTO merchant_buylists VALUES (3957,0,30046,44);
-INSERT INTO merchant_buylists VALUES (4122,0,30046,45);
-INSERT INTO merchant_buylists VALUES (4123,0,30046,46);
-INSERT INTO merchant_buylists VALUES (4124,0,30046,47);
-INSERT INTO merchant_buylists VALUES (4125,0,30046,48);
-INSERT INTO merchant_buylists VALUES (4126,0,30046,49);
-INSERT INTO merchant_buylists VALUES (4127,0,30046,50);
-INSERT INTO merchant_buylists VALUES (4128,0,30047,1);
-INSERT INTO merchant_buylists VALUES (4129,0,30047,2);
-INSERT INTO merchant_buylists VALUES (4130,0,30047,3);
-INSERT INTO merchant_buylists VALUES (4131,0,30047,4);
-INSERT INTO merchant_buylists VALUES (4132,0,30047,5);
-INSERT INTO merchant_buylists VALUES (4133,0,30047,6);
-INSERT INTO merchant_buylists VALUES (4134,0,30047,7);
-INSERT INTO merchant_buylists VALUES (4135,0,30047,8);
-INSERT INTO merchant_buylists VALUES (4136,0,30047,9);
-INSERT INTO merchant_buylists VALUES (4137,0,30047,10);
-INSERT INTO merchant_buylists VALUES (4138,0,30047,11);
-INSERT INTO merchant_buylists VALUES (4139,0,30047,12);
-INSERT INTO merchant_buylists VALUES (4140,0,30047,13);
-INSERT INTO merchant_buylists VALUES (4141,0,30047,14);
-INSERT INTO merchant_buylists VALUES (4142,0,30047,15);
-INSERT INTO merchant_buylists VALUES (4143,0,30047,16);
-INSERT INTO merchant_buylists VALUES (4144,0,30047,17);
-INSERT INTO merchant_buylists VALUES (4145,0,30047,18);
-INSERT INTO merchant_buylists VALUES (4146,0,30047,19);
-INSERT INTO merchant_buylists VALUES (4147,0,30047,20);
-INSERT INTO merchant_buylists VALUES (4148,0,30047,21);
-INSERT INTO merchant_buylists VALUES (4149,0,30047,22);
-INSERT INTO merchant_buylists VALUES (4150,0,30047,23);
-INSERT INTO merchant_buylists VALUES (4151,0,30047,24);
-INSERT INTO merchant_buylists VALUES (4152,0,30047,25);
-INSERT INTO merchant_buylists VALUES (4153,0,30047,26);
-INSERT INTO merchant_buylists VALUES (4154,0,30047,27);
-INSERT INTO merchant_buylists VALUES (4155,0,30047,28);
-INSERT INTO merchant_buylists VALUES (4156,0,30047,29);
-INSERT INTO merchant_buylists VALUES (4157,0,30047,30);
-INSERT INTO merchant_buylists VALUES (4158,0,30047,31);
-INSERT INTO merchant_buylists VALUES (4159,0,30047,32);
-INSERT INTO merchant_buylists VALUES (4160,0,30047,33);
-INSERT INTO merchant_buylists VALUES (4161,0,30047,34);
-INSERT INTO merchant_buylists VALUES (4162,0,30047,35);
-INSERT INTO merchant_buylists VALUES (4163,0,30047,36);
-INSERT INTO merchant_buylists VALUES (4164,0,30047,37);
-INSERT INTO merchant_buylists VALUES (4165,0,30047,38);
-INSERT INTO merchant_buylists VALUES (4166,0,30047,39);
-INSERT INTO merchant_buylists VALUES (4167,0,30047,40);
-INSERT INTO merchant_buylists VALUES (4168,0,30047,41);
-INSERT INTO merchant_buylists VALUES (4169,0,30047,42);
-INSERT INTO merchant_buylists VALUES (4170,0,30047,43);
-INSERT INTO merchant_buylists VALUES (4171,0,30047,44);
-INSERT INTO merchant_buylists VALUES (4172,0,30047,45);
-INSERT INTO merchant_buylists VALUES (4173,0,30047,46);
-INSERT INTO merchant_buylists VALUES (4174,0,30047,47);
-INSERT INTO merchant_buylists VALUES (4175,0,30047,48);
-INSERT INTO merchant_buylists VALUES (4176,0,30047,49);
-INSERT INTO merchant_buylists VALUES (4177,0,30047,50);
-INSERT INTO merchant_buylists VALUES (4178,0,30048,1);
-INSERT INTO merchant_buylists VALUES (4179,0,30048,2);
-INSERT INTO merchant_buylists VALUES (4180,0,30048,3);
-INSERT INTO merchant_buylists VALUES (4181,0,30048,4);
-INSERT INTO merchant_buylists VALUES (4182,0,30048,5);
-INSERT INTO merchant_buylists VALUES (4183,0,30048,6);
-INSERT INTO merchant_buylists VALUES (4184,0,30048,7);
-INSERT INTO merchant_buylists VALUES (4185,0,30048,8);
-INSERT INTO merchant_buylists VALUES (4186,0,30048,9);
-INSERT INTO merchant_buylists VALUES (4187,0,30048,10);
-INSERT INTO merchant_buylists VALUES (4188,0,30048,11);
-INSERT INTO merchant_buylists VALUES (4189,0,30048,12);
-INSERT INTO merchant_buylists VALUES (4190,0,30048,13);
-INSERT INTO merchant_buylists VALUES (4191,0,30048,14);
-INSERT INTO merchant_buylists VALUES (4192,0,30048,15);
-INSERT INTO merchant_buylists VALUES (4193,0,30048,16);
-INSERT INTO merchant_buylists VALUES (4194,0,30048,17);
-INSERT INTO merchant_buylists VALUES (4195,0,30048,18);
-INSERT INTO merchant_buylists VALUES (4196,0,30048,19);
-INSERT INTO merchant_buylists VALUES (4197,0,30048,20);
-INSERT INTO merchant_buylists VALUES (4198,0,30048,21);
-INSERT INTO merchant_buylists VALUES (4199,0,30048,22);
-INSERT INTO merchant_buylists VALUES (4440,0,30048,23);
-INSERT INTO merchant_buylists VALUES (4441,0,30048,24);
-INSERT INTO merchant_buylists VALUES (4936,0,30048,25);
-INSERT INTO merchant_buylists VALUES (4937,0,30048,26);
-INSERT INTO merchant_buylists VALUES (4938,0,30048,27);
-INSERT INTO merchant_buylists VALUES (4939,0,30048,28);
-INSERT INTO merchant_buylists VALUES (4940,0,30048,29);
-INSERT INTO merchant_buylists VALUES (4941,0,30048,30);
-INSERT INTO merchant_buylists VALUES (4942,0,30048,31);
-INSERT INTO merchant_buylists VALUES (4943,0,30048,32);
-INSERT INTO merchant_buylists VALUES (4944,0,30048,33);
-INSERT INTO merchant_buylists VALUES (4945,0,30048,34);
-INSERT INTO merchant_buylists VALUES (4946,0,30048,35);
-INSERT INTO merchant_buylists VALUES (4947,0,30048,36);
-INSERT INTO merchant_buylists VALUES (4948,0,30048,37);
-INSERT INTO merchant_buylists VALUES (4949,0,30048,38);
-INSERT INTO merchant_buylists VALUES (4950,0,30048,39);
-INSERT INTO merchant_buylists VALUES (4951,0,30048,40);
-INSERT INTO merchant_buylists VALUES (4952,0,30048,41);
-INSERT INTO merchant_buylists VALUES (4953,0,30048,42);
-INSERT INTO merchant_buylists VALUES (4954,0,30048,43);
-INSERT INTO merchant_buylists VALUES (4955,0,30048,44);
-INSERT INTO merchant_buylists VALUES (4956,0,30048,45);
-INSERT INTO merchant_buylists VALUES (4957,0,30048,46);
-INSERT INTO merchant_buylists VALUES (4958,0,30048,47);
-INSERT INTO merchant_buylists VALUES (4959,0,30048,48);
-INSERT INTO merchant_buylists VALUES (4960,0,30048,49);
-INSERT INTO merchant_buylists VALUES (4961,0,30048,50);
-INSERT INTO merchant_buylists VALUES (4962,0,30049,1);
-INSERT INTO merchant_buylists VALUES (4963,0,30049,2);
-INSERT INTO merchant_buylists VALUES (4964,0,30049,3);
-INSERT INTO merchant_buylists VALUES (4965,0,30049,4);
-INSERT INTO merchant_buylists VALUES (4966,0,30049,5);
-INSERT INTO merchant_buylists VALUES (4967,0,30049,6);
-INSERT INTO merchant_buylists VALUES (4968,0,30049,7);
-INSERT INTO merchant_buylists VALUES (4969,0,30049,8);
-INSERT INTO merchant_buylists VALUES (4970,0,30049,9);
-INSERT INTO merchant_buylists VALUES (4971,0,30049,10);
-INSERT INTO merchant_buylists VALUES (4972,0,30049,11);
-INSERT INTO merchant_buylists VALUES (4973,0,30049,12);
-INSERT INTO merchant_buylists VALUES (4974,0,30049,13);
-INSERT INTO merchant_buylists VALUES (4975,0,30049,14);
-INSERT INTO merchant_buylists VALUES (4976,0,30049,15);
-INSERT INTO merchant_buylists VALUES (4977,0,30049,16);
-INSERT INTO merchant_buylists VALUES (4978,0,30049,17);
-INSERT INTO merchant_buylists VALUES (4979,0,30049,18);
-INSERT INTO merchant_buylists VALUES (4980,0,30049,19);
-INSERT INTO merchant_buylists VALUES (4981,0,30049,20);
-INSERT INTO merchant_buylists VALUES (4982,0,30049,21);
-INSERT INTO merchant_buylists VALUES (4983,0,30049,22);
-INSERT INTO merchant_buylists VALUES (4984,0,30049,23);
-INSERT INTO merchant_buylists VALUES (4985,0,30049,24);
-INSERT INTO merchant_buylists VALUES (4986,0,30049,25);
-INSERT INTO merchant_buylists VALUES (4987,0,30049,26);
-INSERT INTO merchant_buylists VALUES (4988,0,30049,27);
-INSERT INTO merchant_buylists VALUES (4989,0,30049,28);
-INSERT INTO merchant_buylists VALUES (4990,0,30049,29);
-INSERT INTO merchant_buylists VALUES (4991,0,30049,30);
-INSERT INTO merchant_buylists VALUES (4992,0,30049,31);
-INSERT INTO merchant_buylists VALUES (4993,0,30049,32);
-INSERT INTO merchant_buylists VALUES (4994,0,30049,33);
-INSERT INTO merchant_buylists VALUES (4995,0,30049,34);
-INSERT INTO merchant_buylists VALUES (4996,0,30049,35);
-INSERT INTO merchant_buylists VALUES (4997,0,30049,36);
-INSERT INTO merchant_buylists VALUES (4998,0,30049,37);
-INSERT INTO merchant_buylists VALUES (4999,0,30049,38);
-INSERT INTO merchant_buylists VALUES (5000,0,30049,39);
-INSERT INTO merchant_buylists VALUES (5001,0,30049,40);
-INSERT INTO merchant_buylists VALUES (5002,0,30049,41);
-INSERT INTO merchant_buylists VALUES (5003,0,30049,42);
-INSERT INTO merchant_buylists VALUES (5004,0,30049,43);
-INSERT INTO merchant_buylists VALUES (5005,0,30049,44);
-INSERT INTO merchant_buylists VALUES (5006,0,30049,45);
-INSERT INTO merchant_buylists VALUES (5007,0,30049,46);
-INSERT INTO merchant_buylists VALUES (5008,0,30049,47);
-INSERT INTO merchant_buylists VALUES (5153,0,30049,48);
-INSERT INTO merchant_buylists VALUES (5154,0,30049,49);
-INSERT INTO merchant_buylists VALUES (5155,0,30049,50);
-INSERT INTO merchant_buylists VALUES (5156,0,300410,1);
-INSERT INTO merchant_buylists VALUES (5157,0,300410,2);
-INSERT INTO merchant_buylists VALUES (5158,0,300410,3);
-INSERT INTO merchant_buylists VALUES (5159,0,300410,4);
-INSERT INTO merchant_buylists VALUES (5160,0,300410,5);
-INSERT INTO merchant_buylists VALUES (5161,0,300410,6);
-INSERT INTO merchant_buylists VALUES (5162,0,300410,7);
-INSERT INTO merchant_buylists VALUES (5163,0,300410,8);
-INSERT INTO merchant_buylists VALUES (5164,0,300410,9);
-INSERT INTO merchant_buylists VALUES (5165,0,300410,10);
-INSERT INTO merchant_buylists VALUES (5166,0,300410,11);
-INSERT INTO merchant_buylists VALUES (5167,0,300410,12);
-INSERT INTO merchant_buylists VALUES (5230,0,300410,13);
-INSERT INTO merchant_buylists VALUES (5231,0,300410,14);
-INSERT INTO merchant_buylists VALUES (5268,0,300410,15);
-INSERT INTO merchant_buylists VALUES (5269,0,300410,16);
-INSERT INTO merchant_buylists VALUES (5270,0,300410,17);
-INSERT INTO merchant_buylists VALUES (5271,0,300410,18);
-INSERT INTO merchant_buylists VALUES (5272,0,300410,19);
-INSERT INTO merchant_buylists VALUES (5273,0,300410,20);
-INSERT INTO merchant_buylists VALUES (5274,0,300410,21);
-INSERT INTO merchant_buylists VALUES (5275,0,300410,22);
-INSERT INTO merchant_buylists VALUES (5276,0,300410,23);
-INSERT INTO merchant_buylists VALUES (5277,0,300410,24);
-INSERT INTO merchant_buylists VALUES (5278,0,300410,25);
-INSERT INTO merchant_buylists VALUES (5279,0,300410,26);
-INSERT INTO merchant_buylists VALUES (5280,0,300410,27);
-INSERT INTO merchant_buylists VALUES (5281,0,300410,28);
-INSERT INTO merchant_buylists VALUES (5282,0,300410,29);
-INSERT INTO merchant_buylists VALUES (1674,0,30050,1);
-INSERT INTO merchant_buylists VALUES (1675,0,30050,2);
-INSERT INTO merchant_buylists VALUES (1676,0,30050,3);
-INSERT INTO merchant_buylists VALUES (1677,0,30050,4);
-INSERT INTO merchant_buylists VALUES (1678,0,30050,5);
-INSERT INTO merchant_buylists VALUES (1679,0,30050,6);
-INSERT INTO merchant_buylists VALUES (1680,0,30050,7);
-INSERT INTO merchant_buylists VALUES (1681,0,30050,8);
-INSERT INTO merchant_buylists VALUES (1682,0,30050,9);
-INSERT INTO merchant_buylists VALUES (1683,0,30050,10);
-INSERT INTO merchant_buylists VALUES (1684,0,30050,11);
-INSERT INTO merchant_buylists VALUES (1685,0,30050,12);
-INSERT INTO merchant_buylists VALUES (1686,0,30050,13);
-INSERT INTO merchant_buylists VALUES (1687,0,30050,14);
-INSERT INTO merchant_buylists VALUES (1688,0,30050,15);
-INSERT INTO merchant_buylists VALUES (1689,0,30050,16);
-INSERT INTO merchant_buylists VALUES (1690,0,30050,17);
-INSERT INTO merchant_buylists VALUES (1691,0,30050,18);
-INSERT INTO merchant_buylists VALUES (1692,0,30050,19);
-INSERT INTO merchant_buylists VALUES (1693,0,30050,20);
-INSERT INTO merchant_buylists VALUES (1694,0,30050,21);
-INSERT INTO merchant_buylists VALUES (1695,0,30050,22);
-INSERT INTO merchant_buylists VALUES (1696,0,30050,23);
-INSERT INTO merchant_buylists VALUES (1697,0,30050,24);
-INSERT INTO merchant_buylists VALUES (1698,0,30050,25);
-INSERT INTO merchant_buylists VALUES (1699,0,30050,26);
-INSERT INTO merchant_buylists VALUES (1700,0,30050,27);
-INSERT INTO merchant_buylists VALUES (1701,0,30050,28);
-INSERT INTO merchant_buylists VALUES (1702,0,30050,29);
-INSERT INTO merchant_buylists VALUES (1703,0,30050,30);
-INSERT INTO merchant_buylists VALUES (1704,0,30050,31);
-INSERT INTO merchant_buylists VALUES (1705,0,30050,32);
-INSERT INTO merchant_buylists VALUES (1706,0,30050,33);
-INSERT INTO merchant_buylists VALUES (1707,0,30050,34);
-INSERT INTO merchant_buylists VALUES (1708,0,30050,35);
-INSERT INTO merchant_buylists VALUES (1709,0,30050,36);
-INSERT INTO merchant_buylists VALUES (1710,0,30050,37);
-INSERT INTO merchant_buylists VALUES (1711,0,30050,38);
-INSERT INTO merchant_buylists VALUES (1712,0,30050,39);
-INSERT INTO merchant_buylists VALUES (1713,0,30050,40);
-INSERT INTO merchant_buylists VALUES (1714,0,30050,41);
-INSERT INTO merchant_buylists VALUES (1715,0,30050,42);
-INSERT INTO merchant_buylists VALUES (1716,0,30050,43);
-INSERT INTO merchant_buylists VALUES (1717,0,30050,44);
-INSERT INTO merchant_buylists VALUES (1718,0,30050,45);
-INSERT INTO merchant_buylists VALUES (1719,0,30050,46);
-INSERT INTO merchant_buylists VALUES (1720,0,30050,47);
-INSERT INTO merchant_buylists VALUES (1721,0,30050,48);
-INSERT INTO merchant_buylists VALUES (1722,0,30050,49);
-INSERT INTO merchant_buylists VALUES (1723,0,30050,50);
-INSERT INTO merchant_buylists VALUES (1724,0,30051,1);
-INSERT INTO merchant_buylists VALUES (1725,0,30051,2);
-INSERT INTO merchant_buylists VALUES (1726,0,30051,3);
-INSERT INTO merchant_buylists VALUES (1727,0,30051,4);
-INSERT INTO merchant_buylists VALUES (1728,0,30051,5);
-INSERT INTO merchant_buylists VALUES (1729,0,30051,6);
-INSERT INTO merchant_buylists VALUES (1730,0,30051,7);
-INSERT INTO merchant_buylists VALUES (1731,0,30051,8);
-INSERT INTO merchant_buylists VALUES (1732,0,30051,9);
-INSERT INTO merchant_buylists VALUES (1733,0,30051,10);
-INSERT INTO merchant_buylists VALUES (1734,0,30051,11);
-INSERT INTO merchant_buylists VALUES (1735,0,30051,12);
-INSERT INTO merchant_buylists VALUES (1736,0,30051,13);
-INSERT INTO merchant_buylists VALUES (1737,0,30051,14);
-INSERT INTO merchant_buylists VALUES (1738,0,30051,15);
-INSERT INTO merchant_buylists VALUES (1739,0,30051,16);
-INSERT INTO merchant_buylists VALUES (1740,0,30051,17);
-INSERT INTO merchant_buylists VALUES (1741,0,30051,18);
-INSERT INTO merchant_buylists VALUES (1742,0,30051,19);
-INSERT INTO merchant_buylists VALUES (1743,0,30051,20);
-INSERT INTO merchant_buylists VALUES (1744,0,30051,21);
-INSERT INTO merchant_buylists VALUES (1745,0,30051,22);
-INSERT INTO merchant_buylists VALUES (1746,0,30051,23);
-INSERT INTO merchant_buylists VALUES (1747,0,30051,24);
-INSERT INTO merchant_buylists VALUES (1748,0,30051,25);
-INSERT INTO merchant_buylists VALUES (1749,0,30051,26);
-INSERT INTO merchant_buylists VALUES (1750,0,30051,27);
-INSERT INTO merchant_buylists VALUES (1751,0,30051,28);
-INSERT INTO merchant_buylists VALUES (1752,0,30051,29);
-INSERT INTO merchant_buylists VALUES (1753,0,30051,30);
-INSERT INTO merchant_buylists VALUES (1754,0,30051,31);
-INSERT INTO merchant_buylists VALUES (1755,0,30051,32);
-INSERT INTO merchant_buylists VALUES (1756,0,30051,33);
-INSERT INTO merchant_buylists VALUES (1757,0,30051,34);
-INSERT INTO merchant_buylists VALUES (1758,0,30051,35);
-INSERT INTO merchant_buylists VALUES (1759,0,30051,36);
-INSERT INTO merchant_buylists VALUES (1760,0,30051,37);
-INSERT INTO merchant_buylists VALUES (1761,0,30051,38);
-INSERT INTO merchant_buylists VALUES (1762,0,30051,39);
-INSERT INTO merchant_buylists VALUES (1763,0,30051,40);
-INSERT INTO merchant_buylists VALUES (1764,0,30051,41);
-INSERT INTO merchant_buylists VALUES (1765,0,30051,42);
-INSERT INTO merchant_buylists VALUES (1766,0,30051,43);
-INSERT INTO merchant_buylists VALUES (1767,0,30051,44);
-INSERT INTO merchant_buylists VALUES (1768,0,30051,45);
-INSERT INTO merchant_buylists VALUES (1769,0,30051,46);
-INSERT INTO merchant_buylists VALUES (1770,0,30051,47);
-INSERT INTO merchant_buylists VALUES (1771,0,30051,48);
-INSERT INTO merchant_buylists VALUES (1772,0,30051,49);
-INSERT INTO merchant_buylists VALUES (1773,0,30051,50);
-INSERT INTO merchant_buylists VALUES (1774,0,30052,1);
-INSERT INTO merchant_buylists VALUES (1775,0,30052,2);
-INSERT INTO merchant_buylists VALUES (1776,0,30052,3);
-INSERT INTO merchant_buylists VALUES (1777,0,30052,4);
-INSERT INTO merchant_buylists VALUES (1778,0,30052,5);
-INSERT INTO merchant_buylists VALUES (1779,0,30052,6);
-INSERT INTO merchant_buylists VALUES (1780,0,30052,7);
-INSERT INTO merchant_buylists VALUES (1781,0,30052,8);
-INSERT INTO merchant_buylists VALUES (1782,0,30052,9);
-INSERT INTO merchant_buylists VALUES (1783,0,30052,10);
-INSERT INTO merchant_buylists VALUES (1784,0,30052,11);
-INSERT INTO merchant_buylists VALUES (1785,0,30052,12);
-INSERT INTO merchant_buylists VALUES (1864,0,30052,13);
-INSERT INTO merchant_buylists VALUES (1865,0,30052,14);
-INSERT INTO merchant_buylists VALUES (1866,0,30052,15);
-INSERT INTO merchant_buylists VALUES (1867,0,30052,16);
-INSERT INTO merchant_buylists VALUES (1868,0,30052,17);
-INSERT INTO merchant_buylists VALUES (1869,0,30052,18);
-INSERT INTO merchant_buylists VALUES (1870,0,30052,19);
-INSERT INTO merchant_buylists VALUES (1871,0,30052,20);
-INSERT INTO merchant_buylists VALUES (1872,0,30052,21);
-INSERT INTO merchant_buylists VALUES (1873,0,30052,22);
-INSERT INTO merchant_buylists VALUES (1874,0,30052,23);
-INSERT INTO merchant_buylists VALUES (1875,0,30052,24);
-INSERT INTO merchant_buylists VALUES (1876,0,30052,25);
-INSERT INTO merchant_buylists VALUES (1877,0,30052,26);
-INSERT INTO merchant_buylists VALUES (1878,0,30052,27);
-INSERT INTO merchant_buylists VALUES (1879,0,30052,28);
-INSERT INTO merchant_buylists VALUES (1880,0,30052,29);
-INSERT INTO merchant_buylists VALUES (1881,0,30052,30);
-INSERT INTO merchant_buylists VALUES (1882,0,30052,31);
-INSERT INTO merchant_buylists VALUES (1883,0,30052,32);
-INSERT INTO merchant_buylists VALUES (1884,0,30052,33);
-INSERT INTO merchant_buylists VALUES (1885,0,30052,34);
-INSERT INTO merchant_buylists VALUES (1886,0,30052,35);
-INSERT INTO merchant_buylists VALUES (1887,0,30052,36);
-INSERT INTO merchant_buylists VALUES (1888,0,30052,37);
-INSERT INTO merchant_buylists VALUES (1889,0,30052,38);
-INSERT INTO merchant_buylists VALUES (1890,0,30052,39);
-INSERT INTO merchant_buylists VALUES (1891,0,30052,40);
-INSERT INTO merchant_buylists VALUES (1892,0,30052,41);
-INSERT INTO merchant_buylists VALUES (1893,0,30052,42);
-INSERT INTO merchant_buylists VALUES (1894,0,30052,43);
-INSERT INTO merchant_buylists VALUES (1895,0,30052,44);
-INSERT INTO merchant_buylists VALUES (1896,0,30052,45);
-INSERT INTO merchant_buylists VALUES (1897,0,30052,46);
-INSERT INTO merchant_buylists VALUES (1898,0,30052,47);
-INSERT INTO merchant_buylists VALUES (1899,0,30052,48);
-INSERT INTO merchant_buylists VALUES (1900,0,30052,49);
-INSERT INTO merchant_buylists VALUES (1901,0,30052,50);
-INSERT INTO merchant_buylists VALUES (1902,0,30053,1);
-INSERT INTO merchant_buylists VALUES (1903,0,30053,2);
-INSERT INTO merchant_buylists VALUES (1904,0,30053,3);
-INSERT INTO merchant_buylists VALUES (1905,0,30053,4);
-INSERT INTO merchant_buylists VALUES (1906,0,30053,5);
-INSERT INTO merchant_buylists VALUES (1907,0,30053,6);
-INSERT INTO merchant_buylists VALUES (1908,0,30053,7);
-INSERT INTO merchant_buylists VALUES (1909,0,30053,8);
-INSERT INTO merchant_buylists VALUES (1910,0,30053,9);
-INSERT INTO merchant_buylists VALUES (1911,0,30053,10);
-INSERT INTO merchant_buylists VALUES (1912,0,30053,11);
-INSERT INTO merchant_buylists VALUES (1913,0,30053,12);
-INSERT INTO merchant_buylists VALUES (1914,0,30053,13);
-INSERT INTO merchant_buylists VALUES (1915,0,30053,14);
-INSERT INTO merchant_buylists VALUES (1916,0,30053,15);
-INSERT INTO merchant_buylists VALUES (1917,0,30053,16);
-INSERT INTO merchant_buylists VALUES (1918,0,30053,17);
-INSERT INTO merchant_buylists VALUES (1919,0,30053,18);
-INSERT INTO merchant_buylists VALUES (1920,0,30053,19);
-INSERT INTO merchant_buylists VALUES (1921,0,30053,20);
-INSERT INTO merchant_buylists VALUES (1922,0,30053,21);
-INSERT INTO merchant_buylists VALUES (1923,0,30053,22);
-INSERT INTO merchant_buylists VALUES (1924,0,30053,23);
-INSERT INTO merchant_buylists VALUES (1925,0,30053,24);
-INSERT INTO merchant_buylists VALUES (1926,0,30053,25);
-INSERT INTO merchant_buylists VALUES (1927,0,30053,26);
-INSERT INTO merchant_buylists VALUES (1928,0,30053,27);
-INSERT INTO merchant_buylists VALUES (1929,0,30053,28);
-INSERT INTO merchant_buylists VALUES (1930,0,30053,29);
-INSERT INTO merchant_buylists VALUES (1931,0,30053,30);
-INSERT INTO merchant_buylists VALUES (1932,0,30053,31);
-INSERT INTO merchant_buylists VALUES (1933,0,30053,32);
-INSERT INTO merchant_buylists VALUES (1934,0,30053,33);
-INSERT INTO merchant_buylists VALUES (1935,0,30053,34);
-INSERT INTO merchant_buylists VALUES (1936,0,30053,35);
-INSERT INTO merchant_buylists VALUES (1937,0,30053,36);
-INSERT INTO merchant_buylists VALUES (1938,0,30053,37);
-INSERT INTO merchant_buylists VALUES (1939,0,30053,38);
-INSERT INTO merchant_buylists VALUES (1940,0,30053,39);
-INSERT INTO merchant_buylists VALUES (1941,0,30053,40);
-INSERT INTO merchant_buylists VALUES (1942,0,30053,41);
-INSERT INTO merchant_buylists VALUES (1943,0,30053,42);
-INSERT INTO merchant_buylists VALUES (1944,0,30053,43);
-INSERT INTO merchant_buylists VALUES (1945,0,30053,44);
-INSERT INTO merchant_buylists VALUES (1946,0,30053,45);
-INSERT INTO merchant_buylists VALUES (1947,0,30053,46);
-INSERT INTO merchant_buylists VALUES (1948,0,30053,47);
-INSERT INTO merchant_buylists VALUES (1949,0,30053,48);
-INSERT INTO merchant_buylists VALUES (1950,0,30053,49);
-INSERT INTO merchant_buylists VALUES (1951,0,30053,50);
-INSERT INTO merchant_buylists VALUES (1952,0,30054,1);
-INSERT INTO merchant_buylists VALUES (1953,0,30054,2);
-INSERT INTO merchant_buylists VALUES (1954,0,30054,3);
-INSERT INTO merchant_buylists VALUES (1955,0,30054,4);
-INSERT INTO merchant_buylists VALUES (1956,0,30054,5);
-INSERT INTO merchant_buylists VALUES (1957,0,30054,6);
-INSERT INTO merchant_buylists VALUES (1958,0,30054,7);
-INSERT INTO merchant_buylists VALUES (1959,0,30054,8);
-INSERT INTO merchant_buylists VALUES (1960,0,30054,9);
-INSERT INTO merchant_buylists VALUES (1961,0,30054,10);
-INSERT INTO merchant_buylists VALUES (1962,0,30054,11);
-INSERT INTO merchant_buylists VALUES (1963,0,30054,12);
-INSERT INTO merchant_buylists VALUES (1964,0,30054,13);
-INSERT INTO merchant_buylists VALUES (1965,0,30054,14);
-INSERT INTO merchant_buylists VALUES (1966,0,30054,15);
-INSERT INTO merchant_buylists VALUES (1967,0,30054,16);
-INSERT INTO merchant_buylists VALUES (1968,0,30054,17);
-INSERT INTO merchant_buylists VALUES (1969,0,30054,18);
-INSERT INTO merchant_buylists VALUES (1970,0,30054,19);
-INSERT INTO merchant_buylists VALUES (1971,0,30054,20);
-INSERT INTO merchant_buylists VALUES (1972,0,30054,21);
-INSERT INTO merchant_buylists VALUES (1973,0,30054,22);
-INSERT INTO merchant_buylists VALUES (1974,0,30054,23);
-INSERT INTO merchant_buylists VALUES (1975,0,30054,24);
-INSERT INTO merchant_buylists VALUES (1976,0,30054,25);
-INSERT INTO merchant_buylists VALUES (1977,0,30054,26);
-INSERT INTO merchant_buylists VALUES (1978,0,30054,27);
-INSERT INTO merchant_buylists VALUES (1979,0,30054,28);
-INSERT INTO merchant_buylists VALUES (1980,0,30054,29);
-INSERT INTO merchant_buylists VALUES (1981,0,30054,30);
-INSERT INTO merchant_buylists VALUES (1982,0,30054,31);
-INSERT INTO merchant_buylists VALUES (1983,0,30054,32);
-INSERT INTO merchant_buylists VALUES (1984,0,30054,33);
-INSERT INTO merchant_buylists VALUES (1985,0,30054,34);
-INSERT INTO merchant_buylists VALUES (1986,0,30054,35);
-INSERT INTO merchant_buylists VALUES (1987,0,30054,36);
-INSERT INTO merchant_buylists VALUES (1988,0,30054,37);
-INSERT INTO merchant_buylists VALUES (1989,0,30054,38);
-INSERT INTO merchant_buylists VALUES (1990,0,30054,39);
-INSERT INTO merchant_buylists VALUES (1991,0,30054,40);
-INSERT INTO merchant_buylists VALUES (1992,0,30054,41);
-INSERT INTO merchant_buylists VALUES (1993,0,30054,42);
-INSERT INTO merchant_buylists VALUES (1994,0,30054,43);
-INSERT INTO merchant_buylists VALUES (1995,0,30054,44);
-INSERT INTO merchant_buylists VALUES (1996,0,30054,45);
-INSERT INTO merchant_buylists VALUES (1997,0,30054,46);
-INSERT INTO merchant_buylists VALUES (1998,0,30054,47);
-INSERT INTO merchant_buylists VALUES (1999,0,30054,48);
-INSERT INTO merchant_buylists VALUES (2000,0,30054,49);
-INSERT INTO merchant_buylists VALUES (2001,0,30054,50);
-INSERT INTO merchant_buylists VALUES (2002,0,30055,1);
-INSERT INTO merchant_buylists VALUES (2003,0,30055,2);
-INSERT INTO merchant_buylists VALUES (2004,0,30055,3);
-INSERT INTO merchant_buylists VALUES (2005,0,30055,4);
-INSERT INTO merchant_buylists VALUES (2006,0,30055,5);
-INSERT INTO merchant_buylists VALUES (2007,0,30055,6);
-INSERT INTO merchant_buylists VALUES (2008,0,30055,7);
-INSERT INTO merchant_buylists VALUES (2009,0,30055,8);
-INSERT INTO merchant_buylists VALUES (2010,0,30055,9);
-INSERT INTO merchant_buylists VALUES (2011,0,30055,10);
-INSERT INTO merchant_buylists VALUES (2012,0,30055,11);
-INSERT INTO merchant_buylists VALUES (2013,0,30055,12);
-INSERT INTO merchant_buylists VALUES (2014,0,30055,13);
-INSERT INTO merchant_buylists VALUES (2015,0,30055,14);
-INSERT INTO merchant_buylists VALUES (2016,0,30055,15);
-INSERT INTO merchant_buylists VALUES (2017,0,30055,16);
-INSERT INTO merchant_buylists VALUES (2018,0,30055,17);
-INSERT INTO merchant_buylists VALUES (2019,0,30055,18);
-INSERT INTO merchant_buylists VALUES (2020,0,30055,19);
-INSERT INTO merchant_buylists VALUES (2021,0,30055,20);
-INSERT INTO merchant_buylists VALUES (2022,0,30055,21);
-INSERT INTO merchant_buylists VALUES (2023,0,30055,22);
-INSERT INTO merchant_buylists VALUES (2024,0,30055,23);
-INSERT INTO merchant_buylists VALUES (2025,0,30055,24);
-INSERT INTO merchant_buylists VALUES (2026,0,30055,25);
-INSERT INTO merchant_buylists VALUES (2027,0,30055,26);
-INSERT INTO merchant_buylists VALUES (2028,0,30055,27);
-INSERT INTO merchant_buylists VALUES (2029,0,30055,28);
-INSERT INTO merchant_buylists VALUES (2030,0,30055,29);
-INSERT INTO merchant_buylists VALUES (2031,0,30055,30);
-INSERT INTO merchant_buylists VALUES (2032,0,30055,31);
-INSERT INTO merchant_buylists VALUES (2033,0,30055,32);
-INSERT INTO merchant_buylists VALUES (2034,0,30055,33);
-INSERT INTO merchant_buylists VALUES (2035,0,30055,34);
-INSERT INTO merchant_buylists VALUES (2036,0,30055,35);
-INSERT INTO merchant_buylists VALUES (2037,0,30055,36);
-INSERT INTO merchant_buylists VALUES (2038,0,30055,37);
-INSERT INTO merchant_buylists VALUES (2039,0,30055,38);
-INSERT INTO merchant_buylists VALUES (2040,0,30055,39);
-INSERT INTO merchant_buylists VALUES (2041,0,30055,40);
-INSERT INTO merchant_buylists VALUES (2042,0,30055,41);
-INSERT INTO merchant_buylists VALUES (2043,0,30055,42);
-INSERT INTO merchant_buylists VALUES (2044,0,30055,43);
-INSERT INTO merchant_buylists VALUES (2045,0,30055,44);
-INSERT INTO merchant_buylists VALUES (2046,0,30055,45);
-INSERT INTO merchant_buylists VALUES (2047,0,30055,46);
-INSERT INTO merchant_buylists VALUES (2048,0,30055,47);
-INSERT INTO merchant_buylists VALUES (2049,0,30055,48);
-INSERT INTO merchant_buylists VALUES (2050,0,30055,49);
-INSERT INTO merchant_buylists VALUES (2051,0,30055,50);
-INSERT INTO merchant_buylists VALUES (2052,0,30056,1);
-INSERT INTO merchant_buylists VALUES (2053,0,30056,2);
-INSERT INTO merchant_buylists VALUES (2054,0,30056,3);
-INSERT INTO merchant_buylists VALUES (2055,0,30056,4);
-INSERT INTO merchant_buylists VALUES (2056,0,30056,5);
-INSERT INTO merchant_buylists VALUES (2057,0,30056,6);
-INSERT INTO merchant_buylists VALUES (2058,0,30056,7);
-INSERT INTO merchant_buylists VALUES (2059,0,30056,8);
-INSERT INTO merchant_buylists VALUES (2060,0,30056,9);
-INSERT INTO merchant_buylists VALUES (2061,0,30056,10);
-INSERT INTO merchant_buylists VALUES (2062,0,30056,11);
-INSERT INTO merchant_buylists VALUES (2063,0,30056,12);
-INSERT INTO merchant_buylists VALUES (2064,0,30056,13);
-INSERT INTO merchant_buylists VALUES (2065,0,30056,14);
-INSERT INTO merchant_buylists VALUES (2066,0,30056,15);
-INSERT INTO merchant_buylists VALUES (2067,0,30056,16);
-INSERT INTO merchant_buylists VALUES (2068,0,30056,17);
-INSERT INTO merchant_buylists VALUES (2069,0,30056,18);
-INSERT INTO merchant_buylists VALUES (2070,0,30056,19);
-INSERT INTO merchant_buylists VALUES (2071,0,30056,20);
-INSERT INTO merchant_buylists VALUES (2072,0,30056,21);
-INSERT INTO merchant_buylists VALUES (2073,0,30056,22);
-INSERT INTO merchant_buylists VALUES (2074,0,30056,23);
-INSERT INTO merchant_buylists VALUES (2075,0,30056,24);
-INSERT INTO merchant_buylists VALUES (2076,0,30056,25);
-INSERT INTO merchant_buylists VALUES (2077,0,30056,26);
-INSERT INTO merchant_buylists VALUES (2078,0,30056,27);
-INSERT INTO merchant_buylists VALUES (2079,0,30056,28);
-INSERT INTO merchant_buylists VALUES (2080,0,30056,29);
-INSERT INTO merchant_buylists VALUES (2081,0,30056,30);
-INSERT INTO merchant_buylists VALUES (2082,0,30056,31);
-INSERT INTO merchant_buylists VALUES (2083,0,30056,32);
-INSERT INTO merchant_buylists VALUES (2084,0,30056,33);
-INSERT INTO merchant_buylists VALUES (2085,0,30056,34);
-INSERT INTO merchant_buylists VALUES (2086,0,30056,35);
-INSERT INTO merchant_buylists VALUES (2087,0,30056,36);
-INSERT INTO merchant_buylists VALUES (2088,0,30056,37);
-INSERT INTO merchant_buylists VALUES (2089,0,30056,38);
-INSERT INTO merchant_buylists VALUES (2090,0,30056,39);
-INSERT INTO merchant_buylists VALUES (2091,0,30056,40);
-INSERT INTO merchant_buylists VALUES (2092,0,30056,41);
-INSERT INTO merchant_buylists VALUES (2093,0,30056,42);
-INSERT INTO merchant_buylists VALUES (2094,0,30056,43);
-INSERT INTO merchant_buylists VALUES (2095,0,30056,44);
-INSERT INTO merchant_buylists VALUES (2096,0,30056,45);
-INSERT INTO merchant_buylists VALUES (2097,0,30056,46);
-INSERT INTO merchant_buylists VALUES (2098,0,30056,47);
-INSERT INTO merchant_buylists VALUES (2099,0,30056,48);
-INSERT INTO merchant_buylists VALUES (2100,0,30056,49);
-INSERT INTO merchant_buylists VALUES (2101,0,30056,50);
-INSERT INTO merchant_buylists VALUES (2102,0,30057,1);
-INSERT INTO merchant_buylists VALUES (2103,0,30057,2);
-INSERT INTO merchant_buylists VALUES (2104,0,30057,3);
-INSERT INTO merchant_buylists VALUES (2105,0,30057,4);
-INSERT INTO merchant_buylists VALUES (2106,0,30057,5);
-INSERT INTO merchant_buylists VALUES (2107,0,30057,6);
-INSERT INTO merchant_buylists VALUES (2108,0,30057,7);
-INSERT INTO merchant_buylists VALUES (2109,0,30057,8);
-INSERT INTO merchant_buylists VALUES (2110,0,30057,9);
-INSERT INTO merchant_buylists VALUES (2111,0,30057,10);
-INSERT INTO merchant_buylists VALUES (2112,0,30057,11);
-INSERT INTO merchant_buylists VALUES (2113,0,30057,12);
-INSERT INTO merchant_buylists VALUES (2114,0,30057,13);
-INSERT INTO merchant_buylists VALUES (2115,0,30057,14);
-INSERT INTO merchant_buylists VALUES (2116,0,30057,15);
-INSERT INTO merchant_buylists VALUES (2117,0,30057,16);
-INSERT INTO merchant_buylists VALUES (2118,0,30057,17);
-INSERT INTO merchant_buylists VALUES (2119,0,30057,18);
-INSERT INTO merchant_buylists VALUES (2120,0,30057,19);
-INSERT INTO merchant_buylists VALUES (2121,0,30057,20);
-INSERT INTO merchant_buylists VALUES (2122,0,30057,21);
-INSERT INTO merchant_buylists VALUES (2123,0,30057,22);
-INSERT INTO merchant_buylists VALUES (2124,0,30057,23);
-INSERT INTO merchant_buylists VALUES (2125,0,30057,24);
-INSERT INTO merchant_buylists VALUES (2126,0,30057,25);
-INSERT INTO merchant_buylists VALUES (2127,0,30057,26);
-INSERT INTO merchant_buylists VALUES (2128,0,30057,27);
-INSERT INTO merchant_buylists VALUES (2129,0,30057,28);
-INSERT INTO merchant_buylists VALUES (2130,0,30057,29);
-INSERT INTO merchant_buylists VALUES (2131,0,30057,30);
-INSERT INTO merchant_buylists VALUES (2132,0,30057,31);
-INSERT INTO merchant_buylists VALUES (2133,0,30057,32);
-INSERT INTO merchant_buylists VALUES (2134,0,30057,33);
-INSERT INTO merchant_buylists VALUES (2508,0,30057,34);
-INSERT INTO merchant_buylists VALUES (2917,0,30057,35);
-INSERT INTO merchant_buylists VALUES (2918,0,30057,36);
-INSERT INTO merchant_buylists VALUES (2919,0,30057,37);
-INSERT INTO merchant_buylists VALUES (2920,0,30057,38);
-INSERT INTO merchant_buylists VALUES (2921,0,30057,39);
-INSERT INTO merchant_buylists VALUES (2922,0,30057,40);
-INSERT INTO merchant_buylists VALUES (2923,0,30057,41);
-INSERT INTO merchant_buylists VALUES (2924,0,30057,42);
-INSERT INTO merchant_buylists VALUES (2925,0,30057,43);
-INSERT INTO merchant_buylists VALUES (2926,0,30057,44);
-INSERT INTO merchant_buylists VALUES (2927,0,30057,45);
-INSERT INTO merchant_buylists VALUES (2928,0,30057,46);
-INSERT INTO merchant_buylists VALUES (2929,0,30057,47);
-INSERT INTO merchant_buylists VALUES (2930,0,30057,48);
-INSERT INTO merchant_buylists VALUES (2931,0,30057,49);
-INSERT INTO merchant_buylists VALUES (2932,0,30057,50);
-INSERT INTO merchant_buylists VALUES (2933,0,30058,1);
-INSERT INTO merchant_buylists VALUES (2934,0,30058,2);
-INSERT INTO merchant_buylists VALUES (2935,0,30058,3);
-INSERT INTO merchant_buylists VALUES (2936,0,30058,4);
-INSERT INTO merchant_buylists VALUES (2937,0,30058,5);
-INSERT INTO merchant_buylists VALUES (2938,0,30058,6);
-INSERT INTO merchant_buylists VALUES (2939,0,30058,7);
-INSERT INTO merchant_buylists VALUES (2940,0,30058,8);
-INSERT INTO merchant_buylists VALUES (2941,0,30058,9);
-INSERT INTO merchant_buylists VALUES (2942,0,30058,10);
-INSERT INTO merchant_buylists VALUES (2943,0,30058,11);
-INSERT INTO merchant_buylists VALUES (2944,0,30058,12);
-INSERT INTO merchant_buylists VALUES (2945,0,30058,13);
-INSERT INTO merchant_buylists VALUES (2946,0,30058,14);
-INSERT INTO merchant_buylists VALUES (2947,0,30058,15);
-INSERT INTO merchant_buylists VALUES (2948,0,30058,16);
-INSERT INTO merchant_buylists VALUES (2949,0,30058,17);
-INSERT INTO merchant_buylists VALUES (2950,0,30058,18);
-INSERT INTO merchant_buylists VALUES (2951,0,30058,19);
-INSERT INTO merchant_buylists VALUES (2952,0,30058,20);
-INSERT INTO merchant_buylists VALUES (2953,0,30058,21);
-INSERT INTO merchant_buylists VALUES (2954,0,30058,22);
-INSERT INTO merchant_buylists VALUES (2955,0,30058,23);
-INSERT INTO merchant_buylists VALUES (2956,0,30058,24);
-INSERT INTO merchant_buylists VALUES (2957,0,30058,25);
-INSERT INTO merchant_buylists VALUES (2958,0,30058,26);
-INSERT INTO merchant_buylists VALUES (2959,0,30058,27);
-INSERT INTO merchant_buylists VALUES (2960,0,30058,28);
-INSERT INTO merchant_buylists VALUES (2961,0,30058,29);
-INSERT INTO merchant_buylists VALUES (2962,0,30058,30);
-INSERT INTO merchant_buylists VALUES (2963,0,30058,31);
-INSERT INTO merchant_buylists VALUES (2964,0,30058,32);
-INSERT INTO merchant_buylists VALUES (2965,0,30058,33);
-INSERT INTO merchant_buylists VALUES (2966,0,30058,34);
-INSERT INTO merchant_buylists VALUES (2967,0,30058,35);
-INSERT INTO merchant_buylists VALUES (2968,0,30058,36);
-INSERT INTO merchant_buylists VALUES (2969,0,30058,37);
-INSERT INTO merchant_buylists VALUES (3031,0,30058,38);
-INSERT INTO merchant_buylists VALUES (4039,0,30058,39);
-INSERT INTO merchant_buylists VALUES (4040,0,30058,40);
-INSERT INTO merchant_buylists VALUES (4041,0,30058,41);
-INSERT INTO merchant_buylists VALUES (4042,0,30058,42);
-INSERT INTO merchant_buylists VALUES (4043,0,30058,43);
-INSERT INTO merchant_buylists VALUES (4044,0,30058,44);
-INSERT INTO merchant_buylists VALUES (4045,0,30058,45);
-INSERT INTO merchant_buylists VALUES (4046,0,30058,46);
-INSERT INTO merchant_buylists VALUES (4047,0,30058,47);
-INSERT INTO merchant_buylists VALUES (4048,0,30058,48);
-INSERT INTO merchant_buylists VALUES (4049,0,30058,49);
-INSERT INTO merchant_buylists VALUES (4050,0,30058,50);
-INSERT INTO merchant_buylists VALUES (4051,0,30059,1);
-INSERT INTO merchant_buylists VALUES (4052,0,30059,2);
-INSERT INTO merchant_buylists VALUES (4053,0,30059,3);
-INSERT INTO merchant_buylists VALUES (4054,0,30059,4);
-INSERT INTO merchant_buylists VALUES (4055,0,30059,5);
-INSERT INTO merchant_buylists VALUES (4056,0,30059,6);
-INSERT INTO merchant_buylists VALUES (4057,0,30059,7);
-INSERT INTO merchant_buylists VALUES (4058,0,30059,8);
-INSERT INTO merchant_buylists VALUES (4059,0,30059,9);
-INSERT INTO merchant_buylists VALUES (4060,0,30059,10);
-INSERT INTO merchant_buylists VALUES (4061,0,30059,11);
-INSERT INTO merchant_buylists VALUES (4062,0,30059,12);
-INSERT INTO merchant_buylists VALUES (4063,0,30059,13);
-INSERT INTO merchant_buylists VALUES (4064,0,30059,14);
-INSERT INTO merchant_buylists VALUES (4065,0,30059,15);
-INSERT INTO merchant_buylists VALUES (4066,0,30059,16);
-INSERT INTO merchant_buylists VALUES (4067,0,30059,17);
-INSERT INTO merchant_buylists VALUES (4068,0,30059,18);
-INSERT INTO merchant_buylists VALUES (4069,0,30059,19);
-INSERT INTO merchant_buylists VALUES (4070,0,30059,20);
-INSERT INTO merchant_buylists VALUES (4071,0,30059,21);
-INSERT INTO merchant_buylists VALUES (4072,0,30059,22);
-INSERT INTO merchant_buylists VALUES (4073,0,30059,23);
-INSERT INTO merchant_buylists VALUES (4074,0,30059,24);
-INSERT INTO merchant_buylists VALUES (4075,0,30059,25);
-INSERT INTO merchant_buylists VALUES (4076,0,30059,26);
-INSERT INTO merchant_buylists VALUES (4077,0,30059,27);
-INSERT INTO merchant_buylists VALUES (4078,0,30059,28);
-INSERT INTO merchant_buylists VALUES (4079,0,30059,29);
-INSERT INTO merchant_buylists VALUES (4080,0,30059,30);
-INSERT INTO merchant_buylists VALUES (4081,0,30059,31);
-INSERT INTO merchant_buylists VALUES (4082,0,30059,32);
-INSERT INTO merchant_buylists VALUES (4083,0,30059,33);
-INSERT INTO merchant_buylists VALUES (4084,0,30059,34);
-INSERT INTO merchant_buylists VALUES (4085,0,30059,35);
-INSERT INTO merchant_buylists VALUES (4086,0,30059,36);
-INSERT INTO merchant_buylists VALUES (4087,0,30059,37);
-INSERT INTO merchant_buylists VALUES (4088,0,30059,38);
-INSERT INTO merchant_buylists VALUES (4089,0,30059,39);
-INSERT INTO merchant_buylists VALUES (4090,0,30059,40);
-INSERT INTO merchant_buylists VALUES (4091,0,30059,41);
-INSERT INTO merchant_buylists VALUES (4092,0,30059,42);
-INSERT INTO merchant_buylists VALUES (4093,0,30059,43);
-INSERT INTO merchant_buylists VALUES (4094,0,30059,44);
-INSERT INTO merchant_buylists VALUES (4095,0,30059,45);
-INSERT INTO merchant_buylists VALUES (4096,0,30059,46);
-INSERT INTO merchant_buylists VALUES (4097,0,30059,47);
-INSERT INTO merchant_buylists VALUES (4098,0,30059,48);
-INSERT INTO merchant_buylists VALUES (4099,0,30059,49);
-INSERT INTO merchant_buylists VALUES (4100,0,30059,50);
-INSERT INTO merchant_buylists VALUES (4101,0,300510,1);
-INSERT INTO merchant_buylists VALUES (4102,0,300510,2);
-INSERT INTO merchant_buylists VALUES (4103,0,300510,3);
-INSERT INTO merchant_buylists VALUES (4104,0,300510,4);
-INSERT INTO merchant_buylists VALUES (4105,0,300510,5);
-INSERT INTO merchant_buylists VALUES (4106,0,300510,6);
-INSERT INTO merchant_buylists VALUES (4107,0,300510,7);
-INSERT INTO merchant_buylists VALUES (4108,0,300510,8);
-INSERT INTO merchant_buylists VALUES (4109,0,300510,9);
-INSERT INTO merchant_buylists VALUES (4110,0,300510,10);
-INSERT INTO merchant_buylists VALUES (4111,0,300510,11);
-INSERT INTO merchant_buylists VALUES (4112,0,300510,12);
-INSERT INTO merchant_buylists VALUES (4113,0,300510,13);
-INSERT INTO merchant_buylists VALUES (4114,0,300510,14);
-INSERT INTO merchant_buylists VALUES (4115,0,300510,15);
-INSERT INTO merchant_buylists VALUES (4116,0,300510,16);
-INSERT INTO merchant_buylists VALUES (4117,0,300510,17);
-INSERT INTO merchant_buylists VALUES (4118,0,300510,18);
-INSERT INTO merchant_buylists VALUES (4119,0,300510,19);
-INSERT INTO merchant_buylists VALUES (4120,0,300510,20);
-INSERT INTO merchant_buylists VALUES (4121,0,300510,21);
-INSERT INTO merchant_buylists VALUES (4438,0,300510,22);
-INSERT INTO merchant_buylists VALUES (4439,0,300510,23);
-INSERT INTO merchant_buylists VALUES (5220,0,300510,24);
-INSERT INTO merchant_buylists VALUES (5556,0,300510,25);
-INSERT INTO merchant_buylists VALUES (5557,0,300510,26);
-INSERT INTO merchant_buylists VALUES (5558,0,300510,27);
-INSERT INTO merchant_buylists VALUES (5559,0,300510,28);
-INSERT INTO merchant_buylists VALUES (1463,0,300511,2);
-INSERT INTO merchant_buylists VALUES (1464,0,300511,3);
-INSERT INTO merchant_buylists VALUES (1465,0,300511,4);
-INSERT INTO merchant_buylists VALUES (1466,0,300511,5);
-INSERT INTO merchant_buylists VALUES (1467,0,300511,6);
-INSERT INTO merchant_buylists VALUES (2509,0,300511,7);
-INSERT INTO merchant_buylists VALUES (2510,0,300511,8);
-INSERT INTO merchant_buylists VALUES (2511,0,300511,9);
-INSERT INTO merchant_buylists VALUES (2512,0,300511,10);
-INSERT INTO merchant_buylists VALUES (2513,0,300511,11);
-INSERT INTO merchant_buylists VALUES (2514,0,300511,12);
-INSERT INTO merchant_buylists VALUES (3947,0,300511,13);
-INSERT INTO merchant_buylists VALUES (3948,0,300511,14);
-INSERT INTO merchant_buylists VALUES (3949,0,300511,15);
-INSERT INTO merchant_buylists VALUES (3950,0,300511,16);
-INSERT INTO merchant_buylists VALUES (3951,0,300511,17);
-INSERT INTO merchant_buylists VALUES (3952,0,300511,18);
-INSERT INTO merchant_buylists VALUES (5134,0,300511,19);
-INSERT INTO merchant_buylists VALUES (5135,0,300511,20);
-INSERT INTO merchant_buylists VALUES (5136,0,300511,21);
-INSERT INTO merchant_buylists VALUES (5137,0,300511,22);
-INSERT INTO merchant_buylists VALUES (5138,0,300511,23);
-INSERT INTO merchant_buylists VALUES (5139,0,300511,24);
-INSERT INTO merchant_buylists VALUES (5140,0,300511,25);
-INSERT INTO merchant_buylists VALUES (5141,0,300511,26);
-INSERT INTO merchant_buylists VALUES (5142,0,300511,27);
-INSERT INTO merchant_buylists VALUES (5143,0,300511,28);
-INSERT INTO merchant_buylists VALUES (5144,0,300511,29);
-INSERT INTO merchant_buylists VALUES (5145,0,300511,30);
-INSERT INTO merchant_buylists VALUES (5146,0,300511,31);
-INSERT INTO merchant_buylists VALUES (5147,0,300511,32);
-INSERT INTO merchant_buylists VALUES (5148,0,300511,33);
-INSERT INTO merchant_buylists VALUES (5149,0,300511,34);
-INSERT INTO merchant_buylists VALUES (5150,0,300511,35);
-INSERT INTO merchant_buylists VALUES (5151,0,300511,36);
-INSERT INTO merchant_buylists VALUES (5250,0,300511,37);
-INSERT INTO merchant_buylists VALUES (5251,0,300511,38);
-INSERT INTO merchant_buylists VALUES (5252,0,300511,39);
-INSERT INTO merchant_buylists VALUES (5253,0,300511,40);
-INSERT INTO merchant_buylists VALUES (5254,0,300511,41);
-INSERT INTO merchant_buylists VALUES (5255,0,300511,42);
-INSERT INTO merchant_buylists VALUES (5256,0,300511,43);
-INSERT INTO merchant_buylists VALUES (5257,0,300511,44);
-INSERT INTO merchant_buylists VALUES (5258,0,300511,45);
-INSERT INTO merchant_buylists VALUES (5259,0,300511,46);
-INSERT INTO merchant_buylists VALUES (5260,0,300511,47);
-INSERT INTO merchant_buylists VALUES (5261,0,300511,48);
-INSERT INTO merchant_buylists VALUES (5262,0,300511,49);
-INSERT INTO merchant_buylists VALUES (5263,0,300511,50);
-INSERT INTO merchant_buylists VALUES (5264,0,300511,51);
-INSERT INTO merchant_buylists VALUES (5265,0,300511,52);
-INSERT INTO merchant_buylists VALUES (5266,0,300511,53);
-INSERT INTO merchant_buylists VALUES (5267,0,300511,54);
-INSERT INTO merchant_buylists VALUES (4682,0,1025,1);
-INSERT INTO merchant_buylists VALUES (4684,0,1025,2);
-INSERT INTO merchant_buylists VALUES (4687,0,1025,3);
-INSERT INTO merchant_buylists VALUES (4689,0,1025,4);
-INSERT INTO merchant_buylists VALUES (4692,0,1025,5);
-INSERT INTO merchant_buylists VALUES (4693,0,1025,6);
-INSERT INTO merchant_buylists VALUES (4696,0,1025,7);
-INSERT INTO merchant_buylists VALUES (4697,0,1025,8);
-INSERT INTO merchant_buylists VALUES (4699,0,1025,9);
-INSERT INTO merchant_buylists VALUES (4700,0,1025,10);
-INSERT INTO merchant_buylists VALUES (4702,0,1025,11);
-INSERT INTO merchant_buylists VALUES (4704,0,1025,12);
-INSERT INTO merchant_buylists VALUES (4705,0,1025,13);
-INSERT INTO merchant_buylists VALUES (4706,0,1025,14);
-INSERT INTO merchant_buylists VALUES (4708,0,1025,15);
-INSERT INTO merchant_buylists VALUES (4710,0,1025,16);
-INSERT INTO merchant_buylists VALUES (4712,0,1025,17);
-INSERT INTO merchant_buylists VALUES (4714,0,1025,18);
-INSERT INTO merchant_buylists VALUES (4715,0,1025,19);
-INSERT INTO merchant_buylists VALUES (4717,0,1025,20);
-INSERT INTO merchant_buylists VALUES (4719,0,1025,21);
-INSERT INTO merchant_buylists VALUES (4720,0,1025,22);
-INSERT INTO merchant_buylists VALUES (4723,0,1025,23);
-INSERT INTO merchant_buylists VALUES (4725,0,1025,24);
-INSERT INTO merchant_buylists VALUES (5636,0,1025,25);
-INSERT INTO merchant_buylists VALUES (5637,0,1025,26);
-INSERT INTO merchant_buylists VALUES (5640,0,1025,27);
-INSERT INTO merchant_buylists VALUES (5643,0,1025,28);
-INSERT INTO merchant_buylists VALUES (5644,0,1025,29);
-INSERT INTO merchant_buylists VALUES (5648,0,1025,30);
-INSERT INTO merchant_buylists VALUES (6307,0,1025,31);
-INSERT INTO merchant_buylists VALUES (6309,0,1025,32);
-INSERT INTO merchant_buylists VALUES (6310,0,1025,33);
-INSERT INTO merchant_buylists VALUES (6313,0,1025,34);
-INSERT INTO merchant_buylists VALUES (6314,0,1025,35);
-INSERT INTO merchant_buylists VALUES (6347,0,1025,36);
-INSERT INTO merchant_buylists VALUES (6349,0,1025,37);
-INSERT INTO merchant_buylists VALUES (4726,0,1026,1);
-INSERT INTO merchant_buylists VALUES (4728,0,1026,2);
-INSERT INTO merchant_buylists VALUES (4729,0,1026,3);
-INSERT INTO merchant_buylists VALUES (4731,0,1026,4);
-INSERT INTO merchant_buylists VALUES (4732,0,1026,5);
-INSERT INTO merchant_buylists VALUES (4734,0,1026,6);
-INSERT INTO merchant_buylists VALUES (4735,0,1026,7);
-INSERT INTO merchant_buylists VALUES (4736,0,1026,8);
-INSERT INTO merchant_buylists VALUES (4738,0,1026,9);
-INSERT INTO merchant_buylists VALUES (4739,0,1026,10);
-INSERT INTO merchant_buylists VALUES (4740,0,1026,11);
-INSERT INTO merchant_buylists VALUES (4741,0,1026,12);
-INSERT INTO merchant_buylists VALUES (4742,0,1026,13);
-INSERT INTO merchant_buylists VALUES (4743,0,1026,14);
-INSERT INTO merchant_buylists VALUES (4744,0,1026,15);
-INSERT INTO merchant_buylists VALUES (4745,0,1026,16);
-INSERT INTO merchant_buylists VALUES (4747,0,1026,17);
-INSERT INTO merchant_buylists VALUES (4748,0,1026,18);
-INSERT INTO merchant_buylists VALUES (4750,0,1026,19);
-INSERT INTO merchant_buylists VALUES (4751,0,1026,20);
-INSERT INTO merchant_buylists VALUES (4752,0,1026,21);
-INSERT INTO merchant_buylists VALUES (4753,0,1026,22);
-INSERT INTO merchant_buylists VALUES (4755,0,1026,23);
-INSERT INTO merchant_buylists VALUES (4756,0,1026,24);
-INSERT INTO merchant_buylists VALUES (4868,0,1026,25);
-INSERT INTO merchant_buylists VALUES (4885,0,1026,26);
-INSERT INTO merchant_buylists VALUES (4892,0,1026,27);
-INSERT INTO merchant_buylists VALUES (5596,0,1026,28);
-INSERT INTO merchant_buylists VALUES (5597,0,1026,29);
-INSERT INTO merchant_buylists VALUES (5598,0,1026,30);
-INSERT INTO merchant_buylists VALUES (5599,0,1026,31);
-INSERT INTO merchant_buylists VALUES (5602,0,1026,32);
-INSERT INTO merchant_buylists VALUES (5603,0,1026,33);
-INSERT INTO merchant_buylists VALUES (5605,0,1026,34);
-INSERT INTO merchant_buylists VALUES (5607,0,1026,35);
-INSERT INTO merchant_buylists VALUES (4762,0,1027,1);
-INSERT INTO merchant_buylists VALUES (4768,0,1027,2);
-INSERT INTO merchant_buylists VALUES (4769,0,1027,3);
-INSERT INTO merchant_buylists VALUES (4771,0,1027,4);
-INSERT INTO merchant_buylists VALUES (4772,0,1027,5);
-INSERT INTO merchant_buylists VALUES (4777,0,1027,6);
-INSERT INTO merchant_buylists VALUES (4778,0,1027,7);
-INSERT INTO merchant_buylists VALUES (4783,0,1027,8);
-INSERT INTO merchant_buylists VALUES (4786,0,1027,9);
-INSERT INTO merchant_buylists VALUES (5614,0,1027,10);
-INSERT INTO merchant_buylists VALUES (5617,0,1027,11);
-INSERT INTO merchant_buylists VALUES (4794,0,1028,1);
-INSERT INTO merchant_buylists VALUES (4800,0,1028,2);
-INSERT INTO merchant_buylists VALUES (5620,0,1028,3);
-INSERT INTO merchant_buylists VALUES (5621,0,1028,4);
-INSERT INTO merchant_buylists VALUES (5622,0,1028,5);
-INSERT INTO merchant_buylists VALUES (5624,0,1028,6);
-INSERT INTO merchant_buylists VALUES (5625,0,1028,7);
-INSERT INTO merchant_buylists VALUES (4810,0,1029,1);
-INSERT INTO merchant_buylists VALUES (4811,0,1029,2);
-INSERT INTO merchant_buylists VALUES (4813,0,1029,3);
-INSERT INTO merchant_buylists VALUES (4816,0,1029,4);
-INSERT INTO merchant_buylists VALUES (4819,0,1029,5);
-INSERT INTO merchant_buylists VALUES (4820,0,1029,6);
-INSERT INTO merchant_buylists VALUES (4822,0,1029,7);
-INSERT INTO merchant_buylists VALUES (4825,0,1029,8);
-INSERT INTO merchant_buylists VALUES (4828,0,1029,9);
-INSERT INTO merchant_buylists VALUES (4832,0,1029,10);
-INSERT INTO merchant_buylists VALUES (5610,0,1029,11);
-INSERT INTO merchant_buylists VALUES (4834,0,1030,1);
-INSERT INTO merchant_buylists VALUES (4837,0,1030,2);
-INSERT INTO merchant_buylists VALUES (4846,0,1030,3);
-INSERT INTO merchant_buylists VALUES (4855,0,1030,4);
-INSERT INTO merchant_buylists VALUES (4858,0,1030,5);
-INSERT INTO merchant_buylists VALUES (5626,0,1030,6);
-INSERT INTO merchant_buylists VALUES (5632,0,1030,7);
-INSERT INTO merchant_buylists VALUES (5633,0,1030,8);
-INSERT INTO merchant_buylists VALUES (1512,0,300522,1);
-INSERT INTO merchant_buylists VALUES (1513,0,300522,2);
-INSERT INTO merchant_buylists VALUES (1514,0,300522,3);
-INSERT INTO merchant_buylists VALUES (1515,0,300522,4);
-INSERT INTO merchant_buylists VALUES (1516,0,300522,5);
-INSERT INTO merchant_buylists VALUES (1517,0,300522,6);
-INSERT INTO merchant_buylists VALUES (1518,0,300522,7);
-INSERT INTO merchant_buylists VALUES (1519,0,300522,8);
-INSERT INTO merchant_buylists VALUES (1520,0,300522,9);
-INSERT INTO merchant_buylists VALUES (1521,0,300522,10);
-INSERT INTO merchant_buylists VALUES (1522,0,300522,11);
-INSERT INTO merchant_buylists VALUES (1523,0,300522,12);
-INSERT INTO merchant_buylists VALUES (1524,0,300522,13);
-INSERT INTO merchant_buylists VALUES (1525,0,300522,14);
-INSERT INTO merchant_buylists VALUES (1526,0,300522,15);
-INSERT INTO merchant_buylists VALUES (1527,0,300522,16);
-INSERT INTO merchant_buylists VALUES (1528,0,300522,17);
-INSERT INTO merchant_buylists VALUES (1529,0,300522,18);
-INSERT INTO merchant_buylists VALUES (1530,0,300522,19);
-INSERT INTO merchant_buylists VALUES (1531,0,300522,20);
-INSERT INTO merchant_buylists VALUES (1048,0,300522,21);
-INSERT INTO merchant_buylists VALUES (1049,0,300522,22);
-INSERT INTO merchant_buylists VALUES (1050,0,300522,23);
-INSERT INTO merchant_buylists VALUES (1051,0,300522,24);
-INSERT INTO merchant_buylists VALUES (1052,0,300522,25);
-INSERT INTO merchant_buylists VALUES (1053,0,300522,26);
-INSERT INTO merchant_buylists VALUES (1054,0,300522,27);
-INSERT INTO merchant_buylists VALUES (1055,0,300522,28);
-INSERT INTO merchant_buylists VALUES (1056,0,300522,29);
-INSERT INTO merchant_buylists VALUES (1058,0,300522,30);
-INSERT INTO merchant_buylists VALUES (1095,0,300522,31);
-INSERT INTO merchant_buylists VALUES (1096,0,300522,32);
-INSERT INTO merchant_buylists VALUES (1097,0,300522,33);
-INSERT INTO merchant_buylists VALUES (1098,0,300522,34);
-INSERT INTO merchant_buylists VALUES (1099,0,300522,35);
-INSERT INTO merchant_buylists VALUES (1152,0,300522,36);
-INSERT INTO merchant_buylists VALUES (1294,0,300522,37);
-INSERT INTO merchant_buylists VALUES (1370,0,300522,38);
-INSERT INTO merchant_buylists VALUES (1371,0,300522,39);
-INSERT INTO merchant_buylists VALUES (1372,0,300522,40);
-INSERT INTO merchant_buylists VALUES (1377,0,300522,41);
-INSERT INTO merchant_buylists VALUES (1378,0,300522,42);
-INSERT INTO merchant_buylists VALUES (1379,0,300522,43);
-INSERT INTO merchant_buylists VALUES (1380,0,300522,44);
-INSERT INTO merchant_buylists VALUES (1381,0,300522,45);
-INSERT INTO merchant_buylists VALUES (1382,0,300522,46);
-INSERT INTO merchant_buylists VALUES (1383,0,300522,47);
-INSERT INTO merchant_buylists VALUES (1384,0,300522,48);
-INSERT INTO merchant_buylists VALUES (1385,0,300522,49);
-INSERT INTO merchant_buylists VALUES (1386,0,300523,1);
-INSERT INTO merchant_buylists VALUES (1387,0,300523,2);
-INSERT INTO merchant_buylists VALUES (1388,0,300523,3);
-INSERT INTO merchant_buylists VALUES (1389,0,300523,4);
-INSERT INTO merchant_buylists VALUES (1390,0,300523,5);
-INSERT INTO merchant_buylists VALUES (1391,0,300523,6);
-INSERT INTO merchant_buylists VALUES (1392,0,300523,7);
-INSERT INTO merchant_buylists VALUES (1394,0,300523,8);
-INSERT INTO merchant_buylists VALUES (1397,0,300523,9);
-INSERT INTO merchant_buylists VALUES (1398,0,300523,10);
-INSERT INTO merchant_buylists VALUES (1399,0,300523,11);
-INSERT INTO merchant_buylists VALUES (1400,0,300523,12);
-INSERT INTO merchant_buylists VALUES (1401,0,300523,13);
-INSERT INTO merchant_buylists VALUES (1402,0,300523,14);
-INSERT INTO merchant_buylists VALUES (1403,0,300523,15);
-INSERT INTO merchant_buylists VALUES (1404,0,300523,16);
-INSERT INTO merchant_buylists VALUES (1405,0,300523,17);
-INSERT INTO merchant_buylists VALUES (1406,0,300523,18);
-INSERT INTO merchant_buylists VALUES (1407,0,300523,19);
-INSERT INTO merchant_buylists VALUES (1408,0,300523,20);
-INSERT INTO merchant_buylists VALUES (1409,0,300523,21);
-INSERT INTO merchant_buylists VALUES (1410,0,300523,22);
-INSERT INTO merchant_buylists VALUES (1411,0,300523,23);
-INSERT INTO merchant_buylists VALUES (1412,0,300523,24);
-INSERT INTO merchant_buylists VALUES (1413,0,300523,25);
-INSERT INTO merchant_buylists VALUES (1414,0,300523,26);
-INSERT INTO merchant_buylists VALUES (1415,0,300523,27);
-INSERT INTO merchant_buylists VALUES (1416,0,300523,28);
-INSERT INTO merchant_buylists VALUES (1417,0,300523,29);
-INSERT INTO merchant_buylists VALUES (1418,0,300523,30);
-INSERT INTO merchant_buylists VALUES (1532,0,300523,31);
-INSERT INTO merchant_buylists VALUES (1533,0,300523,32);
-INSERT INTO merchant_buylists VALUES (1534,0,300523,33);
-INSERT INTO merchant_buylists VALUES (1535,0,300523,34);
-INSERT INTO merchant_buylists VALUES (1536,0,300523,35);
-INSERT INTO merchant_buylists VALUES (1537,0,300523,36);
-INSERT INTO merchant_buylists VALUES (1667,0,300523,37);
-INSERT INTO merchant_buylists VALUES (1668,0,300523,38);
-INSERT INTO merchant_buylists VALUES (1669,0,300523,39);
-INSERT INTO merchant_buylists VALUES (1670,0,300523,40);
-INSERT INTO merchant_buylists VALUES (1671,0,300523,41);
-INSERT INTO merchant_buylists VALUES (1856,0,300523,42);
-INSERT INTO merchant_buylists VALUES (3038,0,300523,43);
-INSERT INTO merchant_buylists VALUES (3039,0,300523,44);
-INSERT INTO merchant_buylists VALUES (3040,0,300523,45);
-INSERT INTO merchant_buylists VALUES (3041,0,300523,46);
-INSERT INTO merchant_buylists VALUES (3042,0,300523,47);
-INSERT INTO merchant_buylists VALUES (3043,0,300523,48);
-INSERT INTO merchant_buylists VALUES (3044,0,300523,49);
-INSERT INTO merchant_buylists VALUES (3045,0,300524,1);
-INSERT INTO merchant_buylists VALUES (3046,0,300524,2);
-INSERT INTO merchant_buylists VALUES (3047,0,300524,3);
-INSERT INTO merchant_buylists VALUES (3048,0,300524,4);
-INSERT INTO merchant_buylists VALUES (3049,0,300524,5);
-INSERT INTO merchant_buylists VALUES (3050,0,300524,6);
-INSERT INTO merchant_buylists VALUES (3051,0,300524,7);
-INSERT INTO merchant_buylists VALUES (3052,0,300524,8);
-INSERT INTO merchant_buylists VALUES (3053,0,300524,9);
-INSERT INTO merchant_buylists VALUES (3054,0,300524,10);
-INSERT INTO merchant_buylists VALUES (3055,0,300524,11);
-INSERT INTO merchant_buylists VALUES (3056,0,300524,12);
-INSERT INTO merchant_buylists VALUES (3057,0,300524,13);
-INSERT INTO merchant_buylists VALUES (3058,0,300524,14);
-INSERT INTO merchant_buylists VALUES (3059,0,300524,15);
-INSERT INTO merchant_buylists VALUES (3060,0,300524,16);
-INSERT INTO merchant_buylists VALUES (3061,0,300524,17);
-INSERT INTO merchant_buylists VALUES (3062,0,300524,18);
-INSERT INTO merchant_buylists VALUES (3063,0,300524,19);
-INSERT INTO merchant_buylists VALUES (3064,0,300524,20);
-INSERT INTO merchant_buylists VALUES (3065,0,300524,21);
-INSERT INTO merchant_buylists VALUES (3066,0,300524,22);
-INSERT INTO merchant_buylists VALUES (3067,0,300524,23);
-INSERT INTO merchant_buylists VALUES (3068,0,300524,24);
-INSERT INTO merchant_buylists VALUES (3069,0,300524,25);
-INSERT INTO merchant_buylists VALUES (3070,0,300524,26);
-INSERT INTO merchant_buylists VALUES (3071,0,300524,27);
-INSERT INTO merchant_buylists VALUES (3072,0,300524,28);
-INSERT INTO merchant_buylists VALUES (3073,0,300524,29);
-INSERT INTO merchant_buylists VALUES (3074,0,300524,30);
-INSERT INTO merchant_buylists VALUES (3075,0,300524,31);
-INSERT INTO merchant_buylists VALUES (3076,0,300524,32);
-INSERT INTO merchant_buylists VALUES (3077,0,300524,33);
-INSERT INTO merchant_buylists VALUES (3078,0,300524,34);
-INSERT INTO merchant_buylists VALUES (3079,0,300524,35);
-INSERT INTO merchant_buylists VALUES (3080,0,300524,36);
-INSERT INTO merchant_buylists VALUES (3081,0,300524,37);
-INSERT INTO merchant_buylists VALUES (3082,0,300524,38);
-INSERT INTO merchant_buylists VALUES (3085,0,300524,39);
-INSERT INTO merchant_buylists VALUES (3086,0,300524,40);
-INSERT INTO merchant_buylists VALUES (3087,0,300524,41);
-INSERT INTO merchant_buylists VALUES (3088,0,300524,42);
-INSERT INTO merchant_buylists VALUES (3089,0,300524,43);
-INSERT INTO merchant_buylists VALUES (3090,0,300524,44);
-INSERT INTO merchant_buylists VALUES (3091,0,300524,45);
-INSERT INTO merchant_buylists VALUES (3092,0,300524,46);
-INSERT INTO merchant_buylists VALUES (3093,0,300524,47);
-INSERT INTO merchant_buylists VALUES (3094,0,300524,48);
-INSERT INTO merchant_buylists VALUES (3095,0,300524,49);
-INSERT INTO merchant_buylists VALUES (3096,0,300525,1);
-INSERT INTO merchant_buylists VALUES (3097,0,300525,2);
-INSERT INTO merchant_buylists VALUES (3098,0,300525,3);
-INSERT INTO merchant_buylists VALUES (3099,0,300525,4);
-INSERT INTO merchant_buylists VALUES (3100,0,300525,5);
-INSERT INTO merchant_buylists VALUES (3101,0,300525,6);
-INSERT INTO merchant_buylists VALUES (3102,0,300525,7);
-INSERT INTO merchant_buylists VALUES (3103,0,300525,8);
-INSERT INTO merchant_buylists VALUES (3104,0,300525,9);
-INSERT INTO merchant_buylists VALUES (3105,0,300525,10);
-INSERT INTO merchant_buylists VALUES (3106,0,300525,11);
-INSERT INTO merchant_buylists VALUES (3107,0,300525,12);
-INSERT INTO merchant_buylists VALUES (3108,0,300525,13);
-INSERT INTO merchant_buylists VALUES (3109,0,300525,14);
-INSERT INTO merchant_buylists VALUES (3110,0,300525,15);
-INSERT INTO merchant_buylists VALUES (3111,0,300525,16);
-INSERT INTO merchant_buylists VALUES (3112,0,300525,17);
-INSERT INTO merchant_buylists VALUES (3113,0,300525,18);
-INSERT INTO merchant_buylists VALUES (3114,0,300525,19);
-INSERT INTO merchant_buylists VALUES (3115,0,300525,20);
-INSERT INTO merchant_buylists VALUES (3116,0,300525,21);
-INSERT INTO merchant_buylists VALUES (3117,0,300525,22);
-INSERT INTO merchant_buylists VALUES (3118,0,300525,23);
-INSERT INTO merchant_buylists VALUES (3429,0,300525,24);
-INSERT INTO merchant_buylists VALUES (3430,0,300525,25);
-INSERT INTO merchant_buylists VALUES (3431,0,300525,26);
-INSERT INTO merchant_buylists VALUES (3432,0,300525,27);
-INSERT INTO merchant_buylists VALUES (3940,0,300525,28);
-INSERT INTO merchant_buylists VALUES (3941,0,300525,29);
-INSERT INTO merchant_buylists VALUES (3942,0,300525,30);
-INSERT INTO merchant_buylists VALUES (3943,0,300525,31);
-INSERT INTO merchant_buylists VALUES (3944,0,300525,32);
-INSERT INTO merchant_buylists VALUES (4200,0,300525,33);
-INSERT INTO merchant_buylists VALUES (4201,0,300525,34);
-INSERT INTO merchant_buylists VALUES (4203,0,300525,35);
-INSERT INTO merchant_buylists VALUES (4204,0,300525,36);
-INSERT INTO merchant_buylists VALUES (4205,0,300525,37);
-INSERT INTO merchant_buylists VALUES (4206,0,300525,38);
-INSERT INTO merchant_buylists VALUES (4207,0,300525,39);
-INSERT INTO merchant_buylists VALUES (4208,0,300525,40);
-INSERT INTO merchant_buylists VALUES (4445,0,300526,1); 
-INSERT INTO merchant_buylists VALUES (4446,0,300526,2); 
-INSERT INTO merchant_buylists VALUES (4447,0,300526,3); 
-INSERT INTO merchant_buylists VALUES (4448,0,300526,4); 
-INSERT INTO merchant_buylists VALUES (4449,0,300526,5); 
-INSERT INTO merchant_buylists VALUES (4450,0,300526,6); 
-INSERT INTO merchant_buylists VALUES (4451,0,300526,7); 
-INSERT INTO merchant_buylists VALUES (4452,0,300526,8); 
-INSERT INTO merchant_buylists VALUES (4453,0,300526,9); 
-INSERT INTO merchant_buylists VALUES (4454,0,300526,10); 
-INSERT INTO merchant_buylists VALUES (4455,0,300526,11); 
-INSERT INTO merchant_buylists VALUES (4456,0,300526,12); 
-INSERT INTO merchant_buylists VALUES (4457,0,300526,13); 
-INSERT INTO merchant_buylists VALUES (4458,0,300526,14); 
-INSERT INTO merchant_buylists VALUES (4459,0,300526,15); 
-INSERT INTO merchant_buylists VALUES (4460,0,300526,16); 
-INSERT INTO merchant_buylists VALUES (4461,0,300526,17); 
-INSERT INTO merchant_buylists VALUES (4462,0,300526,18); 
-INSERT INTO merchant_buylists VALUES (4463,0,300526,19); 
-INSERT INTO merchant_buylists VALUES (4464,0,300526,20); 
-INSERT INTO merchant_buylists VALUES (4465,0,300526,21); 
-INSERT INTO merchant_buylists VALUES (4466,0,300526,22); 
-INSERT INTO merchant_buylists VALUES (4467,0,300526,23); 
-INSERT INTO merchant_buylists VALUES (4468,0,300526,24); 
-INSERT INTO merchant_buylists VALUES (4469,0,300526,25); 
-INSERT INTO merchant_buylists VALUES (4470,0,300526,26); 
-INSERT INTO merchant_buylists VALUES (4471,0,300526,27); 
-INSERT INTO merchant_buylists VALUES (4472,0,300526,28); 
-INSERT INTO merchant_buylists VALUES (4473,0,300526,29); 
-INSERT INTO merchant_buylists VALUES (4474,0,300526,30); 
-INSERT INTO merchant_buylists VALUES (4475,0,300526,31); 
-INSERT INTO merchant_buylists VALUES (4476,0,300526,32); 
-INSERT INTO merchant_buylists VALUES (4477,0,300526,33); 
-INSERT INTO merchant_buylists VALUES (4478,0,300526,34); 
-INSERT INTO merchant_buylists VALUES (4479,0,300526,35); 
-INSERT INTO merchant_buylists VALUES (4480,0,300526,36); 
-INSERT INTO merchant_buylists VALUES (4481,0,300526,37); 
-INSERT INTO merchant_buylists VALUES (4482,0,300526,38); 
-INSERT INTO merchant_buylists VALUES (4483,0,300526,39); 
-INSERT INTO merchant_buylists VALUES (4484,0,300526,40); 
-INSERT INTO merchant_buylists VALUES (4485,0,300526,41); 
-INSERT INTO merchant_buylists VALUES (4486,0,300526,42); 
-INSERT INTO merchant_buylists VALUES (4487,0,300526,43); 
-INSERT INTO merchant_buylists VALUES (4488,0,300526,44); 
-INSERT INTO merchant_buylists VALUES (4489,0,300526,45); 
-INSERT INTO merchant_buylists VALUES (4490,0,300526,46); 
-INSERT INTO merchant_buylists VALUES (4491,0,300526,47); 
-INSERT INTO merchant_buylists VALUES (4492,0,300526,48); 
-INSERT INTO merchant_buylists VALUES (4493,0,300526,49); 
-INSERT INTO merchant_buylists VALUES (4494,0,300526,50); 
-INSERT INTO merchant_buylists VALUES (4495,0,300526,51); 
-INSERT INTO merchant_buylists VALUES (4496,0,300526,52); 
-INSERT INTO merchant_buylists VALUES (4497,0,300526,53); 
-INSERT INTO merchant_buylists VALUES (4498,0,300526,54); 
-INSERT INTO merchant_buylists VALUES (4499,0,300526,55); 
-INSERT INTO merchant_buylists VALUES (4500,0,300526,56); 
-INSERT INTO merchant_buylists VALUES (4501,0,300526,57); 
-INSERT INTO merchant_buylists VALUES (4502,0,300526,58); 
-INSERT INTO merchant_buylists VALUES (4503,0,300526,59); 
-INSERT INTO merchant_buylists VALUES (4504,0,300526,60); 
-INSERT INTO merchant_buylists VALUES (4505,0,300526,61); 
-INSERT INTO merchant_buylists VALUES (4506,0,300526,62); 
-INSERT INTO merchant_buylists VALUES (4507,0,300526,63); 
-INSERT INTO merchant_buylists VALUES (4508,0,300526,64); 
-INSERT INTO merchant_buylists VALUES (4509,0,300526,65); 
-INSERT INTO merchant_buylists VALUES (4510,0,300526,66); 
-INSERT INTO merchant_buylists VALUES (4511,0,300526,67); 
-INSERT INTO merchant_buylists VALUES (4512,0,300526,68); 
-INSERT INTO merchant_buylists VALUES (4513,0,300526,69); 
-INSERT INTO merchant_buylists VALUES (4514,0,300526,70); 
-INSERT INTO merchant_buylists VALUES (4515,0,300526,71); 
-INSERT INTO merchant_buylists VALUES (4516,0,300526,72); 
-INSERT INTO merchant_buylists VALUES (4517,0,300526,73); 
-INSERT INTO merchant_buylists VALUES (4518,0,300526,74); 
-INSERT INTO merchant_buylists VALUES (4519,0,300526,75); 
-INSERT INTO merchant_buylists VALUES (4520,0,300526,76); 
-INSERT INTO merchant_buylists VALUES (4521,0,300526,77); 
-INSERT INTO merchant_buylists VALUES (4522,0,300526,78); 
-INSERT INTO merchant_buylists VALUES (4523,0,300526,79); 
-INSERT INTO merchant_buylists VALUES (4524,0,300526,80); 
-INSERT INTO merchant_buylists VALUES (4525,0,300526,81); 
-INSERT INTO merchant_buylists VALUES (4526,0,300526,82); 
-INSERT INTO merchant_buylists VALUES (4527,0,300526,83); 
-INSERT INTO merchant_buylists VALUES (4528,0,300526,84); 
-INSERT INTO merchant_buylists VALUES (4529,0,300526,85); 
-INSERT INTO merchant_buylists VALUES (4530,0,300526,86); 
-INSERT INTO merchant_buylists VALUES (4531,0,300526,87); 
-INSERT INTO merchant_buylists VALUES (4532,0,300526,88); 
-INSERT INTO merchant_buylists VALUES (4533,0,300526,89); 
-INSERT INTO merchant_buylists VALUES (4534,0,300526,90); 
-INSERT INTO merchant_buylists VALUES (4535,0,300526,91); 
-INSERT INTO merchant_buylists VALUES (4536,0,300526,92); 
-INSERT INTO merchant_buylists VALUES (4537,0,300526,93); 
-INSERT INTO merchant_buylists VALUES (4538,0,300526,94); 
-INSERT INTO merchant_buylists VALUES (4539,0,300526,95); 
-INSERT INTO merchant_buylists VALUES (4540,0,300526,96); 
-INSERT INTO merchant_buylists VALUES (4541,0,300526,97); 
-INSERT INTO merchant_buylists VALUES (4542,0,300526,98); 
-INSERT INTO merchant_buylists VALUES (4543,0,300526,99); 
-INSERT INTO merchant_buylists VALUES (4544,0,300526,100); 
-INSERT INTO merchant_buylists VALUES (4545,0,300526,101); 
-INSERT INTO merchant_buylists VALUES (4546,0,300526,102); 
-INSERT INTO merchant_buylists VALUES (4547,0,300526,103); 
-INSERT INTO merchant_buylists VALUES (4548,0,300526,104); 
-INSERT INTO merchant_buylists VALUES (4549,0,300526,105); 
-INSERT INTO merchant_buylists VALUES (4550,0,300526,106); 
-INSERT INTO merchant_buylists VALUES (4551,0,300526,107); 
-INSERT INTO merchant_buylists VALUES (4552,0,300526,108); 
-INSERT INTO merchant_buylists VALUES (4553,0,300526,109); 
-INSERT INTO merchant_buylists VALUES (4554,0,300526,110); 
-INSERT INTO merchant_buylists VALUES (4555,0,300526,111); 
-INSERT INTO merchant_buylists VALUES (4556,0,300526,112); 
-INSERT INTO merchant_buylists VALUES (4557,0,300526,113); 
-INSERT INTO merchant_buylists VALUES (4558,0,300526,114); 
-INSERT INTO merchant_buylists VALUES (4559,0,300526,115); 
-INSERT INTO merchant_buylists VALUES (4560,0,300526,116); 
-INSERT INTO merchant_buylists VALUES (4561,0,300526,117); 
-INSERT INTO merchant_buylists VALUES (4562,0,300526,118); 
-INSERT INTO merchant_buylists VALUES (4563,0,300526,119); 
-INSERT INTO merchant_buylists VALUES (4564,0,300526,120); 
-INSERT INTO merchant_buylists VALUES (4565,0,300526,121); 
-INSERT INTO merchant_buylists VALUES (4566,0,300526,122); 
-INSERT INTO merchant_buylists VALUES (4567,0,300526,123); 
-INSERT INTO merchant_buylists VALUES (4568,0,300526,124); 
-INSERT INTO merchant_buylists VALUES (4569,0,300526,125); 
-INSERT INTO merchant_buylists VALUES (4570,0,300526,126); 
-INSERT INTO merchant_buylists VALUES (4571,0,300526,127); 
-INSERT INTO merchant_buylists VALUES (4572,0,300526,128); 
-INSERT INTO merchant_buylists VALUES (4573,0,300526,129); 
-INSERT INTO merchant_buylists VALUES (4574,0,300526,130); 
-INSERT INTO merchant_buylists VALUES (4575,0,300526,131); 
-INSERT INTO merchant_buylists VALUES (4576,0,300526,132); 
-INSERT INTO merchant_buylists VALUES (4577,0,300526,133); 
-INSERT INTO merchant_buylists VALUES (4578,0,300526,134); 
-INSERT INTO merchant_buylists VALUES (4579,0,300526,135); 
-INSERT INTO merchant_buylists VALUES (4580,0,300526,136); 
-INSERT INTO merchant_buylists VALUES (4581,0,300526,137); 
-INSERT INTO merchant_buylists VALUES (4582,0,300526,138); 
-INSERT INTO merchant_buylists VALUES (4583,0,300526,139); 
-INSERT INTO merchant_buylists VALUES (4584,0,300526,140); 
-INSERT INTO merchant_buylists VALUES (4585,0,300526,141); 
-INSERT INTO merchant_buylists VALUES (4586,0,300526,142); 
-INSERT INTO merchant_buylists VALUES (4587,0,300526,143); 
-INSERT INTO merchant_buylists VALUES (4588,0,300526,144); 
-INSERT INTO merchant_buylists VALUES (4589,0,300526,145); 
-INSERT INTO merchant_buylists VALUES (4590,0,300526,146); 
-INSERT INTO merchant_buylists VALUES (4591,0,300526,147); 
-INSERT INTO merchant_buylists VALUES (4592,0,300526,148); 
-INSERT INTO merchant_buylists VALUES (4593,0,300526,149); 
-INSERT INTO merchant_buylists VALUES (4594,0,300526,150); 
-INSERT INTO merchant_buylists VALUES (4595,0,300526,151); 
-INSERT INTO merchant_buylists VALUES (4596,0,300526,152); 
-INSERT INTO merchant_buylists VALUES (4597,0,300526,153); 
-INSERT INTO merchant_buylists VALUES (4598,0,300526,154); 
-INSERT INTO merchant_buylists VALUES (4599,0,300526,155); 
-INSERT INTO merchant_buylists VALUES (4600,0,300526,156); 
-INSERT INTO merchant_buylists VALUES (4601,0,300526,157); 
-INSERT INTO merchant_buylists VALUES (4602,0,300526,158); 
-INSERT INTO merchant_buylists VALUES (4603,0,300526,159); 
-INSERT INTO merchant_buylists VALUES (4604,0,300526,160); 
-INSERT INTO merchant_buylists VALUES (4605,0,300526,161); 
-INSERT INTO merchant_buylists VALUES (4606,0,300526,162); 
-INSERT INTO merchant_buylists VALUES (4607,0,300526,163); 
-INSERT INTO merchant_buylists VALUES (4608,0,300526,164); 
-INSERT INTO merchant_buylists VALUES (4609,0,300526,165); 
-INSERT INTO merchant_buylists VALUES (4610,0,300526,166); 
-INSERT INTO merchant_buylists VALUES (4611,0,300526,167); 
-INSERT INTO merchant_buylists VALUES (4612,0,300526,168); 
-INSERT INTO merchant_buylists VALUES (4613,0,300526,169); 
-INSERT INTO merchant_buylists VALUES (4614,0,300526,170); 
-INSERT INTO merchant_buylists VALUES (4615,0,300526,171); 
-INSERT INTO merchant_buylists VALUES (4616,0,300526,172); 
-INSERT INTO merchant_buylists VALUES (4617,0,300526,173); 
-INSERT INTO merchant_buylists VALUES (4618,0,300526,174); 
-INSERT INTO merchant_buylists VALUES (4619,0,300526,175); 
-INSERT INTO merchant_buylists VALUES (4620,0,300526,176); 
-INSERT INTO merchant_buylists VALUES (4621,0,300526,177); 
-INSERT INTO merchant_buylists VALUES (4622,0,300526,178); 
-INSERT INTO merchant_buylists VALUES (4623,0,300526,179); 
-INSERT INTO merchant_buylists VALUES (4624,0,300526,180);
-INSERT INTO merchant_buylists VALUES (218,163200,5800,2); 
-INSERT INTO merchant_buylists VALUES (272,163200,5800,3);
-INSERT INTO merchant_buylists VALUES (15,163200,5800,4);
-INSERT INTO merchant_buylists VALUES (68,292800,5800,5);
-INSERT INTO merchant_buylists VALUES (219,292800,5800,6);
-INSERT INTO merchant_buylists VALUES (273,292800,5800,7);
-INSERT INTO merchant_buylists VALUES (155,292800,5800,8);
-INSERT INTO merchant_buylists VALUES (87,292800,5800,9);
-INSERT INTO merchant_buylists VALUES (16,292800,5800,10);
-INSERT INTO merchant_buylists VALUES (123,490800,5800,11);
-INSERT INTO merchant_buylists VALUES (220,490800,5800,12);
-INSERT INTO merchant_buylists VALUES (221,490800,5800,13);
-INSERT INTO merchant_buylists VALUES (274,490800,5800,14);
-INSERT INTO merchant_buylists VALUES (156,490800,5800,15);
-INSERT INTO merchant_buylists VALUES (166,490800,5800,16);
-INSERT INTO merchant_buylists VALUES (168,490800,5800,17);
-INSERT INTO merchant_buylists VALUES (291,490800,5800,18);
-INSERT INTO merchant_buylists VALUES (69,772800,5800,19);
-INSERT INTO merchant_buylists VALUES (126,772800,5800,20);
-INSERT INTO merchant_buylists VALUES (222,772800,5800,21);
-INSERT INTO merchant_buylists VALUES (275,772800,5800,22);
-INSERT INTO merchant_buylists VALUES (276,772800,5800,23);
-INSERT INTO merchant_buylists VALUES (277,772800,5800,24);
-INSERT INTO merchant_buylists VALUES (86,772800,5800,25);
-INSERT INTO merchant_buylists VALUES (292,772800,5800,26);
-INSERT INTO merchant_buylists VALUES (295,772800,5800,27);
-INSERT INTO merchant_buylists VALUES (124,1160400,5800,28);
-INSERT INTO merchant_buylists VALUES (127,1160400,5800,29);
-INSERT INTO merchant_buylists VALUES (130,1160400,5800,30);
-INSERT INTO merchant_buylists VALUES (223,1160400,5800,31);
-INSERT INTO merchant_buylists VALUES (278,1160400,5800,32);
-INSERT INTO merchant_buylists VALUES (157,1160400,5800,33);
-INSERT INTO merchant_buylists VALUES (293,1160400,5800,34);
-INSERT INTO merchant_buylists VALUES (296,1160400,5800,35);
-INSERT INTO merchant_buylists VALUES (129,1680000,5800,36);
-INSERT INTO merchant_buylists VALUES (224,1680000,5800,37);
-INSERT INTO merchant_buylists VALUES (1660,1680000,5800,38);
-INSERT INTO merchant_buylists VALUES (279,1680000,5800,39);
-INSERT INTO merchant_buylists VALUES (158,1680000,5800,40);
-INSERT INTO merchant_buylists VALUES (172,1680000,5800,41);
-INSERT INTO merchant_buylists VALUES (294,1680000,5800,42);
-INSERT INTO merchant_buylists VALUES (93,1680000,5800,43);
-INSERT INTO merchant_buylists VALUES (256,163200,5800,44);
-INSERT INTO merchant_buylists VALUES (257,292800,5800,45);
-INSERT INTO merchant_buylists VALUES (258,490800,5800,46);
-INSERT INTO merchant_buylists VALUES (259,772800,5800,47);
-INSERT INTO merchant_buylists VALUES (260,1160400,5800,48);
-INSERT INTO merchant_buylists VALUES (261,1680000,5800,49);
-INSERT INTO merchant_buylists VALUES (176,163200,5801,1);
-INSERT INTO merchant_buylists VALUES (310,163200,5801,2);
-INSERT INTO merchant_buylists VALUES (177,292800,5801,3);
-INSERT INTO merchant_buylists VALUES (311,292800,5801,4);
-INSERT INTO merchant_buylists VALUES (100,292800,5801,5);
-INSERT INTO merchant_buylists VALUES (178,490800,5801,6);
-INSERT INTO merchant_buylists VALUES (101,490800,5801,7);
-INSERT INTO merchant_buylists VALUES (312,490800,5801,8);
-INSERT INTO merchant_buylists VALUES (314,490800,5801,9);
-INSERT INTO merchant_buylists VALUES (179,772800,5801,10);
-INSERT INTO merchant_buylists VALUES (182,772800,5801,11);
-INSERT INTO merchant_buylists VALUES (183,772800,5801,12);
-INSERT INTO merchant_buylists VALUES (185,772800,5801,13);
-INSERT INTO merchant_buylists VALUES (315,772800,5801,14);
-INSERT INTO merchant_buylists VALUES (83,859200,5801,15);
-INSERT INTO merchant_buylists VALUES (143,859200,5801,16);
-INSERT INTO merchant_buylists VALUES (144,859200,5801,17);
-INSERT INTO merchant_buylists VALUES (238,1160400,5801,18);
-INSERT INTO merchant_buylists VALUES (90,1680000,5801,19);
-INSERT INTO merchant_buylists VALUES (318,1680000,5801,20);
-INSERT INTO merchant_buylists VALUES (321,1824000,5801,21);
-INSERT INTO merchant_buylists VALUES (17,2,5801,22);
-INSERT INTO merchant_buylists VALUES (1341,3,5801,23);
-INSERT INTO merchant_buylists VALUES (1342,6,5801,24);
-INSERT INTO merchant_buylists VALUES (1343,8,5801,25);
-INSERT INTO merchant_buylists VALUES (412,15240,5802,1);
-INSERT INTO merchant_buylists VALUES (390,24360,5802,2);
-INSERT INTO merchant_buylists VALUES (31,15240,5802,3);
-INSERT INTO merchant_buylists VALUES (24,24360,5802,4);
-INSERT INTO merchant_buylists VALUES (32,23880,5802,5);
-INSERT INTO merchant_buylists VALUES (25,38160,5802,6);
-INSERT INTO merchant_buylists VALUES (34,36840,5802,9);
-INSERT INTO merchant_buylists VALUES (26,59040,5802,10);
-INSERT INTO merchant_buylists VALUES (33,27600,5802,7);
-INSERT INTO merchant_buylists VALUES (27,44280,5802,8);
-INSERT INTO merchant_buylists VALUES (413,46920,5802,11);
-INSERT INTO merchant_buylists VALUES (391,75120,5802,12);
-INSERT INTO merchant_buylists VALUES (414,75000,5802,13);
-INSERT INTO merchant_buylists VALUES (392,119880,5802,14);
-INSERT INTO merchant_buylists VALUES (377,99960,5802,15);
-INSERT INTO merchant_buylists VALUES (348,159600,5802,16);
-INSERT INTO merchant_buylists VALUES (378,152400,5802,17);
-INSERT INTO merchant_buylists VALUES (349,219600,5802,18);
-INSERT INTO merchant_buylists VALUES (379,152400,5802,19);
-INSERT INTO merchant_buylists VALUES (350,219600,5802,20);
-INSERT INTO merchant_buylists VALUES (59,152400,5802,21);
-INSERT INTO merchant_buylists VALUES (58,219600,5802,22);
-INSERT INTO merchant_buylists VALUES (416,114240,5802,23);
-INSERT INTO merchant_buylists VALUES (394,182400,5802,24);
-INSERT INTO merchant_buylists VALUES (417,168000,5802,25);
-INSERT INTO merchant_buylists VALUES (395,268800,5802,26);
-INSERT INTO merchant_buylists VALUES (2378,224400,5802,27);
-INSERT INTO merchant_buylists VALUES (352,358800,5802,28);
-INSERT INTO merchant_buylists VALUES (102,8532,5802,29);
-INSERT INTO merchant_buylists VALUES (625,15480,5802,30);
-INSERT INTO merchant_buylists VALUES (626,26280,5802,31);
-INSERT INTO merchant_buylists VALUES (628,63960,5802,32);
-INSERT INTO merchant_buylists VALUES (629,94080,5802,33);
-INSERT INTO merchant_buylists VALUES (50,8124,5802,34);
-INSERT INTO merchant_buylists VALUES (51,14760,5802,35);
-INSERT INTO merchant_buylists VALUES (604,25080,5802,36);
-INSERT INTO merchant_buylists VALUES (605,39960,5802,37);
-INSERT INTO merchant_buylists VALUES (63,60960,5802,38);
-INSERT INTO merchant_buylists VALUES (606,89640,5802,39);
-INSERT INTO merchant_buylists VALUES (38,8124,5802,40);
-INSERT INTO merchant_buylists VALUES (39,14760,5802,41);
-INSERT INTO merchant_buylists VALUES (40,25080,5802,42);
-INSERT INTO merchant_buylists VALUES (1123,39960,5802,43);
-INSERT INTO merchant_buylists VALUES (1124,89640,5802,44);
-INSERT INTO merchant_buylists VALUES (44,12240,5802,45);
-INSERT INTO merchant_buylists VALUES (1148,22080,5802,46);
-INSERT INTO merchant_buylists VALUES (45,37560,5802,47);
-INSERT INTO merchant_buylists VALUES (46,60000,5802,48);
-INSERT INTO merchant_buylists VALUES (47,91440,5802,49);
-INSERT INTO merchant_buylists VALUES (1104,15240,5803,1);
-INSERT INTO merchant_buylists VALUES (1101,24360,5803,2);
-INSERT INTO merchant_buylists VALUES (1105,27600,5803,3);
-INSERT INTO merchant_buylists VALUES (1102,44280,5803,4);
-INSERT INTO merchant_buylists VALUES (465,46920,5803,5);
-INSERT INTO merchant_buylists VALUES (432,75120,5803,6);
-INSERT INTO merchant_buylists VALUES (467,75000,5803,7);
-INSERT INTO merchant_buylists VALUES (434,119880,5803,8);
-INSERT INTO merchant_buylists VALUES (468,75000,5803,9);
-INSERT INTO merchant_buylists VALUES (435,119880,5803,10);
-INSERT INTO merchant_buylists VALUES (469,114240,5803,11);
-INSERT INTO merchant_buylists VALUES (436,182400,5803,12);
-INSERT INTO merchant_buylists VALUES (470,168000,5803,13);
-INSERT INTO merchant_buylists VALUES (437,268800,5803,14);
-INSERT INTO merchant_buylists VALUES (908,13090,5600,1);
-INSERT INTO merchant_buylists VALUES (909,23430,5600,2);
-INSERT INTO merchant_buylists VALUES (910,39490,5600,3);
-INSERT INTO merchant_buylists VALUES (911,62480,5600,4);
-INSERT INTO merchant_buylists VALUES (912,94270,5600,5);
-INSERT INTO merchant_buylists VALUES (913,137500,5600,6);
-INSERT INTO merchant_buylists VALUES (845,9779,5600,7);
-INSERT INTO merchant_buylists VALUES (846,17600,5600,8);
-INSERT INTO merchant_buylists VALUES (847,29590,5600,9);
-INSERT INTO merchant_buylists VALUES (848,46860,5600,10);
-INSERT INTO merchant_buylists VALUES (849,70730,5600,11);
-INSERT INTO merchant_buylists VALUES (850,102740,5600,12);
-INSERT INTO merchant_buylists VALUES (877,6512,5600,13);
-INSERT INTO merchant_buylists VALUES (878,11770,5600,14);
-INSERT INTO merchant_buylists VALUES (890,19800,5600,15);
-INSERT INTO merchant_buylists VALUES (879,31240,5600,16);
-INSERT INTO merchant_buylists VALUES (880,47080,5600,17);
-INSERT INTO merchant_buylists VALUES (881,68530,5600,18);
-INSERT INTO merchant_buylists VALUES (1661,1100,5600,19);
-INSERT INTO merchant_buylists VALUES (3031,440,5600,20);
-INSERT INTO merchant_buylists VALUES (1785,275,5600,21);
-INSERT INTO merchant_buylists VALUES (1341,3,5600,22);
-INSERT INTO merchant_buylists VALUES (1342,6,5600,23);
-INSERT INTO merchant_buylists VALUES (734,1320,5600,24);
-INSERT INTO merchant_buylists VALUES (735,2640,5600,25);
-INSERT INTO merchant_buylists VALUES (1061,363,5600,26);
-INSERT INTO merchant_buylists VALUES (1832,198,5600,27);
-INSERT INTO merchant_buylists VALUES (1834,198,5600,28);
-INSERT INTO merchant_buylists VALUES (737,2200,5600,29);
-INSERT INTO merchant_buylists VALUES (1829,550,5600,30);
-INSERT INTO merchant_buylists VALUES (1830,550,5600,31);
-INSERT INTO merchant_buylists VALUES (2130,1100,5600,32);
-INSERT INTO merchant_buylists VALUES (2131,3300,5600,33);
-INSERT INTO merchant_buylists VALUES (2132,11000,5600,34);
-INSERT INTO merchant_buylists VALUES (4625,550,5600,35);
-INSERT INTO merchant_buylists VALUES (4626,550,5600,36);
-INSERT INTO merchant_buylists VALUES (4627,550,5600,37);
-INSERT INTO merchant_buylists VALUES (4628,550,5600,38);
-INSERT INTO merchant_buylists VALUES (5192,110,5600,39);
-INSERT INTO merchant_buylists VALUES (5193,165,5600,40);
-INSERT INTO merchant_buylists VALUES (5194,275,5600,41);
-INSERT INTO merchant_buylists VALUES (736,440,5600,42);
-INSERT INTO merchant_buylists VALUES (4679,550,5600,43);
-INSERT INTO merchant_buylists VALUES (5146,12705,5600,44);
-INSERT INTO merchant_buylists VALUES (5140,5445,5600,45);
-INSERT INTO merchant_buylists VALUES (5134,2530,5600,46);
-INSERT INTO merchant_buylists VALUES (5195,440,5600,47);
-INSERT INTO merchant_buylists VALUES (5262,42350,5600,48);
-INSERT INTO merchant_buylists VALUES (5256,18150,5600,49);
-INSERT INTO merchant_buylists VALUES (5250,8470,5600,50);
-INSERT INTO merchant_buylists VALUES (6037,110,5600,51);
-INSERT INTO merchant_buylists VALUES (5589,110,5600,52);
-INSERT INTO merchant_buylists VALUES (6035,2600,5600,53);
-INSERT INTO merchant_buylists VALUES (1370,900,5601,1);
-INSERT INTO merchant_buylists VALUES (1401,900,5601,2);
-INSERT INTO merchant_buylists VALUES (1411,900,5601,3);
-INSERT INTO merchant_buylists VALUES (1372,900,5601,4);
-INSERT INTO merchant_buylists VALUES (1513,960,5601,5);
-INSERT INTO merchant_buylists VALUES (1399,900,5601,6);
-INSERT INTO merchant_buylists VALUES (1386,900,5601,7);
-INSERT INTO merchant_buylists VALUES (1856,1920,5601,8);
-INSERT INTO merchant_buylists VALUES (1377,900,5601,9);
-INSERT INTO merchant_buylists VALUES (1383,900,5601,10);
-INSERT INTO merchant_buylists VALUES (1514,960,5601,11);
-INSERT INTO merchant_buylists VALUES (1405,900,5601,12);
-INSERT INTO merchant_buylists VALUES (1403,900,5601,13);
-INSERT INTO merchant_buylists VALUES (1371,900,5601,14);
-INSERT INTO merchant_buylists VALUES (1515,960,5601,15);
-INSERT INTO merchant_buylists VALUES (1667,960,5601,16);
-INSERT INTO merchant_buylists VALUES (1669,960,5601,17);
-INSERT INTO merchant_buylists VALUES (1671,960,5601,18);
-INSERT INTO merchant_buylists VALUES (1512,1380,5601,19);
-INSERT INTO merchant_buylists VALUES (1379,1380,5601,20);
-INSERT INTO merchant_buylists VALUES (1402,1500,5601,21);
-INSERT INTO merchant_buylists VALUES (1517,1500,5601,22);
-INSERT INTO merchant_buylists VALUES (1415,1500,5601,23);
-INSERT INTO merchant_buylists VALUES (1391,1500,5601,24);
-INSERT INTO merchant_buylists VALUES (1398,1500,5601,25);
-INSERT INTO merchant_buylists VALUES (1389,1500,5601,26);
-INSERT INTO merchant_buylists VALUES (1388,1500,5601,27);
-INSERT INTO merchant_buylists VALUES (1410,1500,5601,28);
-INSERT INTO merchant_buylists VALUES (1404,1500,5601,29);
-INSERT INTO merchant_buylists VALUES (1417,1500,5601,30);
-INSERT INTO merchant_buylists VALUES (1400,1500,5601,31);
-INSERT INTO merchant_buylists VALUES (1418,1500,5601,32);
-INSERT INTO merchant_buylists VALUES (1668,1500,5601,33);
-INSERT INTO merchant_buylists VALUES (1670,1500,5601,34);
-INSERT INTO merchant_buylists VALUES (3038,1860,5601,35);
-INSERT INTO merchant_buylists VALUES (1378,1920,5601,36);
-INSERT INTO merchant_buylists VALUES (1516,2160,5601,37);
-INSERT INTO merchant_buylists VALUES (1414,2160,5601,38);
-INSERT INTO merchant_buylists VALUES (1385,2160,5601,39);
-INSERT INTO merchant_buylists VALUES (1394,2160,5601,40);
-INSERT INTO merchant_buylists VALUES (1412,2940,5601,41);
-INSERT INTO merchant_buylists VALUES (3944,2940,5601,42);
-INSERT INTO merchant_buylists VALUES (1392,2940,5601,43);
-INSERT INTO merchant_buylists VALUES (1407,2940,5601,44);
-INSERT INTO merchant_buylists VALUES (1416,2940,5601,45);
-INSERT INTO merchant_buylists VALUES (1397,2940,5601,46);
-INSERT INTO merchant_buylists VALUES (1406,2940,5601,47);
-INSERT INTO merchant_buylists VALUES (1408,2940,5601,48);
-INSERT INTO merchant_buylists VALUES (1390,2940,5601,49);
-INSERT INTO merchant_buylists VALUES (1387,2940,5601,50);
-INSERT INTO merchant_buylists VALUES (1409,2940,5601,51);
-INSERT INTO merchant_buylists VALUES (1413,2940,5601,52);
-INSERT INTO merchant_buylists VALUES (1381,3120,5601,53);
-INSERT INTO merchant_buylists VALUES (1382,3120,5601,54);
-INSERT INTO merchant_buylists VALUES (1384,3120,5601,55);
-INSERT INTO merchant_buylists VALUES (1380,600,5601,56);
-INSERT INTO merchant_buylists VALUES (1535,960,5601,57);
-INSERT INTO merchant_buylists VALUES (1521,960,5601,58);
-INSERT INTO merchant_buylists VALUES (1523,960,5601,59);
-INSERT INTO merchant_buylists VALUES (1534,960,5601,60);
-INSERT INTO merchant_buylists VALUES (1537,960,5601,61);
-INSERT INTO merchant_buylists VALUES (1533,1500,5601,62);
-INSERT INTO merchant_buylists VALUES (1536,1500,5601,63);
-INSERT INTO merchant_buylists VALUES (1532,1500,5601,64);
-INSERT INTO merchant_buylists VALUES (1528,2160,5601,65);
-INSERT INTO merchant_buylists VALUES (1519,2160,5601,66);
-INSERT INTO merchant_buylists VALUES (1518,2160,5601,67);
-INSERT INTO merchant_buylists VALUES (1520,2940,5601,68);
-INSERT INTO merchant_buylists VALUES (1530,2940,5601,69);
-INSERT INTO merchant_buylists VALUES (4457,13200,5601,70);
-INSERT INTO merchant_buylists VALUES (4458,13200,5601,71);
-INSERT INTO merchant_buylists VALUES (4459,13200,5601,72);
-INSERT INTO merchant_buylists VALUES (4460,13200,5601,73);
-INSERT INTO merchant_buylists VALUES (4461,13200,5601,74);
-INSERT INTO merchant_buylists VALUES (4462,13200,5601,75);
-INSERT INTO merchant_buylists VALUES (4463,13200,5601,76);
-INSERT INTO merchant_buylists VALUES (4464,13200,5601,77);
-INSERT INTO merchant_buylists VALUES (4465,13200,5601,78);
-INSERT INTO merchant_buylists VALUES (4466,13200,5601,79);
-INSERT INTO merchant_buylists VALUES (4467,13200,5601,80);
-INSERT INTO merchant_buylists VALUES (4468,13200,5601,81);
-INSERT INTO merchant_buylists VALUES (4481,13200,5601,82);
-INSERT INTO merchant_buylists VALUES (4482,13200,5601,83);
-INSERT INTO merchant_buylists VALUES (4483,13200,5601,84);
-INSERT INTO merchant_buylists VALUES (4484,13200,5601,85);
-INSERT INTO merchant_buylists VALUES (4485,13200,5601,86);
-INSERT INTO merchant_buylists VALUES (4486,13200,5601,87);
-INSERT INTO merchant_buylists VALUES (4487,13200,5601,88);
-INSERT INTO merchant_buylists VALUES (4488,13200,5601,89);
-INSERT INTO merchant_buylists VALUES (4489,13200,5601,90);
-INSERT INTO merchant_buylists VALUES (4490,13200,5601,91);
-INSERT INTO merchant_buylists VALUES (4491,13200,5601,92);
-INSERT INTO merchant_buylists VALUES (4492,13200,5601,93);
-INSERT INTO merchant_buylists VALUES (4493,23100,5601,94);
-INSERT INTO merchant_buylists VALUES (4494,23100,5601,95);
-INSERT INTO merchant_buylists VALUES (4495,23100,5601,96);
-INSERT INTO merchant_buylists VALUES (4496,23100,5601,97);
-INSERT INTO merchant_buylists VALUES (4497,23100,5601,98);
-INSERT INTO merchant_buylists VALUES (4498,23100,5601,99);
-INSERT INTO merchant_buylists VALUES (4499,23100,5601,100);
-INSERT INTO merchant_buylists VALUES (4500,23100,5601,101);
-INSERT INTO merchant_buylists VALUES (4501,23100,5601,102);
-INSERT INTO merchant_buylists VALUES (4502,23100,5601,103);
-INSERT INTO merchant_buylists VALUES (4503,23100,5601,104);
-INSERT INTO merchant_buylists VALUES (4504,23100,5601,105);
-INSERT INTO merchant_buylists VALUES (4916,880,5601,106);
-INSERT INTO merchant_buylists VALUES (4906,1375,5601,107);
-INSERT INTO merchant_buylists VALUES (4908,1375,5601,108);
-INSERT INTO merchant_buylists VALUES (4910,1375,5601,109);
-INSERT INTO merchant_buylists VALUES (4906,1980,5601,110);
-INSERT INTO merchant_buylists VALUES (2505,16667,5710,1);
-INSERT INTO merchant_buylists VALUES (3439,40477,5710,2);
-INSERT INTO merchant_buylists VALUES (3902,72620,5710,3);
-INSERT INTO merchant_buylists VALUES (3903,119048,5710,4);
-INSERT INTO merchant_buylists VALUES (3904,190477,5710,5);
-INSERT INTO merchant_buylists VALUES (3905,285714,5710,6);
-INSERT INTO merchant_buylists VALUES (3906,416666,5710,7);
-INSERT INTO merchant_buylists VALUES (2506,8334,5710,8);
-INSERT INTO merchant_buylists VALUES (3891,21428,5710,9);
-INSERT INTO merchant_buylists VALUES (3892,38095,5710,10);
-INSERT INTO merchant_buylists VALUES (3893,65476,5710,11);
-INSERT INTO merchant_buylists VALUES (3894,103571,5710,12);
-INSERT INTO merchant_buylists VALUES (3895,154761,5710,13);
-INSERT INTO merchant_buylists VALUES (3896,238095,5710,14);
-INSERT INTO merchant_buylists VALUES (2515,119,5710,15);
-INSERT INTO merchant_buylists VALUES (3920,369047,5710,16);
-INSERT INTO merchant_buylists VALUES (3921,500000,5710,17);
-INSERT INTO merchant_buylists VALUES (3922,678571,5710,18);
-INSERT INTO merchant_buylists VALUES (3923,904761,5710,19);
-INSERT INTO merchant_buylists VALUES (3913,369047,5710,20);
-INSERT INTO merchant_buylists VALUES (3914,500000,5710,21);
-INSERT INTO merchant_buylists VALUES (3915,678571,5710,22);
-INSERT INTO merchant_buylists VALUES (3916,910476,5710,23);
-INSERT INTO merchant_buylists VALUES (4038,178,5710,24);
-INSERT INTO merchant_buylists VALUES (5168,238,5710,25);
-INSERT INTO merchant_buylists VALUES (5170,1904761,5710,26);
-INSERT INTO merchant_buylists VALUES (5176,1904761,5710,27);
-INSERT INTO merchant_buylists VALUES (5171,2738095,5710,28);
-INSERT INTO merchant_buylists VALUES (5177,2738095,5710,29);
-INSERT INTO merchant_buylists VALUES (5182,2738095,5710,30);
-INSERT INTO merchant_buylists VALUES (5187,2738095,5710,31);
-INSERT INTO merchant_buylists VALUES (218,163200,5806,2); 
-INSERT INTO merchant_buylists VALUES (272,163200,5806,3);
-INSERT INTO merchant_buylists VALUES (15,163200,5806,4);
-INSERT INTO merchant_buylists VALUES (68,292800,5806,5);
-INSERT INTO merchant_buylists VALUES (219,292800,5806,6);
-INSERT INTO merchant_buylists VALUES (273,292800,5806,7);
-INSERT INTO merchant_buylists VALUES (155,292800,5806,8);
-INSERT INTO merchant_buylists VALUES (87,292800,5806,9);
-INSERT INTO merchant_buylists VALUES (16,292800,5806,10);
-INSERT INTO merchant_buylists VALUES (123,490800,5806,11);
-INSERT INTO merchant_buylists VALUES (220,490800,5806,12);
-INSERT INTO merchant_buylists VALUES (221,490800,5806,13);
-INSERT INTO merchant_buylists VALUES (274,490800,5806,14);
-INSERT INTO merchant_buylists VALUES (156,490800,5806,15);
-INSERT INTO merchant_buylists VALUES (166,490800,5806,16);
-INSERT INTO merchant_buylists VALUES (168,490800,5806,17);
-INSERT INTO merchant_buylists VALUES (291,490800,5806,18);
-INSERT INTO merchant_buylists VALUES (69,772800,5806,19);
-INSERT INTO merchant_buylists VALUES (126,772800,5806,20);
-INSERT INTO merchant_buylists VALUES (222,772800,5806,21);
-INSERT INTO merchant_buylists VALUES (275,772800,5806,22);
-INSERT INTO merchant_buylists VALUES (276,772800,5806,23);
-INSERT INTO merchant_buylists VALUES (277,772800,5806,24);
-INSERT INTO merchant_buylists VALUES (86,772800,5806,25);
-INSERT INTO merchant_buylists VALUES (292,772800,5806,26);
-INSERT INTO merchant_buylists VALUES (295,772800,5806,27);
-INSERT INTO merchant_buylists VALUES (124,1160400,5806,28);
-INSERT INTO merchant_buylists VALUES (127,1160400,5806,29);
-INSERT INTO merchant_buylists VALUES (130,1160400,5806,30);
-INSERT INTO merchant_buylists VALUES (223,1160400,5806,31);
-INSERT INTO merchant_buylists VALUES (278,1160400,5806,32);
-INSERT INTO merchant_buylists VALUES (157,1160400,5806,33);
-INSERT INTO merchant_buylists VALUES (293,1160400,5806,34);
-INSERT INTO merchant_buylists VALUES (296,1160400,5806,35);
-INSERT INTO merchant_buylists VALUES (129,1680000,5806,36);
-INSERT INTO merchant_buylists VALUES (224,1680000,5806,37);
-INSERT INTO merchant_buylists VALUES (1660,1680000,5806,38);
-INSERT INTO merchant_buylists VALUES (279,1680000,5806,39);
-INSERT INTO merchant_buylists VALUES (158,1680000,5806,40);
-INSERT INTO merchant_buylists VALUES (172,1680000,5806,41);
-INSERT INTO merchant_buylists VALUES (294,1680000,5806,42);
-INSERT INTO merchant_buylists VALUES (93,1680000,5806,43);
-INSERT INTO merchant_buylists VALUES (256,163200,5806,44);
-INSERT INTO merchant_buylists VALUES (257,292800,5806,45);
-INSERT INTO merchant_buylists VALUES (258,490800,5806,46);
-INSERT INTO merchant_buylists VALUES (259,772800,5806,47);
-INSERT INTO merchant_buylists VALUES (260,1160400,5806,48);
-INSERT INTO merchant_buylists VALUES (261,1680000,5806,49);
-INSERT INTO merchant_buylists VALUES (176,163200,5807,1);
-INSERT INTO merchant_buylists VALUES (310,163200,5807,2);
-INSERT INTO merchant_buylists VALUES (177,292800,5807,3);
-INSERT INTO merchant_buylists VALUES (311,292800,5807,4);
-INSERT INTO merchant_buylists VALUES (100,292800,5807,5);
-INSERT INTO merchant_buylists VALUES (178,490800,5807,6);
-INSERT INTO merchant_buylists VALUES (101,490800,5807,7);
-INSERT INTO merchant_buylists VALUES (312,490800,5807,8);
-INSERT INTO merchant_buylists VALUES (314,490800,5807,9);
-INSERT INTO merchant_buylists VALUES (179,772800,5807,10);
-INSERT INTO merchant_buylists VALUES (182,772800,5807,11);
-INSERT INTO merchant_buylists VALUES (183,772800,5807,12);
-INSERT INTO merchant_buylists VALUES (185,772800,5807,13);
-INSERT INTO merchant_buylists VALUES (315,772800,5807,14);
-INSERT INTO merchant_buylists VALUES (83,859200,5807,15);
-INSERT INTO merchant_buylists VALUES (143,859200,5807,16);
-INSERT INTO merchant_buylists VALUES (144,859200,5807,17);
-INSERT INTO merchant_buylists VALUES (238,1160400,5807,18);
-INSERT INTO merchant_buylists VALUES (90,1680000,5807,19);
-INSERT INTO merchant_buylists VALUES (318,1680000,5807,20);
-INSERT INTO merchant_buylists VALUES (321,1824000,5807,21);
-INSERT INTO merchant_buylists VALUES (17,2,5807,22);
-INSERT INTO merchant_buylists VALUES (1341,3,5807,23);
-INSERT INTO merchant_buylists VALUES (1342,6,5807,24);
-INSERT INTO merchant_buylists VALUES (1343,8,5807,25);
-INSERT INTO merchant_buylists VALUES (412,15240,5804,1);
-INSERT INTO merchant_buylists VALUES (390,24360,5804,2);
-INSERT INTO merchant_buylists VALUES (31,15240,5804,3);
-INSERT INTO merchant_buylists VALUES (24,24360,5804,4);
-INSERT INTO merchant_buylists VALUES (32,23880,5804,5);
-INSERT INTO merchant_buylists VALUES (25,38160,5804,6);
-INSERT INTO merchant_buylists VALUES (34,36840,5804,9);
-INSERT INTO merchant_buylists VALUES (26,59040,5804,10);
-INSERT INTO merchant_buylists VALUES (33,27600,5804,7);
-INSERT INTO merchant_buylists VALUES (27,44280,5804,8);
-INSERT INTO merchant_buylists VALUES (413,46920,5804,11);
-INSERT INTO merchant_buylists VALUES (391,75120,5804,12);
-INSERT INTO merchant_buylists VALUES (414,75000,5804,13);
-INSERT INTO merchant_buylists VALUES (392,119880,5804,14);
-INSERT INTO merchant_buylists VALUES (377,99960,5804,15);
-INSERT INTO merchant_buylists VALUES (348,159600,5804,16);
-INSERT INTO merchant_buylists VALUES (378,152400,5804,17);
-INSERT INTO merchant_buylists VALUES (349,219600,5804,18);
-INSERT INTO merchant_buylists VALUES (379,152400,5804,19);
-INSERT INTO merchant_buylists VALUES (350,219600,5804,20);
-INSERT INTO merchant_buylists VALUES (59,152400,5804,21);
-INSERT INTO merchant_buylists VALUES (58,219600,5804,22);
-INSERT INTO merchant_buylists VALUES (416,114240,5804,23);
-INSERT INTO merchant_buylists VALUES (394,182400,5804,24);
-INSERT INTO merchant_buylists VALUES (417,168000,5804,25);
-INSERT INTO merchant_buylists VALUES (395,268800,5804,26);
-INSERT INTO merchant_buylists VALUES (2378,224400,5804,27);
-INSERT INTO merchant_buylists VALUES (352,358800,5804,28);
-INSERT INTO merchant_buylists VALUES (102,8532,5804,29);
-INSERT INTO merchant_buylists VALUES (625,15480,5804,30);
-INSERT INTO merchant_buylists VALUES (626,26280,5804,31);
-INSERT INTO merchant_buylists VALUES (628,63960,5804,32);
-INSERT INTO merchant_buylists VALUES (629,94080,5804,33);
-INSERT INTO merchant_buylists VALUES (50,8124,5804,34);
-INSERT INTO merchant_buylists VALUES (51,14760,5804,35);
-INSERT INTO merchant_buylists VALUES (604,25080,5804,36);
-INSERT INTO merchant_buylists VALUES (605,39960,5804,37);
-INSERT INTO merchant_buylists VALUES (63,60960,5804,38);
-INSERT INTO merchant_buylists VALUES (606,89640,5804,39);
-INSERT INTO merchant_buylists VALUES (38,8124,5804,40);
-INSERT INTO merchant_buylists VALUES (39,14760,5804,41);
-INSERT INTO merchant_buylists VALUES (40,25080,5804,42);
-INSERT INTO merchant_buylists VALUES (1123,39960,5804,43);
-INSERT INTO merchant_buylists VALUES (1124,89640,5804,44);
-INSERT INTO merchant_buylists VALUES (44,12240,5804,45);
-INSERT INTO merchant_buylists VALUES (1148,22080,5804,46);
-INSERT INTO merchant_buylists VALUES (45,37560,5804,47);
-INSERT INTO merchant_buylists VALUES (46,60000,5804,48);
-INSERT INTO merchant_buylists VALUES (47,91440,5804,49);
-INSERT INTO merchant_buylists VALUES (1104,15240,5805,1);
-INSERT INTO merchant_buylists VALUES (1101,24360,5805,2);
-INSERT INTO merchant_buylists VALUES (1105,27600,5805,3);
-INSERT INTO merchant_buylists VALUES (1102,44280,5805,4);
-INSERT INTO merchant_buylists VALUES (465,46920,5805,5);
-INSERT INTO merchant_buylists VALUES (432,75120,5805,6);
-INSERT INTO merchant_buylists VALUES (467,75000,5805,7);
-INSERT INTO merchant_buylists VALUES (434,119880,5805,8);
-INSERT INTO merchant_buylists VALUES (468,75000,5805,9);
-INSERT INTO merchant_buylists VALUES (435,119880,5805,10);
-INSERT INTO merchant_buylists VALUES (469,114240,5805,11);
-INSERT INTO merchant_buylists VALUES (436,182400,5805,12);
-INSERT INTO merchant_buylists VALUES (470,168000,5805,13);
-INSERT INTO merchant_buylists VALUES (437,268800,5805,14);
-INSERT INTO merchant_buylists VALUES (5192,115,85,29);
-INSERT INTO merchant_buylists VALUES (5146,13282,85,30);
-INSERT INTO merchant_buylists VALUES (5140,5692,85,31);
-INSERT INTO merchant_buylists VALUES (5134,2645,85,32);
-INSERT INTO merchant_buylists VALUES (5262,44275,85,33);
-INSERT INTO merchant_buylists VALUES (5256,18975,85,34);
-INSERT INTO merchant_buylists VALUES (5250,8855,85,35);
-INSERT INTO merchant_buylists VALUES (5589,115,85,36); 
-
--- Merc Manager Greenspan - Gludio
-INSERT INTO merchant_buylists VALUES (3960,30000,123161,1); 
-INSERT INTO merchant_buylists VALUES (3961,40000,123161,2); 
-INSERT INTO merchant_buylists VALUES (3962,50000,123161,3); 
-INSERT INTO merchant_buylists VALUES (3963,150000,123161,4); 
-INSERT INTO merchant_buylists VALUES (3964,150000,123161,5); 
-INSERT INTO merchant_buylists VALUES (3965,30000,123161,6); 
-INSERT INTO merchant_buylists VALUES (3966,40000,123161,7); 
-INSERT INTO merchant_buylists VALUES (3967,50000,123161,8); 
-INSERT INTO merchant_buylists VALUES (3968,150000,123161,9); 
-INSERT INTO merchant_buylists VALUES (3969,150000,123161,10); 
-
--- Merc Manager Sanford - Dion
-INSERT INTO merchant_buylists VALUES (3973,30000,123171,1); 
-INSERT INTO merchant_buylists VALUES (3974,40000,123171,2); 
-INSERT INTO merchant_buylists VALUES (3975,50000,123171,3); 
-INSERT INTO merchant_buylists VALUES (3976,150000,123171,4); 
-INSERT INTO merchant_buylists VALUES (3977,150000,123171,5); 
-INSERT INTO merchant_buylists VALUES (3978,30000,123171,6); 
-INSERT INTO merchant_buylists VALUES (3979,40000,123171,7); 
-INSERT INTO merchant_buylists VALUES (3980,50000,123171,8); 
-INSERT INTO merchant_buylists VALUES (3981,150000,123171,9); 
-INSERT INTO merchant_buylists VALUES (3982,150000,123171,10); 
-
--- Merc Manager Morrison - Oren
-INSERT INTO merchant_buylists VALUES (3999,30000,123181,1); 
-INSERT INTO merchant_buylists VALUES (4000,40000,123181,2); 
-INSERT INTO merchant_buylists VALUES (4001,50000,123181,3); 
-INSERT INTO merchant_buylists VALUES (4002,150000,123181,4); 
-INSERT INTO merchant_buylists VALUES (4003,150000,123181,5); 
-INSERT INTO merchant_buylists VALUES (4004,30000,123181,6); 
-INSERT INTO merchant_buylists VALUES (4005,40000,123181,7); 
-INSERT INTO merchant_buylists VALUES (4006,50000,123181,8); 
-INSERT INTO merchant_buylists VALUES (4007,150000,123181,9); 
-INSERT INTO merchant_buylists VALUES (4008,150000,123181,10); 
-
--- Merc Manager Arvid - Giran
-INSERT INTO merchant_buylists VALUES (3986,30000,123191,1); 
-INSERT INTO merchant_buylists VALUES (3987,40000,123191,2); 
-INSERT INTO merchant_buylists VALUES (3988,50000,123191,3); 
-INSERT INTO merchant_buylists VALUES (3989,150000,123191,4); 
-INSERT INTO merchant_buylists VALUES (3990,150000,123191,5); 
-INSERT INTO merchant_buylists VALUES (3991,30000,123191,6); 
-INSERT INTO merchant_buylists VALUES (3992,40000,123191,7); 
-INSERT INTO merchant_buylists VALUES (3993,50000,123191,8); 
-INSERT INTO merchant_buylists VALUES (3994,150000,123191,9); 
-INSERT INTO merchant_buylists VALUES (3995,150000,123191,10); 
-
--- Merc Manager Eldon - Aden
-INSERT INTO merchant_buylists VALUES (4012,30000,123201,1); 
-INSERT INTO merchant_buylists VALUES (4013,40000,123201,2); 
-INSERT INTO merchant_buylists VALUES (4014,50000,123201,3); 
-INSERT INTO merchant_buylists VALUES (4015,150000,123201,4); 
-INSERT INTO merchant_buylists VALUES (4016,150000,123201,5); 
-INSERT INTO merchant_buylists VALUES (4017,30000,123201,6); 
-INSERT INTO merchant_buylists VALUES (4018,40000,123201,7); 
-INSERT INTO merchant_buylists VALUES (4019,50000,123201,8); 
-INSERT INTO merchant_buylists VALUES (4020,150000,123201,9); 
-INSERT INTO merchant_buylists VALUES (4021,150000,123201,10); 
+INSERT INTO merchant_buylists VALUES
+(1,883,1,1),
+(4,883,1,2),
+(11,883,1,3),
+(13,883,1,4),
+(3,14375,1,5),
+(152,9280,1,6),
+(12,14375,1,7),
+(215,14375,1,8),
+(14,14375,1,9),
+(5,14375,1,10),
+(153,21275,1,11),
+(1333,62215,1,12),
+(66,62215,1,13),
+(67,62215,1,14),
+(122,62215,1,15),
+(154,62215,1,16),
+(216,62215,1,17),
+(271,62215,1,18),
+(2,156400,1,19),
+(218,156400,1,20),
+(272,156400,1,21),
+(15,156400,1,22),
+(28,106,1,23),
+(21,169,1,24),
+(29,1748,1,25),
+(22,2794,1,26),
+(30,5716,1,27),
+(2386,5716,1,28),
+(23,9154,1,29),
+(412,14605,1,30),
+(390,23345,1,31),
+(24,23345,1,32),
+(31,14605,1,33),
+(18,45,1,34),
+(19,734,1,35),
+(20,3197,1,36),
+(102,8176,1,37),
+(48,43,1,38),
+(1119,698,1,39),
+(49,3047,1,40),
+(50,7785,1,41),
+(1121,8,1,42),
+(35,43,1,43),
+(36,43,1,44),
+(1129,698,1,45),
+(1122,698,1,46),
+(37,3047,1,47),
+(38,7785,1,48),
+(41,63,1,49),
+(42,1048,1,50),
+(43,4577,1,51),
+(44,11730,1,52),
+(17,2,1,53),
+(1341,3,1,54),
+(7,883,2,1),
+(308,883,2,2),
+(8,14375,2,3),
+(99,14375,2,4),
+(9,62215,2,5),
+(176,156400,2,6),
+(310,156400,2,7),
+(462,106,2,8),
+(426,169,2,9),
+(1103,1748,2,10),
+(1100,2794,2,11),
+(463,1748,2,12),
+(428,2794,2,13),
+(464,5716,2,14),
+(429,9154,2,15),
+(1104,14605,2,16),
+(1101,23345,2,17),
+(18,45,2,18),
+(19,734,2,19),
+(20,3197,2,20),
+(102,8176,2,21),
+(48,43,2,22),
+(1119,698,2,23),
+(49,3047,2,24),
+(50,7785,2,25),
+(1121,8,2,26),
+(35,43,2,27),
+(36,43,2,28),
+(1129,698,2,29),
+(1122,698,2,30),
+(37,3047,2,31),
+(38,7785,2,32),
+(41,63,2,33),
+(42,1048,2,34),
+(43,4577,2,35),
+(44,11730,2,36),
+(17,2,2,37),
+(1341,3,2,38),
+(412,13970,3,1),
+(390,22330,3,2),
+(24,22330,3,3),
+(31,13970,3,4),
+(25,34980,3,5),
+(26,54120,3,6),
+(33,25300,3,7),
+(32,21890,3,8),
+(27,40590,3,9),
+(34,33770,3,10),
+(413,43010,3,11),
+(347,91850,3,12),
+(391,68860,3,13),
+(376,57420,3,14),
+(414,68750,3,15),
+(392,109890,3,16),
+(348,146300,3,17),
+(349,201300,3,18),
+(350,201300,3,19),
+(58,201300,3,20),
+(415,104720,3,21),
+(416,104720,3,22),
+(377,91630,3,23),
+(351,223300,3,24),
+(378,139700,3,25),
+(379,139700,3,26),
+(59,139700,3,27),
+(394,167200,3,28),
+(2378,205700,3,29),
+(352,328900,3,30),
+(395,246400,3,31),
+(417,154000,3,32),
+(102,7821,3,33),
+(625,14190,3,34),
+(626,24090,3,35),
+(627,38500,3,36),
+(628,58630,3,37),
+(629,86240,3,38),
+(50,7447,3,39),
+(51,13530,3,40),
+(604,22990,3,41),
+(605,36630,3,42),
+(63,55880,3,43),
+(606,82170,3,44),
+(38,7447,3,45),
+(39,13530,3,46),
+(40,22990,3,47),
+(1123,36630,3,48),
+(553,55880,3,49),
+(1124,82170,3,50),
+(44,11220,3,51),
+(1148,20240,3,52),
+(45,34430,3,53),
+(46,55000,3,54),
+(47,83820,3,55),
+(1104,13970,4,1),
+(1101,22330,4,2),
+(1105,25300,4,3),
+(1102,40590,4,4),
+(465,43010,4,5),
+(432,68860,4,6),
+(467,68750,4,7),
+(434,109890,4,8),
+(468,68750,4,9),
+(435,109890,4,10),
+(469,104720,4,11),
+(436,167200,4,12),
+(470,154000,4,13),
+(437,246400,4,14),
+(102,7821,4,15),
+(625,14190,4,16),
+(626,24090,4,17),
+(627,38500,4,18),
+(628,58630,4,19),
+(629,86240,4,20),
+(50,7447,4,21),
+(51,13530,4,22),
+(604,22990,4,23),
+(605,36630,4,24),
+(63,55880,4,25),
+(606,82170,4,26),
+(38,7447,4,27),
+(39,13530,4,28),
+(40,22990,4,29),
+(1123,36630,4,30),
+(553,55880,4,31),
+(1124,82170,4,32),
+(44,11220,4,33),
+(1148,20240,4,34),
+(45,34430,4,35),
+(46,55000,4,36),
+(47,83820,4,37),
+(412,13970,5,1),
+(390,22330,5,2),
+(24,22330,5,3),
+(31,13970,5,4),
+(25,34980,5,5),
+(26,54120,5,6),
+(33,25300,5,7),
+(32,21890,5,8),
+(27,40590,5,9),
+(34,33770,5,10),
+(413,43010,5,11),
+(347,91850,5,12),
+(391,68860,5,13),
+(376,57420,5,14),
+(414,68750,5,15),
+(392,109890,5,16),
+(348,146300,5,17),
+(349,201300,5,18),
+(350,201300,5,19),
+(58,201300,5,20),
+(415,104720,5,21),
+(416,104720,5,22),
+(377,91630,5,23),
+(351,223300,5,24),
+(378,139700,5,25),
+(379,139700,5,26),
+(59,139700,5,27),
+(394,167200,5,28),
+(2378,205700,5,29),
+(352,328900,5,30),
+(395,246400,5,31),
+(417,154000,5,32),
+(102,7821,5,33),
+(625,14190,5,34),
+(626,24090,5,35),
+(627,38500,5,36),
+(628,58630,5,37),
+(629,86240,5,38),
+(50,7447,5,39),
+(51,13530,5,40),
+(604,22990,5,41),
+(605,36630,5,42),
+(63,55880,5,43),
+(606,82170,5,44),
+(38,7447,5,45),
+(39,13530,5,46),
+(40,22990,5,47),
+(1123,36630,5,48),
+(553,55880,5,49),
+(1124,82170,5,50),
+(44,11220,5,51),
+(1148,20240,5,52),
+(45,34430,5,53),
+(46,55000,5,54),
+(47,83820,5,55),
+(1104,13970,6,1),
+(1101,22330,6,2),
+(1105,25300,6,3),
+(1102,40590,6,4),
+(465,43010,6,5),
+(432,68860,6,6),
+(467,68750,6,7),
+(434,109890,6,8),
+(468,68750,6,9),
+(435,109890,6,10),
+(469,104720,6,11),
+(436,167200,6,12),
+(470,154000,6,13),
+(437,246400,6,14),
+(102,7821,6,15),
+(625,14190,6,16),
+(626,24090,6,17),
+(627,38500,6,18),
+(628,58630,6,19),
+(629,86240,6,20),
+(50,7447,6,21),
+(51,13530,6,22),
+(604,22990,6,23),
+(605,36630,6,24),
+(63,55880,6,25),
+(606,82170,6,26),
+(38,7447,6,27),
+(39,13530,6,28),
+(40,22990,6,29),
+(1123,36630,6,30),
+(553,55880,6,31),
+(1124,82170,6,32),
+(44,11220,6,33),
+(1148,20240,6,34),
+(45,34430,6,35),
+(46,55000,6,36),
+(47,83820,6,37),
+(908,13090,7,1),
+(909,23430,7,2),
+(910,39490,7,3),
+(911,62480,7,4),
+(912,94270,7,5),
+(913,137500,7,6),
+(845,9779,7,7),
+(846,17600,7,8),
+(847,29590,7,9),
+(848,46860,7,10),
+(849,70730,7,11),
+(850,102740,7,12),
+(877,6512,7,13),
+(878,11770,7,14),
+(890,19800,7,15),
+(879,31240,7,16),
+(880,47080,7,17),
+(881,68530,7,18),
+(908,13090,8,1),
+(909,23430,8,2),
+(910,39490,8,3),
+(911,62480,8,4),
+(912,94270,8,5),
+(913,137500,8,6),
+(845,9779,8,7),
+(846,17600,8,8),
+(847,29590,8,9),
+(848,46860,8,10),
+(849,70730,8,11),
+(850,102740,8,12),
+(877,6512,8,13),
+(878,11770,8,14),
+(890,19800,8,15),
+(879,31240,8,16),
+(880,47080,8,17),
+(881,68530,8,18),
+(1370,825,9,1),
+(1401,825,9,2),
+(1411,825,9,3),
+(1372,825,9,4),
+(1513,880,9,5),
+(1399,825,9,6),
+(1386,825,9,7),
+(1856,1760,9,8),
+(1377,825,9,9),
+(1383,825,9,10),
+(1514,880,9,11),
+(1405,825,9,12),
+(1403,825,9,13),
+(1371,825,9,14),
+(1515,880,9,15),
+(1667,880,9,16),
+(1669,880,9,17),
+(1671,880,9,18),
+(1512,1265,9,19),
+(1379,1265,9,20),
+(1402,1375,9,21),
+(1517,1375,9,22),
+(1415,1375,9,23),
+(1391,1375,9,24),
+(1398,1375,9,25),
+(1389,1375,9,26),
+(1388,1375,9,27),
+(1410,1375,9,28),
+(1404,1375,9,29),
+(1417,1375,9,30),
+(1400,1375,9,31),
+(1418,1375,9,32),
+(1668,1375,9,33),
+(1670,1375,9,34),
+(3038,1705,9,35),
+(1378,1760,9,36),
+(1516,1980,9,37),
+(1414,1980,9,38),
+(1385,1980,9,39),
+(1394,1980,9,40),
+(1412,2695,9,41),
+(3944,2695,9,42),
+(1392,2695,9,43),
+(1407,2695,9,44),
+(1416,2695,9,45),
+(1397,2695,9,46),
+(1406,2695,9,47),
+(1408,2695,9,48),
+(1390,2695,9,49),
+(1387,2695,9,50),
+(1409,2695,9,51),
+(1413,2695,9,52),
+(1381,2860,9,53),
+(1382,2860,9,54),
+(1384,2860,9,55),
+(1380,550,9,56),
+(1535,880,9,57),
+(1521,880,9,58),
+(1523,880,9,59),
+(1534,880,9,60),
+(1537,880,9,61),
+(1533,1375,9,62),
+(1536,1375,9,63),
+(1532,1375,9,64),
+(1528,1980,9,65),
+(1519,1980,9,66),
+(1518,1980,9,67),
+(1520,2695,9,68),
+(1530,2695,9,69),
+(4916,895,9,70),
+(4906,1375,9,71),
+(4908,1375,9,72),
+(4910,1985,9,73),
+(4457,13200,9,74),
+(4458,13200,9,75),
+(4459,13200,9,76),
+(4460,13200,9,77),
+(4461,13200,9,78),
+(4462,13200,9,79),
+(4463,13200,9,80),
+(4464,13200,9,81),
+(4465,13200,9,82),
+(4466,13200,9,83),
+(4467,13200,9,84),
+(4468,13200,9,85),
+(4481,13200,9,86),
+(4482,13200,9,87),
+(4483,13200,9,88),
+(4484,13200,9,89),
+(4485,13200,9,90),
+(4486,13200,9,91),
+(4487,13200,9,92),
+(4488,13200,9,93),
+(4489,13200,9,94),
+(4490,13200,9,95),
+(4491,13200,9,96),
+(4492,13200,9,97),
+(4493,23100,9,98),
+(4494,23100,9,99),
+(4495,23100,9,100),
+(4496,23100,9,101),
+(4497,23100,9,102),
+(4498,23100,9,103),
+(4499,23100,9,104),
+(4500,23100,9,105),
+(4501,23100,9,106),
+(4502,23100,9,107),
+(4503,23100,9,108),
+(4504,23100,9,109),
+(17,2,10,1),
+(1341,3,10,2),
+(177,268400,10,3),
+(311,268400,10,4),
+(100,268400,10,5),
+(178,449900,10,6),
+(101,449900,10,7),
+(312,449900,10,8),
+(314,449900,10,9),
+(182,708400,10,10),
+(183,708400,10,11),
+(185,708400,10,12),
+(315,708400,10,13),
+(83,787600,10,14),
+(143,787600,10,15),
+(144,787600,10,16),
+(238,1063700,10,17),
+(239,1063700,10,18),
+(240,1063700,10,19),
+(1105,25300,10,20),
+(1102,40590,10,21),
+(465,43010,10,22),
+(432,68860,10,23),
+(467,68750,10,24),
+(4457,13140,10,25),
+(4458,13140,10,26),
+(4459,13140,10,27),
+(4460,13140,10,28),
+(4461,13140,10,29),
+(4462,13140,10,30),
+(4463,13140,10,31),
+(4464,13140,10,32),
+(4465,13140,10,33),
+(4466,13140,10,34),
+(4467,13140,10,35),
+(4468,13140,10,36),
+(4481,13140,10,37),
+(4482,13140,10,38),
+(4483,13140,10,39),
+(4484,13140,10,40),
+(4485,13140,10,41),
+(4486,13140,10,42),
+(4487,13140,10,43),
+(4488,13140,10,44),
+(4489,13140,10,45),
+(4490,13140,10,46),
+(4491,13140,10,47),
+(4492,13140,10,48),
+(4493,23000,10,49),
+(4494,23000,10,50),
+(4495,23000,10,51),
+(4496,23000,10,52),
+(4497,23000,10,53),
+(4498,23000,10,54),
+(4499,23000,10,55),
+(4500,23000,10,56),
+(4501,23000,10,57),
+(4502,23000,10,58),
+(4503,23000,10,59),
+(4504,23000,10,60),
+(1,883,11,1),
+(4,883,11,2),
+(11,883,11,3),
+(13,883,11,4),
+(3,14375,11,5),
+(152,9280,11,6),
+(12,14375,11,7),
+(215,14375,11,8),
+(14,14375,11,9),
+(5,14375,11,10),
+(153,21275,11,11),
+(1333,62215,11,12),
+(66,62215,11,13),
+(67,62215,11,14),
+(122,62215,11,15),
+(154,62215,11,16),
+(216,62215,11,17),
+(271,62215,11,18),
+(2,156400,11,19),
+(218,156400,11,20),
+(272,156400,11,21),
+(15,156400,11,22),
+(28,106,11,23),
+(21,169,11,24),
+(29,1748,11,25),
+(22,2794,11,26),
+(30,5716,11,27),
+(2386,5716,11,28),
+(23,9154,11,29),
+(412,14605,11,30),
+(390,23345,11,31),
+(24,23345,11,32),
+(31,14605,11,33),
+(18,45,11,34),
+(19,734,11,35),
+(20,3197,11,36),
+(102,8176,11,37),
+(48,43,11,38),
+(1119,698,11,39),
+(49,3047,11,40),
+(50,7785,11,41),
+(1121,8,11,42),
+(35,43,11,43),
+(36,43,11,44),
+(1129,698,11,45),
+(1122,698,11,46),
+(37,3047,11,47),
+(38,7785,11,48),
+(41,63,11,49),
+(42,1048,11,50),
+(43,4577,11,51),
+(44,11730,11,52),
+(17,2,11,53),
+(1341,3,11,54),
+(7,883,12,1),
+(308,883,12,2),
+(8,14375,12,3),
+(99,14375,12,4),
+(9,62215,12,5),
+(176,156400,12,6),
+(310,156400,12,7),
+(462,106,12,8),
+(426,169,12,9),
+(1103,1748,12,10),
+(1100,2794,12,11),
+(463,1748,12,12),
+(428,2794,12,13),
+(464,5716,12,14),
+(429,9154,12,15),
+(1104,14605,12,16),
+(1101,23345,12,17),
+(18,45,12,18),
+(19,734,12,19),
+(20,3197,12,20),
+(102,8176,12,21),
+(48,43,12,22),
+(1119,698,12,23),
+(49,3047,12,24),
+(50,7785,12,25),
+(1121,8,12,26),
+(35,43,12,27),
+(36,43,12,28),
+(1129,698,12,29),
+(1122,698,12,30),
+(37,3047,12,31),
+(38,7785,12,32),
+(41,63,12,33),
+(42,1048,12,34),
+(43,4577,12,35),
+(44,11730,12,36),
+(17,2,12,37),
+(1341,3,12,38),
+(118,76,13,1),
+(906,1242,13,2),
+(907,5382,13,3),
+(908,13685,13,4),
+(112,56,13,5),
+(113,933,13,6),
+(114,4036,13,7),
+(115,4036,13,8),
+(845,10224,13,9),
+(116,38,13,10),
+(875,621,13,11),
+(876,2691,13,12),
+(877,6808,13,13),
+(17,2,13,14),
+(1341,3,13,15),
+(1665,575,13,16),
+(1661,1150,13,17),
+(3031,460,13,18),
+(1785,288,13,19),
+(3947,40,13,20),
+(2509,17,13,21),
+(1835,8,13,22),
+(736,460,13,23),
+(1060,103,13,24),
+(1831,86,13,25),
+(1833,86,13,26),
+(734,1380,13,27),
+(735,2760,13,28),
+(1294,86,14,1),
+(1095,86,14,2),
+(1050,115,14,3),
+(1152,115,14,4),
+(1049,115,14,5),
+(1048,115,14,6),
+(1051,115,14,7),
+(1099,575,14,8),
+(1053,575,14,9),
+(1055,575,14,10),
+(1056,575,14,11),
+(1052,575,14,12),
+(1054,575,14,13),
+(1058,575,14,14),
+(1098,575,14,15),
+(1097,632,14,16),
+(1096,632,14,17),
+(1370,862,14,18),
+(1401,862,14,19),
+(1411,862,14,20),
+(1372,862,14,21),
+(1513,920,14,22),
+(1399,862,14,23),
+(1386,862,14,24),
+(1377,862,14,25),
+(1383,862,14,26),
+(1514,920,14,27),
+(1405,862,14,28),
+(1403,862,14,29),
+(1371,862,14,30),
+(1515,920,14,31),
+(1333,64920,15,1),
+(66,64920,15,2),
+(67,64920,15,3),
+(122,64920,15,4),
+(154,64920,15,5),
+(216,64920,15,6),
+(271,64920,15,7),
+(2,163200,15,8),
+(218,163200,15,9),
+(272,163200,15,10),
+(15,163200,15,11),
+(68,292800,15,12),
+(219,292800,15,13),
+(273,292800,15,14),
+(155,292800,15,15),
+(87,292800,15,16),
+(16,292800,15,17),
+(123,490800,15,18),
+(220,490800,15,19),
+(221,490800,15,20),
+(274,490800,15,21),
+(156,490800,15,22),
+(166,490800,15,23),
+(168,490800,15,24),
+(291,490800,15,25),
+(256,163200,15,26),
+(257,292800,15,27),
+(258,490800,15,28),
+(30,5964,15,29),
+(23,9552,15,30),
+(412,15240,15,31),
+(390,24360,15,32),
+(24,24360,15,33),
+(31,15240,15,34),
+(25,38160,15,35),
+(26,59040,15,36),
+(33,27600,15,37),
+(32,23880,15,38),
+(27,44280,15,39),
+(34,36840,15,40),
+(413,46920,15,41),
+(347,100200,15,42),
+(20,3336,15,43),
+(102,8532,15,44),
+(625,15480,15,45),
+(626,26280,15,46),
+(49,3180,15,47),
+(50,8124,15,48),
+(51,14760,15,49),
+(604,25080,15,50),
+(37,3180,15,51),
+(38,8124,15,52),
+(39,14760,15,53),
+(40,25080,15,54),
+(43,4776,15,55),
+(44,12240,15,56),
+(1148,22080,15,57),
+(45,37560,15,58),
+(17,2,15,59),
+(1341,4,15,60),
+(9,64920,16,1),
+(176,163200,16,2),
+(310,163200,16,3),
+(177,292800,16,4),
+(311,292800,16,5),
+(100,292800,16,6),
+(178,490800,16,7),
+(101,490800,16,8),
+(312,490800,16,9),
+(314,490800,16,10),
+(179,772800,16,11),
+(182,772800,16,12),
+(464,5964,16,13),
+(429,9552,16,14),
+(1104,15240,16,15),
+(1101,24360,16,16),
+(1105,27600,16,17),
+(1102,44280,16,18),
+(465,46920,16,19),
+(432,75120,16,20),
+(20,3336,16,21),
+(102,8532,16,22),
+(625,15480,16,23),
+(626,26280,16,24),
+(49,3180,16,25),
+(50,8124,16,26),
+(51,14760,16,27),
+(604,25080,16,28),
+(37,3180,16,29),
+(38,8124,16,30),
+(39,14760,16,31),
+(40,25080,16,32),
+(43,4776,16,33),
+(44,12240,16,34),
+(1148,22080,16,35),
+(45,37560,16,36),
+(17,2,16,37),
+(1341,4,16,38),
+(1333,64920,17,1),
+(66,64920,17,2),
+(67,64920,17,3),
+(122,64920,17,4),
+(154,64920,17,5),
+(216,64920,17,6),
+(271,64920,17,7),
+(2,163200,17,8),
+(218,163200,17,9),
+(272,163200,17,10),
+(15,163200,17,11),
+(68,292800,17,12),
+(219,292800,17,13),
+(273,292800,17,14),
+(155,292800,17,15),
+(87,292800,17,16),
+(16,292800,17,17),
+(123,490800,17,18),
+(220,490800,17,19),
+(221,490800,17,20),
+(274,490800,17,21),
+(156,490800,17,22),
+(166,490800,17,23),
+(168,490800,17,24),
+(291,490800,17,25),
+(256,163200,17,26),
+(257,292800,17,27),
+(258,490800,17,28),
+(30,5964,17,29),
+(23,9552,17,30),
+(412,15240,17,31),
+(390,24360,17,32),
+(24,24360,17,33),
+(31,15240,17,34),
+(25,38160,17,35),
+(26,59040,17,36),
+(33,27600,17,37),
+(32,23880,17,38),
+(27,44280,17,39),
+(34,36840,17,40),
+(413,46920,17,41),
+(347,100200,17,42),
+(20,3336,17,43),
+(102,8532,17,44),
+(625,15480,17,45),
+(626,26280,17,46),
+(49,3180,17,47),
+(50,8124,17,48),
+(51,14760,17,49),
+(604,25080,17,50),
+(37,3180,17,51),
+(38,8124,17,52),
+(39,14760,17,53),
+(40,25080,17,54),
+(43,4776,17,55),
+(44,12240,17,56),
+(1148,22080,17,57),
+(45,37560,17,58),
+(17,2,17,59),
+(1341,4,17,60),
+(9,64920,18,1),
+(176,163200,18,2),
+(310,163200,18,3),
+(177,292800,18,4),
+(311,292800,18,5),
+(100,292800,18,6),
+(178,490800,18,7),
+(101,490800,18,8),
+(312,490800,18,9),
+(314,490800,18,10),
+(179,772800,18,11),
+(182,772800,18,12),
+(464,5964,18,13),
+(429,9552,18,14),
+(1104,15240,18,15),
+(1101,24360,18,16),
+(1105,27600,18,17),
+(1102,44280,18,18),
+(465,46920,18,19),
+(432,75120,18,20),
+(20,3336,18,21),
+(102,8532,18,22),
+(625,15480,18,23),
+(626,26280,18,24),
+(49,3180,18,25),
+(50,8124,18,26),
+(51,14760,18,27),
+(604,25080,18,28),
+(37,3180,18,29),
+(38,8124,18,30),
+(39,14760,18,31),
+(40,25080,18,32),
+(43,4776,18,33),
+(44,12240,18,34),
+(1148,22080,18,35),
+(45,37560,18,36),
+(17,2,18,37),
+(1341,4,18,38),
+(907,5616,19,1),
+(908,14280,19,2),
+(114,4212,19,3),
+(115,4212,19,4),
+(845,10668,19,5),
+(876,2808,19,6),
+(877,7104,19,7),
+(1099,600,19,8),
+(1053,600,19,9),
+(1055,600,19,10),
+(1056,600,19,11),
+(1052,600,19,12),
+(1054,600,19,13),
+(1058,600,19,14),
+(1098,600,19,15),
+(1097,660,19,16),
+(1096,660,19,17),
+(1370,900,19,18),
+(1401,900,19,19),
+(1411,900,19,20),
+(1372,900,19,21),
+(1513,960,19,22),
+(1399,900,19,23),
+(1386,900,19,24),
+(1856,1920,19,25),
+(1377,900,19,26),
+(1383,900,19,27),
+(1514,960,19,28),
+(1405,900,19,29),
+(1403,900,19,30),
+(1371,900,19,31),
+(1515,960,19,32),
+(1667,960,19,33),
+(1669,960,19,34),
+(1671,960,19,35),
+(1512,1380,19,36),
+(1379,1380,19,37),
+(1402,1500,19,38),
+(1517,1500,19,39),
+(1415,1500,19,40),
+(1391,1500,19,41),
+(1398,1500,19,42),
+(1389,1500,19,43),
+(1388,1500,19,44),
+(1410,1500,19,45),
+(1404,1500,19,46),
+(1417,1500,19,47),
+(1400,1500,19,48),
+(1418,1500,19,49),
+(1668,1500,19,50),
+(1670,1500,19,51),
+(3038,1860,19,52),
+(1378,1920,19,53),
+(1516,2160,19,54),
+(1414,2160,19,55),
+(1385,2160,19,56),
+(1394,2160,19,57),
+(1526,480,19,58),
+(1522,900,19,59),
+(1535,960,19,60),
+(1521,960,19,61),
+(1523,960,19,62),
+(1534,960,19,63),
+(1537,960,19,64),
+(1533,1500,19,65),
+(1536,1500,19,66),
+(1532,1500,19,67),
+(1528,2160,19,68),
+(1519,2160,19,69),
+(1518,2160,19,70),
+(17,2,19,71),
+(1341,4,19,72),
+(1665,600,19,73),
+(1661,1200,19,74),
+(3031,480,19,75),
+(1785,300,19,76),
+(1831,90,19,77),
+(1833,90,19,78),
+(734,1440,19,79),
+(735,2880,19,80),
+(1061,396,19,81),
+(1832,216,19,82),
+(736,480,19,83),
+(737,2400,19,84),
+(1829,600,19,85),
+(2130,1200,19,86),
+(4916,960,19,87),
+(4906,1500,19,88),
+(4908,1500,19,89),
+(4445,6120,19,90),
+(4446,6120,19,91),
+(4447,6120,19,92),
+(4448,6120,19,93),
+(4449,6120,19,94),
+(4450,6120,19,95),
+(4451,6120,19,96),
+(4452,6120,19,97),
+(4453,6120,19,98),
+(4454,6120,19,99),
+(4455,6120,19,100),
+(4456,6120,19,101),
+(4910,2160,19,102),
+(4457,14400,19,103),
+(4458,14400,19,104),
+(4459,14400,19,105),
+(4460,14400,19,106),
+(4461,14400,19,107),
+(4462,14400,19,108),
+(4463,14400,19,109),
+(4464,14400,19,110),
+(4465,14400,19,111),
+(4466,14400,19,112),
+(4467,14400,19,113),
+(4481,14400,19,114),
+(4482,14400,19,115),
+(4483,14400,19,116),
+(4484,14400,19,117),
+(4485,14400,19,118),
+(4486,14400,19,119),
+(4487,14400,19,120),
+(4488,14400,19,121),
+(4489,14400,19,122),
+(4490,14400,19,123),
+(4491,14400,19,124),
+(4492,14400,19,125),
+(4493,14400,19,126),
+(4625,600,19,127),
+(4626,600,19,128),
+(4627,600,19,129),
+(4628,600,19,130),
+(5192,120,19,131),
+(5193,180,19,132),
+(5194,300,19,133),
+(5146,13860,19,134),
+(5140,5940,19,135),
+(5134,2760,19,136),
+(5262,46200,19,137),
+(5256,19800,19,138),
+(5250,9240,19,139),
+(6037,120,19,140),
+(5589,120,19,141),
+(6035,2880,19,142),
+(907,5616,20,1),
+(908,14280,20,2),
+(114,4212,20,3),
+(115,4212,20,4),
+(845,10668,20,5),
+(876,2808,20,6),
+(877,7104,20,7),
+(1099,600,20,8),
+(1053,600,20,9),
+(1055,600,20,10),
+(1056,600,20,11),
+(1052,600,20,12),
+(1054,600,20,13),
+(1058,600,20,14),
+(1098,600,20,15),
+(1097,660,20,16),
+(1096,660,20,17),
+(1370,900,20,18),
+(1401,900,20,19),
+(1411,900,20,20),
+(1372,900,20,21),
+(1513,960,20,22),
+(1399,900,20,23),
+(1386,900,20,24),
+(1856,1920,20,25),
+(1377,900,20,26),
+(1383,900,20,27),
+(1514,960,20,28),
+(1405,900,20,29),
+(1403,900,20,30),
+(1371,900,20,31),
+(1515,960,20,32),
+(1667,960,20,33),
+(1669,960,20,34),
+(1671,960,20,35),
+(1512,1380,20,36),
+(1379,1380,20,37),
+(1402,1500,20,38),
+(1517,1500,20,39),
+(1415,1500,20,40),
+(1391,1500,20,41),
+(1398,1500,20,42),
+(1389,1500,20,43),
+(1388,1500,20,44),
+(1410,1500,20,45),
+(1404,1500,20,46),
+(1417,1500,20,47),
+(1400,1500,20,48),
+(1418,1500,20,49),
+(1668,1500,20,50),
+(1670,1500,20,51),
+(3038,1860,20,52),
+(1378,1920,20,53),
+(1516,2160,20,54),
+(1414,2160,20,55),
+(1385,2160,20,56),
+(1394,2160,20,57),
+(1526,480,20,58),
+(1522,900,20,59),
+(1535,960,20,60),
+(1521,960,20,61),
+(1523,960,20,62),
+(1534,960,20,63),
+(1537,960,20,64),
+(1533,1500,20,65),
+(1536,1500,20,66),
+(1532,1500,20,67),
+(1528,2160,20,68),
+(1519,2160,20,69),
+(1518,2160,20,70),
+(17,2,20,71),
+(1341,4,20,72),
+(1665,600,20,73),
+(1661,1200,20,74),
+(3031,480,20,75),
+(1785,300,20,76),
+(1831,90,20,77),
+(1833,90,20,78),
+(734,1440,20,79),
+(735,2880,20,80),
+(1061,396,20,81),
+(1832,216,20,82),
+(736,480,20,83),
+(737,2400,20,84),
+(1829,600,20,85),
+(2130,1200,20,86),
+(4916,960,20,87),
+(4906,1500,20,88),
+(4908,1500,20,89),
+(4445,6120,20,90),
+(4446,6120,20,91),
+(4447,6120,20,92),
+(4448,6120,20,93),
+(4449,6120,20,94),
+(4450,6120,20,95),
+(4451,6120,20,96),
+(4452,6120,20,97),
+(4453,6120,20,98),
+(4454,6120,20,99),
+(4455,6120,20,100),
+(4456,6120,20,101),
+(4910,2160,20,102),
+(4457,14400,20,103),
+(4458,14400,20,104),
+(4459,14400,20,105),
+(4460,14400,20,106),
+(4461,14400,20,107),
+(4462,14400,20,108),
+(4463,14400,20,109),
+(4464,14400,20,110),
+(4465,14400,20,111),
+(4466,14400,20,112),
+(4467,14400,20,113),
+(4481,14400,20,114),
+(4482,14400,20,115),
+(4483,14400,20,116),
+(4484,14400,20,117),
+(4485,14400,20,118),
+(4486,14400,20,119),
+(4487,14400,20,120),
+(4488,14400,20,121),
+(4489,14400,20,122),
+(4490,14400,20,123),
+(4491,14400,20,124),
+(4492,14400,20,125),
+(4493,14400,20,126),
+(4625,600,20,127),
+(4626,600,20,128),
+(4627,600,20,129),
+(4628,600,20,130),
+(5192,120,20,131),
+(5193,180,20,132),
+(5194,300,20,133),
+(5146,13860,20,134),
+(5140,5940,20,135),
+(5134,2760,20,136),
+(5262,46200,20,137),
+(5256,19800,20,138),
+(5250,9240,20,139),
+(6037,120,20,140),
+(5589,120,20,141),
+(6035,2880,20,142),
+(123,613500,21,1),
+(220,613500,21,2),
+(221,613500,21,3),
+(156,613500,21,4),
+(166,613500,21,5),
+(168,613500,21,6),
+(291,613500,21,7),
+(69,966000,21,8),
+(222,966000,21,9),
+(275,966000,21,10),
+(34,46050,21,11),
+(347,125250,21,12),
+(391,93900,21,13),
+(376,78300,21,14),
+(1105,34500,21,15),
+(1102,55350,21,16),
+(465,58650,21,17),
+(432,93900,21,18),
+(17,3,22,1),
+(1341,4,22,2),
+(1061,495,22,3),
+(1060,135,22,4),
+(907,7020,22,5),
+(908,17850,22,6),
+(114,5265,22,7),
+(115,5265,22,8),
+(845,13335,22,9),
+(876,3510,22,10),
+(877,8880,22,11),
+(5192,150,22,12),
+(5146,17337,22,13),
+(5140,7430,22,14),
+(5134,3452,22,15),
+(5262,57788,22,16),
+(5256,24766,22,17),
+(5250,11529,22,18),
+(908,13090,23,1),
+(909,23430,23,2),
+(910,39490,23,3),
+(911,62480,23,4),
+(912,94270,23,5),
+(913,137500,23,6),
+(845,9779,23,7),
+(846,17600,23,8),
+(847,29590,23,9),
+(848,46860,23,10),
+(849,70730,23,11),
+(850,102740,23,12),
+(877,6512,23,13),
+(878,11770,23,14),
+(890,19800,23,15),
+(879,31240,23,16),
+(880,47080,23,17),
+(881,68530,23,18),
+(1661,1100,23,19),
+(3031,440,23,20),
+(1785,275,23,21),
+(1341,3,23,22),
+(1342,6,23,23),
+(734,1320,23,24),
+(735,2640,23,25),
+(1061,363,23,26),
+(1832,198,23,27),
+(1834,198,23,28),
+(737,2200,23,29),
+(1829,550,23,30),
+(1830,550,23,31),
+(2130,1100,23,32),
+(2131,3300,23,33),
+(2132,11000,23,34),
+(4625,550,23,35),
+(4626,550,23,36),
+(4627,550,23,37),
+(4628,550,23,38),
+(5192,110,23,39),
+(5193,165,23,40),
+(5194,275,23,41),
+(5195,440,23,42),
+(5146,12700,23,43),
+(5140,5445,23,44),
+(5134,2530,23,45),
+(5262,42333,23,46),
+(5256,18145,23,47),
+(5250,8470,23,48),
+(6037,110,23,49),
+(5589,110,23,50),
+(6035,2640,23,51),
+(908,13090,24,1),
+(909,23430,24,2),
+(910,39490,24,3),
+(911,62480,24,4),
+(912,94270,24,5),
+(913,137500,24,6),
+(845,9779,24,7),
+(846,17600,24,8),
+(847,29590,24,9),
+(848,46860,24,10),
+(849,70730,24,11),
+(850,102740,24,12),
+(877,6512,24,13),
+(878,11770,24,14),
+(890,19800,24,15),
+(879,31240,24,16),
+(880,47080,24,17),
+(881,68530,24,18),
+(1661,1100,24,19),
+(3031,440,24,20),
+(1785,275,24,21),
+(1341,3,24,22),
+(1342,6,24,23),
+(734,1320,24,24),
+(735,2640,24,25),
+(1061,363,24,26),
+(1832,198,24,27),
+(1834,198,24,28),
+(737,2200,24,29),
+(1829,550,24,30),
+(1830,550,24,31),
+(2130,1100,24,32),
+(2131,3300,24,33),
+(2132,11000,24,34),
+(4625,550,24,35),
+(4626,550,24,36),
+(4627,550,24,37),
+(4628,550,24,38),
+(5192,110,24,39),
+(5193,165,24,40),
+(5194,275,24,41),
+(5195,440,24,42),
+(5146,12700,24,43),
+(5140,5445,24,44),
+(5134,2530,24,45),
+(5262,42333,24,46),
+(5256,18145,24,47),
+(5250,8470,24,48),
+(6037,110,24,49),
+(5589,110,24,50),
+(6035,2640,24,51),
+(2,149600,25,1),
+(218,149600,25,2),
+(272,149600,25,3),
+(15,149600,25,4),
+(68,268400,25,5),
+(219,268400,25,6),
+(273,268400,25,7),
+(155,268400,25,8),
+(87,268400,25,9),
+(16,268400,25,10),
+(123,449900,25,11),
+(220,449900,25,12),
+(221,449900,25,13),
+(274,449900,25,14),
+(156,449900,25,15),
+(166,449900,25,16),
+(168,449900,25,17),
+(291,449900,25,18),
+(69,708400,25,19),
+(126,708400,25,20),
+(222,708400,25,21),
+(275,708400,25,22),
+(276,708400,25,23),
+(277,708400,25,24),
+(86,708400,25,25),
+(292,708400,25,26),
+(295,708400,25,27),
+(124,1063700,25,28),
+(127,1063700,25,29),
+(130,1063700,25,30),
+(223,1063700,25,31),
+(278,1063700,25,32),
+(157,1063700,25,33),
+(293,1063700,25,34),
+(296,1063700,25,35),
+(129,1540000,25,36),
+(224,1540000,25,37),
+(1660,1540000,25,38),
+(279,1540000,25,39),
+(158,1540000,25,40),
+(172,1540000,25,41),
+(294,1540000,25,42),
+(93,1540000,25,43),
+(256,149600,25,44),
+(257,268400,25,45),
+(258,449900,25,46),
+(259,708400,25,47),
+(260,1063700,25,48),
+(261,1540000,25,49),
+(17,2,25,50),
+(1341,3,25,51),
+(1342,6,25,52),
+(176,149600,26,1),
+(310,149600,26,2),
+(177,268400,26,3),
+(311,268400,26,4),
+(100,268400,26,5),
+(178,449900,26,6),
+(101,449900,26,7),
+(312,449900,26,8),
+(314,449900,26,9),
+(179,708400,26,10),
+(182,708400,26,11),
+(183,708400,26,12),
+(185,708400,26,13),
+(315,708400,26,14),
+(83,787600,26,15),
+(143,787600,26,16),
+(144,787600,26,17),
+(238,1063700,26,18),
+(239,1063700,26,19),
+(240,1063700,26,20),
+(241,1063700,26,21),
+(186,1063700,26,22),
+(316,1063700,26,23),
+(317,1063700,26,24),
+(90,1540000,26,25),
+(318,1540000,26,26),
+(321,1672000,26,27),
+(17,2,26,28),
+(1341,3,26,29),
+(1342,6,26,30),
+(2,149600,27,1),
+(218,149600,27,2),
+(272,149600,27,3),
+(15,149600,27,4),
+(68,268400,27,5),
+(219,268400,27,6),
+(273,268400,27,7),
+(155,268400,27,8),
+(87,268400,27,9),
+(16,268400,27,10),
+(123,449900,27,11),
+(220,449900,27,12),
+(221,449900,27,13),
+(274,449900,27,14),
+(156,449900,27,15),
+(166,449900,27,16),
+(168,449900,27,17),
+(291,449900,27,18),
+(69,708400,27,19),
+(126,708400,27,20),
+(222,708400,27,21),
+(275,708400,27,22),
+(276,708400,27,23),
+(277,708400,27,24),
+(86,708400,27,25),
+(292,708400,27,26),
+(295,708400,27,27),
+(124,1063700,27,28),
+(127,1063700,27,29),
+(130,1063700,27,30),
+(223,1063700,27,31),
+(278,1063700,27,32),
+(157,1063700,27,33),
+(293,1063700,27,34),
+(296,1063700,27,35),
+(129,1540000,27,36),
+(224,1540000,27,37),
+(1660,1540000,27,38),
+(279,1540000,27,39),
+(158,1540000,27,40),
+(172,1540000,27,41),
+(294,1540000,27,42),
+(93,1540000,27,43),
+(256,149600,27,44),
+(257,268400,27,45),
+(258,449900,27,46),
+(259,708400,27,47),
+(260,1063700,27,48),
+(261,1540000,27,49),
+(17,2,27,50),
+(1341,3,27,51),
+(1342,6,27,52),
+(176,149600,28,1),
+(310,149600,28,2),
+(177,268400,28,3),
+(311,268400,28,4),
+(100,268400,28,5),
+(178,449900,28,6),
+(101,449900,28,7),
+(312,449900,28,8),
+(314,449900,28,9),
+(179,708400,28,10),
+(182,708400,28,11),
+(183,708400,28,12),
+(185,708400,28,13),
+(315,708400,28,14),
+(83,787600,28,15),
+(143,787600,28,16),
+(144,787600,28,17),
+(238,1063700,28,18),
+(239,1063700,28,19),
+(240,1063700,28,20),
+(241,1063700,28,21),
+(186,1063700,28,22),
+(316,1063700,28,23),
+(317,1063700,28,24),
+(90,1540000,28,25),
+(318,1540000,28,26),
+(321,1672000,28,27),
+(17,2,28,28),
+(1341,3,28,29),
+(1342,6,28,30),
+(1370,825,29,1),
+(1401,825,29,2),
+(1411,825,29,3),
+(1372,825,29,4),
+(1513,880,29,5),
+(1399,825,29,6),
+(1386,825,29,7),
+(1856,1760,29,8),
+(1377,825,29,9),
+(1383,825,29,10),
+(1514,880,29,11),
+(1405,825,29,12),
+(1403,825,29,13),
+(1371,825,29,14),
+(1515,880,29,15),
+(1667,880,29,16),
+(1669,880,29,17),
+(1671,880,29,18),
+(1512,1265,29,19),
+(1379,1265,29,20),
+(1402,1375,29,21),
+(1517,1375,29,22),
+(1415,1375,29,23),
+(1391,1375,29,24),
+(1398,1375,29,25),
+(1389,1375,29,26),
+(1388,1375,29,27),
+(1410,1375,29,28),
+(1404,1375,29,29),
+(1417,1375,29,30),
+(1400,1375,29,31),
+(1418,1375,29,32),
+(1668,1375,29,33),
+(1670,1375,29,34),
+(3038,1705,29,35),
+(1378,1760,29,36),
+(1516,1980,29,37),
+(1414,1980,29,38),
+(1385,1980,29,39),
+(1394,1980,29,40),
+(1412,2695,29,41),
+(3944,2695,29,42),
+(1392,2695,29,43),
+(1407,2695,29,44),
+(1416,2695,29,45),
+(1397,2695,29,46),
+(1406,2695,29,47),
+(1408,2695,29,48),
+(1390,2695,29,49),
+(1387,2695,29,50),
+(1409,2695,29,51),
+(1413,2695,29,52),
+(1381,2860,29,53),
+(1382,2860,29,54),
+(1384,2860,29,55),
+(1380,550,29,56),
+(1535,880,29,57),
+(1521,880,29,58),
+(1523,880,29,59),
+(1534,880,29,60),
+(1537,880,29,61),
+(1533,1375,29,62),
+(1536,1375,29,63),
+(1532,1375,29,64),
+(1528,1980,29,65),
+(1519,1980,29,66),
+(1518,1980,29,67),
+(1520,2695,29,68),
+(1530,2695,29,69),
+(4916,895,29,70),
+(4906,1375,29,71),
+(4908,1375,29,72),
+(4910,1985,29,73),
+(4457,13200,29,74),
+(4458,13200,29,75),
+(4459,13200,29,76),
+(4460,13200,29,77),
+(4461,13200,29,78),
+(4462,13200,29,79),
+(4463,13200,29,80),
+(4464,13200,29,81),
+(4465,13200,29,82),
+(4466,13200,29,83),
+(4467,13200,29,84),
+(4468,13200,29,85),
+(4481,13200,29,86),
+(4482,13200,29,87),
+(4483,13200,29,88),
+(4484,13200,29,89),
+(4485,13200,29,90),
+(4486,13200,29,91),
+(4487,13200,29,92),
+(4488,13200,29,93),
+(4489,13200,29,94),
+(4490,13200,29,95),
+(4491,13200,29,96),
+(4492,13200,29,97),
+(4493,23100,29,98),
+(4494,23100,29,99),
+(4495,23100,29,100),
+(4496,23100,29,101),
+(4497,23100,29,102),
+(4498,23100,29,103),
+(4499,23100,29,104),
+(4500,23100,29,105),
+(4501,23100,29,106),
+(4502,23100,29,107),
+(4503,23100,29,108),
+(4504,23100,29,109),
+(17,2,30,1),
+(1341,3,30,2),
+(177,268400,30,3),
+(311,268400,30,4),
+(100,268400,30,5),
+(178,449900,30,6),
+(101,449900,30,7),
+(312,449900,30,8),
+(314,449900,30,9),
+(182,708400,30,10),
+(183,708400,30,11),
+(185,708400,30,12),
+(315,708400,30,13),
+(83,787600,30,14),
+(143,787600,30,15),
+(144,787600,30,16),
+(238,1063700,30,17),
+(239,1063700,30,18),
+(240,1063700,30,19),
+(1105,25300,30,20),
+(1102,40590,30,21),
+(465,43010,30,22),
+(432,68860,30,23),
+(467,68750,30,24),
+(1,883,31,1),
+(4,883,31,2),
+(11,883,31,3),
+(13,883,31,4),
+(3,14375,31,5),
+(152,9280,31,6),
+(12,14375,31,7),
+(215,14375,31,8),
+(14,14375,31,9),
+(5,14375,31,10),
+(153,21275,31,11),
+(1333,62215,31,12),
+(66,62215,31,13),
+(67,62215,31,14),
+(122,62215,31,15),
+(154,62215,31,16),
+(216,62215,31,17),
+(271,62215,31,18),
+(2,156400,31,19),
+(218,156400,31,20),
+(272,156400,31,21),
+(15,156400,31,22),
+(28,106,31,23),
+(21,169,31,24),
+(29,1748,31,25),
+(22,2794,31,26),
+(30,5716,31,27),
+(23,9154,31,28),
+(2386,5716,31,29),
+(412,14605,31,30),
+(390,23345,31,31),
+(24,23345,31,32),
+(31,14605,31,33),
+(18,45,31,34),
+(19,734,31,35),
+(20,3197,31,36),
+(102,8176,31,37),
+(48,43,31,38),
+(1119,698,31,39),
+(49,3047,31,40),
+(50,7785,31,41),
+(1121,8,31,42),
+(35,43,31,43),
+(36,43,31,44),
+(1129,698,31,45),
+(1122,698,31,46),
+(37,3047,31,47),
+(38,7785,31,48),
+(41,63,31,49),
+(42,1048,31,50),
+(43,4577,31,51),
+(44,11730,31,52),
+(17,2,31,53),
+(1341,3,31,54),
+(7,883,32,1),
+(308,883,32,2),
+(8,14375,32,3),
+(99,14375,32,4),
+(9,62215,32,5),
+(176,156400,32,6),
+(310,156400,32,7),
+(462,106,32,8),
+(426,169,32,9),
+(1103,1748,32,10),
+(1100,2794,32,11),
+(463,1748,32,12),
+(428,2794,32,13),
+(464,5716,32,14),
+(429,9154,32,15),
+(1104,14605,32,16),
+(1101,23345,32,17),
+(18,45,32,18),
+(19,734,32,19),
+(20,3197,32,20),
+(102,8176,32,21),
+(48,43,32,22),
+(1119,698,32,23),
+(49,3047,32,24),
+(50,7785,32,25),
+(1121,8,32,26),
+(35,43,32,27),
+(36,43,32,28),
+(1129,698,32,29),
+(1122,698,32,30),
+(37,3047,32,31),
+(38,7785,32,32),
+(41,63,32,33),
+(42,1048,32,34),
+(43,4577,32,35),
+(44,11730,32,36),
+(17,2,32,37),
+(1341,3,32,38),
+(1,883,33,1),
+(4,883,33,2),
+(11,883,33,3),
+(13,883,33,4),
+(3,14375,33,5),
+(152,9280,33,6),
+(12,14375,33,7),
+(215,14375,33,8),
+(14,14375,33,9),
+(5,14375,33,10),
+(153,21275,33,11),
+(1333,62215,33,12),
+(66,62215,33,13),
+(67,62215,33,14),
+(122,62215,33,15),
+(154,62215,33,16),
+(216,62215,33,17),
+(271,62215,33,18),
+(2,156400,33,19),
+(218,156400,33,20),
+(272,156400,33,21),
+(15,156400,33,22),
+(28,106,33,23),
+(21,169,33,24),
+(29,1748,33,25),
+(22,2794,33,26),
+(30,5716,33,27),
+(23,9154,33,28),
+(2386,5716,33,29),
+(412,14605,33,30),
+(390,23345,33,31),
+(24,23345,33,32),
+(31,14605,33,33),
+(18,45,33,34),
+(19,734,33,35),
+(20,3197,33,36),
+(102,8176,33,37),
+(48,43,33,38),
+(1119,698,33,39),
+(49,3047,33,40),
+(50,7785,33,41),
+(1121,8,33,42),
+(35,43,33,43),
+(36,43,33,44),
+(1129,698,33,45),
+(1122,698,33,46),
+(37,3047,33,47),
+(38,7785,33,48),
+(41,63,33,49),
+(42,1048,33,50),
+(43,4577,33,51),
+(44,11730,33,52),
+(17,2,33,53),
+(1341,3,33,54),
+(7,883,34,1),
+(308,883,34,2),
+(8,14375,34,3),
+(99,14375,34,4),
+(9,62215,34,5),
+(176,156400,34,6),
+(310,156400,34,7),
+(462,106,34,8),
+(426,169,34,9),
+(1103,1748,34,10),
+(1100,2794,34,11),
+(463,1748,34,12),
+(428,2794,34,13),
+(464,5716,34,14),
+(429,9154,34,15),
+(1104,14605,34,16),
+(1101,23345,34,17),
+(18,45,34,18),
+(19,734,34,19),
+(20,3197,34,20),
+(102,8176,34,21),
+(48,43,34,22),
+(1119,698,34,23),
+(49,3047,34,24),
+(50,7785,34,25),
+(1121,8,34,26),
+(35,43,34,27),
+(36,43,34,28),
+(1129,698,34,29),
+(1122,698,34,30),
+(37,3047,34,31),
+(38,7785,34,32),
+(41,63,34,33),
+(42,1048,34,34),
+(43,4577,34,35),
+(44,11730,34,36),
+(17,2,34,37),
+(1341,3,34,38),
+(118,76,35,1),
+(906,1242,35,2),
+(907,5382,35,3),
+(908,13685,35,4),
+(112,56,35,5),
+(113,933,35,6),
+(114,4036,35,7),
+(115,4036,35,8),
+(845,10224,35,9),
+(116,38,35,10),
+(875,621,35,11),
+(876,2691,35,12),
+(877,6808,35,13),
+(17,2,35,14),
+(1341,3,35,15),
+(1665,575,35,16),
+(1661,1150,35,17),
+(3031,460,35,18),
+(1785,288,35,19),
+(3947,40,35,20),
+(2509,17,35,21),
+(1835,8,35,22),
+(736,460,35,23),
+(1060,103,35,24),
+(1831,86,35,25),
+(1833,86,35,26),
+(734,1380,35,27),
+(735,2760,35,28),
+(1294,86,36,1),
+(1095,86,36,2),
+(1050,115,36,3),
+(1152,115,36,4),
+(1049,115,36,5),
+(1048,115,36,6),
+(1051,115,36,7),
+(1099,575,36,8),
+(1053,575,36,9),
+(1055,575,36,10),
+(1056,575,36,11),
+(1052,575,36,12),
+(1054,575,36,13),
+(1058,575,36,14),
+(1098,575,36,15),
+(1097,632,36,16),
+(1096,632,36,17),
+(1370,862,36,18),
+(1401,862,36,19),
+(1411,862,36,20),
+(1372,862,36,21),
+(1513,920,36,22),
+(1399,862,36,23),
+(1386,862,36,24),
+(1377,862,36,25),
+(1383,862,36,26),
+(1514,920,36,27),
+(1405,862,36,28),
+(1403,862,36,29),
+(1371,862,36,30),
+(1515,920,36,31),
+(1,883,37,1),
+(4,883,37,2),
+(11,883,37,3),
+(13,883,37,4),
+(3,14375,37,5),
+(152,9280,37,6),
+(12,14375,37,7),
+(215,14375,37,8),
+(14,14375,37,9),
+(5,14375,37,10),
+(153,21275,37,11),
+(1333,62215,37,12),
+(66,62215,37,13),
+(67,62215,37,14),
+(122,62215,37,15),
+(154,62215,37,16),
+(216,62215,37,17),
+(271,62215,37,18),
+(2,156400,37,19),
+(218,156400,37,20),
+(272,156400,37,21),
+(15,156400,37,22),
+(28,106,37,23),
+(21,169,37,24),
+(29,1748,37,25),
+(22,2794,37,26),
+(30,5716,37,27),
+(23,9154,37,28),
+(2386,5716,37,29),
+(412,14605,37,30),
+(390,23345,37,31),
+(24,23345,37,32),
+(31,14605,37,33),
+(18,45,37,34),
+(19,734,37,35),
+(20,3197,37,36),
+(102,8176,37,37),
+(48,43,37,38),
+(1119,698,37,39),
+(49,3047,37,40),
+(50,7785,37,41),
+(1121,8,37,42),
+(35,43,37,43),
+(36,43,37,44),
+(1129,698,37,45),
+(1122,698,37,46),
+(37,3047,37,47),
+(38,7785,37,48),
+(41,63,37,49),
+(42,1048,37,50),
+(43,4577,37,51),
+(44,11730,37,52),
+(17,2,37,53),
+(1341,3,37,54),
+(7,883,38,1),
+(308,883,38,2),
+(8,14375,38,3),
+(99,14375,38,4),
+(9,62215,38,5),
+(176,156400,38,6),
+(310,156400,38,7),
+(462,106,38,8),
+(426,169,38,9),
+(1103,1748,38,10),
+(1100,2794,38,11),
+(463,1748,38,12),
+(428,2794,38,13),
+(464,5716,38,14),
+(429,9154,38,15),
+(1104,14605,38,16),
+(1101,23345,38,17),
+(18,45,38,18),
+(19,734,38,19),
+(20,3197,38,20),
+(102,8176,38,21),
+(48,43,38,22),
+(1119,698,38,23),
+(49,3047,38,24),
+(50,7785,38,25),
+(1121,8,38,26),
+(35,43,38,27),
+(36,43,38,28),
+(1129,698,38,29),
+(1122,698,38,30),
+(37,3047,38,31),
+(38,7785,38,32),
+(41,63,38,33),
+(42,1048,38,34),
+(43,4577,38,35),
+(44,11730,38,36),
+(17,2,38,37),
+(1341,3,38,38),
+(1,883,39,1),
+(4,883,39,2),
+(11,883,39,3),
+(13,883,39,4),
+(3,14375,39,5),
+(152,9280,39,6),
+(12,14375,39,7),
+(215,14375,39,8),
+(14,14375,39,9),
+(5,14375,39,10),
+(153,21275,39,11),
+(1333,62215,39,12),
+(66,62215,39,13),
+(67,62215,39,14),
+(122,62215,39,15),
+(154,62215,39,16),
+(216,62215,39,17),
+(271,62215,39,18),
+(2,156400,39,19),
+(218,156400,39,20),
+(272,156400,39,21),
+(15,156400,39,22),
+(28,106,39,23),
+(21,169,39,24),
+(29,1748,39,25),
+(22,2794,39,26),
+(30,5716,39,27),
+(23,9154,39,28),
+(2386,5716,39,29),
+(412,14605,39,30),
+(390,23345,39,31),
+(24,23345,39,32),
+(31,14605,39,33),
+(18,45,39,34),
+(19,734,39,35),
+(20,3197,39,36),
+(102,8176,39,37),
+(48,43,39,38),
+(1119,698,39,39),
+(49,3047,39,40),
+(50,7785,39,41),
+(1121,8,39,42),
+(35,43,39,43),
+(36,43,39,44),
+(1129,698,39,45),
+(1122,698,39,46),
+(37,3047,39,47),
+(38,7785,39,48),
+(41,63,39,49),
+(42,1048,39,50),
+(43,4577,39,51),
+(44,11730,39,52),
+(17,2,39,53),
+(1341,3,39,54),
+(7,883,40,1),
+(308,883,40,2),
+(8,14375,40,3),
+(99,14375,40,4),
+(9,62215,40,5),
+(176,156400,40,6),
+(310,156400,40,7),
+(462,106,40,8),
+(426,169,40,9),
+(1103,1748,40,10),
+(1100,2794,40,11),
+(463,1748,40,12),
+(428,2794,40,13),
+(464,5716,40,14),
+(429,9154,40,15),
+(1104,14605,40,16),
+(1101,23345,40,17),
+(18,45,40,18),
+(19,734,40,19),
+(20,3197,40,20),
+(102,8176,40,21),
+(48,43,40,22),
+(1119,698,40,23),
+(49,3047,40,24),
+(50,7785,40,25),
+(1121,8,40,26),
+(35,43,40,27),
+(36,43,40,28),
+(1129,698,40,29),
+(1122,698,40,30),
+(37,3047,40,31),
+(38,7785,40,32),
+(41,63,40,33),
+(42,1048,40,34),
+(43,4577,40,35),
+(44,11730,40,36),
+(17,2,40,37),
+(1341,3,40,38),
+(118,76,41,1),
+(906,1242,41,2),
+(907,5382,41,3),
+(908,13685,41,4),
+(112,56,41,5),
+(113,933,41,6),
+(114,4036,41,7),
+(115,4036,41,8),
+(845,10224,41,9),
+(116,38,41,10),
+(875,621,41,11),
+(876,2691,41,12),
+(877,6808,41,13),
+(17,2,41,14),
+(1341,3,41,15),
+(1665,575,41,16),
+(1661,1150,41,17),
+(3031,460,41,18),
+(1785,288,41,19),
+(3947,40,41,20),
+(2509,17,41,21),
+(1835,8,41,22),
+(736,460,41,23),
+(1060,103,41,24),
+(1831,86,41,25),
+(1833,86,41,26),
+(734,1380,41,27),
+(735,2760,41,28),
+(1294,86,42,1),
+(1095,86,42,2),
+(1050,115,42,3),
+(1152,115,42,4),
+(1049,115,42,5),
+(1048,115,42,6),
+(1051,115,42,7),
+(1099,575,42,8),
+(1053,575,42,9),
+(1055,575,42,10),
+(1056,575,42,11),
+(1052,575,42,12),
+(1054,575,42,13),
+(1058,575,42,14),
+(1098,575,42,15),
+(1097,632,42,16),
+(1096,632,42,17),
+(1370,862,42,18),
+(1401,862,42,19),
+(1411,862,42,20),
+(1372,862,42,21),
+(1513,920,42,22),
+(1399,862,42,23),
+(1386,862,42,24),
+(1377,862,42,25),
+(1383,862,42,26),
+(1514,920,42,27),
+(1405,862,42,28),
+(1403,862,42,29),
+(1371,862,42,30),
+(1515,920,42,31),
+(179,740600,43,1),
+(182,740600,43,2),
+(183,740600,43,3),
+(185,740600,43,4),
+(315,740600,43,5),
+(83,823400,43,6),
+(143,823400,43,7),
+(144,823400,43,8),
+(238,1112050,43,9),
+(239,1112050,43,10),
+(240,1112050,43,11),
+(241,1112050,43,12),
+(186,1112050,43,13),
+(316,1112050,43,14),
+(317,1112050,43,15),
+(1341,3,43,16),
+(1342,6,43,17),
+(432,71990,44,1),
+(467,71875,44,2),
+(434,114885,44,3),
+(468,71875,44,4),
+(435,114885,44,5),
+(469,109480,44,6),
+(436,174800,44,7),
+(626,25185,44,8),
+(627,40250,44,9),
+(628,61295,44,10),
+(604,24035,44,11),
+(605,38295,44,12),
+(63,58420,44,13),
+(40,24035,44,14),
+(1123,38295,44,15),
+(553,58420,44,16),
+(45,35995,44,17),
+(46,57500,44,18),
+(910,41285,45,1),
+(911,65320,45,2),
+(912,98555,45,3),
+(847,30935,45,4),
+(848,48990,45,5),
+(849,73945,45,6),
+(879,32660,45,7),
+(880,49220,45,8),
+(1341,3,45,9),
+(3031,460,45,10),
+(1785,288,45,11),
+(1061,379,45,12),
+(1832,207,45,13),
+(1834,207,45,14),
+(737,2300,45,15),
+(1829,575,45,16),
+(1516,2070,46,1),
+(1414,2070,46,2),
+(1385,2070,46,3),
+(1382,2990,46,4),
+(1384,2990,46,5),
+(3944,2818,46,6),
+(1392,2818,46,7),
+(1407,2818,46,8),
+(1416,2818,46,9),
+(1397,2818,46,10),
+(1406,2818,46,11),
+(1408,2818,46,12),
+(1390,2818,46,13),
+(1387,2818,46,14),
+(1409,2818,46,15),
+(1413,2818,46,16),
+(1381,2990,46,17),
+(1380,575,46,18),
+(1528,2070,46,19),
+(1519,2070,46,20),
+(1518,2070,46,21),
+(1520,2818,46,22),
+(1530,2818,46,23),
+(1333,62215,47,1),
+(66,62215,47,2),
+(67,62215,47,3),
+(122,62215,47,4),
+(154,62215,47,5),
+(216,62215,47,6),
+(271,62215,47,7),
+(2,156400,47,8),
+(218,156400,47,9),
+(272,156400,47,10),
+(15,156400,47,11),
+(68,280600,47,12),
+(219,280600,47,13),
+(273,280600,47,14),
+(155,280600,47,15),
+(87,280600,47,16),
+(16,280600,47,17),
+(123,470350,47,18),
+(220,470350,47,19),
+(221,470350,47,20),
+(274,470350,47,21),
+(156,470350,47,22),
+(166,470350,47,23),
+(168,470350,47,24),
+(291,470350,47,25),
+(256,156400,47,26),
+(257,280600,47,27),
+(258,470350,47,28),
+(17,2,47,29),
+(1341,3,47,30),
+(9,62215,48,1),
+(176,156400,48,2),
+(310,156400,48,3),
+(177,280600,48,4),
+(311,280600,48,5),
+(100,280600,48,6),
+(178,470350,48,7),
+(101,470350,48,8),
+(312,470350,48,9),
+(314,470350,48,10),
+(179,740600,48,11),
+(182,740600,48,12),
+(17,2,48,13),
+(1341,3,48,14),
+(30,5716,49,1),
+(23,9154,49,2),
+(412,14605,49,3),
+(390,23345,49,4),
+(24,23345,49,5),
+(31,14605,49,6),
+(25,36570,49,7),
+(26,56580,49,8),
+(33,26450,49,9),
+(32,22885,49,10),
+(27,42435,49,11),
+(34,35305,49,12),
+(413,44965,49,13),
+(347,96025,49,14),
+(20,3197,49,15),
+(102,8176,49,16),
+(625,14835,49,17),
+(626,25185,49,18),
+(49,3047,49,19),
+(50,7785,49,20),
+(51,14145,49,21),
+(604,24035,49,22),
+(37,3047,49,23),
+(38,7785,49,24),
+(39,14145,49,25),
+(40,24035,49,26),
+(43,4577,49,27),
+(44,11730,49,28),
+(1148,21160,49,29),
+(45,35995,49,30),
+(464,5716,50,1),
+(429,9154,50,2),
+(1104,14605,50,3),
+(1101,23345,50,4),
+(1105,26450,50,5),
+(1102,42435,50,6),
+(465,44965,50,7),
+(432,71990,50,8),
+(20,3197,50,9),
+(102,8176,50,10),
+(625,14835,50,11),
+(626,25185,50,12),
+(49,3047,50,13),
+(50,7785,50,14),
+(51,14145,50,15),
+(604,24035,50,16),
+(37,3047,50,17),
+(38,7785,50,18),
+(39,14145,50,19),
+(40,24035,50,20),
+(43,4577,50,21),
+(44,11730,50,22),
+(1148,21160,50,23),
+(45,35995,50,24),
+(17,2,50,25),
+(1341,3,50,26),
+(907,5382,51,1),
+(908,13685,51,2),
+(114,4036,51,3),
+(115,4036,51,4),
+(845,10224,51,5),
+(876,2691,51,6),
+(877,6808,51,7),
+(17,2,51,8),
+(1341,3,51,9),
+(1665,575,51,10),
+(1661,1150,51,11),
+(3031,460,51,12),
+(1785,288,51,13),
+(1831,86,51,14),
+(1833,86,51,15),
+(734,1380,51,16),
+(735,2760,51,17),
+(1061,379,51,18),
+(1832,207,51,19),
+(736,460,51,20),
+(737,2300,51,21),
+(1829,575,51,22),
+(2130,1150,51,23),
+(1099,575,52,1),
+(1053,575,52,2),
+(1055,575,52,3),
+(1056,575,52,4),
+(1052,575,52,5),
+(1054,575,52,6),
+(1058,575,52,7),
+(1098,575,52,8),
+(1097,632,52,9),
+(1096,632,52,10),
+(1370,862,52,11),
+(1401,862,52,12),
+(1411,862,52,13),
+(1372,862,52,14),
+(1513,920,52,15),
+(1399,862,52,16),
+(1386,862,52,17),
+(1856,1840,52,18),
+(1377,862,52,19),
+(1383,862,52,20),
+(1514,920,52,21),
+(1405,862,52,22),
+(1403,862,52,23),
+(1371,862,52,24),
+(1515,920,52,25),
+(1667,920,52,26),
+(1669,920,52,27),
+(1671,920,52,28),
+(1512,1322,52,29),
+(1379,1322,52,30),
+(1402,1438,52,31),
+(1517,1438,52,32),
+(1415,1438,52,33),
+(1391,1438,52,34),
+(1398,1438,52,35),
+(1389,1438,52,36),
+(1388,1438,52,37),
+(1410,1438,52,38),
+(1404,1438,52,39),
+(1417,1438,52,40),
+(1400,1438,52,41),
+(1418,1438,52,42),
+(1668,1438,52,43),
+(1670,1438,52,44),
+(3038,1782,52,45),
+(1378,1840,52,46),
+(1516,2070,52,47),
+(1414,2070,52,48),
+(1385,2070,52,49),
+(1394,2070,52,50),
+(1526,460,52,51),
+(1522,862,52,52),
+(1535,920,52,53),
+(1521,920,52,54),
+(1523,920,52,55),
+(1534,920,52,56),
+(1537,920,52,57),
+(1533,1438,52,58),
+(1536,1438,52,59),
+(1532,1438,52,60),
+(1528,2070,52,61),
+(1519,2070,52,62),
+(1518,2070,52,63),
+(3,15000,53,1),
+(152,9684,53,2),
+(12,15000,53,3),
+(215,15000,53,4),
+(14,15000,53,5),
+(5,15000,53,6),
+(153,22200,53,7),
+(1333,64920,53,8),
+(66,64920,53,9),
+(67,64920,53,10),
+(122,64920,53,11),
+(154,64920,53,12),
+(216,64920,53,13),
+(271,64920,53,14),
+(2,163200,53,15),
+(218,163200,53,16),
+(272,163200,53,17),
+(15,163200,53,18),
+(68,292800,53,19),
+(219,292800,53,20),
+(273,292800,53,21),
+(155,292800,53,22),
+(87,292800,53,23),
+(16,292800,53,24),
+(123,490800,53,25),
+(220,490800,53,26),
+(221,490800,53,27),
+(274,490800,53,28),
+(156,490800,53,29),
+(166,490800,53,30),
+(168,490800,53,31),
+(291,490800,53,32),
+(254,15000,53,33),
+(255,64920,53,34),
+(256,163200,53,35),
+(257,292800,53,36),
+(258,490800,53,37),
+(17,2,53,38),
+(1341,4,53,39),
+(8,15000,54,1),
+(99,15000,54,2),
+(9,64920,54,3),
+(176,163200,54,4),
+(310,163200,54,5),
+(177,292800,54,6),
+(311,292800,54,7),
+(100,292800,54,8),
+(178,490800,54,9),
+(101,490800,54,10),
+(312,490800,54,11),
+(314,490800,54,12),
+(17,2,54,13),
+(1341,4,54,14),
+(29,1824,55,1),
+(22,2916,55,2),
+(30,5964,55,3),
+(23,9552,55,4),
+(2386,5964,55,5),
+(412,15240,55,6),
+(390,24360,55,7),
+(24,24360,55,8),
+(31,15240,55,9),
+(26,59040,55,10),
+(33,27600,55,11),
+(27,44280,55,12),
+(34,36840,55,13),
+(347,100200,55,14),
+(18,47,55,15),
+(19,766,55,16),
+(20,3336,55,17),
+(102,8532,55,18),
+(625,15480,55,19),
+(626,26280,55,20),
+(1119,728,55,21),
+(49,3180,55,22),
+(50,8124,55,23),
+(51,14760,55,24),
+(604,25080,55,25),
+(1129,728,55,26),
+(1122,728,55,27),
+(37,3180,55,28),
+(38,8124,55,29),
+(39,14760,55,30),
+(40,25080,55,31),
+(42,1093,55,32),
+(43,4776,55,33),
+(44,12240,55,34),
+(1148,22080,55,35),
+(45,37560,55,36),
+(17,2,55,37),
+(1341,4,55,38),
+(1100,2916,56,1),
+(463,1824,56,2),
+(428,2916,56,3),
+(464,5964,56,4),
+(429,9552,56,5),
+(1104,15240,56,6),
+(1101,24360,56,7),
+(1105,27600,56,8),
+(1102,44280,56,9),
+(465,46920,56,10),
+(432,75120,56,11),
+(18,47,56,12),
+(19,766,56,13),
+(20,3336,56,14),
+(102,8532,56,15),
+(625,15480,56,16),
+(626,26280,56,17),
+(1119,728,56,18),
+(49,3180,56,19),
+(50,8124,56,20),
+(51,14760,56,21),
+(604,25080,56,22),
+(1129,728,56,23),
+(1122,728,56,24),
+(37,3180,56,25),
+(38,8124,56,26),
+(39,14760,56,27),
+(40,25080,56,28),
+(42,1093,56,29),
+(43,4776,56,30),
+(44,12240,56,31),
+(1148,22080,56,32),
+(45,37560,56,33),
+(17,2,56,34),
+(1341,4,56,35),
+(1099,600,57,1),
+(1053,600,57,2),
+(1055,600,57,3),
+(1056,600,57,4),
+(1052,600,57,5),
+(1054,600,57,6),
+(1058,600,57,7),
+(1098,600,57,8),
+(1097,660,57,9),
+(1096,660,57,10),
+(1370,900,57,11),
+(1401,900,57,12),
+(1411,900,57,13),
+(1372,900,57,14),
+(1513,960,57,15),
+(1399,900,57,16),
+(1386,900,57,17),
+(1856,1920,57,18),
+(1377,900,57,19),
+(1383,900,57,20),
+(1514,960,57,21),
+(1405,900,57,22),
+(1403,900,57,23),
+(1371,900,57,24),
+(1515,960,57,25),
+(1667,960,57,26),
+(1669,960,57,27),
+(1671,960,57,28),
+(1512,1380,57,29),
+(1379,1380,57,30),
+(1402,1500,57,31),
+(1517,1500,57,32),
+(1415,1500,57,33),
+(1391,1500,57,34),
+(1398,1500,57,35),
+(1389,1500,57,36),
+(1388,1500,57,37),
+(1410,1500,57,38),
+(1404,1500,57,39),
+(1417,1500,57,40),
+(1400,1500,57,41),
+(1418,1500,57,42),
+(1668,1500,57,43),
+(1670,1500,57,44),
+(3038,1860,57,45),
+(1378,1920,57,46),
+(1516,2160,57,47),
+(1414,2160,57,48),
+(1385,2160,57,49),
+(1394,2160,57,50),
+(1526,480,57,51),
+(1522,900,57,52),
+(1535,960,57,53),
+(1521,960,57,54),
+(1523,960,57,55),
+(1534,960,57,56),
+(1537,960,57,57),
+(1533,1500,57,58),
+(1536,1500,57,59),
+(1532,1500,57,60),
+(1528,2160,57,61),
+(1519,2160,57,62),
+(1518,2160,57,63),
+(1333,70330,58,1),
+(66,70330,58,2),
+(67,70330,58,3),
+(122,70330,58,4),
+(154,70330,58,5),
+(216,70330,58,6),
+(271,70330,58,7),
+(2,176800,58,8),
+(218,176800,58,9),
+(272,176800,58,10),
+(15,176800,58,11),
+(68,317200,58,12),
+(219,317200,58,13),
+(273,317200,58,14),
+(155,317200,58,15),
+(87,317200,58,16),
+(16,317200,58,17),
+(123,531700,58,18),
+(220,531700,58,19),
+(221,531700,58,20),
+(274,531700,58,21),
+(156,531700,58,22),
+(166,531700,58,23),
+(168,531700,58,24),
+(291,531700,58,25),
+(256,176800,58,26),
+(257,317200,58,27),
+(258,531700,58,28),
+(17,3,58,29),
+(1341,4,58,30),
+(9,70330,59,1),
+(176,176800,59,2),
+(310,176800,59,3),
+(177,317200,59,4),
+(311,317200,59,5),
+(100,317200,59,6),
+(178,531700,59,7),
+(101,531700,59,8),
+(312,531700,59,9),
+(314,531700,59,10),
+(179,837200,59,11),
+(182,837200,59,12),
+(17,3,59,13),
+(1341,4,59,14),
+(1099,650,60,1),
+(1053,650,60,2),
+(1055,650,60,3),
+(1056,650,60,4),
+(1052,650,60,5),
+(1054,650,60,6),
+(1058,650,60,7),
+(1098,650,60,8),
+(1097,715,60,9),
+(1096,715,60,10),
+(1370,975,60,11),
+(1401,975,60,12),
+(1411,975,60,13),
+(1372,975,60,14),
+(1513,1040,60,15),
+(1399,975,60,16),
+(1386,975,60,17),
+(1856,2080,60,18),
+(1377,975,60,19),
+(1383,975,60,20),
+(1514,1040,60,21),
+(1405,975,60,22),
+(1403,975,60,23),
+(1371,975,60,24),
+(1515,1040,60,25),
+(1667,1040,60,26),
+(1669,1040,60,27),
+(1671,1040,60,28),
+(1512,1495,60,29),
+(1379,1495,60,30),
+(1402,1625,60,31),
+(1517,1625,60,32),
+(1415,1625,60,33),
+(1391,1625,60,34),
+(1398,1625,60,35),
+(1389,1625,60,36),
+(1388,1625,60,37),
+(1410,1625,60,38),
+(1404,1625,60,39),
+(1417,1625,60,40),
+(1400,1625,60,41),
+(1418,1625,60,42),
+(1668,1625,60,43),
+(1670,1625,60,44),
+(3038,2015,60,45),
+(1378,2080,60,46),
+(1516,2340,60,47),
+(1414,2340,60,48),
+(1385,2340,60,49),
+(1394,2340,60,50),
+(1526,520,60,51),
+(1522,975,60,52),
+(1535,1040,60,53),
+(1521,1040,60,54),
+(1523,1040,60,55),
+(1534,1040,60,56),
+(1537,1040,60,57),
+(1533,1625,60,58),
+(1536,1625,60,59),
+(1532,1625,60,60),
+(1528,2340,60,61),
+(1519,2340,60,62),
+(1518,2340,60,63),
+(2,163200,61,1),
+(218,163200,61,2),
+(272,163200,61,3),
+(15,163200,61,4),
+(68,292800,61,5),
+(219,292800,61,6),
+(273,292800,61,7),
+(155,292800,61,8),
+(87,292800,61,9),
+(16,292800,61,10),
+(123,490800,61,11),
+(220,490800,61,12),
+(221,490800,61,13),
+(274,490800,61,14),
+(156,490800,61,15),
+(166,490800,61,16),
+(168,490800,61,17),
+(291,490800,61,18),
+(69,772800,61,19),
+(222,772800,61,20),
+(275,772800,61,21),
+(277,772800,61,22),
+(292,772800,61,23),
+(295,772800,61,24),
+(256,163200,61,25),
+(257,292800,61,26),
+(258,490800,61,27),
+(259,772800,61,28),
+(412,15240,61,29),
+(390,24360,61,30),
+(24,24360,61,31),
+(31,15240,61,32),
+(25,38160,61,33),
+(26,59040,61,34),
+(33,27600,61,35),
+(32,23880,61,36),
+(27,44280,61,37),
+(34,36840,61,38),
+(413,46920,61,39),
+(347,100200,61,40),
+(391,75120,61,41),
+(414,75000,61,42),
+(392,119880,61,43),
+(58,219600,61,44),
+(415,114240,61,45),
+(102,8532,61,46),
+(625,15480,61,47),
+(626,26280,61,48),
+(627,42000,61,49),
+(50,8124,61,50),
+(51,14760,61,51),
+(604,25080,61,52),
+(605,39960,61,53),
+(38,8124,61,54),
+(39,14760,61,55),
+(40,25080,61,56),
+(1123,39960,61,57),
+(44,12240,61,58),
+(1148,22080,61,59),
+(45,37560,61,60),
+(46,60000,61,61),
+(17,2,61,62),
+(1341,4,61,63),
+(176,163200,62,1),
+(310,163200,62,2),
+(177,292800,62,3),
+(311,292800,62,4),
+(100,292800,62,5),
+(178,490800,62,6),
+(101,490800,62,7),
+(312,490800,62,8),
+(314,490800,62,9),
+(179,772800,62,10),
+(182,772800,62,11),
+(183,772800,62,12),
+(185,772800,62,13),
+(315,772800,62,14),
+(83,859200,62,15),
+(143,859200,62,16),
+(144,859200,62,17),
+(238,1160400,62,18),
+(239,1160400,62,19),
+(240,1160400,62,20),
+(1104,15240,62,21),
+(1101,24360,62,22),
+(1105,27600,62,23),
+(1102,44280,62,24),
+(465,46920,62,25),
+(432,75120,62,26),
+(467,75000,62,27),
+(434,119880,62,28),
+(468,75000,62,29),
+(435,119880,62,30),
+(469,114240,62,31),
+(436,182400,62,32),
+(102,8532,62,33),
+(625,15480,62,34),
+(626,26280,62,35),
+(627,42000,62,36),
+(50,8124,62,37),
+(51,14760,62,38),
+(604,25080,62,39),
+(605,39960,62,40),
+(38,8124,62,41),
+(39,14760,62,42),
+(40,25080,62,43),
+(1123,39960,62,44),
+(44,12240,62,45),
+(1148,22080,62,46),
+(45,37560,62,47),
+(46,60000,62,48),
+(17,2,62,49),
+(1341,4,62,50),
+(1370,900,63,1),
+(1401,900,63,2),
+(1411,900,63,3),
+(1372,900,63,4),
+(1513,960,63,5),
+(1399,900,63,6),
+(1386,900,63,7),
+(1856,1920,63,8),
+(1377,900,63,9),
+(1383,900,63,10),
+(1514,960,63,11),
+(1405,900,63,12),
+(1403,900,63,13),
+(1371,900,63,14),
+(1515,960,63,15),
+(1667,960,63,16),
+(1669,960,63,17),
+(1671,960,63,18),
+(1512,1380,63,19),
+(1379,1380,63,20),
+(1402,1500,63,21),
+(1517,1500,63,22),
+(1415,1500,63,23),
+(1391,1500,63,24),
+(1398,1500,63,25),
+(1389,1500,63,26),
+(1388,1500,63,27),
+(1410,1500,63,28),
+(1404,1500,63,29),
+(1417,1500,63,30),
+(1400,1500,63,31),
+(1418,1500,63,32),
+(1668,1500,63,33),
+(1670,1500,63,34),
+(3038,1860,63,35),
+(1378,1920,63,36),
+(1516,2160,63,37),
+(1414,2160,63,38),
+(1385,2160,63,39),
+(1394,2160,63,40),
+(1412,2940,63,41),
+(3944,2940,63,42),
+(1392,2940,63,43),
+(1407,2940,63,44),
+(1416,2940,63,45),
+(1397,2940,63,46),
+(1406,2940,63,47),
+(1408,2940,63,48),
+(1390,2940,63,49),
+(1387,2940,63,50),
+(1409,2940,63,51),
+(1413,2940,63,52),
+(1381,3120,63,53),
+(1382,3120,63,54),
+(1384,3120,63,55),
+(1380,600,63,56),
+(1535,960,63,57),
+(1521,960,63,58),
+(1523,960,63,59),
+(1534,960,63,60),
+(1537,960,63,61),
+(1533,1500,63,62),
+(1536,1500,63,63),
+(1532,1500,63,64),
+(1528,2160,63,65),
+(1519,2160,63,66),
+(1518,2160,63,67),
+(1520,2940,63,68),
+(1530,2940,63,69),
+(4908,1500,63,70),
+(4445,6120,63,71),
+(4446,6120,63,72),
+(4447,6120,63,73),
+(4448,6120,63,74),
+(4449,6120,63,75),
+(4450,6120,63,76),
+(4451,6120,63,77),
+(4452,6120,63,78),
+(4453,6120,63,79),
+(4454,6120,63,80),
+(4455,6120,63,81),
+(4456,6120,63,82),
+(4910,2160,63,83),
+(908,14280,64,1),
+(909,25560,64,2),
+(910,43080,64,3),
+(845,10668,64,4),
+(846,19200,64,5),
+(847,32280,64,6),
+(877,7104,64,7),
+(878,12840,64,8),
+(890,21600,64,9),
+(1661,1200,64,10),
+(3031,480,64,11),
+(1785,300,64,12),
+(17,2,64,13),
+(1341,4,64,14),
+(734,1440,64,15),
+(735,2880,64,16),
+(1061,396,64,17),
+(1832,216,64,18),
+(1834,216,64,19),
+(736,480,64,20),
+(737,2400,64,21),
+(1829,600,64,22),
+(2130,1200,64,23),
+(5192,120,64,25),
+(5146,13860,64,26),
+(5140,5940,64,27),
+(5134,2760,64,28),
+(5262,46200,64,29),
+(5256,19800,64,30),
+(5250,9240,64,31),
+(6037,120,64,32),
+(5589,120,64,33),
+(6035,2880,64,34),
+(908,15470,65,1),
+(909,27690,65,2),
+(910,46670,65,3),
+(845,11557,65,4),
+(846,20800,65,5),
+(847,34970,65,6),
+(877,7696,65,7),
+(878,13910,65,8),
+(890,23400,65,9),
+(1665,650,65,10),
+(1661,1300,65,11),
+(3031,520,65,12),
+(1785,325,65,13),
+(17,3,65,14),
+(1341,4,65,15),
+(734,1560,65,16),
+(735,3120,65,17),
+(1061,429,65,18),
+(1832,234,65,19),
+(1834,234,65,20),
+(736,520,65,21),
+(737,2600,65,22),
+(1829,650,65,23),
+(2130,1300,65,24),
+(1099,600,66,1),
+(1053,600,66,2),
+(1055,600,66,3),
+(1056,600,66,4),
+(1052,600,66,5),
+(1054,600,66,6),
+(1058,600,66,7),
+(1098,600,66,8),
+(1097,660,66,9),
+(1096,660,66,10),
+(1370,900,66,11),
+(1401,900,66,12),
+(1411,900,66,13),
+(1372,900,66,14),
+(1513,960,66,15),
+(1399,900,66,16),
+(1386,900,66,17),
+(1856,1920,66,18),
+(1377,900,66,19),
+(1383,900,66,20),
+(1514,960,66,21),
+(1405,900,66,22),
+(1403,900,66,23),
+(1371,900,66,24),
+(1515,960,66,25),
+(1667,960,66,26),
+(1669,960,66,27),
+(1671,960,66,28),
+(1512,1380,66,29),
+(1379,1380,66,30),
+(1402,1500,66,31),
+(1517,1500,66,32),
+(1415,1500,66,33),
+(1391,1500,66,34),
+(1398,1500,66,35),
+(1389,1500,66,36),
+(1388,1500,66,37),
+(1410,1500,66,38),
+(1404,1500,66,39),
+(1417,1500,66,40),
+(1400,1500,66,41),
+(1418,1500,66,42),
+(1668,1500,66,43),
+(1670,1500,66,44),
+(3038,1860,66,45),
+(1378,1920,66,46),
+(1516,2160,66,47),
+(1414,2160,66,48),
+(1385,2160,66,49),
+(1394,2160,66,50),
+(1526,480,66,51),
+(1522,900,66,52),
+(1535,960,66,53),
+(1521,960,66,54),
+(1523,960,66,55),
+(1534,960,66,56),
+(1537,960,66,57),
+(1533,1500,66,58),
+(1536,1500,66,59),
+(1532,1500,66,60),
+(1528,2160,66,61),
+(1519,2160,66,62),
+(1518,2160,66,63),
+(906,1296,67,1),
+(907,5616,67,2),
+(908,14280,67,3),
+(909,25560,67,4),
+(910,43080,67,5),
+(113,973,67,6),
+(114,4212,67,7),
+(115,4212,67,8),
+(845,10668,67,9),
+(846,19200,67,10),
+(847,32280,67,11),
+(875,648,67,12),
+(876,2808,67,13),
+(877,7104,67,14),
+(878,12840,67,15),
+(890,21600,67,16),
+(1665,600,67,17),
+(1661,1200,67,18),
+(3031,480,67,19),
+(1785,300,67,20),
+(17,2,67,21),
+(1341,4,67,22),
+(1060,108,67,23),
+(1831,90,67,24),
+(1833,90,67,25),
+(734,1440,67,26),
+(735,2880,67,27),
+(1061,396,67,28),
+(1832,216,67,29),
+(1834,216,67,30),
+(736,480,67,31),
+(737,2400,67,32),
+(1829,600,67,33),
+(2130,1200,67,34),
+(906,1296,68,1),
+(907,5616,68,2),
+(908,14280,68,3),
+(909,25560,68,4),
+(910,43080,68,5),
+(113,973,68,6),
+(114,4212,68,7),
+(115,4212,68,8),
+(845,10668,68,9),
+(846,19200,68,10),
+(847,32280,68,11),
+(875,648,68,12),
+(876,2808,68,13),
+(877,7104,68,14),
+(878,12840,68,15),
+(890,21600,68,16),
+(1665,600,68,17),
+(1661,1200,68,18),
+(3031,480,68,19),
+(1785,300,68,20),
+(17,2,68,21),
+(1341,4,68,22),
+(1060,108,68,23),
+(1831,90,68,24),
+(1833,90,68,25),
+(734,1440,68,26),
+(735,2880,68,27),
+(1061,396,68,28),
+(1832,216,68,29),
+(1834,216,68,30),
+(736,480,68,31),
+(737,2400,68,32),
+(1829,600,68,33),
+(2130,1200,68,34),
+(2,163200,69,1),
+(218,163200,69,2),
+(272,163200,69,3),
+(15,163200,69,4),
+(68,292800,69,5),
+(219,292800,69,6),
+(273,292800,69,7),
+(155,292800,69,8),
+(87,292800,69,9),
+(16,292800,69,10),
+(123,490800,69,11),
+(220,490800,69,12),
+(221,490800,69,13),
+(274,490800,69,14),
+(156,490800,69,15),
+(166,490800,69,16),
+(168,490800,69,17),
+(291,490800,69,18),
+(69,772800,69,19),
+(222,772800,69,20),
+(275,772800,69,21),
+(277,772800,69,22),
+(292,772800,69,23),
+(295,772800,69,24),
+(256,163200,69,25),
+(257,292800,69,26),
+(258,490800,69,27),
+(259,772800,69,28),
+(412,15240,69,29),
+(390,24360,69,30),
+(24,24360,69,31),
+(31,15240,69,32),
+(25,38160,69,33),
+(26,59040,69,34),
+(33,27600,69,35),
+(32,23880,69,36),
+(27,44280,69,37),
+(34,36840,69,38),
+(413,46920,69,39),
+(347,100200,69,40),
+(391,75120,69,41),
+(414,75000,69,42),
+(392,119880,69,43),
+(58,219600,69,44),
+(415,114240,69,45),
+(102,8532,69,46),
+(625,15480,69,47),
+(626,26280,69,48),
+(627,42000,69,49),
+(50,8124,69,50),
+(51,14760,69,51),
+(604,25080,69,52),
+(605,39960,69,53),
+(38,8124,69,54),
+(39,14760,69,55),
+(40,25080,69,56),
+(1123,39960,69,57),
+(44,12240,69,58),
+(1148,22080,69,59),
+(45,37560,69,60),
+(46,60000,69,61),
+(17,2,69,62),
+(1341,4,69,63),
+(176,163200,70,1),
+(310,163200,70,2),
+(177,292800,70,3),
+(311,292800,70,4),
+(100,292800,70,5),
+(178,490800,70,6),
+(101,490800,70,7),
+(312,490800,70,8),
+(314,490800,70,9),
+(179,772800,70,10),
+(182,772800,70,11),
+(183,772800,70,12),
+(185,772800,70,13),
+(315,772800,70,14),
+(83,859200,70,15),
+(143,859200,70,16),
+(144,859200,70,17),
+(238,1160400,70,18),
+(239,1160400,70,19),
+(240,1160400,70,20),
+(1104,15240,70,21),
+(1101,24360,70,22),
+(1105,27600,70,23),
+(1102,44280,70,24),
+(465,46920,70,25),
+(432,75120,70,26),
+(467,75000,70,27),
+(434,119880,70,28),
+(468,75000,70,29),
+(435,119880,70,30),
+(469,114240,70,31),
+(436,182400,70,32),
+(102,8532,70,33),
+(625,15480,70,34),
+(626,26280,70,35),
+(627,42000,70,36),
+(50,8124,70,37),
+(51,14760,70,38),
+(604,25080,70,39),
+(605,39960,70,40),
+(38,8124,70,41),
+(39,14760,70,42),
+(40,25080,70,43),
+(1123,39960,70,44),
+(44,12240,70,45),
+(1148,22080,70,46),
+(45,37560,70,47),
+(46,60000,70,48),
+(17,2,70,49),
+(1341,4,70,50),
+(118,99,71,1),
+(906,1620,71,2),
+(907,7020,71,3),
+(908,17850,71,4),
+(112,74,71,5),
+(113,1216,71,6),
+(114,5265,71,7),
+(115,5265,71,8),
+(845,13335,71,9),
+(116,50,71,10),
+(875,810,71,11),
+(876,3510,71,12),
+(877,8880,71,13),
+(17,3,71,14),
+(1341,4,71,15),
+(1831,112,71,16),
+(1833,112,71,17),
+(734,1800,71,18),
+(735,3600,71,19),
+(1061,495,71,20),
+(1832,270,71,21),
+(66,81150,72,1),
+(67,81150,72,2),
+(216,81150,72,3),
+(271,81150,72,4),
+(2,204000,72,5),
+(15,204000,72,6),
+(68,366000,72,7),
+(273,366000,72,8),
+(123,613500,72,9),
+(221,613500,72,10),
+(156,613500,72,11),
+(291,613500,72,12),
+(412,19050,72,13),
+(390,30450,72,14),
+(26,73800,72,15),
+(33,34500,72,16),
+(27,55350,72,17),
+(34,46050,72,18),
+(347,125250,72,19),
+(102,10665,72,20),
+(626,32850,72,21),
+(50,10155,72,22),
+(51,18450,72,23),
+(37,3975,72,24),
+(39,18450,72,25),
+(43,5970,72,26),
+(1148,27600,72,27),
+(17,3,72,28),
+(1341,4,72,29),
+(9,81150,73,1),
+(310,204000,73,2),
+(177,366000,73,3),
+(100,366000,73,4),
+(178,613500,73,5),
+(314,613500,73,6),
+(464,7455,73,7),
+(429,11940,73,8),
+(1105,34500,73,9),
+(1102,55350,73,10),
+(465,58650,73,11),
+(432,93900,73,12),
+(102,10665,73,13),
+(626,32850,73,14),
+(50,10155,73,15),
+(51,18450,73,16),
+(37,3975,73,17),
+(39,18450,73,18),
+(43,5970,73,19),
+(1148,27600,73,20),
+(17,3,73,21),
+(1341,4,73,22),
+(118,99,74,1),
+(906,1620,74,2),
+(907,7020,74,3),
+(908,17850,74,4),
+(112,74,74,5),
+(113,1216,74,6),
+(114,5265,74,7),
+(115,5265,74,8),
+(845,13335,74,9),
+(116,50,74,10),
+(875,810,74,11),
+(876,3510,74,12),
+(877,8880,74,13),
+(17,3,74,14),
+(1341,4,74,15),
+(1831,112,74,16),
+(1833,112,74,17),
+(734,1800,74,18),
+(735,3600,74,19),
+(1061,495,74,20),
+(1832,270,74,21),
+(1,883,75,1),
+(4,883,75,2),
+(11,883,75,3),
+(13,883,75,4),
+(3,14375,75,5),
+(152,9280,75,6),
+(12,14375,75,7),
+(215,14375,75,8),
+(14,14375,75,9),
+(5,14375,75,10),
+(153,21275,75,11),
+(1333,62215,75,12),
+(66,62215,75,13),
+(67,62215,75,14),
+(122,62215,75,15),
+(154,62215,75,16),
+(216,62215,75,17),
+(271,62215,75,18),
+(2,156400,75,19),
+(218,156400,75,20),
+(272,156400,75,21),
+(15,156400,75,22),
+(28,106,75,23),
+(21,169,75,24),
+(29,1748,75,25),
+(22,2794,75,26),
+(30,5716,75,27),
+(2386,5716,75,28),
+(23,9154,75,29),
+(412,14605,75,30),
+(390,23345,75,31),
+(24,23345,75,32),
+(31,14605,75,33),
+(18,45,75,34),
+(19,734,75,35),
+(20,3197,75,36),
+(102,8176,75,37),
+(48,43,75,38),
+(1119,698,75,39),
+(49,3047,75,40),
+(50,7785,75,41),
+(1121,8,75,42),
+(35,43,75,43),
+(36,43,75,44),
+(1129,698,75,45),
+(1122,698,75,46),
+(37,3047,75,47),
+(38,7785,75,48),
+(41,63,75,49),
+(42,1048,75,50),
+(43,4577,75,51),
+(44,11730,75,52),
+(17,2,75,53),
+(1341,3,75,54),
+(7,883,76,1),
+(308,883,76,2),
+(8,14375,76,3),
+(99,14375,76,4),
+(9,62215,76,5),
+(176,156400,76,6),
+(310,156400,76,7),
+(462,106,76,8),
+(426,169,76,9),
+(1103,1748,76,10),
+(1100,2794,76,11),
+(463,1748,76,12),
+(428,2794,76,13),
+(464,5716,76,14),
+(429,9154,76,15),
+(1104,14605,76,16),
+(1101,23345,76,17),
+(18,45,76,18),
+(19,734,76,19),
+(20,3197,76,20),
+(102,8176,76,21),
+(48,43,76,22),
+(1119,698,76,23),
+(49,3047,76,24),
+(50,7785,76,25),
+(1121,8,76,26),
+(35,43,76,27),
+(36,43,76,28),
+(1129,698,76,29),
+(1122,698,76,30),
+(37,3047,76,31),
+(38,7785,76,32),
+(41,63,76,33),
+(42,1048,76,34),
+(43,4577,76,35),
+(44,11730,76,36),
+(17,2,76,37),
+(1341,3,76,38),
+(1,883,77,1),
+(4,883,77,2),
+(11,883,77,3),
+(13,883,77,4),
+(3,14375,77,5),
+(152,9280,77,6),
+(12,14375,77,7),
+(215,14375,77,8),
+(14,14375,77,9),
+(5,14375,77,10),
+(153,21275,77,11),
+(1333,62215,77,12),
+(66,62215,77,13),
+(67,62215,77,14),
+(122,62215,77,15),
+(154,62215,77,16),
+(216,62215,77,17),
+(271,62215,77,18),
+(2,156400,77,19),
+(218,156400,77,20),
+(272,156400,77,21),
+(15,156400,77,22),
+(28,106,77,23),
+(21,169,77,24),
+(29,1748,77,25),
+(22,2794,77,26),
+(30,5716,77,27),
+(2386,5716,77,28),
+(23,9154,77,29),
+(412,14605,77,30),
+(390,23345,77,31),
+(24,23345,77,32),
+(31,14605,77,33),
+(18,45,77,34),
+(19,734,77,35),
+(20,3197,77,36),
+(102,8176,77,37),
+(48,43,77,38),
+(1119,698,77,39),
+(49,3047,77,40),
+(50,7785,77,41),
+(1121,8,77,42),
+(35,43,77,43),
+(36,43,77,44),
+(1129,698,77,45),
+(1122,698,77,46),
+(37,3047,77,47),
+(38,7785,77,48),
+(41,63,77,49),
+(42,1048,77,50),
+(43,4577,77,51),
+(44,11730,77,52),
+(17,2,77,53),
+(1341,3,77,54),
+(7,883,78,1),
+(308,883,78,2),
+(8,14375,78,3),
+(99,14375,78,4),
+(9,62215,78,5),
+(176,156400,78,6),
+(310,156400,78,7),
+(462,106,78,8),
+(426,169,78,9),
+(1103,1748,78,10),
+(1100,2794,78,11),
+(463,1748,78,12),
+(428,2794,78,13),
+(464,5716,78,14),
+(429,9154,78,15),
+(1104,14605,78,16),
+(1101,23345,78,17),
+(18,45,78,18),
+(19,734,78,19),
+(20,3197,78,20),
+(102,8176,78,21),
+(48,43,78,22),
+(1119,698,78,23),
+(49,3047,78,24),
+(50,7785,78,25),
+(1121,8,78,26),
+(35,43,78,27),
+(36,43,78,28),
+(1129,698,78,29),
+(1122,698,78,30),
+(37,3047,78,31),
+(38,7785,78,32),
+(41,63,78,33),
+(42,1048,78,34),
+(43,4577,78,35),
+(44,11730,78,36),
+(17,2,78,37),
+(1341,3,78,38),
+(118,76,79,1),
+(906,1242,79,2),
+(907,5382,79,3),
+(908,13685,79,4),
+(112,56,79,5),
+(113,933,79,6),
+(114,4036,79,7),
+(115,4036,79,8),
+(845,10224,79,9),
+(116,38,79,10),
+(875,621,79,11),
+(876,2691,79,12),
+(877,6808,79,13),
+(17,2,79,14),
+(1341,3,79,15),
+(1661,1150,79,16),
+(3031,460,79,17),
+(1785,288,79,18),
+(3947,40,79,19),
+(2509,17,79,20),
+(1835,8,79,21),
+(736,460,79,22),
+(1060,103,79,23),
+(1831,86,79,24),
+(1833,86,79,25),
+(734,1380,79,26),
+(735,2760,79,27),
+(1863,575,79,28),
+(2130,1150,79,29),
+(118,76,80,1),
+(906,1242,80,2),
+(907,5382,80,3),
+(908,13685,80,4),
+(112,56,80,5),
+(113,933,80,6),
+(114,4036,80,7),
+(115,4036,80,8),
+(845,10224,80,9),
+(116,38,80,10),
+(875,621,80,11),
+(876,2691,80,12),
+(877,6808,80,13),
+(17,2,80,14),
+(1341,3,80,15),
+(1661,1150,80,16),
+(3031,460,80,17),
+(1785,288,80,18),
+(3947,40,80,19),
+(2509,17,80,20),
+(1835,8,80,21),
+(736,460,80,22),
+(1060,103,80,23),
+(1831,86,80,24),
+(1833,86,80,25),
+(734,1380,80,26),
+(735,2760,80,27),
+(1863,575,80,28),
+(2130,1150,80,29),
+(1,883,81,1),
+(4,883,81,2),
+(11,883,81,3),
+(13,883,81,4),
+(3,14375,81,5),
+(152,9280,81,6),
+(12,14375,81,7),
+(215,14375,81,8),
+(14,14375,81,9),
+(5,14375,81,10),
+(153,21275,81,11),
+(1333,62215,81,12),
+(66,62215,81,13),
+(67,62215,81,14),
+(122,62215,81,15),
+(154,62215,81,16),
+(216,62215,81,17),
+(271,62215,81,18),
+(2,156400,81,19),
+(218,156400,81,20),
+(272,156400,81,21),
+(15,156400,81,22),
+(253,883,81,23),
+(254,14375,81,24),
+(255,62215,81,25),
+(256,156400,81,26),
+(28,106,81,27),
+(21,169,81,28),
+(29,1748,81,29),
+(22,2794,81,30),
+(30,5716,81,31),
+(2386,5716,81,32),
+(23,9154,81,33),
+(412,14605,81,34),
+(390,23345,81,35),
+(24,23345,81,36),
+(31,14605,81,37),
+(18,45,81,38),
+(19,734,81,39),
+(20,3197,81,40),
+(102,8176,81,41),
+(48,43,81,42),
+(1119,698,81,43),
+(49,3047,81,44),
+(50,7785,81,45),
+(1121,8,81,46),
+(35,43,81,47),
+(36,43,81,48),
+(1129,698,81,49),
+(1122,698,81,50),
+(37,3047,81,51),
+(38,7785,81,52),
+(41,63,81,53),
+(42,1048,81,54),
+(43,4577,81,55),
+(44,11730,81,56),
+(17,2,81,57),
+(1341,3,81,58),
+(7,883,82,1),
+(308,883,82,2),
+(8,14375,82,3),
+(99,14375,82,4),
+(9,62215,82,5),
+(176,156400,82,6),
+(310,156400,82,7),
+(462,106,82,8),
+(426,169,82,9),
+(1103,1748,82,10),
+(1100,2794,82,11),
+(463,1748,82,12),
+(428,2794,82,13),
+(464,5716,82,14),
+(429,9154,82,15),
+(1104,14605,82,16),
+(1101,23345,82,17),
+(18,45,82,18),
+(19,734,82,19),
+(20,3197,82,20),
+(102,8176,82,21),
+(48,43,82,22),
+(1119,698,82,23),
+(49,3047,82,24),
+(50,7785,82,25),
+(1121,8,82,26),
+(35,43,82,27),
+(36,43,82,28),
+(1129,698,82,29),
+(1122,698,82,30),
+(37,3047,82,31),
+(38,7785,82,32),
+(41,63,82,33),
+(42,1048,82,34),
+(43,4577,82,35),
+(44,11730,82,36),
+(17,2,82,37),
+(1341,3,82,38),
+(1,883,83,1),
+(4,883,83,2),
+(11,883,83,3),
+(13,883,83,4),
+(3,14375,83,5),
+(152,9280,83,6),
+(12,14375,83,7),
+(215,14375,83,8),
+(14,14375,83,9),
+(5,14375,83,10),
+(153,21275,83,11),
+(1333,62215,83,12),
+(66,62215,83,13),
+(67,62215,83,14),
+(122,62215,83,15),
+(154,62215,83,16),
+(216,62215,83,17),
+(271,62215,83,18),
+(2,156400,83,19),
+(218,156400,83,20),
+(272,156400,83,21),
+(15,156400,83,22),
+(253,883,83,23),
+(254,14375,83,24),
+(255,62215,83,25),
+(256,156400,83,26),
+(28,106,83,27),
+(21,169,83,28),
+(29,1748,83,29),
+(22,2794,83,30),
+(30,5716,83,31),
+(2386,5716,83,32),
+(23,9154,83,33),
+(412,14605,83,34),
+(390,23345,83,35),
+(24,23345,83,36),
+(31,14605,83,37),
+(18,45,83,38),
+(19,734,83,39),
+(20,3197,83,40),
+(102,8176,83,41),
+(48,43,83,42),
+(1119,698,83,43),
+(49,3047,83,44),
+(50,7785,83,45),
+(1121,8,83,46),
+(35,43,83,47),
+(36,43,83,48),
+(1129,698,83,49),
+(1122,698,83,50),
+(37,3047,83,51),
+(38,7785,83,52),
+(41,63,83,53),
+(42,1048,83,54),
+(43,4577,83,55),
+(44,11730,83,56),
+(17,2,83,57),
+(1341,3,83,58),
+(7,883,84,1),
+(308,883,84,2),
+(8,14375,84,3),
+(99,14375,84,4),
+(9,62215,84,5),
+(176,156400,84,6),
+(310,156400,84,7),
+(462,106,84,8),
+(426,169,84,9),
+(1103,1748,84,10),
+(1100,2794,84,11),
+(463,1748,84,12),
+(428,2794,84,13),
+(464,5716,84,14),
+(429,9154,84,15),
+(1104,14605,84,16),
+(1101,23345,84,17),
+(18,45,84,18),
+(19,734,84,19),
+(20,3197,84,20),
+(102,8176,84,21),
+(48,43,84,22),
+(1119,698,84,23),
+(49,3047,84,24),
+(50,7785,84,25),
+(1121,8,84,26),
+(35,43,84,27),
+(36,43,84,28),
+(1129,698,84,29),
+(1122,698,84,30),
+(37,3047,84,31),
+(38,7785,84,32),
+(41,63,84,33),
+(42,1048,84,34),
+(43,4577,84,35),
+(44,11730,84,36),
+(17,2,84,37),
+(1341,3,84,38),
+(118,76,85,1),
+(906,1242,85,2),
+(907,5382,85,3),
+(908,13685,85,4),
+(112,56,85,5),
+(113,933,85,6),
+(114,4036,85,7),
+(115,4036,85,8),
+(845,10224,85,9),
+(116,38,85,10),
+(875,621,85,11),
+(876,2691,85,12),
+(877,6808,85,13),
+(17,2,85,14),
+(1341,3,85,15),
+(1661,1150,85,16),
+(3031,460,85,17),
+(1785,288,85,18),
+(3947,40,85,19),
+(2509,17,85,20),
+(1835,8,85,21),
+(736,460,85,22),
+(1060,103,85,23),
+(1831,86,85,24),
+(1833,86,85,25),
+(734,1380,85,26),
+(735,2760,85,27),
+(1863,575,85,28),
+(5192,115,85,29),
+(5146,13282,85,30),
+(5140,5692,85,31),
+(5134,2645,85,32),
+(5262,44275,85,33),
+(5256,18975,85,34),
+(5250,8855,85,35),
+(5589,115,85,36),
+(1525,115,86,1),
+(1531,115,86,2),
+(1524,115,86,3),
+(1529,115,86,4),
+(1527,115,86,5),
+(1526,460,86,6),
+(1522,862,86,7),
+(1856,1840,86,8),
+(1535,920,86,9),
+(1521,920,86,10),
+(1523,920,86,11),
+(1534,920,86,12),
+(1537,920,86,13),
+(1661,1150,86,14),
+(3031,460,86,15),
+(1785,288,86,16),
+(1863,575,86,17),
+(30,6461,87,1),
+(23,10348,87,2),
+(412,16510,87,3),
+(390,26390,87,4),
+(24,26390,87,5),
+(31,16510,87,6),
+(25,41340,87,7),
+(26,63960,87,8),
+(33,29900,87,9),
+(32,25870,87,10),
+(27,47970,87,11),
+(34,39910,87,12),
+(413,50830,87,13),
+(347,108550,87,14),
+(20,3614,87,15),
+(102,9243,87,16),
+(625,16770,87,17),
+(626,28470,87,18),
+(49,3445,87,19),
+(50,8801,87,20),
+(51,15990,87,21),
+(604,27170,87,22),
+(37,3445,87,23),
+(38,8801,87,24),
+(39,15990,87,25),
+(40,27170,87,26),
+(43,5174,87,27),
+(44,13260,87,28),
+(1148,23920,87,29),
+(45,40690,87,30),
+(464,6461,88,1),
+(429,10348,88,2),
+(1104,16510,88,3),
+(1101,26390,88,4),
+(1105,29900,88,5),
+(1102,47970,88,6),
+(465,50830,88,7),
+(432,81380,88,8),
+(20,3614,88,9),
+(102,9243,88,10),
+(625,16770,88,11),
+(626,28470,88,12),
+(49,3445,88,13),
+(50,8801,88,14),
+(51,15990,88,15),
+(604,27170,88,16),
+(37,3445,88,17),
+(38,8801,88,18),
+(39,15990,88,19),
+(40,27170,88,20),
+(43,5174,88,21),
+(44,13260,88,22),
+(1148,23920,88,23),
+(45,40690,88,24),
+(17,3,88,25),
+(1341,4,88,26),
+(2505,16220,89,1),
+(3439,40880,89,2),
+(3902,73301,89,3),
+(3903,122838,89,4),
+(3904,193273,89,5),
+(3905,289986,89,6),
+(3906,418964,89,7),
+(2506,8353,89,8),
+(3891,21337,89,9),
+(3892,38718,89,10),
+(3893,65735,89,11),
+(3894,104920,89,12),
+(3895,159931,89,13),
+(3896,235160,89,14),
+(2515,120,89,15),
+(3920,377347,89,16),
+(3921,506849,89,17),
+(3922,680520,89,18),
+(3923,909889,89,19),
+(3913,377347,89,20),
+(3914,506849,89,21),
+(3915,680520,89,22),
+(3916,909889,89,23),
+(4038,180,89,24),
+(2505,16220,90,1),
+(3439,40880,90,2),
+(3902,73301,90,3),
+(3903,122838,90,4),
+(3904,193273,90,5),
+(3905,289986,90,6),
+(3906,418964,90,7),
+(2506,8353,90,8),
+(3891,21337,90,9),
+(3892,38718,90,10),
+(3893,65735,90,11),
+(3894,104920,90,12),
+(3895,159931,90,13),
+(3896,235160,90,14),
+(2515,120,90,15),
+(3920,377347,90,16),
+(3921,506849,90,17),
+(3922,680520,90,18),
+(3923,909889,90,19),
+(3913,377347,90,20),
+(3914,506849,90,21),
+(3915,680520,90,22),
+(3916,909889,90,23),
+(4038,180,90,24),
+(2505,16220,91,1),
+(3439,40880,91,2),
+(3902,73301,91,3),
+(3903,122838,91,4),
+(3904,193273,91,5),
+(3905,289986,91,6),
+(3906,418964,91,7),
+(2506,8353,91,8),
+(3891,21337,91,9),
+(3892,38718,91,10),
+(3893,65735,91,11),
+(3894,104920,91,12),
+(3895,159931,91,13),
+(3896,235160,91,14),
+(2515,120,91,15),
+(3920,377347,91,16),
+(3921,506849,91,17),
+(3922,680520,91,18),
+(3923,909889,91,19),
+(3913,377347,91,20),
+(3914,506849,91,21),
+(3915,680520,91,22),
+(3916,909889,91,23),
+(4038,180,91,24),
+(2505,14869,92,1),
+(3439,37474,92,2),
+(3902,67192,92,3),
+(3903,112602,92,4),
+(3904,177167,92,5),
+(3905,265820,92,6),
+(3906,384051,92,7),
+(2506,7657,92,8),
+(3891,19559,92,9),
+(3892,35492,92,10),
+(3893,60257,92,11),
+(3894,96176,92,12),
+(3895,146604,92,13),
+(3896,215564,92,14),
+(2515,110,92,15),
+(3920,345902,92,16),
+(3921,464611,92,17),
+(3922,623810,92,18),
+(3923,834065,92,19),
+(3913,345902,92,20),
+(3914,464611,92,21),
+(3915,623810,92,22),
+(3916,834065,92,23),
+(4038,165,92,24),
+(2505,15545,93,1),
+(3439,39177,93,2),
+(3902,70247,93,3),
+(3903,117720,93,4),
+(3904,185220,93,5),
+(3905,277903,93,6),
+(3906,401508,93,7),
+(2506,8005,93,8),
+(3891,20448,93,9),
+(3892,37105,93,10),
+(3893,62996,93,11),
+(3894,100548,93,12),
+(3895,153267,93,13),
+(3896,225362,93,14),
+(2515,115,93,15),
+(3920,361624,93,16),
+(3921,485730,93,17),
+(3922,652165,93,18),
+(3923,871977,93,19),
+(3913,361624,93,20),
+(3914,485730,93,21),
+(3915,652165,93,22),
+(3916,871977,93,23),
+(4038,172,93,24),
+(2505,17572,94,1),
+(3439,44287,94,2),
+(3902,79409,94,3),
+(3903,133074,94,4),
+(3904,209379,94,5),
+(3905,314152,94,6),
+(3906,453878,94,7),
+(2506,9049,94,8),
+(3891,23115,94,9),
+(3892,41944,94,10),
+(3893,71213,94,11),
+(3894,113663,94,12),
+(3895,173259,94,13),
+(3896,254757,94,14),
+(2515,130,94,15),
+(3920,408793,94,16),
+(3921,549086,94,17),
+(3922,737230,94,18),
+(3923,985713,94,19),
+(3913,408793,94,20),
+(3914,549086,94,21),
+(3915,737230,94,22),
+(3916,985713,94,23),
+(4038,195,94,24),
+(179,772800,95,1),
+(182,772800,95,2),
+(183,772800,95,3),
+(185,772800,95,4),
+(315,772800,95,5),
+(83,859200,95,6),
+(143,859200,95,7),
+(144,859200,95,8),
+(238,1160400,95,9),
+(239,1160400,95,10),
+(240,1160400,95,11),
+(241,1160400,95,12),
+(186,1160400,95,13),
+(316,1160400,95,14),
+(317,1160400,95,15),
+(432,75120,95,16),
+(467,75000,95,17),
+(434,119880,95,18),
+(468,75000,95,19),
+(435,119880,95,20),
+(469,114240,95,21),
+(436,182400,95,22),
+(626,26280,95,23),
+(627,42000,95,24),
+(628,63960,95,25),
+(604,25080,95,26),
+(605,39960,95,27),
+(63,60960,95,28),
+(40,25080,95,29),
+(1123,39960,95,30),
+(553,60960,95,31),
+(45,37560,95,32),
+(46,60000,95,33),
+(2508,300,95,34),
+(1333,64920,96,1),
+(66,64920,96,2),
+(67,64920,96,3),
+(122,64920,96,4),
+(154,64920,96,5),
+(216,64920,96,6),
+(271,64920,96,7),
+(2,163200,96,8),
+(218,163200,96,9),
+(272,163200,96,10),
+(15,163200,96,11),
+(68,292800,96,12),
+(219,292800,96,13),
+(273,292800,96,14),
+(155,292800,96,15),
+(87,292800,96,16),
+(16,292800,96,17),
+(123,490800,96,18),
+(220,490800,96,19),
+(221,490800,96,20),
+(274,490800,96,21),
+(156,490800,96,22),
+(166,490800,96,23),
+(168,490800,96,24),
+(291,490800,96,25),
+(256,163200,96,26),
+(257,292800,96,27),
+(258,490800,96,28),
+(17,2,96,29),
+(1341,4,96,30),
+(1342,6,96,31),
+(9,64920,97,1),
+(176,163200,97,2),
+(310,163200,97,3),
+(177,292800,97,4),
+(311,292800,97,5),
+(100,292800,97,6),
+(178,490800,97,7),
+(101,490800,97,8),
+(312,490800,97,9),
+(314,490800,97,10),
+(179,772800,97,11),
+(182,772800,97,12),
+(17,2,97,13),
+(1341,4,97,14),
+(1342,6,97,15),
+(30,5964,98,1),
+(23,9552,98,2),
+(412,15240,98,3),
+(390,24360,98,4),
+(24,24360,98,5),
+(31,15240,98,6),
+(25,38160,98,7),
+(26,59040,98,8),
+(33,27600,98,9),
+(32,23880,98,10),
+(27,44280,98,11),
+(34,36840,98,12),
+(413,46920,98,13),
+(347,100200,98,14),
+(20,3336,98,15),
+(102,8532,98,16),
+(625,15480,98,17),
+(626,26280,98,18),
+(49,3180,98,19),
+(50,8124,98,20),
+(51,14760,98,21),
+(604,25080,98,22),
+(37,3180,98,23),
+(38,8124,98,24),
+(39,14760,98,25),
+(40,25080,98,26),
+(43,4776,98,27),
+(44,12240,98,28),
+(1148,22080,98,29),
+(45,37560,98,30),
+(17,2,98,31),
+(1341,4,98,32),
+(1342,6,98,33),
+(464,5964,99,1),
+(429,9552,99,2),
+(1104,15240,99,3),
+(1101,24360,99,4),
+(1105,27600,99,5),
+(1102,44280,99,6),
+(465,46920,99,7),
+(432,75120,99,8),
+(20,3336,99,9),
+(102,8532,99,10),
+(625,15480,99,11),
+(626,26280,99,12),
+(49,3180,99,13),
+(50,8124,99,14),
+(51,14760,99,15),
+(604,25080,99,16),
+(37,3180,99,17),
+(38,8124,99,18),
+(39,14760,99,19),
+(40,25080,99,20),
+(43,4776,99,21),
+(44,12240,99,22),
+(1148,22080,99,23),
+(45,37560,99,24),
+(17,2,99,25),
+(1341,4,99,26),
+(1342,6,99,27),
+(1099,600,100,1),
+(1053,600,100,2),
+(1055,600,100,3),
+(1056,600,100,4),
+(1052,600,100,5),
+(1054,600,100,6),
+(1058,600,100,7),
+(1098,600,100,8),
+(1097,660,100,9),
+(1096,660,100,10),
+(1370,900,100,11),
+(1401,900,100,12),
+(1411,900,100,13),
+(1372,900,100,14),
+(1513,960,100,15),
+(1399,900,100,16),
+(1386,900,100,17),
+(1856,1920,100,18),
+(1377,900,100,19),
+(1383,900,100,20),
+(1514,960,100,21),
+(1405,900,100,22),
+(1403,900,100,23),
+(1371,900,100,24),
+(1515,960,100,25),
+(1667,960,100,26),
+(1669,960,100,27),
+(1671,960,100,28),
+(1512,1380,100,29),
+(1379,1380,100,30),
+(1402,1500,100,31),
+(1517,1500,100,32),
+(1415,1500,100,33),
+(1391,1500,100,34),
+(1398,1500,100,35),
+(1389,1500,100,36),
+(1388,1500,100,37),
+(1410,1500,100,38),
+(1404,1500,100,39),
+(1417,1500,100,40),
+(1400,1500,100,41),
+(1418,1500,100,42),
+(1668,1500,100,43),
+(1670,1500,100,44),
+(3038,1860,100,45),
+(1378,1920,100,46),
+(1516,2160,100,47),
+(1414,2160,100,48),
+(1385,2160,100,49),
+(1394,2160,100,50),
+(1526,480,100,51),
+(1522,900,100,52),
+(1535,960,100,53),
+(1521,960,100,54),
+(1523,960,100,55),
+(1534,960,100,56),
+(1537,960,100,57),
+(1533,1500,100,58),
+(1536,1500,100,59),
+(1532,1500,100,60),
+(1528,2160,100,61),
+(1519,2160,100,62),
+(1518,2160,100,63),
+(17,2,101,1),
+(1341,4,101,2),
+(1342,6,101,3),
+(1665,600,101,4),
+(1661,1200,101,5),
+(3031,480,101,6),
+(1785,300,101,7),
+(1831,90,101,8),
+(1833,90,101,9),
+(734,1440,101,10),
+(735,2880,101,11),
+(1061,396,101,12),
+(1832,216,101,13),
+(736,480,101,14),
+(737,2400,101,15),
+(1829,600,101,16),
+(2130,1200,101,17),
+(907,5616,102,1),
+(908,14280,102,2),
+(114,4212,102,3),
+(115,4212,102,4),
+(845,10668,102,5),
+(876,2808,102,6),
+(877,7104,102,7),
+(17,2,102,8),
+(1341,3,102,9),
+(1342,6,102,10),
+(1665,575,102,11),
+(1661,1150,102,12),
+(3031,460,102,13),
+(1785,288,102,14),
+(1831,86,102,15),
+(1833,86,102,16),
+(734,1380,102,17),
+(735,2760,102,18),
+(1061,379,102,19),
+(1832,207,102,20),
+(736,460,102,21),
+(737,2300,102,22),
+(1829,575,102,23),
+(2130,1150,102,24),
+(907,5616,103,1),
+(908,14280,103,2),
+(114,4212,103,3),
+(115,4212,103,4),
+(845,10668,103,5),
+(876,2808,103,6),
+(877,7104,103,7),
+(2505,16220,104,1),
+(3439,40880,104,2),
+(3902,73301,104,3),
+(3903,122838,104,4),
+(3904,193273,104,5),
+(3905,289986,104,6),
+(3906,418964,104,7),
+(2506,8353,104,8),
+(3891,21337,104,9),
+(3892,38718,104,10),
+(3893,65735,104,11),
+(3894,104920,104,12),
+(3895,159931,104,13),
+(3896,235160,104,14),
+(2515,120,104,15),
+(3920,377347,104,16),
+(3921,506849,104,17),
+(3922,680520,104,18),
+(3923,909889,104,19),
+(3913,377347,104,20),
+(3914,506849,104,21),
+(3915,680520,104,22),
+(3916,909889,104,23),
+(4038,180,104,24),
+(21,0,1001,1),
+(22,0,1001,2),
+(23,0,1001,3),
+(24,0,1001,4),
+(25,0,1001,5),
+(26,0,1001,6),
+(27,0,1001,7),
+(58,0,1001,8),
+(60,0,1001,9),
+(347,0,1001,10),
+(348,0,1001,11),
+(349,0,1001,12),
+(350,0,1001,13),
+(351,0,1001,14),
+(352,0,1001,15),
+(353,0,1001,16),
+(354,0,1001,17),
+(355,0,1001,18),
+(356,0,1001,19),
+(357,0,1001,20),
+(358,0,1001,21),
+(359,0,1001,22),
+(360,0,1001,23),
+(361,0,1001,24),
+(362,0,1001,25),
+(363,0,1001,26),
+(364,0,1001,27),
+(365,0,1001,28),
+(366,0,1001,29),
+(367,0,1001,30),
+(368,0,1001,31),
+(369,0,1001,32),
+(370,0,1001,33),
+(371,0,1001,34),
+(372,0,1001,35),
+(373,0,1001,36),
+(374,0,1001,37),
+(375,0,1001,38),
+(390,0,1001,39),
+(391,0,1001,40),
+(392,0,1001,41),
+(393,0,1001,42),
+(394,0,1001,43),
+(395,0,1001,44),
+(396,0,1001,45),
+(397,0,1001,46),
+(398,0,1001,47),
+(399,0,1001,48),
+(400,0,1001,49),
+(401,0,1001,50),
+(402,0,1001,51),
+(403,0,1001,52),
+(404,0,1001,53),
+(405,0,1001,54),
+(406,0,1001,55),
+(407,0,1001,56),
+(408,0,1001,57),
+(409,0,1001,58),
+(410,0,1001,59),
+(411,0,1001,60),
+(425,0,1001,61),
+(426,0,1001,62),
+(427,0,1001,63),
+(428,0,1001,64),
+(429,0,1001,65),
+(430,0,1001,66),
+(431,0,1001,67),
+(432,0,1001,68),
+(433,0,1001,69),
+(434,0,1001,70),
+(435,0,1001,71),
+(436,0,1001,72),
+(437,0,1001,73),
+(438,0,1001,74),
+(439,0,1001,75),
+(440,0,1001,76),
+(441,0,1001,77),
+(442,0,1001,78),
+(443,0,1001,79),
+(444,0,1001,80),
+(445,0,1001,81),
+(446,0,1001,82),
+(447,0,1001,83),
+(448,0,1001,84),
+(449,0,1001,85),
+(450,0,1001,86),
+(451,0,1001,87),
+(452,0,1001,88),
+(453,0,1001,89),
+(454,0,1001,90),
+(455,0,1001,91),
+(456,0,1001,92),
+(457,0,1001,93),
+(458,0,1001,94),
+(459,0,1001,95),
+(460,0,1001,96),
+(1100,0,1001,97),
+(1101,0,1001,98),
+(1102,0,1001,99),
+(1146,0,1001,100),
+(1308,0,1001,101),
+(1309,0,1001,102),
+(1310,0,1001,103),
+(1311,0,1001,104),
+(1312,0,1001,105),
+(2376,0,1001,106),
+(2381,0,1001,107),
+(2382,0,1001,108),
+(2383,0,1001,109),
+(2384,0,1001,110),
+(2385,0,1001,111),
+(2390,0,1001,112),
+(2391,0,1001,113),
+(2392,0,1001,114),
+(2393,0,1001,115),
+(2394,0,1001,116),
+(2395,0,1001,117),
+(2396,0,1001,118),
+(2397,0,1001,119),
+(2398,0,1001,120),
+(2399,0,1001,121),
+(2400,0,1001,122),
+(2406,0,1001,123),
+(2407,0,1001,124),
+(2408,0,1001,125),
+(2409,0,1001,126),
+(4224,0,1001,127),
+(4228,0,1001,128),
+(28,0,1002,1),
+(29,0,1002,2),
+(30,0,1002,3),
+(31,0,1002,4),
+(32,0,1002,5),
+(33,0,1002,6),
+(34,0,1002,7),
+(59,0,1002,8),
+(376,0,1002,9),
+(377,0,1002,10),
+(378,0,1002,11),
+(379,0,1002,12),
+(380,0,1002,13),
+(381,0,1002,14),
+(382,0,1002,15),
+(383,0,1002,16),
+(384,0,1002,17),
+(385,0,1002,18),
+(386,0,1002,19),
+(387,0,1002,20),
+(388,0,1002,21),
+(389,0,1002,22),
+(412,0,1002,23),
+(413,0,1002,24),
+(414,0,1002,25),
+(415,0,1002,26),
+(416,0,1002,27),
+(417,0,1002,28),
+(418,0,1002,29),
+(419,0,1002,30),
+(420,0,1002,31),
+(421,0,1002,32),
+(422,0,1002,33),
+(423,0,1002,34),
+(424,0,1002,35),
+(461,0,1002,36),
+(462,0,1002,37),
+(463,0,1002,38),
+(464,0,1002,39),
+(465,0,1002,40),
+(466,0,1002,41),
+(467,0,1002,42),
+(468,0,1002,43),
+(469,0,1002,44),
+(470,0,1002,45),
+(471,0,1002,46),
+(472,0,1002,47),
+(473,0,1002,48),
+(474,0,1002,49),
+(475,0,1002,50),
+(476,0,1002,51),
+(477,0,1002,52),
+(478,0,1002,53),
+(479,0,1002,54),
+(480,0,1002,55),
+(481,0,1002,56),
+(482,0,1002,57),
+(483,0,1002,58),
+(484,0,1002,59),
+(1103,0,1002,60),
+(1104,0,1002,61),
+(1105,0,1002,62),
+(1147,0,1002,63),
+(1313,0,1002,64),
+(1314,0,1002,65),
+(1315,0,1002,66),
+(1316,0,1002,67),
+(1317,0,1002,68),
+(2377,0,1002,69),
+(2378,0,1002,70),
+(2379,0,1002,71),
+(2380,0,1002,72),
+(2386,0,1002,73),
+(2387,0,1002,74),
+(2388,0,1002,75),
+(2389,0,1002,76),
+(2401,0,1002,77),
+(2402,0,1002,78),
+(2403,0,1002,79),
+(2404,0,1002,80),
+(2405,0,1002,81),
+(4225,0,1002,82),
+(4229,0,1002,83),
+(35,0,1003,1),
+(36,0,1003,2),
+(37,0,1003,3),
+(38,0,1003,4),
+(39,0,1003,5),
+(40,0,1003,6),
+(62,0,1003,7),
+(64,0,1003,8),
+(553,0,1003,9),
+(554,0,1003,10),
+(555,0,1003,11),
+(556,0,1003,12),
+(557,0,1003,13),
+(558,0,1003,14),
+(559,0,1003,15),
+(560,0,1003,16),
+(561,0,1003,17),
+(562,0,1003,18),
+(563,0,1003,19),
+(564,0,1003,20),
+(565,0,1003,21),
+(566,0,1003,22),
+(567,0,1003,23),
+(568,0,1003,24),
+(569,0,1003,25),
+(570,0,1003,26),
+(571,0,1003,27),
+(572,0,1003,28),
+(573,0,1003,29),
+(574,0,1003,30),
+(575,0,1003,31),
+(576,0,1003,32),
+(577,0,1003,33),
+(578,0,1003,34),
+(579,0,1003,35),
+(580,0,1003,36),
+(581,0,1003,37),
+(582,0,1003,38),
+(583,0,1003,39),
+(584,0,1003,40),
+(585,0,1003,41),
+(586,0,1003,42),
+(587,0,1003,43),
+(588,0,1003,44),
+(589,0,1003,45),
+(590,0,1003,46),
+(591,0,1003,47),
+(592,0,1003,48),
+(593,0,1003,49),
+(594,0,1003,50),
+(595,0,1003,51),
+(596,0,1003,52),
+(597,0,1003,53),
+(598,0,1003,54),
+(599,0,1003,55),
+(600,0,1003,56),
+(601,0,1003,57),
+(602,0,1003,58),
+(603,0,1003,59),
+(1121,0,1003,60),
+(1122,0,1003,61),
+(1123,0,1003,62),
+(1124,0,1003,63),
+(1125,0,1003,64),
+(1126,0,1003,65),
+(1127,0,1003,66),
+(1128,0,1003,67),
+(1129,0,1003,68),
+(1323,0,1003,69),
+(1324,0,1003,70),
+(1325,0,1003,71),
+(1326,0,1003,72),
+(1327,0,1003,73),
+(2422,0,1003,74),
+(2423,0,1003,75),
+(2424,0,1003,76),
+(2425,0,1003,77),
+(2426,0,1003,78),
+(2427,0,1003,79),
+(2428,0,1003,80),
+(2429,0,1003,81),
+(2430,0,1003,82),
+(2431,0,1003,83),
+(2432,0,1003,84),
+(2433,0,1003,85),
+(2434,0,1003,86),
+(2435,0,1003,87),
+(2436,0,1003,88),
+(2437,0,1003,89),
+(2438,0,1003,90),
+(2439,0,1003,91),
+(2440,0,1003,92),
+(2441,0,1003,93),
+(2442,0,1003,94),
+(2443,0,1003,95),
+(2444,0,1003,96),
+(2445,0,1003,97),
+(4227,0,1003,98),
+(4231,0,1003,99),
+(41,0,1004,1),
+(42,0,1004,2),
+(43,0,1004,3),
+(44,0,1004,4),
+(45,0,1004,5),
+(46,0,1004,6),
+(47,0,1004,7),
+(497,0,1004,8),
+(498,0,1004,9),
+(499,0,1004,10),
+(500,0,1004,11),
+(501,0,1004,12),
+(502,0,1004,13),
+(503,0,1004,14),
+(504,0,1004,15),
+(505,0,1004,16),
+(506,0,1004,17),
+(507,0,1004,18),
+(508,0,1004,19),
+(509,0,1004,20),
+(510,0,1004,21),
+(511,0,1004,22),
+(512,0,1004,23),
+(513,0,1004,24),
+(514,0,1004,25),
+(515,0,1004,26),
+(516,0,1004,27),
+(517,0,1004,28),
+(518,0,1004,29),
+(519,0,1004,30),
+(520,0,1004,31),
+(521,0,1004,32),
+(522,0,1004,33),
+(523,0,1004,34),
+(524,0,1004,35),
+(525,0,1004,36),
+(526,0,1004,37),
+(527,0,1004,38),
+(528,0,1004,39),
+(529,0,1004,40),
+(530,0,1004,41),
+(531,0,1004,42),
+(532,0,1004,43),
+(533,0,1004,44),
+(534,0,1004,45),
+(535,0,1004,46),
+(536,0,1004,47),
+(537,0,1004,48),
+(538,0,1004,49),
+(539,0,1004,50),
+(540,0,1004,51),
+(541,0,1004,52),
+(542,0,1004,53),
+(543,0,1004,54),
+(544,0,1004,55),
+(545,0,1004,56),
+(546,0,1004,57),
+(547,0,1004,58),
+(548,0,1004,59),
+(549,0,1004,60),
+(550,0,1004,61),
+(551,0,1004,62),
+(552,0,1004,63),
+(1148,0,1004,64),
+(1149,0,1004,65),
+(2411,0,1004,66),
+(2412,0,1004,67),
+(2413,0,1004,68),
+(2414,0,1004,69),
+(2415,0,1004,70),
+(2416,0,1004,71),
+(2417,0,1004,72),
+(2418,0,1004,73),
+(2419,0,1004,74),
+(2420,0,1004,75),
+(2421,0,1004,76),
+(48,0,1005,1),
+(49,0,1005,2),
+(50,0,1005,3),
+(51,0,1005,4),
+(61,0,1005,5),
+(63,0,1005,6),
+(604,0,1005,7),
+(605,0,1005,8),
+(606,0,1005,9),
+(607,0,1005,10),
+(608,0,1005,11),
+(609,0,1005,12),
+(610,0,1005,13),
+(611,0,1005,14),
+(612,0,1005,15),
+(613,0,1005,16),
+(990,0,1005,17),
+(991,0,1005,18),
+(992,0,1005,19),
+(993,0,1005,20),
+(994,0,1005,21),
+(995,0,1005,22),
+(996,0,1005,23),
+(997,0,1005,24),
+(998,0,1005,25),
+(999,0,1005,26),
+(1000,0,1005,27),
+(1119,0,1005,28),
+(1120,0,1005,29),
+(1318,0,1005,30),
+(1319,0,1005,31),
+(1320,0,1005,32),
+(1321,0,1005,33),
+(1322,0,1005,34),
+(2446,0,1005,35),
+(2447,0,1005,36),
+(2448,0,1005,37),
+(2449,0,1005,38),
+(2450,0,1005,39),
+(2451,0,1005,40),
+(2452,0,1005,41),
+(2453,0,1005,42),
+(2454,0,1005,43),
+(2455,0,1005,44),
+(2456,0,1005,45),
+(2457,0,1005,46),
+(2458,0,1005,47),
+(2459,0,1005,48),
+(2460,0,1005,49),
+(2461,0,1005,50),
+(2462,0,1005,51),
+(2463,0,1005,52),
+(2464,0,1005,53),
+(2465,0,1005,54),
+(2466,0,1005,55),
+(2467,0,1005,56),
+(2468,0,1005,57),
+(2469,0,1005,58),
+(2470,0,1005,59),
+(2471,0,1005,60),
+(2472,0,1005,61),
+(2473,0,1005,62),
+(2474,0,1005,63),
+(2475,0,1005,64),
+(2476,0,1005,65),
+(2477,0,1005,66),
+(2478,0,1005,67),
+(2479,0,1005,68),
+(2480,0,1005,69),
+(2481,0,1005,70),
+(2482,0,1005,71),
+(2483,0,1005,72),
+(2484,0,1005,73),
+(2485,0,1005,74),
+(2486,0,1005,75),
+(2487,0,1005,76),
+(2488,0,1005,77),
+(2489,0,1005,78),
+(4226,0,1005,79),
+(4230,0,1005,80),
+(52,0,1006,1),
+(53,0,1006,2),
+(54,0,1006,3),
+(614,0,1006,4),
+(615,0,1006,5),
+(616,0,1006,6),
+(617,0,1006,7),
+(618,0,1006,8),
+(619,0,1006,9),
+(620,0,1006,10),
+(621,0,1006,11),
+(622,0,1006,12),
+(623,0,1006,13),
+(624,0,1006,14),
+(2490,0,1006,15),
+(2491,0,1006,16),
+(2492,0,1006,17),
+(55,0,1007,1),
+(56,0,1007,2),
+(675,0,1007,3),
+(676,0,1007,4),
+(677,0,1007,5),
+(678,0,1007,6),
+(679,0,1007,7),
+(680,0,1007,8),
+(681,0,1007,9),
+(682,0,1007,10),
+(683,0,1007,11),
+(684,0,1007,12),
+(685,0,1007,13),
+(112,0,1008,1),
+(113,0,1008,2),
+(114,0,1008,3),
+(115,0,1008,4),
+(845,0,1008,5),
+(846,0,1008,6),
+(847,0,1008,7),
+(848,0,1008,8),
+(849,0,1008,9),
+(850,0,1008,10),
+(851,0,1008,11),
+(852,0,1008,12),
+(853,0,1008,13),
+(854,0,1008,14),
+(855,0,1008,15),
+(856,0,1008,16),
+(857,0,1008,17),
+(858,0,1008,18),
+(859,0,1008,19),
+(860,0,1008,20),
+(861,0,1008,21),
+(862,0,1008,22),
+(863,0,1008,23),
+(864,0,1008,24),
+(865,0,1008,25),
+(866,0,1008,26),
+(867,0,1008,27),
+(868,0,1008,28),
+(869,0,1008,29),
+(870,0,1008,30),
+(871,0,1008,31),
+(872,0,1008,32),
+(873,0,1008,33),
+(874,0,1008,34),
+(116,0,1009,1),
+(117,0,1009,2),
+(875,0,1009,3),
+(876,0,1009,4),
+(877,0,1009,5),
+(878,0,1009,6),
+(879,0,1009,7),
+(880,0,1009,8),
+(881,0,1009,9),
+(882,0,1009,10),
+(883,0,1009,11),
+(884,0,1009,12),
+(885,0,1009,13),
+(886,0,1009,14),
+(887,0,1009,15),
+(888,0,1009,16),
+(889,0,1009,17),
+(890,0,1009,18),
+(891,0,1009,19),
+(892,0,1009,20),
+(893,0,1009,21),
+(894,0,1009,22),
+(895,0,1009,23),
+(896,0,1009,24),
+(897,0,1009,25),
+(898,0,1009,26),
+(899,0,1009,27),
+(900,0,1009,28),
+(901,0,1009,29),
+(902,0,1009,30),
+(903,0,1009,31),
+(904,0,1009,32),
+(905,0,1009,33),
+(1508,0,1009,34),
+(1509,0,1009,35),
+(118,0,1010,1),
+(119,0,1010,2),
+(906,0,1010,3),
+(907,0,1010,4),
+(908,0,1010,5),
+(909,0,1010,6),
+(910,0,1010,7),
+(911,0,1010,8),
+(912,0,1010,9),
+(913,0,1010,10),
+(914,0,1010,11),
+(915,0,1010,12),
+(916,0,1010,13),
+(917,0,1010,14),
+(918,0,1010,15),
+(919,0,1010,16),
+(920,0,1010,17),
+(921,0,1010,18),
+(922,0,1010,19),
+(923,0,1010,20),
+(924,0,1010,21),
+(925,0,1010,22),
+(926,0,1010,23),
+(927,0,1010,24),
+(928,0,1010,25),
+(929,0,1010,26),
+(930,0,1010,27),
+(931,0,1010,28),
+(932,0,1010,29),
+(933,0,1010,30),
+(934,0,1010,31),
+(935,0,1010,32),
+(936,0,1010,33),
+(1506,0,1010,34),
+(1507,0,1010,35),
+(485,0,1011,1),
+(486,0,1011,2),
+(487,0,1011,3),
+(488,0,1011,4),
+(489,0,1011,5),
+(490,0,1011,6),
+(491,0,1011,7),
+(492,0,1011,8),
+(493,0,1011,9),
+(494,0,1011,10),
+(495,0,1011,11),
+(496,0,1011,12),
+(2410,0,1011,13),
+(2506,0,1012,1),
+(3891,0,1012,2),
+(3892,0,1012,3),
+(3893,0,1012,4),
+(3894,0,1012,5),
+(3895,0,1012,6),
+(3896,0,1012,7),
+(3897,0,1012,8),
+(3898,0,1012,9),
+(3899,0,1012,10),
+(3900,0,1012,11),
+(3901,0,1012,12),
+(4236,0,1012,13),
+(5216,0,1012,14),
+(3912,0,1013,1),
+(3913,0,1013,2),
+(3914,0,1013,3),
+(3915,0,1013,4),
+(3916,0,1013,5),
+(3917,0,1013,6),
+(3918,0,1013,7),
+(5182,0,1013,8),
+(5183,0,1013,9),
+(5184,0,1013,10),
+(4234,0,1013,11),
+(5185,0,1013,12),
+(5186,0,1013,13),
+(4235,0,1013,14),
+(5170,0,1014,1),
+(5171,0,1014,2),
+(5172,0,1014,3),
+(5173,0,1014,4),
+(5174,0,1014,5),
+(5175,0,1014,6),
+(5287,0,1015,1),
+(5288,0,1015,2),
+(5289,0,1015,3),
+(5290,0,1015,4),
+(5291,0,1015,5),
+(5293,0,1015,6),
+(5294,0,1015,7),
+(5295,0,1015,8),
+(5296,0,1015,9),
+(5297,0,1015,10),
+(5298,0,1015,11),
+(5299,0,1015,12),
+(5300,0,1015,13),
+(5301,0,1015,14),
+(5302,0,1015,15),
+(5303,0,1015,16),
+(5304,0,1015,17),
+(5305,0,1015,18),
+(5306,0,1015,19),
+(5307,0,1015,20),
+(5308,0,1015,21),
+(5309,0,1015,22),
+(5310,0,1015,23),
+(5311,0,1015,24),
+(5312,0,1015,25),
+(5313,0,1015,26),
+(5314,0,1015,27),
+(5316,0,1015,28),
+(5317,0,1015,29),
+(5318,0,1015,30),
+(5319,0,1015,31),
+(5320,0,1015,32),
+(5321,0,1015,33),
+(5322,0,1015,34),
+(5323,0,1015,35),
+(5324,0,1015,36),
+(5325,0,1015,37),
+(5326,0,1015,38),
+(5327,0,1015,39),
+(5328,0,1015,40),
+(5329,0,1015,41),
+(5330,0,1015,42),
+(5331,0,1015,43),
+(5576,0,1015,44),
+(5590,0,1015,45),
+(5709,0,1015,46),
+(5710,0,1015,47),
+(5711,0,1015,48),
+(5712,0,1015,49),
+(5713,0,1015,50),
+(5714,0,1015,51),
+(5715,0,1015,52),
+(5716,0,1015,53),
+(5717,0,1015,54),
+(5718,0,1015,55),
+(5719,0,1015,56),
+(5720,0,1015,57),
+(5721,0,1015,58),
+(5722,0,1015,59),
+(5723,0,1015,60),
+(5724,0,1015,61),
+(5725,0,1015,62),
+(5726,0,1015,63),
+(5727,0,1015,64),
+(5728,0,1015,65),
+(5729,0,1015,66),
+(5730,0,1015,67),
+(5731,0,1015,68),
+(5732,0,1015,69),
+(5733,0,1015,70),
+(5734,0,1015,71),
+(5735,0,1015,72),
+(5736,0,1015,73),
+(5737,0,1015,74),
+(5738,0,1015,75),
+(5739,0,1015,76),
+(5740,0,1015,77),
+(5765,0,1015,78),
+(5766,0,1015,79),
+(5767,0,1015,80),
+(5768,0,1015,81),
+(5769,0,1015,82),
+(5770,0,1015,83),
+(5771,0,1015,84),
+(5772,0,1015,85),
+(5773,0,1015,86),
+(5774,0,1015,87),
+(5775,0,1015,88),
+(5776,0,1015,89),
+(5777,0,1015,90),
+(5778,0,1015,91),
+(5779,0,1015,92),
+(5780,0,1015,93),
+(5781,0,1015,94),
+(5782,0,1015,95),
+(5783,0,1015,96),
+(5784,0,1015,97),
+(5785,0,1015,98),
+(5786,0,1015,99),
+(5787,0,1015,100),
+(5788,0,1015,101),
+(5808,0,1015,102),
+(6323,0,1015,103),
+(6324,0,1015,104),
+(6325,0,1015,105),
+(6326,0,1015,106),
+(6327,0,1015,107),
+(6328,0,1015,108),
+(4682,0,1025,1),
+(4684,0,1025,2),
+(4687,0,1025,3),
+(4689,0,1025,4),
+(4692,0,1025,5),
+(4693,0,1025,6),
+(4696,0,1025,7),
+(4697,0,1025,8),
+(4699,0,1025,9),
+(4700,0,1025,10),
+(4702,0,1025,11),
+(4704,0,1025,12),
+(4705,0,1025,13),
+(4706,0,1025,14),
+(4708,0,1025,15),
+(4710,0,1025,16),
+(4712,0,1025,17),
+(4714,0,1025,18),
+(4715,0,1025,19),
+(4717,0,1025,20),
+(4719,0,1025,21),
+(4720,0,1025,22),
+(4723,0,1025,23),
+(4725,0,1025,24),
+(5636,0,1025,25),
+(5637,0,1025,26),
+(5640,0,1025,27),
+(5643,0,1025,28),
+(5644,0,1025,29),
+(5648,0,1025,30),
+(6307,0,1025,31),
+(6309,0,1025,32),
+(6310,0,1025,33),
+(6313,0,1025,34),
+(6314,0,1025,35),
+(6347,0,1025,36),
+(6349,0,1025,37),
+(4726,0,1026,1),
+(4728,0,1026,2),
+(4729,0,1026,3),
+(4731,0,1026,4),
+(4732,0,1026,5),
+(4734,0,1026,6),
+(4735,0,1026,7),
+(4736,0,1026,8),
+(4738,0,1026,9),
+(4739,0,1026,10),
+(4740,0,1026,11),
+(4741,0,1026,12),
+(4742,0,1026,13),
+(4743,0,1026,14),
+(4744,0,1026,15),
+(4745,0,1026,16),
+(4747,0,1026,17),
+(4748,0,1026,18),
+(4750,0,1026,19),
+(4751,0,1026,20),
+(4752,0,1026,21),
+(4753,0,1026,22),
+(4755,0,1026,23),
+(4756,0,1026,24),
+(4868,0,1026,25),
+(4885,0,1026,26),
+(4892,0,1026,27),
+(5596,0,1026,28),
+(5597,0,1026,29),
+(5598,0,1026,30),
+(5599,0,1026,31),
+(5602,0,1026,32),
+(5603,0,1026,33),
+(5605,0,1026,34),
+(5607,0,1026,35),
+(4762,0,1027,1),
+(4768,0,1027,2),
+(4769,0,1027,3),
+(4771,0,1027,4),
+(4772,0,1027,5),
+(4777,0,1027,6),
+(4778,0,1027,7),
+(4783,0,1027,8),
+(4786,0,1027,9),
+(5614,0,1027,10),
+(5617,0,1027,11),
+(4794,0,1028,1),
+(4800,0,1028,2),
+(5620,0,1028,3),
+(5621,0,1028,4),
+(5622,0,1028,5),
+(5624,0,1028,6),
+(5625,0,1028,7),
+(4810,0,1029,1),
+(4811,0,1029,2),
+(4813,0,1029,3),
+(4816,0,1029,4),
+(4819,0,1029,5),
+(4820,0,1029,6),
+(4822,0,1029,7),
+(4825,0,1029,8),
+(4828,0,1029,9),
+(4832,0,1029,10),
+(5610,0,1029,11),
+(4834,0,1030,1),
+(4837,0,1030,2),
+(4846,0,1030,3),
+(4855,0,1030,4),
+(4858,0,1030,5),
+(5626,0,1030,6),
+(5632,0,1030,7),
+(5633,0,1030,8),
+(1,0,2001,1),
+(2,0,2001,2),
+(3,0,2001,3),
+(66,0,2001,4),
+(67,0,2001,5),
+(68,0,2001,6),
+(69,0,2001,7),
+(72,0,2001,8),
+(73,0,2001,9),
+(74,0,2001,10),
+(75,0,2001,11),
+(76,0,2001,12),
+(77,0,2001,13),
+(79,0,2001,14),
+(80,0,2001,15),
+(82,0,2001,16),
+(83,0,2001,17),
+(84,0,2001,18),
+(85,0,2001,19),
+(120,0,2001,20),
+(121,0,2001,21),
+(122,0,2001,22),
+(123,0,2001,23),
+(125,0,2001,24),
+(126,0,2001,25),
+(127,0,2001,26),
+(128,0,2001,27),
+(129,0,2001,28),
+(130,0,2001,29),
+(131,0,2001,30),
+(132,0,2001,31),
+(133,0,2001,32),
+(134,0,2001,33),
+(135,0,2001,34),
+(136,0,2001,35),
+(137,0,2001,36),
+(138,0,2001,37),
+(139,0,2001,38),
+(140,0,2001,39),
+(141,0,2001,40),
+(142,0,2001,41),
+(143,0,2001,42),
+(144,0,2001,43),
+(145,0,2001,44),
+(146,0,2001,45),
+(147,0,2001,46),
+(148,0,2001,47),
+(149,0,2001,48),
+(150,0,2001,49),
+(151,0,2001,50),
+(738,0,2001,51),
+(743,0,2001,52),
+(975,0,2001,53),
+(1142,0,2001,54),
+(1295,0,2001,55),
+(1296,0,2001,56),
+(1297,0,2001,57),
+(1298,0,2001,58),
+(1510,0,2001,59),
+(2369,0,2001,60),
+(2499,0,2001,61),
+(2500,0,2001,62),
+(2915,0,2001,63),
+(3029,0,2001,64),
+(4027,0,2001,65),
+(4202,0,2001,66),
+(4219,0,2001,67),
+(4681,0,2001,68),
+(4682,0,2001,69),
+(4683,0,2001,70),
+(4684,0,2001,71),
+(4685,0,2001,72),
+(4686,0,2001,73),
+(4687,0,2001,74),
+(4688,0,2001,75),
+(4689,0,2001,76),
+(4690,0,2001,77),
+(4691,0,2001,78),
+(4692,0,2001,79),
+(4693,0,2001,80),
+(4694,0,2001,81),
+(4695,0,2001,82),
+(4696,0,2001,83),
+(4697,0,2001,84),
+(4698,0,2001,85),
+(4699,0,2001,86),
+(4700,0,2001,87),
+(4701,0,2001,88),
+(4702,0,2001,89),
+(4703,0,2001,90),
+(4704,0,2001,91),
+(4705,0,2001,92),
+(4706,0,2001,93),
+(4707,0,2001,94),
+(4708,0,2001,95),
+(4709,0,2001,96),
+(4710,0,2001,97),
+(4714,0,2001,98),
+(4715,0,2001,99),
+(4716,0,2001,100),
+(4717,0,2001,101),
+(4718,0,2001,102),
+(4719,0,2001,103),
+(4720,0,2001,104),
+(4721,0,2001,105),
+(4722,0,2001,106),
+(6354,0,2001,107),
+(70,0,2002,1),
+(71,0,2002,2),
+(78,0,2002,3),
+(81,0,2002,4),
+(124,0,2002,5),
+(981,0,2002,6),
+(1333,0,2002,7),
+(3027,0,2002,8),
+(4711,0,2002,9),
+(4712,0,2002,10),
+(4713,0,2002,11),
+(4723,0,2002,12),
+(4724,0,2002,13),
+(4725,0,2002,14),
+(1299,0,2003,1),
+(2516,0,2003,2),
+(2517,0,2003,3),
+(2518,0,2003,4),
+(2519,0,2003,5),
+(2520,0,2003,6),
+(2521,0,2003,7),
+(2522,0,2003,8),
+(2523,0,2003,9),
+(2524,0,2003,10),
+(2525,0,2003,11),
+(2526,0,2003,12),
+(2527,0,2003,13),
+(2528,0,2003,14),
+(2529,0,2003,15),
+(2530,0,2003,16),
+(2531,0,2003,17),
+(2532,0,2003,18),
+(2533,0,2003,19),
+(2534,0,2003,20),
+(2535,0,2003,21),
+(2536,0,2003,22),
+(2537,0,2003,23),
+(2538,0,2003,24),
+(2539,0,2003,25),
+(2540,0,2003,26),
+(2541,0,2003,27),
+(2542,0,2003,28),
+(2543,0,2003,29),
+(2544,0,2003,30),
+(2545,0,2003,31),
+(2546,0,2003,32),
+(2547,0,2003,33),
+(2548,0,2003,34),
+(2549,0,2003,35),
+(2550,0,2003,36),
+(2551,0,2003,37),
+(2552,0,2003,38),
+(2553,0,2003,39),
+(2554,0,2003,40),
+(2555,0,2003,41),
+(2556,0,2003,42),
+(2557,0,2003,43),
+(2558,0,2003,44),
+(2559,0,2003,45),
+(2560,0,2003,46),
+(2561,0,2003,47),
+(2562,0,2003,48),
+(2563,0,2003,49),
+(2564,0,2003,50),
+(2565,0,2003,51),
+(2566,0,2003,52),
+(2567,0,2003,53),
+(2568,0,2003,54),
+(2569,0,2003,55),
+(2570,0,2003,56),
+(2571,0,2003,57),
+(2572,0,2003,58),
+(2573,0,2003,59),
+(2574,0,2003,60),
+(2575,0,2003,61),
+(2576,0,2003,62),
+(2577,0,2003,63),
+(2578,0,2003,64),
+(2579,0,2003,65),
+(2580,0,2003,66),
+(2581,0,2003,67),
+(2582,0,2003,68),
+(2583,0,2003,69),
+(2584,0,2003,70),
+(2585,0,2003,71),
+(2586,0,2003,72),
+(2587,0,2003,73),
+(2588,0,2003,74),
+(2589,0,2003,75),
+(2590,0,2003,76),
+(2591,0,2003,77),
+(2592,0,2003,78),
+(2593,0,2003,79),
+(2594,0,2003,80),
+(2595,0,2003,81),
+(2596,0,2003,82),
+(2597,0,2003,83),
+(2598,0,2003,84),
+(2599,0,2003,85),
+(2600,0,2003,86),
+(2601,0,2003,87),
+(2602,0,2003,88),
+(2603,0,2003,89),
+(2604,0,2003,90),
+(2605,0,2003,91),
+(2606,0,2003,92),
+(2607,0,2003,93),
+(2608,0,2003,94),
+(2609,0,2003,95),
+(2610,0,2003,96),
+(2611,0,2003,97),
+(2612,0,2003,98),
+(2613,0,2003,99),
+(2614,0,2003,100),
+(2615,0,2003,101),
+(2616,0,2003,102),
+(2617,0,2003,103),
+(2618,0,2003,104),
+(2619,0,2003,105),
+(2620,0,2003,106),
+(2621,0,2003,107),
+(2622,0,2003,108),
+(2623,0,2003,109),
+(2624,0,2003,110),
+(2625,0,2003,111),
+(2626,0,2003,112),
+(5129,0,2003,113),
+(5233,0,2003,114),
+(10,0,2004,1),
+(11,0,2004,2),
+(12,0,2004,3),
+(215,0,2004,4),
+(216,0,2004,5),
+(217,0,2004,6),
+(218,0,2004,7),
+(219,0,2004,8),
+(220,0,2004,9),
+(221,0,2004,10),
+(222,0,2004,11),
+(223,0,2004,12),
+(224,0,2004,13),
+(225,0,2004,14),
+(226,0,2004,15),
+(227,0,2004,16),
+(228,0,2004,17),
+(229,0,2004,18),
+(230,0,2004,19),
+(231,0,2004,20),
+(232,0,2004,21),
+(233,0,2004,22),
+(234,0,2004,23),
+(235,0,2004,24),
+(236,0,2004,25),
+(237,0,2004,26),
+(238,0,2004,27),
+(239,0,2004,28),
+(240,0,2004,29),
+(241,0,2004,30),
+(242,0,2004,31),
+(243,0,2004,32),
+(946,0,2004,33),
+(989,0,2004,34),
+(1182,0,2004,35),
+(1305,0,2004,36),
+(1306,0,2004,37),
+(1471,0,2004,38),
+(1660,0,2004,39),
+(2372,0,2004,40),
+(2374,0,2004,41),
+(2507,0,2004,42),
+(3471,0,2004,43),
+(4028,0,2004,44),
+(4220,0,2004,45),
+(4665,0,2004,46),
+(4759,0,2004,47),
+(4760,0,2004,48),
+(4761,0,2004,49),
+(4762,0,2004,50),
+(4763,0,2004,51),
+(4764,0,2004,52),
+(4765,0,2004,53),
+(4766,0,2004,54),
+(4767,0,2004,55),
+(4768,0,2004,56),
+(4769,0,2004,57),
+(4770,0,2004,58),
+(4771,0,2004,59),
+(4772,0,2004,60),
+(4773,0,2004,61),
+(4774,0,2004,62),
+(4775,0,2004,63),
+(4776,0,2004,64),
+(4777,0,2004,65),
+(4778,0,2004,66),
+(4779,0,2004,67),
+(4780,0,2004,68),
+(4781,0,2004,69),
+(4782,0,2004,70),
+(4783,0,2004,71),
+(4784,0,2004,72),
+(4785,0,2004,73),
+(4786,0,2004,74),
+(4787,0,2004,75),
+(4788,0,2004,76),
+(5127,0,2004,77),
+(5128,0,2004,78),
+(5130,0,2004,79),
+(5131,0,2004,80),
+(5132,0,2004,81),
+(13,0,2005,1),
+(14,0,2005,2),
+(271,0,2005,3),
+(272,0,2005,4),
+(273,0,2005,5),
+(274,0,2005,6),
+(275,0,2005,7),
+(276,0,2005,8),
+(277,0,2005,9),
+(278,0,2005,10),
+(279,0,2005,11),
+(280,0,2005,12),
+(281,0,2005,13),
+(282,0,2005,14),
+(283,0,2005,15),
+(284,0,2005,16),
+(285,0,2005,17),
+(286,0,2005,18),
+(287,0,2005,19),
+(288,0,2005,20),
+(289,0,2005,21),
+(290,0,2005,22),
+(1181,0,2005,23),
+(1213,0,2005,24),
+(1307,0,2005,25),
+(3028,0,2005,26),
+(4810,0,2005,27),
+(4811,0,2005,28),
+(4812,0,2005,29),
+(4813,0,2005,30),
+(4814,0,2005,31),
+(4815,0,2005,32),
+(4816,0,2005,33),
+(4817,0,2005,34),
+(4818,0,2005,35),
+(4819,0,2005,36),
+(4820,0,2005,37),
+(4821,0,2005,38),
+(4822,0,2005,39),
+(4823,0,2005,40),
+(4824,0,2005,41),
+(4825,0,2005,42),
+(4826,0,2005,43),
+(4827,0,2005,44),
+(4828,0,2005,45),
+(4829,0,2005,46),
+(4830,0,2005,47),
+(4831,0,2005,48),
+(4832,0,2005,49),
+(4833,0,2005,50),
+(17,0,2005,51),
+(1341,0,2005,52),
+(1342,0,2005,53),
+(1343,0,2005,54),
+(1344,0,2005,55),
+(1345,0,2005,56),
+(244,0,2006,1),
+(245,0,2006,2),
+(246,0,2006,3),
+(247,0,2006,4),
+(248,0,2006,5),
+(249,0,2006,6),
+(250,0,2006,7),
+(251,0,2006,8),
+(252,0,2006,9),
+(253,0,2007,1),
+(254,0,2007,2),
+(255,0,2007,3),
+(256,0,2007,4),
+(257,0,2007,5),
+(258,0,2007,6),
+(259,0,2007,7),
+(260,0,2007,8),
+(261,0,2007,9),
+(262,0,2007,10),
+(263,0,2007,11),
+(264,0,2007,12),
+(265,0,2007,13),
+(266,0,2007,14),
+(267,0,2007,15),
+(268,0,2007,16),
+(269,0,2007,17),
+(270,0,2007,18),
+(2368,0,2007,19),
+(2371,0,2007,20),
+(4233,0,2007,21),
+(4789,0,2007,22),
+(4790,0,2007,23),
+(4791,0,2007,24),
+(4792,0,2007,25),
+(4793,0,2007,26),
+(4794,0,2007,27),
+(4795,0,2007,28),
+(4796,0,2007,29),
+(4797,0,2007,30),
+(4798,0,2007,31),
+(4799,0,2007,32),
+(4800,0,2007,33),
+(4801,0,2007,34),
+(4802,0,2007,35),
+(4803,0,2007,36),
+(4804,0,2007,37),
+(4805,0,2007,38),
+(4806,0,2007,39),
+(4807,0,2007,40),
+(4808,0,2007,41),
+(4809,0,2007,42),
+(5133,0,2007,43),
+(15,0,2008,1),
+(16,0,2008,2),
+(93,0,2008,3),
+(94,0,2008,4),
+(95,0,2008,5),
+(96,0,2008,6),
+(97,0,2008,7),
+(98,0,2008,8),
+(291,0,2008,9),
+(292,0,2008,10),
+(293,0,2008,11),
+(294,0,2008,12),
+(295,0,2008,13),
+(296,0,2008,14),
+(297,0,2008,15),
+(298,0,2008,16),
+(299,0,2008,17),
+(300,0,2008,18),
+(301,0,2008,19),
+(302,0,2008,20),
+(303,0,2008,21),
+(304,0,2008,22),
+(305,0,2008,23),
+(306,0,2008,24),
+(307,0,2008,25),
+(1302,0,2008,26),
+(1303,0,2008,27),
+(1376,0,2008,28),
+(1472,0,2008,29),
+(3026,0,2008,30),
+(3937,0,2008,31),
+(3938,0,2008,32),
+(3939,0,2008,33),
+(4834,0,2008,34),
+(4835,0,2008,35),
+(4836,0,2008,36),
+(4837,0,2008,37),
+(4838,0,2008,38),
+(4839,0,2008,39),
+(4840,0,2008,40),
+(4841,0,2008,41),
+(4842,0,2008,42),
+(4843,0,2008,43),
+(4844,0,2008,44),
+(4845,0,2008,45),
+(4846,0,2008,46),
+(4847,0,2008,47),
+(4848,0,2008,48),
+(4849,0,2008,49),
+(4850,0,2008,50),
+(4851,0,2008,51),
+(4852,0,2008,52),
+(4853,0,2008,53),
+(4854,0,2008,54),
+(4855,0,2008,55),
+(4856,0,2008,56),
+(4857,0,2008,57),
+(4858,0,2008,58),
+(4859,0,2008,59),
+(4860,0,2008,60),
+(4861,0,2008,61),
+(4862,0,2008,62),
+(4863,0,2008,63),
+(4,0,2009,1),
+(5,0,2009,2),
+(6,0,2009,3),
+(7,0,2009,4),
+(86,0,2009,5),
+(87,0,2009,6),
+(88,0,2009,7),
+(89,0,2009,8),
+(91,0,2009,9),
+(152,0,2009,10),
+(153,0,2009,11),
+(154,0,2009,12),
+(155,0,2009,13),
+(156,0,2009,14),
+(157,0,2009,15),
+(158,0,2009,16),
+(159,0,2009,17),
+(160,0,2009,18),
+(161,0,2009,19),
+(162,0,2009,20),
+(163,0,2009,21),
+(164,0,2009,22),
+(165,0,2009,23),
+(166,0,2009,24),
+(167,0,2009,25),
+(168,0,2009,26),
+(169,0,2009,27),
+(170,0,2009,28),
+(171,0,2009,29),
+(172,0,2009,30),
+(173,0,2009,31),
+(174,0,2009,32),
+(175,0,2009,33),
+(179,0,2009,34),
+(180,0,2009,35),
+(181,0,2009,36),
+(182,0,2009,37),
+(189,0,2009,38),
+(193,0,2009,39),
+(196,0,2009,40),
+(201,0,2009,41),
+(202,0,2009,42),
+(747,0,2009,43),
+(1300,0,2009,44),
+(1301,0,2009,45),
+(1511,0,2009,46),
+(2370,0,2009,47),
+(2501,0,2009,48),
+(2502,0,2009,49),
+(2503,0,2009,50),
+(2504,0,2009,51),
+(4221,0,2009,52),
+(4726,0,2009,53),
+(4727,0,2009,54),
+(4728,0,2009,55),
+(4729,0,2009,56),
+(4730,0,2009,57),
+(4731,0,2009,58),
+(4732,0,2009,59),
+(4733,0,2009,60),
+(4734,0,2009,61),
+(4735,0,2009,62),
+(4736,0,2009,63),
+(4737,0,2009,64),
+(4738,0,2009,65),
+(4739,0,2009,66),
+(4740,0,2009,67),
+(4741,0,2009,68),
+(4742,0,2009,69),
+(4743,0,2009,70),
+(4744,0,2009,71),
+(4745,0,2009,72),
+(4746,0,2009,73),
+(4747,0,2009,74),
+(4748,0,2009,75),
+(4749,0,2009,76),
+(4750,0,2009,77),
+(4751,0,2009,78),
+(4752,0,2009,79),
+(4753,0,2009,80),
+(4754,0,2009,81),
+(4755,0,2009,82),
+(4756,0,2009,83),
+(4757,0,2009,84),
+(4758,0,2009,85),
+(8,0,2010,1),
+(9,0,2010,2),
+(90,0,2010,3),
+(92,0,2010,4),
+(176,0,2010,5),
+(177,0,2010,6),
+(178,0,2010,7),
+(183,0,2010,8),
+(184,0,2010,9),
+(185,0,2010,10),
+(186,0,2010,11),
+(187,0,2010,12),
+(188,0,2010,13),
+(190,0,2010,14),
+(191,0,2010,15),
+(192,0,2010,16),
+(194,0,2010,17),
+(195,0,2010,18),
+(197,0,2010,19),
+(198,0,2010,20),
+(199,0,2010,21),
+(200,0,2010,22),
+(203,0,2010,23),
+(204,0,2010,24),
+(205,0,2010,25),
+(206,0,2010,26),
+(207,0,2010,27),
+(208,0,2010,28),
+(209,0,2010,29),
+(210,0,2010,30),
+(211,0,2010,31),
+(212,0,2010,32),
+(213,0,2010,33),
+(214,0,2010,34),
+(744,0,2010,35),
+(748,0,2010,36),
+(749,0,2010,37),
+(754,0,2010,38),
+(1304,0,2010,39),
+(2373,0,2010,40),
+(4864,0,2010,41),
+(4865,0,2010,42),
+(4866,0,2010,43),
+(4867,0,2010,44),
+(4868,0,2010,45),
+(4869,0,2010,46),
+(4870,0,2010,47),
+(4871,0,2010,48),
+(4872,0,2010,49),
+(4873,0,2010,50),
+(4874,0,2010,51),
+(4875,0,2010,52),
+(4876,0,2010,53),
+(4877,0,2010,54),
+(4878,0,2010,55),
+(4879,0,2010,56),
+(4880,0,2010,57),
+(4881,0,2010,58),
+(4882,0,2010,59),
+(4883,0,2010,60),
+(4884,0,2010,61),
+(4885,0,2010,62),
+(4886,0,2010,63),
+(4887,0,2010,64),
+(4888,0,2010,65),
+(4889,0,2010,66),
+(4890,0,2010,67),
+(4891,0,2010,68),
+(4892,0,2010,69),
+(4893,0,2010,70),
+(4894,0,2010,71),
+(4895,0,2010,72),
+(4896,0,2010,73),
+(4897,0,2010,74),
+(4898,0,2010,75),
+(4899,0,2010,76),
+(4900,0,2010,77),
+(4901,0,2010,78),
+(4902,0,2010,79),
+(4903,0,2010,80),
+(4904,0,2010,81),
+(4905,0,2010,82),
+(6355,0,2010,83),
+(18,0,2011,1),
+(19,0,2011,2),
+(20,0,2011,3),
+(102,0,2011,4),
+(103,0,2011,5),
+(104,0,2011,6),
+(105,0,2011,7),
+(106,0,2011,8),
+(107,0,2011,9),
+(108,0,2011,10),
+(109,0,2011,11),
+(110,0,2011,12),
+(111,0,2011,13),
+(625,0,2011,14),
+(626,0,2011,15),
+(627,0,2011,16),
+(628,0,2011,17),
+(629,0,2011,18),
+(630,0,2011,19),
+(631,0,2011,20),
+(632,0,2011,21),
+(633,0,2011,22),
+(634,0,2011,23),
+(635,0,2011,24),
+(636,0,2011,25),
+(637,0,2011,26),
+(638,0,2011,27),
+(639,0,2011,28),
+(640,0,2011,29),
+(641,0,2011,30),
+(642,0,2011,31),
+(643,0,2011,32),
+(644,0,2011,33),
+(645,0,2011,34),
+(646,0,2011,35),
+(647,0,2011,36),
+(648,0,2011,37),
+(649,0,2011,38),
+(650,0,2011,39),
+(651,0,2011,40),
+(652,0,2011,41),
+(653,0,2011,42),
+(654,0,2011,43),
+(655,0,2011,44),
+(656,0,2011,45),
+(657,0,2011,46),
+(658,0,2011,47),
+(659,0,2011,48),
+(660,0,2011,49),
+(661,0,2011,50),
+(662,0,2011,51),
+(663,0,2011,52),
+(664,0,2011,53),
+(665,0,2011,54),
+(666,0,2011,55),
+(667,0,2011,56),
+(668,0,2011,57),
+(669,0,2011,58),
+(670,0,2011,59),
+(671,0,2011,60),
+(672,0,2011,61),
+(673,0,2011,62),
+(674,0,2011,63),
+(945,0,2011,64),
+(1328,0,2011,65),
+(1329,0,2011,66),
+(1330,0,2011,67),
+(1331,0,2011,68),
+(1332,0,2011,69),
+(2493,0,2011,70),
+(2494,0,2011,71),
+(2495,0,2011,72),
+(2496,0,2011,73),
+(2497,0,2011,74),
+(2498,0,2011,75),
+(4222,0,2011,76),
+(4223,0,2011,77),
+(99,0,2012,1),
+(100,0,2012,2),
+(101,0,2012,3),
+(308,0,2012,4),
+(309,0,2012,5),
+(310,0,2012,6),
+(311,0,2012,7),
+(312,0,2012,8),
+(313,0,2012,9),
+(314,0,2012,10),
+(315,0,2012,11),
+(316,0,2012,12),
+(317,0,2012,13),
+(318,0,2012,14),
+(319,0,2012,15),
+(320,0,2012,16),
+(321,0,2012,17),
+(322,0,2012,18),
+(323,0,2012,19),
+(324,0,2012,20),
+(325,0,2012,21),
+(326,0,2012,22),
+(327,0,2012,23),
+(328,0,2012,24),
+(329,0,2012,25),
+(330,0,2012,26),
+(331,0,2012,27),
+(332,0,2012,28),
+(333,0,2012,29),
+(334,0,2012,30),
+(335,0,2012,31),
+(336,0,2012,32),
+(337,0,2012,33),
+(338,0,2012,34),
+(339,0,2012,35),
+(340,0,2012,36),
+(341,0,2012,37),
+(342,0,2012,38),
+(343,0,2012,39),
+(344,0,2012,40),
+(345,0,2012,41),
+(346,0,2012,42),
+(2505,0,2013,1),
+(3439,0,2013,2),
+(3902,0,2013,3),
+(3903,0,2013,4),
+(3904,0,2013,5),
+(3905,0,2013,6),
+(3906,0,2013,7),
+(3907,0,2013,8),
+(3908,0,2013,9),
+(3909,0,2013,10),
+(3910,0,2013,11),
+(3911,0,2013,12),
+(5217,0,2013,13),
+(3919,0,2014,1),
+(3920,0,2014,2),
+(3921,0,2014,3),
+(3922,0,2014,4),
+(3923,0,2014,5),
+(3924,0,2014,6),
+(3925,0,2014,7),
+(5187,0,2014,8),
+(5188,0,2014,9),
+(5189,0,2014,10),
+(4237,0,2014,11),
+(5190,0,2014,12),
+(5191,0,2014,13),
+(4238,0,2014,14),
+(5176,0,2015,1),
+(5177,0,2015,2),
+(5178,0,2015,3),
+(5179,0,2015,4),
+(5180,0,2015,5),
+(5181,0,2015,6),
+(65,0,3001,1),
+(725,0,3001,2),
+(726,0,3001,3),
+(727,0,3001,4),
+(728,0,3001,5),
+(733,0,3001,6),
+(734,0,3001,7),
+(735,0,3001,8),
+(1060,0,3001,9),
+(1061,0,3001,10),
+(1062,0,3001,11),
+(1073,0,3001,12),
+(1374,0,3001,13),
+(1375,0,3001,14),
+(1539,0,3001,15),
+(1540,0,3001,16),
+(1831,0,3001,17),
+(1832,0,3001,18),
+(1833,0,3001,19),
+(1834,0,3001,20),
+(3889,0,3001,21),
+(4677,0,3001,22),
+(4678,0,3001,23),
+(4679,0,3001,24),
+(4680,0,3001,25),
+(5234,0,3001,26),
+(5235,0,3001,27),
+(5236,0,3001,28),
+(5237,0,3001,29),
+(5238,0,3001,30),
+(5239,0,3001,31),
+(5240,0,3001,32),
+(5241,0,3001,33),
+(5242,0,3001,34),
+(5243,0,3001,35),
+(5244,0,3001,36),
+(5245,0,3001,37),
+(5246,0,3001,38),
+(5247,0,3001,39),
+(5248,0,3001,40),
+(5283,0,3001,41),
+(5560,0,3001,42),
+(5561,0,3001,43),
+(729,0,3002,1),
+(730,0,3002,2),
+(731,0,3002,3),
+(732,0,3002,4),
+(736,0,3002,5),
+(737,0,3002,6),
+(947,0,3002,7),
+(948,0,3002,8),
+(949,0,3002,9),
+(950,0,3002,10),
+(951,0,3002,11),
+(952,0,3002,12),
+(953,0,3002,13),
+(954,0,3002,14),
+(955,0,3002,15),
+(956,0,3002,16),
+(957,0,3002,17),
+(958,0,3002,18),
+(959,0,3002,19),
+(960,0,3002,20),
+(961,0,3002,21),
+(962,0,3002,22),
+(1538,0,3002,23),
+(1829,0,3002,24),
+(1830,0,3002,25),
+(3926,0,3002,26),
+(3927,0,3002,27),
+(3928,0,3002,28),
+(3929,0,3002,29),
+(3930,0,3002,30),
+(3931,0,3002,31),
+(3932,0,3002,32),
+(3933,0,3002,33),
+(3934,0,3002,34),
+(3935,0,3002,35),
+(3936,0,3002,36),
+(3958,0,3002,37),
+(3959,0,3002,38),
+(4218,0,3002,39),
+(4629,0,3002,40),
+(4630,0,3002,41),
+(4631,0,3002,42),
+(4632,0,3002,43),
+(4633,0,3002,44),
+(4634,0,3002,45),
+(4635,0,3002,46),
+(4636,0,3002,47),
+(4637,0,3002,48),
+(4638,0,3002,49),
+(4639,0,3002,50),
+(4640,0,3002,51),
+(4641,0,3002,52),
+(4642,0,3002,53),
+(4643,0,3002,54),
+(4644,0,3002,55),
+(4645,0,3002,56),
+(4646,0,3002,57),
+(4647,0,3002,58),
+(4648,0,3002,59),
+(4649,0,3002,60),
+(4650,0,3002,61),
+(4651,0,3002,62),
+(4652,0,3002,63),
+(4653,0,3002,64),
+(4654,0,3002,65),
+(4655,0,3002,66),
+(4656,0,3002,67),
+(4657,0,3002,68),
+(4658,0,3002,69),
+(4659,0,3002,70),
+(4660,0,3002,71),
+(4661,0,3002,72),
+(4662,0,3002,73),
+(4663,0,3002,74),
+(4664,0,3002,75),
+(2375,0,3003,1),
+(3500,0,3003,2),
+(3501,0,3003,3),
+(3502,0,3003,4),
+(4422,0,3003,5),
+(4423,0,3003,6),
+(4424,0,3003,7),
+(4425,0,3003,8),
+(908,13090,5600,1),
+(909,23430,5600,2),
+(910,39490,5600,3),
+(911,62480,5600,4),
+(912,94270,5600,5),
+(913,137500,5600,6),
+(845,9779,5600,7),
+(846,17600,5600,8),
+(847,29590,5600,9),
+(848,46860,5600,10),
+(849,70730,5600,11),
+(850,102740,5600,12),
+(877,6512,5600,13),
+(878,11770,5600,14),
+(890,19800,5600,15),
+(879,31240,5600,16),
+(880,47080,5600,17),
+(881,68530,5600,18),
+(1661,1100,5600,19),
+(3031,440,5600,20),
+(1785,275,5600,21),
+(1341,3,5600,22),
+(1342,6,5600,23),
+(734,1320,5600,24),
+(735,2640,5600,25),
+(1061,363,5600,26),
+(1832,198,5600,27),
+(1834,198,5600,28),
+(737,2200,5600,29),
+(1829,550,5600,30),
+(1830,550,5600,31),
+(2130,1100,5600,32),
+(2131,3300,5600,33),
+(2132,11000,5600,34),
+(4625,550,5600,35),
+(4626,550,5600,36),
+(4627,550,5600,37),
+(4628,550,5600,38),
+(5192,110,5600,39),
+(5193,165,5600,40),
+(5194,275,5600,41),
+(736,440,5600,42),
+(4679,550,5600,43),
+(5146,12705,5600,44),
+(5140,5445,5600,45),
+(5134,2530,5600,46),
+(5195,440,5600,47),
+(5262,42350,5600,48),
+(5256,18150,5600,49),
+(5250,8470,5600,50),
+(6037,110,5600,51),
+(5589,110,5600,52),
+(6035,2600,5600,53),
+(1370,900,5601,1),
+(1401,900,5601,2),
+(1411,900,5601,3),
+(1372,900,5601,4),
+(1513,960,5601,5),
+(1399,900,5601,6),
+(1386,900,5601,7),
+(1856,1920,5601,8),
+(1377,900,5601,9),
+(1383,900,5601,10),
+(1514,960,5601,11),
+(1405,900,5601,12),
+(1403,900,5601,13),
+(1371,900,5601,14),
+(1515,960,5601,15),
+(1667,960,5601,16),
+(1669,960,5601,17),
+(1671,960,5601,18),
+(1512,1380,5601,19),
+(1379,1380,5601,20),
+(1402,1500,5601,21),
+(1517,1500,5601,22),
+(1415,1500,5601,23),
+(1391,1500,5601,24),
+(1398,1500,5601,25),
+(1389,1500,5601,26),
+(1388,1500,5601,27),
+(1410,1500,5601,28),
+(1404,1500,5601,29),
+(1417,1500,5601,30),
+(1400,1500,5601,31),
+(1418,1500,5601,32),
+(1668,1500,5601,33),
+(1670,1500,5601,34),
+(3038,1860,5601,35),
+(1378,1920,5601,36),
+(1516,2160,5601,37),
+(1414,2160,5601,38),
+(1385,2160,5601,39),
+(1394,2160,5601,40),
+(1412,2940,5601,41),
+(3944,2940,5601,42),
+(1392,2940,5601,43),
+(1407,2940,5601,44),
+(1416,2940,5601,45),
+(1397,2940,5601,46),
+(1406,2940,5601,47),
+(1408,2940,5601,48),
+(1390,2940,5601,49),
+(1387,2940,5601,50),
+(1409,2940,5601,51),
+(1413,2940,5601,52),
+(1381,3120,5601,53),
+(1382,3120,5601,54),
+(1384,3120,5601,55),
+(1380,600,5601,56),
+(1535,960,5601,57),
+(1521,960,5601,58),
+(1523,960,5601,59),
+(1534,960,5601,60),
+(1537,960,5601,61),
+(1533,1500,5601,62),
+(1536,1500,5601,63),
+(1532,1500,5601,64),
+(1528,2160,5601,65),
+(1519,2160,5601,66),
+(1518,2160,5601,67),
+(1520,2940,5601,68),
+(1530,2940,5601,69),
+(4457,13200,5601,70),
+(4458,13200,5601,71),
+(4459,13200,5601,72),
+(4460,13200,5601,73),
+(4461,13200,5601,74),
+(4462,13200,5601,75),
+(4463,13200,5601,76),
+(4464,13200,5601,77),
+(4465,13200,5601,78),
+(4466,13200,5601,79),
+(4467,13200,5601,80),
+(4468,13200,5601,81),
+(4481,13200,5601,82),
+(4482,13200,5601,83),
+(4483,13200,5601,84),
+(4484,13200,5601,85),
+(4485,13200,5601,86),
+(4486,13200,5601,87),
+(4487,13200,5601,88),
+(4488,13200,5601,89),
+(4489,13200,5601,90),
+(4490,13200,5601,91),
+(4491,13200,5601,92),
+(4492,13200,5601,93),
+(4493,23100,5601,94),
+(4494,23100,5601,95),
+(4495,23100,5601,96),
+(4496,23100,5601,97),
+(4497,23100,5601,98),
+(4498,23100,5601,99),
+(4499,23100,5601,100),
+(4500,23100,5601,101),
+(4501,23100,5601,102),
+(4502,23100,5601,103),
+(4503,23100,5601,104),
+(4504,23100,5601,105),
+(4916,880,5601,106),
+(4906,1375,5601,107),
+(4908,1375,5601,108),
+(4910,1375,5601,109),
+(4906,1980,5601,110),
+(2505,16667,5710,1),
+(3439,40477,5710,2),
+(3902,72620,5710,3),
+(3903,119048,5710,4),
+(3904,190477,5710,5),
+(3905,285714,5710,6),
+(3906,416666,5710,7),
+(2506,8334,5710,8),
+(3891,21428,5710,9),
+(3892,38095,5710,10),
+(3893,65476,5710,11),
+(3894,103571,5710,12),
+(3895,154761,5710,13),
+(3896,238095,5710,14),
+(2515,119,5710,15),
+(3920,369047,5710,16),
+(3921,500000,5710,17),
+(3922,678571,5710,18),
+(3923,904761,5710,19),
+(3913,369047,5710,20),
+(3914,500000,5710,21),
+(3915,678571,5710,22),
+(3916,910476,5710,23),
+(4038,178,5710,24),
+(5168,238,5710,25),
+(5170,1904761,5710,26),
+(5176,1904761,5710,27),
+(5171,2738095,5710,28),
+(5177,2738095,5710,29),
+(5182,2738095,5710,30),
+(5187,2738095,5710,31),
+(218,163200,5800,2),
+(272,163200,5800,3),
+(15,163200,5800,4),
+(68,292800,5800,5),
+(219,292800,5800,6),
+(273,292800,5800,7),
+(155,292800,5800,8),
+(87,292800,5800,9),
+(16,292800,5800,10),
+(123,490800,5800,11),
+(220,490800,5800,12),
+(221,490800,5800,13),
+(274,490800,5800,14),
+(156,490800,5800,15),
+(166,490800,5800,16),
+(168,490800,5800,17),
+(291,490800,5800,18),
+(69,772800,5800,19),
+(126,772800,5800,20),
+(222,772800,5800,21),
+(275,772800,5800,22),
+(276,772800,5800,23),
+(277,772800,5800,24),
+(86,772800,5800,25),
+(292,772800,5800,26),
+(295,772800,5800,27),
+(124,1160400,5800,28),
+(127,1160400,5800,29),
+(130,1160400,5800,30),
+(223,1160400,5800,31),
+(278,1160400,5800,32),
+(157,1160400,5800,33),
+(293,1160400,5800,34),
+(296,1160400,5800,35),
+(129,1680000,5800,36),
+(224,1680000,5800,37),
+(1660,1680000,5800,38),
+(279,1680000,5800,39),
+(158,1680000,5800,40),
+(172,1680000,5800,41),
+(294,1680000,5800,42),
+(93,1680000,5800,43),
+(256,163200,5800,44),
+(257,292800,5800,45),
+(258,490800,5800,46),
+(259,772800,5800,47),
+(260,1160400,5800,48),
+(261,1680000,5800,49),
+(176,163200,5801,1),
+(310,163200,5801,2),
+(177,292800,5801,3),
+(311,292800,5801,4),
+(100,292800,5801,5),
+(178,490800,5801,6),
+(101,490800,5801,7),
+(312,490800,5801,8),
+(314,490800,5801,9),
+(179,772800,5801,10),
+(182,772800,5801,11),
+(183,772800,5801,12),
+(185,772800,5801,13),
+(315,772800,5801,14),
+(83,859200,5801,15),
+(143,859200,5801,16),
+(144,859200,5801,17),
+(238,1160400,5801,18),
+(90,1680000,5801,19),
+(318,1680000,5801,20),
+(321,1824000,5801,21),
+(17,2,5801,22),
+(1341,3,5801,23),
+(1342,6,5801,24),
+(1343,8,5801,25),
+(412,15240,5802,1),
+(390,24360,5802,2),
+(31,15240,5802,3),
+(24,24360,5802,4),
+(32,23880,5802,5),
+(25,38160,5802,6),
+(33,27600,5802,7),
+(27,44280,5802,8),
+(34,36840,5802,9),
+(26,59040,5802,10),
+(413,46920,5802,11),
+(391,75120,5802,12),
+(414,75000,5802,13),
+(392,119880,5802,14),
+(377,99960,5802,15),
+(348,159600,5802,16),
+(378,152400,5802,17),
+(349,219600,5802,18),
+(379,152400,5802,19),
+(350,219600,5802,20),
+(59,152400,5802,21),
+(58,219600,5802,22),
+(416,114240,5802,23),
+(394,182400,5802,24),
+(417,168000,5802,25),
+(395,268800,5802,26),
+(2378,224400,5802,27),
+(352,358800,5802,28),
+(102,8532,5802,29),
+(625,15480,5802,30),
+(626,26280,5802,31),
+(628,63960,5802,32),
+(629,94080,5802,33),
+(50,8124,5802,34),
+(51,14760,5802,35),
+(604,25080,5802,36),
+(605,39960,5802,37),
+(63,60960,5802,38),
+(606,89640,5802,39),
+(38,8124,5802,40),
+(39,14760,5802,41),
+(40,25080,5802,42),
+(1123,39960,5802,43),
+(1124,89640,5802,44),
+(44,12240,5802,45),
+(1148,22080,5802,46),
+(45,37560,5802,47),
+(46,60000,5802,48),
+(47,91440,5802,49),
+(1104,15240,5803,1),
+(1101,24360,5803,2),
+(1105,27600,5803,3),
+(1102,44280,5803,4),
+(465,46920,5803,5),
+(432,75120,5803,6),
+(467,75000,5803,7),
+(434,119880,5803,8),
+(468,75000,5803,9),
+(435,119880,5803,10),
+(469,114240,5803,11),
+(436,182400,5803,12),
+(470,168000,5803,13),
+(437,268800,5803,14),
+(412,15240,5804,1),
+(390,24360,5804,2),
+(31,15240,5804,3),
+(24,24360,5804,4),
+(32,23880,5804,5),
+(25,38160,5804,6),
+(33,27600,5804,7),
+(27,44280,5804,8),
+(34,36840,5804,9),
+(26,59040,5804,10),
+(413,46920,5804,11),
+(391,75120,5804,12),
+(414,75000,5804,13),
+(392,119880,5804,14),
+(377,99960,5804,15),
+(348,159600,5804,16),
+(378,152400,5804,17),
+(349,219600,5804,18),
+(379,152400,5804,19),
+(350,219600,5804,20),
+(59,152400,5804,21),
+(58,219600,5804,22),
+(416,114240,5804,23),
+(394,182400,5804,24),
+(417,168000,5804,25),
+(395,268800,5804,26),
+(2378,224400,5804,27),
+(352,358800,5804,28),
+(102,8532,5804,29),
+(625,15480,5804,30),
+(626,26280,5804,31),
+(628,63960,5804,32),
+(629,94080,5804,33),
+(50,8124,5804,34),
+(51,14760,5804,35),
+(604,25080,5804,36),
+(605,39960,5804,37),
+(63,60960,5804,38),
+(606,89640,5804,39),
+(38,8124,5804,40),
+(39,14760,5804,41),
+(40,25080,5804,42),
+(1123,39960,5804,43),
+(1124,89640,5804,44),
+(44,12240,5804,45),
+(1148,22080,5804,46),
+(45,37560,5804,47),
+(46,60000,5804,48),
+(47,91440,5804,49),
+(1104,15240,5805,1),
+(1101,24360,5805,2),
+(1105,27600,5805,3),
+(1102,44280,5805,4),
+(465,46920,5805,5),
+(432,75120,5805,6),
+(467,75000,5805,7),
+(434,119880,5805,8),
+(468,75000,5805,9),
+(435,119880,5805,10),
+(469,114240,5805,11),
+(436,182400,5805,12),
+(470,168000,5805,13),
+(437,268800,5805,14),
+(218,163200,5806,2),
+(272,163200,5806,3),
+(15,163200,5806,4),
+(68,292800,5806,5),
+(219,292800,5806,6),
+(273,292800,5806,7),
+(155,292800,5806,8),
+(87,292800,5806,9),
+(16,292800,5806,10),
+(123,490800,5806,11),
+(220,490800,5806,12),
+(221,490800,5806,13),
+(274,490800,5806,14),
+(156,490800,5806,15),
+(166,490800,5806,16),
+(168,490800,5806,17),
+(291,490800,5806,18),
+(69,772800,5806,19),
+(126,772800,5806,20),
+(222,772800,5806,21),
+(275,772800,5806,22),
+(276,772800,5806,23),
+(277,772800,5806,24),
+(86,772800,5806,25),
+(292,772800,5806,26),
+(295,772800,5806,27),
+(124,1160400,5806,28),
+(127,1160400,5806,29),
+(130,1160400,5806,30),
+(223,1160400,5806,31),
+(278,1160400,5806,32),
+(157,1160400,5806,33),
+(293,1160400,5806,34),
+(296,1160400,5806,35),
+(129,1680000,5806,36),
+(224,1680000,5806,37),
+(1660,1680000,5806,38),
+(279,1680000,5806,39),
+(158,1680000,5806,40),
+(172,1680000,5806,41),
+(294,1680000,5806,42),
+(93,1680000,5806,43),
+(256,163200,5806,44),
+(257,292800,5806,45),
+(258,490800,5806,46),
+(259,772800,5806,47),
+(260,1160400,5806,48),
+(261,1680000,5806,49),
+(176,163200,5807,1),
+(310,163200,5807,2),
+(177,292800,5807,3),
+(311,292800,5807,4),
+(100,292800,5807,5),
+(178,490800,5807,6),
+(101,490800,5807,7),
+(312,490800,5807,8),
+(314,490800,5807,9),
+(179,772800,5807,10),
+(182,772800,5807,11),
+(183,772800,5807,12),
+(185,772800,5807,13),
+(315,772800,5807,14),
+(83,859200,5807,15),
+(143,859200,5807,16),
+(144,859200,5807,17),
+(238,1160400,5807,18),
+(90,1680000,5807,19),
+(318,1680000,5807,20),
+(321,1824000,5807,21),
+(17,2,5807,22),
+(1341,3,5807,23),
+(1342,6,5807,24),
+(1343,8,5807,25),
+(1666,0,30040,1),
+(1786,0,30040,2),
+(1787,0,30040,3),
+(1788,0,30040,4),
+(1789,0,30040,5),
+(1790,0,30040,6),
+(1791,0,30040,7),
+(1792,0,30040,8),
+(1793,0,30040,9),
+(1794,0,30040,10),
+(1795,0,30040,11),
+(1796,0,30040,12),
+(1797,0,30040,13),
+(1798,0,30040,14),
+(1799,0,30040,15),
+(1800,0,30040,16),
+(1801,0,30040,17),
+(1802,0,30040,18),
+(1803,0,30040,19),
+(1804,0,30040,20),
+(1805,0,30040,21),
+(1806,0,30040,22),
+(1807,0,30040,23),
+(1808,0,30040,24),
+(1809,0,30040,25),
+(1810,0,30040,26),
+(1811,0,30040,27),
+(1812,0,30040,28),
+(1813,0,30040,29),
+(1814,0,30040,30),
+(1815,0,30040,31),
+(1816,0,30040,32),
+(1817,0,30040,33),
+(1818,0,30040,34),
+(1819,0,30040,35),
+(1820,0,30040,36),
+(1821,0,30040,37),
+(1822,0,30040,38),
+(1823,0,30040,39),
+(1824,0,30040,40),
+(1825,0,30040,41),
+(1826,0,30040,42),
+(1827,0,30040,43),
+(1828,0,30040,44),
+(2135,0,30040,45),
+(2136,0,30040,46),
+(2137,0,30040,47),
+(2138,0,30040,48),
+(2139,0,30040,49),
+(2140,0,30040,50),
+(2141,0,30041,1),
+(2142,0,30041,2),
+(2143,0,30041,3),
+(2144,0,30041,4),
+(2145,0,30041,5),
+(2146,0,30041,6),
+(2147,0,30041,7),
+(2148,0,30041,8),
+(2149,0,30041,9),
+(2150,0,30041,10),
+(2151,0,30041,11),
+(2152,0,30041,12),
+(2153,0,30041,13),
+(2154,0,30041,14),
+(2155,0,30041,15),
+(2156,0,30041,16),
+(2157,0,30041,17),
+(2158,0,30041,18),
+(2159,0,30041,19),
+(2160,0,30041,20),
+(2161,0,30041,21),
+(2162,0,30041,22),
+(2163,0,30041,23),
+(2164,0,30041,24),
+(2165,0,30041,25),
+(2166,0,30041,26),
+(2167,0,30041,27),
+(2168,0,30041,28),
+(2169,0,30041,29),
+(2170,0,30041,30),
+(2171,0,30041,31),
+(2172,0,30041,32),
+(2173,0,30041,33),
+(2174,0,30041,34),
+(2175,0,30041,35),
+(2176,0,30041,36),
+(2177,0,30041,37),
+(2178,0,30041,38),
+(2179,0,30041,39),
+(2180,0,30041,40),
+(2181,0,30041,41),
+(2182,0,30041,42),
+(2183,0,30041,43),
+(2184,0,30041,44),
+(2185,0,30041,45),
+(2186,0,30041,46),
+(2187,0,30041,47),
+(2188,0,30041,48),
+(2189,0,30041,49),
+(2190,0,30041,50),
+(2191,0,30042,1),
+(2192,0,30042,2),
+(2193,0,30042,3),
+(2194,0,30042,4),
+(2195,0,30042,5),
+(2196,0,30042,6),
+(2197,0,30042,7),
+(2198,0,30042,8),
+(2199,0,30042,9),
+(2200,0,30042,10),
+(2201,0,30042,11),
+(2202,0,30042,12),
+(2203,0,30042,13),
+(2204,0,30042,14),
+(2205,0,30042,15),
+(2206,0,30042,16),
+(2207,0,30042,17),
+(2208,0,30042,18),
+(2209,0,30042,19),
+(2210,0,30042,20),
+(2211,0,30042,21),
+(2212,0,30042,22),
+(2213,0,30042,23),
+(2214,0,30042,24),
+(2215,0,30042,25),
+(2216,0,30042,26),
+(2217,0,30042,27),
+(2218,0,30042,28),
+(2219,0,30042,29),
+(2220,0,30042,30),
+(2221,0,30042,31),
+(2222,0,30042,32),
+(2223,0,30042,33),
+(2224,0,30042,34),
+(2225,0,30042,35),
+(2226,0,30042,36),
+(2227,0,30042,37),
+(2228,0,30042,38),
+(2229,0,30042,39),
+(2230,0,30042,40),
+(2231,0,30042,41),
+(2232,0,30042,42),
+(2233,0,30042,43),
+(2234,0,30042,44),
+(2235,0,30042,45),
+(2236,0,30042,46),
+(2237,0,30042,47),
+(2238,0,30042,48),
+(2239,0,30042,49),
+(2240,0,30042,50),
+(2241,0,30043,1),
+(2242,0,30043,2),
+(2243,0,30043,3),
+(2244,0,30043,4),
+(2245,0,30043,5),
+(2246,0,30043,6),
+(2247,0,30043,7),
+(2248,0,30043,8),
+(2249,0,30043,9),
+(2250,0,30043,10),
+(2251,0,30043,11),
+(2252,0,30043,12),
+(2253,0,30043,13),
+(2254,0,30043,14),
+(2255,0,30043,15),
+(2256,0,30043,16),
+(2257,0,30043,17),
+(2258,0,30043,18),
+(2259,0,30043,19),
+(2260,0,30043,20),
+(2261,0,30043,21),
+(2262,0,30043,22),
+(2263,0,30043,23),
+(2264,0,30043,24),
+(2265,0,30043,25),
+(2266,0,30043,26),
+(2267,0,30043,27),
+(2268,0,30043,28),
+(2269,0,30043,29),
+(2270,0,30043,30),
+(2271,0,30043,31),
+(2272,0,30043,32),
+(2273,0,30043,33),
+(2274,0,30043,34),
+(2275,0,30043,35),
+(2276,0,30043,36),
+(2277,0,30043,37),
+(2278,0,30043,38),
+(2279,0,30043,39),
+(2280,0,30043,40),
+(2281,0,30043,41),
+(2282,0,30043,42),
+(2283,0,30043,43),
+(2284,0,30043,44),
+(2285,0,30043,45),
+(2286,0,30043,46),
+(2287,0,30043,47),
+(2288,0,30043,48),
+(2289,0,30043,49),
+(2290,0,30043,50),
+(2291,0,30044,1),
+(2292,0,30044,2),
+(2293,0,30044,3),
+(2294,0,30044,4),
+(2295,0,30044,5),
+(2296,0,30044,6),
+(2297,0,30044,7),
+(2298,0,30044,8),
+(2299,0,30044,9),
+(2300,0,30044,10),
+(2301,0,30044,11),
+(2302,0,30044,12),
+(2303,0,30044,13),
+(2304,0,30044,14),
+(2305,0,30044,15),
+(2306,0,30044,16),
+(2307,0,30044,17),
+(2308,0,30044,18),
+(2309,0,30044,19),
+(2310,0,30044,20),
+(2311,0,30044,21),
+(2312,0,30044,22),
+(2313,0,30044,23),
+(2314,0,30044,24),
+(2315,0,30044,25),
+(2316,0,30044,26),
+(2317,0,30044,27),
+(2318,0,30044,28),
+(2319,0,30044,29),
+(2320,0,30044,30),
+(2321,0,30044,31),
+(2322,0,30044,32),
+(2323,0,30044,33),
+(2324,0,30044,34),
+(2325,0,30044,35),
+(2326,0,30044,36),
+(2327,0,30044,37),
+(2328,0,30044,38),
+(2329,0,30044,39),
+(2330,0,30044,40),
+(2331,0,30044,41),
+(2332,0,30044,42),
+(2333,0,30044,43),
+(2334,0,30044,44),
+(2335,0,30044,45),
+(2336,0,30044,46),
+(2337,0,30044,47),
+(2338,0,30044,48),
+(2339,0,30044,49),
+(2340,0,30044,50),
+(2341,0,30045,1),
+(2342,0,30045,2),
+(2343,0,30045,3),
+(2344,0,30045,4),
+(2345,0,30045,5),
+(2346,0,30045,6),
+(2347,0,30045,7),
+(2348,0,30045,8),
+(2349,0,30045,9),
+(2350,0,30045,10),
+(2351,0,30045,11),
+(2352,0,30045,12),
+(2353,0,30045,13),
+(2354,0,30045,14),
+(2355,0,30045,15),
+(2356,0,30045,16),
+(2357,0,30045,17),
+(2358,0,30045,18),
+(2359,0,30045,19),
+(2360,0,30045,20),
+(2361,0,30045,21),
+(2362,0,30045,22),
+(2363,0,30045,23),
+(2364,0,30045,24),
+(2365,0,30045,25),
+(2366,0,30045,26),
+(2367,0,30045,27),
+(2970,0,30045,28),
+(2971,0,30045,29),
+(2972,0,30045,30),
+(2973,0,30045,31),
+(2974,0,30045,32),
+(2975,0,30045,33),
+(2976,0,30045,34),
+(2977,0,30045,35),
+(2978,0,30045,36),
+(2979,0,30045,37),
+(2980,0,30045,38),
+(2981,0,30045,39),
+(2982,0,30045,40),
+(2983,0,30045,41),
+(2984,0,30045,42),
+(2985,0,30045,43),
+(2986,0,30045,44),
+(2987,0,30045,45),
+(2988,0,30045,46),
+(2989,0,30045,47),
+(2990,0,30045,48),
+(2991,0,30045,49),
+(2992,0,30045,50),
+(2993,0,30046,1),
+(2994,0,30046,2),
+(2995,0,30046,3),
+(2996,0,30046,4),
+(2997,0,30046,5),
+(2998,0,30046,6),
+(2999,0,30046,7),
+(3000,0,30046,8),
+(3001,0,30046,9),
+(3002,0,30046,10),
+(3003,0,30046,11),
+(3004,0,30046,12),
+(3005,0,30046,13),
+(3006,0,30046,14),
+(3007,0,30046,15),
+(3008,0,30046,16),
+(3009,0,30046,17),
+(3010,0,30046,18),
+(3011,0,30046,19),
+(3012,0,30046,20),
+(3013,0,30046,21),
+(3014,0,30046,22),
+(3015,0,30046,23),
+(3016,0,30046,24),
+(3017,0,30046,25),
+(3018,0,30046,26),
+(3019,0,30046,27),
+(3020,0,30046,28),
+(3021,0,30046,29),
+(3022,0,30046,30),
+(3023,0,30046,31),
+(3024,0,30046,32),
+(3025,0,30046,33),
+(3032,0,30046,34),
+(3033,0,30046,35),
+(3034,0,30046,36),
+(3035,0,30046,37),
+(3036,0,30046,38),
+(3838,0,30046,39),
+(3953,0,30046,40),
+(3954,0,30046,41),
+(3955,0,30046,42),
+(3956,0,30046,43),
+(3957,0,30046,44),
+(4122,0,30046,45),
+(4123,0,30046,46),
+(4124,0,30046,47),
+(4125,0,30046,48),
+(4126,0,30046,49),
+(4127,0,30046,50),
+(4128,0,30047,1),
+(4129,0,30047,2),
+(4130,0,30047,3),
+(4131,0,30047,4),
+(4132,0,30047,5),
+(4133,0,30047,6),
+(4134,0,30047,7),
+(4135,0,30047,8),
+(4136,0,30047,9),
+(4137,0,30047,10),
+(4138,0,30047,11),
+(4139,0,30047,12),
+(4140,0,30047,13),
+(4141,0,30047,14),
+(4142,0,30047,15),
+(4143,0,30047,16),
+(4144,0,30047,17),
+(4145,0,30047,18),
+(4146,0,30047,19),
+(4147,0,30047,20),
+(4148,0,30047,21),
+(4149,0,30047,22),
+(4150,0,30047,23),
+(4151,0,30047,24),
+(4152,0,30047,25),
+(4153,0,30047,26),
+(4154,0,30047,27),
+(4155,0,30047,28),
+(4156,0,30047,29),
+(4157,0,30047,30),
+(4158,0,30047,31),
+(4159,0,30047,32),
+(4160,0,30047,33),
+(4161,0,30047,34),
+(4162,0,30047,35),
+(4163,0,30047,36),
+(4164,0,30047,37),
+(4165,0,30047,38),
+(4166,0,30047,39),
+(4167,0,30047,40),
+(4168,0,30047,41),
+(4169,0,30047,42),
+(4170,0,30047,43),
+(4171,0,30047,44),
+(4172,0,30047,45),
+(4173,0,30047,46),
+(4174,0,30047,47),
+(4175,0,30047,48),
+(4176,0,30047,49),
+(4177,0,30047,50),
+(4178,0,30048,1),
+(4179,0,30048,2),
+(4180,0,30048,3),
+(4181,0,30048,4),
+(4182,0,30048,5),
+(4183,0,30048,6),
+(4184,0,30048,7),
+(4185,0,30048,8),
+(4186,0,30048,9),
+(4187,0,30048,10),
+(4188,0,30048,11),
+(4189,0,30048,12),
+(4190,0,30048,13),
+(4191,0,30048,14),
+(4192,0,30048,15),
+(4193,0,30048,16),
+(4194,0,30048,17),
+(4195,0,30048,18),
+(4196,0,30048,19),
+(4197,0,30048,20),
+(4198,0,30048,21),
+(4199,0,30048,22),
+(4440,0,30048,23),
+(4441,0,30048,24),
+(4936,0,30048,25),
+(4937,0,30048,26),
+(4938,0,30048,27),
+(4939,0,30048,28),
+(4940,0,30048,29),
+(4941,0,30048,30),
+(4942,0,30048,31),
+(4943,0,30048,32),
+(4944,0,30048,33),
+(4945,0,30048,34),
+(4946,0,30048,35),
+(4947,0,30048,36),
+(4948,0,30048,37),
+(4949,0,30048,38),
+(4950,0,30048,39),
+(4951,0,30048,40),
+(4952,0,30048,41),
+(4953,0,30048,42),
+(4954,0,30048,43),
+(4955,0,30048,44),
+(4956,0,30048,45),
+(4957,0,30048,46),
+(4958,0,30048,47),
+(4959,0,30048,48),
+(4960,0,30048,49),
+(4961,0,30048,50),
+(4962,0,30049,1),
+(4963,0,30049,2),
+(4964,0,30049,3),
+(4965,0,30049,4),
+(4966,0,30049,5),
+(4967,0,30049,6),
+(4968,0,30049,7),
+(4969,0,30049,8),
+(4970,0,30049,9),
+(4971,0,30049,10),
+(4972,0,30049,11),
+(4973,0,30049,12),
+(4974,0,30049,13),
+(4975,0,30049,14),
+(4976,0,30049,15),
+(4977,0,30049,16),
+(4978,0,30049,17),
+(4979,0,30049,18),
+(4980,0,30049,19),
+(4981,0,30049,20),
+(4982,0,30049,21),
+(4983,0,30049,22),
+(4984,0,30049,23),
+(4985,0,30049,24),
+(4986,0,30049,25),
+(4987,0,30049,26),
+(4988,0,30049,27),
+(4989,0,30049,28),
+(4990,0,30049,29),
+(4991,0,30049,30),
+(4992,0,30049,31),
+(4993,0,30049,32),
+(4994,0,30049,33),
+(4995,0,30049,34),
+(4996,0,30049,35),
+(4997,0,30049,36),
+(4998,0,30049,37),
+(4999,0,30049,38),
+(5000,0,30049,39),
+(5001,0,30049,40),
+(5002,0,30049,41),
+(5003,0,30049,42),
+(5004,0,30049,43),
+(5005,0,30049,44),
+(5006,0,30049,45),
+(5007,0,30049,46),
+(5008,0,30049,47),
+(5153,0,30049,48),
+(5154,0,30049,49),
+(5155,0,30049,50),
+(1674,0,30050,1),
+(1675,0,30050,2),
+(1676,0,30050,3),
+(1677,0,30050,4),
+(1678,0,30050,5),
+(1679,0,30050,6),
+(1680,0,30050,7),
+(1681,0,30050,8),
+(1682,0,30050,9),
+(1683,0,30050,10),
+(1684,0,30050,11),
+(1685,0,30050,12),
+(1686,0,30050,13),
+(1687,0,30050,14),
+(1688,0,30050,15),
+(1689,0,30050,16),
+(1690,0,30050,17),
+(1691,0,30050,18),
+(1692,0,30050,19),
+(1693,0,30050,20),
+(1694,0,30050,21),
+(1695,0,30050,22),
+(1696,0,30050,23),
+(1697,0,30050,24),
+(1698,0,30050,25),
+(1699,0,30050,26),
+(1700,0,30050,27),
+(1701,0,30050,28),
+(1702,0,30050,29),
+(1703,0,30050,30),
+(1704,0,30050,31),
+(1705,0,30050,32),
+(1706,0,30050,33),
+(1707,0,30050,34),
+(1708,0,30050,35),
+(1709,0,30050,36),
+(1710,0,30050,37),
+(1711,0,30050,38),
+(1712,0,30050,39),
+(1713,0,30050,40),
+(1714,0,30050,41),
+(1715,0,30050,42),
+(1716,0,30050,43),
+(1717,0,30050,44),
+(1718,0,30050,45),
+(1719,0,30050,46),
+(1720,0,30050,47),
+(1721,0,30050,48),
+(1722,0,30050,49),
+(1723,0,30050,50),
+(1724,0,30051,1),
+(1725,0,30051,2),
+(1726,0,30051,3),
+(1727,0,30051,4),
+(1728,0,30051,5),
+(1729,0,30051,6),
+(1730,0,30051,7),
+(1731,0,30051,8),
+(1732,0,30051,9),
+(1733,0,30051,10),
+(1734,0,30051,11),
+(1735,0,30051,12),
+(1736,0,30051,13),
+(1737,0,30051,14),
+(1738,0,30051,15),
+(1739,0,30051,16),
+(1740,0,30051,17),
+(1741,0,30051,18),
+(1742,0,30051,19),
+(1743,0,30051,20),
+(1744,0,30051,21),
+(1745,0,30051,22),
+(1746,0,30051,23),
+(1747,0,30051,24),
+(1748,0,30051,25),
+(1749,0,30051,26),
+(1750,0,30051,27),
+(1751,0,30051,28),
+(1752,0,30051,29),
+(1753,0,30051,30),
+(1754,0,30051,31),
+(1755,0,30051,32),
+(1756,0,30051,33),
+(1757,0,30051,34),
+(1758,0,30051,35),
+(1759,0,30051,36),
+(1760,0,30051,37),
+(1761,0,30051,38),
+(1762,0,30051,39),
+(1763,0,30051,40),
+(1764,0,30051,41),
+(1765,0,30051,42),
+(1766,0,30051,43),
+(1767,0,30051,44),
+(1768,0,30051,45),
+(1769,0,30051,46),
+(1770,0,30051,47),
+(1771,0,30051,48),
+(1772,0,30051,49),
+(1773,0,30051,50),
+(1774,0,30052,1),
+(1775,0,30052,2),
+(1776,0,30052,3),
+(1777,0,30052,4),
+(1778,0,30052,5),
+(1779,0,30052,6),
+(1780,0,30052,7),
+(1781,0,30052,8),
+(1782,0,30052,9),
+(1783,0,30052,10),
+(1784,0,30052,11),
+(1785,0,30052,12),
+(1864,0,30052,13),
+(1865,0,30052,14),
+(1866,0,30052,15),
+(1867,0,30052,16),
+(1868,0,30052,17),
+(1869,0,30052,18),
+(1870,0,30052,19),
+(1871,0,30052,20),
+(1872,0,30052,21),
+(1873,0,30052,22),
+(1874,0,30052,23),
+(1875,0,30052,24),
+(1876,0,30052,25),
+(1877,0,30052,26),
+(1878,0,30052,27),
+(1879,0,30052,28),
+(1880,0,30052,29),
+(1881,0,30052,30),
+(1882,0,30052,31),
+(1883,0,30052,32),
+(1884,0,30052,33),
+(1885,0,30052,34),
+(1886,0,30052,35),
+(1887,0,30052,36),
+(1888,0,30052,37),
+(1889,0,30052,38),
+(1890,0,30052,39),
+(1891,0,30052,40),
+(1892,0,30052,41),
+(1893,0,30052,42),
+(1894,0,30052,43),
+(1895,0,30052,44),
+(1896,0,30052,45),
+(1897,0,30052,46),
+(1898,0,30052,47),
+(1899,0,30052,48),
+(1900,0,30052,49),
+(1901,0,30052,50),
+(1902,0,30053,1),
+(1903,0,30053,2),
+(1904,0,30053,3),
+(1905,0,30053,4),
+(1906,0,30053,5),
+(1907,0,30053,6),
+(1908,0,30053,7),
+(1909,0,30053,8),
+(1910,0,30053,9),
+(1911,0,30053,10),
+(1912,0,30053,11),
+(1913,0,30053,12),
+(1914,0,30053,13),
+(1915,0,30053,14),
+(1916,0,30053,15),
+(1917,0,30053,16),
+(1918,0,30053,17),
+(1919,0,30053,18),
+(1920,0,30053,19),
+(1921,0,30053,20),
+(1922,0,30053,21),
+(1923,0,30053,22),
+(1924,0,30053,23),
+(1925,0,30053,24),
+(1926,0,30053,25),
+(1927,0,30053,26),
+(1928,0,30053,27),
+(1929,0,30053,28),
+(1930,0,30053,29),
+(1931,0,30053,30),
+(1932,0,30053,31),
+(1933,0,30053,32),
+(1934,0,30053,33),
+(1935,0,30053,34),
+(1936,0,30053,35),
+(1937,0,30053,36),
+(1938,0,30053,37),
+(1939,0,30053,38),
+(1940,0,30053,39),
+(1941,0,30053,40),
+(1942,0,30053,41),
+(1943,0,30053,42),
+(1944,0,30053,43),
+(1945,0,30053,44),
+(1946,0,30053,45),
+(1947,0,30053,46),
+(1948,0,30053,47),
+(1949,0,30053,48),
+(1950,0,30053,49),
+(1951,0,30053,50),
+(1952,0,30054,1),
+(1953,0,30054,2),
+(1954,0,30054,3),
+(1955,0,30054,4),
+(1956,0,30054,5),
+(1957,0,30054,6),
+(1958,0,30054,7),
+(1959,0,30054,8),
+(1960,0,30054,9),
+(1961,0,30054,10),
+(1962,0,30054,11),
+(1963,0,30054,12),
+(1964,0,30054,13),
+(1965,0,30054,14),
+(1966,0,30054,15),
+(1967,0,30054,16),
+(1968,0,30054,17),
+(1969,0,30054,18),
+(1970,0,30054,19),
+(1971,0,30054,20),
+(1972,0,30054,21),
+(1973,0,30054,22),
+(1974,0,30054,23),
+(1975,0,30054,24),
+(1976,0,30054,25),
+(1977,0,30054,26),
+(1978,0,30054,27),
+(1979,0,30054,28),
+(1980,0,30054,29),
+(1981,0,30054,30),
+(1982,0,30054,31),
+(1983,0,30054,32),
+(1984,0,30054,33),
+(1985,0,30054,34),
+(1986,0,30054,35),
+(1987,0,30054,36),
+(1988,0,30054,37),
+(1989,0,30054,38),
+(1990,0,30054,39),
+(1991,0,30054,40),
+(1992,0,30054,41),
+(1993,0,30054,42),
+(1994,0,30054,43),
+(1995,0,30054,44),
+(1996,0,30054,45),
+(1997,0,30054,46),
+(1998,0,30054,47),
+(1999,0,30054,48),
+(2000,0,30054,49),
+(2001,0,30054,50),
+(2002,0,30055,1),
+(2003,0,30055,2),
+(2004,0,30055,3),
+(2005,0,30055,4),
+(2006,0,30055,5),
+(2007,0,30055,6),
+(2008,0,30055,7),
+(2009,0,30055,8),
+(2010,0,30055,9),
+(2011,0,30055,10),
+(2012,0,30055,11),
+(2013,0,30055,12),
+(2014,0,30055,13),
+(2015,0,30055,14),
+(2016,0,30055,15),
+(2017,0,30055,16),
+(2018,0,30055,17),
+(2019,0,30055,18),
+(2020,0,30055,19),
+(2021,0,30055,20),
+(2022,0,30055,21),
+(2023,0,30055,22),
+(2024,0,30055,23),
+(2025,0,30055,24),
+(2026,0,30055,25),
+(2027,0,30055,26),
+(2028,0,30055,27),
+(2029,0,30055,28),
+(2030,0,30055,29),
+(2031,0,30055,30),
+(2032,0,30055,31),
+(2033,0,30055,32),
+(2034,0,30055,33),
+(2035,0,30055,34),
+(2036,0,30055,35),
+(2037,0,30055,36),
+(2038,0,30055,37),
+(2039,0,30055,38),
+(2040,0,30055,39),
+(2041,0,30055,40),
+(2042,0,30055,41),
+(2043,0,30055,42),
+(2044,0,30055,43),
+(2045,0,30055,44),
+(2046,0,30055,45),
+(2047,0,30055,46),
+(2048,0,30055,47),
+(2049,0,30055,48),
+(2050,0,30055,49),
+(2051,0,30055,50),
+(2052,0,30056,1),
+(2053,0,30056,2),
+(2054,0,30056,3),
+(2055,0,30056,4),
+(2056,0,30056,5),
+(2057,0,30056,6),
+(2058,0,30056,7),
+(2059,0,30056,8),
+(2060,0,30056,9),
+(2061,0,30056,10),
+(2062,0,30056,11),
+(2063,0,30056,12),
+(2064,0,30056,13),
+(2065,0,30056,14),
+(2066,0,30056,15),
+(2067,0,30056,16),
+(2068,0,30056,17),
+(2069,0,30056,18),
+(2070,0,30056,19),
+(2071,0,30056,20),
+(2072,0,30056,21),
+(2073,0,30056,22),
+(2074,0,30056,23),
+(2075,0,30056,24),
+(2076,0,30056,25),
+(2077,0,30056,26),
+(2078,0,30056,27),
+(2079,0,30056,28),
+(2080,0,30056,29),
+(2081,0,30056,30),
+(2082,0,30056,31),
+(2083,0,30056,32),
+(2084,0,30056,33),
+(2085,0,30056,34),
+(2086,0,30056,35),
+(2087,0,30056,36),
+(2088,0,30056,37),
+(2089,0,30056,38),
+(2090,0,30056,39),
+(2091,0,30056,40),
+(2092,0,30056,41),
+(2093,0,30056,42),
+(2094,0,30056,43),
+(2095,0,30056,44),
+(2096,0,30056,45),
+(2097,0,30056,46),
+(2098,0,30056,47),
+(2099,0,30056,48),
+(2100,0,30056,49),
+(2101,0,30056,50),
+(2102,0,30057,1),
+(2103,0,30057,2),
+(2104,0,30057,3),
+(2105,0,30057,4),
+(2106,0,30057,5),
+(2107,0,30057,6),
+(2108,0,30057,7),
+(2109,0,30057,8),
+(2110,0,30057,9),
+(2111,0,30057,10),
+(2112,0,30057,11),
+(2113,0,30057,12),
+(2114,0,30057,13),
+(2115,0,30057,14),
+(2116,0,30057,15),
+(2117,0,30057,16),
+(2118,0,30057,17),
+(2119,0,30057,18),
+(2120,0,30057,19),
+(2121,0,30057,20),
+(2122,0,30057,21),
+(2123,0,30057,22),
+(2124,0,30057,23),
+(2125,0,30057,24),
+(2126,0,30057,25),
+(2127,0,30057,26),
+(2128,0,30057,27),
+(2129,0,30057,28),
+(2130,0,30057,29),
+(2131,0,30057,30),
+(2132,0,30057,31),
+(2133,0,30057,32),
+(2134,0,30057,33),
+(2508,0,30057,34),
+(2917,0,30057,35),
+(2918,0,30057,36),
+(2919,0,30057,37),
+(2920,0,30057,38),
+(2921,0,30057,39),
+(2922,0,30057,40),
+(2923,0,30057,41),
+(2924,0,30057,42),
+(2925,0,30057,43),
+(2926,0,30057,44),
+(2927,0,30057,45),
+(2928,0,30057,46),
+(2929,0,30057,47),
+(2930,0,30057,48),
+(2931,0,30057,49),
+(2932,0,30057,50),
+(2933,0,30058,1),
+(2934,0,30058,2),
+(2935,0,30058,3),
+(2936,0,30058,4),
+(2937,0,30058,5),
+(2938,0,30058,6),
+(2939,0,30058,7),
+(2940,0,30058,8),
+(2941,0,30058,9),
+(2942,0,30058,10),
+(2943,0,30058,11),
+(2944,0,30058,12),
+(2945,0,30058,13),
+(2946,0,30058,14),
+(2947,0,30058,15),
+(2948,0,30058,16),
+(2949,0,30058,17),
+(2950,0,30058,18),
+(2951,0,30058,19),
+(2952,0,30058,20),
+(2953,0,30058,21),
+(2954,0,30058,22),
+(2955,0,30058,23),
+(2956,0,30058,24),
+(2957,0,30058,25),
+(2958,0,30058,26),
+(2959,0,30058,27),
+(2960,0,30058,28),
+(2961,0,30058,29),
+(2962,0,30058,30),
+(2963,0,30058,31),
+(2964,0,30058,32),
+(2965,0,30058,33),
+(2966,0,30058,34),
+(2967,0,30058,35),
+(2968,0,30058,36),
+(2969,0,30058,37),
+(3031,0,30058,38),
+(4039,0,30058,39),
+(4040,0,30058,40),
+(4041,0,30058,41),
+(4042,0,30058,42),
+(4043,0,30058,43),
+(4044,0,30058,44),
+(4045,0,30058,45),
+(4046,0,30058,46),
+(4047,0,30058,47),
+(4048,0,30058,48),
+(4049,0,30058,49),
+(4050,0,30058,50),
+(4051,0,30059,1),
+(4052,0,30059,2),
+(4053,0,30059,3),
+(4054,0,30059,4),
+(4055,0,30059,5),
+(4056,0,30059,6),
+(4057,0,30059,7),
+(4058,0,30059,8),
+(4059,0,30059,9),
+(4060,0,30059,10),
+(4061,0,30059,11),
+(4062,0,30059,12),
+(4063,0,30059,13),
+(4064,0,30059,14),
+(4065,0,30059,15),
+(4066,0,30059,16),
+(4067,0,30059,17),
+(4068,0,30059,18),
+(4069,0,30059,19),
+(4070,0,30059,20),
+(4071,0,30059,21),
+(4072,0,30059,22),
+(4073,0,30059,23),
+(4074,0,30059,24),
+(4075,0,30059,25),
+(4076,0,30059,26),
+(4077,0,30059,27),
+(4078,0,30059,28),
+(4079,0,30059,29),
+(4080,0,30059,30),
+(4081,0,30059,31),
+(4082,0,30059,32),
+(4083,0,30059,33),
+(4084,0,30059,34),
+(4085,0,30059,35),
+(4086,0,30059,36),
+(4087,0,30059,37),
+(4088,0,30059,38),
+(4089,0,30059,39),
+(4090,0,30059,40),
+(4091,0,30059,41),
+(4092,0,30059,42),
+(4093,0,30059,43),
+(4094,0,30059,44),
+(4095,0,30059,45),
+(4096,0,30059,46),
+(4097,0,30059,47),
+(4098,0,30059,48),
+(4099,0,30059,49),
+(4100,0,30059,50),
+(3960,30000,123161,1),
+(3961,40000,123161,2),
+(3962,50000,123161,3),
+(3963,150000,123161,4),
+(3964,150000,123161,5),
+(3965,30000,123161,6),
+(3966,40000,123161,7),
+(3967,50000,123161,8),
+(3968,150000,123161,9),
+(3969,150000,123161,10),
+(3973,30000,123171,1),
+(3974,40000,123171,2),
+(3975,50000,123171,3),
+(3976,150000,123171,4),
+(3977,150000,123171,5),
+(3978,30000,123171,6),
+(3979,40000,123171,7),
+(3980,50000,123171,8),
+(3981,150000,123171,9),
+(3982,150000,123171,10),
+(3999,30000,123181,1),
+(4000,40000,123181,2),
+(4001,50000,123181,3),
+(4002,150000,123181,4),
+(4003,150000,123181,5),
+(4004,30000,123181,6),
+(4005,40000,123181,7),
+(4006,50000,123181,8),
+(4007,150000,123181,9),
+(4008,150000,123181,10),
+(3986,30000,123191,1),
+(3987,40000,123191,2),
+(3988,50000,123191,3),
+(3989,150000,123191,4),
+(3990,150000,123191,5),
+(3991,30000,123191,6),
+(3992,40000,123191,7),
+(3993,50000,123191,8),
+(3994,150000,123191,9),
+(3995,150000,123191,10),
+(4012,30000,123201,1),
+(4013,40000,123201,2),
+(4014,50000,123201,3),
+(4015,150000,123201,4),
+(4016,150000,123201,5),
+(4017,30000,123201,6),
+(4018,40000,123201,7),
+(4019,50000,123201,8),
+(4020,150000,123201,9),
+(4021,150000,123201,10),
+(5156,0,300410,1),
+(5157,0,300410,2),
+(5158,0,300410,3),
+(5159,0,300410,4),
+(5160,0,300410,5),
+(5161,0,300410,6),
+(5162,0,300410,7),
+(5163,0,300410,8),
+(5164,0,300410,9),
+(5165,0,300410,10),
+(5166,0,300410,11),
+(5167,0,300410,12),
+(5230,0,300410,13),
+(5231,0,300410,14),
+(5268,0,300410,15),
+(5269,0,300410,16),
+(5270,0,300410,17),
+(5271,0,300410,18),
+(5272,0,300410,19),
+(5273,0,300410,20),
+(5274,0,300410,21),
+(5275,0,300410,22),
+(5276,0,300410,23),
+(5277,0,300410,24),
+(5278,0,300410,25),
+(5279,0,300410,26),
+(5280,0,300410,27),
+(5281,0,300410,28),
+(5282,0,300410,29),
+(4101,0,300510,1),
+(4102,0,300510,2),
+(4103,0,300510,3),
+(4104,0,300510,4),
+(4105,0,300510,5),
+(4106,0,300510,6),
+(4107,0,300510,7),
+(4108,0,300510,8),
+(4109,0,300510,9),
+(4110,0,300510,10),
+(4111,0,300510,11),
+(4112,0,300510,12),
+(4113,0,300510,13),
+(4114,0,300510,14),
+(4115,0,300510,15),
+(4116,0,300510,16),
+(4117,0,300510,17),
+(4118,0,300510,18),
+(4119,0,300510,19),
+(4120,0,300510,20),
+(4121,0,300510,21),
+(4438,0,300510,22),
+(4439,0,300510,23),
+(5220,0,300510,24),
+(5556,0,300510,25),
+(5557,0,300510,26),
+(5558,0,300510,27),
+(5559,0,300510,28),
+(1463,0,300511,2),
+(1464,0,300511,3),
+(1465,0,300511,4),
+(1466,0,300511,5),
+(1467,0,300511,6),
+(2509,0,300511,7),
+(2510,0,300511,8),
+(2511,0,300511,9),
+(2512,0,300511,10),
+(2513,0,300511,11),
+(2514,0,300511,12),
+(3947,0,300511,13),
+(3948,0,300511,14),
+(3949,0,300511,15),
+(3950,0,300511,16),
+(3951,0,300511,17),
+(3952,0,300511,18),
+(5134,0,300511,19),
+(5135,0,300511,20),
+(5136,0,300511,21),
+(5137,0,300511,22),
+(5138,0,300511,23),
+(5139,0,300511,24),
+(5140,0,300511,25),
+(5141,0,300511,26),
+(5142,0,300511,27),
+(5143,0,300511,28),
+(5144,0,300511,29),
+(5145,0,300511,30),
+(5146,0,300511,31),
+(5147,0,300511,32),
+(5148,0,300511,33),
+(5149,0,300511,34),
+(5150,0,300511,35),
+(5151,0,300511,36),
+(5250,0,300511,37),
+(5251,0,300511,38),
+(5252,0,300511,39),
+(5253,0,300511,40),
+(5254,0,300511,41),
+(5255,0,300511,42),
+(5256,0,300511,43),
+(5257,0,300511,44),
+(5258,0,300511,45),
+(5259,0,300511,46),
+(5260,0,300511,47),
+(5261,0,300511,48),
+(5262,0,300511,49),
+(5263,0,300511,50),
+(5264,0,300511,51),
+(5265,0,300511,52),
+(5266,0,300511,53),
+(5267,0,300511,54),
+(1512,0,300522,1),
+(1513,0,300522,2),
+(1514,0,300522,3),
+(1515,0,300522,4),
+(1516,0,300522,5),
+(1517,0,300522,6),
+(1518,0,300522,7),
+(1519,0,300522,8),
+(1520,0,300522,9),
+(1521,0,300522,10),
+(1522,0,300522,11),
+(1523,0,300522,12),
+(1524,0,300522,13),
+(1525,0,300522,14),
+(1526,0,300522,15),
+(1527,0,300522,16),
+(1528,0,300522,17),
+(1529,0,300522,18),
+(1530,0,300522,19),
+(1531,0,300522,20),
+(1048,0,300522,21),
+(1049,0,300522,22),
+(1050,0,300522,23),
+(1051,0,300522,24),
+(1052,0,300522,25),
+(1053,0,300522,26),
+(1054,0,300522,27),
+(1055,0,300522,28),
+(1056,0,300522,29),
+(1058,0,300522,30),
+(1095,0,300522,31),
+(1096,0,300522,32),
+(1097,0,300522,33),
+(1098,0,300522,34),
+(1099,0,300522,35),
+(1152,0,300522,36),
+(1294,0,300522,37),
+(1370,0,300522,38),
+(1371,0,300522,39),
+(1372,0,300522,40),
+(1377,0,300522,41),
+(1378,0,300522,42),
+(1379,0,300522,43),
+(1380,0,300522,44),
+(1381,0,300522,45),
+(1382,0,300522,46),
+(1383,0,300522,47),
+(1384,0,300522,48),
+(1385,0,300522,49),
+(1386,0,300523,1),
+(1387,0,300523,2),
+(1388,0,300523,3),
+(1389,0,300523,4),
+(1390,0,300523,5),
+(1391,0,300523,6),
+(1392,0,300523,7),
+(1394,0,300523,8),
+(1397,0,300523,9),
+(1398,0,300523,10),
+(1399,0,300523,11),
+(1400,0,300523,12),
+(1401,0,300523,13),
+(1402,0,300523,14),
+(1403,0,300523,15),
+(1404,0,300523,16),
+(1405,0,300523,17),
+(1406,0,300523,18),
+(1407,0,300523,19),
+(1408,0,300523,20),
+(1409,0,300523,21),
+(1410,0,300523,22),
+(1411,0,300523,23),
+(1412,0,300523,24),
+(1413,0,300523,25),
+(1414,0,300523,26),
+(1415,0,300523,27),
+(1416,0,300523,28),
+(1417,0,300523,29),
+(1418,0,300523,30),
+(1532,0,300523,31),
+(1533,0,300523,32),
+(1534,0,300523,33),
+(1535,0,300523,34),
+(1536,0,300523,35),
+(1537,0,300523,36),
+(1667,0,300523,37),
+(1668,0,300523,38),
+(1669,0,300523,39),
+(1670,0,300523,40),
+(1671,0,300523,41),
+(1856,0,300523,42),
+(3038,0,300523,43),
+(3039,0,300523,44),
+(3040,0,300523,45),
+(3041,0,300523,46),
+(3042,0,300523,47),
+(3043,0,300523,48),
+(3044,0,300523,49),
+(3045,0,300524,1),
+(3046,0,300524,2),
+(3047,0,300524,3),
+(3048,0,300524,4),
+(3049,0,300524,5),
+(3050,0,300524,6),
+(3051,0,300524,7),
+(3052,0,300524,8),
+(3053,0,300524,9),
+(3054,0,300524,10),
+(3055,0,300524,11),
+(3056,0,300524,12),
+(3057,0,300524,13),
+(3058,0,300524,14),
+(3059,0,300524,15),
+(3060,0,300524,16),
+(3061,0,300524,17),
+(3062,0,300524,18),
+(3063,0,300524,19),
+(3064,0,300524,20),
+(3065,0,300524,21),
+(3066,0,300524,22),
+(3067,0,300524,23),
+(3068,0,300524,24),
+(3069,0,300524,25),
+(3070,0,300524,26),
+(3071,0,300524,27),
+(3072,0,300524,28),
+(3073,0,300524,29),
+(3074,0,300524,30),
+(3075,0,300524,31),
+(3076,0,300524,32),
+(3077,0,300524,33),
+(3078,0,300524,34),
+(3079,0,300524,35),
+(3080,0,300524,36),
+(3081,0,300524,37),
+(3082,0,300524,38),
+(3085,0,300524,39),
+(3086,0,300524,40),
+(3087,0,300524,41),
+(3088,0,300524,42),
+(3089,0,300524,43),
+(3090,0,300524,44),
+(3091,0,300524,45),
+(3092,0,300524,46),
+(3093,0,300524,47),
+(3094,0,300524,48),
+(3095,0,300524,49),
+(3096,0,300525,1),
+(3097,0,300525,2),
+(3098,0,300525,3),
+(3099,0,300525,4),
+(3100,0,300525,5),
+(3101,0,300525,6),
+(3102,0,300525,7),
+(3103,0,300525,8),
+(3104,0,300525,9),
+(3105,0,300525,10),
+(3106,0,300525,11),
+(3107,0,300525,12),
+(3108,0,300525,13),
+(3109,0,300525,14),
+(3110,0,300525,15),
+(3111,0,300525,16),
+(3112,0,300525,17),
+(3113,0,300525,18),
+(3114,0,300525,19),
+(3115,0,300525,20),
+(3116,0,300525,21),
+(3117,0,300525,22),
+(3118,0,300525,23),
+(3429,0,300525,24),
+(3430,0,300525,25),
+(3431,0,300525,26),
+(3432,0,300525,27),
+(3940,0,300525,28),
+(3941,0,300525,29),
+(3942,0,300525,30),
+(3943,0,300525,31),
+(3944,0,300525,32),
+(4200,0,300525,33),
+(4201,0,300525,34),
+(4203,0,300525,35),
+(4204,0,300525,36),
+(4205,0,300525,37),
+(4206,0,300525,38),
+(4207,0,300525,39),
+(4208,0,300525,40),
+(4445,0,300526,1),
+(4446,0,300526,2),
+(4447,0,300526,3),
+(4448,0,300526,4),
+(4449,0,300526,5),
+(4450,0,300526,6),
+(4451,0,300526,7),
+(4452,0,300526,8),
+(4453,0,300526,9),
+(4454,0,300526,10),
+(4455,0,300526,11),
+(4456,0,300526,12),
+(4457,0,300526,13),
+(4458,0,300526,14),
+(4459,0,300526,15),
+(4460,0,300526,16),
+(4461,0,300526,17),
+(4462,0,300526,18),
+(4463,0,300526,19),
+(4464,0,300526,20),
+(4465,0,300526,21),
+(4466,0,300526,22),
+(4467,0,300526,23),
+(4468,0,300526,24),
+(4469,0,300526,25),
+(4470,0,300526,26),
+(4471,0,300526,27),
+(4472,0,300526,28),
+(4473,0,300526,29),
+(4474,0,300526,30),
+(4475,0,300526,31),
+(4476,0,300526,32),
+(4477,0,300526,33),
+(4478,0,300526,34),
+(4479,0,300526,35),
+(4480,0,300526,36),
+(4481,0,300526,37),
+(4482,0,300526,38),
+(4483,0,300526,39),
+(4484,0,300526,40),
+(4485,0,300526,41),
+(4486,0,300526,42),
+(4487,0,300526,43),
+(4488,0,300526,44),
+(4489,0,300526,45),
+(4490,0,300526,46),
+(4491,0,300526,47),
+(4492,0,300526,48),
+(4493,0,300526,49),
+(4494,0,300526,50),
+(4495,0,300526,51),
+(4496,0,300526,52),
+(4497,0,300526,53),
+(4498,0,300526,54),
+(4499,0,300526,55),
+(4500,0,300526,56),
+(4501,0,300526,57),
+(4502,0,300526,58),
+(4503,0,300526,59),
+(4504,0,300526,60),
+(4505,0,300526,61),
+(4506,0,300526,62),
+(4507,0,300526,63),
+(4508,0,300526,64),
+(4509,0,300526,65),
+(4510,0,300526,66),
+(4511,0,300526,67),
+(4512,0,300526,68),
+(4513,0,300526,69),
+(4514,0,300526,70),
+(4515,0,300526,71),
+(4516,0,300526,72),
+(4517,0,300526,73),
+(4518,0,300526,74),
+(4519,0,300526,75),
+(4520,0,300526,76),
+(4521,0,300526,77),
+(4522,0,300526,78),
+(4523,0,300526,79),
+(4524,0,300526,80),
+(4525,0,300526,81),
+(4526,0,300526,82),
+(4527,0,300526,83),
+(4528,0,300526,84),
+(4529,0,300526,85),
+(4530,0,300526,86),
+(4531,0,300526,87),
+(4532,0,300526,88),
+(4533,0,300526,89),
+(4534,0,300526,90),
+(4535,0,300526,91),
+(4536,0,300526,92),
+(4537,0,300526,93),
+(4538,0,300526,94),
+(4539,0,300526,95),
+(4540,0,300526,96),
+(4541,0,300526,97),
+(4542,0,300526,98),
+(4543,0,300526,99),
+(4544,0,300526,100),
+(4545,0,300526,101),
+(4546,0,300526,102),
+(4547,0,300526,103),
+(4548,0,300526,104),
+(4549,0,300526,105),
+(4550,0,300526,106),
+(4551,0,300526,107),
+(4552,0,300526,108),
+(4553,0,300526,109),
+(4554,0,300526,110),
+(4555,0,300526,111),
+(4556,0,300526,112),
+(4557,0,300526,113),
+(4558,0,300526,114),
+(4559,0,300526,115),
+(4560,0,300526,116),
+(4561,0,300526,117),
+(4562,0,300526,118),
+(4563,0,300526,119),
+(4564,0,300526,120),
+(4565,0,300526,121),
+(4566,0,300526,122),
+(4567,0,300526,123),
+(4568,0,300526,124),
+(4569,0,300526,125),
+(4570,0,300526,126),
+(4571,0,300526,127),
+(4572,0,300526,128),
+(4573,0,300526,129),
+(4574,0,300526,130),
+(4575,0,300526,131),
+(4576,0,300526,132),
+(4577,0,300526,133),
+(4578,0,300526,134),
+(4579,0,300526,135),
+(4580,0,300526,136),
+(4581,0,300526,137),
+(4582,0,300526,138),
+(4583,0,300526,139),
+(4584,0,300526,140),
+(4585,0,300526,141),
+(4586,0,300526,142),
+(4587,0,300526,143),
+(4588,0,300526,144),
+(4589,0,300526,145),
+(4590,0,300526,146),
+(4591,0,300526,147),
+(4592,0,300526,148),
+(4593,0,300526,149),
+(4594,0,300526,150),
+(4595,0,300526,151),
+(4596,0,300526,152),
+(4597,0,300526,153),
+(4598,0,300526,154),
+(4599,0,300526,155),
+(4600,0,300526,156),
+(4601,0,300526,157),
+(4602,0,300526,158),
+(4603,0,300526,159),
+(4604,0,300526,160),
+(4605,0,300526,161),
+(4606,0,300526,162),
+(4607,0,300526,163),
+(4608,0,300526,164),
+(4609,0,300526,165),
+(4610,0,300526,166),
+(4611,0,300526,167),
+(4612,0,300526,168),
+(4613,0,300526,169),
+(4614,0,300526,170),
+(4615,0,300526,171),
+(4616,0,300526,172),
+(4617,0,300526,173),
+(4618,0,300526,174),
+(4619,0,300526,175),
+(4620,0,300526,176),
+(4621,0,300526,177),
+(4622,0,300526,178),
+(4623,0,300526,179),
+(4624,0,300526,180);
