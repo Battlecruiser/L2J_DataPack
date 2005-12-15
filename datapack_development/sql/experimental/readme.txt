@@ -27,7 +27,7 @@ https://opensvn.csie.org/traccgi/L2J_Datapack/trac.cgi/browser/trunk/datapack_de
 
 		NPC
 /sql/npc.sql    -> better stats
-/sql/experimental/npc.sql    -> better `type` field entries
+/sql/experimental/npc.sql    -> ???
 
 		NPCSKILLS
 /sql/npcskills.sql    -> fewer entries
@@ -40,4 +40,4 @@ https://opensvn.csie.org/traccgi/L2J_Datapack/trac.cgi/browser/trunk/datapack_de
 
 
 	*i would reccomend /sql/experimental/npcskills.sql, /sql/experimental/spawnlist-experimental.sql
-		and /sql/npc.sql with the `type` field entries from /sql/experimental/npc.sql (warrax)
+		and /sql/npc.sql (warrax)
