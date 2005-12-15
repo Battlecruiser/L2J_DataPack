@@ -28,6 +28,7 @@ class Quest (JQuest) :
             st.set("cond","0")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
+            st.exitQuest(1)
     elif event == "7435_2" :
             htmltext = "7435-08.htm"
     return htmltext
