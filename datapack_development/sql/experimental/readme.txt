@@ -10,7 +10,7 @@ Revision 659                            Revision 687
 /sql/npcskills.sql                  ->  /sql/npcskills.sql
 
 /sql/spawnlist-experimental-c3.sql  ->  /sql/experimental/spawnlist-experimental.sql
-/sql/spawnlist-sexy.sql             ->  /sql/experimental/spawnlist-loc_id.sql
+/sql/spawnlist-sexy.sql             ->  /sql/experimental/spawnlist-loc_id.sql        -> removed
 /sql/spawnlist.sql                  ->  /sql/spawnlist.sql
 
 
@@ -36,7 +36,7 @@ https://opensvn.csie.org/traccgi/L2J_Datapack/trac.cgi/browser/trunk/datapack_de
 		SPAWNLIST
 /sql/spawnlist.sql    -> old spawnlist (no usage of loc_id?)
 /sql/experimental/spawnlist-experimental.sql    -> newer spawnlist, more raidbosses, more usage of loc_id (locations.sql)
-/sql/experimental/spawnlist-loc_id.sql   -> initial implementation of loc_id, old, not maintained
+/sql/experimental/spawnlist-loc_id.sql   -> initial implementation of loc_id, old, not maintained -> removed
 
 
 	*i would reccomend /sql/experimental/npcskills.sql, /sql/experimental/spawnlist-experimental.sql
