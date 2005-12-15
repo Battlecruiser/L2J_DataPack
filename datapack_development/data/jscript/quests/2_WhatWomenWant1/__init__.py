@@ -34,7 +34,6 @@ class Quest (JQuest) :
         st.set("cond","0")
         st.setState(COMPLETED)
         st.playSound("ItemSound.quest_finish")
-        st.set("onlyone","1")
     return htmltext
 
 
@@ -44,8 +43,7 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
-     st.set("onlyone","0")
-   if npcId == 7223 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+   if npcId == 7223 and id == CREATED :
       if st.getPlayer().getRace().ordinal() != 1 and st.getPlayer().getRace().ordinal() != 0 :
          htmltext = "7223-00.htm"
       elif st.getPlayer().getLevel()>1 :
@@ -54,9 +52,9 @@ class Quest (JQuest) :
       else:
          htmltext = "7223-01.htm"
          st.exitQuest(1)
-   elif npcId == 7223 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 7223 and id== COMPLETED :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7223 and int(st.get("cond"))==1 and int(st.get("onlyone"))==0 :
+   elif npcId == 7223 and int(st.get("cond"))>=1 :
         if st.getQuestItemsCount(ARUJIENS_LETTER1_ID) :
           htmltext = "7223-05.htm"
         elif st.getQuestItemsCount(ARUJIENS_LETTER3_ID) :
@@ -71,7 +69,6 @@ class Quest (JQuest) :
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
-          st.set("onlyone","1")
           htmltext = "7223-10.htm"
    elif npcId == 7146 and int(st.get("cond"))==1 :
         if st.getQuestItemsCount(ARUJIENS_LETTER1_ID) :
@@ -110,6 +107,7 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7223)
 
 CREATED.addTalkId(7223)
+COMPLETED.addTalkId(7223)
 
 STARTED.addTalkId(7146)
 STARTED.addTalkId(7150)
