@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # rewritten by Rolarga Version 0.3
 import sys
 from net.sf.l2j.gameserver.model.quest import State
@@ -40,7 +40,7 @@ NPC = [7063,7098,7110,7188,7314,7417,7435,7476,7630,7631,7632,7633]
 
 STATS = ["cond","step","gem1","gem2","gem3","gem456"] 
 
-#This handels all Mob Drop relatet Datas npcId:[var,value,maxcount,chance,giveList,takeList]
+#This handle all Mob-Drop related Data npcId:[var,value,maxcount,chance,giveList,takeList]
 DROPLIST={
 5101:	["step",	[3,14],	1,100,[ZERUEL_BIND_CRYSTAL_ID,PURGATORY_KEY_ID],[BRIMSTONE2_ID,SOULTRAP_CRYSTAL_ID]],
 5100:	["gem456",	[3,4,5],1,100,[AKLANTOS_GEM4_ID,AKLANTOS_GEM5_ID,AKLANTOS_GEM6_ID],[LEOPOLDS_JOURNAL1_ID]],
@@ -402,7 +402,7 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7630)
-
+CREATED.addTalkId(7630)
 
 for npcId in NPC:
 	STARTED.addTalkId(npcId)
