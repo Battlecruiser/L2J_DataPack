@@ -2636,7 +2636,7 @@ INSERT INTO `npc` VALUES
 (8123,'Ziggurat Gate Keeper','teleport_npc_sm',7.00,15.00,75,'male','L2Teleporter',40,16667,5000,40,21,30,20,43,10,0,0,1000,1667,1000,1429,253,0,253,0,0,0,80,120,NULL,NULL,0),
 (8124,'Ziggurat Gate Keeper','teleport_npc_sm',7.00,15.00,75,'male','L2Teleporter',40,16667,5000,40,21,30,20,43,10,0,0,1000,1667,1000,1429,253,0,253,0,0,0,80,120,NULL,NULL,0),
 (8125,'Ziggurat Gate Keeper','teleport_npc_sm',7.00,15.00,75,'male','L2Teleporter',40,16667,5000,40,21,30,20,43,10,0,0,1000,1667,1000,1429,253,0,253,0,0,0,80,120,NULL,NULL,0),
-(8126,'Blacksmith Of Mammon','e_smith_master_MDwarf',8.00,17.00,75,'male','L2Npc',40,16667,5000,40,21,30,20,43,10,0,0,1000,1667,1000,1429,253,0,253,0,0,0,80,120,NULL,NULL,0),
+(8126,'Blacksmith Of Mammon','e_smith_master_MDwarf',8.00,17.00,75,'male','L2Trainer',40,16667,5000,40,21,30,20,43,10,0,0,1000,1667,1000,1429,253,0,253,0,0,0,80,120,NULL,NULL,0),
 (8127,'Festival Guide','priest_of_dawn',8.00,30.50,75,'male','L2FestivalGuide',40,16667,5000,40,21,30,20,43,10,0,0,1000,1667,1000,1429,253,0,253,0,0,0,80,120,NULL,NULL,0),
 (8128,'Festival Guide','priest_of_dawn',8.00,30.50,75,'male','L2FestivalGuide',40,16667,5000,40,21,30,20,43,10,0,0,1000,1667,1000,1429,253,0,253,0,0,0,80,120,NULL,NULL,0),
 (8129,'Festival Guide','priest_of_dawn',8.00,30.50,75,'male','L2FestivalGuide',40,16667,5000,40,21,30,20,43,10,0,0,1000,1667,1000,1429,253,0,253,0,0,0,80,120,NULL,NULL,0),
