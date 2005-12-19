@@ -75,44 +75,64 @@ class Quest (JQuest) :
             n2 = st.getRandom(10)
           if n1 == 0 :
               st.giveItems(BETRAYER_SUE_REPORT_ID,1)
+              st.addRadar(35515, 175550, -3209)
           elif n1 == 1 :
               st.giveItems(BETRAYER_WANUK_REPORT_ID,1)
+              st.addRadar(-55190, 167274, -3697)
           elif n1 == 2 :
               st.giveItems(BETRAYER_CHEWBA_REPORT_ID,1)
+              st.addRadar(-42108, 130178, -2941)
           elif n1 == 3 :
               st.giveItems(BETRAYER_HEITAFU_REPORT_ID,1)
+              st.addRadar(-99282, 114104, -3541)
           elif n1 == 4 :
               st.giveItems(BETRAYER_PICUBO_REPORT_ID,1)
+              st.addRadar(-13820, 67923, -3552)
           elif n1 == 5 :
               st.giveItems(BETRAYER_BUMBUM_REPORT_ID,1)
+              st.addRadar(-86884, 109826, -3621)
           elif n1 == 6 :
               st.giveItems(BETRAYER_MINSKU_REPORT_ID,1)
+              st.addRadar(-11213, 209616, -3709)
           elif n1 == 7 :
               st.giveItems(BETRAYER_CHUCHU_REPORT_ID,1)
+              st.addRadar(4322, 169008, -3513)
           elif n1 == 8 :
               st.giveItems(BETRAYER_UMBAR_REPORT_ID,1)
+              st.addRadar(-16760, 78268, -3480)
           elif n1 == 9 :
               st.giveItems(BETRAYER_ZAKAN_REPORT_ID,1)
+              st.addRadar(-48426, 153534, -3017)
           if n2 == 0 :
               st.giveItems(BETRAYER_SUE_REPORT_ID,1)
+              st.addRadar(35515, 175550, -3209)
           elif n2 == 1 :
               st.giveItems(BETRAYER_WANUK_REPORT_ID,1)
+              st.addRadar(-55190, 167274, -3697)
           elif n2 == 2 :
               st.giveItems(BETRAYER_CHEWBA_REPORT_ID,1)
+              st.addRadar(-42108, 130178, -2941)
           elif n2 == 3 :
               st.giveItems(BETRAYER_HEITAFU_REPORT_ID,1)
+              st.addRadar(-99282, 114104, -3541)
           elif n2 == 4 :
               st.giveItems(BETRAYER_PICUBO_REPORT_ID,1)
+              st.addRadar(-13820, 67923, -3552)
           elif n2 == 5 :
               st.giveItems(BETRAYER_BUMBUM_REPORT_ID,1)
+              st.addRadar(-86884, 109826, -3621)
           elif n2 == 6 :
               st.giveItems(BETRAYER_MINSKU_REPORT_ID,1)
+              st.addRadar(-11213, 209616, -3709)
           elif n2 == 7 :
               st.giveItems(BETRAYER_CHUCHU_REPORT_ID,1)
+              st.addRadar(4322, 169008, -3513)
           elif n2 == 8 :
               st.giveItems(BETRAYER_UMBAR_REPORT_ID,1)
+              st.addRadar(-16760, 78268, -3480)
           elif n2 == 9 :
               st.giveItems(BETRAYER_ZAKAN_REPORT_ID,1)
+              st.addRadar(-48426, 153534, -3017)
           st.set("cond","3")
    elif npcId == 7570 and int(st.get("cond")) and ((st.getQuestItemsCount(BETRAYER_SUE_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHEWBA_REPORT_ID)+st.getQuestItemsCount(BETRAYER_WANUK_REPORT_ID)+st.getQuestItemsCount(BETRAYER_HEITAFU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_PICUBO_REPORT_ID)+st.getQuestItemsCount(BETRAYER_BUMBUM_REPORT_ID)+st.getQuestItemsCount(BETRAYER_MINSKU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_CHUCHU_REPORT_ID)+st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID)+st.getQuestItemsCount(BETRAYER_ZAKAN_REPORT_ID))>0)  and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)>0 :
           htmltext = "7570-08.htm"
@@ -180,7 +200,8 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 5046 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_SUE_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<3 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_SUE_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+          st.removeRadar(35515, 175550, -3209)
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_SUE_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
@@ -189,7 +210,8 @@ class Quest (JQuest) :
             st.set("cond","4")
    elif npcId == 5047 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_WANUK_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<3 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_WANUK_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+          st.removeRadar(-55190, 167274, -3697)
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_WANUK_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
@@ -198,7 +220,8 @@ class Quest (JQuest) :
             st.set("cond","4")
    elif npcId == 5048 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_CHEWBA_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<3 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_CHEWBA_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+          st.removeRadar(-42108, 130178, -2941)
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_CHEWBA_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
@@ -208,6 +231,7 @@ class Quest (JQuest) :
    elif npcId == 5049 :
         st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_HEITAFU_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+          st.removeRadar(-99282, 114104, -3541)
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_HEITAFU_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
@@ -217,6 +241,7 @@ class Quest (JQuest) :
    elif npcId == 5050 :
         st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_PICUBO_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+          st.removeRadar(-13820, 67923, -3552)
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_PICUBO_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
@@ -226,6 +251,7 @@ class Quest (JQuest) :
    elif npcId == 5051 :
         st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_BUMBUM_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+          st.removeRadar(-86884, 109826, -3621)
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_BUMBUM_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
@@ -235,6 +261,7 @@ class Quest (JQuest) :
    elif npcId == 5052 :
         st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_MINSKU_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+          st.removeRadar(-11213, 209616, -3709)
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_MINSKU_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
@@ -244,6 +271,7 @@ class Quest (JQuest) :
    elif npcId == 5053 :
         st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_CHUCHU_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+          st.removeRadar(4322, 169008, -3513)
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_CHUCHU_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
@@ -253,6 +281,7 @@ class Quest (JQuest) :
    elif npcId == 5054 :
         st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+          st.removeRadar(-16760, 78268, -3480)
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_UMBAR_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
@@ -262,6 +291,7 @@ class Quest (JQuest) :
    elif npcId == 5055 :
         st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_ZAKAN_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
+          st.removeRadar(-48426, 153534, -3017)
           st.giveItems(HEAD_OF_BETRAYER_ID,1)
           st.takeItems(BETRAYER_ZAKAN_REPORT_ID,1)
           st.playSound("ItemSound.quest_itemget")
