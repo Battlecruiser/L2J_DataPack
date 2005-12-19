@@ -1,5 +1,4 @@
 # Made by Mr. Have fun! Version 0.2
-print "importing quests: 417: Path To Scavenger"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -124,7 +123,7 @@ class Quest (JQuest) :
           st.takeItems(ROUTS_TP_SCROLL_ID,1)
           st.giveItems(SUCCUBUS_UNDIES_ID,1)
           st.set("cond","11")
-          st.getPcSpawn().removeAllSpawns()
+          st.getPcSpawn().removeAllSpawn()
     return htmltext
 
 
@@ -133,16 +132,12 @@ class Quest (JQuest) :
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
-     st.setState(STARTING)
+     st.setState(STARTING)  
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 7524 and int(st.get("cond"))==0 :
-          if int(st.get("cond")) < 15 :
-            htmltext = "7524-01.htm"
-            return htmltext
-          else:
-            htmltext = "7524-01.htm"
+     htmltext = "7524-01.htm"
    elif npcId == 7524 and int(st.get("cond")) and st.getQuestItemsCount(PIPIS_LETTER_ID)>0 :
           htmltext = "7524-06.htm"
    elif npcId == 7524 and int(st.get("cond")) and st.getQuestItemsCount(PIPIS_LETTER_ID)==0 and id==STARTING :
@@ -303,13 +298,14 @@ class Quest (JQuest) :
 
 QUEST       = Quest(417,"417_PathToScavenger","Path To Scavenger")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
+STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7524)
+CREATED.addTalkId(7524)
 
 STARTING.addTalkId(7524)
 
@@ -344,3 +340,5 @@ STARTED.addQuestDrop(7556,TARANTULA_PIC_ID,1)
 STARTED.addQuestDrop(7557,SUCCUBUS_UNDIES_ID,1)
 STARTED.addQuestDrop(7556,BEAD_PARCEL_ID,1)
 STARTED.addQuestDrop(7316,ROUTS_TP_SCROLL_ID,1)
+
+print "importing quests: 417: Path To Scavenger"
