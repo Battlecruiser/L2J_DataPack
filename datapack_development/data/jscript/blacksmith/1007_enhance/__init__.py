@@ -15,7 +15,7 @@ from net.sf.l2j.gameserver import ItemTable
 EnhanceList={
 #Bows
 281:["weapon_crystallized_ice_bow_i01", [["Guidance", 4810, 4634, 2131, 250], ["Evasion", 4811, 4645, 2131, 250], ["Quick Recovery", 4812, 4656, 2131, 250]]], 
-285:["weapon_elven_bow_of_nobility_i01", [["Evasion", 4816, 4635, 2131, 350], ["Miser", 4817, 4646, 2131, 350], ["Cheap Shot", 4818, 4657, 2131, 350]]], 
+285:["weapon_noble_elven_bow_i01", [["Evasion", 4816, 4635, 2131, 350], ["Miser", 4817, 4646, 2131, 350], ["Cheap Shot", 4818, 4657, 2131, 350]]], 
 283:["weapon_akat_long_bow_i01", [["Guidance", 4819, 4636, 2131, 450], ["Evasion", 4820, 4647, 2131, 450], ["Miser", 4821, 4658, 2131, 450]]], 
 286:["weapon_eminence_bow_i01", [["Guidance", 4822, 4637, 2131, 550], ["Miser", 4823, 4648, 2131, 550], ["Cheap Shot", 4824, 4659, 2131, 550]]], 
 284:["weapon_dark_elven_long_bow_i01", [["Evasion", 4825, 4639, 2132, 222], ["Critical Bleed", 4826, 4650, 2132, 222], ["Miser", 4827, 4661, 2132, 222]]], 
@@ -75,8 +75,8 @@ EnhanceList={
 227:["weapon_stiletto_i01", [["Critical Bleed", 4765, 4635, 2132, 250], ["Critical Poison", 4766, 4646, 2132, 250], ["Rsk. Haste", 6357, 4657, 2132, 250]]], 
 # Poleaxe'
 301:["weapon_scorpion_i01", [["Anger", 4846, 4636, 2131, 450], ["Critical Stun", 4847, 4647, 2131, 450], ["Long Blow", 4848, 4659, 2131, 450]]], 
-303:["weapon_widow_maker_critical_stun", [["Critical Stun", 4849, 4636, 2131, 450], ["Long Blow", 4850, 4647, 2131, 450], ["Wide Blow", 4851, 4658, 2131, 450]]], 
-299:["weapon_orcish_poleaxe_critical_stun", [["Critical Stun", 4852, 4637, 2131, 550], ["Long Blow", 4853, 4648, 2131, 550], ["Wide Blow", 4854, 4659, 2131, 550]]], 
+303:["weapon_widow_maker_i01", [["Critical Stun", 4849, 4636, 2131, 450], ["Long Blow", 4850, 4647, 2131, 450], ["Wide Blow", 4851, 4658, 2131, 450]]], 
+299:["weapon_orcish_poleaxe_i01", [["Critical Stun", 4852, 4637, 2131, 550], ["Long Blow", 4853, 4648, 2131, 550], ["Wide Blow", 4854, 4659, 2131, 550]]], 
 300:["weapon_great_axe_i01", [["Anger", 4855, 4638, 2132, 222], ["Critical Stun", 4856, 4649, 2132, 222], ["Light", 4857, 4660, 2132, 222]]], 
 97: ["weapon_lance_i01", [["Anger", 4858, 4639, 2132, 339], ["Critical Stun", 4859, 4650, 2132, 339], ["Long Blow", 4860, 4661, 2132, 339]]], 
 96:["weapon_scythe_i01", [["Anger", 4834, 4634, 2132, 250], ["Critical Stun", 4835, 4645, 2132, 250], ["Light", 4836, 4656, 2132, 250]]], 
