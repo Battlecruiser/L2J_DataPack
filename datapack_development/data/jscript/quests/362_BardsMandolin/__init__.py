@@ -42,17 +42,16 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_itemget")
    elif npcId == 7957 and cond == 3 and st.getQuestItemsCount(4316) and not st.getQuestItemsCount(4317) :
         st.set("cond","4")
-        st.set("id","0")
         st.giveItems(4317,1)
         htmltext = "7957_3.htm"
-   elif npcId == 7957 and cond == 4 and st.getQuestItemsCount(4316) and st.getQuestItemsCount(4317) and not int(st.get("id")) :
+   elif npcId == 7957 and cond == 4 and st.getQuestItemsCount(4316) and st.getQuestItemsCount(4317) :
         htmltext = "7957_6.htm"
-   elif npcId == 7956 and cond == 4 and st.getQuestItemsCount(4316) and st.getQuestItemsCount(4317) and not int(st.get("id")) :
+   elif npcId == 7956 and cond == 4 and st.getQuestItemsCount(4316) and st.getQuestItemsCount(4317) :
         st.takeItems(4316,1)
         st.takeItems(4317,1)
-        st.set("id","1")
+        st.set("cond","5")
         htmltext = "7956_1.htm"
-   elif npcId == 7957 and cond == 4 and int(st.get("id")) :
+   elif npcId == 7957 and cond == 5 :
         htmltext = "7957_4.htm"
    return htmltext
 
