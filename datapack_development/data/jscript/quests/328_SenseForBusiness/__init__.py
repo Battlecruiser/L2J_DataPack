@@ -15,17 +15,13 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "1" :
+    if event == "7436-03.htm" :
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
-        htmltext = "7436-03.htm"
-    elif event == "7436_1" :
-            htmltext = "7436-06.htm"
-            st.playSound("ItemSound.quest_finish")
-            st.exitQuest(1)
-    elif event == "7436_2" :
-            htmltext = "7436-07.htm"
+    elif event == "7436-06.htm" :
+        st.playSound("ItemSound.quest_finish")
+        st.exitQuest(1)
     return htmltext
 
  def onTalk (Self,npc,st):
@@ -41,7 +37,7 @@ class Quest (JQuest) :
      else:
         htmltext = "7436-01.htm"
         st.exitQuest(1)
-   elif npcId == 7436 and int(st.get("cond"))==1 :
+   elif npcId == 7436 and int(st.get("cond")) :
      if st.getQuestItemsCount(MONSTER_EYE_CARCASS_ID)+st.getQuestItemsCount(MONSTER_EYE_LENS_ID)+st.getQuestItemsCount(BASILISK_GIZZARD_ID) > 0 :
         st.giveItems(ADENA_ID,30*st.getQuestItemsCount(MONSTER_EYE_CARCASS_ID)+2000*st.getQuestItemsCount(MONSTER_EYE_LENS_ID)+75*st.getQuestItemsCount(BASILISK_GIZZARD_ID))
         st.takeItems(MONSTER_EYE_CARCASS_ID,-1)
@@ -56,33 +52,33 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    n = st.getRandom(100)
    if npcId == 55 :
+     if n<51 :
+      st.playSound("ItemSound.quest_itemget")
       if n<50 :
          st.giveItems(MONSTER_EYE_CARCASS_ID,1)
-         st.playSound("ItemSound.quest_itemget")
-      elif n<51 :
+      else :
          st.giveItems(MONSTER_EYE_LENS_ID,1)
-         st.playSound("ItemSound.quest_itemget")
    elif npcId == 59 :
+     if n<55 :
+      st.playSound("ItemSound.quest_itemget")
       if n<54 :
          st.giveItems(MONSTER_EYE_CARCASS_ID,1)
-         st.playSound("ItemSound.quest_itemget")
-      elif n<55 :
+      else :
          st.giveItems(MONSTER_EYE_LENS_ID,1)
-         st.playSound("ItemSound.quest_itemget")
    elif npcId == 67 :
+     if n<69 :
+      st.playSound("ItemSound.quest_itemget")
       if n<67 :
          st.giveItems(MONSTER_EYE_CARCASS_ID,1)
-         st.playSound("ItemSound.quest_itemget")
-      elif n<69 :
+      else :
          st.giveItems(MONSTER_EYE_LENS_ID,1)
-         st.playSound("ItemSound.quest_itemget")
    elif npcId == 68 :
+     if n<74 :
+      st.playSound("ItemSound.quest_itemget")
       if n<72 :
          st.giveItems(MONSTER_EYE_CARCASS_ID,1)
-         st.playSound("ItemSound.quest_itemget")
-      elif n<74 :
+      else :
          st.giveItems(MONSTER_EYE_LENS_ID,1)
-         st.playSound("ItemSound.quest_itemget")
    elif npcId == 70 :
       if n<50 :
          st.giveItems(BASILISK_GIZZARD_ID,1)
