@@ -96,13 +96,12 @@ class Quest (JQuest) :
     elif event == "7627_1" :
           htmltext = "7627-01a.htm"
           st.giveItems(RUSTED_KEY1_ID,1)
-          st.getPcSpawn().addSpawn(7628)
+          st.getPcSpawn().addSpawn(7628,300000)
           st.set("phase","20")
     elif event == "7628_1" :
           htmltext = "7628-01a.htm"
           st.giveItems(GOLD_BAR_ID,20)
           st.takeItems(RUSTED_KEY1_ID,1)
-	  st.getPcSpawn().removeAllSpawn()
           st.set("phase","21")
     return htmltext
 
@@ -147,7 +146,6 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_finish")
          st.giveItems(MARK_OF_SEARCHER_ID,1)
          st.takeItems(ALANKELLS_RECOMMEND_ID,1)
-         st.getPcSpawn().removeAllSpawn()
      elif npcId == NPC[0] :
       if phase==1 :
         htmltext = "7291-01.htm"
