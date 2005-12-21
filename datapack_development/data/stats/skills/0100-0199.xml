@@ -733,9 +733,9 @@
 <!-- Done by dc, completed by NewAge -->
 <table name="#Tab-pDef"> 2 2.5 3 </table>
 <for>
-  <effect name="Buff" time="90" count="1" val="0">
+  <effect name="Buff" time="30" count="1" val="0">
     <mul  order='0x50' stat='pDef' val="#Tab-pDef">
-	<player hp="30"/>
+	<player hp="20"/>
 	</mul>
   </effect>
 </for>
