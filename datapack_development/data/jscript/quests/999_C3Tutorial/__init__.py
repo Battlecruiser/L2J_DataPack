@@ -74,7 +74,8 @@ class Quest (JQuest) :
          elif st.getPlayer().getClassId().getId() == classId2 :
           st.addExpAndSp(0,50)
           st.takeItems(item,1)
-          st.giveItems(gift2,count2)
+          if gift2:
+           st.giveItems(gift2,count2)
           st.set("cond","0")
           st.set("onlyone","1")
           st.setState(COMPLETED)
