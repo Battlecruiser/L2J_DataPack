@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS characters (
   `base_class` int(2) NOT NULL default '0',
   deletetime decimal(20,0) default NULL,
   cancraft decimal(11,0) default NULL,
-  title varchar(15) default NULL,
+  title varchar(16) default NULL,
   allyId decimal(11,0) default NULL,
   rec_have int(3) NOT NULL default '0',
   rec_left int(3) NOT NULL default '0',
