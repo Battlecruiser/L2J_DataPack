@@ -838,7 +838,7 @@ INSERT INTO weapon VALUES
 (5285,'Heavy Sword','lrhand','true',1520,2,2,'steel','d',49,10,'bigsword',8,0.00000,0,0,0,325,0,26,95,409000,743,'true'),
 (5286,'Berserker Blade','lrhand','true',1380,3,3,'oriharukon','c',190,10,'bigsword',8,0.00000,0,0,0,325,0,83,95,6130000,2452,'true'),
 (5292,'Sealed Dark Crystal Shield','lhand','true',1190,0,0,'crystal','a',0,0,'none',0,0.00000,-8,243,20,0,0,0,95,1220000,90,'true'),
-(5315,'Sealed Shield of Nightmare','rhand','true',1180,0,0,'leather','a',0,0,'none',0,0.00000,-8,256,20,0,0,0,90,1850000,140,'true'),
+(5315,'Sealed Shield of Nightmare','lhand','true',1180,0,0,'leather','a',0,0,'none',0,0.00000,-8,256,20,0,0,0,90,1850000,140,'true'),
 (5596,'Dasparion''s Staff Mana Up','lrhand','true',920,1,1,'adamantaite','a',207,20,'blunt',4,4.00000,0,0,0,325,0,143,95,18300000,1464,'true'),
 (5597,'Dasparion''s Staff Conversion','lrhand','true',920,1,1,'adamantaite','a',207,20,'blunt',4,4.00000,0,0,0,325,0,143,95,18300000,1464,'true'),
 (5598,'Dasparion''s Staff Acumen','lrhand','true',920,1,1,'adamantaite','a',207,20,'blunt',4,4.00000,0,0,0,325,0,143,95,18300000,1464,'true'),
