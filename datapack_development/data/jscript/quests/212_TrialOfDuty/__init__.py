@@ -78,7 +78,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
       st.set("cond","0")
-      st.getPcSpawn.removeAllSpawn()
+      st.getPcSpawn().removeAllSpawn()
    elif npcId == 7109 and int(st.get("cond"))==1 :
       htmltext = "7109-04.htm"
    elif npcId == 7653 and int(st.get("cond"))==1 :
