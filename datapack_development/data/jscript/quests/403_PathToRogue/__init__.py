@@ -17,6 +17,23 @@ BEZIQUES_RECOMMENDATION_ID = 1190
 NETIS_BOW_ID = 1181
 NETIS_DAGGER_ID = 1182
 
+DROP_CHANCE = { 35:2, 42:3, 45:2, 51:2, 54:8, 60:8 }
+
+STOLEN_ITEM = {
+0: (STOLEN_JEWELRY_ID),
+1: (STOLEN_TOMES_ID),
+2: (STOLEN_RING_ID),
+3: (STOLEN_NECKLACE_ID)
+}
+
+# Helper function - If player have all stolen items returns 1, otherwise 0
+def HaveAllStolenItems (st) :
+  for i in STOLEN_ITEM.keys() :
+    if st.getQuestItemsCount(STOLEN_ITEM[i]) == 0 :
+      return 0
+  return 1
+
+# Main Quest code
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -65,21 +82,16 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 7379 and int(st.get("cond"))==0 :
-        if int(st.get("cond"))<15 :
-          htmltext = "7379-01.htm"
-        else:
-          htmltext = "7379-01.htm"
+     htmltext = "7379-01.htm"
    elif npcId == 7379 and int(st.get("cond")) :
-        if st.getQuestItemsCount(HORSESHOE_OF_LIGHT_ID) == 0 and st.getQuestItemsCount(STOLEN_JEWELRY_ID) and st.getQuestItemsCount(STOLEN_TOMES_ID) and st.getQuestItemsCount(STOLEN_RING_ID) and st.getQuestItemsCount(STOLEN_NECKLACE_ID) :
+        if st.getQuestItemsCount(HORSESHOE_OF_LIGHT_ID) == 0 and HaveAllStolenItems(st) :
           htmltext = "7379-09.htm"
           st.giveItems(BEZIQUES_RECOMMENDATION_ID,1)
           st.takeItems(NETIS_BOW_ID,1)
           st.takeItems(NETIS_DAGGER_ID,1)
-          st.takeItems(STOLEN_JEWELRY_ID,1)
-          st.takeItems(STOLEN_TOMES_ID,1)
-          st.takeItems(STOLEN_RING_ID,1)
-          st.takeItems(STOLEN_NECKLACE_ID,1)
           st.takeItems(WANTED_BILL_ID,1)
+          for i in STOLEN_ITEM.keys() :
+            st.takeItems(STOLEN_ITEM[i],-1)
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
@@ -111,94 +123,28 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-
    npcId = npc.getNpcId()
-   if npcId == 51 :
-      st.set("id","0")
-      if int(st.get("cond")) and st.getQuestItemsCount(SPATOIS_BONES_ID)<10 and st.getRandom(10)<2 :
-        st.giveItems(SPATOIS_BONES_ID,1)
-        if st.getQuestItemsCount(SPATOIS_BONES_ID) == 10 :
-          st.playSound("ItemSound.quest_middle")
-          st.set("cond","3")
-        else:
-          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 45 :
-      st.set("id","0")
-      if int(st.get("cond")) and st.getQuestItemsCount(SPATOIS_BONES_ID)<10 and st.getRandom(10)<2 :
-        st.giveItems(SPATOIS_BONES_ID,1)
-        if st.getQuestItemsCount(SPATOIS_BONES_ID) == 10 :
-          st.playSound("ItemSound.quest_middle")
-          st.set("cond","3")
-        else:
-          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 35 :
-      st.set("id","0")
-      if int(st.get("cond")) and st.getQuestItemsCount(SPATOIS_BONES_ID)<10 and st.getRandom(10)<2 :
-        st.giveItems(SPATOIS_BONES_ID,1)
-        if st.getQuestItemsCount(SPATOIS_BONES_ID) == 10 :
-          st.playSound("ItemSound.quest_middle")
-          st.set("cond","3")
-        else:
-          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 42 :
-      st.set("id","0")
-      if int(st.get("cond")) and st.getQuestItemsCount(SPATOIS_BONES_ID)<10 and st.getRandom(10)<3 :
-        st.giveItems(SPATOIS_BONES_ID,1)
-        if st.getQuestItemsCount(SPATOIS_BONES_ID) == 10 :
-          st.playSound("ItemSound.quest_middle")
-          st.set("cond","3")
-        else:
-          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 54 :
-      st.set("id","0")
-      if int(st.get("cond")) and st.getQuestItemsCount(SPATOIS_BONES_ID)<10 and st.getRandom(10)<8 :
-        st.giveItems(SPATOIS_BONES_ID,1)
-        if st.getQuestItemsCount(SPATOIS_BONES_ID) == 10 :
-          st.playSound("ItemSound.quest_middle")
-          st.set("cond","3")
-        else:
-          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 60 :
-      st.set("id","0")
-      if int(st.get("cond")) and st.getQuestItemsCount(SPATOIS_BONES_ID)<10 and st.getRandom(10)<8 :
-        st.giveItems(SPATOIS_BONES_ID,1)
-        if st.getQuestItemsCount(SPATOIS_BONES_ID) == 10 :
-          st.playSound("ItemSound.quest_middle")
-          st.set("cond","3")
-        else:
-          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 262 :
-      st.set("id","0")
-      if int(st.get("cond")) and st.getQuestItemsCount(WANTED_BILL_ID)>0 :
-    	    n = st.getRandom(4);
-            if st.getQuestItemsCount(STOLEN_JEWELRY_ID) == 0 and n == 0:
-              st.giveItems(STOLEN_JEWELRY_ID,1)
-              if st.getQuestItemsCount(STOLEN_JEWELRY_ID)+st.getQuestItemsCount(STOLEN_TOMES_ID)+st.getQuestItemsCount(STOLEN_RING_ID)+st.getQuestItemsCount(STOLEN_NECKLACE_ID) == 4 :
-                st.playSound("ItemSound.quest_middle")
-                st.set("cond","6")
-              else:
-                st.playSound("ItemSound.quest_itemget")
-            elif st.getQuestItemsCount(STOLEN_TOMES_ID) == 0 and n == 1 :
-              st.giveItems(STOLEN_TOMES_ID,1)
-              if st.getQuestItemsCount(STOLEN_JEWELRY_ID)+st.getQuestItemsCount(STOLEN_TOMES_ID)+st.getQuestItemsCount(STOLEN_RING_ID)+st.getQuestItemsCount(STOLEN_NECKLACE_ID) == 4 :
-                st.playSound("ItemSound.quest_middle")
-                st.set("cond","6")
-              else:
-                st.playSound("ItemSound.quest_itemget")
-            elif st.getQuestItemsCount(STOLEN_RING_ID) == 0 and n == 2 :
-              st.giveItems(STOLEN_RING_ID,1)
-              if st.getQuestItemsCount(STOLEN_JEWELRY_ID)+st.getQuestItemsCount(STOLEN_TOMES_ID)+st.getQuestItemsCount(STOLEN_RING_ID)+st.getQuestItemsCount(STOLEN_NECKLACE_ID) == 4 :
-                st.playSound("ItemSound.quest_middle")
-                st.set("cond","6")
-              else:
-                st.playSound("ItemSound.quest_itemget")
-            elif st.getQuestItemsCount(STOLEN_NECKLACE_ID) == 0 and n == 3 :
-              st.giveItems(STOLEN_NECKLACE_ID,1)
-              if st.getQuestItemsCount(STOLEN_JEWELRY_ID)+st.getQuestItemsCount(STOLEN_TOMES_ID)+st.getQuestItemsCount(STOLEN_RING_ID)+st.getQuestItemsCount(STOLEN_NECKLACE_ID) == 4:
-                st.playSound("ItemSound.quest_middle")
-                st.set("cond","6")
-              else:
-                st.playSound("ItemSound.quest_itemget")
+   if st.getItemEquipped(7) == NETIS_BOW_ID or st.getItemEquipped(7) == NETIS_DAGGER_ID :
+     if npcId in (35, 42, 45, 51, 54, 60) :
+        st.set("id","0")
+        if int(st.get("cond")) and st.getQuestItemsCount(SPATOIS_BONES_ID)<10 and st.getRandom(10)<DROP_CHANCE[npcId] :
+            st.giveItems(SPATOIS_BONES_ID,1)
+            if st.getQuestItemsCount(SPATOIS_BONES_ID) == 10 :
+              st.playSound("ItemSound.quest_middle")
+              st.set("cond","3")
+            else:
+              st.playSound("ItemSound.quest_itemget")
+     elif npcId == 262 :
+        st.set("id","0")
+        if int(st.get("cond")) and st.getQuestItemsCount(WANTED_BILL_ID)>0 :
+            n = st.getRandom(4)
+            if st.getQuestItemsCount(STOLEN_ITEM[n]) == 0 :
+                st.giveItems(STOLEN_ITEM[n],1)
+                if not HaveAllStolenItems(st) :
+                  st.playSound("ItemSound.quest_itemget")
+                else:
+                  st.playSound("ItemSound.quest_middle")
+                  st.set("cond","6")
    return
 
 QUEST       = Quest(403,"403_PathToRogue","Path To Rogue")
@@ -217,25 +163,16 @@ STARTED.addTalkId(7379)
 STARTED.addTalkId(7425)
 
 STARTED.addKillId(262)
-STARTED.addKillId(35)
-STARTED.addKillId(42)
-STARTED.addKillId(45)
-STARTED.addKillId(51)
-STARTED.addKillId(54)
-STARTED.addKillId(60)
+
+for StolenItemId in STOLEN_ITEM.keys():
+  STARTED.addQuestDrop(262,STOLEN_ITEM[StolenItemId],1)
+
+for mobId in (35,42,45,51,54,60) :
+  STARTED.addKillId(mobId)
+  STARTED.addQuestDrop(mobId,SPATOIS_BONES_ID,1)
 
 STARTED.addQuestDrop(7425,NETIS_BOW_ID,1)
 STARTED.addQuestDrop(7425,NETIS_DAGGER_ID,1)
-STARTED.addQuestDrop(262,STOLEN_JEWELRY_ID,1)
-STARTED.addQuestDrop(262,STOLEN_TOMES_ID,1)
-STARTED.addQuestDrop(262,STOLEN_RING_ID,1)
-STARTED.addQuestDrop(262,STOLEN_NECKLACE_ID,1)
 STARTED.addQuestDrop(7379,WANTED_BILL_ID,1)
 STARTED.addQuestDrop(7425,HORSESHOE_OF_LIGHT_ID,1)
 STARTED.addQuestDrop(7379,BEZIQUES_LETTER_ID,1)
-STARTED.addQuestDrop(51,SPATOIS_BONES_ID,1)
-STARTED.addQuestDrop(45,SPATOIS_BONES_ID,1)
-STARTED.addQuestDrop(35,SPATOIS_BONES_ID,1)
-STARTED.addQuestDrop(42,SPATOIS_BONES_ID,1)
-STARTED.addQuestDrop(54,SPATOIS_BONES_ID,1)
-STARTED.addQuestDrop(60,SPATOIS_BONES_ID,1)
