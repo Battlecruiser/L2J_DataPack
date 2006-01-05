@@ -731,12 +731,12 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
 <!-- Done by dc, completed by NewAge -->
-<table name="#Tab-pDef"> 2 2.5 3 </table>
+<table name="#Tab-pDef"> 100 150 200 </table>
 <for>
   <effect name="Buff" time="30" count="1" val="0">
-    <mul  order='0x50' stat='pDef' val="#Tab-pDef">
+    <add  order='0x50' stat='pDef' val="#Tab-pDef">
 	<player hp="20"/>
-	</mul>
+	</add>
   </effect>
 </for>
 </skill>
@@ -1153,13 +1153,13 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
-<table name="#Tab-pAtk"> 2 2.5 3 </table>
+<table name="#Tab-pAtk"> 100 150 200 </table>
 <!-- Done by dc, completed by NewAge -->
 <for>
   <effect name="Buff" time="30" count="1" val="0">
-    <mul  order='0x50' stat='pAtk' val="#Tab-pAtk">
+    <add  order='0x50' stat='pAtk' val="#Tab-pAtk">
     <player hp="20"/>
-    </mul>
+    </add>
  </effect>
 </for>
 </skill>
