@@ -977,7 +977,7 @@
 </for>
 
 </skill>
-<skill id="4071" levels="1" name="Strong On">
+<skill id="4071" levels="1" name="Archery Resistance">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
@@ -985,6 +985,7 @@
   <set name="castRange" val="-1"/>
   <set name="displayId" val="1035"/>
   <for>
+  	<add order='0x40' stat='bowWpnRes' val='80'/>
   </for>
 </skill>
 <skill id="4072" levels="7" name="NPC Thunder Storm">
