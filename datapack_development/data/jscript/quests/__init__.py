@@ -101,6 +101,7 @@ __all__ = [
 '362_BardsMandolin',
 '363_SorrowfulSoundofFlute',
 '364_JovialAccordion',
+'372_LegacyOfInsolence',
 '376_GiantsExploration1',
 '377_GiantsExploration2',
 '385_YokeofthePast',
