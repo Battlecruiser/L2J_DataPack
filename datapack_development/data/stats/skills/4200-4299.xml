@@ -1154,9 +1154,9 @@
   <for>
   </for>
 </skill>
-<skill id="4267" levels="1" name="Grade Penalty">
-  <table name="#rate">0.35</table>
-  <table name="#rate2">0.45</table>
+<skill id="4267" levels="5" name="Grade Penalty">
+  <table name="#rate">0.65 0.42 0.27 0.18 0.10</table>
+  <table name="#rate2">0.75 0.56 0.42 0.32 0.23</table>
   <set name="power" val="0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="DEBUFF"/>
@@ -1165,8 +1165,12 @@
   <for>
 	<mul order="0x10" stat="pAtkSpd" val="#rate"/>
 	<mul order="0x10" stat="mAtkSpd" val="#rate"/>
-	<mul order="0x10" stat="rEvas" val="#rate2"/>
-	<mul order="0x10" stat="runSpd" val="#rate"/>
+	<mul order="0x10" stat="rEvas" val="#rate"/>
+	<mul order="0x10" stat="rExp" val="#rate"/>
+	<mul order="0x10" stat="runSpd" val="#rate2"/>
+	<mul order="0x10" stat="regHp" val="#rate2"/>
+	<mul order="0x10" stat="regCp" val="#rate2"/>
+	<mul order="0x10" stat="regMp" val="#rate2"/>
   </for>
 </skill>
 <skill id="4268" levels="1" name="Danger Area">
