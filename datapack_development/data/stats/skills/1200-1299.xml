@@ -1229,12 +1229,17 @@
 </for>
 </skill>
 <skill id="1262" levels="5" name="Transfer Pain">
+  <table name="#mpConsume"> 7 9 11 12 13 </table>
+  <table name="#power"> 15 23 32 42 56 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="1" val="#mpConsume">
+      <add order="0x50" stat="transDam" val="#power"/>
+    </effect>
   </for>
 </skill>
 <skill id="1263" levels="13" name="Curse Gloom">
