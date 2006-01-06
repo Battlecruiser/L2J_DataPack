@@ -1,10 +1,12 @@
 # Stolen Dignity version 0.1 
 # by DrLecter
+import sys
+from net.sf.l2j.gameserver.model.quest import State
+from net.sf.l2j.gameserver.model.quest import QuestState
+from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #Quest info
-QUEST_NUMBER      = 386
-QUEST_NAME        = "StolenDignity"
-QUEST_DESCRIPTION = "Stolen Dignity"
+QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 386,"StolenDignity","Stolen Dignity"
 
 #Variables
 DROP_RATE=25  #in %
@@ -42,13 +44,6 @@ footer  = "</table></body></html>"
 loser   = "Wow! How unlucky can you get? Your choices are highlighted in red below. As you can see, your choices didn't make a single line! Losing this badly is actually quite rare!<br><br>You look so sad, I feel bad for you... Wait here...<br><br>.<br><br>.<br><br>.<br><br>Take this... I hope it will bring you better luck in the future.<br><br>"
 winner  = "Excellent! As you can see, you've formed three lines! Congratulations! As promised, I'll give you some unclaimed merchandise from the warehouse. Wait here...<br><br>.<br><br>.<br><br>.<br><br>Whew, it's dusty! OK, here you go. Do you like it?<br><br>"
 average = "Hum. Well, your choices are highlighted in red below. As you can see your choices didn't formed three lines... but you were near, so don't be sad. You can always get another few infernium ores and try again. Better luck in the future!<br><br>"
-
-print "importing quests: "+str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION
-import sys
-from net.sf.l2j.gameserver.model.quest import State
-from net.sf.l2j.gameserver.model.quest import QuestState
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
 
 def partial(st) :
     html = " number:<br><br><table border=0><tr>"
@@ -99,7 +94,7 @@ class Quest (JQuest) :
        htmltext = ext_msg
        st.exitQuest(1)
     elif event == "bingo" :
-       st.takeItems(SI_ORE,100)
+       st.takeItems(SI_ORE,REQUIRED_ORE)
        htmltext = bingo0
        grid = range(1,10) #random.sample(xrange(1,10),9) ... damn jython that makes me think that inefficient stuff
        for i in range(len(grid)-1, 0, -1) :
@@ -134,7 +129,6 @@ class Quest (JQuest) :
                           htmltext += average
                       htmltext += result(st)
                       st.playSound("ItemSound.quest_finish")
-#                      st.setState(COMPLETED)   #why the hell this spits errors...
                       st.exitQuest(1)
                   else :
                       htmltext = header+"Select your "+number[8-chosen.count("?")]+partial(st)
@@ -184,4 +178,4 @@ STARTED.addTalkId(WK_ROMP)
 for i in MOBS :
   STARTED.addKillId(i)
 
-
+print "importing quests: "+str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION
