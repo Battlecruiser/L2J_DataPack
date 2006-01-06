@@ -661,7 +661,7 @@ INSERT INTO armor VALUES
 (4231,'Ubiquitous Boots','feet','true','none',1310,'cloth','none',0,90,17,0,0,0,0,'true'),
 (4234,'Hatchling`s Level 65 Armor','hatchling','false','pet',160,'leather','none',0,90,50,50,0,0,0,'true'),
 (4235,'Hatchling`s Level 75 Armor','hatchling','false','pet',160,'leather','none',0,90,58,58,0,0,0,'true'),
-(4236,'Gara Item','none','false','light',160,'leather','none',0,90,58,58,0,0,0,'true'),
+(4236,'Gara Item','hatchling','false','light',160,'leather','none',0,90,58,58,0,0,0,'true'),
 (5170,'Mithril Panzer Coat','strider','false','pet',160,'leather','none',0,90,41,41,0,0,0,'true'),
 (5171,'Brigadine Panzer Coat','strider','false','pet',160,'leather','none',0,90,44,44,0,2300000,0,'true'),
 (5172,'Draconic Panzer Coat','strider','false','pet',160,'leather','none',0,90,46,46,0,0,0,'true'),
