@@ -1,17 +1,19 @@
 # Exploration of Giants Cave, part 2 version 0.1 
 # by DrLecter
+print "importing quests:",
+import sys
+from net.sf.l2j.gameserver.model.quest import State
+from net.sf.l2j.gameserver.model.quest import QuestState
+from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #Quest info
-QUEST_NUMBER      = 377
-QUEST_NAME        = "GiantsExploration2"
-QUEST_DESCRIPTION = "Exploration of Giants Cave, part 2"
+QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 377,"GiantsExploration2","Exploration of Giants Cave, part 2"
 
 #Variables
 #Titan Ancient Books drop rate in %
 DROP_RATE=20
 #Alternative rewards. Set this to a non-zero value and recipes will be 100% instead of 60%
 ALT_RP_100=0
-
 
 #Quest items
 ANC_BOOK = 5955
@@ -40,13 +42,6 @@ HR_SOBLING = 8147
 #Mobs
 MOBS = [ 654,656,657,658 ]
 
-print "importing quests:",
-import sys
-from net.sf.l2j.gameserver.model.quest import State
-from net.sf.l2j.gameserver.model.quest import QuestState
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
-
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -61,7 +56,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_accept")
     elif event == "0" :
        htmltext = ext_msg
-       st.playSound("ItemSound.quest_finnish")
+       st.playSound("ItemSound.quest_finish")
        st.takeItems(DICT2,1)
        st.exitQuest(1)
     elif event == "show" :
