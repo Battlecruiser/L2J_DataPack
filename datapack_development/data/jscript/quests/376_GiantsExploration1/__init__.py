@@ -1,10 +1,12 @@
 # Exploration of Giants Cave, part 1 version 0.1 
 # by DrLecter
-
+print "importing quests:",
+import sys
+from net.sf.l2j.gameserver.model.quest import State
+from net.sf.l2j.gameserver.model.quest import QuestState
+from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 #Quest info
-QUEST_NUMBER      = 376
-QUEST_NAME        = "GiantsExploration1"
-QUEST_DESCRIPTION = "Exploration of Giants Cave, part 1"
+QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 376,"GiantsExploration1","Exploration of Giants Cave, part 1"
 
 #Variables
 #Ancient parchment drop rate in %
@@ -35,7 +37,6 @@ EXCHANGE = [
 #Messages
 default   = "<html><head><body>I have nothing to say to you.</body></html>"
 error_1   = "<html><head><body>Head Researcher Sobling:<br><br>I think it is too early for you to help me. Come back after you have gained some more experience. <br><font color=\"LEVEL\">(Quest for characters level 51 and above.)</font></body></html>"
-error_2   = "<html><head><body>Head Researcher Sobling:<br><br>I think it is too late for you to help me.<br><font color=\"LEVEL\">(Quest for characters level greater than 50, lesser than 63)</font></body></html>"
 start     = "<html><head><body>Head Researcher Sobling:<br><br>As leader of the research team i'm looking for experienced adventurers to join us. Actually we're searching for relics from the ancient Giants Culture. There are four scripts we can't find yet: <font color=\"LEVEL\">Plans for the construction of Golems, Basis of the Giant's Magic, Construction Technology Handbook and Giant's Medical Theory.</font><br><br>Given the value of the items we're looking for, there is no need to tell you how generous shall be my rewards.<br><br><a action=\"bypass -h Quest 376_GiantsExploration1 yes\">I will search for ancient items</a><br><a action=\"bypass -h Quest 376_GiantsExploration1 0\">I won't help you</a><br></body></html>"
 starting  = "Starting.htm"
 checkout  = "<html><head><body>Head Researcher Sobling:<br><br>Excellent! You came back! Was it difficult to collect ancient pieces?<br><br>Let me see what you've found thus far...<br><br><a action=\"bypass -h Quest 376_GiantsExploration1 show\">Show him the books you collected</a><br><a action=\"bypass -h Quest 376_GiantsExploration1 myst\">Show him another items you've found</a><br></body></html>"
@@ -55,13 +56,6 @@ WF_CLIFF   = 7182
 #Mobs
 MOBS = range(647,651)
 
-print "importing quests:",
-import sys
-from net.sf.l2j.gameserver.model.quest import State
-from net.sf.l2j.gameserver.model.quest import QuestState
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
-
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -77,7 +71,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_accept")
     elif event == "0" :
        htmltext = ext_msg
-       st.playSound("ItemSound.quest_finnish")
+       st.playSound("ItemSound.quest_finish")
        st.takeItems(DICT1,1)
        st.exitQuest(1)
     elif event == "show" :
@@ -118,9 +112,6 @@ class Quest (JQuest) :
          if st.getPlayer().getLevel() < 51 :
             st.exitQuest(1)
             htmltext = error_1
-#         if st.getPlayer().getLevel() > 63 : #does this restriction really apply?
-#            st.exitQuest(1)
-#            htmltext = error_2
       elif id in [ STARTING,STARTED ] :
          if st.getQuestItemsCount(ANC_SCROLL) == 0 :
             htmltext = checkout
