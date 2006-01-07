@@ -157,7 +157,7 @@ class Quest (JQuest) :
            EnhancID = 0
            for Name, WeaponID, MaterialID, MaterialQuant in Enhancements:
                     htmltext += "<tr>\n<td width=35><img src=\"icon." + Icon + "01\" width=32 height=32 align=\"left\"></td>\n" \
-                        "<td width=835><table border=0 width=\"835\">\n<tr><td><a action=\"bypass -h Quest 1010_remove_mammon 2_" + str(Item.getObjectId()) + "." + str(EnhancID) + "\">" + getItemName(Item) + ": " + Name + "</a></td></tr>\n" \
+                        "<td width=835><table border=0 width=\"835\">\n<tr><td><a action=\"bypass -h Quest 1009_remove_mammon 2_" + str(Item.getObjectId()) + "." + str(EnhancID) + "\">" + getItemName(Item) + ": " + Name + "</a></td></tr>\n" \
                         "<tr><td><font color=\"B09878\">Remove Enhancement</font></td></tr></table></td>\n</tr>"
                     EnhancID += 1
    if htmltext == "": 
