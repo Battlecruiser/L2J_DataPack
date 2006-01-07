@@ -9,7 +9,7 @@ from net.sf.l2j.gameserver import ItemTable
 
 ############################## Feel Free to add more Weapons ##########################################################################################################3
 
-# Weapon enhancement definition  WeaponID:[Icon, [Enhancement, newWeaponID, CrystalID, MaterialID, MaterialQuant], ...]
+# Weapon enhancement definition  WeaponID:[Icon, [[Enhancement, newWeaponID, CrystalID, MaterialID, MaterialQuant], ...]]
 
 EnhanceList={
 # Bows'
@@ -34,7 +34,7 @@ EnhanceList={
 305:["weapon_tallum_glaive_i01", [["Guidance", 5632, 5580, 2133, 147], ["Health", 5633, 5581, 2133, 147], ["Wide Blow", 5634, 5582, 2133, 147]]], 
 # Fist'
 269:["weapon_blood_tornado_i01", [["Haste", 5620, 5577, 2133, 147], ["Focus", 5621, 5578, 2133, 147], ["Anger", 5622, 5579, 2133, 147]]], 
-270:["weapon_dragon_grinder_i01", [["Rsk. Evasion", 5623, 5580, 2133, 147], ["Guidance", 5624, 5581, 2133, 147], ["Health", 5625, 5582, 2133, 147]]], 
+270:["weapon_dragon_grinder_i01", [["Rsk. Evasion", 5623, 5580, 2133, 147], ["Guidance", 5624, 5581, 2133, 147], ["Health", 5625, 5582, 2133, 147]]] 
 }
 
 
@@ -91,25 +91,8 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     
-    # Creates a List to choose a weapon
-    if event == "1":
-        htmltext = ""
-        for Item in st.getPlayer().getInventory().getItems():
-            if Item.getItemId() in EnhanceList and not Item.isEquipped():
-                Icon, Enhancements = EnhanceList[Item.getItemId()]
-                EnhancID = 0
-                for Name, WeaponID, CrystalID, MaterialID, MaterialQuant in Enhancements:
-                    htmltext += "<tr>\n<td width=35><img src=\"icon." + Icon + "\" width=32 height=32 align=\"left\"></td>\n" \
-                        "<td width=835><table border=0 width=\"835\">\n<tr><td><a action=\"bypass -h Quest 1008_enhance_mammon 2_" + str(Item.getObjectId()) + "." + str(EnhancID) + "\">" + getItemName(Item) + ": " + Name + "</a></td></tr>\n" \
-                        "<tr><td><font color=\"B09878\">Enhance</font></td></tr></table></td>\n</tr>"
-                    EnhancID += 1
-        if htmltext == "": 
-            htmltext = "<tr><td>You have no enhanceable weapon in your inventory</td></tr>"
-        htmltext = "<html><body>\nList:\n<left>\n<table width=870 border=0>\n" + htmltext + "</table>\n<br></left></body></html>"
-        return htmltext
-	
 	# shows you how much materials you need to enhance, ok button to go forward, too
-    elif event.startswith("2_"):
+    if event.startswith("2_"):
         reqEnh = event.replace("2_", "").split(".")
         ObjectID = int(reqEnh[0])
         EnhancID = int(reqEnh[1])
@@ -162,10 +145,22 @@ class Quest (JQuest) :
 # this just return new html, if the player can talk with this npc about that enhance stuff
  def onTalk (self,npc,st):
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
    st.set("cond","0")
    st.setState(STARTED)
-   return "1.htm"
+   htmltext = ""
+   for Item in st.getPlayer().getInventory().getItems():
+            if Item.getItemId() in EnhanceList and not Item.isEquipped():
+                Icon, Enhancements = EnhanceList[Item.getItemId()]
+                EnhancID = 0
+                for Name, WeaponID, CrystalID, MaterialID, MaterialQuant in Enhancements:
+                    htmltext += "<tr>\n<td width=35><img src=\"icon." + Icon + "\" width=32 height=32 align=\"left\"></td>\n" \
+                        "<td width=835><table border=0 width=\"835\">\n<tr><td><a action=\"bypass -h Quest 1008_enhance_mammon 2_" + str(Item.getObjectId()) + "." + str(EnhancID) + "\">" + getItemName(Item) + ": " + Name + "</a></td></tr>\n" \
+                        "<tr><td><font color=\"B09878\">Enhance</font></td></tr></table></td>\n</tr>"
+                    EnhancID += 1
+   if htmltext == "": 
+          htmltext = "<tr><td>You have no enhancable weapon in your inventory</td></tr>"
+   htmltext = "<html><body>\nList:\n<left>\n<table width=870 border=0>\n" + htmltext + "</table>\n<br></left></body></html>"
+   return htmltext
 
 
 QUEST       = Quest(1008,"1008_enhance_mammon","Blacksmith")
