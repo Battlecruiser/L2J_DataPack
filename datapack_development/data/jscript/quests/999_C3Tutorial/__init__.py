@@ -124,7 +124,7 @@ class Quest (JQuest) :
          else:
            if st.getPlayer().getClassId().isMage() :
              htmltext = "7131-02.htm"
-             if st.getPlayer().getClassId().getId() == 0x31 :
+             if st.getPlayer().getRace().ordinal() == 3 :
               htmltext = "7575-02.htm"
            else:
              htmltext = "7530-02.htm"
