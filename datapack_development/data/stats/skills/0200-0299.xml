@@ -183,7 +183,7 @@
   <set name="castRange" val="-1"/>
   <table name="#Tab-regMp"> 1.4 </table>
   <for>
-    <mul order='0x50' stat='regMp' val="#Tab-regMp"/>
+    <mul order='0x50' stat='regMp' val="#Tab-regMp">
   	   <and>
           <using kind="Magic"/>
           <not>
