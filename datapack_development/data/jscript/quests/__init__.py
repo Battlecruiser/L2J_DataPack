@@ -97,6 +97,7 @@ __all__ = [
 '331_ArrowForVengeance',
 '333_BlackLionHunt',
 '334_TheWishingPotion',
+'347_GoGetTheCalculator',
 '350_EnhanceYourWeapon',
 '358_IllegitimateChildOfAGoddess',
 '362_BardsMandolin',
