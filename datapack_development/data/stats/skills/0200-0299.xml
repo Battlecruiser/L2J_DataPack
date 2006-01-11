@@ -184,12 +184,13 @@
   <table name="#Tab-regMp"> 1.4 </table>
   <for>
     <mul order='0x50' stat='regMp' val="#Tab-regMp"/>
-  	<and>
+  	   <and>
           <using kind="Magic"/>
           <not>
             <using kind="Light,Heavy"/>
           </not>
-        </and>
+       </and>
+    </mul>    
   </for>
 </skill>
 <skill id="215" levels="1" name="Polearm Range Mastery">
