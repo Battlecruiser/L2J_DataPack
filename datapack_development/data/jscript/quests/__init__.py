@@ -100,6 +100,7 @@ __all__ = [
 '347_GoGetTheCalculator',
 '350_EnhanceYourWeapon',
 '358_IllegitimateChildOfAGoddess',
+'359_ForSleeplessDeadmen',
 '362_BardsMandolin',
 '363_SorrowfulSoundofFlute',
 '364_JovialAccordion',
