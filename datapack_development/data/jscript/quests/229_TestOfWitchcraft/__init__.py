@@ -345,7 +345,7 @@ class Quest (JQuest) :
 					htmltext = "7633-01.htm"
 				elif step in [13,14]:
 					htmltext = "7633-02.htm"
-					st.getPcSpawn().addSpawn(5101)
+					st.getPcSpawn().addSpawn(5101,13313,169800,-3708)
 					st.set("step","14")
 				elif step == 15 :
 					htmltext = "7633-03.htm"
