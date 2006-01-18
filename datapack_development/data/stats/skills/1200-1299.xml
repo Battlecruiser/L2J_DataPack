@@ -1764,13 +1764,15 @@
   <set name="power" val="350.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="7000"/>
-  <set name="skillType" val="MDAM_ELEMENTAL"/>
+  <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="reuseDelay" val="15000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
 
-  <set name="seed_any" val="1"/>
+  <cond msg="Proper elemental seeds required.">
+    <player seed_various="2"/>
+  </cond>
 
   <for>
 
@@ -1783,13 +1785,15 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="element" val="2"/>
   <set name="skillTime" val="7000"/>
-  <set name="skillType" val="MDAM_ELEMENTAL"/>
+  <set name="skillType" val="MDAM"/>
   <set name="reuseDelay" val="150000"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
 
-  <set name="seed_any" val="1"/>
+  <cond msg="Proper elemental seeds required.">
+    <player seed_fire="2"/>
+  </cond>
 
   <for>
 	  <effect count="20" name="DamOverTime" time="6" val="20"/>
@@ -1801,16 +1805,15 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="element" val="3"/>
   <set name="skillTime" val="7000"/>
-  <set name="skillType" val="MDAM_ELEMENTAL"/>
+  <set name="skillType" val="MDAM"/>
   <set name="reuseDelay" val="15000"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
-  <set name="conditionValue" val="1"/>
-  <set name="hitTime" val="7000"/>
-  <set name="buffDuration" val="120000"/>
 
-  <set name="seed1" val="1286"/>
+  <cond msg="Proper elemental seeds required.">
+    <player seed_water="2"/>
+  </cond>
 
   <for>
 	<effect count="1" name="Buff" time="120" val="0">
@@ -1827,13 +1830,15 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="element" val="1"/>
   <set name="skillTime" val="7000"/>
-  <set name="skillType" val="MDAM_ELEMENTAL"/>
+  <set name="skillType" val="MDAM"/>
   <set name="reuseDelay" val="15000"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
 
-  <set name="seed1" val="1287"/>
+  <cond msg="Proper elemental seeds required.">
+    <player seed_wind="2"/>
+  </cond>
 
   <for>
   <effect count="1" name="Buff" time="120" val="0">
@@ -1847,14 +1852,15 @@
   <set name="power" val="500.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="7000"/>
-  <set name="skillType" val="MDAM_ELEMENTAL"/>
+  <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="reuseDelay" val="1500000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
 
-  <set name="seed1" val="1286"/>
-  <set name="seed2" val="1287"/>
+  <cond msg="Proper elemental seeds required.">
+    <player seed_water="1" seed_wind="1"/>
+  </cond>
 
   <for>
   </for>
@@ -1864,14 +1870,15 @@
   <set name="power" val="500.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="7000"/>
-  <set name="skillType" val="MDAM_ELEMENTAL"/>
+  <set name="skillType" val="MDAM"/>
   <set name="reuseDelay" val="1500000"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
 
-  <set name="seed1" val="1285"/>
-  <set name="seed2" val="1287"/>
+  <cond msg="Proper elemental seeds required.">
+    <player seed_fire="1" seed_wind="1"/>
+  </cond>
 
   <for>
   </for>
@@ -1881,14 +1888,15 @@
   <set name="power" val="500.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="7000"/>
-  <set name="skillType" val="MDAM_ELEMENTAL"/>
+  <set name="skillType" val="MDAM"/>
   <set name="reuseDelay" val="1500000"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
 
-  <set name="seed1" val="1285"/>
-  <set name="seed2" val="1286"/>
+  <cond msg="Proper elemental seeds required.">
+    <player seed_fire="1" seed_water="1"/>
+  </cond>
 
   <for>
   </for>
