@@ -26,13 +26,14 @@
 </skill>
 <skill id="2003" levels="1" name="Mana drug">
 	<table name="#mot">1.5</table>
-  <set name="power" val="5000.0"/>
+  <set name="power" val="1.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="MANAHEAL"/>
+  <set name="skillType" val="MPHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="20000"/>
   <set name="castRange" val="-1"/>
   <for>
+  <effect count="4" name="ManaHealOverTime" time="5" val="#mot" stackOrder="#mot" stackType="MpRecover"/> 
   </for>
 </skill>
 <skill id="2004" levels="1" name="Deleted">
@@ -45,7 +46,7 @@
   </for>
 </skill>
 <skill id="2005" levels="1" name="Mana potion">
-  <set name="power" val="100.0"/>
+  <set name="power" val="200.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="MANAHEAL"/>
   <set name="operateType" val="OP_ACTIVE"/>
