@@ -1,10 +1,9 @@
-# Maked by Mr. Have fun! Version 0.2
-#
+# Made by Mr. Have fun! Version 0.2
 # Updated by ElgarL
-#
+# Improved a lil' bit by DrLecter
 
-print "importing quests: 215: Trial Of Pilgrim"
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -52,10 +51,10 @@ class Quest (JQuest) :
           st.takeItems(ESSENSE_OF_FLAME_ID,1)
           st.set("cond","5")
     elif event == "7650_1" :
-          if st.getQuestItemsCount(ADENA_ID) >= 100000 :
+          if st.getQuestItemsCount(ADENA_ID) >= 100000*int(Config.RATE_DROP_ADENA) :
             htmltext = "7650-02.htm"
             st.giveItems(BOOK_OF_GERALD_ID,1)
-            st.takeItems(ADENA_ID,100000)
+            st.takeItems(ADENA_ID,100000*int(Config.RATE_DROP_ADENA))
             st.set("cond","7")
           else:
             htmltext = "7650-03.htm"
@@ -87,18 +86,15 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 7648 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-      if int(st.get("cond")) < 15 :
-        if (st.getPlayer().getClassId().getId()==0x0f or st.getPlayer().getClassId().getId()==0x1d or st.getPlayer().getClassId().getId()==0x2a or st.getPlayer().getClassId().getId()==0x32) and st.getPlayer().getLevel() >= 35 :
-          htmltext = "7648-03.htm"
-        elif st.getPlayer().getClassId().getId()==0x0f or st.getPlayer().getClassId().getId()==0x1d or st.getPlayer().getClassId().getId()==0x2a or st.getPlayer().getClassId().getId()==0x32 :
-          htmltext = "7648-01.htm"
-          st.exitQuest(1)
+        if (st.getPlayer().getClassId().getId() in [0x0f,0x1d,0x2a,0x32]) :
+           if st.getPlayer().getLevel() >= 35 :
+              htmltext = "7648-03.htm"
+           else :
+              htmltext = "7648-01.htm"
+              st.exitQuest(1)
         else:
           htmltext = "7648-02.htm"
           st.exitQuest(1)
-      else:
-        htmltext = "7648-02.htm"
-        st.exitQuest(1)
    elif npcId == 7648 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7648 and int(st.get("cond"))==1 and st.getQuestItemsCount(VOUCHER_OF_TRIAL_ID) :
@@ -136,10 +132,12 @@ class Quest (JQuest) :
    elif npcId == 7550 and int(st.get("cond"))==6 :
       htmltext = "7550-02.htm"
    elif npcId == 7650 and int(st.get("cond"))==6 and st.getQuestItemsCount(TAG_OF_RUMOR_ID) :
-      htmltext = "7650-01.htm"
+      htmltext = st.showHtmlFile("7650-01.htm").replace("<RequiredAdena>", str(100000*int(Config.RATE_DROP_ADENA)))
    elif npcId == 7650 and int(st.get("cond"))>=8 and st.getQuestItemsCount(GREY_BADGE_ID) and st.getQuestItemsCount(BOOK_OF_GERALD_ID) :
       htmltext = "7650-04.htm"
-      st.giveItems(ADENA_ID,100000)
+      rate=int(Config.RATE_QUESTS_REWARD)
+      if rate == 0 : rate = 1
+      st.giveItems(ADENA_ID,int(100000*Config.RATE_DROP_ADENA/rate))
       st.takeItems(BOOK_OF_GERALD_ID,1)
    elif npcId == 7651 and int(st.get("cond"))==6 and st.getQuestItemsCount(TAG_OF_RUMOR_ID) :
       htmltext = "7651-01.htm"
@@ -201,7 +199,6 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-
    npcId = npc.getNpcId()
    if npcId == 5116 :
       if int(st.get("cond")) and int(st.get("cond")) == 3 and st.getQuestItemsCount(ESSENSE_OF_FLAME_ID) == 0 :
@@ -262,3 +259,5 @@ STARTED.addQuestDrop(5118,DEBRIS_OF_WILLOW_ID,1)
 STARTED.addQuestDrop(7651,GREY_BADGE_ID,1)
 STARTED.addQuestDrop(7649,SPIRIT_OF_FLAME_ID,1)
 STARTED.addQuestDrop(7036,STATUE_OF_EINHASAD_ID,1)
+
+print "importing quests: 215: Trial Of Pilgrim"
