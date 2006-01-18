@@ -82,7 +82,7 @@ def chest_game(st,command) :
        leader(st).set("chest_game","0")
 
 def autochat(npc,text) :
-    chars = npc.getKnownlist().getKnownPlayers()
+    chars = npc.getKnownList().getKnownPlayers()
     if chars != None:
        list = chars.iterator()
        while list.hasNext() :
