@@ -1810,6 +1810,8 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
+  <set name="hitTime" val="7000"/>
+  <set name="buffDuration" val="120000"/>
 
   <cond msg="Proper elemental seeds required.">
     <player seed_water="2"/>
