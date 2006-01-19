@@ -8,10 +8,8 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 KEY_1 = 4323
 KEY_2 = 4324
-BEER_ID = 4321
-ECHO_ID = 4421
-
-ADENA_ID = 57
+BEER = 4321
+ECHO = 4421
 
 class Quest (JQuest) :
 
@@ -19,31 +17,24 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "1" :
+    if event == "7959-02.htm" :
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
-        htmltext = "7959-02.htm"
-    elif event == "2" :
+    elif event == "7957-02.htm" :
         st.set("cond","2")
         st.giveItems(KEY_1,1)
         st.giveItems(KEY_2,1)
-        htmltext = "7957-02.htm" 
-    elif event == "3" :
-      if st.getQuestItemsCount(KEY_1)>0 :
+    elif event == "7961-03.htm" :
+      if st.getQuestItemsCount(KEY_1) :
         st.takeItems(KEY_1,1)
         htmltext = "7961-02.htm"
-      else :
-        htmltext = "7961-03.htm"
-    elif event == "4" :
-      if st.getQuestItemsCount(KEY_2)>0 :
+    elif event == "7960-03.htm" :
+      if st.getQuestItemsCount(KEY_2) :
         st.takeItems(KEY_2,1)
-        st.giveItems(BEER_ID,1)
+        st.giveItems(BEER,1)
         htmltext = "7960-02.htm"
-      else :
-        htmltext = "7960-03.htm"
     return htmltext
-
 
  def onTalk (Self,npc,st):
    npcId = npc.getNpcId()
@@ -51,32 +42,35 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
+     st.set("ok","0")
+   cond=int(st.get("cond"))
    if npcId == 7959 :
-     if int(st.get("cond"))==0 :
+     if cond == 0 :
         htmltext = "7959-01.htm"
-     elif int(st.get("cond"))==3 :
+     elif cond == 3 :
         st.playSound("ItemSound.quest_finish")
-        st.giveItems(ECHO_ID,1)
+        st.giveItems(ECHO,1)
         st.exitQuest(1)
         htmltext = "7959-03.htm"
-     elif int(st.get("cond"))>=1 :
+     elif cond >= 1 :
         htmltext = "7959-02.htm"
    elif npcId == 7957 :
-     if int(st.get("cond"))==1 :
+     if cond == 1 :
         htmltext = "7957-01.htm"
-     elif int(st.get("cond"))==2 and st.getQuestItemsCount(KEY_1)==0 and st.getQuestItemsCount(KEY_2)==0 and st.getQuestItemsCount(BEER_ID)==0 :
+     elif cond == 2 and not st.getQuestItemsCount(KEY_1) and int(st.get("ok")):
         st.set("cond","3")
         htmltext = "7957-04.htm"
-     elif int(st.get("cond"))==3 :
+     elif cond == 3 :
         htmltext = "7957-05.htm"
-     elif int(st.get("cond"))==2 :
+     elif cond == 2 :
         htmltext = "7957-03.htm"
-   elif npcId == 7960 and int(st.get("cond"))>1 :
+   elif npcId == 7960 and cond :
         htmltext = "7960-01.htm"
-   elif npcId == 7961 and int(st.get("cond"))>1 :
+   elif npcId == 7961 and cond :
         htmltext = "7961-01.htm"
-   elif npcId == 7060 and st.getQuestItemsCount(BEER_ID)>0 :
-        st.takeItems(BEER_ID,1)
+   elif npcId == 7060 and st.getQuestItemsCount(BEER) :
+        st.set("ok","1")
+        st.takeItems(BEER,1)
         htmltext = "7060-01.htm"
    return htmltext
 
@@ -94,9 +88,8 @@ CREATED.addTalkId(7959)
 for npcId in [7959,7957,7060,7961,7960]:
   STARTED.addTalkId(npcId)
 
-
 STARTED.addQuestDrop(7959,KEY_1,1)
 STARTED.addQuestDrop(7959,KEY_2,1)
-STARTED.addQuestDrop(7960,BEER_ID,1)
+STARTED.addQuestDrop(7960,BEER,1)
 
 print "importing quests: 364: Jovial Accordion"
