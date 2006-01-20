@@ -27,7 +27,7 @@ class Quest (JQuest) :
           else:
             if st.getPlayer().getLevel()<19 :
               htmltext = "7327-03.htm"
-              st.exitQuet(1)
+              st.exitQuest(1)
             else:
               if st.getQuestItemsCount(ELVEN_KNIGHT_BROOCH_ID) :
                 htmltext = "7327-04.htm"
