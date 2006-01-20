@@ -333,9 +333,9 @@
 </skill>
 <skill id="15" levels="52" name="Charm">
   <table name="#mpConsume"> 37 38 39 40 42 43 47 48 49 53 54 55 59 60 63 67 68 70 72 74 75 78 80 82 84 87 88 90 92 94 97 98 100 103 104 107 108 109 111 112 113 115 116 117 119 120 121 123 124 125 127 128 </table>
-  <table name="#power"> 132.0 137.0 143.0 153.0 159.0 164.0 176.0 182.0 188.0 200.0 206.0 213.0 225.0 232.0 239.0 252.0 259.0 266.0 272.0 279.0 286.0 293.0 300.0 307.0 313.0 320.0 327.0 334.0 340.0 347.0 353.0 360.0 366.0 373.0 379.0 385.0 392.0 400.0 409.0 419.0 430.0 442.0 455.0 469.0 484.0 500.0 517.0 535.0 554.0 574.0 595.0 617.0 </table>
+  <table name="#aggr"> 132.0 137.0 143.0 153.0 159.0 164.0 176.0 182.0 188.0 200.0 206.0 213.0 225.0 232.0 239.0 252.0 259.0 266.0 272.0 279.0 286.0 293.0 300.0 307.0 313.0 320.0 327.0 334.0 340.0 347.0 353.0 360.0 366.0 373.0 379.0 385.0 392.0 400.0 409.0 419.0 430.0 442.0 455.0 469.0 484.0 500.0 517.0 535.0 554.0 574.0 595.0 617.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="60000"/>
@@ -343,8 +343,13 @@
   <set name="skillType" val="AGGREDUCE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="60000"/>
   <set name="castRange" val="600"/>
   <for>
+   <effect name="Buff" time="60" count="1" val="0">
+      <sub  order="0x10" stat="aggression" val="#aggr">
+      </sub>
+   </effect>
   </for>
 </skill>
 <skill id="16" levels="24" name="Mortal Blow">
