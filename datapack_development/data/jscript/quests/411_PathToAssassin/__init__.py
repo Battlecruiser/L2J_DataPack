@@ -1,5 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
-print "importing quests: 411: Path To Assassin"
+# Made by Mr. Have fun! Version 0.2
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -20,7 +19,6 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-        st.set("id","0")
         if st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x1f and st.getQuestItemsCount(IRON_HEART_ID) == 0 :
           st.set("cond","1")
           st.setState(STARTED)
@@ -32,8 +30,10 @@ class Quest (JQuest) :
               htmltext = "7416-02a.htm"
             else:
               htmltext = "7416-02.htm"
+              st.exitQuest(1)
         elif st.getPlayer().getLevel()<19 and st.getPlayer().getClassId().getId() == 0x1f :
             htmltext = "7416-03.htm"
+            st.exitQuest(1)
         elif st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x1f and st.getQuestItemsCount(IRON_HEART_ID) == 1 :
             htmltext = "7416-04.htm"
     elif event == "7419_1" :
@@ -52,23 +52,17 @@ class Quest (JQuest) :
 
 
  def onTalk (Self,npc,st):
-
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
-     st.setState(STARTING)
      st.set("cond","0")
      st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 7416 and int(st.get("cond"))==0 :
-        if int(st.get("cond"))<15 :
-          if st.getQuestItemsCount(IRON_HEART_ID) == 0 :
-            htmltext = "7416-01.htm"
-          else:
-            htmltext = "7416-04.htm"
-        else:
-          htmltext = "7416-04.htm"
+     if st.getQuestItemsCount(IRON_HEART_ID) == 0 :
+        htmltext = "7416-01.htm"
+     else:
+        htmltext = "7416-04.htm"
    elif npcId == 7416 and int(st.get("cond"))>=1 :
         if st.getQuestItemsCount(ARKENIAS_LETTER_ID) == 0 and st.getQuestItemsCount(LEIKANS_NOTE_ID) == 0 and st.getQuestItemsCount(SHILENS_TEARS_ID) == 0 and st.getQuestItemsCount(ARKENIA_RECOMMEND_ID) == 1 and st.getQuestItemsCount(IRON_HEART_ID) == 0 :
           htmltext = "7416-06.htm"
@@ -124,16 +118,13 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-
    npcId = npc.getNpcId()
    if npcId == 5036 :
-        st.set("id","0")
         if int(st.get("cond")) >= 1 and st.getQuestItemsCount(SHILENS_TEARS_ID) == 0 :
           st.giveItems(SHILENS_TEARS_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","6")
    elif npcId == 369 :
-        st.set("id","0")
         if int(st.get("cond")) >= 1 and st.getQuestItemsCount(LEIKANS_NOTE_ID) == 1 and st.getQuestItemsCount(ONYX_BEASTS_MOLAR_ID)<10 :
           st.giveItems(ONYX_BEASTS_MOLAR_ID,1)
           if st.getQuestItemsCount(ONYX_BEASTS_MOLAR_ID) == 10 :
@@ -149,11 +140,12 @@ STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
-
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7416)
 
+CREATED.addTalkId(7416)
 STARTING.addTalkId(7416)
+COMPLETED.addTalkId(7416)
 
 STARTED.addTalkId(7382)
 STARTED.addTalkId(7416)
@@ -168,3 +160,5 @@ STARTED.addQuestDrop(7416,SHILENS_CALL_ID,1)
 STARTED.addQuestDrop(369,ONYX_BEASTS_MOLAR_ID,1)
 STARTED.addQuestDrop(7382,LEIKANS_NOTE_ID,1)
 STARTED.addQuestDrop(7419,ARKENIAS_LETTER_ID,1)
+
+print "importing quests: 411: Path To Assassin"
