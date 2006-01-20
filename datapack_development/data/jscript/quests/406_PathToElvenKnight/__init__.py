@@ -1,5 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
-print "importing quests: 406: Path To Elven Knight"
+# Made by Mr. Have fun! Version 0.2
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -24,16 +23,17 @@ class Quest (JQuest) :
               htmltext = "7327-02a.htm"
             else:
               htmltext = "7327-02.htm"
+              st.exitQuest(1)
           else:
             if st.getPlayer().getLevel()<19 :
               htmltext = "7327-03.htm"
+              st.exitQuet(1)
             else:
-              if st.getQuestItemsCount(ELVEN_KNIGHT_BROOCH_ID) != 0 :
+              if st.getQuestItemsCount(ELVEN_KNIGHT_BROOCH_ID) :
                 htmltext = "7327-04.htm"
               else:
                 htmltext = "7327-05.htm"
     elif event == "1" :
-        st.set("id","0")
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
@@ -49,15 +49,11 @@ class Quest (JQuest) :
 
 
  def onTalk (Self,npc,st):
-
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
-     st.setState(STARTING)
      st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 7327 and int(st.get("cond"))==0 :
         htmltext = "7327-01.htm"
    elif npcId == 7327 and int(st.get("cond"))!=0 and st.getQuestItemsCount(KLUTO_BOX_ID)==0 and st.getQuestItemsCount(TOPAZ_PIECE_ID)==0 :
@@ -100,65 +96,17 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-
    npcId = npc.getNpcId()
-   if npcId == 54 :
-        st.set("id","0")
-        if int(st.get("cond")) != 0 and st.getQuestItemsCount(KLUTO_BOX_ID) == 0 and st.getQuestItemsCount(TOPAZ_PIECE_ID)<20 and st.getRandom(100)<70 :
+   if npcId != 782 :
+        if int(st.get("cond")) and st.getQuestItemsCount(KLUTO_BOX_ID) == 0 and st.getQuestItemsCount(TOPAZ_PIECE_ID)<20 and st.getRandom(100)<70 :
             st.giveItems(TOPAZ_PIECE_ID,1)
             if st.getQuestItemsCount(TOPAZ_PIECE_ID) == 20 :
               st.playSound("ItemSound.quest_middle")
               st.set("cond","2")
             else:
               st.playSound("ItemSound.quest_itemget")
-   elif npcId == 60 :
-        st.set("id","0")
-        if int(st.get("cond")) != 0 and st.getQuestItemsCount(KLUTO_BOX_ID) == 0 and st.getQuestItemsCount(TOPAZ_PIECE_ID)<20 and st.getRandom(100)<70 :
-            st.giveItems(TOPAZ_PIECE_ID,1)
-            if st.getQuestItemsCount(TOPAZ_PIECE_ID) == 20 :
-              st.playSound("ItemSound.quest_middle")
-              st.set("cond","2")
-            else:
-              st.playSound("ItemSound.quest_itemget")
-   elif npcId == 35 :
-        st.set("id","0")
-        if int(st.get("cond")) != 0 and st.getQuestItemsCount(KLUTO_BOX_ID) == 0 and st.getQuestItemsCount(TOPAZ_PIECE_ID)<20 and st.getRandom(100)<70 :
-            st.giveItems(TOPAZ_PIECE_ID,1)
-            if st.getQuestItemsCount(TOPAZ_PIECE_ID) == 20 :
-              st.playSound("ItemSound.quest_middle")
-              st.set("cond","2")
-            else:
-              st.playSound("ItemSound.quest_itemget")
-   elif npcId == 42 :
-        st.set("id","0")
-        if int(st.get("cond")) != 0 and st.getQuestItemsCount(KLUTO_BOX_ID) == 0 and st.getQuestItemsCount(TOPAZ_PIECE_ID)<20 and st.getRandom(100)<70 :
-            st.giveItems(TOPAZ_PIECE_ID,1)
-            if st.getQuestItemsCount(TOPAZ_PIECE_ID) == 20 :
-              st.playSound("ItemSound.quest_middle")
-              st.set("cond","2")
-            else:
-              st.playSound("ItemSound.quest_itemget")
-   elif npcId == 51 :
-        st.set("id","0")
-        if int(st.get("cond")) != 0 and st.getQuestItemsCount(KLUTO_BOX_ID) == 0 and st.getQuestItemsCount(TOPAZ_PIECE_ID)<20 and st.getRandom(100)<70 :
-            st.giveItems(TOPAZ_PIECE_ID,1)
-            if st.getQuestItemsCount(TOPAZ_PIECE_ID) == 20 :
-              st.playSound("ItemSound.quest_middle")
-              st.set("cond","2")
-            else:
-              st.playSound("ItemSound.quest_itemget")
-   elif npcId == 45 :
-        st.set("id","0")
-        if int(st.get("cond")) != 0 and st.getQuestItemsCount(KLUTO_BOX_ID) == 0 and st.getQuestItemsCount(TOPAZ_PIECE_ID)<20 and st.getRandom(100)<70 :
-            st.giveItems(TOPAZ_PIECE_ID,1)
-            if st.getQuestItemsCount(TOPAZ_PIECE_ID) == 20 :
-              st.playSound("ItemSound.quest_middle")
-              st.set("cond","2")
-            else:
-              st.playSound("ItemSound.quest_itemget")
-   elif npcId == 782 :
-        st.set("id","0")
-        if int(st.get("cond")) != 0 and st.getQuestItemsCount(KLUTO_MEMO_ID) != 0 and st.getQuestItemsCount(EMERALD_PIECE_ID)<20 and st.getRandom(100)<50 :
+   else :
+        if int(st.get("cond")) and st.getQuestItemsCount(KLUTO_MEMO_ID) and st.getQuestItemsCount(EMERALD_PIECE_ID)<20 and st.getRandom(100)<50 :
             st.giveItems(EMERALD_PIECE_ID,1)
             if st.getQuestItemsCount(EMERALD_PIECE_ID) == 20 :
               st.playSound("ItemSound.quest_middle")
@@ -177,7 +125,9 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7327)
 
+CREATED.addTalkId(7327)
 STARTING.addTalkId(7327)
+COMPLETED.addTalkId(7327)
 
 STARTED.addTalkId(7317)
 STARTED.addTalkId(7327)
@@ -200,3 +150,5 @@ STARTED.addQuestDrop(51,TOPAZ_PIECE_ID,1)
 STARTED.addQuestDrop(45,TOPAZ_PIECE_ID,1)
 STARTED.addQuestDrop(7317,KLUTO_MEMO_ID,1)
 STARTED.addQuestDrop(7317,KLUTO_BOX_ID,1)
+
+print "importing quests: 406: Path To Elven Knight"
