@@ -91,6 +91,22 @@ insert into zone values (15, 'Town', 'Heine', 103598, 216010, 118991, 225905, 0,
 insert into zone values (16, 'Town', 'Floran Village', 0, 0, 0, 0, 0, 2);
 insert into zone values (17, 'Town', 'Ivory Tower', 0, 0, 0, 0, 0, 4);
 
+insert into zone values (1, 'Town Spawn', 'DE Village', 12181, 16675, 0, 0, -4580, 0);
+insert into zone values (2, 'Town Spawn', 'Talking Island', -84176, 243382, 0, 0, -3126, 0);
+insert into zone values (3, 'Town Spawn', 'Elven Village', 45525, 48376, 0, 0, -3059, 0);
+insert into zone values (4, 'Town Spawn', 'Orc Village', -45232, -113603, 0, 0, -224, 0);
+insert into zone values (5, 'Town Spawn', 'Gludin Village', -82856, 150901, 0, 0, -3128, 0);
+insert into zone values (6, 'Town Spawn', 'Dwarven Village', 115074, -178115, 0, 0, -880, 0);
+insert into zone values (7, 'Town Spawn', 'Gludio Castle Town', -14138, 122042, 0, 0, -2988, 0);
+insert into zone values (8, 'Town Spawn', 'Dion Castle Town', 18823, 145048, 0, 0, -3126, 0);
+insert into zone values (9, 'Town Spawn', 'Giran Castle Town', 83235, 148497, 0, 0, -3404, 0);
+insert into zone values (10, 'Town Spawn', 'Town of Oren', 80853, 54653, 0, 0, -1524, 0);
+insert into zone values (11, 'Town Spawn', 'Hunter Village', 117163, 76511, 0, 0, -2712, 0);
+insert into zone values (12, 'Town Spawn', 'Town of Aden', 147391, 25967, 0, 0, -2012, 0);
+insert into zone values (15, 'Town Spawn', 'Heine', 111381, 219064, 0, 0, -3543, 0);
+insert into zone values (16, 'Town Spawn', 'Floran Village', 17817, 170079, 0, 0, -3530, 0);
+insert into zone values (17, 'Town Spawn', 'Ivory Tower', 0, 0, 0, 0, 0, 0);
+
 insert into zone values (1, 'Underground', 'Ascetics Necropolis', 0, 0, 0, 0, -4844, 0);
 insert into zone values (2, 'Underground', 'Elven Ruins', 43100, 246500, 49400, 249200, -6614, 0);
 insert into zone values (3, 'Underground', 'School of Dark Arts', -49800, 56879, -35311, 43790, -6000, 0);
