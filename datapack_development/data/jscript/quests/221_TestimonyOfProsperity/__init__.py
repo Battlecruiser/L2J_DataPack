@@ -293,7 +293,7 @@ class Quest (JQuest) :
           htmltext = "7553-02.htm"
         else:
           htmltext = "7553-03.htm"
-          st.takeItems(ANIMAL_SKIN_ID,st.getQuestItemsCount(ANIMAL_SKIN_ID))
+          st.takeItems(ANIMAL_SKIN_ID,100)
           st.giveItems(CONTRIBUTION_OF_MARIFE_ID,1)
           st.takeItems(MARIFES_REQUEST_ID,1)
    elif npcId == 7553 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(CONTRIBUTION_OF_MARIFE_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID) == 0 and st.getQuestItemsCount(MARIFES_REQUEST_ID) == 0 :
