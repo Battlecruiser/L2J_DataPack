@@ -199,7 +199,7 @@ class Quest (JQuest) :
    if st.getQuestItemsCount(required) and count < maxqty :
       if st.getRandom(100) < chance :
         st.giveItems(item,1)
-        if count == maxqty :
+        if count+1 == maxqty :
            st.playSound("Itemsound.quest_middle")
         else :
            st.playSound("Itemsound.quest_itemget")
