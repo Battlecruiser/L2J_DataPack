@@ -146,6 +146,8 @@ class Quest (JQuest) :
           st.getPcSpawn().addSpawn(5082)
           st.giveItems(GLOVE_OF_KEPRA_ID,1)
           st.takeItems(MANAKIAS_LETTER2_ID,1)
+    elif event == "7616_3" :
+          return
     elif event == "7617_1" :
           htmltext = "7617-03.htm"
           st.getPcSpawn().addSpawn(5083)
