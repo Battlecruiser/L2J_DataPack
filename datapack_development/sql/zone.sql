@@ -29,20 +29,14 @@ insert into zone values (2, 'Castle Area', 'Dion', 18438, 152343, 25757, 164097,
 insert into zone values (3, 'Castle Area', 'Giran', 105737, 140128, 121331, 149842, 0, 5);
 insert into zone values (4, 'Castle Area', 'Oren', 72876, 32336, 87556, 40457, 0, 5);
 insert into zone values (5, 'Castle Area', 'Aden', 134790, -2552, 154760, 20850, 0, 0);
-insert into zone values (6, 'Castle Area', 'Innadril', 0, 0, 0, 0, 0, 5);
-
--- insert into zone values (1, 'Castle Area', 'Gludio Castle', -20394, 106804, -15708, 113862, 0, 5);
--- insert into zone values (2, 'Castle Area', 'Dion Castle', 19679, 155959, 24365, 163101, 0, 5);
--- insert into zone values (3, 'Castle Area', 'Giran Castle', 112064, 142760, 119112, 147446, 0, 5);
--- insert into zone values (4, 'Castle Area', 'Oren Castle', 78142, 34908, 85284, 39594, 0, 5);
--- insert into zone values (5, 'Castle Area', 'Aden Castle', 144599, 577, 150295, 8521, 0, 0);
+insert into zone values (6, 'Castle Area', 'Innadril', 111975, 241396, 120720, 253425, 0, 5);
 
 insert into zone values (1, 'Castle Defender Spawn', 'Gludio', -18105, 110303, 0, 0, -2146, 0);
 insert into zone values (2, 'Castle Defender Spawn', 'Dion', 22080, 159450, 0, 0, -2441, 0);
 insert into zone values (3, 'Castle Defender Spawn', 'Giran', 115621, 145097, 0, 0, -2214, 0);
 insert into zone values (4, 'Castle Defender Spawn', 'Oren', 81707, 37208, 0, 0, -1941, 0);
 insert into zone values (5, 'Castle Defender Spawn', 'Aden', 147456, 6048, 0, 0, 253, 0);
-insert into zone values (6, 'Castle Defender Spawn', 'Innadril', 0, 0, 0, 0, 0, 5);
+insert into zone values (6, 'Castle Defender Spawn', 'Innadril', 116025, 248229, 0, 0, -536, 0);
 
 insert into zone values (1, 'Clan Hall', 'Gludio 1', -12954, 123785, -12291, 124264, -3117, 1);
 insert into zone values (2, 'Clan Hall', 'Gludio 2', -16405, 123275, -15551, 123886, -3117, 1);
@@ -73,7 +67,7 @@ insert into zone values (2, 'Siege Battlefield', 'Dion', 18438, 152343, 25757, 1
 insert into zone values (3, 'Siege Battlefield', 'Giran', 105737, 140128, 121331, 149842, 0, 0);
 insert into zone values (4, 'Siege Battlefield', 'Oren', 72876, 32336, 87556, 40457, 0, 0);
 insert into zone values (5, 'Siege Battlefield', 'Aden', 134790, -2552, 154760, 20850, 0, 0);
-insert into zone values (6, 'Siege Battlefield', 'Innadril', 0, 0, 0, 0, 0, 0);
+insert into zone values (6, 'Siege Battlefield', 'Innadril', 111975, 241396, 120720, 253425, 0, 0);
 
 insert into zone values (1, 'Town', 'DE Village', 6063, 19664, 17248, 14019, 0, 4);
 insert into zone values (2, 'Town', 'Talking Island', -87312, 240096, -81129, 246345, 0, 1);
