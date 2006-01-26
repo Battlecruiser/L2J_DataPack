@@ -82,13 +82,13 @@ class Quest (JQuest) :
 
  def onTalk (Self,npc,st):
    npcId = npc.getNpcId()
-   cond = int(st.get("cond"))
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
+   cond = int(st.get("cond"))
    if npcId == 7191 and cond==0 and int(st.get("onlyone"))==0 :
      if st.getPlayer().getRace().ordinal() == 0 :
        if st.getPlayer().getLevel() >= 37 :
