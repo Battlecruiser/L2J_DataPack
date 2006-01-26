@@ -19,9 +19,9 @@ insert into zone values (2, 'Arena', 'Gudin Arena', -88410, 142728, -87421, 1427
 insert into zone values (3, 'Arena', 'Collusieum', 148014, 45304, 150976, 48020, -3410, 0);
 insert into zone values (4, 'Arena', 'Monster Track', 11955, 183017, 12937, 184008, -3565, 0);
 
-insert into zone values (1, 'Arena Spawn', 'Giran Arena Spawn', 73890, 142656, 0, 0, -3778, 0);
-insert into zone values (2, 'Arena Spawn', 'Gludin Arena Spawn', -86979, 142402, 0, 0, -3643, 0);
-insert into zone values (3, 'Arena Spawn', 'Collusieum Spawn', 147451, 46728, 0, 0, -3410, 0);
+insert into zone values (1, 'Arena Spawn', 'Giran Arena', 73890, 142656, 0, 0, -3778, 0);
+insert into zone values (2, 'Arena Spawn', 'Gludin Arena', -86979, 142402, 0, 0, -3643, 0);
+insert into zone values (3, 'Arena Spawn', 'Collusieum', 147451, 46728, 0, 0, -3410, 0);
 insert into zone values (4, 'Arena Spawn', 'Monster Track', 12312, 182752, 0, 0, -3558, 0);
 
 insert into zone values (1, 'Castle Area', 'Gludio', -22900, 104000, -14567, 116513, 0, 5);
