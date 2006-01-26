@@ -88,7 +88,8 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   cond = int(st.get("cond"))
+   if int(st.get("cond")) == 0 or int(st.get("cond")) > 0 :
+       cond = int(st.get("cond"))
    if npcId == 7191 and cond==0 and int(st.get("onlyone"))==0 :
      if st.getPlayer().getRace().ordinal() == 0 :
        if st.getPlayer().getLevel() >= 37 :
@@ -99,7 +100,7 @@ class Quest (JQuest) :
      else:
        htmltext = "7191-02.htm"
        st.exitQuest(1)
-   elif npcId == 7191 and cond==0 and int(st.get("onlyone")) == 1 :
+   elif npcId == 7191 and id == COMPLETED  :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7191 and cond==9 and st.getQuestItemsCount(SCROLL_OF_ELF_TRUST_ID) and st.getQuestItemsCount(SCROLL_OF_DARKELF_TRUST_ID) :
       htmltext = "7191-05.htm"
@@ -210,8 +211,7 @@ class Quest (JQuest) :
       htmltext = "7031-01.htm"
       st.takeItems(RECOMMENDATION_OF_HOLLIN_ID,1)
       st.giveItems(MARK_OF_TRUST_ID,1)
-      st.set("cond","0")
-      st.set("onlyone","1")
+      st.unset("cond")
       st.setState(COMPLETED)
       st.playSound("ItemSound.quest_finish")
    return htmltext
