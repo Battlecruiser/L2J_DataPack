@@ -1,8 +1,6 @@
 # Written by #questdevs Team
 
 import sys
-from java.util                                	import Iterator
-from net.sf.l2j.gameserver.serverpackets      	import CreatureSay 
 from net.sf.l2j.gameserver.model.quest 		import State
 from net.sf.l2j.gameserver.model.quest 		import QuestState
 from net.sf.l2j.gameserver.model.quest.jython 	import QuestJython as JQuest
@@ -164,17 +162,13 @@ class Quest (JQuest) :
 
 # Events Martien	
 		elif event == "7645_02":
-#			htmltext = "7645-03.htm"
+			htmltext = "7645-03.htm"
 			st.takeItems(G_Let_Martien,-1)
 			st.set("cond","2")
 			suscribe_members(st) 
-			htmltext = "in the event of martien : "
 			try:
-				htmltext += "it trys : "
 				members = st.getPlayer().getClan().getOnlineMembers("")[0]
-				htmltext +=  "it has the members list : " + members * " : "
 				for i in members:
-					htmltext += i + " : "
 					st.getPlayer().getClan().getClanMember(int(i)).getPlayerInstance().setQuestState(PROGRESS)
 			except:
 				return htmltext
@@ -199,8 +193,8 @@ class Quest (JQuest) :
 				st.set("Lutz","2")
 			else:
 				htmltext = "7762-03.htm"
-			st.getPcSpawn().addSpawn(5178,120000)
-			st.getPcSpawn().addSpawn(5178,120000)
+			st.getPcSpawn().addSpawn(5178, 112268, 112761, -2770, 120000)
+			st.getPcSpawn().addSpawn(5178, 112234, 112705, -2770,120000)
 			
 # Events Fritz
 		elif event == "7761_01":
@@ -211,8 +205,8 @@ class Quest (JQuest) :
 				st.set("Fritz","2")
 			else:
 				htmltext = "7761-03.htm"
-			st.getPcSpawn().addSpawn(5178,120000)
-			st.getPcSpawn().addSpawn(5178,120000)
+			st.getPcSpawn().addSpawn(5178, 103841, 116809, -3025, 120000)
+			st.getPcSpawn().addSpawn(5178, 103848, 116910, -3020,120000)
 			
 # Events Kusto
 		elif event == "7512_02":
@@ -253,9 +247,9 @@ class Quest (JQuest) :
 		elif event == "7766_03":
 			htmltext = "7766-04.htm"
 			st.set("cond","9")
-			st.getPcSpawn().addSpawn(7766,100,["Blood and Honour"],0)
-			st.getPcSpawn().addSpawn(7759,6000,["Ambition and Power"],0)
-			st.getPcSpawn().addSpawn(7758,6000,["War and Death"],0)
+			st.getPcSpawn().addSpawn(7766, 160622, 21230, -3710,  100,["Blood and Honour"],0)
+			st.getPcSpawn().addSpawn(7759, 160665, 21209, -3710 ,6000,["Ambition and Power"],0)
+			st.getPcSpawn().addSpawn(7758, 160665, 21291, -3710, 6000,["War and Death"],0)
 		elif event == "7766_07":
 			htmltext = "7766-08.htm"
 			st.takeItems(Scepter_Judgement,-1)
