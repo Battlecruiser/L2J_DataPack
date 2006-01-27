@@ -70,7 +70,7 @@ def suscribe_members(st) :														# offline registration for all clan memb
 			insertion.setString(3, "<state>")
 			insertion.setString(4, "Progress")
 			insertion.executeUpdate()
-#            insertion.close();
+			insertion.close();
 		except :
 			pass
 	try :
