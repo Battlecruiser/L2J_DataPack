@@ -1,36 +1,18 @@
 # completely rewritten by Rolarga, original from Mr
 # modified by Ariakas 08.12.2005
+# Version 0.4 by DrLecter
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-LUTHERS_LETTER_ID = 2784
-ALANKELLS_WARRANT_ID = 2785
-LEIRYNNS_ORDER1_ID = 2786
-DELU_TOTEM_ID = 2787
-LEIRYNNS_ORDER2_ID = 2788
-CHIEF_KALKIS_FANG_ID = 2789
-MARK_OF_SEARCHER_ID = 2809
-ALANKELLS_RECOMMEND_ID = 2808
-LAMBERTS_MAP_ID = 2792
-LEIRYNNS_REPORT_ID = 2790
-ALANKELLS_LETTER_ID = 2793
-STRANGE_MAP_ID = 2791
-ALANKELLS_ORDER_ID = 2794
-COMBINED_MAP_ID = 2805
-GOLD_BAR_ID = 2807
-WINE_CATALOG_ID = 2795
-OLD_ORDER_ID = 2799
-MALRUKIAN_WINE_ID = 2798
-TWEETYS_CONTRACT_ID = 2796
-RED_SPORE_DUST_ID = 2797
-REXS_DIARY_ID = 2800
-SOLTS_MAP_ID = 2803
-MAKELS_MAP_ID = 2804
-RUSTED_KEY1_ID = 2806
-TORN_MAP_PIECE1_ID = 2801
-TORN_MAP_PIECE2_ID = 2802
+LUTHERS_LETTER_ID,     ALANKELLS_WARRANT_ID,LEIRYNNS_ORDER1_ID,DELU_TOTEM_ID,  \
+LEIRYNNS_ORDER2_ID,    CHIEF_KALKIS_FANG_ID,LEIRYNNS_REPORT_ID,STRANGE_MAP_ID, \
+LAMBERTS_MAP_ID,       ALANKELLS_LETTER_ID, ALANKELLS_ORDER_ID,WINE_CATALOG_ID,\
+TWEETYS_CONTRACT_ID,   RED_SPORE_DUST_ID,   MALRUKIAN_WINE_ID, OLD_ORDER_ID,   \
+REXS_DIARY_ID,         TORN_MAP_PIECE1_ID,  TORN_MAP_PIECE2_ID,SOLTS_MAP_ID,   \
+MAKELS_MAP_ID,         COMBINED_MAP_ID,     RUSTED_KEY1_ID,    GOLD_BAR_ID,    \
+ALANKELLS_RECOMMEND_ID,MARK_OF_SEARCHER_ID = range(2784,2810)
 
 #This handle all mob drops   npcId:[condition,maxcount,chance,itemid]
 DROPLIST={
@@ -54,8 +36,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "1" :
-        htmltext = "7690-05.htm"
+    if event == "7690-05.htm" :
         for var in STATS[0]:
          st.set(var,"1")
         for var in STATS[1]:
@@ -63,46 +44,31 @@ class Quest (JQuest) :
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(LUTHERS_LETTER_ID,1)
-    elif event == "7291_1" :
-          htmltext = "7291-05.htm"
-    elif event == "7291_2" :
-          htmltext = "7291-06.htm"
-    elif event == "7291_3" :
-          htmltext = "7291-07.htm"
-          st.giveItems(LAMBERTS_MAP_ID,1)
-          st.takeItems(LEIRYNNS_REPORT_ID,1)
-          st.giveItems(ALANKELLS_LETTER_ID,1)
-          st.takeItems(STRANGE_MAP_ID,1)
-          st.giveItems(ALANKELLS_ORDER_ID,1)
-          st.set("phase","8")
-    elif event == "7420_1" :
-          htmltext = "7420-01a.htm"
-          st.giveItems(TWEETYS_CONTRACT_ID,1)
-          st.takeItems(WINE_CATALOG_ID,1)
-          st.set("phase","10")
-    elif event == "7730_1" :
-          htmltext = "7730-01a.htm"
-    elif event == "7730_2" :
-          htmltext = "7730-01b.htm"
-    elif event == "7730_3" :
-          htmltext = "7730-01c.htm"
-    elif event == "7730_4" :
-          htmltext = "7730-01d.htm"
-          st.giveItems(REXS_DIARY_ID,1)
-          st.takeItems(OLD_ORDER_ID,1)
-          st.set("phase","14")
-          for var in STATS[1]:
-           st.set(var,"1")
-    elif event == "7627_1" :
-          htmltext = "7627-01a.htm"
-          st.giveItems(RUSTED_KEY1_ID,1)
-          st.getPcSpawn().addSpawn(7628,300000)
-          st.set("phase","20")
-    elif event == "7628_1" :
-          htmltext = "7628-01a.htm"
-          st.giveItems(GOLD_BAR_ID,20)
-          st.takeItems(RUSTED_KEY1_ID,1)
-          st.set("phase","21")
+    elif event == "7291-07.htm" :
+        st.giveItems(LAMBERTS_MAP_ID,1)
+        st.takeItems(LEIRYNNS_REPORT_ID,1)
+        st.giveItems(ALANKELLS_LETTER_ID,1)
+        st.takeItems(STRANGE_MAP_ID,1)
+        st.giveItems(ALANKELLS_ORDER_ID,1)
+        st.set("phase","8")
+    elif event == "7420-01a.htm" :
+        st.giveItems(TWEETYS_CONTRACT_ID,1)
+        st.takeItems(WINE_CATALOG_ID,1)
+        st.set("phase","10")
+    elif event == "7730-01d.htm" :
+        st.giveItems(REXS_DIARY_ID,1)
+        st.takeItems(OLD_ORDER_ID,1)
+        st.set("phase","14")
+        for var in STATS[1]:
+          st.set(var,"1")
+    elif event == "7627-01a.htm" :
+        st.giveItems(RUSTED_KEY1_ID,1)
+        st.getPcSpawn().addSpawn(7628,10011,157449,-2374,300000)
+        st.set("phase","20")
+    elif event == "7628-01a.htm" :
+        st.giveItems(GOLD_BAR_ID,20)
+        st.takeItems(RUSTED_KEY1_ID,1)
+        st.set("phase","21")
     return htmltext
 
 
@@ -169,7 +135,7 @@ class Quest (JQuest) :
         st.giveItems(ALANKELLS_RECOMMEND_ID,1)
         st.takeItems(ALANKELLS_ORDER_ID,1)
         st.takeItems(COMBINED_MAP_ID,1)
-        st.takeItems(GOLD_BAR_ID,st.getQuestItemsCount(GOLD_BAR_ID))
+        st.takeItems(GOLD_BAR_ID,-1)
         st.removeRadar(10133,157155,-2383);
         st.set("phase","22")
       elif phase==22 :
@@ -184,7 +150,7 @@ class Quest (JQuest) :
         htmltext = "7728-02.htm"
       elif phase==4 :
         htmltext = "7728-03.htm"
-        st.takeItems(DELU_TOTEM_ID,st.getQuestItemsCount(DELU_TOTEM_ID))
+        st.takeItems(DELU_TOTEM_ID,-1)
         st.takeItems(LEIRYNNS_ORDER1_ID,1)
         st.giveItems(LEIRYNNS_ORDER2_ID,1)
         st.set("phase","5")
@@ -225,7 +191,7 @@ class Quest (JQuest) :
           htmltext = "7420-03.htm"
           st.giveItems(MALRUKIAN_WINE_ID,1)
           st.takeItems(TWEETYS_CONTRACT_ID,1)
-          st.takeItems(RED_SPORE_DUST_ID,st.getQuestItemsCount(RED_SPORE_DUST_ID))
+          st.takeItems(RED_SPORE_DUST_ID,-1)
           st.set("phase","12")
       elif phase in [12,13]  :
         htmltext = "7420-04.htm"
@@ -289,11 +255,11 @@ CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
-
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7690)
 
 CREATED.addTalkId(7690)
+COMPLETED.addTalkId(7690)
 
 for npcId in NPC:
  STARTED.addTalkId(npcId)
