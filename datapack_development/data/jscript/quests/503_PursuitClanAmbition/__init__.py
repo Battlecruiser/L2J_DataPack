@@ -1,6 +1,7 @@
 # Written by #questdevs Team
 
 import sys
+from java.util                                	import Iterator
 from net.sf.l2j.gameserver.model.quest 		import State
 from net.sf.l2j.gameserver.model.quest 		import QuestState
 from net.sf.l2j.gameserver.model.quest.jython 	import QuestJython as JQuest
