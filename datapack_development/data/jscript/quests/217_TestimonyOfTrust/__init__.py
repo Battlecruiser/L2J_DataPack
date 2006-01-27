@@ -88,8 +88,10 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if int(st.get("cond")) == 0 or int(st.get("cond")) > 0 :
-       cond = int(st.get("cond"))
+   try :
+     cond = int(st.get("cond"))
+   except :
+     cond = None
    if npcId == 7191 and cond==0 and int(st.get("onlyone"))==0 :
      if st.getPlayer().getRace().ordinal() == 0 :
        if st.getPlayer().getLevel() >= 37 :
@@ -224,12 +226,12 @@ class Quest (JQuest) :
        st.set("id",str(int(st.get("id"))+1))
        if st.getRandom(100)<(int(st.get("id"))*33) :
          st.playSound("Itemsound.quest_before_battle")
-         st.getPcSpawn().addSpawn(5120)
+         st.getPcSpawn().addSpawn(5120,9410,50301,-3713)
      elif npcId == 13 or npcId == 19 and st.getQuestItemsCount(SEED_OF_VERDURE_ID) == 0 :
        st.set("id",str(int(st.get("id"))+1))
        if st.getRandom(100)<(int(st.get("id"))*33) :
          st.playSound("Itemsound.quest_before_battle")
-         st.getPcSpawn().addSpawn(5121)
+         st.getPcSpawn().addSpawn(5121,16895,47210,-3673)
    elif cond == 14 :
      parasite = st.getQuestItemsCount(PARASITE_OF_LOTA_ID)
      if npcId == 553 and parasite < 10 :
