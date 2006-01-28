@@ -38,7 +38,7 @@ Proof_Aspiration = 3870
 EggList = [Mi_Drake_Eggs,Bl_Wyrm_Eggs,Drake_Eggs,Th_Wyrm_Eggs]
 
 # NPC = Martien,Athrea,Kalis,Gustaf,Fritz,Lutz,Kurtz,Kusto,Balthazar,Rodemai,Coffer,Cleo
-NPC=[7645,7758,7759,7760,7761,7762,7763,7512,7764,7756,7765,7766]
+NPC=[7645,7758,7759,7760,7761,7762,7763,7512,7764,7868,7765,7766]
 STATS=["cond","Fritz","Lutz","Kurtz","ImpGraveKeeper"]
 
 # DROPLIST = step,chance,maxcount,item 
@@ -233,15 +233,15 @@ class Quest (JQuest) :
 			st.giveItems(Recipe_Power_Stone,1)
 
 # Events Rodemai
-		elif event == "7756_03":
-			htmltext = "7756-04.htm"
+		elif event == "7868_03":
+			htmltext = "7868-04.htm"
 			st.takeItems(G_Let_Rodemai,-1)
 			st.set("cond","8")
-		elif event == "7756_06":
-			htmltext = "7756-06a.htm"
+		elif event == "7868_06":
+			htmltext = "7868-06a.htm"
 			st.set("cond","10")
-		elif event == "7756_09":
-			htmltext = "7756-10.htm"
+		elif event == "7868_09":
+			htmltext = "7868-10.htm"
 			st.set("cond","12")
 
 # Events Cleo
@@ -262,7 +262,7 @@ class Quest (JQuest) :
 	def onTalk(self,npc,st):
 		npcId = npc.getNpcId()
 		id =  st.getState()
-		Martien,Athrea,Kalis,Gustaf,Fritz,Lutz,Kurtz,Kusto,Balthazar,Rodemai,Coffer,Cleo = 7645,7758,7759,7760,7761,7762,7763,7512,7764,7756,7765,7766
+		Martien,Athrea,Kalis,Gustaf,Fritz,Lutz,Kurtz,Kusto,Balthazar,Rodemai,Coffer,Cleo = 7645,7758,7759,7760,7761,7762,7763,7512,7764,7868,7765,7766
 		htmltext = "<html><head><body>I have nothing to say.</body></html>"
 		isLeader = st.getPlayer().isClanLeader()
 		
