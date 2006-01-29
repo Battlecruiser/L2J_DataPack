@@ -376,17 +376,17 @@ class Quest (JQuest) :
 				
 				elif npcId == Rodemai:
 					if cond == 7:
-						htmltext = "7756-02.htm"
+						htmltext = "7868-02.htm"
 					elif cond == 8:
-						htmltext = "7756-05.htm"
+						htmltext = "7868-05.htm"
 					elif cond == 9:
-						htmltext = "7756-06.htm"
+						htmltext = "7868-06.htm"
 					elif cond == 10:
-						htmltext = "7756-08.htm"
+						htmltext = "7868-08.htm"
 					elif cond == 11:
-						htmltext = "7756-09.htm"
+						htmltext = "7868-09.htm"
 					elif cond == 12:
-						htmltext = "7756-11.htm"
+						htmltext = "7868-11.htm"
 
 				elif npcId == Cleo:
 					if cond == 8:
@@ -431,7 +431,7 @@ class Quest (JQuest) :
 					if cond in [9,10]:
 						htmltext = "7645-07.htm"
 					elif cond == 7:
-						htmltext = "7756-01.htm"
+						htmltext = "7868-01.htm"
 				elif npcId == Balthazar and cond == 4:
 					htmltext = "7764-01.htm"
 				elif npcId == Cleo and cond == 8:
