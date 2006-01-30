@@ -190,7 +190,7 @@ class Quest (JQuest) :
 					htmltext = "7630-02.htm"
 					st.exitQuest(1)
 				else:
-					if st.getPlayer().getClassId() == 0x0b :
+					if st.getPlayer().getClassId().getId() == 0x0b :
 						htmltext = "7630-03.htm"
 					else:
 						htmltext = "7630-05.htm"
