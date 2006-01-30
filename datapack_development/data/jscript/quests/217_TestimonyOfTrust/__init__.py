@@ -248,7 +248,7 @@ class Quest (JQuest) :
      if st.getQuestItemsCount(required) and count < maxqty :
         st.giveItems(item,1)
         if count+1 == maxqty :
-          if npcId in [ 550, 82, 84, 86, 88, 157, 230, 232, 234 ] :
+          if npcId in [ 550, 82, 84, 86, 87, 88, 157, 230, 232, 234 ] :
              if item == BLOOD_OF_GUARDIAN_BASILISK_ID :
                st.takeItems(BLOOD_OF_GUARDIAN_BASILISK_ID, maxqty)
                st.giveItems(BASILISK_PLASMA_ID, 1)
