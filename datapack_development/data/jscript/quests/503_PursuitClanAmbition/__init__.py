@@ -1,11 +1,12 @@
-# Written by #questdevs Team
+# Written by
+#questdevs Team
 
 import sys
-from java.util                                	import Iterator
-from net.sf.l2j.gameserver.model.quest 		import State
-from net.sf.l2j.gameserver.model.quest 		import QuestState
-from net.sf.l2j.gameserver.model.quest.jython 	import QuestJython as JQuest
-from net.sf.l2j								import L2DatabaseFactory
+from java.util import Iterator
+from net.sf.l2j import L2DatabaseFactory
+from net.sf.l2j.gameserver.model.quest import State
+from net.sf.l2j.gameserver.model.quest import QuestState
+from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "503_PursuitClanAmbition"
 
@@ -34,7 +35,6 @@ Scepter_Judgement = 3869
 # the final item
 Proof_Aspiration = 3870
 
-
 EggList = [Mi_Drake_Eggs,Bl_Wyrm_Eggs,Drake_Eggs,Th_Wyrm_Eggs]
 
 # NPC = Martien,Athrea,Kalis,Gustaf,Fritz,Lutz,Kurtz,Kusto,Balthazar,Rodemai,Coffer,Cleo
@@ -46,17 +46,17 @@ STATS=["cond","Fritz","Lutz","Kurtz","ImpGraveKeeper"]
 DROPLIST = {
 282: [2,10,20,[Th_Wyrm_Eggs]], 										# Thunder Wyrm 1
 243: [2,10,15,[Th_Wyrm_Eggs]], 										# Thunder Wyrm 2
-137: [2,10,20,[Drake_Eggs]], 											# Drake 1
-285: [2,10,25,[Drake_Eggs]], 											# Drake 2
+137: [2,10,20,[Drake_Eggs]], 										# Drake 1
+285: [2,10,25,[Drake_Eggs]], 										# Drake 2
 5178:[2,10,100,[Bl_Wyrm_Eggs]],										# Blitz Wyrm
 654: [5,10,25,[Broke_Power_Stone,Power_Stones,Nebulite_Crystals]], 	# Giant Soldier
 656: [5,10,35,[Broke_Power_Stone,Power_Stones,Nebulite_Crystals]], 	# Giant Scouts
-668: [10,0,15,[]],														# Grave Guard
+668: [10,0,15,[]],													# Grave Guard
 5179:[10,6,80,[Imp_Keys]], 											# GraveKeyKeeper
-5181:[10,0,100,[]]														# Imperial Gravekeeper
+5181:[10,0,100,[]]													# Imperial Gravekeeper
 }
 
-def suscribe_members(st) :														# offline registration for all clan members
+def suscribe_members(st) :											# offline registration for all clan members
 	clan=st.getPlayer().getClan().getClanId()
 	con=L2DatabaseFactory.getInstance().getConnection()
 	offline=con.prepareStatement("SELECT obj_Id FROM characters WHERE clanid=? AND online=0")
@@ -81,11 +81,11 @@ def suscribe_members(st) :														# offline registration for all clan memb
 
 
 def leader(st) :																	# returns leaders quest status
-    leader=st.getPlayer().getClan().getLeader().getPlayerInstance()  
-    if leader != None :  
-       leader = leader.getQuestState(qn)  
-    return leader  
-	
+	leader=st.getPlayer().getClan().getLeader().getPlayerInstance()  
+	if leader != None :  
+		leader = leader.getQuestState(qn)  
+	return leader  
+
 def checkEggs(st):																# checkes that all eggs are in inventory of leader
 	count = 0
 	for item in EggList:
@@ -96,7 +96,6 @@ def checkEggs(st):																# checkes that all eggs are in inventory of le
 	else:
 		return 0
 
-	
 def giveItem(item,maxcount,st):													# just helping method to give items
 	count = st.getQuestItemsCount(item)
 	if count < maxcount:
@@ -107,7 +106,6 @@ def giveItem(item,maxcount,st):													# just helping method to give items
 			st.playSound("ItemSound.quest_itemget")
 	return
 
-					
 def exit503(completed,st):														# handels exit
 		if completed:
 			st.giveItems(Proof_Aspiration,1)
@@ -126,8 +124,8 @@ def exit503(completed,st):														# handels exit
 		except:
 			return "You dont have any members in your Clan, so you can't finish the Pursuit of Aspiration"
 		return "Congratulation, you have finished the Pursuit of Clan Ambition"
-	
-	
+
+
 class Quest (JQuest) :
 
 	def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -255,7 +253,6 @@ class Quest (JQuest) :
 			htmltext = "7766-08.htm"
 			st.takeItems(Scepter_Judgement,-1)
 			exit503(0,st)
-
 		return htmltext
 
 
@@ -421,7 +418,6 @@ class Quest (JQuest) :
 				
 				return htmltext
 
-
 			######## Member Area ######
 			else:
 				cond = int(leader(st).get("cond"))
@@ -451,7 +447,6 @@ class Quest (JQuest) :
 						htmltext = "7766-24t.htm"
 				return htmltext
 
-
 	def onAttack(self, npc, st):												# just for the last mob to kill, which can teleport players out of range
 		npdId = npc.getNpcId()
 		if (npc.getMaxHp()/2) > npc.getCurrentHp():
@@ -462,7 +457,7 @@ class Quest (JQuest) :
 						st.getPcSpawn().addSpawn(5180)
 					leader(st).set("ImpGraveKeeper","2")
 				else:
-					players = npc.getKnownlist().getKnownPlayers()
+					players = npc.getKnownList().getKnownPlayers()
 					player = players[st.getRandom(int(players.size()))].getObjectId().setXYZ(185462,20342,-3250)
 		return	
 
@@ -489,15 +484,10 @@ class Quest (JQuest) :
 					st.getPcSpawn().addSpawn(5179)
 		return
 
-
-
-
-
 QUEST		= Quest(503,qn,"Pursuit of Clan Ambition")
 CREATED		= State('Start', QUEST)
 PROGRESS	= State('Progress', QUEST)
 COMPLETED	= State('Completed', QUEST)
-
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(NPC[3])
@@ -506,12 +496,10 @@ CREATED.addTalkId(NPC[3])
 
 for npcId in NPC:
 	PROGRESS.addTalkId(npcId)
-	
 
 for mobId in DROPLIST.keys():
 	PROGRESS.addKillId(mobId)
-	
-PROGRESS.addAttackId(5181)
 
+PROGRESS.addAttackId(5181)
 
 print "importing quests: 503: PursuitClanAmbition"
