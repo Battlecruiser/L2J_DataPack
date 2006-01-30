@@ -36,7 +36,7 @@ insert  into teleport values
 ('Dwarf Town -> The Northeast Coast','17','169008','-208272','-3504','700'),
 ('Dwarven Town -> Abandoned Coal Mines','418','155535','-173560','2495','290'),
 ('Dwarven Town -> Mithril Mines','419','179039','-184080','-319','680'),
-('Dion Town -> Town of Gludio','18','-12672','122776','-3116','4200'),
+('Dion Town -> Town of Gludio','18','-12672','122776','-3116','4100'),
 ('Dion Town -> Town of Giran','19','83400','147943','-3404','8100'),
 ('Dion Town & Giran Town -> Entrance Giran','20','47942','186764','-3485','6500'),
 ('Cruma Tower Entrance -> Cruma Tower 1st floor','21','17724','114004','-11672','0'),
