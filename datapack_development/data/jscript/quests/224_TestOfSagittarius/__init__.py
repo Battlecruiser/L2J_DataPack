@@ -217,7 +217,7 @@ class Quest (JQuest) :
       giveNormal(st,itemid)
     elif dropcondition == 2 :
      if ((st.getQuestItemsCount(itemid)-120)*5)> st.getRandom(100) :
-      st.getPcSpawn().addSpawn(5090)
+      st.getPcSpawn().addSpawn(5090,75315,40138,-3204)
       st.takeItems(itemid, st.getQuestItemsCount(itemid))
       st.playSound("Itemsound.quest_before_battle")
      else:
