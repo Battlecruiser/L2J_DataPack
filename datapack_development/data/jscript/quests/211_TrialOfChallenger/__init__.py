@@ -182,7 +182,7 @@ class Quest (JQuest) :
             st.giveItems(WATCHERS_EYE2_ID,1)
             st.playSound("ItemSound.quest_middle")
             st.set("cond","6")
-            st.getPcSpawn().addSpawn(7646)
+            st.getPcSpawn().addSpawn(7646,-3130,53049,-3457)
    elif npcId == 5114 :
         if int(st.get("cond")) :
           if int(st.get("cond")) == 8 :
