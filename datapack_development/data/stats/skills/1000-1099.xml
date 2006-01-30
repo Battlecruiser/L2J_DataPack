@@ -1251,7 +1251,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="600"/>
+  <set name="castRange" val="900"/>
  <for>
  <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
    <sub order="0x50" stat="waterRes" val="#Tab-waterRes">
@@ -1316,7 +1316,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="600"/>
+  <set name="castRange" val="900"/>
 <for>
    <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
       <sub order="0x50" stat="windRes" val="#Tab-windRes">
