@@ -834,7 +834,7 @@ INSERT INTO weapon VALUES
 (5191,'Diabolic Grinder','hatchling','false',100,0,0,'steel','none',27,10,'sword',8,0.00000,0,0,0,277,0,37,95,10000000,0,'true'),
 (5217,'Wolf Level 75 Weapon','wolf','false',100,0,0,'steel','none',194,10,'sword',8,0.00000,0,0,0,277,0,136,95,0,0,'true'),
 (5233,'Keshanberk*Keshanberk','lrhand','true',2080,1,1,'fine_steel','a',259,10,'dual',8,0.00000,0,0,0,325,0,107,95,0,1464,'true'),
-(5284,'Zweihander','lrhand','false',1530,2,2,'bronze','none',38,10,'bigsword',8,0.00000,0,0,0,325,0,21,95,0,0,'true'),
+(5284,'Zweihander','lrhand','false',1530,2,2,'bronze','none',38,10,'bigsword',8,0.00000,0,0,0,325,0,21,95,268400,0,'true'),
 (5285,'Heavy Sword','lrhand','true',1520,2,2,'steel','d',49,10,'bigsword',8,0.00000,0,0,0,325,0,26,95,409000,743,'true'),
 (5286,'Berserker Blade','lrhand','true',1380,3,3,'oriharukon','c',190,10,'bigsword',8,0.00000,0,0,0,325,0,83,95,6130000,2452,'true'),
 (5292,'Sealed Dark Crystal Shield','lhand','true',1190,0,0,'crystal','a',0,0,'none',0,0.00000,-8,243,20,0,0,0,95,1220000,90,'true'),
