@@ -81,10 +81,29 @@ def suscribe_members(st) :											# offline registration for all clan members
 
 
 def leader(st) :																	# returns leaders quest status
+    leader=st.getPlayer().getClan().getLeader().getPlayerInstance()  
+    if leader != None :  
+       leader = leader.getQuestState(qn)  
+    return leader  
+
+
+def leaderCond(st) :																	# returns leaders quest cond, if he is offline will read out of database :)
 	leader=st.getPlayer().getClan().getLeader().getPlayerInstance()  
 	if leader != None :  
-		leader = leader.getQuestState(qn)  
-	return leader  
+		rs = leader.getQuestState(qn).get("cond")
+	else :
+		leaderId=leader.getLeaderId()
+		con=L2DatabaseFactory.getInstance().getConnection()
+		offline=con.prepareStatement("SELECT value FROM character_quests WHERE char_id=? AND var=cond AND name=503_PursuitClanAmbition")
+		offline.setInt(1, leaderId)
+		rs=offline.executeQuery()
+		try :
+			con.close()
+		except :
+			pass
+	return int(rs)  
+
+
 
 def checkEggs(st):																# checkes that all eggs are in inventory of leader
 	count = 0
@@ -420,7 +439,7 @@ class Quest (JQuest) :
 
 			######## Member Area ######
 			else:
-				cond = int(leader(st).get("cond"))
+				cond = leaderCond(st)
 				if npcId == Martien and cond in [1,2,3]:
 					htmltext = "7645-01.htm"
 				elif npcId == Rodemai :
@@ -434,7 +453,7 @@ class Quest (JQuest) :
 					htmltext = "7766-01.htm"
 				elif npcId == Kusto and 6 > cond > 2:
 					htmltext = "7512-01a.htm"
-				elif npcId == Coffer and int(leader(st).get("cond")) == 10:
+				elif npcId == Coffer and leaderCond == 10:
 					htmltext = "7765-01.htm"
 				elif npcId == Gustaf:
 					if cond == 3:
@@ -466,11 +485,7 @@ class Quest (JQuest) :
 		npcId=npc.getNpcId()
 		condition,maxcount,chance,itemList = DROPLIST[npcId]
 		random = st.getRandom(100)
-		try :
-			cond = int(leader(st).get("cond"))
-		except :
-			st.exitQuest(1)
-			return
+		cond = leaderCond(st)
 		if cond == condition and random < chance:
 			if len(itemList) > 1:
 				stoneRandom = st.getRandom(3)
