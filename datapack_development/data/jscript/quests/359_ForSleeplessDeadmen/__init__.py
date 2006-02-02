@@ -10,7 +10,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 359,"ForSleeplessDeadmen","For Sleepless Deadmen"
 
 #Variables
-DROP_RATE = 1  #in %
+DROP_RATE = 10  #in %
 DROP_MAX = 100 #unless you change this
 
 REQUIRED=60  #how many items will be paid for a reward

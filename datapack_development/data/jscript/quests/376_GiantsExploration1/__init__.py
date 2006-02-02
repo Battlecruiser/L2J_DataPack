@@ -10,7 +10,7 @@ QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 376,"GiantsExploration1","Exploratio
 
 #Variables
 #Ancient parchment drop rate in %
-DROP_RATE   = 25
+DROP_RATE   = 20
 #Mysterious Book drop rate in %
 DROP_RATE_2 = 5
 #By changing this setting you can make a group of recipes harder to get
