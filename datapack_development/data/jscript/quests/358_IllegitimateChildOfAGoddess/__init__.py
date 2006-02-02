@@ -10,7 +10,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 358,"IllegitimateChildOfAGoddess","Illegitimate Child Of A Goddess"
 
 #Variables
-DROP_RATE=2  #in %
+DROP_RATE=12  #in %
 REQUIRED=108 #how many items will be paid for a reward (affects onkill sounds too)
 
 #Quest items

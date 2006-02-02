@@ -9,7 +9,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 386,"StolenDignity","Stolen Dignity"
 
 #Variables
-DROP_RATE=25  #in %
+DROP_RATE=20  #in %
 REQUIRED_ORE=100 #how many items will be paid for a game (affects onkill sounds too)
 
 #Quest items
