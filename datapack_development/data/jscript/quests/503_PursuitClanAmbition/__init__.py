@@ -458,14 +458,20 @@ class Quest (JQuest) :
 					leader(st).set("ImpGraveKeeper","2")
 				else:
 					players = npc.getKnownList().getKnownPlayers()
-					player = players[st.getRandom(int(players.size()))].getObjectId().setXYZ(185462,20342,-3250)
+					player = players[st.getRandom(int(players.size()))]
+					player.setXYZ(185462,20342,-3250)
 		return	
 
 	def onKill (self,npc,st):
 		npcId=npc.getNpcId()
 		condition,maxcount,chance,itemList = DROPLIST[npcId]
 		random = st.getRandom(100)
-		if int(leader(st).get("cond")) == condition and random < chance:
+		try :
+			cond = int(leader(st).get("cond"))
+		except :
+			st.exitQuest(1)
+			return
+		if cond == condition and random < chance:
 			if len(itemList) > 1:
 				stoneRandom = st.getRandom(3)
 				if stoneRandom == 0 :
