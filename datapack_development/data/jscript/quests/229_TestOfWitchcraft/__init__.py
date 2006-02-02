@@ -93,7 +93,7 @@ class Quest (JQuest) :
 			st.takeItems(AKLANTOS_GEM5_ID,1)
 			st.takeItems(AKLANTOS_GEM6_ID,1)
 			st.set("step","3")
-			st.getPcSpawn().addSpawn(5101)
+			st.getPcSpawn().addSpawn(5101,70298, 109564, -3731)
 		elif event == "7630_7" :
 			htmltext = "7630-16.htm"
 			st.takeItems(BRIMSTONE1_ID,1)
@@ -173,7 +173,7 @@ class Quest (JQuest) :
 		elif event == "7633_1" :
 			htmltext = "7633-02.htm"
 			st.giveItems(BRIMSTONE2_ID,1)
-			st.getPcSpawn().addSpawn(5101)
+			st.getPcSpawn().addSpawn(5101,70298, 109564, -3731)
 		return htmltext
 
 
