@@ -90,18 +90,19 @@ def leader(st) :																	# returns leaders quest status
 def leaderCond(st) :																	# returns leaders quest cond, if he is offline will read out of database :)
 	leader=st.getPlayer().getClan().getLeader().getPlayerInstance()  
 	if leader != None :  
-		rs = leader.getQuestState(qn).get("cond")
+		rs = int(leader.getQuestState(qn).get("cond"))
 	else :
 		leaderId=st.getPlayer().getClan().getLeaderId()
 		con=L2DatabaseFactory.getInstance().getConnection()
 		offline=con.prepareStatement("SELECT value FROM character_quests WHERE char_id=? AND var=cond AND name=503_PursuitClanAmbition")
 		offline.setInt(1, leaderId)
 		rs=offline.executeQuery()
+		rs=rs.getInt("value")
 		try :
 			con.close()
 		except :
 			pass
-	return int(rs)  
+	return rs  
 
 
 
