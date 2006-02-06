@@ -21,7 +21,8 @@
              48 49 50 52 54 55 58 60 62 64 65 67 69 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/>
+  <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="8000"/>
@@ -145,7 +146,8 @@
   <table name="#mpConsume"> 34 40 45 53 59 65 70 77 80 83 87 89 93 95 98 100 103 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="40"/>
+  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
   <set name="hitTime" val="4000"/>
@@ -551,6 +553,11 @@
   </for>
 </skill>
 <skill id="1230" levels="28" name="Prominence">
+  <table name="#magicLvl">
+     38 40 42 44 46 48 50 52 54 56
+     57 58 59 60 61 62 63 64 65 66
+     67 68 69 70 71 72 73 74
+  </table>
   <table name="#mpConsume">
      34 35 38 39 42 44 45 48 49 52
      53 54 55 55 57 58 59 60 60 62
@@ -561,6 +568,7 @@
      80.0 82.0  84.0  85.0  87.0  89.0  90.0  92.0 94.0 96.0
      97.0 99.0 100.0 102.0 104.0 105.0 107.0 108.0
   </table>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -899,7 +907,8 @@
   <table name="#mpConsume"> 65 70 77 80 83 87 89 93 95 98 100 103 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="2"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="40"/>
+  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
   <set name="hitTime" val="4000"/>
