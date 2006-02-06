@@ -240,4 +240,20 @@
   <for>
   </for>
 </skill>
+<skill id="4515" levels="99" name="Petrified">
+<!---
+  Curse of the guardian spirit of a Raid Boss.
+  It's a state in which ones s body is temporarily petrified like a stone.
+  One can receive this curse when trying to kill a raid monster 
+  whose level is lower than one' s level by 9 or more. 
+  This curse cannot be undone.
+-->
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="PARALYZE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="1500"/>
+  <for>
+    <effect count="1" name="Paralyze" time="300" val="0"/>
+  </for>
+</skill>
 </list>

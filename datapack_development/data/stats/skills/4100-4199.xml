@@ -204,7 +204,8 @@
 </skill>
 <skill id="4111" levels="1" name="Fossilization">
   <set name="save" val="4"/>
-  <set name="power" val="10.0"/>
+  <set name="power" val="10"/>
+  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="205"/>
   <set name="hitTime" val="3000"/>
@@ -295,7 +296,8 @@
   <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="4"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="10"/>
+  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="120000"/>
@@ -314,7 +316,8 @@
   <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="4"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="25"/>
+  <set name="lvlDepend" val="5"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="205"/>
   <set name="hitTime" val="6000"/>
@@ -354,6 +357,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="4"/>
   <set name="power" val="#power"/>
+  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
   <set name="overHit" val="true"/>
@@ -509,6 +513,8 @@
   </for>
 </skill>
 <skill id="4131" levels="1" name="Paralyze">
+  <set name="power" val="25"/>
+  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="205"/>
   <set name="skillTime" val="3600"/>
@@ -1073,9 +1079,9 @@
 </for>
 </skill>
 <skill id="4164" levels="9" name="Paralyze">
-  <table name="#power"> 18 26 38 52 68 85 102 119 136 </table>
   <set name="save" val="3"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="50"/>
+  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="3000"/>
   <set name="reuseDelay" val="120000"/>
@@ -1110,6 +1116,7 @@
   <table name="#power"> 18 26 38 52 68 85 102 119 136 </table>
   <set name="save" val="3"/>
   <set name="power" val="#power"/>
+  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="3000"/>
   <set name="reuseDelay" val="120000"/>
@@ -1160,6 +1167,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="3"/>
   <set name="power" val="#power"/>
+  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="3000"/>
   <set name="reuseDelay" val="120000"/>
