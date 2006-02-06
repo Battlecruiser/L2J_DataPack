@@ -144,8 +144,8 @@ class Quest (JQuest) :
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
-   if npcId == 5198 :
-      if int(st.get("cond"))==1 and st.getRandom(100) < 50 and st.getQuestItemsCount(BLUE_GEM_ID) == 0 :
+   if npcId == 1 or npcId == 5198:
+      if int(st.get("cond"))==1 and st.getRandom(100) < 25 and st.getQuestItemsCount(BLUE_GEM_ID) == 0 :
             st.giveItems(BLUE_GEM_ID,1)
             st.playSound("ItemSound.quest_itemget")
             st.playSound("ItemSound.quest_tutorial")
@@ -166,5 +166,6 @@ for startNpc in [7008,7009,7017,7019,7129,7131,7404,7056,7011,7012,7401,7403,740
   STARTED.addTalkId(startNpc)
 
 
+STARTED.addKillId(1)
 STARTED.addKillId(5198)
 
