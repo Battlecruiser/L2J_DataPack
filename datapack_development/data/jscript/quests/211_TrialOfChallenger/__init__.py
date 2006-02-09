@@ -1,8 +1,6 @@
 # Maked by Mr. Have fun! Version 0.2
 # Quest: Trial Of Challenger
 # Fixed by Artful (http://L2PLanet.ru Lineage2 C3 Server)
-
-print "importing quests: 211: Trial Of Challenger"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -48,22 +46,20 @@ class Quest (JQuest) :
               htmltext = "7647-03.htm"
               st.takeItems(BROKEN_KEY_ID,1)
               st.playSound("ItemSound.quest_jackpot")
-              if st.getGameTicks() != int(st.get("id")) :
-                st.set("id",str(st.getGameTicks()))
-                n = st.getRandom(100)
-                if n > 90 :
-                  st.giveItems(MITHRIL_SCALE_GAITERS_MATERIAL_ID,1)
-                  st.giveItems(BRIGANDINE_GAUNTLET_PATTERN_ID,1)
-                  st.giveItems(MANTICOR_SKIN_GAITERS_PATTERN_ID,1)
-                  st.giveItems(GAUNTLET_OF_REPOSE_OF_THE_SOUL_PATTERN_ID,1)
-                  st.giveItems(IRON_BOOTS_DESIGN_ID,1)
-                elif n > 70 :
-                  st.giveItems(TOME_OF_BLOOD_PAGE_ID,1)
-                  st.giveItems(ELVEN_NECKLACE_BEADS_ID,1)
-                elif n > 40 :
-                  st.giveItems(WHITE_TUNIC_PATTERN_ID,1)
-                else:
-                  st.giveItems(IRON_BOOTS_DESIGN_ID,1)
+              n = st.getRandom(100)
+              if n > 90 :
+                 st.giveItems(MITHRIL_SCALE_GAITERS_MATERIAL_ID,1)
+                 st.giveItems(BRIGANDINE_GAUNTLET_PATTERN_ID,1)
+                 st.giveItems(MANTICOR_SKIN_GAITERS_PATTERN_ID,1)
+                 st.giveItems(GAUNTLET_OF_REPOSE_OF_THE_SOUL_PATTERN_ID,1)
+                 st.giveItems(IRON_BOOTS_DESIGN_ID,1)
+              elif n > 70 :
+                 st.giveItems(TOME_OF_BLOOD_PAGE_ID,1)
+                 st.giveItems(ELVEN_NECKLACE_BEADS_ID,1)
+              elif n > 40 :
+                 st.giveItems(WHITE_TUNIC_PATTERN_ID,1)
+              else:
+                 st.giveItems(IRON_BOOTS_DESIGN_ID,1)
             else:
               htmltext = "7647-02.htm"
               n = st.getRandom(1000)+1
@@ -88,28 +84,22 @@ class Quest (JQuest) :
 
 
  def onTalk (Self,npc,st):
-
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
-     st.setState(STARTING)
      st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
-   if npcId == 7644 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-      if int(st.get("cond")) < 15 :
-        if (st.getPlayer().getClassId().ordinal()==0x01 or st.getPlayer().getClassId().ordinal()==0x13 or st.getPlayer().getClassId().ordinal()==0x20 or st.getPlayer().getClassId().ordinal()==0x2d or st.getPlayer().getClassId().ordinal()==0x2f) and st.getPlayer().getLevel() >= 35 :
-          htmltext = "7644-03.htm"
-        elif (st.getPlayer().getClassId().ordinal()==0x01 or st.getPlayer().getClassId().ordinal()==0x13 or st.getPlayer().getClassId().ordinal()==0x20 or st.getPlayer().getClassId().ordinal()==0x2d or st.getPlayer().getClassId().ordinal()==0x2f) :
-          htmltext = "7644-01.htm"
-        else:
-          htmltext = "7644-02.htm"
-          st.exitQuest(1)
-      else:
-        htmltext = "7644-02.htm"
-        st.exitQuest(1)
-   elif npcId == 7644 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+     if npcId == 7644 :
+        if st.getPlayer().getClassId().ordinal() in [0x01,0x13,0x20,0x2d,0x2f] :
+           if st.getPlayer().getLevel() >= 35 :
+              htmltext = "7644-03.htm"
+           else :
+              htmltext = "7644-01.htm"
+              st.exitQuest(1)
+        else :
+           htmltext = "7644-02.htm"
+           st.exitQuest(1)
+   elif npcId == 7644 and id == COMPLETED :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7644 and int(st.get("cond"))==1 :
       htmltext = "7644-06.htm"
@@ -141,15 +131,13 @@ class Quest (JQuest) :
    elif npcId == 7646 and int(st.get("cond"))==7 :
       htmltext = "7646-06a.htm"
    elif npcId == 7646 and int(st.get("cond"))==9 :
-      if st.getGameTicks() != int(st.get("id")) :
-        st.set("id",str(st.getGameTicks()))
-        st.addExpAndSp(26000,3100)
+      st.addExpAndSp(26000,3100)
       htmltext = "7646-07.htm"
       st.takeItems(BROKEN_KEY_ID,1)
       st.giveItems(MARK_OF_CHALLENGER_ID,1)
       st.setState(COMPLETED)
       st.playSound("ItemSound.quest_finish")
-      st.set("onlyone","1")
+      st.getPcSpawn().removeAllSpawn()
       st.set("cond","0")
    elif npcId == 7535 and int(st.get("cond"))==7 :
       if st.getPlayer().getLevel() >= 36 :
@@ -164,38 +152,35 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-
    npcId = npc.getNpcId()
    if npcId == 5110 :
-        if int(st.get("cond")) and int(st.get("cond")) == 1 and st.getQuestItemsCount(SCROLL_OF_SHYSLASSY_ID) == 0 and st.getQuestItemsCount(BROKEN_KEY_ID) == 0 :
+        if int(st.get("cond")) == 1 and st.getQuestItemsCount(SCROLL_OF_SHYSLASSY_ID) == 0 and st.getQuestItemsCount(BROKEN_KEY_ID) == 0 :
           st.giveItems(BROKEN_KEY_ID,1)
           st.getPcSpawn().addSpawn(7647)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","2")
    elif npcId == 5112 :
-        if int(st.get("cond")) and int(st.get("cond")) == 4 and st.getQuestItemsCount(WATCHERS_EYE1_ID) == 0 :
+        if int(st.get("cond")) == 4 and st.getQuestItemsCount(WATCHERS_EYE1_ID) == 0 :
           st.giveItems(WATCHERS_EYE1_ID,1)
           st.playSound("ItemSound.quest_middle")
    elif npcId == 5113 :
-        if int(st.get("cond")) :
-          if int(st.get("cond")) == 5 and st.getQuestItemsCount(WATCHERS_EYE2_ID) == 0 :
-            st.giveItems(WATCHERS_EYE2_ID,1)
-            st.playSound("ItemSound.quest_middle")
-            st.set("cond","6")
-            st.getPcSpawn().addSpawn(7646,-3130,53049,-3457)
+        if int(st.get("cond")) == 5 and st.getQuestItemsCount(WATCHERS_EYE2_ID) == 0 :
+           st.giveItems(WATCHERS_EYE2_ID,1)
+           st.playSound("ItemSound.quest_middle")
+           st.set("cond","6")
+           st.getPcSpawn().addSpawn(7646,21291,184673,-3313)
    elif npcId == 5114 :
-        if int(st.get("cond")) :
-          if int(st.get("cond")) == 8 :
-            st.set("cond","9")
-            st.playSound("ItemSound.quest_middle")
-            st.removeRadar(176560,-184969,-3729);
-            st.getPcSpawn().addSpawn(7646)
-
+        if int(st.get("cond")) == 8 :
+           st.set("cond","9")
+           st.playSound("ItemSound.quest_middle")
+           st.removeRadar(176560,-184969,-3729)
+           st.getPcSpawn().removeAllSpawn()
+           st.getPcSpawn().addSpawn(7646,176643,-185803,-3677)
    return
 
 QUEST       = Quest(211,"211_TrialOfChallenger","Trial Of Challenger")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
+STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
@@ -203,7 +188,9 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7644)
 
+CREATED.addTalkId(7644)
 STARTING.addTalkId(7644)
+COMPLETED.addTalkId(7644)
 
 STARTED.addTalkId(7535)
 STARTED.addTalkId(7644)
@@ -221,3 +208,5 @@ STARTED.addQuestDrop(7644,LETTER_OF_KASH_ID,1)
 STARTED.addQuestDrop(5112,WATCHERS_EYE1_ID,1)
 STARTED.addQuestDrop(5110,BROKEN_KEY_ID,1)
 STARTED.addQuestDrop(5113,WATCHERS_EYE2_ID,1)
+
+print "importing quests: 211: Trial Of Challenger"
