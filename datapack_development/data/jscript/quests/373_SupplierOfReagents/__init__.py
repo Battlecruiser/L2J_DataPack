@@ -100,12 +100,12 @@ WESLEY,URN=7166,8149
 #Mobs & Drop
 DROPLIST = {
 813: [REAGENT_POUCH3,SULFUR],
-822: [REAGENT_POUCH2,BLOOD_ROOT],
+822: [REAGENT_POUCH2,BLOOD_ROOT,MOONSTONE_SHARD,QUICKSILVER],
 1061:[DEMONS_BLOOD,VOLCANIC_ASH],
 828: [REAGENT_POUCH2,QUICKSILVER],
 1066:[REAGENT_BOX,BLOOD_ROOT],
 1111:[WYRMS_BLOOD,REAGENT_POUCH3],
-1115:[REAGENT_POUCH1,QUICKSILVER]
+1115:[REAGENT_POUCH1,QUICKSILVER,VOLCANIC_ASH]
 }
 #temperature:[success_%,reagent_qty_obtained]
 TEMPERATURE={1:[100,1],2:[45,2],3:[15,3]}
@@ -279,8 +279,8 @@ class Quest (JQuest) :
  def onTalk (self,npc,st):
    htmltext = default
    id = st.getState()
-   npcid = npc.getNpcId()
-   if npcid == WESLEY :
+   npcId = npc.getNpcId()
+   if npcId == WESLEY :
       if id == CREATED :
          st.set("cond","0")
          htmltext = "7166-1.htm"
