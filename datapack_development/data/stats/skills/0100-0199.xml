@@ -678,9 +678,9 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul stat="rootRes" val="1.2" order="0x05"/>
-  	<mul stat="sleepRes" val="1.2" order="0x05"/>
-	<mul stat="stunRes" val="1.2" order="0x05"/>
+    <add stat="rootRes" val="20" order="0x05"/>
+  	<add stat="sleepRes" val="20" order="0x05"/>
+	<add stat="poisonRes" val="20" order="0x05"/>
   </for>
 </skill>
 <skill id="135" levels="2" name="Heroism">
