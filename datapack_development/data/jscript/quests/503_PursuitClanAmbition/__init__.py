@@ -2,11 +2,12 @@
 #questdevs Team
 
 import sys
-from java.util import Iterator
-from net.sf.l2j import L2DatabaseFactory
-from net.sf.l2j.gameserver.model.quest import State
-from net.sf.l2j.gameserver.model.quest import QuestState
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from java.util									import Iterator
+from net.sf.l2j.gameserver.serverpackets		import CreatureSay 
+from net.sf.l2j.gameserver.model.quest			import State
+from net.sf.l2j.gameserver.model.quest			import QuestState
+from net.sf.l2j.gameserver.model.quest.jython	import QuestJython as JQuest
+from net.sf.l2j									import L2DatabaseFactory
 
 qn = "503_PursuitClanAmbition"
 
@@ -35,6 +36,7 @@ Scepter_Judgement = 3869
 # the final item
 Proof_Aspiration = 3870
 
+
 EggList = [Mi_Drake_Eggs,Bl_Wyrm_Eggs,Drake_Eggs,Th_Wyrm_Eggs]
 
 # NPC = Martien,Athrea,Kalis,Gustaf,Fritz,Lutz,Kurtz,Kusto,Balthazar,Rodemai,Coffer,Cleo
@@ -49,14 +51,14 @@ DROPLIST = {
 137: [2,10,20,[Drake_Eggs]], 										# Drake 1
 285: [2,10,25,[Drake_Eggs]], 										# Drake 2
 5178:[2,10,100,[Bl_Wyrm_Eggs]],										# Blitz Wyrm
-654: [5,10,25,[Broke_Power_Stone,Power_Stones,Nebulite_Crystals]], 	# Giant Soldier
-656: [5,10,35,[Broke_Power_Stone,Power_Stones,Nebulite_Crystals]], 	# Giant Scouts
+654: [5,10,25,[Broke_Power_Stone,Power_Stones,Nebulite_Crystals]],	# Giant Soldier
+656: [5,10,35,[Broke_Power_Stone,Power_Stones,Nebulite_Crystals]],	# Giant Scouts
 668: [10,0,15,[]],													# Grave Guard
 5179:[10,6,80,[Imp_Keys]], 											# GraveKeyKeeper
 5181:[10,0,100,[]]													# Imperial Gravekeeper
 }
 
-def suscribe_members(st) :											# offline registration for all clan members
+def suscribe_members(st) :
 	clan=st.getPlayer().getClan().getClanId()
 	con=L2DatabaseFactory.getInstance().getConnection()
 	offline=con.prepareStatement("SELECT obj_Id FROM characters WHERE clanid=? AND online=0")
@@ -73,40 +75,85 @@ def suscribe_members(st) :											# offline registration for all clan members
 			insertion.executeUpdate()
 			insertion.close();
 		except :
-			pass
+			try : insertion.close()
+			except : pass
 	try :
 		con.close()
 	except :
 		pass
 
+def offlineMemberExit(st) :
+	clan=st.getPlayer().getClan().getClanId()
+	con=L2DatabaseFactory.getInstance().getConnection()
+	offline=con.prepareStatement("DELETE FROM character_quests WHERE name = ? and char_id IN (SELECT obj_id FROM characters WHERE clanId =? AND online=0")
+	offline.setString(1, qn)
+	offline.setInt(2, clan)
+	try :
+		offline.executeUpdate()
+		offline.close()
+		con.close()
+	except :
+		try : con.close()
+		except : pass
 
-def leader(st) :																	# returns leaders quest status
-    leader=st.getPlayer().getClan().getLeader().getPlayerInstance()  
-    if leader != None :  
-       leader = leader.getQuestState(qn)  
-    return leader  
+# returns leaders quest cond, if he is offline will read out of database :)
+def getLeaderVar(st, var) :
+	try :
+		clan = st.getPlayer().getClan()  
+		if clan == None:
+			return -1
+		leader=clan.getLeader().getPlayerInstance()
+		if leader != None :
+			return int(leader.getQuestState(qn).get(var))
+	except :
+		pass
+	leaderId=st.getPlayer().getClan().getLeaderId()
+	con=L2DatabaseFactory.getInstance().getConnection()
+	offline=con.prepareStatement("SELECT value FROM character_quests WHERE char_id=? AND var=? AND name=?")
+	offline.setInt(1, leaderId)
+	offline.setString(2, var)
+	offline.setString(3, qn)
+	rs=offline.executeQuery()
+	if rs :
+		rs.next()
+		try :
+			val=rs.getInt("value")
+			con.close()
+		except :
+			val=-1
+			try : con.close()
+			except : pass
+	else :
+		val=-1
+	return int(val)
 
-
-def leaderCond(st) :																	# returns leaders quest cond, if he is offline will read out of database :)
-	leader=st.getPlayer().getClan().getLeader().getPlayerInstance()  
-	if leader != None :  
-		rs = int(leader.getQuestState(qn).get("cond"))
+# set's leaders quest cond, if he is offline will read out of database :)
+# for now, if the leader is not logged in, this assumes that the variable
+# has already been inserted once (initialized, in some sense).
+def setLeaderVar(st, var, value) :
+	clan = st.getPlayer().getClan()  
+	if clan == None: return   
+	leader=clan.getLeader().getPlayerInstance()
+	if leader != None :
+		leader.getQuestState(qn).set(var,value)
 	else :
 		leaderId=st.getPlayer().getClan().getLeaderId()
 		con=L2DatabaseFactory.getInstance().getConnection()
-		offline=con.prepareStatement("SELECT value FROM character_quests WHERE char_id=? AND var='cond' AND name='503_PursuitClanAmbition'")
-		offline.setInt(1, leaderId)
-		rs=offline.executeQuery()
-		rs=rs.getInt("value")
+		offline=con.prepareStatement("UPDATE character_quests SET value=? WHERE char_id=? AND var=? AND name=?")
+		offline.setString(1, value)
+		offline.setInt(2, leaderId)
+		offline.setString(3, var)
+		offline.setString(4, qn)
 		try :
+			offline.executeUpdate()
+			offline.close()
 			con.close()
 		except :
-			pass
-	return rs  
+			try : con.close()
+			except : pass 
+	return
 
-
-
-def checkEggs(st):																# checkes that all eggs are in inventory of leader
+def checkEggs(st):
 	count = 0
 	for item in EggList:
 		if st.getQuestItemsCount(item) > 9:
@@ -116,7 +163,7 @@ def checkEggs(st):																# checkes that all eggs are in inventory of le
 	else:
 		return 0
 
-def giveItem(item,maxcount,st):													# just helping method to give items
+def giveItem(item,maxcount,st):
 	count = st.getQuestItemsCount(item)
 	if count < maxcount:
 		st.giveItems(item,1)
@@ -126,7 +173,7 @@ def giveItem(item,maxcount,st):													# just helping method to give items
 			st.playSound("ItemSound.quest_itemget")
 	return
 
-def exit503(completed,st):														# handels exit
+def exit503(completed,st):
 		if completed:
 			st.giveItems(Proof_Aspiration,1)
 			st.addExpAndSp(0,250000)
@@ -141,15 +188,15 @@ def exit503(completed,st):														# handels exit
 			members = st.getPlayer().getClan().getOnlineMembers("")[0]
 			for i in members:
 				st.getPlayer().getClan().getClanMember(i).getPlayerInstance().getQuestState(qn).exitQuest(1)
+			offlineMemberExit(st)
 		except:
 			return "You dont have any members in your Clan, so you can't finish the Pursuit of Aspiration"
-		return "Congratulation, you have finished the Pursuit of Clan Ambition"
-
+		return "Congratulations, you have finished the Pursuit of Clan Ambition"
 
 class Quest (JQuest) :
 
 	def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
-	
+
 	def onEvent (self,event,st) :
 		htmltext = event
 # Events Gustaf
@@ -178,8 +225,7 @@ class Quest (JQuest) :
 		elif event in ["7760_21a","7760_24a"]:
 			htmltext = "7760-23.htm"
 			exit503(1,st)
-
-# Events Martien	
+# Events Martien
 		elif event == "7645_02":
 			htmltext = "7645-03.htm"
 			st.takeItems(G_Let_Martien,-1)
@@ -191,7 +237,6 @@ class Quest (JQuest) :
 					st.getPlayer().getClan().getClanMember(int(i)).getPlayerInstance().setQuestState(PROGRESS)
 			except:
 				return htmltext
-
 # Events Kurtz
 		elif event == "7763_01":
 			if int(st.get("Kurtz")) == 1:
@@ -212,8 +257,8 @@ class Quest (JQuest) :
 				st.set("Lutz","2")
 			else:
 				htmltext = "7762-03.htm"
-			st.getPcSpawn().addSpawn(5178, 112268, 112761, -2770, 120000)
-			st.getPcSpawn().addSpawn(5178, 112234, 112705, -2770,120000)
+			st.getPcSpawn().addSpawn(5178,112268,112761,-2770,120000)
+			st.getPcSpawn().addSpawn(5178,112234,112705,-2770,120000)
 			
 # Events Fritz
 		elif event == "7761_01":
@@ -224,8 +269,8 @@ class Quest (JQuest) :
 				st.set("Fritz","2")
 			else:
 				htmltext = "7761-03.htm"
-			st.getPcSpawn().addSpawn(5178, 103841, 116809, -3025, 120000)
-			st.getPcSpawn().addSpawn(5178, 103848, 116910, -3020,120000)
+			st.getPcSpawn().addSpawn(5178,103841,116809,-3025,120000)
+			st.getPcSpawn().addSpawn(5178,103848,116910,-3020,120000)
 			
 # Events Kusto
 		elif event == "7512_02":
@@ -233,7 +278,6 @@ class Quest (JQuest) :
 			st.takeItems(Brooch,1)
 			st.giveItems(Bl_Anvil_Coin,1)
 			st.set("Kurtz","3")
-
 # Events Balthazar
 		elif event == "7764_02":
 			htmltext = "7764-03.htm"
@@ -249,26 +293,24 @@ class Quest (JQuest) :
 			st.takeItems(Bl_Anvil_Coin,-1)
 			st.set("Kurtz","4")
 			st.giveItems(Recipe_Power_Stone,1)
-
 # Events Rodemai
-		elif event == "7868_03":
-			htmltext = "7868-04.htm"
+		elif event == "7756_03":
+			htmltext = "7756-04.htm"
 			st.takeItems(G_Let_Rodemai,-1)
 			st.set("cond","8")
-		elif event == "7868_06":
-			htmltext = "7868-06a.htm"
+		elif event == "7756_06":
+			htmltext = "7756-06a.htm"
 			st.set("cond","10")
-		elif event == "7868_09":
-			htmltext = "7868-10.htm"
+		elif event == "7756_09":
+			htmltext = "7756-10.htm"
 			st.set("cond","12")
-
 # Events Cleo
 		elif event == "7766_03":
 			htmltext = "7766-04.htm"
 			st.set("cond","9")
-			st.getPcSpawn().addSpawn(7766, 160622, 21230, -3710,  100,["Blood and Honour"],0)
-			st.getPcSpawn().addSpawn(7759, 160665, 21209, -3710 ,6000,["Ambition and Power"],0)
-			st.getPcSpawn().addSpawn(7758, 160665, 21291, -3710, 6000,["War and Death"],0)
+			st.getPcSpawn().addSpawn(7766,160622,21230,-3710,100,["Blood and Honour"],0)
+			st.getPcSpawn().addSpawn(7759,160665,21209,-3710,6000,["Ambition and Power"],0)
+			st.getPcSpawn().addSpawn(7758,160665,21291,-3710,6000,["War and Death"],0)
 		elif event == "7766_07":
 			htmltext = "7766-08.htm"
 			st.takeItems(Scepter_Judgement,-1)
@@ -282,31 +324,30 @@ class Quest (JQuest) :
 		Martien,Athrea,Kalis,Gustaf,Fritz,Lutz,Kurtz,Kusto,Balthazar,Rodemai,Coffer,Cleo = 7645,7758,7759,7760,7761,7762,7763,7512,7764,7868,7765,7766
 		htmltext = "<html><head><body>I have nothing to say.</body></html>"
 		isLeader = st.getPlayer().isClanLeader()
-		
-		if id == CREATED and npcId == Gustaf:											
+		if id == CREATED and npcId == Gustaf:
 			for var in STATS:																	# adds all the  vars for initialisation
 				st.set(var,"0")
-			if st.getPlayer().getClan():															# has Clan	
-				if isLeader:																			# check if player is clan leader
+			if st.getPlayer().getClan():														# has Clan
+				if isLeader:																	# check if player is clan leader
 					clanLevel = st.getPlayer().getClan().getLevel()
-					if st.getQuestItemsCount(Proof_Aspiration):											# if he has the proof already, tell him what to do now
+					if st.getQuestItemsCount(Proof_Aspiration):									# if he has the proof already, tell him what to do now
 						htmltext = "7760-03.htm"
 						st.exitQuest(1)
-					elif clanLevel > 3:																	# if clanLevel > 3 you can take this quest, because repeatable
+					elif clanLevel > 3:															# if clanLevel > 3 you can take this quest, because repeatable
 						htmltext = "7760-04.htm"
-					else:																					# if clanLevel < 4 you cant take it
+					else:																		# if clanLevel < 4 you cant take it
 						htmltext = "7760-02.htm"
 						st.exitQuest(1)
-				else:																					# player isnt a leader
+				else:																			# player isnt a leader
 					htmltext = "7760-04t.htm"
 					st.exitQuest(1)
-			else:																					# no Clan
+			else:																				# no Clan
 				htmltext = "7760-01.htm"
 				st.exitQuest(1)
 			return htmltext
 		elif st.getPlayer().getClan().getLevel() == 5:											# player has level 5 clan already
 			return "<html><head><body>This quest has already been completed.</body></html>"
-		elif id == COMPLETED:																		# player has proof, and has finished quest as leader
+		elif id == COMPLETED:																	# player has proof, and has finished quest as leader
 			return "7760.htm>"
 		else:
 			######## Leader Area ######
@@ -337,7 +378,6 @@ class Quest (JQuest) :
 						htmltext = "7760-24.htm"
 					else:
 						htmltext = "7760-18.htm"
-						
 				elif npcId == Martien :
 					if cond == 1:
 						htmltext = "7645-02.htm"
@@ -353,17 +393,13 @@ class Quest (JQuest) :
 						htmltext = "7645-07.htm"
 					else:
 						htmltext = "7645-08.htm"
-				
 				elif cond == 2:												# Dwarven Corpse in DV, only needed if condition is 2
 					if npcId == Lutz:
 						htmltext = "7762-01.htm"
-				
 					elif npcId == Kurtz:
 						htmltext = "7763-01.htm"
-				
 					elif npcId == Fritz:
 						htmltext = "7761-01.htm"
-					
 				elif npcId == Kusto:
 					if kurtz == 1:
 						htmltext = "7512-01.htm"
@@ -372,7 +408,6 @@ class Quest (JQuest) :
 					else:
 						htmltext = "7512-04.htm"
 					return htmltext
-							
 				elif npcId == Balthazar:
 					if cond == 4:
 						if kurtz > 2:
@@ -390,21 +425,19 @@ class Quest (JQuest) :
 							htmltext = "7764-07.htm"
 					elif cond == 6:
 						htmltext = "7764-09.htm"
-				
 				elif npcId == Rodemai:
 					if cond == 7:
-						htmltext = "7868-02.htm"
+						htmltext = "7756-02.htm"
 					elif cond == 8:
-						htmltext = "7868-05.htm"
+						htmltext = "7756-05.htm"
 					elif cond == 9:
-						htmltext = "7868-06.htm"
+						htmltext = "7756-06.htm"
 					elif cond == 10:
-						htmltext = "7868-08.htm"
+						htmltext = "7756-08.htm"
 					elif cond == 11:
-						htmltext = "7868-09.htm"
+						htmltext = "7756-09.htm"
 					elif cond == 12:
-						htmltext = "7868-11.htm"
-
+						htmltext = "7756-11.htm"
 				elif npcId == Cleo:
 					if cond == 8:
 						htmltext = "7766-02.htm"
@@ -414,7 +447,6 @@ class Quest (JQuest) :
 						htmltext = "7766-06.htm"
 					elif cond in [11,12,13]:
 						htmltext = "7766-07.htm"
-				
 				elif npcId == Coffer:
 					if int(st.get("cond")) == 10:
 						if st.getQuestItemsCount(Imp_Keys) < 6:
@@ -429,32 +461,28 @@ class Quest (JQuest) :
 							htmltext = "<html><head><body>(You and your Clan didn't kill the Imperial Gravekeeper by your own, do it try again.)</body></html>"
 					else:
 							htmltext = "<html><head><body>(You already have the Scepter of Judgement.)</body></html>"
-				
 				elif npcId == Kalis:
 					htmltext = "7759-01.htm"
-				
 				elif npcId == Athrea:
 					htmltext = "7758-01.htm"
-				
 				return htmltext
-
 			######## Member Area ######
 			else:
-				cond = leaderCond(st)
+				cond = getLeaderVar(st,"cond")
 				if npcId == Martien and cond in [1,2,3]:
 					htmltext = "7645-01.htm"
 				elif npcId == Rodemai :
 					if cond in [9,10]:
 						htmltext = "7645-07.htm"
 					elif cond == 7:
-						htmltext = "7868-01.htm"
+						htmltext = "7756-01.htm"
 				elif npcId == Balthazar and cond == 4:
 					htmltext = "7764-01.htm"
 				elif npcId == Cleo and cond == 8:
 					htmltext = "7766-01.htm"
 				elif npcId == Kusto and 6 > cond > 2:
 					htmltext = "7512-01a.htm"
-				elif npcId == Coffer and leaderCond == 10:
+				elif npcId == Coffer and cond == 10:
 					htmltext = "7765-01.htm"
 				elif npcId == Gustaf:
 					if cond == 3:
@@ -467,31 +495,31 @@ class Quest (JQuest) :
 						htmltext = "7766-24t.htm"
 				return htmltext
 
-	def onAttack(self, npc, st):												# just for the last mob to kill, which can teleport players out of range
+	def onAttack(self, npc, st):
 		npdId = npc.getNpcId()
 		if (npc.getMaxHp()/2) > npc.getCurrentHp():
 			if st.getRandom(100) < 4:
-				ImpGraveKepperStat = int(leader(st).get("ImpGraveKeeper"))
+				ImpGraveKepperStat = getLeaderVar(st,"ImpGraveKeeper")
 				if ImpGraveKepperStat == 1:
 					for i in range(4):
 						st.getPcSpawn().addSpawn(5180)
-					leader(st).set("ImpGraveKeeper","2")
+					setLeaderVar(st,"ImpGraveKeeper","2")
 				else:
 					players = npc.getKnownList().getKnownPlayers()
 					player = players[st.getRandom(int(players.size()))]
 					player.setXYZ(185462,20342,-3250)
-		return	
+		return
 
 	def onKill (self,npc,st):
 		npcId=npc.getNpcId()
 		condition,maxcount,chance,itemList = DROPLIST[npcId]
 		random = st.getRandom(100)
-		cond = leaderCond(st)
+		cond = getLeaderVar(st,"cond")
 		if cond == condition and random < chance:
 			if len(itemList) > 1:
 				stoneRandom = st.getRandom(3)
 				if stoneRandom == 0 :
-					if int(leader(st).get("Kurtz")) < 4:
+					if getLeaderVar(st,"Kurtz") < 4:
 						return
 					else:
 						maxcount*=4
@@ -501,7 +529,7 @@ class Quest (JQuest) :
 			else:
 				if npcId == 5181:								# Imperial Gravekeeper
 					st.getPcSpawn().addSpawn(7765,6000000,["Curse of the gods on the one that defiles the property of the empire!"],0)
-					leader(st).set("ImpGraveKeeper","3")
+					setLeaderVar(st,"ImpGraveKeeper","3")
 				else:
 					st.getPcSpawn().addSpawn(5179)
 		return
@@ -524,4 +552,4 @@ for mobId in DROPLIST.keys():
 
 PROGRESS.addAttackId(5181)
 
-print "importing quests: 503: PursuitClanAmbition"
+print "importing quests: " + qn
