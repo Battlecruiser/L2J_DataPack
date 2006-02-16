@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS clan_data (
   ally_name varchar(45) ,
   leader_id INT,
   crest_id INT,
+  crest_large_id INT,
   ally_crest_id INT,
   PRIMARY KEY  (clan_id),
   KEY `leader_id` (`leader_id`),
