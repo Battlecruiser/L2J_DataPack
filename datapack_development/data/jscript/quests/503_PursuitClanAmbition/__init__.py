@@ -200,34 +200,25 @@ class Quest (JQuest) :
 	def onEvent (self,event,st) :
 		htmltext = event
 # Events Gustaf
-		if event in ["7760_06","7760_07"]:
-			htmltext = "7760-08.htm"
+		if event == "7760-08.htm" :
 			st.giveItems(G_Let_Martien,1)
 			for var in STATS:
 				st.set(var,"1")
 			st.setState(PROGRESS)
-		elif event == "7760_11" :
-			htmltext = "7760-12.htm"
+		elif event == "7760-12.htm" :
 			st.giveItems(G_Let_Balthazar,1)
 			st.set("cond","4")
-		elif event == "7760_15" :
-			htmltext = "7760-16.htm"
+		elif event == "7760-16.htm" :
 			st.giveItems(G_Let_Rodemai,1)
 			st.set("cond","7")
-		elif event == "7760_19" :
-			htmltext = "7760-20.htm"
+		elif event == "7760-20.htm" :
 			exit503(1,st)
-		elif event == "7760_19a" :
-			htmltext = "7760-21.htm"
-		elif event in ["7760_21","7760_24"]:
-			htmltext = "7760-22.htm"
+		elif event == "7760-22.htm" :
 			st.set("cond","13")
-		elif event in ["7760_21a","7760_24a"]:
-			htmltext = "7760-23.htm"
+		elif event == "7760-23.htm" :
 			exit503(1,st)
 # Events Martien
-		elif event == "7645_02":
-			htmltext = "7645-03.htm"
+		elif event == "7645-03.htm":
 			st.takeItems(G_Let_Martien,-1)
 			st.set("cond","2")
 			suscribe_members(st) 
@@ -238,81 +229,63 @@ class Quest (JQuest) :
 			except:
 				return htmltext
 # Events Kurtz
-		elif event == "7763_01":
+		elif event == "7763-03.htm":
 			if int(st.get("Kurtz")) == 1:
 				htmltext = "7763-02.htm"
 				st.giveItems(Mi_Drake_Eggs,6)
 				st.giveItems(Brooch,1)
 				st.set("Kurtz","2")
-			else:
-				htmltext = "7763-03.htm"
-				
 # Events Lutz
-		elif event == "7762_01":
+		elif event == "7762-03.htm":
 			lutz = int(st.get("Lutz"))
 			if lutz == 1:
 				htmltext = "7762-02.htm"
 				st.giveItems(Mi_Drake_Eggs,4)
 				st.giveItems(Bl_Wyrm_Eggs,3)
 				st.set("Lutz","2")
-			else:
-				htmltext = "7762-03.htm"
 			st.getPcSpawn().addSpawn(5178,112268,112761,-2770,120000)
 			st.getPcSpawn().addSpawn(5178,112234,112705,-2770,120000)
-			
 # Events Fritz
-		elif event == "7761_01":
+		elif event == "7761-03.htm":
 			fritz = int(st.get("Fritz"))
 			if fritz == 1:
 				htmltext = "7761-02.htm"
 				st.giveItems(Bl_Wyrm_Eggs,3)
 				st.set("Fritz","2")
-			else:
-				htmltext = "7761-03.htm"
 			st.getPcSpawn().addSpawn(5178,103841,116809,-3025,120000)
 			st.getPcSpawn().addSpawn(5178,103848,116910,-3020,120000)
-			
 # Events Kusto
-		elif event == "7512_02":
-			htmltext = "7512-03.htm"
+		elif event == "7512-03.htm":
 			st.takeItems(Brooch,1)
 			st.giveItems(Bl_Anvil_Coin,1)
 			st.set("Kurtz","3")
 # Events Balthazar
-		elif event == "7764_02":
-			htmltext = "7764-03.htm"
+		elif event == "7764-03.htm":
 			st.takeItems(G_Let_Balthazar,-1)
 			st.set("cond","5")
 			st.set("Kurtz","3")
-		elif event == "7764_04":
-			htmltext = "7764-05.htm"
+		elif event == "7764-05.htm":
 			st.takeItems(G_Let_Balthazar,-1)
 			st.set("cond","5")
-		elif event == "7764_05":
-			htmltext = "7764-06.htm"
+		elif event == "7764-06.htm":
 			st.takeItems(Bl_Anvil_Coin,-1)
 			st.set("Kurtz","4")
 			st.giveItems(Recipe_Power_Stone,1)
 # Events Rodemai
-		elif event == "7756_03":
-			htmltext = "7756-04.htm"
+		elif event == "7868-04.htm":
 			st.takeItems(G_Let_Rodemai,-1)
 			st.set("cond","8")
-		elif event == "7756_06":
-			htmltext = "7756-06a.htm"
+		elif event == "7868-06a.htm":
 			st.set("cond","10")
-		elif event == "7756_09":
-			htmltext = "7756-10.htm"
+		elif event == "7868-10.htm":
 			st.set("cond","12")
 # Events Cleo
-		elif event == "7766_03":
-			htmltext = "7766-04.htm"
+		elif event == "7766-04.htm":
 			st.set("cond","9")
 			st.getPcSpawn().addSpawn(7766,160622,21230,-3710,100,["Blood and Honour"],0)
 			st.getPcSpawn().addSpawn(7759,160665,21209,-3710,6000,["Ambition and Power"],0)
 			st.getPcSpawn().addSpawn(7758,160665,21291,-3710,6000,["War and Death"],0)
-		elif event == "7766_07":
-			htmltext = "7766-08.htm"
+		elif event == "7766-08.htm":
 			st.takeItems(Scepter_Judgement,-1)
 			exit503(0,st)
 		return htmltext
@@ -427,17 +400,17 @@ class Quest (JQuest) :
 						htmltext = "7764-09.htm"
 				elif npcId == Rodemai:
 					if cond == 7:
-						htmltext = "7756-02.htm"
+						htmltext = "7868-02.htm"
 					elif cond == 8:
-						htmltext = "7756-05.htm"
+						htmltext = "7868-05.htm"
 					elif cond == 9:
-						htmltext = "7756-06.htm"
+						htmltext = "7868-06.htm"
 					elif cond == 10:
-						htmltext = "7756-08.htm"
+						htmltext = "7868-08.htm"
 					elif cond == 11:
-						htmltext = "7756-09.htm"
+						htmltext = "7868-09.htm"
 					elif cond == 12:
-						htmltext = "7756-11.htm"
+						htmltext = "7868-11.htm"
 				elif npcId == Cleo:
 					if cond == 8:
 						htmltext = "7766-02.htm"
@@ -473,9 +446,9 @@ class Quest (JQuest) :
 					htmltext = "7645-01.htm"
 				elif npcId == Rodemai :
 					if cond in [9,10]:
-						htmltext = "7645-07.htm"
+						htmltext = "7868-07.htm"
 					elif cond == 7:
-						htmltext = "7756-01.htm"
+						htmltext = "7868-01.htm"
 				elif npcId == Balthazar and cond == 4:
 					htmltext = "7764-01.htm"
 				elif npcId == Cleo and cond == 8:
