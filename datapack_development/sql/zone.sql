@@ -81,6 +81,8 @@ insert into zone values (9, 'Town', 'Giran Castle Town', 76995, 141424, 90565, 1
 insert into zone values (10, 'Town', 'Town of Oren', 76696, 57199, 84511, 50120, 0, 4);
 insert into zone values (11, 'Town', 'Hunter Village', 121308, 73941, 114667, 80383, 0, 5);
 insert into zone values (12, 'Town', 'Town of Aden', 142312, 32317, 152163, 19708, 0, 5);
+insert into zone values (13, 'Town','Goddard',160432,-46726,130432,-50726,0,5);
+insert into zone values (14, 'Town','Rune Castle Town',41446,-45245,48000,-52000,0,6);
 insert into zone values (15, 'Town', 'Heine', 103598, 216010, 118991, 225905, 0, 6);
 insert into zone values (16, 'Town', 'Floran Village', 0, 0, 0, 0, 0, 2);
 insert into zone values (17, 'Town', 'Ivory Tower', 0, 0, 0, 0, 0, 4);
@@ -97,6 +99,8 @@ insert into zone values (9, 'Town Spawn', 'Giran Castle Town', 83235, 148497, 0,
 insert into zone values (10, 'Town Spawn', 'Town of Oren', 80853, 54653, 0, 0, -1524, 0);
 insert into zone values (11, 'Town Spawn', 'Hunter Village', 117163, 76511, 0, 0, -2712, 0);
 insert into zone values (12, 'Town Spawn', 'Town of Aden', 147391, 25967, 0, 0, -2012, 0);
+insert into zone values (13, 'Town Spawn','Goddard',147432,-48726,0,0,-2277,0);
+insert into zone values (14, 'Town Spawn','Rune Castle Town',59425,-47753,0,0,-2562,0);
 insert into zone values (15, 'Town Spawn', 'Heine', 111381, 219064, 0, 0, -3543, 0);
 insert into zone values (16, 'Town Spawn', 'Floran Village', 17817, 170079, 0, 0, -3530, 0);
 insert into zone values (17, 'Town Spawn', 'Ivory Tower', 0, 0, 0, 0, 0, 0);
