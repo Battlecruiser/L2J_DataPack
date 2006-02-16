@@ -1,6 +1,7 @@
 #----------------------------
 # Table structure for class_list
 #----------------------------
+DROP TABLE IF EXISTS class_list;
 CREATE TABLE `class_list` (
   `class_name` varchar(19) NOT NULL default '',
   `id` int(10) unsigned NOT NULL default '0',
