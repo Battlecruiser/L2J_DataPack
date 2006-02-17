@@ -1,10 +1,12 @@
 # Weapon SA Quest Written By MickyLee
+# rewritten by Questdevs Team
 print "importing quests: 350: Enhance Your Weapon"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+NPC=[7115,7856,7194];
 
 RED_SOUL_CRYSTAL0_ID = 4629
 RED_SOUL_CRYSTAL1_ID = 4630
@@ -50,50 +52,18 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7115_1" :
-       htmltext = "7115-02.htm"
-    elif event == "1" :
+    if event ["7115-04.htm","7856-04.htm","7194-04.htm"] :
         st.set("cond","1")
         st.set("id","0")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
-        htmltext = "7115-04.htm"
-    elif event == "7115_2" :
-        htmltext = "7115-05.htm"
-    elif event == "7115_3" :
-        htmltext = "7115-06.htm"
-    elif event == "7115_4" :
-        htmltext = "7115-07.htm"
-    elif event == "7115_5" :
-        htmltext = "7115-08.htm"
-    elif event == "7115_6" :
+    elif event ["7115-09.htm","7856-09.htm","7194-09.htm"] :
         st.giveItems(RED_SOUL_CRYSTAL0_ID,1)
-        htmltext = "7115-09.htm"
-    elif event == "7115_7" :
+    elif event ["7115-10.htm","7856-10.htm","7194-10.htm"] :
         st.giveItems(GREEN_SOUL_CRYSTAL0_ID,1)
-        htmltext = "7115-10.htm"
-    elif event == "7115_8" :
+    elif event in ["7115-11.htm","7856-11.htm","7194-11.htm"] :
         st.giveItems(BLUE_SOUL_CRYSTAL0_ID,1)
-        htmltext = "7115-11.htm"
-    elif event == "7115_9" :
-        htmltext = "7115-12.htm"
-    elif event == "7115_10" :
-        htmltext = "7115-13.htm"
-    elif event == "7115_11" :
-        htmltext = "7115-14.htm"
-    elif event == "7115_12" :
-        htmltext = "7115-15.htm"
-    elif event == "7115_13" :
-        htmltext = "7115-16.htm"
-    elif event == "7115_14" :
-        htmltext = "7115-17.htm"
-    elif event == "7115_15" :
-        htmltext = "7115-18.htm"
-    elif event == "7115_16" :
-        htmltext = "7115-19.htm"
-    elif event == "7115_17" :
-        htmltext = "7115-20.htm"
-    elif event == "7115_18" :
+    elif event == "exit" :
         st.set("cond","0")
         st.setState(COMPLETED)
     return htmltext
@@ -109,12 +79,12 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 7115 and int(st.get("cond")) == 0:   
-        htmltext = "7115-01.htm"
-   elif npcId == 7115 and int(st.get("cond")) == 1 and st.getQuestItemsCount(RED_SOUL_CRYSTAL0_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL0_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL0_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL1_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL2_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL3_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL4_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL5_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL6_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL7_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL8_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL9_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL10_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL1_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL2_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL3_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL4_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL5_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL6_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL7_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL8_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL9_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL10_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL1_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL2_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL3_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL4_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL5_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL6_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL7_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL8_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL9_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL10_ID) != 0 :
-        htmltext = "7115-03.htm"
-   elif npcId == 7115 and int(st.get("cond")) == 1 and st.getQuestItemsCount(RED_SOUL_CRYSTAL0_ID) == 0 and st.getQuestItemsCount(GREEN_SOUL_CRYSTAL0_ID) == 0 and st.getQuestItemsCount(BLUE_SOUL_CRYSTAL0_ID) == 0 :
-        htmltext = "7115-21.htm"
+   if npcId in NPC and int(st.get("cond")) == 0:   
+        htmltext = npcId+"-01.htm"
+   elif npcId in NPC and int(st.get("cond")) == 1 and st.getQuestItemsCount(RED_SOUL_CRYSTAL0_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL0_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL0_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL1_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL2_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL3_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL4_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL5_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL6_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL7_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL8_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL9_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL10_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL1_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL2_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL3_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL4_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL5_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL6_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL7_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL8_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL9_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL10_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL1_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL2_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL3_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL4_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL5_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL6_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL7_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL8_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL9_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL10_ID) != 0 :
+        htmltext = npcId+"-03.htm"
+   elif npcId in NPC and int(st.get("cond")) == 1 and st.getQuestItemsCount(RED_SOUL_CRYSTAL0_ID) == 0 and st.getQuestItemsCount(GREEN_SOUL_CRYSTAL0_ID) == 0 and st.getQuestItemsCount(BLUE_SOUL_CRYSTAL0_ID) == 0 :
+        htmltext = npcId+"-21.htm"
    return htmltext
 
  
@@ -127,11 +97,11 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7115)
+QUEST.addStartNpc(7115,7856,7194)
 
-STARTING.addTalkId(7115)
+STARTING.addTalkId(7115,7856,7194)
 
-STARTED.addTalkId(7115)
+STARTED.addTalkId(7115,7856,7194)
 
 
 STARTED.addQuestDrop(4629,RED_SOUL_CRYSTAL0_ID,1)
