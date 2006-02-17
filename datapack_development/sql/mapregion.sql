@@ -1,24 +1,24 @@
 -- 
--- Table structure for table `mapregion` 
+-- Table structure for table `mapregion`
 -- 
-DROP TABLE IF EXISTS mapregion; 
-CREATE TABLE `mapregion` ( 
-`region` int(11) NOT NULL default '0', 
-`sec0` int(2) NOT NULL default '0', 
-`sec1` int(2) NOT NULL default '0', 
-`sec2` int(2) NOT NULL default '0', 
-`sec3` int(2) NOT NULL default '0', 
-`sec4` int(2) NOT NULL default '0', 
-`sec5` int(2) NOT NULL default '0', 
-`sec6` int(2) NOT NULL default '0', 
-`sec7` int(2) NOT NULL default '0', 
-`sec8` int(2) NOT NULL default '0', 
-`sec9` int(2) NOT NULL default '0', 
-PRIMARY KEY (`region`) 
-) TYPE=MyISAM; 
+DROP TABLE IF EXISTS mapregion;
+CREATE TABLE `mapregion` (
+`region` int(11) NOT NULL default '0',
+`sec0` int(2) NOT NULL default '0',
+`sec1` int(2) NOT NULL default '0',
+`sec2` int(2) NOT NULL default '0',
+`sec3` int(2) NOT NULL default '0',
+`sec4` int(2) NOT NULL default '0',
+`sec5` int(2) NOT NULL default '0',
+`sec6` int(2) NOT NULL default '0',
+`sec7` int(2) NOT NULL default '0',
+`sec8` int(2) NOT NULL default '0',
+`sec9` int(2) NOT NULL default '0',
+PRIMARY KEY (`region`)
+) TYPE=MyISAM;
 
--- 
--- Dumping data for table `mapregion` 
+--
+-- Dumping data for table `mapregion`
 -- 
 
 INSERT INTO mapregion VALUES 
