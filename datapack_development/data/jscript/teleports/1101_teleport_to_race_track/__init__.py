@@ -1,12 +1,12 @@
 #
-# Created by DraX on 2005.07.27
+# Created by DraX on 2005.07.27. updated by mr.
 #
 
 print "importing teleport data: 1101_teleport_to_race_track"
 
 import sys
 
-from net.sf.l2j.gameserver.model              import L2PcInstance
+from net.sf.l2j.gameserver.model.actor.instance import L2PcInstance
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -19,6 +19,8 @@ BELLA        = 7256
 RICHLIN	     = 7320
 ELISA        = 7848
 FLAUEN       = 7899
+TATIANA	     = 8275
+ILYANA	     = 8320
 RACE_MANAGER = 7995
 
 class Quest (JQuest) :
@@ -89,6 +91,20 @@ class Quest (JQuest) :
      st.set("id","8")     
      return
 
+   # Rune Town
+   if npcId == ILYANA: 
+     st.player.teleToLocation(12661,181687,-3560)
+     st.setState(STARTED)
+     st.set("id","9")     
+     return
+
+   # Goddard Castle Town
+   if npcId == TATIANA: 
+     st.player.teleToLocation(12661,181687,-3560)
+     st.setState(STARTED)
+     st.set("id","10")     
+     return
+
    ############################
    # Monster Derby Race Track #
    ############################
@@ -149,6 +165,20 @@ class Quest (JQuest) :
      st.exitQuest(1)
      return
 
+   # back to Rune Village
+   if npcId == RACE_MANAGER and int(st.get("id")) == 9:
+     st.player.teleToLocation(43835,-47749,-792)
+     st.setState(COMPLETED)
+     st.exitQuest(1)
+     return
+
+   # back to Goddard Castle Town
+   if npcId == RACE_MANAGER and int(st.get("id")) == 10:
+     st.player.teleToLocation(147930,-55281,-2728)
+     st.setState(COMPLETED)
+     st.exitQuest(1)
+     return
+
 QUEST       = Quest(1101,"1101_teleport_to_race_track","Teleports")
 CREATED     = State('Start',     QUEST)
 STARTED     = State('Started',   QUEST)
@@ -164,6 +194,8 @@ QUEST.addStartNpc(BELLA)
 QUEST.addStartNpc(RICHLIN)
 QUEST.addStartNpc(ELISA)
 QUEST.addStartNpc(FLAUEN)
+QUEST.addStartNpc(ILYANA)
+QUEST.addStartNpc(TATIANA)
 
 CREATED.addTalkId(TRISHA)
 CREATED.addTalkId(CLARISSA)
@@ -173,5 +205,7 @@ CREATED.addTalkId(BELLA)
 CREATED.addTalkId(RICHLIN)
 CREATED.addTalkId(ELISA)
 CREATED.addTalkId(FLAUEN)
+CREATED.addTalkId(ILYANA)
+CREATED.addTalkId(TATIANA)
 
 STARTED.addTalkId(RACE_MANAGER)
