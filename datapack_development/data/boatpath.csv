@@ -1,0 +1,7 @@
+#id;nbpoint;(speed1;speed2;x;y;z;time(ms))
+#
+# Speed1 : Speed of the boat
+# Speed2 : rotation speed of the boat
+# time   : -  > 0:  if the boat has reached the point before the time is spent, the boat wait !
+#                   else if the time is spent and the boat has not reached the point, server will pass to the next point
+#          -  < 0:  lets server calculate when the boat reachs the point (/!\ don't use time < 0 when you do a rotation with the boat.)
