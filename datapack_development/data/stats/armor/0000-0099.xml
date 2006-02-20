@@ -13,10 +13,11 @@
 <item id='23' name="Wooden Breastplate">
  <for>
    <add stat='pDef' order='0x10'  val='47'/>
-   <add stat='maxHp' order='0x40' val='41'/>
+   <add stat='maxHp' order='0x40' val='41'>
      <and><using slotitem="43;6"/>
      <using slotitem="2386;11"/></and>
-   <mul stat='pDef' order='0x40' val='2'>
+    </add>
+   <mul stat='pDef' order='0x40' val='1.02'>
      <and><using slotitem="43;6"/>
      <using slotitem="2386;11"/></and>
    </mul>
