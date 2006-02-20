@@ -36,7 +36,7 @@ EnhanceList={
 132:["weapon_sword_of_limit_i01", [["Guidance", 6307, 4636, 2131, 450], ["Critical Drain", 6308, 4647, 2131, 450], ["Health", 6309, 4658, 2131, 450]]], 
 145:["weapon_deathbreath_sword_i01", [["Empower", 6310, 4636, 2131, 450], ["Magic Power", 6311, 4647, 2131, 450], ["Magic Silence", 6312, 4658, 2131, 450]]], 
 84:["weapon_homunkuluss_sword_i01", [["Acumen", 6313, 4636, 2131, 450], ["Conversion", 6314, 4647, 2131, 450], ["Magic Paralyze", 6315, 4658, 2131, 450]]], 
-85:["weapon_caliburs_i01", [["Guidance", 4696, 4636, 2131, 350], ["Focus", 4697, 4647, 2131, 350], ["Critical Damage", 4698, 4658, 2131, 350]]], 
+75:["weapon_caliburs_i01", [["Guidance", 4696, 4636, 2131, 350], ["Focus", 4697, 4647, 2131, 350], ["Critical Damage", 4698, 4658, 2131, 350]]], 
 135:["weapon_samurai_longsword_i01", [["Focus", 4708, 4637, 2131, 450], ["Critical Damage", 4709, 4648, 2131, 450], ["Haste", 4710, 4659, 2131, 450]]], 
 71:["weapon_flamberge_i01", [["Critical Damage", 4711, 4634, 2131, 222], ["Focus", 4712, 4645, 2131, 222], ["Light", 4713, 4656, 2131, 222]]], 
 5286:["weapon_berserker_blade_i01", [["Focus", 6347, 4637, 2131, 350], ["Critical Damage", 6348, 4648, 2131, 350], ["Haste", 6349, 4659, 2131, 350]]], 
