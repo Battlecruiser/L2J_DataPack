@@ -143,6 +143,8 @@ __all__ = [
 '419_GetAPet',
 '420_LittleWings',
 '421_LittleWingAdventures',
+'431_WeddingMarch',
+'432_BirthdayPartySong',
 '501_ProofOfClanAlliance',
 '999_C3Tutorial'
 ]
