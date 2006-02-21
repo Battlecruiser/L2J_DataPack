@@ -83,6 +83,7 @@ EnhanceList={
 298:["weapon_orcish_glaive_i01", [["Anger", 4837, 4634, 2132, 250], ["Critical Stun", 4838, 4645, 2132, 250], ["Long Blow", 4839, 4656, 2132, 250]]], 
 302:["weapon_body_slasher_i01", [["Critical Stun", 4840, 4634, 2132, 250], ["Long Blow", 4841, 4645, 2132, 250], ["Wide Blow", 4842, 4656, 2132, 250]]], 
 94:["weapon_bech_de_corbin_i01", [["Critical Stun", 4843, 4635, 2132, 350], ["Long Blow", 4844, 4646, 2132, 350], ["Light", 4845, 4657, 2132, 350]]], 
+95:["weapon_poleaxe_i01",[["Critical Stun", 7719, 4635, 2132, 350], ["Long Blow", 7720, 4646, 2132, 350], ["Wide Blow", 7721, 4656, 2132, 250]]],
 # Fist'
 263:["weapon_chakram_i01", [["Critical Drain", 4789, 4634, 2131, 250], ["Critical Poison", 4790, 4645, 2131, 250], ["Rsk. Haste", 4791, 4656, 2131, 250]]], 
 265:["weapon_fist_blade_i01", [["Rsk. Evasion", 4792, 4635, 2131, 350], ["Rsk. Haste", 4793, 4646, 2131, 350], ["Haste", 4794, 4657, 2131, 350]]], 
