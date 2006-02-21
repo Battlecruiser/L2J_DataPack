@@ -6,7 +6,7 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-NPC=[7115,7856,7194];
+NPC=[7115,7856,7194]
 
 RED_SOUL_CRYSTAL0_ID = 4629
 RED_SOUL_CRYSTAL1_ID = 4630
