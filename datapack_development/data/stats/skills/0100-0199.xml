@@ -334,7 +334,7 @@
 <table name="#mpConsume"> 29 32 34 35 38 40 42 44 45 47 48 50 52 53 </table>
  <set name="mpConsume" val="#mpConsume"/>
  <set name="save" val="6"/>
- <set name="power" val="0.0"/>
+ <set name="power" val="10"/>
  <set name="target" val="TARGET_AREA"/>
  <set name="skillRadius" val="205"/>
  <set name="hitTime" val="2000"/>
@@ -1205,7 +1205,7 @@
 </skill>
 <skill id="181" levels="1" name="Revival">
   <set name="mpConsume" val="25"/>
-  <set name="power" val="1685.0"/>
+  <set name="power" val="6000"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1000"/>
   <set name="condition" val="32"/>
