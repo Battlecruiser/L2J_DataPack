@@ -146,6 +146,7 @@ __all__ = [
 '431_WeddingMarch',
 '432_BirthdayPartySong',
 '501_ProofOfClanAlliance',
+'503_PursuitClanAmbition',
 '999_C3Tutorial'
 ]
 print ""
