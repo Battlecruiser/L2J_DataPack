@@ -117,3 +117,5 @@ insert into zone values (9, 'Underground', 'Hunter Village', 1234573, 68112, 985
 insert into zone values (10, 'Underground', 'DE Village', 34061, 8905, -7877, 26384, -6000, 0);
 
 insert into zone values (1, 'Water', 'ascetics necropolis', -56190, 78595, -55175, 79600, -3061, 0);
+
+insert into zone values (1,'No Landing', 'ToI', 109448, 10233,118547,21446,0,0);
