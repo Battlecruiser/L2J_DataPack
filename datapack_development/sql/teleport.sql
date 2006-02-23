@@ -104,8 +104,6 @@ insert  into teleport values
 ('Aden -> The Forbidden Gateway','82','185319','20218','-3264','840'),
 ('Aden -> The Front of Anghell Waterfall','83','163341','91374','-3320','2400'),
 ('Aden -> Forsaken Plains','84','167285','37109','-4008','840'),
-('Aden -> Rune Castle Town','108','43835','-47749','-792','25000'),
-('Aden -> Goddard Castle Town','109','147930','-55281','-2728','16000'),
 ('Dion -> Heine','85','111409','219364','-3545','9800'),
 ('Dion -> Partisan Hideaway','86','46467','126885','-3720','1900'),
 ('Dion -> Bee Hive','87','20505','189036','-3344','2500'),
@@ -128,16 +126,6 @@ insert  into teleport values
 ('Hunters -> Ascetics Necropolis','104','-55385','78667','-3012','14500'),
 ('Hunters -> Saints Necropolis','105','79296','209584','-3704','11500'),
 ('Hunters -> Catacomb of Dark Omens','106','-23165','13827','-3172','12800'),
-
-('Rune Castle Town -> Goddard Castle Town','110','147930','-55281','-2728','12000'),
-('Rune Castle Town -> Aden','112','146331','25762','-2018','15000'),
-('Rune Castle Town -> Giran','111','83400','147943','-3404','25000'),
--- ('Rune Castle Town -> Rune Castle Town Guild','113','148053','26659','-2200','15000'),
--- ('Rune Castle Town -> Rune Castle Town Temple','114','146331','25762','-2018','15000'),
-
-('Goddard Castle Town -> Aden','130','146331','25762','-2018','15000'),
-('Goddard Castle Town -> Rune Castle Town','131','43835','-47749','-792','25000'),
-
 
 ('TOI - 1st Floor','201','115168','16022','-5100','100000'),
 ('TOI - 2nd Floor','202','114649','18587','-3609','150000'),
