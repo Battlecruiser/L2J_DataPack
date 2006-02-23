@@ -65,7 +65,7 @@ class Quest (JQuest) :
         st.giveItems(BLUE_SOUL_CRYSTAL0_ID,1)
     elif event == "exit" :
         st.set("cond","0")
-        st.setState(COMPLETED)
+        st.exitQuest(1)
     return htmltext
 
 
