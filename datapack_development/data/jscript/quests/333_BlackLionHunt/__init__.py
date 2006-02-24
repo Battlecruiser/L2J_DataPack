@@ -453,6 +453,7 @@ class Quest (JQuest) :
 			if st.getQuestItemsCount(CARGO_BOX1):
 				coins = st.getQuestItemsCount(GUILD_COIN)
 				count = int(coins/40)
+				if count > 2 : count = 2
 				st.giveItems(GUILD_COIN,1)
 				st.giveItems(ADENA_ID,(1+count)*100)
 				st.takeItems(CARGO_BOX1,1)
