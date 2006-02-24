@@ -1011,7 +1011,7 @@ INSERT INTO `weapon` VALUES (1, 'Short Sword', 'rhand', 'false', 1600, 1, 1, 'st
 (7702, 'Stick of Faith Magic Hold', 'rhand', 'true', 1160, 2, 2, 'wood', 'c', 85, 20, 'blunt', 4, 4.00000, 0, 0, 0, 379, 0, 81, 85, 0, 0, 'true'),
 (7703, 'Stick of Faith Magic Shield', 'rhand', 'true', 1160, 2, 2, 'wood', 'c', 85, 20, 'blunt', 4, 4.00000, 0, 0, 0, 379, 0, 81, 85, 0, 0, 'true'),
 (7704, 'Stick of Eternity Empower', 'rhand', 'true', 1130, 3, 3, 'wood', 'c', 111, 20, 'blunt', 4, 4.00000, 0, 0, 0, 379, 0, 101, 95, 0, 0, 'true'),
-(7705, 'Stick of Eternity Rsk., Evasion', 'rhand', 'true', 1130, 3, 3, 'wood', 'c', 111, 20, 'blunt', 4, 4.00000, 0, 0, 0, 379, 0, 101, 95, 0, 0, 'true'),
+(7705, 'Stick of Eternity Rsk. Evasion', 'rhand', 'true', 1130, 3, 3, 'wood', 'c', 111, 20, 'blunt', 4, 4.00000, 0, 0, 0, 379, 0, 101, 95, 0, 0, 'true'),
 (7706, 'Stick of Eternity Bless the Body', 'rhand', 'true', 1130, 3, 3, 'wood', 'c', 111, 20, 'blunt', 4, 4.00000, 0, 0, 0, 379, 0, 101, 95, 0, 0, 'true'),
 (7707, 'Nirvana Axe Magic Power', 'rhand', 'true', 1150, 3, 3, 'fine_steel', 'c', 111, 20, 'blunt', 4, 4.00000, 0, 0, 0, 379, 0, 101, 95, 0, 0, 'true'),
 (7708, 'Nirvana Axe Magic Poison', 'rhand', 'true', 1150, 3, 3, 'fine_steel', 'c', 111, 20, 'blunt', 4, 4.00000, 0, 0, 0, 379, 0, 101, 95, 0, 0, 'true'),
