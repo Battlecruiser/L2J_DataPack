@@ -1,38 +1,39 @@
---
+-- 
 -- Table structure for table `weapon`
---
-DROP TABLE IF EXISTS weapon;
-CREATE TABLE weapon (
-  item_id decimal(11,0) NOT NULL default '0',
-  name varchar(39) default NULL,
-  bodypart varchar(15) default NULL,
-  crystallizable varchar(5) default NULL,
-  weight decimal(4,0) default NULL,
-  soulshots decimal(2,0) default NULL,
-  spiritshots decimal(1,0) default NULL,
-  material varchar(11) default NULL,
-  crystal_type varchar(4) default NULL,
-  p_dam decimal(5,0) default NULL,
-  rnd_dam decimal(2,0) default NULL,
-  weaponType varchar(8) default NULL,
-  critical decimal(2,0) default NULL,
-  hit_modify decimal(6,5) default NULL,
-  avoid_modify decimal(2,0) default NULL,
-  shield_def decimal(3,0) default NULL,
-  shield_def_rate decimal(2,0) default NULL,
-  atk_speed decimal(3,0) default NULL,
-  mp_consume decimal(2,0) default NULL,
-  m_dam decimal(3,0) default NULL,
-  durability decimal(3,0) default NULL,
-  price decimal(11,0) default NULL,
-  crystal_count int(4) default NULL,
-  sellable varchar(5) default NULL,
-  PRIMARY KEY  (item_id)
+-- 
+
+DROP TABLE IF EXISTS `weapon`;
+CREATE TABLE `weapon` (
+  `item_id` decimal(11,0) NOT NULL default '0',
+  `name` varchar(39) default NULL,
+  `bodypart` varchar(15) default NULL,
+  `crystallizable` varchar(5) default NULL,
+  `weight` decimal(4,0) default NULL,
+  `soulshots` decimal(2,0) default NULL,
+  `spiritshots` decimal(1,0) default NULL,
+  `material` varchar(11) default NULL,
+  `crystal_type` varchar(4) default NULL,
+  `p_dam` decimal(5,0) default NULL,
+  `rnd_dam` decimal(2,0) default NULL,
+  `weaponType` varchar(8) default NULL,
+  `critical` decimal(2,0) default NULL,
+  `hit_modify` decimal(6,5) default NULL,
+  `avoid_modify` decimal(2,0) default NULL,
+  `shield_def` decimal(3,0) default NULL,
+  `shield_def_rate` decimal(2,0) default NULL,
+  `atk_speed` decimal(3,0) default NULL,
+  `mp_consume` decimal(2,0) default NULL,
+  `m_dam` decimal(3,0) default NULL,
+  `durability` decimal(3,0) default NULL,
+  `price` decimal(11,0) default NULL,
+  `crystal_count` int(4) default NULL,
+  `sellable` varchar(5) default NULL,
+  PRIMARY KEY  (`item_id`)
 ) TYPE=MyISAM;
 
---
+-- 
 -- Dumping data for table `weapon`
---
+-- 
 
 INSERT INTO `weapon` VALUES (1, 'Short Sword', 'rhand', 'false', 1600, 1, 1, 'steel', 'none', 8, 10, 'sword', 8, 0.00000, 0, 0, 0, 379, 0, 6, 95, 768, 0, 'true'),
 (2, 'Long Sword', 'rhand', 'false', 1560, 2, 2, 'fine_steel', 'none', 24, 10, 'sword', 8, 0.00000, 0, 0, 0, 379, 0, 17, 95, 136000, 0, 'true'),
@@ -936,12 +937,12 @@ INSERT INTO `weapon` VALUES (1, 'Short Sword', 'rhand', 'false', 1600, 1, 1, 'st
 (6371, 'Demon Splinter', 'lrhand', 'true', 1350, 1, 1, 'adamantaite', 's', 342, 5, 'dualfist', 4, 4.00000, 0, 0, 0, 325, 0, 132, 95, 0, 2160, 'true'),
 (6372, 'Heaven''s Divider', 'lrhand', 'true', 1380, 1, 1, 'adamantaite', 's', 342, 10, 'bigsword', 8, 0.00000, 0, 0, 0, 325, 0, 132, 95, 0, 1, 'true'),
 (6377, 'Imperial Crusader Shield', 'lhand', 'true', 1170, 0, 0, 'bone', 's', 0, 0, 'none', 0, 0.00000, -8, 290, 20, 0, 0, 0, 100, 0, 0, 'true'),
-(6529, 'Baby Duck Rod', 'lrhand', 'false', 1000, 0, 0, 'bone', 'none', 1, 1, 'rod', 0, -3.00000, 0, 0, 0, 325, 0, 1, 0, 0, 0, 'true'),
-(6530, 'Albatross Rod', 'lrhand', 'false', 1000, 0, 0, 'bone', 'd', 1, 1, 'rod', 0, -3.00000, 0, 0, 0, 325, 0, 1, 0, 0, 0, 'true'),
-(6531, 'Pelican Rod', 'lrhand', 'false', 1000, 0, 0, 'bone', 'c', 1, 1, 'rod', 0, -3.00000, 0, 0, 0, 325, 0, 1, 0, 0, 0, 'true'),
-(6532, 'Kingfisher Rod', 'lrhand', 'false', 1000, 0, 0, 'bone', 'b', 1, 1, 'rod', 0, -3.00000, 0, 0, 0, 325, 0, 1, 0, 0, 0, 'true'),
-(6533, 'Cygnus Pole', 'lrhand', 'false', 1000, 0, 0, 'bone', 'a', 1, 1, 'rod', 0, -3.00000, 0, 0, 0, 325, 0, 1, 0, 0, 0, 'true'),
-(6534, 'Triton Pole', 'lrhand', 'false', 1000, 0, 0, 'bone', 's', 1, 1, 'rod', 0, -3.00000, 0, 0, 0, 325, 0, 1, 0, 0, 0, 'true'),
+(6529, 'Baby Duck Rod', 'lrhand', 'false', 1000, 0, 0, 'bone', 'none', 1, 1, 'rod', 0, -3.00000, 0, 0, 0, 325, 0, 1, 0, 18000, 0, 'true'),
+(6530, 'Albatross Rod', 'lrhand', 'false', 1000, 0, 0, 'bone', 'd', 1, 1, 'rod', 0, -3.00000, 0, 0, 0, 325, 0, 1, 0, 60000, 0, 'true'),
+(6531, 'Pelican Rod', 'lrhand', 'false', 1000, 0, 0, 'bone', 'c', 1, 1, 'rod', 0, -3.00000, 0, 0, 0, 325, 0, 1, 0, 240000, 0, 'true'),
+(6532, 'Kingfisher Rod', 'lrhand', 'false', 1000, 0, 0, 'bone', 'b', 1, 1, 'rod', 0, -3.00000, 0, 0, 0, 325, 0, 1, 0, 720000, 0, 'true'),
+(6533, 'Cygnus Pole', 'lrhand', 'false', 1000, 0, 0, 'bone', 'a', 1, 1, 'rod', 0, -3.00000, 0, 0, 0, 325, 0, 1, 0, 2400000, 0, 'true'),
+(6534, 'Triton Pole', 'lrhand', 'false', 1000, 0, 0, 'bone', 's', 1, 1, 'rod', 0, -3.00000, 0, 0, 0, 325, 0, 1, 0, 6000000, 0, 'true'),
 (6579, 'Arcana Mace', 'rhand', 'true', 1300, 1, 1, 'adamantaite', 's', 225, 20, 'blunt', 4, 4.00000, 0, 0, 0, 379, 0, 175, 95, 0, 0, 'true'),
 (6580, 'Tallum Blade*Dark Legion''s Edge', 'lrhand', 'true', 2080, 1, 1, 'adamantaite', 's', 342, 10, 'dual', 8, 0.00000, 0, 0, 0, 325, 0, 132, 95, 0, 0, 'true'),
 (6581, 'Forgotten Blade Haste', 'rhand', 'true', 1300, 1, 1, 'adamantaite', 's', 281, 10, 'sword', 8, 0.00000, 0, 0, 0, 379, 0, 132, 95, 0, 0, 'true'),
