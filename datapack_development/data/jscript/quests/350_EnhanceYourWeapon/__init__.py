@@ -1,6 +1,5 @@
 # Weapon SA Quest Written By MickyLee
 # rewritten by Questdevs Team
-print "importing quests: 350: Enhance Your Weapon"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -54,7 +53,6 @@ class Quest (JQuest) :
     htmltext = event
     if event ["7115-04.htm","7856-04.htm","7194-04.htm"] :
         st.set("cond","1")
-        st.set("id","0")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
     elif event ["7115-09.htm","7856-09.htm","7194-09.htm"] :
@@ -64,27 +62,23 @@ class Quest (JQuest) :
     elif event in ["7115-11.htm","7856-11.htm","7194-11.htm"] :
         st.giveItems(BLUE_SOUL_CRYSTAL0_ID,1)
     elif event == "exit" :
-        st.set("cond","0")
         st.exitQuest(1)
     return htmltext
 
 
  def onTalk (Self,npc,st):
-
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   htmltext = "<html><head><body>I have nothing to say to you</body></html>"
    id = st.getState()
    if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId in NPC and int(st.get("cond")) == 0:   
-        htmltext = npcId+"-01.htm"
+     htmltext = npcId+"-01.htm"
    elif npcId in NPC and int(st.get("cond")) == 1 and st.getQuestItemsCount(RED_SOUL_CRYSTAL0_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL0_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL0_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL1_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL2_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL3_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL4_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL5_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL6_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL7_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL8_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL9_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL10_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL1_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL2_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL3_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL4_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL5_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL6_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL7_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL8_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL9_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL10_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL1_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL2_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL3_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL4_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL5_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL6_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL7_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL8_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL9_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL10_ID) != 0 :
-        htmltext = npcId+"-03.htm"
+     htmltext = npcId+"-03.htm"
    elif npcId in NPC and int(st.get("cond")) == 1 and st.getQuestItemsCount(RED_SOUL_CRYSTAL0_ID) == 0 and st.getQuestItemsCount(GREEN_SOUL_CRYSTAL0_ID) == 0 and st.getQuestItemsCount(BLUE_SOUL_CRYSTAL0_ID) == 0 :
-        htmltext = npcId+"-21.htm"
+     htmltext = npcId+"-21.htm"
    return htmltext
 
  
@@ -93,17 +87,19 @@ QUEST       = Quest(350,"350_EnhanceYourWeapon","Enhance Your Weapon")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7115,7856,7194)
+QUEST.addStartNpc(7115)
 
-STARTING.addTalkId(7115,7856,7194)
 
-STARTED.addTalkId(7115,7856,7194)
+for npcId in NPC:
+  STARTING.addTalkId(npcId)
+  STARTED.addTalkId(npcId)
 
 
 STARTED.addQuestDrop(4629,RED_SOUL_CRYSTAL0_ID,1)
 STARTED.addQuestDrop(4640,GREEN_SOUL_CRYSTAL0_ID,1)
 STARTED.addQuestDrop(4651,BLUE_SOUL_CRYSTAL0_ID,1)
+
+print "importing quests: 350: Enhance Your Weapon"
