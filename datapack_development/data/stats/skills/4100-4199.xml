@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
-<skill id="4100" levels="7" name="NPC Prominence">
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
-  <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 </table>
+<skill id="4100" levels="12" name="NPC Prominence">
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+  <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 119.0 136.0 153.0 170.0 187.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -17,9 +17,9 @@
   <for>
   </for>
 </skill>
-<skill id="4101" levels="7" name="NPC Whirlwind">
-  <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
-  <table name="#power"> 46.0 105.0 219.0 417.0 722.0 1136.0 1626.0 </table>
+<skill id="4101" levels="12" name="NPC Spinning Slasher">
+  <table name="#mpConsume"> 14 22 31 43 55 68 79 84 89 92 94 95 </table>
+  <table name="#power"> 46.0 105.0 219.0 417.0 722.0 1136.0 1626.0 2116.0 2606.0 3096.0 3586.0 4076.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
@@ -34,7 +34,7 @@
   <for>
   </for>
 </skill>
-<skill id="4102" levels="2" name="Become weak against line of fire.">
+<skill id="4102" levels="2" name="Become weak against line of fire">
   <table name="#mpConsume"> 35 65 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="3"/>
@@ -53,7 +53,7 @@
   </for>
 </skill>
 <skill id="4103" levels="2" name="NPC Ultimate Evasion">
-  <table name="#mpConsume"> 28 52 </table>
+  <table name="#mpConsume"> 35 65 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -73,9 +73,9 @@
  </effect>
 </for>
 </skill>
-<skill id="4104" levels="7" name="Flame">
-  <table name="#mpConsume"> 17 31 45 60 75 90 105 </table>
-  <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 </table>
+<skill id="4104" levels="12" name="Flame">
+  <table name="#mpConsume"> 17 31 45 60 75 90 105 112 119 126 132 139 </table>
+  <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="2"/>
   <set name="power" val="#power"/>
@@ -93,9 +93,9 @@
   <for>
   </for>
 </skill>
-<skill id="4105" levels="7" name="Direct Beam Canon">
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
-  <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 </table>
+<skill id="4105" levels="12" name="NPC Straight Beam Cannon">
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+  <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 119.0 136.0 153.0 170.0 187.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -109,7 +109,7 @@
   <for>
   </for>
 </skill>
-<skill id="4106" levels="1" name="Antharas Jump">
+<skill id="4106" levels="1" name="Shock">
   <set name="power" val="11000.0"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="205"/>
@@ -124,7 +124,7 @@
   <for>
   </for>
 </skill>
-<skill id="4107" levels="1" name="Antharas Tail">
+<skill id="4107" levels="1" name="Shock">
   <set name="power" val="11000.0"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="205"/>
@@ -138,11 +138,11 @@
   <for>
   </for>
 </skill>
-<skill id="4108" levels="1" name="Fear">
+<skill id="4108" levels="1" name="Terror">
   <set name="save" val="2"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="2000"/>
+  <set name="hitTime" val="3000"/>
   <set name="skillTime" val="5000"/>
   <set name="skillType" val="FEAR"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -156,7 +156,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="205"/>
-  <set name="hitTime" val="2000"/>
+  <set name="hitTime" val="3000"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="reuseDelay" val="6000000"/>
@@ -192,23 +192,22 @@
 <skill id="4110" levels="1" name="Mouth Odor Attack">
   <set name="power" val="250.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="23000"/>
+  <set name="hitTime" val="2300"/>
   <set name="element" val="2"/>
   <set name="skillTime" val="2500"/>
   <set name="skillType" val="MDAM"/>
   <set name="reuseDelay" val="17000"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="700"/>
+  <set name="castRange" val="500"/>
   <for>
   </for>
 </skill>
 <skill id="4111" levels="1" name="Fossilization">
   <set name="save" val="4"/>
-  <set name="power" val="10"/>
-  <set name="lvlDepend" val="1"/>
+  <set name="power" val="10.0"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="205"/>
-  <set name="hitTime" val="3000"/>
+  <set name="hitTime" val="3200"/>
   <set name="element" val="4"/>
   <set name="overHit" val="true"/>
   <set name="skillTime" val="5000"/>
@@ -225,7 +224,7 @@
   <set name="power" val="22000.0"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="205"/>
-  <set name="hitTime" val="2000"/>
+  <set name="hitTime" val="2200"/>
   <set name="overHit" val="true"/>
   <set name="skillTime" val="2200"/>
   <set name="skillType" val="PDAM"/>
@@ -238,7 +237,7 @@
   <set name="power" val="22000.0"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="205"/>
-  <set name="hitTime" val="2000"/>
+  <set name="hitTime" val="2200"/>
   <set name="overHit" val="true"/>
   <set name="skillTime" val="2200"/>
   <set name="skillType" val="PDAM"/>
@@ -277,7 +276,7 @@
   <for>
   </for>
 </skill>
-<skill id="4116" levels="1" name="I am strong against magical attacks.">
+<skill id="4116" levels="10" name="Resist M.Atk">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -285,19 +284,18 @@
   <set name="castRange" val="-1"/>
   <set name="displayId" val="1071"/>
 <!-- Done by dc -->
-<table name="#Tab-mDef"> 1.2 </table>
+<table name="#Tab-mDef"> 1.2 1.25 1.3 1.35 1.4 1.45 1.5 1.55 1.6 1.65 </table>
 <for>
    <effect name="Buff" time="120" count="1" val="0">
     <mul  order='0x50' stat='mDef' val="#Tab-mDef"/>
    </effect>
 </for>
 </skill>
-<skill id="4117" levels="7" name="Paralysis">
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
+<skill id="4117" levels="12" name="Paralysis">
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="4"/>
-  <set name="power" val="10"/>
-  <set name="lvlDepend" val="1"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="120000"/>
@@ -313,11 +311,10 @@
   </for>
 </skill>
 <skill id="4118" levels="7" name="Paralysis">
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
+  <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="4"/>
-  <set name="power" val="25"/>
-  <set name="lvlDepend" val="5"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="205"/>
   <set name="hitTime" val="6000"/>
@@ -350,14 +347,13 @@
   <for>
   </for>
 </skill>
-<skill id="4120" levels="7" name="NPC Stun Shot">
-  <table name="#mpConsume"> 27 44 62 85 109 135 157 </table>
-  <table name="#power"> 46.0 105.0 219.0 417.0 722.0 1136.0 1626.0 </table>
+<skill id="4120" levels="12" name="Shock">
+  <table name="#mpConsume"> 27 44 62 85 109 135 157 168 177 183 187 189 </table>
+  <table name="#power"> 46.0 105.0 219.0 417.0 722.0 1136.0 1626.0 2116.0 2606.0 3096.0 3586.0 4076.0 </table>
   <set name="weaponsAllowed" val="32"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="4"/>
   <set name="power" val="#power"/>
-  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
   <set name="overHit" val="true"/>
@@ -381,7 +377,7 @@
   <for>
   </for>
 </skill>
-<skill id="4122" levels="1" name="Body of Antharas">
+<skill id="4122" levels="1" name="Antharas">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
@@ -390,12 +386,12 @@
   <for>
   </for>
 </skill>
-<skill id="4123" levels="7" name="Please hate me.">
-  <table name="#mpConsume"> 12 19 26 35 45 55 65 </table>
+<skill id="4123" levels="12" name="Hostile Feeling">
+  <table name="#mpConsume"> 12 19 26 35 45 55 65 84 89 92 94 95 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="1000"/>
+  <set name="hitTime" val="1500"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="1000"/>
   <set name="skillType" val="NOTDONE"/>
@@ -404,9 +400,9 @@
   <for>
   </for>
 </skill>
-<skill id="4124" levels="7" name="NPC Spear">
-  <table name="#mpConsume"> 27 44 62 85 109 135 157 </table>
-  <table name="#power"> 122.0 279.0 584.0 1110.0 1923.0 3030.0 4336.0 </table>
+<skill id="4124" levels="12" name="NPC Spear Attack">
+  <table name="#mpConsume"> 27 44 62 85 109 135 157 168 177 183 187 189 </table>
+  <table name="#power"> 122.0 279.0 584.0 1110.0 1923.0 3030.0 4336.0 5642.0 6948.0 8254.0 9560.0 10866.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -433,17 +429,15 @@
 </for>
 </skill>
 <skill id="4126" levels="1" name="Reduction in recovery time">
-
   <set name="save" val="2"/>
   <set name="power" val="250.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="2000"/>
+  <set name="hitTime" val="0"/>
   <set name="skillTime" val="0"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="0"/>
-  <set name="castRange" val="800"/>
-
+  <set name="castRange" val="600"/>
   <for>
   </for>
 </skill>
@@ -454,6 +448,7 @@
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
+  <set name="hitTime" val="1500"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="PDAM"/>
@@ -467,24 +462,21 @@
   <set name="power" val="500.0"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="205"/>
-  <set name="hitTime" val="22000"/>
+  <set name="hitTime" val="2300"/>
   <set name="element" val="2"/>
   <set name="skillTime" val="2300"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="17000"/>
-  <set name="castRange" val="200"/>
   <set name="castRange" val="300"/>
   <for>
-
   </for>
 </skill>
 <skill id="4129" levels="1" name="Earthquake">
-
   <set name="power" val="1250.0"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="205"/>
-  <set name="hitTime" val="22000"/>
+  <set name="hitTime" val="1500"/>
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -492,31 +484,27 @@
   <set name="castRange" val="1000"/>
   <set name="castRange" val="100"/>
   <for>
-
   </for>
 </skill>
 <skill id="4130" levels="1" name="Striking of Thunderbolt">
-
   <set name="save" val="2"/>
   <set name="power" val="300.0"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="205"/>
-  <set name="hitTime" val="30000"/>
+  <set name="hitTime" val="6000"/>
   <set name="skillTime" val="6000"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="5000"/>
-  <set name="castRange" val="1500"/>
-  <set name="castRange" val="500"/>
+  <set name="castRange" val="900"/>
   <for>
-
   </for>
 </skill>
-<skill id="4131" levels="1" name="Paralyze">
-  <set name="power" val="25"/>
-  <set name="lvlDepend" val="1"/>
+<skill id="4131" levels="1" name="Shock">
+<!--- Paralyzed so that it cannot move temporarily -->
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="205"/>
+  <set name="hitTime" val="3600"/>
   <set name="skillTime" val="3600"/>
   <set name="skillType" val="PARALYZE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -528,16 +516,14 @@
   </for>
 </skill>
 <skill id="4132" levels="1" name="Spear: Pound the Ground">
-
   <set name="power" val="100.0"/>
   <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="3000"/>
   <set name="skillTime" val="3000"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-
   <for>
-
   </for>
 </skill>
 <skill id="4133" levels="1" name="Angel Heal">
@@ -547,6 +533,7 @@
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
+  <set name="hitTime" val="2000"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="2000"/>
   <set name="skillType" val="NOTDONE"/>
@@ -562,6 +549,7 @@
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
+  <set name="hitTime" val="20000"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="20000"/>
   <set name="skillType" val="NOTDONE"/>
@@ -577,6 +565,7 @@
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
+  <set name="hitTime" val="100"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="100"/>
   <set name="skillType" val="NOTDONE"/>
@@ -592,6 +581,7 @@
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
+  <set name="hitTime" val="2000"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="2000"/>
   <set name="skillType" val="NOTDONE"/>
@@ -600,17 +590,33 @@
   <for>
   </for>
 </skill>
-<skill id="4137" levels="7" name="Hydro Screw">
- <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
- <table name="#power"> 49.0 56.0 63.0 70.0 77.0 84.0 91.0 </table>
+<skill id="4137" levels="12" name="Hydro Screw">
+ <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
+ <table name="#power"> 49.0 56.0 63.0 70.0 77.0 84.0 91.0 98.0 105.0 112.0 119.0 126.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="205"/>
-  <set name="hitTime" val="1000"/> 
+  <set name="hitTime" val="4000"/>
   <set name="element" val="3"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="4000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="500"/>
+  <for>
+  </for>
+</skill>
+<skill id="4138" levels="12" name="NPC AE - Corpse Burst">
+<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
+  <table name="#power"> 31.0 33.0 34.0 36.0 38.0 39.0 41.0 43.0 45.0 47.0 49.0 51.0 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="1000"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -618,29 +624,14 @@
   <for>
   </for>
 </skill>
-<skill id="4138" levels="7" name="Parasite Burst">
-<table name="#mpConsume"> 42 44 45 48 49 52 54 </table>
-  <table name="#power"> 31.0 33.0 34.0 36.0 38.0 39.0 41.0 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="1000"/>
-  <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="1000"/>
-  <set name="skillType" val="MDAM"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="400"/>
-  <for>
-  </for>
-</skill>
-<skill id="4139" levels="7" name="Boom Attack">
+<skill id="4139" levels="12" name="Boom Attack">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
+  <set name="hitTime" val="6000"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="6000"/>
   <set name="skillType" val="NOTDONE"/>
@@ -649,7 +640,7 @@
   <for>
   </for>
 </skill>
-<skill id="4140" levels="7" name="Contract Payment">
+<skill id="4140" levels="12" name="Contract Payment">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -659,7 +650,7 @@
   7: As a result of summoning a devil, one's MP will be consumed.  Effect 7.
   created 2005-05-29 23:34:32
 -->
-  <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 </table>
+  <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 </table>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -669,13 +660,14 @@
   <for>
   </for>
 </skill>
-<skill id="4141" levels="7" name="Monster Wind of Force">
+<skill id="4141" levels="12" name="NPC Wind Fist">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
+  <set name="hitTime" val="1500"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="NOTDONE"/>
@@ -684,13 +676,14 @@
   <for>
   </for>
 </skill>
-<skill id="4142" levels="7" name="Monster Wind of Force: Has A Little More Speed">
+<skill id="4142" levels="12" name="NPC Fast Wind Fist">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
+  <set name="hitTime" val="1100"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="1100"/>
   <set name="skillType" val="NOTDONE"/>
@@ -699,13 +692,14 @@
   <for>
   </for>
 </skill>
-<skill id="4143" levels="8" name="Explosion of Treasure Trove">
+<skill id="4143" levels="8" name="Treasure Bomb">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
+  <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
@@ -722,6 +716,7 @@
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
+  <set name="hitTime" val="1000"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="1000"/>
   <set name="skillType" val="NOTDONE"/>
@@ -749,7 +744,7 @@
   <for>
   </for>
 </skill>
-<skill id="4146" levels="3" name="Decrease P. Atk.">
+<skill id="4146" levels="3" name="Decrease M.Def">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -782,7 +777,7 @@
   <for>
   </for>
 </skill>
-<skill id="4148" levels="7" name="Poison">
+<skill id="4148" levels="12" name="Poison">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -792,7 +787,7 @@
   7: Gradually reduces one's HP. Effect 8.
   created 2005-05-29 23:34:32
 -->
-  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 </table>
+  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 </table>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -801,7 +796,7 @@
   <for>
   </for>
 </skill>
-<skill id="4149" levels="7" name="Bleed">
+<skill id="4149" levels="12" name="Bleed">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -811,7 +806,7 @@
   7: Inflicts a wound and reduces HP. Effect 8.
   created 2005-05-29 23:34:32
 -->
-  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 </table>
+  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 </table>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -820,7 +815,7 @@
   <for>
   </for>
 </skill>
-<skill id="4150" levels="7" name="Flame">
+<skill id="4150" levels="12" name="Flame">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -830,7 +825,7 @@
   7: Inflicts continuous damage with burning flames. Effect 8.
   created 2005-05-29 23:34:32
 -->
-  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 </table>
+  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 </table>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -839,15 +834,16 @@
   <for>
   </for>
 </skill>
-<skill id="4151" levels="7" name="DD Wind">
+<skill id="4151" levels="12" name="NPC Windstrike - Magic">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="NOTDONE"/>
@@ -857,15 +853,16 @@
   <for>
   </for>
 </skill>
-<skill id="4152" levels="7" name="Absorb HP">
+<skill id="4152" levels="12" name="NPC HP Drain - Magic">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
+  <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="NOTDONE"/>
@@ -875,7 +872,7 @@
   <for>
   </for>
 </skill>
-<skill id="4153" levels="7" name="Decrease Speed">
+<skill id="4153" levels="12" name="Decrease Speed">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -885,10 +882,11 @@
   7: Temporarily reduces speed. Effect 3.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
-  <table name="#power"> 3.0 3.0 3.0 3.0 3.0 3.0 3.0 </table>
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+  <table name="#power"> 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
+  <set name="hitTime" val="3100"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="3100"/>
   <set name="skillType" val="NOTDONE"/>
@@ -898,15 +896,54 @@
   <for>
   </for>
 </skill>
-<skill id="4154" levels="7" name="Absorb MP">
+<skill id="4154" levels="12" name="NPC MP Drain - Magic">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4155" levels="12" name="NPC Twister - Magic">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:32
+-->
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4156" levels="12" name="NPC Curve Beam Cannon - Magic">
+<!---
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+  created 2005-05-29 23:34:32
+-->
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="NOTDONE"/>
@@ -916,15 +953,16 @@
   <for>
   </for>
 </skill>
-<skill id="4155" levels="7" name="NPC Twister">
+<skill id="4157" levels="12" name="NPC Blaze - Magic">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="NOTDONE"/>
@@ -934,15 +972,16 @@
   <for>
   </for>
 </skill>
-<skill id="4156" levels="7" name="Beam Cannon: Curving Shot">
+<skill id="4158" levels="12" name="NPC Prominence - Magic">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78</table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="NOTDONE"/>
@@ -952,15 +991,16 @@
   <for>
   </for>
 </skill>
-<skill id="4157" levels="7" name="NPC Blaze">
+<skill id="4159" levels="12" name="NPC Straight Beam Cannon - Magic">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="NOTDONE"/>
@@ -970,51 +1010,16 @@
   <for>
   </for>
 </skill>
-<skill id="4158" levels="7" name="NPC Prominence">
+<skill id="4160" levels="12" name="NPC Aura Burn - Magic">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
+  <table name="#mpConsume"> 4 5 8 9 12 14 17 18 19 19 20 20 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="600"/>
-  <for>
-  </for>
-</skill>
-<skill id="4159" levels="7" name="Beam Cannon: Straight Shot">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:32
--->
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="600"/>
-  <for>
-  </for>
-</skill>
-<skill id="4160" levels="7" name="NPC Aura Burn">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:32
--->
-  <table name="#mpConsume"> 4 5 8 9 12 14 17 </table>
-  <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="1500"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1031,6 +1036,7 @@
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
+  <set name="hitTime" val="2000"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="2000"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1058,17 +1064,17 @@
   <for>
   </for>
 </skill>
-<skill id="4163" levels="3" name="Self Shield">
-
-<table name="#rate"> 1.08 1.12 1.15 </table>
-
+<skill id="4163" levels="12" name="NPC Self Damage Shield">
+  <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <table name="#rate"> 1.08 1.12 1.15 1.18 1.21 1.24 1.27 1.30 1.33 1.36 1.39 1.42 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="1800"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="1800"/>
   <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
+  <set name="isMagic" val="false"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
@@ -1078,10 +1084,10 @@
   </effect>
 </for>
 </skill>
-<skill id="4164" levels="9" name="Paralyze">
+<skill id="4164" levels="9" name="Paralysis">
+  <table name="#power"> 18 26 38 52 68 85 102 119 136 </table>
   <set name="save" val="3"/>
-  <set name="power" val="50"/>
-  <set name="lvlDepend" val="1"/>
+  <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="3000"/>
   <set name="reuseDelay" val="120000"/>
@@ -1116,7 +1122,6 @@
   <table name="#power"> 18 26 38 52 68 85 102 119 136 </table>
   <set name="save" val="3"/>
   <set name="power" val="#power"/>
-  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="3000"/>
   <set name="reuseDelay" val="120000"/>
@@ -1144,15 +1149,16 @@
   <for>
   </for>
 </skill>
-<skill id="4168" levels="7" name="BOSS Power Strike">
+<skill id="4168" levels="12" name="BOSS Power Strike">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
+  <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="830"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="830"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1161,17 +1167,16 @@
   <for>
   </for>
 </skill>
-<skill id="4169" levels="7" name="Shock">
- <table name="#power"> 18 26 38 52 68 85 102 </table>
- <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
+<skill id="4169" levels="12" name="Shock">
+ <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 119.0 136.0 153.0 170.0 187.0 </table>
+ <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="3"/>
   <set name="power" val="#power"/>
-  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="3000"/>
+  <set name="hitTime" val="830"/>
   <set name="reuseDelay" val="120000"/>
-  <set name="skillTime" val="3000"/>
+  <set name="skillTime" val="830"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -1179,32 +1184,41 @@
     <effect count="1" name="Stun" time="9" val="0"/>
   </for>
 </skill>  
-<skill id="4170" levels="7" name="BOSS Mortal Blow">
+<skill id="4170" levels="12" name="BOSS Mortal Blow">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
+  <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 119.0 136.0 153.0 170.0 187.0 </table>
+  <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
+  <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="830"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="830"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
+    <add order="0x10" stat="rCrit" val="45">
+      <using kind="Dagger" skill="0016"/>
+    </add>
   </for>
 </skill>
-<skill id="4171" levels="7" name="BOSS Spinning Slasher">
+<skill id="4171" levels="12" name="BOSS Spinning Slasher">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
+  <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 119.0 136.0 153.0 170.0 187.0 </table>
+  <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
+  <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="830"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="830"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1213,7 +1227,7 @@
   <for>
   </for>
 </skill>
-<skill id="4172" levels="7" name="Shock">
+<skill id="4172" levels="12" name="Shock">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1223,8 +1237,9 @@
   7: Temporarily throws one's enemy into a state of shock preventing the enemy from moving.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
+  <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="830"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="830"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1233,15 +1248,16 @@
   <for>
   </for>
 </skill>
-<skill id="4173" levels="7" name="BOSS Might">
+<skill id="4173" levels="12" name="BOSS Might">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 6 10 13 18 23 28 33 </table>
+  <table name="#mpConsume"> 8 11 15 20 25 30 34 36 38 38 39 40 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="1500"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1250,15 +1266,16 @@
   <for>
   </for>
 </skill>
-<skill id="4174" levels="7" name="BOSS Shield">
+<skill id="4174" levels="12" name="BOSS Shield">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 6 10 13 18 23 28 33 </table>
+  <table name="#mpConsume"> 8 11 15 20 25 30 34 36 38 38 39 40 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="1500"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1267,15 +1284,16 @@
   <for>
   </for>
 </skill>
-<skill id="4175" levels="7" name="BOSS Haste">
+<skill id="4175" levels="12" name="BOSS Haste">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 6 10 13 18 23 28 33 </table>
+  <table name="#mpConsume"> 8 11 15 20 25 30 34 36 38 38 39 40 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="1500"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1284,15 +1302,16 @@
   <for>
   </for>
 </skill>
-<skill id="4176" levels="7" name="BOSS Reflect Damage">
+<skill id="4176" levels="12" name="BOSS Reflect Damage">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 6 10 13 18 23 28 33 </table>
+  <table name="#mpConsume"> 8 11 15 20 25 30 34 36 38 38 39 40 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="1500"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1301,15 +1320,16 @@
   <for>
   </for>
 </skill>
-<skill id="4177" levels="7" name="Around Oneself: Cancel">
+<skill id="4177" levels="12" name="Around Oneself: Cancel">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 12 19 26 35 45 55 65 </table>
+  <table name="#mpConsume"> 15 22 29 39 49 59 68 72 75 76 77 79 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="1500"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1318,30 +1338,32 @@
   <for>
   </for>
 </skill>
-<skill id="4178" levels="7" name="BOSS Flame Strike">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:32
--->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
+<skill id="4178" levels="12" name="BOSS Flame Strike">
+  <table name="#mpConsume"> 23 32 44 58 74 79 102 107 112 114 116 118 </table>
+  <table name="#power"> 13.0 16.0 19.0 22.0 25.0 28.0 31.0 34.0 37.0 40.0 43.0 46.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="power" val="#power"/>
+  <set name="hitTime" val="3300"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
+  <set name="element" val="2"/>
+  <set name="reuseDelay" val="15000"/>
   <set name="skillTime" val="3300"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="700"/>
+  <set name="castRange" val="500"/>
+  <set name="displayId" val="1181"/>
   <for>
   </for>
 </skill>
-<skill id="4179" levels="24" name="BOSS Power Strike">
+<skill id="4179" levels="12" name="BOSS Power Strike">
 
-  <table name="#power"> 25.0 27.0 30.0 39.0 42.0 46.0 60.0 65.0 70.0 90.0 97.0 105.0 123.0 132.0 143.0 165.0 177.0 191.0 219.0 235.0 251.0 287.0 306.0 326.0 </table>
-
+  <table name="#power"> 25.0 27.0 30.0 39.0 42.0 46.0 60.0 65.0 70.0 90.0 97.0 105.0 </table>
+  <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
+  <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="1000"/>
+  <set name="hitTime" val="830"/>
   <set name="overHit" val="true"/>
   <set name="reuseDelay" val="13000"/>
   <set name="skillTime" val="830"/>
@@ -1351,7 +1373,7 @@
   <for>
   </for>
 </skill>
-<skill id="4180" levels="7" name="Shock">
+<skill id="4180" levels="12" name="Shock">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1361,8 +1383,9 @@
   7: Temporarily throws one's enemy into a state of shock, preventing him from moving.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
+  <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="830"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="830"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1371,15 +1394,16 @@
   <for>
   </for>
 </skill>
-<skill id="4181" levels="7" name="BOSS Mortal Blow">
+<skill id="4181" levels="12" name="BOSS Mortal Blow">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
+  <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="830"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="830"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1388,7 +1412,7 @@
   <for>
   </for>
 </skill>
-<skill id="4182" levels="7" name="Poison">
+<skill id="4182" levels="12" name="Poison">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1398,10 +1422,11 @@
   7: Gradually reduces one's HP. Effect 8.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
-  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
+  <set name="hitTime" val="3300"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="3300"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1410,7 +1435,7 @@
   <for>
   </for>
 </skill>
-<skill id="4183" levels="7" name="Decrease P. Atk.">
+<skill id="4183" levels="12" name="Decrease P. Atk.">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1420,8 +1445,9 @@
   7: Temporarily reduces P. Atk.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="3300"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="3300"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1430,7 +1456,7 @@
   <for>
   </for>
 </skill>
-<skill id="4184" levels="7" name="Decrease Atk. Spd.">
+<skill id="4184" levels="12" name="Decrease Atk. Spd.">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1440,8 +1466,9 @@
   7: Temporarily reduces Atk. Speed.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="3300"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="3300"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1450,7 +1477,7 @@
   <for>
   </for>
 </skill>
-<skill id="4185" levels="7" name="Sleep">
+<skill id="4185" levels="12" name="Sleep">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1460,8 +1487,9 @@
   7: Causes one to fall asleep for a while.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="3300"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="3300"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1470,7 +1498,7 @@
   <for>
   </for>
 </skill>
-<skill id="4186" levels="7" name="Hold">
+<skill id="4186" levels="12" name="Hold">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1480,8 +1508,9 @@
   7: Unable to move at all, as though one has grown roots into the ground.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="3300"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="3300"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1490,7 +1519,7 @@
   <for>
   </for>
 </skill>
-<skill id="4187" levels="7" name="Decrease Speed">
+<skill id="4187" levels="12" name="Decrease Speed">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1500,8 +1529,9 @@
   7: Temporarily reduces one's speed.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="3300"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="3300"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1510,7 +1540,7 @@
   <for>
   </for>
 </skill>
-<skill id="4188" levels="7" name="Bleed">
+<skill id="4188" levels="12" name="Bleed">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1520,10 +1550,11 @@
   7: Inflicts a wound and reduces HP. Effect 8.
   created 2005-05-29 23:34:32
 -->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
-  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0</table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
+  <set name="hitTime" val="3300"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="3300"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1532,7 +1563,7 @@
   <for>
   </for>
 </skill>
-<skill id="4189" levels="7" name="Paralyze">
+<skill id="4189" levels="12" name="Paralysis">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1542,8 +1573,9 @@
   7: Paralyzes the entire body.
   created 2005-05-29 23:34:33
 -->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="3300"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="3300"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1552,7 +1584,7 @@
   <for>
   </for>
 </skill>
-<skill id="4190" levels="7" name="Decrease MP">
+<skill id="4190" levels="12" name="Decrease MP">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1562,8 +1594,9 @@
   7: Decreases one's MP.
   created 2005-05-29 23:34:33
 -->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="3300"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="3300"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1572,15 +1605,16 @@
   <for>
   </for>
 </skill>
-<skill id="4191" levels="7" name="BOSS Wind Strike">
+<skill id="4191" levels="12" name="BOSS Wind Strike">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:33
 -->
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
+  <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="2500"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="2500"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1589,15 +1623,16 @@
   <for>
   </for>
 </skill>
-<skill id="4192" levels="7" name="BOSS Vampiric Touch">
+<skill id="4192" levels="12" name="BOSS HP Drain">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:33
 -->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
+  <table name="#mpConsume"> 12 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="2500"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="2500"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1606,15 +1641,16 @@
   <for>
   </for>
 </skill>
-<skill id="4193" levels="7" name="BOSS Life Drain">
+<skill id="4193" levels="12" name="BOSS Life Drain">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:33
 -->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="2500"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="2500"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1623,15 +1659,16 @@
   <for>
   </for>
 </skill>
-<skill id="4194" levels="7" name="BOSS Aura Burn">
+<skill id="4194" levels="12" name="BOSS Aura Burn">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:33
 -->
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
+  <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="1000"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="1000"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1640,15 +1677,16 @@
   <for>
   </for>
 </skill>
-<skill id="4195" levels="7" name="BOSS Twister">
+<skill id="4195" levels="12" name="BOSS Twister">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
   Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   created 2005-05-29 23:34:33
 -->
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
+  <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="2500"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="2500"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1657,7 +1695,7 @@
   <for>
   </for>
 </skill>
-<skill id="4196" levels="7" name="Decreases Speed">
+<skill id="4196" levels="12" name="Decreases Speed">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1667,10 +1705,11 @@
   7: Temporarily reduces speed. Effect 3.
   created 2005-05-29 23:34:33
 -->
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
-  <table name="#power"> 3.0 3.0 3.0 3.0 3.0 3.0 3.0 </table>
+  <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
+  <table name="#power"> 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
+  <set name="hitTime" val="2300"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="2300"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1679,7 +1718,7 @@
   <for>
   </for>
 </skill>
-<skill id="4197" levels="7" name="Hold">
+<skill id="4197" levels="12" name="Hold">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1689,8 +1728,9 @@
   7: Unable to move at all, as though one has grown roots into the ground.
   created 2005-05-29 23:34:33
 -->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="3300"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="3300"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1699,7 +1739,7 @@
   <for>
   </for>
 </skill>
-<skill id="4198" levels="7" name="Poison">
+<skill id="4198" levels="12" name="Poison">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1709,10 +1749,11 @@
   7: Gradually reduces one's HP. Effect 8.
   created 2005-05-29 23:34:33
 -->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
-  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
+  <set name="hitTime" val="2500"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="2500"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1721,7 +1762,7 @@
   <for>
   </for>
 </skill>
-<skill id="4199" levels="7" name="Decrease P. Atk.">
+<skill id="4199" levels="12" name="Decrease P. Atk.">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1731,8 +1772,9 @@
   7: Temporarily reduces P. Atk.
   created 2005-05-29 23:34:33
 -->
-  <table name="#mpConsume"> 18 29 40 53 68 83 98 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="2500"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="2500"/>
   <set name="skillType" val="NOTDONE"/>
