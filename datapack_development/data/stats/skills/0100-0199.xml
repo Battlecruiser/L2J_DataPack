@@ -1388,12 +1388,14 @@
   </for>
 </skill>
 <skill id="197" levels="2" name="Holy Armor">
+  <table name="#pDef-undead"> 1.15 1.3 </table>
   <set name="power" val="2"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="UNDEAD_DEFENSE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <mul order="0x50" stat="pDef-undead" val="#pDef-undead" /> 
   </for>
 </skill>
 <skill id="198" levels="3" name="Boost Evasion">
