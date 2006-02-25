@@ -1,279 +1,95 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
-<skill id="7001" levels="1" name="Summon Spartoi">
-
-<table name="#itemConsumeCount"> 8 </table>
-<set name="itemConsumeId" val="1458"/>
-<set name="mpConsume" val="103"/>
-<set name="power" val="0.0"/>
-<set name="target" val="TARGET_SELF"/>
-<set name="itemConsumeCount" val="#itemConsumeCount"/>
-<set name="hitTime" val="6000"/>
-<set name="reuseDelay" val="18600000"/>
-<set name="skillTime" val="8000"/>
-<set name="skillType" val="SUMMON"/>
-<set name="isMagic" val="true"/>
-<set name="operateType" val="OP_ACTIVE"/>
-<set name="castRange" val="-1"/>
-<!-- Summon-specific -->
-<table name="#npcIds">
-170
-</table>
-<set name="npcId" val="#npcIds" />
-<set name="expPenalty" val="0.3" />
-<set name="isCubic" val="false" />
-
-<for>
-
-</for>
-
-</skill>
-<skill id="7002" levels="1" name="none">
+<skill id="7001" levels="1" name="Dispel Buff">
+<!-- TODO -->
   <set name="save" val="3"/>
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="POISON"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="60000"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="400"/>
   <for>
   </for>
 </skill>
-<skill id="7003" levels="1" name="none">
+<skill id="7002" levels="1" name="Dispel Debuff">
+<!-- TODO -->
+  <set name="save" val="3"/>
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="POISON"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="60000"/>
+  <set name="castRange" val="400"/>
+  <for>
+  </for>
+</skill>
+<skill id="7003" levels="1" name="Dispel All">
+<!-- TODO -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="400"/>
   <for>
   </for>
 </skill>
-<skill id="7004" levels="1" name="none">
+<skill id="7004" levels="2" name="Disple Petrification">
+<!-- TODO -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
-<skill id="7005" levels="1" name="none">
+<skill id="7005" levels="4" name="Greater Chant of Vampire">
+<!-- TODO -->
+  <set name="mpConsume" val="272"/>
   <set name="power" val="0.0"/>
+  <set name="hitTime" val="2500"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="skillTime" val="2500"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="400"/>
   <for>
   </for>
 </skill>
-<skill id="7006" levels="1" name="none">
+<skill id="7006" levels="13" name="Greater Heart of Paagrio">
+<!-- TODO -->
+  <set name="mpConsume" val="272"/>
   <set name="power" val="0.0"/>
+  <set name="hitTime" val="2500"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="skillTime" val="2500"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="400"/>
   <for>
   </for>
 </skill>
-<skill id="7007" levels="1" name="none">
+<skill id="7007" levels="4" name="Greater Seal of Flame">
+<!-- TODO -->
+  <set name="mpConsume" val="153"/>
   <set name="power" val="0.0"/>
+  <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="skillTime" val="4000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="400"/>
   <for>
   </for>
 </skill>
-<skill id="7008" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7009" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7010" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7011" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7012" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7013" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7014" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7015" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7016" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7017" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7018" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7019" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7020" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7021" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7022" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7023" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7024" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7025" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7026" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7027" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7028" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="7029" levels="3" name="Super Haste">
+<!-- ID 7008 thru 7028 are not used. Check skillname.dat to verify -->
+<skill id="7029" levels="4" name="Super Haste">
+<!-- TODO -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -281,11 +97,11 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
  <!-- Done by dc -->
-<table name="#Tab-runSpd"> 2 3 3 </table>
-<table name="#Tab-pAtk"> 1 1 1 </table>
-<table name="#Tab-mAtkSpd"> 2 3 3 </table>
-<table name="#Tab-pAtkSpd"> 2 3 3 </table>
-<table name="#Tab-mReuse"> 1 1 1.99 </table>
+<table name="#Tab-runSpd"> 2 3 3 3 </table>
+<table name="#Tab-pAtk"> 1 1 1 1 </table>
+<table name="#Tab-mAtkSpd"> 2 3 3 3 </table>
+<table name="#Tab-pAtkSpd"> 2 3 3 3 </table>
+<table name="#Tab-mReuse"> 1 1 1.99 1.99 </table>
 <for>
   <effect name="Buff" time="1200" count="1" val="0">
     <mul  order='0x50' stat='runSpd' val="#Tab-runSpd"/>
@@ -300,11 +116,11 @@
 
 <table name="#itemConsumeCount"> 8 </table>
 <set name="itemConsumeId" val="1458"/>
-<set name="mpConsume" val="103"/>
+<set name="mpConsume" val="3"/>
 <set name="power" val="0.0"/>
 <set name="target" val="TARGET_SELF"/>
 <set name="itemConsumeCount" val="#itemConsumeCount"/>
-<set name="hitTime" val="6000"/>
+<set name="hitTime" val="4000"/>
 <set name="reuseDelay" val="18600000"/>
 <set name="skillTime" val="8000"/>
 <set name="skillType" val="SUMMON"/>
@@ -328,11 +144,11 @@
 
 <table name="#itemConsumeCount"> 8 </table>
 <set name="itemConsumeId" val="1458"/>
-<set name="mpConsume" val="103"/>
+<set name="mpConsume" val="3"/>
 <set name="power" val="0.0"/>
 <set name="target" val="TARGET_SELF"/>
 <set name="itemConsumeCount" val="#itemConsumeCount"/>
-<set name="hitTime" val="6000"/>
+<set name="hitTime" val="4000"/>
 <set name="reuseDelay" val="18600000"/>
 <set name="skillTime" val="8000"/>
 <set name="skillType" val="SUMMON"/>
@@ -356,11 +172,11 @@
 
 <table name="#itemConsumeCount"> 8 </table>
 <set name="itemConsumeId" val="1458"/>
-<set name="mpConsume" val="103"/>
+<set name="mpConsume" val="3"/>
 <set name="power" val="0.0"/>
 <set name="target" val="TARGET_SELF"/>
 <set name="itemConsumeCount" val="#itemConsumeCount"/>
-<set name="hitTime" val="6000"/>
+<set name="hitTime" val="4000"/>
 <set name="reuseDelay" val="18600000"/>
 <set name="skillTime" val="8000"/>
 <set name="skillType" val="SUMMON"/>
@@ -380,4 +196,5 @@
 </for>
 
 </skill>
+<!-- ID's 7033 thru 7099 are not used. Checked skillname.dat to verify -->
 </list>

@@ -147,16 +147,7 @@
     <mul order="0x40" stat="maxHp" val="#maxHp"/>
   </for>
 </skill>
-
 <skill id="4312" levels="1" name="Heavy Armor">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Monster equipped with heavy armor.
-  created 2005-05-29 23:34:33
--->
   <table name="#pDef"> 20 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -173,16 +164,7 @@
   </add>
 </for>
 </skill>
-
 <skill id="4313" levels="1" name="Light Armor">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Monster equipped with light armor.
-  created 2005-05-29 23:34:33
--->
   <table name="#pDef"> 20 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -199,40 +181,27 @@
   </add>
 </for>
 </skill>
-
-<skill id="4314" levels="8" name="BOSS Holy Light Burst">
-
-<!--- by Phantom -->
-
-  <table name="#power"> 128.0 156.0 138.0 152.0 198.0 235.0 272.0 235.0 </table>
-  <table name="#hitTime"> 4000 4000 4000 4000 4000 4000 4000 1000 </table>
-  <table name="#skillTime"> 4000 4000 4000 4000 4000 4000 4000 1000 </table>
+<skill id="4314" levels="12" name="BOSS Holy Light Burst">
+  <table name="#power"> 128.0 156.0 138.0 152.0 198.0 235.0 272.0 309.0 346.0 383.0 420.0 457.0 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+  <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="#hitTime"/>
+  <set name="hitTime" val="2000"/>
   <set name="element" val="1"/>
   <set name="reuseDelay" val="8000"/>
-  <set name="skillTime" val="#skillTime"/>
+  <set name="skillTime" val="2000"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
-
   <for>
-
   </for>
 </skill>
-<skill id="4315" levels="7" name="Hold">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Unable to move at all, as though one has grown roots into the ground.
-  7: Unable to move at all, as though one has grown roots into the ground.
-  created 2005-05-29 23:34:33
--->
-  <table name="#mpConsume"> 23 33 44 59 74 89 103 </table>
+<skill id="4315" levels="12" name="Hold">
+<!--- TODO -->
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="2500"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="2500"/>
   <set name="skillType" val="NOTDONE"/>
@@ -241,13 +210,12 @@
   <for>
   </for>
 </skill>
-<skill id="4316" levels="7" name="Boss Lilim Drain">
-
-
-  <table name="#power"> 26.0 31.0 36.0 41.0 46.0 51.0 56.0 </table>
-  <table name="#mpConsume"> 23 33 44 59 74 89 103 </table>
+<skill id="4316" levels="12" name="Boss Lilim Drain">
+  <table name="#power"> 26.0 31.0 36.0 41.0 46.0 51.0 56.0 61.0 66.0 71.0 76.0 81.0 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="2500"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="205"/>
   <set name="skillTime" val="2500"/>
@@ -256,20 +224,13 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="750"/>
   <set name="absorbPart" val="0.8"/>
-
   <for>
-
   </for>
 </skill>
 <skill id="4317" levels="5" name="Increase Rage Might">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
-  <table name="#mpConsume"> 50 50 50 50 50 </table>
-  <set name="mpConsume" val="#mpConsume"/>
+<!--- TODO -->
+  <set name="mpConsume" val="50"/>
+  <set name="hitTime" val="1800"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="1800"/>
   <set name="skillType" val="NOTDONE"/>
@@ -279,12 +240,7 @@
   </for>
 </skill>
 <skill id="4318" levels="1" name="Ultimate Buff">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
+<!--- TODO -->
   <set name="mpConsume" val="50"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -294,14 +250,7 @@
   </for>
 </skill>
 <skill id="4319" levels="1" name="Paralysis">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Entire body is paralyzed and one cannot move at all.
-  created 2005-05-29 23:34:33
--->
+<!--- TODO -->
   <set name="mpConsume" val="50"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -311,18 +260,10 @@
   <for>
   </for>
 </skill>
-<skill id="4320" levels="7" name="Poison">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Gradually reduces one's HP. Effect 4.
-  7: Gradually reduces one's HP. Effect 9.
-  created 2005-05-29 23:34:33
--->
-  <table name="#mpConsume"> 50 50 50 50 50 50 50 </table>
-  <table name="#power"> 4.0 5.0 6.0 7.0 8.0 9.0 9.0 </table>
+<skill id="4320" levels="12" name="Poison">
+<!--- TODO -->
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 77 78 83 </table>
+  <table name="#power"> 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 15.0 16.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_NONE"/>
@@ -334,14 +275,7 @@
   </for>
 </skill>
 <skill id="4321" levels="1" name="Decrease P. Def.">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily reduces one's P. Def. greatly.
-  created 2005-05-29 23:34:33
--->
+<!--- TODO -->
   <set name="mpConsume" val="50"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -512,14 +446,7 @@
 </for>
 </skill>
 <skill id="4332" levels="1" name="Mental Aegis">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Provides complete resistance to Hold, Sleep, Fear and Silence.
-  created 2005-05-29 23:34:33
--->
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -528,15 +455,7 @@
   </for>
 </skill>
 <skill id="4333" levels="6" name="Resist Dark Attack">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Provides powerful resistance against dark magic.
-  6: Provides very powerful resistance against dark magic attack.
-  created 2005-05-29 23:34:33
--->
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -545,12 +464,7 @@
   </for>
 </skill>
 <skill id="4334" levels="1" name="SSQ Cancel">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -559,14 +473,7 @@
   </for>
 </skill>
 <skill id="4335" levels="1" name="Sacred Attack">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Launches a sacred attack.
-  created 2005-05-29 23:34:33
--->
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -575,15 +482,7 @@
   </for>
 </skill>
 <skill id="4336" levels="5" name="Dark Attack Weak Point">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Is vulnerable to a dark attack
-  5: Is vulnerable to a dark attack
-  created 2005-05-29 23:34:33
--->
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -592,15 +491,7 @@
   </for>
 </skill>
 <skill id="4337" levels="6" name="Resist Sacred Attack">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Provides powerful resistance against sacred attack.
-  6: Provides very powerful resistance against sacred attack.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -609,12 +500,7 @@
   </for>
 </skill>
 <skill id="4338" levels="1" name="Life Cubic For Novice">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
@@ -624,12 +510,7 @@
   </for>
 </skill>
 <skill id="4339" levels="1" name="Mimir's Elixir">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -638,12 +519,7 @@
   </for>
 </skill>
 <skill id="4340" levels="1" name="Ultimate Buff, 2nd">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <set name="mpConsume" val="50"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -653,12 +529,7 @@
   </for>
 </skill>
 <skill id="4341" levels="1" name="Ultimate Buff, 3rd">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <set name="mpConsume" val="50"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -668,15 +539,7 @@
   </for>
 </skill>
 <skill id="4342" levels="2" name="Clan Hall Wind Walk">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases Speed. Effect 1.
-  2: Temporarily increases Speed. Effect 2.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <table name="#mpConsume"> 50 100 </table>
   <table name="#power"> 1.0 2.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -690,15 +553,7 @@
   </for>
 </skill>
 <skill id="4343" levels="3" name="Clan Hall: Decrease Weight">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily reduces body weight. Effect 1.
-  3: Temporarily reduces body weight. Effect 3.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <table name="#mpConsume"> 50 0 100 </table>
   <table name="#power"> 1.0 2.0 3.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -712,15 +567,7 @@
   </for>
 </skill>
 <skill id="4344" levels="3" name="Clan Hall: Shield">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases P. Def. Effect 1.
-  3: Temporarily increases P. Def. Effect 3.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <table name="#mpConsume"> 50 0 100 </table>
   <table name="#power"> 1.0 2.0 3.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -734,15 +581,7 @@
   </for>
 </skill>
 <skill id="4345" levels="3" name="Clan Hall: Might">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases P. Atk. Effect 1.
-  3: Temporarily increases P. Atk. Effect 3.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <table name="#mpConsume"> 50 0 100 </table>
   <table name="#power"> 1.0 2.0 3.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -756,15 +595,7 @@
   </for>
 </skill>
 <skill id="4346" levels="4" name="Clan Hall: Mental Shield">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases resistance against Hold, Sleep, Fear and Silence. Effect 1.
-  4: Temporarily increases resistance against Hold, Sleep, Fear and Silence. Effect 4.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <table name="#mpConsume"> 50 0 0 100 </table>
   <table name="#power"> 1.0 2.0 3.0 4.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -778,37 +609,30 @@
   </for>
 </skill>
 <skill id="4347" levels="6" name="Clan Hall: Bless the Body">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases maximum HP. Effect 1.
-  6: Temporarily increases maximum HP. Effect 6.
-  created 2005-05-29 23:34:34
--->
-  <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 </table>
-  <set name="power" val="#power"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#mpConsume"> 0 150 0 0 0 300 </table>
+  <table name="#Tab-maxHp"> 1.1 1.15 1.2 1.25 1.3 1.4 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
+  <effect count="1" name="Buff" time="1200" val="0">
+    <mul order="0x50" stat="maxHp" val="#Tab-maxHp"/>
+  </effect>
   </for>
 </skill>
 <skill id="4348" levels="6" name="Clan Hall: Bless the Soul">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases maximum MP. Effect 1.
-  6: Temporarily increases maximum MP. Effect 6.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
+  <table name="#mpConsume"> 0 150 0 0 0 300 </table>
   <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 </table>
   <set name="power" val="#power"/>
+  <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
@@ -818,15 +642,7 @@
   </for>
 </skill>
 <skill id="4349" levels="2" name="Clan Hall: Magic Barrier">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases M. Def. Effect 2.
-  2: Temporarily increases M. Def. Effect 3.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <table name="#mpConsume"> 150 300 </table>
   <table name="#power"> 2.0 3.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -840,15 +656,7 @@
   </for>
 </skill>
 <skill id="4350" levels="4" name="Clan Hall: Resist Shock">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Gives temporary resistance to shock. Effect 1.
-  4: Gives temporary resistance to shock. Effect 4.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <table name="#mpConsume"> 150 0 0 300 </table>
   <table name="#power"> 1.0 2.0 3.0 4.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -862,17 +670,11 @@
   </for>
 </skill>
 <skill id="4351" levels="6" name="Clan Hall: Concentration">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily lowers the probability of magic being canceled due to damage. Effect 1.
-  6: Temporarily lowers the probability of magic being canceled due to damage. Effect 6.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
+  <table name="#mpConsume"> 0 200 0 0 0 400 </table>
   <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 </table>
   <set name="power" val="#power"/>
+  <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
@@ -882,15 +684,7 @@
   </for>
 </skill>
 <skill id="4352" levels="2" name="Clan Hall: Berserker Spirit">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily decreases P. Def. and increases P. Atk., M. Atk., Atk. Spd, and Casting Spd. Effect 1.
-  2: Temporarily decreases P. Def. and increases P. Atk., M. Atk., Atk. Spd, and Casting Spd. Effect 2.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <table name="#mpConsume"> 200 400 </table>
   <table name="#power"> 1.0 2.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -904,17 +698,11 @@
   </for>
 </skill>
 <skill id="4353" levels="6" name="Clan Hall: Bless Shield">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases the success rate of shield defense. Effect 1.
-  6: Temporarily increases the success rate of shield defense. Effect 6.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
+  <table name="#mpConsume"> 0 200 0 0 0 400 </table>
   <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 </table>
   <set name="power" val="#power"/>
+  <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
@@ -924,15 +712,7 @@
   </for>
 </skill>
 <skill id="4354" levels="4" name="Clan Hall: Vampiric Rage">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily restores HP using damage inflicted upon the enemy. Excludes damage inflicted by skill or remote attack. Effect 1.
-  4: Temporarily restores HP using damage inflicted upon the enemy. Excludes damage inflicted by skill or remote attack. Effect 4.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <table name="#mpConsume"> 200 0 0 400 </table>
   <table name="#power"> 1.0 2.0 3.0 4.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -946,15 +726,7 @@
   </for>
 </skill>
 <skill id="4355" levels="3" name="Clan Hall: Acumen">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases Casting Spd. Effect 1.
-  3: Temporarily increases Casting Spd. Effect 3.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <table name="#mpConsume"> 300 0 600 </table>
   <table name="#power"> 1.0 2.0 3.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -968,15 +740,7 @@
   </for>
 </skill>
 <skill id="4356" levels="3" name="Clan Hall: Empower">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases M. Atk. Effect 1.
-  3: Temporarily increases M. Atk. Effect 3.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <table name="#mpConsume"> 300 0 600 </table>
   <table name="#power"> 1.0 2.0 3.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -990,15 +754,7 @@
   </for>
 </skill>
 <skill id="4357" levels="2" name="Clan Hall: Haste">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases Atk. Spd. Effect 1.
-  2: Temporarily increases Atk. Spd. Effect 2.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <table name="#mpConsume"> 300 600 </table>
   <table name="#power"> 1.0 2.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1012,15 +768,7 @@
   </for>
 </skill>
 <skill id="4358" levels="3" name="Clan Hall: Guidance">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases Accuracy. Effect 1.
-  3: Temporarily increases Accuracy. Effect 3.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <table name="#mpConsume"> 200 0 400 </table>
   <table name="#power"> 1.0 2.0 3.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1034,15 +782,7 @@
   </for>
 </skill>
 <skill id="4359" levels="3" name="Clan Hall: Focus">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases critical attack rate. Effect 1.
-  3: Temporarily increases critical attack rate. Effect 3.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <table name="#mpConsume"> 300 0 600 </table>
   <table name="#power"> 1.0 2.0 3.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1056,15 +796,7 @@
   </for>
 </skill>
 <skill id="4360" levels="3" name="Clan Hall: Death Whisper">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases critical power. Effect 1.
-  3: Temporarily increases critical power. Effect 3.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <table name="#mpConsume"> 300 0 600 </table>
   <table name="#power"> 1.0 2.0 3.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1081,14 +813,12 @@
   <table name="#power"> 1.0 2.0 </table>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
-  <set name="castRange" val="400"/>
+  <set name="castRange" val="600"/>
   <for>
    <effect count="1" name="Buff" time="1200" val="0">
      <sub order="0x50" stat="accCombat" val="5"/>
@@ -1099,17 +829,18 @@
   </for>
 </skill>
 <skill id="4362" levels="2" name="Curse of Destruction">
+<!--- TODO
+Curse of the Preacher of Doom. Temporarily decreases Casting Spd.
+and resistance to Sleep/Hold/Shock attacks. Effect 2. -->
   <table name="#power"> 1.0 2.0 </table>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
-  <set name="castRange" val="400"/>
+  <set name="castRange" val="600"/>
   <for>
    <effect count="1" name="Buff" time="1200" val="0">
      <mul order="0x50" stat="mAtkSpd" val="0.75"/>
@@ -1120,13 +851,8 @@
   </for>
 </skill>
 <skill id="4363" levels="1" name="Curse of Destruction">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Curse of the Preacher of Doom. Temporarily decreases Accuracy. Effect 1.
-  created 2005-05-29 23:34:34
+<!--- TODO
+Curse of the Preacher of Doom. Temporarily decreases Accuracy. Effect 1.
 -->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1138,12 +864,14 @@
   </for>
 </skill>
 <skill id="4364" levels="2" name="Blessing of Prophecy">
+<!--- TODO
+Blessing of the Orator of Revelations. Temporarily decreases body 
+weight and increases resistance to Poison/Bleed/Hold/Shock/Paralysis attacks. 
+Effect 2.-->
   <table name="#power"> 1.0 2.0 </table>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1161,12 +889,14 @@
   </for>
 </skill>
 <skill id="4365" levels="2" name="Blessing of Prophecy">
+<!--- TODO
+Blessing of the Orator of Revelations. Temporarily, the chance 
+to get one's magic canceled by damage is decreased and one's 
+resistance to Hold/Mental attack is increased. -->
   <table name="#power"> 1.0 2.0 </table>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1184,13 +914,9 @@
   </for>
 </skill>
 <skill id="4366" levels="1" name="Blessing of Prophecy">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Blessing of the Orator of Revelations. Temporarily decreases body weight and increases resistance to Poison/Bleed attacks. Effect 1.
-  created 2005-05-29 23:34:34
+<!--- TODO
+Blessing of the Orator of Revelations. Temporarily decreases body 
+weight and increases resistance to Poison/Bleed attacks. Effect 1.
 -->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_NONE"/>
@@ -1202,12 +928,7 @@
   </for>
 </skill>
 <skill id="4367" levels="1" name="Clan Hall Manager Buff">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
@@ -1217,12 +938,7 @@
   </for>
 </skill>
 <skill id="4368" levels="1" name="Clan Hall Manager Buff">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
@@ -1232,12 +948,7 @@
   </for>
 </skill>
 <skill id="4369" levels="1" name="Clan Hall Manager Buff">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
@@ -1247,12 +958,7 @@
   </for>
 </skill>
 <skill id="4370" levels="1" name="Clan Hall Manager Buff">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
@@ -1262,12 +968,7 @@
   </for>
 </skill>
 <skill id="4371" levels="1" name="Clan Hall Manager Buff">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
@@ -1277,12 +978,7 @@
   </for>
 </skill>
 <skill id="4372" levels="1" name="Clan Hall Manager Buff">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
@@ -1292,12 +988,7 @@
   </for>
 </skill>
 <skill id="4373" levels="1" name="Clan Hall Manager Buff">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
@@ -1307,12 +998,7 @@
   </for>
 </skill>
 <skill id="4374" levels="1" name="Clan Hall Manager Buff">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
@@ -1322,12 +1008,7 @@
   </for>
 </skill>
 <skill id="4375" levels="1" name="Clan Hall Manager Buff">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
@@ -1336,15 +1017,8 @@
   <for>
   </for>
 </skill>
-<skill id="4376" levels="1" name="Strong Resistance to P. Atk.">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Provides very strong resistance against P. Atk.
-  created 2005-05-29 23:34:34
--->
+<skill id="4376" levels="1" name="Strong Resistance to P.Atk.">
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1352,15 +1026,11 @@
   <for>
   </for>
 </skill>
-<skill id="4377" levels="7" name="Wield Temper">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
-  <table name="#mpConsume"> 14 22 31 43 55 68 79 </table>
+<skill id="4377" levels="12" name="Wield Temper">
+<!--- TODO -->
+  <table name="#mpConsume"> 14 22 31 43 55 68 79 84 89 92 94 95 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="1000"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="1000"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1369,17 +1039,17 @@
   <for>
   </for>
 </skill>
-<skill id="4378" levels="7" name="Self Damage Shield">
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 </table>
-  <table name="#power"> 10.0 15.0 20.0 25.0 30.0 35.0 40.0 </table>
+<skill id="4378" levels="12" name="Self Damage Shield">
+  <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
+  <table name="#power"> 10.0 15.0 20.0 25.0 30.0 35.0 40.0 45.0 50.0 55.0 60.0 65.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="1800"/>
   <set name="reuseDelay" val="60000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="skillTime" val="1800"/>
   <set name="skillType" val="REFLECT"/>
-  <set name="isMagic" val="true"/>
+  <set name="isMagic" val="false"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
@@ -1400,13 +1070,8 @@
 	<add order="0x50" stat="poleWpnRes" val="#Tab-poleRes"/>
   </for>
 </skill>
-<skill id="4380" levels="1" name="Not used">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
+<skill id="4380" levels="1" name="Arena CP Recovery">
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1414,12 +1079,9 @@
   <for>
   </for>
 </skill>
-<skill id="4381" levels="1" name="Raid Boss - Level 23">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
+<skill id="4381" levels="1" name="Magic Skill Block">
+<!--- TODO
+Temporarily blocks the use of magic skills.
 -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1428,12 +1090,32 @@
   <for>
   </for>
 </skill>
-<skill id="4382" levels="1" name="Raid Boss - Level 30">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
+<skill id="4382" levels="12" name="Curse of Lake Ghost">
+<!--- TODO
+Being curse by Lake Ghost, the head is enlarged temporarily.-->
+  <table name="#mpConsume"> 14 22 31 43 55 68 79 84 89 92 94 95 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="1000"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="skillTime" val="1000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="40"/>
+  <for>
+  </for>
+</skill>
+<skill id="4383" levels="1" name="NPC Hate Stone">
+<!--- TODO -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4384" levels="1" name="Scapegoat's Grace">
+<!--- TODO
+Temporarily provides protection against the de-buff that lowers one's P. Def.
 -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1442,12 +1124,9 @@
   <for>
   </for>
 </skill>
-<skill id="4383" levels="1" name="Raid Boss - Level 39">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
+<skill id="4385" levels="1" name="Scapegoat's Grace">
+<!--- TODO
+Temporarily provides protection against the de-buff that lowers one's P. Atk.
 -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1456,12 +1135,44 @@
   <for>
   </for>
 </skill>
-<skill id="4384" levels="1" name="Raid Boss - Level 55">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
+<skill id="4386" levels="1" name="Scapegoat's Grace">
+<!--- TODO
+Temporarily provides protection against the de-buff that poisons.-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4387" levels="1" name="Scapegoat's Grace">
+<!--- TODO
+Temporarily provides protection against the de-buff that 
+lowers the effectiveness of HP regeneration magic.-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4388" levels="6" name="Resist Paralysis">
+<!--- TODO -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4389" levels="6" name="Resist Mental Derangement">
+<!--- TODO
+1.Provides resistance against mental attack.
+2.Resist Mental Derangement
+3.Resist Mental Derangement
+4.Resist Mental Derangement
+5.Possesses strong resistance against mental attacks.
+6.Possesses strong resistance against mental attacks.
 -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1470,13 +1181,8 @@
   <for>
   </for>
 </skill>
-<skill id="4385" levels="1" name="Raid Boss - Level 50">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
+<skill id="4390" levels="1" name="NPC Abnormal Immunity">
+<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1484,200 +1190,5 @@
   <for>
   </for>
 </skill>
-<skill id="4386" levels="1" name="Raid Boss - Level 60">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="4387" levels="1" name="Raid Boss - Level 25">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="4388" levels="1" name="Raid Boss - Level 34">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="4389" levels="1" name="Raid Boss - Level 45">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="4390" levels="1" name="Raid Boss - Level 49">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="4391" levels="1" name="Raid Boss - Level 53">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="4392" levels="1" name="Raid Boss - Level 65">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="4393" levels="1" name="Raid Boss - Level 70">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="4394" levels="1" name="Raid Boss - Level 28">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="4395" levels="1" name="Raid Boss - Level 35">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="4396" levels="1" name="Raid Boss - Level 43">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="4397" levels="1" name="Raid Boss - Level 49">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="4398" levels="1" name="Raid Boss - Level 55">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="4399" levels="1" name="Raid Boss - Level 65">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:34
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
+<!--- ID 4391 thru 4399 have NONE listed for skill name -->
 </list>

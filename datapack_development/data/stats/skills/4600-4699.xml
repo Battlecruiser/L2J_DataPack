@@ -1,0 +1,1336 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+<skill id="4600" levels="12" name="Reducing P.Def Shock">
+<!-- TODO -->
+  <table name="#mpConsume"> 25 41 57 77 100 123 143 153 161 166 170 172 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="1800"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="1800"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4601" levels="3" name="NPC Clan Buff - Acumen Focus">
+<!-- TODO -->
+  <table name="#mpConsume"> 29 53 98 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4602" levels="12" name="Decrease P.Atk">
+<!-- TODO -->
+  <table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="4000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="4000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4603" levels="12" name="Decrease P.Atk">
+<!-- TODO -->
+  <table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="4000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="4000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4604" levels="12" name="Decrease P.Atk">
+<!-- TODO -->
+  <table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="1000"/>
+  <for>
+  </for>
+</skill>
+<skill id="4605" levels="12" name="Fire Weakness">
+<!-- TODO -->
+  <table name="#mpConsume"> 25 41 57 77 100 123 143 153 161 166 170 172 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="1800"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="1800"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="40"/>
+  <for>
+  </for>
+</skill>
+<skill id="4606" levels="12" name="Poison">
+<!-- TODO -->
+  <table name="#mpConsume"> 37 62 86 116 149 184 215 229 241 249 255 258 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="1800"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="1800"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="40"/>
+  <for>
+  </for>
+</skill>
+<skill id="4607" levels="1" name="Magma Attack">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="1500"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="1500"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4608" levels="2" name="NPC Clan Buff - Berserk">
+<!-- TODO -->
+  <table name="#mpConsume"> 20 49 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4609" levels="4" name="NPC Clan Buff - Vampiric Rage">
+<!-- TODO -->
+  <table name="#mpConsume"> 15 27 42 49 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4610" levels="3" name="NPC Clan Buff - Focus">
+<!-- TODO -->
+  <table name="#mpConsume"> 15 27 49 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4611" levels="3" name="NPC Clan Buff - Death Whisper">
+<!-- TODO -->
+  <table name="#mpConsume"> 15 27 49 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4612" levels="12" name="NPC Wide Wild Sweep">
+<!-- TODO -->
+  <table name="#mpConsume"> 21 33 47 64 82 101 118 126 133 137 140 142 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="1800"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="1800"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="40"/>
+  <for>
+  </for>
+</skill>
+<skill id="4613" levels="12" name="NPC Clan Heal">
+<!-- TODO -->
+  <table name="#mpConsume"> 25 44 67 92 120 147 170 182 189 194 197 197 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4614" levels="12" name="NPC Death Bomb">
+<!-- TODO -->
+  <table name="#mpConsume"> 21 33 47 64 82 101 118 126 133 137 140 142 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4615" levels="12" name="Bleed">
+<!-- TODO -->
+  <table name="#mpConsume"> 22 34 48 64 83 102 119 127 133 138 140 143 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="500"/>
+  <for>
+  </for>
+</skill>
+<skill id="4616" levels="1" name="Fake Petrification">
+<!-- TODO -->
+  <set name="mpConsume" val="73"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4617" levels="1" name="Dispel Petrification">
+<!-- TODO -->
+  <set name="mpConsume" val="73"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4618" levels="1" name="NPC Cancel PC Target">
+<!-- TODO -->
+  <set name="mpConsume" val="35"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="1500"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="1500"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="400"/>
+  <for>
+  </for>
+</skill>
+<skill id="4619" levels="1" name="NPC Dispel Sleep">
+<!-- TODO -->
+  <set name="mpConsume" val="35"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4620" levels="12" name="Paralysis">
+<!-- TODO -->
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="6000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="6000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="400"/>
+  <for>
+  </for>
+</skill>
+<skill id="4621" levels="12" name="NPC AE - 80% HP Drain">
+<!-- TODO -->
+  <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="4000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="4000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="500"/>
+  <for>
+  </for>
+</skill>
+<skill id="4622" levels="12" name="NPC AE - 80% HP Drain - Magic">
+<!-- TODO -->
+  <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="4000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="4000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="500"/>
+  <for>
+  </for>
+</skill>
+<skill id="4623" levels="12" name="NPC AE - 80% HP Drain - Slow">
+<!-- TODO -->
+  <table name="#mpConsume"> 22 34 48 64 83 102 119 127 133 138 140 143 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="1000"/>
+  <for>
+  </for>
+</skill>
+<skill id="4624" levels="12" name="Decrease HP Regeneration Rate">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4625" levels="12" name="Decrease Speed">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4626" levels="12" name="NPC Buff - Physical Barrier">
+<!-- TODO -->
+  <table name="#mpConsume"> 7 10 14 18 23 28 33 35 37 38 39 39 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4627" levels="12" name="NPC Buff - Magical Barrier">
+<!-- TODO -->
+  <table name="#mpConsume"> 7 10 14 18 23 28 33 35 37 38 39 39 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4628" levels="1" name="Mysterious Aura">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4629" levels="12" name="NPC MR - HP Drain">
+<!-- TODO -->
+  <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="4000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="4000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="400"/>
+  <for>
+  </for>
+</skill>
+<skill id="4630" levels="12" name="NPC MR - Twister">
+<!-- TODO -->
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="4000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="4000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="400"/>
+  <for>
+  </for>
+</skill>
+<skill id="4631" levels="3" name="NPC Buff - Acumen Shield WildMagic">
+<!-- TODO -->
+  <table name="#mpConsume"> 29 53 83 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4632" levels="3" name="NPC Buff - Acumen Empower WildMagic">
+<!-- TODO -->
+  <table name="#mpConsume"> 29 53 83 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4633" levels="3" name="NPC Buff - Acumen Empower Berserk">
+<!-- TODO -->
+  <table name="#mpConsume"> 29 53 83 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4634" levels="3" name="NPC Buff - Acumen Empower DamageShield">
+<!-- TODO -->
+  <table name="#mpConsume"> 29 53 83 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4635" levels="3" name="NPC Buff - Acumen Berserk WildMagic">
+<!-- TODO -->
+  <table name="#mpConsume"> 29 53 83 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4636" levels="3" name="NPC Buff - Acumen Berserk DamageShield">
+<!-- TODO -->
+  <table name="#mpConsume"> 29 53 83 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4637" levels="3" name="NPC Buff - Acumen WildMagic DamageShield">
+<!-- TODO -->
+  <table name="#mpConsume"> 29 53 83 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4638" levels="3" name="NPC Clan Buff - Acumen Empower WildMagic">
+<!-- TODO -->
+  <table name="#mpConsume"> 43 79 124 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4639" levels="3" name="NPC Clan Buff - Acumen Empower Berserk">
+<!-- TODO -->
+  <table name="#mpConsume"> 43 79 124 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4640" levels="12" name="Sleep">
+<!-- TODO -->
+  <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2500"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2500"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="500"/>
+  <for>
+  </for>
+</skill>
+<skill id="4641" levels="12" name="NPC Super Strike">
+<!-- TODO -->
+  <table name="#mpConsume"> 41 66 93 127 164 202 236 252 265 274 280 283 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="1800"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="1800"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="40"/>
+  <for>
+  </for>
+</skill>
+<skill id="4642" levels="3" name="NPC Fast Spell Casting">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4643" levels="12" name="Decrease Speed">
+<!-- TODO -->
+  <table name="#mpConsume"> 25 41 57 77 100 123 143 153 161 166 170 172 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="1800"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="1800"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="40"/>
+  <for>
+  </for>
+</skill>
+<skill id="4644" levels="2" name="Area Buff - Haste">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4645" levels="3" name="Area Buff - Focus">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4646" levels="3" name="Area Buff - Death Whisper">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4647" levels="3" name="Area Buff - Might">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4648" levels="12" name="Area Buff - Shield">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4649" levels="12" name="Poison">
+<!-- TODO -->
+  <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4650" levels="1" name="NPC AE - Dispel Hold">
+<!-- TODO -->
+  <set name="mpConsume" val="53"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4651" levels="3" name="NPC AE - Dispel Slow">
+<!-- TODO -->
+  <table name="#mpConsume"> 29 53 83 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4652" levels="1" name="NPC AE Dispel Silence">
+<!-- TODO -->
+  <set name="mpConsume" val="53"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4653" levels="12" name="NPC Corpse Life Drain">
+<!-- TODO -->
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="400"/>
+  <for>
+  </for>
+</skill>
+<skill id="4654" levels="12" name="NPC Death Link">
+<!-- TODO -->
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="4000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="4000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="900"/>
+  <for>
+  </for>
+</skill>
+<skill id="4655" levels="12" name="NPC Death Link - Magic">
+<!-- TODO -->
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="4000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="4000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="900"/>
+  <for>
+  </for>
+</skill>
+<skill id="4656" levels="12" name="NPC Death Link - Slow">
+<!-- TODO -->
+  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="1000"/>
+  <for>
+  </for>
+</skill>
+<skill id="4657" levels="12" name="Hold">
+<!-- TODO -->
+  <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="4000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="4000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4658" levels="12" name="Hold">
+<!-- TODO -->
+  <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="4000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="4000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4659" levels="12" name="Hold">
+<!-- TODO -->
+  <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="1000"/>
+  <for>
+  </for>
+</skill>
+<skill id="4660" levels="12" name="Sleep">
+<!-- TODO -->
+  <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="4000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="4000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4661" levels="12" name="Sleep">
+<!-- TODO -->
+  <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="4000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="4000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4662" levels="12" name="Sleep">
+<!-- TODO -->
+  <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="1000"/>
+  <for>
+  </for>
+</skill>
+<skill id="4663" levels="1" name="NPC Hate">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="900"/>
+  <for>
+  </for>
+</skill>
+<skill id="4664" levels="12" name="NPC 100% HP Drain">
+<!-- TODO -->
+  <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4665" levels="12" name="NPC 100% HP Drain - Magic">
+<!-- TODO -->
+  <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4666" levels="12" name="NPC 100% HP Drain - Slow">
+<!-- TODO -->
+  <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="1000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="1000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="1000"/>
+  <for>
+  </for>
+</skill>
+<skill id="4667" levels="12" name="NPC Strong 100% HP Drain">
+<!-- TODO -->
+  <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4668" levels="12" name="NPC Strong 100% HP Drain - Magic">
+<!-- TODO -->
+  <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4669" levels="12" name="NPC Strong 100% HP Drain - Slow">
+<!-- TODO -->
+  <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="1000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="1000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="1000"/>
+  <for>
+  </for>
+</skill>
+<skill id="4670" levels="12" name="Short Shock">
+<!-- TODO -->
+  <table name="#mpConsume"> 11 18 25 34 44 54 63 68 71 74 75 76 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="1800"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="1800"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="40"/>
+  <for>
+  </for>
+</skill>
+<skill id="4671" levels="1" name="AV - Teleport">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4672" levels="1" name="NPC Corpse Remove">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="900"/>
+  <for>
+  </for>
+</skill>
+<skill id="4673" levels="12" name="NPC Dispel Offensive Buff">
+<!-- TODO -->
+  <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4674" levels="12" name="NPC Dispel Offensive Buff">
+<!-- TODO -->
+  <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4675" levels="12" name="NPC Dispel Fighter Buff">
+<!-- TODO -->
+  <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4676" levels="12" name="NPC Dispel Mage Offensive Buff">
+<!-- TODO -->
+  <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4677" levels="12" name="NPC Dispel Fighter Defensive Buff">
+<!-- TODO -->
+  <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4678" levels="12" name="NPC Dispel Mage Defensive Buff">
+<!-- TODO -->
+  <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="2000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <for>
+  </for>
+</skill>
+<skill id="4679" levels="1" name="Valakas">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4680" levels="1" name="Valakas Lava Skin">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="3300"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="3300"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4681" levels="1" name="Valakas Trample">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="1000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="1000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="50"/>
+  <for>
+  </for>
+</skill>
+<skill id="4682" levels="1" name="Valakas Trample">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="1000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="1000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="50"/>
+  <for>
+  </for>
+</skill>
+<skill id="4683" levels="1" name="Valakas Dragon Breath">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="3000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="3000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="300"/>
+  <for>
+  </for>
+</skill>
+<skill id="4684" levels="1" name="Valakas Dragon Breath">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="3000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="3000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="900"/>
+  <for>
+  </for>
+</skill>
+<skill id="4685" levels="1" name="Valakas Tail Stomp">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="3000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="3000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4686" levels="1" name="Valakas Tail Stomp">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4687" levels="1" name="Valakas Tail Stomp">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="3000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="3000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4688" levels="1" name="Valakas Shock">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="3000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="3000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4689" levels="2" name="Valakas Fear">
+<!-- TODO -->
+  <table name="#hitTime"> 3000 0 </table>
+  <table name="#skillTime"> 3000 0 </table>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="#hitTime"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="#skillTime"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4690" levels="1" name="Valakas Meteor Storm">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="8000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="8000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4691" levels="4" name="Valakas Regeneration">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4692" levels="1" name="Quest BOSS Big Body">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4693" levels="1" name="Quest BOSS Dispel Big Body">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4694" levels="1" name="Ultimate Debuff">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4695" levels="1" name="Ultimate Debuff">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4696" levels="1" name="Ultimate Debuff">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4697" levels="12" name="NPC Monster Hate">
+<!-- TODO -->
+  <table name="#mpConsume"> 18 29 40 53 68 83 100 104 109 113 115 117 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4698" levels="12" name="HP Regeneration">
+<!-- TODO -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4699" levels="13" name="Blessing of Queen">
+<!-- TODO -->
+  <table name="#mpConsume"> 122 157 194 202 207 212 215 220 224 229 233 237 242 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="4000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="PASSIVE"/>
+  <set name="skillTime" val="4000"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+</list>
