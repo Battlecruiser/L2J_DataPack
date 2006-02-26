@@ -54,11 +54,11 @@ class Quest (JQuest) :
       if int(st.get("cond"))==1 and st.getQuestItemsCount(KASHA_CRYSTAL_ID) == 0 :
         count = st.getQuestItemsCount(KASHA_PARASITE_ID)
         random = st.getRandom(100)
-        if (count >= 20 and random < 70) or \
-           (count >= 15 and random < 60) or \
-           (count >= 10 and random < 50) or \
-           (count >= 2  and random < 40) or \
-           (count >  0  and random < 30) :
+        if (count >= 70 and random < 90) or \
+           (count >= 65 and random < 75) or \
+           (count >= 60 and random < 60) or \
+           (count >= 52 and random < 45) or \
+           (count >  50 and random < 30) :
                 st.getPcSpawn().addSpawn(5044)
                 st.takeItems(KASHA_PARASITE_ID,count)
         else :
@@ -75,7 +75,6 @@ QUEST       = Quest(276,"276_HestuiTotem","Hestui Totem")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
-
 
 QUEST.setInitialState(CREATED)
 
