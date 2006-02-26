@@ -7,43 +7,21 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 NPC=[7115,7856,7194]
 
-RED_SOUL_CRYSTAL0_ID = 4629
-RED_SOUL_CRYSTAL1_ID = 4630
-RED_SOUL_CRYSTAL2_ID = 4631
-RED_SOUL_CRYSTAL3_ID = 4632
-RED_SOUL_CRYSTAL4_ID = 4633
-RED_SOUL_CRYSTAL5_ID = 4634
-RED_SOUL_CRYSTAL6_ID = 4635
-RED_SOUL_CRYSTAL7_ID = 4636
-RED_SOUL_CRYSTAL8_ID = 4637
-RED_SOUL_CRYSTAL9_ID = 4638
-RED_SOUL_CRYSTAL10_ID = 4639
-RED_SOUL_CRYSTALX_ID = 4662
-GREEN_SOUL_CRYSTAL0_ID = 4640
-GREEN_SOUL_CRYSTAL1_ID = 4641
-GREEN_SOUL_CRYSTAL2_ID = 4642
-GREEN_SOUL_CRYSTAL3_ID = 4643
-GREEN_SOUL_CRYSTAL4_ID = 4644
-GREEN_SOUL_CRYSTAL5_ID = 4645
-GREEN_SOUL_CRYSTAL6_ID = 4646
-GREEN_SOUL_CRYSTAL7_ID = 4647
-GREEN_SOUL_CRYSTAL8_ID = 4648
-GREEN_SOUL_CRYSTAL9_ID = 4649
-GREEN_SOUL_CRYSTAL10_ID = 4650
-GREEN_SOUL_CRYSTALX_ID = 4663
-BLUE_SOUL_CRYSTAL0_ID = 4651
-BLUE_SOUL_CRYSTAL1_ID = 4652
-BLUE_SOUL_CRYSTAL2_ID = 4653
-BLUE_SOUL_CRYSTAL3_ID = 4654
-BLUE_SOUL_CRYSTAL4_ID = 4655
-BLUE_SOUL_CRYSTAL5_ID = 4656
-BLUE_SOUL_CRYSTAL6_ID = 4657
-BLUE_SOUL_CRYSTAL7_ID = 4658
-BLUE_SOUL_CRYSTAL8_ID = 4659
-BLUE_SOUL_CRYSTAL9_ID = 4660
-BLUE_SOUL_CRYSTAL10_ID = 4661
-BLUE_SOUL_CRYSTALX_ID = 4664
+RED_SOUL_CRYSTAL0_ID,RED_SOUL_CRYSTAL1_ID,RED_SOUL_CRYSTAL2_ID,RED_SOUL_CRYSTAL3_ID,\
+RED_SOUL_CRYSTAL4_ID,RED_SOUL_CRYSTAL5_ID,RED_SOUL_CRYSTAL6_ID,RED_SOUL_CRYSTAL7_ID,\
+RED_SOUL_CRYSTAL8_ID,RED_SOUL_CRYSTAL9_ID,RED_SOUL_CRYSTAL10_ID,GREEN_SOUL_CRYSTAL0_ID,\
+GREEN_SOUL_CRYSTAL1_ID,GREEN_SOUL_CRYSTAL2_ID,GREEN_SOUL_CRYSTAL3_ID,GREEN_SOUL_CRYSTAL4_ID,\
+GREEN_SOUL_CRYSTAL5_ID,GREEN_SOUL_CRYSTAL6_ID,GREEN_SOUL_CRYSTAL7_ID,GREEN_SOUL_CRYSTAL8_ID,\
+GREEN_SOUL_CRYSTAL9_ID,GREEN_SOUL_CRYSTAL10_ID,BLUE_SOUL_CRYSTAL0_ID,BLUE_SOUL_CRYSTAL1_ID,\
+BLUE_SOUL_CRYSTAL2_ID,BLUE_SOUL_CRYSTAL3_ID,BLUE_SOUL_CRYSTAL4_ID,BLUE_SOUL_CRYSTAL5_ID,\
+BLUE_SOUL_CRYSTAL6_ID,BLUE_SOUL_CRYSTAL7_ID,BLUE_SOUL_CRYSTAL8_ID,BLUE_SOUL_CRYSTAL9_ID,\
+BLUE_SOUL_CRYSTAL10_ID,RED_SOUL_CRYSTALX_ID,GREEN_SOUL_CRYSTALX_ID,BLUE_SOUL_CRYSTALX_ID = range(4629,4665)
 
+def check(st) :
+    for i in range(4629,4665) :
+       if st.getQuestItemsCount(i) :
+         return True
+    return False
 
 class Quest (JQuest) :
 
@@ -65,7 +43,6 @@ class Quest (JQuest) :
         st.exitQuest(1)
     return htmltext
 
-
  def onTalk (Self,npc,st):
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say to you</body></html>"
@@ -73,30 +50,25 @@ class Quest (JQuest) :
    if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
-   if npcId in NPC and int(st.get("cond")) == 0:   
+   if int(st.get("cond")) == 0:   
      htmltext = npcId+"-01.htm"
-   elif npcId in NPC and int(st.get("cond")) == 1 and st.getQuestItemsCount(RED_SOUL_CRYSTAL0_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL0_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL0_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL1_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL2_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL3_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL4_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL5_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL6_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL7_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL8_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL9_ID) != 0 or st.getQuestItemsCount(RED_SOUL_CRYSTAL10_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL1_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL2_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL3_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL4_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL5_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL6_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL7_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL8_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL9_ID) != 0 or st.getQuestItemsCount(GREEN_SOUL_CRYSTAL10_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL1_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL2_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL3_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL4_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL5_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL6_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL7_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL8_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL9_ID) != 0 or st.getQuestItemsCount(BLUE_SOUL_CRYSTAL10_ID) != 0 :
+   elif check(st) :
      htmltext = npcId+"-03.htm"
-   elif npcId in NPC and int(st.get("cond")) == 1 and st.getQuestItemsCount(RED_SOUL_CRYSTAL0_ID) == 0 and st.getQuestItemsCount(GREEN_SOUL_CRYSTAL0_ID) == 0 and st.getQuestItemsCount(BLUE_SOUL_CRYSTAL0_ID) == 0 :
+   elif st.getQuestItemsCount(RED_SOUL_CRYSTAL0_ID) == st.getQuestItemsCount(GREEN_SOUL_CRYSTAL0_ID) == st.getQuestItemsCount(BLUE_SOUL_CRYSTAL0_ID) == 0 :
      htmltext = npcId+"-21.htm"
    return htmltext
-
- 
 
 QUEST       = Quest(350,"350_EnhanceYourWeapon","Enhance Your Weapon")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 
-
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7115)
-
 
 for npcId in NPC:
+  QUEST.addStartNpc(npcId)
   STARTING.addTalkId(npcId)
   STARTED.addTalkId(npcId)
-
 
 STARTED.addQuestDrop(4629,RED_SOUL_CRYSTAL0_ID,1)
 STARTED.addQuestDrop(4640,GREEN_SOUL_CRYSTAL0_ID,1)
