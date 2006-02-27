@@ -298,11 +298,11 @@ class Quest (JQuest) :
 
 # Leolins Mold
     if event == "26":
-        if st.getQuestItemsCount(5474) >= 1 and st.getQuestItemsCount(5549) >= 40 and st.getQuestItemsCount(5550) >= 10 and st.getQuestItemsCount(1877) >= 15 and st.getQuestItemsCount(57) >= 5000:
+        if st.getQuestItemsCount(5549) >= 40 and st.getQuestItemsCount(5550) >= 10 and st.getQuestItemsCount(1877) >= 15 and st.getQuestItemsCount(57) >= 10000:
             st.takeItems(5549,40)
             st.takeItems(5550,10)
             st.takeItems(1877,15)
-            st.takeItems(57,5000)
+            st.takeItems(57,10000)
             st.giveItems(5551,1)
             htmltext = "Item has been succesfully created."
 	else:
@@ -310,11 +310,11 @@ class Quest (JQuest) :
 
 # Warsmiths Mold
     if event == "27":
-        if st.getQuestItemsCount(5475) >= 1 and st.getQuestItemsCount(1891) >= 1 and st.getQuestItemsCount(4041) >= 10 and st.getQuestItemsCount(4042) >= 5 and st.getQuestItemsCount(57) >= 5000:
+        if st.getQuestItemsCount(1891) >= 1 and st.getQuestItemsCount(4041) >= 10 and st.getQuestItemsCount(4042) >= 5 and st.getQuestItemsCount(57) >= 10000:
             st.takeItems(1891,1)
             st.takeItems(4041,10)
             st.takeItems(4042,5)
-            st.takeItems(57,5000)
+            st.takeItems(57,10000)
             st.giveItems(5552,1)
             htmltext = "Item has been succesfully created."
 	else:
@@ -322,11 +322,11 @@ class Quest (JQuest) :
 
 # Archsmiths Anvil Lock
     if event == "28":
-        if st.getQuestItemsCount(5476) >= 1 and st.getQuestItemsCount(4046) >= 3 and st.getQuestItemsCount(4040) >= 20 and st.getQuestItemsCount(4044) >= 10 and st.getQuestItemsCount(57) >= 5000:
+        if st.getQuestItemsCount(4046) >= 3 and st.getQuestItemsCount(4040) >= 20 and st.getQuestItemsCount(4044) >= 10 and st.getQuestItemsCount(57) >= 10000:
             st.takeItems(4046,3)
             st.takeItems(4040,20)
             st.takeItems(4044,10)
-            st.takeItems(57,5000)
+            st.takeItems(57,10000)
             st.giveItems(5553,1)
             htmltext = "Item has been succesfully created."
 	else:
@@ -334,11 +334,11 @@ class Quest (JQuest) :
 
 # Warsmith Holder
     if event == "29":
-        if st.getQuestItemsCount(5477) >= 1 and st.getQuestItemsCount(4045) >= 2 and st.getQuestItemsCount(4039) >= 10 and st.getQuestItemsCount(1868) >= 20 and st.getQuestItemsCount(57) >= 5000:
+        if st.getQuestItemsCount(4045) >= 2 and st.getQuestItemsCount(4039) >= 10 and st.getQuestItemsCount(1868) >= 20 and st.getQuestItemsCount(57) >= 10000:
             st.takeItems(4045,2)
             st.takeItems(4039,10)
             st.takeItems(1868,20)
-            st.takeItems(57,5000)
+            st.takeItems(57,10000)
             st.giveItems(5554,1)
             htmltext = "Item has been succesfully created."
 	else:
