@@ -163,7 +163,7 @@ class Quest (JQuest) :
            st.set("cond","10")
          elif npcId == 7358 :
            htmltext = "7358-04.htm"
-     elif cond == 10 :                                     # Condition 10 meet the Seresin
+     elif cond in [ 10, 11 ] :                             # Condition 10 meet the Seresin or Condition 11 A lack of Experience 
          if npcId == 7191 :
            htmltext = "7191-09.htm"
          elif npcId == 7657 and st.getQuestItemsCount(LETTER_TO_SERESIN_ID) :
