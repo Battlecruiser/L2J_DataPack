@@ -178,7 +178,7 @@
 </item>
 <item id='18' name="leather_shield">
   <for>
-    <add val='0' order='0x10' stat='rEvas' />
+    <sub val='8' order='0x10' stat='rEvas' />
     <set val='47' order='0x08' stat='sDef' />
     <set val='20' order='0x08' stat='rShld' />
     <enchant val='0' order='0x0C' stat='pDef' />
@@ -186,7 +186,7 @@
 </item>
 <item id='19' name="small_shield">
   <for>
-    <add val='0' order='0x10' stat='rEvas' />
+    <sub val='8' order='0x10' stat='rEvas' />
     <set val='56' order='0x08' stat='sDef' />
     <set val='20' order='0x08' stat='rShld' />
     <enchant val='0' order='0x0C' stat='pDef' />
@@ -194,7 +194,7 @@
 </item>
 <item id='20' name="buckler">
   <for>
-    <add val='0' order='0x10' stat='rEvas' />
+    <sub val='8' order='0x10' stat='rEvas' />
     <set val='67' order='0x08' stat='sDef' />
     <set val='20' order='0x08' stat='rShld' />
     <enchant val='0' order='0x0C' stat='pDef' />
