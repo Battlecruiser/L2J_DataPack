@@ -6,8 +6,6 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 NPC=[7115,7856,7194]
-True=1
-False=0
 
 RED_SOUL_CRYSTAL0_ID,RED_SOUL_CRYSTAL1_ID,RED_SOUL_CRYSTAL2_ID,RED_SOUL_CRYSTAL3_ID,\
 RED_SOUL_CRYSTAL4_ID,RED_SOUL_CRYSTAL5_ID,RED_SOUL_CRYSTAL6_ID,RED_SOUL_CRYSTAL7_ID,\
@@ -41,23 +39,22 @@ class Quest (JQuest) :
         st.giveItems(GREEN_SOUL_CRYSTAL0_ID,1)
     elif event in ["7115-11.htm","7856-11.htm","7194-11.htm"] :
         st.giveItems(BLUE_SOUL_CRYSTAL0_ID,1)
-    elif event == "exit" :
+    elif event == "exit.htm" :
         st.exitQuest(1)
     return htmltext
 
  def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+   npcId = str(npc.getNpcId())
    htmltext = "<html><head><body>I have nothing to say to you</body></html>"
    id = st.getState()
    if id == CREATED :
-     st.setState(STARTING)
      st.set("cond","0")
    if int(st.get("cond")) == 0:   
-     htmltext = str(npcId)+"-01.htm"
+     htmltext = npcId+"-01.htm"
    elif check(st) :
-     htmltext = str(npcId)+"-03.htm"
+     htmltext = npcId+"-03.htm"
    elif st.getQuestItemsCount(RED_SOUL_CRYSTAL0_ID) == st.getQuestItemsCount(GREEN_SOUL_CRYSTAL0_ID) == st.getQuestItemsCount(BLUE_SOUL_CRYSTAL0_ID) == 0 :
-     htmltext = str(npcId)+"-21.htm"
+     htmltext = npcId+"-21.htm"
    return htmltext
 
 QUEST       = Quest(350,"350_EnhanceYourWeapon","Enhance Your Weapon")
@@ -69,6 +66,7 @@ QUEST.setInitialState(CREATED)
 
 for npcId in NPC:
   QUEST.addStartNpc(npcId)
+  CREATED.addTalkId(npcId)
   STARTING.addTalkId(npcId)
   STARTED.addTalkId(npcId)
 
