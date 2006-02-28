@@ -119,7 +119,6 @@ class Quest (JQuest) :
      st.set("chest_try","0")
      st.startQuestTimer("poison_timer",3600000)
      st.getPlayer().useMagic(SkillTable.getInstance().getInfo(4082,1),False,False)
-     htmltext = "7759-07.htm"
    elif event == "poison_timer" :
      members_finnish(st)
      st.exitQuest(1)
@@ -207,7 +206,7 @@ class Quest (JQuest) :
              st.giveItems(VOUCHER_OF_FAITH,1)
              htmltext =  "7759-08.htm"
              st.playSound("ItemSound.quest_finish")
-           else:
+           elif st.getQuestItemsCount(VOUCHER_OF_FAITH)==0:
              htmltext =  "7759-10.htm"
          else :
            st.exitQuest(1)
@@ -361,6 +360,7 @@ CREATED.addQuestDrop(STATUE_OF_OFFERING,SYMBOL_OF_LOYALTY,1)
 PART3.addQuestDrop(WITCH_KALIS,ANTIDOTE_RECIPE,1)
 PART4.addQuestDrop(WITCH_KALIS,VOUCHER_OF_FAITH,1)
 PART4.addQuestDrop(WITCH_KALIS,POTION_OF_RECOVERY,1)
+PART4.addQuestDrop(WITCH_KALIS,ANTIDOTE_RECIPE,1)
 
 for i in range(len(MOBS)) :
     CREATED.addKillId(MOBS[i][0])
