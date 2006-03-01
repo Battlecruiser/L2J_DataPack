@@ -55,7 +55,7 @@ class Quest (JQuest) :
       if st.getPlayer().getLevel() < 60 :
          htmltext = "7515-2.htm"
          st.exitQuest(1)
-      if not st.getQuestItemsCount(MSTONE) :
+      elif not st.getQuestItemsCount(MSTONE) :
          htmltext = "7515-3.htm"
          st.exitQuest(1)
    elif id == STARTED :
