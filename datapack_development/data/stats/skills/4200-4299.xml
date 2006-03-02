@@ -336,6 +336,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
 -->
   <set name="hitTime" val="2000"/>
   <set name="target" val="TARGET_NONE"/>
+  <set name="element" val="6"/>
   <set name="skillTime" val="2000"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -816,6 +817,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="2000"/>
   <set name="target" val="TARGET_NONE"/>
+  <set name="element" val="6"/>
   <set name="skillTime" val="2000"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
@@ -1040,6 +1042,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
+  <set name="element" val="6"/>
   <set name="reuseDelay" val="8000"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="DRAIN"/>
@@ -1301,9 +1304,14 @@ HP/MP Regeneration is greatly decreased. Move and quest are suspended due to exc
 -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-holyRes"> 10 15 20 25 30 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <sub order="0x50" stat="holyRes" val="#Tab-holyRes"/>
   </for>
 </skill>
 <skill id="4276" levels="5" name="Archery Attack Weak Point">
