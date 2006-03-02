@@ -1297,10 +1297,10 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
-  <table name="#Tab-pAtk"> 1.3 </table>
+  <table name="#Tab-darkRes"> 1.2 </table>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
-      <mul order='0x50' stat='pAtk-undead' val="#Tab-pAtk"/>
+      <mul order='0x50' stat='darkRes' val="#Tab-darkRes"/>
     </effect>
   </for>    
 </skill>
@@ -1686,6 +1686,7 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="3000"/>
+  <set name="element" val="6"/>
   <set name="reuseDelay" val="15000"/>
   <set name="skillTime" val="3000"/>
   <set name="skillType" val="DRAIN"/>

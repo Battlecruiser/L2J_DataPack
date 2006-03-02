@@ -27,6 +27,7 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
+  <set name="element" val="6"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="DRAIN"/>
@@ -734,6 +735,7 @@
   <table name="#power"> 15.0 21.0 26.0 32.0 37.0 43.0 48.0 53.0 </table>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
+  <set name="element" val="6"/>
   <set name="skillType" val="DRAIN"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
@@ -746,6 +748,7 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
+  <set name="element" val="6"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>

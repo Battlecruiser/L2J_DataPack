@@ -217,6 +217,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="2500"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="element" val="6"/>
   <set name="skillRadius" val="205"/>
   <set name="skillTime" val="2500"/>
   <set name="skillType" val="DRAIN"/>
@@ -456,11 +457,14 @@
 </skill>
 <skill id="4333" levels="6" name="Resist Dark Attack">
 <!--- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-darkRes"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <mul order="0x50" stat="darkRes" val="#Tab-darkRes"/>
   </for>
 </skill>
 <skill id="4334" levels="1" name="SSQ Cancel">
@@ -483,20 +487,26 @@
 </skill>
 <skill id="4336" levels="5" name="Dark Attack Weak Point">
 <!--- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-darkRes"> 10 15 20 25 30 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+     <sub order="0x50" stat="darkRes" val="#Tab-darkRes"/>
   </for>
 </skill>
 <skill id="4337" levels="6" name="Resist Sacred Attack">
 <!--- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-holyRes"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <mul order="0x50" stat="holyRes" val="#Tab-holyRes"/>
   </for>
 </skill>
 <skill id="4338" levels="1" name="Life Cubic For Novice">
