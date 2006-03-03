@@ -1578,7 +1578,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="6000"/>
+  <set name="skillTime" val="15000"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1586,7 +1586,7 @@
   <!-- Summon-specific -->
   <table name="#npcIds"> 12184 12185 12186 12473 12474 12475 12476 </table>
   <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="0.3" />
+  <set name="expPenalty" val="0.15" />
   <set name="isCubic" val="false" />
 
   <for>

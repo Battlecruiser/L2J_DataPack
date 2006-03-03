@@ -449,7 +449,7 @@
 <set name="target" val="TARGET_SELF"/>
 <set name="hitTime" val="6000"/>
 <set name="reuseDelay" val="#reuseDelay"/>
-<set name="skillTime" val="6000"/>
+<set name="skillTime" val="15000"/>
 <set name="skillType" val="SUMMON"/>
 <set name="isMagic" val="true"/>
 <set name="operateType" val="OP_ACTIVE"/>
@@ -473,7 +473,7 @@
 <set name="hitTime" val="6000"/>
 <set name="itemConsumeCount" val="#itemConsumeCount"/>
 <set name="reuseDelay" val="#reuseDelay"/>
-<set name="skillTime" val="6000"/>
+<set name="skillTime" val="15000"/>
 <set name="skillType" val="SUMMON"/>
 <set name="isMagic" val="true"/>
 <set name="operateType" val="OP_ACTIVE"/>
@@ -496,7 +496,7 @@
 <set name="hitTime" val="6000"/>
 <set name="itemConsumeCount" val="1"/>
 <set name="reuseDelay" val="#reuseDelay"/>
-<set name="skillTime" val="6000"/>
+<set name="skillTime" val="15000"/>
 <set name="skillType" val="SUMMON"/>
 <set name="isMagic" val="true"/>
 <set name="operateType" val="OP_ACTIVE"/>
@@ -1503,7 +1503,7 @@
 <set name="target" val="TARGET_SELF"/>
 <set name="hitTime" val="6000"/>
 <set name="reuseDelay" val="20000"/>
-<set name="skillTime" val="6000"/>
+<set name="skillTime" val="15000"/>
 <set name="skillType" val="SUMMON"/>
 <set name="isMagic" val="true"/>
 <set name="operateType" val="OP_ACTIVE"/>
@@ -1515,7 +1515,7 @@
 12487 12488 12489 12536
 </table>
 <set name="npcId" val="#npcIds" />
-<set name="expPenalty" val="0.3" />
+<set name="expPenalty" val="0.1" />
 <set name="isCubic" val="false" />
 </skill>
 <skill id="1277" levels="14" name="Summon Unicorn Merrow">
@@ -1547,7 +1547,7 @@
   </table>
 
   <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="0.3" />
+  <set name="expPenalty" val="0.1" />
   <set name="isCubic" val="false" />
 
   <for>
@@ -1574,7 +1574,7 @@
   <set name="hitTime" val="6000"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="8000"/>
+  <set name="skillTime" val="15000"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1584,7 +1584,7 @@
   <table name="#npcIds"> 12503 12504 12505 12506 12507 12508 12509 12510 12511 12512 12513 12514 12515 12538 </table>
 
   <set name="npcId" val="#npcIds"/>
-  <set name="expPenalty" val="0.3"/>
+  <set name="expPenalty" val="0.1"/>
   <set name="isCubic" val="false"/>
 
   <for>
