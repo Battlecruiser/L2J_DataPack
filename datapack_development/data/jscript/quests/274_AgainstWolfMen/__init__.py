@@ -50,7 +50,7 @@ class Quest (JQuest) :
          htmltext = "7569-06.htm"
        else :
          htmltext = "7569-05.htm"
-       exitQuest(1)
+       st.exitQuest(1)
        st.playSound("ItemSound.quest_finish")
        st.giveItems(ADENA,1200*int(Config.RATE_DROP_ADENA))
        st.takeItems(MARAKU_WEREWOLF_HEAD,-1)
