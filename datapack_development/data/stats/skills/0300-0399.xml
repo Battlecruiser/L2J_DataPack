@@ -575,19 +575,29 @@
 </skill>
 <!-- New Skills for C4  ID's 328 - 369  need finished. Adding to prevent errors -->
 <skill id="328" levels="1" name="Wisdom">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
   <for>
+  	 <mul stat="rootRes" val="1.5" order="0x50"/>
+	 <mul stat="sleepRes" val="1.5" order="0x50"/>
+	 <mul stat="confusionRes" val="1.5" order="0x50"/>
+	 <mul stat="muteRes" val="1.5" order="0x50"/>
   </for>
 </skill>
 <skill id="329" levels="1" name="Health">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
   <for>
+   <mul stat='bleedRes' order="0x50" val="1.5"/> 
+   <mul stat='poisonRes' order="0x50" val="1.5"/>
   </for>
 </skill>
 <skill id="330" levels="1" name="Skill Mastery">
@@ -607,12 +617,18 @@
   </for>
 </skill>
 <skill id="335" levels="1" name="Fortitude">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="mpConsume" val="35"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+ <for> 
+  <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="35"> 
+   <mul stat='paralyzeRes' order="0x50" val="1.5"/> 
+   <mul stat='stunRes' order="0x50" val="1.5"/> 
+  </effect> 
+ </for>
 </skill>
 <skill id="336" levels="1" name="Arcane Wisdom">
   <set name="target" val="TARGET_NONE"/>
@@ -759,12 +775,22 @@
   </for>
 </skill>
 <skill id="354" levels="1" name="Hamstring Shot">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="weaponsAllowed" val="32"/> 
+  <set name="mpConsume" val="129"/> 
+  <set name="power" val="1973"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="3000"/> 
+  <set name="overHit" val="true"/> 
+  <set name="reuseDelay" val="25000"/> 
+  <set name="skillTime" val="3200"/> 
+  <set name="skillType" val="PDAM"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="900"/> 
+   <for> 
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="1.6" stackType="SpeedDown"> 
+    <div order="0x50" stat="runSpd" val="1.6"/> 
+    </effect> 
+   </for>
 </skill>
 <skill id="355" levels="1" name="Focus Death">
   <set name="target" val="TARGET_NONE"/>
@@ -799,19 +825,40 @@
   </for>
 </skill>
 <skill id="359" levels="1" name="Eye of Hunter">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="70"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
   <for>
+   <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="detect_weakness">
+   	  <mul order="0x50" stat="pAtk-insects" val="1.4"/>
+   	  <mul order="0x50" stat="pAtk-plants" val="1.4"/>
+   	  <mul order="0x50" stat="pAtk-animals" val="1.4"/>
+   </effect>
   </for>
 </skill>
 <skill id="360" levels="1" name="Eye of Slayer">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="71"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
   <for>
+   <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="detect_weakness">
+   	  <mul order="0x50" stat="pAtk-monsters" val="1.4"/>
+   	  <mul order="0x50" stat="pAtk-dragons" val="1.4"/>
+   </effect>
   </for>
 </skill>
 <skill id="361" levels="1" name="Shock Blast">
@@ -847,12 +894,23 @@
   </for>
 </skill>
 <skill id="365" levels="1" name="Dance of Siren">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+   <set name="weaponsAllowed" val="512"/> 
+   <set name="mpConsume" val="60"/> 
+   <set name="power" val="0.0"/> 
+   <set name="target" val="TARGET_PARTY"/> 
+   <set name="skillRadius" val="900"/> 
+   <set name="hitTime" val="2000"/> 
+   <set name="reuseDelay" val="10000"/> 
+   <set name="skillTime" val="2000"/> 
+   <set name="skillType" val="BUFF"/> 
+   <set name="operateType" val="OP_ACTIVE"/> 
+   <set name="buffDuration" val="120000"/> 
+   <set name="castRange" val="-1"/> 
+   <for> 
+     <effect name="Buff" time="120" count="1" val="0"> 
+       <mul stat="mCritRate" val="1.5" order="0x50"/> 
+     </effect> 
+   </for>
 </skill>
 <skill id="366" levels="1" name="Dance of Shadow">
   <set name="target" val="TARGET_NONE"/>
@@ -879,11 +937,21 @@
   </for>
 </skill>
 <skill id="369" levels="1" name="Evade Shot">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="weaponsAllowed" val="32"/> 
+  <set name="mpConsume" val="130"/> 
+  <set name="power" val="2020"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="3000"/> 
+  <set name="overHit" val="true"/> 
+  <set name="reuseDelay" val="25000"/> 
+  <set name="skillTime" val="3200"/> 
+  <set name="skillType" val="PDAM"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="900"/> 
+   <for> 
+    <effect count="1" name="Buff" time="30" val="0" stackOrder="1.6" stackType="rEvas"> 
+    <mul order="0x50" stat="rEvas" val="1.3"/> 
+    </effect> 
+   </for>
 </skill>
 </list>
