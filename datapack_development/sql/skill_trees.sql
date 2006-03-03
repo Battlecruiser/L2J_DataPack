@@ -56,7 +56,7 @@ ORCS 3rd Professions
 115=Dominator        | 116=Doomcryer
 
 DWARVES 3rd Professions
-117=Fortune Seeker   | 118=Maestro /*
+117=Fortune Seeker   | 118=Maestro */
 
 INSERT INTO skill_trees VALUES (0,3,1,'Power Strike',50,5);
 INSERT INTO skill_trees VALUES (0,3,2,'Power Strike',50,5);
