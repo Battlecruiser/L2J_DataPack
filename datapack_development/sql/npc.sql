@@ -1577,7 +1577,7 @@ INSERT INTO `npc` VALUES
 (1529, 'Soul of Splendor', 'Monster.kel_mahum_witch_doctor', 13.00, 25.00, 63, 'male', 'L2Monster', 40, 3302, 1251, 40, 21, 30, 20, 43, 10, 4763, 430, 1085, 437, 545, 322, 278, 0, 366, 193, 0, 0, 50, 160, 'null', 0, 0),
 (1530, 'Victory of Splendor', 'Monster.kel_mahum', 13.00, 26.00, 64, 'male', 'L2Monster', 40, 3384, 1285, 40, 21, 30, 20, 43, 10, 4915, 450, 1134, 448, 573, 331, 278, 0, 366, 196, 0, 0, 50, 160, 'null', 0, 0),
 (1531, 'Punishment of Splendor', 'Monster.kel_mahum_warrior', 13.00, 28.00, 65, 'male', 'L2Monster', 40, 3466, 1320, 40, 21, 30, 20, 43, 10, 5070, 471, 1184, 459, 602, 338, 278, 0, 333, 242, 0, 0, 50, 165, 'null', 0, 0),
-(1532, 'Shout of Splendor', 'Monster.kel_mahum_champion', 13.00, 32.00, 65, 'male', 'L2Npc', 40, 3466, 1320, 40, 21, 30, 20, 43, 10, 5070, 471, 1184, 459, 602, 338, 278, 0, 366, 196, 0, 0, 50, 150, 'null', 0, 0),
+(1532, 'Shout of Splendor', 'Monster.kel_mahum_champion', 13.00, 32.00, 65, 'male', 'L2Monster', 40, 3466, 1320, 40, 21, 30, 20, 43, 10, 5070, 471, 1184, 459, 602, 338, 278, 0, 366, 196, 0, 0, 50, 150, 'null', 0, 0),
 (1533, 'Alliance of Splendor', 'Monster.kel_mahum_witch_doctor', 13.00, 25.00, 65, 'male', 'L2Monster', 40, 3466, 1320, 40, 21, 30, 20, 43, 10, 5070, 471, 1184, 459, 602, 338, 278, 0, 366, 196, 0, 0, 50, 160, 'null', 0, 0),
 (1534, 'Alliance of Splendor', 'Monster.dark_fencer', 8.00, 22.00, 65, 'male', 'L2Monster', 40, 3466, 1320, 40, 21, 30, 20, 43, 10, 5070, 471, 1184, 459, 602, 338, 253, 0, 333, 0, 0, 0, 80, 120, 'null', 0, 0),
 (1535, 'Signet of Splendor', 'Monster.kel_mahum_warrior', 13.00, 28.00, 66, 'male', 'L2Monster', 40, 3547, 1354, 40, 21, 30, 20, 43, 10, 5228, 493, 1235, 470, 633, 347, 300, 0, 512, 189, 0, 0, 50, 160, 'null', 0, 0),
