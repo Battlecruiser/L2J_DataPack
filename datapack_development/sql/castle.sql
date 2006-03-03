@@ -18,5 +18,5 @@ INSERT IGNORE INTO `castle` VALUES (1, 'Gludio', 0, 0, 0, 7, 20),
 (3, 'Giran', 0, 0, 0, 1, 16),
 (4, 'Oren', 0, 0, 0, 1, 16),
 (5, 'Aden', 0, 0, 0, 7, 20),
-(6, 'Innadril', 0, 0, 0, 1, 16);
+(6, 'Innadril', 0, 0, 0, 1, 16),
 (7, 'Goddard', 0, 0, 0, 1, 16);
