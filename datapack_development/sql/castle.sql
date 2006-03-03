@@ -1,7 +1,8 @@
 -- ---------------------------
 -- Table structure for castle
 -- ---------------------------
-CREATE TABLE IF NOT EXISTS castle (
+DROP TABLE IF EXISTS castle;
+CREATE TABLE castle (
   id INT NOT NULL default 0,
   name varchar(25) NOT NULL,
   taxPercent INT NOT NULL default 15,
