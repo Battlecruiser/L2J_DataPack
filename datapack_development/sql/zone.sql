@@ -30,6 +30,7 @@ insert into zone values (3, 'Castle Area', 'Giran', 105737, 140128, 121331, 1498
 insert into zone values (4, 'Castle Area', 'Oren', 72876, 32336, 87556, 40457, 0, 5);
 insert into zone values (5, 'Castle Area', 'Aden', 134790, -2552, 154760, 20850, 0, 0);
 insert into zone values (6, 'Castle Area', 'Innadril', 111975, 241396, 120720, 253425, 0, 5);
+insert into zone values (7, 'Castle Area', 'Goddard', 0, 0, 0, 0, 0, 5);
 
 insert into zone values (1, 'Castle Defender Spawn', 'Gludio', -18105, 110303, 0, 0, -2146, 0);
 insert into zone values (2, 'Castle Defender Spawn', 'Dion', 22080, 159450, 0, 0, -2441, 0);
