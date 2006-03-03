@@ -566,7 +566,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="6000"/>
+  <set name="skillTime" val="15000"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -574,7 +574,7 @@
   <!-- Summon-specific -->
   <table name="#npcIds"> 12187 12188 12189 12190 12191 12522 12523 12524 12525 </table> 
   <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="0.3" />
+  <set name="expPenalty" val="0.15" />
   <set name="isCubic" val="false" />
 
   <for>
@@ -1520,7 +1520,7 @@
 </skill>
 <skill id="81" levels="3" name="Punch of Doom">
   <table name="#hpConsume"> 399 455 499 </table>
-  <table name="#power"> 3664.0 5306.0 7305.0 </table>
+  <table name="#power"> 4580.0 6332.0 9132.0 </table>
   <set name="weaponsAllowed" val="1024"/>
   <set name="hpConsume" val="#hpConsume"/>
   <set name="save" val="4"/>
@@ -1579,7 +1579,7 @@
   </for>
 </skill>
 <skill id="84" levels="3" name="Poison Blade Dance">
-  <table name="#mpConsume"> 105 117 140 </table>
+  <table name="#mpConsume"> 100 110 133 </table>
   <table name="#poison-dmg"> 38 58 81 </table>
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="#mpConsume"/>
