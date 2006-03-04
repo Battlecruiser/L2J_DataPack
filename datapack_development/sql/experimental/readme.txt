@@ -1,5 +1,8 @@
 		SQL File History, or, "What happened to the files?"
 
+The npc.sql and npcskills.sql files from the experimental folder became obsolete as of C4 :)
+so basically were deleted. You can still find them in the C3 branch if you really want to. 
+But we would highly reccomend you don't do that.
 	
 Old name as in:                         New name as in:
 Revision 659                            Revision 687
