@@ -59,6 +59,7 @@ CREATE TABLE IF NOT EXISTS characters (
   rec_left int(3) NOT NULL default '0',
   accesslevel decimal(4,0) default NULL,
   online decimal(1,0) default NULL,
+  onlinetime decimal(20,0) default NULL,
   char_slot decimal(1) default NULL,
   newbie decimal(1,0) default '1',
   lastAccess decimal(20,0) default NULL,
