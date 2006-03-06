@@ -330,8 +330,8 @@ while :
    fi
   done 
 echo "Installing experimental content."
-$MYG < ../sql/experimental/npc.sql &> /dev/null
-$MYG < ../sql/experimental/npcskills.sql &> /dev/null
+#$MYG < ../sql/experimental/npc.sql &> /dev/null
+#$MYG < ../sql/experimental/npcskills.sql &> /dev/null
 $MYG < ../sql/experimental/spawnlist-experimental.sql &> /dev/null
 finish
 }
