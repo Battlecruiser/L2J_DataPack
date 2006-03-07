@@ -1,2 +1,2 @@
 -- add column onlinetime
-alter table `characters` ADD `onlinetime` decimal(20,0) NOT NULL DEFAULT 0;
+ALTER TABLE `characters` ADD `onlinetime` DECIMAL( 20, 0 ) DEFAULT '0' NOT NULL AFTER `online`; 
