@@ -405,73 +405,88 @@
   </for>
 </skill>
 <skill id="4729" levels="12" name="BOSS Mortal Blow">
-<!-- TODO -->
+  <table name="#power"> 146.0 176.0 252.0 356.0 420.0 582.0 734.0 854.0 1062.0 1312.0 1504.0 1832.0 </table>
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
+  <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="hitTime" val="830"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="830"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
+    <add order="0x10" stat="rCrit" val="45">
+      <using kind="Dagger" skill="0016"/>
+    </add>
   </for>
 </skill>
 <skill id="4730" levels="12" name="BOSS Mortal Blow">
-<!-- TODO -->
+  <table name="#power"> 146.0 176.0 252.0 356.0 420.0 582.0 734.0 854.0 1062.0 1312.0 1504.0 1832.0 </table>
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
+  <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="hitTime" val="830"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="830"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
+    <add order="0x10" stat="rCrit" val="45">
+      <using kind="Dagger" skill="0016"/>
+    </add>
   </for>
 </skill>
 <skill id="4731" levels="12" name="BOSS Mortal Blow">
-<!-- TODO -->
+  <table name="#power"> 146.0 176.0 252.0 356.0 420.0 582.0 734.0 854.0 1062.0 1312.0 1504.0 1832.0 </table>
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
+  <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="hitTime" val="830"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="830"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
+    <add order="0x10" stat="rCrit" val="45">
+      <using kind="Dagger" skill="0016"/>
+    </add>
   </for>
 </skill>
 <skill id="4732" levels="12" name="BOSS Mortal Blow">
-<!-- TODO -->
+  <table name="#power"> 146.0 176.0 252.0 356.0 420.0 582.0 734.0 854.0 1062.0 1312.0 1504.0 1832.0 </table>
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
+  <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="hitTime" val="830"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="830"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
+    <add order="0x10" stat="rCrit" val="45">
+      <using kind="Dagger" skill="0016"/>
+    </add>
   </for>
 </skill>
 <skill id="4733" levels="12" name="BOSS Mortal Blow">
-<!-- TODO -->
+  <table name="#power"> 146.0 176.0 252.0 356.0 420.0 582.0 734.0 854.0 1062.0 1312.0 1504.0 1832.0 </table>
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
+  <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="hitTime" val="830"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="830"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
+    <add order="0x10" stat="rCrit" val="45">
+      <using kind="Dagger" skill="0016"/>
+    </add>
   </for>
 </skill>
 <skill id="4734" levels="12" name="BOSS Spinning Slasher">
@@ -685,73 +700,88 @@
   </for>
 </skill>
 <skill id="4749" levels="12" name="BOSS Mortal Blow">
-<!-- TODO -->
+  <table name="#power"> 146.0 176.0 252.0 356.0 420.0 582.0 734.0 854.0 1062.0 1312.0 1504.0 1832.0 </table>
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
+  <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="hitTime" val="830"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="830"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
+    <add order="0x10" stat="rCrit" val="45">
+      <using kind="Dagger" skill="0016"/>
+    </add>
   </for>
 </skill>
 <skill id="4750" levels="12" name="BOSS Mortal Blow">
-<!-- TODO -->
+  <table name="#power"> 146.0 176.0 252.0 356.0 420.0 582.0 734.0 854.0 1062.0 1312.0 1504.0 1832.0 </table>
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
+  <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="hitTime" val="830"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="830"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
+    <add order="0x10" stat="rCrit" val="45">
+      <using kind="Dagger" skill="0016"/>
+    </add>
   </for>
 </skill>
 <skill id="4751" levels="12" name="BOSS Mortal Blow">
-<!-- TODO -->
+  <table name="#power"> 146.0 176.0 252.0 356.0 420.0 582.0 734.0 854.0 1062.0 1312.0 1504.0 1832.0 </table>
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
+  <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="hitTime" val="830"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="830"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
+    <add order="0x10" stat="rCrit" val="45">
+      <using kind="Dagger" skill="0016"/>
+    </add>
   </for>
 </skill>
 <skill id="4752" levels="12" name="BOSS Mortal Blow">
-<!-- TODO -->
+  <table name="#power"> 146.0 176.0 252.0 356.0 420.0 582.0 734.0 854.0 1062.0 1312.0 1504.0 1832.0 </table>
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
+  <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="hitTime" val="830"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="830"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
+    <add order="0x10" stat="rCrit" val="45">
+      <using kind="Dagger" skill="0016"/>
+    </add>
   </for>
 </skill>
 <skill id="4753" levels="12" name="BOSS Mortal Blow">
-<!-- TODO -->
+  <table name="#power"> 146.0 176.0 252.0 356.0 420.0 582.0 734.0 854.0 1062.0 1312.0 1504.0 1832.0 </table>
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
+  <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="hitTime" val="830"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="830"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
+    <add order="0x10" stat="rCrit" val="45">
+      <using kind="Dagger" skill="0016"/>
+    </add>
   </for>
 </skill>
 <skill id="4754" levels="12" name="BOSS Power Shot">

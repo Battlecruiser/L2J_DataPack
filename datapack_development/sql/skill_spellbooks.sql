@@ -143,7 +143,6 @@ INSERT INTO `skill_spellbooks` VALUES (1175,1370);
 INSERT INTO `skill_spellbooks` VALUES (1176,3089);
 INSERT INTO `skill_spellbooks` VALUES (1178,1371);
 INSERT INTO `skill_spellbooks` VALUES (1181,1052);
-INSERT INTO `skill_spellbooks` VALUES (1181,1518);
 INSERT INTO `skill_spellbooks` VALUES (1182,1412);
 INSERT INTO `skill_spellbooks` VALUES (1183,3084);
 INSERT INTO `skill_spellbooks` VALUES (1184,1049);

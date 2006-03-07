@@ -1186,13 +1186,7 @@
   </for>
 </skill>  
 <skill id="4170" levels="12" name="BOSS Mortal Blow">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:32
--->
-  <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 119.0 136.0 153.0 170.0 187.0 </table>
+  <table name="#power"> 146.0 176.0 252.0 356.0 420.0 582.0 734.0 854.0 1062.0 1312.0 1504.0 1832.0 </table>
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
   <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1396,21 +1390,20 @@
   </for>
 </skill>
 <skill id="4181" levels="12" name="BOSS Mortal Blow">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:32
--->
+  <table name="#power"> 146.0 176.0 252.0 356.0 420.0 582.0 734.0 854.0 1062.0 1312.0 1504.0 1832.0 </table>
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
+  <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="830"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="830"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
+    <add order="0x10" stat="rCrit" val="45">
+      <using kind="Dagger" skill="0016"/>
+    </add>
   </for>
 </skill>
 <skill id="4182" levels="12" name="Poison">
