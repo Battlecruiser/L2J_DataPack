@@ -273,7 +273,7 @@ class Quest (JQuest) :
            st.playSound("Itemsound.quest_middle")
          else:
            st.playSound("Itemsound.quest_itemget")
-   elif cond in [ 2,6,19 ] :
+   elif cond in [ 2,6,19 ] and npcId in DROPLIST.keys() :
      required,item,maxqty=DROPLIST[npcId]
      count = st.getQuestItemsCount(item)
      if st.getQuestItemsCount(required) and count < maxqty :
