@@ -16,8 +16,7 @@ CREATE TABLE `spawnlist` (
   `heading` int(9) NOT NULL default '0',
   `respawn_delay` int(9) NOT NULL default '0',
   `loc_id` int(9) NOT NULL default '0',
-  PRIMARY KEY  (`id`),
-  UNIQUE KEY `locx` (`locx`,`locy`,`locz`),
+  PRIMARY KEY  (id),
   KEY `key_npc_templateid` (`npc_templateid`)
 ) TYPE=MyISAM;
 
