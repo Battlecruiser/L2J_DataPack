@@ -91,7 +91,7 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     
-	# shows you how much materials you need to enhance, ok button to go forward, too
+    # shows you how much materials you need to enhance, ok button to go forward, too
     if event.startswith("2_"):
         reqEnh = event.replace("2_", "").split(".")
         ObjectID = int(reqEnh[0])

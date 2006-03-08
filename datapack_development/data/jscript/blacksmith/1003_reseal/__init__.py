@@ -17,7 +17,7 @@ class Quest (JQuest) :
             st.takeItems(5718,1)
             st.giveItems(2487,1)
             htmltext = "Item has been succesfully unsealed."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # BW Gloves*BW Gloves Light
@@ -26,7 +26,7 @@ class Quest (JQuest) :
             st.takeItems(5719,1)
             st.giveItems(2487,1)
             htmltext = "Item has been succesfully unsealed."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # BW Gloves*BW Gloves Robe
@@ -35,7 +35,7 @@ class Quest (JQuest) :
             st.takeItems(5720,1)
             st.giveItems(2487,1)
             htmltext = "Item has been succesfully unsealed."
-    	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Doom Gloves*Doom Gloves Heavy
@@ -44,7 +44,7 @@ class Quest (JQuest) :
             st.takeItems(5722,1)
             st.giveItems(2475,1)
             htmltext = "Item has been succesfully unsealed."
-  	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Doom Gloves*Doom Gloves Light
@@ -125,7 +125,7 @@ class Quest (JQuest) :
             st.takeItems(5734,1)
             st.giveItems(2439,1)
             htmltext = "Item has been succesfully unsealed."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # BW Boots*BW Boots Light
@@ -134,7 +134,7 @@ class Quest (JQuest) :
             st.takeItems(5735,1)
             st.giveItems(2439,1)
             htmltext = "Item has been succesfully unsealed."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # BW Boots*BW Boots Robe
@@ -143,7 +143,7 @@ class Quest (JQuest) :
             st.takeItems(5736,1)
             st.giveItems(2439,1)
             htmltext = "Item has been succesfully unsealed."
-    	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Doom Boots*Doom Boots Heavy
@@ -152,7 +152,7 @@ class Quest (JQuest) :
             st.takeItems(5738,1)
             st.giveItems(601,1)
             htmltext = "Item has been succesfully unsealed."
-  	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Doom Boots*Doom Boots Light

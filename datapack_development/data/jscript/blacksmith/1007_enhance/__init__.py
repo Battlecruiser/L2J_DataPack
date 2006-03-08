@@ -161,8 +161,8 @@ class Quest (JQuest) :
             htmltext = "<tr><td>You have no enhancable weapon in your inventory</td></tr>"
         htmltext = "<html><body>\nList:\n<left>\n<table width=870 border=0>\n" + htmltext + "</table>\n<br></left></body></html>"
         return htmltext
-	
-	# shows you how much materials you need to enhance, ok button to go forward, too
+
+    # shows you how much materials you need to enhance, ok button to go forward, too
     elif event.startswith("2_"):
         reqEnh = event.replace("2_", "").split(".")
         ObjectID = int(reqEnh[0])
