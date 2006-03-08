@@ -18,7 +18,7 @@ class Quest (JQuest) :
             st.takeItems(57,50)
             st.giveItems(1878,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Cokes
@@ -29,7 +29,7 @@ class Quest (JQuest) :
             st.takeItems(57,50)
             st.giveItems(1879,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 # Steel
     if event == "3":
@@ -39,7 +39,7 @@ class Quest (JQuest) :
             st.takeItems(57,50)
             st.giveItems(1880,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Coarse Bone Powder
@@ -49,7 +49,7 @@ class Quest (JQuest) :
             st.takeItems(57,50)
             st.giveItems(1881,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Leather
@@ -59,7 +59,7 @@ class Quest (JQuest) :
             st.takeItems(57,50)
             st.giveItems(1882,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Steel Mold
@@ -71,7 +71,7 @@ class Quest (JQuest) :
             st.takeItems(57,500)
             st.giveItems(1883,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Cord
@@ -82,7 +82,7 @@ class Quest (JQuest) :
             st.takeItems(57,250)
             st.giveItems(1884,20)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # High Grade Suede
@@ -93,7 +93,7 @@ class Quest (JQuest) :
             st.takeItems(57,250)
             st.giveItems(1885,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Silver Mold
@@ -105,7 +105,7 @@ class Quest (JQuest) :
             st.takeItems(57,500)
             st.giveItems(1886,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Varnish of Purity
@@ -117,7 +117,7 @@ class Quest (JQuest) :
             st.takeItems(57,500)
             st.giveItems(1887,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Synthetic Cokes
@@ -128,7 +128,7 @@ class Quest (JQuest) :
             st.takeItems(57,500)
             st.giveItems(1888,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Compound Braid
@@ -139,7 +139,7 @@ class Quest (JQuest) :
             st.takeItems(57,250)
             st.giveItems(1889,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Mithril Alloy
@@ -151,7 +151,7 @@ class Quest (JQuest) :
             st.takeItems(57,500)
             st.giveItems(1890,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Artisans Frame
@@ -163,7 +163,7 @@ class Quest (JQuest) :
             st.takeItems(57,500)
             st.giveItems(1891,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."    
 
 # Blacksmith Frame
@@ -175,7 +175,7 @@ class Quest (JQuest) :
             st.takeItems(57,500)
             st.giveItems(1892,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Oriharukon 
@@ -187,7 +187,7 @@ class Quest (JQuest) :
             st.takeItems(57,500)
             st.giveItems(1893,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Crafted Leather
@@ -199,7 +199,7 @@ class Quest (JQuest) :
             st.takeItems(57,250)
             st.giveItems(1894,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Metallic Fiber
@@ -210,7 +210,7 @@ class Quest (JQuest) :
             st.takeItems(57,500)
             st.giveItems(1895,20)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Metallic Thread
@@ -221,7 +221,7 @@ class Quest (JQuest) :
             st.takeItems(57,250)
             st.giveItems(5549,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Metal Hardner
@@ -233,7 +233,7 @@ class Quest (JQuest) :
             st.takeItems(57,250)
             st.giveItems(5220,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Reinforced Metal Plate
@@ -244,7 +244,7 @@ class Quest (JQuest) :
             st.takeItems(57,500)
             st.giveItems(5550,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 
@@ -257,7 +257,7 @@ class Quest (JQuest) :
             st.takeItems(57,2500)
             st.giveItems(4046,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Maestro Holder
@@ -269,7 +269,7 @@ class Quest (JQuest) :
             st.takeItems(57,2500)
             st.giveItems(4045,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Maestro Mold
@@ -281,7 +281,7 @@ class Quest (JQuest) :
             st.takeItems(57,2500)
             st.giveItems(4048,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Craftsman Mold
@@ -293,7 +293,7 @@ class Quest (JQuest) :
             st.takeItems(57,2500)
             st.giveItems(4047,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Leolins Mold
@@ -305,7 +305,7 @@ class Quest (JQuest) :
             st.takeItems(57,10000)
             st.giveItems(5551,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Warsmiths Mold
@@ -317,7 +317,7 @@ class Quest (JQuest) :
             st.takeItems(57,10000)
             st.giveItems(5552,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Archsmiths Anvil Lock
@@ -329,7 +329,7 @@ class Quest (JQuest) :
             st.takeItems(57,10000)
             st.giveItems(5553,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 # Warsmith Holder
@@ -341,7 +341,7 @@ class Quest (JQuest) :
             st.takeItems(57,10000)
             st.giveItems(5554,1)
             htmltext = "Item has been succesfully created."
-	else:
+        else:
              htmltext = "You do not have enough materials."
 
 
