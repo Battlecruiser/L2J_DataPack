@@ -49,9 +49,9 @@ class Quest (JQuest) :
    elif npcId == 7006 and int(st.get("cond"))==1 :
       htmltext = "7006-04.htm"
    elif npcId == 7033 :
-      if st.getQuestItemsCount(BAULRO_LETTER) == 0 :
+      if int(st.get("cond"))==1:
          htmltext = "7033-01.htm"
-      else :
+      elif int(st.get("cond"))==2 and st.getQuestItemsCount(BAULRO_LETTER):
          htmltext = "7033-03.htm"
    elif npcId == 7311 and int(st.get("cond"))==2 :
       if st.getQuestItemsCount(BAULRO_LETTER) :
