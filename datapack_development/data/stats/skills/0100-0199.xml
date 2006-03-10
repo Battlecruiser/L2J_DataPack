@@ -737,10 +737,9 @@
 <!-- Done by dc, completed by NewAge -->
 <table name="#Tab-pDef"> 2.0 2.5 3.0 </table>
 <for>
+  <cond><player hp="30"/></cond>
   <effect name="Buff" time="90" count="1" val="0">
-    <mul order='0x50' stat='pDef' val="#Tab-pDef">
-	<player hp="30"/>
-	</mul>
+    <mul order='0x50' stat='pDef' val="#Tab-pDef"/>
   </effect>
 </for>
 </skill>
@@ -1160,10 +1159,9 @@
 <table name="#Tab-pAtk"> 2.0 2.5 3.0 </table>
 <!-- Done by dc, completed by NewAge -->
 <for>
+  <cond><player hp="30"/></cond>
   <effect name="Buff" time="90" count="1" val="0">
-    <mul  order='0x50' stat='pAtk' val="#Tab-pAtk">
-    <player hp="30"/>
-    </mul>
+    <mul  order='0x50' stat='pAtk' val="#Tab-pAtk"/>
  </effect>
 </for>
 </skill>

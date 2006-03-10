@@ -1546,7 +1546,7 @@
   </for>
 </skill>
 <skill id="282" levels="1" name="Totem Spirit Puma">
-  <set name="mpConsume" val="18"/>
+  <set name="mpConsume" val="4"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1000"/>
@@ -1724,8 +1724,7 @@
   </for>
 </skill>
 <skill id="292" levels="1" name="Totem Spirit Bison">
-
-  <set name="mpConsume" val="8"/>
+  <set name="mpConsume" val="7"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1000"/>
@@ -1735,17 +1734,14 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
-
-  <for>
-    <player hp="60">
-         <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
-                <mul order="0x50" stat="pAtk" val="1.125"/>
-                <add order="0x40" stat="rCrit" val="200"/>
-	 </effect>
-    </player> 
+  <for>
+    <cond><player hp="60"/></cond>
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
+        <mul order="0x50" stat="pAtk" val="1.125"/>
+        <add order="0x40" stat="rCrit" val="200"/>
+    </effect>
   </for>
-
-</skill>
+</skill>
 <skill id="293" levels="20" name="Two-handed Weapon Mastery">
 <table name="#Attack">
    6.7 8.3 9.5 11.6 13.3 16. 17. 18.1 20.4 21.6 22.8 25.5 26.9 28.3 31.4 33. 34.6 38. 39.8 41.7
