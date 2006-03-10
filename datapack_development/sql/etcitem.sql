@@ -2742,7 +2742,7 @@ INSERT INTO `etcitem` VALUES (17, 'Wooden Arrow', 'false', 'arrow', 6, 'stackabl
 (3843, 'Brooch of the Magpie', 'false', 'quest', 0, 'normal', 'steel', 'none', 0, 1000, 0, 'false', 'q_magipie_brooch', 'none'),
 (3844, 'Nebulite Crystals', 'false', 'quest', 0, 'stackable', 'steel', 'none', 0, 0, 0, 'false', 'q_nebulite_crystals', 'none'),
 (3845, 'Broken Titan''s Powerstone', 'false', 'material', 0, 'stackable', 'steel', 'none', 0, 500, 0, 'false', 'q_bk_titan_powerstone', 'none'),
-(3846, 'Titan''s Powerstone', 'false', 'quest', 0, 'stackable', 'steel', 'none', 0, 0, 0, 'false', 'q_titan_powerstone', 'none'),
+(3846, 'Titan''s Powerstone', 'false', 'material', 0, 'stackable', 'steel', 'none', 0, 0, 0, 'false', 'q_titan_powerstone', 'none'),
 (3847, 'Imperial Key', 'false', 'quest', 0, 'stackable', 'steel', 'none', 0, 0, 0, 'false', 'q_imperial_key', 'none'),
 (3848, 'Undead Ash', 'false', 'quest', 0, 'stackable', 'steel', 'none', 100, 0, 0, 'false', 'q_undead_ash', 'none'),
 (3849, 'Bloody Axe Insignia', 'false', 'quest', 0, 'stackable', 'steel', 'none', 100, 0, 0, 'false', 'q_bloodyaxe_insignia', 'none'),
