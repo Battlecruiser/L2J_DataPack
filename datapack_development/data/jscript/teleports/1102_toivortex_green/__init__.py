@@ -1,6 +1,6 @@
 import sys
 
-from net.sf.l2j.gameserver.model              import L2PcInstance
+from net.sf.l2j.gameserver.model.actor.instance import      L2PcInstance
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
