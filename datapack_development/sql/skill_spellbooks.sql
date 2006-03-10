@@ -50,6 +50,7 @@ INSERT INTO `skill_spellbooks` VALUES (278,3054);
 INSERT INTO `skill_spellbooks` VALUES (279,3055);
 INSERT INTO `skill_spellbooks` VALUES (283,3056);
 INSERT INTO `skill_spellbooks` VALUES (289,4203);
+INSERT INTO `skill_spellbooks` VALUES (1002,1518);
 INSERT INTO `skill_spellbooks` VALUES (1003,1519);
 INSERT INTO `skill_spellbooks` VALUES (1004,3103);
 INSERT INTO `skill_spellbooks` VALUES (1005,1520);
