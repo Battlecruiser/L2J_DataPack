@@ -57,13 +57,20 @@
 <item id='354' name="Chain Mail Shirt">
   <for>
     <add val='120' order='0x10' stat='pDef' />
-	<mul val='1.05' order='0x60' stat='pDef'>
+	<mul val='1.0524' order='0x60' stat='pDef'>
 	<and>
-     <using slotitem="381;11"/>
-     <using slotitem="2413;6"/>
-     <target using="Dagger" />
-    </and>
-    </mul>
+    	    <using slotitem="381;11"/>
+    	    <using slotitem="2413;6"/>
+    	    <target using="Dagger" />
+	</and>
+	</mul>
+    <add val='198' order='0x10' stat='maxHp'>
+	<and>
+    	    <using slotitem="381;11"/>
+    	    <using slotitem="2413;6"/>
+    	    <using slotitem="2495;8"/>
+	</and>
+    </add>
   <enchant val='0' order='0x0C' stat='pDef' />
 </for>
 </item>
