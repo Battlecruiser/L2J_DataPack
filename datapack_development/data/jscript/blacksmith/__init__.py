@@ -8,7 +8,8 @@ __all__ = [
 '1006_duals',
 '1007_enhance',
 '1008_enhance_mammon',
-'1009_remove_mammon'
+'1009_remove_mammon',
+'1010_exchange',
 ]
 print ""
 print "importing blacksmith data ..."

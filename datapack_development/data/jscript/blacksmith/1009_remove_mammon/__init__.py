@@ -125,10 +125,10 @@ class Quest (JQuest) :
  
             if st.getQuestItemsCount(MaterialID) >= MaterialQuant :
                 EnchantLevel = Item.getEnchantLevel()
-                st.getPlayer().getInventory().destroyItem(ObjectID, 1)
-                NewItem = ItemTable.getInstance().createItem(WeaponID)
+                st.getPlayer().destroyItem("enhance",ObjectID, 1,st.getPlayer(), 0)
+                NewItem = ItemTable.getInstance().createItem("enhance",WeaponID, 1,st.getPlayer())
                 NewItem.setEnchantLevel(EnchantLevel)
-                st.getPlayer().getInventory().addItem(NewItem)
+                st.getPlayer().addItem("enhance", NewItem, st.getPlayer(), 0)
                 st.takeItems(MaterialID, MaterialQuant)
                 htmltext = "Enhancement has been successfully removed!"
             else :
