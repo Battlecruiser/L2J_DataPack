@@ -1,13 +1,13 @@
-# Made by Mr. Have fun! - Version 0.3 by DrLecter
+# Made by Mr. - Version 0.3 by DrLecter
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-HARPY_FEATHER_ID = 1452
-MEDUSA_VENOM_ID = 1453
-WYRMS_TOOTH_ID = 1454
-ADENA_ID = 57
+HARPY_FEATHER = 1452
+MEDUSA_VENOM = 1453
+WYRMS_TOOTH = 1454
+ADENA = 57
 
 class Quest (JQuest) :
 
@@ -15,17 +15,13 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
-   if event == "1" :
+   if event == "7125-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-      htmltext = "7125-03.htm"
-   elif event == "7125_1" :
-      htmltext = "7125-06.htm"
+   elif event == "7125-06.htm" :
       st.exitQuest(1)
       st.playSound("ItemSound.quest_finish")
-   elif event == "7125_2" :
-      htmltext = "7125-07.htm"
    return htmltext
 
  def onTalk (Self,npc,st):
@@ -42,11 +38,11 @@ class Quest (JQuest) :
          htmltext = "7125-01.htm"
          st.exitQuest(1)
    elif npcId == 7125 and int(st.get("cond"))==1 :
-     if st.getQuestItemsCount(HARPY_FEATHER_ID)+st.getQuestItemsCount(MEDUSA_VENOM_ID)+st.getQuestItemsCount(WYRMS_TOOTH_ID)>0 :
-        st.giveItems(ADENA_ID,80*st.getQuestItemsCount(HARPY_FEATHER_ID)+90*st.getQuestItemsCount(MEDUSA_VENOM_ID)+100*st.getQuestItemsCount(WYRMS_TOOTH_ID))
-        st.takeItems(HARPY_FEATHER_ID,-1)
-        st.takeItems(MEDUSA_VENOM_ID,-1)
-        st.takeItems(WYRMS_TOOTH_ID,-1)
+     if st.getQuestItemsCount(HARPY_FEATHER)+st.getQuestItemsCount(MEDUSA_VENOM)+st.getQuestItemsCount(WYRMS_TOOTH)>0 :
+        st.giveItems(ADENA,80*st.getQuestItemsCount(HARPY_FEATHER)+90*st.getQuestItemsCount(MEDUSA_VENOM)+100*st.getQuestItemsCount(WYRMS_TOOTH))
+        st.takeItems(HARPY_FEATHER,-1)
+        st.takeItems(MEDUSA_VENOM,-1)
+        st.takeItems(WYRMS_TOOTH,-1)
         htmltext = "7125-05.htm"
      else:
         htmltext = "7125-04.htm"
@@ -57,11 +53,11 @@ class Quest (JQuest) :
    n = st.getRandom(10)
    if n<5 :
       if npcId == 145 :
-         st.giveItems(HARPY_FEATHER_ID,1)
+         st.giveItems(HARPY_FEATHER,1)
       elif npcId == 158 :
-         st.giveItems(MEDUSA_VENOM_ID,1)
+         st.giveItems(MEDUSA_VENOM,1)
       elif npcId == 176 :
-         st.giveItems(WYRMS_TOOTH_ID,1)
+         st.giveItems(WYRMS_TOOTH,1)
       st.playSound("ItemSound.quest_itemget")
    return
 
@@ -80,8 +76,8 @@ STARTED.addKillId(145)
 STARTED.addKillId(158)
 STARTED.addKillId(176)
 
-STARTED.addQuestDrop(145,HARPY_FEATHER_ID,1)
-STARTED.addQuestDrop(158,MEDUSA_VENOM_ID,1)
-STARTED.addQuestDrop(176,WYRMS_TOOTH_ID,1)
+STARTED.addQuestDrop(145,HARPY_FEATHER,1)
+STARTED.addQuestDrop(158,MEDUSA_VENOM,1)
+STARTED.addQuestDrop(176,WYRMS_TOOTH,1)
 
 print "importing quests: 331: Arrow For Vengeance"
