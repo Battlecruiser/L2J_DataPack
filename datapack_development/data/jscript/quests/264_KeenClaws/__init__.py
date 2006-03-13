@@ -70,17 +70,19 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    count=st.getQuestItemsCount(WOLF_CLAW)
    chance = st.getRandom(20)
+   qty=0
    for i in DROP[npcId]:
       if i[0]<=chance<i[1]:
          qty=i[2]
-   if count+qty>50 :
-     qty=50-count
-   if count+qty==50:
-     st.playSound("ItemSound.quest_middle")
-     st.set("cond","2")
-   else :
-     st.playSound("ItemSound.quest_itemget")
-   st.giveItems(WOLF_CLAW,qty)
+   if qty :
+     if count+qty>50 :
+       qty=50-count
+     if count+qty==50:
+       st.playSound("ItemSound.quest_middle")
+       st.set("cond","2")
+     else :
+       st.playSound("ItemSound.quest_itemget")
+     st.giveItems(WOLF_CLAW,qty)
    return
 
 QUEST       = Quest(264,"264_KeenClaws","Keen Claws")
