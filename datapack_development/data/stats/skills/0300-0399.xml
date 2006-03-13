@@ -499,6 +499,7 @@
 <skill id="322" levels="6" name="Shield Fortress">
  <table name="#mpConsume"> 12 13 13 13 14 14 </table>
  <table name="#ShieldDefRate"> 1.1 1.2 1.3 1.4 1.5 1.6 </table>
+ <set name="weaponsAllowed" val="2"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>

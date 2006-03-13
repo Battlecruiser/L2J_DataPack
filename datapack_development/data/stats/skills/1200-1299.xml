@@ -1390,10 +1390,7 @@
 </skill>
 <skill id="1271" levels="1" name="Benediction">
 
-<table name="#MP">
-	214
-</table>
-
+<table name="#MP"> 214 </table>
   <set name="mpConsume" val="#MP"/>
   <set name="power" val="5000"/>
   <set name="target" val="TARGET_PARTY"/>
@@ -1401,14 +1398,13 @@
   <set name="hitTime" val="7000"/>
   <set name="reuseDelay" val="100000"/>
   <set name="skillTime" val="5000"/>
-  <set name="skillType" val="HEAL"/>
+  <set name="skillType" val="HEAL_PERCENT"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-
-  </for>
-
+  <cond>
+	<player hp="25"/>
+  </cond>
 </skill>
 <skill id="1272" levels="13" name="Word of Fear">
   <table name="#mpConsume"> 117 129 140 153 159 165 172 178 184 189 194 199 204 </table>
