@@ -31,7 +31,7 @@ CREATE TABLE `npc` (
   `aggro` decimal(6,0) default NULL,
   `matkspd` decimal(3,0) default NULL,
   `rhand` decimal(4,0) default NULL,
-  `lhand` decimal(3,0) default NULL,
+  `lhand` decimal(4,0) default NULL,
   `armor` decimal(1,0) default NULL,
   `walkspd` decimal(3,0) default NULL,
   `runspd` decimal(3,0) default NULL,
