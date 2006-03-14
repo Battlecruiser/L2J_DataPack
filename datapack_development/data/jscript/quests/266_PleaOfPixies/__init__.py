@@ -1,15 +1,16 @@
-# Maked by Mr. Have fun! Version 0.2
-print "importing quests: 266: Plea Of Pixies"
+# Made by Mr. - Version 0.3 by DrLecter
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-PREDATORS_FANG_ID = 1334
-EMERALD_ID = 1337
-BLUE_ONYX_ID = 1338
-ONYX_ID = 1339
-GLASS_SHARD_ID = 1336
+PREDATORS_FANG = 1334
+EMERALD = 1337
+BLUE_ONYX = 1338
+ONYX = 1339
+GLASS_SHARD = 1336
+
+DROP={530:[[0,8,1]],534:[[4,10,1],[0,4,2]],537:[[0,10,2]],525:[[5,10,2],[0,5,3]]}
 
 class Quest (JQuest) :
 
@@ -17,135 +18,84 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "1" :
-      st.set("id","0")
+    if event == "12091-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-      htmltext = "12091-03.htm"
     return htmltext
 
-
  def onTalk (Self,npc,st):
-
-   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
-     st.setState(STARTING)
      st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
-   if npcId == 12091 and int(st.get("cond"))==0 :
-      if int(st.get("cond"))<15 :
-        if st.getPlayer().getLevel() >= 3 and st.getPlayer().getRace().ordinal() == 1 :
+   if int(st.get("cond"))==0 :
+     if st.getPlayer().getRace().ordinal() != 1 :
+       htmltext = "12091-00.htm"
+       st.exitQuest(1)
+     elif st.getPlayer().getLevel()<3 :
+       htmltext = "12091-01.htm"
+       st.exitQuest(1)
+     else :
           htmltext = "12091-02.htm"
-          return htmltext
-        elif st.getPlayer().getRace().ordinal() != 1 :
-          htmltext = "12091-00.htm"
-          st.exitQuest(1)
-        elif st.getPlayer().getLevel()<3 :
-          htmltext = "12091-01.htm"
-          st.exitQuest(1)
-      else:
-        htmltext = "12091-01.htm"
-        st.exitQuest(1)
-   elif npcId == 12091 and int(st.get("cond"))==1 and st.getQuestItemsCount(PREDATORS_FANG_ID)<100 :
-      htmltext = "12091-04.htm"
-   elif npcId == 12091 and (int(st.get("cond"))==1) and (st.getQuestItemsCount(PREDATORS_FANG_ID)>=100) :
-      if int(st.get("id")) != 266 :
-        st.set("id","266")
-        st.takeItems(PREDATORS_FANG_ID,st.getQuestItemsCount(PREDATORS_FANG_ID))
-        n = st.getRandom(100)
-        if n<2 :
-          st.giveItems(EMERALD_ID,1)
+   else :
+     if st.getQuestItemsCount(PREDATORS_FANG)<100 :
+       htmltext = "12091-04.htm"
+     else :
+       st.takeItems(PREDATORS_FANG,-1)
+       n = st.getRandom(100)
+       if n<2 :
+          st.giveItems(EMERALD,1)
           st.playSound("ItemSound.quest_jackpot")
-        elif n<20 :
-          st.giveItems(BLUE_ONYX_ID,1)
-        elif n<45 :
-          st.giveItems(ONYX_ID,1)
-        else:
-          st.giveItems(GLASS_SHARD_ID,1)
-        htmltext = "12091-05.htm"
-        st.set("cond","0")
-        st.setState(COMPLETED)
-        st.playSound("ItemSound.quest_finish")
+       elif n<20 :
+          st.giveItems(BLUE_ONYX,1)
+       elif n<45 :
+          st.giveItems(ONYX,1)
+       else:
+          st.giveItems(GLASS_SHARD,1)
+       htmltext = "12091-05.htm"
+       st.exitQuest(1)
+       st.playSound("ItemSound.quest_finish")
    return htmltext
 
  def onKill (self,npc,st):
-
    npcId = npc.getNpcId()
-   if npcId == 530 :
-        st.set("id","0")
-        if st.getQuestItemsCount(PREDATORS_FANG_ID)<100 and int(st.get("cond")) :
-          if st.getRandom(10)<8 :
-            st.giveItems(PREDATORS_FANG_ID,1)
-            if st.getQuestItemsCount(PREDATORS_FANG_ID) == 100 :
-              st.playSound("ItemSound.quest_middle")
-            else:
-              st.playSound("ItemSound.quest_itemget")
-   elif npcId == 534 :
-        st.set("id","0")
-        if st.getQuestItemsCount(PREDATORS_FANG_ID)<100 and int(st.get("cond")) :
-          n = st.getRandom(10)
-          if n<6 :
-            st.giveItems(PREDATORS_FANG_ID,1)
-            if st.getQuestItemsCount(PREDATORS_FANG_ID) == 100 :
-              st.playSound("ItemSound.quest_middle")
-            else:
-              st.playSound("ItemSound.quest_itemget")
-          elif n<4 :
-              st.giveItems(PREDATORS_FANG_ID,2)
-              if st.getQuestItemsCount(PREDATORS_FANG_ID) == 100 :
-                st.playSound("ItemSound.quest_middle")
-              else:
-                st.playSound("ItemSound.quest_itemget")
-   elif npcId == 537 :
-        st.set("id","0")
-        if st.getQuestItemsCount(PREDATORS_FANG_ID)<100 and int(st.get("cond")) :
-          st.giveItems(PREDATORS_FANG_ID,2)
-          if st.getQuestItemsCount(PREDATORS_FANG_ID) == 100 :
-            st.playSound("ItemSound.quest_middle")
-          else:
-            st.playSound("ItemSound.quest_itemget")
-   elif npcId == 525 :
-        st.set("id","0")
-        if st.getQuestItemsCount(PREDATORS_FANG_ID)<100 and int(st.get("cond")) :
-          n = st.getRandom(10)
-          if n<5 :
-            st.giveItems(PREDATORS_FANG_ID,2)
-            if st.getQuestItemsCount(PREDATORS_FANG_ID) == 100 :
-              st.playSound("ItemSound.quest_middle")
-            else:
-              st.playSound("ItemSound.quest_itemget")
-          else:
-            st.giveItems(PREDATORS_FANG_ID,3)
-            if st.getQuestItemsCount(PREDATORS_FANG_ID) == 100 :
-              st.playSound("ItemSound.quest_middle")
-            else:
-              st.playSound("ItemSound.quest_itemget")
+   count = st.getQuestItemsCount(PREDATORS_FANG)
+   chance = st.getRandom(10)
+   qty = 0
+   for i in DROP[npcId] :
+      if i[0] <= chance < i[1] :
+         qty = i[2]
+   if qty :
+     if count+qty>100 :
+       qty=50-count
+     if count+qty==100 :
+       st.playSound("ItemSound.quest_middle")
+       st.set("cond","2")
+     else :
+       st.playSound("ItemSound.quest_itemget")
+     st.giveItems(PREDATORS_FANG,qty)
    return
 
 QUEST       = Quest(266,"266_PleaOfPixies","Plea Of Pixies")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
+STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
-
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(12091)
 
+CREATED.addTalkId(12091)
 STARTING.addTalkId(12091)
-
 STARTED.addTalkId(12091)
+COMPLETED.addTalkId(12091)
 
 STARTED.addKillId(525)
 STARTED.addKillId(530)
 STARTED.addKillId(534)
 STARTED.addKillId(537)
 
-STARTED.addQuestDrop(530,PREDATORS_FANG_ID,1)
-STARTED.addQuestDrop(534,PREDATORS_FANG_ID,1)
-STARTED.addQuestDrop(537,PREDATORS_FANG_ID,1)
-STARTED.addQuestDrop(525,PREDATORS_FANG_ID,1)
+STARTED.addQuestDrop(530,PREDATORS_FANG,1)
+
+print "importing quests: 266: Plea Of Pixies"
