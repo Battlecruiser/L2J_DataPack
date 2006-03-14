@@ -165,9 +165,6 @@ class Quest (JQuest) :
           st.takeItems(VOUCHER_OF_FAITH,1)
           st.giveItems(PROOF_OF_ALLIANCE,1)
           st.addExpAndSp(120000,0)
-          timer=leader(st).getQuestTimer("poison_timer")
-          if timer != None : timer.cancel()
-          members_finnish(st)
           htmltext="7756-07.htm"
           st.exitQuest(1)
        elif st.getState() in [PART2,PART3] :
@@ -204,6 +201,9 @@ class Quest (JQuest) :
              st.takeItems(BLOOD_OF_EVA,1)
              st.giveItems(POTION_OF_RECOVERY,1)
              st.giveItems(VOUCHER_OF_FAITH,1)
+             timer=leader(st).getQuestTimer("poison_timer")
+             if timer != None : timer.cancel()
+             members_finnish(st)
              htmltext =  "7759-08.htm"
              st.playSound("ItemSound.quest_finish")
            elif st.getQuestItemsCount(VOUCHER_OF_FAITH)==0:
