@@ -734,14 +734,14 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="90000"/>
   <set name="castRange" val="-1"/>
-  <player hp="30"/>
+  <cond><player hp="30"/></cond>
 <!-- Done by dc, completed by NewAge -->
-<table name="#Tab-pDef"> 2.0 2.5 3.0 </table>
-<for>
-  <effect name="Buff" time="90" count="1" val="0">
+  <table name="#Tab-pDef"> 2.0 2.5 3.0 </table>
+  <for>
+   <effect name="Buff" time="90" count="1" val="0">
     <mul order='0x50' stat='pDef' val="#Tab-pDef"/>
-  </effect>
-</for>
+   </effect>
+  </for>
 </skill>
 <skill id="140" levels="1" name="Big Pocket">
   <set name="power" val="0.0"/>
@@ -1156,15 +1156,14 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="90000"/>
   <set name="castRange" val="-1"/>
-  <player hp="30"/>
-<table name="#Tab-pAtk"> 2.0 2.5 3.0 </table>
+  <cond><player hp="30"/></cond>
+  <table name="#Tab-pAtk"> 2.0 2.5 3.0 </table>
 <!-- Done by dc, completed by NewAge -->
-<for>
-
-  <effect name="Buff" time="90" count="1" val="0">
+  <for>
+   <effect name="Buff" time="90" count="1" val="0">
 	  <mul  order='0x50' stat='pAtk' val="#Tab-pAtk"/>
- </effect>
-</for>
+   </effect>
+  </for>
 </skill>
 <skill id="177" levels="1" name="none">
   <set name="power" val="0.0"/>
