@@ -68,6 +68,8 @@ __all__ = [
 '231_TestOfMaestro',
 '232_TestOfLord',
 '233_TestOfWarspirit',
+'234_FatesWhisper',
+'235_MimirsElixir',
 '257_GuardIsBusy1',
 '258_BringWolfPelt1',
 '259_RanchersPlea',
