@@ -80,8 +80,8 @@ ITEMS={
 6032:["etc_dragons_blood_i04","Abyss Oil","High Level Reagent"],
 6033:["etc_luxury_wine_b_i00","Hellfire Oil","Highest Level Reagent"],
 6034:["etc_luxury_wine_c_i00","Nightmare Oil","Highest Level Reagent"],
-6320:["etc_lump_white_i00","Pure Silver",""],
-6321:["etc_lump_yellow_i00","True Gold",""],
+6320:["etc_broken_crystal_silver_i00","Pure Silver",""],
+6321:["etc_broken_crystal_gold_i00","True Gold",""],
 }
 #Quest items
 REAGENT_POUCH1,   REAGENT_POUCH2,REAGENT_POUCH3, REAGENT_BOX, \
@@ -95,7 +95,7 @@ MIXING_STONE1 = 5904
 #Mimir's Elixir items
 BLOOD_FIRE, MIMIRS_ELIXIR, PURE_SILVER, TRUE_GOLD = range(6318,6322)
 
-MATS=range(6011,6032)+[BLOOD_FIRE, PURE_SILVER]
+MATS=range(6011,6032)+range(6320,6322)
 #Messages
 default   = "<html><head><body>I have nothing to say to you.</body></html>"
 #NPCs
@@ -119,7 +119,7 @@ NECROPLASM:      [ROTTEN_BONE,10,BLOOD_ROOT,1],     DEMONPLASM:     [DEMONS_BLOO
 DRACONIC_ESSENCE:[DRACOPLASM,10,QUICKSILVER,1],     FIRE_ESSENCE:   [MAGMA_DUST,10,SULFUR,1],      LUNARGENT:[MOON_DUST,10,QUICKSILVER,1],
 MIDNIGHT_OIL:    [NECROPLASM,10,QUICKSILVER,1],     DEMONIC_ESSENCE:[DEMONPLASM,10,SULFUR,1],      ABYSS_OIL:[INFERNO_DUST,10,SULFUR,1],
 HELLFIRE_OIL:    [FIRE_ESSENCE,1,DEMONIC_ESSENCE,1],NIGHTMARE_OIL:  [LUNARGENT,1,MIDNIGHT_OIL,1],  PURE_SILVER:[LUNARGENT,1,QUICKSILVER,1],
-MIMIRS_ELIXIR:   [PURE_SILVER,1,TRUE_GOLD,1],       MIMIRS_ELIXIR:   [TRUE_GOLD,1,PURE_SILVER,1],
+MIMIRS_ELIXIR:   [PURE_SILVER,1,TRUE_GOLD,1],
 }
 
 def render_shop(mode,item) :
@@ -149,10 +149,10 @@ def render_urn(st, page) :
        if catalyst : html = html.replace("CACT","Retrieve")
        else : html = html.replace("CACT","Insert")
     elif isinstance(page,list) :
-       html = "<html><body><font color=\"LEVEL\">Insert:</font><table border=0>"
+       html = "<html><body>Insert:<table border=0>"
        for i in MATS :
-          html += "<tr><td height=45><img src=icon."+ITEMS[i][0]+" width=32 height=32></td><td>"+ITEMS[i][1]+"</td><td><button value=X1 action=\"bypass -h Quest 373_SupplierOfReagents x_1_"+page[1]+"_"+str(i)+"\" width=40 height=15 back=sek.cbui94 fore=sek.cbui92><button value=X10 action=\"bypass -h Quest 373_SupplierOfReagents x_10_"+page[1]+"_"+str(i)+"\" width=40 height=15 back=sek.cbui94 fore=sek.cbui92></td></tr>"
-       html += "</table><center><button value=Back action=\"bypass -h Quest 373_SupplierOfReagents urn\" width=40 height=15 back=sek.cbui94 fore=sek.cbui92></center></body></html>"
+          html += "<tr><td height=45><img src=icon."+ITEMS[i][0]+" height=32 width=32></td><td>"+ITEMS[i][1]+"</td><td><button value=X1 action=\"bypass -h Quest 373_SupplierOfReagents x_1_"+page[1]+"_"+str(i)+"\" width=40 height=15 fore=sek.cbui92><button value=X10 action=\"bypass -h Quest 373_SupplierOfReagents x_2_"+page[1]+"_"+str(i)+"\" width=40 height=15 fore=sek.cbui92></td></tr>"
+       html += "</table><center><a action=\"bypass -h Quest 373_SupplierOfReagents urn\">Back</a></center></body></html>"
     return html
 
 class Quest (JQuest) :
@@ -232,8 +232,9 @@ class Quest (JQuest) :
              htmltext="8149-3a.htm"
           else :
              htmltext = "8149-3b.htm" 
-    elif event.startswith("x_1") :
+    elif event.startswith("x_") :
        x,qty,dst,item=event.split("_")
+       if qty=="2": qty="10"
        if st.getQuestItemsCount(int(item)) >= int(qty) :
           if dst == "I" :
              dest = "ingredient"
@@ -283,7 +284,7 @@ class Quest (JQuest) :
                       qty = 1
                       mimirs.set("cond","8")
                    else :
-                      chance = -1
+                      return "8149-7d.htm"
                 if st.getRandom(100) < chance :
                    st.giveItems(item,qty)
                 else :
