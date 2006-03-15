@@ -80,6 +80,8 @@ ITEMS={
 6032:["etc_dragons_blood_i04","Abyss Oil","High Level Reagent"],
 6033:["etc_luxury_wine_b_i00","Hellfire Oil","Highest Level Reagent"],
 6034:["etc_luxury_wine_c_i00","Nightmare Oil","Highest Level Reagent"],
+6320:["etc_lump_white_i00","Pure Silver",""],
+6321:["etc_lump_yellow_i00","True Gold",""],
 }
 #Quest items
 REAGENT_POUCH1,   REAGENT_POUCH2,REAGENT_POUCH3, REAGENT_BOX, \
@@ -90,9 +92,10 @@ MOON_DUST,        NECROPLASM,    DEMONPLASM,     INFERNO_DUST,\
 DRACONIC_ESSENCE, FIRE_ESSENCE,  LUNARGENT,      MIDNIGHT_OIL,\
 DEMONIC_ESSENCE,  ABYSS_OIL,     HELLFIRE_OIL,   NIGHTMARE_OIL=range(6007,6035)
 MIXING_STONE1 = 5904
-PURE_SILVER = 6320
+#Mimir's Elixir items
+BLOOD_FIRE, MIMIRS_ELIXIR, PURE_SILVER, TRUE_GOLD = range(6318,6322)
 
-MATS=range(6011,6032)
+MATS=range(6011,6032)+[BLOOD_FIRE, PURE_SILVER]
 #Messages
 default   = "<html><head><body>I have nothing to say to you.</body></html>"
 #NPCs
@@ -115,7 +118,8 @@ DRACOPLASM:      [WYRMS_BLOOD,10,BLOOD_ROOT,1],     MAGMA_DUST:     [LAVA_STONE,
 NECROPLASM:      [ROTTEN_BONE,10,BLOOD_ROOT,1],     DEMONPLASM:     [DEMONS_BLOOD,10,BLOOD_ROOT,1],INFERNO_DUST:[INFERNIUM_ORE,10,VOLCANIC_ASH,1],
 DRACONIC_ESSENCE:[DRACOPLASM,10,QUICKSILVER,1],     FIRE_ESSENCE:   [MAGMA_DUST,10,SULFUR,1],      LUNARGENT:[MOON_DUST,10,QUICKSILVER,1],
 MIDNIGHT_OIL:    [NECROPLASM,10,QUICKSILVER,1],     DEMONIC_ESSENCE:[DEMONPLASM,10,SULFUR,1],      ABYSS_OIL:[INFERNO_DUST,10,SULFUR,1],
-HELLFIRE_OIL:    [FIRE_ESSENCE,1,DEMONIC_ESSENCE,1],NIGHTMARE_OIL:  [LUNARGENT,1,MIDNIGHT_OIL,1],  PURE_SILVER:[LUNARGENT,1,QUICKSILVER,1]
+HELLFIRE_OIL:    [FIRE_ESSENCE,1,DEMONIC_ESSENCE,1],NIGHTMARE_OIL:  [LUNARGENT,1,MIDNIGHT_OIL,1],  PURE_SILVER:[LUNARGENT,1,QUICKSILVER,1],
+MIMIRS_ELIXIR:   [PURE_SILVER,1,TRUE_GOLD,1],       MIMIRS_ELIXIR:   [TRUE_GOLD,1,PURE_SILVER,1],
 }
 
 def render_shop(mode,item) :
@@ -261,10 +265,26 @@ class Quest (JQuest) :
                  if [ingredient,iq,catalyst,cq] == FORMULAS[i] :
                     item=i
                     break
+             if item == PURE_SILVER and temp != 1: return "8149-7c.htm"
+             if item == MIMIRS_ELIXIR :
+                if temp == 3 :
+                  if st.getQuestItemsCount(BLOOD_FIRE) :
+                     st.takeItems(BLOOD_FIRE,1)
+                  else :
+                     return "8149-7a.htm"
+                else :
+                  return "8149-7b.htm"
              if item :
                 chance,qty=TEMPERATURE[temp]
+                if item == MIMIRS_ELIXIR :
+                   mimirs=st.getPlayer().getQuestState("235_MimirsElixir")
+                   if mimirs :
+                      chance = 100
+                      qty = 1
+                      mimirs.set("cond","8")
+                   else :
+                      chance = -1
                 if st.getRandom(100) < chance :
-                   if item == PURE_SILVER : qty = 1 
                    st.giveItems(item,qty)
                 else :
                    htmltext = "8149-6c.htm"
