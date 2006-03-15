@@ -125,7 +125,7 @@ class Quest (JQuest) :
  
             if st.getQuestItemsCount(MaterialID) >= MaterialQuant :
                 EnchantLevel = Item.getEnchantLevel()
-                st.getPlayer().destroyItem("enhance",ObjectID, 1,st.getPlayer(), 0)
+                st.getPlayer().destroyItem("remove_1009",ObjectID, 1,st.getPlayer(), 0)
                 NewItem = ItemTable.getInstance().createItem("enhance",WeaponID, 1,st.getPlayer())
                 NewItem.setEnchantLevel(EnchantLevel)
                 st.getPlayer().addItem("enhance", NewItem, st.getPlayer(), 0)
