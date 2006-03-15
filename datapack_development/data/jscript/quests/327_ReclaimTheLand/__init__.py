@@ -164,6 +164,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(327,"327_ReclaimTheLand","Reclaim The Land")
 CREATED     = State('Start', QUEST)
+STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 

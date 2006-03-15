@@ -90,7 +90,7 @@ COMPLETED.addTalkId(7567)
 STARTED.addKillId(316)
 STARTED.addKillId(5043)
 
-STARTED.addQuestDrop(316,DARKWING_BAT_FANG_ID,1)
-STARTED.addQuestDrop(316,VARANGKAS_PARASITE_ID,1)
+STARTED.addQuestDrop(316,DARKWING_BAT_FANG,1)
+STARTED.addQuestDrop(316,VARANGKAS_PARASITE,1)
 
 print "importing quests: 275: Black Winged Spies"
