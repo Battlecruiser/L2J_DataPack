@@ -270,7 +270,7 @@ class Quest (JQuest) :
 						st.set("dudaStat","4")
 						htmltext = "7641-04.htm"
 						st.takeItems(DROPLIST[233][5],DROPLIST[233][4])
-                                                st.takeItems(MARSH_SPIDER_FEET_ID,st.getQuestItemsCount(MARSH_SPIDER_FEET_ID))
+						st.takeItems(MARSH_SPIDER_FEET_ID,st.getQuestItemsCount(MARSH_SPIDER_FEET_ID))
 						st.giveItems(HANDIWORK_SPIDER_BROOCH_ID,1)
 						st.takeItems(TAKUNA_CHARM_ID,1)
 					elif duda==4:
@@ -333,8 +333,18 @@ class Quest (JQuest) :
 		random=st.getRandom(100)
 		count=st.getQuestItemsCount(item)
 		spiderCount=st.getQuestItemsCount(MARSH_SPIDER_FEET_ID)
-		
-		if int(st.get(var)) == value and random < chance and count < maxcount:
+		if item == MARSH_SPIDER_FEELER_ID and int(st.get(var)) == value:
+			if spiderCount<10:
+				st.giveItems(MARSH_SPIDER_FEET_ID,1)
+				st.playSound("ItemSound.quest_itemget")
+			elif st.getQuestItemsCount(MARSH_SPIDER_FEELER_ID)<9:
+				st.giveItems(MARSH_SPIDER_FEELER_ID,1)
+				st.playSound("ItemSound.quest_itemget")
+			elif st.getQuestItemsCount(MARSH_SPIDER_FEELER_ID)==9:
+				st.giveItems(MARSH_SPIDER_FEELER_ID,1)
+				st.playSound("ItemSound.quest_middle")
+				st.set("dudaStat","3")
+		elif int(st.get(var)) == value and random < chance and count < maxcount:
 			st.giveItems(item,1)
 			if count == maxcount-1:
 				st.playSound("ItemSound.quest_middle")
@@ -342,13 +352,6 @@ class Quest (JQuest) :
 					st.set(var,"2")
 				else:
 					st.set(var,str(newValue))
-			else:
-				st.playSound("ItemSound.quest_itemget")
-		elif item == MARSH_SPIDER_FEELER_ID and int(st.get(var)) == newValue and spiderCount < 10:
-			st.giveItems(MARSH_SPIDER_FEET_ID,1)
-			if spiderCount==9:
-				st.playSound("ItemSound.quest_middle")
-				st.set("dudaStat","3")
 			else:
 				st.playSound("ItemSound.quest_itemget")
 		return
