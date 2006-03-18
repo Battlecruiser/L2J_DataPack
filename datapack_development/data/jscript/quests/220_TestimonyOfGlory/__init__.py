@@ -320,7 +320,7 @@ class Quest (JQuest) :
            else :
                htmltext = "7616-01.htm"
          elif npcId == 7617 :                               # Chief of Turek Orcs
-           if st.getQuestItemsCount(KASANS_LETTER2) :
+           if st.getQuestItemsCount(KASMANS_LETTER2) :
                htmltext = "7617-02.htm"
            elif st.getQuestItemsCount(GLOVE_OF_BURAI) :
                htmltext = "7617-05.htm"
