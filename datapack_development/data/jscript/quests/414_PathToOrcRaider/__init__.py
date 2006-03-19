@@ -28,8 +28,9 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npcId,st):
+ def onTalk (Self,npc,st):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
      st.setState(STARTING)
@@ -77,7 +78,8 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_finish")
    return htmltext
 
- def onKill (self,npcId,st):
+ def onKill (self,npc,st):
+   npcId = npc.getNpcId()
    if npcId == 320 :
           st.set("id","0")
           if int(st.get("cond")) and st.getQuestItemsCount(GOBLIN_DWELLING_MAP_ID) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID)<10 and st.getQuestItemsCount(GREEN_BLOOD_ID)<40 :
