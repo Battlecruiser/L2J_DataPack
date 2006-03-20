@@ -73,24 +73,14 @@
 </item>
 <item id='4237' name="hatchlings_level_65_weapon">
   <for>
-    <set val='24' order='0x08' stat='pAtk' />
-    <set val='32' order='0x08' stat='mAtk' />
-    <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
-    <set val='277' order='0x08' stat='pAtkSpd' />
-    <enchant val='0' order='0x0C' stat='pAtk' />
-    <enchant val='0' order='0x0C' stat='mAtk' />
+    <add val='24' order='0x40' stat='pAtk' />
+    <add val='32' order='0x40' stat='mAtk' />
   </for>
 </item>
 <item id='4238' name="hatchlings_level_75_weapon">
   <for>
-    <set val='31' order='0x08' stat='pAtk' />
-    <set val='43' order='0x08' stat='mAtk' />
-    <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
-    <set val='277' order='0x08' stat='pAtkSpd' />
-    <enchant val='0' order='0x0C' stat='pAtk' />
-    <enchant val='0' order='0x0C' stat='mAtk' />
+    <add val='31' order='0x40' stat='pAtk' />
+    <add val='43' order='0x40' stat='mAtk' />
   </for>
 </item>
 </list>
