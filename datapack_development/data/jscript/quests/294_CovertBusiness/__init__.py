@@ -54,20 +54,21 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-   npcId = npc.getNpcId()
-   count=st.getQuestItemsCount(BAT_FANG)
-   chance = st.getRandom(10)
-   for i in DROP[npcId]:
-      if i[0]<=chance<i[1]:
-         qty=i[2]
-   if count+qty>100 :
-     qty=100-count
-   if count+qty==100:
-     st.playSound("ItemSound.quest_middle")
-     st.set("cond","2")
-   else :
-     st.playSound("ItemSound.quest_itemget")
-   st.giveItems(BAT_FANG,qty)
+   if st.getInt("cond") == 1:
+     npcId = npc.getNpcId()
+     count=st.getQuestItemsCount(BAT_FANG)
+     chance = st.getRandom(10)
+     for i in DROP[npcId]:
+        if i[0]<=chance<i[1]:
+           qty=i[2]
+     if count+qty>100 :
+       qty=100-count
+     if count+qty==100:
+       st.playSound("ItemSound.quest_middle")
+       st.set("cond","2")
+     else :
+       st.playSound("ItemSound.quest_itemget")
+     st.giveItems(BAT_FANG,qty)
    return
 
 QUEST       = Quest(294,"294_CovertBusiness","Covert Business")
