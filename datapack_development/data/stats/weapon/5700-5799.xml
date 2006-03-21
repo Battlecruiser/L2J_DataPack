@@ -7,6 +7,11 @@
     <set val='8' order='0x08' stat='rCrit' />
     <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
+<mul val='1.08' order='0x50' stat='pAtkSpd'>
+<and>
+<using slotitem="5704;14;4"/>
+</and>
+</mul>
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
   </for>
@@ -18,6 +23,11 @@
     <set val='8' order='0x08' stat='rCrit' />
     <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
+<mul val='1.25' order='0x50' stat='maxHp'>
+<and>
+<using slotitem="5705;14;4"/>
+</and>
+</mul>
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
   </for>
@@ -27,8 +37,12 @@
     <set val='282' order='0x08' stat='pAtk' />
     <set val='114' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
+<add val='6' order='0x40' stat='accCombat'>
+<and>
+<using slotitem="5706;14;4"/>
+</and>
+</add>
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
   </for>
