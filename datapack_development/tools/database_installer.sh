@@ -280,6 +280,7 @@ $MYG < ../sql/merchant_shopids.sql &> /dev/null
 $MYG < ../sql/merchants.sql &> /dev/null
 $MYG < ../sql/minions.sql &> /dev/null
 $MYG < ../sql/npc.sql &> /dev/null
+$MYG < ../sql/pet_stats.sql &> /dev/null
 $MYG < ../sql/npcskills.sql &> /dev/null
 $MYG < ../sql/pets.sql &> /dev/null
 $MYG < ../sql/random_spawn.sql &> /dev/null
@@ -299,7 +300,7 @@ $MYG < ../sql/zone.sql &> /dev/null
 experimental(){
 echo ""
 echo ""
-echo "WARNING: Installing experimental gameserver data (y) may change game balance."
+echo "WARNING: Experimental spawnlist doesnt contain C4 mobs, and (y) may change game balance."
 echo -ne "Install experimental gameserver DB tables: (y) yes or (n) no or (q) quit?"
 read ASKXP
 case "$ASKXP" in
