@@ -113,7 +113,7 @@ class Quest (JQuest) :
         st.giveItems(GREETINGS_ID,3)
    elif npcId == 7666 and int(st.get("cond"))==18 and st.getQuestItemsCount(KATARIS_LETTER_ID)>0 and st.getQuestItemsCount(KAKANS_LETTER_ID)>0 and st.getQuestItemsCount(NYAKURIS_LETTER_ID)>0 and st.getQuestItemsCount(RAMUSS_LETTER_ID)>0 :
           st.giveItems(MARK_OF_REFORMER_ID,1)
-          st.addExpAndSp(28000,3600)
+          st.addExpAndSp(164032,17500)
           htmltext = "7666-07.htm"
           st.set("cond","0")
           st.set("onlyone","1")

@@ -134,7 +134,7 @@ class Quest (JQuest) :
    elif npcId == 7624 and int(st.get("step")) == 3 and st.getQuestItemsCount(ASCALONS_LETTER3_ID) :
       htmltext = "7624-15.htm"
    elif npcId == 7624 and int(st.get("step")) == 5 and st.getQuestItemsCount(MOUENS_LETTER_ID) :
-      st.addExpAndSp(36000,4600)
+      st.addExpAndSp(117454,25000)
       htmltext = "7624-17.htm"
       st.giveItems(MARK_OF_CHAMPION_ID,1)
       st.takeItems(MOUENS_LETTER_ID,1)

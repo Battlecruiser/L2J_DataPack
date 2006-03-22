@@ -114,7 +114,7 @@ class Quest (JQuest) :
 		elif int(st.get("phase"))==2:
 			if event == "7565_2":
 				htmltext = "7565-12.htm"
-				st.addExpAndSp(25000,3000)
+				st.addExpAndSp(92955,16250)
 				st.giveItems(MARK_OF_LORD_ID,1)
 				st.takeItems(IMMORTAL_FLAME_ID,1)
 				st.playSound("ItemSound.quest_finish")

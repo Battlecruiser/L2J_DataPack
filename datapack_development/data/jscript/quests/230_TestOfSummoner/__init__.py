@@ -209,7 +209,7 @@ class Quest (JQuest) :
             elif step == 2 :              # step 2 means already talkd with lara
                if Arcanas == 6:           # finished all battles... the player is able to earn the marks
                   htmltext = "7634-12.htm"
-                  st.addExpAndSp(41000,5000)
+                  st.addExpAndSp(148409,30000)
                   for var in STATS:
                      st.unset(var)
                   st.setState(COMPLETED)

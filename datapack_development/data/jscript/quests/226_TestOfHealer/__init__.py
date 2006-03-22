@@ -53,7 +53,10 @@ class Quest (JQuest) :
           htmltext = "7473-08.htm"
     elif event == "7473_2" :
           htmltext = "7473-09.htm"
-          st.addExpAndSp(37000,4500)
+          if st.getQuestItemsCount(GOLDEN_STATUE_ID):
+            st.addExpAndSp(134839,50000)
+          else:
+            st.addExpAndSp(118304,26250)
           st.giveItems(MARK_OF_HEALER_ID,1)
           st.takeItems(GOLDEN_STATUE_ID,1)
           st.set("cond","0")

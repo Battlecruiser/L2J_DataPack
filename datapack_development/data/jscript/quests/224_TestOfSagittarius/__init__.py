@@ -162,7 +162,7 @@ class Quest (JQuest) :
       st.takeItems(CRESCENT_MOON_BOW_ID,1)
       st.takeItems(TALISMAN_OF_KADESH_ID,1)
       st.takeItems(BLOOD_OF_LIZARDMAN_ID,st.getQuestItemsCount(BLOOD_OF_LIZARDMAN_ID))
-      st.addExpAndSp(28000,3600)
+      st.addExpAndSp(54726,20250)
       st.unset("step")
       st.set("cond","0")
       st.setState(COMPLETED)

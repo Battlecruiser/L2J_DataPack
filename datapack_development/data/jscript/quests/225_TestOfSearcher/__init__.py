@@ -102,7 +102,7 @@ class Quest (JQuest) :
        elif phase>1 and phase<22 :
          htmltext = "7690-07.htm"
        elif phase==22 :
-         st.addExpAndSp(21000,2600)
+         st.addExpAndSp(37831,18750)
          htmltext = "7690-08.htm"
          for var in STATS[0]:
           st.unset(var)
