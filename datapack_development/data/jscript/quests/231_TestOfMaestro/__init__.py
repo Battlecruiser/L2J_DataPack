@@ -107,7 +107,7 @@ class Quest (JQuest) :
      elif int(st.get("cond"))>0 and int(st.get("cond"))<17 :
        htmltext = "7531-05.htm"
      elif int(st.get("cond"))==17 :
-       st.addExpAndSp(46000,5900)
+       st.addExpAndSp(154499,37500)
        htmltext = "7531-06.htm"
        st.giveItems(MARK_OF_MAESTRO_ID,1)
        st.takeItems(RECOMMENDATION_OF_BALANKI_ID,1)

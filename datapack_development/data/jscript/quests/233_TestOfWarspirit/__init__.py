@@ -121,7 +121,7 @@ class Quest (JQuest) :
 			st.takeItems(BRAKIS_REMAINS2_ID,-1)
 			st.takeItems(HERMODTS_REMAINS2_ID,-1)
 			st.takeItems(KIRUNAS_REMAINS2_ID,-1)
-			st.addExpAndSp(23000,2900)
+			st.addExpAndSp(63483,17500)
 			st.takeItems(TONARS_REMAINS2_ID,-1)
 			st.giveItems(MARK_OF_WARSPIRIT_ID,1)
 			htmltext = "7649-03.htm"

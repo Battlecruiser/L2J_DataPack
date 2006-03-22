@@ -112,7 +112,7 @@ class Quest (JQuest) :
             st.takeItems(GRANDIS_SKIN_ID,-1)
             st.takeItems(TIMAK_ORCS_BELT_ID,-1)
             st.takeItems(RAKINS_MACE_ID,-1)
-            st.addExpAndSp(24000,3100)
+            st.addExpAndSp(47015,20000)
             st.giveItems(MARK_OF_DUELIST_ID,1)
             st.takeItems(FINAL_ORDER_ID,1)
             htmltext = "7623-18.htm"
