@@ -236,7 +236,8 @@ class Quest (JQuest) :
          if npcId == 7191 :
            htmltext = "7191-07.htm"
          elif npcId == 7031 and st.getQuestItemsCount(RECOMMENDATION_OF_HOLLIN_ID) :
-           st.addExpAndSp(32600,4000)
+           st.addExpAndSp(39571,2500)
+           st.giveItems(7562,16)
            htmltext = "7031-01.htm"
            st.takeItems(RECOMMENDATION_OF_HOLLIN_ID,1)
            st.giveItems(MARK_OF_TRUST_ID,1)

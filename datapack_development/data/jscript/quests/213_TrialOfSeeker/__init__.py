@@ -110,7 +110,8 @@ class Quest (JQuest) :
           elif st.getQuestItemsCount(DUFNERS_LETTER_ID) == 0 and st.getQuestItemsCount(TERYS_REPORT_ID) == 0 :
             htmltext = "7106-07.htm"
           elif st.getQuestItemsCount(DUFNERS_LETTER_ID) == 0 and st.getQuestItemsCount(TERYS_REPORT_ID) == 1 :
-              st.addExpAndSp(27000,3100)
+              st.addExpAndSp(72126,11000)
+              st.giveItems(7562,8)
               htmltext = "7106-08.htm"
               st.set("cond","0")
               st.set("onlyone","1")
