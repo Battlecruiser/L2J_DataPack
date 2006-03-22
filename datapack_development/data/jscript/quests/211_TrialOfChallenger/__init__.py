@@ -131,7 +131,8 @@ class Quest (JQuest) :
    elif npcId == 7646 and int(st.get("cond"))==7 :
       htmltext = "7646-06a.htm"
    elif npcId == 7646 and int(st.get("cond"))==9 :
-      st.addExpAndSp(26000,3100)
+      st.addExpAndSp(72394,11250)
+      st.giveItems(7562,8)
       htmltext = "7646-07.htm"
       st.takeItems(BROKEN_KEY_ID,1)
       st.giveItems(MARK_OF_CHALLENGER_ID,1)

@@ -281,9 +281,8 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(SYMBOL_OF_CRONOS_ID) == 0 :
           htmltext = "7461-13.htm"
         else:
-          if st.getGameTicks() != int(st.get("id")) :
-            st.set("id",str(st.getGameTicks()))
-            st.addExpAndSp(45000,5500)
+            st.addExpAndSp(80265,30000)
+            st.giveItems(7562,8)
             htmltext = "7461-14.htm"
             st.set("cond","0")
             st.set("onlyone","1")

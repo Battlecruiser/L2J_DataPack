@@ -200,9 +200,8 @@ class Quest (JQuest) :
    elif npcId == 7358 and int(st.get("cond"))==1 and st.getQuestItemsCount(PALUS_CHARM_ID) and st.getQuestItemsCount(ARKENIAS_NOTE_ID) :
       htmltext = "7358-03.htm"
    elif npcId == 7358 and int(st.get("cond"))==1 and st.getQuestItemsCount(PALUS_CHARM_ID) and st.getQuestItemsCount(ARKENIAS_LETTER_ID) :
-      if st.getGameTicks() != int(st.get("id")) :
-        st.set("id",str(st.getGameTicks()))
-        st.addExpAndSp(35000,4400)
+      st.addExpAndSp(68183,1750)
+      st.giveItems(7562,16)
       htmltext = "7358-04.htm"
       st.giveItems(MARK_OF_FATE_ID,1)
       st.takeItems(ARKENIAS_LETTER_ID,1)

@@ -192,9 +192,8 @@ class Quest (JQuest) :
    elif npcId == 7104 and int(st.get("cond"))>=1 and (st.getQuestItemsCount(CLAY_DOUGH_ID) or st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) or st.getQuestItemsCount(NIKOLAS_LIST_ID)) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
         htmltext = "7104-12.htm"
    elif npcId == 7104 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) :
-        if st.getGameTicks() != int(st.get("id")) :
-          st.set("id",str(st.getGameTicks()))
-          st.addExpAndSp(25000,3100)
+          st.addExpAndSp(12969,1000)
+          st.giveItems(7562,16)
           st.takeItems(RING_OF_TESTIMONY2_ID,1)
           st.giveItems(MARK_OF_PROSPERITY_ID,1)
           st.takeItems(MAPHR_TABLET_FRAGMENT_ID,1)

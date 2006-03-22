@@ -68,9 +68,8 @@ class Quest (JQuest) :
             st.takeItems(RP_JOURNEYMAN_RING_ID,1)
             st.giveItems(MARK_OF_GUILDSMAN_ID,1)
     elif event == "7103_4" :
-          if st.getGameTicks() != int(st.get("id")) :
-            st.set("id",str(st.getGameTicks()))
-            st.addExpAndSp(32000,3900)
+            st.addExpAndSp(80933,12250)
+            st.giveItems(7562,8)
             htmltext = "7103-09b.htm"
             st.set("cond","0")
             st.set("onlyone","1")
