@@ -426,7 +426,7 @@ class Quest (JQuest) :
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
    cond = int(st.get("cond"))
-   if cond == 1 :
+   if cond == 1 and npcId in DROPLIST_COND_1.keys():
      required,item,maxquanty=DROPLIST_COND_1[npcId]
      count = st.getQuestItemsCount(item)
      if st.getQuestItemsCount(required) and count < maxquanty :
@@ -439,7 +439,7 @@ class Quest (JQuest) :
            st.playSound("Itemsound.quest_itemget")
        else :
          st.playSound("Itemsound.quest_itemget")
-   elif cond == 4 :
+   elif cond == 4 and npcId in DROPLIST_COND_4.keys():
      required,item,maxquanty=DROPLIST_COND_4[npcId]
      count = st.getQuestItemsCount(item)
      if st.getQuestItemsCount(required) and count < maxquanty :
@@ -464,7 +464,7 @@ class Quest (JQuest) :
              st.playSound("Itemsound.quest_middle")
          else :
            st.playSound("Itemsound.quest_itemget")
-   elif cond == 6 :
+   elif cond == 6 and npcId in DROPLIST_COND_6.keys():
      required,item,maxquanty,chance=DROPLIST_COND_6[npcId]
      count = st.getQuestItemsCount(item)
      if st.getQuestItemsCount(required) and count < maxquanty :
