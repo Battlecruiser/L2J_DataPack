@@ -86,7 +86,7 @@ class Quest (JQuest) :
             if st.getQuestItemsCount(GREEN_BLOOD_ID)>20 :
               if st.getRandom(100)<((st.getQuestItemsCount(GREEN_BLOOD_ID)-20)*5) :
                 st.takeItems(GREEN_BLOOD_ID,st.getQuestItemsCount(GREEN_BLOOD_ID))
-                st.spawnNpc(5045)
+                st.getPcSpawn().addSpawn(5045)
               else:
                 st.giveItems(GREEN_BLOOD_ID,1)
                 st.playSound("ItemSound.quest_itemget")
