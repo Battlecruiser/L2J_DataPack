@@ -98,12 +98,9 @@ class Quest (JQuest) :
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
-     st.setState(STARTING)
      st.set("cond","0")
-     st.set("onlyone","0")
      st.set("step","0")
-   if npcId == 7624 and int(st.get("step")) == 0 and int(st.get("onlyone")) == 0 :
-      if int(st.get("cond")) < 15 :
+   if npcId == 7624 and st.getInt("step") == 0 :
         if st.getPlayer().getClassId().getId() in [0x01, 0x2d] and st.getPlayer().getLevel() > 38 :
           if st.getPlayer().getClassId().getId() == 0x01 :
             htmltext = "7624-03.htm"
@@ -114,10 +111,7 @@ class Quest (JQuest) :
         else:
           htmltext = "7624-01.htm"
           st.exitQuest(1)
-      else:
-        htmltext = "7624-01.htm"
-        st.exitQuest(1)
-   elif npcId == 7624 and int(st.get("onlyone")) == 1 :
+   elif npcId == 7624 and id == COMPLETED :
       htmltext = "<html><head><body>This quest has already been completed.</body></html>"
    elif npcId == 7624 and int(st.get("step")) == 1 :
       htmltext = "7624-07.htm"
@@ -142,7 +136,6 @@ class Quest (JQuest) :
       st.set("cond","0")
       st.setState(COMPLETED)
       st.playSound("ItemSound.quest_finish")
-      st.set("onlyone","1")
    elif npcId == 7624 and int(st.get("step")) in [4,5] :
       htmltext = "7624-16.htm"
    elif npcId == 7625 and int(st.get("step")) == 1 and st.getQuestItemsCount(ASCALONS_LETTER1_ID) :
@@ -213,7 +206,9 @@ COMPLETED = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7624)
 
+CREATED.addTalkId(7624)
 STARTING.addTalkId(7624)
+COMPLETED.addTalkId(7624)
 
 for npcId in [7093,7196,7624,7625]:
     STARTED.addTalkId(npcId)
