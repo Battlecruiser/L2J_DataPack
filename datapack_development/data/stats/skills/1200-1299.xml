@@ -1354,7 +1354,7 @@
 </skill>
 <skill id="1268" levels="4" name="Vampiric Rage">
   <table name="#mpConsume">27 39 54 67</table>
-  <table name="#abs">4 6 8 10</table>
+  <table name="#Tab-absorbDam">4 6 8 10</table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1366,8 +1366,8 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-   <effect name="Buff" time="1200" count="1" val="0" stackOrder="#abs" stackType="vampRage">
-    <add stat="absorbDam" val="#abs" order="0x40"/>
+   <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-absorbDam" stackType="vampRage">
+    <add stat="absorbDam" val="#Tab-absorbDam" order="0x40"/>
    </effect>
   </for>
 </skill>
