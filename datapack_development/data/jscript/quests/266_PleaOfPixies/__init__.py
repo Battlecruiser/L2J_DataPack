@@ -69,7 +69,7 @@ class Quest (JQuest) :
             qty = i[2]
       if qty :
         if count+qty>100 :
-          qty=50-count
+          qty=100-count
         if count+qty==100 :
           st.playSound("ItemSound.quest_middle")
           st.set("cond","2")
