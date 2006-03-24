@@ -3229,7 +3229,7 @@ INSERT INTO `etcitem` VALUES (17, 'Wooden Arrow', 'false', 'arrow', 6, 'stackabl
 (4390, 'Dwarven Royal Seal', 'false', 'quest', 20, 'stackable', 'steel', 'none', 0, 0, 0, 'false', 'q_dwarven_royal_seal', 'none'),
 (4391, 'Dwarven Royal Crown', 'false', 'quest', 20, 'stackable', 'steel', 'none', 0, 0, 0, 'false', 'q_dwarven_royal_crown', 'none'),
 (4392, 'Dwarven Dance Manual', 'false', 'quest', 20, 'stackable', 'paper', 'none', 0, 0, 0, 'false', 'q_dwarven_dance_manual', 'none'),
-(4393, 'Calculator', 'false', 'none', 20, 'normal', 'steel', 'none', 0, 100, 0, 'false', 'calculator', 'none'),
+(4393, 'Calculator', 'false', 'none', 20, 'normal', 'steel', 'none', 0, 200, 0, 'true', 'calculator', 'none'),
 (4394, 'Hanellin''s White Flower', 'false', 'quest', 0, 'normal', 'wood', 'none', 0, 0, 0, 'false', 'hanellins_white_flower', 'none'),
 (4395, 'Hanellin''s Red Flower', 'false', 'quest', 0, 'normal', 'wood', 'none', 0, 0, 0, 'false', 'hanellins_red_flower', 'none'),
 (4396, 'Hanellin''s Yellow Flower', 'false', 'quest', 0, 'normal', 'wood', 'none', 0, 0, 0, 'false', 'hanellins_yellow_flower', 'none'),
