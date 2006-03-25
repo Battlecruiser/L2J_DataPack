@@ -16,7 +16,7 @@ ALANKELLS_RECOMMEND_ID,MARK_OF_SEARCHER_ID = range(2784,2810)
 
 #This handle all mob drops   npcId:[condition,maxcount,chance,itemid]
 DROPLIST={
-781:["phase",0,10,100,DELU_TOTEM_ID],
+781:["phase",3,10,100,DELU_TOTEM_ID],
 5094:["phase",3,10,100,DELU_TOTEM_ID],
 5093:["phase",5,1,100,CHIEF_KALKIS_FANG_ID],
 555:["phase",10,10,100,RED_SPORE_DUST_ID],
