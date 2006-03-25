@@ -45,6 +45,13 @@
      <using slotitem="2411;6"/>
     </and>
    </mul>
+  <add stat='maxHp' order='0x60' val='20'>
+     <and>
+        <using slotitem="2378;11"/>
+	 <using slotitem="2411;6"/>
+	 <using slotitem="2493;8"/>
+     </and>
+  </add>
  <enchant val='0' order='0x0C' stat='pDef' />
 </for>
 </item>
