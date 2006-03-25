@@ -17,12 +17,10 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "1" :
-      st.set("id","0")
+    if event == "7001-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-      htmltext = "7001-03.htm"
     return htmltext
 
  def onTalk (Self,npc,st):
