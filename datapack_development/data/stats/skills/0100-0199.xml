@@ -119,7 +119,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="2"/>
   <set name="power" val="#power"/>
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="3000"/>
   <set name="element" val="3"/>
   <set name="reuseDelay" val="8000"/>
@@ -166,6 +167,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
   <for>
+    <effect count="1" name="Root" time="30" val="0"/>
   </for>
 </skill>
 <skill id="108" levels="3" name="Union">
