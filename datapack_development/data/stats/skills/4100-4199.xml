@@ -273,6 +273,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="displayId" val="1011"/>
   <for>
   </for>
 </skill>
@@ -344,6 +345,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
+  <set name="displayId" val="1168"/>
   <for>
   </for>
 </skill>
@@ -850,6 +852,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="displayId" val="1177"/>
   <for>
   </for>
 </skill>
@@ -894,6 +897,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="displayId" val="1184"/>
   <for>
   </for>
 </skill>
@@ -1067,10 +1071,10 @@
 </skill>
 <skill id="4163" levels="12" name="NPC Self Damage Shield">
   <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
-  <set name="mpConsume" val="#mpConsume"/>
   <table name="#rate"> 1.08 1.12 1.15 1.18 1.21 1.24 1.27 1.30 1.33 1.36 1.39 1.42 </table>
+  <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1800"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="1800"/>
@@ -1079,6 +1083,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="displayId" val="1040"/>
   <for>
   <effect count="1" name="Buff" time="1200" val="0">
     <mul order="0x50" stat="pDef" val="#rate"/>
@@ -1235,66 +1240,76 @@
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="830"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="830"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="STUN"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="displayId" val="1264"/>
   <for>
   </for>
 </skill>
 <skill id="4173" levels="12" name="BOSS Might">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:32
--->
-  <table name="#mpConsume"> 8 11 15 20 25 30 34 36 38 38 39 40 </table>
+<table name="#rate"> 1.04 1.08 1.12 1.16 1.2 1.24 1.28 1.32 1.36 1.4 1.44 1.48 </table>
+<table name="#mpConsume"> 8 11 15 20 25 30 34 36 38 38 39 40 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="hitTime" val="1500"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="1500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
+  <set name="isMagic" val="true"/>
+  <set name="displayId" val="1068"/>
   <for>
+  	<effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pAtk">
+   		<mul order="0x50" stat="pAtk" val="#rate"/>
+  	</effect>
   </for>
 </skill>
 <skill id="4174" levels="12" name="BOSS Shield">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:32
--->
-  <table name="#mpConsume"> 8 11 15 20 25 30 34 36 38 38 39 40 </table>
+<table name="#rate"> 1.04 1.08 1.12 1.16 1.2 1.24 1.28 1.32 1.36 1.4 1.44 1.48 </table>
+<table name="#mpConsume"> 8 11 15 20 25 30 34 36 38 38 39 40 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="hitTime" val="1500"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="1500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
+  <set name="isMagic" val="true"/>
+  <set name="displayId" val="1040"/>
   <for>
+  	<effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pDef">
+    	<mul order="0x50" stat="pDef" val="#rate"/>
+  	</effect>
   </for>
 </skill>
 <skill id="4175" levels="12" name="BOSS Haste">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:32
--->
-  <table name="#mpConsume"> 8 11 15 20 25 30 34 36 38 38 39 40 </table>
+<table name="#Tab-pAtkSpd"> 1.04 1.08 1.12 1.16 1.2 1.24 1.28 1.32 1.36 1.4 1.44 1.48 </table>
+<table name="#mpConsume"> 8 11 15 20 25 30 34 36 38 38 39 40 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="hitTime" val="1500"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="1500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
+  <set name="isMagic" val="true"/>
+  <set name="displayId" val="1086"/>
   <for>
+  	<effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpeedUp">
+    	<mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+ 	</effect>
   </for>
 </skill>
 <skill id="4176" levels="12" name="BOSS Reflect Damage">
@@ -1316,20 +1331,21 @@
   </for>
 </skill>
 <skill id="4177" levels="12" name="Around Oneself: Cancel">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:32
--->
+
   <table name="#mpConsume"> 15 22 29 39 49 59 68 72 75 76 77 79 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1500"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="reuseDelay" val="120000"/>
   <set name="skillTime" val="1500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="CANCEL"/>
+  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="600"/>
+  <set name="negateStats" val="STUN SLEEP MUTE FEAR CONFUSION POISON BLEED BUFF DEBUFF WEAKNESS PARALYZE"/>
+  <set name="negatePower" val="9.0"/>
+  <set name="displayId" val="1056"/>
   <for>
   </for>
 </skill>
@@ -1600,20 +1616,19 @@
   </for>
 </skill>
 <skill id="4191" levels="12" name="BOSS Wind Strike">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
   <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
+  <table name="#power"> 12.0 15.0 18.0 21.0 24.0 27.0 30.0 33.0 36.0 39.0 42.0 45.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
   <set name="hitTime" val="2500"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="2500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="750"/>
+  <set name="displayId" val="1177"/>
   <for>
   </for>
 </skill>
@@ -1691,26 +1706,25 @@
   </for>
 </skill>
 <skill id="4196" levels="12" name="Decreases Speed">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily reduces speed. Effect 3.
-  7: Temporarily reduces speed. Effect 3.
-  created 2005-05-29 23:34:33
--->
   <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
-  <table name="#power"> 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 </table>
+  <table name="#power"> 9.0 11.0 13.0 15.0 17.0 19.0 21.0 23.0 25.0 27.0 29.0 31.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="save" val="2"/>
   <set name="power" val="#power"/>
   <set name="hitTime" val="2300"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="element" val="3"/>
+  <set name="reuseDelay" val="8000"/>
   <set name="skillTime" val="2300"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="750"/>
+  <set name="displayId" val="1184"/>
   <for>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="1.4" stackType="RunSpeedDown">
+      <div order="0x50" stat="runSpd" val="1.4"/>
+    </effect>
   </for>
 </skill>
 <skill id="4197" levels="12" name="Hold">
