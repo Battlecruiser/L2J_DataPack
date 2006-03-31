@@ -162,6 +162,7 @@ one's level by 9 or more. This curse cannot be undone. -->
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="displayId" val="1011"/>
   <for>
   </for>
 </skill>
@@ -635,28 +636,37 @@ is increased and MP consumption is decreased. Effect 1-10-->
 <skill id="4560" levels="12" name="NPC Fire Burn">
 <!--- TODO -->
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+  <table name="#power"> 13.0 15.0 18.0 20.0 23.0 26.0 29.0 32.0 35.0 38.0 42.0 44.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1500"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="element" val="2"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="1500"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="150"/>
+  <set name="displayId" val="1220"/>
   <for>
   </for>
 </skill>
 <skill id="4561" levels="12" name="NPC Fire Burn - Magic">
-<!--- TODO -->
   <table name="#mpConsume"> 4 5 8 9 12 14 17 18 19 19 20 20 </table>
+  <table name="#power"> 13.0 15.0 18.0 20.0 23.0 26.0 29.0 32.0 35.0 38.0 42.0 44.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1500"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="element" val="2"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="1500"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="150"/>
+  <set name="displayId" val="1220"/>
   <for>
   </for>
 </skill>
@@ -703,44 +713,59 @@ is increased and MP consumption is decreased. Effect 1-10-->
   </for>
 </skill>
 <skill id="4565" levels="12" name="NPC Eruption">
-<!--- TODO -->
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+  <table name="#power"> 37.0 39.0 41.0 43.0 45.0 46.0 48.0 50.0 51.0 53.0 54.0 56.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
   <set name="hitTime" val="5000"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
+  <set name="element" val="2"/>
+  <set name="skillType" val="MDAM"/>
   <set name="skillTime" val="5000"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="500"/>
+  <set name="displayId" val="1296"/>
   <for>
   </for>
 </skill>
 <skill id="4566" levels="12" name="NPC Eruption - Magic">
-<!--- TODO -->
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+  <table name="#power"> 37.0 39.0 41.0 43.0 45.0 46.0 48.0 50.0 51.0 53.0 54.0 56.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
   <set name="hitTime" val="5000"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
+  <set name="element" val="2"/>
+  <set name="skillType" val="MDAM"/>
   <set name="skillTime" val="5000"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="500"/>
+  <set name="displayId" val="1296"/>
   <for>
   </for>
 </skill>
 <skill id="4567" levels="12" name="NPC Eruption - Slow">
-<!--- TODO -->
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+  <table name="#power"> 37.0 39.0 41.0 43.0 45.0 46.0 48.0 50.0 51.0 53.0 54.0 56.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="hitTime" val="2500"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="skillTime" val="2500"/>
+  <set name="power" val="#power"/>
+  <set name="hitTime" val="5000"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
+  <set name="element" val="2"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="skillTime" val="5000"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
-  <set name="castRange" val="1000"/>
+  <set name="castRange" val="500"/>
+  <set name="displayId" val="1296"/>
   <for>
   </for>
 </skill>
@@ -787,16 +812,21 @@ is increased and MP consumption is decreased. Effect 1-10-->
   </for>
 </skill>
 <skill id="4571" levels="12" name="NPC Blazing Circle">
-<!--- TODO -->
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
+  <table name="#power"> 42.0 44.0 46.0 48.0 50.0 52.0 55.0 57.0 58.0 60.0 62.0 64.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="400"/>
   <set name="hitTime" val="5000"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="element" val="2"/>
+  <set name="reuseDelay" val="15000"/>
   <set name="skillTime" val="5000"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="displayId" val="1171"/>
   <for>
   </for>
 </skill>
