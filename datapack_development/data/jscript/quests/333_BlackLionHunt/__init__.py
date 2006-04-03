@@ -320,7 +320,7 @@ class Quest (JQuest) :
 		elif event == "f_info":
 			text = int(st.get("text"))
 			if text<4:
-				rnd=int(st.getRandom(21))
+				rnd=int(st.getRandom(20))
 				st.set("text",str(text+1))
 				text_rnd = html+redfoot+f_rnd_list[rnd]+back+htmlend
 				return text_rnd
