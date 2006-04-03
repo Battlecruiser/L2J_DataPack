@@ -4,7 +4,7 @@
 CREATE TABLE IF NOT EXISTS pets (
   item_obj_id decimal(11) NOT NULL default 0,
   objId decimal(11) ,
-  name varchar(12) ,
+  name varchar(16) ,
   level decimal(11) ,
   maxHp decimal(11) ,
   curHp decimal(18,0) ,
