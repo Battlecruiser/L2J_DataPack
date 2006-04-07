@@ -244,6 +244,8 @@ else
 echo "Upgrading gameserver content"
 fi
 $MYG < ../sql/armor.sql &> /dev/null
+$MYG < ../sql/auction.sql &> /dev/null
+$MYG < ../sql/auction_bid.sql &> /dev/null
 $MYG < ../sql/boxaccess.sql &> /dev/null
 $MYG < ../sql/boxes.sql &> /dev/null
 $MYG < ../sql/castle.sql &> /dev/null
@@ -263,9 +265,11 @@ $MYG < ../sql/character_subclasses.sql &> /dev/null
 $MYG < ../sql/characters.sql &> /dev/null
 $MYG < ../sql/clan_data.sql &> /dev/null
 $MYG < ../sql/clan_wars.sql &> /dev/null
+$MYG < ../sql/clanhall.sql &> /dev/null
 $MYG < ../sql/class_list.sql &> /dev/null
 $MYG < ../sql/droplist.sql &> /dev/null
 $MYG < ../sql/etcitem.sql &> /dev/null
+$MYG < ../sql/games.sql &> /dev/null
 $MYG < ../sql/global_tasks.sql &> /dev/null
 $MYG < ../sql/henna.sql &> /dev/null
 $MYG < ../sql/henna_trees.sql &> /dev/null
