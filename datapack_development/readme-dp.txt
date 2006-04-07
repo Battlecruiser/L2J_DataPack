@@ -1,4 +1,4 @@
-	Copyright 2005 L2J-DataPack team
+	Copyright 2006 L2J-DataPack team
 
 	This file is part of the L2J-DataPack.
 
@@ -20,7 +20,7 @@
 L2J-Datapack version 3 dev/unstable:
 
 Sourceforge project page: http://sourceforge.net/projects/l2j-c2datapack
-Forum: http://l2j-c2datapack.sourceforge.net/bb/index.php
+Forum: http://forum.l2jdp.com
 Wiki: http://www.l2jdp.com/trac/wiki
 Download: The wiki contains guides to get the latest datapack revision from the SVN repository.
 IRC: irc.freenode.net #l2j-datapack
