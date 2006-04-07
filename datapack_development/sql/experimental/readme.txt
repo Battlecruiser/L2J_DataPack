@@ -3,26 +3,12 @@
 The npc.sql and npcskills.sql files from the experimental folder became obsolete as of C4 :)
 so basically were deleted. You can still find them in the C3 branch if you really want to. 
 But we would highly reccomend you don't do that.
-	
-Old name as in:                         New name as in:
-Revision 659                            Revision 687
-
-/sql/npc-c3.sql                     ->  /sql/experimental/npc.sql
-/sql/npc.sql                        ->  /sql/npc.sql
-/sql/npcskills-c3.sql               ->  /sql/experimental/npcskills.sql
-/sql/npcskills.sql                  ->  /sql/npcskills.sql
-
-/sql/spawnlist-experimental-c3.sql  ->  /sql/experimental/spawnlist-experimental.sql
-/sql/spawnlist-sexy.sql             ->  /sql/experimental/spawnlist-loc_id.sql        -> removed
-/sql/spawnlist.sql                  ->  /sql/spawnlist.sql
-
 
 Link to Revision 659 /sql/ folder for reference:
-https://opensvn.csie.org/traccgi/L2J_Datapack/trac.cgi/browser/trunk/datapack_development/sql/?rev=659
+http://l2jdp.com/trac/browser/trunk/datapack_development/sql?rev=659
 
 Link to Revision 687 /sql/ folder for reference:
-https://opensvn.csie.org/traccgi/L2J_Datapack/trac.cgi/browser/trunk/datapack_development/sql/?rev=687
-
+http://l2jdp.com/trac/browser/trunk/datapack_development/sql?rev=687
 
 
 	Notes:
@@ -30,17 +16,15 @@ https://opensvn.csie.org/traccgi/L2J_Datapack/trac.cgi/browser/trunk/datapack_de
 
 		NPC
 /sql/npc.sql    -> better stats
-/sql/experimental/npc.sql    -> ???
+/sql/experimental/npc.sql    -> DELETED
 
 		NPCSKILLS
-/sql/npcskills.sql    -> fewer entries
-/sql/experimental/npcskills.sql    -> more entries
+/sql/npcskills.sql    -> better skills
+/sql/experimental/npcskills.sql    -> DELETED
 
 		SPAWNLIST
-/sql/spawnlist.sql    -> old spawnlist (no usage of loc_id?)
-/sql/experimental/spawnlist-experimental.sql    -> newer spawnlist, more raidbosses, more usage of loc_id (locations.sql)
-/sql/experimental/spawnlist-loc_id.sql   -> initial implementation of loc_id, old, not maintained -> removed
+/sql/spawnlist.sql    -> only active spawnlist
+/sql/experimental/spawnlist-experimental.sql    -> some entries still need to be merged on active spawnlist, but no C4 spawns here
+/sql/experimental/spawnlist-loc_id.sql   -> DELETED LONG TIME AGO
 
-
-	*i would reccomend /sql/experimental/npcskills.sql, /sql/experimental/spawnlist-experimental.sql
-		and /sql/npc.sql (warrax)
+In short, don't use experimental spawnlist.
