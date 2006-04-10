@@ -1177,23 +1177,23 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   <for>
   </for>
 </skill>
-<skill id="4267" levels="1" name="Grade Penalty">
-  <table name="#rate"> 0.18 </table>
-  <table name="#rate2"> 0.32 </table>
+<skill id="4267" levels="5" name="Grade Penalty">
+  <table name="#rate">0.22 0.19 0.16 0.13 0.10</table>
+  <table name="#rate2">0.22 0.19 0.16 0.13 0.10</table>
   <set name="power" val="0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-	<mul order="0x10" stat="pAtkSpd" val="#rate"/>
-	<mul order="0x10" stat="mAtkSpd" val="#rate"/>
-	<mul order="0x10" stat="rEvas" val="#rate"/>
-	<mul order="0x10" stat="rExp" val="#rate"/>
-	<mul order="0x10" stat="runSpd" val="#rate2"/>
-	<mul order="0x10" stat="regHp" val="#rate2"/>
-	<mul order="0x10" stat="regCp" val="#rate2"/>
-	<mul order="0x10" stat="regMp" val="#rate2"/>
+   <mul order="0x10" stat="pAtkSpd" val="#rate"/>
+   <mul order="0x10" stat="mAtkSpd" val="#rate"/>
+   <mul order="0x10" stat="rEvas" val="#rate"/>
+   <mul order="0x10" stat="rExp" val="#rate"/>
+   <mul order="0x10" stat="runSpd" val="#rate2"/>
+   <mul order="0x10" stat="regHp" val="#rate2"/>
+   <mul order="0x10" stat="regCp" val="#rate2"/>
+   <mul order="0x10" stat="regMp" val="#rate2"/>
   </for>
 </skill>
 <skill id="4268" levels="1" name="Danger Area">
