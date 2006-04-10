@@ -3874,7 +3874,7 @@ INSERT INTO `npc` VALUES
 (8685, 'Eye of Asefa', 'Monster.magical_weaver', 8.00, 22.00, 76, 'male', 'L2Npc', 40, 4298, 1710, 40, 21, 30, 20, 43, 10, 6922, 761, 1770, 584, 962, 434, 253, 0, 333, 0, 0, 0, 80, 120, 'null', 0, 0),
 (8686, 'Gatekeeper of Fire Dragon', 'Monster.skeleton_knight', 10.00, 25.00, 76, 'male', 'L2Npc', 40, 4298, 1710, 40, 21, 30, 20, 43, 10, 6922, 761, 1770, 584, 962, 434, 278, 0, 333, 84, 0, 0, 40, 120, 'null', 0, 0),
 (8687, 'Gatekeeper of Fire Dragon', 'Monster.skeleton_knight', 10.00, 25.00, 76, 'male', 'L2Npc', 40, 4298, 1710, 40, 21, 30, 20, 43, 10, 6922, 761, 1770, 584, 962, 434, 278, 0, 333, 84, 0, 0, 40, 120, 'null', 0, 0),
-(8688, 'Grand Olympiad Manager', 'NPC.a_fighterguild_master_Mhuman', 8.00, 23.50, 76, 'male', 'L2Npc', 40, 4298, 1710, 40, 21, 30, 20, 43, 10, 6922, 761, 1770, 584, 962, 434, 278, 0, 333, 70, 0, 0, 50, 120, 'null', 0, 0),
+(8688, 'Grand Olympiad Manager', 'NPC.a_fighterguild_master_Mhuman', 8.00, 23.50, 76, 'male', 'L2Observation', 40, 4298, 1710, 40, 21, 30, 20, 43, 10, 6922, 761, 1770, 584, 962, 434, 278, 0, 333, 70, 0, 0, 50, 120, 'null', 0, 0),
 (8689, 'Olympiad Finisher', 'NPC.a_fighterguild_master_Mhuman', 8.00, 22.00, 76, 'male', 'L2Npc', 40, 4298, 1710, 40, 21, 30, 20, 43, 10, 6922, 761, 1770, 584, 962, 434, 253, 0, 333, 0, 0, 0, 80, 120, 'null', 0, 0),
 (8690, 'Monument of Heroes', 'NPC.heroes_obelisk_human', 24.00, 69.00, 76, 'male', 'L2Npc', 40, 4298, 1710, 40, 21, 30, 20, 43, 10, 6922, 761, 1770, 584, 962, 434, 278, 0, 333, 0, 0, 0, 50, 120, 'null', 0, 0),
 (8691, 'Training Dummy', 'NPC.training_doll', 9.00, 22.00, 76, 'male', 'L2Npc', 40, 4298, 1710, 40, 21, 30, 20, 43, 10, 6922, 761, 1770, 584, 962, 434, 278, 0, 333, 0, 0, 0, 50, 120, 'null', 0, 0),
