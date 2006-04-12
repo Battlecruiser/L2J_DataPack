@@ -265,43 +265,32 @@
   </for>
 </skill>
 <skill id="313" levels="8" name="Snipe">
-
-<table name="#mpConsume">
-	55 58 60 62 64 65 67 69
-</table>
-<table name="#power">
-	1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0
-</table>
-<table name="#Acc">
-	3 5 7 8 10 12 14 16
-</table>
-<table name="#CritChance">
-	1.1 1.3 1.5 1.7 1.8 2.0 2.2 2.4
-</table>
-<table name="#pAtk">
-	1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8
-</table>
-  <set name="weaponsAllowed" val="32"/>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="1000"/>
-  <set name="reuseDelay" val="150000"/>
-  <set name="skillTime" val="1000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="30000"/>
-  <set name="castRange" val="-1"/>
-
+  <table name="#mpConsume">55 58 60 62 64 65 67 69</table>
+  <table name="#power">1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0</table>
+  <table name="#Acc">2 2 2 2 2 2 2 2</table>
+  <table name="#CritChance">26 26 26 26 26 26 26 26</table>
+  <table name="#pAtk">108 118 128 138 147 157 167 177</table>
+  <set name="weaponsAllowed" val="32" />
+  <set name="mpConsume" val="#mpConsume" />
+  <set name="power" val="#power" />
+  <set name="target" val="TARGET_SELF" />
+  <set name="hitTime" val="1000" />
+  <set name="reuseDelay" val="150000" />
+  <set name="skillTime" val="1000" />
+  <set name="skillType" val="BUFF" />
+  <set name="operateType" val="OP_ACTIVE" />
+  <set name="buffDuration" val="180000" />
+  <set name="castRange" val="-1" />
   <for>
-  <cond><player state="stand"/></cond>
-  <effect count="1" name="ImobileBuff" time="120" val="0">
-     <mul order="0x40" stat="pAtk" val="#pAtk"/>
-     <add order="0x40" stat="accCombat" val="#Acc"/>
-	 <mul order="0x40" stat="rCrit" val="#CritChance"/>
-  </effect>
+     <cond>
+        <player state="stand" />
+     </cond>
+     <effect count="1" name="ImobileBuff" time="180" val="0">
+         <add order="0x40" stat="pAtk" val="#pAtk" />
+         <add order="0x40" stat="accCombat" val="#Acc" />
+         <add order="0x40" stat="rCrit" val="#CritChance" />
+     </effect>
   </for>
-
 </skill>
 <skill id="314" levels="16" name="Fatal Counter">
 
