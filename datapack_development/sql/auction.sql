@@ -10,6 +10,7 @@ CREATE TABLE auction (
   itemId INT NOT NULL default 0,
   itemObjectId INT NOT NULL default 0,
   itemName varchar(40) NOT NULL,
+  itemQuantity INT NOT NULL default 0,
   startingBid int(11) NOT NULL default 0,
   currentBid int(11) NOT NULL default 0,
   endDate DECIMAL(20,0) NOT NULL default 0,
