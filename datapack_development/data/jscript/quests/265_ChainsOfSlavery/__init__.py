@@ -32,7 +32,7 @@ class Quest (JQuest) :
        htmltext = "7357-00.htm"
        st.exitQuest(1)
      else :
-       if st.getPlayer().getLevel()<5 :
+       if st.getPlayer().getLevel()<6 :
           htmltext = "7357-01.htm"
           st.exitQuest(1)
        else:
