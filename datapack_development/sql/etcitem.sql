@@ -4884,7 +4884,7 @@ INSERT INTO `etcitem` VALUES (17, 'Wooden Arrow', 'false', 'arrow', 6, 'stackabl
 (6535, 'Fishing Shot: non-grade', 'false', 'shot', 3, 'stackable', 'paper', 'none', 0, 3, 0, 'true', 'Fishing Shot: non-grade', 'none'),
 (6536, 'Fishing Shot: D-grade', 'false', 'shot', 3, 'stackable', 'paper', 'd', 0, 5, 0, 'true', 'Fishing Shot: D-grade', 'none'),
 (6537, 'Fishing Shot: C-grade', 'false', 'shot', 3, 'stackable', 'paper', 'c', 0, 7, 0, 'true', 'Fishing Shot: C-grade', 'none'),
-(6538, 'Fishing Shot: C-grade', 'false', 'shot', 3, 'stackable', 'paper', 'b', 0, 25, 0, 'true', 'Fishing Shot: B-grade', 'none'),
+(6538, 'Fishing Shot: B-grade', 'false', 'shot', 3, 'stackable', 'paper', 'b', 0, 25, 0, 'true', 'Fishing Shot: B-grade', 'none'),
 (6539, 'Fishing Shot: A-grade', 'false', 'shot', 3, 'stackable', 'paper', 'a', 0, 40, 0, 'true', 'Fishing Shot: A-grade', 'none),
 (6540, 'Fishing Shot: S-grade', 'false', 'shot', 3, 'stackable', 'paper', 's', 0, 50, 0, 'true', 'Fishing Shot: S-grade', 'none'),
 (6541, 'Blue Coba', 'false', 'seed', 2, 'stackable', 'paper', 'none', 0, 0, 0, 'true', 'C4Item', 'castle_guard'),
