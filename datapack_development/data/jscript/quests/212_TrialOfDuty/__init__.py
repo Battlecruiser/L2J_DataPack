@@ -199,7 +199,7 @@ class Quest (JQuest) :
    elif npcId == 144 :
       if int(st.get("cond")) == 6 :
         if st.getRandom(75)<2 :
-           st.getPcSpawn().addSpawn(7656)
+           st.getPcSpawn().addSpawn(7656,44656,148431,-3703,300000)
            st.playSound("ItemSound.quest_middle")
    elif npcId == 577 :
       if int(st.get("cond")) == 9 and st.getQuestItemsCount(MILITAS_ARTICLE_ID) < 20 :
