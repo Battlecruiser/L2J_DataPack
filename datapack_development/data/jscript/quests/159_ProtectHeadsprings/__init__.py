@@ -65,7 +65,7 @@ class Quest (JQuest) :
           st.takeItems(PLAGUE_DUST_ID,st.getQuestItemsCount(PLAGUE_DUST_ID))
           st.takeItems(HYACINTH_CHARM2_ID,st.getQuestItemsCount(HYACINTH_CHARM2_ID))
           st.giveItems(RING_OF_ANGUISH_ID,1)
-          st.giveItems(ADENA_ID,2500)
+          st.giveItems(ADENA_ID,18250)
           htmltext = "7154-08.htm"
           st.set("cond","0")
           st.setState(COMPLETED)

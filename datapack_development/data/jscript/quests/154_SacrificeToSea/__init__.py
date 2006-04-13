@@ -8,7 +8,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 FOX_FUR_ID = 1032
 FOX_FUR_YARN_ID = 1033
 MAIDEN_DOLL_ID = 1034
-ADENA_ID = 57
+EARING_ID = 113
 
 class Quest (JQuest) :
 
@@ -77,8 +77,8 @@ class Quest (JQuest) :
         st.set("id","154")
         htmltext = "7312-07.htm"
         st.takeItems(MAIDEN_DOLL_ID,st.getQuestItemsCount(MAIDEN_DOLL_ID))
-        st.giveItems(ADENA_ID,400)
-        st.addExpAndSp(1100,0)
+        st.giveItems(EARING_ID,1)
+        st.addExpAndSp(100,0)
         st.set("cond","0")
         st.setState(COMPLETED)
         st.playSound("ItemSound.quest_finish")

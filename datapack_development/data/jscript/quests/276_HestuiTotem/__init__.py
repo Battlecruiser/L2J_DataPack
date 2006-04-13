@@ -7,6 +7,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 KASHA_PARASITE_ID = 1480
 KASHA_CRYSTAL_ID = 1481
 HESTUIS_TOTEM_ID = 1500
+LEATHER_PANTS_ID = 29
 
 class Quest (JQuest) :
 
@@ -46,6 +47,7 @@ class Quest (JQuest) :
         st.takeItems(KASHA_CRYSTAL_ID,-1)
         st.takeItems(KASHA_PARASITE_ID,-1)
         st.giveItems(HESTUIS_TOTEM_ID,1)
+        st.giveItems(LEATHER_PANTS_ID,1)
    return htmltext
 
  def onKill (self,npc,st):

@@ -9,7 +9,7 @@ DARINGS_LETTER_ID = 687
 RAPUNZELS_KERCHIEF_ID = 688
 DARINGS_RECEIPT_ID = 1079
 BAULS_POTION_ID = 1080
-ADENA_ID = 57
+NECKLACE_ID = 908
 
 class Quest (JQuest) :
 
@@ -85,7 +85,7 @@ class Quest (JQuest) :
             st.set("cond","0")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
-            st.giveItems(ADENA_ID,450)
+            st.giveItems(NECKLACE_ID,1)
             st.set("onlyone","1")
         else:
           htmltext = "7048-07.htm"
