@@ -321,16 +321,15 @@
 
 </skill>
 <skill id="315" levels="16" name="Crush of Doom">
-
 <table name="#power">
-	2120.0 2209.0 2300.0 2392.0 2485.0 2580.0 2675.0 2771.0 2868.0 2966.0
-	3064.0 3162.0 3260.0 3357.0 3455.0 3551.0
+   4558.0 4750.0 4944.0 5142.0 5342.0 5545.0 5751.0 5958.0 6166.0 6376.0
+   6586.0 6797.0 7006.0 7218.0 7427.0 7635.0
 </table>
 <table name="#hpConsume">
-	231 235 236 241 245 250 254 258 263 267
-	271 275 279 283 287 290
+   231 235 236 241 245 250 254 258 263 267
+   271 275 279 283 287 290
 </table>
-  <set name="weaponsAllowed" val="2060"/>
+  <set name="weaponsAllowed" val="2048"/>
   <set name="hpConsume" val="#hpConsume"/>
   <set name="save" val="4"/>
   <set name="power" val="#power"/>
@@ -342,12 +341,9 @@
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="50"/>
-
   <for>
-
   </for>
-
-</skill>
+</skill> 
 <skill id="316" levels="1" name="Aegis">
 <!-- done by roxaz -->
 <set name="target" val="TARGET_SELF"/>
