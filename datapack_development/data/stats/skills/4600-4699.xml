@@ -1098,155 +1098,200 @@
   </for>
 </skill>
 <skill id="4679" levels="1" name="Valakas">
-<!-- TODO -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+   <for>
+    <mul order="0x50" stat="fireRes" val="1.89"/>
+    <div order="0x50" stat="waterRes" val="1.67"/>
+   </for>
 </skill>
 <skill id="4680" levels="1" name="Valakas Lava Skin">
-<!-- TODO -->
-  <set name="power" val="0.0"/>
-  <set name="hitTime" val="3300"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="skillTime" val="3300"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<set name="mpConsume" val="0" />
+<set name="power" val="2540" />
+<set name="target" val="TARGET_AREA" />
+<set name="skillRadius" val="400"/>
+<set name="hitTime" val="3300" />
+<set name="overHit" val="true" />
+<set name="reuseDelay" val="65000" />
+<set name="skillTime" val="3300" />
+<set name="skillType" val="PDAM" />
+<set name="operateType" val="OP_ACTIVE" />
+<set name="castRange" val="-1" />
+<for>
+</for>
 </skill>
 <skill id="4681" levels="1" name="Valakas Trample">
-<!-- TODO -->
-  <set name="power" val="0.0"/>
-  <set name="hitTime" val="1000"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="skillTime" val="1000"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="50"/>
-  <for>
-  </for>
+<set name="mpConsume" val="0" />
+<set name="power" val="2540" />
+<set name="target" val="TARGET_AREA" />
+<set name="skillRadius" val="400"/>
+<set name="hitTime" val="1000" />
+<set name="overHit" val="true" />
+<set name="reuseDelay" val="65000" />
+<set name="skillTime" val="1000" />
+<set name="skillType" val="PDAM" />
+<set name="operateType" val="OP_ACTIVE" />
+<set name="castRange" val="50" />
+<for>
+</for>
 </skill>
 <skill id="4682" levels="1" name="Valakas Trample">
-<!-- TODO -->
-  <set name="power" val="0.0"/>
-  <set name="hitTime" val="1000"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="skillTime" val="1000"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="50"/>
-  <for>
-  </for>
+<set name="mpConsume" val="0" />
+<set name="power" val="2540" />
+<set name="target" val="TARGET_AREA" />
+<set name="skillRadius" val="400"/>
+<set name="hitTime" val="1000" />
+<set name="overHit" val="true" />
+<set name="reuseDelay" val="65000" />
+<set name="skillTime" val="1000" />
+<set name="skillType" val="PDAM" />
+<set name="operateType" val="OP_ACTIVE" />
+<set name="castRange" val="50" />
+<for>
+</for>
 </skill>
 <skill id="4683" levels="1" name="Valakas Dragon Breath">
-<!-- TODO -->
-  <set name="power" val="0.0"/>
+  <set name="mpConsume" val="0"/>
+  <set name="save" val="3"/>
+  <set name="power" val="22.0"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="800"/>
   <set name="hitTime" val="3000"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
+  <set name="reuseDelay" val="20000"/>
   <set name="skillTime" val="3000"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="POISON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="60000"/>
   <set name="castRange" val="300"/>
-  <for>
-  </for>
+   <for>
+    <effect count="6" name="DamOverTime" time="20" val="79" abnormal="poison"/>
+   </for>
 </skill>
 <skill id="4684" levels="1" name="Valakas Dragon Breath">
-<!-- TODO -->
-  <set name="power" val="0.0"/>
-  <set name="hitTime" val="3000"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="skillTime" val="3000"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="0"/>
+  <set name="save" val="3"/>
+  <set name="power" val="22.0"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="800"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="POISON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="60000"/>
   <set name="castRange" val="900"/>
-  <for>
-  </for>
+   <for>
+    <effect count="6" name="DamOverTime" time="40" val="129" abnormal="poison"/>
+   </for>
 </skill>
 <skill id="4685" levels="1" name="Valakas Tail Stomp">
-<!-- TODO -->
-  <set name="power" val="0.0"/>
-  <set name="hitTime" val="3000"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="skillTime" val="3000"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<set name="mpConsume" val="0" />
+<set name="power" val="4540" />
+<set name="target" val="TARGET_AREA" />
+<set name="skillRadius" val="600"/>
+<set name="hitTime" val="3000" />
+<set name="overHit" val="true" />
+<set name="reuseDelay" val="65000" />
+<set name="skillTime" val="3000" />
+<set name="skillType" val="PDAM" />
+<set name="operateType" val="OP_ACTIVE" />
+<set name="castRange" val="-1" />
+<for>
+</for>
 </skill>
 <skill id="4686" levels="1" name="Valakas Tail Stomp">
-<!-- TODO -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<set name="mpConsume" val="0" />
+<set name="power" val="4540" />
+<set name="target" val="TARGET_AREA" />
+<set name="skillRadius" val="600"/>
+<set name="hitTime" val="0" />
+<set name="overHit" val="true" />
+<set name="reuseDelay" val="65000" />
+<set name="skillTime" val="0" />
+<set name="skillType" val="PDAM" />
+<set name="operateType" val="OP_ACTIVE" />
+<set name="castRange" val="-1" />
+<for>
+</for>
 </skill>
 <skill id="4687" levels="1" name="Valakas Tail Stomp">
-<!-- TODO -->
-  <set name="power" val="0.0"/>
-  <set name="hitTime" val="3000"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="skillTime" val="3000"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<set name="mpConsume" val="0" />
+<set name="power" val="4540" />
+<set name="target" val="TARGET_AREA" />
+<set name="skillRadius" val="600"/>
+<set name="hitTime" val="3000" />
+<set name="overHit" val="true" />
+<set name="reuseDelay" val="65000" />
+<set name="skillTime" val="3000" />
+<set name="skillType" val="PDAM" />
+<set name="operateType" val="OP_ACTIVE" />
+<set name="castRange" val="-1" />
+<for>
+</for>
 </skill>
 <skill id="4688" levels="1" name="Valakas Shock">
-<!-- TODO -->
-  <set name="power" val="0.0"/>
-  <set name="hitTime" val="3000"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="skillTime" val="3000"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<set name="mpConsume" val="112"/>
+<set name="power" val="1740"/>
+<set name="target" val="TARGET_MULTIFACE"/>
+<set name="skillRadius" val="500"/>
+<set name="hitTime" val="3000"/>
+<set name="overHit" val="true"/>
+<set name="reuseDelay" val="10000"/>
+<set name="skillTime" val="3000"/>
+<set name="skillType" val="PDAM"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="castRange" val="-1"/>
+<for>
+</for>
 </skill>
 <skill id="4689" levels="2" name="Valakas Fear">
-<!-- TODO -->
-  <table name="#hitTime"> 3000 0 </table>
-  <table name="#skillTime"> 3000 0 </table>
-  <set name="power" val="0.0"/>
-  <set name="hitTime" val="#hitTime"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="skillTime" val="#skillTime"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <table name="#mpConsume"> 155 238 </table>
+   <set name="mpConsume" val="#mpConsume"/> 
+    <set name="power" val="0.0"/> 
+   <set name="target" val="TARGET_AREA"/>
+   <set name="skillRadius" val="400"/>
+   <set name="hitTime" val="3000"/> 
+   <set name="reuseDelay" val="120000"/> 
+   <set name="skillTime" val="3000"/> 
+   <set name="skillType" val="FEAR"/> 
+   <set name="isMagic" val="true"/> 
+   <set name="operateType" val="OP_ACTIVE"/> 
+   <set name="castRange" val="-1"/> 
+    <for> 
+    <effect count="5" name="Fear" time="17" val="0"/> 
+   </for> 
 </skill>
 <skill id="4690" levels="1" name="Valakas Meteor Storm">
-<!-- TODO -->
-  <set name="power" val="0.0"/>
-  <set name="hitTime" val="8000"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="skillTime" val="8000"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<set name="mpConsume" val="900" />
+<set name="power" val="45750" />
+<set name="target" val="TARGET_AREA" />
+<set name="skillRadius" val="2000"/>
+<set name="hitTime" val="8000" />
+<set name="overHit" val="true" />
+<set name="reuseDelay" val="115000" />
+<set name="skillTime" val="8000" />
+<set name="skillType" val="PDAM" />
+<set name="operateType" val="OP_ACTIVE" />
+<set name="castRange" val="-1" />
+<for>
+</for>
 </skill>
 <skill id="4691" levels="4" name="Valakas Regeneration">
-<!-- TODO -->
-  <set name="power" val="0.0"/>
+  <table name="#regHp"> 1.3 1.5 1.6 1.8 </table>
+  <table name="#regMp"> 1.3 1.4 1.5 1.7 </table>
+  <table name="#sleepRes"> 1.3 1.5 1.8 2.0 </table>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <for>
+       <mul order='0x50' stat='regHp' val="#regHp"/>
+       <mul order='0x50' stat='regMp' val="#regMp"/>
+       <mul order='0x50' stat='sleepRes' val="#sleepRes"/>
   </for>
 </skill>
 <skill id="4692" levels="1" name="Quest BOSS Big Body">
