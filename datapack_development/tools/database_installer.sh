@@ -246,6 +246,7 @@ fi
 $MYG < ../sql/armor.sql &> /dev/null
 $MYG < ../sql/auction.sql &> /dev/null
 $MYG < ../sql/auction_bid.sql &> /dev/null
+$MYG < ../sql/auction_watch.sql &> /dev/null
 $MYG < ../sql/boxaccess.sql &> /dev/null
 $MYG < ../sql/boxes.sql &> /dev/null
 $MYG < ../sql/castle.sql &> /dev/null
