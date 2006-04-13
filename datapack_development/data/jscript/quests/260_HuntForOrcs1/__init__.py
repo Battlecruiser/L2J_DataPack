@@ -44,7 +44,7 @@ class Quest (JQuest) :
        htmltext = "7221-04.htm"
      else :
        htmltext = "7221-05.htm"
-       st.giveItems(ADENA,amulet*8+necklace*15)
+       st.giveItems(ADENA,amulet*5+necklace*15)
        st.takeItems(ORC_AMULET,-1)
        st.takeItems(ORC_NECKLACE,-1)
    return htmltext

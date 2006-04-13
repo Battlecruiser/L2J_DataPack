@@ -42,7 +42,7 @@ class Quest (JQuest) :
         htmltext = "7566-04.htm"
      elif st.getQuestItemsCount(RED_SOULSTONE) == 0 :
         htmltext = "7566-05.htm"
-        st.giveItems(ADENA,st.getQuestItemsCount(BLACK_SOULSTONE)*5)
+        st.giveItems(ADENA,st.getQuestItemsCount(BLACK_SOULSTONE)*3)
         st.takeItems(BLACK_SOULSTONE,-1)
         st.playSound("ItemSound.quest_finish")
      else:
@@ -51,7 +51,7 @@ class Quest (JQuest) :
         if n :
            st.giveItems(ADENA,n*5)
            st.takeItems(BLACK_SOULSTONE,-1)
-        st.giveItems(ADENA,st.getQuestItemsCount(RED_SOULSTONE)*50)
+        st.giveItems(ADENA,st.getQuestItemsCount(RED_SOULSTONE)*5)
         st.takeItems(RED_SOULSTONE,-1)
         st.playSound("ItemSound.quest_finish")
    return htmltext

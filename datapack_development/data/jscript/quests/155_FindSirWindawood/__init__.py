@@ -6,8 +6,7 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 OFFICIAL_LETTER_ID = 1019
-HEALING_POTION_ID = 1061
-ADENA_ID = 57
+HASTE_POTION_ID = 734
 
 class Quest (JQuest) :
 
@@ -54,8 +53,7 @@ class Quest (JQuest) :
       if int(st.get("id")) != 155 :
         st.set("id","155")
         st.takeItems(OFFICIAL_LETTER_ID,st.getQuestItemsCount(OFFICIAL_LETTER_ID))
-        st.giveItems(HEALING_POTION_ID,1)
-        st.giveItems(ADENA_ID,100)
+        st.giveItems(HASTE_POTION_ID,1)
         st.set("cond","0")
         st.setState(COMPLETED)
         st.playSound("ItemSound.quest_finish")

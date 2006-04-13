@@ -11,8 +11,13 @@ HATOSS_ORDER3_ID = 1555
 LETTER_TO_HUMAN_ID = 1557
 LETTER_TO_DARKELF_ID = 1556
 LETTER_TO_ELF_ID = 1558
-ADENA_ID = 57
 BUTCHER_ID = 1510
+LESSER_HEALING_ID = 1060
+CRYSTAL_BATTLE = 4412
+CRYSTAL_LOVE = 4413
+CRYSTAL_SOLITUDE = 4414
+CRYSTAL_FEAST = 4415
+CRYSTAL_CELEBRATION = 4416
 
 class Quest (JQuest) :
 
@@ -103,6 +108,12 @@ class Quest (JQuest) :
             st.takeItems(LETTER_TO_ELF_ID,1)
             st.takeItems(HATOSS_ORDER3_ID,1)
             st.giveItems(BUTCHER_ID,1)
+            st.giveItems(LESSER_HEALING_ID,100)
+            st.giveItems(CRYSTAL_BATTLE,10)
+            st.giveItems(CRYSTAL_LOVE,10)
+            st.giveItems(CRYSTAL_SOLITUDE,10)
+            st.giveItems(CRYSTAL_FEAST,10)
+            st.giveItems(CRYSTAL_CELEBRATION,10)
             st.set("cond","0")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")

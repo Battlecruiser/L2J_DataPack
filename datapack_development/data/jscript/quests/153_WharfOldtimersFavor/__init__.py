@@ -13,7 +13,7 @@ JACKSONS_RECEIPT_ID = 1016
 SILVIAS_RECEIPT_ID = 1017
 RANTS_RECEIPT_ID = 1018
 LESSER_HEALING_POTION_ID = 1060
-ADENA_ID = 57
+RING_ID = 875
 
 class Quest (JQuest) :
 
@@ -96,7 +96,7 @@ class Quest (JQuest) :
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
           st.set("onlyone","1")
-          st.giveItems(ADENA_ID,600)
+          st.giveItems(RING_ID,2)
           htmltext = "7041-06.htm"
    return htmltext
 

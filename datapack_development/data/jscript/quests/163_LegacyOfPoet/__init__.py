@@ -9,7 +9,7 @@ RUMIELS_POEM_1_ID = 1038
 RUMIELS_POEM_3_ID = 1039
 RUMIELS_POEM_4_ID = 1040
 RUMIELS_POEM_5_ID = 1041
-LEATHER_SHIRT_ID = 22
+ADENA_ID = 57
 
 class Quest (JQuest) :
 
@@ -56,7 +56,7 @@ class Quest (JQuest) :
         if int(st.get("id")) != 163 :
           st.set("id","163")
           htmltext = "7220-09.htm"
-          st.giveItems(LEATHER_SHIRT_ID,1)
+          st.giveItems(ADENA_ID,13890)
           st.takeItems(RUMIELS_POEM_1_ID,1)
           st.takeItems(RUMIELS_POEM_3_ID,1)
           st.takeItems(RUMIELS_POEM_4_ID,1)

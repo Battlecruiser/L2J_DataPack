@@ -11,7 +11,7 @@ MINERS_PICK_ID = 1549
 BOOMBOOM_POWDER_ID = 1550
 REDSTONE_BEER_ID = 1551
 BOLTERS_SMELLY_SOCKS_ID = 1552
-ADENA_ID = 57
+NECKLACE_ID = 908
 
 class Quest (JQuest) :
 
@@ -68,7 +68,7 @@ class Quest (JQuest) :
             st.takeItems(BOOMBOOM_POWDER_ID,1)
             st.takeItems(REDSTONE_BEER_ID,1)
             st.takeItems(BOLTERS_LIST_ID,1)
-            st.giveItems(ADENA_ID,450)
+            st.giveItems(NECKLACE_ID,1)
             st.set("cond","0")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
