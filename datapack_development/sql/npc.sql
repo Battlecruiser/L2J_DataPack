@@ -906,7 +906,7 @@ INSERT INTO `npc` VALUES (1, 'Gremlin', 'Monster.gremlin', 10.00, 15.00, 1, 'mal
 (859, 'Guardian Angel', 'Monster.angel', 13.50, 36.50, 72, 'male', 'L2Monster', 80, 4013, 1565, 40, 21, 30, 20, 43, 10, 6217, 643, 1551, 536, 824, 399, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
 (860, 'Seal Angel', 'Monster.angel', 13.50, 36.50, 73, 'male', 'L2Monster', 80, 4087, 1601, 40, 21, 30, 20, 43, 10, 6389, 671, 1605, 548, 857, 407, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
 (861, 'Oel Mahum Champion', 'Monster.oel_mahum_champion', 23.00, 61.00, 56, 'male', 'L2Monster', 80, 2725, 1020, 40, 21, 30, 20, 43, 10, 3764, 309, 776, 362, 372, 268, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
-(862, "Death Lord", "Monster.death_lord", 21, 40, 75, "male", "L2Monster", 80, 13383, 957, 40, 21, 30, 20, 43, 10, 5878, 583, 1706, 351, 624, 395, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
+(862, "Death Lord", "Monster.death_lord", 21.00, 40.00, 75, "male", "L2Monster", 80, 13383, 957, 40, 21, 30, 20, 43, 10, 5878, 583, 1706, 351, 624, 395, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
 (863, 'Magic Golem Gonhirim', 'Monster.mechanic_golem_200_bi', 15.00, 63.00, 50, 'male', 'L2Monster', 80, 2245, 830, 40, 21, 30, 20, 43, 10, 3000, 226, 560, 305, 257, 225, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
 (864, 'Gonhirim''s Magic Golem', 'Monster.mechanic_golem_200_bi', 15.00, 63.00, 48, 'male', 'L2Minion', 80, 2092, 769, 40, 21, 30, 20, 43, 10, 2765, 202, 498, 287, 225, 211, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
 (865, 'Gonhirim''s Golem', 'Monster.mechanic_golem_200_bi', 15.00, 63.00, 48, 'male', 'L2Minion', 80, 2092, 769, 40, 21, 30, 20, 43, 10, 2765, 202, 498, 287, 225, 211, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
