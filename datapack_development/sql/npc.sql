@@ -1261,7 +1261,8 @@ INSERT INTO `npc` VALUES (1, 'Gremlin', 'Monster.gremlin', 10.00, 15.00, 1, 'mal
 (1214, 'Vault Sentinel', 'Monster.imp_bi', 14.00, 43.20, 35, 'male', 'L2Monster', 40, 1221, 447, 40, 21, 30, 20, 43, 10, 1471, 87, 211, 186, 86, 137, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
 (1215, 'Vault Monk', 'Monster.succubus_bi', 10.00, 43.20, 37, 'male', 'L2Monster', 40, 1339, 480, 40, 21, 30, 20, 43, 10, 1643, 101, 243, 187, 101, 146, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
 (1216, 'Holy Land Overlord', 'Monster.skeleton_knight_20_bi', 12.00, 30.50, 75, 'male', 'L2Monster', 40, 4229, 1674, 40, 21, 30, 20, 43, 10, 6742, 730, 1714, 572, 926, 425, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 1),
-(1217, 'Holy Land Priest', 'Monster.banshee_20_bi', 10.00, 27.50, 42, 'male', 'L2Monster', 40, 1660, 589, 40, 21, 30, 20, 43, 10, 2117, 141, 342, 237, 148, 174, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
+(1217, 'Holy Land Priest', 'Monster.banshee_20_bi', 10.00, 27.50, 42, 'male', 'L2Monster', 40, 1660, 589, 40, 21, 30, 20, 43, 10, 2117, 141, 342, 237, 148, 174, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0);
+INSERT INTO `npc` VALUES
 (1218, 'Vault Overlord', 'Monster.death_blader_10_sm', 14.00, 40.50, 45, 'male', 'L2Monster', 40, 1870, 678, 40, 21, 30, 20, 43, 10, 2431, 169, 414, 261, 183, 193, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 1),
 (1219, 'Vault Priest', 'Monster.bloody_queen_10_sm', 13.00, 38.00, 47, 'male', 'L2Monster', 40, 2017, 738, 40, 21, 30, 20, 43, 10, 2651, 190, 468, 278, 210, 205, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
 (1220, 'Sepulcher Archon', 'Monster.skeleton_knight_30_bi', 13.00, 33.00, 75, 'male', 'L2Monster', 40, 4229, 1674, 40, 21, 30, 20, 43, 10, 6742, 730, 1714, 572, 926, 425, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 1),
@@ -2605,7 +2606,8 @@ INSERT INTO `npc` VALUES (1, 'Gremlin', 'Monster.gremlin', 10.00, 15.00, 1, 'mal
 (7418, 'Annika', 'NPC.a_common_people_FDarkElf', 8.00, 23.00, 70, 'female', 'L2Npc', 40, 3862, 1494, 40, 43, 30, 21, 20, 10, 5879, 590, 1444, 514, 760, 381, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
 (7419, 'Arkenia', 'NPC.a_clergyman_FDarkElf', 8.00, 24.50, 70, 'female', 'L2Npc', 40, 3862, 1494, 40, 43, 30, 21, 20, 10, 5879, 590, 1444, 514, 760, 381, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
 (7420, 'Tyra', 'NPC.a_trader_Fdarkelf', 8.00, 24.50, 70, 'female', 'L2Merchant', 40, 3862, 1494, 40, 43, 30, 21, 20, 10, 5879, 590, 1444, 514, 760, 381, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
-(7421, 'Varika', 'NPC.a_clergyman_FDarkElf', 8.00, 24.50, 70, 'female', 'L2Npc', 40, 3862, 1494, 40, 43, 30, 21, 20, 10, 5879, 590, 1444, 514, 760, 381, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
+(7421, 'Varika', 'NPC.a_clergyman_FDarkElf', 8.00, 24.50, 70, 'female', 'L2Npc', 40, 3862, 1494, 40, 43, 30, 21, 20, 10, 5879, 590, 1444, 514, 760, 381, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0);
+INSERT INTO `npc` VALUES
 (7422, 'Kalinta', 'NPC.a_clergyman_FDarkElf', 8.00, 24.50, 70, 'female', 'L2Npc', 40, 3862, 1494, 40, 43, 30, 21, 20, 10, 5879, 590, 1444, 514, 760, 381, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
 (7423, 'Northwind', 'NPC.a_common_people_MElf', 6.00, 24.50, 70, 'male', 'L2Npc', 40, 3862, 1494, 40, 43, 30, 21, 20, 10, 5879, 590, 1444, 514, 760, 381, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
 (7424, 'Allana', 'NPC.a_sanctuary_teacher_FHuman', 8.00, 22.50, 70, 'female', 'L2Npc', 40, 3862, 1494, 40, 43, 30, 21, 20, 10, 5879, 590, 1444, 514, 760, 381, 253, 0, 253, 0, 0, 0, 80, 120, NULL, NULL, 0),
@@ -4141,7 +4143,8 @@ INSERT INTO `npc` VALUES (1, 'Gremlin', 'Monster.gremlin', 10.00, 15.00, 1, 'mal
 (10180, 'Daughter of Hatos', 'Monster.lesser_giant_mage', 21.00, 44.00, 59, 'female', 'L2Minion', 80, 8125, 1677, 40, 21, 30, 20, 43, 10, 16712, 1428, 1804, 790, 882, 580, 253, 500, 253, 0, 0, 0, 80, 120, 'Hatos_clan', 1200, 0),
 (10181, 'Hatos'' Guard', 'Monster.susceptor', 20.00, 35.00, 59, 'male', 'L2Minion', 40, 28119, 1677, 40, 21, 30, 20, 43, 10, 16712, 1428, 1804, 790, 882, 580, 253, 500, 253, 0, 0, 0, 80, 120, 'Hatos_clan', 1200, 0),
 (10182, 'Demon Kurikups', 'Monster.karik_100_bi', 50.00, 180.00, 65, 'male', 'L2RaidBoss', 120, 186648, 2640, 40, 21, 30, 20, 43, 10, 202800, 18840, 8288, 3213, 4214, 2366, 253, 500, 253, 0, 0, 0, 80, 120, 'Kurikups_clan', 1200, 0),
-(10183, 'Kurikups'' Wife', 'Monster.bloody_queen', 14.00, 40.00, 64, 'male', 'L2Minion', 80, 12245, 1927, 40, 21, 30, 20, 43, 10, 19660, 1800, 2268, 896, 1146, 662, 253, 500, 253, 0, 0, 0, 80, 120, 'Kurikups_clan', 1200, 0),
+(10183, 'Kurikups'' Wife', 'Monster.bloody_queen', 14.00, 40.00, 64, 'male', 'L2Minion', 80, 12245, 1927, 40, 21, 30, 20, 43, 10, 19660, 1800, 2268, 896, 1146, 662, 253, 500, 253, 0, 0, 0, 80, 120, 'Kurikups_clan', 1200, 0);
+INSERT INTO `npc` VALUES
 (10184, 'Devil Blader of Chaos', 'Monster.death_blader', 15.00, 45.00, 64, 'male', 'L2Minion', 80, 12245, 1927, 40, 21, 30, 20, 43, 10, 19660, 1800, 2268, 896, 1146, 662, 253, 500, 253, 0, 0, 0, 80, 120, 'Kurikups_clan', 1200, 1),
 (10185, 'Tasaba Patriarch Hellena', 'Monster.zenta_lizardman_matriarch', 20.00, 40.00, 35, 'male', 'L2RaidBoss', 80, 41308, 894, 40, 21, 30, 20, 43, 10, 51485, 3045, 1477, 1302, 602, 959, 253, 0, 253, 0, 0, 0, 80, 120, 'Hellena_clan', 1200, 0),
 (10186, 'Hellena''s Marksman', 'Monster.zenta_lizardman_scout', 11.00, 30.00, 34, 'male', 'L2Minion', 80, 3501, 645, 40, 21, 30, 20, 43, 10, 5552, 324, 392, 358, 158, 264, 253, 500, 253, 0, 0, 0, 80, 120, 'Hellena_clan', 1200, 0),
