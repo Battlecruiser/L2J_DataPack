@@ -41,9 +41,13 @@ class Quest (JQuest) :
      st.set("cond","0")
    if npcId == 7091 and int(st.get("cond")) == 0 and st.getQuestItemsCount(JEWEL_BOX) == 0 :
      fwear=st.getPlayer().getQuestState("37_PleaseMakeMeFormalWear")
-     if fwear.get("cond") == "6" :
-       htmltext = "7091-0.htm"
-       return htmltext
+     if not fwear is None :
+       if fwear.get("cond") == "6" :
+         htmltext = "7091-0.htm"
+         return htmltext
+       else:
+         htmltext = "<html><head><body>I have nothing to say you</body></html>"
+         st.exitQuest(1)
      else:
        htmltext = "<html><head><body>I have nothing to say you</body></html>"
        st.exitQuest(1)
