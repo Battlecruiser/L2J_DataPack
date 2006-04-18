@@ -134,7 +134,7 @@ class Quest (JQuest) :
               st.set("cond","3")
             else:
               st.playSound("ItemSound.quest_itemget")
-     elif npcId == 262 :
+     elif npcId == 5038 :
         st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(WANTED_BILL_ID)>0 :
             n = st.getRandom(4)
@@ -162,10 +162,10 @@ STARTING.addTalkId(7379)
 STARTED.addTalkId(7379)
 STARTED.addTalkId(7425)
 
-STARTED.addKillId(262)
+STARTED.addKillId(5038)
 
 for StolenItemId in STOLEN_ITEM.keys():
-  STARTED.addQuestDrop(262,STOLEN_ITEM[StolenItemId],1)
+  STARTED.addQuestDrop(5038,STOLEN_ITEM[StolenItemId],1)
 
 for mobId in (35,42,45,51,54,60) :
   STARTED.addKillId(mobId)
