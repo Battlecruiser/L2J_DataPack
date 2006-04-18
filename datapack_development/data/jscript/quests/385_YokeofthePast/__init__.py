@@ -3,7 +3,7 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-ANCIENT_SCROLL_ID = 5902
+ANCIENT_SCROLL = 5902
 
 class Quest (JQuest) :
 
@@ -11,18 +11,14 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "1" :
+    if event == "14.htm" :
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-      htmltext = "14.htm"
       st.set("cond","1")
-    elif event == "2" :
-          htmltext = "16.htm"
-          st.playSound("ItemSound.quest_finish")
-          st.exitQuest(1)
-          
+    elif event == "16.htm" :
+      st.playSound("ItemSound.quest_finish")
+      st.exitQuest(1)
     return htmltext
-
 
  def onTalk (Self,npc,st):
    npcId = npc.getNpcId()
@@ -31,46 +27,40 @@ class Quest (JQuest) :
    if id == CREATED :
        htmltext = "10.htm"
        st.set("cond","0")
-   elif int(st.get("cond")) == 1 and st.getQuestItemsCount(ANCIENT_SCROLL_ID) == 0 :
+   elif int(st.get("cond")) == 1 and st.getQuestItemsCount(ANCIENT_SCROLL) == 0 :
        htmltext = "17.htm"
-   elif int(st.get("cond")) == 1 and st.getQuestItemsCount(ANCIENT_SCROLL_ID):
+   elif int(st.get("cond")) == 1 and st.getQuestItemsCount(ANCIENT_SCROLL):
         htmltext = "16.htm"
-        numancientscrolls = st.getQuestItemsCount(ANCIENT_SCROLL_ID)
+        numancientscrolls = st.getQuestItemsCount(ANCIENT_SCROLL)
         st.giveItems(5965,numancientscrolls)
-        st.takeItems(ANCIENT_SCROLL_ID,numancientscrolls)
+        st.takeItems(ANCIENT_SCROLL,-1)
    else:
-     st.exitQuest(1)    # cond is always 1 if he acceptet the quest, but we have no way to check if he hasnt the quest, so we delete it if he didnt accept by first talk
+     st.exitQuest(1)  # cond is always 1 if he acceptet the quest, but we have no way to check if he hasnt the quest, so we delete it if he didnt accept by first talk
    return htmltext
-
 
  def onKill (self,npc,st):
     npcId = npc.getNpcId()
-    if npcId in range(1208,1256) :
-         if st.getRandom(10)<6 :
-           st.giveItems(ANCIENT_SCROLL_ID,1)
-           st.playSound("ItemSound.quest_itemget")
-
+    if st.getRandom(10)<6 :
+      st.giveItems(ANCIENT_SCROLL,1)
+      st.playSound("ItemSound.quest_itemget")
     return
-
 
 QUEST       = Quest(385,"385_YokeofthePast","Yoke of the Past")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
-
 
 QUEST.setInitialState(CREATED)
 
 for npcId in range(8095,8125):
-	if npcId in [8100,8111,8112,8113]:
-		continue
-	STARTED.addTalkId(npcId)
-	CREATED.addTalkId(npcId)
-	QUEST.addStartNpc(npcId)
+    if npcId in [8100,8111,8112,8113]:
+        continue
+        STARTED.addTalkId(npcId)
+        CREATED.addTalkId(npcId)
+        QUEST.addStartNpc(npcId)
 
 for mobs in range(1208,1256):
-	STARTED.addKillId(mobs)
+    STARTED.addKillId(mobs)
 	
-STARTED.addQuestDrop(986,ANCIENT_SCROLL_ID,1)
+STARTED.addQuestDrop(986,ANCIENT_SCROLL,1)
 
 print "importing quests: 385: Yoke of the Past"
