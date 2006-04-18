@@ -482,7 +482,8 @@ class Quest (JQuest) :
    elif cond == 9 and st.getQuestItemsCount(TANAPIS_ORDER1) and st.getQuestItemsCount(SCEPTER_OF_TANTOS) == 0 :
      if npcId in [ 778, 779 ] :
        st.playSound("Itemsound.quest_before_battle")
-       st.getPcSpawn().addSpawn(5086, 11839,-106261,3550)
+       st.getPcSpawn().addSpawn(5086)
+       #st.getPcSpawn().addSpawn(5086, 11839,-106261,3550)
        # Alternate coord. set:
        #st.getPcSpawn().addSpawn(5086,11567.-106785,-3520)
      elif npcId == 5086 :
