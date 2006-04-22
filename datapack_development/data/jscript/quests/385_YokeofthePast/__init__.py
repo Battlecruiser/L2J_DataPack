@@ -54,9 +54,9 @@ QUEST.setInitialState(CREATED)
 for npcId in range(8095,8125):
     if npcId in [8100,8111,8112,8113]:
         continue
-        STARTED.addTalkId(npcId)
-        CREATED.addTalkId(npcId)
-        QUEST.addStartNpc(npcId)
+    STARTED.addTalkId(npcId)
+    CREATED.addTalkId(npcId)
+    QUEST.addStartNpc(npcId)
 
 for mobs in range(1208,1256):
     STARTED.addKillId(mobs)
