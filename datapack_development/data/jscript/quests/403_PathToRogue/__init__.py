@@ -48,6 +48,8 @@ class Quest (JQuest) :
               else:
                 htmltext = "7379-05.htm"
                 return htmltext
+            else :
+              htmltext = "7379-03.htm"
           else:
             if st.getPlayer().getClassId().getId() == 0x07 :
               htmltext = "7379-02a.htm"
