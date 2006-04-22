@@ -55,8 +55,7 @@ class Quest (JQuest) :
           if int(st.get("id")) != 164 :
             st.set("id","164")
             htmltext = "7149-06.htm"
-            st.giveItems(ADENA_ID,3000)
-            st.addExpAndSp(4000,0)
+            st.giveItems(ADENA_ID,42000)
             st.takeItems(KIRUNAK_SKULL_ID,1)
             st.set("cond","0")
             st.setState(COMPLETED)
