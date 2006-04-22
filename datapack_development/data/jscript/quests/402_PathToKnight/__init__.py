@@ -39,6 +39,8 @@ class Quest (JQuest) :
                 htmltext = "7417-04.htm"
               else:
                 htmltext = "7417-05.htm"
+            else :
+              htmltext = "7417-02.htm"
           else:
             if st.getPlayer().getClassId().getId() == 0x04 :
               htmltext = "7417-02a.htm"
@@ -46,7 +48,6 @@ class Quest (JQuest) :
               htmltext = "7417-03.htm"
     elif event == "7417_2" :
           htmltext = "7417-07.htm"
-          return htmltext
     elif event == "1" :
         st.set("id","0")
         st.set("cond","1")
@@ -248,7 +249,6 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-
    npcId = npc.getNpcId()
    if npcId == 775 :
       st.set("id","0")
@@ -388,16 +388,10 @@ STARTED.addQuestDrop(7332,GLUDIO_GUARDS_MARK1_ID,1)
 STARTED.addQuestDrop(5024,EINHASAD_CRUCIFIX_ID,1)
 STARTED.addQuestDrop(7289,EINHASAD_CHURCH_MARK1_ID,1)
 STARTED.addQuestDrop(38,POISON_SPIDER_LEG1_ID,1)
-STARTED.addQuestDrop(43,POISON_SPIDER_LEG1_ID,1)
-STARTED.addQuestDrop(50,POISON_SPIDER_LEG1_ID,1)
 STARTED.addQuestDrop(7379,GLUDIO_GUARDS_MARK2_ID,1)
 STARTED.addQuestDrop(30,LIZARDMAN_TOTEM_ID,1)
-STARTED.addQuestDrop(27,LIZARDMAN_TOTEM_ID,1)
-STARTED.addQuestDrop(24,LIZARDMAN_TOTEM_ID,1)
 STARTED.addQuestDrop(7037,EINHASAD_CHURCH_MARK2_ID,1)
 STARTED.addQuestDrop(103,GIANT_SPIDER_HUSK_ID,1)
-STARTED.addQuestDrop(106,GIANT_SPIDER_HUSK_ID,1)
-STARTED.addQuestDrop(108,GIANT_SPIDER_HUSK_ID,1)
 STARTED.addQuestDrop(7039,GLUDIO_GUARDS_MARK3_ID,1)
 STARTED.addQuestDrop(404,HORRIBLE_SKULL_ID,1)
 STARTED.addQuestDrop(7031,EINHASAD_CHURCH_MARK3_ID,1)
