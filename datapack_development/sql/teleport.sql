@@ -141,7 +141,7 @@ insert  into teleport values
 ('Rune -> Goddard Castle Village','119','147928','-55273','-2734','12000'),
 ('Rune -> The Town of Giran','120','83400','147943','-3404','23000'),
 ('Rune -> Aden Castle Town','121','146331','25762','-2018','15000'),
-('Rune -> Rune Castle Town Guild','122','-38320','-48092','-1153','150'),
+('Rune -> Rune Castle Town Guild','122','38320','-48092','-1153','150'),
 ('Rune -> Rune Castle Town Temple','123','38275','-48065','896','150'),
 ('Rune -> Entrance to the Forest of the Dead','124','52112','-53939','-3159','290'),
 ('Rune -> Western Entrance to the Swamp of Screams','125','70006','-49902','-3251','710'),
