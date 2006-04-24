@@ -762,6 +762,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <mul order="0x35" stat="pAtk" val="1.08635"/>
     <add order="0x40" stat="pAtk" val="#pAtk"/>
   </for>
 </skill>
