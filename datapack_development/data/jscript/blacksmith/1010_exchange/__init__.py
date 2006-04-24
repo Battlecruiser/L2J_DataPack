@@ -279,7 +279,6 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-
    # shows the weapons available for exchange that you can trade from
     if event.startswith("1_"):
         for ItemInst in st.getPlayer().getInventory().getItems():
@@ -287,12 +286,12 @@ class Quest (JQuest) :
             if Item.getType1() != 0 or Item.getType2() != 0 or ItemInst.isEquipped():
                 continue
             if Item.getItemGrade() == 1 or Item.getItemGrade() == 2:
-                htmltext += "<tr>\n<td width=35><img src=\"icon." + getItemIcon(Item.getName()) + "\" width=32 height=32 align=\"left\"></td>\n" \
-                    "<td width=835><table border=0 width=\"835\">\n<tr><td><a action=\"bypass -h Quest 1010_exchange 2_" + str(ItemInst.getObjectId()) + "\">" + getItemName(ItemInst) + "</a></td></tr>\n" \
-                    "<tr><td><font color=\"B09878\">Exchange</font></td></tr></table></td>\n</tr>"
+                htmltext += "<tr><td width=35><img src=\"icon." + getItemIcon(Item.getName()) + "\" width=32 height=32 align=\"left\"></td>" \
+                    "<td width=835><table border=0 width=835><tr><td><a action=\"bypass -h Quest 1010_exchange 2_" + str(ItemInst.getObjectId()) + "\">" + getItemName(ItemInst) + "</a></td></tr>" \
+                    "<tr><td><font color=\"B09878\">Exchange</font></td></tr></table></td></tr>"
         if htmltext == "":
             htmltext = "<html><body><tr><td>You have no weapon in your inventory that can be exchanged.</td></tr></body></html>"
-        htmltext = "<html><body> Choose the weapon you want exchange: <br> \nList:\n<left>\n<table width=870 border=0>\n" + htmltext + "</table>\n<br></left></body></html>"
+        htmltext = "<html><body>Choose the weapon you want exchange:<br>List:<left><table width=870 border=0>" + htmltext + "</table><br></left></body></html>"
         return htmltext
    
    # shows you the available weapons for exchange that you can trade for
@@ -317,13 +316,13 @@ class Quest (JQuest) :
                     continue
                 if ItemInst.getEnchantLevel() > 0:
                     NewItemName = "+" + str(ItemInst.getEnchantLevel()) + " " + NewItemName
-                htmltext += "<tr>\n<td width=35><img src=\"icon." + getItemIcon(NewItem.getName()) + "\" width=32 height=32 align=\"left\"></td>\n" \
-                    "<td width=835><table border=0 width=\"835\">\n<tr><td><a action=\"bypass -h Quest 1010_exchange 3_" + str(ObjectID) + "." + str(NewItemID) + "\">" + NewItemName + "</a></td></tr>\n" \
-                    "<tr><td><font color=\"B09878\">Exchange</font></td></tr></table></td>\n</tr>"
+                htmltext += "<tr><td width=35><img src=\"icon." + getItemIcon(NewItem.getName()) + "\" width=32 height=32 align=\"left\"></td>" \
+                    "<td width=835><table border=0 width=835><tr><td><a action=\"bypass -h Quest 1010_exchange 3_" + str(ObjectID) + "." + str(NewItemID) + "\">" + NewItemName + "</a></td></tr>" \
+                    "<tr><td><font color=\"B09878\">Exchange</font></td></tr></table></td></tr>"
         if htmltext == "":
             htmltext = "<html><body><tr><td>This weapon is not suitable for exchange.</td></tr></body></html>"
         else:
-            htmltext = "<html><body> Choose the weapon you want to trade for: <br> \nList:\n<left>\n<table width=870 border=0>\n" + htmltext + "</table>\n<br></left></body></html>"
+            htmltext = "<html><body>Choose the weapon you want to trade for: <br>List:<left><table width=870 border=0>" + htmltext + "</table><br></left></body></html>"
         return htmltext
    
     # displays the recipe
@@ -364,15 +363,13 @@ class Quest (JQuest) :
     # if event is 0, or has a bug... trade is canceled
     else :
         htmltext = "Trade has been cancelled."
-
-   
     st.setState(COMPLETED)
     st.exitQuest(1)
     return htmltext
    
    
 # this just return new html, if the player can talk with this npc about that enhance stuff
- def onTalk (self,npc,st):
+ def onTalk (self,npc,st) :
    npcId = npc.getNpcId()
    st.set("cond","0")
    st.setState(STARTED)
