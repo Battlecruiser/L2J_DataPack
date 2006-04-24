@@ -16,1786 +16,1790 @@ CREATE TABLE castle_siege_guards (
   KEY id (castleId)
 );
 
--- Aden
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,147290,8527,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,147356,8527,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,147423,8527,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,147490,8527,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,147556,8527,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147290,8547,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147323,8547,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147356,8547,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147390,8547,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147423,8547,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147456,8547,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147490,8547,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147523,8547,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147556,8547,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147590,8547,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147290,8567,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147323,8567,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12281,147356,8567,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147390,8567,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12281,147423,8567,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147456,8567,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12281,147490,8567,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147523,8567,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12281,147556,8567,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147590,8567,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12281,147290,8587,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12283,147323,8587,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12283,147356,8587,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12283,147390,8587,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12283,147423,8587,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12278,147456,8587,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12283,147490,8587,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12283,147523,8587,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12283,147556,8587,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12283,147590,8587,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8527,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8567,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8608,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8649,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8689,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8730,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8771,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8811,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8852,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8893,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8933,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8974,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,9015,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,9055,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,9096,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,9137,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,9177,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,9218,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,9259,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,9300,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,148231,8724,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,148231,8839,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,148231,8954,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,148231,9069,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,148231,8954,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,148231,9069,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,148261,8621,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,148261,8757,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,148261,8894,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,148261,9030,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,148261,9167,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147984,8486,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147955,8486,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147927,8486,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147896,8485,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147865,8485,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147835,8485,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147983,8467,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,147954,8467,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,147925,8467,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,147895,8466,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,147864,8466,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,147833,8466,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147064,8489,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147035,8489,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147007,8489,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146976,8488,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146945,8488,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146915,8488,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147065,8466,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,147036,8466,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,147007,8466,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,146977,8465,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,146946,8465,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,146915,8465,-212,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,149105,6657,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,149142,6657,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,149180,6657,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,149217,6657,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,149255,6657,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,149292,6657,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,149330,6657,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149105,6637,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149142,6637,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149180,6637,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149217,6637,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149255,6637,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149292,6637,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149330,6637,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149105,6617,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,149142,6617,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149180,6617,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,149217,6617,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149255,6617,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,149292,6617,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149330,6617,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,145569,6657,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,145606,6657,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,145644,6657,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,145682,6657,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,145719,6657,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,145757,6657,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,145795,6657,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145569,6637,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145606,6637,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145644,6637,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145682,6637,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145719,6637,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145757,6637,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145795,6637,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145569,6617,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,145606,6617,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145644,6617,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,145682,6617,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145719,6617,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,145757,6617,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145795,6617,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12269,145762,7588,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12269,146067,7588,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12269,146372,7588,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12269,146678,7588,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12269,146983,7588,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12281,147288,7588,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12269,147594,7588,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12269,147899,7588,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12281,148204,7588,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12269,148510,7588,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12269,148815,7588,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12269,149121,7588,-470,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,149083,4965,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149082,4926,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149081,4886,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149081,4843,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149057,4810,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149034,4790,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149008,4773,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148980,4766,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,148951,4766,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148921,4766,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,149006,4835,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,149056,4219,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149080,4252,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149080,4295,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149081,4335,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149082,4374,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149038,4416,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149011,4439,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148984,4449,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,148955,4450,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148922,4451,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,149006,4362,-20,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,145831,4252,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145909,4440,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145883,4421,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145833,4374,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145833,4335,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145832,4295,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145852,4404,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145936,4450,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,145966,4450,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145995,4449,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,145926,4377,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,145836,4968,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145836,4929,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145835,4889,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145834,4846,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145853,4815,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145874,4797,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145901,4774,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145989,4766,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,145958,4767,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145928,4767,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,145921,4829,-20,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147146,5459,-340,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147196,5459,-340,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147247,5459,-340,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147298,5459,-340,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147349,5459,-340,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147400,5459,-340,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147451,5459,-340,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147501,5459,-340,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147552,5459,-340,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147603,5459,-340,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147654,5459,-340,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147705,5459,-340,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147756,5459,-340,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,147554,5354,-340,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,147352,5354,-340,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,147560,5754,-340,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,147356,5754,-340,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,147457,5754,-340,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147556,5857,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147522,5857,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147488,5857,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147455,5857,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147421,5857,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147387,5857,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147353,5857,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147320,5857,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147455,3221,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147334,5827,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147367,5827,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147401,5827,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147435,5827,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147468,5827,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147502,5827,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147536,5827,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147570,5827,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147590,5857,-400,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,148161,1600,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,148199,1600,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,148161,1620,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,148199,1620,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,148161,1640,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,148199,1640,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,148161,1660,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,148199,1660,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,148161,1680,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,148199,1680,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148161,1700,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148199,1700,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148161,1720,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148199,1720,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,146750,1600,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,146707,1600,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,146750,1620,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,146707,1620,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,146750,1640,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,146707,1640,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,146750,1660,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,146707,1660,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,146750,1680,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,146707,1680,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146750,1700,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146707,1700,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146750,1720,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146707,1720,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146818,1300,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146861,1300,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146905,1300,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146949,1300,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146993,1300,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147037,1300,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147351,1300,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147393,1300,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147435,1300,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147477,1300,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147519,1300,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147561,1300,-150,16389,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,147461,1245,-150,16391,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,146933,1245,-150,16392,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,147441,1245,-150,16391,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,146953,1245,-150,16392,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12254,147468,1671,-338,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,147428,1671,-338,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12281,147508,1671,-338,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147482,1933,-468,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12282,147449,1933,-468,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147740,2020,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147690,2020,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147592,2020,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147542,2020,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147444,2020,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147395,2020,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147296,2020,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147247,2020,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147740,2040,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147690,2040,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147592,2040,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147542,2040,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147444,2040,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147395,2040,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147296,2040,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,147247,2040,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147740,2060,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147690,2060,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147641,2060,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147592,2060,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147542,2060,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147493,2060,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147444,2060,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147395,2060,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147345,2060,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147296,2060,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147247,2060,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147198,2060,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147740,2080,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147690,2080,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147641,2080,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147592,2080,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147542,2080,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147493,2080,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147444,2080,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147395,2080,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147345,2080,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147296,2080,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147247,2080,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,147198,2080,-450,16389,200,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,148404,5289,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,148404,5309,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,148404,5328,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,148404,5348,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,148404,5368,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148424,5289,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148424,5309,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148424,5328,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148424,5348,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148424,5368,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148444,5289,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148444,5309,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148444,5328,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148444,5348,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148444,5368,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,148464,5289,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,148464,5309,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,148464,5328,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,148464,5348,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,148464,5368,-21,0,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,146520,5289,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,146520,5308,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,146520,5328,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,146520,5348,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,146520,5368,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146500,5289,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146500,5308,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146500,5328,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146500,5348,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146500,5368,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146480,5289,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146480,5308,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146480,5328,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146480,5348,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,146480,5368,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,146460,5289,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,146460,5308,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,146460,5328,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,146460,5348,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12270,146460,5368,-21,32768,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149936,5168,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149893,5230,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149851,5293,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149809,5355,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149767,5418,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149725,5480,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149682,5543,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149640,5605,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149598,5668,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149556,5730,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149514,5793,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,149472,5856,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,144976,5136,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145015,5197,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145054,5258,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145093,5319,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145133,5380,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145172,5441,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145211,5502,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145250,5563,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145290,5624,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145329,5685,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145368,5746,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,145408,5808,-80,8192,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8527,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8567,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8649,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8689,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8771,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8811,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8893,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,8933,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,9015,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,9055,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,9137,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,9177,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,9259,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12284,148185,9300,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,148231,8724,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,148231,8839,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,148231,9069,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12279,148231,8954,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,148261,8621,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,148261,8894,-212,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (5,12280,148261,9167,-212,32768,10800,0);
+INSERT INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
+  (1,1201,12031,-18175,110197,-2421,6320,60,0),
+  (1,1200,12029,-18196,110223,-2419,6320,60,0),
+  (1,1202,12029,-18157,110173,-2421,6320,60,0),
+  (1,1204,12029,-18113,110141,-2422,17076,60,0),
+  (1,1203,12031,-18138,110152,-2421,6320,60,0),
+  (1,1196,12029,-18272,110315,-2420,6320,60,0),
+  (1,1195,12028,-17956,110348,-2419,25568,60,0),
+  (1,1197,12031,-18254,110291,-2421,6320,60,0),
+  (1,1199,12031,-18211,110241,-2420,6320,60,0),
+  (1,1198,12029,-18230,110265,-2420,6320,60,0),
+  (1,1205,12031,-18085,110142,-2419,17076,60,0),
+  (1,1212,12029,-17955,110311,-2419,25568,60,0),
+  (1,1211,12031,-17972,110286,-2419,25568,60,0),
+  (1,1213,12031,-17942,110330,-2418,25568,60,0),
+  (1,1215,12031,-18281,110187,-2418,6320,60,0),
+  (1,1214,12031,-18300,110210,-2418,6320,60,0),
+  (1,1207,12031,-18042,110185,-2418,25568,60,0),
+  (1,1206,12029,-18060,110161,-2418,25568,60,0),
+  (1,1208,12029,-18029,110205,-2417,25568,60,0),
+  (1,1210,12029,-17991,110256,-2420,25568,60,0),
+  (1,1209,12031,-18010,110232,-2419,25568,60,0),
+  (1,1194,12030,-17969,110329,-2420,25568,60,0),
+  (1,1179,12028,-18257,110335,-2418,6320,60,0),
+  (1,1178,12027,-18179,112302,-2423,22676,60,0),
+  (1,1180,12030,-18240,110310,-2419,6320,60,0),
+  (1,1182,12030,-18197,110261,-2418,6320,60,0),
+  (1,1181,12028,-18216,110284,-2418,6320,60,0),
+  (1,1174,12029,-17828,112289,-2514,-56,60,0),
+  (1,1173,12029,-17832,112316,-2515,-56,60,0),
+  (1,1175,12028,-17851,112343,-2500,-56,60,0),
+  (1,1177,12028,-17846,112288,-2500,-56,60,0),
+  (1,1176,12028,-17850,112315,-2501,-56,60,0),
+  (1,1183,12028,-18182,110243,-2417,6320,60,0),
+  (1,1190,12030,-18043,110223,-2418,25568,60,0),
+  (1,1189,12028,-18056,110203,-2419,25568,60,0),
+  (1,1191,12028,-18024,110250,-2420,25568,60,0),
+  (1,1193,12028,-17986,110304,-2420,25568,60,0),
+  (1,1192,12030,-18005,110274,-2421,25568,60,0),
+  (1,1185,12028,-18143,110192,-2419,6320,60,0),
+  (1,1184,12030,-18160,110217,-2419,6320,60,0),
+  (1,1186,12030,-18123,110171,-2419,6320,60,0),
+  (1,1188,12030,-18074,110179,-2419,25568,60,0),
+  (1,1187,12028,-18099,110160,-2420,17076,60,0),
+  (1,1244,12014,-17921,108237,-2486,16344,60,0),
+  (1,1243,12014,-17959,108238,-2486,16344,60,0),
+  (1,1245,12014,-17888,108237,-2486,16344,60,0),
+  (1,1247,12014,-17813,108236,-2485,16344,60,0),
+  (1,1246,12014,-17851,108236,-2486,16344,60,0),
+  (1,1239,12017,-17814,108202,-2484,16344,60,0),
+  (1,1238,12017,-17851,108202,-2485,16344,60,0),
+  (1,1240,12017,-17776,108201,-2484,16344,60,0),
+  (1,1242,12017,-17706,108200,-2484,16344,60,0),
+  (1,1241,12017,-17744,108201,-2484,16344,60,0),
+  (1,1248,12014,-17776,108235,-2485,16344,60,0),
+  (1,1255,12016,-17812,108274,-2486,16344,60,0),
+  (1,1254,12016,-17849,108274,-2487,16344,60,0),
+  (1,1256,12011,-17774,108273,-2486,16344,60,0),
+  (1,1258,12016,-17704,108272,-2486,16344,60,0),
+  (1,1257,12016,-17742,108273,-2486,16344,60,0),
+  (1,1250,12014,-17706,108234,-2485,16344,60,0),
+  (1,1249,12014,-17743,108235,-2485,16344,60,0),
+  (1,1251,12016,-17957,108276,-2487,16344,60,0),
+  (1,1253,12011,-17887,108275,-2487,16344,60,0),
+  (1,1252,12016,-17919,108275,-2487,16344,60,0),
+  (1,1237,12017,-17889,108203,-2485,16344,60,0),
+  (1,1222,12031,-17948,110223,-2416,25568,60,0),
+  (1,1221,12031,-17966,110199,-2415,25568,60,0),
+  (1,1223,12031,-17929,110253,-2415,25568,60,0),
+  (1,1225,12026,-17934,110076,-2417,15620,60,0),
+  (1,1224,12027,-17968,110076,-2416,15620,60,0),
+  (1,1217,12031,-18244,110143,-2419,6320,60,0),
+  (1,1216,12031,-18266,110169,-2417,6320,60,0),
+  (1,1218,12031,-18227,110118,-2420,6320,60,0),
+  (1,1220,12031,-17986,110172,-2413,25568,60,0),
+  (1,1219,12031,-17999,110152,-2414,25568,60,0),
+  (1,1226,12026,-18213,110073,-2417,15620,60,0),
+  (1,1233,12009,-18173,108190,-2480,16344,60,0),
+  (1,1232,12016,-17936,110315,-2418,6320,60,0),
+  (1,1234,12010,-18061,108187,-2479,16344,60,0),
+  (1,1236,12017,-17922,108203,-2485,16344,60,0),
+  (1,1235,12017,-17959,108204,-2485,16344,60,0),
+  (1,1228,12031,-18265,110348,-2415,25568,60,0),
+  (1,1227,12027,-18190,110074,-2417,15620,60,0),
+  (1,1229,12016,-18274,110294,-2418,6320,60,0),
+  (1,1231,12016,-18008,110212,-2418,6320,60,0),
+  (1,1230,12016,-18193,110203,-2418,6320,60,0),
+  (1,1115,12030,-18574,112687,-2673,-688,60,0),
+  (1,1114,12030,-18575,112718,-2674,-688,60,0),
+  (1,1116,12025,-18574,112657,-2673,-688,60,0),
+  (1,1118,12030,-18575,112596,-2673,-688,60,0),
+  (1,1117,12030,-18574,112627,-2672,-688,60,0),
+  (1,1110,12030,-18292,113136,-2684,15608,60,0),
+  (1,1109,12025,-18320,113136,-2684,15608,60,0),
+  (1,1111,12030,-18264,113136,-2684,15608,60,0),
+  (1,1113,12030,-18208,113136,-2684,15608,60,0),
+  (1,1112,12030,-18236,113136,-2684,15608,60,0),
+  (1,1119,12030,-18573,112567,-2672,-688,60,0),
+  (1,1126,12029,-18601,112609,-2692,-688,60,0),
+  (1,1125,12028,-18600,112639,-2691,-688,60,0),
+  (1,1127,12029,-18599,112579,-2691,-688,60,0),
+  (1,1129,12029,-18598,112520,-2690,-688,60,0),
+  (1,1128,12028,-18599,112549,-2691,-688,60,0),
+  (1,1121,12030,-18573,112507,-2671,-688,60,0),
+  (1,1120,12025,-18573,112537,-2672,-688,60,0),
+  (1,1122,12030,-18574,112476,-2672,-688,60,0),
+  (1,1124,12029,-18600,112670,-2692,-688,60,0),
+  (1,1123,12029,-18600,112700,-2692,-688,60,0),
+  (1,1108,12030,-18348,113136,-2684,15608,60,0),
+  (1,1093,12031,-18264,113096,-2684,15608,60,0),
+  (1,1092,12031,-18292,113096,-2684,15608,60,0),
+  (1,1094,12031,-18236,113096,-2684,15608,60,0),
+  (1,1096,12029,-18432,113116,-2684,15608,60,0),
+  (1,1095,12031,-18208,113096,-2684,15608,60,0),
+  (1,1088,12031,-18404,113096,-2684,15608,60,0),
+  (1,1087,12031,-18432,113096,-2684,15608,60,0),
+  (1,1089,12031,-18376,113096,-2684,15608,60,0),
+  (1,1091,12031,-18320,113096,-2684,15608,60,0),
+  (1,1090,12031,-18348,113096,-2684,15608,60,0),
+  (1,1097,12028,-18404,113116,-2684,15608,60,0),
+  (1,1104,12029,-18208,113116,-2684,15608,60,0),
+  (1,1103,12028,-18236,113116,-2684,15608,60,0),
+  (1,1105,12030,-18432,113136,-2684,15608,60,0),
+  (1,1107,12030,-18376,113136,-2684,15608,60,0),
+  (1,1106,12030,-18404,113136,-2684,15608,60,0),
+  (1,1099,12028,-18348,113116,-2684,15608,60,0),
+  (1,1098,12029,-18376,113116,-2684,15608,60,0),
+  (1,1100,12029,-18320,113116,-2684,15608,60,0),
+  (1,1102,12029,-18264,113116,-2684,15608,60,0),
+  (1,1101,12028,-18292,113116,-2684,15608,60,0),
+  (1,1158,12031,-18263,112349,-2422,15900,60,0),
+  (1,1157,12031,-18292,112348,-2423,15900,60,0),
+  (1,1159,12031,-18612,112411,-2421,15900,60,0),
+  (1,1161,12026,-18553,112413,-2421,15900,60,0),
+  (1,1160,12031,-18582,112410,-2422,15900,60,0),
+  (1,1153,12016,-18628,112698,-2672,-688,60,0),
+  (1,1152,12016,-18631,112638,-2672,-688,60,0),
+  (1,1154,12031,-18382,112345,-2423,15900,60,0),
+  (1,1156,12026,-18322,112347,-2423,15900,60,0),
+  (1,1155,12031,-18352,112344,-2424,15900,60,0),
+  (1,1162,12031,-18523,112414,-2421,15900,60,0),
+  (1,1169,12030,-17812,112343,-2525,-56,60,0),
+  (1,1168,12031,-18076,112668,-2421,31664,60,0),
+  (1,1170,12025,-17811,112315,-2525,-56,60,0),
+  (1,1172,12029,-17833,112344,-2514,-56,60,0),
+  (1,1171,12030,-17807,112288,-2524,-56,60,0),
+  (1,1164,12031,-18079,112549,-2422,31664,60,0),
+  (1,1163,12031,-18493,112415,-2420,15900,60,0),
+  (1,1165,12031,-18076,112579,-2423,31664,60,0),
+  (1,1167,12031,-18077,112638,-2422,31664,60,0),
+  (1,1166,12026,-18078,112608,-2422,31664,60,0),
+  (1,1151,12016,-18631,112549,-2672,-688,60,0),
+  (1,1136,12031,-18619,112565,-2694,-688,60,0),
+  (1,1135,12031,-18621,112595,-2695,-688,60,0),
+  (1,1137,12031,-18619,112535,-2694,-688,60,0),
+  (1,1139,12031,-18619,112474,-2694,-688,60,0),
+  (1,1138,12031,-18618,112506,-2693,-688,60,0),
+  (1,1131,12031,-18621,112716,-2696,-688,60,0),
+  (1,1130,12029,-18599,112488,-2691,-688,60,0),
+  (1,1132,12031,-18620,112686,-2696,-688,60,0),
+  (1,1134,12031,-18619,112625,-2695,-688,60,0),
+  (1,1133,12031,-18620,112656,-2695,-688,60,0),
+  (1,1140,12031,-18767,112698,-2697,-688,60,0),
+  (1,1147,12031,-18764,112487,-2694,-688,60,0),
+  (1,1146,12031,-18764,112517,-2694,-688,60,0),
+  (1,1148,12027,-18868,112367,-2688,15900,60,0),
+  (1,1150,12016,-18630,112485,-2672,-688,60,0),
+  (1,1149,12027,-18838,112366,-2689,15900,60,0),
+  (1,1142,12031,-18767,112637,-2696,-688,60,0),
+  (1,1141,12031,-18767,112668,-2696,-688,60,0),
+  (1,1143,12031,-18766,112607,-2695,-688,60,0),
+  (1,1145,12031,-18765,112547,-2695,-688,60,0),
+  (1,1144,12031,-18767,112577,-2695,-688,60,0),
+  (1,1373,12016,-18496,111232,-2565,16384,60,0),
+  (1,1372,12016,-18560,111232,-2565,16384,60,0),
+  (1,1374,12016,-17664,111232,-2565,16384,60,0),
+  (1,1376,12011,-18112,111232,-2565,16384,60,0),
+  (1,1375,12016,-17728,111232,-2565,16384,60,0),
+  (1,1368,12012,-18563,111104,-2549,16384,60,0),
+  (1,1367,12012,-17664,111104,-2549,16384,60,0),
+  (1,1369,12013,-18112,111104,-2553,16384,60,0),
+  (1,1371,12013,-18435,111104,-2549,16384,60,0),
+  (1,1370,12013,-17793,111104,-2549,16384,60,0),
+  (1,1377,12016,-18432,111232,-2565,16384,60,0),
+  (1,1384,12016,-17921,111232,-2565,16384,60,0),
+  (1,1383,12016,-17985,111232,-2565,16384,60,0),
+  (1,1385,12016,-17857,111232,-2565,16384,60,0),
+  (1,1387,12031,-17880,110667,-2116,32768,60,0),
+  (1,1386,12016,-17793,111232,-2565,16384,60,0),
+  (1,1379,12016,-18304,111232,-2565,16384,60,0),
+  (1,1378,12016,-18368,111232,-2565,16384,60,0),
+  (1,1380,12016,-18240,111232,-2565,16384,60,0),
+  (1,1382,12011,-18049,111232,-2565,16384,60,0),
+  (1,1381,12011,-18176,111232,-2565,16384,60,0),
+  (1,1366,12012,-17921,111104,-2552,16384,60,0),
+  (1,1351,12026,-18561,113180,-2297,0,60,0),
+  (1,1350,12031,-18719,113288,-2298,16384,60,0),
+  (1,1352,12026,-18572,113251,-2297,8192,60,0),
+  (1,1354,12026,-18076,113164,-2298,32768,60,0),
+  (1,1353,12026,-18066,113248,-2297,24576,60,0),
+  (1,1346,12031,-18560,113219,-2298,0,60,0),
+  (1,1345,12031,-18561,113139,-2298,0,60,0),
+  (1,1347,12031,-18606,113276,-2298,8192,60,0),
+  (1,1349,12031,-18678,113288,-2298,16384,60,0),
+  (1,1348,12031,-18638,113288,-2298,16384,60,0),
+  (1,1355,12027,-18660,113249,-2298,8192,60,0),
+  (1,1362,12017,-18499,111104,-2553,16384,60,0),
+  (1,1361,12017,-18371,111104,-2553,16384,60,0),
+  (1,1363,12017,-17857,111104,-2553,16384,60,0),
+  (1,1365,12012,-18304,111104,-2549,16384,60,0),
+  (1,1364,12017,-17728,111104,-2553,16384,60,0),
+  (1,1357,12017,-18176,111104,-2554,16384,60,0),
+  (1,1356,12027,-17970,113241,-2298,24576,60,0),
+  (1,1358,12017,-18048,111104,-2554,16384,60,0),
+  (1,1360,12017,-18240,111104,-2554,16384,60,0),
+  (1,1359,12017,-17985,111104,-2554,16384,60,0),
+  (1,1416,12031,-18076,112668,-2421,31664,60,0),
+  (1,1415,12026,-18078,112608,-2422,31664,60,0),
+  (1,1417,12031,-18076,113100,-2298,32768,60,0),
+  (1,1419,12031,-18029,113271,-2298,24576,60,0),
+  (1,1418,12031,-18076,113212,-2298,32768,60,0),
+  (1,1411,12031,-18582,112410,-2422,15900,60,0),
+  (1,1410,12031,-18612,112411,-2421,15900,60,0),
+  (1,1412,12026,-18553,112413,-2421,15900,60,0),
+  (1,1414,12031,-18079,112549,-2422,31664,60,0),
+  (1,1413,12031,-18523,112414,-2421,15900,60,0),
+  (1,1420,12031,-17962,113285,-2298,16384,60,0),
+  (1,1427,12026,-18066,113248,-2297,24576,60,0),
+  (1,1426,12026,-18572,113251,-2297,8192,60,0),
+  (1,1428,12026,-18076,113164,-2298,32768,60,0),
+  (1,1430,12027,-17970,113241,-2298,24576,60,0),
+  (1,1429,12027,-18660,113249,-2298,8192,60,0),
+  (1,1422,12031,-18560,113219,-2298,0,60,0),
+  (1,1421,12031,-18561,113139,-2298,0,60,0),
+  (1,1423,12031,-18606,113276,-2298,8192,60,0),
+  (1,1425,12026,-18561,113180,-2297,0,60,0),
+  (1,1424,12031,-18678,113288,-2298,16384,60,0),
+  (1,1409,12031,-18263,112349,-2422,15900,60,0),
+  (1,1394,12026,-17852,110825,-2116,24576,60,0),
+  (1,1393,12031,-17880,110710,-2116,32768,60,0),
+  (1,1395,12026,-17880,110749,-2115,32768,60,0),
+  (1,1397,12031,-18333,110661,-2118,0,60,0),
+  (1,1396,12027,-17778,110804,-2117,24576,60,0),
+  (1,1389,12031,-17826,110850,-2116,24576,60,0),
+  (1,1388,12031,-17881,110789,-2116,32768,60,0),
+  (1,1390,12031,-17801,110869,-2116,16384,60,0),
+  (1,1392,12031,-17726,110870,-2116,16384,60,0),
+  (1,1391,12031,-17762,110870,-2116,16384,60,0),
+  (1,1398,12031,-18333,110701,-2116,0,60,0),
+  (1,1405,12026,-18355,110815,-2117,8192,60,0),
+  (1,1404,12026,-18333,110745,-2114,0,60,0),
+  (1,1406,12027,-18435,110797,-2114,8192,60,0),
+  (1,1408,12026,-18322,112347,-2423,15900,60,0),
+  (1,1407,12031,-18382,112345,-2423,15900,60,0),
+  (1,1400,12031,-18391,110851,-2116,8192,60,0),
+  (1,1399,12031,-18333,110786,-2117,0,60,0),
+  (1,1401,12031,-18418,110871,-2115,16384,60,0),
+  (1,1403,12031,-18497,110871,-2116,16384,60,0),
+  (1,1402,12031,-18458,110870,-2116,16384,60,0),
+  (1,1287,12013,-18024,108044,-2476,16344,60,0),
+  (1,1286,12013,-18201,108044,-2479,16344,60,0),
+  (1,1288,12013,-17941,108044,-2476,16344,60,0),
+  (1,1290,12013,-17787,108043,-2476,16344,60,0),
+  (1,1289,12013,-17861,108043,-2476,16344,60,0),
+  (1,1282,12016,-18264,108278,-2482,16344,60,0),
+  (1,1281,12016,-18301,108279,-2482,16344,60,0),
+  (1,1283,12013,-18439,108045,-2480,16344,60,0),
+  (1,1285,12013,-18276,108044,-2479,16344,60,0),
+  (1,1284,12013,-18355,108045,-2479,16344,60,0),
+  (1,1291,12030,-17599,109170,-2258,16088,60,0),
+  (1,1298,12028,-17627,109123,-2260,16088,60,0),
+  (1,1297,12028,-17600,109123,-2260,16088,60,0),
+  (1,1299,12028,-17654,109124,-2259,16088,60,0),
+  (1,1301,12027,-17566,109046,-2260,16088,60,0),
+  (1,1300,12027,-17540,109046,-2260,16088,60,0),
+  (1,1293,12030,-17653,109170,-2257,16088,60,0),
+  (1,1292,12025,-17625,109170,-2258,16088,60,0),
+  (1,1294,12029,-17599,109148,-2262,16088,60,0),
+  (1,1296,12029,-17653,109148,-2261,16088,60,0),
+  (1,1295,12029,-17626,109148,-2262,16088,60,0),
+  (1,1280,12011,-18334,108279,-2482,16344,60,0),
+  (1,1265,12017,-18303,108207,-2480,16344,60,0),
+  (1,1264,12017,-18336,108208,-2480,16344,60,0),
+  (1,1266,12017,-18266,108207,-2480,16344,60,0),
+  (1,1268,12014,-18480,108244,-2482,16344,60,0),
+  (1,1267,12014,-18518,108245,-2482,16344,60,0),
+  (1,1260,12017,-18481,108210,-2481,16344,60,0),
+  (1,1259,12017,-18519,108210,-2481,16344,60,0),
+  (1,1261,12017,-18449,108210,-2481,16344,60,0),
+  (1,1263,12017,-18374,108208,-2480,16344,60,0),
+  (1,1262,12017,-18411,108209,-2481,16344,60,0),
+  (1,1269,12014,-18448,108244,-2482,16344,60,0),
+  (1,1276,12016,-18479,108281,-2483,16344,60,0),
+  (1,1275,12016,-18517,108282,-2483,16344,60,0),
+  (1,1277,12011,-18446,108281,-2483,16344,60,0),
+  (1,1279,12016,-18371,108280,-2482,16344,60,0),
+  (1,1278,12016,-18409,108280,-2483,16344,60,0),
+  (1,1271,12014,-18373,108242,-2481,16344,60,0),
+  (1,1270,12014,-18410,108243,-2482,16344,60,0),
+  (1,1272,12014,-18335,108242,-2481,16344,60,0),
+  (1,1274,12014,-18265,108241,-2481,16344,60,0),
+  (1,1273,12014,-18303,108242,-2481,16344,60,0),
+  (1,1330,12031,-18426,108263,-2262,65152,60,0),
+  (1,1329,12031,-18426,108227,-2262,65152,60,0),
+  (1,1331,12026,-18425,108301,-2262,65152,60,0),
+  (1,1333,12031,-18424,108369,-2261,65152,60,0),
+  (1,1332,12031,-18425,108332,-2261,65152,60,0),
+  (1,1325,12027,-18590,108948,-2259,16088,60,0),
+  (1,1324,12027,-18562,108948,-2260,16088,60,0),
+  (1,1326,12031,-18428,108118,-2263,65152,60,0),
+  (1,1328,12026,-18426,108191,-2262,65152,60,0),
+  (1,1327,12031,-18427,108154,-2263,65152,60,0),
+  (1,1334,12026,-18424,108404,-2261,65152,60,0),
+  (1,1341,12031,-17962,113285,-2298,16384,60,0),
+  (1,1340,12031,-17998,113285,-2298,16384,60,0),
+  (1,1342,12031,-17927,113285,-2298,16384,60,0),
+  (1,1344,12031,-18076,113132,-2298,32768,60,0),
+  (1,1343,12031,-18561,113097,-2298,0,60,0),
+  (1,1336,12031,-18422,108478,-2261,65152,60,0),
+  (1,1335,12031,-18423,108441,-2261,65152,60,0),
+  (1,1337,12031,-18076,113100,-2298,32768,60,0),
+  (1,1339,12031,-18029,113271,-2298,24576,60,0),
+  (1,1338,12031,-18076,113212,-2298,32768,60,0),
+  (1,1323,12027,-18536,108948,-2260,16088,60,0),
+  (1,1308,12026,-17792,108289,-2262,32692,60,0),
+  (1,1307,12031,-17793,108327,-2262,32692,60,0),
+  (1,1309,12031,-17792,108258,-2261,32692,60,0),
+  (1,1311,12026,-17790,108186,-2261,32692,60,0),
+  (1,1310,12031,-17791,108221,-2261,32692,60,0),
+  (1,1303,12031,-17795,108473,-2263,32692,60,0),
+  (1,1302,12027,-17594,109046,-2259,16088,60,0),
+  (1,1304,12031,-17794,108436,-2263,32692,60,0),
+  (1,1306,12031,-17793,108363,-2262,32692,60,0),
+  (1,1305,12026,-17794,108399,-2262,32692,60,0),
+  (1,1312,12031,-17790,108149,-2261,32692,60,0),
+  (1,1319,12029,-18628,109214,-2261,16088,60,0),
+  (1,1318,12029,-18601,109214,-2262,16088,60,0),
+  (1,1320,12028,-18575,109189,-2260,16088,60,0),
+  (1,1322,12028,-18629,109190,-2259,16088,60,0),
+  (1,1321,12028,-18602,109189,-2260,16088,60,0),
+  (1,1314,12030,-18574,109236,-2258,16088,60,0),
+  (1,1313,12031,-17790,108112,-2261,32692,60,0),
+  (1,1315,12025,-18600,109236,-2258,16088,60,0),
+  (1,1317,12029,-18574,109214,-2262,16088,60,0),
+  (1,1316,12030,-18643,109233,-2257,16088,60,0),
+  (2,609,12111,21571,160698,-2529,48856,10800,0),
+  (2,610,12111,21598,160698,-2529,48856,10800,0),
+  (2,611,12111,21625,160697,-2528,48856,10800,0),
+  (2,606,12112,21570,160673,-2531,48856,10800,0),
+  (2,607,12112,21597,160673,-2531,48856,10800,0),
+  (2,608,12112,21624,160673,-2530,48856,10800,0),
+  (2,615,12114,21766,161348,-2532,65460,10800,0),
+  (2,616,12114,21765,161385,-2532,65460,10800,0),
+  (2,617,12109,21765,161422,-2531,65460,10800,0),
+  (2,612,12110,21511,160775,-2529,48856,10800,0),
+  (2,613,12110,21537,160775,-2529,48856,10800,0),
+  (2,614,12110,21565,160775,-2528,48856,10800,0),
+  (2,597,12097,22247,161777,-2748,49112,120,0),
+  (2,598,12097,22172,161777,-2748,49112,120,0),
+  (2,599,12097,21995,161777,-2745,49112,120,0),
+  (2,594,12100,22235,161543,-2751,49112,120,0),
+  (2,595,12097,22410,161776,-2749,49112,120,0),
+  (2,596,12097,22326,161776,-2748,49112,120,0),
+  (2,603,12113,21570,160651,-2527,48856,10800,0),
+  (2,604,12108,21596,160651,-2527,48856,10800,0),
+  (2,605,12113,21624,160651,-2526,48856,10800,0),
+  (2,600,12097,21912,161777,-2745,49112,120,0),
+  (2,601,12097,21832,161778,-2745,49112,120,0),
+  (2,602,12097,21758,161778,-2745,49112,120,0),
+  (2,618,12114,21764,161458,-2531,65460,10800,0),
+  (2,634,12111,22600,160631,-2528,48856,10800,0),
+  (2,635,12110,22507,160873,-2529,48856,10800,0),
+  (2,636,12110,22533,160873,-2529,48856,10800,0),
+  (2,631,12112,22599,160607,-2530,48856,10800,0),
+  (2,632,12111,22546,160632,-2529,48856,10800,0),
+  (2,633,12111,22573,160632,-2529,48856,10800,0),
+  (2,640,12109,22397,161630,-2531,32384,10800,0),
+  (2,641,12114,22397,161594,-2531,32384,10800,0),
+  (2,642,12114,22397,161558,-2531,32384,10800,0),
+  (2,637,12110,22561,160873,-2528,48856,10800,0),
+  (2,638,12114,22399,161703,-2532,32384,10800,0),
+  (2,639,12114,22398,161667,-2532,32384,10800,0),
+  (2,622,12114,21762,161600,-2530,65460,10800,0),
+  (2,623,12109,21761,161635,-2530,65460,10800,0),
+  (2,624,12114,21761,161672,-2530,65460,10800,0),
+  (2,619,12114,21764,161494,-2531,65460,10800,0),
+  (2,620,12109,21763,161532,-2531,65460,10800,0),
+  (2,621,12114,21763,161563,-2530,65460,10800,0),
+  (2,628,12113,22614,160588,-2526,48856,10800,0),
+  (2,629,12112,22545,160607,-2531,48856,10800,0),
+  (2,630,12112,22572,160607,-2531,48856,10800,0),
+  (2,625,12114,21761,161709,-2530,65460,10800,0),
+  (2,626,12113,22545,160585,-2527,48856,10800,0),
+  (2,627,12108,22571,160585,-2527,48856,10800,0),
+  (2,593,12100,22272,161542,-2751,49112,120,0),
+  (2,559,12098,21784,161585,-2754,49112,120,0),
+  (2,560,12098,21747,161586,-2754,49112,120,0),
+  (2,561,12098,21714,161586,-2754,49112,120,0),
+  (2,556,12098,21892,161584,-2755,49112,120,0),
+  (2,557,12098,21859,161584,-2755,49112,120,0),
+  (2,558,12098,21822,161585,-2755,49112,120,0),
+  (2,565,12095,21858,161546,-2756,49112,120,0),
+  (2,566,12100,21820,161547,-2756,49112,120,0),
+  (2,567,12100,21783,161547,-2755,49112,120,0),
+  (2,562,12098,21677,161587,-2754,49112,120,0),
+  (2,563,12100,21928,161545,-2756,49112,120,0),
+  (2,564,12100,21890,161546,-2756,49112,120,0),
+  (2,547,12101,21930,161617,-2754,49112,120,0),
+  (2,548,12101,21893,161618,-2754,49112,120,0),
+  (2,549,12101,21860,161618,-2754,49112,120,0),
+  (2,544,12100,21907,159506,-2687,39088,60,0),
+  (2,545,12093,22144,161631,-2749,49112,300,0),
+  (2,546,12094,22032,161634,-2748,49112,180,0),
+  (2,553,12101,21715,161620,-2753,49112,120,0),
+  (2,554,12101,21677,161621,-2753,49112,120,0),
+  (2,555,12098,21930,161583,-2755,49112,120,0),
+  (2,550,12101,21822,161619,-2754,49112,120,0),
+  (2,551,12101,21785,161619,-2753,49112,120,0),
+  (2,552,12101,21747,161620,-2753,49112,120,0),
+  (2,568,12095,21745,161548,-2755,49112,120,0),
+  (2,584,12098,22306,161579,-2750,49112,120,0),
+  (2,585,12098,22274,161579,-2750,49112,120,0),
+  (2,586,12098,22236,161580,-2750,49112,120,0),
+  (2,581,12098,22419,161577,-2751,49112,120,0),
+  (2,582,12098,22381,161578,-2751,49112,120,0),
+  (2,583,12098,22344,161579,-2750,49112,120,0),
+  (2,590,12100,22380,161541,-2752,49112,120,0),
+  (2,591,12100,22342,161541,-2751,49112,120,0),
+  (2,592,12095,22305,161542,-2751,49112,120,0),
+  (2,587,12100,22488,161539,-2752,49112,120,0),
+  (2,588,12100,22450,161540,-2752,49112,120,0),
+  (2,589,12095,22417,161540,-2752,49112,120,0),
+  (2,572,12101,22452,161611,-2750,49112,120,0),
+  (2,573,12101,22420,161611,-2750,49112,120,0),
+  (2,574,12101,22382,161612,-2750,49112,120,0),
+  (2,569,12100,21713,161548,-2755,49112,120,0),
+  (2,570,12100,21675,161549,-2755,49112,120,0),
+  (2,571,12101,22490,161611,-2750,49112,120,0),
+  (2,578,12101,22237,161614,-2749,49112,120,0),
+  (2,579,12098,22489,161576,-2751,49112,120,0),
+  (2,580,12098,22451,161577,-2751,49112,120,0),
+  (2,575,12101,22345,161613,-2749,49112,120,0),
+  (2,576,12101,22307,161613,-2749,49112,120,0),
+  (2,577,12101,22274,161614,-2749,49112,120,0),
+  (2,643,12109,22396,161520,-2531,32384,10800,0),
+  (2,709,12114,22304,159160,-2387,32768,10800,0),
+  (2,710,12114,22304,159120,-2385,32768,10800,0),
+  (2,711,12114,22304,159035,-2386,32768,10800,0),
+  (2,706,12109,21823,158996,-2385,57344,10800,0),
+  (2,707,12109,21851,159072,-2384,0,10800,0),
+  (2,708,12110,21749,159017,-2386,57344,10800,0),
+  (2,715,12114,22468,158950,-2385,49152,10800,0),
+  (2,716,12109,22304,159076,-2383,32768,10800,0),
+  (2,717,12109,22326,159006,-2386,40960,10800,0),
+  (2,712,12114,22362,158970,-2385,40960,10800,0),
+  (2,713,12114,22389,158950,-2384,49152,10800,0),
+  (2,714,12114,22429,158951,-2385,49152,10800,0),
+  (2,697,12100,21828,158589,-2834,49152,10800,0),
+  (2,698,12100,21764,158589,-2834,49152,10800,0),
+  (2,699,12114,21851,159154,-2385,0,10800,0),
+  (2,694,12095,22020,158589,-2834,49152,10800,0),
+  (2,695,12100,21956,158589,-2834,49152,10800,0),
+  (2,696,12100,21892,158589,-2834,49152,10800,0),
+  (2,703,12114,21733,158951,-2385,49152,10800,0),
+  (2,704,12114,21697,158951,-2385,49152,10800,0),
+  (2,705,12114,21851,159111,-2385,0,10800,0),
+  (2,700,12114,21852,159032,-2385,0,10800,0),
+  (2,701,12114,21797,158971,-2385,57344,10800,0),
+  (2,702,12114,21772,158952,-2385,49152,10800,0),
+  (2,718,12110,22406,159024,-2383,40960,10800,0),
+  (2,734,12114,22531,156602,-2567,32768,10800,0),
+  (2,735,12114,22577,156545,-2567,40960,10800,0),
+  (2,736,12114,22649,156533,-2567,49152,10800,0),
+  (2,731,12114,22000,156550,-2567,57344,10800,0),
+  (2,732,12114,21933,156536,-2567,49152,10800,0),
+  (2,733,12114,22532,156682,-2567,32768,10800,0),
+  (2,740,12109,22047,156657,-2567,0,10800,0),
+  (2,741,12110,22631,156572,-2567,40960,10800,0),
+  (2,742,12110,21941,156580,-2567,57344,10800,0),
+  (2,737,12109,22532,156641,-2566,32768,10800,0),
+  (2,738,12109,22543,156570,-2566,40960,10800,0),
+  (2,739,12109,22037,156573,-2566,57344,10800,0),
+  (2,722,12114,22583,157410,-2690,48668,10800,0),
+  (2,723,12114,22553,157411,-2691,48668,10800,0),
+  (2,724,12109,22524,157408,-2690,48668,10800,0),
+  (2,719,12114,22353,157476,-2692,48668,10800,0),
+  (2,720,12109,22293,157474,-2692,48668,10800,0),
+  (2,721,12114,22234,157472,-2691,48668,10800,0),
+  (2,728,12114,22047,157153,-2690,64432,10800,0),
+  (2,729,12114,22047,156721,-2567,0,10800,0),
+  (2,730,12114,22047,156609,-2567,0,10800,0),
+  (2,725,12114,22494,157407,-2690,48668,10800,0),
+  (2,726,12114,22050,157272,-2691,64432,10800,0),
+  (2,727,12109,22049,157213,-2691,64432,10800,0),
+  (2,693,12095,22147,158589,-2834,49152,10800,0),
+  (2,659,12114,22577,156545,-2567,40960,10800,0),
+  (2,660,12114,22609,156533,-2567,49152,10800,0),
+  (2,661,12114,22649,156533,-2567,49152,10800,0),
+  (2,656,12114,22047,156689,-2567,0,10800,0),
+  (2,657,12114,22532,156682,-2567,32768,10800,0),
+  (2,658,12114,22531,156602,-2567,32768,10800,0);
 
--- Dion
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22403,156725,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22375,156725,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22347,156725,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22319,156725,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22291,156725,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22263,156725,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22235,156725,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22207,156725,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22179,156725,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22403,156705,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,22375,156705,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22347,156705,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,22319,156705,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22291,156705,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,22263,156705,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22235,156705,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,22207,156705,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22179,156705,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22403,156685,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22375,156685,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22347,156685,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22319,156685,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12108,22291,156685,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22263,156685,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22235,156685,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22207,156685,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22179,156685,-2953,48376,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22546,157103,-2943,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22545,157134,-2942,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12108,22545,157164,-2942,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22545,157194,-2941,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22546,157225,-2942,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22544,157254,-2941,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12108,22544,157284,-2941,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22544,157314,-2940,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22545,157345,-2941,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22571,157121,-2961,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22571,157151,-2961,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,22571,157182,-2960,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22572,157212,-2961,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22570,157242,-2960,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,22570,157272,-2960,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22569,157301,-2959,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22570,157333,-2960,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22592,157105,-2965,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22591,157135,-2965,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22591,157165,-2964,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22590,157196,-2964,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22592,157226,-2964,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22590,157256,-2963,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22590,157286,-2963,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22589,157315,-2962,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22590,157347,-2963,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22738,157123,-2966,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22738,157153,-2965,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22738,157184,-2965,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22737,157214,-2964,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22738,157244,-2964,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22736,157274,-2964,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22735,157304,-2963,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22735,157334,-2963,32080,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12110,22839,157454,-2957,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12110,22809,157455,-2958,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22601,157336,-2941,32080,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22602,157272,-2941,32080,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22602,157183,-2941,32080,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22599,157123,-2941,32080,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22353,157476,-2692,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22323,157477,-2693,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22293,157474,-2692,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22263,157473,-2692,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22234,157472,-2691,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22583,157410,-2690,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22553,157411,-2691,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22524,157408,-2690,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22494,157407,-2690,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22464,157406,-2689,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22050,157272,-2691,64432,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22047,157242,-2692,64432,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22049,157213,-2691,64432,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22048,157183,-2691,64432,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22047,157153,-2690,64432,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,21783,157478,-2794,32712,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12108,21782,157506,-2794,32712,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,21778,157533,-2793,32712,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,21804,157477,-2783,32712,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,21803,157505,-2784,32712,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,21799,157532,-2783,32712,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,21822,157478,-2769,32712,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,21821,157506,-2770,32712,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,21817,157533,-2769,32712,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12110,22150,157519,-2692,55444,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,22228,159486,-2687,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22211,159511,-2688,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,22187,159537,-2687,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22168,159560,-2687,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,22153,159578,-2686,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22131,159604,-2688,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,22114,159629,-2688,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22094,159650,-2688,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,22070,159661,-2689,49844,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22045,159642,-2688,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,22027,159618,-2688,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22014,159598,-2687,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,21995,159571,-2689,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,21976,159547,-2690,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,21957,159517,-2689,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,21940,159492,-2689,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,21927,159473,-2688,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22243,159506,-2689,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22225,159530,-2690,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22201,159556,-2689,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22182,159580,-2689,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22167,159598,-2688,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22146,159624,-2690,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22128,159648,-2690,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22109,159669,-2690,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22084,159680,-2691,49844,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22056,159679,-2688,49844,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22031,159660,-2687,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22013,159636,-2687,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22000,159616,-2686,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21981,159589,-2688,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,21962,159565,-2689,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21943,159535,-2688,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,21926,159510,-2688,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21913,159491,-2687,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22271,159611,-2687,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22252,159634,-2687,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22237,159652,-2686,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22215,159678,-2688,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22198,159703,-2689,39088,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21970,159669,-2683,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21957,159649,-2682,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21937,159622,-2684,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21919,159598,-2685,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21900,159568,-2684,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12110,21939,159745,-2685,48388,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,21905,159745,-2686,48388,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22184,159748,-2686,48388,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12110,22161,159747,-2686,48388,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22236,159473,-2684,58336,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22245,159527,-2687,39088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22164,159618,-2687,39088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,21979,159609,-2687,39088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,21907,159506,-2687,39088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12093,22144,161631,-2749,49112,300,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12094,22032,161634,-2748,49112,180,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,21930,161617,-2754,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,21893,161618,-2754,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,21860,161618,-2754,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,21822,161619,-2754,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,21785,161619,-2753,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,21747,161620,-2753,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,21715,161620,-2753,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,21677,161621,-2753,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12098,21930,161583,-2755,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12098,21892,161584,-2755,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12098,21859,161584,-2755,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12098,21822,161585,-2755,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12098,21784,161585,-2754,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12098,21747,161586,-2754,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12098,21714,161586,-2754,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12098,21677,161587,-2754,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,21928,161545,-2756,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,21890,161546,-2756,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12095,21858,161546,-2756,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,21820,161547,-2756,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,21783,161547,-2755,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12095,21745,161548,-2755,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,21713,161548,-2755,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,21675,161549,-2755,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,22490,161611,-2750,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,22452,161611,-2750,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,22420,161611,-2750,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,22382,161612,-2750,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,22345,161613,-2749,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,22307,161613,-2749,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,22274,161614,-2749,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,22237,161614,-2749,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12098,22489,161576,-2751,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12098,22451,161577,-2751,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12098,22419,161577,-2751,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12098,22381,161578,-2751,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12098,22344,161579,-2750,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12098,22306,161579,-2750,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12098,22274,161579,-2750,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12098,22236,161580,-2750,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22488,161539,-2752,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22450,161540,-2752,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12095,22417,161540,-2752,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22380,161541,-2752,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22342,161541,-2751,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12095,22305,161542,-2751,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22272,161542,-2751,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22235,161543,-2751,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12097,22410,161776,-2749,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12097,22326,161776,-2748,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12097,22247,161777,-2748,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12097,22172,161777,-2748,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12097,21995,161777,-2745,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12097,21912,161777,-2745,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12097,21832,161778,-2745,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12097,21758,161778,-2745,49112,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,21570,160651,-2527,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12108,21596,160651,-2527,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,21624,160651,-2526,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,21570,160673,-2531,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,21597,160673,-2531,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,21624,160673,-2530,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,21571,160698,-2529,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,21598,160698,-2529,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,21625,160697,-2528,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12110,21511,160775,-2529,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12110,21537,160775,-2529,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12110,21565,160775,-2528,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21766,161348,-2532,65460,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21765,161385,-2532,65460,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,21765,161422,-2531,65460,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21764,161458,-2531,65460,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21764,161494,-2531,65460,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,21763,161532,-2531,65460,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21763,161563,-2530,65460,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21762,161600,-2530,65460,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,21761,161635,-2530,65460,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21761,161672,-2530,65460,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21761,161709,-2530,65460,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22545,160585,-2527,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12108,22571,160585,-2527,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12113,22614,160588,-2526,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22545,160607,-2531,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22572,160607,-2531,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12112,22599,160607,-2530,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,22546,160632,-2529,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,22573,160632,-2529,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12111,22600,160631,-2528,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12110,22507,160873,-2529,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12110,22533,160873,-2529,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12110,22561,160873,-2528,48856,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22399,161703,-2532,32384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22398,161667,-2532,32384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22397,161630,-2531,32384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22397,161594,-2531,32384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22397,161558,-2531,32384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22396,161520,-2531,32384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22396,161489,-2530,32384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22395,161452,-2530,32384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22395,161417,-2530,32384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22394,161380,-2530,32384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22393,161343,-2530,32384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22047,156721,-2567,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22047,156609,-2567,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22000,156550,-2567,57344,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21969,156536,-2567,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21933,156536,-2567,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21898,156536,-2567,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22532,156724,-2567,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22047,156689,-2567,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22532,156682,-2567,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22531,156602,-2567,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22577,156545,-2567,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22609,156533,-2567,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22649,156533,-2567,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22690,156533,-2567,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22532,156641,-2566,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22543,156570,-2566,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22037,156573,-2566,57344,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22047,156657,-2567,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12110,22631,156572,-2567,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12110,21941,156580,-2567,57344,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,22147,158717,-2823,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,22019,158717,-2823,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,21956,158717,-2823,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,22211,158717,-2823,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,22342,158717,-2822,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,22470,158717,-2822,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,21828,158717,-2822,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12101,21699,158717,-2822,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12096,22275,158717,-2818,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12096,21892,158717,-2821,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12096,21635,158717,-2818,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12096,22534,158717,-2818,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12097,22083,158717,-2822,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12097,21764,158717,-2818,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12097,22406,158717,-2818,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22531,158589,-2834,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22467,158589,-2834,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,21635,158589,-2834,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,21699,158589,-2834,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12095,22083,158589,-2834,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22403,158589,-2834,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22339,158589,-2834,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22275,158589,-2834,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,22211,158589,-2834,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12095,22147,158589,-2834,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12095,22020,158589,-2834,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,21956,158589,-2834,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,21892,158589,-2834,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,21828,158589,-2834,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12100,21764,158589,-2834,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21851,159154,-2385,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21852,159032,-2385,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21797,158971,-2385,57344,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21772,158952,-2385,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21733,158951,-2385,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21697,158951,-2385,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21851,159111,-2385,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,21823,158996,-2385,57344,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,21851,159072,-2384,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12110,21749,159017,-2386,57344,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22304,159160,-2387,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22304,159120,-2385,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22304,159035,-2386,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22362,158970,-2385,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22389,158950,-2384,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22429,158951,-2385,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22468,158950,-2385,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22304,159076,-2383,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22326,159006,-2386,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12110,22406,159024,-2383,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22353,157476,-2692,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22293,157474,-2692,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22234,157472,-2691,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22583,157410,-2690,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22553,157411,-2691,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22524,157408,-2690,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22494,157407,-2690,48668,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22050,157272,-2691,64432,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22049,157213,-2691,64432,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22047,157153,-2690,64432,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22047,156721,-2567,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22047,156609,-2567,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22000,156550,-2567,57344,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,21933,156536,-2567,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22532,156682,-2567,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22531,156602,-2567,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22577,156545,-2567,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12114,22649,156533,-2567,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22532,156641,-2566,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22543,156570,-2566,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22037,156573,-2566,57344,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12109,22047,156657,-2567,0,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12110,22631,156572,-2567,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (2,12110,21941,156580,-2567,57344,10800,0);
+COMMIT;
 
--- Giran
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112830,144722,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112830,144750,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112830,144778,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112830,144806,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112830,144834,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112830,144862,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112830,144890,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112830,144918,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112830,144946,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,112810,144722,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,112810,144750,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,112810,144778,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,112810,144806,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,112810,144834,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,112810,144862,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,112810,144890,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,112810,144918,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,112810,144946,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,112790,144722,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,112790,144750,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,112790,144778,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,112790,144806,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12139,112790,144834,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,112790,144862,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,112790,144890,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,112790,144918,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,112790,144946,-2828,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,113208,144579,-2818,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,113239,144580,-2817,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12139,113269,144580,-2817,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,113299,144580,-2816,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,113330,144579,-2817,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,113359,144581,-2816,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12139,113389,144581,-2816,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,113419,144581,-2815,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,113450,144580,-2816,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,113226,144554,-2836,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,113256,144554,-2836,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,113287,144554,-2835,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,113317,144553,-2836,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,113347,144555,-2835,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,113377,144555,-2835,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,113406,144556,-2834,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,113438,144555,-2835,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113210,144533,-2840,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113240,144534,-2840,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113270,144534,-2839,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113301,144535,-2839,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113331,144533,-2839,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113361,144535,-2838,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113391,144535,-2838,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113420,144536,-2837,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113452,144535,-2838,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113228,144387,-2841,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113258,144387,-2840,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113289,144387,-2840,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113319,144388,-2839,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113349,144387,-2839,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113379,144389,-2839,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113409,144390,-2838,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113439,144390,-2838,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12141,113559,144286,-2832,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12141,113560,144316,-2833,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,113441,144524,-2816,15696,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,113377,144523,-2816,15696,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,113288,144523,-2816,15696,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,113228,144526,-2816,15696,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113581,144772,-2567,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113582,144802,-2568,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,113579,144832,-2567,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113578,144862,-2567,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113577,144891,-2566,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113515,144542,-2565,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113516,144572,-2566,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,113513,144601,-2565,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113512,144631,-2565,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113511,144661,-2564,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113377,145075,-2566,48048,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113347,145078,-2567,48048,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,113318,145076,-2566,48048,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113288,145077,-2566,48048,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113258,145078,-2565,48048,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,113583,145342,-2669,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12139,113611,145343,-2669,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,113638,145347,-2668,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,113582,145321,-2658,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,113610,145322,-2659,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,113637,145326,-2658,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,113583,145303,-2644,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,113611,145304,-2645,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,113638,145308,-2644,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12141,113624,144975,-2567,39060,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,115591,144897,-2562,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,115616,144914,-2563,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,115642,144938,-2562,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,115665,144957,-2562,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,115683,144972,-2561,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,115709,144994,-2563,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,115734,145011,-2563,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,115755,145031,-2563,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,115766,145055,-2564,33460,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,115747,145080,-2563,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,115723,145098,-2563,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,115703,145111,-2562,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,115676,145130,-2564,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,115652,145149,-2565,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,115622,145168,-2564,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,115597,145185,-2564,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,115578,145198,-2563,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,115611,144882,-2564,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115635,144900,-2565,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,115661,144924,-2564,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115685,144943,-2564,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,115703,144958,-2563,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115729,144979,-2565,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,115753,144997,-2565,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115774,145016,-2565,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,115785,145041,-2566,33460,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115784,145069,-2563,33460,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,115765,145094,-2562,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115741,145112,-2562,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,115721,145125,-2561,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115694,145144,-2563,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,115670,145163,-2564,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115640,145182,-2563,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,115615,145199,-2563,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115596,145212,-2562,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115716,144854,-2562,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115739,144873,-2562,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115757,144888,-2561,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115783,144910,-2563,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115808,144927,-2564,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115774,145155,-2558,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115754,145168,-2557,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115727,145188,-2559,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115703,145206,-2560,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115673,145225,-2559,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12141,115850,145186,-2560,32004,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,115850,145220,-2561,32004,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,115853,144941,-2561,32004,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12141,115852,144964,-2561,32004,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115578,144889,-2559,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,115632,144880,-2562,22704,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,115723,144961,-2562,22704,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,115714,145146,-2562,22704,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,115611,145218,-2562,22704,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12124,117736,144981,-2624,32728,300,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12125,117739,145093,-2623,32728,180,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,117722,145195,-2629,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,117723,145232,-2629,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,117723,145265,-2629,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,117724,145303,-2629,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,117724,145340,-2628,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,117725,145378,-2628,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,117725,145410,-2628,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,117726,145448,-2628,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12129,117688,145195,-2630,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12129,117689,145233,-2630,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12129,117689,145266,-2630,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12129,117690,145303,-2630,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12129,117690,145341,-2629,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12129,117691,145378,-2629,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12129,117691,145411,-2629,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12129,117692,145448,-2629,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,117650,145197,-2631,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,117651,145235,-2631,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12126,117651,145267,-2631,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,117652,145305,-2631,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,117652,145342,-2630,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12126,117653,145380,-2630,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,117653,145412,-2630,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,117654,145450,-2630,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,117716,144635,-2625,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,117716,144673,-2625,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,117716,144705,-2625,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,117717,144743,-2625,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,117718,144780,-2624,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,117718,144818,-2624,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,117719,144851,-2624,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,117719,144888,-2624,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12129,117681,144636,-2626,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12129,117682,144674,-2626,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12129,117682,144706,-2626,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12129,117683,144744,-2626,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12129,117684,144781,-2625,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12129,117684,144819,-2625,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12129,117684,144851,-2625,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12129,117685,144889,-2625,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,117644,144637,-2627,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,117645,144675,-2627,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12126,117645,144708,-2627,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,117646,144745,-2627,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,117646,144783,-2626,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12126,117647,144820,-2626,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,117647,144853,-2626,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,117648,144890,-2626,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12128,117881,144715,-2624,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12128,117881,144799,-2623,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12128,117882,144878,-2623,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12128,117882,144953,-2623,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12128,117882,145130,-2620,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12128,117882,145213,-2620,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12128,117883,145293,-2620,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12128,117883,145367,-2620,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,116756,145555,-2402,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12139,116756,145529,-2402,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,116756,145501,-2401,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,116778,145555,-2406,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,116778,145528,-2406,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,116778,145501,-2405,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,116803,145554,-2404,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,116803,145527,-2404,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,116802,145500,-2403,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12141,116880,145614,-2404,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12141,116880,145588,-2404,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12141,116880,145560,-2403,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,117453,145359,-2407,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,117490,145360,-2407,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,117527,145360,-2406,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,117563,145361,-2406,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,117599,145361,-2406,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,117637,145362,-2406,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,117668,145362,-2405,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,117705,145363,-2405,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,117740,145364,-2405,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,117777,145364,-2405,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,117814,145364,-2405,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,116690,144580,-2402,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12139,116690,144554,-2402,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12144,116693,144511,-2401,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,116712,144580,-2406,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,116712,144553,-2406,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12143,116712,144526,-2405,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,116737,144579,-2404,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,116737,144552,-2404,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12142,116736,144525,-2403,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12141,116978,144618,-2404,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12141,116978,144592,-2404,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12141,116978,144564,-2403,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,117808,144726,-2407,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,117772,144727,-2407,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,117735,144728,-2406,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,117699,144728,-2406,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,117663,144728,-2406,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,117625,144729,-2406,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,117594,144729,-2405,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,117557,144730,-2405,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,117522,144730,-2405,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,117485,144731,-2405,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,117448,144732,-2405,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112826,145078,-2442,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112714,145078,-2442,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112655,145125,-2442,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112641,145156,-2442,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112641,145192,-2442,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112641,145227,-2442,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112829,144593,-2442,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112794,145078,-2442,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112787,144593,-2442,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112707,144594,-2442,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112650,144548,-2442,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112638,144516,-2442,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112638,144476,-2442,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112638,144435,-2442,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,112746,144593,-2441,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,112675,144582,-2441,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,112678,145088,-2441,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,112762,145078,-2442,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12141,112677,144494,-2442,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12141,112685,145184,-2442,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,114822,144978,-2698,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,114822,145106,-2698,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,114822,145169,-2698,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,114822,144914,-2698,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,114822,144783,-2697,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,114822,144655,-2697,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,114822,145297,-2697,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12132,114822,145426,-2697,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12127,114822,144850,-2693,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12127,114822,145233,-2696,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12127,114822,145490,-2693,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12127,114822,144591,-2693,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12128,114822,145042,-2697,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12128,114822,145361,-2693,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12128,114822,144719,-2693,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,114694,144594,-2709,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,114694,144658,-2709,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,114694,145490,-2709,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,114694,145426,-2709,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12126,114694,145042,-2709,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,114694,144722,-2709,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,114694,144786,-2709,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,114694,144850,-2709,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,114694,144914,-2709,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12126,114694,144978,-2709,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12126,114694,145105,-2709,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,114694,145169,-2709,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,114694,145233,-2709,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,114694,145297,-2709,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12131,114694,145361,-2709,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115259,145274,-2260,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115137,145273,-2260,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115076,145328,-2260,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115057,145353,-2260,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115056,145392,-2260,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115056,145428,-2260,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115216,145274,-2260,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,115101,145302,-2260,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,115177,145274,-2259,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12141,115122,145376,-2261,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115265,144821,-2262,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115225,144821,-2260,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115140,144821,-2261,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115075,144763,-2260,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115055,144736,-2259,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115056,144696,-2260,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,115055,144657,-2260,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,115181,144821,-2258,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,115111,144799,-2261,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12141,115129,144719,-2258,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113581,144772,-2567,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,113579,144832,-2567,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113577,144891,-2566,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113515,144542,-2565,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113516,144572,-2566,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,113513,144601,-2565,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113512,144631,-2565,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113377,145075,-2566,48048,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,113318,145076,-2566,48048,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,113258,145078,-2565,48048,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112826,145078,-2442,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112714,145078,-2442,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112655,145125,-2442,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112641,145192,-2442,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112787,144593,-2442,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112707,144594,-2442,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112650,144548,-2442,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12145,112638,144476,-2442,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,112746,144593,-2441,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,112675,144582,-2441,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,112678,145088,-2441,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12140,112762,145078,-2442,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12141,112677,144494,-2442,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (3,12141,112685,145184,-2442,40960,10800,0);
+INSERT INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
+  (2,665,12109,22037,156573,-2566,57344,10800,0),
+  (2,666,12109,22047,156657,-2567,0,10800,0),
+  (2,667,12110,22631,156572,-2567,40960,10800,0),
+  (2,662,12114,22690,156533,-2567,49152,10800,0),
+  (2,663,12109,22532,156641,-2566,32768,10800,0),
+  (2,664,12109,22543,156570,-2566,40960,10800,0),
+  (2,647,12114,22394,161380,-2530,32384,10800,0),
+  (2,648,12114,22393,161343,-2530,32384,10800,0),
+  (2,649,12114,22047,156721,-2567,0,10800,0),
+  (2,644,12114,22396,161489,-2530,32384,10800,0),
+  (2,645,12114,22395,161452,-2530,32384,10800,0),
+  (2,646,12109,22395,161417,-2530,32384,10800,0),
+  (2,653,12114,21933,156536,-2567,49152,10800,0),
+  (2,654,12114,21898,156536,-2567,49152,10800,0),
+  (2,655,12114,22532,156724,-2567,32768,10800,0),
+  (2,650,12114,22047,156609,-2567,0,10800,0),
+  (2,651,12114,22000,156550,-2567,57344,10800,0),
+  (2,652,12114,21969,156536,-2567,49152,10800,0),
+  (2,668,12110,21941,156580,-2567,57344,10800,0),
+  (2,684,12100,22531,158589,-2834,49152,10800,0),
+  (2,685,12100,22467,158589,-2834,49152,10800,0),
+  (2,686,12100,21635,158589,-2834,49152,10800,0),
+  (2,681,12097,22083,158717,-2822,49152,10800,0),
+  (2,682,12097,21764,158717,-2818,49152,10800,0),
+  (2,683,12097,22406,158717,-2818,49152,10800,0),
+  (2,690,12100,22339,158589,-2834,49152,10800,0),
+  (2,691,12100,22275,158589,-2834,49152,10800,0),
+  (2,692,12100,22211,158589,-2834,49152,10800,0),
+  (2,687,12100,21699,158589,-2834,49152,10800,0),
+  (2,688,12095,22083,158589,-2834,49152,10800,0),
+  (2,689,12100,22403,158589,-2834,49152,10800,0),
+  (2,672,12101,22211,158717,-2823,49152,10800,0),
+  (2,673,12101,22342,158717,-2822,49152,10800,0),
+  (2,674,12101,22470,158717,-2822,49152,10800,0),
+  (2,669,12101,22147,158717,-2823,49152,10800,0),
+  (2,670,12101,22019,158717,-2823,49152,10800,0),
+  (2,671,12101,21956,158717,-2823,49152,10800,0),
+  (2,678,12096,21892,158717,-2821,49152,10800,0),
+  (2,679,12096,21635,158717,-2818,49152,10800,0),
+  (2,680,12096,22534,158717,-2818,49152,10800,0),
+  (2,675,12101,21828,158717,-2822,49152,10800,0),
+  (2,676,12101,21699,158717,-2822,49152,10800,0),
+  (2,677,12096,22275,158717,-2818,49152,10800,0),
+  (2,446,12114,22590,157196,-2964,32080,10800,0),
+  (2,447,12114,22592,157226,-2964,32080,10800,0),
+  (2,444,12114,22591,157135,-2965,32080,10800,0),
+  (2,445,12114,22591,157165,-2964,32080,10800,0),
+  (2,448,12114,22590,157256,-2963,32080,10800,0),
+  (2,451,12114,22590,157347,-2963,32080,10800,0),
+  (2,452,12114,22738,157123,-2966,32080,10800,0),
+  (2,449,12114,22590,157286,-2963,32080,10800,0),
+  (2,450,12114,22589,157315,-2962,32080,10800,0),
+  (2,437,12111,22571,157182,-2960,32080,10800,0),
+  (2,438,12112,22572,157212,-2961,32080,10800,0),
+  (2,435,12112,22571,157121,-2961,32080,10800,0),
+  (2,436,12112,22571,157151,-2961,32080,10800,0),
+  (2,439,12112,22570,157242,-2960,32080,10800,0),
+  (2,442,12112,22570,157333,-2960,32080,10800,0),
+  (2,443,12114,22592,157105,-2965,32080,10800,0),
+  (2,440,12111,22570,157272,-2960,32080,10800,0),
+  (2,441,12112,22569,157301,-2959,32080,10800,0),
+  (2,464,12100,22602,157183,-2941,32080,60,0),
+  (2,465,12100,22599,157123,-2941,32080,60,0),
+  (2,462,12100,22601,157336,-2941,32080,60,0),
+  (2,463,12100,22602,157272,-2941,32080,60,0),
+  (2,466,12114,22353,157476,-2692,48668,10800,0),
+  (2,469,12114,22263,157473,-2692,48668,10800,0),
+  (2,470,12114,22234,157472,-2691,48668,10800,0),
+  (2,467,12114,22323,157477,-2693,48668,10800,0),
+  (2,468,12109,22293,157474,-2692,48668,10800,0),
+  (2,455,12114,22737,157214,-2964,32080,10800,0),
+  (2,456,12114,22738,157244,-2964,32080,10800,0),
+  (2,453,12114,22738,157153,-2965,32080,10800,0),
+  (2,454,12114,22738,157184,-2965,32080,10800,0),
+  (2,457,12114,22736,157274,-2964,32080,10800,0),
+  (2,460,12110,22839,157454,-2957,48668,10800,0),
+  (2,461,12110,22809,157455,-2958,48668,10800,0),
+  (2,458,12114,22735,157304,-2963,32080,10800,0),
+  (2,459,12114,22735,157334,-2963,32080,10800,0),
+  (2,410,12112,22347,156705,-2953,48376,10800,0),
+  (2,411,12111,22319,156705,-2953,48376,10800,0),
+  (2,408,12112,22403,156705,-2953,48376,10800,0),
+  (2,409,12111,22375,156705,-2953,48376,10800,0),
+  (2,412,12112,22291,156705,-2953,48376,10800,0),
+  (2,415,12111,22207,156705,-2953,48376,10800,0),
+  (2,416,12112,22179,156705,-2953,48376,10800,0),
+  (2,413,12111,22263,156705,-2953,48376,10800,0),
+  (2,414,12112,22235,156705,-2953,48376,10800,0),
+  (2,401,12114,22347,156725,-2953,48376,10800,0),
+  (2,402,12114,22319,156725,-2953,48376,10800,0),
+  (2,399,12114,22403,156725,-2953,48376,10800,0),
+  (2,400,12114,22375,156725,-2953,48376,10800,0),
+  (2,403,12114,22291,156725,-2953,48376,10800,0),
+  (2,406,12114,22207,156725,-2953,48376,10800,0),
+  (2,407,12114,22179,156725,-2953,48376,10800,0),
+  (2,404,12114,22263,156725,-2953,48376,10800,0),
+  (2,405,12114,22235,156725,-2953,48376,10800,0),
+  (2,428,12108,22545,157164,-2942,32080,10800,0),
+  (2,429,12113,22545,157194,-2941,32080,10800,0),
+  (2,426,12113,22546,157103,-2943,32080,10800,0),
+  (2,427,12113,22545,157134,-2942,32080,10800,0),
+  (2,430,12113,22546,157225,-2942,32080,10800,0),
+  (2,433,12113,22544,157314,-2940,32080,10800,0),
+  (2,434,12113,22545,157345,-2941,32080,10800,0),
+  (2,431,12113,22544,157254,-2941,32080,10800,0),
+  (2,432,12108,22544,157284,-2941,32080,10800,0),
+  (2,419,12113,22347,156685,-2953,48376,10800,0),
+  (2,420,12113,22319,156685,-2953,48376,10800,0),
+  (2,417,12113,22403,156685,-2953,48376,10800,0),
+  (2,418,12113,22375,156685,-2953,48376,10800,0),
+  (2,421,12108,22291,156685,-2953,48376,10800,0),
+  (2,424,12113,22207,156685,-2953,48376,10800,0),
+  (2,425,12113,22179,156685,-2953,48376,10800,0),
+  (2,422,12113,22263,156685,-2953,48376,10800,0),
+  (2,423,12113,22235,156685,-2953,48376,10800,0),
+  (2,471,12114,22583,157410,-2690,48668,10800,0),
+  (2,519,12114,22013,159636,-2687,58336,10800,0),
+  (2,520,12112,22000,159616,-2686,58336,10800,0),
+  (2,517,12114,22056,159679,-2688,49844,10800,0),
+  (2,518,12112,22031,159660,-2687,58336,10800,0),
+  (2,521,12114,21981,159589,-2688,58336,10800,0),
+  (2,524,12112,21926,159510,-2688,58336,10800,0),
+  (2,525,12114,21913,159491,-2687,58336,10800,0),
+  (2,522,12112,21962,159565,-2689,58336,10800,0),
+  (2,523,12114,21943,159535,-2688,58336,10800,0),
+  (2,510,12112,22201,159556,-2689,39088,10800,0),
+  (2,511,12114,22182,159580,-2689,39088,10800,0),
+  (2,508,12112,22243,159506,-2689,39088,10800,0),
+  (2,509,12114,22225,159530,-2690,39088,10800,0),
+  (2,512,12112,22167,159598,-2688,39088,10800,0),
+  (2,515,12114,22109,159669,-2690,39088,10800,0),
+  (2,516,12112,22084,159680,-2691,49844,10800,0),
+  (2,513,12114,22146,159624,-2690,39088,10800,0),
+  (2,514,12112,22128,159648,-2690,39088,10800,0),
+  (2,537,12109,21905,159745,-2686,48388,10800,0),
+  (2,538,12109,22184,159748,-2686,48388,10800,0),
+  (2,535,12114,21900,159568,-2684,58336,10800,0),
+  (2,536,12110,21939,159745,-2685,48388,10800,0),
+  (2,539,12110,22161,159747,-2686,48388,10800,0),
+  (2,542,12100,22164,159618,-2687,39088,60,0),
+  (2,543,12100,21979,159609,-2687,39088,60,0),
+  (2,540,12114,22236,159473,-2684,58336,10800,0),
+  (2,541,12100,22245,159527,-2687,39088,60,0),
+  (2,528,12114,22237,159652,-2686,39088,10800,0),
+  (2,529,12114,22215,159678,-2688,39088,10800,0),
+  (2,526,12114,22271,159611,-2687,39088,10800,0),
+  (2,527,12114,22252,159634,-2687,39088,10800,0),
+  (2,530,12114,22198,159703,-2689,39088,10800,0),
+  (2,533,12114,21937,159622,-2684,58336,10800,0),
+  (2,534,12114,21919,159598,-2685,58336,10800,0),
+  (2,531,12114,21970,159669,-2683,58336,10800,0),
+  (2,532,12114,21957,159649,-2682,58336,10800,0),
+  (2,483,12113,21778,157533,-2793,32712,10800,0),
+  (2,484,12112,21804,157477,-2783,32712,10800,0),
+  (2,481,12113,21783,157478,-2794,32712,10800,0),
+  (2,482,12108,21782,157506,-2794,32712,10800,0),
+  (2,485,12112,21803,157505,-2784,32712,10800,0),
+  (2,488,12111,21821,157506,-2770,32712,10800,0),
+  (2,489,12111,21817,157533,-2769,32712,10800,0),
+  (2,486,12112,21799,157532,-2783,32712,10800,0),
+  (2,487,12111,21822,157478,-2769,32712,10800,0),
+  (2,474,12114,22494,157407,-2690,48668,10800,0),
+  (2,475,12114,22464,157406,-2689,48668,10800,0),
+  (2,472,12114,22553,157411,-2691,48668,10800,0),
+  (2,473,12109,22524,157408,-2690,48668,10800,0),
+  (2,476,12114,22050,157272,-2691,64432,10800,0),
+  (2,479,12114,22048,157183,-2691,64432,10800,0),
+  (2,480,12114,22047,157153,-2690,64432,10800,0),
+  (2,477,12114,22047,157242,-2692,64432,10800,0),
+  (2,478,12109,22049,157213,-2691,64432,10800,0),
+  (2,501,12111,22027,159618,-2688,58336,10800,0),
+  (2,502,12113,22014,159598,-2687,58336,10800,0),
+  (2,499,12111,22070,159661,-2689,49844,10800,0),
+  (2,500,12113,22045,159642,-2688,58336,10800,0),
+  (2,503,12111,21995,159571,-2689,58336,10800,0),
+  (2,506,12113,21940,159492,-2689,58336,10800,0),
+  (2,507,12111,21927,159473,-2688,58336,10800,0),
+  (2,504,12113,21976,159547,-2690,58336,10800,0),
+  (2,505,12111,21957,159517,-2689,58336,10800,0),
+  (2,492,12113,22211,159511,-2688,39088,10800,0),
+  (2,493,12111,22187,159537,-2687,39088,10800,0),
+  (2,490,12110,22150,157519,-2692,55444,10800,0),
+  (2,491,12111,22228,159486,-2687,39088,10800,0),
+  (2,494,12113,22168,159560,-2687,39088,10800,0),
+  (2,497,12111,22114,159629,-2688,39088,10800,0),
+  (2,498,12113,22094,159650,-2688,39088,10800,0),
+  (2,495,12111,22153,159578,-2686,39088,10800,0),
+  (2,496,12113,22131,159604,-2688,39088,10800,0),
+  (3,953,12142,116803,145554,-2404,32472,10800,0),
+  (3,954,12142,116803,145527,-2404,32472,10800,0),
+  (3,955,12142,116802,145500,-2403,32472,10800,0),
+  (3,950,12143,116778,145555,-2406,32472,10800,0),
+  (3,951,12143,116778,145528,-2406,32472,10800,0),
+  (3,952,12143,116778,145501,-2405,32472,10800,0),
+  (3,959,12145,117453,145359,-2407,49076,10800,0),
+  (3,960,12145,117490,145360,-2407,49076,10800,0),
+  (3,961,12140,117527,145360,-2406,49076,10800,0),
+  (3,956,12141,116880,145614,-2404,32472,10800,0),
+  (3,957,12141,116880,145588,-2404,32472,10800,0),
+  (3,958,12141,116880,145560,-2403,32472,10800,0),
+  (3,941,12128,117882,144878,-2623,32728,120,0),
+  (3,942,12128,117882,144953,-2623,32728,120,0),
+  (3,943,12128,117882,145130,-2620,32728,120,0),
+  (3,938,12131,117648,144890,-2626,32728,120,0),
+  (3,939,12128,117881,144715,-2624,32728,120,0),
+  (3,940,12128,117881,144799,-2623,32728,120,0),
+  (3,947,12144,116756,145555,-2402,32472,10800,0),
+  (3,948,12139,116756,145529,-2402,32472,10800,0),
+  (3,949,12144,116756,145501,-2401,32472,10800,0),
+  (3,944,12128,117882,145213,-2620,32728,120,0),
+  (3,945,12128,117883,145293,-2620,32728,120,0),
+  (3,946,12128,117883,145367,-2620,32728,120,0),
+  (3,962,12145,117563,145361,-2406,49076,10800,0),
+  (3,978,12142,116736,144525,-2403,32472,10800,0),
+  (3,979,12141,116978,144618,-2404,32472,10800,0),
+  (3,980,12141,116978,144592,-2404,32472,10800,0),
+  (3,975,12143,116712,144526,-2405,32472,10800,0),
+  (3,976,12142,116737,144579,-2404,32472,10800,0),
+  (3,977,12142,116737,144552,-2404,32472,10800,0),
+  (3,984,12140,117735,144728,-2406,16000,10800,0),
+  (3,985,12145,117699,144728,-2406,16000,10800,0),
+  (3,986,12145,117663,144728,-2406,16000,10800,0),
+  (3,981,12141,116978,144564,-2403,32472,10800,0),
+  (3,982,12145,117808,144726,-2407,16000,10800,0),
+  (3,983,12145,117772,144727,-2407,16000,10800,0),
+  (3,966,12145,117705,145363,-2405,49076,10800,0),
+  (3,967,12140,117740,145364,-2405,49076,10800,0),
+  (3,968,12145,117777,145364,-2405,49076,10800,0),
+  (3,963,12145,117599,145361,-2406,49076,10800,0),
+  (3,964,12140,117637,145362,-2406,49076,10800,0),
+  (3,965,12145,117668,145362,-2405,49076,10800,0),
+  (3,972,12144,116693,144511,-2401,32472,10800,0),
+  (3,973,12143,116712,144580,-2406,32472,10800,0),
+  (3,974,12143,116712,144553,-2406,32472,10800,0),
+  (3,969,12145,117814,145364,-2405,49076,10800,0),
+  (3,970,12144,116690,144580,-2402,32472,10800,0),
+  (3,971,12139,116690,144554,-2402,32472,10800,0),
+  (3,937,12131,117647,144853,-2626,32728,120,0),
+  (3,903,12129,117690,145341,-2629,32728,120,0),
+  (3,904,12129,117691,145378,-2629,32728,120,0),
+  (3,905,12129,117691,145411,-2629,32728,120,0),
+  (3,900,12129,117689,145233,-2630,32728,120,0),
+  (3,901,12129,117689,145266,-2630,32728,120,0),
+  (3,902,12129,117690,145303,-2630,32728,120,0),
+  (3,909,12126,117651,145267,-2631,32728,120,0),
+  (3,910,12131,117652,145305,-2631,32728,120,0),
+  (3,911,12131,117652,145342,-2630,32728,120,0),
+  (3,906,12129,117692,145448,-2629,32728,120,0),
+  (3,907,12131,117650,145197,-2631,32728,120,0),
+  (3,908,12131,117651,145235,-2631,32728,120,0),
+  (3,891,12132,117722,145195,-2629,32728,120,0),
+  (3,892,12132,117723,145232,-2629,32728,120,0),
+  (3,893,12132,117723,145265,-2629,32728,120,0),
+  (3,888,12131,115611,145218,-2562,22704,60,0),
+  (3,889,12124,117736,144981,-2624,32728,300,0),
+  (3,890,12125,117739,145093,-2623,32728,180,0),
+  (3,897,12132,117725,145410,-2628,32728,120,0),
+  (3,898,12132,117726,145448,-2628,32728,120,0),
+  (3,899,12129,117688,145195,-2630,32728,120,0),
+  (3,894,12132,117724,145303,-2629,32728,120,0),
+  (3,895,12132,117724,145340,-2628,32728,120,0),
+  (3,896,12132,117725,145378,-2628,32728,120,0),
+  (3,912,12126,117653,145380,-2630,32728,120,0),
+  (3,928,12129,117684,144819,-2625,32728,120,0),
+  (3,929,12129,117684,144851,-2625,32728,120,0),
+  (3,930,12129,117685,144889,-2625,32728,120,0),
+  (3,925,12129,117682,144706,-2626,32728,120,0),
+  (3,926,12129,117683,144744,-2626,32728,120,0),
+  (3,927,12129,117684,144781,-2625,32728,120,0),
+  (3,934,12131,117646,144745,-2627,32728,120,0),
+  (3,935,12131,117646,144783,-2626,32728,120,0),
+  (3,936,12126,117647,144820,-2626,32728,120,0),
+  (3,931,12131,117644,144637,-2627,32728,120,0),
+  (3,932,12131,117645,144675,-2627,32728,120,0),
+  (3,933,12126,117645,144708,-2627,32728,120,0),
+  (3,916,12132,117716,144673,-2625,32728,120,0),
+  (3,917,12132,117716,144705,-2625,32728,120,0),
+  (3,918,12132,117717,144743,-2625,32728,120,0),
+  (3,913,12131,117653,145412,-2630,32728,120,0),
+  (3,914,12131,117654,145450,-2630,32728,120,0),
+  (3,915,12132,117716,144635,-2625,32728,120,0),
+  (3,922,12132,117719,144888,-2624,32728,120,0),
+  (3,923,12129,117681,144636,-2626,32728,120,0),
+  (3,924,12129,117682,144674,-2626,32728,120,0),
+  (3,919,12132,117718,144780,-2624,32728,120,0),
+  (3,920,12132,117718,144818,-2624,32728,120,0),
+  (3,921,12132,117719,144851,-2624,32728,120,0),
+  (3,987,12140,117625,144729,-2406,16000,10800,0),
+  (3,1066,12145,113515,144542,-2565,32284,10800,0),
+  (3,1065,12145,113577,144891,-2566,32284,10800,0),
+  (3,1064,12140,113579,144832,-2567,32284,10800,0),
+  (3,1069,12145,113512,144631,-2565,32284,10800,0),
+  (3,1068,12140,113513,144601,-2565,32284,10800,0),
+  (3,1067,12145,113516,144572,-2566,32284,10800,0),
+  (3,1060,12140,115181,144821,-2258,16384,10800,0),
+  (3,1059,12145,115055,144657,-2260,32768,10800,0),
+  (3,1058,12145,115056,144696,-2260,32768,10800,0),
+  (3,1063,12145,113581,144772,-2567,32284,10800,0),
+  (3,1062,12141,115129,144719,-2258,24576,10800,0),
+  (3,1061,12140,115111,144799,-2261,24576,10800,0),
+  (3,1078,12145,112707,144594,-2442,16384,10800,0),
+  (3,1077,12145,112787,144593,-2442,16384,10800,0),
+  (3,1076,12145,112641,145192,-2442,32768,10800,0),
+  (3,1081,12140,112746,144593,-2441,16384,10800,0),
+  (3,1080,12145,112638,144476,-2442,32768,10800,0),
+  (3,1079,12145,112650,144548,-2442,24576,10800,0),
+  (3,1072,12145,113258,145078,-2565,48048,10800,0),
+  (3,1071,12140,113318,145076,-2566,48048,10800,0),
+  (3,1070,12145,113377,145075,-2566,48048,10800,0),
+  (3,1075,12145,112655,145125,-2442,40960,10800,0),
+  (3,1074,12145,112714,145078,-2442,49152,10800,0),
+  (3,1073,12145,112826,145078,-2442,49152,10800,0),
+  (3,1057,12145,115055,144736,-2259,32768,10800,0),
+  (3,1041,12131,114694,145297,-2709,32768,10800,0),
+  (3,1040,12131,114694,145233,-2709,32768,10800,0),
+  (3,1039,12131,114694,145169,-2709,32768,10800,0),
+  (3,1044,12145,115137,145273,-2260,49152,10800,0),
+  (3,1043,12145,115259,145274,-2260,49152,10800,0),
+  (3,1042,12131,114694,145361,-2709,32768,10800,0),
+  (3,1035,12131,114694,144850,-2709,32768,10800,0),
+  (3,1034,12131,114694,144786,-2709,32768,10800,0),
+  (3,1033,12131,114694,144722,-2709,32768,10800,0),
+  (3,1038,12126,114694,145105,-2709,32768,10800,0),
+  (3,1037,12126,114694,144978,-2709,32768,10800,0),
+  (3,1036,12131,114694,144914,-2709,32768,10800,0),
+  (3,1053,12145,115265,144821,-2262,16384,10800,0),
+  (3,1052,12141,115122,145376,-2261,40960,10800,0),
+  (3,1051,12140,115177,145274,-2259,49152,10800,0),
+  (3,1056,12145,115075,144763,-2260,24576,10800,0),
+  (3,1055,12145,115140,144821,-2261,16384,10800,0),
+  (3,1054,12145,115225,144821,-2260,16384,10800,0),
+  (3,1047,12145,115056,145392,-2260,32768,10800,0),
+  (3,1046,12145,115057,145353,-2260,32768,10800,0),
+  (3,1045,12145,115076,145328,-2260,40960,10800,0),
+  (3,1050,12140,115101,145302,-2260,40960,10800,0),
+  (3,1049,12145,115216,145274,-2260,49152,10800,0),
+  (3,1048,12145,115056,145428,-2260,32768,10800,0),
+  (3,1082,12140,112675,144582,-2441,24576,10800,0),
+  (3,1003,12145,112650,144548,-2442,24576,10800,0),
+  (3,1004,12145,112638,144516,-2442,32768,10800,0),
+  (3,1005,12145,112638,144476,-2442,32768,10800,0),
+  (3,1000,12145,112794,145078,-2442,49152,10800,0),
+  (3,1001,12145,112787,144593,-2442,16384,10800,0),
+  (3,1002,12145,112707,144594,-2442,16384,10800,0),
+  (3,1009,12140,112678,145088,-2441,40960,10800,0),
+  (3,1010,12140,112762,145078,-2442,49152,10800,0),
+  (3,1011,12141,112677,144494,-2442,24576,10800,0),
+  (3,1006,12145,112638,144435,-2442,32768,10800,0),
+  (3,1007,12140,112746,144593,-2441,16384,10800,0),
+  (3,1008,12140,112675,144582,-2441,24576,10800,0),
+  (3,991,12145,117485,144731,-2405,16000,10800,0),
+  (3,992,12145,117448,144732,-2405,16000,10800,0),
+  (3,993,12145,112826,145078,-2442,49152,10800,0),
+  (3,988,12145,117594,144729,-2405,16000,10800,0),
+  (3,989,12145,117557,144730,-2405,16000,10800,0),
+  (3,990,12140,117522,144730,-2405,16000,10800,0),
+  (3,997,12145,112641,145192,-2442,32768,10800,0),
+  (3,998,12145,112641,145227,-2442,32768,10800,0),
+  (3,999,12145,112829,144593,-2442,16384,10800,0),
+  (3,994,12145,112714,145078,-2442,49152,10800,0),
+  (3,995,12145,112655,145125,-2442,40960,10800,0),
+  (3,996,12145,112641,145156,-2442,32768,10800,0),
+  (3,1012,12141,112685,145184,-2442,40960,10800,0),
+  (3,1028,12131,114694,144594,-2709,32768,10800,0),
+  (3,1029,12131,114694,144658,-2709,32768,10800,0),
+  (3,1030,12131,114694,145490,-2709,32768,10800,0),
+  (3,1025,12128,114822,145042,-2697,32768,10800,0),
+  (3,1026,12128,114822,145361,-2693,32768,10800,0),
+  (3,1027,12128,114822,144719,-2693,32768,10800,0),
+  (3,1085,12141,112677,144494,-2442,24576,10800,0),
+  (3,1084,12140,112762,145078,-2442,49152,10800,0),
+  (3,1083,12140,112678,145088,-2441,40960,10800,0),
+  (3,1031,12131,114694,145426,-2709,32768,10800,0),
+  (3,1032,12126,114694,145042,-2709,32768,10800,0),
+  (3,1086,12141,112685,145184,-2442,40960,10800,0),
+  (3,1016,12132,114822,144914,-2698,32768,10800,0),
+  (3,1017,12132,114822,144783,-2697,32768,10800,0),
+  (3,1018,12132,114822,144655,-2697,32768,10800,0),
+  (3,1013,12132,114822,144978,-2698,32768,10800,0),
+  (3,1014,12132,114822,145106,-2698,32768,10800,0),
+  (3,1015,12132,114822,145169,-2698,32768,10800,0),
+  (3,1022,12127,114822,145233,-2696,32768,10800,0),
+  (3,1023,12127,114822,145490,-2693,32768,10800,0),
+  (3,1024,12127,114822,144591,-2693,32768,10800,0),
+  (3,1019,12132,114822,145297,-2697,32768,10800,0),
+  (3,1020,12132,114822,145426,-2697,32768,10800,0),
+  (3,1021,12127,114822,144850,-2693,32768,10800,0),
+  (3,790,12145,113301,144535,-2839,15696,10800,0),
+  (3,791,12145,113331,144533,-2839,15696,10800,0),
+  (3,788,12145,113240,144534,-2840,15696,10800,0),
+  (3,789,12145,113270,144534,-2839,15696,10800,0),
+  (3,792,12145,113361,144535,-2838,15696,10800,0),
+  (3,795,12145,113452,144535,-2838,15696,10800,0),
+  (3,796,12145,113228,144387,-2841,15696,10800,0),
+  (3,793,12145,113391,144535,-2838,15696,10800,0),
+  (3,794,12145,113420,144536,-2837,15696,10800,0),
+  (3,781,12142,113287,144554,-2835,15696,10800,0),
+  (3,782,12143,113317,144553,-2836,15696,10800,0),
+  (3,779,12143,113226,144554,-2836,15696,10800,0),
+  (3,780,12143,113256,144554,-2836,15696,10800,0),
+  (3,783,12143,113347,144555,-2835,15696,10800,0),
+  (3,786,12143,113438,144555,-2835,15696,10800,0),
+  (3,787,12145,113210,144533,-2840,15696,10800,0),
+  (3,784,12142,113377,144555,-2835,15696,10800,0),
+  (3,785,12143,113406,144556,-2834,15696,10800,0),
+  (3,808,12131,113288,144523,-2816,15696,60,0),
+  (3,809,12131,113228,144526,-2816,15696,60,0),
+  (3,806,12131,113441,144524,-2816,15696,60,0),
+  (3,807,12131,113377,144523,-2816,15696,60,0),
+  (3,810,12145,113581,144772,-2567,32284,10800,0),
+  (3,813,12145,113578,144862,-2567,32284,10800,0),
+  (3,814,12145,113577,144891,-2566,32284,10800,0),
+  (3,811,12145,113582,144802,-2568,32284,10800,0),
+  (3,812,12140,113579,144832,-2567,32284,10800,0),
+  (3,799,12145,113319,144388,-2839,15696,10800,0),
+  (3,800,12145,113349,144387,-2839,15696,10800,0),
+  (3,797,12145,113258,144387,-2840,15696,10800,0),
+  (3,798,12145,113289,144387,-2840,15696,10800,0),
+  (3,801,12145,113379,144389,-2839,15696,10800,0),
+  (3,804,12141,113559,144286,-2832,32284,10800,0),
+  (3,805,12141,113560,144316,-2833,32284,10800,0),
+  (3,802,12145,113409,144390,-2838,15696,10800,0),
+  (3,803,12145,113439,144390,-2838,15696,10800,0),
+  (3,754,12143,112810,144778,-2828,31992,10800,0),
+  (3,755,12142,112810,144806,-2828,31992,10800,0),
+  (3,752,12143,112810,144722,-2828,31992,10800,0),
+  (3,753,12142,112810,144750,-2828,31992,10800,0),
+  (3,756,12143,112810,144834,-2828,31992,10800,0),
+  (3,759,12142,112810,144918,-2828,31992,10800,0),
+  (3,760,12143,112810,144946,-2828,31992,10800,0),
+  (3,757,12142,112810,144862,-2828,31992,10800,0),
+  (3,758,12143,112810,144890,-2828,31992,10800,0),
+  (3,745,12145,112830,144778,-2828,31992,10800,0),
+  (3,746,12145,112830,144806,-2828,31992,10800,0),
+  (3,743,12145,112830,144722,-2828,31992,10800,0),
+  (3,744,12145,112830,144750,-2828,31992,10800,0),
+  (3,747,12145,112830,144834,-2828,31992,10800,0),
+  (3,750,12145,112830,144918,-2828,31992,10800,0),
+  (3,751,12145,112830,144946,-2828,31992,10800,0),
+  (3,748,12145,112830,144862,-2828,31992,10800,0),
+  (3,749,12145,112830,144890,-2828,31992,10800,0),
+  (3,772,12139,113269,144580,-2817,15696,10800,0),
+  (3,773,12144,113299,144580,-2816,15696,10800,0),
+  (3,770,12144,113208,144579,-2818,15696,10800,0),
+  (3,771,12144,113239,144580,-2817,15696,10800,0),
+  (3,774,12144,113330,144579,-2817,15696,10800,0),
+  (3,777,12144,113419,144581,-2815,15696,10800,0),
+  (3,778,12144,113450,144580,-2816,15696,10800,0),
+  (3,775,12144,113359,144581,-2816,15696,10800,0),
+  (3,776,12139,113389,144581,-2816,15696,10800,0),
+  (3,763,12144,112790,144778,-2828,31992,10800,0),
+  (3,764,12144,112790,144806,-2828,31992,10800,0),
+  (3,761,12144,112790,144722,-2828,31992,10800,0),
+  (3,762,12144,112790,144750,-2828,31992,10800,0),
+  (3,765,12139,112790,144834,-2828,31992,10800,0),
+  (3,768,12144,112790,144918,-2828,31992,10800,0),
+  (3,769,12144,112790,144946,-2828,31992,10800,0),
+  (3,766,12144,112790,144862,-2828,31992,10800,0),
+  (3,767,12144,112790,144890,-2828,31992,10800,0),
+  (3,815,12145,113515,144542,-2565,32284,10800,0),
+  (3,863,12145,115741,145112,-2562,41952,10800,0),
+  (3,864,12143,115721,145125,-2561,41952,10800,0),
+  (3,861,12145,115784,145069,-2563,33460,10800,0),
+  (3,862,12143,115765,145094,-2562,41952,10800,0),
+  (3,865,12145,115694,145144,-2563,41952,10800,0),
+  (3,868,12143,115615,145199,-2563,41952,10800,0),
+  (3,869,12145,115596,145212,-2562,41952,10800,0),
+  (3,866,12143,115670,145163,-2564,41952,10800,0),
+  (3,867,12145,115640,145182,-2563,41952,10800,0),
+  (3,854,12143,115661,144924,-2564,22704,10800,0),
+  (3,855,12145,115685,144943,-2564,22704,10800,0),
+  (3,852,12143,115611,144882,-2564,22704,10800,0),
+  (3,853,12145,115635,144900,-2565,22704,10800,0),
+  (3,856,12143,115703,144958,-2563,22704,10800,0),
+  (3,859,12145,115774,145016,-2565,22704,10800,0),
+  (3,860,12143,115785,145041,-2566,33460,10800,0),
+  (3,857,12145,115729,144979,-2565,22704,10800,0),
+  (3,858,12143,115753,144997,-2565,22704,10800,0),
+  (3,881,12140,115850,145220,-2561,32004,10800,0),
+  (3,882,12140,115853,144941,-2561,32004,10800,0),
+  (3,879,12145,115673,145225,-2559,41952,10800,0),
+  (3,880,12141,115850,145186,-2560,32004,10800,0),
+  (3,883,12141,115852,144964,-2561,32004,10800,0),
+  (3,886,12131,115723,144961,-2562,22704,60,0),
+  (3,887,12131,115714,145146,-2562,22704,60,0),
+  (3,884,12145,115578,144889,-2559,41952,10800,0),
+  (3,885,12131,115632,144880,-2562,22704,60,0),
+  (3,872,12145,115757,144888,-2561,22704,10800,0),
+  (3,873,12145,115783,144910,-2563,22704,10800,0),
+  (3,870,12145,115716,144854,-2562,22704,10800,0),
+  (3,871,12145,115739,144873,-2562,22704,10800,0),
+  (3,874,12145,115808,144927,-2564,22704,10800,0),
+  (3,877,12145,115727,145188,-2559,41952,10800,0),
+  (3,878,12145,115703,145206,-2560,41952,10800,0),
+  (3,875,12145,115774,145155,-2558,41952,10800,0),
+  (3,876,12145,115754,145168,-2557,41952,10800,0),
+  (3,827,12144,113638,145347,-2668,16328,10800,0),
+  (3,828,12143,113582,145321,-2658,16328,10800,0),
+  (3,825,12144,113583,145342,-2669,16328,10800,0),
+  (3,826,12139,113611,145343,-2669,16328,10800,0);
 
--- Gludio
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18432,113096,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18404,113096,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18376,113096,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18348,113096,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18320,113096,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18292,113096,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18264,113096,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18236,113096,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18208,113096,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18432,113116,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-18404,113116,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18376,113116,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-18348,113116,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18320,113116,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-18292,113116,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18264,113116,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-18236,113116,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18208,113116,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18432,113136,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18404,113136,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18376,113136,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18348,113136,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12025,-18320,113136,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18292,113136,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18264,113136,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18236,113136,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18208,113136,-2684,15608,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18575,112718,-2674,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18574,112687,-2673,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12025,-18574,112657,-2673,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18574,112627,-2672,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18575,112596,-2673,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18573,112567,-2672,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12025,-18573,112537,-2672,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18573,112507,-2671,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18574,112476,-2672,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18600,112700,-2692,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18600,112670,-2692,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-18600,112639,-2691,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18601,112609,-2692,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18599,112579,-2691,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-18599,112549,-2691,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18598,112520,-2690,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18599,112488,-2691,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18621,112716,-2696,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18620,112686,-2696,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18620,112656,-2695,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18619,112625,-2695,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18621,112595,-2695,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18619,112565,-2694,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18619,112535,-2694,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18618,112506,-2693,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18619,112474,-2694,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18767,112698,-2697,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18767,112668,-2696,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18767,112637,-2696,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18766,112607,-2695,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18767,112577,-2695,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18765,112547,-2695,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18764,112517,-2694,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18764,112487,-2694,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12027,-18868,112367,-2688,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12027,-18838,112366,-2689,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18630,112485,-2672,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18631,112549,-2672,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18631,112638,-2672,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18628,112698,-2672,-688,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18382,112345,-2423,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18352,112344,-2424,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18322,112347,-2423,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18292,112348,-2423,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18263,112349,-2422,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18612,112411,-2421,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18582,112410,-2422,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18553,112413,-2421,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18523,112414,-2421,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18493,112415,-2420,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18079,112549,-2422,31664,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18076,112579,-2423,31664,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18078,112608,-2422,31664,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18077,112638,-2422,31664,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18076,112668,-2421,31664,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-17812,112343,-2525,-56,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12025,-17811,112315,-2525,-56,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-17807,112288,-2524,-56,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-17833,112344,-2514,-56,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-17832,112316,-2515,-56,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-17828,112289,-2514,-56,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-17851,112343,-2500,-56,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-17850,112315,-2501,-56,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-17846,112288,-2500,-56,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12027,-18179,112302,-2423,22676,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-18257,110335,-2418,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18240,110310,-2419,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-18216,110284,-2418,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18197,110261,-2418,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-18182,110243,-2417,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18160,110217,-2419,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-18143,110192,-2419,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18123,110171,-2419,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-18099,110160,-2420,17076,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18074,110179,-2419,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-18056,110203,-2419,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18043,110223,-2418,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-18024,110250,-2420,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18005,110274,-2421,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-17986,110304,-2420,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-17969,110329,-2420,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-17956,110348,-2419,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18272,110315,-2420,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18254,110291,-2421,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18230,110265,-2420,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18211,110241,-2420,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18196,110223,-2419,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18175,110197,-2421,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18157,110173,-2421,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18138,110152,-2421,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18113,110141,-2422,17076,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18085,110142,-2419,17076,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18060,110161,-2418,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18042,110185,-2418,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18029,110205,-2417,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18010,110232,-2419,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-17991,110256,-2420,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17972,110286,-2419,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-17955,110311,-2419,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17942,110330,-2418,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18300,110210,-2418,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18281,110187,-2418,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18266,110169,-2417,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18244,110143,-2419,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18227,110118,-2420,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17999,110152,-2414,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17986,110172,-2413,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17966,110199,-2415,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17948,110223,-2416,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17929,110253,-2415,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12027,-17968,110076,-2416,15620,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-17934,110076,-2417,15620,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18213,110073,-2417,15620,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12027,-18190,110074,-2417,15620,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18265,110348,-2415,25568,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18274,110294,-2418,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18193,110203,-2418,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18008,110212,-2418,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-17936,110315,-2418,6320,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12009,-18173,108190,-2480,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12010,-18061,108187,-2479,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-17959,108204,-2485,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-17922,108203,-2485,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-17889,108203,-2485,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-17851,108202,-2485,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-17814,108202,-2484,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-17776,108201,-2484,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-17744,108201,-2484,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-17706,108200,-2484,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12014,-17959,108238,-2486,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12014,-17921,108237,-2486,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12014,-17888,108237,-2486,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12014,-17851,108236,-2486,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12014,-17813,108236,-2485,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12014,-17776,108235,-2485,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12014,-17743,108235,-2485,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12014,-17706,108234,-2485,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-17957,108276,-2487,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-17919,108275,-2487,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12011,-17887,108275,-2487,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-17849,108274,-2487,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-17812,108274,-2486,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12011,-17774,108273,-2486,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-17742,108273,-2486,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-17704,108272,-2486,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-18519,108210,-2481,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-18481,108210,-2481,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-18449,108210,-2481,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-18411,108209,-2481,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-18374,108208,-2480,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-18336,108208,-2480,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-18303,108207,-2480,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-18266,108207,-2480,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12014,-18518,108245,-2482,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12014,-18480,108244,-2482,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12014,-18448,108244,-2482,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12014,-18410,108243,-2482,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12014,-18373,108242,-2481,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12014,-18335,108242,-2481,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12014,-18303,108242,-2481,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12014,-18265,108241,-2481,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18517,108282,-2483,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18479,108281,-2483,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12011,-18446,108281,-2483,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18409,108280,-2483,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18371,108280,-2482,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12011,-18334,108279,-2482,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18301,108279,-2482,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18264,108278,-2482,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12013,-18439,108045,-2480,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12013,-18355,108045,-2479,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12013,-18276,108044,-2479,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12013,-18201,108044,-2479,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12013,-18024,108044,-2476,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12013,-17941,108044,-2476,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12013,-17861,108043,-2476,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12013,-17787,108043,-2476,16344,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-17599,109170,-2258,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12025,-17625,109170,-2258,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-17653,109170,-2257,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-17599,109148,-2262,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-17626,109148,-2262,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-17653,109148,-2261,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-17600,109123,-2260,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-17627,109123,-2260,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-17654,109124,-2259,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12027,-17540,109046,-2260,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12027,-17566,109046,-2260,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12027,-17594,109046,-2259,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17795,108473,-2263,32692,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17794,108436,-2263,32692,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-17794,108399,-2262,32692,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17793,108363,-2262,32692,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17793,108327,-2262,32692,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-17792,108289,-2262,32692,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17792,108258,-2261,32692,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17791,108221,-2261,32692,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-17790,108186,-2261,32692,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17790,108149,-2261,32692,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17790,108112,-2261,32692,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18574,109236,-2258,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12025,-18600,109236,-2258,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12030,-18643,109233,-2257,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18574,109214,-2262,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18601,109214,-2262,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12029,-18628,109214,-2261,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-18575,109189,-2260,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-18602,109189,-2260,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12028,-18629,109190,-2259,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12027,-18536,108948,-2260,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12027,-18562,108948,-2260,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12027,-18590,108948,-2259,16088,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18428,108118,-2263,65152,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18427,108154,-2263,65152,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18426,108191,-2262,65152,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18426,108227,-2262,65152,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18426,108263,-2262,65152,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18425,108301,-2262,65152,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18425,108332,-2261,65152,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18424,108369,-2261,65152,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18424,108404,-2261,65152,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18423,108441,-2261,65152,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18422,108478,-2261,65152,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18076,113100,-2298,32768,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18076,113212,-2298,32768,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18029,113271,-2298,24576,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17998,113285,-2298,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17962,113285,-2298,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17927,113285,-2298,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18561,113097,-2298,0,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18076,113132,-2298,32768,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18561,113139,-2298,0,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18560,113219,-2298,0,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18606,113276,-2298,8192,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18638,113288,-2298,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18678,113288,-2298,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18719,113288,-2298,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18561,113180,-2297,0,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18572,113251,-2297,8192,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18066,113248,-2297,24576,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18076,113164,-2298,32768,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12027,-18660,113249,-2298,8192,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12027,-17970,113241,-2298,24576,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-18176,111104,-2554,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-18048,111104,-2554,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-17985,111104,-2554,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-18240,111104,-2554,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-18371,111104,-2553,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-18499,111104,-2553,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-17857,111104,-2553,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12017,-17728,111104,-2553,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12012,-18304,111104,-2549,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12012,-17921,111104,-2552,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12012,-17664,111104,-2549,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12012,-18563,111104,-2549,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12013,-18112,111104,-2553,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12013,-17793,111104,-2549,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12013,-18435,111104,-2549,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18560,111232,-2565,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18496,111232,-2565,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-17664,111232,-2565,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-17728,111232,-2565,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12011,-18112,111232,-2565,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18432,111232,-2565,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18368,111232,-2565,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18304,111232,-2565,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-18240,111232,-2565,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12011,-18176,111232,-2565,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12011,-18049,111232,-2565,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-17985,111232,-2565,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-17921,111232,-2565,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-17857,111232,-2565,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12016,-17793,111232,-2565,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17880,110667,-2116,32768,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17881,110789,-2116,32768,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17826,110850,-2116,24576,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17801,110869,-2116,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17762,110870,-2116,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17726,110870,-2116,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17880,110710,-2116,32768,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-17852,110825,-2116,24576,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-17880,110749,-2115,32768,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12027,-17778,110804,-2117,24576,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18333,110661,-2118,0,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18333,110701,-2116,0,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18333,110786,-2117,0,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18391,110851,-2116,8192,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18418,110871,-2115,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18458,110870,-2116,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18497,110871,-2116,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18333,110745,-2114,0,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18355,110815,-2117,8192,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12027,-18435,110797,-2114,8192,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18382,112345,-2423,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18322,112347,-2423,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18263,112349,-2422,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18612,112411,-2421,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18582,112410,-2422,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18553,112413,-2421,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18523,112414,-2421,15900,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18079,112549,-2422,31664,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18078,112608,-2422,31664,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18076,112668,-2421,31664,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18076,113100,-2298,32768,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18076,113212,-2298,32768,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18029,113271,-2298,24576,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-17962,113285,-2298,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18561,113139,-2298,0,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18560,113219,-2298,0,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18606,113276,-2298,8192,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12031,-18678,113288,-2298,16384,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18561,113180,-2297,0,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18572,113251,-2297,8192,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18066,113248,-2297,24576,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12026,-18076,113164,-2298,32768,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12027,-18660,113249,-2298,8192,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (1,12027,-17970,113241,-2298,24576,60,0);
+COMMIT;
 
--- Oren
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78908,36870,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78908,36898,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78908,36926,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78908,36954,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78908,36982,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78908,37010,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78908,37038,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78908,37066,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78908,37094,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,78888,36870,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,78888,36898,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,78888,36926,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,78888,36954,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,78888,36982,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,78888,37010,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,78888,37038,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,78888,37066,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,78888,37094,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,78868,36870,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,78868,36898,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,78868,36926,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,78868,36954,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12227,78868,36982,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,78868,37010,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,78868,37038,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,78868,37066,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,78868,37094,-2549,31992,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,79286,36727,-2539,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,79317,36728,-2538,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12227,79347,36728,-2538,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,79377,36728,-2537,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,79408,36727,-2538,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,79437,36729,-2537,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12227,79467,36729,-2537,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,79497,36729,-2536,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,79528,36728,-2537,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,79304,36702,-2557,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,79334,36702,-2557,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,79365,36702,-2556,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,79395,36701,-2557,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,79425,36703,-2556,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,79455,36703,-2556,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,79484,36704,-2555,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,79516,36703,-2556,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79288,36681,-2561,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79318,36682,-2561,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79348,36682,-2560,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79379,36683,-2560,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79409,36681,-2560,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79439,36683,-2559,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79469,36683,-2559,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79498,36684,-2558,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79530,36683,-2559,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79306,36535,-2562,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79336,36535,-2561,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79367,36535,-2561,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79397,36536,-2560,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79427,36535,-2560,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79457,36537,-2560,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79487,36538,-2559,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79517,36538,-2559,15696,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12229,79637,36434,-2553,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12229,79638,36464,-2554,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,79519,36672,-2537,15696,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,79455,36671,-2537,15696,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,79366,36671,-2537,15696,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,79306,36674,-2537,15696,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79659,36920,-2288,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79660,36950,-2289,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,79657,36980,-2288,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79656,37010,-2288,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79655,37039,-2287,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79593,36690,-2286,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79594,36720,-2287,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,79591,36749,-2286,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79590,36779,-2286,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79589,36809,-2285,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79455,37223,-2287,48048,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79425,37226,-2288,48048,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,79396,37224,-2287,48048,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79366,37225,-2287,48048,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79336,37226,-2286,48048,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,79661,37490,-2390,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12227,79689,37491,-2390,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,79716,37495,-2389,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,79660,37469,-2379,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,79688,37470,-2380,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,79715,37474,-2379,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,79661,37451,-2365,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,79689,37452,-2366,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,79716,37456,-2365,16328,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12229,79702,37123,-2288,39060,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,81669,37045,-2283,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,81694,37062,-2284,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,81720,37086,-2283,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,81743,37105,-2283,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,81761,37120,-2282,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,81787,37142,-2284,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,81812,37159,-2284,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,81833,37179,-2284,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,81844,37203,-2285,33460,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,81825,37228,-2284,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,81801,37246,-2284,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,81781,37259,-2283,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,81754,37278,-2285,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,81730,37297,-2286,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,81700,37316,-2285,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,81675,37333,-2285,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,81656,37346,-2284,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,81689,37030,-2285,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81713,37048,-2286,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,81739,37072,-2285,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81763,37091,-2285,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,81781,37106,-2284,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81807,37127,-2286,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,81831,37145,-2286,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81852,37164,-2286,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,81863,37189,-2287,33460,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81862,37217,-2284,33460,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,81843,37242,-2283,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81819,37260,-2283,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,81799,37273,-2282,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81772,37292,-2284,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,81748,37311,-2285,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81718,37330,-2284,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,81693,37347,-2284,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81674,37360,-2283,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81794,37002,-2283,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81817,37021,-2283,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81835,37036,-2282,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81861,37058,-2284,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81886,37075,-2285,22704,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81852,37303,-2279,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81832,37316,-2278,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81805,37336,-2280,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81781,37354,-2281,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81751,37373,-2280,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12229,81928,37334,-2281,32004,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,81928,37368,-2282,32004,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,81931,37089,-2282,32004,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12229,81930,37112,-2282,32004,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81656,37037,-2280,41952,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,81710,37028,-2283,22704,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,81801,37109,-2283,22704,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,81792,37294,-2283,22704,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,81689,37366,-2283,22704,60,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12212,83814,37129,-2345,32728,300,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12213,83817,37241,-2344,32728,180,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,83800,37343,-2350,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,83801,37380,-2350,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,83801,37413,-2350,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,83802,37451,-2350,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,83802,37488,-2349,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,83803,37526,-2349,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,83803,37558,-2349,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,83804,37596,-2349,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12217,83766,37343,-2351,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12217,83767,37381,-2351,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12217,83767,37414,-2351,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12217,83768,37451,-2351,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12217,83768,37489,-2350,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12217,83769,37526,-2350,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12217,83769,37559,-2350,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12217,83770,37596,-2350,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,83728,37345,-2352,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,83729,37383,-2352,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12214,83729,37415,-2352,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,83730,37453,-2352,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,83730,37490,-2351,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12214,83731,37528,-2351,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,83731,37560,-2351,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,83732,37598,-2351,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,83794,36783,-2346,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,83794,36821,-2346,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,83794,36853,-2346,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,83795,36891,-2346,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,83796,36928,-2345,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,83796,36966,-2345,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,83797,36999,-2345,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,83797,37036,-2345,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12217,83759,36784,-2347,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12217,83760,36822,-2347,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12217,83760,36854,-2347,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12217,83761,36892,-2347,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12217,83762,36929,-2346,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12217,83762,36967,-2346,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12217,83762,36999,-2346,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12217,83763,37037,-2346,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,83722,36785,-2348,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,83723,36823,-2348,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12214,83723,36856,-2348,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,83724,36893,-2348,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,83724,36931,-2347,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12214,83725,36968,-2347,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,83725,37001,-2347,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,83726,37038,-2347,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12216,83959,36863,-2345,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12216,83959,36947,-2344,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12216,83960,37026,-2344,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12216,83960,37101,-2344,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12216,83960,37278,-2341,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12216,83960,37361,-2341,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12216,83961,37441,-2341,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12216,83961,37515,-2341,32728,120,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,82834,37703,-2123,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12227,82834,37677,-2123,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,82834,37649,-2122,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,82856,37703,-2127,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,82856,37676,-2127,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,82856,37649,-2126,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,82881,37702,-2125,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,82881,37675,-2125,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,82880,37648,-2124,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12229,82958,37762,-2125,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12229,82958,37736,-2125,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12229,82958,37708,-2124,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,83531,37507,-2128,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,83568,37508,-2128,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,83605,37508,-2127,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,83641,37509,-2127,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,83677,37509,-2127,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,83715,37510,-2127,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,83746,37510,-2126,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,83783,37511,-2126,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,83818,37512,-2126,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,83855,37512,-2126,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,83892,37512,-2126,49076,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,82768,36728,-2123,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12227,82768,36702,-2123,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12232,82771,36659,-2122,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,82790,36728,-2127,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,82790,36701,-2127,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12231,82790,36674,-2126,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,82815,36727,-2125,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,82815,36700,-2125,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12230,82814,36673,-2124,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12229,83056,36766,-2125,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12229,83056,36740,-2125,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12229,83056,36712,-2124,32472,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,83886,36874,-2128,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,83850,36875,-2128,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,83813,36876,-2127,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,83777,36876,-2127,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,83741,36876,-2127,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,83703,36877,-2127,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,83672,36877,-2126,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,83635,36878,-2126,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,83600,36878,-2126,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,83563,36879,-2126,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,83526,36880,-2126,16000,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78904,37226,-2163,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78792,37226,-2163,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78733,37273,-2163,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78719,37304,-2163,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78719,37340,-2163,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78719,37375,-2163,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78907,36741,-2163,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78872,37226,-2163,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78865,36741,-2163,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78785,36742,-2163,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78728,36696,-2163,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78716,36664,-2163,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78716,36624,-2163,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78716,36583,-2163,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,78824,36741,-2162,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,78753,36730,-2162,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,78756,37236,-2162,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,78840,37226,-2163,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12229,78755,36642,-2163,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12229,78763,37332,-2163,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,80900,37126,-2419,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,80900,37254,-2419,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,80900,37317,-2419,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,80900,37062,-2419,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,80900,36931,-2418,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,80900,36803,-2418,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,80900,37445,-2418,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12220,80900,37574,-2418,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12215,80900,36998,-2414,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12215,80900,37381,-2417,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12215,80900,37638,-2414,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12215,80900,36739,-2414,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12216,80900,37190,-2418,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12216,80900,37509,-2414,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12216,80900,36867,-2414,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,80772,36742,-2430,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,80772,36806,-2430,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,80772,37638,-2430,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,80772,37574,-2430,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12214,80772,37190,-2430,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,80772,36870,-2430,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,80772,36934,-2430,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,80772,36998,-2430,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,80772,37062,-2430,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12214,80772,37126,-2430,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12214,80772,37253,-2430,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,80772,37317,-2430,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,80772,37381,-2430,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,80772,37445,-2430,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12219,80772,37509,-2430,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81337,37422,-1981,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81215,37421,-1981,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81154,37476,-1981,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81135,37501,-1981,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81134,37540,-1981,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81134,37576,-1981,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81294,37422,-1981,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,81179,37450,-1981,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,81255,37422,-1980,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12229,81200,37524,-1982,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81343,36969,-1983,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81303,36969,-1981,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81218,36969,-1982,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81153,36911,-1981,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81133,36884,-1980,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81134,36844,-1981,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,81133,36805,-1981,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,81259,36969,-1979,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,81189,36947,-1982,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12229,81207,36867,-1979,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79659,36920,-2288,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,79657,36980,-2288,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79655,37039,-2287,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79593,36690,-2286,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79594,36720,-2287,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,79591,36749,-2286,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79590,36779,-2286,32284,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79455,37223,-2287,48048,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,79396,37224,-2287,48048,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,79336,37226,-2286,48048,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78904,37226,-2163,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78792,37226,-2163,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78733,37273,-2163,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78719,37340,-2163,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78865,36741,-2163,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78785,36742,-2163,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78728,36696,-2163,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12233,78716,36624,-2163,32768,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,78824,36741,-2162,16384,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,78753,36730,-2162,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,78756,37236,-2162,40960,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12228,78840,37226,-2163,49152,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12229,78755,36642,-2163,24576,10800,0);
-Insert Into castle_siege_guards (castleId,npcId,x,y,z,heading,respawnDelay,isHired) Values (4,12229,78763,37332,-2163,40960,10800,0);
+INSERT INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
+  (3,829,12143,113610,145322,-2659,16328,10800,0),
+  (3,832,12142,113611,145304,-2645,16328,10800,0),
+  (3,833,12142,113638,145308,-2644,16328,10800,0),
+  (3,830,12143,113637,145326,-2658,16328,10800,0),
+  (3,831,12142,113583,145303,-2644,16328,10800,0),
+  (3,818,12145,113512,144631,-2565,32284,10800,0),
+  (3,819,12145,113511,144661,-2564,32284,10800,0),
+  (3,816,12145,113516,144572,-2566,32284,10800,0),
+  (3,817,12140,113513,144601,-2565,32284,10800,0),
+  (3,820,12145,113377,145075,-2566,48048,10800,0),
+  (3,823,12145,113288,145077,-2566,48048,10800,0),
+  (3,824,12145,113258,145078,-2565,48048,10800,0),
+  (3,821,12145,113347,145078,-2567,48048,10800,0),
+  (3,822,12140,113318,145076,-2566,48048,10800,0),
+  (3,845,12142,115723,145098,-2563,41952,10800,0),
+  (3,846,12144,115703,145111,-2562,41952,10800,0),
+  (3,843,12142,115766,145055,-2564,33460,10800,0),
+  (3,844,12144,115747,145080,-2563,41952,10800,0),
+  (3,847,12142,115676,145130,-2564,41952,10800,0),
+  (3,850,12144,115597,145185,-2564,41952,10800,0),
+  (3,851,12142,115578,145198,-2563,41952,10800,0),
+  (3,848,12144,115652,145149,-2565,41952,10800,0),
+  (3,849,12142,115622,145168,-2564,41952,10800,0),
+  (3,836,12144,115616,144914,-2563,22704,10800,0),
+  (3,837,12142,115642,144938,-2562,22704,10800,0),
+  (3,834,12141,113624,144975,-2567,39060,10800,0),
+  (3,835,12142,115591,144897,-2562,22704,10800,0),
+  (3,838,12144,115665,144957,-2562,22704,10800,0),
+  (3,841,12142,115734,145011,-2563,22704,10800,0),
+  (3,842,12144,115755,145031,-2563,22704,10800,0),
+  (3,839,12142,115683,144972,-2561,22704,10800,0),
+  (3,840,12144,115709,144994,-2563,22704,10800,0),
+  (4,1545,12233,81807,37127,-2286,22704,10800,0),
+  (4,1544,12231,81781,37106,-2284,22704,10800,0),
+  (4,1546,12231,81831,37145,-2286,22704,10800,0),
+  (4,1548,12231,81863,37189,-2287,33460,10800,0),
+  (4,1547,12233,81852,37164,-2286,22704,10800,0),
+  (4,1540,12231,81689,37030,-2285,22704,10800,0),
+  (4,1539,12230,81656,37346,-2284,41952,10800,0),
+  (4,1541,12233,81713,37048,-2286,22704,10800,0),
+  (4,1543,12233,81763,37091,-2285,22704,10800,0),
+  (4,1542,12231,81739,37072,-2285,22704,10800,0),
+  (4,1549,12233,81862,37217,-2284,33460,10800,0),
+  (4,1556,12231,81693,37347,-2284,41952,10800,0),
+  (4,1555,12233,81718,37330,-2284,41952,10800,0),
+  (4,1557,12233,81674,37360,-2283,41952,10800,0),
+  (4,1559,12233,81817,37021,-2283,22704,10800,0),
+  (4,1558,12233,81794,37002,-2283,22704,10800,0),
+  (4,1551,12233,81819,37260,-2283,41952,10800,0),
+  (4,1550,12231,81843,37242,-2283,41952,10800,0),
+  (4,1552,12231,81799,37273,-2282,41952,10800,0),
+  (4,1554,12231,81748,37311,-2285,41952,10800,0),
+  (4,1553,12233,81772,37292,-2284,41952,10800,0),
+  (4,1538,12232,81675,37333,-2285,41952,10800,0),
+  (4,1523,12230,81669,37045,-2283,22704,10800,0),
+  (4,1522,12229,79702,37123,-2288,39060,10800,0),
+  (4,1524,12232,81694,37062,-2284,22704,10800,0),
+  (4,1526,12232,81743,37105,-2283,22704,10800,0),
+  (4,1525,12230,81720,37086,-2283,22704,10800,0),
+  (4,1518,12231,79715,37474,-2379,16328,10800,0),
+  (4,1517,12231,79688,37470,-2380,16328,10800,0),
+  (4,1519,12230,79661,37451,-2365,16328,10800,0),
+  (4,1521,12230,79716,37456,-2365,16328,10800,0),
+  (4,1520,12230,79689,37452,-2366,16328,10800,0),
+  (4,1527,12230,81761,37120,-2282,22704,10800,0),
+  (4,1534,12232,81781,37259,-2283,41952,10800,0),
+  (4,1533,12230,81801,37246,-2284,41952,10800,0),
+  (4,1535,12230,81754,37278,-2285,41952,10800,0),
+  (4,1537,12230,81700,37316,-2285,41952,10800,0),
+  (4,1536,12232,81730,37297,-2286,41952,10800,0),
+  (4,1529,12230,81812,37159,-2284,22704,10800,0),
+  (4,1528,12232,81787,37142,-2284,22704,10800,0),
+  (4,1530,12232,81833,37179,-2284,22704,10800,0),
+  (4,1532,12232,81825,37228,-2284,41952,10800,0),
+  (4,1531,12230,81844,37203,-2285,33460,10800,0),
+  (4,1588,12217,83767,37381,-2351,32728,120,0),
+  (4,1587,12217,83766,37343,-2351,32728,120,0),
+  (4,1589,12217,83767,37414,-2351,32728,120,0),
+  (4,1591,12217,83768,37489,-2350,32728,120,0),
+  (4,1590,12217,83768,37451,-2351,32728,120,0),
+  (4,1583,12220,83802,37488,-2349,32728,120,0),
+  (4,1582,12220,83802,37451,-2350,32728,120,0),
+  (4,1584,12220,83803,37526,-2349,32728,120,0),
+  (4,1586,12220,83804,37596,-2349,32728,120,0),
+  (4,1585,12220,83803,37558,-2349,32728,120,0),
+  (4,1592,12217,83769,37526,-2350,32728,120,0),
+  (4,1599,12219,83730,37490,-2351,32728,120,0),
+  (4,1598,12219,83730,37453,-2352,32728,120,0),
+  (4,1600,12214,83731,37528,-2351,32728,120,0),
+  (4,1602,12219,83732,37598,-2351,32728,120,0),
+  (4,1601,12219,83731,37560,-2351,32728,120,0),
+  (4,1594,12217,83770,37596,-2350,32728,120,0),
+  (4,1593,12217,83769,37559,-2350,32728,120,0),
+  (4,1595,12219,83728,37345,-2352,32728,120,0),
+  (4,1597,12214,83729,37415,-2352,32728,120,0),
+  (4,1596,12219,83729,37383,-2352,32728,120,0),
+  (4,1581,12220,83801,37413,-2350,32728,120,0),
+  (4,1566,12233,81781,37354,-2281,41952,10800,0),
+  (4,1565,12233,81805,37336,-2280,41952,10800,0),
+  (4,1567,12233,81751,37373,-2280,41952,10800,0),
+  (4,1569,12228,81928,37368,-2282,32004,10800,0),
+  (4,1568,12229,81928,37334,-2281,32004,10800,0),
+  (4,1561,12233,81861,37058,-2284,22704,10800,0),
+  (4,1560,12233,81835,37036,-2282,22704,10800,0),
+  (4,1562,12233,81886,37075,-2285,22704,10800,0),
+  (4,1564,12233,81832,37316,-2278,41952,10800,0),
+  (4,1563,12233,81852,37303,-2279,41952,10800,0),
+  (4,1570,12228,81931,37089,-2282,32004,10800,0),
+  (4,1577,12212,83814,37129,-2345,32728,300,0),
+  (4,1576,12219,81689,37366,-2283,22704,60,0),
+  (4,1578,12213,83817,37241,-2344,32728,180,0),
+  (4,1580,12220,83801,37380,-2350,32728,120,0),
+  (4,1579,12220,83800,37343,-2350,32728,120,0),
+  (4,1572,12233,81656,37037,-2280,41952,10800,0),
+  (4,1571,12229,81930,37112,-2282,32004,10800,0),
+  (4,1573,12219,81710,37028,-2283,22704,60,0),
+  (4,1575,12219,81792,37294,-2283,22704,60,0),
+  (4,1574,12219,81801,37109,-2283,22704,60,0),
+  (4,1459,12232,79317,36728,-2538,15696,10800,0),
+  (4,1458,12232,79286,36727,-2539,15696,10800,0),
+  (4,1460,12227,79347,36728,-2538,15696,10800,0),
+  (4,1462,12232,79408,36727,-2538,15696,10800,0),
+  (4,1461,12232,79377,36728,-2537,15696,10800,0),
+  (4,1454,12232,78868,37010,-2549,31992,10800,0),
+  (4,1453,12227,78868,36982,-2549,31992,10800,0),
+  (4,1455,12232,78868,37038,-2549,31992,10800,0),
+  (4,1457,12232,78868,37094,-2549,31992,10800,0),
+  (4,1456,12232,78868,37066,-2549,31992,10800,0),
+  (4,1463,12232,79437,36729,-2537,15696,10800,0),
+  (4,1470,12231,79395,36701,-2557,15696,10800,0),
+  (4,1469,12230,79365,36702,-2556,15696,10800,0),
+  (4,1471,12231,79425,36703,-2556,15696,10800,0),
+  (4,1473,12231,79484,36704,-2555,15696,10800,0),
+  (4,1472,12230,79455,36703,-2556,15696,10800,0),
+  (4,1465,12232,79497,36729,-2536,15696,10800,0),
+  (4,1464,12227,79467,36729,-2537,15696,10800,0),
+  (4,1466,12232,79528,36728,-2537,15696,10800,0),
+  (4,1468,12231,79334,36702,-2557,15696,10800,0),
+  (4,1467,12231,79304,36702,-2557,15696,10800,0),
+  (4,1452,12232,78868,36954,-2549,31992,10800,0),
+  (4,1437,12233,78908,37038,-2549,31992,10800,0),
+  (4,1436,12233,78908,37010,-2549,31992,10800,0),
+  (4,1438,12233,78908,37066,-2549,31992,10800,0),
+  (4,1440,12231,78888,36870,-2549,31992,10800,0),
+  (4,1439,12233,78908,37094,-2549,31992,10800,0),
+  (4,1432,12233,78908,36898,-2549,31992,10800,0),
+  (4,1431,12233,78908,36870,-2549,31992,10800,0),
+  (4,1433,12233,78908,36926,-2549,31992,10800,0),
+  (4,1435,12233,78908,36982,-2549,31992,10800,0),
+  (4,1434,12233,78908,36954,-2549,31992,10800,0),
+  (4,1441,12230,78888,36898,-2549,31992,10800,0),
+  (4,1448,12231,78888,37094,-2549,31992,10800,0),
+  (4,1447,12230,78888,37066,-2549,31992,10800,0),
+  (4,1449,12232,78868,36870,-2549,31992,10800,0),
+  (4,1451,12232,78868,36926,-2549,31992,10800,0),
+  (4,1450,12232,78868,36898,-2549,31992,10800,0),
+  (4,1443,12230,78888,36954,-2549,31992,10800,0),
+  (4,1442,12231,78888,36926,-2549,31992,10800,0),
+  (4,1444,12231,78888,36982,-2549,31992,10800,0),
+  (4,1446,12231,78888,37038,-2549,31992,10800,0),
+  (4,1445,12230,78888,37010,-2549,31992,10800,0),
+  (4,1502,12233,79655,37039,-2287,32284,10800,0),
+  (4,1501,12233,79656,37010,-2288,32284,10800,0),
+  (4,1503,12233,79593,36690,-2286,32284,10800,0),
+  (4,1505,12228,79591,36749,-2286,32284,10800,0),
+  (4,1504,12233,79594,36720,-2287,32284,10800,0),
+  (4,1497,12219,79306,36674,-2537,15696,60,0),
+  (4,1496,12219,79366,36671,-2537,15696,60,0),
+  (4,1498,12233,79659,36920,-2288,32284,10800,0),
+  (4,1500,12228,79657,36980,-2288,32284,10800,0),
+  (4,1499,12233,79660,36950,-2289,32284,10800,0),
+  (4,1506,12233,79590,36779,-2286,32284,10800,0),
+  (4,1513,12232,79661,37490,-2390,16328,10800,0),
+  (4,1512,12233,79336,37226,-2286,48048,10800,0),
+  (4,1514,12227,79689,37491,-2390,16328,10800,0),
+  (4,1516,12231,79660,37469,-2379,16328,10800,0),
+  (4,1515,12232,79716,37495,-2389,16328,10800,0),
+  (4,1508,12233,79455,37223,-2287,48048,10800,0),
+  (4,1507,12233,79589,36809,-2285,32284,10800,0),
+  (4,1509,12233,79425,37226,-2288,48048,10800,0),
+  (4,1511,12233,79366,37225,-2287,48048,10800,0),
+  (4,1510,12228,79396,37224,-2287,48048,10800,0),
+  (4,1495,12219,79455,36671,-2537,15696,60,0),
+  (4,1480,12233,79439,36683,-2559,15696,10800,0),
+  (4,1479,12233,79409,36681,-2560,15696,10800,0),
+  (4,1481,12233,79469,36683,-2559,15696,10800,0),
+  (4,1483,12233,79530,36683,-2559,15696,10800,0),
+  (4,1482,12233,79498,36684,-2558,15696,10800,0),
+  (4,1475,12233,79288,36681,-2561,15696,10800,0),
+  (4,1474,12231,79516,36703,-2556,15696,10800,0),
+  (4,1476,12233,79318,36682,-2561,15696,10800,0),
+  (4,1478,12233,79379,36683,-2560,15696,10800,0),
+  (4,1477,12233,79348,36682,-2560,15696,10800,0),
+  (4,1484,12233,79306,36535,-2562,15696,10800,0),
+  (4,1491,12233,79517,36538,-2559,15696,10800,0),
+  (4,1490,12233,79487,36538,-2559,15696,10800,0),
+  (4,1492,12229,79637,36434,-2553,32284,10800,0),
+  (4,1494,12219,79519,36672,-2537,15696,60,0),
+  (4,1493,12229,79638,36464,-2554,32284,10800,0),
+  (4,1486,12233,79367,36535,-2561,15696,10800,0),
+  (4,1485,12233,79336,36535,-2561,15696,10800,0),
+  (4,1487,12233,79397,36536,-2560,15696,10800,0),
+  (4,1489,12233,79457,36537,-2560,15696,10800,0),
+  (4,1488,12233,79427,36535,-2560,15696,10800,0),
+  (4,1717,12219,80772,36806,-2430,32768,10800,0),
+  (4,1716,12219,80772,36742,-2430,32768,10800,0),
+  (4,1718,12219,80772,37638,-2430,32768,10800,0),
+  (4,1720,12214,80772,37190,-2430,32768,10800,0),
+  (4,1719,12219,80772,37574,-2430,32768,10800,0),
+  (4,1712,12215,80900,36739,-2414,32768,10800,0),
+  (4,1711,12215,80900,37638,-2414,32768,10800,0),
+  (4,1713,12216,80900,37190,-2418,32768,10800,0),
+  (4,1715,12216,80900,36867,-2414,32768,10800,0),
+  (4,1714,12216,80900,37509,-2414,32768,10800,0),
+  (4,1721,12219,80772,36870,-2430,32768,10800,0),
+  (4,1728,12219,80772,37381,-2430,32768,10800,0),
+  (4,1727,12219,80772,37317,-2430,32768,10800,0),
+  (4,1729,12219,80772,37445,-2430,32768,10800,0),
+  (4,1731,12233,81337,37422,-1981,49152,10800,0),
+  (4,1730,12219,80772,37509,-2430,32768,10800,0),
+  (4,1723,12219,80772,36998,-2430,32768,10800,0),
+  (4,1722,12219,80772,36934,-2430,32768,10800,0),
+  (4,1724,12219,80772,37062,-2430,32768,10800,0),
+  (4,1726,12214,80772,37253,-2430,32768,10800,0),
+  (4,1725,12214,80772,37126,-2430,32768,10800,0),
+  (4,1710,12215,80900,37381,-2417,32768,10800,0),
+  (4,1695,12228,78824,36741,-2162,16384,10800,0),
+  (4,1694,12233,78716,36583,-2163,32768,10800,0),
+  (4,1696,12228,78753,36730,-2162,24576,10800,0),
+  (4,1698,12228,78840,37226,-2163,49152,10800,0),
+  (4,1697,12228,78756,37236,-2162,40960,10800,0),
+  (4,1690,12233,78785,36742,-2163,16384,10800,0),
+  (4,1689,12233,78865,36741,-2163,16384,10800,0),
+  (4,1691,12233,78728,36696,-2163,24576,10800,0),
+  (4,1693,12233,78716,36624,-2163,32768,10800,0),
+  (4,1692,12233,78716,36664,-2163,32768,10800,0),
+  (4,1699,12229,78755,36642,-2163,24576,10800,0),
+  (4,1706,12220,80900,36803,-2418,32768,10800,0),
+  (4,1705,12220,80900,36931,-2418,32768,10800,0),
+  (4,1707,12220,80900,37445,-2418,32768,10800,0),
+  (4,1709,12215,80900,36998,-2414,32768,10800,0),
+  (4,1708,12220,80900,37574,-2418,32768,10800,0),
+  (4,1701,12220,80900,37126,-2419,32768,10800,0),
+  (4,1700,12229,78763,37332,-2163,40960,10800,0),
+  (4,1702,12220,80900,37254,-2419,32768,10800,0),
+  (4,1704,12220,80900,37062,-2419,32768,10800,0),
+  (4,1703,12220,80900,37317,-2419,32768,10800,0),
+  (4,1760,12233,79336,37226,-2286,48048,10800,0),
+  (4,1759,12228,79396,37224,-2287,48048,10800,0),
+  (4,1761,12233,78904,37226,-2163,49152,10800,0),
+  (4,1763,12233,78733,37273,-2163,40960,10800,0),
+  (4,1762,12233,78792,37226,-2163,49152,10800,0),
+  (4,1755,12233,79594,36720,-2287,32284,10800,0),
+  (4,1754,12233,79593,36690,-2286,32284,10800,0),
+  (4,1756,12228,79591,36749,-2286,32284,10800,0),
+  (4,1758,12233,79455,37223,-2287,48048,10800,0),
+  (4,1757,12233,79590,36779,-2286,32284,10800,0),
+  (4,1764,12233,78719,37340,-2163,32768,10800,0),
+  (4,1771,12228,78756,37236,-2162,40960,10800,0),
+  (4,1770,12228,78753,36730,-2162,24576,10800,0),
+  (4,1772,12228,78840,37226,-2163,49152,10800,0),
+  (4,1774,12229,78763,37332,-2163,40960,10800,0),
+  (4,1773,12229,78755,36642,-2163,24576,10800,0),
+  (4,1766,12233,78785,36742,-2163,16384,10800,0),
+  (4,1765,12233,78865,36741,-2163,16384,10800,0),
+  (4,1767,12233,78728,36696,-2163,24576,10800,0),
+  (4,1769,12228,78824,36741,-2162,16384,10800,0),
+  (4,1768,12233,78716,36624,-2163,32768,10800,0),
+  (4,1753,12233,79655,37039,-2287,32284,10800,0),
+  (4,1738,12228,81179,37450,-1981,40960,10800,0),
+  (4,1737,12233,81294,37422,-1981,49152,10800,0),
+  (4,1739,12228,81255,37422,-1980,49152,10800,0),
+  (4,1741,12233,81343,36969,-1983,16384,10800,0),
+  (4,1740,12229,81200,37524,-1982,40960,10800,0),
+  (4,1733,12233,81154,37476,-1981,40960,10800,0),
+  (4,1732,12233,81215,37421,-1981,49152,10800,0),
+  (4,1734,12233,81135,37501,-1981,32768,10800,0),
+  (4,1736,12233,81134,37576,-1981,32768,10800,0),
+  (4,1735,12233,81134,37540,-1981,32768,10800,0),
+  (4,1742,12233,81303,36969,-1981,16384,10800,0),
+  (4,1749,12228,81189,36947,-1982,24576,10800,0),
+  (4,1748,12228,81259,36969,-1979,16384,10800,0),
+  (4,1750,12229,81207,36867,-1979,24576,10800,0),
+  (4,1752,12228,79657,36980,-2288,32284,10800,0),
+  (4,1751,12233,79659,36920,-2288,32284,10800,0),
+  (4,1744,12233,81153,36911,-1981,24576,10800,0),
+  (4,1743,12233,81218,36969,-1982,16384,10800,0),
+  (4,1745,12233,81133,36884,-1980,32768,10800,0),
+  (4,1747,12233,81133,36805,-1981,32768,10800,0),
+  (4,1746,12233,81134,36844,-1981,32768,10800,0),
+  (4,1631,12216,83960,37278,-2341,32728,120,0),
+  (4,1630,12216,83960,37101,-2344,32728,120,0),
+  (4,1632,12216,83960,37361,-2341,32728,120,0),
+  (4,1634,12216,83961,37515,-2341,32728,120,0),
+  (4,1633,12216,83961,37441,-2341,32728,120,0),
+  (4,1626,12219,83726,37038,-2347,32728,120,0),
+  (4,1625,12219,83725,37001,-2347,32728,120,0),
+  (4,1627,12216,83959,36863,-2345,32728,120,0),
+  (4,1629,12216,83960,37026,-2344,32728,120,0),
+  (4,1628,12216,83959,36947,-2344,32728,120,0),
+  (4,1635,12232,82834,37703,-2123,32472,10800,0),
+  (4,1642,12230,82881,37675,-2125,32472,10800,0),
+  (4,1641,12230,82881,37702,-2125,32472,10800,0),
+  (4,1643,12230,82880,37648,-2124,32472,10800,0),
+  (4,1645,12229,82958,37736,-2125,32472,10800,0),
+  (4,1644,12229,82958,37762,-2125,32472,10800,0),
+  (4,1637,12232,82834,37649,-2122,32472,10800,0),
+  (4,1636,12227,82834,37677,-2123,32472,10800,0),
+  (4,1638,12231,82856,37703,-2127,32472,10800,0),
+  (4,1640,12231,82856,37649,-2126,32472,10800,0),
+  (4,1639,12231,82856,37676,-2127,32472,10800,0),
+  (4,1624,12214,83725,36968,-2347,32728,120,0),
+  (4,1609,12220,83797,36999,-2345,32728,120,0),
+  (4,1608,12220,83796,36966,-2345,32728,120,0),
+  (4,1610,12220,83797,37036,-2345,32728,120,0),
+  (4,1612,12217,83760,36822,-2347,32728,120,0),
+  (4,1611,12217,83759,36784,-2347,32728,120,0),
+  (4,1604,12220,83794,36821,-2346,32728,120,0),
+  (4,1603,12220,83794,36783,-2346,32728,120,0),
+  (4,1605,12220,83794,36853,-2346,32728,120,0),
+  (4,1607,12220,83796,36928,-2345,32728,120,0),
+  (4,1606,12220,83795,36891,-2346,32728,120,0),
+  (4,1613,12217,83760,36854,-2347,32728,120,0),
+  (4,1620,12219,83723,36823,-2348,32728,120,0),
+  (4,1619,12219,83722,36785,-2348,32728,120,0),
+  (4,1621,12214,83723,36856,-2348,32728,120,0),
+  (4,1623,12219,83724,36931,-2347,32728,120,0),
+  (4,1622,12219,83724,36893,-2348,32728,120,0),
+  (4,1615,12217,83762,36929,-2346,32728,120,0),
+  (4,1614,12217,83761,36892,-2347,32728,120,0),
+  (4,1616,12217,83762,36967,-2346,32728,120,0),
+  (4,1618,12217,83763,37037,-2346,32728,120,0),
+  (4,1617,12217,83762,36999,-2346,32728,120,0),
+  (4,1674,12233,83741,36876,-2127,16000,10800,0),
+  (4,1673,12233,83777,36876,-2127,16000,10800,0),
+  (4,1675,12228,83703,36877,-2127,16000,10800,0),
+  (4,1677,12233,83635,36878,-2126,16000,10800,0),
+  (4,1676,12233,83672,36877,-2126,16000,10800,0),
+  (4,1669,12229,83056,36712,-2124,32472,10800,0),
+  (4,1668,12229,83056,36740,-2125,32472,10800,0),
+  (4,1670,12233,83886,36874,-2128,16000,10800,0),
+  (4,1672,12228,83813,36876,-2127,16000,10800,0),
+  (4,1671,12233,83850,36875,-2128,16000,10800,0),
+  (4,1678,12228,83600,36878,-2126,16000,10800,0),
+  (4,1685,12233,78719,37340,-2163,32768,10800,0),
+  (4,1684,12233,78719,37304,-2163,32768,10800,0),
+  (4,1686,12233,78719,37375,-2163,32768,10800,0),
+  (4,1688,12233,78872,37226,-2163,49152,10800,0),
+  (4,1687,12233,78907,36741,-2163,16384,10800,0),
+  (4,1680,12233,83526,36880,-2126,16000,10800,0),
+  (4,1679,12233,83563,36879,-2126,16000,10800,0),
+  (4,1681,12233,78904,37226,-2163,49152,10800,0),
+  (4,1683,12233,78733,37273,-2163,40960,10800,0),
+  (4,1682,12233,78792,37226,-2163,49152,10800,0),
+  (4,1667,12229,83056,36766,-2125,32472,10800,0),
+  (4,1652,12228,83715,37510,-2127,49076,10800,0),
+  (4,1651,12233,83677,37509,-2127,49076,10800,0),
+  (4,1653,12233,83746,37510,-2126,49076,10800,0),
+  (4,1655,12228,83818,37512,-2126,49076,10800,0),
+  (4,1654,12233,83783,37511,-2126,49076,10800,0),
+  (4,1647,12233,83531,37507,-2128,49076,10800,0),
+  (4,1646,12229,82958,37708,-2124,32472,10800,0),
+  (4,1648,12233,83568,37508,-2128,49076,10800,0),
+  (4,1650,12233,83641,37509,-2127,49076,10800,0),
+  (4,1649,12228,83605,37508,-2127,49076,10800,0),
+  (4,1656,12233,83855,37512,-2126,49076,10800,0),
+  (4,1663,12231,82790,36674,-2126,32472,10800,0),
+  (4,1662,12231,82790,36701,-2127,32472,10800,0),
+  (4,1664,12230,82815,36727,-2125,32472,10800,0),
+  (4,1666,12230,82814,36673,-2124,32472,10800,0),
+  (4,1665,12230,82815,36700,-2125,32472,10800,0),
+  (4,1658,12232,82768,36728,-2123,32472,10800,0),
+  (4,1657,12233,83892,37512,-2126,49076,10800,0),
+  (4,1659,12227,82768,36702,-2123,32472,10800,0),
+  (4,1661,12231,82790,36728,-2127,32472,10800,0),
+  (4,1660,12232,82771,36659,-2122,32472,10800,0),
+  (5,18,12281,147356,8567,-470,16389,10800,0),
+  (5,19,12282,147390,8567,-470,16389,10800,0),
+  (5,20,12281,147423,8567,-470,16389,10800,0),
+  (5,15,12284,147590,8547,-470,16389,10800,0),
+  (5,16,12284,147290,8567,-470,16389,10800,0),
+  (5,17,12282,147323,8567,-470,16389,10800,0),
+  (5,21,12282,147456,8567,-470,16389,10800,0),
+  (5,25,12282,147590,8567,-470,16389,10800,0),
+  (5,26,12281,147290,8587,-470,16389,10800,0),
+  (5,27,12283,147323,8587,-470,16389,10800,0),
+  (5,22,12281,147490,8567,-470,16389,10800,0),
+  (5,23,12282,147523,8567,-470,16389,10800,0),
+  (5,24,12281,147556,8567,-470,16389,10800,0),
+  (5,14,12284,147556,8547,-470,16389,10800,0),
+  (5,4,12280,147490,8527,-470,16389,10800,0),
+  (5,5,12280,147556,8527,-470,16389,10800,0),
+  (5,6,12284,147290,8547,-470,16389,10800,0),
+  (5,1,12280,147290,8527,-470,16389,10800,0),
+  (5,2,12280,147356,8527,-470,16389,10800,0),
+  (5,3,12280,147423,8527,-470,16389,10800,0),
+  (5,7,12284,147323,8547,-470,16389,10800,0),
+  (5,11,12284,147456,8547,-470,16389,10800,0),
+  (5,12,12284,147490,8547,-470,16389,10800,0),
+  (5,13,12284,147523,8547,-470,16389,10800,0),
+  (5,8,12284,147356,8547,-470,16389,10800,0),
+  (5,9,12284,147390,8547,-470,16389,10800,0),
+  (5,10,12284,147423,8547,-470,16389,10800,0),
+  (5,275,12284,147690,2020,-450,16389,200,0),
+  (5,276,12284,147592,2020,-450,16389,200,0),
+  (5,274,12284,147740,2020,-450,16389,200,0),
+  (5,272,12282,147482,1933,-468,16389,200,0),
+  (5,273,12282,147449,1933,-468,16389,200,0),
+  (5,277,12284,147542,2020,-450,16389,200,0),
+  (5,281,12284,147247,2020,-450,16389,200,0),
+  (5,282,12284,147740,2040,-450,16389,200,0),
+  (5,280,12284,147296,2020,-450,16389,200,0),
+  (5,278,12284,147444,2020,-450,16389,200,0),
+  (5,279,12284,147395,2020,-450,16389,200,0),
+  (5,271,12281,147508,1671,-338,16389,200,0),
+  (5,263,12284,147519,1300,-150,16389,10800,0),
+  (5,264,12284,147561,1300,-150,16389,10800,0),
+  (5,262,12284,147477,1300,-150,16389,10800,0),
+  (5,260,12284,147393,1300,-150,16389,10800,0),
+  (5,261,12284,147435,1300,-150,16389,10800,0),
+  (5,265,12279,147461,1245,-150,16391,10800,0),
+  (5,269,12254,147468,1671,-338,16389,200,0),
+  (5,270,12280,147428,1671,-338,16389,200,0),
+  (5,268,12280,146953,1245,-150,16392,10800,0),
+  (5,266,12279,146933,1245,-150,16392,10800,0),
+  (5,267,12280,147441,1245,-150,16391,10800,0),
+  (5,298,12270,147345,2060,-450,16389,200,0),
+  (5,299,12270,147296,2060,-450,16389,200,0),
+  (5,297,12270,147395,2060,-450,16389,200,0),
+  (5,295,12270,147493,2060,-450,16389,200,0),
+  (5,296,12270,147444,2060,-450,16389,200,0),
+  (5,300,12270,147247,2060,-450,16389,200,0),
+  (5,304,12270,147641,2080,-450,16389,200,0),
+  (5,305,12270,147592,2080,-450,16389,200,0),
+  (5,303,12270,147690,2080,-450,16389,200,0),
+  (5,301,12270,147198,2060,-450,16389,200,0),
+  (5,302,12270,147740,2080,-450,16389,200,0),
+  (5,294,12270,147542,2060,-450,16389,200,0),
+  (5,286,12284,147444,2040,-450,16389,200,0),
+  (5,287,12284,147395,2040,-450,16389,200,0),
+  (5,285,12284,147542,2040,-450,16389,200,0),
+  (5,283,12284,147690,2040,-450,16389,200,0),
+  (5,284,12284,147592,2040,-450,16389,200,0),
+  (5,288,12284,147296,2040,-450,16389,200,0),
+  (5,292,12270,147641,2060,-450,16389,200,0),
+  (5,293,12270,147592,2060,-450,16389,200,0),
+  (5,291,12270,147690,2060,-450,16389,200,0),
+  (5,289,12284,147247,2040,-450,16389,200,0),
+  (5,290,12270,147740,2060,-450,16389,200,0),
+  (5,229,12282,148161,1640,-150,16389,10800,0),
+  (5,230,12282,148199,1640,-150,16389,10800,0),
+  (5,228,12282,148199,1620,-150,16389,10800,0),
+  (5,226,12282,148199,1600,-150,16389,10800,0),
+  (5,227,12282,148161,1620,-150,16389,10800,0),
+  (5,231,12282,148161,1660,-150,16389,10800,0),
+  (5,235,12284,148161,1700,-150,16389,10800,0),
+  (5,236,12284,148199,1700,-150,16389,10800,0),
+  (5,234,12282,148199,1680,-150,16389,10800,0),
+  (5,232,12282,148199,1660,-150,16389,10800,0),
+  (5,233,12282,148161,1680,-150,16389,10800,0),
+  (5,225,12282,148161,1600,-150,16389,10800,0),
+  (5,217,12282,147367,5827,-400,16389,10800,0),
+  (5,218,12282,147401,5827,-400,16389,10800,0),
+  (5,216,12282,147334,5827,-400,16389,10800,0),
+  (5,214,12282,147320,5857,-400,16389,10800,0),
+  (5,215,12282,147455,3221,-400,16389,10800,0),
+  (5,219,12282,147435,5827,-400,16389,10800,0),
+  (5,223,12282,147570,5827,-400,16389,10800,0),
+  (5,224,12282,147590,5857,-400,16389,10800,0),
+  (5,222,12282,147536,5827,-400,16389,10800,0),
+  (5,220,12282,147468,5827,-400,16389,10800,0),
+  (5,221,12282,147502,5827,-400,16389,10800,0),
+  (5,252,12284,146707,1720,-150,16389,10800,0),
+  (5,253,12284,146818,1300,-150,16389,10800,0),
+  (5,251,12284,146750,1720,-150,16389,10800,0),
+  (5,249,12284,146750,1700,-150,16389,10800,0),
+  (5,250,12284,146707,1700,-150,16389,10800,0),
+  (5,254,12284,146861,1300,-150,16389,10800,0),
+  (5,258,12284,147037,1300,-150,16389,10800,0),
+  (5,259,12284,147351,1300,-150,16389,10800,0),
+  (5,257,12284,146993,1300,-150,16389,10800,0),
+  (5,255,12284,146905,1300,-150,16389,10800,0),
+  (5,256,12284,146949,1300,-150,16389,10800,0),
+  (5,248,12282,146707,1680,-150,16389,10800,0),
+  (5,240,12282,146707,1600,-150,16389,10800,0),
+  (5,241,12282,146750,1620,-150,16389,10800,0),
+  (5,239,12282,146750,1600,-150,16389,10800,0),
+  (5,237,12284,148161,1720,-150,16389,10800,0),
+  (5,238,12284,148199,1720,-150,16389,10800,0),
+  (5,242,12282,146707,1620,-150,16389,10800,0),
+  (5,246,12282,146707,1660,-150,16389,10800,0),
+  (5,247,12282,146750,1680,-150,16389,10800,0),
+  (5,245,12282,146750,1660,-150,16389,10800,0),
+  (5,243,12282,146750,1640,-150,16389,10800,0),
+  (5,244,12282,146707,1640,-150,16389,10800,0),
+  (5,306,12270,147542,2080,-450,16389,200,0),
+  (5,368,12284,145054,5258,-80,8192,120,0),
+  (5,369,12284,145093,5319,-80,8192,120,0),
+  (5,367,12284,145015,5197,-80,8192,120,0),
+  (5,365,12284,149472,5856,-80,8192,120,0);
+
+COMMIT;
+
+INSERT INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
+  (5,366,12284,144976,5136,-80,8192,120,0),
+  (5,370,12284,145133,5380,-80,8192,120,0),
+  (5,374,12284,145290,5624,-80,8192,120,0),
+  (5,375,12284,145329,5685,-80,8192,120,0),
+  (5,373,12284,145250,5563,-80,8192,120,0),
+  (5,371,12284,145172,5441,-80,8192,120,0),
+  (5,372,12284,145211,5502,-80,8192,120,0),
+  (5,364,12284,149514,5793,-80,8192,120,0),
+  (5,356,12284,149851,5293,-80,8192,120,0),
+  (5,357,12284,149809,5355,-80,8192,120,0),
+  (5,355,12284,149893,5230,-80,8192,120,0),
+  (5,353,12270,146460,5368,-21,32768,120,0),
+  (5,354,12284,149936,5168,-80,8192,120,0),
+  (5,358,12284,149767,5418,-80,8192,120,0),
+  (5,362,12284,149598,5668,-80,8192,120,0),
+  (5,363,12284,149556,5730,-80,8192,120,0),
+  (5,361,12284,149640,5605,-80,8192,120,0),
+  (5,359,12284,149725,5480,-80,8192,120,0),
+  (5,360,12284,149682,5543,-80,8192,120,0),
+  (5,391,12284,148185,9300,-212,32768,10800,0),
+  (5,392,12279,148231,8724,-212,32768,10800,0),
+  (5,390,12284,148185,9259,-212,32768,10800,0),
+  (5,388,12284,148185,9137,-212,32768,10800,0),
+  (5,389,12284,148185,9177,-212,32768,10800,0),
+  (5,393,12279,148231,8839,-212,32768,10800,0),
+  (5,397,12280,148261,8894,-212,32768,10800,0),
+  (5,398,12280,148261,9167,-212,32768,10800,0),
+  (5,396,12280,148261,8621,-212,32768,10800,0),
+  (5,394,12279,148231,9069,-212,32768,10800,0),
+  (5,395,12279,148231,8954,-212,32768,10800,0),
+  (5,387,12284,148185,9055,-212,32768,10800,0),
+  (5,379,12284,148185,8567,-212,32768,10800,0),
+  (5,380,12284,148185,8649,-212,32768,10800,0),
+  (5,378,12284,148185,8527,-212,32768,10800,0),
+  (5,376,12284,145368,5746,-80,8192,120,0),
+  (5,377,12284,145408,5808,-80,8192,120,0),
+  (5,381,12284,148185,8689,-212,32768,10800,0),
+  (5,385,12284,148185,8933,-212,32768,10800,0),
+  (5,386,12284,148185,9015,-212,32768,10800,0),
+  (5,384,12284,148185,8893,-212,32768,10800,0),
+  (5,382,12284,148185,8771,-212,32768,10800,0),
+  (5,383,12284,148185,8811,-212,32768,10800,0),
+  (5,322,12284,148424,5348,-21,0,120,0),
+  (5,323,12284,148424,5368,-21,0,120,0),
+  (5,321,12284,148424,5328,-21,0,120,0),
+  (5,319,12284,148424,5289,-21,0,120,0),
+  (5,320,12284,148424,5309,-21,0,120,0),
+  (5,324,12284,148444,5289,-21,0,120,0),
+  (5,328,12284,148444,5368,-21,0,120,0),
+  (5,329,12270,148464,5289,-21,0,120,0),
+  (5,327,12284,148444,5348,-21,0,120,0),
+  (5,325,12284,148444,5309,-21,0,120,0),
+  (5,326,12284,148444,5328,-21,0,120,0),
+  (5,318,12280,148404,5368,-21,0,120,0),
+  (5,310,12270,147345,2080,-450,16389,200,0),
+  (5,311,12270,147296,2080,-450,16389,200,0),
+  (5,309,12270,147395,2080,-450,16389,200,0),
+  (5,307,12270,147493,2080,-450,16389,200,0),
+  (5,308,12270,147444,2080,-450,16389,200,0),
+  (5,312,12270,147247,2080,-450,16389,200,0),
+  (5,316,12280,148404,5328,-21,0,120,0),
+  (5,317,12279,148404,5348,-21,0,120,0),
+  (5,315,12279,148404,5309,-21,0,120,0),
+  (5,313,12270,147198,2080,-450,16389,200,0),
+  (5,314,12280,148404,5289,-21,0,120,0),
+  (5,345,12284,146480,5308,-21,32768,120,0),
+  (5,346,12284,146480,5328,-21,32768,120,0),
+  (5,344,12284,146480,5289,-21,32768,120,0),
+  (5,342,12284,146500,5348,-21,32768,120,0),
+  (5,343,12284,146500,5368,-21,32768,120,0),
+  (5,347,12284,146480,5348,-21,32768,120,0),
+  (5,351,12270,146460,5328,-21,32768,120,0),
+  (5,352,12270,146460,5348,-21,32768,120,0),
+  (5,350,12270,146460,5308,-21,32768,120,0),
+  (5,348,12284,146480,5368,-21,32768,120,0),
+  (5,349,12270,146460,5289,-21,32768,120,0),
+  (5,341,12284,146500,5328,-21,32768,120,0),
+  (5,333,12270,148464,5368,-21,0,120,0),
+  (5,334,12280,146520,5289,-21,32768,120,0),
+  (5,332,12270,148464,5348,-21,0,120,0),
+  (5,330,12270,148464,5309,-21,0,120,0),
+  (5,331,12270,148464,5328,-21,0,120,0),
+  (5,335,12279,146520,5308,-21,32768,120,0),
+  (5,339,12284,146500,5289,-21,32768,120,0),
+  (5,340,12284,146500,5308,-21,32768,120,0),
+  (5,338,12280,146520,5368,-21,32768,120,0),
+  (5,336,12280,146520,5328,-21,32768,120,0),
+  (5,337,12279,146520,5348,-21,32768,120,0),
+  (5,213,12282,147353,5857,-400,16389,10800,0),
+  (5,89,12280,146946,8465,-212,16389,10800,0),
+  (5,90,12279,146915,8465,-212,16389,10800,0),
+  (5,88,12279,146977,8465,-212,16389,10800,0),
+  (5,86,12279,147036,8466,-212,16389,10800,0),
+  (5,87,12280,147007,8466,-212,16389,10800,0),
+  (5,91,12282,149105,6657,-470,16389,10800,0),
+  (5,95,12282,149255,6657,-470,16389,10800,0),
+  (5,96,12282,149292,6657,-470,16389,10800,0),
+  (5,94,12282,149217,6657,-470,16389,10800,0),
+  (5,92,12282,149142,6657,-470,16389,10800,0),
+  (5,93,12282,149180,6657,-470,16389,10800,0),
+  (5,85,12284,147065,8466,-212,16389,10800,0),
+  (5,77,12280,147864,8466,-212,16389,10800,0),
+  (5,78,12279,147833,8466,-212,16389,10800,0),
+  (5,76,12279,147895,8466,-212,16389,10800,0),
+  (5,74,12279,147954,8467,-212,16389,10800,0),
+  (5,75,12280,147925,8467,-212,16389,10800,0),
+  (5,79,12284,147064,8489,-212,16389,10800,0),
+  (5,83,12284,146945,8488,-212,16389,10800,0),
+  (5,84,12284,146915,8488,-212,16389,10800,0),
+  (5,82,12284,146976,8488,-212,16389,10800,0),
+  (5,80,12284,147035,8489,-212,16389,10800,0),
+  (5,81,12284,147007,8489,-212,16389,10800,0),
+  (5,112,12282,145569,6657,-470,16389,10800,0),
+  (5,113,12282,145606,6657,-470,16389,10800,0),
+  (5,111,12284,149330,6617,-470,16389,10800,0),
+  (5,109,12284,149255,6617,-470,16389,10800,0),
+  (5,110,12279,149292,6617,-470,16389,10800,0),
+  (5,114,12282,145644,6657,-470,16389,10800,0),
+  (5,118,12282,145795,6657,-470,16389,10800,0),
+  (5,119,12284,145569,6637,-470,16389,10800,0),
+  (5,117,12282,145757,6657,-470,16389,10800,0),
+  (5,115,12282,145682,6657,-470,16389,10800,0),
+  (5,116,12282,145719,6657,-470,16389,10800,0),
+  (5,108,12279,149217,6617,-470,16389,10800,0),
+  (5,100,12284,149180,6637,-470,16389,10800,0),
+  (5,101,12284,149217,6637,-470,16389,10800,0),
+  (5,99,12284,149142,6637,-470,16389,10800,0),
+  (5,97,12282,149330,6657,-470,16389,10800,0),
+  (5,98,12284,149105,6637,-470,16389,10800,0),
+  (5,102,12284,149255,6637,-470,16389,10800,0),
+  (5,106,12279,149142,6617,-470,16389,10800,0),
+  (5,107,12284,149180,6617,-470,16389,10800,0),
+  (5,105,12284,149105,6617,-470,16389,10800,0),
+  (5,103,12284,149292,6637,-470,16389,10800,0),
+  (5,104,12284,149330,6637,-470,16389,10800,0),
+  (5,43,12284,148185,8811,-212,32768,10800,0),
+  (5,44,12284,148185,8852,-212,32768,10800,0),
+  (5,42,12284,148185,8771,-212,32768,10800,0),
+  (5,40,12284,148185,8689,-212,32768,10800,0),
+  (5,41,12284,148185,8730,-212,32768,10800,0),
+  (5,45,12284,148185,8893,-212,32768,10800,0),
+  (5,49,12284,148185,9055,-212,32768,10800,0),
+  (5,50,12284,148185,9096,-212,32768,10800,0),
+  (5,48,12284,148185,9015,-212,32768,10800,0),
+  (5,46,12284,148185,8933,-212,32768,10800,0),
+  (5,47,12284,148185,8974,-212,32768,10800,0),
+  (5,39,12284,148185,8649,-212,32768,10800,0),
+  (5,31,12278,147456,8587,-470,16389,10800,0),
+  (5,32,12283,147490,8587,-470,16389,10800,0),
+  (5,30,12283,147423,8587,-470,16389,10800,0),
+  (5,28,12283,147356,8587,-470,16389,10800,0),
+  (5,29,12283,147390,8587,-470,16389,10800,0),
+  (5,33,12283,147523,8587,-470,16389,10800,0),
+  (5,37,12284,148185,8567,-212,32768,10800,0),
+  (5,38,12284,148185,8608,-212,32768,10800,0),
+  (5,36,12284,148185,8527,-212,32768,10800,0),
+  (5,34,12283,147556,8587,-470,16389,10800,0),
+  (5,35,12283,147590,8587,-470,16389,10800,0),
+  (5,66,12280,148261,9167,-212,32768,10800,0),
+  (5,67,12284,147984,8486,-212,16389,10800,0),
+  (5,65,12280,148261,9030,-212,32768,10800,0),
+  (5,63,12280,148261,8757,-212,32768,10800,0),
+  (5,64,12280,148261,8894,-212,32768,10800,0),
+  (5,68,12284,147955,8486,-212,16389,10800,0),
+  (5,72,12284,147835,8485,-212,16389,10800,0),
+  (5,73,12284,147983,8467,-212,16389,10800,0),
+  (5,71,12284,147865,8485,-212,16389,10800,0),
+  (5,69,12284,147927,8486,-212,16389,10800,0),
+  (5,70,12284,147896,8485,-212,16389,10800,0),
+  (5,62,12280,148261,8621,-212,32768,10800,0),
+  (5,54,12284,148185,9259,-212,32768,10800,0),
+  (5,55,12284,148185,9300,-212,32768,10800,0),
+  (5,53,12284,148185,9218,-212,32768,10800,0),
+  (5,51,12284,148185,9137,-212,32768,10800,0),
+  (5,52,12284,148185,9177,-212,32768,10800,0),
+  (5,56,12279,148231,8724,-212,32768,10800,0),
+  (5,60,12279,148231,8954,-212,32768,10800,0),
+  (5,61,12279,148231,9069,-212,32768,10800,0),
+  (5,59,12279,148231,9069,-212,32768,10800,0),
+  (5,57,12279,148231,8839,-212,32768,10800,0),
+  (5,58,12279,148231,8954,-212,32768,10800,0),
+  (5,120,12284,145606,6637,-470,16389,10800,0),
+  (5,182,12284,145853,4815,-20,32768,10800,0),
+  (5,183,12284,145874,4797,-20,32768,10800,0),
+  (5,181,12284,145834,4846,-20,32768,10800,0),
+  (5,179,12284,145836,4929,-20,32768,10800,0),
+  (5,180,12284,145835,4889,-20,32768,10800,0),
+  (5,184,12284,145901,4774,-20,32768,10800,0),
+  (5,188,12280,145921,4829,-20,32768,10800,0),
+  (5,189,12284,147146,5459,-340,16389,10800,0),
+  (5,187,12284,145928,4767,-20,32768,10800,0),
+  (5,185,12284,145989,4766,-20,32768,10800,0),
+  (5,186,12279,145958,4767,-20,32768,10800,0),
+  (5,178,12280,145836,4968,-20,32768,10800,0),
+  (5,170,12284,145833,4374,-20,32768,10800,0),
+  (5,171,12284,145833,4335,-20,32768,10800,0),
+  (5,169,12284,145883,4421,-20,32768,10800,0),
+  (5,167,12280,145831,4252,-20,32768,10800,0),
+  (5,168,12284,145909,4440,-20,32768,10800,0),
+  (5,172,12284,145832,4295,-20,32768,10800,0),
+  (5,176,12284,145995,4449,-20,32768,10800,0),
+  (5,177,12280,145926,4377,-20,32768,10800,0),
+  (5,175,12279,145966,4450,-20,32768,10800,0),
+  (5,173,12284,145852,4404,-20,32768,10800,0),
+  (5,174,12284,145936,4450,-20,32768,10800,0),
+  (5,205,12279,147356,5754,-340,32768,10800,0),
+  (5,206,12280,147457,5754,-340,32768,10800,0),
+  (5,204,12279,147560,5754,-340,32768,10800,0),
+  (5,202,12280,147554,5354,-340,16389,10800,0),
+  (5,203,12280,147352,5354,-340,32768,10800,0),
+  (5,207,12282,147556,5857,-400,16389,10800,0),
+  (5,211,12282,147421,5857,-400,16389,10800,0),
+  (5,212,12282,147387,5857,-400,16389,10800,0),
+  (5,210,12282,147455,5857,-400,16389,10800,0),
+  (5,208,12282,147522,5857,-400,16389,10800,0),
+  (5,209,12282,147488,5857,-400,16389,10800,0),
+  (5,201,12284,147756,5459,-340,16389,10800,0),
+  (5,193,12284,147349,5459,-340,16389,10800,0),
+  (5,194,12284,147400,5459,-340,16389,10800,0),
+  (5,192,12284,147298,5459,-340,16389,10800,0),
+  (5,190,12284,147196,5459,-340,16389,10800,0),
+  (5,191,12284,147247,5459,-340,16389,10800,0),
+  (5,195,12284,147451,5459,-340,16389,10800,0),
+  (5,199,12284,147654,5459,-340,16389,10800,0),
+  (5,200,12284,147705,5459,-340,16389,10800,0),
+  (5,198,12284,147603,5459,-340,16389,10800,0),
+  (5,196,12284,147501,5459,-340,16389,10800,0),
+  (5,197,12284,147552,5459,-340,16389,10800,0),
+  (5,136,12269,146678,7588,-470,16389,10800,0),
+  (5,137,12269,146983,7588,-470,16389,10800,0),
+  (5,135,12269,146372,7588,-470,16389,10800,0),
+  (5,133,12269,145762,7588,-470,16389,10800,0),
+  (5,134,12269,146067,7588,-470,16389,10800,0),
+  (5,138,12281,147288,7588,-470,16389,10800,0),
+  (5,142,12269,148510,7588,-470,16389,10800,0),
+  (5,143,12269,148815,7588,-470,16389,10800,0),
+  (5,141,12281,148204,7588,-470,16389,10800,0),
+  (5,139,12269,147594,7588,-470,16389,10800,0),
+  (5,140,12269,147899,7588,-470,16389,10800,0),
+  (5,132,12284,145795,6617,-470,16389,10800,0),
+  (5,124,12284,145757,6637,-470,16389,10800,0),
+  (5,125,12284,145795,6637,-470,16389,10800,0),
+  (5,123,12284,145719,6637,-470,16389,10800,0),
+  (5,121,12284,145644,6637,-470,16389,10800,0),
+  (5,122,12284,145682,6637,-470,16389,10800,0),
+  (5,126,12284,145569,6617,-470,16389,10800,0),
+  (5,130,12284,145719,6617,-470,16389,10800,0),
+  (5,131,12279,145757,6617,-470,16389,10800,0),
+  (5,129,12279,145682,6617,-470,16389,10800,0),
+  (5,127,12279,145606,6617,-470,16389,10800,0),
+  (5,128,12284,145644,6617,-470,16389,10800,0),
+  (5,159,12284,149081,4335,-20,0,10800,0),
+  (5,160,12284,149082,4374,-20,0,10800,0),
+  (5,158,12284,149080,4295,-20,0,10800,0),
+  (5,156,12280,149056,4219,-20,0,10800,0),
+  (5,157,12284,149080,4252,-20,0,10800,0),
+  (5,161,12284,149038,4416,-20,0,10800,0),
+  (5,165,12284,148922,4451,-20,0,10800,0),
+  (5,166,12280,149006,4362,-20,0,10800,0),
+  (5,164,12279,148955,4450,-20,0,10800,0),
+  (5,162,12284,149011,4439,-20,0,10800,0),
+  (5,163,12284,148984,4449,-20,0,10800,0),
+  (5,155,12280,149006,4835,-20,0,10800,0),
+  (5,147,12284,149081,4886,-20,0,10800,0),
+  (5,148,12284,149081,4843,-20,0,10800,0),
+  (5,146,12284,149082,4926,-20,0,10800,0),
+  (5,144,12269,149121,7588,-470,16389,10800,0),
+  (5,145,12280,149083,4965,-20,0,10800,0),
+  (5,149,12284,149057,4810,-20,0,10800,0),
+  (5,153,12279,148951,4766,-20,0,10800,0),
+  (5,154,12284,148921,4766,-20,0,10800,0),
+  (5,152,12284,148980,4766,-20,0,10800,0),
+  (5,150,12284,149034,4790,-20,0,10800,0),
+  (5,151,12284,149008,4773,-20,0,10800,0);
