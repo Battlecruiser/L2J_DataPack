@@ -782,6 +782,8 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <mul order="0x35" stat="pAtk" val="1.444"/>
+    <mul order="0x35" stat="mAtk" val="1.1692"/>
     <add order="0x40" stat="pAtk" val="#pAtk"/>
     <add order="0x40" stat="mAtk" val="#mAtk"/>
   </for>
@@ -795,6 +797,8 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <mul order="0x35" stat="pAtk" val="1.444"/>
+    <mul order="0x35" stat="mAtk" val="1.1692"/>
     <add order="0x40" stat="pAtk" val="#pAtk"/>
     <add order="0x40" stat="mAtk" val="#mAtk"/>
   </for>
