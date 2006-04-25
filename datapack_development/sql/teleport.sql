@@ -16,7 +16,7 @@ CREATE TABLE teleport (
 -- Dumping data for table `teleport`
 -- 
 
-insert  into teleport values 
+INSERT INTO teleport VALUES 
 ('Elven Town & Dark Elven Town -> Village of Gludin','1','-80826','149775','-3043','6400'),
 ('Elven Town & Dark Elven Town -> Town of Gludio','2','-12672','122776','-3116','3700'),
 ('Town of gludio -> Elven village','3','46934','51467','-2977','3700'),
@@ -263,9 +263,10 @@ insert  into teleport values
 ('Aden(outofcastle -> out)','411','147723','7916','-475','0'),
 ('Aden(outofcastle -> in)','412','148580','4578','-408','0'),
 ('Aden(outofcastle -> hall)','413','147520','6107','-409','0'),
-('Aden(hall -> artifact)','414','147499','2544','-473','0'),
-('Aden(hall -> out)','415','147723','7916','-475','0'),
-('Aden(hall -> in)','416','148580','4578','-408','0'),
-('Aden(hall -> outofcastle)','417','147582','8753','-496','0'),
-
-('Lair Of Valakas', '420', '208884', '-113705', '-256', '0');
+('Aden(hall) -> artifact)','414','147499','2544','-473','0'),
+('Aden(hall) -> out)','415','147723','7916','-475','0'),
+('Aden(hall) -> in)','416','148580','4578','-408','0'),
+('Aden(hall) -> outofcastle)','417','147582','8753','-496','0'),
+('Lair Of Valakas', '420', '208884', '-113705', '-256', '0'),
+('Disciples Necropolis -> Anakim/Lilith','450','184397','-11957','-5493','0'),
+('Anakim/Lilith -> Disciples Necropolis','451','183225','-11911','-4897','0');

@@ -247,6 +247,8 @@ $MYG < ../sql/armor.sql &> /dev/null
 $MYG < ../sql/auction.sql &> /dev/null
 $MYG < ../sql/auction_bid.sql &> /dev/null
 $MYG < ../sql/auction_watch.sql &> /dev/null
+$MYG < ../sql/auto_chat.sql &> /dev/null
+$MYG < ../sql/auto_chat_text.sql &> /dev/null
 $MYG < ../sql/boxaccess.sql &> /dev/null
 $MYG < ../sql/boxes.sql &> /dev/null
 $MYG < ../sql/castle.sql &> /dev/null
@@ -270,6 +272,7 @@ $MYG < ../sql/clanhall.sql &> /dev/null
 $MYG < ../sql/class_list.sql &> /dev/null
 $MYG < ../sql/droplist.sql &> /dev/null
 $MYG < ../sql/etcitem.sql &> /dev/null
+$MYG < ../sql/forums.sql &> /dev/null
 $MYG < ../sql/games.sql &> /dev/null
 $MYG < ../sql/global_tasks.sql &> /dev/null
 $MYG < ../sql/henna.sql &> /dev/null
@@ -285,19 +288,22 @@ $MYG < ../sql/merchant_shopids.sql &> /dev/null
 $MYG < ../sql/merchants.sql &> /dev/null
 $MYG < ../sql/minions.sql &> /dev/null
 $MYG < ../sql/npc.sql &> /dev/null
-$MYG < ../sql/pets_stats.sql &> /dev/null
-$MYG < ../sql/npcskills.sql &> /dev/null
 $MYG < ../sql/pets.sql &> /dev/null
+$MYG < ../sql/pets_stats.sql &> /dev/null
+$MYG < ../sql/posts.sql &> /dev/null
+$MYG < ../sql/npcskills.sql &> /dev/null
 $MYG < ../sql/random_spawn.sql &> /dev/null
 $MYG < ../sql/random_spawn_loc.sql &> /dev/null
 $MYG < ../sql/seven_signs.sql &> /dev/null
 $MYG < ../sql/seven_signs_festival.sql &> /dev/null
+$MYG < ../sql/seven_signs_status.sql &> /dev/null
 $MYG < ../sql/siege_clans.sql &> /dev/null
 $MYG < ../sql/skill_learn.sql &> /dev/null
 $MYG < ../sql/skill_spellbooks.sql &> /dev/null
 $MYG < ../sql/skill_trees.sql &> /dev/null
 $MYG < ../sql/spawnlist.sql &> /dev/null
 $MYG < ../sql/teleport.sql &> /dev/null
+$MYG < ../sql/topic.sql &> /dev/null
 $MYG < ../sql/weapon.sql &> /dev/null
 $MYG < ../sql/zone.sql &> /dev/null
 }
