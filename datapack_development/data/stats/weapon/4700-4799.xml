@@ -10,7 +10,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Health -->
-    <mul val='1.25' order='0x40' stat='maxHp' />
+    <mul val='1.25' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4701' name="sword_of_delusion_rsk._haste">
@@ -23,7 +23,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Haste -->
-    <mul order="0x40" stat="pAtkSpd" val="1.12">
+    <mul order="0x50" stat="pAtkSpd" val="1.12">
       <and>
         <player hp="60" />
       </and>
@@ -40,7 +40,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Focus -->
-    <add val='77' order='0x40' stat='rCrit' />
+    <add val='77' order='0x40' stat='cAtk' />
   </for>
 </item>
 <item id='4703' name="tsurugi_critical_damage">
@@ -64,7 +64,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Haste -->
-    <mul val='1.07' order='0x40' stat='pAtkSpd' />
+    <mul val='1.07' order='0x50' stat='pAtkSpd' />
   </for>
 </item>
 <item id='4705' name="sword_of_nightmare_health">
@@ -77,7 +77,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Health -->
-    <mul val='1.25' order='0x40' stat='maxHp' />
+    <mul val='1.25' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4706' name="sword_of_nightmare_focus">
@@ -90,7 +90,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Focus -->
-    <add val='77' order='0x40' stat='rCrit' />
+    <add val='77' order='0x40' stat='cAtk' />
   </for>
 </item>
 <item id='4707' name="sword_of_nightmare_light">
@@ -114,7 +114,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Focus -->
-    <add val='73' order='0x40' stat='rCrit' />
+    <add val='73' order='0x40' stat='cAtk' />
   </for>
 </item>
 <item id='4709' name="samurai_longsword_critical_damage">
@@ -138,7 +138,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Haste -->
-    <mul val='1.07' order='0x40' stat='pAtkSpd' />
+    <mul val='1.07' order='0x50' stat='pAtkSpd' />
   </for>
 </item>
 <item id='4711' name="flamberge_critical_damage">
@@ -162,7 +162,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Focus -->
-    <add val='86' order='0x40' stat='rCrit' />
+    <add val='86' order='0x40' stat='cAtk' />
   </for>
 </item>
 <item id='4713' name="flamberge_light">
@@ -199,7 +199,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Focus -->
-    <add val='68' order='0x40' stat='rCrit' />
+    <add val='68' order='0x40' stat='cAtk' />
   </for>
 </item>
 <item id='4716' name="keshanberk_back_blow">
@@ -223,7 +223,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Focus -->
-    <add val='64' order='0x40' stat='rCrit' />
+    <add val='64' order='0x40' stat='cAtk' />
   </for>
 </item>
 <item id='4718' name="sword_of_damascus_critical_damage">
@@ -247,7 +247,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Haste -->
-    <mul val='1.06' order='0x40' stat='pAtkSpd' />
+    <mul val='1.06' order='0x50' stat='pAtkSpd' />
   </for>
 </item>
 <item id='4720' name="tallum_blade_health">
@@ -260,7 +260,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Health -->
-    <mul val='1.25' order='0x40' stat='maxHp' />
+    <mul val='1.25' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4721' name="tallum_blade_-_rsk._evasion_rsk._evasio">
@@ -290,7 +290,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Haste -->
-    <mul order="0x40" stat="pAtkSpd" val="1.12">
+    <mul order="0x50" stat="pAtkSpd" val="1.12">
       <and>
         <player hp="60" />
       </and>
@@ -307,7 +307,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Health -->
-    <mul val='1.25' order='0x40' stat='maxHp' />
+    <mul val='1.25' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4724' name="great_sword_critical_damage">
@@ -331,7 +331,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Focus -->
-    <add val='68' order='0x40' stat='rCrit' />
+    <add val='68' order='0x40' stat='cAtk' />
   </for>
 </item>
 <item id='4726' name="big_hammer_health">
@@ -344,7 +344,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Health -->
-    <mul val='1.25' order='0x40' stat='maxHp' />
+    <mul val='1.25' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4727' name="big_hammer_rsk.focus">
@@ -357,8 +357,12 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Focus -->
-    <add order="0x40" stat="rCrit" val="138">
-      <and>        <player hp="60" />      </and>    </add>  </for>
+    <add order="0x40" stat="cAtk" val="138">
+		<and>
+			<player hp="60" />
+		</and>
+	</add>
+  </for>
 </item>
 <item id='4728' name="big_hammer_haste">
   <for>
@@ -370,7 +374,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Haste -->
-    <mul val='1.08' order='0x40' stat='pAtkSpd' />
+    <mul val='1.08' order='0x50' stat='pAtkSpd' />
   </for>
 </item>
 <item id='4729' name="battle_axe_anger">
@@ -384,7 +388,7 @@
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Anger -->
     <add val='20' order='0x40' stat='pAtk' />
-    <mul val='0.85' order='0x40' stat='maxHp' />
+    <mul val='0.85' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4730' name="battle_axe_rsk.focus">
@@ -397,8 +401,12 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Focus -->
-    <add order="0x40" stat="rCrit" val="138">
-      <and>        <player hp="60" />      </and>    </add>  </for>
+    <add order="0x40" stat="cAtk" val="138">
+		<and>
+			<player hp="60" />
+		</and>
+	</add>
+  </for>
 </item>
 <item id='4731' name="battle_axe_haste">
   <for>
@@ -410,7 +418,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Haste -->
-    <mul val='1.08' order='0x40' stat='pAtkSpd' />
+    <mul val='1.08' order='0x50' stat='pAtkSpd' />
   </for>
 </item>
 <item id='4732' name="silver_axe_anger">
@@ -424,7 +432,7 @@
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Anger -->
     <add val='20' order='0x40' stat='pAtk' />
-    <mul val='0.85' order='0x40' stat='maxHp' />
+    <mul val='0.85' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4733' name="silver_axe_rsk.focus">
@@ -437,8 +445,12 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Focus -->
-    <add order="0x40" stat="rCrit" val="138">
-      <and>        <player hp="60" />      </and>    </add>  </for>
+    <add order="0x40" stat="cAtk" val="138">
+		<and>
+			<player hp="60" />
+		</and>
+	</add>
+  </for>
 </item>
 <item id='4734' name="silver_axe_haste">
   <for>
@@ -450,7 +462,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Haste -->
-    <mul val='1.08' order='0x40' stat='pAtkSpd' />
+    <mul val='1.08' order='0x50' stat='pAtkSpd' />
   </for>
 </item>
 <item id='4735' name="skull_graver_anger">
@@ -464,7 +476,7 @@
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Anger -->
     <add val='20' order='0x40' stat='pAtk' />
-    <mul val='0.85' order='0x40' stat='maxHp' />
+    <mul val='0.85' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4736' name="skull_graver_health">
@@ -477,7 +489,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Health -->
-    <mul val='1.25' order='0x40' stat='maxHp' />
+    <mul val='1.25' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4737' name="skull_graver_rsk.focus">
@@ -490,8 +502,12 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Focus -->
-    <add order="0x40" stat="rCrit" val="138">
-      <and>        <player hp="60" />      </and>    </add>  </for>
+    <add order="0x40" stat="cAtk" val="138">
+		<and>
+			<player hp="60" />
+		</and>
+	</add>
+  </for>
 </item>
 <item id='4738' name="dwarven_war_hammer_anger">
   <for>
@@ -504,7 +520,7 @@
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Anger -->
     <add val='22' order='0x40' stat='pAtk' />
-    <mul val='0.85' order='0x40' stat='maxHp' />
+    <mul val='0.85' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4739' name="dwarven_war_hammer_health">
@@ -517,7 +533,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Health -->
-    <mul val='1.25' order='0x40' stat='maxHp' />
+    <mul val='1.25' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4740' name="dwarven_war_hammer_haste">
@@ -530,7 +546,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Haste -->
-    <mul val='1.07' order='0x40' stat='pAtkSpd' />
+    <mul val='1.07' order='0x50' stat='pAtkSpd' />
   </for>
 </item>
 <item id='4741' name="war_axe_anger">
@@ -544,7 +560,7 @@
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Anger -->
     <add val='24' order='0x40' stat='pAtk' />
-    <mul val='0.85' order='0x40' stat='maxHp' />
+    <mul val='0.85' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4742' name="war_axe_health">
@@ -557,7 +573,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Health -->
-    <mul val='1.25' order='0x40' stat='maxHp' />
+    <mul val='1.25' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4743' name="war_axe_haste">
@@ -570,7 +586,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Haste -->
-    <mul val='1.07' order='0x40' stat='pAtkSpd' />
+    <mul val='1.07' order='0x50' stat='pAtkSpd' />
   </for>
 </item>
 <item id='4744' name="yaksa_mace_anger">
@@ -584,7 +600,7 @@
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Anger -->
     <add val='26' order='0x40' stat='pAtk' />
-    <mul val='0.85' order='0x40' stat='maxHp' />
+    <mul val='0.85' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4745' name="yaksa_mace_health">
@@ -597,7 +613,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Health -->
-    <mul val='1.25' order='0x40' stat='maxHp' />
+    <mul val='1.25' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4746' name="yaksa_mace_rsk._focus">
@@ -610,8 +626,12 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Focus -->
-    <add order="0x40" stat="rCrit" val="115">
-      <and>        <player hp="60" />      </and>    </add>  </for>
+    <add order="0x40" stat="cAtk" val="115">
+		<and>
+			<player hp="60" />
+		</and>
+	</add>
+  </for>
 </item>
 <item id='4747' name="heavy_war_axe_anger">
   <for>
@@ -624,7 +644,7 @@
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Anger -->
     <add val='28' order='0x40' stat='pAtk' />
-    <mul val='0.85' order='0x40' stat='maxHp' />
+    <mul val='0.85' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4748' name="heavy_war_axe_health">
@@ -637,7 +657,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Health -->
-    <mul val='1.25' order='0x40' stat='maxHp' />
+    <mul val='1.25' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4749' name="heavy_war_axe_rsk._focus">
@@ -650,8 +670,12 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Focus -->
-    <add order="0x40" stat="rCrit" val="107">
-      <and>        <player hp="60" />      </and>    </add>  </for>
+    <add order="0x40" stat="cAtk" val="107">
+		<and>
+			<player hp="60" />
+		</and>
+	</add>
+  </for>
 </item>
 <item id='4750' name="deadmans_glory_anger">
   <for>
@@ -664,7 +688,7 @@
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Anger -->
     <add val='30' order='0x40' stat='pAtk' />
-    <mul val='0.85' order='0x40' stat='maxHp' />
+    <mul val='0.85' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4751' name="deadmans_glory_health">
@@ -677,7 +701,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Health -->
-    <mul val='1.25' order='0x40' stat='maxHp' />
+    <mul val='1.25' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4752' name="deadmans_glory_haste">
@@ -690,7 +714,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Haste -->
-    <mul val='1.06' order='0x40' stat='pAtkSpd' />
+    <mul val='1.06' order='0x50' stat='pAtkSpd' />
   </for>
 </item>
 <item id='4753' name="art_of_battle_axe_health">
@@ -703,7 +727,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Health -->
-    <mul val='1.25' order='0x40' stat='maxHp' />
+    <mul val='1.25' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4754' name="art_of_battle_axe_rsk._focus">
@@ -716,8 +740,12 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Focus -->
-    <add order="0x40" stat="rCrit" val="99">
-      <and>        <player hp="60" />      </and>    </add>  </for>
+    <add order="0x40" stat="cAtk" val="99">
+		<and>
+			<player hp="60" />
+		</and>
+	</add>
+  </for>
 </item>
 <item id='4755' name="art_of_battle_axe_haste">
   <for>
@@ -729,7 +757,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Haste -->
-    <mul val='1.06' order='0x40' stat='pAtkSpd' />
+    <mul val='1.06' order='0x50' stat='pAtkSpd' />
   </for>
 </item>
 <item id='4756' name="meteor_shower_health">
@@ -742,7 +770,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Health -->
-    <mul val='1.25' order='0x40' stat='maxHp' />
+    <mul val='1.25' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4757' name="meteor_shower_-_focus_focus">
@@ -755,7 +783,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Focus -->
-    <add val='87' order='0x40' stat='rCrit' />
+    <add val='87' order='0x40' stat='cAtk' />
   </for>
 </item>
 <item id='4758' name="meteor_shower_-_m._focus_p.focus">
@@ -767,6 +795,7 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+	<add val='87' order='0x40' stat='cAtk' />
   </for>
 </item>
 <item id='4759' name="cursed_dagger_critical_bleed">
@@ -801,7 +830,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Haste -->
-    <mul order="0x40" stat="pAtkSpd" val="1.13">
+    <mul order="0x50" stat="pAtkSpd" val="1.13">
       <and>
         <player hp="60" />
       </and>
@@ -818,7 +847,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Focus -->
-    <add val='90' order='0x40' stat='rCrit' />
+    <add val='90' order='0x40' stat='cAtk' />
   </for>
 </item>
 <item id='4763' name="dark_elven_dagger_back_blow">
@@ -899,7 +928,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Focus -->
-    <add val='81' order='0x40' stat='rCrit' />
+    <add val='81' order='0x40' stat='cAtk' />
   </for>
 </item>
 <item id='4770' name="grace_dagger_back_blow">
@@ -936,7 +965,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Focus -->
-    <add val='81' order='0x40' stat='rCrit' />
+    <add val='81' order='0x40' stat='cAtk' />
   </for>
 </item>
 <item id='4773' name="dark_screamer_critical_bleed">
@@ -1006,7 +1035,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Focus -->
-    <add val='71' order='0x40' stat='rCrit' />
+    <add val='71' order='0x40' stat='cAtk' />
   </for>
 </item>
 <item id='4779' name="kris_back_blow">
@@ -1076,7 +1105,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Focus -->
-    <add val='87' order='0x40' stat='rCrit' />
+    <add val='87' order='0x40' stat='cAtk' />
   </for>
 </item>
 <item id='4785' name="bloody_orchid_-_backblow_back_blow">
@@ -1100,7 +1129,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Focus -->
-    <add val='71' order='0x40' stat='rCrit' />
+    <add val='71' order='0x40' stat='cAtk' />
   </for>
 </item>
 <item id='4787' name="hell_knife_back_blow">
@@ -1191,7 +1220,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Haste -->
-    <mul order="0x40" stat="pAtkSpd" val="1.12">
+    <mul order="0x50" stat="pAtkSpd" val="1.12">
       <and>
         <player hp="60" />
       </and>
@@ -1208,7 +1237,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Haste -->
-    <mul val='1.07' order='0x40' stat='pAtkSpd' />
+    <mul val='1.07' order='0x50' stat='pAtkSpd' />
   </for>
 </item>
 <item id='4795' name="great_pata_critical_drain">
@@ -1243,7 +1272,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Haste -->
-    <mul order="0x40" stat="pAtkSpd" val="1.11">
+    <mul order="0x50" stat="pAtkSpd" val="1.11">
       <and>
         <player hp="60" />
       </and>
@@ -1277,7 +1306,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Haste -->
-    <mul order="0x40" stat="pAtkSpd" val="1.12">
+    <mul order="0x50" stat="pAtkSpd" val="1.12">
       <and>
         <player hp="60" />
       </and>

@@ -10,7 +10,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Mana Up -->
-    <mul val='1.3' order='0x40' stat='maxMp' />
+    <mul val='1.3' order='0x50' stat='maxMp' />
   </for>
 </item>
 <item id='5597' name="dasparions_staff_conversion">
@@ -23,8 +23,8 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Conversion -->
-    <mul val='0.6' order='0x40' stat='maxHp' />
-    <mul val='1.6' order='0x40' stat='maxMp' />
+    <mul val='0.6' order='0x50' stat='maxHp' />
+    <mul val='1.6' order='0x50' stat='maxMp' />
   </for>
 </item>
 <item id='5598' name="dasparions_staff_acumen">
@@ -37,7 +37,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Acumen -->
-    <mul val='1.15' order='0x40' stat='mAtkSpd' />
+    <mul val='1.15' order='0x50' stat='mAtkSpd' />
   </for>
 </item>
 <item id='5599' name="meteor_shower_focus">
@@ -50,7 +50,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Focus -->
-    <add val='61' order='0x40' stat='rCrit' />
+    <add val='61' order='0x40' stat='cAtk' />
   </for>
 </item>
 </list>

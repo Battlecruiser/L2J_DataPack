@@ -34,7 +34,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Health -->
-    <mul val='1.25' order='0x40' stat='maxHp' />
+    <mul val='1.25' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='6310' name="sword_of_whispering_death_empower">
@@ -82,7 +82,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Acumen -->
-    <mul val='1.15' order='0x40' stat='mAtkSpd' />
+    <mul val='1.15' order='0x50' stat='mAtkSpd' />
   </for>
 </item>
 <item id='6314' name="homunkuluss_sword_conversion">
@@ -95,8 +95,8 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Conversion -->
-    <mul val='0.6' order='0x40' stat='maxHp' />
-    <mul val='1.6' order='0x40' stat='maxMp' />
+    <mul val='0.6' order='0x50' stat='maxHp' />
+    <mul val='1.6' order='0x50' stat='maxMp' />
   </for>
 </item>
 <item id='6315' name="homunkuluss_sword_magic_paralyze">
@@ -120,7 +120,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Focus -->
-    <add val='73' order='0x40' stat='rCrit' />
+    <add val='73' order='0x40' stat='cAtk' />
   </for>
 </item>
 <item id='6348' name="berserker_blade_critical_damage">
@@ -144,7 +144,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Haste -->
-    <mul val='1.07' order='0x40' stat='pAtkSpd' />
+    <mul val='1.07' order='0x50' stat='pAtkSpd' />
   </for>
 </item>
 <item id='6354' name="falchion_-_for_newbie">
@@ -179,7 +179,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Haste -->
-    <mul order="0x40" stat="pAtkSpd" val="1.13">
+    <mul order="0x50" stat="pAtkSpd" val="1.13">
       <and>
         <player hp="60" />
       </and>
@@ -196,7 +196,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Haste -->
-    <mul order="0x40" stat="pAtkSpd" val="1.12">
+    <mul order="0x50" stat="pAtkSpd" val="1.12">
       <and>
         <player hp="60" />
       </and>
