@@ -26,5 +26,5 @@ CREATE TABLE IF NOT EXISTS `seven_signs_status` (
   PRIMARY KEY  (`id`)
 );
 
-INSERT INTO `seven_signs_status` VALUES
+INSERT IGNORE INTO `seven_signs_status` VALUES
 (0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
