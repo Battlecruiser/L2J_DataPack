@@ -1,53 +1,88 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <item id='6656' name="Earring of Antharas">
+<!-- TODO: Decrease in MP consumption -->
   <for>
     <add val='71' order='0x10' stat='mDef' />
     <add val='31' order='0x10' stat='maxMp' />
-  <enchant val='0' order='0x0C' stat='mDef' />
-</for>
+    <mul val='1.8' order='0x50' stat='bleedRes' />
+    <mul val='1.15' order='0x50' stat='regHp' /> 
+	<add val='10' order='0x40' stat='absorbDam' /> 
+	<mul val='1.6' order='0x50' stat='stunRes'/> 
+	<mul val='1.6' order='0x50' stat='muteRes'/>
+	<mul val='1.25' order='0x50' stat='earthRes'/> 
+	<enchant val='0' order='0x0C' stat='mDef' /> 
+  </for> 
 </item>
 <item id='6657' name="Necklace of Valakas">
   <for>
     <add val='95' order='0x10' stat='mDef' />
     <add val='42' order='0x10' stat='maxMp' />
-  <enchant val='0' order='0x0C' stat='mDef' />
-</for>
+	<add val='445' order='0x40' stat='maxHp' /> 
+	<mul val='1.8' order='0x50' stat='sleepRes' /> 
+	<mul val='1.1' order='0x50' stat='pAtk' /> 
+	<mul val='1.1' order='0x50' stat='mAtk' /> 
+	<mul val='1.1' order='0x50' stat='mCritRate' /> 
+	<mul val='1.25' order='0x50' stat='fireRes' /> 
+	<mul order='0x50' stat='mReuse' val="0.85"/>
+	<mul order='0x50' stat='atkReuse' val="0.85"/>
+	<add order="0x40" stat="reflectDam" val="15"/>
+	<enchant val='0' order='0x0C' stat='mDef' /> 
+  </for> 
 </item>
 <item id='6658' name="Ring of Baium">
   <for>
     <add val='48' order='0x10' stat='mDef' />
     <add val='21' order='0x10' stat='maxMp' />
-  <enchant val='0' order='0x0C' stat='mDef' />
-</for>
+	<mul val='1.8' order='0x50' stat='poisonRes' /> 
+	<add val='6' order='0x40' stat='accCombat' />
+	<add val='85' order='0x40' stat='cAtk' />
+	<mul val='1.6' order='0x50' stat='rootRes' />
+	<mul val='1.1' order='0x50' stat='pAtkSpd' />
+	<mul val='1.1' order='0x50' stat='mAtkSpd' />
+	<enchant val='0' order='0x0C' stat='mDef' />
+  </for>
 </item>
 <item id='6659' name="Zaken's Earring">
   <for>
     <add val='71' order='0x10' stat='mDef' />
     <add val='31' order='0x10' stat='maxMp' />
-  <enchant val='0' order='0x0C' stat='mDef' />
-</for>
+	<mul val='1.6' order='0x50' stat='bleedRes' /> 
+	<mul val='1.1' order='0x50' stat='regHp' />
+	<add val='6' order='0x40' stat='absorbDam' /> 
+	<mul val='1.6' order='0x50' stat='stunRes' />
+	<mul val='1.6' order='0x50' stat='muteRes' />
+	<enchant val='0' order='0x0C' stat='mDef' />
+  </for>
 </item>
 <item id='6660' name="Ring of Queen Ant">
   <for>
     <add val='48' order='0x10' stat='mDef' />
     <add val='21' order='0x10' stat='maxMp' />
-  <enchant val='0' order='0x0C' stat='mDef' />
-</for>
+	<mul val='1.6' order='0x50' stat='poisonRes' /> 
+	<add val='4' order='0x40' stat='accCombat' />
+	<add val='70' order='0x40' stat='cAtk' />	
+	<mul val='1.4' order='0x50' stat='rootRes' />
+	<enchant val='0' order='0x0C' stat='mDef' />
+  </for>
 </item>
 <item id='6661' name="Earring of Orfen">
   <for>
     <add val='71' order='0x10' stat='mDef' />
     <add val='31' order='0x10' stat='maxMp' />
-  <enchant val='0' order='0x0C' stat='mDef' />
-</for>
+    <mul val='1.4' order='0x50' stat='bleedRes' />
+    <mul val='1.1' order='0x50' stat='regHp' />
+    <enchant val='0' order='0x0C' stat='mDef' />
+  </for>
 </item>
 <item id='6662' name="Ring of Core">
   <for>
     <add val='48' order='0x10' stat='mDef' />
     <add val='21' order='0x10' stat='maxMp' />
-  <enchant val='0' order='0x0C' stat='mDef' />
-</for>
+    <mul val='1.4' order='0x50' stat='poisonRes' />
+    <add val='3' order='0x40' stat='accCombat' />
+    <enchant val='0' order='0x0C' stat='mDef' />
+  </for>
 </item>
 <item id='6674' name="Sealed Imperial Crusader Breastplate">
   <for>
