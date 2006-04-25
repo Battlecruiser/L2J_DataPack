@@ -578,12 +578,21 @@
   </for>
 </skill>
 <skill id="1353" levels="1" name="Divine Protection">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+	<set name="mpConsume" val="70"/> 
+	<set name="power" val="0.0"/> 
+	<set name="target" val="TARGET_ONE"/> 
+	<set name="hitTime" val="4000"/> 
+	<set name="reuseDelay" val="6000"/> 
+	<set name="skillTime" val="4000"/> 
+	<set name="skillType" val="BUFF"/> 
+	<set name="operateType" val="OP_ACTIVE"/> 
+	<set name="buffDuration" val="1200000"/> 
+	<set name="castRange" val="400"/> 
+	<for> 
+		<effect count="1" name="Buff" time="1200" val="0"> 
+			<mul stat="darkRes" val="1.5" order="0x50"/> 
+		</effect> 
+	</for> 
 </skill>
 <skill id="1354" levels="1" name="Arcane Protection">
   <set name="target" val="TARGET_NONE"/>
