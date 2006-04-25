@@ -5663,7 +5663,7 @@ INSERT INTO `npc` (`id`, `name`, `class`, `collision_radius`, `collision_height`
   (13157,'Unicorn Seraphim','Monster2.angelic_unicorn',8,22,76,'male','L2Pet',40,4298,1710,40,21,30,20,43,10,6922,761,1770,584,962,434,253,0,333,0,0,0,80,120,'null',0,0),
   (13158,'Unicorn Seraphim','Monster2.angelic_unicorn',8,22,76,'male','L2Pet',40,4298,1710,40,21,30,20,43,10,6922,761,1770,584,962,434,253,0,333,0,0,0,80,120,'null',0,0),
   (13159,'Unicorn Seraphim','Monster2.angelic_unicorn',8,22,76,'male','L2Pet',40,4298,1710,40,21,30,20,43,10,6922,761,1770,584,962,434,253,0,333,0,0,0,80,120,'null',0,0),
-  (13160,'Unicorn Seraphim','Monster2.angelic_unicorn',9,25.5,76,'male','L2Npc',40,4298,1710,40,21,30,20,43,10,6922,761,1770,584,962,434,278,0,333,0,0,0,27,140,'null',0,0),
+  (13160,'Unicorn Seraphim','Monster2.angelic_unicorn',9,22,76,'male','L2Npc',40,4298,1710,40,21,30,20,43,10,6922,761,1770,584,962,434,278,0,333,0,0,0,27,140,'null',0,0),
   (13161,'Unicorn Seraphim','Monster2.angelic_unicorn',8,22,76,'male','L2Pet',40,4298,1710,40,21,30,20,43,10,6922,761,1770,584,962,434,253,0,333,0,0,0,80,120,'null',0,0),
   (13162,'Unicorn Seraphim','Monster2.angelic_unicorn',8,22,76,'male','L2Pet',40,4298,1710,40,21,30,20,43,10,6922,761,1770,584,962,434,253,0,333,0,0,0,80,120,'null',0,0),
   (13163,'Unicorn Seraphim','Monster2.angelic_unicorn',8,22,76,'male','L2Pet',40,4298,1710,40,21,30,20,43,10,6922,761,1770,584,962,434,253,0,333,0,0,0,80,120,'null',0,0),

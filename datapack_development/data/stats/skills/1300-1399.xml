@@ -368,10 +368,24 @@
   </for>
 </skill>
 <skill id="1332" levels="10" name="Summon Unicorn Seraphim">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume">70 78 87 94 103 107 110 115 119 123</table>
+  <table name="#itemConsumeCount">1 1 2 2 3 2 3 4 3 4</table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="itemConsumeId" val="1459"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="6000"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="6000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <table name="#npcIds">13151 13152 13153 13154 13155 13156 13157 13158 13159 13160 13161 13162 13163 13164</table>
+  <set name="npcId" val="#npcIds" />
+  <set name="expPenalty" val="0.05" />
+  <set name="isCubic" val="false" />
   <for>
   </for>
 </skill>
