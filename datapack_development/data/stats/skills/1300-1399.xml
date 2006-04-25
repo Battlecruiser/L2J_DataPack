@@ -611,9 +611,9 @@
   </for>
 </skill>
 <skill id="1356" levels="1" name="Prophecy of Fire">
+  <set name="mpConsume" val="72"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="5"/>
-  <set name="mpConsume" val="72"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillRadius" val="900"/>
@@ -626,7 +626,7 @@
   <set name="buffDuration" val="300000"/>
   <set name="castRange" val="-1"/>
   <for>
-	<effect count="1" name="Buff" time="300" val="0" stackOrder="#power" stackType="CoV">
+	<effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="CoV">
 		<mul order="0x50" stat="pAtk" val="1.08" />
 		<mul order="0x50" stat="pDef" val="1.16" />
 		<add order="0x40" stat="accCombat" val="4" />
@@ -700,7 +700,7 @@
   <set name="buffDuration" val="300000"/>
   <set name="castRange" val="-1"/>
   <for>
-	<effect count="1" name="Buff" time="300" val="0" stackOrder="#power" stackType="CoV">
+	<effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="CoV">
 		<mul order="0x50" stat="pAtk" val="1.08" />
 		<mul order="0x50" stat="pDef" val="1.16" />
 		<add order="0x40" stat="rCrit" val="9" />
