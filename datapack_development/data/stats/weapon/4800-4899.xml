@@ -10,7 +10,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Haste -->
-    <mul val='1.07' order='0x40' stat='pAtkSpd' />
+    <mul val='1.07' order='0x50' stat='pAtkSpd' />
   </for>
 </item>
 <item id='4801' name="arthro_nail_critical_poison">
@@ -51,7 +51,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Haste -->
-    <mul order="0x40" stat="pAtkSpd" val="1.1">
+    <mul order="0x50" stat="pAtkSpd" val="1.1">
       <and>
         <player hp="60" />
       </and>
@@ -135,7 +135,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Haste -->
-    <mul val='1.06' order='0x40' stat='pAtkSpd' />
+    <mul val='1.06' order='0x50' stat='pAtkSpd' />
   </for>
 </item>
 <item id='4810' name="crystallized_ice_bow_guidance">
@@ -174,7 +174,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Quick Recovery -->
-    <mul val='0.83' order='0x40' stat='atkReuse' />
+    <mul val='0.83' order='0x50' stat='atkReuse' />
   </for>
 </item>
 <item id='4813' name="elemental_bow_guidance">
@@ -211,7 +211,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Quick Recovery -->
-    <mul val='0.8' order='0x40' stat='atkReuse' />
+    <mul val='0.8' order='0x50' stat='atkReuse' />
   </for>
 </item>
 <item id='4816' name="elven_bow_of_nobility_evasion">
@@ -379,7 +379,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Quick Recovery -->
-    <mul val='0.87' order='0x40' stat='atkReuse' />
+    <mul val='0.87' order='0x50' stat='atkReuse' />
   </for>
 </item>
 <item id='4830' name="bow_of_peril_cheap_shot">
@@ -414,7 +414,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Mana Up -->
-    <mul val='1.3' order='0x40' stat='maxMp' />
+    <mul val='1.3' order='0x50' stat='maxMp' />
   </for>
 </item>
 <item id='4833' name="carnage_bow_quick_recovery">
@@ -427,7 +427,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Quick Recovery -->
-    <mul val='0.9' order='0x40' stat='atkReuse' />
+    <mul val='0.9' order='0x50' stat='atkReuse' />
   </for>
 </item>
 <item id='4834' name="scythe_anger">
@@ -441,7 +441,7 @@
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Anger -->
     <add val='20' order='0x40' stat='pAtk' />
-    <mul val='0.85' order='0x40' stat='maxHp' />
+    <mul val='0.85' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4835' name="scythe_critical_stun">
@@ -477,7 +477,7 @@
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Anger -->
     <add val='20' order='0x40' stat='pAtk' />
-    <mul val='0.85' order='0x40' stat='maxHp' />
+    <mul val='0.85' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4838' name="orcish_glaive_critical_stun">
@@ -579,7 +579,7 @@
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Anger -->
     <add val='24' order='0x40' stat='pAtk' />
-    <mul val='0.85' order='0x40' stat='maxHp' />
+    <mul val='0.85' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4847' name="scorpion_critical_stun">
@@ -681,7 +681,7 @@
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Anger -->
     <add val='28' order='0x40' stat='pAtk' />
-    <mul val='0.85' order='0x40' stat='maxHp' />
+    <mul val='0.85' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4856' name="great_axe_critical_stun">
@@ -717,7 +717,7 @@
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Anger -->
     <add val='30' order='0x40' stat='pAtk' />
-    <mul val='0.85' order='0x40' stat='maxHp' />
+    <mul val='0.85' order='0x50' stat='maxHp' />
   </for>
 </item>
 <item id='4859' name="lance_critical_stun">
@@ -835,7 +835,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Mana Up -->
-    <mul val='1.3' order='0x40' stat='maxMp' />
+    <mul val='1.3' order='0x50' stat='maxMp' />
   </for>
 </item>
 <item id='4869' name="crystal_staff_bodily_blessing">
@@ -1030,7 +1030,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Mana Up -->
-    <mul val='1.3' order='0x40' stat='maxMp' />
+    <mul val='1.3' order='0x50' stat='maxMp' />
   </for>
 </item>
 <item id='4886' name="paagrio_axe_magic_weakness">
@@ -1115,7 +1115,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Mana Up -->
-    <mul val='1.3' order='0x40' stat='maxMp' />
+    <mul val='1.3' order='0x50' stat='maxMp' />
   </for>
 </item>
 <item id='4893' name="ghouls_staff_bodily_blessing">
