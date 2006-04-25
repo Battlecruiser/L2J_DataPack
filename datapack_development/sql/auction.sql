@@ -1,8 +1,7 @@
 -- ---------------------------
 -- Table structure for auction
 -- ---------------------------
-DROP TABLE IF EXISTS auction;
-CREATE TABLE auction (
+CREATE TABLE IF NOT EXISTS auction (
   id INT NOT NULL default 0,
   sellerId INT NOT NULL default 0,
   sellerName varchar(50) NOT NULL default 'NPC',

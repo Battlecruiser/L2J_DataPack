@@ -1,8 +1,7 @@
 -- ---------------------------
 -- Table structure for auction_bid
 -- ---------------------------
-DROP TABLE IF EXISTS auction_bid;
-CREATE TABLE auction_bid (
+CREATE TABLE IF NOT EXISTS auction_bid (
   id INT NOT NULL default 0,
   auctionId INT NOT NULL default 0,
   bidderId INT NOT NULL default 0,

@@ -1,8 +1,7 @@
 -- ---------------------------
 -- Table structure for castle_siege_guards
 -- ---------------------------
-DROP TABLE IF EXISTS castle_siege_guards;
-CREATE TABLE castle_siege_guards (
+CREATE TABLE IF NOT EXISTS castle_siege_guards (
   castleId INT NOT NULL default 0,
   id int(11) NOT NULL auto_increment,
   npcId INT NOT NULL default 0,
@@ -16,7 +15,7 @@ CREATE TABLE castle_siege_guards (
   KEY id (castleId)
 );
 
-INSERT INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
+INSERT IGNORE INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
   (1,1201,12031,-18175,110197,-2421,6320,60,0),
   (1,1200,12029,-18196,110223,-2419,6320,60,0),
   (1,1202,12029,-18157,110173,-2421,6320,60,0),
@@ -518,9 +517,9 @@ INSERT INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `he
   (2,657,12114,22532,156682,-2567,32768,10800,0),
   (2,658,12114,22531,156602,-2567,32768,10800,0);
 
-COMMIT;
+-- Dion
 
-INSERT INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
+INSERT IGNORE INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
   (2,665,12109,22037,156573,-2566,57344,10800,0),
   (2,666,12109,22047,156657,-2567,0,10800,0),
   (2,667,12110,22631,156572,-2567,40960,10800,0),
@@ -1022,9 +1021,9 @@ INSERT INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `he
   (3,825,12144,113583,145342,-2669,16328,10800,0),
   (3,826,12139,113611,145343,-2669,16328,10800,0);
 
-COMMIT;
+-- Gludio
 
-INSERT INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
+INSERT IGNORE INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
   (3,829,12143,113610,145322,-2659,16328,10800,0),
   (3,832,12142,113611,145304,-2645,16328,10800,0),
   (3,833,12142,113638,145308,-2644,16328,10800,0),
@@ -1528,7 +1527,7 @@ INSERT INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `he
 
 COMMIT;
 
-INSERT INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
+INSERT IGNORE INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
   (5,366,12284,144976,5136,-80,8192,120,0),
   (5,370,12284,145133,5380,-80,8192,120,0),
   (5,374,12284,145290,5624,-80,8192,120,0),

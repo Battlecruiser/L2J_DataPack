@@ -1,7 +1,7 @@
 -- ---------------------------
 -- Table structure for topic
 -- ---------------------------
-CREATE TABLE `topic` (
+CREATE TABLE IF NOT EXISTS `topic` (
   `topic_id` int(8) NOT NULL default '0',
   `topic_forum_id` int(8) NOT NULL default '0',
   `topic_name` varchar(255) NOT NULL default '',
