@@ -101,6 +101,7 @@ __all__ = [
 '295_DreamsOfFlight',
 '296_SilkOfTarantula',
 '297_GatekeepersFavor',
+'298_LizardmensConspiracy',
 '303_CollectArrowheads',
 '306_CrystalOfFireice',
 '313_CollectSpores',
