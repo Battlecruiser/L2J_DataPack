@@ -32,8 +32,11 @@ class Quest (JQuest) :
    cond = int(st.get("cond"))
    if cond == 0 and st.getQuestItemsCount(SEWING_KIT) == 0 :
      fwear=st.getPlayer().getQuestState("37_PleaseMakeMeFormalWear")
-     if fwear.get("cond") == "6" :
-       htmltext = "7847-0.htm"
+     if fwear:
+         if fwear.get("cond") == "6" :
+           htmltext = "7847-0.htm"
+         else:
+           st.exitQuest(1)
      else:
        st.exitQuest(1)
    elif st.getQuestItemsCount(REINFORCED_STEEL) == 5 :
