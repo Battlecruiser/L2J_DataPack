@@ -159,6 +159,8 @@ __all__ = [
 '432_BirthdayPartySong',
 '501_ProofOfClanAlliance',
 '503_PursuitClanAmbition',
+'621_EggDelivery',
+'622_DeliveryOfSpecialLiquor',
 '634_InSearchofDimensionalFragments',
 '999_C3Tutorial'
 ]
