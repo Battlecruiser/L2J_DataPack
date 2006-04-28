@@ -552,7 +552,7 @@ INSERT INTO `weapon` VALUES (1, 'Short Sword', 'rhand', 'false', 1600, 1, 1, 'st
 (2626, 'Samurai Long Sword*Samurai Long Sword', 'lrhand', 'true', 2080, 1, 1, 'fine_steel', 'b', 236, 10, 'dual', 8, 0.00000, 0, 0, 0, 325, 0, 99, 95, 13100000, 1746, 'true'),
 (2915, 'Old Knight Sword', 'rhand', 'false', 3200, 2, 2, 'fine_steel', 'none', 24, 10, 'sword', 8, 0.00000, 0, 0, 0, 379, 0, 17, 95, 136000, 0, 'true'),
 (3026, 'Talins Spear', 'lrhand', 'false', 800, 2, 2, 'steel', 'none', 24, 10, 'pole', 8, -3.00000, 0, 0, 0, 325, 0, 17, 95, 136000, 0, 'true'),
-(3027, 'Old Knight''s Sword', 'lrhand', 'false', 2100, 2, 2, 'steel', 'none', 29, 10, 'bigsword', 8, 0.00000, 0, 0, 0, 325, 0, 17, 95, 136000, 0, 'true'),
+(3027, 'Old Knight''s Sword', 'lrhand', 'false', 2100, 2, 2, 'steel', 'none', 29, 10, 'bigsword', 8, 0.00000, 0, 0, 0, 325, 0, 17, 95, 136000, 0, 'false'),
 (3028, 'Crescent Moon Bow', 'lrhand', 'false', 600, 6, 2, 'wood', 'none', 34, 5, 'bow', 12, -3.00000, 0, 0, 0, 293, 2, 12, 95, 54100, 0, 'true'),
 (3029, 'Sword of Binding', 'rhand', 'false', 1200, 2, 2, 'steel', 'none', 17, 10, 'sword', 8, 0.00000, 0, 0, 0, 379, 0, 12, 95, 54100, 0, 'true'),
 (3439, 'Shining Canine', 'wolf', 'false', 100, 0, 0, 'steel', 'none', 7, 10, 'pet', 8, 0.00000, 0, 0, 0, 277, 0, 8, 95, 34067, 0, 'true'),
