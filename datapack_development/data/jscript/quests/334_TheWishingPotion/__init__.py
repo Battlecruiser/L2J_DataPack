@@ -156,6 +156,7 @@ class Quest (JQuest) :
      if st.getQuestItemsCount(MATILDS_ORB_ID) == 0 : st.giveItems(MATILDS_ORB_ID,1)
      st.giveItems(WISH_POTION_ID,1)
      htmltext = "7738-10.htm"
+     st.set("cond","0")
    if event == "7738-14.htm":
      if st.getQuestItemsCount(WISH_POTION_ID) >= 1:
        htmltext = "7738-15.htm"
@@ -375,7 +376,7 @@ class Quest (JQuest) :
            st.playSound("ItemSound.quest_middle")
            st.setState(END)
          else: st.playSound("ItemSound.quest_itemget")
-   elif id == MIDDLE:
+   else :
      DROP_CHANCE = st.getRandom(MAX_VALUE)
      if npcId == SUCCUBUS_OF_SEDUCTION:
        if DROP_CHANCE <= DROP_CHANCE_FORBIDDEN_LOVE_SCROLL_ID:
