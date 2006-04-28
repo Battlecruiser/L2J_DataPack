@@ -1,8 +1,9 @@
-print "importing blacksmith data: 1002_unseal"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+
+SMITHS = [7283,7298,7300,7317,7458,7471,7526,7527,7536,7621,7678,7688,7846,7898,8002,8044,8271,8274,8316,8539,8583,8626,8668]
 
 class Quest (JQuest) :
 
@@ -251,20 +252,8 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 
-QUEST.addStartNpc(7300)
-QUEST.addStartNpc(7846)
-QUEST.addStartNpc(7688)
-QUEST.addStartNpc(7678)
-QUEST.addStartNpc(7471)
-QUEST.addStartNpc(8583)
-QUEST.addStartNpc(8271)
-QUEST.addStartNpc(8316)
-
-STARTED.addTalkId(7300)
-STARTED.addTalkId(7846)
-STARTED.addTalkId(7688)
-STARTED.addTalkId(7678)
-STARTED.addTalkId(7471)
-STARTED.addTalkId(8583)
-STARTED.addTalkId(8271)
-STARTED.addTalkId(8316)
+for npcId in SMITHS :
+    QUEST.addStartNpc(npcId)
+    STARTED.addTalkId(npcId)
+    
+print "importing blacksmith data: 1002_unseal"
