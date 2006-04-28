@@ -6,6 +6,7 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver import ItemTable
 
+SMITHS = [7283,7298,7300,7317,7458,7471,7526,7527,7536,7621,7678,7688,7846,7898,8002,8044,8271,8274,8316,8539,8583,8626,8668]
 
 ############################## Feel Free to add more Weapons ##########################################################################################################3
 
@@ -232,7 +233,7 @@ QUEST.setInitialState(CREATED)
 
 
 # init all npc to the correct stats
-for npcId in [7300,7471,7678,7688,7846,8271,8316]:
+for npcId in SMITHS:
 	QUEST.addStartNpc(npcId)
 	STARTED.addTalkId(npcId)
 	
