@@ -292,6 +292,7 @@ $MYG < ../sql/pets.sql &> /dev/null
 $MYG < ../sql/pets_stats.sql &> /dev/null
 $MYG < ../sql/posts.sql &> /dev/null
 $MYG < ../sql/npcskills.sql &> /dev/null
+$MYG < ../sql/raidboss_spawnlist.sql &> /dev/null
 $MYG < ../sql/random_spawn.sql &> /dev/null
 $MYG < ../sql/random_spawn_loc.sql &> /dev/null
 $MYG < ../sql/seven_signs.sql &> /dev/null
