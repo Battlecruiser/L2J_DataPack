@@ -9,6 +9,6 @@ CREATE TABLE IF NOT EXISTS raidboss_spawnlist (
   loc_z INT NOT NULL default 0,
   heading INT NOT NULL default 0,
   respawn_delay INT NOT NULL default 0,
-  respawn_time INT NOT NULL default 0,
+  respawn_time BIGINT NOT NULL default 0,
   PRIMARY KEY  (boss_id, loc_x, loc_x, loc_x)
 );
