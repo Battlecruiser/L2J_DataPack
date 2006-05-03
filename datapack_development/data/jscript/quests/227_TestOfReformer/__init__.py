@@ -59,13 +59,11 @@ class Quest (JQuest) :
           htmltext = "7669-02.htm"
     elif event == "7669_2" :
           htmltext = "7669-03.htm"
-#          if Maker_GetNpcCount() == 1 :
           st.getPcSpawn().addSpawn(5131,-9382,-89852,-2333)
     elif event == "7669_3" :
           htmltext = "7669-05.htm"
     elif event == "7670_1" :
           htmltext = "7670-03.htm"
-#          if Maker_GetNpcCount() == 1 :
           st.getPcSpawn().addSpawn(5132,126019,-179983,-1781)
     elif event == "7670_2" :
           htmltext = "7670-02.htm"
@@ -176,13 +174,12 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-
    npcId = npc.getNpcId()
    if npcId == 5099 :
     if int(st.get("cond")) == 1 and st.getQuestItemsCount(RIPPED_DIARY_ID) < 7 and st.getQuestItemsCount(BOOK_OF_REFORM_ID) >= 1 :
       if st.getQuestItemsCount(RIPPED_DIARY_ID) == 6 :
         st.set("cond","2")
-        st.getPcSpawn().addSpawn(5128)
+        st.getPcSpawn().addSpawn(5128,53668,143283,-3863)
         st.takeItems(RIPPED_DIARY_ID,st.getQuestItemsCount(RIPPED_DIARY_ID))
       else:
         st.giveItems(RIPPED_DIARY_ID,1)
