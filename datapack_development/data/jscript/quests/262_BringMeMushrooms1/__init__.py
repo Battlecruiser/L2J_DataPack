@@ -45,13 +45,13 @@ class Quest (JQuest) :
    count = st.getQuestItemsCount(FUNGUS_SAC)
    chance = 3
    if npc.getNpcId() == 400 : chance += 1
-   if count <10 and st.getRandom(10)< 3 :
+   if count < 10 and st.getRandom(10) < chance :
      st.giveItems(FUNGUS_SAC,1)
-   if count == 9 :
-     st.playSound("ItemSound.quest_middle")
-     st.set("cond","2")
-   else:
-     st.playSound("ItemSound.quest_itemget")
+     if count == 9 :
+       st.playSound("ItemSound.quest_middle")
+       st.set("cond","2")
+     else :
+       st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST       = Quest(262,"262_BringMeMushrooms1","Bring Me Mushrooms1")
@@ -71,7 +71,6 @@ COMPLETED.addTalkId(7137)
 STARTED.addKillId(400)
 STARTED.addKillId(7)
 
-STARTED.addQuestDrop(7,FUNGUS_SAC,1)
 STARTED.addQuestDrop(400,FUNGUS_SAC,1)
 
 print "importing quests: 262: Bring Me Mushrooms1"
