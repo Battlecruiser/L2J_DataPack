@@ -34,7 +34,7 @@ class Quest (JQuest) :
      if st.getQuestItemsCount(FUNGUS_SAC)<10 :
        htmltext = "7137-04.htm"
      else :
-       st.giveItems(ADENA,2000)
+       st.giveItems(ADENA,3000)
        st.takeItems(FUNGUS_SAC,-1)
        st.exitQuest(1)
        st.playSound("ItemSound.quest_finish")
