@@ -69,7 +69,7 @@ class Quest (JQuest) :
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
           st.set("onlyone","1")
-          st.giveItems(ADENA_ID,450)
+          st.giveItems(ADENA_ID,820)
    elif npcId == 7360 and int(st.get("cond"))==1 and st.getQuestItemsCount(JENNIES_LETTER_ID)==1 :
         htmltext = "7360-01.htm"
         st.takeItems(JENNIES_LETTER_ID,1)

@@ -1,5 +1,4 @@
 # Maked by Mr. Have fun! Version 0.2
-print "importing quests: 108: Diamond Gambit"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -27,7 +26,6 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-          st.set("id","0")
           htmltext = "7523-03.htm"
           st.giveItems(GOUPHS_CONTRACT_ID,1)
           st.set("cond","1")
@@ -50,12 +48,10 @@ class Quest (JQuest) :
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
-     st.setState(STARTING)
      st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
-   if npcId == 7523 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-        if int(st.get("cond")) < 15 :
+   if npcId == 7523 and id == COMPLETED :
+      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
+   elif npcId == 7523 and int(st.get("cond"))==0 :
           if st.getPlayer().getRace().ordinal() != 4 :
             htmltext = "7523-00.htm"
             st.exitQuest(1)
@@ -65,11 +61,6 @@ class Quest (JQuest) :
           else:
             htmltext = "7523-01.htm"
             st.exitQuest(1)
-        else:
-          htmltext = "7523-01.htm"
-          st.exitQuest(1)
-   elif npcId == 7523 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
-      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7523 and int(st.get("cond"))==1 and st.getQuestItemsCount(GOUPHS_CONTRACT_ID) :
           htmltext = "7523-04.htm"
    elif npcId == 7523 and int(st.get("cond"))==1 and (st.getQuestItemsCount(REEPS_CONTRACT_ID) or st.getQuestItemsCount(ELVEN_WINE_ID) or st.getQuestItemsCount(BRONPS_DICE_ID) or st.getQuestItemsCount(BRONPS_CONTRACT_ID)) :
@@ -80,16 +71,16 @@ class Quest (JQuest) :
           st.giveItems(COAL_PIECE_ID,1)
    elif npcId == 7523 and int(st.get("cond"))==1 and (st.getQuestItemsCount(BRONPS_LETTER_ID) or st.getQuestItemsCount(COAL_PIECE_ID) or st.getQuestItemsCount(BERRY_TART_ID) or st.getQuestItemsCount(BAT_DIAGRAM_ID)) :
           htmltext = "7523-07.htm"
-   elif npcId == 7523 and int(st.get("cond"))==1 and st.getQuestItemsCount(STAR_DIAMOND_ID) and int(st.get("onlyone"))==0 :
-          if int(st.get("id")) != 108 :
-            st.set("id","108")
+   elif npcId == 7523 and int(st.get("cond"))==1 and st.getQuestItemsCount(STAR_DIAMOND_ID) :
             htmltext = "7523-08.htm"
             st.giveItems(SILVERSMITH_HAMMER_ID,1)
-            st.takeItems(STAR_DIAMOND_ID,1)
+            for item in range(4412,4417) :
+               st.giveItems(item,10)   # Echo crystals
+            st.giveItems(1060,100)     # Lesser Healing Potions
+            st.takeItems(STAR_DIAMOND_ID,-1)
             st.set("cond","0")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
-            st.set("onlyone","1")
    elif npcId == 7516 and int(st.get("cond"))==1 and st.getQuestItemsCount(GOUPHS_CONTRACT_ID) and st.getQuestItemsCount(REEPS_CONTRACT_ID)==0 :
           htmltext = "7516-01.htm"
           st.giveItems(REEPS_CONTRACT_ID,1)
@@ -162,7 +153,6 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    if npcId == 323 :
-        st.set("id","0")
         if int(st.get("cond")) == 1 and st.getQuestItemsCount(BRONPS_CONTRACT_ID) :
           if st.getRandom(10) < 8 :
             if st.getQuestItemsCount(AQUAMARINE_ID)+st.getQuestItemsCount(CHRYSOBERYL_ID) == 19 :
@@ -183,7 +173,6 @@ class Quest (JQuest) :
                   st.giveItems(CHRYSOBERYL_ID,1)
                   st.playSound("ItemSound.quest_itemget")
    elif npcId == 324 :
-        st.set("id","0")
         if int(st.get("cond")) == 1 and st.getQuestItemsCount(BRONPS_CONTRACT_ID) :
           if st.getRandom(10) < 6 :
             if st.getQuestItemsCount(AQUAMARINE_ID)+st.getQuestItemsCount(CHRYSOBERYL_ID) == 19 :
@@ -204,7 +193,6 @@ class Quest (JQuest) :
                   st.giveItems(CHRYSOBERYL_ID,1)
                   st.playSound("ItemSound.quest_itemget")
    elif npcId == 480 :
-        st.set("id","0")
         if int(st.get("cond")) == 1 and st.getQuestItemsCount(BAT_DIAGRAM_ID) and st.getQuestItemsCount(STAR_DIAMOND_ID) == 0 :
           if st.getRandom(10) < 2 :
             st.giveItems(STAR_DIAMOND_ID,1)
@@ -222,7 +210,9 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7523)
 
+CREATED.addTalkId(7523)
 STARTING.addTalkId(7523)
+COMPLETED.addTalkId(7523)
 
 STARTED.addTalkId(7516)
 STARTED.addTalkId(7521)
@@ -243,11 +233,11 @@ STARTED.addQuestDrop(7516,REEPS_CONTRACT_ID,1)
 STARTED.addQuestDrop(7555,ELVEN_WINE_ID,1)
 STARTED.addQuestDrop(7526,BRONPS_CONTRACT_ID,1)
 STARTED.addQuestDrop(323,AQUAMARINE_ID,1)
-STARTED.addQuestDrop(324,AQUAMARINE_ID,1)
 STARTED.addQuestDrop(323,CHRYSOBERYL_ID,1)
-STARTED.addQuestDrop(324,CHRYSOBERYL_ID,1)
 STARTED.addQuestDrop(7523,COAL_PIECE_ID,1)
 STARTED.addQuestDrop(7529,BRONPS_DICE_ID,1)
 STARTED.addQuestDrop(7526,BRONPS_LETTER_ID,1)
 STARTED.addQuestDrop(7521,BERRY_TART_ID,1)
 STARTED.addQuestDrop(7522,BAT_DIAGRAM_ID,1)
+
+print "importing quests: 108: Diamond Gambit"

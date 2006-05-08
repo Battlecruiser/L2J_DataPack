@@ -47,7 +47,7 @@ class Quest (JQuest) :
        else :
          htmltext = "7534-06.htm"
          st.giveItems(ADENA,2400)
-       st.addExpAndSp(0,60)
+       st.addExpAndSp(0,600)
        st.takeItems(BAT_FANG,-1)
        st.exitQuest(1)
        st.playSound("ItemSound.quest_finish")
