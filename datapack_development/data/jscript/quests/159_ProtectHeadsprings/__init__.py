@@ -8,7 +8,6 @@ from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 ADENA           = 57
-RING_OF_ANGUISH = 876
 PLAGUE_DUST     = 1035
 HYACINTH_CHARM1 = 1071
 HYACINTH_CHARM2 = 1072
@@ -58,7 +57,6 @@ class Quest (JQuest) :
    elif cond == 4 and count >= 5 :
       st.takeItems(PLAGUE_DUST,-1)
       st.takeItems(HYACINTH_CHARM2,-1)
-      st.giveItems(RING_OF_ANGUISH,1)
       st.giveItems(ADENA,18250)
       htmltext = "7154-08.htm"
       st.unset("cond")
