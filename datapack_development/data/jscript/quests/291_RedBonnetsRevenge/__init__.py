@@ -7,6 +7,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 BLACK_WOLF_PELT = 1482
 GRANDMAS_PEARL,GRANDMAS_MIRROR,GRANDMAS_NECKLACE,GRANDMAS_HAIRPIN = range(1502,1506)
+SOE=736
 
 class Quest (JQuest) :
 
@@ -49,6 +50,7 @@ class Quest (JQuest) :
             st.giveItems(GRANDMAS_NECKLACE,1)
           else :
             st.giveItems(GRANDMAS_HAIRPIN,1)
+          st.giveItems(SOE,1)
    return htmltext
 
  def onKill (self,npc,st):
