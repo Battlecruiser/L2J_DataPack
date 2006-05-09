@@ -807,6 +807,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Bleed -->
+    <skill onCrit="1" id="96" lvl="3" chance="12" />
   </for>
 </item>
 <item id='4760' name="cursed_dagger_critical_poison">
@@ -818,6 +820,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Poison -->
+    <skill onCrit="1" id="1168" lvl="4" chance="4" />
   </for>
 </item>
 <item id='4761' name="cursed_dagger_rsk._haste">
@@ -881,6 +885,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Bleed -->
+    <skill onCrit="1" id="96" lvl="3" chance="12" />
   </for>
 </item>
 <item id='4766' name="stiletto_critical_poison">
@@ -892,6 +898,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Poison -->
+    <skill onCrit="1" id="1168" lvl="4" chance="4" />
   </for>
 </item>
 <item id='4767' name="stiletto_might_mortal">
@@ -977,6 +985,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Bleed -->
+    <skill onCrit="1" id="96" lvl="4" chance="10" />
   </for>
 </item>
 <item id='4774' name="crystal_dagger_critical_bleed">
@@ -988,6 +998,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Bleed -->
+    <skill onCrit="1" id="96" lvl="4" chance="10" />
   </for>
 </item>
 <item id='4775' name="crystal_dagger_critical_poison">
@@ -999,6 +1011,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Poison -->
+    <skill onCrit="1" id="1168" lvl="5" chance="3" />
   </for>
 </item>
 <item id='4776' name="crystal_dagger_might_mortal">
@@ -1058,6 +1072,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Bleed -->
+    <skill onCrit="1" id="96" lvl="4" chance="10" />
   </for>
 </item>
 <item id='4781' name="demons_sword_critical_poison">
@@ -1069,6 +1085,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Poison -->
+    <skill onCrit="1" id="1168" lvl="5" chance="3" />
   </for>
 </item>
 <item id='4782' name="demons_sword_might_mortal">
@@ -1163,6 +1181,8 @@
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Drain -->
+    <skill onCrit="1" id="3022" lvl="1" />
   </for>
 </item>
 <item id='4790' name="chakram_critical_poison">
@@ -1174,6 +1194,8 @@
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Poison -->
+    <skill onCrit="1" id="1168" lvl="4" chance="8" />
   </for>
 </item>
 <item id='4791' name="chakram_rsk._haste">
@@ -1249,6 +1271,8 @@
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Drain -->
+    <skill onCrit="1" id="3022" lvl="3" />
   </for>
 </item>
 <item id='4796' name="great_pata_critical_poison">
@@ -1260,6 +1284,8 @@
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Poison -->
+    <skill onCrit="1" id="1168" lvl="5" chance="7" />
   </for>
 </item>
 <item id='4797' name="great_pata_rsk._haste">
