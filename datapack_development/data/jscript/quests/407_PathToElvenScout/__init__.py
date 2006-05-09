@@ -35,6 +35,8 @@ class Quest (JQuest) :
             st.set("cond","1")
             st.setState(STARTED)
             st.playSound("ItemSound.quest_accept")
+        else :
+          htmltext = "7328-03.htm"
       else:
         if st.getPlayer().getClassId().getId() == 0x16 :
           htmltext = "7328-02a.htm"
