@@ -1076,9 +1076,11 @@
 <!-- Done by dc -->
 <table name="#Tab-mAtk"> 1.1 1.16 </table>
 <table name="#Tab-pAtk"> 1.05 1.08 </table>
+<table name="#Tab-mDef"> 0.88 0.85 </table>
 <table name="#Tab-pDef"> 0.88 0.85 </table>
 <table name="#Tab-mAtkSpd"> 1.05 1.08 </table>
 <table name="#Tab-pAtkSpd"> 1.05 1.08 </table>
+<table name="#Tab-runSpd"> 5 8 </table>
 <table name="#mpConsume"> 30 48 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -1095,9 +1097,11 @@
    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="berserk">
     <mul order="0x50" stat="mAtk" val="#Tab-mAtk"/>
     <mul order="0x50" stat="pAtk" val="#Tab-pAtk"/>
+    <mul order="0x50" stat="mDef" val="#Tab-mDef"/>
     <mul order="0x50" stat="pDef" val="#Tab-pDef"/>
     <mul order="0x50" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
     <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+    <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
   </effect>
  </for>
 </skill>
