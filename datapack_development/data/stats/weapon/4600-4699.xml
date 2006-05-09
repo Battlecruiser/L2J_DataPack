@@ -144,6 +144,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Poison -->
+    <skill onCrit="1" id="1168" lvl="4" chance="15" />
   </for>
 </item>
 <item id='4692' name="spirit_sword_haste">
@@ -181,6 +183,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Drain --> 
+    <skill onCrit="1" id="3022" lvl="2" />
   </for>
 </item>
 <item id='4695' name="raid_sword_critical_poison">
@@ -192,6 +196,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Poison -->    
+    <skill onCrit="1" id="1168" lvl="4" chance="15" />
   </for>
 </item>
 <item id='4696' name="caliburs_guidance">

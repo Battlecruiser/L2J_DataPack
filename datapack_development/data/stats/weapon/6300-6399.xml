@@ -22,6 +22,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Drain -->
+    <skill onCrit="1" id="3022" lvl="2" />
   </for>
 </item>
 <item id='6309' name="sword_of_limit_health">
@@ -70,6 +72,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Magic Silence -->
+    <skill onCast="1" id="1064" lvl="1" chance="10" />
   </for>
 </item>
 <item id='6313' name="homunkuluss_sword_acumen">
@@ -108,6 +112,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Magic Paralyze -->
+    <skill onCast="1" id="1170" lvl="1" chance="5" />
   </for>
 </item>
 <item id='6347' name="berserker_blade_focus">

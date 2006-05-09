@@ -9,6 +9,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Bleed -->
+    <skill onCrit="1" id="96" lvl="5" chance="42" />
   </for>
 </item>
 <item id='5601' name="meteor_shower_rsk._haste">
@@ -64,6 +66,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Drain -->
+    <skill onCrit="1" id="3022" lvl="7" />
   </for>
 </item>
 <item id='5605' name="branch_of_the_mother_tree_conversion">
@@ -124,6 +128,8 @@
     <set val='293' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Bleed -->
+    <skill onCrit="1" id="96" lvl="5" chance="35" />
   </for>
 </item>
 <item id='5610' name="carnage_bow_mana_up">
@@ -172,6 +178,8 @@
     <set val='227' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Poison -->
+    <skill onCrit="1" id="1168" lvl="6" chance="18" />
   </for>
 </item>
 <item id='5614' name="bloody_orchid_focus">
@@ -207,6 +215,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Bleed -->
+    <skill onCrit="1" id="96" lvl="5" chance="12" />
   </for>
 </item>
 <item id='5617' name="soul_separator_guidance">
@@ -355,6 +365,8 @@
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Stun -->
+    <skill onCrit="1" id="3070" lvl="1" chance="25" />
   </for>
 </item>
 <item id='5628' name="halberd_wide_blow">
@@ -447,6 +459,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Poison -->
+    <skill onCrit="1" id="1168" lvl="6" chance="10" />
   </for>
 </item>
 <item id='5636' name="tallum_blade_haste">
@@ -496,6 +510,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Magic Paralyze -->
+    <skill onCast="1" id="1170" lvl="1" chance="5" />
   </for>
 </item>
 <item id='5640' name="elemental_sword_empower">
@@ -531,6 +547,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Magic Silence -->
+    <skill onCast="1" id="1064" lvl="1" chance="10" />
   </for>
 </item>
 <item id='5643' name="sword_of_miracles__acumen">
@@ -568,6 +586,8 @@
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Bleed -->
+    <skill onCrit="1" id="96" lvl="5" chance="24" />
   </for>
 </item>
 <item id='5646' name="dragon_slayer_critical_drain">
@@ -579,6 +599,8 @@
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- Critical Drain -->
+    <skill onCrit="1" id="3022" lvl="4" />
   </for>
 </item>
 <item id='5647' name="dark_legions_edge_critical_damage">
