@@ -74,6 +74,16 @@ class Quest (JQuest) :
          htmltext = "7358-07.htm"
          st.takeItems(KARTAS_TRANSLATION,1)
          st.giveItems(ELDRITCH_DAGGER,1)
+         for item in range(4412,4417) :
+               st.giveItems(item,10)
+         st.giveItems(1060,100)
+         if st.getPlayer().getClassId().isMage():
+           item = 2509
+           qty = 300
+         else :
+           item = 1835
+           qty = 100
+         st.giveItems(item,qty)
          st.unset("cond")
          st.setState(COMPLETED)
          st.playSound("ItemSound.quest_finish")
