@@ -124,7 +124,7 @@ class Quest (JQuest) :
       htmltext = "7476-09.htm"
       st.giveItems(ALDERS_SKULL2_ID,1)
       st.takeItems(ALDERS_SKULL1_ID,1)
-      st.getPcSpawn().addSpawn(7613,78977,149036,-3597)
+      st.getPcSpawn().addSpawn(7613,78977,149036,-3597,300000)
    elif npcId == 7476 and int(st.get("cond"))==1 and (st.getQuestItemsCount(ALDERS_SKULL2_ID) or st.getQuestItemsCount(ALDERS_RECEIPT_ID)) :
       htmltext = "7476-10.htm"
    elif npcId == 7476 and int(st.get("cond"))==1 and st.getQuestItemsCount(REVELATIONS_MANUSCRIPT_ID) :
@@ -421,13 +421,9 @@ STARTED.addQuestDrop(7614,HERBALISM_TEXTBOOK_ID,1)
 STARTED.addQuestDrop(7463,IXIAS_LIST_ID,1)
 STARTED.addQuestDrop(158,MEDUSA_ICHOR_ID,1)
 STARTED.addQuestDrop(192,TYRANTS_BLOOD_ID,1)
-STARTED.addQuestDrop(193,TYRANTS_BLOOD_ID,1)
 STARTED.addQuestDrop(233,M_SPIDER_FLUIDS_ID,1)
 STARTED.addQuestDrop(202,DEAD_SEEKER_DUNG_ID,1)
 STARTED.addQuestDrop(230,NIGHTSHADE_ROOT_ID,1)
-STARTED.addQuestDrop(157,NIGHTSHADE_ROOT_ID,1)
-STARTED.addQuestDrop(232,NIGHTSHADE_ROOT_ID,1)
-STARTED.addQuestDrop(234,NIGHTSHADE_ROOT_ID,1)
 STARTED.addQuestDrop(7476,ALDERS_SKULL2_ID,1)
 STARTED.addQuestDrop(7114,ALDERS_RECEIPT_ID,1)
 STARTED.addQuestDrop(7476,KAIRAS_RECOMMEND_ID,1)
