@@ -160,5 +160,7 @@ insert into zone values (12, 'Underground', 'Gludin North Road', -77276, 134858,
 insert into zone values (13, 'Underground', '', 38116, 147264, -69590, 120547, -5000, 0);
 
 insert into zone values (1, 'Water', 'ascetics necropolis', -56190, 78595, -55175, 79600, -3061, 0);
-
+INSERT INTO zone VALUES(1,'Fishing','Giran North Entrance',82480,143048,83321,141782,0,0);
+INSERT INTO zone VALUES(1,'Fishing','Giran North Entrance',82109,142550,82211,142149,0,0);
+INSERT INTO zone VALUES(1,'Fishing','Giran North Entrance',82235,141780,82700,142718,0,0);
 insert into zone values (1,'No Landing', 'ToI', 109448, 10233,118547,21446,0,0);
