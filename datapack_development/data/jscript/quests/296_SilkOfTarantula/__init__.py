@@ -55,7 +55,7 @@ class Quest (JQuest) :
          htmltext = "7519-04.htm"
        else :
          htmltext = "7519-05.htm"
-         st.giveItems(ADENA,count*23)
+         st.giveItems(ADENA,count*20)
          st.takeItems(TARANTULA_SPIDER_SILK,count)
    else :
      htmltext = "7548-01.htm"
