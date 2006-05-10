@@ -6,8 +6,7 @@ Source Database:       l2jdb
 Date:                  2006-04-26 21:15:54
 */
 
-SET FOREIGN_KEY_CHECKS=0;
-use l2jdb;
+DROP TABLE `fishreward` IF EXISTS;
 #----------------------------
 # Table structure for fishreward
 #----------------------------
@@ -24,7 +23,7 @@ CREATE TABLE `fishreward` (
 #----------------------------
 
 
-insert  into fishreward values 
+INSERT INTO `fishreward` VALUES 
 (6412, 6908, 6, 1, 26), 
 (6412, 6911, 2, 26, 47), 
 (7726, 6908, 6, 1, 29), 
