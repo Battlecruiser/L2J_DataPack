@@ -6,7 +6,7 @@ Source Database:       l2jdb
 Date:                  2006-04-26 21:15:54
 */
 
-DROP TABLE `fishreward` IF EXISTS;
+DROP TABLE IF EXISTS `fishreward`;
 #----------------------------
 # Table structure for fishreward
 #----------------------------
