@@ -6,12 +6,10 @@ Source Database:       l2jdb
 Date:                  2006-04-26 21:15:38
 */
 
-SET FOREIGN_KEY_CHECKS=0;
-use l2jdb;
 #----------------------------
 # Table structure for fishing_skill_trees
 #----------------------------
-CREATE TABLE `fishing_skill_trees` (
+CREATE TABLE IF NOT EXISTS `fishing_skill_trees` (
   `skill_id` int(10) NOT NULL default '0',
   `level` int(10) NOT NULL default '0',
   `name` varchar(25) NOT NULL default '',

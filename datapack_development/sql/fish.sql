@@ -6,8 +6,7 @@ Source Database:       l2jdb
 Date:                  2006-04-26 21:16:32
 */
 
-SET FOREIGN_KEY_CHECKS=0;
-use l2jdb;
+DROP TABLE IF EXISTS `fish`;
 #----------------------------
 # Table structure for fish
 #----------------------------
@@ -25,7 +24,7 @@ CREATE TABLE `fish` (
 #----------------------------
 
 
-insert  into fish values 
+INSERT INTO `fish` VALUES
 (6412, 1, 'Small green ugly fish', 100, 8, 3), 
 (7726, 1, 'Small green nimble fish', 116, 8, 1), 
 (7728, 1, 'Small Green Fat Fish', 132, 8, 2), 
