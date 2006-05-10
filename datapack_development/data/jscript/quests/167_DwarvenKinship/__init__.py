@@ -24,7 +24,7 @@ class Quest (JQuest) :
       st.set("cond","2")
       st.takeItems(COLLETTE_LETTER,1)
       st.giveItems(NORMANS_LETTER,1)
-      st.giveItems(ADENA,1000)
+      st.giveItems(ADENA,2000)
     elif event == "7255-04.htm" :
       st.takeItems(COLLETTE_LETTER,1)
       st.giveItems(ADENA,3000)
@@ -33,7 +33,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_finish")
     elif event == "7210-02.htm" :
       st.takeItems(NORMANS_LETTER,1)
-      st.giveItems(ADENA,5100)
+      st.giveItems(ADENA,20000)
       st.unset("cond")
       st.setState(COMPLETED)
       st.playSound("ItemSound.quest_finish")

@@ -56,8 +56,8 @@ class Quest (JQuest) :
             st.set("id","165")
             htmltext = "7348-05.htm"
             st.takeItems(DARK_BEZOAR_ID,st.getQuestItemsCount(DARK_BEZOAR_ID))
-            st.giveItems(LESSER_HEALING_POTION_ID,1)
-            st.addExpAndSp(1900,0)
+            st.giveItems(LESSER_HEALING_POTION_ID,5)
+            st.addExpAndSp(1000,0)
             st.set("cond","0")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
