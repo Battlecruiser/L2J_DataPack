@@ -1183,7 +1183,7 @@
   <set name="castRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-      <add stat="stunRes" val="#res" order="0x50"/>
+      <add stat="stunRes" val="#res" order="0x40"/>
     </effect>
   </for>
 </skill>
