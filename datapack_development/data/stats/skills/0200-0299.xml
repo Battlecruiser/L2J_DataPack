@@ -465,7 +465,6 @@
      29.4  30.8  32.2  33.7  35.2  36.7  38.2  39.8  41.4  43.0
      44.6  46.3  48.0  49.7  51.5  53.3  57.0  58.9  62.8  64.8
      68.9  71.0  75.3  77.5  82.0  84.3  89.0  91.4  96.3  98.8
-
   </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -667,7 +666,6 @@
   <set name="castRange" val="-1"/>
   <!-- cannot be learned, given -->
   <set name="canLearn" val=""/>
-
   <for>
   </for>
 </skill>
@@ -1106,11 +1104,9 @@
   <set name="skillType" val="CHARGEDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="50"/>
-
   <!-- charge values -->
   <set name="num_charges" val="3"/>
   <set name="charge_skill_id" val="8"/> <!-- Focus Sonic is the charger -->
-
   <for>
   </for>
 </skill>
@@ -1170,6 +1166,7 @@
  </for>
 </skill>
 <skill id="264" levels="1" name="Song of Earth">
+  <!-- Done by dc -->
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
@@ -1181,15 +1178,14 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
- <!-- Done by dc -->
-  <table name="#Tab-pDef"> 1.15 </table>
- <for>
-  <effect name="Buff" time="120" count="1" val="0">
-    <mul  order='0x50' stat='pDef' val="#Tab-pDef"/>
-  </effect>
- </for>
+  <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <mul order="0x50" stat="pDef" val="1.15"/>
+    </effect>
+  </for>
 </skill>
 <skill id="265" levels="1" name="Song of Life">
+  <!-- Done by dc -->
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
@@ -1201,15 +1197,14 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
-<!-- Done by dc -->
-<table name="#Tab-regHp"> 1.2 </table>
-<for>
-  <effect name="Buff" time="120" count="1" val="0">
-    <mul  order='0x50' stat='regHp' val="#Tab-regHp"/>
- </effect>
-</for>
+  <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <mul order="0x50" stat="regHp" val="1.2"/>
+    </effect>
+  </for>
 </skill>
 <skill id="266" levels="1" name="Song of Water">
+  <!-- Done by dc -->
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
@@ -1221,15 +1216,14 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
- <!-- Done by dc -->
-<table name="#Tab-rEvas"> 10 </table>
-<for>
-  <effect name="Buff" time="120" count="1" val="0">
-    <add  order='0x40' stat='rEvas' val="#Tab-rEvas"/>
- </effect>
-</for>
+  <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <add order="0x40" stat="rEvas" val="10"/>
+    </effect>
+  </for>
 </skill>
 <skill id="267" levels="1" name="Song of Warding">
+  <!-- Done by dc -->
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
@@ -1241,15 +1235,14 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
-<!-- Done by dc -->
-<table name="#Tab-mDef"> 1.3 </table>
-<for>
-  <effect name="Buff" time="120" count="1" val="0">
-    <mul  order='0x50' stat='mDef' val="#Tab-mDef"/>
- </effect>
-</for>
+  <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <mul order="0x50" stat="mDef" val="1.3"/>
+    </effect>
+  </for>
 </skill>
 <skill id="268" levels="1" name="Song of Wind">
+  <!-- Done by dc -->
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
@@ -1261,15 +1254,14 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
-<!-- Done by dc -->
-<table name="#Tab-runSpd"> 20 </table>
-<for>
-  <effect name="Buff" time="120" count="1" val="0">
-    <add  order='0x40' stat='runSpd' val="#Tab-runSpd"/>
- </effect>
-</for>
+  <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <add order="0x40" stat="runSpd" val="20"/>
+    </effect>
+  </for>
 </skill>
 <skill id="269" levels="1" name="Song of Hunter">
+  <!-- Done by dc -->
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
@@ -1281,13 +1273,11 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
-<!-- Done by dc -->
-<table name="#Tab-rCrit"> 2 </table>
-<for>
-  <effect name="Buff" time="120" count="1" val="0">
-    <mul  order='0x50' stat='rCrit' val="#Tab-rCrit"/>
- </effect>
-</for>
+  <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <mul order="0x50" stat="rCrit" val="2"/>
+    </effect>
+  </for>
 </skill>
 <skill id="270" levels="1" name="Song of Invocation">
   <set name="mpConsume" val="60"/>
@@ -1309,6 +1299,7 @@
   </for>    
 </skill>
 <skill id="271" levels="1" name="Dance of Warrior">
+  <!-- Done by dc -->
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
@@ -1321,15 +1312,14 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
-<!-- Done by dc -->
-<table name="#Tab-pAtk"> 1.12 </table>
-<for>
-  <effect name="Buff" time="120" count="1" val="0">
-    <mul  order='0x50' stat='pAtk' val="#Tab-pAtk"/>
- </effect>
-</for>
+  <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <mul order="0x50" stat="pAtk" val="1.12"/>
+    </effect>
+  </for>
 </skill>
 <skill id="272" levels="1" name="Dance of Inspiration">
+  <!-- Done by dc -->
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
@@ -1342,15 +1332,14 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
-<!-- Done by dc -->
-<table name="#Tab-accCombat"> 4 </table>
-<for>
-  <effect name="Buff" time="120" count="1" val="0">
-    <add  order='0x40' stat='accCombat' val="#Tab-accCombat"/>
- </effect>
-</for>
+  <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <add order="0x40" stat="accCombat" val="4"/>
+    </effect>
+  </for>
 </skill>
 <skill id="273" levels="1" name="Dance of Mystic">
+  <!-- Done by dc -->
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
@@ -1363,15 +1352,14 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
- <!-- Done by dc -->
-<table name="#Tab-mAtk"> 1.2 </table>
-<for>
-  <effect name="Buff" time="120" count="1" val="0">
-    <mul  order='0x50' stat='mAtk' val="#Tab-mAtk"/>
- </effect>
-</for>
+  <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <mul order="0x50" stat="mAtk" val="1.2"/>
+    </effect>
+  </for>
 </skill>
 <skill id="274" levels="1" name="Dance of Fire">
+  <!-- Done by dc -->
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
@@ -1384,15 +1372,14 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
-<!-- Done by dc -->
-<table name="#Tab-cAtk"> 1.5 </table>
-<for>
-  <effect name="Buff" time="120" count="1" val="0">
-    <mul  order='0x50' stat='cAtk' val="#Tab-cAtk"/>
- </effect>
-</for>
+  <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <mul order="0x50" stat="cAtk" val="1.5"/>
+    </effect>
+  </for>
 </skill>
 <skill id="275" levels="1" name="Dance of Fury">
+  <!-- Done by dc -->
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
@@ -1405,61 +1392,56 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
-<!-- Done by dc -->
-<table name="#Tab-pAtkSpd"> 1.15 </table>
-<for>
-  <effect name="Buff" time="120" count="1" val="0">
-    <mul  order='0x50' stat='pAtkSpd' val="#Tab-pAtkSpd"/>
- </effect>
-</for>
+  <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <mul order="0x50" stat="pAtkSpd" val="1.15"/>
+    </effect>
+  </for>
 </skill>
 <skill id="276" levels="1" name="Dance of concentration">
-<!-- Done by lucl -->
- <set name="weaponsAllowed" val="512"/>
- <set name="mpConsume" val="60"/>
- <set name="power" val="0.0"/>
- <set name="target" val="TARGET_PARTY"/>
- <set name="skillRadius" val="900"/>
- <set name="hitTime" val="2000"/>
- <set name="reuseDelay" val="10000"/>
- <set name="skillTime" val="2000"/>
- <set name="skillType" val="BUFF"/>
- <set name="operateType" val="OP_ACTIVE"/>
- <set name="buffDuration" val="120000"/>
- <set name="castRange" val="-1"/>
-<table name="#Tab-mAtkSpd"> 1.3 </table>
-<for>
- <effect name="Buff" time="120" count="1" val="0">
-   <mul  order='0x50' stat='mAtkSpd' val="#Tab-mAtkSpd"/>
-   <mul order="0x50" stat="cancel" val="1.3"/>
-</effect>
-</for>
+  <!-- Done by lucl -->
+  <set name="weaponsAllowed" val="512"/>
+  <set name="mpConsume" val="60"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="900"/>
+  <set name="hitTime" val="2000"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="skillTime" val="2000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="120000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <mul order="0x50" stat="mAtkSpd" val="1.3"/>
+      <sub order="0x40" stat="cancel" val="30"/>
+    </effect>
+  </for>
 </skill>
 <skill id="277" levels="1" name="Dance of Light">
- <set name="weaponsAllowed" val="512"/>
- <set name="mpConsume" val="60"/>
- <set name="power" val="0.0"/>
- <set name="target" val="TARGET_PARTY"/>
- <set name="skillRadius" val="900"/>
- <set name="hitTime" val="2000"/>
- <set name="reuseDelay" val="10000"/>
- <set name="skillTime" val="2000"/>
- <set name="skillType" val="BUFF"/>
- <set name="operateType" val="OP_ACTIVE"/>
- <set name="buffDuration" val="120000"/>
- <set name="castRange" val="-1"/>
-<!-- Done by dc -->
-<table name="#Tab-pAtk"> 1.3 </table>
-<for>
- <effect name="Buff" time="120" count="1" val="0">
-   <mul  order='0x50' stat='pAtk-undead' val="#Tab-pAtk"/>
- </effect>
-</for>
+  <!-- Done by dc -->
+  <set name="weaponsAllowed" val="512"/>
+  <set name="mpConsume" val="60"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="900"/>
+  <set name="hitTime" val="2000"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="skillTime" val="2000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="120000"/>
+  <set name="castRange" val="-1"/>
+  <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <mul order="0x50" stat="pAtk-undead" val="1.3"/>
+    </effect>
+  </for>
 </skill>
 <skill id="278" levels="6" name="Summon Viper Cubic">
   <table name="#mpConsume"> 44 50 55 60 64 67 </table>
   <table name="#itemConsumeCount"> 3 4 5 6 6 6 </table>
-
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="1458" />
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
@@ -1472,7 +1454,6 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-
   <!-- Summon-specific -->
   <set name="npcId" val="4" />
   <set name="expPenalty" val="0.0" />
@@ -1592,7 +1573,6 @@
   <set name="npcId" val="#npcIds" />
   <set name="expPenalty" val="0.15" />
   <set name="isCubic" val="false" />
-
   <for>
   </for>
 </skill>
@@ -1764,18 +1744,15 @@
    </for>
 </skill>
 <skill id="294" levels="1" name="Shadow Sense">
-
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-
   <for>
 	<cond><game time="night"/></cond>
 	<add stat="accCombat" val="10" order="0x01"/>
   </for>
-
 </skill>
 <skill id="295" levels="1" name="Iron Body">
 <!---
@@ -1809,9 +1786,7 @@
  </for>
 </skill>
 <skill id="297" levels="2" name="Duelist Spirit">
-
   <table name="#Tab-pAtkSpd"> 1.05 1.09 </table>
-
   <table name="#mpConsume"> 30 44 </table>
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1825,16 +1800,13 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
-
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
        <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
     </effect>
   </for>
-
 </skill>
 <skill id="298" levels="1" name="Totem Spirit Rabbit">
-
   <set name="mpConsume" val="29"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1845,7 +1817,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
-
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
 	 <mul order='0x50' stat="pAtk" val="0.2"/>
@@ -1853,7 +1824,6 @@
 	 <add order='0x40' stat="runSpd" val="65"/>
 	</effect>
   </for>
-
 </skill>
 <skill id="299" levels="1" name="Summon Wild Hog Cannon">
  <table name="#mpConsume"> 530 </table>
