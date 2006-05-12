@@ -37,7 +37,7 @@ class Quest (JQuest) :
        st.takeItems(ORCISH_ARROWHEAD,-1)
        st.playSound("ItemSound.quest_finish")
        st.giveItems(ADENA,1000)
-       st.addExpAndSp(1200,0)
+       st.addExpAndSp(2000,0)
        htmltext = "7029-06.htm"
        st.exitQuest(1)
    return htmltext
