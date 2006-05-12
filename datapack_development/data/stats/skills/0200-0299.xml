@@ -1659,10 +1659,10 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0">
-      <add stat="stunRes" val="#res" order="0x50"/>
-      <add stat="rootRes" val="#res" order="0x50"/>
-      <add stat="sleepRes" val="#res" order="0x50"/>
-      <add stat="paralyzeRes" val="#res" order="0x50"/>
+      <add stat="stunRes" val="#res" order="0x40"/>
+      <add stat="rootRes" val="#res" order="0x40"/>
+      <add stat="sleepRes" val="#res" order="0x40"/>
+      <add stat="paralyzeRes" val="#res" order="0x40"/>
     </effect>
   </for>
 </skill>
@@ -1679,7 +1679,7 @@
   <for>
 	<effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume">
       <mul order="0x50" stat="pDef" val="#pDef"/>
-	  <add order="0x10" stat="rShld" val="#ShieldRate"/>
+	  <add order="0x40" stat="rShld" val="#ShieldRate"/>
     </effect>
   </for>
 </skill>
