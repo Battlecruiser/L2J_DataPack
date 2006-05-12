@@ -73,10 +73,9 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
-  <table name="#Tab-maxHp"> 1.25 </table>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul  order='0x50' stat='maxHp' val="#Tab-maxHp"/>
+      <mul order="0x50" stat="maxHp" val="1.25"/>
     </effect>
   </for>
 </skill>
@@ -92,10 +91,9 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
-  <table name="#Tab-reflectDam"> 20.0 </table>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <add  order='0x50' stat='reflectDam' val="#Tab-reflectDam"/>
+      <add order="0x40" stat="reflectDam" val="20"/>
     </effect>
   </for>
 </skill>
@@ -112,9 +110,9 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <for>
-		<effect name="Buff" time="120" count="1" val="0" >
-			<mul stat="fireRes" val="1.15" order="0x01" />
-		</effect>
+    <effect name="Buff" time="120" count="1" val="0">
+      <add stat="fireRes" val="20" order="0x40"/>
+    </effect>
   </for>
 </skill>
 <skill id="307" levels="1" name="Dance of Aqua Guard">
@@ -149,8 +147,8 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect name="Buff" time="120" count="1" val="0" >
-      <add stat="windRes" order="0x40" val="50" />
+    <effect name="Buff" time="120" count="1" val="0">
+      <add stat="windRes" order="0x40" val="50"/>
     </effect>
   </for>
 </skill>
