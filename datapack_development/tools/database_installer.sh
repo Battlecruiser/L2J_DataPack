@@ -272,6 +272,9 @@ $MYG < ../sql/clanhall.sql &> /dev/null
 $MYG < ../sql/class_list.sql &> /dev/null
 $MYG < ../sql/droplist.sql &> /dev/null
 $MYG < ../sql/etcitem.sql &> /dev/null
+$MYG < ../sql/fish.sql &> /dev/null
+$MYG < ../sql/fishing_skill_trees.sql &> /dev/null
+$MYG < ../sql/fishreward.sql &> /dev/null
 $MYG < ../sql/forums.sql &> /dev/null
 $MYG < ../sql/games.sql &> /dev/null
 $MYG < ../sql/global_tasks.sql &> /dev/null
