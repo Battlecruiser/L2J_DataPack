@@ -1,14 +1,6 @@
-/*
-MySQL Backup
-Source Host:           reddragon.servegame.org
-Source Server Version: 4.0.25-standard-log
-Source Database:       l2jdb
-Date:                  2006-04-26 21:15:38
-*/
-
-#----------------------------
-# Table structure for fishing_skill_trees
-#----------------------------
+--
+--  Table structure for fishing_skill_trees
+--
 CREATE TABLE IF NOT EXISTS `fishing_skill_trees` (
   `skill_id` int(10) NOT NULL default '0',
   `level` int(10) NOT NULL default '0',
@@ -20,8 +12,8 @@ CREATE TABLE IF NOT EXISTS `fishing_skill_trees` (
   `isfordwarf` int(1) NOT NULL default '0',
   PRIMARY KEY  (`skill_id`,`level`)
 ) TYPE=MyISAM;
-#----------------------------
-# Records for table fishing_skill_trees
-#----------------------------
+--
+--  Records for table fishing_skill_trees
+--
 
 
