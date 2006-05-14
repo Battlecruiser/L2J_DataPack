@@ -1151,7 +1151,7 @@ INSERT INTO `etcitem` (`item_id`, `name`, `crystallizable`, `item_type`, `weight
  (1986, 'Full Plate Armor Temper', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 18927, 0, 'true', 'full_plate_armor_temper', 'material', '1'),
  (1987, 'Drake Leather Mail Texture', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 13109, 0, 'true', 'drake_leather_mail_texture', 'material', '2'),
  (1988, 'Divine Tunic Fabric', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 10409, 0, 'true', 'divine_tunic_fabric', 'material', '1'),
- (1989, 'Divine Stocking Pattern', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 6636, 0, 'true', 'divine_hose_pattern', 'material', '2'),
+ (1989, 'Divine Stocking Pattern', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 6636, 0, 'true', 'divine_hose_pattern', 'material', '1'),
  (1990, 'Mithril Helmet Design', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 5782, 0, 'true', 'mithril_helmet_design', 'material', '1'),
  (1991, 'Cap of Mana Pattern', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 5782, 0, 'true', 'cap_of_mana_pattern', 'material', '1'),
  (1992, 'Paradia Hood Material', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 5782, 0, 'true', 'paradia_hood_material', 'material', '1'),
