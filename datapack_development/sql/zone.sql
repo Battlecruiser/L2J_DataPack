@@ -121,8 +121,8 @@ insert into zone values (9, 'Town', 'Giran Castle Town', 76995, 141424, 90565, 1
 insert into zone values (10, 'Town', 'Town of Oren', 76696, 57199, 84511, 50120, 0, 4);
 insert into zone values (11, 'Town', 'Hunter Village', 121308, 73941, 114667, 80383, 0, 5);
 insert into zone values (12, 'Town', 'Town of Aden', 142312, 32317, 152163, 19708, 0, 5);
-insert into zone values (13, 'Town','Goddard',160432,-46726,130432,-50726,0,5);
-insert into zone values (14, 'Town','Rune Castle Town',41446,-45245,48000,-52000,0,6);
+insert into zone values (13, 'Town', 'Goddard', 152846, -54289, 143721, -59446, 0, 5);
+insert into zone values (14, 'Town', 'Rune Castle Town', 47150, -44815, 32531, -52045, 0, 6);
 insert into zone values (15, 'Town', 'Heine', 103598, 216010, 118991, 225905, 0, 6);
 insert into zone values (16, 'Town', 'Floran Village', 0, 0, 0, 0, 0, 2);
 insert into zone values (17, 'Town', 'Ivory Tower', 0, 0, 0, 0, 0, 4);
@@ -139,8 +139,8 @@ insert into zone values (9, 'Town Spawn', 'Giran Castle Town', 83235, 148497, 0,
 insert into zone values (10, 'Town Spawn', 'Town of Oren', 80853, 54653, 0, 0, -1524, 0);
 insert into zone values (11, 'Town Spawn', 'Hunter Village', 117163, 76511, 0, 0, -2712, 0);
 insert into zone values (12, 'Town Spawn', 'Town of Aden', 147391, 25967, 0, 0, -2012, 0);
-insert into zone values (13, 'Town Spawn','Goddard', 147955, -55339, 0, 0, -2734, 0);
-insert into zone values (14, 'Town Spawn','Rune Castle Town', 43813, -47790, 0, 0, -797, 0);
+insert into zone values (13, 'Town Spawn', 'Goddard', 147955, -55339, 0, 0, -2734, 0);
+insert into zone values (14, 'Town Spawn', 'Rune Castle Town', 43813, -47790, 0, 0, -797, 0);
 insert into zone values (15, 'Town Spawn', 'Heine', 111381, 219064, 0, 0, -3543, 0);
 insert into zone values (16, 'Town Spawn', 'Floran Village', 17817, 170079, 0, 0, -3530, 0);
 insert into zone values (17, 'Town Spawn', 'Ivory Tower', 0, 0, 0, 0, 0, 0);
@@ -159,8 +159,8 @@ insert into zone values (11, 'Underground', 'Ruins of Despair', -1231, 131977, -
 insert into zone values (12, 'Underground', 'Gludin North Road', -77276, 134858, -69590, 120547, -5000, 0);
 insert into zone values (13, 'Underground', '', 38116, 147264, -69590, 120547, -5000, 0);
 
-insert into zone values (1, 'Water', 'ascetics necropolis', -56190, 78595, -55175, 79600, -3061, 0);
-INSERT INTO zone VALUES(1,'Fishing','Giran North Entrance',82480,143048,83321,141782,0,0);
-INSERT INTO zone VALUES(1,'Fishing','Giran North Entrance',82109,142550,82211,142149,0,0);
-INSERT INTO zone VALUES(1,'Fishing','Giran North Entrance',82235,141780,82700,142718,0,0);
-insert into zone values (1,'No Landing', 'ToI', 109448, 10233,118547,21446,0,0);
+insert into zone values (1, 'Water', 'Ascetics Necropolis', -56190, 78595, -55175, 79600, -3061, 0);
+insert into zone values (1, 'Fishing', 'Giran North Entrance', 82480, 143048, 83321, 141782, 0, 0);
+insert into zone values (1, 'Fishing', 'Giran North Entrance', 82109, 142550, 82211, 142149, 0, 0);
+insert into zone values (1, 'Fishing', 'Giran North Entrance', 82235, 141780, 82700, 142718, 0, 0);
+insert into zone values (1, 'No Landing', 'ToI', 109448, 10233, 118547, 21446, 0, 0);
