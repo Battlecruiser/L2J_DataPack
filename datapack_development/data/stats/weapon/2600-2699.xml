@@ -419,7 +419,7 @@
     <set val='8' order='0x08' stat='rCrit' />
     <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
-<add val='4' order='0x40' stat='accCombat'>
+<mul val='1.04' order='0x50' stat='pAtkSpd'>
 <and>
 <using slotitem="2626;14;4"/>
 </and>
