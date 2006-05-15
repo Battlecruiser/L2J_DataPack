@@ -483,7 +483,7 @@ class Quest (JQuest) :
      if npcId in [ 778, 779 ] :
        st.playSound("Itemsound.quest_before_battle")
        #st.getPcSpawn().addSpawn(5086)
-       st.getPcSpawn().addSpawn(5086, 11839,-106261,3550,300000)
+       st.getPcSpawn().addSpawn(5086, 11839,-106261,-3550,300000)
        # Alternate coord. set:
        #st.getPcSpawn().addSpawn(5086,11567,-106785,-3520)
      elif npcId == 5086 :
