@@ -131,7 +131,6 @@ class Quest (JQuest) :
                 if st.getPlayer().getLevel() < 60 :
                     st.exitQuest(1)
                     htmltext = "7864-01.htm"     #not qualified
-                    exitQuest(1)
                 elif cond==0 :
                     st.setState(PROGRESS)
                     st.set("cond","1")
