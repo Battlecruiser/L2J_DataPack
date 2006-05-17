@@ -18,7 +18,6 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_accept")
         htmltext = "7956_2.htm"
     elif event == "5" :
-        st.giveItems(57,1000)
         st.giveItems(4420,1)
         st.playSound("ItemSound.quest_finish")
         st.exitQuest(1)
@@ -35,7 +34,7 @@ class Quest (JQuest) :
    if npcId == 7956 and int(st.get("cond")) == 0 :
         htmltext = "7956_1.htm"
    elif npcId == 7956 and int(st.get("cond")) == 1 :
-        htmltext = "<html><head><body>Go to Dwarfen Village and find Blacksmith Opix..</body></html>"
+        htmltext = "<html><head><body>Find Blacksmith Opix..</body></html>"
    elif npcId == 7595 and int(st.get("cond")) == 1 :
         st.set("cond","2")
         htmltext = "7595_1.htm"
