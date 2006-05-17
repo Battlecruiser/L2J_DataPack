@@ -5874,7 +5874,7 @@ INSERT INTO `etcitem` (`item_id`, `name`, `crystallizable`, `item_type`, `weight
  (7583, 'Pet Exchange Ticket: Buffalo', 'false', 'none', 20, 'stackable', 'paper', 'none', 0, 5000, 0, 'false', 'C4Item', 'none', '2'),
  (7584, 'Pet Exchange Ticket: Cougar', 'false', 'none', 20, 'stackable', 'paper', 'none', 0, 5000, 0, 'false', 'C4Item', 'none', '2'),
  (7585, 'Pet Exchange Ticket: Kookaburra', 'false', 'none', 20, 'stackable', 'paper', 'none', 0, 5000, 0, 'false', 'C4Item', 'none', '2'),
- (7586, 'Sweet Fluid', 'false', 'quest', 0, 'stackable', 'paper', 'none', 0, 0, 0, 'false', 'C4Item', 'none', '2'),
+ (7586, 'Sweet Fluid', 'false', 'quest', 0, 'stackable', 'paper', 'none', 0, 0, 0, 'false', 'C4Item', 'none', '0'),
  (7587, 'Legend of Seventeen', 'false', 'quest', 0, 'stackable', 'paper', 'none', 0, 0, 0, 'false', 'C4Item', 'none', '0'),
  (7588, 'Faded Poetry Book', 'false', 'quest', 0, 'stackable', 'paper', 'none', 0, 0, 0, 'false', 'C4Item', 'none', '0'),
  (7589, 'Echo Crystal - Forgotten Song', 'false', 'quest', 0, 'stackable', 'paper', 'none', 0, 0, 0, 'false', 'C4Item', 'none', '0'),
