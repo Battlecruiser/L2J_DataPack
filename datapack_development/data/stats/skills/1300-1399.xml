@@ -248,6 +248,70 @@
    </effect>
 </for> 	
 </skill> 	
+<skill id="1312" levels="1" name="Fishing">
+<set name="mpConsume" val="1"/> 	
+  <set name="power" val="0.0"/> 	
+  <set name="target" val="TARGET_SELF"/> 	
+  <set name="skillRadius" val="0"/> 	
+  <set name="hitTime" val="0"/> 	
+  <set name="reuseDelay" val="0"/> 	
+  <set name="skillTime" val="0"/> 	
+  <set name="skillType" val="FISHING"/> 	
+  <set name="isMagic" val="true"/> 	
+  <set name="operateType" val="OP_ACTIVE"/> 	
+  <set name="castRange" val="-1"/> 
+<for>   
+</for> 	
+</skill>
+<skill id="1313" levels="27" name="Pumping">
+<table name="#power"> 
+10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 
+20.0 21.0 22.0 23.0 24.0 25.0 26.0 27.0 28.0 29.0 
+30.0 31.0 32.0 33.0 34.0 35.0 36.0
+</table>
+<set name="mpConsume" val="2"/> 	
+  <set name="power" val="#power"/> 	
+  <set name="target" val="TARGET_SELF"/> 	
+  <set name="skillRadius" val="50"/> 	
+  <set name="hitTime" val="0"/> 	
+  <set name="reuseDelay" val="0"/> 	
+  <set name="skillTime" val="0"/> 	
+  <set name="skillType" val="PUMPING"/> 	
+  <set name="isMagic" val="true"/> 	
+  <set name="operateType" val="OP_ACTIVE"/> 	
+  <set name="castRange" val="-1"/> 
+<for>   
+</for> 	
+</skill>
+<skill id="1314" levels="27" name="Reeling">
+<table name="#power"> 
+6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 
+16.0 17.0 18.0 19.0 20.0 21.0 22.0 23.0 24.0 25.0 
+26.0 27.0 28.0 29.0 30.0 31.0 32.0
+</table>
+<set name="mpConsume" val="2"/> 	
+  <set name="power" val="#power"/> 	
+  <set name="target" val="TARGET_SELF"/> 	
+  <set name="skillRadius" val="50"/> 	
+  <set name="hitTime" val="0"/> 	
+  <set name="reuseDelay" val="0"/> 	
+  <set name="skillTime" val="0"/> 	
+  <set name="skillType" val="REELING"/> 	
+  <set name="isMagic" val="true"/> 	
+  <set name="operateType" val="OP_ACTIVE"/> 	
+  <set name="castRange" val="-1"/> 
+<for>   
+</for> 	
+</skill>
+<skill id="1315" levels="27" name="Fishing Expertise">
+  <set name="power" val="0.0"/> 	
+  <set name="target" val="TARGET_SELF"/> 	
+  <set name="skillType" val="NOTDONE"/> 	
+  <set name="operateType" val="OP_PASSIVE"/> 	
+  <set name="castRange" val="-1"/>
+<for>   
+</for> 	
+</skill>
 <skill id="1320" levels="9" name="Create Common Item"> 	
   <set name="power" val="0.0"/> 	
   <set name="target" val="TARGET_SELF"/> 	
@@ -789,43 +853,60 @@
   </for>
 </skill>
 <skill id="1368" levels="8" name="Expand Dwarven Craft">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#power"> 6 12 18 24 30 36 42 48 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <add order="0x40" stat="DwarfRecipeLimit" val="#power"/>    
   </for>
-</skill>
+</skill>  
 <skill id="1369" levels="8" name="Expand Common Craft">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#power"> 6 12 18 24 30 36 42 48 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <add order="0x40" stat="CommonRecipeLimit" val="#power"/>    
   </for>
 </skill>
 <skill id="1370" levels="8" name="Expand Trade">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#power"> 1 2 3 4 5 6 7 8 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <add order="0x40" stat="PrivateSellLimit" val="#power"/>
+    <add order="0x40" stat="PrivateBuyLimit" val="#power"/>     
   </for>
 </skill>
 <skill id="1371" levels="8" name="Expand Storage">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#power"> 6 12 18 24 30 36 42 48 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <add order="0x40" stat="whLimit" val="#power"/>
+    <add order="0x40" stat="FreightLimit" val="#power"/>
   </for>
 </skill>
 <skill id="1372" levels="8" name="Expand Inventory">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#power"> 6 12 18 24 30 36 42 48 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <add order="0x40" stat="inventoryLimit" val="#power"/>    
   </for>
 </skill>
 <skill id="1373" levels="1" name="Strider Mastery">
