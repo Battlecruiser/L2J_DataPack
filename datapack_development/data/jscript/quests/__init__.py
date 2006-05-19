@@ -51,6 +51,7 @@ __all__ = [
 '168_DeliverSupplies',
 '169_NightmareChildren',
 '170_DangerousAllure',
+'171_ActsOfEvil',
 '211_TrialOfChallenger',
 '212_TrialOfDuty',
 '213_TrialOfSeeker',
