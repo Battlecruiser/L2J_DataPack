@@ -31,6 +31,7 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
      htmltext = event
      amount = st.getQuestItemsCount(ALLIGATOR_TOOTH)
+     maps = divmod(st.getQuestItemsCount(TORN_MAP_FRAGMENT),10)
      if event == "7895-00a.htm" :
          st.exitQuest(1)
      elif event == "1" :
@@ -52,8 +53,8 @@ class Quest (JQuest) :
                 item=RANDOM_REWARDS[st.getRandom(len(RANDOM_REWARDS))]
                 st.giveItems(item[0],st.getRandom(item[1])+1)
      elif event == "7895-08.htm" :
-         st.giveItems(PIRATES_TREASURE_MAP,1)
-         st.takeItems(TORN_MAP_FRAGMENT,10)
+         st.giveItems(PIRATES_TREASURE_MAP,maps[0])
+         st.takeItems(TORN_MAP_FRAGMENT,maps[0]*10)
      elif event == "7895-09.htm" :
          st.exitQuest(1)
          st.playSound("ItemSound.quest_finish")
