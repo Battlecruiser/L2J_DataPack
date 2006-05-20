@@ -287,7 +287,6 @@
   </for>
 </skill>
 <skill id="4322" levels="1" name="Wind Walk For Novice">
-<table name="#Tab-runSpd"> 20 </table>
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="21"/>
@@ -297,13 +296,12 @@
   <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="3600" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
-    <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
- </effect>
-</for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
+      <add order="0x40" stat="runSpd" val="20"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4323" levels="1" name="Shield For Novice">
-  <table name="#rate"> 1.08  </table>
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="8"/>
@@ -313,13 +311,12 @@
   <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="3600" val="0" stackOrder="#rate" stackType="pDef">
-    <mul order="0x50" stat="pDef" val="#rate"/>
-  </effect>
-</for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="#rate" stackType="pDef">
+      <mul order="0x50" stat="pDef" val="1.08"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4324" levels="1" name="Bless the Body For Novice">
-  <table name="#Tab-maxHp"> 1.1 </table>
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="16"/>
@@ -329,29 +326,26 @@
   <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="3600" val="0">
-    <mul order="0x50" stat="maxHp" val="#Tab-maxHp"/>
- </effect>
-</for>
+    <effect count="1" name="Buff" time="3600" val="0">
+      <mul order="0x50" stat="maxHp" val="1.1"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4325" levels="1" name="Vampiric Rage For Novice">
- <set name="power" val="1.0"/>
+  <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="14"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
- <table name="#abs"> 20 </table>
-<for>
- <effect count="1" name="Buff" time="3600" val="0">
-    <add stat="absorbDam" val="#abs" order="0x50"/>
- </effect>
-</for>
-
+  <for>
+    <effect count="1" name="Buff" time="3600" val="0">
+      <add stat="absorbDam" val="20" order="0x40"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4326" levels="1" name="Regeneration For Novice">
- <table name="#rate"> 1.15 </table>
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="13"/>
@@ -361,13 +355,12 @@
   <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="3600" val="0">
-    <mul order="0x50" stat="regHp" val="#rate"/>
-  </effect>
-</for>
+    <effect count="1" name="Buff" time="3600" val="0">
+      <mul order="0x50" stat="regHp" val="1.15"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4327" levels="1" name="Haste For Novice">
-  <table name="#Tab-pAtkSpd"> 1.15 </table>
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="14"/>
@@ -377,13 +370,12 @@
   <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="3600" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpeedUp">
-    <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
- </effect>
-</for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpeedUp">
+      <mul order="0x50" stat="pAtkSpd" val="1.15"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4328" levels="1" name="Bless the Soul For Novice">
-  <table name="#Tab-maxMp"> 1.1 </table>
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="12"/>
@@ -393,13 +385,12 @@
   <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="3600" val="0">
-    <mul order="0x50" stat="maxMp" val="#Tab-maxMp"/>
- </effect>
-</for>
+    <effect count="1" name="Buff" time="3600" val="0">
+      <mul order="0x50" stat="maxMp" val="1.1"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4329" levels="1" name="Acumen For Novice">
-  <table name="#Tab-mAtkSpd"> 1.15 </table>
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="10"/>
@@ -409,13 +400,12 @@
   <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="3600" val="0" stackOrder="#Tab-mAtkSpd" stackType="mAtkSpeedUp">
-    <mul order="0x50" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
-  </effect>
-</for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="#Tab-mAtkSpd" stackType="mAtkSpeedUp">
+      <mul order="0x50" stat="mAtkSpd" val="1.15"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4330" levels="1" name="Concentration For Novice">
-  <table name="#cancel"> 18 </table>
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="10"/>
@@ -426,12 +416,11 @@
   <set name="castRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="3600" val="0">
-      <sub order='0x40' stat='cancel' val="#cancel"/>
+      <sub order="0x40" stat="cancel" val="18"/>
     </effect>
   </for>
 </skill>
 <skill id="4331" levels="1" name="Empower For Novice">
-  <table name="#Tab-mAtk"> 1.55 </table>
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="12"/>
@@ -441,10 +430,10 @@
   <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="3600" val="0" stackOrder="#Tab-mAtk" stackType="mAtk">
-    <mul order="0x50" stat="mAtk" val="#Tab-mAtk"/>
-  </effect>
-</for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="#Tab-mAtk" stackType="mAtk">
+      <mul order="0x50" stat="mAtk" val="1.55"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4332" levels="1" name="Mental Aegis">
 <!--- TODO -->
