@@ -283,7 +283,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Focus -->
-    <add val='61' order='0x40' stat='cAtk' />
+    <add val='61' order='0x40' stat='rCrit' />
   </for>
 </item>
 <item id='5622' name="blood_tornado_anger">
@@ -637,7 +637,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Focus -->
-    <add order="0x40" stat="cAtk" val="130">
+    <add order="0x40" stat="rCrit" val="130">
 		<and>        
       		<player hp="60" />
 		</and>
