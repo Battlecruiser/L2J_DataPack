@@ -5101,7 +5101,7 @@ INSERT INTO `npc` (`id`, `name`, `class`, `collision_radius`, `collision_height`
   (12599,'Guard','NPC.a_guard_MHuman',8,24,40,'male','L2SiegeGuard',40,1527,531,40,21,30,20,43,10,1921,124,298,221,127,163,253,300,253,0,0,0,80,120,'aden_siege_clan',1200,0),
   (12600,'Neurath','NPC.a_chamberlain_MHuman',9.5,22.5,40,'male','L2CastleChamberlain',40,1527,531,40,21,30,20,43,10,1921,124,298,221,127,163,253,300,253,0,0,0,80,120,'aden_siege_clan',1200,0),
   (12601,'Raybell','NPC.a_guard_MHuman',8,24,40,'male','L2SiegeNpc',40,1527,531,40,21,30,20,43,10,1921,124,298,221,127,163,253,300,253,0,0,0,80,120,'aden_siege_clan',1200,0),
-  (12602,'Innadril Holy Artifact','NPC.castle_kent_statue_jewel',25,98,40,'male','L2Artefact',40,1527,531,40,21,30,20,43,10,1921,124,298,221,127,163,253,0,253,0,0,0,80,120,'aden_siege_clan',1200,0),
+  (12602,'Innadril Holy Artifact','NPC.castle_kent_statue_jewel',25,98,40,'male','L2Artefact',40,1527,531,40,21,30,20,43,10,1921,124,298,221,127,163,253,0,253,0,0,0,0,0,'aden_siege_clan',1200,0),
   (12603,'Gatekeeper','NPC.a_guard_MHuman',8,24,40,'male','L2SiegeGuard',40,1527,531,40,21,30,20,43,10,1921,124,298,221,127,163,253,0,253,0,0,0,80,120,'gludio_siege_clan',600,0),
   (12604,'Gatekeeper','NPC.a_guard_MHuman',8,24,40,'male','L2SiegeGuard',40,1527,531,40,21,30,20,43,10,1921,124,298,221,127,163,253,0,253,0,0,0,80,120,'gludio_siege_clan',600,0),
   (12605,'Gatekeeper','NPC.a_guard_MHuman',8,24,40,'male','L2SiegeGuard',40,1527,531,40,21,30,20,43,10,1921,124,298,221,127,163,253,0,253,0,0,0,80,120,'gludio_siege_clan',600,0),
