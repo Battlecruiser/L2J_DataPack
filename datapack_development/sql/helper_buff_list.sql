@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS `helper_buff_list`;
 #----------------------------
 # Table structure for helper_buff_list
 #----------------------------
