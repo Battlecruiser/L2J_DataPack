@@ -1989,23 +1989,24 @@
    </effect>
   </for>
 </skill>
-<skill id="1299" levels="2" name="Servitor Empower">
-  <table name="#rate"> 1.55 1.65 </table>
+<skill id="1299" levels="2" name="Servitor Ultimate Defense">
+  <table name="#pDef"> 1800 3600 </table>
+  <table name="#mDef"> 1350 2700 </table>
   <table name="#mpConsume"> 48 65 </table>
-
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PET"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="30000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0">
-    <mul order="0x50" stat="mAtk" val="#rate"/>
-  </effect>
+    <effect count="1" name="Buff" time="30" val="0">
+      <add order="0x40" stat="pDef" val="#pDef"/>
+      <add order="0x40" stat="mDef" val="#mDef"/>
+      <set order="0xF0" stat="runSpd" val="0"/>
+    </effect>
   </for>
-</skill>
+</skill> 
 </list>
