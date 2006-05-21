@@ -1,4 +1,4 @@
-﻿ALTER TABLE `seven_signs`
+ALTER TABLE `seven_signs`
 CHANGE COLUMN `red_stones` `dawn_red_stones` INT(10) NOT NULL DEFAULT 0,
 CHANGE COLUMN `green_stones` `dawn_green_stones` INT(10) NOT NULL DEFAULT 0,
 CHANGE COLUMN `blue_stones` `dawn_blue_stones` INT(10) NOT NULL DEFAULT 0,
