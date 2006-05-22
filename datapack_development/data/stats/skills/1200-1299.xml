@@ -1127,7 +1127,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="-1"/>
   <for>
-   <effect count="6" name="HealOverTime" time="5" val="#hot" stackOrder="#hot" stackType="HpRecover"/>
+   <effect count="15" name="HealOverTime" time="1" val="#hot" stackOrder="#hot" stackType="HpRecover"/>
   </for>
 </skill>
 <skill id="1257" levels="3" name="Decrease Weight">
