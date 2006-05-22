@@ -5,9 +5,9 @@ CREATE TABLE IF NOT EXISTS `seven_signs_status` (
   `active_period` int(10) NOT NULL default '1',
   `date` int(10) NOT NULL default '1',
   `previous_winner` int(10) NOT NULL default '0',
-  `dawn_stone_score` int(10) NOT NULL default '0',
+  `dawn_stone_score` DECIMAL(20,0) NOT NULL default '0',
   `dawn_festival_score` int(10) NOT NULL default '0',
-  `dusk_stone_score` int(10) NOT NULL default '0',
+  `dusk_stone_score` DECIMAL(20,0) NOT NULL default '0',
   `dusk_festival_score` int(10) NOT NULL default '0',
   `avarice_owner` int(10) NOT NULL default '0',
   `gnosis_owner` int(10) NOT NULL default '0',
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `seven_signs_status` (
   `accumulated_bonus2` int(10) NOT NULL default '0',
   `accumulated_bonus3` int(10) NOT NULL default '0',
   `accumulated_bonus4` int(10) NOT NULL default '0',
-  PRIMARY KEY  (`id`, `current_cycle`)
+  PRIMARY KEY  (`id`)
 );
 
 INSERT IGNORE INTO `seven_signs_status` VALUES
