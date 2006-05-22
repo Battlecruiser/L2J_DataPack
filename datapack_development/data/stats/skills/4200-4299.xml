@@ -192,7 +192,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="hitTime" val="2000"/>
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="skillTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillType" val="HEAL"/>
@@ -245,7 +245,7 @@
   <table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1800"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="1800"/>
@@ -256,10 +256,10 @@
   <set name="castRange" val="-1"/>
   <set name="displayId" val="1040"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0">
-    <mul order="0x50" stat="pDef" val="#rate"/>
-  </effect>
-</for>
+    <effect count="1" name="Buff" time="1200" val="0">
+      <mul order="0x50" stat="pDef" val="#rate"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4213" levels="12" name="BOSS Haste">
 <!---
@@ -294,9 +294,9 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0">
-    <add order="0x50" stat="reflectDam" val="#power"/>
-  </effect>
+    <effect count="1" name="Buff" time="1200" val="0">
+      <add order="0x40" stat="reflectDam" val="#power"/>
+    </effect>
   </for>
 </skill>
 <skill id="4215" levels="1" name="Raid Curse">
@@ -633,11 +633,9 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4237" levels="1" name="Decreases Speed">
-  <table name="#mpConsume"> 65 </table>
-  <table name="#power"> 21.0 </table>
-  <set name="mpConsume" val="#mpConsume"/>
+  <set name="mpConsume" val="65"/>
   <set name="save" val="2"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="21.0"/>
   <set name="hitTime" val="2300"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="element" val="3"/>
@@ -1020,8 +1018,8 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4259" levels="12" name="Toxic Smoke">
-<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
-<table name="#cast"> 500 600 600 750 750 750 750 750 750 750 750 750 </table>
+  <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
+  <table name="#cast"> 500 600 600 750 750 750 750 750 750 750 750 750 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="3"/>
@@ -1179,21 +1177,20 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
 </skill>
 <skill id="4267" levels="5" name="Grade Penalty">
   <table name="#rate">0.22 0.19 0.16 0.13 0.10</table>
-  <table name="#rate2">0.22 0.19 0.16 0.13 0.10</table>
   <set name="power" val="0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-   <mul order="0x10" stat="pAtkSpd" val="#rate"/>
-   <mul order="0x10" stat="mAtkSpd" val="#rate"/>
-   <mul order="0x10" stat="rEvas" val="#rate"/>
-   <mul order="0x10" stat="rExp" val="#rate"/>
-   <mul order="0x10" stat="runSpd" val="#rate2"/>
-   <mul order="0x10" stat="regHp" val="#rate2"/>
-   <mul order="0x10" stat="regCp" val="#rate2"/>
-   <mul order="0x10" stat="regMp" val="#rate2"/>
+    <mul order="0x10" stat="pAtkSpd" val="#rate"/>
+    <mul order="0x10" stat="mAtkSpd" val="#rate"/>
+    <mul order="0x10" stat="rEvas" val="#rate"/>
+    <mul order="0x10" stat="rExp" val="#rate"/>
+    <mul order="0x10" stat="runSpd" val="#rate"/>
+    <mul order="0x10" stat="regHp" val="#rate"/>
+    <mul order="0x10" stat="regCp" val="#rate"/>
+    <mul order="0x10" stat="regMp" val="#rate"/>
   </for>
 </skill>
 <skill id="4268" levels="1" name="Danger Area">
@@ -1230,10 +1227,10 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
 </skill>
 <skill id="4270" levels="4" name="Weight Penalty">
 <!--- TODO
-HP/MP Regeneration greatly reduced because weight of inventory exceeds 50% of weight limit.
-HP/MP Regeneration and Speed greatly reduced because weight of inventory exceeds 66.6% of weight limit.
-HP/MP Regeneration and Speed greatly reduced and quests suspended because weight exceeds 80% of limit.
-HP/MP Regeneration is greatly decreased. Move and quest are suspended due to excess weight.
+  HP/MP Regeneration greatly reduced because weight of inventory exceeds 50% of weight limit.
+  HP/MP Regeneration and Speed greatly reduced because weight of inventory exceeds 66.6% of weight limit.
+  HP/MP Regeneration and Speed greatly reduced and quests suspended because weight exceeds 80% of limit.
+  HP/MP Regeneration is greatly decreased. Move and quest are suspended due to excess weight.
 -->
   <table name="#rate">0.5 0.5 0.5 0.5</table>
   <table name="#rateSpd">1 0.5 0.5 0</table>
@@ -1243,9 +1240,9 @@ HP/MP Regeneration is greatly decreased. Move and quest are suspended due to exc
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-	<mul order="0x10" stat="regHp" val="#rate"/>
-	<mul order="0x10" stat="regMp" val="#rate"/>
-	<mul order="0x10" stat="runSpd" val="#rateSpd"/>
+    <mul order="0x10" stat="regHp" val="#rate"/>
+    <mul order="0x10" stat="regMp" val="#rate"/>
+    <mul order="0x10" stat="runSpd" val="#rateSpd"/>
   </for>
 </skill>
 <skill id="4271" levels="7" name="Increase Force">
@@ -1266,14 +1263,13 @@ HP/MP Regeneration is greatly decreased. Move and quest are suspended due to exc
   </for>
 </skill>
 <skill id="4272" levels="1" name="Greater Resist Archery Attack">
-  <table name="#Tab-bowRes"> 70 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-	<add order="0x50" stat="bowWpnRes" val="#Tab-bowRes"/>
+    <add order="0x40" stat="bowWpnRes" val="70"/>
   </for>
 </skill>
 <skill id="4273" levels="6" name="Resist Dagger">
@@ -1284,7 +1280,7 @@ HP/MP Regeneration is greatly decreased. Move and quest are suspended due to exc
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-	<add order="0x50" stat="daggerWpnRes" val="#Tab-daggerRes"/>
+    <add order="0x40" stat="daggerWpnRes" val="#Tab-daggerRes"/>
   </for>
 </skill>
 <skill id="4274" levels="5" name="Blunt Attack Weak Point">
@@ -1295,21 +1291,10 @@ HP/MP Regeneration is greatly decreased. Move and quest are suspended due to exc
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-	<sub order="0x50" stat="bluntWpnRes" val="#Tab-bluntRes"/>
+    <sub order="0x40" stat="bluntWpnRes" val="#Tab-bluntRes"/>
   </for>
 </skill>
 <skill id="4275" levels="5" name="Sacred Attack Weak Point">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Is vulnerable to a sacred attack.
-  5: Is vulnerable to a sacred attack.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
   <table name="#Tab-holyRes"> 10 15 20 25 30 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1317,7 +1302,7 @@ HP/MP Regeneration is greatly decreased. Move and quest are suspended due to exc
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <sub order="0x50" stat="holyRes" val="#Tab-holyRes"/>
+    <sub order="0x40" stat="holyRes" val="#Tab-holyRes"/>
   </for>
 </skill>
 <skill id="4276" levels="5" name="Archery Attack Weak Point">
@@ -1328,7 +1313,7 @@ HP/MP Regeneration is greatly decreased. Move and quest are suspended due to exc
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-	<sub order="0x50" stat="bowWpnRes" val="#Tab-bowRes"/>
+    <sub order="0x40" stat="bowWpnRes" val="#Tab-bowRes"/>
   </for>
 </skill>
 <skill id="4277" levels="6" name="Resist Poison">
@@ -1339,7 +1324,7 @@ HP/MP Regeneration is greatly decreased. Move and quest are suspended due to exc
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-	<add order="0x50" stat="poisonRes" val="#Tab-poisonRes"/>
+    <add order="0x40" stat="poisonRes" val="#Tab-poisonRes"/>
   </for>
 </skill>
 <skill id="4278" levels="1" name="Dark Attack">
@@ -1366,7 +1351,7 @@ HP/MP Regeneration is greatly decreased. Move and quest are suspended due to exc
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-     <sub order="0x50" stat="fireRes" val="#Tab-fireRes"/>
+    <sub order="0x40" stat="fireRes" val="#Tab-fireRes"/>
   </for>
 </skill>
 <skill id="4280" levels="5" name="Water Attack Weak Point">
@@ -1377,7 +1362,7 @@ HP/MP Regeneration is greatly decreased. Move and quest are suspended due to exc
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-     <sub order="0x50" stat="waterRes" val="#Tab-waterRes"/>
+    <sub order="0x40" stat="waterRes" val="#Tab-waterRes"/>
   </for>
 </skill>
 <skill id="4281" levels="5" name="Wind Attack Weak Point">
@@ -1388,7 +1373,7 @@ HP/MP Regeneration is greatly decreased. Move and quest are suspended due to exc
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-     <sub order="0x50" stat="windRes" val="#Tab-windRes"/>
+    <sub order="0x40" stat="windRes" val="#Tab-windRes"/>
   </for>
 </skill>
 <skill id="4282" levels="5" name="Earth Attack Weak Point">
@@ -1399,18 +1384,17 @@ HP/MP Regeneration is greatly decreased. Move and quest are suspended due to exc
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-     <sub order="0x50" stat="earthRes" val="#Tab-earthRes"/>
+    <sub order="0x40" stat="earthRes" val="#Tab-earthRes"/>
   </for>
 </skill>
 <skill id="4283" levels="1" name="Greater Resist Magic Attack">
-  <table name="#Tab-mDef"> 55 </table> 
   <set name="power" val="0.0"/> 
   <set name="target" val="TARGET_SELF"/> 
   <set name="skillType" val="BUFF"/> 
   <set name="operateType" val="OP_PASSIVE"/> 
   <set name="castRange" val="-1"/> 
   <for> 
-     <add  order='0x40' stat='mDef' val="#Tab-mDef"/> 
+    <add order="0x40" stat='mDef' val="55"/> 
   </for> 
 </skill> 
 <skill id="4284" levels="6" name="Resist Bleeding">
@@ -1421,10 +1405,9 @@ HP/MP Regeneration is greatly decreased. Move and quest are suspended due to exc
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-     <add order="0x50" stat="bleedRes" val="#Tab-bleedRes"/>
+    <add order="0x40" stat="bleedRes" val="#Tab-bleedRes"/>
   </for>
 </skill>
-
 <skill id="4285" levels="6" name="Resist Sleep">
   <table name="#Tab-sleepRes"> 40 50 60 70 80 90 </table>
   <set name="power" val="0.0"/>
@@ -1433,18 +1416,17 @@ HP/MP Regeneration is greatly decreased. Move and quest are suspended due to exc
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-     <add order="0x50" stat="sleepRes" val="#Tab-sleepRes"/>
+    <add order="0x40" stat="sleepRes" val="#Tab-sleepRes"/>
   </for>
 </skill>
 <skill id="4286" levels="1" name="Greater Resist Sleep">
-  <table name="#Tab-sleepRes"> 95 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-     <add order="0x50" stat="sleepRes" val="#Tab-sleepRes"/>
+    <add order="0x40" stat="sleepRes" val="95"/>
   </for>
 </skill>
 <skill id="4287" levels="6" name="Resist Hold">
@@ -1455,19 +1437,17 @@ HP/MP Regeneration is greatly decreased. Move and quest are suspended due to exc
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-     <add order="0x50" stat="rootRes" val="#Tab-rootRes"/>
+    <add order="0x40" stat="rootRes" val="#Tab-rootRes"/>
   </for>
 </skill>
-
 <skill id="4288" levels="1" name="Greater Resist Hold">
-  <table name="#Tab-rootRes"> 95 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-     <add order="0x50" stat="rootRes" val="#Tab-rootRes"/>
+    <add order="0x40" stat="rootRes" val="95"/>
   </for>
 </skill>
 <skill id="4289" levels="1" name="Wyvern Breath">
