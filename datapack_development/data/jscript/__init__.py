@@ -4,7 +4,6 @@ __all__ = [
 'blacksmith',
 'custom',
 'teleports',
-'seven_signs',
 'village_master'
 ]
 import quests
@@ -12,5 +11,4 @@ import luxury_shop
 import blacksmith
 import custom
 import teleports
-import seven_signs
 import village_master
