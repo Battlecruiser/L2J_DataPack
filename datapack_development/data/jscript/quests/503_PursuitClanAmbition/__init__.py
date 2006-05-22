@@ -10,6 +10,7 @@ from net.sf.l2j.gameserver.model.quest.jython	import QuestJython as JQuest
 from net.sf.l2j								import L2DatabaseFactory
 
 qn = "503_PursuitClanAmbition"
+qd = "Pursuit Clan Ambition"
 
 # Items
 # first part
@@ -525,4 +526,4 @@ for mobId in DROPLIST.keys():
 
 PROGRESS.addAttackId(5181)
 
-print "importing quests: " + qn
+print "importing quests: 503: " + qd
