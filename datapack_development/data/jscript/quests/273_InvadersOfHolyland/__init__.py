@@ -38,21 +38,22 @@ class Quest (JQuest) :
      else:
         htmltext = "7566-02.htm"
    else :
-     if st.getQuestItemsCount(BLACK_SOULSTONE)+st.getQuestItemsCount(RED_SOULSTONE) == 0 :
+     red=st.getQuestItemsCount(RED_SOULSTONE)
+     black=st.getQuestItemsCount(BLACK_SOULSTONE)
+     if red+black == 0 :
         htmltext = "7566-04.htm"
-     elif st.getQuestItemsCount(RED_SOULSTONE) == 0 :
+     elif red == 0 :
         htmltext = "7566-05.htm"
-        st.giveItems(ADENA,st.getQuestItemsCount(BLACK_SOULSTONE)*3)
-        st.takeItems(BLACK_SOULSTONE,-1)
+        st.giveItems(ADENA,black*3)
+        st.takeItems(BLACK_SOULSTONE,black)
         st.playSound("ItemSound.quest_finish")
      else:
         htmltext = "7566-06.htm"
-        n = st.getQuestItemsCount(BLACK_SOULSTONE)
-        if n :
-           st.giveItems(ADENA,n*5)
-           st.takeItems(BLACK_SOULSTONE,-1)
-        st.giveItems(ADENA,st.getQuestItemsCount(RED_SOULSTONE)*5)
-        st.takeItems(RED_SOULSTONE,-1)
+        if black :
+           st.giveItems(ADENA,black*3)
+           st.takeItems(BLACK_SOULSTONE,black)
+        st.giveItems(ADENA,red*5)
+        st.takeItems(RED_SOULSTONE,red)
         st.playSound("ItemSound.quest_finish")
    return htmltext
 
