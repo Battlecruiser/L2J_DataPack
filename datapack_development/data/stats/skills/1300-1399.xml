@@ -264,44 +264,36 @@
 </for> 	
 </skill>
 <skill id="1313" levels="27" name="Pumping">
-<table name="#power"> 
-10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 
-20.0 21.0 22.0 23.0 24.0 25.0 26.0 27.0 28.0 29.0 
-30.0 31.0 32.0 33.0 34.0 35.0 36.0
-</table>
-<set name="mpConsume" val="2"/> 	
-  <set name="power" val="#power"/> 	
-  <set name="target" val="TARGET_SELF"/> 	
-  <set name="skillRadius" val="50"/> 	
-  <set name="hitTime" val="0"/> 	
-  <set name="reuseDelay" val="0"/> 	
-  <set name="skillTime" val="0"/> 	
-  <set name="skillType" val="PUMPING"/> 	
-  <set name="isMagic" val="true"/> 	
-  <set name="operateType" val="OP_ACTIVE"/> 	
-  <set name="castRange" val="-1"/> 
-<for>   
-</for> 	
+  <table name="#power"> 24 37 50 62 70 76 82 88 94 100 104 107 110 113 116 119 121 124 127 130 133 136 139 142 145 149 155 </table>
+  <set name="mpConsume" val="2"/>    
+  <set name="power" val="#power"/>    
+  <set name="target" val="TARGET_SELF"/>    
+  <set name="skillRadius" val="0"/>    
+  <set name="hitTime" val="0"/>    
+  <set name="reuseDelay" val="2000"/>    
+  <set name="skillTime" val="0"/>    
+  <set name="skillType" val="PUMPING"/>    
+  <set name="isMagic" val="false"/>    
+  <set name="operateType" val="OP_ACTIVE"/>    
+  <set name="castRange" val="-1"/>
+  <for>   
+  </for>    
 </skill>
 <skill id="1314" levels="27" name="Reeling">
-<table name="#power"> 
-6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 
-16.0 17.0 18.0 19.0 20.0 21.0 22.0 23.0 24.0 25.0 
-26.0 27.0 28.0 29.0 30.0 31.0 32.0
-</table>
-<set name="mpConsume" val="2"/> 	
-  <set name="power" val="#power"/> 	
-  <set name="target" val="TARGET_SELF"/> 	
-  <set name="skillRadius" val="50"/> 	
-  <set name="hitTime" val="0"/> 	
-  <set name="reuseDelay" val="0"/> 	
-  <set name="skillTime" val="0"/> 	
-  <set name="skillType" val="REELING"/> 	
-  <set name="isMagic" val="true"/> 	
-  <set name="operateType" val="OP_ACTIVE"/> 	
-  <set name="castRange" val="-1"/> 
-<for>   
-</for> 	
+  <table name="#power"> 24 37 50 62 70 76 82 88 94 100 104 107 110 113 116 119 121 124 127 130 133 136 139 142 145 149 155 </table>
+  <set name="mpConsume" val="2"/>    
+  <set name="power" val="#power"/>    
+  <set name="target" val="TARGET_SELF"/>    
+  <set name="skillRadius" val="0"/>    
+  <set name="hitTime" val="0"/>    
+  <set name="reuseDelay" val="2000"/>    
+  <set name="skillTime" val="0"/>    
+  <set name="skillType" val="REELING"/>    
+  <set name="isMagic" val="false"/>    
+  <set name="operateType" val="OP_ACTIVE"/>    
+  <set name="castRange" val="-1"/>
+  <for>   
+  </for>    
 </skill>
 <skill id="1315" levels="27" name="Fishing Expertise">
   <set name="power" val="0.0"/> 	
