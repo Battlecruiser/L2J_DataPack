@@ -101,5 +101,7 @@ STARTED.addTalkId(7466)
 STARTED.addKillId(WASP_LEADER)
 STARTED.addKillId(WASP_WORKER)
 STARTED.addQuestDrop(WASP_WORKER,HONEY_POUCH,1)
+STARTED.addQuestDrop(EMILY,AVELLAN_SPICE,1)
+STARTED.addQuestDrop(EMILY,FRUIT_BASKET,1)
 
 print "importing quests: 299: Gather Ingredients For A Pie"
