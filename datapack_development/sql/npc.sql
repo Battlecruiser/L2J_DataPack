@@ -3944,7 +3944,7 @@ INSERT INTO `npc` (`id`, `name`, `class`, `collision_radius`, `collision_height`
   (8728,'Orator of Revelations','Monster.liviona',8,22,70,'male','L2Npc',40,3862,1494,40,21,30,20,43,10,5879,590,1444,514,760,381,253,0,333,0,0,0,80,120,'null',0,0),
   (8729,'Adventurer Guildsman','NPC.a_common_peopleA_MHuman',8,21.5,76,'male','L2Adventurer',40,4298,1710,40,21,30,20,43,10,6922,761,1770,584,962,434,278,0,333,156,20,0,50,120,'null',0,0),
   (8730,'Adventurer Guildsman','NPC.a_common_people_MElf',6,21,76,'male','L2Adventurer',40,4298,1710,40,21,30,20,43,10,6922,761,1770,584,962,434,278,0,333,130,0,0,50,120,'null',0,0),
-  (8731,'Adventurer Guildsman','NPC.a_fighterguild_teacher_FDarkElf',8,23,76,'L2Adventurer','L2Npc',40,4298,1710,40,21,30,20,43,10,6922,761,1770,584,962,434,278,0,333,224,0,0,50,120,'null',0,0),
+  (8731,'Adventurer Guildsman','NPC.a_fighterguild_teacher_FDarkElf',8,23,76,'male','L2Adventurer',40,4298,1710,40,21,30,20,43,10,6922,761,1770,584,962,434,278,0,333,224,0,0,50,120,'null',0,0),
   (8732,'Adventurer Guildsman','NPC.e_common_people_MOrc',8,26,76,'male','L2Adventurer',40,4298,1710,40,21,30,20,43,10,6922,761,1770,584,962,434,278,0,333,0,0,0,50,120,'null',0,0),
   (8733,'Adventurer Guildsman','NPC.e_collector_teacher_FDwarf',8,17.5,76,'male','L2Adventurer',40,4298,1710,40,21,30,20,43,10,6922,761,1770,584,962,434,278,0,333,0,0,0,50,120,'null',0,0),
   (8734,'Adventurer Guildsman','NPC.a_fighterguild_teacher_FHuman',9.5,22.4,76,'male','L2Adventurer',40,4298,1710,40,21,30,20,43,10,6922,761,1770,584,962,434,278,0,333,129,102,0,50,120,'null',0,0),
