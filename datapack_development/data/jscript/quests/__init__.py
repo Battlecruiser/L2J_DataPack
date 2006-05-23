@@ -99,6 +99,7 @@ __all__ = [
 '292_CrushBrigands',
 '293_HiddenVein',
 '294_CovertBusiness',
+'299_GatherIngredientsForPie',
 '295_DreamsOfFlight',
 '296_SilkOfTarantula',
 '297_GatekeepersFavor',
