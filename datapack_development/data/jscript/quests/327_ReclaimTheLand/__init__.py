@@ -139,7 +139,7 @@ class Quest (JQuest) :
         htmltext = "7597-04.htm"
       else:
         htmltext = "7597-05.htm"
-        st.giveItems(ADENA,dogtag*20+medallion*25)
+        st.giveItems(ADENA,dogtag*40+medallion*50)
         st.takeItems(TUREK_DOGTAG,dogtag)
         st.takeItems(TUREK_MEDALLION,medallion)
    else :
