@@ -126,6 +126,7 @@ __all__ = [
 '348_ArrogantSearch',
 '350_EnhanceYourWeapon',
 '354_ConquestOfAlligatorIsland',
+'355_FamilyHonor',
 '356_DigUpTheSeaOfSpores',
 '358_IllegitimateChildOfAGoddess',
 '359_ForSleeplessDeadmen',
