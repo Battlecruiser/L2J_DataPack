@@ -168,6 +168,8 @@ __all__ = [
 '503_PursuitClanAmbition',
 '621_EggDelivery',
 '622_DeliveryOfSpecialLiquor',
+'626_ADarkTwilight',
+'627_HeartInSearchOfPower',
 '634_InSearchofDimensionalFragments',
 '999_C3Tutorial'
 ]
