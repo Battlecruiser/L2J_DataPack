@@ -919,7 +919,8 @@
   <table name="#power"> 31.0 33.0 34.0 36.0 38.0 39.0 41.0 43.0 45.0 46.0 48.0 50.0 51.0 53.0 54.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
-  <set name="target" val="TARGET_CORPSE_MOB"/>
+  <set name="target" val="TARGET_AREA_CORPSE_MOB"/>
+  <set name="skillRadius" val="400"/>
   <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="20000"/>
   <set name="skillTime" val="1000"/>
