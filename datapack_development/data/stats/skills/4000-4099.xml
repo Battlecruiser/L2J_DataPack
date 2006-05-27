@@ -100,7 +100,7 @@
   </for>
 </skill>
 <skill id="4009" levels="6" name="Resist Fire">
-  <table name="#res"> 25 30 35 40 45 50 </table>
+  <table name="#res"> 1.25 1.30 1.35 1.40 1.45 1.50 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="4000"/>
@@ -111,11 +111,11 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add stat="fireRes" val="#res" order="0x40"/>
+    <mul stat="fireRes" val="#res" order="0x50"/>
   </for>
 </skill>
 <skill id="4010" levels="6" name="Resist Water">
-  <table name="#res"> 25 30 35 40 45 50 </table>
+  <table name="#res"> 1.25 1.30 1.35 1.40 1.45 1.50 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="4000"/>
@@ -126,11 +126,11 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add stat="waterRes" val="#res" order="0x50"/>
+    <mul stat="waterRes" val="#res" order="0x50"/>
   </for>
 </skill>
 <skill id="4011" levels="6" name="Resist Wind">
-  <table name="#res"> 25 30 35 40 45 50 </table>
+  <table name="#res"> 1.25 1.30 1.35 1.40 1.45 1.50 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="4000"/>
@@ -141,7 +141,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add stat="windRes" val="#res" order="0x50"/>
+    <mul stat="windRes" val="#res" order="0x50"/>
   </for>
 </skill>
 <skill id="4012" levels="1" name="Resist Earth">
