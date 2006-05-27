@@ -66,6 +66,8 @@ CREATE TABLE IF NOT EXISTS characters (
   clan_privs INT DEFAULT 0,
   wantspeace decimal(1,0) DEFAULT 0,
   deleteclan decimal(20,0) default NULL,
+  in_jail decimal(1,0) DEFAULT 0,
+  jail_timer decimal(20,0) DEFAULT 0,
   PRIMARY KEY  (obj_Id),
   KEY `clanid` (`clanid`)
 ) ;

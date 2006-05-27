@@ -164,3 +164,5 @@ insert into zone values (1, 'Fishing', 'Giran North Entrance', 82480, 143048, 83
 insert into zone values (1, 'Fishing', 'Giran North Entrance', 82109, 142550, 82211, 142149, 0, 0);
 insert into zone values (1, 'Fishing', 'Giran North Entrance', 82235, 141780, 82700, 142718, 0, 0);
 insert into zone values (1, 'No Landing', 'ToI', 109448, 10233, 118547, 21446, 0, 0);
+
+insert into zone values (1, 'Jail', 'GM Jail', -115600, -250700, -113500, -248200, 0, 0);
