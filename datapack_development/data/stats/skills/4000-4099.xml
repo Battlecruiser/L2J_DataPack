@@ -270,7 +270,7 @@
     <add stat="paralyzeRes" val="1000" order="0x40"/>
     <add stat="sleepRes" val="1000" order="0x40"/>
     <add stat="confusionRes" val="1000" order="0x40"/>
-    <sub stat="fireRes" val="50" order="0x50"/>
+    <mul stat="fireRes" val="0.5" order="0x50"/>
     <add stat="bowWpnRes" val="80" order="0x50"/>
   </for>
 </skill>
