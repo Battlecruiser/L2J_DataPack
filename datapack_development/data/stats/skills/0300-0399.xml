@@ -556,29 +556,60 @@
  </for>
 </skill>
 <skill id="336" levels="1" name="Arcane Wisdom">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- Significantly increases efficiency of magic and decreases MP consumption of skills. 
+Casting Spd. is decreased and HP will be continuously consumed while in effect. -->
+  <set name="mpConsume" val="36"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="6000"/>
+  <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
+<for>
+ <effect count="0x7fffffff" name="DamOverTime" time="3" val="165">
+  <mul order="0x50" stat="regMp" val="2"/>
+  <mul stat="maxMp" order="0x50" val="1.5"/>
+  <div stat="mAtkSpd" order="0x50" val="1.15"/>
+  <mul stat="mReuse" order="0x50" val="0.8"/>
+  <mul order="0x50" stat="MpConsumeRate" val="0.7"/>
+ </effect>   
+</for>
+</skill> 
 <skill id="337" levels="1" name="Arcane Power">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- Significantly increase M. Atk.  Increases the power. 
+At an increased MP consumption per skill. 
+HP will be continuously consumed while in effect. -->
+	<set name="mpConsume" val="36"/>
+	<set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <effect count="0x7fffffff" name="DamOverTime" time="3" val="165">
+      <mul order="0x50" stat="MpConsumeRate" val="1.3"/>
+      <mul order="0x50" stat="mAtk" val="1.3"/>
+    </effect>
   </for>
 </skill>
 <skill id="338" levels="1" name="Arcane Agility">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_TOGGLE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
+<!-- Significantly increases Casting Spd. 
+and decreases skill re-use time at an increased MP consumption per skill. 
+HP will be continuously consumed while in effect. -->
+  <set name="mpConsume" val="36"/>
+ <set name="power" val="0.0"/>
+ <set name="target" val="TARGET_SELF"/>
+ <set name="skillType" val="CONT"/>
+ <set name="operateType" val="OP_TOGGLE"/>
+ <set name="castRange" val="-1"/>
+<for>
+ <effect count="0x7fffffff" name="DamOverTime" time="3" val="165">
+  <mul order="0x50" stat="mAtkSpd" val="1.15"/>
+  <mul order="0x50" stat="mReuse" val="0.8"/>
+  <mul order="0x50" stat="MpConsumeRate" val="1.3"/>
+ </effect>
+</for>
+</skill> 
 <skill id="339" levels="1" name="Parry Stance">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
