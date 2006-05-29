@@ -37033,4 +37033,13 @@ INSERT INTO `spawnlist` VALUES
  (null,'MailleLizardmenBaracks',1,927,-31462,118189,-2934,0,0,26692,120,0),
  (null,'MailleLizardmenBaracks',1,927,-31958,117834,-2807,0,0,44335,120,0),
  (null,'MailleLizardmenBaracks',1,927,-31568,117220,-3005,0,0,55881,120,0),
- (null,'MailleLizardmenBaracks',1,927,-29025,118759,-3749,0,0,7702,120,0);
+ (null,'MailleLizardmenBaracks',1,927,-29025,118759,-3749,0,0,7702,120,0),
+ (null,'MailleLizardmenBaracks',1,7659,-28643,121923,-3701,0,0,13829,60,0),
+ (null,'MailleLizardmenBaracks',1,7659,-28865,122013,-3677,0,0,12916,60,0),
+ (null,'MailleLizardmenBaracks',1,7659,-28789,121995,-3700,0,0,13558,60,0),
+ (null,'MailleLizardmenBaracks',1,7659,-28983,122049,-3700,0,0,13029,60,0),
+ (null,'MailleLizardmenBaracks',1,7659,-29016,122352,-3684,0,0,63079,60,0),
+ (null,'MailleLizardmenBaracks',1,7659,-28979,122552,-3675,0,0,62454,60,0),
+ (null,'MailleLizardmenBaracks',1,7659,-28899,122715,-3645,0,0,62377,60,0),
+ (null,'MailleLizardmenBaracks',1,7659,-28994,122464,-3679,0,0,62422,60,0);
+ 
