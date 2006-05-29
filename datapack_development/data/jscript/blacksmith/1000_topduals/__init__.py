@@ -1,4 +1,3 @@
-print "importing blacksmith data: 1000_topduals"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -612,7 +611,7 @@ class Quest (JQuest) :
                st.giveItems(2555,1)
                htmltext = "Item has been succesfully created."
             else:
-               st.giveItems(127,1)
+               st.giveItems(130,1)
                htmltext = "You need one more sword."
          else:
              htmltext = "You do not have enough materials."
@@ -627,7 +626,7 @@ class Quest (JQuest) :
                st.giveItems(2556,1)
                htmltext = "Item has been succesfully created."
             else:
-               st.giveItems(127,1)
+               st.giveItems(130,1)
                htmltext = "You need one more sword."
          else:
              htmltext = "You do not have enough materials."
@@ -642,7 +641,7 @@ class Quest (JQuest) :
                st.giveItems(2557,1)
                htmltext = "Item has been succesfully created."
             else:
-               st.giveItems(127,1)
+               st.giveItems(130,1)
                htmltext = "You need one more sword."
          else:
              htmltext = "You do not have enough materials."
@@ -1190,7 +1189,7 @@ class Quest (JQuest) :
 # Sword of Delusion*Tsurugi
     if event == "79":
          if st.getQuestItemsCount(76)>=1 and st.getQuestItemsCount(77)>=1 and st.getQuestItemsCount(5126)>=1:
-            st.takeItems(132,1)
+            st.takeItems(76,1)
             if st.getQuestItemsCount(77)>=1:
                st.takeItems(77,1)
                st.takeItems(5126,1)
@@ -1319,8 +1318,6 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (Self,npc,st):
-
-   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
    st.set("cond","0")
    st.setState(STARTED)
@@ -1336,3 +1333,5 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7846)
 
 STARTED.addTalkId(7846)
+
+print "importing blacksmith data: 1000_topduals"
