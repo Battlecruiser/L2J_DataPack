@@ -140,23 +140,25 @@ class Quest (JQuest) :
      if st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and st.getQuestItemsCount(WISH_POTION_ID) >= 1:
        htmltext = "7738-13.htm"
    if event == "7738-10.htm":
-     st.playSound("ItemSound.quest_finish")
-     st.takeItems(ALCHEMY_TEXT_ID,-1)
-     st.takeItems(SECRET_BOOK_ID,-1)
-     st.takeItems(POTION_RECIPE_1_ID,-1)
-     st.takeItems(POTION_RECIPE_2_ID,-1)
-     st.takeItems(AMBER_SCALE_ID,-1)
-     st.takeItems(WIND_SOULSTONE_ID,-1)
-     st.takeItems(GLASS_EYE_ID,-1)
-     st.takeItems(HORROR_ECTOPLASM_ID,-1)
-     st.takeItems(SILENOS_HORN_ID,-1)
-     st.takeItems(ANT_SOLDIER_APHID_ID,-1)
-     st.takeItems(TYRANTS_CHITIN_ID,-1)
-     st.takeItems(BUGBEAR_BLOOD_ID,-1)
-     if st.getQuestItemsCount(MATILDS_ORB_ID) == 0 : st.giveItems(MATILDS_ORB_ID,1)
-     st.giveItems(WISH_POTION_ID,1)
-     htmltext = "7738-10.htm"
-     st.set("cond","0")
+     if check_ingredients(st,1,1,1,1,1,1,1,1) :
+       st.playSound("ItemSound.quest_finish")
+       st.takeItems(ALCHEMY_TEXT_ID,-1)
+       st.takeItems(SECRET_BOOK_ID,-1)
+       st.takeItems(POTION_RECIPE_1_ID,-1)
+       st.takeItems(POTION_RECIPE_2_ID,-1)
+       st.takeItems(AMBER_SCALE_ID,-1)
+       st.takeItems(WIND_SOULSTONE_ID,-1)
+       st.takeItems(GLASS_EYE_ID,-1)
+       st.takeItems(HORROR_ECTOPLASM_ID,-1)
+       st.takeItems(SILENOS_HORN_ID,-1)
+       st.takeItems(ANT_SOLDIER_APHID_ID,-1)
+       st.takeItems(TYRANTS_CHITIN_ID,-1)
+       st.takeItems(BUGBEAR_BLOOD_ID,-1)
+       if st.getQuestItemsCount(MATILDS_ORB_ID) == 0 : st.giveItems(MATILDS_ORB_ID,1)
+       st.giveItems(WISH_POTION_ID,1)
+       st.set("cond","0")
+     else :
+       htmltext="You don't have required items"
    if event == "7738-14.htm":
      if st.getQuestItemsCount(WISH_POTION_ID) >= 1:
        htmltext = "7738-15.htm"
