@@ -9,6 +9,7 @@ __all__ = [
 '8_AnAdventureBegins',
 '9_IntoTheCityOfHumans',
 '10_IntoTheWorld',
+'19_GoToThePastureland',
 '33_MakeAPairOfDressShoes',
 '34_InSearchOfClothes',
 '35_FindGlitteringJewelry',

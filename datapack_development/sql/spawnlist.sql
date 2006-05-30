@@ -37041,5 +37041,5 @@ INSERT INTO `spawnlist` VALUES
  (null,'MailleLizardmenBaracks',1,7659,-29016,122352,-3684,0,0,63079,60,0),
  (null,'MailleLizardmenBaracks',1,7659,-28979,122552,-3675,0,0,62454,60,0),
  (null,'MailleLizardmenBaracks',1,7659,-28899,122715,-3645,0,0,62377,60,0),
- (null,'MailleLizardmenBaracks',1,7659,-28994,122464,-3679,0,0,62422,60,0);
- 
+ (null,'MailleLizardmenBaracks',1,7659,-28994,122464,-3679,0,0,62422,60,0),
+ (null,'AltarOfSaints',1,8510,73648,-92368,-3228,0,0,62633,60,0);
