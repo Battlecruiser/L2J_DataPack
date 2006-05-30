@@ -62,7 +62,7 @@ def partial(st) :
 def result(st) :
     chosen = st.get("chosen").split()
     grid = st.get("grid").split()
-    html = "<table border=1 width=120 hieght=64>"
+    html = "<table border=1 width=120 height=64>"
     for y in range(0,7,3) :
         html +="<tr>"
         for x in range(3) :
@@ -94,15 +94,18 @@ class Quest (JQuest) :
        htmltext = ext_msg
        st.exitQuest(1)
     elif event == "bingo" :
-       st.takeItems(SI_ORE,REQUIRED_ORE)
-       htmltext = bingo0
-       grid = range(1,10) #random.sample(xrange(1,10),9) ... damn jython that makes me think that inefficient stuff
-       for i in range(len(grid)-1, 0, -1) :
+       if st.getQuestItemsCount(SI_ORE) >= REQUIRED_ORE :
+         st.takeItems(SI_ORE,REQUIRED_ORE)
+         htmltext = bingo0
+         grid = range(1,10) #random.sample(xrange(1,10),9) ... damn jython that makes me think that inefficient stuff
+         for i in range(len(grid)-1, 0, -1) :
            j = st.getRandom(8)
            grid[i], grid[j] = grid[j], grid[i]
-       for i in range(len(grid)): grid[i]=str(grid[i])
-       st.set("chosen","? ? ? ? ? ? ? ? ?")
-       st.set("grid"," ".join(grid))
+         for i in range(len(grid)): grid[i]=str(grid[i])
+         st.set("chosen","? ? ? ? ? ? ? ? ?")
+         st.set("grid"," ".join(grid))
+       else :
+         htmltext = "You don't have required items"
     else :
        for i in range(1,10) :
           if event == str(i) :
