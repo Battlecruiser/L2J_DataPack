@@ -1,7 +1,9 @@
 -- ---------------------------
 -- Table structure for raidboss_spawnlist
 -- ---------------------------
-CREATE TABLE IF NOT EXISTS raidboss_spawnlist (
+DROP TABLE IF EXISTS raidboss_spawnlist;
+
+CREATE TABLE raidboss_spawnlist (
   boss_id INT NOT NULL default 0,
   amount INT NOT NULL default 0,
   loc_x INT NOT NULL default 0,
