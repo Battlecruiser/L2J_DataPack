@@ -45,7 +45,7 @@ no_items  = "<html><head><body>Head Researcher Sobling:<br><br>Hum... I see no v
 tnx4items = "<html><head><body>Head Researcher Sobling:<br><br>Amazing! These are the sort of items i was looking for... Take this rare recipes as a proof of my gratitude. Anyhow, I'm sure there are more ancient relics guarded by those monsters, would you like to search some more?<br><br><a action=\"bypass -h Quest 376_GiantsExploration1 Starting.htm\">I will continue</a><br><a action=\"bypass -h Quest 376_GiantsExploration1 0\">I will quit</a><br></body></html>"
 go_part2  = "<html><head><body>Head Researcher Sobling:<br><br>Interesting. What could this mysterious book be? I'm afraid we will not be able to figure out it's contents without assistance. But don't worry, i know who can help us, go now and talk with <font color=\"LEVEL\">Warehouse Freightman Cliff in Oren Castle Town</font>, show him the tome and he will probably know what to do with it.<br><br></body></html>"
 no_part2  = "<html><head><body>Head Researcher Sobling:<br><br>I don't find anything useful here... I'm aware already about some discoveries related to giant's living, but there is no archeological value in vane letters or drawings you may find. As i told you, we are in desperate search for <font color=\"LEVEL\">Plans for the construction of Golems, Basis of the Giant's Magic, Construction Technology and Giant's Medical Theory.</font> You must bring any of those books complete. Few we can do only with fragments.<br><br></body></html>"
-ok_part2  = "<html><head><body>Warehouse Freightman Cliff:<br><br>What is that book? Sobling told you to bring it to me? Well... It's written in a very ancient language.. yes.. Humm.. Take this this \"Ancient Language Dictionary: Intermediate Level\" and meet <font color=\"LEVEL\">Sobling</font> again. With this he will be able to translate it. Leave now.</body></html>"
+ok_part2  = "<html><head><body>Warehouse Freightman Cliff:<br><br>What is that book? Sobling told you to bring it to me? Well... It's written in a very ancient language.. yes.. Humm.. Take this \"Ancient Language Dictionary: Intermediate Level\" and meet <font color=\"LEVEL\">Sobling</font> again. With this he will be able to translate it. Leave now.</body></html>"
 gogogo_2  = "<html><head><body>Head Researcher Sobling:<br><br>Are you still there with the book? There is no way to read it's contents with our current knowledge. Take the book to <font color=\"LEVEL\">Warehouse Freightman Cliff in Oren Castle Town</font>.<br><br></body></html>"
 ext_msg   = "Quest aborted"
 
@@ -72,25 +72,28 @@ class Quest (JQuest) :
     elif event == "0" :
        htmltext = ext_msg
        st.playSound("ItemSound.quest_finish")
-       st.takeItems(DICT1,1)
+       st.takeItems(DICT1,-1)
+       st.takeItems(MST_BK,-1)
        st.exitQuest(1)
     elif event == "show" :
        htmltext = no_items
        for i in range(len(EXCHANGE)) :
            dec=2**len(EXCHANGE[i][0])
            for j in range(len(EXCHANGE[i][0])) :
-               if st.getQuestItemsCount(EXCHANGE[i][0][j]) > 0 :
+               if st.getQuestItemsCount(EXCHANGE[i][0][j]) :
                   dec = dec >> 1
            if dec == 1 :
               htmltext = tnx4items
               for k in range(len(EXCHANGE[i][0])) :
                   st.takeItems(EXCHANGE[i][0][k], 1)
-              if st.getRandom(100) < RP_BALANCE : item = EXCHANGE[i][1]
-              else : item = EXCHANGE[i][2]
+              if st.getRandom(100) < RP_BALANCE :
+                 item = EXCHANGE[i][1]
+              else :
+                 item = EXCHANGE[i][2]
               if ALT_RP_100 != 0 : item += 1
               st.giveItems(item,1)
     elif event == "myst" :
-       if st.getQuestItemsCount(MST_BK) == 1 :
+       if st.getQuestItemsCount(MST_BK) :
           if id == STARTING :
              st.setState(STARTED)
              st.set("cond","2")
@@ -118,7 +121,7 @@ class Quest (JQuest) :
          else :
             htmltext = checkout2
    elif npcid == WF_CLIFF :
-      if id == STARTED and st.getQuestItemsCount(MST_BK) == 1 :
+      if id == STARTED and st.getQuestItemsCount(MST_BK) :
             htmltext = ok_part2
             st.takeItems(MST_BK,1)
             st.giveItems(DICT2,1)
@@ -132,7 +135,7 @@ class Quest (JQuest) :
         st.giveItems(ANC_SCROLL,1)
         st.playSound("ItemSound.quest_itemget")
      if st.getState() == STARTING :   
-        if drop < DROP_RATE_2  and st.getQuestItemsCount(MST_BK) == 0 :
+        if drop < DROP_RATE_2  and not st.getQuestItemsCount(MST_BK):
            st.giveItems(MST_BK,1)
            st.playSound("ItemSound.quest_middle")
      return  
@@ -159,6 +162,7 @@ for i in MOBS :
   STARTING.addKillId(i)
   STARTED.addKillId(i)
 
-STARTING.addQuestDrop(HR_SOBLING,DICT1,1)
+STARTED.addQuestDrop(HR_SOBLING,DICT1,1)
+STARTED.addQuestDrop(HR_SOBLING,MST_BK,1)
 
 print str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION
