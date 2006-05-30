@@ -5,20 +5,14 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #NPC
-M_NECROMANCER = 8518
-ENFEUX = 8519
+M_NECROMANCER,ENFEUX = 8518,8519
 
 #ITEMS
-SEAL_OF_LIGHT = 7170
-GEM_OF_SUBMISSION = 7171
-GEM_OF_SAINTS = 7172
+SEAL_OF_LIGHT,GEM_OF_SUBMISSION,GEM_OF_SAINTS = 7170,7171,7172
 
 #REWARDS
 ADENA = 57
-MOLD_HARDENER = 41
-ENRIA = 4042
-ASOFE = 4043
-THONS = 4044
+MOLD_HARDENER,ENRIA,ASOFE,THONS = 4041,4042,4043,4044
 
 class Quest (JQuest) :
 
@@ -103,4 +97,5 @@ for mobs in range(1520,1541):
   STARTED.addKillId(mobs)
 
 STARTED.addQuestDrop(1520,GEM_OF_SUBMISSION,1)
+
 print "importing quests: 627: Heart In Search Of Power"
