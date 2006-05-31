@@ -129,6 +129,7 @@ __all__ = [
 '347_GoGetTheCalculator',
 '348_ArrogantSearch',
 '350_EnhanceYourWeapon',
+'351_BlackSwan',
 '352_HelpRoodRaiseANewPet',
 '354_ConquestOfAlligatorIsland',
 '355_FamilyHonor',
