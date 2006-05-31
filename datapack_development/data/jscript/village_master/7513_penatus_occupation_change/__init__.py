@@ -97,7 +97,7 @@ class Quest (JQuest) :
             st.player.setClassId(48)
             st.player.broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
-	    htmltext = "7513-19.htm"
+            htmltext = "7513-19.htm"
 
    if event == "class_change_46":
      if ClassId in [ClassId.orcRaider]:
@@ -116,7 +116,7 @@ class Quest (JQuest) :
             st.player.setClassId(46)
             st.player.broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
-	    htmltext = "7513-23.htm"
+            htmltext = "7513-23.htm"
 
    if event == "class_change_51":
      if ClassId in [ClassId.orcShaman]:
@@ -135,13 +135,13 @@ class Quest (JQuest) :
             st.player.setClassId(51)
             st.player.broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
-	    htmltext = "7513-27.htm"
+            htmltext = "7513-27.htm"
 
    if event == "class_change_52":
      if ClassId in [ClassId.orcShaman]:
         if Level <= 39:
           if st.getQuestItemsCount(MARK_OF_PILGRIM_ID) == 0 or st.getQuestItemsCount(MARK_OF_GLORY_ID) == 0 or st.getQuestItemsCount(MARK_OF_WARSPIRIT_ID) == 0:
-	    htmltext = "7513-28.htm"
+            htmltext = "7513-28.htm"
           else:
             htmltext = "7513-29.htm"
         elif Level >= 40:
@@ -154,7 +154,7 @@ class Quest (JQuest) :
             st.player.setClassId(52)
             st.player.broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
-	    htmltext = "7513-31.htm"
+            htmltext = "7513-31.htm"
 
    st.setState(COMPLETED)
    st.exitQuest(1)
