@@ -104,6 +104,11 @@ class Quest (JQuest) :
                htmltext = "7834-04.htm"
              else :
                htmltext = "7834-03.htm"
+     elif npcId==7835 :
+         if st.getQuestItemsCount(ECTOPLASM) :
+             st.takeItems(ECTOPLASM,1)
+             item=RANDOM_REWARDS[st.getRandom(len(RANDOM_REWARDS))]
+             st.giveItems(item[0],item[1])
      elif npcId==7934 :
          htmltext = "7934-01.htm"
      elif npcId==7935 :
@@ -113,11 +118,7 @@ class Quest (JQuest) :
  def onKill (self,npc,st):
      npcId = npc.getNpcId()
      cond = st.getInt("cond")
-     if npcId==5265 and st.getQuestItemsCount(ECTOPLASM) :
-         st.takeItems(ECTOPLASM,1)
-         item=RANDOM_REWARDS[st.getRandom(len(RANDOM_REWARDS))]
-         st.giveItems(item[0],item[1])
-     elif npcId <> 5265 and st.getRandom(100) < CHANCE :
+     if st.getRandom(100) < CHANCE :
          st.giveItems(ORB,1)
          st.playSound("ItemSound.quest_itemget")
      return
@@ -130,11 +131,13 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7834)
 
 CREATED.addTalkId(7834)
+CREATED.addTalkId(7835)
 STARTED.addTalkId(7834)
+STARTED.addTalkId(7835)
 STARTED.addTalkId(7934)
 STARTED.addTalkId(7935)
 
-for i in range(563,567)+[5265] :
+for i in range(563,567) :
     STARTED.addKillId(i)
 
 STARTED.addQuestDrop(7834,ORB,1)

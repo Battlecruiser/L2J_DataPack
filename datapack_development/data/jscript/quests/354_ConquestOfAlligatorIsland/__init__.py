@@ -8,18 +8,18 @@ ADENA = 57
 ALLIGATOR_TOOTH = 5863
 TORN_MAP_FRAGMENT = 5864
 PIRATES_TREASURE_MAP = 5915
-CHANCE = 35
+CHANCE = 45
 CHANCE2 = 10
 #These items are custom, since we don't have info about them. Feel free to change them as you see fit (DrLecter)
 #Syntax: [itemid,max qty],
 RANDOM_REWARDS=[[736,15], #SoE
                 [1061,20],#Healing Potion
-                [1062,10],#Haste Potion
-                [735,5],  #Alacrity Potion
-                [1878,25],#Braided Hemp
-                [1875,10],#Stone of Purity
-                [1879,10],#Cokes
-                [1880,10],#Steel
+                [1062,15],#Haste Potion
+                [735,15], #Alacrity Potion
+                [1878,35],#Braided Hemp
+                [1875,15],#Stone of Purity
+                [1879,15],#Cokes
+                [1880,15],#Steel
                 [956,1],  #Enchant Armor D
                 [955,1],  #Enchant Weapon D
                ]
