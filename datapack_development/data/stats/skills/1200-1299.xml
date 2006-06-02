@@ -964,7 +964,8 @@
 <for>
    <effect count="1" name="Buff" time="120" val="0">
       <mul stat="mReuse" order="0x50" val="#reuse"/>
-<!--      <mul stat="pReuse" order="0x50" val="#reuse"/> global says that...-->
+<!--      <mul stat="pReuse" order="0x50" val="#reuse"/>
+ global says that...-->
    </effect>
 </for>
 </skill>
@@ -1357,8 +1358,12 @@
   </for>
 </skill>
 <skill id="1268" levels="4" name="Vampiric Rage">
-  <table name="#mpConsume">27 39 54 67</table>
-  <table name="#Tab-absorbDam">4 6 8 10</table>
+  <table name="#mpConsume">
+27 39 54 67
+</table>
+  <table name="#Tab-absorbDam">
+4 6 8 10
+</table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1973,7 +1978,7 @@
   <set name="hpConsume" val="#hpConsume"/>
   <set name="power" val="0.0"/>
   <set name="save" val="5"/>
-  <set name="target" val="TARGET_AREA"/>
+  <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="205"/>
   <set name="hitTime" val="4000"/>
   <set name="skillTime" val="4000"/>
