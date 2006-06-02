@@ -120,11 +120,13 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
+   step = st.getInt("step")
+   onlyone = st.getInt("onlyone")
    if id == CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("step","0")
-   if npcId == 7702 and int(st.get("step"))==0 and int(st.get("onlyone"))==0 :
+   if npcId == 7702 and step==0 and onlyone==0 :
         if (st.getPlayer().getClassId().getId() == 0x07 or st.getPlayer().getClassId().getId() == 0x16 or st.getPlayer().getClassId().getId() == 0x23) and st.getPlayer().getLevel() >= 39 :
           htmltext = "7702-03.htm"
         elif st.getPlayer().getClassId().getId() == 0x07 or st.getPlayer().getClassId().getId() == 0x16 or st.getPlayer().getClassId().getId() == 0x23 :
@@ -133,30 +135,30 @@ class Quest (JQuest) :
         else:
           htmltext = "7702-02.htm"
           st.exitQuest(1)
-   elif npcId == 7702 and int(st.get("onlyone"))==1 :
+   elif npcId == 7702 and onlyone==1 :
       htmltext = "<html><head><body>This quest has already been completed.</body></html>"
-   elif npcId == 7702 and int(st.get("step"))==1 and st.getQuestItemsCount(BERNARDS_INTRODUCTION_ID) :
+   elif npcId == 7702 and step==1 and st.getQuestItemsCount(BERNARDS_INTRODUCTION_ID) :
       htmltext = "7702-05.htm"
-   elif npcId == 7626 and int(st.get("step"))==1 and st.getQuestItemsCount(BERNARDS_INTRODUCTION_ID) :
+   elif npcId == 7626 and step==1 and st.getQuestItemsCount(BERNARDS_INTRODUCTION_ID) :
       htmltext = "7626-01.htm"
-   elif npcId == 7626 and int(st.get("step"))==2 and st.getQuestItemsCount(LETTER_OF_HAMIL1_ID) :
+   elif npcId == 7626 and step==2 and st.getQuestItemsCount(LETTER_OF_HAMIL1_ID) :
       htmltext = "7626-04.htm"
-   elif npcId == 7626 and int(st.get("step"))==4 and st.getQuestItemsCount(HUNTERS_RUNE1_ID)==10 :
+   elif npcId == 7626 and step==4 and st.getQuestItemsCount(HUNTERS_RUNE1_ID)==10 :
       htmltext = "7626-05.htm"
-   elif npcId == 7626 and int(st.get("step"))==5 and st.getQuestItemsCount(LETTER_OF_HAMIL2_ID) :
+   elif npcId == 7626 and step==5 and st.getQuestItemsCount(LETTER_OF_HAMIL2_ID) :
       htmltext = "7626-08.htm"
-   elif npcId == 7626 and int(st.get("step"))==8 :
+   elif npcId == 7626 and step==8 :
       htmltext = "7626-09.htm"
       st.giveItems(LETTER_OF_HAMIL3_ID,1)
       st.set("step","9")
-   elif npcId == 7626 and int(st.get("step"))==9 and st.getQuestItemsCount(LETTER_OF_HAMIL3_ID) :
+   elif npcId == 7626 and step==9 and st.getQuestItemsCount(LETTER_OF_HAMIL3_ID) :
       htmltext = "7626-10.htm"
-   elif npcId == 7626 and int(st.get("step"))==12 and st.getQuestItemsCount(CRESCENT_MOON_BOW_ID) :
+   elif npcId == 7626 and step==12 and st.getQuestItemsCount(CRESCENT_MOON_BOW_ID) :
       htmltext = "7626-11.htm"
       st.set("step","13")
-   elif npcId == 7626 and int(st.get("step"))==13 :
+   elif npcId == 7626 and step==13 :
       htmltext = "7626-12.htm"
-   elif npcId == 7626 and int(st.get("step"))==14 :
+   elif npcId == 7626 and step==14 :
       htmltext = "7626-13.htm"
       st.giveItems(MARK_OF_SAGITTARIUS_ID,1)
       st.takeItems(CRESCENT_MOON_BOW_ID,1)
@@ -168,29 +170,29 @@ class Quest (JQuest) :
       st.setState(COMPLETED)
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
-   elif npcId == 7653 and int(st.get("step"))==2 and st.getQuestItemsCount(LETTER_OF_HAMIL1_ID) :
+   elif npcId == 7653 and step==2 and st.getQuestItemsCount(LETTER_OF_HAMIL1_ID) :
       htmltext = "7653-01.htm"
-   elif npcId == 7653 and int(st.get("step"))==3 :
+   elif npcId == 7653 and step==3 :
       htmltext = "7653-03.htm"
-   elif npcId == 7514 and int(st.get("step"))==5 and st.getQuestItemsCount(LETTER_OF_HAMIL2_ID) :
+   elif npcId == 7514 and step==5 and st.getQuestItemsCount(LETTER_OF_HAMIL2_ID) :
       htmltext = "7514-01.htm"
-   elif npcId == 7514 and int(st.get("step"))==6 :
+   elif npcId == 7514 and step==6 :
       htmltext = "7514-03.htm"
-   elif npcId == 7514 and int(st.get("step"))==7 and st.getQuestItemsCount(TALISMAN_OF_SNAKE_ID) :
+   elif npcId == 7514 and step==7 and st.getQuestItemsCount(TALISMAN_OF_SNAKE_ID) :
       htmltext = "7514-04.htm"
       st.takeItems(TALISMAN_OF_SNAKE_ID,1)
       st.set("step","8")
-   elif npcId == 7514 and int(st.get("step"))==8 :
+   elif npcId == 7514 and step==8 :
       htmltext = "7514-05.htm"
-   elif npcId == 7717 and int(st.get("step"))==9 and st.getQuestItemsCount(LETTER_OF_HAMIL3_ID) :
+   elif npcId == 7717 and step==9 and st.getQuestItemsCount(LETTER_OF_HAMIL3_ID) :
       htmltext = "7717-01.htm"
       st.takeItems(LETTER_OF_HAMIL3_ID,1)
       st.set("step","10")
-   elif npcId == 7717 and int(st.get("step"))==10 :
+   elif npcId == 7717 and step==10 :
       htmltext = "7717-03.htm"
-   elif npcId == 7717 and int(st.get("step"))==12 :
+   elif npcId == 7717 and step==12 :
       htmltext = "7717-04.htm"
-   elif npcId == 7717 and int(st.get("step"))==11 and st.getQuestItemsCount(STAKATO_CHITIN_ID) and st.getQuestItemsCount(MITHRIL_CLIP_ID) and st.getQuestItemsCount(ST_BOWSTRING_ID) and st.getQuestItemsCount(MANASHENS_HORN_ID) :
+   elif npcId == 7717 and step==11 and st.getQuestItemsCount(STAKATO_CHITIN_ID) and st.getQuestItemsCount(MITHRIL_CLIP_ID) and st.getQuestItemsCount(ST_BOWSTRING_ID) and st.getQuestItemsCount(MANASHENS_HORN_ID) :
       htmltext = "7717-02.htm"
       st.takeItems(MITHRIL_CLIP_ID,1)
       st.takeItems(STAKATO_CHITIN_ID,1)
@@ -206,7 +208,7 @@ class Quest (JQuest) :
    step, dropcondition, maxcount, chance, itemid = DROPLIST[npcId]
    random = st.getRandom(100)
    
-   if int(st.get("step")) == step and st.getQuestItemsCount(itemid)<maxcount and random < chance:
+   if st.getInt("step") == step and st.getQuestItemsCount(itemid)<maxcount and random < chance:
     if dropcondition == 1:
      if st.getQuestItemsCount(itemid)== maxcount-1 : 
       giveMiddle(st,itemid,step)
