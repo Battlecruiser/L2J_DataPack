@@ -1,24 +1,22 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="4200" levels="12" name="Decrease Atk. Spd.">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily reduces Atk. Speed.
-  7: Temporarily reduces Atk. Speed.
-  created 2005-05-29 23:34:33
--->
+  <table name="#Tab-pAtkSpd"> 0.95 0.90 0.85 0.80 0.75 0.70 0.65 0.60 0.55 0.50 0.45 0.40 </table>
   <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="hitTime" val="2500"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="reuseDelay" val="66000"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="2500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="90000"/>
   <set name="castRange" val="750"/>
   <for>
+   <effect name="Buff" time="90" count="1" val="0">
+     <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+   </effect>
   </for>
 </skill>
 <skill id="4201" levels="12" name="Sleep">
@@ -41,149 +39,137 @@
   </for>
 </skill>
 <skill id="4202" levels="12" name="Hold">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Unable to move at all, as though one has grown roots into the ground.
-  7: Unable to move at all, as though one has grown roots into the ground.
-  created 2005-05-29 23:34:33
--->
   <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="save" val="5"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="2500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillTime" val="2000"/>
+  <set name="skillType" val="ROOT"/>
+  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="30000"/>
   <set name="castRange" val="750"/>
+  <set name="displayId" val="1201"/>
   <for>
+    <effect count="1" name="Root" time="30" val="0"/>
   </for>
 </skill>
 <skill id="4203" levels="12" name="Decrease Speed">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily reduces one's speed.
-  7: Temporarily reduces one's speed.
-  created 2005-05-29 23:34:33
--->
+  <table name="#Tab-runSpd"> 0.9 0.85 0.83 0.8 0.75 0.7 0.68 0.65 0.62 0.6 0.56 0.52 0.48 0.44 0.4 </table>
   <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="save" val="5"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="reuseDelay" val="7000"/>
   <set name="skillTime" val="2500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="750"/>
   <for>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
+      <mul order="0x50" stat="runSpd" val="#Tab-runSpd"/>
+    </effect>
   </for>
 </skill>
 <skill id="4204" levels="12" name="Bleed">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Inflicts a wound and reduces HP. Effect 2.
-  7: Inflicts a wound and reduces HP. Effect 8.
-  created 2005-05-29 23:34:33
--->
+  <table name="#damage">2 3 5 6 8 9 10 11 12 13 14 15</table>
   <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 </table>
+  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="save" val="4"/>
   <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="2500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="BLEED"/>
+  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="30000"/>
   <set name="castRange" val="750"/>
   <for>
+	<effect count="10" name="DamOverTime" time="3" val="#damage"/>
   </for>
 </skill>
 <skill id="4205" levels="12" name="Paralysis">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Paralyzes the entire body.
-  7: Paralyzes the entire body.
-  created 2005-05-29 23:34:33
--->
   <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="save" val="4"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="reuseDelay" val="120000"/>
   <set name="skillTime" val="2500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="PARALYZE"/>
+  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="750"/>
+  <set name="displayId" val="1170"/>
   <for>
+    <effect count="1" name="Paralyze" time="120" val="0"/>
   </for>
 </skill>
 <skill id="4206" levels="12" name="Decrease MP">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Decreases one's MP.
-  7: Decreases one's MP.
-  created 2005-05-29 23:34:33
--->
+  <table name="#Tab-maxMp"> 0.95 0.90 0.85 0.80 0.75 0.70 0.65 0.60 0.55 0.50 0.45 0.40 </table>
   <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="2500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="750"/>
   <for>
+    <effect count="1" name="Buff" time="120" val="0">
+      <mul order="0x50" stat="maxMp" val="#Tab-maxMp"/>
+    </effect>
   </for>
 </skill>
 <skill id="4207" levels="12" name="BOSS Twister">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
   <table name="#mpConsume"> 36 50 69 93 118 143 166 175 182 186 189 192 </table>
+  <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 119.0 136.0 153.0 170.0 187.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4500"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="element" val="1"/>
+  <set name="reuseDelay" val="8000"/>
   <set name="skillTime" val="4500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <for>
   </for>
 </skill>
 <skill id="4208" levels="12" name="Shock">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily throws one's enemy into a state of shock, preventing him from moving.
-  7: Temporarily throws one's enemy into a state of shock, preventing him from moving.
-  created 2005-05-29 23:34:33
--->
   <table name="#mpConsume"> 36 50 69 93 118 143 166 175 182 186 189 192 </table>
+  <table name="#power"> 16.0 35.0 73.0 139.0 241.0 379.0 542.0 705.0 868.0 1031.0 1194.0 1357.0 </table>
+  <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="save" val="4"/>
   <set name="hitTime" val="4500"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="reuseDelay" val="16000"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="4500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="9000"/>
   <set name="castRange" val="900"/>
   <for>
+	<effect count="1" name="Stun" time="9" val="0"/>
   </for>
 </skill>
 <skill id="4209" levels="12" name="BOSS Heal">
@@ -204,40 +190,42 @@
   </for>
 </skill>
 <skill id="4210" levels="12" name="Life Chant">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
+  <table name="#hot"> 7 12 18 27 37 46 55 64 73 82 91 100 </table>
   <table name="#mpConsume"> 43 49 99 134 173 207 139 250 258 262 262 263 </table>
+  <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="2000"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="reuseDelay" val="8000"/>
   <set name="skillTime" val="2000"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="HOT"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="15000"/>
   <set name="castRange" val="700"/>
   <for>
+	<effect count="5" name="HealOverTime" time="3" val="#hot"/>
   </for>
 </skill>
 <skill id="4211" levels="12" name="BOSS Might">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
+  <table name="#rate"> 1.08 1.12 1.15 1.18 1.21 1.24 1.27 1.30 1.33 1.36 1.39 1.42 </table>
   <table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1500"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="1500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pAtk">
+      <mul order="0x50" stat="pAtk" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="4212" levels="12" name="BOSS Shield">
@@ -262,21 +250,24 @@
   </for>
 </skill>
 <skill id="4213" levels="12" name="BOSS Haste">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
+  <table name="#Tab-pAtkSpd"> 1.08 1.12 1.15 1.18 1.21 1.24 1.27 1.30 1.33 1.36 1.39 1.42 </table>
   <table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="hitTime" val="1500"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="1500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="700"/>
+  <set name="isMagic" val="true"/>
+  <set name="displayId" val="1086"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpeedUp">
+      <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+    </effect>
   </for>
 </skill>
 <skill id="4214" levels="12" name="BOSS Reflect Damage">
@@ -314,12 +305,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4216" levels="1" name="Scatter Enemy">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
+<!--- Zaken skills -->
   <set name="hitTime" val="2900"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="2900"/>
@@ -330,12 +316,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4218" levels="1" name="Absorb HP MP">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
+<!--- Zaken skills -->
   <set name="hitTime" val="2000"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="element" val="6"/>
@@ -347,14 +328,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4219" levels="1" name="Hold">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Unable to move at all, as though one has grown roots into the ground.
-  created 2005-05-29 23:34:33
--->
+<!--- Zaken skills -->
   <set name="hitTime" val="2000"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="2000"/>
@@ -365,12 +339,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4220" levels="1" name="Deadly Two-Sword Weapon">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
+<!--- Zaken skills -->
   <set name="hitTime" val="2100"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="2100"/>
@@ -381,12 +350,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4221" levels="1" name="Deadly Two-Sword Weapon: Range Attack">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
+<!--- Zaken skills -->
   <set name="hitTime" val="1500"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="1500"/>
@@ -397,12 +361,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4222" levels="1" name="Instant Move">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
+<!--- Zaken skills -->
   <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="500"/>
@@ -413,78 +372,51 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4223" levels="1" name="Face Chance: Night to Day">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
-  <set name="hitTime" val="1100"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="1100"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4224" levels="1" name="Face Chance: Day to Night">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
-  <set name="hitTime" val="1100"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="1100"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4225" levels="6" name="Resist Shock">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Provides powerful resistance against Shock Attack.
-  6: Provides very powerful resistance against Shock attack.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4226" levels="1" name="Ban Heal">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4227" levels="1" name="Zaken Regeneration">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
@@ -581,14 +513,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4233" levels="1" name="Vampiric Attack">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: While attacking, absorbs the enemy's HP.
-  created 2005-05-29 23:34:33
--->
+<!--- Summon Shadow Skill -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -597,32 +522,28 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4234" levels="12" name="BOSS Power Throw">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
-  <table name="#mpConsume"> 36 50 69 93 118 143 166 175 182 186 189 192 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="hitTime" val="4500"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="4500"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="900"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="4235" levels="1" name="none">
+<!-- Dietrich/Mikhail/Gustav Skill -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="skillTime" val="1500"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4236" levels="1" name="Decrease Heal">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Reduces recovery magic.
-  created 2005-05-29 23:34:33
--->
+<!-- Gustav Skill -->
   <set name="hitTime" val="400"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="4000"/>
@@ -633,6 +554,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4237" levels="1" name="Decreases Speed">
+<!-- Mikhail Skill -->
   <set name="mpConsume" val="65"/>
   <set name="save" val="2"/>
   <set name="power" val="21.0"/>
@@ -653,14 +575,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4238" levels="1" name="Increase Re-use Time">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Increases skill re-use time.
-  created 2005-05-29 23:34:33
--->
+<!-- Dietrich Skill -->
   <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="4000"/>
@@ -671,120 +586,88 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4239" levels="1" name="Antharas Regeneration">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4240" levels="1" name="Antharas Regeneration">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4241" levels="1" name="Antharas Regeneration">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4242" levels="1" name="Zaken Regeneration">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4243" levels="1" name="Venomous Poison">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Gradually reduces HP. Effect 9.
-  created 2005-05-29 23:34:33
--->
-  <set name="power" val="9.0"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="2000"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4244" levels="12" name="NPC Wild Sweep">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
   <table name="#mpConsume"> 14 22 31 43 55 68 79 84 89 92 94 95 </table>
+  <table name="#power"> 90.0 97.0 105.0 123.0 132.0 143.0 165.0 177.0 191.0 219.0 235.0 251.0 </table>
+  <set name="weaponsAllowed" val="64"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="205"/>
   <set name="hitTime" val="1000"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="1000"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="overHit" val="true"/>
+  <set name="reuseDelay" val="17000"/>
+  <set name="skillTime" val="1080"/>
+  <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
   </for>
 </skill>
 <skill id="4245" levels="1" name="Mimic of Wrath">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4246" levels="1" name="Strong in 'nan' activity magic DOT">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
@@ -871,21 +754,12 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4251" levels="12" name="NPC Curve Beam Cannon - Slow">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="hitTime" val="2000"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="2000"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="1000"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -947,51 +821,36 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4255" levels="12" name="NPC Straight Beam Cannon - Slow">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
-  <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="hitTime" val="2000"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="2000"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="1000"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4256" levels="1" name="100% Stun Resistance.">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4257" levels="12" name="NPC Hydroblast - Magic">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:33
--->
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
+  <table name="#power"> 49.0 52.0 55.0 58.0 61.0 65.0 68.0 72.0 75.0 78.0 80.0 82.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="element" val="3"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="4000"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
@@ -999,28 +858,19 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4258" levels="1" name="Anti Strider Slow">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Slows down the speed of a user who is riding a strider.
-  created 2005-05-29 23:34:33
--->
-  <set name="hitTime" val="500"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="500"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="1000"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4259" levels="12" name="Toxic Smoke">
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <table name="#cast"> 500 600 600 750 750 750 750 750 750 750 750 750 </table>
-  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 </table>
+  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="3"/>
   <set name="power" val="#power"/>
@@ -1035,7 +885,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="#cast"/>
   <for>
-    <effect count="6" name="DamOverTime" time="5" val="#power" abnormal="poison"/>
+    <effect count="10" name="DamOverTime" time="3" val="#power" abnormal="poison"/>
   </for>
 </skill>
 <skill id="4260" levels="12" name="Steal Blood">
@@ -1076,107 +926,57 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4262" levels="1" name="Holiday Wind Walk">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Increases Speed. Effect 2.
-  created 2005-05-29 23:34:33
--->
-  <set name="hitTime" val="500"/>
-  <set name="power" val="2.0"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="500"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="400"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4263" levels="1" name="Holiday Haste">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases Atk. Spd. Effect 1.
-  created 2005-05-29 23:34:33
--->
-  <set name="hitTime" val="500"/>
-  <set name="power" val="1.0"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="500"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="400"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4264" levels="1" name="Holiday Empower">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases M. Atk. Effect 1.
-  created 2005-05-29 23:34:33
--->
-  <set name="hitTime" val="500"/>
-  <set name="power" val="1.0"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="500"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="400"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4265" levels="1" name="Holiday Might">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases P. Atk. Effect 3.
-  created 2005-05-29 23:34:33
--->
-  <set name="hitTime" val="500"/>
-  <set name="power" val="3.0"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="500"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="400"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4266" levels="1" name="Holiday Shield">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Temporarily increases P. Def. Effect 3.
-  created 2005-05-29 23:34:33
--->
-  <set name="hitTime" val="500"/>
-  <set name="power" val="3.0"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="500"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="400"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4267" levels="5" name="Grade Penalty">
-  <table name="#rate">0.22 0.19 0.16 0.13 0.10</table>
+  <table name="#rate"> 0.22 0.19 0.16 0.13 0.10 </table>
   <set name="power" val="0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="DEBUFF"/>
@@ -1194,32 +994,20 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4268" levels="1" name="Danger Area">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Located in an area in which one can receive damage or penalty.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4269" levels="1" name="Block All Chat">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: A mode that blocks global chatting. Whispers cannot be heard.
-  created 2005-05-29 23:34:33
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
@@ -1232,8 +1020,8 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   HP/MP Regeneration and Speed greatly reduced and quests suspended because weight exceeds 80% of limit.
   HP/MP Regeneration is greatly decreased. Move and quest are suspended due to excess weight.
 -->
-  <table name="#rate">0.5 0.5 0.5 0.5</table>
-  <table name="#rateSpd">1 0.5 0.5 0</table>
+  <table name="#rate"> 0.5 0.5 0.5 0.5 </table>
+  <table name="#rateSpd"> 1 0.5 0.5 0 </table>
   <set name="power" val="0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="DEBUFF"/>
@@ -1394,7 +1182,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   <set name="operateType" val="OP_PASSIVE"/> 
   <set name="castRange" val="-1"/> 
   <for> 
-    <add order="0x40" stat='mDef' val="55"/> 
+    <add order="0x40" stat="mDef" val="55"/> 
   </for> 
 </skill> 
 <skill id="4284" levels="6" name="Resist Bleeding">
@@ -1464,14 +1252,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4290" levels="1" name="Race">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Undead
-  created 2005-05-29 23:34:33
--->
+<!--- 1: Undead -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1480,14 +1261,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4291" levels="1" name="Race">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Construct
-  created 2005-05-29 23:34:33
--->
+<!--- 1: Construct -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1496,14 +1270,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4292" levels="1" name="Race">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Beast
-  created 2005-05-29 23:34:33
--->
+<!--- 1: Beast -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1512,14 +1279,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4293" levels="1" name="Race">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Animal
-  created 2005-05-29 23:34:33
--->
+<!--- 1: Animal -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1528,14 +1288,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4294" levels="1" name="Race">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Plant
-  created 2005-05-29 23:34:33
--->
+<!--- 1: Plant -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1544,14 +1297,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4295" levels="1" name="Race">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Humanoid
-  created 2005-05-29 23:34:33
--->
+<!--- 1: Humanoid -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1560,14 +1306,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4296" levels="1" name="Race">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Spirit
-  created 2005-05-29 23:34:33
--->
+<!--- 1: Spirit -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1576,14 +1315,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4297" levels="1" name="Race">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Divine
-  created 2005-05-29 23:34:33
--->
+<!--- 1: Divine -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1592,14 +1324,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4298" levels="1" name="Race">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Demonic
-  created 2005-05-29 23:34:33
--->
+<!--- 1: Demonic -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1608,14 +1333,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4299" levels="1" name="Race">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Dragon
-  created 2005-05-29 23:34:33
--->
+<!--- 1: Dragon -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
