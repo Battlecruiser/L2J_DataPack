@@ -98,7 +98,7 @@ class Quest (JQuest) :
             st.giveItems(VICTIMS_THIGH_BONE,1)
          elif not st.getQuestItemsCount(VICTIMS_SKULL) :
             st.giveItems(VICTIMS_SKULL,1)
-         elif st.getQuestItemsCount(VICTIMS_RIB_BONE) :
+         elif not st.getQuestItemsCount(VICTIMS_RIB_BONE) :
             st.giveItems(VICTIMS_RIB_BONE,1)
          elif not st.getQuestItemsCount(VICTIMS_SPINE) :
             st.giveItems(VICTIMS_SPINE,1)
