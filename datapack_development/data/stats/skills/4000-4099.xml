@@ -323,33 +323,22 @@
   </for>
 </skill>
 <skill id="4026" levels="1" name="Gludio Flame">
-  <set name="mpConsume" val="83"/>
-  <set name="power" val="43.0"/>
-  <set name="target" val="TARGET_AREA"/>
-  <set name="skillRadius" val="205"/>
-  <set name="hitTime" val="4000"/>
-  <set name="element" val="2"/>
-  <set name="reuseDelay" val="15000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="MDAM"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="900"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4027" levels="1" name="Gludio Heal">
-  <set name="mpConsume" val="98"/>
-  <set name="power" val="627.0"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="5000"/>
-  <set name="reuseDelay" val="10000"/>
-  <set name="skillTime" val="5000"/>
-  <set name="skillType" val="HEAL"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="600"/>
-  <set name="displayId" val="1011"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -491,7 +480,7 @@
 <skill id="4035" levels="12" name="Poison">
   <table name="#dmg"> 18 29 40 53 68 83 98 113 128 143 158 173 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 83 77 78 </table>
-  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 </table>
+  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="3"/>
   <set name="power" val="#power"/>
@@ -512,7 +501,7 @@
 <skill id="4036" levels="12" name="Poison">
   <table name="#dmg"> 29 44 59 74 89 104 109 114 119 124 129 134 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
-  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 </table>
+  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="3"/>
   <set name="power" val="#power"/>
@@ -610,18 +599,12 @@
   </for>
 </skill>
 <skill id="4041" levels="2" name="Cruma Blaze">
-  <table name="#mpConsume"> 40 45 </table>
-  <table name="#power"> 60.0 68.0 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="element" val="2"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="MDAM"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="600"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -640,37 +623,27 @@
   </for>
 </skill>
 <skill id="4043" levels="1" name="Partisan Flame">
-  <set name="mpConsume" val="60"/>
-  <set name="power" val="30.0"/>
-  <set name="target" val="TARGET_AREA"/>
-  <set name="skillRadius" val="205"/>
-  <set name="hitTime" val="4000"/>
-  <set name="element" val="2"/>
-  <set name="reuseDelay" val="15000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="MDAM"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="400"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4044" levels="1" name="Partisan Heal">
-  <set name="mpConsume" val="70"/>
-  <set name="power" val="427.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="5000"/>
-  <set name="reuseDelay" val="10000"/>
-  <set name="skillTime" val="5000"/>
-  <set name="skillType" val="HEAL"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="600"/>
-  <set name="displayId" val="1011"/>
+<!-- NOT USED IN C4 -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAKNESS"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4045" levels="1" name="Resist Full Magic Attack">
+<!-- NOT USED IN C4 -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
@@ -779,9 +752,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="400"/>
-  <set name="displayId" val="0129"/>
   <for>
-    <effect count="6" name="DamOverTime" time="5" val="#dmg" abnormal="poison"/>
+    <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison"/>
   </for>
 </skill>
 <skill id="4053" levels="8" name="P. Atk. Drop">
@@ -1292,7 +1264,7 @@
 <skill id="4088" levels="12" name="Bleed">
   <table name="#damage">2 3 5 6 8 9 10 11 12 13 14 15</table>
   <table name="#mpConsume"> 14 22 31 43 55 68 79 84 89 92 94 95 </table>
-  <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 </table>
+  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="4"/>
   <set name="power" val="#power"/>
@@ -1307,7 +1279,7 @@
   <set name="castRange" val="40"/>
   <set name="displayId" val="96"/>
   <for>
-	<effect count="6" name="DamOverTime" time="5" val="#damage"/>
+	<effect count="10" name="DamOverTime" time="3" val="#damage"/>
   </for>
 </skill>
 <skill id="4089" levels="1" name="NPC Bear Stun">

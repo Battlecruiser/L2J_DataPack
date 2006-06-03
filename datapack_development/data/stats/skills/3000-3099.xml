@@ -37,7 +37,6 @@
   </for>
 </skill>
 <skill id="3005" levels="1" name="Bleed">
-	<table name="#damage">22</table>
   <set name="save" val="4"/>
   <set name="power" val="5.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -46,7 +45,7 @@
   <set name="buffDuration" val="20000"/>
   <set name="castRange" val="-1"/>
   <for>
-	<effect count="4" name="DamOverTime" time="5" val="#damage"/>
+	<effect count="4" name="DamOverTime" time="5" val="22"/>
   </for>
 </skill>
 <skill id="3006" levels="1" name="Equip Set Items">
