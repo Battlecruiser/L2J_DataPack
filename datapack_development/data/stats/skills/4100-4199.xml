@@ -261,13 +261,15 @@
   </for>
 </skill>
 <skill id="4116" levels="10" name="Resist M.Atk">
-<!-- NOT USED IN C4 -->
+  <!-- Done by dc -->
+  <table name="#Tab-mDef"> 1.2 1.25 1.3 1.35 1.4 1.45 1.5 1.55 1.6 1.65 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAKNESS"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <mul order="0x50" stat="mDef" val="#Tab-mDef"/>
   </for>
 </skill>
 <skill id="4117" levels="12" name="Paralysis">
