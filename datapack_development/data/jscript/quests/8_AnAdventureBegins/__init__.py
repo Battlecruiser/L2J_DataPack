@@ -5,85 +5,95 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-GATEKEEPER_JASMINE_ID = 7134
-SENTRY_ROSELYN_ID = 7355
-ROSELYNS_NOTE_ID = 7573
-MAGISTER_HARNE_ID = 7144
-ADENA_ID = 57
-SCROLL_OF_ESCAPE_GIRAN_ID = 7559
-MARK_OF_TRAVELER_ID = 7570
+#NPCs 
+JASMINE = 7134 
+ROSELYN = 7355 
+HARNE   = 7144 
 
+#ITEM 
+ROSELYNS_NOTE = 7573 
+ 
+#REWARDS 
+ADENA      = 57 
+SCROLL_OF_ESCAPE_GIRAN = 7559 
+MARK_OF_TRAVELER       = 7570 
+ 
 class Quest (JQuest) :
 
-    def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr) 
 
-    def onEvent (self,event,st) :
-        htmltext = event
-        if event == "1" :
-            st.set("cond","1")
-            st.setState(STARTED)
-            st.playSound("ItemSound.quest_accept")
-            htmltext = "7134-03.htm"
-        elif event == "2" :
-            st.set("cond","2")
-            st.giveItems(ROSELYNS_NOTE_ID,1)
-            htmltext = "7355-02.htm"
-        elif event == "3" :
-            st.set("cond","3")
-            st.takeItems(ROSELYNS_NOTE_ID,1)
-            htmltext = "7144-02.htm"
-        elif event == "4" :
-            st.giveItems(SCROLL_OF_ESCAPE_GIRAN_ID,1)
-            st.giveItems(MARK_OF_TRAVELER_ID, 1)
-            htmltext = "7134-06.htm"
-            st.set("cond","0")
-            st.setState(COMPLETED)
-            st.playSound("ItemSound.quest_finish")
-        return htmltext
+ def onEvent (self,event,st) : 
+   htmltext = event 
+   if event == "7134-03.htm" : 
+     st.set("cond","1") 
+     st.setState(STARTED) 
+     st.playSound("ItemSound.quest_accept") 
+   elif event == "7355-02.htm" : 
+     st.giveItems(ROSELYNS_NOTE,1) 
+     st.set("cond","2") 
+     st.set("id","2") 
+     st.playSound("ItemSound.quest_middle") 
+   elif event == "7144-02.htm" : 
+     st.takeItems(ROSELYNS_NOTE,-1) 
+     st.set("cond","3") 
+     st.set("id","3") 
+     st.playSound("ItemSound.quest_middle") 
+   elif event == "7134-06.htm" : 
+     st.giveItems(SCROLL_OF_ESCAPE_GIRAN,1) 
+     st.giveItems(MARK_OF_TRAVELER, 1) 
+     st.set("cond","0") 
+     st.setState(COMPLETED) 
+     st.playSound("ItemSound.quest_finish") 
+   return htmltext 
 
-    def onTalk (Self,npc,st):
-        npcId = npc.getNpcId()
-        htmltext = "<html><head><body>I have nothing to say you</body></html>"
-        id = st.getState()
-        if id == CREATED :
-            st.set("cond","0")
-            if st.getPlayer().getRace().ordinal() == 2 :
-                htmltext = "7134-02.htm"
-            else :
-                htmltext = "7134-01.htm"
-                st.exitQuest(1)
-        elif npcId == 7134 and id == COMPLETED :
-            htmltext = "<html><head><body>I can't supply you with another Giran Scroll of Escape. Sorry traveller.</body></html>"
-        elif npcId == 7134 and int(st.get("cond"))==1 :
-            htmltext = "7134-04.htm"
-        elif npcId == 7355 and int(st.get("cond")) :
-            if st.getQuestItemsCount(ROSELYNS_NOTE_ID) == 0 :
-                htmltext = "7355-01.htm"
-            elif st.getQuestItemsCount(ROSELYNS_NOTE_ID) > 0 :
-                htmltext = "7355-03.htm"
-        elif npcId == 7144 and int(st.get("cond"))==2 :
-            if st.getQuestItemsCount(ROSELYNS_NOTE_ID) > 0 :
-                htmltext = "7144-01.htm"
-        elif npcId == 7134 and int(st.get("cond"))==3 :
-            htmltext = "7134-05.htm"
+ def onTalk (Self,npc,st): 
+   htmltext = "<html><head><body>I have nothing to say you</body></html>" 
+   npcId = npc.getNpcId() 
+   cond  = st.getInt("cond") 
+   id    = st.getState() 
 
-        return htmltext
+   if id == CREATED : 
+     st.set("cond","0") 
+     if st.getPlayer().getRace().ordinal() == 2 : 
+       if st.getPlayer().getLevel() >= 3 and st.getPlayer().getLevel() <= 10 : 
+         htmltext = "7134-02.htm" 
+       else : 
+         htmltext = "<html><head><body>Quest for characters level between 3 and 10.</body></html>" 
+         st.exitQuest(1) 
+     else : 
+       htmltext = "7134-01.htm" 
+       st.exitQuest(1) 
+   elif npcId == JASMINE and id == COMPLETED : 
+     htmltext = "<html><head><body>I can't supply you with another Giran Scroll of Escape. Sorry traveller.</body></html>" 
+   elif npcId == JASMINE and cond == 1 : 
+     htmltext = "7134-04.htm" 
+   elif npcId == ROSELYN and cond : 
+     if st.getQuestItemsCount(ROSELYNS_NOTE) == 0 : 
+       htmltext = "7355-01.htm" 
+     else : 
+       htmltext = "7355-03.htm" 
+   elif npcId == HARNE and cond == 2 and st.getQuestItemsCount(ROSELYNS_NOTE) > 0 : 
+     htmltext = "7144-01.htm" 
+   elif npcId == JASMINE and cond == 3 : 
+     htmltext = "7134-05.htm" 
 
-QUEST       = Quest(8,"8_AnAdventureBegins","An Adventure Begins")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
+   return htmltext 
 
+QUEST     = Quest(8,"8_AnAdventureBegins","An Adventure Begins") 
+CREATED   = State('Start',     QUEST) 
+STARTED   = State('Started',   QUEST) 
+COMPLETED = State('Completed', QUEST) 
+ 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7134)
+QUEST.addStartNpc(JASMINE) 
 
-CREATED.addTalkId(7134)
-COMPLETED.addTalkId(7134)
+CREATED.addTalkId(JASMINE) 
+COMPLETED.addTalkId(JASMINE) 
 
-STARTED.addTalkId(7134)
-STARTED.addTalkId(7355)
-STARTED.addTalkId(7144)
+STARTED.addTalkId(JASMINE) 
+STARTED.addTalkId(ROSELYN) 
+STARTED.addTalkId(HARNE) 
 
-STARTED.addQuestDrop(7355,ROSELYNS_NOTE_ID,1)
+STARTED.addQuestDrop(JASMINE,ROSELYNS_NOTE,1) 
 
-print "importing quests: 8: An Adventure Begins"
+print "importing quests: 8: An Adventure Begins" 

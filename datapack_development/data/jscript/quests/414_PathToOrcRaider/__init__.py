@@ -1,140 +1,162 @@
 # Maked by Mr. Have fun! Version 0.2
-print "importing quests: 414: Path To Orc Raider"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-GREEN_BLOOD_ID = 1578
-GOBLIN_DWELLING_MAP_ID = 1579
-KURUKA_RATMAN_TOOTH_ID = 1580
-BETRAYER_UMBAR_REPORT_ID = 1589
-HEAD_OF_BETRAYER_ID = 1591
-MARK_OF_RAIDER_ID = 1592
+#NPCs 
+KARUKIA = 7570 
+KASMAN  = 7501 
 
+#MOBS 
+GOBLIN_TOMB_RAIDER_LEADER = 320 
+KURUKA_RATMAN_LEADER      = 5045 
+UMBAR_ORC                 = 5054 
+ 
+#ITEMS 
+GREEN_BLOOD           = 1578 
+GOBLIN_DWELLING_MAP   = 1579 
+KURUKA_RATMAN_TOOTH   = 1580 
+BETRAYER_UMBAR_REPORT = 1589 
+HEAD_OF_BETRAYER      = 1591 
+ 
+#REWARD 
+MARK_OF_RAIDER = 1592 
+ 
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onEvent (self,event,st) :
-    htmltext = event
-    if event == "1" :
-          st.set("id","0")
-          st.set("cond","1")
-          st.setState(STARTED)
-          st.playSound("ItemSound.quest_accept")
-          st.giveItems(GOBLIN_DWELLING_MAP_ID,1)
-          htmltext = "7570-05.htm"
-    return htmltext
+   htmltext = event 
+   if event == "7570-05.htm" : 
+     st.set("id","1") 
+     st.set("cond","1") 
+     st.setState(STARTED) 
+     st.giveItems(GOBLIN_DWELLING_MAP,1) 
+     st.playSound("ItemSound.quest_accept") 
+   return htmltext 
 
 
  def onTalk (Self,npc,st):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   npcId = npc.getNpcId()
-   id = st.getState()
+   playerClassID = st.getPlayer().getClassId().getId() 
+   playerLvl     = st.getPlayer().getLevel() 
+   npcId         = npc.getNpcId() 
+   id            = st.getState() 
+ 
    if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 7570 and int(st.get("cond"))==0 :
-          if st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x2c and st.getQuestItemsCount(MARK_OF_RAIDER_ID) == 0 and st.getQuestItemsCount(GOBLIN_DWELLING_MAP_ID) == 0 :
-              htmltext = "7570-01.htm"
-          elif st.getPlayer().getClassId().getId() != 0x2c :
-              if st.getPlayer().getClassId().getId() == 0x2d :
-                htmltext = "7570-02a.htm"
-              else:
-                htmltext = "7570-03.htm"
-          elif st.getPlayer().getLevel()<19 and st.getPlayer().getClassId().getId() == 0x2c :
-              htmltext = "7570-02.htm"
-          elif st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x2c and st.getQuestItemsCount(MARK_OF_RAIDER_ID) == 1 :
-              htmltext = "7570-04.htm"
-          else:
-            htmltext = "7570-02.htm"
-   elif npcId == 7570 and int(st.get("cond")) and st.getQuestItemsCount(GOBLIN_DWELLING_MAP_ID)==1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID)<10 :
-          htmltext = "7570-06.htm"
-   elif npcId == 7570 and int(st.get("cond")) and st.getQuestItemsCount(GOBLIN_DWELLING_MAP_ID)==1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID)>=10 and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID)==0 :
-          htmltext = "7570-07.htm"
-          st.takeItems(KURUKA_RATMAN_TOOTH_ID,st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID))
-          st.takeItems(GOBLIN_DWELLING_MAP_ID,1)
-          st.giveItems(BETRAYER_UMBAR_REPORT_ID,1)
-          st.addRadar(-16760, 78268, -3480)
-          st.set("cond","3")
-   elif npcId == 7570 and int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
-          htmltext = "7570-08.htm"
-   elif npcId == 7570 and int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)==2 :
-          htmltext = "7570-09.htm"
-   elif npcId == 7501 and int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)==0 :
-        htmltext = "7501-01.htm"
-   elif npcId == 7501 and int(st.get("cond")) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)>0 and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
-        htmltext = "7501-02.htm"
-   elif npcId == 7501 and int(st.get("cond")) and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)==2 :
-        htmltext = "7501-03.htm"
-        st.takeItems(HEAD_OF_BETRAYER_ID,st.getQuestItemsCount(HEAD_OF_BETRAYER_ID))
-        st.takeItems(BETRAYER_UMBAR_REPORT_ID,1)
-        st.giveItems(MARK_OF_RAIDER_ID,1)
-        st.set("cond","0")
-        st.setState(COMPLETED)
-        st.playSound("ItemSound.quest_finish")
+ 
+   cond = st.getInt("cond") 
+ 
+   if npcId == KARUKIA and cond == 0 : 
+     if playerLvl >= 19 and playerClassID == 0x2c and st.getQuestItemsCount(MARK_OF_RAIDER) == 0 and st.getQuestItemsCount(GOBLIN_DWELLING_MAP) == 0 : 
+       htmltext = "7570-01.htm" 
+     elif playerClassID != 0x2c : 
+       if playerClassID == 0x2d : 
+         htmltext = "7570-02a.htm" 
+       else: 
+         htmltext = "7570-03.htm" 
+     elif playerLvl < 19 and playerClassID == 0x2c : 
+       htmltext = "7570-02.htm" 
+     elif playerLvl >= 19 and playerClassID == 0x2c and st.getQuestItemsCount(MARK_OF_RAIDER) == 1 : 
+       htmltext = "7570-04.htm" 
+     else: 
+       htmltext = "7570-02.htm" 
+   elif npcId == KARUKIA and cond and st.getQuestItemsCount(GOBLIN_DWELLING_MAP) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH) < 10 : 
+     htmltext = "7570-06.htm" 
+   elif npcId == KARUKIA and cond and st.getQuestItemsCount(GOBLIN_DWELLING_MAP) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH) >= 10 and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT) == 0 : 
+     htmltext = "7570-07.htm" 
+     st.takeItems(KURUKA_RATMAN_TOOTH,-1) 
+     st.takeItems(GOBLIN_DWELLING_MAP,-1) 
+     st.giveItems(BETRAYER_UMBAR_REPORT,1) 
+     st.addRadar(-16760, 78268, -3480) 
+     st.set("id","3") 
+     st.set("cond","3") 
+     st.playSound("ItemSound.quest_middle") 
+   elif npcId == KARUKIA and cond and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT) and st.getQuestItemsCount(HEAD_OF_BETRAYER) < 2 : 
+     htmltext = "7570-08.htm" 
+   elif npcId == KARUKIA and cond and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT) and st.getQuestItemsCount(HEAD_OF_BETRAYER) == 2 : 
+     htmltext = "7570-09.htm" 
+   elif npcId == KASMAN and cond and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT) and st.getQuestItemsCount(HEAD_OF_BETRAYER) == 0 : 
+     htmltext = "7501-01.htm" 
+   elif npcId == KASMAN and cond and st.getQuestItemsCount(HEAD_OF_BETRAYER) > 0 and st.getQuestItemsCount(HEAD_OF_BETRAYER) < 2 : 
+     htmltext = "7501-02.htm" 
+   elif npcId == KASMAN and cond and st.getQuestItemsCount(HEAD_OF_BETRAYER) == 2 : 
+     htmltext = "7501-03.htm" 
+     st.takeItems(HEAD_OF_BETRAYER,-1) 
+     st.takeItems(BETRAYER_UMBAR_REPORT,-1) 
+     st.giveItems(MARK_OF_RAIDER,1) 
+     st.set("cond","0") 
+     st.setState(COMPLETED) 
+     st.playSound("ItemSound.quest_finish") 
    return htmltext
 
  def onKill (self,npc,st):
+   cond = st.getInt("cond") 
    npcId = npc.getNpcId()
-   if npcId == 320 :
-          st.set("id","0")
-          if int(st.get("cond")) and st.getQuestItemsCount(GOBLIN_DWELLING_MAP_ID) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID)<10 and st.getQuestItemsCount(GREEN_BLOOD_ID)<40 :
-            if st.getQuestItemsCount(GREEN_BLOOD_ID)>20 :
-              if st.getRandom(100)<((st.getQuestItemsCount(GREEN_BLOOD_ID)-20)*5) :
-                st.takeItems(GREEN_BLOOD_ID,st.getQuestItemsCount(GREEN_BLOOD_ID))
-                st.getPcSpawn().addSpawn(5045)
-              else:
-                st.giveItems(GREEN_BLOOD_ID,1)
-                st.playSound("ItemSound.quest_itemget")
-            else:
-              st.giveItems(GREEN_BLOOD_ID,1)
-              st.playSound("ItemSound.quest_itemget")
-   elif npcId == 5045 :
-          st.set("id","0")
-          if int(st.get("cond")) and st.getQuestItemsCount(GOBLIN_DWELLING_MAP_ID) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID)<10 :
-            st.takeItems(GREEN_BLOOD_ID,st.getQuestItemsCount(GREEN_BLOOD_ID))
-            if st.getQuestItemsCount(KURUKA_RATMAN_TOOTH_ID) == 9 :
-              st.giveItems(KURUKA_RATMAN_TOOTH_ID,1)
-              st.playSound("ItemSound.quest_middle")
-              st.set("cond","2")
-            else:
-              st.giveItems(KURUKA_RATMAN_TOOTH_ID,1)
-              st.playSound("ItemSound.quest_itemget")
-   elif npcId == 5054 :
-        st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT_ID)>0 and st.getQuestItemsCount(HEAD_OF_BETRAYER_ID)<2 :
-          st.giveItems(HEAD_OF_BETRAYER_ID,1)
-          st.playSound("ItemSound.quest_itemget")
-          if st.getQuestItemsCount(HEAD_OF_BETRAYER_ID) > 1 :
-            st.playSound("ItemSound.quest_middle")
-            st.set("cond","4")
+ 
+   if npcId == GOBLIN_TOMB_RAIDER_LEADER : 
+     if cond and st.getQuestItemsCount(GOBLIN_DWELLING_MAP) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH) < 10 and st.getQuestItemsCount(GREEN_BLOOD) < 40 : 
+       if st.getQuestItemsCount(GREEN_BLOOD) > 20 : 
+         if st.getRandom(100) < ((st.getQuestItemsCount(GREEN_BLOOD)-20)*5) : 
+           st.takeItems(GREEN_BLOOD,-1) 
+           st.getPcSpawn().addSpawn(5045) 
+         else: 
+           st.giveItems(GREEN_BLOOD,1) 
+           st.playSound("ItemSound.quest_itemget") 
+       else: 
+         st.giveItems(GREEN_BLOOD,1) 
+         st.playSound("ItemSound.quest_itemget") 
+   elif npcId == KURUKA_RATMAN_LEADER : 
+     if cond and st.getQuestItemsCount(GOBLIN_DWELLING_MAP) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH) < 10 : 
+       st.takeItems(GREEN_BLOOD,-1) 
+       if st.getQuestItemsCount(KURUKA_RATMAN_TOOTH) == 9 : 
+         st.giveItems(KURUKA_RATMAN_TOOTH,1) 
+         st.set("id","2") 
+         st.set("cond","2") 
+         st.playSound("ItemSound.quest_middle") 
+       else: 
+         st.giveItems(KURUKA_RATMAN_TOOTH,1) 
+         st.playSound("ItemSound.quest_itemget") 
+   elif npcId == UMBAR_ORC : 
+     if cond and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT) > 0 and st.getQuestItemsCount(HEAD_OF_BETRAYER) < 2 : 
+       st.giveItems(HEAD_OF_BETRAYER,1) 
+       if st.getQuestItemsCount(HEAD_OF_BETRAYER) > 1 : 
+         st.set("id","4") 
+         st.set("cond","4") 
+         st.playSound("ItemSound.quest_middle") 
+       else: 
+         st.playSound("ItemSound.quest_itemget") 
    return
 
-QUEST       = Quest(414,"414_PathToOrcRaider","Path To Orc Raider")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
+QUEST     = Quest(414,"414_PathToOrcRaider","Path to an Orc Raider") 
+CREATED   = State('Start',     QUEST) 
+STARTING  = State('Starting',  QUEST) 
+STARTED   = State('Started',   QUEST) 
+COMPLETED = State('Completed', QUEST) 
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7570)
+QUEST.addStartNpc(KARUKIA) 
 
-STARTING.addTalkId(7570)
+STARTING.addTalkId(KARUKIA) 
 
-STARTED.addTalkId(7501)
-STARTED.addTalkId(7570)
+STARTED.addTalkId(KASMAN) 
+STARTED.addTalkId(KARUKIA) 
 
-STARTED.addKillId(320)
-STARTED.addKillId(5045)
-STARTED.addKillId(5054)
+STARTED.addKillId(GOBLIN_TOMB_RAIDER_LEADER) 
+STARTED.addKillId(KURUKA_RATMAN_LEADER) 
+STARTED.addKillId(UMBAR_ORC) 
 
-STARTED.addQuestDrop(5045,KURUKA_RATMAN_TOOTH_ID,1)
-STARTED.addQuestDrop(7570,GOBLIN_DWELLING_MAP_ID,1)
-STARTED.addQuestDrop(320,GREEN_BLOOD_ID,1)
-STARTED.addQuestDrop(5054,HEAD_OF_BETRAYER_ID,1)
-STARTED.addQuestDrop(7570,BETRAYER_UMBAR_REPORT_ID,1)
+STARTED.addQuestDrop(KARUKIA,KURUKA_RATMAN_TOOTH,1) 
+STARTED.addQuestDrop(KARUKIA,GOBLIN_DWELLING_MAP,1) 
+STARTED.addQuestDrop(KARUKIA,GREEN_BLOOD,1) 
+STARTED.addQuestDrop(KARUKIA,HEAD_OF_BETRAYER,1) 
+STARTED.addQuestDrop(KARUKIA,BETRAYER_UMBAR_REPORT,1) 
+ 
+print "importing quests: 414: Path To An Orc Raider" 
