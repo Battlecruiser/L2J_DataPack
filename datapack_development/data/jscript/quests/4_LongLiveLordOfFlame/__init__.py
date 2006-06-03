@@ -15,17 +15,15 @@ class Quest (JQuest) :
     htmltext = event
     if event == "7578-03.htm" :
       st.set("cond","1")
-      st.set("id","1") 
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
  def onTalk (Self,npc,st):
-   htmltext = "<html><head><body>I have nothing to say you</body></html>" 
    npcId = npc.getNpcId()
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    cond = st.getInt("cond")
- 
    if id == COMPLETED :
      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 7578 :
@@ -33,7 +31,7 @@ class Quest (JQuest) :
        if st.getPlayer().getRace().ordinal() <> 3 :
          htmltext = "7578-00.htm"
          st.exitQuest(1)
-       elif st.getPlayer().getLevel() >= 2 and st.getPlayer().getLevel() <= 5 : 
+       elif st.getPlayer().getLevel() >= 2 :
          htmltext = "7578-02.htm"
        else:
          htmltext = "7578-01.htm"
@@ -61,17 +59,16 @@ class Quest (JQuest) :
          count += st.getQuestItemsCount(item)
        if count == 6 :
          st.set("cond","2")
-         st.set("id","2") 
          st.playSound("ItemSound.quest_middle")
        else :
          st.playSound("ItemSound.quest_itemget")
    return htmltext
 
-QUEST     = Quest(4,"4_LongLiveLordOfFlame","Long Live Lord Of Flame") 
-CREATED   = State('Start',     QUEST) 
-STARTING  = State('Starting',  QUEST) 
-STARTED   = State('Started',   QUEST) 
-COMPLETED = State('Completed', QUEST) 
+QUEST       = Quest(4,"4_LongLiveLordOfFlame","Long Live Lord Of Flame")
+CREATED     = State('Start', QUEST)
+STARTING    = State('Starting', QUEST)
+STARTED     = State('Started', QUEST)
+COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(7578)
@@ -89,6 +86,6 @@ STARTED.addTalkId(7585)
 STARTED.addTalkId(7587)
 
 for i in range(1541,1547) :
-   STARTED.addQuestDrop(7578,i,1) 
+   STARTED.addQuestDrop(7566,i,1)
 
 print "importing quests: 4: Long Live Lord Of Flame"
