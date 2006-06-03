@@ -417,7 +417,7 @@
   </for>
 </skill>
 <skill id="2042" levels="1" name="Antidote">
-  <set name="power" val="3"/>
+  <set name="power" val="3.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="UNPOISON"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -426,7 +426,7 @@
   </for>
 </skill>
 <skill id="2043" levels="1" name="Advanced antidote">
-  <set name="power" val="7"/>
+  <set name="power" val="7.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="UNPOISON"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -435,7 +435,7 @@
   </for>
 </skill>
 <skill id="2044" levels="1" name="Bandage">
-  <set name="power" val="0.0"/>
+  <set name="power" val="3.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="UNBLEED"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -444,9 +444,9 @@
   </for>
 </skill>
 <skill id="2045" levels="1" name="Emergency dressing">
-  <set name="power" val="0.0"/>
+  <set name="power" val="7.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NEGATE"/>
+  <set name="skillType" val="UNBLEED"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <for>
