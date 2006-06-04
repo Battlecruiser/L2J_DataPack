@@ -50,7 +50,7 @@ ExchangeList={
 76:["Sword of Delusion", "weapon_sword_of_delusion_i0"],
 77: ["Tsurugi", "weapon_tsurugi_i0"],
 84:["Homunkulus's Sword", "weapon_homunkuluss_sword_i0"],
-131:["Spirit Sword", "weapon_spirit_sword_i0"],
+131:["Spirit Sword", "weapon_spirits_sword_i0"],
 132:["Sword of Limit", "weapon_sword_of_limit_i0"],
 133:["Raid Sword", "weapon_raid_sword_i0"],
 134:["Sword of Nightmare", "weapon_sword_of_nightmare_i0"],
