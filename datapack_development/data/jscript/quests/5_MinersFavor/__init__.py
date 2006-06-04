@@ -46,7 +46,6 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget") 
    return htmltext 
 
-
  def onTalk (Self,npc,st):
 
    npcId = npc.getNpcId()
@@ -65,7 +64,7 @@ class Quest (JQuest) :
    if npcId == BOLTER and cond == 0 : 
      if onlyone == 1 : 
        htmltext = "<html><head><body>This quest have already been completed.</body></html>" 
-     elif st.getPlayer().getLevel() >= 2 and st.getPlayer().getLevel() <= 5 : 
+     elif st.getPlayer().getLevel() >= 2 : 
        htmltext = "7554-02.htm" 
      else: 
        htmltext = "7554-01.htm" 

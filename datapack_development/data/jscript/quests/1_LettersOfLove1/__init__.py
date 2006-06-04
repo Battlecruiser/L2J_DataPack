@@ -33,12 +33,10 @@ class Quest (JQuest) :
        st.giveItems(DARINGS_LETTER,1) 
    return htmltext 
 
-
  def onTalk (Self,npc,st):
    htmltext = "<html><head><body>I have nothing to say you</body></html>" 
    npcId = npc.getNpcId()
    id = st.getState()
-    
    if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
@@ -53,14 +51,14 @@ class Quest (JQuest) :
    ItemsCount_BP = st.getQuestItemsCount(BAULS_POTION) 
  
    if npcId == DARIN and cond == 0 and onlyone == 0 : 
-     if st.getPlayer().getLevel() >= 2 and st.getPlayer().getLevel() <= 5: 
+     if st.getPlayer().getLevel() >= 2 : 
        if cond < 15 : 
          htmltext = "7048-02.htm" 
        else: 
          htmltext = "7048-01.htm" 
          st.exitQuest(1) 
      else: 
-       htmltext = "<html><head><body>Quest for characters level between 2 and 5.</body></html>" 
+       htmltext = "<html><head><body>Quest for characters level 2 and above.</body></html>" 
        st.exitQuest(1) 
    elif npcId == DARIN and cond == 0 and onlyone == 1 : 
      htmltext = "<html><head><body>This quest have already been completed.</body></html>" 

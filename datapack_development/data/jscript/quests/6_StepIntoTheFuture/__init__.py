@@ -56,10 +56,10 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("id","0") 
      if st.getPlayer().getRace().ordinal() == 0 :
-       if st.getPlayer().getLevel() >= 3 and st.getPlayer().getLevel() <= 10 : 
+       if st.getPlayer().getLevel() >= 3 : 
          htmltext = "7006-02.htm" 
        else : 
-         htmltext = "<html><head><body>Quest for characters level between 3 and 10.</body></html>" 
+         htmltext = "<html><head><body>Quest for characters level 3 and above.</body></html>" 
          st.exitQuest(1) 
      else :
        htmltext = "7006-01.htm"
