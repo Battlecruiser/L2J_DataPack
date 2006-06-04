@@ -315,20 +315,28 @@
       <using slotitem="5771;9"/>
      </and>
    </add>
-    <mul val='1.80' order='0x40' stat='rootRes'>
+    <mul val='1.70' order='0x40' stat='rootRes'>
      <and>
       <using slotitem="2418;6"/>
       <using slotitem="5783;12"/>
       <using slotitem="5771;9"/>
      </and>
    </mul>
-    <mul val='1.80' order='0x40' stat='sleepRes'>
+    <mul val='1.70' order='0x40' stat='sleepRes'>
      <and>
       <using slotitem="2418;6"/>
       <using slotitem="5783;12"/>
       <using slotitem="5771;9"/>
      </and>
    </mul>
+    		<add val='5' order='0x50' stat='reflectDam'>
+     <and>
+      <using slotitem="2418;6"/>
+      <using slotitem="5783;12"/>
+      <using slotitem="5771;9"/>
+	  <using slotitem="2498;8"/>
+     </and>
+   </add>
   <enchant val='0' order='0x0C' stat='pDef' />
 </for>
 </item>
