@@ -2343,7 +2343,7 @@ INSERT INTO `etcitem` (`item_id`, `name`, `crystallizable`, `item_type`, `weight
  (3425, 'Bloody Nail', 'false', 'quest', 0, 'stackable', 'steel', 'none', 100, 0, 0, 'false', 'bloody_nail', 'none', '0'),
  (3426, 'Bloody Kasha Fang', 'false', 'quest', 0, 'stackable', 'steel', 'none', 100, 0, 0, 'false', 'bloody_kasha_fang', 'none', '0'),
  (3427, 'Bloody Tarantula Nail', 'false', 'quest', 0, 'stackable', 'steel', 'none', 100, 0, 0, 'false', 'bloody_tarantula_nail', 'none', '0'),
- (3428, 'Crystal Brooch', 'false', 'none', 0, 'stackable', 'steel', 'none', 100, 0, 0, 'false', 'crystal_brooch', 'none', '2'),
+ (3428, 'Crystal Brooch', 'false', 'quest', 0, 'stackable', 'steel', 'none', 100, 0, 0, 'false', 'crystal_brooch', 'none', '2'),
  (3429, 'Spellbook: Greater Heal', 'false', 'spellbook', 120, 'normal', 'paper', 'none', 0, 3200, 0, 'true', 'sb_greater_heal11', 'none', '2'),
  (3430, 'Spellbook: Greater Battle Heal', 'false', 'spellbook', 120, 'normal', 'paper', 'none', 0, 3200, 0, 'true', 'sb_greater_battle_heal11', 'none', '2'),
  (3431, 'Spellbook: Greater Group Heal', 'false', 'spellbook', 120, 'normal', 'paper', 'none', 0, 3200, 0, 'true', 'sb_greater_group_heal11', 'none', '2'),

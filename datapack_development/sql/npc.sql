@@ -601,7 +601,7 @@ INSERT INTO `npc` (`id`, `name`, `class`, `collision_radius`, `collision_height`
   (549,'Ol Mahum Lord','Monster.ol_mahum_champion',14,27,34,'male','L2Monster',40,1164,430,40,43,30,21,20,10,1388,81,196,179,79,132,253,500,253,69,19,0,50,110,'ol_mahum_clan',300,0),
   (550,'Guardian Basilisk','Monster.lesser_basilisk',34,25,36,'male','L2Monster',40,1279,464,40,43,30,21,20,10,1556,94,226,192,94,141,253,0,253,0,0,0,60,143,'lesser_basilisk',300,0),
   (551,'Road Scavenger','Monster.wererat',14,25,37,'male','L2Monster',40,1339,480,40,43,30,21,20,10,1643,101,243,187,101,146,253,0,253,0,0,0,80,120,'wererat',300,0),
-  (552,'Fettered Soul','Monster.binding',12,21,38,'male','L2Monster',40,1400,497,40,43,30,21,20,10,1733,108,260,194,109,152,253,500,253,0,0,0,10,140,NULL,NULL,1),
+  (552,'Fettered Soul','Monster.binding',12,21,38,'male','L2Monster',40,1400,497,40,43,30,21,20,10,1733,108,260,194,109,152,253,0,253,0,0,0,10,140,NULL,NULL,1),
   (553,'Windsus','Monster.giant_wild_hog',35,27,39,'male','L2Monster',40,1463,514,40,43,30,21,20,10,1826,116,279,200,118,157,253,0,253,0,0,0,35,120,'giant_wild_hog',300,0),
   (554,'Grandis','Monster.twin_headed_giant',17,39,40,'male','L2Monster',40,1527,531,40,43,30,21,20,10,1921,124,298,221,127,163,253,500,253,0,0,0,45,100,NULL,NULL,0),
   (555,'Giant Fungus','Monster.walking_fungus_bi',15,31.3,40,'male','L2Monster',40,1527,531,40,43,30,21,20,10,1921,124,298,221,127,163,253,0,253,0,0,0,70,110,'walking_fungus_bi',300,0),
