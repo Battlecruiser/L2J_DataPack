@@ -48,7 +48,6 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_finish") 
    return htmltext 
 
-
  def onTalk (Self,npc,st):
    htmltext = "<html><head><body>I have nothing to say you</body></html>" 
    npcId = npc.getNpcId()
@@ -63,7 +62,7 @@ class Quest (JQuest) :
    if npcId == ARUJIEN and id == CREATED : 
      if st.getPlayer().getRace().ordinal() != 1 and st.getPlayer().getRace().ordinal() != 0 : 
        htmltext = "7223-00.htm" 
-     elif st.getPlayer().getLevel() >= 2 and st.getPlayer().getLevel() <= 5 : 
+     elif st.getPlayer().getLevel() >= 2 : 
        htmltext = "7223-02.htm" 
      else: 
        htmltext = "7223-01.htm" 
