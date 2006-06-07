@@ -125,14 +125,14 @@ INSERT INTO fishing_skill_trees VALUES
 (1371,6,'Expand Storage',0,60,7609,60000,0),
 (1371,7,'Expand Storage',0,70,7609,100000,0),
 (1371,8,'Expand Storage',0,76,7609,100000,0),
-(1372,1,'Expand Storage',0,10,7609,4000,0),
-(1372,2,'Expand Storage',0,20,7609,8000,0),
-(1372,3,'Expand Storage',0,30,7609,20000,0),
-(1372,4,'Expand Storage',0,40,7609,20000,0),
-(1372,5,'Expand Storage',0,50,7609,60000,0),
-(1372,6,'Expand Storage',0,60,7609,60000,0),
-(1372,7,'Expand Storage',0,70,7609,100000,0),
-(1372,8,'Expand Storage',0,76,7609,100000,0),
+(1372,1,'Expand Inventory',0,10,7609,4000,0),
+(1372,2,'Expand Inventory',0,20,7609,8000,0),
+(1372,3,'Expand Inventory',0,30,7609,20000,0),
+(1372,4,'Expand Inventory',0,40,7609,20000,0),
+(1372,5,'Expand Inventory',0,50,7609,60000,0),
+(1372,6,'Expand Inventory',0,60,7609,60000,0),
+(1372,7,'Expand Inventory',0,70,7609,100000,0),
+(1372,8,'Expand Inventory',0,76,7609,100000,0),
 (1312,1,'Fishing',0,10,57,1000,0); 
 
 
