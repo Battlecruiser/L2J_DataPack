@@ -3,21 +3,168 @@
 <item id='6656' name="Earring of Antharas">
 <!-- TODO: Decrease in MP consumption -->
   <for>
-    <add val='71' order='0x10' stat='mDef' />
-    <add val='31' order='0x10' stat='maxMp' />
-    <mul val='1.8' order='0x50' stat='bleedRes' />
-    <mul val='1.15' order='0x50' stat='regHp' /> 
-	<add val='10' order='0x40' stat='absorbDam' /> 
-	<mul val='1.6' order='0x50' stat='stunRes'/> 
-	<mul val='1.6' order='0x50' stat='muteRes'/>
-	<mul val='1.25' order='0x50' stat='earthRes'/> 
+<add val='71' order='0x40' stat='mDef' />
+<add val='31' order='0x40' stat='maxMp'>
+	<or>
+		<and>
+			<using slotitem="6656;1"/>
+			<not>
+				<using slotitem="6656;2"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6656;2"/>
+			<not>
+				<using slotitem="6656;1"/>
+			</not>
+		</and>
+	</or>
+</add>
+<add val='15.5' order='0x40' stat='maxMp'>
+		<and>
+			<using slotitem="6656;1"/>
+			<using slotitem="6656;2"/>
+		</and>
+</add>
+<mul val='1.8' order='0x50' stat='bleedRes'>
+	<or>
+		<and>
+			<using slotitem="6656;1"/>
+			<not>
+				<using slotitem="6656;2"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6656;2"/>
+			<not>
+				<using slotitem="6656;1"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.342' order='0x50' stat='bleedRes'>
+		<and>
+			<using slotitem="6656;1"/>
+			<using slotitem="6656;2"/>
+		</and>
+</mul>
+<mul val='1.15' order='0x50' stat='regHp'>
+	<or>
+		<and>
+			<using slotitem="6656;1"/>
+			<not>
+				<using slotitem="6656;2"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6656;2"/>
+			<not>
+				<using slotitem="6656;1"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.0725' order='0x50' stat='regHp'>
+		<and>
+			<using slotitem="6656;1"/>
+			<using slotitem="6656;2"/>
+		</and>
+</mul>
+<add val='10' order='0x40' stat='absorbDam'>
+	<or>
+		<and>
+			<using slotitem="6656;1"/>
+			<not>
+				<using slotitem="6656;2"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6656;2"/>
+			<not>
+				<using slotitem="6656;1"/>
+			</not>
+		</and>
+	</or>
+</add>
+<add val='5' order='0x40' stat='absorbDam'>
+		<and>
+			<using slotitem="6656;1"/>
+			<using slotitem="6656;2"/>
+		</and>
+</add>
+<mul val='1.6' order='0x50' stat='stunRes'>
+	<or>
+		<and>
+			<using slotitem="6656;1"/>
+			<not>
+				<using slotitem="6656;2"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6656;2"/>
+			<not>
+				<using slotitem="6656;1"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.26495' order='0x50' stat='stunRes'>
+		<and>
+			<using slotitem="6656;1"/>
+			<using slotitem="6656;2"/>
+		</and>
+</mul>
+<mul val='1.6' order='0x50' stat='muteRes'>
+	<or>
+		<and>
+			<using slotitem="6656;1"/>
+			<not>
+				<using slotitem="6656;2"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6656;2"/>
+			<not>
+				<using slotitem="6656;1"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.26495' order='0x50' stat='muteRes'>
+		<and>
+			<using slotitem="6656;1"/>
+			<using slotitem="6656;2"/>
+		</and>
+</mul>
+<mul val='1.25' order='0x50' stat='earthRes'>
+	<or>
+		<and>
+			<using slotitem="6656;1"/>
+			<not>
+				<using slotitem="6656;2"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6656;2"/>
+			<not>
+				<using slotitem="6656;1"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.1184' order='0x50' stat='earthRes'>
+		<and>
+			<using slotitem="6656;1"/>
+			<using slotitem="6656;2"/>
+		</and>
+</mul>
 	<enchant val='0' order='0x0C' stat='mDef' /> 
   </for> 
 </item>
 <item id='6657' name="Necklace of Valakas">
   <for>
-    <add val='95' order='0x10' stat='mDef' />
-    <add val='42' order='0x10' stat='maxMp' />
+    <add val='95' order='0x40' stat='mDef' />
+    <add val='42' order='0x40' stat='maxMp' />
 	<add val='445' order='0x40' stat='maxHp' /> 
 	<mul val='1.8' order='0x50' stat='sleepRes' /> 
 	<mul val='1.1' order='0x50' stat='pAtk' /> 
@@ -32,138 +179,642 @@
 </item>
 <item id='6658' name="Ring of Baium">
   <for>
-    <add val='48' order='0x10' stat='mDef' />
-    <add val='21' order='0x10' stat='maxMp' />
-	<mul val='1.8' order='0x50' stat='poisonRes' /> 
-	<add val='6' order='0x40' stat='accCombat' />
-	<add val='85' order='0x40' stat='cAtk' />
-	<mul val='1.6' order='0x50' stat='rootRes' />
-	<mul val='1.1' order='0x50' stat='pAtkSpd' />
-	<mul val='1.1' order='0x50' stat='mAtkSpd' />
-	<enchant val='0' order='0x0C' stat='mDef' />
+<add val='48' order='0x40' stat='mDef' />
+<add val='21' order='0x40' stat='maxMp'>
+	<or>
+		<and>
+			<using slotitem="6658;4"/>
+			<not>
+				<using slotitem="6658;5"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6658;5"/>
+			<not>
+				<using slotitem="6658;4"/>
+			</not>
+		</and>
+	</or>
+</add>
+<add val='10.5' order='0x40' stat='maxMp'>
+		<and>
+			<using slotitem="6658;4"/>
+			<using slotitem="6658;5"/>
+		</and>
+</add>
+<mul val='1.8' order='0x50' stat='poisonRes'>
+	<or>
+		<and>
+			<using slotitem="6658;4"/>
+			<not>
+				<using slotitem="6658;5"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6658;5"/>
+			<not>
+				<using slotitem="6658;4"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.342' order='0x50' stat='poisonRes'>
+		<and>
+			<using slotitem="6658;4"/>
+			<using slotitem="6658;5"/>
+		</and>
+</mul>
+<add val='6' order='0x40' stat='accCombat'>
+	<or>
+		<and>
+			<using slotitem="6658;4"/>
+			<not>
+				<using slotitem="6658;5"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6658;5"/>
+			<not>
+				<using slotitem="6658;4"/>
+			</not>
+		</and>
+	</or>
+</add>
+<add val='3' order='0x40' stat='accCombat'>
+		<and>
+			<using slotitem="6658;4"/>
+			<using slotitem="6658;5"/>
+		</and>
+</add>
+<add val='85' order='0x40' stat='cAtk'>
+	<or>
+		<and>
+			<using slotitem="6658;4"/>
+			<not>
+				<using slotitem="6658;5"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6658;5"/>
+			<not>
+				<using slotitem="6658;4"/>
+			</not>
+		</and>
+	</or>
+</add>
+<add val='42.5' order='0x40' stat='cAtk'>
+		<and>
+			<using slotitem="6658;4"/>
+			<using slotitem="6658;5"/>
+		</and>
+</add>
+<mul val='1.6' order='0x50' stat='rootRes'>
+	<or>
+		<and>
+			<using slotitem="6658;4"/>
+			<not>
+				<using slotitem="6658;5"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6658;5"/>
+			<not>
+				<using slotitem="6658;4"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.26495' order='0x50' stat='rootRes'>
+		<and>
+			<using slotitem="6658;4"/>
+			<using slotitem="6658;5"/>
+		</and>
+</mul>
+<mul val='1.1' order='0x50' stat='pAtkSpd'>
+	<or>
+		<and>
+			<using slotitem="6658;4"/>
+			<not>
+				<using slotitem="6658;5"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6658;5"/>
+			<not>
+				<using slotitem="6658;4"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.0489' order='0x50' stat='pAtkSpd'>
+		<and>
+			<using slotitem="6658;4"/>
+			<using slotitem="6658;5"/>
+		</and>
+</mul>
+<mul val='1.1' order='0x50' stat='mAtkSpd'>
+	<or>
+		<and>
+			<using slotitem="6658;4"/>
+			<not>
+				<using slotitem="6658;5"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6658;5"/>
+			<not>
+				<using slotitem="6658;4"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.0489' order='0x50' stat='mAtkSpd'>
+		<and>
+			<using slotitem="6658;4"/>
+			<using slotitem="6658;5"/>
+		</and>
+</mul>
+<enchant val='0' order='0x0C' stat='mDef' />
   </for>
 </item>
 <item id='6659' name="Zaken's Earring">
   <for>
-    <add val='71' order='0x10' stat='mDef' />
-    <add val='31' order='0x10' stat='maxMp' />
-	<mul val='1.6' order='0x50' stat='bleedRes' /> 
-	<mul val='1.1' order='0x50' stat='regHp' />
-	<add val='6' order='0x40' stat='absorbDam' /> 
-	<mul val='1.6' order='0x50' stat='stunRes' />
-	<mul val='1.6' order='0x50' stat='muteRes' />
-	<enchant val='0' order='0x0C' stat='mDef' />
+<add val='71' order='0x40' stat='mDef' />
+<add val='31' order='0x40' stat='maxMp'>
+	<or>
+		<and>
+			<using slotitem="6659;1"/>
+			<not>
+				<using slotitem="6659;2"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6659;2"/>
+			<not>
+				<using slotitem="6659;1"/>
+			</not>
+		</and>
+	</or>
+</add>
+<add val='15.5' order='0x40' stat='maxMp'>
+		<and>
+			<using slotitem="6659;1"/>
+			<using slotitem="6659;2"/>
+		</and>
+</add>
+<mul val='1.6' order='0x50' stat='bleedRes'>
+	<or>
+		<and>
+			<using slotitem="6659;1"/>
+			<not>
+				<using slotitem="6659;2"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6659;2"/>
+			<not>
+				<using slotitem="6659;1"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.26495' order='0x50' stat='bleedRes'>
+		<and>
+			<using slotitem="6659;1"/>
+			<using slotitem="6659;2"/>
+		</and>
+</mul>
+<mul val='1.1' order='0x50' stat='regHp'>
+	<or>
+		<and>
+			<using slotitem="6659;1"/>
+			<not>
+				<using slotitem="6659;2"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6659;2"/>
+			<not>
+				<using slotitem="6659;1"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.0489' order='0x50' stat='regHp'>
+		<and>
+			<using slotitem="6659;1"/>
+			<using slotitem="6659;2"/>
+		</and>
+</mul>
+<add val='6' order='0x40' stat='absorbDam'>
+	<or>
+		<and>
+			<using slotitem="6659;1"/>
+			<not>
+				<using slotitem="6659;2"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6659;2"/>
+			<not>
+				<using slotitem="6659;1"/>
+			</not>
+		</and>
+	</or>
+</add>
+<add val='3' order='0x40' stat='absorbDam'>
+		<and>
+			<using slotitem="6659;1"/>
+			<using slotitem="6659;2"/>
+		</and>
+</add>
+<mul val='1.6' order='0x50' stat='stunRes'>
+	<or>
+		<and>
+			<using slotitem="6659;1"/>
+			<not>
+				<using slotitem="6659;2"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6659;2"/>
+			<not>
+				<using slotitem="6659;1"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.26495' order='0x50' stat='stunRes'>
+		<and>
+			<using slotitem="6659;1"/>
+			<using slotitem="6659;2"/>
+		</and>
+</mul>
+<mul val='1.6' order='0x50' stat='muteRes'>
+	<or>
+		<and>
+			<using slotitem="6659;1"/>
+			<not>
+				<using slotitem="6659;2"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6659;2"/>
+			<not>
+				<using slotitem="6659;1"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.26495' order='0x50' stat='muteRes'>
+		<and>
+			<using slotitem="6659;1"/>
+			<using slotitem="6659;2"/>
+		</and>
+</mul>
+<enchant val='0' order='0x0C' stat='mDef' />
   </for>
 </item>
 <item id='6660' name="Ring of Queen Ant">
   <for>
-    <add val='48' order='0x10' stat='mDef' />
-    <add val='21' order='0x10' stat='maxMp' />
-	<mul val='1.6' order='0x50' stat='poisonRes' /> 
-	<add val='4' order='0x40' stat='accCombat' />
-	<add val='70' order='0x40' stat='cAtk' />	
-	<mul val='1.4' order='0x50' stat='rootRes' />
-	<enchant val='0' order='0x0C' stat='mDef' />
+    <add val='48' order='0x40' stat='mDef' />
+<add val='21' order='0x40' stat='maxMp'>
+	<or>
+		<and>
+			<using slotitem="6660;4"/>
+			<not>
+				<using slotitem="6660;5"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6660;5"/>
+			<not>
+				<using slotitem="6660;4"/>
+			</not>
+		</and>
+	</or>
+</add>
+<add val='10.5' order='0x40' stat='maxMp'>
+		<and>
+			<using slotitem="6660;4"/>
+			<using slotitem="6660;5"/>
+		</and>
+</add>
+<mul val='1.6' order='0x50' stat='poisonRes'>
+	<or>
+		<and>
+			<using slotitem="6660;4"/>
+			<not>
+				<using slotitem="6660;5"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6660;5"/>
+			<not>
+				<using slotitem="6660;4"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.26495' order='0x50' stat='poisonRes'>
+       <and>
+          <using slotitem="6660;4"/>
+          <using slotitem="6660;5"/>
+       </and>
+</mul>
+<add val='4' order='0x40' stat='accCombat'>
+	<or>
+		<and>
+			<using slotitem="6660;4"/>
+			<not>
+				<using slotitem="6660;5"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6660;5"/>
+			<not>
+				<using slotitem="6660;4"/>
+			</not>
+		</and>
+	</or>
+</add>
+<add val='2' order='0x40' stat='accCombat'>
+       <and>
+          <using slotitem="6660;4"/>
+          <using slotitem="6660;5"/>
+       </and>
+</add>
+<add val='70' order='0x40' stat='cAtk'>
+	<or>
+		<and>
+			<using slotitem="6660;4"/>
+			<not>
+				<using slotitem="6660;5"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6660;5"/>
+			<not>
+				<using slotitem="6660;4"/>
+			</not>
+		</and>
+	</or>
+</add>
+<add val='35' order='0x40' stat='cAtk'>
+       <and>
+          <using slotitem="6660;4"/>
+          <using slotitem="6660;5"/>
+       </and>
+</add>
+<mul val='1.4' order='0x50' stat='rootRes'>
+	<or>
+		<and>
+			<using slotitem="6660;4"/>
+			<not>
+				<using slotitem="6660;5"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6660;5"/>
+			<not>
+				<using slotitem="6660;4"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.1835' order='0x50' stat='rootRes'>
+       <and>
+          <using slotitem="6660;4"/>
+          <using slotitem="6660;5"/>
+       </and>
+</mul>
+     <enchant val='0' order='0x0C' stat='mDef' />
   </for>
 </item>
 <item id='6661' name="Earring of Orfen">
   <for>
-    <add val='71' order='0x10' stat='mDef' />
-    <add val='31' order='0x10' stat='maxMp' />
-    <mul val='1.4' order='0x50' stat='bleedRes' />
-    <mul val='1.1' order='0x50' stat='regHp' />
+<add val='71' order='0x40' stat='mDef' />
+<add val='31' order='0x40' stat='maxMp'>
+	<or>
+		<and>
+			<using slotitem="6661;1"/>
+			<not>
+				<using slotitem="6661;2"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6661;2"/>
+			<not>
+				<using slotitem="6661;1"/>
+			</not>
+		</and>
+	</or>
+</add>
+<add val='15.5' order='0x40' stat='maxMp'>
+       <and>
+          <using slotitem="6661;1"/>
+          <using slotitem="6661;2"/>
+       </and>
+</add>
+<mul val='1.4' order='0x50' stat='bleedRes'>
+	<or>
+		<and>
+			<using slotitem="6661;1"/>
+			<not>
+				<using slotitem="6661;2"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6661;2"/>
+			<not>
+				<using slotitem="6661;1"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.1835' order='0x50' stat='bleedRes'>
+       <and>
+          <using slotitem="6661;1"/>
+          <using slotitem="6661;2"/>
+       </and>
+</mul>
+<mul val='1.1' order='0x50' stat='regHp'>
+	<or>
+		<and>
+			<using slotitem="6661;1"/>
+			<not>
+				<using slotitem="6661;2"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6661;2"/>
+			<not>
+				<using slotitem="6661;1"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.0489' order='0x50' stat='regHp'>
+       <and>
+          <using slotitem="6661;1"/>
+          <using slotitem="6661;2"/>
+       </and>
+</mul>
     <enchant val='0' order='0x0C' stat='mDef' />
   </for>
 </item>
 <item id='6662' name="Ring of Core">
   <for>
-    <add val='48' order='0x10' stat='mDef' />
-    <add val='21' order='0x10' stat='maxMp' />
-    <mul val='1.4' order='0x50' stat='poisonRes' />
-    <add val='3' order='0x40' stat='accCombat' />
-    <enchant val='0' order='0x0C' stat='mDef' />
+    <add val='48' order='0x40' stat='mDef' />
+<add val='21' order='0x40' stat='maxMp'>
+	<or>
+		<and>
+			<using slotitem="6662;4"/>
+			<not>
+				<using slotitem="6662;5"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6662;5"/>
+			<not>
+				<using slotitem="6662;4"/>
+			</not>
+		</and>
+	</or>
+</add>
+<add val='10.5' order='0x40' stat='maxMp'>
+       <and>
+          <using slotitem="6662;4"/>
+          <using slotitem="6662;5"/>
+       </and>
+</add>
+<mul val='1.4' order='0x50' stat='poisonRes'>
+	<or>
+		<and>
+			<using slotitem="6662;4"/>
+			<not>
+				<using slotitem="6662;5"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6662;5"/>
+			<not>
+				<using slotitem="6662;4"/>
+			</not>
+		</and>
+	</or>
+</mul>
+<mul val='1.1835' order='0x50' stat='poisonRes'>
+       <and>
+          <using slotitem="6662;4"/>
+          <using slotitem="6662;5"/>
+       </and>
+</mul>
+<add val='3' order='0x40' stat='accCombat'>
+	<or>
+		<and>
+			<using slotitem="6662;4"/>
+			<not>
+				<using slotitem="6662;5"/>
+			</not>
+		</and>
+		<and>
+			<using slotitem="6662;5"/>
+			<not>
+				<using slotitem="6662;4"/>
+			</not>
+		</and>
+	</or>
+</add>
+<add val='1.5' order='0x40' stat='accCombat'>
+       <and>
+          <using slotitem="6662;4"/>
+          <using slotitem="6662;5"/>
+       </and>
+</add>
+<enchant val='0' order='0x0C' stat='mDef' />
   </for>
 </item>
 <item id='6674' name="Sealed Imperial Crusader Breastplate">
   <for>
-    <add val='193' order='0x10' stat='pDef' />
+    <add val='193' order='0x40' stat='pDef' />
   </for>
 </item>
 <item id='6675' name="Sealed Imperial Crusader Gaiters">
   <for>
-    <add val='121' order='0x10' stat='pDef' />
+    <add val='121' order='0x40' stat='pDef' />
   </for>
 </item>
 <item id='6676' name="Sealed Imperial Crusader Gauntlet">
   <for>
-    <add val='55' order='0x10' stat='pDef' />
+    <add val='55' order='0x40' stat='pDef' />
   </for>
 </item>
 <item id='6677' name="Sealed Imperial Crusader Boots">
   <for>
-    <add val='55' order='0x10' stat='pDef' />
+    <add val='55' order='0x40' stat='pDef' />
   </for>
 </item>
 <item id='6679' name="Sealed Imperial Crusader Helmet">
   <for>
-    <add val='83' order='0x10' stat='pDef' />
+    <add val='83' order='0x40' stat='pDef' />
   </for>
 </item>
 <item id='6680' name="Sealed Draconic Leather Armor">
   <for>
-    <add val='236' order='0x10' stat='pDef' />
+    <add val='236' order='0x40' stat='pDef' />
   </for>
 </item>
 <item id='6681' name="Sealed Draconic Leather Glove">
   <for>
-    <add val='55' order='0x10' stat='pDef' />
+    <add val='55' order='0x40' stat='pDef' />
   </for>
 </item>
 <item id='6682' name="Sealed Draconic Leather Boots">
   <for>
-    <add val='55' order='0x10' stat='pDef' />
+    <add val='55' order='0x40' stat='pDef' />
   </for>
 </item>
 <item id='6683' name="Sealed Draconic Leather Helmet">
   <for>
-    <add val='83' order='0x10' stat='pDef' />
+    <add val='83' order='0x40' stat='pDef' />
   </for>
 </item>
 <item id='6684' name="Sealed Major Arcana Robe">
   <for>
-    <add val='157' order='0x10' stat='pDef' />
+    <add val='157' order='0x40' stat='pDef' />
   </for>
 </item>
 <item id='6685' name="Sealed Major Arcana Glove">
   <for>
-    <add val='55' order='0x10' stat='pDef' />
+    <add val='55' order='0x40' stat='pDef' />
   </for>
 </item>
 <item id='6686' name="Sealed Major Arcana Boots">
   <for>
-    <add val='55' order='0x10' stat='pDef' />
+    <add val='55' order='0x40' stat='pDef' />
   </for>
 </item>
 <item id='6687' name="Sealed Major Arcana Circlet">
   <for>
-    <add val='83' order='0x10' stat='pDef' />
+    <add val='83' order='0x40' stat='pDef' />
   </for>
 </item>
 <item id='6724' name="Sealed Tateossian Earring">
   <for>
-    <add val='68' order='0x10' stat='mDef' />
+    <add val='68' order='0x40' stat='mDef' />
   <enchant val='0' order='0x0C' stat='mDef' />
 </for>
 </item>
 <item id='6725' name="Sealed Tateossian Ring">
   <for>
-    <add val='46' order='0x10' stat='mDef' />
+    <add val='46' order='0x40' stat='mDef' />
   <enchant val='0' order='0x0C' stat='mDef' />
 </for>
 </item>
 <item id='6726' name="Sealed Tateossian Necklace">
   <for>
-    <add val='91' order='0x10' stat='mDef' />
+    <add val='91' order='0x40' stat='mDef' />
   <enchant val='0' order='0x0C' stat='mDef' />
 </for>
 </item>
