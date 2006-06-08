@@ -349,7 +349,7 @@
   <set name="castRange" val="600"/>
   <for>
     <effect name="Buff" time="60" count="1" val="0">
-      <sub order="0x10" stat="aggression" val="#aggr"/>
+      <sub order="0x40" stat="aggression" val="#aggr"/>
     </effect>
   </for>
 </skill>
@@ -369,7 +369,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
-    <add order="0x10" stat="rCrit" val="45">
+    <add order="0x40" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>
@@ -1469,7 +1469,7 @@
   <set name="castRange" val="-1"/>
   <for>
   <effect count="1" name="Buff" time="60" val="0">
-    <mul order="0x40" stat="pAtk" val="#pAtk"/>
+    <mul order="0x50" stat="pAtk" val="#pAtk"/>
   </effect>
   </for>
 </skill>

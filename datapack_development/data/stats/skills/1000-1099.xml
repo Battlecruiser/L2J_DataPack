@@ -567,7 +567,7 @@
   <set name="castRange" val="400"/>
   <for>
      <effect count="1" name="Buff" time="1200" val="0">
-      <add stat="poisonRes" val="#res" order="0x50"/>
+      <add stat="poisonRes" val="#res" order="0x40"/>
      </effect>
   </for>
 </skill>
@@ -833,7 +833,7 @@
   <set name="castRange" val="-1"/>
   <for>
   <effect count="1" name="Buff" time="1200" val="0">
-    <mul order="0x40" stat="regMp" val="#Tab-regMp"/>
+    <mul order="0x50" stat="regMp" val="#Tab-regMp"/>
   </effect>
   </for>
 </skill>
@@ -1261,7 +1261,7 @@
   <set name="castRange" val="900"/>
  <for>
  <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
-   <sub order="0x50" stat="waterRes" val="#Tab-waterRes">
+   <sub order="0x40" stat="waterRes" val="#Tab-waterRes">
    </sub>
  </effect>
  </for>
@@ -1327,7 +1327,7 @@
   <set name="castRange" val="900"/>
 <for>
    <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
-      <sub order="0x50" stat="windRes" val="#Tab-windRes">
+      <sub order="0x40" stat="windRes" val="#Tab-windRes">
       </sub>
    </effect>
 </for>
@@ -1487,7 +1487,7 @@
   <set name="castRange" val="900"/>
   <for>
    <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
-      <sub order="0x50" stat="fireRes" val="#Tab-fireRes"/>
+      <sub order="0x40" stat="fireRes" val="#Tab-fireRes"/>
    </effect>
   </for>
 </skill>
@@ -1718,7 +1718,7 @@
   <set name="castRange" val="-1"/>
 <for>
    <effect count="1" name="Buff" time="120" val="0">
-      <sub order="0x01" stat="accCombat" val="#Acc" />
+      <sub order="0x40" stat="accCombat" val="#Acc" />
    </effect>
 </for>
 </skill>
