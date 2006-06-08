@@ -1420,7 +1420,7 @@
   <set name="castRange" val="400"/>
   <for>
    <effect count="1" name="Buff" time="1200" val="0">
-    <mul stat="waterRes" val="#res" order="0x05"/>
+    <mul stat="waterRes" val="#res" order="0x50"/>
    </effect>
   </for>
 </skill>
@@ -1547,7 +1547,7 @@
   <set name="castRange" val="400"/>
   <for>
   <effect count="1" name="Buff" time="1200" val="0">
-   <mul stat="windRes" val="#res" order="0x05"/>
+   <mul stat="windRes" val="#res" order="0x50"/>
   </effect>
   </for>
 </skill>

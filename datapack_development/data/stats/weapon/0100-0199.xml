@@ -5,7 +5,7 @@
     <set val='25' order='0x08' stat='pAtk' />
     <set val='28' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -16,7 +16,7 @@
     <set val='32' order='0x08' stat='pAtk' />
     <set val='35' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -24,7 +24,7 @@
 </item>
 <item id='102' name="round_shield">
   <for>
-    <sub val='8' order='0x10' stat='rEvas' />
+    <sub val='8' order='0x40' stat='rEvas' />
     <set val='79' order='0x08' stat='sDef' />
     <set val='20' order='0x08' stat='rShld' />
     <enchant val='0' order='0x0C' stat='pDef' />
@@ -32,7 +32,7 @@
 </item>
 <item id='103' name="tower_shield">
   <for>
-    <sub val='8' order='0x10' stat='rEvas' />
+    <sub val='8' order='0x40' stat='rEvas' />
     <set val='190' order='0x08' stat='sDef' />
     <set val='20' order='0x08' stat='rShld' />
     <enchant val='0' order='0x0C' stat='pDef' />
@@ -40,7 +40,7 @@
 </item>
 <item id='104' name="shield_of_victory">
   <for>
-    <sub val='8' order='0x10' stat='rEvas' />
+    <sub val='8' order='0x40' stat='rEvas' />
     <set val='216' order='0x08' stat='sDef' />
     <set val='20' order='0x08' stat='rShld' />
     <enchant val='0' order='0x0C' stat='pDef' />
@@ -48,7 +48,7 @@
 </item>
 <item id='105' name="implosion_shield">
   <for>
-    <sub val='8' order='0x10' stat='rEvas' />
+    <sub val='8' order='0x40' stat='rEvas' />
     <set val='216' order='0x08' stat='sDef' />
     <set val='20' order='0x08' stat='rShld' />
     <enchant val='0' order='0x0C' stat='pDef' />
@@ -56,7 +56,7 @@
 </item>
 <item id='106' name="dark_dragon_shield">
   <for>
-    <sub val='8' order='0x10' stat='rEvas' />
+    <sub val='8' order='0x40' stat='rEvas' />
     <set val='230' order='0x08' stat='sDef' />
     <set val='20' order='0x08' stat='rShld' />
     <enchant val='0' order='0x0C' stat='pDef' />
@@ -64,7 +64,7 @@
 </item>
 <item id='107' name="composite_shield">
   <for>
-    <sub val='8' order='0x10' stat='rEvas' />
+    <sub val='8' order='0x40' stat='rEvas' />
     <set val='190' order='0x08' stat='sDef' />
     <set val='20' order='0x08' stat='rShld' />
     <enchant val='0' order='0x0C' stat='pDef' />
@@ -72,7 +72,7 @@
 </item>
 <item id='108' name="masterpiece_shield">
   <for>
-    <sub val='8' order='0x10' stat='rEvas' />
+    <sub val='8' order='0x40' stat='rEvas' />
     <set val='230' order='0x08' stat='sDef' />
     <set val='20' order='0x08' stat='rShld' />
     <enchant val='0' order='0x0C' stat='pDef' />
@@ -80,7 +80,7 @@
 </item>
 <item id='109' name="shield_of_solar_eclipse">
   <for>
-    <sub val='8' order='0x10' stat='rEvas' />
+    <sub val='8' order='0x40' stat='rEvas' />
     <set val='216' order='0x08' stat='sDef' />
     <set val='20' order='0x08' stat='rShld' />
     <enchant val='0' order='0x0C' stat='pDef' />
@@ -88,7 +88,7 @@
 </item>
 <item id='110' name="doom_shield">
   <for>
-    <sub val='8' order='0x10' stat='rEvas' />
+    <sub val='8' order='0x40' stat='rEvas' />
     <set val='230' order='0x08' stat='sDef' />
     <set val='20' order='0x08' stat='rShld' />
     <enchant val='0' order='0x0C' stat='pDef' />
@@ -96,7 +96,7 @@
 </item>
 <item id='111' name="shield_of_pledge">
   <for>
-    <sub val='8' order='0x10' stat='rEvas' />
+    <sub val='8' order='0x40' stat='rEvas' />
     <set val='216' order='0x08' stat='sDef' />
     <set val='20' order='0x08' stat='rShld' />
     <enchant val='0' order='0x0C' stat='pDef' />
@@ -107,7 +107,7 @@
     <set val='24' order='0x08' stat='pAtk' />
     <set val='17' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -118,7 +118,7 @@
     <set val='24' order='0x08' stat='pAtk' />
     <set val='17' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -129,7 +129,7 @@
     <set val='17' order='0x08' stat='pAtk' />
     <set val='12' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -140,7 +140,7 @@
     <set val='40' order='0x08' stat='pAtk' />
     <set val='26' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -151,7 +151,7 @@
     <set val='78' order='0x08' stat='pAtk' />
     <set val='39' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -162,7 +162,7 @@
     <set val='51' order='0x08' stat='pAtk' />
     <set val='32' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -173,7 +173,7 @@
     <set val='51' order='0x08' stat='pAtk' />
     <set val='32' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -184,7 +184,7 @@
     <set val='64' order='0x08' stat='pAtk' />
     <set val='39' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -195,7 +195,7 @@
     <set val='51' order='0x08' stat='pAtk' />
     <set val='32' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -206,7 +206,7 @@
     <set val='79' order='0x08' stat='pAtk' />
     <set val='47' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -217,7 +217,7 @@
     <set val='64' order='0x08' stat='pAtk' />
     <set val='39' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -228,7 +228,7 @@
     <set val='122' order='0x08' stat='pAtk' />
     <set val='68' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -239,7 +239,7 @@
     <set val='139' order='0x08' stat='pAtk' />
     <set val='76' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -250,7 +250,7 @@
     <set val='122' order='0x08' stat='pAtk' />
     <set val='68' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -261,7 +261,7 @@
     <set val='139' order='0x08' stat='pAtk' />
     <set val='76' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -272,7 +272,7 @@
     <set val='156' order='0x08' stat='pAtk' />
     <set val='83' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -283,7 +283,7 @@
     <set val='175' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -294,7 +294,7 @@
     <set val='175' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -305,7 +305,7 @@
     <set val='175' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -316,7 +316,7 @@
     <set val='175' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -327,7 +327,7 @@
     <set val='175' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -338,7 +338,7 @@
     <set val='175' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -349,7 +349,7 @@
     <set val='175' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -360,7 +360,7 @@
     <set val='43' order='0x08' stat='pAtk' />
     <set val='45' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -371,7 +371,7 @@
     <set val='43' order='0x08' stat='pAtk' />
     <set val='45' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -382,7 +382,7 @@
     <set val='111' order='0x08' stat='pAtk' />
     <set val='101' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -393,7 +393,7 @@
     <set val='140' order='0x08' stat='pAtk' />
     <set val='122' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -404,7 +404,7 @@
     <set val='170' order='0x08' stat='pAtk' />
     <set val='143' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -415,7 +415,7 @@
     <set val='140' order='0x08' stat='pAtk' />
     <set val='122' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -426,7 +426,7 @@
     <set val='170' order='0x08' stat='pAtk' />
     <set val='143' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -437,7 +437,7 @@
     <set val='170' order='0x08' stat='pAtk' />
     <set val='143' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -448,7 +448,7 @@
     <set val='186' order='0x08' stat='pAtk' />
     <set val='152' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x10' stat='accCombat' />
+    <add val='0' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -459,7 +459,7 @@
     <set val='10' order='0x08' stat='pAtk' />
     <set val='8' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -470,7 +470,7 @@
     <set val='12' order='0x08' stat='pAtk' />
     <set val='9' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -481,7 +481,7 @@
     <set val='17' order='0x08' stat='pAtk' />
     <set val='12' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -492,7 +492,7 @@
     <set val='31' order='0x08' stat='pAtk' />
     <set val='21' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -503,7 +503,7 @@
     <set val='40' order='0x08' stat='pAtk' />
     <set val='26' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -514,7 +514,7 @@
     <set val='64' order='0x08' stat='pAtk' />
     <set val='39' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -525,7 +525,7 @@
     <set val='79' order='0x08' stat='pAtk' />
     <set val='47' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -536,7 +536,7 @@
     <set val='92' order='0x08' stat='pAtk' />
     <set val='54' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -547,7 +547,7 @@
     <set val='107' order='0x08' stat='pAtk' />
     <set val='61' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -558,7 +558,7 @@
     <set val='107' order='0x08' stat='pAtk' />
     <set val='61' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -569,7 +569,7 @@
     <set val='139' order='0x08' stat='pAtk' />
     <set val='76' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -580,7 +580,7 @@
     <set val='175' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -591,7 +591,7 @@
     <set val='232' order='0x08' stat='pAtk' />
     <set val='114' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -602,7 +602,7 @@
     <set val='251' order='0x08' stat='pAtk' />
     <set val='121' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -613,7 +613,7 @@
     <set val='40' order='0x08' stat='pAtk' />
     <set val='26' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -624,7 +624,7 @@
     <set val='40' order='0x08' stat='pAtk' />
     <set val='26' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -635,7 +635,7 @@
     <set val='40' order='0x08' stat='pAtk' />
     <set val='26' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -646,7 +646,7 @@
     <set val='79' order='0x08' stat='pAtk' />
     <set val='47' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -657,7 +657,7 @@
     <set val='258' order='0x08' stat='pAtk' />
     <set val='86' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -668,7 +668,7 @@
     <set val='194' order='0x08' stat='pAtk' />
     <set val='99' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -679,7 +679,7 @@
     <set val='79' order='0x08' stat='pAtk' />
     <set val='47' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -690,7 +690,7 @@
     <set val='107' order='0x08' stat='pAtk' />
     <set val='61' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -701,7 +701,7 @@
     <set val='111' order='0x08' stat='pAtk' />
     <set val='101' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -712,7 +712,7 @@
     <set val='194' order='0x08' stat='pAtk' />
     <set val='99' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -723,7 +723,7 @@
     <set val='23' order='0x08' stat='pAtk' />
     <set val='22' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -734,7 +734,7 @@
     <set val='30' order='0x08' stat='pAtk' />
     <set val='28' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -745,7 +745,7 @@
     <set val='39' order='0x08' stat='pAtk' />
     <set val='35' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -756,7 +756,7 @@
     <set val='41' order='0x08' stat='pAtk' />
     <set val='43' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -767,7 +767,7 @@
     <set val='41' order='0x08' stat='pAtk' />
     <set val='43' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -778,7 +778,7 @@
     <set val='41' order='0x08' stat='pAtk' />
     <set val='43' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -789,7 +789,7 @@
     <set val='41' order='0x08' stat='pAtk' />
     <set val='43' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -800,7 +800,7 @@
     <set val='50' order='0x08' stat='pAtk' />
     <set val='43' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -811,7 +811,7 @@
     <set val='50' order='0x08' stat='pAtk' />
     <set val='43' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -822,7 +822,7 @@
     <set val='50' order='0x08' stat='pAtk' />
     <set val='43' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -833,7 +833,7 @@
     <set val='62' order='0x08' stat='pAtk' />
     <set val='52' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -844,7 +844,7 @@
     <set val='90' order='0x08' stat='pAtk' />
     <set val='72' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -855,7 +855,7 @@
     <set val='90' order='0x08' stat='pAtk' />
     <set val='72' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -866,7 +866,7 @@
     <set val='74' order='0x08' stat='pAtk' />
     <set val='72' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -877,7 +877,7 @@
     <set val='90' order='0x08' stat='pAtk' />
     <set val='72' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -888,7 +888,7 @@
     <set val='103' order='0x08' stat='pAtk' />
     <set val='81' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -899,7 +899,7 @@
     <set val='103' order='0x08' stat='pAtk' />
     <set val='81' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -910,7 +910,7 @@
     <set val='85' order='0x08' stat='pAtk' />
     <set val='81' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -921,7 +921,7 @@
     <set val='103' order='0x08' stat='pAtk' />
     <set val='81' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -932,7 +932,7 @@
     <set val='119' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -943,7 +943,7 @@
     <set val='111' order='0x08' stat='pAtk' />
     <set val='101' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -954,7 +954,7 @@
     <set val='135' order='0x08' stat='pAtk' />
     <set val='101' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -965,7 +965,7 @@
     <set val='135' order='0x08' stat='pAtk' />
     <set val='101' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -976,7 +976,7 @@
     <set val='135' order='0x08' stat='pAtk' />
     <set val='101' order='0x08' stat='mAtk' />
     <set val='4' order='0x08' stat='rCrit' />
-    <add val='4' order='0x10' stat='accCombat' />
+    <add val='4' order='0x40' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
