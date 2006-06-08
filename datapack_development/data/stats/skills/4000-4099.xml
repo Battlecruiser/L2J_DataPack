@@ -225,7 +225,7 @@
   <set name="displayId" val="1206"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <div order="0x50" stat="runSpd" val="1.3"/>
+      <div order="0x40" stat="runSpd" val="1.3"/>
     </effect>
   </for>
 </skill>
@@ -271,7 +271,7 @@
     <add stat="sleepRes" val="1000" order="0x40"/>
     <add stat="confusionRes" val="1000" order="0x40"/>
     <mul stat="fireRes" val="0.5" order="0x50"/>
-    <add stat="bowWpnRes" val="80" order="0x50"/>
+    <add stat="bowWpnRes" val="80" order="0x40"/>
   </for>
 </skill>
 <skill id="4022" levels="1" name="Body Of Nurse Ant">
@@ -768,7 +768,7 @@
   <set name="castRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
-      <sub order="0x50" stat="pAtk" val="#Tab-pAtk"/>
+      <sub order="0x40" stat="pAtk" val="#Tab-pAtk"/>
     </effect>
   </for>
 </skill>
@@ -784,7 +784,7 @@
   <set name="castRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
-      <sub order="0x50" stat="pDef" val="#Tab-pDef"/>
+      <sub order="0x40" stat="pDef" val="#Tab-pDef"/>
     </effect>
   </for>
 </skill>

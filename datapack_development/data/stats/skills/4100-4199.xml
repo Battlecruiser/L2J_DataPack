@@ -51,7 +51,7 @@
   <set name="displayId" val="1083"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
-      <sub order="0x50" stat="fireRes" val="#Tab-fireRes"/>
+      <sub order="0x40" stat="fireRes" val="#Tab-fireRes"/>
     </effect>
   </for>
 </skill>
@@ -1042,7 +1042,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
-    <add order="0x10" stat="rCrit" val="45">
+    <add order="0x40" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>
@@ -1240,7 +1240,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
-    <add order="0x10" stat="rCrit" val="45">
+    <add order="0x40" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>
