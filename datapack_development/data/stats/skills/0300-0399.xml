@@ -224,7 +224,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume">
-      <add order="0x40" stat="cAtk" val="#crit"/>
+      <add order="0x10" stat="cAtk" val="#crit"/>
       <mul order="0x50" stat="cAtk" val="#critMult"/>
     </effect>
   </for>
@@ -317,7 +317,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="7">
-      <add order="0x40" stat="accCombat" val="15"/>
+      <add order="0x10" stat="accCombat" val="15"/>
     </effect>
   </for>
 </skill>
@@ -413,7 +413,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume">
-      <mul stat="rShld" val="#ShieldDefRate" order="0x50"/>
+      <mul stat="rShld" val="#ShieldDefRate" order="0x01"/>
     </effect>
   </for>
 </skill>

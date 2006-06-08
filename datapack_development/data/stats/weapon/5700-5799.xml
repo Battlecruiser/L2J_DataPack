@@ -5,7 +5,7 @@
     <set val='259' order='0x08' stat='pAtk' />
     <set val='107' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <mul val='1.08' order='0x50' stat='pAtkSpd'>
 <and>
@@ -21,7 +21,7 @@
     <set val='275' order='0x08' stat='pAtk' />
     <set val='112' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <mul val='1.25' order='0x50' stat='maxHp'>
 <and>
@@ -52,7 +52,7 @@
     <set val='78' order='0x08' stat='pAtk' />
     <set val='39' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -63,7 +63,7 @@
     <set val='78' order='0x08' stat='pAtk' />
     <set val='39' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -74,7 +74,7 @@
     <set val='156' order='0x08' stat='pAtk' />
     <set val='83' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -85,7 +85,7 @@
     <set val='156' order='0x08' stat='pAtk' />
     <set val='83' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -96,7 +96,7 @@
     <set val='78' order='0x08' stat='pAtk' />
     <set val='39' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -107,7 +107,7 @@
     <set val='78' order='0x08' stat='pAtk' />
     <set val='39' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -118,7 +118,7 @@
     <set val='156' order='0x08' stat='pAtk' />
     <set val='83' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -129,7 +129,7 @@
     <set val='156' order='0x08' stat='pAtk' />
     <set val='83' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
@@ -137,7 +137,7 @@
 </item>
 <item id='5799' name="nephilim_lord">
   <for>
-    <sub val='8' order='0x40' stat='rEvas' />
+    <sub val='8' order='0x10' stat='rEvas' />
     <set val='142' order='0x08' stat='sDef' />
     <set val='20' order='0x08' stat='rShld' />
     <enchant val='0' order='0x0C' stat='pDef' />

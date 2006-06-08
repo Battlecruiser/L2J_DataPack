@@ -983,14 +983,14 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x40" stat="pAtkSpd" val="#rate"/>
-    <mul order="0x40" stat="mAtkSpd" val="#rate"/>
-    <mul order="0x40" stat="rEvas" val="#rate"/>
-    <mul order="0x40" stat="rExp" val="#rate"/>
-    <mul order="0x40" stat="runSpd" val="#rate"/>
-    <mul order="0x40" stat="regHp" val="#rate"/>
-    <mul order="0x40" stat="regCp" val="#rate"/>
-    <mul order="0x40" stat="regMp" val="#rate"/>
+    <mul order="0x10" stat="pAtkSpd" val="#rate"/>
+    <mul order="0x10" stat="mAtkSpd" val="#rate"/>
+    <mul order="0x10" stat="rEvas" val="#rate"/>
+    <mul order="0x10" stat="rExp" val="#rate"/>
+    <mul order="0x10" stat="runSpd" val="#rate"/>
+    <mul order="0x10" stat="regHp" val="#rate"/>
+    <mul order="0x10" stat="regCp" val="#rate"/>
+    <mul order="0x10" stat="regMp" val="#rate"/>
   </for>
 </skill>
 <skill id="4268" levels="1" name="Danger Area">
@@ -1028,9 +1028,9 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x40" stat="regHp" val="#rate"/>
-    <mul order="0x40" stat="regMp" val="#rate"/>
-    <mul order="0x40" stat="runSpd" val="#rateSpd"/>
+    <mul order="0x10" stat="regHp" val="#rate"/>
+    <mul order="0x10" stat="regMp" val="#rate"/>
+    <mul order="0x10" stat="runSpd" val="#rateSpd"/>
   </for>
 </skill>
 <skill id="4271" levels="7" name="Increase Force">

@@ -414,7 +414,7 @@
   <set name="castRange" val="900"/>
  <for>
  <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
-   <sub order="0x40" stat="earthRes" val="#Tab-earthRes"/>
+   <sub order="0x50" stat="earthRes" val="#Tab-earthRes"/>
  </effect>
  </for>
 </skill>
@@ -627,7 +627,7 @@
   <set name="castRange" val="400"/>
   <for>
   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#power" stackType="DmgShield">
-    <add order="0x40" stat="reflectDam" val="#power"/>
+    <add order="0x50" stat="reflectDam" val="#power"/>
   </effect>
   </for>
 </skill>
@@ -759,7 +759,7 @@
   <set name="castRange" val="400"/>
   <for>
   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#power" stackType="DmgShield">
-    <add order="0x40" stat="reflectDam" val="#power"/>
+    <add order="0x50" stat="reflectDam" val="#power"/>
   </effect>
   </for>
 </skill>
@@ -804,7 +804,7 @@
   <set name="castRange" val="400"/>
   <for>
     <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-accCombat" stackType="accuracyUp">
-      <add order='0x40' stat='accCombat' val="#Tab-accCombat"/>
+      <add order='0x50' stat='accCombat' val="#Tab-accCombat"/>
     </effect>
   </for>
 </skill>
@@ -990,7 +990,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-accCombat" stackType="accuracyUp">
-      <add order="0x40" stat="accCombat" val="#Tab-accCombat"/>
+      <add order="0x50" stat="accCombat" val="#Tab-accCombat"/>
     </effect>
   </for>
 </skill>
@@ -1258,7 +1258,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="1" val="#mpConsume">
-      <add order="0x40" stat="transDam" val="#power"/>
+      <add order="0x50" stat="transDam" val="#power"/>
     </effect>
   </for>
 </skill>
@@ -1726,7 +1726,7 @@
   <set name="castRange" val="-1"/>
 <for>
    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#power" stackType="DmgShield">
-      <add order="0x40" stat="reflectDam" val="#power"/>
+      <add order="0x50" stat="reflectDam" val="#power"/>
    </effect>
 </for>
 </skill>
@@ -1834,7 +1834,7 @@
 
   <for>
 	<effect count="1" name="Buff" time="120" val="0">
-		<div order="0x40" stat="runSpd" val="1.6">
+		<div order="0x50" stat="runSpd" val="1.6">
 		</div>
 	</effect>
   </for>
@@ -1970,7 +1970,7 @@
   <table name="#Tab-regMp"> 1.1 1.3 1.5 1.7 1.9 2.0 </table>
 
   <for>
-   <mul order='0x50' stat='regMp' val="#Tab-regMp">
+   <mul order='0x40' stat='regMp' val="#Tab-regMp">
    <player resting="true"/>
    <player walking="true"/>
    </mul>
@@ -2014,7 +2014,7 @@
     <effect count="1" name="Buff" time="30" val="0">
       <add order="0x40" stat="pDef" val="#pDef"/>
       <add order="0x40" stat="mDef" val="#mDef"/>
-      <set order="0x08" stat="runSpd" val="0"/>
+      <set order="0xF0" stat="runSpd" val="0"/>
     </effect>
   </for>
 </skill> 
