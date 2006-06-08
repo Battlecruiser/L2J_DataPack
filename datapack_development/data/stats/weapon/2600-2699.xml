@@ -20,7 +20,7 @@
     <set val='204' order='0x08' stat='pAtk' />
     <set val='89' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <add val='146' order='0x40' stat='cAtk'>
 <and>
@@ -36,7 +36,7 @@
     <set val='204' order='0x08' stat='pAtk' />
     <set val='89' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <mul val='1.25' order='0x50' stat='maxHp'>
 <and>
@@ -52,7 +52,7 @@
     <set val='204' order='0x08' stat='pAtk' />
     <set val='89' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <add val='65' order='0x40' stat='rCrit'>
 <and>
@@ -68,7 +68,7 @@
     <set val='204' order='0x08' stat='pAtk' />
     <set val='89' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <mul val='1.06' order='0x50' stat='pAtkSpd'>
 <and>
@@ -84,7 +84,7 @@
     <set val='220' order='0x08' stat='pAtk' />
     <set val='94' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <add val='43' order='0x40' stat='rCrit'>
 <and>
@@ -100,7 +100,7 @@
     <set val='213' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <add val='127' order='0x40' stat='cAtk'>
 <and>
@@ -116,7 +116,7 @@
     <set val='213' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <mul val='1.25' order='0x50' stat='maxHp'>
 <and>
@@ -132,7 +132,7 @@
     <set val='213' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <add val='54' order='0x40' stat='rCrit'>
 <and>
@@ -148,7 +148,7 @@
     <set val='213' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <mul val='1.05' order='0x50' stat='pAtkSpd'>
 <and>
@@ -179,7 +179,7 @@
     <set val='228' order='0x08' stat='pAtk' />
     <set val='97' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <mul val='1.05' order='0x50' stat='pAtkSpd'>
 <and>
@@ -195,7 +195,7 @@
     <set val='213' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <add val='127' order='0x40' stat='cAtk'>
 <and>
@@ -211,7 +211,7 @@
     <set val='213' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <mul val='1.25' order='0x50' stat='maxHp'>
 <and>
@@ -227,7 +227,7 @@
     <set val='213' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <add val='54' order='0x40' stat='rCrit'>
 <and>
@@ -243,7 +243,7 @@
     <set val='213' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <mul val='1.05' order='0x50' stat='pAtkSpd'>
 <and>
@@ -289,7 +289,7 @@
     <set val='213' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <add val='127' order='0x40' stat='cAtk'>
 <and>
@@ -305,7 +305,7 @@
     <set val='213' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <mul val='1.25' order='0x50' stat='maxHp'>
 <and>
@@ -321,7 +321,7 @@
     <set val='228' order='0x08' stat='pAtk' />
     <set val='97' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <add val='133' order='0x40' stat='cAtk'>
 <and>
@@ -337,7 +337,7 @@
     <set val='213' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <add val='54' order='0x40' stat='rCrit'>
 <and>
@@ -353,7 +353,7 @@
     <set val='213' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <mul val='1.05' order='0x50' stat='pAtkSpd'>
 <and>
@@ -369,7 +369,7 @@
     <set val='228' order='0x08' stat='pAtk' />
     <set val='97' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <mul val='1.25' order='0x50' stat='maxHp'>
 <and>
@@ -385,7 +385,7 @@
     <set val='213' order='0x08' stat='pAtk' />
     <set val='91' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <add val='54' order='0x40' stat='rCrit'>
 <and>
@@ -401,7 +401,7 @@
     <set val='228' order='0x08' stat='pAtk' />
     <set val='97' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <add val='52' order='0x40' stat='rCrit'>
 <and>
@@ -417,7 +417,7 @@
     <set val='236' order='0x08' stat='pAtk' />
     <set val='99' order='0x08' stat='mAtk' />
     <set val='8' order='0x08' stat='rCrit' />
-    <add val='0' order='0x40' stat='accCombat' />
+    <add val='0' order='0x10' stat='accCombat' />
     <set val='325' order='0x08' stat='pAtkSpd' />
 <mul val='1.04' order='0x50' stat='pAtkSpd'>
 <and>

@@ -286,7 +286,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add order="0x40" stat="pAtkRange" val="#dist">
+    <add order="0x10" stat="pAtkRange" val="#dist">
       <using kind="Bow"/>
     </add>
   </for>
@@ -681,9 +681,9 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add stat="rootRes" val="20" order="0x40"/>
-  	<add stat="sleepRes" val="20" order="0x40"/>
-	<add stat="poisonRes" val="20" order="0x40"/>
+    <add stat="rootRes" val="20" order="0x05"/>
+  	<add stat="sleepRes" val="20" order="0x05"/>
+	<add stat="poisonRes" val="20" order="0x05"/>
   </for>
 </skill>
 <skill id="135" levels="2" name="Heroism">
@@ -712,7 +712,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x50" stat="rCrit" val="#rate"/>
+    <mul order="0x10" stat="rCrit" val="#rate"/>
   </for>
 </skill>
 <skill id="138" levels="4" name="Melee Evasion">
@@ -763,7 +763,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x50" stat="pAtk" val="1.08635"/>
+    <mul order="0x35" stat="pAtk" val="1.08635"/>
     <add order="0x40" stat="pAtk" val="#pAtk"/>
   </for>
 </skill>
@@ -838,7 +838,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add order="0x40" stat="mDef" val="#mDef"/>
+    <add order="0x10" stat="mDef" val="#mDef"/>
   </for>
 </skill>
 <skill id="147" levels="51" name="Magic Resistance">
@@ -892,7 +892,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <set order="0x08" stat="maxLoad" val="#rate"/>
+    <set order="0x40" stat="maxLoad" val="#rate"/>
   </for>
 </skill>
 <skill id="151" levels="1" name="Mithril Weapon Mastery">
@@ -1032,7 +1032,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x50" stat="mReuse" val="#reuse"/>
+    <mul order="0x20" stat="mReuse" val="#reuse"/>
   </for>
 </skill>
 <skill id="165" levels="5" name="Trade">
@@ -1347,7 +1347,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x50" stat="cAtk" val="#crit"/>
+    <mul order="0x10" stat="cAtk" val="#crit"/>
   </for>
 </skill>
 <skill id="194" levels="1" name="Lucky">
@@ -1375,7 +1375,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-     <add stat="breath" val="#breath" order="0x40"/>
+     <add stat="breath" val="#breath" order="0x01"/>
   </for>
 
 </skill>
