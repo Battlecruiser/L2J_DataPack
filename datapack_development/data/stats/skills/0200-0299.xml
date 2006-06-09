@@ -280,7 +280,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="SilentMove" time="5" val="7">
-	  <mul order="0x10" stat="runSpd" val="0.6"/>
+	  <mul order="0x50" stat="runSpd" val="0.6"/>
     </effect>
   </for>
 </skill>
@@ -295,7 +295,7 @@
   <set name="castRange" val="-1"/>
   <for>
    <effect count="0x7fffffff" name="DamOverTime" time="3" val="#HP">
-      <mul order="0x10" stat="pAtkSpd" val="#pAtkSpd"/>
+      <mul order="0x50" stat="pAtkSpd" val="#pAtkSpd"/>
     </effect>
   </for>
 </skill>
@@ -359,7 +359,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add order="0x50" stat="rEvas" val="#gain">
+    <add order="0x40" stat="rEvas" val="#gain">
       <player running="true"/>
     </add>
   </for>
@@ -373,7 +373,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="Relax" time="2" val="2">
-      <add order="0x10" stat="regHp" val="5"/>
+      <add order="0x40" stat="regHp" val="5"/>
     </effect>
    </for>
 </skill>
@@ -434,7 +434,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x40" stat="regMp" val="#regMp"/>
+    <mul order="0x50" stat="regMp" val="#regMp"/>
   </for>
 </skill>
 <skill id="230" levels="2" name="Sprint">
@@ -780,8 +780,8 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x35" stat="pAtk" val="1.444"/>
-    <mul order="0x35" stat="mAtk" val="1.1692"/>
+    <mul order="0x50" stat="pAtk" val="1.444"/>
+    <mul order="0x50" stat="mAtk" val="1.1692"/>
     <add order="0x40" stat="pAtk" val="#pAtk"/>
     <add order="0x40" stat="mAtk" val="#mAtk"/>
   </for>
@@ -795,8 +795,8 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x35" stat="pAtk" val="1.444"/>
-    <mul order="0x35" stat="mAtk" val="1.1692"/>
+    <mul order="0x50" stat="pAtk" val="1.444"/>
+    <mul order="0x50" stat="mAtk" val="1.1692"/>
     <add order="0x40" stat="pAtk" val="#pAtk"/>
     <add order="0x40" stat="mAtk" val="#mAtk"/>
   </for>
@@ -953,7 +953,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume">
-      <add order="0x10" stat="accCombat" val="#acc"/>
+      <add order="0x40" stat="accCombat" val="#acc"/>
     </effect>
   </for>
 </skill>
@@ -1164,7 +1164,7 @@
  <set name="operateType" val="OP_ACTIVE"/>
  <set name="castRange" val="40"/>
  <for>
-   <add order="0x10" stat="rCrit" val="45">
+   <add order="0x40" stat="rCrit" val="45">
      <using kind="Dagger" skill="0263"/>
    </add>
  </for>
@@ -1747,7 +1747,7 @@
   <set name="castRange" val="-1"/>
    <for>
       <add order="0x40" stat="pAtk" val="#Attack" />
-      <add order="0x10" stat="accCombat" val="#Accuracy">
+      <add order="0x40" stat="accCombat" val="#Accuracy">
       </add>
    </for>
 </skill>
@@ -1759,7 +1759,7 @@
   <set name="castRange" val="-1"/>
   <for>
 	<cond><game time="night"/></cond>
-	<add stat="accCombat" val="10" order="0x01"/>
+	<add stat="accCombat" val="10" order="0x40"/>
   </for>
 </skill>
 <skill id="295" levels="1" name="Iron Body">
@@ -1788,7 +1788,7 @@
   <set name="castRange" val="-1"/>
  <for>
 	<effect count="0x7fffffff" name="Relax" time="1" val="1">
-		<add order="0x10" stat="regHp" val="5"/>
+		<add order="0x40" stat="regHp" val="5"/>
 	</effect>
 	<effect count="0x7fffffff" name="SilentMove" time="1" val="8"/>
  </for>
