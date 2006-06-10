@@ -768,7 +768,7 @@
   </for>
 </skill>
 <skill id="142" levels="5" name="Armor Mastery">
-  <table name="#pDef"> 22.5 27.5 30.0 32.5 35.0 </table>
+  <table name="#pDef"> 18 22 24 26 28 </table>
   <table name="#rEvas"> 0 0 0 3 3 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -826,11 +826,11 @@
 </skill>
 <skill id="146" levels="45" name="Anti Magic">
   <table name="#mDef">
-20 24 28 32 36 40 46 50 56 60
-68 72 80 84 86 92 94 98 104 108
-112 118 122 126 132 136 140 144 148 152
-156 160 164 168 172 176 180 184 188 192
-196 200 204 208 212
+30 36 42 48 54 60 69 75 84 90
+102 108 120 126 129 138 141 147 156 162
+168 177 183 189 198 204 210 216 222 228
+234 240 246 252 258 264 270 276 282 288
+294 300 306 312 318
   </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -848,9 +848,9 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <!-- Done by dc -->
-  <table name="#Tab-mDef"> 38 40 44 46 48 52 54 56 60 62 64 70 72 74 80 84
-86 88 92 94 98 102 104 108 112 114 118 122 126 128 132 136 140 144 148 152 156 160 164 168
-172 176 180 184 188 192 196 200 204 208 212
+  <table name="#Tab-mDef"> 57 60 66 69 72 78 81 84 90 93 96 105 108 111 120 126
+129 132 138 141 147 153 156 162 168 171 177 183 189 192 198 204 210 216 222 228 234 240 246 252
+258 264 270 276 282 288 294 300 306 312 318
   </table>
  <for>
      <add  order='0x40' stat='mDef' val="#Tab-mDef"/>
