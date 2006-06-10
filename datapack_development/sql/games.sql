@@ -1,8 +1,7 @@
 -- ---------------------------
 -- Table structure for games
 -- ---------------------------
-DROP TABLE IF EXISTS games;
-CREATE TABLE games (
+CREATE TABLE IF NOT EXISTS games (
   id INT NOT NULL default 0,
   idnr INT NOT NULL default 0,
   number1 INT NOT NULL default 0,
