@@ -47,6 +47,7 @@ class Quest (JQuest) :
  def onKill (self,npc,st):
      npcId = npc.getNpcId()
      random = st.getRandom(100)
+     CHANCE += npcId - 794
      if random<=CHANCE :
          st.giveItems(BLADE_STAKATO_FANG,1)
          st.playSound("ItemSound.quest_itemget")
@@ -64,7 +65,7 @@ STARTED.addTalkId(7926)
 
 STARTED.addQuestDrop(7926,BLADE_STAKATO_FANG,1)
 
-for i in range(794,797) :
+for i in range(794,798) :
     STARTED.addKillId(i)
 
 print "importing quests: 368: Trespassing Into The Sacred Area"
