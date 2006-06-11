@@ -56,7 +56,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    carn=st.getQuestItemsCount(CARNIVORE_SPORE)
    herb=st.getQuestItemsCount(HERBIBOROUS_SPORE)
-   if npcId == SPORE_ZOMBIE :
+   if npcId == SPORE_ZOMBIE and carn < 50 :
      st.giveItems(CARNIVORE_SPORE,1)
      if carn == 49 :
        if herb == 50 :
@@ -67,7 +67,7 @@ class Quest (JQuest) :
          st.set("cond","2")
      else :
        st.playSound("ItemSound.quest_itemget")	
-   elif npcId == ROTTING_TREE :
+   elif npcId == ROTTING_TREE and herb < 50 :
      st.giveItems(HERBIBOROUS_SPORE,1)
      if herb == 49 :
        if carn == 50 :
