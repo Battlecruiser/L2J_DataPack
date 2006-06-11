@@ -1,12 +1,23 @@
 # Made by disKret
 import sys
-from net.sf.l2j.gameserver.model.quest import State
-from net.sf.l2j.gameserver.model.quest import QuestState
+from net.sf.l2j.gameserver.model.quest        import State
+from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+htmlhead = "<html><head><body>"
+htmlfoot = "</body></html>"
+
+#NPCs
+WOODLEY = 7838
+IAN     = 7164
+LEIKAR  = 8520
+
+#ITEMS
 LEATHER = 1882
-THREAD = 1868
-ADENA = 57
+THREAD  = 1868
+ADENA   = 57
+
+#REWARDS
 DRESS_SHOES_BOX = 7113
 
 class Quest (JQuest) :
@@ -17,69 +28,92 @@ class Quest (JQuest) :
    htmltext = event
    if event == "7838-1.htm" :
      st.set("cond","1")
+     st.set("id","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   if event == "8520-1.htm" :
+   elif event == "8520-1.htm" :
      st.set("cond","2")
-   if event == "7838-3.htm" :
+     st.set("id","2")
+     st.playSound("ItemSound.quest_middle")
+   elif event == "7838-3.htm" :
      st.set("cond","3")
-   if event == "7838-5.htm" :
+     st.set("id","3")
+     st.playSound("ItemSound.quest_middle")
+   elif event == "7838-5.htm" :
      if st.getQuestItemsCount(LEATHER) >= 200 and st.getQuestItemsCount(THREAD) >= 600 and st.getQuestItemsCount(ADENA) >= 200000 :
        st.takeItems(LEATHER,200)
        st.takeItems(THREAD,600)
        st.takeItems(ADENA,200000)
        st.set("cond","4")
+       st.set("id","4")
+       st.playSound("ItemSound.quest_middle")
      else :
        htmltext = "You don't have enough materials"
-   if event == "7164-1.htm" :
+   elif event == "7164-1.htm" :
      if st.getQuestItemsCount(ADENA) >= 300000 :
        st.takeItems(ADENA,300000)
        st.set("cond","5")
+       st.set("id","5")
+       st.playSound("ItemSound.quest_middle")
      else :
        htmltext = "You don't have enough materials"
-   if event == "7838-7.htm" :
+   elif event == "7838-7.htm" :
      st.giveItems(DRESS_SHOES_BOX,1)
+     st.unset("cond")
+     st.setState(COMPLETED)
      st.playSound("ItemSound.quest_finish")
-     st.exitQuest(1)
    return htmltext
 
- def onTalk (Self,npc,st):
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+ def onTalk (self,npc,st):
+   htmltext = htmlhead + "I have nothing to say you" + htmlfoot
    npcId = npc.getNpcId()
-   id = st.getState()
+   id    = st.getState()
+   cond  = int(st.get("cond"))
+
    if id == CREATED :
-     st.set("cond","0")
-   cond = int(st.get("cond"))
-   if npcId == 7838 and cond == 0 and st.getQuestItemsCount(DRESS_SHOES_BOX) == 0 :
-     fwear=st.getPlayer().getQuestState("37_PleaseMakeMeFormalWear")
-     if fwear :
-       if fwear.get("cond") == "7" :
-         htmltext = "7838-0.htm"
-       else:
-         st.exitQuest(1)
-     else:
+     if st.getPlayer().getLevel() >= 60 :
+       if st.getQuestItemsCount(DRESS_SHOES_BOX) == 0 :
+         fwear = st.getPlayer().getQuestState("37_PleaseMakeMeFormalWear")
+         if not fwear is None :
+           if fwear.get("cond") == "7" :
+             htmltext = "7838-0.htm"
+             return htmltext
        st.exitQuest(1)
-   elif npcId == 8520 and cond == 1 :
+     else :
+       htmltext = "7838-8.htm"
+       st.exitQuest(1)
+   elif id == COMPLETED :
+     htmltext = htmlhead + "This quest has already been completed." + htmlfoot
+   elif npcId == LEIKAR and cond == 1 :
      htmltext = "8520-0.htm"
-   elif npcId == 7838 and cond == 2 :
+   elif npcId == WOODLEY and cond == 2 :
      htmltext = "7838-2.htm"
-   elif npcId == 7838 and cond == 3 :
+   elif npcId == WOODLEY and cond == 3 :
      htmltext = "7838-4.htm"
-   elif npcId == 7164 and cond == 4 :
+   elif npcId == IAN and cond == 4 :
      htmltext = "7164-0.htm"
-   elif npcId == 7838 and cond == 5 :
+   elif npcId == WOODLEY and cond == 5 :
      htmltext = "7838-6.htm"
    return htmltext
 
-QUEST       = Quest(33,"33_MakeAPairOfDressShoes","Make A Pair Of Dress Shoes")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
+qnum  = 33
+qdef  = str(qnum) + "_MakeAPairOfDressShoes"
+qname = "Make a pair of dress shoes"
+
+QUEST     = Quest(qnum,qdef,qname)
+CREATED   = State('Start',     QUEST)
+STARTED   = State('Started',   QUEST)
+COMPLETED = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7838)
-CREATED.addTalkId(7838)
-STARTED.addTalkId(7838)
-STARTED.addTalkId(7164)
-STARTED.addTalkId(8520)
+QUEST.addStartNpc(WOODLEY)
 
-print "importing quests: 33: Make A Pair Of Dress Shoes"
+CREATED.addTalkId(WOODLEY)
+
+STARTED.addTalkId(WOODLEY)
+STARTED.addTalkId(IAN)
+STARTED.addTalkId(LEIKAR)
+
+COMPLETED.addTalkId(WOODLEY)
+
+print "importing quests: " + str(qnum) + ": " + qname
