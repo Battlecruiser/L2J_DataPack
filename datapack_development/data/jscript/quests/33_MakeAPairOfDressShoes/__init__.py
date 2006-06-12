@@ -68,7 +68,7 @@ class Quest (JQuest) :
    htmltext = htmlhead + "I have nothing to say you" + htmlfoot
    npcId = npc.getNpcId()
    id    = st.getState()
-   cond  = int(st.get("cond"))
+   cond  = st.getInt("cond")
 
    if id == CREATED :
      if st.getPlayer().getLevel() >= 60 :
