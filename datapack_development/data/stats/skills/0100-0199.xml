@@ -826,11 +826,11 @@
 </skill>
 <skill id="146" levels="45" name="Anti Magic">
   <table name="#mDef">
-30 36 42 48 54 60 69 75 84 90
-102 108 120 126 129 138 141 147 156 162
-168 177 183 189 198 204 210 216 222 228
-234 240 246 252 258 264 270 276 282 288
-294 300 306 312 318
+   10  12  14  16  18 20 23 25 28 30
+   34  36  40  42  43 46 47 49 52 54
+   56  59  61  63  66 68 70 72 74 76
+   78  80  82  84  86 88 90 92 94 96
+   98 100 102 104 106
   </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -848,9 +848,9 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <!-- Done by dc -->
-  <table name="#Tab-mDef"> 57 60 66 69 72 78 81 84 90 93 96 105 108 111 120 126
-129 132 138 141 147 153 156 162 168 171 177 183 189 192 198 204 210 216 222 228 234 240 246 252
-258 264 270 276 282 288 294 300 306 312 318
+  <table name="#Tab-mDef"> 19 20 22 23 24 26 27 28 30 31 32 35 36 37 40 42
+  43 44 46 47 49 51 52 54 56 57 59 61 63 64 66 68 70 72 74 76 78 80 82 84
+  86 88 90 92 94 96 98 100 102 104 106
   </table>
  <for>
      <add  order='0x40' stat='mDef' val="#Tab-mDef"/>
@@ -1207,16 +1207,15 @@
 </skill>
 <skill id="181" levels="1" name="Revival">
   <set name="mpConsume" val="25"/>
-  <set name="power" val="1685"/>
+  <set name="power" val="6000"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="1000"/>
   <set name="condition" val="32"/>
   <set name="reuseDelay" val="10800000"/>
   <set name="skillTime" val="1000"/>
   <set name="skillType" val="HEAL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <cond><player hp="10"/></cond>
   <for>
   </for>
 </skill>
