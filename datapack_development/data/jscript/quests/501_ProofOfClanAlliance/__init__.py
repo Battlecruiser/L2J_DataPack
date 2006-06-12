@@ -46,8 +46,9 @@ def leader(st) :
 
 def members_finnish(st) :
     dead_ppl = 0
-    try : dead_ppl =  leader(st).get("dead_list").split()
-    finally :
+    if leader(st) :
+      try : dead_ppl =  leader(st).get("dead_list").split()
+      finally :
        if dead_ppl :
           for i in dead_ppl :
              try : st.getPlayer().getClan().getClanMember(i).getPlayerInstance().getQuestState(qn).exitQuest(1)
