@@ -120,7 +120,7 @@ STARTED.addTalkId(GALIBREDO)
 STARTED.addTalkId(PATRIN)
 
 #MOBS TIMAK ORC TROOPS
-for MOBS in range(767,771) :
+for MOBS in range(767,771)+range(583,589) :
   STARTED.addKillId(MOBS)
 
 STARTED.addQuestDrop(767,GALFREDOS_BUST,1)
