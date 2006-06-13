@@ -1,27 +1,13 @@
 # Made by disKret
 import sys
-from net.sf.l2j.gameserver.model.quest        import State
-from net.sf.l2j.gameserver.model.quest        import QuestState
+from net.sf.l2j.gameserver.model.quest import State
+from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-htmlhead = "<html><head><body>"
-htmlfoot = "</body></html>"
-
-#NPCs
-RADIA   = 7088
-RALFORD = 7165
-VARAN   = 7294
-
-#MOB
-TRISALIM_SPIDER = 560
-
-#ITEMS
-SPINNERET  = 7528
-SUEDE      = 1866
-THREAD     = 1868
+SPINNERET = 7528
+SUEDE = 1866
+THREAD = 1868
 SPIDERSILK = 1493
-
-#REWARD
 MYSTERIOUS_CLOTH = 7076
 
 class Quest (JQuest) :
@@ -32,73 +18,60 @@ class Quest (JQuest) :
    htmltext = event
    if event == "7088-1.htm" :
      st.set("cond","1")
-     st.set("id","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   elif event == "7294-1.htm" :
+   if event == "7294-1.htm" :
      st.set("cond","2")
-     st.set("id","2")
-     st.playSound("ItemSound.quest_middle")
-   elif event == "7088-3.htm" :
+   if event == "7088-3.htm" :
      st.set("cond","3")
-     st.set("id","3")
-     st.playSound("ItemSound.quest_middle")
-   elif event == "7165-1.htm" :
+   if event == "7165-1.htm" :
      st.set("cond","4")
-     st.set("id","4")
-     st.playSound("ItemSound.quest_middle")
-   elif event == "7165-3.htm" :
+   if event == "7165-3.htm" :
      if st.getQuestItemsCount(SPINNERET) == 10 :
        st.takeItems(SPINNERET,10)
        st.giveItems(SPIDERSILK,1)
        st.set("cond","6")
-       st.set("id","6")
-       st.playSound("ItemSound.quest_middle")
      else :
        htmltext = "You don't have enough materials"
-   elif event == "7088-5.htm" :
+   if event == "7088-5.htm" :
      if st.getQuestItemsCount(SUEDE) >= 3000 and st.getQuestItemsCount(THREAD) >= 5000 and st.getQuestItemsCount(SPIDERSILK) == 1 :
        st.takeItems(SUEDE,3000)
        st.takeItems(THREAD,5000)
        st.takeItems(SPIDERSILK,1)
        st.giveItems(MYSTERIOUS_CLOTH,1)
-       st.unset("cond")
-       st.setState(COMPLETED)
        st.playSound("ItemSound.quest_finish")
+       st.exitQuest(1)
      else :
        htmltext = "You don't have enough materials"
    return htmltext
 
- def onTalk (self,npc,st):
-   htmltext = htmlhead + "I have nothing to say you" + htmlfoot
+ def onTalk (Self,npc,st):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
    npcId = npc.getNpcId()
-   id    = st.getState()
-   cond  = st.getInt("cond")
-
+   id = st.getState()
    if id == CREATED :
-     if st.getPlayer().getLevel() >= 60 :
-       if st.getQuestItemsCount(MYSTERIOUS_CLOTH) == 0 :
-         fwear = st.getPlayer().getQuestState("37_PleaseMakeMeFormalWear")
-         if not fwear is None :
-           if fwear.get("cond") == "7" :
-             htmltext = "7088-0.htm"
-             return htmltext
-       st.exitQuest(1)
+     st.set("cond","0")
+   cond = int(st.get("cond"))
+   if npcId == 7088 and cond == 0 and st.getQuestItemsCount(MYSTERIOUS_CLOTH) == 0 :
+     fwear=st.getPlayer().getQuestState("37_PleaseMakeMeFormalWear")
+     if fwear :
+       if fwear.get("cond") == "6" :
+         htmltext = "7088-0.htm"
+       else :
+         st.exitQuest(1)
      else :
-       htmltext = "7088-6.htm"
        st.exitQuest(1)
-   elif id == COMPLETED :
-     htmltext = htmlhead + "This quest has already been completed." + htmlfoot
-   elif npcId == VARAN and cond == 1 :
+   elif npcId == 7294 and cond == 1 :
      htmltext = "7294-0.htm"
-   elif npcId == RADIA and cond == 2 :
+   elif npcId == 7088 and cond == 2 :
      htmltext = "7088-2.htm"
-   elif npcId == RALFORD and cond == 3 :
+   elif npcId == 7165 and cond == 3 :
      htmltext = "7165-0.htm"
-   elif npcId == RALFORD and cond == 5 :
+   elif npcId == 7165 and cond == 5 :
      htmltext = "7165-2.htm"
-   elif npcId == RADIA and cond == 6 :
+   elif npcId == 7088 and cond == 6 :
       htmltext = "7088-4.htm"
+   else : htmltext = "<html><head><body>I have nothing to say you</body></html>"
    return htmltext
 
  def onKill (self,npc,st):
@@ -106,35 +79,23 @@ class Quest (JQuest) :
    if count < 10 :
      st.giveItems(SPINNERET,1)
      if count == 9 :
-       st.set("cond","5")
-       st.set("id","5")
        st.playSound("ItemSound.quest_middle")
+       st.set("cond","5")
      else :
-       st.playSound("ItemSound.quest_itemget")
+       st.playSound("ItemSound.quest_itemget")	
    return
 
-qnum  = 34
-qdef  = str(qnum) + "_InSearchOfClothes"
-qname = "In Search of Cloth"
-
-QUEST     = Quest(qnum,qdef,qname)
-CREATED   = State('Start',     QUEST)
-STARTED   = State('Started',   QUEST)
-COMPLETED = State('Completed', QUEST)
+QUEST       = Quest(34,"34_InSearchOfClothes","In Search of Clothes")
+CREATED     = State('Start', QUEST)
+STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(RADIA)
+QUEST.addStartNpc(7088)
+CREATED.addTalkId(7088)
+STARTED.addTalkId(7088)
+STARTED.addTalkId(7165)
+STARTED.addTalkId(7294)
+STARTED.addKillId(560)
+STARTED.addQuestDrop(560,SPINNERET,1)
 
-CREATED.addTalkId(RADIA)
-
-STARTED.addTalkId(RADIA)
-STARTED.addTalkId(RALFORD)
-STARTED.addTalkId(VARAN)
-
-COMPLETED.addTalkId(RADIA)
-
-STARTED.addKillId(TRISALIM_SPIDER)
-
-STARTED.addQuestDrop(RADIA,SPINNERET,1)
-
-print "importing quests: " + str(qnum) + ": " + qname
+print "importing quests: 34: In Search of Clothes"

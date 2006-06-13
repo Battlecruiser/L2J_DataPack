@@ -1,11 +1,8 @@
 # Maked by Mr. Have fun! Version 0.2
 import sys
-from net.sf.l2j.gameserver.model.quest        import State
-from net.sf.l2j.gameserver.model.quest        import QuestState
+from net.sf.l2j.gameserver.model.quest import State
+from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
-htmlhead = "<html><head><body>"
-htmlfoot = "</body></html>"
 
 #NPC
 TALLOTH = 7141
@@ -39,86 +36,91 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_accept")
    return htmltext
 
- def onTalk (self,npc,st):
-   htmltext = htmlhead + "I have nothing to say you" + htmlfoot
+ def onTalk (Self,npc,st):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
    npcId = npc.getNpcId()
-   id    = st.getState()
-   cond  = st.getInt("cond")
+   id = st.getState()
 
    if id == CREATED :
-     if st.getPlayer().getRace().ordinal() != 2 :
-       htmltext = "7141-00.htm"
-       st.exitQuest(1)
-     elif st.getPlayer().getLevel() >= 16 :
-       htmltext = "7141-02.htm"
+     st.setState(STARTING)
+     st.set("cond","0")
+     st.set("onlyone","0")
+     st.set("id","0")
+
+   cond = st.getInt("cond")
+   onlyone = st.getInt("onlyone")
+
+   if npcId == TALLOTH and cond == 0 and onlyone == 0 :
+     if int(st.get("cond"))<15 :
+       if st.getPlayer().getRace().ordinal() != 2 :
+         htmltext = "7141-00.htm"
+         st.exitQuest(1)
+       elif st.getPlayer().getLevel() >= 16 :
+         htmltext = "7141-02.htm"
+       else:
+         htmltext = "7141-01.htm"
+         st.exitQuest(1)
      else:
        htmltext = "7141-01.htm"
        st.exitQuest(1)
-   elif id == COMPLETED :
-     htmltext = htmlhead + "This quest has already been completed." + htmlfoot
-   elif npcId == TALLOTH and cond == 1 :
+   elif npcId == TALLOTH and cond == 0 and onlyone == 1 :
+     htmltext = "<html><head><body>This quest have already been completed.</body></html>"
+   elif npcId == TALLOTH and cond == 1 and onlyone == 0 :
      htmltext = "7141-04.htm"
-   elif npcId == TALLOTH and cond == 2 :
+   elif npcId == TALLOTH and cond == 2 and onlyone == 0 :
      htmltext = "7141-06.htm"
      st.takeItems(ONYX_BEAST_EYE,-1)
      st.takeItems(TAINT_STONE,-1)
      st.takeItems(SUCCUBUS_BLOOD,-1)
      st.giveItems(ADENA,4900)
      st.addExpAndSp(5000,0)
-     st.unset("cond")
+     st.set("cond","0")
+     st.set("onlyone","1")
      st.setState(COMPLETED)
      st.playSound("ItemSound.quest_finish")
    return htmltext
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
-   cond  = st.getInt("cond")
-   count_OBE = st.getQuestItemsCount(ONYX_BEAST_EYE)
-   count_TS  = st.getQuestItemsCount(TAINT_STONE)
-   count_SB  = st.getQuestItemsCount(SUCCUBUS_BLOOD)
+   cond = st.getInt("cond")
 
    if cond == 1 :
-     if npcId == OMEN_BEAST and count_OBE == 0 :
+     if npcId == OMEN_BEAST and st.getQuestItemsCount(ONYX_BEAST_EYE) == 0 :
        st.giveItems(ONYX_BEAST_EYE,1)
        st.playSound("ItemSound.quest_itemget")
-     elif npcId == TAINTED_ZOMBIE and count_TS == 0 :
+     elif npcId == TAINTED_ZOMBIE and st.getQuestItemsCount(TAINT_STONE) == 0 :
        st.giveItems(TAINT_STONE,1)
        st.playSound("ItemSound.quest_itemget")
-     elif npcId == STINK_ZOMBIE and count_TS == 0 :
+     elif npcId == STINK_ZOMBIE and st.getQuestItemsCount(TAINT_STONE) == 0 :
        st.giveItems(TAINT_STONE,1)
        st.playSound("ItemSound.quest_itemget")
-     elif npcId == LESSER_SUCCUBUS and count_SB == 0 :
+     elif npcId == LESSER_SUCCUBUS and st.getQuestItemsCount(SUCCUBUS_BLOOD) == 0 :
        st.giveItems(SUCCUBUS_BLOOD,1)
        st.playSound("ItemSound.quest_itemget")
-     elif npcId == LESSER_SUCCUBUS_TUREN and count_SB == 0 :
+     elif npcId == LESSER_SUCCUBUS_TUREN and st.getQuestItemsCount(SUCCUBUS_BLOOD) == 0 :
        st.giveItems(SUCCUBUS_BLOOD,1)
        st.playSound("ItemSound.quest_itemget")
-     elif npcId == LESSER_SUCCUBUS_TILFO and count_SB == 0 :
+     elif npcId == LESSER_SUCCUBUS_TILFO and st.getQuestItemsCount(SUCCUBUS_BLOOD) == 0 :
        st.giveItems(SUCCUBUS_BLOOD,1)
        st.playSound("ItemSound.quest_itemget")
-     elif count_OBE >= 1 and count_TS >= 1 and count_SB >= 1 :
+     elif st.getQuestItemsCount(ONYX_BEAST_EYE) >= 1 and st.getQuestItemsCount(TAINT_STONE) >= 1 and st.getQuestItemsCount(SUCCUBUS_BLOOD) >= 1 :
        st.set("cond","2")
-       st.set("id","2")
+       st.set("id","2")       
        st.playSound("ItemSound.quest_middle")
    return
 
-qnum  = 3
-qdef  = str(qnum) + "_ReleaseDarkelfElder1"
-qname = "Will the Seal be Broken?"
-
-QUEST     = Quest(qnum,qdef,qname)
+QUEST     = Quest(3,"3_ReleaseDarkelfElder1","Will the Seal be Broken?")
 CREATED   = State('Start',     QUEST)
+STARTING  = State('Starting',  QUEST)
 STARTED   = State('Started',   QUEST)
 COMPLETED = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(TALLOTH)
 
-CREATED.addTalkId(TALLOTH)
+STARTING.addTalkId(TALLOTH)
 
 STARTED.addTalkId(TALLOTH)
-
-COMPLETED.addTalkId(TALLOTH)
 
 STARTED.addKillId(OMEN_BEAST)
 STARTED.addKillId(TAINTED_ZOMBIE)
@@ -127,7 +129,11 @@ STARTED.addKillId(LESSER_SUCCUBUS)
 STARTED.addKillId(LESSER_SUCCUBUS_TUREN)
 STARTED.addKillId(LESSER_SUCCUBUS_TILFO)
 
-for i in range(1081,1083) :
-   STARTED.addQuestDrop(TALLOTH,i,1)
+STARTED.addQuestDrop(TALLOTH,ONYX_BEAST_EYE,1)
+STARTED.addQuestDrop(TALLOTH,TAINT_STONE,1)
+STARTED.addQuestDrop(TALLOTH,TAINT_STONE,1)
+STARTED.addQuestDrop(TALLOTH,SUCCUBUS_BLOOD,1)
+STARTED.addQuestDrop(TALLOTH,SUCCUBUS_BLOOD,1)
+STARTED.addQuestDrop(TALLOTH,SUCCUBUS_BLOOD,1)
 
-print "importing quests: " + str(qnum) + ": " + qname
+print "importing quests: 3: Will the Seal be Broken?"
