@@ -21,6 +21,8 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
+   carn=st.getQuestItemsCount(CARNIVORE_SPORE)
+   herb=st.getQuestItemsCount(HERBIBOROUS_SPORE)
    if event == "7717-5.htm" :
      if st.getPlayer().getLevel() >= 43 :
        st.set("cond","1")
@@ -29,7 +31,7 @@ class Quest (JQuest) :
      else :
        htmltext = "7717-4.htm"
        st.exitQuest(1)
-   elif event in [ "7717-10.htm", "7717-9.htm" ] :
+   elif event in [ "7717-10.htm", "7717-9.htm" ] and carn==herb==50 :
      if event == "7717-9.htm" :
         st.giveItems(57,44000)
      else :
