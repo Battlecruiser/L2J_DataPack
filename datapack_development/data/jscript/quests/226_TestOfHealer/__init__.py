@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 print "importing quests: 226: Test Of Healer"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
