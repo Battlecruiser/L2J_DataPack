@@ -3300,7 +3300,7 @@ INSERT INTO `etcitem` (`item_id`, `name`, `crystallizable`, `item_type`, `weight
  (4436, 'Bentley''s Request', 'false', 'quest', 0, 'stackable', 'paper', 'none', 100, 0, 0, 'false', 'q_bentleys_request', 'none', '0'),
  (4437, 'Carson''s Request', 'false', 'quest', 0, 'stackable', 'paper', 'none', 100, 0, 0, 'true', 'q_carsons_request', 'none', '0'),
  (4438, 'Knuckle Duster Edge', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 28044, 0, 'true', 'knuckle_dust_edge', 'material', '2'),
- (4439, 'Avadon Shield Fragment', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 2900, 0, 'true', 'avadon_shield_fragment', 'material', '2'),
+ (4439, 'Avadon Shield Fragment', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 2900, 0, 'true', 'avadon_shield_fragment', 'material', '1'),
  (4440, 'Recipe: Knuckle Duster', 'false', 'recipe', 30, 'stackable', 'liquid', 'none', 0, 57400, 0, 'true', 'rp_knuckle_dust', 'recipe', '2'),
  (4441, 'Recipe: Avadon Shield', 'false', 'recipe', 30, 'stackable', 'liquid', 'none', 0, 10900, 0, 'true', 'rp_avadon_shield', 'recipe', '2'),
  (4442, 'Lottery Ticket', 'false', 'lotto', 20, 'normal', 'paper', 'none', 0, 0, 0, 'true', 'lottery_ticket', 'lotto', '2'),
