@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # Fixed by Artful (http://L2PLanet.ru Lineage2 C3 Server)
 
 print "importing quests: 212: Trial Of Duty"
@@ -200,6 +200,7 @@ class Quest (JQuest) :
       if int(st.get("cond")) == 6 :
         if st.getRandom(75)<2 :
            st.getPcSpawn().addSpawn(7656,44656,148431,-3703,300000)
+           return "Spirit Of Sir Talianus has spawned at X=44656 Y=148431 Z=-3703"
            st.playSound("ItemSound.quest_middle")
    elif npcId == 577 :
       if int(st.get("cond")) == 9 and st.getQuestItemsCount(MILITAS_ARTICLE_ID) < 20 :

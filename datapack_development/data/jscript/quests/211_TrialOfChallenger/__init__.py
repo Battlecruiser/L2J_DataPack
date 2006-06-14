@@ -170,6 +170,7 @@ class Quest (JQuest) :
            st.playSound("ItemSound.quest_middle")
            st.set("cond","6")
            st.getPcSpawn().addSpawn(7646,21291,184673,-3313)
+           return "Raldo has spawned at X=21291 Y=184673 Z=-3313"
    elif npcId == 5114 :
         if int(st.get("cond")) == 8 :
            st.set("cond","9")
@@ -177,6 +178,7 @@ class Quest (JQuest) :
            st.removeRadar(176560,-184969,-3729)
            st.getPcSpawn().removeAllSpawn()
            st.getPcSpawn().addSpawn(7646,176643,-185803,-3677)
+           return "Raldo has spawned at X=176643 Y=-185803 Z=-3677"
    return
 
 QUEST       = Quest(211,"211_TrialOfChallenger","Trial Of Challenger")

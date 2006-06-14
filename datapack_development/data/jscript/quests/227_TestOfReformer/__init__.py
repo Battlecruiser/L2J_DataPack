@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -175,6 +175,7 @@ class Quest (JQuest) :
       if st.getQuestItemsCount(RIPPED_DIARY) == 6 :
         st.set("cond","2")
         st.getPcSpawn().addSpawn(5128,53668,143283,-3863,300000)
+        return "Aruraune has spawned at X=53668 Y=143283 Z=-3863"
         st.takeItems(RIPPED_DIARY,st.getQuestItemsCount(RIPPED_DIARY))
       else:
         st.giveItems(RIPPED_DIARY,1)
