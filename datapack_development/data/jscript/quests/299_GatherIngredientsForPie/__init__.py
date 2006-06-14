@@ -28,23 +28,24 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
+   cond = st.getInt("cond")
    if event == "7620-1.htm" :
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   elif event == "7620-3.htm" :
+   elif event == "7620-3.htm" and st.getQuestItemsCount(HONEY_POUCH)==100:
      st.takeItems(HONEY_POUCH,100)
      st.set("cond","3")
-   elif event == "7063-1.htm" :
+   elif event == "7063-1.htm" and cond == 3:
      st.giveItems(AVELLAN_SPICE,1)
      st.set("cond","4")
-   elif event == "7620-5.htm" :
+   elif event == "7620-5.htm" and st.getQuestItemsCount(AVELLAN_SPICE):
      st.takeItems(AVELLAN_SPICE,1)
      st.set("cond","5")
-   elif event == "7466-1.htm" :
+   elif event == "7466-1.htm" and cond == 5:
      st.giveItems(FRUIT_BASKET,1)
      st.set("cond","6")
-   elif event == "7620-7.htm" :
+   elif event == "7620-7.htm" and st.getQuestItemsCount(FRUIT_BASKET):
      st.takeItems(FRUIT_BASKET,1)
      st.giveItems(ADENA,25000)
      st.giveItems(VARNISH,50)
