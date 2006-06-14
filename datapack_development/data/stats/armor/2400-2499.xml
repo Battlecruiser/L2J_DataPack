@@ -3,8 +3,8 @@
 <item id='2400' name="Tallum Tunic">
  <for>
   <add val='86' order='0x40' stat='pDef' />
-  <add val='409' order='0x40' stat='maxMp'>
-   <mul val='1.08' order='0x50' stat='mDef'>
+  <add val='409' order='0x40' stat='maxMp' />
+  <mul val='1.08' order='0x50' stat='mDef'>
     <and>
      <using slotitem="2405;11"/>
      <using slotitem="547;6"/>
@@ -12,7 +12,6 @@
      <using slotitem="5770;9"/>
     </and>
    </mul>
-  </add>
   <mul val='1.15' order='0x50' stat='mAtkSpd'>
    <and>
     <using slotitem="2405;11"/>
