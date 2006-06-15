@@ -322,7 +322,7 @@ class Quest (JQuest) :
 		elif st.getPlayer().getClan().getLevel() == 5:											# player has level 5 clan already
 			return "<html><head><body>This quest has already been completed.</body></html>"
 		elif id == COMPLETED:																	# player has proof, and has finished quest as leader
-			return "7760.htm>"
+			return "7760.htm"
 		else:
 			######## Leader Area ######
 			if isLeader:
