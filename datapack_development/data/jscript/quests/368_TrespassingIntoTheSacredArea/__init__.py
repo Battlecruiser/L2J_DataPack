@@ -6,7 +6,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 ADENA = 57
 BLADE_STAKATO_FANG = 5881
-CHANCE = 10
+CHANCE = 9
 
 class Quest (JQuest) :
 
@@ -47,8 +47,8 @@ class Quest (JQuest) :
  def onKill (self,npc,st):
      npcId = npc.getNpcId()
      random = st.getRandom(100)
-     CHANCE += npcId - 794
-     if random<=CHANCE :
+     chance = CHANCE + npcId - 794
+     if random<=chance :
          st.giveItems(BLADE_STAKATO_FANG,1)
          st.playSound("ItemSound.quest_itemget")
      return
