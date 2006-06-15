@@ -172,7 +172,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add stat="maxMp" order="0x40" val="#mp" />
+    <add stat="maxMp" order="0x40" val="#mp"/>
   </for>
 </skill>
 <skill id="214" levels="1" name="Mana Recovery">
@@ -336,7 +336,7 @@
   <set name="buffDuration" val="20000"/>
   <set name="castRange" val="40"/>
   <for>
-     <effect count="4" name="DamOverTime" time="5" val="#bleedpower" abnormal="bleeding"/>
+     <effect count="7" name="DamOverTime" time="3" val="#bleedpower" abnormal="bleeding"/>
   </for>
 </skill>
 <skill id="224" levels="1" name="See Invisibility">
