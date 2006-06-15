@@ -52,7 +52,7 @@ WHITE_FABRIC_0 = 4400  #talk to Hanellin to see what to do (for companions)
 WHITE_FABRIC_2 = 5232  #to use on Guardian Angels and Seal Angels
 
 ANTIDOTE = 1831
-GREATER_HEALING_POTION = 1539
+HEALING_POTION = 1061
 
 #ARK: [key, summon, no-key text, openning-with-key text, already-openned text, content item]
 ARKS={
@@ -158,11 +158,11 @@ class Quest (JQuest) :
             st.takeItems(BLOOD_OF_SAINT,-1)
             st.takeItems(BRANCH_OF_SAINT,-1)
             st.set("cond","22")
-        elif cond == 22 and st.getQuestItemsCount(ANTIDOTE)<5 and st.getQuestItemsCount(GREATER_HEALING_POTION)<1:
+        elif cond == 22 and st.getQuestItemsCount(ANTIDOTE)<5 and st.getQuestItemsCount(HEALING_POTION)<1:
             htmltext = "7864-06a.htm"     # where are my antidotes & greater healing
         elif cond == 22 :
             st.takeItems(ANTIDOTE,5)
-            st.takeItems(GREATER_HEALING_POTION,1)
+            st.takeItems(HEALING_POTION,1)
             if st.getInt("companions") == 0 :
                 st.set("cond","25")
                 htmltext = "7864-07.htm"    # go get platinum tribe blood...
