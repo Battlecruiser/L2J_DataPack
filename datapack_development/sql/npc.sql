@@ -4612,7 +4612,7 @@ INSERT INTO `npc` (`id`, `name`, `class`, `collision_radius`, `collision_height`
   (12049,'Partisan Soldier','Monster.ol_mahum',13.5,25,35,'male','L2Monster',40,1221,447,40,43,30,21,20,10,1471,87,211,186,86,137,257,0,257,2,0,0,50,110,'partisan_clan',300,0,0),
   (12050,'Partisan Sorcerer','Monster.batur_orc_shaman',11,16,35,'male','L2Monster',40,1221,447,40,43,30,21,20,10,1471,87,211,186,86,137,257,0,257,7,0,0,80,120,'partisan_clan',300,0,0),
   (12051,'Partisan Archer','Monster.ol_mahum_archer',14,25,35,'male','L2Monster',1100,1221,447,40,43,30,21,20,10,1471,87,211,186,86,137,231,0,231,14,0,0,50,110,'partisan_clan',300,0,0),
-  (12052,'Core','NPC.core',140,75,50,'male','L2Monster',40,162561,830,40,43,30,21,20,10,27500,1980,560,305,257,225,257,0,257,0,0,0,1,1,'cruma_core_clan',1800,0,0),
+  (12052,'Core','NPC.core',140,75,50,'male','L2Boss',40,162561,830,40,43,30,21,20,10,27500,1980,560,305,257,225,257,0,257,0,0,0,1,1,'cruma_core_clan',1800,0,0),
   (12053,'Teleport Cube','NPC.teleport_npc',30,65,70,'female','L2Teleporter',40,3862,1494,40,43,30,21,20,10,5879,590,1444,514,760,381,257,0,257,0,0,0,80,120,NULL,NULL,0,0),
   (12054,'Death Knight','Monster.death_knight',24,29,50,'male','L2Monster',40,2245,830,40,43,30,21,20,10,3000,226,560,305,257,225,257,1000,257,75,0,0,27,110,'cruma_core_clan',1500,1,0),
   (12055,'Death Wraith','Monster.death_blader',15,45,55,'male','L2Monster',40,2643,988,40,43,30,21,20,10,3631,293,736,352,351,260,257,1000,257,1472,0,0,100,230,'cruma_core_clan',1500,1,0),
