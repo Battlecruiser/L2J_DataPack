@@ -231,14 +231,14 @@ class Quest (JQuest) :
 				return htmltext
 # Events Kurtz
 		elif event == "7763-03.htm":
-			if int(st.get("Kurtz")) == 1:
+			if st.getInt("Kurtz") == 1:
 				htmltext = "7763-02.htm"
 				st.giveItems(Mi_Drake_Eggs,6)
 				st.giveItems(Brooch,1)
 				st.set("Kurtz","2")
 # Events Lutz
 		elif event == "7762-03.htm":
-			lutz = int(st.get("Lutz"))
+			lutz = st.getInt("Lutz")
 			if lutz == 1:
 				htmltext = "7762-02.htm"
 				st.giveItems(Mi_Drake_Eggs,4)
@@ -248,7 +248,7 @@ class Quest (JQuest) :
 			st.getPcSpawn().addSpawn(5178,112234,112705,-2770,120000)
 # Events Fritz
 		elif event == "7761-03.htm":
-			fritz = int(st.get("Fritz"))
+			fritz = st.getInt("Fritz")
 			if fritz == 1:
 				htmltext = "7761-02.htm"
 				st.giveItems(Bl_Wyrm_Eggs,3)
@@ -326,10 +326,10 @@ class Quest (JQuest) :
 		else:
 			######## Leader Area ######
 			if isLeader:
-				cond 	= int(st.get("cond"))
-				kurtz	= int(st.get("Kurtz"))
-				lutz	= int(st.get("Lutz"))
-				fritz	= int(st.get("Fritz"))
+				cond 	= st.getInt("cond")
+				kurtz	= st.getInt("Kurtz")
+				lutz	= st.getInt("Lutz")
+				fritz	= st.getInt("Fritz")
 				
 				if npcId == Gustaf :
 					if cond == 1:
@@ -422,10 +422,10 @@ class Quest (JQuest) :
 					elif cond in [11,12,13]:
 						htmltext = "7766-07.htm"
 				elif npcId == Coffer:
-					if int(st.get("cond")) == 10:
+					if st.getInt("cond") == 10:
 						if st.getQuestItemsCount(Imp_Keys) < 6:
 							htmltext = "7765-03a.htm"
-						elif int(st.get("ImpGraveKeeper")) == 3:
+						elif st.getInt("ImpGraveKeeper") == 3:
 							htmltext = "7765-02.htm"
 							st.set("cond","11")
 							st.takeItems(Imp_Keys,6)
