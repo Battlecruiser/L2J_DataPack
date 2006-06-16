@@ -4451,7 +4451,7 @@ INSERT INTO `npc` (`id`, `name`, `class`, `collision_radius`, `collision_height`
   (10388,'Red Eye Captain Trakia','Monster.oel_mahum_bi',30,55,35,'male','L2RaidBoss',40,35407,894,40,21,30,20,43,10,51485,3045,1477,1302,602,959,253,0,333,0,0,0,80,120,'Captain_Trakia_clan',1200,0,0),
   (10389,'Red Eye Archer','Monster.ol_mahum_archer',14,25,34,'male','L2Minion',500,3001,645,40,21,30,20,43,10,5552,324,392,358,158,264,253,0,333,272,0,0,80,120,'Captain_Trakia_clan',1200,0,0),
   (10390,'Red Eye Guards','Monster.ol_mahum_champion',14,27,34,'male','L2Minion',40,2253,645,40,21,30,20,43,10,5552,324,392,358,158,264,253,0,333,0,0,0,80,120,'Captain_Trakia_clan',1200,0,0),
-  (10391,'Nurka\'s Messenger','Monster.ol_mahum_champion_bi',21,40,5,33,'male','L2RaidBoss',40,65044,828,40,21,30,20,43,10,45745,2625,1267,1211,511,889,253,0,333,0,0,0,80,120,'Nurka',1200,0,0),
+  (10391,'Nurka\'s Messenger','Monster.ol_mahum_champion_bi',21,40.5,33,'male','L2RaidBoss',40,65044,828,40,21,30,20,43,10,45745,2625,1267,1211,511,889,253,0,333,0,0,0,80,120,'Nurka',1200,0,0),
   (10392,'Captain of Queen\'s Royal Guards','Monster.marsh_stakato_queen',15,37,32,'male','L2RaidBoss',40,31134,796,40,21,30,20,43,10,43015,2415,1176,1162,469,854,253,0,333,0,0,0,80,120,'Stakato_Royal_Guards_clan',1200,0,0),
   (10393,'Marsh Stakato Noble','Monster.marsh_stakato_drone',9,24,31,'male','L2Minion',40,3954,573,40,21,30,20,43,10,4616,256,312,320,122,236,253,0,333,0,0,0,80,120,'Stakato_Royal_Guards_clan',1200,0,0),
   (10394,'Premo Prime','Monster.twin_headed_giant',17,39,38,'male','L2RaidBoss',40,80010,994,40,21,30,20,43,10,60655,3780,1820,1358,763,1064,253,0,333,157,0,0,80,120,'null',1200,0,0),
