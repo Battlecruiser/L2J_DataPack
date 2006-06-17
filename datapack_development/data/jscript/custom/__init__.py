@@ -3,7 +3,8 @@ __all__ = [
 '3995_echo',
 '5000_crystal',
 '5005_scroll',
-'12535_WakeBaium'
+'12535_WakeBaium',
+'7000_HeroItems'
 ]
 print ""
 print "importing custom data ..."
