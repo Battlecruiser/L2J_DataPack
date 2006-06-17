@@ -167,3 +167,27 @@ insert into zone values (1, 'No Landing', 'ToI', 109448, 10233, 118547, 21446, 0
 
 insert into zone values (1, 'Jail', 'GM Jail', -115600, -250700, -113500, -248200, 0, 0);
 insert into zone values (1, 'Monster Derby Track', 'Monster Derby Track', 11600, 181200, 14600, 184500, -3565, 0);
+
+insert into zone values
+(1, "Olympiad Stadia", "Stadia 1",-19627, -19712, -22024, -22322, -3026, 0),
+(2, "Olympiad Stadia", "Stadia 2",-119100, -223705, -121484, -226316, -3331, 0),
+(3, "Olympiad Stadia", "Stadia 3",-103690, -210300, -101325, -207724, -3331, 0),
+(4, "Olympiad Stadia", "Stadia 4",-119079, -206078, -121438, -208668, -3331, 0),
+(5, "Olympiad Stadia", "Stadia 5",-88700, -226280, -86351, -223722, -3331, 0),
+(6, "Olympiad Stadia", "Stadia 6",-80586, -211911, -82939, -214487, -3331, 0),
+(7, "Olympiad Stadia", "Stadia 7",-88659, -208652, -86297, -206075, -3331, 0),
+(8, "Olympiad Stadia", "Stadia 8",-95000, -219531, -92632, -216950, -3331, 0),
+(9, "Olympiad Stadia", "Stadia 9",-75936, -217408, -78306, -220017, -3331, 0),
+(10, "Olympiad Stadia", "Stadia 10",-68560, -207718, -70933, -210312, -3331, 0),
+(11, "Olympiad Stadia", "Stadia 11",-78008, -202528, -75663, -199943, -3331, 0),
+(12, "Olympiad Stadia", "Stadia 12",-108690, -217403, -111072, -220023, -3331, 0),
+(13, "Olympiad Stadia", "Stadia 13",-127766, -219555, -125394, -216946, -3331, 0),
+(14, "Olympiad Stadia", "Stadia 14",-108428, -199935, -110796, -202541, -3331, 0),
+(15, "Olympiad Stadia", "Stadia 15",-88677, -241444, -86294, -238836, -3331, 0),
+(16, "Olympiad Stadia", "Stadia 16",-82938, -247261, -80580, -244668, -3331, 0),
+(17, "Olympiad Stadia", "Stadia 17",-75930, -250175, -78298, -252779, -3331, 0),
+(18, "Olympiad Stadia", "Stadia 18",-70920, -243079, -68547, -240473, -3331, 0),
+(19, "Olympiad Stadia", "Stadia 19",-75670, -232712, -78027, -235326, -3331, 0),
+(20, "Olympiad Stadia", "Stadia 20",-92632, -249706, -94999, -252316, -3331, 0),
+(21, "Olympiad Stadia", "Stadia 21",-87816, -254280, -86332, -256466, -3331, 0),
+(22, "Olympiad Stadia", "Stadia 22",-113332, -211881, -115713, -214513, -3331, 0);
