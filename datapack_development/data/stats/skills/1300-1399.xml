@@ -428,18 +428,23 @@
 <skill id="1333" levels="10" name="Summon Nightshade">
   <table name="#mpConsume"> 70 78 87 94 103 107 110 115 119 123 </table>
   <table name="#itemConsumeCount"> 1 1 2 2 3 2 3 4 3 4 </table>
+  <table name="#itemConsumeCountOT"> 1 1 1 1 1 2 2 2 3 3 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="1459"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
+  <set name="itemConsumeIdOT" val="1459"/>
+  <set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
+  <set name="itemConsumeTime" val="240000" />
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="6000"/>
-  <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="reuseDelay" val="20000"/>
   <set name="skillTime" val="15000"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <!-- Summon-specific -->
   <table name="#npcIds"> 13165 13166 13167 13168 13169 13170 13171 13172 13173 13174 13175 13176 13177 13178 </table>
   <set name="npcId" val="#npcIds" />
   <set name="expPenalty" val="0.05" />
