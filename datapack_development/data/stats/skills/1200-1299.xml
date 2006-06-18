@@ -440,27 +440,27 @@
   </for>
 </skill>
 <skill id="1225" levels="18" name="Summon Mew the Cat">
-<table name="#mpConsume"> 39 44 53 60 70 78 87 94 103 107 110 115 119 123 127 130 133 137 </table>
-<table name="#reuseDelay"> 21600000 21600000 21600000 21600000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 </table>
-<set name="mpConsume" val="#mpConsume"/>
-<set name="itemConsumeId" val="1458"/>
-<set name="itemConsumeCount" val="1"/>
-<set name="power" val="0.0"/>
-<set name="target" val="TARGET_SELF"/>
-<set name="hitTime" val="6000"/>
-<set name="reuseDelay" val="#reuseDelay"/>
-<set name="skillTime" val="15000"/>
-<set name="skillType" val="SUMMON"/>
-<set name="isMagic" val="true"/>
-<set name="operateType" val="OP_ACTIVE"/>
-<set name="castRange" val="-1"/>
-<!-- Summon-specific -->
-<table name="#npcIds"> 12061 12062 12063 12177 12348 12349 12350 12351 12352 12420 12421 12422 12423 12424 12425 12426 12427 12428 </table>
-<set name="npcId" val="#npcIds" />
-<set name="expPenalty" val="0.9" />
-<set name="isCubic" val="false" />
-<for>
-</for>
+  <table name="#mpConsume"> 39 44 53 60 70 78 87 94 103 107 110 115 119 123 127 130 133 137 </table>
+  <table name="#reuseDelay"> 21600000 21600000 21600000 21600000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="itemConsumeId" val="1458"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="6000"/>
+  <set name="reuseDelay" val="#reuseDelay"/>
+  <set name="skillTime" val="15000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <!-- Summon-specific -->
+  <table name="#npcIds"> 12061 12062 12063 12177 12348 12349 12350 12351 12352 12420 12421 12422 12423 12424 12425 12426 12427 12428 </table>
+  <set name="npcId" val="#npcIds" />
+  <set name="expPenalty" val="0.9" />
+  <set name="isCubic" val="false" />
+  <for>
+  </for>
 </skill>
 <skill id="1226" levels="18" name="Summon Unicorn Boxer">
   <table name="#mpConsume"> 39 44 53 60 70 78 87 94 103 107 110 115 119 123 127 130 133 137 </table>
@@ -1496,37 +1496,29 @@
 
 </skill>
 <skill id="1276" levels="14" name="Summon Kai the Cat">
-<!-- Done by Aradel -->
-<table name="#mpConsume">
-70 78 87 94 103 107 110 115 119 123 127 130 133 137
-</table>
-<table name="#itemConsumeCount">
-5 3 4 4 5 6 6 7 5 6 7 9 7 8
-</table>
-<table name="#continuousitemConsumeCount">
-1 2 2 3 3 3 4 4 5 5 5 5 6 6
-</table>
-<set name="mpConsume" val="#mpConsume"/>
-<set name="itemConsumeId" val="1458" />
-<set name="itemConsumeCount" val="#itemConsumeCount" />
-<set name="power" val="0.0"/>
-<set name="target" val="TARGET_SELF"/>
-<set name="hitTime" val="6000"/>
-<set name="reuseDelay" val="20000"/>
-<set name="skillTime" val="15000"/>
-<set name="skillType" val="SUMMON"/>
-<set name="isMagic" val="true"/>
-<set name="operateType" val="OP_ACTIVE"/>
-<set name="castRange" val="-1"/>
-<!-- Summon-specific -->
-<table name="#npcIds">
-12477 12478 12479 12480 12481
-12482 12483 12484 12485 12486
-12487 12488 12489 12536
-</table>
-<set name="npcId" val="#npcIds" />
-<set name="expPenalty" val="0.1" />
-<set name="isCubic" val="false" />
+  <table name="#mpConsume"> 70 78 87 94 103 107 110 115 119 123 127 130 133 137 </table>
+  <table name="#itemConsumeCount"> 1 1 1 2 2 2 2 2 3 3 3 3 4 4 </table>
+  <table name="#itemConsumeCountOT"> 1 1 1 1 1 1 2 2 2 2 3 3 3 3 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="itemConsumeId" val="1459"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount" />
+  <set name="itemConsumeIdOT" val="1459"/>
+  <set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
+  <set name="itemConsumeTime" val="240000" />
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="6000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="15000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <!-- Summon-specific -->
+  <table name="#npcIds"> 12477 12478 12479 12480 12481 12482 12483 12484 12485 12486 12487 12488 12489 12536 </table>
+  <set name="npcId" val="#npcIds" />
+  <set name="expPenalty" val="0.1" />
+  <set name="isCubic" val="false" />
 </skill>
 <skill id="1277" levels="14" name="Summon Unicorn Merrow">
   <table name="#mpConsume"> 70 78 87 94 103 107 110 115 119 123 127 130 133 137 </table>
