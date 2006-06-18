@@ -476,31 +476,31 @@
 </for>
 </skill> 
 <skill id="1129" levels="7" name="Summon Reanimated Man">
-<table name="#mpConsume"> 78 94 110 119 127 133 137 </table>
-<set name="mpConsume" val="#mpConsume"/>
-<set name="power" val="0.0"/>
-<set name="target" val="TARGET_CORPSE_MOB"/>
-<set name="hitTime" val="1000"/>
-<set name="reuseDelay" val="20000"/>
-<set name="skillTime" val="1000"/>
-<set name="skillType" val="SUMMON"/>
-<set name="isMagic" val="true"/>
-<set name="operateType" val="OP_ACTIVE"/>
-<set name="castRange" val="50"/>
+  <table name="#mpConsume"> 78 94 110 119 127 133 137 </table>
   <table name="#itemConsumeCount"> 2 3 3 2 4 2 4 </table>
+  <table name="#itemConsumeCountOT"> 1 1 2 3 3 4 4 </table>
+  <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="1459" />
   <set name="itemConsumeCount" val="#itemConsumeCount" />
-<!-- Summon-specific -->
-  <table name="#itemConsumeCountOT"> 1 1 2 3 3 4 4 </table>
   <set name="itemConsumeIdOT" val="1459" />
   <set name="itemConsumeCountOT" val="#itemConsumeCountOT" />
   <set name="itemConsumeTime" val="240000" />
-<table name="#npcIds"> 12192 12193 12465 12466 12467 12468 12469 </table> 
-<set name="npcId" val="#npcIds" />
-<set name="expPenalty" val="0.15" />
-<set name="isCubic" val="false" />
-<for>
-</for> 
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_CORPSE_MOB"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="50"/>
+  <!-- Summon-specific -->
+  <table name="#npcIds"> 12192 12193 12465 12466 12467 12468 12469 </table> 
+  <set name="npcId" val="#npcIds" />
+  <set name="expPenalty" val="0.15" />
+  <set name="isCubic" val="false" />
+  <for>
+  </for> 
 </skill>
 <skill id="1130" levels="3" name="Summon Dark Spider">
   <set name="mpConsume" val="15"/>
@@ -904,27 +904,27 @@
   </for>
 </skill>
 <skill id="1154" levels="6" name="Summon Corrupted Man">
-<table name="#mpConsume"> 70 87 103 115 123 130 </table>
-<table name="#itemConsumeCount"> 3 3 3 3 3 3 </table>
-<set name="mpConsume" val="#mpConsume"/>
-<set name="itemConsumeId" val="1458" />
-<set name="power" val="0.0"/>
-<set name="target" val="TARGET_CORPSE_MOB"/>
-<set name="itemConsumeCount" val="#itemConsumeCount" />
-<set name="hitTime" val="1000"/>
-<set name="reuseDelay" val="20000"/>
-<set name="skillTime" val="1000"/>
-<set name="skillType" val="SUMMON"/>
-<set name="isMagic" val="true"/>
-<set name="operateType" val="OP_ACTIVE"/>
-<set name="castRange" val="50"/>
-<!-- Summon-specific -->
-<table name="#npcIds"> 12194 12195 12196 12470 12471 12472 </table>
-<set name="npcId" val="#npcIds" />
-<set name="expPenalty" val="0.9" />
-<set name="isCubic" val="false" />
-<for>
-</for>
+  <table name="#mpConsume"> 70 87 103 115 123 130 </table>
+  <table name="#itemConsumeCount"> 3 3 3 3 3 3 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="itemConsumeCount" val="3" />
+  <set name="itemConsumeId" val="1458" />
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_CORPSE_MOB"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="50"/>
+  <!-- Summon-specific -->
+  <table name="#npcIds"> 12194 12195 12196 12470 12471 12472 </table>
+  <set name="npcId" val="#npcIds" />
+  <set name="expPenalty" val="0.9" />
+  <set name="isCubic" val="false" />
+  <for>
+  </for>
 </skill> 
 <skill id="1155" levels="15" name="Corpse Burst">
   <table name="#mpConsume"> 42 44 45 48 49 52 54 55 58 60 62 64 65 67 69 </table>

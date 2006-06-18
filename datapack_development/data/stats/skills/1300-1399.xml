@@ -449,19 +449,24 @@
 </skill>
 <skill id="1334" levels="7" name="Summon Cursed Man">
   <table name="#mpConsume"> 103 110 119 127 130 133 137 </table>
-  <table name="#itemConsumeCount"> 1 2 3 3 3 3 3 </table>
+  <table name="#itemConsumeCount"> 1 2 2 3 3 3 3 </table>
+  <table name="#itemConsumeCountOT"> 2 2 3 3 3 4 4 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="itemConsumeId" val="1459"/>
+  <set name="itemConsumeId" val="1459" />
+  <set name="itemConsumeCount" val="#itemConsumeCount" />
+  <set name="itemConsumeIdOT" val="1459" />
+  <set name="itemConsumeCountOT" val="#itemConsumeCountOT" />
+  <set name="itemConsumeTime" val="240000" />
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="6000"/>
-  <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="reuseDelay" val="20000"/>
   <set name="skillTime" val="15000"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <!-- Summon-specific -->
   <table name="#npcIds"> 13179 13180 13181 13182 13183 13184 13185 </table>
   <set name="npcId" val="#npcIds" />
   <set name="expPenalty" val="0.15" />
