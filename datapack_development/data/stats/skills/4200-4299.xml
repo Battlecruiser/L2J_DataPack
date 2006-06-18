@@ -33,7 +33,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="750"/>
-  <set name="displayId" val="1069"/>
   <for>
     <effect count="1" name="Sleep" time="30" val="0"/>
   </for>
@@ -52,7 +51,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="750"/>
-  <set name="displayId" val="1201"/>
   <for>
     <effect count="1" name="Root" time="30" val="0"/>
   </for>
@@ -112,7 +110,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="750"/>
-  <set name="displayId" val="1170"/>
   <for>
     <effect count="1" name="Paralyze" time="120" val="0"/>
   </for>
@@ -185,7 +182,6 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
-  <set name="displayId" val="1011"/>
   <for>
   </for>
 </skill>
@@ -242,7 +238,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
-  <set name="displayId" val="1040"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
       <mul order="0x50" stat="pDef" val="#rate"/>
@@ -263,7 +258,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
   <set name="isMagic" val="true"/>
-  <set name="displayId" val="1086"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpeedUp">
       <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
@@ -567,7 +561,6 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="750"/>
-  <set name="displayId" val="1184"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1.4" stackType="RunSpeedDown">
       <div order="0x50" stat="runSpd" val="1.4"/>
@@ -727,7 +720,6 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="750"/>
-  <set name="displayId" val="1184"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1.4" stackType="RunSpeedDown">
       <div order="0x50" stat="runSpd" val="1.4"/>

@@ -16,7 +16,6 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
-  <set name="displayId" val="1177"/>
   <for>
   </for>
 </skill>
@@ -35,7 +34,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="absorbPart" val="0.2" /><!-- absorbs 20% of damage -->
-  <set name="displayId" val="1147"/>
   <for>
   </for>
 </skill>
@@ -222,7 +220,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="500"/>
-  <set name="displayId" val="1206"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
       <div order="0x40" stat="runSpd" val="1.3"/>
@@ -241,7 +238,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="800"/>
-  <set name="displayId" val="1206"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
       <div order="0x50" stat="runSpd" val="1.3"/>
@@ -418,7 +414,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
-  <set name="displayId" val="1040"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
       <mul order="0x50" stat="pDef" val="#Tab-pDef"/>
@@ -473,7 +468,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
-  <set name="displayId" val="1184"/>
   <for>
   </for>
 </skill>
@@ -493,7 +487,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="600"/>
-  <set name="displayId" val="0129"/>
   <for>
     <effect count="6" name="DamOverTime" time="5" val="#dmg" abnormal="poison"/>
   </for>
@@ -515,7 +508,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="500"/>
-  <set name="displayId" val="0129"/>
   <for>
     <effect count="6" name="DamOverTime" time="5" val="#dmg" abnormal="poison"/>
   </for>
@@ -536,7 +528,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
-  <set name="displayId" val="1164"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
       <div order="0x50" stat="pAtk" val="#Tab-pAtk"/>
@@ -559,7 +550,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
-  <set name="displayId" val="51"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
       <div order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
@@ -579,7 +569,6 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
-  <set name="displayId" val="1222"/>
   <for>
   </for>
 </skill>
@@ -666,7 +655,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="600"/>
-  <set name="displayId" val="1069"/>
   <for>
     <effect count="1" name="Sleep" time="30" val="0"/>
   </for>
@@ -685,7 +673,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="600"/>
-  <set name="displayId" val="1201"/>
   <for>
     <effect count="1" name="Root" time="30" val="0"/>
   </for>
@@ -910,7 +897,6 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
-  <set name="displayId" val="1011"/>
   <for>
   </for>
 </skill>
@@ -999,7 +985,6 @@
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="displayId" val="1035"/>
   <for>
   	<add order="0x40" stat="bowWpnRes" val="80"/>
   </for>
@@ -1058,7 +1043,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
-  <set name="displayId" val="1086"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
       <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
@@ -1078,7 +1062,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="9000"/>
   <set name="castRange" val="40"/>
-  <set name="displayId" val="0279"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0"/>
   </for>
@@ -1118,7 +1101,6 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="150"/>
-  <set name="displayId" val="1231"/>
   <for>
   </for>
 </skill>
@@ -1137,7 +1119,6 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
-  <set name="displayId" val="1220"/>
   <for>
   </for>
 </skill>
@@ -1277,7 +1258,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="40"/>
-  <set name="displayId" val="96"/>
   <for>
 	<effect count="10" name="DamOverTime" time="3" val="#damage"/>
   </for>
@@ -1294,7 +1274,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
-  <set name="displayId" val="1068"/>
   <for>
     <effect name="Buff" time="600" count="1" val="0">
       <div order="0x50" stat="runSpd" val="1.15"/>
@@ -1314,7 +1293,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
-  <set name="displayId" val="1068"/>
   <for>
     <effect name="Buff" time="600" count="1" val="0">
       <mul order="0x50" stat="runSpd" val="1.4"/>
@@ -1332,7 +1310,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
-  <set name="displayId" val="1068"/>
   <for>
   </for>
 </skill>
@@ -1348,7 +1325,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
-  <set name="displayId" val="1068"/>
   <for>
     <effect name="Buff" time="600" count="1" val="0">
       <div order="0x50" stat="pDef" val="1.2"/>
@@ -1449,7 +1425,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
-  <set name="displayId" val="1064"/>
   <for>
 	<effect count="1" name="Mute" time="120" val="0"/>
   </for>
@@ -1472,7 +1447,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
-  <set name="displayId" val="1062"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
       <mul order="0x50" stat="pAtk" val="#Tab-pAtk"/>
