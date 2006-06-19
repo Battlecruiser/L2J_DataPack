@@ -358,7 +358,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add order="0x50" stat="rEvas" val="#gain">
+    <add order="0x40" stat="rEvas" val="#gain">
       <player running="true"/>
     </add>
   </for>
