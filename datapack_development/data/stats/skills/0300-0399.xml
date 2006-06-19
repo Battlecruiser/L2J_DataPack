@@ -336,7 +336,7 @@
 </skill>
 <skill id="319" levels="2" name="Agile Movement">
   <table name="#Accuracy"> 1.1 1.2 </table>
-  <table name="#Speed"> 8 12 </table>
+  <table name="#Speed"> 6 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -718,7 +718,7 @@ HP will be continuously consumed while in effect. -->
   <set name="castRange" val="900"/> 
   <for> 
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1.6" stackType="SpeedDown"> 
-      <div order="0x50" stat="runSpd" val="1.6"/> 
+      <sub order="0x40" stat="runSpd" val="61"/> 
     </effect> 
   </for>
 </skill>

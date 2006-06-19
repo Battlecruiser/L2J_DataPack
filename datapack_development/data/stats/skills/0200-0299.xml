@@ -437,9 +437,9 @@
   </for>
 </skill>
 <skill id="230" levels="2" name="Sprint">
-<!-- Done by dc -->
-<table name="#Tab-runSpd"> 20 33 </table>
-<table name="#mpConsume"> 28 48 </table>
+  <!-- Done by dc -->
+  <table name="#Tab-runSpd"> 20 33 </table>
+  <table name="#mpConsume"> 28 48 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -452,9 +452,9 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
       <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
-   </effect>
+    </effect>
   </for>
 </skill>
 <skill id="231" levels="50" name="Heavy Armor Mastery">
@@ -1825,22 +1825,25 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
-	 <mul order='0x50' stat="pAtk" val="0.2"/>
-	 <add order='0x40' stat="rEvas" val="25"/>
-	 <add order='0x40' stat="runSpd" val="65"/>
-	</effect>
+      <mul order="0x50" stat="pAtk" val="0.2"/>
+      <add order="0x40" stat="rEvas" val="25"/>
+      <add order="0x40" stat="runSpd" val="62"/>
+    </effect>
   </for>
 </skill>
 <skill id="299" levels="1" name="Summon Wild Hog Cannon">
- <table name="#mpConsume"> 530 </table>
- <table name="#itemConsumeCount"> 120 </table>
- <table name="#reuseDelay"> 20000 </table>
+  <table name="#mpConsume"> 530 </table>
+  <table name="#itemConsumeCount"> 120 </table>
+  <table name="#reuseDelay"> 20000 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="itemConsumeIdOT" val="2132" />
+  <set name="itemConsumeCountOT" val="30" />
+  <set name="itemConsumeTime" val="60000" />
+  <set name="itemConsumeCount" val="#itemConsumeCount" />
+  <set name="reuseDelay" val="#reuseDelay"/>
   <set name="itemConsumeId" val="1460" />
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="itemConsumeCount" val="#itemConsumeCount" />
-  <set name="reuseDelay" val="#reuseDelay"/>
   <set name="hitTime" val="200000"/>
   <set name="reuseDelay" val="400000"/>
   <set name="skillTime" val="10000"/>
@@ -1849,10 +1852,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <!-- Summon-specific -->
-  <set name="itemConsumeIdOT" val="2132" />
-  <set name="itemConsumeCountOT" val="30" />
-  <set name="itemConsumeTime" val="60000" />
- <table name="#npcIds"> 12375 </table>
+  <table name="#npcIds"> 12375 </table>
   <set name="npcId" val="#npcIds" />
   <set name="expPenalty" val="0.0" />
   <set name="isCubic" val="false" />

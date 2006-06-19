@@ -1073,15 +1073,15 @@
   </for>
 </skill>
 <skill id="1062" levels="2" name="Berserker Spirit">
-<!-- Done by dc -->
-<table name="#Tab-mAtk"> 1.1 1.16 </table>
-<table name="#Tab-pAtk"> 1.05 1.08 </table>
-<table name="#Tab-mDef"> 0.88 0.85 </table>
-<table name="#Tab-pDef"> 0.88 0.85 </table>
-<table name="#Tab-mAtkSpd"> 1.05 1.08 </table>
-<table name="#Tab-pAtkSpd"> 1.05 1.08 </table>
-<table name="#Tab-runSpd"> 5 8 </table>
-<table name="#mpConsume"> 30 48 </table>
+  <!-- Done by dc -->
+  <table name="#Tab-mAtk"> 1.1 1.16 </table>
+  <table name="#Tab-pAtk"> 1.05 1.08 </table>
+  <table name="#Tab-mDef"> 0.88 0.85 </table>
+  <table name="#Tab-pDef"> 0.88 0.85 </table>
+  <table name="#Tab-mAtkSpd"> 1.05 1.08 </table>
+  <table name="#Tab-pAtkSpd"> 1.05 1.08 </table>
+  <table name="#Tab-runSpd"> 5 8 </table>
+  <table name="#mpConsume"> 30 48 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1094,16 +1094,16 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-   <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="berserk">
-    <mul order="0x50" stat="mAtk" val="#Tab-mAtk"/>
-    <mul order="0x50" stat="pAtk" val="#Tab-pAtk"/>
-    <mul order="0x50" stat="mDef" val="#Tab-mDef"/>
-    <mul order="0x50" stat="pDef" val="#Tab-pDef"/>
-    <mul order="0x50" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
-    <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
-    <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
-  </effect>
- </for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="berserk">
+      <mul order="0x50" stat="mAtk" val="#Tab-mAtk"/>
+      <mul order="0x50" stat="pAtk" val="#Tab-pAtk"/>
+      <mul order="0x50" stat="mDef" val="#Tab-mDef"/>
+      <mul order="0x50" stat="pDef" val="#Tab-pDef"/>
+      <mul order="0x50" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
+      <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+      <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
+    </effect>
+  </for>
 </skill>
 <skill id="1063" levels="1" name="none">
   <set name="mpConsume" val="15"/>
@@ -1758,7 +1758,7 @@
   </for>
 </skill>
 <skill id="1099" levels="15" name="Seal of Slow">
-  <table name="#Tab-runSpd"> 1.15 1.19 1.23 1.27 1.31 1.36 1.40 1.44 1.48 1.52 1.57 1.61 1.65 1.69 1.74 1.8 </table>
+  <table name="#Tab-runSpd"> 38 61 61 61 61 61 61 61 61 61 61 61 61 61 61 </table>
   <table name="#mpConsume"> 45 53 59 65 70 77 80 83 87 89 93 95 98 100 103 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
@@ -1773,11 +1773,10 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="12000"/>
   <set name="castRange" val="-1"/>
-<for>
-   <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown" >
-      <div order="0x50" stat="runSpd" val="#Tab-runSpd">
-      </div>
-   </effect>
-</for>
+  <for>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown" >
+      <sub order="0x40" stat="runSpd" val="#Tab-runSpd"/>
+    </effect>
+  </for>
 </skill>
 </list>

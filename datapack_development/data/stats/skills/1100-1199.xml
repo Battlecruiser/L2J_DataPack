@@ -726,9 +726,9 @@
   </for>
 </skill>
 <skill id="1144" levels="2" name="Fast Servitor">
-<!-- Done by dc -->
-<table name="#Tab-runSpd"> 20 33 </table>
-<table name="#mpConsume"> 30 46 </table>
+  <!-- Done by dc -->
+  <table name="#Tab-runSpd"> 20 33 </table>
+  <table name="#mpConsume"> 30 46 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PET"/>
@@ -741,15 +741,15 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
-    <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
-  </effect>
-</for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
+      <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
+    </effect>
+  </for>
 </skill>
 <skill id="1145" levels="3" name="Bright Servitor">
-<!-- Done by dc -->
-<table name="#Tab-mAtk"> 1.55 1.65 1.75 </table>
-<table name="#mpConsume"> 30 46 54 </table>
+  <!-- Done by dc -->
+  <table name="#Tab-mAtk"> 1.55 1.65 1.75 </table>
+  <table name="#mpConsume"> 30 46 54 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PET"/>
@@ -762,15 +762,15 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0">
-    <mul order="0x50" stat="mAtk" val="#Tab-mAtk"/>
-  </effect>
-</for>
+    <effect count="1" name="Buff" time="1200" val="0">
+      <mul order="0x50" stat="mAtk" val="#Tab-mAtk"/>
+    </effect>
+  </for>
 </skill>
 <skill id="1146" levels="3" name="Mighty Servitor">
-<!-- Done by dc -->
-<table name="#Tab-pAtk"> 1.08 1.12 1.15 </table>
-<table name="#mpConsume"> 30 46 54 </table>
+  <!-- Done by dc -->
+  <table name="#Tab-pAtk"> 1.08 1.12 1.15 </table>
+  <table name="#mpConsume"> 30 46 54 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PET"/>
@@ -783,10 +783,10 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtk" stackType="pAtk">
-    <mul order="0x50" stat="pAtk" val="#Tab-pAtk"/>
-  </effect>
-</for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtk" stackType="pAtk">
+      <mul order="0x50" stat="pAtk" val="#Tab-pAtk"/>
+    </effect>
+  </for>
 </skill>
 <skill id="1147" levels="6" name="Vampiric Touch">
   <table name="#mpConsume"> 20 23 27 29 32 34 </table>
@@ -1011,8 +1011,8 @@
   </for>
 </skill>
 <skill id="1160" levels="15" name="Slow">
-<table name="#Tab-runSpd"> 0.9 0.85 0.83 0.8 0.75 0.7 0.68 0.65 0.62 0.6 0.56 0.52 0.48 0.44 0.4 </table>
-<table name="#mpConsume"> 30 35 39 44 48 52 54 55 58 60 62 64 65 67 69 </table>
+  <table name="#Tab-runSpd"> 38 61 61 61 61 61 61 61 61 61 61 61 61 61 61 </table>
+  <table name="#mpConsume"> 30 35 39 44 48 52 54 55 58 60 62 64 65 67 69 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
   <set name="power" val="0.0"/>
@@ -1026,10 +1026,10 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
   <for>
-  <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
-    <mul order="0x50" stat="runSpd" val="#Tab-runSpd"/>
- </effect>
-</for>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
+      <sub order="0x40" stat="runSpd" val="#Tab-runSpd"/>
+    </effect>
+  </for>
 </skill>
 <skill id="1161" levels="1" name="Concentration Black Magic">
   <set name="mpConsume" val="15"/>
@@ -1461,8 +1461,8 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="1.4" stackType="RunSpeedDown">
-      <div order="0x50" stat="runSpd" val="1.4"/>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="38" stackType="RunSpeedDown">
+      <sub order="0x40" stat="runSpd" val="38"/>
     </effect>
   </for>
 </skill>
