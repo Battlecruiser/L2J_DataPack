@@ -499,12 +499,18 @@
   </for>
 </skill>
 <skill id="4338" levels="1" name="Life Cubic For Novice">
-<!--- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillTime" val="16"/>
+  <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="400"/>
+  <set name="castRange" val="-1"/>
+
+  <!-- Summon-specific -->
+  <set name="npcId" val="3" />
+  <set name="expPenalty" val="0.0" />
+  <set name="isCubic" val="true" />
   <for>
   </for>
 </skill>
