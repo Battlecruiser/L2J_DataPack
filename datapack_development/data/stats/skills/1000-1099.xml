@@ -1718,7 +1718,7 @@
   <set name="castRange" val="-1"/>
 <for>
    <effect count="1" name="Buff" time="120" val="0">
-      <sub order="0x40" stat="accCombat" val="#Acc" />
+      <sub order="0x10" stat="accCombat" val="#Acc" />
    </effect>
 </for>
 </skill>

@@ -975,14 +975,14 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x40" stat="pAtkSpd" val="#rate"/>
-    <mul order="0x40" stat="mAtkSpd" val="#rate"/>
-    <mul order="0x40" stat="rEvas" val="#rate"/>
-    <mul order="0x40" stat="rExp" val="#rate"/>
-    <mul order="0x40" stat="runSpd" val="#rate"/>
-    <mul order="0x40" stat="regHp" val="#rate"/>
-    <mul order="0x40" stat="regCp" val="#rate"/>
-    <mul order="0x40" stat="regMp" val="#rate"/>
+    <mul order="0x50" stat="pAtkSpd" val="#rate"/>
+    <mul order="0x50" stat="mAtkSpd" val="#rate"/>
+    <mul order="0x50" stat="rEvas" val="#rate"/>
+    <mul order="0x50" stat="rExp" val="#rate"/>
+    <mul order="0x50" stat="runSpd" val="#rate"/>
+    <mul order="0x50" stat="regHp" val="#rate"/>
+    <mul order="0x50" stat="regCp" val="#rate"/>
+    <mul order="0x50" stat="regMp" val="#rate"/>
   </for>
 </skill>
 <skill id="4268" levels="1" name="Danger Area">
@@ -1006,12 +1006,6 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4270" levels="4" name="Weight Penalty">
-<!--- TODO
-  HP/MP Regeneration greatly reduced because weight of inventory exceeds 50% of weight limit.
-  HP/MP Regeneration and Speed greatly reduced because weight of inventory exceeds 66.6% of weight limit.
-  HP/MP Regeneration and Speed greatly reduced and quests suspended because weight exceeds 80% of limit.
-  HP/MP Regeneration is greatly decreased. Move and quest are suspended due to excess weight.
--->
   <table name="#rate"> 0.5 0.5 0.5 0.5 </table>
   <table name="#rateSpd"> 1 0.5 0.5 0 </table>
   <set name="power" val="0"/>
@@ -1020,9 +1014,9 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x40" stat="regHp" val="#rate"/>
-    <mul order="0x40" stat="regMp" val="#rate"/>
-    <mul order="0x40" stat="runSpd" val="#rateSpd"/>
+    <mul order="0x50" stat="regHp" val="#rate"/>
+    <mul order="0x50" stat="regMp" val="#rate"/>
+    <mul order="0x50" stat="runSpd" val="#rateSpd"/>
   </for>
 </skill>
 <skill id="4271" levels="7" name="Increase Force">

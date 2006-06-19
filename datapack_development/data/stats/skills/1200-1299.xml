@@ -1807,7 +1807,7 @@
 
   <for>
 	<effect count="1" name="Buff" time="120" val="0">
-		<div order="0x40" stat="runSpd" val="1.6">
+		<div order="0x50" stat="runSpd" val="1.6">
 		</div>
 	</effect>
   </for>
@@ -1987,7 +1987,7 @@
     <effect count="1" name="Buff" time="30" val="0">
       <add order="0x40" stat="pDef" val="#pDef"/>
       <add order="0x40" stat="mDef" val="#mDef"/>
-      <set order="0x08" stat="runSpd" val="0"/>
+      <set order="0xF0" stat="runSpd" val="0"/>
     </effect>
   </for>
 </skill> 

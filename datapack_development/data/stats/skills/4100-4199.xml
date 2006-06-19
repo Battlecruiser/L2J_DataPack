@@ -1032,7 +1032,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
-    <add order="0x40" stat="rCrit" val="45">
+    <add order="0x10" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>
@@ -1224,7 +1224,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
-    <add order="0x40" stat="rCrit" val="45">
+    <add order="0x10" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>
