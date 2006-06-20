@@ -716,7 +716,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="1.4" stackType="RunSpeedDown">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="38" stackType="RunSpeedDown">
       <sub order="0x40" stat="runSpd" val="38"/>
     </effect>
   </for>
@@ -804,7 +804,7 @@
   <set name="castRange" val="400"/>
   <for>
     <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-accCombat" stackType="accuracyUp">
-      <add order='0x40' stat='accCombat' val="#Tab-accCombat"/>
+      <add order="0x40" stat="accCombat" val="#Tab-accCombat"/>
     </effect>
   </for>
 </skill>
@@ -1876,24 +1876,22 @@
   <for>
   </for>
 </skill>
- <skill id="1297" levels="6" name="Clear Mind">
+<skill id="1297" levels="6" name="Clear Mind">
+  <table name="#Tab-regMp"> 1.1 1.3 1.5 1.7 1.9 2.0 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <table name="#Tab-regMp"> 1.1 1.3 1.5 1.7 1.9 2.0 </table>
-
   <for>
-   <mul order='0x50' stat='regMp' val="#Tab-regMp">
-   <player resting="true"/>
-   <player walking="true"/>
-   </mul>
- </for>
+    <mul order="0x50" stat="regMp" val="#Tab-regMp">
+      <player resting="true"/>
+      <player walking="true"/>
+    </mul>
+  </for>
 </skill>
 <skill id="1298" levels="14" name="Mass Slow">
   <table name="#hpConsume"> 505 514 522 531 540 548 557 565 573 581 589 596 603 610 </table>
-  <table name="#Tab-runSpd"> 61 61 61 61 61 61 61 61 61 61 61 61 61 61 </table>
   <set name="hpConsume" val="#hpConsume"/>
   <set name="power" val="0.0"/>
   <set name="save" val="5"/>
@@ -1908,8 +1906,8 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
-      <sub order="0x40" stat="runSpd" val="#Tab-runSpd"/>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="61" stackType="RunSpeedDown">
+      <sub order="0x40" stat="runSpd" val="61"/>
     </effect>
   </for>
 </skill> 
@@ -1919,6 +1917,7 @@
   <table name="#mpConsume"> 48 65 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_PET"/>
+  <set name="reuseDelay" val="900000"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
