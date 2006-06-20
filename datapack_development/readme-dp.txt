@@ -17,9 +17,9 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 
-L2J-Datapack version 3 dev/unstable:
+L2J-Datapack SVN Build:
 
-Sourceforge project page: http://sourceforge.net/projects/l2j-c2datapack
+Project page: http://l2jdp.com
 Forum: http://forum.l2jdp.com
 Wiki: http://www.l2jdp.com/trac/wiki
 Download: The wiki contains guides to get the latest datapack revision from the SVN repository.
@@ -56,3 +56,8 @@ IMPORTANT: 	There may also be changes to character data tables, to update these 
 **NOTE:	Read readme in the /sql/experimental/ folder.
 
 -the l2j-datapack team
+
+    L2JDP, Copyright (C) 2006 
+    L2JDP comes with ABSOLUTELY NO WARRANTY.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions.
