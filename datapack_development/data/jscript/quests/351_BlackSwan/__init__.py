@@ -25,12 +25,12 @@ class Quest (JQuest) :
          st.giveItems(ORDER_OF_GOSTA,1)
          st.playSound("ItemSound.quest_accept")
      elif event == "7969-02a.htm" :
-         if st.getQuestItemsCount(LIZARD_FANG):
+         if amount:
              htmltext = "7969-02.htm"
              st.giveItems(ADENA,amount*20)
              st.takeItems(LIZARD_FANG,-1)
      elif event == "7969-03a.htm" :
-         if st.getQuestItemsCount(BARREL_OF_LEAGUE) :
+         if amount2 :
              htmltext = "7969-03.htm"
              st.set("cond","2")
              st.giveItems(ADENA,amount2*3880)
@@ -52,7 +52,7 @@ class Quest (JQuest) :
      cond = st.getInt("cond")
      if npcId==7916 :
          if id == CREATED :
-             if level>=38 :
+             if level>=32 :
                  htmltext = "7916-01.htm"
              else :
                  htmltext = "7916-00.htm"
@@ -75,7 +75,6 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
      if random<=CHANCE2 :
          st.giveItems(BARREL_OF_LEAGUE,1)
-         st.playSound("ItemSound.quest_itemget")
      return
 
 QUEST       = Quest(351,"351_BlackSwan","Black Swan")
