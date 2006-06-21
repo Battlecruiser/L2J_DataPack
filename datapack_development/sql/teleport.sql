@@ -21,7 +21,7 @@ INSERT INTO teleport VALUES
 ('Elven Town & Dark Elven Town -> Town of Gludio','2','-12672','122776','-3116','3700'),
 ('Elven Village -> Elven Forest','468','21362','51122','-3688','300'),
 ('Elven Village -> Neutral Zone','469','-10612','75881','-3592','740'),
-('Elven Village -> Elven Forest','470','21362','51122','-3688','2500'),
+('Elven Village -> Elven Fortress','470','29294','74968','-3776','2500'),
 ('Town of gludio -> Elven village','3','46934','51467','-2977','3700'),
 ('Town of gludio -> Dark Elven village','4','9745','15606','-4574','3700'),
 ('Town of gludio -> Village of Gludin','5','-80826','149775','-3043','2900'),
