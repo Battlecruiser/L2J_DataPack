@@ -136,6 +136,7 @@ __all__ = [
 '356_DigUpTheSeaOfSpores',
 '358_IllegitimateChildOfAGoddess',
 '359_ForSleeplessDeadmen',
+'360_PlunderTheirSupplies',
 '362_BardsMandolin',
 '363_SorrowfulSoundofFlute',
 '364_JovialAccordion',
