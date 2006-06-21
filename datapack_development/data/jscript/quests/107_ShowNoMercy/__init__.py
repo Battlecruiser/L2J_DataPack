@@ -40,7 +40,6 @@ class Quest (JQuest) :
             st.takeItems(LETTER_TO_ELF_ID,1)
             st.takeItems(HATOSS_ORDER1_ID,1)
             st.takeItems(HATOSS_ORDER3_ID,1)
-            st.giveItems(ADENA_ID,100)
             st.set("cond","0")
             st.playSound("ItemSound.quest_giveup")
     elif event == "7568_2" :
@@ -56,7 +55,6 @@ class Quest (JQuest) :
             st.takeItems(LETTER_TO_ELF_ID,1)
             st.takeItems(HATOSS_ORDER2_ID,1)
             st.takeItems(HATOSS_ORDER3_ID,1)
-            st.giveItems(ADENA_ID,200)
             st.set("cond","0")
             st.playSound("ItemSound.quest_giveup")
     elif event == "7568_4" :
