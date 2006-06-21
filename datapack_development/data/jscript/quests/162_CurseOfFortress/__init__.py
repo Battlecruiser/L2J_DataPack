@@ -38,7 +38,7 @@ class Quest (JQuest) :
          htmltext = "7147-01.htm"
          st.exitQuest(1)
    else :
-      if (st.getQuestItemsCount(ELF_SKULL)+st.getQuestItemsCount(BONE_FRAGMENT3))<13 :
+      if st.getQuestItemsCount(ELF_SKULL) < 3 and st.getQuestItemsCount(BONE_FRAGMENT3) < 10 :
          htmltext = "7147-05.htm"
       else  :
          htmltext = "7147-06.htm"
@@ -52,20 +52,24 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-   npcId = npc.getNpcId()
-   if npcId in [464,463,504] :
-      item = BONE_FRAGMENT3
-      maxcount = 10
-   else :
-      item = ELF_SKULL
-      maxcount = 3
-   count = st.getQuestItemsCount(item)
-   if st.getRandom(4) == 1 and count < maxcount :
-      st.giveItems(item,1)
-      if count == maxcount - 1 :
+   if st.getRandom(4) == 1 :
+     npcId = npc.getNpcId()
+     bones = st.getQuestItemsCount(BONE_FRAGMENT3)
+     skulls = st.getQuestItemsCount(ELF_SKULL)
+     if npcId in [464,463,504] :
+       if bones < 10 :
+         st.giveItems(BONE_FRAGMENT3,1)
+         if bones == 9 and skulls == 3 :
+           st.playSound("ItemSound.quest_middle")
+           st.set ("cond","2")
+         else:
+           st.playSound("ItemSound.quest_itemget")
+     elif skulls < 3 :
+       st.giveItems(ELF_SKULL,1)
+       if bones == 10 and skulls == 2 :
          st.playSound("ItemSound.quest_middle")
          st.set ("cond","2")
-      else:
+       else:
          st.playSound("ItemSound.quest_itemget")
    return
 
