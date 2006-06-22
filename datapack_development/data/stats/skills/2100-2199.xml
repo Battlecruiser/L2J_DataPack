@@ -947,6 +947,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="isPotion" val="true"/>
   <for>
   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtkSpd" stackType="mAtkSpeedUp">
     <mul order="0x50" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
