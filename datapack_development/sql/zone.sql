@@ -111,7 +111,7 @@ insert into zone values (6, 'Siege Battlefield', 'Innadril', 111975, 241396, 120
 
 insert into zone values (1, 'Town', 'DE Village', 6063, 19664, 17248, 14019, 0, 4);
 insert into zone values (2, 'Town', 'Talking Island', -87312, 240096, -81129, 246345, 0, 1);
-insert into zone values (3, 'Town', 'Elven Village', 48294, 52995, 43193, 45911, 0, 4);
+insert into zone values (3, 'Town', 'Elven Village', 48294, 52995, 42402, 46155, 0, 4);
 insert into zone values (4, 'Town', 'Orc Village', -42078, -109785, -47648, -117366, 0, 0);
 insert into zone values (5, 'Town', 'Gludin Village', -84892, 149075, -76820, 156125, 0, 1);
 insert into zone values (6, 'Town', 'Dwarven Village', 117395, -176766, 114650, -184347, 0, 0);
