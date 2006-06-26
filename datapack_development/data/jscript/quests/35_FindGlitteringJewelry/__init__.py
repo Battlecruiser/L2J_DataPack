@@ -26,12 +26,15 @@ class Quest (JQuest) :
      st.takeItems(ROUGH_JEWEL,10)
      st.set("cond","4")
    if event == "7091-5.htm" :
-     st.takeItems(ORIHARUKON,5)
-     st.takeItems(SILVER_NUGGET,500)
-     st.takeItems(THONS,150)
-     st.giveItems(JEWEL_BOX,1)
-     st.playSound("ItemSound.quest_finish")
-     st.exitQuest(1)
+     if st.getQuestItemsCount(ORIHARUKON) >= 5 and st.getQuestItemsCount(SILVER_NUGGET) >= 500 and st.getQuestItemsCount(THONS) >= 150 :
+       st.takeItems(ORIHARUKON,5)
+       st.takeItems(SILVER_NUGGET,500)
+       st.takeItems(THONS,150)
+       st.giveItems(JEWEL_BOX,1)
+       st.playSound("ItemSound.quest_finish")
+       st.exitQuest(1)
+     else :
+       htmltext = "You don't have enough materials"
    return htmltext
 
  def onTalk (Self,npc,st):
