@@ -30,8 +30,11 @@ class Quest (JQuest) :
      st.giveItems(ICE_WINE,1)
      st.set("cond","3")
    if event == "8627-1.htm" :
-     st.takeItems(ICE_WINE,1)
-     st.set("cond","4")
+     if st.getQuestItemsCount(ICE_WINE):
+       st.takeItems(ICE_WINE,1)
+       st.set("cond","4")
+     else:
+       htmltext = "You don't have enough materials"
    if event == "8521-3.htm" :
      st.giveItems(BOX_OF_COOKIES,1)
      st.set("cond","5")
