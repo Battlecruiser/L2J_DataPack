@@ -52,9 +52,9 @@ def getMaterialName(MaterialID):
     if MaterialID in range(2131, 2134):
         return "Gemstone " + chr(ord('A') + 2133 - MaterialID)
     Stage = ""
-    if MaterialID in range(5577, 5579):
+    if MaterialID in range(5577, 5580):
         Stage = "11"
-    if MaterialID in range(5580, 5582):
+    if MaterialID in range(5580, 5583):
         Stage = "12"
     if MaterialID in [5577, 5580]:
         return "Red Soul Crystal - Stage " + Stage
