@@ -22,6 +22,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Magic Hold -->
+    <skill onCast="1" id="1201" lvl="1" chance="10" />
   </for>
 </item>
 <item id='7703' name="stick_of_faith_magic_shield">
@@ -33,6 +35,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Mental Shield -->
+    <skill onCast="1" id="1035" lvl="2" chance="50" />
   </for>
 </item>
 <item id='7704' name="stick_of_eternity_empower">
@@ -74,6 +78,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Bodily Blessing -->
+    <skill onCast="1" id="1045" lvl="2" chance="20" />
   </for>
 </item>
 <item id='7707' name="nirvana_axe_magic_power">
@@ -96,6 +102,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Magic Poison -->
+    <skill onCast="1" id="1168" lvl="6" chance="8" />
   </for>
 </item>
 <item id='7709' name="nirvana_axe_magic_weakness">
@@ -107,6 +115,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Magic Weakness -->
+    <skill onCast="1" id="1164" lvl="6" chance="7" />
   </for>
 </item>
 <item id='7710' name="club_of_nature_acumen">
@@ -131,6 +141,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Mental Shield -->
+    <skill onCast="1" id="1035" lvl="2" chance="50" />
   </for>
 </item>
 <item id='7712' name="club_of_nature_magic_hold">
@@ -142,6 +154,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Magic Hold -->
+    <skill onCast="1" id="1201" lvl="1" chance="10" />
   </for>
 </item>
 <item id='7713' name="mace_of_the_underworld_mana_up">
@@ -166,6 +180,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Silence -->
+    <skill onCast="1" id="1064" lvl="1" chance="10" />
   </for>
 </item>
 <item id='7715' name="mace_of_the_underworld_conversion">
@@ -204,6 +220,8 @@
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Silence -->
+    <skill onCast="1" id="1064" lvl="1" chance="10" />
   </for>
 </item>
 <item id='7718' name="inferno_staff_magic_paralyze">
@@ -215,6 +233,8 @@
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Magic Paralyze -->
+    <skill onCast="1" skill="1170" lvl="1" chance="5" />
   </for>
 </item>
 <item id='7719' name="poleaxe_critical_stun">
@@ -226,6 +246,8 @@
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Critical Stun -->
+    <skill onCrit="1" id="3070" lvl="1" chance="18" />
   </for>
 </item>
 <item id='7720' name="poleaxe_long_blow">
@@ -272,6 +294,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Magic Weakness -->
+    <skill onCast="1" id="1164" lvl="6" chance="7" />
   </for>
 </item>
 <item id='7724' name="sword_of_valhalla_magic_regeneration">
@@ -283,6 +307,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Magic Regeneration -->
+    <skill onCast="1" id="1044" lvl="3" chance="30" />
   </for>
 </item>
 </list>
