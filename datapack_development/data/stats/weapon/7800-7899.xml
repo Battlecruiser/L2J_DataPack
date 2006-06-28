@@ -22,6 +22,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Magic Hold -->
+    <skill onCast="1" id="1201" lvl="1" chance="10" />
   </for>
 </item>
 <item id='7812' name="soulfire_dirk_magic_silence">
@@ -33,6 +35,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Silence -->
+    <skill onCast="1" id="1064" lvl="1" chance="10" />
   </for>
 </item>
 <item id='7813' name="hell_knife_magic_regeneration">
@@ -44,6 +48,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Magic Regeneration -->
+    <skill onCast="1" id="1044" lvl="1" chance="30" />
   </for>
 </item>
 <item id='7814' name="hell_knife_mental_shield">
@@ -55,6 +61,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Mental Shield -->
+    <skill onCast="1" id="1035" lvl="2" chance="50" />
   </for>
 </item>
 <item id='7815' name="hell_knife_magic_weakness">
@@ -66,6 +74,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Magic Weakness -->
+    <skill onCast="1" id="1164" lvl="6" chance="7" />
   </for>
 </item>
 <item id='7816' name="apprentice_adventurers_staff">
