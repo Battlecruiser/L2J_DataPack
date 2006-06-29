@@ -49,7 +49,7 @@ INSERT INTO teleport VALUES
 ('Dwarven Town -> Mithril Mines','419','179039','-184080','-319','680'),
 ('Dion Town -> Town of Gludio','18','-12672','122776','-3116','4100'),
 ('Dion Town -> Town of Giran','19','83400','147943','-3404','8100'),
-('Dion Town & Giran Town -> Giran Harbor','20','47942','186764','-3485','6500'),
+('Dion Town -> Giran Harbor','20','47942','186764','-3485','6500'),
 ('Cruma Tower Entrance -> Cruma Tower 1st floor','21','17724','114004','-11672','0'),
 ('Cruma Tower 1st floor -> Cruma Tower Entrance','22','17192','114178','-3439','0'),
 ('Cruma Tower 1st floor -> Cruma Tower 2nd floor','23','17730','108301','-9057','0'),
@@ -169,6 +169,7 @@ INSERT INTO teleport VALUES
 ('Rune -> Rune Castle Town Store','131','43799','-47727','-798','150'),
 ('Aden -> Rune','134','43799','-47727','-798','25000'),
 ('Aden -> Goddard','135','147928','-55273','-2734','16000'),
+('Giran Town -> Giran Harbor','136','47942','186764','-3485','6300'),
 
 ('TOI - 1st Floor','201','115168','16022','-5100','100000'),
 ('TOI - 2nd Floor','202','114649','18587','-3609','150000'),
