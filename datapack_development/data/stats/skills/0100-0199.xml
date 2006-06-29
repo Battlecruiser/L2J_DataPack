@@ -716,7 +716,9 @@
   </for>
 </skill>
 <skill id="139" levels="3" name="Guts">
-  <table name="#mpConsume"> 17 19 24 </table>
+  <!-- Done by dc, completed by NewAge -->
+  <table name="#Tab-pDef"> 2.0 2.5 3.0 </table>
+  <table name="#mpConsume"> 16 19 24 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -729,12 +731,10 @@
   <set name="buffDuration" val="90000"/>
   <set name="castRange" val="-1"/>
   <cond><player hp="30"/></cond>
-<!-- Done by dc, completed by NewAge -->
-  <table name="#Tab-pDef"> 2.0 2.5 3.0 </table>
   <for>
-   <effect name="Buff" time="90" count="1" val="0">
-    <mul order='0x50' stat='pDef' val="#Tab-pDef"/>
-   </effect>
+    <effect name="Buff" time="90" count="1" val="0" stackOrder=1 stackType="OrcBuff">
+      <mul order="0x50" stat="pDef" val="#Tab-pDef"/>
+    </effect>
   </for>
 </skill>
 <skill id="140" levels="1" name="Big Pocket">
@@ -1139,7 +1139,9 @@
   </for>
 </skill>
 <skill id="176" levels="3" name="Frenzy">
-  <table name="#mpConsume"> 14 22 25 </table>
+  <!-- Done by dc, completed by NewAge -->
+  <table name="#Tab-pAtk"> 2.0 2.5 3.0 </table>
+  <table name="#mpConsume"> 14 21 25 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1152,12 +1154,10 @@
   <set name="buffDuration" val="90000"/>
   <set name="castRange" val="-1"/>
   <cond><player hp="30"/></cond>
-  <table name="#Tab-pAtk"> 2.0 2.5 3.0 </table>
-<!-- Done by dc, completed by NewAge -->
   <for>
-   <effect name="Buff" time="90" count="1" val="0">
-	  <mul  order='0x50' stat='pAtk' val="#Tab-pAtk"/>
-   </effect>
+    <effect name="Buff" time="90" count="1" val="0" stackOrder=1 stackType="OrcBuff">
+	  <mul order="0x50" stat="pAtk" val="#Tab-pAtk"/>
+    </effect>
   </for>
 </skill>
 <skill id="177" levels="1" name="none">
