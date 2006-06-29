@@ -12477,6 +12477,7 @@ INSERT INTO skill_trees VALUES (57,172,5,'Create Item',46000,43);
 INSERT INTO skill_trees VALUES (57,172,6,'Create Item',110000,49);
 INSERT INTO skill_trees VALUES (57,172,7,'Create Item',250000,55);
 INSERT INTO skill_trees VALUES (57,172,8,'Create Item',400000,62);
+INSERT INTO skill_trees VALUES (57,172,9,'Create Item',850000,70);
 INSERT INTO skill_trees VALUES (57,205,9,'Blunt Mastery',14000,40);
 INSERT INTO skill_trees VALUES (57,205,10,'Blunt Mastery',14000,40);
 INSERT INTO skill_trees VALUES (57,205,11,'Blunt Mastery',14000,40);
