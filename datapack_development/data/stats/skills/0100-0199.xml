@@ -732,7 +732,7 @@
   <set name="castRange" val="-1"/>
   <cond><player hp="30"/></cond>
   <for>
-    <effect name="Buff" time="90" count="1" val="0" stackOrder=1 stackType="OrcBuff">
+    <effect name="Buff" time="90" count="1" val="0" stackOrder="1" stackType="OrcBuff">
       <mul order="0x50" stat="pDef" val="#Tab-pDef"/>
     </effect>
   </for>
@@ -1155,7 +1155,7 @@
   <set name="castRange" val="-1"/>
   <cond><player hp="30"/></cond>
   <for>
-    <effect name="Buff" time="90" count="1" val="0" stackOrder=1 stackType="OrcBuff">
+    <effect name="Buff" time="90" count="1" val="0" stackOrder="1" stackType="OrcBuff">
 	  <mul order="0x50" stat="pAtk" val="#Tab-pAtk"/>
     </effect>
   </for>
