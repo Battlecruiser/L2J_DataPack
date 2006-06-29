@@ -1205,7 +1205,7 @@ INSERT INTO `npc` (`id`, `name`, `class`, `collision_radius`, `collision_height`
   (1148,'Catacomb Liviona','Monster.liviona',15,28,44,'male','L2Monster',40,1865,648,40,21,30,20,43,10,2323,159,352,254,176,187,253,400,253,0,0,0,80,120,'Tomb_Guard',400,0,0),
   (1149,'Decayed Ancient Pikeman','Monster.skeleton_pikeman',10,28,46,'male','L2Monster',40,2006,708,40,21,30,20,43,10,2539,180,398,271,203,200,253,400,253,96,0,0,80,120,'Tomb_Guard',400,1,0),
   (1150,'Decayed Ancient Soldier','Monster.skeleton_knight',10,25,49,'male','L2Monster',40,2238,799,40,21,30,20,43,10,2881,213,525,270,248,219,253,400,253,1142,0,0,80,120,'Tomb_Guard',400,1,0),
-  (1151,'Decayed Ancient Knight','Monster.skeleton_royal_guard',11,28.5,50,'male','L2Monster',40,2317,830,40,21,30,20,43,10,3000,226,556,278,264,1142,253,400,253,0,0,0,80,120,'Tomb_Guard',400,1,0),
+  (1151,'Decayed Ancient Knight','Monster.skeleton_royal_guard',11,28.5,50,'male','L2Monster',40,2317,830,40,21,30,20,43,10,3000,226,556,278,264,248,253,400,253,0,0,0,80,120,'Tomb_Guard',400,1,0),
   (1152,'Purgatory Wisp','Monster.will_o_wisp',13,22,53,'male','L2Monster',40,2562,924,40,21,30,20,43,10,3371,265,617,314,320,247,253,400,253,0,0,0,80,120,'Tomb_Guard',400,0,0),
   (1153,'Purgatory Serpent','Monster.serpent_slave',17,46,56,'male','L2Monster',40,2813,1020,40,21,30,20,43,10,3763,309,771,331,382,269,253,400,253,73,0,0,80,120,'Tomb_Guard',400,0,0),
   (1154,'Hell Keeper Medusa','Monster.medusa',10,25,58,'male','L2Monster',40,2889,1085,40,21,30,20,43,10,4037,341,852,350,429,284,253,400,253,0,0,0,80,120,'Tomb_Guard',400,0,0),
