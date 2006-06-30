@@ -173,7 +173,7 @@ class Quest (JQuest) :
 		elif event == "7633_1" :
 			htmltext = "7633-02.htm"
 			st.giveItems(BRIMSTONE2_ID,1)
-			st.getPcSpawn().addSpawn(5101,70298, 109564, -3731)
+			st.getPcSpawn().addSpawn(5101,14027, 169896, -3646)
 		return htmltext
 
 
