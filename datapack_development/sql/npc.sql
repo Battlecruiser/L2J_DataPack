@@ -2570,7 +2570,7 @@ COMMIT;
 INSERT INTO `npc` (`id`, `name`, `class`, `collision_radius`, `collision_height`, `level`, `sex`, `type`, `attackrange`, `hp`, `mp`, `str`, `con`, `dex`, `int`, `wit`, `men`, `exp`, `sp`, `patk`, `pdef`, `matk`, `mdef`, `atkspd`, `aggro`, `matkspd`, `rhand`, `lhand`, `armor`, `walkspd`, `runspd`, `faction_id`, `faction_range`, `isUndead`, `absorb_level`) VALUES 
   (7361,'Rizraell','NPC.a_common_people_FElf',7,25.5,70,'female','L2Npc',40,3862,1494,40,43,30,21,20,10,5879,590,1444,514,760,381,253,0,253,0,0,0,80,120,NULL,NULL,0,0),
   (7362,'Andellia','NPC.a_common_people_FElf',7,25.5,70,'female','L2Npc',40,3862,1494,40,43,30,21,20,10,5879,590,1444,514,760,381,253,0,253,0,0,0,80,120,NULL,NULL,0,0),
-  (7363,'Aios','NPC.a_common_people_MElf',6,24.5,70,'male','L2Trainer',40,3862,1494,40,43,30,21,20,10,5879,590,1444,514,760,381,253,0,253,0,0,0,80,120,NULL,NULL,0,0),
+  (7363,'Aios','NPC.a_common_people_MElf',6,24.5,70,'male','L2Npc',40,3862,1494,40,43,30,21,20,10,5879,590,1444,514,760,381,253,0,253,0,0,0,80,120,NULL,NULL,0,0),
   (7364,'trash','NPC.a_common_people_FElf',7,25.5,70,'male','L2Npc',40,3862,1494,40,43,30,21,20,10,5879,590,1444,514,760,381,253,0,253,0,0,0,80,120,NULL,NULL,0,0),
   (7365,'trash','NPC.a_common_people_FElf',7,25.5,70,'male','L2Npc',40,3862,1494,40,43,30,21,20,10,5879,590,1444,514,760,381,253,0,253,0,0,0,80,120,NULL,NULL,0,0),
   (7366,'trash','NPC.a_common_people_FElf',7,25.5,70,'male','L2Npc',40,3862,1494,40,43,30,21,20,10,5879,590,1444,514,760,381,253,0,253,0,0,0,80,120,NULL,NULL,0,0),
