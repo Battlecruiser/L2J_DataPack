@@ -43,7 +43,7 @@ class Quest (JQuest) :
  def onTalk (Self,npc,st):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
-   cond=st.getint("cond")
+   cond=st.getInt("cond")
    jade = st.getQuestItemsCount(JADE_CRYSTAL)
    if cond == 0 :
      if st.getPlayer().getLevel() >= 47 :
