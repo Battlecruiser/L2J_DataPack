@@ -128,7 +128,7 @@
     <set val='293' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
-    <!-- Critical Bleed -->
+    <!-- SA: Critical Bleed -->
     <skill onCrit="1" id="96" lvl="5" chance="35" />
   </for>
 </item>
@@ -241,6 +241,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Critical Damage -->
+    <add onCrit='1' val='200' order='0x08' stat='pAtk' />
   </for>
 </item>
 <item id='5619' name="soul_separator_rsk._haste">
@@ -586,7 +588,7 @@
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
-    <!-- Critical Bleed -->
+    <!-- SA: Critical Bleed -->
     <skill onCrit="1" id="96" lvl="5" chance="24" />
   </for>
 </item>
@@ -599,7 +601,7 @@
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
-    <!-- Critical Drain -->
+    <!-- SA: Critical Drain -->
     <skill onCrit="1" id="3022" lvl="4" />
   </for>
 </item>
@@ -612,6 +614,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Critical Damage -->
+    <add onCrit='1' val='326' order='0x08' stat='pAtk' />
   </for>
 </item>
 <item id='5648' name="dark_legions_edge_health">

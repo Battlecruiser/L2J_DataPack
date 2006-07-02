@@ -52,7 +52,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
-    <!-- Critical Damage -->
+    <!-- SA: Critical Damage -->
+    <add onCrit='1' val='213' order='0x08' stat='pAtk' />
   </for>
 </item>
 <item id='4704' name="tsurugi_haste">
@@ -127,7 +128,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
-    <!-- Critical Damage -->
+    <!-- SA: Critical Damage -->
+    <add onCrit='1' val='231' order='0x08' stat='pAtk' />
   </for>
 </item>
 <item id='4710' name="samurai_longsword_haste">
@@ -152,7 +154,8 @@
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
-    <!-- Critical Damage -->
+    <!-- SA: Critical Damage -->
+    <add onCrit='1' val='174' order='0x08' stat='pAtk' />
   </for>
 </item>
 <item id='4712' name="flamberge_focus">
@@ -238,7 +241,8 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
-    <!-- Critical Damage -->
+    <!-- SA: Critical Damage -->
+    <add onCrit='1' val='262' order='0x08' stat='pAtk' />
   </for>
 </item>
 <item id='4719' name="sword_of_damascus_haste">
@@ -323,7 +327,8 @@
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
-    <!-- Critical Damage -->
+    <!-- SA: Critical Damage -->
+    <add onCrit='1' val='247' order='0x08' stat='pAtk' />
   </for>
 </item>
 <item id='4725' name="great_sword_focus">

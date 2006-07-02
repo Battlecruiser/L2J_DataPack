@@ -138,6 +138,8 @@
     <set val='325' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Critical Damage -->
+    <add onCrit='1' val='270' order='0x08' stat='pAtk' />
   </for>
 </item>
 <item id='6349' name="berserker_blade_haste">
@@ -218,6 +220,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Critical Damage -->
+    <add onCrit='1' val='140' order='0x08' stat='pAtk' />
   </for>
 </item>
 <item id='6359' name="demons_sword_critical_damage">
@@ -229,6 +233,8 @@
     <set val='433' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Critical Damage -->
+    <add onCrit='1' val='160' order='0x08' stat='pAtk' />
   </for>
 </item>
 <item id='6364' name="forgotten_blade">
