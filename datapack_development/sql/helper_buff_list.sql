@@ -18,14 +18,14 @@ PRIMARY KEY  (`id`)
 #----------------------------
 
 insert  into helper_buff_list values 
-(0, 4322, 'WindWalk', 1, 10, 24, 'false'), 
+(0, 4322, 'WindWalk', 1, 8, 24, 'false'),
 (1, 4323, 'Shield', 1, 11, 23, 'false'), 
 (2, 4338, 'Life Cubic', 1, 16, 19, 'false'), 
 (3, 4324, 'Bless the Body', 1, 12, 22, 'false'), 
 (4, 4325, 'Vampiric Rage', 1, 13, 21, 'false'), 
 (5, 4326, 'Regeneration', 1, 14, 20, 'false'), 
 (6, 4327, 'Haste', 1, 15, 19, 'false'), 
-(7, 4322, 'WindWalk', 1, 10, 24, 'true'), 
+(7, 4322, 'WindWalk', 1, 8, 24, 'true'),
 (8, 4323, 'Shield', 1, 11, 23, 'true'), 
 (9, 4338, 'Life Cubic', 1, 16, 19, 'true'), 
 (10, 4328, 'Bless the Soul', 1, 12, 22, 'true'), 
