@@ -363,6 +363,7 @@ class Quest (JQuest) :
         st.giveItems(NIKOLAS_LIST_ID,1)
         st.takeItems(PATTERN_OF_KEYHOLE_ID,1)
         st.giveItems(RP_TITAN_KEY_ID,1)
+        st.takeItems(PARMANS_LETTER_ID,1)
    elif npcId == 7621 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(NIKOLAS_LIST_ID) and st.getQuestItemsCount(CLAY_DOUGH_ID) == 0 and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) == 0 and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) == 0 and st.getQuestItemsCount(KEY_OF_TITAN_ID) == 0 :
         htmltext = "7621-07.htm"
    elif npcId == 7621 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(NIKOLAS_LIST_ID) and st.getQuestItemsCount(KEY_OF_TITAN_ID) and st.getQuestItemsCount(CLAY_DOUGH_ID) == 0 and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) == 0 and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) == 0 :
