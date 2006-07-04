@@ -120,8 +120,8 @@
   <set name="castRange" val="400"/>
   <for>
      <effect count="1" name="Buff" time="30" val="0" stackOrder="100" stackType="CurseShade">
-        <div order="0x50" stat="mDef" val="#Tab-mDef"/>
-        <div order="0x50" stat="pDef" val="#Tab-pDef"/>
+        <mul order="0x50" stat="mDef" val="#Tab-mDef"/>
+        <mul order="0x50" stat="pDef" val="#Tab-pDef"/>
      </effect>
   </for>
 </skill>
@@ -142,8 +142,8 @@
   <set name="castRange" val="-1"/>
   <for>
      <effect count="1" name="Buff" time="30" val="0" stackOrder="100" stackType="CurseShade">
-        <div order="0x50" stat="mDef" val="#Tab-mDef"/>
-        <div order="0x50" stat="pDef" val="#Tab-pDef"/>
+        <mul order="0x50" stat="mDef" val="#Tab-mDef"/>
+        <mul order="0x50" stat="pDef" val="#Tab-pDef"/>
      </effect>
   </for>
 </skill>
