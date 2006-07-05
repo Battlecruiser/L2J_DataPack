@@ -242,7 +242,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Critical Damage -->
-    <add onCrit='1' val='200' order='0x08' stat='pAtk' />
+    <add val='200' order='0x08' stat='cAtk' />
   </for>
 </item>
 <item id='5619' name="soul_separator_rsk._haste">
@@ -615,7 +615,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Critical Damage -->
-    <add onCrit='1' val='326' order='0x08' stat='pAtk' />
+    <add val='326' order='0x08' stat='cAtk' />
   </for>
 </item>
 <item id='5648' name="dark_legions_edge_health">
