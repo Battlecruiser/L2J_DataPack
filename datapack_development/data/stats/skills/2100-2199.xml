@@ -1083,15 +1083,11 @@
   </for>
 </skill>
 <skill id="2179" levels="1" name="Blessed Scroll of Resurrection: For Pets">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  created 2005-05-29 23:34:30
--->
-  <set name="target" val="TARGET_NONE"/>
+  <set name="power" val="100.0"/>
+  <set name="target" val="TARGET_CORPSE_PET"/>
+  <set name="hitTime" val="15000"/>
   <set name="skillTime" val="15000"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="RESURRECT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <for>
