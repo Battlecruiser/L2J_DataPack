@@ -25,10 +25,10 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(PIRATES_TREASURE_MAP) :
            st.set("cond","2")
            st.takeItems(PIRATES_TREASURE_MAP,1)
-           st.getPcSpawn().addSpawn(PIRATES_CHEST,106583,197747,-4209,600000)
-           st.getPcSpawn().addSpawn(SHARK,106570,197740,-4209,600000)
-           st.getPcSpawn().addSpawn(SHARK,106580,197747,-4209,600000)
-           st.getPcSpawn().addSpawn(SHARK,106590,197743,-4209,600000)
+           st.getPcSpawn().addSpawn(PIRATES_CHEST,106583,197747,-4209,900000)
+           st.getPcSpawn().addSpawn(SHARK,106570,197740,-4209,900000)
+           st.getPcSpawn().addSpawn(SHARK,106580,197747,-4209,900000)
+           st.getPcSpawn().addSpawn(SHARK,106590,197743,-4209,900000)
            st.playSound("ItemSound.quest_accept")
         else:
            htmltext="You don't have required items"
