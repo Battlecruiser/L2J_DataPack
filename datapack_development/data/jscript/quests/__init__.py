@@ -123,6 +123,7 @@ __all__ = [
 '331_ArrowForVengeance',
 '333_BlackLionHunt',
 '334_TheWishingPotion',
+'336_CoinOfMagic',
 '338_AlligatorHunter',
 '341_HuntingForWildBeasts',
 '343_UnderTheShadowOfTheIvoryTower',
