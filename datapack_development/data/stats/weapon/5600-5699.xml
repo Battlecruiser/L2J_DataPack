@@ -507,6 +507,9 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+	<!-- SA: Magic Power -->
+    <add val='153' order='0x40' stat='mAtk' />
+    <mul val='1.15' order='0x50' stat='MpConsume' /> 
   </for>
 </item>
 <item id='5639' name="elemental_sword_magic_paralyze">
@@ -544,6 +547,9 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+	<!-- SA: Magic Power -->
+    <add val='167' order='0x40' stat='mAtk' />
+    <mul val='1.15' order='0x50' stat='MpConsume' /> 
   </for>
 </item>
 <item id='5642' name="sword_of_miracles__magic_silence">

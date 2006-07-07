@@ -61,6 +61,9 @@
     <set val='379' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+	<!-- SA: Magic Power -->
+    <add val='99' order='0x40' stat='mAtk' />
+    <mul val='1.15' order='0x50' stat='MpConsume' /> 
   </for>
 </item>
 <item id='6312' name="sword_of_whispering_death_magic_silence">
