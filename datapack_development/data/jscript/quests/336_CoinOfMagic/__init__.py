@@ -26,8 +26,8 @@ SORINT, BERNARD, PAGE, HAGGER, STAN, RALFORD, FERRIS, COLLOB, PANO, DUNING, LORA
 
 #MOBs
 TIMAKARCH, TIMAKSOLD, TIMAKSHAM, LAKIN, HATARHANI, PUNISHMENT, SHACKLE, TIMAKORC, HEADLESS, ROYALSERVANT, \
-MALRUKTUREN, FORMOR, FORMORELDER, VANORSHAMAN, TARLKHIWARRIOR, OLMAHUM, OLMAHUMW, OLMAHUMDOC, HARITMATR, HARITSHA = \
-584, 585, 587, 604, 663,  678, 235, 583, 146, 240,  245, 568, 569, 685, 572,  161, 575, 576, 645, 644
+MALRUKTUREN, FORMOR, FORMORELDER, VANORSHAMAN, TARLKHIWARRIOR, OLMAHUM, OLMAHUMW, HARITMATR, HARITSHA = \
+584, 585, 587, 604, 663,  678, 235, 583, 146, 240,  245, 568, 569, 685, 572,  161, 575, 645, 644
 
 
 PROMOTE={3:[BLOOD_WEREWOLF,GOLD_DRAKE,SILVER_FAIRY,BLOOD_DREVANUL,GOLD_KNIGHT,SILVER_GOLEM],
@@ -323,14 +323,14 @@ class Quest (JQuest) :
          htmltext = "7702-01.htm"
       elif grade == 3 :
          htmltext = "7702-05.htm"
-   elif npcId in EXCHANGE_LIST.keys():
+   elif npcId in EXCHANGE_LIST.keys() and grade :
       htmltext = str(npcId)+"-01.htm"
    return htmltext
 
  def onKill (self,npc,st) :
    cond=st.getInt("cond")
    grade=st.getInt("grade")
-   chance=npc.getLevel() - grade * 3 - 15
+   chance=npc.getLevel() - grade * 3 - 20
    npcId=npc.getNpcId()
    item=DROP_LIST[npcId][0]
    random = st.getRandom(100)
@@ -361,7 +361,7 @@ CREATED.addTalkId(SORINT)
 for npc in [SORINT, BERNARD, PAGE, HAGGER, STAN, RALFORD, FERRIS, COLLOB, PANO, DUNING, LORAIN]:
    STARTED.addTalkId(npc)
 
-for mob in [584, 585, 587, 604, 663,  678, 235, 583, 146, 240,  245, 568, 569, 685, 572,  161, 575, 576, 645]:
+for mob in [584, 585, 587, 604, 663,  678, 235, 583, 146, 240,  245, 568, 569, 685, 572, 161, 575, 645]:
    STARTED.addKillId(mob)
 
 for item in range(3472,3499)+range(3811,3816):
