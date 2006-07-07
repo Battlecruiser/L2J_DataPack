@@ -154,6 +154,12 @@
     <set val='227' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Cheap Shot -->
+    <set val='2' order='0x08' stat='MpConsume'> 
+       <and>
+          <game chance="38"/> 
+       </and> 
+    </set>
   </for>
 </item>
 <item id='5612' name="soul_bow_quick_recovery">
