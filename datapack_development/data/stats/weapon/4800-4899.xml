@@ -207,6 +207,12 @@
     <set val='227' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!--SA: Miser--> 
+    <set val='7' order='0x08' stat='soulShotCount'> 
+       <and>
+          <game chance="30"/> 
+       </and> 
+    </set>
   </for>
 </item>
 <item id='4815' name="elemental_bow_quick_recovery">
@@ -244,6 +250,12 @@
     <set val='293' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!--SA: Miser--> 
+    <set val='7' order='0x08' stat='soulShotCount'> 
+       <and>
+          <game chance="30"/> 
+       </and> 
+    </set>
   </for>
 </item>
 <item id='4818' name="elven_bow_of_nobility_cheap_shot">
@@ -255,6 +267,12 @@
     <set val='293' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Cheap Shot -->
+    <set val='2' order='0x08' stat='MpConsume'> 
+       <and>
+          <game chance="46"/> 
+       </and> 
+    </set>
   </for>
 </item>
 <item id='4819' name="akat_long_bow_guidance">
@@ -292,6 +310,12 @@
     <set val='227' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!--SA: Miser--> 
+    <set val='8' order='0x08' stat='soulShotCount'> 
+       <and>
+          <game chance="30"/> 
+       </and> 
+    </set>
   </for>
 </item>
 <item id='4822' name="eminence_bow_guidance">
@@ -316,6 +340,12 @@
     <set val='293' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!--SA: Miser--> 
+    <set val='9' order='0x08' stat='soulShotCount'> 
+       <and>
+          <game chance="30"/> 
+       </and> 
+    </set>
   </for>
 </item>
 <item id='4824' name="eminence_bow_cheap_shot">
@@ -327,6 +357,12 @@
     <set val='293' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Cheap Shot -->
+    <set val='1' order='0x08' stat='MpConsume'> 
+       <and>
+          <game chance="34"/> 
+       </and> 
+    </set>
   </for>
 </item>
 <item id='4825' name="dark_elven_long_bow_evasion">
@@ -364,6 +400,12 @@
     <set val='227' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!--SA: Miser--> 
+    <set val='2' order='0x08' stat='soulShotCount'> 
+       <and>
+          <game chance="30"/> 
+       </and> 
+    </set>
   </for>
 </item>
 <item id='4828' name="bow_of_peril_guidance">
@@ -401,6 +443,12 @@
     <set val='293' order='0x08' stat='pAtkSpd' />
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
+    <!-- SA: Cheap Shot -->
+    <set val='2' order='0x08' stat='MpConsume'> 
+       <and>
+          <game chance="42"/> 
+       </and> 
+    </set>
   </for>
 </item>
 <item id='4831' name="carnage_bow_critical_bleed">
