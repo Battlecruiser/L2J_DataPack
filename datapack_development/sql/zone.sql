@@ -191,3 +191,10 @@ insert into zone values
 (20, "Olympiad Stadia", "Stadia 20",-92632, -249706, -94999, -252316, -3331, 0),
 (21, "Olympiad Stadia", "Stadia 21",-87816, -254280, -86332, -256466, -3331, 0),
 (22, "Olympiad Stadia", "Stadia 22",-113332, -211881, -115713, -214513, -3331, 0);
+
+insert into zone values
+(1, 'MotherTree', 'Shadow of the Mother Tree', 47600, 38290, 44483, 41745, -3491, 0),
+(2, 'MotherTree', 'Elven Village', 46249, 50036, 44431, 49176, -3060, 0),
+(3, 'MotherTree', 'East Elven Village', 20580, 51713, 21667, 50393, -3690, 0),
+(4, 'MotherTree', 'Elven Fortress', 24993, 80655, 25454, 82314, -3165, 0),
+(5, 'MotherTree', 'Iris Lake', 57052, 85445, 57937, 87057, -3658, 0);
