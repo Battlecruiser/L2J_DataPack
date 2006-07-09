@@ -10,7 +10,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- Critical Bleed -->
-    <skill onCrit="1" id="96" lvl="5" chance="42" />
+    <skill onCrit='1' id='96' lvl='5' chance='42' />
   </for>
 </item>
 <item id='5601' name="meteor_shower_rsk._haste">
@@ -23,9 +23,9 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Haste -->
-    <mul order="0x50" stat="pAtkSpd" val="1.11">
+    <mul order='0x50' stat='pAtkSpd' val='1.11'>
       <and>
-        <player hp="60" />
+        <player hp='60' />
       </and>
     </mul>
   </for>
@@ -67,7 +67,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- Critical Drain -->
-    <skill onCrit="1" id="3022" lvl="7" />
+    <skill onCrit='1' id='3022' lvl='7' />
   </for>
 </item>
 <item id='5605' name="branch_of_the_mother_tree_conversion">
@@ -129,7 +129,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Critical Bleed -->
-    <skill onCrit="1" id="96" lvl="5" chance="35" />
+    <skill onCrit='1' id='96' lvl='5' chance='35' />
   </for>
 </item>
 <item id='5610' name="carnage_bow_mana_up">
@@ -185,7 +185,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- Critical Poison -->
-    <skill onCrit="1" id="1168" lvl="6" chance="18" />
+    <skill onCrit='1' id='1168' lvl='6' chance='18' />
   </for>
 </item>
 <item id='5614' name="bloody_orchid_focus">
@@ -222,7 +222,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- Critical Bleed -->
-    <skill onCrit="1" id="96" lvl="5" chance="12" />
+    <skill onCrit='1' id='96' lvl='5' chance='12' />
   </for>
 </item>
 <item id='5617' name="soul_separator_guidance">
@@ -261,9 +261,9 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Haste -->
-    <mul order="0x50" stat="pAtkSpd" val="1.11">
+    <mul order='0x50' stat='pAtkSpd' val='1.11'>
       <and>
-        <player hp="60" />
+        <player hp='60' />
       </and>
     </mul>
   </for>
@@ -318,9 +318,9 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Evasion -->
-    <add order="0x40" stat="rEvas" val="6">
+    <add order='0x40' stat='rEvas' val='6'>
       <and>
-        <player hp="60" />
+        <player hp='60' />
       </and>
     </add>
   </for>
@@ -374,7 +374,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- Critical Stun -->
-    <skill onCrit="1" id="3070" lvl="1" chance="25" />
+    <skill onCrit='1' id='3070' lvl='1' chance='25' />
   </for>
 </item>
 <item id='5628' name="halberd_wide_blow">
@@ -468,7 +468,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- Critical Poison -->
-    <skill onCrit="1" id="1168" lvl="6" chance="10" />
+    <skill onCrit='1' id='1168' lvl='6' chance='10' />
   </for>
 </item>
 <item id='5636' name="tallum_blade_haste">
@@ -522,7 +522,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- Magic Paralyze -->
-    <skill onCast="1" id="1170" lvl="1" chance="5" />
+    <skill onCast='1' id='1170' lvl='1' chance='5' />
   </for>
 </item>
 <item id='5640' name="elemental_sword_empower">
@@ -562,7 +562,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- Magic Silence -->
-    <skill onCast="1" id="1064" lvl="1" chance="10" />
+    <skill onCast='1' id='1064' lvl='1' chance='10' />
   </for>
 </item>
 <item id='5643' name="sword_of_miracles__acumen">
@@ -601,7 +601,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Critical Bleed -->
-    <skill onCrit="1" id="96" lvl="5" chance="24" />
+    <skill onCrit='1' id='96' lvl='5' chance='24' />
   </for>
 </item>
 <item id='5646' name="dragon_slayer_critical_drain">
@@ -614,7 +614,7 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Critical Drain -->
-    <skill onCrit="1" id="3022" lvl="4" />
+    <skill onCrit='1' id='3022' lvl='4' />
   </for>
 </item>
 <item id='5647' name="dark_legions_edge_critical_damage">
@@ -653,9 +653,9 @@
     <enchant val='0' order='0x0C' stat='pAtk' />
     <enchant val='0' order='0x0C' stat='mAtk' />
     <!-- SA: Rsk. Focus -->
-    <add order="0x40" stat="rCrit" val="130">
+    <add order='0x40' stat='rCrit' val='130'>
 		<and>        
-      		<player hp="60" />
+            <player hp='60' />
 		</and>
 	</add>
   </for>
