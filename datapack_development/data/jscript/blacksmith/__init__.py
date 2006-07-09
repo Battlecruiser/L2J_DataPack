@@ -4,7 +4,6 @@ __all__ = [
 '1003_reseal',
 '1004_create',
 '1005_unseal',
-'1006_duals',
 '1007_enhance',
 '1008_enhance_mammon',
 '1009_remove_mammon',
