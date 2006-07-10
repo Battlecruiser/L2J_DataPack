@@ -4399,7 +4399,7 @@ INSERT INTO `etcitem` (`item_id`, `name`, `crystallizable`, `item_type`, `weight
  (5962, 'Kail''s Gold Golem', 'false', 'quest', 0, 'stackable', 'liquid', 'none', 0, 1000, 0, 'false', 'q_kails_gold_golem', 'none', '0'),
  (5963, 'Kail''s Blood Dragon', 'false', 'quest', 0, 'stackable', 'liquid', 'none', 0, 1000, 0, 'false', 'q_kails_blood_dragon', 'none', '0'),
  (5964, 'Warehouse Keeper''s Medal', 'false', 'quest', 0, 'stackable', 'liquid', 'none', 0, 100, 0, 'false', 'q_irongate_medal', 'none', '0'),
- (5965, 'Blank Scroll', 'false', 'none', 0, 'stackable', 'liquid', 'none', 0, 500, 0, 'false', 'q_blank_scrl', 'none', '2'),
+ (5965, 'Blank Scroll', 'false', 'none', 0, 'stackable', 'liquid', 'none', 0, 500, 0, 'true', 'q_blank_scrl', 'none', '2'),
  (5966, 'Ancient Red Papyrus', 'false', 'none', 0, 'stackable', 'liquid', 'none', 0, 400, 0, 'true', 'ancient_papyrus1', 'none', '2'),
  (5967, 'Ancient Blue Papyrus', 'false', 'none', 0, 'stackable', 'liquid', 'none', 0, 400, 0, 'true', 'ancient_papyrus2', 'none', '2'),
  (5968, 'Ancient Black Papyrus', 'false', 'none', 0, 'stackable', 'liquid', 'none', 0, 400, 0, 'true', 'ancient_papyrus3', 'none', '2'),
