@@ -4104,7 +4104,7 @@ INSERT INTO `etcitem` (`item_id`, `name`, `crystallizable`, `item_type`, `weight
  (5538, 'Dragon Grinder Edge', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 72914, 0, 'true', 'dragon_grinder_edge', 'material', '1'),
  (5539, 'Blood Tornado Edge', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 59308, 0, 'true', 'blood_tornado_edge', 'material', '1'),
  (5540, 'Orcish Halberd Edge', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 62500, 0, 'true', 'orcish_halbard_edge', 'material', '1'),
- (5541, 'Tallum Glaive Edge', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 72929, 0, 'true', 'tallum_glaive_edge', 'material', '21'),
+ (5541, 'Tallum Glaive Edge', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 72929, 0, 'true', 'tallum_glaive_edge', 'material', '1'),
  (5542, 'Halberd Edge', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 59308, 0, 'true', 'halbard_edge', 'material', '1'),
  (5543, 'Dasparion''s Staff Edge', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 58754, 0, 'true', 'dasparion''s_staff_head', 'material', '1'),
  (5544, 'Branch of The Mother Tree Head', 'false', 'material', 60, 'stackable', 'liquid', 'none', 0, 72986, 0, 'true', 'worldtree''s_branch_head', 'material', '1'),
