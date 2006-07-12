@@ -93,7 +93,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="6" name="DamOverTime" time="5" val="#dmg"/>
+    <effect count="10" name="DamOverTime" time="3" val="#dmg"/>
   </for>
 </skill>
 <skill id="104" levels="1" name="Detect Plant Weakness">
@@ -588,7 +588,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="6" name="DamOverTime" time="5" val="#dmg" abnormal="poison"/>
+    <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison"/>
   </for>
 </skill>
 <skill id="130" levels="2" name="Thrill Fight">
