@@ -1580,7 +1580,7 @@
   <set name="buffDuration" val="3000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="6" name="DamOverTime" time="5" val="#poison-dmg" abnormal="poison"/>
+    <effect count="10" name="DamOverTime" time="3" val="#poison-dmg" abnormal="poison"/>
   </for>
 </skill>
 <skill id="85" levels="1" name="none">

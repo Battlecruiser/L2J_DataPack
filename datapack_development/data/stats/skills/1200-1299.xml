@@ -180,7 +180,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="3" name="DamOverTime" time="5" val="#dmg"/>
+    <effect count="10" name="DamOverTime" time="3" val="#dmg"/>
   </for>
 </skill>
 <skill id="1210" levels="4" name="Seal of Gloom">
