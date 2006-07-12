@@ -14,7 +14,7 @@ CHANCE2 = 10
 #Syntax: [itemid,max qty],
 RANDOM_REWARDS=[[736,15], #SoE
                 [1061,20],#Healing Potion
-                [1062,15],#Haste Potion
+                [734,15], #Haste Potion
                 [735,15], #Alacrity Potion
                 [1878,35],#Braided Hemp
                 [1875,15],#Stone of Purity
