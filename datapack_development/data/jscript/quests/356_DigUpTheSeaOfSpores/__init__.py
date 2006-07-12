@@ -31,13 +31,13 @@ class Quest (JQuest) :
      else :
        htmltext = "7717-4.htm"
        st.exitQuest(1)
-   elif event in [ "7717-10.htm", "7717-9.htm" ] and carn==herb==50 :
+   elif event in [ "7717-10.htm", "7717-9.htm" ] and (carn>=50 and herb>=50) :
      if event == "7717-9.htm" :
         st.giveItems(57,44000)
      else :
         st.addExpAndSp(36000,2600)
-     st.takeItems(CARNIVORE_SPORE,50)
-     st.takeItems(HERBIBOROUS_SPORE,50)
+     st.takeItems(CARNIVORE_SPORE,-1)
+     st.takeItems(HERBIBOROUS_SPORE,-1)
      st.playSound("ItemSound.quest_finish")
      st.exitQuest(1)
    return htmltext
@@ -46,11 +46,13 @@ class Quest (JQuest) :
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    cond = st.getInt("cond")
+   carn=st.getQuestItemsCount(CARNIVORE_SPORE)
+   herb=st.getQuestItemsCount(HERBIBOROUS_SPORE)
    if cond == 0 :
      htmltext = "7717-0.htm"
    elif cond <> 3 :
      htmltext = "7717-6.htm"
-   else :
+   elif cond == 3 or (carn>=50 and herb>=50) :
      htmltext = "7717-7.htm"
    return htmltext
 
@@ -61,7 +63,7 @@ class Quest (JQuest) :
    if npcId == SPORE_ZOMBIE and carn < 50 :
      st.giveItems(CARNIVORE_SPORE,1)
      if carn == 49 :
-       if herb == 50 :
+       if herb >= 50 :
          st.playSound("ItemSound.quest_middle")
          st.set("cond","3")
        else :
@@ -72,7 +74,7 @@ class Quest (JQuest) :
    elif npcId == ROTTING_TREE and herb < 50 :
      st.giveItems(HERBIBOROUS_SPORE,1)
      if herb == 49 :
-       if carn == 50 :
+       if carn >= 50 :
          st.playSound("ItemSound.quest_middle")
          st.set("cond","3")
        else :
