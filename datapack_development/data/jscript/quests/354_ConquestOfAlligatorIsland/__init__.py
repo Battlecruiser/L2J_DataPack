@@ -99,7 +99,7 @@ STARTED.addTalkId(7895)
 STARTED.addQuestDrop(991,ALLIGATOR_TOOTH,1)
 STARTED.addQuestDrop(991,TORN_MAP_FRAGMENT,1)
 
-for i in range(804,808)+[991] :
+for i in range(804,809)+[991] :
     STARTED.addKillId(i)
 
 print "importing quests: 354: Conquest Of Alligator Island"
