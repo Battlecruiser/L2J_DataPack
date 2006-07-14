@@ -526,4 +526,7 @@ for mobId in DROPLIST.keys():
 
 PROGRESS.addAttackId(5181)
 
+for i in range(3839,3848)+range(3866,3870):
+    PROGRESS.addQuestDrop(5181,i,1)
+
 print "importing quests: 503: " + qd
