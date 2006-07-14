@@ -47,9 +47,9 @@ class Quest (JQuest) :
        htmltext = "7095-0a.htm"
        st.exitQuest(1)
    elif cond == 1 :
-     if not st.getQuestItemsCount(TREASURE_CHEST) == 0 :
+     if not st.getQuestItemsCount(TREASURE_CHEST) :
         htmltext = "7095-2.htm"
-     elif st.getQuestItemsCount(TREASURE_CHEST) :
+     else :
         htmltext = "7095-4.htm"
    return htmltext
 
