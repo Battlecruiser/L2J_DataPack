@@ -176,6 +176,7 @@ __all__ = [
 '419_GetAPet',
 '420_LittleWings',
 '421_LittleWingAdventures',
+'426_FishingShot',
 '431_WeddingMarch',
 '432_BirthdayPartySong',
 '501_ProofOfClanAlliance',
