@@ -17,32 +17,28 @@ class Quest (JQuest) :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-    else :
-      count = st.getQuestItemsCount(WIND_SHARD)
-      if count :
-        st.giveItems(ADENA,30*count)
-      st.takeItems(WIND_SHARD,-1)
-      if event == "7361-08.htm" :
-        st.playSound("ItemSound.quest_finish")
-        st.exitQuest(1)
+    elif event == "7361-08.htm" :
+      st.playSound("ItemSound.quest_finish")
+      st.exitQuest(1)
     return htmltext
 
  def onTalk (Self,npc,st):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   id = st.getState()
-   if id == CREATED :
-     st.set("cond","0")
-   if int(st.get("cond"))==0 :
+   cond=st.getInt("cond")
+   if cond == 0 :
      if st.getPlayer().getLevel() >= 18 :
        htmltext = "7361-03.htm"
      else:
        htmltext = "7361-02.htm"
        st.exitQuest(1)
    else :
-     if not st.getQuestItemsCount(WIND_SHARD) :
-        htmltext = "7361-05.htm"
+     count = st.getQuestItemsCount(WIND_SHARD)
+     if count :
+       st.giveItems(ADENA,30*count)
+       st.takeItems(WIND_SHARD,-1)
+       htmltext = "7361-07.htm"
      else :
-        htmltext = "7361-07.htm"
+       htmltext = "7361-05.htm"
    return htmltext
 
  def onKill (self,npc,st):
