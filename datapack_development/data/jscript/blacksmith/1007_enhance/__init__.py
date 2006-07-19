@@ -154,7 +154,7 @@ class Quest (JQuest) :
             if Item.getItemId() in EnhanceList and not Item.isEquipped():
                 Icon, Enhancements = EnhanceList[Item.getItemId()]
                 EnhancID = 0
-                for Name, WeaponID, CrystalID, MaterialID, MaterialQuant in Enhancements:
+                for Name, WeaponID, CrystalID, MaterialID, MaterialQuant,Adena in Enhancements:
                     htmltext += "<tr>\n<td width=35><img src=\"icon." + Icon + "\" width=32 height=32 align=\"left\"></td>\n" \
                         "<td width=835><table border=0 width=\"835\">\n<tr><td><a action=\"bypass -h Quest 1007_enhance 2_" + str(Item.getObjectId()) + "." + str(EnhancID) + "\">" + getItemName(Item) + ": " + Name + "</a></td></tr>\n" \
                         "<tr><td><font color=\"B09878\">Enhance</font></td></tr></table></td>\n</tr>"
