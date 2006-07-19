@@ -34,7 +34,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,st) :
-   if st.getRandom(2) == 0 :
+   if st.getRandom(20) == 0 :
      st.giveItems(SWEET_FLUID,1)
      st.playSound("ItemSound.quest_itemget")  
    return
