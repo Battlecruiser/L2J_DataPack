@@ -40,7 +40,7 @@ RETRY_PRICE=10000
 
 def leader(st) :
     leader=st.getPlayer().getClan().getLeader().getPlayerInstance()  
-    if leader != None :  
+    if leader :  
        leader = leader.getQuestState(qn)  
     return leader  
 
@@ -255,8 +255,8 @@ class Quest (JQuest) :
        if st.getPlayer().isClanLeader() == 1 :
           st.exitQuest(1)
        else :
-          if leader(st) != None :  
-             game_state=int(leader(st).get("chest_game"))  
+          if leader(st) :  
+             game_state=leader(st).getInt("chest_game")  
              if game_state == 0 :  
                 if int(leader(st).get("chest_try")) == 0 :  
                    htmltext="7758-01.htm"  
