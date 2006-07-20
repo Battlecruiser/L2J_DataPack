@@ -319,7 +319,7 @@ class Quest (JQuest) :
 				htmltext = "7760-01.htm"
 				st.exitQuest(1)
 			return htmltext
-		elif st.getPlayer().getClan().getLevel() == 5:											# player has level 5 clan already
+		elif st.getPlayer().getClan() and st.getPlayer().getClan().getLevel() == 5:				# player has level 5 clan already
 			return "<html><head><body>This quest has already been completed.</body></html>"
 		elif id == COMPLETED:																	# player has proof, and has finished quest as leader
 			return "7760.htm"
