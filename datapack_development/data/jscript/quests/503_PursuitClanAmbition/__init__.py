@@ -480,8 +480,9 @@ class Quest (JQuest) :
 					setLeaderVar(st,"ImpGraveKeeper","2")
 				else:
 					players = npc.getKnownList().getKnownPlayers()
-					player = players[st.getRandom(int(players.size()))]
-					player.setXYZ(185462,20342,-3250)
+					if players.size() > 0 :
+						player = players[st.getRandom(int(players.size()))]
+						player.setXYZ(185462,20342,-3250)
 		return
 
 	def onKill (self,npc,st):
