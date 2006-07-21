@@ -6,8 +6,7 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 CLAY_TABLET_ID = 1025
-SICKLE_ID = 153
-ADENA_ID = 57
+ENCHANT_ARMOR_D = 956
 
 class Quest (JQuest) :
 
@@ -57,8 +56,7 @@ class Quest (JQuest) :
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
           st.set("onlyone","1")
-          st.giveItems(SICKLE_ID,1)
-          st.giveItems(ADENA_ID,6000)
+          st.giveItems(ENCHANT_ARMOR_D,1)
           htmltext = "7031-06.htm"
    return htmltext
 
