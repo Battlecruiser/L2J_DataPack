@@ -79,6 +79,7 @@ class Quest (JQuest) :
         if Level >= 20 and st.getQuestItemsCount(ETERNITY_DIAMOND_ID) >= 1:
           st.takeItems(ETERNITY_DIAMOND_ID,1)
           st.player.setClassId(26)
+          st.player.setBaseClass(26)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "7037-18.htm"
@@ -94,6 +95,7 @@ class Quest (JQuest) :
         if Level >= 20 and st.getQuestItemsCount(LEAF_OF_ORACLE_ID) >= 1:
           st.takeItems(LEAF_OF_ORACLE_ID,1)
           st.player.setClassId(29)
+          st.player.setBaseClass(29)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "7037-22.htm"
@@ -110,6 +112,7 @@ class Quest (JQuest) :
         if Level >= 20 and st.getQuestItemsCount(BEAD_OF_SEASON_ID) >= 1:
           st.takeItems(BEAD_OF_SEASON_ID,1)
           st.player.setClassId(11)
+          st.player.setBaseClass(11)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "7037-26.htm"
@@ -126,6 +129,7 @@ class Quest (JQuest) :
         if Level >= 20 and st.getQuestItemsCount(MARK_OF_FAITH_ID) >= 1:
           st.takeItems(MARK_OF_FAITH_ID,1)
           st.player.setClassId(15)
+          st.player.setBaseClass(15)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "7037-30.htm"

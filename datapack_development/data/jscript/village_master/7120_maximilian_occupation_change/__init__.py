@@ -80,6 +80,7 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_LIFE_ID,1)
             st.takeItems(MARK_OF_HEALER_ID,1)
             st.player.setClassId(30)
+            st.player.setBaseClass(30)
             st.player.broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "7120-15.htm"
@@ -99,6 +100,7 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_TRUST_ID,1)
             st.takeItems(MARK_OF_HEALER_ID,1)
             st.player.setClassId(16)
+            st.player.setBaseClass(16)
             st.player.broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "7120-19.htm"
@@ -118,6 +120,7 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_TRUST_ID,1)
             st.takeItems(MARK_OF_REFORMER_ID,1)
             st.player.setClassId(17)
+            st.player.setBaseClass(17)
             st.player.broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "7120-23.htm"
