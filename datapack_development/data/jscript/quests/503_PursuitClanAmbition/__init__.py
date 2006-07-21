@@ -481,7 +481,7 @@ class Quest (JQuest) :
 				else:
 					players = npc.getKnownList().getKnownPlayers()
 					if players.size() > 0 :
-						player = players[st.getRandom(int(players.size()))]
+						player = players.get(st.getRandom(int(players.size())))
 						player.setXYZ(185462,20342,-3250)
 		return
 
