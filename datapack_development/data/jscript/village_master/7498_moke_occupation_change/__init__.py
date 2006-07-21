@@ -46,6 +46,7 @@ class Quest (JQuest) :
         if Level >= 20 and st.getQuestItemsCount(RING_OF_RAVEN_ID) >= 1:
           st.takeItems(RING_OF_RAVEN_ID,1)
           st.player.setClassId(54)
+          st.player.setBaseClass(54)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "7498-08.htm"

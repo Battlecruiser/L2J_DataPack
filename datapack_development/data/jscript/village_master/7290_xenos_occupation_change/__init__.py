@@ -81,6 +81,7 @@ class Quest (JQuest) :
         if Level >= 20 and st.getQuestItemsCount(GAZE_OF_ABYSS_ID) >= 1:
           st.takeItems(GAZE_OF_ABYSS_ID,1)
           st.player.setClassId(32)
+          st.player.setBaseClass(32)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "7290-18.htm"
@@ -96,6 +97,7 @@ class Quest (JQuest) :
         if Level >= 20 and st.getQuestItemsCount(IRON_HEART_ID) >= 1:
           st.takeItems(IRON_HEART_ID,1)
           st.player.setClassId(35)
+          st.player.setBaseClass(35)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "7290-22.htm"
@@ -111,6 +113,7 @@ class Quest (JQuest) :
         if Level >= 20 and st.getQuestItemsCount(JEWEL_OF_DARKNESS_ID) >= 1:
           st.takeItems(JEWEL_OF_DARKNESS_ID,1)
           st.player.setClassId(39)
+          st.player.setBaseClass(39)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "7290-26.htm"
@@ -126,6 +129,7 @@ class Quest (JQuest) :
         if Level >= 20 and st.getQuestItemsCount(ORB_OF_ABYSS_ID) >= 1:
           st.takeItems(ORB_OF_ABYSS_ID,1)
           st.player.setClassId(42)
+          st.player.setBaseClass(42)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "7290-30.htm"

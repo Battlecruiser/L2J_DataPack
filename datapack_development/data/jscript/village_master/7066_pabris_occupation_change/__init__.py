@@ -89,6 +89,7 @@ class Quest (JQuest) :
         if Level >= 20 and st.getQuestItemsCount(ELVEN_KNIGHT_BROOCH_ID) >= 1:
           st.takeItems(ELVEN_KNIGHT_BROOCH_ID,1)
           st.player.setClassId(19)
+          st.player.setBaseClass(19)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "7066-21.htm"
@@ -104,6 +105,7 @@ class Quest (JQuest) :
         if Level >= 20 and st.getQuestItemsCount(REORIA_RECOMMENDATION_ID) >= 1:
           st.takeItems(REORIA_RECOMMENDATION_ID,1)
           st.player.setClassId(22)
+          st.player.setBaseClass(22)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "7066-25.htm"
@@ -119,6 +121,7 @@ class Quest (JQuest) :
         if Level >= 20 and st.getQuestItemsCount(MEDALLION_OF_WARRIOR_ID) >= 1:
           st.takeItems(MEDALLION_OF_WARRIOR_ID,1)
           st.player.setClassId(1)
+          st.player.setBaseClass(1)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "7066-29.htm"
@@ -134,6 +137,7 @@ class Quest (JQuest) :
         if Level >= 20 and st.getQuestItemsCount(SWORD_OF_RITUAL_ID) >= 1:
           st.takeItems(SWORD_OF_RITUAL_ID,1)
           st.player.setClassId(4)
+          st.player.setBaseClass(4)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "7066-33.htm"
@@ -149,6 +153,7 @@ class Quest (JQuest) :
         if Level >= 20 and st.getQuestItemsCount(BEZIQUES_RECOMMENDATION_ID) >= 1:
           st.takeItems(BEZIQUES_RECOMMENDATION_ID,1)
           st.player.setClassId(7)
+          st.player.setBaseClass(7)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "7066-37.htm"

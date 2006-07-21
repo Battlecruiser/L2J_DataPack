@@ -61,6 +61,7 @@ class Quest (JQuest) :
         if Level >= 20 and st.getQuestItemsCount(MARK_OF_RAIDER_ID) >= 1:
           st.takeItems(MARK_OF_RAIDER_ID,1)
           st.player.setClassId(45)
+          st.player.setBaseClass(45)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "7505-12.htm"
@@ -76,6 +77,7 @@ class Quest (JQuest) :
         if Level >= 20 and st.getQuestItemsCount(KHAVATARI_TOTEM_ID) >= 1:
           st.takeItems(KHAVATARI_TOTEM_ID,1)
           st.player.setClassId(47)
+          st.player.setBaseClass(47)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "7505-16.htm"
@@ -91,6 +93,7 @@ class Quest (JQuest) :
         if Level >= 20 and st.getQuestItemsCount(MASK_OF_MEDIUM_ID) >= 1:
           st.takeItems(MASK_OF_MEDIUM_ID,1)
           st.player.setClassId(50)
+          st.player.setBaseClass(50)
           st.player.broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "7505-20.htm"

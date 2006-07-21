@@ -58,6 +58,7 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_GUILDSMAN_ID,1)
             st.takeItems(MARK_OF_PROSPERITY_ID,1)
             st.player.setClassId(57)
+            st.player.setBaseClass(57)
             st.player.broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "7512-08.htm"
