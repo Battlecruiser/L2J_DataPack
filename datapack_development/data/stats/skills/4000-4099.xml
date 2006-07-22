@@ -98,7 +98,7 @@
   </for>
 </skill>
 <skill id="4009" levels="6" name="Resist Fire">
-  <table name="#res"> 1.25 1.30 1.35 1.40 1.45 1.50 </table>
+  <table name="#res"> 1.15 1.30 1.50 1.70 1.90 2.0 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="4000"/>
@@ -113,7 +113,7 @@
   </for>
 </skill>
 <skill id="4010" levels="6" name="Resist Water">
-  <table name="#res"> 1.25 1.30 1.35 1.40 1.45 1.50 </table>
+  <table name="#res"> 1.15 1.30 1.50 1.70 1.90 2.0 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="4000"/>
@@ -128,7 +128,7 @@
   </for>
 </skill>
 <skill id="4011" levels="6" name="Resist Wind">
-  <table name="#res"> 1.25 1.30 1.35 1.40 1.45 1.50 </table>
+  <table name="#res"> 1.15 1.30 1.50 1.70 1.90 2.0 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="4000"/>
@@ -144,7 +144,7 @@
 </skill>
 <skill id="4012" levels="1" name="Resist Earth">
 <!-- NOT USED IN C4 -->
-  <table name="#res"> 1.25 1.3 1.35 1.4 1.45 1.5 </table>
+  <table name="#res"> 1.15 1.30 1.50 1.70 1.90 2.0 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="4000"/>
@@ -852,6 +852,12 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <add stat="rootRes" val="1000" order="0x40"/>
+    <add stat="paralyzeRes" val="1000" order="0x40"/>
+    <add stat="sleepRes" val="1000" order="0x40"/>
+    <add stat="confusionRes" val="1000" order="0x40"/>
+    <mul stat="fireRes" val="0.0" order="0x50"/>
+    <add stat="bowWpnRes" val="80" order="0x40"/>
   </for>
 </skill>
 <skill id="4063" levels="1" name="Paralysis">
@@ -980,13 +986,14 @@
   </for>
 </skill>
 <skill id="4071" levels="6" name="Resist Archery">
+  <table name="#res"> 1.15 1.30 1.50 1.70 1.90 2.0 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-  	<add order="0x40" stat="bowWpnRes" val="80"/>
+  	<add order="0x40" stat="bowWpnRes" val="#res"/>
   </for>
 </skill>
 <skill id="4072" levels="12" name="Shock">
@@ -1195,7 +1202,7 @@
 </skill>
 <skill id="4084" levels="10" name="Resist Physical Attack">
   <!-- Done by dc -->
-  <table name="#Tab-pDef"> 1.2 1.25 1.3 1.35 1.4 1.45 1.5 1.55 1.6 1.65 </table>
+  <table name="#Tab-pDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2.0 3.3 10.0 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>

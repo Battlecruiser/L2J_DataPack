@@ -335,8 +335,8 @@
   </for>
 </skill>
 <skill id="319" levels="2" name="Agile Movement">
-  <table name="#Accuracy"> 1.1 1.2 </table>
-  <table name="#Speed"> 6 10 </table>
+  <table name="#Accuracy"> 2 3 </table>
+  <table name="#Speed"> 5 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -350,14 +350,14 @@
 		</not>
       </and>
     </add>
-    <mul order="0x50" stat="accCombat" val="#Accuracy">
+    <add order="0x40" stat="accCombat" val="#Accuracy">
       <and>
         <using kind="Light"/>
         <not>
 		<using kind="Heavy,Magic"/>
 		</not>
 	  </and>
-    </mul>
+    </add>
   </for>
 </skill>
 <skill id="320" levels="10" name="Wrath">
@@ -483,10 +483,9 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul stat="rootRes" val="1.5" order="0x50"/>
-    <mul stat="sleepRes" val="1.5" order="0x50"/>
-    <mul stat="confusionRes" val="1.5" order="0x50"/>
-    <mul stat="muteRes" val="1.5" order="0x50"/>
+    <mul stat="rootRes" val="1.2" order="0x50"/>
+    <mul stat="sleepRes" val="1.2" order="0x50"/>
+    <mul stat="confusionRes" val="1.2" order="0x50"/>
   </for>
 </skill>
 <skill id="329" levels="1" name="Health">
@@ -497,8 +496,8 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul stat="bleedRes" order="0x50" val="1.5"/> 
-    <mul stat="poisonRes" order="0x50" val="1.5"/>
+    <mul stat="bleedRes" order="0x50" val="1.2"/> 
+    <mul stat="poisonRes" order="0x50" val="1.2"/>
   </for>
 </skill>
 <skill id="330" levels="1" name="Skill Mastery">

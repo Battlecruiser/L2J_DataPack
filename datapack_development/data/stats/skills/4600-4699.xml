@@ -1104,8 +1104,8 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
    <for>
-    <mul order="0x50" stat="fireRes" val="1.89"/>
-    <div order="0x50" stat="waterRes" val="1.67"/>
+    <add order="0x40" stat="fireRes" val="30"/>
+    <sub order="0x40" stat="waterRes" val="30"/>
    </for>
 </skill>
 <skill id="4680" levels="1" name="Valakas Lava Skin">

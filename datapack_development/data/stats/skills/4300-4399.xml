@@ -442,16 +442,19 @@
 </skill>
 <skill id="4332" levels="1" name="Mental Aegis">
 <!--- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <sub stat="rootRes" val="100" order="0x40"/>
+    <sub stat="sleepRes" val="100" order="0x40"/>
+    <sub stat="confusionRes" val="100" order="0x40"/>
   </for>
 </skill>
 <skill id="4333" levels="6" name="Resist Dark Attack">
 <!--- TODO -->
-  <table name="#Tab-darkRes"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
+  <table name="#Tab-darkRes"> 1.15 1.30 1.50 1.70 1.90 2.0 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
@@ -481,7 +484,7 @@
 </skill>
 <skill id="4336" levels="5" name="Dark Attack Weak Point">
 <!--- TODO -->
-  <table name="#Tab-darkRes"> 10 15 20 25 30 </table>
+  <table name="#Tab-darkRes"> 10 15 20 30 50 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
@@ -493,7 +496,7 @@
 </skill>
 <skill id="4337" levels="6" name="Resist Sacred Attack">
 <!--- TODO -->
-  <table name="#Tab-holyRes"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
+  <table name="#Tab-holyRes"> 1.15 1.30 1.50 1.70 1.90 2.0 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
@@ -1112,12 +1115,12 @@
   </for>
 </skill>
 <skill id="4376" levels="1" name="Strong Resistance to P.Atk.">
-<!--- TODO -->
   <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+     <mul order="0x50" stat="pDef" val="3"/>
   </for>
 </skill>
 <skill id="4377" levels="12" name="Wield Temper">
@@ -1154,7 +1157,7 @@
   </for>
 </skill>
 <skill id="4379" levels="6" name="Resist Pole Arm">
-  <table name="#Tab-poleRes"> 40 50 60 70 80 90 </table>
+  <table name="#Tab-poleRes"> 15 30 50 70 90 100 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1251,28 +1254,23 @@ lowers the effectiveness of HP regeneration magic.-->
   </for>
 </skill>
 <skill id="4388" levels="6" name="Resist Paralysis">
-<!--- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#power"> 15 30 50 70 90 100 </table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+     <add order="0x40" stat="paralyzeRes" val="#power"/>
   </for>
 </skill>
 <skill id="4389" levels="6" name="Resist Mental Derangement">
-<!--- TODO
-1.Provides resistance against mental attack.
-2.Resist Mental Derangement
-3.Resist Mental Derangement
-4.Resist Mental Derangement
-5.Possesses strong resistance against mental attacks.
-6.Possesses strong resistance against mental attacks.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#power"> 15 30 50 70 90 100 </table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <add order="0x40" stat="confusionRes" val="#power"/>
   </for>
 </skill>
 <skill id="4390" levels="1" name="NPC Abnormal Immunity">
