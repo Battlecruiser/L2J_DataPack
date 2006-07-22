@@ -1047,14 +1047,14 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4273" levels="6" name="Resist Dagger">
-  <table name="#Tab-daggerRes"> 1.15 1.30 1.50 1.70 1.90 2.0 </table>
+  <table name="#Tab-daggerRes"> 15 30 50 70 90 100 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x50" stat="daggerWpnRes" val="#Tab-daggerRes"/>
+    <add order="0x40" stat="daggerWpnRes" val="#Tab-daggerRes"/>
   </for>
 </skill>
 <skill id="4274" levels="5" name="Blunt Attack Weak Point">
@@ -1091,14 +1091,14 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4277" levels="6" name="Resist Poison">
-  <table name="#Tab-poisonRes"> 1.15 1.30 1.50 1.70 1.90 2.0 </table>
+  <table name="#Tab-poisonRes"> 15 30 50 70 90 100 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x50" stat="poisonRes" val="#Tab-poisonRes"/>
+    <add order="0x40" stat="poisonRes" val="#Tab-poisonRes"/>
   </for>
 </skill>
 <skill id="4278" levels="1" name="Dark Attack">
@@ -1172,25 +1172,25 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for> 
 </skill> 
 <skill id="4284" levels="6" name="Resist Bleeding">
-  <table name="#Tab-bleedRes"> 1.15 1.30 1.50 1.70 1.90 2.0 </table>
+  <table name="#Tab-bleedRes"> 15 30 50 70 90 100 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x50" stat="bleedRes" val="#Tab-bleedRes"/>
+    <add order="0x40" stat="bleedRes" val="#Tab-bleedRes"/>
   </for>
 </skill>
 <skill id="4285" levels="6" name="Resist Sleep">
-  <table name="#Tab-sleepRes"> 1.15 1.30 1.50 1.70 1.90 2.0 </table>
+  <table name="#Tab-sleepRes"> 15 30 50 70 90 100 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x50" stat="sleepRes" val="#Tab-sleepRes"/>
+    <add order="0x40" stat="sleepRes" val="#Tab-sleepRes"/>
   </for>
 </skill>
 <skill id="4286" levels="1" name="Greater Resist Sleep">
@@ -1204,14 +1204,14 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4287" levels="6" name="Resist Hold">
-  <table name="#Tab-rootRes"> 1.15 1.30 1.50 1.70 1.90 2.0 </table>
+  <table name="#Tab-rootRes"> 15 30 50 70 90 100 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x50" stat="rootRes" val="#Tab-rootRes"/>
+    <add order="0x40" stat="rootRes" val="#Tab-rootRes"/>
   </for>
 </skill>
 <skill id="4288" levels="1" name="Greater Resist Hold">
