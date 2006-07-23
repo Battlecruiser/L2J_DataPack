@@ -59,7 +59,9 @@ class Quest (JQuest) :
          elif random1==2 :
              htmltext = "7934-06.htm"
      elif event == "7934-06.htm" :
-         if random1==1 :
+         if random1==0 :
+             htmltext = "7934-06.htm"
+         elif random1==1 :
              htmltext = "7934-04.htm"
              st.giveItems(ORB,20)
          elif random1==2 :
