@@ -304,8 +304,8 @@
     <cond>
 	  <using kind="Shield"/>
     </cond>
-    <add stat="sDef" val="0.2" order="0x40"/>
-    <add stat="pDef" val="1.1" order="0x40"/>
+    <mul order="0x50" stat="sDef" val="1.2"/>
+    <mul order="0x50" stat="pDef" val="1.1"/>
   </for>
 </skill>
 <skill id="317" levels="1" name="Focus Attack">
