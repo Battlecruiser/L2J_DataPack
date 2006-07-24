@@ -87,17 +87,23 @@ class Quest (JQuest) :
      elif event == "7935-03.htm" :
          if orbs>=10 :
              st.takeItems(ORB,10)
+             st.set("toss","1")
          else :
              htmltext = "<html><head><body>You dont have enough orbs! Come back when you have some!</body></html>"
      elif event == "7935-05.htm" :
-         if random2==0 :
+         if st.getInt("toss"):
+           if random2==0 :
              row = st.getInt("row")
              row += 1
              st.giveItems(ORB,row*20)
              htmltext = "7935-04.htm"
-         else :
+           else :
              row = 0
-         st.set("row",str(row))
+           st.set("row",str(row))
+           st.unset("toss")
+         else:
+           st.takeItems(ORB,-1)
+           htmltext="Player is cheating"
      elif event == "7834-06.htm" :
          st.playSound("ItemSound.quest_finish")
          st.exitQuest(1)
