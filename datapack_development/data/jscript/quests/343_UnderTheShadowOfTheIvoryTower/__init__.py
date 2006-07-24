@@ -40,33 +40,47 @@ class Quest (JQuest) :
      elif event == "7934-03.htm" :
          if orbs>=10 :
              st.takeItems(ORB,10)
+             st.set("playing","1")
          else :
              htmltext = "<html><head><body>You dont have enough orbs! Come back when you have some!</body></html>"
      elif event == "7934-04.htm" :
-         if random1==0 :
+         if st.getInt("playing"):
+           if random1==0 :
              htmltext = "7934-05.htm"
              st.giveItems(ORB,10)
-         elif random1==1 :
+           elif random1==1 :
              htmltext = "7934-06.htm"
-         elif random1==2 :
+           elif random1==2 :
              st.giveItems(ORB,20)
+           st.unset("playing")
+         else:
+           htmltext="Player is cheating"
+           st.takeItems(ORB,-1)
      elif event == "7934-05.htm" :
-         if random1==0 :
+         if st.getInt("playing"):
+           if random1==0 :
              htmltext = "7934-04.htm"
              st.giveItems(ORB,20)
-         elif random1==1 :
+           elif random1==1 :
              st.giveItems(ORB,10)
-         elif random1==2 :
+           elif random1==2 :
              htmltext = "7934-06.htm"
+           st.unset("playing")
+         else:
+           htmltext="Player is cheating"
+           st.takeItems(ORB,-1)
      elif event == "7934-06.htm" :
-         if random1==0 :
-             htmltext = "7934-06.htm"
-         elif random1==1 :
+         if st.getInt("playing"):
+           if random1==1 :
              htmltext = "7934-04.htm"
              st.giveItems(ORB,20)
-         elif random1==2 :
+           elif random1==2 :
              htmltext = "7934-05.htm"
              st.giveItems(ORB,10)
+           st.unset("playing")
+         else:
+           htmltext="Player is cheating"
+           st.takeItems(ORB,-1)
      elif event == "7935-02.htm" :
          if orbs < 10 :
              htmltext = "<html><head><body>You dont have enough orbs! Come back when you have some!</body></html>"
