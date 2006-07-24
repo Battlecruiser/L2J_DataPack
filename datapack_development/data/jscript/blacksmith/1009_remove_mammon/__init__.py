@@ -93,8 +93,7 @@ class Quest (JQuest) :
  
  def onEvent (self,event,st) :
     htmltext = event
- 
-        # shows you how much materials you need to enhance, ok button to go forward, too
+    # shows you how much materials you need to enhance, ok button to go forward, too
     if event.startswith("2_"):
         reqEnh = event.replace("2_", "").split(".")
         ObjectID = int(reqEnh[0])
@@ -122,7 +121,6 @@ class Quest (JQuest) :
         if Item.getItemId() in EnhanceList:
             Icon, Enhancements = EnhanceList[Item.getItemId()]
             Name, WeaponID, MaterialID, MaterialQuant = Enhancements[EnhancID]
- 
             if st.getQuestItemsCount(MaterialID) >= MaterialQuant :
                 EnchantLevel = Item.getEnchantLevel()
                 st.getPlayer().destroyItem("remove_1009",ObjectID, 1,st.getPlayer(), 0)
@@ -137,8 +135,6 @@ class Quest (JQuest) :
     # if event is 0, or has a bug... trade is canceled
     else :
         htmltext = "Trade has been cancelled."
- 
-    
     st.setState(COMPLETED)
     st.exitQuest(1)
     return htmltext
@@ -146,8 +142,6 @@ class Quest (JQuest) :
     
 # this just return new html, if the player can talk with this npc about that enhance stuff
  def onTalk (self,npc,st):
-   npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
    st.set("cond","0")
    st.setState(STARTED)
    htmltext = ""
@@ -176,7 +170,7 @@ QUEST.setInitialState(CREATED)
  
  
 # init all npc to the correct stats
-for npcId in [8126]:
+for npcId in [8092]:
         QUEST.addStartNpc(npcId)
         STARTED.addTalkId(npcId)
         
