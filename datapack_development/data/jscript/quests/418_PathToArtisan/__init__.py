@@ -1,5 +1,4 @@
 # Maked by Mr. Have fun! Version 0.2
-print "importing quests: 418: Path To Artisan"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -67,6 +66,7 @@ class Quest (JQuest) :
           st.giveItems(KLUTOS_LETTER_ID,1)
           st.set("cond","4")
     elif event == "7317_7" :
+        if st.getQuestItemsCount(PASS_1ST_ID) and st.getQuestItemsCount(PASS_2ND_ID) and st.getQuestItemsCount(SECRET_BOX2_ID) :
           htmltext = "7317-10.htm"
           st.takeItems(PASS_1ST_ID,1)
           st.takeItems(PASS_2ND_ID,1)
@@ -75,9 +75,12 @@ class Quest (JQuest) :
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
+        else :
+          htmltext = "7317-08.htm"
     elif event == "7317_8" :
           htmltext = "7317-11.htm"
     elif event == "7317_9" :
+        if st.getQuestItemsCount(PASS_1ST_ID) and st.getQuestItemsCount(PASS_2ND_ID) and st.getQuestItemsCount(SECRET_BOX2_ID) :
           htmltext = "7317-12.htm"
           st.takeItems(PASS_1ST_ID,1)
           st.takeItems(PASS_2ND_ID,1)
@@ -86,6 +89,8 @@ class Quest (JQuest) :
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
+        else :
+          htmltext = "7317-08.htm"
     elif event == "7298_1" :
           htmltext = "7298-02.htm"
     elif event == "7298_2" :
@@ -104,7 +109,6 @@ class Quest (JQuest) :
 
 
  def onTalk (Self,npc,st):
-
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
@@ -114,9 +118,6 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 7527 and int(st.get("cond"))==0 :
-        if int(st.get("cond"))<15 :
-          htmltext = "7527-01.htm"
-        else:
           htmltext = "7527-01.htm"
    elif npcId == 7527 and int(st.get("cond")) and st.getQuestItemsCount(SILVERYS_RING_ID)==1 and (st.getQuestItemsCount(RATMAN_TOOTH_ID)+st.getQuestItemsCount(BIG_RATMAN_TOOTH_ID))<12 :
         htmltext = "7527-07.htm"
@@ -146,7 +147,6 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-
    npcId = npc.getNpcId()
    if npcId == 389 :
         st.set("id","0")
@@ -211,3 +211,5 @@ STARTED.addQuestDrop(7298,SECRET_BOX2_ID,1)
 STARTED.addQuestDrop(7317,KLUTOS_LETTER_ID,1)
 STARTED.addQuestDrop(17,SECRET_BOX1_ID,1)
 STARTED.addQuestDrop(7298,FOOTPRINT_ID,1)
+
+print "importing quests: 418: Path To Artisan"

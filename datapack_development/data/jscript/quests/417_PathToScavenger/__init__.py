@@ -45,22 +45,21 @@ class Quest (JQuest) :
           elif st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x35 and st.getQuestItemsCount(RING_OF_RAVEN_ID) == 1 :
                 htmltext = "7524-04.htm"
     elif event == "7519_1" :
+        if st.getQuestItemsCount(PIPIS_LETTER_ID):
+            st.takeItems(PIPIS_LETTER_ID,1)
+            st.set("cond","2")
             n = st.getRandom(3)
             if n == 0:
               htmltext = "7519-02.htm"
-              st.takeItems(PIPIS_LETTER_ID,1)
               st.giveItems(ZIMENFS_POTION_ID,1)
-              st.set("cond","2")
-            if n == 1:
+            elif n == 1:
               htmltext = "7519-03.htm"
-              st.takeItems(PIPIS_LETTER_ID,1)
               st.giveItems(CHALIS_AXE_ID,1)
-              st.set("cond","2")
-            if n == 2:
+            elif n == 2:
               htmltext = "7519-04.htm"
-              st.takeItems(PIPIS_LETTER_ID,1)
               st.giveItems(BRONKS_INGOT_ID,1)
-              st.set("cond","2")
+        else:
+            htmltext = "<html><head><body>I have nothing to say you</body></html>"
     elif event == "7519_2" :
           htmltext = "7519-06.htm"
     elif event == "7519_3" :
@@ -73,6 +72,7 @@ class Quest (JQuest) :
             if n == 1:
               htmltext = "7519-11.htm"
     elif event == "7519_5" :
+        if st.getQuestItemsCount(ZIMENFS_POTION_ID) and st.getQuestItemsCount(CHALIS_AXE_ID) and st.getQuestItemsCount(BRONKS_INGOT_ID):
           if int(st.get("id")) / 10 < 2 :
             htmltext = "7519-07.htm"
             st.set("id",str(int(st.get("id"))+1))
@@ -86,44 +86,52 @@ class Quest (JQuest) :
               st.takeItems(CHALIS_AXE_ID,1)
               st.takeItems(ZIMENFS_POTION_ID,1)
               st.takeItems(BRONKS_INGOT_ID,1)
+        else:
+            htmltext = "<html><head><body>I have nothing to say you</body></html>"
     elif event == "7519_6" :
+        if st.getQuestItemsCount(ZIMENFS_PAY_ID) and st.getQuestItemsCount(CHALIS_PAY_ID) and st.getQuestItemsCount(BRONKS_PAY_ID):
             n = st.getRandom(3)
+            st.takeItems(ZIMENFS_PAY_ID,1)
+            st.takeItems(CHALIS_PAY_ID,1)
+            st.takeItems(BRONKS_PAY_ID,1)
             if n == 0:
               htmltext = "7519-02.htm"
-              st.takeItems(ZIMENFS_PAY_ID,1)
-              st.takeItems(CHALIS_PAY_ID,1)
-              st.takeItems(BRONKS_PAY_ID,1)
               st.giveItems(ZIMENFS_POTION_ID,1)
-            if n == 1:
+            elif n == 1:
               htmltext = "7519-03.htm"
-              st.takeItems(ZIMENFS_PAY_ID,1)
-              st.takeItems(CHALIS_PAY_ID,1)
-              st.takeItems(BRONKS_PAY_ID,1)
               st.giveItems(CHALIS_AXE_ID,1)
-            if n == 2:
+            elif n == 2:
               htmltext = "7519-04.htm"
-              st.takeItems(ZIMENFS_PAY_ID,1)
-              st.takeItems(CHALIS_PAY_ID,1)
-              st.takeItems(BRONKS_PAY_ID,1)
               st.giveItems(BRONKS_INGOT_ID,1)
+        else:
+            htmltext = "<html><head><body>I have nothing to say you</body></html>"
     elif event == "7316_1" :
+        if st.getQuestItemsCount(BEAD_PARCEL_ID):
           htmltext = "7316-02.htm"
           st.takeItems(BEAD_PARCEL_ID,1)
           st.giveItems(ROUTS_TP_SCROLL_ID,1)
           st.set("cond","10")
+        else:
+            htmltext = "<html><head><body>I have nothing to say you</body></html>"
     elif event == "7316_2" :
+        if st.getQuestItemsCount(BEAD_PARCEL_ID):
           htmltext = "7316-03.htm"
           st.takeItems(BEAD_PARCEL_ID,1)
           st.giveItems(ROUTS_TP_SCROLL_ID,1)
           st.set("cond","10")
+        else:
+            htmltext = "<html><head><body>I have nothing to say you</body></html>"
     elif event == "7557_1" :
           htmltext = "7557-02.htm"
     elif event == "7557_2" :
+        if st.getQuestItemsCount(ROUTS_TP_SCROLL_ID):
           htmltext = "7557-03.htm"
           st.takeItems(ROUTS_TP_SCROLL_ID,1)
           st.giveItems(SUCCUBUS_UNDIES_ID,1)
           st.set("cond","11")
           st.getPcSpawn().removeAllSpawn()
+        else:
+            htmltext = "<html><head><body>I have nothing to say you</body></html>"
     return htmltext
 
 
