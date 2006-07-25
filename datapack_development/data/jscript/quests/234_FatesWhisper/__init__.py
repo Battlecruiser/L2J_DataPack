@@ -96,24 +96,24 @@ class Quest (JQuest) :
 			# and if that item is still not equipped
 			Item = st.getPlayer().getInventory().getItemByObjectId(bGradeObjId)
 			if Item and not Item.isEquipped() :
-                                st.getPlayer().destroyItem("234_FatesWhisper",bGradeObjId, 1, st.getPlayer(), 0)
-                                st.set("bypass","1")
+				st.getPlayer().destroyItem("234_FatesWhisper",bGradeObjId, 1, st.getPlayer(), 0)
+				st.set("bypass","1")
 				# now show the A Grade weapon list
 				htmltext = "8002-AGradeList.htm"
 			else :
 				htmltext = "<html><body>Maestro Reorin:<br>Are you trying to cheat me?!  What happenned to the weapon you were about to give me for the neutralization of Infernum's evil aura?</body></html>"
 		elif event.startswith("selectAGrade_"):
-                    if st.getInt("bypass"):
-			aGradeItemId = int(event.replace("selectAGrade_", ""))
-			htmltext = "8002-12.htm"
-			st.giveItems(aGradeItemId,1)
-			st.giveItems(STAR_OF_DESTINY,1)
-			st.setState(COMPLETED)
-			st.unset("cond")
-			st.unset("bypass")
-		    else:
-                        htmltext="0hnoes!"
-                        st.exitQuest(1)
+			if st.getInt("bypass"):
+				aGradeItemId = int(event.replace("selectAGrade_", ""))
+				htmltext = "8002-12.htm"
+				st.giveItems(aGradeItemId,1)
+				st.giveItems(STAR_OF_DESTINY,1)
+				st.setState(COMPLETED)
+				st.unset("cond")
+				st.unset("bypass")
+			else:
+				htmltext="<html><body>Maestro Reorin:<br>Are you trying to cheat me?!  What happenned to the weapon you were about to give me for the neutralization of Infernum's evil aura?</body></html>"
+				#st.exitQuest(1)
 		return htmltext
 
 	def onTalk(self,npc,st):
@@ -179,7 +179,10 @@ class Quest (JQuest) :
 					st.set("cond","10")
 				# all is ready.  Now give a menu to trade the B weapon for the player's choice of A Weapon.
 				elif cond == 10:
-					htmltext = "8002-11.htm"
+					if st.getInt("bypass") :
+						htmltext = "8002-AGradeList.htm"
+					else :
+						htmltext = "8002-11.htm"
 			## CLIFF.
 			# came to take the varnish
 			elif npcId == NPC[1] and cond==3 and not st.getQuestItemsCount(INFERNIUM_VARNISH) :
