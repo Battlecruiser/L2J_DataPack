@@ -72,7 +72,7 @@ class Quest (JQuest) :
             if n == 1:
               htmltext = "7519-11.htm"
     elif event == "7519_5" :
-        if st.getQuestItemsCount(ZIMENFS_POTION_ID) and st.getQuestItemsCount(CHALIS_AXE_ID) and st.getQuestItemsCount(BRONKS_INGOT_ID):
+        if st.getQuestItemsCount(ZIMENFS_POTION_ID) or st.getQuestItemsCount(CHALIS_AXE_ID) or st.getQuestItemsCount(BRONKS_INGOT_ID):
           if int(st.get("id")) / 10 < 2 :
             htmltext = "7519-07.htm"
             st.set("id",str(int(st.get("id"))+1))
@@ -89,7 +89,7 @@ class Quest (JQuest) :
         else:
             htmltext = "<html><head><body>I have nothing to say you</body></html>"
     elif event == "7519_6" :
-        if st.getQuestItemsCount(ZIMENFS_PAY_ID) and st.getQuestItemsCount(CHALIS_PAY_ID) and st.getQuestItemsCount(BRONKS_PAY_ID):
+        if st.getQuestItemsCount(ZIMENFS_PAY_ID) or st.getQuestItemsCount(CHALIS_PAY_ID) or st.getQuestItemsCount(BRONKS_PAY_ID):
             n = st.getRandom(3)
             st.takeItems(ZIMENFS_PAY_ID,1)
             st.takeItems(CHALIS_PAY_ID,1)
