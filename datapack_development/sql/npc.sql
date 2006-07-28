@@ -2058,7 +2058,7 @@ INSERT INTO `npc` (`id`, `idTemplate`, `name`, `serverSideName`, `title`, `serve
   (5178,5178,'Blitz Wyrm',0,'',0,'Monster.wyrm',29,72,60,'male','L2Monster',40,3055,1265,40,43,30,21,20,10,0,0,945,405,466,299,253,500,253,0,0,0,70,70,'wyrm',300,0,0),
   (5179,5179,'Grave Keymaster',0,'',0,'Monster.gargoyle',16,50,65,'male','L2Monster',40,3466,1450,40,43,30,21,20,10,0,0,1184,459,602,338,253,0,253,0,0,0,140,140,'grave_guard_clan',300,0,0),
   (5180,5180,'Imperial Slave',0,'',0,'Monster.binding',12,21,56,'male','L2Monster',40,2725,1121,40,43,30,21,20,10,0,0,776,362,372,268,253,500,253,0,0,0,10,140,'grave_keeper_clan',300,1,0),
-  (5181,5181,'Imperial Gravekeeper',0,'',0,'Monster.death_blader',15,45,60,'male','L2Monster',40,3055,1265,40,43,30,21,20,10,0,0,945,405,466,299,253,0,253,1472,0,0,100,170,'grave_keeper_clan',300,1,0),
+  (5181,5181,'Imperial Gravekeeper',0,'',0,'Monster.death_blader',15,45,60,'male','L2Monster',40,9055,1265,40,43,30,21,20,10,0,0,945,405,466,299,253,0,253,1472,0,0,100,170,'grave_keeper_clan',300,1,0),
   (5182,5182,'Ark Guardian Elberoth',0,'',0,'Monster.archangel',15,80,60,'male','L2Monster',80,3055,1265,40,21,30,20,43,10,0,0,945,405,466,299,253,0,253,93,0,0,80,120,NULL,0,0,0),
   (5183,5183,'Ark Guardian Shadowfang',0,'',0,'Monster.kel_mahum_archer',13,27,60,'male','L2Monster',1000,3055,1265,40,21,30,20,43,10,0,0,945,405,466,299,253,0,253,279,0,0,80,120,NULL,0,0,0),
   (5184,5184,'Angel Killer',0,'',0,'Monster.death_lord',21,40,60,'male','L2Monster',80,3054,1265,40,21,30,20,43,10,0,0,945,405,466,299,253,0,253,78,0,0,80,120,NULL,0,1,0),

@@ -475,13 +475,14 @@ class Quest (JQuest) :
 			if st.getRandom(100) < 4:
 				ImpGraveKepperStat = getLeaderVar(st,"ImpGraveKeeper")
 				if ImpGraveKepperStat == 1:
-					for i in range(4):
-						st.getPcSpawn().addSpawn(5180)
+					for j in range(2):
+						for k in range(2): 
+							st.getPcSpawn().addSpawn(5180,npc.getX()+70*pow(-1,j%2),npc.getY()+70*pow(-1,k%2),npc.getZ())
 					setLeaderVar(st,"ImpGraveKeeper","2")
 				else:
 					players = npc.getKnownList().getKnownPlayers().toArray()
-					if players.size() > 0 :
-						player = players[st.getRandom(int(players.size()))]
+					if players.length :
+						player = players[st.getRandom(int(players.length))]
 						player.setXYZ(185462,20342,-3250)
 		return
 
