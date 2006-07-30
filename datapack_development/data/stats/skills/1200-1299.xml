@@ -1639,7 +1639,7 @@
   </for>
 </skill>
 <skill id="1283" levels="13" name="Soul Guard">
-  <table name="#def"> 1.42 1.48 1.54 1.61 1.64 1.68 1.71 1.75 1.79 1.82 1.86 1.90 1.95 </table>
+  <table name="#def"> 293 333 376 421 445 470 495 520 546 572 599 626 653 </table>
   <table name="#mpConsume"> 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1647,8 +1647,8 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="1" val="#mpConsume">
-      <mul order="0x50" stat="pDef" val="#def"/>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume">
+      <add order="0x40" stat="pDef" val="#def"/>
     </effect>
   </for>
 </skill>
