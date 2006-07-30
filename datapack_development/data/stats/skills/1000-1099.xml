@@ -1758,7 +1758,7 @@
   </for>
 </skill>
 <skill id="1099" levels="15" name="Seal of Slow">
-  <table name="#Tab-runSpd"> 38 61 61 61 61 61 61 61 61 61 61 61 61 61 61 </table>
+  <table name="#Tab-runSpd"> 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </table>
   <table name="#mpConsume"> 45 53 59 65 70 77 80 83 87 89 93 95 98 100 103 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
@@ -1775,7 +1775,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown" >
-      <sub order="0x40" stat="runSpd" val="#Tab-runSpd"/>
+      <mul order="0x50" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>
 </skill>

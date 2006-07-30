@@ -716,8 +716,8 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="38" stackType="RunSpeedDown">
-      <sub order="0x40" stat="runSpd" val="38"/>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.7" stackType="RunSpeedDown">
+      <mul order="0x50" stat="runSpd" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -1906,8 +1906,8 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="61" stackType="RunSpeedDown">
-      <sub order="0x40" stat="runSpd" val="61"/>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.5" stackType="RunSpeedDown">
+      <mul order="0x50" stat="runSpd" val="0.5"/>
     </effect>
   </for>
 </skill> 

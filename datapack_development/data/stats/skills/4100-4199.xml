@@ -747,7 +747,6 @@
   </for>
 </skill>
 <skill id="4153" levels="12" name="Decrease Speed">
-  <table name="#Tab-runSpd"> 0.9 0.85 0.83 0.8 0.75 0.7 0.68 0.65 0.62 0.6 0.56 0.52 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#power"> 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -762,8 +761,8 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
-      <mul order="0x50" stat="runSpd" val="#Tab-runSpd"/>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.7" stackType="RunSpeedDown">
+      <mul order="0x50" stat="runSpd" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -1324,7 +1323,7 @@
   </for>
 </skill>
 <skill id="4187" levels="12" name="Decrease Speed">
-  <table name="#Tab-runSpd"> 0.9 0.85 0.83 0.8 0.75 0.7 0.68 0.65 0.62 0.6 0.56 0.52 0.48 0.44 0.4 </table>
+  <table name="#Tab-runSpd"> 0.85 0.7 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </table>
   <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
@@ -1503,8 +1502,8 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="750"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="1.4" stackType="RunSpeedDown">
-      <div order="0x50" stat="runSpd" val="1.4"/>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.7" stackType="RunSpeedDown">
+      <mul order="0x50" stat="runSpd" val="0.7"/>
     </effect>
   </for>
 </skill>
