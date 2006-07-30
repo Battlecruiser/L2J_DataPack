@@ -1011,7 +1011,7 @@
   </for>
 </skill>
 <skill id="1160" levels="15" name="Slow">
-  <table name="#Tab-runSpd"> 38 61 61 61 61 61 61 61 61 61 61 61 61 61 61 </table>
+  <table name="#Tab-runSpd"> 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </table>
   <table name="#mpConsume"> 30 35 39 44 48 52 54 55 58 60 62 64 65 67 69 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
@@ -1027,7 +1027,7 @@
   <set name="castRange" val="600"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
-      <sub order="0x40" stat="runSpd" val="#Tab-runSpd"/>
+      <mul order="0x50" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>
 </skill>
@@ -1462,7 +1462,7 @@
   <set name="castRange" val="600"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="38" stackType="RunSpeedDown">
-      <sub order="0x40" stat="runSpd" val="38"/>
+      <mul order="0x50" stat="runSpd" val="0.7"/>
     </effect>
   </for>
 </skill>

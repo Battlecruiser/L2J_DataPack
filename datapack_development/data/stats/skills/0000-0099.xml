@@ -1767,7 +1767,7 @@
 <skill id="95" levels="20" name="Cripple">
   <!-- Done by dc -->
   <table name="#mpConsume"> 20 22 25 28 32 35 38 42 44 48 50 54 55 58 60 62 64 65 67 69 </table>
-  <table name="#Tab-runSpd"> 38 38 38 38 38 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 </table>
+  <table name="#Tab-runSpd"> 0.7 0.7 0.7 0.7 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </table>
   <set name="weaponsAllowed" val="1024"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
@@ -1782,7 +1782,7 @@
   <set name="castRange" val="40"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
-      <sub order="0x40" stat="runSpd" val="#Tab-runSpd"/>
+      <mul order="0x50" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>
 </skill>

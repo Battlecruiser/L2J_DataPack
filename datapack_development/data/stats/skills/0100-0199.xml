@@ -55,7 +55,7 @@
 </for>
 </skill>
  <skill id="102" levels="16" name="Entangle">
-  <table name="#Tab-runSpd"> 38 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 </table>
+  <table name="#Tab-runSpd"> 0.3 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </table>
   <table name="#mpConsume"> 17 18 19 22 23 24 25 28 28 29 30 32 33 33 34 35 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
@@ -71,7 +71,7 @@
   <set name="castRange" val="600"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
-      <sub order="0x40" stat="runSpd" val="#Tab-runSpd"/>
+      <mul order="0x50" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>
 </skill>
@@ -133,7 +133,7 @@
   <set name="castRange" val="600"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="38" stackType="RunSpeedDown">
-      <sub order="0x40" stat="runSpd" val="38"/>
+      <mul order="0x50" stat="runSpd" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -536,7 +536,6 @@
 </skill>
 <skill id="127" levels="14" name="Hamstring">
   <!-- Done by dc -->
-  <table name="#Tab-runSpd"> 61 61 61 61 61 61 61 61 61 61 61 61 61 61 </table>
   <table name="#mpConsume"> 19 22 23 24 25 28 28 29 30 32 33 33 34 35 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
@@ -551,8 +550,8 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown" >
-      <sub order="0x40" stat="runSpd" val="#Tab-runSpd"/>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.5" stackType="RunSpeedDown">
+      <mul order="0x50" stat="runSpd" val="0.5"/>
     </effect>
   </for>
 </skill>
