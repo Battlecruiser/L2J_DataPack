@@ -305,6 +305,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="-1"/>
+  <set name="isPotion" val="true"/>
   <for>
     <effect count="5" name="HealOverTime" time="3" val="12" stackOrder="12" stackType="HpRecover"/>
   </for>
