@@ -237,8 +237,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add order="0x40" stat="pAtk" val="#pAtk">
-    </add>
+    <add order="0x40" stat="pAtk" val="#pAtk"/>
   </for>
 </skill>
 <skill id="218" levels="2" name="Fist King">
@@ -1604,7 +1603,6 @@
   </for>
 </skill>
 <skill id="285" levels="36" name="Higher Mana Gain">
-  <!-- TO CHECK IF WORKS WITH ADD NOT MUL -->
   <table name="#Tab-gainMp"> 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0 3.1 3.2 3.3 3.4 3.5 3.6 3.7 3.8 3.9 4.0 4.1 4.2 4.3 4.4 4.5 4.6 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1754,10 +1752,10 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <cond>
-    <game time="night"/>
-  </cond>
   <for>
+    <cond>
+      <game time="night"/>
+    </cond>
     <add order="0x40" stat="accCombat" val="3"/>
   </for>
 </skill>

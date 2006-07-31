@@ -781,10 +781,10 @@
   <for>
     <add order="0x40" stat="regHp" val="#hp">
       <player resting="true"/>
-    </mul>
+    </add>
     <add order="0x40" stat="regMp" val="#mp">
       <player resting="true"/>
-    </mul>
+    </add>
   </for>
 </skill>
 <skill id="149" levels="1" name="Finishing Blow">
@@ -931,9 +931,9 @@
         <not>
            <using kind="Magic"/>
         </not>
-       </and>
-     </mul>
-   </for>
+      </and>
+    </mul>
+  </for>
 </skill>
 <skill id="164" levels="3" name="Quick Recovery">
   <table name="#reuse"> 0.80 0.75 0.70 </table>
@@ -1016,10 +1016,10 @@
   <for>
     <add order="0x40" stat="regHp" val="#hp">
       <player running="true"/>
-    </mul>
+    </add>
     <add order="0x40" stat="regMp" val="#mp">
       <player running="true"/>
-    </mul>
+    </add>
   </for>
 </skill>
 <skill id="172" levels="9" name="Create Item">
