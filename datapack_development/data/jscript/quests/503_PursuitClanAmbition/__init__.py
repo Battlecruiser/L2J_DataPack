@@ -481,8 +481,8 @@ class Quest (JQuest) :
 					setLeaderVar(st,"ImpGraveKeeper","2")
 				else:
 					players = npc.getKnownList().getKnownPlayers().toArray()
-					if players.length :
-						player = players[st.getRandom(int(players.length))]
+					if len(players) :
+						player = players[st.getRandom(int(len(players)))]
 						player.setXYZ(185462,20342,-3250)
 		return
 
