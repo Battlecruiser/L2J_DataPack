@@ -856,7 +856,7 @@
   <set name="castRange" val="600"/>
   <for>
     <effect count="5" name="Confusion" time="6" val="100">
-   <mul stat="pAtkSpd" order="0x30" val="0.7">
+      <mul stat="pAtkSpd" order="0x30" val="0.7"/>
     </effect>
   </for>
 </skill>
