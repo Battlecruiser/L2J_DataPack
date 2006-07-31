@@ -161,7 +161,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x50" stat="regHp" val="#hp"/>
+    <add order="0x10" stat="regHp" val="#hp"/>
   </for>
 </skill>
 <skill id="213" levels="8" name="Boost Mana">
@@ -183,7 +183,7 @@
   <set name="castRange" val="-1"/>
   <table name="#Tab-regMp"> 1.2 </table>
   <for>
-    <mul order='0x50' stat='regMp' val="#Tab-regMp">
+    <mul order="0x30" stat="regMp" val="#Tab-regMp">
   	   <and>
           <using kind="Magic"/>
           <not>
@@ -280,7 +280,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="SilentMove" time="5" val="7">
-	  <mul order="0x20" stat="runSpd" val="0.6"/>
+	  <mul order="0x30" stat="runSpd" val="0.6"/>
     </effect>
   </for>
 </skill>
@@ -422,7 +422,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x50" stat="mAtkSpd" val="#rate"/>
+    <mul order="0x30" stat="mAtkSpd" val="#rate"/>
   </for>
 </skill>
 <skill id="229" levels="7" name="Fast Mana Recovery">
@@ -433,7 +433,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x50" stat="regMp" val="#regMp"/>
+    <add order="0x40" stat="regMp" val="#regMp"/>
   </for>
 </skill>
 <skill id="230" levels="2" name="Sprint">
@@ -613,7 +613,7 @@
 		</not>
       </and>
     </add>
-	<mul order="0x50" stat="mAtkSpd" val="1.91">
+	<mul order="0x30" stat="mAtkSpd" val="1.91">
 	  <and>
 		<using kind="Light"/>
         <not>
@@ -621,7 +621,7 @@
 		</not>
       </and>
     </mul>
-	<mul order="0x50" stat="pAtkSpd" val="1.25">
+	<mul order="0x30" stat="pAtkSpd" val="1.25">
 	  <and>
 		<using kind="Light"/>
         <not>
@@ -629,7 +629,7 @@
 		</not>
       </and>
     </mul>
-	<mul order="0x50" stat="regMp" val="1.2">
+	<mul order="0x30" stat="regMp" val="1.2">
 	  <and>
 		<using kind="Light"/>
         <not>
@@ -783,8 +783,8 @@
   <for>
     <add order="0x40" stat="pAtk" val="#pAtk"/>
     <add order="0x40" stat="mAtk" val="#mAtk"/>
-    <mul order="0x50" stat="pAtk" val="#mulpAtk"/>
-    <mul order="0x50" stat="mAtk" val="#mulmAtk"/>
+    <mul order="0x30" stat="pAtk" val="#mulpAtk"/>
+    <mul order="0x30" stat="mAtk" val="#mulmAtk"/>
   </for>
 </skill>
 <skill id="250" levels="42" name="Weapon Mastery">
@@ -800,8 +800,8 @@
   <for>
     <add order="0x40" stat="pAtk" val="#pAtk"/>
     <add order="0x40" stat="mAtk" val="#mAtk"/>
-    <mul order="0x50" stat="pAtk" val="#mulpAtk"/>
-    <mul order="0x50" stat="mAtk" val="#mulmAtk"/>
+    <mul order="0x30" stat="pAtk" val="#mulpAtk"/>
+    <mul order="0x30" stat="mAtk" val="#mulmAtk"/>
   </for>
 </skill>
 <skill id="251" levels="45" name="Robe Mastery">
@@ -850,7 +850,7 @@
 		</not>
       </and>
     </add>
-	<mul order="0x50" stat="mAtkSpd" val="1.9">
+	<mul order="0x30" stat="mAtkSpd" val="1.9">
 	  <and>
 		<using kind="Light"/>
         <not>
@@ -858,7 +858,7 @@
 		</not>
       </and>
     </mul>
-	<mul order="0x50" stat="pAtkSpd" val="1.25">
+	<mul order="0x30" stat="pAtkSpd" val="1.25">
 	  <and>
 		<using kind="Light"/>
         <not>
@@ -866,7 +866,7 @@
 		</not>
       </and>
     </mul>
-	<mul order="0x50" stat="regMp" val="1.2">
+	<mul order="0x30" stat="regMp" val="1.2">
 	  <and>
 		<using kind="Light"/>
         <not>
@@ -898,7 +898,7 @@
 		</not>
       </and>
     </add>
-    <mul order="0x50" stat="mAtkSpd" val="1.71">
+    <mul order="0x30" stat="mAtkSpd" val="1.71">
       <and>
         <using kind="Heavy"/>
         <not>
@@ -906,7 +906,7 @@
 		</not>
       </and>
     </mul>
-    <mul order="0x50" stat="pAtkSpd" val="1.25">
+    <mul order="0x30" stat="pAtkSpd" val="1.25">
       <and>
         <using kind="Heavy"/>
         <not>
@@ -949,7 +949,7 @@
 </skill>
 <skill id="256" levels="1" name="Accuracy">
  <table name="#mpConsume"> 1 </table>
- <table name="#acc"> 10 </table>
+ <table name="#acc"> 3 </table>
   <set name="power" val="0.0"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1002,7 +1002,7 @@
 		</not>
       </and>
     </add>
-	<mul order="0x50" stat="mAtkSpd" val="1.88">
+	<mul order="0x30" stat="mAtkSpd" val="1.88">
 	  <and>
 		<using kind="Light"/>
         <not>
@@ -1010,7 +1010,7 @@
 		</not>
       </and>
     </mul>
-	<mul order="0x50" stat="pAtkSpd" val="1.25">
+	<mul order="0x30" stat="pAtkSpd" val="1.25">
 	  <and>
 		<using kind="Light"/>
         <not>
@@ -1018,7 +1018,7 @@
 		</not>
       </and>
     </mul>
-	<mul order="0x50" stat="regMp" val="1.2">
+	<mul order="0x30" stat="regMp" val="1.2">
 	  <and>
 		<using kind="Light"/>
         <not>
@@ -1049,7 +1049,7 @@
 		</not>
       </and>
     </add>
-    <mul order="0x50" stat="mAtkSpd" val="1.68">
+    <mul order="0x30" stat="mAtkSpd" val="1.68">
       <and>
         <using kind="Heavy"/>
         <not>
@@ -1057,7 +1057,7 @@
 		</not>
       </and>
     </mul>
-    <mul order="0x50" stat="pAtkSpd" val="1.25">
+    <mul order="0x30" stat="pAtkSpd" val="1.25">
       <and>
         <using kind="Heavy"/>
         <not>
@@ -1189,7 +1189,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul order="0x50" stat="pDef" val="1.15"/>
+      <mul order="0x30" stat="pDef" val="1.15"/>
     </effect>
   </for>
 </skill>
@@ -1208,7 +1208,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul order="0x50" stat="regHp" val="1.2"/>
+      <mul order="0x30" stat="regHp" val="1.2"/>
     </effect>
   </for>
 </skill>
@@ -1246,7 +1246,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul order="0x50" stat="mDef" val="1.3"/>
+      <mul order="0x30" stat="mDef" val="1.3"/>
     </effect>
   </for>
 </skill>
@@ -1284,7 +1284,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul order="0x50" stat="rCrit" val="2"/>
+      <mul order="0x30" stat="rCrit" val="2"/>
     </effect>
   </for>
 </skill>
@@ -1322,7 +1322,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul order="0x50" stat="pAtk" val="1.12"/>
+      <mul order="0x30" stat="pAtk" val="1.12"/>
     </effect>
   </for>
 </skill>
@@ -1362,7 +1362,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul order="0x50" stat="mAtk" val="1.2"/>
+      <mul order="0x30" stat="mAtk" val="1.2"/>
     </effect>
   </for>
 </skill>
@@ -1382,7 +1382,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul order="0x50" stat="cAtk" val="1.5"/>
+      <mul order="0x30" stat="cAtk" val="1.5"/>
     </effect>
   </for>
 </skill>
@@ -1402,7 +1402,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul order="0x50" stat="pAtkSpd" val="1.15"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.15"/>
     </effect>
   </for>
 </skill>
@@ -1422,7 +1422,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul order="0x50" stat="mAtkSpd" val="1.3"/>
+      <mul order="0x30" stat="mAtkSpd" val="1.3"/>
       <sub order="0x40" stat="cancel" val="30"/>
     </effect>
   </for>
@@ -1443,7 +1443,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul order="0x50" stat="pAtk-undead" val="1.3"/>
+      <mul order="0x30" stat="pAtk-undead" val="1.3"/>
     </effect>
   </for>
 </skill>
@@ -1555,9 +1555,9 @@
 <table name="#Tab-rEvas"> 3 </table>
 <for>
   <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
-    <mul  order='0x50' stat='pDef' val="#Tab-pDef"/>
-    <mul  order='0x50' stat='pAtkSpd' val="#Tab-pAtkSpd"/>
-    <add  order='0x40' stat='rEvas' val="#Tab-rEvas"/>
+    <mul  order="0x30" stat="pDef" val="#Tab-pDef"/>
+    <mul  order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+    <add  order="0x40" stat="rEvas" val="#Tab-rEvas"/>
  </effect>
 </for>
 </skill>
@@ -1617,7 +1617,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x50" stat="gainMp" val="#Tab-gainMp"/>
+    <mul order="0x30" stat="gainMp" val="#Tab-gainMp"/>
   </for>
 </skill>
 <skill id="286" levels="3" name="Provoke">
@@ -1660,8 +1660,8 @@
 </skill>
 <skill id="288" levels="4" name="Guard Stance">
 <table name="#mpConsume"> 8 10 12 13 </table>
-<table name="#pDef"> 1.20 1.25 1.30 1.35 </table>
-<table name="#ShieldRate"> 15 20 25 30 </table>
+<table name="#pDef"> 122 161 212 256 </table>
+<table name="#ShieldRate"> 50 50 50 50 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1670,7 +1670,7 @@
   <set name="castRange" val="-1"/>
   <for>
 	<effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume">
-      <mul order="0x50" stat="pDef" val="#pDef"/>
+      <add order="0x40" stat="pDef" val="#pDef"/>
 	  <add order="0x40" stat="rShld" val="#ShieldRate"/>
     </effect>
   </for>
@@ -1731,9 +1731,9 @@
   <player hp="60"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
-        <mul order="0x50" stat="pAtk" val="1.125"/>
+        <mul order="0x30" stat="pAtk" val="1.125"/>
         <add order="0x40" stat="rCrit" val="200"/>
-        <mul order="0x50" stat="maxHp" val="0.75"/>
+        <mul order="0x30" stat="maxHp" val="0.75"/>
     </effect>
   </for>
 </skill>
@@ -1815,7 +1815,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0">
-       <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
     </effect>
   </for>
 </skill>
@@ -1832,7 +1832,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
-      <mul order="0x50" stat="pAtk" val="0.2"/>
+      <mul order="0x30" stat="pAtk" val="0.2"/>
       <add order="0x40" stat="rEvas" val="25"/>
       <add order="0x40" stat="runSpd" val="62"/>
     </effect>

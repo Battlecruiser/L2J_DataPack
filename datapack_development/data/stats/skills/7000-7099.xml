@@ -104,11 +104,11 @@
 <table name="#Tab-mReuse"> 1 1 1.99 1.99 </table>
 <for>
   <effect name="Buff" time="1200" count="1" val="0">
-    <mul  order='0x50' stat='runSpd' val="#Tab-runSpd"/>
-    <mul  order='0x50' stat='pAtk' val="#Tab-pAtk"/>
-    <mul  order='0x50' stat='mAtkSpd' val="#Tab-mAtkSpd"/>
-    <mul  order='0x50' stat='pAtkSpd' val="#Tab-pAtkSpd"/>
-    <div  order='0x50' stat='mReuse' val="#Tab-mReuse"/>
+    <mul  order="0x30" stat="runSpd" val="#Tab-runSpd"/>
+    <mul  order="0x30" stat="pAtk" val="#Tab-pAtk"/>
+    <mul  order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
+    <mul  order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+    <div  order="0x30" stat="mReuse" val="#Tab-mReuse"/>
  </effect>
 </for>
 </skill>
