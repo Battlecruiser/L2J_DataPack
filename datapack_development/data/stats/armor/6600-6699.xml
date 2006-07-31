@@ -4,7 +4,7 @@
 <!-- TODO: Decrease in MP consumption -->
   <for>
 <add val='71' order='0x10' stat='mDef'/>
-<add val='31' order='0x10' stat='maxMp'>
+<add val='31' order='0x40' stat='maxMp'>
 	<or>
 		<and>
 			<using slotitem="6656;1"/>
@@ -20,7 +20,7 @@
 		</and>
 	</or>
 </add>
-<add val='15.5' order='0x10' stat='maxMp'>
+<add val='15.5' order='0x40' stat='maxMp'>
 		<and>
 			<using slotitem="6656;1"/>
 			<using slotitem="6656;2"/>
@@ -70,7 +70,7 @@
 			<using slotitem="6656;2"/>
 		</and>
 </mul>
-<add val='10' order='0x10' stat='absorbDam'>
+<add val='10' order='0x40' stat='absorbDam'>
 	<or>
 		<and>
 			<using slotitem="6656;1"/>
@@ -86,7 +86,7 @@
 		</and>
 	</or>
 </add>
-<add val='5' order='0x10' stat='absorbDam'>
+<add val='5' order='0x40' stat='absorbDam'>
 		<and>
 			<using slotitem="6656;1"/>
 			<using slotitem="6656;2"/>
@@ -180,7 +180,7 @@
 <item id='6658' name="Ring of Baium">
   <for>
 <add val='48' order='0x10' stat='mDef'/>
-<add val='21' order='0x10' stat='maxMp'>
+<add val='21' order='0x40' stat='maxMp'>
 	<or>
 		<and>
 			<using slotitem="6658;4"/>
@@ -196,7 +196,7 @@
 		</and>
 	</or>
 </add>
-<add val='10.5' order='0x10' stat='maxMp'>
+<add val='10.5' order='0x40' stat='maxMp'>
 		<and>
 			<using slotitem="6658;4"/>
 			<using slotitem="6658;5"/>
@@ -224,7 +224,7 @@
 			<using slotitem="6658;5"/>
 		</and>
 </mul>
-<add val='6' order='0x10' stat='accCombat'>
+<add val='6' order='0x40' stat='accCombat'>
 	<or>
 		<and>
 			<using slotitem="6658;4"/>
@@ -240,13 +240,13 @@
 		</and>
 	</or>
 </add>
-<add val='3' order='0x10' stat='accCombat'>
+<add val='3' order='0x40' stat='accCombat'>
 		<and>
 			<using slotitem="6658;4"/>
 			<using slotitem="6658;5"/>
 		</and>
 </add>
-<add val='85' order='0x10' stat='cAtk'>
+<add val='85' order='0x40' stat='cAtk'>
 	<or>
 		<and>
 			<using slotitem="6658;4"/>
@@ -262,7 +262,7 @@
 		</and>
 	</or>
 </add>
-<add val='42.5' order='0x10' stat='cAtk'>
+<add val='42.5' order='0x40' stat='cAtk'>
 		<and>
 			<using slotitem="6658;4"/>
 			<using slotitem="6658;5"/>
@@ -340,7 +340,7 @@
 <item id='6659' name="Zaken's Earring">
   <for>
 <add val='71' order='0x10' stat='mDef'/>
-<add val='31' order='0x10' stat='maxMp'>
+<add val='31' order='0x40' stat='maxMp'>
 	<or>
 		<and>
 			<using slotitem="6659;1"/>
@@ -356,7 +356,7 @@
 		</and>
 	</or>
 </add>
-<add val='15.5' order='0x10' stat='maxMp'>
+<add val='15.5' order='0x40' stat='maxMp'>
 		<and>
 			<using slotitem="6659;1"/>
 			<using slotitem="6659;2"/>
@@ -406,7 +406,7 @@
 			<using slotitem="6659;2"/>
 		</and>
 </mul>
-<add val='6' order='0x10' stat='absorbDam'>
+<add val='6' order='0x40' stat='absorbDam'>
 	<or>
 		<and>
 			<using slotitem="6659;1"/>
@@ -422,7 +422,7 @@
 		</and>
 	</or>
 </add>
-<add val='3' order='0x10' stat='absorbDam'>
+<add val='3' order='0x40' stat='absorbDam'>
 		<and>
 			<using slotitem="6659;1"/>
 			<using slotitem="6659;2"/>
@@ -478,7 +478,7 @@
 <item id='6660' name="Ring of Queen Ant">
   <for>
     <add val='48' order='0x10' stat='mDef'/>
-<add val='21' order='0x10' stat='maxMp'>
+<add val='21' order='0x40' stat='maxMp'>
 	<or>
 		<and>
 			<using slotitem="6660;4"/>
@@ -494,7 +494,7 @@
 		</and>
 	</or>
 </add>
-<add val='10.5' order='0x10' stat='maxMp'>
+<add val='10.5' order='0x40' stat='maxMp'>
 		<and>
 			<using slotitem="6660;4"/>
 			<using slotitem="6660;5"/>
@@ -538,13 +538,13 @@
 		</and>
 	</or>
 </add>
-<add val='2' order='0x10' stat='accCombat'>
+<add val='2' order='0x40' stat='accCombat'>
        <and>
           <using slotitem="6660;4"/>
           <using slotitem="6660;5"/>
        </and>
 </add>
-<add val='70' order='0x10' stat='cAtk'>
+<add val='70' order='0x40' stat='cAtk'>
 	<or>
 		<and>
 			<using slotitem="6660;4"/>
@@ -560,7 +560,7 @@
 		</and>
 	</or>
 </add>
-<add val='35' order='0x10' stat='cAtk'>
+<add val='35' order='0x40' stat='cAtk'>
        <and>
           <using slotitem="6660;4"/>
           <using slotitem="6660;5"/>
@@ -594,7 +594,7 @@
 <item id='6661' name="Earring of Orfen">
   <for>
 <add val='71' order='0x10' stat='mDef'/>
-<add val='31' order='0x10' stat='maxMp'>
+<add val='31' order='0x40' stat='maxMp'>
 	<or>
 		<and>
 			<using slotitem="6661;1"/>
@@ -610,7 +610,7 @@
 		</and>
 	</or>
 </add>
-<add val='15.5' order='0x10' stat='maxMp'>
+<add val='15.5' order='0x40' stat='maxMp'>
        <and>
           <using slotitem="6661;1"/>
           <using slotitem="6661;2"/>
@@ -666,7 +666,7 @@
 <item id='6662' name="Ring of Core">
   <for>
     <add val='48' order='0x10' stat='mDef'/>
-<add val='21' order='0x10' stat='maxMp'>
+<add val='21' order='0x40' stat='maxMp'>
 	<or>
 		<and>
 			<using slotitem="6662;4"/>
@@ -682,7 +682,7 @@
 		</and>
 	</or>
 </add>
-<add val='10.5' order='0x10' stat='maxMp'>
+<add val='10.5' order='0x40' stat='maxMp'>
        <and>
           <using slotitem="6662;4"/>
           <using slotitem="6662;5"/>
@@ -710,7 +710,7 @@
           <using slotitem="6662;5"/>
        </and>
 </mul>
-<add val='3' order='0x10' stat='accCombat'>
+<add val='3' order='0x40' stat='accCombat'>
 	<or>
 		<and>
 			<using slotitem="6662;4"/>
@@ -726,7 +726,7 @@
 		</and>
 	</or>
 </add>
-<add val='1.5' order='0x10' stat='accCombat'>
+<add val='1.5' order='0x40' stat='accCombat'>
        <and>
           <using slotitem="6662;4"/>
           <using slotitem="6662;5"/>

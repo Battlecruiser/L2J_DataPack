@@ -253,19 +253,19 @@
   <for>
    <add val='52' order='0x10' stat='pDef'/>
    <add val='169' order='0x10' stat='maxMp'/>
-   <add val='7' order='0x10' stat='runSpd'>
+   <add val='7' order='0x40' stat='runSpd'>
     <and>
      <using slotitem="470;11"/>
      <using slotitem="2450;9"/>
     </and>
    </add>
-   <add val='1' order='0x10' stat='WIT'>
+   <add val='1' order='0x40' stat='WIT'>
     <and>
      <using slotitem="470;11"/>
      <using slotitem="2450;9"/>
     </and>
    </add>
-   <add val='-1' order='0x10' stat='INT'>
+   <add val='-1' order='0x40' stat='INT'>
     <and>
      <using slotitem="470;11"/>
      <using slotitem="2450;9"/>
@@ -309,19 +309,19 @@
   <for>
     <add val='69' order='0x10' stat='pDef'/>
     <add val='284' order='0x10' stat='maxMp'/>
-   <sub stat='maxHp' order='0x10' val='270'>
+   <sub stat='maxHp' order='0x40' val='270'>
    <and>
      <using slotitem="472;11"/>
      <using slotitem="2459;9"/>
    </and>
   </sub>
-   <add stat='INT' order='0x10' val='4'>
+   <add stat='INT' order='0x40' val='4'>
    <and>
      <using slotitem="472;11"/>
      <using slotitem="2459;9"/>
    </and>
   </add>
-     <add stat='WIT' order='0x10' val='-1'>
+     <add stat='WIT' order='0x40' val='-1'>
    <and>
      <using slotitem="472;11"/>
      <using slotitem="2459;9"/>
@@ -334,19 +334,19 @@
   <for>
     <add val='74' order='0x10' stat='pDef'/>
     <add val='314' order='0x10' stat='maxMp'/>
-   <add stat='maxMp' order='0x10' val='170'>
+   <add stat='maxMp' order='0x40' val='170'>
      <and>
        <using slotitem="473;11"/>
        <using slotitem="2463;9"/>
      </and>
    </add>
-   <add stat='WIT' order='0x10' val='1'>
+   <add stat='WIT' order='0x40' val='1'>
      <and>
        <using slotitem="473;11"/>
        <using slotitem="2463;9"/>
      </and>
    </add>
-   <sub stat='INT' order='0x10' val='1'>
+   <sub stat='INT' order='0x40' val='1'>
      <and>
        <using slotitem="473;11"/>
        <using slotitem="2463;9"/>
