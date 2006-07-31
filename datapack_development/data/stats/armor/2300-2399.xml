@@ -3,7 +3,7 @@
 <item id='2376' name="Avadon Breastplate">
   <for>
    <add val='157' order='0x10' stat='pDef'/>
-   <add val='294' order='0x10' stat='maxHp'>
+   <add val='294' order='0x40' stat='maxHp'>
     <and>
      <using slotitem="2379;11"/>
      <using slotitem="2415;6"/>
@@ -11,7 +11,7 @@
      <using slotitem="5714;9"/>
     </and>
    </add>
-   <add stat='rShld' order='0x10' val='4'>
+   <add stat='rShld' order='0x40' val='4'>
     <and>
      <using slotitem="2379;11"/>
      <using slotitem="2415;6"/>
@@ -50,21 +50,21 @@
 <item id='2381' name="Doom Plate Armor">
   <for>
     <add val='270' order='0x10' stat='pDef'/>
-    <add val='320' order='0x10' stat='maxHp'>
+    <add val='320' order='0x40' stat='maxHp'>
      <and>
       <using slotitem="2417;6"/>
       <using slotitem="5738;12"/>
       <using slotitem="5722;9"/>
      </and>
    </add>
-           <add val='3' order='0x10' stat='CON'>
+           <add val='3' order='0x40' stat='CON'>
     <and>
      <using slotitem="2417;6"/>
      <using slotitem="5738;12"/>
      <using slotitem="5722;9"/>
      </and>
     </add>
-            <add val='-3' order='0x10' stat='STR'>
+            <add val='-3' order='0x40' stat='STR'>
     <and>
      <using slotitem="2417;6"/>
      <using slotitem="5738;12"/>
@@ -85,14 +85,14 @@
      <using slotitem="5768;9"/>
     </and>
     </mul>
-    <add val='2' order='0x10' stat='STR'>
+    <add val='2' order='0x40' stat='STR'>
     <and>
      <using slotitem="547;6"/>
      <using slotitem="5780;12"/>
      <using slotitem="5768;9"/>
     </and>
     </add>
-       <add val='-2' order='0x10' stat='CON'>
+       <add val='-2' order='0x40' stat='CON'>
     <and>
      <using slotitem="547;6"/>
      <using slotitem="5780;12"/>
@@ -113,7 +113,7 @@
       <using slotitem="5768;9"/>
     </and>
     </mul>
-	<add val='5759' order='0x10' stat='maxLoad'>
+	<add val='5759' order='0x40' stat='maxLoad'>
 	<and>
      <using slotitem="547;6"/>
      <using slotitem="5780;12"/>
@@ -133,21 +133,21 @@
       <using slotitem="5774;9"/>
      </and>
     </mul>
-    <add val='3' order='0x10' stat='accCombat'>
+    <add val='3' order='0x40' stat='accCombat'>
      <and>
       <using slotitem="2419;6"/>
       <using slotitem="5786;12"/>
       <using slotitem="5774;9"/>
      </and>
     </add>
-    <add val='2' order='0x10' stat='STR'>
+    <add val='2' order='0x40' stat='STR'>
      <and>
       <using slotitem="2419;6"/>
       <using slotitem="5786;12"/>
       <using slotitem="5774;9"/>
      </and>
     </add>
-    <add val='-2' order='0x10' stat='CON'>
+    <add val='-2' order='0x40' stat='CON'>
      <and>
       <using slotitem="2419;6"/>
       <using slotitem="5786;12"/>
@@ -189,7 +189,7 @@
      <using slotitem="5766;9"/>
     </and>
     </mul>
-    <add val='1' order='0x10' stat='STR'>
+    <add val='1' order='0x40' stat='STR'>
     <and>
      <using slotitem="2389;11"/>
      <using slotitem="512;6"/>
@@ -197,7 +197,7 @@
      <using slotitem="5766;9"/>
     </and>
     </add>
-    <add val='-1' order='0x10' stat='CON'>
+    <add val='-1' order='0x40' stat='CON'>
     <and>
      <using slotitem="2389;11"/>
      <using slotitem="512;6"/>
@@ -277,21 +277,21 @@
       <using slotitem="5719;9"/>
      </and>
     </mul>
-            <add val='3' order='0x10' stat='MEN'>
+            <add val='3' order='0x40' stat='MEN'>
     <and>
      <using slotitem="2416;6"/>
      <using slotitem="5735;12"/>
      <using slotitem="5719;9"/>
     </and>
     </add>
-            <add val='-2' order='0x10' stat='INT'>
+            <add val='-2' order='0x40' stat='INT'>
     <and>
      <using slotitem="2416;6"/>
      <using slotitem="5735;12"/>
      <using slotitem="5719;9"/>
     </and>
     </add>
-            <add val='-1' order='0x10' stat='WIT'>
+            <add val='-1' order='0x40' stat='WIT'>
     <and>
      <using slotitem="2416;6"/>
      <using slotitem="5735;12"/>
@@ -326,21 +326,21 @@
       <using slotitem="5723;9"/>
      </and>
     </mul>
-                <add val='3' order='0x10' stat='DEX'>
+                <add val='3' order='0x40' stat='DEX'>
     <and>
      <using slotitem="2417;6"/>
      <using slotitem="5739;12"/>
      <using slotitem="5723;9"/>
     </and>
     </add>
-                <add val='-2' order='0x10' stat='CON'>
+                <add val='-2' order='0x40' stat='CON'>
     <and>
      <using slotitem="2417;6"/>
      <using slotitem="5739;12"/>
      <using slotitem="5723;9"/>
     </and>
     </add>
-                <add val='-1' order='0x10' stat='STR'>
+                <add val='-1' order='0x40' stat='STR'>
     <and>
      <using slotitem="2417;6"/>
      <using slotitem="5739;12"/>
@@ -354,7 +354,7 @@
 <item id='2393' name="Tallum Leather Armor">
  <for>
   <add val='209' order='0x10' stat='pDef'/>
-  <add val='222' order='0x10' stat='maxMp'>
+  <add val='222' order='0x40' stat='maxMp'>
    <and>
     <using slotitem="547;6"/>
     <using slotitem="5781;12"/>
@@ -368,14 +368,14 @@
      <using slotitem="5769;9"/>
     </and>
    </mul>
-  <add val='-2' order='0x10' stat='WIT'>
+  <add val='-2' order='0x40' stat='WIT'>
    <and>
     <using slotitem="547;6"/>
     <using slotitem="5781;12"/>
     <using slotitem="5769;9"/>
    </and>
   </add>
-  <add val='2' order='0x10' stat='MEN'>
+  <add val='2' order='0x40' stat='MEN'>
    <and>
     <using slotitem="547;6"/>
     <using slotitem="5781;12"/>
@@ -409,21 +409,21 @@
       <using slotitem="5772;9"/>
      </and>
     </mul>
-    <add val='3' order='0x01' stat='absorbDam'>
+    <add val='3' order='0x40' stat='absorbDam'>
      <and>
       <using slotitem="2418;6"/>
       <using slotitem="5784;12"/>
       <using slotitem="5772;9"/>
      </and>
     </add>
-    <add val='1' order='0x10' stat='DEX'>
+    <add val='1' order='0x40' stat='DEX'>
      <and>
       <using slotitem="2418;6"/>
       <using slotitem="5784;12"/>
       <using slotitem="5772;9"/>
      </and>
     </add>
-    <add val='-1' order='0x10' stat='CON'>
+    <add val='-1' order='0x40' stat='CON'>
      <and>
       <using slotitem="2418;6"/>
       <using slotitem="5784;12"/>
@@ -458,21 +458,21 @@
       <using slotitem="5775;9"/>
      </and>
     </mul>
-    <add val='240' order='0x10' stat='maxMp'>
+    <add val='240' order='0x40' stat='maxMp'>
      <and>
       <using slotitem="2419;6"/>
       <using slotitem="5787;12"/>
       <using slotitem="5775;9"/>
      </and>
     </add>
-    <add val='1' order='0x10' stat='DEX'>
+    <add val='1' order='0x40' stat='DEX'>
      <and>
       <using slotitem="2419;6"/>
       <using slotitem="5787;12"/>
       <using slotitem="5775;9"/>
      </and>
     </add>
-    <add val='-1' order='0x10' stat='CON'>
+    <add val='-1' order='0x40' stat='CON'>
      <and>
       <using slotitem="2419;6"/>
       <using slotitem="5787;12"/>
@@ -486,7 +486,7 @@
       <using slotitem="5775;9"/>
      </and>
     </mul>
-    <add val='5759' order='0x10' stat='maxLoad'>
+    <add val='5759' order='0x40' stat='maxLoad'>
     <and>
       <using slotitem="2419;6"/>
       <using slotitem="5787;12"/>
@@ -530,7 +530,7 @@
   <for>
     <add val='83' order='0x10' stat='pDef'/>
     <add val='377' order='0x10' stat='maxMp'/>
-    <add val='206' order='0x10' stat='maxMp'>
+    <add val='206' order='0x40' stat='maxMp'>
      <and>
       <using slotitem="2403;11"/>
       <using slotitem="2416;6"/>
@@ -538,7 +538,7 @@
       <using slotitem="5720;9"/>
      </and>
     </add>
-        <add val='3' order='0x10' stat='WIT'>
+        <add val='3' order='0x40' stat='WIT'>
     <and>
      <using slotitem="2403;11"/>
      <using slotitem="2416;6"/>
@@ -546,7 +546,7 @@
      <using slotitem="5720;9"/>
     </and>
     </add>
-            <add val='-2' order='0x10' stat='INT'>
+            <add val='-2' order='0x40' stat='INT'>
     <and>
      <using slotitem="2403;11"/>
      <using slotitem="2416;6"/>
@@ -554,7 +554,7 @@
      <using slotitem="5720;9"/>
     </and>
     </add>
-            <add val='-1' order='0x10' stat='MEN'>
+            <add val='-1' order='0x40' stat='MEN'>
     <and>
      <using slotitem="2403;11"/>
      <using slotitem="2416;6"/>
@@ -577,7 +577,7 @@
   <for>
     <add val='83' order='0x10' stat='pDef'/>
     <add val='377' order='0x10' stat='maxMp'/>
-    <add val='7' order='0x10' stat='runSpd'>
+    <add val='7' order='0x40' stat='runSpd'>
      <and>
       <using slotitem="2404;11"/>
       <using slotitem="2417;6"/>
@@ -585,7 +585,7 @@
       <using slotitem="5724;9"/>
      </and>
     </add>
-   <add val='2' order='0x10' stat='INT'>
+   <add val='2' order='0x40' stat='INT'>
     <and>
      <using slotitem="2404;11"/>
      <using slotitem="2417;6"/>
@@ -593,7 +593,7 @@
      <using slotitem="5724;9"/>
     </and>
    </add>
-   <add val='1' order='0x10' stat='MEN'>
+   <add val='1' order='0x40' stat='MEN'>
     <and>
      <using slotitem="2404;11"/>
      <using slotitem="2417;6"/>
@@ -601,7 +601,7 @@
      <using slotitem="5724;9"/>
     </and>
    </add>
-   <add val='-3' order='0x10' stat='WIT'>
+   <add val='-3' order='0x40' stat='WIT'>
     <and>
      <using slotitem="2404;11"/>
      <using slotitem="2417;6"/>

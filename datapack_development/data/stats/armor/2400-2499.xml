@@ -20,7 +20,7 @@
     <using slotitem="5770;9"/>
    </and>
   </mul>
-  <add val='2' order='0x10' stat='WIT'>
+  <add val='2' order='0x40' stat='WIT'>
    <and>
     <using slotitem="2405;11"/>
     <using slotitem="547;6"/>
@@ -28,7 +28,7 @@
     <using slotitem="5770;9"/>
    </and>
   </add>
-  <add val='-2' order='0x10' stat='INT'>
+  <add val='-2' order='0x40' stat='INT'>
    <and>
     <using slotitem="2405;11"/>
     <using slotitem="547;6"/>
@@ -115,21 +115,21 @@
  <for>
   <add val='139' order='0x10' stat='pDef'/>
   <add val='665' order='0x10' stat='maxMp'/>
-  <add val='7' order='0x10' stat='runSpd'>
+  <add val='7' order='0x40' stat='runSpd'>
    <and>
     <using slotitem="512;6"/>
     <using slotitem="5779;12"/>
     <using slotitem="5767;9"/>
    </and>
   </add>
-  <add val='2' order='0x10' stat='WIT'>
+  <add val='2' order='0x40' stat='WIT'>
    <and>
     <using slotitem="512;6"/>
     <using slotitem="5779;12"/>
     <using slotitem="5767;9"/>
    </and>
   </add>
-  <add val='-2' order='0x10' stat='MEN'>
+  <add val='-2' order='0x40' stat='MEN'>
    <and>
     <using slotitem="512;6"/>
     <using slotitem="5779;12"/>
@@ -179,14 +179,14 @@
       <using slotitem="5773;9"/>
      </and>
     </mul>
-    <add val='2' order='0x10' stat='INT'>
+    <add val='2' order='0x40' stat='INT'>
      <and>
       <using slotitem="2418;6"/>
       <using slotitem="5785;12"/>
       <using slotitem="5773;9"/>
      </and>
     </add>
-    <add val='-2' order='0x10' stat='WIT'>
+    <add val='-2' order='0x40' stat='WIT'>
      <and>
       <using slotitem="2418;6"/>
       <using slotitem="5785;12"/>
@@ -214,7 +214,7 @@
  <for>
     <add val='147' order='0x10' stat='pDef'/>
     <add val='718' order='0x10' stat='maxMp'/>
-    <add val='240' order='0x10' stat='maxMp'>
+    <add val='240' order='0x40' stat='maxMp'>
      <and>
       <using slotitem="2419;6"/>
       <using slotitem="5788;12"/>
@@ -235,14 +235,14 @@
       <using slotitem="5776;9"/>
      </and>
     </mul>
-    <add val='1' order='0x10' stat='MEN'>
+    <add val='1' order='0x40' stat='MEN'>
      <and>
       <using slotitem="2419;6"/>
       <using slotitem="5788;12"/>
       <using slotitem="5776;9"/>
      </and>
     </add>
-    <add val='-1' order='0x10' stat='INT'>
+    <add val='-1' order='0x40' stat='INT'>
      <and>
       <using slotitem="2419;6"/>
       <using slotitem="5788;12"/>
