@@ -368,14 +368,13 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-   <mul stat="pAtkSpd" order="0x50" val="1.2">
-     <and>
-       <using kind="Magic"/>
-     <not>
-       <using kind="Light,Heavy"/>
-     </not>
-     </and>
-   </mul>
+    <mul stat="pAtkSpd" order="0x50" val="0.8">
+      <and>       
+        <not>
+          <using kind="Magic"/>
+        </not>
+      </and>
+    </mul>
   </for>
 </skill>
 <skill id="119" levels="6" name="Gear Tuning">
@@ -1003,15 +1002,14 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x50" stat="mAtkSpd" val="1.5">
-      <and>
-        <using kind="Magic"/>
+    <mul order="0x40" stat="mAtkSpd" val="0.5">
+      <and>        
         <not>
-         <using kind="Light,Heavy"/>
+          <using kind="Magic"/>
         </not>
-       </and>
-     </mul>
-   </for>
+      </and>
+    </mul>
+  </for>
 </skill>
 <skill id="164" levels="3" name="Quick Recovery">
   <table name="#reuse"> 0.80 0.75 0.70 </table>
