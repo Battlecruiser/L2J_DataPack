@@ -562,8 +562,8 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="750"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.7" stackType="RunSpeedDown">
-      <mul order="0x30" stat="runSpd" val="0.7"/>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.5" stackType="RunSpeedDown">
+      <mul order="0x30" stat="runSpd" val="0.5"/>
     </effect>
   </for>
 </skill>
