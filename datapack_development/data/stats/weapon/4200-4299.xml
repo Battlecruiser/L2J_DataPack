@@ -75,12 +75,16 @@
   <for>
     <add val='24' order='0x10' stat='pAtk'/>
     <add val='32' order='0x10' stat='mAtk'/>
+    <set val='80' order='0x08' stat='rCrit'/>
+    <set val='304' order='0x08' stat='pAtkSpd'/>
   </for>
 </item>
 <item id='4238' name="hatchlings_level_75_weapon">
   <for>
     <add val='31' order='0x10' stat='pAtk'/>
     <add val='43' order='0x10' stat='mAtk'/>
+    <set val='80' order='0x08' stat='rCrit'/>
+    <set val='304' order='0x08' stat='pAtkSpd'/>
   </for>
 </item>
 </list>
