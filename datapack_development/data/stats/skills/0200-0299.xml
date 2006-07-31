@@ -161,7 +161,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add order="0x10" stat="regHp" val="#hp"/>
+    <add order="0x40" stat="regHp" val="#hp"/>
   </for>
 </skill>
 <skill id="213" levels="8" name="Boost Mana">

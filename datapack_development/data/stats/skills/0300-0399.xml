@@ -223,7 +223,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume">
-      <add order="0x10" stat="cAtk" val="#crit"/>
+      <add order="0x40" stat="cAtk" val="#crit"/>
     </effect>
   </for>
 </skill>
