@@ -176,20 +176,20 @@
   </for>
 </skill>
 <skill id="214" levels="1" name="Mana Recovery">
+  <table name="#Tab-regMp"> 1.2 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <table name="#Tab-regMp"> 1.2 </table>
   <for>
     <mul order="0x30" stat="regMp" val="#Tab-regMp">
-  	   <and>
-          <using kind="Magic"/>
-          <not>
-            <using kind="Light,Heavy"/>
-          </not>
-       </and>
+  	  <and>
+        <using kind="Magic"/>
+        <not>
+          <using kind="Light,Heavy"/>
+        </not>
+      </and>
     </mul>    
   </for>
 </skill>
@@ -285,16 +285,14 @@
   </for>
 </skill>
 <skill id="222" levels="1" name="Fist Fury">
-  <table name="#pAtkSpd"> 1.25 </table>
-  <table name="#HP"> 13 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-   <effect count="0x7fffffff" name="DamOverTime" time="3" val="#HP">
-      <mul order="0x20" stat="pAtkSpd" val="#pAtkSpd"/>
+   <effect count="0x7fffffff" name="DamOverTime" time="3" val="13">
+      <mul order="0x20" stat="pAtkSpd" val="1.25"/>
     </effect>
   </for>
 </skill>
@@ -310,7 +308,7 @@
     6.0 6.0 6.0 6.0 7.0 7.0 7.0 7.0 7.0 7.0 7.0 7.0 7.0 7.0 8.0
     8.0 8.0 8.0 8.0
   </table>
-  <table name="#power">
+  <table name="#power">  
     41.0 44.0 48.0 55.0 59.0 64.0 73.0 79.0 84.0 96.0 102.0
     109.0 123.0 131.0 139.0 148.0 157.0 166.0 175.0 185.0 196.0
     206.0 217.0 229.0 241.0 253.0 266.0 279.0 292.0 306.0 320.0
@@ -336,7 +334,7 @@
   <set name="buffDuration" val="20000"/>
   <set name="castRange" val="40"/>
   <for>
-     <effect count="7" name="DamOverTime" time="3" val="#bleedpower" abnormal="bleeding"/>
+    <effect count="7" name="DamOverTime" time="3" val="#bleedpower" abnormal="bleeding"/>
   </for>
 </skill>
 <skill id="224" levels="1" name="See Invisibility">
@@ -372,18 +370,18 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="Relax" time="2" val="2">
-      <add order="0x10" stat="regHp" val="5"/>
+      <add order="0x40" stat="regHp" val="5"/>
     </effect>
    </for>
 </skill>
 <skill id="227" levels="50" name="Light Armor Mastery">
   <table name="#pDef">
-4.2 5.3 6.5 7.7 9 9.9 10.8 12.7 13.7 14.8
-16.9 18 19.1 21.5 22.7 24 25.3 26.6 27.9
-29.3 30.7 32.1 33.6 35 36.5 38.1 39.6 41.2
-42.8 44.5 46.1 47.8 49.5 51.3 53.0 54.5
-56.6 58.4 60.2 62.1 64.0 65.8 67.7 69.7
-71.6 73.5 75.5 77.4 79.4 81.3
+    4.2 5.3 6.5 7.7 9 9.9 10.8 12.7 13.7 14.8
+    16.9 18 19.1 21.5 22.7 24 25.3 26.6 27.9
+    29.3 30.7 32.1 33.6 35 36.5 38.1 39.6 41.2
+    42.8 44.5 46.1 47.8 49.5 51.3 53.0 54.5
+    56.6 58.4 60.2 62.1 64.0 65.8 67.7 69.7
+    71.6 73.5 75.5 77.4 79.4 81.3
   </table>
   <table name="#rEvas">
 	3 3 5 5 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6
@@ -400,16 +398,16 @@
       <and>
         <using kind="Light"/>
         <not>
-<using kind="Heavy,Magic"/>
-</not>
+          <using kind="Heavy,Magic"/>
+        </not>
       </and>
     </add>
     <add order="0x40" stat="rEvas" val="#rEvas">
       <and>
         <using kind="Light"/>
         <not>
-<using kind="Heavy,Magic"/>
-</not>
+          <using kind="Heavy,Magic"/>
+        </not>
       </and>
     </add>
   </for>
@@ -459,11 +457,11 @@
 </skill>
 <skill id="231" levels="50" name="Heavy Armor Mastery">
   <table name="#pDef">
-1.9 3.3 4.8 6.4 8.1 8.9 9.8 11.7 12.7 13.7 15.8
-16.9 18.0 20.4 21.6 22.8 24.1 25.4 26.7 28.0 29.4
-30.8 32.2 33.7 35.2 36.7 38.2 39.8 41.4 43.0 44.6 46.3
-48.0 49.7 51.4 53.2 55.0 56.7 58.6 60.4 62.2 64.1 66.0
-67.8 69.7 71.6 73.6 75.5 77.4 79.3
+    1.9 3.3 4.8 6.4 8.1 8.9 9.8 11.7 12.7 13.7 15.8
+    16.9 18.0 20.4 21.6 22.8 24.1 25.4 26.7 28.0 29.4
+    30.8 32.2 33.7 35.2 36.7 38.2 39.8 41.4 43.0 44.6 46.3
+    48.0 49.7 51.4 53.2 55.0 56.7 58.6 60.4 62.2 64.1 66.0
+    67.8 69.7 71.6 73.6 75.5 77.4 79.3
   </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -475,19 +473,19 @@
       <and>
         <using kind="Heavy"/>
         <not>
-<using kind="Light,Magic"/>
-</not>
+          <using kind="Light,Magic"/>
+        </not>
       </and>
     </add>
   </for>
 </skill>
 <skill id="232" levels="52" name="Heavy Armor Mastery">
   <table name="#pDef">
-17.7 19.1 20.5 23.5 25.0 26.7 30.0 31.8 33.6 37.4 39.3
-41.3 45.6 47.7 50.0 54.6 57.1 59.5 62.1 64.6 67.3 70.0
-72.7 75.5 78.4 81.3 84.3 87.3 90.4 93.5 96.7 99.9 103.2
-106.5 109.9 113.3 116.8 120.3 123.8 127.4 131.0 134.7
-138.4 142.1 145.8 149.6 153.4 157.2 161.0 164.9 168.7 172.6
+    17.7 19.1 20.5 23.5 25.0 26.7 30.0 31.8 33.6 37.4 39.3
+    41.3 45.6 47.7 50.0 54.6 57.1 59.5 62.1 64.6 67.3 70.0
+    72.7 75.5 78.4 81.3 84.3 87.3 90.4 93.5 96.7 99.9 103.2
+    106.5 109.9 113.3 116.8 120.3 123.8 127.4 131.0 134.7
+    138.4 142.1 145.8 149.6 153.4 157.2 161.0 164.9 168.7 172.6
   </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -499,20 +497,20 @@
       <and>
         <using kind="Heavy"/>
         <not>
-<using kind="Light,Magic"/>
-</not>
+          <using kind="Light,Magic"/>
+        </not>
       </and>
     </add>
   </for>
 </skill>
 <skill id="233" levels="47" name="Light Armor Mastery">
   <table name="#pDef">
-1.3 2.2 3.2 4.2 5.3 6.8 8.4 10.1
-11.9 13.7 15.7 16.7 17.8 18.8 19.9
-21.1 22.2 23.4 24.5 25.8 27.0 28.2 29.5
-30.8 32.1 33.5 34.8 36.2 37.6 39.1 40.5
-42.0 43.5 44.9 46.5 48.0 49.5 51.1 52.7
-54.2 55.8 57.4 59.1 60.7 62.3 63.9 65.6
+    1.3 2.2 3.2 4.2 5.3 6.8 8.4 10.1
+    11.9 13.7 15.7 16.7 17.8 18.8 19.9
+    21.1 22.2 23.4 24.5 25.8 27.0 28.2 29.5
+    30.8 32.1 33.5 34.8 36.2 37.6 39.1 40.5
+    42.0 43.5 44.9 46.5 48.0 49.5 51.1 52.7
+    54.2 55.8 57.4 59.1 60.7 62.3 63.9 65.6
   </table>
   <table name="#rEvas">
 	4 4 6 6 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
@@ -529,27 +527,27 @@
       <and>
         <using kind="Light"/>
         <not>
-<using kind="Heavy,Magic"/>
-</not>
+          <using kind="Heavy,Magic"/>
+        </not>
       </and>
     </add>
     <add order="0x40" stat="rEvas" val="#rEvas">
       <and>
         <using kind="Light"/>
         <not>
-<using kind="Heavy,Magic"/>
-</not>
+          <using kind="Heavy,Magic"/>
+        </not>
       </and>
     </add>
   </for>
 </skill>
 <skill id="234" levels="41" name="Robe Mastery">
   <table name="#pDef">
-1.7 2.7 4.3 5.4 7.2 8.5 10.6 12.1 14.5
-15.3 16.2 17.9 18.8 19.8 21.7 22.7 23.7
-25.8 26.8 27.9 30.1 31.2 32.4 33.5 34.7
-35.9 37.1 38.4 39.6 40.8 42.1 43.4 44.7
-45.9 47.3 48.6 49.9 51.2 52.5 53.9 55.2
+    1.7 2.7 4.3 5.4 7.2 8.5 10.6 12.1 14.5
+    15.3 16.2 17.9 18.8 19.8 21.7 22.7 23.7
+    25.8 26.8 27.9 30.1 31.2 32.4 33.5 34.7
+    35.9 37.1 38.4 39.6 40.8 42.1 43.4 44.7
+    45.9 47.3 48.6 49.9 51.2 52.5 53.9 55.2
   </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -561,19 +559,19 @@
       <and>
         <using kind="Magic"/>
         <not>
-<using kind="Light,Heavy"/>
-</not>
+          <using kind="Light,Heavy"/>
+        </not>
       </and>
     </add>
   </for>
 </skill>
 <skill id="235" levels="41" name="Robe Mastery">
   <table name="#pDef">
-7.2 8.6 11.0 12.7 15.4 17.4 20.5 22.7 26.3
-27.6 28.8 31.5 32.9 34.2 37.1 38.6 40.1
-43.2 44.8 46.4 49.8 51.5 53.2 54.9 56.7
-58.5 60.3 62.1 64.0 65.9 67.7 69.7 71.6
-73.5 75.5 77.4 79.4 81.4 83.4 85.4 87.4
+    7.2 8.6 11.0 12.7 15.4 17.4 20.5 22.7 26.3
+    27.6 28.8 31.5 32.9 34.2 37.1 38.6 40.1
+    43.2 44.8 46.4 49.8 51.5 53.2 54.9 56.7
+    58.5 60.3 62.1 64.0 65.9 67.7 69.7 71.6
+    73.5 75.5 77.4 79.4 81.4 83.4 85.4 87.4
   </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -585,19 +583,19 @@
       <and>
         <using kind="Magic"/>
         <not>
-<using kind="Light,Heavy"/>
-</not>
+          <using kind="Light,Heavy"/>
+        </not>
       </and>
     </add>
   </for>
 </skill>
 <skill id="236" levels="41" name="Light Armor Mastery">
   <table name="#pDef">
-5.4 6.3 7.8 8.8 10.9 12.5 15.0 16.9 19.8 20.8
-21.8 24.0 25.1 26.3 28.6 29.8 31 33.6 34.9 36.2
-38.9 40.3 41.7 43.1 44.6 46 47.5 49 50.5 52.1
-53.6 55.2 56.7 58.3 59.9 61.5 63.1 64.7 66.4
-68.0 69.6
+    5.4 6.3 7.8 8.8 10.9 12.5 15.0 16.9 19.8 20.8
+    21.8 24.0 25.1 26.3 28.6 29.8 31 33.6 34.9 36.2
+    38.9 40.3 41.7 43.1 44.6 46 47.5 49 50.5 52.1
+    53.6 55.2 56.7 58.3 59.9 61.5 63.1 64.7 66.4
+    68.0 69.6
   </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -806,12 +804,12 @@
 </skill>
 <skill id="251" levels="45" name="Robe Mastery">
   <table name="#pDef"> 
-11.6 13.4 16.1 18.4 20.9 23.8 26.9 29.1 32.8 35.4
-39.6 42.6 47.3 49.0 50.7 54.2 56.1 57.9 61.8 63.7
-65.7 69.9 72.0 74.2 78.6 80.9 83.2 85.5 87.8 90.2
-92.6  95.1 97.6 100.1 102.6 105.1 107.7 110.3
-112.9 115.5 118.1 120.8 123.4 126.1 128.8
- </table>
+    11.6 13.4 16.1 18.4 20.9 23.8 26.9 29.1 32.8 35.4
+    39.6 42.6 47.3 49.0 50.7 54.2 56.1 57.9 61.8 63.7
+    65.7 69.9 72.0 74.2 78.6 80.9 83.2 85.5 87.8 90.2
+    92.6 95.1 97.6 100.1 102.6 105.1 107.7 110.3
+    112.9 115.5 118.1 120.8 123.4 126.1 128.8
+  </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -823,18 +821,18 @@
         <using kind="Magic"/>
         <not>
 		  <using kind="Light,Heavy"/>
-	  </not>
+        </not>
       </and>
     </add>
   </for>
 </skill>
 <skill id="252" levels="45" name="Light Armor Mastery">
   <table name="#pDef">
-12.6 14.5 17.5 19.3 21.2 23.2 25.5 27.0 30.1 32.5
-36.3 39.1 43.5 45.0 46.6 49.8 51.5 53.2 56.7 58.5
-60.4 64.2 66.1 68.1 72.2 74.2 76.3 78.5 80.6 82.8
-85.1 87.3 89.6 91.9 94.2 96.5 98.9 101.2 103.6 106.0
-108.5 110.9 113.3 115.8 118.2
+    12.6 14.5 17.5 19.3 21.2 23.2 25.5 27.0 30.1 32.5
+    36.3 39.1 43.5 45.0 46.6 49.8 51.5 53.2 56.7 58.5
+    60.4 64.2 66.1 68.1 72.2 74.2 76.3 78.5 80.6 82.8
+    85.1 87.3 89.6 91.9 94.2 96.5 98.9 101.2 103.6 106.0
+    108.5 110.9 113.3 115.8 118.2
   </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -878,11 +876,11 @@
 </skill>
 <skill id="253" levels="43" name="Heavy Armor Mastery">
   <table name="#pDef">
-11.6 13.3 15.2 17.2 19.5 21.1 23.7 25.6 28.7 30.8
-34.3 35.5 36.7 39.3 40.6 41.9 44.7 46.1 47.6 50.6
-52.1 53.7 56.9 58.6 60.2 61.9 63.6 65.3 67.1 68.9
-70.7 72.5 74.3 76.1 78.0 79.9 81.7 83.6 85.5 87.5
-89.4 91.3 93.3
+    11.6 13.3 15.2 17.2 19.5 21.1 23.7 25.6 28.7 30.8
+    34.3 35.5 36.7 39.3 40.6 41.9 44.7 46.1 47.6 50.6
+    52.1 53.7 56.9 58.6 60.2 61.9 63.6 65.3 67.1 68.9
+    70.7 72.5 74.3 76.1 78.0 79.9 81.7 83.6 85.5 87.5
+    89.4 91.3 93.3
   </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -926,7 +924,7 @@
   <set name="skillTime" val="1000"/>
   <set name="skillType" val="SPOIL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="50"/>
+  <set name="castRange" val="40"/>
   <for>
   </for>
 </skill>
@@ -948,8 +946,8 @@
   </for>
 </skill>
 <skill id="256" levels="1" name="Accuracy">
- <table name="#mpConsume"> 1 </table>
- <table name="#acc"> 3 </table>
+  <table name="#mpConsume"> 1 </table>
+  <table name="#acc"> 3 </table>
   <set name="power" val="0.0"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
@@ -977,16 +975,15 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add order="0x40" stat="pAtk" val="#pAtk">
-    </add>
+    <add order="0x40" stat="pAtk" val="#pAtk"/>
   </for>
 </skill>
 <skill id="258" levels="33" name="Light Armor Mastery">
   <table name="#pDef">
-11.1 11.8 12.5 14.0 14.8 15.6 17.3 18.1 19.0 20.8
-21.7 22.6 24.5 25.5 26.4 27.4 28.4 29.5 30.5 31.6
-32.6 33.7 34.8 35.9 37.0 38.1 39.2 40.3 41.4 42.6
-43.7 44.8 46.0
+    11.1 11.8 12.5 14.0 14.8 15.6 17.3 18.1 19.0 20.8
+    21.7 22.6 24.5 25.5 26.4 27.4 28.4 29.5 30.5 31.6
+    32.6 33.7 34.8 35.9 37.0 38.1 39.2 40.3 41.4 42.6
+    43.7 44.8 46.0
   </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1030,10 +1027,10 @@
 </skill>
 <skill id="259" levels="33" name="Heavy Armor Mastery">
   <table name="#pDef">
-14.8 15.6 16.5 18.3 19.2 20.2 22.1 23.1 24.1 26.2
-27.3 28.4 30.6 31.8 33.0 34.1 35.3 36.5 37.8 39.0
-40.3 41.5 42.8 44.1 45.4 46.7 48.0 49.4 50.7 52.0
-53.4 54.7 56.1
+    14.8 15.6 16.5 18.3 19.2 20.2 22.1 23.1 24.1 26.2
+    27.3 28.4 30.6 31.8 33.0 34.1 35.3 36.5 37.8 39.0
+    40.3 41.5 42.8 44.1 45.4 46.7 48.0 49.4 50.7 52.0
+    53.4 54.7 56.1
   </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1068,35 +1065,35 @@
   </for>
 </skill>
 <skill id="260" levels="37" name="Hammer Crush">
-<table name="#mpConsume">
- 40 41 43 43 44 45 47 48 49 51
- 52 54 55 55 56 58 59 61 62 63
- 65 66 68 68 69 70 72 73 74 75
- 77 78 79 80 81 82 83
-</table>
-<table name="#power">
- 123.0 131.0 139.0 148.0 157.0 166.0 175.0 185.0 196.0 206.0
- 217.0 229.0 241.0 253.0 266.0 279.0 292.0 306.0 320.0 334.0
- 349.0 364.0 379.0 395.0 410.0 426.0 443.0 459.0 475.0 492.0
- 509.0 526.0 542.0 559.0 576.0 593.0 609.0
-</table>
-<set name="weaponsAllowed" val="8"/>
-<set name="mpConsume" val="#mpConsume"/>
-<set name="save" val="4"/>
-<set name="power" val="#power"/>
-<set name="lvlDepend" val="1"/>
-<set name="target" val="TARGET_ONE"/>
-<set name="hitTime" val="1000"/>
-<set name="overHit" val="true"/>
-<set name="reuseDelay" val="13000"/>
-<set name="skillTime" val="1080"/>
-<set name="skillType" val="PDAM"/>
-<set name="operateType" val="OP_ACTIVE"/>
-<set name="buffDuration" val="9000"/>
-<set name="castRange" val="50"/>
-<for>
-<effect count="1" name="Stun" time="9" val="0"/>
-</for>
+  <table name="#mpConsume">
+    40 41 43 43 44 45 47 48 49 51
+    52 54 55 55 56 58 59 61 62 63
+    65 66 68 68 69 70 72 73 74 75
+    77 78 79 80 81 82 83
+  </table>
+  <table name="#power">
+    123.0 131.0 139.0 148.0 157.0 166.0 175.0 185.0 196.0 206.0
+    217.0 229.0 241.0 253.0 266.0 279.0 292.0 306.0 320.0 334.0
+    349.0 364.0 379.0 395.0 410.0 426.0 443.0 459.0 475.0 492.0
+    509.0 526.0 542.0 559.0 576.0 593.0 609.0
+  </table>
+  <set name="weaponsAllowed" val="8"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="save" val="4"/>
+  <set name="power" val="#power"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1000"/>
+  <set name="overHit" val="true"/>
+  <set name="reuseDelay" val="13000"/>
+  <set name="skillTime" val="1080"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="9000"/>
+  <set name="castRange" val="40"/>
+  <for>
+    <effect count="1" name="Stun" time="9" val="0"/>
+  </for>
 </skill>
 <skill id="261" levels="22" name="Triple Sonic Slash">
   <table name="#mpConsume"> 114 117 120 123 125 128 131 134 134 137 139 142 144 147 149 152 154 156 158 161 163 165 </table>
@@ -1120,7 +1117,7 @@
   </for>
 </skill>
 <skill id="262" levels="37" name="Holy Blessing">
-<table name="#mpConsume">
+  <table name="#mpConsume">
 	115 119 122 122 127
 	130 134 139 143 148
 	152 157 159 159 164
@@ -1129,8 +1126,8 @@
 	203 207 210 214 218
 	222 224 228 230 233
 	237 239
-</table>
-<table name="#power">
+  </table>
+  <table name="#power">
 	236.0 245.0 254.0 262.0 271.0
 	281.0 290.0 299.0 308.0 318.0
 	327.0 337.0 346.0 356.0 365.0
@@ -1139,7 +1136,7 @@
 	466.0 474.0 482.0 490.0 498.0
 	506.0 513.0 520.0 527.0 534.0
 	540.0 546.0
-</table>
+  </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1154,32 +1151,32 @@
   </for>
 </skill>
 <skill id="263" levels="37" name="Deadly Blow">
-<!-- Done by lucl -->
- <table name="#mpConsume"> 36 37 38 38 40 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 </table>
- <table name="#power"> 1107.0 1176.0 1249.0 1325.0 1405.0 1488.0 1574.0 1664.0 1757.0 1853.0 1953.0 2057.0 2164.0 2274.0 2388.0 2505.0 2625.0 2748.0 2875.0 3004.0 3136.0 3271.0 3408.0 3548.0 3690.0 3834.0 3980.0 4127.0 4275.0 4425.0 4575.0 4726.0 4878.0 5029.0 5180.0 5330.0 5479.0 </table>
- <set name="weaponsAllowed" val="16"/>
- <set name="mpConsume" val="#mpConsume"/>
- <set name="power" val="#power"/>
- <set name="target" val="TARGET_ONE"/>
- <set name="hitTime" val="1000"/>
- <set name="condition" val="16"/>
- <set name="reuseDelay" val="11000"/>
- <set name="skillTime" val="1080"/>
- <set name="skillType" val="PDAM"/>
- <set name="operateType" val="OP_ACTIVE"/>
- <set name="castRange" val="40"/>
- <for>
-   <add order="0x10" stat="rCrit" val="45">
-     <using kind="Dagger" skill="0263"/>
-   </add>
- </for>
+  <!-- Done by lucl -->
+  <table name="#mpConsume"> 36 37 38 38 40 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 </table>
+  <table name="#power"> 1107.0 1176.0 1249.0 1325.0 1405.0 1488.0 1574.0 1664.0 1757.0 1853.0 1953.0 2057.0 2164.0 2274.0 2388.0 2505.0 2625.0 2748.0 2875.0 3004.0 3136.0 3271.0 3408.0 3548.0 3690.0 3834.0 3980.0 4127.0 4275.0 4425.0 4575.0 4726.0 4878.0 5029.0 5180.0 5330.0 5479.0 </table>
+  <set name="weaponsAllowed" val="16"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1000"/>
+  <set name="condition" val="16"/>
+  <set name="reuseDelay" val="11000"/>
+  <set name="skillTime" val="1080"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <for>
+    <add order="0x40" stat="rCrit" val="45">
+      <using kind="Dagger" skill="0263"/>
+    </add>
+  </for>
 </skill>
 <skill id="264" levels="1" name="Song of Earth">
   <!-- Done by dc -->
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="900"/>
+  <set name="skillRadius" val="1000"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1189,7 +1186,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul order="0x30" stat="pDef" val="1.15"/>
+      <mul order="0x30" stat="pDef" val="1.25"/>
     </effect>
   </for>
 </skill>
@@ -1198,7 +1195,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="900"/>
+  <set name="skillRadius" val="1000"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1217,7 +1214,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="900"/>
+  <set name="skillRadius" val="1000"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1227,7 +1224,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <add order="0x40" stat="rEvas" val="10"/>
+      <add order="0x40" stat="rEvas" val="3"/>
     </effect>
   </for>
 </skill>
@@ -1236,7 +1233,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="900"/>
+  <set name="skillRadius" val="1000"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1255,7 +1252,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="900"/>
+  <set name="skillRadius" val="1000"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1274,7 +1271,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="900"/>
+  <set name="skillRadius" val="1000"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1292,7 +1289,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="900"/>
+  <set name="skillRadius" val="1000"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1302,7 +1299,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
-      <add order="0x40" stat="darkRes" val="30"/>
+      <add order="0x40" stat="darkRes" val="20"/>
     </effect>
   </for>    
 </skill>
@@ -1312,7 +1309,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="900"/>
+  <set name="skillRadius" val="1000"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1332,7 +1329,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="900"/>
+  <set name="skillRadius" val="1000"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1352,7 +1349,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="900"/>
+  <set name="skillRadius" val="1000"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1372,7 +1369,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="900"/>
+  <set name="skillRadius" val="1000"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1392,7 +1389,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="900"/>
+  <set name="skillRadius" val="1000"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1412,7 +1409,7 @@
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="900"/>
+  <set name="skillRadius" val="1000"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="2000"/>
@@ -1423,7 +1420,7 @@
   <for>
     <effect name="Buff" time="120" count="1" val="0">
       <mul order="0x30" stat="mAtkSpd" val="1.3"/>
-      <sub order="0x40" stat="cancel" val="30"/>
+      <sub order="0x40" stat="cancel" val="40"/>
     </effect>
   </for>
 </skill>
@@ -1451,7 +1448,7 @@
   <table name="#mpConsume"> 44 50 55 60 64 67 </table>
   <table name="#itemConsumeCount"> 3 4 5 6 6 6 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="itemConsumeId" val="1458" />
+  <set name="itemConsumeId" val="1458"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1463,9 +1460,9 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <!-- Summon-specific -->
-  <set name="npcId" val="4" />
-  <set name="expPenalty" val="0.0" />
-  <set name="isCubic" val="true" />
+  <set name="npcId" val="4"/>
+  <set name="expPenalty" val="0.0"/>
+  <set name="isCubic" val="true"/>
   <for>
   </for>
 </skill>
@@ -1503,7 +1500,7 @@
   <set name="skillTime" val="1900"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="50"/>
+  <set name="castRange" val="40"/>
   <for>
   </for>
 </skill>
@@ -1515,10 +1512,10 @@
     77 78 79 80 81 82 83
   </table>
   <table name="#power">
-   144.0 153.0 162.0 172.0 183.0 193.0 204.0 216.0 228.0 241.0
-   254.0 267.0 281.0 295.0 310.0 325.0 341.0 357.0 373.0 390.0
-   407.0 424.0 442.0 460.0 479.0 497.0 516.0 535.0 555.0 574.0
-   594.0 613.0 633.0 652.0 672.0 691.0 711.0
+    144.0 153.0 162.0 172.0 183.0 193.0 204.0 216.0 228.0 241.0
+    254.0 267.0 281.0 295.0 310.0 325.0 341.0 357.0 373.0 390.0
+    407.0 424.0 442.0 460.0 479.0 497.0 516.0 535.0 555.0 574.0
+    594.0 613.0 633.0 652.0 672.0 691.0 711.0
   </table>
   <set name="weaponsAllowed" val="1024"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1535,10 +1532,11 @@
   <set name="buffDuration" val="9000"/>
   <set name="castRange" val="50"/>
   <for>
-   <effect count="1" name="Stun" time="9" val="0"/>
+    <effect count="1" name="Stun" time="9" val="0"/>
   </for>
 </skill>
 <skill id="282" levels="1" name="Totem Spirit Puma">
+  <!-- Done by dc -->
   <set name="mpConsume" val="4"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1549,28 +1547,24 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
-<!-- Done by dc -->
-<table name="#Tab-pDef"> 0.8 </table>
-<table name="#Tab-pAtkSpd"> 1.25 </table>
-<table name="#Tab-rEvas"> 3 </table>
-<for>
-  <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
-    <mul  order="0x30" stat="pDef" val="#Tab-pDef"/>
-    <mul  order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
-    <add  order="0x40" stat="rEvas" val="#Tab-rEvas"/>
- </effect>
-</for>
+  <for>
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
+      <mul order="0x30" stat="pDef" val="0.8"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.25"/>
+      <add order="0x40" stat="rEvas" val="3"/>
+    </effect>
+  </for>
 </skill>
 <skill id="283" levels="7" name="Summon Dark Panther">
   <table name="#mpConsume"> 70 88 107 127 148 170 193 </table>
   <table name="#itemConsumeCount"> 1 3 3 2 4 2 4 </table>
   <table name="#itemConsumeCountOT"> 1 1 2 3 4 4 4 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="itemConsumeId" val="1459" />
-  <set name="itemConsumeCount" val="#itemConsumeCount" />
-  <set name="itemConsumeIdOT" val="1459" />
-  <set name="itemConsumeCountOT" val="#itemConsumeCountOT" />
-  <set name="itemConsumeTime" val="240000" />
+  <set name="itemConsumeId" val="1459"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
+  <set name="itemConsumeIdOT" val="1459"/>
+  <set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
+  <set name="itemConsumeTime" val="240000"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="6000"/>
@@ -1582,18 +1576,18 @@
   <set name="castRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 12184 12185 12186 12473 12474 12475 12476 </table>
-  <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="0.15" />
-  <set name="isCubic" val="false" />
+  <set name="npcId" val="#npcIds"/>
+  <set name="expPenalty" val="0.15"/>
+  <set name="isCubic" val="false"/>
   <for>
   </for>
 </skill>
 <skill id="284" levels="40" name="Hurricane Assault">
-	<table name="#mpConsume"> 49 50 52 56 58 59 59 61 63 65 67 69 71 73 75 77 77 79 81 83 85 87 89 91 93 94 95 97 98 100 102 104 105 107 109 110 112 113 115 116 </table>
-	<table name="#power"> 501.0 535.0 570.0 607.0 646.0 729.0 773.0 820.0 868.0 918.0 971.0 1025.0 1081.0 1140.0 1200.0 1262.0 1327.0 1393.0 1461.0 1531.0 1603.0 1677.0 1753.0 1830.0 1908.0 1988.0 2070.0 2153.0 2237.0 2322.0 2408.0 2494.0 2581.0 2669.0 2757.0 2846.0 2934.0 3022.0 3109.0 3196.0 </table>
-	<set name="weaponsAllowed" val="1024"/>
-	<set name="mpConsume" val="#mpConsume"/>
-	<set name="power" val="#power"/>
+  <table name="#mpConsume"> 49 50 52 56 58 59 59 61 63 65 67 69 71 73 75 77 77 79 81 83 85 87 89 91 93 94 95 97 98 100 102 104 105 107 109 110 112 113 115 116 </table>
+  <table name="#power"> 501.0 535.0 570.0 607.0 646.0 729.0 773.0 820.0 868.0 918.0 971.0 1025.0 1081.0 1140.0 1200.0 1262.0 1327.0 1393.0 1461.0 1531.0 1603.0 1677.0 1753.0 1830.0 1908.0 1988.0 2070.0 2153.0 2237.0 2322.0 2408.0 2494.0 2581.0 2669.0 2757.0 2846.0 2934.0 3022.0 3109.0 3196.0 </table>
+  <set name="weaponsAllowed" val="1024"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="conditionValue" val="2"/>
   <set name="hitTime" val="1000"/>
@@ -1610,6 +1604,7 @@
   </for>
 </skill>
 <skill id="285" levels="36" name="Higher Mana Gain">
+  <!-- TO CHECK IF WORKS WITH ADD NOT MUL -->
   <table name="#Tab-gainMp"> 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0 3.1 3.2 3.3 3.4 3.5 3.6 3.7 3.8 3.9 4.0 4.1 4.2 4.3 4.4 4.5 4.6 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1622,11 +1617,11 @@
 </skill>
 <skill id="286" levels="3" name="Provoke">
   <table name="#mpConsume"> 57 75 89 </table>
-  <table name="#skillRadius">500 600 700 </table>
+  <table name="#skillRadius"> 500 700 900 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="500"/>
   <set name="target" val="TARGET_AURA"/>
-  <set name="skillRadius" val="#skillRadius" />
+  <set name="skillRadius" val="#skillRadius"/>
   <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="15000"/>
   <set name="skillTime" val="1000"/>
@@ -1637,8 +1632,8 @@
   </for>
 </skill>
 <skill id="287" levels="3" name="Lionheart">
- <table name="#mpConsume"> 31 44 58 </table>
- <table name="#res"> 40 60 80 </table>
+  <table name="#mpConsume"> 31 44 58 </table>
+  <table name="#res"> 40 60 80 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1659,9 +1654,9 @@
   </for>
 </skill>
 <skill id="288" levels="4" name="Guard Stance">
-<table name="#mpConsume"> 8 10 12 13 </table>
-<table name="#pDef"> 122 161 212 256 </table>
-<table name="#ShieldRate"> 50 50 50 50 </table>
+  <table name="#mpConsume"> 8 10 12 13 </table>
+  <table name="#pDef"> 122 161 212 256 </table>
+  <table name="#ShieldRate"> 50 50 50 50 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1689,7 +1684,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
-  <set name="absorbPart" val="0.8" />
+  <set name="absorbPart" val="0.8"/>
   <for>
   </for>
 </skill>
@@ -1728,7 +1723,9 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
-  <player hp="60"/>
+  <cond>
+    <player hp="60"/>
+  </cond>
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
         <mul order="0x30" stat="pAtk" val="1.125"/>
@@ -1738,23 +1735,18 @@
   </for>
 </skill>
 <skill id="293" levels="20" name="Two-handed Weapon Mastery">
-<table name="#Attack">
-   4.5 7.3 10.7 15.1 20.5 27.1 32.9 39.4 46.6 54.6 63.3 72.7 79.3 86.6 93.1 100.2 107.5 114.8 122.1 129.3
-</table>
-<table name="#Accuracy">
-   3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
-</table>
+  <table name="#Attack"> 4.5 7.3 10.7 15.1 20.5 27.1 32.9 39.4 46.6 54.6 63.3 72.7 79.3 86.6 93.1 100.2 107.5 114.8 122.1 129.3 </table>
+  <table name="#Accuracy"> 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </table>
   <set name="weaponsAllowed" val="2048"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-   <for>
-      <add order="0x40" stat="pAtk" val="#Attack" />
-      <add order="0x40" stat="accCombat" val="#Accuracy">
-      </add>
-   </for>
+  <for>
+    <add order="0x40" stat="pAtk" val="#Attack"/>
+    <add order="0x40" stat="accCombat" val="#Accuracy"/>
+  </for>
 </skill>
 <skill id="294" levels="1" name="Shadow Sense">
   <set name="power" val="0.0"/>
@@ -1762,20 +1754,14 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <cond>
+    <game time="night"/>
+  </cond>
   <for>
-	<cond><game time="night"/></cond>
-	<add order="0x40" stat="accCombat" val="3"/>
+    <add order="0x40" stat="accCombat" val="3"/>
   </for>
 </skill>
 <skill id="295" levels="1" name="Iron Body">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Resist damage from falling.
-  created 2005-05-29 23:34:27
--->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1784,22 +1770,22 @@
   </for>
 </skill>
 <skill id="296" levels="1" name="Rest of Chameleon">
- <table name="#mpConsume"> 9 </table> 
+  <table name="#mpConsume"> 9 </table> 
   <set name="power" val="0.0"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
- <for>
-	<effect count="0x7fffffff" name="Relax" time="1" val="1">
-		<add order="0x10" stat="regHp" val="5"/>
+  <for>
+    <effect count="0x7fffffff" name="Relax" time="1" val="1">
+      <add order="0x10" stat="regHp" val="5"/>
 	</effect>
 	<effect count="0x7fffffff" name="SilentMove" time="1" val="8"/>
- </for>
+  </for>
 </skill>
 <skill id="297" levels="2" name="Duelist Spirit">
-  <table name="#Tab-pAtkSpd"> 1.09 1.12 </table>
+  <table name="#Tab-pAtkSpd"> 1.08 1.12 </table>
   <table name="#mpConsume"> 30 44 </table>
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1815,7 +1801,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0">
-       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+      <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
     </effect>
   </for>
 </skill>
@@ -1832,9 +1818,9 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
-      <mul order="0x30" stat="pAtk" val="0.2"/>
+      <mul order="0x30" stat="pAtk" val="0.99"/>
       <add order="0x40" stat="rEvas" val="25"/>
-      <add order="0x40" stat="runSpd" val="62"/>
+      <mul order="0x30" stat="runSpd" val="1.5"/>
     </effect>
   </for>
 </skill>
@@ -1843,12 +1829,12 @@
   <table name="#itemConsumeCount"> 120 </table>
   <table name="#reuseDelay"> 20000 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="itemConsumeIdOT" val="2132" />
-  <set name="itemConsumeCountOT" val="30" />
-  <set name="itemConsumeTime" val="60000" />
-  <set name="itemConsumeCount" val="#itemConsumeCount" />
+  <set name="itemConsumeIdOT" val="2132"/>
+  <set name="itemConsumeCountOT" val="30"/>
+  <set name="itemConsumeTime" val="60000"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="reuseDelay" val="#reuseDelay"/>
-  <set name="itemConsumeId" val="1460" />
+  <set name="itemConsumeId" val="1460"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="200000"/>
@@ -1860,9 +1846,9 @@
   <set name="castRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 12375 </table>
-  <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="0.0" />
-  <set name="isCubic" val="false" />
+  <set name="npcId" val="#npcIds"/>
+  <set name="expPenalty" val="0.0"/>
+  <set name="isCubic" val="false"/>
   <for>
   </for>
 </skill>
