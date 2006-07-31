@@ -435,7 +435,7 @@
   <set name="castRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
-      <mul order="0x50" stat="poisonRes" val="#Tab-poisonRes"/>
+      <mul order="0x30" stat="poisonRes" val="#Tab-poisonRes"/>
     </effect>
   </for>
 </skill>
@@ -717,7 +717,7 @@
   <set name="castRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="0.7" stackType="RunSpeedDown">
-      <mul order="0x50" stat="runSpd" val="0.7"/>
+      <mul order="0x30" stat="runSpd" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -824,7 +824,7 @@
   <set name="castRange" val="200"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0">
-      <mul order="0x50" stat="rEvas" val="1.02"/>
+      <mul order="0x30" stat="rEvas" val="1.02"/>
     </effect>
   </for>
 </skill>
@@ -845,7 +845,7 @@
   <set name="castRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-cAtk" stackType="cAtk">
-      <mul order="0x50" stat="cAtk" val="#Tab-cAtk"/>
+      <mul order="0x30" stat="cAtk" val="#Tab-cAtk"/>
     </effect>
   </for>
 </skill>
@@ -866,7 +866,7 @@
   <set name="castRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-sDef" stackType="shieldDef">
-      <mul order="0x50" stat="sDef" val="#Tab-sDef"/>
+      <mul order="0x30" stat="sDef" val="#Tab-sDef"/>
     </effect>
   </for>
 </skill>
@@ -946,7 +946,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
-      <div order="0x50" stat="regHp" val="#Tab-regHp"/>
+      <div order="0x30" stat="regHp" val="#Tab-regHp"/>
     </effect>
   </for>
 </skill>
@@ -967,8 +967,8 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
-      <mul stat="mReuse" order="0x50" val="#reuse"/>
-      <!--      <mul stat="pReuse" order="0x50" val="#reuse"/>
+      <mul stat="mReuse" order="0x30" val="#reuse"/>
+      <!--      <mul stat="pReuse" order="0x30" val="#reuse"/>
       global says that...-->
     </effect>
   </for>
@@ -1012,7 +1012,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-sDef" stackType="shieldDef">
-      <mul order="0x50" stat="sDef" val="#Tab-sDef"/>
+      <mul order="0x30" stat="sDef" val="#Tab-sDef"/>
     </effect>
   </for>
 </skill>
@@ -1034,7 +1034,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpeedUp">
-      <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+      <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
     </effect>
   </for>
 </skill>
@@ -1078,7 +1078,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-cAtk" stackType="cAtk">
-      <mul order="0x50" stat="cAtk" val="#Tab-cAtk"/>
+      <mul order="0x30" stat="cAtk" val="#Tab-cAtk"/>
     </effect>
   </for>
 </skill>
@@ -1152,7 +1152,7 @@
   <!-- Fixed by Pela -->
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-      <mul order="0x50" stat="maxLoad" val="#Weight"/>
+      <mul order="0x30" stat="maxLoad" val="#Weight"/>
     </effect>
   </for>
 </skill>
@@ -1238,12 +1238,12 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="berserk">
-      <mul order="0x50" stat="mAtk" val="#Tab-mAtk"/>
-      <mul order="0x50" stat="pAtk" val="#Tab-pAtk"/>
-      <mul order="0x50" stat="mDef" val="#Tab-mDef"/>
-      <mul order="0x50" stat="pDef" val="#Tab-pDef"/>
-      <mul order="0x50" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
-      <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+      <mul order="0x30" stat="mAtk" val="#Tab-mAtk"/>
+      <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
+      <mul order="0x30" stat="mDef" val="#Tab-mDef"/>
+      <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
+      <mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
+      <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
       <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>
@@ -1280,7 +1280,7 @@
   <set name="castRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
-      <div order="0x50" stat="mDef" val="#Tab-mDef"/>
+      <div order="0x30" stat="mDef" val="#Tab-mDef"/>
     </effect>
   </for>
 </skill>
@@ -1383,7 +1383,7 @@
   <set name="castRange" val="600"/>
   <for>
     <effect name="Buff" time="300" count="1" val="0">
-      <mul stat="regHp" val="#regHp" order="0x50"/>
+      <mul stat="regHp" val="#regHp" order="0x30"/>
     </effect>
   </for>
 </skill>
@@ -1639,7 +1639,7 @@
   </for>
 </skill>
 <skill id="1283" levels="13" name="Soul Guard">
-  <table name="#def"> 293 333 376 421 445 470 495 520 546 572 599 626 653 </table>
+  <table name="#def"> 293.3 333.2 375.9 421.4 445.5 469.7 494.9 520.1 546.0 571.9 598.5 625.8 653.1 </table>
   <table name="#mpConsume"> 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1647,7 +1647,7 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="1" val="#mpConsume">
       <add order="0x40" stat="pDef" val="#def"/>
     </effect>
   </for>
@@ -1790,7 +1790,7 @@
   </cond>
   <for>
   <effect count="1" name="Buff" time="120" val="0">
-    <div order="0x50" stat="regHp" val="1.6"/>
+    <div order="0x30" stat="regHp" val="1.6"/>
   </effect>
   </for>
 </skill>
@@ -1884,7 +1884,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x50" stat="regMp" val="#Tab-regMp">
+    <mul order="0x30" stat="regMp" val="#Tab-regMp">
       <player resting="true"/>
       <player walking="true"/>
     </mul>
@@ -1907,7 +1907,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="0.5" stackType="RunSpeedDown">
-      <mul order="0x50" stat="runSpd" val="0.5"/>
+      <mul order="0x30" stat="runSpd" val="0.5"/>
     </effect>
   </for>
 </skill> 

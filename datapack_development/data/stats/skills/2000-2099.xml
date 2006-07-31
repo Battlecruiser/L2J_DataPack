@@ -128,7 +128,7 @@
   <set name="isPotion" val="true"/>
   <for>
     <effect name="Buff" time="1200" count="1" val="0" stackOrder="1.15" stackType="pAtkSpeedUp">
-      <mul order="0x50" stat="pAtkSpd" val="1.15"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.15"/>
     </effect>
   </for>
 </skill>
@@ -334,7 +334,7 @@
   <for>
     <effect name="Buff" time="1200" count="1" val="0" stackOrder="33" stackType="SpeedUp">
       <add order="0x40" stat="runSpd" val="33"/>
-      <mul order="0x50" stat="pAtkSpd" val="1.33"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.33"/>
     </effect>
   </for>
 </skill>
@@ -364,7 +364,7 @@
   <set name="isPotion" val="true"/>
   <for>
     <effect name="Buff" time="1200" count="1" val="0" stackOrder="1.3" stackType="pAtkSpeedUp">
-      <mul order="0x50" stat="pAtkSpd" val="1.3"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.3"/>
     </effect>
   </for>
 </skill>
@@ -534,7 +534,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.5" stackType="cAtk">
-      <mul order="0x50" stat="cAtk" val="1.5"/>
+      <mul order="0x30" stat="cAtk" val="1.5"/>
     </effect>
   </for>
 </skill>
@@ -550,7 +550,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="3600" count="1" val="0" stackOrder="1.3" stackType="rCrit">
-      <mul order="0x50" stat="rCrit" val="1.3"/>
+      <mul order="0x30" stat="rCrit" val="1.3"/>
     </effect>
   </for>
 </skill>
@@ -566,8 +566,8 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="3600" count="1" val="0" stackOrder="1.3" stackType="mAtkSpeedUp">
-      <mul order="0x50" stat="mAtkSpd" val="1.3"/>
-      <mul order="0x50" stat="mReuse" val="0.9"/>
+      <mul order="0x30" stat="mAtkSpd" val="1.3"/>
+      <mul order="0x30" stat="mReuse" val="0.9"/>
     </effect>
   </for>
 </skill>
@@ -583,7 +583,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="3600" count="1" val="0" stackOrder="1.33" stackType="pAtkSpeedUp">
-      <mul order="0x50" stat="pAtkSpd" val="1.33"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.33"/>
     </effect>
   </for>
 </skill>
@@ -615,7 +615,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="3600" count="1" val="0" stackOrder="1.75" stackType="mAtk">
-      <mul order="0x50" stat="mAtk" val="1.75"/>
+      <mul order="0x30" stat="mAtk" val="1.75"/>
     </effect>
   </for>
 </skill>
@@ -631,7 +631,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="3600" count="1" val="0" stackOrder="1.15" stackType="pAtk">
-      <mul order="0x50" stat="pAtk" val="1.15"/>
+      <mul order="0x30" stat="pAtk" val="1.15"/>
     </effect>
   </for>
 </skill>
@@ -663,7 +663,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="3600" count="1" val="0" stackOrder="1.15" stackType="pDef">
-      <mul order="0x50" stat="pDef" val="1.15"/>
+      <mul order="0x30" stat="pDef" val="1.15"/>
     </effect>
   </for>
 </skill> 
@@ -849,19 +849,15 @@
   </for>
 </skill>
 <skill id="2074" levels="1" name="Potion of Critical Escape">
-<!---
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Misdirects enemy attack and slows Speed of user.
-  created 2005-05-29 23:34:30
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="CONFUSE_MOB_ONLY"/>
+  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <for>
+    <effect count="5" name="Confusion" time="6" val="100">
+   <mul stat="pAtkSpd" order="0x30" val="0.7">
+    </effect>
   </for>
 </skill>
 <skill id="2075" levels="1" name="Decrease Hate Scroll">

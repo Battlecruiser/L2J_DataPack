@@ -18,8 +18,8 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-      <mul order="0x50" stat="pAtk" val="#Tab-pAtk"/>
-      <add order="0x50" stat="accCombat" val="#Tab-accCombat"/>
+      <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
+      <add order="0x30" stat="accCombat" val="#Tab-accCombat"/>
     </effect>
   </for>
 </skill>
@@ -59,7 +59,7 @@
   <set name="castRange" val="-1"/>
   <for>
   	<effect name="Buff" time="120" count="1" val="0">
-  		<mul order='0x50' stat='regMp' val="#Tab-regMp"/>
+  		<mul order="0x30" stat="regMp" val="#Tab-regMp"/>
   	</effect>
   </for>
 </skill>
@@ -81,8 +81,8 @@
   <set name="castRange" val="-1"/>
   <for>
   	<effect name="Buff" time="120" count="1" val="0">
-  		<mul order='0x50' stat='atkReuse' val="#Tab-atkReuse"/>
-  		<mul order='0x50' stat='mReuse' val="#Tab-mReuse"/>
+  		<mul order="0x30" stat="atkReuse" val="#Tab-atkReuse"/>
+  		<mul order="0x30" stat="mReuse" val="#Tab-mReuse"/>
   	</effect>
   </for>
 </skill>
@@ -120,8 +120,8 @@
   <set name="castRange" val="400"/>
   <for>
      <effect count="1" name="Buff" time="30" val="0" stackOrder="100" stackType="CurseShade">
-        <mul order="0x50" stat="mDef" val="#Tab-mDef"/>
-        <mul order="0x50" stat="pDef" val="#Tab-pDef"/>
+        <mul order="0x30" stat="mDef" val="#Tab-mDef"/>
+        <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
      </effect>
   </for>
 </skill>
@@ -142,8 +142,8 @@
   <set name="castRange" val="-1"/>
   <for>
      <effect count="1" name="Buff" time="30" val="0" stackOrder="100" stackType="CurseShade">
-        <mul order="0x50" stat="mDef" val="#Tab-mDef"/>
-        <mul order="0x50" stat="pDef" val="#Tab-pDef"/>
+        <mul order="0x30" stat="mDef" val="#Tab-mDef"/>
+        <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
      </effect>
   </for>
 </skill>

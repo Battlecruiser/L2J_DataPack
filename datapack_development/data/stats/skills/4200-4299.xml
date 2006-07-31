@@ -15,7 +15,7 @@
   <set name="castRange" val="750"/>
   <for>
    <effect name="Buff" time="90" count="1" val="0">
-     <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+     <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
    </effect>
   </for>
 </skill>
@@ -72,7 +72,7 @@
   <set name="castRange" val="750"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
-      <mul order="0x50" stat="runSpd" val="#Tab-runSpd"/>
+      <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>
 </skill>
@@ -130,7 +130,7 @@
   <set name="castRange" val="750"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
-      <mul order="0x50" stat="maxMp" val="#Tab-maxMp"/>
+      <mul order="0x30" stat="maxMp" val="#Tab-maxMp"/>
     </effect>
   </for>
 </skill>
@@ -220,7 +220,7 @@
   <set name="castRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pAtk">
-      <mul order="0x50" stat="pAtk" val="#rate"/>
+      <mul order="0x30" stat="pAtk" val="#rate"/>
     </effect>
   </for>
 </skill>
@@ -240,7 +240,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-      <mul order="0x50" stat="pDef" val="#rate"/>
+      <mul order="0x30" stat="pDef" val="#rate"/>
     </effect>
   </for>
 </skill>
@@ -260,7 +260,7 @@
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpeedUp">
-      <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+      <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
     </effect>
   </for>
 </skill>
@@ -548,7 +548,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   </for>
 </skill>
 <skill id="4237" levels="1" name="Decreases Speed">
-  <!-- Mikhail Skill -->
+<!-- Mikhail Skill -->
   <set name="mpConsume" val="65"/>
   <set name="save" val="2"/>
   <set name="power" val="72.0"/>
@@ -562,8 +562,8 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="750"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.5" stackType="RunSpeedDown">
-      <mul order="0x50" stat="runSpd" val="0.5"/>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.7" stackType="RunSpeedDown">
+      <mul order="0x30" stat="runSpd" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -722,7 +722,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   <set name="castRange" val="750"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="0.7" stackType="RunSpeedDown">
-      <mul order="0x50" stat="runSpd" val="0.7"/>
+      <mul order="0x30" stat="runSpd" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -975,14 +975,14 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x50" stat="pAtkSpd" val="#rate"/>
-    <mul order="0x50" stat="mAtkSpd" val="#rate"/>
-    <mul order="0x50" stat="rEvas" val="#rate"/>
-    <mul order="0x50" stat="rExp" val="#rate"/>
-    <mul order="0x50" stat="runSpd" val="#rate"/>
-    <mul order="0x50" stat="regHp" val="#rate"/>
-    <mul order="0x50" stat="regCp" val="#rate"/>
-    <mul order="0x50" stat="regMp" val="#rate"/>
+    <mul order="0x30" stat="pAtkSpd" val="#rate"/>
+    <mul order="0x30" stat="mAtkSpd" val="#rate"/>
+    <mul order="0x30" stat="rEvas" val="#rate"/>
+    <mul order="0x30" stat="rExp" val="#rate"/>
+    <mul order="0x30" stat="runSpd" val="#rate"/>
+    <mul order="0x30" stat="regHp" val="#rate"/>
+    <mul order="0x30" stat="regCp" val="#rate"/>
+    <mul order="0x30" stat="regMp" val="#rate"/>
   </for>
 </skill>
 <skill id="4268" levels="1" name="Danger Area">
@@ -1014,9 +1014,9 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x50" stat="regHp" val="#rate"/>
-    <mul order="0x50" stat="regMp" val="#rate"/>
-    <mul order="0x50" stat="runSpd" val="#rateSpd"/>
+    <mul order="0x30" stat="regHp" val="#rate"/>
+    <mul order="0x30" stat="regMp" val="#rate"/>
+    <mul order="0x30" stat="runSpd" val="#rateSpd"/>
   </for>
 </skill>
 <skill id="4271" levels="7" name="Increase Force">
@@ -1168,7 +1168,7 @@ whose level is lower than one's level by 9 or more. This curse cannot be undone.
   <set name="operateType" val="OP_PASSIVE"/> 
   <set name="castRange" val="-1"/> 
   <for> 
-    <mul order="0x50" stat="mDef" val="2"/> 
+    <mul order="0x30" stat="mDef" val="2"/> 
   </for> 
 </skill> 
 <skill id="4284" levels="6" name="Resist Bleeding">

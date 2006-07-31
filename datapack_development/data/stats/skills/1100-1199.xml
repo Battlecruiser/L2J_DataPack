@@ -97,7 +97,7 @@
   <set name="castRange" val="-1"/>
 <for>
    <effect count="1" name="Buff" time="120" val="0">
-      <div order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd" >
+      <div order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd" >
       </div>
    </effect>
 </for>
@@ -647,7 +647,7 @@
   <set name="castRange" val="400"/>
   <for>
   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mDef" stackType="MagicDefUp">
-    <mul order="0x50" stat="mDef" val="#Tab-mDef"/>
+    <mul order="0x30" stat="mDef" val="#Tab-mDef"/>
   </effect>
 </for>
 </skill>
@@ -668,7 +668,7 @@
   <set name="castRange" val="400"/>
   <for>
   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pDef" stackType="pDef">
-    <mul order="0x50" stat="pDef" val="#Tab-pDef"/>
+    <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
   </effect>
 </for>
 </skill>
@@ -689,7 +689,7 @@
   <set name="castRange" val="400"/>
   <for>
   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpeedUp">
-    <mul order="0x50" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+    <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
   </effect>
 </for>
 </skill>
@@ -763,7 +763,7 @@
   <set name="castRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-      <mul order="0x50" stat="mAtk" val="#Tab-mAtk"/>
+      <mul order="0x30" stat="mAtk" val="#Tab-mAtk"/>
     </effect>
   </for>
 </skill>
@@ -784,7 +784,7 @@
   <set name="castRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtk" stackType="pAtk">
-      <mul order="0x50" stat="pAtk" val="#Tab-pAtk"/>
+      <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
     </effect>
   </for>
 </skill>
@@ -1027,7 +1027,7 @@
   <set name="castRange" val="600"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
-      <mul order="0x50" stat="runSpd" val="#Tab-runSpd"/>
+      <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>
 </skill>
@@ -1097,7 +1097,7 @@
   <set name="castRange" val="600"/>
   <for>
   <effect count="1" name="Buff" time="120" val="0">
-    <div order="0x50" stat="pAtk" val="#Tab-pAtk"/>
+    <div order="0x30" stat="pAtk" val="#Tab-pAtk"/>
   </effect>
 </for>
 </skill>
@@ -1117,7 +1117,7 @@
   <set name="castRange" val="200"/>
   <for>
   <effect count="1" name="Buff" time="300" val="0">
-    <div order="0x50" stat="regHp" val="#regHp"/>
+    <div order="0x30" stat="regHp" val="#regHp"/>
   </effect>
   </for>
 </skill>
@@ -1419,7 +1419,7 @@
   <set name="castRange" val="400"/>
   <for>
    <effect count="1" name="Buff" time="1200" val="0">
-    <mul stat="waterRes" val="#res" order="0x50"/>
+    <mul stat="waterRes" val="#res" order="0x30"/>
    </effect>
   </for>
 </skill>
@@ -1462,7 +1462,7 @@
   <set name="castRange" val="600"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="38" stackType="RunSpeedDown">
-      <mul order="0x50" stat="runSpd" val="0.7"/>
+      <mul order="0x30" stat="runSpd" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -1546,7 +1546,7 @@
   <set name="castRange" val="400"/>
   <for>
   <effect count="1" name="Buff" time="1200" val="0">
-   <mul stat="windRes" val="#res" order="0x50"/>
+   <mul stat="windRes" val="#res" order="0x30"/>
   </effect>
   </for>
 </skill>
@@ -1583,7 +1583,7 @@
 <!-- Fixed by Pela -->
 <for>
         <effect count="1" name="Buff" time="1200" val="0">
-        <mul stat="fireRes" val="#res" order="0x50"/>
+        <mul stat="fireRes" val="#res" order="0x30"/>
         </effect>
 </for>
 </skill>

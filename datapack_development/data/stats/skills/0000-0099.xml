@@ -85,7 +85,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="10" val="0">
-      <mul order="0x50" stat="runSpd" val="#spd"/>
+      <mul order="0x30" stat="runSpd" val="#spd"/>
     </effect>
   </for>
 </skill>
@@ -1360,7 +1360,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mDef" stackType="MagicDefUp">
-    <mul order="0x50" stat="mDef" val="#Tab-mDef"/>
+    <mul order="0x30" stat="mDef" val="#Tab-mDef"/>
     </effect>
   </for>
 </skill>
@@ -1407,7 +1407,7 @@
   <set name="castRange" val="-1"/>
   <for>
    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="detect_weakness">
-   	  <mul order="0x50" stat="pAtk-insects" val="1.2"/>
+   	  <mul order="0x30" stat="pAtk-insects" val="1.2"/>
       <target kind="insect"/>
    </effect>
   </for>
@@ -1427,7 +1427,7 @@
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
       <sub order="0x40" stat="runSpd" val="38"/>
-      <mul order="0x50" stat="pAtk" val="1.2"/>
+      <mul order="0x30" stat="pAtk" val="1.2"/>
     </effect>
   </for>
 </skill>
@@ -1447,7 +1447,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pAtk">
-        <mul order="0x50" stat="pAtk" val="#rate"/>
+        <mul order="0x30" stat="pAtk" val="#rate"/>
     </effect>
   </for>
 </skill>
@@ -1467,7 +1467,7 @@
   <set name="castRange" val="-1"/>
   <for>
   <effect count="1" name="Buff" time="60" val="0">
-    <mul order="0x50" stat="pAtk" val="#pAtk"/>
+    <mul order="0x30" stat="pAtk" val="#pAtk"/>
   </effect>
   </for>
 </skill>
@@ -1499,7 +1499,7 @@
   <set name="castRange" val="-1"/>
   <for>
    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="detect_weakness">
-      <mul order="0x50" stat="pAtk-monsters" val="1.2"/>
+      <mul order="0x30" stat="pAtk-monsters" val="1.2"/>
       <target kind="monster"/>
    </effect>
   </for>
@@ -1540,8 +1540,8 @@
 <table name="#Tab-rEvas"> 2 4 6 </table>
 <for>
   <effect name="Buff" time="300" count="1" val="0">
-    <mul  order='0x50' stat='pDef' val="#Tab-pDef"/>
-    <sub  order='0x40' stat='rEvas' val="#Tab-rEvas"/>
+    <mul  order="0x30" stat="pDef" val="#Tab-pDef"/>
+    <sub  order="0x40" stat="rEvas" val="#Tab-rEvas"/>
   </effect>
 </for>
 </skill>
@@ -1614,7 +1614,7 @@
   <set name="castRange" val="-1"/>
   <for>
    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#power" stackType="DmgShield">
-     <add order="0x50" stat="reflectDam" val="#power"/>
+     <add order="0x30" stat="reflectDam" val="#power"/>
    </effect>
   </for>
 </skill>
@@ -1631,7 +1631,7 @@
   <set name="castRange" val="-1"/>
   <for>
    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="detect_weakness">
-      <mul order="0x50" stat="pAtk-animals" val="1.2"/>
+      <mul order="0x30" stat="pAtk-animals" val="1.2"/>
       <target kind="animal"/>
    </effect>
   </for>
@@ -1649,7 +1649,7 @@
   <set name="castRange" val="-1"/>
   <for>
    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="detect_weakness">
-      <mul order="0x50" stat="pAtk-dragons" val="1.2"/>
+      <mul order="0x30" stat="pAtk-dragons" val="1.2"/>
       <target kind="dragon"/>
    </effect>
   </for>
@@ -1700,7 +1700,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pDef">
-        <mul order="0x50" stat="pDef" val="#rate"/>
+        <mul order="0x30" stat="pDef" val="#rate"/>
     </effect>
   </for>
 </skill>
@@ -1758,8 +1758,8 @@
 <!-- Done by dc -->
 <for>
   <effect count="1" name="Buff" time="60" val="0">
-    <mul order="0x50" stat="pAtk" val="#Tab-pAtk"/>
-    <div order="0x50" stat="pDef" val="#Tab-pDef"/>
+    <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
+    <div order="0x30" stat="pDef" val="#Tab-pDef"/>
     <sub order="0x40" stat="rEvas" val="#Tab-rEvas"/>
   </effect>
 </for>
@@ -1782,7 +1782,7 @@
   <set name="castRange" val="40"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
-      <mul order="0x50" stat="runSpd" val="#Tab-runSpd"/>
+      <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>
 </skill>
@@ -1824,7 +1824,7 @@
 <table name="#Tab-pAtk"> 1.15 1.23 1.31 1.39 1.47 1.55 1.63 1.7 1.77 1.84 1.9 </table>
  <for>
   <effect name="Buff" time="120" count="1" val="0">
-    <div  order='0x50' stat='pAtk' val="#Tab-pAtk"/>
+    <div  order="0x30" stat="pAtk" val="#Tab-pAtk"/>
   </effect>
  </for>
 </skill>
@@ -1861,7 +1861,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-      <mul order="0x50" stat="pAtkSpd" val="#rate">
+      <mul order="0x30" stat="pAtkSpd" val="#rate">
         <using kind="Bow"/>
       </mul>
     </effect>

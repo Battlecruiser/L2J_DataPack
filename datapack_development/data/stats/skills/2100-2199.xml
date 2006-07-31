@@ -950,8 +950,8 @@
   <set name="isPotion" val="true"/>
   <for>
   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtkSpd" stackType="mAtkSpeedUp">
-    <mul order="0x50" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
-    <mul order="0x50" stat="mReuse" val="#reuse"/>
+    <mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
+    <mul order="0x30" stat="mReuse" val="#reuse"/>
   </effect>
 </for>
 </skill>
