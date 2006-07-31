@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="7001" levels="1" name="Dispel Buff">
-<!-- TODO -->
+  <!-- TODO -->
   <set name="save" val="3"/>
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -13,7 +13,7 @@
   </for>
 </skill>
 <skill id="7002" levels="1" name="Dispel Debuff">
-<!-- TODO -->
+  <!-- TODO -->
   <set name="save" val="3"/>
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -25,7 +25,7 @@
   </for>
 </skill>
 <skill id="7003" levels="1" name="Dispel All">
-<!-- TODO -->
+  <!-- TODO -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -35,7 +35,7 @@
   </for>
 </skill>
 <skill id="7004" levels="2" name="Disple Petrification">
-<!-- TODO -->
+  <!-- TODO -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -46,7 +46,7 @@
   </for>
 </skill>
 <skill id="7005" levels="4" name="Greater Chant of Vampire">
-<!-- TODO -->
+  <!-- TODO -->
   <set name="mpConsume" val="272"/>
   <set name="power" val="0.0"/>
   <set name="hitTime" val="2500"/>
@@ -60,7 +60,7 @@
   </for>
 </skill>
 <skill id="7006" levels="13" name="Greater Heart of Paagrio">
-<!-- TODO -->
+  <!-- TODO -->
   <set name="mpConsume" val="272"/>
   <set name="power" val="0.0"/>
   <set name="hitTime" val="2500"/>
@@ -74,7 +74,7 @@
   </for>
 </skill>
 <skill id="7007" levels="4" name="Greater Seal of Flame">
-<!-- TODO -->
+  <!-- TODO -->
   <set name="mpConsume" val="153"/>
   <set name="power" val="0.0"/>
   <set name="hitTime" val="4000"/>
@@ -89,112 +89,90 @@
 </skill>
 <!-- ID 7008 thru 7028 are not used. Check skillname.dat to verify -->
 <skill id="7029" levels="4" name="Super Haste">
-<!-- TODO -->
+  <!-- Done by dc -->
+  <table name="#Tab-runSpd"> 2 3 3 3 </table>
+  <table name="#Tab-pAtk"> 1 1 1 1 </table>
+  <table name="#Tab-mAtkSpd"> 2 3 3 3 </table>
+  <table name="#Tab-pAtkSpd"> 2 3 3 3 </table>
+  <table name="#Tab-mReuse"> 1 1 1.99 1.99 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
- <!-- Done by dc -->
-<table name="#Tab-runSpd"> 2 3 3 3 </table>
-<table name="#Tab-pAtk"> 1 1 1 1 </table>
-<table name="#Tab-mAtkSpd"> 2 3 3 3 </table>
-<table name="#Tab-pAtkSpd"> 2 3 3 3 </table>
-<table name="#Tab-mReuse"> 1 1 1.99 1.99 </table>
-<for>
-  <effect name="Buff" time="1200" count="1" val="0">
-    <mul  order="0x30" stat="runSpd" val="#Tab-runSpd"/>
-    <mul  order="0x30" stat="pAtk" val="#Tab-pAtk"/>
-    <mul  order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
-    <mul  order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
-    <div  order="0x30" stat="mReuse" val="#Tab-mReuse"/>
- </effect>
-</for>
+  <for>
+    <effect name="Buff" time="1200" count="1" val="0">
+      <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
+      <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
+      <mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
+      <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+      <div order="0x30" stat="mReuse" val="#Tab-mReuse"/>
+    </effect>
+  </for>
 </skill>
 <skill id="7030" levels="1" name="Summon King Bugbear">
-
-<table name="#itemConsumeCount"> 8 </table>
-<set name="itemConsumeId" val="1458"/>
-<set name="mpConsume" val="3"/>
-<set name="power" val="0.0"/>
-<set name="target" val="TARGET_SELF"/>
-<set name="itemConsumeCount" val="#itemConsumeCount"/>
-<set name="hitTime" val="4000"/>
-<set name="reuseDelay" val="18600000"/>
-<set name="skillTime" val="8000"/>
-<set name="skillType" val="SUMMON"/>
-<set name="isMagic" val="true"/>
-<set name="operateType" val="OP_ACTIVE"/>
-<set name="castRange" val="-1"/>
-<!-- Summon-specific -->
-<table name="#npcIds">
-150
-</table>
-<set name="npcId" val="#npcIds" />
-<set name="expPenalty" val="0.3" />
-<set name="isCubic" val="false" />
-
-<for>
-
-</for>
-
+  <table name="#itemConsumeCount"> 8 </table>
+  <set name="itemConsumeId" val="1458"/>
+  <set name="mpConsume" val="3"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="18600000"/>
+  <set name="skillTime" val="8000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <!-- Summon-specific -->
+  <set name="npcId" val="150"/>
+  <set name="expPenalty" val="0.3"/>
+  <set name="isCubic" val="false"/>
+  <for>
+  </for>
 </skill>
 <skill id="7031" levels="1" name="Summon Skeleton Royal Guard">
-
-<table name="#itemConsumeCount"> 8 </table>
-<set name="itemConsumeId" val="1458"/>
-<set name="mpConsume" val="3"/>
-<set name="power" val="0.0"/>
-<set name="target" val="TARGET_SELF"/>
-<set name="itemConsumeCount" val="#itemConsumeCount"/>
-<set name="hitTime" val="4000"/>
-<set name="reuseDelay" val="18600000"/>
-<set name="skillTime" val="8000"/>
-<set name="skillType" val="SUMMON"/>
-<set name="isMagic" val="true"/>
-<set name="operateType" val="OP_ACTIVE"/>
-<set name="castRange" val="-1"/>
-<!-- Summon-specific -->
-<table name="#npcIds">
-622
-</table>
-<set name="npcId" val="#npcIds" />
-<set name="expPenalty" val="0.3" />
-<set name="isCubic" val="false" />
-
-<for>
-
-</for>
-
+  <table name="#itemConsumeCount"> 8 </table>
+  <set name="itemConsumeId" val="1458"/>
+  <set name="mpConsume" val="3"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="18600000"/>
+  <set name="skillTime" val="8000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <!-- Summon-specific -->
+  <set name="npcId" val="622"/>
+  <set name="expPenalty" val="0.3"/>
+  <set name="isCubic" val="false"/>
+  <for>
+  </for>
 </skill>
 <skill id="7032" levels="1" name="Summon Hunter Gargoyle">
-
-<table name="#itemConsumeCount"> 8 </table>
-<set name="itemConsumeId" val="1458"/>
-<set name="mpConsume" val="3"/>
-<set name="power" val="0.0"/>
-<set name="target" val="TARGET_SELF"/>
-<set name="itemConsumeCount" val="#itemConsumeCount"/>
-<set name="hitTime" val="4000"/>
-<set name="reuseDelay" val="18600000"/>
-<set name="skillTime" val="8000"/>
-<set name="skillType" val="SUMMON"/>
-<set name="isMagic" val="true"/>
-<set name="operateType" val="OP_ACTIVE"/>
-<set name="castRange" val="-1"/>
-<!-- Summon-specific -->
-<table name="#npcIds">
-241
-</table>
-<set name="npcId" val="#npcIds" />
-<set name="expPenalty" val="0.3" />
-<set name="isCubic" val="false" />
-
-<for>
-
-</for>
-
+  <table name="#itemConsumeCount"> 8 </table>
+  <set name="itemConsumeId" val="1458"/>
+  <set name="mpConsume" val="3"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="18600000"/>
+  <set name="skillTime" val="8000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <!-- Summon-specific -->
+  <set name="npcId" val="241"/>
+  <set name="expPenalty" val="0.3"/>
+  <set name="isCubic" val="false"/>
+  <for>
+  </for>
 </skill>
 <!-- ID's 7033 thru 7099 are not used. Checked skillname.dat to verify -->
 </list>
