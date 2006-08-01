@@ -17,13 +17,15 @@
 </skill>
 <skill id="4495" levels="12" name="BOSS Power Shot">
   <table name="#mpConsume"> 36 50 69 93 118 143 166 175 182 186 189 192 </table>
-  <table name="#power"> 172.0 187.0 239.0 258.0 279.0 326.0 352.0 379.0 440.0 472.0 507.0 584.0 </table>
-  <set name="weaponsAllowed" val="32"/>
+  <table name="#power"> 352.0 949.0 2607.0 6828.0 17184.0 33213.0 51007.0 59177.0 67888.0 77001.0 86359.0 95790.0 </table>
+  <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4500"/>
-  <set name="reuseDelay" val="10000"/>
+  <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
   <set name="skillTime" val="4500"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -33,25 +35,28 @@
 </skill>
 <skill id="4496" levels="12" name="Shock">
   <table name="#mpConsume"> 36 50 69 93 118 143 166 175 182 186 189 192 </table>
-  <table name="#power"> 16.0 35.0 73.0 139.0 241.0 379.0 542.0 705.0 868.0 1031.0 1194.0 1357.0 </table>
+  <table name="#power"> 176.0 475.0 1304.0 3414.0 8592.0 16607.0 25504.0 29589.0 33944.0 38501.0 43180.0 47895.0 </table>
+  <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="4"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="1000"/>
+  <set name="hitTime" val="4500"/>
   <set name="overHit" val="true"/>
-  <set name="reuseDelay" val="16000"/>
-  <set name="skillTime" val="1000"/>
+  <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
+  <set name="skillTime" val="4500"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="9000"/>
-  <set name="castRange" val="40"/>
+  <set name="castRange" val="900"/>
   <for>
 	<effect count="1" name="Stun" time="9" val="0"/>
   </for>
 </skill>
 <skill id="4497" levels="1" name="Treasure Chest - Level 21">
-<!-- TODO -->
+  <!-- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -60,7 +65,7 @@
   </for>
 </skill>
 <skill id="4498" levels="1" name="Treasure Chest - Level 22">
-<!-- TODO -->
+  <!-- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -69,7 +74,7 @@
   </for>
 </skill>
 <skill id="4499" levels="1" name="Treasure Chest - Level 25">
-<!-- TODO -->
+  <!-- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
