@@ -94,7 +94,6 @@
   <table name="#Tab-pAtk"> 1 1 1 1 </table>
   <table name="#Tab-mAtkSpd"> 2 3 3 3 </table>
   <table name="#Tab-pAtkSpd"> 2 3 3 3 </table>
-  <table name="#Tab-mReuse"> 1 1 1.99 1.99 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -107,7 +106,6 @@
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
       <mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
-      <div order="0x30" stat="mReuse" val="#Tab-mReuse"/>
     </effect>
   </for>
 </skill>
