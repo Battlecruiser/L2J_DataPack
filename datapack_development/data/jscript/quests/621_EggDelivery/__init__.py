@@ -18,7 +18,7 @@ FEE_OF_EGGS = 7196
 
 #REWARDS
 ADENA = 57
-HASTE_POTION = 1062
+HASTE_POTION = 734
 
 class Quest (JQuest) :
 
