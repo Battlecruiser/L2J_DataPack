@@ -945,17 +945,15 @@
   </for>
 </skill>
 <skill id="256" levels="1" name="Accuracy">
-  <table name="#mpConsume"> 1 </table>
-  <table name="#acc"> 3 </table>
   <set name="power" val="0.0"/>
-  <set name="mpConsume" val="#mpConsume"/>
+  <set name="mpConsume" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume">
-      <add order="0x10" stat="accCombat" val="#acc"/>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="1">
+      <add order="0x10" stat="accCombat" val="3"/>
     </effect>
   </for>
 </skill>

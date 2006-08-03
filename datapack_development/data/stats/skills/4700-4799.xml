@@ -5,6 +5,7 @@
   <table name="#Tab-pAtk"> 1.06 1.08 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 </table>
   <table name="#Tab-accCombat"> 3 3 3 3 3 3 3 3 3 3 3 3 3 </table>
   <table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
+  <table name="#dur"> 120000 120000 120000 150000 165000 180000 195000 210000 225000 240000 255000 270000 285000 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
@@ -15,7 +16,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="#dur"/>
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="#time" val="0">
@@ -227,7 +228,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="skillTime" val="1100"/>
-  <set name="reuseDelay" val="1200000"/>
+  <set name="reuseDelay" val="120000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
