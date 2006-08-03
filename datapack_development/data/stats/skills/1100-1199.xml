@@ -706,8 +706,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <!-- Drain-specific: absorb from a mob's corpse -->
-  <set name="absorbPart" val="0."     /> <!-- no damage, it's dead -->
-  <set name="absorbAbs"  val="#drain" /> <!-- absorbs absolute value -->
+  <set name="absorbPart" val="0"/> <!-- no damage, it's dead -->
+  <set name="absorbAbs"  val="#drain"/> <!-- absorbs absolute value -->
   <for>
   </for>
 </skill>
