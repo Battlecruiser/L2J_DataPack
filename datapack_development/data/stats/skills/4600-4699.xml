@@ -29,7 +29,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="120000"/>
   <for>
    <effect count="1" name="Buff" time="120" val="0">
     <mul order="0x30" stat="rCrit" val="#rCrit"/>
@@ -161,7 +161,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="120000"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
       <mul order="0x30" stat="pAtk" val="#pAtk"/>
@@ -186,7 +186,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="120000"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
       <add order="0x40" stat="absorbDam" val="#Tab-absorbDam"/>
@@ -205,7 +205,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="120000"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
       <mul order="0x30" stat="rCrit" val="#rCrit"/>
@@ -224,7 +224,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="120000"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
       <mul order="0x30" stat="cAtk" val="#cAtk"/>
@@ -415,7 +415,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="50000"/>
+  <set name="buffDuration" val="5000"/>
   <for>
     <effect count="1" name="Buff" time="5" val="0">
      <mul order="0x30" stat="regHp" val="0"/>
@@ -429,7 +429,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="50000"/>
+  <set name="buffDuration" val="5000"/>
   <for>
     <effect count="1" name="Buff" time="5" val="0">
      <mul order="0x30" stat="runSpd" val="#runSpd"/>
@@ -448,7 +448,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="50000"/>
+  <set name="buffDuration" val="5000"/>
   <for>
     <effect count="1" name="Buff" time="5" val="0">
      <mul order="0x30" stat="pDef" val="#pDef"/>
@@ -467,7 +467,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="50000"/>
+  <set name="buffDuration" val="5000"/>
   <for>
     <effect count="1" name="Buff" time="5" val="0">
      <mul order="0x30" stat="mDef" val="#mDef"/>
@@ -530,7 +530,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="120000"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
      <mul order="0x30" stat="pDef" val="#pDef"/>
@@ -553,7 +553,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="120000"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
      <mul order="0x30" stat="mAtk" val="#mAtk"/>
@@ -580,7 +580,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="120000"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
      <mul order="0x30" stat="pAtk" val="#pAtk"/>
@@ -607,7 +607,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="120000"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
      <mul order="0x30" stat="mAtk" val="#mAtk"/>
@@ -635,7 +635,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="120000"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
      <mul order="0x30" stat="pAtk" val="#pAtk"/>
@@ -668,7 +668,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="120000"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
      <mul order="0x30" stat="pAtk" val="#pAtk"/>
@@ -696,7 +696,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="120000"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
      <mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
@@ -719,7 +719,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="120000"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
      <mul order="0x30" stat="mAtk" val="#mAtk"/>
@@ -746,7 +746,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="120000"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
      <mul order="0x30" stat="pAtk" val="#pAtk"/>
@@ -825,7 +825,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="50000"/>
+  <set name="buffDuration" val="5000"/>
   <for>
     <effect count="1" name="Buff" time="5" val="0">
      <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
@@ -839,7 +839,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="50000"/>
+  <set name="buffDuration" val="5000"/>
   <for>
     <effect count="1" name="Buff" time="5" val="0">
      <mul order="0x30" stat="rCrit" val="#rCrit"/>
@@ -853,7 +853,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="50000"/>
+  <set name="buffDuration" val="5000"/>
   <for>
     <effect count="1" name="Buff" time="5" val="0">
      <mul order="0x30" stat="cAtk" val="#cAtk"/>
@@ -867,7 +867,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="50000"/>
+  <set name="buffDuration" val="5000"/>
   <for>
     <effect count="1" name="Buff" time="5" val="0">
      <mul order="0x30" stat="pAtk" val="#pAtk"/>
@@ -881,7 +881,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="50000"/>
+  <set name="buffDuration" val="5000"/>
   <for>
     <effect count="1" name="Buff" time="5" val="0">
      <mul order="0x30" stat="pDef" val="#pDef"/>
@@ -1586,7 +1586,7 @@
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="150000"/>
+  <set name="buffDuration" val="15000"/>
   <for>
     <effect count="5" name="Buff" time="15" val="0"> 
        <mul order="0x30" stat="pAtk" val="0.55"/>
@@ -1605,7 +1605,7 @@
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="150000"/>
+  <set name="buffDuration" val="15000"/>
   <for>
     <effect count="5" name="Buff" time="15" val="0"> 
        <mul order="0x30" stat="pAtk" val="0.20"/>
@@ -1618,7 +1618,7 @@
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="150000"/>
+  <set name="buffDuration" val="15000"/>
   <for>
     <effect count="5" name="Buff" time="15" val="0"> 
        <mul order="0x30" stat="pDef" val="0.20"/>
@@ -1647,7 +1647,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="buffDuration" val="50000"/>
+  <set name="buffDuration" val="5000"/>
   <for>
     <effect count="10" name="Buff" time="5" val="0">
        <mul order="0x30" stat="regHp" val="#regHp"/>
@@ -1668,7 +1668,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <for>
 	<effect count="1" name="Buff" time="#time" val="0">

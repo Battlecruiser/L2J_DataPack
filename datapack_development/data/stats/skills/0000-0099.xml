@@ -182,14 +182,8 @@
   </for>
 </skill>
 <skill id="8" levels="7" name="Focus Sonic">
-
-<table name="#power">
-   1.0 2.0 3.0 4.0 5.0 6.0 7.0
-</table>
-<table name="#charges">
-   1 2 3 4 5 6 7
-</table>
-
+<table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 </table>
+<table name="#charges"> 1 2 3 4 5 6 7 </table>
   <set name="mpConsume" val="10"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
@@ -202,7 +196,6 @@
 <for>
    <effect count="1" name="Charge" time="0x7fffffff" val="1"/>
 </for>
-
 </skill>
 <skill id="9" levels="34" name="Sonic Buster">
   <!-- Charge is always 1, not rising
@@ -339,7 +332,7 @@
   <set name="castRange" val="600"/>
   <for>
     <effect name="Buff" time="60" count="1" val="0">
-      <sub order="0x10" stat="aggression" val="#aggr"/>
+      <sub order="0x40" stat="aggression" val="#aggr"/>
     </effect>
   </for>
 </skill>
@@ -359,7 +352,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
-    <add order="0x10" stat="rCrit" val="45">
+    <add order="0x40" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>
@@ -962,12 +955,8 @@
   </for>
 </skill>
 <skill id="50" levels="7" name="Focus Force">
-<table name="#power">
-   1.0 2.0 3.0 4.0 5.0 6.0 7.0
-</table>
-<table name="#charges">
-   1 2 3 4 5 6 7
-</table>
+<table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 </table>
+<table name="#charges"> 1 2 3 4 5 6 7 </table>
   <set name="mpConsume" val="7"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
