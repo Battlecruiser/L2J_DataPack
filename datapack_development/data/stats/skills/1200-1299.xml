@@ -1834,8 +1834,12 @@
   <set name="castRange" val="-1"/>
   <for>
     <add order="0x40" stat="regMp" val="#Tab-regMp">
-      <player resting="true"/>
-      <player walking="true"/>
+      <and>
+        <player resting="false"/>
+        <not>
+          <player running="true"/>
+        </not>
+      </and>
     </add>
   </for>
 </skill>
