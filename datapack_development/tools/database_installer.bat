@@ -1,11 +1,9 @@
 @echo off
-
-REM ############################################
-REM ## You can change here your own DB params ##
-REM ############################################
-REM MYSQL BIN PATH
+REM ##############################################
+REM ## Interactive script setup -  (by TanelTM) ##
+REM ##############################################
+REM Default values:
 set mysqlBinPath=C:\Program Files\MySQL\MySQL Server 4.1\bin
-
 REM LOGINSERVER
 set lsuser=root
 set lspass=
@@ -17,23 +15,61 @@ set gsuser=root
 set gspass=
 set gsdb=l2jdb
 set gshost=localhost
-REM ############################################
 
-set mysqldumpPath="%mysqlBinPath%\mysqldump"
-set mysqlPath="%mysqlBinPath%\mysql"
-
-echo PLEASE EDIT THIS SCRIPT SO VALUES IN THE CONFIG SECTION MATCH YOUR DATABASE(S)
+set workdir="%cd%"
+:loadVars
+if not exist vars.txt goto createVars
+ren vars.txt *.bat
+call vars.bat
+ren vars.bat *.txt
+cls
+goto start
+:createVars
+echo This is the first time you run database_installer so we need to set it up...
 echo.
+echo Your mysqlBinPath is? (default: C:\Program Files\MySQL\MySQL Server 4.1\bin)
+set /P mysqlBinPath=": "
+echo.
+echo LoginServer settings
+echo --------------------
+set /P lsuser="User (default is 'root'): "
+set /P lspass="Pass (will be shown and saved as clear text): "
+set /P lsdb="Database (default is 'l2jdb'): "
+set /P lshost="Host (default is 'localhost'): "
+echo.
+echo GameServer settings
+echo -------------------
+set /P gsuser="User (default is 'root'): "
+set /P gspass="Pass (will be shown and saved as clear text): "
+set /P gsdb="Database (default is 'l2jdb'): "
+set /P gshost="Host (default is 'localhost'): "
+echo.
+echo @set mysqlPath="%mysqlBinPath%\mysql"> vars.txt
+echo @set mysqlBinPath="%mysqlBinPath%">> vars.txt
+echo @set mysqldumpPath="%mysqlBinPath%\mysqldump">> vars.txt
+echo @set lsuser=%lsuser%>> vars.txt
+echo @set lspass=%lspass%>> vars.txt
+echo @set lsdb=%lsdb%>> vars.txt
+echo @set lshost=%lshost%>> vars.txt
+echo @set gsuser=%gsuser%>> vars.txt
+echo @set gspass=%gspass%>> vars.txt
+echo @set gsdb=%gsdb%>> vars.txt
+echo @set gshost=%gshost%>> vars.txt
+echo.
+echo Setup complete, press any key to continue...
+pause> nul
+goto loadVars
+:start
+REM ############################################
 echo.
 echo Making a backup of the original loginserver database.
 %mysqldumpPath% --add-drop-table -h %lshost% -u %lsuser% --password=%lspass% %lsdb% > loginserver_backup.sql
 echo.
-echo WARNING: A full install (f) will destroy data in your
-echo          `accounts` and `gameserver` tables.
-echo          Choose upgrade (u) if you already have an `accounts` table but no
-echo          `gameserver` table (ie. your server is a pre LS/GS split version.)
-echo          Choose skip (s) to skip loginserver DB installation and go to
-echo          gameserver DB installation/upgrade.
+echo WARNING: A full install (f) will destroy data in your `accounts` and `gameserver` tables.
+echo          Choose upgrade (u) if you already have an `accounts` table but no `gameserver` 
+echo          table (ie. your server is a pre LS/GS split version.)
+echo          Choose skip (s) to skip loginserver DB installation and go to gameserver DB 
+echo          installation/upgrade.
 :asklogin
 set loginprompt=x
 set /p loginprompt=LOGINSERVER DB install type: (f) full or (u) upgrade or {s} skip or (q) quit? 
