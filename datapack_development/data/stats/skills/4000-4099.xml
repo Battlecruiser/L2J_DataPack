@@ -577,7 +577,7 @@
   <set name="castRange" val="600"/>
   <for>
     <effect count="1" name="Buff" time="15" val="0">
-      <div order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+      <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
     </effect>
   </for>
 </skill>
