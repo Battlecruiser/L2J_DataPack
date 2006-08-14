@@ -56,7 +56,7 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 
-for npcId in range(8494,8507):
+for npcId in range(8494,8508):
 	CREATED.addTalkId(npcId)
 	STARTED.addTalkId(npcId)
 	QUEST.addStartNpc(npcId)
