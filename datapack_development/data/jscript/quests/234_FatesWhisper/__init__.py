@@ -36,7 +36,8 @@ TopBGradeWeaponData = { \
 "Dual Fist":(236,99), \
 "Etc":(170,143), \
 "Pole":(194,99), \
-"Sword":(194,122) }
+"Sword":(194,122),\
+"Dual Sword":(236,99)}
 
 class Quest (JQuest) :
 
