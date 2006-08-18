@@ -289,6 +289,9 @@
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
+  <cond msg="Dual Fist required.">
+    <using kind="Fist, Dual Fist"/>
+  </cond>
   <for>
    <effect count="0x7fffffff" name="DamOverTime" time="3" val="13">
       <mul order="0x20" stat="pAtkSpd" val="1.25"/>
