@@ -20,54 +20,107 @@ FEE_OF_DRINK = 7198
 ADENA = 57
 HASTE_POTION = 734
 
+#Chance to get an S-grade random recipe instead of just adena and haste potion
+RPCHANCE=10
+#Change this value to 1 if you wish 100% recipes, default 70%
+ALT_RP100=0
+
+#MESSAGES
+default="<html><head><body>I have nothing to say you</body></html>"
+
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onEvent (self,event,st) :
    htmltext = event
+   cond=st.getInt("cond")
    if event == "8521-1.htm" :
-     st.set("cond","1")
-     st.setState(STARTED)
-     st.giveItems(SPECIAL_DRINK,5)
-     st.playSound("ItemSound.quest_accept")
+     if cond==0:
+       st.set("cond","1")
+       st.setState(STARTED)
+       st.giveItems(SPECIAL_DRINK,5)
+       st.playSound("ItemSound.quest_accept")
+     else:
+       htmltext=default
    if event == "8547-1.htm" :
-     st.takeItems(SPECIAL_DRINK,1)
-     st.giveItems(FEE_OF_DRINK,1)
-     st.set("cond","2")
+     if st.getQuestItemsCount(SPECIAL_DRINK):
+       if cond==1:
+         st.takeItems(SPECIAL_DRINK,1)
+         st.giveItems(FEE_OF_DRINK,1)
+         st.set("cond","2")
+       else:
+         htmltext=default
+     else:
+       htmltext="LMFAO!"
+       st.extiQuest(1)
    if event == "8546-1.htm" :
-     st.takeItems(SPECIAL_DRINK,1)
-     st.giveItems(FEE_OF_DRINK,1)
-     st.set("cond","3")
+     if st.getQuestItemsCount(SPECIAL_DRINK):
+       if cond==2:
+         st.takeItems(SPECIAL_DRINK,1)
+         st.giveItems(FEE_OF_DRINK,1)
+         st.set("cond","3")
+       else:
+         htmltext=default
+     else:
+       htmltext="LMFAO!"
+       st.extiQuest(1)
    if event == "8545-1.htm" :
-     st.takeItems(SPECIAL_DRINK,1)
-     st.giveItems(FEE_OF_DRINK,1)
-     st.set("cond","4")
+     if st.getQuestItemsCount(SPECIAL_DRINK):
+       if cond==3:
+         st.takeItems(SPECIAL_DRINK,1)
+         st.giveItems(FEE_OF_DRINK,1)
+         st.set("cond","4")
+       else:
+         htmltext=default
+     else:
+       htmltext="LMFAO!"
+       st.extiQuest(1)
    if event == "8544-1.htm" :
-     st.takeItems(SPECIAL_DRINK,1)
-     st.giveItems(FEE_OF_DRINK,1)
-     st.set("cond","5")
+     if st.getQuestItemsCount(SPECIAL_DRINK):
+       if cond==4:
+         st.takeItems(SPECIAL_DRINK,1)
+         st.giveItems(FEE_OF_DRINK,1)
+         st.set("cond","5")
+       else:
+         htmltext=default
+     else:
+       htmltext="LMFAO!"
+       st.extiQuest(1)
    if event == "8543-1.htm" :
-     st.takeItems(SPECIAL_DRINK,1)
-     st.giveItems(FEE_OF_DRINK,1)
-     st.set("cond","6")
+     if st.getQuestItemsCount(SPECIAL_DRINK):
+       if cond==5:
+         st.takeItems(SPECIAL_DRINK,1)
+         st.giveItems(FEE_OF_DRINK,1)
+         st.set("cond","6")
+       else:
+         htmltext=default
+     else:
+       htmltext="LMFAO!"
+       st.extiQuest(1)
    if event == "8521-3.htm" :
-     st.takeItems(FEE_OF_DRINK,5)
-     st.giveItems(ADENA,18800)
-     st.giveItems(HASTE_POTION,1)
-     st.playSound("ItemSound.quest_finish")
-     st.exitQuest(1)
+     if st.getQuestItemsCount(FEE_OF_DRINK) == 5:
+        st.takeItems(FEE_OF_DRINK,5)
+        if st.getRandom(100) < RPCHANCE :
+          st.giveItems(range(6847+ALT_RP100,6853,2)[st.getRandom(3)],1)
+        else:
+          st.giveItems(ADENA,18800)
+          st.giveItems(HASTE_POTION,1)
+        st.playSound("ItemSound.quest_finish")
+        st.exitQuest(1)
+     else:
+        htmltext=default
    return htmltext
 
  def onTalk (Self,npc,st):
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   htmltext = default
    npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
    cond = int(st.get("cond"))
    if npcId == 8521 and cond == 0 :
-     if st.getPlayer().getLevel() >= 68 and st.getPlayer().getLevel() <= 73 :
+     if st.getPlayer().getLevel() >= 68 :
        htmltext = "8521-0.htm"
      else:
        st.exitQuest(1)
