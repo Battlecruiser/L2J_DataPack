@@ -609,7 +609,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtk" stackType="mAtk">
       <mul order="0x30" stat="mAtk" val="#Tab-mAtk"/>
     </effect>
   </for>
