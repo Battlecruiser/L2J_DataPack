@@ -592,36 +592,112 @@
   </for>
 </skill>
 <skill id="1346" levels="1" name="Warrior Servitor">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpInitialConsume" val="14"/>
+  <set name="mpConsume" val="56"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="10"/>
+  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="target" val="TARGET_PET"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="300000"/>
+  <set name="castRange" val="400"/>
   <for>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="Servitors_buff">
+      <mul stat="pDef" val="1.2" order="0x30"/>
+      <add stat="accCombat" val="4" order="0x40"/>
+      <mul stat="pAtk" val="1.1" order="0x30"/>
+      <mul stat="pAtkSpd" val="1.2" order="0x30"/>
+      <mul stat="maxHp" val="1.2" order="0x30"/>
+      <mul stat="regHp" val="1.2" order="0x30"/>
+      <mul stat="runSpd" val="0.9" order="0x30"/>
+      <!-- missing decreased resistance -->
+    </effect>
   </for>
+</skill> 
 </skill>
 <skill id="1347" levels="1" name="Wizard Servitor">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpInitialConsume" val="14"/>
+  <set name="mpConsume" val="56"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="10"/>
+  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="target" val="TARGET_PET"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="300000"/>
+  <set name="castRange" val="400"/>
   <for>
-  </for>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="Servitors_buff">
+      <mul stat="regMp" val="1.2" order="0x30"/>
+      <mul stat="mDef" val="1.2" order="0x30"/>
+      <mul stat="mCritRate" val="2" order="0x30"/>
+      <mul stat="mAtk" val="1.2" order="0x30"/>
+      <mul stat="mAtkSpd" val="1.2" order="0x30"/>
+      <mul stat="runSpd" val="0.8" order="0x30"/>
+      <!-- missing decreased resistance -->
+    </effect>
+  </for> 
 </skill>
 <skill id="1348" levels="1" name="Assassin Servitor">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpInitialConsume" val="14"/>
+  <set name="mpConsume" val="56"/>
+  <set name="power" val="0.0"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="10"/>
+  <set name="target" val="TARGET_PET"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="300000"/>
+  <set name="castRange" val="400"/>
   <for>
-  </for>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="Servitors_buff">
+      <add order="0x40" stat="accCombat" val="4"/>
+      <add order="0x40" stat="rEvas" val="4"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.2"/>
+      <add order="0x40" stat="absorbDam" val="5"/>
+      <!-- missing decreased resistance -->
+      <!-- missing increased chance and damage during attack from behind -->
+    </effect>
+  </for> 
 </skill>
 <skill id="1349" levels="1" name="Final Servitor">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpInitialConsume" val="15"/>
+  <set name="mpConsume" val="57"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="20"/>
+  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="600000"/>
+  <set name="target" val="TARGET_PET"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="300000"/>
+  <set name="castRange" val="400"/>
   <for>
-  </for>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="2" stackType="Servitors_buff">
+      <mul stat="rCrit" val="1.2" order="0x30"/>
+      <mul stat="pAtk" val="1.1" order="0x30"/>
+      <mul stat="cAtk" val="1.2" order="0x30"/>
+      <mul stat="pAtkSpd" val="1.2" order="0x30"/>
+      <mul stat="maxHp" val="1.2" order="0x30"/>
+      <mul stat="runSpd" val="0.8" order="0x30"/>
+      <add stat="accCombat" val="4" order="0x40"/>
+      <mul stat="pDef" val="1.2" order="0x30"/>
+      <mul stat="mDef" val="1.2" order="0x30"/>
+      <mul stat="mAtk" val="1.2" order="0x30"/>
+      <mul stat="mAtkSpd" val="1.2" order="0x30"/>
+      <!-- missing decreased resistance -->
+    </effect>
+  </for> 
 </skill>
 <skill id="1350" levels="1" name="Warrior Bane">
   <set name="target" val="TARGET_NONE"/>
