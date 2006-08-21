@@ -99,20 +99,20 @@
      <using slotitem="5768;9"/>
     </and>
     </add>
-    <mul val='1.80' order='0x30' stat='poisonRes'>
+    <add val='80' order='0x40' stat='poisonRes'>
      <and>
       <using slotitem="547;6"/>
       <using slotitem="5780;12"/>
       <using slotitem="5768;9"/>
     </and>
-    </mul>
-        <mul val='1.80' order='0x30' stat='bleedRes'>
+    </add>
+        <add val='80' order='0x40' stat='bleedRes'>
      <and>
       <using slotitem="547;6"/>
       <using slotitem="5780;12"/>
       <using slotitem="5768;9"/>
     </and>
-    </mul>
+    </add>
 	<add val='5759' order='0x40' stat='maxLoad'>
 	<and>
      <using slotitem="547;6"/>
@@ -154,13 +154,13 @@
       <using slotitem="5774;9"/>
      </and>
     </add>
-    <mul val='1.50' order='0x30' stat='stunRes'>
+    <add val='50' order='0x40' stat='stunRes'>
      <and>
       <using slotitem="2419;6"/>
       <using slotitem="5786;12"/>
       <using slotitem="5774;9"/>
      </and>
-    </mul>
+    </add>
   <enchant val='0' order='0x0C' stat='pDef'/>
  </for>
 </item>
@@ -213,14 +213,14 @@
      <using slotitem="5766;9"/>
     </and>
     </mul>
-    <mul val='1.50' order='0x30' stat='rootRes'>
+    <add val='50' order='0x40' stat='paralyzeRes'>
     <and>
      <using slotitem="388;11"/>
      <using slotitem="512;6"/>
      <using slotitem="5777;12"/>
      <using slotitem="5765;9"/>
     </and>
-    </mul>
+    </add>
   <enchant val='0' order='0x0C' stat='pDef'/>
  </for>
 </item>
@@ -326,13 +326,13 @@
       <using slotitem="5723;9"/>
      </and>
     </mul>
-    <mul val='1.20' order='0x30' stat='poisonRes'>
+    <add val='20' order='0x40' stat='poisonRes'>
      <and>
       <using slotitem="2417;6"/>
       <using slotitem="5739;12"/>
       <using slotitem="5723;9"/>
      </and>
-    </mul>
+    </add>
                 <add val='3' order='0x40' stat='DEX'>
     <and>
      <using slotitem="2417;6"/>
@@ -389,20 +389,20 @@
     <using slotitem="5769;9"/>
    </and>
   </add>
-  <mul val='1.80' order='0x30' stat='poisonRes'>
+  <add val='80' order='0x40' stat='poisonRes'>
    <and>
     <using slotitem="547;6"/>
     <using slotitem="5781;12"/>
     <using slotitem="5769;9"/>
    </and>
-  </mul>
-  <mul val='1.80' order='0x30' stat='bleedRes'>
+  </add>
+  <add val='80' order='0x40' stat='bleedRes'>
    <and>
     <using slotitem="547;6"/>
     <using slotitem="5781;12"/>
     <using slotitem="5769;9"/>
    </and>
-  </mul>
+  </add>
   <enchant val='0' order='0x0C' stat='pDef'/>
  </for>
 </item>
@@ -437,20 +437,20 @@
       <using slotitem="5772;9"/>
      </and>
     </add>
-    <mul val='1.70' order='0x30' stat='sleepRes'>
+    <add val='70' order='0x40' stat='sleepRes'>
      <and>
       <using slotitem="2418;6"/>
       <using slotitem="5784;12"/>
       <using slotitem="5772;9"/>
      </and>
-    </mul>
-    <mul val='1.70' order='0x30' stat='rootRes'>
+    </add>
+    <add val='70' order='0x40' stat='rootRes'>
      <and>
       <using slotitem="2418;6"/>
       <using slotitem="5784;12"/>
       <using slotitem="5772;9"/>
      </and>
-    </mul>
+    </add>
   <enchant val='0' order='0x0C' stat='pDef'/>
  </for>
 </item>
@@ -486,13 +486,13 @@
       <using slotitem="5775;9"/>
      </and>
     </add>
-    <mul val='1.50' order='0x30' stat='stunRes'>
+    <add val='50' order='0x40' stat='stunRes'>
      <and>
       <using slotitem="2419;6"/>
       <using slotitem="5787;12"/>
       <using slotitem="5775;9"/>
      </and>
-    </mul>
+    </add>
     <add val='5759' order='0x40' stat='maxLoad'>
     <and>
       <using slotitem="2419;6"/>
