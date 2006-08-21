@@ -71,23 +71,23 @@
 			<using slotitem="6375;9"/> 
 		</and> 
 	</add> 
-	<mul val='1.7' order='0x30' stat='sleepRes'> 
+	<add val='70' order='0x40' stat='sleepRes'> 
 		<and> 
 			<using slotitem="6374;11"/> 
 			<using slotitem="6378;6"/> 
 			<using slotitem="6376;12"/> 
 			<using slotitem="6375;9"/> 
 		</and> 
-	</mul> 
-	<mul val='1.7' order='0x30' stat='rootRes'> 
+	</add> 
+	<add val='70' order='0x40' stat='rootRes'> 
 		<and> 
 			<using slotitem="6374;11"/> 
 			<using slotitem="6378;6"/> 
 			<using slotitem="6376;12"/> 
 			<using slotitem="6375;9"/> 
 		</and> 
-	</mul>
-	<mul val='1.8' order='0x30' stat='poisonRes'>
+	</add>
+	<add val='80' order='0x40' stat='poisonRes'>
 		<and>
 			<using slotitem="6374;11"/> 
 			<using slotitem="6378;6"/> 
@@ -95,8 +95,8 @@
 			<using slotitem="6375;9"/>
 			<using slotitem="6377;8"/>
 		</and>
-	</mul>
-	<mul val='1.8' order='0x30' stat='bleedRes'>
+	</add>
+	<add val='80' order='0x40' stat='bleedRes'>
 		<and>
 			<using slotitem="6374;11"/> 
 			<using slotitem="6378;6"/> 
@@ -104,7 +104,7 @@
 			<using slotitem="6375;9"/>
 			<using slotitem="6377;8"/>
 		</and>
-	</mul>
+	</add>
   <enchant val='0' order='0x0C' stat='pDef'/> 
   </for> 
 </item>
