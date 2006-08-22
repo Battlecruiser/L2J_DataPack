@@ -437,9 +437,10 @@
   </for>
 </skill>
 <skill id="230" levels="2" name="Sprint">
-  <!-- Done by dc -->
+  <table name="#mpConsume_Init"> 6 10 </table>
+  <table name="#mpConsume"> 22 38 </table>
   <table name="#Tab-runSpd"> 20 33 </table>
-  <table name="#mpConsume"> 28 48 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -734,7 +735,8 @@
   </for>
 </skill>
 <skill id="246" levels="1" name="Seal of Ruler">
-  <set name="mpConsume" val="50"/>
+  <set name="mpInitialConsume" val="50"/>
+  <set name="mpConsume" val="0"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_HOLY"/>
   <set name="hitTime" val="180000"/>
@@ -747,7 +749,8 @@
 </skill>
 <skill id="247" levels="1" name="Build Headquarters">
   <table name="#itemConsumeCount"> 300 </table>
-  <set name="mpConsume" val="30"/>
+  <set name="mpInitialConsume" val="30"/>
+  <set name="mpConsume" val="0"/>
   <set name="itemConsumeId" val="2131"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="power" val="0.0"/>
