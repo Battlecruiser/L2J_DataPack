@@ -27,11 +27,13 @@
   </for>
 </skill>
 <skill id="302" levels="9" name="Spoil Festival">
+  <table name="#magicLvl"> 28 36 43 49 55 62 66 70 74 </table>
   <table name="#mpConsume"> 74 93 113 132 150 172 184 194 204 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_AREA"/>
-  <set name="skillRadius" val="205"/>
+  <set name="skillRadius" val="200"/>
   <set name="hitTime" val="1800"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="1800"/>
@@ -213,10 +215,10 @@
   </for>
 </skill>
 <skill id="312" levels="20" name="Vicious Stance">
-  <table name="#mpConsume"> 4 5 5 6 7 7 8 9 9 10 10 11 11 12 12 13 13 13 14 14 </table>
+  <table name="#mpConsume_Init"> 4 5 5 6 7 7 8 9 9 10 10 11 11 12 12 13 13 13 14 14 </table>
   <table name="#crit"> 35 48 64 84 109 139 166 196 229 266 306 349 379 410 443 475 509 542 576 609 </table>
   <set name="power" val="0.0"/>
-  <set name="mpConsume" val="#mpConsume"/>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
@@ -229,13 +231,10 @@
 </skill>
 <skill id="313" levels="8" name="Snipe">
   <table name="#mpConsume"> 55 58 60 62 64 65 67 69 </table>
-  <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 </table>
-  <table name="#Acc"> 2 2 2 2 2 2 2 2 </table>
-  <table name="#CritChance"> 20 20 20 20 20 20 20 20 </table>
   <table name="#pAtk"> 110 119 129 138 148 158 167 177 </table>
   <set name="weaponsAllowed" val="32"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1500"/>
   <set name="reuseDelay" val="10000"/>
@@ -250,16 +249,19 @@
     </cond>
     <effect count="1" name="ImobileBuff" time="120" val="0">
       <add order="0x40" stat="pAtk" val="#pAtk"/>
-      <add order="0x40" stat="accCombat" val="#Acc"/>
-      <add order="0x40" stat="rCrit" val="#CritChance"/>
+      <add order="0x40" stat="accCombat" val="2"/>
+      <add order="0x40" stat="rCrit" val="20"/>
     </effect>
   </for>
 </skill>
 <skill id="314" levels="16" name="Fatal Counter">
+  <!-- TO DO LINK WITH HP LVL -->
   <table name="#mpConsume">	129 132 135 135 138 140 143 145 148 150	153 155 157 160 162 164 </table>
+  <table name="#magicLvl"> 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#power">	2908.0 3030.0 3154.0 3280.0 3408.0 3537.0 3668.0 3800.0 3933.0 4067.0 4201.0 4336.0 4470.0 4604.0 4738.0 4870.0 </table>
   <set name="weaponsAllowed" val="32"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="3000" />
@@ -275,10 +277,12 @@
 </skill>
 <skill id="315" levels="16" name="Crush of Doom">
   <table name="#power"> 4558.0 4750.0 4944.0 5142.0 5342.0 5545.0 5751.0 5958.0 6166.0 6376.0 6586.0 6797.0 7006.0 7218.0 7427.0 7635.0 </table>
+  <table name="#magicLvl"> 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#hpConsume"> 231 235 236 241 245 250 254 258 263 267 271 275 279 283 287 290 </table>
   <set name="weaponsAllowed" val="2048"/>
   <set name="hpConsume" val="#hpConsume"/>
   <set name="save" val="4"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1620"/>
@@ -320,14 +324,14 @@
   </for>
 </skill>
 <skill id="318" levels="1" name="Aegis Stance">
-  <set name="mpConsume" val="9"/>
+  <set name="mpInitialConsume" val="9"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="9">
-      <mul stat="sDef" val="0.7" order="0x30"/>
+      <mul stat="sDef" val="0.6" order="0x30"/>
       <mul stat="pDef" val="1.35" order="0x30"/>
     </effect>
   </for>
@@ -359,13 +363,16 @@
   </for>
 </skill>
 <skill id="320" levels="10" name="Wrath">
+  <!-- MISSING CP DECREASE BY PERCENT -->
   <table name="#mpConsume"> 73 74 75 77 78 79 80 81 82 83 </table>
+  <table name="#magicLvl"> 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#CP"> 0.93 0.90 0.88 0.85 0.83 0.80 0.78 0.75 0.73 0.7 </table>
   <set name="weaponsAllowed" val="64"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#CP"/>
-  <set name="target" val="TARGET_AURA"/>
-  <set name="skillRadius" val="200"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="150"/>
   <set name="hitTime" val="1080"/>
   <set name="overHit" val="true"/>
   <set name="reuseDelay" val="120000"/>
@@ -377,11 +384,14 @@
   </for>
 </skill>
 <skill id="321" levels="10" name="Blinding Blow">
+  <!-- MISSING TWO TARGET SKILL ONE AND SELF -->  
   <table name="#mpConsume"> 133 135 137 139 141 143 145 147 149 151 </table>
+  <table name="#magicLvl"> 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#power"> 2751.0 2850.0 2950.0 3050.0 3151.0 3252.0 3353.0 3453.0 3553.0 3653.0 </table>
   <table name="#runSpeed"> 40 40 40 40 40 40 40 40 40 40 </table>
   <set name="weaponsAllowed" val="16"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1080"/>
@@ -392,19 +402,21 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
+  <!--
     <effect count="1" name="Buff" time="10" val="0">
       <add order="0x10" stat="rCrit" val="45">
         <using kind="Dagger" skill="0321"/>
       </add>
-   	  <add order="0x40" stat="runSpd" val="#runSpeed"/>
+   	  <add order="0x40" stat="runSpd" val="40"/>
     </effect>
+  -->
   </for>
 </skill>
 <skill id="322" levels="6" name="Shield Fortress">
-  <table name="#mpConsume"> 12 13 13 13 14 14 </table>
+  <table name="#mpConsume_Init"> 12 13 13 13 14 14 </table>
   <table name="#ShieldDefRate"> 446 468 491 514 537 560 </table>
   <set name="weaponsAllowed" val="2"/>
-  <set name="mpConsume" val="#mpConsume"/>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
@@ -446,6 +458,7 @@
   </for>
 </skill>
 <skill id="325" levels="1" name="Strider Siege Assault">
+  <!-- SHOULD WORK ONLY DURING SIEGE -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="3000"/>
   <set name="skillType" val="NOTDONE"/>
@@ -476,18 +489,17 @@
   <set name="castRange" val="-1"/>
   <set name="buffDuration" val="9000"/>
   <for>
-   <effect count="1" name="Buff" time="9" val="0">
-    <add order="0x40" stat="pDef" val="7000"/>
-    <add order="0x40" stat="mDef" val="6000"/>
-   </effect> 
- </for>
+    <effect count="1" name="Buff" time="9" val="0">
+      <add order="0x40" stat="pDef" val="7000"/>
+      <add order="0x40" stat="mDef" val="6000"/>
+    </effect> 
+  </for>
 </skill>
 <skill id="328" levels="1" name="Wisdom">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
   <for>
     <add stat="rootRes" val="20" order="0x40"/>
@@ -500,7 +512,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
   <for>
     <add stat="bleedRes" order="0x40" val="20"/> 
@@ -508,6 +519,34 @@
   </for>
 </skill>
 <skill id="330" levels="1" name="Skill Mastery">
+  <!-- SKILL MASTERY FOR FIGHTERS -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="331" levels="1" name="Skill Mastery">
+  <!-- SKILL MASTERY FOR MAGES -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="332" levels="1" name="Extra Inventory">
+  <!-- SKILL MASTERY FOR MAGES -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="333" levels="1" name="Extra Sell Inventory">
+  <!-- SKILL MASTERY FOR MAGES -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -522,7 +561,7 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-      <mul order="0x30" stat="mCritRate" val="11"/> 
+    <mul order="0x30" stat="mCritRate" val="11"/> 
   </for>
 </skill>
 <skill id="335" levels="1" name="Fortitude">
@@ -622,8 +661,6 @@
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
-  <set name="negateStats" val="BUFF DEBUFF"/>
-  <set name="negatePower" val="9"/>
   <set name="reuseDelay" val="1200000"/>
   <set name="skillTime" val="1800"/> 
   <set name="hitTime" val="1800"/> 
@@ -636,6 +673,7 @@
   </for>
 </skill>
 <skill id="342" levels="1" name="Touch of Death">
+  <!-- WRONG SKILL -->
   <set name="hpConsume" val="1338"/>
   <set name="power" val="-70.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -658,6 +696,7 @@
 <skill id="343" levels="1" name="Lethal Shot">
   <set name="mpConsume" val="170"/>
   <set name="weaponsAllowed" val="32"/>
+  <set name="magicLvl" val="76"/>
   <set name="power" val="5132"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PDAM"/>
@@ -673,6 +712,7 @@
 <skill id="344" levels="1" name="Lethal Blow">
   <set name="mpConsume" val="85"/>
   <set name="weaponsAllowed" val="16"/>
+  <set name="magicLvl" val="76"/>
   <set name="power" val="5773"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PDAM"/>
@@ -698,7 +738,7 @@
   <set name="castRange" val="-1"/>
   <set name="num_charges" val="7"/>
   <for>
-   <effect count="1" name="Charge" val="1"/>
+    <effect count="1" name="Charge" val="1"/>
   </for>
 </skill>
 <skill id="346" levels="1" name="Force Rage">
@@ -714,15 +754,18 @@
   <set name="castRange" val="-1"/>
   <set name="num_charges" val="7"/>
   <for>
-   <effect count="1" name="Charge" val="1"/>
+    <effect count="1" name="Charge" val="1"/>
   </for>
 </skill>
 <skill id="347" levels="1" name="Earthquake">
+  <!-- MISSING REMOVING ENEMYS TARGET -->
   <set name="hpConsume" val="340"/>
   <set name="mpConsume" val="87"/>
   <set name="weaponsAllowed" val="64"/>
+  <set name="magicLvl" val="78"/>
   <set name="power" val="4040"/>
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="150"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -734,6 +777,7 @@
 </skill>
 <skill id="348" levels="1" name="Spoil Crush">
   <set name="mpConsume" val="70"/>
+  <set name="magicLvl" val="76"/>
   <set name="power" val="2.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="SPOIL"/>
@@ -804,8 +848,9 @@
   </for>
 </skill>
 <skill id="352" levels="1" name="Shield Bash">
+  <set name="magicLvl" val="77"/>
   <set name="weaponsAllowed" val="2"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/>
   <set name="mpConsume" val="35"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="STUN"/>
@@ -819,6 +864,8 @@
   </for>
 </skill>
 <skill id="353" levels="1" name="Shield Slam">
+  <!-- MISSING SILENCING PHYSICAL SKILLS -->
+  <set name="magicLvl" val="77"/>
   <set name="weaponsAllowed" val="2"/>
   <set name="power" val="0.0"/>
   <set name="mpConsume" val="70"/>
@@ -834,6 +881,7 @@
   </for>
 </skill>
 <skill id="354" levels="1" name="Hamstring Shot">
+  <set name="magicLvl" val="77"/>
   <set name="weaponsAllowed" val="32"/> 
   <set name="mpConsume" val="129"/> 
   <set name="power" val="1973"/> 
@@ -845,6 +893,9 @@
   <set name="skillType" val="PDAM"/> 
   <set name="operateType" val="OP_ACTIVE"/> 
   <set name="castRange" val="900"/> 
+  <set name="effectType" val="DEBUFF"/>
+  <set name="effectPower" val="40"/>
+  <set name="lvlDepend" val="1"/>
   <for> 
     <effect count="1" name="Buff" time="120" val="0" stackOrder="0.5" stackType="RunSpeedDown"> 
       <mul order="0x30" stat="runSpd" val="0.5"/> 
@@ -852,6 +903,7 @@
   </for>
 </skill>
 <skill id="355" levels="1" name="Focus Death">
+  <!-- WRONG -->
   <set name="mpConsume" val="71"/> 
   <set name="power" val="0.0"/> 
   <set name="target" val="TARGET_SELF"/>
@@ -869,9 +921,10 @@
   </for>
 </skill>
 <skill id="356" levels="1" name="Focus Chance">
+  <!-- WRONG -->
   <set name="mpConsume" val="71"/> 
   <set name="power" val="0.0"/> 
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -883,9 +936,10 @@
   </for>
 </skill>
 <skill id="357" levels="1" name="Focus Power">
+  <!-- WRONG -->
   <set name="mpConsume" val="71"/> 
   <set name="power" val="0.0"/> 
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -897,11 +951,12 @@
   </for>
 </skill>
 <skill id="358" levels="1" name="Bluff">
+  <!-- WRONG -->
   <set name="weaponsAllowed" val="16"/> 
   <set name="mpConsume" val="70"/> 
-  <set name="power" val="0.0"/> 
+  <set name="power" val="40"/> 
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="PDAM"/>
+  <set name="skillType" val="STUN"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="reuseDelay" val="30000"/>
@@ -952,7 +1007,9 @@
 </skill>
 <skill id="361" levels="1" name="Shock Blast">
   <set name="weaponsAllowed" val="64"/> 
+  <set name="magicLvl" val="77"/>
   <set name="mpConsume" val="65"/>
+  <set name="save" val="4"/>
   <set name="power" val="1973"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PDAM"/>
@@ -962,6 +1019,9 @@
   <set name="skillTime" val="4000"/> 
   <set name="hitTime" val="4000"/> 
   <set name="overHit" val="true"/> 
+  <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="40"/>
+  <set name="lvlDepend" val="1"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0">
    	  <mul order="0x30" stat="pDef" val="0.7"/>
@@ -970,16 +1030,21 @@
   </for>
 </skill>
 <skill id="362" levels="1" name="Armor Crush">
+  <set name="magicLvl" val="77"/>
   <set name="weaponsAllowed" val="2060"/>
   <set name="mpConsume" val="65"/>
+  <set name="hpConsume" val="254"/>
   <set name="power" val="1973"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="400"/>
   <set name="reuseDelay" val="15000"/>
   <set name="skillTime" val="2000"/> 
   <set name="hitTime" val="2000"/> 
+  <set name="castRange" val="40"/>
+  <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="40"/>
+  <set name="lvlDepend" val="1"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0">
    	  <mul order="0x30" stat="pDef" val="0.7"/>
@@ -1058,12 +1123,13 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect name="SilentMove" time="60" count="1" val="7">
+    <effect name="SilentMove" time="120" count="1" val="0">
   	  <mul order="0x30" stat="runSpd" val="0.5"/>
     </effect>
   </for>
 </skill>
 <skill id="367" levels="1" name="Dance of Medusa">
+  <set name="magicLvl" val="77"/>
   <set name="mpConsume" val="105"/>
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
@@ -1082,7 +1148,6 @@
 <skill id="368" levels="1" name="Vengeance">
   <set name="mpConsume" val="105"/>
   <set name="power" val="0.0"/>
-  <set name="skillRadius" val="200"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="1800000"/>
@@ -1099,21 +1164,24 @@
   </for>
 </skill>
 <skill id="369" levels="1" name="Evade Shot">
-  <set name="weaponsAllowed" val="32"/> 
-  <set name="mpConsume" val="130"/> 
-  <set name="power" val="2020"/> 
-  <set name="target" val="TARGET_ONE"/> 
-  <set name="hitTime" val="4000"/> 
-  <set name="overHit" val="true"/> 
-  <set name="reuseDelay" val="300000"/> 
-  <set name="skillTime" val="4000"/> 
-  <set name="skillType" val="PDAM"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="castRange" val="900"/> 
+  <!-- MISSING TWO TARGET SKILL ONE AND SELF -->
+  <set name="weaponsAllowed" val="32"/>
+  <set name="mpConsume" val="130"/>
+  <set name="power" val="2020"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="overHit" val="true"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="900"/>
   <for> 
+  <!--
     <effect count="1" name="Buff" time="30" val="0" stackOrder="6" stackType="rEvas"> 
-      <add order="0x40" stat="rEvas" val="6"/> 
+      <add order="0x40" stat="rEvas" val="6"/>
     </effect> 
+  -->
   </for>
 </skill>
 </list>
