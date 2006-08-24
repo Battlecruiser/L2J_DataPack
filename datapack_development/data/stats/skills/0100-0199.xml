@@ -26,24 +26,14 @@
   </for>
 </skill>
 <skill id="101" levels="40" name="Stun Shot">
-  <table name="#mpConsume">
-    69  72  74  80  82  85  85  87  90  93
-    95  98 101 104 107 109 110 112 115 118
-   121 124 126 129 132 135 135 138 140 143
-   145 148 150 153 155 157 160 162 164 166
-  </table>
-  <table name="#power">
-    287.0  306.0  326.0  369.0  392.0  417.0  442.0
-    469.0  496.0  525.0  555.0  586.0  618.0  651.0
-    686.0  722.0  758.0  796.0  835.0  875.0  916.0
-    959.0 1002.0 1046.0 1091.0 1136.0 1183.0 1230.0
-   1278.0 1327.0 1376.0 1425.0 1475.0 1525.0 1576.0
-   1626.0 1677.0 1727.0 1777.0 1827.0
-  </table>
+  <table name="#mpConsume"> 69 72 74 80 82 85 85 87 90 93 95 98 101 104 107 109 110 112 115 118 121 124 126 129 132 135 135 138 140 143 145 148 150 153 155 157 160 162 164 166 </table>
+  <table name="#magicLvl"> 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
+  <table name="#power"> 287.0 306.0 326.0 369.0 392.0 417.0 442.0 469.0 496.0 525.0 555.0 586.0 618.0 651.0 686.0 722.0 758.0 796.0 835.0 875.0 916.0 959.0 1002.0 1046.0 1091.0 1136.0 1183.0 1230.0 1278.0 1327.0 1376.0 1425.0 1475.0 1525.0 1576.0 1626.0 1677.0 1727.0 1777.0 1827.0 </table>
   <set name="weaponsAllowed" val="32"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="4"/>
   <set name="power" val="#power"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="3000"/>
@@ -54,6 +44,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="9000"/>
   <set name="castRange" val="900"/>
+  <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="50"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0"/>
   </for>
@@ -61,11 +53,14 @@
 <skill id="102" levels="16" name="Entangle">
   <table name="#mpConsume_Init"> 4 4 4 5 5 5 5 6 6 6 6 7 7 7 7 7 </table>
   <table name="#mpConsume"> 13 14 15 17 18 19 20 22 22 23 24 25 26 26 27 28 </table>
+  <table name="#magicLvl"> 36 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
   <table name="#Tab-runSpd"> 0.3 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="lvlDepend" val="2"/>
   <set name="save" val="5"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="3000"/>
   <set name="reuseDelay" val="7000"/>
@@ -83,10 +78,13 @@
 </skill>
 <skill id="103" levels="4" name="Corpse Plague">
   <table name="#dmg"> 31 38 45 52 </table>
+  <table name="#magicLvl"> 46 58 62 70 </table>
   <table name="#mpConsume"> 42 54 58 65 </table>
   <table name="#power"> 5.0 6.0 7.0 8.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="3"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="lvlDepend" val="1"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA_CORPSE_MOB"/>
   <set name="skillRadius" val="400"/>
@@ -104,6 +102,7 @@
 </skill>
 <skill id="104" levels="1" name="Detect Plant Weakness">
   <set name="mpConsume" val="21"/>
+  <set name="magicLvl" val="46"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1500"/>
@@ -123,10 +122,13 @@
 <skill id="105" levels="24" name="Freezing Strike">
   <table name="#mpConsume_Init"> 3 4 4 4 4 4 4 5 5 5 5 5 5 5 6 6 6 6 6 7 7 7 7 7 </table>
   <table name="#mpConsume"> 12 13 14 14 15 15 16 17 18 18 19 19 20 20 21 22 22 23 24 25 26 26 27 28  </table>
+  <table name="#magicLvl"> 34 36 38 40 42 43 45 46 48 49 51 52 54 55 57 58 60 62 64 66 68 70 72 74 </table>
   <table name="#power"> 26.0 28.0 30.0 31.0 33.0 34.0 36.0 37.0 39.0 40.0 42.0 43.0 45.0 46.0 48.0 49.0 51.0 53.0 56.0 58.0 59.0 61.0 63.0 65.0 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="2"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="lvlDepend" val="1"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillRadius" val="205"/>
@@ -139,16 +141,20 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
+  <set name="effectType" val="DEBUFF"/>
+  <set name="effectPower" val="60"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="38" stackType="RunSpeedDown">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.7" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="0.7"/>
     </effect>
   </for>
 </skill>
 <skill id="106" levels="14" name="Veil">
+  <table name="#magicLvl"> 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
   <table name="#mpConsume"> 45 49 54 56 61 65 68 69 72 74 77 79 81 83 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="70"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1200"/>
   <set name="reuseDelay" val="20000"/>
@@ -161,8 +167,10 @@
   </for>
 </skill>
 <skill id="107" levels="9" name="Holy Aura">
+  <table name="#magicLvl"> 58 60 62 64 66 68 70 72 74 </table>
   <table name="#mpConsume"> 80 83 87 89 93 95 98 100 103 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="save" val="5"/>
   <set name="power" val="40"/>
   <set name="lvlDepend" val="2"/>
@@ -177,15 +185,6 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Root" time="30" val="0"/>
-  </for>
-</skill>
-<skill id="108" levels="3" name="Union">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
   </for>
 </skill>
 <skill id="109" levels="1" name="Spirit of Ogre">
@@ -254,7 +253,7 @@
 </skill>
 <skill id="112" levels="4" name="Deflect Arrow">
   <!-- TO DO -->
-  <table name="#Tab-bowRes"> 40 80 120 160 </table>
+  <table name="#Tab-bowRes"> 16 19 22 25 </table>
   <table name="#mpConsume"> 22 28 38 44 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -286,23 +285,17 @@
     </add>
   </for>
 </skill>
-<skill id="114" levels="2" name="Martyrdom">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
 <skill id="115" levels="17" name="Power Break">
   <table name="#mpConsume_Init"> 2 2 4 4 5 5 5 5 6 6 6 6 7 7 7 7 7 </table>
   <table name="#mpConsume"> 6 7 14 15 17 18 19 20 22 22 23 24 25 26 26 27 28 </table>
+  <table name="#magicLvl"> 32 36 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
   <table name="#Tab-pAtk"> 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="6"/>
-  <set name="power" val="0.0"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="lvlDepend" val="2"/>
+  <set name="power" val="80"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1200"/>
   <set name="reuseDelay" val="8000"/>
@@ -319,10 +312,13 @@
   </for>
 </skill>
 <skill id="116" levels="14" name="Howl">
+  <table name="#magicLvl"> 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
   <table name="#mpConsume"> 29 31 33 35 38 40 42 43 45 46 48 50 51 53 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="6"/>
-  <set name="power" val="10"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="lvlDepend" val="2"/>
+  <set name="power" val="40"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
   <set name="hitTime" val="1200"/>
@@ -336,15 +332,6 @@
     <effect name="Buff" time="15" count="1" val="0">
       <div order="0x30" stat="pAtk" val="1.23"/>
     </effect>
-  </for>
-</skill>
-<skill id="117" levels="3" name="hide">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
   </for>
 </skill>
 <skill id="118" levels="1" name="Magician's Movement">
@@ -363,21 +350,14 @@
     </mul>
   </for>
 </skill>
-<skill id="119" levels="6" name="Gear Tuning">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
 <skill id="120" levels="15" name="Stunning Fist">
+  <table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
   <table name="#mpConsume"> 22 22 22 23 24 25 27 29 30 31 31 33 35 36 37 </table>
   <table name="#power"> 38.0 41.0 44.0 51.0 55.0 60.0 69.0 74.0 80.0 92.0 98.0 105.0 120.0 128.0 136.0 </table>
   <set name="weaponsAllowed" val="1024"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="4"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
@@ -389,12 +369,13 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="9000"/>
   <set name="castRange" val="40"/>
+  <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="50"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0"/>
   </for>
 </skill>
 <skill id="121" levels="6" name="Battle Roar">
-  <!-- TO DO -->
   <table name="#mpConsume"> 13 18 23 28 30 33 </table>
   <table name="#Tab-maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35</table>
   <table name="#reg-HP"> 9.1 13 16.6 20 23 25.7</table>
@@ -415,10 +396,13 @@
   </for>
 </skill>
 <skill id="122" levels="15" name="Hex">
+  <table name="#magicLvl"> 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
   <table name="#mpConsume"> 14 15 17 18 19 20 22 22 23 24 25 26 26 27 28 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="4"/>
-  <set name="power" val="0.0"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="lvlDepend" val="2"/>
+  <set name="power" val="80"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1200"/>
   <set name="reuseDelay" val="6000"/>
@@ -437,7 +421,9 @@
 <skill id="123" levels="3" name="Spirit Barrier">
   <!-- Done by dc -->
   <table name="#Tab-mDef"> 1.15 1.23 1.3 </table>
+  <table name="#mpConsume_Init"> 7 9 11 </table>
   <table name="#mpConsume"> 28 35 43 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -455,39 +441,17 @@
     </effect>
   </for>
 </skill>
-<skill id="124" levels="4" name="Tiger Chant">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="125" levels="4" name="Bear Chant">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="126" levels="3" name="Fox Chant">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
 <skill id="127" levels="14" name="Hamstring">
   <!-- Done by dc -->
+  <table name="#magicLvl"> 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
+  <table name="#mpConsume_Init"> 4 5 5 5 5 6 6 6 6 7 7 7 7 7 </table>
   <table name="#mpConsume"> 15 17 18 19 20 22 22 23 24 25 26 26 27 28 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
-  <set name="power" val="0.0"/>
+  <set name="lvlDepend" val="2"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="80"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="3000"/>
   <set name="reuseDelay" val="7000"/>
@@ -503,23 +467,17 @@
     </effect>
   </for>
 </skill>
-<skill id="128" levels="2" name="Transfer Bleeding">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
 <skill id="129" levels="5" name="Poison">
   <table name="#mpConsume_Init"> 2 5 6 7 7 </table>
   <table name="#mpConsume"> 8 18 22 25 28 </table>
+  <table name="#magicLvl"> 20 49 58 66 74 </table>
   <table name="#dmg"> 18 31 38 44 48 </table>
   <table name="#power"> 3.0 5.0 6.0 7.0 8.0 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="3"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="lvlDepend" val="1"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="3000"/>
@@ -536,7 +494,6 @@
 </skill>
 <skill id="130" levels="2" name="Thrill Fight">
   <!-- Done by dc -->
-  <table name="#Tab-runSpd"> 0.8 0.8 </table>
   <table name="#Tab-pAtkSpd"> 1.05 1.1 </table>
   <table name="#mpConsume"> 17 20 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -551,7 +508,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect name="Buff" time="300" count="1" val="0">
-      <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
     </effect>
   </for>
@@ -578,24 +535,6 @@
     </effect>
   </for>
 </skill>
-<skill id="132" levels="1" name="Spot Strike">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="133" levels="1" name="Riposte">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
 <skill id="134" levels="1" name="Toughness">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -608,24 +547,6 @@
     <add stat="poisonRes" val="20" order="0x40"/>
   </for>
 </skill>
-<skill id="135" levels="2" name="Heroism">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="136" levels="1" name="Day Walk">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
 <skill id="137" levels="3" name="Critical Chance">
   <table name="#rate"> 1.2 1.3 1.4 </table>
   <set name="power" val="0.0"/>
@@ -635,15 +556,6 @@
   <set name="castRange" val="-1"/>
   <for>
     <mul order="0x30" stat="rCrit" val="#rate"/>
-  </for>
-</skill>
-<skill id="138" levels="4" name="Melee Evasion">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
   </for>
 </skill>
 <skill id="139" levels="3" name="Guts">
@@ -668,15 +580,6 @@
     <effect name="Buff" time="90" count="1" val="0" stackOrder="1" stackType="OrcBuff">
       <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
     </effect>
-  </for>
-</skill>
-<skill id="140" levels="1" name="Big Pocket">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
   </for>
 </skill>
 <skill id="141" levels="3" name="Weapon Mastery">
@@ -721,12 +624,7 @@
   </for>
 </skill>
 <skill id="144" levels="37" name="Dual Weapon Mastery">
-  <table name="#pAtk">
-    23.7  25.4  27.1  29.0  30.9  32.9  35.0  37.1  39.4  41.7
-    44.1  46.6  49.2  51.9  54.6  57.5  60.4  63.3  66.4  69.5
-    72.7  76.0  79.3  82.7  86.1  89.6  93.1 96.6 100.2 103.8
-    107.5 111.1 114.8 118.4 122.1 125.7 129.3
-  </table>
+  <table name="#pAtk"> 23.7 25.4 27.1 29.0 30.9 32.9 35.0 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76.0 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3 </table>
   <set name="weaponsAllowed" val="512"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -739,23 +637,8 @@
     </add>
   </for>
 </skill>
-<skill id="145" levels="2" name="Robe Mastery">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
 <skill id="146" levels="45" name="Anti Magic">
-  <table name="#mDef">
-    10  12  14  16  18 20 23 25 28 30
-    34  36  40  42  43 46 47 49 52 54
-    56  59  61  63  66 68 70 72 74 76
-    78  80  82  84  86 88 91 93 95 97
-    99 102 104 106 108
-  </table>
+  <table name="#mDef"> 10 12 14 16 18 20 23 25 28 30 34 36 40 42 43 46 47 49 52 54 56 59 61 63 66 68 70 72 74 76 78 80 82 84 86 88 91 93 95 97 99 102 104 106 108 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -767,11 +650,7 @@
 </skill>
 <skill id="147" levels="51" name="Magic Resistance">
   <!-- Done by dc -->
-  <table name="#Tab-mDef"> 
-    19 20 22 23 24 26 27 28 30 31 32 35 36 37 40 42 43
-    44 46 47 49 51 52 54 56 57 59 61 63 64 66 68 70 72
-    74 76 78 80 82 84 86 88 91 93 95 97 99 102 104 106 108
-  </table>
+  <table name="#Tab-mDef"> 19 20 22 23 24 26 27 28 30 31 32 35 36 37 40 42 43 44 46 47 49 51 52 54 56 57 59 61 63 64 66 68 70 72 74 76 78 80 82 84 86 88 91 93 95 97 99 102 104 106 108 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -799,17 +678,8 @@
     </add>
   </for>
 </skill>
-<skill id="149" levels="1" name="Finishing Blow">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
 <skill id="150" levels="3" name="Weight Limit">
-<table name="#rate"> 2 3 4 </table>
+  <table name="#rate"> 2 3 4 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -817,24 +687,6 @@
   <set name="castRange" val="-1"/>
   <for>
     <mul order="0x30" stat="maxLoad" val="#rate"/>
-  </for>
-</skill>
-<skill id="151" levels="1" name="Mithril Weapon Mastery">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="152" levels="1" name="Mithril Armor Mastery">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
   </for>
 </skill>
 <skill id="153" levels="4" name="Shield Mastery">
@@ -848,87 +700,6 @@
     <mul order="0x30" stat="rShld" val="#rShld">
       <using kind="Shield"/>
     </mul>
-  </for>
-</skill>
-<skill id="154" levels="1" name="White Magic Mastery">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="155" levels="2" name="Enlarge White Magic">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="156" levels="4" name="Focus White Magic">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="157" levels="1" name="Advanced White Magic">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="158" levels="1" name="Support Magic Mastery">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="159" levels="2" name="Enlarge Support Magic">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="160" levels="4" name="Focus Support Magic">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="161" levels="1" name="Advanced Support Magic">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="162" levels="2" name="Achilles Punch">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
   </for>
 </skill>
 <skill id="163" levels="1" name="Spellcraft">
@@ -959,15 +730,6 @@
   </for>
 </skill>
 <skill id="165" levels="5" name="Trade">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="166" levels="1" name="Repair Castle">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1007,15 +769,6 @@
     <add order="0x40" stat="runSpd" val="#spd"/>
   </for>
 </skill>
-<skill id="170" levels="1" name="Forest Walk">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
 <skill id="171" levels="8" name="Esprit">
   <table name="#hp"> 2.5 3.0 3.5 4.0 4.5 5.0 5.5 6.0 </table>
   <table name="#mp"> 0.8 0.9 1.0 1.1 1.2 1.3 1.4 1.5 </table>
@@ -1052,24 +805,6 @@
   <for>
   </for>
 </skill>
-<skill id="174" levels="1" name="Night Stalk">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="175" levels="1" name="Night Rest">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
 <skill id="176" levels="3" name="Frenzy">
   <!-- Done by dc, completed by NewAge -->
   <table name="#Tab-pAtk"> 2.0 2.5 3.0 </table>
@@ -1094,42 +829,6 @@
     </effect>
   </for>
 </skill>
-<skill id="177" levels="1" name="none">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="178" levels="2" name="Elemental Magic Mastery">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="179" levels="4" name="Enlarge Elemental Magic">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="180" levels="1" name="Focus Elemental Magic">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
 <skill id="181" levels="1" name="Revival">
   <set name="mpConsume" val="25"/>
   <set name="power" val="1685"/>
@@ -1147,93 +846,13 @@
   <for>
   </for>
 </skill>
-<skill id="182" levels="4" name="Enlarge Inventory">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="183" levels="1" name="Day Rest">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="184" levels="1" name="Spirit Magic Mastery">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="185" levels="2" name="Enlarge Spirit Magic">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="186" levels="4" name="Focus Spirit Magic">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="187" levels="1" name="Advanced Spirit Magic">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="188" levels="1" name="Control Transporter">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="189" levels="3" name="Fast Recovery">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
 <skill id="190" levels="37" name="Fatal Strike">
-  <table name="#mpConsume">
-    40 41 43 43 44 45 47 48 49 51
-    52 54 55 55 56 58 59 61 62 63
-    65 66 68 68 69 70 72 73 74 75
-    77 78 79 80 81 82 83
-  </table>
-  <table name="#power">
-    615.0  654.0  694.0  737.0  781.0  827.0  875.0  924.0  976.0  1030.0 
-    1085.0 1143.0 1202.0 1264.0 1327.0 1392.0 1459.0 1527.0 1597.0 1669.0 
-    1743.0 1817.0 1894.0 1971.0 2050.0 2130.0 2211.0 2293.0 2375.0 2459.0 
-    2542.0 2626.0 2710.0 2794.0 2878.0 2961.0 3044.0
-  </table>
+  <table name="#magicLvl"> 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
+  <table name="#mpConsume"> 40 41 43 43 44 45 47 48 49 51 52 54 55 55 56 58 59 61 62 63 65 66 68 68 69 70 72 73 74 75 77 78 79 80 81 82 83 </table>
+  <table name="#power"> 615.0 654.0 694.0 737.0 781.0 827.0 875.0 924.0 976.0 1030.0 1085.0 1143.0 1202.0 1264.0 1327.0 1392.0 1459.0 1527.0 1597.0 1669.0 1743.0 1817.0 1894.0 1971.0 2050.0 2130.0 2211.0 2293.0 2375.0 2459.0 2542.0 2626.0 2710.0 2794.0 2878.0 2961.0 3044.0 </table>
   <set name="weaponsAllowed" val="2060"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1080"/>
@@ -1242,7 +861,7 @@
   <set name="skillTime" val="1080"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="50"/>
+  <set name="castRange" val="40"/>
   <for>
   </for>
 </skill>
@@ -1255,15 +874,6 @@
   <set name="castRange" val="-1"/>
   <for>
     <add order="0x40" stat="regMp" val="#Tab-regMp"/>
-  </for>
-</skill>
-<skill id="192" levels="9" name="Plate Mastery">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
   </for>
 </skill>
 <skill id="193" levels="6" name="Critical Power">
@@ -1300,24 +910,31 @@
   </for>
 </skill>
 <skill id="196" levels="1" name="Holy Blade">
+  <set name="mpConsume" val="8"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x30" stat="pAtk-undead" val="1.3"/>
+	<effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="0">
+      <mul order="0x30" stat="pAtk-undead" val="1.3"/>
+    </effect>
   </for>
 </skill>
 <skill id="197" levels="2" name="Holy Armor">
-  <table name="#pDef-undead"> 1.15 1.3 </table>
-  <set name="power" val="2"/>
+  <table name="#pDef-undead"> 7 10 </table>
+  <table name="#mpConsume"> 7 9 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x30" stat="pDef-undead" val="#pDef-undead"/> 
+	<effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="0">
+      <add order="0x40" stat="pDef-undead" val="#pDef-undead"/>
+    </effect>
   </for>
 </skill>
 <skill id="198" levels="3" name="Boost Evasion">
@@ -1330,15 +947,6 @@
   <set name="castRange" val="-1"/>
   <for>
     <add order="0x40" stat="rEvas" val="#rEvas"/>
-  </for>
-</skill>
-<skill id="199" levels="4" name="Black Magic Resist">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
   </for>
 </skill>
 </list>
