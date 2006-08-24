@@ -224,7 +224,7 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume_Init">
       <add order="0x40" stat="cAtk" val="#crit"/>
     </effect>
   </for>
@@ -422,7 +422,7 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume_Init">
       <add order="0x40" stat="rShld" val="#ShieldDefRate"/>
     </effect>
   </for>

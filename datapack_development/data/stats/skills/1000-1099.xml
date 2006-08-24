@@ -3,14 +3,14 @@
 <skill id="1001" levels="10" name="Soul Cry">
   <table name="#patk-add"> 4.5 14 33.5 66.5 90.5 141.5 208.5 247.0 310.0 375.5 </table>
   <table name="#mpConsume_Init"> 2 3 5 6 7 9 11 11 13 14 </table>
-  <set name="power" val="0.0"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume_Init">
       <add order="0x40" stat="pAtk" val="#patk-add"/>
     </effect>
   </for>
@@ -1252,7 +1252,7 @@
 </skill>
 <skill id="1099" levels="15" name="Seal of Slow">
   <table name="#Tab-runSpd"> 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </table>
-  <table name="#mpConsume"> 9 11 12 13 14 16 16 17 18 18 19 19 20 20 21 </table>
+  <table name="#mpConsume_Init"> 9 11 12 13 14 16 16 17 18 18 19 19 20 20 21 </table>
   <table name="#mpConsume"> 36 42 47 52 56 61 64 66 69 71 74 76 78 80 82 </table>
   <table name="#magicLvl"> 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
