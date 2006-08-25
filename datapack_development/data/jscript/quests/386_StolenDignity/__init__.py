@@ -16,7 +16,7 @@ REQUIRED_ORE=100 #how many items will be paid for a game (affects onkill sounds 
 SI_ORE = 6363
 
 #Rewards
-#5529..5548
+REWARDS=[5529]+range(5532,5540)+range(5541,5549)
  
 #Messages
 default   = "<html><head><body>I have nothing to say to you.</body></html>"
@@ -124,10 +124,10 @@ class Quest (JQuest) :
                       if ''.join(chosen[2:7:2]).isdigit() : diag += 1
                       if col == 1 and row == 1 and diag == 1 :
                           htmltext += winner
-                          st.giveItems(5529+st.getRandom(19),4)
+                          st.giveItems(REWARDS[st.getRandom(len(REWARDS))],4)
                       elif diag == 0 and row == 0 and col == 0 :
                           htmltext += loser
-                          st.giveItems(5529+st.getRandom(19),10)
+                          st.giveItems(REWARDS[st.getRandom(len(REWARDS))],10)
                       else :
                           htmltext += average
                       htmltext += result(st)
@@ -168,10 +168,8 @@ class Quest (JQuest) :
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
 CREATED     = State('Start',     QUEST)
 STARTED     = State('Started',   QUEST)
-COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-
 # Quest NPC starter initialization
 QUEST.addStartNpc(WK_ROMP)
 # Quest initialization
@@ -180,5 +178,7 @@ STARTED.addTalkId(WK_ROMP)
 
 for i in MOBS :
   STARTED.addKillId(i)
+
+STARTED.addQuestDrop(WK_ROMP,SI_ORE,1)
 
 print "importing quests: "+str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION
