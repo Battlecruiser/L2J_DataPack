@@ -136,13 +136,20 @@
     <using slotitem="5767;9"/>
    </and>
   </add>
-  <add val='50' order='0x40' stat='rootRes'>
+  <add val='50' order='0x40' stat='paralyzeRes'>
    <and>
     <using slotitem="512;6"/>
     <using slotitem="5779;12"/>
     <using slotitem="5767;9"/>
    </and>
   </add>
+  <sub val='50' order='0x40' stat='cancel'>
+   <and>
+    <using slotitem="512;6"/>
+    <using slotitem="5779;12"/>
+    <using slotitem="5767;9"/>
+   </and>
+  </sub>
   <mul val='1.15' order='0x30' stat='mAtkSpd'>
    <and>
     <using slotitem="512;6"/>
