@@ -1,7 +1,5 @@
 # version 0.1 
 # by DrLecter
-
-print "importing quests: 420: Little Wings"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -15,39 +13,12 @@ BACK_DROP = 30
 EGG_DROP  = 50
 
 #Quest items
-FRY_STN      = 3816 
-FRY_STN_DLX  = 3817
-FSN_LIST     = 3818
-FSN_LIST_DLX = 3819
-TD_BCK_SKN   = 3820
-FRY_DUST     = 3499
-JUICE        = 3821 
-
-EX_EGG = 3823
-ZW_EGG = 3825
-KA_EGG = 3827
-SU_EGG = 3829
-SH_EGG = 3831
-
-SCALE_1 = 3822
-SCALE_2 = 3824
-SCALE_3 = 3826
-SCALE_4 = 3828
-SCALE_5 = 3830
-
+FRY_STN,FRY_STN_DLX,FSN_LIST,FSN_LIST_DLX,TD_BCK_SKN,JUICE,SCALE_1,EX_EGG,\
+SCALE_2,ZW_EGG,SCALE_3,KA_EGG,SCALE_4,SU_EGG,SCALE_5,SH_EGG,FRY_DUST = range(3816,3832)+[3499]
 
 #NPCs
-PM_COOPER = 7829
-SG_CRONOS = 7610
-GD_BYRON  = 7711
-MC_MARIA  = 7608
-FR_MYMYU  = 7747
-
-DK_EXARION  = 7748
-DK_ZWOV     = 7749
-DK_KALIBRAN = 7750
-WM_SUZET    = 7751
-WM_SHAMHAI  = 7752
+PM_COOPER,SG_CRONOS,GD_BYRON,MC_MARIA,FR_MYMYU = 7829,7610,7711,7608,7747
+DK_EXARION,DK_ZWOV,DK_KALIBRAN,WM_SUZET,WM_SHAMHAI = range(7748,7753)
 
 #mobs
 TD_LORD   = 231 #toad lord
@@ -57,24 +28,7 @@ RD_SCVNGR = 551 #kalibran's
 BO_OVERLD = 270 #suzet's
 DD_SEEKER = 202 #shamhai's
 
-#enchant valley 
-FLINE     = 589
-FLINE_LDR = 595
-LIELE     = 590
-LIELE_LDR = 596
-FORST_RNR = 594
-SATYR     = 592
-UNICORN   = 593
-VLY_TRNT  = 591
-VLY_T_LDR = 597
-SATYR_LDR = 598
-UNICO_LDR = 599
-FRY_QN    = 719
-
 #Rewards
-FLT_OF_WIND = 3500
-FLT_OF_STAR = 3501
-FLT_OF_TWIL = 3502
 FOOD        = 4038
 ARMOR       = 3912
 
@@ -114,13 +68,12 @@ def check_elements(st) :
   snug  = st.getQuestItemsCount(1873)
   sofp  = st.getQuestItemsCount(1875)
   tdbk  = st.getQuestItemsCount(TD_BCK_SKN)
-  
-  if progress == 1 or progress == 8 :
+  if progress in [1,8] :
      if coal >= 10 and char >= 10 and gemd >= 1 and snug >= 3 and tdbk >= 10 :
         return "420_maria_2.htm"
      else :
         return "420_maria_1.htm"
-  elif progress == 2 or progress == 9 :
+  elif progress in [2,9] :
      if coal >= 10 and char >= 10 and gemc >= 1 and snug >= 5 and sofp >= 1 and tdbk >= 20 :
         return "420_maria_4.htm"
      else :
@@ -129,7 +82,7 @@ def check_elements(st) :
 
 def craft_stone(st) :
     progress = int(st.get("progress"))
-    if progress == 1 or progress == 8:
+    if progress in [1,8]:
        st.takeItems(1870,10)
        st.takeItems(1871,10)
        st.takeItems(2130,1)
@@ -139,7 +92,7 @@ def craft_stone(st) :
        st.giveItems(FRY_STN,1)
        st.playSound("ItemSound.quest_itemget")
        return "420_maria_3.htm"
-    elif progress == 2 or progress == 9:
+    elif progress in [2,9]:
        st.takeItems(1870,10)
        st.takeItems(1871,10)
        st.takeItems(2131,1)
@@ -160,7 +113,7 @@ def check_eggs(st, npc) :
     elif whom == 4 : eggs = SU_EGG
     elif whom == 5 : eggs = SH_EGG
     if npc == "mymyu" :
-       if progress == 19 or progress == 20 and st.getQuestItemsCount(eggs) == 1 :
+       if progress in [19,20] and st.getQuestItemsCount(eggs) == 1 :
           return "420_"+npc+"_10.htm"
        else :
           if st.getQuestItemsCount(eggs) >= 20 :
@@ -173,9 +126,9 @@ def check_eggs(st, npc) :
        else :
           st.takeItems(eggs,20)
           st.takeItems(SCALE_1,1)
-          if progress == 14 or progress == 21 :
+          if progress in [14,21] :
              st.set("progress","19")
-          elif progress == 15 or progress == 22 :
+          elif progress in [15,22] :
              st.set("progress","20") 
           st.giveItems(eggs,1)
           st.playSound("ItemSound.quest_itemget")
@@ -187,9 +140,9 @@ def check_eggs(st, npc) :
        else :
           st.takeItems(eggs,20)
           st.takeItems(SCALE_2,1)
-          if progress == 14 or progress == 21 :
+          if progress in [14,21] :
              st.set("progress","19")
-          elif progress == 15 or progress == 22 :
+          elif progress in [15,22] :
              st.set("progress","20") 
           st.giveItems(eggs,1)
           st.set("cond","7")
@@ -208,9 +161,9 @@ def check_eggs(st, npc) :
        else :
           st.takeItems(eggs,20)
           st.takeItems(SCALE_4,1)
-          if progress == 14 or progress == 21 :
+          if progress in [14,21] :
              st.set("progress","19")
-          elif progress == 15 or progress == 22 :
+          elif progress in [15,22] :
              st.set("progress","20") 
           st.giveItems(eggs,1)
           st.set("cond","7")
@@ -222,22 +175,15 @@ def check_eggs(st, npc) :
        else :
           st.takeItems(eggs,20)
           st.takeItems(SCALE_5,1)
-          if progress == 14 or progress == 21 :
+          if progress in [14,21] :
              st.set("progress","19")
-          elif progress == 15 or progress == 22 :
+          elif progress in [15,22] :
              st.set("progress","20") 
           st.giveItems(eggs,1)
           st.set("cond","7")
           st.playSound("ItemSound.quest_itemget")
           return "420_"+npc+"_4.htm"
     return "check_eggs sux"
-
-def random_flute(st) :
-    luck = st.getRandom(3)
-    if   luck == 0 : flute = FLT_OF_WIND
-    elif luck == 1 : flute = FLT_OF_TWIL
-    elif luck == 2 : flute = FLT_OF_STAR
-    return flute
 
 
 # Main Quest Code
@@ -331,9 +277,10 @@ class Quest (JQuest):
              st.set("progress",str(progress+9))
              return "420_kalibran_2.htm"
          elif event == "kalibran_2" :
-             if progress == 14 or progress == 21 :
+            if st.getQuestItemsCount(SCALE_3) :
+             if progress in [14,21] :
                 st.set("progress","19")
-             elif progress == 15 or progress == 22 :
+             elif progress in [15,22] :
                 st.set("progress","20")
              st.takeItems(SCALE_3,1)   
              st.giveItems(KA_EGG,1)
@@ -364,17 +311,17 @@ class Quest (JQuest):
              st.set("progress",str(progress+9))
              return "420_suzet_3.htm"
          elif event == "hatch" :
-              st.set("cond","8")
-              whom = int(st.get("dragon"))
-              if   whom == 1 : eggs = EX_EGG
-              elif whom == 2 : eggs = ZW_EGG
-              elif whom == 3 : eggs = KA_EGG
-              elif whom == 4 : eggs = SU_EGG
-              elif whom == 5 : eggs = SH_EGG
+             whom = int(st.get("dragon"))
+             if   whom == 1 : eggs = EX_EGG
+             elif whom == 2 : eggs = ZW_EGG
+             elif whom == 3 : eggs = KA_EGG
+             elif whom == 4 : eggs = SU_EGG
+             elif whom == 5 : eggs = SH_EGG
+             if st.getQuestItemsCount(eggs) and progress in [19,20] :
               st.takeItems(eggs,1)
-              flute = random_flute(st)
+              st.set("cond","8")
               if progress == 19 :
-                 st.giveItems(flute,1)
+                 st.giveItems(3500+st.getRandom(3),1)
                  st.setState(COMPLETED)
                  st.clearQuestDrops()
                  st.exitQuest(True)
@@ -383,8 +330,8 @@ class Quest (JQuest):
               elif progress == 20 :
                  return "420_mymyu_11.htm"
          elif event == "give_dust" :
+             if st.getQuestItemsCount(FRY_DUST):
               st.takeItems(FRY_DUST,1)
-              flute = random_flute(st)
               luck = st.getRandom(2)
               if luck == 0 :
                  extra = ARMOR
@@ -394,7 +341,7 @@ class Quest (JQuest):
                  extra = FOOD
                  qty = 100
                  htmltext = "420_mymyu_14.htm"
-              st.giveItems(flute,1)
+              st.giveItems(3500+st.getRandom(3),1)
               st.giveItems(extra,qty)
               st.setState(COMPLETED)
               st.clearQuestDrops()
@@ -402,8 +349,7 @@ class Quest (JQuest):
               st.playSound("ItemSound.quest_finish")
               return htmltext
          elif event == "no_dust" :
-              flute = random_flute(st)
-              st.giveItems(flute,1)
+              st.giveItems(3500+st.getRandom(3),1)
               st.setState(COMPLETED)
               st.clearQuestDrops()
               st.exitQuest(True)
@@ -455,15 +401,15 @@ class Quest (JQuest):
           elif progress == 11  and st.getQuestItemsCount(FRY_STN_DLX)==1 :
               st.set("progress","13")
               return "420_byron_6.htm"
-          elif progress == 5 or progress == 12 :
+          elif progress in [5,12] :
              return "420_byron_7.htm"
-          elif progress == 6 or progress == 13 :
+          elif progress in [6,13] :
              return "420_byron_8.htm"
     elif npcid == FR_MYMYU :
        if id == STARTING :
-          if ( progress == 5 or progress == 12 ) and st.getQuestItemsCount(FRY_STN) == 1 :
+          if ( progress in [5,12] ) and st.getQuestItemsCount(FRY_STN) == 1 :
              return "420_mymyu_1.htm"
-          elif ( progress == 6 or progress == 13 ) and st.getQuestItemsCount(FRY_STN_DLX) == 1 :
+          elif ( progress in [6,13] ) and st.getQuestItemsCount(FRY_STN_DLX) == 1 :
              return "420_mymyu_3.htm"
        elif id == STARTED :
           if progress < 14 and st.getQuestItemsCount(JUICE) == 1  :
@@ -562,7 +508,7 @@ class Quest (JQuest):
                   st.playSound("ItemSound.quest_middle")
   #fairy stone destruction    
     elif id == STARTING and st.getQuestItemsCount(FRY_STN_DLX) == 1 :
-      if (589 <= npcid <= 599) or npcid == FRY_QN :
+      if npcid in range(589,600)+[719]:
          st.takeItems(FRY_STN_DLX,1)
          st.set("progress","7")
          return "you lost fairy stone deluxe!"
@@ -581,29 +527,15 @@ QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
 QUEST.addStartNpc(PM_COOPER)
 # Quest Item Drop initialization
-STARTING.addQuestDrop(TD_LORD,TD_BCK_SKN,1)
+for i in [3499]+range(3816,3832):
+    STARTING.addQuestDrop(PM_COOPER,i,1)
 
-STARTED.addQuestDrop(LO_LZRD_W,EX_EGG,1)
-STARTED.addQuestDrop(RD_SCVNGR,KA_EGG,1)
-STARTED.addQuestDrop(MS_SPIDER,ZW_EGG,1)
-STARTED.addQuestDrop(DD_SEEKER,SH_EGG,1)
-STARTED.addQuestDrop(BO_OVERLD,SU_EGG,1)
 # Quest mob initialization
 #back skins
 STARTING.addKillId(TD_LORD)
 #fairy stone dlx destroyers
-STARTING.addKillId(FLINE)
-STARTING.addKillId(FLINE_LDR)
-STARTING.addKillId(LIELE)
-STARTING.addKillId(LIELE_LDR)
-STARTING.addKillId(FORST_RNR)
-STARTING.addKillId(SATYR)
-STARTING.addKillId(SATYR_LDR)
-STARTING.addKillId(UNICORN)
-STARTING.addKillId(UNICO_LDR)
-STARTING.addKillId(VLY_TRNT)
-STARTING.addKillId(VLY_T_LDR)
-STARTING.addKillId(FRY_QN)
+for i in range(589,600)+[719]:
+    STARTING.addKillId(i)
 #eggs
 STARTED.addKillId(LO_LZRD_W)
 STARTED.addKillId(RD_SCVNGR)
@@ -621,8 +553,7 @@ STARTING.addTalkId(MC_MARIA)
 STARTING.addTalkId(FR_MYMYU)
 
 STARTED.addTalkId(FR_MYMYU)
-STARTED.addTalkId(DK_EXARION)
-STARTED.addTalkId(DK_ZWOV)
-STARTED.addTalkId(DK_KALIBRAN)
-STARTED.addTalkId(WM_SUZET)
-STARTED.addTalkId(WM_SHAMHAI)
+for i in range(7748,7753):
+    STARTED.addTalkId(i)
+
+print "importing quests: 420: Little Wings"
