@@ -1653,7 +1653,7 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="1" val="#mpConsume">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="1" val="#mpConsume_Init">
       <add order="0x40" stat="pDef" val="#def"/>
     </effect>
   </for>
