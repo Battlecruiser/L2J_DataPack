@@ -225,6 +225,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="500"/>
+  <set name="effectType" val="DEBUFF"/>
+  <set name="effectPower" val="70"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
       <mul order="0x30" stat="runSpd" val="0.5"/>
@@ -234,7 +236,7 @@
 <skill id="4019" levels="1" name="Decrease Speed">
   <!-- Done by dc -->
   <set name="save" val="5"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="40"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="205"/>
   <set name="hitTime" val="1700"/>
@@ -480,6 +482,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
+  <set name="effectType" val="DEBUFF"/>
+  <set name="effectPower" val="60"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="0.7" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="0.7"/>
@@ -541,7 +545,7 @@
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="6"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="70"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1500"/>
   <set name="reuseDelay" val="8000"/>
@@ -565,7 +569,7 @@
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1500"/>
   <set name="reuseDelay" val="8000"/>
@@ -678,10 +682,10 @@
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
+  <set name="lvlDepend" val="2"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="2"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="8000"/>
@@ -699,10 +703,10 @@
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
+  <set name="lvlDepend" val="2"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="8000"/>
@@ -782,7 +786,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="save" val="3"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="70"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="POISON"/>
   <set name="isMagic" val="true"/>
@@ -796,9 +800,9 @@
 <skill id="4053" levels="8" name="P. Atk. Drop">
   <table name="#magicLvl"> 40 46 52 58 62 66 70 74 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
+  <set name="lvlDepend" val="2"/>
   <set name="save" val="6"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
@@ -814,9 +818,9 @@
 <skill id="4054" levels="8" name="Decrease P. Def.">
   <table name="#magicLvl"> 40 46 52 58 62 66 70 74 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
+  <set name="lvlDepend" val="2"/>
   <set name="save" val="4"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
@@ -832,9 +836,9 @@
 <skill id="4055" levels="8" name="Decrease Atk. Spd.">
   <table name="#magicLvl"> 40 46 52 58 62 66 70 74 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
+  <set name="lvlDepend" val="2"/>
   <set name="save" val="5"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
@@ -928,26 +932,27 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="50"/>
+  <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="90"/>
   <for>
 	<effect count="1" name="Stun" time="120" val="0"/>
   </for>
 </skill>
 <skill id="4064" levels="1" name="Paralysis">
   <set name="magicLvl" val="50"/>
-  <set name="lvlDepend" val="1"/>
   <set name="save" val="3"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="30"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="hitTime" val="4000"/>
   <set name="skillTime" val="5000"/>
-  <set name="skillType" val="PDAM"/>
+  <set name="skillType" val="PARALYZE"/>
   <set name="isMagic" val="false"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="800"/>
   <for>
-	<effect count="1" name="Stun" time="120" val="0"/>
+	<effect count="1" name="Paralyze" time="120" val="0"/>
   </for>
 </skill>
 <skill id="4065" levels="12" name="NPC Heal">
@@ -1044,8 +1049,9 @@
 </skill>
 <skill id="4070" levels="1" name="Decrease Atk. Spd.">
   <!-- Done by dc -->
+  <set name="lvlDepend" val="1"/>
   <set name="save" val="5"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="10"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1087,6 +1093,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="9000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="30"/>
   <for>
 	<effect count="1" name="Stun" time="9" val="0"/>
   </for>
@@ -1109,6 +1117,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="9000"/>
   <set name="castRange" val="40"/>
+  <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="50"/>
   <for>
 	<effect count="1" name="Stun" time="9" val="0"/>
   </for>
@@ -1138,10 +1148,10 @@
   <table name="#mpConsume"> 14 23 32 43 55 68 79 84 89 92 94 95 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
+  <set name="lvlDepend" val="2"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="4"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="6000"/>
@@ -1160,10 +1170,10 @@
   <table name="#mpConsume"> 20 35 65 </table>
   <table name="#magicLvl"> 20 40 70 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
+  <set name="lvlDepend" val="2"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="8000"/>
@@ -1535,10 +1545,10 @@
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
+  <set name="lvlDepend" val="2"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="2"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="8000"/>
