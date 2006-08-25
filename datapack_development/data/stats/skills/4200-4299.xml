@@ -29,7 +29,7 @@
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="2"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="70"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
@@ -49,7 +49,7 @@
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="70"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
@@ -70,7 +70,7 @@
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="50"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
@@ -114,7 +114,7 @@
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="4"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="30"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
@@ -185,6 +185,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="9000"/>
   <set name="castRange" val="900"/>
+  <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="80"/>
   <for>
 	<effect count="1" name="Stun" time="9" val="0"/>
   </for>
@@ -355,7 +357,7 @@
   <!--- Zaken skills -->
   <set name="magicLvl" val="60"/>
   <set name="lvlDepend" val="1"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="95"/>
   <set name="hitTime" val="2000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="2000"/>
@@ -593,6 +595,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="900"/>
+  <set name="effectType" val="DEBUFF"/>
+  <set name="effectPower" val="90"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
       <mul order="0x30" stat="regHp" val="0.5"/>

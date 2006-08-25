@@ -51,6 +51,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="9000"/>
   <set name="castRange" val="900"/>
+  <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="80"/>
   <for>
 	<effect count="1" name="Stun" time="9" val="0"/>
   </for>
