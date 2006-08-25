@@ -83,9 +83,9 @@ class Quest (JQuest) :
               st.giveItems(ORB,10)
               msg=tie_msg
            st.unset("playing")
-           htmltext = st.showHtmlFile("7934-04.htm").replace("<player>", OPTIONS[player]).\
-                      replace("<marsha>", OPTIONS[marsha]).replace("<msg>", msg[st.getRandom(len(msg))]).\
-                      replace("<again>", again_msg[st.getRandom(len(again_msg))])
+           htmltext = st.showHtmlFile("7934-04.htm").replace("%player%", OPTIONS[player]).\
+                      replace("%marsha%", OPTIONS[marsha]).replace("%msg%", msg[st.getRandom(len(msg))]).\
+                      replace("%again%", again_msg[st.getRandom(len(again_msg))])
         else:
            htmltext="Player is cheating"
            st.takeItems(ORB,-1)
@@ -118,9 +118,9 @@ class Quest (JQuest) :
               st.takeItems(ORB,10)
               template="7935-06b.htm"
             st.set("row",str(row))
-            htmltext = st.showHtmlFile(template).replace("<toss>",TOSS[random2]).\
-                      replace("<msg1>",toss_msg[row-1][0]).replace("<msg2>",toss_msg[row-1][1]).\
-                      replace("<orbs>",str(ORBS[row-1])).replace("<next>",str(ORBS[row]))
+            htmltext = st.showHtmlFile(template).replace("%toss%",TOSS[random2]).\
+                      replace("%msg1%",toss_msg[row-1][0]).replace("%msg2%",toss_msg[row-1][1]).\
+                      replace("%orbs%",str(ORBS[row-1])).replace("%next%",str(ORBS[row]))
           else:
            st.unset("row")
            htmltext = "7935-02a.htm"
@@ -133,7 +133,7 @@ class Quest (JQuest) :
             qty=st.getInt("row")-1
             st.giveItems(ORB,ORBS[qty])
             st.unset("row")
-            htmltext = st.showHtmlFile("7935-06a.htm").replace("<nebulites>",str(ORBS[qty]))
+            htmltext = st.showHtmlFile("7935-06a.htm").replace("%nebulites%",str(ORBS[qty]))
         else:
            st.takeItems(ORB,-1)
            htmltext="Player is cheating"
