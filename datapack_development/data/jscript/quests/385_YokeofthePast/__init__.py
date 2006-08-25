@@ -52,7 +52,7 @@ STARTED     = State('Started', QUEST)
 QUEST.setInitialState(CREATED)
 
 for npcId in range(8095,8126):
-    if npcId in [8100,8111,8112,8113]:
+    if npcId in [8111,8112,8113]:
         continue
     STARTED.addTalkId(npcId)
     CREATED.addTalkId(npcId)
