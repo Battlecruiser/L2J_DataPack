@@ -542,8 +542,9 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="1" name="Mute" time="120" val="0"/>
+    <effect count="1" name="Mute" time="120" val="0">
     <!-- MISSING MUTE OF PHYSICAL SKILLS-->
+    </effect> 
   </for>
 </skill>
 <skill id="1337" levels="1" name="Curse of Abyss">
@@ -704,7 +705,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="900"/>
-  <set name="absorbPart" val="0.7"
+  <set name="absorbPart" val="0.7"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
