@@ -20,7 +20,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="1" name="Root" time="30" val="0"/>
+    <effect count="1" name="Root" time="30" val="0" stackOrder="1" stackType="Root"/>
   </for>
 </skill>
 <skill id="1204" levels="2" name="Wind Walk">
@@ -67,7 +67,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0">
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpdDown">
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
     </effect>
   </for>
@@ -93,7 +93,7 @@
   <set name="buffDuration" val="3000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Root" time="30" val="0"/>
+    <effect count="1" name="Root" time="30" val="0" stackOrder="1" stackType="Root"/>
   </for>
 </skill> 
 <skill id="1209" levels="6" name="Seal of Poison">
@@ -280,7 +280,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect name="Buff" time="15" count="1" val="0">
+    <effect name="Buff" time="15" count="1" val="0" stackOrder="#Tab-accCombat" stackType="accuracyDown">
       <sub order="0x40" stat="accCombat" val="#Tab-accCombat"/>
     </effect> 
   </for>
@@ -831,7 +831,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Mute" time="120" val="0"/>
+    <effect count="1" name="Mute" time="120" val="0" stackOrder="1" stackType="silence"/>
   </for>
 </skill>
 <skill id="1247" levels="14" name="Seal of Scourge">
@@ -1084,7 +1084,7 @@
   <set name="castRange" val="400"/>
   <!-- Fixed by Pela -->
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Weight" stackType="Weight">
       <mul order="0x30" stat="maxLoad" val="#Weight"/>
     </effect>
   </for>
@@ -1784,7 +1784,7 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="350"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.5" stackType="RunSpeedDown">
       <mul order="0x40" stat="runSpd" val="0.5"/>
     </effect>
   </for>
@@ -1972,7 +1972,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="1" name="ImobilePetBuff" time="30" val="0">
+    <effect count="1" name="ImobilePetBuff" time="30" val="0" stackOrder="1" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="#pDef"/>
       <add order="0x40" stat="mDef" val="#mDef"/>
     </effect>

@@ -227,7 +227,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#hp" stackType="MaxHPUp">
       <mul order="0x30" stat="maxHp" val="#hp"/>
     </effect>
   </for> 	
@@ -872,7 +872,7 @@
   <set name="buffDuration" val="1200000"/> 
   <set name="castRange" val="400"/> 
   <for> 
-    <effect count="1" name="Buff" time="1200" val="0"> 
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="30" stackType="MagicDefUpAtr"> 
       <add stat="waterRes" val="20" order="0x40"/> 
       <add stat="fireRes" val="30" order="0x40"/> 
       <add stat="windRes" val="20" order="0x40"/> 
@@ -1005,7 +1005,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="3" stackType="pDef">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="10" stackType="pDef">
       <mul order="0x30" stat="pDef" val="0.9"/>
     </effect>
   </for>
@@ -1027,7 +1027,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="100" stackType="SpeedUp">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="99" stackType="SpeedUp">
       <mul order="0x30" stat="runSpd" val="0.9"/>
     </effect>
   </for>
@@ -1050,7 +1050,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="3" stackType="pDef">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="10" stackType="pDef">
       <mul order="0x30" stat="pDef" val="0.9"/>
     </effect>
   </for>
@@ -1073,7 +1073,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="100" stackType="SpeedUp">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="99" stackType="SpeedUp">
       <mul order="0x30" stat="runSpd" val="0.9"/>
     </effect>
   </for>
@@ -1135,7 +1135,7 @@
   <set name="buffDuration" val="1200000"/> 
   <set name="castRange" val="-1"/> 
   <for> 
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.5" stackType="cAtkUp"> 
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.5" stackType="cAtk"> 
       <mul order="0x30" stat="cAtk" val="1.5"/> 
     </effect> 
   </for>

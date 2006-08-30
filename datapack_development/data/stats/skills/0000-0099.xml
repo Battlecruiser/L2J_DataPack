@@ -75,7 +75,7 @@
   <set name="buffDuration" val="10000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="10" val="0">
+    <effect count="1" name="Buff" time="10" val="0" stackOrder="#spd" stackType="SpeedUpS">
       <add order="0x40" stat="runSpd" val="#spd"/>
     </effect>
   </for>
@@ -716,7 +716,7 @@
   <set name="effectType" val="STUN"/>
   <set name="effectPower" val="50"/>
   <for>
-    <effect count="1" name="Stun" time="9" val="0"/>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="49" levels="26" name="Holy Strike">
@@ -1036,6 +1036,7 @@
   <!-- Done by Znabty -->
   <table name="#pAtk"> 1.20 1.25 </table>
   <table name="#mpConsume"> 10 19 </table>
+  <table name="#uprate"> 1 2 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1047,7 +1048,7 @@
   <set name="buffDuration" val="60000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="60" val="0">
+    <effect count="1" name="Buff" time="60" val="0" stackOrder="#uprate" stackType="pAtks">
       <mul order="0x30" stat="pAtk" val="#pAtk"/>
     </effect>
   </for>
@@ -1091,7 +1092,7 @@
   <set name="effectType" val="STUN"/>
   <set name="effectPower" val="80"/>
   <for>
-    <effect count="1" name="StunSelf" time="9" val="0"/>
+    <effect count="1" name="StunSelf" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="82" levels="3" name="Majesty">
@@ -1257,7 +1258,7 @@
   <set name="buffDuration" val="9000"/>
   <set name="castRange" val="40"/>
   <for>
-    <effect count="1" name="Stun" time="9" val="0">
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun">
        <using kind="Shield"/>
 	</effect>  
   </for>
@@ -1268,6 +1269,7 @@
   <table name="#Tab-pDef"> 0.8 0.8 </table>
   <table name="#Tab-rEvas"> 3 3 </table>
   <table name="#mpConsume"> 9 20 </table>
+  <table name="#uprate"> 1 2 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1279,7 +1281,7 @@
   <set name="buffDuration" val="60000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="60" val="0">
+    <effect count="1" name="Buff" time="60" val="0" stackOrder="#uprate" stackType="pAtks">
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
       <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
       <sub order="0x40" stat="rEvas" val="#Tab-rEvas"/>
@@ -1352,7 +1354,7 @@
   <set name="buffDuration" val="60000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect name="Buff" time="60" count="1" val="0">
+    <effect name="Buff" time="60" count="1" val="0" stackOrder="0.77" stackType="pAtkDown">
       <mul order="0x30" stat="pAtk" val="0.77"/>
     </effect>
   </for>

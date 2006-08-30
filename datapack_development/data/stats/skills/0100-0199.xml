@@ -22,7 +22,7 @@
   <set name="effectType" val="STUN"/>
   <set name="effectPower" val="50"/>
   <for>
-    <effect count="1" name="Stun" time="9" val="0"/>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="101" levels="40" name="Stun Shot">
@@ -47,7 +47,7 @@
   <set name="effectType" val="STUN"/>
   <set name="effectPower" val="50"/>
   <for>
-    <effect count="1" name="Stun" time="9" val="0"/>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="102" levels="16" name="Entangle">
@@ -184,7 +184,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Root" time="30" val="0"/>
+    <effect count="1" name="Root" time="30" val="0" stackOrder="1" stackType="Root"/>
   </for>
 </skill>
 <skill id="109" levels="1" name="Spirit of Ogre">
@@ -225,7 +225,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="ImobileBuff" time="30" val="0">
+    <effect count="1" name="ImobileBuff" time="30" val="0" stackOrder="1" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="#pDef"/>
       <add order="0x40" stat="mDef" val="#mDef"/>
     </effect>
@@ -246,7 +246,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0">
+    <effect count="1" name="Buff" time="30" val="0" stackOrder="#Tab-rEvas" stackType="rEvasSpec">
       <add order="0x40" stat="rEvas" val="#Tab-rEvas"/>
     </effect>
   </for>
@@ -306,7 +306,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0">
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="#Tab-pAtk" stackType="pAtkDown">
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
     </effect>
   </for>
@@ -329,8 +329,8 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect name="Buff" time="15" count="1" val="0">
-      <div order="0x30" stat="pAtk" val="1.23"/>
+    <effect name="Buff" time="15" count="1" val="0" stackOrder="0.77" stackType="pAtkDown">
+      <mul order="0x30" stat="pAtk" val="0.77"/>
     </effect>
   </for>
 </skill>
@@ -372,7 +372,7 @@
   <set name="effectType" val="STUN"/>
   <set name="effectPower" val="50"/>
   <for>
-    <effect count="1" name="Stun" time="9" val="0"/>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="121" levels="6" name="Battle Roar">
@@ -390,7 +390,7 @@
   <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0">
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="#Tab-maxHp" stackType="MaxHPUp">
       <mul order="0x30" stat="maxHp" val="#Tab-maxHp"/>
     </effect>
   </for>
@@ -413,8 +413,8 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0">
-      <div order="0x30" stat="pDef" val="1.23"/>
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="0.77" stackType="pDefDown">
+      <mul order="0x30" stat="pDef" val="0.77"/>
     </effect>
   </for>
 </skill>
@@ -529,7 +529,7 @@
   <set name="buffDuration" val="300000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect name="Buff" time="300" count="1" val="0">
+    <effect name="Buff" time="300" count="1" val="0" stackOrder="#Tab-accCombat" stackType="HawkEye">
       <add order="0x40" stat="accCombat" val="#Tab-accCombat"/>
       <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
     </effect>
