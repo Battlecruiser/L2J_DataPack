@@ -59,7 +59,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#mp" stackType="MPregen">
        <mul stat="maxMp" order="0x30" val="#mp">
          <using kind="Bow"/>
        </mul>
@@ -403,7 +403,7 @@
   <set name="castRange" val="40"/>
   <for>
   <!--
-    <effect count="1" name="Buff" time="10" val="0">
+    <effect count="1" name="Buff" time="10" val="0" stackOrder="40" stackType="SpeedUpS">
       <add order="0x10" stat="rCrit" val="45">
         <using kind="Dagger" skill="0321"/>
       </add>
@@ -489,7 +489,7 @@
   <set name="castRange" val="-1"/>
   <set name="buffDuration" val="9000"/>
   <for>
-    <effect count="1" name="Buff" time="9" val="0">
+    <effect count="1" name="Buff" time="9" val="0" stackOrder="3" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="7000"/>
       <add order="0x40" stat="mDef" val="6000"/>
     </effect> 
@@ -860,7 +860,7 @@
   <set name="skillTime" val="2000"/> 
   <set name="hitTime" val="2000"/> 
   <for>
-    <effect count="1" name="Stun" time="120" val="0"/>
+    <effect count="1" name="Stun" time="120" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="353" levels="1" name="Shield Slam">
@@ -877,7 +877,7 @@
   <set name="skillTime" val="1000"/> 
   <set name="hitTime" val="1000"/> 
   <for>
-    <effect count="1" name="Stun" time="120" val="0"/>
+    <effect count="1" name="Stun" time="120" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="354" levels="1" name="Hamstring Shot">
@@ -1023,7 +1023,7 @@
   <set name="effectPower" val="40"/>
   <set name="lvlDepend" val="1"/>
   <for>
-    <effect count="1" name="Stun" time="9" val="0">
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="2" stackType="Stun">
    	  <mul order="0x30" stat="pDef" val="0.7"/>
    	  <mul order="0x30" stat="mDef" val="0.7"/>
     </effect>
@@ -1046,7 +1046,7 @@
   <set name="effectPower" val="40"/>
   <set name="lvlDepend" val="1"/>
   <for>
-    <effect count="1" name="Stun" time="9" val="0">
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="2" stackType="Stun">
    	  <mul order="0x30" stat="pDef" val="0.7"/>
    	  <mul order="0x30" stat="mDef" val="0.7"/>
     </effect>
@@ -1157,7 +1157,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="ImobileBuff" time="30" val="0">
+    <effect count="1" name="ImobileBuff" time="30" val="0" stackOrder="3" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="5400"/>
       <add order="0x40" stat="mDef" val="4050"/>
     </effect>
@@ -1178,7 +1178,7 @@
   <set name="castRange" val="900"/>
   <for> 
   <!--
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="6" stackType="rEvas"> 
+    <effect count="1" name="Buff" time="30" val="0" stackOrder="6" stackType="rEvasSpec"> 
       <add order="0x40" stat="rEvas" val="6"/>
     </effect> 
   -->

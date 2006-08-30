@@ -228,7 +228,7 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="70"/>
   <for>
-    <effect name="Buff" time="120" count="1" val="0">
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="0.5" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="0.5"/>
     </effect>
   </for>
@@ -246,7 +246,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="800"/>
   <for>
-    <effect name="Buff" time="120" count="1" val="0">
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="0.5" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="0.5"/>
     </effect>
   </for>
@@ -359,7 +359,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0">
+    <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-pAtk" stackType="pAtk">
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
     </effect>
   </for>
@@ -378,7 +378,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0">
+    <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-pDef" stackType="pDef">
       <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
     </effect>
   </for>
@@ -399,7 +399,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtk" stackType="pAtk">
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
     </effect>
   </for>
@@ -420,7 +420,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pDef" stackType="pDef">
       <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
     </effect>
   </for>
@@ -556,7 +556,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0">
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="#Tab-pAtk" stackType="pAtkDown">
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
     </effect>
   </for>
@@ -580,7 +580,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0">
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpdDown">
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
     </effect>
   </for>
@@ -717,7 +717,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="1" name="Root" time="30" val="0"/>
+    <effect count="1" name="Root" time="30" val="0" stackOrder="1" stackType="Root"/>
   </for>
 </skill>
 <skill id="4048" levels="3" name="NPC Dash">
@@ -810,7 +810,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.77" stackType="pAtkDown">
      <mul order="0x30" stat="pAtk" val="0.77"/>
     </effect>
   </for>
@@ -828,7 +828,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.77" stackType="pDefDown">
       <mul order="0x30" stat="pDef" val="0.77"/>
     </effect>
   </for>
@@ -846,7 +846,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.77" stackType="pAtkSpdDown">
        <mul order="0x30" stat="pAtkSpd" val="0.77"/>
     </effect>
   </for>
@@ -1058,8 +1058,8 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect name="Buff" time="120" count="1" val="0">
-      <mul order="0x30" stat="pAtkSpd" val="0.7"/>
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="0.77" stackType="pAtkSpdDown">
+      <mul order="0x30" stat="pAtkSpd" val="0.77"/>
     </effect>
   </for>
 </skill>
@@ -1096,7 +1096,7 @@
   <set name="effectType" val="STUN"/>
   <set name="effectPower" val="30"/>
   <for>
-	<effect count="1" name="Stun" time="9" val="0"/>
+	<effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="4073" levels="12" name="Shock">
@@ -1120,7 +1120,7 @@
   <set name="effectType" val="STUN"/>
   <set name="effectPower" val="50"/>
   <for>
-	<effect count="1" name="Stun" time="9" val="0"/>
+	<effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="4074" levels="2" name="NPC Haste">
@@ -1139,7 +1139,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpeedUp">
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
     </effect>
   </for>
@@ -1161,7 +1161,7 @@
   <set name="buffDuration" val="9000"/>
   <set name="castRange" val="40"/>
   <for>
-    <effect count="1" name="Stun" time="9" val="0"/>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="4076" levels="3" name="Reduction in movement speed">
@@ -1184,7 +1184,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>
@@ -1516,7 +1516,7 @@
   <set name="buffDuration" val="300000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect name="Buff" time="300" count="1" val="0">
+    <effect name="Buff" time="300" count="1" val="0" stackOrder="#Tab-accCombat" stackType="HawkEye">
       <add order="0x40" stat="accCombat" val="#Tab-accCombat"/>
       <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
     </effect>
@@ -1538,7 +1538,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="600"/>
   <for>
-	<effect count="5" name="HealOverTime" time="3" val="#hot"/>
+	<effect count="5" name="HealOverTime" time="3" val="#hot" stackOrder="#hot" stackType="HpRecover"/>
   </for>
 </skill>
 <skill id="4098" levels="12" name="Magic Skill Block">
@@ -1559,7 +1559,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
   <for>
-	<effect count="1" name="Mute" time="120" val="0"/>
+	<effect count="1" name="Mute" time="120" val="0" stackOrder="1" stackType="silence"/>
   </for>
 </skill>
 <skill id="4099" levels="2" name="NPC Berserk">
@@ -1581,7 +1581,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="berserk">
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
       <mul order="0x30" stat="mAtk" val="#Tab-mAtk"/>
       <div order="0x30" stat="pDef" val="#Tab-pDef"/>

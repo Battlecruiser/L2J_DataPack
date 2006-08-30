@@ -614,7 +614,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="HPregen">
       <mul order="0x30" stat="regHp" val="#rate"/>
     </effect>
   </for>
@@ -637,7 +637,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxHp" stackType="MaxHPUp">
       <mul order="0x30" stat="maxHp" val="#Tab-maxHp"/>
     </effect>
   </for>
@@ -687,7 +687,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxMp" stackType="MPregen">
       <mul order="0x30" stat="maxMp" val="#Tab-maxMp"/>
     </effect>
   </for>
@@ -833,7 +833,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="1" name="Mute" time="120" val="0"/>
+    <effect count="1" name="Mute" time="120" val="0" stackOrder="1" stackType="silence"/>
   </for>
 </skill>
 <skill id="1068" levels="3" name="Might">
@@ -1033,7 +1033,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#cancel" stackType="Concentration">
       <sub order="0x40" stat="cancel" val="#cancel"/>
     </effect>
   </for>
@@ -1222,7 +1222,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0">
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="#Acc" stackType="accuracyDown">
       <sub order="0x40" stat="accCombat" val="#Acc"/>
     </effect>
   </for>

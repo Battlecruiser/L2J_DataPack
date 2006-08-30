@@ -96,7 +96,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0">
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="0.77" stackType="pAtkSpdDown">
       <mul order="0x30" stat="pAtkSpd" val="0.77"/>
     </effect>
   </for>
@@ -673,7 +673,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0">
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="#Tab-pAtk" stackType="pAtkDown">
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
     </effect>
   </for>
@@ -960,7 +960,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#res" stackType="MagicDefUpAtr">
       <add stat="waterRes" val="#res" order="0x40"/>
     </effect>
   </for>
@@ -1014,7 +1014,7 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="60"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="38" stackType="RunSpeedDown">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.7" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="0.7"/>
     </effect>
   </for>
@@ -1036,7 +1036,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#res" stackType="MagicDefUpAtr">
       <add stat="windRes" val="#res" order="0x40"/>
     </effect>
   </for>
@@ -1058,7 +1058,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#res" stackType="MagicDefUpAtr">
       <add stat="fireRes" val="#res" order="0x40"/>
     </effect>
   </for>

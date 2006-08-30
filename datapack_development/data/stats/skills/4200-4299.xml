@@ -17,7 +17,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="750"/>
   <for>
-    <effect name="Buff" time="15" count="1" val="0">
+    <effect name="Buff" time="15" count="1" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpdDown">
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
     </effect>
   </for>
@@ -59,7 +59,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="750"/>
   <for>
-    <effect count="1" name="Root" time="30" val="0"/>
+    <effect count="1" name="Root" time="30" val="0" stackOrder="1" stackType="Root"/>
   </for>
 </skill>
 <skill id="4203" levels="12" name="Decrease Speed">
@@ -188,7 +188,7 @@
   <set name="effectType" val="STUN"/>
   <set name="effectPower" val="80"/>
   <for>
-	<effect count="1" name="Stun" time="9" val="0"/>
+	<effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="4209" levels="12" name="BOSS Heal">
@@ -229,7 +229,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="700"/>
   <for>
-	<effect count="5" name="HealOverTime" time="3" val="#hot"/>
+	<effect count="5" name="HealOverTime" time="3" val="#hot" stackOrder="#hot" stackType="HpRecover"/>
   </for>
 </skill>
 <skill id="4211" levels="12" name="BOSS Might">
