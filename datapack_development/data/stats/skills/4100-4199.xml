@@ -365,7 +365,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0" stackOrder="Tab-accCombat" stackType="accuracyDown">
+    <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-accCombat" stackType="accuracyDown">
       <sub order="0x40" stat="accCombat" val="#Tab-accCombat"/>
     </effect>
   </for>
