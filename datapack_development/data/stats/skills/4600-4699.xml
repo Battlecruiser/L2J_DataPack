@@ -827,7 +827,7 @@
   <set name="castRange" val="-1"/>
   <set name="buffDuration" val="5000"/>
   <for>
-    <effect count="1" name="Buff" time="5" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpeedUp">
+    <effect count="1" name="Buff" time="5" val="0" stackOrder="#pAtkSpd" stackType="pAtkSpeedUp">
      <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
     </effect>
   </for>
