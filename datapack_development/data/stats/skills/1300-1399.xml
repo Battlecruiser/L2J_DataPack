@@ -499,14 +499,14 @@
   <set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
   <set name="itemConsumeTime" val="240000"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
+  <set name="target" val="TARGET_CORPSE_MOB"/>
   <set name="hitTime" val="15000"/>
   <set name="reuseDelay" val="20000"/>
   <set name="skillTime" val="15000"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="40"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 13179 13180 13181 13182 13183 13184 13185 </table>
   <set name="npcId" val="#npcIds"/>
