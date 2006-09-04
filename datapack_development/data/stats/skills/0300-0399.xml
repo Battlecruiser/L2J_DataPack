@@ -561,7 +561,9 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x30" stat="mCritRate" val="11"/> 
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="78">
+      <mul order="0x30" stat="mCritRate" val="11"/> 
+    </effect>
   </for>
 </skill>
 <skill id="335" levels="1" name="Fortitude">
@@ -572,7 +574,7 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for> 
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="35"> 
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="35"> 
       <add order="0x40" stat="paralyzeRes" val="30"/> 
       <add order="0x40" stat="stunRes" val="30"/> 
     </effect> 
@@ -630,7 +632,7 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="36">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="36">
       <mul order="0x30" stat="pDef" val="1.25"/>
       <mul order="0x30" stat="mDef" val="1.25"/>
       <mul order="0x30" stat="pAtkSpd" val="0.8"/>
@@ -646,7 +648,7 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="35">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="35">
       <mul order="0x30" stat="reflectDam" val="1.9"/>
       <mul order="0x30" stat="pAtkSpd" val="0.8"/>
       <mul order="0x30" stat="runSpd" val="0.9"/>
