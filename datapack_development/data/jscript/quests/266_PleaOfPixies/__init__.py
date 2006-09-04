@@ -9,6 +9,8 @@ EMERALD = 1337
 BLUE_ONYX = 1338
 ONYX = 1339
 GLASS_SHARD = 1336
+REC_LEATHER_BOOT = 2176
+REC_SPIRITSHOT = 3032
 
 DROP={530:[[0,8,1]],534:[[4,10,1],[0,4,2]],537:[[0,10,2]],525:[[5,10,2],[0,5,3]]}
 
@@ -46,9 +48,11 @@ class Quest (JQuest) :
        n = st.getRandom(100)
        if n<2 :
           st.giveItems(EMERALD,1)
+          st.giveItems(REC_SPIRITSHOT,1)
           st.playSound("ItemSound.quest_jackpot")
        elif n<20 :
           st.giveItems(BLUE_ONYX,1)
+          st.giveItems(REC_LEATHER_BOOT,1)
        elif n<45 :
           st.giveItems(ONYX,1)
        else:

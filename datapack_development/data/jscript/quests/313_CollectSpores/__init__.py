@@ -22,9 +22,8 @@ class Quest (JQuest) :
  def onTalk (Self,npc,st):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
-   if id == CREATED :
-     st.set("cond","0")
-   if int(st.get("cond"))==0 :
+   cond=st.getInt("cond")
+   if cond == 0 :
      if st.getPlayer().getLevel() >= 8 :
        htmltext = "7150-03.htm"
      else:
@@ -42,7 +41,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,st) :
-   if st.getQuestItemsCount(FUNGUS_SAC)<10 :
+   if st.getQuestItemsCount(FUNGUS_SAC)<10 and st.getRandom(100) < 50 :
      st.giveItems(FUNGUS_SAC,1)
      if st.getQuestItemsCount(FUNGUS_SAC) == 10 :
        st.playSound("ItemSound.quest_middle")
