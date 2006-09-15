@@ -317,17 +317,18 @@ $MYG < ../sql/zone.sql &> /dev/null
 }
 
 experimental(){
-echo ""
-echo ""
-echo "WARNING: Experimental spawnlist doesnt contain C4 mobs, and (y) may change game balance."
-echo -ne "Install experimental gameserver DB tables: (y) yes or (n) no or (q) quit?"
-read ASKXP
-case "$ASKXP" in
-	"y"|"Y") expinstall;;
-	"n"|"N") finish;;
-	"q"|"Q") finish;;
-	*) experimental;;
-esac
+#echo ""
+#echo ""
+#echo "WARNING: Experimental spawnlist doesnt contain C4 mobs, and (y) may change game balance."
+#echo -ne "Install experimental gameserver DB tables: (y) yes or (n) no or (q) quit?"
+#read ASKXP
+#case "$ASKXP" in
+#	"y"|"Y") expinstall;;
+#	"n"|"N") finish;;
+#	"q"|"Q") finish;;
+#	*) experimental;;
+#esac
+finish
 }
 
 expinstall(){
@@ -352,7 +353,7 @@ while :
 echo "Installing experimental content."
 #$MYG < ../sql/experimental/npc.sql &> /dev/null
 #$MYG < ../sql/experimental/npcskills.sql &> /dev/null
-$MYG < ../sql/experimental/spawnlist-experimental.sql &> /dev/null
+#$MYG < ../sql/experimental/spawnlist-experimental.sql &> /dev/null
 finish
 }
 
