@@ -48,34 +48,34 @@
 <item id='8186' name="Artisan's Goggle">
   <for>
     <add val='0' order='0x10' stat='pDef'/>
-</for>
+  </for>
 </item>
 <item id='8187' name="Red Horn of Victory">
   <for>
     <add val='0' order='0x10' stat='pDef'/>
-</for>
+  </for>
 </item>
 <item id='8188' name="Little Angel Wing">
   <for>
     <add val='0' order='0x10' stat='pDef'/>
-</for>
+  </for>
 </item>
 <item id='8189' name="Fairy's Antenna">
   <for>
     <add val='0' order='0x10' stat='pDef'/>
-</for>
+  </for>
 </item>
 <item id='8191' name="Frintezza's Necklace">
-<!-- ADD REFLECT DAMAGE BONUS -->
   <for>
     <add val='95' order='0x10' stat='mDef'/>
     <add val='30' order='0x40' stat='sleepRes'/>
     <add val='50' order='0x40' stat='poisonRes'/>
     <add val='50' order='0x40' stat='bleedRes'/>
-    <add val='30' order='0x40' stat='paralyzeRes'>
+    <add val='30' order='0x40' stat='paralyzeRes'/>
     <add val='30' order='0x40' stat='stunRes'/>
-    <add val="20" order="0x40" stat="darkRes"/>
-    <div val='1.25' order='0x30' stat='atkReuse'/>
+    <add val='20' order='0x40' stat='darkRes'/>
+    <add val='15' order='0x40' stat='reflectDam' />
+    <mul val='0.75' order='0x30' stat='atkReuse'/>
   </for>
 </item>
 </list>
