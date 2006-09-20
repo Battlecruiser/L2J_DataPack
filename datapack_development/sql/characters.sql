@@ -69,6 +69,7 @@ CREATE TABLE IF NOT EXISTS characters (
   isin7sdungeon decimal(1,0) NOT NULL default 0,
   in_jail decimal(1,0) DEFAULT 0,
   jail_timer decimal(20,0) DEFAULT 0,
+  power_grade decimal(11,0) DEFAULT NULL,
   PRIMARY KEY  (obj_Id),
   KEY `clanid` (`clanid`)
 ) ;
