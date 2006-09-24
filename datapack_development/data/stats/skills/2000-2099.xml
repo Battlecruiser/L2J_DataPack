@@ -307,7 +307,7 @@
   <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect count="5" name="HealOverTime" time="3" val="8" stackOrder="8" stackType="HpRecover"/>
+    <effect count="5" name="HealOverTime" time="3" val="30" stackOrder="30" stackType="HpRecover"/>
   </for>
 </skill>
 <skill id="2032" levels="1" name="Healing potion">
@@ -319,7 +319,7 @@
   <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect count="5" name="HealOverTime" time="3" val="24" stackOrder="24" stackType="HpRecover"/>
+    <effect count="5" name="HealOverTime" time="3" val="60" stackOrder="60" stackType="HpRecover"/>
   </for>
 </skill>
 <skill id="2033" levels="1" name="Haste potion">
@@ -385,7 +385,7 @@
   <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect count="5" name="HealOverTime" time="3" val="50" stackOrder="50" stackType="HpRecover"/>
+    <effect count="5" name="HealOverTime" time="3" val="120" stackOrder="50" stackType="HpRecover"/>
   </for>
 </skill>
 <skill id="2038" levels="1" name="Quick healing potion">
