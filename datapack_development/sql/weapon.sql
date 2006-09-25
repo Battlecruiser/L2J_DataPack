@@ -1158,4 +1158,5 @@ INSERT INTO `weapon` (`item_id`, `name`, `bodypart`, `crystallizable`, `weight`,
 (8529, '(Monster Only) Knife', 'rhand', 'false', '1140', '1', '1', 'oriharukon', 'none', '10', '5', 'dagger', '12', '-3.00000', '0', '0', '0', '433', '0', '9', '95', '0', '0', 'true'),
 (8530, '(Monster Only) Squire\'s Sword', 'rhand', 'false', '1600', '1', '1', 'oriharukon', 'none', '6', '10', 'sword', '8', '0.00000', '0', '0', '0', '379', '0', '5', '95', '0', '0', 'true'),
 (8531, '(Monster Only) Bone Staff', 'lrhand', 'false', '1060', '2', '2', 'oriharukon', 'none', '39', '20', 'blunt', '4', '0.00000', '0', '0', '0', '325', '0', '35', '95', '0', '0', 'true'),
-(8532, '(Monster Only) Spinebone Sword', 'rhand', 'false', '1510', '2', '2', 'oriharukon', 'none', '51', '10', 'sword', '8', '0.00000', '0', '0', '0', '379', '0', '32', '95', '0', '0', 'true');
+(8532, '(Monster Only) Spinebone Sword', 'rhand', 'false', '1510', '2', '2', 'oriharukon', 'none', '51', '10', 'sword', '8', '0.00000', '0', '0', '0', '379', '0', '32', '95', '0', '0', 'true'),
+(8533, '(Monster Only) Crimson Sword', 'rhand', 'false', '1490', '2', '2', 'oriharukon', 'none', '64', '10', 'sword', '8', '0.00000', '0', '0', '0', '379', '0', '39', '95', '0', '0', 'true');
