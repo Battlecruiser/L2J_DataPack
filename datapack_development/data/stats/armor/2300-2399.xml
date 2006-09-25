@@ -506,14 +506,14 @@
 <item id='2396' name="Elven Mithril Tunic">
   <for>
     <add val='54' order='0x10' stat='pDef'/>
-    <add val='169' order='0x10' stat='maxMp'/>
+    <add val='169' order='0x60' stat='maxMp'/>
   <enchant val='0' order='0x0C' stat='pDef'/>
 </for>
 </item>
 <item id='2397' name="Tunic of Zubei">
   <for>
     <add val='78' order='0x10' stat='pDef'/>
-    <add val='345' order='0x10' stat='maxMp'/>
+    <add val='345' order='0x60' stat='maxMp'/>
     <mul val='1.10' order='0x30' stat='mAtk'>
      <and>
       <using slotitem="2402;11"/>
@@ -536,7 +536,7 @@
 <item id='2398' name="Blue Wolf Tunic">
   <for>
     <add val='83' order='0x10' stat='pDef'/>
-    <add val='377' order='0x10' stat='maxMp'/>
+    <add val='377' order='0x60' stat='maxMp'/>
     <add val='206' order='0x40' stat='maxMp'>
      <and>
       <using slotitem="2403;11"/>
@@ -583,7 +583,7 @@
 <item id='2399' name="Tunic of Doom">
   <for>
     <add val='83' order='0x10' stat='pDef'/>
-    <add val='377' order='0x10' stat='maxMp'/>
+    <add val='377' order='0x60' stat='maxMp'/>
     <add val='7' order='0x40' stat='runSpd'>
      <and>
       <using slotitem="2404;11"/>
