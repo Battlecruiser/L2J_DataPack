@@ -831,17 +831,17 @@
 </skill>
 <skill id="181" levels="1" name="Revival">
   <set name="mpConsume" val="25"/>
-  <set name="power" val="1685"/>
+  <set name="power" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1500"/>
   <set name="condition" val="32"/>
   <set name="reuseDelay" val="10800000"/>
   <set name="skillTime" val="1500"/>
-  <set name="skillType" val="HEAL"/>
+  <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <cond>
-    <player hp="10"/>
+    <player hp="5"/>
   </cond>
   <for>
   </for>

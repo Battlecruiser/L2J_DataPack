@@ -92,13 +92,13 @@
   <set name="conditionValue" val="2"/>
   <set name="hitTime" val="1733"/>
   <set name="condition" val="128"/>
-  <set name="reuseDelay" val="17000"/>
+  <set name="reuseDelay" val="11000"/>
   <set name="skillTime" val="1733"/>
   <set name="skillType" val="CHARGEDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="50"/>
   <!-- charge values -->
-  <set name="num_charges" val="2"/>
+  <set name="num_charges" val="3"/>
   <set name="charge_skill_id" val="8"/> <!-- Focus Sonic is the charger -->
   <for>
   </for>
@@ -115,13 +115,13 @@
   <set name="conditionValue" val="1"/>
   <set name="hitTime" val="1900"/>
   <set name="condition" val="128"/>
-  <set name="reuseDelay" val="15000"/>
+  <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="1900"/>
   <set name="skillType" val="CHARGEDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <!-- charge values -->
-  <set name="num_charges" val="1"/>
+  <set name="num_charges" val="2"/>
   <set name="charge_skill_id" val="8"/> <!-- Focus Sonic is the charger -->
 </skill>
 <skill id="7" levels="28" name="Sonic Storm">
@@ -137,21 +137,22 @@
   <set name="conditionValue" val="1"/>
   <set name="hitTime" val="1900"/>
   <set name="condition" val="128"/>
-  <set name="reuseDelay" val="20000"/>
+  <set name="reuseDelay" val="13000"/>
   <set name="skillTime" val="1900"/>
-  <set name="skillType" val="CHARGEDAM"/>
+  <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
   <!-- charge values -->
-  <set name="num_charges" val="1"/>
-  <set name="charge_skill_id" val="8"/> <!-- Focus Sonic is the charger -->
+  <set name="itemConsumeId" val="5589" />
+  <set name="itemConsumeCount" val="3"/>
   <for>
   </for>
 </skill>
 <skill id="8" levels="7" name="Focus Sonic">
   <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 </table>
   <table name="#charges"> 1 2 3 4 5 6 7 </table>
-  <set name="mpConsume" val="10"/>
+  <set name="mpConsume" val="5"/>
+  <set name="hpConsume" val="25"/>
   <set name="power" val="#power"/>
   <set name="hitTime" val="900"/>
   <set name="target" val="TARGET_SELF"/>
@@ -162,7 +163,7 @@
   <set name="castRange" val="-1"/>
   <set name="num_charges" val="#charges"/>
   <for>
-    <effect count="1" name="Charge" time="0x7fffffff" val="1"/>
+    <effect count="1" name="Charge" time="600" val="1"/>
   </for>
 </skill>
 <skill id="9" levels="34" name="Sonic Buster">
@@ -178,14 +179,14 @@
   <set name="skillRadius" val="200"/>
   <set name="conditionValue" val="1"/>
   <set name="condition" val="128"/>
-  <set name="reuseDelay" val="10000"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="720"/>
-  <set name="skillType" val="CHARGEDAM"/>
+  <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
   <!-- charge values -->
-  <set name="num_charges" val="1"/>
-  <set name="charge_skill_id" val="8"/> <!-- Focus Sonic is the charger -->
+  <set name="itemConsumeId" val="5589" />
+  <set name="itemConsumeCount" val="3"/>
   <for>
   </for>
 </skill>
@@ -743,7 +744,8 @@
 <skill id="50" levels="7" name="Focus Force">
   <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 </table>
   <table name="#charges"> 1 2 3 4 5 6 7 </table>
-  <set name="mpConsume" val="7"/>
+  <set name="mpConsume" val="5"/>
+  <set name="mpConsume" val="20"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="900"/>
