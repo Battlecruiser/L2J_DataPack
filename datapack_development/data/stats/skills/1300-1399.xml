@@ -1487,6 +1487,16 @@
    </effect>
  </for>  
 </skill>
+<skill id="1387" levels="3" name="Summon Cursed Bones">
+  <!-- Necromancer -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
 <skill id="1388" levels="3" name="Greater Might">
 <!-- Done by KID -->
   <table name="#pAtk"> 1.1 1.15 1.2 </table>
@@ -1634,6 +1644,36 @@
   <for>
     <effect count="1" name="Sleep" time="10" val="0"/>
   </for>  
+</skill>
+<skill id="1395" levels="10" name="Erase">
+  <!-- Bishop, Prophet, Elder, Shillien Elder -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="1396" levels="10" name="Magical Backfire">
+  <!-- Bishop -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="1397" levels="3" name="Clarity">
+  <!-- Elder -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
 </skill>
 <skill id="1398" levels="10" name="Mana Burn"> 
 <!-- Done by KID -->
