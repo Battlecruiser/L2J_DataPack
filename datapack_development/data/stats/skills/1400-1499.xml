@@ -21,15 +21,12 @@
   </for>
 </skill>
 <skill id="1401" levels="10" name="Major Heal">
-<!-- Done by KID -->
   <table name="#mpConsume"> 90 95 98 100 104 108 112 114 117 120 </table>
   <table name="#power"> 690 722 753 783 812 840 867 892 915 936 </table>
-  <table name="#HEALpercent"> 483.0 505.4 527.1 548.1 568.4 588.0 606.9 624.4 640.5 655.2 </table>
-  <table name="#HOTpercent"> 13.8 14.44 15.06 15.66 16.24 16.8 17.34 17.84 18.3 18.72 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
-  <set name="itemConsumeCount" val="1"/>  
-  <set name="power" val="#HEALpercent"/>
+  <set name="itemConsumeCount" val="1"/>   
+  <set name="power" val="#power"/>
   <set name="hitTime" val="10000"/>
   <set name="reuseDelay" val="14000"/>
   <set name="skillTime" val="10000"/>
@@ -38,20 +35,14 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="isMagic" val="true"/>
-  <for>
-   <effect count="15" name="HealOverTime" time="1" val="#HOTpercent" stackOrder="#HOTpercent" stackType="HpRecover"/>
-  </for>  
 </skill>
 <skill id="1402" levels="5" name="Major Group Heal">
-<!-- Done by KID -->
   <table name="#mpConsume"> 283 299 320 340 358 </table>
   <table name="#power"> 722 783 840 892 936 </table>
-  <table name="#HEALpercent"> 505.4 548.1 588.0 624.4 655.2 </table>
-  <table name="#HOTpercent"> 14.44 15.66 16.8 17.84 18.72 </table>  
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
-  <set name="itemConsumeCount" val="4"/>    
-  <set name="power" val="#HEALpercent"/>
+  <set name="itemConsumeCount" val="4"/>     
+  <set name="power" val="#power"/>
   <set name="hitTime" val="15000"/>
   <set name="reuseDelay" val="19000"/>
   <set name="skillTime" val="15000"/>
@@ -60,8 +51,5 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <for>
-   <effect count="15" name="HealOverTime" time="1" val="#HOTpercent" stackOrder="#HOTpercent" stackType="HpRecover"/>
-  </for>    
 </skill>
 </list>
