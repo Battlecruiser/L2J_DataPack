@@ -186,7 +186,8 @@
 <skill id="1217" levels="33" name="Greater Heal">
   <table name="#mpConsume_Init"> 12 12 13 13 13 14 15 15 16 16 16 17 18 18 18 19 19 20 20 20 20 21 21 21 22 22 23 23 23 23 24 24 24 </table>
   <table name="#mpConsume"> 46 48 49 51 52 54 57 59 61 64 64 66 69 71 72 74 76 77 78 78 80 81 83 84 86 87 89 90 91 92 93 95 96 </table>
-  <table name="#power"> 371.0 384.0 398.0 426.0 441.0 455.0 484.0 499.0 514.0 544.0 559.0 574.0 603.0 618.0 633.0 647.0 662.0 676.0 690.0 704.0 718.0 731.0 745.0 758.0 770.0 783.0 795.0 806.0 817.0 828.0 839.0 849.0 858.0 </table>
+  <table name="#power"> 204 212 219 235 243 251 267 275 283 299 307 316 332 340 348 356 364 372 380 387 395 402 410 417 424 431 437 444 450 456 462 467 472 </table>
+  <table name="#hotValue"> 15 15 15 18 18 18 18 23 23 23 23 23 23 23 27 27 27 27 27 27 27 27 31 31 31 31 31 31 31 31 31 35 35 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -199,7 +200,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <for>
-  </for>
+   <effect count="15" name="HealOverTime" time="1" val="#hotValue" stackOrder="#hotValue" stackType="HpRecover"/>
+  </for> 
 </skill>
 <skill id="1218" levels="33" name="Greater Battle Heal">
   <table name="#mpConsume_Init"> 18 18 19 19 20 21 22 22 23 24 25 25 26 27 27 28 29 29 30 30 30 31 31 32 32 33 34 34 34 35 35 36 36 </table>
@@ -222,7 +224,8 @@
 <skill id="1219" levels="33" name="Greater Group Heal">
   <table name="#mpConsume_Init"> 23 24 25 26 26 27 29 30 31 32 32 33 35 36 36 37 38 39 39 39 40 41 42 42 43 44 45 45 46 46 47 48 48 </table>
   <table name="#mpConsume"> 92 95 97 101 104 107 114 118 121 127 127 131 138 141 144 148 151 154 156 156 159 162 165 168 171 174 177 179 182 184 186 189 191 </table>
-  <table name="#power"> 297.0 308.0 319.0 341.0 353.0 364.0 388.0 399.0 411.0 435.0 447.0 459.0 483.0 495.0 506.0 518.0 529.0 541.0 552.0 563.0 574.0 585.0 596.0 606.0 616.0 626.0 636.0 645.0 654.0 663.0 671.0 679.0 687.0 </table>
+  <table name="#power"> 163 179 175 188 194 201 213 220 226 240 246 253 266 272 279 285 291 298 304 310 316 322 328 334 339 345 350 355 360 365 369 374 378 </table>
+  <table name="#hotValue"> 12 12 12 12 12 12 12 15 18 18 18 18 18 23 23 23 23 23 23 23 23 23 23 23 23 23 27 27 27 27 27 27 27 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -236,7 +239,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-  </for>
+   <effect count="15" name="HealOverTime" time="1" val="#hotValue" stackOrder="#hotValue" stackType="HpRecover"/>
+  </for> 
 </skill>
 <skill id="1220" levels="8" name="Blaze">
   <table name="#mpConsume_Init"> 4 4 5 5 5 6 6 6 </table>
