@@ -1,27 +1,54 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="400" levels="10" name="Tribunal">
-  <!-- Paladin & Temple Knight -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume"> 55 58 62 64 66 68 70 72 74 76</table>
+  <table name="#power"> 240.0 262.0 284.0 308.0 332.0 357.0 382.0 407.0 432.0 457.0</table>
+  <set name="weaponsAllowed" val="2060"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="element" val="5"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="overHit" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="10000"/>
+  <set name="castRange" val="40"/>
+  <set name="effectType" val="DEBUFF"/>
+  <set name="effectPower" val="40"/>
   <for>
+     <effect count="1" name="Buff" time="10" val="0">
+       <sub order="0x10" stat="accCombat" val="10"/>
+     </effect>
   </for>
 </skill>
 <skill id="401" levels="10" name="Judgment">
-  <!-- Dark Avenger & Shillien Knight -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume"> 55 58 62 64 66 68 70 72 74 76</table>
+  <table name="#power"> 306.0 349.0 379.0 410.0 443.0 457.0 509.0 542.0 576.0 609.0</table>
+  <set name="weaponsAllowed" val="2060"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="element" val="6"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="overHit" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="10000"/>
+  <set name="castRange" val="40"/>
+  <set name="effectType" val="DEBUFF"/>
+  <set name="effectPower" val="40"/>
   <for>
+     <effect count="1" name="Buff" time="10" val="0">
+       <mul order="0x30" stat="cAtk" val="0.5"/>
+     </effect>
   </for>
 </skill>
 <skill id="402" levels="10" name="Arrest">
-  <!-- Temple Knight, Shillien Knight, Swordsinger, Bladedancer -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
@@ -131,14 +158,28 @@
   </for>
 </skill>
 <skill id="413" levels="8" name="Rapid Fire">
-  <!-- Silver Ranger -->
+  <table name="#mpConsume"> 28 29 30 31 32 33 34 34 </table>
+  <table name="#atk"> 38 48 58 68 78 88 98 108 </table>
+  <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="skillTime" val="1500"/>
+  <set name="buffDuration" val="120000"/>
+  <cond msg="Bow required.">
+    <using kind="Bow"/>
+  </cond>
+  <for> 
+     <effect count="1" name="Buff" time="120" val="0"> 
+        <add order="0x40" stat="pAtk" val="#atk"><using kind="Bow"/></add>
+        <mul order="0x30" stat="pAtkSpd" val="1.20"><using kind="Bow"/></mul>
+        <sub order="0x40" stat="pAtkRange" val="300"><using kind="Bow"/></sub>
+     </effect> 
+   </for> 
 </skill>
 <skill id="414" levels="8" name="Dead Eye">
   <!-- Phantom Ranger -->
