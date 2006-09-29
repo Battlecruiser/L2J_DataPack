@@ -13438,4 +13438,10 @@ INSERT INTO `merchant_buylists` (`item_id`, `price`, `shop_id`, `order`) VALUES
 (8370,0,71030,41),
 (8371,0,71030,42),
 (8372,0,71030,43),
-(8554,0,71030,44);
+(8554,0,71030,44),
+(1074,1200,351,1), -- Firon - Boat Ticket: Talking Island to Gludin
+(3945,6000,351,2), -- Firon - Ship ticket: From Talking Island  To Giran
+(1075,6000,352,1), -- Clancy - Boat Ticket: Gludin to Talking Island
+(7905,6000,352,2), -- Clancy - Boat Ticket: Gludin to Rune
+(3946,6000,353,1), -- Felton - Ship ticket: From Giran To Talking Island
+(7904,6000,354,1); -- Volker - Boat Ticket: Rune to Gludin
