@@ -169,6 +169,10 @@ INSERT INTO merchant_shopids VALUES (5807,'8045');
 INSERT INTO merchant_shopids VALUES (5600,'7892');
 INSERT INTO merchant_shopids VALUES (5601,'7893');
 INSERT INTO merchant_shopids VALUES (5710,'8067');
+INSERT INTO merchant_shopids VALUES (351,'7047'); -- Firon - Talking Island
+INSERT INTO merchant_shopids VALUES (352,'7387'); -- Clancy - Gludin
+INSERT INTO merchant_shopids VALUES (353,'7879'); -- Felton - Giran
+INSERT INTO merchant_shopids VALUES (354,'8351'); -- Volker - Rune
 INSERT INTO merchant_shopids VALUES (123161,'12316');
 INSERT INTO merchant_shopids VALUES (123171,'12317');
 INSERT INTO merchant_shopids VALUES (123181,'12318');
