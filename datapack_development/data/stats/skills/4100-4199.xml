@@ -641,11 +641,21 @@
   </for>
 </skill>
 <skill id="4139" levels="12" name="Boom Attack">
-  <!-- NOT USED IN C4 -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#power"> 33.0 49.0 71.0 98.0 128.0 161.0 192.0 207.0 219.0 230.0 238 244.0 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+  <set name="mpConsume" val="0"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="200"/>
+  <set name="hitTime" val="6000"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillTime" val="6000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="isMagic" val="false"/>
+  <set name="isSuicideAttack" val="true"/>
+  <set name="element" val="2"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
@@ -682,11 +692,20 @@
   </for>
 </skill>
 <skill id="4143" levels="8" name="Treasure Bomb">
-  <!-- NOT USED IN C4 -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#power"> 2.0 4.0 8.0 15.0 23.0 35.0 48.0 63.0 </table>
+  <table name="#magicLvl"> 5 15 25 35 45 55 65 75 </table>
+  <set name="mpConsume" val="0"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="350"/>
+  <set name="hitTime" val="500"/>
+  <set name="reuseDelay" val="0"/>
+  <set name="skillTime" val="500"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="isMagic" val="false"/>
+  <set name="isSuicideAttack" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
