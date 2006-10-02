@@ -160,6 +160,7 @@ INSERT INTO merchant_shopids VALUES (145,'8366');
 INSERT INTO merchant_shopids VALUES (146,'8445');
 INSERT INTO merchant_shopids VALUES (147,'8386');
 INSERT INTO merchant_shopids VALUES (148,'8438');
+INSERT INTO merchant_shopids VALUES (149,'8413');
 INSERT INTO merchant_shopids VALUES (5800,'7890');
 INSERT INTO merchant_shopids VALUES (5801,'7890');
 INSERT INTO merchant_shopids VALUES (5802,'7891');
