@@ -89,21 +89,19 @@
 </skill>
 <!-- ID 7008 thru 7028 are not used. Check skillname.dat to verify -->
 <skill id="7029" levels="4" name="Super Haste">
-  <!-- Done by dc -->
-  <table name="#Tab-runSpd"> 2 3 3 3 </table>
-  <table name="#Tab-pAtk"> 1 1 1 1 </table>
-  <table name="#Tab-mAtkSpd"> 2 3 3 3 </table>
-  <table name="#Tab-pAtkSpd"> 2 3 3 3 </table>
+  <table name="#Tab-runSpd"> 1.5 2 3 4 </table>
+  <table name="#Tab-mReuse"> 1 2 4 30 </table>
+  <table name="#Tab-mAtkSpd"> 1.2 1.5 2 3 </table>
+  <table name="#Tab-pAtkSpd"> 1.2 1.5 2 3 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0">
+    <effect name="Buff" time="144000" count="1" val="0">
       <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
-      <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
+      <div order="0x50" stat="mReuse" val="#Tab-mReuse"/>
       <mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
     </effect>
