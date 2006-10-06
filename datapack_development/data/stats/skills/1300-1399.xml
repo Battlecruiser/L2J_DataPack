@@ -1290,8 +1290,8 @@
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-     <mul order="0x50" stat="pAtk" val="1.54"/>
-     <mul order="0x50" stat="pDef" val="1.48"/>
+     <mul order="0x30" stat="pAtk" val="1.54"/>
+     <mul order="0x30" stat="pDef" val="1.48"/>
    </effect>
   </for>  
 </skill>
@@ -1310,11 +1310,11 @@
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-     <div order="0x50" stat="mDef" val="1.23"/>
-     <div order="0x50" stat="pDef" val="1.2"/>
-     <div order="0x50" stat="sDef" val="1.4"/>
-     <sub order="0x50" stat="accCombat" val="19"/>
-     <add order="0x50" stat="cancel" val="65"/>
+     <div order="0x30" stat="mDef" val="1.23"/>
+     <div order="0x30" stat="pDef" val="1.2"/>
+     <div order="0x30" stat="sDef" val="1.4"/>
+     <sub order="0x40" stat="accCombat" val="19"/>
+     <add order="0x40" stat="cancel" val="65"/>
    </effect>
   </for>    
 </skill>
@@ -1333,7 +1333,7 @@
   <set name="isMagic" val="true"/>
   <for>
      <effect count="5" name="Fear" time="9" val="0">
-        <add order="0x50" stat="runSpd" val="64"/>
+        <add order="0x40" stat="runSpd" val="64"/>
      </effect>
   </for>  
 </skill>
@@ -1385,7 +1385,7 @@
   <set name="castRange" val="500"/>
   <set name="isMagic" val="true"/>
   <for>
-   <effect count="5" name="Fear" time="6" val="0"/>
+    <effect count="5" name="Fear" time="6" val="0"/>
   </for>  
 </skill>
 <skill id="1382" levels="5" name="Mass Gloom">
@@ -1404,7 +1404,7 @@
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
-      <div order="0x50" stat="mDef" val="#mDef"/>
+      <div order="0x30" stat="mDef" val="#mDef"/>
     </effect>
   </for>  
 </skill>
@@ -1423,10 +1423,10 @@
   <set name="castRange" val="900"/>
   <set name="isMagic" val="true"/>
   <for>
-     <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
-         <sub order="0x50" stat="fireRes" val="#fireRes"/>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
+      <sub order="0x40" stat="fireRes" val="#fireRes"/>
     </effect>
- </for>    
+  </for>    
 </skill>
 <skill id="1384" levels="5" name="Surrender to Water en masse">
 <!-- Done by KID -->
@@ -1443,10 +1443,10 @@
   <set name="castRange" val="900"/>
   <set name="isMagic" val="true"/>
   <for>
-     <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
-         <sub order="0x50" stat="waterRes" val="#waterRes"/>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
+      <sub order="0x40" stat="waterRes" val="#waterRes"/>
     </effect>
- </for>  
+  </for>  
 </skill>
 <skill id="1385" levels="5" name="Surrender to Wind en masse">
 <!-- Done by KID -->
@@ -1463,10 +1463,10 @@
   <set name="castRange" val="900"/>
   <set name="isMagic" val="true"/>
   <for>
-     <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
-         <sub order="0x50" stat="windRes" val="#windRes"/>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
+      <sub order="0x40" stat="windRes" val="#windRes"/>
     </effect>
- </for>    
+  </for>    
 </skill>
 <skill id="1386" levels="10" name="Arcane Distruption">
 <!-- Done by KID -->
@@ -1482,10 +1482,10 @@
   <set name="castRange" val="600"/>
   <set name="isMagic" val="true"/>
   <for>
-   <effect count="1" name="Buff" time="90" val="0">
-    <div order="0x50" stat="mAtkSpd" val="#mAtkSpd"/>
-   </effect>
- </for>  
+    <effect count="1" name="Buff" time="90" val="0">
+      <div order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
+    </effect>
+  </for>  
 </skill>
 <skill id="1387" levels="3" name="Summon Cursed Bones">
   <!-- Necromancer -->
@@ -1515,10 +1515,10 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <for>
-   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#pAtk" stackType="pAtk">
-    <mul order="0x50" stat="pAtk" val="#pAtk"/>
-   </effect>
- </for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#pAtk" stackType="pAtk">
+      <mul order="0x30" stat="pAtk" val="#pAtk"/>
+    </effect>
+  </for>
 </skill>
 <skill id="1389" levels="3" name="Greater Shield">
 <!-- Done by KID -->
@@ -1537,10 +1537,10 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <for>
-   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pDef">
-    <mul order="0x50" stat="pDef" val="#rate"/>
-   </effect>
- </for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pDef">
+      <mul order="0x30" stat="pDef" val="#rate"/>
+    </effect>
+  </for>
 </skill>
 <skill id="1390" levels="3" name="War Chant">
 <!-- Done by KID -->
@@ -1560,10 +1560,10 @@
   <set name="castRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <for>
-   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#pAtk" stackType="pAtk">
-    <mul order="0x50" stat="pAtk" val="#pAtk"/>
-   </effect>
- </for>  
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#pAtk" stackType="pAtk">
+      <mul order="0x30" stat="pAtk" val="#pAtk"/>
+    </effect>
+  </for>  
 </skill>
 <skill id="1391" levels="3" name="Earth Chant">
 <!-- Done by KID -->
@@ -1583,10 +1583,10 @@
   <set name="castRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <for>
-   <effect count="1" name="Buff" time="1200" val="0" stackOrder="#pDef" stackType="pDef">
-    <mul order="0x50" stat="pDef" val="#pDef"/>
-   </effect>
- </for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#pDef" stackType="pDef">
+      <mul order="0x30" stat="pDef" val="#pDef"/>
+    </effect>
+  </for>
 </skill>
 <skill id="1392" levels="3" name="Holy Resistance">
 <!-- Done by KID -->
@@ -1603,14 +1603,14 @@
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-       <add order="0x50" stat="holyRes" val="#holyRes"/>
+      <add order="0x40" stat="holyRes" val="#holyRes"/>
     </effect>
   </for>      
 </skill>
 <skill id="1393" levels="3" name="Unholy Resistance">
 <!-- Done by KID -->
   <table name="#mpConsume"> 54 62 69 </table>
-  <table name="#darkRes"> 1.3 1.37 1.45 </table>
+  <table name="#darkRes"> 30 50 70 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="7000"/>
@@ -1622,7 +1622,7 @@
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-       <mul order="0x50" stat="darkRes" val="#darkRes"/>
+      <add order="0x40" stat="darkRes" val="#darkRes"/>
     </effect>
   </for>    
 </skill>
