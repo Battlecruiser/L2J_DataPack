@@ -153,7 +153,7 @@ def check_eggs(st, npc) :
           return "420_"+npc+"_3.htm"
        else :
           st.takeItems(eggs,20)
-          st.takeItems(SCALE_3,1)
+#          st.takeItems(SCALE_3,1)
           return "420_"+npc+"_4.htm"
     elif npc == "suzet" and whom == 4 :
        if st.getQuestItemsCount(eggs) < 20 :
