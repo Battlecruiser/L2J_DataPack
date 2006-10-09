@@ -343,7 +343,7 @@ INSERT INTO teleport VALUES
 ('Giran -> Schuttgart',1058,87386,-143246,-1293,87000),
 ('Giran -> Aden',1059,146331,25762,-2018,13000),
 ('Giran -> Antharas Lair',1060,132828,114421,-3725,7000),
-('Giran -> Alligator Island',1061,109144,178712,-3347,5700),
+('Giran -> Devil Isle',1061,43101,204857,-3758,5700),
 ('Giran -> Brekas Stronghold',1062,79798,130624,-3677,1000),
 ('Heine -> Oren',1063,82956,53162,-1495,50000),
 ('Heine -> Aden',1064,146331,25762,-2018,59000),
