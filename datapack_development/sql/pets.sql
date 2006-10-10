@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS pets (
   _int decimal(11) ,
   men decimal(11) ,
   wit decimal(11) ,
-  exp decimal(11) ,
+  exp decimal(20, 0) ,
   sp decimal(11) ,
   karma decimal(11) ,
   pkkills decimal(11) ,

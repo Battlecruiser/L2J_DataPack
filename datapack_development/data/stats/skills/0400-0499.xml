@@ -49,23 +49,38 @@
   </for>
 </skill>
 <skill id="402" levels="10" name="Arrest">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<table name="#mpConsume"> 25 27 28 29 30 31 32 33 34 34 </table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="save" val="5"/>
+<set name="power" val="40"/>
+<set name="lvlDepend" val="2"/>
+<set name="target" val="TARGET_ONE"/>
+<set name="hitTime" val="2000"/>
+<set name="reuseDelay" val="16000"/>
+<set name="skillTime" val="2000"/>
+<set name="skillType" val="ROOT"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="buffDuration" val="8000"/>
+<set name="castRange" val="150"/>
+<for>
+   <effect count="1" name="Root" time="8" val="0" stackOrder="1" stackType="Root"/>
+</for>
 </skill>
 <skill id="403" levels="10" name="Shackle">
-  <!-- Paladin & Dark Avenger -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<table name="#mpConsume"> 25 27 28 29 30 31 32 33 34 34</table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="target" val="TARGET_ONE"/>
+<set name="power" val="100"/>
+<set name="hitTime" val="1000"/>
+<set name="reuseDelay" val="16000"/>
+<set name="skillTime" val="4000"/>
+<set name="skillType" val="ROOT"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="buffDuration" val="8000"/>
+<set name="castRange" val="600"/>
+<for>
+   <effect count="1" name="Root" time="8" val="0" stackOrder="1" stackType="Root"/>
+</for>
 </skill>
 <skill id="404" levels="5" name="Mass Shackling">
   <!-- Paladin -->
@@ -78,65 +93,151 @@
   </for>
 </skill>
 <skill id="405" levels="10" name="Banish Undead">
-  <!-- Paladin -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<table name="#mpConsume"> 50 53 55 58 59 61 63 65 67 68</table>
+<table name="#itemConsumeCount"> 5 6 7 7 8 8 9 9 10 10</table>
+<set name="itemConsumeId" val="1785"/>
+<set name="itemConsumeCount" val="#itemConsumeCount"/>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="power" val="0.0"/>
+<set name="hitTime" val="6000"/>
+<set name="reuseDelay" val="60000"/>
+<set name="skillTime" val="6000"/>
+<set name="target" val="TARGET_AREA_UNDEAD"/>
+<set name="skillRadius" val="230"/>
+<set name="skillType" val="FEAR"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="castRange" val="500"/>
+<set name="isMagic" val="true"/>
+<for>
+<effect count="5" name="Fear" time="6" val="0"/>
+</for>
 </skill>
 <skill id="406" levels="3" name="Angelic Icon">
-  <!-- Paladin -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<table name="#Tab-pAtkSpd"> 1.10 1.20 1.30</table>
+<table name="#Tab-runSpd"> 10 20 30 </table>
+<table name="#mpConsume"> 14 21 25 </table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="hitTime" val="1500"/>
+<set name="condition" val="32"/>
+<set name="reuseDelay" val="600000"/>
+<set name="skillTime" val="1500"/>
+<set name="skillType" val="BUFF"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="buffDuration" val="120000"/>
+<set name="castRange" val="-1"/>
+<cond>
+<player hp="30"/>
+</cond>
+<for>
+  <effect count="1" name="Buff" time="120" val="0">
+    <mul order="0x30" stat="mDef" val="1.5"/>
+    <mul order="0x30" stat="pDef" val="1.5"/>
+    <add order="0x10" stat="accCombat" val="6"/>
+    <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
+    <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+    <mul order="0x30" stat="regHp" val="0.2"/>
+    <add order="0x40" stat="rCrit" val="100"><using kind="Sword, Dual Sword"/></add>
+  </effect>
+</for>
 </skill>
 <skill id="407" levels="10" name="Psycho Symphony">
-  <!-- Swordsinger -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<table name="#mpConsume"> 83 88 92 95 98 101 105 108 111 113</table>
+<table name="#power"> 229.0 262.0 284.0 308.0 332.0 357.0 382.0 407.0 432.0 457.0</table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="power" val="#power"/>
+<set name="target" val="TARGET_AURA"/>
+<set name="skillRadius" val="150"/>
+<set name="hitTime" val="2000"/>
+<set name="reuseDelay" val="120000"/>
+<set name="skillTime" val="2000"/>
+<set name="skillType" val="DEBUFF"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="castRange" val="-1"/>
+<set name="buffDuration" val="30000"/>
+<for>
+  <effect count="1" name="Buff" time="30" val="0">
+     <mul order="0x30" stat="runSpd" val="0.5"/>
+     <mul order="0x30" stat="pAtkSpd" val="0.8"/>
+     <mul order="0x30" stat="mAtkSpd" val="0.8"/>
+  </effect> 
+</for> 
 </skill>
 <skill id="408" levels="10" name="Demonic Blade Dance">
-  <!-- Bladedancer -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<table name="#mpConsume"> 83 88 92 95 98 101 105 108 111 113</table>
+<table name="#power"> 229.0 262.0 284.0 308.0 332.0 357.0 382.0 407.0 432.0 457.0</table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="power" val="#power"/>
+<set name="target" val="TARGET_AURA"/>
+<set name="skillRadius" val="150"/>
+<set name="hitTime" val="2000"/>
+<set name="reuseDelay" val="120000"/>
+<set name="skillTime" val="2000"/>
+<set name="skillType" val="DEBUFF"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="castRange" val="-1"/>
+<set name="buffDuration" val="15000"/>
+<set name="weaponsAllowed" val="512"/>
+<for>
+  <effect count="1" name="Buff" time="15" val="0">
+     <mul order="0x30" stat="mAtk" val="0.65"/>
+     <mul order="0x30" stat="pAtk" val="0.65"/>
+  </effect>
+</for> 
 </skill>
 <skill id="409" levels="10" name="Critical Blow">
-  <!-- Treasure Hunter -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<table name="#mpConsume"> 55 59 62 63 66 68 70 72 74 76 </table>
+<table name="#power"> 1832.0 2091.0 2272.0 2460.0 2653.0 2850.0 3050.0 3252.0 3453.0 3653.0 </table>
+<set name="weaponsAllowed" val="16"/>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="power" val="#power"/>
+<set name="target" val="TARGET_ONE"/>
+<set name="hitTime" val="1080"/>
+<set name="condition" val="16"/>
+<set name="reuseDelay" val="90000"/>
+<set name="skillTime" val="1080"/>
+<set name="skillType" val="PDAM"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="castRange" val="40"/>
+<for>
+<add order="0x10" stat="rCrit" val="55">
+   <using kind="Dagger" skill="0409"/>
+</add>
+</for>
 </skill>
 <skill id="410" levels="3" name="Mortal Strike">
-  <!-- Plains Walker & Abyss Walker -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
+<table name="#mpConsume"> 27 31 34 </table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="skillType" val="BUFF"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="castRange" val="-1"/>
+<set name="reuseDelay" val="600000"/>
+<set name="skillTime" val="2000"/>
+<set name="hitTime" val="2000"/>
+<set name="buffDuration" val="120000"/>
+<for>
+  <effect count="1" name="Buff" time="120" val="0">
+    <add order="0x10" stat="rCrit" val="45">
+      <using kind="Dagger" skill="0263"/> 
+    </add> 
+    <add order="0x10" stat="rCrit" val="45"> 
+      <using kind="Dagger" skill="0409"/> 
+    </add> 
+    <add order="0x10" stat="rCrit" val="45"> 
+      <using kind="Dagger" skill="0016"/> 
+    </add> 
+    <add order="0x10" stat="rCrit" val="45"> 
+      <using kind="Dagger" skill="0321"/> 
+    </add> 
+    <add order="0x10" stat="rCrit" val="45"> 
+      <using kind="Dagger" skill="0344"/> 
+    </add> 
+  </effect> 
+</for> 
+</skill> 
 <skill id="411" levels="3" name="Stealth">
   <!-- Treasure Hunter -->
   <set name="power" val="0.0"/>
@@ -148,14 +249,24 @@
   </for>
 </skill>
 <skill id="412" levels="10" name="Sand Bomb">
-  <!-- Treasure Hunter, Plains Walker, Abyss Walker -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<table name="#mpConsume"> 25 27 28 29 30 31 32 33 34 34</table>
+<table name="#Tab-accCombat"> 1 2 3 4 5 6 7 8 9 10 </table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="save" val="5"/>
+<set name="power" val="80"/>
+<set name="target" val="TARGET_ONE"/>
+<set name="hitTime" val="1500"/>
+<set name="reuseDelay" val="8000"/>
+<set name="skillTime" val="1500"/>
+<set name="skillType" val="DEBUFF"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="buffDuration" val="30000"/>
+<set name="castRange" val="600"/>
+<for>
+   <effect count="1" name="Buff" time="30" val="0" stackOrder="#Tab-accCombat" stackType="accuracyDown">
+      <sub order="0x40" stat="accCombat" val="#Tab-accCombat"/> 
+   </effect> 
+</for> 
 </skill>
 <skill id="413" levels="8" name="Rapid Fire">
   <table name="#mpConsume"> 28 29 30 31 32 33 34 34 </table>
@@ -182,54 +293,94 @@
    </for> 
 </skill>
 <skill id="414" levels="8" name="Dead Eye">
-  <!-- Phantom Ranger -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<table name="#mpConsume"> 28 29 30 31 32 33 34 35 </table>
+<table name="#pAtk"> 110 119 129 138 148 158 167 177 </table>
+<table name="#Tab-cAtk"> 1.15 1.15 1.15 1.17 1.17 1.17 1.20 1.20 </table>
+<set name="weaponsAllowed" val="32"/>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="hitTime" val="1500"/>
+<set name="reuseDelay" val="240000"/>
+<set name="skillTime" val="1500"/>
+<set name="skillType" val="BUFF"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="buffDuration" val="120000"/>
+<set name="castRange" val="-1"/>
+<for>
+   <effect count="1" name="Buff" time="120" val="0">
+      <mul order="0x30" stat="pAtkSpd" val="0.8"><using kind="Bow"/></mul>
+      <add order="0x40" stat="pAtk" val="#pAtk"><using kind="Bow"/></add>
+      <add order="0x40" stat="accCombat" val="1"><using kind="Bow"/></add>
+      <mul order="0x30" stat="cAtk" val="#Tab-cAtk"><using kind="Bow"/></mul>
+   </effect>
+</for>
 </skill>
-<skill id="415" levels="3" name="Spirit of Sagittarius">
-  <!-- Hawkeye, Silver Ranger, Phantom Ranger -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<skill id="415" levels="3" name="Spirit of Sagittarius"> 
+<!-- Hawkeye, Silver Ranger, Phantom Ranger --> 
+<table name="#mpConsume"> 27 31 34 </table> 
+<table name="#MpConsumeRate"> 0.9 0.8 0.7 </table> 
+<set name="mpConsume" val="#mpConsume"/> 
+<set name="power" val="0.0"/> 
+<set name="target" val="TARGET_SELF"/> 
+<set name="hitTime" val="4000"/> 
+<set name="reuseDelay" val="300000"/> 
+<set name="skillTime" val="1500"/> 
+<set name="skillType" val="BUFF"/> 
+<set name="operateType" val="OP_ACTIVE"/> 
+<set name="buffDuration" val="600000"/> 
+<set name="castRange" val="-1"/> 
+<for> 
+<effect count="1" name="Buff" time="600" val="0"> 
+<mul order="0x30" stat="MpConsumeRate" val="0.7"/> 
+</effect> 
+</for> 
 </skill>
 <skill id="416" levels="3" name="Blessing of Sagittarius">
-  <!-- Hawkeye, Silver Ranger -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<table name="#mpConsume"> 27 31 34 </table>
+<table name="#mReuseRate"> 0.9 0.8 0.7 </table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="hitTime" val="4000"/>
+<set name="reuseDelay" val="300000"/>
+<set name="skillTime" val="1500"/>
+<set name="skillType" val="BUFF"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="buffDuration" val="1200000"/>
+<set name="castRange" val="-1"/>
+<for>
+   <effect count="1" name="Buff" time="1200" val="0">
+      <mul order="0x30" stat="mReuse" val="#mReuseRate"/>
+   </effect>
+</for>
 </skill>
 <skill id="417" levels="5" name="Pain of Sagittarius">
-  <!-- Hawkeye, Phantom Ranger -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<table name="#hpConsume"> 318 343 366 387 407</table>
+<table name="#power"> 35.0 38.0 41.0 43.0 45.0 </table>
+<set name="hpConsume" val="#hpConsume"/>
+<set name="power" val="#power"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="hitTime" val="4000"/>
+<set name="reuseDelay" val="20000"/>
+<set name="skillTime" val="4000"/>
+<set name="skillType" val="MANAHEAL"/>
+<set name="isMagic" val="true"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="castRange" val="-1"/>
+<for>
+</for>
 </skill>
 <skill id="418" levels="3" name="Quiver of Holding">
-  <!-- Hawkeye -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<table name="#rate"> 2 3 4 </table>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="skillType" val="BUFF"/>
+<set name="operateType" val="OP_PASSIVE"/>
+<set name="castRange" val="-1"/>
+<for>
+   <mul order="0x30" stat="maxLoad" val="#rate"/>
+</for>
 </skill>
 <skill id="419" levels="4" name="Summon Treasure Key">
   <!-- Treasure Hunter, Plains Walker, Abyss Walker -->
@@ -252,53 +403,94 @@
   </for>
 </skill>
 <skill id="421" levels="5" name="Fell Swoop">
-  <!-- Warlord -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<table name="#mpConsume"> 27 29 31 33 34 </table>
+<table name="#range"> 5 10 15 20 25 </table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="weaponsAllowed" val="64"/>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="skillType" val="BUFF"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="castRange" val="-1"/>
+<set name="hitTime" val="4000"/>
+<set name="reuseDelay" val="300000"/>
+<set name="skillTime" val="1500"/>
+<set name="buffDuration" val="60000"/>
+<for>
+   <effect count="1" name="Buff" time="60" val="0">
+   <add order="0x40" stat="pAtkRange" val="#range"/>
+</effect>
+</for>
 </skill>
-<skill id="422" levels="3" name="Polearm Accuracy">
-  <!-- Warlord, Destroyer, Bounty Hunter, Warsmith -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<skill id="422" levels="3" name="Polearm Accuracy"> 
+<table name="#mpConsume"> 11 13 14 </table>
+<table name="#Tab-accCombat"> 2 3 4 </table>
+<set name="weaponsAllowed" val="64"/>
+<set name="power" val="0.0"/>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="skillType" val="CONT"/>
+<set name="operateType" val="OP_TOGGLE"/>
+<set name="castRange" val="-1"/>
+<for>
+   <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume">
+      <add order="0x10" stat="accCombat" val="#Tab-accCombat"/>
+   </effect>
+</for>
 </skill>
 <skill id="423" levels="3" name="Infernal Form">
-  <!-- Destroyer, Tyrant -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<table name="#mpConsume"> 27 31 34 </table>
+<table name="#res"> 15 23 30 </table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="hitTime" val="4000"/>
+<set name="reuseDelay" val="6000"/>
+<set name="skillTime" val="4000"/>
+<set name="skillType" val="BUFF"/>
+<set name="isMagic" val="true"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="buffDuration" val="120000"/>
+<set name="castRange" val="-1"/>
+<for>
+<effect count="1" name="Buff" time="120" val="0" stackOrder="#res" stackType="MagicDefUpAtr">
+<add order="0x40" stat="fireRes" val="#res"/>
+</effect>
+</for>
 </skill>
 <skill id="424" levels="3" name="War Frenzy">
-  <!-- Gladiator, Warlord, Destroyer, Tyrant, Bounty Hunter, Warsmith -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<table name="#mpConsume"> 13 14 15 </table>
+<table name="#res"> 40 60 80 </table>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="skillType" val="CONT"/>
+<set name="operateType" val="OP_TOGGLE"/>
+<set name="castRange" val="-1"/>
+<for>
+   <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume">
+      <add order="0x40" stat="stunRes" val="#res"/>
+      <add order="0x40" stat="sleepRes" val="#res"/>
+   </effect>
+</for>
 </skill>
 <skill id="425" levels="1" name="Hawk Spirit Totem">
-  <!-- Tyrant -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<set name="mpConsume" val="34"/>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="weaponsAllowed" val="1024"/>
+<set name="hitTime" val="1500"/>
+<set name="reuseDelay" val="300000"/>
+<set name="skillTime" val="1500"/>
+<set name="skillType" val="BUFF"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="buffDuration" val="120000"/>
+<set name="castRange" val="-1"/>
+<for>
+  <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="possession">
+    <add order="0x10" stat="accCombat" val="6"/>
+    <add order="0x40" stat="rCrit" val="100"/>
+    <mul order="0x30" stat="cAtk" val="1.5"/>
+  </effect> 
+</for> 
 </skill>
 </list>

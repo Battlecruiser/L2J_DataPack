@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS characters (
   attack_speed_multiplier decimal(10,9) default NULL,
   colRad decimal(10,3) default NULL,
   colHeight decimal(10,3) default NULL, 
-  exp decimal(11,0) default NULL,
+  exp decimal(20,0) default NULL,
   sp decimal(11,0) default NULL,
   karma decimal(11,0) default NULL,
   pvpkills decimal(11,0) default NULL,
