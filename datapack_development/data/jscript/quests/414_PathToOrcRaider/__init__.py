@@ -5,13 +5,13 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #NPCs 
-KARUKIA = 7570 
-KASMAN  = 7501 
+KARUKIA = 30570 
+KASMAN  = 30501 
 
 #MOBS 
-GOBLIN_TOMB_RAIDER_LEADER = 320 
-KURUKA_RATMAN_LEADER      = 5045 
-UMBAR_ORC                 = 5054 
+GOBLIN_TOMB_RAIDER_LEADER = 20320 
+KURUKA_RATMAN_LEADER      = 27045 
+UMBAR_ORC                 = 27054 
  
 #ITEMS 
 GREEN_BLOOD           = 1578 
@@ -29,7 +29,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event 
-   if event == "7570-05.htm" : 
+   if event == "30570-05.htm" : 
      st.set("id","1") 
      st.set("cond","1") 
      st.setState(STARTED) 
@@ -55,22 +55,22 @@ class Quest (JQuest) :
  
    if npcId == KARUKIA and cond == 0 : 
      if playerLvl >= 19 and playerClassID == 0x2c and st.getQuestItemsCount(MARK_OF_RAIDER) == 0 and st.getQuestItemsCount(GOBLIN_DWELLING_MAP) == 0 : 
-       htmltext = "7570-01.htm" 
+       htmltext = "30570-01.htm" 
      elif playerClassID != 0x2c : 
        if playerClassID == 0x2d : 
-         htmltext = "7570-02a.htm" 
+         htmltext = "30570-02a.htm" 
        else: 
-         htmltext = "7570-03.htm" 
+         htmltext = "30570-03.htm" 
      elif playerLvl < 19 and playerClassID == 0x2c : 
-       htmltext = "7570-02.htm" 
+       htmltext = "30570-02.htm" 
      elif playerLvl >= 19 and playerClassID == 0x2c and st.getQuestItemsCount(MARK_OF_RAIDER) == 1 : 
-       htmltext = "7570-04.htm" 
+       htmltext = "30570-04.htm" 
      else: 
-       htmltext = "7570-02.htm" 
+       htmltext = "30570-02.htm" 
    elif npcId == KARUKIA and cond and st.getQuestItemsCount(GOBLIN_DWELLING_MAP) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH) < 10 : 
-     htmltext = "7570-06.htm" 
+     htmltext = "30570-06.htm" 
    elif npcId == KARUKIA and cond and st.getQuestItemsCount(GOBLIN_DWELLING_MAP) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH) >= 10 and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT) == 0 : 
-     htmltext = "7570-07.htm" 
+     htmltext = "30570-07.htm" 
      st.takeItems(KURUKA_RATMAN_TOOTH,-1) 
      st.takeItems(GOBLIN_DWELLING_MAP,-1) 
      st.giveItems(BETRAYER_UMBAR_REPORT,1) 
@@ -79,15 +79,15 @@ class Quest (JQuest) :
      st.set("cond","3") 
      st.playSound("ItemSound.quest_middle") 
    elif npcId == KARUKIA and cond and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT) and st.getQuestItemsCount(HEAD_OF_BETRAYER) < 2 : 
-     htmltext = "7570-08.htm" 
+     htmltext = "30570-08.htm" 
    elif npcId == KARUKIA and cond and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT) and st.getQuestItemsCount(HEAD_OF_BETRAYER) == 2 : 
-     htmltext = "7570-09.htm" 
+     htmltext = "30570-09.htm" 
    elif npcId == KASMAN and cond and st.getQuestItemsCount(BETRAYER_UMBAR_REPORT) and st.getQuestItemsCount(HEAD_OF_BETRAYER) == 0 : 
-     htmltext = "7501-01.htm" 
+     htmltext = "30501-01.htm" 
    elif npcId == KASMAN and cond and st.getQuestItemsCount(HEAD_OF_BETRAYER) > 0 and st.getQuestItemsCount(HEAD_OF_BETRAYER) < 2 : 
-     htmltext = "7501-02.htm" 
+     htmltext = "30501-02.htm" 
    elif npcId == KASMAN and cond and st.getQuestItemsCount(HEAD_OF_BETRAYER) == 2 : 
-     htmltext = "7501-03.htm" 
+     htmltext = "30501-03.htm" 
      st.takeItems(HEAD_OF_BETRAYER,-1) 
      st.takeItems(BETRAYER_UMBAR_REPORT,-1) 
      st.giveItems(MARK_OF_RAIDER,1) 
@@ -105,7 +105,7 @@ class Quest (JQuest) :
        if st.getQuestItemsCount(GREEN_BLOOD) > 20 : 
          if st.getRandom(100) < ((st.getQuestItemsCount(GREEN_BLOOD)-20)*5) : 
            st.takeItems(GREEN_BLOOD,-1) 
-           st.getPcSpawn().addSpawn(5045) 
+           st.getPcSpawn().addSpawn(KURUKA_RATMAN_LEADER) 
          else: 
            st.giveItems(GREEN_BLOOD,1) 
            st.playSound("ItemSound.quest_itemget") 

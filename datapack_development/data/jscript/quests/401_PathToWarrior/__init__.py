@@ -1,7 +1,6 @@
 # Maked by Mr. Have fun! Version 0.2
 # Updated by ElgarL
 
-print "importing quests: 401: Path To Warrior"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -26,21 +25,21 @@ class Quest (JQuest) :
           if st.getPlayer().getClassId().getId() == 0x00 :
             if st.getPlayer().getLevel() >= 19 :
               if st.getQuestItemsCount(MEDALLION_OF_WARRIOR_ID)>0 :
-                htmltext = "7010-04.htm"
+                htmltext = "30010-04.htm"
               else:
-                htmltext = "7010-05.htm"
+                htmltext = "30010-05.htm"
                 return htmltext
             else :
-              htmltext = "7010-02.htm"
+              htmltext = "30010-02.htm"
           else:
             if st.getPlayer().getClassId().getId() == 0x01 :
-              htmltext = "7010-02a.htm"
+              htmltext = "30010-02a.htm"
             else:
-              htmltext = "7010-03.htm"
+              htmltext = "30010-03.htm"
     elif event == "401_2" :
-          htmltext = "7010-10.htm"
+          htmltext = "30010-10.htm"
     elif event == "401_3" :
-            htmltext = "7010-11.htm"
+            htmltext = "30010-11.htm"
             st.takeItems(SIMPLONS_LETTER_ID,1)
             st.takeItems(RUSTED_BRONZE_SWORD2_ID,1)
             st.giveItems(RUSTED_BRONZE_SWORD3_ID,1)
@@ -52,9 +51,9 @@ class Quest (JQuest) :
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(EINS_LETTER_ID,1)
-        htmltext = "7010-06.htm"
-    elif event == "7253_1" :
-          htmltext = "7253-02.htm"
+        htmltext = "30010-06.htm"
+    elif event == "30253_1" :
+          htmltext = "30253-02.htm"
           st.takeItems(EINS_LETTER_ID,1)
           st.giveItems(WARRIOR_GUILD_MARK_ID,1)
           st.set("cond","2")
@@ -71,38 +70,38 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 7010 and int(st.get("cond"))==0 :
-      htmltext = "7010-01.htm"
-   elif npcId == 7010 and int(st.get("cond")) and st.getQuestItemsCount(EINS_LETTER_ID)>0 :
-      htmltext = "7010-07.htm"
-   elif npcId == 7010 and int(st.get("cond")) and st.getQuestItemsCount(WARRIOR_GUILD_MARK_ID)==1 :
-      htmltext = "7010-08.htm"
-   elif npcId == 7253 and int(st.get("cond")) and st.getQuestItemsCount(EINS_LETTER_ID) :
-      htmltext = "7253-01.htm"
-   elif npcId == 7253 and int(st.get("cond")) and st.getQuestItemsCount(WARRIOR_GUILD_MARK_ID) :
+   if npcId == 30010 and int(st.get("cond"))==0 :
+      htmltext = "30010-01.htm"
+   elif npcId == 30010 and int(st.get("cond")) and st.getQuestItemsCount(EINS_LETTER_ID)>0 :
+      htmltext = "30010-07.htm"
+   elif npcId == 30010 and int(st.get("cond")) and st.getQuestItemsCount(WARRIOR_GUILD_MARK_ID)==1 :
+      htmltext = "30010-08.htm"
+   elif npcId == 30253 and int(st.get("cond")) and st.getQuestItemsCount(EINS_LETTER_ID) :
+      htmltext = "30253-01.htm"
+   elif npcId == 30253 and int(st.get("cond")) and st.getQuestItemsCount(WARRIOR_GUILD_MARK_ID) :
       if st.getQuestItemsCount(RUSTED_BRONZE_SWORD1_ID)<1 :
-        htmltext = "7253-03.htm"
+        htmltext = "30253-03.htm"
       elif st.getQuestItemsCount(RUSTED_BRONZE_SWORD1_ID)<10 :
-        htmltext = "7253-04.htm"
+        htmltext = "30253-04.htm"
       elif st.getQuestItemsCount(RUSTED_BRONZE_SWORD1_ID) >= 10 :
         st.takeItems(WARRIOR_GUILD_MARK_ID,1)
         st.takeItems(RUSTED_BRONZE_SWORD1_ID,st.getQuestItemsCount(RUSTED_BRONZE_SWORD1_ID))
         st.giveItems(RUSTED_BRONZE_SWORD2_ID,1)
         st.giveItems(SIMPLONS_LETTER_ID,1)
         st.set("cond","4")
-        htmltext = "7253-05.htm"
-   elif npcId == 7253 and int(st.get("cond")) and st.getQuestItemsCount(SIMPLONS_LETTER_ID) :
-        htmltext = "7253-06.htm"
-   elif npcId == 7010 and int(st.get("cond")) and st.getQuestItemsCount(SIMPLONS_LETTER_ID) and st.getQuestItemsCount(RUSTED_BRONZE_SWORD2_ID) and st.getQuestItemsCount(WARRIOR_GUILD_MARK_ID)==0 and st.getQuestItemsCount(EINS_LETTER_ID)==0 :
-        htmltext = "7010-09.htm"
-   elif npcId == 7010 and int(st.get("cond")) and st.getQuestItemsCount(RUSTED_BRONZE_SWORD3_ID) and st.getQuestItemsCount(WARRIOR_GUILD_MARK_ID)==0 and st.getQuestItemsCount(EINS_LETTER_ID)==0 :
+        htmltext = "30253-05.htm"
+   elif npcId == 30253 and int(st.get("cond")) and st.getQuestItemsCount(SIMPLONS_LETTER_ID) :
+        htmltext = "30253-06.htm"
+   elif npcId == 30010 and int(st.get("cond")) and st.getQuestItemsCount(SIMPLONS_LETTER_ID) and st.getQuestItemsCount(RUSTED_BRONZE_SWORD2_ID) and st.getQuestItemsCount(WARRIOR_GUILD_MARK_ID)==0 and st.getQuestItemsCount(EINS_LETTER_ID)==0 :
+        htmltext = "30010-09.htm"
+   elif npcId == 30010 and int(st.get("cond")) and st.getQuestItemsCount(RUSTED_BRONZE_SWORD3_ID) and st.getQuestItemsCount(WARRIOR_GUILD_MARK_ID)==0 and st.getQuestItemsCount(EINS_LETTER_ID)==0 :
         if st.getQuestItemsCount(POISON_SPIDER_LEG2_ID)<20 :
-          htmltext = "7010-12.htm"
+          htmltext = "30010-12.htm"
         elif st.getQuestItemsCount(POISON_SPIDER_LEG2_ID)>19 :
           st.takeItems(POISON_SPIDER_LEG2_ID,st.getQuestItemsCount(POISON_SPIDER_LEG2_ID))
           st.takeItems(RUSTED_BRONZE_SWORD3_ID,1)
           st.giveItems(MEDALLION_OF_WARRIOR_ID,1)
-          htmltext = "7010-13.htm"
+          htmltext = "30010-13.htm"
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
@@ -111,7 +110,7 @@ class Quest (JQuest) :
  def onKill (self,npc,st):
 
    npcId = npc.getNpcId()
-   if npcId == 35 or npcId == 42 :
+   if npcId in [20035,20042] :
         st.set("id","0")
         if int(st.get("cond")) == 2 and st.getQuestItemsCount(RUSTED_BRONZE_SWORD1_ID)<10 :
           if st.getRandom(10)<4 :
@@ -121,7 +120,7 @@ class Quest (JQuest) :
               st.set("cond","3")
             else:
               st.playSound("ItemSound.quest_itemget")
-   elif npcId == 43 or npcId == 38 :
+   elif npcId in [20043,20038] :
       st.set("id","0")
       if int(st.get("cond")) and st.getQuestItemsCount(POISON_SPIDER_LEG2_ID)<20 and st.getQuestItemsCount(RUSTED_BRONZE_SWORD3_ID) == 1 and st.getItemEquipped(7) == RUSTED_BRONZE_SWORD3_ID:
         st.giveItems(POISON_SPIDER_LEG2_ID,1)
@@ -141,24 +140,25 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7010)
+QUEST.addStartNpc(30010)
 
-STARTING.addTalkId(7010)
+STARTING.addTalkId(30010)
 
-STARTED.addTalkId(7010)
-STARTED.addTalkId(7253)
+STARTED.addTalkId(30010)
+STARTED.addTalkId(30253)
 
-STARTED.addKillId(35)
-STARTED.addKillId(38)
-STARTED.addKillId(42)
-STARTED.addKillId(43)
+STARTED.addKillId(20035)
+STARTED.addKillId(20038)
+STARTED.addKillId(20042)
+STARTED.addKillId(20043)
 
-STARTED.addQuestDrop(7253,SIMPLONS_LETTER_ID,1)
-STARTED.addQuestDrop(7253,RUSTED_BRONZE_SWORD2_ID,1)
-STARTED.addQuestDrop(7010,EINS_LETTER_ID,1)
-STARTED.addQuestDrop(7253,WARRIOR_GUILD_MARK_ID,1)
-STARTED.addQuestDrop(35,RUSTED_BRONZE_SWORD1_ID,1)
-STARTED.addQuestDrop(42,RUSTED_BRONZE_SWORD1_ID,1)
-STARTED.addQuestDrop(43,POISON_SPIDER_LEG2_ID,1)
-STARTED.addQuestDrop(38,POISON_SPIDER_LEG2_ID,1)
-STARTED.addQuestDrop(7010,RUSTED_BRONZE_SWORD3_ID,1)
+STARTED.addQuestDrop(30253,SIMPLONS_LETTER_ID,1)
+STARTED.addQuestDrop(30253,RUSTED_BRONZE_SWORD2_ID,1)
+STARTED.addQuestDrop(30010,EINS_LETTER_ID,1)
+STARTED.addQuestDrop(30253,WARRIOR_GUILD_MARK_ID,1)
+STARTED.addQuestDrop(20035,RUSTED_BRONZE_SWORD1_ID,1)
+STARTED.addQuestDrop(20042,RUSTED_BRONZE_SWORD1_ID,1)
+STARTED.addQuestDrop(20043,POISON_SPIDER_LEG2_ID,1)
+STARTED.addQuestDrop(20038,POISON_SPIDER_LEG2_ID,1)
+STARTED.addQuestDrop(30010,RUSTED_BRONZE_SWORD3_ID,1)
+print "importing quests: 401: Path To Warrior"
