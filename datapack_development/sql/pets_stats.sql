@@ -6,7 +6,7 @@ CREATE TABLE `pets_stats` (
   `type` varchar(25) NOT NULL default '',
   `typeID` int(5) NOT NULL default '0',
   `level` int(11) NOT NULL default '0',
-  `expMax` int(11) NOT NULL default '0',
+  `expMax` int(20) NOT NULL default '0',
   `hpMax` int(11) NOT NULL default '0',
   `mpMax` int(11) NOT NULL default '0',
   `patk` int(11) NOT NULL default '0',
