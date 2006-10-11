@@ -43,28 +43,28 @@ KIRUNAS_THIGH_BONE_ID = 2909
 INSECT_DIAGRAM_BOOK_ID = 2904
 VIVIANTES_LETTER_ID = 2903
 
-NPC=[7030,7436,7507,7510,7515,7630,7649,7682]
+NPC=[30030,30436,30507,30510,30515,30630,30649,30682]
 
 STATS=["cond","step","Orim","Racoy","Perkiron","Manakia","Manakia_Queen"]
 
 
 #npcId=[[accepted values for this part],variable for the current part from the mob,maxcount,chance in %, items to give(one per kill max)]
 DROPLIST={
-213: [[2,3,4],"Orim",10,100,[PORTAS_EYE_ID]],
-214: [[2,3,4],"Orim",10,100,[EXCUROS_SCALE_ID]],
-215: [[2,3,4],"Orim",10,100,[MORDEOS_TALON_ID]],
-601: [[1],"step",13,50,[TAMLIN_ORC_HEAD_ID]],
-602: [[1],"step",13,50,[TAMLIN_ORC_HEAD_ID]],
-5108:[[2],"Manakia_Queen",1,100,[HERMODTS_SKULL_ID]],
-581: [[2,3,4,5,6],"Perkiron",1,50,[TONARS_RIB_BONE_ID,TONARS_SPINE_ID,TONARS_ARM_BONE_ID,TONARS_SKULL_ID,TONARS_THIGH_BONE_ID]],
-582: [[2,3,4,5,6],"Perkiron",1,50,[TONARS_SKULL_ID,TONARS_ARM_BONE_ID,TONARS_RIB_BONE_ID,TONARS_SPINE_ID,TONARS_THIGH_BONE_ID]],
-158: [[2,3,4,5],"Manakia",1,50,[HERMODTS_RIB_BONE_ID,HERMODTS_SPINE_ID,HERMODTS_ARM_BONE_ID,HERMODTS_THIGH_BONE_ID]],
-89:  [[4,5,6,7,8,9],"Racoy",1,100,[[KIRUNAS_THIGH_BONE_ID,KIRUNAS_ARM_BONE_ID],[KIRUNAS_SPINE_ID,KIRUNAS_RIB_BONE_ID],[KIRUNAS_SKULL_ID]]],
-90:  [[4,5,6,7,8,9],"Racoy",1,100,[[KIRUNAS_THIGH_BONE_ID,KIRUNAS_ARM_BONE_ID],[KIRUNAS_SPINE_ID,KIRUNAS_RIB_BONE_ID],[KIRUNAS_SKULL_ID]]]
+20213:[[2,3,4],"Orim",10,100,[PORTAS_EYE_ID]],
+20214:[[2,3,4],"Orim",10,100,[EXCUROS_SCALE_ID]],
+20215:[[2,3,4],"Orim",10,100,[MORDEOS_TALON_ID]],
+20601:[[1],"step",13,50,[TAMLIN_ORC_HEAD_ID]],
+20602:[[1],"step",13,50,[TAMLIN_ORC_HEAD_ID]],
+27108:[[2],"Manakia_Queen",1,100,[HERMODTS_SKULL_ID]],
+20581:[[2,3,4,5,6],"Perkiron",1,50,[TONARS_RIB_BONE_ID,TONARS_SPINE_ID,TONARS_ARM_BONE_ID,TONARS_SKULL_ID,TONARS_THIGH_BONE_ID]],
+20582:[[2,3,4,5,6],"Perkiron",1,50,[TONARS_SKULL_ID,TONARS_ARM_BONE_ID,TONARS_RIB_BONE_ID,TONARS_SPINE_ID,TONARS_THIGH_BONE_ID]],
+20158:[[2,3,4,5],"Manakia",1,50,[HERMODTS_RIB_BONE_ID,HERMODTS_SPINE_ID,HERMODTS_ARM_BONE_ID,HERMODTS_THIGH_BONE_ID]],
+20089:[[4,5,6,7,8,9],"Racoy",1,100,[[KIRUNAS_THIGH_BONE_ID,KIRUNAS_ARM_BONE_ID],[KIRUNAS_SPINE_ID,KIRUNAS_RIB_BONE_ID],[KIRUNAS_SKULL_ID]]],
+20090:[[4,5,6,7,8,9],"Racoy",1,100,[[KIRUNAS_THIGH_BONE_ID,KIRUNAS_ARM_BONE_ID],[KIRUNAS_SPINE_ID,KIRUNAS_RIB_BONE_ID],[KIRUNAS_SKULL_ID]]]
 }
 
 # Mob List initialisation for the different Parts
-PART2_MOBS = [601,602]
+PART2_MOBS = [20601,20602]
 PART1_MOBS = []
 
 for mob in DROPLIST.keys():
@@ -80,43 +80,43 @@ class Quest (JQuest) :
 	def onEvent (self,event,st) :
 		htmltext = event
 		if event == "1" :
-			htmltext = "7510-05.htm"
+			htmltext = "30510-05.htm"
 			for var in STATS:
 				st.set(var,"1")
 			st.setState(PART1)
 			st.playSound("ItemSound.quest_accept")
-		elif event == "7630_1" :
-			htmltext = "7630-02.htm"
-		elif event == "7630_2" :
-			htmltext = "7630-03.htm"
-		elif event == "7630_3" :
-			htmltext = "7630-04.htm"
+		elif event == "30630_1" :
+			htmltext = "30630-02.htm"
+		elif event == "30630_2" :
+			htmltext = "30630-03.htm"
+		elif event == "30630_3" :
+			htmltext = "30630-04.htm"
 			st.giveItems(ORIMS_CONTRACT_ID,1)
 			st.set("Orim","2")
-		elif event == "7682_1" :
-			htmltext = "7682-02.htm"
+		elif event == "30682_1" :
+			htmltext = "30682-02.htm"
 			st.giveItems(PEKIRONS_TOTEM_ID,1)
 			st.set("Perkiron","2")
-		elif event == "7515_1" :
-			htmltext = "7515-02.htm"
+		elif event == "30515_1" :
+			htmltext = "30515-02.htm"
 			st.giveItems(MANAKIAS_TOTEM_ID,1)
 			st.set("Manakia","2")
 			st.set("Manakia_Queen","2")
-		elif event == "7507_1" :
-			htmltext = "7507-02.htm"
+		elif event == "30507_1" :
+			htmltext = "30507-02.htm"
 			st.giveItems(RACOYS_TOTEM_ID,1)
 			st.set("Racoy","2")
-		elif event == "7030_1" :
-			htmltext = "7030-02.htm"
-		elif event == "7030_2" :
-			htmltext = "7030-03.htm"
-		elif event == "7030_3" :
-			htmltext = "7030-04.htm"
+		elif event == "30030_1" :
+			htmltext = "30030-02.htm"
+		elif event == "30030_2" :
+			htmltext = "30030-03.htm"
+		elif event == "30030_3" :
+			htmltext = "30030-04.htm"
 			st.giveItems(VIVIANTES_LETTER_ID,1)
 			st.set("Racoy","3")
-		elif event == "7649_1" :
-			htmltext = "7649-02.htm"
-		elif event == "7649_2" :
+		elif event == "30649_1" :
+			htmltext = "30649-02.htm"
+		elif event == "30649_2" :
 			st.takeItems(WARSPIRIT_TOTEM_ID,-1)
 			st.takeItems(BRAKIS_REMAINS2_ID,-1)
 			st.takeItems(HERMODTS_REMAINS2_ID,-1)
@@ -124,7 +124,7 @@ class Quest (JQuest) :
 			st.addExpAndSp(63483,17500)
 			st.takeItems(TONARS_REMAINS2_ID,-1)
 			st.giveItems(MARK_OF_WARSPIRIT_ID,1)
-			htmltext = "7649-03.htm"
+			htmltext = "30649-03.htm"
 			for var in STATS:
 				st.unset(var)
 			st.setState(COMPLETED)
@@ -143,15 +143,15 @@ class Quest (JQuest) :
 				st.set(var,"0")
 			if st.getPlayer().getClassId().getId() == 0x32:
 				if st.getPlayer().getLevel() > 38:
-					htmltext = "7510-04.htm"
+					htmltext = "30510-04.htm"
 				else :
-					htmltext = "7510-03.htm"
+					htmltext = "30510-03.htm"
 					st.exitQuest(1)
 			elif st.getPlayer().getRace().ordinal() == 3:
-				htmltext = "7510-02.htm"
+				htmltext = "30510-02.htm"
 				st.exitQuest(1)
 			else:
-				htmltext = "7510-01.htm"
+				htmltext = "30510-01.htm"
 				st.exitQuest(1)
 			return htmltext
 		# if quest is already completed
@@ -167,7 +167,7 @@ class Quest (JQuest) :
 				#Somak 
 				if npcId == NPC[3]:
 					if Orim == 6 and Racoy == 11 and Perkiron == 8 and Manakia == 7:  				# Step 1 finished
-						htmltext = "7510-07.htm"
+						htmltext = "30510-07.htm"
 						st.takeItems(BRAKIS_REMAINS1_ID,1)
 						st.takeItems(HERMODTS_REMAINS1_ID,1)
 						st.takeItems(KIRUNAS_REMAINS1_ID,1)
@@ -175,15 +175,15 @@ class Quest (JQuest) :
 						st.giveItems(VENDETTA_TOTEM_ID,1)
 						st.setState(PART2)
 					else:																				# shows you again his List
-						htmltext = "7510-06.htm"
+						htmltext = "30510-06.htm"
 				# Orim and his Part, he sends you out to hunt Portas, Mordeos and Excuros
 				elif npcId == NPC[5]:
 					if Orim == 1:
-						htmltext = "7630-01.htm"
+						htmltext = "30630-01.htm"
 					elif Orim in [2,3,4]:
-						htmltext = "7630-05.htm"
+						htmltext = "30630-05.htm"
 					elif Orim == 5:
-						htmltext = "7630-06.htm"
+						htmltext = "30630-06.htm"
 						st.takeItems(ORIMS_CONTRACT_ID,-1)
 						st.takeItems(PORTAS_EYE_ID,-1)
 						st.takeItems(EXCUROS_SCALE_ID,-1)
@@ -191,19 +191,19 @@ class Quest (JQuest) :
 						st.giveItems(BRAKIS_REMAINS1_ID,1)
 						st.set("Orim","6")
 					else:
-						htmltext = "7630-07.htm"
+						htmltext = "30630-07.htm"
 				# Racyos Part he sends you into the church and then to the wastelands... after wastelands he give you his item			
 				elif npcId == NPC[2]:
 					if Racoy == 1:
-						htmltext = "7507-01.htm"
+						htmltext = "30507-01.htm"
 					elif Racoy == 2:
-						htmltext = "7507-03.htm"
+						htmltext = "30507-03.htm"
 					elif Racoy == 3:
-						htmltext = "7507-04.htm"
+						htmltext = "30507-04.htm"
 					elif 10 > Racoy > 3:
-						htmltext = "7507-05.htm"
+						htmltext = "30507-05.htm"
 					elif Racoy == 10:
-						htmltext = "7507-06.htm"
+						htmltext = "30507-06.htm"
 						st.takeItems(RACOYS_TOTEM_ID,-1)
 						st.takeItems(KIRUNAS_SKULL_ID,-1)
 						st.takeItems(KIRUNAS_RIB_BONE_ID,-1)
@@ -214,36 +214,36 @@ class Quest (JQuest) :
 						st.giveItems(KIRUNAS_REMAINS1_ID,1)
 						st.set("Racoy","11")
 					else:
-						htmltext = "7507-07.htm"
+						htmltext = "30507-07.htm"
 				# Racoy Part, lady in the church (Viviana)
 				elif npcId == NPC[0]:
 					if Racoy == 2:								# explainations
-						htmltext = "7030-01.htm"
+						htmltext = "30030-01.htm"
 					elif Racoy == 3:							# go to sarien, hurry up
-						htmltext = "7030-05.htm"
+						htmltext = "30030-05.htm"
 					elif 10 > Racoy > 3: 						# bring more
-						htmltext = "7030-06.htm"
+						htmltext = "30030-06.htm"
 					elif Racoy in [10,11]: 					# this part is finished, for this npc
-						htmltext = "7030-07.htm"
+						htmltext = "30030-07.htm"
 				# Racoy Part, Wastelands Trader Sarien tells: "Hunt noble ant leaders and bring the items to Racoy"
 				elif npcId == NPC[1]:
 					if Racoy == 3:								# explanation about hunting noble ants
-						htmltext = "7436-01.htm"
+						htmltext = "30436-01.htm"
 						st.giveItems(INSECT_DIAGRAM_BOOK_ID,1)
 						st.takeItems(VIVIANTES_LETTER_ID,1)
 						st.set("Racoy","4")
 					elif 10 > Racoy > 3: 						# bring more
-						htmltext = "7436-02.htm"
+						htmltext = "30436-02.htm"
 					elif Racoy in [10,11]: 					# this part is finished, for this npc
-						htmltext = "7436-03.htm"
+						htmltext = "30436-03.htm"
 				# Perkirons Part, just hunt Lizzardsman near Oren		
 				elif npcId == NPC[7]:
 					if Perkiron == 1:							# explanation
-						htmltext = "7682-01.htm"
+						htmltext = "30682-01.htm"
 					elif Perkiron in [2,3,4,5,6]:				# bring more
-						htmltext = "7682-03.htm"
+						htmltext = "30682-03.htm"
 					elif Perkiron == 7:						# ah you got anything i need
-						htmltext = "7682-04.htm"
+						htmltext = "30682-04.htm"
 						st.takeItems(PEKIRONS_TOTEM_ID,1)
 						st.takeItems(TONARS_SKULL_ID,1)
 						st.takeItems(TONARS_RIB_BONE_ID,1)
@@ -253,15 +253,15 @@ class Quest (JQuest) :
 						st.giveItems(TONARS_REMAINS1_ID,1)
 						st.set("Perkiron","8")
 					else:										# part is finished for this npc
-						htmltext = "7682-05.htm"
+						htmltext = "30682-05.htm"
 				# Manakias Part, hunt Medusas Steona Gorgogon Queen
 				elif npcId == NPC[4]:
 						if Manakia == 1:														# explanation
-							htmltext = "7515-01.htm"
+							htmltext = "30515-01.htm"
 						elif Manakia == 7:														# this part is finished for this npc
-							htmltext = "7515-05.htm"
+							htmltext = "30515-05.htm"
 						elif Manakia == 6 and int(st.get("Manakia_Queen"))==3:				# ah you got both items i need
-							htmltext = "7515-04.htm"
+							htmltext = "30515-04.htm"
 							st.takeItems(MANAKIAS_TOTEM_ID,1)
 							st.takeItems(HERMODTS_SKULL_ID,1)
 							st.takeItems(HERMODTS_RIB_BONE_ID,1)
@@ -271,14 +271,14 @@ class Quest (JQuest) :
 							st.giveItems(HERMODTS_REMAINS1_ID,1)
 							st.set("Manakia","7")	
 						else:																	# bring me more, because two vars are required , Manakia and Manakia_Queen
-							htmltext = "7515-03.htm"
+							htmltext = "30515-03.htm"
 		elif id == PART2:
 				step=int(st.get("step"))
 				if npcId == NPC[3]:																
 					if step == 1:																# explain Part 2 again or bring more skulls
-						htmltext = "7510-08.htm"
+						htmltext = "30510-08.htm"
 					elif step == 2:																# ah you got the items i need
-						htmltext = "7510-09.htm"
+						htmltext = "30510-09.htm"
 						st.takeItems(VENDETTA_TOTEM_ID,1)
 						st.takeItems(TAMLIN_ORC_HEAD_ID,st.getQuestItemsCount(TAMLIN_ORC_HEAD_ID))
 						st.giveItems(WARSPIRIT_TOTEM_ID,1)
@@ -288,9 +288,9 @@ class Quest (JQuest) :
 						st.giveItems(TONARS_REMAINS2_ID,1)
 						st.set("step","3")
 					else:															# this part is finished for this npc
-						htmltext = "7510-10.htm"
+						htmltext = "30510-10.htm"
 				elif npcId == NPC[6] and step == 3:
-					htmltext = "7649-01.htm"										# ah thx.. i will give you the mark of War Spirit
+					htmltext = "30649-01.htm"										# ah thx.. i will give you the mark of War Spirit
 		return htmltext		
 				
 	def onKill (self,npc,st):
@@ -302,7 +302,7 @@ class Quest (JQuest) :
 		isValue = int(st.get(var))
 		if int(st.get(var)) in value and random<chance:
 			# special part for Noble Ants
-			if npcId in [89,90]:
+			if npcId in [20089,20090]:
 				if random>70:
 					list=0
 				elif random>40:
@@ -329,9 +329,9 @@ class Quest (JQuest) :
 					if count<maxcount:
 						st.giveItems(item,1)
 						# spawns 5 new medusas around the dead queen *muha*
-						if npcId == 5108:
+						if npcId == 27108:
 							for i in range(5):
-								st.getPcSpawn().addSpawn(158)
+								st.getPcSpawn().addSpawn(20158)
 						if count == maxcount-1:
 							st.playSound("ItemSound.quest_middle")
 							st.set(var,str(isValue+1))
@@ -350,9 +350,10 @@ COMPLETED	= State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7510)
+QUEST.addStartNpc(30510)
 
-CREATED.addTalkId(7510)
+CREATED.addTalkId(30510)
+COMPLETED.addTalkId(30510)
 
 for npcId in NPC:
 	PART1.addTalkId(npcId)
@@ -363,5 +364,8 @@ for mobId in PART1_MOBS:
 	
 for mobId in PART2_MOBS:
 	PART2.addKillId(mobId)
+
+for item in range(2880,2915):
+	PART2.addQuestDrop(30510,item,1)
 
 print "importing quests: 233: Test Of Warspirit"

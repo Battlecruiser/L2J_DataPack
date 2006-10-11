@@ -32,7 +32,7 @@ CRYSTAL_OF_DEFEAT6_ID,     CRYSTAL_OF_VICTORY6_ID = range(3337,3390)
 # Lists and other Info-Stores
 
 # any npcIds
-NPC = [7063]+range(7634,7641)
+NPC = [30063]+range(30634,30641)
 
 # all stats
 STATS = ["cond","step","Lara_Part","Arcanas","Beginner_Arcanas","Belthus","Brynthea","Celestiel","Camoniell","Basilla","Almors"]
@@ -40,28 +40,28 @@ STATS = ["cond","step","Lara_Part","Arcanas","Beginner_Arcanas","Belthus","Brynt
 # This stores any drop for Laras Parts, datas including mob npcs
 # DROPLIST = [LaraPart,maxcount,chance,item]
 DROPLIST_LARA = {
-555: ["Lara_Part",1,80,SAC_OF_REDSPORES_ID],    # List 1
-557: ["Lara_Part",1,25,LETOLIZARDMAN_AMULET_ID],
-558: ["Lara_Part",1,25,LETOLIZARDMAN_AMULET_ID],
-557: ["Lara_Part",1,25,LETOLIZARDMAN_AMULET_ID],
-559: ["Lara_Part",1,25,LETOLIZARDMAN_AMULET_ID],
-580: ["Lara_Part",1,50,LETOLIZARDMAN_AMULET_ID],
-581: ["Lara_Part",1,75,LETOLIZARDMAN_AMULET_ID],
-582: ["Lara_Part",1,75,LETOLIZARDMAN_AMULET_ID],
-600: ["Lara_Part",2,80,KARULBUGBEAR_TOTEM_ID],  # List 2
-563: ["Lara_Part",2,80,SHARDS_OF_MANASHEN_ID],
-552: ["Lara_Part",3,60,CRIMSON_BLOODSTONE_ID],  # List 3
-267: ["Lara_Part",3,25,BREKAORC_TOTEM_ID],
-268: ["Lara_Part",3,25,BREKAORC_TOTEM_ID],
-271: ["Lara_Part",3,25,BREKAORC_TOTEM_ID],
-269: ["Lara_Part",3,50,BREKAORC_TOTEM_ID],
-270: ["Lara_Part",3,50,BREKAORC_TOTEM_ID],
-553: ["Lara_Part",4,70,TUSK_OF_WINDSUS_ID],     # List 4
-192: ["Lara_Part",4,50,TALONS_OF_TYRANT_ID],
-193: ["Lara_Part",4,50,TALONS_OF_TYRANT_ID],
-89:  ["Lara_Part",5,30,WINGS_OF_DRONEANT_ID],   # List 5
-90:  ["Lara_Part",5,60,WINGS_OF_DRONEANT_ID],
-176: ["Lara_Part",5,50,FANGS_OF_WYRM_ID]
+20555: ["Lara_Part",1,80,SAC_OF_REDSPORES_ID],    # List 1
+20557: ["Lara_Part",1,25,LETOLIZARDMAN_AMULET_ID],
+20558: ["Lara_Part",1,25,LETOLIZARDMAN_AMULET_ID],
+20557: ["Lara_Part",1,25,LETOLIZARDMAN_AMULET_ID],
+20559: ["Lara_Part",1,25,LETOLIZARDMAN_AMULET_ID],
+20580: ["Lara_Part",1,50,LETOLIZARDMAN_AMULET_ID],
+20581: ["Lara_Part",1,75,LETOLIZARDMAN_AMULET_ID],
+20582: ["Lara_Part",1,75,LETOLIZARDMAN_AMULET_ID],
+20600: ["Lara_Part",2,80,KARULBUGBEAR_TOTEM_ID],  # List 2
+20563: ["Lara_Part",2,80,SHARDS_OF_MANASHEN_ID],
+20552: ["Lara_Part",3,60,CRIMSON_BLOODSTONE_ID],  # List 3
+20267: ["Lara_Part",3,25,BREKAORC_TOTEM_ID],
+20268: ["Lara_Part",3,25,BREKAORC_TOTEM_ID],
+20271: ["Lara_Part",3,25,BREKAORC_TOTEM_ID],
+20269: ["Lara_Part",3,50,BREKAORC_TOTEM_ID],
+20270: ["Lara_Part",3,50,BREKAORC_TOTEM_ID],
+20553: ["Lara_Part",4,70,TUSK_OF_WINDSUS_ID],     # List 4
+20192: ["Lara_Part",4,50,TALONS_OF_TYRANT_ID],
+20193: ["Lara_Part",4,50,TALONS_OF_TYRANT_ID],
+20089: ["Lara_Part",5,30,WINGS_OF_DRONEANT_ID],   # List 5
+20090: ["Lara_Part",5,60,WINGS_OF_DRONEANT_ID],
+20176: ["Lara_Part",5,50,FANGS_OF_WYRM_ID]
 }
 
 # This stores datas like required Items for lists and the random choice part
@@ -76,22 +76,22 @@ LISTS = {
 
 # This stores all datas which are required for the Summoners in onTalk Part
 SUMMONERS = {
-7635: ["Almors",   ALMORS_ARCANA_ID,CRYSTAL_OF_VICTORY1_ID],   # Almors
-7636: ["Camoniell",CAMONIELL_ARCANA_ID,CRYSTAL_OF_VICTORY2_ID],# Camoniell
-7637: ["Belthus",  BELTHUS_ARCANA_ID,CRYSTAL_OF_VICTORY3_ID],  # Belthus
-7638: ["Basilla",  BASILLIA_ARCANA_ID,CRYSTAL_OF_VICTORY4_ID], # Basilla
-7639: ["Celestiel",CELESTIEL_ARCANA_ID,CRYSTAL_OF_VICTORY5_ID],# Celestiel
-7640: ["Brynthea", BRYNTHEA_ARCANA_ID,CRYSTAL_OF_VICTORY6_ID]  # Brynthea
+30635: ["Almors",   ALMORS_ARCANA_ID,CRYSTAL_OF_VICTORY1_ID],   # Almors
+30636: ["Camoniell",CAMONIELL_ARCANA_ID,CRYSTAL_OF_VICTORY2_ID],# Camoniell
+30637: ["Belthus",  BELTHUS_ARCANA_ID,CRYSTAL_OF_VICTORY3_ID],  # Belthus
+30638: ["Basilla",  BASILLIA_ARCANA_ID,CRYSTAL_OF_VICTORY4_ID], # Basilla
+30639: ["Celestiel",CELESTIEL_ARCANA_ID,CRYSTAL_OF_VICTORY5_ID],# Celestiel
+30640: ["Brynthea", BRYNTHEA_ARCANA_ID,CRYSTAL_OF_VICTORY6_ID]  # Brynthea
 }
 
 # This stores all datas for Summonkills/drops which are required in the onKill, onAttack and onDeath part
 DROPLIST_SUMMON = {
-5102: ["Almors",   CRYSTAL_OF_PROGRESS1_ID,CRYSTAL_OF_INPROGRESS1_ID,CRYSTAL_OF_FOUL1_ID,CRYSTAL_OF_DEFEAT1_ID,CRYSTAL_OF_VICTORY1_ID], # Pako the Cat
-5103: ["Camoniell",CRYSTAL_OF_PROGRESS2_ID,CRYSTAL_OF_INPROGRESS2_ID,CRYSTAL_OF_FOUL2_ID,CRYSTAL_OF_DEFEAT2_ID,CRYSTAL_OF_VICTORY2_ID], # Mimi the Cat
-5104: ["Belthus",  CRYSTAL_OF_PROGRESS3_ID,CRYSTAL_OF_INPROGRESS3_ID,CRYSTAL_OF_FOUL3_ID,CRYSTAL_OF_DEFEAT3_ID,CRYSTAL_OF_VICTORY3_ID], # Shadow Turen
-5105: ["Basilla",  CRYSTAL_OF_PROGRESS4_ID,CRYSTAL_OF_INPROGRESS4_ID,CRYSTAL_OF_FOUL4_ID,CRYSTAL_OF_DEFEAT4_ID,CRYSTAL_OF_VICTORY4_ID], # Unicorn Racer
-5106: ["Celestiel",CRYSTAL_OF_PROGRESS5_ID,CRYSTAL_OF_INPROGRESS5_ID,CRYSTAL_OF_FOUL5_ID,CRYSTAL_OF_DEFEAT5_ID,CRYSTAL_OF_VICTORY5_ID], # Unicorn Phantasm
-5107: ["Brynthea", CRYSTAL_OF_PROGRESS6_ID,CRYSTAL_OF_INPROGRESS6_ID,CRYSTAL_OF_FOUL6_ID,CRYSTAL_OF_DEFEAT6_ID,CRYSTAL_OF_VICTORY6_ID]  # Silhoutte Tilfo
+27102: ["Almors",   CRYSTAL_OF_PROGRESS1_ID,CRYSTAL_OF_INPROGRESS1_ID,CRYSTAL_OF_FOUL1_ID,CRYSTAL_OF_DEFEAT1_ID,CRYSTAL_OF_VICTORY1_ID], # Pako the Cat
+27103: ["Camoniell",CRYSTAL_OF_PROGRESS2_ID,CRYSTAL_OF_INPROGRESS2_ID,CRYSTAL_OF_FOUL2_ID,CRYSTAL_OF_DEFEAT2_ID,CRYSTAL_OF_VICTORY2_ID], # Mimi the Cat
+27104: ["Belthus",  CRYSTAL_OF_PROGRESS3_ID,CRYSTAL_OF_INPROGRESS3_ID,CRYSTAL_OF_FOUL3_ID,CRYSTAL_OF_DEFEAT3_ID,CRYSTAL_OF_VICTORY3_ID], # Shadow Turen
+27105: ["Basilla",  CRYSTAL_OF_PROGRESS4_ID,CRYSTAL_OF_INPROGRESS4_ID,CRYSTAL_OF_FOUL4_ID,CRYSTAL_OF_DEFEAT4_ID,CRYSTAL_OF_VICTORY4_ID], # Unicorn Racer
+27106: ["Celestiel",CRYSTAL_OF_PROGRESS5_ID,CRYSTAL_OF_INPROGRESS5_ID,CRYSTAL_OF_FOUL5_ID,CRYSTAL_OF_DEFEAT5_ID,CRYSTAL_OF_VICTORY5_ID], # Unicorn Phantasm
+27107: ["Brynthea", CRYSTAL_OF_PROGRESS6_ID,CRYSTAL_OF_INPROGRESS6_ID,CRYSTAL_OF_FOUL6_ID,CRYSTAL_OF_DEFEAT6_ID,CRYSTAL_OF_VICTORY6_ID]  # Silhoutte Tilfo
 }
 
 # Reduces the Beginner Arcanas on every try to kill a Summon by one, item and stat!
@@ -104,75 +104,75 @@ class Quest (JQuest) :
 
    def onEvent (self,event,st) :
       htmltext = event
-      if event == "7634-08.htm" :                    # start part for Galatea
+      if event == "30634-08.htm" :                    # start part for Galatea
          for var in STATS:
             if var in ["Arcanas","Beginner_Arcanas","Lara_Part"]:
                continue
             st.set(var,"1")
          st.setState(PROGRESS)
          st.playSound("ItemSound.quest_accept")
-      elif event == "7634-07.htm" :
+      elif event == "30634-07.htm" :
          st.giveItems(GALATEAS_LETTER_ID,1)
-      elif event == "7063-02.htm" :                  # Lara first time to give a list out
+      elif event == "30063-02.htm" :                  # Lara first time to give a list out
          random = st.getRandom(5)+1
          st.giveItems(LISTS[random][0],1)
          st.takeItems(GALATEAS_LETTER_ID,1)
          st.set("Lara_Part",str(random))
          st.set("step","2")
-      elif event == "7063-04.htm" :                  # Lara later to give a list out
+      elif event == "30063-04.htm" :                  # Lara later to give a list out
          random = st.getRandom(5)+1
          st.giveItems(LISTS[random][0],1)
          st.set("Lara_Part",str(random))
-      elif event == "7635-02.htm" :                  # Almors' Part, this is the same just other items below.. so just one time comments
+      elif event == "30635-02.htm" :                  # Almors' Part, this is the same just other items below.. so just one time comments
          if int(st.get("Beginner_Arcanas")) :        # if the player has more then one beginners' arcana he can start a fight against the masters summon
-            htmltext = "7635-03.htm"
+            htmltext = "30635-03.htm"
             st.set("Almors","2")                     # set state ready to fight
-      elif event == "7635-04.htm" :
+      elif event == "30635-04.htm" :
          st.giveItems(CRYSTAL_OF_PROGRESS1_ID,1)     # give Starting Crystal
          st.takeItems(CRYSTAL_OF_FOUL1_ID,-1)        # just in case he cheated or loses
          st.takeItems(CRYSTAL_OF_DEFEAT1_ID,-1)
          takeBeginnerArcanas(st)                     # this takes one Beginner Arcana and set Beginner_Arcana stat -1
-      elif event == "7636-02.htm" :                  # Camoniell's Part
+      elif event == "30636-02.htm" :                  # Camoniell's Part
          if int(st.get("Beginner_Arcanas")) :
-            htmltext = "7636-03.htm"
+            htmltext = "30636-03.htm"
             st.set("Camoniell","2")
-      elif event == "7636-04.htm" :
+      elif event == "30636-04.htm" :
          st.giveItems(CRYSTAL_OF_PROGRESS2_ID,1)
          st.takeItems(CRYSTAL_OF_FOUL2_ID,-1)
          st.takeItems(CRYSTAL_OF_DEFEAT2_ID,-1)
          takeBeginnerArcanas(st)
-      elif event == "7637-02.htm" :                  # Belthus' Part
+      elif event == "30637-02.htm" :                  # Belthus' Part
          if int(st.get("Beginner_Arcanas")) :
-            htmltext = "7637-03.htm"
+            htmltext = "30637-03.htm"
             st.set("Belthus","2")
-      elif event == "7637-04.htm" :
+      elif event == "30637-04.htm" :
          st.giveItems(CRYSTAL_OF_PROGRESS3_ID,1)
          st.takeItems(CRYSTAL_OF_FOUL3_ID,-1)
          st.takeItems(CRYSTAL_OF_DEFEAT3_ID,-1)
          takeBeginnerArcanas(st)
-      elif event == "7638-02.htm" :                  # Basilla's Part
+      elif event == "30638-02.htm" :                  # Basilla's Part
          if int(st.get("Beginner_Arcanas")) :
-            htmltext = "7638-03.htm"
+            htmltext = "30638-03.htm"
             st.set("Basilla","2")
-      elif event == "7638-04.htm" :
+      elif event == "30638-04.htm" :
          st.giveItems(CRYSTAL_OF_PROGRESS4_ID,1)
          st.takeItems(CRYSTAL_OF_FOUL4_ID,-1)
          st.takeItems(CRYSTAL_OF_DEFEAT4_ID,-1)
          takeBeginnerArcanas(st)
-      elif event == "7639-02.htm" :                  # Celestiel's Part
+      elif event == "30639-02.htm" :                  # Celestiel's Part
          if int(st.get("Beginner_Arcanas")) :
-            htmltext = "7639-03.htm"
+            htmltext = "30639-03.htm"
             st.set("Celestiel","2")
-      elif event == "7639-04.htm" :
+      elif event == "30639-04.htm" :
          st.giveItems(CRYSTAL_OF_PROGRESS5_ID,1)
          st.takeItems(CRYSTAL_OF_FOUL5_ID,-1)
          st.takeItems(CRYSTAL_OF_DEFEAT5_ID,-1)
          takeBeginnerArcanas(st)
-      elif event == "7640-02.htm" :                  # Brynthea's Part
+      elif event == "30640-02.htm" :                  # Brynthea's Part
          if int(st.get("Beginner_Arcanas")) :
-            htmltext = "7640-03.htm"
+            htmltext = "30640-03.htm"
             st.set("Brynthea","2")
-      elif event == "7640-04.htm" :
+      elif event == "30640-04.htm" :
          st.giveItems(CRYSTAL_OF_PROGRESS6_ID,1)
          st.takeItems(CRYSTAL_OF_FOUL6_ID,-1)
          st.takeItems(CRYSTAL_OF_DEFEAT6_ID,-1)
@@ -189,12 +189,12 @@ class Quest (JQuest) :
             st.set(var,"0")
          if st.getPlayer().getClassId().getId() in [0x0b, 0x1a, 0x27]:
             if st.getPlayer().getLevel() > 38:  # conditions are ok, lets start
-               htmltext = "7634-03.htm"
+               htmltext = "30634-03.htm"
             else:
-               htmltext = "7634-02.htm"         # too young.. not now
+               htmltext = "30634-02.htm"         # too young.. not now
                st.exitQuest(1)
          else:                                  # wrong class.. never
-            htmltext = "7634-01.htm"
+            htmltext = "30634-01.htm"
             st.exitQuest(1)
       elif id == COMPLETED:                     # quest already done, not repeatable
          htmltext = "<html><head><body>This quest have already been completed.</body></html>"
@@ -205,10 +205,10 @@ class Quest (JQuest) :
          BeginnerArcanas = int(st.get("Beginner_Arcanas"))
          if npcId == Galatea :            # Start and End Npc Galatea related stuff
             if step == 1 :                # step 1 means just started
-               htmltext = "7634-09.htm"
+               htmltext = "30634-09.htm"
             elif step == 2 :              # step 2 means already talkd with lara
                if Arcanas == 6:           # finished all battles... the player is able to earn the marks
-                  htmltext = "7634-12.htm"
+                  htmltext = "30634-12.htm"
                   st.addExpAndSp(148409,30000)
                   for var in STATS:
                      st.unset(var)
@@ -218,20 +218,20 @@ class Quest (JQuest) :
                   for item in [LARS_LIST1_ID,LARS_LIST2_ID,LARS_LIST3_ID,LARS_LIST4_ID,LARS_LIST5_ID,ALMORS_ARCANA_ID,BASILLIA_ARCANA_ID,CAMONIELL_ARCANA_ID,CELESTIEL_ARCANA_ID,BELTHUS_ARCANA_ID,BRYNTHEA_ARCANA_ID]:
                      st.takeItems(item,-1)
                else:                # he lost something :) or didnt finished
-                  htmltext = "7634-10.htm"
+                  htmltext = "30634-10.htm"
          elif npcId == Lara:        # anything realated to Lara below
             if step == 1:           # first talk to lara
-               htmltext = "7063-01.htm"
+               htmltext = "30063-01.htm"
             else:                   # talk again to lara
                if LaraPart == 0:    # if you havent a part taken, give one
-                  htmltext = "7063-03.htm"
+                  htmltext = "30063-03.htm"
                else:
                   ItemCount1 = st.getQuestItemsCount(LISTS[LaraPart][1])
                   ItemCount2 = st.getQuestItemsCount(LISTS[LaraPart][2])
                   if ItemCount1 < 30 or ItemCount2 < 30:   # if you have not enough materials, List 1 - 5
-                     htmltext = "7063-05.htm"
+                     htmltext = "30063-05.htm"
                   elif ItemCount1 > 29 and ItemCount2 > 29:# if you have enough materials, receive your Beginner Arcanas, List 1 - 5
-                     htmltext = "7063-06.htm"
+                     htmltext = "30063-06.htm"
                      st.giveItems(BEGINNERS_ARCANA_ID,2)
                      st.takeItems(LISTS[LaraPart][0],1)
                      st.takeItems(LISTS[LaraPart][1],-1)
@@ -320,9 +320,9 @@ class Quest (JQuest) :
       return
 
 QUEST       = Quest(230,"230_TestOfSummoner","Test Of Summoner")
-CREATED        = State('Start', QUEST)
+CREATED     = State('Start', QUEST)
 PROGRESS    = State('Progress', QUEST)
-COMPLETED      = State('Completed', QUEST)
+COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
@@ -346,38 +346,7 @@ for mobId in DROPLIST_SUMMON.keys():
 #This is just to formal add the drops, in case that a player abort this quest.. the items should disappear
 STARTED        = State('Started', QUEST)
 
-STARTED.addQuestDrop(7063,LARS_LIST1_ID,1)
-STARTED.addQuestDrop(7063,LARS_LIST2_ID,1)
-STARTED.addQuestDrop(7063,LARS_LIST3_ID,1)
-STARTED.addQuestDrop(7063,LARS_LIST4_ID,1)
-STARTED.addQuestDrop(7063,LARS_LIST5_ID,1)
-STARTED.addQuestDrop(7635,ALMORS_ARCANA_ID,1)
-STARTED.addQuestDrop(7638,BASILLIA_ARCANA_ID,1)
-STARTED.addQuestDrop(7636,CAMONIELL_ARCANA_ID,1)
-STARTED.addQuestDrop(7639,CELESTIEL_ARCANA_ID,1)
-STARTED.addQuestDrop(7637,BELTHUS_ARCANA_ID,1)
-STARTED.addQuestDrop(7640,BRYNTHEA_ARCANA_ID,1)
-STARTED.addQuestDrop(577,LETOLIZARDMAN_AMULET_ID,1)
-STARTED.addQuestDrop(578,LETOLIZARDMAN_AMULET_ID,1)
-STARTED.addQuestDrop(579,LETOLIZARDMAN_AMULET_ID,1)
-STARTED.addQuestDrop(580,LETOLIZARDMAN_AMULET_ID,1)
-STARTED.addQuestDrop(581,LETOLIZARDMAN_AMULET_ID,1)
-STARTED.addQuestDrop(582,LETOLIZARDMAN_AMULET_ID,1)
-STARTED.addQuestDrop(555,SAC_OF_REDSPORES_ID,1)
-STARTED.addQuestDrop(600,KARULBUGBEAR_TOTEM_ID,1)
-STARTED.addQuestDrop(563,SHARDS_OF_MANASHEN_ID,1)
-STARTED.addQuestDrop(267,BREKAORC_TOTEM_ID,1)
-STARTED.addQuestDrop(268,BREKAORC_TOTEM_ID,1)
-STARTED.addQuestDrop(271,BREKAORC_TOTEM_ID,1)
-STARTED.addQuestDrop(269,BREKAORC_TOTEM_ID,1)
-STARTED.addQuestDrop(270,BREKAORC_TOTEM_ID,1)
-STARTED.addQuestDrop(552,CRIMSON_BLOODSTONE_ID,1)
-STARTED.addQuestDrop(192,TALONS_OF_TYRANT_ID,1)
-STARTED.addQuestDrop(193,TALONS_OF_TYRANT_ID,1)
-STARTED.addQuestDrop(553,TUSK_OF_WINDSUS_ID,1)
-STARTED.addQuestDrop(89,WINGS_OF_DRONEANT_ID,1)
-STARTED.addQuestDrop(90,WINGS_OF_DRONEANT_ID,1)
-STARTED.addQuestDrop(176,FANGS_OF_WYRM_ID,1)
-STARTED.addQuestDrop(7634,GALATEAS_LETTER_ID,1)
+for item in range(3337,3390):
+    STARTED.addQuestDrop(30063,item,1)
 
 print "importing quests: 230: Test Of Summoner"

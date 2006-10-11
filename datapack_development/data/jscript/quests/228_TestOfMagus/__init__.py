@@ -1,5 +1,4 @@
 # Maked by Mr. Have fun! Version 0.2
-print "importing quests: 228: Test Of Magus"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -32,21 +31,21 @@ EN_IRONGOLEM_SCRAP_ID = 2855
 
 #This handels all drops from mobs.   npcId:[condition,maxcount,chance,item,part]
 DROPLIST={
-5095:[3,1,100,GOLDEN_SEED1_ID,1],
-5096:[3,1,100,GOLDEN_SEED2_ID,1],
-5097:[3,1,100,GOLDEN_SEED3_ID,1],
-5098:[7,5,50,FLAME_CRYSTAL_ID,2],
-230:[7,20,30,DAZZLING_DROP_ID,2],
-231:[7,20,30,DAZZLING_DROP_ID,2],
-157:[7,20,30,DAZZLING_DROP_ID,2],
-232:[7,20,40,DAZZLING_DROP_ID,2],
-234:[7,20,50,DAZZLING_DROP_ID,2],
-145:[7,20,50,HARPYS_FEATHER_ID,2],
-176:[7,10,50,WYRMS_WINGBONE_ID,2],
-553:[7,10,50,WINDSUS_MANE_ID,2],
-564:[7,10,100,EN_MONSTEREYE_SHELL_ID,2],
-565:[7,10,100,EN_STONEGOLEM_POWDER_ID,2],
-566:[7,10,100,EN_IRONGOLEM_SCRAP_ID,2]
+27095:[3,1,100,GOLDEN_SEED1_ID,1],
+27096:[3,1,100,GOLDEN_SEED2_ID,1],
+27097:[3,1,100,GOLDEN_SEED3_ID,1],
+27098:[7,5,50,FLAME_CRYSTAL_ID,2],
+20230:[7,20,30,DAZZLING_DROP_ID,2],
+20231:[7,20,30,DAZZLING_DROP_ID,2],
+20157:[7,20,30,DAZZLING_DROP_ID,2],
+20232:[7,20,40,DAZZLING_DROP_ID,2],
+20234:[7,20,50,DAZZLING_DROP_ID,2],
+20145:[7,20,50,HARPYS_FEATHER_ID,2],
+20176:[7,10,50,WYRMS_WINGBONE_ID,2],
+20553:[7,10,50,WINDSUS_MANE_ID,2],
+20564:[7,10,100,EN_MONSTEREYE_SHELL_ID,2],
+20565:[7,10,100,EN_STONEGOLEM_POWDER_ID,2],
+20566:[7,10,100,EN_IRONGOLEM_SCRAP_ID,2]
 }
 
 
@@ -57,15 +56,15 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-        htmltext = "7629-04.htm"
+        htmltext = "30629-04.htm"
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(RUKALS_LETTER_ID,1)
-    elif event == "7629_1" :
-          htmltext = "7629-09.htm"
-    elif event == "7629_2" :
-          htmltext = "7629-10.htm"
+    elif event == "30629_1" :
+          htmltext = "30629-09.htm"
+    elif event == "30629_2" :
+          htmltext = "30629-10.htm"
           st.takeItems(LILAC_CHARM_ID,1)
           st.takeItems(GOLDEN_SEED1_ID,1)
           st.takeItems(GOLDEN_SEED2_ID,1)
@@ -73,27 +72,27 @@ class Quest (JQuest) :
           st.giveItems(SCORE_OF_ELEMENTS_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","6")
-    elif event == "7391_1" :
-          htmltext = "7391-02.htm"
+    elif event == "30391_1" :
+          htmltext = "30391-02.htm"
           st.giveItems(PARINAS_LETTER_ID,1)
           st.takeItems(RUKALS_LETTER_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","2")
-    elif event == "7612_1" :
-          htmltext = "7612-02.htm"
+    elif event == "30612_1" :
+          htmltext = "30612-02.htm"
           st.giveItems(LILAC_CHARM_ID,1)
           st.takeItems(PARINAS_LETTER_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","3")
-    elif event == "7412_1" :
-          htmltext = "7412-02.htm"
+    elif event == "30412_1" :
+          htmltext = "30412-02.htm"
           st.giveItems(SYLPH_CHARM_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","7")
-    elif event == "7409_1" :
-          htmltext = "7409-02.htm"
-    elif event == "7409_2" :
-          htmltext = "7409-03.htm"
+    elif event == "30409_1" :
+          htmltext = "30409-02.htm"
+    elif event == "30409_2" :
+          htmltext = "30409-03.htm"
           st.giveItems(SERPENT_CHARM_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","7")
@@ -101,7 +100,6 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,st):
-
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say to you</body></html>"
    id = st.getState()
@@ -110,30 +108,30 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 7629 :
+   if npcId == 30629 :
      if int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
         if int(st.get("cond")) < 15 :
           if st.getPlayer().getClassId().getId() == 0x0b or st.getPlayer().getClassId().getId() == 0x1a or st.getPlayer().getClassId().getId() == 0x27 :
             if st.getPlayer().getLevel() < 39 :
-              htmltext = "7629-02.htm"
+              htmltext = "30629-02.htm"
             else:
-              htmltext = "7629-03.htm"
+              htmltext = "30629-03.htm"
           else:
-            htmltext = "7629-01.htm"
+            htmltext = "30629-01.htm"
             st.exitQuest(1)
         else:
-          htmltext = "7629-01.htm"
+          htmltext = "30629-01.htm"
           st.exitQuest(1)
      elif int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest has already been completed.</body></html>"
      elif int(st.get("cond"))==1:
-        htmltext = "7629-05.htm"
+        htmltext = "30629-05.htm"
      elif int(st.get("cond"))==2:
-        htmltext = "7629-06.htm"
+        htmltext = "30629-06.htm"
      elif int(st.get("cond"))==3:
-        htmltext = "7629-07.htm"
+        htmltext = "30629-07.htm"
      elif int(st.get("cond"))==5:
-        htmltext = "7629-08.htm"
+        htmltext = "30629-08.htm"
      elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 :
         if st.getQuestItemsCount(TONE_OF_WATER_ID) and st.getQuestItemsCount(TONE_OF_FIRE_ID) and st.getQuestItemsCount(TONE_OF_WIND_ID) and st.getQuestItemsCount(TONE_OF_EARTH_ID) :
             st.takeItems(SCORE_OF_ELEMENTS_ID,1)
@@ -143,72 +141,72 @@ class Quest (JQuest) :
             st.takeItems(TONE_OF_EARTH_ID,1)
             st.giveItems(MARK_OF_MAGUS_ID,1)
             st.addExpAndSp(139039,40000)
-            htmltext = "7629-12.htm"
+            htmltext = "30629-12.htm"
             st.set("cond","0")
             st.set("onlyone","1")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
         else:
-          htmltext = "7629-11.htm"
-   elif npcId == 7391:
+          htmltext = "30629-11.htm"
+   elif npcId == 30391:
      if int(st.get("cond"))==1:
-        htmltext = "7391-01.htm"
+        htmltext = "30391-01.htm"
      elif int(st.get("cond"))==2:
-        htmltext = "7391-03.htm"
+        htmltext = "30391-03.htm"
      elif int(st.get("cond"))<6 and int(st.get("cond"))>2:
-        htmltext = "7391-04.htm"
+        htmltext = "30391-04.htm"
      elif int(st.get("cond"))>5 :
-        htmltext = "7391-05.htm"
-   elif npcId == 7612:
+        htmltext = "30391-05.htm"
+   elif npcId == 30612:
      if int(st.get("cond"))==2 :
-        htmltext = "7612-01.htm"
+        htmltext = "30612-01.htm"
      elif int(st.get("cond"))<5 and int(st.get("cond"))>2:
-        htmltext = "7612-03.htm"
+        htmltext = "30612-03.htm"
      elif int(st.get("cond"))==5:
-        htmltext = "7612-04.htm"
+        htmltext = "30612-04.htm"
      elif int(st.get("cond"))>5:
-        htmltext = "7612-05.htm"
-   elif npcId == 7413:
+        htmltext = "30612-05.htm"
+   elif npcId == 30413:
      if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WATER_ID)==0 and st.getQuestItemsCount(UNDINE_CHARM_ID)==0 :
-        htmltext = "7413-01.htm"
+        htmltext = "30413-01.htm"
         st.giveItems(UNDINE_CHARM_ID,1)
         st.set("cond","7")
      elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(UNDINE_CHARM_ID)==1 :
         if st.getQuestItemsCount(DAZZLING_DROP_ID) < 20 :
-          htmltext = "7413-02.htm"
+          htmltext = "30413-02.htm"
         else:
-          htmltext = "7413-03.htm"
+          htmltext = "30413-03.htm"
           st.takeItems(DAZZLING_DROP_ID,st.getQuestItemsCount(DAZZLING_DROP_ID))
           st.takeItems(UNDINE_CHARM_ID,1)
           st.giveItems(TONE_OF_WATER_ID,1)
           st.playSound("ItemSound.quest_middle")
      elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WATER_ID)==1 and st.getQuestItemsCount(UNDINE_CHARM_ID)==0 :
-        htmltext = "7413-04.htm"
-   elif npcId == 7411 :
+        htmltext = "30413-04.htm"
+   elif npcId == 30411 :
      if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_FIRE_ID)==0 and st.getQuestItemsCount(SALAMANDER_CHARM_ID)==0 :
-        htmltext = "7411-01.htm"
+        htmltext = "30411-01.htm"
         st.giveItems(SALAMANDER_CHARM_ID,1)
         st.playSound("ItemSound.quest_middle")
         st.set("cond","7")
      elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(SALAMANDER_CHARM_ID)==1 :
         if st.getQuestItemsCount(FLAME_CRYSTAL_ID) < 5 :
-          htmltext = "7411-02.htm"
+          htmltext = "30411-02.htm"
         else:
-          htmltext = "7411-03.htm"
+          htmltext = "30411-03.htm"
           st.takeItems(FLAME_CRYSTAL_ID,st.getQuestItemsCount(FLAME_CRYSTAL_ID))
           st.giveItems(TONE_OF_FIRE_ID,1)
           st.takeItems(SALAMANDER_CHARM_ID,1)
           st.playSound("ItemSound.quest_middle")
      elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_FIRE_ID)==1 and st.getQuestItemsCount(SALAMANDER_CHARM_ID)==0 :
-        htmltext = "7411-04.htm"
-   elif npcId == 7412 :
+        htmltext = "30411-04.htm"
+   elif npcId == 30412 :
      if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WIND_ID)==0 and st.getQuestItemsCount(SYLPH_CHARM_ID)==0 :
-        htmltext = "7412-01.htm"
+        htmltext = "30412-01.htm"
      elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(SYLPH_CHARM_ID)==1 :
         if st.getQuestItemsCount(HARPYS_FEATHER_ID)+st.getQuestItemsCount(WYRMS_WINGBONE_ID)+st.getQuestItemsCount(WINDSUS_MANE_ID) < 40 :
-          htmltext = "7412-03.htm"
+          htmltext = "30412-03.htm"
         else:
-          htmltext = "7412-04.htm"
+          htmltext = "30412-04.htm"
           st.takeItems(HARPYS_FEATHER_ID,st.getQuestItemsCount(HARPYS_FEATHER_ID))
           st.takeItems(WYRMS_WINGBONE_ID,st.getQuestItemsCount(WYRMS_WINGBONE_ID))
           st.takeItems(WINDSUS_MANE_ID,st.getQuestItemsCount(WINDSUS_MANE_ID))
@@ -216,15 +214,15 @@ class Quest (JQuest) :
           st.takeItems(SYLPH_CHARM_ID,1)
           st.playSound("ItemSound.quest_middle")
      elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_WIND_ID)==1 and st.getQuestItemsCount(SYLPH_CHARM_ID)==0 :
-        htmltext = "7412-05.htm"
-   elif npcId == 7409 :
+        htmltext = "30412-05.htm"
+   elif npcId == 30409 :
      if int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_EARTH_ID)==0 and st.getQuestItemsCount(SERPENT_CHARM_ID)==0 :
-        htmltext = "7409-01.htm"
+        htmltext = "30409-01.htm"
      elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(SERPENT_CHARM_ID)==1 :
         if st.getQuestItemsCount(EN_MONSTEREYE_SHELL_ID)+st.getQuestItemsCount(EN_STONEGOLEM_POWDER_ID)+st.getQuestItemsCount(EN_IRONGOLEM_SCRAP_ID) < 30 :
-          htmltext = "7409-04.htm"
+          htmltext = "30409-04.htm"
         else:
-          htmltext = "7409-05.htm"
+          htmltext = "30409-05.htm"
           st.takeItems(EN_MONSTEREYE_SHELL_ID,st.getQuestItemsCount(EN_MONSTEREYE_SHELL_ID))
           st.takeItems(EN_STONEGOLEM_POWDER_ID,st.getQuestItemsCount(EN_STONEGOLEM_POWDER_ID))
           st.takeItems(EN_IRONGOLEM_SCRAP_ID,st.getQuestItemsCount(EN_IRONGOLEM_SCRAP_ID))
@@ -232,11 +230,10 @@ class Quest (JQuest) :
           st.takeItems(SERPENT_CHARM_ID,1)
           st.playSound("ItemSound.quest_middle")
      elif int(st.get("cond")) and st.getQuestItemsCount(SCORE_OF_ELEMENTS_ID)==1 and st.getQuestItemsCount(TONE_OF_EARTH_ID)==1 and st.getQuestItemsCount(SERPENT_CHARM_ID)==0 :
-        htmltext = "7409-06.htm"
+        htmltext = "30409-06.htm"
    return htmltext
                              
  def onKill (self,npc,st):
-
    npcId = npc.getNpcId()
    condition,maxcount,chance,item,part = DROPLIST[npcId]
    random = st.getRandom(100)
@@ -265,13 +262,17 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7629)
+QUEST.addStartNpc(30629)
 
-STARTING.addTalkId(7629)
+STARTING.addTalkId(30629)
 
-for npcId in [7391,7409,7411,7412,7413,7612,7629]:
+for npcId in [30391,30409,30411,30412,30413,30612,30629]:
    STARTED.addTalkId(npcId)
   
-for mobId in [145,157,176,230,231,232,234,5095,5096,5097,5098,553,564,565,566]:
+for mobId in [20145,20157,20176,20230,20231,20232,20234,27095,27096,27097,27098,20553,20564,20565,20566]:
    STARTED.addKillId(mobId)
+
+for item in range(2841,2864):
+   STARTED.addQuestDrop(30629,item,1)
   
+print "importing quests: 228: Test Of Magus"

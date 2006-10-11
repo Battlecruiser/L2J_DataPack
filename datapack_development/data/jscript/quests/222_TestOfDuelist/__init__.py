@@ -12,21 +12,21 @@ TAMRIN_ORCS_ARROW_ID,FINAL_ORDER_ID,       EXCUROS_SKIN_ID,      KRATORS_SHARD_I
 TIMAK_ORCS_BELT_ID,  RAKINS_MACE_ID = range(2762,2784)
 
 DROPLIST={
-85:(1,10,PUNCHERS_SHARD_ID),
-90:(1,10,NOBLE_ANTS_FEELER_ID),
-234:(1,10,DRONES_CHITIN_ID),
-202:(1,10,DEADSEEKER_FANG_ID),
-270:(1,10,OVERLORD_NECKLACE_ID),
-552:(1,10,CRIMSONBINDS_CHAIN_ID),
-582:(1,10,CHIEFS_AMULET_ID),
-564:(1,10,TEMPERED_EYE_MEAT_ID),
-601:(1,10,TAMRIN_ORCS_RING_ID),
-602:(1,10,TAMRIN_ORCS_ARROW_ID),
-604:(2,3,RAKINS_MACE_ID),
-214:(2,3,EXCUROS_SKIN_ID),
-217:(2,3,KRATORS_SHARD_ID),
-588:(2,3,TIMAK_ORCS_BELT_ID),
-554:(2,3,GRANDIS_SKIN_ID)
+20085:(1,10,PUNCHERS_SHARD_ID),
+20090:(1,10,NOBLE_ANTS_FEELER_ID),
+20234:(1,10,DRONES_CHITIN_ID),
+20202:(1,10,DEADSEEKER_FANG_ID),
+20270:(1,10,OVERLORD_NECKLACE_ID),
+20552:(1,10,CRIMSONBINDS_CHAIN_ID),
+20582:(1,10,CHIEFS_AMULET_ID),
+20564:(1,10,TEMPERED_EYE_MEAT_ID),
+20601:(1,10,TAMRIN_ORCS_RING_ID),
+20602:(1,10,TAMRIN_ORCS_ARROW_ID),
+20604:(2,3,RAKINS_MACE_ID),
+20214:(2,3,EXCUROS_SKIN_ID),
+20217:(2,3,KRATORS_SHARD_ID),
+20588:(2,3,TIMAK_ORCS_BELT_ID),
+20554:(2,3,GRANDIS_SKIN_ID)
 }
 
 
@@ -36,7 +36,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7623-07.htm" :
+    if event == "30623-07.htm" :
         if int(st.get("step"))==0 :
            st.set("cond","1")
            st.set("step","1")
@@ -47,10 +47,10 @@ class Quest (JQuest) :
            st.giveItems(ORDER_GIRAN_ID,1)
            st.giveItems(ORDER_OREN_ID,1)
            st.giveItems(ORDER_ADEN_ID,1)
-    elif event == "7623-04.htm" :
+    elif event == "30623-04.htm" :
           if st.getPlayer().getRace().ordinal() == 3 :
-            htmltext = "7623-05.htm"
-    elif event == "7623-16.htm" :
+            htmltext = "30623-05.htm"
+    elif event == "30623-16.htm" :
         if st.getQuestItemsCount(FINAL_ORDER_ID)==0:
             for i in [
             PUNCHERS_SHARD_ID,
@@ -87,21 +87,21 @@ class Quest (JQuest) :
    elif int(st.get("step"))==0 :
       if st.getPlayer().getClassId().getId() in [0x01,0x2f,0x13,0x20] :
          if st.getPlayer().getLevel() >= 39 :
-            htmltext = "7623-03.htm"
+            htmltext = "30623-03.htm"
          else:
-            htmltext = "7623-01.htm"
+            htmltext = "30623-01.htm"
             st.exitQuest(1)
       else:
-         htmltext = "7623-02.htm"
+         htmltext = "30623-02.htm"
          st.exitQuest(1)
    elif int(st.get("step"))==1 :
       if st.getQuestItemsCount(ORDER_GLUDIO_ID) and st.getQuestItemsCount(ORDER_DION_ID) and st.getQuestItemsCount(ORDER_GIRAN_ID) and st.getQuestItemsCount(ORDER_OREN_ID) and st.getQuestItemsCount(ORDER_ADEN_ID) :
         if st.getQuestItemsCount(PUNCHERS_SHARD_ID)==st.getQuestItemsCount(NOBLE_ANTS_FEELER_ID)==st.getQuestItemsCount(DRONES_CHITIN_ID)==st.getQuestItemsCount(DEADSEEKER_FANG_ID)==st.getQuestItemsCount(OVERLORD_NECKLACE_ID)==st.getQuestItemsCount(CRIMSONBINDS_CHAIN_ID)==st.getQuestItemsCount(CHIEFS_AMULET_ID)==st.getQuestItemsCount(TEMPERED_EYE_MEAT_ID)==st.getQuestItemsCount(TAMRIN_ORCS_RING_ID)==st.getQuestItemsCount(TAMRIN_ORCS_ARROW_ID) == 10 :
-          htmltext = "7623-13.htm"
+          htmltext = "30623-13.htm"
         else:
-          htmltext = "7623-14.htm"
+          htmltext = "30623-14.htm"
       else:
-          htmltext = "7623-14.htm"
+          htmltext = "30623-14.htm"
           for i in [ORDER_GLUDIO_ID,ORDER_DION_ID,ORDER_GIRAN_ID,ORDER_OREN_ID,ORDER_ADEN_ID]:
             if st.getQuestItemsCount(i)==0:
                 st.giveItems(i,1) 
@@ -115,13 +115,13 @@ class Quest (JQuest) :
             st.addExpAndSp(47015,20000)
             st.giveItems(MARK_OF_DUELIST_ID,1)
             st.takeItems(FINAL_ORDER_ID,1)
-            htmltext = "7623-18.htm"
+            htmltext = "30623-18.htm"
             st.unset("step")
             st.set("cond","0")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
         else :
-          htmltext = "7623-17.htm"
+          htmltext = "30623-17.htm"
    return htmltext
 
  def onKill (self,npc,st):
@@ -144,12 +144,12 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7623)
+QUEST.addStartNpc(30623)
 
-CREATED.addTalkId(7623)
-STARTING.addTalkId(7623)
-STARTED.addTalkId(7623)
-COMPLETED.addTalkId(7623)
+CREATED.addTalkId(30623)
+STARTING.addTalkId(30623)
+STARTED.addTalkId(30623)
+COMPLETED.addTalkId(30623)
 
 for i in DROPLIST.keys():
     STARTED.addKillId(i)
