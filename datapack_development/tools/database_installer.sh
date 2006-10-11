@@ -339,7 +339,7 @@ while :
    read LSB
    if [ "$LSB" == "Y" -o "$LSB" == "y" ]; then
      echo "Making a backup of the default gameserver tables."
-     $MYSQLDUMPPATH --add-drop-table -h $GSDBHOST -u $GSUSER --password=$GSPASS $LSDB > experimental_backup.sql &> /dev/null
+     $MYSQLDUMPPATH --add-drop-table -h $GSDBHOST -u $GSUSER --password=$GSPASS $GSDB > experimental_backup.sql 2> /dev/null
      if [ $? -ne 0 ];then
      echo ""
      echo "There was a problem accesing your GS database, server down?."
