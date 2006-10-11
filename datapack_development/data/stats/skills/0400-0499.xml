@@ -79,18 +79,25 @@
 <set name="buffDuration" val="8000"/>
 <set name="castRange" val="600"/>
 <for>
-   <effect count="1" name="Root" time="8" val="0" stackOrder="1" stackType="Root"/>
+   <effect count="1" name="Root" time="10" val="0" stackOrder="1" stackType="Root"/>
 </for>
 </skill>
 <skill id="404" levels="5" name="Mass Shackling">
-  <!-- Paladin -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<table name="#mpConsume"> 40 43 46 59 51</table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="target" val="TARGET_AURA"/>
+<set name="skillRadius" val="230"/>
+<set name="power" val="100"/>
+<set name="hitTime" val="1000"/>
+<set name="reuseDelay" val="20000"/>
+<set name="skillTime" val="1000"/>
+<set name="skillType" val="ROOT"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="buffDuration" val="8000"/>
+<set name="castRange" val="-1"/>
+<for>
+   <effect count="1" name="Root" time="10" val="0" stackOrder="1" stackType="Root"/>
+</for>
 </skill>
 <skill id="405" levels="10" name="Banish Undead">
 <table name="#mpConsume"> 50 53 55 58 59 61 63 65 67 68</table>
