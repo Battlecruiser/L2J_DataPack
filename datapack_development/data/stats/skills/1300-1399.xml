@@ -908,85 +908,83 @@
   </for>
 </skill>
 <skill id="1355" levels="1" name="Prophecy of Water">
-  <!-- TO DO -->
-  <set name="mpInitialConsume" val="15"/>
-  <set name="mpConsume" val="57"/>
-  <set name="itemConsumeId" val="3031"/>
-  <set name="itemConsumeCount" val="5"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="120000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="300000"/>
-  <set name="castRange" val="400"/>
-  <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="CoV">
-      <mul order="0x30" stat="pAtk" val="1.08"/>
-      <mul order="0x30" stat="pDef" val="1.16"/>
-      <add order="0x40" stat="accCombat" val="4"/>
-      <mul order="0x30" stat="pAtkSpd" val="1.2"/>
-      <sub order="0x40" stat="runSpd" val="25"/>
-      <mul order="0x30" stat="maxHp" val="1.25"/>
-    </effect>
-  </for>
+<set name="mpInitialConsume" val="15"/>
+<set name="mpConsume" val="57"/>
+<set name="itemConsumeId" val="3031"/>
+<set name="itemConsumeCount" val="5"/>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_ONE"/>
+<set name="hitTime" val="4000"/>
+<set name="reuseDelay" val="120000"/>
+<set name="skillTime" val="4000"/>
+<set name="skillType" val="BUFF"/>
+<set name="isMagic" val="true"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="buffDuration" val="300000"/>
+<set name="castRange" val="400"/>
+<for>
+  <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="CoV">
+    <mul order="0x30" stat="mAtk" val="1.20"/>
+    <mul order="0x30" stat="mDef" val="1.20"/>
+    <mul order="0x30" stat="mAtkSpd" val="1.20"/>
+    <mul order="0x30" stat="mCritRate" val="2.00"/>
+    <mul order="0x30" stat="regMp" val="1.2"/>
+    <mul order="0x30" stat="runSpd" val="0.80"/>
+  </effect>
+</for>
 </skill>
 <skill id="1356" levels="1" name="Prophecy of Fire">
-  <!-- TO DO -->
-  <set name="mpInitialConsume" val="15"/>
-  <set name="mpConsume" val="57"/>
-  <set name="itemConsumeId" val="3031"/>
-  <set name="itemConsumeCount" val="5"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="120000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="300000"/>
-  <set name="castRange" val="400"/>
-  <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="CoV">
-      <mul order="0x30" stat="pAtk" val="1.08"/>
-      <mul order="0x30" stat="pDef" val="1.16"/>
-      <add order="0x40" stat="accCombat" val="4"/>
-      <mul order="0x30" stat="pAtkSpd" val="1.2"/>
-      <sub order="0x40" stat="runSpd" val="13"/>
-      <mul order="0x30" stat="maxHp" val="1.25"/>
-    </effect>
-  </for>
+<set name="mpInitialConsume" val="15"/>
+<set name="mpConsume" val="57"/>
+<set name="itemConsumeId" val="3031"/>
+<set name="itemConsumeCount" val="5"/>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_ONE"/>
+<set name="hitTime" val="4000"/>
+<set name="reuseDelay" val="120000"/>
+<set name="skillTime" val="4000"/>
+<set name="skillType" val="BUFF"/>
+<set name="isMagic" val="true"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="buffDuration" val="300000"/>
+<set name="castRange" val="400"/>
+<for>
+  <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="CoV">
+    <mul order="0x30" stat="pAtk" val="1.10"/>
+    <mul order="0x30" stat="pDef" val="1.20"/>
+    <add order="0x40" stat="accCombat" val="4"/>
+    <mul order="0x30" stat="pAtkSpd" val="1.20"/>
+    <mul order="0x30" stat="runSpd" val="0.90"/>
+    <mul order="0x30" stat="maxHp" val="1.20"/>
+    <mul order="0x30" stat="regHp" val="1.20"/>
+  </effect>
+</for>
 </skill>
 <skill id="1357" levels="1" name="Prophecy of Wind">
-  <!-- TO DO -->
-  <set name="mpInitialConsume" val="15"/>
-  <set name="mpConsume" val="57"/>
-  <set name="itemConsumeId" val="3031"/>
-  <set name="itemConsumeCount" val="5"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="120000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="300000"/>
-  <set name="castRange" val="400"/>
-  <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="CoV">
-      <mul order="0x30" stat="pAtk" val="1.08"/>
-      <mul order="0x30" stat="pDef" val="1.16"/>
-      <add order="0x40" stat="accCombat" val="4"/>
-      <mul order="0x30" stat="pAtkSpd" val="1.2"/>
-      <sub order="0x40" stat="runSpd" val="24"/>
-      <mul order="0x30" stat="maxHp" val="1.25"/>
-    </effect>
-  </for>
+<set name="mpInitialConsume" val="15"/>
+<set name="mpConsume" val="57"/>
+<set name="itemConsumeId" val="3031"/>
+<set name="itemConsumeCount" val="5"/>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_ONE"/>
+<set name="hitTime" val="4000"/>
+<set name="reuseDelay" val="120000"/>
+<set name="skillTime" val="4000"/>
+<set name="skillType" val="BUFF"/>
+<set name="isMagic" val="true"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="buffDuration" val="300000"/>
+<set name="castRange" val="400"/>
+<for>
+  <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="CoV">
+     <add order="0x40" stat="absorbDam" val="5"/>
+     <mul order="0x30" stat="rCrit" val="1.20"/>
+     <mul order="0x50" stat="cAtk" val="1.20"/>
+     <add order="0x40" stat="accCombat" val="4"/>
+     <add order="0x40" stat="rEvas" val="4"/>
+     <mul order="0x30" stat="pAtkSpd" val="1.20"/>
+  </effect>
+</for>
 </skill>
 <skill id="1358" levels="1" name="Block Shield">
   <set name="mpInitialConsume" val="14"/>
