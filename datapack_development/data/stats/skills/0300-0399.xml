@@ -657,7 +657,7 @@
   </for>
 </skill>
 <skill id="341" levels="1" name="Touch of Life">
-  <set name="hpConsume" val="1621"/>
+  <set name="hpConsume" val="1216"/>
   <set name="power" val="30.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="HEAL_PERCENT"/>
@@ -676,7 +676,7 @@
 </skill>
 <skill id="342" levels="1" name="Touch of Death">
   <!-- WRONG SKILL -->
-  <set name="hpConsume" val="1338"/>
+  <set name="hpConsume" val="1004"/>
   <set name="power" val="-70.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="HEAL_PERCENT"/>
@@ -812,10 +812,9 @@
   </for>
 </skill>
 <skill id="350" levels="1" name="Physical Mirror">
-  <set name="mpConsume" val="71"/>
+  <set name="mpConsume" val="36"/>
   <set name="weaponsAllowed" val="2"/>
   <set name="power" val="0.0"/>
-  <set name="mpConsume" val="71"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -831,10 +830,9 @@
   </for>
 </skill>
 <skill id="351" levels="1" name="Magical Mirror">
-  <set name="mpConsume" val="71"/>
+  <set name="mpConsume" val="36"/>
   <set name="weaponsAllowed" val="2"/>
   <set name="power" val="0.0"/>
-  <set name="mpConsume" val="71"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -853,7 +851,7 @@
   <set name="magicLvl" val="77"/>
   <set name="weaponsAllowed" val="2"/>
   <set name="power" val="80"/>
-  <set name="mpConsume" val="35"/>
+  <set name="mpConsume" val="18"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="STUN"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -870,7 +868,7 @@
   <set name="magicLvl" val="77"/>
   <set name="weaponsAllowed" val="2"/>
   <set name="power" val="0.0"/>
-  <set name="mpConsume" val="70"/>
+  <set name="mpConsume" val="35"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="STUN"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -885,7 +883,7 @@
 <skill id="354" levels="1" name="Hamstring Shot">
   <set name="magicLvl" val="77"/>
   <set name="weaponsAllowed" val="32"/> 
-  <set name="mpConsume" val="129"/> 
+  <set name="mpConsume" val="86"/> 
   <set name="power" val="1973"/> 
   <set name="target" val="TARGET_ONE"/> 
   <set name="hitTime" val="4000"/> 
@@ -906,7 +904,7 @@
 </skill>
 <skill id="355" levels="1" name="Focus Death">
   <!-- WRONG -->
-  <set name="mpConsume" val="71"/> 
+  <set name="mpConsume" val="36"/> 
   <set name="power" val="0.0"/> 
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -924,7 +922,7 @@
 </skill>
 <skill id="356" levels="1" name="Focus Chance">
   <!-- WRONG -->
-  <set name="mpConsume" val="71"/> 
+  <set name="mpConsume" val="36"/> 
   <set name="power" val="0.0"/> 
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -939,7 +937,7 @@
 </skill>
 <skill id="357" levels="1" name="Focus Power">
   <!-- WRONG -->
-  <set name="mpConsume" val="71"/> 
+  <set name="mpConsume" val="36"/> 
   <set name="power" val="0.0"/> 
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -955,7 +953,7 @@
 <skill id="358" levels="1" name="Bluff">
   <!-- WRONG -->
   <set name="weaponsAllowed" val="16"/> 
-  <set name="mpConsume" val="70"/> 
+  <set name="mpConsume" val="35"/> 
   <set name="power" val="40"/> 
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="STUN"/>
@@ -1010,7 +1008,8 @@
 <skill id="361" levels="1" name="Shock Blast">
   <set name="weaponsAllowed" val="64"/> 
   <set name="magicLvl" val="77"/>
-  <set name="mpConsume" val="65"/>
+  <set name="mpConsume" val="53"/>
+  <set name="hpConsume" val="507"/>
   <set name="save" val="4"/>
   <set name="power" val="1973"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1034,8 +1033,8 @@
 <skill id="362" levels="1" name="Armor Crush">
   <set name="magicLvl" val="77"/>
   <set name="weaponsAllowed" val="2060"/>
-  <set name="mpConsume" val="65"/>
-  <set name="hpConsume" val="254"/>
+  <set name="mpConsume" val="35"/>
+  <set name="hpConsume" val="338"/>
   <set name="power" val="1973"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PDAM"/>
@@ -1132,7 +1131,7 @@
 </skill>
 <skill id="367" levels="1" name="Dance of Medusa">
   <set name="magicLvl" val="77"/>
-  <set name="mpConsume" val="105"/>
+  <set name="mpConsume" val="53"/>
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
   <set name="skillRadius" val="150"/>
@@ -1148,7 +1147,7 @@
   </for>
 </skill>
 <skill id="368" levels="1" name="Vengeance">
-  <set name="mpConsume" val="105"/>
+  <set name="mpConsume" val="35"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1000"/>
@@ -1168,7 +1167,7 @@
 <skill id="369" levels="1" name="Evade Shot">
   <!-- MISSING TWO TARGET SKILL ONE AND SELF -->
   <set name="weaponsAllowed" val="32"/>
-  <set name="mpConsume" val="130"/>
+  <set name="mpConsume" val="122"/>
   <set name="power" val="2020"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
