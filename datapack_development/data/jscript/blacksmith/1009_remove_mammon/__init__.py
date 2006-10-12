@@ -170,7 +170,7 @@ QUEST.setInitialState(CREATED)
  
  
 # init all npc to the correct stats
-for npcId in [8092]:
+for npcId in [31092]:
         QUEST.addStartNpc(npcId)
         STARTED.addTalkId(npcId)
         

@@ -10,8 +10,8 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 ORC_GATEKEEPER_CHARM   	= 1658
 DWARF_GATEKEEPER_TOKEN 	= 1659
-WHIRPY			= 7540
-TAMIL			= 7576
+WHIRPY			= 30540
+TAMIL			= 30576
 
 class Quest (JQuest) :
 
@@ -28,7 +28,7 @@ class Quest (JQuest) :
        return
      else:
        st.exitQuest(1)
-       return "7576-01.htm"
+       return "30576-01.htm"
    # DWARVEN_VILLAGE
    elif npcId == WHIRPY: 
      if st.getQuestItemsCount(DWARF_GATEKEEPER_TOKEN) >= 1:
@@ -38,7 +38,7 @@ class Quest (JQuest) :
        return
      else:
        st.exitQuest(1)
-       return "7540-01.htm"
+       return "30540-01.htm"
 
 QUEST       = Quest(1100,"1100_teleport_with_charm","Teleports")
 CREATED     = State('Start',QUEST)

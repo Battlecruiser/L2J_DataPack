@@ -16,18 +16,18 @@ class Quest (JQuest):
 
   def onTalk (self,npc,st):
     npcId = npc.getNpcId()
-    if npcId == 12535 :
+    if npcId == 29025 :
       if st.getInt("ok"):
         if not npc.isBusy():
            npc.setBusy(True)
            npc.setBusyMessage("Attending another player's request")
-           st.getPcSpawn().addSpawn(12372)
+           st.getPcSpawn().addSpawn(29020)
            npc.reduceCurrentHp(9999999, npc)
         st.exitQuest(1)
       else:
         st.exitQuest(1)
         return "Conditions are not right to wake up Baium"
-    elif npcId == 12571 :
+    elif npcId == 31862 :
       if st.getQuestItemsCount(4295) > 0 :   # bloody fabric
         st.takeItems(4295,1)
         st.getPlayer().teleToLocation(113100,14500,10077)
@@ -44,9 +44,9 @@ COMPLETED   = State('Completed',   QUEST)
 # Quest initialization
 QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
-QUEST.addStartNpc(12535)
-QUEST.addStartNpc(12571)
-CREATED.addTalkId(12535)
-CREATED.addTalkId(12571)
+QUEST.addStartNpc(29025)
+QUEST.addStartNpc(31862)
+CREATED.addTalkId(29025)
+CREATED.addTalkId(31862)
 
 print "importing quests: 12535: Wake Up Baium"

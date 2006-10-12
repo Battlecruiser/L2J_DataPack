@@ -1,27 +1,29 @@
 #
 # Created by DraX on 2005.07.27. updated by mr.
 #
-
-print "importing teleport data: 1101_teleport_to_race_track"
-
 import sys
 
 from net.sf.l2j.gameserver.model.actor.instance import L2PcInstance
-from net.sf.l2j.gameserver.model.quest        import State
-from net.sf.l2j.gameserver.model.quest        import QuestState
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.model.quest          import State
+from net.sf.l2j.gameserver.model.quest          import QuestState
+from net.sf.l2j.gameserver.model.quest.jython   import QuestJython as JQuest
 
-TRISHA	     = 7059
-CLARISSA     = 7080
-VALENTIA     = 7177
-ESMERALDA    = 7233
-BELLA        = 7256
-RICHLIN	     = 7320
-ELISA        = 7848
-FLAUEN       = 7899
-TATIANA	     = 8275
-ILYANA	     = 8320
-RACE_MANAGER = 7995
+TRISHA	     = 30059
+CLARISSA     = 30080
+VALENTIA     = 30177
+ESMERALDA    = 30233
+BELLA        = 30256
+RICHLIN	     = 30320
+ELISA        = 30848
+FLAUEN       = 30899
+TATIANA	     = 31275
+ILYANA	     = 31320
+RACE_MANAGER = 30995
+#TODO
+ANYA         = 30237
+MINERVA      = 30836
+VERONA       = 30727
+
 
 class Quest (JQuest) :
 
@@ -110,70 +112,70 @@ class Quest (JQuest) :
    ############################
    
    # back to Gludin Village
-   if npcId == RACE_MANAGER and int(st.get("id")) == 1:
+   if npcId == RACE_MANAGER and st.getInt("id") == 1:
      st.player.teleToLocation(-80826,149775,-3043)
      st.setState(COMPLETED)
      st.exitQuest(1)
      return
    
    # back to Gludio Castle Town
-   if npcId == RACE_MANAGER and int(st.get("id")) == 2:
+   if npcId == RACE_MANAGER and st.getInt("id") == 2:
      st.player.teleToLocation(-12672,122776,-3116)
      st.setState(COMPLETED)
      st.exitQuest(1)
      return
   
    # back to Dion Castle Town
-   if npcId == RACE_MANAGER and int(st.get("id")) == 3:
+   if npcId == RACE_MANAGER and st.getInt("id") == 3:
      st.player.teleToLocation(15670,142983,-2705)
      st.setState(COMPLETED)
      st.exitQuest(1)
      return
 
    # back to Giran Castle Town
-   if npcId == RACE_MANAGER and int(st.get("id")) == 4:
+   if npcId == RACE_MANAGER and st.getInt("id") == 4:
      st.player.teleToLocation(83400,147943,-3404)
      st.setState(COMPLETED)
      st.exitQuest(1)
      return
 
    # back to Heine
-   if npcId == RACE_MANAGER and int(st.get("id")) == 5:
+   if npcId == RACE_MANAGER and st.getInt("id") == 5:
      st.player.teleToLocation(111409,219364,-3545)
      st.setState(COMPLETED)
      st.exitQuest(1)
      return
 
    # back to Town of Oren
-   if npcId == RACE_MANAGER and int(st.get("id")) == 6:
+   if npcId == RACE_MANAGER and st.getInt("id") == 6:
      st.player.teleToLocation(82956,53162,-1495)
      st.setState(COMPLETED)
      st.exitQuest(1)
      return
 
    # back to Town of Aden
-   if npcId == RACE_MANAGER and int(st.get("id")) == 7:
+   if npcId == RACE_MANAGER and st.getInt("id") == 7:
      st.player.teleToLocation(146331,25762,-2018)
      st.setState(COMPLETED)
      st.exitQuest(1)
      return
 
    # back to Hunters Village
-   if npcId == RACE_MANAGER and int(st.get("id")) == 8:
+   if npcId == RACE_MANAGER and st.getInt("id") == 8:
      st.player.teleToLocation(116819,76994,-2714)
      st.setState(COMPLETED)
      st.exitQuest(1)
      return
 
    # back to Rune Village
-   if npcId == RACE_MANAGER and int(st.get("id")) == 9:
+   if npcId == RACE_MANAGER and st.getInt("id") == 9:
      st.player.teleToLocation(43835,-47749,-792)
      st.setState(COMPLETED)
      st.exitQuest(1)
      return
 
    # back to Goddard Castle Town
-   if npcId == RACE_MANAGER and int(st.get("id")) == 10:
+   if npcId == RACE_MANAGER and st.getInt("id") == 10:
      st.player.teleToLocation(147930,-55281,-2728)
      st.setState(COMPLETED)
      st.exitQuest(1)
@@ -209,3 +211,5 @@ CREATED.addTalkId(ILYANA)
 CREATED.addTalkId(TATIANA)
 
 STARTED.addTalkId(RACE_MANAGER)
+
+print "importing teleport data: 1101_teleport_to_race_track"
