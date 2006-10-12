@@ -5,8 +5,8 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #NPC
-VLADIMIR = 8302
-TUNATUN = 8537
+VLADIMIR = 31302
+TUNATUN = 31537
 
 #ITEMS
 BEAST_MEAT = 7547
@@ -17,12 +17,12 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
-   if event == "8302-1.htm" :
+   if event == "31302-1.htm" :
      st.giveItems(BEAST_MEAT,1)
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   if event == "8537-1.htm" :
+   if event == "31537-1.htm" :
      st.takeItems(BEAST_MEAT,1)
      st.giveItems(57,30000)
      st.unset("cond")
@@ -40,14 +40,14 @@ class Quest (JQuest) :
        if id == COMPLETED :
          htmltext = "<html><head><body>This quest has already been completed.</body></html>"
        elif st.getPlayer().getLevel() >= 63 :
-         htmltext = "8302-0.htm"
+         htmltext = "31302-0.htm"
        else:
          htmltext = "<html><head><body>Quest for characters level 63 or above.</body></html>"
          st.exitQuest(1)
      else :
-       htmltext = "8302-2.htm"
+       htmltext = "31302-2.htm"
    else :
-       htmltext = "8537-0.htm"
+       htmltext = "31537-0.htm"
    return htmltext
 
 QUEST       = Quest(19,"19_GoToThePastureland","Go To The Pastureland")

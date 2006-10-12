@@ -23,7 +23,7 @@ class Quest (JQuest) :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-      htmltext = "7349-03.htm"
+      htmltext = "30349-03.htm"
       st.giveItems(JENNIES_LETTER_ID,1)
     return htmltext
 
@@ -38,59 +38,59 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 7349 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30349 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
       if int(st.get("cond"))<15 :
         if st.getPlayer().getRace().ordinal() != 2 :
-          htmltext = "7349-00.htm"
+          htmltext = "30349-00.htm"
         elif st.getPlayer().getLevel() >= 3 :
-          htmltext = "7349-02.htm"
+          htmltext = "30349-02.htm"
           return htmltext
         else:
-          htmltext = "7349-01.htm"
+          htmltext = "30349-01.htm"
           st.exitQuest(1)
       else:
-        htmltext = "7349-01.htm"
+        htmltext = "30349-01.htm"
         st.exitQuest(1)
-   elif npcId == 7349 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30349 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7349 and int(st.get("cond"))==1 and st.getQuestItemsCount(JENNIES_LETTER_ID) :
-        htmltext = "7349-04.htm"
-   elif npcId == 7349 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE2_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE3_ID)==1 :
-        htmltext = "7349-05.htm"
+   elif npcId == 30349 and int(st.get("cond"))==1 and st.getQuestItemsCount(JENNIES_LETTER_ID) :
+        htmltext = "30349-04.htm"
+   elif npcId == 30349 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE2_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE3_ID)==1 :
+        htmltext = "30349-05.htm"
         st.takeItems(SENTRY_BLADE1_ID,1)
-   elif npcId == 7349 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==0 and (st.getQuestItemsCount(SENTRY_BLADE2_ID)==1 or st.getQuestItemsCount(SENTRY_BLADE3_ID)==1) :
-        htmltext = "7349-07.htm"
-   elif npcId == 7349 and int(st.get("cond"))==1 and st.getQuestItemsCount(OLD_BRONZE_SWORD_ID)==2 and int(st.get("onlyone"))==0 :
+   elif npcId == 30349 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==0 and (st.getQuestItemsCount(SENTRY_BLADE2_ID)==1 or st.getQuestItemsCount(SENTRY_BLADE3_ID)==1) :
+        htmltext = "30349-07.htm"
+   elif npcId == 30349 and int(st.get("cond"))==1 and st.getQuestItemsCount(OLD_BRONZE_SWORD_ID)==2 and int(st.get("onlyone"))==0 :
         if int(st.get("id")) != 168 :
           st.set("id","168")
-          htmltext = "7349-06.htm"
+          htmltext = "30349-06.htm"
           st.takeItems(OLD_BRONZE_SWORD_ID,2)
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
           st.set("onlyone","1")
           st.giveItems(ADENA_ID,820)
-   elif npcId == 7360 and int(st.get("cond"))==1 and st.getQuestItemsCount(JENNIES_LETTER_ID)==1 :
-        htmltext = "7360-01.htm"
+   elif npcId == 30360 and int(st.get("cond"))==1 and st.getQuestItemsCount(JENNIES_LETTER_ID)==1 :
+        htmltext = "30360-01.htm"
         st.takeItems(JENNIES_LETTER_ID,1)
         st.giveItems(SENTRY_BLADE1_ID,1)
         st.giveItems(SENTRY_BLADE2_ID,1)
         st.giveItems(SENTRY_BLADE3_ID,1)
-   elif npcId == 7360 and int(st.get("cond"))==1 and (st.getQuestItemsCount(SENTRY_BLADE1_ID)+st.getQuestItemsCount(SENTRY_BLADE2_ID)+st.getQuestItemsCount(SENTRY_BLADE3_ID))>0 :
-        htmltext = "7360-02.htm"
-   elif npcId == 7355 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE2_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==0 :
-        htmltext = "7355-01.htm"
+   elif npcId == 30360 and int(st.get("cond"))==1 and (st.getQuestItemsCount(SENTRY_BLADE1_ID)+st.getQuestItemsCount(SENTRY_BLADE2_ID)+st.getQuestItemsCount(SENTRY_BLADE3_ID))>0 :
+        htmltext = "30360-02.htm"
+   elif npcId == 30355 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE2_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==0 :
+        htmltext = "30355-01.htm"
         st.takeItems(SENTRY_BLADE2_ID,1)
         st.giveItems(OLD_BRONZE_SWORD_ID,1)
-   elif npcId == 7355 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE2_ID)==0 :
-        htmltext = "7355-02.htm"
+   elif npcId == 30355 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE2_ID)==0 :
+        htmltext = "30355-02.htm"
         st.takeItems(SENTRY_BLADE2_ID,1)
-   elif npcId == 7357 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE3_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==0 :
-        htmltext = "7357-01.htm"
+   elif npcId == 30357 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE3_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==0 :
+        htmltext = "30357-01.htm"
         st.takeItems(SENTRY_BLADE3_ID,1)
         st.giveItems(OLD_BRONZE_SWORD_ID,1)
-   elif npcId == 7357 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE3_ID)==0 :
-        htmltext = "7357-02.htm"
+   elif npcId == 30357 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE3_ID)==0 :
+        htmltext = "30357-02.htm"
         st.takeItems(SENTRY_BLADE3_ID,1)
    return htmltext
 
@@ -102,19 +102,19 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7349)
+QUEST.addStartNpc(30349)
 
-STARTING.addTalkId(7349)
+STARTING.addTalkId(30349)
 
-STARTED.addTalkId(7349)
-STARTED.addTalkId(7355)
-STARTED.addTalkId(7357)
-STARTED.addTalkId(7360)
+STARTED.addTalkId(30349)
+STARTED.addTalkId(30355)
+STARTED.addTalkId(30357)
+STARTED.addTalkId(30360)
 
 
-STARTED.addQuestDrop(7360,SENTRY_BLADE1_ID,1)
-STARTED.addQuestDrop(7355,OLD_BRONZE_SWORD_ID,1)
-STARTED.addQuestDrop(7357,OLD_BRONZE_SWORD_ID,1)
-STARTED.addQuestDrop(7349,JENNIES_LETTER_ID,1)
-STARTED.addQuestDrop(7360,SENTRY_BLADE2_ID,1)
-STARTED.addQuestDrop(7360,SENTRY_BLADE3_ID,1)
+STARTED.addQuestDrop(30360,SENTRY_BLADE1_ID,1)
+STARTED.addQuestDrop(30355,OLD_BRONZE_SWORD_ID,1)
+STARTED.addQuestDrop(30357,OLD_BRONZE_SWORD_ID,1)
+STARTED.addQuestDrop(30349,JENNIES_LETTER_ID,1)
+STARTED.addQuestDrop(30360,SENTRY_BLADE2_ID,1)
+STARTED.addQuestDrop(30360,SENTRY_BLADE3_ID,1)

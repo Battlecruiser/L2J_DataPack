@@ -14,7 +14,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7147-04.htm" :
+    if event == "30147-04.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -30,18 +30,18 @@ class Quest (JQuest) :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif st.getInt("cond") == 0 :
       if st.getPlayer().getRace().ordinal() == 2 :
-         htmltext = "7147-00.htm"
+         htmltext = "30147-00.htm"
          st.exitQuest(1)
       elif st.getPlayer().getLevel() >= 12 :
-         htmltext = "7147-02.htm"
+         htmltext = "30147-02.htm"
       else:
-         htmltext = "7147-01.htm"
+         htmltext = "30147-01.htm"
          st.exitQuest(1)
    else :
       if st.getQuestItemsCount(ELF_SKULL) < 3 and st.getQuestItemsCount(BONE_FRAGMENT3) < 10 :
-         htmltext = "7147-05.htm"
+         htmltext = "30147-05.htm"
       else  :
-         htmltext = "7147-06.htm"
+         htmltext = "30147-06.htm"
          st.giveItems(BONE_SHIELD,1)
          st.giveItems(57,24000)
          st.takeItems(ELF_SKULL,-1)
@@ -56,7 +56,7 @@ class Quest (JQuest) :
      npcId = npc.getNpcId()
      bones = st.getQuestItemsCount(BONE_FRAGMENT3)
      skulls = st.getQuestItemsCount(ELF_SKULL)
-     if npcId in [464,463,504] :
+     if npcId in [20464,20463,20504] :
        if bones < 10 :
          st.giveItems(BONE_FRAGMENT3,1)
          if bones == 9 and skulls == 3 :
@@ -80,21 +80,21 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7147)
+QUEST.addStartNpc(30147)
 
-CREATED.addTalkId(7147)
-STARTING.addTalkId(7147)
-STARTED.addTalkId(7147)
-COMPLETED.addTalkId(7147)
+CREATED.addTalkId(30147)
+STARTING.addTalkId(30147)
+STARTED.addTalkId(30147)
+COMPLETED.addTalkId(30147)
 
-STARTED.addKillId(33)
-STARTED.addKillId(345)
-STARTED.addKillId(371)
-STARTED.addKillId(463)
-STARTED.addKillId(464)
-STARTED.addKillId(504)
+STARTED.addKillId(20033)
+STARTED.addKillId(20345)
+STARTED.addKillId(20371)
+STARTED.addKillId(20463)
+STARTED.addKillId(20464)
+STARTED.addKillId(20504)
 
-STARTED.addQuestDrop(371,ELF_SKULL,1)
-STARTED.addQuestDrop(464,BONE_FRAGMENT3,1)
+STARTED.addQuestDrop(20371,ELF_SKULL,1)
+STARTED.addQuestDrop(20464,BONE_FRAGMENT3,1)
 
 print "importing quests: 162: Curse Of Fortress"

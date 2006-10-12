@@ -17,7 +17,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7370-04.htm" :
+    if event == "30370-04.htm" :
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
@@ -30,12 +30,12 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
      if st.getPlayer().getRace().ordinal() != 1 :
-       htmltext = "7370-00.htm"
+       htmltext = "30370-00.htm"
      elif st.getPlayer().getLevel() >= 3 :
-       htmltext = "7370-03.htm"
+       htmltext = "30370-03.htm"
        st.set("cond","0")
      else:
-       htmltext = "7370-02.htm"
+       htmltext = "30370-02.htm"
        st.exitQuest(1)
    elif id == COMPLETED :
      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
@@ -45,48 +45,48 @@ class Quest (JQuest) :
      except :
        cond = None
      if cond == 1 :
-       if npcId == 7370 :
-         htmltext = "7370-05.htm"
-       elif npcId == 7147 and st.getQuestItemsCount(SILVERY_SPIDERSILK) :
+       if npcId == 30370 :
+         htmltext = "30370-05.htm"
+       elif npcId == 30147 and st.getQuestItemsCount(SILVERY_SPIDERSILK) :
          st.takeItems(SILVERY_SPIDERSILK,1)
          st.giveItems(UNOS_RECEIPT,1)
          st.set("cond","2")
-         htmltext = "7147-01.htm"
+         htmltext = "30147-01.htm"
      elif cond == 2 :
-       if npcId == 7370 :
-         htmltext = "7370-05.htm"
-       elif npcId == 7147 and st.getQuestItemsCount(UNOS_RECEIPT) :
-         htmltext = "7147-02.htm"
-       elif npcId == 7149 and st.getQuestItemsCount(UNOS_RECEIPT) :
+       if npcId == 30370 :
+         htmltext = "30370-05.htm"
+       elif npcId == 30147 and st.getQuestItemsCount(UNOS_RECEIPT) :
+         htmltext = "30147-02.htm"
+       elif npcId == 30149 and st.getQuestItemsCount(UNOS_RECEIPT) :
          st.takeItems(UNOS_RECEIPT,1)
          st.giveItems(CELS_TICKET,1)
          st.set("cond","3")
-         htmltext = "7149-01.htm"
+         htmltext = "30149-01.htm"
      elif cond == 3 :
-       if npcId == 7370 :
-         htmltext = "7370-05.htm"
-       elif npcId == 7149 and st.getQuestItemsCount(CELS_TICKET) :
-         htmltext = "7149-02.htm"
-       elif npcId == 7152 and st.getQuestItemsCount(CELS_TICKET) :
+       if npcId == 30370 :
+         htmltext = "30370-05.htm"
+       elif npcId == 30149 and st.getQuestItemsCount(CELS_TICKET) :
+         htmltext = "30149-02.htm"
+       elif npcId == 30152 and st.getQuestItemsCount(CELS_TICKET) :
         st.takeItems(CELS_TICKET,st.getQuestItemsCount(CELS_TICKET))
         st.giveItems(NIGHTSHADE_LEAF,1)
         st.set("cond","4")
-        htmltext = "7152-01.htm"
+        htmltext = "30152-01.htm"
      elif cond == 4 :
-        if npcId == 7152 and st.getQuestItemsCount(NIGHTSHADE_LEAF) :
-          htmltext = "7152-02.htm"
-        elif npcId == 7149 and st.getQuestItemsCount(NIGHTSHADE_LEAF) :
-          htmltext = "7149-03.htm"
-        elif npcId == 7147 and st.getQuestItemsCount(NIGHTSHADE_LEAF) :
-          htmltext = "7147-03.htm"
-        elif npcId == 7370 and st.getQuestItemsCount(NIGHTSHADE_LEAF) :
+        if npcId == 30152 and st.getQuestItemsCount(NIGHTSHADE_LEAF) :
+          htmltext = "30152-02.htm"
+        elif npcId == 30149 and st.getQuestItemsCount(NIGHTSHADE_LEAF) :
+          htmltext = "30149-03.htm"
+        elif npcId == 30147 and st.getQuestItemsCount(NIGHTSHADE_LEAF) :
+          htmltext = "30147-03.htm"
+        elif npcId == 30370 and st.getQuestItemsCount(NIGHTSHADE_LEAF) :
           st.takeItems(NIGHTSHADE_LEAF,1)
           st.giveItems(LESSER_HEALING_POTION,1)
           st.addExpAndSp(1000,0)
           st.unset("cond")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
-          htmltext = "7370-06.htm"
+          htmltext = "30370-06.htm"
    return htmltext
 
 QUEST       = Quest(160,"160_NerupasFavor","Nerupas Favor")
@@ -96,20 +96,20 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7370)
+QUEST.addStartNpc(30370)
 
-CREATED.addTalkId(7370)
-STARTING.addTalkId(7370)
-COMPLETED.addTalkId(7370)
+CREATED.addTalkId(30370)
+STARTING.addTalkId(30370)
+COMPLETED.addTalkId(30370)
 
-STARTED.addTalkId(7147)
-STARTED.addTalkId(7149)
-STARTED.addTalkId(7152)
-STARTED.addTalkId(7370)
+STARTED.addTalkId(30147)
+STARTED.addTalkId(30149)
+STARTED.addTalkId(30152)
+STARTED.addTalkId(30370)
 
-STARTED.addQuestDrop(7370,SILVERY_SPIDERSILK,1)
-STARTED.addQuestDrop(7147,UNOS_RECEIPT,1)
-STARTED.addQuestDrop(7149,CELS_TICKET,1)
-STARTED.addQuestDrop(7152,NIGHTSHADE_LEAF,1)
+STARTED.addQuestDrop(30370,SILVERY_SPIDERSILK,1)
+STARTED.addQuestDrop(30147,UNOS_RECEIPT,1)
+STARTED.addQuestDrop(30149,CELS_TICKET,1)
+STARTED.addQuestDrop(30152,NIGHTSHADE_LEAF,1)
 
 print "importing quests: 160: Nerupas Favor"
