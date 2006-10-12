@@ -232,7 +232,7 @@ class Quest (JQuest) :
       else:
         st.giveItems(DUNINGS_KEY_ID,1)
         st.playSound("ItemSound.quest_itemget")
-   elif npcId in [201,200]:
+   elif npcId in [20201,20200]:
     st.set("id","0")
     if int(st.get("cond")) >= 1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) == 1 and st.getQuestItemsCount(NORMANS_LIST_ID) == 1 and st.getQuestItemsCount(GRAY_BONE_POWDER_ID) <= 68 :
      if st.getQuestItemsCount(GRAY_BONE_POWDER_ID) == 68 :
