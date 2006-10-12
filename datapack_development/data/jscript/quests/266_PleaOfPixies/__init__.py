@@ -12,7 +12,7 @@ GLASS_SHARD = 1336
 REC_LEATHER_BOOT = 2176
 REC_SPIRITSHOT = 3032
 
-DROP={530:[[0,8,1]],534:[[4,10,1],[0,4,2]],537:[[0,10,2]],525:[[5,10,2],[0,5,3]]}
+DROP={20530:[[0,8,1]],20534:[[4,10,1],[0,4,2]],20537:[[0,10,2]],20525:[[5,10,2],[0,5,3]]}
 
 class Quest (JQuest) :
 
@@ -20,7 +20,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "12091-03.htm" :
+    if event == "31852-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -33,16 +33,16 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getRace().ordinal() != 1 :
-       htmltext = "12091-00.htm"
+       htmltext = "31852-00.htm"
        st.exitQuest(1)
      elif st.getPlayer().getLevel()<3 :
-       htmltext = "12091-01.htm"
+       htmltext = "31852-01.htm"
        st.exitQuest(1)
      else :
-          htmltext = "12091-02.htm"
+          htmltext = "31852-02.htm"
    else :
      if st.getQuestItemsCount(PREDATORS_FANG)<100 :
-       htmltext = "12091-04.htm"
+       htmltext = "31852-04.htm"
      else :
        st.takeItems(PREDATORS_FANG,-1)
        n = st.getRandom(100)
@@ -57,7 +57,7 @@ class Quest (JQuest) :
           st.giveItems(ONYX,1)
        else:
           st.giveItems(GLASS_SHARD,1)
-       htmltext = "12091-05.htm"
+       htmltext = "31852-05.htm"
        st.exitQuest(1)
        st.playSound("ItemSound.quest_finish")
    return htmltext
@@ -89,18 +89,18 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(12091)
+QUEST.addStartNpc(31852)
 
-CREATED.addTalkId(12091)
-STARTING.addTalkId(12091)
-STARTED.addTalkId(12091)
-COMPLETED.addTalkId(12091)
+CREATED.addTalkId(31852)
+STARTING.addTalkId(31852)
+STARTED.addTalkId(31852)
+COMPLETED.addTalkId(31852)
 
-STARTED.addKillId(525)
-STARTED.addKillId(530)
-STARTED.addKillId(534)
-STARTED.addKillId(537)
+STARTED.addKillId(20525)
+STARTED.addKillId(20530)
+STARTED.addKillId(20534)
+STARTED.addKillId(20537)
 
-STARTED.addQuestDrop(530,PREDATORS_FANG,1)
+STARTED.addQuestDrop(20530,PREDATORS_FANG,1)
 
 print "importing quests: 266: Plea Of Pixies"

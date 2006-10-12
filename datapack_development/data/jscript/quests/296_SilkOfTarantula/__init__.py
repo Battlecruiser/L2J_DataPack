@@ -16,20 +16,20 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7519-03.htm" :
+    if event == "30519-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-    elif event == "7519-06.htm" :
+    elif event == "30519-06.htm" :
       st.takeItems(TARANTULA_SPINNERETTE,-1)
       st.exitQuest(1)
       st.playSound("ItemSound.quest_finish")
-    elif event == "7548-02.htm" :
+    elif event == "30548-02.htm" :
       if st.getQuestItemsCount(TARANTULA_SPINNERETTE) :
-        htmltext = "7548-03.htm"
+        htmltext = "30548-03.htm"
         st.giveItems(TARANTULA_SPIDER_SILK,15+st.getRandom(9))
         st.takeItems(TARANTULA_SPINNERETTE,1)
-    elif event == "7519-09.htm" :
+    elif event == "30519-09.htm" :
       st.exitQuest(1)
     return htmltext
 
@@ -39,26 +39,26 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
-   if npcId == 7519 :
+   if npcId == 30519 :
      if int(st.get("cond"))==0 :
        if st.getPlayer().getLevel() >= 15 :
          if st.getQuestItemsCount(RING_OF_RACCOON)==st.getQuestItemsCount(RING_OF_FIREFLY)==0 :
-           htmltext = "7519-08.htm"
+           htmltext = "30519-08.htm"
          else:
-           htmltext = "7519-02.htm"
+           htmltext = "30519-02.htm"
        else:
-         htmltext = "7519-01.htm"
+         htmltext = "30519-01.htm"
          st.exitQuest(1)
      else :
        count = st.getQuestItemsCount(TARANTULA_SPIDER_SILK)
        if count == 0 :
-         htmltext = "7519-04.htm"
+         htmltext = "30519-04.htm"
        else :
-         htmltext = "7519-05.htm"
+         htmltext = "30519-05.htm"
          st.giveItems(ADENA,count*20)
          st.takeItems(TARANTULA_SPIDER_SILK,count)
    else :
-     htmltext = "7548-01.htm"
+     htmltext = "30548-01.htm"
    return htmltext
 
  def onKill (self,npc,st):
@@ -78,20 +78,20 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7519)
+QUEST.addStartNpc(30519)
 
-CREATED.addTalkId(7519)
-STARTING.addTalkId(7519)
-COMPLETED.addTalkId(7519)
+CREATED.addTalkId(30519)
+STARTING.addTalkId(30519)
+COMPLETED.addTalkId(30519)
 
-STARTED.addTalkId(7519)
-STARTED.addTalkId(7548)
+STARTED.addTalkId(30519)
+STARTED.addTalkId(30548)
 
-STARTED.addKillId(394)
-STARTED.addKillId(403)
-STARTED.addKillId(508)
+STARTED.addKillId(20394)
+STARTED.addKillId(20403)
+STARTED.addKillId(20508)
 
-STARTED.addQuestDrop(508,TARANTULA_SPIDER_SILK,1)
-STARTED.addQuestDrop(394,TARANTULA_SPINNERETTE,1)
+STARTED.addQuestDrop(20508,TARANTULA_SPIDER_SILK,1)
+STARTED.addQuestDrop(20394,TARANTULA_SPINNERETTE,1)
 
 print "importing quests: 296: Silk Of Tarantula"

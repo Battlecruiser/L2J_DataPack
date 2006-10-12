@@ -15,17 +15,17 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7535-03.htm" :
+    if event == "30535-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-    elif event == "7535-06.htm" :
+    elif event == "30535-06.htm" :
       st.takeItems(TORN_MAP_FRAGMENT,-1)
       st.exitQuest(1)
       st.playSound("ItemSound.quest_finish")
-    elif event == "7539-02.htm" :
+    elif event == "30539-02.htm" :
       if st.getQuestItemsCount(TORN_MAP_FRAGMENT) >=4 :
-        htmltext = "7539-03.htm"
+        htmltext = "30539-03.htm"
         st.giveItems(HIDDEN_VEIN_MAP,1)
         st.takeItems(TORN_MAP_FRAGMENT,4)
     return htmltext
@@ -36,37 +36,37 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
-   if npcId == 7535 :
+   if npcId == 30535 :
      if int(st.get("cond"))==0 :
        if st.getPlayer().getRace().ordinal() != 4 :
-         htmltext = "7535-00.htm"
+         htmltext = "30535-00.htm"
          st.exitQuest(1)
        elif st.getPlayer().getLevel() >= 6 :
-         htmltext = "7535-02.htm"
+         htmltext = "30535-02.htm"
          return htmltext
        else:
-         htmltext = "7535-01.htm"
+         htmltext = "30535-01.htm"
          st.exitQuest(1)
      else :
        if st.getQuestItemsCount(CHRYSOLITE_ORE)==0 :
          if st.getQuestItemsCount(HIDDEN_VEIN_MAP)==0 :
-           htmltext = "7535-04.htm"
+           htmltext = "30535-04.htm"
          else :
-           htmltext = "7535-08.htm"
+           htmltext = "30535-08.htm"
            st.giveItems(ADENA,st.getQuestItemsCount(HIDDEN_VEIN_MAP)*1000)
            st.takeItems(HIDDEN_VEIN_MAP,-1)
        else :
          if st.getQuestItemsCount(HIDDEN_VEIN_MAP)==0 :
-           htmltext = "7535-05.htm"
+           htmltext = "30535-05.htm"
            st.giveItems(ADENA,st.getQuestItemsCount(CHRYSOLITE_ORE)*10)
            st.takeItems(CHRYSOLITE_ORE,-1)
          else :
-           htmltext = "7535-09.htm"
+           htmltext = "30535-09.htm"
            st.giveItems(ADENA,st.getQuestItemsCount(CHRYSOLITE_ORE)*10+st.getQuestItemsCount(HIDDEN_VEIN_MAP)*1000)
            st.takeItems(HIDDEN_VEIN_MAP,-1)
            st.takeItems(CHRYSOLITE_ORE,-1)
-   elif npcId == 7539 :
-      htmltext = "7539-01.htm"
+   elif npcId == 30539 :
+      htmltext = "30539-01.htm"
    return htmltext
 
  def onKill (self,npc,st):
@@ -86,21 +86,21 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7535)
+QUEST.addStartNpc(30535)
 
-CREATED.addTalkId(7535)
-STARTING.addTalkId(7535)
-STARTED.addTalkId(7535)
-COMPLETED.addTalkId(7535)
+CREATED.addTalkId(30535)
+STARTING.addTalkId(30535)
+STARTED.addTalkId(30535)
+COMPLETED.addTalkId(30535)
 
-STARTED.addTalkId(7539)
+STARTED.addTalkId(30539)
 
-STARTED.addKillId(446)
-STARTED.addKillId(447)
-STARTED.addKillId(448)
+STARTED.addKillId(20446)
+STARTED.addKillId(20447)
+STARTED.addKillId(20448)
 
-STARTED.addQuestDrop(7539,HIDDEN_VEIN_MAP,1)
-STARTED.addQuestDrop(446,CHRYSOLITE_ORE,1)
-STARTED.addQuestDrop(447,TORN_MAP_FRAGMENT,1)
+STARTED.addQuestDrop(30539,HIDDEN_VEIN_MAP,1)
+STARTED.addQuestDrop(20446,CHRYSOLITE_ORE,1)
+STARTED.addQuestDrop(20447,TORN_MAP_FRAGMENT,1)
 
 print "importing quests: 293: Hidden Vein"

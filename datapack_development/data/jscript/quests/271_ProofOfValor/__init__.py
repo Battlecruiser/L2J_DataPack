@@ -14,12 +14,12 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7577-03.htm" :
+    if event == "30577-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
       if st.getQuestItemsCount(NECKLACE_OF_COURAGE) or st.getQuestItemsCount(NECKLACE_OF_VALOR) :
-        htmltext = "7577-07.htm"
+        htmltext = "30577-07.htm"
     return htmltext
 
  def onTalk (Self,npc,st):
@@ -29,19 +29,19 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
    if id == COMPLETED :
-     htmltext = "7577-06.htm"
+     htmltext = "30577-06.htm"
    elif int(st.get("cond")) == 0 :
      if st.getPlayer().getRace().ordinal() != 3 :
-        htmltext = "7577-00.htm"
+        htmltext = "30577-00.htm"
         st.exitQuest(1)
      else :
         if st.getPlayer().getLevel() < 4 :
-           htmltext = "7577-01.htm"
+           htmltext = "30577-01.htm"
            st.exitQuest(1)
         else :
-           htmltext = "7577-02.htm"
+           htmltext = "30577-02.htm"
    elif int(st.get("cond")) == 1 :
-     htmltext = "7577-04.htm"
+     htmltext = "30577-04.htm"
    elif st.getQuestItemsCount(KASHA_WOLF_FANG) >= 50 :
      st.set("cond","0")
      st.setState(COMPLETED)
@@ -51,7 +51,7 @@ class Quest (JQuest) :
         st.giveItems(NECKLACE_OF_VALOR,1)
      else :
         st.giveItems(NECKLACE_OF_COURAGE,1)
-     htmltext = "7577-05.htm"
+     htmltext = "30577-05.htm"
    return htmltext
 
  def onKill (self,npc,st):
@@ -77,14 +77,14 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7577)
+QUEST.addStartNpc(30577)
 
-CREATED.addTalkId(7577)
-STARTING.addTalkId(7577)
-STARTED.addTalkId(7577)
-COMPLETED.addTalkId(7577)
+CREATED.addTalkId(30577)
+STARTING.addTalkId(30577)
+STARTED.addTalkId(30577)
+COMPLETED.addTalkId(30577)
 
-STARTED.addKillId(475)
-STARTED.addQuestDrop(475,KASHA_WOLF_FANG,1)
+STARTED.addKillId(20475)
+STARTED.addQuestDrop(20475,KASHA_WOLF_FANG,1)
 
 print "importing quests: 271: Proof Of Valor"

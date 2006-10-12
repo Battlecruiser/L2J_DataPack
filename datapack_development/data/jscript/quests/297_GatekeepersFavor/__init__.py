@@ -16,12 +16,12 @@ class Quest (JQuest) :
     htmltext = event
     if event == "1" :
        if st.getPlayer().getLevel() >= 15 :
-          htmltext = "7540-03.htm"
+          htmltext = "30540-03.htm"
           st.set("cond","1")
           st.setState(STARTED)
           st.playSound("ItemSound.quest_accept")
        else:
-          htmltext = "7540-01.htm"
+          htmltext = "30540-01.htm"
     return htmltext
 
  def onTalk (Self,npc,st):
@@ -30,13 +30,13 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
       st.set("cond","0")
-   if npcId == 7540 :
+   if npcId == 30540 :
       if int(st.get("cond"))==0 :
-         htmltext = "7540-02.htm"
+         htmltext = "30540-02.htm"
       elif int(st.get("cond"))==1 and st.getQuestItemsCount(STARSTONE2_ID)<20 :
-         htmltext = "7540-04.htm"
+         htmltext = "30540-04.htm"
       elif int(st.get("cond"))==2 and st.getQuestItemsCount(STARSTONE2_ID)==20 :
-         htmltext = "7540-05.htm"
+         htmltext = "30540-05.htm"
          st.takeItems(STARSTONE2_ID,-1)
          st.giveItems(GATEKEEPER_TOKEN_ID,2)
          st.exitQuest(1)
@@ -45,7 +45,7 @@ class Quest (JQuest) :
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
-   if npcId == 521 :
+   if npcId == 20521 :
       if int(st.get("cond")) == 1 and st.getQuestItemsCount(STARSTONE2_ID) < 20 :
          if st.getRandom(2) == 0 :
             st.giveItems(STARSTONE2_ID,1) 
@@ -63,11 +63,11 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 
-QUEST.addStartNpc(7540)
-CREATED.addTalkId(7540)
+QUEST.addStartNpc(30540)
+CREATED.addTalkId(30540)
 
-STARTED.addTalkId(7540)
-STARTED.addKillId(521)
-STARTED.addQuestDrop(521,STARSTONE2_ID,1)
+STARTED.addTalkId(30540)
+STARTED.addKillId(20521)
+STARTED.addQuestDrop(20521,STARSTONE2_ID,1)
 
 print "importing quests: 297: Gatekeepers Favor"

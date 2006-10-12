@@ -8,8 +8,8 @@ BAT_FANG = 1491
 RING_OF_RACCOON = 1508
 ADENA = 57
 DROP = {
-480:[[6,10,1],[3,6,2],[0,3,3]],
-370:[[7,10,1],[4,7,2],[2,4,3],[0,2,4]]
+20480:[[6,10,1],[3,6,2],[0,3,3]],
+20370:[[7,10,1],[4,7,2],[2,4,3],[0,2,4]]
 }
 class Quest (JQuest) :
 
@@ -17,7 +17,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7534-03.htm" :
+    if event == "30534-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -30,22 +30,22 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getRace().ordinal() != 4 :
-       htmltext = "7534-00.htm"
+       htmltext = "30534-00.htm"
        st.exitQuest(1)
      elif st.getPlayer().getLevel() >= 10 :
-       htmltext = "7534-02.htm"
+       htmltext = "30534-02.htm"
      else:
-       htmltext = "7534-01.htm"
+       htmltext = "30534-01.htm"
        st.exitQuest(1)
    else:
      if st.getQuestItemsCount(BAT_FANG)<100 :
-       htmltext = "7534-04.htm"
+       htmltext = "30534-04.htm"
      else :
        if st.getQuestItemsCount(RING_OF_RACCOON) ==0 :
-         htmltext = "7534-05.htm"
+         htmltext = "30534-05.htm"
          st.giveItems(RING_OF_RACCOON,1)
        else :
-         htmltext = "7534-06.htm"
+         htmltext = "30534-06.htm"
          st.giveItems(ADENA,2400)
        st.addExpAndSp(0,600)
        st.takeItems(BAT_FANG,-1)
@@ -78,16 +78,16 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7534)
+QUEST.addStartNpc(30534)
 
-CREATED.addTalkId(7534)
-STARTING.addTalkId(7534)
-STARTED.addTalkId(7534)
-COMPLETED.addTalkId(7534)
+CREATED.addTalkId(30534)
+STARTING.addTalkId(30534)
+STARTED.addTalkId(30534)
+COMPLETED.addTalkId(30534)
 
-STARTED.addKillId(370)
-STARTED.addKillId(480)
+STARTED.addKillId(20370)
+STARTED.addKillId(20480)
 
-STARTED.addQuestDrop(480,BAT_FANG,1)
+STARTED.addQuestDrop(20480,BAT_FANG,1)
 
 print "importing quests: 294: Covert Business"

@@ -13,7 +13,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7222-03.htm" :
+    if event == "30222-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -26,20 +26,20 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getLevel() >= 15 :
-       htmltext = "7222-02.htm"
+       htmltext = "30222-02.htm"
      else:
-       htmltext = "7222-01.htm"
+       htmltext = "30222-01.htm"
        st.exitQuest(1)
    else :
      if st.getQuestItemsCount(GIANT_SPIDER_LEG) >= 8 :
        st.giveItems(ADENA,1000)
        st.addExpAndSp(2000,0)
        st.takeItems(GIANT_SPIDER_LEG,-1)
-       htmltext = "7222-05.htm"
+       htmltext = "30222-05.htm"
        st.exitQuest(1)
        st.playSound("ItemSound.quest_finish")
      else:
-       htmltext = "7222-04.htm"
+       htmltext = "30222-04.htm"
    return htmltext
 
  def onKill (self,npc,st):
@@ -60,17 +60,17 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7222)
+QUEST.addStartNpc(30222)
 
-CREATED.addTalkId(7222)
-STARTING.addTalkId(7222)
-STARTED.addTalkId(7222)
-COMPLETED.addTalkId(7222)
+CREATED.addTalkId(30222)
+STARTING.addTalkId(30222)
+STARTED.addTalkId(30222)
+COMPLETED.addTalkId(30222)
 
-STARTED.addKillId(308)
-STARTED.addKillId(460)
-STARTED.addKillId(466)
+STARTED.addKillId(20308)
+STARTED.addKillId(20460)
+STARTED.addKillId(20466)
 
-STARTED.addQuestDrop(460,GIANT_SPIDER_LEG,1)
+STARTED.addQuestDrop(20460,GIANT_SPIDER_LEG,1)
 
 print "importing quests: 261: Dream Of Moneylender1"
