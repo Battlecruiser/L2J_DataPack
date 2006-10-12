@@ -13,7 +13,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7351-04.htm" :
+    if event == "30351-04.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -26,23 +26,23 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getLevel() >= 18 :
-       htmltext = "7351-03.htm"
+       htmltext = "30351-03.htm"
      else:
-       htmltext = "7351-02.htm"
+       htmltext = "30351-02.htm"
        st.exitQuest(1)
    else :
      if st.getQuestItemsCount(VENOM_SAC)<10 :
-       htmltext = "7351-05.htm"
+       htmltext = "30351-05.htm"
      else :
        st.takeItems(VENOM_SAC,-1)
        st.giveItems(ADENA,5810)
        st.exitQuest(1)
        st.playSound("ItemSound.quest_finish")
-       htmltext = "7351-06.htm"
+       htmltext = "30351-06.htm"
    return htmltext
 
  def onKill (self,npc,st):
-   chance=12*(1+((npc.getNpcId()^34)/4))
+   chance=12*(1+(((npc.getNpcId()-20000)^34)/4))
    count=st.getQuestItemsCount(VENOM_SAC)
    if count < 10 and st.getRandom(100) < chance :
      st.giveItems(VENOM_SAC,1)
@@ -60,17 +60,17 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7351)
+QUEST.addStartNpc(30351)
 
-CREATED.addTalkId(7351)
-STARTING.addTalkId(7351)
-STARTED.addTalkId(7351)
-COMPLETED.addTalkId(7351)
+CREATED.addTalkId(30351)
+STARTING.addTalkId(30351)
+STARTED.addTalkId(30351)
+COMPLETED.addTalkId(30351)
 
-STARTED.addKillId(34)
-STARTED.addKillId(38)
-STARTED.addKillId(43)
+STARTED.addKillId(20034)
+STARTED.addKillId(20038)
+STARTED.addKillId(20043)
 
-STARTED.addQuestDrop(34,VENOM_SAC,1)
+STARTED.addQuestDrop(20034,VENOM_SAC,1)
 
 print "importing quests: 324: Sweetest Venom"

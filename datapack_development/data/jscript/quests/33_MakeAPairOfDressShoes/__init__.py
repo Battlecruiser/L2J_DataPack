@@ -15,15 +15,15 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
-   if event == "7838-1.htm" :
+   if event == "30838-1.htm" :
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   if event == "8520-1.htm" :
+   if event == "31520-1.htm" :
      st.set("cond","2")
-   if event == "7838-3.htm" :
+   if event == "30838-3.htm" :
      st.set("cond","3")
-   if event == "7838-5.htm" :
+   if event == "30838-5.htm" :
      if st.getQuestItemsCount(LEATHER) >= 200 and st.getQuestItemsCount(THREAD) >= 600 and st.getQuestItemsCount(ADENA) >= 200000 :
        st.takeItems(LEATHER,200)
        st.takeItems(THREAD,600)
@@ -31,13 +31,13 @@ class Quest (JQuest) :
        st.set("cond","4")
      else :
        htmltext = "You don't have enough materials"
-   if event == "7164-1.htm" :
+   if event == "30164-1.htm" :
      if st.getQuestItemsCount(ADENA) >= 300000 :
        st.takeItems(ADENA,300000)
        st.set("cond","5")
      else :
        htmltext = "You don't have enough materials"
-   if event == "7838-7.htm" :
+   if event == "30838-7.htm" :
      st.giveItems(DRESS_SHOES_BOX,1)
      st.playSound("ItemSound.quest_finish")
      st.exitQuest(1)
@@ -50,25 +50,25 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
    cond = int(st.get("cond"))
-   if npcId == 7838 and cond == 0 and st.getQuestItemsCount(DRESS_SHOES_BOX) == 0 :
+   if npcId == 30838 and cond == 0 and st.getQuestItemsCount(DRESS_SHOES_BOX) == 0 :
      fwear=st.getPlayer().getQuestState("37_PleaseMakeMeFormalWear")
      if fwear :
        if fwear.get("cond") == "7" :
-         htmltext = "7838-0.htm"
+         htmltext = "30838-0.htm"
        else:
          st.exitQuest(1)
      else:
        st.exitQuest(1)
-   elif npcId == 8520 and cond == 1 :
-     htmltext = "8520-0.htm"
-   elif npcId == 7838 and cond == 2 :
-     htmltext = "7838-2.htm"
-   elif npcId == 7838 and cond == 3 :
-     htmltext = "7838-4.htm"
-   elif npcId == 7164 and cond == 4 :
-     htmltext = "7164-0.htm"
-   elif npcId == 7838 and cond == 5 :
-     htmltext = "7838-6.htm"
+   elif npcId == 31520 and cond == 1 :
+     htmltext = "31520-0.htm"
+   elif npcId == 30838 and cond == 2 :
+     htmltext = "30838-2.htm"
+   elif npcId == 30838 and cond == 3 :
+     htmltext = "30838-4.htm"
+   elif npcId == 30164 and cond == 4 :
+     htmltext = "30164-0.htm"
+   elif npcId == 30838 and cond == 5 :
+     htmltext = "30838-6.htm"
    return htmltext
 
 QUEST       = Quest(33,"33_MakeAPairOfDressShoes","Make A Pair Of Dress Shoes")
@@ -76,10 +76,10 @@ CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7838)
-CREATED.addTalkId(7838)
-STARTED.addTalkId(7838)
-STARTED.addTalkId(7164)
-STARTED.addTalkId(8520)
+QUEST.addStartNpc(30838)
+CREATED.addTalkId(30838)
+STARTED.addTalkId(30838)
+STARTED.addTalkId(30164)
+STARTED.addTalkId(31520)
 
 print "importing quests: 33: Make A Pair Of Dress Shoes"

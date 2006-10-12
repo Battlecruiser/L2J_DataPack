@@ -14,11 +14,11 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7155-04.htm" :
+    if event == "30155-04.htm" :
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
-    elif event == "7155-08.htm" :
+    elif event == "30155-08.htm" :
         st.exitQuest(1)
         st.playSound("ItemSound.quest_finish")
     return htmltext
@@ -30,28 +30,28 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getRace().ordinal() != 1 :
-       htmltext = "7155-00.htm"
+       htmltext = "30155-00.htm"
        st.exitQuest(1)
      elif st.getPlayer().getLevel() >= 18 :
-       htmltext = "7155-03.htm"
+       htmltext = "30155-03.htm"
      else:
-       htmltext = "7155-02.htm"
+       htmltext = "30155-02.htm"
        st.exitQuest(1)
    else :
      rats=st.getQuestItemsCount(WERERAT_FANG)
      varool=st.getQuestItemsCount(VAROOL_FOULCLAWS_FANG)
      if rats or varool :
-       htmltext = "7155-07.htm"
+       htmltext = "30155-07.htm"
        st.giveItems(ADENA,rats*60+varool*10000)
        st.takeItems(WERERAT_FANG,-1)
        st.takeItems(VAROOL_FOULCLAWS_FANG,-1)
      else:
-       htmltext = "7155-05.htm"
+       htmltext = "30155-05.htm"
    return htmltext
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
-   if npcId == 5020 :
+   if npcId == 27020 :
      if st.getQuestItemsCount(VAROOL_FOULCLAWS_FANG) == 0 and st.getRandom(10)>7:
        st.giveItems(VAROOL_FOULCLAWS_FANG,1)
        st.playSound("ItemSound.quest_middle")
@@ -68,18 +68,18 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7155)
+QUEST.addStartNpc(30155)
 
-CREATED.addTalkId(7155)
-STARTING.addTalkId(7155)
-STARTED.addTalkId(7155)
-COMPLETED.addTalkId(7155)
+CREATED.addTalkId(30155)
+STARTING.addTalkId(30155)
+STARTED.addTalkId(30155)
+COMPLETED.addTalkId(30155)
 
-STARTED.addKillId(40)
-STARTED.addKillId(47)
-STARTED.addKillId(5020)
+STARTED.addKillId(20040)
+STARTED.addKillId(20047)
+STARTED.addKillId(27020)
 
-STARTED.addQuestDrop(40,WERERAT_FANG,1)
-STARTED.addQuestDrop(5020,VAROOL_FOULCLAWS_FANG,1)
+STARTED.addQuestDrop(20040,WERERAT_FANG,1)
+STARTED.addQuestDrop(27020,VAROOL_FOULCLAWS_FANG,1)
 
 print "importing quests: 316: Destroy Plaguebringers"

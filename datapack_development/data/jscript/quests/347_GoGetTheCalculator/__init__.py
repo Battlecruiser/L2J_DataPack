@@ -7,13 +7,13 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 # NPCs to talk to
-BRUNON = 7526
-SILVERA = 7527
-SPIRON = 7532
-BALANKI = 7533
+BRUNON = 30526
+SILVERA = 30527
+SPIRON = 30532
+BALANKI = 30533
 
 # MOBs to kill
-GEMSTONE_BEAST = 540    # drops "gemstone beast's crystal" at 50% chance
+GEMSTONE_BEAST = 20540    # drops "gemstone beast's crystal" at 50% chance
 
 # quest items
 GEMSTONE_BEAST_CRYSTAL = 4286
@@ -33,7 +33,7 @@ class Quest (JQuest) :
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
         htmltext = str(BRUNON)+"-02.htm"
-    elif event == "7533_1" :
+    elif event == "30533_1" :
         if st.getQuestItemsCount(ADENA)>100 :
             st.takeItems(ADENA, 100)
             if int(st.get("cond"))== 1:
@@ -43,17 +43,17 @@ class Quest (JQuest) :
             htmltext = str(BALANKI)+"-02.htm"
         else :
             htmltext = str(BALANKI)+"-03.htm"
-    elif event == "7532_1" :
+    elif event == "30532_1" :
         htmltext = str(SPIRON)+"-02a.htm"
         if int(st.get("cond"))== 1:
             st.set("cond","3")
         else :
             st.set("cond","4")
-    elif event == "7532_2" :
+    elif event == "30532_2" :
         htmltext = str(SPIRON)+"-02b.htm"
-    elif event == "7532_3" :
+    elif event == "30532_3" :
         htmltext = str(SPIRON)+"-02c.htm"
-    elif event == "7526_1" :
+    elif event == "30526_1" :
         st.giveItems(CALCULATOR,1)
         st.takeItems(CALCULATOR_Q,1)
         st.playSound("ItemSound.quest_middle")
@@ -61,7 +61,7 @@ class Quest (JQuest) :
         st.set("cond","0")
         st.exitQuest(1)
         htmltext = str(BRUNON)+"-05.htm"
-    elif event == "7526_2" :
+    elif event == "30526_2" :
         st.giveItems(ADENA,1000)
         st.takeItems(CALCULATOR_Q,1)
         st.playSound("ItemSound.quest_middle")
@@ -73,7 +73,6 @@ class Quest (JQuest) :
 
 
  def onTalk (Self,npc,st):
-
     npcId = npc.getNpcId()
     htmltext = "<html><head><body>I have nothing to say you</body></html>"
     id = st.getState()
@@ -103,7 +102,6 @@ class Quest (JQuest) :
     return htmltext
 
  def onKill (self,npc,st):
-
    npcId = npc.getNpcId()
    if npcId == GEMSTONE_BEAST and int(st.get("cond"))==5 and st.getRandom(2)==1 and st.getQuestItemsCount(GEMSTONE_BEAST_CRYSTAL)<10 :
         st.giveItems(GEMSTONE_BEAST_CRYSTAL,1)
