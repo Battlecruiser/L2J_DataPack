@@ -17,16 +17,16 @@ FRY_STN,FRY_STN_DLX,FSN_LIST,FSN_LIST_DLX,TD_BCK_SKN,JUICE,SCALE_1,EX_EGG,\
 SCALE_2,ZW_EGG,SCALE_3,KA_EGG,SCALE_4,SU_EGG,SCALE_5,SH_EGG,FRY_DUST = range(3816,3832)+[3499]
 
 #NPCs
-PM_COOPER,SG_CRONOS,GD_BYRON,MC_MARIA,FR_MYMYU = 7829,7610,7711,7608,7747
-DK_EXARION,DK_ZWOV,DK_KALIBRAN,WM_SUZET,WM_SHAMHAI = range(7748,7753)
+PM_COOPER,SG_CRONOS,GD_BYRON,MC_MARIA,FR_MYMYU = 30829,30610,30711,30608,30747
+DK_EXARION,DK_ZWOV,DK_KALIBRAN,WM_SUZET,WM_SHAMHAI = range(30748,30753)
 
 #mobs
-TD_LORD   = 231 #toad lord
-LO_LZRD_W = 580 #exarion's
-MS_SPIDER = 233 #zwov's
-RD_SCVNGR = 551 #kalibran's
-BO_OVERLD = 270 #suzet's
-DD_SEEKER = 202 #shamhai's
+TD_LORD   = 20231 #toad lord
+LO_LZRD_W = 20580 #exarion's
+MS_SPIDER = 20233 #zwov's
+RD_SCVNGR = 20551 #kalibran's
+BO_OVERLD = 20270 #suzet's
+DD_SEEKER = 20202 #shamhai's
 
 #Rewards
 FOOD        = 4038
@@ -508,7 +508,7 @@ class Quest (JQuest):
                   st.playSound("ItemSound.quest_middle")
   #fairy stone destruction    
     elif id == STARTING and st.getQuestItemsCount(FRY_STN_DLX) == 1 :
-      if npcid in range(589,600)+[719]:
+      if npcid in range(20589,20600)+[20719]:
          st.takeItems(FRY_STN_DLX,1)
          st.set("progress","7")
          return "you lost fairy stone deluxe!"
@@ -534,7 +534,7 @@ for i in [3499]+range(3816,3832):
 #back skins
 STARTING.addKillId(TD_LORD)
 #fairy stone dlx destroyers
-for i in range(589,600)+[719]:
+for i in range(20589,20600)+[20719]:
     STARTING.addKillId(i)
 #eggs
 STARTED.addKillId(LO_LZRD_W)
@@ -553,7 +553,7 @@ STARTING.addTalkId(MC_MARIA)
 STARTING.addTalkId(FR_MYMYU)
 
 STARTED.addTalkId(FR_MYMYU)
-for i in range(7748,7753):
+for i in range(30748,30753):
     STARTED.addTalkId(i)
 
 print "importing quests: 420: Little Wings"

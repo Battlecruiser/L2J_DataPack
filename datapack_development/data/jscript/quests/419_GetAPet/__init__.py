@@ -10,47 +10,37 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 REQUIRED_SPIDER_LEGS = 50
 #Quest items
-ANIMAL_LOVERS_LIST1 = 3417
-
-ANIMAL_SLAYER_LIST1 = 3418
-ANIMAL_SLAYER_LIST2 = 3419
-ANIMAL_SLAYER_LIST3 = 3420
-ANIMAL_SLAYER_LIST4 = 3421
-ANIMAL_SLAYER_LIST5 = 3422
-
-SPIDER_LEG1 = 3423
-SPIDER_LEG2 = 3424
-SPIDER_LEG3 = 3425
-SPIDER_LEG4 = 3426
-SPIDER_LEG5 = 3427
+ANIMAL_LOVERS_LIST1,ANIMAL_SLAYER_LIST1,ANIMAL_SLAYER_LIST2,ANIMAL_SLAYER_LIST3,\
+ANIMAL_SLAYER_LIST4,ANIMAL_SLAYER_LIST5,SPIDER_LEG1,SPIDER_LEG2,SPIDER_LEG3,    \
+SPIDER_LEG4,SPIDER_LEG5 = range(3417,3428)
 #Chance of drop in %
 SPIDER_LEG_DROP = 100
 #mobs
 #1 humans
-SPIDER_H1 = 103 #Giant Spider
-SPIDER_H2 = 106 #Talon Spider
-SPIDER_H3 = 108 #Blade Spider
+SPIDER_H1 = 20103 #Giant Spider
+SPIDER_H2 = 20106 #Talon Spider
+SPIDER_H3 = 20108 #Blade Spider
 #2 elves
-SPIDER_LE1 = 460 # Crimson Spider
-SPIDER_LE2 = 308 # Hook Spider
-SPIDER_LE3 = 466 # Pincer Spider
+SPIDER_LE1 = 20460 # Crimson Spider
+SPIDER_LE2 = 20308 # Hook Spider
+SPIDER_LE3 = 20466 # Pincer Spider
 #3 dark elves
-SPIDER_DE1 =  25 # Lesser Dark Horror
-SPIDER_DE2 = 105 # Dark Horror 
-SPIDER_DE3 =  34 # Prowler
+SPIDER_DE1 = 20025 # Lesser Dark Horror
+SPIDER_DE2 = 20105 # Dark Horror 
+SPIDER_DE3 = 20034 # Prowler
 #4 orcs
-SPIDER_O1 = 474 # Kasha Spider
-SPIDER_O2 = 476 # Kasha Fang Spider
-SPIDER_O3 = 478 # Kasha Blade Spider
+SPIDER_O1 = 20474 # Kasha Spider
+SPIDER_O2 = 20476 # Kasha Fang Spider
+SPIDER_O3 = 20478 # Kasha Blade Spider
 #5 dwarves
-SPIDER_D1 = 403 # Hunter Tarantula
-SPIDER_D2 = 508 # Plunder Tarantula
+SPIDER_D1 = 20403 # Hunter Tarantula
+SPIDER_D2 = 20508 # Plunder Tarantula
 
 #NPCs
-PET_MANAGER_MARTIN = 7731
-GK_BELLA = 7256
-MC_ELLIE = 7091
-GD_METTY = 7072
+PET_MANAGER_MARTIN = 30731
+GK_BELLA = 30256
+MC_ELLIE = 30091
+GD_METTY = 30072
 
 #Rewards
 WOLF_COLLAR = 2375
@@ -205,7 +195,6 @@ class Quest (JQuest):
     return
 
   def onKill (self,npc,st):
-
       npcId = npc.getNpcId()
       collected = getCount_proof(st)
       if collected < REQUIRED_SPIDER_LEGS:
