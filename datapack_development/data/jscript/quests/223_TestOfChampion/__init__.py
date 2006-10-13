@@ -216,7 +216,7 @@ for npcId in [30093,30196,30624,30625]:
 for mobId in [20145,20158,27088,27089,20551,20553,20577,20578,20579,20580,20581,20582,20780]:
     STARTED.addKillId(mobId)
 
-for item range(3277,3293):
+for item in range(3277,3293):
     STARTED.addQuestDrop(30093,item,1)
 
 print "importing quests: 223: Test Of Champion"

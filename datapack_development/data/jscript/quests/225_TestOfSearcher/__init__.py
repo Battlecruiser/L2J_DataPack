@@ -268,7 +268,7 @@ for npcId in NPC:
 for mobId in MOB:
  STARTED.addKillId(mobId)
 
-for item in range(2784,2809):
+for item in range(2784,2809):
     STARTED.addQuestDrop(30690,item,1)
 
 print "importing quests: 225: Test Of Searcher"

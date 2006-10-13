@@ -346,7 +346,7 @@ for mobId in DROPLIST_SUMMON.keys():
 #This is just to formal add the drops, in case that a player abort this quest.. the items should disappear
 STARTED        = State('Started', QUEST)
 
-for item in range(3337,3390):
+for item in range(3337,3390):
     STARTED.addQuestDrop(30063,item,1)
 
 print "importing quests: 230: Test Of Summoner"
