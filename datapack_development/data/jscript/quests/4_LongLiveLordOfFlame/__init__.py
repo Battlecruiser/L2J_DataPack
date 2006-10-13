@@ -5,7 +5,7 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 HONEY_KHANDAR,BEAR_FUR_CLOAK,BLOODY_AXE,ANCESTOR_SKULL,SPIDER_DUST,DEEP_SEA_ORB = range(1541,1547)
-NPC_GIFTS = {7585:BEAR_FUR_CLOAK,7566:HONEY_KHANDAR,7562:BLOODY_AXE,7560:ANCESTOR_SKULL,7559:SPIDER_DUST,7587:DEEP_SEA_ORB}
+NPC_GIFTS = {30585:BEAR_FUR_CLOAK,30566:HONEY_KHANDAR,30562:BLOODY_AXE,30560:ANCESTOR_SKULL,30559:SPIDER_DUST,30587:DEEP_SEA_ORB}
 
 class Quest (JQuest) :
 
@@ -13,7 +13,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7578-03.htm" :
+    if event == "30578-03.htm" :
       st.set("cond","1")
       st.set("id","1")
       st.setState(STARTED)
@@ -28,20 +28,20 @@ class Quest (JQuest) :
 
    if id == COMPLETED :
      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7578 :
+   elif npcId == 30578 :
      if cond == 0 :
        if st.getPlayer().getRace().ordinal() <> 3 :
-         htmltext = "7578-00.htm"
+         htmltext = "30578-00.htm"
          st.exitQuest(1)
        elif st.getPlayer().getLevel() >= 2 :
-         htmltext = "7578-02.htm"
+         htmltext = "30578-02.htm"
        else:
-         htmltext = "7578-01.htm"
+         htmltext = "30578-01.htm"
          st.exitQuest(1)
      elif cond == 1 :
-       htmltext = "7578-04.htm"
+       htmltext = "30578-04.htm"
      elif cond == 2 :
-       htmltext = "7578-06.htm"
+       htmltext = "30578-06.htm"
        st.giveItems(4,1)
        for item in NPC_GIFTS.values():
            st.takeItems(item,-1)
@@ -74,21 +74,21 @@ STARTED   = State('Started',   QUEST)
 COMPLETED = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7578)
+QUEST.addStartNpc(30578)
 
-CREATED.addTalkId(7578)
-STARTING.addTalkId(7578)
-COMPLETED.addTalkId(7578)
+CREATED.addTalkId(30578)
+STARTING.addTalkId(30578)
+COMPLETED.addTalkId(30578)
 
-STARTED.addTalkId(7559)
-STARTED.addTalkId(7560)
-STARTED.addTalkId(7562)
-STARTED.addTalkId(7566)
-STARTED.addTalkId(7578)
-STARTED.addTalkId(7585)
-STARTED.addTalkId(7587)
+STARTED.addTalkId(30559)
+STARTED.addTalkId(30560)
+STARTED.addTalkId(30562)
+STARTED.addTalkId(30566)
+STARTED.addTalkId(30578)
+STARTED.addTalkId(30585)
+STARTED.addTalkId(30587)
 
 for i in range(1541,1547) :
-   STARTED.addQuestDrop(7578,i,1)
+   STARTED.addQuestDrop(30578,i,1)
 
 print "importing quests: 4: Long Live the Paagrio Lord"
