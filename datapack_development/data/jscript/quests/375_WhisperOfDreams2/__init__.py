@@ -25,10 +25,10 @@ REWARDS = [5340]+range(5346,5355,2)
 default   = "<html><head><body>I have nothing to say to you.</body></html>"
 
 #NPCs
-MANAKIA = 7515
+MANAKIA = 30515
 
 #Mobs & Drop
-DROPLIST = {624:[CH_SKULL],629:[K_HORN]}
+DROPLIST = {20624:[CH_SKULL],20629:[K_HORN]}
 
 class Quest (JQuest) :
 
@@ -36,12 +36,12 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7515-6.htm" :
+    if event == "30515-6.htm" :
        st.takeItems(MSTONE,1)
        st.setState(STARTED)
        st.set("cond","1")
        st.playSound("ItemSound.quest_accept")
-    elif event == "7515-7.htm" :
+    elif event == "30515-7.htm" :
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(1)
     return htmltext
@@ -51,12 +51,12 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
       st.set("cond","0")
-      htmltext = "7515-1.htm"
+      htmltext = "30515-1.htm"
       if st.getPlayer().getLevel() < 60 :
-         htmltext = "7515-2.htm"
+         htmltext = "30515-2.htm"
          st.exitQuest(1)
       elif not st.getQuestItemsCount(MSTONE) :
-         htmltext = "7515-3.htm"
+         htmltext = "30515-3.htm"
          st.exitQuest(1)
    elif id == STARTED :
       if st.getQuestItemsCount(CH_SKULL)==st.getQuestItemsCount(K_HORN)==100 :
@@ -65,10 +65,10 @@ class Quest (JQuest) :
          item=REWARDS[st.getRandom(len(REWARDS))]
          if ALT_RP_100 : item += 1
          st.giveItems(item,1)
-         htmltext="7515-4.htm"
+         htmltext="30515-4.htm"
          st.exitQuest(1)
       else :
-         htmltext = "7515-5.htm"
+         htmltext = "30515-5.htm"
    return htmltext
 
  def onKill (self,npc,st) :

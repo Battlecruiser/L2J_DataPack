@@ -34,10 +34,10 @@ CB_TOOTH, DW_LIGHT, SEALD_MSTONE, MSTONE = range(5884,5888)
 default   = "<html><head><body>I have nothing to say to you.</body></html>"
 
 #NPCs
-MANAKIA,TORAI = 7515, 7557
+MANAKIA,TORAI = 30515, 30557
 
 #Mobs & Drop
-DROPLIST = {620:[CB_TOOTH],621:[DW_LIGHT]}
+DROPLIST = {20620:[CB_TOOTH],20621:[DW_LIGHT]}
 
 def render_shop() :
     html = "<html><head><body><font color=\"LEVEL\">Robe Armor Fabrics:</font><table border=0 width=300>"
@@ -55,29 +55,29 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     id = st.getState() 
     htmltext = event
-    if event == "7515-4.htm" :
+    if event == "30515-4.htm" :
        st.setState(STARTING)
        st.set("cond","1")
        st.playSound("ItemSound.quest_accept")
-    elif event == "7515-5.htm" :
+    elif event == "30515-5.htm" :
        st.takeItems(CB_TOOTH,-1)
        st.takeItems(DW_LIGHT,-1)
        st.takeItems(SEALD_MSTONE,-1)
        st.exitQuest(1)
-    elif event == "7515-6.htm" :
+    elif event == "30515-6.htm" :
        if st.getQuestItemsCount(CB_TOOTH)==st.getQuestItemsCount(DW_LIGHT)==65 :
           st.set("allow","1")
           st.takeItems(CB_TOOTH,-1)
           st.takeItems(DW_LIGHT,-1)
-          htmltext = "7515-7.htm"
-    elif event == "7515-8.htm" :
+          htmltext = "30515-7.htm"
+    elif event == "30515-8.htm" :
        if st.getQuestItemsCount(SEALD_MSTONE) :
           if id == STARTING :
              st.setState(STARTED)
              st.set("cond","2")
-             htmltext = "7515-9.htm"
+             htmltext = "30515-9.htm"
           elif id == STARTED :
-             htmltext = "7515-10.htm"
+             htmltext = "30515-10.htm"
     elif event == "buy" :
        htmltext = render_shop()
     elif int(event) in SHOP_LIST.keys() :
@@ -87,7 +87,7 @@ class Quest (JQuest) :
           st.giveItems(int(event),SHOP_LIST[int(event)][1])
           st.playSound("ItemSound.quest_finish")
           st.exitQuest(1)
-          htmltext = "7515-11.htm"
+          htmltext = "30515-11.htm"
        else :
           htmltext = "Not enough adena"
     return htmltext
@@ -100,18 +100,18 @@ class Quest (JQuest) :
       if id == CREATED :
          st.set("cond","0")
          st.set("allow","0")
-         htmltext = "7515-1.htm"
+         htmltext = "30515-1.htm"
          if st.getPlayer().getLevel() < 56 :
             st.exitQuest(1)
-            htmltext = "7515-2.htm"
+            htmltext = "30515-2.htm"
       else :
          if int(st.get("allow")) :
-            htmltext = "7515-3.htm"
+            htmltext = "30515-3.htm"
          else :
-            htmltext = "7515-3a.htm"
+            htmltext = "30515-3a.htm"
    elif npcid == TORAI :
       if st.getQuestItemsCount(SEALD_MSTONE) :
-         htmltext = "7557-1.htm"
+         htmltext = "30557-1.htm"
          st.takeItems(SEALD_MSTONE,1)
          st.giveItems(MSTONE,1)
          st.set("cond","3")

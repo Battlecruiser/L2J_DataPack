@@ -36,7 +36,7 @@ REWARD={
 "Majestic": [5382,5406,5432],
 }
 #NPCs Area
-WALDERAL,DESMOND,CLAUDIA,PATRIN,HOLLY=7844,7855,8001,7929,7839
+WALDERAL,DESMOND,CLAUDIA,PATRIN,HOLLY=30844,30855,31001,30929,30839
 #Npc: ("Needed Collectibles","Reward recipes")
 NPC = {
 WALDERAL: ("ToI"),            #Well, this guy is special
@@ -46,7 +46,7 @@ PATRIN:   ("Anc","Tallum"),
 HOLLY:    ("Imp","DarkCryst")
 }
 #Mobs & Drop
-CORRUPT_SAGE,ERIN_EDIUNCE,HALLATE_INSP,PLATINUM_OVL,PLATINUM_PRE,MESSENGER_A1,MESSENGER_A2=817,821,825,829,1069,1062,1063
+CORRUPT_SAGE,ERIN_EDIUNCE,HALLATE_INSP,PLATINUM_OVL,PLATINUM_PRE,MESSENGER_A1,MESSENGER_A2=20817,20821,20825,20829,21069,21062,21063
 # This drop distribution is basically what i found here and there
 # reading forums. Non-linear distribution makes some pages harder
 # to get which is fine with me, but feel free to populate lists as
@@ -105,18 +105,18 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     id = st.getState() 
     htmltext = event
-    if event == "7844-6.htm":
+    if event == "30844-6.htm":
        st.set("cond","1")
        st.setState(STARTED)
        st.playSound("ItemSound.quest_accept")
-    elif event == "7844-7.htm" :
+    elif event == "30844-7.htm" :
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(1)
-    elif event == "7844-9.htm" :
+    elif event == "30844-9.htm" :
        st.set("cond","2") 
     elif len(event) == 4 and int(event) in NPC.keys() :
-       if event == "7844" :
-          htmltext = "7844-2.htm"
+       if event == "30844" :
+          htmltext = "30844-2.htm"
        else :
           if check_n_take(st,NPC[int(event)][0]) :
              give_reward(st,NPC[int(event)][1])
@@ -126,9 +126,9 @@ class Quest (JQuest) :
     elif event in REWARD.keys() :
        if check_n_take(st,"ToI") :
           give_reward(st,event)
-          htmltext = "7844-11.htm"
+          htmltext = "30844-11.htm"
        else :
-          htmltext = "7844-12.htm"
+          htmltext = "30844-12.htm"
     return htmltext
 
  def onTalk (self,npc,st):
@@ -137,10 +137,10 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
       st.set("cond","0")
-      htmltext = "7844-4.htm"
+      htmltext = "30844-4.htm"
       if st.getPlayer().getLevel() < 59 :
          st.exitQuest(1)
-         htmltext = "7844-5.htm"
+         htmltext = "30844-5.htm"
    elif id == STARTED :
       htmltext = str(npcId)+"-1.htm"
    return htmltext

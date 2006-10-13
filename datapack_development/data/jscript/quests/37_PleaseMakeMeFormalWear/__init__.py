@@ -19,28 +19,28 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
-   if event == "7842-1.htm" :
+   if event == "30842-1.htm" :
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   if event == "8520-1.htm" :
+   if event == "31520-1.htm" :
      st.giveItems(SIGNET_RING,1)
      st.set("cond","2")
-   if event == "8521-1.htm" :
+   if event == "31521-1.htm" :
      st.giveItems(ICE_WINE,1)
      st.set("cond","3")
-   if event == "8627-1.htm" :
+   if event == "31627-1.htm" :
      if st.getQuestItemsCount(ICE_WINE):
        st.takeItems(ICE_WINE,1)
        st.set("cond","4")
      else:
        htmltext = "You don't have enough materials"
-   if event == "8521-3.htm" :
+   if event == "31521-3.htm" :
      st.giveItems(BOX_OF_COOKIES,1)
      st.set("cond","5")
-   if event == "8520-3.htm" :
+   if event == "31520-3.htm" :
      st.set("cond","6")
-   if event == "8520-5.htm" :
+   if event == "31520-5.htm" :
      if st.getQuestItemsCount(MYSTERIOUS_CLOTH) and st.getQuestItemsCount(JEWEL_BOX) and st.getQuestItemsCount(SEWING_KIT) :
        st.takeItems(MYSTERIOUS_CLOTH,1)
        st.takeItems(JEWEL_BOX,1)
@@ -48,7 +48,7 @@ class Quest (JQuest) :
        st.set("cond","7")
      else :
        htmltext = "You don't have enough materials"
-   if event == "8520-7.htm" :
+   if event == "31520-7.htm" :
      if st.getQuestItemsCount(DRESS_SHOES_BOX) :
        st.takeItems(DRESS_SHOES_BOX,1)
        st.giveItems(FORMAL_WEAR,1)
@@ -66,31 +66,31 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
    cond = int(st.get("cond"))
-   if npcId == 7842 and cond == 0 :
+   if npcId == 30842 and cond == 0 :
      if id == COMPLETED :
        htmltext = "<html><head><body>This quest has already been completed.</body></html>"
      elif st.getPlayer().getLevel() >= 60 :
-       htmltext = "7842-0.htm"
+       htmltext = "30842-0.htm"
        return htmltext
      else:
-       htmltext = "7842-2.htm"
+       htmltext = "30842-2.htm"
        st.exitQuest(1)
-   elif npcId == 8520 and cond == 1 :
-     htmltext = "8520-0.htm"
-   elif npcId == 8521 and st.getQuestItemsCount(SIGNET_RING) :
+   elif npcId == 31520 and cond == 1 :
+     htmltext = "31520-0.htm"
+   elif npcId == 31521 and st.getQuestItemsCount(SIGNET_RING) :
      st.takeItems(SIGNET_RING,1)
-     htmltext = "8521-0.htm"
-   elif npcId == 8627 and st.getQuestItemsCount(ICE_WINE) :
-     htmltext = "8627-0.htm"
-   elif npcId == 8521 and cond == 4 :
-     htmltext = "8521-2.htm"
-   elif npcId == 8520 and st.getQuestItemsCount(BOX_OF_COOKIES) :
+     htmltext = "31521-0.htm"
+   elif npcId == 31627 and st.getQuestItemsCount(ICE_WINE) :
+     htmltext = "31627-0.htm"
+   elif npcId == 31521 and cond == 4 :
+     htmltext = "31521-2.htm"
+   elif npcId == 31520 and st.getQuestItemsCount(BOX_OF_COOKIES) :
      st.takeItems(BOX_OF_COOKIES,1)
-     htmltext = "8520-2.htm"
-   elif npcId == 8520 and st.getQuestItemsCount(MYSTERIOUS_CLOTH) and st.getQuestItemsCount(JEWEL_BOX) and st.getQuestItemsCount(SEWING_KIT) :
-     htmltext = "8520-4.htm"
-   elif npcId == 8520 and st.getQuestItemsCount(DRESS_SHOES_BOX) :
-     htmltext = "8520-6.htm"
+     htmltext = "31520-2.htm"
+   elif npcId == 31520 and st.getQuestItemsCount(MYSTERIOUS_CLOTH) and st.getQuestItemsCount(JEWEL_BOX) and st.getQuestItemsCount(SEWING_KIT) :
+     htmltext = "31520-4.htm"
+   elif npcId == 31520 and st.getQuestItemsCount(DRESS_SHOES_BOX) :
+     htmltext = "31520-6.htm"
    return htmltext
 
 QUEST       = Quest(37,"37_PleaseMakeMeFormalWear","Please Make Me Formal Wear")
@@ -99,10 +99,10 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7842)
-CREATED.addTalkId(7842)
-STARTED.addTalkId(8520)
-STARTED.addTalkId(8521)
-STARTED.addTalkId(8627)
+QUEST.addStartNpc(30842)
+CREATED.addTalkId(30842)
+STARTED.addTalkId(31520)
+STARTED.addTalkId(31521)
+STARTED.addTalkId(31627)
 
 print "importing quests: 37: Please Make Me Formal Wear"

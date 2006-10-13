@@ -37,10 +37,10 @@ tnx4items = "<html><head><body>Head Researcher Sobling:<br><br>Amazing! These ar
 ext_msg   = "Quest aborted"
 
 #NPCs
-HR_SOBLING = 8147
+HR_SOBLING = 31147
 
 #Mobs
-MOBS = [ 654,656,657,658 ]
+MOBS = [ 20654,20656,20657,20658 ]
 
 class Quest (JQuest) :
 
