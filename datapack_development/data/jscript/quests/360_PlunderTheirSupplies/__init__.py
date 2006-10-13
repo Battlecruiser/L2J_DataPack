@@ -5,11 +5,11 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #NPC
-COLEMAN = 7873
+COLEMAN = 30873
 
 #MOBS
-TAIK_SEEKER = 666
-TAIK_LEADER = 669
+TAIK_SEEKER = 20666
+TAIK_LEADER = 20669
 
 #QUEST ITEMS
 SUPPLY_ITEM = 5872
@@ -22,11 +22,11 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
-   if event == "7873-2.htm" :
+   if event == "30873-2.htm" :
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   elif event == "7873-6.htm" :
+   elif event == "30873-6.htm" :
      st.takeItems(SUPPLY_ITEM,-1)
      st.takeItems(SUSPICIOUS_DOCUMENT,-1)
      st.takeItems(RECIPE_OF_SUPPLY,-1)
@@ -41,19 +41,19 @@ class Quest (JQuest) :
    supplies = st.getQuestItemsCount(SUPPLY_ITEM)
    if cond == 0 :
      if st.getPlayer().getLevel() >= 52 :
-       htmltext = "7873-0.htm"
+       htmltext = "30873-0.htm"
      else:
        htmltext = "<html><head><body>Quest for characters level 52 or above.</body></html>"
        st.exitQuest(1)
    elif not supplies :
-     htmltext = "7873-3.htm"
+     htmltext = "30873-3.htm"
    elif supplies :
      DOCS = st.getQuestItemsCount(RECIPE_OF_SUPPLY) * 5000 # I dont have an info about reward on this doc
      REWARD = (supplies * 1600) + DOCS
      st.takeItems(SUPPLY_ITEM,-1)
      st.takeItems(RECIPE_OF_SUPPLY,-1)
      st.giveItems(57,REWARD)
-     htmltext = "7873-5.htm"
+     htmltext = "30873-5.htm"
    return htmltext
 
  def onKill (self,npc,st):

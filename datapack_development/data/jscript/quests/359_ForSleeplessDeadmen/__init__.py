@@ -25,10 +25,10 @@ REWARDS=range(6341,6347)+range(5494,5496)
 default   = "<html><head><body>I have nothing to say to you.</body></html>"
 
 #NPCs
-ORVEN = 7857
+ORVEN = 30857
 
 #Mobs
-MOBS = range(1006,1009)
+MOBS = range(21006,21009)
 
 class Quest (JQuest) :
 
@@ -36,14 +36,14 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7857-6.htm" :
+    if event == "30857-6.htm" :
        st.setState(STARTED)
        st.set("cond","1")
        st.playSound("ItemSound.quest_accept")
-    elif event == "7857-7.htm" :
+    elif event == "30857-7.htm" :
        st.exitQuest(1)
        st.playSound("ItemSound.quest_finish")
-    elif event == "7857-8.htm" :
+    elif event == "30857-8.htm" :
        st.set("cond","1")
        st.giveItems(REWARDS[st.getRandom(len(REWARDS))] ,4)
     return htmltext
@@ -55,19 +55,19 @@ class Quest (JQuest) :
       st.set("cond","0")
       if st.getPlayer().getLevel() < 60 :
          st.exitQuest(1)
-         htmltext = "7857-1.htm"
+         htmltext = "30857-1.htm"
       else :
-         htmltext = "7857-2.htm"
+         htmltext = "30857-2.htm"
    elif id == STARTED :
       cond=int(st.get("cond"))
       if cond == 3 :
-         htmltext = "7857-3.htm"
+         htmltext = "30857-3.htm"
       elif cond == 2 and st.getQuestItemsCount(REMAINS) >= REQUIRED :
          st.takeItems(REMAINS,REQUIRED)
          st.set("cond","3")
-         htmltext = "7857-4.htm"
+         htmltext = "30857-4.htm"
       else :
-         htmltext = "7857-5.htm"
+         htmltext = "30857-5.htm"
    return htmltext
 
  def onKill (self,npc,st) :

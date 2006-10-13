@@ -14,11 +14,11 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
      htmltext = event
-     if event == "7926-02.htm" :
+     if event == "30926-02.htm" :
          st.set("cond","1")
          st.setState(STARTED)
          st.playSound("ItemSound.quest_accept")
-     elif event == "7926-05.htm" :
+     elif event == "30926-05.htm" :
          st.playSound("ItemSound.quest_finish")
          st.exitQuest(1)
      return htmltext
@@ -32,13 +32,13 @@ class Quest (JQuest) :
      amount = st.getQuestItemsCount(BLADE_STAKATO_FANG)
      if id == CREATED :
         if level>=36 :
-            htmltext = "7926-01.htm"
+            htmltext = "30926-01.htm"
         else :
             htmltext = "<html><head><body>(This is a quest that can only be performed by players of level 36 and above.)</body></html>"
      elif cond and not amount :
-         htmltext = "7926-03.htm"
+         htmltext = "30926-03.htm"
      elif amount :
-         htmltext = "7926-04.htm"
+         htmltext = "30926-04.htm"
          st.giveItems(ADENA,amount*2250)
          st.takeItems(BLADE_STAKATO_FANG,-1)
          st.playSound("ItemSound.quest_middle")
@@ -47,7 +47,7 @@ class Quest (JQuest) :
  def onKill (self,npc,st):
      npcId = npc.getNpcId()
      random = st.getRandom(100)
-     chance = CHANCE + npcId - 794
+     chance = CHANCE + npcId - 20794
      if random<=chance :
          st.giveItems(BLADE_STAKATO_FANG,1)
          st.playSound("ItemSound.quest_itemget")
@@ -58,14 +58,14 @@ CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7926)
+QUEST.addStartNpc(30926)
 
-CREATED.addTalkId(7926)
-STARTED.addTalkId(7926)
+CREATED.addTalkId(30926)
+STARTED.addTalkId(30926)
 
-STARTED.addQuestDrop(7926,BLADE_STAKATO_FANG,1)
+STARTED.addQuestDrop(30926,BLADE_STAKATO_FANG,1)
 
-for i in range(794,798) :
+for i in range(20794,20798) :
     STARTED.addKillId(i)
 
 print "importing quests: 368: Trespassing Into The Sacred Area"

@@ -26,10 +26,10 @@ ALT_RP_100 = 0
 default   = "<html><head><body>I have nothing to say to you.</body></html>"
 
 #NPCs
-OLTLIN = 7862
+OLTLIN = 30862
 
 #Mobs
-MOBS = [ 672,673 ]
+MOBS = [ 20672,20673 ]
 
 class Quest (JQuest) :
 
@@ -37,13 +37,13 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7862-5.htm" :
+    if event == "30862-5.htm" :
        st.setState(STARTED)
        st.set("cond","1")
        st.playSound("ItemSound.quest_accept")
-    elif event == "7862-6.htm" :
+    elif event == "30862-6.htm" :
        st.exitQuest(1)
-    elif event == "7862-7.htm" :
+    elif event == "30862-7.htm" :
        if st.getQuestItemsCount(SN_SCALE) >= REQUIRED :
           st.takeItems(SN_SCALE,REQUIRED)
           item=REWARDS[st.getRandom(len(REWARDS))]
@@ -52,7 +52,7 @@ class Quest (JQuest) :
           st.exitQuest(1)
           st.playSound("ItemSound.quest_finish")
        else :
-          htmltext = "7862-4.htm"
+          htmltext = "30862-4.htm"
     return htmltext
 
  def onTalk (self,npc,st):
@@ -62,14 +62,14 @@ class Quest (JQuest) :
       st.set("cond","0")
       if st.getPlayer().getLevel() < 63 :
          st.exitQuest(1)
-         htmltext = "7862-1.htm"
+         htmltext = "30862-1.htm"
       else :
-         htmltext = "7862-2.htm"
+         htmltext = "30862-2.htm"
    elif id == STARTED :
       if st.getQuestItemsCount(SN_SCALE) >= REQUIRED :
-         htmltext = "7862-3.htm"
+         htmltext = "30862-3.htm"
       else :
-         htmltext = "7862-4.htm"
+         htmltext = "30862-4.htm"
    return htmltext
 
  def onKill (self,npc,st) :

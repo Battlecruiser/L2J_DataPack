@@ -5,7 +5,7 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-NPC=[7115,7856,7194]
+NPC=[30115,30856,30194]
 
 RED_SOUL_CRYSTAL0_ID,RED_SOUL_CRYSTAL1_ID,RED_SOUL_CRYSTAL2_ID,RED_SOUL_CRYSTAL3_ID,\
 RED_SOUL_CRYSTAL4_ID,RED_SOUL_CRYSTAL5_ID,RED_SOUL_CRYSTAL6_ID,RED_SOUL_CRYSTAL7_ID,\
@@ -29,15 +29,15 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event in ["7115-04.htm","7856-04.htm","7194-04.htm"] :
+    if event in ["30115-04.htm","30856-04.htm","30194-04.htm"] :
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
-    elif event in ["7115-09.htm","7856-09.htm","7194-09.htm"] :
+    elif event in ["30115-09.htm","30856-09.htm","30194-09.htm"] :
         st.giveItems(RED_SOUL_CRYSTAL0_ID,1)
-    elif event in ["7115-10.htm","7856-10.htm","7194-10.htm"] :
+    elif event in ["30115-10.htm","30856-10.htm","30194-10.htm"] :
         st.giveItems(GREEN_SOUL_CRYSTAL0_ID,1)
-    elif event in ["7115-11.htm","7856-11.htm","7194-11.htm"] :
+    elif event in ["30115-11.htm","30856-11.htm","30194-11.htm"] :
         st.giveItems(BLUE_SOUL_CRYSTAL0_ID,1)
     elif event == "exit.htm" :
         st.exitQuest(1)

@@ -5,11 +5,11 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #NPC
-GAUEN = 7717
+GAUEN = 30717
 
 #MOBS
-SPORE_ZOMBIE = 562
-ROTTING_TREE = 558
+SPORE_ZOMBIE = 20562
+ROTTING_TREE = 20558
 
 #QUEST ITEMS
 CARNIVORE_SPORE = 5865
@@ -23,16 +23,16 @@ class Quest (JQuest) :
    htmltext = event
    carn=st.getQuestItemsCount(CARNIVORE_SPORE)
    herb=st.getQuestItemsCount(HERBIBOROUS_SPORE)
-   if event == "7717-5.htm" :
+   if event == "30717-5.htm" :
      if st.getPlayer().getLevel() >= 43 :
        st.set("cond","1")
        st.setState(STARTED)
        st.playSound("ItemSound.quest_accept")
      else :
-       htmltext = "7717-4.htm"
+       htmltext = "30717-4.htm"
        st.exitQuest(1)
-   elif event in [ "7717-10.htm", "7717-9.htm" ] and (carn>=50 and herb>=50) :
-     if event == "7717-9.htm" :
+   elif event in [ "30717-10.htm", "30717-9.htm" ] and (carn>=50 and herb>=50) :
+     if event == "30717-9.htm" :
         st.giveItems(57,44000)
      else :
         st.addExpAndSp(36000,2600)
@@ -49,11 +49,11 @@ class Quest (JQuest) :
    carn=st.getQuestItemsCount(CARNIVORE_SPORE)
    herb=st.getQuestItemsCount(HERBIBOROUS_SPORE)
    if cond == 0 :
-     htmltext = "7717-0.htm"
+     htmltext = "30717-0.htm"
    elif cond <> 3 :
-     htmltext = "7717-6.htm"
+     htmltext = "30717-6.htm"
    elif cond == 3 or (carn>=50 and herb>=50) :
-     htmltext = "7717-7.htm"
+     htmltext = "30717-7.htm"
    return htmltext
 
  def onKill (self,npc,st):
@@ -94,8 +94,8 @@ QUEST.addStartNpc(GAUEN)
 CREATED.addTalkId(GAUEN)
 STARTED.addTalkId(GAUEN)
 
-STARTED.addKillId(562)
-STARTED.addKillId(558)
+STARTED.addKillId(SPORE_ZOMBIE)
+STARTED.addKillId(ROTTING_TREE)
 
 STARTED.addQuestDrop(GAUEN,CARNIVORE_SPORE,1)
 STARTED.addQuestDrop(GAUEN,HERBIBOROUS_SPORE,1)
