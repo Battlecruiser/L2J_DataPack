@@ -48,7 +48,7 @@ class Quest (JQuest) :
    if event == "31745-5.htm" :
      if cond == 2 :
        st.set("cond","0")
-       # st.getPlayer().setNoble(True) - UNCOMMENT WHEN CHARACTERS TABLE WILL BE UPDATED WITH NOBLESS STATUS
+       st.getPlayer().setNoble(True)
        st.giveItems(NOBLESS_TIARA,1)
        st.playSound("ItemSound.quest_finish")
        st.setState(COMPLETED)
