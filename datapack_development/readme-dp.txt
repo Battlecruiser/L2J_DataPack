@@ -17,7 +17,7 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 
-L2J-Datapack SVN Build:
+L2J-Datapack SVN Build:  
 
 Project page: http://www.l2jdp.com
 Forum: http://forum.l2jdp.com
