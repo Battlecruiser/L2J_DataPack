@@ -11,6 +11,8 @@ __all__ = [
 '10_IntoTheWorld',
 '13_ParcelDelivery',
 '14_WhereaboutsOfTheArchaeologist',
+'15_SweetWhisper',
+'16_TheComingDarkness',
 '19_GoToThePastureland',
 '31_SecretBuriedInTheSwamp',
 '32_AnObviousLie',
