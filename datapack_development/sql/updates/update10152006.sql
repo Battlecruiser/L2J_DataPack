@@ -1,0 +1,1 @@
+ALTER TABLE character ADD COLUMN nobless decimal(1,0) NOT NULL default 0 AFTER power_grade;

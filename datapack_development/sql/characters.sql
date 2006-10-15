@@ -70,6 +70,7 @@ CREATE TABLE IF NOT EXISTS characters (
   in_jail decimal(1,0) DEFAULT 0,
   jail_timer decimal(20,0) DEFAULT 0,
   power_grade decimal(11,0) DEFAULT NULL,
+  nobless decimal(1,0) NOT NULL default 0,
   PRIMARY KEY  (obj_Id),
   KEY `clanid` (`clanid`)
 ) ;
