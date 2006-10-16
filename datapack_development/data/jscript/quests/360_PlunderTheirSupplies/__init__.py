@@ -48,8 +48,8 @@ class Quest (JQuest) :
    elif not supplies :
      htmltext = "30873-3.htm"
    elif supplies :
-     DOCS = st.getQuestItemsCount(RECIPE_OF_SUPPLY) * 5000 # I dont have an info about reward on this doc
-     REWARD = (supplies * 1600) + DOCS
+     DOCS = st.getQuestItemsCount(RECIPE_OF_SUPPLY)*6000 # I dont have an info about reward on this doc
+     REWARD = 6000+(supplies*100)+DOCS
      st.takeItems(SUPPLY_ITEM,-1)
      st.takeItems(RECIPE_OF_SUPPLY,-1)
      st.giveItems(57,REWARD)
