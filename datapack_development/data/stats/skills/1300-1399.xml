@@ -1486,14 +1486,21 @@
   </for>  
 </skill>
 <skill id="1387" levels="3" name="Summon Cursed Bones">
-  <!-- Necromancer -->
-  <set name="power" val="0.0"/>
+  <table name="#mpConsume"> 318 366 407 </table>
+  <table name="#spiritore"> 40 80 160 </table>
+  <table name="#cursed_bones"> 25 50 100 </table>
+  <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillTime" val="10000"/>
+  <set name="skillType" val="CREATE_ITEM"/>
+  <set name="reuseDelay" val="18000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="need_item_id" val="3031"/>
+  <set name="need_item_count" val="#spiritore"/>
+  <set name="create_item_id" val="2508"/>
+  <set name="create_item_count" val="#cursed_bones"/>
+  <set name="random_count" val="4"/>
 </skill>
 <skill id="1388" levels="3" name="Greater Might">
 <!-- Done by KID -->
