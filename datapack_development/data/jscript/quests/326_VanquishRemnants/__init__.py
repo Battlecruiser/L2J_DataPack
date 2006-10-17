@@ -30,14 +30,10 @@ class Quest (JQuest) :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-    elif event == "30435_1" :
-      htmltext = "30435-07.htm"
+    elif event == "30435-07.htm" :
       st.playSound("ItemSound.quest_finish")
       st.exitQuest(1)
-    elif event == "30435_2" :
-      htmltext = "30435-08.htm"
     return htmltext
-
 
  def onTalk (Self,npc,st):
    npcId = npc.getNpcId()

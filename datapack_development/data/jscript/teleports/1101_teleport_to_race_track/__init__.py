@@ -20,7 +20,7 @@ TATIANA	     = 31275
 ILYANA	     = 31320
 RACE_MANAGER = 30995
 #TODO
-ANYA         = 30237
+#ANYA         = 30237
 MINERVA      = 30836
 VERONA       = 30727
 
@@ -107,6 +107,20 @@ class Quest (JQuest) :
      st.set("id","10")     
      return
 
+   # Ivory Tower
+   if npcId == VERONA: 
+     st.player.teleToLocation(12661,181687,-3560)
+     st.setState(STARTED)
+     st.set("id","11")     
+     return
+
+   # Private Hardins Academy
+   if npcId == MINERVA: 
+     st.player.teleToLocation(12661,181687,-3560)
+     st.setState(STARTED)
+     st.set("id","12")     
+     return
+
    ############################
    # Monster Derby Race Track #
    ############################
@@ -177,6 +191,20 @@ class Quest (JQuest) :
    # back to Goddard Castle Town
    if npcId == RACE_MANAGER and st.getInt("id") == 10:
      st.player.teleToLocation(147930,-55281,-2728)
+     st.setState(COMPLETED)
+     st.exitQuest(1)
+     return
+
+   # back to Ivory Tower
+   if npcId == RACE_MANAGER and st.getInt("id") == 11:
+     st.player.teleToLocation(85335,16177,-3694)
+     st.setState(COMPLETED)
+     st.exitQuest(1)
+     return
+
+   # back to Hardins
+   if npcId == RACE_MANAGER and st.getInt("id") == 12:
+     st.player.teleToLocation(105857,109763,-3202)
      st.setState(COMPLETED)
      st.exitQuest(1)
      return
