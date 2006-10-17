@@ -9,6 +9,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="60000"/>
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
   </for>
 </skill>
@@ -21,6 +22,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="60000"/>
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
   </for>
 </skill>
@@ -31,10 +33,11 @@
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
   </for>
 </skill>
-<skill id="7004" levels="2" name="Disple Petrification">
+<skill id="7004" levels="2" name="Dispel Petrification">
   <!-- TODO -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -42,6 +45,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -56,6 +60,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
   </for>
 </skill>
@@ -70,6 +75,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
   </for>
 </skill>
@@ -84,6 +90,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
   </for>
 </skill>
@@ -98,6 +105,7 @@
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
     <effect name="Buff" time="144000" count="1" val="0">
       <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
@@ -121,6 +129,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <set name="npcId" val="150"/>
   <set name="expPenalty" val="0.3"/>
@@ -142,6 +151,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <set name="npcId" val="622"/>
   <set name="expPenalty" val="0.3"/>
@@ -163,6 +173,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <set name="npcId" val="241"/>
   <set name="expPenalty" val="0.3"/>

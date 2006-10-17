@@ -14,6 +14,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <set name="negateStats" val="POISON BLEED"/>
   <set name="negatePower" val="#negatePower"/>
   <for>
@@ -30,6 +31,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <set name="negateStats" val="ROOT PARALYZE DEBUFF"/>
   <set name="negatePower" val="3.0"/>
   <for>
@@ -50,6 +52,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
     <effect name="Buff" time="1200" count="1" val="0">
       <mul stat="mCritRate" val="#mCrit" order="0x30"/>
@@ -72,6 +75,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
       <mul order="0x30" stat="rShld" val="#Tab-rShld"/>
@@ -95,6 +99,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -113,6 +118,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <for>
   </for>
 </skill>
@@ -133,6 +139,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
     <effect name="Buff" time="1200" count="1" val="0">
       <mul order="0x30" stat="gainHp" val="#tab-gainHp"/>
@@ -156,6 +163,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-rCrit" stackType="rCrit">
       <mul order="0x30" stat="rCrit" val="#Tab-rCrit"/>
@@ -179,6 +187,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-accCombat" stackType="accuracyUp">
       <add order="0x40" stat="accCombat" val="#Tab-accCombat"/>
@@ -193,7 +202,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="900"/>
+  <set name="skillRadius" val="1000"/>
   <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="20000"/>
   <set name="skillTime" val="2500"/>
@@ -202,6 +211,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
     <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-absorbDam" stackType="vampRage">
       <add order="0x40" stat="absorbDam" val="#Tab-absorbDam"/>
@@ -226,6 +236,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#hp" stackType="MaxHPUp">
       <mul order="0x30" stat="maxHp" val="#hp"/>
@@ -244,6 +255,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for> 	
 </skill>
@@ -260,6 +272,7 @@
   <set name="isMagic" val="false"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -276,6 +289,7 @@
   <set name="isMagic" val="false"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -309,6 +323,7 @@
   <set name="isMagic" val="false"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -324,6 +339,7 @@
   <set name="isMagic" val="false"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -344,6 +360,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <set name="npcId" val="1"/>
   <set name="expPenalty" val="0.0"/>
@@ -368,6 +385,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <set name="npcId" val="7"/>
   <set name="expPenalty" val="0.0"/>
@@ -392,6 +410,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <set name="npcId" val="5"/>
   <set name="expPenalty" val="0.0"/>
@@ -420,6 +439,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 14251 14252 14253 14254 14255 14256 14257 14258 14259 14260 14261 14262 14263 14264 </table>
   <set name="npcId" val="#npcIds"/>
@@ -449,6 +469,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 14435 14436 14437 14438 14439 14440 14441 14442 14443 14444 14445 14446 14447 14448 </table>
   <set name="npcId" val="#npcIds"/>
@@ -478,6 +499,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 14619 14620 14621 14622 14623 14624 14625 14626 14627 14628 14629 14630 14631 14632 </table>
   <set name="npcId" val="#npcIds"/>
@@ -507,6 +529,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 14074 14075 14076 14077 14078 14079 14080 </table>
   <set name="npcId" val="#npcIds"/>
@@ -541,9 +564,10 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <for>
     <effect count="1" name="Mute" time="120" val="0">
-    <!-- MISSING MUTE OF PHYSICAL SKILLS-->
+    <!-- MISSING MUTE OF PHYSICAL SKILLS FOR TWO MINUTES-->
     </effect> 
   </for>
 </skill>
@@ -561,7 +585,8 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/> 
   <set name="buffDuration" val="120000"/> 
-  <set name="castRange" val="600"/> 
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/> 
   <for> 
     <effect count="1" name="Buff" time="120" val="0"> 
       <mul order="0x30" stat="runSpd" val="0.9"/> 
@@ -588,6 +613,7 @@
   <set name="isMagic" val="true"/>
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <for>
   </for>
 </skill>
@@ -605,6 +631,7 @@
   <set name="isMagic" val="true"/>
   <set name="overHit" val="true"/>
   <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
@@ -631,6 +658,7 @@
   <set name="isMagic" val="true"/>
   <set name="overHit" val="true"/>
   <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
@@ -657,6 +685,7 @@
   <set name="isMagic" val="true"/>
   <set name="overHit" val="true"/>
   <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
@@ -682,6 +711,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
@@ -705,6 +735,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <set name="absorbPart" val="0.7"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
@@ -746,6 +777,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="300000"/>
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="Servitors_buff">
       <mul stat="pDef" val="1.2" order="0x30"/>
@@ -772,6 +804,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="300000"/>
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="Servitors_buff">
       <mul stat="regMp" val="1.2" order="0x30"/>
@@ -799,6 +832,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="300000"/>
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="Servitors_buff">
       <add order="0x40" stat="accCombat" val="4"/>
@@ -823,6 +857,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="300000"/>
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="2" stackType="Servitors_buff">
       <mul stat="rCrit" val="1.2" order="0x30"/>
@@ -870,7 +905,8 @@
   <set name="isMagic" val="true"/> 
   <set name="operateType" val="OP_ACTIVE"/> 
   <set name="buffDuration" val="1200000"/> 
-  <set name="castRange" val="400"/> 
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/> 
   <for> 
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="30" stackType="MagicDefUpAtr"> 
       <add stat="waterRes" val="20" order="0x40"/> 
@@ -891,7 +927,8 @@
   <set name="skillType" val="BUFF"/> 
   <set name="operateType" val="OP_ACTIVE"/> 
   <set name="buffDuration" val="1200000"/> 
-  <set name="castRange" val="400"/> 
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/> 
   <for> 
     <effect count="1" name="Buff" time="1200" val="0"> 
       <add stat="darkRes" val="30" order="0x40"/> 
@@ -922,6 +959,7 @@
 <set name="operateType" val="OP_ACTIVE"/>
 <set name="buffDuration" val="300000"/>
 <set name="castRange" val="400"/>
+<set name="effectRange" val="900"/>
 <for>
   <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="CoV">
     <mul order="0x30" stat="mAtk" val="1.20"/>
@@ -948,6 +986,7 @@
 <set name="operateType" val="OP_ACTIVE"/>
 <set name="buffDuration" val="300000"/>
 <set name="castRange" val="400"/>
+<set name="effectRange" val="900"/>
 <for>
   <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="CoV">
     <mul order="0x30" stat="pAtk" val="1.10"/>
@@ -975,6 +1014,7 @@
 <set name="operateType" val="OP_ACTIVE"/>
 <set name="buffDuration" val="300000"/>
 <set name="castRange" val="400"/>
+<set name="effectRange" val="900"/>
 <for>
   <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="CoV">
      <add order="0x40" stat="absorbDam" val="5"/>
@@ -1002,6 +1042,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="10" stackType="pDef">
       <mul order="0x30" stat="pDef" val="0.9"/>
@@ -1024,6 +1065,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="99" stackType="SpeedUp">
       <mul order="0x30" stat="runSpd" val="0.9"/>
@@ -1047,6 +1089,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="10" stackType="pDef">
       <mul order="0x30" stat="pDef" val="0.9"/>
@@ -1070,6 +1113,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="99" stackType="SpeedUp">
       <mul order="0x30" stat="runSpd" val="0.9"/>
@@ -1101,6 +1145,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="300000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="CoV">
       <mul order="0x30" stat="pAtk" val="1.1"/>
@@ -1131,7 +1176,8 @@
   <set name="isMagic" val="true"/> 
   <set name="operateType" val="OP_ACTIVE"/> 
   <set name="buffDuration" val="1200000"/> 
-  <set name="castRange" val="-1"/> 
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/> 
   <for> 
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.5" stackType="cAtk"> 
       <mul order="0x30" stat="cAtk" val="1.5"/> 
@@ -1151,7 +1197,8 @@
   <set name="isMagic" val="true"/> 
   <set name="operateType" val="OP_ACTIVE"/> 
   <set name="buffDuration" val="1200000"/> 
-  <set name="castRange" val="-1"/> 
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/> 
   <for> 
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.75" stackType="mAtk"> 
       <mul order="0x30" stat="mAtk" val="1.75"/> 
@@ -1173,7 +1220,8 @@
   <set name="isMagic" val="true"/> 
   <set name="operateType" val="OP_ACTIVE"/> 
   <set name="buffDuration" val="12000"/> 
-  <set name="castRange" val="-1"/> 
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/> 
   <for> 
     <effect count="1" name="Buff" time="120" val="0"> 
       <mul stat="pAtk" order="0x30" val="0.9"/> 
@@ -1187,6 +1235,7 @@
   </for>
 </skill>
 <skill id="1367" levels="1" name="Seal of Disease">
+<!-- ONLY ENEMY ALIANCE DURING CLANWARS NOT FULL AREA -->
   <set name="mpInitialConsume" val="21"/>
   <set name="mpConsume" val="84"/>
   <set name="magicLvl" val="76"/>
@@ -1202,6 +1251,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
       <mul stat="regHp" val="0.5" order="0x30"/>
@@ -1215,6 +1265,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="DwarfRecipeLimit" val="#power"/>
   </for>
@@ -1226,6 +1277,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="CommonRecipeLimit" val="#power"/>
   </for>
@@ -1237,6 +1289,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="PrivateSellLimit" val="#power"/>
     <add order="0x40" stat="PrivateBuyLimit" val="#power"/>
@@ -1249,6 +1302,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="whLimit" val="#power"/>
     <add order="0x40" stat="FreightLimit" val="#power"/>
@@ -1261,6 +1315,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="inventoryLimit" val="#power"/>
   </for>
@@ -1282,9 +1337,11 @@
   <set name="hitTime" val="2500"/>
   <set name="skillTime" val="2500"/>
   <set name="target" val="TARGET_CLAN"/>
+  <set name="skillRadius" val="400"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
@@ -1301,10 +1358,11 @@
   <set name="hitTime" val="2500"/>
   <set name="skillTime" val="2500"/>
   <set name="target" val="TARGET_AREA"/>
-  <set name="skillRadius" val="205"/>
+  <set name="skillRadius" val="200"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
@@ -1324,10 +1382,11 @@
   <set name="hitTime" val="2500"/>
   <set name="skillTime" val="2500"/>
   <set name="target" val="TARGET_AURA"/>
-  <set name="skillRadius" val="300"/>
+  <set name="skillRadius" val="200"/>
   <set name="skillType" val="FEAR"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <for>
      <effect count="5" name="Fear" time="9" val="0">
@@ -1367,6 +1426,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <set name="isMagic" val="true"/>
 </skill>
 <skill id="1381" levels="5" name="Mass Fear">
@@ -1377,10 +1437,11 @@
   <set name="reuseDelay" val="21000"/> 
   <set name="skillTime" val="6000"/>
   <set name="target" val="TARGET_AREA"/>
-  <set name="skillRadius" val="230"/>
+  <set name="skillRadius" val="200"/>
   <set name="skillType" val="FEAR"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
+  <set name="effectRange" val="1000"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="5" name="Fear" time="6" val="0"/>
@@ -1399,6 +1460,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
@@ -1406,7 +1468,7 @@
     </effect>
   </for>  
 </skill>
-<skill id="1383" levels="5" name="Surrender to Fire en masse">
+<skill id="1383" levels="5" name="Mass Surrender to Fire">
 <!-- Done by KID -->
   <table name="#mpConsume"> 80 87 93 98 103 </table>
   <table name="#fireRes"> 30 36 41 49 58 </table>
@@ -1415,10 +1477,11 @@
   <set name="reuseDelay" val="21000"/>  
   <set name="skillTime" val="6000"/>
   <set name="target" val="TARGET_AREA"/>
-  <set name="skillRadius" val="230"/>
+  <set name="skillRadius" val="200"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
@@ -1426,7 +1489,7 @@
     </effect>
   </for>    
 </skill>
-<skill id="1384" levels="5" name="Surrender to Water en masse">
+<skill id="1384" levels="5" name="Mass Surrender to Watere">
 <!-- Done by KID -->
   <table name="#mpConsume"> 80 87 93 98 103 </table>
   <table name="#waterRes"> 30 36 41 49 58 </table>
@@ -1435,10 +1498,11 @@
   <set name="reuseDelay" val="21000"/>
   <set name="skillTime" val="6000"/>
   <set name="target" val="TARGET_AREA"/>
-  <set name="skillRadius" val="230"/>
+  <set name="skillRadius" val="200"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
@@ -1446,7 +1510,7 @@
     </effect>
   </for>  
 </skill>
-<skill id="1385" levels="5" name="Surrender to Wind en masse">
+<skill id="1385" levels="5" name="Mass Surrender to Wind">
 <!-- Done by KID -->
   <table name="#mpConsume"> 80 87 93 98 103 </table>
   <table name="#windRes"> 30 36 41 49 58 </table>
@@ -1455,10 +1519,11 @@
   <set name="reuseDelay" val="21000"/>  
   <set name="skillTime" val="6000"/>
   <set name="target" val="TARGET_AREA"/>
-  <set name="skillRadius" val="230"/>
+  <set name="skillRadius" val="200"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
@@ -1478,6 +1543,7 @@
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="90" val="0">
@@ -1519,6 +1585,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#pAtk" stackType="pAtk">
       <mul order="0x30" stat="pAtk" val="#pAtk"/>
@@ -1541,6 +1608,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pDef">
       <mul order="0x30" stat="pDef" val="#rate"/>
@@ -1559,10 +1627,11 @@
   <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="2500"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="900"/>
+  <set name="skillRadius" val="1000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#pAtk" stackType="pAtk">
@@ -1582,10 +1651,11 @@
   <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="2500"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="900"/>
+  <set name="skillRadius" val="1000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#pDef" stackType="pDef">
@@ -1605,6 +1675,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
@@ -1624,6 +1695,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
@@ -1645,6 +1717,7 @@
   <set name="skillType" val="SLEEP"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Sleep" time="10" val="0"/>
@@ -1693,6 +1766,7 @@
   <set name="skillType" val="MANADAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <set name="isMagic" val="true"/>
 </skill>
 <skill id="1399" levels="5" name="Mana Storm"> 
@@ -1705,10 +1779,11 @@
   <set name="reuseDelay" val="17000"/>
   <set name="skillTime" val="6000"/>
   <set name="target" val="TARGET_AURA"/>
-  <set name="skillRadius" val="250"/>
+  <set name="skillRadius" val="200"/>
   <set name="skillType" val="MANADAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
 </skill>
 </list>

@@ -423,6 +423,7 @@
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -433,6 +434,7 @@
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -443,6 +445,7 @@
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -453,6 +456,7 @@
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -463,6 +467,7 @@
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -473,6 +478,7 @@
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -483,6 +489,7 @@
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -493,6 +500,7 @@
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -503,6 +511,7 @@
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -513,6 +522,7 @@
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
 </for>
 </skill>
@@ -523,6 +533,7 @@
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -533,6 +544,7 @@
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -543,6 +555,7 @@
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -553,6 +566,7 @@
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -563,6 +577,7 @@
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -611,6 +626,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtkSpd" stackType="mAtkSpeedUp">
@@ -623,7 +639,8 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="NEGATE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="600"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="600"/>
   <set name="negateStats" val="SLEEP"/>
   <set name="negatePower" val="9.0"/>
   <set name="itemConsumeId" val="6037" />
@@ -705,6 +722,7 @@
   <set name="skillType" val="RESURRECT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="600"/>
   <for>
   </for>
 </skill>
