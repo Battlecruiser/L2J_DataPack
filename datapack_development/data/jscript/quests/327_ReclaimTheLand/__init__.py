@@ -19,13 +19,13 @@ ANCIENT_JADE_NECKLACE:1294
 }
 
 DROPLIST = {
-501:[TUREK_MEDALLION,12],
-500:[TUREK_DOGTAG,7],
-499:[TUREK_DOGTAG,8],
-498:[TUREK_DOGTAG,10],
-497:[TUREK_MEDALLION,11],
-496:[TUREK_DOGTAG,9],
-495:[TUREK_MEDALLION,13]
+20501:[TUREK_MEDALLION,12],
+20500:[TUREK_DOGTAG,7],
+20499:[TUREK_DOGTAG,8],
+20498:[TUREK_DOGTAG,10],
+20497:[TUREK_MEDALLION,11],
+20496:[TUREK_DOGTAG,9],
+20495:[TUREK_MEDALLION,13]
 }
 
 class Quest (JQuest) :
@@ -35,78 +35,78 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     n=st.getRandom(100)
-    if event == "7597-03.htm" :
+    if event == "30597-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-    elif event == "7597-06.htm" :
+    elif event == "30597-06.htm" :
       st.exitQuest(1)
       st.playSound("ItemSound.quest_finish")
-    elif event == "7313-02.htm" :
+    elif event == "30313-02.htm" :
       if st.getQuestItemsCount(CLAY_URN_FRAGMENT) >= 5 :
         st.takeItems(CLAY_URN_FRAGMENT,5)
         if n < 80 :
-          htmltext = "7313-03.htm"
+          htmltext = "30313-03.htm"
           st.giveItems(ANCIENT_CLAY_URN,1)
         else:
-          htmltext = "7313-10.htm"
-    elif event == "7313-04.htm" :
+          htmltext = "30313-10.htm"
+    elif event == "30313-04.htm" :
       if st.getQuestItemsCount(BRASS_TRINKET_PIECE) >= 5 :
         st.takeItems(BRASS_TRINKET_PIECE,5)
         if n < 80 :
-          htmltext = "7313-05.htm"
+          htmltext = "30313-05.htm"
           st.giveItems(ANCIENT_BRASS_TIARA,1)
         else:
-          htmltext = "7313-10.htm"
-    elif event == "7313-06.htm" :
+          htmltext = "30313-10.htm"
+    elif event == "30313-06.htm" :
       if st.getQuestItemsCount(BRONZE_MIRROR_PIECE) >= 5 :
         st.takeItems(BRONZE_MIRROR_PIECE,5)
         if n < 80 :
-          htmltext = "7313-07.htm"
+          htmltext = "30313-07.htm"
           st.giveItems(ANCIENT_BRONZE_MIRROR,1)
         else:
-          htmltext = "7313-10.htm"
-    elif event == "7313-08.htm" :
+          htmltext = "30313-10.htm"
+    elif event == "30313-08.htm" :
       if st.getQuestItemsCount(JADE_NECKLACE_BEAD) >= 5 :
         st.takeItems(JADE_NECKLACE_BEAD,5)
         if n < 80 :
-          htmltext = "7313-09.htm"
+          htmltext = "30313-09.htm"
           st.giveItems(ANCIENT_JADE_NECKLACE,1)
         else:
-          htmltext = "7313-10.htm"
-    elif event == "7034-03.htm" :
+          htmltext = "30313-10.htm"
+    elif event == "30034-03.htm" :
       n = st.getQuestItemsCount(CLAY_URN_FRAGMENT)
       if n == 0 :
-        htmltext = "7034-02.htm"
+        htmltext = "30034-02.htm"
       else:
         st.takeItems(CLAY_URN_FRAGMENT,n)
         st.addExpAndSp(n*152,0)
         st.playSound("ItemSound.quest_itemget")
-    elif event == "7034-04.htm" :
+    elif event == "30034-04.htm" :
       n = st.getQuestItemsCount(BRASS_TRINKET_PIECE)
       if n == 0 :
-        htmltext = "7034-02.htm"
+        htmltext = "30034-02.htm"
       else:
         st.takeItems(BRASS_TRINKET_PIECE,n)
         st.addExpAndSp(n*182,0)
         st.playSound("ItemSound.quest_itemget")
-    elif event == "7034-05.htm" :
+    elif event == "30034-05.htm" :
       n = st.getQuestItemsCount(BRONZE_MIRROR_PIECE)
       if n == 0 :
-        htmltext = "7034-02.htm"
+        htmltext = "30034-02.htm"
       else:
         st.takeItems(BRONZE_MIRROR_PIECE,n)
         st.addExpAndSp(n*182,0)
         st.playSound("ItemSound.quest_itemget")
-    elif event == "7034-06.htm" :
+    elif event == "30034-06.htm" :
       n = st.getQuestItemsCount(JADE_NECKLACE_BEAD)
       if n < 1 :
-        htmltext = "7034-02.htm"
+        htmltext = "30034-02.htm"
       else:
        st.takeItems(JADE_NECKLACE_BEAD,n)
        st.addExpAndSp(n*182,0)
        st.playSound("ItemSound.quest_itemget")
-    elif event == "7034-07.htm" :
+    elif event == "30034-07.htm" :
       n1 = 0
       for i in range(1852,1856) :
          n=st.getQuestItemsCount(i)
@@ -116,7 +116,7 @@ class Quest (JQuest) :
            st.addExpAndSp(n*EXP[i],0)
            st.playSound("ItemSound.quest_itemget")
       if not n1 :
-        htmltext = "7034-02.htm"
+        htmltext = "30034-02.htm"
     return htmltext
 
  def onTalk (Self,npc,st):
@@ -125,20 +125,20 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
-   if npcId == 7597 :
+   if npcId == 30597 :
      if int(st.get("cond"))==0 :
        if st.getPlayer().getLevel() < 25 :
-         htmltext = "7597-01.htm"
+         htmltext = "30597-01.htm"
          st.exitQuest(1)
        else :
-         htmltext = "7597-02.htm"
+         htmltext = "30597-02.htm"
      else :
       dogtag = st.getQuestItemsCount(TUREK_DOGTAG)
       medallion = st.getQuestItemsCount(TUREK_MEDALLION)
       if dogtag + medallion == 0 :
-        htmltext = "7597-04.htm"
+        htmltext = "30597-04.htm"
       else:
-        htmltext = "7597-05.htm"
+        htmltext = "30597-05.htm"
         st.giveItems(ADENA,dogtag*40+medallion*50)
         st.takeItems(TUREK_DOGTAG,dogtag)
         st.takeItems(TUREK_MEDALLION,medallion)
@@ -169,24 +169,24 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7597)
+QUEST.addStartNpc(30597)
 
-CREATED.addTalkId(7597)
-STARTING.addTalkId(7597)
-COMPLETED.addTalkId(7597)
+CREATED.addTalkId(30597)
+STARTING.addTalkId(30597)
+COMPLETED.addTalkId(30597)
 
-STARTED.addTalkId(7034)
-STARTED.addTalkId(7313)
-STARTED.addTalkId(7597)
+STARTED.addTalkId(30034)
+STARTED.addTalkId(30313)
+STARTED.addTalkId(30597)
 
-for i in range(495,502) :
+for i in range(20495,20502) :
     STARTED.addKillId(i)
 
-STARTED.addQuestDrop(495,CLAY_URN_FRAGMENT,1)
-STARTED.addQuestDrop(496,BRASS_TRINKET_PIECE,1)
-STARTED.addQuestDrop(497,BRONZE_MIRROR_PIECE,1)
-STARTED.addQuestDrop(498,JADE_NECKLACE_BEAD,1)
-STARTED.addQuestDrop(498,TUREK_DOGTAG,1)
-STARTED.addQuestDrop(499,TUREK_MEDALLION,1)
+STARTED.addQuestDrop(20495,CLAY_URN_FRAGMENT,1)
+STARTED.addQuestDrop(20496,BRASS_TRINKET_PIECE,1)
+STARTED.addQuestDrop(20497,BRONZE_MIRROR_PIECE,1)
+STARTED.addQuestDrop(20498,JADE_NECKLACE_BEAD,1)
+STARTED.addQuestDrop(20498,TUREK_DOGTAG,1)
+STARTED.addQuestDrop(20499,TUREK_MEDALLION,1)
 
 print "importing quests: 327: Reclaim The Land"
