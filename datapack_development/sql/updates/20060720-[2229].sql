@@ -1,3 +1,4 @@
+/*
 update npc set absorb_level='13' where (id='10319');
 
 update npc set absorb_level='13', `type`='L2Boss' where (id='10338');
@@ -20,3 +21,4 @@ UPDATE npc SET absorb_level='3' WHERE id IN
 
 UPDATE npc SET absorb_level='2' WHERE id IN 
 ('795','796');
+*/
