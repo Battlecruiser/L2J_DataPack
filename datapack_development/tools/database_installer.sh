@@ -221,7 +221,7 @@ asktype(){
 echo ""
 echo ""
 echo "WARNING: A full install (f) will destroy all existing character data."
-echo -ne "GAMESERVER DB install type: (f) full install or (u) upgrade or (s) skip or (q) quit?"
+echo -ne "GAMESERVER DB install type: (f) full install, (u) upgrade, (s) skip or (q) quit? "
 read INSTALLTYPE
 case "$INSTALLTYPE" in
 	"f"|"F") fullinstall; upgradeinstall I; experimental; expinstall;;
@@ -314,6 +314,7 @@ $MYG < ../sql/teleport.sql &> /dev/null
 $MYG < ../sql/topic.sql &> /dev/null
 $MYG < ../sql/weapon.sql &> /dev/null
 $MYG < ../sql/zone.sql &> /dev/null
+newbie_helper
 }
 
 experimental(){
@@ -339,7 +340,7 @@ while :
    read LSB
    if [ "$LSB" == "Y" -o "$LSB" == "y" ]; then
      echo "Making a backup of the default gameserver tables."
-     $MYSQLDUMPPATH --add-drop-table -h $GSDBHOST -u $GSUSER --password=$GSPASS $LSDB > experimental_backup.sql &> /dev/null
+     $MYSQLDUMPPATH --add-drop-table -h $GSDBHOST -u $GSUSER --password=$GSPASS $GSDB > experimental_backup.sql 2> /dev/null
      if [ $? -ne 0 ];then
      echo ""
      echo "There was a problem accesing your GS database, server down?."
@@ -362,6 +363,34 @@ echo ""
 echo "Script execution finished."
 exit 0
 }
+
+newbie_helper(){
+while :
+  do
+   echo ""
+   echo -ne "If you're not that skilled applying changes within 'updates' folder, i can try to do it for you (y). If you wish to do it on your own, choose (n). Shall i parse updates files? (Y/n)"
+   read NOB
+   if [ "$NOB" == "Y" -o "$NOB" == "y" -o "$NOB" == "" ]; then
+     echo ""
+     echo "There we go, it may take some time..."
+     echo "updates parser results. Last run: "`date` >database_installer.log
+     for file in $(ls ../sql/updates/*sql);do
+        echo $file|cut -d/ -f4 >> database_installer.log
+        $MYG < $file 2>> database_installer.log
+	if [ $? -eq 0 ];then
+	    echo "no errors">> database_installer.log
+	fi    
+	done
+     echo ""
+     echo "Log available at $(pwd)/database_installer.log"
+     echo ""
+     break
+   elif [ "$NOB" == "n" -o "$NOB" == "N" ]; then 
+     break
+   fi
+  done 
+}
+
 
 clear
 load_config $1
