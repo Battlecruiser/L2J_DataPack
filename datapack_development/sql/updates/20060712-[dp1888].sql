@@ -1,5 +1,6 @@
 -- Forest of dead/Cursed Village Day/Night spawn implementation
 -- npc
+/*
 UPDATE npc SET type = 'L2Monster' WHERE id IN (1596,1599);
 UPDATE npc SET type = 'L2Minion' WHERE id IN (1597,1598,1600,1601);
 UPDATE npc SET hp=0,mp=0,exp=0,sp=0 WHERE id = 12789;
@@ -615,4 +616,4 @@ INSERT INTO spawnlist VALUES
 (NULL,'forest_of_the_dead',1,1585,55544,-44500,-2922,0,0,0,240,0,2),
 (NULL,'forest_of_the_dead',1,1585,57349,-46255,-2773,0,0,0,240,0,2),
 (NULL,'forest_of_the_dead',1,1587,55602,-45389,-2894,0,0,0,240,0,2),
-(NULL,'forest_of_the_dead',1,1587,56641,-45690,-2905,0,0,0,240,0,2);
+(NULL,'forest_of_the_dead',1,1587,56641,-45690,-2905,0,0,0,240,0,2); */
