@@ -30,6 +30,7 @@ __all__ = [
 '47_IntoTheDarkForest',
 '48_ToTheImmortalPlateau',
 '49_TheRoadHome',
+'90_SagaOfTheStormScreamer',
 '101_SwordOfSolidarityQuest',
 '102_FungusFever',
 '103_SpiritOfCraftsman',
