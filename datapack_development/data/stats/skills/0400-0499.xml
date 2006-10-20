@@ -257,14 +257,31 @@
 </for> 
 </skill> 
 <skill id="411" levels="3" name="Stealth">
-  <!-- Treasure Hunter -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<table name="#mpConsume"> 27 31 34 </table>
+<table name="#pAtk"> 1.2 1.3 1.4 </table>
+<table name="#accCombat"> 1.1 1.15 1.2 </table>
+<table name="#rCrit"> 1.1 1.2 1.3 </table>
+<table name="#pDef"> 1.1 1.2 1.3 </table>
+<table name="#mDef"> 1.15 1.25 1.35 </table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="hitTime" val="2000"/>
+<set name="skillTime" val="2000"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="skillType" val="BUFF"/>
+<set name="reuseDelay" val="60000"/>
+<set name="buffDuration" val="120000"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="castRange" val="-1"/>
+<set name="effectRange" val="-1"/>
+<for>
+  <effect count="1" name="SilentMove" time="120" val="0">
+     <div order="0x30" stat="pAtk" val="#pAtk"/>
+     <div order="0x30" stat="accCombat" val="#accCombat"/>
+     <div order="0x30" stat="rCrit" val="#rCrit"/>
+     <div order="0x30" stat="pDef" val="#pDef"/>
+     <div order="0x30" stat="mDef" val="#mDef"/>
+  </effect>
+</for>
 </skill>
 <skill id="412" levels="10" name="Sand Bomb">
 <table name="#mpConsume"> 25 27 28 29 30 31 32 33 34 34</table>
@@ -419,36 +436,36 @@
   </for>
 </skill>
 <skill id="420" levels="3" name="Zealot">
-   <table name="#hpConsume"> 159 183 204 </table>
-   <table name="#mpConsume"> 106 122 136 </table>
-   <table name="#runSpd"> 10 20 30 </table>
-   <table name="#pAtkSpd"> 1.1 1.2 1.3 </table>
-   <table name="#cAtk"> 1.3 1.6 2.0 </table>
-   <set name="hpConsume" val="#hpConsume"/>
-   <set name="mpConsume" val="#mpConsume"/>
-   <set name="power" val="0.0"/>
-   <set name="hitTime" val="2000"/>
-   <set name="condition" val="32"/>
-   <set name="reuseDelay" val="900000"/>
-   <set name="skillTime" val="2000"/>
-   <set name="target" val="TARGET_SELF"/>
-   <set name="skillType" val="BUFF"/>
-   <set name="operateType" val="OP_ACTIVE"/>
-   <set name="castRange" val="-1"/>
-   <set name="effectRange" val="-1"/>
-   <cond>
-     <player hp="30"/>
-   </cond>
-   <for>
-       <effect count="60" name="DamOverTime" time="1" val="75">
-          <add order="0x40" stat="accCombat" val="6"/>
-          <add order="0x40" stat="runSpd" val="#runSpd"/>
-          <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
-          <mul order="0x30" stat="regHp" val="0.3"/>
-          <mul order="0x30" stat="cAtk" val="#cAtk"/>
-     </effect>
-   </for>
- </skill>
+<table name="#hpConsume"> 159 183 204 </table>
+<table name="#mpConsume"> 106 122 136 </table>
+<table name="#runSpd"> 10 20 30 </table>
+<table name="#pAtkSpd"> 1.1 1.2 1.3 </table>
+<table name="#cAtk"> 1.3 1.6 2.0 </table>
+<set name="hpConsume" val="#hpConsume"/>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="power" val="0.0"/>
+<set name="hitTime" val="2000"/>
+<set name="condition" val="32"/>
+<set name="reuseDelay" val="900000"/>
+<set name="skillTime" val="2000"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="skillType" val="BUFF"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="castRange" val="-1"/>
+<set name="effectRange" val="-1"/>
+<cond>
+  <player hp="30"/>
+</cond>
+<for>
+  <effect count="60" name="DamOverTime" time="1" val="75">
+     <add order="0x40" stat="accCombat" val="6"/>
+     <add order="0x40" stat="runSpd" val="#runSpd"/>
+     <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+     <mul order="0x30" stat="regHp" val="0.3"/>
+     <mul order="0x30" stat="cAtk" val="#cAtk"/>
+   </effect>
+</for>
+</skill>
 <skill id="421" levels="5" name="Fell Swoop">
 <table name="#mpConsume"> 27 29 31 33 34 </table>
 <table name="#range"> 5 10 15 20 25 </table>
