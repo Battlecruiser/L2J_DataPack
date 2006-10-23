@@ -69,6 +69,7 @@ class Quest (JQuest) :
           htmltext = "30502-07.htm"
           st.takeItems(TOTEM_SPIRIT_BLOOD_ID,st.getQuestItemsCount(TOTEM_SPIRIT_BLOOD_ID))
           st.giveItems(MASK_OF_MEDIUM_ID,1)
+          st.addExpAndSp(3200,2600)
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
