@@ -13519,7 +13519,7 @@ INSERT INTO skill_trees VALUES (27,1169,1,'Curse Fear',27000,40);
 INSERT INTO skill_trees VALUES (27,1169,2,'Curse Fear',35000,44);
 INSERT INTO skill_trees VALUES (27,1169,3,'Curse Fear',57000,48);
 INSERT INTO skill_trees VALUES (27,1169,4,'Curse Fear',90000,52);
-INSERT INTO skill_trees VALUES (27,1169,5,'Curse Fear',910000,56);
+INSERT INTO skill_trees VALUES (27,1169,5,'Curse Fear',91000,56);
 INSERT INTO skill_trees VALUES (27,1169,6,'Curse Fear',116000,58);
 INSERT INTO skill_trees VALUES (27,1169,7,'Curse Fear',142000,60);
 INSERT INTO skill_trees VALUES (27,1169,8,'Curse Fear',200000,62);
