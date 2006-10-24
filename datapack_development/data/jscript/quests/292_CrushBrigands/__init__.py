@@ -18,11 +18,11 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7532-03.htm" :
+    if event == "30532-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-    elif event == "7532-06.htm" :
+    elif event == "30532-06.htm" :
       st.takeItems(SUSPICIOUS_MEMO,-1)
       st.exitQuest(1)
       st.playSound("ItemSound.quest_finish")
@@ -34,16 +34,16 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
-   if npcId == 7532 :
+   if npcId == 30532 :
      if int(st.get("cond"))==0 :
        if st.getPlayer().getRace().ordinal() != 4 :
-         htmltext = "7532-00.htm"
+         htmltext = "30532-00.htm"
          st.exitQuest(1)
        elif st.getPlayer().getLevel() >= 5 :
-         htmltext = "7532-02.htm"
+         htmltext = "30532-02.htm"
          return htmltext
        else:
-         htmltext = "7532-01.htm"
+         htmltext = "30532-01.htm"
          st.exitQuest(1)
      else :
       neckl=st.getQuestItemsCount(GOBLIN_NECKLACE)
@@ -52,36 +52,36 @@ class Quest (JQuest) :
       smemo=st.getQuestItemsCount(SUSPICIOUS_MEMO)
       scont=st.getQuestItemsCount(SUSPICIOUS_CONTRACT)
       if neckl==penda==lordp==smemo==scont==0 :
-        htmltext = "7532-04.htm"
+        htmltext = "30532-04.htm"
       else :
         st.takeItems(GOBLIN_NECKLACE,-1)
         st.takeItems(GOBLIN_PENDANT,-1)
         st.takeItems(GOBLIN_LORD_PENDANT,-1)
         if scont == 0 :
           if smemo == 1 :
-            htmltext = "7532-08.htm"
+            htmltext = "30532-08.htm"
           elif smemo >= 2 :
-            htmltext = "7532-09.htm"
+            htmltext = "30532-09.htm"
           else :
-            htmltext = "7532-05.htm"
+            htmltext = "30532-05.htm"
         else :
-           htmltext = "7532-10.htm"
+           htmltext = "30532-10.htm"
            st.takeItems(SUSPICIOUS_CONTRACT,-1)
         st.giveItems(ADENA,12*neckl+36*penda+33*lordp+100*scont*int(Config.RATE_DROP_ADENA))
-   elif npcId == 7533 :
+   elif npcId == 30533 :
       if st.getQuestItemsCount(SUSPICIOUS_CONTRACT)==0 :
-        htmltext = "7533-01.htm"
+        htmltext = "30533-01.htm"
       else :
-        htmltext = "7533-02.htm"
+        htmltext = "30533-02.htm"
         st.giveItems(ADENA,st.getQuestItemsCount(SUSPICIOUS_CONTRACT)*120*int(Config.RATE_DROP_ADENA))
         st.takeItems(SUSPICIOUS_CONTRACT,-1)
    return htmltext
 
  def onKill (self,npc,st) :
    npcId = npc.getNpcId()
-   if npcId in [322, 323]: item = GOBLIN_NECKLACE
-   if npcId in [324, 327]: item = GOBLIN_PENDANT
-   if npcId == 528 : item = GOBLIN_LORD_PENDANT
+   if npcId in [20322, 20323]: item = GOBLIN_NECKLACE
+   if npcId in [20324, 20327]: item = GOBLIN_PENDANT
+   if npcId == 20528 : item = GOBLIN_LORD_PENDANT
    if int(st.get("cond")) :
      n = st.getRandom(10)
      if n > 5 :
@@ -106,25 +106,25 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7532)
+QUEST.addStartNpc(30532)
 
-CREATED.addTalkId(7532)
-STARTING.addTalkId(7532)
-STARTED.addTalkId(7532)
-COMPLETED.addTalkId(7532)
+CREATED.addTalkId(30532)
+STARTING.addTalkId(30532)
+STARTED.addTalkId(30532)
+COMPLETED.addTalkId(30532)
 
-STARTED.addTalkId(7533)
+STARTED.addTalkId(30533)
 
-STARTED.addKillId(322)
-STARTED.addKillId(323)
-STARTED.addKillId(324)
-STARTED.addKillId(327)
-STARTED.addKillId(528)
+STARTED.addKillId(20322)
+STARTED.addKillId(20323)
+STARTED.addKillId(20324)
+STARTED.addKillId(20327)
+STARTED.addKillId(20528)
 
-STARTED.addQuestDrop(327,GOBLIN_NECKLACE,1)
-STARTED.addQuestDrop(323,GOBLIN_PENDANT,1)
-STARTED.addQuestDrop(528,GOBLIN_LORD_PENDANT,1)
-STARTED.addQuestDrop(528,SUSPICIOUS_CONTRACT,1)
-STARTED.addQuestDrop(327,SUSPICIOUS_MEMO,1)
+STARTED.addQuestDrop(20327,GOBLIN_NECKLACE,1)
+STARTED.addQuestDrop(20323,GOBLIN_PENDANT,1)
+STARTED.addQuestDrop(20528,GOBLIN_LORD_PENDANT,1)
+STARTED.addQuestDrop(20528,SUSPICIOUS_CONTRACT,1)
+STARTED.addQuestDrop(20327,SUSPICIOUS_MEMO,1)
 
 print "importing quests: 292: Crush Brigands"

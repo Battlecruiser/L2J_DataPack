@@ -26,11 +26,11 @@ SCROLL_ENCHANT_WEAPON_A = 729
 #Messages
 default   = "<html><head><body>I have nothing to say to you.</body></html>"
 #NPCs
-LADD,JOAN=7721,7718
+LADD,JOAN=7721,30718
 #Mobs, cond, Drop
 DROPLIST = {
-965: [3,SAGES_STONE],   #Chimera Piece
-1090: [6,BLOOD_FIRE]    #Bloody Guardian
+20965: [3,SAGES_STONE],   #Chimera Piece
+21090: [6,BLOOD_FIRE]    #Bloody Guardian
 }
 
 class Quest (JQuest) :
@@ -41,10 +41,10 @@ class Quest (JQuest) :
     if event == "1" :
         st.setState(PROGRESS)
         st.set("cond","1")
-        htmltext = "7166-02a.htm"
-    elif event == "7718_1" :
+        htmltext = "30166-02a.htm"
+    elif event == "30718_1" :
         st.set("cond","3")
-        htmltext = "7718-01a.htm"
+        htmltext = "30718-01a.htm"
     return htmltext
  
  def onTalk (self,npc,st):
@@ -57,41 +57,41 @@ class Quest (JQuest) :
             st.set("cond","0")
             if st.getPlayer().getLevel() < MINLEVEL :
                 st.exitQuest(1)
-                htmltext = "7166-01.htm"     #not qualified
+                htmltext = "30166-01.htm"     #not qualified
             elif not st.getQuestItemsCount(STAR_OF_DESTINY) :
                 st.exitQuest(1)
-                htmltext = "7166-01a.htm"     #not qualified
+                htmltext = "30166-01a.htm"     #not qualified
             elif int(st.get("cond"))==0 :
-                htmltext = "7166-02.htm"    # Successful start: Bring me Pure silver from Reagents quest
+                htmltext = "30166-02.htm"    # Successful start: Bring me Pure silver from Reagents quest
         elif id == COMPLETED :
             htmltext = "<html><head><body>You have already completed this quest.</body></html>"
         # was asked to get pure silver but has not done so yet.  Repeat: get pure silver
         elif cond==1 and not st.getQuestItemsCount(PURE_SILVER) :
-            htmltext = "7166-03.htm"    # Bring me Pure silver from Reagents quest
+            htmltext = "30166-03.htm"    # Bring me Pure silver from Reagents quest
         # got the pure silver and came back.  Ask for TrueGold.
         elif cond==1 and st.getQuestItemsCount(PURE_SILVER) :
             st.set("cond","2")
-            htmltext = "7166-04.htm"    # Bring me True Gold from Joan
+            htmltext = "30166-04.htm"    # Bring me True Gold from Joan
         elif 1<cond<5 :
-            htmltext = "7166-05.htm"    # Where is my GOLD?!  Bring to me first.
+            htmltext = "30166-05.htm"    # Where is my GOLD?!  Bring to me first.
         # got the true gold...look for Blood fire
         elif cond==5 :
             st.set("cond","6")
-            htmltext = "7166-06.htm"    # find Blood Fire from "bloody guardians"
+            htmltext = "30166-06.htm"    # find Blood Fire from "bloody guardians"
         # still looking for blood fire?
         elif cond==6 :
-            htmltext = "7166-07.htm"    # find Blood Fire from "bloody guardians"
+            htmltext = "30166-07.htm"    # find Blood Fire from "bloody guardians"
         # Ah, you got the blood fire!  Time to mix them up!
         elif cond==7 and st.getQuestItemsCount(PURE_SILVER) and st.getQuestItemsCount(TRUE_GOLD):
-            htmltext = "7166-08.htm"     # what are you standing there for?  Go to the cauldron and mix them...
+            htmltext = "30166-08.htm"     # what are you standing there for?  Go to the cauldron and mix them...
         # you idiot, how did you lose your quest items?
         elif cond==7 :   
-            htmltext = "7166-09.htm"     # Well...you already know what to do...go get the 3 items...
+            htmltext = "30166-09.htm"     # Well...you already know what to do...go get the 3 items...
             st.set("cond","3")          # start over...yay...
         # cond for this quest is set to 8 from Supplier or Reagents, when you create Mimir's Elixir.
         # Finally, all is done...time to learn how to use the Elixir...
         elif cond==8 :
-            htmltext = "7166-10.htm"     # here's what you do...
+            htmltext = "30166-10.htm"     # here's what you do...
             #st.takeItems(MIMIRS_ELIXIR,-1)  #disabled for compatibility with the way java expects things at Grand Master.
             st.giveItems(SCROLL_ENCHANT_WEAPON_A,1)
             st.setState(COMPLETED)
@@ -99,18 +99,18 @@ class Quest (JQuest) :
     elif npcId == JOAN :
        # first time talking to Joan: You ask for True Gold, she sends you for Sage's stone
         if cond==2 :
-            htmltext = "7718-01.htm"      # You want True Gold?  Please get the sage's stone.  Kill Chimera!
+            htmltext = "30718-01.htm"      # You want True Gold?  Please get the sage's stone.  Kill Chimera!
         # Why are you back alraedy?  You don't have the stone.
         elif cond==3 :
-            htmltext = "7718-02.htm"     # you haven't gotten the sage's stone yet?
+            htmltext = "30718-02.htm"     # you haven't gotten the sage's stone yet?
         # aha!  Here is the sage's stone!  Cool, now we can make true gold
         elif cond==4 :
             st.takeItems(SAGES_STONE,-1)
             st.giveItems(TRUE_GOLD,1)
             st.set("cond","5")
-            htmltext = "7718-03.htm"     # here you go...take the gold.  Now go back to ladd.
+            htmltext = "30718-03.htm"     # here you go...take the gold.  Now go back to ladd.
         elif cond>=5 :
-            htmltext = "7718-04.htm"     # Go back to ladd already!
+            htmltext = "30718-04.htm"     # Go back to ladd already!
     return htmltext
  
  def onKill (self,npc,st) :

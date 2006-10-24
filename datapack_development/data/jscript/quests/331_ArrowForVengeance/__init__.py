@@ -15,11 +15,11 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
-   if event == "7125-03.htm" :
+   if event == "30125-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-   elif event == "7125-06.htm" :
+   elif event == "30125-06.htm" :
       st.exitQuest(1)
       st.playSound("ItemSound.quest_finish")
    return htmltext
@@ -30,33 +30,33 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
       st.set("cond","0")
-   if npcId == 7125 and int(st.get("cond"))==0 :
+   if npcId == 30125 and int(st.get("cond"))==0 :
       if st.getPlayer().getLevel() >= 32 :
-         htmltext = "7125-02.htm"
+         htmltext = "30125-02.htm"
          return htmltext
       else:
-         htmltext = "7125-01.htm"
+         htmltext = "30125-01.htm"
          st.exitQuest(1)
-   elif npcId == 7125 and int(st.get("cond"))==1 :
+   elif npcId == 30125 and int(st.get("cond"))==1 :
      if st.getQuestItemsCount(HARPY_FEATHER)+st.getQuestItemsCount(MEDUSA_VENOM)+st.getQuestItemsCount(WYRMS_TOOTH)>0 :
         st.giveItems(ADENA,80*st.getQuestItemsCount(HARPY_FEATHER)+90*st.getQuestItemsCount(MEDUSA_VENOM)+100*st.getQuestItemsCount(WYRMS_TOOTH))
         st.takeItems(HARPY_FEATHER,-1)
         st.takeItems(MEDUSA_VENOM,-1)
         st.takeItems(WYRMS_TOOTH,-1)
-        htmltext = "7125-05.htm"
+        htmltext = "30125-05.htm"
      else:
-        htmltext = "7125-04.htm"
+        htmltext = "30125-04.htm"
    return htmltext
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
    n = st.getRandom(10)
    if n<5 :
-      if npcId == 145 :
+      if npcId == 20145 :
          st.giveItems(HARPY_FEATHER,1)
-      elif npcId == 158 :
+      elif npcId == 20158 :
          st.giveItems(MEDUSA_VENOM,1)
-      elif npcId == 176 :
+      elif npcId == 20176 :
          st.giveItems(WYRMS_TOOTH,1)
       st.playSound("ItemSound.quest_itemget")
    return
@@ -68,16 +68,16 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 
-QUEST.addStartNpc(7125)
-CREATED.addTalkId(7125)
-STARTED.addTalkId(7125)
+QUEST.addStartNpc(30125)
+CREATED.addTalkId(30125)
+STARTED.addTalkId(30125)
 
-STARTED.addKillId(145)
-STARTED.addKillId(158)
-STARTED.addKillId(176)
+STARTED.addKillId(20145)
+STARTED.addKillId(20158)
+STARTED.addKillId(20176)
 
-STARTED.addQuestDrop(145,HARPY_FEATHER,1)
-STARTED.addQuestDrop(158,MEDUSA_VENOM,1)
-STARTED.addQuestDrop(176,WYRMS_TOOTH,1)
+STARTED.addQuestDrop(20145,HARPY_FEATHER,1)
+STARTED.addQuestDrop(20158,MEDUSA_VENOM,1)
+STARTED.addQuestDrop(20176,WYRMS_TOOTH,1)
 
 print "importing quests: 331: Arrow For Vengeance"

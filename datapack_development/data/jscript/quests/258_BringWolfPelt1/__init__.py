@@ -17,7 +17,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7001-03.htm" :
+    if event == "30001-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -30,13 +30,13 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getLevel() >= 3 :
-       htmltext = "7001-02.htm"
+       htmltext = "30001-02.htm"
      else:
-       htmltext = "7001-01.htm"
+       htmltext = "30001-01.htm"
        st.exitQuest(1)
    else :
      if st.getQuestItemsCount(WOLF_PELT) < 40 :
-       htmltext = "7001-05.htm"
+       htmltext = "30001-05.htm"
      else :
        st.takeItems(WOLF_PELT,-1)
        n = st.getRandom(16)
@@ -51,7 +51,7 @@ class Quest (JQuest) :
          st.giveItems(HOSE,1)
        else:
          st.giveItems(LEATHER_SHIELD,1)
-       htmltext = "7001-06.htm"
+       htmltext = "30001-06.htm"
        st.exitQuest(1)
        st.playSound("ItemSound.quest_finish")
    return htmltext
@@ -74,16 +74,16 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7001)
+QUEST.addStartNpc(30001)
 
-CREATED.addTalkId(7001)
-STARTING.addTalkId(7001)
-STARTED.addTalkId(7001)
-COMPLETED.addTalkId(7001)
+CREATED.addTalkId(30001)
+STARTING.addTalkId(30001)
+STARTED.addTalkId(30001)
+COMPLETED.addTalkId(30001)
 
-STARTED.addKillId(120)
-STARTED.addKillId(442)
+STARTED.addKillId(20120)
+STARTED.addKillId(20442)
 
-STARTED.addQuestDrop(120,WOLF_PELT,1)
+STARTED.addQuestDrop(20120,WOLF_PELT,1)
 
 print "importing quests: 258: Bring Wolf Pelt1"

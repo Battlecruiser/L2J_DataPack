@@ -17,9 +17,9 @@ class Quest (JQuest) :
        st.set("cond","1")
        st.setState(STARTED)
        st.playSound("ItemSound.quest_accept")
-       htmltext = "7005-05.htm"
+       htmltext = "30005-05.htm"
     elif event == "157_1" :
-       htmltext = "7005-04.htm"
+       htmltext = "30005-04.htm"
     return htmltext
 
  def onTalk (Self,npc,st):
@@ -31,9 +31,9 @@ class Quest (JQuest) :
      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif cond == 0 :
      if st.getPlayer().getLevel() >= 5 :
-        htmltext = "7005-03.htm"
+        htmltext = "30005-03.htm"
      else :
-        htmltext = "7005-02.htm"
+        htmltext = "30005-02.htm"
         st.exitQuest(1)
    elif cond :
      if st.getQuestItemsCount(ADAMANTITE_ORE)>=20 :
@@ -41,9 +41,9 @@ class Quest (JQuest) :
         st.setState(COMPLETED)
         st.playSound("ItemSound.quest_finish")
         st.giveItems(BUCKLER,1)
-        htmltext = "7005-07.htm"
+        htmltext = "30005-07.htm"
      else :
-        htmltext = "7005-06.htm"
+        htmltext = "30005-06.htm"
    return htmltext
 
  def onKill (self,npc,st):
@@ -65,15 +65,15 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7005)
+QUEST.addStartNpc(30005)
 
-CREATED.addTalkId(7005)
-STARTING.addTalkId(7005)
-STARTED.addTalkId(7005)
-COMPLETED.addTalkId(7005)
+CREATED.addTalkId(30005)
+STARTING.addTalkId(30005)
+STARTED.addTalkId(30005)
+COMPLETED.addTalkId(30005)
 
-STARTED.addKillId(121)
+STARTED.addKillId(20121)
 
-STARTED.addQuestDrop(121,ADAMANTITE_ORE_ID,1)
+STARTED.addQuestDrop(20121,ADAMANTITE_ORE_ID,1)
 
 print "importing quests: 157: Recover Smuggled"

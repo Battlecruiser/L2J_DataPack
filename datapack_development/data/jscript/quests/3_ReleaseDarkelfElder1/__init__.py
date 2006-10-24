@@ -5,7 +5,7 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #NPC
-TALLOTH = 7141
+TALLOTH = 30141
 
 #ITEMS
 ONYX_BEAST_EYE = 1081
@@ -13,12 +13,12 @@ TAINT_STONE    = 1082
 SUCCUBUS_BLOOD = 1083
 
 #MOBS
-OMEN_BEAST            = 31
-TAINTED_ZOMBIE        = 41
-STINK_ZOMBIE          = 46
-LESSER_SUCCUBUS       = 48
-LESSER_SUCCUBUS_TUREN = 52
-LESSER_SUCCUBUS_TILFO = 57
+OMEN_BEAST            = 20031
+TAINTED_ZOMBIE        = 20041
+STINK_ZOMBIE          = 20046
+LESSER_SUCCUBUS       = 20048
+LESSER_SUCCUBUS_TUREN = 20052
+LESSER_SUCCUBUS_TILFO = 20057
 
 #REWARDS
 ADENA = 57
@@ -29,7 +29,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
-   if event == "7141-03.htm" :
+   if event == "30141-03.htm" :
      st.set("cond","1")
      st.set("id","1")
      st.setState(STARTED)
@@ -53,22 +53,22 @@ class Quest (JQuest) :
    if npcId == TALLOTH and cond == 0 and onlyone == 0 :
      if int(st.get("cond"))<15 :
        if st.getPlayer().getRace().ordinal() != 2 :
-         htmltext = "7141-00.htm"
+         htmltext = "30141-00.htm"
          st.exitQuest(1)
        elif st.getPlayer().getLevel() >= 16 :
-         htmltext = "7141-02.htm"
+         htmltext = "30141-02.htm"
        else:
-         htmltext = "7141-01.htm"
+         htmltext = "30141-01.htm"
          st.exitQuest(1)
      else:
-       htmltext = "7141-01.htm"
+       htmltext = "30141-01.htm"
        st.exitQuest(1)
    elif npcId == TALLOTH and cond == 0 and onlyone == 1 :
      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == TALLOTH and cond == 1 and onlyone == 0 :
-     htmltext = "7141-04.htm"
+     htmltext = "30141-04.htm"
    elif npcId == TALLOTH and cond == 2 and onlyone == 0 :
-     htmltext = "7141-06.htm"
+     htmltext = "30141-06.htm"
      st.takeItems(ONYX_BEAST_EYE,-1)
      st.takeItems(TAINT_STONE,-1)
      st.takeItems(SUCCUBUS_BLOOD,-1)

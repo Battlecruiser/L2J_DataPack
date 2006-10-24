@@ -43,15 +43,15 @@ FT_LEAF = 4325
 CONTROL_ITEMS = { 3500:4422, 3501:4423, 3502:4424 }
 
 #NPCs
-SG_CRONOS = 7610
-FY_MYMYU  = 7747
+SG_CRONOS = 30610
+FY_MYMYU  = 30747
 #NpcId, bitmask, spawnX,spawnY,spawnZ,msg1,msg2
-FAIRY_TREES = [ [5185,1,128091,90400,-1998,ftm_11,ftm_12],
-                [5186,2,117935,94080,-2096,ftm_21,ftm_22],
-                [5187,4,113449,93928,-2072,ftm_31,ftm_32],
-                [5188,8,106685,92608,-2162,ftm_41,ftm_42] ]
+FAIRY_TREES = [ [27185,1,128091,90400,-1998,ftm_11,ftm_12],
+                [27186,2,117935,94080,-2096,ftm_21,ftm_22],
+                [27187,4,113449,93928,-2072,ftm_31,ftm_32],
+                [27188,8,106685,92608,-2162,ftm_41,ftm_42] ]
 #Mobs
-GUARDIAN = 5189
+GUARDIAN = 27189
 
 import sys
 from net.sf.l2j.gameserver.model.quest import State

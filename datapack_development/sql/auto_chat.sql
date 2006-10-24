@@ -7,5 +7,5 @@ CREATE TABLE `auto_chat` (
 ) ENGINE=InnoDB;
 
 INSERT INTO `auto_chat` VALUES 
-(1,8093,-1),
-(2,8094,-1);
+(1,31093,-1),
+(2,31094,-1);

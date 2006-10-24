@@ -13,7 +13,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7137-03.htm" :
+    if event == "30137-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -26,25 +26,25 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getLevel() >= 8 :
-       htmltext = "7137-02.htm"
+       htmltext = "30137-02.htm"
      else:
-       htmltext = "7137-01.htm"
+       htmltext = "30137-01.htm"
        st.exitQuest(1)
    else :
      if st.getQuestItemsCount(FUNGUS_SAC)<10 :
-       htmltext = "7137-04.htm"
+       htmltext = "30137-04.htm"
      else :
        st.giveItems(ADENA,3000)
        st.takeItems(FUNGUS_SAC,-1)
        st.exitQuest(1)
        st.playSound("ItemSound.quest_finish")
-       htmltext = "7137-05.htm"
+       htmltext = "30137-05.htm"
    return htmltext
 
  def onKill (self,npc,st):
    count = st.getQuestItemsCount(FUNGUS_SAC)
    chance = 3
-   if npc.getNpcId() == 400 : chance += 1
+   if npc.getNpcId() == 20400 : chance += 1
    if count < 10 and st.getRandom(10) < chance :
      st.giveItems(FUNGUS_SAC,1)
      if count == 9 :
@@ -61,16 +61,16 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7137)
+QUEST.addStartNpc(30137)
 
-CREATED.addTalkId(7137)
-STARTING.addTalkId(7137)
-STARTED.addTalkId(7137)
-COMPLETED.addTalkId(7137)
+CREATED.addTalkId(30137)
+STARTING.addTalkId(30137)
+STARTED.addTalkId(30137)
+COMPLETED.addTalkId(30137)
 
-STARTED.addKillId(400)
-STARTED.addKillId(7)
+STARTED.addKillId(20400)
+STARTED.addKillId(20007)
 
-STARTED.addQuestDrop(400,FUNGUS_SAC,1)
+STARTED.addQuestDrop(20400,FUNGUS_SAC,1)
 
 print "importing quests: 262: Bring Me Mushrooms1"

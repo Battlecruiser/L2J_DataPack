@@ -41,29 +41,29 @@ ANT_SOLDIER_APHID_ID      = 3689
 TYRANTS_CHITIN_ID         = 3690
 BUGBEAR_BLOOD_ID          = 3691
 #npcs
-GRIMA                     = 5135
-SUCCUBUS_OF_SEDUCTION     = 5136
-GREAT_DEMON_KING          = 5138
-SECRET_KEEPER_TREE        = 5139
-SANCHES                   = 5153
-BONAPARTERIUS             = 5154
-RAMSEBALIUS               = 5155
-TORAI                     = 7557
-ALCHEMIST_MATILD          = 7738
-RUPINA                    = 7742
-WISDOM_CHEST              = 7743
+GRIMA                     = 27135
+SUCCUBUS_OF_SEDUCTION     = 27136
+GREAT_DEMON_KING          = 27138
+SECRET_KEEPER_TREE        = 27139
+SANCHES                   = 27153
+BONAPARTERIUS             = 27154
+RAMSEBALIUS               = 27155
+TORAI                     = 30557
+ALCHEMIST_MATILD          = 30738
+RUPINA                    = 30742
+WISDOM_CHEST              = 30743
 #mobs
-WHISPERING_WIND           =   78
-ANT_RECRUIT               =   82
-ANT_WARRIOR_CAPTAIN       =   88
-SILENOS                   =  168
-TYRANT                    =  192
-TYRANT_KINGPIN            =  193
-AMBER_BASILISK            =  199
-HORROR_MIST_RIPPER        =  227
-TURAK_BUGBEAR             =  248
-TURAK_BUGBEAR_WARRIOR     =  249
-GLASS_JAGUAR              =  250
+WHISPERING_WIND           = 20078
+ANT_RECRUIT               = 20082
+ANT_WARRIOR_CAPTAIN       = 20088
+SILENOS                   = 20168
+TYRANT                    = 20192
+TYRANT_KINGPIN            = 20193
+AMBER_BASILISK            = 20199
+HORROR_MIST_RIPPER        = 20227
+TURAK_BUGBEAR             = 20248
+TURAK_BUGBEAR_WARRIOR     = 20249
+GLASS_JAGUAR              = 20250
 
 ### DROP CHANCE CONFIGURATION 
 ###
@@ -104,14 +104,14 @@ class Quest (JQuest) :
 
    if st.get("cond") == None: st.set("cond","0")
 
-   if event == "7738-03.htm":
+   if event == "30738-03.htm":
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
      if st.getQuestItemsCount(ALCHEMY_TEXT_ID) >= 2: st.takeItems(ALCHEMY_TEXT_ID,-1)
      if st.getQuestItemsCount(ALCHEMY_TEXT_ID) == 0: st.giveItems(ALCHEMY_TEXT_ID,1)
-     htmltext = "7738-03.htm"
-   if event == "7738-06.htm":
+     htmltext = "30738-03.htm"
+   if event == "30738-06.htm":
      # first time 
      if st.getQuestItemsCount(MATILDS_ORB_ID) == 0 and st.getQuestItemsCount(WISH_POTION_ID) == 0:
        st.playSound("ItemSound.quest_accept")
@@ -123,7 +123,7 @@ class Quest (JQuest) :
        if st.getQuestItemsCount(POTION_RECIPE_1_ID) == 0: st.giveItems(POTION_RECIPE_1_ID,1)
        if st.getQuestItemsCount(POTION_RECIPE_2_ID) >= 2: st.takeItems(POTION_RECIPE_2_ID,-1)
        if st.getQuestItemsCount(POTION_RECIPE_2_ID) == 0: st.giveItems(POTION_RECIPE_2_ID,1)
-       htmltext = "7738-06.htm"
+       htmltext = "30738-06.htm"
      # you did already this quest
      if st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and st.getQuestItemsCount(WISH_POTION_ID) == 0:
        st.playSound("ItemSound.quest_accept")
@@ -135,11 +135,11 @@ class Quest (JQuest) :
        if st.getQuestItemsCount(POTION_RECIPE_1_ID) == 0: st.giveItems(POTION_RECIPE_1_ID,1)
        if st.getQuestItemsCount(POTION_RECIPE_2_ID) >= 2: st.takeItems(POTION_RECIPE_2_ID,-1)
        if st.getQuestItemsCount(POTION_RECIPE_2_ID) == 0: st.giveItems(POTION_RECIPE_2_ID,1)
-       htmltext = "7738-12.htm"
+       htmltext = "30738-12.htm"
      # you did already this quest, but you dont have taken your wish potion yet
      if st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and st.getQuestItemsCount(WISH_POTION_ID) >= 1:
-       htmltext = "7738-13.htm"
-   if event == "7738-10.htm":
+       htmltext = "30738-13.htm"
+   if event == "30738-10.htm":
      if check_ingredients(st,1,1,1,1,1,1,1,1) :
        st.playSound("ItemSound.quest_finish")
        st.takeItems(ALCHEMY_TEXT_ID,-1)
@@ -159,14 +159,14 @@ class Quest (JQuest) :
        st.set("cond","0")
      else :
        htmltext="You don't have required items"
-   if event == "7738-14.htm":
+   if event == "30738-14.htm":
      if st.getQuestItemsCount(WISH_POTION_ID) >= 1:
-       htmltext = "7738-15.htm"
+       htmltext = "30738-15.htm"
      # if you dropped or destroyed your wish potion, you are not able to see the list
      else:
-       htmltext = "7738-14.htm"
+       htmltext = "30738-14.htm"
 #### WISH I : Please make me into a loving person.
-   if event == "7738-16.htm":
+   if event == "30738-16.htm":
      # if you dropped or destroyed your wish potion, you are not able to make a wish
      if st.getQuestItemsCount(WISH_POTION_ID) >= 1:
        ### autochat should begin here !!!!
@@ -178,11 +178,11 @@ class Quest (JQuest) :
          st.getPcSpawn().addSpawn(SUCCUBUS_OF_SEDUCTION)
        else:
          st.getPcSpawn().addSpawn(RUPINA)
-       htmltext = "7738-16.htm"
+       htmltext = "30738-16.htm"
      else:
-       htmltext = "7738-14.htm"
+       htmltext = "30738-14.htm"
 #### WISH II : I want to become an extremely rich person. How about 100 million adena?! 
-   if event == "7738-17.htm":
+   if event == "30738-17.htm":
      # if you dropped or destroyed your wish potion, you are not able to make a wish
      if st.getQuestItemsCount(WISH_POTION_ID) >= 1:
        ### autochat should begin here !!!!
@@ -201,11 +201,11 @@ class Quest (JQuest) :
            st.getPcSpawn().addSpawn(GRIMA)
            st.getPcSpawn().addSpawn(GRIMA)
            st.getPcSpawn().addSpawn(GRIMA)
-       htmltext = "7738-17.htm"
+       htmltext = "30738-17.htm"
      else:
-       htmltext = "7738-14.htm"
+       htmltext = "30738-14.htm"
 #### WISH III : I want to be a king in this world.
-   if event == "7738-18.htm":
+   if event == "30738-18.htm":
      # if you dropped or destroyed your wish potion, you are not able to make a wish
      if st.getQuestItemsCount(WISH_POTION_ID) >= 1:
        ### autochat should begin here !!!!
@@ -217,11 +217,11 @@ class Quest (JQuest) :
          st.giveItems(ANCIENT_CROWN_ID,1)
        else:
          st.getPcSpawn().addSpawn(SANCHES)
-       htmltext = "7738-18.htm"
+       htmltext = "30738-18.htm"
      else:
-       htmltext = "7738-14.htm"
+       htmltext = "30738-14.htm"
 #### WISH IV : I'd like to become the wisest person in the world.
-   if event == "7738-19.htm":
+   if event == "30738-19.htm":
      # if you dropped or destroyed your wish potion, you are not able to make a wish
      if st.getQuestItemsCount(WISH_POTION_ID) >= 1:
        ### autochat should begin here !!!!
@@ -233,9 +233,9 @@ class Quest (JQuest) :
          st.giveItems(SPELLBOOK_BATTLEHEAL_ID,1)
        else:
          st.getPcSpawn().addSpawn(WISDOM_CHEST)
-       htmltext = "7738-19.htm"
+       htmltext = "30738-19.htm"
      else:
-       htmltext = "7738-14.htm"
+       htmltext = "30738-14.htm"
    return htmltext
 
  def onTalk (Self,npc,st):
@@ -246,7 +246,7 @@ class Quest (JQuest) :
      if st.getQuestItemsCount(FORBIDDEN_LOVE_SCROLL_ID) >= 1:
        st.takeItems(FORBIDDEN_LOVE_SCROLL_ID,1)     
        st.giveItems(ADENA_ID,500000)
-       return "7557-01.htm"
+       return "30557-01.htm"
      else:
        return "no_quest.htm"
 
@@ -256,14 +256,14 @@ class Quest (JQuest) :
        st.giveItems(SPELLBOOK_ICEBOLT_ID,1)
        st.giveItems(SPELLBOOK_BATTLEHEAL_ID,1)
        st.getPlayer().getTarget().decayMe()
-       return "7743-06.htm"
+       return "30743-06.htm"
      elif DROP_CHANCE <= 30:
        st.giveItems(HEART_OF_PAAGRIO_ID,1)
        st.getPlayer().getTarget().decayMe()
-       return "7743-06.htm"
+       return "30743-06.htm"
      else:
        st.getPlayer().getTarget().decayMe()
-       return "7743-0" + str(st.getRandom(4)+1) + ".htm"
+       return "30743-0" + str(st.getRandom(4)+1) + ".htm"
 
    if npcId == RUPINA:
      DROP_CHANCE = st.getRandom(MAX_VALUE)
@@ -272,41 +272,41 @@ class Quest (JQuest) :
      else:
        st.giveItems(SCROLL_OF_ESCAPE_ID,1)
      st.getPlayer().getTarget().decayMe()
-     return "7742-01.htm"
+     return "30742-01.htm"
 
    if npcId == ALCHEMIST_MATILD:
      if st.getPlayer().getLevel() <= 29:
        st.exitQuest(1)
-       return "7738-21.htm"
+       return "30738-21.htm"
      else:
        if st.getState() == CREATED:
          st.set("cond","0")
        if st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and check_ingredients(st,0,0,0,0,0,0,0,0) and st.getState() != MIDDLE:
          if st.get("cond") == None:
            st.set("cond","0")
-         return "7738-11.htm"
+         return "30738-11.htm"
        elif st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and check_ingredients(st,1,1,1,1,1,1,1,1):
-         return "7738-08.htm"
+         return "30738-08.htm"
        elif st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and st.getQuestItemsCount(WISH_POTION_ID) == 0 and st.getState() != MIDDLE:
          st.set("cond","2")
          st.setState(MIDDLE)
          if st.getQuestItemsCount(POTION_RECIPE_1_ID) == 0: st.giveItems(POTION_RECIPE_1_ID,1)
          if st.getQuestItemsCount(POTION_RECIPE_2_ID) == 0: st.giveItems(POTION_RECIPE_2_ID,1)
-         return "7738-12.htm"
+         return "30738-12.htm"
        elif st.getState() == END and not check_ingredients(st,1,1,1,1,1,1,1,1):
-         return "7738-07.htm"       
+         return "30738-07.htm"       
        elif check_ingredients(st,1,1,1,1,1,1,1,1):
-         return "7738-08.htm"
+         return "30738-08.htm"
        elif st.getQuestItemsCount(ALCHEMY_TEXT_ID) >= 1 and st.getQuestItemsCount(SECRET_BOOK_ID) >= 1:
-         return "7738-05.htm"
+         return "30738-05.htm"
        elif st.getState() == MIDDLE and st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and st.getQuestItemsCount(POTION_RECIPE_1_ID) == 0 and st.getQuestItemsCount(POTION_RECIPE_2_ID) == 0:
-         return "7738-11.htm"
+         return "30738-11.htm"
        elif st.getState() == MIDDLE and st.getQuestItemsCount(POTION_RECIPE_1_ID) >= 1 and st.getQuestItemsCount(POTION_RECIPE_2_ID) >= 1:
-         return "7738-07.htm"
+         return "30738-07.htm"
        elif st.getState() == STARTED and st.getQuestItemsCount(ALCHEMY_TEXT_ID) >= 1 and st.getQuestItemsCount(SECRET_BOOK_ID) == 0:
-         return "7738-04.htm"
+         return "30738-04.htm"
        else:
-         return "7738-01.htm"
+         return "30738-01.htm"
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()

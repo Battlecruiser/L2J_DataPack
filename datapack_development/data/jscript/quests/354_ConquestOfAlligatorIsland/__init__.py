@@ -32,30 +32,30 @@ class Quest (JQuest) :
      htmltext = event
      amount = st.getQuestItemsCount(ALLIGATOR_TOOTH)
      maps = divmod(st.getQuestItemsCount(TORN_MAP_FRAGMENT),10)
-     if event == "7895-00a.htm" :
+     if event == "30895-00a.htm" :
          st.exitQuest(1)
      elif event == "1" :
          st.setState(STARTED)
          st.set("cond","1")
-         htmltext = "7895-02.htm"
+         htmltext = "30895-02.htm"
          st.playSound("ItemSound.quest_accept")
-     elif event == "7895-06.htm" :
+     elif event == "30895-06.htm" :
          if st.getQuestItemsCount(TORN_MAP_FRAGMENT)>=10 :
-             htmltext = "7895-07.htm"
-     elif event == "7895-05.htm" :
+             htmltext = "30895-07.htm"
+     elif event == "30895-05.htm" :
          if amount :
              st.giveItems(ADENA,amount*300)
              st.takeItems(ALLIGATOR_TOOTH,-1)
              st.playSound("ItemSound.quest_itemget")
-             htmltext = "7895-05a.htm"
+             htmltext = "30895-05a.htm"
              if amount > 99 :
-                htmltext = "7895-05b.htm"
+                htmltext = "30895-05b.htm"
                 item=RANDOM_REWARDS[st.getRandom(len(RANDOM_REWARDS))]
                 st.giveItems(item[0],st.getRandom(item[1])+1)
-     elif event == "7895-08.htm" :
+     elif event == "30895-08.htm" :
          st.giveItems(PIRATES_TREASURE_MAP,maps[0])
          st.takeItems(TORN_MAP_FRAGMENT,maps[0]*10)
-     elif event == "7895-09.htm" :
+     elif event == "30895-09.htm" :
          st.exitQuest(1)
          st.playSound("ItemSound.quest_finish")
      return htmltext
@@ -68,11 +68,11 @@ class Quest (JQuest) :
      cond = st.getInt("cond")
      if id == CREATED :
         if level>=38 :
-           htmltext = "7895-01.htm"
+           htmltext = "30895-01.htm"
         else :
-           htmltext = "7895-00.htm"
+           htmltext = "30895-00.htm"
      elif cond==1 :
-         htmltext = "7895-03.htm"
+         htmltext = "30895-03.htm"
      return htmltext
 
  def onKill (self,npc,st):
@@ -91,15 +91,15 @@ CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7895)
+QUEST.addStartNpc(30895)
 
-CREATED.addTalkId(7895)
-STARTED.addTalkId(7895)
+CREATED.addTalkId(30895)
+STARTED.addTalkId(30895)
 
-STARTED.addQuestDrop(991,ALLIGATOR_TOOTH,1)
-STARTED.addQuestDrop(991,TORN_MAP_FRAGMENT,1)
+STARTED.addQuestDrop(20991,ALLIGATOR_TOOTH,1)
+STARTED.addQuestDrop(20991,TORN_MAP_FRAGMENT,1)
 
-for i in range(804,809)+[991] :
+for i in range(20804,20809)+[20991] :
     STARTED.addKillId(i)
 
 print "importing quests: 354: Conquest Of Alligator Island"

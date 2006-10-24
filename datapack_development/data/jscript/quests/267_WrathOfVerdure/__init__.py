@@ -13,11 +13,11 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "12092-03.htm" :
+    if event == "31853-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-    elif event == "12092-06.htm" :
+    elif event == "31853-06.htm" :
       st.exitQuest(1)
       st.playSound("ItemSound.quest_finish")
     return htmltext
@@ -29,21 +29,21 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getRace().ordinal() != 1 :
-       htmltext = "12092-00.htm"
+       htmltext = "31853-00.htm"
        st.exitQuest(1)
      elif st.getPlayer().getLevel()<4 :
-       htmltext = "12092-01.htm"
+       htmltext = "31853-01.htm"
        st.exitQuest(1)
      else :
-       htmltext = "12092-02.htm"
+       htmltext = "31853-02.htm"
    else :
      count=st.getQuestItemsCount(GOBLIN_CLUB)
      if count :
        st.giveItems(SILVERY_LEAF,count)
        st.takeItems(GOBLIN_CLUB,-1)
-       htmltext = "12092-05.htm"
+       htmltext = "31853-05.htm"
      else:
-       htmltext = "12092-04.htm"
+       htmltext = "31853-04.htm"
    return htmltext
 
  def onKill (self,npc,st):
@@ -59,15 +59,15 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(12092)
+QUEST.addStartNpc(31853)
 
-CREATED.addTalkId(12092)
-STARTING.addTalkId(12092)
-STARTED.addTalkId(12092)
-COMPLETED.addTalkId(12092)
+CREATED.addTalkId(31853)
+STARTING.addTalkId(31853)
+STARTED.addTalkId(31853)
+COMPLETED.addTalkId(31853)
 
-STARTED.addKillId(325)
+STARTED.addKillId(20325)
 
-STARTED.addQuestDrop(325,GOBLIN_CLUB,1)
+STARTED.addQuestDrop(20325,GOBLIN_CLUB,1)
 
 print "importing quests: 267: Wrath Of Verdure"

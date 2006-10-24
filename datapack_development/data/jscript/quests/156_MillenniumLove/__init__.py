@@ -19,18 +19,18 @@ class Quest (JQuest) :
     if event == "1" :
         st.set("id","0")
         if st.getPlayer().getLevel() >= 15 :
-          htmltext = "7368-06.htm"
+          htmltext = "30368-06.htm"
           st.giveItems(RYLITHS_LETTER_ID,1)
           st.set("cond","1")
           st.setState(STARTED)
           st.playSound("ItemSound.quest_accept")
         else:
-          htmltext = "7368-05.htm"
+          htmltext = "30368-05.htm"
     elif event == "156_1" :
             st.takeItems(RYLITHS_LETTER_ID,st.getQuestItemsCount(RYLITHS_LETTER_ID))
             if st.getQuestItemsCount(THEONS_DIARY_ID) == 0 :
               st.giveItems(THEONS_DIARY_ID,1)
-            htmltext = "7369-03.htm"
+            htmltext = "30369-03.htm"
     elif event == "156_2" and int(st.get("onlyone")) == 0 :
             if int(st.get("id")) != 156 :
               st.set("id","156")
@@ -40,7 +40,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_finish")
               st.set("onlyone","1")
               st.giveItems(ADENA_ID,3000)
-              htmltext = "7369-04.htm"
+              htmltext = "30369-04.htm"
     return htmltext
 
 
@@ -54,17 +54,17 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 7368 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-      htmltext = "7368-04.htm"
-   elif npcId == 7368 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   if npcId == 30368 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+      htmltext = "30368-04.htm"
+   elif npcId == 30368 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7368 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RYLITHS_LETTER_ID)!=0 :
-        htmltext = "7368-07.htm"
-   elif npcId == 7369 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RYLITHS_LETTER_ID)!=0 :
-        htmltext = "7369-02.htm"
-   elif npcId == 7369 and int(st.get("cond"))!=0 and st.getQuestItemsCount(THEONS_DIARY_ID)!=0 :
-        htmltext = "7369-05.htm"
-   elif npcId == 7368 and int(st.get("cond"))!=0 and st.getQuestItemsCount(THEONS_DIARY_ID)!=0 and int(st.get("onlyone"))==0 :
+   elif npcId == 30368 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RYLITHS_LETTER_ID)!=0 :
+        htmltext = "30368-07.htm"
+   elif npcId == 30369 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RYLITHS_LETTER_ID)!=0 :
+        htmltext = "30369-02.htm"
+   elif npcId == 30369 and int(st.get("cond"))!=0 and st.getQuestItemsCount(THEONS_DIARY_ID)!=0 :
+        htmltext = "30369-05.htm"
+   elif npcId == 30368 and int(st.get("cond"))!=0 and st.getQuestItemsCount(THEONS_DIARY_ID)!=0 and int(st.get("onlyone"))==0 :
         if int(st.get("id")) != 156 :
           st.set("id","156")
           st.takeItems(THEONS_DIARY_ID,st.getQuestItemsCount(THEONS_DIARY_ID))
@@ -74,7 +74,7 @@ class Quest (JQuest) :
           st.set("onlyone","1")
           st.addExpAndSp(3600,0)
           st.giveItems(SWIFT_ATTACK_POTION_ID,2)
-          htmltext = "7368-08.htm"
+          htmltext = "30368-08.htm"
    return htmltext
 
 QUEST       = Quest(156,"156_MillenniumLove","Millennium Love")
@@ -85,13 +85,13 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7368)
+QUEST.addStartNpc(30368)
 
-STARTING.addTalkId(7368)
+STARTING.addTalkId(30368)
 
-STARTED.addTalkId(7368)
-STARTED.addTalkId(7369)
+STARTED.addTalkId(30368)
+STARTED.addTalkId(30369)
 
 
-STARTED.addQuestDrop(7368,RYLITHS_LETTER_ID,1)
-STARTED.addQuestDrop(7369,THEONS_DIARY_ID,1)
+STARTED.addQuestDrop(30368,RYLITHS_LETTER_ID,1)
+STARTED.addQuestDrop(30369,THEONS_DIARY_ID,1)

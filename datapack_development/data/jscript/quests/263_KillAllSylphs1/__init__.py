@@ -14,11 +14,11 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7346-03.htm" :
+    if event == "30346-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-    elif event == "7346-06.htm" :
+    elif event == "30346-06.htm" :
       st.exitQuest(1)
       st.playSound("ItemSound.quest_finish")
     return htmltext
@@ -30,20 +30,20 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getRace().ordinal() != 2 :
-       htmltext = "7346-00.htm"
+       htmltext = "30346-00.htm"
        st.exitQuest(1)
      elif st.getPlayer().getLevel()<8 :
-       htmltext = "7346-01.htm"
+       htmltext = "30346-01.htm"
        st.exitQuest(1)
      else :
-       htmltext = "7346-02.htm"
+       htmltext = "30346-02.htm"
    else :
      amulet = st.getQuestItemsCount(ORC_AMULET)
      necklace = st.getQuestItemsCount(ORC_NECKLACE)
      if amulet == necklace == 0 :
-       htmltext = "7346-04.htm"
+       htmltext = "30346-04.htm"
      else :
-       htmltext = "7346-05.htm"
+       htmltext = "30346-05.htm"
        st.giveItems(ADENA_ID,amulet*20+necklace*30)
        st.takeItems(ORC_AMULET,-1)
        st.takeItems(ORC_NECKLACE,-1)
@@ -51,7 +51,7 @@ class Quest (JQuest) :
 
  def onKill (self,npc,st):
    item=ORC_NECKLACE
-   if npc.getNpcId() == 385 :
+   if npc.getNpcId() == 20385 :
      item = ORC_AMULET
    if st.getRandom(10)>4 :
      st.giveItems(item,1)
@@ -66,19 +66,19 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7346)
+QUEST.addStartNpc(30346)
 
-CREATED.addTalkId(7346)
-STARTING.addTalkId(7346)
-STARTED.addTalkId(7346)
-COMPLETED.addTalkId(7346)
+CREATED.addTalkId(30346)
+STARTING.addTalkId(30346)
+STARTED.addTalkId(30346)
+COMPLETED.addTalkId(30346)
 
-STARTED.addKillId(385)
-STARTED.addKillId(386)
-STARTED.addKillId(387)
-STARTED.addKillId(388)
+STARTED.addKillId(20385)
+STARTED.addKillId(20386)
+STARTED.addKillId(20387)
+STARTED.addKillId(20388)
 
-STARTED.addQuestDrop(385,ORC_AMULET,1)
-STARTED.addQuestDrop(386,ORC_NECKLACE,1)
+STARTED.addQuestDrop(20385,ORC_AMULET,1)
+STARTED.addQuestDrop(20386,ORC_NECKLACE,1)
 
 print "importing quests: 263: Kill All Sylphs1"

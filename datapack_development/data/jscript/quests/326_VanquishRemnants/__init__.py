@@ -9,15 +9,15 @@ ADENA = 57
 BLACK_LION_MARK = 1369
 
 DROPLIST={
-53:[RED_CROSS_BADGE,25],
-437:[RED_CROSS_BADGE,25],
-58:[RED_CROSS_BADGE,25],
-61:[BLUE_CROSS_BADGE,25],
-63:[BLUE_CROSS_BADGE,25],
-436:[BLUE_CROSS_BADGE,25],
-439:[BLUE_CROSS_BADGE,25],
-438:[BLACK_CROSS_BADGE,35],
-66:[BLACK_CROSS_BADGE,25],
+20053:[RED_CROSS_BADGE,25],
+20437:[RED_CROSS_BADGE,25],
+20058:[RED_CROSS_BADGE,25],
+20061:[BLUE_CROSS_BADGE,25],
+20063:[BLUE_CROSS_BADGE,25],
+20436:[BLUE_CROSS_BADGE,25],
+20439:[BLUE_CROSS_BADGE,25],
+20438:[BLACK_CROSS_BADGE,35],
+20066:[BLACK_CROSS_BADGE,25],
 }
 
 class Quest (JQuest) :
@@ -26,18 +26,14 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7435-03.htm" :
+    if event == "30435-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-    elif event == "7435_1" :
-      htmltext = "7435-07.htm"
+    elif event == "30435-07.htm" :
       st.playSound("ItemSound.quest_finish")
       st.exitQuest(1)
-    elif event == "7435_2" :
-      htmltext = "7435-08.htm"
     return htmltext
-
 
  def onTalk (Self,npc,st):
    npcId = npc.getNpcId()
@@ -47,27 +43,27 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getLevel() >= 21 :
-       htmltext = "7435-02.htm"
+       htmltext = "30435-02.htm"
      else:
-       htmltext = "7435-01.htm"
+       htmltext = "30435-01.htm"
        st.exitQuest(1)
    else :
      red=st.getQuestItemsCount(RED_CROSS_BADGE)
      blue=st.getQuestItemsCount(BLUE_CROSS_BADGE)
      black=st.getQuestItemsCount(BLACK_CROSS_BADGE)
      if red+blue+black == 0 :
-       htmltext = "7435-04.htm"
+       htmltext = "30435-04.htm"
      else :
-       htmltext = "7435-05.htm"
+       htmltext = "30435-05.htm"
        st.giveItems(ADENA,60*red+65*blue+70*black)
        st.takeItems(RED_CROSS_BADGE,-1)
        st.takeItems(BLUE_CROSS_BADGE,-1)
        st.takeItems(BLACK_CROSS_BADGE,-1)
        if red+blue+black >= 100 :
-         htmltext = "7435-09.htm"
+         htmltext = "30435-09.htm"
          if st.getQuestItemsCount(BLACK_LION_MARK) ==  0 :
            st.giveItems(BLACK_LION_MARK,1)
-           htmltext = "7435-06.htm"
+           htmltext = "30435-06.htm"
    return htmltext
 
  def onKill (self,npc,st):
@@ -84,25 +80,25 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7435)
+QUEST.addStartNpc(30435)
 
-CREATED.addTalkId(7435)
-STARTING.addTalkId(7435)
-STARTED.addTalkId(7435)
-COMPLETED.addTalkId(7435)
+CREATED.addTalkId(30435)
+STARTING.addTalkId(30435)
+STARTED.addTalkId(30435)
+COMPLETED.addTalkId(30435)
 
-STARTED.addKillId(436)
-STARTED.addKillId(437)
-STARTED.addKillId(438)
-STARTED.addKillId(439)
-STARTED.addKillId(53)
-STARTED.addKillId(58)
-STARTED.addKillId(61)
-STARTED.addKillId(63)
-STARTED.addKillId(66)
+STARTED.addKillId(20436)
+STARTED.addKillId(20437)
+STARTED.addKillId(20438)
+STARTED.addKillId(20439)
+STARTED.addKillId(20053)
+STARTED.addKillId(20058)
+STARTED.addKillId(20061)
+STARTED.addKillId(20063)
+STARTED.addKillId(20066)
 
-STARTED.addQuestDrop(53,RED_CROSS_BADGE,1)
-STARTED.addQuestDrop(61,BLUE_CROSS_BADGE,1)
-STARTED.addQuestDrop(66,BLACK_CROSS_BADGE,1)
+STARTED.addQuestDrop(20053,RED_CROSS_BADGE,1)
+STARTED.addQuestDrop(20061,BLUE_CROSS_BADGE,1)
+STARTED.addQuestDrop(20066,BLACK_CROSS_BADGE,1)
 
 print "importing quests: 326: Vanquish Remnants"

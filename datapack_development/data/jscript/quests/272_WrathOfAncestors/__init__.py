@@ -13,7 +13,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7572-03.htm" :
+    if event == "30572-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -26,19 +26,19 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond")) == 0 :
      if st.getPlayer().getRace().ordinal() != 3 :
-        htmltext = "7572-00.htm"
+        htmltext = "30572-00.htm"
         st.exitQuest(1)
      else :
         if st.getPlayer().getLevel() < 5 :
-          htmltext = "7572-01.htm"
+          htmltext = "30572-01.htm"
           st.exitQuest(1)
         else:
-          htmltext = "7572-02.htm"
+          htmltext = "30572-02.htm"
    else :
      if st.getQuestItemsCount(GRAVE_ROBBERS_HEAD) < 50 :
-        htmltext = "7572-04.htm"
+        htmltext = "30572-04.htm"
      else:
-        htmltext = "7572-05.htm"
+        htmltext = "30572-05.htm"
         st.exitQuest(1)
         st.playSound("ItemSound.quest_finish")
         st.giveItems(ADENA,1500)
@@ -63,15 +63,15 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7572)
+QUEST.addStartNpc(30572)
 
-CREATED.addTalkId(7572)
-STARTING.addTalkId(7572)
-STARTED.addTalkId(7572)
+CREATED.addTalkId(30572)
+STARTING.addTalkId(30572)
+STARTED.addTalkId(30572)
 
-STARTED.addKillId(319)
-STARTED.addKillId(320)
+STARTED.addKillId(20319)
+STARTED.addKillId(20320)
 
-STARTED.addQuestDrop(319,GRAVE_ROBBERS_HEAD,1)
+STARTED.addQuestDrop(20319,GRAVE_ROBBERS_HEAD,1)
 
 print "importing quests: 272: Wrath Of Ancestors"

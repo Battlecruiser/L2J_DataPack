@@ -51,16 +51,16 @@ STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 
-for npcId in range(8095,8126):
-    if npcId in [8111,8112,8113]:
+for npcId in range(31095,31126):
+    if npcId in [31111,31112,31113]:
         continue
     STARTED.addTalkId(npcId)
     CREATED.addTalkId(npcId)
     QUEST.addStartNpc(npcId)
 
-for mobs in range(1208,1256):
+for mobs in range(21208,21256):
     STARTED.addKillId(mobs)
 
-STARTED.addQuestDrop(986,ANCIENT_SCROLL,1)
+STARTED.addQuestDrop(20986,ANCIENT_SCROLL,1)
 
 print "importing quests: 385: Yoke of the Past"

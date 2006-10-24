@@ -5,10 +5,10 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #NPCs 
-ARUJIEN = 7223 
-MIRABEL = 7146 
-HERBIEL = 7150 
-GREENIS = 7157 
+ARUJIEN = 30223 
+MIRABEL = 30146 
+HERBIEL = 30150 
+GREENIS = 30157 
 
 #ITEMS 
 ARUJIENS_LETTER1 = 1092 
@@ -27,20 +27,20 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event 
-   if event == "7223-04.htm" : 
+   if event == "30223-04.htm" : 
      if st.getQuestItemsCount(ARUJIENS_LETTER1) == 0 and st.getQuestItemsCount(ARUJIENS_LETTER2) == 0 and st.getQuestItemsCount(ARUJIENS_LETTER3) == 0 : 
        st.giveItems(ARUJIENS_LETTER1,1) 
      st.set("cond","1") 
      st.set("id","1") 
      st.setState(STARTED) 
      st.playSound("ItemSound.quest_accept") 
-   elif event == "7223-08.htm" : 
+   elif event == "30223-08.htm" : 
      st.takeItems(ARUJIENS_LETTER3,-1) 
      st.giveItems(POETRY_BOOK,1) 
      st.set("cond","4") 
      st.set("id","4") 
      st.playSound("ItemSound.quest_middle") 
-   elif event == "7223-10.htm" : 
+   elif event == "30223-10.htm" : 
      st.takeItems(ARUJIENS_LETTER3,-1) 
      st.giveItems(ADENA,450) 
      st.set("cond","0") 
@@ -61,25 +61,25 @@ class Quest (JQuest) :
  
    if npcId == ARUJIEN and id == CREATED : 
      if st.getPlayer().getRace().ordinal() != 1 and st.getPlayer().getRace().ordinal() != 0 : 
-       htmltext = "7223-00.htm" 
+       htmltext = "30223-00.htm" 
      elif st.getPlayer().getLevel() >= 2 : 
-       htmltext = "7223-02.htm" 
+       htmltext = "30223-02.htm" 
      else: 
-       htmltext = "7223-01.htm" 
+       htmltext = "30223-01.htm" 
        st.exitQuest(1) 
    elif npcId == ARUJIEN and id == COMPLETED : 
      htmltext = "<html><head><body>This quest have already been completed.</body></html>" 
    elif npcId == ARUJIEN and cond >= 1 : 
      if st.getQuestItemsCount(ARUJIENS_LETTER1) : 
-       htmltext = "7223-05.htm" 
+       htmltext = "30223-05.htm" 
      elif st.getQuestItemsCount(ARUJIENS_LETTER3) : 
-       htmltext = "7223-07.htm" 
+       htmltext = "30223-07.htm" 
      elif st.getQuestItemsCount(ARUJIENS_LETTER2) : 
-       htmltext = "7223-06.htm" 
+       htmltext = "30223-06.htm" 
      elif st.getQuestItemsCount(POETRY_BOOK) : 
-       htmltext = "7223-11.htm" 
+       htmltext = "30223-11.htm" 
      elif st.getQuestItemsCount(GREENIS_LETTER) : 
-       htmltext = "7223-10.htm" 
+       htmltext = "30223-10.htm" 
        st.takeItems(GREENIS_LETTER,-1) 
        st.giveItems(BEGINNERS_POTION,5) 
        st.set("cond","0") 
@@ -87,36 +87,36 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_finish") 
    elif npcId == MIRABEL and cond == 1 : 
      if st.getQuestItemsCount(ARUJIENS_LETTER1) : 
-       htmltext = "7146-01.htm" 
+       htmltext = "30146-01.htm" 
        st.takeItems(ARUJIENS_LETTER1,-1) 
        st.giveItems(ARUJIENS_LETTER2,1) 
        st.set("cond","2") 
        st.set("id","2") 
        st.playSound("ItemSound.quest_middle") 
      elif st.getQuestItemsCount(ARUJIENS_LETTER2) or st.getQuestItemsCount(ARUJIENS_LETTER3) or st.getQuestItemsCount(POETRY_BOOK) or st.getQuestItemsCount(GREENIS_LETTER) : 
-       htmltext = "7146-02.htm" 
+       htmltext = "30146-02.htm" 
    elif npcId == HERBIEL and cond == 2 and st.getQuestItemsCount(ARUJIENS_LETTER1) == 0 : 
      if st.getQuestItemsCount(ARUJIENS_LETTER2) : 
-       htmltext = "7150-01.htm" 
+       htmltext = "30150-01.htm" 
        st.takeItems(ARUJIENS_LETTER2,-1) 
        st.giveItems(ARUJIENS_LETTER3,1) 
        st.set("cond","3") 
        st.set("id","3") 
        st.playSound("ItemSound.quest_middle") 
      elif st.getQuestItemsCount(ARUJIENS_LETTER3) or st.getQuestItemsCount(POETRY_BOOK) or st.getQuestItemsCount(GREENIS_LETTER) : 
-       htmltext = "7150-02.htm" 
+       htmltext = "30150-02.htm" 
    elif npcId == GREENIS and cond == 4 : 
      if st.getQuestItemsCount(POETRY_BOOK) : 
-       htmltext = "7157-02.htm" 
+       htmltext = "30157-02.htm" 
        st.takeItems(POETRY_BOOK,-1) 
        st.giveItems(GREENIS_LETTER,1) 
        st.set("cond","5") 
        st.set("id","5") 
        st.playSound("ItemSound.quest_middle") 
    elif npcId == GREENIS and st.getQuestItemsCount(GREENIS_LETTER) : 
-     htmltext = "7157-03.htm" 
+     htmltext = "30157-03.htm" 
    elif npcId == GREENIS and (st.getQuestItemsCount(ARUJIENS_LETTER1) or st.getQuestItemsCount(ARUJIENS_LETTER2) or st.getQuestItemsCount(ARUJIENS_LETTER3)) : 
-     htmltext = "7157-01.htm" 
+     htmltext = "30157-01.htm" 
    return htmltext
 
 QUEST     = Quest(2,"2_WhatWomenWant1","What Women Want") 

@@ -14,11 +14,11 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7437-03.htm" :
+    if event == "30437-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-    elif event == "7437-06.htm" :
+    elif event == "30437-06.htm" :
       st.exitQuest(1)
       st.playSound("ItemSound.quest_finish")
     return htmltext
@@ -31,9 +31,9 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
       if st.getPlayer().getLevel() >= 33 :
-         htmltext = "7437-02.htm"
+         htmltext = "30437-02.htm"
       else:
-         htmltext = "7437-01.htm"
+         htmltext = "30437-01.htm"
          st.exitQuest(1)
    else :
       heart=st.getQuestItemsCount(GOLEM_HEARTSTONE)
@@ -42,22 +42,22 @@ class Quest (JQuest) :
          st.giveItems(ADENA,50*broken+1000*heart)
          st.takeItems(BROKEN_HEARTSTONE,-1)
          st.takeItems(GOLEM_HEARTSTONE,-1)
-         htmltext = "7437-05.htm"
+         htmltext = "30437-05.htm"
       else:
-         htmltext = "7437-04.htm"
+         htmltext = "30437-04.htm"
    return htmltext
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
    n = st.getRandom(100)
-   if npcId == 85 :
+   if npcId == 20085 :
       if n<5 :
          st.giveItems(GOLEM_HEARTSTONE,1)
          st.playSound("ItemSound.quest_itemget")
       elif n<58 :
          st.giveItems(BROKEN_HEARTSTONE,1)
          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 83 :
+   elif npcId == 20083 :
       if n<6 :
          st.giveItems(GOLEM_HEARTSTONE,1)
          st.playSound("ItemSound.quest_itemget")
@@ -73,14 +73,14 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 
-QUEST.addStartNpc(7437)
-CREATED.addTalkId(7437)
-STARTED.addTalkId(7437)
+QUEST.addStartNpc(30437)
+CREATED.addTalkId(30437)
+STARTED.addTalkId(30437)
 
-STARTED.addKillId(83)
-STARTED.addKillId(85)
+STARTED.addKillId(20083)
+STARTED.addKillId(20085)
 
-STARTED.addQuestDrop(85,BROKEN_HEARTSTONE,1)
-STARTED.addQuestDrop(85,GOLEM_HEARTSTONE,1)
+STARTED.addQuestDrop(20085,BROKEN_HEARTSTONE,1)
+STARTED.addQuestDrop(20085,GOLEM_HEARTSTONE,1)
 
 print "importing quests: 329: Curiosity Of Dwarf"

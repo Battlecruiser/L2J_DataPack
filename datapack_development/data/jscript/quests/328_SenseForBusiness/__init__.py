@@ -15,11 +15,11 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7436-03.htm" :
+    if event == "30436-03.htm" :
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
-    elif event == "7436-06.htm" :
+    elif event == "30436-06.htm" :
         st.playSound("ItemSound.quest_finish")
         st.exitQuest(1)
     return htmltext
@@ -32,10 +32,10 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getLevel() >= 21 :
-        htmltext = "7436-02.htm"
+        htmltext = "30436-02.htm"
         return htmltext
      else:
-        htmltext = "7436-01.htm"
+        htmltext = "30436-01.htm"
         st.exitQuest(1)
    else :
      carcass=st.getQuestItemsCount(MONSTER_EYE_CARCASS)
@@ -46,47 +46,47 @@ class Quest (JQuest) :
         st.takeItems(MONSTER_EYE_CARCASS,-1)
         st.takeItems(MONSTER_EYE_LENS,-1)
         st.takeItems(BASILISK_GIZZARD,-1)
-        htmltext = "7436-05.htm"
+        htmltext = "30436-05.htm"
      else:
-        htmltext = "7436-04.htm"
+        htmltext = "30436-04.htm"
    return htmltext
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
    n = st.getRandom(100)
-   if npcId == 55 :
+   if npcId == 20055 :
      if n<51 :
       st.playSound("ItemSound.quest_itemget")
       if n<50 :
          st.giveItems(MONSTER_EYE_CARCASS,1)
       else :
          st.giveItems(MONSTER_EYE_LENS,1)
-   elif npcId == 59 :
+   elif npcId == 20059 :
      if n<55 :
       st.playSound("ItemSound.quest_itemget")
       if n<54 :
          st.giveItems(MONSTER_EYE_CARCASS,1)
       else :
          st.giveItems(MONSTER_EYE_LENS,1)
-   elif npcId == 67 :
+   elif npcId == 20067 :
      if n<69 :
       st.playSound("ItemSound.quest_itemget")
       if n<67 :
          st.giveItems(MONSTER_EYE_CARCASS,1)
       else :
          st.giveItems(MONSTER_EYE_LENS,1)
-   elif npcId == 68 :
+   elif npcId == 20068 :
      if n<74 :
       st.playSound("ItemSound.quest_itemget")
       if n<72 :
          st.giveItems(MONSTER_EYE_CARCASS,1)
       else :
          st.giveItems(MONSTER_EYE_LENS,1)
-   elif npcId == 70 :
+   elif npcId == 20070 :
       if n<50 :
          st.giveItems(BASILISK_GIZZARD,1)
          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 72 :
+   elif npcId == 20072 :
       if n<53 :
          st.giveItems(BASILISK_GIZZARD,1)
          st.playSound("ItemSound.quest_itemget")
@@ -99,15 +99,15 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 
-QUEST.addStartNpc(7436)
-CREATED.addTalkId(7436)
-STARTED.addTalkId(7436)
+QUEST.addStartNpc(30436)
+CREATED.addTalkId(30436)
+STARTED.addTalkId(30436)
 
-for i in [ 0,4,12,13,15,17 ] :
-    STARTED.addKillId(55+i)
+for i in [ 20055,20059,20067,20068,20070,20072 ] :
+    STARTED.addKillId(i)
 
-STARTED.addQuestDrop(55,MONSTER_EYE_CARCASS,1)
-STARTED.addQuestDrop(55,MONSTER_EYE_LENS,1)
-STARTED.addQuestDrop(70,BASILISK_GIZZARD,1)
+STARTED.addQuestDrop(20055,MONSTER_EYE_CARCASS,1)
+STARTED.addQuestDrop(20055,MONSTER_EYE_LENS,1)
+STARTED.addQuestDrop(20070,BASILISK_GIZZARD,1)
 
 print "importing quests: 328: Sense For Business"

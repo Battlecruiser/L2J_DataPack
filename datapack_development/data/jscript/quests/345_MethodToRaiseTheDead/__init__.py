@@ -25,22 +25,22 @@ class Quest (JQuest) :
      if event == "1" :
          st.set("cond","1")
          st.setState(STARTED)
-         htmltext = "7970-02.htm"
+         htmltext = "30970-02.htm"
          st.playSound("ItemSound.quest_accept")
      elif event == "2" :
          st.set("cond","2")
-         htmltext = "7970-06.htm"
+         htmltext = "30970-06.htm"
      elif event == "3" :
          if st.getQuestItemsCount(ADENA)>=1000 :
              st.takeItems(ADENA,1000)
              st.giveItems(POWDER_TO_SUMMON_DEAD_SOULS,1)
              st.set("cond","3")
-             htmltext = "7912-03.htm"
+             htmltext = "30912-03.htm"
              st.playSound("ItemSound.quest_itemget")
          else :
              htmltext = "<html><head><body>You dont have enough adena!</body></html>"
      elif event == "4" :
-         htmltext = "7973-02.htm"
+         htmltext = "30973-02.htm"
          st.takeItems(POWDER_TO_SUMMON_DEAD_SOULS,-1)
          st.takeItems(VICTIMS_ARM_BONE,-1)
          st.takeItems(VICTIMS_THIGH_BONE,-1)
@@ -57,35 +57,35 @@ class Quest (JQuest) :
      level = st.getPlayer().getLevel()
      cond = st.getInt("cond")
      amount = st.getQuestItemsCount(USELESS_BONE_PIECES)
-     if npcId==7970 :
+     if npcId==30970 :
          if id == CREATED :
              if level>=35 :
-                 htmltext = "7970-01.htm"
+                 htmltext = "30970-01.htm"
              else :
                  htmltext = "<html><head><body>(This is a quest that can only be performed by players of level 35 and above.)</body></html>"
                  st.exitQuest(1)
          elif cond==1 and st.getQuestItemsCount(VICTIMS_ARM_BONE) and st.getQuestItemsCount(VICTIMS_THIGH_BONE) and st.getQuestItemsCount(VICTIMS_SKULL) and st.getQuestItemsCount(VICTIMS_RIB_BONE) and st.getQuestItemsCount(VICTIMS_SPINE) :
-             htmltext = "7970-05.htm"
+             htmltext = "30970-05.htm"
          elif cond==1 and (st.getQuestItemsCount(VICTIMS_ARM_BONE)+st.getQuestItemsCount(VICTIMS_THIGH_BONE)+st.getQuestItemsCount(VICTIMS_SKULL)+st.getQuestItemsCount(VICTIMS_RIB_BONE)+st.getQuestItemsCount(VICTIMS_SPINE)<5) :
-             htmltext = "7970-04.htm"
+             htmltext = "30970-04.htm"
          elif cond==7 :
-             htmltext = "7970-07.htm"
+             htmltext = "30970-07.htm"
              st.set("cond","1")
              st.giveItems(ADENA,amount*238)
              st.giveItems(BILL_OF_IASON_HEINE,st.getRandom(7)+1)
              st.takeItems(USELESS_BONE_PIECES,-1)
-     if npcId==7912 :
+     if npcId==30912 :
          if cond == 2 :
-             htmltext = "7912-01.htm"
+             htmltext = "30912-01.htm"
              st.playSound("ItemSound.quest_middle")
          elif cond == 3 :
              htmltext = "<html><head><body>What did the urn say?</body></html>"
          elif cond == 6 :
-             htmltext = "7912-04.htm"
+             htmltext = "30912-04.htm"
              st.set("cond","7")
-     if npcId==7973 :
+     if npcId==30973 :
          if cond==3 :
-             htmltext = "7973-01.htm"
+             htmltext = "30973-01.htm"
      return htmltext
 
  def onKill (self,npc,st):
@@ -111,21 +111,21 @@ CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7970)
+QUEST.addStartNpc(30970)
 
-CREATED.addTalkId(7970)
-STARTED.addTalkId(7970)
-STARTED.addTalkId(7912)
-STARTED.addTalkId(7973)
+CREATED.addTalkId(30970)
+STARTED.addTalkId(30970)
+STARTED.addTalkId(30912)
+STARTED.addTalkId(30973)
 
-STARTED.addQuestDrop(7970,VICTIMS_ARM_BONE,1)
-STARTED.addQuestDrop(7970,VICTIMS_THIGH_BONE,1)
-STARTED.addQuestDrop(7970,VICTIMS_SKULL,1)
-STARTED.addQuestDrop(7970,VICTIMS_RIB_BONE,1)
-STARTED.addQuestDrop(7970,VICTIMS_SPINE,1)
-STARTED.addQuestDrop(7912,POWDER_TO_SUMMON_DEAD_SOULS,1)
+STARTED.addQuestDrop(30970,VICTIMS_ARM_BONE,1)
+STARTED.addQuestDrop(30970,VICTIMS_THIGH_BONE,1)
+STARTED.addQuestDrop(30970,VICTIMS_SKULL,1)
+STARTED.addQuestDrop(30970,VICTIMS_RIB_BONE,1)
+STARTED.addQuestDrop(30970,VICTIMS_SPINE,1)
+STARTED.addQuestDrop(30912,POWDER_TO_SUMMON_DEAD_SOULS,1)
 
-STARTED.addKillId(789)
-STARTED.addKillId(791)
+STARTED.addKillId(20789)
+STARTED.addKillId(20791)
 
 print "importing quests: 345: Method To Raise The Dead"

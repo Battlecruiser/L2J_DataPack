@@ -6,8 +6,8 @@ from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 GREEN_DIMENSION_STONE  	= 4401
-DIMENSION_VORTEX_2      = 7953
-DIMENSION_VORTEX_3      = 7954
+DIMENSION_VORTEX_2      = 30953
+DIMENSION_VORTEX_3      = 30954
 
 class Quest (JQuest) :
 

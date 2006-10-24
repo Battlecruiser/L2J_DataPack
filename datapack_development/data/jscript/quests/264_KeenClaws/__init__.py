@@ -13,7 +13,7 @@ HEALING_POTION = 1061
 SHORT_GLOVES = 48
 CLOTH_SHOES = 35
 
-DROP={3:[[5,10,8],[0,5,2]],456:[[16,20,2],[0,16,1]]}
+DROP={20003:[[5,10,8],[0,5,2]],20456:[[16,20,2],[0,16,1]]}
 
 class Quest (JQuest) :
 
@@ -21,7 +21,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7136-03.htm" :
+    if event == "30136-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -34,14 +34,14 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getLevel() >= 3 :
-       htmltext = "7136-02.htm"
+       htmltext = "30136-02.htm"
      else:
-       htmltext = "7136-01.htm"
+       htmltext = "30136-01.htm"
        st.exitQuest(1)
    else:
      count=st.getQuestItemsCount(WOLF_CLAW)
      if count<50 :
-       htmltext = "7136-04.htm"
+       htmltext = "30136-04.htm"
      else :
        st.takeItems(WOLF_CLAW,-1)
        n = st.getRandom(17)
@@ -61,7 +61,7 @@ class Quest (JQuest) :
          st.giveItems(SHORT_GLOVES,1)
        else:
           st.giveItems(CLOTH_SHOES,1)
-       htmltext = "7136-05.htm"
+       htmltext = "30136-05.htm"
        st.exitQuest(1)
        st.playSound("ItemSound.quest_finish")
    return htmltext
@@ -93,17 +93,17 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7136)
+QUEST.addStartNpc(30136)
 
-CREATED.addTalkId(7136)
-STARTING.addTalkId(7136)
-STARTED.addTalkId(7136)
-COMPLETED.addTalkId(7136)
+CREATED.addTalkId(30136)
+STARTING.addTalkId(30136)
+STARTED.addTalkId(30136)
+COMPLETED.addTalkId(30136)
 
-STARTED.addKillId(3)
-STARTED.addKillId(456)
+STARTED.addKillId(20003)
+STARTED.addKillId(20456)
 
-STARTED.addQuestDrop(3,WOLF_CLAW,1)
+STARTED.addQuestDrop(20003,WOLF_CLAW,1)
 
 print "importing quests: 264: Keen Claws"
 

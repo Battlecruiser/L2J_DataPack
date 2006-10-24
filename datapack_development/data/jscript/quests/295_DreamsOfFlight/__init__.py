@@ -14,7 +14,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7536-03.htm" :
+    if event == "30536-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -27,19 +27,19 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getLevel() >= 11 :
-       htmltext = "7536-02.htm"
+       htmltext = "30536-02.htm"
      else:
-       htmltext = "7536-01.htm"
+       htmltext = "30536-01.htm"
        st.exitQuest(1)
    else:
      if st.getQuestItemsCount(FLOATING_STONE)<50 :
-       htmltext = "7536-04.htm"
+       htmltext = "30536-04.htm"
      else :
        if st.getQuestItemsCount(RING_OF_FIREFLY)==0 :
-          htmltext = "7536-05.htm"
+          htmltext = "30536-05.htm"
           st.giveItems(RING_OF_FIREFLY,1)
        else :
-          htmltext = "7536-06.htm"
+          htmltext = "30536-06.htm"
           st.giveItems(ADENA,2400)
        st.addExpAndSp(0,60)
        st.playSound("ItemSound.quest_finish")
@@ -69,14 +69,14 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7536)
+QUEST.addStartNpc(30536)
 
-CREATED.addTalkId(7536)
-STARTING.addTalkId(7536)
-STARTED.addTalkId(7536)
-COMPLETED.addTalkId(7536)
+CREATED.addTalkId(30536)
+STARTING.addTalkId(30536)
+STARTED.addTalkId(30536)
+COMPLETED.addTalkId(30536)
 
-STARTED.addKillId(153)
+STARTED.addKillId(20153)
 
-STARTED.addQuestDrop(153,FLOATING_STONE,1)
+STARTED.addQuestDrop(20153,FLOATING_STONE,1)
 print "importing quests: 295: Dreams Of Flight"

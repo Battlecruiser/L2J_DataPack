@@ -5,13 +5,13 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #NPC
-LARA = 7063
-BRIGHT = 7466
-EMILY = 7620
+LARA = 30063
+BRIGHT = 30466
+EMILY = 30620
 
 #MOBS
-WASP_WORKER = 934
-WASP_LEADER = 935
+WASP_WORKER = 20934
+WASP_LEADER = 20935
 
 #ITEMS
 FRUIT_BASKET = 7136
@@ -29,23 +29,23 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
    htmltext = event
    cond = st.getInt("cond")
-   if event == "7620-1.htm" :
+   if event == "30620-1.htm" :
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   elif event == "7620-3.htm" and st.getQuestItemsCount(HONEY_POUCH)==100:
+   elif event == "30620-3.htm" and st.getQuestItemsCount(HONEY_POUCH)==100:
      st.takeItems(HONEY_POUCH,100)
      st.set("cond","3")
-   elif event == "7063-1.htm" and cond == 3:
+   elif event == "30063-1.htm" and cond == 3:
      st.giveItems(AVELLAN_SPICE,1)
      st.set("cond","4")
-   elif event == "7620-5.htm" and st.getQuestItemsCount(AVELLAN_SPICE):
+   elif event == "30620-5.htm" and st.getQuestItemsCount(AVELLAN_SPICE):
      st.takeItems(AVELLAN_SPICE,1)
      st.set("cond","5")
-   elif event == "7466-1.htm" and cond == 5:
+   elif event == "30466-1.htm" and cond == 5:
      st.giveItems(FRUIT_BASKET,1)
      st.set("cond","6")
-   elif event == "7620-7.htm" and st.getQuestItemsCount(FRUIT_BASKET):
+   elif event == "30620-7.htm" and st.getQuestItemsCount(FRUIT_BASKET):
      st.takeItems(FRUIT_BASKET,1)
      st.giveItems(ADENA,25000)
      st.giveItems(VARNISH,50)
@@ -61,20 +61,20 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    if npcId == EMILY and cond == 0 :
      if st.getPlayer().getLevel() >= 34 and st.getPlayer().getLevel() <= 40 :
-       htmltext = "7620-0.htm"
+       htmltext = "30620-0.htm"
      else:
-       htmltext = "7620-0a.htm"
+       htmltext = "30620-0a.htm"
        st.exitQuest(1)
    elif npcId == EMILY and st.getQuestItemsCount(HONEY_POUCH) == 100 :
-     htmltext = "7620-2.htm"
+     htmltext = "30620-2.htm"
    elif npcId == LARA and cond == 3 :
-     htmltext = "7063-0.htm"
+     htmltext = "30063-0.htm"
    elif npcId == EMILY and st.getQuestItemsCount(AVELLAN_SPICE) == 1 :
-     htmltext = "7620-4.htm"
+     htmltext = "30620-4.htm"
    elif npcId == BRIGHT and cond == 5 :
-     htmltext = "7466-0.htm"
+     htmltext = "30466-0.htm"
    elif npcId == EMILY and st.getQuestItemsCount(FRUIT_BASKET) == 1 :
-     htmltext = "7620-6.htm"
+     htmltext = "30620-6.htm"
    return htmltext
 
  def onKill (self,npc,st):
@@ -94,11 +94,11 @@ CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7620)
-CREATED.addTalkId(7620)
-STARTED.addTalkId(7620)
-STARTED.addTalkId(7063)
-STARTED.addTalkId(7466)
+QUEST.addStartNpc(30620)
+CREATED.addTalkId(30620)
+STARTED.addTalkId(30620)
+STARTED.addTalkId(30063)
+STARTED.addTalkId(30466)
 STARTED.addKillId(WASP_LEADER)
 STARTED.addKillId(WASP_WORKER)
 STARTED.addQuestDrop(WASP_WORKER,HONEY_POUCH,1)

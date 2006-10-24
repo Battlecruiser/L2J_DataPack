@@ -17,7 +17,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7569-03.htm" :
+    if event == "30569-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -32,24 +32,24 @@ class Quest (JQuest) :
      if st.getPlayer().getRace().ordinal() == 3 :
        if st.getPlayer().getLevel() > 8 :
          if st.getQuestItemsCount(NECKLACE_OF_VALOR) or st.getQuestItemsCount(NECKLACE_OF_COURAGE) :
-           htmltext = "7569-02.htm"
+           htmltext = "30569-02.htm"
          else :
-           htmltext = "7569-07.htm"
+           htmltext = "30569-07.htm"
            st.exitQuest(1)
        else :
-         htmltext = "7569-01.htm"
+         htmltext = "30569-01.htm"
          st.exitQuest(1)
      else :
-       htmltext = "7569-00.htm"
+       htmltext = "30569-00.htm"
        st.exitQuest(1)
    else :
      if st.getQuestItemsCount(MARAKU_WEREWOLF_HEAD) < 40 :
-       htmltext = "7569-04.htm"
+       htmltext = "30569-04.htm"
      else :
        if st.getQuestItemsCount(MARAKU_WOLFMEN_TOTEM) :
-         htmltext = "7569-06.htm"
+         htmltext = "30569-06.htm"
        else :
-         htmltext = "7569-05.htm"
+         htmltext = "30569-05.htm"
        st.exitQuest(1)
        st.playSound("ItemSound.quest_finish")
        st.giveItems(ADENA,3500)
@@ -76,17 +76,16 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7569)
+QUEST.addStartNpc(30569)
 
-CREATED.addTalkId(7569)
-STARTING.addTalkId(7569)
-STARTED.addTalkId(7569)
-COMPLETED.addTalkId(7569)
+CREATED.addTalkId(30569)
+STARTING.addTalkId(30569)
+STARTED.addTalkId(30569)
+COMPLETED.addTalkId(30569)
 
-STARTED.addKillId(363)
-STARTED.addKillId(364)
+STARTED.addKillId(20363)
+STARTED.addKillId(20364)
 
-STARTED.addQuestDrop(363,MARAKU_WEREWOLF_HEAD,1)
-STARTED.addQuestDrop(364,MARAKU_WEREWOLF_HEAD,1)
+STARTED.addQuestDrop(20363,MARAKU_WEREWOLF_HEAD,1)
 
 print "importing quests: 274: Against Wolf Men"

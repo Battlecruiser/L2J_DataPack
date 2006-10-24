@@ -5,62 +5,28 @@
 BLACK_LION_MARK = 1369
 ADENA_ID = 57
 
-#Drops
-CARGO_BOX1 = 3440
-CARGO_BOX2 = 3441
-CARGO_BOX3 = 3442
-CARGO_BOX4 = 3443
-UNDEAD_ASH = 3848
-BLOODY_AXE_INSIGNIAS = 3849
-DELU_FANG = 3850
-STAKATO_TALONS = 3851
-SOPHIAS_LETTER1=3671
-SOPHIAS_LETTER2=3672
-SOPHIAS_LETTER3=3673
-SOPHIAS_LETTER4=3674
-
-#Rewards
-LIONS_CLAW = 3675
-LIONS_EYE = 3676
-GUILD_COIN = 3677
-COMPLETE_STATUE = 3461
-COMPLETE_TABLET = 3466
+#Drops & Rewards
+CARGO_BOX1,CARGO_BOX2,CARGO_BOX3,CARGO_BOX4 = range(3440,3444)
+UNDEAD_ASH,BLOODY_AXE_INSIGNIAS,DELU_FANG,STAKATO_TALONS = range(3848,3852)
+SOPHIAS_LETTER1,SOPHIAS_LETTER2,SOPHIAS_LETTER3,SOPHIAS_LETTER4,LIONS_CLAW,LIONS_EYE,GUILD_COIN = range(3671,3678)
 ALACRITY_POTION = 735
 SCROLL_ESCAPE = 736
 SOULSHOT_D = 1463
 SPIRITSHOT_D = 2510
 HEALING_POTION=1061
+#Box rewards
+GLUDIO_APPLE,CORN_MEAL,WOLF_PELTS,MONNSTONE,GLUDIO_WEETS_FLOWER,SPIDERSILK_ROPE,ALEXANDRIT,              \
+SILVER_TEA,GOLEM_PART,FIRE_EMERALD,SILK_FROCK,PORCELAN_URN,IMPERIAL_DIAMOND,STATUE_SHILIEN_HEAD,         \
+STATUE_SHILIEN_TORSO,STATUE_SHILIEN_ARM,STATUE_SHILIEN_LEG,COMPLETE_STATUE,FRAGMENT_ANCIENT_TABLE1,      \
+FRAGMENT_ANCIENT_TABLE2,FRAGMENT_ANCIENT_TABLE3,FRAGMENT_ANCIENT_TABLE4,COMPLETE_TABLET = range(3444,3467)
 
 #Price to Open a Box
 OPEN_BOX_PRICE=650
 
-#Box rewards
-GLUDIO_APPLE=3444
-CORN_MEAL=3445
-WOLF_PELTS=3446
-MONNSTONE = 3447
-GLUDIO_WEETS_FLOWER = 3448
-SPIDERSILK_ROPE=3449
-ALEXANDRIT = 3450
-SILVER_TEA=3451
-GOLEM_PART=3452
-FIRE_EMERALD = 3453
-SILK_FROCK=3454
-PORCELAN_URN=3455
-IMPERIAL_DIAMOND = 3456
-STATUE_SHILIEN_HEAD = 3457
-STATUE_SHILIEN_TORSO = 3458
-STATUE_SHILIEN_ARM = 3459
-STATUE_SHILIEN_LEG = 3460
-FRAGMENT_ANCIENT_TABLE1 = 3462
-FRAGMENT_ANCIENT_TABLE2 = 3463
-FRAGMENT_ANCIENT_TABLE3 = 3464
-FRAGMENT_ANCIENT_TABLE4 = 3465
-
 
 #Lists
 #List of all NPCs this Quest: Sophya,Redfoot,Rupio,Undinas(Shilien Temple),Lockirin(Dwarfen Village)
-NPC=[7735,7736,7471,7130,7531,7737]
+NPC=[30735,30736,30471,30130,30531,30737]
 #List for some Item Groups
 statue_list=[STATUE_SHILIEN_HEAD,STATUE_SHILIEN_TORSO,STATUE_SHILIEN_ARM,STATUE_SHILIEN_LEG]
 tablet_list=[FRAGMENT_ANCIENT_TABLE1,FRAGMENT_ANCIENT_TABLE2,FRAGMENT_ANCIENT_TABLE3,FRAGMENT_ANCIENT_TABLE4]
@@ -73,29 +39,29 @@ tablet_list=[FRAGMENT_ANCIENT_TABLE1,FRAGMENT_ANCIENT_TABLE2,FRAGMENT_ANCIENT_TA
 #--PartItem --> this defines wich Item should this Mob drop, because 4 Parts.. 4 Different Items.
 DROPLIST={
 #Execturion Ground - Part 1
-160:[1,1,67,29,UNDEAD_ASH],			#Neer Crawler
-171:[1,1,76,31,UNDEAD_ASH],			#Specter
-197:[1,1,89,25,UNDEAD_ASH],			#Sorrow Maiden
-200:[1,1,60,28,UNDEAD_ASH],			#Strain	
-201:[1,1,70,29,UNDEAD_ASH],			#Ghoul
-202:[1,0,60,24,UNDEAD_ASH],			#Dead Seeker (not official Monster for this Quest)
-198:[1,1,60,35,UNDEAD_ASH],			#Neer Ghoul Berserker
+20160:[1,1,67,29,UNDEAD_ASH],			#Neer Crawler
+20171:[1,1,76,31,UNDEAD_ASH],			#Specter
+20197:[1,1,89,25,UNDEAD_ASH],			#Sorrow Maiden
+20200:[1,1,60,28,UNDEAD_ASH],			#Strain	
+20201:[1,1,70,29,UNDEAD_ASH],			#Ghoul
+20202:[1,0,60,24,UNDEAD_ASH],			#Dead Seeker (not official Monster for this Quest)
+20198:[1,1,60,35,UNDEAD_ASH],			#Neer Ghoul Berserker
 #Partisan Hideaway - Part 2
-207:[2,1,69,29,BLOODY_AXE_INSIGNIAS],	#Ol Mahum Guerilla
-208:[2,1,67,32,BLOODY_AXE_INSIGNIAS],	#Ol Mahum Raider
-209:[2,1,62,33,BLOODY_AXE_INSIGNIAS],	#Ol Mahum Marksman
-210:[2,1,78,23,BLOODY_AXE_INSIGNIAS],	#Ol Mahum Sergeant
-211:[2,1,71,22,BLOODY_AXE_INSIGNIAS],	#Ol Mahum Captain
+20207:[2,1,69,29,BLOODY_AXE_INSIGNIAS],	#Ol Mahum Guerilla
+20208:[2,1,67,32,BLOODY_AXE_INSIGNIAS],	#Ol Mahum Raider
+20209:[2,1,62,33,BLOODY_AXE_INSIGNIAS],	#Ol Mahum Marksman
+20210:[2,1,78,23,BLOODY_AXE_INSIGNIAS],	#Ol Mahum Sergeant
+20211:[2,1,71,22,BLOODY_AXE_INSIGNIAS],	#Ol Mahum Captain
 #Delu Lizzardmans near Giran - Part 3
-251:[3,1,70,30,DELU_FANG],				#Delu Lizardman
-252:[3,1,67,28,DELU_FANG],				#Delu Lizardman Scout
-253:[3,1,65,26,DELU_FANG],				#Delu Lizardman Warrior
-781:[3,0,69,31,DELU_FANG],				#Delu Lizardman Shaman (not official Monster for this Quest)
+20251:[3,1,70,30,DELU_FANG],				#Delu Lizardman
+20252:[3,1,67,28,DELU_FANG],				#Delu Lizardman Scout
+20253:[3,1,65,26,DELU_FANG],				#Delu Lizardman Warrior
+20781:[3,0,69,31,DELU_FANG],				#Delu Lizardman Shaman (not official Monster for this Quest)
 #Cruma Area - Part 4
-157:[4,1,66,32,STAKATO_TALONS],		#Marsh Stakato
-230:[4,1,68,26,STAKATO_TALONS],		#Marsh Stakato Worker
-232:[4,1,67,28,STAKATO_TALONS],		#Marsh Stakato Soldier
-234:[4,1,69,32,STAKATO_TALONS]			#Marsh Stakato Drone
+20157:[4,1,66,32,STAKATO_TALONS],		#Marsh Stakato
+20230:[4,1,68,26,STAKATO_TALONS],		#Marsh Stakato Worker
+20232:[4,1,67,28,STAKATO_TALONS],		#Marsh Stakato Soldier
+20234:[4,1,69,32,STAKATO_TALONS]		#Marsh Stakato Drone
 }
 
 ######################################## DO NOT MODIFY BELOW THIS LINE ####################################################################################
@@ -204,13 +170,11 @@ m_rnd_3				= html+morgan+"I really thank you for recovering so many freight boxe
 m_no_more_box       = html+morgan+"Freight box...? What box are you talking about? It doesn't look to me as if you have one of those..."+htmlend
 m_reward			= html+morgan+"Is there anything I can do for you...?<br><a action=\"bypass -h Quest 333_BlackLionHunt m_give\">Give freight box.</a>"+htmlend
 
-
-#This Put all Mob Ids from dictionari in a list. So its possible to add new mobs, to one of this 4 Areas, without modification on the addKill Part.
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
+#This Put all Mob Ids from dictionari in a list. So its possible to add new mobs, to one of this 4 Areas, without modification on the addKill Part.
 MOBS=DROPLIST.keys()
 
 def giveRewards(st,item,count):

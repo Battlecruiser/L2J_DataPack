@@ -14,10 +14,10 @@ qn="501_ProofOfClanAlliance"
 qd="Proof of Clan Alliance"
 
 # Quest Npcs
-SIR_KRISTOF_RODEMAI  = 7756
-STATUE_OF_OFFERING   = 7757
-WITCH_ATHREA         = 7758
-WITCH_KALIS          = 7759
+SIR_KRISTOF_RODEMAI  = 30756
+STATUE_OF_OFFERING   = 30757
+WITCH_ATHREA         = 30758
+WITCH_KALIS          = 30759
 
 # Quest Items
 HERB_OF_HARIT     = 3832
@@ -31,8 +31,8 @@ ANTIDOTE_RECIPE   = 3872
 POTION_OF_RECOVERY= 3889
 
 #Quest mobs, drop, rates and prices
-CHESTS=range(1042,1058)
-MOBS=[[685,HERB_OF_VANOR],[644,HERB_OF_HARIT],[576,HERB_OF_OEL_MAHUM]]
+CHESTS=range(21042,21058)
+MOBS=[[20685,HERB_OF_VANOR],[20644,HERB_OF_HARIT],[20576,HERB_OF_OEL_MAHUM]]
 RATE=35
 #stackable items paid to retry chest game: (default 10k adena)
 RETRY_ITEMS=57
@@ -76,7 +76,7 @@ def chest_game(st,command) :
        randomize_chests(st)
        for row in range(4) :
            for col in range(4) :
-               leader(st).getPcSpawn().addSpawn(1042+(4*row+col),x+(row*u)+(col*v),y-(w*col),z,60000)
+               leader(st).getPcSpawn().addSpawn(21042+(4*row+col),x+(row*u)+(col*v),y-(w*col),z,60000)
        leader(st).startQuestTimer("chest_timer",60000)
     elif command == "stop" :
        leader(st).getPcSpawn().removeAllSpawn()
@@ -99,15 +99,15 @@ class Quest (JQuest) :
  def onEvent (self,event,st):
    htmltext = event
 #####  Leaders area  ######
-   if event == "7756-03.htm" :
+   if event == "30756-03.htm" :
      st.setState(PART2)
      st.set("cond","1")
      st.playSound("ItemSound.quest_accept")
-   elif event == "7759-03.htm" :
+   elif event == "30759-03.htm" :
      st.setState(PART3)
      st.set("cond","2")
      st.set("dead_list"," ")
-   elif event == "7759-07.htm" :
+   elif event == "30759-07.htm" :
      for i in range(3) :
         st.takeItems(SYMBOL_OF_LOYALTY,1)
      st.giveItems(ANTIDOTE_RECIPE,1)
@@ -123,12 +123,12 @@ class Quest (JQuest) :
    elif event == "poison_timer" :
      members_finnish(st)
      st.exitQuest(1)
-     htmltext = "7759-09.htm"
+     htmltext = "30759-09.htm"
    elif event == "chest_timer" :
      htmltext = ""
      chest_game(st,"stop")
 #####  Members area  ######
-   elif event == "7757-04.htm" :
+   elif event == "30757-04.htm" :
      deadlist = leader(st).get("dead_list").split()
      deadlist.append(st.getPlayer().getName())
      leader(st).set("dead_list"," ".join(deadlist))
@@ -136,13 +136,13 @@ class Quest (JQuest) :
      st.getPlayer().reduceCurrentHp(st.getPlayer().getCurrentHp(),st.getPlayer())
      st.giveItems(SYMBOL_OF_LOYALTY,1)
      st.playSound("ItemSound.quest_accept")
-   elif event == "7757-05.htm" :
+   elif event == "30757-05.htm" :
      st.exitQuest(1)
-   elif event == "7758-03.htm" :
+   elif event == "30758-03.htm" :
      chest_game(st,"start")
-   elif event == "7758-07.htm" :
+   elif event == "30758-07.htm" :
      if st.getQuestItemsCount(RETRY_ITEMS) < RETRY_PRICE :
-        htmltext = "7758-06.htm"
+        htmltext = "30758-06.htm"
      else :
         st.takeItems(RETRY_ITEMS,RETRY_PRICE) 
    return htmltext
@@ -153,26 +153,26 @@ class Quest (JQuest) :
    if npcId == SIR_KRISTOF_RODEMAI:
      if st.getPlayer().getClan() == None or st.getPlayer().isClanLeader() == 0:
        st.exitQuest(1) 
-       htmltext = "7756-10.htm"
+       htmltext = "30756-10.htm"
      else :
        if st.getPlayer().getClan().getLevel() <= 2 :
          st.exitQuest(1)
-         htmltext =  "7756-08.htm"
+         htmltext =  "30756-08.htm"
        elif st.getPlayer().getClan().getLevel() >= 4 :
          st.exitQuest(1)
-         htmltext =  "7756-09.htm"
+         htmltext =  "30756-09.htm"
        elif st.getState() == PART4 and st.getQuestItemsCount(VOUCHER_OF_FAITH):
           st.playSound("ItemSound.quest_fanfare_2")
           st.takeItems(VOUCHER_OF_FAITH,1)
           st.giveItems(PROOF_OF_ALLIANCE,1)
           st.addExpAndSp(120000,0)
-          htmltext="7756-07.htm"
+          htmltext="30756-07.htm"
           st.exitQuest(1)
        elif st.getState() in [PART2,PART3] :
-         htmltext =  "7756-06.htm"
+         htmltext =  "30756-06.htm"
        elif st.getQuestItemsCount(PROOF_OF_ALLIANCE) == 0 :
          st.set("cond","0")
-         htmltext =  "7756-01.htm"
+         htmltext =  "30756-01.htm"
        else :
          st.exitQuest(1)
    elif npcId == WITCH_KALIS:
@@ -181,14 +181,14 @@ class Quest (JQuest) :
      else:
        if st.getPlayer().isClanLeader() == 1 :
          if st.getState() == PART2 :
-           htmltext =  "7759-01.htm"
+           htmltext =  "30759-01.htm"
          elif st.getState() == PART3 :
-           htmltext = "7759-05.htm"  
+           htmltext = "30759-05.htm"  
            if st.getQuestItemsCount(SYMBOL_OF_LOYALTY) == 3 :
               try : deads=len(st.get("dead_list").split())
               finally :
                  if deads == 3 :
-                    htmltext = "7759-06.htm"
+                    htmltext = "30759-06.htm"
          elif st.getState() == PART4:
            if st.getQuestItemsCount(HERB_OF_HARIT) and \
               st.getQuestItemsCount(HERB_OF_VANOR) and \
@@ -206,16 +206,16 @@ class Quest (JQuest) :
              timer=leader(st).getQuestTimer("poison_timer")
              if timer != None : timer.cancel()
              members_finnish(st)
-             htmltext =  "7759-08.htm"
+             htmltext =  "30759-08.htm"
              st.playSound("ItemSound.quest_finish")
            elif st.getQuestItemsCount(VOUCHER_OF_FAITH)==0:
-             htmltext =  "7759-10.htm"
+             htmltext =  "30759-10.htm"
          else :
            st.exitQuest(1)
        else :
          try :
            if leader(st).getState() == PART4 :
-              htmltext =  "7759-11.htm"
+              htmltext =  "30759-11.htm"
          except :
            st.exitQuest(1)  
    elif npcId == STATUE_OF_OFFERING:
@@ -224,13 +224,13 @@ class Quest (JQuest) :
      else :
        if st.getPlayer().isClanLeader() == 1 :
          if st.getState() in [PART2,PART3,PART4] :
-           htmltext =  "7757-03.htm"
+           htmltext =  "30757-03.htm"
          else :
            st.exitQuest(1)
        else :
          if st.getPlayer().getLevel() <= 39 :
            st.exitQuest(1)
-           htmltext =  "7757-02.htm"
+           htmltext =  "30757-02.htm"
          else :
            dlist=[]
            deads=3
@@ -242,9 +242,9 @@ class Quest (JQuest) :
            if  deads < 3 :
              if st.getPlayer().getName() not in dlist :
                 if not st.getQuestItemsCount(SYMBOL_OF_LOYALTY) :
-                   htmltext =  "7757-01.htm"
+                   htmltext =  "30757-01.htm"
                 else :
-                   htmltext =  "7757-06.htm"
+                   htmltext =  "30757-06.htm"
                    st.exitQuest(1)
              else :
                  htmltext = "you cannot die again!"
@@ -259,13 +259,13 @@ class Quest (JQuest) :
              game_state=leader(st).getInt("chest_game")  
              if game_state == 0 :  
                 if int(leader(st).get("chest_try")) == 0 :  
-                   htmltext="7758-01.htm"  
+                   htmltext="30758-01.htm"  
                 else :  
-                   htmltext="7758-05.htm"  
+                   htmltext="30758-05.htm"  
              elif game_state == 1 :  
-                htmltext="7758-09.htm"  
+                htmltext="30758-09.htm"  
              elif game_state == 2 :  
-                htmltext="7758-08.htm"
+                htmltext="30758-08.htm"
                 st.playSound("ItemSound.quest_finish")
                 st.giveItems(BLOOD_OF_EVA,1)  
                 timer=leader(st).getQuestTimer("chest_timer")
@@ -311,7 +311,7 @@ class Quest (JQuest) :
            if timer == None : chest_game(st,"stop");return "Time is up!"
            chests = leader(st).get("chests").split()
            for i in range(len(chests)) :
-               if npcId == 1042+i and chests[i] == '1' :
+               if npcId == 21042+i and chests[i] == '1' :
                   autochat(npc,"###### BINGO! ######")
                   count=int(leader(st).get("chest_count"))
                   if count < 4 :

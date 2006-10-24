@@ -16,12 +16,12 @@ class Quest (JQuest) :
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
-        htmltext = "7956_2.htm"
+        htmltext = "30956_2.htm"
     elif event == "5" :
         st.giveItems(4420,1)
         st.playSound("ItemSound.quest_finish")
         st.exitQuest(1)
-        htmltext = "7956_5.htm"
+        htmltext = "30956_5.htm"
     return htmltext
 
 
@@ -31,29 +31,29 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
-   if npcId == 7956 and int(st.get("cond")) == 0 :
-        htmltext = "7956_1.htm"
-   elif npcId == 7956 and int(st.get("cond")) == 1 :
+   if npcId == 30956 and int(st.get("cond")) == 0 :
+        htmltext = "30956_1.htm"
+   elif npcId == 30956 and int(st.get("cond")) == 1 :
         htmltext = "<html><head><body>Find Blacksmith Opix..</body></html>"
-   elif npcId == 7595 and int(st.get("cond")) == 1 :
+   elif npcId == 30595 and int(st.get("cond")) == 1 :
         st.set("cond","2")
-        htmltext = "7595_1.htm"
-   elif npcId == 7595 and int(st.get("cond")) > 1 :
+        htmltext = "30595_1.htm"
+   elif npcId == 30595 and int(st.get("cond")) > 1 :
         htmltext = "<html><head><body>Go back to Nanarin..</body></html>"
-   elif npcId == 7956 and int(st.get("cond")) == 2 :
+   elif npcId == 30956 and int(st.get("cond")) == 2 :
         st.giveItems(4319,1)
         st.set("cond","3")
-        htmltext = "7956_3.htm"
-   elif npcId == 7956 and int(st.get("cond")) == 3 :
+        htmltext = "30956_3.htm"
+   elif npcId == 30956 and int(st.get("cond")) == 3 :
         htmltext = "<html><head><body>Find Barbado..</body></html>"
-   elif npcId == 7959 and int(st.get("cond")) == 3 :
+   elif npcId == 30959 and int(st.get("cond")) == 3 :
         st.takeItems(4319,1)
         st.set("cond","4")
-        htmltext = "7959_1.htm"
-   elif npcId == 7959 and int(st.get("cond")) == 4 :
+        htmltext = "30959_1.htm"
+   elif npcId == 30959 and int(st.get("cond")) == 4 :
         htmltext = "<html><head><body>Go back to Nanarin..</body></html>"
-   elif npcId == 7956 and int(st.get("cond")) == 4 :
-        htmltext = "7956_4.htm"
+   elif npcId == 30956 and int(st.get("cond")) == 4 :
+        htmltext = "30956_4.htm"
    return htmltext
 
 
@@ -64,13 +64,13 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7956)
-CREATED.addTalkId(7956)
+QUEST.addStartNpc(30956)
+CREATED.addTalkId(30956)
 
-STARTED.addTalkId(7595)
-STARTED.addTalkId(7959)
-STARTED.addTalkId(7956)
+STARTED.addTalkId(30595)
+STARTED.addTalkId(30959)
+STARTED.addTalkId(30956)
 
-STARTED.addQuestDrop(7959,4319,1)
+STARTED.addQuestDrop(30959,4319,1)
 
 print "importing quests: 363: Sorrowful Sound of Flute"

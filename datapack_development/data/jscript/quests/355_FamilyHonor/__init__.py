@@ -5,8 +5,8 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #NPC
-GALIBREDO = 7181
-PATRIN = 7929
+GALIBREDO = 30181
+PATRIN = 30929
 
 #CHANCES
 CHANCE_FOR_GALFREDOS_BUST = 80
@@ -28,42 +28,42 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
-   if event == "7181-1.htm" :
+   if event == "30181-1.htm" :
      return htmltext
-   if event == "7181-2.htm" :
+   if event == "30181-2.htm" :
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   if event == "7181-4.htm" :
+   if event == "30181-4.htm" :
      count = st.getQuestItemsCount(BUST_OF_ANCIENT_GODDESS)
      st.takeItems(BUST_OF_ANCIENT_GODDESS,count)
      st.giveItems(WORK_OF_BERONA,count)
-   if event == "7929-0.htm" :
+   if event == "30929-0.htm" :
      return htmltext
-   if event == "7929-1.htm" :
+   if event == "30929-1.htm" :
      return htmltext
    if event == "appraise" :
      appraising = st.getRandom(100)
      if appraising in range(0,20) : 
-       htmltext = "7929-2.htm"       
+       htmltext = "30929-2.htm"       
        st.takeItems(WORK_OF_BERONA,1)
      elif appraising in range(20,40) : 
-       htmltext = "7929-3.htm"       
+       htmltext = "30929-3.htm"       
        st.takeItems(WORK_OF_BERONA,1)
        st.giveItems(STATUE_REPLICA,1)
      elif appraising in range(40,60) : 
-       htmltext = "7929-4.htm"       
+       htmltext = "30929-4.htm"       
        st.takeItems(WORK_OF_BERONA,1)
        st.giveItems(STATUE_ORIGINAL,1)
      elif appraising in range(60,80) : 
-       htmltext = "7929-5.htm"       # custom txt
+       htmltext = "30929-5.htm"       # custom txt
        st.takeItems(WORK_OF_BERONA,1)
        st.giveItems(STATUE_FORGERY,1)
      elif appraising in range(80,100) : 
-       htmltext = "7929-6.htm"       # custom txt
+       htmltext = "30929-6.htm"       # custom txt
        st.takeItems(WORK_OF_BERONA,1)
        st.giveItems(STATUE_PROTOTYPE,1)
-   if event == "7181-5.htm" :
+   if event == "30181-5.htm" :
      st.playSound("ItemSound.quest_finish")
      st.exitQuest(1)
    return htmltext
@@ -77,9 +77,9 @@ class Quest (JQuest) :
    if npcId == GALIBREDO :
      if cond == 0 :
        if st.getPlayer().getLevel() >= 36 : 
-         htmltext = "7181-0.htm"
+         htmltext = "30181-0.htm"
        else:
-         htmltext = "7181-0a.htm"
+         htmltext = "30181-0a.htm"
          st.exitQuest(1)
      elif cond == 1 :
        if count :
@@ -88,12 +88,12 @@ class Quest (JQuest) :
            reward = reward + 5000   # custom - need more info
          st.takeItems(GALFREDOS_BUST,count)
          st.giveItems(57,reward)
-         htmltext = "7181-3.htm"
+         htmltext = "30181-3.htm"
        else :
-         htmltext = "7181-2a.htm"
+         htmltext = "30181-2a.htm"
    elif npcId == PATRIN :
      if st.getQuestItemsCount(WORK_OF_BERONA) :   
-       htmltext = "7929-0.htm"
+       htmltext = "30929-0.htm"
      else :
        htmltext = "<html><head><body>You have nothing to appraise.</body></html>"
    return htmltext
@@ -120,10 +120,10 @@ STARTED.addTalkId(GALIBREDO)
 STARTED.addTalkId(PATRIN)
 
 #MOBS TIMAK ORC TROOPS
-for MOBS in range(767,771) :
+for MOBS in range(20767,20771) :
   STARTED.addKillId(MOBS)
 
-STARTED.addQuestDrop(767,GALFREDOS_BUST,1)
-STARTED.addQuestDrop(767,BUST_OF_ANCIENT_GODDESS,1)
+STARTED.addQuestDrop(20767,GALFREDOS_BUST,1)
+STARTED.addQuestDrop(20767,BUST_OF_ANCIENT_GODDESS,1)
 
 print "importing quests: 355: Family Honor"

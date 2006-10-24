@@ -15,7 +15,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7553-03.htm" :
+    if event == "30553-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -29,15 +29,15 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
       if st.getPlayer().getLevel() < 4 :
-          htmltext = "7553-01.htm"
+          htmltext = "30553-01.htm"
           st.exitQuest(1)
       else:
-          htmltext = "7553-02.htm"
+          htmltext = "30553-02.htm"
    else :
       if st.getQuestItemsCount(BLACK_WOLF_PELT) < 40 :
-        htmltext = "7553-04.htm"
+        htmltext = "30553-04.htm"
       else:
-          htmltext = "7553-05.htm"
+          htmltext = "30553-05.htm"
           st.exitQuest(1)
           st.playSound("ItemSound.quest_finish")
           st.takeItems(BLACK_WOLF_PELT,-1)
@@ -71,15 +71,15 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7553)
+QUEST.addStartNpc(30553)
 
-CREATED.addTalkId(7553)
-STARTING.addTalkId(7553)
-STARTED.addTalkId(7553)
-COMPLETED.addTalkId(7553)
+CREATED.addTalkId(30553)
+STARTING.addTalkId(30553)
+STARTED.addTalkId(30553)
+COMPLETED.addTalkId(30553)
 
-STARTED.addKillId(317)
+STARTED.addKillId(20317)
 
-STARTED.addQuestDrop(317,BLACK_WOLF_PELT,1)
+STARTED.addQuestDrop(20317,BLACK_WOLF_PELT,1)
 
 print "importing quests: 291: Red Bonnets Revenge"

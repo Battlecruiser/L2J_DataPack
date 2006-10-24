@@ -22,13 +22,13 @@ BELETHS_SILVER,    MANAKS_SILVER_DRYAD, NIAS_SILVER_FAIRY = range(3472,3499)
 
 #NPCs
 SORINT, BERNARD, PAGE, HAGGER, STAN, RALFORD, FERRIS, COLLOB, PANO, DUNING, LORAIN = \
-7232,   7702,    7696, 7183,   7200, 7165,    7847,   7092,   7078, 7688,   7673
+30232,  30702,   30696,30183,  30200,30165,   30847,  30092,  30078,30688,  30673
 
 #MOBs
 TIMAKARCH, TIMAKSOLD, TIMAKSHAM, LAKIN, HATARHANI, PUNISHMENT, SHACKLE, TIMAKORC, HEADLESS, ROYALSERVANT, \
 MALRUKTUREN, FORMOR, FORMORELDER, VANORSHAMAN, TARLKHIWARRIOR, OLMAHUM, OLMAHUMW, HARITMATR, HARITSHA, \
 SHACKL2, HEADLES2, MALRUKTURE2, ROYALSERVAN2 = \
-584, 585, 587, 604, 663,  678, 235, 583, 146, 240,  245, 568, 569, 685, 572,  161, 575, 645, 644, 279, 280, 284, 276
+20584, 20585, 20587, 20604, 20663,  20678, 20235, 20583, 20146, 20240,  20245, 20568, 20569, 20685, 20572,  20161, 20575, 20645, 20644, 20279, 20280, 20284, 20276
 
 
 
@@ -100,7 +100,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 def promote(st) :
    grade = st.getInt("grade")
    if grade == 1 :
-      html = "7232-15.htm"
+      html = "30232-15.htm"
    else :
       h = 0
       for i in range(len(PROMOTE[grade])) :
@@ -109,14 +109,14 @@ def promote(st) :
       if h == i + 1 :
          for j in PROMOTE[grade] :
              st.takeItems(j,1)
-         html = "7232-"+str(19-grade)+".htm"
+         html = "30232-"+str(19-grade)+".htm"
          st.takeItems(3812+grade,-1)
          st.giveItems(3811+grade,1)
          st.set ("grade",str(grade-1))
          cond=COND[grade]
          st.playSound("ItemSound.quest_fanfare_middle")
       else :
-         html = "7232-"+str(16-grade)+".htm"
+         html = "30232-"+str(16-grade)+".htm"
          cond=COND[grade]-1
       st.set("cond",str(cond))
    return html
@@ -131,25 +131,25 @@ class Quest (JQuest) :
     htmltext = event
     grade=st.getInt("grade")
     cond = st.getInt("cond")
-    if event == "7702-06.htm":
+    if event == "30702-06.htm":
        if cond < 7:
          st.set("cond","7")
          st.playSound("ItemSound.quest_accept")
-    elif event == "7232-22.htm" :
+    elif event == "30232-22.htm" :
        if cond < 6:
          st.set("cond","6")
-    elif event == "7232-23.htm" :
+    elif event == "30232-23.htm" :
        if cond < 5:
          st.set("cond","5")
-    elif event == "7702-02.htm":
+    elif event == "30702-02.htm":
        st.set("cond","2")
-    elif event == "7232-05.htm" :
+    elif event == "30232-05.htm" :
        st.setState(STARTED)
        st.playSound("ItemSound.quest_accept")
        st.giveItems(COIN_DIAGRAM,1)
        st.set("cond","1")
        st.set("grade","0")
-    elif event in ["7232-04.htm","7232-18a.htm"] :
+    elif event in ["30232-04.htm","30232-18a.htm"] :
        st.exitQuest(1)
        st.playSound("ItemSound.quest_giveup")
     elif event == "raise" :
@@ -166,9 +166,9 @@ class Quest (JQuest) :
              for l in range(len(TRADE_LIST[item])) :
                 st.takeItems(TRADE_LIST[item][l][0],TRADE_LIST[item][l][1])
              st.giveItems(item,1)
-             htmltext = "7232-24a.htm"
+             htmltext = "30232-24a.htm"
           else :
-             htmltext = "7232-24.htm"
+             htmltext = "30232-24.htm"
     elif event.startswith("Li_"):
        action,npc,coin=event.split("_")
        if grade <= EXCHANGE_LEVEL[int(npc)]:
@@ -298,10 +298,10 @@ class Quest (JQuest) :
    if npcId == SORINT :
       if id == CREATED :
          if st.getPlayer().getLevel() < 40 :
-             htmltext = "7232-01.htm"
+             htmltext = "30232-01.htm"
              st.exitQuest(1)
          else :
-             htmltext = "7232-02.htm"
+             htmltext = "30232-02.htm"
       else :
          if st.getQuestItemsCount(COIN_DIAGRAM) :
             if st.getQuestItemsCount(KALDIS_COIN) :
@@ -311,21 +311,21 @@ class Quest (JQuest) :
               st.set("grade","3")
               st.set("cond","4")
               st.playSound("ItemSound.quest_fanfare_middle")
-              htmltext = "7232-07.htm"
+              htmltext = "30232-07.htm"
             else :
-              htmltext = "7232-06.htm"
+              htmltext = "30232-06.htm"
          else:
             if grade == 3 :
-               htmltext = "7232-12.htm"
+               htmltext = "30232-12.htm"
             elif grade == 2 :
-               htmltext = "7232-11.htm"
+               htmltext = "30232-11.htm"
             elif grade == 1 :
-               htmltext = "7232-10.htm"
+               htmltext = "30232-10.htm"
    elif npcId == BERNARD:
       if st.getQuestItemsCount(COIN_DIAGRAM) and grade == 0:
-         htmltext = "7702-01.htm"
+         htmltext = "30702-01.htm"
       elif grade == 3 :
-         htmltext = "7702-05.htm"
+         htmltext = "30702-05.htm"
    elif npcId in EXCHANGE_LIST.keys() and grade :
       htmltext = str(npcId)+"-01.htm"
    return htmltext
@@ -364,7 +364,7 @@ CREATED.addTalkId(SORINT)
 for npc in [SORINT, BERNARD, PAGE, HAGGER, STAN, RALFORD, FERRIS, COLLOB, PANO, DUNING, LORAIN]:
    STARTED.addTalkId(npc)
 
-for mob in [584, 585, 587, 604, 663,  678, 235, 583, 146, 240,  245, 568, 569, 685, 572, 161, 575, 645, 644, 279, 280, 284, 276]:
+for mob in [20584, 20585, 20587, 20604, 20663,  20678, 20235, 20583, 20146, 20240, 20245, 20568, 20569, 20685, 20572, 20161, 20575, 20645, 20644, 20279, 20280, 20284, 20276]:
    STARTED.addKillId(mob)
 
 for item in range(3472,3499)+range(3811,3816):

@@ -6,9 +6,9 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #NPCs 
-MIRABEL  = 7146 
-ARIEL    = 7148 
-ASTERIOS = 7154 
+MIRABEL  = 30146 
+ARIEL    = 30148 
+ASTERIOS = 30154 
 
 #ITEM 
 ARIELS_RECOMMENDATION = 7572 
@@ -24,21 +24,21 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) : 
    htmltext = event 
-   if event == "7146-03.htm" : 
+   if event == "30146-03.htm" : 
      st.set("cond","1") 
      st.setState(STARTED) 
      st.playSound("ItemSound.quest_accept") 
-   elif event == "7148-02.htm" : 
+   elif event == "30148-02.htm" : 
      st.giveItems(ARIELS_RECOMMENDATION,1) 
      st.set("cond","2") 
      st.set("id","2") 
      st.playSound("ItemSound.quest_middle") 
-   elif event == "7154-02.htm" : 
+   elif event == "30154-02.htm" : 
      st.takeItems(ARIELS_RECOMMENDATION,-1) 
      st.set("cond","3") 
      st.set("id","3") 
      st.playSound("ItemSound.quest_middle") 
-   elif event == "7146-06.htm" : 
+   elif event == "30146-06.htm" : 
      st.giveItems(SCROLL_OF_ESCAPE_GIRAN,1) 
      st.giveItems(MARK_OF_TRAVELER, 1) 
      st.set("cond","0") 
@@ -56,26 +56,26 @@ class Quest (JQuest) :
      st.set("cond","0") 
      if st.getPlayer().getRace().ordinal() == 1 : 
        if st.getPlayer().getLevel() >= 3 : 
-         htmltext = "7146-02.htm" 
+         htmltext = "30146-02.htm" 
        else : 
          htmltext = "<html><head><body>Quest for characters level 3 above.</body></html>" 
          st.exitQuest(1) 
      else : 
-       htmltext = "7146-01.htm" 
+       htmltext = "30146-01.htm" 
        st.exitQuest(1) 
    elif npcId == MIRABEL and id == COMPLETED : 
      htmltext = "<html><head><body>I can't supply you with another Giran Scroll of Escape. Sorry traveller.</body></html>" 
    elif npcId == MIRABEL and cond == 1 : 
-     htmltext = "7146-04.htm" 
+     htmltext = "30146-04.htm" 
    elif npcId == ARIEL and cond : 
      if st.getQuestItemsCount(ARIELS_RECOMMENDATION) == 0 : 
-       htmltext = "7148-01.htm" 
+       htmltext = "30148-01.htm" 
      else : 
-       htmltext = "7148-03.htm" 
+       htmltext = "30148-03.htm" 
    elif npcId == ASTERIOS and cond == 2 and st.getQuestItemsCount(ARIELS_RECOMMENDATION) > 0 : 
-     htmltext = "7154-01.htm" 
+     htmltext = "30154-01.htm" 
    elif npcId == MIRABEL and cond == 3 : 
-     htmltext = "7146-05.htm" 
+     htmltext = "30146-05.htm" 
 
    return htmltext 
 

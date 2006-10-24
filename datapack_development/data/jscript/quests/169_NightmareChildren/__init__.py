@@ -17,14 +17,14 @@ class Quest (JQuest) :
     htmltext = event
     if event == "1" :
       st.set("id","0")
-      htmltext = "7145-04.htm"
+      htmltext = "30145-04.htm"
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "169_1" and int(st.get("onlyone")) == 0 :
           if int(st.get("id")) != 169 :
             st.set("id","169")
-            htmltext = "7145-08.htm"
+            htmltext = "30145-08.htm"
             st.giveItems(BONE_GAITERS_ID,1)
             st.giveItems(57,17150)
             st.takeItems(CRACKED_SKULL_ID,st.getQuestItemsCount(CRACKED_SKULL_ID))
@@ -46,34 +46,34 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 7145 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30145 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
       if int(st.get("cond"))<15 :
         if st.getPlayer().getRace().ordinal() != 2 :
-          htmltext = "7145-00.htm"
+          htmltext = "30145-00.htm"
         elif st.getPlayer().getLevel() >= 15 :
-          htmltext = "7145-03.htm"
+          htmltext = "30145-03.htm"
           return htmltext
         else:
-          htmltext = "7145-02.htm"
+          htmltext = "30145-02.htm"
           st.exitQuest(1)
       else:
-        htmltext = "7145-02.htm"
+        htmltext = "30145-02.htm"
         st.exitQuest(1)
-   elif npcId == 7145 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30145 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7145 and int(st.get("cond")) :
+   elif npcId == 30145 and int(st.get("cond")) :
       if st.getQuestItemsCount(CRACKED_SKULL_ID) >= 1 and st.getQuestItemsCount(PERFECT_SKULL_ID) == 0 :
-        htmltext = "7145-06.htm"
+        htmltext = "30145-06.htm"
       elif st.getQuestItemsCount(PERFECT_SKULL_ID) >= 1 :
-          htmltext = "7145-07.htm"
+          htmltext = "30145-07.htm"
       elif st.getQuestItemsCount(CRACKED_SKULL_ID) == 0 and st.getQuestItemsCount(PERFECT_SKULL_ID) == 0 :
-          htmltext = "7145-05.htm"
+          htmltext = "30145-05.htm"
    return htmltext
 
  def onKill (self,npc,st):
 
    npcId = npc.getNpcId()
-   if npcId == 105 :
+   if npcId == 20105 :
       st.set("id","0")
       if int(st.get("cond")) == 1 :
         if st.getRandom(10)>7 and st.getQuestItemsCount(PERFECT_SKULL_ID) == 0 :
@@ -82,7 +82,7 @@ class Quest (JQuest) :
         if st.getRandom(10)>4 :
           st.giveItems(CRACKED_SKULL_ID,1)
           st.playSound("ItemSound.quest_itemget")
-   elif npcId == 25 :
+   elif npcId == 20025 :
       st.set("id","0")
       if int(st.get("cond")) == 1 :
         if st.getRandom(10)>7 and st.getQuestItemsCount(PERFECT_SKULL_ID) == 0 :
@@ -101,16 +101,16 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7145)
+QUEST.addStartNpc(30145)
 
-STARTING.addTalkId(7145)
+STARTING.addTalkId(30145)
 
-STARTED.addTalkId(7145)
+STARTED.addTalkId(30145)
 
-STARTED.addKillId(105)
-STARTED.addKillId(25)
+STARTED.addKillId(20105)
+STARTED.addKillId(20025)
 
-STARTED.addQuestDrop(105,CRACKED_SKULL_ID,1)
-STARTED.addQuestDrop(25,CRACKED_SKULL_ID,1)
-STARTED.addQuestDrop(105,PERFECT_SKULL_ID,1)
-STARTED.addQuestDrop(25,PERFECT_SKULL_ID,1)
+STARTED.addQuestDrop(20105,CRACKED_SKULL_ID,1)
+STARTED.addQuestDrop(20025,CRACKED_SKULL_ID,1)
+STARTED.addQuestDrop(20105,PERFECT_SKULL_ID,1)
+STARTED.addQuestDrop(20025,PERFECT_SKULL_ID,1)

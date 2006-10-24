@@ -15,11 +15,11 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
-   if event == "7847-1.htm" :
+   if event == "30847-1.htm" :
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   if event == "7847-3.htm" :
+   if event == "30847-3.htm" :
      st.takeItems(REINFORCED_STEEL,5)
      st.set("cond","3")
    return htmltext
@@ -34,19 +34,19 @@ class Quest (JQuest) :
      fwear=st.getPlayer().getQuestState("37_PleaseMakeMeFormalWear")
      if fwear:
          if fwear.get("cond") == "6" :
-           htmltext = "7847-0.htm"
+           htmltext = "30847-0.htm"
          else:
            st.exitQuest(1)
      else:
        st.exitQuest(1)
    elif st.getQuestItemsCount(REINFORCED_STEEL) == 5 :
-     htmltext = "7847-2.htm"
+     htmltext = "30847-2.htm"
    elif cond == 3 and st.getQuestItemsCount(ORIHARUKON) >= 10 and st.getQuestItemsCount(ARTISANS_FRAME) >= 10 :
      st.takeItems(ORIHARUKON,10)
      st.takeItems(ARTISANS_FRAME,10)
      st.giveItems(SEWING_KIT,1)
      st.playSound("ItemSound.quest_finish")
-     htmltext = "7847-4.htm"
+     htmltext = "30847-4.htm"
      st.exitQuest(1)
    return htmltext
 
@@ -66,10 +66,10 @@ CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7847)
-CREATED.addTalkId(7847)
-STARTED.addTalkId(7847)
-STARTED.addKillId(566)
-STARTED.addQuestDrop(566,REINFORCED_STEEL,1)
+QUEST.addStartNpc(30847)
+CREATED.addTalkId(30847)
+STARTED.addTalkId(30847)
+STARTED.addKillId(20566)
+STARTED.addQuestDrop(20566,REINFORCED_STEEL,1)
 
 print "importing quests: 36: Make A Sewing Kit"

@@ -5,10 +5,10 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #NPC
-CASIAN = 7612
+CASIAN = 30612
 
 #MOBS
-MOBS = [82,84,86,89,90]
+MOBS = [20082,20084,20086,20089,20090]
 
 #ITEMS
 CHAPTER_OF_FIRE,CHAPTER_OF_WATER,CHAPTER_OF_WIND,CHAPTER_OF_EARTH = range(5917,5921)
@@ -19,11 +19,11 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
-   if event == "7612-1.htm" :
+   if event == "30612-1.htm" :
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   elif event == "7612-6.htm" :
+   elif event == "30612-6.htm" :
      if st.getQuestItemsCount(CHAPTER_OF_FIRE) and \
         st.getQuestItemsCount(CHAPTER_OF_WATER) and \
         st.getQuestItemsCount(CHAPTER_OF_WIND) and \
@@ -33,8 +33,8 @@ class Quest (JQuest) :
        st.takeItems(CHAPTER_OF_WIND,1)
        st.takeItems(CHAPTER_OF_EARTH,1)
        st.giveItems(57,3600)
-       htmltext = "7612-8.htm"
-   elif event == "7612-9.htm" :
+       htmltext = "30612-8.htm"
+   elif event == "30612-9.htm" :
      st.playSound("ItemSound.quest_finish")
      st.exitQuest(1)
    return htmltext
@@ -45,12 +45,12 @@ class Quest (JQuest) :
    cond=st.getInt("cond")
    if cond == 0 :
      if st.getPlayer().getLevel() >= 28 :
-       htmltext = "7612-0.htm"
+       htmltext = "30612-0.htm"
      else:
-       htmltext = "7612-0a.htm"
+       htmltext = "30612-0a.htm"
        st.exitQuest(1)
    elif cond :
-     htmltext = "7612-4.htm"
+     htmltext = "30612-4.htm"
    return htmltext
 
  def onKill (self,npc,st):

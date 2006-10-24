@@ -1,5 +1,4 @@
 # Maked by Mr. Have fun! Version 0.2
-print "importing quests: 412: Path To Darkwizard"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -31,37 +30,37 @@ class Quest (JQuest) :
             st.setState(STARTED)
             st.playSound("ItemSound.quest_accept")
             st.giveItems(SEEDS_OF_DESPAIR_ID,1)
-            htmltext = "7421-05.htm"
+            htmltext = "30421-05.htm"
           elif st.getPlayer().getClassId().getId() != 0x26 :
               if st.getPlayer().getClassId().getId() == 0x27 :
-                htmltext = "7421-02a.htm"
+                htmltext = "30421-02a.htm"
               else:
-                htmltext = "7421-03.htm"
+                htmltext = "30421-03.htm"
           elif st.getPlayer().getLevel()<19 and st.getPlayer().getClassId().getId() == 0x26 :
-              htmltext = "7421-02.htm"
+              htmltext = "30421-02.htm"
           elif st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x26 and st.getQuestItemsCount(JEWEL_OF_DARKNESS_ID) == 1 :
-              htmltext = "7421-04.htm"
+              htmltext = "30421-04.htm"
     elif event == "412_1" :
           if st.getQuestItemsCount(SEEDS_OF_ANGER_ID) :
-            htmltext = "7421-06.htm"
+            htmltext = "30421-06.htm"
           else:
-            htmltext = "7421-07.htm"
+            htmltext = "30421-07.htm"
     elif event == "412_2" :
             if st.getQuestItemsCount(SEEDS_OF_HORROR_ID) :
-              htmltext = "7421-09.htm"
+              htmltext = "30421-09.htm"
             else:
-              htmltext = "7421-10.htm"
+              htmltext = "30421-10.htm"
     elif event == "412_3" :
             if st.getQuestItemsCount(SEEDS_OF_LUNACY_ID) :
-              htmltext = "7421-12.htm"
+              htmltext = "30421-12.htm"
             elif st.getQuestItemsCount(SEEDS_OF_LUNACY_ID) == 0 and st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) :
-                htmltext = "7421-13.htm"
+                htmltext = "30421-13.htm"
                 st.giveItems(HUB_SCENT_ID,1)
     elif event == "412_4" :
-          htmltext = "7415-03.htm"
+          htmltext = "30415-03.htm"
           st.giveItems(LUCKY_KEY_ID,1)
-    elif event == "7418_1" :
-          htmltext = "7418-02.htm"
+    elif event == "30418_1" :
+          htmltext = "30418-02.htm"
           st.giveItems(CANDLE_ID,1)
     return htmltext
 
@@ -76,19 +75,19 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 7421 and int(st.get("cond"))==0 :
+   if npcId == 30421 and int(st.get("cond"))==0 :
         if int(st.get("cond"))<15 :
           if st.getQuestItemsCount(JEWEL_OF_DARKNESS_ID) == 0 :
-            htmltext = "7421-01.htm"
+            htmltext = "30421-01.htm"
             st.set("cond","0")
             return htmltext
           else:
-            htmltext = "7421-04.htm"
+            htmltext = "30421-04.htm"
         else:
-          htmltext = "7421-04.htm"
-   elif npcId == 7421 and int(st.get("cond"))==1 :
+          htmltext = "30421-04.htm"
+   elif npcId == 30421 and int(st.get("cond"))==1 :
         if st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) and st.getQuestItemsCount(SEEDS_OF_HORROR_ID) and st.getQuestItemsCount(SEEDS_OF_LUNACY_ID) and st.getQuestItemsCount(SEEDS_OF_ANGER_ID) :
-            htmltext = "7421-16.htm"
+            htmltext = "30421-16.htm"
             st.takeItems(SEEDS_OF_HORROR_ID,1)
             st.takeItems(SEEDS_OF_ANGER_ID,1)
             st.takeItems(SEEDS_OF_LUNACY_ID,1)
@@ -98,43 +97,43 @@ class Quest (JQuest) :
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
         elif st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and st.getQuestItemsCount(FAMILYS_ASHES_ID) == 0 and st.getQuestItemsCount(LUCKY_KEY_ID) == 0 and st.getQuestItemsCount(CANDLE_ID) == 0 and st.getQuestItemsCount(HUB_SCENT_ID) == 0 and st.getQuestItemsCount(KNEE_BONE_ID) == 0 and st.getQuestItemsCount(HEART_OF_LUNACY_ID) == 0 :
-          htmltext = "7421-17.htm"
+          htmltext = "30421-17.htm"
         elif st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and int(st.get("id")) == 1 and st.getQuestItemsCount(SEEDS_OF_ANGER_ID) == 0 :
-            htmltext = "7421-08.htm"
+            htmltext = "30421-08.htm"
         elif st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and int(st.get("id")) == 2 and st.getQuestItemsCount(SEEDS_OF_HORROR_ID) :
-            htmltext = "7421-19.htm"
+            htmltext = "30421-19.htm"
         elif st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and int(st.get("id")) == 3 and st.getQuestItemsCount(HEART_OF_LUNACY_ID) == 0 :
-            htmltext = "7421-13.htm"
-   elif npcId == 7419 and int(st.get("cond"))==1 :
+            htmltext = "30421-13.htm"
+   elif npcId == 30419 and int(st.get("cond"))==1 :
         if st.getQuestItemsCount(HUB_SCENT_ID) == 0 and st.getQuestItemsCount(HEART_OF_LUNACY_ID) == 0 :
-            htmltext = "7419-01.htm"
+            htmltext = "30419-01.htm"
             st.giveItems(HUB_SCENT_ID,1)
         elif st.getQuestItemsCount(HUB_SCENT_ID) and st.getQuestItemsCount(HEART_OF_LUNACY_ID)<3 :
-            htmltext = "7419-02.htm"
+            htmltext = "30419-02.htm"
         elif st.getQuestItemsCount(HUB_SCENT_ID) and st.getQuestItemsCount(HEART_OF_LUNACY_ID) >= 3 :
-            htmltext = "7419-03.htm"
+            htmltext = "30419-03.htm"
             st.giveItems(SEEDS_OF_LUNACY_ID,1)
             st.takeItems(HEART_OF_LUNACY_ID,3)
             st.takeItems(HUB_SCENT_ID,1)
-   elif npcId == 7415 and int(st.get("cond"))==1 and st.getQuestItemsCount(SEEDS_OF_ANGER_ID)==0 :
+   elif npcId == 30415 and int(st.get("cond"))==1 and st.getQuestItemsCount(SEEDS_OF_ANGER_ID)==0 :
         if st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and st.getQuestItemsCount(FAMILYS_ASHES_ID) == 0 and st.getQuestItemsCount(LUCKY_KEY_ID) == 0 :
-          htmltext = "7415-01.htm"
+          htmltext = "30415-01.htm"
         elif st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and st.getQuestItemsCount(FAMILYS_ASHES_ID)<3 and st.getQuestItemsCount(LUCKY_KEY_ID) == 1 :
-            htmltext = "7415-04.htm"
+            htmltext = "30415-04.htm"
         elif st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and st.getQuestItemsCount(FAMILYS_ASHES_ID) >= 3 and st.getQuestItemsCount(LUCKY_KEY_ID) == 1 :
-            htmltext = "7415-05.htm"
+            htmltext = "30415-05.htm"
             st.giveItems(SEEDS_OF_ANGER_ID,1)
             st.takeItems(FAMILYS_ASHES_ID,3)
             st.takeItems(LUCKY_KEY_ID,1)
-   elif npcId == 7415 and int(st.get("cond"))==1 and st.getQuestItemsCount(SEEDS_OF_ANGER_ID)==1 :
-        htmltext = "7415-06.htm"
-   elif npcId == 7418 and int(st.get("cond"))>0 and st.getQuestItemsCount(SEEDS_OF_HORROR_ID)==0 :
+   elif npcId == 30415 and int(st.get("cond"))==1 and st.getQuestItemsCount(SEEDS_OF_ANGER_ID)==1 :
+        htmltext = "30415-06.htm"
+   elif npcId == 30418 and int(st.get("cond"))>0 and st.getQuestItemsCount(SEEDS_OF_HORROR_ID)==0 :
         if st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and st.getQuestItemsCount(CANDLE_ID) == 0 and st.getQuestItemsCount(KNEE_BONE_ID) == 0 :
-          htmltext = "7418-01.htm"
+          htmltext = "30418-01.htm"
         elif st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and st.getQuestItemsCount(CANDLE_ID) == 1 and st.getQuestItemsCount(KNEE_BONE_ID)<2 :
-            htmltext = "7418-03.htm"
+            htmltext = "30418-03.htm"
         elif st.getQuestItemsCount(SEEDS_OF_DESPAIR_ID) == 1 and st.getQuestItemsCount(CANDLE_ID) == 1 and st.getQuestItemsCount(KNEE_BONE_ID) >= 2 :
-            htmltext = "7418-04.htm"
+            htmltext = "30418-04.htm"
             st.giveItems(SEEDS_OF_HORROR_ID,1)
             st.takeItems(CANDLE_ID,1)
             st.takeItems(KNEE_BONE_ID,2)
@@ -143,7 +142,7 @@ class Quest (JQuest) :
  def onKill (self,npc,st):
 
    npcId = npc.getNpcId()
-   if npcId == 15 :
+   if npcId == 20015 :
         st.set("id","0")
         if int(st.get("cond")) == 1 and st.getQuestItemsCount(LUCKY_KEY_ID) == 1 and st.getQuestItemsCount(FAMILYS_ASHES_ID)<3 :
           if st.getRandom(2) == 0 :
@@ -152,7 +151,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_middle")
             else:
               st.playSound("ItemSound.quest_itemget")
-   elif npcId == 517 :
+   elif npcId == 20517 :
         st.set("id","0")
         if int(st.get("cond")) == 1 and st.getQuestItemsCount(CANDLE_ID) == 1 and st.getQuestItemsCount(KNEE_BONE_ID)<2 :
           if st.getRandom(2) == 0 :
@@ -161,7 +160,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_middle")
             else:
               st.playSound("ItemSound.quest_itemget")
-   elif npcId == 518 :
+   elif npcId == 20518 :
         st.set("id","0")
         if int(st.get("cond")) == 1 and st.getQuestItemsCount(CANDLE_ID) == 1 and st.getQuestItemsCount(KNEE_BONE_ID)<2 :
           if st.getRandom(2) == 0 :
@@ -170,7 +169,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_middle")
             else:
               st.playSound("ItemSound.quest_itemget")
-   elif npcId == 22 :
+   elif npcId == 20022 :
         st.set("id","0")
         if int(st.get("cond")) == 1 and st.getQuestItemsCount(CANDLE_ID) == 1 and st.getQuestItemsCount(KNEE_BONE_ID)<2 :
           if st.getRandom(2) == 0 :
@@ -179,7 +178,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_middle")
             else:
               st.playSound("ItemSound.quest_itemget")
-   elif npcId == 45 :
+   elif npcId == 20045 :
         st.set("id","0")
         if int(st.get("cond")) == 1 and st.getQuestItemsCount(HUB_SCENT_ID) == 1 and st.getQuestItemsCount(HEART_OF_LUNACY_ID)<3 :
           if st.getRandom(2) == 0 :
@@ -198,30 +197,32 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7421)
+QUEST.addStartNpc(30421)
 
-STARTING.addTalkId(7421)
+STARTING.addTalkId(30421)
 
-STARTED.addTalkId(7415)
-STARTED.addTalkId(7418)
-STARTED.addTalkId(7419)
-STARTED.addTalkId(7421)
+STARTED.addTalkId(30415)
+STARTED.addTalkId(30418)
+STARTED.addTalkId(30419)
+STARTED.addTalkId(30421)
 
-STARTED.addKillId(15)
-STARTED.addKillId(22)
-STARTED.addKillId(45)
-STARTED.addKillId(517)
-STARTED.addKillId(518)
+STARTED.addKillId(20015)
+STARTED.addKillId(20022)
+STARTED.addKillId(20045)
+STARTED.addKillId(20517)
+STARTED.addKillId(20518)
 
-STARTED.addQuestDrop(7418,SEEDS_OF_HORROR_ID,1)
-STARTED.addQuestDrop(7415,SEEDS_OF_ANGER_ID,1)
-STARTED.addQuestDrop(7419,SEEDS_OF_LUNACY_ID,1)
-STARTED.addQuestDrop(7421,SEEDS_OF_DESPAIR_ID,1)
-STARTED.addQuestDrop(45,HEART_OF_LUNACY_ID,1)
-STARTED.addQuestDrop(7419,HUB_SCENT_ID,1)
-STARTED.addQuestDrop(15,FAMILYS_ASHES_ID,1)
-STARTED.addQuestDrop(7415,LUCKY_KEY_ID,1)
-STARTED.addQuestDrop(7418,CANDLE_ID,1)
-STARTED.addQuestDrop(517,KNEE_BONE_ID,1)
-STARTED.addQuestDrop(518,KNEE_BONE_ID,1)
-STARTED.addQuestDrop(22,KNEE_BONE_ID,1)
+STARTED.addQuestDrop(30418,SEEDS_OF_HORROR_ID,1)
+STARTED.addQuestDrop(30415,SEEDS_OF_ANGER_ID,1)
+STARTED.addQuestDrop(30419,SEEDS_OF_LUNACY_ID,1)
+STARTED.addQuestDrop(30421,SEEDS_OF_DESPAIR_ID,1)
+STARTED.addQuestDrop(20045,HEART_OF_LUNACY_ID,1)
+STARTED.addQuestDrop(30419,HUB_SCENT_ID,1)
+STARTED.addQuestDrop(20015,FAMILYS_ASHES_ID,1)
+STARTED.addQuestDrop(30415,LUCKY_KEY_ID,1)
+STARTED.addQuestDrop(30418,CANDLE_ID,1)
+STARTED.addQuestDrop(20517,KNEE_BONE_ID,1)
+STARTED.addQuestDrop(20518,KNEE_BONE_ID,1)
+STARTED.addQuestDrop(20022,KNEE_BONE_ID,1)
+
+print "importing quests: 412: Path To Darkwizard"

@@ -15,22 +15,22 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7497-03.htm" :
+    if event == "30497-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-    elif event == "7497-06.htm" :
+    elif event == "30497-06.htm" :
       st.exitQuest(1)
       st.playSound("ItemSound.quest_finish")
-    elif event == "7405-04.htm" :
+    elif event == "30405-04.htm" :
       st.giveItems(HEALING_POTION,1)
       st.takeItems(GIANT_SPIDER_SKIN,10)
-    elif event == "7405-05.htm" :
+    elif event == "30405-05.htm" :
       st.giveItems(WOODEN_ARROW,50)
       st.takeItems(GIANT_SPIDER_SKIN,10)
-    elif event == "7405-07.htm" :
+    elif event == "30405-07.htm" :
       if st.getQuestItemsCount(GIANT_SPIDER_SKIN) >= 10 :
-        htmltext = "7405-06.htm"
+        htmltext = "30405-06.htm"
     return htmltext
 
  def onTalk (Self,npc,st):
@@ -41,24 +41,24 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getLevel() >= 15 :
-       htmltext = "7497-02.htm"
+       htmltext = "30497-02.htm"
      else:
-       htmltext = "7497-01.htm"
+       htmltext = "30497-01.htm"
        st.exitQuest(1)
    else :
      count=st.getQuestItemsCount(GIANT_SPIDER_SKIN)
-     if npcId == 7497 :
+     if npcId == 30497 :
        if count == 0 :
-         htmltext = "7497-04.htm"
+         htmltext = "30497-04.htm"
        else :
-         htmltext = "7497-05.htm"
+         htmltext = "30497-05.htm"
          st.giveItems(ADENA,count*25)
          st.takeItems(GIANT_SPIDER_SKIN,-1)
      else :
        if count < 10 :
-         htmltext = "7405-01.htm"
+         htmltext = "30405-01.htm"
        else :
-         htmltext = "7405-02.htm"
+         htmltext = "30405-02.htm"
    return htmltext
 
  def onKill (self,npc,st):
@@ -74,19 +74,19 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7497)
+QUEST.addStartNpc(30497)
 
-CREATED.addTalkId(7497)
-STARTING.addTalkId(7497)
-COMPLETED.addTalkId(7497)
+CREATED.addTalkId(30497)
+STARTING.addTalkId(30497)
+COMPLETED.addTalkId(30497)
 
-STARTED.addTalkId(7405)
-STARTED.addTalkId(7497)
+STARTED.addTalkId(30405)
+STARTED.addTalkId(30497)
 
-STARTED.addKillId(103)
-STARTED.addKillId(106)
-STARTED.addKillId(108)
+STARTED.addKillId(20103)
+STARTED.addKillId(20106)
+STARTED.addKillId(20108)
 
-STARTED.addQuestDrop(103,GIANT_SPIDER_SKIN,1)
+STARTED.addQuestDrop(20103,GIANT_SPIDER_SKIN,1)
 
 print "importing quests: 259: Ranchers Plea"

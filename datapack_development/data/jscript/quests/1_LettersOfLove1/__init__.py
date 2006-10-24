@@ -5,9 +5,9 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #NPCs 
-DARIN  = 7048 
-ROXXY  = 7006 
-BAULRO = 7033 
+DARIN  = 30048 
+ROXXY  = 30006 
+BAULRO = 30033 
 
 #ITEMS 
 DARINGS_LETTER     = 687 
@@ -24,7 +24,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event 
-   if event == "7048-06.htm" : 
+   if event == "30048-06.htm" : 
      st.set("cond","1") 
      st.set("id","1") 
      st.setState(STARTED) 
@@ -53,9 +53,9 @@ class Quest (JQuest) :
    if npcId == DARIN and cond == 0 and onlyone == 0 : 
      if st.getPlayer().getLevel() >= 2 : 
        if cond < 15 : 
-         htmltext = "7048-02.htm" 
+         htmltext = "30048-02.htm" 
        else: 
-         htmltext = "7048-01.htm" 
+         htmltext = "30048-01.htm" 
          st.exitQuest(1) 
      else: 
        htmltext = "<html><head><body>Quest for characters level 2 and above.</body></html>" 
@@ -64,18 +64,18 @@ class Quest (JQuest) :
      htmltext = "<html><head><body>This quest have already been completed.</body></html>" 
    elif npcId == ROXXY and cond and onlyone == 0 : 
      if ItemsCount_RK == 0 and ItemsCount_DL : 
-       htmltext = "7006-01.htm" 
+       htmltext = "30006-01.htm" 
        st.takeItems(DARINGS_LETTER,-1) 
        st.giveItems(RAPUNZELS_KERCHIEF,1) 
        st.set("cond","2") 
        st.set("id","2") 
        st.playSound("ItemSound.quest_middle") 
      elif ItemsCount_BP or ItemsCount_DR : 
-       htmltext = "7006-03.htm" 
+       htmltext = "30006-03.htm" 
      elif ItemsCount_RK : 
-       htmltext = "7006-02.htm" 
+       htmltext = "30006-02.htm" 
    elif npcId == DARIN and cond and ItemsCount_RK > 0 and onlyone == 0 : 
-     htmltext = "7048-08.htm" 
+     htmltext = "30048-08.htm" 
      st.takeItems(RAPUNZELS_KERCHIEF,-1) 
      st.giveItems(DARINGS_RECEIPT,1) 
      st.set("cond","3") 
@@ -83,19 +83,19 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_middle") 
    elif npcId == BAULRO and cond and onlyone == 0 : 
      if ItemsCount_DR > 0 : 
-       htmltext = "7033-01.htm" 
+       htmltext = "30033-01.htm" 
        st.takeItems(DARINGS_RECEIPT,-1) 
        st.giveItems(BAULS_POTION,1) 
        st.set("cond","4") 
        st.set("id","4") 
        st.playSound("ItemSound.quest_middle") 
      elif ItemsCount_BP > 0 : 
-       htmltext = "7033-02.htm" 
+       htmltext = "30033-02.htm" 
    elif npcId == DARIN and cond and ItemsCount_RK == 0 and onlyone == 0 : 
      if ItemsCount_DR > 0 : 
-       htmltext = "7048-09.htm" 
+       htmltext = "30048-09.htm" 
      elif ItemsCount_BP > 0 : 
-       htmltext = "7048-10.htm" 
+       htmltext = "30048-10.htm" 
        st.takeItems(BAULS_POTION,-1) 
        st.giveItems(NECKLACE,1) 
        st.set("cond","0") 
@@ -103,7 +103,7 @@ class Quest (JQuest) :
        st.setState(COMPLETED) 
        st.playSound("ItemSound.quest_finish") 
      else: 
-       htmltext = "7048-07.htm" 
+       htmltext = "30048-07.htm" 
    return htmltext
 
 QUEST     = Quest(1,"1_LettersOfLove1","Letters of Love") 

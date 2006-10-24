@@ -13,7 +13,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7150-05.htm" :
+    if event == "30150-05.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -25,18 +25,18 @@ class Quest (JQuest) :
    cond=st.getInt("cond")
    if cond == 0 :
      if st.getPlayer().getLevel() >= 8 :
-       htmltext = "7150-03.htm"
+       htmltext = "30150-03.htm"
      else:
-       htmltext = "7150-02.htm"
+       htmltext = "30150-02.htm"
        st.exitQuest(1)
    else :
      if st.getQuestItemsCount(FUNGUS_SAC)<10 :
-       htmltext = "7150-06.htm"
+       htmltext = "30150-06.htm"
      else :
        st.takeItems(FUNGUS_SAC,-1)
        st.playSound("ItemSound.quest_finish")
        st.giveItems(ADENA,3500)
-       htmltext = "7150-07.htm"
+       htmltext = "30150-07.htm"
        st.exitQuest(1)
    return htmltext
 
@@ -56,15 +56,15 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7150)
+QUEST.addStartNpc(30150)
 
-CREATED.addTalkId(7150)
-STARTING.addTalkId(7150)
-STARTED.addTalkId(7150)
-COMPLETED.addTalkId(7150)
+CREATED.addTalkId(30150)
+STARTING.addTalkId(30150)
+STARTED.addTalkId(30150)
+COMPLETED.addTalkId(30150)
 
-STARTED.addKillId(509)
+STARTED.addKillId(20509)
 
-STARTED.addQuestDrop(509,FUNGUS_SAC,1)
+STARTED.addQuestDrop(20509,FUNGUS_SAC,1)
 
 print "importing quests: 313: Collect Spores"

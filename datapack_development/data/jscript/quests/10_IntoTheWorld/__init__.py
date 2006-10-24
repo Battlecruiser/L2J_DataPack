@@ -15,17 +15,17 @@ class Quest (JQuest) :
 
     def onEvent (self,event,st) :
         htmltext = event
-        if event == "7533-03.htm" :
+        if event == "30533-03.htm" :
             st.set("cond","1")
             st.setState(STARTED)
             st.playSound("ItemSound.quest_accept")
-        elif event == "7520-02.htm" :
+        elif event == "30520-02.htm" :
             st.set("cond","2")
             st.giveItems(VERY_EXPENSIVE_NECKLACE,1)
-        elif event == "7650-02.htm" :
+        elif event == "30650-02.htm" :
             st.set("cond","3")
             st.takeItems(VERY_EXPENSIVE_NECKLACE,1)
-        elif event == "7533-06.htm" :
+        elif event == "30533-06.htm" :
             st.giveItems(SCROLL_OF_ESCAPE_GIRAN,1)
             st.giveItems(MARK_OF_TRAVELER, 1)
             st.unset("cond")
@@ -40,27 +40,27 @@ class Quest (JQuest) :
         if id == CREATED :
             st.set("cond","0")
             if st.getPlayer().getRace().ordinal() == 4 :
-                htmltext = "7533-02.htm"
+                htmltext = "30533-02.htm"
             else :
-                htmltext = "7533-01.htm"
+                htmltext = "30533-01.htm"
                 st.exitQuest(1)
-        elif npcId == 7533 and id == COMPLETED :
+        elif npcId == 30533 and id == COMPLETED :
             htmltext = "<html><head><body>I can't supply you with another Giran Scroll of Escape. Sorry traveller.</body></html>"
-        elif npcId == 7533 and int(st.get("cond"))==1 :
-            htmltext = "7533-04.htm"
-        elif npcId == 7520 and int(st.get("cond")) == 3 :
-            htmltext = "7520-04.htm"
+        elif npcId == 30533 and int(st.get("cond"))==1 :
+            htmltext = "30533-04.htm"
+        elif npcId == 30520 and int(st.get("cond")) == 3 :
+            htmltext = "30520-04.htm"
             st.set("cond","4")
-        elif npcId == 7520 and int(st.get("cond")) :
+        elif npcId == 30520 and int(st.get("cond")) :
             if st.getQuestItemsCount(VERY_EXPENSIVE_NECKLACE) == 0 :
-                htmltext = "7520-01.htm"
+                htmltext = "30520-01.htm"
             else :
-                htmltext = "7520-03.htm"
-        elif npcId == 7650 and int(st.get("cond"))==2 :
+                htmltext = "30520-03.htm"
+        elif npcId == 30650 and int(st.get("cond"))==2 :
             if st.getQuestItemsCount(VERY_EXPENSIVE_NECKLACE) :
-                htmltext = "7650-01.htm"
-        elif npcId == 7533 and int(st.get("cond"))==4 :
-            htmltext = "7533-05.htm"
+                htmltext = "30650-01.htm"
+        elif npcId == 30533 and int(st.get("cond"))==4 :
+            htmltext = "30533-05.htm"
         return htmltext
 
 QUEST       = Quest(10,"10_IntoTheWorld","Into The World")
@@ -69,15 +69,15 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7533)
+QUEST.addStartNpc(30533)
 
-CREATED.addTalkId(7533)
-COMPLETED.addTalkId(7533)
+CREATED.addTalkId(30533)
+COMPLETED.addTalkId(30533)
 
-STARTED.addTalkId(7533)
-STARTED.addTalkId(7520)
-STARTED.addTalkId(7650)
+STARTED.addTalkId(30533)
+STARTED.addTalkId(30520)
+STARTED.addTalkId(30650)
 
-STARTED.addQuestDrop(7520,VERY_EXPENSIVE_NECKLACE,1)
+STARTED.addQuestDrop(30520,VERY_EXPENSIVE_NECKLACE,1)
 
 print "importing quests: 10: Into The World"
