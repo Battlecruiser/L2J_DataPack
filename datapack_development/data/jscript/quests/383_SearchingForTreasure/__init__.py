@@ -4,10 +4,10 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-SHARK=314
+SHARK=20314
 PIRATES_TREASURE_MAP = 5915
-PIRATES_CHEST = 8148
-ESPEN = 7890
+PIRATES_CHEST = 31148
+ESPEN = 30890
 
 #itemid:[maxqty,chance in 1000].
 REWARDS={1338:[2,150],3452:[1,140],1337:[1,130],3455:[1,120],4409:[1,220],4408:[1,220],4418:[1,220],4419:[1,220],956:[1,15],952:[1,8],2451:[1,2],2450:[1,2]}
@@ -18,10 +18,10 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
      htmltext = event
-     if event == "7890-03.htm" :
+     if event == "30890-03.htm" :
         st.set("cond","1")
         st.setState(STARTED)
-     elif event == "7890-07.htm" :
+     elif event == "30890-07.htm" :
         if st.getQuestItemsCount(PIRATES_TREASURE_MAP) :
            st.set("cond","2")
            st.takeItems(PIRATES_TREASURE_MAP,1)
@@ -33,7 +33,7 @@ class Quest (JQuest) :
         else:
            htmltext="You don't have required items"
            st.exitquest(1)
-     elif event == "7890-02b.htm":
+     elif event == "30890-02b.htm":
         if st.getQuestItemsCount(PIRATES_TREASURE_MAP) :
            st.takeItems(PIRATES_TREASURE_MAP,1)
            st.giveItems(57,1000)
@@ -41,7 +41,7 @@ class Quest (JQuest) :
         else:
            htmltext="You don't have required items"
         st.exitQuest(1)
-     elif event == "8148-02.htm":
+     elif event == "31148-02.htm":
         if st.getQuestItemsCount(1661):
            st.takeItems(1661,1)
            st.giveItems(57,500+(st.getRandom(5)*300))
@@ -60,7 +60,7 @@ class Quest (JQuest) :
            st.playSound("ItemSound.quest_finish")
            st.exitQuest(1)
         else :
-           htmltext = "8148-03.htm"
+           htmltext = "31148-03.htm"
      return htmltext
 
  def onTalk (Self,npc,st):
@@ -70,17 +70,17 @@ class Quest (JQuest) :
      if id == CREATED :
        if st.getPlayer().getLevel() >= 42:  
           if st.getQuestItemsCount(PIRATES_TREASURE_MAP) :
-            htmltext = "7890-01.htm"
+            htmltext = "30890-01.htm"
           else :
-            htmltext = "7890-00.htm"
+            htmltext = "30890-00.htm"
             st.exitQuest(1)
        else :
-          htmltext = "7890-01a.htm"
+          htmltext = "30890-01a.htm"
           st.exitQuest(1)
      elif npcId == ESPEN :
-        htmltext = "7890-03a.htm"
+        htmltext = "30890-03a.htm"
      elif npcId == PIRATES_CHEST and st.getInt("cond") == 2 :
-        htmltext = "8148-01.htm"
+        htmltext = "31148-01.htm"
      return htmltext
 
 QUEST       = Quest(383,"383_SearchingForTreasure","Searching For Treasure")

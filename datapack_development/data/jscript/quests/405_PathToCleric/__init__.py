@@ -1,5 +1,4 @@
 # Maked by Mr. Have fun! Version 0.2
-print "importing quests: 405: Path To Cleric"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -30,16 +29,16 @@ class Quest (JQuest) :
           st.setState(STARTED)
           st.playSound("ItemSound.quest_accept")
           st.giveItems(LETTER_OF_ORDER1_ID,1)
-          htmltext = "7022-05.htm"
+          htmltext = "30022-05.htm"
         elif st.getPlayer().getClassId().getId() != 0x0a :
             if st.getPlayer().getClassId().getId() == 0x0f :
-              htmltext = "7022-02a.htm"
+              htmltext = "30022-02a.htm"
             else:
-              htmltext = "7022-02.htm"
+              htmltext = "30022-02.htm"
         elif st.getPlayer().getLevel()<19 and st.getPlayer().getClassId().getId() == 0x0a :
-            htmltext = "7022-03.htm"
+            htmltext = "30022-03.htm"
         elif st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x0a and st.getQuestItemsCount(MARK_OF_FAITH_ID) == 1 :
-            htmltext = "7022-04.htm"
+            htmltext = "30022-04.htm"
     return htmltext
 
 
@@ -53,28 +52,28 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 7022 and int(st.get("cond"))==0 :
+   if npcId == 30022 and int(st.get("cond"))==0 :
         if int(st.get("cond"))<15 :
           if st.getQuestItemsCount(MARK_OF_FAITH_ID) == 0 :
-              htmltext = "7022-01.htm"
+              htmltext = "30022-01.htm"
               return htmltext
           else:
-              htmltext = "7022-04.htm"
+              htmltext = "30022-04.htm"
         else:
-            htmltext = "7022-04.htm"
-   elif npcId == 7022 and int(st.get("cond")) and st.getQuestItemsCount(LETTER_OF_ORDER2_ID)==1 and st.getQuestItemsCount(LEMONIELLS_COVENANT_ID)==0 :
-        htmltext = "7022-07.htm"
-   elif npcId == 7022 and int(st.get("cond")) and st.getQuestItemsCount(LETTER_OF_ORDER2_ID)==1 and st.getQuestItemsCount(LEMONIELLS_COVENANT_ID)==1 :
-        htmltext = "7022-09.htm"
+            htmltext = "30022-04.htm"
+   elif npcId == 30022 and int(st.get("cond")) and st.getQuestItemsCount(LETTER_OF_ORDER2_ID)==1 and st.getQuestItemsCount(LEMONIELLS_COVENANT_ID)==0 :
+        htmltext = "30022-07.htm"
+   elif npcId == 30022 and int(st.get("cond")) and st.getQuestItemsCount(LETTER_OF_ORDER2_ID)==1 and st.getQuestItemsCount(LEMONIELLS_COVENANT_ID)==1 :
+        htmltext = "30022-09.htm"
         st.takeItems(LEMONIELLS_COVENANT_ID,1)
         st.takeItems(LETTER_OF_ORDER2_ID,1)
         st.giveItems(MARK_OF_FAITH_ID,1)
         st.set("cond","0")
         st.setState(COMPLETED)
         st.playSound("ItemSound.quest_finish")
-   elif npcId == 7022 and int(st.get("cond")) and st.getQuestItemsCount(LETTER_OF_ORDER1_ID)==1 :
+   elif npcId == 30022 and int(st.get("cond")) and st.getQuestItemsCount(LETTER_OF_ORDER1_ID)==1 :
         if st.getQuestItemsCount(BOOK_OF_VIVI_ID) == 1 and st.getQuestItemsCount(BOOK_OF_SIMLON_ID)>0 and st.getQuestItemsCount(BOOK_OF_PRAGA_ID) == 1 :
-            htmltext = "7022-08.htm"
+            htmltext = "30022-08.htm"
             st.takeItems(BOOK_OF_PRAGA_ID,1)
             st.takeItems(BOOK_OF_VIVI_ID,1)
             st.takeItems(BOOK_OF_SIMLON_ID,3)
@@ -82,68 +81,68 @@ class Quest (JQuest) :
             st.giveItems(LETTER_OF_ORDER2_ID,1)
             st.set("cond","3")
         else:
-            htmltext = "7022-06.htm"
-   elif npcId == 7253 and int(st.get("cond")) and st.getQuestItemsCount(LETTER_OF_ORDER1_ID)==1 :
+            htmltext = "30022-06.htm"
+   elif npcId == 30253 and int(st.get("cond")) and st.getQuestItemsCount(LETTER_OF_ORDER1_ID)==1 :
         if st.getQuestItemsCount(BOOK_OF_SIMLON_ID) == 0 :
-            htmltext = "7253-01.htm"
+            htmltext = "30253-01.htm"
             st.giveItems(BOOK_OF_SIMLON_ID,3)
         elif st.getQuestItemsCount(BOOK_OF_SIMLON_ID)>0 :
-            htmltext = "7253-02.htm"
-   elif npcId == 7030 and int(st.get("cond")) and st.getQuestItemsCount(LETTER_OF_ORDER1_ID)==1 :
+            htmltext = "30253-02.htm"
+   elif npcId == 30030 and int(st.get("cond")) and st.getQuestItemsCount(LETTER_OF_ORDER1_ID)==1 :
         if st.getQuestItemsCount(BOOK_OF_VIVI_ID) == 0 :
-            htmltext = "7030-01.htm"
+            htmltext = "30030-01.htm"
             st.giveItems(BOOK_OF_VIVI_ID,1)
         elif st.getQuestItemsCount(BOOK_OF_VIVI_ID) == 1 :
-            htmltext = "7030-02.htm"
-   elif npcId == 7333 and int(st.get("cond")) and st.getQuestItemsCount(LETTER_OF_ORDER1_ID)==1 :
+            htmltext = "30030-02.htm"
+   elif npcId == 30333 and int(st.get("cond")) and st.getQuestItemsCount(LETTER_OF_ORDER1_ID)==1 :
         if st.getQuestItemsCount(BOOK_OF_PRAGA_ID) == 0 and st.getQuestItemsCount(NECKLACE_OF_MOTHER_ID) == 0 :
-            htmltext = "7333-01.htm"
+            htmltext = "30333-01.htm"
             st.giveItems(NECKLACE_OF_MOTHER_ID,1)
         elif st.getQuestItemsCount(BOOK_OF_PRAGA_ID) == 0 and st.getQuestItemsCount(NECKLACE_OF_MOTHER_ID) == 1 and st.getQuestItemsCount(PENDANT_OF_MOTHER_ID) == 0 :
-            htmltext = "7333-02.htm"
+            htmltext = "30333-02.htm"
         elif st.getQuestItemsCount(BOOK_OF_PRAGA_ID) == 0 and st.getQuestItemsCount(NECKLACE_OF_MOTHER_ID) == 1 and st.getQuestItemsCount(PENDANT_OF_MOTHER_ID) == 1 :
-            htmltext = "7333-03.htm"
+            htmltext = "30333-03.htm"
             st.takeItems(NECKLACE_OF_MOTHER_ID,1)
             st.takeItems(PENDANT_OF_MOTHER_ID,1)
             st.giveItems(BOOK_OF_PRAGA_ID,1)
             st.set("cond","2")
         elif st.getQuestItemsCount(BOOK_OF_PRAGA_ID)>0 :
-            htmltext = "7333-04.htm"
-   elif npcId == 7408 and int(st.get("cond")) :
+            htmltext = "30333-04.htm"
+   elif npcId == 30408 and int(st.get("cond")) :
         if st.getQuestItemsCount(LETTER_OF_ORDER2_ID) == 0 :
-          htmltext = "7408-02.htm"
+          htmltext = "30408-02.htm"
         elif st.getQuestItemsCount(LETTER_OF_ORDER2_ID) == 1 and st.getQuestItemsCount(BOOK_OF_LEMONIELL_ID) == 0 and st.getQuestItemsCount(LEMONIELLS_COVENANT_ID) == 0 and st.getQuestItemsCount(CERTIFICATE_OF_GALLINT_ID) == 0 :
-            htmltext = "7408-01.htm"
+            htmltext = "30408-01.htm"
             st.giveItems(BOOK_OF_LEMONIELL_ID,1)
             st.set("cond","4")
         elif st.getQuestItemsCount(LETTER_OF_ORDER2_ID) == 1 and st.getQuestItemsCount(BOOK_OF_LEMONIELL_ID) == 1 and st.getQuestItemsCount(LEMONIELLS_COVENANT_ID) == 0 and st.getQuestItemsCount(CERTIFICATE_OF_GALLINT_ID) == 0 :
-            htmltext = "7408-03.htm"
+            htmltext = "30408-03.htm"
         elif st.getQuestItemsCount(LETTER_OF_ORDER2_ID) == 1 and st.getQuestItemsCount(BOOK_OF_LEMONIELL_ID) == 0 and st.getQuestItemsCount(LEMONIELLS_COVENANT_ID) == 0 and st.getQuestItemsCount(CERTIFICATE_OF_GALLINT_ID) == 1 :
-            htmltext = "7408-04.htm"
+            htmltext = "30408-04.htm"
             st.takeItems(CERTIFICATE_OF_GALLINT_ID,1)
             st.giveItems(LEMONIELLS_COVENANT_ID,1)
             st.set("cond","6")
         elif st.getQuestItemsCount(LETTER_OF_ORDER2_ID) == 1 and st.getQuestItemsCount(BOOK_OF_LEMONIELL_ID) == 0 and st.getQuestItemsCount(LEMONIELLS_COVENANT_ID) == 1 and st.getQuestItemsCount(CERTIFICATE_OF_GALLINT_ID) == 0 :
-            htmltext = "7408-05.htm"
-   elif npcId == 7017 and int(st.get("cond")) and st.getQuestItemsCount(LETTER_OF_ORDER2_ID)==1 and st.getQuestItemsCount(LEMONIELLS_COVENANT_ID)==0 :
+            htmltext = "30408-05.htm"
+   elif npcId == 30017 and int(st.get("cond")) and st.getQuestItemsCount(LETTER_OF_ORDER2_ID)==1 and st.getQuestItemsCount(LEMONIELLS_COVENANT_ID)==0 :
         if st.getQuestItemsCount(BOOK_OF_LEMONIELL_ID) == 1 and st.getQuestItemsCount(CERTIFICATE_OF_GALLINT_ID) == 0 :
-            htmltext = "7017-01.htm"
+            htmltext = "30017-01.htm"
             st.takeItems(BOOK_OF_LEMONIELL_ID,1)
             st.giveItems(CERTIFICATE_OF_GALLINT_ID,1)
             st.set("cond","5")
         elif st.getQuestItemsCount(BOOK_OF_LEMONIELL_ID) == 0 and st.getQuestItemsCount(CERTIFICATE_OF_GALLINT_ID) == 1 :
-            htmltext = "7017-02.htm"
+            htmltext = "30017-02.htm"
    return htmltext
 
  def onKill (self,npc,st):
 
    npcId = npc.getNpcId()
-   if npcId == 26 :
+   if npcId == 20026 :
         st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(PENDANT_OF_MOTHER_ID) == 0 :
           st.giveItems(PENDANT_OF_MOTHER_ID,1)
           st.playSound("ItemSound.quest_middle")
-   elif npcId == 29 :
+   elif npcId == 20029 :
         st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(PENDANT_OF_MOTHER_ID) == 0 :
           st.giveItems(PENDANT_OF_MOTHER_ID,1)
@@ -158,28 +157,30 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7022)
+QUEST.addStartNpc(30022)
 
-STARTING.addTalkId(7022)
+STARTING.addTalkId(30022)
 
-STARTED.addTalkId(7017)
-STARTED.addTalkId(7022)
-STARTED.addTalkId(7030)
-STARTED.addTalkId(7253)
-STARTED.addTalkId(7333)
-STARTED.addTalkId(7408)
+STARTED.addTalkId(30017)
+STARTED.addTalkId(30022)
+STARTED.addTalkId(30030)
+STARTED.addTalkId(30253)
+STARTED.addTalkId(30333)
+STARTED.addTalkId(30408)
 
-STARTED.addKillId(26)
-STARTED.addKillId(29)
+STARTED.addKillId(20026)
+STARTED.addKillId(20029)
 
-STARTED.addQuestDrop(7408,LEMONIELLS_COVENANT_ID,1)
-STARTED.addQuestDrop(7022,LETTER_OF_ORDER2_ID,1)
-STARTED.addQuestDrop(7333,BOOK_OF_PRAGA_ID,1)
-STARTED.addQuestDrop(7030,BOOK_OF_VIVI_ID,1)
-STARTED.addQuestDrop(7253,BOOK_OF_SIMLON_ID,1)
-STARTED.addQuestDrop(7022,LETTER_OF_ORDER1_ID,1)
-STARTED.addQuestDrop(7333,NECKLACE_OF_MOTHER_ID,1)
-STARTED.addQuestDrop(26,PENDANT_OF_MOTHER_ID,1)
-STARTED.addQuestDrop(29,PENDANT_OF_MOTHER_ID,1)
-STARTED.addQuestDrop(7017,CERTIFICATE_OF_GALLINT_ID,1)
-STARTED.addQuestDrop(7408,BOOK_OF_LEMONIELL_ID,1)
+STARTED.addQuestDrop(30408,LEMONIELLS_COVENANT_ID,1)
+STARTED.addQuestDrop(30022,LETTER_OF_ORDER2_ID,1)
+STARTED.addQuestDrop(30333,BOOK_OF_PRAGA_ID,1)
+STARTED.addQuestDrop(30030,BOOK_OF_VIVI_ID,1)
+STARTED.addQuestDrop(30253,BOOK_OF_SIMLON_ID,1)
+STARTED.addQuestDrop(30022,LETTER_OF_ORDER1_ID,1)
+STARTED.addQuestDrop(30333,NECKLACE_OF_MOTHER_ID,1)
+STARTED.addQuestDrop(20026,PENDANT_OF_MOTHER_ID,1)
+STARTED.addQuestDrop(20029,PENDANT_OF_MOTHER_ID,1)
+STARTED.addQuestDrop(30017,CERTIFICATE_OF_GALLINT_ID,1)
+STARTED.addQuestDrop(30408,BOOK_OF_LEMONIELL_ID,1)
+
+print "importing quests: 405: Path To Cleric"

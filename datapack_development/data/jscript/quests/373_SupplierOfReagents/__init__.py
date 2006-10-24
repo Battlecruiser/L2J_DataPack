@@ -99,16 +99,16 @@ MATS=range(6011,6032)+range(6320,6322)
 #Messages
 default   = "<html><head><body>I have nothing to say to you.</body></html>"
 #NPCs
-WESLEY,URN=7166,8149
+WESLEY,URN=30166,31149
 #Mobs & Drop
 DROPLIST = {
-813: [REAGENT_POUCH3,SULFUR],
-822: [REAGENT_POUCH2,BLOOD_ROOT,MOONSTONE_SHARD,QUICKSILVER],
-1061:[DEMONS_BLOOD,VOLCANIC_ASH],
-828: [REAGENT_POUCH2,QUICKSILVER],
-1066:[REAGENT_BOX,BLOOD_ROOT],
-1111:[WYRMS_BLOOD,REAGENT_POUCH3],
-1115:[REAGENT_POUCH1,QUICKSILVER,VOLCANIC_ASH]
+20813: [REAGENT_POUCH3,SULFUR],
+20822: [REAGENT_POUCH2,BLOOD_ROOT,MOONSTONE_SHARD,QUICKSILVER],
+21061:[DEMONS_BLOOD,VOLCANIC_ASH],
+20828: [REAGENT_POUCH2,QUICKSILVER],
+21066:[REAGENT_BOX,BLOOD_ROOT],
+21111:[WYRMS_BLOOD,REAGENT_POUCH3],
+21115:[REAGENT_POUCH1,QUICKSILVER,VOLCANIC_ASH]
 }
 #temperature:[success_%,reagent_qty_obtained]
 TEMPERATURE={1:[100,1],2:[45,2],3:[15,3]}
@@ -135,7 +135,7 @@ def render_shop(mode,item) :
 def render_urn(st, page) :
     stone,ingredient,catalyst = int(st.get("mixing")),int(st.get("ingredient")),int(st.get("catalyst"))
     if page == "Start" :
-       html = "<html><body>Alchemists Mixing Urn:<br><table border=0 width=300><tr><tr><td width=50%><a action=\"bypass -h Quest 373_SupplierOfReagents U_M_MACT\">MACT Mixing Stone</a></td><td></td></tr><tr><td><a action=\"bypass -h Quest 373_SupplierOfReagents U_I_IACT\">IACT Ingredients</a></td><td>(current: INGR)</td></tr><tr><td><a action=\"bypass -h Quest 373_SupplierOfReagents U_C_CACT\">CACT Catalyst</a></td><td>(current: CATA)</td></tr><tr><td><a action=\"bypass -h Quest 373_SupplierOfReagents 8149-5.htm\">Select Temperature</a></td><td>(current: TEMP)</td></tr><tr><td><a action=\"bypass -h Quest 373_SupplierOfReagents 8149-6.htm\">Mix Ingredients</a></td><td></td></tr></table></body></html>"
+       html = "<html><body>Alchemists Mixing Urn:<br><table border=0 width=300><tr><tr><td width=50%><a action=\"bypass -h Quest 373_SupplierOfReagents U_M_MACT\">MACT Mixing Stone</a></td><td></td></tr><tr><td><a action=\"bypass -h Quest 373_SupplierOfReagents U_I_IACT\">IACT Ingredients</a></td><td>(current: INGR)</td></tr><tr><td><a action=\"bypass -h Quest 373_SupplierOfReagents U_C_CACT\">CACT Catalyst</a></td><td>(current: CATA)</td></tr><tr><td><a action=\"bypass -h Quest 373_SupplierOfReagents 31149-5.htm\">Select Temperature</a></td><td>(current: TEMP)</td></tr><tr><td><a action=\"bypass -h Quest 373_SupplierOfReagents 31149-6.htm\">Mix Ingredients</a></td><td></td></tr></table></body></html>"
        ingr,cata,temp=int(st.get("ingredient")),int(st.get("catalyst")),st.get("temp")
        if ingr : ingr = ITEMS[ingr][1]+"x"+st.get("i_qty")
        else : ingr = "None"
@@ -162,7 +162,7 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     id = st.getState() 
     htmltext = event
-    if event == "7166-4.htm" :
+    if event == "30166-4.htm" :
        st.setState(STARTED)
        st.set("cond","1")
        st.set("ingredient","0")
@@ -174,7 +174,7 @@ class Quest (JQuest) :
        st.giveItems(6317,1)
        st.giveItems(5904,1)
        st.playSound("ItemSound.quest_accept")
-    elif event == "7166-5.htm" :
+    elif event == "30166-5.htm" :
        for i in range(6007,6035)+[6317,5904] : 
           st.takeItems(i,-1)
        st.exitQuest(1)
@@ -200,7 +200,7 @@ class Quest (JQuest) :
               if st.getQuestItemsCount(MIXING_STONE1) :
                  st.takeItems(MIXING_STONE1,-1)
                  st.set("mixing","1")
-                 htmltext = "8149-2.htm"
+                 htmltext = "31149-2.htm"
               else :
                  htmltext = "You don't have a mixing stone."
           elif event[2] == "Retrieve" :
@@ -209,11 +209,11 @@ class Quest (JQuest) :
                  st.set("temp","0")
                  st.giveItems(MIXING_STONE1,1)
                  if int(st.get("ingredient")) or int(st.get("catalyst")) :
-                     htmltext = "8149-2c.htm"
+                     htmltext = "31149-2c.htm"
                  else :
-                     htmltext = "8149-2a.htm"
+                     htmltext = "31149-2a.htm"
               else :
-                 htmltext = "8149-2b.htm"
+                 htmltext = "31149-2b.htm"
        elif event[2] == "Insert" :
           htmltext = render_urn(st,event)
        elif event[2] == "Retrieve" :
@@ -229,9 +229,9 @@ class Quest (JQuest) :
              st.set("c_qty","0")
           if item and qty :
              st.giveItems(item,qty)
-             htmltext="8149-3a.htm"
+             htmltext="31149-3a.htm"
           else :
-             htmltext = "8149-3b.htm" 
+             htmltext = "31149-3b.htm" 
     elif event.startswith("x_") :
        x,qty,dst,item=event.split("_")
        if qty=="2": qty="10"
@@ -245,13 +245,13 @@ class Quest (JQuest) :
           st.takeItems(int(item),int(qty))
           st.set(dest,item)
           st.set(count,qty)
-          htmltext = "8149-4a.htm"
+          htmltext = "31149-4a.htm"
        else :
-          htmltext = "8149-4b.htm"
+          htmltext = "31149-4b.htm"
     elif event.startswith("tmp_") :
        st.set("temp",event.split("_")[1])
-       htmltext = "8149-5a.htm"
-    elif event == "8149-6.htm" :
+       htmltext = "31149-5a.htm"
+    elif event == "31149-6.htm" :
        if int(st.get("mixing")) :
           temp=int(st.get("temp"))
           if temp :
@@ -266,15 +266,15 @@ class Quest (JQuest) :
                  if [ingredient,iq,catalyst,cq] == FORMULAS[i] :
                     item=i
                     break
-             if item == PURE_SILVER and temp != 1: return "8149-7c.htm"
+             if item == PURE_SILVER and temp != 1: return "31149-7c.htm"
              if item == MIMIRS_ELIXIR :
                 if temp == 3 :
                   if st.getQuestItemsCount(BLOOD_FIRE) :
                      st.takeItems(BLOOD_FIRE,1)
                   else :
-                     return "8149-7a.htm"
+                     return "31149-7a.htm"
                 else :
-                  return "8149-7b.htm"
+                  return "31149-7b.htm"
              if item :
                 chance,qty=TEMPERATURE[temp]
                 if item == MIMIRS_ELIXIR :
@@ -284,17 +284,17 @@ class Quest (JQuest) :
                       qty = 1
                       mimirs.set("cond","8")
                    else :
-                      return "8149-7d.htm"
+                      return "31149-7d.htm"
                 if st.getRandom(100) < chance :
                    st.giveItems(item,qty)
                 else :
-                   htmltext = "8149-6c.htm"
+                   htmltext = "31149-6c.htm"
              else :
-                htmltext = "8149-6d.htm"
+                htmltext = "31149-6d.htm"
           else :
-             htmltext = "8149-6b.htm"
+             htmltext = "31149-6b.htm"
        else :
-          htmltext="8149-6a.htm"
+          htmltext="31149-6a.htm"
     return htmltext
 
  def onTalk (self,npc,st):
@@ -304,12 +304,12 @@ class Quest (JQuest) :
    if npcId == WESLEY :
       if id == CREATED :
          st.set("cond","0")
-         htmltext = "7166-1.htm"
+         htmltext = "30166-1.htm"
          if st.getPlayer().getLevel() < 57 :
             st.exitQuest(1)
-            htmltext = "7166-2.htm"
+            htmltext = "30166-2.htm"
       else :
-         htmltext = "7166-3.htm"
+         htmltext = "30166-3.htm"
    else :
       htmltext = render_urn(st,"Start")
    return htmltext
@@ -341,6 +341,6 @@ for i in DROPLIST.keys():
   STARTED.addKillId(i)
 
 for i in range(6007,6035)+[6317,5904] :
-  STARTED.addQuestDrop(8149,i,1)
+  STARTED.addQuestDrop(31149,i,1)
 
 print str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

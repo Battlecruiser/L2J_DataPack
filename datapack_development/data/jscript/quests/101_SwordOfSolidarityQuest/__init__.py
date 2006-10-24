@@ -19,16 +19,16 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7008-04.htm" :
+    if event == "30008-04.htm" :
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(ROIENS_LETTER_ID,1)
-    elif event == "7283-02.htm" :
+    elif event == "30283-02.htm" :
         st.set("cond","2")
         st.takeItems(ROIENS_LETTER_ID,st.getQuestItemsCount(ROIENS_LETTER_ID))
         st.giveItems(HOWTOGO_RUINS_ID,1)
-    elif event == "7283-07.htm" :
+    elif event == "30283-07.htm" :
         st.takeItems(BROKEN_SWORD_HANDLE_ID,-1)
         st.giveItems(SWORD_OF_SOLIDARITY_ID,1)
         st.set("cond","0")
@@ -45,56 +45,56 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
-   if npcId == 7008 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30008 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
       if st.getPlayer().getRace().ordinal() != 0 :
-        htmltext = "7008-00.htm"
+        htmltext = "30008-00.htm"
       elif st.getPlayer().getLevel() >= 9 :
-        htmltext = "7008-02.htm"
+        htmltext = "30008-02.htm"
         return htmltext
       else:
-        htmltext = "7008-08.htm"
+        htmltext = "30008-08.htm"
         st.exitQuest(1)
-   elif npcId == 7008 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30008 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7008 and int(st.get("cond"))==1 and (st.getQuestItemsCount(ROIENS_LETTER_ID)==1) :
-        htmltext = "7008-05.htm"
-   elif npcId == 7008 and int(st.get("cond"))>=2 and st.getQuestItemsCount(ROIENS_LETTER_ID)==0 and st.getQuestItemsCount(ALLTRANS_NOTE_ID)==0 :
+   elif npcId == 30008 and int(st.get("cond"))==1 and (st.getQuestItemsCount(ROIENS_LETTER_ID)==1) :
+        htmltext = "30008-05.htm"
+   elif npcId == 30008 and int(st.get("cond"))>=2 and st.getQuestItemsCount(ROIENS_LETTER_ID)==0 and st.getQuestItemsCount(ALLTRANS_NOTE_ID)==0 :
         if st.getQuestItemsCount(BROKEN_BLADE_TOP_ID) and st.getQuestItemsCount(BROKEN_BLADE_BOTTOM_ID) :
-          htmltext = "7008-12.htm"
+          htmltext = "30008-12.htm"
         if (st.getQuestItemsCount(BROKEN_BLADE_TOP_ID) + st.getQuestItemsCount(BROKEN_BLADE_BOTTOM_ID)) <= 1 :
-          htmltext = "7008-11.htm"
+          htmltext = "30008-11.htm"
         if st.getQuestItemsCount(BROKEN_SWORD_HANDLE_ID) > 0 :
-          htmltext = "7008-07.htm"
+          htmltext = "30008-07.htm"
         if st.getQuestItemsCount(HOWTOGO_RUINS_ID) == 1 :
-          htmltext = "7008-10.htm"
-   elif npcId == 7008 and int(st.get("cond"))==4 and st.getQuestItemsCount(ROIENS_LETTER_ID)==0 and st.getQuestItemsCount(ALLTRANS_NOTE_ID) :
-        htmltext = "7008-06.htm"
+          htmltext = "30008-10.htm"
+   elif npcId == 30008 and int(st.get("cond"))==4 and st.getQuestItemsCount(ROIENS_LETTER_ID)==0 and st.getQuestItemsCount(ALLTRANS_NOTE_ID) :
+        htmltext = "30008-06.htm"
         st.set("cond","5")
         st.takeItems(ALLTRANS_NOTE_ID,st.getQuestItemsCount(ALLTRANS_NOTE_ID))
         st.giveItems(BROKEN_SWORD_HANDLE_ID,1)
-   elif npcId == 7283 and int(st.get("cond"))==1 and st.getQuestItemsCount(ROIENS_LETTER_ID)>0 :
-        htmltext = "7283-01.htm"
-   elif npcId == 7283 and int(st.get("cond"))>=2 and st.getQuestItemsCount(ROIENS_LETTER_ID)==0 and st.getQuestItemsCount(HOWTOGO_RUINS_ID)>0 :
+   elif npcId == 30283 and int(st.get("cond"))==1 and st.getQuestItemsCount(ROIENS_LETTER_ID)>0 :
+        htmltext = "30283-01.htm"
+   elif npcId == 30283 and int(st.get("cond"))>=2 and st.getQuestItemsCount(ROIENS_LETTER_ID)==0 and st.getQuestItemsCount(HOWTOGO_RUINS_ID)>0 :
         if (st.getQuestItemsCount(BROKEN_BLADE_TOP_ID) + st.getQuestItemsCount(BROKEN_BLADE_BOTTOM_ID)) == 1 :
-          htmltext = "7283-08.htm"
+          htmltext = "30283-08.htm"
         if (st.getQuestItemsCount(BROKEN_BLADE_TOP_ID) + st.getQuestItemsCount(BROKEN_BLADE_BOTTOM_ID)) == 0 :
-          htmltext = "7283-03.htm"
+          htmltext = "30283-03.htm"
         if st.getQuestItemsCount(BROKEN_BLADE_TOP_ID) and st.getQuestItemsCount(BROKEN_BLADE_BOTTOM_ID) :
-          htmltext = "7283-04.htm"
+          htmltext = "30283-04.htm"
           st.set("cond","4")
           st.takeItems(HOWTOGO_RUINS_ID,st.getQuestItemsCount(HOWTOGO_RUINS_ID))
           st.takeItems(BROKEN_BLADE_TOP_ID,st.getQuestItemsCount(BROKEN_BLADE_TOP_ID))
           st.takeItems(BROKEN_BLADE_BOTTOM_ID,st.getQuestItemsCount(BROKEN_BLADE_BOTTOM_ID))
           st.giveItems(ALLTRANS_NOTE_ID,1)
-   elif npcId == 7283 and int(st.get("cond"))==4 and st.getQuestItemsCount(ALLTRANS_NOTE_ID) :
-        htmltext = "7283-05.htm"
-   elif npcId == 7283 and int(st.get("cond"))==5 and st.getQuestItemsCount(BROKEN_SWORD_HANDLE_ID) :
-        htmltext = "7283-06.htm"
+   elif npcId == 30283 and int(st.get("cond"))==4 and st.getQuestItemsCount(ALLTRANS_NOTE_ID) :
+        htmltext = "30283-05.htm"
+   elif npcId == 30283 and int(st.get("cond"))==5 and st.getQuestItemsCount(BROKEN_SWORD_HANDLE_ID) :
+        htmltext = "30283-06.htm"
    return htmltext
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
-   if npcId in [361,362] :
+   if npcId in [20361,20362] :
       if st.getQuestItemsCount(HOWTOGO_RUINS_ID) :
          if st.getQuestItemsCount(BROKEN_BLADE_TOP_ID) == 0 :
             if st.getRandom(5) == 0 :
@@ -115,23 +115,23 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7008)
+QUEST.addStartNpc(30008)
 
-CREATED.addTalkId(7008)
+CREATED.addTalkId(30008)
 
-STARTED.addTalkId(7008)
-STARTED.addTalkId(7283)
+STARTED.addTalkId(30008)
+STARTED.addTalkId(30283)
 
-STARTED.addKillId(361)
-STARTED.addKillId(362)
+STARTED.addKillId(20361)
+STARTED.addKillId(20362)
 
-STARTED.addQuestDrop(7283,ALLTRANS_NOTE_ID,1)
-STARTED.addQuestDrop(7283,HOWTOGO_RUINS_ID,1)
-STARTED.addQuestDrop(362,BROKEN_BLADE_TOP_ID,1)
-STARTED.addQuestDrop(361,BROKEN_BLADE_TOP_ID,1)
-STARTED.addQuestDrop(362,BROKEN_BLADE_BOTTOM_ID,1)
-STARTED.addQuestDrop(361,BROKEN_BLADE_BOTTOM_ID,1)
-STARTED.addQuestDrop(7008,ROIENS_LETTER_ID,1)
-STARTED.addQuestDrop(7008,BROKEN_SWORD_HANDLE_ID,1)
+STARTED.addQuestDrop(30283,ALLTRANS_NOTE_ID,1)
+STARTED.addQuestDrop(30283,HOWTOGO_RUINS_ID,1)
+STARTED.addQuestDrop(20362,BROKEN_BLADE_TOP_ID,1)
+STARTED.addQuestDrop(20361,BROKEN_BLADE_TOP_ID,1)
+STARTED.addQuestDrop(20362,BROKEN_BLADE_BOTTOM_ID,1)
+STARTED.addQuestDrop(20361,BROKEN_BLADE_BOTTOM_ID,1)
+STARTED.addQuestDrop(30008,ROIENS_LETTER_ID,1)
+STARTED.addQuestDrop(30008,BROKEN_SWORD_HANDLE_ID,1)
 
 print "importing quests: 101: Sword Of Solidarity Quest"

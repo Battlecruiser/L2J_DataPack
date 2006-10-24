@@ -5,12 +5,12 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #NPC
-MAXIMILIAN = 7120
-GENTLER = 7094
-MIKI_THE_CAT = 8706
+MAXIMILIAN = 30120
+GENTLER = 30094
+MIKI_THE_CAT = 31706
 
 #MOBS
-ALLIGATOR = 135
+ALLIGATOR = 20135
 
 #CHANCE FOR DROP
 CHANCE_FOR_DROP = 30
@@ -33,34 +33,34 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
-   if event == "7120-1.htm" :
+   if event == "30120-1.htm" :
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   elif event == "7094-1.htm" :
+   elif event == "30094-1.htm" :
      st.giveItems(MAP,1)
      st.set("cond","2")
-   elif event == "8706-1.htm" :
+   elif event == "31706-1.htm" :
      st.takeItems(MAP,1)
      st.set("cond","3")
-   elif event == "7094-4.htm" :
+   elif event == "30094-4.htm" :
      if st.getQuestItemsCount(MEDICINAL_HERB) > 19 :
        st.takeItems(MEDICINAL_HERB,20)
        st.set("cond","5")
      else:
        htmltext="You don't have enough materials"
        st.set("cond","3")
-   elif event == "7094-7.htm" :
+   elif event == "30094-7.htm" :
      if st.getQuestItemsCount(SPIRIT_ORES) >= 500:
        st.takeItems(SPIRIT_ORES,500)
        st.set("cond","6")
      else:
        htmltext="Youn don't have enough materials"
-   elif event == "8706-4.htm" :
+   elif event == "31706-4.htm" :
      st.set("cond","7")
-   elif event == "7094-10.htm" :
+   elif event == "30094-10.htm" :
      st.set("cond","8")
-   elif event == "7094-13.htm" :
+   elif event == "30094-13.htm" :
      if st.getQuestItemsCount(THREAD) >= 1000 and st.getQuestItemsCount(SUEDE) >= 500 :
        st.takeItems(THREAD,1000)
        st.takeItems(SUEDE,500)
@@ -78,7 +78,7 @@ class Quest (JQuest) :
        st.setState(COMPLETED)
        st.unset("cond")
        st.playSound("ItemSound.quest_finish")
-       htmltext = "7094-14.htm"
+       htmltext = "30094-14.htm"
      else :
        htmltext="???"
    return htmltext
@@ -91,42 +91,42 @@ class Quest (JQuest) :
    if npcId == MAXIMILIAN :
      if cond == 0 :
        if st.getPlayer().getLevel() >= 45 :
-         htmltext = "7120-0.htm"
+         htmltext = "30120-0.htm"
        elif id == COMPLETED :
          htmltext = "<html><head><body>This quest have already been completed.</body></html>"
        else:
-         htmltext = "7120-0a.htm"
+         htmltext = "30120-0a.htm"
          st.exitQuest(1)
      elif cond == 1 :
-       htmltext = "7120-2.htm"
+       htmltext = "30120-2.htm"
    if npcId == GENTLER :
      if cond == 1 :
-       htmltext = "7094-0.htm"
+       htmltext = "30094-0.htm"
      elif cond == 2 :
-       htmltext = "7094-2.htm"
+       htmltext = "30094-2.htm"
      elif cond == 4 :
-       htmltext = "7094-3.htm"
+       htmltext = "30094-3.htm"
      elif cond == 5 and st.getQuestItemsCount(SPIRIT_ORES) < 500 :
-       htmltext = "7094-5.htm"
+       htmltext = "30094-5.htm"
      elif cond == 5 and st.getQuestItemsCount(SPIRIT_ORES) >= 500 :
-       htmltext = "7094-6.htm"
+       htmltext = "30094-6.htm"
      elif cond == 6 :
-       htmltext = "7094-8.htm"
+       htmltext = "30094-8.htm"
      elif cond == 7 :
-       htmltext = "7094-9.htm"
+       htmltext = "30094-9.htm"
      elif cond == 8 and (st.getQuestItemsCount(THREAD) < 1000 or st.getQuestItemsCount(SUEDE) < 500) :
-       htmltext = "7094-11.htm"
+       htmltext = "30094-11.htm"
      elif cond == 8 and st.getQuestItemsCount(THREAD) >= 1000 and st.getQuestItemsCount(SUEDE) >= 500 :
-       htmltext = "7094-12.htm"
+       htmltext = "30094-12.htm"
    if npcId == MIKI_THE_CAT :
      if cond == 2 :
-       htmltext = "8706-0.htm"
+       htmltext = "31706-0.htm"
      elif cond == 3 :
-       htmltext = "8706-2.htm"
+       htmltext = "31706-2.htm"
      elif cond == 6 :
-       htmltext = "8706-3.htm"
+       htmltext = "31706-3.htm"
      elif cond == 7 :
-       htmltext = "8706-5.htm"
+       htmltext = "31706-5.htm"
    return htmltext
 
  def onKill (self,npc,st):

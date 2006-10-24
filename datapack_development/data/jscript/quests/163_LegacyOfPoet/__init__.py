@@ -19,7 +19,7 @@ class Quest (JQuest) :
     htmltext = event
     if event == "1" :
       st.set("id","0")
-      htmltext = "7220-07.htm"
+      htmltext = "30220-07.htm"
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -36,26 +36,26 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 7220 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30220 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
       if int(st.get("cond"))<15 :
         if st.getPlayer().getRace().ordinal() != 1 and st.getPlayer().getRace().ordinal() != 3 and st.getPlayer().getRace().ordinal() != 4 and st.getPlayer().getRace().ordinal() != 0 :
-          htmltext = "7220-00.htm"
+          htmltext = "30220-00.htm"
         elif st.getPlayer().getLevel() >= 11 :
-          htmltext = "7220-03.htm"
+          htmltext = "30220-03.htm"
           return htmltext
         else:
-          htmltext = "7220-02.htm"
+          htmltext = "30220-02.htm"
           st.exitQuest(1)
       else:
-        htmltext = "7220-02.htm"
+        htmltext = "30220-02.htm"
         st.exitQuest(1)
-   elif npcId == 7220 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30220 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7220 and int(st.get("cond")) :
+   elif npcId == 30220 and int(st.get("cond")) :
       if st.getQuestItemsCount(RUMIELS_POEM_1_ID) == 1 and st.getQuestItemsCount(RUMIELS_POEM_3_ID) == 1 and st.getQuestItemsCount(RUMIELS_POEM_4_ID) == 1 and st.getQuestItemsCount(RUMIELS_POEM_5_ID) == 1 and int(st.get("onlyone")) == 0 :
         if int(st.get("id")) != 163 :
           st.set("id","163")
-          htmltext = "7220-09.htm"
+          htmltext = "30220-09.htm"
           st.giveItems(ADENA_ID,13890)
           st.takeItems(RUMIELS_POEM_1_ID,1)
           st.takeItems(RUMIELS_POEM_3_ID,1)
@@ -66,13 +66,13 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_finish")
           st.set("onlyone","1")
       else:
-        htmltext = "7220-08.htm"
+        htmltext = "30220-08.htm"
    return htmltext
 
  def onKill (self,npc,st):
 
    npcId = npc.getNpcId()
-   if npcId == 372 :
+   if npcId == 20372 :
         st.set("id","0")
         if int(st.get("cond")) == 1 :
           if st.getRandom(10) == 0 and st.getQuestItemsCount(RUMIELS_POEM_1_ID) == 0 :
@@ -99,7 +99,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_middle")
             else:
               st.playSound("ItemSound.quest_itemget")
-   elif npcId == 373 :
+   elif npcId == 20373 :
         st.set("id","0")
         if int(st.get("cond")) == 1 :
           if st.getRandom(10) == 0 and st.getQuestItemsCount(RUMIELS_POEM_1_ID) == 0 :
@@ -136,20 +136,20 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7220)
+QUEST.addStartNpc(30220)
 
-STARTING.addTalkId(7220)
+STARTING.addTalkId(30220)
 
-STARTED.addTalkId(7220)
+STARTED.addTalkId(30220)
 
-STARTED.addKillId(372)
-STARTED.addKillId(373)
+STARTED.addKillId(20372)
+STARTED.addKillId(20373)
 
-STARTED.addQuestDrop(372,RUMIELS_POEM_1_ID,1)
-STARTED.addQuestDrop(373,RUMIELS_POEM_1_ID,1)
-STARTED.addQuestDrop(372,RUMIELS_POEM_3_ID,1)
-STARTED.addQuestDrop(373,RUMIELS_POEM_3_ID,1)
-STARTED.addQuestDrop(372,RUMIELS_POEM_4_ID,1)
-STARTED.addQuestDrop(373,RUMIELS_POEM_4_ID,1)
-STARTED.addQuestDrop(372,RUMIELS_POEM_5_ID,1)
-STARTED.addQuestDrop(373,RUMIELS_POEM_5_ID,1)
+STARTED.addQuestDrop(20372,RUMIELS_POEM_1_ID,1)
+STARTED.addQuestDrop(20373,RUMIELS_POEM_1_ID,1)
+STARTED.addQuestDrop(20372,RUMIELS_POEM_3_ID,1)
+STARTED.addQuestDrop(20373,RUMIELS_POEM_3_ID,1)
+STARTED.addQuestDrop(20372,RUMIELS_POEM_4_ID,1)
+STARTED.addQuestDrop(20373,RUMIELS_POEM_4_ID,1)
+STARTED.addQuestDrop(20372,RUMIELS_POEM_5_ID,1)
+STARTED.addQuestDrop(20373,RUMIELS_POEM_5_ID,1)

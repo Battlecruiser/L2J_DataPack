@@ -6,9 +6,9 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #NPCs 
-PETUKAI = 7583 
-TANAPI  = 7571 
-TAMIL   = 7576 
+PETUKAI = 30583 
+TANAPI  = 30571 
+TAMIL   = 30576 
 
 #REWARDS 
 ADENA = 57 
@@ -21,16 +21,16 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) : 
    htmltext = event 
-   if event == "7583-03.htm" : 
+   if event == "30583-03.htm" : 
      st.set("cond","1") 
      st.set("id","1") 
      st.setState(STARTED) 
      st.playSound("ItemSound.quest_accept") 
-   elif event == "7571-02.htm" : 
+   elif event == "30571-02.htm" : 
      st.set("cond","2") 
      st.set("id","2") 
      st.playSound("ItemSound.quest_middle") 
-   elif event == "7576-02.htm" : 
+   elif event == "30576-02.htm" : 
      st.giveItems(SCROLL_OF_ESCAPE_GIRAN,1) 
      st.giveItems(MARK_OF_TRAVELER, 1) 
      st.set("cond","0") 
@@ -48,21 +48,21 @@ class Quest (JQuest) :
      st.set("cond","0") 
      if st.getPlayer().getRace().ordinal() == 3 : 
        if st.getPlayer().getLevel() >= 3 : 
-         htmltext = "7583-02.htm" 
+         htmltext = "30583-02.htm" 
        else: 
          htmltext = "<html><head><body>Quest for characters level 3 and above.</body></html>" 
          st.exitQuest(1) 
      else : 
-       htmltext = "7583-01.htm" 
+       htmltext = "30583-01.htm" 
        st.exitQuest(1) 
    elif npc == PETUKAI and id == COMPLETED : 
      htmltext = "<html><head><body>I can't supply you with another Giran Scroll of Escape. Sorry traveller.</body></html>" 
    elif npc == PETUKAI and cond == 1 : 
-     htmltext = "7583-04.htm" 
+     htmltext = "30583-04.htm" 
    elif npcId == TANAPI and cond : 
-     htmltext = "7571-01.htm" 
+     htmltext = "30571-01.htm" 
    elif npcId == TAMIL and cond == 2 : 
-     htmltext = "7576-01.htm" 
+     htmltext = "30576-01.htm" 
 
    return htmltext 
 

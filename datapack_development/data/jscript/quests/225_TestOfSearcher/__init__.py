@@ -16,17 +16,17 @@ ALANKELLS_RECOMMEND_ID,MARK_OF_SEARCHER_ID = range(2784,2810)
 
 #This handle all mob drops   npcId:[condition,maxcount,chance,itemid]
 DROPLIST={
-781:["phase",3,10,100,DELU_TOTEM_ID],
-5094:["phase",3,10,100,DELU_TOTEM_ID],
-5093:["phase",5,1,100,CHIEF_KALKIS_FANG_ID],
-555:["phase",10,10,100,RED_SPORE_DUST_ID],
-551:["soltsMap",1,4,50,TORN_MAP_PIECE1_ID],
-144:["makelsMap",1,4,50,TORN_MAP_PIECE2_ID]
+20781:["phase",3,10,100,DELU_TOTEM_ID],
+27094:["phase",3,10,100,DELU_TOTEM_ID],
+27093:["phase",5,1,100,CHIEF_KALKIS_FANG_ID],
+20555:["phase",10,10,100,RED_SPORE_DUST_ID],
+20551:["soltsMap",1,4,50,TORN_MAP_PIECE1_ID],
+20144:["makelsMap",1,4,50,TORN_MAP_PIECE2_ID]
 }
 
-NPC=[7291,7420,7628,7690,7728,7729,7730,7627]
+NPC=[30291,30420,30628,30690,30728,30729,30730,30627]
 
-MOB=[144,5093,551,555,781,5094]
+MOB=[20144,27093,20551,20555,20781,27094]
 
 STATS=[["phase","cond"],["makelsMap","soltsMap"]]
 
@@ -36,7 +36,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7690-05.htm" :
+    if event == "30690-05.htm" :
         for var in STATS[0]:
          st.set(var,"1")
         for var in STATS[1]:
@@ -44,28 +44,28 @@ class Quest (JQuest) :
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(LUTHERS_LETTER_ID,1)
-    elif event == "7291-07.htm" :
+    elif event == "30291-07.htm" :
         st.giveItems(LAMBERTS_MAP_ID,1)
         st.takeItems(LEIRYNNS_REPORT_ID,1)
         st.giveItems(ALANKELLS_LETTER_ID,1)
         st.takeItems(STRANGE_MAP_ID,1)
         st.giveItems(ALANKELLS_ORDER_ID,1)
         st.set("phase","8")
-    elif event == "7420-01a.htm" :
+    elif event == "30420-01a.htm" :
         st.giveItems(TWEETYS_CONTRACT_ID,1)
         st.takeItems(WINE_CATALOG_ID,1)
         st.set("phase","10")
-    elif event == "7730-01d.htm" :
+    elif event == "30730-01d.htm" :
         st.giveItems(REXS_DIARY_ID,1)
         st.takeItems(OLD_ORDER_ID,1)
         st.set("phase","14")
         for var in STATS[1]:
           st.set(var,"1")
-    elif event == "7627-01a.htm" :
+    elif event == "30627-01a.htm" :
         st.giveItems(RUSTED_KEY1_ID,1)
-        st.getPcSpawn().addSpawn(7628,10011,157449,-2374,300000)
+        st.getPcSpawn().addSpawn(30628,10011,157449,-2374,300000)
         st.set("phase","20")
-    elif event == "7628-01a.htm" :
+    elif event == "30628-01a.htm" :
         st.giveItems(GOLD_BAR_ID,20)
         st.takeItems(RUSTED_KEY1_ID,1)
         st.set("phase","21")
@@ -83,14 +83,14 @@ class Quest (JQuest) :
           if st.getPlayer().getClassId().getId() in [ 0x07, 0x16, 0x23, 0x36] :
            if st.getPlayer().getLevel() > 38 :
             if st.getPlayer().getClassId().getId() == 0x36 :
-              htmltext = "7690-04.htm"
+              htmltext = "30690-04.htm"
             else:
-              htmltext = "7690-03.htm"
+              htmltext = "30690-03.htm"
            else:
-             htmltext = "7690-02.htm"
+             htmltext = "30690-02.htm"
              st.exitQuest(1)
           else:
-           htmltext = "7690-01.htm"
+           htmltext = "30690-01.htm"
            st.exitQuest(1)
    elif id==COMPLETED :
      htmltext = "<html><head><body>This quest has already been completed.</body></html>"
@@ -98,12 +98,12 @@ class Quest (JQuest) :
      phase=int(st.get("phase"))
      if npcId== NPC[3]:
        if phase==1 :
-         htmltext = "7690-06.htm"
+         htmltext = "30690-06.htm"
        elif phase>1 and phase<22 :
-         htmltext = "7690-07.htm"
+         htmltext = "30690-07.htm"
        elif phase==22 :
          st.addExpAndSp(37831,18750)
-         htmltext = "7690-08.htm"
+         htmltext = "30690-08.htm"
          for var in STATS[0]:
           st.unset(var)
          for var in STATS[1]:
@@ -114,24 +114,24 @@ class Quest (JQuest) :
          st.takeItems(ALANKELLS_RECOMMEND_ID,1)
      elif npcId == NPC[0] :
       if phase==1 :
-        htmltext = "7291-01.htm"
+        htmltext = "30291-01.htm"
         st.giveItems(ALANKELLS_WARRANT_ID,1)
         st.takeItems(LUTHERS_LETTER_ID,1)
         st.set("phase","2")
       elif phase == 2:
-        htmltext = "7291-02.htm"
+        htmltext = "30291-02.htm"
       elif phase>2 and phase<7 :
-        htmltext = "7291-03.htm"
+        htmltext = "30291-03.htm"
       elif phase==7 :
-        htmltext = "7291-04.htm"
+        htmltext = "30291-04.htm"
       elif phase==8 :
-        htmltext = "7291-08.htm"
+        htmltext = "30291-08.htm"
       elif phase==13 or phase==14 :
-        htmltext = "7291-09.htm"
+        htmltext = "30291-09.htm"
       elif phase==18 :
-        htmltext = "7291-10.htm"
+        htmltext = "30291-10.htm"
       elif phase==21 :
-        htmltext = "7291-11.htm"
+        htmltext = "30291-11.htm"
         st.giveItems(ALANKELLS_RECOMMEND_ID,1)
         st.takeItems(ALANKELLS_ORDER_ID,1)
         st.takeItems(COMBINED_MAP_ID,1)
@@ -139,70 +139,70 @@ class Quest (JQuest) :
         st.removeRadar(10133,157155,-2383);
         st.set("phase","22")
       elif phase==22 :
-        htmltext = "7291-12.htm"
+        htmltext = "30291-12.htm"
      elif npcId == NPC[4] :
       if phase==2 :
-        htmltext = "7728-01.htm"
+        htmltext = "30728-01.htm"
         st.giveItems(LEIRYNNS_ORDER1_ID,1)
         st.takeItems(ALANKELLS_WARRANT_ID,1)
         st.set("phase","3")
       elif phase==3 :
-        htmltext = "7728-02.htm"
+        htmltext = "30728-02.htm"
       elif phase==4 :
-        htmltext = "7728-03.htm"
+        htmltext = "30728-03.htm"
         st.takeItems(DELU_TOTEM_ID,-1)
         st.takeItems(LEIRYNNS_ORDER1_ID,1)
         st.giveItems(LEIRYNNS_ORDER2_ID,1)
         st.set("phase","5")
       elif phase==5 :
-        htmltext = "7728-04.htm"
+        htmltext = "30728-04.htm"
       elif phase==6 :
-        htmltext = "7728-05.htm"
+        htmltext = "30728-05.htm"
         st.giveItems(LEIRYNNS_REPORT_ID,1)
         st.takeItems(CHIEF_KALKIS_FANG_ID,1)
         st.takeItems(LEIRYNNS_ORDER2_ID,1)
         st.set("phase","7")
       elif phase==7 :
-        htmltext = "7728-06.htm"
+        htmltext = "30728-06.htm"
       elif phase==8 :
-        htmltext = "7728-07.htm"
+        htmltext = "30728-07.htm"
      elif npcId == NPC[5]: 
       if phase==8 :
-        htmltext = "7729-01.htm"
+        htmltext = "30729-01.htm"
         st.giveItems(WINE_CATALOG_ID,1)
         st.takeItems(ALANKELLS_LETTER_ID,1)
         st.set("phase","9")
       elif phase==9 :
-        htmltext = "7729-02.htm"
+        htmltext = "30729-02.htm"
       elif phase==12 :
-        htmltext = "7729-03.htm"
+        htmltext = "30729-03.htm"
         st.giveItems(OLD_ORDER_ID,1)
         st.takeItems(WINE_CATALOG_ID,1)
         st.takeItems(MALRUKIAN_WINE_ID,1)
         st.set("phase","13")
       elif phase==13 :
-        htmltext = "7729-04.htm"
+        htmltext = "30729-04.htm"
       elif phase in [8,14] :
-        htmltext = "7729-05.htm"
+        htmltext = "30729-05.htm"
      elif npcId == NPC[1] :
       if phase==10 :
-        htmltext = "7420-02.htm"
+        htmltext = "30420-02.htm"
       elif phase==11 :
-          htmltext = "7420-03.htm"
+          htmltext = "30420-03.htm"
           st.giveItems(MALRUKIAN_WINE_ID,1)
           st.takeItems(TWEETYS_CONTRACT_ID,1)
           st.takeItems(RED_SPORE_DUST_ID,-1)
           st.set("phase","12")
       elif phase in [12,13]  :
-        htmltext = "7420-04.htm"
+        htmltext = "30420-04.htm"
       elif phase==9 :
-        htmltext = "7420-01.htm"
+        htmltext = "30420-01.htm"
      elif npcId == NPC[6] :
       if phase==13 :
-        htmltext = "7730-01.htm"
+        htmltext = "30730-01.htm"
       elif phase == 14:
        if int(st.get("soltsMap"))==2 and int(st.get("makelsMap"))==2:
-         htmltext = "7730-03.htm"
+         htmltext = "30730-03.htm"
          st.takeItems(LAMBERTS_MAP_ID,1)
          st.takeItems(TORN_MAP_PIECE2_ID,4)
          st.takeItems(TORN_MAP_PIECE1_ID,4)
@@ -213,14 +213,14 @@ class Quest (JQuest) :
          st.addRadar(10133,157155,-2383);
          st.set("phase","18")
        else:
-         htmltext = "7730-02.htm"
+         htmltext = "30730-02.htm"
       elif phase>17 :
-        htmltext = "7730-04.htm"
+        htmltext = "30730-04.htm"
      elif npcId == NPC[7] and phase==18:
-        htmltext = "7627-01.htm"
+        htmltext = "30627-01.htm"
      elif npcId == NPC[2] :
         if phase==20 :
-          htmltext = "7628-01.htm"
+          htmltext = "30628-01.htm"
         else:
           htmltext = "<html><head><body>You haven't got a Key for this Chest.</body></html>"	
    return htmltext
@@ -235,18 +235,18 @@ class Quest (JQuest) :
      if count==maxcount-1:
       st.playSound("ItemSound.quest_middle")
       st.set(var,str(status+1))
-      if npcId == 5093:
+      if npcId == 27093:
        st.giveItems(STRANGE_MAP_ID,1)
-      elif npcId==144:
+      elif npcId==20144:
        st.giveItems(MAKELS_MAP_ID,1)
        st.takeItems(TORN_MAP_PIECE2_ID,4)
-      elif npcId==551:
+      elif npcId==20551:
        st.giveItems(SOLTS_MAP_ID,1)
        st.takeItems(TORN_MAP_PIECE1_ID,4)
      else:
       st.playSound("Itemsound.quest_itemget")
-   if npcId==781 and random<30 and count<maxcount:
-     st.getPcSpawn().addSpawn(5094,55841,176464,-2993,300000)
+   if npcId==20781 and random<30 and count<maxcount:
+     st.getPcSpawn().addSpawn(27094,55841,176464,-2993,300000)
      return "Delu Lizardman Assassin has spawned at X=55841 Y=176464 Z=-2993"
    return
 
@@ -257,15 +257,18 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7690)
+QUEST.addStartNpc(30690)
 
-CREATED.addTalkId(7690)
-COMPLETED.addTalkId(7690)
+CREATED.addTalkId(30690)
+COMPLETED.addTalkId(30690)
 
 for npcId in NPC:
  STARTED.addTalkId(npcId)
 
 for mobId in MOB:
  STARTED.addKillId(mobId)
- 
+
+for item in range(2784,2809):
+    STARTED.addQuestDrop(30690,item,1)
+
 print "importing quests: 225: Test Of Searcher"

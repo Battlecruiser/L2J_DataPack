@@ -50,11 +50,11 @@ gogogo_2  = "<html><head><body>Head Researcher Sobling:<br><br>Are you still the
 ext_msg   = "Quest aborted"
 
 #NPCs
-HR_SOBLING = 8147
-WF_CLIFF   = 7182
+HR_SOBLING = 31147
+WF_CLIFF   = 30182
 
 #Mobs
-MOBS = range(647,651)
+MOBS = range(20647,20651)
 
 class Quest (JQuest) :
 

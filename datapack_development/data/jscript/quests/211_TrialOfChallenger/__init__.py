@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # Quest: Trial Of Challenger
 # Fixed by Artful (http://L2PLanet.ru Lineage2 C3 Server)
 import sys
@@ -29,21 +29,21 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-      htmltext = "7644-05.htm"
+      htmltext = "30644-05.htm"
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-    elif event == "7644_1" :
-          htmltext = "7644-04.htm"
-    elif event == "7645_1" :
-          htmltext = "7645-02.htm"
+    elif event == "30644_1" :
+          htmltext = "30644-04.htm"
+    elif event == "30645_1" :
+          htmltext = "30645-02.htm"
           st.takeItems(LETTER_OF_KASH_ID,1)
           st.set("cond","4")
-    elif event == "7647_1" :
+    elif event == "30647_1" :
           if st.getQuestItemsCount(BROKEN_KEY_ID) == 1 :
             st.giveItems(SCROLL_OF_SHYSLASSY_ID,1)
             if st.getRandom(10) < 2 :
-              htmltext = "7647-03.htm"
+              htmltext = "30647-03.htm"
               st.takeItems(BROKEN_KEY_ID,1)
               st.playSound("ItemSound.quest_jackpot")
               n = st.getRandom(100)
@@ -61,23 +61,23 @@ class Quest (JQuest) :
               else:
                  st.giveItems(IRON_BOOTS_DESIGN_ID,1)
             else:
-              htmltext = "7647-02.htm"
+              htmltext = "30647-02.htm"
               n = st.getRandom(1000)+1
               st.takeItems(BROKEN_KEY_ID,1)
               st.giveItems(ADENA_ID,n)
           else:
-            htmltext = "7647-04.htm"
+            htmltext = "30647-04.htm"
             st.takeItems(BROKEN_KEY_ID,1)
-    elif event == "7646_1" :
-          htmltext = "7646-02.htm"
-    elif event == "7646_2" :
-          htmltext = "7646-03.htm"
-    elif event == "7646_3" :
-          htmltext = "7646-04.htm"
+    elif event == "30646_1" :
+          htmltext = "30646-02.htm"
+    elif event == "30646_2" :
+          htmltext = "30646-03.htm"
+    elif event == "30646_3" :
+          htmltext = "30646-04.htm"
           st.set("cond","7")
           st.takeItems(WATCHERS_EYE2_ID,1)
-    elif event == "7646_4" :
-          htmltext = "7646-06.htm"
+    elif event == "30646_4" :
+          htmltext = "30646-06.htm"
           st.set("cond","7")
           st.takeItems(WATCHERS_EYE2_ID,1)
     return htmltext
@@ -89,95 +89,95 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
-     if npcId == 7644 :
+     if npcId == 30644 :
         if st.getPlayer().getClassId().ordinal() in [0x01,0x13,0x20,0x2d,0x2f] :
            if st.getPlayer().getLevel() >= 35 :
-              htmltext = "7644-03.htm"
+              htmltext = "30644-03.htm"
            else :
-              htmltext = "7644-01.htm"
+              htmltext = "30644-01.htm"
               st.exitQuest(1)
         else :
-           htmltext = "7644-02.htm"
+           htmltext = "30644-02.htm"
            st.exitQuest(1)
-   elif npcId == 7644 and id == COMPLETED :
+   elif npcId == 30644 and id == COMPLETED :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7644 and int(st.get("cond"))==1 :
-      htmltext = "7644-06.htm"
-   elif npcId == 7644 and int(st.get("cond"))==2 and st.getQuestItemsCount(SCROLL_OF_SHYSLASSY_ID)==1 :
-      htmltext = "7644-07.htm"
+   elif npcId == 30644 and int(st.get("cond"))==1 :
+      htmltext = "30644-06.htm"
+   elif npcId == 30644 and int(st.get("cond"))==2 and st.getQuestItemsCount(SCROLL_OF_SHYSLASSY_ID)==1 :
+      htmltext = "30644-07.htm"
       st.takeItems(SCROLL_OF_SHYSLASSY_ID,1)
       st.giveItems(LETTER_OF_KASH_ID,1)
       st.set("cond","3")
-   elif npcId == 7644 and int(st.get("cond"))==1 and st.getQuestItemsCount(LETTER_OF_KASH_ID)==1 :
-      htmltext = "7644-08.htm"
-   elif npcId == 7644 and int(st.get("cond"))>=7 :
-      htmltext = "7644-09.htm"
-   elif npcId == 7645 and int(st.get("cond"))==3 and st.getQuestItemsCount(LETTER_OF_KASH_ID)==1 :
-      htmltext = "7645-01.htm"
-   elif npcId == 7645 and int(st.get("cond"))==4 and st.getQuestItemsCount(WATCHERS_EYE1_ID)==0 :
-      htmltext = "7645-03.htm"
-   elif npcId == 7645 and int(st.get("cond"))==4 and st.getQuestItemsCount(WATCHERS_EYE1_ID) :
-      htmltext = "7645-04.htm"
+   elif npcId == 30644 and int(st.get("cond"))==1 and st.getQuestItemsCount(LETTER_OF_KASH_ID)==1 :
+      htmltext = "30644-08.htm"
+   elif npcId == 30644 and int(st.get("cond"))>=7 :
+      htmltext = "30644-09.htm"
+   elif npcId == 30645 and int(st.get("cond"))==3 and st.getQuestItemsCount(LETTER_OF_KASH_ID)==1 :
+      htmltext = "30645-01.htm"
+   elif npcId == 30645 and int(st.get("cond"))==4 and st.getQuestItemsCount(WATCHERS_EYE1_ID)==0 :
+      htmltext = "30645-03.htm"
+   elif npcId == 30645 and int(st.get("cond"))==4 and st.getQuestItemsCount(WATCHERS_EYE1_ID) :
+      htmltext = "30645-04.htm"
       st.takeItems(WATCHERS_EYE1_ID,1)
       st.set("cond","5")
-   elif npcId == 7645 and int(st.get("cond"))==5 :
-      htmltext = "7645-05.htm"
-   elif npcId == 7645 and int(st.get("cond"))>=7 :
-      htmltext = "7645-06.htm"
-   elif npcId == 7647 and int(st.get("cond"))==2 :
-      htmltext = "7647-01.htm"
-   elif npcId == 7646 and int(st.get("cond"))==6 and st.getQuestItemsCount(WATCHERS_EYE2_ID) :
-      htmltext = "7646-01.htm"
-   elif npcId == 7646 and int(st.get("cond"))==7 :
-      htmltext = "7646-06a.htm"
-   elif npcId == 7646 and int(st.get("cond"))==9 :
+   elif npcId == 30645 and int(st.get("cond"))==5 :
+      htmltext = "30645-05.htm"
+   elif npcId == 30645 and int(st.get("cond"))>=7 :
+      htmltext = "30645-06.htm"
+   elif npcId == 30647 and int(st.get("cond"))==2 :
+      htmltext = "30647-01.htm"
+   elif npcId == 30646 and int(st.get("cond"))==6 and st.getQuestItemsCount(WATCHERS_EYE2_ID) :
+      htmltext = "30646-01.htm"
+   elif npcId == 30646 and int(st.get("cond"))==7 :
+      htmltext = "30646-06a.htm"
+   elif npcId == 30646 and int(st.get("cond"))==9 :
       st.addExpAndSp(72394,11250)
       st.giveItems(7562,8)
-      htmltext = "7646-07.htm"
+      htmltext = "30646-07.htm"
       st.takeItems(BROKEN_KEY_ID,1)
       st.giveItems(MARK_OF_CHALLENGER_ID,1)
       st.setState(COMPLETED)
       st.playSound("ItemSound.quest_finish")
       st.getPcSpawn().removeAllSpawn()
       st.set("cond","0")
-   elif npcId == 7535 and int(st.get("cond"))==7 :
+   elif npcId == 30535 and int(st.get("cond"))==7 :
       if st.getPlayer().getLevel() >= 36 :
-        htmltext = "7535-01.htm"
+        htmltext = "30535-01.htm"
         st.addRadar(176560,-184969,-3729);
         st.set("cond","8")
       else:
-        htmltext = "7535-03.htm"
-   elif npcId == 7535 and int(st.get("cond"))==8 :
-      htmltext = "7535-02.htm"
+        htmltext = "30535-03.htm"
+   elif npcId == 30535 and int(st.get("cond"))==8 :
+      htmltext = "30535-02.htm"
       st.addRadar(176560,-184969,-3729);
    return htmltext
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
-   if npcId == 5110 :
+   if npcId == 27110 :
         if int(st.get("cond")) == 1 and st.getQuestItemsCount(SCROLL_OF_SHYSLASSY_ID) == 0 and st.getQuestItemsCount(BROKEN_KEY_ID) == 0 :
           st.giveItems(BROKEN_KEY_ID,1)
-          st.getPcSpawn().addSpawn(7647)
+          st.getPcSpawn().addSpawn(30647)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","2")
-   elif npcId == 5112 :
+   elif npcId == 27112 :
         if int(st.get("cond")) == 4 and st.getQuestItemsCount(WATCHERS_EYE1_ID) == 0 :
           st.giveItems(WATCHERS_EYE1_ID,1)
           st.playSound("ItemSound.quest_middle")
-   elif npcId == 5113 :
+   elif npcId == 27113 :
         if int(st.get("cond")) == 5 and st.getQuestItemsCount(WATCHERS_EYE2_ID) == 0 :
            st.giveItems(WATCHERS_EYE2_ID,1)
            st.playSound("ItemSound.quest_middle")
            st.set("cond","6")
-           st.getPcSpawn().addSpawn(7646,21291,184673,-3313)
+           st.getPcSpawn().addSpawn(30646,21291,184673,-3313)
            return "Raldo has spawned at X=21291 Y=184673 Z=-3313"
-   elif npcId == 5114 :
+   elif npcId == 27114 :
         if int(st.get("cond")) == 8 :
            st.set("cond","9")
            st.playSound("ItemSound.quest_middle")
            st.removeRadar(176560,-184969,-3729)
            st.getPcSpawn().removeAllSpawn()
-           st.getPcSpawn().addSpawn(7646,176643,-185803,-3677)
+           st.getPcSpawn().addSpawn(30646,176643,-185803,-3677)
            return "Raldo has spawned at X=176643 Y=-185803 Z=-3677"
    return
 
@@ -189,27 +189,27 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7644)
+QUEST.addStartNpc(30644)
 
-CREATED.addTalkId(7644)
-STARTING.addTalkId(7644)
-COMPLETED.addTalkId(7644)
+CREATED.addTalkId(30644)
+STARTING.addTalkId(30644)
+COMPLETED.addTalkId(30644)
 
-STARTED.addTalkId(7535)
-STARTED.addTalkId(7644)
-STARTED.addTalkId(7645)
-STARTED.addTalkId(7646)
-STARTED.addTalkId(7647)
+STARTED.addTalkId(30535)
+STARTED.addTalkId(30644)
+STARTED.addTalkId(30645)
+STARTED.addTalkId(30646)
+STARTED.addTalkId(30647)
 
-STARTED.addKillId(5110)
-STARTED.addKillId(5112)
-STARTED.addKillId(5113)
-STARTED.addKillId(5114)
+STARTED.addKillId(27110)
+STARTED.addKillId(27112)
+STARTED.addKillId(27113)
+STARTED.addKillId(27114)
 
-STARTED.addQuestDrop(7647,SCROLL_OF_SHYSLASSY_ID,1)
-STARTED.addQuestDrop(7644,LETTER_OF_KASH_ID,1)
-STARTED.addQuestDrop(5112,WATCHERS_EYE1_ID,1)
-STARTED.addQuestDrop(5110,BROKEN_KEY_ID,1)
-STARTED.addQuestDrop(5113,WATCHERS_EYE2_ID,1)
+STARTED.addQuestDrop(30647,SCROLL_OF_SHYSLASSY_ID,1)
+STARTED.addQuestDrop(30644,LETTER_OF_KASH_ID,1)
+STARTED.addQuestDrop(27112,WATCHERS_EYE1_ID,1)
+STARTED.addQuestDrop(27110,BROKEN_KEY_ID,1)
+STARTED.addQuestDrop(27113,WATCHERS_EYE2_ID,1)
 
 print "importing quests: 211: Trial Of Challenger"

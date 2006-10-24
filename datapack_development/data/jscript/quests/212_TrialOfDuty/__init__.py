@@ -1,7 +1,5 @@
 # Made by Mr. Have fun! Version 0.2
 # Fixed by Artful (http://L2PLanet.ru Lineage2 C3 Server)
-
-print "importing quests: 212: Trial Of Duty"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -30,18 +28,18 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-      htmltext = "7109-04.htm"
+      htmltext = "30109-04.htm"
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
       st.set("cond","1")
-    elif event == "7116_1" :
-          htmltext = "7116-02.htm"
-    elif event == "7116_2" :
-          htmltext = "7116-03.htm"
-    elif event == "7116_3" :
-          htmltext = "7116-04.htm"
-    elif event == "7116_4" :
-          htmltext = "7116-05.htm"
+    elif event == "30116_1" :
+          htmltext = "30116-02.htm"
+    elif event == "30116_2" :
+          htmltext = "30116-03.htm"
+    elif event == "30116_3" :
+          htmltext = "30116-04.htm"
+    elif event == "30116_4" :
+          htmltext = "30116-05.htm"
           st.takeItems(TEAR_OF_LOYALTY_ID,1)
           st.set("cond","11")
     return htmltext
@@ -55,22 +53,22 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 7109 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30109 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
       if st.getPlayer().getClassId().ordinal() in [ 0x04, 0x13, 0x20] :
          if st.getPlayer().getLevel() >= 35 :
-            htmltext = "7109-03.htm"
+            htmltext = "30109-03.htm"
          else :
-            htmltext = "7109-01.htm"
+            htmltext = "30109-01.htm"
             st.exitQuest(1)
       else:
-         htmltext = "7109-02.htm"
+         htmltext = "30109-02.htm"
          st.exitQuest(1)
-   elif npcId == 7109 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30109 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7109 and int(st.get("cond"))==14  and st.getQuestItemsCount(LETTER_OF_DUSTIN_ID):
+   elif npcId == 30109 and int(st.get("cond"))==14  and st.getQuestItemsCount(LETTER_OF_DUSTIN_ID):
       st.addExpAndSp(79832,3750)
       st.giveItems(7562,8)
-      htmltext = "7109-05.htm"
+      htmltext = "30109-05.htm"
       st.takeItems(LETTER_OF_DUSTIN_ID,1)
       st.giveItems(MARK_OF_DUTY_ID,1)
       st.setState(COMPLETED)
@@ -78,105 +76,105 @@ class Quest (JQuest) :
       st.set("onlyone","1")
       st.set("cond","0")
       st.getPcSpawn().removeAllSpawn()
-   elif npcId == 7109 and int(st.get("cond"))==1 :
-      htmltext = "7109-04.htm"
-   elif npcId == 7653 and int(st.get("cond"))==1 :
-      htmltext = "7653-01.htm"
+   elif npcId == 30109 and int(st.get("cond"))==1 :
+      htmltext = "30109-04.htm"
+   elif npcId == 30653 and int(st.get("cond"))==1 :
+      htmltext = "30653-01.htm"
       if st.getQuestItemsCount(OLD_KNIGHT_SWORD_ID) == 0 :
         st.giveItems(OLD_KNIGHT_SWORD_ID,1)
       st.set("cond","2")
-   elif npcId == 7653 and int(st.get("cond"))==2 and st.getQuestItemsCount(KNIGHTS_TEAR_ID)==0 :
-      htmltext = "7653-02.htm"
-   elif npcId == 7653 and int(st.get("cond"))==3 and st.getQuestItemsCount(KNIGHTS_TEAR_ID) :
-      htmltext = "7653-03.htm"
+   elif npcId == 30653 and int(st.get("cond"))==2 and st.getQuestItemsCount(KNIGHTS_TEAR_ID)==0 :
+      htmltext = "30653-02.htm"
+   elif npcId == 30653 and int(st.get("cond"))==3 and st.getQuestItemsCount(KNIGHTS_TEAR_ID) :
+      htmltext = "30653-03.htm"
       st.takeItems(KNIGHTS_TEAR_ID,1)
       st.takeItems(OLD_KNIGHT_SWORD_ID,1)
       st.set("cond","4")
-   elif npcId == 7653 and int(st.get("cond"))==4 :
-      htmltext = "7653-04.htm"
-   elif npcId == 7654 and int(st.get("cond"))==4 :
-      htmltext = "7654-01.htm"
+   elif npcId == 30653 and int(st.get("cond"))==4 :
+      htmltext = "30653-04.htm"
+   elif npcId == 30654 and int(st.get("cond"))==4 :
+      htmltext = "30654-01.htm"
       st.set("cond","5")
-   elif npcId == 7654 and int(st.get("cond"))==5 and st.getQuestItemsCount(TALIANUSS_REPORT_ID)==0 :
-      htmltext = "7654-02.htm"
-   elif npcId == 7654 and int(st.get("cond"))==5 and st.getQuestItemsCount(TALIANUSS_REPORT_ID) :
-      htmltext = "7654-03.htm"
+   elif npcId == 30654 and int(st.get("cond"))==5 and st.getQuestItemsCount(TALIANUSS_REPORT_ID)==0 :
+      htmltext = "30654-02.htm"
+   elif npcId == 30654 and int(st.get("cond"))==5 and st.getQuestItemsCount(TALIANUSS_REPORT_ID) :
+      htmltext = "30654-03.htm"
       st.set("cond","6")
       st.giveItems(MIRROR_OF_ORPIC_ID,1)
-   elif npcId == 7654 and int(st.get("cond"))==6 :
-      htmltext = "7654-04.htm"
-   elif npcId == 7654 and int(st.get("cond"))==7 and st.getQuestItemsCount(TEAR_OF_CONFESSION_ID) :
-      htmltext = "7654-05.htm"
+   elif npcId == 30654 and int(st.get("cond"))==6 :
+      htmltext = "30654-04.htm"
+   elif npcId == 30654 and int(st.get("cond"))==7 and st.getQuestItemsCount(TEAR_OF_CONFESSION_ID) :
+      htmltext = "30654-05.htm"
       st.takeItems(TEAR_OF_CONFESSION_ID,1)
       st.set("cond","8")
-   elif npcId == 7654 and int(st.get("cond"))==8 :
-      htmltext = "7654-06.htm"
-   elif npcId == 7656 and int(st.get("cond"))==6 and st.getQuestItemsCount(MIRROR_OF_ORPIC_ID) :
-      htmltext = "7656-01.htm"
+   elif npcId == 30654 and int(st.get("cond"))==8 :
+      htmltext = "30654-06.htm"
+   elif npcId == 30656 and int(st.get("cond"))==6 and st.getQuestItemsCount(MIRROR_OF_ORPIC_ID) :
+      htmltext = "30656-01.htm"
       st.takeItems(MIRROR_OF_ORPIC_ID,1)
       st.takeItems(TALIANUSS_REPORT_ID,1)
       st.giveItems(TEAR_OF_CONFESSION_ID,1)
       st.set("cond","7")
-   elif npcId == 7655 and int(st.get("cond"))==8 :
+   elif npcId == 30655 and int(st.get("cond"))==8 :
       if st.getPlayer().getLevel() >= 36 :
-        htmltext = "7655-02.htm"
+        htmltext = "30655-02.htm"
         st.set("cond","9")
       else:
-        htmltext = "7655-01.htm"
-   elif npcId == 7655 and int(st.get("cond"))==9 :
+        htmltext = "30655-01.htm"
+   elif npcId == 30655 and int(st.get("cond"))==9 :
       if st.getQuestItemsCount(MILITAS_ARTICLE_ID) < 20 :
-        htmltext = "7655-03.htm"
+        htmltext = "30655-03.htm"
       else:
-        htmltext = "7655-04.htm"
+        htmltext = "30655-04.htm"
         st.takeItems(MILITAS_ARTICLE_ID,st.getQuestItemsCount(MILITAS_ARTICLE_ID))
         st.giveItems(TEAR_OF_LOYALTY_ID,1)
         st.set("cond","10")
-   elif npcId == 7655 and int(st.get("cond"))==10 :
-      htmltext = "7655-05.htm"
-   elif npcId == 7116 and int(st.get("cond"))==10 and st.getQuestItemsCount(TEAR_OF_LOYALTY_ID) :
-      htmltext = "7116-01.htm"
+   elif npcId == 30655 and int(st.get("cond"))==10 :
+      htmltext = "30655-05.htm"
+   elif npcId == 30116 and int(st.get("cond"))==10 and st.getQuestItemsCount(TEAR_OF_LOYALTY_ID) :
+      htmltext = "30116-01.htm"
       st.set("cond","9")
-   elif npcId == 7116 and int(st.get("cond"))==11 and not (st.getQuestItemsCount(ATEBALTS_SKULL_ID) and st.getQuestItemsCount(ATEBALTS_RIBS_ID) and st.getQuestItemsCount(ATEBALTS_SHIN_ID)) :
-      htmltext = "7116-06.htm"
-   elif npcId == 7116 and int(st.get("cond"))==50 :
-      htmltext = "7116-07.htm"
+   elif npcId == 30116 and int(st.get("cond"))==11 and not (st.getQuestItemsCount(ATEBALTS_SKULL_ID) and st.getQuestItemsCount(ATEBALTS_RIBS_ID) and st.getQuestItemsCount(ATEBALTS_SHIN_ID)) :
+      htmltext = "30116-06.htm"
+   elif npcId == 30116 and int(st.get("cond"))==50 :
+      htmltext = "30116-07.htm"
       st.takeItems(ATEBALTS_SKULL_ID,1)
       st.takeItems(ATEBALTS_RIBS_ID,1)
       st.takeItems(ATEBALTS_SHIN_ID,1)
       st.giveItems(SAINTS_ASHES_URN_ID,1)
       st.set("cond","12")
-   elif npcId == 7116 and int(st.get("cond"))==13 and st.getQuestItemsCount(LETTER_OF_WINDAWOOD_ID) :
-      htmltext = "7116-08.htm"
+   elif npcId == 30116 and int(st.get("cond"))==13 and st.getQuestItemsCount(LETTER_OF_WINDAWOOD_ID) :
+      htmltext = "30116-08.htm"
       st.takeItems(LETTER_OF_WINDAWOOD_ID,1)
       st.giveItems(LETTER_OF_DUSTIN_ID,1)
       st.set("cond","14")
-   elif npcId == 7116 and int(st.get("cond"))==12 :
-      htmltext = "7116-09.htm"
-   elif npcId == 7116 and int(st.get("cond"))==14 :
-      htmltext = "7116-10.htm"
-   elif npcId == 7311 and int(st.get("cond"))==12 and st.getQuestItemsCount(SAINTS_ASHES_URN_ID) :
-      htmltext = "7311-01.htm"
+   elif npcId == 30116 and int(st.get("cond"))==12 :
+      htmltext = "30116-09.htm"
+   elif npcId == 30116 and int(st.get("cond"))==14 :
+      htmltext = "30116-10.htm"
+   elif npcId == 30311 and int(st.get("cond"))==12 and st.getQuestItemsCount(SAINTS_ASHES_URN_ID) :
+      htmltext = "30311-01.htm"
       st.takeItems(SAINTS_ASHES_URN_ID,1)
       st.giveItems(LETTER_OF_WINDAWOOD_ID,1)
       st.set("cond","13")
-   elif npcId == 7311 and int(st.get("cond"))==13 :
-      htmltext = "7311-02.htm"
+   elif npcId == 30311 and int(st.get("cond"))==13 :
+      htmltext = "30311-02.htm"
    return htmltext
 
  def onKill (self,npc,st):
 
    npcId = npc.getNpcId()
-   if npcId in [190,191] :
+   if npcId in [20190,20191] :
       if int(st.get("cond")) == 2 :
         if st.getRandom(50)<2 :
           st.getPcSpawn().addSpawn(5119)
           st.playSound("Itemsound.quest_before_battle")
-   elif npcId == 5119 :
+   elif npcId == 27119 :
       if int(st.get("cond")) == 2 and st.getQuestItemsCount(OLD_KNIGHT_SWORD_ID) > 0 :
         st.giveItems(KNIGHTS_TEAR_ID,1)
         st.playSound("ItemSound.quest_middle")
         st.set("cond","3")
-   elif npcId == 200 :
+   elif npcId == 20200 :
       if int(st.get("cond")) == 5 and st.getQuestItemsCount(REPORT_PIECE_ID) < 10 and st.getQuestItemsCount(TALIANUSS_REPORT_ID) == 0 :
         if st.getQuestItemsCount(REPORT_PIECE_ID) == 9 :
           if st.getRandom(2) == 1 :
@@ -186,7 +184,7 @@ class Quest (JQuest) :
         elif st.getRandom(2) == 1 :
           st.giveItems(REPORT_PIECE_ID,1)
           st.playSound("ItemSound.quest_itemget")
-   elif npcId == 201 :
+   elif npcId == 20201 :
       if int(st.get("cond")) == 5 and st.getQuestItemsCount(REPORT_PIECE_ID) < 10 and st.getQuestItemsCount(TALIANUSS_REPORT_ID) == 0 :
         if st.getQuestItemsCount(REPORT_PIECE_ID) == 9 :
           if st.getRandom(2) == 1 :
@@ -196,13 +194,13 @@ class Quest (JQuest) :
         elif st.getRandom(2) == 1 :
           st.giveItems(REPORT_PIECE_ID,1)
           st.playSound("ItemSound.quest_itemget")
-   elif npcId == 144 :
+   elif npcId == 20144 :
       if int(st.get("cond")) == 6 :
         if st.getRandom(75)<2 :
-           st.getPcSpawn().addSpawn(7656,44656,148431,-3703,300000)
+           st.getPcSpawn().addSpawn(30656,44656,148431,-3703,300000)
            return "Spirit Of Sir Talianus has spawned at X=44656 Y=148431 Z=-3703"
            st.playSound("ItemSound.quest_middle")
-   elif npcId == 577 :
+   elif npcId == 20577 :
       if int(st.get("cond")) == 9 and st.getQuestItemsCount(MILITAS_ARTICLE_ID) < 20 :
         if st.getQuestItemsCount(MILITAS_ARTICLE_ID) == 19 :
           st.giveItems(MILITAS_ARTICLE_ID,1)
@@ -210,7 +208,7 @@ class Quest (JQuest) :
         else:
           st.giveItems(MILITAS_ARTICLE_ID,1)
           st.playSound("ItemSound.quest_itemget")
-   elif npcId == 578 :
+   elif npcId == 20578 :
       if int(st.get("cond")) == 9 and st.getQuestItemsCount(MILITAS_ARTICLE_ID) < 20 :
         if st.getQuestItemsCount(MILITAS_ARTICLE_ID) == 19 :
           st.giveItems(MILITAS_ARTICLE_ID,1)
@@ -218,7 +216,7 @@ class Quest (JQuest) :
         else:
           st.giveItems(MILITAS_ARTICLE_ID,1)
           st.playSound("ItemSound.quest_itemget")
-   elif npcId == 579 :
+   elif npcId == 20579 :
       if int(st.get("cond")) == 9 and st.getQuestItemsCount(MILITAS_ARTICLE_ID) < 20 :
         if st.getQuestItemsCount(MILITAS_ARTICLE_ID) == 19 :
           st.giveItems(MILITAS_ARTICLE_ID,1)
@@ -226,7 +224,7 @@ class Quest (JQuest) :
         else:
           st.giveItems(MILITAS_ARTICLE_ID,1)
           st.playSound("ItemSound.quest_itemget")
-   elif npcId == 580 :
+   elif npcId == 20580 :
       if int(st.get("cond")) == 9 and st.getQuestItemsCount(MILITAS_ARTICLE_ID) < 20 :
         if st.getQuestItemsCount(MILITAS_ARTICLE_ID) == 19 :
           st.giveItems(MILITAS_ARTICLE_ID,1)
@@ -234,7 +232,7 @@ class Quest (JQuest) :
         else:
           st.giveItems(MILITAS_ARTICLE_ID,1)
           st.playSound("ItemSound.quest_itemget")
-   elif npcId == 581 :
+   elif npcId == 20581 :
       if int(st.get("cond")) == 9 and st.getQuestItemsCount(MILITAS_ARTICLE_ID) < 20 :
         if st.getQuestItemsCount(MILITAS_ARTICLE_ID) == 19 :
           st.giveItems(MILITAS_ARTICLE_ID,1)
@@ -242,7 +240,7 @@ class Quest (JQuest) :
         else:
           st.giveItems(MILITAS_ARTICLE_ID,1)
           st.playSound("ItemSound.quest_itemget")
-   elif npcId == 582 :
+   elif npcId == 20582 :
       if int(st.get("cond")) == 9 and st.getQuestItemsCount(MILITAS_ARTICLE_ID) < 20 :
         if st.getQuestItemsCount(MILITAS_ARTICLE_ID) == 19 :
           st.giveItems(MILITAS_ARTICLE_ID,1)
@@ -250,7 +248,7 @@ class Quest (JQuest) :
         else:
           st.giveItems(MILITAS_ARTICLE_ID,1)
           st.playSound("ItemSound.quest_itemget")
-   elif npcId == 270 :
+   elif npcId == 20270 :
       if int(st.get("cond")) == 11 :
         if st.getRandom(2) == 1 :
           if st.getQuestItemsCount(ATEBALTS_SKULL_ID) == 0 :
@@ -272,51 +270,46 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7109)
+QUEST.addStartNpc(30109)
 
-CREATED.addTalkId(7109)
-COMPLETED.addTalkId(7109)
+CREATED.addTalkId(30109)
+COMPLETED.addTalkId(30109)
 
-STARTED.addTalkId(7109)
-STARTED.addTalkId(7116)
-STARTED.addTalkId(7311)
-STARTED.addTalkId(7653)
-STARTED.addTalkId(7654)
-STARTED.addTalkId(7655)
-STARTED.addTalkId(7656)
+STARTED.addTalkId(30109)
+STARTED.addTalkId(30116)
+STARTED.addTalkId(30311)
+STARTED.addTalkId(30653)
+STARTED.addTalkId(30654)
+STARTED.addTalkId(30655)
+STARTED.addTalkId(30656)
 
-STARTED.addKillId(144)
-STARTED.addKillId(190)
-STARTED.addKillId(191)
-STARTED.addKillId(200)
-STARTED.addKillId(201)
-STARTED.addKillId(270)
-STARTED.addKillId(5119)
-STARTED.addKillId(577)
-STARTED.addKillId(578)
-STARTED.addKillId(579)
-STARTED.addKillId(580)
-STARTED.addKillId(581)
-STARTED.addKillId(582)
+STARTED.addKillId(20144)
+STARTED.addKillId(20190)
+STARTED.addKillId(20191)
+STARTED.addKillId(20200)
+STARTED.addKillId(20201)
+STARTED.addKillId(20270)
+STARTED.addKillId(27119)
+STARTED.addKillId(20577)
+STARTED.addKillId(20578)
+STARTED.addKillId(20579)
+STARTED.addKillId(20580)
+STARTED.addKillId(20581)
+STARTED.addKillId(20582)
 
-STARTED.addQuestDrop(7116,LETTER_OF_DUSTIN_ID,1)
-STARTED.addQuestDrop(5119,KNIGHTS_TEAR_ID,1)
-STARTED.addQuestDrop(7653,OLD_KNIGHT_SWORD_ID,1)
-STARTED.addQuestDrop(7656,TEAR_OF_CONFESSION_ID,1)
-STARTED.addQuestDrop(7654,MIRROR_OF_ORPIC_ID,1)
-STARTED.addQuestDrop(200,TALIANUSS_REPORT_ID,1)
-STARTED.addQuestDrop(201,TALIANUSS_REPORT_ID,1)
-STARTED.addQuestDrop(577,MILITAS_ARTICLE_ID,1)
-STARTED.addQuestDrop(578,MILITAS_ARTICLE_ID,1)
-STARTED.addQuestDrop(579,MILITAS_ARTICLE_ID,1)
-STARTED.addQuestDrop(580,MILITAS_ARTICLE_ID,1)
-STARTED.addQuestDrop(581,MILITAS_ARTICLE_ID,1)
-STARTED.addQuestDrop(582,MILITAS_ARTICLE_ID,1)
-STARTED.addQuestDrop(270,ATEBALTS_SKULL_ID,1)
-STARTED.addQuestDrop(270,ATEBALTS_RIBS_ID,1)
-STARTED.addQuestDrop(270,ATEBALTS_SHIN_ID,1)
-STARTED.addQuestDrop(7311,LETTER_OF_WINDAWOOD_ID,1)
-STARTED.addQuestDrop(7655,TEAR_OF_LOYALTY_ID,1)
-STARTED.addQuestDrop(7116,SAINTS_ASHES_URN_ID,1)
-STARTED.addQuestDrop(200,REPORT_PIECE_ID,1)
-STARTED.addQuestDrop(201,REPORT_PIECE_ID,1)
+STARTED.addQuestDrop(30116,LETTER_OF_DUSTIN_ID,1)
+STARTED.addQuestDrop(27119,KNIGHTS_TEAR_ID,1)
+STARTED.addQuestDrop(30653,OLD_KNIGHT_SWORD_ID,1)
+STARTED.addQuestDrop(30656,TEAR_OF_CONFESSION_ID,1)
+STARTED.addQuestDrop(30654,MIRROR_OF_ORPIC_ID,1)
+STARTED.addQuestDrop(20200,TALIANUSS_REPORT_ID,1)
+STARTED.addQuestDrop(20577,MILITAS_ARTICLE_ID,1)
+STARTED.addQuestDrop(20270,ATEBALTS_SKULL_ID,1)
+STARTED.addQuestDrop(20270,ATEBALTS_RIBS_ID,1)
+STARTED.addQuestDrop(20270,ATEBALTS_SHIN_ID,1)
+STARTED.addQuestDrop(30311,LETTER_OF_WINDAWOOD_ID,1)
+STARTED.addQuestDrop(30655,TEAR_OF_LOYALTY_ID,1)
+STARTED.addQuestDrop(30116,SAINTS_ASHES_URN_ID,1)
+STARTED.addQuestDrop(20200,REPORT_PIECE_ID,1)
+
+print "importing quests: 212: Trial Of Duty"

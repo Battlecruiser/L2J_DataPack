@@ -16,11 +16,11 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
      htmltext = event
-     if event == "8067-04.htm" :
+     if event == "31067-04.htm" :
          st.set("cond","1")
          st.setState(STARTED)
          st.playSound("ItemSound.quest_accept")
-     elif event == "8067-09.htm" :
+     elif event == "31067-09.htm" :
          st.playSound("ItemSound.quest_finish")
          st.exitQuest(1)
      return htmltext
@@ -35,25 +35,25 @@ class Quest (JQuest) :
      eggs2 = st.getQuestItemsCount(LIENRIK_EGG2)
      if id == CREATED :
         if level>=39 :
-            htmltext = "8067-01.htm"
+            htmltext = "31067-01.htm"
         else :
             htmltext = "<html><head><body>(This is a quest that can only be performed by players of level 39 and above.)</body></html>"
             st.exitQuest(1)
      elif cond==1 :
         if not eggs1 and not eggs2 :
-          htmltext = "8067-05.htm"
+          htmltext = "31067-05.htm"
         elif eggs1 and not eggs2 :
-          htmltext = "8067-06.htm"
+          htmltext = "31067-06.htm"
           st.giveItems(ADENA,eggs1*209)
           st.takeItems(LIENRIK_EGG1,-1)
           st.playSound("ItemSound.quest_itemget")
         elif not eggs1 and eggs2 :
-          htmltext = "8067-08.htm"
+          htmltext = "31067-08.htm"
           st.giveItems(ADENA,eggs2*2050)
           st.takeItems(LIENRIK_EGG2,-1)
           st.playSound("ItemSound.quest_itemget")
         elif eggs1 and eggs2 :
-          htmltext = "8067-08.htm"
+          htmltext = "31067-08.htm"
           st.giveItems(ADENA,eggs1*209+eggs2*2050)
           st.takeItems(LIENRIK_EGG1,-1)
           st.takeItems(LIENRIK_EGG2,-1)
@@ -74,16 +74,16 @@ CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(8067)
+QUEST.addStartNpc(31067)
 
-CREATED.addTalkId(8067)
-STARTED.addTalkId(8067)
+CREATED.addTalkId(31067)
+STARTED.addTalkId(31067)
 
-STARTED.addQuestDrop(8067,LIENRIK_EGG1,1)
-STARTED.addQuestDrop(8067,LIENRIK_EGG2,1)
+STARTED.addQuestDrop(31067,LIENRIK_EGG1,1)
+STARTED.addQuestDrop(31067,LIENRIK_EGG2,1)
 
-STARTED.addKillId(786)
-STARTED.addKillId(787)
+STARTED.addKillId(20786)
+STARTED.addKillId(20787)
 
 print "importing quests: 352: Help Rood Raise A New Pet"
 

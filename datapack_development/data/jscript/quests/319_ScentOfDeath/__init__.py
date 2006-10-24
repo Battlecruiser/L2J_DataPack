@@ -14,7 +14,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7138-04.htm" :
+    if event == "30138-04.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -28,15 +28,15 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getLevel() >= 11 :
-       htmltext = "7138-03.htm"
+       htmltext = "30138-03.htm"
      else:
-       htmltext = "7138-02.htm"
+       htmltext = "30138-02.htm"
        st.exitQuest(1)
    else :
      if st.getQuestItemsCount(ZOMBIE_SKIN)<5 :
-       htmltext = "7138-05.htm"
+       htmltext = "30138-05.htm"
      else :
-       htmltext = "7138-06.htm"
+       htmltext = "30138-06.htm"
        st.giveItems(ADENA,2000)
        st.giveItems(HEALING_POTION,1)
        st.takeItems(ZOMBIE_SKIN,-1)
@@ -62,16 +62,16 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7138)
+QUEST.addStartNpc(30138)
 
-CREATED.addTalkId(7138)
-STARTING.addTalkId(7138)
-STARTED.addTalkId(7138)
-COMPLETED.addTalkId(7138)
+CREATED.addTalkId(30138)
+STARTING.addTalkId(30138)
+STARTED.addTalkId(30138)
+COMPLETED.addTalkId(30138)
 
-STARTED.addKillId(15)
-STARTED.addKillId(20)
+STARTED.addKillId(20015)
+STARTED.addKillId(20020)
 
-STARTED.addQuestDrop(15,ZOMBIE_SKIN,1)
+STARTED.addQuestDrop(20015,ZOMBIE_SKIN,1)
 
 print "importing quests: 319: Scent Of Death"

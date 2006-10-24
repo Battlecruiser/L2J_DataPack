@@ -1,5 +1,4 @@
 # Maked by Mr. Have fun! Version 0.2
-print "importing quests: 403: Path To Rogue"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -17,7 +16,7 @@ BEZIQUES_RECOMMENDATION_ID = 1190
 NETIS_BOW_ID = 1181
 NETIS_DAGGER_ID = 1182
 
-DROP_CHANCE = { 35:2, 42:3, 45:2, 51:2, 54:8, 60:8 }
+DROP_CHANCE = { 20035:2, 20042:3, 20045:2, 20051:2, 20054:8, 20060:8 }
 
 STOLEN_ITEM = {
 0: (STOLEN_JEWELRY_ID),
@@ -40,36 +39,36 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7379_2" :
+    if event == "30379_2" :
           if st.getPlayer().getClassId().getId() == 0x00 :
             if st.getPlayer().getLevel() >= 19 :
               if st.getQuestItemsCount(BEZIQUES_RECOMMENDATION_ID)>0 :
-                htmltext = "7379-04.htm"
+                htmltext = "30379-04.htm"
               else:
-                htmltext = "7379-05.htm"
+                htmltext = "30379-05.htm"
                 return htmltext
             else :
-              htmltext = "7379-03.htm"
+              htmltext = "30379-03.htm"
           else:
             if st.getPlayer().getClassId().getId() == 0x07 :
-              htmltext = "7379-02a.htm"
+              htmltext = "30379-02a.htm"
             else:
-              htmltext = "7379-02.htm"
+              htmltext = "30379-02.htm"
     elif event == "1" :
         st.set("id","0")
         st.set("cond","1")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(BEZIQUES_LETTER_ID,1)
-        htmltext = "7379-06.htm"
-    elif event == "7425_1" :
+        htmltext = "30379-06.htm"
+    elif event == "30425_1" :
           st.takeItems(BEZIQUES_LETTER_ID,1)
           if st.getQuestItemsCount(NETIS_BOW_ID) == 0 :
             st.giveItems(NETIS_BOW_ID,1)
           if st.getQuestItemsCount(NETIS_DAGGER_ID) == 0 :
             st.giveItems(NETIS_DAGGER_ID,1)
           st.set("cond","2")
-          htmltext = "7425-05.htm"
+          htmltext = "30425-05.htm"
     return htmltext
 
 
@@ -83,11 +82,11 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 7379 and int(st.get("cond"))==0 :
-     htmltext = "7379-01.htm"
-   elif npcId == 7379 and int(st.get("cond")) :
+   if npcId == 30379 and int(st.get("cond"))==0 :
+     htmltext = "30379-01.htm"
+   elif npcId == 30379 and int(st.get("cond")) :
         if st.getQuestItemsCount(HORSESHOE_OF_LIGHT_ID) == 0 and HaveAllStolenItems(st) :
-          htmltext = "7379-09.htm"
+          htmltext = "30379-09.htm"
           st.giveItems(BEZIQUES_RECOMMENDATION_ID,1)
           st.takeItems(NETIS_BOW_ID,1)
           st.takeItems(NETIS_DAGGER_ID,1)
@@ -98,36 +97,36 @@ class Quest (JQuest) :
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
         elif st.getQuestItemsCount(HORSESHOE_OF_LIGHT_ID) == 0 and st.getQuestItemsCount(BEZIQUES_LETTER_ID)>0 :
-          htmltext = "7379-07.htm"
+          htmltext = "30379-07.htm"
         elif st.getQuestItemsCount(HORSESHOE_OF_LIGHT_ID)>0 :
-          htmltext = "7379-08.htm"
+          htmltext = "30379-08.htm"
           st.takeItems(HORSESHOE_OF_LIGHT_ID,1)
           st.giveItems(WANTED_BILL_ID,1)
           st.set("cond","5")
         elif st.getQuestItemsCount(NETIS_BOW_ID) and st.getQuestItemsCount(NETIS_DAGGER_ID) and st.getQuestItemsCount(WANTED_BILL_ID) == 0 :
-          htmltext = "7379-10.htm"
+          htmltext = "30379-10.htm"
         elif st.getQuestItemsCount(WANTED_BILL_ID) :
-          htmltext = "7379-11.htm"
-   elif npcId == 7425 and int(st.get("cond")) and st.getQuestItemsCount(BEZIQUES_LETTER_ID)>0 :
-        htmltext = "7425-01.htm"
-   elif npcId == 7425 and int(st.get("cond")) and st.getQuestItemsCount(HORSESHOE_OF_LIGHT_ID)==0 and st.getQuestItemsCount(BEZIQUES_LETTER_ID)==0 :
+          htmltext = "30379-11.htm"
+   elif npcId == 30425 and int(st.get("cond")) and st.getQuestItemsCount(BEZIQUES_LETTER_ID)>0 :
+        htmltext = "30425-01.htm"
+   elif npcId == 30425 and int(st.get("cond")) and st.getQuestItemsCount(HORSESHOE_OF_LIGHT_ID)==0 and st.getQuestItemsCount(BEZIQUES_LETTER_ID)==0 :
         if st.getQuestItemsCount(SPATOIS_BONES_ID)<10 :
-          htmltext = "7425-06.htm"
+          htmltext = "30425-06.htm"
         elif st.getQuestItemsCount(WANTED_BILL_ID) :
-          htmltext = "7425-08.htm"
+          htmltext = "30425-08.htm"
         elif st.getQuestItemsCount(SPATOIS_BONES_ID) >= 10 :
-          htmltext = "7425-07.htm"
+          htmltext = "30425-07.htm"
           st.takeItems(SPATOIS_BONES_ID,st.getQuestItemsCount(SPATOIS_BONES_ID))
           st.giveItems(HORSESHOE_OF_LIGHT_ID,1)
           st.set("cond","4")
-   elif npcId == 7425 and int(st.get("cond")) and st.getQuestItemsCount(HORSESHOE_OF_LIGHT_ID)>0 :
-        htmltext = "7425-08.htm"
+   elif npcId == 30425 and int(st.get("cond")) and st.getQuestItemsCount(HORSESHOE_OF_LIGHT_ID)>0 :
+        htmltext = "30425-08.htm"
    return htmltext
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
    if st.getItemEquipped(7) == NETIS_BOW_ID or st.getItemEquipped(7) == NETIS_DAGGER_ID :
-     if npcId in (35, 42, 45, 51, 54, 60) :
+     if npcId in (20035, 20042, 20045, 20051, 20054, 20060) :
         st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(SPATOIS_BONES_ID)<10 and st.getRandom(10)<DROP_CHANCE[npcId] :
             st.giveItems(SPATOIS_BONES_ID,1)
@@ -136,7 +135,7 @@ class Quest (JQuest) :
               st.set("cond","3")
             else:
               st.playSound("ItemSound.quest_itemget")
-     elif npcId == 5038 :
+     elif npcId == 27038 :
         st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(WANTED_BILL_ID)>0 :
             n = st.getRandom(4)
@@ -157,24 +156,26 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7379)
+QUEST.addStartNpc(30379)
 
-STARTING.addTalkId(7379)
+STARTING.addTalkId(30379)
 
-STARTED.addTalkId(7379)
-STARTED.addTalkId(7425)
+STARTED.addTalkId(30379)
+STARTED.addTalkId(30425)
 
-STARTED.addKillId(5038)
+STARTED.addKillId(27038)
 
 for StolenItemId in STOLEN_ITEM.keys():
-  STARTED.addQuestDrop(5038,STOLEN_ITEM[StolenItemId],1)
+  STARTED.addQuestDrop(27038,STOLEN_ITEM[StolenItemId],1)
 
-for mobId in (35,42,45,51,54,60) :
+for mobId in (20035,20042,20045,20051,20054,20060) :
   STARTED.addKillId(mobId)
   STARTED.addQuestDrop(mobId,SPATOIS_BONES_ID,1)
 
-STARTED.addQuestDrop(7425,NETIS_BOW_ID,1)
-STARTED.addQuestDrop(7425,NETIS_DAGGER_ID,1)
-STARTED.addQuestDrop(7379,WANTED_BILL_ID,1)
-STARTED.addQuestDrop(7425,HORSESHOE_OF_LIGHT_ID,1)
-STARTED.addQuestDrop(7379,BEZIQUES_LETTER_ID,1)
+STARTED.addQuestDrop(30425,NETIS_BOW_ID,1)
+STARTED.addQuestDrop(30425,NETIS_DAGGER_ID,1)
+STARTED.addQuestDrop(30379,WANTED_BILL_ID,1)
+STARTED.addQuestDrop(30425,HORSESHOE_OF_LIGHT_ID,1)
+STARTED.addQuestDrop(30379,BEZIQUES_LETTER_ID,1)
+
+print "importing quests: 403: Path To Rogue"

@@ -14,23 +14,23 @@ QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 348,"ArrogantSearch","An Arrogant Se
 #Messages
 default   = "<html><head><body>I have nothing to say to you.</body></html>"
 #MOBS TO KILL
-ARK_GUARDIAN_ELBEROTH = 5182
-ARK_GUARDIAN_SHADOWFANG = 5183
-ANGEL_KILLER = 5184
-PLATINUM_TRIBE_SHAMAN = 828
-PLATINUM_TRIBE_OVERLORD = 829
-LESSER_GIANT_MAGE = 657
-LESSER_GIANT_ELDER =658
+ARK_GUARDIAN_ELBEROTH = 27182
+ARK_GUARDIAN_SHADOWFANG = 27183
+ANGEL_KILLER = 27184
+PLATINUM_TRIBE_SHAMAN = 20828
+PLATINUM_TRIBE_OVERLORD = 20829
+LESSER_GIANT_MAGE = 20657
+LESSER_GIANT_ELDER =20658
 
 #NPCS TO TALK TO
-HANELLIN = 7864
-HOLY_ARK_OF_SECRECY_1 = 7977
-HOLY_ARK_OF_SECRECY_2 = 7978
-HOLY_ARK_OF_SECRECY_3 = 7979
-ARK_GUARDIANS_CORPSE = 7980
-HARNE = 7144
-CLAUDIA_ATHEBALT = 8001
-MARTIEN = 7645
+HANELLIN = 30864
+HOLY_ARK_OF_SECRECY_1 = 30977
+HOLY_ARK_OF_SECRECY_2 = 30978
+HOLY_ARK_OF_SECRECY_3 = 30979
+ARK_GUARDIANS_CORPSE = 30980
+HARNE = 30144
+CLAUDIA_ATHEBALT = 31001
+MARTIEN = 30645
 
 #items
 TITANS_POWERSTONE = 4287
@@ -56,16 +56,16 @@ HEALING_POTION = 1061
 
 #ARK: [key, summon, no-key text, openning-with-key text, already-openned text, content item]
 ARKS={
-HOLY_ARK_OF_SECRECY_1: [FIRST_KEY_OF_ARK,0,"7977-01.htm","7977-02.htm","7977-03.htm",BLOOD_OF_SAINT],
-HOLY_ARK_OF_SECRECY_2: [SECOND_KEY_OF_ARK,ARK_GUARDIAN_ELBEROTH,"That doesn't belong to you.  Don't touch it!","7978-02.htm","7978-03.htm",BOOK_OF_SAINT],
-HOLY_ARK_OF_SECRECY_3: [THIRD_KEY_OF_ARK,ARK_GUARDIAN_SHADOWFANG, "Get off my sight, you infidels!","7979-02.htm","7979-03.htm",BRANCH_OF_SAINT],
+HOLY_ARK_OF_SECRECY_1: [FIRST_KEY_OF_ARK,0,"30977-01.htm","30977-02.htm","30977-03.htm",BLOOD_OF_SAINT],
+HOLY_ARK_OF_SECRECY_2: [SECOND_KEY_OF_ARK,ARK_GUARDIAN_ELBEROTH,"That doesn't belong to you.  Don't touch it!","30978-02.htm","30978-03.htm",BOOK_OF_SAINT],
+HOLY_ARK_OF_SECRECY_3: [THIRD_KEY_OF_ARK,ARK_GUARDIAN_SHADOWFANG, "Get off my sight, you infidels!","30979-02.htm","30979-03.htm",BRANCH_OF_SAINT],
 }
 
 # npc: letter to take, item to check for, 1st time htm, return htm, completed part htm, [x,y,z of chest]
 ARK_OWNERS={
-HARNE: [HANELLINS_FIRST_LETTER, BLOOD_OF_SAINT, '7144-01.htm', '7144-02.htm', '7144-03.htm', [-418,44174,-3568]],
-CLAUDIA_ATHEBALT: [HANELLINS_SECOND_LETTER, BOOK_OF_SAINT, '8001-01.htm', '8001-02.htm', '8001-03.htm', [181472,7158,-2725]],
-MARTIEN: [HANELLINS_THIRD_LETTER, BRANCH_OF_SAINT, '7645-01.htm', '7645-02.htm', '7645-03.htm', [50693,158674,376]]
+HARNE: [HANELLINS_FIRST_LETTER, BLOOD_OF_SAINT, '30144-01.htm', '30144-02.htm', '30144-03.htm', [-418,44174,-3568]],
+CLAUDIA_ATHEBALT: [HANELLINS_SECOND_LETTER, BOOK_OF_SAINT, '31001-01.htm', '31001-02.htm', '31001-03.htm', [181472,7158,-2725]],
+MARTIEN: [HANELLINS_THIRD_LETTER, BRANCH_OF_SAINT, '30645-01.htm', '30645-02.htm', '30645-03.htm', [50693,158674,376]]
 }
 
 #mob: cond, giveItem, amount, chance%, takeItem (assumed to take only 1 of it)
@@ -98,15 +98,15 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7864_02" :
+    if event == "30864_02" :
         st.set("cond","2")
-        htmltext = "7864-03.htm"
-    elif event == "7864_04a" :  #work alone
+        htmltext = "30864-03.htm"
+    elif event == "30864_04a" :  #work alone
         st.set("cond","4")
         st.takeItems(TITANS_POWERSTONE,-1)
-        htmltext = "7864-04c.htm"
+        htmltext = "30864-04c.htm"
         st.set("companions","0")
-    elif event == "7864_04b" :  #work with friends
+    elif event == "30864_04b" :  #work with friends
         st.set("cond","3")
         st.set("companions","1")
         st.takeItems(TITANS_POWERSTONE,-1)
@@ -124,55 +124,55 @@ class Quest (JQuest) :
             # if the quest was completed and the player still has a blooded fabric
             # tell them the "secret" that they can use it in order to visit Baium.
             if st.getQuestItemsCount(BLOODED_FABRIC)==1:
-                htmltext = "7864-Baium.htm"
+                htmltext = "30864-Baium.htm"
                 st.exitQuest(1)
             else : #else, start the quest normally
                 st.set("cond","0")
                 if st.getPlayer().getLevel() < 60 :
                     st.exitQuest(1)
-                    htmltext = "7864-01.htm"     #not qualified
+                    htmltext = "30864-01.htm"     #not qualified
                     st.exitQuest(1)
                 elif cond==0 :
                     st.setState(PROGRESS)
                     st.set("cond","1")
-                    htmltext = "7864-02.htm"    # Successful start: begin the dialog which will set cond=2
+                    htmltext = "30864-02.htm"    # Successful start: begin the dialog which will set cond=2
         # Player abandoned in the middle of last dialog...repeat the dialog.
         elif cond==1  :
-            htmltext = "7864-02.htm"    # begin the dialog which will set cond=2
+            htmltext = "30864-02.htm"    # begin the dialog which will set cond=2
         # Has returned before getting the powerstone
         elif cond==2 and st.getQuestItemsCount(TITANS_POWERSTONE)==0 :
-            htmltext = "7864-03a.htm"    # go get the titan's powerstone
+            htmltext = "30864-03a.htm"    # go get the titan's powerstone
         elif cond==2 :
-            htmltext = "7864-04.htm"    # Ask "work alone or in group?"...only alone is implemented in v0.1
+            htmltext = "30864-04.htm"    # Ask "work alone or in group?"...only alone is implemented in v0.1
         elif cond==4 :
             st.set("cond","5")
             st.giveItems(HANELLINS_FIRST_LETTER,1)
             st.giveItems(HANELLINS_SECOND_LETTER,1)
             st.giveItems(HANELLINS_THIRD_LETTER,1)
-            htmltext = "7864-05.htm"    # Go get the 3 sacred relics
+            htmltext = "30864-05.htm"    # Go get the 3 sacred relics
         elif cond == 5 and st.getQuestItemsCount(BOOK_OF_SAINT)+st.getQuestItemsCount(BLOOD_OF_SAINT)+st.getQuestItemsCount(BRANCH_OF_SAINT)<3 :
-            htmltext = "7864-05.htm"    # Repeat: Go get the 3 sacred relics
+            htmltext = "30864-05.htm"    # Repeat: Go get the 3 sacred relics
         elif cond == 5 :
-            htmltext = "7864-06.htm"     # All relics collected!...Get me antidotes & greater healing
+            htmltext = "30864-06.htm"     # All relics collected!...Get me antidotes & greater healing
             st.takeItems(BOOK_OF_SAINT,-1)
             st.takeItems(BLOOD_OF_SAINT,-1)
             st.takeItems(BRANCH_OF_SAINT,-1)
             st.set("cond","22")
         elif cond == 22 and st.getQuestItemsCount(ANTIDOTE)<5 and st.getQuestItemsCount(HEALING_POTION)<1:
-            htmltext = "7864-06a.htm"     # where are my antidotes & greater healing
+            htmltext = "30864-06a.htm"     # where are my antidotes & greater healing
         elif cond == 22 :
             st.takeItems(ANTIDOTE,5)
             st.takeItems(HEALING_POTION,1)
             if st.getInt("companions") == 0 :
                 st.set("cond","25")
-                htmltext = "7864-07.htm"    # go get platinum tribe blood...
+                htmltext = "30864-07.htm"    # go get platinum tribe blood...
                 st.giveItems(WHITE_FABRIC_1,1)
             else:
                 st.set("cond","23")
                 htmltext = "not implemented yet"
                 st.giveItems(WHITE_FABRIC_0,3)
         elif cond == 25 and st.getQuestItemsCount(BLOODED_FABRIC)<1 :
-            htmltext = "7864-07a.htm"
+            htmltext = "30864-07a.htm"
         # the remaining of hanellin's dialogs, including the hunt for Angels which is only done for money,
         # are NOT implemented.
     # Other NPCs follow:
@@ -206,12 +206,12 @@ class Quest (JQuest) :
             # if you do not have the key (first meeting)
             if st.getQuestItemsCount(FIRST_KEY_OF_ARK)==0 and st.getInt("angelKillerIsDefeated")==0 :
                 st.getPcSpawn().addSpawn(ANGEL_KILLER,st.getPlayer().getClientX(),st.getPlayer().getClientY(),st.getPlayer().getClientZ(),120000)
-                htmltext = "7980-01.htm"
+                htmltext = "30980-01.htm"
             elif st.getQuestItemsCount(FIRST_KEY_OF_ARK)==0 and st.getInt("angelKillerIsDefeated")==1 :
                 st.giveItems(FIRST_KEY_OF_ARK,1)
-                htmltext = "7980-02.htm"
+                htmltext = "30980-02.htm"
             else :
-                htmltext = "7980-03.htm"
+                htmltext = "30980-03.htm"
     return htmltext
 
  def onKill (self,npc,st) :

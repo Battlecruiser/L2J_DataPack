@@ -5,7 +5,7 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver import ItemTable
 
-MONUMENTS=[8690]+range(8769,8773)
+MONUMENTS=[31690]+range(31769,31773)
 
 HERO_ITEMS={
 6611:["weapon_the_sword_of_hero_i00","Infinity Blade","During a critical attack, decreases one's P. Def and increases de-buff casting ability, damage shield effect, Max HP, Max MP, Max CP, and shield defense power. Also enhances damage to target during PvP.","297/137","Sword"],

@@ -15,7 +15,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "7567-03.htm" :
+    if event == "30567-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -28,18 +28,18 @@ class Quest (JQuest) :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getRace().ordinal() != 3 :
-       htmltext = "7567-00.htm"
+       htmltext = "30567-00.htm"
        st.exitQuest(1)
      elif st.getPlayer().getLevel() < 11 :
-       htmltext = "7567-01.htm"
+       htmltext = "30567-01.htm"
        st.exitQuest(1)
      else :
-       htmltext = "7567-02.htm"
+       htmltext = "30567-02.htm"
    else :
      if st.getQuestItemsCount(DARKWING_BAT_FANG) < 70 :
-       htmltext = "7567-04.htm"
+       htmltext = "30567-04.htm"
      else:
-       htmltext = "7567-05.htm"
+       htmltext = "30567-05.htm"
        st.getPcSpawn().removeAllSpawn()
        st.exitQuest(1)
        st.playSound("ItemSound.quest_finish")
@@ -50,7 +50,7 @@ class Quest (JQuest) :
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
-   if npcId == 316 :
+   if npcId == 20316 :
      if st.getQuestItemsCount(DARKWING_BAT_FANG) < 70 :
         if st.getQuestItemsCount(DARKWING_BAT_FANG) < 69 :
           st.playSound("ItemSound.quest_itemget")
@@ -59,7 +59,7 @@ class Quest (JQuest) :
           st.set("cond","2")
         st.giveItems(DARKWING_BAT_FANG,1)
         if 66>st.getQuestItemsCount(DARKWING_BAT_FANG)>10 and st.getRandom(100) < 10 :
-          st.getPcSpawn().addSpawn(5043)
+          st.getPcSpawn().addSpawn(27043)
           st.giveItems(VARANGKAS_PARASITE,1)
    else :
       if st.getQuestItemsCount(DARKWING_BAT_FANG) < 66 and st.getQuestItemsCount(VARANGKAS_PARASITE) :
@@ -80,17 +80,17 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7567)
+QUEST.addStartNpc(30567)
 
-CREATED.addTalkId(7567)
-STARTING.addTalkId(7567)
-STARTED.addTalkId(7567)
-COMPLETED.addTalkId(7567)
+CREATED.addTalkId(30567)
+STARTING.addTalkId(30567)
+STARTED.addTalkId(30567)
+COMPLETED.addTalkId(30567)
 
-STARTED.addKillId(316)
-STARTED.addKillId(5043)
+STARTED.addKillId(20316)
+STARTED.addKillId(27043)
 
-STARTED.addQuestDrop(316,DARKWING_BAT_FANG,1)
-STARTED.addQuestDrop(316,VARANGKAS_PARASITE,1)
+STARTED.addQuestDrop(20316,DARKWING_BAT_FANG,1)
+STARTED.addQuestDrop(20316,VARANGKAS_PARASITE,1)
 
 print "importing quests: 275: Black Winged Spies"

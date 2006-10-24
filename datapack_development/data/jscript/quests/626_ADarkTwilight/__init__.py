@@ -5,7 +5,7 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #NPC
-HIERARCH = 8517
+HIERARCH = 31517
 
 #ITEMS
 BLOOD_OF_SAINT = 7169
@@ -19,16 +19,16 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
-   if event == "8517-1.htm" :
+   if event == "31517-1.htm" :
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   elif event == "8517-3.htm" :
+   elif event == "31517-3.htm" :
      st.takeItems(BLOOD_OF_SAINT,300)
    else :
-     if event == "8517-4.htm" :
+     if event == "31517-4.htm" :
        st.addExpAndSp(162773,12500)
-     elif event == "8517-5.htm" :
+     elif event == "31517-5.htm" :
        st.giveItems(ADENA,100000)
      st.playSound("ItemSound.quest_finish")
      st.exitQuest(1)
@@ -41,12 +41,12 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    if cond == 0 :
      if st.getPlayer().getLevel() >= 60 : # and st.getPlayer().getLevel() <= 71
-       htmltext = "8517-0.htm"
+       htmltext = "31517-0.htm"
      else:
-       htmltext = "8517-0a.htm"
+       htmltext = "31517-0a.htm"
        st.exitQuest(1)
    elif st.getQuestItemsCount(BLOOD_OF_SAINT) == 300 :
-     htmltext = "8517-2.htm"
+     htmltext = "31517-2.htm"
    return htmltext
 
  def onKill (self,npc,st):
@@ -65,13 +65,13 @@ CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(8517)
-CREATED.addTalkId(8517)
-STARTED.addTalkId(8517)
+QUEST.addStartNpc(31517)
+CREATED.addTalkId(31517)
+STARTED.addTalkId(31517)
 
-for mobs in range(1520,1541):
+for mobs in range(21520,21541):
   STARTED.addKillId(mobs)
 
-STARTED.addQuestDrop(1520,BLOOD_OF_SAINT,1)
+STARTED.addQuestDrop(21520,BLOOD_OF_SAINT,1)
 
 print "importing quests: 626: A Dark Twilight"

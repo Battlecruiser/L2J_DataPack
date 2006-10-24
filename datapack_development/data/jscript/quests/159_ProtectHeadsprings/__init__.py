@@ -24,7 +24,7 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_accept")
         if st.getQuestItemsCount(HYACINTH_CHARM1) == 0 :
            st.giveItems(HYACINTH_CHARM1,1)
-        htmltext = "7154-04.htm"
+        htmltext = "30154-04.htm"
     return htmltext
 
  def onTalk (Self,npc,st):
@@ -37,28 +37,28 @@ class Quest (JQuest) :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif cond == 0 :
       if st.getPlayer().getRace().ordinal() != 1 :
-         htmltext = "7154-00.htm"
+         htmltext = "30154-00.htm"
          st.exitQuest(1)
       elif st.getPlayer().getLevel() >= 12 :
-         htmltext = "7154-03.htm"
+         htmltext = "30154-03.htm"
       else:
          st.exitQuest(1)
    elif cond == 1 :
-      htmltext = "7154-05.htm"
+      htmltext = "30154-05.htm"
    elif cond == 2 and count :
       st.takeItems(PLAGUE_DUST,-1)
       st.takeItems(HYACINTH_CHARM1,-1)
       if st.getQuestItemsCount(HYACINTH_CHARM2) == 0 :
          st.giveItems(HYACINTH_CHARM2,1)
       st.set("cond","3")
-      htmltext = "7154-06.htm"
+      htmltext = "30154-06.htm"
    elif cond == 3 :
-      htmltext = "7154-07.htm"
+      htmltext = "30154-07.htm"
    elif cond == 4 and count >= 5 :
       st.takeItems(PLAGUE_DUST,-1)
       st.takeItems(HYACINTH_CHARM2,-1)
       st.giveItems(ADENA,18250)
-      htmltext = "7154-08.htm"
+      htmltext = "30154-08.htm"
       st.unset("cond")
       st.setState(COMPLETED)
       st.playSound("ItemSound.quest_finish")
@@ -89,17 +89,17 @@ COMPLETED = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7154)
+QUEST.addStartNpc(30154)
 
-CREATED.addTalkId(7154)
-STARTING.addTalkId(7154)
-STARTED.addTalkId(7154)
-COMPLETED.addTalkId(7154)
+CREATED.addTalkId(30154)
+STARTING.addTalkId(30154)
+STARTED.addTalkId(30154)
+COMPLETED.addTalkId(30154)
 
-STARTED.addKillId(5017)
+STARTED.addKillId(27017)
 
-STARTED.addQuestDrop(5017,PLAGUE_DUST,1)
-STARTED.addQuestDrop(7154,HYACINTH_CHARM1,1)
-STARTED.addQuestDrop(7154,HYACINTH_CHARM2,1)
+STARTED.addQuestDrop(27017,PLAGUE_DUST,1)
+STARTED.addQuestDrop(30154,HYACINTH_CHARM1,1)
+STARTED.addQuestDrop(30154,HYACINTH_CHARM2,1)
 
 print "importing quests: 159: Protect Headsprings"

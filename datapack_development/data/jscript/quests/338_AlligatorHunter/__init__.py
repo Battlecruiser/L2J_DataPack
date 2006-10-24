@@ -5,7 +5,7 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 ADENA = 57
-ALLIGATOR = 135
+ALLIGATOR = 20135
 ALLIGATOR_PELTS = 4337
 CHANCE = 90
 
@@ -15,10 +15,10 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
      htmltext = event
-     if event == "7892-00a.htm" :
-         htmltext = "7892-00a.htm"
+     if event == "30892-00a.htm" :
+         htmltext = "30892-00a.htm"
          st.exitQuest(1)
-     elif event == "7892-02.htm" :
+     elif event == "30892-02.htm" :
          st.setState(STARTED)
          st.set("cond","1")
          st.playSound("ItemSound.quest_accept")
@@ -36,16 +36,16 @@ class Quest (JQuest) :
      amount = st.getQuestItemsCount(ALLIGATOR_PELTS)*40
      if id == CREATED :
         if level>=40 :
-           htmltext = "7892-01.htm"
+           htmltext = "30892-01.htm"
         else :
-           htmltext = "7892-00.htm"
+           htmltext = "30892-00.htm"
      elif cond==1 :
         if amount :
-           htmltext = "7892-03.htm"
+           htmltext = "30892-03.htm"
            st.giveItems(ADENA,amount)
            st.takeItems(ALLIGATOR_PELTS,-1)
         else :
-           htmltext = "7892-04.htm"
+           htmltext = "30892-04.htm"
      return htmltext
 
  def onKill (self,npc,st):
@@ -60,10 +60,10 @@ CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7892)
+QUEST.addStartNpc(30892)
 
-CREATED.addTalkId(7892)
-STARTED.addTalkId(7892)
+CREATED.addTalkId(30892)
+STARTED.addTalkId(30892)
 
 STARTED.addKillId(ALLIGATOR)
 STARTED.addQuestDrop(ALLIGATOR,ALLIGATOR_PELTS,1)

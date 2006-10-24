@@ -17,7 +17,7 @@ class Quest (JQuest) :
     if event == "1" :
       st.set("id","0")
       st.giveItems(OFFICIAL_LETTER_ID,1)
-      htmltext = "7042-04.htm"
+      htmltext = "30042-04.htm"
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
@@ -34,22 +34,22 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 7042 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30042 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
       if int(st.get("cond"))<15 :
         if st.getPlayer().getLevel() >= 3 :
-          htmltext = "7042-03.htm"
+          htmltext = "30042-03.htm"
           return htmltext
         else:
-          htmltext = "7042-02.htm"
+          htmltext = "30042-02.htm"
           st.exitQuest(1)
       else:
-        htmltext = "7042-02.htm"
+        htmltext = "30042-02.htm"
         st.exitQuest(1)
-   elif npcId == 7042 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30042 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 7042 and int(st.get("cond"))==1 and st.getQuestItemsCount(OFFICIAL_LETTER_ID)==1 :
-      htmltext = "7042-05.htm"
-   elif npcId == 7311 and int(st.get("cond"))==1 and st.getQuestItemsCount(OFFICIAL_LETTER_ID)==1 and int(st.get("onlyone"))==0 :
+   elif npcId == 30042 and int(st.get("cond"))==1 and st.getQuestItemsCount(OFFICIAL_LETTER_ID)==1 :
+      htmltext = "30042-05.htm"
+   elif npcId == 30311 and int(st.get("cond"))==1 and st.getQuestItemsCount(OFFICIAL_LETTER_ID)==1 and int(st.get("onlyone"))==0 :
       if int(st.get("id")) != 155 :
         st.set("id","155")
         st.takeItems(OFFICIAL_LETTER_ID,st.getQuestItemsCount(OFFICIAL_LETTER_ID))
@@ -58,7 +58,7 @@ class Quest (JQuest) :
         st.setState(COMPLETED)
         st.playSound("ItemSound.quest_finish")
         st.set("onlyone","1")
-        htmltext = "7311-01.htm"
+        htmltext = "30311-01.htm"
    return htmltext
 
 QUEST       = Quest(155,"155_FindSirWindawood","Find Sir Windawood")
@@ -69,12 +69,12 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(7042)
+QUEST.addStartNpc(30042)
 
-STARTING.addTalkId(7042)
+STARTING.addTalkId(30042)
 
-STARTED.addTalkId(7042)
-STARTED.addTalkId(7311)
+STARTED.addTalkId(30042)
+STARTED.addTalkId(30311)
 
 
-STARTED.addQuestDrop(7042,OFFICIAL_LETTER_ID,1)
+STARTED.addQuestDrop(30042,OFFICIAL_LETTER_ID,1)

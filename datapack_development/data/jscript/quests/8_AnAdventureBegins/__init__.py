@@ -6,9 +6,9 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #NPCs 
-JASMINE = 7134 
-ROSELYN = 7355 
-HARNE   = 7144 
+JASMINE = 30134 
+ROSELYN = 30355 
+HARNE   = 30144 
 
 #ITEM 
 ROSELYNS_NOTE = 7573 
@@ -24,21 +24,21 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) : 
    htmltext = event 
-   if event == "7134-03.htm" : 
+   if event == "30134-03.htm" : 
      st.set("cond","1") 
      st.setState(STARTED) 
      st.playSound("ItemSound.quest_accept") 
-   elif event == "7355-02.htm" : 
+   elif event == "30355-02.htm" : 
      st.giveItems(ROSELYNS_NOTE,1) 
      st.set("cond","2") 
      st.set("id","2") 
      st.playSound("ItemSound.quest_middle") 
-   elif event == "7144-02.htm" : 
+   elif event == "30144-02.htm" : 
      st.takeItems(ROSELYNS_NOTE,-1) 
      st.set("cond","3") 
      st.set("id","3") 
      st.playSound("ItemSound.quest_middle") 
-   elif event == "7134-06.htm" : 
+   elif event == "30134-06.htm" : 
      st.giveItems(SCROLL_OF_ESCAPE_GIRAN,1) 
      st.giveItems(MARK_OF_TRAVELER, 1) 
      st.set("cond","0") 
@@ -56,26 +56,26 @@ class Quest (JQuest) :
      st.set("cond","0") 
      if st.getPlayer().getRace().ordinal() == 2 : 
        if st.getPlayer().getLevel() >= 3 : 
-         htmltext = "7134-02.htm" 
+         htmltext = "30134-02.htm" 
        else : 
          htmltext = "<html><head><body>Quest for characters level 3 and above.</body></html>" 
          st.exitQuest(1) 
      else : 
-       htmltext = "7134-01.htm" 
+       htmltext = "30134-01.htm" 
        st.exitQuest(1) 
    elif npcId == JASMINE and id == COMPLETED : 
      htmltext = "<html><head><body>I can't supply you with another Giran Scroll of Escape. Sorry traveller.</body></html>" 
    elif npcId == JASMINE and cond == 1 : 
-     htmltext = "7134-04.htm" 
+     htmltext = "30134-04.htm" 
    elif npcId == ROSELYN and cond : 
      if st.getQuestItemsCount(ROSELYNS_NOTE) == 0 : 
-       htmltext = "7355-01.htm" 
+       htmltext = "30355-01.htm" 
      else : 
-       htmltext = "7355-03.htm" 
+       htmltext = "30355-03.htm" 
    elif npcId == HARNE and cond == 2 and st.getQuestItemsCount(ROSELYNS_NOTE) > 0 : 
-     htmltext = "7144-01.htm" 
+     htmltext = "30144-01.htm" 
    elif npcId == JASMINE and cond == 3 : 
-     htmltext = "7134-05.htm" 
+     htmltext = "30134-05.htm" 
 
    return htmltext 
 
