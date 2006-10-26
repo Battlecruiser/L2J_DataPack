@@ -318,17 +318,17 @@ newbie_helper
 }
 
 experimental(){
-echo ""
-echo ""
-echo "WARNING: Alternative NPC table is as experimental as standard one for the moment. By comparing the two you can help us to find better values for this table."
-echo -ne "Install experimental gameserver DB tables: (y) yes or (n) no or (q) quit?"
-read ASKXP
-case "$ASKXP" in
-	"y"|"Y") expinstall;;
-	"n"|"N") finish;;
-	"q"|"Q") finish;;
-	*) experimental;;
-esac
+#echo ""
+#echo ""
+#echo "WARNING: Alternative NPC table is as experimental as standard one for the moment. By comparing the two you can help us to find better values for this table."
+#echo -ne "Install experimental gameserver DB tables: (y) yes or (n) no or (q) quit?"
+#read ASKXP
+#case "$ASKXP" in
+#	"y"|"Y") expinstall;;
+#	"n"|"N") finish;;
+#	"q"|"Q") finish;;
+#	*) experimental;;
+#esac
 finish
 }
 

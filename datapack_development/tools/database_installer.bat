@@ -184,15 +184,15 @@ echo Installling new gameserver content.
 %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/zone.sql
 
 :experimental
-echo.
-echo.
-echo WARNING: Alternative NPC table is as experimental as standard one for the moment. By comparing the two you can help us to find better values for this table.
-:askexp
-set expprompt=x
-set /p expprompt=Install experimental gameserver DB tables: (y) yes or (n) no or (q) quit? 
-if /i %expprompt%==y goto expinstall
-if /i %expprompt%==n goto end
-if /i %expprompt%==q goto end
+rem echo.
+rem echo.
+rem echo WARNING: Alternative NPC table is as experimental as standard one for the moment. By comparing the two you can help us to find better values for this table.
+rem :askexp
+rem set expprompt=x
+rem set /p expprompt=Install experimental gameserver DB tables: (y) yes or (n) no or (q) quit? 
+rem if /i %expprompt%==y goto expinstall
+rem if /i %expprompt%==n goto end
+rem if /i %expprompt%==q goto end
 goto end
 
 :expinstall
