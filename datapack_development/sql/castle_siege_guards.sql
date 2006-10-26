@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS castle_siege_guards (
   KEY id (castleId)
 );
 
-INSERT IGNORE INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
+REPLACE INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
 (1,1,35085,-18460,113107,-2759,15608,10800,0),
 (1,2,35085,-18432,113107,-2759,15608,10800,0),
 (1,3,35085,-18404,113107,-2759,15608,10800,0),
@@ -788,7 +788,7 @@ INSERT IGNORE INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `
 (2,770,35107,117735,145148,-2621,32728,180,0),
 (2,771,35106,83808,37131,-2349,32728,300,0),
 (2,772,35107,83811,37243,-2348,32728,180,0);
-INSERT IGNORE INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
+REPLACE INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
 (3,773,35169,112815,144749,-2826,31992,10800,0),
 (3,774,35169,112815,144777,-2826,31992,10800,0),
 (3,775,35169,112815,144805,-2826,31992,10800,0),
@@ -1959,7 +1959,7 @@ INSERT IGNORE INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `
 (5,1940,35250,148261,8621,-212,32768,10800,0),
 (5,1941,35250,148261,8894,-212,32768,10800,0),
 (5,1942,35250,148261,9167,-212,32768,10800,0);
-INSERT IGNORE INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
+REPLACE INTO `castle_siege_guards` (`castleId`, `id`, `npcId`, `x`, `y`, `z`, `heading`, `respawnDelay`, `isHired`) VALUES 
 (6,1943,35301,116371,245422,-1049,48376,10800,0),
 (6,1944,35301,116343,245422,-1049,48376,10800,0),
 (6,1945,35301,116315,245422,-1049,48376,10800,0),
