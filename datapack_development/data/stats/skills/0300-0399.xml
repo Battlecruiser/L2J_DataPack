@@ -29,7 +29,7 @@
 </skill>
 <skill id="302" levels="9" name="Spoil Festival">
   <table name="#magicLvl"> 28 36 43 49 55 62 66 70 74 </table>
-  <table name="#mpConsume"> 74 93 113 132 150 172 184 194 204 </table>
+  <table name="#mpConsume"> 73 93 113 131 150 172 183 194 204 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="0.0"/>
@@ -242,7 +242,7 @@
   </for>
 </skill>
 <skill id="313" levels="8" name="Snipe">
-  <table name="#mpConsume"> 55 58 60 62 64 65 67 69 </table>
+  <table name="#mpConsume"> 28 29 30 31 32 33 34 34 </table>
   <table name="#pAtk"> 110 119 129 138 148 158 167 177 </table>
   <set name="weaponsAllowed" val="32"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -326,16 +326,18 @@
     <mul order="0x30" stat="pDef" val="1.1"/>
   </for>
 </skill>
-<skill id="317" levels="1" name="Focus Attack">
+<skill id="317" levels="5" name="Focus Attack">
   <set name="weaponsAllowed" val="64"/>
-  <set name="mpConsume" val="7"/>
+  <table name="#mpConsume"> 18 22 27 31 34 </table>
+  <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="7">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume">
+      <!-- this needs to be fixed for C5 to support multiple levels -->
       <add order="0x40" stat="accCombat" val="15"/>
     </effect>
   </for>
@@ -405,7 +407,7 @@
 </skill>
 <skill id="321" levels="10" name="Blinding Blow">
   <!-- MISSING TWO TARGET SKILL ONE AND SELF -->  
-  <table name="#mpConsume"> 133 135 137 139 141 143 145 147 149 151 </table>
+  <table name="#mpConsume"> 67 68 69 70 71 72 73 74 75 76 </table>
   <table name="#magicLvl"> 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#power"> 2751.0 2850.0 2950.0 3050.0 3151.0 3252.0 3353.0 3453.0 3553.0 3653.0 </table>
   <table name="#runSpeed"> 40 40 40 40 40 40 40 40 40 40 </table>
@@ -483,8 +485,9 @@
 </skill>
 <skill id="325" levels="1" name="Strider Siege Assault">
   <!-- SHOULD WORK ONLY DURING SIEGE -->
+  <!-- <set name="mpConsume" val="168"/> -->
   <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="3000"/>
+  <set name="skillTime" val="1080"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -492,8 +495,9 @@
   </for>
 </skill>
 <skill id="326" levels="1" name="Build Advanced Headquarters">
+  <!-- <set name="mpConsume" val="30"/> -->
   <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="3000"/>
+  <set name="skillTime" val="4000"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -546,7 +550,7 @@
   </for>
 </skill>
 <skill id="330" levels="1" name="Skill Mastery">
-  <!-- SKILL MASTERY FOR FIGHTERS -->
+  <!-- Masters excellence in skills. Low possibility of being able to re-use skills without delay or doubles the duration. Influenced by STR. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -555,7 +559,7 @@
   </for>
 </skill>
 <skill id="331" levels="1" name="Skill Mastery">
-  <!-- SKILL MASTERY FOR MAGES -->
+  <!-- Masters excellence in skills. Low possibility of being able to re-use skills without delay or doubles the duration. Influenced by INT. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -564,7 +568,7 @@
   </for>
 </skill>
 <skill id="332" levels="1" name="Extra Inventory">
-  <!-- SKILL MASTERY FOR MAGES -->
+  <!-- Increases size of inventory. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -573,7 +577,7 @@
   </for>
 </skill>
 <skill id="333" levels="1" name="Extra Sell Inventory">
-  <!-- SKILL MASTERY FOR MAGES -->
+  <!-- Increases private store sales slots. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -711,6 +715,7 @@
 </skill>
 <skill id="342" levels="1" name="Touch of Death">
   <!-- WRONG SKILL -->
+  <!-- Sacrifices HP to cast a dark curse upon an enemy that has a chance to remove multiple buffs and significantly decrease maximum CP for a brief time. Decreases resistance to debuff attacks and the effectiveness of HP regeneration magic. Only usable when HP is 75% or lower. -->
   <set name="hpConsume" val="1004"/>
   <set name="power" val="-70.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1247,6 +1252,219 @@
       <add order="0x40" stat="rEvas" val="6"/>
     </effect> 
   -->
+  </for>
+</skill>
+<skill id="370" levels="3" name="Clan Vitality">
+  <!-- Increases clan members' Max HP. It only effects those who are of an Heir class or higher. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="371" levels="3" name="Clan Spirituality">
+  <!-- Increases clan members' Max CP. It only effects those who are of a Baron class or higher. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="372" levels="3" name="Clan Essence">
+  <!-- Increases clan members' Max MP. It only effects those who are of a Viscount class or higher. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="373" levels="3" name="Clan Lifeblood">
+  <!-- Increases the clan members' HP regeneration. Only affects Heir class and above. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="374" levels="3" name="Clan Morale">
+  <!-- Increases the clan members' CP regeneration. Only affects Wise Man class and above. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="375" levels="3" name="Clan Clarity">
+  <!-- Increases the clan members' MP regeneration. Only affects Viscount class and above. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="376" levels="3" name="Clan Might">
+  <!-- Increases the clan members' P. Atk. Only affects Knight class and above. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="377" levels="3" name="Clan Aegis">
+  <!-- Increases clan members' P. Def. It only effects those who are of a Knight class or higher. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="378" levels="3" name="Clan Empowerment">
+  <!-- Increases clan members' M. Atk. It only effects those who are of a Viscount class or higher. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="379" levels="3" name="Clan Magic Protection">
+  <!-- Increases clan members' M. Def. It only effects those who are of an Heir class or higher. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="380" levels="3" name="Clan Guidance">
+  <!-- Increases the clan members' Accuracy. Only affects Baron class and above. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="381" levels="3" name="Clan Agility">
+  <!-- Increases the clan members' Evasion. Only affects Baron class and above. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="382" levels="3" name="Clan Withstand-Attack">
+  <!-- Increases clan members' Shield defense probability. It only effects those who are of a Viscount class or higher. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="383" levels="3" name="Clan Shield Boost">
+  <!-- Increases clan members' Shield P. Def. It only effects those who are of a Baron class or higher. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="384" levels="3" name="Clan Cyclonic Resistance">
+  <!-- Increases clan members' resistance to water/wind attacks. It only effects those who are of a Viscount class or higher. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="385" levels="3" name="Clan Magmatic Resistance">
+  <!-- Increases clan members' resistance to fire/earth attacks. It only effects those who are of a Viscount class or higher. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="386" levels="3" name="Clan Fortitude">
+  <!-- Increases the clan members' resistance to shock attacks. Only affects Viscount class and above. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="387" levels="3" name="Clan Freedom">
+  <!-- Increases the clan members' resistance to hold attacks. Only affects Viscount class and above. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="388" levels="3" name="Clan Vigilance">
+  <!-- Increases the clan members' resistance to sleep attacks. Only affects Viscount class and above. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="389" levels="3" name="Clan March">
+  <!-- Increases clan members' Speed. It only effects those who are of a Count class or higher. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="390" levels="3" name="Clan Luck">
+  <!-- Decreases Exp. loss and the chance of other death penalties when killed by a monster or player. It only effects those who are of an Heir class or higher. -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="395" levels="1" name="Heroic Miracle">
+  <!-- Instantly and significantly increases P.Def., M.Def., and resistance to buff canceling attacks as well as increases Speed. An equipped shield is required in order to use this skill. Consumes 40 Soul Ores. Effect 3. -->
+  <!-- P.Def. +5400, M.Def. +4050, Speed +5, Cancel resistance +??, requires Shield to function -->
+  <!-- <set name="mpConsume" val="72"/> -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="396" levels="1" name="Heroic Berserker">
+  <!-- Temporarily yet significantly increases Accuracy, P. Atk., M. Atk., Atk. Spd., Casting Spd., Speed, resistance to buff canceling attacks and debuff attacks, and the effects of HP regeneration magic. Significantly decreases P. Def., M. Def., and Evasion while the effect lasts. Consumes 40 Soul Ores. -->
+  <!-- Accuracy +8, Evasion -8, P.Atk. +500, M.Atk. +500, P.Def. -25%, M.Def. -25, Atk. Speed +100, Casting Spd. +100, Speed +20, Cancel/Debuff resistance +??, Heals are ??% more effective -->
+  <!-- <set name="mpConsume" val="72"/> -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
   </for>
 </skill>
 </list>
