@@ -167,7 +167,7 @@ class Quest (JQuest) :
    if npcId in [20190,20191] :
       if int(st.get("cond")) == 2 :
         if st.getRandom(50)<2 :
-          st.getPcSpawn().addSpawn(5119)
+          st.getPcSpawn().addSpawn(27119)
           st.playSound("Itemsound.quest_before_battle")
    elif npcId == 27119 :
       if int(st.get("cond")) == 2 and st.getQuestItemsCount(OLD_KNIGHT_SWORD_ID) > 0 :
