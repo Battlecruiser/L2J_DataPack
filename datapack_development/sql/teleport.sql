@@ -362,7 +362,7 @@ INSERT INTO teleport VALUES
 ('Rune -> Schuttgart',1101,87386,-143246,-1293,10000),
 ('Rune -> Oren',1102,82956,53162,-1495,10000),
 ('Rune -> Beast Farm',1103,57059,-82976,-2847,4800),
-('Rune -> Valley of Saints',1104,98564,88749,-1564,3800),
+('Rune -> Valley of Saints',1104,67992,-72012,-3748,3800),
 ('Rune -> Monastery of Silence',1105,123743,-75032,-2902,14000),
 ('Schuttgart -> Rune',1106,43799,-47727,-798,10000),
 ('Schuttgart -> Goddard',1107,147928,-55273,-2734,10000),
