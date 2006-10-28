@@ -54,8 +54,8 @@
   </for>
 </skill>
 <skill id="1102" levels="6" name="Aura Sink">
-  <table name="#mpConsume_Init"> 5 6 8 10 12 13 </table>
-  <table name="#mpConsume"> 18 24 31 38 48 52 </table>
+  <table name="#mpConsume_Init"> 7 9 12 15 18 20 </table>
+  <table name="#mpConsume"> 27 36 47 55 71 78 </table>
   <table name="#magicLvl"> 25 35 44 52 64 70 </table>
   <table name="#dmg"> 22 44 66 88 110 132 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
@@ -452,8 +452,8 @@
   </for>
 </skill>
 <skill id="1147" levels="6" name="Vampiric Touch">
-  <table name="#mpConsume_Init"> 4 5 6 6 7 7 </table>
-  <table name="#mpConsume"> 16 18 21 23 25 27 </table>
+  <table name="#mpConsume_Init"> 5 6 7 7 8 8 </table>
+  <table name="#mpConsume"> 20 22 25 28 30 32 </table>
   <table name="#magicLvl"> 11 14 17 20 23 25 </table>
   <table name="#power"> 18.0 21.0 23.0 26.0 29.0 32.0 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
@@ -807,7 +807,7 @@
 </skill>
 <skill id="1171" levels="19" name="Blazing Circle">
   <table name="#mpConsume_Init"> 10 11 11 12 13 13 14 14 15 16 16 17 18 18 19 19 20 20 21 </table>
-  <table name="#mpConsume"> 50 53 55 59 62 65 68 70 74 77 80 83 87 89 93 95 98 100 103 </table>
+  <table name="#mpConsume"> 40 42 44 47 49 52 54 56 59 61 64 66 69 71 74 76 78 80 82 </table>
   <table name="#magicLvl"> 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 </table>
   <table name="#power"> 29.0 30.0 32.0 34.0 36.0 38.0 40.0 42.0 44.0 46.0 48.0 50.0 52.0 55.0 57.0 58.0 60.0 62.0 64.0 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
@@ -838,9 +838,9 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="1000"/>
+  <set name="hitTime" val="1500"/>
   <set name="reuseDelay" val="2000"/>
-  <set name="skillTime" val="1000"/>
+  <set name="skillTime" val="1500"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1045,10 +1045,10 @@
   <set name="power" val="#power"/>
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="3000"/>
+  <set name="hitTime" val="3100"/>
   <set name="element" val="3"/>
   <set name="reuseDelay" val="8000"/>
-  <set name="skillTime" val="3000"/>
+  <set name="skillTime" val="3100"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
