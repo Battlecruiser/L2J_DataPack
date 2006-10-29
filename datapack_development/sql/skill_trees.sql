@@ -13446,16 +13446,7 @@ INSERT INTO skill_trees VALUES (118,339,1,'Parry Stance',32000000,78);
 INSERT INTO skill_trees VALUES (118,340,1,'Riposte Stance',13000000,77);
 INSERT INTO skill_trees VALUES (118,347,1,'Earthquake',32000000,78);
 INSERT INTO skill_trees VALUES (118,362,1,'Armor Crush',13000000,77);
-
 INSERT INTO skill_trees VALUES (53,172,1,'Create Item',0,1);
-INSERT INTO skill_trees VALUES (56,172,2,'Create Item',0,20);
-INSERT INTO skill_trees VALUES (56,172,3,'Create Item',0,28);
-INSERT INTO skill_trees VALUES (56,172,4,'Create Item',0,36);
-INSERT INTO skill_trees VALUES (57,172,5,'Create Item',0,43);
-INSERT INTO skill_trees VALUES (57,172,6,'Create Item',0,49);
-INSERT INTO skill_trees VALUES (57,172,7,'Create Item',0,55);
-INSERT INTO skill_trees VALUES (57,172,8,'Create Item',0,62);
-INSERT INTO skill_trees VALUES (57,172,9,'Create Item',0,70);
 
 -- Lucky 194 (Done by DJ MELERIX)
 
