@@ -13,7 +13,7 @@ CREATE TABLE skill_trees (
 -- Dumping data for table `skill_trees`
 --
 
-/* GLOSSARY FOR CLASS ID'S (thx Mr_Pleb_Mgoo) - Updated by DJ MELERIX
+/* GLOSSARY FOR CLASS ID'S (thx Mr_Pleb_Mgoo) - updated by DJ MELERIX
 
 HUMANS
 0=Human Fighter       | 1=Human Warrior    | 2=Gladiator        | 3=Warlord          | 4=Human Knight 
@@ -12497,6 +12497,7 @@ INSERT INTO skill_trees VALUES (53,142,4,'Armor Mastery',3300,15);
 INSERT INTO skill_trees VALUES (53,142,5,'Armor Mastery',3300,15);
 INSERT INTO skill_trees VALUES (53,150,1,'Weight Limit',1100,10);
 INSERT INTO skill_trees VALUES (53,165,1,'Trade',6700,15);
+INSERT INTO skill_trees VALUES (53,172,1,'Create Item',310,5);
 INSERT INTO skill_trees VALUES (53,254,1,'Spoil',1100,10);
 INSERT INTO skill_trees VALUES (53,1368,1,'Expand Dwarven Craft',0,5);
 INSERT INTO skill_trees VALUES (53,1368,2,'Expand Dwarven Craft',0,20);
@@ -12888,6 +12889,9 @@ INSERT INTO skill_trees VALUES (56,100,15,'Stun Attack',11000,36);
 INSERT INTO skill_trees VALUES (56,148,1,'Vital Force',7000,24);
 INSERT INTO skill_trees VALUES (56,148,2,'Vital Force',25000,32);
 INSERT INTO skill_trees VALUES (56,150,2,'Weight Limit',7000,24);
+INSERT INTO skill_trees VALUES (56,172,2,'Create Item',3700,20);
+INSERT INTO skill_trees VALUES (56,172,3,'Create Item',13000,28);
+INSERT INTO skill_trees VALUES (56,172,4,'Create Item',34000,36);
 INSERT INTO skill_trees VALUES (56,205,1,'Blunt Mastery',3700,20);
 INSERT INTO skill_trees VALUES (56,205,2,'Blunt Mastery',7000,24);
 INSERT INTO skill_trees VALUES (56,205,3,'Blunt Mastery',6700,28);
@@ -13005,6 +13009,11 @@ INSERT INTO skill_trees VALUES (57,148,6,'Vital Force',242000,58);
 INSERT INTO skill_trees VALUES (57,148,7,'Vital Force',600000,64);
 INSERT INTO skill_trees VALUES (57,148,8,'Vital Force',1330000,72);
 INSERT INTO skill_trees VALUES (57,150,3,'Weight Limit',67000,46);
+INSERT INTO skill_trees VALUES (57,172,5,'Create Item',46000,43);
+INSERT INTO skill_trees VALUES (57,172,6,'Create Item',98000,49);
+INSERT INTO skill_trees VALUES (57,172,7,'Create Item',189000,55);
+INSERT INTO skill_trees VALUES (57,172,8,'Create Item',400000,62);
+INSERT INTO skill_trees VALUES (57,172,9,'Create Item',870000,70);
 INSERT INTO skill_trees VALUES (57,205,9,'Blunt Mastery',14000,40);
 INSERT INTO skill_trees VALUES (57,205,10,'Blunt Mastery',14000,40);
 INSERT INTO skill_trees VALUES (57,205,11,'Blunt Mastery',14000,40);
@@ -13440,18 +13449,6 @@ INSERT INTO skill_trees VALUES (118,339,1,'Parry Stance',32000000,78);
 INSERT INTO skill_trees VALUES (118,340,1,'Riposte Stance',13000000,77);
 INSERT INTO skill_trees VALUES (118,347,1,'Earthquake',32000000,78);
 INSERT INTO skill_trees VALUES (118,362,1,'Armor Crush',13000000,77);
-
--- Create Item 172 (Done by DJ MELERIX) (Only For Artisan, Warsmith, Maestro)
-
-INSERT INTO skill_trees VALUES (53,172,1,'Create Item',0,1);
-INSERT INTO skill_trees VALUES (56,172,2,'Create Item',0,20);
-INSERT INTO skill_trees VALUES (56,172,3,'Create Item',0,28);
-INSERT INTO skill_trees VALUES (56,172,4,'Create Item',0,36);
-INSERT INTO skill_trees VALUES (57,172,5,'Create Item',0,43);
-INSERT INTO skill_trees VALUES (57,172,6,'Create Item',0,49);
-INSERT INTO skill_trees VALUES (57,172,7,'Create Item',0,55);
-INSERT INTO skill_trees VALUES (57,172,8,'Create Item',0,62);
-INSERT INTO skill_trees VALUES (57,172,9,'Create Item',0,70);
 
 -- Lucky 194 (Done by DJ MELERIX)
 
