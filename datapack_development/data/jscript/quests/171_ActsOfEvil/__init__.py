@@ -122,7 +122,7 @@ class Quest (JQuest) :
              htmltext = "30437-01.htm"
          elif cond==9 :
              htmltext = "30437-03a.htm"
-     elif npcId==7617 :
+     elif npcId==30617 :
          if cond==9 and st.getQuestItemsCount(CERTIFICATE) and st.getQuestItemsCount(CARGOBOX) and st.getQuestItemsCount(ATTACK_DIRECTIVES) :
              htmltext = "30617-01.htm"
          if cond==10 :
@@ -185,7 +185,7 @@ STARTED.addQuestDrop(30381,CERTIFICATE,1)
 STARTED.addQuestDrop(30381,BLADE_MOLD,1)
 STARTED.addQuestDrop(30381,WEAPON_TRADE_CONTRACT,1)
 
-for i in range(20494,20500)+[20062]+[20066]+[27190]+[20438] :
+for i in range(20494,20500)+[20062,20066,27190,20438] :
     STARTED.addKillId(i)
 
 print "importing quests: 171: Acts of Evil"
