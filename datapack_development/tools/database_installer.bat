@@ -56,7 +56,7 @@ echo @set gspass=%gspass%>> vars.txt
 echo @set gsdb=%gsdb%>> vars.txt
 echo @set gshost=%gshost%>> vars.txt
 echo.
-echo Setup complete, press any key to continue...
+echo Script setup complete, press any key to continue...
 pause> nul
 goto loadVars
 :start
@@ -184,24 +184,24 @@ echo Installling new gameserver content.
 %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/zone.sql
 
 :experimental
-rem echo.
-rem echo.
-rem echo WARNING: Alternative NPC table is as experimental as standard one for the moment. By comparing the two you can help us to find better values for this table.
-rem :askexp
-rem set expprompt=x
-rem set /p expprompt=Install experimental gameserver DB tables: (y) yes or (n) no or (q) quit? 
-rem if /i %expprompt%==y goto expinstall
-rem if /i %expprompt%==n goto end
-rem if /i %expprompt%==q goto end
+echo.
+echo.
+echo WARNING: legacy spawnlist contains more mobs and lesser chests, but many z values are wrong and doesnt match retail in many areas.
+:askexp
+set expprompt=x
+set /p expprompt=Install experimental gameserver DB tables: (y) yes or (n) no or (q) quit? 
+if /i %expprompt%==y goto expinstall
+if /i %expprompt%==n goto end
+if /i %expprompt%==q goto end
 goto end
 
 :expinstall
 echo Making a backup of the default gameserver tables.
 %mysqldumpPath% --add-drop-table -h %gshost% -u %gsuser% --password=%gspass% %gsdb% > experimental_backup.sql
 echo Installing new content.
-%mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/experimental/npc.sql
+REM %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/experimental/npc.sql
 REM %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/experimental/npcskills.sql
-REM %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/experimental/spawnlist-experimental.sql
+%mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/experimental/spawnlist.sql
 
 :end
 echo.
