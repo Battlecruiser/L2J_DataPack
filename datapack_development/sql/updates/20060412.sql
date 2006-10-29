@@ -18,10 +18,6 @@ UPDATE `seven_signs` SET
 `dusk_contribution_score` = `dawn_contribution_score`, `dawn_contribution_score` = 0 
 WHERE `cabal` = 'dusk';
 
--- For those who already used my previous patch for sql seven signs status :)
-ALTER TABLE `seven_signs_status` 
-DROP COLUMN `id`, DROP PRIMARY KEY;
-
 ALTER TABLE `random_spawn_loc` ADD COLUMN `heading` INTEGER NOT NULL DEFAULT -1,
 DROP PRIMARY KEY,
 ADD PRIMARY KEY(`groupId`, `x`, `y`, `z`, `heading`);
