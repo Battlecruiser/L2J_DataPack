@@ -13,50 +13,52 @@ CREATE TABLE skill_trees (
 -- Dumping data for table `skill_trees`
 --
 
-/* CLASS ID'S (Done by DJ MELERIX)
+/* GLOSSARY FOR CLASS ID'S (thx Mr_Pleb_Mgoo) - updated by DJ MELERIX
 
-HUMAN
-0=Human Fighter       | 1=Warrior          | 2=Gladiator        | 3=Warlord          | 4=Human Knight
-5=Paladin             | 6=Dark Avenger     | 7=Rogue            | 8=Treasure Hunter  | 9=Hawkeye
-10=Human Mystic       | 11=Wizard          | 12=Sorcerer/SS     | 13=Necromancer     | 14=Warlock
-15=Cleric             | 16=Bishop          | 17=Prophet
+HUMANS
+0=Human Fighter       | 1=Human Warrior    | 2=Gladiator        | 3=Warlord          | 4=Human Knight 
+5=Paladin             | 6=Dark Avenger     | 7=Rogue            | 8=Treasure Hunter  | 9=Hawkeye      
+10=Human Mage         | 11=Human Wizard    | 12=Sorcerer        | 13=Necromancer     | 14=Warlock
+15=Cleric             | 16=Bishop          | 17=Prophet 
 
-ELF
-18=Elven Fighter      | 19=Elven Knight    | 20=Temple Knight   | 21=Swordsinger     | 22=Elven Scout
-23=Plainswalker       | 24=Silver Ranger   | 25=Elven Mystic    | 26=Elven Wizard    | 27=Spellsinger
-28=Elemental Summoner | 29=Elven Oracle    | 30=Elven Elder
+ELVES 
+18=Elven Fighter      | 19=Elven Knight    | 20=Temple Knight   | 21=Swordsinger     | 22=Elven Scout      
+23=Plainswalker       | 24=Silver Ranger   | 25=Elven Mage      | 26=Elven Wizard    | 27=Spellsinger 
+28=Elemental Summoner | 29=Elven Oracle    | 30=Elven Elder 
 
-DARK ELF
-31=Dark Elven Fighter | 32=Palus Knight    | 33=Shillien Knight | 34=Bladedancer     | 35=Assassin
-36=Abyss Walker       | 37=Phantom Ranger  | 38=Dark Mystic     | 39=Dark Wizard     | 40=Spellhowler
-41=Phantom Summoner   | 42=Shillien Oracle | 43=Shillien Elder
+DARK ELVES
+31=Dark Elven Fighter | 32=Palus Knight    | 33=Shillien Knight | 34=Bladedancer     | 35=Assassin 
+36=Abyss Walker       | 37=Phantom Ranger  | 38=Dark Elven Mage | 39=Dark Wizard     | 40=Spellhowler 
+41=Phantom Summoner   | 42=Shillien Oracle | 43=Shillien Elder 
 
-ORC
-44=Orc Fighter        | 45=Orc Raider      | 46=Destroyer       | 47=Monk            | 48=Tyrant
-49=Orc Mystic         | 50=Orc Shaman      | 51=Overlord        | 52=Warcryer
+ORCS 
+44=Orc Fighter        | 45=Orc Raider      | 46=Destroyer       | 47=Monk            | 48=Tyrant 
+49=Orc Mage           | 50=Orc Shaman      | 51=Overlord        | 52=Warcryer 
 
-DWARF
-53=Dwarven Fighter    | 54=Scavenger       | 55=Bounty Hunter   | 56=Artisan         |57=Warsmith
+DWARVES 
+53=Dwarven Fighter    | 54=Scavenger       | 55=Bounty Hunter   | 56=Artisan         | 57=Warsmith
 
-HUMAN 3rd Professions
-89=Dreadnought        | 88=Duelist         | 90=Phoenix Knight  | 91=Hell Knight     |93=Adventurer
-92=Sagittarius        | 94=Archmage        | 95=Soultaker       | 96=Arcana Lord     |97=Cardinal
-98=Heirophant
+HUMANS 3rd Professions
+88=Duelist            | 89=Dread Nought    | 90=Phoenix Knight  | 91=Hell Knight     | 92=Sagittarius
+93=Adventurer         | 94=Archmage        | 95=Soul Traker     | 96=Arcane Lord     | 97=Cardinal
+98=Hierophant
 
-ELF 3rd Professions
-99=Eva's Templar     | 100=Sword Muse      | 101=Wind Rider     | 102=Moonlight Sentinel
-103=Mystic Muse      | 104=Elemental Master                     | 105=Eva's Saint
+ELVES 3rd Professions
+99=Evas Templar      | 100=Sword Muse      | 101=Wind Rider     | 102=Moonlight Sentinel
+103=Mystic Muse      | 104=Elemental Master                     | 105=Evas Saint
 
-DARK ELF 3rd Professions
+DARK ELVES 3rd Professions
 106=Shillien Templar | 107=Spectral Dancer | 108=Ghost Hunter   | 109=Ghost Sentinel
 110=Storm Screamer   | 111=Spectral Master | 112=Shillien Saint
 
-ORC 3rd Professions
-113=Titan            | 114=Grand Khavatari
+ORCS 3rd Professions
+113=Titan            | 114=Grand Khauatari
 115=Dominator        | 116=Doomcryer
 
-DWARF 3rd Professions
-117=Fortune Seeker   | 118=Maestro */
+DWARVES 3rd Professions
+117=Fortune Seeker   | 118=Maestro
+
+*/
 
 INSERT INTO skill_trees VALUES (0,3,1,'Power Strike',50,5);
 INSERT INTO skill_trees VALUES (0,3,2,'Power Strike',50,5);
@@ -12495,6 +12497,7 @@ INSERT INTO skill_trees VALUES (53,142,4,'Armor Mastery',3300,15);
 INSERT INTO skill_trees VALUES (53,142,5,'Armor Mastery',3300,15);
 INSERT INTO skill_trees VALUES (53,150,1,'Weight Limit',1100,10);
 INSERT INTO skill_trees VALUES (53,165,1,'Trade',6700,15);
+INSERT INTO skill_trees VALUES (53,172,1,'Create Item',310,5);
 INSERT INTO skill_trees VALUES (53,254,1,'Spoil',1100,10);
 INSERT INTO skill_trees VALUES (53,1368,1,'Expand Dwarven Craft',0,5);
 INSERT INTO skill_trees VALUES (53,1368,2,'Expand Dwarven Craft',0,20);
@@ -13446,7 +13449,6 @@ INSERT INTO skill_trees VALUES (118,339,1,'Parry Stance',32000000,78);
 INSERT INTO skill_trees VALUES (118,340,1,'Riposte Stance',13000000,77);
 INSERT INTO skill_trees VALUES (118,347,1,'Earthquake',32000000,78);
 INSERT INTO skill_trees VALUES (118,362,1,'Armor Crush',13000000,77);
-INSERT INTO skill_trees VALUES (53,172,1,'Create Item',0,1);
 
 -- Lucky 194 (Done by DJ MELERIX)
 
