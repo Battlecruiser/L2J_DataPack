@@ -67,7 +67,7 @@ class Quest (JQuest) :
         st.takeItems(HEAVY_WOOD_BOX_ID,st.getQuestItemsCount(HEAVY_WOOD_BOX_ID))
         if st.getQuestItemsCount(JACKSONS_RECEIPT_ID) == 0 :
           st.giveItems(JACKSONS_RECEIPT_ID,1)
-        htmltext = "3002-01.htm"
+        htmltext = "30002-01.htm"
    elif npcId == 30002 and int(st.get("cond"))!=0 and st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 :
         htmltext = "30002-02.htm"
    elif npcId == 30003 and int(st.get("cond"))!=0 and st.getQuestItemsCount(CLOTH_BUNDLE_ID)!=0 :
