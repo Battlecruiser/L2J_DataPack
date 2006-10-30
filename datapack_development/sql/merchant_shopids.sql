@@ -152,7 +152,7 @@ INSERT INTO merchant_shopids VALUES (137,'31318');
 INSERT INTO merchant_shopids VALUES (138,'31319');
 INSERT INTO merchant_shopids VALUES (139,'31338');
 INSERT INTO merchant_shopids VALUES (140,'31339');
-INSERT INTO merchant_shopids VALUES (141,'31346');
+INSERT INTO merchant_shopids VALUES (141,'31366');
 INSERT INTO merchant_shopids VALUES (142,'31578');
 INSERT INTO merchant_shopids VALUES (143,'31579');
 INSERT INTO merchant_shopids VALUES (144,'31696');
