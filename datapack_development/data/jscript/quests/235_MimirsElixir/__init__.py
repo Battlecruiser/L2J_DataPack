@@ -26,7 +26,7 @@ SCROLL_ENCHANT_WEAPON_A = 729
 #Messages
 default   = "<html><head><body>I have nothing to say to you.</body></html>"
 #NPCs
-LADD,JOAN=7721,30718
+LADD,JOAN=30721,30718
 #Mobs, cond, Drop
 DROPLIST = {
 20965: [3,SAGES_STONE],   #Chimera Piece
