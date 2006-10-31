@@ -93,9 +93,9 @@ CREATED.addTalkId(31518)
 STARTED.addTalkId(31518)
 STARTED.addTalkId(31519)
 
-for mobs in range(1520,1541):
+for mobs in range(21520,21541):
   STARTED.addKillId(mobs)
 
-STARTED.addQuestDrop(1520,GEM_OF_SUBMISSION,1)
+STARTED.addQuestDrop(21520,GEM_OF_SUBMISSION,1)
 
 print "importing quests: 627: Heart In Search Of Power"
