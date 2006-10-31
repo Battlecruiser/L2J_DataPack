@@ -47,7 +47,7 @@ class Quest (JQuest) :
  
  def onKill(self,npc,st):
      npcId = npc.getNpcId()     
-     if npcId == 20786 or 20npcId == 787 :
+     if npcId == 20786 or npcId == 20787 :
          if int(st.get("cond"))==1 and st.getQuestItemsCount(SILVER_CRYSTAL_ID)<50 :
              st.giveItems(SILVER_CRYSTAL_ID,1)
              if st.getQuestItemsCount(SILVER_CRYSTAL_ID) == 50 :
