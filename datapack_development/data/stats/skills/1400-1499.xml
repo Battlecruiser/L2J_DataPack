@@ -4,8 +4,11 @@
 <!-- Done by KID -->
   <table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table>
   <table name="#power"> 230.0 250.0 270.0 290.0 310.0 330.0 350.0 370.0 390.0 411.0 </table>
+  <table name="#itemConsumeCount"> 3 3 4 4 4 4 5 5 5 5 </table>
   <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="save" val="6"/>  
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="9000"/>
@@ -22,15 +25,17 @@
   </for>
 </skill>
 <skill id="1401" levels="10" name="Major Heal">
-  <table name="#mpConsume"> 90 95 98 100 104 108 112 114 117 120 </table>
+  <table name="#mpConsume"> 60 64 65 67 69 72 74 77 78 80 </table>
   <table name="#power"> 690 722 753 783 812 840 867 892 915 936 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="1"/>   
   <set name="power" val="#power"/>
-  <set name="hitTime" val="10000"/>
-  <set name="reuseDelay" val="14000"/>
-  <set name="skillTime" val="10000"/>
+  <set name="hitTime" val="5000"/>
+  <!-- reuse is meant to be "almost instant" -->
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="5000"/>
+  <!-- really should be one party member -->
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="HEAL"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -39,15 +44,16 @@
   <set name="isMagic" val="true"/>
 </skill>
 <skill id="1402" levels="5" name="Major Group Heal">
-  <table name="#mpConsume"> 283 299 320 340 358 </table>
+  <table name="#mpConsume"> 189 199 214 228 239 </table>
   <table name="#power"> 902 979 1050 1115 1170 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="4"/>     
   <set name="power" val="#power"/>
-  <set name="hitTime" val="15000"/>
+  <set name="hitTime" val="7000"/>
+  <!-- reuse time needs verifying... left this high to be safe -->
   <set name="reuseDelay" val="19000"/>
-  <set name="skillTime" val="15000"/>
+  <set name="skillTime" val="7000"/>
   <set name="skillRadius" val="1000"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillType" val="HEAL"/>
