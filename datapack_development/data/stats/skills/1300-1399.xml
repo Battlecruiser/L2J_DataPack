@@ -430,6 +430,7 @@
   <set name="itemConsumeIdOT" val="1459"/>
   <set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
   <set name="itemConsumeTime" val="240000"/>
+  <!-- should be consumed over 14 regular intervals -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="15000"/>
@@ -460,6 +461,7 @@
   <set name="itemConsumeIdOT" val="1459"/>
   <set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
   <set name="itemConsumeTime" val="240000"/>
+  <!-- should be consumed over 14 regular intervals -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="15000"/>
@@ -490,6 +492,7 @@
   <set name="itemConsumeIdOT" val="1459"/>
   <set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
   <set name="itemConsumeTime" val="240000"/>
+  <!-- should be consumed over 14 regular intervals -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="15000"/>
@@ -520,11 +523,12 @@
   <set name="itemConsumeIdOT" val="1459"/>
   <set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
   <set name="itemConsumeTime" val="240000"/>
+  <!-- should be consumed over 4 regular intervals -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_CORPSE_MOB"/>
-  <set name="hitTime" val="15000"/>
+  <set name="hitTime" val="1500"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="15000"/>
+  <set name="skillTime" val="1500"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -539,7 +543,7 @@
   </for>
 </skill>
 <skill id="1335" levels="1" name="Balance Life">
-  <!-- NOT IMPLEMENTED -->
+  <!-- NOT IMPLEMENTED - Balances party members' HP. -->
   <set name="mpInitialConsume" val="25"/>
   <set name="mpConsume" val="98"/>
   <set name="target" val="TARGET_NONE"/>
@@ -567,7 +571,7 @@
   <set name="effectRange" val="1100"/>
   <for>
     <effect count="1" name="Mute" time="120" val="0">
-    <!-- MISSING MUTE OF PHYSICAL SKILLS FOR TWO MINUTES-->
+    <!-- MISSING MUTE OF PHYSICAL and magical SKILLS FOR TWO MINUTES-->
     </effect> 
   </for>
 </skill>
@@ -614,6 +618,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <!-- Cancel+Debuff resistance -30%, Magic MP Cost +30%, MP Regen per tick -24 -->
   <for>
   </for>
 </skill>
@@ -639,7 +644,7 @@
       <mul order="0x30" stat="runSpd" val="0.9"/>
       <mul order="0x30" stat="pAtkSpd" val="0.7"/>
       <mul order="0x30" stat="mAtkSpd" val="0.9"/>
-      <!-- MISSING MDOT -->
+      <!-- MISSING MDOT - MP Regen per tick -12 -->
       <sub order="0x40" stat="fireRes" val="20"/>
     </effect>
   </for> 
@@ -666,7 +671,7 @@
       <mul order="0x30" stat="runSpd" val="0.7"/>
       <mul order="0x30" stat="pAtkSpd" val="0.9"/>
       <mul order="0x30" stat="mAtkSpd" val="0.9"/>
-      <!-- MISSING MDOT -->
+      <!-- MISSING MDOT - MP Regen per tick -12 -->
       <sub order="0x40" stat="waterRes" val="20"/>
     </effect>
   </for> 
@@ -693,7 +698,7 @@
       <mul order="0x30" stat="runSpd" val="0.9"/>
       <mul order="0x30" stat="pAtkSpd" val="0.9"/>
       <mul order="0x30" stat="mAtkSpd" val="0.7"/>
-      <!-- MISSING MDOT -->
+      <!-- MISSING MDOT - MP Regen per tick -12 -->
       <sub order="0x40" stat="windRes" val="20"/>
     </effect>
   </for> 
@@ -717,7 +722,7 @@
   <for>
     <effect count="1" name="Buff" time="30" val="0">
       <sub order="0x40" stat="accCombat" val="6"/>
-      <!-- MISSING MDOT -->
+      <!-- MISSING MDOT - MP Regen per tick -12 -->
       <sub order="0x40" stat="holyRes" val="30"/> 
     </effect>
   </for>
@@ -726,7 +731,7 @@
   <set name="mpInitialConsume" val="21"/>
   <set name="mpConsume" val="84"/>
   <set name="magicLvl" val="76"/>
-  <set name="power" val="139.0"/>
+  <set name="power" val="111.0"/>
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillTime" val="6000"/>
@@ -736,12 +741,13 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <set name="absorbPart" val="0.7"/>
+  <!-- Dark Vortex: Power is reduced but drain percentage is increased - so I changed 0.7 -> 0.8 -->
+  <set name="absorbPart" val="0.8"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
     <effect count="1" name="Buff" time="30" val="0">
-      <!-- MISSING MDOT -->
+      <!-- MISSING MDOT - MP Regen per tick -12 -->
       <sub order="0x40" stat="darkRes" val="30"/> 
     </effect>
   </for>
@@ -941,6 +947,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <!-- Cancel resistance +30%, Debuff resistance +20% -->
   <for>
   </for>
 </skill>
@@ -968,6 +975,7 @@
     <mul order="0x30" stat="mCritRate" val="2.00"/>
     <mul order="0x30" stat="regMp" val="1.2"/>
     <mul order="0x30" stat="runSpd" val="0.80"/>
+	<!-- needs debuff resistance +10% -->
   </effect>
 </for>
 </skill>
@@ -996,6 +1004,7 @@
     <mul order="0x30" stat="runSpd" val="0.90"/>
     <mul order="0x30" stat="maxHp" val="1.20"/>
     <mul order="0x30" stat="regHp" val="1.20"/>
+	<!-- needs debuff resistance +10% -->
   </effect>
 </for>
 </skill>
@@ -1023,10 +1032,12 @@
      <add order="0x40" stat="accCombat" val="4"/>
      <add order="0x40" stat="rEvas" val="4"/>
      <mul order="0x30" stat="pAtkSpd" val="1.20"/>
+	<!-- needs debuff resistance +10% -->
   </effect>
 </for>
 </skill>
 <skill id="1358" levels="1" name="Block Shield">
+  <!-- needs to remove pDef buffs on target -->
   <set name="mpInitialConsume" val="14"/>
   <set name="mpConsume" val="56"/>
   <set name="save" val="4"/>
@@ -1050,6 +1061,7 @@
   </for>
 </skill>
 <skill id="1359" levels="1" name="Block Wind Walk">
+  <!-- needs to remove speed buffs on target -->
   <set name="mpInitialConsume" val="14"/>
   <set name="mpConsume" val="56"/>
   <set name="save" val="4"/>
@@ -1073,6 +1085,7 @@
   </for>
 </skill>
 <skill id="1360" levels="1" name="Mass Block Shield">
+  <!-- needs to remove pDef buffs in target aura -->
   <set name="mpInitialConsume" val="21"/>
   <set name="mpConsume" val="84"/>
   <set name="save" val="5"/>
@@ -1097,6 +1110,7 @@
   </for>
 </skill>
 <skill id="1361" levels="1" name="Mass Block Wind Walk">
+  <!-- needs to remove speed buffs in target aura -->
   <set name="mpInitialConsume" val="22"/>
   <set name="mpConsume" val="85"/>
   <set name="save" val="5"/>
@@ -1336,6 +1350,8 @@
   <set name="itemConsumeCount" val="80"/>
   <set name="hitTime" val="2500"/>
   <set name="skillTime" val="2500"/>
+  <!-- 20 minute recharge -->
+  <set name="reuseDelay" val="1200000"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="skillRadius" val="400"/>
   <set name="skillType" val="BUFF"/>
@@ -1344,9 +1360,11 @@
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <for>
+    <!-- 2 minute duration -->
     <effect count="1" name="Buff" time="1200" val="0">
-     <mul order="0x30" stat="pAtk" val="1.54"/>
-     <mul order="0x30" stat="pDef" val="1.48"/>
+     <!-- suspect this was custom before... still not 100% -->
+     <add order="0x40" stat="pAtk" val="250"/>
+     <add order="0x40" stat="pDef" val="500"/>
    </effect>
   </for>  
 </skill>
@@ -1357,6 +1375,8 @@
   <set name="itemConsumeCount" val="80"/>
   <set name="hitTime" val="2500"/>
   <set name="skillTime" val="2500"/>
+  <!-- 20 minute recharge -->
+  <set name="reuseDelay" val="1200000"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="DEBUFF"/>
@@ -1365,7 +1385,9 @@
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <!-- 30 seconds duration -->
+    <effect count="1" name="Buff" time="30" val="0">
+     <!-- suspect this is custom -->
      <div order="0x30" stat="mDef" val="1.23"/>
      <div order="0x30" stat="pDef" val="1.2"/>
      <div order="0x30" stat="sDef" val="1.4"/>
@@ -1381,6 +1403,8 @@
   <set name="itemConsumeCount" val="80"/>
   <set name="hitTime" val="2500"/>
   <set name="skillTime" val="2500"/>
+  <!-- 20 minute recharge -->
+  <set name="reuseDelay" val="1200000"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="FEAR"/>
@@ -1389,7 +1413,9 @@
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <for>
-     <effect count="5" name="Fear" time="9" val="0">
+     <!-- 30 seconds duration -->
+     <effect count="5" name="Fear" time="6" val="0">
+        <!-- suspect this is custom -->
         <add order="0x40" stat="runSpd" val="64"/>
      </effect>
   </for>  
@@ -1423,6 +1449,7 @@
   <set name="skillTime" val="4000"/>
   <set name="reuseDelay" val="22000"/>
   <set name="target" val="TARGET_PET"/>
+  <!-- needs to make summon attack master -->
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
@@ -1450,8 +1477,12 @@
 <skill id="1382" levels="5" name="Mass Gloom">
 <!-- Done by KID -->
   <table name="#mpConsume"> 80 87 93 98 103 </table>
+  <!-- suspect these mDef values are guesses -->
   <table name="#mDef"> 1.12 1.16 1.2 1.24 1.29 </table>
+  <table name="#itemConsumeCount"> 4 4 4 5 5 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="21000"/> 
   <set name="skillTime" val="6000"/>
@@ -1471,8 +1502,12 @@
 <skill id="1383" levels="5" name="Mass Surrender to Fire">
 <!-- Done by KID -->
   <table name="#mpConsume"> 80 87 93 98 103 </table>
+  <!-- suspect these res values are guesses -->
   <table name="#fireRes"> 30 36 41 49 58 </table>
+  <table name="#itemConsumeCount"> 2 2 2 3 3 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="21000"/>  
   <set name="skillTime" val="6000"/>
@@ -1492,8 +1527,12 @@
 <skill id="1384" levels="5" name="Mass Surrender to Watere">
 <!-- Done by KID -->
   <table name="#mpConsume"> 80 87 93 98 103 </table>
+  <!-- suspect these res values are guesses -->
   <table name="#waterRes"> 30 36 41 49 58 </table>
+  <table name="#itemConsumeCount"> 2 2 2 3 3 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="21000"/>
   <set name="skillTime" val="6000"/>
@@ -1513,8 +1552,12 @@
 <skill id="1385" levels="5" name="Mass Surrender to Wind">
 <!-- Done by KID -->
   <table name="#mpConsume"> 80 87 93 98 103 </table>
+  <!-- suspect these res values are guesses -->
   <table name="#windRes"> 30 36 41 49 58 </table>
+  <table name="#itemConsumeCount"> 2 2 2 3 3 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="21000"/>  
   <set name="skillTime" val="6000"/>
@@ -1534,6 +1577,7 @@
 <skill id="1386" levels="10" name="Arcane Distruption">
 <!-- Done by KID -->
   <table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table>
+  <!-- L2P still need to confirm mAtkSpd reduction values - says about -23% -->
   <table name="#mAtkSpd"> 1.11 1.13 1.15 1.16 1.18 1.21 1.24 1.26 1.29 1.32 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="4000"/>
@@ -1546,7 +1590,8 @@
   <set name="effectRange" val="1100"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="90" val="0">
+    <!-- time might be wrong -->
+    <effect count="1" name="Buff" time="10" val="0">
       <div order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
     </effect>
   </for>  
@@ -1570,7 +1615,7 @@
 </skill>
 <skill id="1388" levels="3" name="Greater Might">
 <!-- Done by KID -->
-  <table name="#pAtk"> 1.1 1.15 1.2 </table>
+  <table name="#pAtk"> 1.04 1.07 1.10 </table>
   <table name="#mpConsume"> 54 62 69 </table>
   <table name="#spiritOre"> 1 2 3 </table>
   <set name="itemConsumeId" val="3031"/>
@@ -1594,7 +1639,8 @@
 </skill>
 <skill id="1389" levels="3" name="Greater Shield">
 <!-- Done by KID -->
-  <table name="#rate"> 1.14 1.19 1.25 </table>
+  <!-- L2P still need to confirm pDef values -->
+  <table name="#rate"> 1.05 1.10 1.15 </table>
   <table name="#mpConsume"> 54 62 69 </table>
   <table name="#spiritOre"> 1 2 3 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1618,7 +1664,7 @@
 <skill id="1390" levels="3" name="War Chant">
 <!-- Done by KID -->
   <table name="#mpConsume"> 213 244 272 </table>
-  <table name="#pAtk"> 1.1 1.15 1.2 </table>
+  <table name="#pAtk"> 1.04 1.07 1.10 </table>
   <table name="#spiritOre"> 4 8 12 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
@@ -1642,7 +1688,8 @@
 <skill id="1391" levels="3" name="Earth Chant">
 <!-- Done by KID -->
   <table name="#mpConsume"> 213 244 272 </table>
-  <table name="#pDef"> 1.14 1.19 1.25 </table>
+  <!-- L2P still need to confirm pDef values -->
+  <table name="#pDef"> 1.05 1.10 1.15 </table>
   <table name="#spiritOre"> 4 8 12 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
@@ -1666,7 +1713,8 @@
 <skill id="1392" levels="3" name="Holy Resistance">
 <!-- Done by KID -->
   <table name="#mpConsume"> 54 62 69 </table>
-  <table name="#holyRes"> 30 50 70 </table>
+  <!-- L2P still need to confirm res values -->
+  <table name="#holyRes"> 15 23 30 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="7000"/>
@@ -1686,7 +1734,8 @@
 <skill id="1393" levels="3" name="Unholy Resistance">
 <!-- Done by KID -->
   <table name="#mpConsume"> 54 62 69 </table>
-  <table name="#darkRes"> 30 50 70 </table>
+  <!-- L2P still need to confirm res values -->
+  <table name="#darkRes"> 15 23 30 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="7000"/>
@@ -1711,7 +1760,8 @@
   <set name="power" val="44"/>
   <set name="lvlDepend" val="2"/>  
   <set name="hitTime" val="3000"/>
-  <set name="reuseDelay" val="9000"/>
+  <!-- reuse delay should be "nearly instant" -->
+  <set name="reuseDelay" val="4000"/>
   <set name="skillTime" val="3000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="SLEEP"/>
@@ -1720,13 +1770,14 @@
   <set name="effectRange" val="1100"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Sleep" time="10" val="0"/>
+    <effect count="1" name="Sleep" time="15" val="0"/>
   </for>  
 </skill>
 <skill id="1395" levels="10" name="Erase">
   <!-- Bishop, Prophet, Elder, Shillien Elder -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <!-- needs to unsummon (destroy) target summon -->
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
@@ -1737,6 +1788,7 @@
   <!-- Bishop -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <!-- needs to increase target's MP usage cost -->
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
@@ -1747,6 +1799,7 @@
   <!-- Elder -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <!-- needs to decrease target's MP usage cost -->
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
@@ -1755,7 +1808,7 @@
 </skill>
 <skill id="1398" levels="10" name="Mana Burn"> 
 <!-- Done by KID -->
-  <table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table>
+  <table name="#mpConsume"> 77 80 83 87 89 93 95 98 100 103 </table>
   <table name="#power"> 117 123 128 133 138 143 148 153 157 162 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -1771,7 +1824,7 @@
 </skill>
 <skill id="1399" levels="5" name="Mana Storm"> 
 <!-- Done by KID -->
-  <table name="#mpConsume"> 80 87 93 98 103 </table>
+  <table name="#mpConsume"> 120 129 138 147 153 </table>
   <table name="#power"> 62 67 72 77 81 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
