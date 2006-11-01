@@ -16,7 +16,7 @@ DROP_RATE=20
 ALT_RP_100=0
 
 #Quest items
-MSTONE,CH_SKULL,K_HORN=range(5887,5890)
+MSTONE,K_HORN,CH_SKULL=range(5887,5890)
 
 #Quest collections
 REWARDS = [5340]+range(5346,5355,2)
