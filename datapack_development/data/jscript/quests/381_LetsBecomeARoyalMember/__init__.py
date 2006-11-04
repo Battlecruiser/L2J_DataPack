@@ -25,6 +25,7 @@ class Quest (JQuest) :
   def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
   def onEvent (self,event,st) :
+      htmltext = event
       if event == "30232-02.htm":
          if st.getPlayer().getLevel() >= 55 and st.getQuestItemsCount(MEMBERSHIP_1) :
             st.set("cond","1")
@@ -87,7 +88,7 @@ class Quest (JQuest) :
       if npcId == ANCIENT_GARGOYLE and not coin :
          if st.getRandom(100) < GARGOYLE_CHANCE :
             st.giveItems(KAILS_COIN,1)
-            if album :
+            if album or clover :
                st.playSound("ItemSound.quest_middle")
             else :
                st.playSound("ItemSound.quest_itemget")
