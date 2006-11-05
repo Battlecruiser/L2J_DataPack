@@ -106,12 +106,16 @@ class Quest (JQuest) :
 		elif event.startswith("selectAGrade_"):
 			if st.getInt("bypass"):
 				aGradeItemId = int(event.replace("selectAGrade_", ""))
-				htmltext = "31002-12.htm"
-				st.giveItems(aGradeItemId,1)
-				st.giveItems(STAR_OF_DESTINY,1)
-				st.setState(COMPLETED)
-				st.unset("cond")
-				st.unset("bypass")
+				if aGradeItemId in (80,98,150,212,235,269,288,2504,5233):
+					htmltext = "31002-12.htm"
+					st.giveItems(aGradeItemId,1)
+					st.giveItems(STAR_OF_DESTINY,1)
+					st.setState(COMPLETED)
+					st.unset("cond")
+					st.unset("bypass")
+				else:
+					htmltext="bye"
+					st.exitQuest(1)
 			else:
 				htmltext="<html><body>Maestro Reorin:<br>Are you trying to cheat me?!  What happenned to the weapon you were about to give me for the neutralization of Infernum's evil aura?</body></html>"
 				#st.exitQuest(1)
