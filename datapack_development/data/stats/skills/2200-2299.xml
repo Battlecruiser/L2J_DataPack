@@ -715,7 +715,7 @@
   <set name="isPotion" val="true"/>
   <for>
     <!-- this stack check is incorrect (kept to prevent exploit) - herb should suspend original buff -->
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpeedUp">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="1.33" stackType="pAtkSpeedUp">
       <mul order="0x30" stat="pAtkSpd" val="1.33"/>
     </effect>
   </for>
@@ -730,7 +730,7 @@
   <set name="isPotion" val="true"/>
   <for>
     <!-- this stack check is incorrect (kept to prevent exploit) - herb should suspend original buff -->
-	<effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-mAtkSpd" stackType="mAtkSpeedUp">
+	<effect count="1" name="Buff" time="120" val="0" stackOrder="1.30" stackType="mAtkSpeedUp">
       <mul order="0x30" stat="mAtkSpd" val="1.30"/>
     </effect>
   </for>
@@ -745,7 +745,7 @@
   <set name="isPotion" val="true"/>
   <for>
     <!-- this stack check is incorrect (kept to prevent exploit) - herb should suspend original buff -->
-	<effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-rCrit" stackType="rCrit">
+	<effect count="1" name="Buff" time="120" val="0" stackOrder="1.30" stackType="rCrit">
       <mul order="0x30" stat="rCrit" val="1.30"/>
     </effect>
   </for>
@@ -760,7 +760,7 @@
   <set name="isPotion" val="true"/>
   <for>
     <!-- this stack check is incorrect (kept to prevent exploit) - herb should suspend original buff -->
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="33" stackType="SpeedUp">
       <add order="0x40" stat="runSpd" val="33"/>
     </effect>
   </for>
