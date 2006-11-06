@@ -6631,3 +6631,21 @@ INSERT INTO `etcitem` (`item_id`, `name`, `crystallizable`, `item_type`, `weight
  (8554, 'Recipe: Red Mask of Victory (100%)', 'false', 'none', '30', 'stackable', 'paper', 'none', '0', '0', 0, 'true', 'C5Item', 'none', '2'), 
  (8555, 'Echo Crystal - Viva Victory Korea', 'false', 'none', '10', 'normal', 'paper', 'none', '0', '0', 0, 'true', 'C5Item', 'none', '2'), 
  (8556, 'Dewdrop of Destruction', 'false', 'none', '3', 'normal', 'paper', 'none', '0', '0', 0, 'true', 'C5Item', 'none', '2');
+
+-- C5 Herb items (this will get cleaned up when the other new IDs are added :)
+INSERT INTO etcitem VALUES
+(8600,'Herb of Life','false','none',0,'normal','paper','none',0,0,0,'false','C5Item','none',2),
+(8601,'Greater Herb of Life','false','none',0,'normal','paper','none',0,0,0,'false','C5Item','none',2),
+(8602,'Superior Herb of Life','false','none',0,'normal','paper','none',0,0,0,'false','C5Item','none',2),
+(8603,'Herb of Mana','false','none',0,'normal','paper','none',0,0,0,'false','C5Item','none',2),
+(8604,'Greater Herb of Mana','false','none',0,'normal','paper','none',0,0,0,'false','C5Item','none',2),
+(8605,'Superior Herb of Mana','false','none',0,'normal','paper','none',0,0,0,'false','C5Item','none',2),
+(8606,'Herb of Power','false','none',0,'normal','paper','none',0,0,0,'false','C5Item','none',2),
+(8607,'Herb of Magic','false','none',0,'normal','paper','none',0,0,0,'false','C5Item','none',2),
+(8608,'Herb of Atk. Spd.','false','none',0,'normal','paper','none',0,0,0,'false','C5Item','none',2),
+(8609,'Herb of Casting Spd.','false','none',0,'normal','paper','none',0,0,0,'false','C5Item','none',2),
+(8610,'Herb of Critical Attack','false','none',0,'normal','paper','none',0,0,0,'false','C5Item','none',2),
+(8611,'Herb of Speed','false','none',0,'normal','paper','none',0,0,0,'false','C5Item','none',2),
+(8612,'Herb of Warrior','false','none',0,'normal','paper','none',0,0,0,'false','C5Item','none',2),
+(8613,'Herb of Mystic','false','none',0,'normal','paper','none',0,0,0,'false','C5Item','none',2),
+(8614,'Herb of Recovery','false','none',0,'normal','paper','none',0,0,0,'false','C5Item','none',2);
