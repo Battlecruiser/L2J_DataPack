@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
-<skill id="2001" levels="1" name="Red potion">
+<skill id="2001" levels="1" name="Red Potion">
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HOT"/>
@@ -13,7 +13,7 @@
     <effect count="3" name="HealOverTime" time="5" val="2" stackOrder="2" stackType="HpRecover"/>
   </for>
 </skill>
-<skill id="2002" levels="1" name="Healing drug">
+<skill id="2002" levels="1" name="Healing Drug">
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HOT"/>
@@ -26,7 +26,15 @@
     <effect count="4" name="HealOverTime" time="5" val="1.5" stackOrder="1.5" stackType="HpRecover"/>
   </for>
 </skill>
-<skill id="2003" levels="1" name="Mana drug">
+<skill id="2003" levels="1" name="Squash Seed">
+  <!-- WARNING - this "Mana Drug" no longer exists... it's effects will soon be deprecated -->
+  <!-- Actual statements for "Squash Seed"
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  -->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="MPHOT"/>
@@ -39,7 +47,7 @@
     <effect count="4" name="ManaHealOverTime" time="5" val="1.5" stackOrder="1.5" stackType="MpRecover"/> 
   </for>
 </skill>
-<skill id="2004" levels="1" name="Deleted">
+<skill id="2004" levels="1" name="Large Squash Seed">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -48,7 +56,15 @@
   <for>
   </for>
 </skill>
-<skill id="2005" levels="1" name="Mana potion">
+<skill id="2005" levels="1" name="Pollen">
+  <!-- WARNING - this "Mana Potion" no longer exists... it's effects will soon be deprecated -->
+  <!-- Actual statements for "Pollen"
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  -->
   <set name="power" val="200.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="MANAHEAL"/>
@@ -59,7 +75,7 @@
   <for>
   </for>
 </skill>
-<skill id="2006" levels="1" name="Scroll of enchant weapon-A grade">
+<skill id="2006" levels="1" name="Scroll: Enchant Weapon (Grade A)">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_WEAPON"/>
@@ -69,7 +85,7 @@
   <for>
   </for>
 </skill>
-<skill id="2007" levels="1" name="Scroll of enchant armor-A grade">
+<skill id="2007" levels="1" name="Scroll: Enchant Armor (Grade A)">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_ARMOR"/>
@@ -79,7 +95,7 @@
   <for>
   </for>
 </skill>
-<skill id="2008" levels="1" name="Crystal scroll of enchant weapon-A grade">
+<skill id="2008" levels="1" name="Item - Beast Spirit Shot">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="NOTDONE"/>
@@ -88,7 +104,7 @@
   <for>
   </for>
 </skill>
-<skill id="2009" levels="1" name="Crystal scroll of enchant armor-A grade">
+<skill id="2009" levels="1" name="Item - Beast Blessed Spirit Shot">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="NOTDONE"/>
@@ -97,7 +113,7 @@
   <for>
   </for>
 </skill>
-<skill id="2010" levels="1" name="Endeavor potion">
+<skill id="2010" levels="1" name="Endeavor Potion">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
@@ -108,7 +124,7 @@
   <for>
   </for>
 </skill>
-<skill id="2011" levels="1" name="Quick step potion">
+<skill id="2011" levels="1" name="Haste Potion">
   <!-- Done by dc -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -124,7 +140,7 @@
     </effect>
   </for>
 </skill>
-<skill id="2012" levels="1" name="Swift attack potion">
+<skill id="2012" levels="1" name="Potion of Alacrity">
   <!-- Done by dc -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -140,7 +156,7 @@
     </effect>
   </for>
 </skill>
-<skill id="2013" levels="1" name="Scroll of escape">
+<skill id="2013" levels="1" name="Scroll Of Escape">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="20000"/>
@@ -152,7 +168,7 @@
   <for>
   </for>
 </skill>
-<skill id="2014" levels="1" name="Scroll of resurrection">
+<skill id="2014" levels="1" name="Scroll Of Resurrection">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_CORPSE_PLAYER"/>
   <set name="hitTime" val="15000"/>
@@ -164,7 +180,7 @@
   <for>
   </for>
 </skill>
-<skill id="2015" levels="1" name="Scroll of enchant weapon-B grade">
+<skill id="2015" levels="1" name="Scroll: Enchant Weapon (Grade B)">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_WEAPON"/>
@@ -174,7 +190,7 @@
   <for>
   </for>
 </skill>
-<skill id="2016" levels="1" name="Scroll of enchant armor-B grade">
+<skill id="2016" levels="1" name="Scroll: Enchant Armor (Grade B)">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_ARMOR"/>
@@ -184,7 +200,7 @@
   <for>
   </for>
 </skill>
-<skill id="2017" levels="1" name="Scroll of enchant weapon-C grade">
+<skill id="2017" levels="1" name="Scroll: Enchant Weapon (Grade C)">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_WEAPON"/>
@@ -194,7 +210,7 @@
   <for>
   </for>
 </skill>
-<skill id="2018" levels="1" name="Scroll of enchant armor-C grade">
+<skill id="2018" levels="1" name="Scroll: Enchant Armor (Grade C)">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_ARMOR"/>
@@ -204,7 +220,7 @@
   <for>
   </for>
 </skill>
-<skill id="2019" levels="1" name="Scroll of enchant weapon-D grade">
+<skill id="2019" levels="1" name="Scroll: Enchant Weapon (Grade D)">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_WEAPON"/>
@@ -214,7 +230,7 @@
   <for>
   </for>
 </skill>
-<skill id="2020" levels="1" name="Scroll of enchant armor-D grade">
+<skill id="2020" levels="1" name="Scroll: Enchant Armor (Grade D)">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_ARMOR"/>
@@ -224,7 +240,7 @@
   <for>
   </for>
 </skill>
-<skill id="2021" levels="1" name="Scroll of enchant weapon-S grade">
+<skill id="2021" levels="1" name="Scroll: Enchant Weapon (Grade S)">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_WEAPON"/>
@@ -234,7 +250,7 @@
   <for>
   </for>
 </skill>
-<skill id="2022" levels="1" name="Scroll of enchant armor-S grade">
+<skill id="2022" levels="1" name="Scroll: Enchant Armor (Grade S)">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_ARMOR"/>
@@ -247,6 +263,7 @@
 <skill id="2023" levels="1" name="Fairy Firecracker">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <!-- HOT ??? this a temp hack to make it work? -->
   <set name="skillType" val="HOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -257,6 +274,7 @@
 <skill id="2024" levels="1" name="Firecracker">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <!-- HOT ??? this a temp hack to make it work? -->
   <set name="skillType" val="HOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -267,6 +285,7 @@
 <skill id="2025" levels="1" name="Large Firecracker">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <!-- HOT ??? this a temp hack to make it work? -->
   <set name="skillType" val="HOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -274,52 +293,62 @@
   <for>
   </for>
 </skill>
-<skill id="2026" levels="1" name="Crystal scroll of enchant armor-C grade">
+<skill id="2026" levels="1" name="Scroll: Enchant Weapon (Grade S)">
+<!-- Blessed Enchant -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ITEM"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="ENCHANT_WEAPON"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
-<skill id="2027" levels="1" name="Crystal scroll of enchant weapon-D grade">
+<skill id="2027" levels="1" name="Scroll: Enchant Weapon (Grade A)">
+<!-- Blessed Enchant -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ITEM"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="ENCHANT_WEAPON"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
-<skill id="2028" levels="1" name="Crystal scroll of enchant armor-D grade">
+<skill id="2028" levels="1" name="Scroll: Enchant Weapon (Grade B)">
+<!-- Blessed Enchant -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ITEM"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="ENCHANT_WEAPON"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
-<skill id="2029" levels="1" name="Crystal scroll of enchant weapon-S grade">
+<skill id="2029" levels="1" name="Scroll: Enchant Weapon (Grade C)">
+<!-- Blessed Enchant -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ITEM"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="ENCHANT_WEAPON"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
-<skill id="2030" levels="1" name="Crystal scroll of enchant armor-S grade">
+<skill id="2030" levels="1" name="Scroll: Enchant Weapon (Grade D)">
+<!-- Blessed Enchant -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ITEM"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="ENCHANT_WEAPON"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
-<skill id="2031" levels="1" name="Lesser healing potion">
+<skill id="2031" levels="1" name="Lesser Healing Potion">
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HOT"/>
@@ -345,7 +374,30 @@
     <effect count="5" name="HealOverTime" time="3" val="60" stackOrder="60" stackType="HpRecover"/>
   </for>
 </skill>
-<skill id="2033" levels="1" name="Haste potion">
+<skill id="2033" levels="1" name="Item - Beast Soul Shot">
+  <!-- WARNING - this "Haste Potion" no longer exists... it's effect will soon be deprecated -->
+  <!-- Actual statements for "Item - Beast Soul Shot"
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ITEM"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isPotion" val="true"/>
+  <for>
+    <effect name="Buff" time="1200" count="1" val="0" stackOrder="33" stackType="SpeedUp">
+      <add order="0x40" stat="runSpd" val="33"/>
+    </effect>
+  </for>
+</skill>
+<skill id="2034" levels="1" name="Greater Haste Potion">
   <!-- Done by dc -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -361,23 +413,7 @@
     </effect>
   </for>
 </skill>
-<skill id="2034" levels="1" name="Enchant haste potion">
-  <!-- Done by dc -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
-  <set name="isPotion" val="true"/>
-  <for>
-    <effect name="Buff" time="1200" count="1" val="0" stackOrder="33" stackType="SpeedUp">
-      <add order="0x40" stat="runSpd" val="33"/>
-    </effect>
-  </for>
-</skill>
-<skill id="2035" levels="1" name="Enchant attack speed potion">
+<skill id="2035" levels="1" name="Greater Swift Attack Potion">
   <!-- Done by dc -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -393,7 +429,8 @@
     </effect>
   </for>
 </skill>
-<skill id="2036" levels="1" name="Blessed scroll of escape">
+<skill id="2036" levels="2" name="Blessed Scroll of Escape">
+<!-- lvl 2 version is "L2day Blessed Scroll of Escape" -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="RECALL"/>
@@ -403,7 +440,7 @@
   <for>
   </for>
 </skill>
-<skill id="2037" levels="1" name="Greater healing potion">
+<skill id="2037" levels="1" name="Greater Healing Potion">
   <set name="power" val="3.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HOT"/>
@@ -416,7 +453,7 @@
     <effect count="5" name="HealOverTime" time="3" val="120" stackOrder="120" stackType="HpRecover"/>
   </for>
 </skill>
-<skill id="2038" levels="1" name="Quick healing potion">
+<skill id="2038" levels="1" name="Quick Healing Potion">
   <set name="power" val="435.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HEAL"/>
@@ -427,7 +464,7 @@
   <for>
   </for>
 </skill>
-<skill id="2039" levels="1" name="Soulshot">
+<skill id="2039" levels="1" name="Soulshot: No Grade">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SOULSHOT"/>
@@ -437,7 +474,7 @@
   <for>
   </for>
 </skill>
-<skill id="2040" levels="1" name="Scroll of escape to agit">
+<skill id="2040" levels="1" name="Scroll of Escape: Clan Hall">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="20000"/>
@@ -449,7 +486,7 @@
   <for>
   </for>
 </skill>
-<skill id="2041" levels="1" name="Scroll of escape to castle">
+<skill id="2041" levels="1" name="Scroll of Escape: Castle">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="20000"/>
@@ -471,7 +508,7 @@
   <for>
   </for>
 </skill>
-<skill id="2043" levels="1" name="Advanced antidote">
+<skill id="2043" levels="1" name="Greater Antidote">
   <set name="power" val="7.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="UNPOISON"/>
@@ -491,7 +528,7 @@
   <for>
   </for>
 </skill>
-<skill id="2045" levels="1" name="Emergency dressing">
+<skill id="2045" levels="1" name="Emergency Dressing">
   <set name="power" val="7.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="UNBLEED"/>
@@ -501,7 +538,7 @@
   <for>
   </for>
 </skill>
-<skill id="2046" levels="1" name="Wolves' necklace">
+<skill id="2046" levels="1" name="Wolves' Necklace">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="5000"/>
@@ -514,7 +551,7 @@
   <for>
   </for>
 </skill>
-<skill id="2047" levels="1" name="Magic shot">
+<skill id="2047" levels="1" name="Spiritshot: No Grade">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
@@ -524,7 +561,7 @@
   <for>
   </for>
 </skill>
-<skill id="2048" levels="1" name="Wolves' food">
+<skill id="2048" levels="1" name="Wolves' Food">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="FEED_PET"/>
@@ -534,7 +571,7 @@
   <for>
   </for>
 </skill>
-<skill id="2049" levels="1" name="Blessed scroll of resurrection">
+<skill id="2049" levels="1" name="Blessed Scroll of Resurrection">
   <set name="power" val="100.0"/>
   <set name="target" val="TARGET_CORPSE_PLAYER"/>
   <set name="hitTime" val="15000"/>
@@ -725,7 +762,7 @@
   <for>
   </for>
 </skill>
-<skill id="2061" levels="1" name="Blessed Spiritshot">
+<skill id="2061" levels="1" name="Blessed Spiritshot: No Grade">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
@@ -735,7 +772,15 @@
   <for>
   </for>
 </skill>
-<skill id="2062" levels="1" name="L2Day - Blessed Scroll of Resurrection">
+<skill id="2062" levels="1" name="none">
+  <!-- WARNING - this "L2Day - Blessed Scroll of Resurrection" no longer exists... it's effect will soon be deprecated -->
+  <!-- Actual statements for "none"
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  -->
   <set name="power" val="100.0"/>
   <set name="target" val="TARGET_CORPSE_PLAYER"/>
   <set name="hitTime" val="15000"/>
@@ -783,7 +828,7 @@
   <for>
   </for>
 </skill>
-<skill id="2066" levels="1" name="Echo Crystal">
+<skill id="2066" levels="1" name="Item - Theme Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -791,7 +836,7 @@
   <for>
   </for>
 </skill>
-<skill id="2067" levels="1" name="Echo Crystal">
+<skill id="2067" levels="1" name="Item - Theme Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -799,7 +844,7 @@
   <for>
   </for>
 </skill>
-<skill id="2068" levels="1" name="Echo Crystal">
+<skill id="2068" levels="1" name="Item - Race Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -807,7 +852,7 @@
   <for>
   </for>
 </skill>
-<skill id="2069" levels="1" name="Echo Crystal">
+<skill id="2069" levels="1" name="Item - Race Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -815,7 +860,7 @@
   <for>
   </for>
 </skill>
-<skill id="2070" levels="1" name="Echo Crystal">
+<skill id="2070" levels="1" name="Item - Race Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -823,7 +868,7 @@
   <for>
   </for>
 </skill>
-<skill id="2071" levels="1" name="Echo Crystal">
+<skill id="2071" levels="1" name="Item - Race Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -831,7 +876,7 @@
   <for>
   </for>
 </skill>
-<skill id="2072" levels="1" name="Echo Crystal">
+<skill id="2072" levels="1" name="Item - Race Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -839,7 +884,7 @@
   <for>
   </for>
 </skill>
-<skill id="2073" levels="1" name="Echo Crystal">
+<skill id="2073" levels="1" name="Item - Theme Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
