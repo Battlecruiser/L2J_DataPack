@@ -56,22 +56,29 @@
       <using slotitem="5738;12"/>
       <using slotitem="5722;9"/>
      </and>
-   </add>
-           <add val='3' order='0x40' stat='CON'>
-    <and>
-     <using slotitem="2417;6"/>
-     <using slotitem="5738;12"/>
-     <using slotitem="5722;9"/>
+    </add>
+    <add val='3' order='0x40' stat='CON'>
+     <and>
+      <using slotitem="2417;6"/>
+      <using slotitem="5738;12"/>
+      <using slotitem="5722;9"/>
      </and>
     </add>
-            <add val='-3' order='0x40' stat='STR'>
-    <and>
-     <using slotitem="2417;6"/>
-     <using slotitem="5738;12"/>
-     <using slotitem="5722;9"/>
+    <add val='-3' order='0x40' stat='STR'>
+     <and>
+      <using slotitem="2417;6"/>
+      <using slotitem="5738;12"/>
+      <using slotitem="5722;9"/>
      </and>
     </add>
-
+    <add stat='rShld' order='0x40' val='4'>
+     <and>
+      <using slotitem="2417;6"/>
+      <using slotitem="5738;12"/>
+      <using slotitem="5722;9"/>
+      <using slotitem="110;8"/>
+     </and>
+    </add>
   <enchant val='0' order='0x0C' stat='pDef'/>
 </for>
 </item>
