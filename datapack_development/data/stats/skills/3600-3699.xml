@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+
+<skill id="3603" levels="10" name="Demonic Sword Zariche">
+  <table name="#maxCp"> 1500 3000 4500 6000 7500 9000 10500 12000 13500 15000 </table>
+  <table name="#pAtk"> 1500 3000 4500 6000 7500 9000 10500 12000 13500 15000 </table>
+  <table name="#mAtk"> 150 300 450 600 750 900 1050 1200 1350 1500 </table>
+  <table name="#pDef"> 300 1000 1500 3000 4500 6000 7500 9000 10500 12000 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <set name="minPledgeClass" val="2"/>
+  <for>
+    <add stat="maxCp" val="#maxCp" order="0x40"/>
+	<add stat="pAtk" val="#pAtk" order="0x40"/>
+	<add stat="mAtk" val="#mAtk" order="0x40"/>
+	<add stat="pDef" val="#pDef" order="0x40"/>
+  </for>
+</skill>
+</list>
