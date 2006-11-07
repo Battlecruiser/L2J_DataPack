@@ -457,7 +457,7 @@
   <player hp="30"/>
 </cond>
 <for>
-  <effect count="60" name="DamOverTime" time="1" val="75">
+  <effect count="1" name="Buff" time="60" val="0">
      <add order="0x40" stat="accCombat" val="6"/>
      <add order="0x40" stat="runSpd" val="#runSpd"/>
      <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
