@@ -271,6 +271,7 @@ $MYG < ../sql/clan_data.sql &> /dev/null
 $MYG < ../sql/clan_wars.sql &> /dev/null
 $MYG < ../sql/clanhall.sql &> /dev/null
 $MYG < ../sql/class_list.sql &> /dev/null
+$MYG < ../sql/cursedWeapons.sql &> /dev/null
 $MYG < ../sql/droplist.sql &> /dev/null
 $MYG < ../sql/etcitem.sql &> /dev/null
 $MYG < ../sql/fish.sql &> /dev/null
