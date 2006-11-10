@@ -114,7 +114,7 @@ class Quest (JQuest) :
        st.exitQuest(1)
     elif event == "30844-9.htm" :
        st.set("cond","2") 
-    elif len(event) == 4 and int(event) in NPC.keys() :
+    elif len(event) == 5 and int(event) in NPC.keys() :
        if event == "30844" :
           htmltext = "30844-2.htm"
        else :
