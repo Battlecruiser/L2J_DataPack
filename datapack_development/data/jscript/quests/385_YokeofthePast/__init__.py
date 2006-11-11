@@ -45,7 +45,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_itemget")
     return
 
-QUEST       = Quest(385,"385_YokeofthePast","Yoke of the Past")
+QUEST       = Quest(385,"385_YokeofthePast","Yoke of the Past",true)
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 
