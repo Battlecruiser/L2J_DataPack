@@ -7,7 +7,7 @@ ANCIENT_SCROLL = 5902
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -45,7 +45,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_itemget")
     return
 
-QUEST       = Quest(385,"385_YokeofthePast","Yoke of the Past",true)
+QUEST       = Quest(385,"385_YokeofthePast","Yoke of the Past",True)
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

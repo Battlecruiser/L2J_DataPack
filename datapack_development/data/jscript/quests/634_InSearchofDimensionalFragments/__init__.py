@@ -7,7 +7,7 @@ DIMENSION_FRAGMENT_ID = 7079
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -45,14 +45,14 @@ class Quest (JQuest) :
 
     return
 
-QUEST       = Quest(634, "634_InSearchofDimensionalFragments", "In Search of Dimensional Fragments")
+QUEST       = Quest(634, "634_InSearchofDimensionalFragments", "In Search of Dimensional Fragments",True)
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 
-for npcId in range(30494,30508):
+for npcId in range(31494,31508):
 	CREATED.addTalkId(npcId)
 	STARTED.addTalkId(npcId)
 	QUEST.addStartNpc(npcId)
