@@ -47,9 +47,9 @@
    </mul>
   <add stat='maxHp' order='0x40' val='20'>
      <and>
-        <using slotitem="2378;11"/>
-	 <using slotitem="2411;6"/>
-	 <using slotitem="2493;8"/>
+      <using slotitem="2378;11"/>
+	    <using slotitem="2411;6"/>
+	    <using slotitem="2493;8"/>
      </and>
   </add>
  <enchant val='0' order='0x0C' stat='pDef'/>
@@ -59,11 +59,11 @@
   <for>
     <add val='111' order='0x10' stat='pDef'/>
   <enchant val='0' order='0x0C' stat='pDef'/>
-</for>
+  </for>
 </item>
 <item id='354' name="Chain Mail Shirt">
-  <for>
-    <add val='120' order='0x10' stat='pDef'/>
+ <for>
+  <add val='120' order='0x10' stat='pDef'/>
 	<mul val='1.0524' order='0x30' stat='pDef'>
 	<and>
     	    <using slotitem="381;11"/>
@@ -468,7 +468,7 @@
 <item id='395' name="Manticore Skin Shirt">
  <for>
    <add val='77' order='0x10' stat='pDef'/>
-   <add stat='maxMp' order='0x40' val='91'>
+   <add stat='maxMp' order='0x40' val='92'>
      <and>
      <using slotitem="417;11"/>
      <using slotitem="2424;12"/></and>
