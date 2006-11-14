@@ -13,7 +13,7 @@ KRORINS_JOURNAL = 7252
 default = "<html><head><body>I have nothing to say you</body></html>"
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
 
  def onEvent (self,event,st) :
    id = st.getState()
@@ -97,7 +97,7 @@ class Quest (JQuest) :
        htmltext = "31664-2.htm"
    return htmltext
 
-QUEST       = Quest(31,"31_SecretBuriedInTheSwamp","Secret Buried In The Swamp")
+QUEST       = Quest(31,"31_SecretBuriedInTheSwamp","Secret Buried In The Swamp",True)
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

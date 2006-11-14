@@ -44,7 +44,7 @@ MOBS = [ 20654,20656,20657,20658 ]
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
 
  def onEvent (self,event,st) :
     id = st.getState() 
@@ -105,7 +105,7 @@ class Quest (JQuest) :
      return  
 
 # Quest class and state definition
-QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
+QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION,True)
 
 CREATED     = State('Start',     QUEST)
 STARTED     = State('Started',   QUEST)

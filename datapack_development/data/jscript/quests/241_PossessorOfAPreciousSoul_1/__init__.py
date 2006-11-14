@@ -36,7 +36,7 @@ BARAHAM = 27113
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -261,7 +261,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_middle")
    return
 
-QUEST       = Quest(241,"241_PossessorOfAPreciousSoul_1","Possessor Of A Precious Soul - 1")
+QUEST       = Quest(241,"241_PossessorOfAPreciousSoul_1","Possessor Of A Precious Soul - 1",True)
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

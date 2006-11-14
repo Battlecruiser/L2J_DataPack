@@ -30,7 +30,7 @@ default="<html><head><body>I have nothing to say you</body></html>"
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -138,7 +138,7 @@ class Quest (JQuest) :
      htmltext = "31521-2.htm"
    return htmltext
 
-QUEST       = Quest(622,"622_DeliveryOfSpecialLiquor","Delivery of special liquor")
+QUEST       = Quest(622,"622_DeliveryOfSpecialLiquor","Delivery of special liquor",True)
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

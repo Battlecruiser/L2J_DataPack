@@ -15,7 +15,7 @@ CHAPTER_OF_FIRE,CHAPTER_OF_WATER,CHAPTER_OF_WIND,CHAPTER_OF_EARTH = range(5917,5
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -71,7 +71,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_middle")
    return
 
-QUEST       = Quest(370,"370_AWisemanSowsSeeds","A Wiseman Sows Seeds")
+QUEST       = Quest(370,"370_AWisemanSowsSeeds","A Wiseman Sows Seeds",True)
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

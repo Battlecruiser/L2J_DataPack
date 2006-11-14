@@ -10,7 +10,7 @@ CHANCE = 9
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
 
  def onEvent (self,event,st) :
      htmltext = event
@@ -39,7 +39,7 @@ class Quest (JQuest) :
          htmltext = "30926-03.htm"
      elif amount :
          htmltext = "30926-04.htm"
-         st.giveItems(ADENA,amount*2250)
+         st.giveItems(ADENA,amount*1250)
          st.takeItems(BLADE_STAKATO_FANG,-1)
          st.playSound("ItemSound.quest_middle")
      return htmltext
@@ -53,7 +53,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
      return
 
-QUEST       = Quest(368,"368_TrespassingIntoTheSacredArea","Trespassing Into The Sacred Area")
+QUEST       = Quest(368,"368_TrespassingIntoTheSacredArea","Trespassing Into The Sacred Area",True)
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 
