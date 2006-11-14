@@ -196,7 +196,7 @@ def exit503(completed,st):
 
 class Quest (JQuest) :
 
-	def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+	def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
 
 	def onEvent (self,event,st) :
 		htmltext = event
@@ -510,7 +510,7 @@ class Quest (JQuest) :
 					st.getPcSpawn().addSpawn(27179)
 		return
 
-QUEST		= Quest(503,qn,"Pursuit of Clan Ambition")
+QUEST		= Quest(503,qn,"Pursuit of Clan Ambition",True)
 CREATED		= State('Start', QUEST)
 PROGRESS	= State('Progress', QUEST)
 COMPLETED	= State('Completed', QUEST)

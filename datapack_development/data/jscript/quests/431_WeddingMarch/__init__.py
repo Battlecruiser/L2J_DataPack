@@ -13,7 +13,7 @@ WEDDING_ECHO_CRYSTAL_ID = 7062
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
  
  def onEvent (self,event,st) :
      htmltext = event
@@ -57,7 +57,7 @@ class Quest (JQuest) :
                  st.playSound("ItemSound.quest_itemget")
      return
  
-QUEST       = Quest(431,"431_WeddingMarch","Wedding March")
+QUEST       = Quest(431,"431_WeddingMarch","Wedding March",True)
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

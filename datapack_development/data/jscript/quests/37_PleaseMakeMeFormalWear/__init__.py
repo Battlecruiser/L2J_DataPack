@@ -15,7 +15,7 @@ BOX_OF_COOKIES = 7159
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -93,7 +93,7 @@ class Quest (JQuest) :
      htmltext = "31520-6.htm"
    return htmltext
 
-QUEST       = Quest(37,"37_PleaseMakeMeFormalWear","Please Make Me Formal Wear")
+QUEST       = Quest(37,"37_PleaseMakeMeFormalWear","Please Make Me Formal Wear",True)
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

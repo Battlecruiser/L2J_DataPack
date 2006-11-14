@@ -12,7 +12,7 @@ JEWEL_BOX = 7077
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -75,7 +75,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")	
    return
 
-QUEST       = Quest(35,"35_FindGlitteringJewelry","Find Glittering Jewelry")
+QUEST       = Quest(35,"35_FindGlitteringJewelry","Find Glittering Jewelry",True)
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

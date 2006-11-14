@@ -15,7 +15,7 @@ MOBS = [ 21299,21304 ]
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
 
  def onEvent (self,event,st) :
    cond = st.getInt("cond")
@@ -64,7 +64,7 @@ class Quest (JQuest) :
      st.giveItems(EYE_OF_DARKNESS,qty)
    return
 
-QUEST       = Quest(602,"602_ShadowOfLight","Shadow Of Light")
+QUEST       = Quest(602,"602_ShadowOfLight","Shadow Of Light",True)
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 
