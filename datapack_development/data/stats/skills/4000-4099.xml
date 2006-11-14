@@ -710,14 +710,19 @@
   </for>
 </skill>
 <skill id="4045" levels="1" name="Resist Full Magic Attack">
-  <!-- NOT USED IN C4 -->
-  <set name="power" val="0.0"/>
+  <set name="magicLvl" val="50"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAKNESS"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
-  </for>
+      <add order="0x40" stat="rootRes" val="90"/>
+      <add order="0x40" stat="sleepRes" val="90"/>
+      <add order="0x40" stat="stunRes" val="90"/>
+      <add order="0x40" stat="confusionRes" val="100"/>
+      <add order="0x40" stat="paralyzeRes" val="90"/>
+  </for>  
 </skill>
 <skill id="4046" levels="12" name="Sleep">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
