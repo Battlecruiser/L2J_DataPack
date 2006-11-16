@@ -199,6 +199,7 @@ __all__ = [
 '626_ADarkTwilight',
 '627_HeartInSearchOfPower',
 '634_InSearchofDimensionalFragments',
+'635_InTheDimensionalRift',
 '999_C3Tutorial'
 ]
 print ""
