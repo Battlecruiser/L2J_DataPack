@@ -35,10 +35,10 @@ class Quest (JQuest) :
     htmltext = event
     id=st.getInt("id")
     count=st.getInt("count")
-    if event == "7.htm" :
+    if event == "5.htm" :
       if id :
          if count:
-            htmltext="7a.htm"
+            htmltext="5a.htm"
          st.set("count",str(count+1))
          st.setState(STARTED)
          st.set("cond","1")
