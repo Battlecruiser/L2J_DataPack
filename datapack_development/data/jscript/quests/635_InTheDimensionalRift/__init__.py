@@ -58,7 +58,7 @@ class Quest (JQuest) :
       if st.getPlayer().getLevel() < 20 :
          st.exitQuest(1)
          htmltext="1.htm"
-      elif st.getPlayer().getAllActiveQuests().lenght() > MAX_QUEST :
+      elif len(st.getPlayer().getAllActiveQuests()) > MAX_QUEST :
          st.exitQuest(1)
          htmltext="1a.htm"
       elif not st.getQuestItemsCount(DIMENSION_FRAGMENT) :
