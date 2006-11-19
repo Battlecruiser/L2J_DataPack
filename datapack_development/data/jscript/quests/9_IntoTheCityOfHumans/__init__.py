@@ -30,9 +30,9 @@ class Quest (JQuest) :
      st.set("cond","2") 
      st.set("id","2") 
      st.playSound("ItemSound.quest_middle") 
-   elif event == "30576-02.htm" : 
+   elif event == "30576-02.htm" :
+     st.giveItems(MARK_OF_TRAVELER, 1)
      st.giveItems(SCROLL_OF_ESCAPE_GIRAN,1) 
-     st.giveItems(MARK_OF_TRAVELER, 1) 
      st.set("cond","0") 
      st.setState(COMPLETED) 
      st.playSound("ItemSound.quest_finish") 

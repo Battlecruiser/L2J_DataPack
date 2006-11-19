@@ -9,7 +9,7 @@ HARRYS_RECEIPT1_ID = 1008
 HARRYS_RECEIPT2_ID = 1009
 GOLEM_SHARD_ID = 1010
 TOOL_BOX_ID = 1011
-COTTON_TUNIC_ID = 1100
+WOODEN_BP_ID = 1100
 
 class Quest (JQuest) :
 
@@ -26,10 +26,11 @@ class Quest (JQuest) :
           st.giveItems(HARRYS_RECEIPT1_ID,1)
         htmltext = "30035-04.htm"
     elif event == "152_2" :
-            st.takeItems(HARRYS_RECEIPT1_ID,st.getQuestItemsCount(HARRYS_RECEIPT1_ID))
+            st.takeItems(HARRYS_RECEIPT1_ID,-1)
             if st.getQuestItemsCount(HARRYS_RECEIPT2_ID) == 0 :
               st.giveItems(HARRYS_RECEIPT2_ID,1)
             htmltext = "30283-02.htm"
+            st.set("cond","2")
     return htmltext
 
 
@@ -44,28 +45,22 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 30035 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-        if int(st.get("cond"))<15 :
           if st.getPlayer().getLevel() >= 10 :
             htmltext = "30035-03.htm"
             return htmltext
           else:
             htmltext = "30035-02.htm"
             st.exitQuest(1)
-        else:
-          htmltext = "30035-02.htm"
-          st.exitQuest(1)
    elif npcId == 30035 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 30035 and int(st.get("cond"))!=0 and st.getQuestItemsCount(HARRYS_RECEIPT1_ID)!=0 and st.getQuestItemsCount(TOOL_BOX_ID)==0 :
-        htmltext = "30035-05.htm"
-   elif npcId == 30035 and int(st.get("cond"))!=0 and st.getQuestItemsCount(HARRYS_RECEIPT2_ID)!=0 and st.getQuestItemsCount(TOOL_BOX_ID)==0 :
         htmltext = "30035-05.htm"
    elif npcId == 30283 and int(st.get("cond"))!=0 and st.getQuestItemsCount(HARRYS_RECEIPT1_ID)!=0 :
         htmltext = "30283-01.htm"
    elif npcId == 30283 and int(st.get("cond"))!=0 and st.getQuestItemsCount(HARRYS_RECEIPT2_ID)!=0 and st.getQuestItemsCount(GOLEM_SHARD_ID)<5 and st.getQuestItemsCount(TOOL_BOX_ID)==0 :
         htmltext = "30283-03.htm"
    elif npcId == 30283 and int(st.get("cond"))!=0 and st.getQuestItemsCount(HARRYS_RECEIPT2_ID)!=0 and st.getQuestItemsCount(GOLEM_SHARD_ID)>=5 and st.getQuestItemsCount(TOOL_BOX_ID)==0 :
-        st.takeItems(GOLEM_SHARD_ID,st.getQuestItemsCount(GOLEM_SHARD_ID))
+        st.takeItems(GOLEM_SHARD_ID,-1)
         if st.getQuestItemsCount(TOOL_BOX_ID) == 0 :
           st.giveItems(TOOL_BOX_ID,1)
         htmltext = "30283-04.htm"
@@ -80,22 +75,21 @@ class Quest (JQuest) :
         st.setState(COMPLETED)
         st.playSound("ItemSound.quest_finish")
         st.set("onlyone","1")
-        st.giveItems(COTTON_TUNIC_ID,1)
+        st.giveItems(WOODEN_BP_ID,1)
         st.addExpAndSp(5000,0)
         htmltext = "30035-06.htm"
    return htmltext
 
  def onKill (self,npc,st):
-
-   npcId = npc.getNpcId()
-   if npcId == 20016 :
-        st.set("id","0")
-        if int(st.get("cond")) != 0 and st.getRandom(100)<30 and st.getQuestItemsCount(GOLEM_SHARD_ID)<5 :
-          st.giveItems(GOLEM_SHARD_ID,1)
-          if st.getQuestItemsCount(GOLEM_SHARD_ID) == 5 :
-            st.playSound("ItemSound.quest_middle")
-          else:
-            st.playSound("ItemSound.quest_itemget")
+   st.set("id","0")
+   count=st.getQuestItemsCount(GOLEM_SHARD_ID)
+   if st.getInt("cond")==2 and st.getRandom(100) < 30 and count < 5 :
+      st.giveItems(GOLEM_SHARD_ID,1)
+      if count == 4 :
+         st.playSound("ItemSound.quest_middle")
+         st.set("cond","3")
+      else:
+         st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST       = Quest(152,"152_ShardsOfGolem","Shards Of Golem")

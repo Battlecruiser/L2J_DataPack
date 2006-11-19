@@ -76,8 +76,8 @@ class Quest (JQuest) :
       if int(st.get("id")) != 154 :
         st.set("id","154")
         htmltext = "30312-07.htm"
-        st.takeItems(MAIDEN_DOLL_ID,st.getQuestItemsCount(MAIDEN_DOLL_ID))
         st.giveItems(EARING_ID,1)
+        st.takeItems(MAIDEN_DOLL_ID,-1)
         st.addExpAndSp(100,0)
         st.set("cond","0")
         st.setState(COMPLETED)

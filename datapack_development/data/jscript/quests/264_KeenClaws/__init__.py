@@ -5,13 +5,6 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 WOLF_CLAW = 1367
-WOODEN_HELMET = 43
-ADENA = 57
-LEATHER_SANDALS = 36
-HOSE = 462
-HEALING_POTION = 1061
-SHORT_GLOVES = 48
-CLOTH_SHOES = 35
 
 DROP={20003:[[5,10,8],[0,5,2]],20456:[[16,20,2],[0,16,1]]}
 
@@ -44,23 +37,10 @@ class Quest (JQuest) :
        htmltext = "30136-04.htm"
      else :
        st.takeItems(WOLF_CLAW,-1)
-       n = st.getRandom(17)
-       if n == 0 :
-          st.giveItems(WOODEN_HELMET,1)
-          st.playSound("ItemSound.quest_jackpot")
-       elif n<2 :
-         st.giveItems(ADENA,1000)
-       elif n<5 :
-          st.giveItems(LEATHER_SANDALS,1)
-       elif n<8 :
-          st.giveItems(HOSE,1)
-          st.giveItems(ADENA,50)
-       elif n<11 :
-         st.giveItems(HEALING_POTION,1)
-       elif n<14 :
-         st.giveItems(SHORT_GLOVES,1)
-       else:
-          st.giveItems(CLOTH_SHOES,1)
+       if st.getRandom(17) < 6 :
+          st.giveItems(5140,1)
+       else :
+          st.giveItems(734,1)
        htmltext = "30136-05.htm"
        st.exitQuest(1)
        st.playSound("ItemSound.quest_finish")

@@ -5,11 +5,7 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 WOLF_PELT = 702
-LEATHER_TUNIC = 429
-LEATHER_CAP = 42
-CLOTH_CAP = 41
-HOSE = 462
-LEATHER_SHIELD = 18
+REWARDS={429:[1,6],42:[1,19],41:[1,19],462:[1,19],18:[1,20],426:[1,5],29:[1,2],22:[1,2],390:[1,3]}
 
 class Quest (JQuest) :
 
@@ -39,18 +35,15 @@ class Quest (JQuest) :
        htmltext = "30001-05.htm"
      else :
        st.takeItems(WOLF_PELT,-1)
-       n = st.getRandom(16)
-       if n == 0 :
-         st.giveItems(LEATHER_TUNIC,1)
+       count=0
+       while not count :
+          for item in REWARDS.keys() :
+              qty,chance=REWARDS[item]
+              if st.getRandom(100) < chance and count == 0 :
+                 st.giveItems(item,st.getRandom(qty)+1)
+                 count+=1
+       if chance < 7 :
          st.playSound("ItemSound.quest_jackpot")
-       elif n < 6 :
-         st.giveItems(LEATHER_CAP,1)
-       elif n < 9 :
-         st.giveItems(CLOTH_CAP,1)
-       elif n < 13 :
-         st.giveItems(HOSE,1)
-       else:
-         st.giveItems(LEATHER_SHIELD,1)
        htmltext = "30001-06.htm"
        st.exitQuest(1)
        st.playSound("ItemSound.quest_finish")

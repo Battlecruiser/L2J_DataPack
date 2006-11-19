@@ -88,15 +88,17 @@ class Quest (JQuest) :
    elif npcId == 30041 and int(st.get("cond"))!=0 and (st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0)!=0 and int(st.get("onlyone"))==0 :
         if int(st.get("id")) != 153 :
           st.set("id","153")
-          st.takeItems(DELIVERY_LIST_ID,st.getQuestItemsCount(DELIVERY_LIST_ID))
-          st.takeItems(JACKSONS_RECEIPT_ID,st.getQuestItemsCount(JACKSONS_RECEIPT_ID))
-          st.takeItems(SILVIAS_RECEIPT_ID,st.getQuestItemsCount(SILVIAS_RECEIPT_ID))
-          st.takeItems(RANTS_RECEIPT_ID,st.getQuestItemsCount(RANTS_RECEIPT_ID))
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
           st.set("onlyone","1")
-          st.giveItems(RING_ID,2)
+          st.giveItems(RING_ID,1)
+          st.giveItems(RING_ID,1)
+          st.takeItems(DELIVERY_LIST_ID,-1)
+          st.takeItems(JACKSONS_RECEIPT_ID,-1)
+          st.takeItems(SILVIAS_RECEIPT_ID,-1)
+          st.takeItems(RANTS_RECEIPT_ID,-1)
+          st.addExpAndSp(600,0)
           htmltext = "30041-06.htm"
    return htmltext
 
