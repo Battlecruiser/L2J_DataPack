@@ -53,9 +53,9 @@ class Quest (JQuest) :
      elif cond == 2 :
        if npcId == 30362 and st.getQuestItemsCount(MOTHERTREE_FRUIT) :
          htmltext = "30362-06.htm"
-         st.giveItems(ADENA,500)
-         st.addExpAndSp(1000,0)
+         st.giveItems(ADENA,100)
          st.takeItems(MOTHERTREE_FRUIT,1)
+         st.addExpAndSp(1000,0)
          st.unset("cond")
          st.setState(COMPLETED)
          st.playSound("ItemSound.quest_finish")
