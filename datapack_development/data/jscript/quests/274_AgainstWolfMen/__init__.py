@@ -25,6 +25,7 @@ class Quest (JQuest) :
 
  def onTalk (Self,npc,st):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   totems=st.getQuestItemsCount(MARAKU_WOLFMEN_TOTEM)
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
@@ -46,14 +47,15 @@ class Quest (JQuest) :
      if st.getQuestItemsCount(MARAKU_WEREWOLF_HEAD) < 40 :
        htmltext = "30569-04.htm"
      else :
-       if st.getQuestItemsCount(MARAKU_WOLFMEN_TOTEM) :
-         htmltext = "30569-06.htm"
-       else :
-         htmltext = "30569-05.htm"
-       st.exitQuest(1)
+       amount = 3500
+       if totems :
+         amount += 600*totems
+       htmltext = "30569-05.htm"
        st.playSound("ItemSound.quest_finish")
-       st.giveItems(ADENA,3500)
+       st.giveItems(ADENA,amount)
        st.takeItems(MARAKU_WEREWOLF_HEAD,-1)
+       st.takeItems(MARAKU_WOLFMEN_TOTEM,-1)
+       st.exitQuest(1)
    return htmltext
 
  def onKill (self,npc,st):
@@ -65,7 +67,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_middle")
        st.set("cond","2")
      st.giveItems(MARAKU_WEREWOLF_HEAD,1)
-     if st.getRandom(100) <= 5 :
+     if st.getRandom(100) <= 15 :
        st.giveItems(MARAKU_WOLFMEN_TOTEM,1)
    return
 

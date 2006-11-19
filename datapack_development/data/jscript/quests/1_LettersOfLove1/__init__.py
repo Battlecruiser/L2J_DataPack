@@ -16,7 +16,7 @@ DARINGS_RECEIPT    = 1079
 BAULS_POTION       = 1080 
  
 #REWARD 
-NECKLACE = 908 
+NECKLACE = 906
  
 class Quest (JQuest) :
 
@@ -100,7 +100,7 @@ class Quest (JQuest) :
        st.giveItems(NECKLACE,1) 
        st.set("cond","0") 
        st.set("onlyone","1") 
-       st.setState(COMPLETED) 
+       st.setState(COMPLETED)
        st.playSound("ItemSound.quest_finish") 
      else: 
        htmltext = "30048-07.htm" 

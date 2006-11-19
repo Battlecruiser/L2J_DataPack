@@ -1,5 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
-print "importing quests: 155: Find Sir Windawood"
+# Made by Mr. - Version 0.3 by DrLecter
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -15,7 +14,6 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
-      st.set("id","0")
       st.giveItems(OFFICIAL_LETTER_ID,1)
       htmltext = "30042-04.htm"
       st.set("cond","1")
@@ -23,47 +21,33 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
-
  def onTalk (Self,npc,st):
-
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
-   if npcId == 30042 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-      if int(st.get("cond"))<15 :
-        if st.getPlayer().getLevel() >= 3 :
-          htmltext = "30042-03.htm"
-          return htmltext
-        else:
-          htmltext = "30042-02.htm"
-          st.exitQuest(1)
-      else:
-        htmltext = "30042-02.htm"
-        st.exitQuest(1)
-   elif npcId == 30042 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
-      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 30042 and int(st.get("cond"))==1 and st.getQuestItemsCount(OFFICIAL_LETTER_ID)==1 :
-      htmltext = "30042-05.htm"
-   elif npcId == 30311 and int(st.get("cond"))==1 and st.getQuestItemsCount(OFFICIAL_LETTER_ID)==1 and int(st.get("onlyone"))==0 :
-      if int(st.get("id")) != 155 :
-        st.set("id","155")
-        st.takeItems(OFFICIAL_LETTER_ID,st.getQuestItemsCount(OFFICIAL_LETTER_ID))
-        st.giveItems(HASTE_POTION_ID,1)
-        st.set("cond","0")
-        st.setState(COMPLETED)
-        st.playSound("ItemSound.quest_finish")
-        st.set("onlyone","1")
-        htmltext = "30311-01.htm"
+   if id == COMPLETED:
+      htmltext = "<html><head><body>This quest have already been completed.</body></html>" 
+   elif npcId == 30042 :
+      if not st.getInt("cond") :
+         if st.getPlayer().getLevel() >= 3 :
+            htmltext = "30042-03.htm"
+         else:
+            htmltext = "30042-02.htm"
+            st.exitQuest(1)
+      elif st.getInt("cond") and st.getQuestItemsCount(OFFICIAL_LETTER_ID) :
+         htmltext = "30042-05.htm"
+   elif npcId == 30311 and st.getInt("cond") and st.getQuestItemsCount(OFFICIAL_LETTER_ID) :
+      st.takeItems(OFFICIAL_LETTER_ID,-1)
+      st.giveItems(HASTE_POTION_ID,1)
+      st.unset("cond")
+      st.setState(COMPLETED)
+      st.playSound("ItemSound.quest_finish")
+      htmltext = "30311-01.htm"
    return htmltext
 
 QUEST       = Quest(155,"155_FindSirWindawood","Find Sir Windawood")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
+STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
@@ -71,10 +55,13 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30042)
 
+CREATED.addTalkId(30042)
 STARTING.addTalkId(30042)
-
 STARTED.addTalkId(30042)
+COMPLETED.addTalkId(30042)
+
 STARTED.addTalkId(30311)
 
-
 STARTED.addQuestDrop(30042,OFFICIAL_LETTER_ID,1)
+
+print "importing quests: 155: Find Sir Windawood"

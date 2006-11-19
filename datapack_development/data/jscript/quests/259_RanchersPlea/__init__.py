@@ -15,6 +15,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
+    count=st.getQuestItemsCount(GIANT_SPIDER_SKIN)
     if event == "30497-03.htm" :
       st.set("cond","1")
       st.setState(STARTED)
@@ -23,11 +24,17 @@ class Quest (JQuest) :
       st.exitQuest(1)
       st.playSound("ItemSound.quest_finish")
     elif event == "30405-04.htm" :
-      st.giveItems(HEALING_POTION,1)
-      st.takeItems(GIANT_SPIDER_SKIN,10)
+      if count >= 10 :
+         st.giveItems(HEALING_POTION,1)
+         st.takeItems(GIANT_SPIDER_SKIN,10)
+      else:
+         htmltext="Incorrect item count"
     elif event == "30405-05.htm" :
-      st.giveItems(WOODEN_ARROW,50)
-      st.takeItems(GIANT_SPIDER_SKIN,10)
+      if count >= 10 :
+         st.giveItems(WOODEN_ARROW,50)
+         st.takeItems(GIANT_SPIDER_SKIN,10)
+      else:
+         htmltext="Incorrect item count"
     elif event == "30405-07.htm" :
       if st.getQuestItemsCount(GIANT_SPIDER_SKIN) >= 10 :
         htmltext = "30405-06.htm"
@@ -69,7 +76,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(259,"259_RanchersPlea","Ranchers Plea")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
+STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
