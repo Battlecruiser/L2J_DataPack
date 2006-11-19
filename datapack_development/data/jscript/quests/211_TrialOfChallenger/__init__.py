@@ -1,6 +1,5 @@
-# Made by Mr. Have fun! Version 0.2
+# Fix by Cromir for Kilah
 # Quest: Trial Of Challenger
-# Fixed by Artful (http://L2PLanet.ru Lineage2 C3 Server)
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -39,10 +38,12 @@ class Quest (JQuest) :
           htmltext = "30645-02.htm"
           st.takeItems(LETTER_OF_KASH_ID,1)
           st.set("cond","4")
+          st.playSound("Itemsound.quest_middle")
     elif event == "30647_1" :
           if st.getQuestItemsCount(BROKEN_KEY_ID) == 1 :
-            st.giveItems(SCROLL_OF_SHYSLASSY_ID,1)
-            if st.getRandom(10) < 2 :
+             st.giveItems(SCROLL_OF_SHYSLASSY_ID,1)
+             st.playSound("Itemsound.quest_middle")
+             if st.getRandom(10) < 2 :
               htmltext = "30647-03.htm"
               st.takeItems(BROKEN_KEY_ID,1)
               st.playSound("ItemSound.quest_jackpot")
@@ -53,18 +54,23 @@ class Quest (JQuest) :
                  st.giveItems(MANTICOR_SKIN_GAITERS_PATTERN_ID,1)
                  st.giveItems(GAUNTLET_OF_REPOSE_OF_THE_SOUL_PATTERN_ID,1)
                  st.giveItems(IRON_BOOTS_DESIGN_ID,1)
+                 st.playSound("Itemsound.quest_middle")
               elif n > 70 :
                  st.giveItems(TOME_OF_BLOOD_PAGE_ID,1)
                  st.giveItems(ELVEN_NECKLACE_BEADS_ID,1)
+                 st.playSound("Itemsound.quest_middle")
               elif n > 40 :
                  st.giveItems(WHITE_TUNIC_PATTERN_ID,1)
+                 st.playSound("Itemsound.quest_middle")
               else:
                  st.giveItems(IRON_BOOTS_DESIGN_ID,1)
-            else:
+                 st.playSound("Itemsound.quest_middle")
+             else:
               htmltext = "30647-02.htm"
               n = st.getRandom(1000)+1
               st.takeItems(BROKEN_KEY_ID,1)
               st.giveItems(ADENA_ID,n)
+              st.playSound("Itemsound.quest_middle")
           else:
             htmltext = "30647-04.htm"
             st.takeItems(BROKEN_KEY_ID,1)
@@ -74,11 +80,11 @@ class Quest (JQuest) :
           htmltext = "30646-03.htm"
     elif event == "30646_3" :
           htmltext = "30646-04.htm"
-          st.set("cond","7")
+          st.set("cond","8")
           st.takeItems(WATCHERS_EYE2_ID,1)
     elif event == "30646_4" :
           htmltext = "30646-06.htm"
-          st.set("cond","7")
+          st.set("cond","8")
           st.takeItems(WATCHERS_EYE2_ID,1)
     return htmltext
 
@@ -108,6 +114,7 @@ class Quest (JQuest) :
       st.takeItems(SCROLL_OF_SHYSLASSY_ID,1)
       st.giveItems(LETTER_OF_KASH_ID,1)
       st.set("cond","3")
+      st.playSound("Itemsound.quest_middle")
    elif npcId == 30644 and int(st.get("cond"))==1 and st.getQuestItemsCount(LETTER_OF_KASH_ID)==1 :
       htmltext = "30644-08.htm"
    elif npcId == 30644 and int(st.get("cond"))>=7 :
@@ -116,21 +123,22 @@ class Quest (JQuest) :
       htmltext = "30645-01.htm"
    elif npcId == 30645 and int(st.get("cond"))==4 and st.getQuestItemsCount(WATCHERS_EYE1_ID)==0 :
       htmltext = "30645-03.htm"
-   elif npcId == 30645 and int(st.get("cond"))==4 and st.getQuestItemsCount(WATCHERS_EYE1_ID) :
+   elif npcId == 30645 and int(st.get("cond"))==5 and st.getQuestItemsCount(WATCHERS_EYE1_ID) :
       htmltext = "30645-04.htm"
       st.takeItems(WATCHERS_EYE1_ID,1)
-      st.set("cond","5")
-   elif npcId == 30645 and int(st.get("cond"))==5 :
+      st.set("cond","6")
+      st.playSound("Itemsound.quest_middle")
+   elif npcId == 30645 and int(st.get("cond"))==6 :
       htmltext = "30645-05.htm"
    elif npcId == 30645 and int(st.get("cond"))>=7 :
       htmltext = "30645-06.htm"
    elif npcId == 30647 and int(st.get("cond"))==2 :
       htmltext = "30647-01.htm"
-   elif npcId == 30646 and int(st.get("cond"))==6 and st.getQuestItemsCount(WATCHERS_EYE2_ID) :
+   elif npcId == 30646 and int(st.get("cond"))==7 and st.getQuestItemsCount(WATCHERS_EYE2_ID) :
       htmltext = "30646-01.htm"
    elif npcId == 30646 and int(st.get("cond"))==7 :
       htmltext = "30646-06a.htm"
-   elif npcId == 30646 and int(st.get("cond"))==9 :
+   elif npcId == 30646 and int(st.get("cond"))==10 :
       st.addExpAndSp(72394,11250)
       st.giveItems(7562,8)
       htmltext = "30646-07.htm"
@@ -145,17 +153,20 @@ class Quest (JQuest) :
         htmltext = "30535-01.htm"
         st.addRadar(176560,-184969,-3729);
         st.set("cond","8")
+        st.playSound("Itemsound.quest_middle")
       else:
         htmltext = "30535-03.htm"
    elif npcId == 30535 and int(st.get("cond"))==8 :
       htmltext = "30535-02.htm"
       st.addRadar(176560,-184969,-3729);
+      st.set("cond","9")
+      st.playSound("Itemsound.quest_middle")
    return htmltext
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
    if npcId == 27110 :
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(SCROLL_OF_SHYSLASSY_ID) == 0 and st.getQuestItemsCount(BROKEN_KEY_ID) == 0 :
+        if int(st.get("cond")) == 1 and st.getQuestItemsCount(BROKEN_KEY_ID) == 0 :
           st.giveItems(BROKEN_KEY_ID,1)
           st.getPcSpawn().addSpawn(30647)
           st.playSound("ItemSound.quest_middle")
@@ -163,17 +174,18 @@ class Quest (JQuest) :
    elif npcId == 27112 :
         if int(st.get("cond")) == 4 and st.getQuestItemsCount(WATCHERS_EYE1_ID) == 0 :
           st.giveItems(WATCHERS_EYE1_ID,1)
+          st.set("cond","5")
           st.playSound("ItemSound.quest_middle")
    elif npcId == 27113 :
-        if int(st.get("cond")) == 5 and st.getQuestItemsCount(WATCHERS_EYE2_ID) == 0 :
+        if int(st.get("cond")) == 6 and st.getQuestItemsCount(WATCHERS_EYE2_ID) == 0 :
            st.giveItems(WATCHERS_EYE2_ID,1)
            st.playSound("ItemSound.quest_middle")
-           st.set("cond","6")
+           st.set("cond","7")
            st.getPcSpawn().addSpawn(30646,21291,184673,-3313)
            return "Raldo has spawned at X=21291 Y=184673 Z=-3313"
    elif npcId == 27114 :
-        if int(st.get("cond")) == 8 :
-           st.set("cond","9")
+        if int(st.get("cond")) == 9 :
+           st.set("cond","10")
            st.playSound("ItemSound.quest_middle")
            st.removeRadar(176560,-184969,-3729)
            st.getPcSpawn().removeAllSpawn()
