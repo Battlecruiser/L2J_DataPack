@@ -232,7 +232,7 @@ class Quest (JQuest) :
        elif WISH_CHANCE >= 66:
          st.giveItems(SPELLBOOK_BATTLEHEAL_ID,1)
        else:
-         st.getPcSpawn().addSpawn(WISDOM_CHEST)
+         st.getPcSpawn().addSpawn(WISDOM_CHEST,69988,18197,-3647)
        htmltext = "30738-19.htm"
      else:
        htmltext = "30738-14.htm"
