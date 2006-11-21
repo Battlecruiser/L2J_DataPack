@@ -12,8 +12,8 @@ SORINT, SANDRA = 30232, 30090
 #MOBs
 ANCIENT_GARGOYLE, VEGUS = 21018,27316
 #CHANCES (custom values, feel free to change them)
-GARGOYLE_CHANCE = 10
-VEGUS_CHANCE = 50
+GARGOYLE_CHANCE = 5
+VEGUS_CHANCE = 100
 
 import sys
 from net.sf.l2j.gameserver.model.quest import State
