@@ -435,13 +435,13 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_middle")
    elif npcId == 20231 :
     st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(INPICIO_SAC_ID) <20  :
+    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(INPICIO_SAC_ID) <10  :
      if st.getRandom(100)<50 :
       st.giveItems(INPICIO_SAC_ID,1)
       st.playSound("ItemSound.quest_middle")
    elif npcId == 20233 :
     st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(SPIDER_THORN_ID) <20  :
+    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(SPIDER_THORN_ID) <10  :
      if st.getRandom(100)<50 :
       st.giveItems(SPIDER_THORN_ID,1)
       st.playSound("ItemSound.quest_middle")

@@ -23,13 +23,13 @@ class Quest (JQuest) :
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   elif event == "31517-3.htm" :
-     st.takeItems(BLOOD_OF_SAINT,300)
    else :
      if event == "31517-4.htm" :
        st.addExpAndSp(162773,12500)
+       st.takeItems(BLOOD_OF_SAINT,300)
      elif event == "31517-5.htm" :
        st.giveItems(ADENA,100000)
+       st.takeItems(BLOOD_OF_SAINT,300)
      st.playSound("ItemSound.quest_finish")
      st.exitQuest(1)
    return htmltext
