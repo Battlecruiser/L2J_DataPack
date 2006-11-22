@@ -42,7 +42,10 @@ class Quest (JQuest) :
      varool=st.getQuestItemsCount(VAROOL_FOULCLAWS_FANG)
      if rats or varool :
        htmltext = "30155-07.htm"
-       st.giveItems(ADENA,rats*60+varool*10000)
+       amount=rats*30+varool*10000
+       if rats+varool > 9 :
+          amount += 5000
+       st.giveItems(ADENA,amount)
        st.takeItems(WERERAT_FANG,-1)
        st.takeItems(VAROOL_FOULCLAWS_FANG,-1)
      else:

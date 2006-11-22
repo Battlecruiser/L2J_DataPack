@@ -40,7 +40,10 @@ class Quest (JQuest) :
    else :
      count=st.getQuestItemsCount(IMP_SHACKLES)
      if count :
-       st.giveItems(ADENA,13*count)
+       if count >= 10:
+          st.giveItems(ADENA,12*count+500)
+       else :
+          st.giveItems(ADENA,12*count)
        st.takeItems(IMP_SHACKLES,-1)
        htmltext = "30357-05.htm"
      else:
@@ -48,9 +51,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-   npcId = npc.getNpcId()
-   chance=5+((npcId-20000)^4)
-   if st.getRandom(10)<chance :
+   if st.getRandom(10) < (5+((npc.getNpcId()-20000)^4)) :
      st.giveItems(IMP_SHACKLES,1)
      st.playSound("ItemSound.quest_itemget")
    return
