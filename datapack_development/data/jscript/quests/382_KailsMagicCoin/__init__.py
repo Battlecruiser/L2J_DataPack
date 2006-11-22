@@ -50,7 +50,7 @@ class Quest (JQuest) :
       return htmltext
 
   def onKill (self,npc,st):
-      if st.getRandom(100) < CHANCE and st.getItemsCount(ROYAL_MEMBERSHIP) :
+      if st.getRandom(100) < CHANCE and st.getQuestItemsCount(ROYAL_MEMBERSHIP) :
          npcId = npc.getNpcId()
          st.giveItems(MOBS[npcId][st.getRandom(len(MOBS[npcId]))],1)
          st.playSound("ItemSound.quest_itemget")
