@@ -34,7 +34,10 @@ class Quest (JQuest) :
    else :
      count = st.getQuestItemsCount(WIND_SHARD)
      if count :
-       st.giveItems(ADENA,40*count)
+       if count > 9 :
+          st.giveItems(ADENA,3000+40*count)
+       else :
+          st.giveItems(ADENA,40*count)
        st.takeItems(WIND_SHARD,-1)
        htmltext = "30361-07.htm"
      else :
@@ -42,8 +45,9 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-   st.giveItems(WIND_SHARD,1)
-   st.playSound("ItemSound.quest_itemget")
+   if st.getRandom(100) < 50:
+      st.giveItems(WIND_SHARD,1)
+      st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST       = Quest(317,"317_CatchTheWind","Catch The Wind")

@@ -44,16 +44,23 @@ class Quest (JQuest) :
         htmltext = "30566-04.htm"
      elif red == 0 :
         htmltext = "30566-05.htm"
-        st.giveItems(ADENA,black*3)
+        if black > 9 :
+           st.giveItems(ADENA,black*3+1500)
+        else :
+           st.giveItems(ADENA,black*3)
         st.takeItems(BLACK_SOULSTONE,black)
         st.playSound("ItemSound.quest_finish")
      else:
         htmltext = "30566-06.htm"
+        amount=0
         if black :
-           st.giveItems(ADENA,black*3)
+           amount = black*3
            st.takeItems(BLACK_SOULSTONE,black)
-        st.giveItems(ADENA,red*5)
+        amount += red*10
+        if black+red > 9:
+           amount += 1800
         st.takeItems(RED_SOULSTONE,red)
+        st.giveItems(ADENA,amount)
         st.playSound("ItemSound.quest_finish")
    return htmltext
 

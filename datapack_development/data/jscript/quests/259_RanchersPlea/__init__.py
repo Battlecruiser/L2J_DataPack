@@ -59,7 +59,10 @@ class Quest (JQuest) :
          htmltext = "30497-04.htm"
        else :
          htmltext = "30497-05.htm"
-         st.giveItems(ADENA,count*25)
+         amount = count*25
+         if count > 9:
+            amount += 250
+         st.giveItems(ADENA,amount)
          st.takeItems(GIANT_SPIDER_SKIN,-1)
      else :
        if count < 10 :
