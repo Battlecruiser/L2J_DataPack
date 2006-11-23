@@ -121,7 +121,7 @@ def promote(st) :
       st.set("cond",str(cond))
    return html
 
-#gambling helper...
+# main code
 
 class Quest (JQuest) :
 

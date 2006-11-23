@@ -27,6 +27,27 @@ def pieces(st):
            st.getQuestItemsCount(THIGH_BONE1_ID)+\
            st.getQuestItemsCount(COMPLETE_SKELETON_ID)
 
+def payback(st):
+    count = pieces(st)
+    amount = 0
+    if count :
+       amount = 30*st.getQuestItemsCount(ZOMBIE_HEAD1_ID)+20*st.getQuestItemsCount(ZOMBIE_HEART1_ID)+20*st.getQuestItemsCount(ZOMBIE_LIVER1_ID)+100*st.getQuestItemsCount(SKULL1_ID)+40*st.getQuestItemsCount(RIB_BONE1_ID)+14*st.getQuestItemsCount(SPINE1_ID)+14*st.getQuestItemsCount(ARM_BONE1_ID)+14*st.getQuestItemsCount(THIGH_BONE1_ID)+341*st.getQuestItemsCount(COMPLETE_SKELETON_ID)
+       if count > 10:
+          amount += 1629
+       if st.getQuestItemsCount(COMPLETE_SKELETON_ID):
+          amount +=543
+       st.giveItems(ADENA_ID,amount)
+       st.takeItems(ZOMBIE_HEAD1_ID,-1)
+       st.takeItems(ZOMBIE_HEART1_ID,-1)
+       st.takeItems(ZOMBIE_LIVER1_ID,-1)
+       st.takeItems(SKULL1_ID,-1)
+       st.takeItems(RIB_BONE1_ID,-1)
+       st.takeItems(SPINE1_ID,-1)
+       st.takeItems(ARM_BONE1_ID,-1)
+       st.takeItems(THIGH_BONE1_ID,-1)
+       st.takeItems(COMPLETE_SKELETON_ID,-1)
+    return amount
+
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -40,34 +61,15 @@ class Quest (JQuest) :
     elif event == "30434-03.htm" :
       st.giveItems(ANATOMY_DIAGRAM_ID,1)
     elif event == "30434-06.htm" :
-      if pieces(st) > 0 :  
-         st.giveItems(ADENA_ID,30*st.getQuestItemsCount(ZOMBIE_HEAD1_ID)+20*st.getQuestItemsCount(ZOMBIE_HEART1_ID)+20*st.getQuestItemsCount(ZOMBIE_LIVER1_ID)+50*st.getQuestItemsCount(SKULL1_ID)+15*st.getQuestItemsCount(RIB_BONE1_ID)+10*st.getQuestItemsCount(SPINE1_ID)+10*st.getQuestItemsCount(ARM_BONE1_ID)+10*st.getQuestItemsCount(THIGH_BONE1_ID)+2000*st.getQuestItemsCount(COMPLETE_SKELETON_ID))
-         st.takeItems(ZOMBIE_HEAD1_ID,-1)
-         st.takeItems(ZOMBIE_HEART1_ID,-1)
-         st.takeItems(ZOMBIE_LIVER1_ID,-1)
-         st.takeItems(SKULL1_ID,-1)
-         st.takeItems(RIB_BONE1_ID,-1)
-         st.takeItems(SPINE1_ID,-1)
-         st.takeItems(ARM_BONE1_ID,-1)
-         st.takeItems(THIGH_BONE1_ID,-1)
-         st.takeItems(COMPLETE_SKELETON_ID,-1)
+      payback(st)
       st.takeItems(ANATOMY_DIAGRAM_ID,-1)
       st.playSound("ItemSound.quest_finish")
       st.exitQuest(1)
     elif event == "30434-07.htm" :
-      if pieces(st) > 0 :  
-         st.giveItems(ADENA_ID,30*st.getQuestItemsCount(ZOMBIE_HEAD1_ID)+20*st.getQuestItemsCount(ZOMBIE_HEART1_ID)+20*st.getQuestItemsCount(ZOMBIE_LIVER1_ID)+50*st.getQuestItemsCount(SKULL1_ID)+15*st.getQuestItemsCount(RIB_BONE1_ID)+10*st.getQuestItemsCount(SPINE1_ID)+10*st.getQuestItemsCount(ARM_BONE1_ID)+10*st.getQuestItemsCount(THIGH_BONE1_ID)+2000*st.getQuestItemsCount(COMPLETE_SKELETON_ID))
-         st.takeItems(ZOMBIE_HEAD1_ID,-1)
-         st.takeItems(ZOMBIE_HEART1_ID,-1)
-         st.takeItems(ZOMBIE_LIVER1_ID,-1)
-         st.takeItems(SKULL1_ID,-1)
-         st.takeItems(RIB_BONE1_ID,-1)
-         st.takeItems(SPINE1_ID,-1)
-         st.takeItems(ARM_BONE1_ID,-1)
-         st.takeItems(THIGH_BONE1_ID,-1)
-         st.takeItems(COMPLETE_SKELETON_ID,-1)
+      if not payback(st) :
+         htmltext = "You don't have required items"
     elif event == "30434-09.htm" :
-      st.giveItems(ADENA_ID,2000*st.getQuestItemsCount(COMPLETE_SKELETON_ID))
+      st.giveItems(ADENA_ID,543+(341*st.getQuestItemsCount(COMPLETE_SKELETON_ID)))
       st.takeItems(COMPLETE_SKELETON_ID,-1)
     elif event == "30342-03.htm" :
       if st.getQuestItemsCount(SPINE1_ID) and st.getQuestItemsCount(ARM_BONE1_ID) and st.getQuestItemsCount(SKULL1_ID) and st.getQuestItemsCount(RIB_BONE1_ID) and st.getQuestItemsCount(THIGH_BONE1_ID) :
@@ -88,29 +90,27 @@ class Quest (JQuest) :
  def onTalk (Self,npc,st):
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   id = st.getState()
-   if id == CREATED :
-     st.set("cond","0")
-   if npcId == 30336 and int(st.get("cond"))==0 :
+   cond = st.getInt("cond")
+   if npcId == 30336 and cond==0 :
       if st.getPlayer().getLevel() >= 15 :
          htmltext = "30336-02.htm"
          return htmltext
       else:
          htmltext = "30336-01.htm"
          st.exitQuest(1)
-   elif npcId == 30336 and int(st.get("cond")) and st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) == 0 :
+   elif npcId == 30336 and cond and not st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) :
       htmltext = "30336-04.htm"
-   elif npcId == 30336 and int(st.get("cond")) and st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) :
+   elif npcId == 30336 and cond and st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) :
       htmltext = "30336-05.htm"
-   elif npcId == 30434 and int(st.get("cond")) and st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) == 0 :
+   elif npcId == 30434 and cond and not st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) :
       htmltext = "30434-01.htm"
-   elif npcId == 30434 and int(st.get("cond")) and st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) and not pieces(st) :
+   elif npcId == 30434 and cond and st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) and not pieces(st) :
       htmltext = "30434-04.htm"
-   elif npcId == 30434 and int(st.get("cond")) and st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) and pieces(st) and not st.getQuestItemsCount(COMPLETE_SKELETON_ID):
+   elif npcId == 30434 and cond and st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) and pieces(st) and not st.getQuestItemsCount(COMPLETE_SKELETON_ID):
       htmltext = "30434-05.htm"
-   elif npcId == 30434 and int(st.get("cond")) and st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) and pieces(st) and st.getQuestItemsCount(COMPLETE_SKELETON_ID) :
+   elif npcId == 30434 and cond and st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) and pieces(st) and st.getQuestItemsCount(COMPLETE_SKELETON_ID) :
       htmltext = "30434-08.htm"
-   elif npcId == 30342 and int(st.get("cond")) and st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) :
+   elif npcId == 30342 and cond and st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) :
       htmltext = "30342-01.htm"
    return htmltext
 
