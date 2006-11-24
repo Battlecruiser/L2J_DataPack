@@ -72,6 +72,7 @@ CREATE TABLE IF NOT EXISTS characters (
   power_grade decimal(11,0) DEFAULT NULL,
   nobless decimal(1,0) NOT NULL DEFAULT 0,
   subpledge int(1) NOT NULL DEFAULT 0,
+  last_recom_date decimal(20,0) NOT NULL DEFAULT 0,
   PRIMARY KEY  (obj_Id),
   KEY `clanid` (`clanid`)
 ) ;
