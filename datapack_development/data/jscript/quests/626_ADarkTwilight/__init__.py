@@ -19,19 +19,30 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
+   count = st.getQuestItemsCount(BLOOD_OF_SAINT)
    if event == "31517-1.htm" :
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   else :
-     if event == "31517-4.htm" :
-       st.addExpAndSp(162773,12500)
-       st.takeItems(BLOOD_OF_SAINT,300)
-     elif event == "31517-5.htm" :
-       st.giveItems(ADENA,100000)
-       st.takeItems(BLOOD_OF_SAINT,300)
-     st.playSound("ItemSound.quest_finish")
-     st.exitQuest(1)
+   elif event == "31517-3.htm" :
+     if count < 300 :
+        htmltext = "31517-3a.htm"
+   elif event == "31517-4.htm" :
+     if count < 300 :
+        htmltext = "31517-3a.htm"
+     else :
+        st.addExpAndSp(162773,12500)
+        st.takeItems(BLOOD_OF_SAINT,-1)
+        st.playSound("ItemSound.quest_finish")
+        st.exitQuest(1)
+   elif event == "31517-5.htm" :
+     if count < 300 :
+        htmltext = "31517-3a.htm"
+     else :
+        st.giveItems(ADENA,100000)
+        st.takeItems(BLOOD_OF_SAINT,-1)
+        st.playSound("ItemSound.quest_finish")
+        st.exitQuest(1)
    return htmltext
 
  def onTalk (Self,npc,st):
@@ -47,18 +58,20 @@ class Quest (JQuest) :
        st.exitQuest(1)
    elif st.getQuestItemsCount(BLOOD_OF_SAINT) == 300 :
      htmltext = "31517-2.htm"
+   else :
+     htmltext = "31517-2a.htm"
    return htmltext
 
  def onKill (self,npc,st):
-  count = st.getQuestItemsCount(BLOOD_OF_SAINT)
-  if int(st.get("cond")) == 1 and count < 300 :
-     st.giveItems(BLOOD_OF_SAINT,1)
-     if count == 299 :
-       st.playSound("ItemSound.quest_middle")
-       st.set("cond","2")
-     else:
-       st.playSound("ItemSound.quest_itemget")	
-  return
+   count = st.getQuestItemsCount(BLOOD_OF_SAINT)
+   if st.getInt("cond") == 1 and count < 300 :
+      st.giveItems(BLOOD_OF_SAINT,1)
+      if count == 299 :
+        st.playSound("ItemSound.quest_middle")
+        st.set("cond","2")
+      else:
+        st.playSound("ItemSound.quest_itemget")	
+   return
 
 QUEST       = Quest(626,"626_ADarkTwilight","A Dark Twilight")
 CREATED     = State('Start', QUEST)
