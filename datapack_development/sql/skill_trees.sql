@@ -13,12 +13,12 @@ CREATE TABLE skill_trees (
 -- Dumping data for table `skill_trees`
 --
 
-/* GLOSSARY FOR CLASS ID'S (thx Mr_Pleb_Mgoo) - updated by DJ MELERIX
+/* GLOSSARY FOR CLASS ID'S (thx Mr_Pleb_Mgoo) - Updated by DJ MELERIX
 
 HUMANS
 0=Human Fighter       | 1=Human Warrior    | 2=Gladiator        | 3=Warlord          | 4=Human Knight 
 5=Paladin             | 6=Dark Avenger     | 7=Rogue            | 8=Treasure Hunter  | 9=Hawkeye      
-10=Human Mage         | 11=Human Wizard    | 12=Sorcerer        | 13=Necromancer     | 14=Warlock
+10=Human Mage         | 11=Human Wizard    | 12=Sorcerer/ss     | 13=Necromancer     | 14=Warlock
 15=Cleric             | 16=Bishop          | 17=Prophet 
 
 ELVES 
@@ -39,8 +39,8 @@ DWARVES
 53=Dwarven Fighter    | 54=Scavenger       | 55=Bounty Hunter   | 56=Artisan         | 57=Warsmith
 
 HUMANS 3rd Professions
-88=Duelist            | 89=Dread Nought    | 90=Phoenix Knight  | 91=Hell Knight     | 92=Sagittarius
-93=Adventurer         | 94=Archmage        | 95=Soul Traker     | 96=Arcane Lord     | 97=Cardinal
+88=Duelist            | 89=Dreadnought     | 90=Phoenix Knight  | 91=Hell Knight     | 92=Sagittarius
+93=Adventurer         | 94=Archmage        | 95=Soultaker       | 96=Arcana Lord     | 97=Cardinal
 98=Hierophant
 
 ELVES 3rd Professions
@@ -52,7 +52,7 @@ DARK ELVES 3rd Professions
 110=Storm Screamer   | 111=Spectral Master | 112=Shillien Saint
 
 ORCS 3rd Professions
-113=Titan            | 114=Grand Khauatari
+113=Titan            | 114=Grand Khavatari
 115=Dominator        | 116=Doomcryer
 
 DWARVES 3rd Professions
@@ -12496,8 +12496,7 @@ INSERT INTO skill_trees VALUES (53,142,3,'Armor Mastery',550,10);
 INSERT INTO skill_trees VALUES (53,142,4,'Armor Mastery',3300,15);
 INSERT INTO skill_trees VALUES (53,142,5,'Armor Mastery',3300,15);
 INSERT INTO skill_trees VALUES (53,150,1,'Weight Limit',1100,10);
-INSERT INTO skill_trees VALUES (53,165,1,'Trade',6700,15);
-INSERT INTO skill_trees VALUES (53,172,1,'Create Item',310,5);
+/* INSERT INTO skill_trees VALUES (53,165,1,'Trade',6700,15); -- where did this come from? */
 INSERT INTO skill_trees VALUES (53,254,1,'Spoil',1100,10);
 INSERT INTO skill_trees VALUES (54,34,1,'Bandage',4100,20);
 INSERT INTO skill_trees VALUES (54,100,1,'Stun Attack',1400,20);
@@ -12881,9 +12880,6 @@ INSERT INTO skill_trees VALUES (56,100,15,'Stun Attack',11000,36);
 INSERT INTO skill_trees VALUES (56,148,1,'Vital Force',7000,24);
 INSERT INTO skill_trees VALUES (56,148,2,'Vital Force',25000,32);
 INSERT INTO skill_trees VALUES (56,150,2,'Weight Limit',7000,24);
-INSERT INTO skill_trees VALUES (56,172,2,'Create Item',3700,20);
-INSERT INTO skill_trees VALUES (56,172,3,'Create Item',13000,28);
-INSERT INTO skill_trees VALUES (56,172,4,'Create Item',34000,36);
 INSERT INTO skill_trees VALUES (56,205,1,'Blunt Mastery',3700,20);
 INSERT INTO skill_trees VALUES (56,205,2,'Blunt Mastery',7000,24);
 INSERT INTO skill_trees VALUES (56,205,3,'Blunt Mastery',6700,28);
@@ -13001,11 +12997,6 @@ INSERT INTO skill_trees VALUES (57,148,6,'Vital Force',242000,58);
 INSERT INTO skill_trees VALUES (57,148,7,'Vital Force',600000,64);
 INSERT INTO skill_trees VALUES (57,148,8,'Vital Force',1330000,72);
 INSERT INTO skill_trees VALUES (57,150,3,'Weight Limit',67000,46);
-INSERT INTO skill_trees VALUES (57,172,5,'Create Item',46000,43);
-INSERT INTO skill_trees VALUES (57,172,6,'Create Item',98000,49);
-INSERT INTO skill_trees VALUES (57,172,7,'Create Item',189000,55);
-INSERT INTO skill_trees VALUES (57,172,8,'Create Item',400000,62);
-INSERT INTO skill_trees VALUES (57,172,9,'Create Item',870000,70);
 INSERT INTO skill_trees VALUES (57,205,9,'Blunt Mastery',14000,40);
 INSERT INTO skill_trees VALUES (57,205,10,'Blunt Mastery',14000,40);
 INSERT INTO skill_trees VALUES (57,205,11,'Blunt Mastery',14000,40);
@@ -13232,14 +13223,12 @@ INSERT INTO skill_trees VALUES (57,424,2,'War Frenzy',640000,66);
 INSERT INTO skill_trees VALUES (57,424,3,'War Frenzy',2170000,74);
 INSERT INTO skill_trees VALUES (88,328,1,'Wisdom',12000000,76);
 INSERT INTO skill_trees VALUES (88,329,1,'Health',12000000,76);
-INSERT INTO skill_trees VALUES (88,330,1,'Skill Mastery',15000000,77);
 INSERT INTO skill_trees VALUES (88,340,1,'Riposte Stance',15000000,77);
 INSERT INTO skill_trees VALUES (88,345,1,'Sonic Rage',32000000,78);
 INSERT INTO skill_trees VALUES (88,359,1,'Eye of Hunter',15000000,77);
 INSERT INTO skill_trees VALUES (88,360,1,'Eye of Slayer',32000000,78);
 INSERT INTO skill_trees VALUES (89,328,1,'Wisdom',12000000,76);
 INSERT INTO skill_trees VALUES (89,329,1,'Health',12000000,76);
-INSERT INTO skill_trees VALUES (89,330,1,'Skill Mastery',15000000,77);
 INSERT INTO skill_trees VALUES (89,339,1,'Parry Stance',21000000,78);
 INSERT INTO skill_trees VALUES (89,347,1,'Earthquake',21000000,78);
 INSERT INTO skill_trees VALUES (89,359,1,'Eye of Hunter',15000000,77);
@@ -13260,25 +13249,21 @@ INSERT INTO skill_trees VALUES (91,350,1,'Physical Mirror',32000000,78);
 INSERT INTO skill_trees VALUES (91,353,1,'Shield Slam',20000000,77);
 INSERT INTO skill_trees VALUES (91,368,1,'Vengeance',20000000,77);
 INSERT INTO skill_trees VALUES (92,328,1,'Wisdom',15000000,76);
-INSERT INTO skill_trees VALUES (92,330,1,'Skill Mastery',20000000,77);
 INSERT INTO skill_trees VALUES (92,334,1,'Focus Skill Mastery',64000000,78);
 INSERT INTO skill_trees VALUES (92,343,1,'Lethal Shot',15000000,76);
 INSERT INTO skill_trees VALUES (92,354,1,'Hamstring Shot',20000000,77);
 INSERT INTO skill_trees VALUES (93,328,1,'Wisdom',15000000,76);
-INSERT INTO skill_trees VALUES (93,330,1,'Skill Mastery',20000000,77);
 INSERT INTO skill_trees VALUES (93,334,1,'Focus Skill Mastery',21000000,78);
 INSERT INTO skill_trees VALUES (93,344,1,'Lethal Blow',15000000,76);
 INSERT INTO skill_trees VALUES (93,356,1,'Focus Chance',21000000,78);
 INSERT INTO skill_trees VALUES (93,357,1,'Focus Power',21000000,78);
 INSERT INTO skill_trees VALUES (93,358,1,'Bluff',20000000,77);
 INSERT INTO skill_trees VALUES (94,328,1,'Wisdom',30000000,76);
-INSERT INTO skill_trees VALUES (94,330,1,'Skill Mastery',20000000,77);
 INSERT INTO skill_trees VALUES (94,337,1,'Arcane Power',32000000,78);
 INSERT INTO skill_trees VALUES (94,1338,1,'Arcane Chaos',32000000,78);
 INSERT INTO skill_trees VALUES (94,1339,1,'Fire Vortex',20000000,77);
 INSERT INTO skill_trees VALUES (95,328,1,'Wisdom',10000000,76);
 INSERT INTO skill_trees VALUES (95,329,1,'Health',10000000,76);
-INSERT INTO skill_trees VALUES (95,330,1,'Skill Mastery',13000000,77);
 INSERT INTO skill_trees VALUES (95,337,1,'Arcane Power',21000000,78);
 INSERT INTO skill_trees VALUES (95,1336,1,'Curse of Doom',13000000,77);
 INSERT INTO skill_trees VALUES (95,1337,1,'Curse of Abyss',21000000,78);
@@ -13286,7 +13271,6 @@ INSERT INTO skill_trees VALUES (95,1343,1,'Dark Vortex',10000000,76);
 INSERT INTO skill_trees VALUES (95,1344,1,'Mass Warrior Bane',13000000,77);
 INSERT INTO skill_trees VALUES (95,1345,1,'Mass Mage Bane',21000000,78);
 INSERT INTO skill_trees VALUES (96,328,1,'Wisdom',12000000,76);
-INSERT INTO skill_trees VALUES (96,330,1,'Skill Mastery',15000000,77);
 INSERT INTO skill_trees VALUES (96,338,1,'Arcane Agility',32000000,78);
 INSERT INTO skill_trees VALUES (96,1346,1,'Warrior Servitor',15000000,77);
 INSERT INTO skill_trees VALUES (96,1349,1,'Final Servitor',32000000,78);
@@ -13294,7 +13278,6 @@ INSERT INTO skill_trees VALUES (96,1350,1,'Warrior Bane',12000000,76);
 INSERT INTO skill_trees VALUES (96,1351,1,'Mage Bane',15000000,77);
 INSERT INTO skill_trees VALUES (97,328,1,'Wisdom',10000000,76);
 INSERT INTO skill_trees VALUES (97,329,1,'Health',10000000,76);
-INSERT INTO skill_trees VALUES (97,330,1,'Skill Mastery',13000000,77);
 INSERT INTO skill_trees VALUES (97,336,1,'Arcane Wisdom',32000000,78);
 INSERT INTO skill_trees VALUES (97,1335,1,'Balance Life',10000000,76);
 INSERT INTO skill_trees VALUES (97,1353,1,'Divine Protection',13000000,77);
@@ -13302,7 +13285,6 @@ INSERT INTO skill_trees VALUES (97,1360,1,'Mass Block Shield',13000000,77);
 INSERT INTO skill_trees VALUES (97,1361,1,'Mass Block Wind Walk',32000000,78);
 INSERT INTO skill_trees VALUES (98,328,1,'Wisdom',10000000,76);
 INSERT INTO skill_trees VALUES (98,329,1,'Health',10000000,76);
-INSERT INTO skill_trees VALUES (98,330,1,'Skill Mastery',13000000,77);
 INSERT INTO skill_trees VALUES (98,336,1,'Arcane Wisdom',32000000,78);
 INSERT INTO skill_trees VALUES (98,1352,1,'Elemental Protection',10000000,76);
 INSERT INTO skill_trees VALUES (98,1356,1,'Prophecy of Fire',32000000,78);
@@ -13321,33 +13303,28 @@ INSERT INTO skill_trees VALUES (100,349,1,'Song of Renewal',20000000,77);
 INSERT INTO skill_trees VALUES (100,363,1,'Song of Meditation',20000000,77);
 INSERT INTO skill_trees VALUES (100,364,1,'Song of Champion',64000000,78);
 INSERT INTO skill_trees VALUES (101,328,1,'Wisdom',15000000,76);
-INSERT INTO skill_trees VALUES (101,330,1,'Skill Mastery',20000000,77);
 INSERT INTO skill_trees VALUES (101,334,1,'Focus Skill Mastery',21000000,78);
 INSERT INTO skill_trees VALUES (101,344,1,'Lethal Blow',15000000,76);
 INSERT INTO skill_trees VALUES (101,355,1,'Focus Death',21000000,78);
 INSERT INTO skill_trees VALUES (101,356,1,'Focus Chance',21000000,78);
 INSERT INTO skill_trees VALUES (101,358,1,'Bluff',20000000,77);
 INSERT INTO skill_trees VALUES (102,328,1,'Wisdom',15000000,76);
-INSERT INTO skill_trees VALUES (102,330,1,'Skill Mastery',20000000,77);
 INSERT INTO skill_trees VALUES (102,334,1,'Focus Skill Mastery',32000000,78);
 INSERT INTO skill_trees VALUES (102,343,1,'Lethal Shot',15000000,76);
 INSERT INTO skill_trees VALUES (102,354,1,'Hamstring Shot',20000000,77);
 INSERT INTO skill_trees VALUES (102,369,1,'Evade Shot',32000000,78);
 INSERT INTO skill_trees VALUES (103,328,1,'Wisdom',15000000,76);
-INSERT INTO skill_trees VALUES (103,330,1,'Skill Mastery',20000000,77);
 INSERT INTO skill_trees VALUES (103,337,1,'Arcane Power',32000000,78);
 INSERT INTO skill_trees VALUES (103,1338,1,'Arcane Chaos',32000000,78);
 INSERT INTO skill_trees VALUES (103,1340,1,'Ice Vortex',20000000,77);
 INSERT INTO skill_trees VALUES (103,1342,1,'Light Vortex',15000000,76);
 INSERT INTO skill_trees VALUES (104,328,1,'Wisdom',15000000,76);
-INSERT INTO skill_trees VALUES (104,330,1,'Skill Mastery',20000000,77);
 INSERT INTO skill_trees VALUES (104,338,1,'Arcane Agility',32000000,78);
 INSERT INTO skill_trees VALUES (104,1347,1,'Wizard Servitor',20000000,77);
 INSERT INTO skill_trees VALUES (104,1349,1,'Final Servitor',32000000,78);
 INSERT INTO skill_trees VALUES (104,1350,1,'Warrior Bane',15000000,76);
 INSERT INTO skill_trees VALUES (105,328,1,'Wisdom',10000000,76);
 INSERT INTO skill_trees VALUES (105,329,1,'Health',10000000,76);
-INSERT INTO skill_trees VALUES (105,330,1,'Skill Mastery',13000000,77);
 INSERT INTO skill_trees VALUES (105,336,1,'Arcane Wisdom',32000000,78);
 INSERT INTO skill_trees VALUES (105,1353,1,'Divine Protection',13000000,77);
 INSERT INTO skill_trees VALUES (105,1354,1,'Arcane Protection',10000000,76);
@@ -13366,55 +13343,47 @@ INSERT INTO skill_trees VALUES (107,365,1,'Dance of Siren',64000000,78);
 INSERT INTO skill_trees VALUES (107,366,1,'Dance of Shadow',20000000,77);
 INSERT INTO skill_trees VALUES (107,367,1,'Dance of Medusa',20000000,77);
 INSERT INTO skill_trees VALUES (108,328,1,'Wisdom',15000000,76);
-INSERT INTO skill_trees VALUES (108,330,1,'Skill Mastery',20000000,77);
 INSERT INTO skill_trees VALUES (108,334,1,'Focus Skill Mastery',21000000,78);
 INSERT INTO skill_trees VALUES (108,344,1,'Lethal Blow',15000000,76);
 INSERT INTO skill_trees VALUES (108,355,1,'Focus Death',21000000,78);
 INSERT INTO skill_trees VALUES (108,357,1,'Focus Power',21000000,78);
 INSERT INTO skill_trees VALUES (108,358,1,'Bluff',20000000,77);
 INSERT INTO skill_trees VALUES (109,328,1,'Wisdom',15000000,76);
-INSERT INTO skill_trees VALUES (109,330,1,'Skill Mastery',20000000,77);
 INSERT INTO skill_trees VALUES (109,334,1,'Focus Skill Mastery',32000000,78);
 INSERT INTO skill_trees VALUES (109,343,1,'Lethal Shot',15000000,76);
 INSERT INTO skill_trees VALUES (109,354,1,'Hamstring Shot',20000000,77);
 INSERT INTO skill_trees VALUES (109,369,1,'Evade Shot',32000000,78);
 INSERT INTO skill_trees VALUES (110,328,1,'Wisdom',10000000,76);
 INSERT INTO skill_trees VALUES (110,329,1,'Health',10000000,76);
-INSERT INTO skill_trees VALUES (110,330,1,'Skill Mastery',20000000,77);
 INSERT INTO skill_trees VALUES (110,337,1,'Arcane Power',32000000,78);
 INSERT INTO skill_trees VALUES (110,1338,1,'Arcane Chaos',32000000,78);
 INSERT INTO skill_trees VALUES (110,1341,1,'Wind Vortex',20000000,77);
 INSERT INTO skill_trees VALUES (110,1343,1,'Dark Vortex',10000000,76);
 INSERT INTO skill_trees VALUES (111,328,1,'Wisdom',12000000,76);
 INSERT INTO skill_trees VALUES (111,329,1,'Health',12000000,76);
-INSERT INTO skill_trees VALUES (111,330,1,'Skill Mastery',15000000,77);
 INSERT INTO skill_trees VALUES (111,338,1,'Arcane Agility',32000000,78);
 INSERT INTO skill_trees VALUES (111,1348,1,'Assassin Servitor',15000000,77);
 INSERT INTO skill_trees VALUES (111,1349,1,'Final Servitor',32000000,78);
 INSERT INTO skill_trees VALUES (111,1351,1,'Mage Bane',15000000,77);
 INSERT INTO skill_trees VALUES (112,328,1,'Wisdom',10000000,76);
 INSERT INTO skill_trees VALUES (112,329,1,'Health',10000000,76);
-INSERT INTO skill_trees VALUES (112,330,1,'Skill Mastery',20000000,77);
 INSERT INTO skill_trees VALUES (112,336,1,'Arcane Wisdom',32000000,78);
 INSERT INTO skill_trees VALUES (112,1354,1,'Arcane Protection',10000000,76);
 INSERT INTO skill_trees VALUES (112,1357,1,'Prophecy of Wind',32000000,78);
 INSERT INTO skill_trees VALUES (112,1358,1,'Block Shield',20000000,77);
 INSERT INTO skill_trees VALUES (113,328,1,'Wisdom',10000000,76);
 INSERT INTO skill_trees VALUES (113,329,1,'Health',10000000,76);
-INSERT INTO skill_trees VALUES (113,330,1,'Skill Mastery',20000000,77);
 INSERT INTO skill_trees VALUES (113,335,1,'Fortitude',10000000,76);
 INSERT INTO skill_trees VALUES (113,339,1,'Parry Stance',32000000,78);
 INSERT INTO skill_trees VALUES (113,347,1,'Earthquake',32000000,78);
 INSERT INTO skill_trees VALUES (113,362,1,'Armor Crush',20000000,77);
 INSERT INTO skill_trees VALUES (114,328,1,'Wisdom',10000000,76);
 INSERT INTO skill_trees VALUES (114,329,1,'Health',10000000,76);
-INSERT INTO skill_trees VALUES (114,330,1,'Skill Mastery',20000000,77);
 INSERT INTO skill_trees VALUES (114,335,1,'Fortitude',10000000,76);
 INSERT INTO skill_trees VALUES (114,340,1,'Riposte Stance',20000000,77);
 INSERT INTO skill_trees VALUES (114,346,1,'Raging Force',64000000,78);
 INSERT INTO skill_trees VALUES (115,328,1,'Wisdom',10000000,76);
 INSERT INTO skill_trees VALUES (115,329,1,'Health',10000000,76);
-INSERT INTO skill_trees VALUES (115,330,1,'Skill Mastery',13000000,77);
 INSERT INTO skill_trees VALUES (115,337,1,'Arcane Power',32000000,78);
 INSERT INTO skill_trees VALUES (115,1364,1,'The Eye of Paagrio',13000000,77);
 INSERT INTO skill_trees VALUES (115,1365,1,'The Soul of Paagrio',13000000,77);
@@ -13422,13 +13391,11 @@ INSERT INTO skill_trees VALUES (115,1366,1,'Seal of Despair',32000000,78);
 INSERT INTO skill_trees VALUES (115,1367,1,'Seal of Disease',10000000,76);
 INSERT INTO skill_trees VALUES (116,328,1,'Wisdom',15000000,76);
 INSERT INTO skill_trees VALUES (116,329,1,'Health',15000000,76);
-INSERT INTO skill_trees VALUES (116,330,1,'Skill Mastery',20000000,77);
 INSERT INTO skill_trees VALUES (116,336,1,'Arcane Wisdom',32000000,78);
 INSERT INTO skill_trees VALUES (116,1362,1,'Chant of Spirit',20000000,77);
 INSERT INTO skill_trees VALUES (116,1363,1,'Chant of Victory',32000000,78);
 INSERT INTO skill_trees VALUES (117,328,1,'Wisdom',10000000,76);
 INSERT INTO skill_trees VALUES (117,329,1,'Health',10000000,76);
-INSERT INTO skill_trees VALUES (117,330,1,'Skill Mastery',13000000,77);
 INSERT INTO skill_trees VALUES (117,339,1,'Parry Stance',32000000,78);
 INSERT INTO skill_trees VALUES (117,340,1,'Riposte Stance',13000000,77);
 INSERT INTO skill_trees VALUES (117,347,1,'Earthquake',32000000,78);
@@ -13436,11 +13403,22 @@ INSERT INTO skill_trees VALUES (117,348,1,'Spoil Crush',10000000,76);
 INSERT INTO skill_trees VALUES (117,362,1,'Armor Crush',13000000,77);
 INSERT INTO skill_trees VALUES (118,328,1,'Wisdom',15000000,76);
 INSERT INTO skill_trees VALUES (118,329,1,'Health',15000000,76);
-INSERT INTO skill_trees VALUES (118,330,1,'Skill Mastery',13000000,77);
 INSERT INTO skill_trees VALUES (118,339,1,'Parry Stance',32000000,78);
 INSERT INTO skill_trees VALUES (118,340,1,'Riposte Stance',13000000,77);
 INSERT INTO skill_trees VALUES (118,347,1,'Earthquake',32000000,78);
 INSERT INTO skill_trees VALUES (118,362,1,'Armor Crush',13000000,77);
+
+-- Create Item 172 (Done by DJ MELERIX) (Fixed by Hexa)
+
+INSERT INTO skill_trees VALUES (53,172,1,'Create Item',310,5);
+INSERT INTO skill_trees VALUES (56,172,2,'Create Item',3700,20);
+INSERT INTO skill_trees VALUES (56,172,3,'Create Item',13000,28);
+INSERT INTO skill_trees VALUES (56,172,4,'Create Item',34000,36);
+INSERT INTO skill_trees VALUES (57,172,5,'Create Item',46000,43);
+INSERT INTO skill_trees VALUES (57,172,6,'Create Item',98000,49);
+INSERT INTO skill_trees VALUES (57,172,7,'Create Item',189000,55);
+INSERT INTO skill_trees VALUES (57,172,8,'Create Item',400000,62);
+INSERT INTO skill_trees VALUES (57,172,9,'Create Item',870000,70);
 
 -- Lucky 194 (Done by DJ MELERIX)
 
@@ -13501,6 +13479,49 @@ INSERT INTO skill_trees VALUES (53,239,2,'Expertise C',0,40);
 INSERT INTO skill_trees VALUES (53,239,3,'Expertise B',0,52);
 INSERT INTO skill_trees VALUES (53,239,4,'Expertise A',0,61);
 INSERT INTO skill_trees VALUES (53,239,5,'Expertise S',0,76);
+
+-- Skill Mastery (330 STR - 331 INT) (Done by DJ MELERIX)
+
+INSERT INTO skill_trees VALUES (88,330,1,'Skill Mastery',15000000,77);
+INSERT INTO skill_trees VALUES (89,330,1,'Skill Mastery',15000000,77);
+INSERT INTO skill_trees VALUES (92,330,1,'Skill Mastery',20000000,77);
+INSERT INTO skill_trees VALUES (93,330,1,'Skill Mastery',20000000,77);
+INSERT INTO skill_trees VALUES (94,331,1,'Skill Mastery',20000000,77);
+INSERT INTO skill_trees VALUES (95,331,1,'Skill Mastery',13000000,77);
+INSERT INTO skill_trees VALUES (96,331,1,'Skill Mastery',15000000,77);
+INSERT INTO skill_trees VALUES (97,331,1,'Skill Mastery',13000000,77);
+INSERT INTO skill_trees VALUES (98,331,1,'Skill Mastery',13000000,77);
+INSERT INTO skill_trees VALUES (101,330,1,'Skill Mastery',20000000,77);
+INSERT INTO skill_trees VALUES (102,330,1,'Skill Mastery',20000000,77);
+INSERT INTO skill_trees VALUES (103,331,1,'Skill Mastery',20000000,77);
+INSERT INTO skill_trees VALUES (104,331,1,'Skill Mastery',20000000,77);
+INSERT INTO skill_trees VALUES (105,331,1,'Skill Mastery',13000000,77);
+INSERT INTO skill_trees VALUES (108,330,1,'Skill Mastery',20000000,77);
+INSERT INTO skill_trees VALUES (109,330,1,'Skill Mastery',20000000,77);
+INSERT INTO skill_trees VALUES (110,331,1,'Skill Mastery',20000000,77);
+INSERT INTO skill_trees VALUES (111,331,1,'Skill Mastery',15000000,77);
+INSERT INTO skill_trees VALUES (112,331,1,'Skill Mastery',20000000,77);
+INSERT INTO skill_trees VALUES (113,330,1,'Skill Mastery',20000000,77);
+INSERT INTO skill_trees VALUES (114,330,1,'Skill Mastery',20000000,77);
+INSERT INTO skill_trees VALUES (115,331,1,'Skill Mastery',13000000,77);
+INSERT INTO skill_trees VALUES (116,331,1,'Skill Mastery',20000000,77);
+INSERT INTO skill_trees VALUES (117,330,1,'Skill Mastery',13000000,77);
+INSERT INTO skill_trees VALUES (118,330,1,'Skill Mastery',13000000,77);
+
+-- Mental Shield 1035 (Done by DJ MELERIX)
+
+INSERT INTO skill_trees VALUES (15,1035,1,'Mental Shield',6900,25);
+INSERT INTO skill_trees VALUES (17,1035,2,'Mental Shield',32000,40);
+INSERT INTO skill_trees VALUES (17,1035,3,'Mental Shield',63000,48);
+INSERT INTO skill_trees VALUES (17,1035,4,'Mental Shield',105000,56);
+INSERT INTO skill_trees VALUES (29,1035,1,'Mental Shield',6500,25);
+INSERT INTO skill_trees VALUES (30,1035,2,'Mental Shield',34000,40);
+INSERT INTO skill_trees VALUES (30,1035,3,'Mental Shield',67000,48);
+INSERT INTO skill_trees VALUES (30,1035,4,'Mental Shield',92000,56);
+INSERT INTO skill_trees VALUES (42,1035,1,'Mental Shield',6500,25);
+INSERT INTO skill_trees VALUES (43,1035,2,'Mental Shield',39000,40);
+INSERT INTO skill_trees VALUES (43,1035,3,'Mental Shield',86000,48);
+INSERT INTO skill_trees VALUES (43,1035,4,'Mental Shield',125000,56);
 
 -- Create Common Item 1320 (Done by DJ MELERIX)
 
