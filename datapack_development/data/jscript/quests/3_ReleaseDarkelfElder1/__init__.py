@@ -64,14 +64,14 @@ class Quest (JQuest) :
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
-   if st.getInt("cond") == 1 :
-     if npcId == OMEN_BEAST and not st.getQuestItemsCount(ONYX_BEAST_EYE) :
+   if st.getInt("cond") == 1 :
+     if npcId == OMEN_BEAST and not st.getQuestItemsCount(ONYX_BEAST_EYE) :
        st.giveItems(ONYX_BEAST_EYE,1)
-     elif npcId in [TAINTED_ZOMBIE,STINK_ZOMBIE] and not st.getQuestItemsCount(TAINT_STONE) :
+     elif npcId in [TAINTED_ZOMBIE,STINK_ZOMBIE] and not st.getQuestItemsCount(TAINT_STONE) :
        st.giveItems(TAINT_STONE,1)
-     elif npcId in [LESSER_SUCCUBUS,LESSER_SUCCUBUS_TUREN,LESSER_SUCCUBUS_TILFO] and not st.getQuestItemsCount(SUCCUBUS_BLOOD) :
+     elif npcId in [LESSER_SUCCUBUS,LESSER_SUCCUBUS_TUREN,LESSER_SUCCUBUS_TILFO] and not st.getQuestItemsCount(SUCCUBUS_BLOOD) :
        st.giveItems(SUCCUBUS_BLOOD,1)
-     if st.getQuestItemsCount(ONYX_BEAST_EYE) and st.getQuestItemsCount(TAINT_STONE) and st.getQuestItemsCount(SUCCUBUS_BLOOD) :
+     if st.getQuestItemsCount(ONYX_BEAST_EYE) and st.getQuestItemsCount(TAINT_STONE) and st.getQuestItemsCount(SUCCUBUS_BLOOD) :
        st.set("cond","2")
        st.playSound("ItemSound.quest_middle")
      else :
