@@ -287,6 +287,7 @@ $MYG < ../sql/henna.sql &> /dev/null
 $MYG < ../sql/henna_trees.sql &> /dev/null
 $MYG < ../sql/heroes.sql &> /dev/null
 $MYG < ../sql/items.sql &> /dev/null
+$MYG < ../sql/itemsonground.sql &> /dev/null
 $MYG < ../sql/locations.sql &> /dev/null
 $MYG < ../sql/lvlupgain.sql &> /dev/null
 $MYG < ../sql/mapregion.sql &> /dev/null
