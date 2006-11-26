@@ -42,7 +42,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-   chance=22+(((i-20000)^34)/4)
+   chance=22+(((npc.getNpcId()-20000)^34)/4)
    count=st.getQuestItemsCount(VENOM_SAC)
    if count < 10 and st.getRandom(100) < chance :
      st.giveItems(VENOM_SAC,1)
