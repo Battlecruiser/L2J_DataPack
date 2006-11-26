@@ -232,14 +232,23 @@
       <using slotitem="5765;9"/>
      </and>
     </add>
-    <add val='50' order='0x40' stat='paralyzeRes'>
+    <mul val='2' order='0x30' stat='paralyzeRes'>
      <and>
       <using slotitem="388;11"/>
       <using slotitem="512;6"/>
       <using slotitem="5777;12"/>
       <using slotitem="5765;9"/>
      </and>
-    </add>
+    </mul>
+    <mul val='1.18' order='0x30' stat='rShld'>
+     <and>
+      <using slotitem="388;11"/>
+      <using slotitem="512;6"/>
+      <using slotitem="5777;12"/>
+      <using slotitem="5765;9"/>
+      <using slotitem="641;8"/>
+     </and>
+    </mul>
   <enchant val='0' order='0x0C' stat='pDef'/>
  </for>
 </item>
