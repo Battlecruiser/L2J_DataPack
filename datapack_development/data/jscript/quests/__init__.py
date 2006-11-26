@@ -162,6 +162,7 @@ __all__ = [
 '375_WhisperOfDreams2',
 '376_GiantsExploration1',
 '377_GiantsExploration2',
+'379_FantasyWine',
 '381_LetsBecomeARoyalMember',
 '382_KailsMagicCoin',
 '383_SearchingForTreasure',
