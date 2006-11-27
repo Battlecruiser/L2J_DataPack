@@ -163,6 +163,7 @@ __all__ = [
 '376_GiantsExploration1',
 '377_GiantsExploration2',
 '379_FantasyWine',
+'380_BringOutTheFlavorOfIngredients',
 '381_LetsBecomeARoyalMember',
 '382_KailsMagicCoin',
 '383_SearchingForTreasure',
