@@ -49,7 +49,7 @@ class Quest (JQuest) :
      if flame==ice==0 :
        htmltext = "30004-05.htm"
      else :
-       if fire+ice > 9 :
+       if flame+ice > 9 :
           st.giveItems(ADENA,5000+30*(flame+ice))
        else :
           st.giveItems(ADENA,30*(flame+ice))
