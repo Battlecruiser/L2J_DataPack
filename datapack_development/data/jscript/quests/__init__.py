@@ -162,6 +162,7 @@ __all__ = [
 '375_WhisperOfDreams2',
 '376_GiantsExploration1',
 '377_GiantsExploration2',
+'378_MagnificentFeast',
 '379_FantasyWine',
 '380_BringOutTheFlavorOfIngredients',
 '381_LetsBecomeARoyalMember',
