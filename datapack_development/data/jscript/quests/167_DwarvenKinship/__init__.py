@@ -1,5 +1,4 @@
-# Made by Mr. Have fun! Version 0.2
-# version 0.3 by DrLecter
+# Made by Mr. - version 0.4 by DrLecter
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -9,60 +8,66 @@ COLLETTE_LETTER = 1076
 NORMANS_LETTER = 1106
 ADENA = 57
 
+COLLETTE,NORMAN,HAPROCK = 30350,30210,30255
+
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onEvent (self,event,st) :
-    htmltext = event
-    if event == "30350-04.htm" :
-      st.giveItems(COLLETTE_LETTER,1)
-      st.set("cond","1")
-      st.setState(STARTED)
-      st.playSound("ItemSound.quest_accept")
-    elif event == "30255-03.htm" :
-      st.set("cond","2")
-      st.takeItems(COLLETTE_LETTER,1)
-      st.giveItems(NORMANS_LETTER,1)
-      st.giveItems(ADENA,2000)
-    elif event == "30255-04.htm" :
-      st.takeItems(COLLETTE_LETTER,1)
-      st.giveItems(ADENA,3000)
-      st.unset("cond")
-      st.setState(COMPLETED)
-      st.playSound("ItemSound.quest_finish")
-    elif event == "30210-02.htm" :
-      st.takeItems(NORMANS_LETTER,1)
-      st.giveItems(ADENA,20000)
-      st.unset("cond")
-      st.setState(COMPLETED)
-      st.playSound("ItemSound.quest_finish")
+    if st.getState() != COMPLETED :
+     htmltext = event
+     cond = st.getInt("cond")
+     collette = st.getQuestItemsCount(COLLETTE_LETTER)
+     if event == "30350-04.htm" and cond == 0 :
+       st.giveItems(COLLETTE_LETTER,1)
+       st.set("cond","1")
+       st.setState(STARTED)
+       st.playSound("ItemSound.quest_accept")
+     elif event == "30255-03.htm" and cond == 1 and collette :
+       st.set("cond","2")
+       st.takeItems(COLLETTE_LETTER,1)
+       st.giveItems(NORMANS_LETTER,1)
+       st.giveItems(ADENA,2000)
+     elif event == "30255-04.htm" and cond == 1 and collette :
+       st.takeItems(COLLETTE_LETTER,1)
+       st.giveItems(ADENA,3000)
+       st.unset("cond")
+       st.setState(COMPLETED)
+       st.playSound("ItemSound.quest_finish")
+     elif event == "30210-02.htm" and cond == 2 and st.getQuestItemsCount(NORMANS_LETTER) :
+       st.takeItems(NORMANS_LETTER,1)
+       st.giveItems(ADENA,20000)
+       st.unset("cond")
+       st.setState(COMPLETED)
+       st.playSound("ItemSound.quest_finish")
     return htmltext
 
 
  def onTalk (Self,npc,st):
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   collette = st.getQuestItemsCount(COLLETTE_LETTER)
+   norman = st.getQuestItemsCount(NORMANS_LETTER)
    id = st.getState()
-   if id == CREATED :
-     st.set("cond","0")
-   if id==COMPLETED :
+   cond = st.getInt("cond")
+   if id == COMPLETED :
      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 30350 :
-     if int(st.get("cond"))==0 :
+   elif npcId == COLLETTE :
+     if cond == 0 :
        if st.getPlayer().getLevel() >= 15 :
          htmltext = "30350-03.htm"
        else:
          htmltext = "30350-02.htm"
          st.exitQuest(1)
-     elif int(st.get("cond"))==1 and st.getQuestItemsCount(COLLETTE_LETTER) :
+     elif cond == 1 and collette :
        htmltext = "30350-05.htm"
-   elif npcId == 30255 :
-     if int(st.get("cond"))==1 and st.getQuestItemsCount(COLLETTE_LETTER) :
+   elif npcId == HAPROCK :
+     if cond == 1 and collette :
        htmltext = "30255-01.htm"
-     elif int(st.get("cond"))==2 and st.getQuestItemsCount(NORMANS_LETTER) :
+     elif cond == 2 and norman :
        htmltext = "30255-05.htm"
-   elif npcId == 30210 and int(st.get("cond"))==2 and st.getQuestItemsCount(NORMANS_LETTER) :
+   elif npcId == NORMAN and cond == 2 and norman :
       htmltext = "30210-01.htm"
    return htmltext
 
@@ -72,16 +77,16 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(30350)
+QUEST.addStartNpc(COLLETTE)
 
-CREATED.addTalkId(30350)
-COMPLETED.addTalkId(30350)
+CREATED.addTalkId(COLLETTE)
+COMPLETED.addTalkId(COLLETTE)
 
-STARTED.addTalkId(30210)
-STARTED.addTalkId(30255)
-STARTED.addTalkId(30350)
+STARTED.addTalkId(NORMAN)
+STARTED.addTalkId(HAPROCK)
+STARTED.addTalkId(COLLETTE)
 
-STARTED.addQuestDrop(30350,COLLETTE_LETTER,1)
-STARTED.addQuestDrop(30255,NORMANS_LETTER,1)
+STARTED.addQuestDrop(NORMAN,COLLETTE_LETTER,1)
+STARTED.addQuestDrop(NORMAN,NORMANS_LETTER,1)
 
 print "importing quests: 167: Dwarven Kinship"
