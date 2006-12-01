@@ -117,8 +117,13 @@ class Quest (JQuest) :
         st.set("onlyone","1")
         if st.getPlayer().getClassId().getId() in range(18,25) :
           st.giveItems(SWORD_OF_SENTINEL_ID,1)
+          st.giveItems(1835,1000)
         else:
           st.giveItems(STAFF_OF_SENTINEL_ID,1)
+          st.giveItems(2509,1000)
+        for item in range(4412,4417) :
+          st.giveItems(item,10)
+        st.giveItems(1060,100)
    return htmltext
 
  def onKill (self,npc,st):
@@ -166,4 +171,4 @@ STARTED.addQuestDrop(30156,COBS_MEDICINE4_ID,1)
 STARTED.addQuestDrop(30156,COBS_MEDICINE5_ID,1)
 STARTED.addQuestDrop(30284,ALBERRYUS_LIST_ID,1)
 
-print "importing quests: 102: Fungus Fever"
+print "importing quests: 102: Sea of Spores Fever"
