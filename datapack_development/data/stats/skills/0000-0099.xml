@@ -1193,7 +1193,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="possession">
-      <mul order="0x40" stat="runSpd" val="1.20"/>
+      <mul order="0x30" stat="runSpd" val="1.20"/>
       <add order="0x40" stat="accCombat" val="3"/>
     </effect>
   </for>

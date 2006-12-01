@@ -208,13 +208,10 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
-      <mul order="0x30" stat="regHp" val="1.2"/>
-      <mul order="0x30" stat="pAtk" val="1.07"/>
-      <mul order="0x30" stat="pDef" val="1.15"/>
-      <add order="0x40" stat="accCombat" val="3"/>
-      <mul order="0x30" stat="maxHp" val="1.2"/>
+      <mul order="0x30" stat="pDef" val="1.30"/>
+      <mul order="0x30" stat="mDef" val="1.30"/>
       <mul order="0x30" stat="runSpd" val="0.7"/>
-      <sub order="0x40" stat="rEvas" val="10"/>
+      <sub order="0x40" stat="rEvas" val="9"/>
     </effect>
   </for>
 </skill>
