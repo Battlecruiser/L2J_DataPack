@@ -120,7 +120,7 @@
   </for>
 </skill>
 <skill id="4606" levels="12" name="Poison">
-  <table name="#dmg"> 12 18 24 31 38 44 48 48 50 50 51 51 </table>
+  <table name="#dot"> 12 18 24 31 38 44 48 48 50 50 51 51 </table>
   <table name="#power"> 46 106 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
   <table name="#mpConsume"> 37 62 86 116 149 184 215 229 241 249 255 258 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -133,7 +133,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
-    <effect count="1" name="DamOverTime" time="30" val="#dmg" abnormal="poison"/>
+    <effect count="10" name="DamOverTime" time="3" val="#dot" abnormal="poison"/>
   </for>
 </skill>
 <skill id="4607" levels="1" name="Magma Attack">
@@ -936,7 +936,7 @@
   </for>
 </skill>
 <skill id="4649" levels="12" name="Poison">
-  <table name="#dmg"> 12 18 24 31 38 44 48 48 50 50 51 51 </table>
+  <table name="#dot"> 12 18 24 31 38 44 48 48 50 50 51 51 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -951,7 +951,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="DamOverTime" time="30" val="#dmg" abnormal="poison"/>
+    <effect count="10" name="DamOverTime" time="3" val="#dot" abnormal="poison"/>
   </for>
 </skill>
 <skill id="4650" levels="1" name="NPC AE - Dispel Hold">
