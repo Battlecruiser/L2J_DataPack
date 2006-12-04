@@ -1820,14 +1820,25 @@
   </for>
 </skill>
 <skill id="1397" levels="3" name="Clarity">
-  <!-- Elder -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <!-- needs to decrease target's MP usage cost -->
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume"> 54 62 69 </table>
+  <table name="#SpiritOre"> 1 2 3 </table>
+  <table name="#MpConsumeRate"> 0.96 0.92 0.9 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="#SpiritOre"/> 
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>   
+  <set name="skillTime" val="4000"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#mpConsume" stackType="MPrate">
+      <mul order="0x30" stat="MpConsumeRate" val="#MpConsumeRate"/>
+    </effect>
   </for>
 </skill>
 <skill id="1398" levels="10" name="Mana Burn"> 
