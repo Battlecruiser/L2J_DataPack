@@ -154,6 +154,7 @@ __all__ = [
 '363_SorrowfulSoundofFlute',
 '364_JovialAccordion',
 '365_DevilsLegacy',
+'366_SilverHairedShaman',
 '367_ElectrifyingRecharge',
 '368_TrespassingIntoTheSacredArea',
 '370_AWisemanSowsSeeds',
