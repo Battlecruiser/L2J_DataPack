@@ -230,7 +230,7 @@
 			<using slotitem="6384;9"/> 
 		</and> 
 	</add> 
-	<mul val='1.08' order='0x30' stat='mAtk'> 
+	<mul val='1.17' order='0x30' stat='mAtk'> 
 		<and> 
 			<using slotitem="6386;6"/> 
 			<using slotitem="6385;12"/> 
@@ -251,13 +251,20 @@
 			<using slotitem="6384;9"/> 
 		</and> 
 	</add> 
-	<mul val='1.5' order='0x30' stat='cancel'> 
+	<sub val='50' order='0x40' stat='cancel'>
 		<and> 
 			<using slotitem="6386;6"/> 
 			<using slotitem="6385;12"/> 
 			<using slotitem="6384;9"/> 
 		</and> 
-	</mul> 
+	</sub>
+  <add val='50' order='0x40' stat='stunRes'>
+     <and>
+        <using slotitem="6386;6"/>
+        <using slotitem="6385;12"/>
+        <using slotitem="6384;9"/>
+     </and>
+  </add>
   <enchant val='0' order='0x0C' stat='pDef'/>
   </for> 
 </item>

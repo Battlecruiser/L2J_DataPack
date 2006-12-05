@@ -1002,7 +1002,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#res" stackType="MagicDefUpAtr">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="MagicDefUpAtr">
       <add stat="waterRes" val="#res" order="0x40"/>
     </effect>
   </for>
@@ -1081,7 +1081,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#res" stackType="MagicDefUpAtr">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="MagicDefUpAtr">
       <add stat="windRes" val="#res" order="0x40"/>
     </effect>
   </for>
@@ -1104,7 +1104,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#res" stackType="MagicDefUpAtr">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="MagicDefUpAtr">
       <add stat="fireRes" val="#res" order="0x40"/>
     </effect>
   </for>
