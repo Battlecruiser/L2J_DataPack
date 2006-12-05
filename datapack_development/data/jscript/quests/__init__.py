@@ -157,6 +157,7 @@ __all__ = [
 '366_SilverHairedShaman',
 '367_ElectrifyingRecharge',
 '368_TrespassingIntoTheSacredArea',
+'369_CollectorOfJewels',
 '370_AWisemanSowsSeeds',
 '372_LegacyOfInsolence',
 '373_SupplierOfReagents',
