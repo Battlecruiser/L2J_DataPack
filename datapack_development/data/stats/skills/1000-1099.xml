@@ -929,6 +929,7 @@
   <table name="#mpConsume_Init"> 7 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
   <table name="#mpConsume"> 28 31 35 38 41 43 44 46 48 49 51 52 53 55 </table>
   <table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
+  <table name="#cast-rng"> 750 750 750 900 900 900 900 900 900 900 900 900 900 900 900 900 900 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="3"/>
@@ -943,7 +944,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="15000"/>
-  <set name="castRange" val="900"/>
+  <set name="castRange" val="#cast-rng"/>
   <set name="effectRange" val="1400"/>
   <for>
     <effect count="1" name="Buff" time="15" val="0" stackOrder="2" stackType="surrender">
@@ -999,6 +1000,7 @@
   </for>
 </skill>
 <skill id="1074" levels="14" name="Surrender To Wind">
+  <table name="#cast-rng"> 750 750 750 900 900 900 900 900 900 900 900 900 900 900 900 900 900 </table>
   <table name="#mpConsume_Init"> 7 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
   <table name="#mpConsume"> 28 31 35 38 41 43 44 46 48 49 51 52 53 55 </table>
   <table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
@@ -1016,12 +1018,11 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="15000"/>
-  <set name="castRange" val="900"/>
+  <set name="castRange" val="#cast-rng"/>
   <set name="effectRange" val="1400"/>
   <for>
     <effect count="1" name="Buff" time="15" val="0" stackOrder="2" stackType="surrender">
       <sub order="0x40" stat="windRes" val="30"/>
-      <!-- <add order="0x40" stat="earthRes" val="?"/> -->
     </effect>
   </for>
 </skill>
