@@ -56,9 +56,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(366,"366_SilverHairedShaman","Silver Haired Shaman",True)
 CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(DIETER)
