@@ -143,6 +143,7 @@ __all__ = [
 '350_EnhanceYourWeapon',
 '351_BlackSwan',
 '352_HelpRoodRaiseANewPet',
+'353_PowerOfDarkness',
 '354_ConquestOfAlligatorIsland',
 '355_FamilyHonor',
 '356_DigUpTheSeaOfSpores',
