@@ -32,19 +32,24 @@ class Quest (JQuest) :
      st.takeItems(SEAL_OF_LIGHT,1)
      st.giveItems(GEM_OF_SAINTS,1)
      st.set("cond","4")
-   elif event == "31518-5.htm" :
+   elif event == "31518-5.htm" and st.getQuestItemsCount(GEM_OF_SAINTS) == 1 :
      st.takeItems(GEM_OF_SAINTS,1)
+     st.set("cond","5")
    else :
      if event == "31518-6.htm" :
        st.giveItems(ADENA,100000)
      elif event == "31518-7.htm" :
        st.giveItems(ASOFE,13)
+       st.giveItems(ADENA,6400)
      elif event == "31518-8.htm" :
        st.giveItems(THONS,13)
+       st.giveItems(ADENA,6400)
      elif event == "31518-9.htm" :
        st.giveItems(ENRIA,6)
+       st.giveItems(ADENA,13600)
      elif event == "31518-10.htm" :
-       st.giveItems(MOLD_HARDENER,6)
+       st.giveItems(MOLD_HARDENER,3)
+       st.giveItems(ADENA,17200)
      st.playSound("ItemSound.quest_finish")
      st.exitQuest(1)
    return htmltext
@@ -67,6 +72,8 @@ class Quest (JQuest) :
         htmltext = "31518-2.htm"
       elif st.getQuestItemsCount(GEM_OF_SAINTS) :
         htmltext = "31518-4.htm"
+      elif cond == 5 :
+        htmltext = "31518-5.htm"
    elif npcId == ENFEUX and st.getQuestItemsCount(SEAL_OF_LIGHT) :
      htmltext = "31519-0.htm"
    return htmltext
