@@ -116,6 +116,7 @@ __all__ = [
 '297_GatekeepersFavor',
 '298_LizardmensConspiracy',
 '299_GatherIngredientsForPie',
+'300_HuntingLetoLizardman',
 '303_CollectArrowheads',
 '306_CrystalOfFireice',
 '313_CollectSpores',

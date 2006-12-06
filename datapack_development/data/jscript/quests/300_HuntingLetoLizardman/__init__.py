@@ -1,0 +1,79 @@
+# Hunting Leto Lizardman - Version 0.1 by DrLecter
+import sys
+from net.sf.l2j.gameserver.model.quest import State
+from net.sf.l2j.gameserver.model.quest import QuestState
+from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+
+#NPC
+RATH=30126
+#Items
+BRACELET=7139
+#BASE CHANCE FOR DROP
+CHANCE = 50
+#REWARDS
+REWARDS=[[57,30000],[1867,50],[1872,50]]
+
+class Quest (JQuest) :
+
+ def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+
+ def onEvent (self,event,st) :
+   htmltext = event
+   cond = st.getInt("cond")
+   count = st.getQuestItemsCount(BRACELET)
+   if event == "30126-03.htm" and cond == 0 :
+     st.set("cond","1")
+     st.setState(STARTED)
+     st.playSound("ItemSound.quest_accept")
+   elif event == "30126-05.htm" :
+     if count == 60 and cond == 2 :
+       htmltext = "30126-06.htm"
+       st.takeItems(BRACELET,-1)
+       item,qty = REWARDS[st.getRandom(len(REWARDS))]
+       st.giveItems(item,qty)
+       st.playSound("ItemSound.quest_finish")
+       st.exitQuest(1)
+   return htmltext
+
+ def onTalk (Self,npc,st):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   id = st.getState()
+   cond=st.getInt("cond")
+   if cond == 0 :
+     if st.getPlayer().getLevel() >= 34 :
+       htmltext = "30126-02.htm"
+     else:
+       htmltext = "30126-01.htm"
+       st.exitQuest(1)
+   else :
+       htmltext = "30126-04.htm"
+   return htmltext
+
+ def onKill (self,npc,st):
+   count = st.getQuestItemsCount(BRACELET)
+   cond = st.getInt("cond")
+   if st.getRandom(100) < CHANCE + ((npc.getNpcId() - 20579)*5) and count < 60 and cond == 1:
+     st.giveItems(BRACELET,1)
+     if count == 59 :
+        st.playSound("ItemSound.quest_middle")
+        st.set("cond","2")
+     else :
+        st.playSound("ItemSound.quest_itemget")
+   return
+
+QUEST       = Quest(300,"300_HuntingLetoLizardman","Hunting Leto Lizardman")
+CREATED     = State('Start', QUEST)
+STARTED     = State('Started', QUEST)
+
+QUEST.setInitialState(CREATED)
+QUEST.addStartNpc(RATH)
+
+CREATED.addTalkId(RATH)
+STARTED.addTalkId(RATH)
+
+for mob in range(20577,20581)+[20582] :
+    STARTED.addKillId(mob)
+
+STARTED.addQuestDrop(RATH,BRACELET,1)
+
+print "importing quests: 300: Hunting Leto Lizardman"
