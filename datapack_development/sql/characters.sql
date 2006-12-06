@@ -73,6 +73,9 @@ CREATE TABLE IF NOT EXISTS characters (
   nobless decimal(1,0) NOT NULL DEFAULT 0,
   subpledge int(1) NOT NULL DEFAULT 0,
   last_recom_date decimal(20,0) NOT NULL DEFAULT 0,
+  lvl_joined_academy int(1) NOT NULL DEFAULT 0,
+  apprentice int(1) NOT NULL DEFAULT 0,
+  sponsor int(1) NOT NULL DEFAULT 0,
   PRIMARY KEY  (obj_Id),
   KEY `clanid` (`clanid`)
 ) ;

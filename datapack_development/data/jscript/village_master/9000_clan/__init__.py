@@ -39,6 +39,10 @@ class Quest (JQuest) :
    # player must be in a clan to dissolve clan! 
    elif event == "9000-04.htm" and PlayerinClan == 0: htmltext = "9000-11.htm"
    elif event == "9000-05.htm": htmltext = "9000-05.htm"
+   elif event == "9000-12.htm": htmtext = "9000-12.htm"
+   elif event == "9000-13.htm": htmtext = "9000-13.htm"
+   elif event == "9000-14.htm": htmtext = "9000-14.htm"
+   elif event == "9000-15.htm": htmtext = "9000-15.htm"
    else: htmltext = "9000-02.htm"
    #st.exitQuest(1)
    return htmltext

@@ -269,12 +269,14 @@ $MYG < ../sql/character_subclasses.sql &> /dev/null
 $MYG < ../sql/characters.sql &> /dev/null
 $MYG < ../sql/clan_data.sql &> /dev/null
 $MYG < ../sql/clan_privs.sql &> /dev/null
+$MYG < ../sql/clan_skills.sql &> /dev/null
 $MYG < ../sql/clan_subpledges.sql &> /dev/null
 $MYG < ../sql/clan_wars.sql &> /dev/null
 $MYG < ../sql/clanhall.sql &> /dev/null
 $MYG < ../sql/class_list.sql &> /dev/null
 $MYG < ../sql/cursedWeapons.sql &> /dev/null
 $MYG < ../sql/droplist.sql &> /dev/null
+$MYG < ../sql/enchant_skill_trees.sql &> /dev/null
 $MYG < ../sql/etcitem.sql &> /dev/null
 $MYG < ../sql/fish.sql &> /dev/null
 $MYG < ../sql/fishing_skill_trees.sql &> /dev/null
@@ -301,6 +303,7 @@ $MYG < ../sql/npc.sql &> /dev/null
 $MYG < ../sql/olympiad_nobles.sql&> /dev/null
 $MYG < ../sql/pets.sql &> /dev/null
 $MYG < ../sql/pets_stats.sql &> /dev/null
+$MYG < ../sql/pledge_skill_trees.sql &> /dev/null
 $MYG < ../sql/posts.sql &> /dev/null
 $MYG < ../sql/npcskills.sql &> /dev/null
 $MYG < ../sql/raidboss_spawnlist.sql &> /dev/null
