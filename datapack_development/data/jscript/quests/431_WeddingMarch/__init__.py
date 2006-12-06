@@ -17,40 +17,38 @@ class Quest (JQuest) :
  
  def onEvent (self,event,st) :
      htmltext = event
-     if event == "1" :
+     cond = st.getInt("cond")
+     if event == "1" and cond == 0 :
          htmltext = "31042-02.htm"
          st.set("cond","1")
          st.setState(STARTED)
          st.playSound("ItemSound.quest_accept")
-     elif event == "3" :
+     elif event == "3" and st.getQuestItemsCount(SILVER_CRYSTAL_ID) == 50 :
          st.giveItems(WEDDING_ECHO_CRYSTAL_ID,25)
          st.takeItems(SILVER_CRYSTAL_ID,50)
          htmltext = "31042-05.htm"
-         st.set("cond","0")
-         st.setState(COMPLETED)
          st.playSound("ItemSound.quest_finish")
+         st.exitQuest(1)
      return htmltext
  
  def onTalk (Self,npc,st):
      npcId = npc.getNpcId()
      htmltext = "<html><head><body>I have nothing to say you</body></html>"
+     cond = st.getInt("cond")
      id = st.getState()
      if id == CREATED :
-         st.set("cond","0")
          htmltext = "31042-01.htm"
-     elif npcId == 31042 and int(st.get("cond"))==1 :
+     elif cond == 1 :
          htmltext = "31042-03.htm"
-     elif npcId == 31042 and int(st.get("cond"))==2 :
+     elif cond == 2 :
          htmltext = "31042-04.htm"
-     
      return htmltext
  
  def onKill(self,npc,st):
-     npcId = npc.getNpcId()     
-     if npcId == 20786 or npcId == 20787 :
-         if int(st.get("cond"))==1 and st.getQuestItemsCount(SILVER_CRYSTAL_ID)<50 :
+     count = st.getQuestItemsCount(SILVER_CRYSTAL_ID)
+     if st.getInt("cond") == 1 and count < 50 :
              st.giveItems(SILVER_CRYSTAL_ID,1)
-             if st.getQuestItemsCount(SILVER_CRYSTAL_ID) == 50 :
+             if count == 49 :
                  st.playSound("ItemSound.quest_middle")
                  st.set("cond","2")
              else :

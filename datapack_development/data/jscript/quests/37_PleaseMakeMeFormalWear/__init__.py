@@ -19,53 +19,53 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
-   if event == "30842-1.htm" :
-     st.set("cond","1")
-     st.setState(STARTED)
-     st.playSound("ItemSound.quest_accept")
-   if event == "31520-1.htm" :
-     st.giveItems(SIGNET_RING,1)
-     st.set("cond","2")
-   if event == "31521-1.htm" :
-     st.giveItems(ICE_WINE,1)
-     st.set("cond","3")
-   if event == "31627-1.htm" :
-     if st.getQuestItemsCount(ICE_WINE):
-       st.takeItems(ICE_WINE,1)
-       st.set("cond","4")
-     else:
-       htmltext = "You don't have enough materials"
-   if event == "31521-3.htm" :
-     st.giveItems(BOX_OF_COOKIES,1)
-     st.set("cond","5")
-   if event == "31520-3.htm" :
-     st.set("cond","6")
-   if event == "31520-5.htm" :
-     if st.getQuestItemsCount(MYSTERIOUS_CLOTH) and st.getQuestItemsCount(JEWEL_BOX) and st.getQuestItemsCount(SEWING_KIT) :
-       st.takeItems(MYSTERIOUS_CLOTH,1)
-       st.takeItems(JEWEL_BOX,1)
-       st.takeItems(SEWING_KIT,1)
-       st.set("cond","7")
-     else :
-       htmltext = "You don't have enough materials"
-   if event == "31520-7.htm" :
-     if st.getQuestItemsCount(DRESS_SHOES_BOX) :
-       st.takeItems(DRESS_SHOES_BOX,1)
-       st.giveItems(FORMAL_WEAR,1)
-       st.setState(COMPLETED)
-       st.set("cond","0")
-       st.playSound("ItemSound.quest_finish")
-     else :
-       htmltext = "You don't have enough materials"
+   cond = st.getInt("cond")
+   if st.getState() <> COMPLETED :
+    if event == "30842-1.htm" and cond == 0:
+      st.set("cond","1")
+      st.setState(STARTED)
+      st.playSound("ItemSound.quest_accept")
+    elif event == "31520-1.htm" and cond == 1:
+      st.giveItems(SIGNET_RING,1)
+      st.set("cond","2")
+    elif event == "31521-1.htm" and cond == 2 :
+      st.giveItems(ICE_WINE,1)
+      st.set("cond","3")
+    elif event == "31627-1.htm" and cond == 3:
+      if st.getQuestItemsCount(ICE_WINE):
+         st.takeItems(ICE_WINE,1)
+         st.set("cond","4")
+      else:
+         htmltext = "You don't have enough materials"
+    elif event == "31521-3.htm" and cond == 4:
+       st.giveItems(BOX_OF_COOKIES,1)
+       st.set("cond","5")
+    elif event == "31520-3.htm" and cond == 5:
+       st.set("cond","6")
+    elif event == "31520-5.htm" and cond == 6:
+       if st.getQuestItemsCount(MYSTERIOUS_CLOTH) and st.getQuestItemsCount(JEWEL_BOX) and st.getQuestItemsCount(SEWING_KIT) :
+         st.takeItems(MYSTERIOUS_CLOTH,1)
+         st.takeItems(JEWEL_BOX,1)
+         st.takeItems(SEWING_KIT,1)
+         st.set("cond","7")
+       else :
+         htmltext = "You don't have enough materials"
+    elif event == "31520-7.htm" :
+       if st.getQuestItemsCount(DRESS_SHOES_BOX) :
+         st.takeItems(DRESS_SHOES_BOX,1)
+         st.giveItems(FORMAL_WEAR,1)
+         st.setState(COMPLETED)
+         st.unset("cond")
+         st.playSound("ItemSound.quest_finish")
+       else :
+         htmltext = "You don't have enough materials"
    return htmltext
 
  def onTalk (Self,npc,st):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
-     st.set("cond","0")
-   cond = int(st.get("cond"))
+   cond = st.getInt("cond")
    if npcId == 30842 and cond == 0 :
      if id == COMPLETED :
        htmltext = "<html><head><body>This quest has already been completed.</body></html>"

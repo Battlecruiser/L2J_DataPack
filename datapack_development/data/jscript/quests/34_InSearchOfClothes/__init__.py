@@ -16,24 +16,25 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
-   if event == "30088-1.htm" :
+   cond = st.getInt("cond")
+   if event == "30088-1.htm" and cond == 0:
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   if event == "30294-1.htm" :
+   if event == "30294-1.htm" and cond == 1 :
      st.set("cond","2")
-   if event == "30088-3.htm" :
+   if event == "30088-3.htm" and cond == 2:
      st.set("cond","3")
-   if event == "30165-1.htm" :
+   if event == "30165-1.htm" and cond == 3:
      st.set("cond","4")
-   if event == "30165-3.htm" :
+   if event == "30165-3.htm" and cond == 5:
      if st.getQuestItemsCount(SPINNERET) == 10 :
        st.takeItems(SPINNERET,10)
        st.giveItems(SPIDERSILK,1)
        st.set("cond","6")
      else :
        htmltext = "You don't have enough materials"
-   if event == "30088-5.htm" :
+   if event == "30088-5.htm" and cond == 6 :
      if st.getQuestItemsCount(SUEDE) >= 3000 and st.getQuestItemsCount(THREAD) >= 5000 and st.getQuestItemsCount(SPIDERSILK) == 1 :
        st.takeItems(SUEDE,3000)
        st.takeItems(THREAD,5000)
@@ -49,9 +50,7 @@ class Quest (JQuest) :
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
-     st.set("cond","0")
-   cond = int(st.get("cond"))
+   cond = st.getInt("cond")
    if npcId == 30088 and cond == 0 and st.getQuestItemsCount(MYSTERIOUS_CLOTH) == 0 :
      fwear=st.getPlayer().getQuestState("37_PleaseMakeMeFormalWear")
      if fwear :

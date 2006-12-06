@@ -15,11 +15,12 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
    htmltext = event
-   if event == "30847-1.htm" :
+   cond == st.getInt("cond")
+   if event == "30847-1.htm" and cond == 0 :
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   if event == "30847-3.htm" :
+   if event == "30847-3.htm" and cond == 2 :
      st.takeItems(REINFORCED_STEEL,5)
      st.set("cond","3")
    return htmltext
@@ -27,9 +28,7 @@ class Quest (JQuest) :
  def onTalk (Self,npc,st) :
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
-   if id == CREATED :
-     st.set("cond","0")
-   cond = int(st.get("cond"))
+   cond = st.getInt("cond")
    if cond == 0 and st.getQuestItemsCount(SEWING_KIT) == 0 :
      fwear=st.getPlayer().getQuestState("37_PleaseMakeMeFormalWear")
      if fwear:

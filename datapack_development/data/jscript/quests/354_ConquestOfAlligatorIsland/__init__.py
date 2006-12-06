@@ -26,7 +26,7 @@ RANDOM_REWARDS=[[736,15], #SoE
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
 
  def onEvent (self,event,st) :
      htmltext = event
@@ -86,7 +86,7 @@ class Quest (JQuest) :
          st.giveItems(TORN_MAP_FRAGMENT,1)
      return
 
-QUEST       = Quest(354,"354_ConquestOfAlligatorIsland","Conquest Of Alligator Island")
+QUEST       = Quest(354,"354_ConquestOfAlligatorIsland","Conquest Of Alligator Island",True)
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

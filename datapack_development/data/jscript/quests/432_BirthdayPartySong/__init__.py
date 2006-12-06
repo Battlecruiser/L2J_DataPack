@@ -16,17 +16,17 @@ class Quest (JQuest) :
  
  def onEvent (self,event,st) :
      htmltext = event
-     if event == "1" :
+     cond = st.getInt("cond")
+     if event == "1" and cond == 0 :
          htmltext = "31043-02.htm"
          st.set("cond","1")
          st.setState(STARTED)
          st.playSound("ItemSound.quest_accept")
-     elif event == "3" :
+     elif event == "3" and st.getQuestItemsCount(RED_CRYSTALS_ID) == 50 and cond == 2 :
          st.giveItems(BIRTHDAY_ECHO_CRYSTAL_ID,25)
          st.takeItems(RED_CRYSTALS_ID,50)
          htmltext = "31043-05.htm"
-         st.set("cond","0")
-         st.setState(COMPLETED)
+         st.exitQuest(1)
          st.playSound("ItemSound.quest_finish")
      return htmltext
  
@@ -34,23 +34,20 @@ class Quest (JQuest) :
      npcId = npc.getNpcId()
      htmltext = "<html><head><body>I have nothing to say you</body></html>"
      id = st.getState()
+     cond = st.getInt("cond")
      if id == CREATED :
-         st.set("cond","0")
-         st.set("onlyone","0")
          htmltext = "31043-01.htm"
-     elif npcId == 31043 and int(st.get("cond"))==1 :
+     elif cond ==1 :
          htmltext = "31043-03.htm"
-     elif npcId == 31043 and int(st.get("cond"))==2 :
+     elif cond == 2 :
          htmltext = "31043-04.htm"
-     
      return htmltext
  
  def onKill(self,npc,st):
-     npcId = npc.getNpcId()     
-     if npcId == 21103 :
-         if int(st.get("cond"))==1 and st.getQuestItemsCount(RED_CRYSTALS_ID) < 50 :
+     count = st.getQuestItemsCount(RED_CRYSTALS_ID)
+     if st.getInt("cond") == 1 and count < 50 :
              st.giveItems(RED_CRYSTALS_ID,1)
-             if st.getQuestItemsCount(RED_CRYSTALS_ID) == 50 :
+             if count == 49 :
                  st.playSound("ItemSound.quest_middle")
                  st.set("cond","2")
              else :
@@ -66,12 +63,9 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(31043)
 
 CREATED.addTalkId(31043)
-COMPLETED.addTalkId(31043)
-
 STARTED.addTalkId(31043)
 
 STARTED.addKillId(21103)
-
 STARTED.addQuestDrop(21103,RED_CRYSTALS_ID,1)
 
 print "importing quests: 432: Birthday Party Song"

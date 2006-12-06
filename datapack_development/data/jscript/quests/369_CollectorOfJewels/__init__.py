@@ -30,6 +30,8 @@ class Quest (JQuest) :
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
+   elif event == "30376-07.htm" :
+     st.playSound("ItemSound.quest_itemget")
    elif event == "30376-08.htm" :
      st.exitQuest(1)
      st.playSound("ItemSound.quest_finish")
@@ -73,7 +75,7 @@ class Quest (JQuest) :
       if cond == 1 :
         max = 50
       elif cond == 3 :
-        max == 200
+        max = 200
       if st.getRandom(100) < chance and st.getQuestItemsCount(item) < max :
          st.giveItems(item,1)
          if st.getQuestItemsCount(FLARE_SHARD) == st.getQuestItemsCount(FREEZING_SHARD) == max :
