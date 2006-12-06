@@ -26,32 +26,34 @@ FISHING_SHOT_NG = 6535
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
 
  def onEvent (self,event,st) :
    htmltext = event
-   if event == "30334-1.htm" :
+   cond = st.getInt("cond")
+   if st.getState() <> COMPLETED :
+    if event == "30334-1.htm" and cond == 0 :
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-   if event == "30332-1.htm" :
+    elif event == "30332-1.htm" and cond == 1 :
      st.set("cond","2")
-   if event == "30332-3.htm" :
-     if st.getQuestItemsCount(BLACK_BONE_NECKLACE) == st.getQuestItemsCount(RED_BONE_NECKLACE) == 100 :   
+    elif event == "30332-3.htm" :
+     if st.getQuestItemsCount(BLACK_BONE_NECKLACE) == st.getQuestItemsCount(RED_BONE_NECKLACE) == 100 and cond == 3:
        st.takeItems(BLACK_BONE_NECKLACE,100)
        st.takeItems(RED_BONE_NECKLACE,100)       
        st.set("cond","4")
      else :
        htmltext = "You don't have required items"
-   if event == "30332-5.htm" :
-     if st.getQuestItemsCount(INCENSE_POUCH) == st.getQuestItemsCount(GEM_OF_MAILLE) == 30 :
+    elif event == "30332-5.htm" :
+     if st.getQuestItemsCount(INCENSE_POUCH) == st.getQuestItemsCount(GEM_OF_MAILLE) == 30 and cond == 5 :
        st.takeItems(INCENSE_POUCH,30)
        st.takeItems(GEM_OF_MAILLE,30)  
        st.giveItems(GREEN_COLORED_LURE_HG,60)
        st.giveItems(BABy_DUCK_RODE,1)
        st.giveItems(FISHING_SHOT_NG,500)
        st.setState(COMPLETED)
-       st.set("cond","0")
+       st.unset("cond")
        st.playSound("ItemSound.quest_finish")
      else :
        htmltext = "You don't have required items"
@@ -72,7 +74,7 @@ class Quest (JQuest) :
      else :
        st.exitQuest(1)
    elif npcId == BATHIS :
-     if int(st.get("cond")) == 1 :
+     if cond == 1 :
        htmltext = "30332-0.htm"
      elif st.getQuestItemsCount(BLACK_BONE_NECKLACE) == st.getQuestItemsCount(RED_BONE_NECKLACE) == 100 :
        htmltext = "30332-2.htm"
@@ -82,7 +84,7 @@ class Quest (JQuest) :
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
-   cond = int(st.get("cond"))
+   cond = st.getInt("cond")
    if npcId in [20919,20920] and cond == 2 and st.getQuestItemsCount(BLACK_BONE_NECKLACE) < 100 :
      st.giveItems(BLACK_BONE_NECKLACE,1)
      if st.getQuestItemsCount(BLACK_BONE_NECKLACE) == 100 and st.getQuestItemsCount(RED_BONE_NECKLACE) == 100:
@@ -113,24 +115,24 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")	
    return
 
-QUEST       = Quest(39,"39_RedEyedInvaders","Red Eyed Invaders")
+QUEST       = Quest(39,"39_RedEyedInvaders","Red Eyed Invaders",True)
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(30334)
+QUEST.addStartNpc(BABENCO)
 
-CREATED.addTalkId(30334)
-STARTED.addTalkId(30332)
+CREATED.addTalkId(BABENCO)
+STARTED.addTalkId(BATHIS)
 
 STARTED.addKillId(20919)
 STARTED.addKillId(20920)
 STARTED.addKillId(20921)
 STARTED.addKillId(20925)
-STARTED.addQuestDrop(20919,BLACK_BONE_NECKLACE,1)
-STARTED.addQuestDrop(20921,RED_BONE_NECKLACE,1)
-STARTED.addQuestDrop(20920,INCENSE_POUCH,1)
-STARTED.addQuestDrop(20925,GEM_OF_MAILLE,1)
+STARTED.addQuestDrop(BABENCO,BLACK_BONE_NECKLACE,1)
+STARTED.addQuestDrop(BABENCO,RED_BONE_NECKLACE,1)
+STARTED.addQuestDrop(BABENCO,INCENSE_POUCH,1)
+STARTED.addQuestDrop(BABENCO,GEM_OF_MAILLE,1)
 
 print "importing quests: 39: Red Eyed Invaders"

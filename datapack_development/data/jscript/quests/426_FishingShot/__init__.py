@@ -8,7 +8,7 @@ SWEET_FLUID = 7586
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -39,7 +39,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")  
    return
 
-QUEST       = Quest(426,"426_FishingShot","Quest for Fishing Shot")
+QUEST       = Quest(426,"426_FishingShot","Quest for Fishing Shot",True)
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 
