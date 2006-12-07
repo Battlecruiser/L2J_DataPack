@@ -292,6 +292,6 @@ for npcId in NPC:
 for mobId in DROPLIST.keys() :
 	STARTED.addKillId(mobId)
 
-STARTED.addAttackId(12372)	
+STARTED.addAttackId(29020)
 	
 print "importing quests: 234: Fate's Whisper"
