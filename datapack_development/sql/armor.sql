@@ -902,7 +902,7 @@ INSERT INTO `armor` (`item_id`,`name`,`bodypart`,`crystallizable`,`armor_type`,`
   (8187,'Red Horn of Victory','hair','false','none',10,'wood','none',0,90,0,0,0,0,0,'true'),
   (8188,'Little Angel Wing','hair','false','none',10,'wood','none',0,90,0,0,0,0,0,'true'),
   (8189,'Fairy Antennae','hair','false','none',10,'wood','none',0,90,0,0,0,0,0,'true'),
-  (8191,'Frintezza\'s Necklace','neck','true','none',150,'gold','s',0,90,0,95,0,0,0,'true'),
+  (8191,'Frintezza\'s Necklace','neck','true','none',150,'gold','a',0,90,0,95,0,0,0,'true'),
   (8541,'Little Harness','hatchling','false','none',160,'steel','none',0,90,10,25,0,0,0,'true'),
   (8552,'Red Mask of Victory','face','false','none','10','wood','none','0','90','0','0','0','0','0','true'),
   (8557,'Blue Party Hat - For Event','dhair','false','none',10,'wood','none',0,90,0,0,0,0,0,'false');
