@@ -40,7 +40,7 @@ class Quest (JQuest) :
        st.exitQuest(1)
    else :
      stone=st.getQuestItemsCount(STONE)
-     if not hair :
+     if not stone :
        htmltext = "31044-05.htm"
      else :
        st.giveItems(ADENA,2500+230*stone)
