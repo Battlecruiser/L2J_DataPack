@@ -198,10 +198,9 @@ echo WARNING: legacy spawnlist contains more mobs and lesser chests, but many z 
 set expprompt=x
 set /p expprompt=Install experimental gameserver DB tables: (y) yes or (n) no or (q) quit? 
 if /i %expprompt%==y goto expinstall
-if /i %expprompt%==n goto end
+if /i %expprompt%==n goto newbie_helper
 if /i %expprompt%==q goto end
 goto end
-
 :expinstall
 echo Making a backup of the default gameserver tables.
 %mysqldumpPath% --add-drop-table -h %gshost% -u %gsuser% --password=%gspass% %gsdb% > experimental_backup.sql
@@ -210,6 +209,26 @@ REM %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/e
 REM %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/experimental/npcskills.sql
 %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/experimental/spawnlist.sql
 
+:newbie_helper
+echo.
+echo.
+echo If you're not that skilled applying changes within 'updates' folder, i can try to do it for you (y). If you wish to do it on your own, choose (n).
+:asknb
+set nbprompt=y
+set /p nbprompt=Shall i parse updates files? (Y/n)
+if /i %nbprompt%==y goto nbinstall
+if /i %nbprompt%==n goto end
+goto asknb
+:nbinstall
+cd ..\sql\updates\
+echo @echo off> temp.bat
+if exist errors.txt del errors.txt
+for %%i in (*.sql) do echo %mysqlPath% -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< %%i 2^>^> errors.txt >> temp.bat
+call temp.bat> nul
+del temp.bat
+type errors.txt|find "doesn't exist"
+del errors.txt
+cd %workdir%
 :end
 echo.
 echo Script complete.
