@@ -54,7 +54,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(353,"353_Power of Darkness","Power of Darkness")
+QUEST       = Quest(353,"353_PowerOfDarkness","Power of Darkness")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 
