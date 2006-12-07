@@ -12,12 +12,12 @@ LEAF_OF_FLAVA,BUFFALO_MEAT,ANTELOPE_HORN = range(7199,7202)
 
 #MOBS, DROPS, CHANCES & REWARDS
 BUFFALO,FLAVA,ANTELOPE = [ 21315,21316,21318 ]
-DROPLIST = {BUFFALO:[BUFFALO_MEAT,70],FLAVA:[LEAF_OF_FLAVA,70],ANTELOPE:[ANTELOPE_HORN,70]}
+DROPLIST = {BUFFALO:[BUFFALO_MEAT,99],FLAVA:[LEAF_OF_FLAVA,99],ANTELOPE:[ANTELOPE_HORN,99]}
 REWARDS = [[6849,25000],[6847,65000],[6851,25000],[0,73000]]
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
 
  def onEvent (self,event,st) :
    cond = st.getInt("cond")
@@ -75,7 +75,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(623,"623_TheFinestFood","The Finest Food")
+QUEST       = Quest(623,"623_TheFinestFood","The Finest Food",True)
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 
