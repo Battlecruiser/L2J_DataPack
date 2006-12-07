@@ -45,7 +45,7 @@ class Quest (JQuest) :
      else :
        st.giveItems(ADENA,12070+500*hair)
        st.takeItems(HAIR,-1)
-       htmltext = "30004-07.htm"
+       htmltext = "30111-4.htm"
    return htmltext
 
  def onKill (self,npc,st):
