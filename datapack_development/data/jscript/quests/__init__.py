@@ -205,6 +205,7 @@ __all__ = [
 '602_ShadowOfLight',
 '621_EggDelivery',
 '622_DeliveryOfSpecialLiquor',
+'623_TheFinestFood',
 '626_ADarkTwilight',
 '627_HeartInSearchOfPower',
 '634_InSearchofDimensionalFragments',
