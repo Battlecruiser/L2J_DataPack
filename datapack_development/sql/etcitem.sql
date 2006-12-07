@@ -1630,7 +1630,7 @@ INSERT INTO `etcitem` (`item_id`, `name`, `crystallizable`, `item_type`, `weight
  (2711, 'Poitan''s Notes', 'false', 'quest', 0, 'stackable', 'steel', 'none', 100, 0, 0, 'false', 'poitans_notes', 'none', '0'),
  (2712, 'Scripture of Knowledge', 'false', 'quest', 0, 'stackable', 'steel', 'none', 100, 0, 0, 'false', 'scripture_of_knowledge', 'none', '0'),
  (2713, 'Strong Liquor', 'false', 'quest', 0, 'stackable', 'steel', 'none', 100, 0, 0, 'false', 'strong_liquor', 'none', '0'),
- (2714, 'Crystal of Purity', 'false', 'none', 0, 'stackable', 'steel', 'none', 100, 0, 0, 'false', 'crystal_of_purity2', 'none', '2'),
+ (2714, 'Crystal of Purity', 'false', 'quest', 0, 'stackable', 'steel', 'none', 100, 0, 0, 'false', 'crystal_of_purity2', 'none', '2'),
  (2715, 'Casian''s List', 'false', 'quest', 0, 'stackable', 'steel', 'none', 100, 0, 0, 'false', 'kasians_list', 'none', '0'),
  (2716, 'Ghoul''s Skin', 'false', 'quest', 0, 'stackable', 'steel', 'none', 100, 0, 0, 'false', 'ghouls_skin', 'none', '0'),
  (2717, 'Medusa''s Blood', 'false', 'quest', 0, 'stackable', 'steel', 'none', 100, 0, 0, 'false', 'medusas_blood', 'none', '0'),
