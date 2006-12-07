@@ -161,23 +161,23 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
      elif cond==5 and npcId == 20062 :
          if not st.getQuestItemsCount(RANGERS_REPORT1) and chance < CHANCE2:
-            st.giveItems(RANGERS_REPORT1)
+            st.giveItems(RANGERS_REPORT1,1)
             st.playSound("ItemSound.quest_itemget")
          elif not st.getQuestItemsCount(RANGERS_REPORT2) and chance < CHANCE21:
-            st.giveItems(RANGERS_REPORT2)
+            st.giveItems(RANGERS_REPORT2,1)
             st.playSound("ItemSound.quest_itemget")
          elif not st.getQuestItemsCount(RANGERS_REPORT3) and chance < CHANCE22:
-            st.giveItems(RANGERS_REPORT3)
+            st.giveItems(RANGERS_REPORT3,1)
             st.playSound("ItemSound.quest_itemget")
          elif not st.getQuestItemsCount(RANGERS_REPORT4) and chance < CHANCE23:
-            st.giveItems(RANGERS_REPORT4)
+            st.giveItems(RANGERS_REPORT4,1)
             st.playSound("ItemSound.quest_itemget")
      elif cond==6 and npcId==20438 :
          if not st.getQuestItemsCount(WEAPON_TRADE_CONTRACT) and chance < CHANCE24:
-            st.giveItems(WEAPON_TRADE_CONTRACT)
+            st.giveItems(WEAPON_TRADE_CONTRACT,1)
             st.playSound("ItemSound.quest_itemget")
          elif not st.getQuestItemsCount(ATTACK_DIRECTIVES) and chance < CHANCE25:
-            st.giveItems(ATTACK_DIRECTIVES)
+            st.giveItems(ATTACK_DIRECTIVES,1)
             st.playSound("ItemSound.quest_itemget")
      elif cond==10 and npcId==20066 :
          heads=st.getQuestItemsCount(OL_MAHUM_HEAD)
