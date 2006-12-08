@@ -8,7 +8,7 @@ HARRYS_RECEIPT1_ID = 1008
 HARRYS_RECEIPT2_ID = 1009
 GOLEM_SHARD_ID = 1010
 TOOL_BOX_ID = 1011
-WOODEN_BP_ID = 1100
+WOODEN_BP_ID = 23
 #NPC
 HARRIS=30035
 ALTRAN=30283
@@ -88,7 +88,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(152,"152_ShardsOfGolem","Shards Of Golem")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
+STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
@@ -96,7 +96,9 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(HARRIS)
 
+CREATED.addTalkId(HARRIS)
 STARTING.addTalkId(HARRIS)
+COMPLETED.addTalkId(HARRIS)
 
 STARTED.addTalkId(HARRIS)
 STARTED.addTalkId(ALTRAN)
