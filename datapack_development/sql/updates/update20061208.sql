@@ -1,0 +1,1 @@
+ALTER TABLE skill_trees CHANGE name name varchar(35) NOT NULL default '';
