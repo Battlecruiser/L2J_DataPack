@@ -21685,3 +21685,11 @@ INSERT INTO `npcskills` (`npcid`, `skillid`, `level`) VALUES
 (14834,4121,1),
 (14835,4293,1),
 (14835,4121,1);
+
+INSERT INTO `npcskills` (`npcid`, `skillid`, `level`) VALUES 
+(18001,4298,1),
+(18001,4278,1),
+(18001,4333,3),
+(18001,4039,6),
+(18001,4002,6),
+(18001,4035,6);
