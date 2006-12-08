@@ -1,5 +1,71 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
+<skill id="3600" levels="9" name="Special Ability: Anger">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1 - Decreases the character's Maximum HP but increases P. Atk. Allows the character to attack multiple opponents.
+      Lvl 2 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
+      Lvl 3 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
+      Lvl 4 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
+      Lvl 5 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
+      Lvl 6 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
+      Lvl 7 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
+      Lvl 8 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
+      Lvl 9 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3601" levels="9" name="Special Ability: Haste">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1 - Increases Atk.Spd., and enables the character to attack multiple opponents.
+      Lvl 2 - Increases Atk.Spd., and enables the character to attack multiple opponents.
+      Lvl 3 - Increases Atk.Spd., and enables the character to attack multiple opponents.
+      Lvl 4 - Increases Atk.Spd., and enables the character to attack multiple opponents.
+      Lvl 5 - Increases Atk.Spd., and enables the character to attack multiple opponents.
+      Lvl 6 - Increases Atk.Spd., and enables the character to attack multiple opponents.
+      Lvl 7 - Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
+      Lvl 8 - Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
+      Lvl 9 - Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3602" levels="9" name="Special Ability: Guidance">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1 - Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
+      Lvl 2 - Increases Accuracy, and enables the character to attack multiple opponents.
+      Lvl 3 - Increases Accuracy, and enables the character to attack multiple opponents.
+      Lvl 4 - Increases Accuracy, and enables the character to attack multiple opponents.
+      Lvl 5 - Increases Accuracy, and enables the character to attack multiple opponents.
+      Lvl 6 - Increases Accuracy, and enables the character to attack multiple opponents.
+      Lvl 7 - Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP.
+      Lvl 8 - Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP.
+      Lvl 9 - Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
 <skill id="3603" levels="10" name="Demonic Sword Zariche">
   <table name="#maxCp"> 12 13 14 15 17 19 21 23 25 27 </table>
   <table name="#pAtk"> 3 4.5 6 7.5 9 10.5 11 11.5 12 12.5 </table>
@@ -25,6 +91,314 @@
         <add stat="runSpd" val="#runSpd" order="0x40"/>
         <add order="0x40" stat="absorbDam" val="100"/>
         <mul order="0x30" stat="regCp" val="20"/>
+  </for>
+</skill>
+<skill id="3604" levels="1" name="Frintezza's Necklace">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases resistance to dark/poison/bleed/paralysis/sleep attacks. Reduces skill re-use time. Reflects some of the damage received back to the enemy (does not include damage from skill or range attacks).
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3605" levels="1" name="Clan Oath Heavy Armor Set">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases P. Def. and maximum HP.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3606" levels="1" name="Clan Oath Light Armor Set">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases P. Def. and Evasion.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3607" levels="1" name="Clan Oath Robe Set">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases P. Def. and Casting Spd.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3608" levels="1" name="Apella Heavy Armor Set">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases maximum CP/CP regeneration and decreases experience value penalty if killed by another player. Casts a hold on an attacking player at a certain rate.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3609" levels="1" name="Apella Light Armor Set">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases maximum CP/CP regeneration and decreases experience value penalty if killed by another player. Casts a Speed reduction curse on an attacking player.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3610" levels="1" name="Apella Robe Set">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases maximum CP/CP regeneration and decreases experience value penalty if killed by a player. Casts an Atk. Spd. reduction curse on attacking player.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3611" levels="1" name="Enchant Heavy Armor (Grade D)">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases P. Def. and MP regeneration by enchanting set items.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3612" levels="1" name="Enchant Light Armor (Grade D)">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases M. Def. and Evasion by enchanting set items.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3613" levels="1" name="Enchant Robe (Grade D)">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases P. Def. and weight capacity by enchanting set items.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3614" levels="1" name="Enchant Heavy Armor (Grade C)">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases P. Def. and MP regeneration by enchanting set items.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3615" levels="1" name="Enchant Light Armor (Grade C)">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases M. Def. and Evasion by enchanting set items.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3616" levels="1" name="Enchant Robe (Grade C)">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases P. Def. and weight capacity by enchanting set items.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3617" levels="1" name="Enchant Heavy Armor (Grade B)">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases P. Def. and MP regeneration by enchanting set items.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3618" levels="1" name="Enchant Light Armor (Grade B)">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases M. Def. and Evasion by enchanting set items.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3619" levels="1" name="Enchant Robe (Grade B)">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases P. Def. and weight capacity by enchanting set items.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3620" levels="1" name="Enchant Heavy Armor (Grade A)">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases P. Def. and MP regeneration by enchanting set items.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3621" levels="1" name="Enchant Light Armor (Grade A)">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases M. Def. and Evasion by enchanting set items.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3622" levels="1" name="Enchant Robe (Grade A)">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases P. Def. and weight capacity by enchanting set items.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3623" levels="1" name="Enchant Heavy Armor (Grade S)">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases P. Def. and MP regeneration by enchanting set items.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3624" levels="1" name="Enchant Light Armor (Grade S)">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases M. Def. and Evasion by enchanting set items.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3625" levels="1" name="Enchant Robe (Grade S)">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases P. Def. and weight capacity by enchanting set items.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
   </for>
 </skill>
 </list>
