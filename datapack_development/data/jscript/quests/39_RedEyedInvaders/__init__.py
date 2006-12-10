@@ -63,9 +63,7 @@ class Quest (JQuest) :
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
-     st.set("cond","0")
-   cond = int(st.get("cond"))
+   cond = st.getInt("cond")
    if npcId == BABENCO and cond == 0 :
      if id == COMPLETED :
        htmltext = "<html><head><body>This quest have already been completed.</body></html>"
@@ -92,21 +90,21 @@ class Quest (JQuest) :
        st.set("cond","3")
      else:
        st.playSound("ItemSound.quest_itemget")	
-   if npcId == 20921 and cond == 2 and st.getQuestItemsCount(RED_BONE_NECKLACE) < 100 :
+   elif npcId == 20921 and cond == 2 and st.getQuestItemsCount(RED_BONE_NECKLACE) < 100 :
      st.giveItems(RED_BONE_NECKLACE,1)
      if st.getQuestItemsCount(BLACK_BONE_NECKLACE) == 100 and st.getQuestItemsCount(RED_BONE_NECKLACE) == 100:
        st.playSound("ItemSound.quest_middle")
        st.set("cond","3")
      else:
        st.playSound("ItemSound.quest_itemget")	
-   if npcId in [20920,20921] and cond == 4 and st.getQuestItemsCount(INCENSE_POUCH) < 30 :
+   elif npcId in [20920,20921] and cond == 4 and st.getQuestItemsCount(INCENSE_POUCH) < 30 :
      st.giveItems(INCENSE_POUCH,1)
      if st.getQuestItemsCount(INCENSE_POUCH) == 30 and st.getQuestItemsCount(GEM_OF_MAILLE) == 30:
        st.playSound("ItemSound.quest_middle")
        st.set("cond","5")
      else:
        st.playSound("ItemSound.quest_itemget")	
-   if npcId == 20925 and cond == 4 and st.getQuestItemsCount(GEM_OF_MAILLE) < 30 :
+   elif npcId == 20925 and cond == 4 and st.getQuestItemsCount(GEM_OF_MAILLE) < 30 :
      st.giveItems(GEM_OF_MAILLE,1)
      if st.getQuestItemsCount(INCENSE_POUCH) == 30 and st.getQuestItemsCount(GEM_OF_MAILLE) == 30:
        st.playSound("ItemSound.quest_middle")

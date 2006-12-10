@@ -183,7 +183,7 @@ class Quest (JQuest) :
          heads=st.getQuestItemsCount(OL_MAHUM_HEAD)
          if heads < 30 and chance < CHANCE3 :
             st.giveItems(OL_MAHUM_HEAD,1)
-            if count == 29 :
+            if heads == 29 :
                st.playSound("ItemSound.quest_middle")
             else :
                st.playSound("ItemSound.quest_itemget")
