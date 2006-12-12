@@ -155,7 +155,7 @@ class Quest (JQuest) :
            st.getPcSpawn().addSpawn(27190)
         if chance < CHANCE1 and blades < 20 :
            st.giveItems(BLADE_MOLD,1)
-           if count == 19 :
+           if blades == 19 :
               st.playSound("ItemSound.quest_middle")
            else :
               st.playSound("ItemSound.quest_itemget")
