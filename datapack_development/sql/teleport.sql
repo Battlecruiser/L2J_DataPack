@@ -345,7 +345,7 @@ INSERT INTO teleport VALUES
 ('Aden -> Seal of Shilen',1083,188611,20588,-3696,3300,0),
 ('Aden -> Forest of Mirrors',1084,142065,81300,-3000,4400,0),
 ('Aden -> Fields of Massacre',1085,179718,-7843,-3517,6500,0),
-('Aden -> Ancient Battleground',1086,126516,-7421,3912,5900,0),
+('Aden -> Ancient Battleground',1086,127739,-6998,-3869,5900,0),
 ('Aden -> Silent Valley',1087,177318,48447,-3835,6100,0),
 ('Aden -> ToI',1088,121291,15960,-4964,4200,0),
 ('Goddard -> Gludio',1089,-12672,122776,-3116,71000,0),
