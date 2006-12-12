@@ -1822,37 +1822,26 @@
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Sleep" time="15" val="0"/>
-  </for>  
+  </for>
 </skill>
 <skill id="1395" levels="10" name="Erase">
-  <!-- Bishop, Prophet, Elder, Shillien Elder -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <!-- needs to unsummon (destroy) target summon -->
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+<!-- Erase Done by Scafu -->
+  <table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table>
+  <table name="#itemConsumeCount"> 3 3 3 3 4 4 4 5 5 5 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
+  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="37000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="target" val="TARGET_ENEMY_SUMMON"/>
+  <set name="skillType" val="ERASE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="isMagic" val="true"/>
   <for>
   </for>
 </skill>
-<!-- Erase Done by Scafu -->
-<!-- <skill id="1395" levels="10" name="Erase"> -->
-<!-- <table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table> -->
-<!-- <table name="#itemConsumeCount"> 3 3 3 3 4 4 4 5 5 5 </table> -->
-<!-- <set name="mpConsume" val="#mpConsume"/> -->
-<!-- <set name="itemConsumeId" val="3031"/> -->
-<!-- <set name="itemConsumeCount" val="#itemConsumeCount"/> -->
-<!-- <set name="hitTime" val="4000"/> -->
-<!-- <set name="hitTime" val="37000"/> -->
-<!-- <set name="skillTime" val="4000"/> -->
-<!-- <set name="target" val="TARGET_ENEMY_SUMMON"/> -->
-<!-- <set name="skillType" val="ERASE"/> -->
-<!-- <set name="operateType" val="OP_ACTIVE"/> -->
-<!-- <set name="castRange" val="600"/> -->
-<!-- <set name="isMagic" val="true"/> -->
-<!-- <for> -->
-<!-- </for> -->
-<!-- </skill> -->
 <skill id="1396" levels="10" name="Magical Backfire">
   <!-- Bishop -->
   <set name="power" val="0.0"/>
