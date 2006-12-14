@@ -43,18 +43,18 @@ STATS=[["atubaStat","nerugaStat","urutuStat","urutuDrop","dudaStat","gandiStat",
 
 #This handle all Dropdata for the Mobs in this Quest    npcId:[var,value,newValue,chance,maxcount,item]
 DROPLIST={
-20269:["atubaStat",2,3,40,20,BREKA_ORC_FANG_ID],
-20270:["atubaStat",2,3,50,20,BREKA_ORC_FANG_ID],
-20583:["urutuDrop",0,1,50,10,TIMAK_ORC_SKULL_ID],
-20584:["urutuDrop",0,1,55,10,TIMAK_ORC_SKULL_ID],
-20585:["urutuDrop",0,1,60,10,TIMAK_ORC_SKULL_ID],
-20586:["urutuDrop",0,1,65,10,TIMAK_ORC_SKULL_ID],
-20587:["urutuDrop",0,1,70,10,TIMAK_ORC_SKULL_ID],
-20588:["urutuDrop",0,1,75,10,TIMAK_ORC_SKULL_ID],
-20233:["dudaStat",1,2,100,10,MARSH_SPIDER_FEELER_ID],
-20564:["gandiStat",1,2,90,20,CORNEA_OF_EN_MONSTEREYE_ID],
-20778:["markantusStat",1,1,100,1,RAGNA_ORC_HEAD_ID],
-20779:["markantusStat",1,1,100,1,RAGNA_CHIEF_NOTICE_ID]
+20269:["atubaStat",    2,3, 40,20,BREKA_ORC_FANG_ID ],
+20270:["atubaStat",    2,3, 50,20,BREKA_ORC_FANG_ID ],
+20583:["urutuDrop",    0,1, 50,10,TIMAK_ORC_SKULL_ID],
+20584:["urutuDrop",    0,1, 55,10,TIMAK_ORC_SKULL_ID],
+20585:["urutuDrop",    0,1, 60,10,TIMAK_ORC_SKULL_ID],
+20586:["urutuDrop",    0,1, 65,10,TIMAK_ORC_SKULL_ID],
+20587:["urutuDrop",    0,1, 70,10,TIMAK_ORC_SKULL_ID],
+20588:["urutuDrop",    0,1, 75,10,TIMAK_ORC_SKULL_ID],
+20233:["dudaStat",     1,2,100,10,MARSH_SPIDER_FEELER_ID],
+20564:["gandiStat",    1,2, 90,20,CORNEA_OF_EN_MONSTEREYE_ID],
+20778:["markantusStat",1,1,100, 1,RAGNA_ORC_HEAD_ID],
+20779:["markantusStat",1,1,100, 1,RAGNA_CHIEF_NOTICE_ID]
 }   
 
 
@@ -199,7 +199,7 @@ class Quest (JQuest) :
 						htmltext = "30515-03.htm"
 						st.giveItems(MANAKIAS_AMULET_ID,1)
 						st.takeItems(MANAKIAS_ORDERS_ID,1)
-						st.takeItems(DROPLIST[269][5],DROPLIST[269][4])
+						st.takeItems(DROPLIST[20269][5],DROPLIST[20269][4])
 					elif atuba==4:
 						htmltext = "30515-04.htm"
 					elif atuba==5:
@@ -239,7 +239,7 @@ class Quest (JQuest) :
 						htmltext = "30568-04.htm"
 						st.takeItems(HATOS_CHARM_ID,1)
 						st.takeItems(URUTU_BLADE_ID,1)
-						st.takeItems(DROPLIST[587][5],DROPLIST[587][4])
+						st.takeItems(DROPLIST[20587][5],DROPLIST[20587][4])
 						st.giveItems(SWORD_INTO_SKULL_ID,1)
 					elif urutu>0 and urutu<4:
 						htmltext = "30568-03.htm"
@@ -269,7 +269,7 @@ class Quest (JQuest) :
 					elif duda==3:
 						st.set("dudaStat","4")
 						htmltext = "30641-04.htm"
-						st.takeItems(DROPLIST[233][5],DROPLIST[233][4])
+						st.takeItems(DROPLIST[20233][5],DROPLIST[20233][4])
 						st.takeItems(MARSH_SPIDER_FEET_ID,st.getQuestItemsCount(MARSH_SPIDER_FEET_ID))
 						st.giveItems(HANDIWORK_SPIDER_BROOCH_ID,1)
 						st.takeItems(TAKUNA_CHARM_ID,1)
@@ -284,7 +284,7 @@ class Quest (JQuest) :
 					elif gandi==2:
 						st.set("gandiStat","3")
 						htmltext = "30642-04.htm"
-						st.takeItems(DROPLIST[564][5],DROPLIST[564][4])
+						st.takeItems(DROPLIST[20564][5],DROPLIST[20564][4])
 						st.giveItems(MONSTEREYE_WOODCARVING_ID,1)
 						st.takeItems(CHIANTA_CHARM_ID,1)
 					elif gandi==3:
