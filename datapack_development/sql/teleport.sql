@@ -90,7 +90,7 @@ INSERT INTO teleport VALUES
 ('Hardin\'s Private Academy -> Oren Town',53,82956,53162,-1495,7300,0),
 ('Hardin\'s Private Academy -> Hunter\'s Village',54,116819,76994,-2714,4100,0),
 ('Cruma level 2 -> Cruma level 3',55,17719,115590,-6584,0,0),
-('Cruma level 3 -> Cruma Core',56,17692,112284,-6250,0,0),
+('Cruma level 3 -> Cruma Core',56,17691,111726,-6583,0,0),
 ('Cruma core -> Cruma level 3',57,17719,115590,-6584,0,0),
 ('Cruma Tower 3rd floor -> Cruma Tower 2nd Floor',58,17731,119465,-9067,0,0),
 ('Heine -> The Town of Giran',59,83400,147943,-3404,7600,0),
