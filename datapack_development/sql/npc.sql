@@ -5090,8 +5090,8 @@ INSERT INTO `npc` (`id`,`idTemplate`,`name`,`serverSideName`,`title`,`serverSide
 (35093,35093,'Gatekeeper',0,'Gludio',0,'NPC.a_guard_MHuman',8.00,24.00,56,'male','L2Npc',40,2724,1019,40,43,30,21,20,10,0,0,706,331,382,269,278,0,253,0,0,0,80,120,'gludio_siege_clan',600,1,0),
 (35094,35094,'Gatekeeper',0,'Gludio',0,'NPC.a_guard_MHuman',8.00,24.00,56,'male','L2Npc',40,2724,1019,40,43,30,21,20,10,0,0,706,331,382,269,278,0,253,0,0,0,80,120,'gludio_siege_clan',600,1,0),
 (35095,35095,'Mass Gatekeeper',0,'Gludio',0,'NPC.a_guard_MHuman',8.00,24.00,70,'male','L2Npc',40,3862,1493,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,253,0,0,0,80,120,NULL,0,1,0),
-(35096,35096,'Outer Doorman',0,'Gludio',0,'NPC.a_guard_MHuman',8.00,24.00,70,'male','L2Npc',40,3862,1493,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,253,0,0,0,80,120,NULL,0,1,0),
-(35097,35097,'Inner Doorman',0,'Gludio',0,'NPC.a_guard_MHuman',8.00,24.00,70,'male','L2Npc',40,3862,1493,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,253,0,0,0,80,120,NULL,0,1,0),
+(35096,35096,'Outer Doorman',0,'Gludio',0,'NPC.a_guard_MHuman',8.00,24.00,70,'male','L2Doormen',40,3862,1493,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,253,0,0,0,80,120,NULL,0,1,0),
+(35097,35097,'Inner Doorman',0,'Gludio',0,'NPC.a_guard_MHuman',8.00,24.00,70,'male','L2Doormen',40,3862,1493,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,253,0,0,0,80,120,NULL,0,1,0),
 (35383,35383,'Tamutak',0,'Ol Mahum Steward',0,'Monster.ol_mahum_champion',14.00,27.00,70,'male','L2Npc',40,3862,1493,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,253,0,0,0,80,120,NULL,0,0,0);
 INSERT INTO `npc` (`id`,`idTemplate`,`name`,`serverSideName`,`title`,`serverSideTitle`,`class`,`collision_radius`,`collision_height`,`level`,`sex`,`type`,`attackrange`,`hp`,`mp`,`str`,`con`,`dex`,`int`,`wit`,`men`,`exp`,`sp`,`patk`,`pdef`,`matk`,`mdef`,`atkspd`,`aggro`,`matkspd`,`rhand`,`lhand`,`armor`,`walkspd`,`runspd`,`faction_id`,`faction_range`,`isUndead`,`absorb_level`) VALUES
 (35382,35382,'Brakel',0,'Partisan Herald',0,'Monster.ol_mahum_champion',14.00,27.00,70,'male','L2Npc',40,3862,1493,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,253,0,0,0,80,120,NULL,0,0,0),
