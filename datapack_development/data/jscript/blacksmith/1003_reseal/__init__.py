@@ -17,7 +17,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(5718) >= 1:
             st.takeItems(5718,1)
             st.giveItems(2487,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
         else:
              htmltext = "You do not have enough materials."
 
@@ -26,7 +26,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(5719) >= 1:
             st.takeItems(5719,1)
             st.giveItems(2487,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
         else:
              htmltext = "You do not have enough materials."
 
@@ -35,7 +35,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(5720) >= 1:
             st.takeItems(5720,1)
             st.giveItems(2487,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
         else:
              htmltext = "You do not have enough materials."
 
@@ -44,7 +44,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(5722) >= 1:
             st.takeItems(5722,1)
             st.giveItems(2475,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
         else:
              htmltext = "You do not have enough materials."
 
@@ -53,7 +53,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(5723) >= 1:
             st.takeItems(5723,1)
             st.giveItems(2475,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
          else:
              htmltext = "You do not have enough materials."
 
@@ -62,7 +62,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(5724) >= 1:
             st.takeItems(5724,1)
             st.giveItems(2475,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
          else:
              htmltext = "You do not have enough materials."
 
@@ -71,7 +71,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(5710) >= 1:
             st.takeItems(5710,1)
             st.giveItems(612,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
          else:
              htmltext = "You do not have enough materials."
 
@@ -80,7 +80,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(5711) >= 1:
             st.takeItems(5711,1)
             st.giveItems(612,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
          else:
              htmltext = "You do not have enough materials."
 
@@ -89,7 +89,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(5712) >= 1:
             st.takeItems(5712,1)
             st.giveItems(612,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
          else:
              htmltext = "You do not have enough materials."
 
@@ -98,7 +98,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(5714) >= 1:
             st.takeItems(5714,1)
             st.giveItems(2464,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
          else:
              htmltext = "You do not have enough materials."
 
@@ -107,7 +107,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(5715) >= 1:
             st.takeItems(5715,1)
             st.giveItems(2464,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
          else:
              htmltext = "You do not have enough materials."
 
@@ -116,7 +116,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(5716) >= 1:
             st.takeItems(5716,1)
             st.giveItems(2464,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
          else:
              htmltext = "You do not have enough materials."
 
@@ -125,7 +125,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(5734) >= 1:
             st.takeItems(5734,1)
             st.giveItems(2439,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
         else:
              htmltext = "You do not have enough materials."
 
@@ -134,7 +134,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(5735) >= 1:
             st.takeItems(5735,1)
             st.giveItems(2439,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
         else:
              htmltext = "You do not have enough materials."
 
@@ -143,7 +143,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(5736) >= 1:
             st.takeItems(5736,1)
             st.giveItems(2439,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
         else:
              htmltext = "You do not have enough materials."
 
@@ -152,7 +152,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(5738) >= 1:
             st.takeItems(5738,1)
             st.giveItems(601,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
         else:
              htmltext = "You do not have enough materials."
 
@@ -161,7 +161,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(5739) >= 1:
             st.takeItems(5739,1)
             st.giveItems(601,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
          else:
              htmltext = "You do not have enough materials."
 
@@ -170,7 +170,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(5740) >= 1:
             st.takeItems(5740,1)
             st.giveItems(601,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
          else:
              htmltext = "You do not have enough materials."
 
@@ -179,7 +179,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(5726) >= 1:
             st.takeItems(5726,1)
             st.giveItems(554,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
          else:
              htmltext = "You do not have enough materials."
 
@@ -188,7 +188,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(5727) >= 1:
             st.takeItems(5727,1)
             st.giveItems(554,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
          else:
              htmltext = "You do not have enough materials."
 
@@ -197,7 +197,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(5728) >= 1:
             st.takeItems(5728,1)
             st.giveItems(554,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
          else:
              htmltext = "You do not have enough materials."
 
@@ -206,7 +206,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(5730) >= 1:
             st.takeItems(5730,1)
             st.giveItems(600,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
          else:
              htmltext = "You do not have enough materials."
 
@@ -215,7 +215,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(5731) >= 1:
             st.takeItems(5731,1)
             st.giveItems(600,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
          else:
              htmltext = "You do not have enough materials."
 
@@ -224,7 +224,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(5732) >= 1:
             st.takeItems(5732,1)
             st.giveItems(600,1)
-            htmltext = "Item has been succesfully unsealed."
+            htmltext = "Item has been succesfully resealed."
          else:
              htmltext = "You do not have enough materials."
 
