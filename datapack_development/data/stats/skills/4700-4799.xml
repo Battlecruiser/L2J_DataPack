@@ -247,10 +247,10 @@
   <set name="effectRange" val="-1"/>
   <for>
    <effect count="1" name="ImobileBuff" time="30" val="0">
-      <mul order="0x50" stat="mDef" val="5.0"/>
-      <mul order="0x50" stat="pDef" val="5.0"/>
-      <mul order="0x50" stat="pAtkSpd" val="0.3"/>
-      <mul order="0x50" stat="runSpd" val="0.1"/>
+      <mul order="0x30" stat="mDef" val="5.0"/>
+      <mul order="0x30" stat="pDef" val="5.0"/>
+      <mul order="0x30" stat="pAtkSpd" val="0.3"/>
+      <mul order="0x30" stat="runSpd" val="0.1"/>
       </effect>
   </for>
 </skill>
