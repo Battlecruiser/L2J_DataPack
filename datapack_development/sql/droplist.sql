@@ -15,7 +15,7 @@
 -- Calculation for each drop, when in categories, is equivallent in chance as when outside of categories.
 -- First, the sum of chances for each category is calculated as category chance.  If the category is selected
 -- for drops (i.e. its chance is successful), then exactly 1 item from that category will be selected, with 
--- such a chance that the overall probability is maintained unchanged.
+-- such a chance that the overall probability is maintained unchanged. 
 
 
 --
