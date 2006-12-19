@@ -109,7 +109,7 @@
   <for>
     <effect name="Buff" time="144000" count="1" val="0">
       <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
-      <div order="0x50" stat="mReuse" val="#Tab-mReuse"/>
+      <div order="0x30" stat="mReuse" val="#Tab-mReuse"/>
       <mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
     </effect>
