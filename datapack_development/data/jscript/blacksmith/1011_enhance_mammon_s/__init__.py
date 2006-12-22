@@ -21,7 +21,7 @@ EnhanceList={
 6369:["weapon_dragon_hunter_axe_i01", [["HP Regeneration", 6596, 5908, 2134, 82], ["Health", 6597, 5911, 2134, 82], ["HP Drain", 6598, 5914, 2134, 82]]], 
 6579:["weapon_arcana_mace_i01", [["Acumen", 6608, 5908, 2134, 82], ["MP Regeneration", 6609, 5911, 2134, 82], ["Mana Up", 6610, 5914, 2134, 82]]], 
 6366:["weapon_imperial_staff_i01", [["Empower", 6587, 5908, 2134, 82], ["MP Regeneration", 6588, 5911, 2134, 82], ["Magic Hold", 6589, 5914, 2134, 82]]], 
-6563:["weapon_basalt_battlehammer_i01", [["HP Drain", 6584, 5908, 2134, 82], ["Health", 6585, 5911, 2134, 82], ["HP Regeneration", 6586, 5914, 2134, 82]]], 
+6365:["weapon_basalt_battlehammer_i01", [["HP Drain", 6584, 5908, 2134, 82], ["Health", 6585, 5911, 2134, 82], ["HP Regeneration", 6586, 5914, 2134, 82]]], 
 # Dagger'
 6367:["weapon_angel_slayer_i01", [["Crt. Damage", 6590, 5908, 2134, 82], ["HP Drain", 6591, 5911, 2134, 82], ["Haste", 6592, 5914, 2134, 82]]], 
 # Poleaxe'
@@ -44,34 +44,34 @@ def getItemName(Item):
 def getMaterialName(MaterialID):
     if MaterialID in range(2131, 2134):
         return "Gemstone " + chr(ord('A') + 2133 - MaterialID)
+    elif MaterialID == 2134 :
+        return "Gemstone S"
     Stage = ""
     if MaterialID in range(5577, 5580):
         Stage = "11"
     if MaterialID in range(5580, 5583):
         Stage = "12"
-    if MaterialID in [5577, 5580]:
+    if MaterialID in [5908,5911,5914]:
+        Stage = "13"
+    if MaterialID in [5577, 5580, 5908]:
         return "Red Soul Crystal - Stage " + Stage
-    if MaterialID in [5578, 5581]:
+    if MaterialID in [5578, 5581, 5911]:
         return "Green Soul Crystal - Stage " + Stage
-    if MaterialID in [5579, 5582]:
+    if MaterialID in [5579, 5582, 5914]:
         return "Blue Soul Crystal - Stage " + Stage
     return "Unknown material"
 
     
 def getMaterialIcon(MaterialID):
     if MaterialID in [2133]:
-        return "etc_crystal_ball_green_i00"
-    if MaterialID in [5577]:
+        return "etc_bead_red_i00"
+    if MaterialID in [2134]:
+        return "etc_bead_silver_i00"
+    if MaterialID in [5577,5580,5908]:
         return "etc_crystal_red_i00"
-    if MaterialID in [5580]:
-        return "etc_crystal_red_i00"
-    if MaterialID in [5578]:
+    if MaterialID in [5578,5581,5911]:
         return "etc_crystal_green_i00"
-    if MaterialID in [5581]:
-        return "etc_crystal_green_i00"
-    if MaterialID in [5579]:
-        return "etc_crystal_blue_i00"
-    if MaterialID in [5582]:
+    if MaterialID in [5579,5582,5914]:
         return "etc_crystal_blue_i00"
     return "etc_unknown_material_i00"
 
@@ -115,7 +115,7 @@ class Quest (JQuest) :
 
             if st.getQuestItemsCount(CrystalID) >= 1 and st.getQuestItemsCount(MaterialID) >= MaterialQuant :
                 EnchantLevel = Item.getEnchantLevel()
-                st.getPlayer().destroyItem("enhance_1008",ObjectID, 1, st.getPlayer(), 0)
+                st.getPlayer().destroyItem("enhance_1011",ObjectID, 1, st.getPlayer(), 0)
                 NewItem = ItemTable.getInstance().createItem("enhance",WeaponID, 1, st.getPlayer())
                 NewItem.setEnchantLevel(EnchantLevel)
                 st.getPlayer().addItem("enhance",NewItem, st.getPlayer(), 0)
@@ -147,7 +147,7 @@ class Quest (JQuest) :
                 EnhancID = 0
                 for Name, WeaponID, CrystalID, MaterialID, MaterialQuant in Enhancements:
                     htmltext += "<tr>\n<td width=35><img src=\"icon." + Icon + "\" width=32 height=32 align=\"left\"></td>\n" \
-                        "<td width=835><table border=0 width=\"835\">\n<tr><td><a action=\"bypass -h Quest 1008_enhance_mammon 2_" + str(Item.getObjectId()) + "." + str(EnhancID) + "\">" + getItemName(Item) + ": " + Name + "</a></td></tr>\n" \
+                        "<td width=835><table border=0 width=\"835\">\n<tr><td><a action=\"bypass -h Quest 1011_enhance_mammon_s 2_" + str(Item.getObjectId()) + "." + str(EnhancID) + "\">" + getItemName(Item) + ": " + Name + "</a></td></tr>\n" \
                         "<tr><td><font color=\"B09878\">Enhance</font></td></tr></table></td>\n</tr>"
                     EnhancID += 1
    if htmltext == "": 
@@ -171,4 +171,4 @@ for npcId in [31126]:
 	STARTED.addTalkId(npcId)
 	
 # always at the end, then it shows only up if anything is correct in the code.. no jython error.. because we cant check jython errors with idle
-print "importing blacksmith data: 1011_enhance_mammon_s"
+print "importing blacksmith data: 1011_enhance_mammon_s, items count: "+str(len(EnhanceList))

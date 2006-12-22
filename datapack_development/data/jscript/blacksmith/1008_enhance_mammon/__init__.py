@@ -21,11 +21,18 @@ EnhanceList={
 151:["weapon_sword_of_miracle_i01", [["Magic Power", 5641, 5580, 2133, 147], ["Magic Silence", 5642, 5581, 2133, 147], ["Acumen", 5643, 5582, 2133, 147]]], 
 2500:["weapon_dark_legions_edge_i01", [["Critical Damage", 5647, 5580, 2133, 147], ["Health", 5648, 5581, 2133, 147], ["Rsk. Focus", 5649, 5582, 2133, 147]]], 
 81:["weapon_dragon_slayer_i01", [["Health", 5644, 5580, 2133, 147], ["Critical Bleed", 5645, 5581, 2133, 147], ["Critical Drain", 5646, 5582, 2133, 147]]], 
+#C5
+7884:["weapon_inferno_master_i01", [["Critical Damage", 8109, 5578, 2133, 157], ["Focus", 8110, 5579, 2133, 157], ["Haste", 8108, 5577, 2133, 157]]], 
 # Blunts'
 2504:["weapon_meteor_shower_i01", [["Focus", 5599, 5577, 2133, 147], ["Critical Bleed", 5600, 5578, 2133, 147], ["Rsk. Haste", 5601, 5579, 2133, 147]]], 
 212:["weapon_dasparions_staff_i01", [["Mana Up", 5596, 5577, 2133, 147], ["Conversion", 5597, 5578, 2133, 147], ["Acumen", 5598, 5579, 2133, 147]]], 
 213:["weapon_worldtrees_branch_i01", [["Conversion", 5605, 5580, 2133, 147], ["Magic Damage", 5606, 5581, 2133, 147], ["Acumen", 5607, 5582, 2133, 147]]], 
 164:["weapon_elysian_i01", [["Health", 5602, 5580, 2133, 147], ["Anger", 5603, 5581, 2133, 147], ["Critical Drain", 5604, 5582, 2133, 147]]], 
+#C5
+7899:["weapon_hammer_of_destroyer_i01", [["Critical Drain", 8128, 5579, 2133, 157], ["Haste", 8127, 5578, 2133, 157], ["Health", 8126, 5577, 2133, 157]]], 
+7902:["weapon_doom_crusher_i01", [["Angel", 8136, 5581, 2133, 157], ["Health", 8135, 5580, 2133, 157], ["Rsk. Haste", 8137, 5582, 2133, 157]]], 
+7894:["weapon_eye_of_soul_i01", [["Acumen", 8149, 5579, 2133, 147], ["Magic Potion", 8148, 5578, 2133, 147], ["Mana Up", 8147, 5577, 2133, 147]]], 
+7895:["weapon_dragon_flame_head_i01", [["Acumen", 8150, 5579, 2133, 157], ["Magic Power", 8151, 5577, 2133, 157], ["Magic Silence", 8152, 5581, 2133, 157]]], 
 # Dagger'
 235:["weapon_bloody_orchid_i01", [["Focus", 5614, 5577, 2133, 147], ["Back Blow", 5615, 5578, 2133, 147], ["Critical Bleed", 5616, 5579, 2133, 147]]], 
 236:["weapon_soul_separator_i01", [["Guidance", 5617, 5580, 2133, 147], ["Critical Damage", 5618, 5581, 2133, 147], ["Rsk. Haste", 5619, 5582, 2133, 147]]], 
@@ -67,7 +74,7 @@ def getMaterialName(MaterialID):
     
 def getMaterialIcon(MaterialID):
     if MaterialID in [2133]:
-        return "etc_crystal_ball_green_i00"
+        return "etc_bead_red_i00"
     if MaterialID in [5577]:
         return "etc_crystal_red_i00"
     if MaterialID in [5580]:
