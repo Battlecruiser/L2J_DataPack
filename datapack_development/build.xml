@@ -69,11 +69,13 @@
                 <exclude name="build/**"/>
                 <exclude name="log/**"/>
                 <exclude name="data/clans/**"/>
-            <exclude name="data/**"/>
+               <exclude name="data/**"/>
                 <exclude name="data/crests/**"/>
                 <exclude name="**.svn**"/>
                 <exclude name="**/*.class"/>
                 <include name="sql/*.*"/>
+            <include name="sql/experimental/*.*"/>
+            <include name="sql/updates/*.*"/>
             <include name="tools/*.*"/>
            </fileset>
         </copy>
