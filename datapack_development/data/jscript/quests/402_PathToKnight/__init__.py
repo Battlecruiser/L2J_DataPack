@@ -1,29 +1,30 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. - Version 0.3 by DrLecter
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-MARK_OF_ESQUIRE_ID = 1271
-SWORD_OF_RITUAL_ID = 1161
-COIN_OF_LORDS1_ID = 1162
-COIN_OF_LORDS2_ID = 1163
-COIN_OF_LORDS3_ID = 1164
-COIN_OF_LORDS4_ID = 1165
-COIN_OF_LORDS5_ID = 1166
-COIN_OF_LORDS6_ID = 1167
-GLUDIO_GUARDS_MARK1_ID = 1168
-BUGBEAR_NECKLACE_ID = 1169
-EINHASAD_CHURCH_MARK1_ID = 1170
-EINHASAD_CRUCIFIX_ID = 1171
-GLUDIO_GUARDS_MARK2_ID = 1172
-POISON_SPIDER_LEG1_ID = 1173
-EINHASAD_CHURCH_MARK2_ID = 1174
-LIZARDMAN_TOTEM_ID = 1175
-GLUDIO_GUARDS_MARK3_ID = 1176
-GIANT_SPIDER_HUSK_ID = 1177
-EINHASAD_CHURCH_MARK3_ID = 1178
-HORRIBLE_SKULL_ID = 1179
+MARK_OF_ESQUIRE = 1271
+SWORD_OF_RITUAL,COIN_OF_LORDS1,COIN_OF_LORDS2,COIN_OF_LORDS3,COIN_OF_LORDS4,COIN_OF_LORDS5,COIN_OF_LORDS6,GLUDIO_GUARDS_MARK1,\
+BUGBEAR_NECKLACE,EINHASAD_CHURCH_MARK1,EINHASAD_CRUCIFIX,GLUDIO_GUARDS_MARK2,POISON_SPIDER_LEG1,EINHASAD_CHURCH_MARK2,LIZARDMAN_TOTEM,\
+GLUDIO_GUARDS_MARK3,GIANT_SPIDER_HUSK,EINHASAD_CHURCH_MARK3,HORRIBLE_SKULL = range(1161,1180)
+
+default = "<html><head><body>I have nothing to say you</body></html>"
+
+DROPLIST={
+   20775:[GLUDIO_GUARDS_MARK1,BUGBEAR_NECKLACE,10,100],
+   27024:[EINHASAD_CHURCH_MARK1,EINHASAD_CRUCIFIX,12,100],
+   20038:[GLUDIO_GUARDS_MARK2,POISON_SPIDER_LEG1,20,100],
+   20043:[GLUDIO_GUARDS_MARK2,POISON_SPIDER_LEG1,20,100],
+   20050:[GLUDIO_GUARDS_MARK2,POISON_SPIDER_LEG1,20,100],
+   20030:[EINHASAD_CHURCH_MARK2,LIZARDMAN_TOTEM,20,50],
+   20027:[EINHASAD_CHURCH_MARK2,LIZARDMAN_TOTEM,20,100],
+   20024:[EINHASAD_CHURCH_MARK2,LIZARDMAN_TOTEM,20,100],
+   20103:[GLUDIO_GUARDS_MARK3,GIANT_SPIDER_HUSK,20,40],
+   20106:[GLUDIO_GUARDS_MARK3,GIANT_SPIDER_HUSK,20,40],
+   20108:[GLUDIO_GUARDS_MARK3,GIANT_SPIDER_HUSK,20,40],
+   20404:[EINHASAD_CHURCH_MARK3,HORRIBLE_SKULL,10,100]
+}
 
 class Quest (JQuest) :
 
@@ -31,317 +32,209 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "30417_1" :
-          if st.getPlayer().getClassId().getId() == 0x00 :
-            if st.getPlayer().getLevel() >= 19 :
-              if st.getQuestItemsCount(SWORD_OF_RITUAL_ID)>0 :
+    classid = st.getPlayer().getClassId().getId()
+    level = st.getPlayer().getLevel()
+    squire = st.getQuestItemsCount(MARK_OF_ESQUIRE)
+    coin1,coin2,coin3,coin4,coin5,coin6 = st.getQuestItemsCount(COIN_OF_LORDS1),st.getQuestItemsCount(COIN_OF_LORDS2),st.getQuestItemsCount(COIN_OF_LORDS3),st.getQuestItemsCount(COIN_OF_LORDS4),st.getQuestItemsCount(COIN_OF_LORDS5),st.getQuestItemsCount(COIN_OF_LORDS6)
+    guards_mark1,guards_mark2,guards_mark3=st.getQuestItemsCount(GLUDIO_GUARDS_MARK1),st.getQuestItemsCount(GLUDIO_GUARDS_MARK2),st.getQuestItemsCount(GLUDIO_GUARDS_MARK3)
+    church_mark1,church_mark2,church_mark3=st.getQuestItemsCount(EINHASAD_CHURCH_MARK1),st.getQuestItemsCount(EINHASAD_CHURCH_MARK2),st.getQuestItemsCount(EINHASAD_CHURCH_MARK3)
+    if event == "30417-02a.htm" :
+       if classid == 0x00 :
+          if level >= 19 :
+             if st.getQuestItemsCount(SWORD_OF_RITUAL)>0 :
                 htmltext = "30417-04.htm"
-              else:
+             else:
                 htmltext = "30417-05.htm"
-            else :
-              htmltext = "30417-02.htm"
-          else:
-            if st.getPlayer().getClassId().getId() == 0x04 :
-              htmltext = "30417-02a.htm"
-            else:
-              htmltext = "30417-03.htm"
-    elif event == "30417_2" :
-          htmltext = "30417-07.htm"
-    elif event == "1" :
-        st.set("id","0")
-        st.set("cond","1")
-        st.setState(STARTED)
-        st.playSound("ItemSound.quest_accept")
-        st.giveItems(MARK_OF_ESQUIRE_ID,1)
-        htmltext = "30417-08.htm"
-    elif event == "30332_1" :
-          htmltext = "30332-02.htm"
-          st.giveItems(GLUDIO_GUARDS_MARK1_ID,1)
-    elif event == "30289_1" :
-          htmltext = "30289-03.htm"
-          st.giveItems(EINHASAD_CHURCH_MARK1_ID,1)
-    elif event == "30379_1" :
-          htmltext = "30379-02.htm"
-          st.giveItems(GLUDIO_GUARDS_MARK2_ID,1)
-    elif event == "30037_1" :
-          htmltext = "30037-02.htm"
-          st.giveItems(EINHASAD_CHURCH_MARK2_ID,1)
-    elif event == "30039_1" :
-          htmltext = "30039-02.htm"
-          st.giveItems(GLUDIO_GUARDS_MARK3_ID,1)
-    elif event == "30031_1" :
-          htmltext = "30031-02.htm"
-          st.giveItems(EINHASAD_CHURCH_MARK3_ID,1)
-    elif event == "30417_3" :
-          htmltext = "30417-15.htm"
-    elif event == "30417_4" :
-          htmltext = "30417-13.htm"
-          st.takeItems(COIN_OF_LORDS1_ID,st.getQuestItemsCount(COIN_OF_LORDS1_ID))
-          st.takeItems(COIN_OF_LORDS2_ID,st.getQuestItemsCount(COIN_OF_LORDS2_ID))
-          st.takeItems(COIN_OF_LORDS3_ID,st.getQuestItemsCount(COIN_OF_LORDS3_ID))
-          st.takeItems(COIN_OF_LORDS4_ID,st.getQuestItemsCount(COIN_OF_LORDS4_ID))
-          st.takeItems(COIN_OF_LORDS5_ID,st.getQuestItemsCount(COIN_OF_LORDS5_ID))
-          st.takeItems(COIN_OF_LORDS6_ID,st.getQuestItemsCount(COIN_OF_LORDS6_ID))
-          st.takeItems(GLUDIO_GUARDS_MARK1_ID,st.getQuestItemsCount(GLUDIO_GUARDS_MARK1_ID))
-          st.takeItems(GLUDIO_GUARDS_MARK2_ID,st.getQuestItemsCount(GLUDIO_GUARDS_MARK2_ID))
-          st.takeItems(GLUDIO_GUARDS_MARK3_ID,st.getQuestItemsCount(GLUDIO_GUARDS_MARK3_ID))
-          st.takeItems(EINHASAD_CHURCH_MARK1_ID,st.getQuestItemsCount(EINHASAD_CHURCH_MARK1_ID))
-          st.takeItems(EINHASAD_CHURCH_MARK2_ID,st.getQuestItemsCount(EINHASAD_CHURCH_MARK2_ID))
-          st.takeItems(EINHASAD_CHURCH_MARK3_ID,st.getQuestItemsCount(EINHASAD_CHURCH_MARK3_ID))
-          st.takeItems(BUGBEAR_NECKLACE_ID,st.getQuestItemsCount(BUGBEAR_NECKLACE_ID))
-          st.takeItems(EINHASAD_CRUCIFIX_ID,st.getQuestItemsCount(EINHASAD_CRUCIFIX_ID))
-          st.takeItems(POISON_SPIDER_LEG1_ID,st.getQuestItemsCount(POISON_SPIDER_LEG1_ID))
-          st.takeItems(LIZARDMAN_TOTEM_ID,st.getQuestItemsCount(LIZARDMAN_TOTEM_ID))
-          st.takeItems(GIANT_SPIDER_HUSK_ID,st.getQuestItemsCount(GIANT_SPIDER_HUSK_ID))
-          st.takeItems(HORRIBLE_SKULL_ID,st.getQuestItemsCount(HORRIBLE_SKULL_ID))
-          st.takeItems(MARK_OF_ESQUIRE_ID,st.getQuestItemsCount(MARK_OF_ESQUIRE_ID))
-          st.giveItems(SWORD_OF_RITUAL_ID,1)
+          else :
+             htmltext = "30417-02.htm"
+             st.exitQuest(1)
+       elif classid != 0x04 :
+          htmltext = "30417-03.htm"
+          st.exitQuest(1)
+    elif event == "30417-08.htm" :
+        if st.getInt("cond")== 0 and classid == 0x00 and level >= 19 :
+           st.set("id","0")
+           st.set("cond","1")
+           st.setState(STARTED)
+           st.playSound("ItemSound.quest_accept")
+           st.giveItems(MARK_OF_ESQUIRE,1)
+        else:
+           htmltext = default
+    elif event == "30332-02.htm" :
+        if squire and not guards_mark1 and not coin1:
+          st.giveItems(GLUDIO_GUARDS_MARK1,1)
+        else:
+          htmltext=default
+    elif event == "30289-03.htm" :
+        if squire and not church_mark1 and not coin2:
+          st.giveItems(EINHASAD_CHURCH_MARK1,1)
+        else:
+          htmltext=default
+    elif event == "30379-02.htm" :
+        if squire and not guards_mark2 and not coin3:
+          st.giveItems(GLUDIO_GUARDS_MARK2,1)
+        else:
+          htmltext=default
+    elif event == "30037-02.htm" :
+        if squire and not church_mark2 and not coin4:
+          st.giveItems(EINHASAD_CHURCH_MARK2,1)
+        else:
+          htmltext=default
+    elif event == "30039-02.htm" :
+        if squire and not guards_mark3 and not coin5:
+          st.giveItems(GLUDIO_GUARDS_MARK3,1)
+        else:
+          htmltext=default
+    elif event == "30031-02.htm" :
+        if squire and not church_mark3 and not coin6:
+          st.giveItems(EINHASAD_CHURCH_MARK3,1)
+        else:
+          htmltext=default
+    elif event == "30417-13.htm" :
+        if squire and (coin1+coin2+coin3+coin4+coin5+coin6)>3 :
+          for item in range(1162,1180) :
+               st.takeItems(item,-1)
+          st.takeItems(MARK_OF_ESQUIRE,-1)
+          st.giveItems(SWORD_OF_RITUAL,1)
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
-    elif event == "30417_5" :
-          htmltext = "30417-14.htm"
-          st.takeItems(COIN_OF_LORDS1_ID,st.getQuestItemsCount(COIN_OF_LORDS1_ID))
-          st.takeItems(COIN_OF_LORDS2_ID,st.getQuestItemsCount(COIN_OF_LORDS2_ID))
-          st.takeItems(COIN_OF_LORDS3_ID,st.getQuestItemsCount(COIN_OF_LORDS3_ID))
-          st.takeItems(COIN_OF_LORDS4_ID,st.getQuestItemsCount(COIN_OF_LORDS4_ID))
-          st.takeItems(COIN_OF_LORDS5_ID,st.getQuestItemsCount(COIN_OF_LORDS5_ID))
-          st.takeItems(COIN_OF_LORDS6_ID,st.getQuestItemsCount(COIN_OF_LORDS6_ID))
-          st.takeItems(GLUDIO_GUARDS_MARK1_ID,st.getQuestItemsCount(GLUDIO_GUARDS_MARK1_ID))
-          st.takeItems(GLUDIO_GUARDS_MARK1_ID,st.getQuestItemsCount(GLUDIO_GUARDS_MARK2_ID))
-          st.takeItems(GLUDIO_GUARDS_MARK1_ID,st.getQuestItemsCount(GLUDIO_GUARDS_MARK3_ID))
-          st.takeItems(HORRIBLE_SKULL_ID,st.getQuestItemsCount(EINHASAD_CHURCH_MARK1_ID))
-          st.takeItems(HORRIBLE_SKULL_ID,st.getQuestItemsCount(EINHASAD_CHURCH_MARK2_ID))
-          st.takeItems(HORRIBLE_SKULL_ID,st.getQuestItemsCount(EINHASAD_CHURCH_MARK3_ID))
-          st.takeItems(HORRIBLE_SKULL_ID,st.getQuestItemsCount(BUGBEAR_NECKLACE_ID))
-          st.takeItems(HORRIBLE_SKULL_ID,st.getQuestItemsCount(EINHASAD_CRUCIFIX_ID))
-          st.takeItems(HORRIBLE_SKULL_ID,st.getQuestItemsCount(POISON_SPIDER_LEG1_ID))
-          st.takeItems(HORRIBLE_SKULL_ID,st.getQuestItemsCount(LIZARDMAN_TOTEM_ID))
-          st.takeItems(HORRIBLE_SKULL_ID,st.getQuestItemsCount(GIANT_SPIDER_HUSK_ID))
-          st.takeItems(HORRIBLE_SKULL_ID,st.getQuestItemsCount(HORRIBLE_SKULL_ID))
-          st.giveItems(SWORD_OF_RITUAL_ID,1)
+        else:
+          htmltext=default
+    elif event == "30417-14.htm" :
+        if squire and (coin1+coin2+coin3+coin4+coin5+coin6)>3 :
+          for item in range(1162,1180) :
+               st.takeItems(item,-1)
+          st.takeItems(MARK_OF_ESQUIRE,-1)
+          st.giveItems(SWORD_OF_RITUAL,1)
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
+        else:
+          htmltext=default
     return htmltext
 
 
  def onTalk (Self,npc,st):
-
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   htmltext = default
    id = st.getState()
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
-   if npcId == 30417 and int(st.get("cond"))==0 :
-        htmltext = "30417-01.htm"
-   elif npcId == 30417 and int(st.get("cond"))==1 and st.getQuestItemsCount(MARK_OF_ESQUIRE_ID)>0 and (st.getQuestItemsCount(COIN_OF_LORDS1_ID)+st.getQuestItemsCount(COIN_OF_LORDS2_ID)+st.getQuestItemsCount(COIN_OF_LORDS3_ID)+st.getQuestItemsCount(COIN_OF_LORDS4_ID)+st.getQuestItemsCount(COIN_OF_LORDS5_ID)+st.getQuestItemsCount(COIN_OF_LORDS6_ID))<3 :
-        htmltext = "30417-09.htm"
-   elif npcId == 30332 and int(st.get("cond"))==1 and st.getQuestItemsCount(GLUDIO_GUARDS_MARK1_ID)==0 and st.getQuestItemsCount(MARK_OF_ESQUIRE_ID) and st.getQuestItemsCount(COIN_OF_LORDS1_ID)==0 :
-        htmltext = "30332-01.htm"
-   elif npcId == 30332 and int(st.get("cond"))==1 and st.getQuestItemsCount(GLUDIO_GUARDS_MARK1_ID)>0 :
-        if st.getQuestItemsCount(BUGBEAR_NECKLACE_ID)<10 :
-          htmltext = "30332-03.htm"
-        else:
-          htmltext = "30332-04.htm"
-          st.takeItems(BUGBEAR_NECKLACE_ID,st.getQuestItemsCount(BUGBEAR_NECKLACE_ID))
-          st.takeItems(GLUDIO_GUARDS_MARK1_ID,1)
-          st.giveItems(COIN_OF_LORDS1_ID,1)
-   elif npcId == 30332 and int(st.get("cond"))==1 and st.getQuestItemsCount(COIN_OF_LORDS1_ID)>0 :
-        htmltext = "30332-05.htm"
-   elif npcId == 30289 and int(st.get("cond"))==1 and st.getQuestItemsCount(EINHASAD_CHURCH_MARK1_ID)==0 and st.getQuestItemsCount(COIN_OF_LORDS2_ID)==0 and st.getQuestItemsCount(MARK_OF_ESQUIRE_ID) :
-        htmltext = "30289-01.htm"
-   elif npcId == 30289 and int(st.get("cond"))==1 and st.getQuestItemsCount(EINHASAD_CHURCH_MARK1_ID)>0 :
-        if st.getQuestItemsCount(EINHASAD_CRUCIFIX_ID)<12 :
+   squire = st.getQuestItemsCount(MARK_OF_ESQUIRE)
+   coin1,coin2,coin3,coin4,coin5,coin6 = st.getQuestItemsCount(COIN_OF_LORDS1),st.getQuestItemsCount(COIN_OF_LORDS2),st.getQuestItemsCount(COIN_OF_LORDS3),st.getQuestItemsCount(COIN_OF_LORDS4),st.getQuestItemsCount(COIN_OF_LORDS5),st.getQuestItemsCount(COIN_OF_LORDS6)
+   guards_mark1,guards_mark2,guards_mark3=st.getQuestItemsCount(GLUDIO_GUARDS_MARK1),st.getQuestItemsCount(GLUDIO_GUARDS_MARK2),st.getQuestItemsCount(GLUDIO_GUARDS_MARK3)
+   church_mark1,church_mark2,church_mark3=st.getQuestItemsCount(EINHASAD_CHURCH_MARK1),st.getQuestItemsCount(EINHASAD_CHURCH_MARK2),st.getQuestItemsCount(EINHASAD_CHURCH_MARK3)
+   cond = st.getInt("cond")
+   if id == COMPLETED:
+      htmltext="<html><head><body>This quest have already been completed.</body></html>"
+   elif npcId == 30417 :
+      if cond==0 :
+         htmltext = "30417-01.htm"
+      elif cond==1 and squire :
+        if (coin1+coin2+coin3+coin4+coin5+coin6) < 3 :
+           htmltext = "30417-09.htm"
+        elif (coin1+coin2+coin3+coin4+coin5+coin6) == 3 :
+           htmltext = "30417-10.htm"
+        elif 3<(coin1+coin2+coin3+coin4+coin5+coin6)<6 :
+           htmltext = "30417-11.htm"
+        elif (coin1+coin2+coin3+coin4+coin5+coin6) == 6 :
+           htmltext = "30417-12.htm"
+           for item in range(1162,1180) :
+               st.takeItems(item,-1)
+           st.takeItems(MARK_OF_ESQUIRE,-1)
+           st.giveItems(SWORD_OF_RITUAL,1)
+           st.set("cond","0")
+           st.setState(COMPLETED)
+           st.playSound("ItemSound.quest_finish")
+   elif npcId == 30332 and cond==1 and squire :
+       if not guards_mark1 and not coin1 :
+          htmltext = "30332-01.htm"
+       elif guards_mark1 :
+          if st.getQuestItemsCount(BUGBEAR_NECKLACE)<10 :
+             htmltext = "30332-03.htm"
+          else:
+             htmltext = "30332-04.htm"
+             st.takeItems(BUGBEAR_NECKLACE,-1)
+             st.takeItems(GLUDIO_GUARDS_MARK1,1)
+             st.giveItems(COIN_OF_LORDS1,1)
+       elif coin1 :
+          htmltext = "30332-05.htm"
+   elif npcId == 30289 and cond==1 and squire :
+       if not church_mark1 and not coin2 :
+          htmltext = "30289-01.htm"
+       elif church_mark1 :
+        if st.getQuestItemsCount(EINHASAD_CRUCIFIX)<12 :
           htmltext = "30289-04.htm"
         else:
           htmltext = "30289-05.htm"
-          st.takeItems(EINHASAD_CRUCIFIX_ID,st.getQuestItemsCount(EINHASAD_CRUCIFIX_ID))
-          st.takeItems(EINHASAD_CHURCH_MARK1_ID,1)
-          st.giveItems(COIN_OF_LORDS2_ID,1)
-   elif npcId == 30289 and int(st.get("cond"))==1 and st.getQuestItemsCount(COIN_OF_LORDS2_ID)>0 :
-        htmltext = "30289-06.htm"
-   elif npcId == 30379 and int(st.get("cond"))==1 and st.getQuestItemsCount(MARK_OF_ESQUIRE_ID)>0 and st.getQuestItemsCount(COIN_OF_LORDS3_ID)==0 and st.getQuestItemsCount(GLUDIO_GUARDS_MARK2_ID)==0 :
-        htmltext = "30379-01.htm"
-   elif npcId == 30379 and int(st.get("cond"))==1 and st.getQuestItemsCount(GLUDIO_GUARDS_MARK2_ID)>0 :
-        if st.getQuestItemsCount(POISON_SPIDER_LEG1_ID)<20 :
-          htmltext = "30379-03.htm"
-        else:
-          htmltext = "30379-04.htm"
-          st.takeItems(POISON_SPIDER_LEG1_ID,st.getQuestItemsCount(POISON_SPIDER_LEG1_ID))
-          st.takeItems(GLUDIO_GUARDS_MARK2_ID,1)
-          st.giveItems(COIN_OF_LORDS3_ID,1)
-   elif npcId == 30379 and int(st.get("cond"))==1 and st.getQuestItemsCount(COIN_OF_LORDS3_ID)>0 :
-        htmltext = "30379-05.htm"
-   elif npcId == 30037 and int(st.get("cond"))==1 and st.getQuestItemsCount(EINHASAD_CHURCH_MARK2_ID)==0 and st.getQuestItemsCount(MARK_OF_ESQUIRE_ID) and st.getQuestItemsCount(COIN_OF_LORDS4_ID)==0 :
-        htmltext = "30037-01.htm"
-   elif npcId == 30037 and int(st.get("cond"))==1 and st.getQuestItemsCount(EINHASAD_CHURCH_MARK2_ID)>0 :
-        if st.getQuestItemsCount(LIZARDMAN_TOTEM_ID)<20 :
-          htmltext = "30037-03.htm"
-        else:
-          htmltext = "30037-04.htm"
-          st.takeItems(LIZARDMAN_TOTEM_ID,st.getQuestItemsCount(LIZARDMAN_TOTEM_ID))
-          st.takeItems(EINHASAD_CHURCH_MARK2_ID,1)
-          st.giveItems(COIN_OF_LORDS4_ID,1)
-   elif npcId == 30037 and int(st.get("cond"))==1 and st.getQuestItemsCount(COIN_OF_LORDS4_ID)>0 :
-        htmltext = "30037-05.htm"
-   elif npcId == 30039 and int(st.get("cond"))==1 and st.getQuestItemsCount(GLUDIO_GUARDS_MARK3_ID)==0 and st.getQuestItemsCount(MARK_OF_ESQUIRE_ID) and st.getQuestItemsCount(COIN_OF_LORDS5_ID)==0 :
-        htmltext = "30039-01.htm"
-   elif npcId == 30039 and int(st.get("cond"))==1 and st.getQuestItemsCount(GLUDIO_GUARDS_MARK3_ID)>0 :
-        if st.getQuestItemsCount(GIANT_SPIDER_HUSK_ID)<20 :
-          htmltext = "30039-03.htm"
-        else:
-          htmltext = "30039-04.htm"
-          st.takeItems(GIANT_SPIDER_HUSK_ID,st.getQuestItemsCount(GIANT_SPIDER_HUSK_ID))
-          st.takeItems(GLUDIO_GUARDS_MARK3_ID,1)
-          st.giveItems(COIN_OF_LORDS5_ID,1)
-   elif npcId == 30039 and int(st.get("cond"))==1 and st.getQuestItemsCount(COIN_OF_LORDS5_ID)>0 :
-        htmltext = "30039-05.htm"
-   elif npcId == 30031 and int(st.get("cond"))==1 and st.getQuestItemsCount(EINHASAD_CHURCH_MARK3_ID)==0 and st.getQuestItemsCount(MARK_OF_ESQUIRE_ID) and st.getQuestItemsCount(COIN_OF_LORDS6_ID)==0 :
-        htmltext = "30031-01.htm"
-   elif npcId == 30031 and int(st.get("cond"))==1 and st.getQuestItemsCount(EINHASAD_CHURCH_MARK3_ID)>0 :
-        if st.getQuestItemsCount(HORRIBLE_SKULL_ID)<10 :
-          htmltext = "30031-03.htm"
-        else:
-          htmltext = "30031-04.htm"
-          st.takeItems(HORRIBLE_SKULL_ID,st.getQuestItemsCount(HORRIBLE_SKULL_ID))
-          st.takeItems(EINHASAD_CHURCH_MARK3_ID,1)
-          st.giveItems(COIN_OF_LORDS6_ID,1)
-   elif npcId == 30031 and int(st.get("cond"))==1 and st.getQuestItemsCount(COIN_OF_LORDS6_ID)>0 :
-        htmltext = "30031-05.htm"
-   elif npcId == 30311 and int(st.get("cond"))==1 and st.getQuestItemsCount(MARK_OF_ESQUIRE_ID)>0 :
+          st.takeItems(EINHASAD_CRUCIFIX,-1)
+          st.takeItems(EINHASAD_CHURCH_MARK1,1)
+          st.giveItems(COIN_OF_LORDS2,1)
+       elif coin2 :
+          htmltext = "30289-06.htm"
+   elif npcId == 30379 and cond==1 and squire :
+       if not coin3 and not guards_mark2 :
+          htmltext = "30379-01.htm"
+       elif guards_mark2 :
+          if st.getQuestItemsCount(POISON_SPIDER_LEG1)<20 :
+            htmltext = "30379-03.htm"
+          else:
+            htmltext = "30379-04.htm"
+            st.takeItems(POISON_SPIDER_LEG1,-1)
+            st.takeItems(GLUDIO_GUARDS_MARK2,1)
+            st.giveItems(COIN_OF_LORDS3,1)
+       elif coin3 :
+          htmltext = "30379-05.htm"
+   elif npcId == 30037 and cond==1 and squire :
+       if not coin4 and not church_mark2 :
+          htmltext = "30037-01.htm"
+       elif church_mark2 :
+          if st.getQuestItemsCount(LIZARDMAN_TOTEM)<20 :
+            htmltext = "30037-03.htm"
+          else:
+            htmltext = "30037-04.htm"
+            st.takeItems(LIZARDMAN_TOTEM,-1)
+            st.takeItems(EINHASAD_CHURCH_MARK2,1)
+            st.giveItems(COIN_OF_LORDS4,1)
+       elif coin4 :
+          htmltext = "30037-05.htm"
+   elif npcId == 30039 and cond==1 and squire :
+       if not guards_mark3 and not coin5 :
+          htmltext = "30039-01.htm"
+       elif guards_mark3 :
+          if st.getQuestItemsCount(GIANT_SPIDER_HUSK)<20 :
+            htmltext = "30039-03.htm"
+          else:
+            htmltext = "30039-04.htm"
+            st.takeItems(GIANT_SPIDER_HUSK,-1)
+            st.takeItems(GLUDIO_GUARDS_MARK3,1)
+            st.giveItems(COIN_OF_LORDS5,1)
+       elif coin5 :
+          htmltext = "30039-05.htm"
+   elif npcId == 30031 and cond==1 and squire :
+       if not church_mark3 and not coin6 :
+         htmltext = "30031-01.htm"
+       elif church_mark3 :
+         if st.getQuestItemsCount(HORRIBLE_SKULL)<10 :
+           htmltext = "30031-03.htm"
+         else:
+           htmltext = "30031-04.htm"
+           st.takeItems(HORRIBLE_SKULL,-1)
+           st.takeItems(EINHASAD_CHURCH_MARK3,1)
+           st.giveItems(COIN_OF_LORDS6,1)
+       elif coin6 :
+         htmltext = "30031-05.htm"
+   elif npcId == 30311 and cond==1 and squire :
         htmltext = "30311-01.htm"
-   elif npcId == 30653 and int(st.get("cond"))==1 and st.getQuestItemsCount(MARK_OF_ESQUIRE_ID)>0 :
+   elif npcId == 30653 and cond==1 and squire :
         htmltext = "30653-01.htm"
-   elif npcId == 30417 and int(st.get("cond"))==1 and st.getQuestItemsCount(MARK_OF_ESQUIRE_ID)>0 and (st.getQuestItemsCount(COIN_OF_LORDS1_ID)+st.getQuestItemsCount(COIN_OF_LORDS2_ID)+st.getQuestItemsCount(COIN_OF_LORDS3_ID)+st.getQuestItemsCount(COIN_OF_LORDS4_ID)+st.getQuestItemsCount(COIN_OF_LORDS5_ID)+st.getQuestItemsCount(COIN_OF_LORDS6_ID))==3 :
-        htmltext = "30417-10.htm"
-   elif npcId == 30417 and int(st.get("cond"))==1 and st.getQuestItemsCount(MARK_OF_ESQUIRE_ID)>0 and (st.getQuestItemsCount(COIN_OF_LORDS1_ID)+st.getQuestItemsCount(COIN_OF_LORDS2_ID)+st.getQuestItemsCount(COIN_OF_LORDS3_ID)+st.getQuestItemsCount(COIN_OF_LORDS4_ID)+st.getQuestItemsCount(COIN_OF_LORDS5_ID)+st.getQuestItemsCount(COIN_OF_LORDS6_ID))>3 and (st.getQuestItemsCount(COIN_OF_LORDS1_ID)+st.getQuestItemsCount(COIN_OF_LORDS2_ID)+st.getQuestItemsCount(COIN_OF_LORDS3_ID)+st.getQuestItemsCount(COIN_OF_LORDS4_ID)+st.getQuestItemsCount(COIN_OF_LORDS5_ID)+st.getQuestItemsCount(COIN_OF_LORDS6_ID))<6 :
-        htmltext = "30417-11.htm"
-   elif npcId == 30417 and int(st.get("cond"))==1 and st.getQuestItemsCount(MARK_OF_ESQUIRE_ID)>0 and (st.getQuestItemsCount(COIN_OF_LORDS1_ID)+st.getQuestItemsCount(COIN_OF_LORDS2_ID)+st.getQuestItemsCount(COIN_OF_LORDS3_ID)+st.getQuestItemsCount(COIN_OF_LORDS4_ID)+st.getQuestItemsCount(COIN_OF_LORDS5_ID)+st.getQuestItemsCount(COIN_OF_LORDS6_ID))==6 :
-        htmltext = "30417-12.htm"
-        st.takeItems(COIN_OF_LORDS1_ID,st.getQuestItemsCount(COIN_OF_LORDS1_ID))
-        st.takeItems(COIN_OF_LORDS2_ID,st.getQuestItemsCount(COIN_OF_LORDS2_ID))
-        st.takeItems(COIN_OF_LORDS3_ID,st.getQuestItemsCount(COIN_OF_LORDS3_ID))
-        st.takeItems(COIN_OF_LORDS4_ID,st.getQuestItemsCount(COIN_OF_LORDS4_ID))
-        st.takeItems(COIN_OF_LORDS5_ID,st.getQuestItemsCount(COIN_OF_LORDS5_ID))
-        st.takeItems(COIN_OF_LORDS6_ID,st.getQuestItemsCount(COIN_OF_LORDS6_ID))
-        st.takeItems(GLUDIO_GUARDS_MARK1_ID,st.getQuestItemsCount(GLUDIO_GUARDS_MARK1_ID))
-        st.takeItems(GLUDIO_GUARDS_MARK2_ID,st.getQuestItemsCount(GLUDIO_GUARDS_MARK2_ID))
-        st.takeItems(GLUDIO_GUARDS_MARK3_ID,st.getQuestItemsCount(GLUDIO_GUARDS_MARK3_ID))
-        st.takeItems(EINHASAD_CHURCH_MARK1_ID,st.getQuestItemsCount(EINHASAD_CHURCH_MARK1_ID))
-        st.takeItems(EINHASAD_CHURCH_MARK2_ID,st.getQuestItemsCount(EINHASAD_CHURCH_MARK2_ID))
-        st.takeItems(EINHASAD_CHURCH_MARK3_ID,st.getQuestItemsCount(EINHASAD_CHURCH_MARK3_ID))
-        st.takeItems(BUGBEAR_NECKLACE_ID,st.getQuestItemsCount(BUGBEAR_NECKLACE_ID))
-        st.takeItems(EINHASAD_CRUCIFIX_ID,st.getQuestItemsCount(EINHASAD_CRUCIFIX_ID))
-        st.takeItems(POISON_SPIDER_LEG1_ID,st.getQuestItemsCount(POISON_SPIDER_LEG1_ID))
-        st.takeItems(LIZARDMAN_TOTEM_ID,st.getQuestItemsCount(LIZARDMAN_TOTEM_ID))
-        st.takeItems(GIANT_SPIDER_HUSK_ID,st.getQuestItemsCount(GIANT_SPIDER_HUSK_ID))
-        st.takeItems(HORRIBLE_SKULL_ID,st.getQuestItemsCount(HORRIBLE_SKULL_ID))
-        st.takeItems(MARK_OF_ESQUIRE_ID,st.getQuestItemsCount(MARK_OF_ESQUIRE_ID))
-        st.giveItems(SWORD_OF_RITUAL_ID,1)
-        st.set("cond","0")
-        st.setState(COMPLETED)
-        st.playSound("ItemSound.quest_finish")
    return htmltext
 
  def onKill (self,npc,st):
-   npcId = npc.getNpcId()
-   if npcId == 20775 :
-      st.set("id","0")
-      if int(st.get("cond")) == 1 and st.getQuestItemsCount(GLUDIO_GUARDS_MARK1_ID)>0 :
-        st.giveItems(BUGBEAR_NECKLACE_ID,1)
-        if st.getQuestItemsCount(BUGBEAR_NECKLACE_ID) == 10 :
-          st.playSound("ItemSound.quest_middle")
-        else:
-          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 27024 :
-      st.set("id","0")
-      if st.getQuestItemsCount(EINHASAD_CHURCH_MARK1_ID)  :
-        st.giveItems(EINHASAD_CRUCIFIX_ID,1)
-        if st.getQuestItemsCount(EINHASAD_CRUCIFIX_ID) == 12 :
-          st.playSound("ItemSound.quest_middle")
-        else:
-          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 20038 :
-      st.set("id","0")
-      if int(st.get("cond")) and st.getQuestItemsCount(GLUDIO_GUARDS_MARK2_ID)>0 and st.getQuestItemsCount(POISON_SPIDER_LEG1_ID)<20 :
-        st.giveItems(POISON_SPIDER_LEG1_ID,1)
-        if st.getQuestItemsCount(POISON_SPIDER_LEG1_ID) == 20 :
-          st.playSound("ItemSound.quest_middle")
-        else:
-          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 20043 :
-      st.set("id","0")
-      if int(st.get("cond")) and st.getQuestItemsCount(GLUDIO_GUARDS_MARK2_ID)>0 and st.getQuestItemsCount(POISON_SPIDER_LEG1_ID)<20 :
-        st.giveItems(POISON_SPIDER_LEG1_ID,1)
-        if st.getQuestItemsCount(POISON_SPIDER_LEG1_ID) == 20 :
-          st.playSound("ItemSound.quest_middle")
-        else:
-          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 20050 :
-      st.set("id","0")
-      if st.getQuestItemsCount(GLUDIO_GUARDS_MARK2_ID)>0 and st.getQuestItemsCount(POISON_SPIDER_LEG1_ID)<20 :
-        st.giveItems(POISON_SPIDER_LEG1_ID,1)
-        if st.getQuestItemsCount(POISON_SPIDER_LEG1_ID) == 20 :
-          st.playSound("ItemSound.quest_middle")
-        else:
-          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 20030 :
-      st.set("id","0")
-      if st.getQuestItemsCount(EINHASAD_CHURCH_MARK2_ID) and st.getQuestItemsCount(LIZARDMAN_TOTEM_ID)<20 and st.getRandom(10)<5 :
-        st.giveItems(LIZARDMAN_TOTEM_ID,1)
-        if st.getQuestItemsCount(LIZARDMAN_TOTEM_ID) == 20 :
-          st.playSound("ItemSound.quest_middle")
-        else:
-          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 20027 :
-      st.set("id","0")
-      if st.getQuestItemsCount(EINHASAD_CHURCH_MARK2_ID) :
-        st.giveItems(LIZARDMAN_TOTEM_ID,1)
-        if st.getQuestItemsCount(LIZARDMAN_TOTEM_ID) == 20 :
-          st.playSound("ItemSound.quest_middle")
-        else:
-          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 20024 :
-      st.set("id","0")
-      if st.getQuestItemsCount(EINHASAD_CHURCH_MARK2_ID) :
-        st.giveItems(LIZARDMAN_TOTEM_ID,1)
-        if st.getQuestItemsCount(LIZARDMAN_TOTEM_ID) == 20 :
-          st.playSound("ItemSound.quest_middle")
-        else:
-          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 20103 :
-      st.set("id","0")
-      if st.getQuestItemsCount(GLUDIO_GUARDS_MARK3_ID)>0 and st.getRandom(10)<4 :
-        st.giveItems(GIANT_SPIDER_HUSK_ID,1)
-        if st.getQuestItemsCount(GIANT_SPIDER_HUSK_ID) == 20 :
-          st.playSound("ItemSound.quest_middle")
-        else:
-          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 20106 :
-      st.set("id","0")
-      if st.getQuestItemsCount(GLUDIO_GUARDS_MARK2_ID)>0 and st.getRandom(10)<4 :
-        st.giveItems(GIANT_SPIDER_HUSK_ID,1)
-        if st.getQuestItemsCount(GIANT_SPIDER_HUSK_ID) == 20 :
-          st.playSound("ItemSound.quest_middle")
-        else:
-          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 20108 :
-      st.set("id","0")
-      if st.getQuestItemsCount(GLUDIO_GUARDS_MARK3_ID)>0 and st.getRandom(10)<4 :
-        st.giveItems(GIANT_SPIDER_HUSK_ID,1)
-        if st.getQuestItemsCount(GIANT_SPIDER_HUSK_ID) == 20 :
-          st.playSound("ItemSound.quest_middle")
-        else:
-          st.playSound("ItemSound.quest_itemget")
-   elif npcId == 20404 :
-      st.set("id","0")
-      if st.getQuestItemsCount(EINHASAD_CHURCH_MARK3_ID) :
-        st.giveItems(HORRIBLE_SKULL_ID,1)
-        if st.getQuestItemsCount(HORRIBLE_SKULL_ID) == 10 :
+   if st.getInt("cond") :
+      item_required,item,max,chance=DROPLIST[npc.getNpcId()]
+      if st.getQuestItemsCount(item_required) and st.getQuestItemsCount(item)<max and st.getRandom(100)<chance :
+        st.giveItems(item,1)
+        if st.getQuestItemsCount(item) == max :
           st.playSound("ItemSound.quest_middle")
         else:
           st.playSound("ItemSound.quest_itemget")
@@ -349,7 +242,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(402,"402_PathToKnight","Path To Knight")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
+STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
@@ -357,7 +250,9 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30417)
 
+CREATED.addTalkId(30417)
 STARTING.addTalkId(30417)
+COMPLETED.addTalkId(30417)
 
 STARTED.addTalkId(30031)
 STARTED.addTalkId(30037)
@@ -369,37 +264,10 @@ STARTED.addTalkId(30379)
 STARTED.addTalkId(30417)
 STARTED.addTalkId(30653)
 
-STARTED.addKillId(20103)
-STARTED.addKillId(20106)
-STARTED.addKillId(20108)
-STARTED.addKillId(20024)
-STARTED.addKillId(20027)
-STARTED.addKillId(20030)
-STARTED.addKillId(20038)
-STARTED.addKillId(20404)
-STARTED.addKillId(20043)
-STARTED.addKillId(20050)
-STARTED.addKillId(27024)
-STARTED.addKillId(20775)
+for mob in DROPLIST.keys():
+    STARTED.addKillId(mob)
 
-STARTED.addQuestDrop(20775,BUGBEAR_NECKLACE_ID,1)
-STARTED.addQuestDrop(30332,GLUDIO_GUARDS_MARK1_ID,1)
-STARTED.addQuestDrop(27024,EINHASAD_CRUCIFIX_ID,1)
-STARTED.addQuestDrop(30289,EINHASAD_CHURCH_MARK1_ID,1)
-STARTED.addQuestDrop(20038,POISON_SPIDER_LEG1_ID,1)
-STARTED.addQuestDrop(30379,GLUDIO_GUARDS_MARK2_ID,1)
-STARTED.addQuestDrop(20030,LIZARDMAN_TOTEM_ID,1)
-STARTED.addQuestDrop(30037,EINHASAD_CHURCH_MARK2_ID,1)
-STARTED.addQuestDrop(20103,GIANT_SPIDER_HUSK_ID,1)
-STARTED.addQuestDrop(30039,GLUDIO_GUARDS_MARK3_ID,1)
-STARTED.addQuestDrop(20404,HORRIBLE_SKULL_ID,1)
-STARTED.addQuestDrop(30031,EINHASAD_CHURCH_MARK3_ID,1)
-STARTED.addQuestDrop(30332,COIN_OF_LORDS1_ID,1)
-STARTED.addQuestDrop(30289,COIN_OF_LORDS2_ID,1)
-STARTED.addQuestDrop(30379,COIN_OF_LORDS3_ID,1)
-STARTED.addQuestDrop(30037,COIN_OF_LORDS4_ID,1)
-STARTED.addQuestDrop(30039,COIN_OF_LORDS5_ID,1)
-STARTED.addQuestDrop(30031,COIN_OF_LORDS6_ID,1)
-STARTED.addQuestDrop(30417,MARK_OF_ESQUIRE_ID,1)
+for item in range(1162,1180)+[MARK_OF_ESQUIRE] :
+    STARTED.addQuestDrop(20775,item,1)
 
-print "importing quests: 402: Path To Knight"
+print "importing quests: 402: Path To Knight"
