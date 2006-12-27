@@ -208,6 +208,7 @@ __all__ = [
 '623_TheFinestFood',
 '626_ADarkTwilight',
 '627_HeartInSearchOfPower',
+'628_HuntGoldenRam',
 '634_InSearchofDimensionalFragments',
 '999_C3Tutorial'
 ]
