@@ -17,7 +17,7 @@ CHANCE = 49   #Base dropchance of the Badges
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -90,7 +90,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_middle")
    return
            
-QUEST       = Quest(628,"628_HuntGoldenRam","Hunt of the Golden Ram Mercenary Force")
+QUEST       = Quest(628,"628_HuntGoldenRam","Hunt of the Golden Ram Mercenary Force",True)
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
