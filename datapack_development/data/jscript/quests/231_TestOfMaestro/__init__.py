@@ -23,7 +23,7 @@ MARSH_SPIDERS_WEB = 2877
 BLOOD_OF_LEECH = 2878
 BROKEN_TELEPORT_DEVICE = 2916
 
-#This handle all Mob-Drop Data.  npcId:[progressition,maxcount,item]
+#This handle all Mob-Drop Data.  npcId:[progress,maxcount,item]
 DROPLIST={
 20225:[13,10,BLOOD_OF_LEECH],
 20229:[13,10,WEIRD_BEES_NEEDLE],
@@ -205,10 +205,10 @@ class Quest (JQuest) :
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
-   progressition,maxcount,item=DROPLIST[npcId]
+   progress_drop,maxcount,item=DROPLIST[npcId]
    count=st.getQuestItemsCount(item)
    progress = st.getInt("progress")
-   if progress == progressition and count < maxcount :
+   if progress == progress_drop and count < maxcount :
         st.giveItems(item,1)
         if count == maxcount-1 :
           st.playSound("Itemsound.quest_middle")
