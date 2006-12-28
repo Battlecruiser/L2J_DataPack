@@ -39,6 +39,7 @@ __all__ = [
 '106_ForgottenTruth',
 '107_ShowNoMercy',
 '108_DiamondGambit',
+'122_OminousNews',
 '151_SaveMySister1',
 '152_ShardsOfGolem',
 '153_WharfOldtimersFavor',
