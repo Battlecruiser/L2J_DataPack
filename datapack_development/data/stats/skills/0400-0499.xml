@@ -428,14 +428,19 @@
 </for>
 </skill>
 <skill id="419" levels="4" name="Summon Treasure Key">
-  <!-- Treasure Hunter, Plains Walker, Abyss Walker -->
-  <set name="power" val="0.0"/>
+  <table name="#mpConsume"> 122 159 183 204 </table>
+  <table name="#itemConsumeCount"> 2 3 4 6 </table>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
+  <set name="itemConsumeId" val="1661"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="3000"/>
+  <set name="skillTime" val="3000"/>
+  <set name="reuseDelay" val="15000"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="SUMMON_TREASURE_KEY"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="420" levels="3" name="Zealot">
 <table name="#hpConsume"> 159 183 204 </table>
