@@ -99,13 +99,15 @@ class Quest (JQuest) :
  def onKill (self,npc,st):
    cond = st.getInt("cond") 
    npcId = npc.getNpcId()
- 
+   xx = int(st.getPlayer().getX())
+   yy = int(st.getPlayer().getY())
+   zz = int(st.getPlayer().getZ())
    if npcId == GOBLIN_TOMB_RAIDER_LEADER : 
      if cond and st.getQuestItemsCount(GOBLIN_DWELLING_MAP) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH) < 10 and st.getQuestItemsCount(GREEN_BLOOD) < 40 : 
        if st.getQuestItemsCount(GREEN_BLOOD) > 20 : 
          if st.getRandom(100) < ((st.getQuestItemsCount(GREEN_BLOOD)-20)*5) : 
            st.takeItems(GREEN_BLOOD,-1) 
-           st.getPcSpawn().addSpawn(KURUKA_RATMAN_LEADER) 
+           st.getPcSpawn().addSpawn(KURUKA_RATMAN_LEADER,xx,yy,zz) 
          else: 
            st.giveItems(GREEN_BLOOD,1) 
            st.playSound("ItemSound.quest_itemget") 
