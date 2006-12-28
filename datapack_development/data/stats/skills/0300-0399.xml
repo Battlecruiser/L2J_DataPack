@@ -423,6 +423,8 @@
   <set name="reuseDelay" val="180000"/>
   <set name="skillTime" val="1080"/>
   <set name="skillType" val="PDAM"/>
+  <set name="lethal1" val="5"/>
+  <set name="lethal2" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
@@ -756,7 +758,9 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="reuseDelay" val="30000"/>
-  <set name="overHit" val="true"/> 
+  <set name="overHit" val="true"/>
+  <set name="lethal1" val="5"/>
+  <set name="lethal2" val="2"/>
   <set name="skillTime" val="4000"/> 
   <set name="hitTime" val="4000"/> 
   <for>
@@ -773,7 +777,9 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="reuseDelay" val="15000"/>
-  <set name="overHit" val="true"/> 
+  <set name="overHit" val="true"/>
+  <set name="lethal1" val="5"/>
+  <set name="lethal2" val="2"/>
   <set name="skillTime" val="1800"/> 
   <set name="hitTime" val="1800"/> 
   <for>
