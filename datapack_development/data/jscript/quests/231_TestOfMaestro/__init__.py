@@ -23,7 +23,7 @@ MARSH_SPIDERS_WEB = 2877
 BLOOD_OF_LEECH = 2878
 BROKEN_TELEPORT_DEVICE = 2916
 
-#This handle all Mob-Drop Data.  npcId:[condition,maxcount,item]
+#This handle all Mob-Drop Data.  npcId:[progressition,maxcount,item]
 DROPLIST={
 20225:[13,10,BLOOD_OF_LEECH],
 20229:[13,10,WEIRD_BEES_NEEDLE],
@@ -31,14 +31,14 @@ DROPLIST={
 27133:[4,1,NECKLACE_OF_KAMURU]
 }
 
-#if you have all three recommendation, it sets final cond
+#if you have all three recommendation, it sets final progress
 def recommendationCount(st):
   count=0
   for item in [RECOMMENDATION_OF_ARIN,RECOMMENDATION_OF_FILAUR,RECOMMENDATION_OF_BALANKI]:
     count+=st.getQuestItemsCount(item)
   if count == 3:
-    st.set("cond","17")
-
+    st.set("progress","17")
+    st.set("cond","2")
 
 class Quest (JQuest) :
 
@@ -46,41 +46,42 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    cond = st.getInt("cond")
+    progress = st.getInt("progress")
     id=st.getState()
     if id <> COMPLETED :
-       if event == "1" and cond == 0 :
+       if event == "1" and progress == 0 :
           htmltext = "30531-04.htm"
           st.setState(STARTED)
           st.playSound("ItemSound.quest_accept")
           st.set("cond","1")
-       elif event == "30533_1" and cond == 1:
+          st.set("progress","1")
+       elif event == "30533_1" and progress in [1,11,16]:
           htmltext = "30533-02.htm"
-          st.set("cond","2")
-       elif event == "30671_1" and cond == 2:
+          st.set("progress","2")
+       elif event == "30671_1" and progress == 2:
           htmltext = "30671-02.htm"
           st.giveItems(PAINT_OF_KAMURU,1)
-          st.set("cond","3")
+          st.set("progress","3")
        elif event == "30556_1" :
           htmltext = "30556-02.htm"
        elif event == "30556_2" :
           htmltext = "30556-03.htm"
-       elif event == "30556_3" and cond == 8 :
+       elif event == "30556_3" and progress == 8 :
           htmltext = "30556-05.htm"
           st.takeItems(PAINT_OF_TELEPORT_DEVICE,1)
           st.getPlayer().teleToLocation(140352,-194133,-2028);
           st.giveItems(BROKEN_TELEPORT_DEVICE,1)
-          st.set("cond","9")
+          st.set("progress","9")
        elif event == "30556_4" :
           htmltext = "30556-04.htm"
-       elif event == "30673_1" and cond == 14 :
+       elif event == "30673_1" and progress == 14 :
           htmltext = "30673-04.htm"
           st.giveItems(REPORT_OF_KRUMA,1)
           st.takeItems(WEIRD_BEES_NEEDLE,-1)
           st.takeItems(MARSH_SPIDERS_WEB,-1)
           st.takeItems(BLOOD_OF_LEECH,-1)
           st.takeItems(INGREDIENTS_OF_ANTIDOTE,-1)
-          st.set("cond","15")
+          st.set("progress","15")
     return htmltext
 
 
@@ -90,11 +91,11 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
      st.setState(STARTING)
-   cond = st.getInt("cond")
+   progress = st.getInt("progress")
    if npcId == 30531:
      if id == COMPLETED :
        htmltext = "<html><head><body>This quest has already been completed.</body></html>"
-     elif cond==0 :
+     elif progress==0 :
         if st.getPlayer().getClassId().getId() == 0x38 and st.getPlayer().getLevel() > 38 :
           htmltext = "30531-03.htm"
         elif st.getPlayer().getClassId().getId() == 0x38 :
@@ -103,111 +104,111 @@ class Quest (JQuest) :
         else:
           htmltext = "30531-02.htm"
           st.exitQuest(1)
-     elif cond>0 and cond<17 :
+     elif progress>0 and progress<17 :
        htmltext = "30531-05.htm"
-     elif cond==17 :
+     elif progress==17 :
        st.addExpAndSp(154499,37500)
        htmltext = "30531-06.htm"
        st.giveItems(MARK_OF_MAESTRO,1)
        st.takeItems(RECOMMENDATION_OF_BALANKI,1)
        st.takeItems(RECOMMENDATION_OF_FILAUR,1)
        st.takeItems(RECOMMENDATION_OF_ARIN,1)
-       st.unset("cond")
+       st.unset("progress")
        st.setState(COMPLETED)
        st.playSound("ItemSound.quest_finish")
    elif npcId == 30533:
-     if cond in [1,11,16] and not st.getQuestItemsCount(RECOMMENDATION_OF_BALANKI):
+     if progress in [1,11,16] and not st.getQuestItemsCount(RECOMMENDATION_OF_BALANKI):
        htmltext = "30533-01.htm"
-     elif cond==2:
+     elif progress==2:
        htmltext = "30533-03.htm"
-     elif cond==6 :
+     elif progress==6 :
        htmltext = "30533-04.htm"
        st.giveItems(RECOMMENDATION_OF_BALANKI,1)
        st.takeItems(LETTER_OF_SOLDER_DETACHMENT,1)
-       st.set("cond","7")
+       st.set("progress","7")
        recommendationCount(st)
-     elif cond in [7,17] :
+     elif progress in [7,17] :
        htmltext = "30533-05.htm"
    elif npcId == 30671:
-     if cond==2 :
+     if progress==2 :
        htmltext = "30671-01.htm"
-     elif cond==3:
+     elif progress==3:
        htmltext = "30671-03.htm"
-     elif cond==5 :
+     elif progress==5 :
        htmltext = "30671-04.htm"
        st.giveItems(LETTER_OF_SOLDER_DETACHMENT,1)
        st.takeItems(NECKLACE_OF_KAMURU,1)
        st.takeItems(PAINT_OF_KAMURU,1)
-       st.set("cond","6")
-     elif cond==6 :
+       st.set("progress","6")
+     elif progress==6 :
        htmltext = "30671-05.htm"
-   elif npcId == 30672 and cond==3 :
+   elif npcId == 30672 and progress==3 :
        htmltext = "30672-01.htm"
-   elif npcId == 30675 and cond==3:
-       st.set("cond","4")
+   elif npcId == 30675 and progress==3:
+       st.set("progress","4")
        htmltext="30675-01.htm"
    elif npcId == 30536:
-     if cond in [1,7,16] and not st.getQuestItemsCount(RECOMMENDATION_OF_ARIN) :
+     if progress in [1,7,16] and not st.getQuestItemsCount(RECOMMENDATION_OF_ARIN) :
        htmltext = "30536-01.htm"
        st.giveItems(PAINT_OF_TELEPORT_DEVICE,1)
-       st.set("cond","8")
-     elif cond==8 :
+       st.set("progress","8")
+     elif progress==8 :
        htmltext = "30536-02.htm"
-     elif cond==10:
+     elif progress==10:
        htmltext = "30536-03.htm"
        st.giveItems(RECOMMENDATION_OF_ARIN,1)
        st.takeItems(TELEPORT_DEVICE,5)
-       st.set("cond","11")
+       st.set("progress","11")
        recommendationCount(st)
-     elif cond in [11,17]:
+     elif progress in [11,17]:
        htmltext = "30536-04.htm"
    elif npcId==30556:
-     if cond==8:
+     if progress==8:
        htmltext = "30556-01.htm"
-     elif cond==9:
+     elif progress==9:
        htmltext = "30556-06.htm"
        st.giveItems(TELEPORT_DEVICE,5)
        st.takeItems(BROKEN_TELEPORT_DEVICE,1)
-       st.set("cond","10")
-     elif cond==10 :
+       st.set("progress","10")
+     elif progress==10 :
        htmltext = "30556-07.htm"
    elif npcId==30535:  
-     if cond in [1,7,11] and not st.getQuestItemsCount(RECOMMENDATION_OF_FILAUR) :
+     if progress in [1,7,11] and not st.getQuestItemsCount(RECOMMENDATION_OF_FILAUR) :
        htmltext = "30535-01.htm"
        st.giveItems(ARCHITECTURE_OF_KRUMA,1)
-       st.set("cond","12")
-     elif cond==12 :
+       st.set("progress","12")
+     elif progress==12 :
        htmltext = "30535-02.htm"
-     elif cond==15 :
+     elif progress==15 :
        htmltext = "30535-03.htm"
        st.giveItems(RECOMMENDATION_OF_FILAUR,1)
        st.takeItems(REPORT_OF_KRUMA,1)
-       st.set("cond","16")
+       st.set("progress","16")
        recommendationCount(st)
-     elif cond>15:
+     elif progress>15:
        htmltext = "30535-04.htm"
    elif npcId == 30673:
-     if cond==12 :
+     if progress==12 :
        htmltext = "30673-01.htm"
        st.giveItems(INGREDIENTS_OF_ANTIDOTE,1)
        st.takeItems(ARCHITECTURE_OF_KRUMA,1)
-       st.set("cond","13")
-     elif cond==13 :
+       st.set("progress","13")
+     elif progress==13 :
        htmltext = "30673-02.htm"
-     elif cond==14 :
+     elif progress==14 :
        htmltext = "30673-03.htm"
-     elif cond==15:
+     elif progress==15:
        htmltext = "30673-05.htm"
-   elif npcId==30532 and cond :
+   elif npcId==30532 and progress :
       htmltext = "30532-01.htm"
    return htmltext
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
-   condition,maxcount,item=DROPLIST[npcId]
+   progressition,maxcount,item=DROPLIST[npcId]
    count=st.getQuestItemsCount(item)
-   cond = st.getInt("cond")
-   if cond == condition and count < maxcount :
+   progress = st.getInt("progress")
+   if progress == progressition and count < maxcount :
         st.giveItems(item,1)
         if count == maxcount-1 :
           st.playSound("Itemsound.quest_middle")
@@ -215,7 +216,7 @@ class Quest (JQuest) :
           for id in [WEIRD_BEES_NEEDLE,MARSH_SPIDERS_WEB,BLOOD_OF_LEECH]:
            itemcount+=st.getQuestItemsCount(id)
           if npcId==27133 or itemcount>29:          
-            st.set("cond",str(cond+1))
+            st.set("progress",str(progress+1))
         else:
           st.playSound("Itemsound.quest_itemget")
    return
