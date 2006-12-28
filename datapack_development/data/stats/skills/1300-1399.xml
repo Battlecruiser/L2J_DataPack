@@ -683,14 +683,13 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0">
+   <effect count="5" name="ManaDamOverTime" time="2" val="40">
       <mul order="0x30" stat="runSpd" val="0.9"/>
       <mul order="0x30" stat="pAtkSpd" val="0.7"/>
       <mul order="0x30" stat="mAtkSpd" val="0.9"/>
-      <!-- MISSING MDOT - MP Regen per tick -12 -->
       <sub order="0x40" stat="fireRes" val="20"/>
     </effect>
-  </for> 
+  </for>
 </skill>
 <skill id="1340" levels="1" name="Ice Vortex">
   <set name="mpInitialConsume" val="21"/>
@@ -710,14 +709,13 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0">
+     <effect count="5" name="ManaDamOverTime" time="2" val="40">
       <mul order="0x30" stat="runSpd" val="0.7"/>
       <mul order="0x30" stat="pAtkSpd" val="0.9"/>
       <mul order="0x30" stat="mAtkSpd" val="0.9"/>
-      <!-- MISSING MDOT - MP Regen per tick -12 -->
       <sub order="0x40" stat="waterRes" val="20"/>
     </effect>
-  </for> 
+  </for>
 </skill>
 <skill id="1341" levels="1" name="Wind Vortex">
   <set name="mpInitialConsume" val="21"/>
@@ -737,14 +735,13 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0">
+     <effect count="5" name="ManaDamOverTime" time="2" val="40">
       <mul order="0x30" stat="runSpd" val="0.9"/>
       <mul order="0x30" stat="pAtkSpd" val="0.9"/>
       <mul order="0x30" stat="mAtkSpd" val="0.7"/>
-      <!-- MISSING MDOT - MP Regen per tick -12 -->
-      <sub order="0x40" stat="windRes" val="20"/>
+     <sub order="0x40" stat="windRes" val="20"/>
     </effect>
-  </for> 
+  </for>
 </skill>
 <skill id="1342" levels="1" name="Light Vortex">
   <set name="mpInitialConsume" val="21"/>
@@ -763,10 +760,9 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0">
+     <effect count="5" name="ManaDamOverTime" time="2" val="40">
       <sub order="0x40" stat="accCombat" val="6"/>
-      <!-- MISSING MDOT - MP Regen per tick -12 -->
-      <sub order="0x40" stat="holyRes" val="30"/> 
+      <sub order="0x40" stat="holyRes" val="30"/>
     </effect>
   </for>
 </skill>
@@ -789,9 +785,9 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0">
-      <!-- MISSING MDOT - MP Regen per tick -12 -->
-      <sub order="0x40" stat="darkRes" val="30"/> 
+  <!-- MDOT effect needs fixing - DRAIN appears to not allow MDOT to land [28/12/2006] -->
+    <effect count="5" name="ManaDamOverTime" time="2" val="40">
+          <sub order="0x40" stat="darkRes" val="30"/>
     </effect>
   </for>
 </skill>
