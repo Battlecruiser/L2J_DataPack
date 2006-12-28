@@ -4,22 +4,22 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-RING_OF_RAVEN_ID = 1642
-PIPIS_LETTER_ID = 1643
-ROUTS_TP_SCROLL_ID = 1644
-SUCCUBUS_UNDIES_ID = 1645
-MIONS_LETTER_ID = 1646
-BRONKS_INGOT_ID = 1647
-CHALIS_AXE_ID = 1648
-ZIMENFS_POTION_ID = 1649
-BRONKS_PAY_ID = 1650
-CHALIS_PAY_ID = 1651
-ZIMENFS_PAY_ID = 1652
-BEAR_PIC_ID = 1653
-TARANTULA_PIC_ID = 1654
-HONEY_JAR_ID = 1655
-BEAD_ID = 1656
-BEAD_PARCEL_ID = 1657
+RING_OF_RAVEN = 1642
+PIPIS_LETTER = 1643
+ROUTS_TP_SCROLL = 1644
+SUCCUBUS_UNDIES = 1645
+MIONS_LETTER = 1646
+BRONKS_INGOT = 1647
+CHALIS_AXE = 1648
+ZIMENFS_POTION = 1649
+BRONKS_PAY = 1650
+CHALIS_PAY = 1651
+ZIMENFS_PAY = 1652
+BEAR_PIC = 1653
+TARANTULA_PIC = 1654
+HONEY_JAR = 1655
+BEAD = 1656
+BEAD_PARCEL = 1657
 
 class Quest (JQuest) :
 
@@ -29,11 +29,11 @@ class Quest (JQuest) :
     htmltext = event
     if event == "1" :
           st.set("id","0")
-          if st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x35 and st.getQuestItemsCount(RING_OF_RAVEN_ID) == 0 :
+          if st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x35 and st.getQuestItemsCount(RING_OF_RAVEN) == 0 :
             st.set("cond","1")
             st.setState(STARTED)
             st.playSound("ItemSound.quest_accept")
-            st.giveItems(PIPIS_LETTER_ID,1)
+            st.giveItems(PIPIS_LETTER,1)
             htmltext = "30524-05.htm"
           elif st.getPlayer().getClassId().getId() != 0x35 :
                 if st.getPlayer().getClassId().getId() == 0x36 :
@@ -42,22 +42,22 @@ class Quest (JQuest) :
                   htmltext = "30524-08.htm"
           elif st.getPlayer().getLevel() < 19 and st.getPlayer().getClassId().getId() == 0x35 :
                 htmltext = "30524-02.htm"
-          elif st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x35 and st.getQuestItemsCount(RING_OF_RAVEN_ID) == 1 :
+          elif st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x35 and st.getQuestItemsCount(RING_OF_RAVEN) == 1 :
                 htmltext = "30524-04.htm"
     elif event == "30519_1" :
-        if st.getQuestItemsCount(PIPIS_LETTER_ID):
-            st.takeItems(PIPIS_LETTER_ID,1)
+        if st.getQuestItemsCount(PIPIS_LETTER):
+            st.takeItems(PIPIS_LETTER,1)
             st.set("cond","2")
             n = st.getRandom(3)
             if n == 0:
               htmltext = "30519-02.htm"
-              st.giveItems(ZIMENFS_POTION_ID,1)
+              st.giveItems(ZIMENFS_POTION,1)
             elif n == 1:
               htmltext = "30519-03.htm"
-              st.giveItems(CHALIS_AXE_ID,1)
+              st.giveItems(CHALIS_AXE,1)
             elif n == 2:
               htmltext = "30519-04.htm"
-              st.giveItems(BRONKS_INGOT_ID,1)
+              st.giveItems(BRONKS_INGOT,1)
         else:
             htmltext = "<html><head><body>I have nothing to say you</body></html>"
     elif event == "30519_2" :
@@ -72,7 +72,7 @@ class Quest (JQuest) :
             if n == 1:
               htmltext = "30519-11.htm"
     elif event == "30519_5" :
-        if st.getQuestItemsCount(ZIMENFS_POTION_ID) or st.getQuestItemsCount(CHALIS_AXE_ID) or st.getQuestItemsCount(BRONKS_INGOT_ID):
+        if st.getQuestItemsCount(ZIMENFS_POTION) or st.getQuestItemsCount(CHALIS_AXE) or st.getQuestItemsCount(BRONKS_INGOT):
           if int(st.get("id")) / 10 < 2 :
             htmltext = "30519-07.htm"
             st.set("id",str(int(st.get("id"))+1))
@@ -82,52 +82,52 @@ class Quest (JQuest) :
                 st.set("id",str(int(st.get("id"))+1))
           elif int(st.get("id")) / 10 >= 3 and int(st.get("cond")) > 0 :
               htmltext = "30519-10.htm"
-              st.giveItems(MIONS_LETTER_ID,1)
-              st.takeItems(CHALIS_AXE_ID,1)
-              st.takeItems(ZIMENFS_POTION_ID,1)
-              st.takeItems(BRONKS_INGOT_ID,1)
+              st.giveItems(MIONS_LETTER,1)
+              st.takeItems(CHALIS_AXE,1)
+              st.takeItems(ZIMENFS_POTION,1)
+              st.takeItems(BRONKS_INGOT,1)
         else:
             htmltext = "<html><head><body>I have nothing to say you</body></html>"
     elif event == "30519_6" :
-        if st.getQuestItemsCount(ZIMENFS_PAY_ID) or st.getQuestItemsCount(CHALIS_PAY_ID) or st.getQuestItemsCount(BRONKS_PAY_ID):
+        if st.getQuestItemsCount(ZIMENFS_PAY) or st.getQuestItemsCount(CHALIS_PAY) or st.getQuestItemsCount(BRONKS_PAY):
             n = st.getRandom(3)
-            st.takeItems(ZIMENFS_PAY_ID,1)
-            st.takeItems(CHALIS_PAY_ID,1)
-            st.takeItems(BRONKS_PAY_ID,1)
+            st.takeItems(ZIMENFS_PAY,1)
+            st.takeItems(CHALIS_PAY,1)
+            st.takeItems(BRONKS_PAY,1)
             if n == 0:
               htmltext = "30519-02.htm"
-              st.giveItems(ZIMENFS_POTION_ID,1)
+              st.giveItems(ZIMENFS_POTION,1)
             elif n == 1:
               htmltext = "30519-03.htm"
-              st.giveItems(CHALIS_AXE_ID,1)
+              st.giveItems(CHALIS_AXE,1)
             elif n == 2:
               htmltext = "30519-04.htm"
-              st.giveItems(BRONKS_INGOT_ID,1)
+              st.giveItems(BRONKS_INGOT,1)
         else:
             htmltext = "<html><head><body>I have nothing to say you</body></html>"
     elif event == "30316_1" :
-        if st.getQuestItemsCount(BEAD_PARCEL_ID):
+        if st.getQuestItemsCount(BEAD_PARCEL):
           htmltext = "30316-02.htm"
-          st.takeItems(BEAD_PARCEL_ID,1)
-          st.giveItems(ROUTS_TP_SCROLL_ID,1)
+          st.takeItems(BEAD_PARCEL,1)
+          st.giveItems(ROUTS_TP_SCROLL,1)
           st.set("cond","10")
         else:
             htmltext = "<html><head><body>I have nothing to say you</body></html>"
     elif event == "30316_2" :
-        if st.getQuestItemsCount(BEAD_PARCEL_ID):
+        if st.getQuestItemsCount(BEAD_PARCEL):
           htmltext = "30316-03.htm"
-          st.takeItems(BEAD_PARCEL_ID,1)
-          st.giveItems(ROUTS_TP_SCROLL_ID,1)
+          st.takeItems(BEAD_PARCEL,1)
+          st.giveItems(ROUTS_TP_SCROLL,1)
           st.set("cond","10")
         else:
             htmltext = "<html><head><body>I have nothing to say you</body></html>"
     elif event == "30557_1" :
           htmltext = "30557-02.htm"
     elif event == "30557_2" :
-        if st.getQuestItemsCount(ROUTS_TP_SCROLL_ID):
+        if st.getQuestItemsCount(ROUTS_TP_SCROLL):
           htmltext = "30557-03.htm"
-          st.takeItems(ROUTS_TP_SCROLL_ID,1)
-          st.giveItems(SUCCUBUS_UNDIES_ID,1)
+          st.takeItems(ROUTS_TP_SCROLL,1)
+          st.giveItems(SUCCUBUS_UNDIES,1)
           st.set("cond","11")
           st.getPcSpawn().removeAllSpawn()
         else:
@@ -144,126 +144,127 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30524 and int(st.get("cond"))==0 :
+   cond = st.getInt("cond")
+   if npcId == 30524 and cond==0 :
      htmltext = "30524-01.htm"
-   elif npcId == 30524 and int(st.get("cond")) and st.getQuestItemsCount(PIPIS_LETTER_ID)>0 :
+   elif npcId == 30524 and cond and st.getQuestItemsCount(PIPIS_LETTER) :
           htmltext = "30524-06.htm"
-   elif npcId == 30524 and int(st.get("cond")) and st.getQuestItemsCount(PIPIS_LETTER_ID)==0 and id==STARTING :
+   elif npcId == 30524 and cond and st.getQuestItemsCount(PIPIS_LETTER)==0 and id==STARTING :
           htmltext = "30524-01.htm"
-   elif npcId == 30524 and int(st.get("cond")) and st.getQuestItemsCount(PIPIS_LETTER_ID)==0 :
+   elif npcId == 30524 and cond and st.getQuestItemsCount(PIPIS_LETTER)==0 :
           htmltext = "30524-07.htm"
-   elif npcId == 30519 and int(st.get("cond")) and st.getQuestItemsCount(PIPIS_LETTER_ID)>0 :
+   elif npcId == 30519 and cond and st.getQuestItemsCount(PIPIS_LETTER) :
           htmltext = "30519-01.htm"
-   elif npcId == 30519 and int(st.get("cond")) and ((st.getQuestItemsCount(CHALIS_AXE_ID)+st.getQuestItemsCount(BRONKS_INGOT_ID)+st.getQuestItemsCount(ZIMENFS_POTION_ID))==1) and ((int(st.get("id")) / 10)==0) :
+   elif npcId == 30519 and cond and ((st.getQuestItemsCount(CHALIS_AXE)+st.getQuestItemsCount(BRONKS_INGOT)+st.getQuestItemsCount(ZIMENFS_POTION))==1) and ((int(st.get("id")) / 10)==0) :
           htmltext = "30519-05.htm"
-   elif npcId == 30519 and int(st.get("cond")) and ((st.getQuestItemsCount(CHALIS_AXE_ID)+st.getQuestItemsCount(BRONKS_INGOT_ID)+st.getQuestItemsCount(ZIMENFS_POTION_ID))==1) and ((int(st.get("id")) / 10)>0) :
+   elif npcId == 30519 and cond and ((st.getQuestItemsCount(CHALIS_AXE)+st.getQuestItemsCount(BRONKS_INGOT)+st.getQuestItemsCount(ZIMENFS_POTION))==1) and ((int(st.get("id")) / 10)) :
           htmltext = "30519-08.htm"
-   elif npcId == 30519 and int(st.get("cond")) and ((st.getQuestItemsCount(CHALIS_PAY_ID)+st.getQuestItemsCount(BRONKS_PAY_ID)+st.getQuestItemsCount(ZIMENFS_PAY_ID))==1) and (int(st.get("id")) < 50) :
+   elif npcId == 30519 and cond and ((st.getQuestItemsCount(CHALIS_PAY)+st.getQuestItemsCount(BRONKS_PAY)+st.getQuestItemsCount(ZIMENFS_PAY))==1) and (int(st.get("id")) < 50) :
           htmltext = "30519-12.htm"
-   elif npcId == 30519 and int(st.get("cond")) and ((st.getQuestItemsCount(CHALIS_PAY_ID)+st.getQuestItemsCount(BRONKS_PAY_ID)+st.getQuestItemsCount(ZIMENFS_PAY_ID))==1) and (int(st.get("id")) >= 50) :
+   elif npcId == 30519 and cond and ((st.getQuestItemsCount(CHALIS_PAY)+st.getQuestItemsCount(BRONKS_PAY)+st.getQuestItemsCount(ZIMENFS_PAY))==1) and (int(st.get("id")) >= 50) :
           htmltext = "30519-15.htm"
-          st.giveItems(MIONS_LETTER_ID,1)
-          st.takeItems(CHALIS_PAY_ID,1)
-          st.takeItems(ZIMENFS_PAY_ID,1)
-          st.takeItems(BRONKS_PAY_ID,1)
+          st.giveItems(MIONS_LETTER,1)
+          st.takeItems(CHALIS_PAY,1)
+          st.takeItems(ZIMENFS_PAY,1)
+          st.takeItems(BRONKS_PAY,1)
           st.set("cond","4")
-   elif npcId == 30519 and int(st.get("cond")) and st.getQuestItemsCount(MIONS_LETTER_ID) :
+   elif npcId == 30519 and cond and st.getQuestItemsCount(MIONS_LETTER) :
           htmltext = "30519-13.htm"
-   elif npcId == 30519 and int(st.get("cond")) and (st.getQuestItemsCount(BEAR_PIC_ID) or st.getQuestItemsCount(TARANTULA_PIC_ID) or st.getQuestItemsCount(BEAD_PARCEL_ID) or st.getQuestItemsCount(ROUTS_TP_SCROLL_ID) or st.getQuestItemsCount(SUCCUBUS_UNDIES_ID)) :
+   elif npcId == 30519 and cond and (st.getQuestItemsCount(BEAR_PIC) or st.getQuestItemsCount(TARANTULA_PIC) or st.getQuestItemsCount(BEAD_PARCEL) or st.getQuestItemsCount(ROUTS_TP_SCROLL) or st.getQuestItemsCount(SUCCUBUS_UNDIES)) :
           htmltext = "30519-14.htm"
-   elif npcId == 30517 and int(st.get("cond")) and st.getQuestItemsCount(CHALIS_AXE_ID)==1 and int(st.get("id")) < 20 :
+   elif npcId == 30517 and cond and st.getQuestItemsCount(CHALIS_AXE)==1 and int(st.get("id")) < 20 :
           htmltext = "30517-01.htm"
-          st.takeItems(CHALIS_AXE_ID,1)
-          st.giveItems(CHALIS_PAY_ID,1)
+          st.takeItems(CHALIS_AXE,1)
+          st.giveItems(CHALIS_PAY,1)
           if int(st.get("id")) >= 50 :
             st.set("cond","3")
           st.set("id",str(int(st.get("id"))+10))
-   elif npcId == 30517 and int(st.get("cond")) and st.getQuestItemsCount(CHALIS_AXE_ID)==1 and int(st.get("id")) >= 20 :
+   elif npcId == 30517 and cond and st.getQuestItemsCount(CHALIS_AXE)==1 and int(st.get("id")) >= 20 :
           htmltext = "30517-02.htm"
-          st.takeItems(CHALIS_AXE_ID,1)
-          st.giveItems(CHALIS_PAY_ID,1)
+          st.takeItems(CHALIS_AXE,1)
+          st.giveItems(CHALIS_PAY,1)
           if int(st.get("id")) >= 50 :
             st.set("cond","3")
           st.set("id",str(int(st.get("id"))+10))
-   elif npcId == 30517 and int(st.get("cond")) and st.getQuestItemsCount(CHALIS_PAY_ID)==1 :
+   elif npcId == 30517 and cond and st.getQuestItemsCount(CHALIS_PAY)==1 :
           htmltext = "30517-03.htm"
-   elif npcId == 30525 and int(st.get("cond")) and st.getQuestItemsCount(BRONKS_INGOT_ID)==1 and int(st.get("id")) < 20 :
+   elif npcId == 30525 and cond and st.getQuestItemsCount(BRONKS_INGOT)==1 and int(st.get("id")) < 20 :
           htmltext = "30525-01.htm"
-          st.takeItems(BRONKS_INGOT_ID,1)
-          st.giveItems(BRONKS_PAY_ID,1)
+          st.takeItems(BRONKS_INGOT,1)
+          st.giveItems(BRONKS_PAY,1)
           if int(st.get("id")) >= 50 :
             st.set("cond","3")
           st.set("id",str(int(st.get("id"))+10))
-   elif npcId == 30525 and int(st.get("cond")) and st.getQuestItemsCount(BRONKS_INGOT_ID)==1 and int(st.get("id")) >= 20 :
+   elif npcId == 30525 and cond and st.getQuestItemsCount(BRONKS_INGOT)==1 and int(st.get("id")) >= 20 :
           htmltext = "30525-02.htm"
-          st.takeItems(BRONKS_INGOT_ID,1)
-          st.giveItems(BRONKS_PAY_ID,1)
+          st.takeItems(BRONKS_INGOT,1)
+          st.giveItems(BRONKS_PAY,1)
           if int(st.get("id")) >= 50 :
             st.set("cond","3")          
           st.set("id",str(int(st.get("id"))+10))
-   elif npcId == 30525 and int(st.get("cond")) and st.getQuestItemsCount(BRONKS_PAY_ID)==1 :
+   elif npcId == 30525 and cond and st.getQuestItemsCount(BRONKS_PAY)==1 :
           htmltext = "30525-03.htm"
-   elif npcId == 30538 and int(st.get("cond")) and st.getQuestItemsCount(ZIMENFS_POTION_ID)==1 and int(st.get("id")) < 20 :
+   elif npcId == 30538 and cond and st.getQuestItemsCount(ZIMENFS_POTION)==1 and int(st.get("id")) < 20 :
           htmltext = "30538-01.htm"
-          st.takeItems(ZIMENFS_POTION_ID,1)
-          st.giveItems(ZIMENFS_PAY_ID,1)
+          st.takeItems(ZIMENFS_POTION,1)
+          st.giveItems(ZIMENFS_PAY,1)
           if int(st.get("id")) >= 50 :
             st.set("cond","3")
           st.set("id",str(int(st.get("id"))+10))
-   elif npcId == 30538 and int(st.get("cond")) and st.getQuestItemsCount(ZIMENFS_POTION_ID)==1 and int(st.get("id")) >= 20 :
+   elif npcId == 30538 and cond and st.getQuestItemsCount(ZIMENFS_POTION)==1 and int(st.get("id")) >= 20 :
           htmltext = "30538-02.htm"
-          st.takeItems(ZIMENFS_POTION_ID,1)
-          st.giveItems(ZIMENFS_PAY_ID,1)
+          st.takeItems(ZIMENFS_POTION,1)
+          st.giveItems(ZIMENFS_PAY,1)
           if int(st.get("id")) >= 50 :
             st.set("cond","3")
           st.set("id",str(int(st.get("id"))+10))
-   elif npcId == 30538 and int(st.get("cond")) and st.getQuestItemsCount(ZIMENFS_PAY_ID)==1 :
+   elif npcId == 30538 and cond and st.getQuestItemsCount(ZIMENFS_PAY)==1 :
           htmltext = "30538-03.htm"
-   elif npcId == 30556 and int(st.get("cond")) and st.getQuestItemsCount(MIONS_LETTER_ID)==1 :
+   elif npcId == 30556 and cond and st.getQuestItemsCount(MIONS_LETTER)==1 :
           htmltext = "30556-01.htm"
-          st.takeItems(MIONS_LETTER_ID,1)
-          st.giveItems(BEAR_PIC_ID,1)
+          st.takeItems(MIONS_LETTER,1)
+          st.giveItems(BEAR_PIC,1)
           st.set("cond","5")
           st.set("id",str(0))
-   elif npcId == 30556 and int(st.get("cond")) and st.getQuestItemsCount(BEAR_PIC_ID)==1 and st.getQuestItemsCount(HONEY_JAR_ID)<5 :
+   elif npcId == 30556 and cond and st.getQuestItemsCount(BEAR_PIC)==1 and st.getQuestItemsCount(HONEY_JAR)<5 :
           htmltext = "30556-02.htm"
-   elif npcId == 30556 and int(st.get("cond")) and st.getQuestItemsCount(BEAR_PIC_ID)==1 and st.getQuestItemsCount(HONEY_JAR_ID)>=5 :
+   elif npcId == 30556 and cond and st.getQuestItemsCount(BEAR_PIC)==1 and st.getQuestItemsCount(HONEY_JAR)>=5 :
           htmltext = "30556-03.htm"
-          st.takeItems(HONEY_JAR_ID,st.getQuestItemsCount(HONEY_JAR_ID))
-          st.takeItems(BEAR_PIC_ID,1)
-          st.giveItems(TARANTULA_PIC_ID,1)
+          st.takeItems(HONEY_JAR,st.getQuestItemsCount(HONEY_JAR))
+          st.takeItems(BEAR_PIC,1)
+          st.giveItems(TARANTULA_PIC,1)
           st.set("cond","7")
-   elif npcId == 30556 and int(st.get("cond")) and st.getQuestItemsCount(TARANTULA_PIC_ID)==1 and st.getQuestItemsCount(BEAD_ID)<20 :
+   elif npcId == 30556 and cond and st.getQuestItemsCount(TARANTULA_PIC)==1 and st.getQuestItemsCount(BEAD)<20 :
           htmltext = "30556-04.htm"
-   elif npcId == 30556 and int(st.get("cond")) and st.getQuestItemsCount(TARANTULA_PIC_ID)==1 and st.getQuestItemsCount(BEAD_ID)>=20 :
+   elif npcId == 30556 and cond and st.getQuestItemsCount(TARANTULA_PIC)==1 and st.getQuestItemsCount(BEAD)>=20 :
           htmltext = "30556-05.htm"
-          st.takeItems(BEAD_ID,st.getQuestItemsCount(BEAD_ID))
-          st.takeItems(TARANTULA_PIC_ID,1)
-          st.giveItems(BEAD_PARCEL_ID,1)
+          st.takeItems(BEAD,st.getQuestItemsCount(BEAD))
+          st.takeItems(TARANTULA_PIC,1)
+          st.giveItems(BEAD_PARCEL,1)
           st.set("cond","9")
-   elif npcId == 30556 and int(st.get("cond")) and st.getQuestItemsCount(BEAD_PARCEL_ID)>0 :
+   elif npcId == 30556 and cond and st.getQuestItemsCount(BEAD_PARCEL) :
           htmltext = "30556-06.htm"
-   elif npcId == 30556 and int(st.get("cond")) and (st.getQuestItemsCount(ROUTS_TP_SCROLL_ID)>0 or st.getQuestItemsCount(SUCCUBUS_UNDIES_ID)>0) :
+   elif npcId == 30556 and cond and (st.getQuestItemsCount(ROUTS_TP_SCROLL) or st.getQuestItemsCount(SUCCUBUS_UNDIES)) :
           htmltext = "30556-07.htm"
-   elif npcId == 30316 and int(st.get("cond")) and st.getQuestItemsCount(BEAD_PARCEL_ID)==1 :
+   elif npcId == 30316 and cond and st.getQuestItemsCount(BEAD_PARCEL)==1 :
           htmltext = "30316-01.htm"
-   elif npcId == 30316 and int(st.get("cond")) and st.getQuestItemsCount(ROUTS_TP_SCROLL_ID)==1 :
+   elif npcId == 30316 and cond and st.getQuestItemsCount(ROUTS_TP_SCROLL)==1 :
           htmltext = "30316-04.htm"
-   elif npcId == 30316 and int(st.get("cond")) and st.getQuestItemsCount(SUCCUBUS_UNDIES_ID)==1 :
+   elif npcId == 30316 and cond and st.getQuestItemsCount(SUCCUBUS_UNDIES)==1 :
           htmltext = "30316-05.htm"
-          st.takeItems(SUCCUBUS_UNDIES_ID,1)
-          st.giveItems(RING_OF_RAVEN_ID,1)
+          st.takeItems(SUCCUBUS_UNDIES,1)
+          st.giveItems(RING_OF_RAVEN,1)
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
-   elif npcId == 30557 and int(st.get("cond")) and st.getQuestItemsCount(ROUTS_TP_SCROLL_ID)==1 :
+   elif npcId == 30557 and cond and st.getQuestItemsCount(ROUTS_TP_SCROLL)==1 :
           htmltext = "30557-01.htm"
    return htmltext
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
    if npcId == 20777 :
-        if int(st.get("cond")) and st.getQuestItemsCount(BEAR_PIC_ID) == 1 and st.getQuestItemsCount(HONEY_JAR_ID) < 5 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BEAR_PIC) == 1 and st.getQuestItemsCount(HONEY_JAR) < 5 :
           if int(st.get("id") > 20) :
             n = ((int(st.get("id"))-20)*10)
             if st.getRandom(100) <= n :
@@ -274,30 +275,30 @@ class Quest (JQuest) :
           else:
             st.set("id",str(int(st.get("id"))+1))
    elif npcId == 27058 :
-        if int(st.get("cond")) and st.getQuestItemsCount(BEAR_PIC_ID) == 1 and st.getQuestItemsCount(HONEY_JAR_ID) < 5 :
+        if int(st.get("cond")) and st.getQuestItemsCount(BEAR_PIC) == 1 and st.getQuestItemsCount(HONEY_JAR) < 5 :
           if npc.isSpoil() :
-            st.giveItems(HONEY_JAR_ID,1)
-            if st.getQuestItemsCount(HONEY_JAR_ID) == 5 :
+            st.giveItems(HONEY_JAR,1)
+            if st.getQuestItemsCount(HONEY_JAR) == 5 :
               st.playSound("ItemSound.quest_middle")
               st.set("cond","6")
             else:
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 20403 :
-        if int(st.get("cond")) and st.getQuestItemsCount(TARANTULA_PIC_ID) == 1 and st.getQuestItemsCount(BEAD_ID) < 20 :
+        if int(st.get("cond")) and st.getQuestItemsCount(TARANTULA_PIC) == 1 and st.getQuestItemsCount(BEAD) < 20 :
           if npc.isSpoil() :
             if st.getRandom(2) == 0 :
-              st.giveItems(BEAD_ID,1)
-              if st.getQuestItemsCount(BEAD_ID) == 20 :
+              st.giveItems(BEAD,1)
+              if st.getQuestItemsCount(BEAD) == 20 :
                 st.playSound("ItemSound.quest_middle")
                 st.set("cond","8")
               else:
                 st.playSound("ItemSound.quest_itemget")
    elif npcId == 20508 :
-        if int(st.get("cond")) and st.getQuestItemsCount(TARANTULA_PIC_ID) == 1 and st.getQuestItemsCount(BEAD_ID) < 20 :
+        if int(st.get("cond")) and st.getQuestItemsCount(TARANTULA_PIC) == 1 and st.getQuestItemsCount(BEAD) < 20 :
           if npc.isSpoil() :
             if st.getRandom(10) < 6 :
-              st.giveItems(BEAD_ID,1)
-              if st.getQuestItemsCount(BEAD_ID) == 20 :
+              st.giveItems(BEAD,1)
+              if st.getQuestItemsCount(BEAD) == 20 :
                 st.playSound("ItemSound.quest_middle")
                 st.set("cond","8")
               else:
@@ -331,21 +332,21 @@ STARTED.addKillId(27058)
 STARTED.addKillId(20508)
 STARTED.addKillId(20777)
 
-STARTED.addQuestDrop(30517,CHALIS_PAY_ID,1)
-STARTED.addQuestDrop(30538,ZIMENFS_PAY_ID,1)
-STARTED.addQuestDrop(30525,BRONKS_PAY_ID,1)
-STARTED.addQuestDrop(30524,PIPIS_LETTER_ID,1)
-STARTED.addQuestDrop(30519,CHALIS_AXE_ID,1)
-STARTED.addQuestDrop(30519,ZIMENFS_POTION_ID,1)
-STARTED.addQuestDrop(30519,BRONKS_INGOT_ID,1)
-STARTED.addQuestDrop(30519,MIONS_LETTER_ID,1)
-STARTED.addQuestDrop(5058,HONEY_JAR_ID,1)
-STARTED.addQuestDrop(30556,BEAR_PIC_ID,1)
-STARTED.addQuestDrop(30556,BEAD_PARCEL_ID,1)
-STARTED.addQuestDrop(20403,BEAD_ID,1)
-STARTED.addQuestDrop(30556,TARANTULA_PIC_ID,1)
-STARTED.addQuestDrop(30557,SUCCUBUS_UNDIES_ID,1)
-STARTED.addQuestDrop(30556,BEAD_PARCEL_ID,1)
-STARTED.addQuestDrop(30316,ROUTS_TP_SCROLL_ID,1)
+STARTED.addQuestDrop(30517,CHALIS_PAY,1)
+STARTED.addQuestDrop(30538,ZIMENFS_PAY,1)
+STARTED.addQuestDrop(30525,BRONKS_PAY,1)
+STARTED.addQuestDrop(30524,PIPIS_LETTER,1)
+STARTED.addQuestDrop(30519,CHALIS_AXE,1)
+STARTED.addQuestDrop(30519,ZIMENFS_POTION,1)
+STARTED.addQuestDrop(30519,BRONKS_INGOT,1)
+STARTED.addQuestDrop(30519,MIONS_LETTER,1)
+STARTED.addQuestDrop(27058,HONEY_JAR,1)
+STARTED.addQuestDrop(30556,BEAR_PIC,1)
+STARTED.addQuestDrop(30556,BEAD_PARCEL,1)
+STARTED.addQuestDrop(20403,BEAD,1)
+STARTED.addQuestDrop(30556,TARANTULA_PIC,1)
+STARTED.addQuestDrop(30557,SUCCUBUS_UNDIES,1)
+STARTED.addQuestDrop(30556,BEAD_PARCEL,1)
+STARTED.addQuestDrop(30316,ROUTS_TP_SCROLL,1)
 
 print "importing quests: 417: Path To Scavenger"
