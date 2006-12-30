@@ -9,37 +9,37 @@
 <tr><td width=90>
 <font color="a2a0a2">Name of clan hall</font>
 </td><td width=180>
-<font color="b09979"><?AGIT_NAME?></font>
+<font color="b09979">%AGIT_NAME%</font>
 </td></tr>
 
 <tr><td>
 <font color="a2a0a2">Clan that owns</font>
 </td><td>
-<font color="b09979"><?AGIT_OWNER_PLEDGE_NAME?></font>
+<font color="b09979">%AGIT_OWNER_PLEDGE_NAME%</font>
 </td></tr>
 
 <tr><td>
 <font color="a2a0a2">Leader of clan that owns</font>
 </td><td>
-<font color="b09979"><?OWNER_PLEDGE_MASTER?></font>
+<font color="b09979">%OWNER_PLEDGE_MASTER%</font>
 </td></tr>
 
 <tr><td>
 <font color="a2a0a2">Size of clan hall</font>
 </td><td>
-<font color="b09979"><?AGIT_SIZE?>rating</font> (grade)
+<font color="b09979">%AGIT_SIZE%rating</font> (grade)
 </td></tr>
 
 <tr><td>
 <font color="a2a0a2">Rental fee for clan hall</font>
 </td><td>
-<font color="b09979"><?AGIT_LEASE?></font>adena<font color="LEVEL">/week</font>
+<font color="b09979">%AGIT_LEASE%</font>adena<font color="LEVEL">/week</font>
 </td></tr>
 
 <tr><td>
 <font color="a2a0a2">Clan hall location</font>
 </td><td>
-<?AGIT_LOCATION?>
+%AGIT_LOCATION%
 </td></tr>
 
 
@@ -48,8 +48,8 @@
 <table width=270 border=0>
 <tr>
 <td width=130></td>
-<td width=70 align=center><button action="<?AGIT_LINK_BACK?>" value="????" width=70 height=21 back="L2UI.DefaultButton_click" fore="L2UI.DefaultButton"></td>
-<td width=70 align=center><button action="<?AGIT_LINK_SALE1?>" value="??????" width=70 height=21 back="L2UI.DefaultButton_click" fore="L2UI.DefaultButton"></td>
+<td width=70 align=center><button action="bypass -h npc_%objectId%_start" value="Back" width=70 height=21 back="L2UI.DefaultButton_click" fore="L2UI.DefaultButton"></td>
+<td width=70 align=center><button action="bypass -h npc_%objectId%_sale" value="Sell" width=70 height=21 back="L2UI.DefaultButton_click" fore="L2UI.DefaultButton"></td>
 </tr>
 </table>
 </body></html>
