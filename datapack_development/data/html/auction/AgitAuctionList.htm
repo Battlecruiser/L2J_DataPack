@@ -6,23 +6,35 @@
 <center>Items for Sale in All Regions</center>
 <img src="L2UI.SquareWhite" width=270 height=1>
 
-<table width=270 border=0 bgcolor="000000">
+<table width=270 border=0 bgcolor="#000000">
 <tr>
-<td width=50 align=center>&amp;$550;</td>
-<td width=100 align=center>&amp;$551;</td>
-<td width=50 align=center>&amp;$552;</td>
-<td width=70 align=center>&amp;$555;</td>
+<td width=50 align=center>Action</td>
+<td width=100 align=center>Action
+  </td>
+<td width=50 align=center>EndDate</td>
+<td width=70 align=center>Min Bid</td>
 </tr>
 </table>
-
-<?AGIT_LIST?>
+<table width=270 border=0>
+<tr>
+<td width=50 align=center></td>
+<td width=100 align=center></td>
+<td width=50 align=center></td>
+<td width=70 align=center></td>
+</tr>
+%itemsField%
+</table>
 
 <img src="L2UI.SquareWhite" width=270 height=1> <img src="L2UI.SquareBlank" width=270 height=5>
 <table width=270 border=0>
 <tr>
 <td width=210></td>
-<td width=70 align=center><button action="<?AGIT_LINK_BACK?>" value="??" width=70 height=21 back="L2UI.DefaultButton_click" fore="L2UI.DefaultButton"></td>
+<td width=70 align=center><button action="bypass -h npc_%objectId%_start" value="Back" width=70 height=21 back="L2UI.DefaultButton_click" fore="L2UI.DefaultButton"></td>
 </tr>
 </table>
+
+<a action="bypass -h npc_%objectId%_bidding">All items for sale.</a><br>
+
+
 </body>
 </html>

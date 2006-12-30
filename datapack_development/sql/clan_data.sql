@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS clan_data (
   crest_id INT,
   crest_large_id INT,
   ally_crest_id INT,
+  auction_bid_at INT NOT NULL default '0',
   PRIMARY KEY  (clan_id),
   KEY `leader_id` (`leader_id`),
   KEY `ally_id` (`ally_id`)

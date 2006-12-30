@@ -28,6 +28,7 @@ DROP TABLE IF EXISTS clan_skills;
 DROP TABLE IF EXISTS clan_subpledges;
 DROP TABLE IF EXISTS clan_wars;
 DROP TABLE IF EXISTS clanhall;
+DROP TABLE IF EXISTS clanhall_functions;
 DROP TABLE IF EXISTS class_list;
 DROP TABLE IF EXISTS cursedWeapons;
 DROP TABLE IF EXISTS droplist;

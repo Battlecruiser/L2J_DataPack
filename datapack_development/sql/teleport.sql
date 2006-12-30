@@ -380,3 +380,74 @@ INSERT INTO teleport VALUES
 ('Schuttgart -> Labyrinth of winter',1118,122162,-118893,-2603,3500,0),
 ('Schuttgart -> Graveyard of disgrace',1119,56095,-118952,-3290,1900,0),
 ('Schuttgart -> Farbel Ruins',1120,88288,-125692,-3816,2100,0);
+
+INSERT INTO teleport VALUES
+('Clan Hall -> Execution Grounds',502,51055,141959,-2869,500,0),
+-- ('Clan Hall -> Fortress of Resistance',503,51055,141959,-2869,500,0), -- dunno coords !
+('Clan Hall -> Cruma Marshlands',504,5106,126916,-3664,500,0),
+('Clan Hall -> Cruma Tower Entrance',505,17192,114178,-3439,500,0),
+ -- ('Clan Hall -> Mandragora Farm',506,17192,114178,-3439,500,0), -- dunno coords !
+('Clan Hall -> Town of Dion',507,15670,142983,-2705,500,0),
+('Clan Hall -> Floran Village',508,17838,170274,-3508,500,0),
+ -- 509
+('Clan Hall -> Tanor Canyon',510,51147,165543,-2829,500,0),
+('Clan Hall -> Bee Hive',511,20505,189036,-3344,500,0),
+ -- ('Clan Hall -> Dion Hills',512,20505,189036,-3344,500,0), -- dunno coords !
+ -- ('Clan Hall -> Floran Agricultural Area',513,20505,189036,-3344,500,0), -- dunno coords !
+ -- ('Clan Hall -> Plains of Dion',514,20505,189036,-3344,500,0), -- dunno coords !
+ -- 515
+ -- 516
+('Clan Hall -> Hardin\'s Academy',517,105918,109759,-3207,500,0),
+('Clan Hall -> Dragon Valley',518,122824,110836,-3720,500,0),
+ -- 519
+ -- 520
+('Clan Hall -> Death Pass',521,70000,126636,-3804,500,0),
+('Clan Hall -> Pirate Tunnel',522,41298,200350,-4583,500,0),
+ -- 523
+('Clan Hall -> Giran Harbor',524,47942,186764,-3485,500,0),
+('Clan Hall -> Giran Castle Town',525,83400,147943,-3404,500,0),
+('Clan Hall -> Giran Arena',526,73890,142656,-3778,500,0),
+ -- 527
+('Clan Hall -> Breka\'s Stronghold',528,79798,130624,-3677,500,0),
+ -- ('Clan Hall -> Gorgon Flower Garden',529,79798,130624,-3677,500,0),  -- dunno coords !
+ -- -----------------
+('Clan Hall -> Ivory Tower',581,85348,16142,-3699,500,0),
+('Clan Hall -> Town of Oren',582,85348,16142,-3699,500,0),
+ -- 583
+('Clan Hall -> Plains of Lizardmen',584,87252,85514,-3056,500,0),
+('Clan Hall -> Skyshadow Meadow',585,82764,61145,-3502,500,0),
+ -- ('Clan Hall -> Shilen\'s Garden',586,82764,61145,-3502,500,0),  -- dunno coords !
+ -- ('Clan Hall -> Black Rock Hill',587,82764,61145,-3502,500,0),  -- dunno coords !
+('Clan Hall -> Spider Nest',588,-56532,78321,-2960,500,0),
+ -- ('Clan Hall -> Timak Outpost',589,-56532,78321,-2960,500,0), -- dunno coords !
+ -- ('Clan Hall -> Ivory Tower Crater',590,-56532,78321,-2960,500,0), -- dunno coords !
+ -- ('Clan Hall -> Forest of Evil',591,-56532,78321,-2960,500,0), -- dunno coords !
+('Clan Hall -> Outlaw Forest',592,85995,-2433,-3528,500,0),
+ -- ('Clan Hall -> Misty Mountains',593,85995,-2433,-3528,500,0), -- dunno coords !
+ -- ('Clan Hall -> Starlight Waterfall',594,85995,-2433,-3528,500,0), -- dunno coords !
+ -- ('Clan Hall -> Undine Waterfall',595,85995,-2433,-3528,500,0), -- dunno coords !
+ -- ('Clan Hall -> The Gods\' Falls',596,85995,-2433,-3528,500,0),  -- dunno coords !
+ -- 597
+('Clan Hall -> Tower of Insolence',598,121685,15749,-3852,500,0),
+('Clan Hall -> The Blazing Swamp',599,146828,-12859,-4455,500,0),
+ -- 600
+('Clan Hall -> The Forbidden Gateway',601,185395,20359,-3270,500,0),
+('Clan Hall -> The Giants Cave',602,174528,52683,-4369,500,0),
+('Clan Hall -> Northern Pathway of Enchanted Valley',603,104426,33746,-3800,500,0), -- need also southern?
+('Clan Hall -> The Cemetery',604,172136,20325,-3326,500,0),
+('Clan Hall -> The Forest of Mirrors',605,150477,85907,-2753,500,0),
+('Clan Hall -> Anghel Waterfall',606,165584,85997,-2338,500,0),
+('Clan Hall -> Aden Castle Town',607,146331,25762,-2018,500,0),
+('Clan Hall -> Hunters Village',608,117110,76883,-2695,500,0),
+('Clan Hall -> Border Outpost(Aden Side)',609,109699,-7908,-2902,500,0),
+('Clan Hall -> Coliseum',610,150086,46733,-3412,500,0),
+-- ('Clan Hall -> Narsell Lake',611,150086,46733,-3412,500,0), -- dunno coords !
+ -- 612 
+('Clan Hall -> Ancient Battleground',613,127739,-6998,-3869,500,0),
+('Clan Hall -> Forsaken Plains',614,167285,37109,-4008,500,0),
+('Clan Hall -> Silent Valley',615,177318,48447,-3835,500,0),
+-- ('Clan Hall -> Hunters Valley',616,177318,48447,-3835,500,0), -- dunno coords !
+-- ('Clan Hall -> Plains of Glory',617,177318,48447,-3835,500,0), -- dunno coords !
+('Clan Hall -> Fields of Massacre',618,179718,48447,-7843,500,0),
+-- ('Clan Hall -> War-Torn Plains',619,179718,48447,-7843,500,0), --- dunno coords !
+('Clan Hall -> Border Outpost(Unknown Side)',620,114172,-18034,-1875,500,0);
