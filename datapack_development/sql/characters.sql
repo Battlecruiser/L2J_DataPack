@@ -76,6 +76,7 @@ CREATE TABLE IF NOT EXISTS characters (
   lvl_joined_academy int(1) NOT NULL DEFAULT 0,
   apprentice int(1) NOT NULL DEFAULT 0,
   sponsor int(1) NOT NULL DEFAULT 0,
+  varka_ketra_ally int(1) NOT NULL DEFAULT 0,
   PRIMARY KEY  (obj_Id),
   KEY `clanid` (`clanid`)
 ) ;
