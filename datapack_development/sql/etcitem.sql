@@ -433,7 +433,7 @@ INSERT INTO `etcitem` (`item_id`,`name`,`crystallizable`,`item_type`,`weight`,`c
  (1228,'Peridot','false','quest',0,'stackable','steel','none',100,0,0,'false','peridot','none'),
  (1229,'Fertility Peridot','false','quest',0,'stackable','steel','none',100,0,0,'false','fertility_peridot','none'),
  (1230,'Eternity Diamond','false','quest',0,'stackable','steel','none',100,0,0,'false','eternity_diamond','none'),
- (1231,'Crystal Medallion','false','none',0,'stackable','steel','none',100,0,0,'false','crystal_medallion','none'),
+ (1231,'Crystal Medallion','false','quest',0,'stackable','steel','none',100,0,0,'false','crystal_medallion','none'),
  (1232,'Swindler''s Money','false','quest',0,'stackable','steel','none',100,0,0,'false','money_of_swindler','none'),
  (1233,'Allana''s Diary','false','quest',0,'stackable','steel','none',100,0,0,'false','dairy_of_allana','none'),
  (1234,'Lizard Captain Order','false','quest',0,'stackable','steel','none',100,0,0,'false','lizard_captain_order','none'),
