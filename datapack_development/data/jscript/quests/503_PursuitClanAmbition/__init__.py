@@ -257,7 +257,7 @@ class Quest (JQuest) :
 			st.getPcSpawn().addSpawn(27178,103848,116910,-3020,120000)
 # Events Kusto
 		elif event == "30512-03.htm":
-			st.takeItems(Brooch,1)
+			st.takeItems(Brooch,-1)
 			st.giveItems(Bl_Anvil_Coin,1)
 			st.set("Kurtz","3")
 # Events Balthazar
