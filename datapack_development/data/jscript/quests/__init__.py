@@ -139,6 +139,7 @@ __all__ = [
 '338_AlligatorHunter',
 '341_HuntingForWildBeasts',
 '343_UnderTheShadowOfTheIvoryTower',
+'344_1000YearsEndofLamentation',
 '345_MethodToRaiseTheDead',
 '347_GoGetTheCalculator',
 '348_ArrogantSearch',
