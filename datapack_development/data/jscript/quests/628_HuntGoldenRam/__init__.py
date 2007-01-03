@@ -82,7 +82,7 @@ class Quest (JQuest) :
            else :
               st.playSound("ItemSound.quest_middle")
    elif cond==2 and npcId in range(21513,21518):
-      if st.getRandom(100) < CHANCE((npcId-21512)*3) :
+      if st.getRandom(100) < CHANCE+((npcId-21512)*3) :
            st.giveItems(CHITIN2,1)
            if st.getQuestItemsCount(CHITIN2) < 100 :
               st.playSound("ItemSound.quest_itemget")
