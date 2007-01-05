@@ -92,7 +92,7 @@ class Quest (JQuest) :
         # Finally, all is done...time to learn how to use the Elixir...
         elif cond==8 :
             htmltext = "30166-10.htm"     # here's what you do...
-            #st.takeItems(MIMIRS_ELIXIR,-1)  #disabled for compatibility with the way java expects things at Grand Master.
+            st.takeItems(MIMIRS_ELIXIR,-1)  #remove this line for compatibility with L2JServer revisions prior to 376
             st.giveItems(SCROLL_ENCHANT_WEAPON_A,1)
             st.setState(COMPLETED)
             st.unset("cond")
