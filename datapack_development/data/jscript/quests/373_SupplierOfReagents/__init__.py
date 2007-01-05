@@ -2,6 +2,7 @@
 # by DrLecter
 print "importing quests:",
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -102,13 +103,13 @@ default   = "<html><head><body>I have nothing to say to you.</body></html>"
 WESLEY,URN=30166,31149
 #Mobs & Drop
 DROPLIST = {
-20813: [REAGENT_POUCH3,SULFUR],
-20822: [REAGENT_POUCH2,BLOOD_ROOT,MOONSTONE_SHARD,QUICKSILVER],
-21061:[DEMONS_BLOOD,VOLCANIC_ASH],
-20828: [REAGENT_POUCH2,QUICKSILVER],
-21066:[REAGENT_BOX,BLOOD_ROOT],
-21111:[WYRMS_BLOOD,REAGENT_POUCH3],
-21115:[REAGENT_POUCH1,QUICKSILVER,VOLCANIC_ASH]
+20813: [(QUICKSILVER,60),(ROTTEN_BONE,100)],
+20822: [(VOLCANIC_ASH,40),(REAGENT_POUCH1,100)],
+21061: [(DEMONS_BLOOD,70),(MOONSTONE_SHARD,90)],
+20828: [(REAGENT_POUCH2,70),(QUICKSILVER,30)],
+21066: [(REAGENT_BOX,40)],
+21111: [(WYRMS_BLOOD,50)],
+21115: [(REAGENT_POUCH3,50)]
 }
 #temperature:[success_%,reagent_qty_obtained]
 TEMPERATURE={1:[100,1],2:[45,2],3:[15,3]}
@@ -317,9 +318,13 @@ class Quest (JQuest) :
  def onKill (self,npc,st) :
      npcId = npc.getNpcId()
      drop = st.getRandom(100)
-     if drop < DROP_RATE :
-        st.giveItems(DROPLIST[npcId][st.getRandom(len(DROPLIST[npcId]))],1)
-        st.playSound("ItemSound.quest_itemget")
+     for entry in DROPLIST[npcId] :
+        item,chance=entry
+        if drop < chance :
+           qty=1+st.getRandom(int(Config.RATE_QUESTS_REWARD))
+           st.giveItems(item,qty)
+           st.playSound("ItemSound.quest_itemget")
+           break
      return
 
 # Quest class and state definition
