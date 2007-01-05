@@ -1,14 +1,13 @@
 # Legacy of Insolence version 0.1 
 # by DrLecter
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 print "importing quests:",
 
 # 1- Variables: Maybe you would like to change something here:
-# Chances for a mob to drop a papyrus from its droplist in %
-DROP_RATE=10
 # If a non-zero value is set here, recipes will be 100% instead of 60%
 # (default setting matches retail rewards)
 ALT_RP_100=0
@@ -47,18 +46,15 @@ HOLLY:    ("Imp","DarkCryst")
 }
 #Mobs & Drop
 CORRUPT_SAGE,ERIN_EDIUNCE,HALLATE_INSP,PLATINUM_OVL,PLATINUM_PRE,MESSENGER_A1,MESSENGER_A2=20817,20821,20825,20829,21069,21062,21063
-# This drop distribution is basically what i found here and there
-# reading forums. Non-linear distribution makes some pages harder
-# to get which is fine with me, but feel free to populate lists as
-# you see fit
+# This drop distribution should match retail.
 MOB = {
-CORRUPT_SAGE:[RE_PAP],
-ERIN_EDIUNCE:[RE_PAP],
-HALLATE_INSP:[RE_PAP],
-PLATINUM_OVL:[BL_PAP],
-PLATINUM_PRE:[BK_PAP,WH_PAP],
-MESSENGER_A1:[BK_PAP,WH_PAP],
-MESSENGER_A2:[BK_PAP,WH_PAP]
+CORRUPT_SAGE:[RE_PAP,35],
+ERIN_EDIUNCE:[RE_PAP,40],
+HALLATE_INSP:[RE_PAP,45],
+PLATINUM_OVL:[BL_PAP,40],
+PLATINUM_PRE:[BK_PAP,25],
+MESSENGER_A1:[WH_PAP,25],
+MESSENGER_A2:[WH_PAP,25]
 }
 #Messages
 default = "<html><head><body>I have nothing to say to you.</body></html>"
@@ -94,7 +90,7 @@ def give_reward(st,reward) :
           l = st.getRandom(len(prize))
           st.giveItems(prize[l],1)
           del prize[l]
-    else :                                # ordinary reward: 1 recipe     
+    else :                                # ordinary reward: 1 recipe
        st.giveItems(prize[st.getRandom(3)],1)
 
 
@@ -147,11 +143,13 @@ class Quest (JQuest) :
 
  def onKill (self,npc,st) :
      npcId = npc.getNpcId()
-     drop = st.getRandom(100)
-     if drop < DROP_RATE :
-        st.giveItems(MOB[npcId][st.getRandom(len(MOB[npcId]))],1)
+     item,chance=MOB[npcId]
+     chance*=Config.RATE_DROP_QUEST
+     bonus = int(divmod(chance,101)[0])
+     if st.getRandom(100) < chance :
+        st.giveItems(item,1+bonus)
         st.playSound("ItemSound.quest_itemget")
-     return  
+     return
 
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION,True)
