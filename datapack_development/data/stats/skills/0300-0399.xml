@@ -448,7 +448,7 @@
       <add order="0x10" stat="rCrit" val="45">
         <using kind="Dagger" skill="0321"/>
       </add>
-        <mul order="0x40" stat="runSpd" val="1.40"/> 
+        <mul order="0x40" stat="runSpd" val="1.40"/>
     </effect>
   </for>
 </skill>
@@ -569,7 +569,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <add stat="bleedRes" order="0x40" val="20"/> 
+    <add stat="bleedRes" order="0x40" val="20"/>
     <add stat="poisonRes" order="0x40" val="20"/>
   </for>
 </skill>
@@ -618,7 +618,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="78">
-      <mul order="0x30" stat="mCritRate" val="11"/> 
+      <mul order="0x30" stat="mCritRate" val="11"/>
     </effect>
   </for>
 </skill>
@@ -632,8 +632,8 @@
   <set name="effectRange" val="-1"/>
   <for> 
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="35"> 
-      <add order="0x40" stat="paralyzeRes" val="30"/> 
-      <add order="0x40" stat="stunRes" val="30"/> 
+      <add order="0x40" stat="paralyzeRes" val="30"/>
+      <add order="0x40" stat="stunRes" val="30"/>
     </effect> 
   </for>
 </skill>
@@ -727,9 +727,9 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="reuseDelay" val="1200000"/>
-  <set name="skillTime" val="1800"/> 
-  <set name="hitTime" val="1800"/> 
-  <set name="isMagic" val="true"/> 
+  <set name="skillTime" val="1800"/>
+  <set name="hitTime" val="1800"/>
+  <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
       <mul order="0x30" stat="maxHp" val="1.5"/>
@@ -748,8 +748,8 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="reuseDelay" val="1200000"/>
-  <set name="skillTime" val="1800"/> 
-  <set name="hitTime" val="1800"/> 
+  <set name="skillTime" val="1800"/>
+  <set name="hitTime" val="1800"/>
   <set name="isMagic" val="true"/>
   <cond>
     <player hp="75"/>
@@ -774,8 +774,8 @@
   <set name="overHit" val="true"/>
   <set name="lethal1" val="5"/>
   <set name="lethal2" val="2"/>
-  <set name="skillTime" val="4000"/> 
-  <set name="hitTime" val="4000"/> 
+  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <for>
   </for>
 </skill>
@@ -793,8 +793,8 @@
   <set name="overHit" val="true"/>
   <set name="lethal1" val="5"/>
   <set name="lethal2" val="2"/>
-  <set name="skillTime" val="1800"/> 
-  <set name="hitTime" val="1800"/> 
+  <set name="skillTime" val="1800"/>
+  <set name="hitTime" val="1800"/>
   <for>
   </for>
 </skill>
@@ -805,7 +805,7 @@
   <set name="power" val="7.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="1000"/>
-  <set name="skillTime" val="1000"/> 
+  <set name="skillTime" val="1000"/>
   <set name="skillType" val="CHARGE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -822,7 +822,7 @@
   <set name="power" val="7.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="1000"/>
-  <set name="skillTime" val="1000"/> 
+  <set name="skillTime" val="1000"/>
   <set name="skillType" val="CHARGE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -846,8 +846,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="reuseDelay" val="30000"/>
-  <set name="skillTime" val="1800"/> 
-  <set name="hitTime" val="1800"/> 
+  <set name="skillTime" val="1800"/>
+  <set name="hitTime" val="1800"/>
   <for>
   </for>
 </skill>
@@ -861,8 +861,8 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="reuseDelay" val="30000"/>
-  <set name="skillTime" val="1800"/> 
-  <set name="hitTime" val="1800"/> 
+  <set name="skillTime" val="1800"/>
+  <set name="hitTime" val="1800"/>
   <for>
   </for>
 </skill>
@@ -900,8 +900,8 @@
   <set name="effectRange" val="-1"/>
   <set name="reuseDelay" val="600000"/>
   <set name="buffDuration" val="300000"/>
-  <set name="skillTime" val="2000"/> 
-  <set name="hitTime" val="2000"/> 
+  <set name="skillTime" val="2000"/>
+  <set name="hitTime" val="2000"/>
   <for>
     <effect name="Buff" time="300" count="1" val="0">
       <mul order="0x30" stat="reflectDam" val="1.4"/>
@@ -919,8 +919,8 @@
   <set name="effectRange" val="-1"/>
   <set name="reuseDelay" val="600000"/>
   <set name="buffDuration" val="300000"/>
-  <set name="skillTime" val="2000"/> 
-  <set name="hitTime" val="2000"/> 
+  <set name="skillTime" val="2000"/>
+  <set name="hitTime" val="2000"/>
   <for>
     <effect name="Buff" time="300" count="1" val="0">
       <mul order="0x30" stat="reflectDam" val="1.4"/>
@@ -938,14 +938,16 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="reuseDelay" val="600000"/>
-  <set name="skillTime" val="2000"/> 
-  <set name="hitTime" val="2000"/> 
+  <set name="buffDuration" val="3000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="hitTime" val="1000"/>
   <for>
-    <effect count="1" name="Stun" time="120" val="0" stackOrder="1" stackType="Stun"/>
+    <effect count="1" name="PsychicalMute" time="8" val="0"/>
+      <using kind="Shield"/>
+    <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </for>
 </skill>
 <skill id="353" levels="1" name="Shield Slam">
-  <!-- MISSING CANCEL TARGET -->
   <set name="magicLvl" val="77"/>
   <set name="weaponsAllowed" val="2"/>
   <set name="power" val="0.0"/>
@@ -956,99 +958,102 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="reuseDelay" val="10000"/>
-  <set name="skillTime" val="1000"/> 
-  <set name="hitTime" val="1000"/> 
+  <set name="buffDuration" val="3000"/>
+  <set name="skillTime" val="2000"/>
+  <set name="hitTime" val="2000"/>
   <for>
-    <effect count="1" name="Stun" time="120" val="0" stackOrder="1" stackType="Stun"/>
+    <effect count="1" name="PsychicalMute" time="8" val="0"/>
+      <using kind="Shield"/>
+    <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </for>
 </skill>
 <skill id="354" levels="1" name="Hamstring Shot">
   <set name="magicLvl" val="77"/>
-  <set name="weaponsAllowed" val="32"/> 
-  <set name="mpConsume" val="86"/> 
-  <set name="power" val="1973"/> 
-  <set name="target" val="TARGET_ONE"/> 
-  <set name="hitTime" val="4000"/> 
-  <set name="overHit" val="true"/> 
-  <set name="reuseDelay" val="60000"/> 
-  <set name="skillTime" val="4000"/> 
-  <set name="skillType" val="PDAM"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="weaponsAllowed" val="32"/>
+  <set name="mpConsume" val="86"/>
+  <set name="power" val="1973"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="overHit" val="true"/>
+  <set name="reuseDelay" val="60000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
-  <set name="effectRange" val="1400"/> 
+  <set name="effectRange" val="1400"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="40"/>
   <set name="lvlDepend" val="1"/>
-  <for> 
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.5" stackType="RunSpeedDown"> 
-      <mul order="0x30" stat="runSpd" val="0.5"/> 
-    </effect> 
+  <for>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.5" stackType="RunSpeedDown">
+      <mul order="0x30" stat="runSpd" val="0.5"/>
+    </effect>
   </for>
 </skill>
 <skill id="355" levels="1" name="Focus Death">
   <!-- WRONG -->
-  <set name="mpConsume" val="36"/> 
-  <set name="power" val="0.0"/> 
+  <set name="mpConsume" val="36"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="reuseDelay" val="120000"/>
-  <set name="skillTime" val="2000"/> 
+  <set name="skillTime" val="2000"/>
   <set name="hitTime" val="2000"/>
   <set name="buffDuration" val="120000"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0"> 
-      <mul order="0x30" stat="rCrit" val="0.7"/> 
+      <mul order="0x30" stat="rCrit" val="0.7"/>
     </effect> 
   </for>
 </skill>
 <skill id="356" levels="1" name="Focus Chance">
   <!-- WRONG -->
-  <set name="mpConsume" val="36"/> 
-  <set name="power" val="0.0"/> 
+  <set name="mpConsume" val="36"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="reuseDelay" val="120000"/>
-  <set name="skillTime" val="2000"/> 
-  <set name="hitTime" val="2000"/> 
+  <set name="skillTime" val="2000"/>
+  <set name="hitTime" val="2000"/>
   <set name="buffDuration" val="120000"/>
   <for>
   </for>
 </skill>
 <skill id="357" levels="1" name="Focus Power">
   <!-- WRONG -->
-  <set name="mpConsume" val="36"/> 
-  <set name="power" val="0.0"/> 
+  <set name="mpConsume" val="36"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="reuseDelay" val="120000"/>
-  <set name="skillTime" val="2000"/> 
-  <set name="hitTime" val="2000"/> 
+  <set name="skillTime" val="2000"/>
+  <set name="hitTime" val="2000"/>
   <set name="buffDuration" val="120000"/>
   <for>
   </for>
 </skill>
 <skill id="358" levels="1" name="Bluff">
   <!-- WRONG -->
-  <set name="weaponsAllowed" val="16"/> 
-  <set name="mpConsume" val="35"/> 
-  <set name="power" val="40"/> 
+  <set name="weaponsAllowed" val="16"/>
+  <set name="mpConsume" val="35"/>
+  <set name="power" val="40"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="STUN"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="reuseDelay" val="30000"/>
-  <set name="skillTime" val="1000"/> 
-  <set name="hitTime" val="1000"/> 
+  <set name="skillTime" val="1000"/>
+  <set name="hitTime" val="1000"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0">
       <sub order="0x40" stat="aggression" val="100000"/>
@@ -1095,7 +1100,7 @@
   </for>
 </skill>
 <skill id="361" levels="1" name="Shock Blast">
-  <set name="weaponsAllowed" val="64"/> 
+  <set name="weaponsAllowed" val="64"/>
   <set name="magicLvl" val="77"/>
   <set name="mpConsume" val="53"/>
   <set name="hpConsume" val="507"/>
@@ -1107,9 +1112,9 @@
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
   <set name="reuseDelay" val="30000"/>
-  <set name="skillTime" val="4000"/> 
-  <set name="hitTime" val="4000"/> 
-  <set name="overHit" val="true"/> 
+  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
+  <set name="overHit" val="true"/>
   <set name="effectType" val="STUN"/>
   <set name="effectPower" val="40"/>
   <set name="lvlDepend" val="1"/>
@@ -1118,7 +1123,7 @@
    	  <mul order="0x30" stat="pDef" val="0.7"/>
    	  <mul order="0x30" stat="mDef" val="0.7"/>
     </effect>
-    <effect count="1" name="RemoveTarget" time="1" val="0"/> 
+    <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </for>
 </skill>
 <skill id="362" levels="1" name="Armor Crush">
@@ -1131,8 +1136,8 @@
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="15000"/>
-  <set name="skillTime" val="2000"/> 
-  <set name="hitTime" val="2000"/> 
+  <set name="skillTime" val="2000"/>
+  <set name="hitTime" val="2000"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="effectType" val="STUN"/>
@@ -1190,24 +1195,24 @@
   </for>
 </skill> 
 <skill id="365" levels="1" name="Dance of Siren">
-  <set name="weaponsAllowed" val="512"/> 
+  <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
-  <set name="nextDanceCost" val="30"/> 
-  <set name="power" val="0.0"/> 
-  <set name="target" val="TARGET_PARTY"/> 
-  <set name="skillRadius" val="1000"/> 
-  <set name="hitTime" val="2500"/> 
-  <set name="reuseDelay" val="10000"/> 
-  <set name="skillTime" val="2500"/> 
+  <set name="nextDanceCost" val="30"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="1000"/>
+  <set name="hitTime" val="2500"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="skillTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
-  <set name="isDance" val="true"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="buffDuration" val="120000"/> 
+  <set name="isDance" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/> 
-  <for> 
-    <effect name="Buff" time="120" count="1" val="0"> 
-      <mul order="0x30" stat="mCritRate" val="3"/> 
+  <set name="effectRange" val="-1"/>
+  <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <mul order="0x30" stat="mCritRate" val="3"/>
     </effect> 
   </for>
 </skill>
