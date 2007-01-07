@@ -424,7 +424,6 @@
   </for>
 </skill>
 <skill id="321" levels="10" name="Blinding Blow">
-  <!-- MISSING TWO TARGET SKILL ONE AND SELF -->  
   <table name="#mpConsume"> 67 68 69 70 71 72 73 74 75 76 </table>
   <table name="#magicLvl"> 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#power"> 2751.0 2850.0 2950.0 3050.0 3151.0 3252.0 3353.0 3453.0 3553.0 3653.0 </table>
@@ -445,14 +444,12 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
-  <!--
-    <effect count="1" name="Buff" time="10" val="0" stackOrder="40" stackType="SpeedUpS">
+    <effect self="1" count="1" name="Buff" time="10" val="0" stackOrder="40" stackType="SpeedUpS"> 
       <add order="0x10" stat="rCrit" val="45">
         <using kind="Dagger" skill="0321"/>
       </add>
-   	  <add order="0x40" stat="runSpd" val="40"/>
+        <mul order="0x40" stat="runSpd" val="1.40"/> 
     </effect>
-  -->
   </for>
 </skill>
 <skill id="322" levels="6" name="Shield Fortress">
@@ -1273,7 +1270,6 @@
   </for>
 </skill>
 <skill id="369" levels="1" name="Evade Shot">
-  <!-- MISSING TWO TARGET SKILL ONE AND SELF -->
   <set name="weaponsAllowed" val="32"/>
   <set name="mpConsume" val="122"/>
   <set name="power" val="2020"/>
@@ -1287,11 +1283,9 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <for> 
-  <!--
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="6" stackType="rEvasSpec"> 
+    <effect self="1" count="1" name="Buff" time="30" val="0" stackOrder="6" stackType="rEvasSpec">  
       <add order="0x40" stat="rEvas" val="6"/>
     </effect> 
-  -->
   </for>
 </skill>
 <!-- CLAN SKILLS - temp addition until proper implementation is done - see http://l2p.bravehost.com/passives.html for partial data -->
