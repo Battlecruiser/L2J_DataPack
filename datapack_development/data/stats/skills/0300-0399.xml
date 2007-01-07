@@ -1095,7 +1095,6 @@
   </for>
 </skill>
 <skill id="361" levels="1" name="Shock Blast">
-  <!-- MISSING CANCEL TARGET -->
   <set name="weaponsAllowed" val="64"/> 
   <set name="magicLvl" val="77"/>
   <set name="mpConsume" val="53"/>
@@ -1119,6 +1118,7 @@
    	  <mul order="0x30" stat="pDef" val="0.7"/>
    	  <mul order="0x30" stat="mDef" val="0.7"/>
     </effect>
+    <effect count="1" name="RemoveTarget" time="1" val="0"/> 
   </for>
 </skill>
 <skill id="362" levels="1" name="Armor Crush">
