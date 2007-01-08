@@ -216,6 +216,7 @@ INSERT INTO `skill_spellbooks` VALUES
 (1271,4912),
 (1272,4913),
 (1273,4914),
+(299,4915), -- Spellbook - Blueprint: Summon Wild Hog Cannon
 (1274,4916),
 (1275,4917),
 (1276,4918),
