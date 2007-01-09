@@ -15,13 +15,13 @@
   <set name="skillTime" val="4000"/>
   <set name="target" val="TARGET_AREA_UNDEAD"/>
   <set name="skillRadius" val="200"/>
-  <set name="skillType" val="CONFUSION"/>
+  <set name="skillType" val="FEAR"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="5" name="Confusion" time="6" val="0"/>
+    <effect count="5" name="Fear" time="6" val="0"/>
   </for>
 </skill>
 <skill id="1401" levels="10" name="Major Heal">
