@@ -1,4 +1,10 @@
 # Kail's Magic Coin ver. 0.1 by DrLecter
+import sys
+from net.sf.l2j import Config
+from net.sf.l2j.gameserver.model.quest import State
+from net.sf.l2j.gameserver.model.quest import QuestState
+from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+
 QuestNumber      = 382
 QuestName        = "KailsMagicCoin"
 QuestDescription = "Kail's Magic Coin"
@@ -11,13 +17,7 @@ ROYAL_MEMBERSHIP = 5898
 VERGARA = 30687
 #MOBs and CHANCES
 MOBS={21017:[5961],21019:[5962],21020:[5963],21022:[5961,5962,5963]}
-CHANCE = 10
-
-
-import sys
-from net.sf.l2j.gameserver.model.quest import State
-from net.sf.l2j.gameserver.model.quest import QuestState
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+CHANCE = 10*Config.RATE_DROP_QUEST
 
 class Quest (JQuest) :
 

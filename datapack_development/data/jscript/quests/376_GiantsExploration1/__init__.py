@@ -2,6 +2,7 @@
 # by DrLecter
 print "importing quests:",
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -10,7 +11,7 @@ QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 376,"GiantsExploration1","Exploratio
 
 #Variables
 #Ancient parchment drop rate in %
-DROP_RATE   = 20
+DROP_RATE   = 15*Config.RATE_DROP_QUEST
 #Mysterious Book drop rate in %
 DROP_RATE_2 = 5
 #By changing this setting you can make a group of recipes harder to get
