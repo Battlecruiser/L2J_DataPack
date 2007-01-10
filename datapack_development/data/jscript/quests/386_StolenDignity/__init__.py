@@ -1,6 +1,7 @@
 # Stolen Dignity version 0.1 
 # by DrLecter
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -9,7 +10,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 386,"StolenDignity","Stolen Dignity"
 
 #Variables
-DROP_RATE=20  #in %
+DROP_RATE=15*Config.RATE_DROP_QUEST
 REQUIRED_ORE=100 #how many items will be paid for a game (affects onkill sounds too)
 
 #Quest items
@@ -104,11 +105,13 @@ class Quest (JQuest) :
          for i in range(len(grid)): grid[i]=str(grid[i])
          st.set("chosen","? ? ? ? ? ? ? ? ?")
          st.set("grid"," ".join(grid))
+         st.set("playing","1")
        else :
          htmltext = "You don't have required items"
     else :
        for i in range(1,10) :
           if event == str(i) :
+            if st.getInt("playing"):
               chosen = st.get("chosen").split()
               grid = st.get("grid").split()
               if chosen.count("?") >= 3 :
@@ -125,16 +128,22 @@ class Quest (JQuest) :
                       if col == 1 and row == 1 and diag == 1 :
                           htmltext += winner
                           st.giveItems(REWARDS[st.getRandom(len(REWARDS))],4)
+                          st.playSound("ItemSound.quest_finish")
                       elif diag == 0 and row == 0 and col == 0 :
                           htmltext += loser
                           st.giveItems(REWARDS[st.getRandom(len(REWARDS))],10)
+                          st.playSound("ItemSound.quest_jackpot")
                       else :
                           htmltext += average
+                          st.playSound("ItemSound.quest_giveup")
                       htmltext += result(st)
-                      st.playSound("ItemSound.quest_finish")
-                      st.exitQuest(1)
+                      for var in ["chosen","grid","playing"]:
+                          st.unset(var)
+#                      st.exitQuest(1)
                   else :
                       htmltext = header+"Select your "+number[8-chosen.count("?")]+partial(st)
+            else:
+              htmltext=default
     return htmltext
 
  def onTalk (self,npc,st):

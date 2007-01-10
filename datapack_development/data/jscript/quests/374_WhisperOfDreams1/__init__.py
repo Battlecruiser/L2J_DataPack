@@ -11,10 +11,10 @@ QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 374,"WhisperOfDreams1","Whisper of D
 
 #Variables
 #Quest items drop rate
-DROP_RATE   = 20
+DROP_RATE   = 15*Config.RATE_DROP_QUEST
 DROP_MAX = 100 #in % unless you change this
 #Mysterious Stone drop rate
-DROP_RATE_2 = 1
+DROP_RATE_2 = 1*Config.RATE_DROP_QUEST
 DROP_MAX_2 = 250 # default: ~ 1/250
 #This setting alters the original price for fabrics.
 #By default it gathers server's adena drop multiplier

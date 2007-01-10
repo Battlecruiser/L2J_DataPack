@@ -9,8 +9,6 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 #Quest info
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 373,"SupplierOfReagents","Supplier of Reagents"
 #Variables
-#Quest items drop rate
-DROP_RATE   = 45
 #Rewards
 SHOP_LIST={#itemid:[qty,required_id,required_qty]
 4042:[1,  6025,8],4043:[1,  6021,6],4044:[1,  6024,4],2508:[100,6016,4],735: [10, 6025,7],

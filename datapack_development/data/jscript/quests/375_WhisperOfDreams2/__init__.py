@@ -2,6 +2,7 @@
 # by DrLecter
 print "importing quests:",
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -11,7 +12,7 @@ QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 375,"WhisperOfDreams2","Whisper of D
 
 #Variables
 #Quest items drop rate in %
-DROP_RATE=20
+DROP_RATE=15*Config.RATE_DROP_QUEST
 #Alternative rewards. Set this to a non-zero value and recipes will be 100% instead of 60%
 ALT_RP_100=0
 
