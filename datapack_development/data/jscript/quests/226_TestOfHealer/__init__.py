@@ -64,7 +64,7 @@ class Quest (JQuest) :
           st.set("onlyone","1")
     elif event == "30428_1" :
           htmltext = "30428-02.htm"
-          st.getPcSpawn().addSpawn(27134)
+          st.getPcSpawn().addSpawn(27134,-93254,147559,-2679)
     elif event == "30658_1" :
           if st.getQuestItemsCount(ADENA_ID) >= 100000 :
             htmltext = "30658-02.htm"
@@ -309,4 +309,4 @@ for mobId in [20150,27123,27124,27125,27127,27134]:
 for item in range(2810,2820):
   STARTED.addQuestDrop(30743,item,1)
 
-print "importing quests: 226: Test Of Healer"
+print "importing quests: 226: Test Of Healer"
