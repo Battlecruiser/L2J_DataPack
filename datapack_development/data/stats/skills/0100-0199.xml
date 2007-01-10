@@ -970,7 +970,7 @@
   </for>
 </skill>
 <skill id="197" levels="2" name="Holy Armor">
-  <table name="#pDef-undead"> 7 10 </table>
+  <table name="#darkRes"> 7 10 </table>
   <table name="#mpConsume"> 7 9 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -981,7 +981,7 @@
   <set name="effectRange" val="-1"/>
   <for>
 	<effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="0">
-      <add order="0x40" stat="pDef-undead" val="#pDef-undead"/>
+      <add order="0x40" stat="darkRes" val="#darkRes"/>
     </effect>
   </for>
 </skill>

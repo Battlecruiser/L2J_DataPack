@@ -1304,7 +1304,7 @@
   <set name="effectType" val="PARALYZE"/>
   <set name="effectPower" val="20"/>
   <for>
-	<effect count="1" name="Paralyze" time="120" val="0"/>
+	<effect count="1" name="Paralyze" time="30" val="0"/>
   </for>
 </skill>
 <skill id="280" levels="37" name="Burning Fist">
@@ -1560,17 +1560,28 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <cond>
-    <player hp="60"/>
-  </cond>
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
-      <mul order="0x30" stat="pAtk" val="1.43"/>
-      <add order="0x40" stat="rCrit" val="100"/>
       <add order="0x40" stat="accCombat" val="6"/>
+      <mul order="0x30" stat="pAtk" val="1.43">
+      	<and>
+     	   <player hp='60'/>
+       </and>
+      </mul>
+      <add order="0x40" stat="rCrit" val="100">
+      	<and>
+     	   <player hp='60'/>
+       </and>
+      </add>
+      <add order='0x40' stat='rCrit' val='300'>
+      	<and>
+     	   <player hp='30'/>
+       </and>
+      </add>
     </effect>
   </for>
 </skill>
+
 <skill id="293" levels="20" name="Two-handed Weapon Mastery">
   <table name="#Attack"> 4.5 7.3 10.7 15.1 20.5 27.1 32.9 39.4 46.6 54.6 63.3 72.7 79.3 86.6 93.1 100.2 107.5 114.8 122.1 129.3 </table>
   <table name="#Accuracy"> 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </table>

@@ -800,37 +800,33 @@
 </skill>
 <skill id="345" levels="1" name="Sonic Rage">
   <set name="weaponsAllowed" val="512"/>
+  <set name="magicLvl" val="78"/>
   <set name="hpConsume" val="50"/>
   <set name="mpConsume" val="5"/>
   <set name="power" val="7.0"/>
-  <set name="target" val="TARGET_SELF"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="1000"/>
   <set name="skillTime" val="1000"/>
-  <set name="skillType" val="CHARGE"/>
+  <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1000"/>
   <set name="num_charges" val="7"/>
-  <for>
-    <effect count="1" name="Charge" val="1"/>
-  </for>
 </skill>
 <skill id="346" levels="1" name="Raging Force">
   <set name="weaponsAllowed" val="1024"/>
+  <set name="magicLvl" val="78"/>
   <set name="hpConsume" val="50"/>
   <set name="mpConsume" val="5"/>
   <set name="power" val="7.0"/>
-  <set name="target" val="TARGET_SELF"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="1000"/>
   <set name="skillTime" val="1000"/>
-  <set name="skillType" val="CHARGE"/>
+  <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1000"/>
   <set name="num_charges" val="7"/>
-  <for>
-    <effect count="1" name="Charge" val="1"/>
-  </for>
 </skill>
 <skill id="347" levels="1" name="Earthquake">
   <!-- MISSING REMOVING ENEMYS TARGET -->
@@ -839,6 +835,7 @@
   <set name="weaponsAllowed" val="64"/>
   <set name="magicLvl" val="78"/>
   <set name="power" val="4040"/>
+  <set name="overHit" val="true"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="150"/>
   <set name="skillType" val="PDAM"/>
@@ -849,6 +846,9 @@
   <set name="skillTime" val="1800"/>
   <set name="hitTime" val="1800"/>
   <for>
+    <effect count="1" name="RemoveTarget" time="1" val="0">
+      <add order="0x10" stat="rCrit" val="20"/>
+    </effect>
   </for>
 </skill>
 <skill id="348" levels="1" name="Spoil Crush">
