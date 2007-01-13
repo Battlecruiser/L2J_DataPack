@@ -433,6 +433,8 @@
 <!-- lvl 2 version is "L2day Blessed Scroll of Escape" -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="200"/>
+  <set name="skillTime" val="200"/>
   <set name="skillType" val="RECALL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -1079,6 +1081,7 @@
   <set name="power" val="0.0"/>
   <set name="mpConsume" val="26"/>
   <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1200"/>
   <set name="skillTime" val="1200"/>
   <set name="skillType" val="DRAIN_SOUL"/>
   <set name="reuseDelay" val="1300"/>

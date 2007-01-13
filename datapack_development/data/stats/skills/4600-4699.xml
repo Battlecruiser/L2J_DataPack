@@ -88,13 +88,13 @@
   <table name="#time"> 10 10 15 15 15 15 15 15 15 15 15 15 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="2000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MDAM"/>
-  <set name="skillTime" val="4000"/>
+  <set name="skillTime" val="2000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
-  <set name="castRange" val="600"/>
+  <set name="castRange" val="1000"/>
   <set name="effectRange" val="1100"/>
   <for>
    <effect count="1" name="Buff" time="#time" val="0" stackOrder="#pAtk" stackType="pDefDown">
@@ -140,10 +140,10 @@
   <set name="mpConsume" val="78"/>
   <set name="power" val="187"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="3000"/>
+  <set name="hitTime" val="1500"/>
   <set name="element" val="2"/>
   <set name="reuseDelay" val="15000"/>
-  <set name="skillTime" val="3000"/>
+  <set name="skillTime" val="1500"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1758,9 +1758,9 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
-  <set name="hitTime" val="2000"/>
+  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="2000"/>
+  <set name="skillTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>

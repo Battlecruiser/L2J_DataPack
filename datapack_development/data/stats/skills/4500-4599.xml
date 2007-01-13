@@ -755,16 +755,16 @@ is increased and MP consumption is decreased. Effect 1-10-->
   <table name="#power"> 37.0 39.0 41.0 43.0 45.0 46.0 48.0 50.0 51.0 53.0 54.0 56.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
-  <set name="hitTime" val="5000"/>
+  <set name="hitTime" val="2500"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="element" val="2"/>
   <set name="skillType" val="MDAM"/>
-  <set name="skillTime" val="5000"/>
+  <set name="skillTime" val="2500"/>
   <set name="reuseDelay" val="6000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
-  <set name="castRange" val="500"/>
+  <set name="castRange" val="1000"/>
   <set name="effectRange" val="1000"/>
   <for>
   </for>
