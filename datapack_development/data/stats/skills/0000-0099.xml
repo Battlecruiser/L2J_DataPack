@@ -331,6 +331,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </for>
 </skill>
 <skill id="12" levels="14" name="Switch">
