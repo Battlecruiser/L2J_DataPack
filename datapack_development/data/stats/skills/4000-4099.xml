@@ -115,7 +115,7 @@
   <table name="#res"> 15 30 50 70 90 100 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="0"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
@@ -131,7 +131,7 @@
   <table name="#res"> 15 30 50 70 90 100 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="0"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
@@ -147,7 +147,7 @@
   <table name="#res"> 15 30 50 70 90 100 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="0"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
@@ -163,7 +163,7 @@
   <table name="#res"> 15 30 50 70 90 100 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="0"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
@@ -989,7 +989,7 @@
   <set name="save" val="3"/>
   <set name="power" val="916.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="3500"/>
+  <set name="hitTime" val="3599"/>
   <set name="skillTime" val="3000"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1356,11 +1356,11 @@
 </skill>
 <skill id="4082" levels="1" name="Poison of Death">
   <set name="power" val="90000.0"/>
-  <set name="hitTime" val="50"/>
+  <set name="hitTime" val="0"/>
   <set name="save" val="2"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="50"/>
-  <set name="skillTime" val="50"/>
+  <set name="skillTime" val="0"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>

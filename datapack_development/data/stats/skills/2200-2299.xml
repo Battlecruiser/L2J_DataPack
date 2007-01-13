@@ -364,6 +364,8 @@
 <skill id="2244" levels="1" name="Herb of Life">
   <!-- Orignally done by ettore85a -->
   <set name="power" val="15"/>
+  <set name="hitTime" val="100"/>
+  <set name="skillTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -375,6 +377,8 @@
 <skill id="2245" levels="1" name="Herb of Mana">
   <!-- Orignally done by ettore85a -->
   <set name="power" val="12"/>
+  <set name="hitTime" val="100"/>
+  <set name="skillTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="MANAHEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -386,6 +390,8 @@
 <skill id="2246" levels="1" name="Herb of Strength">
   <!-- Orignally done by ettore85a -->
   <set name="power" val="0.0"/>
+  <set name="hitTime" val="100"/>
+  <set name="skillTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -401,6 +407,8 @@
 <skill id="2247" levels="1" name="Herb of Magic">
   <!-- Orignally done by ettore85a -->
   <set name="power" val="0.0"/>
+  <set name="hitTime" val="100"/>
+  <set name="skillTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -656,6 +664,8 @@
 <skill id="2278" levels="3" name="Herb of Life">
   <table name="#power"> 15 25 100 </table>
   <set name="power" val="#power"/>
+  <set name="hitTime" val="100"/>
+  <set name="skillTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -667,6 +677,8 @@
 <skill id="2279" levels="3" name="Herb of Mana">
   <table name="#power"> 12 18 100 </table>
   <set name="power" val="#power"/>
+  <set name="hitTime" val="100"/>
+  <set name="skillTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="MANAHEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -677,6 +689,8 @@
 </skill>
 <skill id="2280" levels="1" name="Herb of Strength">
   <set name="power" val="0.0"/>
+  <set name="hitTime" val="100"/>
+  <set name="skillTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -692,6 +706,8 @@
 </skill>
 <skill id="2281" levels="1" name="Herb of Magic">
   <set name="power" val="0.0"/>
+  <set name="hitTime" val="100"/>
+  <set name="skillTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -706,6 +722,8 @@
 </skill>
 <skill id="2282" levels="1" name="Herb of Atk. Spd.">
   <set name="power" val="0.0"/>
+  <set name="hitTime" val="100"/>
+  <set name="skillTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -720,6 +738,8 @@
 </skill>
 <skill id="2283" levels="1" name="Herb of Casting Spd.">
   <set name="power" val="0.0"/>
+  <set name="hitTime" val="100"/>
+  <set name="skillTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -734,6 +754,8 @@
 </skill>
 <skill id="2284" levels="1" name="Herb of Critical Attack">
   <set name="power" val="0.0"/>
+  <set name="hitTime" val="100"/>
+  <set name="skillTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -748,6 +770,8 @@
 </skill>
 <skill id="2285" levels="1" name="Herb of Speed">
   <set name="power" val="0.0"/>
+  <set name="hitTime" val="100"/>
+  <set name="skillTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
