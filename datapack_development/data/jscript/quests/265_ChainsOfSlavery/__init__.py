@@ -41,9 +41,9 @@ class Quest (JQuest) :
      count=st.getQuestItemsCount(IMP_SHACKLES)
      if count :
        if count >= 10:
-          st.giveItems(ADENA,12*count+500)
+          st.giveItems(ADENA,13*count+500)
        else :
-          st.giveItems(ADENA,12*count)
+          st.giveItems(ADENA,13*count)
        st.takeItems(IMP_SHACKLES,-1)
        htmltext = "30357-05.htm"
      else:
