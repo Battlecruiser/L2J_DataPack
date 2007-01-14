@@ -196,7 +196,7 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_itemget")
    elif npcId == 20144 :
       if int(st.get("cond")) == 6 :
-        if st.getRandom(75)<2 :
+        if st.getRandom(100)<33 :
            st.getPcSpawn().addSpawn(30656,44656,148431,-3703,300000)
            return "Spirit Of Sir Talianus has spawned at X=44656 Y=148431 Z=-3703"
            st.playSound("ItemSound.quest_middle")
