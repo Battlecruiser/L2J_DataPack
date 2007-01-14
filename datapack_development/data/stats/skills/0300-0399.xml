@@ -740,12 +740,12 @@
   </for>
 </skill>
 <skill id="342" levels="1" name="Touch of Death">
-  <!-- WRONG SKILL -->
+  <!-- WRONG SKILL - temp fix -->
   <!-- Sacrifices HP to cast a dark curse upon an enemy that has a chance to remove multiple buffs and significantly decrease maximum CP for a brief time. Decreases resistance to debuff attacks and the effectiveness of HP regeneration magic. Only usable when HP is 75% or lower. -->
   <set name="hpConsume" val="1004"/>
-  <set name="power" val="-70.0"/>
+  <set name="power" val="100.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="HEAL_PERCENT"/>
+  <set name="skillType" val="CANCEL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
