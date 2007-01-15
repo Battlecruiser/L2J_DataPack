@@ -184,7 +184,6 @@ INSERT INTO merchant_shopids VALUES (169,'31962');
 INSERT INTO merchant_shopids VALUES (170,'31416');
 INSERT INTO merchant_shopids VALUES (171,'31417');
 INSERT INTO merchant_shopids VALUES (172,'31435');
-INSERT INTO merchant_shopids VALUES (172,'31435');
 INSERT INTO merchant_shopids VALUES (173,'31437');
 INSERT INTO merchant_shopids VALUES (174,'31422');
 INSERT INTO merchant_shopids VALUES (5800,'30890');
