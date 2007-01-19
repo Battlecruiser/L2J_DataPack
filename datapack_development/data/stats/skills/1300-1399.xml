@@ -353,13 +353,18 @@
   </for>
 </skill>
 <skill id="1324" levels="1" name="Summon CP Potion">
-  <set name="power" val="0.0"/>
+  <set name="mpConsume" val="412"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillTime" val="20000"/>
+  <set name="skillType" val="CREATE_ITEM"/>
+  <set name="reuseDelay" val="1800000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="itemConsumeId" val="1785"/>
+  <!-- spirit ore amount consumed may be incorrect -->
+  <set name="itemConsumeCount" val="50"/>
+  <set name="create_item_id" val="5592"/>
+  <set name="create_item_count" val="20"/>
 </skill>
 <skill id="1325" levels="1" name="Fortune of Noblesse">
   <set name="power" val="0.0"/>
