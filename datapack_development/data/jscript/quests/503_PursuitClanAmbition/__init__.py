@@ -480,7 +480,7 @@ class Quest (JQuest) :
 							st.getPcSpawn().addSpawn(27180,npc.getX()+70*pow(-1,j%2),npc.getY()+70*pow(-1,k%2),npc.getZ())
 					setLeaderVar(st,"ImpGraveKeeper","2")
 				else:
-					players = npc.getKnownList().getKnownPlayers().toArray()
+					players = npc.getKnownList().getKnownPlayers().values().toArray()
 					if len(players) :
 						player = players[st.getRandom(int(len(players)))]
 						player.setXYZ(185462,20342,-3250)
