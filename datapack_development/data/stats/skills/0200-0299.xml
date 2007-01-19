@@ -169,7 +169,7 @@
   </cond>
   <for>
     <effect count="0x7fffffff" name="DamOverTime" time="3" val="13">
-      <mul order="0x20" stat="pAtkSpd" val="1.25"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.25"/>
     </effect>
   </for>
 </skill>
@@ -749,7 +749,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="1">
-      <add order="0x10" stat="accCombat" val="3"/>
+      <add order="0x40" stat="accCombat" val="3"/>
     </effect>
   </for>
 </skill>
@@ -935,7 +935,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
-    <add order="0x10" stat="rCrit" val="45">
+    <add order="0x40" stat="rCrit" val="45">
       <using kind="Dagger" skill="0263"/>
     </add>
   </for>
@@ -1631,7 +1631,7 @@
   <set name="effectRange" val="-1"/>
   <for>
 	<effect count="0x7fffffff" name="SilentMove" time="1" val="8">
-      <add order="0x10" stat="regHp" val="5"/>
+      <add order="0x40" stat="regHp" val="5"/>
 	</effect>
   </for>
 </skill>

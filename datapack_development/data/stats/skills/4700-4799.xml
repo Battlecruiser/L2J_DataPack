@@ -22,7 +22,7 @@
   <for>
     <effect count="1" name="Buff" time="#time" val="0">
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
-      <add order="0x30" stat="accCombat" val="#Tab-accCombat"/>
+      <add order="0x40" stat="accCombat" val="#Tab-accCombat"/>
     </effect>
   </for>
 </skill>
@@ -534,7 +534,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
-    <add order="0x10" stat="rCrit" val="45">
+    <add order="0x40" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>
@@ -553,7 +553,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
-    <add order="0x10" stat="rCrit" val="45">
+    <add order="0x40" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>
@@ -572,7 +572,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
-    <add order="0x10" stat="rCrit" val="45">
+    <add order="0x40" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>
@@ -591,7 +591,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
-    <add order="0x10" stat="rCrit" val="45">
+    <add order="0x40" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>
@@ -610,7 +610,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
-    <add order="0x10" stat="rCrit" val="45">
+    <add order="0x40" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>
@@ -888,7 +888,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
-    <add order="0x10" stat="rCrit" val="45">
+    <add order="0x40" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>
@@ -907,7 +907,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
-    <add order="0x10" stat="rCrit" val="45">
+    <add order="0x40" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>
@@ -926,7 +926,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
-    <add order="0x10" stat="rCrit" val="45">
+    <add order="0x40" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>
@@ -945,7 +945,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
-    <add order="0x10" stat="rCrit" val="45">
+    <add order="0x40" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>

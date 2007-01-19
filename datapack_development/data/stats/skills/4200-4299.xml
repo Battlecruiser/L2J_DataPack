@@ -152,7 +152,7 @@
   <set name="effectRange" val="1250"/>
   <for>
     <effect count="1" name="Buff" time="30" val="0">
-      <sub order="0x30" stat="maxMp" val="#Tab-maxMp"/>
+      <sub order="0x40" stat="maxMp" val="#Tab-maxMp"/>
     </effect>
   </for>
 </skill>

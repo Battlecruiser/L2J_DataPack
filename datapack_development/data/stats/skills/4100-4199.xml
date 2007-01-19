@@ -1067,7 +1067,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="600" val="0" stackOrder="20" stackType="DmgShield">
-      <add order="0x30" stat="reflectDam" val="20"/>
+      <add order="0x40" stat="reflectDam" val="20"/>
     </effect>
   </for>
 </skill>
@@ -1195,7 +1195,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
-    <add order="0x10" stat="rCrit" val="45">
+    <add order="0x40" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>
@@ -1433,7 +1433,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
-    <add order="0x10" stat="rCrit" val="45">
+    <add order="0x40" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>
@@ -1646,7 +1646,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="30" val="0">
-      <sub order="0x30" stat="maxMp" val="#Tab-maxMp"/>
+      <sub order="0x40" stat="maxMp" val="#Tab-maxMp"/>
     </effect>
   </for>
 </skill>

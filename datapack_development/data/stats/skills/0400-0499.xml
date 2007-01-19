@@ -150,7 +150,7 @@
   <effect count="1" name="Buff" time="120" val="0">
     <mul order="0x30" stat="mDef" val="1.5"/>
     <mul order="0x30" stat="pDef" val="1.5"/>
-    <add order="0x10" stat="accCombat" val="6"/>
+    <add order="0x40" stat="accCombat" val="6"/>
     <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
     <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
     <mul order="0x30" stat="regHp" val="0.2"/>
@@ -222,7 +222,7 @@
 <set name="castRange" val="40"/>
 <set name="effectRange" val="400"/>
 <for>
-<add order="0x10" stat="rCrit" val="55">
+<add order="0x40" stat="rCrit" val="55">
    <using kind="Dagger" skill="0409"/>
 </add>
 </for>
@@ -242,19 +242,19 @@
 <set name="buffDuration" val="120000"/>
 <for>
   <effect count="1" name="Buff" time="120" val="0">
-    <add order="0x10" stat="rCrit" val="45">
+    <add order="0x40" stat="rCrit" val="45">
       <using kind="Dagger" skill="0263"/> 
     </add> 
-    <add order="0x10" stat="rCrit" val="45"> 
+    <add order="0x40" stat="rCrit" val="45"> 
       <using kind="Dagger" skill="0409"/> 
     </add> 
-    <add order="0x10" stat="rCrit" val="45"> 
+    <add order="0x40" stat="rCrit" val="45"> 
       <using kind="Dagger" skill="0016"/> 
     </add> 
-    <add order="0x10" stat="rCrit" val="45"> 
+    <add order="0x40" stat="rCrit" val="45"> 
       <using kind="Dagger" skill="0321"/> 
     </add> 
-    <add order="0x10" stat="rCrit" val="45"> 
+    <add order="0x40" stat="rCrit" val="45"> 
       <using kind="Dagger" skill="0344"/> 
     </add> 
   </effect> 
@@ -509,7 +509,7 @@
 <set name="effectRange" val="-1"/>
 <for>
    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume">
-      <add order="0x10" stat="accCombat" val="#Tab-accCombat"/>
+      <add order="0x40" stat="accCombat" val="#Tab-accCombat"/>
    </effect>
 </for>
 </skill>
@@ -565,7 +565,7 @@
 <set name="effectRange" val="-1"/>
 <for>
   <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="possession">
-    <add order="0x10" stat="accCombat" val="6"/>
+    <add order="0x40" stat="accCombat" val="6"/>
     <add order="0x40" stat="rCrit" val="100"/>
     <mul order="0x30" stat="cAtk" val="1.5"/>
   </effect> 
