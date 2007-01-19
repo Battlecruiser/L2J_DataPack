@@ -345,21 +345,25 @@
   </for>
 </skill>
 <skill id="317" levels="5" name="Focus Attack">
+  <!-- has estimations for values based on L2P - needs to be finished -->
   <set name="weaponsAllowed" val="64"/>
   <table name="#mpConsume"> 18 22 27 31 34 </table>
+  <!-- table name="#crit"> 0 0 0 0 0 </table> -->
+  <table name="#Accuracy"> 3 3 3 5 5 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="reuseDelay" val="12000"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="CONT"/>
-  <set name="operateType" val="OP_TOGGLE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="hitTime" val="2000"/>
   <set name="skillTime" val="2000"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume">
-      <!-- this needs to be fixed for C5 to support multiple levels -->
-      <add order="0x40" stat="accCombat" val="15"/>
-    </effect>
+    <effect name="Buff" time="120" count="1" val="0">
+      <!-- <add order="0x40" stat="cAtk" val="#crit"> -->
+      <add order="0x40" stat="accCombat" val="#Accuracy"/>
+   </effect>
   </for>
 </skill>
 <skill id="318" levels="1" name="Aegis Stance">
