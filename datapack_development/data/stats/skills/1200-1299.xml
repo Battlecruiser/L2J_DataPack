@@ -1880,7 +1880,7 @@
   <set name="effectPower" val="350"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="0.5" stackType="RunSpeedDown">
-      <mul order="0x40" stat="runSpd" val="0.5"/>
+      <mul order="0x30" stat="runSpd" val="0.5"/>
     </effect>
   </for>
 </skill> 

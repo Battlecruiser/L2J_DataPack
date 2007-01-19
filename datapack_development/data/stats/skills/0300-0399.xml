@@ -447,10 +447,10 @@
   <set name="effectRange" val="400"/>
   <for>
     <effect self="1" count="1" name="Buff" time="10" val="0" stackOrder="40" stackType="SpeedUpS"> 
-      <add order="0x10" stat="rCrit" val="45">
+      <add order="0x40" stat="rCrit" val="45">
         <using kind="Dagger" skill="0321"/>
       </add>
-        <mul order="0x40" stat="runSpd" val="1.40"/>
+        <mul order="0x30" stat="runSpd" val="1.40"/>
     </effect>
   </for>
 </skill>
