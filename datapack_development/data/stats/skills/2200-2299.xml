@@ -400,7 +400,7 @@
   <set name="isPotion" val="true"/>
   <for>
    <effect name="Buff" time="120" val="0" stackOrder="1.10" stackType="pAtk">
-    <mul order="0x30" stat="pAtk" val="1.25"/>
+    <mul order="0x30" stat="pAtk" val="1.15"/>
    </effect>
   </for>
 </skill>
@@ -416,8 +416,9 @@
   <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-   <effect name="Buff" time="120" count="1" val="0">
-    <mul order="0x30" stat="mAtk" val="1.44"/>
+   <!-- stackType needs to be verified -->
+   <effect name="Buff" time="120" val="0" stackOrder="1.10" stackType="mAtk">
+    <mul order="0x30" stat="mAtk" val="1.75"/>
    </effect>
   </for>
 </skill> 
@@ -699,7 +700,7 @@
   <set name="isPotion" val="true"/>
   <for>
    <effect name="Buff" time="120" val="0" stackOrder="1.10" stackType="pAtk">
-    <mul order="0x30" stat="pAtk" val="1.25"/>
+    <mul order="0x30" stat="pAtk" val="1.15"/>
    </effect>
   </for>
 
@@ -715,8 +716,8 @@
   <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-   <effect name="Buff" time="120" count="1" val="0">
-    <mul order="0x30" stat="mAtk" val="1.44"/>
+   <effect name="Buff" time="120" val="0" stackOrder="1.10" stackType="mAtk">
+    <mul order="0x30" stat="mAtk" val="1.75"/>
    </effect>
   </for>
 </skill>
