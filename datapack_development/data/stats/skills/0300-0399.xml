@@ -855,7 +855,7 @@
   <set name="hitTime" val="1800"/>
   <for>
     <effect count="1" name="RemoveTarget" time="1" val="0">
-      <add order="0x10" stat="rCrit" val="20"/>
+      <add order="0x40" stat="rCrit" val="20"/>
     </effect>
   </for>
 </skill>
