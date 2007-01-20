@@ -935,7 +935,8 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
-    <add order="0x40" stat="rCrit" val="45">
+    <!-- 0x10 appears to be the correct order -->
+    <add order="0x10" stat="rCrit" val="45">
       <using kind="Dagger" skill="0263"/>
     </add>
   </for>
