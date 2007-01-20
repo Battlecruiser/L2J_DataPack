@@ -217,7 +217,7 @@
   <!-- charge values -->
   <set name="itemConsumeId" val="5589" />
   <set name="itemConsumeCount" val="3"/>
-  <set name="num_charges" val="1"/>
+  <set name="num_charges" val="2"/>
   <set name="charge_skill_id" val="8"/> <!-- Sonic Focus is the charger -->
   <for>
   </for>
@@ -285,7 +285,7 @@
   <!-- charge values -->
   <set name="itemConsumeId" val="5589"/>
   <set name="itemConsumeCount" val="3"/>
-  <set name="num_charges" val="1"/>
+  <set name="num_charges" val="2"/>
   <set name="charge_skill_id" val="8"/> <!-- Sonic Focus is the charger -->
   <for>
   </for>
@@ -426,7 +426,8 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
-    <add order="0x40" stat="rCrit" val="45">
+    <!-- 0x10 appears to be the correct order -->
+    <add order="0x10" stat="rCrit" val="45">
       <using kind="Dagger" skill="0016"/>
     </add>
   </for>
