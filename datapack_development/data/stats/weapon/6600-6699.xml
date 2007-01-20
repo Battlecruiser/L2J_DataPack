@@ -152,6 +152,12 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <mul val='1.25' order='0x30' stat='maxHp'/>
+    <mul val='1.30' order='0x30' stat='maxMp'/>
+    <mul val='1.50' order='0x30' stat='maxCp'/>
+    <mul val='1.33' order='0x30' stat='rShld'/>
+    <mul val='1.09' order='0x30' stat='reflectDam'/>
+    <!-- Missing on a critical hit the target's P.Def. is dropped by 23% at a 4% chance -->
   </for>
 </item>
 <item id='6612' name="infinity_cleaver">
@@ -163,6 +169,11 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <mul val='1.30' order='0x30' stat='maxHp'/>
+    <mul val='1.30' order='0x30' stat='maxCp'/>
+    <add val='504' order='0x40' stat='cAtk'/>
+    <add val='78.7' order='0x40' stat='rCrit'/>
+    <!-- Missing Reflect Skills 10% of the time -->
   </for>
 </item>
 <item id='6613' name="infinity_axe">
@@ -174,6 +185,11 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <mul val='1.25' order='0x30' stat='maxHp'/>
+    <mul val='1.30' order='0x30' stat='maxMp'/>
+    <mul val='1.39' order='0x30' stat='rShld'/>
+    <mul val='1.09' order='0x30' stat='reflectDam'/>
+    <!-- Missing chance of Curse Discord effect on a critical hit -->
   </for>
 </item>
 <item id='6614' name="infinity_rod">
@@ -185,6 +201,11 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <mul val='1.30' order='0x30' stat='maxMp'/>
+    <mul val='1.50' order='0x30' stat='maxCp'/>
+    <mul val='1.15' order='0x30' stat='mAtkSpd'/>
+    <add val='0.51' order='0x40' stat='regMp'/>
+    <!-- Missing 3% chance to full heal target's HP when "good" magic is cast -->
   </for>
 </item>
 <item id='6615' name="infinity_crusher">
@@ -196,6 +217,10 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <mul val='1.25' order='0x30' stat='maxHp'/>
+    <mul val='1.50' order='0x30' stat='maxCp'/>
+    <mul val='1.07' order='0x30' stat='pAtkSpd'/>
+    <!-- Missing 25% chance to stun target on a critical hit -->
   </for>
 </item>
 <item id='6616' name="infinity_scepter">
@@ -207,6 +232,13 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <mul val='1.30' order='0x30' stat='maxMp'/>
+    <mul val='1.50' order='0x30' stat='maxCp'/>
+    <add val='29.67' order='0x40' stat='mAtk'/>
+    <mul val='1.54' order='0x30' stat='mCritRate'/>
+    <mul val='0.96' order='0x30' stat='MpConsumeRate'/>
+    <sub val='106' order='0x40' stat='cancel'/>
+    <!-- Missing 3% chance to full heal target's HP when "good" magic is cast -->
   </for>
 </item>
 <item id='6617' name="infinity_stinger">
@@ -218,6 +250,13 @@
     <set val='433' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <mul val='1.30' order='0x30' stat='maxMp'/>
+    <mul val='1.50' order='0x30' stat='maxCp'/>
+    <mul val='1.03' order='0x30' stat='pAtkSpd'/>
+    <add val='0.51' order='0x40' stat='regMp'/>
+    <!-- add val='220' order='0x40' stat='cAtk'/ only from behind -->
+    <mul val='1.02' order='0x30' stat='absorbDam'/>
+    <!-- Missing 5% chance to Silence target on a critical hit -->
   </for>
 </item>
 <item id='6618' name="infinity_fang">
@@ -229,6 +268,11 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <mul val='1.25' order='0x30' stat='maxHp'/>
+    <mul val='1.30' order='0x30' stat='maxMp'/>
+    <mul val='1.50' order='0x30' stat='maxCp'/>
+    <add val='3.15' order='0x40' stat='rEvas'/>
+    <!-- Missing 25% chance to stun target on a critical hit -->
   </for>
 </item>
 <item id='6619' name="infinity_bow">
@@ -240,6 +284,9 @@
     <set val='293' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <mul val='1.30' order='0x30' stat='maxMp'/>
+    <mul val='1.50' order='0x30' stat='maxCp'/>
+    <!-- Missing 7% chance to inflict slow (-50% speed) on a critical hit -->
   </for>
 </item>
 <item id='6620' name="infinity_wing">
@@ -251,6 +298,11 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <mul val='1.25' order='0x30' stat='maxHp'/>
+    <mul val='1.30' order='0x30' stat='maxMp'/>
+    <mul val='1.50' order='0x30' stat='maxCp'/>
+    <add val='78.7' order='0x40' stat='cAtk'/>
+    <!-- Missing Reflect Skill 10%, 10% chance to inflict Physical Skill Silence on a critical hit -->
   </for>
 </item>
 <item id='6621' name="infinity_spear">
@@ -262,6 +314,11 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <mul val='1.25' order='0x30' stat='maxHp'/>
+    <mul val='1.50' order='0x30' stat='maxCp'/>
+    <mul val='1.07' order='0x30' stat='pAtkSpd'/>
+    <add val='4.89' order='0x40' stat='accCombat'/>
+    <!-- Missing Reflect Skill 10%, 10% chance to cancel each buff from target on a critical hit (for comparison, Cancel is 25% but Cancel also relies on M.Atk. vs. M.Def. while this weapon does not) -->
   </for>
 </item>
 <item id='6678' name="sealed_imperial_crusader_shield">
