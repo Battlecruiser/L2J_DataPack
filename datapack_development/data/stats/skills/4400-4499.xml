@@ -111,22 +111,13 @@
   <for>
   </for>
 </skill>
-<skill id="4407" levels="1" name="Ordinary Monster">
+<skill id="4407" levels="2" name="Monster Type">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="4407" levels="2" name="Strong Type Monster">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1 Name - Ordinary Monster
+      Lvl 2 Name - Strong Type Monster
 -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
