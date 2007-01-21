@@ -1266,19 +1266,21 @@
   </for>
 </skill>
 <skill id="368" levels="1" name="Vengeance">
+  <set name="weaponsAllowed" val="2"/>
   <set name="mpConsume" val="35"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
+  <set name="power" val="3994"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="200"/>
   <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="1800000"/>
   <set name="skillTime" val="1000"/>
-  <set name="skillType" val="BUFF"/>
+  <set name="skillType" val="AGGDAMAGE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="ImobileBuff" time="30" val="0" stackOrder="3" stackType="pDefSpec">
+    <effect self="1" count="1" name="ImobileBuff" time="30" val="0" stackOrder="3" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="5400"/>
       <add order="0x40" stat="mDef" val="4050"/>
     </effect>
