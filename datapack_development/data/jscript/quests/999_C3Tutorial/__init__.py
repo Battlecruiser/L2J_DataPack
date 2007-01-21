@@ -115,9 +115,13 @@ class Quest (JQuest) :
            if st.getPlayer().getClassId().isMage() :
              st.giveItems(SPIRITSHOT_NOVICE,100)
              htmltext = htmlfiles[2]
+             if htmltext == 0 :
+                 htmltext = "<html><head><body>I am sorry.  I only help warriors.  Please go to another Newbie Helper who may assist you.</body></html>"
            else:
              st.giveItems(SOULSHOT_NOVICE,200)
              htmltext = htmlfiles[1]
+             if htmltext == 0 :
+                 htmltext = "<html><head><body>I am sorry.  I only help mystics.  Please go to another Newbie Helper who may assist you.</body></html>"
          else:
            if st.getPlayer().getClassId().isMage() :
              htmltext = "30131-02.htm"
