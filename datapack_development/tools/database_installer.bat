@@ -84,7 +84,7 @@ echo Deleting loginserver tables for new content.
 %mysqlPath% -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% < login_install.sql
 
 :loginupgrade
-echo Installling new loginserver content.
+echo Installing new loginserver content.
 %mysqlPath% -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% < ../sql/accounts.sql
 %mysqlPath% -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% < ../sql/gameservers.sql
 
@@ -110,7 +110,7 @@ echo Deleting all gameserver tables for new content.
 %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < full_install.sql
 
 :upgradeinstall
-echo Installling new gameserver content.
+echo Installing new gameserver content.
 %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/account_data.sql
 %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/armor.sql
 %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/auction.sql
@@ -224,7 +224,7 @@ goto asknb
 cd ..\sql\updates\
 echo @echo off> temp.bat
 if exist errors.txt del errors.txt
-for %%i in (*.sql) do echo %mysqlPath% -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< %%i 2^>^> errors.txt >> temp.bat
+for %%i in (*.sql) do echo %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> errors.txt >> temp.bat
 call temp.bat> nul
 del temp.bat
 type errors.txt|find "doesn't exist"
