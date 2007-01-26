@@ -6516,6 +6516,7 @@ INSERT INTO `etcitem` (`item_id`,`name`,`crystallizable`,`item_type`,`weight`,`c
  (8430,'Small Yellow Nimble Fish - Upper Grade','false','none','0','normal','paper','none','0','0',0,'true','C5Item','none'),
  (8431,'Small Yellow Ugly Fish - Upper Grade','false','none','0','normal','paper','none','0','0',0,'true','C5Item','none'),
  (8432,'Small Yellow Fat Fish - Upper Grade','false','none','0','normal','paper','none','0','0',0,'true','C5Item','none'),
+ (8433,'Yellow Nimble Fish - Upper Grade','false','none','0','normal','paper','none','0','0',0,'true','C5Item','none'),
  (8434,'Yellow Ugly Fish - Upper Grade','false','none','0','normal','paper','none','0','0',0,'true','C5Item','none'),
  (8435,'Yellow Fat Fish - Upper Grade','false','none','0','normal','paper','none','0','0',0,'true','C5Item','none'),
  (8436,'Large Yellow Nimble Fish - Upper Grade','false','none','0','normal','paper','none','0','0',0,'true','C5Item','none'),
