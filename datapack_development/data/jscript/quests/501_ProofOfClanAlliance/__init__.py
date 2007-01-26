@@ -83,10 +83,9 @@ def chest_game(st,command) :
        leader(st).set("chest_game","0")
 
 def autochat(npc,text) :
-    chars = npc.getKnownList().getKnownPlayers().values()
+    chars = npc.getKnownList().getKnownPlayers().values().toArray()
     if chars != None:
-       list = chars.iterator()
-       while list.hasNext() :
+       for pc in chars :
           pc = list.next()
           sm = CreatureSay(npc.getObjectId(), 0, npc.getName(), text)
           pc.sendPacket(sm)
