@@ -169,8 +169,8 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <mul val='1.30' order='0x30' stat='maxHp'/>
-    <mul val='1.30' order='0x30' stat='maxCp'/>
+    <mul val='1.25' order='0x30' stat='maxHp'/>
+    <mul val='1.50' order='0x30' stat='maxCp'/>
     <add val='504' order='0x40' stat='cAtk'/>
     <add val='78.7' order='0x40' stat='rCrit'/>
     <!-- Missing Reflect Skills 10% of the time -->
@@ -301,7 +301,7 @@
     <mul val='1.25' order='0x30' stat='maxHp'/>
     <mul val='1.30' order='0x30' stat='maxMp'/>
     <mul val='1.50' order='0x30' stat='maxCp'/>
-    <add val='78.7' order='0x40' stat='cAtk'/>
+    <add val='78.7' order='0x40' stat='rCrit'/>
     <!-- Missing Reflect Skill 10%, 10% chance to inflict Physical Skill Silence on a critical hit -->
   </for>
 </item>
