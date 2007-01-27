@@ -210,6 +210,12 @@
     <set val='433' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <!-- SA: Back Blow -->
+    <add order='0x10' stat='rCrit' val='37'>
+      <and>
+        <player behind='True'/>
+      </and>
+    </add>
   </for>
 </item>
 <item id='5616' name="bloody_orchid_critical_bleed">
@@ -384,8 +390,11 @@
     <set val='8' order='0x08' stat='rCrit'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
+    <set val='45' order='0x08' stat='pAtkAngle'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <!-- SA: Wide Blow -->
+    <add val='45' order='0x10' stat='pAtkAngle'/>
   </for>
 </item>
 <item id='5629' name="orcish_halberd">
@@ -454,8 +463,11 @@
     <set val='8' order='0x08' stat='rCrit'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
+    <set val='45' order='0x08' stat='pAtkAngle'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <!-- SA: Wide Blow -->
+    <add val='45' order='0x10' stat='pAtkAngle'/>
   </for>
 </item>
 <item id='5635' name="tallum_blade_critical_poison">

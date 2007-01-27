@@ -217,6 +217,12 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <!-- SA: Back Blow -->
+    <add order='0x10' stat='rCrit' val='56'>
+      <and>
+        <player behind='True'/>
+      </and>
+    </add>
   </for>
 </item>
 <item id='4717' name="sword_of_damascus_focus">
@@ -873,6 +879,12 @@
     <set val='433' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <!-- SA: Back Blow -->
+    <add order='0x10' stat='rCrit' val='109'>
+      <and>
+        <player behind='True'/>
+      </and>
+    </add>
   </for>
 </item>
 <item id='4764' name="dark_elven_dagger_might_mortal">
@@ -958,6 +970,12 @@
     <set val='433' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <!-- SA: Back Blow -->
+    <add order='0x10' stat='rCrit' val='97'>
+      <and>
+        <player behind='True'/>
+      </and>
+    </add>
   </for>
 </item>
 <item id='4771' name="dark_screamer_evasion">
@@ -1071,6 +1089,12 @@
     <set val='433' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <!-- SA: Back Blow -->
+    <add order='0x10' stat='rCrit' val='86'>
+      <and>
+        <player behind='True'/>
+      </and>
+    </add>
   </for>
 </item>
 <item id='4780' name="demons_sword_critical_bleed">
