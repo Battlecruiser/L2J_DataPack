@@ -260,8 +260,11 @@
     <set val='8' order='0x08' stat='rCrit'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
+    <set val='80' order='0x08' stat='pAtkRange'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <!-- SA: Long Blow -->
+    <add val='40' order='0x10' stat='pAtkRange'/>
   </for>
 </item>
 <item id='7721' name="poleaxe_wide_blow">
@@ -271,8 +274,11 @@
     <set val='8' order='0x08' stat='rCrit'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
+    <set val='45' order='0x08' stat='pAtkAngle'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <!-- SA: Wide Blow -->
+    <add val='45' order='0x10' stat='pAtkAngle'/>
   </for>
 </item>
 <item id='7722' name="sword_of_valhalla_acumen">
