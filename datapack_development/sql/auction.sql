@@ -1,8 +1,7 @@
 -- ---------------------------
 -- Table structure for auction
 -- ---------------------------
-DROP TABLE IF EXISTS `auction`;
-CREATE TABLE `auction` (
+CREATE TABLE IF NOT EXISTS `auction` (
   id int(11) NOT NULL default '0',
   sellerId int(11) NOT NULL default '0',
   sellerName varchar(50) NOT NULL default 'NPC',
@@ -23,7 +22,7 @@ CREATE TABLE `auction` (
 -- Dumping data for table `auction`
 -- 
 
-INSERT INTO `auction` VALUES 
+INSERT IGNORE INTO `auction` VALUES 
 (22, 0, 'NPC', 'NPC Clan', 'ClanHall', 22, 0, 'Moonstone Hall', 1, 20000000, 0, 1164841200000),
 (23, 0, 'NPC', 'NPC Clan', 'ClanHall', 23, 0, 'Onyx Hall', 1, 20000000, 0, 1164841200000),
 (24, 0, 'NPC', 'NPC Clan', 'ClanHall', 24, 0, 'Topaz Hall', 1, 20000000, 0, 1164841200000),
