@@ -147,7 +147,7 @@ class Quest (JQuest) :
    ClassId = st.getPlayer().getClassId()
    
    # Elfs and Humanss got accepted
-   if npcId == HIGH_PRIESTESS_LEVIAN and Race in [Race.elf, Race.human]:
+   if Race in [Race.elf, Race.human]:
      if ClassId in [ClassId.elvenMage]:
        htmltext = "30037-01.htm"
        st.setState(STARTED)
@@ -175,7 +175,7 @@ class Quest (JQuest) :
      return htmltext
 
    # All other Races must be out
-   if npcId == HIGH_PRIESTESS_LEVIAN and Race in [Race.dwarf, Race.darkelf, Race.orc]:
+   if Race in [Race.dwarf, Race.darkelf, Race.orc]:
      st.setState(COMPLETED)
      st.exitQuest(1)
      return "30037-33.htm"
@@ -188,5 +188,7 @@ COMPLETED = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(30037)
+QUEST.addStartNpc(32098)
 
 STARTED.addTalkId(30037)
+STARTED.addTalkId(32098)

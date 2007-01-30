@@ -109,7 +109,7 @@ class Quest (JQuest) :
    ClassId = st.getPlayer().getClassId()
    
    # orcs got accepted
-   if npcId == HIGH_PREFECT_OSBORN and Race in [Race.orc]:
+   if Race in [Race.orc]:
      if ClassId in [ClassId.orcFighter]:
        htmltext = "30500-01.htm"
        st.setState(STARTED)
@@ -130,7 +130,7 @@ class Quest (JQuest) :
        return htmltext
 
    # All other Races must be out
-   if npcId == HIGH_PREFECT_OSBORN and Race in [Race.elf, Race.darkelf, Race.dwarf, Race.human]:
+   if Race in [Race.elf, Race.darkelf, Race.dwarf, Race.human]:
      st.setState(COMPLETED)
      st.exitQuest(1)
      return "30500-23.htm"
@@ -143,5 +143,7 @@ COMPLETED = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(30500)
+QUEST.addStartNpc(32097)
 
 STARTED.addTalkId(30500)
+STARTED.addTalkId(32097)
