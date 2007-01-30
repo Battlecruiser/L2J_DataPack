@@ -202,6 +202,8 @@ QUEST.addStartNpc(31276)
 QUEST.addStartNpc(31321)
 QUEST.addStartNpc(31279)
 QUEST.addStartNpc(31755)
+QUEST.addStartNpc(31968)
+QUEST.addStartNpc(32095)
 
 STARTED.addTalkId(30120)
 STARTED.addTalkId(30191)
@@ -210,4 +212,8 @@ STARTED.addTalkId(30905)
 STARTED.addTalkId(31276)
 STARTED.addTalkId(31321)
 STARTED.addTalkId(31279)
-STARTED.addTalkId(31755)
+STARTED.addTalkId(31755)
+STARTED.addTalkId(31968)
+STARTED.addTalkId(32095)
+
+

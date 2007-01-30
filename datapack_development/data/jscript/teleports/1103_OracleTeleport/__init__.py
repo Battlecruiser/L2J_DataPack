@@ -20,6 +20,12 @@ ADEN_DAWN = 31084
 ADEN_DUSK = 31091
 HEINE_DAWN = 31082
 HEINE_DUSK = 31089
+GODDARD_DAWN = 31962
+GODDARD_DUSK = 31963
+RUNE_DAWN = 31964
+RUNE_DUSK = 31965
+SCHUTTGART_DAWN = 31997
+SCHUTTGART_DUSK = 31998
 
 class Quest (JQuest) :
 
@@ -78,6 +84,27 @@ class Quest (JQuest) :
      st.set("id", "7")   
      st.set("cabal", "2")
      return
+      
+    if npcId == GODDARD_DAWN: 
+     st.player.teleToLocation(-80157, 111344, -4901)
+     st.setState(STARTED)
+     st.set("id", "8")   
+     st.set("cabal", "2")
+     return
+
+    if npcId == RUNE_DAWN: 
+     st.player.teleToLocation(-80157, 111344, -4901)
+     st.setState(STARTED)
+     st.set("id", "9")   
+     st.set("cabal", "2")
+     return
+
+    if npcId == SCHUTTGART_DAWN: 
+     st.player.teleToLocation(-80157, 111344, -4901)
+     st.setState(STARTED)
+     st.set("id", "10")   
+     st.set("cabal", "2")
+     return
      
    ############
    # Dusk Locations #
@@ -132,6 +159,27 @@ class Quest (JQuest) :
         st.set("cabal", "1")
         return
 
+    if npcId == GODDARD_DUSK: 
+     	st.player.teleToLocation(-81261, 86531, -5157)
+     	st.setState(STARTED)
+     	st.set("id", "8")   
+     	st.set("cabal", "1")
+     	return
+
+    if npcId == RUNE_DUSK: 
+    	st.player.teleToLocation(-81261, 86531, -5157)
+     	st.setState(STARTED)
+     	st.set("id", "9")   
+     	st.set("cabal", "1")
+     	return
+
+    if npcId == SCHUTTGART_DUSK: 
+    	st.player.teleToLocation(-81261, 86531, -5157)
+     	st.setState(STARTED)
+     	st.set("id", "10")   
+     	st.set("cabal", "1")
+     	return
+     	
    ################
    # Oracle of Dusk/Dawn #
    ################
@@ -185,6 +233,27 @@ class Quest (JQuest) :
         st.exitQuest(1)
         return
 
+    # back to Goddard
+    if st.getInt("id") == 8:
+        st.player.teleToLocation(147928, -55273, -2734)
+        st.setState(COMPLETED)
+        st.exitQuest(1)
+        return
+
+    # back to Rune
+    if st.getInt("id") == 9:
+        st.player.teleToLocation(43799, -47727, -798)
+        st.setState(COMPLETED)
+        st.exitQuest(1)
+        return
+
+    # back to Schuttgart
+    if st.getInt("id") == 10:
+        st.player.teleToLocation(87386, -143246, -1293)
+        st.setState(COMPLETED)
+        st.exitQuest(1)
+        return
+        
 QUEST    = Quest(1103, "1103_OracleTeleport", "Teleports")
 CREATED    = State('Start', QUEST)
 STARTED    = State('Started', QUEST)
@@ -192,7 +261,7 @@ COMPLETED    = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 
-for i in range(31078,31092) :
+for i in range(31078,31092)+range(31692,31696)+range(31997,31999) :
     QUEST.addStartNpc(i)
     CREATED.addTalkId(i)
     STARTED.addTalkId(i)

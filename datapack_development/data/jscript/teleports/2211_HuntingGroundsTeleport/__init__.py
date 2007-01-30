@@ -9,6 +9,7 @@ GLUDIN_DAWN,GLUDIO_DAWN,DION_DAWN,GIRAN_DAWN,HEINE_DAWN,OREN_DAWN,ADEN_DAWN,\
 GLUDIN_DUSK,GLUDIO_DUSK,DION_DUSK,GIRAN_DUSK,HEINE_DUSK,OREN_DUSK,ADEN_DUSK = range(31078,31092)
 HW_DAWN,HW_DUSK = range(31168,31170)
 GODDARD_DAWN,GODDARD_DUSK,RUNE_DAWN,RUNE_DUSK = range(31692,31696)
+SCHUTTGART_DAWN,SCHUTTGART_DUSK = range(31997,31999)
 
 class Quest (JQuest) :
 
@@ -36,6 +37,8 @@ class Quest (JQuest) :
           htmltext = "hg_goddard.htm"
     elif npcId in [RUNE_DAWN,RUNE_DUSK] :
           htmltext = "hg_rune.htm"
+    elif npcId in [SCHUTTGART_DAWN,SCHUTTGART_DUSK] :
+          htmltext = "hg_schuttgart.htm"
     else:
     	  htmltext = "hg_wrong.htm"
     st.exitQuest(1)
@@ -46,7 +49,7 @@ CREATED    = State('Start', QUEST)
 
 QUEST.setInitialState(CREATED)
 
-for i in range(31078,31092)+range(31168,31170)+range(31692,31696) :
+for i in range(31078,31092)+range(31168,31170)+range(31692,31696)+range(31997,31999) :
    QUEST.addStartNpc(i)
    CREATED.addTalkId(i)
 
