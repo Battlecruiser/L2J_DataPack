@@ -26,6 +26,8 @@ RUNE_DAWN = 31964
 RUNE_DUSK = 31965
 SCHUTTGART_DAWN = 31997
 SCHUTTGART_DUSK = 31998
+HV_DAWN = 31168
+HV_DUSK = 31169
 
 class Quest (JQuest) :
 
@@ -106,6 +108,13 @@ class Quest (JQuest) :
      st.set("cabal", "2")
      return
      
+    if npcId == HV_DAWN: 
+     st.player.teleToLocation(-80157, 111344, -4901)
+     st.setState(STARTED)
+     st.set("id", "11")   
+     st.set("cabal", "2")
+     return
+     
    ############
    # Dusk Locations #
    ############
@@ -177,6 +186,13 @@ class Quest (JQuest) :
     	st.player.teleToLocation(-81261, 86531, -5157)
      	st.setState(STARTED)
      	st.set("id", "10")   
+     	st.set("cabal", "1")
+     	return
+     	
+    if npcId == HV_DUSK: 
+    	st.player.teleToLocation(-81261, 86531, -5157)
+     	st.setState(STARTED)
+     	st.set("id", "11")   
      	st.set("cabal", "1")
      	return
      	
@@ -254,6 +270,13 @@ class Quest (JQuest) :
         st.exitQuest(1)
         return
         
+    # back to Hunters Village
+    if st.getInt("id") == 11:
+        st.player.teleToLocation(116819, 76994, -2714)
+        st.setState(COMPLETED)
+        st.exitQuest(1)
+        return
+        
 QUEST    = Quest(1103, "1103_OracleTeleport", "Teleports")
 CREATED    = State('Start', QUEST)
 STARTED    = State('Started', QUEST)
@@ -261,7 +284,7 @@ COMPLETED    = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 
-for i in range(31078,31092)+range(31692,31696)+range(31997,31999) :
+for i in range(31078,31092)+range(31168,31170)+range(31692,31696)+range(31997,31999) :
     QUEST.addStartNpc(i)
     CREATED.addTalkId(i)
     STARTED.addTalkId(i)
