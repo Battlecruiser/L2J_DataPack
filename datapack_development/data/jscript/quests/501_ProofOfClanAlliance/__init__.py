@@ -86,7 +86,6 @@ def autochat(npc,text) :
     chars = npc.getKnownList().getKnownPlayers().values().toArray()
     if chars != None:
        for pc in chars :
-          pc = list.next()
           sm = CreatureSay(npc.getObjectId(), 0, npc.getName(), text)
           pc.sendPacket(sm)
 
