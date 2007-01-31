@@ -20,7 +20,7 @@ ALT_RP_100=0
 MSTONE,K_HORN,CH_SKULL=range(5887,5890)
 
 #Quest collections
-REWARDS = [5340]+range(5346,5355,2)
+REWARDS = range(5346,5355,2)
 
 #Messages
 default   = "<html><head><body>I have nothing to say to you.</body></html>"
@@ -38,10 +38,13 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30515-6.htm" :
-       st.takeItems(MSTONE,1)
-       st.setState(STARTED)
-       st.set("cond","1")
-       st.playSound("ItemSound.quest_accept")
+       if st.getQuestItemsCount(MSTONE):
+         st.takeItems(MSTONE,1)
+         st.setState(STARTED)
+         st.set("cond","1")
+         st.playSound("ItemSound.quest_accept")
+       else:
+         htmltext=default
     elif event == "30515-7.htm" :
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(1)
@@ -67,7 +70,6 @@ class Quest (JQuest) :
          if ALT_RP_100 : item += 1
          st.giveItems(item,1)
          htmltext="30515-4.htm"
-         st.exitQuest(1)
       else :
          htmltext = "30515-5.htm"
    return htmltext
