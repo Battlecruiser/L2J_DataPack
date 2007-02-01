@@ -17,7 +17,7 @@ JADE_CRYSTAL = 5867
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
+ def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -64,9 +64,9 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")	
    return
 
-QUEST       = Quest(357,"357_WarehouseKeepersAmbition","Warehouse Keepers Ambition",True)
+QUEST       = Quest(357,"357_WarehouseKeepersAmbition","Warehouse Keepers Ambition")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
+STARTED     = State('Started', QUEST,True)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(SILVA)

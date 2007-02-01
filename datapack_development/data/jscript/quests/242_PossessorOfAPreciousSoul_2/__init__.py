@@ -31,7 +31,7 @@ RESTRAINER_OF_GLORY = 27317
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
+ def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -180,9 +180,9 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_itemget")
     return 
 
-QUEST       = Quest(242,"242_PossessorOfAPreciousSoul_2","Possessor Of A Precious Soul - 2",True)
+QUEST       = Quest(242,"242_PossessorOfAPreciousSoul_2","Possessor Of A Precious Soul - 2")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
+STARTED     = State('Started', QUEST,True)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
