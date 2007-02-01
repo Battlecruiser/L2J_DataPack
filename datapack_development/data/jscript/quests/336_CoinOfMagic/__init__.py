@@ -141,7 +141,7 @@ class Quest (JQuest) :
     elif event == "30702-02.htm":
        st.set("cond","2")
     elif event == "30232-05.htm" :
-       st.setState(STARTED)
+       st.setState(SOLO)
        st.playSound("ItemSound.quest_accept")
        st.giveItems(COIN_DIAGRAM,1)
        st.set("cond","1")
@@ -306,6 +306,7 @@ class Quest (JQuest) :
               st.takeItems(KALDIS_COIN,-1)
               st.takeItems(COIN_DIAGRAM,-1)
               st.giveItems(MEMBERSHIP_3,1)
+              st.setState(PARTY)
               st.set("grade","3")
               st.set("cond","4")
               st.playSound("ItemSound.quest_fanfare_middle")
@@ -331,7 +332,7 @@ class Quest (JQuest) :
  def onKill (self,npc,st) :
    cond=st.getInt("cond")
    grade=st.getInt("grade")
-   chance=int((npc.getLevel() - grade * 3 - 20)
+   chance=int(npc.getLevel() - grade * 3 - 20)
    npcId=npc.getNpcId()
    item=DROP_LIST[npcId][0]
    random = st.getRandom(100)
@@ -349,7 +350,8 @@ class Quest (JQuest) :
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
 CREATED     = State('Start',     QUEST)
-STARTED     = State('Started',   QUEST,True)
+SOLO        = State('Solo',   QUEST)
+PARTY       = State('Party',   QUEST,True)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
@@ -359,13 +361,21 @@ QUEST.addStartNpc(SORINT)
 # Quest initialization
 CREATED.addTalkId(SORINT)
 
+SOLO.addTalkId(SORINT)
+SOLO.addTalkId(BERNARD)
+
 for npc in [SORINT, BERNARD, PAGE, HAGGER, STAN, RALFORD, FERRIS, COLLOB, PANO, DUNING, LORAIN]:
-   STARTED.addTalkId(npc)
+   PARTY.addTalkId(npc)
 
 for mob in DROP_LIST.keys():
-   STARTED.addKillId(mob)
+   if mob in [HARITMATR, HARITSHA]:
+      SOLO.addKillId(mob)
+   else :
+      PARTY.addKillId(mob)
 
-for item in range(3472,3499)+range(3811,3816):
-   STARTED.addQuestDrop(SORINT,item,1)
+SOLO.addQuestDrop(SORINT,3811,1)
+SOLO.addQuestDrop(SORINT,3812,1)
+for item in range(3472,3499)+range(3813,3816):
+   PARTY.addQuestDrop(SORINT,item,1)
 
 print "importing quests: "+str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION
