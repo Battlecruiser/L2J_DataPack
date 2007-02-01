@@ -17,7 +17,7 @@ REWARDS = [[6849,25000],[6847,65000],[6851,25000],[0,73000]]
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
+ def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onEvent (self,event,st) :
    cond = st.getInt("cond")
@@ -75,9 +75,9 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(623,"623_TheFinestFood","The Finest Food",True)
+QUEST       = Quest(623,"623_TheFinestFood","The Finest Food")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
+STARTED     = State('Started', QUEST,True)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(JEREMY)

@@ -4,8 +4,6 @@
 QUEST_NUMBER      = 336
 QUEST_NAME        = "CoinOfMagic"
 QUEST_DESCRIPTION = "Coins of Magic"
-#Configuration
-
 #Messages
 default = "<html><head><body>I have nothing to say to you.</body></html>"
 
@@ -93,7 +91,6 @@ TRADE_LIST={
     }
 
 import sys
-from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -125,7 +122,7 @@ def promote(st) :
 # main code
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
+ def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -334,7 +331,7 @@ class Quest (JQuest) :
  def onKill (self,npc,st) :
    cond=st.getInt("cond")
    grade=st.getInt("grade")
-   chance=int((npc.getLevel() - grade * 3 - 20)*Config.RATE_DROP_QUEST)
+   chance=int((npc.getLevel() - grade * 3 - 20)
    npcId=npc.getNpcId()
    item=DROP_LIST[npcId][0]
    random = st.getRandom(100)
@@ -350,9 +347,9 @@ class Quest (JQuest) :
    return  
 
 # Quest class and state definition
-QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION,True)
+QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
 CREATED     = State('Start',     QUEST)
-STARTED     = State('Started',   QUEST)
+STARTED     = State('Started',   QUEST,True)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)

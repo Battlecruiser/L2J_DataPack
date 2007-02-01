@@ -27,7 +27,7 @@ CHANCE_FOR_DROP = 5
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
+ def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -126,9 +126,9 @@ class Quest (JQuest) :
        st.set("cond","5")
    return 
 
-QUEST       = Quest(246,"246_PossessorOfAPreciousSoul_3","Possessor Of A Precious Soul - 3",True)
+QUEST       = Quest(246,"246_PossessorOfAPreciousSoul_3","Possessor Of A Precious Soul - 3")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
+STARTED     = State('Started', QUEST,True)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)

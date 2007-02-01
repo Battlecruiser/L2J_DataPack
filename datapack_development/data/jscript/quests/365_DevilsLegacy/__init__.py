@@ -15,7 +15,7 @@ TREASURE_CHEST = 5873
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
+ def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -60,9 +60,9 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(365,"365_DevilsLegacy","Devil's Legacy",True)
+QUEST       = Quest(365,"365_DevilsLegacy","Devil's Legacy")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
+STARTED     = State('Started', QUEST,True)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(RANDOLF)

@@ -55,7 +55,7 @@ def partial(st) :
     for y in range(0,7,3) :
         html +="<tr>"
         for x in range(3) :
-	    html+="<td align=center>"+chosen[x+y]+"</td>"
+            html+="<td align=center>"+chosen[x+y]+"</td>"
         html +="</tr>"
     html += footer
     return html
@@ -80,7 +80,7 @@ def result(st) :
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
+ def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -174,9 +174,9 @@ class Quest (JQuest) :
      return  
 
 # Quest class and state definition
-QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION,True)
+QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
 CREATED     = State('Start',     QUEST)
-STARTED     = State('Started',   QUEST)
+STARTED     = State('Started',   QUEST,True)
 
 QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization

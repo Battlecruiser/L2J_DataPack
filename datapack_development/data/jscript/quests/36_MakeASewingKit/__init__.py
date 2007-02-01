@@ -11,7 +11,7 @@ SEWING_KIT = 7078
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
+ def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -60,9 +60,9 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")	
    return
 
-QUEST       = Quest(36,"36_MakeASewingKit","Make A Sewing Kit",True)
+QUEST       = Quest(36,"36_MakeASewingKit","Make A Sewing Kit")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
+STARTED     = State('Started', QUEST,True)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30847)

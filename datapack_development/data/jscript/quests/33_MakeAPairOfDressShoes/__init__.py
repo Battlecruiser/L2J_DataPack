@@ -11,7 +11,7 @@ DRESS_SHOES_BOX = 7113
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
+ def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -71,9 +71,9 @@ class Quest (JQuest) :
      htmltext = "30838-6.htm"
    return htmltext
 
-QUEST       = Quest(33,"33_MakeAPairOfDressShoes","Make A Pair Of Dress Shoes",True)
+QUEST       = Quest(33,"33_MakeAPairOfDressShoes","Make A Pair Of Dress Shoes")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
+STARTED     = State('Started', QUEST,True)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30838)

@@ -12,7 +12,7 @@ MYSTERIOUS_CLOTH = 7076
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr,party): JQuest.__init__(self,id,name,descr,party)
+ def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -84,9 +84,9 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")	
    return
 
-QUEST       = Quest(34,"34_InSearchOfClothes","In Search of Clothes",True)
+QUEST       = Quest(34,"34_InSearchOfClothes","In Search of Clothes")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
+STARTED     = State('Started', QUEST,True)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30088)
