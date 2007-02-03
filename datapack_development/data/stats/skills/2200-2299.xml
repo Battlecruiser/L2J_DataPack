@@ -630,19 +630,27 @@
   <for>
   </for>
 </skill>
-<skill id="2274" levels="8" name="Fisherman's Potions">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="2274" levels="9" name="Fisherman's Potion">
+  <table name="#power"> 2 5 8 11 14 17 20 23 26 </table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
   <set name="castRange" val="-1"/>
+  <set name="isPotion" val="true"/>
   <for>
+    <effect name="Buff" time="3600" count="1" val="0" stackOrder="20" stackType="fishPot" />
   </for>
 </skill>
-<skill id="2275" levels="1" name="Fisherman's Recovery Potion">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="2275" levels="1" name="Fishing Potion">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="NEGATE"/>
+  <set name="isPotion" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="negatePower" val="-1"/>
+  <set name="negateId" val="1315"/>
   <for>
   </for>
 </skill>

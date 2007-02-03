@@ -1318,16 +1318,18 @@
   </for>
 </skill>
 <skill id="4382" levels="12" name="Curse of Lake Ghost">
-  <!--- TODO -->
   <table name="#mpConsume"> 14 22 31 43 55 68 79 84 89 92 94 95 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1000"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="skillTime" val="1000"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
+    <effect count="1" name="BigHead" time="300" val="0" abnormal="bighead"/>
   </for>
 </skill>
 <skill id="4383" levels="1" name="NPC Hate Stone">
