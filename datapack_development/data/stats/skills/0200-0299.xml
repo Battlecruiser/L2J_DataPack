@@ -725,7 +725,9 @@
 </skill>
 <skill id="254" levels="11" name="Spoil">
   <table name="#mpConsume"> 12 19 25 31 38 44 50 55 59 63 67 </table>
+  <table name="#magicLvl"> 10 20 28 36 43 49 55 60 64 68 72 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1800"/>
