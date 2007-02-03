@@ -303,7 +303,7 @@
   <for>
   </for>
 </skill>
-<skill id="1222" levels="15" name="Curse Chaos" enchantLevels1="30" enchantLevels2="30">
+<skill id="1222" levels="15" name="Curse Chaos" enchantLevels1="30" enchantLevels2="30" >
   <table name="#ench2MpConsume"> 67 67 66 66 65 65 63 63 62 62 61 61 60 60 58 58 57 57 56 56 55 55 53 53 52 52 51 51 50 50 </table>
   <!--table name="#ench2MpConsume_Init">  </table-->
   <table name="#mpConsume_Init"> 3 7 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
@@ -336,7 +336,7 @@
     </effect> 
   </for>
 </skill>
-<skill id="1223" levels="15" name="Surrender To Earth" enchantLevels1="30" enchantLevels2="30">
+<skill id="1223" levels="15" name="Surrender To Earth" enchantLevels1="30" enchantLevels2="30" >
   <table name="#ench2MpConsume"> 67 67 66 66 65 65 63 63 62 62 61 61 60 60 58 58 57 57 56 56 55 55 53 53 52 52 51 51 50 50 </table>
   <!--table name="#ench2MpConsume_Init">  </table-->
   <table name="#mpConsume_Init"> 3 7 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
@@ -371,7 +371,7 @@
     </effect>
   </for>
 </skill>
-<skill id="1224" levels="17" name="Surrender To Poison" enchantLevels1="30" enchantLevels2="30">
+<skill id="1224" levels="17" name="Surrender To Poison" enchantLevels1="30" enchantLevels2="30" >
   <table name="#ench2MpConsume"> 67 67 66 66 65 65 63 63 62 62 61 61 60 60 58 58 57 57 56 56 55 55 53 53 52 52 51 51 50 50 </table>
   <!--table name="#ench2MpConsume_Init">  </table-->
   <table name="#mpConsume_Init"> 3 3 3 7 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
@@ -671,14 +671,14 @@
   <for>
   </for>
 </skill>
-<skill id="1235" levels="28" name="Hydro Blast" enchantLevels1="30" enchantLevels2="30">
+<skill id="1235" levels="28" name="Hydro Blast" enchantLevels1="30" enchantLevels2="30" >
   <table name="#ench2MpConsume"> 67 66 65 63 63 62 61 60 60 58 57 56 55 55 53 52 51 51 50 48 47 47 46 45 43 42 42 41 40 38 </table>
   <!--table name="#ench2MpConsume_Init">  </table-->
   <table name="#mpConsume_Init"> 7 7 8 8 9 9 9 10 10 11 11 11 11 11 12 12 12 12 12 13 13 13 13 13 14 14 14 14 </table>
   <table name="#mpConsume"> 27 28 30 31 33 35 36 38 39 41 42 43 44 44 45 46 47 48 48 49 50 51 51 52 53 53 54 55 </table>
   <table name="#magicLvl"> 38 40 42 44 46 48 50 52 54 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#power"> 49.0 52.0 55.0 58.0 61.0 65.0 68.0 72.0 75.0 78.0 80.0 82.0 84.0 85.0 87.0 89.0 90.0 92.0 94.0 96.0 97.0 99.0 100.0 102.0 104.0 105.0 107.0 108.0 </table>
-  <table name="#ench1Power"> 109 109 110 111 111 112 113 113 114 115 115 116 117 118 118 119 120 120 121 122 122 123 124 124 125 125 126 127 127 </table>
+  <table name="#ench1Power"> 109 109 110 111 111 112 113 113 114 115 115 116 116 117 118 118 119 120 120 121 122 122 123 124 124 125 125 126 127 127 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -699,7 +699,7 @@
   <for>
   </for>
 </skill>
-<skill id="1236" levels="19" name="Frost Bolt" enchantLevels1="30" enchantLevels2="30">
+<skill id="1236" levels="19" name="Frost Bolt" enchantLevels1="30" enchantLevels2="30" >
   <table name="#ench2MpConsume"> 67 66 65 63 63 62 61 60 60 58 57 56 55 55 53 52 51 51 50 48 47 47 46 45 43 42 42 41 40 38 </table>
   <!--table name="#ench2MpConsume_Init">  </table-->
   <table name="#mpConsume_Init"> 7 7 8 8 9 9 9 10 10 11 11 11 12 12 13 13 13 14 14 </table>
@@ -734,7 +734,7 @@
     </effect>
   </for>
 </skill>
-<skill id="1237" levels="17" name="Ice Dagger" enchantLevels1="30" enchantLevels2="30">
+<skill id="1237" levels="17" name="Ice Dagger" enchantLevels1="30" enchantLevels2="30" >
   <table name="#ench2MpConsume"> 70 70 68 67 66 65 65 63 62 61 60 60 58 57 56 55 53 53 52 51 50 48 48 47 46 45 43 43 42 41 </table>
   <!--table name="#ench2MpConsume_Init">  </table-->
   <table name="#mpConsume_Init"> 8 8 9 9 10 10 11 11 11 12 12 13 13 13 14 14 15 </table>
@@ -918,7 +918,7 @@
   </for>
 </skill>
 <skill id="1245" levels="14" name="Steal Essence" enchantLevels1="30" enchantLevels2="30" >
-  <table name="#ench2MpConsume"> 133 132 130 128 126 123 122 121 118 116 115 112 111 108 107 105 103 101 98 97 95 93 91 90 87 86 83 82 80 77 </table>
+  <table name="#ench2MpConsume"> 173 172 170 167 165 162 160 157 155 152 151 148 146 143 141 138 136 133 132 130 127 125 122 120 117 115 113 111 108 106 </table>
   <!--table name="#ench2MpConsume_init"-->
   <table name="#mpConsume_Init"> 18 21 23 25 27 28 29 30 31 32 34 34 35 36 </table>
   <table name="#mpConsume"> 74 79 89 97 106 110 115 119 123 127 130 135 138 141 </table>
@@ -1621,7 +1621,7 @@
   <for>
   </for>
 </skill>
-<skill id="1275" levels="14" name="Aura Bolt" enchantLevels1="30" enchantLevels2="30">
+<skill id="1275" levels="14" name="Aura Bolt" enchantLevels1="30" enchantLevels2="30" >
   <table name="#ench2MpConsume"> 33 33 32 32 31 31 31 30 30 30 28 28 27 27 27 26 26 25 25 25 23 23 23 22 22 21 21 21 20 20 </table>
   <!--table name="#ench2MpConsume_Init">  </table-->
   <table name="#mpConsume_Init"> 4 4 5 5 6 6 6 6 6 7 7 7 7 7 </table>
@@ -2075,7 +2075,7 @@
   <for>
   </for>
 </skill>
-<skill id="1295" levels="9" name="Aqua Splash" enchantLevels1="30" enchantLevels2="30">
+<skill id="1295" levels="9" name="Aqua Splash" enchantLevels1="30" enchantLevels2="30" >
   <table name="#ench2MpConsume"> 100 98 97 96 95 93 92 90 88 87 86 85 83 81 80 78 77 76 75 73 61 61 62 62 62 63 63 63 64 64 </table>
   <!--table name="#ench2MpConsume_Init">  </table-->
   <table name="#mpConsume_Init"> 16 17 18 18 19 19 20 20 21 </table>
