@@ -103,10 +103,13 @@
   <for>
   </for>
 </skill>
-<skill id="1306" levels="6" name="Ritual of Life">
+<skill id="1306" levels="6" name="Ritual of Life" enchantLevels1="30" enchantLevels2="30" >
+  <table name="#ench2MpConsume"> 118 117 116 115 113 112 111 110 108 107 107 106 105 103 102 101 100 98 97 96 95 95 93 92 91 90 88 87 86 85 </table>
+  <!-- table name="#ench2MpConsume_Init"> </table--> <!-- need to split enchant2 values to 2 tables -->
   <table name="#mpConsume_Init"> 21 22 23 23 24 24 </table>
   <table name="#mpConsume"> 83 86 89 91 93 96 </table>
   <table name="#rateCp"> 745 767 789 811 834 858 </table>
+  <table name="#ench1Power"> 863 867 871 875 880 884 888 892 897 901 905 909 913 918 922 926 930 935 939 943 947 952 956 960 964 969 973 977 981 986 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#rateCp"/>
@@ -119,6 +122,9 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
+  <!-- enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/-->
   <for>
   </for>
 </skill>
