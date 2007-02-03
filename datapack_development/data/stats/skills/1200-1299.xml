@@ -355,7 +355,7 @@
   <set name="hitTime" val="1500"/>
   <set name="reuseDelay" val="8000"/>
   <set name="skillTime" val="1500"/>
-  <set name="skillType" val=""/>
+  <set name="skillType" val="WEAKNESS"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="15000"/>
@@ -742,7 +742,6 @@
   <table name="#magicLvl"> 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 </table>
   <table name="#power"> 28 31 33 34 36 38 39 41 43 45 46 48 50 51 53 54 55 </table>
   <table name="#bleeddmg"> 22 22 22 22 27 27 27 27 27 27 27 27 27 27 27 27 27 </table>
-  <table name="#power"> 30.0 31.0 33.0 35.0 37.0 39.0 41.0 43.0 45.0 47.0 49.0 51.0 53.0 56.0 58.0 59.0 61.0 63.0 65.0 </table>
   <table name="#ench1Power"> 55 55 55 56 56 56 57 57 57 58 58 58 58 59 59 59 60 60 60 61 61 61 62 62 62 63 63 63 64 64 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
