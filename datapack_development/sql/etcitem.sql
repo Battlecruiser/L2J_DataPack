@@ -6456,7 +6456,7 @@ INSERT INTO `etcitem` (`item_id`,`name`,`crystallizable`,`item_type`,`weight`,`c
  (8370,'Recipe: Red Horn of Victory (100%)','false','recipe','30','stackable','paper','none','0','0',0,'true','C5Item','none'),
  (8371,'Recipe: Little Angel Wing (100%)','false','recipe','30','stackable','paper','none','0','0',0,'true','C5Item','none'),
  (8372,'Recipe: Fairy Antennae (100%)','false','recipe','30','stackable','paper','none','0','0',0,'true','C5Item','none'),
- (8373,'Party Hat Fabric','false','recipe','30','stackable','paper','none','0','0',0,'true','C5Item','none'),
+ (8373,'Party Hat Fabric','false','material','60','stackable','paper','none','0','0',0,'true','C5Item','none'),
  (8374,'Feathered Hat Fabric','false','material','60','stackable','paper','none','0','0',0,'true','C5Item','none'),
  (8375,'Artisan\'s Goggles Fabric','false','material','60','stackable','paper','none','0','0',0,'true','C5Item','none'),
  (8376,'Red Horn of Victory Fragment','false','material','60','stackable','paper','none','0','0',0,'true','C5Item','none'),
