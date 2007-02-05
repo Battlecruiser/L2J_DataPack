@@ -226,7 +226,8 @@ class Quest (JQuest) :
 			try:
 				members = st.getPlayer().getClan().getOnlineMembers("")[0]
 				for i in members:
-					st.getPlayer().getClan().getClanMember(int(i)).getPlayerInstance().setQuestState(PROGRESS)
+					pst = QuestManager.getInstance().getQuest(qn).newQuestState(st.getPlayer().getClan().getClanMember(int(i)).getPlayerInstance())
+					pst.setState(PROGRESS)
 			except:
 				return htmltext
 # Events Kurtz
