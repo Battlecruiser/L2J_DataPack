@@ -41,6 +41,9 @@ ExchangeList={
 144:["Sword of Occult", "weapon_sword_of_occult_i0"],
 2499:["Elven Long Sword", "weapon_elven_long_sword_i0"],
 5285:["Heavy Sword", "weapon_heavy_sword_i0"],
+7881:["Titan Sword", "weapon_giants_sword_i0"],
+7885:["Priest Sword", "weapon_sword_of_priest_i0"],
+7886:["Sword of Magic Fog", "weapon_sword_of_magic_fog_i0"],
 # Swords C grade
 71:["Flamberge", "weapon_flamberge_i0"],
 72:["Stormbringer", "weapon_stormbringer_i0"],
@@ -57,6 +60,9 @@ ExchangeList={
 135:["Samurai Longsword", "weapon_samurai_longsword_i0"],
 145:["Sword of Whispering Death", "weapon_deathbreath_sword_i0"],
 5286:["Berserker Blade", "weapon_berserker_blade_i0"],
+7882:["Sword of Pa'agrio", "weapon_sword_of_paagrio_i0"],
+7887:["Mysterious Sword", "weapon_mystery_sword_i0"],
+7888:["Ecliptic Sword", "weapon_sword_of_eclipse_i0"],
 # Blunts D grade
 86:["Tomahawk", "weapon_tomahawk_i0"],
 88:["Morning Star", "weapon_morning_star_i0"],
@@ -83,6 +89,8 @@ ExchangeList={
 188:["Ghost Staff", "weapon_goathead_staff_i0"],
 189:["Staff of Life", "weapon_life_stick_i0"],
 190:["Atuba Mace", "weapon_atuba_mace_i0"],
+7896:["Titan Hammer", "weapon_giants_hammer_i0"],
+7890:["Priest Mace", "weapon_mace_of_priest_i0"],
 # Blunts C grade
 89:["Big Hammer", "weapon_big_hammer_i0"],
 160:["Battle Axe", "weapon_battle_axe_i0"],
@@ -108,6 +116,9 @@ ExchangeList={
 206:["Demon's Staff", "weapon_demons_staff_i0"],
 2502:["Dwarven War Hammer", "weapon_dwarven_warhammer_i0"],
 2503:["Yaksa Mace", "weapon_yaksa_mace_i0"],
+7897:["Dwarven Hammer", "weapon_dwarven_hammer_i0"],
+7898:["Karik Horn", "weapon_horn_of_karik_i0"],
+7891:["Ecliptic Axe", "weapon_eclipse_axe_i0"],
 # Pole D grade
 93:["Winged Spear", "weapon_winged_spear_i0"],
 291:["Trident", "weapon_trident_i0"],
