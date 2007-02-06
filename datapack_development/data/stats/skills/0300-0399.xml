@@ -280,7 +280,7 @@
     <effect count="1" name="ImobileBuff" time="120" val="0">
       <add order="0x40" stat="pAtk" val="#pAtk"/>
       <add order="0x40" stat="accCombat" val="#accCombat"/>
-      <add order="0x40" stat="rCrit" val="20"/>
+      <mul order="0x30" stat="rCrit" val="1.2"/>
       <add order="0x40" stat="pAtkRange" val="300"/>
     </effect>
   </for>
