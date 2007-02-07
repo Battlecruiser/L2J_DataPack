@@ -322,8 +322,6 @@ class Quest (JQuest):
               st.set("cond","8")
               if progress == 19 :
                  st.giveItems(3500+st.getRandom(3),1)
-                 st.setState(COMPLETED)
-                 st.clearQuestDrops()
                  st.exitQuest(True)
                  st.playSound("ItemSound.quest_finish")
                  return "420_mymyu_15.htm"
@@ -356,9 +354,12 @@ class Quest (JQuest):
   def onTalk (self,npc,st):
     id   = st.getState()
     npcid = npc.getNpcId()
-    if id != CREATED : progress = int(st.get("progress"))
+    if id == COMPLETED:
+       st.setState(CREATED)
+       id = CREATED
+    progress = st.getInt("progress")
     if npcid == PM_COOPER :
-      if id == CREATED :
+      if id == COMPLETED :
         return check_level(st)
       elif id == STARTING and progress == 0 :
         return "Starting.htm"
@@ -541,6 +542,7 @@ STARTED.addKillId(BO_OVERLD)
 
 # Quest NPC initialization
 CREATED.addTalkId(PM_COOPER)
+COMPLETED.addTalkId(PM_COOPER)
 
 STARTING.addTalkId(PM_COOPER)
 STARTING.addTalkId(SG_CRONOS)
