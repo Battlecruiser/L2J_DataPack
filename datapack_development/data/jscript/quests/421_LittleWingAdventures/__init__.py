@@ -46,10 +46,10 @@ CONTROL_ITEMS = { 3500:4422, 3501:4423, 3502:4424 }
 SG_CRONOS = 30610
 FY_MYMYU  = 30747
 #NpcId, bitmask, spawnX,spawnY,spawnZ,msg1,msg2
-FAIRY_TREES = [ [27185,1,128091,90400,-1998,ftm_11,ftm_12],
-                [27186,2,117935,94080,-2096,ftm_21,ftm_22],
-                [27187,4,113449,93928,-2072,ftm_31,ftm_32],
-                [27188,8,106685,92608,-2162,ftm_41,ftm_42] ]
+FAIRY_TREES = [ [27185,1,113356,93848,-2072,ftm_11,ftm_12],
+                [27186,2,117733,94108,-2068,ftm_21,ftm_22],
+                [27187,4,127714,90495,-2095,ftm_31,ftm_32],
+                [27188,8,106671,93905,-2070,ftm_41,ftm_42] ]
 #Mobs
 GUARDIAN = 27189
 
@@ -105,6 +105,9 @@ class Quest (JQuest) :
  def onTalk (self,npc,st):
    htmltext = default
    id = st.getState()
+   if id == COMPLETED :
+      st.setState(CREATED)
+      id = CREATED
    npcid = npc.getNpcId()
    if st.getPlayer().getPet() == None :
        htmltext = error_1
@@ -140,9 +143,6 @@ class Quest (JQuest) :
         else :
             htmltext = qston_3
      elif id == STARTED :
-        st.setState(COMPLETED)
-        st.exitQuest(1)
-        st.playSound("ItemSound.quest_finish")
         name = st.getPlayer().getPet().getName()
         if name == None : name = " "
         else : name = " "+name+" "
@@ -150,6 +150,8 @@ class Quest (JQuest) :
         item=CONTROL_ITEMS[st.getPlayer().getInventory().getItemByObjectId(st.getPlayer().getPet().getControlItemId()).getItemId()]
         st.getPlayer().getPet().deleteMe(st.getPlayer()) #both despawn pet and delete controlitem
         st.giveItems(item,1)
+        st.exitQuest(1)
+        st.playSound("ItemSound.quest_finish")
    else:
      leafs = st.getQuestItemsCount(FT_LEAF)
      if 0 < leafs :
@@ -177,6 +179,7 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(SG_CRONOS)
 # Quest initialization
 CREATED.addTalkId(SG_CRONOS)
+COMPLETED.addTalkId(SG_CRONOS)
 
 STARTING.addTalkId(SG_CRONOS)
 STARTING.addTalkId(FY_MYMYU)
