@@ -341,12 +341,12 @@ class Quest (JQuest):
                  htmltext = "420_mymyu_14.htm"
               st.giveItems(3500+st.getRandom(3),1)
               st.giveItems(extra,qty)
-              st.exitQuest(1)
+              st.exitQuest(True)
               st.playSound("ItemSound.quest_finish")
               return htmltext
          elif event == "no_dust" :
               st.giveItems(3500+st.getRandom(3),1)
-              st.exitQuest(1)
+              st.exitQuest(True)
               st.playSound("ItemSound.quest_finish")
               return "420_mymyu_12.htm"
 
