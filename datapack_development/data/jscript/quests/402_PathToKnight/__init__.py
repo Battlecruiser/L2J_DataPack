@@ -91,7 +91,7 @@ class Quest (JQuest) :
         else:
           htmltext=default
     elif event == "30417-13.htm" :
-        if squire and (coin1+coin2+coin3+coin4+coin5+coin6)>3 :
+        if squire and (coin1+coin2+coin3+coin4+coin5+coin6)>=3 :
           for item in range(1162,1180) :
                st.takeItems(item,-1)
           st.takeItems(MARK_OF_ESQUIRE,-1)
@@ -102,7 +102,7 @@ class Quest (JQuest) :
         else:
           htmltext=default
     elif event == "30417-14.htm" :
-        if squire and (coin1+coin2+coin3+coin4+coin5+coin6)>3 :
+        if squire and (coin1+coin2+coin3+coin4+coin5+coin6)>=3 :
           for item in range(1162,1180) :
                st.takeItems(item,-1)
           st.takeItems(MARK_OF_ESQUIRE,-1)
