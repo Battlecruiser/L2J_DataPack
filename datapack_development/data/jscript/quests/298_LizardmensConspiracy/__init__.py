@@ -54,7 +54,7 @@ class Quest (JQuest) :
 
  def onKill (self,npc,st):
    npcId = npc.getNpcId()
-   if npcId in [20925,20926] :
+   if npcId in [20926,20927] :
      count = st.getQuestItemsCount(SHINING_RED_GEM)
      if count < 50 :
        st.giveItems(SHINING_RED_GEM,1)
@@ -76,7 +76,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(298,"298_LizardmensConspiracy","Lizardmen's Conspiracy")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
+STARTED     = State('Started', QUEST, True)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30333)
@@ -85,10 +85,10 @@ CREATED.addTalkId(30333)
 STARTED.addTalkId(30333)
 STARTED.addTalkId(30344)
 
-for i in range(20922,20927) :
+for i in range(20922,20928) :
     STARTED.addKillId(i)
 
-STARTED.addQuestDrop(20925,SHINING_RED_GEM,1)
+STARTED.addQuestDrop(20926,SHINING_RED_GEM,1)
 STARTED.addQuestDrop(20924,SHINING_GEM,1)
 
 print "importing quests: 298: Lizardmen's Conspiracy"
