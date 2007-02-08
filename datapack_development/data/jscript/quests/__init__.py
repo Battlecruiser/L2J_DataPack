@@ -205,6 +205,7 @@ __all__ = [
 '503_PursuitClanAmbition',
 '601_WatchingEyes',
 '602_ShadowOfLight',
+'605_AllianceWithKetraOrcs',
 '621_EggDelivery',
 '622_DeliveryOfSpecialLiquor',
 '623_TheFinestFood',
