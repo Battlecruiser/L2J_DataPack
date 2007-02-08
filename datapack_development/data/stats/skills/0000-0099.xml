@@ -1667,7 +1667,10 @@
 </skill>
 <skill id="94" levels="2" name="Rage">
   <!-- Done by dc -->
-  <table name="#Tab-pAtk"> 1.45 1.55 </table>
+  <table name="#swordblunt"> 1.45 1.55 </table>
+  <table name="#twohands"> 1.55 1.64 </table>
+  <table name="#other"> 1.15 1.20 </table>
+  <table name="#Tab-accCombat"> 2 4 </table>
   <table name="#Tab-pDef"> 0.8 0.8 </table>
   <table name="#Tab-rEvas"> 3 3 </table>
   <table name="#mpConsume"> 11 25 </table>
@@ -1685,10 +1688,28 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0" stackOrder="#uprate" stackType="pAtks">
-	  <!-- effects in here depend on weapon type equipped - to be done -->
-      <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
       <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
       <sub order="0x40" stat="rEvas" val="#Tab-rEvas"/>
+      <add order="0x40" stat="accCombat" val="#Tab-accCombat">
+       <and>
+          <using kind="Big Sword,Big Blunt"/>
+       </and>
+      </add>
+      <mul order="0x30" stat="pAtk" val="#swordblunt">
+       <and>       
+         <using kind="Sword,Blunt"/>
+       </and>
+      </mul>
+      <mul order="0x30" stat="pAtk" val="#twohands">
+        <and>
+         <using kind="Big Sword,Big Blunt"/>
+       </and>
+      </mul>
+      <mul order="0x30" stat="pAtk" val="#other">
+        <and>
+          <using kind="Dual Fist,Dual Sword,Fist,Etc,Pole,Bow,Dagger"/>
+        </and>
+      </mul>
     </effect>
   </for>
 </skill>
