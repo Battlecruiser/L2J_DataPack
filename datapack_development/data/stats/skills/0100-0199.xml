@@ -867,7 +867,10 @@
 </skill>
 <skill id="176" levels="3" name="Frenzy">
   <!-- Done by dc, completed by NewAge -->
-  <table name="#Tab-pAtk"> 2.0 2.5 3.0 </table>
+  <table name="#swordblunt"> 2.0 2.5 3.0 </table>
+  <table name="#twohands"> 2.5 3.0 4.0 </table>
+  <table name="#other"> 1.15 1.20 1.25 </table>
+  <table name="#Tab-accCombat"> 4 4 4 </table>
   <table name="#mpConsume"> 14 21 25 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -886,8 +889,26 @@
   </cond>
   <for>
     <effect name="Buff" time="90" count="1" val="0" stackOrder="1" stackType="OrcBuff">
-      <!-- effects in here depend on weapon type equipped - to be done -->
-	  <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
+      <add order="0x40" stat="accCombat" val="#Tab-accCombat">
+       <and>
+          <using kind="Big Sword,Big Blunt"/>
+       </and>
+      </add>
+      <mul order="0x30" stat="pAtk" val="#swordblunt">
+       <and>       
+         <using kind="Sword,Blunt"/>
+       </and>
+      </mul>
+      <mul order="0x30" stat="pAtk" val="#twohands">
+        <and>
+         <using kind="Big Sword,Big Blunt"/>
+       </and>
+      </mul>
+      <mul order="0x30" stat="pAtk" val="#other">
+        <and>
+          <using kind="Dual Fist,Dual Sword,Fist,Etc,Pole,Bow,Dagger"/>
+        </and>
+      </mul>
     </effect>
   </for>
 </skill>
