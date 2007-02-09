@@ -5,7 +5,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver import ItemTable
+from net.sf.l2j.gameserver.datatables import ItemTable
 
 SMITHS = [30283,30298,30300,30317,30458,30471,30526,30527,30536,30621,30678,30688,30846,30898,31002,31044,31271,31274,31316,31539,31583,31626,31668,31960]
 
