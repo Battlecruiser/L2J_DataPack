@@ -3,7 +3,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver import ItemTable
+from net.sf.l2j.gameserver.datatables import ItemTable
 
 MONUMENTS=[31690]+range(31769,31773)
 
