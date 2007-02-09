@@ -4,7 +4,7 @@
 
 import sys
 from java.util                                import Iterator
-from net.sf.l2j.gameserver                    import SkillTable
+from net.sf.l2j.gameserver.datatables         import SkillTable
 from net.sf.l2j.gameserver.serverpackets      import CreatureSay 
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
