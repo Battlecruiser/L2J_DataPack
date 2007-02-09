@@ -1,5 +1,6 @@
 # Made by Polo - Have fun!
 import sys
+from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -13,7 +14,18 @@ CHITIN2 = 7249  #Needle Stakato Chitin
 RECRUIT = 7246  #Golden Ram Badge - Recruit
 SOLDIER = 7247  #Golden Ram Badge - Soldier
 
-CHANCE = 49   #Base dropchance of the Badges
+CHANCE={
+    21508:50,
+    21509:43,
+    21510:52,
+    21511:57,
+    21512:75,
+    21513:50,
+    21514:43,
+    21515:52,
+    21516:53,
+    21517:74
+}
 
 class Quest (JQuest) :
 
@@ -74,16 +86,18 @@ class Quest (JQuest) :
  def onKill (Self,npc,st):
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
+   chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
+   bonus = int(divmod(chance,101)[0])
    if cond>=1 and 21507<npcId<21513:
-      if st.getRandom(100) < CHANCE+((npcId-21506)*2) :
-           st.giveItems(CHITIN,1)
+      if st.getRandom(100) < chance :
+           st.giveItems(CHITIN,1+bonus)
            if st.getQuestItemsCount(CHITIN) < 100 :
               st.playSound("ItemSound.quest_itemget")
            else :
               st.playSound("ItemSound.quest_middle")
    elif cond==2 and npcId in range(21513,21518):
-      if st.getRandom(100) < CHANCE+((npcId-21512)*3) :
-           st.giveItems(CHITIN2,1)
+      if st.getRandom(100) < chance :
+           st.giveItems(CHITIN2,1+bonus)
            if st.getQuestItemsCount(CHITIN2) < 100 :
               st.playSound("ItemSound.quest_itemget")
            else :
