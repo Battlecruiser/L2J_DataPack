@@ -2,6 +2,7 @@
 <list>
 <skill id="1001" levels="10" name="Soul Cry">
   <table name="#patk-add"> 4.5 14 33.5 66.5 90.5 141.5 208.5 247.0 310.0 375.5 </table>
+  <table name="#mpRegen-sub"> 1 2 3 4 5 6 7 8 9 10 </table>
   <table name="#mpConsume_Init"> 2 3 5 6 7 9 11 11 13 14 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="power" val="0.0"/>
@@ -11,7 +12,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume_Init">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="#mpRegen-sub">
       <add order="0x40" stat="pAtk" val="#patk-add"/>
     </effect>
   </for>
