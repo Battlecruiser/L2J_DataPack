@@ -466,15 +466,17 @@
   <set name="condition" val="128"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillTime" val="783"/>
-  <set name="skillType" val="PDAM"/>
+  <set name="skillType" val="CHARGEDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/> 
   <set name="effectRange" val="400"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <!-- charge values -->
-  <set name="itemConsumeId" val="5589"/> 
-  <set name="itemConsumeCount" val="2"/> 
+  <set name="itemConsumeId" val="5589"/>
+  <set name="itemConsumeCount" val="2"/>
+   <set name="num_charges" val="2"/>
+  <set name="charge_skill_id" val="50"/> <!-- Force Focus is the charger -->
   <for>
   </for>
 </skill>
@@ -818,15 +820,17 @@
   <set name="condition" val="128"/>
   <set name="reuseDelay" val="20000"/>
   <set name="skillTime" val="2000"/>
-  <set name="skillType" val="MDAM"/>
+  <set name="skillType" val="CHARGEDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <!-- charge values -->
-  <set name="itemConsumeId" val="5589"/> 
-  <set name="itemConsumeCount" val="2"/> 
+  <set name="itemConsumeId" val="5589"/>
+  <set name="itemConsumeCount" val="2"/>
+  <set name="num_charges" val="2"/>
+  <set name="charge_skill_id" val="50"/> <!-- Force Focus is the charger -->
   <for>
   </for>
 </skill>
