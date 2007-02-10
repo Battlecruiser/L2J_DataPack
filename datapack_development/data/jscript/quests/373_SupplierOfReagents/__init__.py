@@ -319,7 +319,7 @@ class Quest (JQuest) :
      for entry in DROPLIST[npcId] :
         item,chance=entry
         if drop < chance :
-           qty=1+st.getRandom(int(Config.RATE_QUESTS_REWARD))
+           qty=1+st.getRandom(int(Config.RATE_DROP_QUEST))
            st.giveItems(item,qty)
            st.playSound("ItemSound.quest_itemget")
            break
