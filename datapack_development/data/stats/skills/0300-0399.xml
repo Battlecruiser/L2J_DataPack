@@ -1130,7 +1130,8 @@
   <set name="hpConsume" val="507"/>
   <set name="save" val="4"/>
   <set name="power" val="1973"/>
-  <set name="target" val="TARGET_AURA"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="150"/> 
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
@@ -1668,25 +1669,62 @@
 <skill id="395" levels="1" name="Heroic Miracle">
   <!-- Instantly and significantly increases P.Def., M.Def., and resistance to buff canceling attacks as well as increases Speed. An equipped shield is required in order to use this skill. Consumes 40 Soul Ores. Effect 3. -->
   <!-- P.Def. +5400, M.Def. +4050, Speed +5, Cancel resistance +??, requires Shield to function -->
-  <!-- <set name="mpConsume" val="72"/> -->
-  <set name="target" val="TARGET_NONE"/>
+  <set name="mpConsume" val="72"/>
+  <set name="itemConsumeId" val="1785"/>
+  <set name="itemConsumeCount" val="40"/>
+  <set name="weaponsAllowed" val="2"/>
   <set name="skillTime" val="1000"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="1200000"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="buffDuration" val="30000"/>
   <for>
+    <cond>
+      <using kind="Shield"/>
+    </cond>
+    <effect name="Buff" time="30" count="1" val="0" stackOrder="1" stackType="hero">
+      <add order="0x40" stat="pDef" val="5400"/>
+      <add order="0x40" stat="mDef" val="4050"/>
+      <add order="0x40" stat="runSpd" val="5"/>
+      <!-- Missing resistance to buff canceling attacks -->
+    </effect>
   </for>
 </skill>
 <skill id="396" levels="1" name="Heroic Berserker">
   <!-- Temporarily yet significantly increases Accuracy, P. Atk., M. Atk., Atk. Spd., Casting Spd., Speed, resistance to buff canceling attacks and debuff attacks, and the effects of HP regeneration magic. Significantly decreases P. Def., M. Def., and Evasion while the effect lasts. Consumes 40 Soul Ores. -->
-  <!-- Accuracy +8, Evasion -8, P.Atk. +500, M.Atk. +500, P.Def. -25%, M.Def. -25, Atk. Speed +100, Casting Spd. +100, Speed +20, Cancel/Debuff resistance +??, Heals are ??% more effective -->
-  <!-- <set name="mpConsume" val="72"/> -->
-  <set name="target" val="TARGET_NONE"/>
+  <!-- Accuracy +8, Evasion -8, P.Atk. +500, M.Atk. +500, P.Def. -25%, M.Def. -25%, Atk. Speed +100, Casting Spd. +100, Speed +20, Cancel/Debuff resistance +??, Heals are ??% more effective -->
+  <set name="mpConsume" val="72"/>
+  <set name="itemConsumeId" val="1785"/>
+  <set name="itemConsumeCount" val="40"/>
   <set name="skillTime" val="1000"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="1200000"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="buffDuration" val="120000"/>
   <for>
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="hero">
+      <add order="0x40" stat="accCombat" val="8"/>
+      <sub order="0x40" stat="rEvas" val="8"/>
+      <add order="0x40" stat="pAtk" val="500"/>
+      <add order="0x40" stat="mAtk" val="500"/>
+      <add order="0x40" stat="pAtkSpd" val="100"/>
+      <add order="0x40" stat="mAtkSpd" val="100"/>
+      <add order="0x40" stat="runSpd" val="20"/>
+      <mul order="0x30" stat="pDef" val="0.75"/>
+      <mul order="0x30" stat="mDef" val="0.75"/>
+      <!--mul order="0x30" stat="gainHp" val="1.10"/-->
+      <!-- Missing Cancel/Debuff resistance +??, Heals are ??% more effective  (custom value)-->
+    </effect>   
   </for>
 </skill>
 </list>

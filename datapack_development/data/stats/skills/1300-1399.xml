@@ -350,12 +350,24 @@
   </for>
 </skill>
 <skill id="1323" levels="1" name="Blessing of Noblesse">
+  <set name="mpInitialConsume" val="14"/>
+  <set name="mpConsume" val="55"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="5"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+  <!-- requires core <effect count="1" name="NoblesseBless" time="3600" val="0" > -->
+  </effect>
   </for>
 </skill>
 <skill id="1324" levels="1" name="Summon CP Potion">
@@ -382,20 +394,42 @@
   </for>
 </skill>
 <skill id="1326" levels="1" name="Harmony of Noblesse">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpInitialConsume" val="10"/>
+  <set name="mpConsume" val="40"/>
+  <set name="power" val="250"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="100"/>
+  <set name="hitTime" val="7000"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="skillTime" val="7000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="700"/>
+  <set name="effectRange" val="1200"/>
+  <cond msg="Proper elemental seeds required.">
+    <player seed_any="4"/>
+  </cond> 
   <for>
   </for>
 </skill>
 <skill id="1327" levels="1" name="Symphony of Noblesse">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpInitialConsume" val="20"/>
+  <set name="mpConsume" val="60"/>
+  <set name="power" val="400"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="200"/>
+  <set name="hitTime" val="7000"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="skillTime" val="7000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="700"/>
+  <set name="effectRange" val="1200"/>
+  <cond msg="Proper elemental seeds required.">
+    <player seed_any="8"/>
+  </cond> 
   <for>
   </for>
 </skill>

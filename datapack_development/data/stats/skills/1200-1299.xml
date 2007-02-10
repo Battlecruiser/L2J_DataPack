@@ -48,12 +48,13 @@
     </effect>
   </for>
 </skill>
-<skill id="1206" levels="19" name="Wind Shackle">
-  <!-- Done by dc -->
+<skill id="1206" levels="19" name="Wind Shackle" enchantLevels1="30" enchantLevels2="30" >
+  <table name="#ench2MpConsume"> 53 53 52 52 51 51 49 49 48 48 47 47 46 46 44 44 43 43 42 42 41 41 39 39 38 38 37 37 36 36 </table>
   <table name="#mpConsume_Init"> 1 2 3 3 3 7 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
   <table name="#mpConsume"> 2 8 9 11 12 28 31 35 38 41 43 44 46 48 49 51 52 53 55 </table>
   <table name="#magicLvl"> 14 20 25 30 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
   <table name="#Tab-pAtkSpd"> 0.83 0.8 0.8 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+  <table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 97 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -69,6 +70,8 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect count="1" name="Buff" time="15" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpdDown">
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
@@ -1838,6 +1841,7 @@
 </skill>
 <skill id="1283" levels="13" name="Soul Guard">
   <table name="#def"> 293.3 333.2 375.9 421.4 445.5 469.7 494.9 520.1 546.0 571.9 598.5 625.8 653.1 </table>
+  <table name="#mpRegen-sub"> 5 6 6 7 8 8 8 8 9 9 9 10 10 </table>
   <table name="#mpConsume_Init"> 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1846,7 +1850,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="1" val="#mpConsume_Init">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="#mpRegen-sub">
       <add order="0x40" stat="pDef" val="#def"/>
     </effect>
   </for>
