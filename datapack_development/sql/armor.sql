@@ -831,7 +831,7 @@ INSERT INTO `armor` (`item_id`,`name`,`bodypart`,`crystallizable`,`armor_type`,`
  ('6839','Circlet of Giran','face','false','none','10','wood','none','0','90','0','0','0','500000','0','false','false','false','false'),
  ('6840','Circlet of Aden','face','false','none','10','wood','none','0','90','0','0','0','500000','0','false','false','false','false'),
  ('6841','Crown of Lord','face','false','none','10','wood','none','0','90','0','0','0','0','0','false','false','false','false'),
- ('6842','Wings of Destiny Circlet','dhair','false','none','10','wood','none','0','90','0','0','0','0','0','false','true','true','true'),
+ ('6842','Wings of Destiny Circlet','dhair','false','none','10','wood','none','0','90','0','0','0','0','0','false','false','false','false'),
  ('6843','Cat Ears','hair','false','none','10','wood','none','0','90','0','0','0','250000','0','false','true','true','true'),
  ('6844','Lady\'s Hair Pin','hair','false','none','10','wood','none','0','90','0','0','0','250000','0','false','true','true','true'),
  ('6845','Pirate\'s Eye Patch','face','false','none','10','wood','none','0','90','0','0','0','250000','0','false','true','true','true'),
