@@ -359,7 +359,7 @@ class Quest (JQuest):
        id = CREATED
     progress = st.getInt("progress")
     if npcid == PM_COOPER :
-      if id == COMPLETED :
+      if id == CREATED :
         return check_level(st)
       elif id == STARTING and progress == 0 :
         return "Starting.htm"
