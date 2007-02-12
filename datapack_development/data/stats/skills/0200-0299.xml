@@ -116,6 +116,13 @@
 </skill>
 <skill id="216" levels="45" name="Polearm Mastery">
   <table name="#pAtk"> 4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29.0 30.9 32.9 35.0 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76.0 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3 </table>
+  <table name="#atkCountMax">
+   5  5  5  5  5  5  5  5 10 10
+  10 10 10 10 10 10 10 10 10 10
+  10 10 10 10 10 10 10 10 10 10
+  10 10 10 10 10 10 10 10 10 10
+  10 10 10 10 10
+  </table>
   <set name="weaponsAllowed" val="64"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -125,6 +132,9 @@
   <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pAtk" val="#pAtk">
+      <using kind="Pole"/>
+    </add>
+    <add order="0x40" stat="atkCountMax" val="#atkCountMax">
       <using kind="Pole"/>
     </add>
   </for>

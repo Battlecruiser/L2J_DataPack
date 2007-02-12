@@ -483,7 +483,8 @@
 </skill>
 <skill id="421" levels="5" name="Fell Swoop">
 <table name="#mpConsume"> 27 29 31 33 34 </table>
-<table name="#range"> 5 10 15 20 25 </table>
+<!-- probably these values're incorrect -->
+<table name="#atkCountMax"> 1 2 3 4 5 </table>
 <set name="mpConsume" val="#mpConsume"/>
 <set name="weaponsAllowed" val="64"/>
 <set name="power" val="0.0"/>
@@ -496,11 +497,11 @@
 <set name="reuseDelay" val="300000"/>
 <set name="skillTime" val="2000"/>
 <set name="buffDuration" val="60000"/>
-<for>
-   <effect count="1" name="Buff" time="60" val="0">
-   <add order="0x40" stat="pAtkRange" val="#range"/>
-</effect>
-</for>
+  <for>
+    <effect count="1" name="Buff" time="60" val="0">
+      <add order="0x40" stat="atkCountMax" val="#atkCountMax"/>
+    </effect>
+  </for>
 </skill>
 <skill id="422" levels="3" name="Polearm Accuracy"> 
 <table name="#mpConsume"> 11 13 14 </table>
