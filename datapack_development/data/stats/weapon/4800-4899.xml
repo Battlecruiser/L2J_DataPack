@@ -495,6 +495,7 @@
     <set val='107' order='0x08' stat='pAtk'/>
     <set val='61' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -509,6 +510,7 @@
     <set val='107' order='0x08' stat='pAtk'/>
     <set val='61' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -522,6 +524,7 @@
     <set val='107' order='0x08' stat='pAtk'/>
     <set val='61' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -533,6 +536,7 @@
     <set val='107' order='0x08' stat='pAtk'/>
     <set val='61' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -547,6 +551,7 @@
     <set val='107' order='0x08' stat='pAtk'/>
     <set val='61' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -562,11 +567,10 @@
     <set val='8' order='0x08' stat='rCrit'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
+    <!-- SA: Long Blow -->
     <set val='80' order='0x08' stat='pAtkRange'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- SA: Long Blow -->
-    <add val='40' order='0x10' stat='pAtkRange'/>
   </for>
 </item>
 <item id='4840' name="body_slasher_critical_stun">
@@ -574,6 +578,7 @@
     <set val='107' order='0x08' stat='pAtk'/>
     <set val='61' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -589,11 +594,10 @@
     <set val='8' order='0x08' stat='rCrit'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
+    <!-- SA: Long Blow -->
     <set val='80' order='0x08' stat='pAtkRange'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- SA: Long Blow -->
-    <add val='40' order='0x10' stat='pAtkRange'/>
   </for>
 </item>
 <item id='4842' name="body_slasher_wide_blow">
@@ -601,13 +605,13 @@
     <set val='107' order='0x08' stat='pAtk'/>
     <set val='61' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
-    <set val='45' order='0x08' stat='pAtkAngle'/>
+    <!-- SA: Wide Blow -->
+    <set val='180' order='0x08' stat='pAtkAngle'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- SA: Wide Blow -->
-    <add val='45' order='0x10' stat='pAtkAngle'/>
   </for>
 </item>
 <item id='4843' name="bec_de_corbin_critical_stun">
@@ -615,6 +619,7 @@
     <set val='122' order='0x08' stat='pAtk'/>
     <set val='68' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -630,11 +635,10 @@
     <set val='8' order='0x08' stat='rCrit'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
+    <!-- SA: Long Blow -->
     <set val='80' order='0x08' stat='pAtkRange'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- SA: Long Blow -->
-    <add val='40' order='0x10' stat='pAtkRange'/>
   </for>
 </item>
 <item id='4845' name="bec_de_corbin_light">
@@ -642,6 +646,7 @@
     <set val='122' order='0x08' stat='pAtk'/>
     <set val='68' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -653,6 +658,7 @@
     <set val='144' order='0x08' stat='pAtk'/>
     <set val='78' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -667,6 +673,7 @@
     <set val='144' order='0x08' stat='pAtk'/>
     <set val='78' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -682,11 +689,10 @@
     <set val='8' order='0x08' stat='rCrit'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
+    <!-- SA: Long Blow -->
     <set val='80' order='0x08' stat='pAtkRange'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- SA: Long Blow -->
-    <add val='40' order='0x10' stat='pAtkRange'/>
   </for>
 </item>
 <item id='4849' name="widow_maker_critical_stun">
@@ -694,6 +700,7 @@
     <set val='144' order='0x08' stat='pAtk'/>
     <set val='78' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -709,11 +716,10 @@
     <set val='8' order='0x08' stat='rCrit'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
+    <!-- SA: Long Blow -->
     <set val='80' order='0x08' stat='pAtkRange'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- SA: Long Blow -->
-    <add val='40' order='0x10' stat='pAtkRange'/>
   </for>
 </item>
 <item id='4851' name="widow_maker_wide_blow">
@@ -721,13 +727,13 @@
     <set val='144' order='0x08' stat='pAtk'/>
     <set val='78' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
-    <set val='45' order='0x08' stat='pAtkAngle'/>
+    <!-- SA: Wide Blow -->
+    <set val='180' order='0x08' stat='pAtkAngle'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- SA: Wide Blow -->
-    <add val='45' order='0x10' stat='pAtkAngle'/>
   </for>
 </item>
 <item id='4852' name="orcish_poleaxe_critical_stun">
@@ -735,6 +741,7 @@
     <set val='156' order='0x08' stat='pAtk'/>
     <set val='83' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -750,11 +757,10 @@
     <set val='8' order='0x08' stat='rCrit'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
+    <!-- SA: Long Blow -->
     <set val='80' order='0x08' stat='pAtkRange'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- SA: Long Blow -->
-    <add val='40' order='0x10' stat='pAtkRange'/>
   </for>
 </item>
 <item id='4854' name="orcish_poleaxe_wide_blow">
@@ -762,13 +768,13 @@
     <set val='156' order='0x08' stat='pAtk'/>
     <set val='83' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
-    <set val='45' order='0x08' stat='pAtkAngle'/>
+    <!-- SA: Wide Blow -->
+    <set val='180' order='0x08' stat='pAtkAngle'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- SA: Wide Blow -->
-    <add val='45' order='0x10' stat='pAtkAngle'/>
   </for>
 </item>
 <item id='4855' name="great_axe_anger">
@@ -776,6 +782,7 @@
     <set val='175' order='0x08' stat='pAtk'/>
     <set val='91' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -790,6 +797,7 @@
     <set val='175' order='0x08' stat='pAtk'/>
     <set val='91' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -803,6 +811,7 @@
     <set val='175' order='0x08' stat='pAtk'/>
     <set val='91' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -814,6 +823,7 @@
     <set val='194' order='0x08' stat='pAtk'/>
     <set val='99' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -828,6 +838,7 @@
     <set val='194' order='0x08' stat='pAtk'/>
     <set val='99' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -843,11 +854,10 @@
     <set val='8' order='0x08' stat='rCrit'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
+    <!-- SA: Long Blow -->
     <set val='80' order='0x08' stat='pAtkRange'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- SA: Long Blow -->
-    <add val='40' order='0x10' stat='pAtkRange'/>
   </for>
 </item>
 <item id='4861' name="halberd_critical_stun">
@@ -855,6 +865,7 @@
     <set val='213' order='0x08' stat='pAtk'/>
     <set val='107' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
@@ -870,11 +881,10 @@
     <set val='8' order='0x08' stat='rCrit'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
+    <!-- SA: Long Blow -->
     <set val='80' order='0x08' stat='pAtkRange'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- SA: Long Blow -->
-    <add val='40' order='0x10' stat='pAtkRange'/>
   </for>
 </item>
 <item id='4863' name="halberd_wide_blow">
@@ -882,13 +892,13 @@
     <set val='213' order='0x08' stat='pAtk'/>
     <set val='107' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
+    <set val='66' order='0x08' stat='pAtkRange'/>
     <add val='-3' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
-    <set val='45' order='0x08' stat='pAtkAngle'/>
+    <!-- SA: Wide Blow -->
+    <set val='180' order='0x08' stat='pAtkAngle'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- SA: Wide Blow -->
-    <add val='45' order='0x10' stat='pAtkAngle'/>
   </for>
 </item>
 <item id='4864' name="heavy_doom_hammer_magic_regeneration">
