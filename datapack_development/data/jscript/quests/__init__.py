@@ -213,6 +213,7 @@ __all__ = [
 '627_HeartInSearchOfPower',
 '628_HuntGoldenRam',
 '629_CleanUpTheSwampOfScreams',
+'631_DeliciousTopChoiceMeat',
 '634_InSearchofDimensionalFragments',
 '999_C3Tutorial'
 ]
