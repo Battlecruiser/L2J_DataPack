@@ -350,10 +350,12 @@ class Quest (JQuest) :
                     st.playSound("Itemsound.quest_middle")
         elif npcId in Ketra_Orcs :
             decreaseAlliance(st)
-            for player in st.getPlayer().getParty().getPartyMembers().toArray() :
-                pst = player.getQuestState("605_AllianceWithKetraOrcs")
-                if pst :
-                  decreaseAlliance(pst)
+            party = st.getPlayer().getParty()
+            if party :
+                for player in party.getPartyMembers().toArray() :
+                    pst = player.getQuestState("605_AllianceWithKetraOrcs")
+                    if pst :
+                        decreaseAlliance(pst)
     return
 
 QUEST       = Quest(605,"605_AllianceWithKetraOrcs","Alliance With Ketra Orcs")
