@@ -8,37 +8,36 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 #Quest info
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 374,"WhisperOfDreams1","Whisper of Dreams, part 1"
-
+ 
 #Variables
 #Quest items drop rate
-DROP_RATE   = 15*Config.RATE_DROP_QUEST
+DROP_RATE   = 50*Config.RATE_DROP_QUEST
 DROP_MAX = 100 #in % unless you change this
 #Mysterious Stone drop rate
 DROP_RATE_2 = 1*Config.RATE_DROP_QUEST
-DROP_MAX_2 = 250 # default: ~ 1/250
-#This setting alters the original price for fabrics.
-#By default it gathers server's adena drop multiplier
-ADENA_X=int(Config.RATE_DROP_ADENA)
+DROP_MAX_2 = 1000 # default: ~ 1/1000
 #Rewards
 SHOP_LIST={
-5485:["etc_leather_yellow_i00",4,11200,"Sealed Tallum Tunic Textures"    ],# 4xTallum Tunic Textures: 11200a
-5486:["etc_leather_gray_i00",  3,13700,"Sealed Dark Crystal Robe Fabrics"],
-5487:["etc_leather_gray_i00",  2,18800,"Sealed Robe of Nightmare Fabrics"],
-5488:["etc_leather_gray_i00",  2,18800,"Sealed Majestic Robe Frabrics"   ],
-5489:["etc_leather_gray_i00",  6,16300,"Sealed Tallum Stockings Fabrics"] 
+5485:["etc_leather_yellow_i00",4,10450,"Sealed Tallum Tunic Textures"    ],# 4xTallum Tunic Textures: 10450a
+5486:["etc_leather_gray_i00",  3,2950,"Sealed Dark Crystal Robe Fabrics"],
+5487:["etc_leather_gray_i00",  2,18050,"Sealed Robe of Nightmare Fabrics"],
+5488:["etc_leather_gray_i00",  2,18050,"Sealed Majestic Robe Fabrics"   ],
+5489:["etc_leather_gray_i00",  6,15550,"Sealed Tallum Stockings Fabrics"] 
 }
-
+ 
+ADENA_X=int(Config.RATE_DROP_ADENA)
+ 
 #Quest items
 CB_TOOTH, DW_LIGHT, SEALD_MSTONE, MSTONE = range(5884,5888)
 #Messages
 default   = "<html><head><body>I have nothing to say to you.</body></html>"
-
+ 
 #NPCs
 MANAKIA,TORAI = 30515, 30557
-
+ 
 #Mobs & Drop
 DROPLIST = {20620:[CB_TOOTH],20621:[DW_LIGHT]}
-
+ 
 def render_shop() :
     html = "<html><head><body><font color=\"LEVEL\">Robe Armor Fabrics:</font><table border=0 width=300>"
     for i in SHOP_LIST.keys() :
@@ -47,11 +46,11 @@ def render_shop() :
        html += "<tr><td><a action=\"bypass -h Quest 374_WhisperOfDreams1 "+str(i)+"\"><font color=\"B09878\">"+str(SHOP_LIST[i][2]*ADENA_X)+" adena</font></a></td></tr></table></td></tr>"
     html += "</table></body></html>"
     return html
-
+ 
 class Quest (JQuest) :
-
+ 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
-
+ 
  def onEvent (self,event,st) :
     id = st.getState() 
     htmltext = event
@@ -81,17 +80,13 @@ class Quest (JQuest) :
     elif event == "buy" :
        htmltext = render_shop()
     elif int(event) in SHOP_LIST.keys() :
-       price = SHOP_LIST[int(event)][2]*ADENA_X
-       if st.getQuestItemsCount(57) >= price :
-          st.takeItems(57,price)
-          st.giveItems(int(event),SHOP_LIST[int(event)][1])
-          st.playSound("ItemSound.quest_finish")
-          st.exitQuest(1)
-          htmltext = "30515-11.htm"
-       else :
-          htmltext = "Not enough adena"
+       st.set("allow","0")
+       st.giveItems(57,SHOP_LIST[int(event)][2])
+       st.giveItems(int(event),SHOP_LIST[int(event)][1])
+       st.playSound("ItemSound.quest_finish")
+       htmltext = "30515-11.htm"
     return htmltext
-
+ 
  def onTalk (self,npc,st):
    htmltext = default
    id = st.getState()
@@ -117,7 +112,7 @@ class Quest (JQuest) :
          st.set("cond","3")
          st.playSound("ItemSound.quest_middle")
    return htmltext
-
+ 
  def onKill (self,npc,st) :
      npcid = npc.getNpcId()
      item  = DROPLIST[npcid][0]
@@ -133,17 +128,17 @@ class Quest (JQuest) :
            st.giveItems(SEALD_MSTONE,1)
            st.playSound("ItemSound.quest_middle")
      return  
-
+ 
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
-
+ 
 CREATED     = State('Start',     QUEST)
 STARTING    = State('Starting',  QUEST,True)
 STARTED     = State('Started',   QUEST,True)
 COMPLETED   = State('Completed', QUEST)
-
+ 
 QUEST.setInitialState(CREATED)
-
+ 
 # Quest NPC starter initialization
 QUEST.addStartNpc(MANAKIA)
 # Quest initialization
@@ -151,10 +146,10 @@ CREATED.addTalkId(MANAKIA)
 STARTING.addTalkId(MANAKIA)
 STARTED.addTalkId(MANAKIA)
 STARTED.addTalkId(TORAI)
-
+ 
 for i in DROPLIST.keys() :
   STARTING.addKillId(i)
   STARTED.addKillId(i)
   STARTING.addQuestDrop(i,DROPLIST[i][0],1)
-
+ 
 print str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION
