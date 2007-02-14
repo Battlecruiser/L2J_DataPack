@@ -139,7 +139,6 @@ class Quest (JQuest) :
                       htmltext += result(st)
                       for var in ["chosen","grid","playing"]:
                           st.unset(var)
-#                      st.exitQuest(1)
                   else :
                       htmltext = header+"Select your "+number[8-chosen.count("?")]+partial(st)
             else:
@@ -187,7 +186,5 @@ STARTED.addTalkId(WK_ROMP)
 
 for i in MOBS :
   STARTED.addKillId(i)
-
-STARTED.addQuestDrop(WK_ROMP,SI_ORE,1)
 
 print "importing quests: "+str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION
