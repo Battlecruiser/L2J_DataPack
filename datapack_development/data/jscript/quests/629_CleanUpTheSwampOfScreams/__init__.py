@@ -70,15 +70,17 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
+    prevItems = st.getQuestItemsCount(CLAWS)
     random = st.getRandom(MAX)
     chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
-    bonus = int(divmod(chance,MAX+1)[0])
+    numItems, chance = divmod(chance,MAX)
     if random<chance :
-       st.giveItems(CLAWS,1+bonus)
-       if st.getQuestItemsCount(CLAWS) % 100 == 0 :
-          st.playSound("ItemSound.quest_middle")
-       else:
-          st.playSound("ItemSound.quest_itemget")
+        numItems = numItems + 1
+    st.giveItems(CLAWS,numItems)
+    if int(prevItems+numItems)/100 > int(prevItems)/100 :
+        st.playSound("ItemSound.quest_middle")
+    else:
+        st.playSound("ItemSound.quest_itemget")
     return
 
 QUEST       = Quest(629,"629_CleanUpTheSwampOfScreams","Clean Up the Swamp of Screams")
