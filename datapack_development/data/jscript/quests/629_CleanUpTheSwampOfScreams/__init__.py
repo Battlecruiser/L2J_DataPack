@@ -11,6 +11,7 @@ CAPTAIN = 31553
 CLAWS = 7250
 COIN = 7251
 #CHANCES
+MAX=1000
 CHANCE={
     21508:500,
     21509:431,
@@ -69,9 +70,9 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,st):
-    random = st.getRandom(1000)
+    random = st.getRandom(MAX)
     chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
-    bonus = int(divmod(chance,101)[0])
+    bonus = int(divmod(chance,MAX+1)[0])
     if random<chance :
        st.giveItems(CLAWS,1+bonus)
        if st.getQuestItemsCount(CLAWS) % 100 == 0 :
