@@ -32,16 +32,14 @@ class Quest (JQuest) :
      elif event == "30969-03a.htm" :
          if amount2 :
              htmltext = "30969-03.htm"
-             st.set("cond","2")
              st.giveItems(ADENA,amount2*3880)
              st.giveItems(BILL_OF_IASON_HEINE,amount2)
              st.takeItems(BARREL_OF_LEAGUE,-1)
-     elif event == "30969-01.htm" :
-         if st.getInt("cond")==2 :
-             htmltext = "30969-04.htm"
-     elif event == "5" :
-         st.exitQuest(1)
-         st.playSound("ItemSound.quest_finish")
+     elif event == "30969-06.htm" :
+         if not (amount + amount2) :
+            st.exitQuest(1)
+            st.playSound("ItemSound.quest_finish")
+            htmltext="30969-07.htm"
      return htmltext
 
  def onTalk (Self,npc,st):
@@ -57,13 +55,15 @@ class Quest (JQuest) :
              else :
                  htmltext = "30916-00.htm"
                  st.exitQuest(1)
-         elif cond>=1 :
+         elif cond :
              htmltext = "30916-04.htm"
-     elif npcId==30969 :
-         if cond==1 :
-             htmltext = "30969-01.htm"
-         elif cond==2 :
-             htmltext = "30969-04.htm"
+     elif npcId==30969 and cond :
+         htmltext = "30969-01.htm"
+     elif npcId == 30897 :
+         if st.getQuestItemsCount(BILL_OF_IASON_HEINE):
+            htmltext="30897-01.htm"
+         else:
+            htmltext="30897-02.htm"
      return htmltext
 
  def onKill (self,npc,st):
@@ -75,6 +75,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
      if random<=CHANCE2 :
          st.giveItems(BARREL_OF_LEAGUE,1)
+         st.set("cond","2")
      return
 
 QUEST       = Quest(351,"351_BlackSwan","Black Swan")
@@ -88,6 +89,8 @@ CREATED.addTalkId(30916)
 STARTED.addTalkId(30916)
 
 STARTED.addTalkId(30969)
+STARTED.addTalkId(30897)
+
 STARTED.addQuestDrop(30916,ORDER_OF_GOSTA,1)
 STARTED.addQuestDrop(30916,BARREL_OF_LEAGUE,1)
 STARTED.addQuestDrop(30916,LIZARD_FANG,1)
