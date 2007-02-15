@@ -633,12 +633,18 @@
   </for>
 </skill>
 <skill id="1335" levels="1" name="Balance Life">
-  <!-- NOT IMPLEMENTED - Balances party members' HP. -->
   <set name="mpInitialConsume" val="25"/>
   <set name="mpConsume" val="98"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="1000"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="1000"/>
+  <set name="hitTime" val="5000"/>
+  <set name="reuseDelay" val="60000"/>
+  <set name="skillTime" val="5000"/>
+  <set name="skillType" val="BALANCE_LIFE"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="effectRange" val="-1"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
