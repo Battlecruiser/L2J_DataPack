@@ -794,7 +794,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <add order="0x40" stat="pAtk" val="#pAtk"/>
+    <add order="0x40" stat="pAtk" val="#pAtk">
+      <and>       
+        <using kind="Sword,Blunt"/>
+      </and>
+    </add>
   </for>
 </skill>
 <skill id="258" levels="33" name="Light Armor Mastery">
