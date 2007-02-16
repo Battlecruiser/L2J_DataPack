@@ -209,6 +209,7 @@ __all__ = [
 '621_EggDelivery',
 '622_DeliveryOfSpecialLiquor',
 '623_TheFinestFood',
+'624_TheFinestIngredientsPart1',
 '626_ADarkTwilight',
 '627_HeartInSearchOfPower',
 '628_HuntGoldenRam',
