@@ -6615,7 +6615,7 @@ INSERT INTO `etcitem` (`item_id`,`name`,`crystallizable`,`item_type`,`weight`,`c
  ('8612','Herb of the Warrior','false','herb','0','normal','paper','none','0','0','0','false','true','true','true','C5Item','none'),
  ('8613','Herb of the Mystic','false','herb','0','normal','paper','none','0','0','0','false','true','true','true','C5Item','none'),
  ('8614','Herb of Recovery','false','herb','0','normal','paper','none','0','0','0','false','true','true','true','C5Item','none'),
- ('8615','Summoning Crystal','false','none','10','normal','crystal','none','0','0','0','true','true','true','true','C5Item','none'),
+ ('8615','Summoning Crystal','false','none','10','stackable','crystal','none','0','0','0','true','true','true','true','C5Item','none'),
  ('8616','Spellbook: Summon Friend','false','spellbook','120','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('8617','Spellbook: Word of Invitation','false','spellbook','120','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('8618','Ancient Book - Divine Inspiration (Modern Language Version)','false','none','120','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
