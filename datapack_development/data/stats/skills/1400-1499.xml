@@ -62,30 +62,31 @@
   <set name="isMagic" val="true"/>
 </skill>
 <skill id="1403" levels="1" name="Summon Friend">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Summons party members to your location. The player being summoned must possess a Summoning Crystal.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_PARTY_MEMBER"/>
+  <set name="skillType" val="SUMMON_FRIEND"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="mpConsume" val="180"/>
+  <set name="hitTime" val="10000"/>
+  <set name="skillTime" val="10000"/>
+  <set name="reuseDelay" val="20000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="1404" levels="1" name="Word of Invitation">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Summons party members to your location.  The player being summoned must possess a Summoning Crystal.  Consumes 3 Spirit Ores.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="-1"/>
+  <set name="skillType" val="SUMMON_FRIEND"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="3"/>
+  <set name="mpConsume" val="320"/>
+  <set name="hitTime" val="10000"/>
+  <set name="skillTime" val="10000"/>
+  <set name="reuseDelay" val="60000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
