@@ -731,7 +731,8 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="35">
-      <mul order="0x30" stat="reflectDam" val="1.9"/>
+      <add order="0x40" stat="reflectSkillPhysic" val="30"/>
+      <add order="0x40" stat="reflectSkillMagic" val="30"/>
       <mul order="0x30" stat="pAtkSpd" val="0.8"/>
       <mul order="0x30" stat="runSpd" val="0.9"/>
       <sub order="0x40" stat="accCombat" val="4"/>
@@ -929,7 +930,8 @@
   <set name="hitTime" val="2000"/>
   <for>
     <effect name="Buff" time="300" count="1" val="0">
-      <mul order="0x30" stat="reflectDam" val="1.4"/>
+      <add order="0x40" stat="reflectSkillPhysic" val="30"/>
+      <add order="0x40" stat="reflectSkillMagic" val="10"/>
     </effect>
   </for>
 </skill>
@@ -948,7 +950,8 @@
   <set name="hitTime" val="2000"/>
   <for>
     <effect name="Buff" time="300" count="1" val="0">
-      <mul order="0x30" stat="reflectDam" val="1.4"/>
+      <add order="0x40" stat="reflectSkillPhysic" val="10"/>
+      <add order="0x40" stat="reflectSkillMagic" val="30"/>
     </effect>
   </for>
 </skill>
@@ -1280,7 +1283,7 @@
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="120000"/>
   <for>
-    <effect count="1" name="Paralyze" time="30" val="0"/>
+    <effect count="1" name="Petrification" time="30" val="0"/>
   </for>
 </skill>
 <skill id="368" levels="1" name="Vengeance">

@@ -175,7 +175,8 @@
     <mul val='1.50' order='0x30' stat='maxCp'/>
     <add val='504' order='0x40' stat='cAtk'/>
     <add val='78.7' order='0x40' stat='rCrit'/>
-    <!-- Missing Reflect Skills 10% of the time -->
+    <add val="10" order="0x40" stat="reflectSkillPhysic"/>
+    <add val="10" order="0x40" stat="reflectSkillMagic"/>
   </for>
 </item>
 <item id='6613' name="infinity_axe">
@@ -222,6 +223,8 @@
     <mul val='1.25' order='0x30' stat='maxHp'/>
     <mul val='1.50' order='0x30' stat='maxCp'/>
     <mul val='1.07' order='0x30' stat='pAtkSpd'/>
+    <add val="10" order="0x40" stat="reflectSkillPhysic"/>
+    <add val="10" order="0x40" stat="reflectSkillMagic"/>
     <!-- Missing 25% chance to stun target on a critical hit -->
   </for>
 </item>
@@ -304,7 +307,9 @@
     <mul val='1.30' order='0x30' stat='maxMp'/>
     <mul val='1.50' order='0x30' stat='maxCp'/>
     <add val='78.7' order='0x40' stat='rCrit'/>
-    <!-- Missing Reflect Skill 10%, 10% chance to inflict Physical Skill Silence on a critical hit -->
+    <add val="10" order="0x40" stat="reflectSkillPhysic"/>
+    <add val="10" order="0x40" stat="reflectSkillMagic"/>
+    <!-- 10% chance to inflict Physical Skill Silence on a critical hit -->
   </for>
 </item>
 <item id='6621' name="infinity_spear">
@@ -321,7 +326,9 @@
     <mul val='1.50' order='0x30' stat='maxCp'/>
     <mul val='1.07' order='0x30' stat='pAtkSpd'/>
     <add val='4.89' order='0x40' stat='accCombat'/>
-    <!-- Missing Reflect Skill 10%, 10% chance to cancel each buff from target on a critical hit (for comparison, Cancel is 25% but Cancel also relies on M.Atk. vs. M.Def. while this weapon does not) -->
+    <add val="10" order="0x40" stat="reflectSkillPhysic"/>
+    <add val="10" order="0x40" stat="reflectSkillMagic"/>
+    <!-- 10% chance to cancel each buff from target on a critical hit (for comparison, Cancel is 25% but Cancel also relies on M.Atk. vs. M.Def. while this weapon does not) -->
   </for>
 </item>
 <item id='6678' name="sealed_imperial_crusader_shield">
