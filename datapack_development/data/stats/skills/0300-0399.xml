@@ -751,9 +751,11 @@
   <set name="hitTime" val="1800"/>
   <set name="isMagic" val="true"/>
   <for>
+    <!-- missing Debuff Resistance +30% -->
     <effect count="1" name="Buff" time="120" val="0">
       <mul order="0x30" stat="maxHp" val="1.5"/>
       <add order="0x40" stat="regHp" val="50"/>
+      <add order="0x40" stat="cancelRes" val="60"/>
     </effect>
   </for>
 </skill>
@@ -1296,6 +1298,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <!-- missing Cancel Resistance -->
     <effect self="1" count="1" name="ImobileBuff" time="30" val="0" stackOrder="3" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="5400"/>
       <add order="0x40" stat="mDef" val="4050"/>

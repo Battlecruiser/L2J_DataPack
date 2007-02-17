@@ -1545,6 +1545,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <!-- missing Cancel Resistance -->
     <effect count="1" name="Buff" time="60" val="0">
       <add stat="stunRes" val="#res" order="0x40"/>
       <add stat="rootRes" val="#res" order="0x40"/>
