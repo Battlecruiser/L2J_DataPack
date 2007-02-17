@@ -707,13 +707,17 @@
   <set name="reuseDelay" val="60000"/> 
   <set name="skillTime" val="4000"/> 
   <set name="skillType" val="DEBUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <!-- Cancel+Debuff resistance -30%, Magic MP Cost +30%, MP Regen per tick -24 -->
   <for>
+    <!-- missing Debuff resistance -30% -->
+    <effect count="5" name="ManaDamOverTime" time="2" val="46">
+      <sub order="0x40" stat="cancelRes" val="30"/>
+      <mul order="0x30" stat="MpConsumeRate" val="1.30"/>
+    </effect>
   </for>
 </skill>
 <skill id="1339" levels="1" name="Fire Vortex">
@@ -1071,13 +1075,23 @@
   </for> 
 </skill>
 <skill id="1354" levels="1" name="Arcane Protection">
-  <!-- RESIST CANCEL BUFF BY STACK TYPE - NOT IMPLEMENTED -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <!-- Cancel resistance +30%, Debuff resistance +20% -->
-  <for>
+  <set name="mpInitialConsume" val="14"/>
+  <set name="mpConsume" val="70"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="hitTime" val="4000"/> 
+  <set name="reuseDelay" val="10000"/> 
+  <set name="skillTime" val="4000"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="buffDuration" val="1200000"/> 
+  <set name="castRange" val="400"/> 
+  <set name="effectRange" val="900"/>
+  <for> 
+    <!-- Debuff resistance +20% -->
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="cancelRes"> 
+      <add stat="cancelRes" val="30" order="0x40"/> 
+    </effect>
   </for>
 </skill>
 <skill id="1355" levels="1" name="Prophecy of Water">
@@ -1264,19 +1278,32 @@
   </for>
 </skill>
 <skill id="1362" levels="1" name="Chant of Spirit">
-  <!-- RESIST CANCEL BUFF BY STACK TYPE - NOT IMPLEMENTED -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpInitialConsume" val="56"/>
+  <set name="mpConsume" val="280"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="900"/>
+  <set name="hitTime" val="2500"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="2500"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <!-- missing Debuff resistance +20% -->
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="cancelRes">
+      <add stat="cancelRes" val="30" order="0x40"/>
+	</effect>
   </for>
 </skill>
 <skill id="1363" levels="1" name="Chant of Victory">
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="40"/>
   <set name="mpInitialConsume" val="57"/>
-  <set name="mpConsume" val="227"/>
+  <set name="mpConsume" val="284"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
