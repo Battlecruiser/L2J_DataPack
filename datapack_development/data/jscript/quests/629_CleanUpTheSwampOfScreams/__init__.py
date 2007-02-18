@@ -57,16 +57,20 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
-   if cond == 0 and (st.getQuestItemsCount(7246)==1 or st.getQuestItemsCount(7247)==1):
-     if st.getPlayer().getLevel() >= 66 :
-       htmltext = "31553-0.htm"
-     else:
-       htmltext = "31553-0a.htm"
-       st.exitQuest(1)
-   elif st.getQuestItemsCount(CLAWS) >= 100 :
-     htmltext = "31553-2.htm"
+   if (st.getQuestItemsCount(7246) or st.getQuestItemsCount(7247)) :
+     if cond == 0 :
+       if st.getPlayer().getLevel() >= 66 :
+         htmltext = "31553-0.htm"
+       else:
+         htmltext = "31553-0a.htm"
+         st.exitQuest(1)
+     elif st.getQuestItemsCount(CLAWS) >= 100 :
+       htmltext = "31553-2.htm"
+     else :
+       htmltext = "31553-1a.htm"
    else :
-     htmltext = "31553-1a.htm"
+     htmltext = "31553-6.htm"
+     st.exitQuest(1)
    return htmltext
 
  def onKill (self,npc,st):

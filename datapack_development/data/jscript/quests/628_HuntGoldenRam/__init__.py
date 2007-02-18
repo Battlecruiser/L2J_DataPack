@@ -14,6 +14,8 @@ CHITIN2 = 7249  #Needle Stakato Chitin
 RECRUIT = 7246  #Golden Ram Badge - Recruit
 SOLDIER = 7247  #Golden Ram Badge - Soldier
 
+#chances
+MAX=100
 CHANCE={
     21508:50,
     21509:43,
@@ -26,6 +28,9 @@ CHANCE={
     21516:53,
     21517:74
 }
+
+#needed count
+count = 100
 
 class Quest (JQuest) :
 
@@ -87,21 +92,22 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
    chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
-   bonus = int(divmod(chance,101)[0])
+   numItems, chance = divmod(chance,MAX)
+   if st.getRandom(100) <chance :
+       numItems = numItems + 1
+   item = 0
    if cond>=1 and 21507<npcId<21513:
-      if st.getRandom(100) < chance :
-           st.giveItems(CHITIN,1+bonus)
-           if st.getQuestItemsCount(CHITIN) < 100 :
-              st.playSound("ItemSound.quest_itemget")
-           else :
-              st.playSound("ItemSound.quest_middle")
+       item = CHITIN       
    elif cond==2 and npcId in range(21513,21518):
-      if st.getRandom(100) < chance :
-           st.giveItems(CHITIN2,1+bonus)
-           if st.getQuestItemsCount(CHITIN2) < 100 :
-              st.playSound("ItemSound.quest_itemget")
-           else :
-              st.playSound("ItemSound.quest_middle")
+       item = CHITIN2
+   if item != 0 :
+       prevItems = st.getQuestItemsCount(item)
+       if count <= (prevItems + numItems) :
+           numItems = count - prevItems
+           st.playSound("ItemSound.quest_middle")
+       else :
+           st.playSound("ItemSound.quest_itemget")
+       st.giveItems(item,int(numItems))
    return
            
 QUEST       = Quest(628,"628_HuntGoldenRam","Hunt of the Golden Ram Mercenary Force")
