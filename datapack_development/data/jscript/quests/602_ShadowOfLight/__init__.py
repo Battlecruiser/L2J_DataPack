@@ -1,5 +1,6 @@
 # by disKret
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -9,7 +10,12 @@ EYE_OF_ARGOS = 31683
 #ITEMS
 EYE_OF_DARKNESS = 7189
 #CHANCE
-CHANCE = 30
+CHANCE = {
+    21304:50,
+    21299:45
+}
+REWARDS = [[6699,40000,120000,20000,0,19],[6698,60000,110000,15000,20,39],[6700,40000,150000,10000,40,49],[0,100000,140000,11250,50,100]]
+
 #MOBS
 MOBS = [ 21299,21304 ]
 
@@ -30,9 +36,18 @@ class Quest (JQuest) :
         st.exitQuest(1)
    if event == "31683-4.htm" :
      if st.getQuestItemsCount(EYE_OF_DARKNESS) == 100 :
-        st.giveItems(57,100000)
+        random = st.getRandom(100)
+        i = 0
+        while i < len(REWARDS) :
+            item,adena,exp,sp,chance,chance2=REWARDS[i]
+            if chance<=random<= chance2 :
+            	break
+            i = i+1
+        st.giveItems(57,adena)
+        if item :
+           st.giveItems(item,3)
+        st.addExpAndSp(exp,sp)
         st.takeItems(EYE_OF_DARKNESS,-1)
-        st.addExpAndSp(140000,11250)
         st.playSound("ItemSound.quest_finish")
         st.exitQuest(1)
      else :
@@ -52,16 +67,18 @@ class Quest (JQuest) :
 
  def onKill (self,npc,st):
    count = st.getQuestItemsCount(EYE_OF_DARKNESS)
-   if st.getInt("cond") == 1 and st.getRandom(100) < CHANCE :
-     qty=1+st.getRandom(2)
-     if count+qty>100 :
-        qty=100-count
-     if count+qty == 100 :
+   chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
+   numItems, chance = divmod(chance,100)
+   if st.getInt("cond") == 1 :
+     if st.getRandom(100) < chance :
+         numItems = numItems + 1
+     if count+numItems=>100 :
+        numItems =100-count
         st.playSound("ItemSound.quest_middle")
         st.set("cond","2")
      else :
         st.playSound("ItemSound.quest_itemget")
-     st.giveItems(EYE_OF_DARKNESS,qty)
+     st.giveItems(EYE_OF_DARKNESS,int(numItems))
    return
 
 QUEST       = Quest(602,"602_ShadowOfLight","Shadow Of Light")

@@ -1,5 +1,6 @@
 # The Finest Food - v0.1 by disKret & DrLecter
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -13,7 +14,10 @@ LEAF_OF_FLAVA,BUFFALO_MEAT,ANTELOPE_HORN = range(7199,7202)
 #MOBS, DROPS, CHANCES & REWARDS
 BUFFALO,FLAVA,ANTELOPE = [ 21315,21316,21318 ]
 DROPLIST = {BUFFALO:[BUFFALO_MEAT,99],FLAVA:[LEAF_OF_FLAVA,99],ANTELOPE:[ANTELOPE_HORN,99]}
-REWARDS = [[6849,25000],[6847,65000],[6851,25000],[0,73000]]
+REWARDS = [[6849,25000,0,11],[6847,65000,12,23],[6851,25000,24,33],[0,73000,34,100]]
+
+#needed count
+count = 100
 
 class Quest (JQuest) :
 
@@ -37,7 +41,13 @@ class Quest (JQuest) :
      if cond == 2 and leaf == meat == horn == 100 :
         htmltext = "31521-06.htm"
         st.playSound("ItemSound.quest_finish")
-        item,adena=REWARDS[st.getRandom(len(REWARDS))]
+        random = st.getRandom(100)
+        i = 0
+        while i < len(REWARDS) :
+            item,adena,chance,chance2=REWARDS[i]
+            if chance<=random<= chance2 :
+            	break
+            i = i+1
         st.giveItems(57,adena)
         if item :
            st.giveItems(item,1)
@@ -66,9 +76,15 @@ class Quest (JQuest) :
  def onKill (self,npc,st) :
    cond = st.getInt("cond")
    item,chance = DROPLIST[npc.getNpcId()]
-   if st.getRandom(100) < chance and st.getQuestItemsCount(item) < 100 :
-      st.giveItems(item,1)
-      if st.getQuestItemsCount(LEAF_OF_FLAVA) == st.getQuestItemsCount(BUFFALO_MEAT) == st.getQuestItemsCount(ANTELOPE_HORN) == 100 :
+   prevItems = st.getQuestItemsCount(item)
+   numItems, chance = divmod(chance*Config.RATE_DROP_QUEST,100)
+   if st.getRandom(100) < chance :
+      numItems = numItems + 1
+   if count < (prevItems + numItems) :
+      numItems = count - prevItems
+   if numItems != 0 :
+      st.giveItems(item,int(numItems))
+      if st.getQuestItemsCount(LEAF_OF_FLAVA) == st.getQuestItemsCount(BUFFALO_MEAT) == st.getQuestItemsCount(ANTELOPE_HORN) == count :
          st.set("cond","2")
          st.playSound("ItemSound.quest_middle")
       else :
