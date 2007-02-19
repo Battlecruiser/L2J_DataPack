@@ -172,7 +172,6 @@ class Quest (JQuest) :
      st.getQuestItemsCount(Varka_Alliance_Four) + st.getQuestItemsCount(Varka_Alliance_Five)
     Valor = st.getQuestItemsCount(Valor_Totem)
     Wisdom = st.getQuestItemsCount(Wisdom_Totem)
-    quest=st.getPlayer().getQuestState("611_AllianceWithVarkaSilenos")
     if npcId == Wahkan :
         st.set("id","1")
         if st.getPlayer().isAlliedWithVarka() or VAlliance :
