@@ -1,5 +1,5 @@
 #
-# Created by DraX on 2005.07.27. updated by mr.
+# Created by DraX on 2005.07.27. updated by DrLecter.
 #
 import sys
 
@@ -19,8 +19,7 @@ FLAUEN       = 30899
 TATIANA	     = 31275
 ILYANA	     = 31320
 RACE_MANAGER = 30995
-#TODO
-#ANYA         = 30237
+BILIA        = 31964
 MINERVA      = 30836
 VERONA       = 30727
 
@@ -121,6 +120,14 @@ class Quest (JQuest) :
      st.set("id","12")     
      return
 
+   # Schuttgart
+   if npcId == BILIA: 
+     st.player.teleToLocation(12661,181687,-3560)
+     st.setState(STARTED)
+     st.set("id","13")
+     return
+
+
    ############################
    # Monster Derby Race Track #
    ############################
@@ -128,86 +135,81 @@ class Quest (JQuest) :
    # back to Gludin Village
    if npcId == RACE_MANAGER and st.getInt("id") == 1:
      st.player.teleToLocation(-80826,149775,-3043)
-     st.setState(COMPLETED)
      st.exitQuest(1)
      return
    
    # back to Gludio Castle Town
    if npcId == RACE_MANAGER and st.getInt("id") == 2:
      st.player.teleToLocation(-12672,122776,-3116)
-     st.setState(COMPLETED)
      st.exitQuest(1)
      return
   
    # back to Dion Castle Town
    if npcId == RACE_MANAGER and st.getInt("id") == 3:
      st.player.teleToLocation(15670,142983,-2705)
-     st.setState(COMPLETED)
      st.exitQuest(1)
      return
 
    # back to Giran Castle Town
    if npcId == RACE_MANAGER and st.getInt("id") == 4:
      st.player.teleToLocation(83400,147943,-3404)
-     st.setState(COMPLETED)
      st.exitQuest(1)
      return
 
    # back to Heine
    if npcId == RACE_MANAGER and st.getInt("id") == 5:
      st.player.teleToLocation(111409,219364,-3545)
-     st.setState(COMPLETED)
      st.exitQuest(1)
      return
 
    # back to Town of Oren
    if npcId == RACE_MANAGER and st.getInt("id") == 6:
      st.player.teleToLocation(82956,53162,-1495)
-     st.setState(COMPLETED)
      st.exitQuest(1)
      return
 
    # back to Town of Aden
    if npcId == RACE_MANAGER and st.getInt("id") == 7:
      st.player.teleToLocation(146331,25762,-2018)
-     st.setState(COMPLETED)
      st.exitQuest(1)
      return
 
    # back to Hunters Village
    if npcId == RACE_MANAGER and st.getInt("id") == 8:
      st.player.teleToLocation(116819,76994,-2714)
-     st.setState(COMPLETED)
      st.exitQuest(1)
      return
 
    # back to Rune Village
    if npcId == RACE_MANAGER and st.getInt("id") == 9:
      st.player.teleToLocation(43835,-47749,-792)
-     st.setState(COMPLETED)
      st.exitQuest(1)
      return
 
    # back to Goddard Castle Town
    if npcId == RACE_MANAGER and st.getInt("id") == 10:
      st.player.teleToLocation(147930,-55281,-2728)
-     st.setState(COMPLETED)
      st.exitQuest(1)
      return
 
    # back to Ivory Tower
    if npcId == RACE_MANAGER and st.getInt("id") == 11:
      st.player.teleToLocation(85335,16177,-3694)
-     st.setState(COMPLETED)
      st.exitQuest(1)
      return
 
    # back to Hardins
    if npcId == RACE_MANAGER and st.getInt("id") == 12:
      st.player.teleToLocation(105857,109763,-3202)
-     st.setState(COMPLETED)
      st.exitQuest(1)
      return
+
+   # back to Schuttgart
+   if npcId == RACE_MANAGER and st.getInt("id") == 13:
+     st.player.teleToLocation(87386,-143246,-1293)
+     st.exitQuest(1)
+     return
+
 
 QUEST       = Quest(1101,"1101_teleport_to_race_track","Teleports")
 CREATED     = State('Start',     QUEST)
@@ -226,6 +228,7 @@ QUEST.addStartNpc(ELISA)
 QUEST.addStartNpc(FLAUEN)
 QUEST.addStartNpc(ILYANA)
 QUEST.addStartNpc(TATIANA)
+QUEST.addStartNpc(BILIA)
 
 CREATED.addTalkId(TRISHA)
 CREATED.addTalkId(CLARISSA)
@@ -237,6 +240,7 @@ CREATED.addTalkId(ELISA)
 CREATED.addTalkId(FLAUEN)
 CREATED.addTalkId(ILYANA)
 CREATED.addTalkId(TATIANA)
+CREATED.addTalkId(BILIA)
 
 STARTED.addTalkId(RACE_MANAGER)
 
