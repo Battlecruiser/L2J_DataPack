@@ -1,5 +1,6 @@
 # Made by Drov.
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -35,7 +36,7 @@ class Quest (JQuest) :
 
  def onKill(self,npc,st) :
    if st.getRandom(20) == 0 :
-     st.giveItems(SWEET_FLUID,1)
+     st.giveItems(SWEET_FLUID,int(Config.RATE_DROP_QUEST))
      st.playSound("ItemSound.quest_itemget")  
    return
 
