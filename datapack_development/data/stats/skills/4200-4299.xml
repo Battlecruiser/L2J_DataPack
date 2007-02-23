@@ -1380,13 +1380,14 @@
   <set name="mpConsume" val="400"/>
   <set name="hitTime" val="3600"/>
   <set name="target" val="TARGET_AREA"/>
-  <set name="skillRadius" val="200"/>
+  <set name="skillRadius" val="300"/>
   <set name="skillTime" val="3600"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="6000"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
+  <cond msg="You can only use Wyvern Breath when flying"><player flying="true"/></cond>
   <for>
   </for>
 </skill>
