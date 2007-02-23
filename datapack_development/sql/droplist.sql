@@ -21076,6 +21076,323 @@ INSERT INTO `droplist` VALUES
 (21823,4044,1,1,2,49875); -- Thons
 
 -- 
+-- work in progress C5 mob drops - 22xxx mobs
+-- 
+INSERT INTO `droplist` VALUES 
+(22079,57,466,1581,0,700000), -- Adena
+(22079,1871,1,1,2,111111), -- Charcoal
+(22079,1866,1,1,2,76923), -- Suede
+(22079,1989,1,1,1,4975), -- Divine Stocking Pattern
+(22079,1877,1,1,2,4504), -- Adamantite Nugget
+(22079,4040,1,1,2,2217), -- Mold Lubricant
+(22079,4126,1,1,2,1972), -- Recipe: Adamantite Earrings
+(22079,4041,1,1,2,933), -- Mold Hardener
+(22079,473,1,1,1,31), -- Divine Stockings
+(22079,442,1,1,1,16), -- Divine Tunic
+(22079,2121,1,1,-1,20680), -- Eminence Bow Shaft
+(22079,4145,1,1,-1,19075), -- Recipe: Avadon Leather Armor
+(22079,2122,1,1,-1,16626), -- Orcish Poleaxe Blade
+(22080,57,511,1703,0,700000), -- Adena
+(22080,8394,1,1,2,11905), -- Spellbook: Trance
+(22080,8380,1,1,2,11628), -- Spellbook: Betray
+(22080,2917,1,1,1,6849), -- Ring of Binding Gemstone
+(22080,1918,1,1,1,5291), -- Nassen\'s Earring Gemstone
+(22080,1920,1,1,1,4115), -- Necklace of Binding Chain
+(22080,886,1,1,1,154), -- Ring of Binding
+(22080,855,1,1,1,113), -- Nassen\'s Earring
+(22080,119,1,1,1,88), -- Necklace of Binding
+(22080,1867,1,5,-1,823561), -- Animal Skin
+(22080,1872,1,5,-1,802482), -- Animal Bone
+(22080,2917,1,1,-1,76144), -- Ring of Binding Gemstone
+(22081,57,485,986,0,700000), -- Adena
+(22081,1868,1,1,2,142857), -- Thread
+(22081,1873,1,1,2,30303), -- Silver Nugget
+(22081,5549,1,1,2,7143), -- Metallic Thread
+(22081,1889,1,1,2,4525), -- Compound Braid
+(22081,4044,1,1,2,2817), -- Thons
+(22081,2955,1,1,1,2119), -- Theca Leather Gloves Texture
+(22081,2954,1,1,1,2083), -- Theca Leather Boots Texture
+(22081,2961,1,1,1,2028), -- Full Plate Boots Part
+(22081,2964,1,1,1,1883), -- Divine Gloves Pattern
+(22081,2963,1,1,1,1773), -- Full Plate Gauntlets Part
+(22081,2960,1,1,1,1754), -- Drake Leather Boots Design
+(22081,2962,1,1,1,1515), -- Drake Leather Gloves Design
+(22081,4128,1,1,2,950), -- Recipe: Adamantite Necklace
+(22081,2437,1,1,1,18), -- Drake Leather Boots
+(22081,2462,1,1,1,18), -- Full Plate Gauntlets
+(22081,2463,1,1,1,18), -- Divine Gloves
+(22081,4146,1,1,-1,58761), -- Recipe: Tunic of Zubei
+(22081,2954,1,2,-1,22577), -- Theca Leather Boots Texture
+(22081,4147,1,2,-1,1135), -- Recipe: Stockings of Zubei
+(22082,57,557,1134,0,700000), -- Adena
+(22082,8395,1,1,2,8000), -- Spellbook: Erase
+(22082,8396,1,1,2,7299), -- Spellbook: Magical Backfire
+(22082,2966,1,1,1,6172), -- Full Plate Shield Fragment
+(22082,2959,1,1,1,3921), -- Full Plate Helmet Design
+(22082,2497,1,1,1,83), -- Full Plate Shield
+(22082,2414,1,1,1,71), -- Full Plate Helmet
+(22082,2955,1,1,-1,81734), -- Theca Leather Gloves Texture
+(22082,4041,1,1,-1,12537), -- Mold Hardener
+(22082,1872,1,3,-1,854850), -- Animal Bone
+(22082,1881,1,1,-1,853135), -- Coarse Bone Powder
+(22083,57,502,1710,0,700000), -- Adena
+(22083,1871,1,1,2,111111), -- Charcoal
+(22083,1866,1,1,2,76923), -- Suede
+(22083,2917,1,1,1,7092), -- Ring of Binding Gemstone
+(22083,1918,1,1,1,5025), -- Nassen\'s Earring Gemstone
+(22083,1877,1,1,2,4505), -- Adamantite Nugget
+(22083,1920,1,1,1,4132), -- Necklace of Binding Chain
+(22083,4040,1,1,2,2217), -- Mold Lubricant
+(22083,4041,1,1,2,1032), -- Mold Hardener
+(22083,4134,1,1,2,967), -- Recipe: Zubei\'s Gaiters
+(22083,886,1,1,1,64), -- Ring of Binding
+(22083,119,1,1,1,40), -- Necklace of Binding
+(22083,855,1,1,1,24), -- Nassen\'s Earring
+(22083,2959,1,1,-1,20931), -- Full Plate Helmet Design
+(22083,4148,1,1,-1,10906), -- Recipe: Avadon Robe
+(22083,2960,1,2,-1,106563), -- Drake Leather Boots Design
+(22084,57,521,1778,0,700000), -- Adena
+(22084,8386,1,1,2,10101), -- Spellbook - Arcane Disruption
+(22084,8400,1,1,2,8620), -- Spellbook: Turn Undead
+(22084,4070,1,1,1,2980), -- Stockings of Zubei Fabric
+(22084,4069,1,1,1,2222), -- Tunic of Zubei Fabric
+(22084,4071,1,1,1,1730), -- Avadon Robe Fabric
+(22084,2397,1,1,1,19), -- Tunic of Zubei
+(22084,2402,1,1,1,22), -- Stockings of Zubei
+(22084,2406,1,1,1,10), -- Avadon Robe
+(22084,4129,1,1,-1,13197), -- Recipe: Earrings of Black Ore
+(22084,4049,1,1,-1,63959), -- Adamantite Earring Gemstone
+(22084,947,1,1,-1,952), -- Scroll: Enchant Weapon (Grade B)
+(22084,8311,1,1,-1,810), -- Recipe: Kaim Vanul\'s Bones (100%)
+(22085,57,460,937,0,700000), -- Adena
+(22085,1870,1,1,2,62500), -- Coal
+(22085,1865,1,1,2,62500), -- Varnish
+(22085,1874,1,1,2,3937), -- Oriharukon Ore
+(22085,2917,1,1,1,3846), -- Ring of Binding Gemstone
+(22085,1920,1,1,1,2849), -- Necklace of Binding Chain
+(22085,1918,1,1,1,2841), -- Nassen\'s Earring Gemstone
+(22085,4039,1,1,2,1916), -- Mold Glue
+(22085,4043,1,1,2,1751), -- Asofe
+(22085,1806,1,1,1,136), -- Recipe: Soulshot: B-Grade
+(22085,886,1,1,1,60), -- Ring of Binding
+(22085,855,1,1,1,45), -- Nassen\'s Earring
+(22085,119,1,1,1,15), -- Necklace of Binding
+(22085,1918,1,2,-1,197438), -- Nassen\'s Earring Gemstone
+(22085,4043,1,1,-1,121204), -- Asofe
+(22085,1874,1,1,-1,113674), -- Oriharukon Ore
+(22086,57,534,1091,0,700000), -- Adena
+(22086,8398,1,1,2,6329), -- Spellbook: Mana Burn
+(22086,8401,1,1,2,6329), -- Spellbook: Major Heal
+(22086,4067,1,1,1,2232), -- Zubei\'s Leather Gaiter Texture
+(22086,4066,1,1,1,1253), -- Zubei\'s Leather Shirt Fabric
+(22086,4068,1,1,1,994), -- Avadon Leather Armor Lining
+(22086,2384,1,1,1,54), -- Zubei\'s Leather Shirt
+(22086,2388,1,1,1,27), -- Zubei\'s Leather Gaiters
+(22086,2390,1,1,1,20), -- Avadon Leather Armor
+(22086,4049,1,1,-1,85625), -- Adamantite Earring Gemstone
+(22086,4130,1,1,-1,43219), -- Recipe: Ring of Black Ore
+(22086,4131,1,1,-1,23438), -- Recipe: Necklace of Black Ore
+(22087,57,857,1751,0,700000), -- Adena
+(22087,1868,1,1,2,166666), -- Thread
+(22087,1864,1,3,2,90909), -- Stem
+(22087,1865,1,1,2,90909), -- Varnish
+(22087,1866,1,1,2,58824), -- Suede
+(22087,1873,1,1,2,35714), -- Silver Nugget
+(22087,4110,1,1,1,975), -- Hell Knife Edge
+(22087,4109,1,1,1,931), -- Kris Edge
+(22087,948,1,1,2,218), -- Scroll: Enchant Armor (Grade B)
+(22087,8298,1,1,2,44), -- Recipe: Guardian\'s Sword (60%)
+(22087,229,1,1,1,15), -- Kris
+(22087,243,1,1,1,15), -- Hell Knife
+(22087,4050,1,2,-1,233550), -- Adamantite Ring Wire
+(22087,948,1,1,-1,19531), -- Scroll: Enchant Armor (Grade B)
+(22087,1865,1,3,-1,767500), -- Varnish
+(22088,57,521,1065,0,700000), -- Adena
+(22088,8382,1,1,2,5714), -- Spellbook: Mass Curse Gloom
+(22088,8381,1,1,2,5649), -- Spellbook: Mass Curse Fear
+(22088,4104,1,1,1,364), -- Great Sword Blade
+(22088,4107,1,1,1,364), -- Keshanberk Blade
+(22088,4108,1,1,1,243), -- Sword of Valhalla Blade
+(22088,78,1,1,1,6), -- Great Sword
+(22088,142,1,1,1,6), -- Keshanberk
+(22088,148,1,1,1,6), -- Sword of Valhalla
+(22088,1867,1,5,-1,865410), -- Animal Skin
+(22088,4613,1,1,-1,6435), -- Greater Dye of Strength <Str+4 Con-4>
+(22088,4051,1,1,-1,4984), -- Adamantite Necklace Chain
+(22089,57,599,1224,0,700000), -- Adena
+(22089,1868,1,1,2,142857), -- Thread
+(22089,1873,1,1,2,28571), -- Silver Nugget
+(22089,1895,1,1,2,18868), -- Metallic Fiber
+(22089,1876,1,1,2,13333), -- Mithril Ore
+(22089,4042,1,1,2,1272), -- Enria
+(22089,4105,1,1,1,460), -- Heavy War Axe Head
+(22089,4106,1,1,1,298), -- Sprite\'s Staff Head
+(22089,8339,1,1,1,298), -- Spell Breaker Head
+(22089,8347,1,1,1,229), -- Ice Storm Hammer Head
+(22089,8312,1,1,2,33), -- Recipe: Kaim Vanul\'s Bones (60%)
+(22089,91,1,1,1,8), -- Heavy War Axe
+(22089,92,1,1,1,8), -- Sprite\'s Staff
+(22089,7892,1,1,1,8), -- Spell Breaker
+(22089,7900,1,1,1,8), -- Ice Storm Hammer
+(22089,4154,1,1,-1,19594), -- Recipe: Doom Shield
+(22089,4155,1,1,-1,4531), -- Recipe: Blue Wolf Breastplate
+(22089,4056,1,1,-1,22188), -- Zubei\'s Breastplate Part
+(22090,57,622,1268,0,700000), -- Adena
+(22090,8384,1,1,2,6849), -- Spellbook: Mass Surrender to Water
+(22090,8383,1,1,2,6410), -- Spellbook: Mass Surrender to Fire
+(22090,4105,1,1,1,460), -- Heavy War Axe Head
+(22090,4106,1,1,1,424), -- Sprite\'s Staff Head
+(22090,8347,1,1,1,318), -- Ice Storm Hammer Head
+(22090,8339,1,1,1,300), -- Spell Breaker Head
+(22090,91,1,1,1,5), -- Heavy War Axe
+(22090,92,1,1,1,5), -- Sprite\'s Staff
+(22090,7892,1,1,1,5), -- Spell Breaker
+(22090,7900,1,1,1,5), -- Ice Storm Hammer
+(22090,4057,1,1,-1,64320), -- Zubei\'s Gaiter Material
+(22090,1866,1,3,-1,791445), -- Suede
+(22090,947,1,1,-1,593), -- Scroll: Enchant Weapon (Grade B)
+(22091,57,656,2324,0,700000), -- Adena
+(22091,1870,1,1,2,125000), -- Coal
+(22091,1871,1,1,2,125000), -- Charcoal
+(22091,1872,1,3,2,100000), -- Animal Bone
+(22091,1867,1,3,2,71429), -- Animal Skin
+(22091,1869,1,6,2,45455), -- Iron Ore
+(22091,4057,1,1,1,2703), -- Zubei\'s Gaiter Material
+(22091,4065,1,1,1,2618), -- Avadon Gaiters Material
+(22091,4064,1,1,1,1706), -- Avadon Breastplate Part
+(22091,4056,1,1,1,1645), -- Zubei\'s Breastplate Part
+(22091,4154,1,1,2,1475), -- Recipe: Doom Shield
+(22091,2379,1,1,1,20), -- Avadon Gaiters
+(22091,2376,1,1,1,20), -- Avadon Breastplate
+(22091,357,1,1,1,20), -- Zubei\'s Breastplate
+(22091,383,1,1,1,20), -- Zubei\'s Gaiters
+(22091,1869,1,5,-1,535000), -- Iron Ore
+(22091,4614,1,1,-1,6535), -- Greater Dye of Strength <Str+4 Dex-4>
+(22091,8306,1,1,-1,5000), -- Recipe: Wizard\'s Tear (60%)
+(22092,57,680,2410,0,700000), -- Adena
+(22092,8385,1,1,2,11111), -- Spellbook: Mass Surrender to Wind
+(22092,8388,1,1,2,10752), -- Spellbook: Greater Might
+(22092,4104,1,1,1,784), -- Great Sword Blade
+(22092,4108,1,1,1,741), -- Sword of Valhalla Blade
+(22092,4107,1,1,1,714), -- Keshanberk Blade
+(22092,357,1,1,1,7), -- Zubei\'s Breastplate
+(22092,4056,1,1,1,1136), -- Zubei\'s Breastplate Part
+(22092,383,1,1,1,10), -- Zubei\'s Gaiters
+(22092,4057,1,1,1,1755), -- Zubei\'s Gaiter Material
+(22092,2376,1,1,1,7), -- Avadon Breastplate
+(22092,4064,1,1,1,1136), -- Avadon Breastplate Part
+(22092,2379,1,1,1,10), -- Avadon Gaiters
+(22092,4065,1,1,1,1755), -- Avadon Gaiters Material
+(22092,4157,1,1,-1,5149), -- Recipe: Blue Wolf Gaiters
+(22092,4065,1,1,-1,48737), -- Avadon Gaiters Material
+(22092,4158,1,1,-1,3533), -- Recipe: Doom Plate Armor
+(22092,8314,1,1,-1,986), -- Recipe: Spiritual Eye (60%)
+(22093,57,994,2021,0,700000), -- Adena
+(22093,1868,1,1,2,200000), -- Thread
+(22093,1343,10,30,2,142857), -- Silver Arrow
+(22093,1873,1,1,2,40000), -- Silver Nugget
+(22093,1895,1,1,2,31250), -- Metallic Fiber
+(22093,1876,1,1,2,20833), -- Mithril Ore
+(22093,4067,1,1,1,4651), -- Zubei\'s Leather Gaiter Texture
+(22093,4066,1,1,1,3058), -- Zubei\'s Leather Shirt Fabric
+(22093,4068,1,1,1,1880), -- Avadon Leather Armor Lining
+(22093,4042,1,1,2,1828), -- Enria
+(22093,4157,1,1,2,653), -- Recipe: Blue Wolf Gaiters
+(22093,4615,1,1,-1,6406), -- Greater Dye of Constitution <Con+4 Str-4>
+(22093,8300,1,1,-1,4125), -- Recipe: Infernal Master (60%)
+(22093,8315,1,1,-1,4125), -- Recipe: Flaming Dragon Skull (100%)
+(22094,57,605,1227,0,700000), -- Adena
+(22094,8391,1,1,2,4444), -- Amulet: Earth Chant
+(22094,8389,1,1,2,4310), -- Spellbook: Greater Shield
+(22094,8390,1,1,2,4132), -- Amulet: War Chant
+(22094,4105,1,1,1,465), -- Heavy War Axe Head
+(22094,8339,1,1,1,410), -- Spell Breaker Head
+(22094,4106,1,1,1,260), -- Sprite\'s Staff Head
+(22094,8347,1,1,1,223), -- Ice Storm Hammer Head
+(22094,2384,1,1,1,17), -- Zubei\'s Leather Shirt
+(22094,4066,1,1,1,3108), -- Zubei\'s Leather Shirt Fabric
+(22094,2388,1,1,1,28), -- Zubei\'s Leather Gaiters
+(22094,4067,1,1,1,4719), -- Zubei\'s Leather Gaiter Texture
+(22094,2390,1,1,1,12), -- Avadon Leather Armor
+(22094,4068,1,1,1,2388), -- Avadon Leather Armor Lining
+(22094,1876,1,1,-1,938515), -- Mithril Ore
+(22094,4615,1,1,-1,5904), -- Greater Dye of Constitution <Con+4 Str-4>
+(22094,4067,1,1,-1,173432), -- Zubei\'s Leather Gaiter Texture
+(22095,57,627,2127,0,700000), -- Adena
+(22095,1343,10,30,2,125000), -- Silver Arrow
+(22095,1870,1,1,2,90909), -- Coal
+(22095,1865,1,1,2,90909), -- Varnish
+(22095,1879,1,1,2,14925), -- Cokes
+(22095,1875,1,1,2,5780), -- Stone of Purity
+(22095,4040,1,1,2,1626), -- Mold Lubricant
+(22095,4109,1,1,1,1055), -- Kris Edge
+(22095,4110,1,1,1,1017), -- Hell Knife Edge
+(22095,4159,1,1,2,333), -- Recipe: Blue Wolf Leather Armor
+(22095,8306,1,1,2,56), -- Recipe: Wizard\'s Tear (60%)
+(22095,229,1,1,1,6), -- Kris
+(22095,243,1,1,1,6), -- Hell Knife
+(22095,4159,1,1,-1,8750), -- Recipe: Blue Wolf Leather Armor
+(22095,4160,1,1,-1,8750), -- Recipe: Leather Armor of Doom
+(22095,4068,1,1,-1,14500), -- Avadon Leather Armor Lining
+(22096,57,650,2201,0,700000), -- Adena
+(22096,8392,1,1,2,10752), -- Spellbook: Holy Resistance
+(22096,8393,1,1,2,10526), -- Spellbook: Unholy Resistance
+(22096,4117,1,1,1,403), -- Art of Battle Axe Blade
+(22096,4116,1,1,1,380), -- Deadman\'s Glory Stone
+(22096,4118,1,1,1,334), -- Evil Spirit Head
+(22096,8348,1,1,1,304), -- Star Buster Head
+(22096,8340,1,1,1,288), -- Bones Head of Kaim Vanul 
+(22096,864,1,1,1,54), -- Earring of Black Ore
+(22096,4052,1,1,1,8684), -- Earring of Black Ore Piece
+(22096,895,1,1,1,80), -- Ring of Black Ore
+(22096,4053,1,1,1,8684), -- Ring of Black Ore Gemstone
+(22096,926,1,1,1,40), -- Necklace of Black Ore
+(22096,4054,1,1,1,4831), -- Necklace of Black Ore Beads
+(22096,4052,1,1,-1,88462), -- Earring of Black Ore Piece
+(22096,1875,1,1,-1,136158), -- Stone of Purity
+(22096,4041,1,1,-1,38815), -- Mold Hardener
+(22097,57,758,1536,0,700000), -- Adena
+(22097,1343,10,30,2,90909), -- Silver Arrow
+(22097,1870,1,1,2,62500), -- Coal
+(22097,1865,1,1,2,58824), -- Varnish
+(22097,1879,1,1,2,10417), -- Cokes
+(22097,1875,1,1,2,4255), -- Stone of Purity
+(22097,4087,1,1,1,1681), -- Stockings of Doom Pattern
+(22097,4086,1,1,1,1522), -- Blue Wolf Stockings Pattern
+(22097,4084,1,1,1,1215), -- Blue Wolf Tunic Fabric
+(22097,4085,1,1,1,1215), -- Tunic of Doom Pattern
+(22097,4040,1,1,2,1203), -- Mold Lubricant
+(22097,3035,1,1,2,160), -- Recipe: Spiritshot A
+(22097,8305,1,1,2,49), -- Recipe: Wizard\'s Tear (100%)
+(22097,2399,1,1,1,12), -- Tunic of Doom
+(22097,2404,1,1,1,12), -- Stockings of Doom
+(22097,2398,1,1,1,12), -- Blue Wolf Tunic
+(22097,2403,1,1,1,12), -- Blue Wolf Stockings
+(22097,4054,1,1,-1,38425), -- Necklace of Black Ore Beads
+(22097,4053,1,1,-1,315000), -- Ring of Black Ore Gemstone
+(22097,1807,1,1,-1,3431), -- Recipe: Soulshot: A-Grade
+(22098,57,785,1590,0,700000), -- Adena
+(22098,8402,1,1,2,4464), -- Spellbook: Major Group Heal
+(22098,8399,1,1,2,4310), -- Spellbook: Mana Storm
+(22098,8397,1,1,2,4081), -- Spellbook: Clarity
+(22098,8387,1,1,2,3831), -- Spellbook - Summon Cursed Bones
+(22098,8336,1,1,1,484), -- Blade of the Wizard\'s Tear
+(22098,4114,1,1,1,330), -- Sword of Damascus Blade
+(22098,8330,1,1,1,286), -- Guardian Sword Blade 
+(22098,79,1,1,1,7), -- Sword of Damascus
+(22098,2398,1,1,1,8), -- Blue Wolf Tunic
+(22098,4084,1,1,1,1587), -- Blue Wolf Tunic Fabric
+(22098,2399,1,1,1,8), -- Tunic of Doom
+(22098,4085,1,1,1,1587), -- Tunic of Doom Pattern
+(22098,2403,1,1,1,13), -- Blue Wolf Stockings
+(22098,4086,1,1,1,2143), -- Blue Wolf Stockings Pattern
+(22098,2404,1,1,1,13), -- Stockings of Doom
+(22098,4087,1,1,1,2143), -- Stockings of Doom Pattern
+(22098,3035,1,1,-1,3141), -- Recipe: Spiritshot A
+(22098,4077,1,1,-1,105674), -- Doom Shield Fragment
+(22098,4039,1,1,-1,61038); -- Mold Glue
+
+-- 
 -- Category Explanation (RaidBoss & their minions)
 --   0 is full armor and armor mats
 --   1 is full weapon and weapon mats
