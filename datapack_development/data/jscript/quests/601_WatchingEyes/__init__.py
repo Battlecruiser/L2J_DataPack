@@ -51,7 +51,7 @@ class Quest (JQuest) :
         htmltext="31683-4a.htm"
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,st):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    npcId = npc.getNpcId()
    id = st.getState()
@@ -71,7 +71,7 @@ class Quest (JQuest) :
      numItems, chance = divmod(chance,100)
      if st.getRandom(100) < chance : 
        numItems = numItems + 1
-     if count + numItems => 100 :
+     if count + numItems >= 100 :
        numItems = 100 - count
        st.playSound("ItemSound.quest_middle")
        st.set("cond","2")
