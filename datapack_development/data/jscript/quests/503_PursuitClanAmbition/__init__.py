@@ -488,32 +488,47 @@ class Quest (JQuest) :
 		return
 
 	def onKill (self,npc,st):
-		npcId=npc.getNpcId()
-		condition,maxcount,chance,itemList = DROPLIST[npcId]
-		random = st.getRandom(100)
-		cond = getLeaderVar(st,"cond")
-		if cond == condition and random < chance:
-			if len(itemList) > 1:
-				stoneRandom = st.getRandom(3)
-				if stoneRandom == 0 :
-					if getLeaderVar(st,"Kurtz") < 4:
-						return
-					else:
-						maxcount*=4
-				giveItem(itemList[stoneRandom],maxcount,st)
-			elif len(itemList) :
-				giveItem(itemList[0],maxcount,st)
-			else:
-				if npcId == 27181:								# Imperial Gravekeeper
-					st.getPcSpawn().addSpawn(30765,6000000,["Curse of the gods on the one that defiles the property of the empire!"],0)
-					setLeaderVar(st,"ImpGraveKeeper","3")
+		# all kill events triggered by the leader occur automatically.
+		# However, kill events that were triggered by members occur via the leader and
+		# only if the leader is online and within a certain distance!
+		leader_st = 0
+		if st.getPlayer().isClanLeader() :
+			leader_st = st
+		else :
+			clan = st.getPlayer().getClan()
+			if clan:
+				leader=clan.getLeader().getPlayerInstance()
+				if leader :
+					if st.getPlayer().isInsideRadius(leader, 1600, 1, 0) :
+						leader_st = leader.getQuestState(qn)
+		
+		if leader_st :
+			npcId=npc.getNpcId()
+			condition,maxcount,chance,itemList = DROPLIST[npcId]
+			random = leader_st.getRandom(100)
+			cond = leader_st.getInt("cond")
+			if cond == condition and random < chance:
+				if len(itemList) > 1:
+					stoneRandom = leader_st.getRandom(3)
+					if stoneRandom == 0 :
+						if leader_st.getInt("Kurtz") < 4:
+							return
+						else:
+							maxcount*=4
+					giveItem(itemList[stoneRandom],maxcount,leader_st)
+				elif len(itemList) :
+					giveItem(itemList[0],maxcount,leader_st)
 				else:
-					st.getPcSpawn().addSpawn(27179)
+					if npcId == 27181:								# Imperial Gravekeeper
+						leader_st.getPcSpawn().addSpawn(30765,6000000,["Curse of the gods on the one that defiles the property of the empire!"],0)
+						leader_st.set("ImpGraveKeeper","3")
+					else:
+						leader_st.getPcSpawn().addSpawn(27179)
 		return
 
 QUEST		= Quest(503,qn,"Pursuit of Clan Ambition")
 CREATED		= State('Start', QUEST)
-PROGRESS	= State('Progress', QUEST,True)
+PROGRESS	= State('Progress', QUEST)
 COMPLETED	= State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
