@@ -6225,7 +6225,7 @@ INSERT INTO `etcitem` (`item_id`,`name`,`crystallizable`,`item_type`,`weight`,`c
  ('8097','X-688','false','none','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('8098','Supplying Goods for Railroad Worker','false','none','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('8099','Thief Guild\'s Mark','false','none','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
- ('8100','Destroyed Golem Shards','false','none','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
+ ('8100','Destroyed Golem Shards','false','quest','0','stackable','steel','none','100','0','0','false','false','true','false','C5Item','none'),
  ('8101','Dwarf\'s Favor','false','none','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('8153','Adventurer\'s Guide Book','false','none','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('8154','Herb of Life','false','none','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
