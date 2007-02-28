@@ -64,6 +64,7 @@ class Quest (JQuest) :
       elif not st.getQuestItemsCount(DIMENSION_FRAGMENT) :
          htmltext="3.htm"
       else :
+         st.setState(CREATED)
          id=str(npcId-31493)
          st.set("id",id)
          htmltext="4.htm"
