@@ -116,9 +116,9 @@ class Quest (JQuest) :
  def onKill (self,npc,st) :
      npcId = npc.getNpcId()
      drop = st.getRandom(100)
-     cond = int(st.get("cond"))
+     cond = st.getInt("cond")
      dropcond = DROPLIST[npcId][0]
-     if drop < DROP_RATE :
+     if drop < DROP_RATE and cond == dropcond :
         if st.getQuestItemsCount(DROPLIST[npcId][1]) == 0 :
             st.giveItems(DROPLIST[npcId][1],1)
             st.playSound("ItemSound.quest_itemget")
