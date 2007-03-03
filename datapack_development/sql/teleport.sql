@@ -377,7 +377,7 @@ INSERT INTO teleport VALUES
 ('Schuttgart -> Dwarven Village',1115,115113,-178212,-901,4400,0),
 ('Schuttgart -> Nest of Evil Spirit',1116,76860,-125169,-3414,3000,0),
 ('Schuttgart -> Wasteland of plunder',1117,109024,-159223,-1778,1600,0),
-('Schuttgart -> Labyrinth of winter',1118,122162,-118893,-2603,3500,0),
+('Schuttgart -> Labyrinth of winter',1118,113903,-108752,-848,3500,0),
 ('Schuttgart -> Graveyard of disgrace',1119,56095,-118952,-3290,1900,0),
 ('Schuttgart -> Farbel Ruins',1120,88288,-125692,-3816,2100,0);
 
