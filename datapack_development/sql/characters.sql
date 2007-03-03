@@ -54,7 +54,6 @@ CREATE TABLE IF NOT EXISTS characters (
   deletetime decimal(20,0) default NULL,
   cancraft decimal(11,0) default NULL,
   title varchar(16) default NULL,
-  allyId decimal(11,0) default NULL,
   rec_have int(3) NOT NULL default '0',
   rec_left int(3) NOT NULL default '0',
   accesslevel decimal(4,0) default NULL,
@@ -65,7 +64,6 @@ CREATE TABLE IF NOT EXISTS characters (
   lastAccess decimal(20,0) default NULL,
   clan_privs INT DEFAULT 0,
   wantspeace decimal(1,0) DEFAULT 0,
-  deleteclan decimal(20,0) default NULL,
   isin7sdungeon decimal(1,0) NOT NULL default 0,
   in_jail decimal(1,0) DEFAULT 0,
   jail_timer decimal(20,0) DEFAULT 0,
@@ -77,6 +75,8 @@ CREATE TABLE IF NOT EXISTS characters (
   apprentice int(1) NOT NULL DEFAULT 0,
   sponsor int(1) NOT NULL DEFAULT 0,
   varka_ketra_ally int(1) NOT NULL DEFAULT 0,
+  clan_join_expiry_time DECIMAL(20,0) NOT NULL DEFAULT 0,
+  clan_create_expiry_time DECIMAL(20,0) NOT NULL DEFAULT 0,
   PRIMARY KEY  (obj_Id),
   KEY `clanid` (`clanid`)
 ) ;

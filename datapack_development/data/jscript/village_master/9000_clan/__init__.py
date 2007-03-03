@@ -19,33 +19,6 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st):
    htmltext     = event
-   Level        = st.getPlayer().getLevel()
-   ClanLeader   = st.player.isClanLeader()
-   PlayerinClan = st.player.getClanId()
-
-   if event == "9000-01.htm": htmltext = "9000-01.htm"
-   # Player must be Level 10 or above! (so cannot create clan)
-   elif event == "9000-02.htm" and Level <= 9: htmltext = "9000-06.htm"
-   # player is always clanleader! (so cannot create clan)
-   elif event == "9000-02.htm" and ClanLeader == 1: htmltext = "9000-07.htm"
-   # player is already in a clan! (so cannot create clan)
-   elif event == "9000-02.htm" and PlayerinClan != 0: htmltext = "9000-09.htm"
-   # always shown the clan raise page!
-   elif event == "9000-03.htm": htmltext = "9000-03.htm"
-   # player must be clanleader to dissolve clan!
-   elif event == "9000-04.htm" and ClanLeader == 1: htmltext = "9000-04.htm"
-   # player must be clanleader to dissolve clan! 
-   elif event == "9000-04.htm" and PlayerinClan != 0: htmltext = "9000-08.htm"
-   # player must be in a clan to dissolve clan! 
-   elif event == "9000-04.htm" and PlayerinClan == 0: htmltext = "9000-11.htm"
-   elif event == "9000-05.htm": htmltext = "9000-05.htm"
-   elif event == "9000-12.htm": htmtext = "9000-12.htm"
-   elif event == "9000-13.htm": htmtext = "9000-13.htm"
-   elif event == "9000-14.htm": htmtext = "9000-14.htm"
-   elif event == "9000-15.htm": htmtext = "9000-15.htm"
-   elif event == "9000-16.htm": htmtext = "9000-16.htm"
-   else: htmltext = "9000-02.htm"
-   #st.exitQuest(1)
    return htmltext
 
  def onTalk (Self,npc,st):
