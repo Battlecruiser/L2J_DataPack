@@ -53,7 +53,7 @@ class Quest (JQuest) :
          htmltext=default
      else:
        htmltext="LMFAO!"
-       st.extiQuest(1)
+       st.exitQuest(1)
    if event == "31546-1.htm" :
      if st.getQuestItemsCount(SPECIAL_DRINK):
        if cond==2:
@@ -64,7 +64,7 @@ class Quest (JQuest) :
          htmltext=default
      else:
        htmltext="LMFAO!"
-       st.extiQuest(1)
+       st.exitQuest(1)
    if event == "31545-1.htm" :
      if st.getQuestItemsCount(SPECIAL_DRINK):
        if cond==3:
@@ -75,7 +75,7 @@ class Quest (JQuest) :
          htmltext=default
      else:
        htmltext="LMFAO!"
-       st.extiQuest(1)
+       st.exitQuest(1)
    if event == "31544-1.htm" :
      if st.getQuestItemsCount(SPECIAL_DRINK):
        if cond==4:
@@ -86,7 +86,7 @@ class Quest (JQuest) :
          htmltext=default
      else:
        htmltext="LMFAO!"
-       st.extiQuest(1)
+       st.exitQuest(1)
    if event == "31543-1.htm" :
      if st.getQuestItemsCount(SPECIAL_DRINK):
        if cond==5:
@@ -97,7 +97,7 @@ class Quest (JQuest) :
          htmltext=default
      else:
        htmltext="LMFAO!"
-       st.extiQuest(1)
+       st.exitQuest(1)
    if event == "31521-3.htm" :
      if st.getQuestItemsCount(FEE_OF_DRINK) == 5:
         st.takeItems(FEE_OF_DRINK,5)
