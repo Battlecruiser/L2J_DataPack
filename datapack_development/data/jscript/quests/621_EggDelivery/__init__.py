@@ -53,7 +53,7 @@ class Quest (JQuest) :
          htmltext=default
      else:
        htmltext="LMFAO!"
-       st.extiQuest(1)
+       st.exitQuest(1)
    if event == "31544-1.htm" :
      if st.getQuestItemsCount(BOILED_EGGS):
        if cond==2:
@@ -64,7 +64,7 @@ class Quest (JQuest) :
          htmltext=default
      else:
        htmltext="LMFAO!"
-       st.extiQuest(1)
+       st.exitQuest(1)
    if event == "31545-1.htm" :
      if st.getQuestItemsCount(BOILED_EGGS):
        if cond==3:
@@ -75,7 +75,7 @@ class Quest (JQuest) :
          htmltext=default
      else:
        htmltext="LMFAO!"
-       st.extiQuest(1)
+       st.exitQuest(1)
    if event == "31546-1.htm" :
      if st.getQuestItemsCount(BOILED_EGGS):
        if cond==4:
