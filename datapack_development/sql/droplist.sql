@@ -24316,3 +24316,41 @@ INSERT INTO `droplist` VALUES
 (29040,6652,2,6,2,197626), -- Amulet: Protection of Valakas
 (29040,6654,18,54,2,68620), -- Amulet: Flames of Valakas
 (29040,6655,14,42,2,44113); -- Amulet: Slay Valakas
+
+-- 
+-- work in progress drops.. once chance becomes more accurate, can move into known good drops
+-- 
+INSERT INTO `droplist` VALUES 
+(20623,5332,1,1,2,1148), -- Recipe: Sealed Dark Crystal Leather Armor(60%)
+(20624,5340,1,1,2,1084), -- Recipe: Sealed Dark Crystalline Leggings(60%)
+(20626,5334,1,1,2,641), -- Recipe: Sealed Tallum Leather Armor(60%)
+(20761,5338,1,1,2,364), -- Recipe: Sealed Majestic Leather Armor(60%)
+(20762,5336,1,1,2,330), -- Recipe: Sealed Leather Armor of Nightmare(60%)
+(20818,5416,1,1,2,308), -- Recipe: Sealed Dark Crystal Breastplate(60%)
+(20820,5424,1,1,2,357), -- Recipe: Sealed Dark Crystal Gaiters(60%)
+(20827,5420,1,1,2,271), -- Recipe: Sealed Armor of Nightmare(60%)
+(21061,5422,1,1,2,281), -- Recipe: Sealed Majestic Plate Armor(60%)
+(21069,5422,1,1,2,504), -- Recipe: Sealed Majestic Plate Armor(60%)
+(21298,5380,1,1,2,563), -- Recipe: Sealed Boots of Nightmare(60%)
+(21299,5382,1,1,2,1394), -- Recipe: Sealed Majestic Boots(60%)
+(21299,8331,1,1,1,1114), -- Infernal Master Blade
+(21301,5404,1,1,2,2173), -- Recipe: Sealed Gloves of Nightmare(60%)
+(21302,5382,1,1,2,1508), -- Recipe: Sealed Majestic Boots(60%)
+(21302,8331,1,1,1,1206), -- Infernal Master Blade
+(21303,5406,1,1,2,1436), -- Recipe: Sealed Majestic Gloves(60%)
+(21303,7899,1,1,1,6), -- Destroyer Hammer
+(21303,8341,1,1,1,901), -- Spiritual Eye Piece
+(21303,8346,1,1,1,1102), -- Hammer Piece of Destroyer 
+(21313,5380,1,1,2,3012), -- Recipe: Sealed Boots of Nightmare(60%)
+(21531,5392,1,1,2,1172), -- Recipe: Sealed Dark Crystal Gloves(60%)
+(21539,5394,1,1,2,1072), -- Recipe: Sealed Tallum Gloves(60%)
+(21541,5392,1,1,2,1524), -- Recipe: Sealed Dark Crystal Gloves(60%)
+(21544,5392,1,1,2,1422), -- Recipe: Sealed Dark Crystal Gloves(60%)
+(21546,5394,1,1,2,579), -- Recipe: Sealed Tallum Gloves(60%)
+(21547,5346,1,1,2,808), -- Recipe: Sealed Tallum Tunic(60%)
+(21548,5346,1,1,2,97), -- Recipe: Sealed Tallum Tunic(60%)
+(21549,5354,1,1,2,546), -- Recipe: Sealed Tallum Stockings(60%)
+(21550,5354,1,1,2,393), -- Recipe: Sealed Tallum Stockings(60%)
+(21553,5348,1,1,2,328), -- Recipe: Sealed Dark Crystal Robe(60%)
+(21572,5352,1,1,2,86), -- Recipe: Sealed Majestic Robe(60%)
+(21596,5350,1,1,2,184); -- Recipe: Sealed Robe of Nightmare(60%)
