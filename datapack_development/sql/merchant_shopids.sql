@@ -247,6 +247,8 @@ INSERT INTO merchant_shopids VALUES (351441,'35144');
 INSERT INTO merchant_shopids VALUES (351861,'35186');
 INSERT INTO merchant_shopids VALUES (352281,'35228');
 INSERT INTO merchant_shopids VALUES (352761,'35276');
+INSERT INTO merchant_shopids VALUES (353181,'35318');
+INSERT INTO merchant_shopids VALUES (353651,'35365');
 
 -- Fishermens
 
