@@ -24354,3 +24354,124 @@ INSERT INTO `droplist` VALUES
 (21553,5348,1,1,2,328), -- Recipe: Sealed Dark Crystal Robe(60%)
 (21572,5352,1,1,2,86), -- Recipe: Sealed Majestic Robe(60%)
 (21596,5350,1,1,2,184); -- Recipe: Sealed Robe of Nightmare(60%)
+
+-- RB drops for clan skill items (25% chance drop until chances are confirmed)
+-- admins who have drop multipliers might want to edit chances
+INSERT INTO `droplist` VALUES 
+-- Skull of The Dead - C-Grade
+(25410,8158,1,3,100,250000), -- Road Scavenger Leader (40)
+(25026,8158,1,3,100,250000), -- Katu Van Leader Atui (49)
+(25437,8158,2,2,100,250000), -- Timak Orc Gosmos (45)
+(25044,8158,1,2,100,250000), -- Barion (47)
+
+-- Skull of The Dead - B-Grade
+(25336,8159,1,1,100,250000), -- Anakazel (58)
+(25256,8159,1,3,100,250000), -- Taik High Prefect Arak (60)
+(25407,8159,1,3,100,250000), -- Lord Ishka (60)
+(25131,8159,1,1,100,250000), -- Carnage Lord Gato (50)
+(25050,8159,1,1,100,250000), -- Verfa (51)
+
+-- Skull of The Dead - A-Grade
+(25220,8160,1,3,100,250000), -- Death Lord Hallate (73)
+(25035,8160,1,3,100,250000), -- Shilen's Messenger Cabrio (70)
+(25248,8160,1,1,100,250000), -- Doom Blade Tanatos (72)
+(25092,8160,1,1,100,250000), -- Korim (70)
+(25109,8160,1,3,100,250000), -- Antharas Priest Cloe (74)
+(25233,8160,1,1,100,250000), -- Spirit of Andras\, the Betrayer (69)
+(25337,8160,1,1,100,250000), -- Anakazel (68)
+(25235,8160,2,3,100,250000), -- Vanor Chief Kandra (72)
+(25444,8160,1,1,100,250000), -- Enmity Ghost Ramdal (65)
+(25447,8160,1,1,100,250000), -- Immortal Savior Mardil (71)
+(25051,8160,1,1,100,250000), -- Rahha (65)
+(25073,8160,2,3,100,250000), -- Bloody Priest Rudelto (69)
+(25328,8160,1,2,100,250000), -- Eilhalder von Hellmann (71)
+
+-- Dragon's Heart - C-Grade
+(25415,8161,1,2,100,250000), -- Nakondas (35)
+
+-- Dragon's Heart - B-Grade
+(25238,8162,1,1,100,250000), -- Abyss Brukunt (67)
+(25234,8162,1,2,100,250000), -- Ancient Weird Drake (65)
+
+-- Dragon's Heart - A-Grade
+(25453,8163,1,1,100,250000), -- Meanas Anor (70)
+(25198,8163,1,3,100,250000), -- Fafurion's Herald Lokness (70)
+(25163,8163,1,3,100,250000), -- Roaring Skylancer (70)
+
+-- Egg of Earth - C-Grade
+(25208,8164,1,3,100,250000), -- Water Couatle Ateka (40)
+(25490,8164,1,2,100,250000), -- Gwindorr (40)
+(25134,8164,1,2,100,250000), -- Leto Chief Talkin (40)
+
+-- Egg of Earth - B-Grade
+(25089,8165,1,1,100,250000), -- Soulless Wild Boar (59)
+(25217,8165,1,1,100,250000), -- Cursed Clara (50)
+(25463,8165,1,1,100,250000), -- Harit Guardian Garangky (56)
+
+-- Egg of Earth - A-Grade
+(25252,8166,1,1,100,250000), -- Palibati Queen Themis (70)
+(25199,8166,1,1,100,250000), -- Water Dragon Seer Sheshark (72)
+(25202,8166,1,3,100,250000), -- Krokian Padisha Sobekk (74)
+(25269,8166,1,1,100,250000), -- Beast Lord Behemoth (70)
+(25255,8166,1,1,100,250000), -- Gargoyle Lord Tiphon (65)
+(25478,8166,1,1,100,250000), -- Shilen's Priest Hisilrome (65)
+
+-- False Nucleus of Life - C-grade
+(25214,8167,1,1,100,250000), -- Fafurion's Page Sika (40)
+
+-- False Nucleus of Life - B-grade
+(25179,8168,1,3,100,250000), -- Guardian of the Statue of Giant Karum (60)
+
+-- False Nucleus of Life - A-grade
+(25470,8169,1,1,100,250000), -- Last Titan Utenus (66)
+(25296,8169,1,3,100,250000), -- Icicle Emperor Bumbalump (74)
+(25467,8169,1,1,100,250000), -- Gorgolos (64)
+(25140,8169,1,1,100,250000), -- Hekaton Prime (65)
+
+-- Angel's Soul - C-Grade
+(25487,8170,1,3,100,250000), -- Water Spirit Lian (40)
+
+-- Angel's Soul - B-Grade
+(25070,8171,1,1,100,250000), -- Enchanted Forest Watcher Ruell (55)
+(25159,8171,1,1,100,250000), -- Unicorn Paniel (54)
+
+-- Angel's Soul - A-Grade
+(25325,8172,1,1,100,250000), -- Flame of Splendor Barakiel (70)
+(25423,8172,1,1,100,250000), -- Fairy Queen Timiniel (56)
+
+-- Destruction Tombstone
+(25453,8176,3,9,101,250000), -- Meanas Anor (70)
+(25035,8176,3,9,101,250000), -- Shilen's Messenger Cabrio (70)
+(25337,8176,1,3,101,250000), -- Anakazel (68)
+(25235,8176,3,8,101,250000), -- Vanor Chief Kandra (72)
+(25051,8176,3,4,101,250000), -- Rahha (65)
+(25410,8176,1,1,101,250000), -- Road Scavenger Leader (40)
+(25026,8176,1,1,101,250000), -- Katu Van Leader Atui (49)
+(25044,8176,1,1,101,250000), -- Barion (47)
+(25478,8176,2,3,101,250000), -- Shilen's Priest Hisilrome (65)
+(25423,8176,1,2,101,250000), -- Fairy Queen Timiniel (56)
+(25296,8176,3,9,101,250000), -- Icicle Emperor Bumbalump (74)
+(25179,8176,1,2,101,250000), -- Guardian of the Statue of Giant Karum (60)
+
+-- Ancient Book - Divine Inspiration (Original Language Version)
+(25453,8619,1,1,102,250000), -- Meanas Anor (70)
+(25198,8619,1,1,102,250000), -- Fafurion's Herald Lokness (70)
+(25163,8619,1,1,102,250000), -- Roaring Skylancer (70)
+(25220,8619,1,1,102,250000), -- Death Lord Hallate (73)
+(25035,8619,1,1,102,250000), -- Shilen's Messenger Cabrio (70)
+(25248,8619,1,1,102,250000), -- Doom Blade Tanatos (72)
+(25092,8619,1,1,102,250000), -- Korim (70)
+(25109,8619,1,1,102,250000), -- Antharas Priest Cloe (74)
+(25233,8619,1,1,102,250000), -- Spirit of Andras\, the Betrayer (69)
+(25073,8619,1,1,102,250000), -- Bloody Priest Rudelto (69)
+(25337,8619,1,1,102,250000), -- Anakazel (68)
+(25235,8619,1,1,102,250000), -- Vanor Chief Kandra (72)
+(25328,8619,1,1,102,250000), -- Eilhalder von Hellmann (71)
+(25447,8619,1,1,102,250000), -- Immortal Savior Mardil (71)
+(25252,8619,1,1,102,250000), -- Palibati Queen Themis (70)
+(25199,8619,1,1,102,250000), -- Water Dragon Seer Sheshark (72)
+(25202,8619,1,1,102,250000), -- Krokian Padisha Sobekk (74)
+(25269,8619,1,1,102,250000), -- Beast Lord Behemoth (70)
+(25325,8619,1,1,102,250000), -- Flame of Splendor Barakiel (70)
+(25470,8619,1,1,102,250000), -- Last Titan Utenus (66)
+(25296,8619,1,1,102,250000); -- Icicle Emperor Bumbalump (74)
