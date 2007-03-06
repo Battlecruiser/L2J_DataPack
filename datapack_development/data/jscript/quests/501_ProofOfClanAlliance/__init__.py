@@ -13,6 +13,9 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 qn="501_ProofOfClanAlliance"
 qd="Proof of Clan Alliance"
 
+# debug facility, turn this to 0 to disable
+DEBUG=1
+
 # Quest Npcs
 SIR_KRISTOF_RODEMAI  = 30756
 STATUE_OF_OFFERING   = 30757
@@ -125,6 +128,7 @@ class Quest (JQuest) :
    elif event == "chest_timer" :
      htmltext = ""
      chest_game(st,"stop")
+     if DEBUG: htmltext = "DEBUG MESSAGE: chest timer event sent."
 #####  Members area  ######
    elif event == "30757-04.htm" :
      deadlist = leader(st).get("dead_list").split()
@@ -173,20 +177,24 @@ class Quest (JQuest) :
          htmltext =  "30756-01.htm"
        else :
          st.exitQuest(1)
+         if DEBUG: htmltext = "DEBUG: rodemai can't decide"
    elif npcId == WITCH_KALIS:
      if st.getPlayer().getClan() == None :
        st.exitQuest(1)
+       if DEBUG: htmltext= "DEBUG: Kalis said NO CLAN."
      else:
        if st.getPlayer().isClanLeader() == 1 :
          if st.getState() == PART2 :
            htmltext =  "30759-01.htm"
          elif st.getState() == PART3 :
-           htmltext = "30759-05.htm"  
+           htmltext = "30759-05.htm"
            if st.getQuestItemsCount(SYMBOL_OF_LOYALTY) == 3 :
               try : deads=len(st.get("dead_list").split())
               finally :
                  if deads == 3 :
                     htmltext = "30759-06.htm"
+                 elif DEBUG:
+                    htmltext="DEBUG: 3 clan members MUST die. Quest items aren't enough."
          elif st.getState() == PART4:
            if st.getQuestItemsCount(HERB_OF_HARIT) and \
               st.getQuestItemsCount(HERB_OF_VANOR) and \
@@ -215,16 +223,19 @@ class Quest (JQuest) :
            if leader(st).getState() == PART4 :
               htmltext =  "30759-11.htm"
          except :
-           st.exitQuest(1)  
+           st.exitQuest(1)
+           if DEBUG: htmltext= "DEBUG: Kalis cancels your application, leader conditions aren't right."
    elif npcId == STATUE_OF_OFFERING:
      if st.getPlayer().getClan() == None :
        st.exitQuest(1)
+       if DEBUG: htmltext= "DEBUG: Statue said NO CLAN."
      else :
        if st.getPlayer().isClanLeader() == 1 :
          if st.getState() in [PART2,PART3,PART4] :
            htmltext =  "30757-03.htm"
          else :
            st.exitQuest(1)
+           if DEBUG: htmltext= "DEBUG: Statue finished your quest. A leader shouldn't talk to it at this stage."
        else :
          if st.getPlayer().getLevel() <= 39 :
            st.exitQuest(1)
@@ -237,6 +248,7 @@ class Quest (JQuest) :
               deads = len(dlist)
            except :
               st.exitQuest(1)
+              if DEBUG: htmltext= "DEBUG: Statue can't gather leader info."
            if  deads < 3 :
              if st.getPlayer().getName() not in dlist :
                 if not st.getQuestItemsCount(SYMBOL_OF_LOYALTY) :
@@ -244,35 +256,39 @@ class Quest (JQuest) :
                 else :
                    htmltext =  "30757-06.htm"
                    st.exitQuest(1)
+                   if DEBUG: htmltext= "DEBUG: Statue hates cheaters, if you dont die for the clan, where you got the Proof from?"
              else :
                  htmltext = "you cannot die again!"
    elif npcId == WITCH_ATHREA :
      if st.getPlayer().getClan() == None :
        st.exitQuest(1)
+       if DEBUG: htmltext = "DEBUG: Athrea said NO CLAN."
      else :
        if st.getPlayer().isClanLeader() == 1 :
           st.exitQuest(1)
+          if DEBUG: htmltext = "DEBUG: clan leader isn't supposed to be here, you broke the quest."
        else :
-          if leader(st) :  
+          if leader(st) :
              game_state=leader(st).getInt("chest_game")  
              if game_state == 0 :  
                 if int(leader(st).get("chest_try")) == 0 :  
                    htmltext="30758-01.htm"  
                 else :  
-                   htmltext="30758-05.htm"  
-             elif game_state == 1 :  
+                   htmltext="30758-05.htm"
+             elif game_state == 1 : 
                 htmltext="30758-09.htm"  
-             elif game_state == 2 :  
-                htmltext="30758-08.htm"
-                st.playSound("ItemSound.quest_finish")
-                st.giveItems(BLOOD_OF_EVA,1)  
+             elif game_state == 2 :
                 timer=leader(st).getQuestTimer("chest_timer")
                 if timer != None : timer.cancel()
                 chest_game(st,"stop")
                 leader(st).set("chest_game","3")
-                members_finnish(st) 
+                st.giveItems(BLOOD_OF_EVA,1)
+                st.playSound("ItemSound.quest_middle")
+                htmltext="30758-08.htm"
+                members_finnish(st)
           else :
              st.exitQuest(1)
+             if DEBUG: htmltext = "DEBUG: Athrea can't find clan leader info. Leader d/c?"
    return htmltext
 
 
@@ -281,12 +297,14 @@ class Quest (JQuest) :
      npcId=npc.getNpcId()
      if leader(st) == None :
         st.exitQuest(1)
+        if DEBUG: return "DEBUG: onKill can't find leader info. Leader d/c?"
         return "Quest Failed"
      else :
         ingredients = []
         timer=leader(st).getQuestTimer("poison_timer")
         if timer == None :
            chest_game(st,"stop")
+           if DEBUG: return "DEBUG: onKill can't find poison timer. Too much time have passed"
            return "Quest Failed"
         try : 
            ingredients = leader(st).get("ingredients").split()
@@ -306,7 +324,7 @@ class Quest (JQuest) :
      ### third part, chest game
         if npcId in CHESTS :
            timer=leader(st).getQuestTimer("chest_timer")
-           if timer == None : chest_game(st,"stop");return "Time is up!"
+           #if timer == None : chest_game(st,"stop");return "Time is up!"
            chests = leader(st).get("chests").split()
            for i in range(len(chests)) :
                if npcId == 21042+i and chests[i] == '1' :
@@ -316,9 +334,9 @@ class Quest (JQuest) :
                      count+=1
                      leader(st).set("chest_count",str(count))
                      if count == 4 :
+                        leader(st).getQuestTimer("chest_timer").cancel()
                         chest_game(st,"stop")
                         leader(st).set("chest_game","2")
-                        leader(st).getQuestTimer("chest_timer").cancel()
                         st.playSound("ItemSound.quest_middle")
                      else :
                         st.playSound("ItemSound.quest_itemget")
@@ -332,6 +350,7 @@ class Quest (JQuest) :
            if timer1 != None : timer1.cancel()
            if timer2 != None : timer2.cancel()
      st.exitQuest(1)
+     if DEBUG: return "DEBUG: Leader died. Quest failed."
 
 
 QUEST       = Quest(501,qn,qd)
