@@ -21300,7 +21300,7 @@ INSERT INTO `droplist` VALUES
 (22093,4157,1,1,2,653), -- Recipe: Blue Wolf Gaiters
 (22093,4615,1,1,-1,6406), -- Greater Dye of Constitution <Con+4 Str-4>
 (22093,8300,1,1,-1,4125), -- Recipe: Infernal Master (60%)
-(22093,8315,1,1,-1,4125), -- Recipe: Flaming Dragon Skull (100%)
+(22093,8316,1,1,-1,4125), -- Recipe: Flaming Dragon Skull (60%)
 (22094,57,605,1227,0,700000), -- Adena
 (22094,8391,1,1,2,4444), -- Amulet: Earth Chant
 (22094,8389,1,1,2,4310), -- Spellbook: Greater Shield
