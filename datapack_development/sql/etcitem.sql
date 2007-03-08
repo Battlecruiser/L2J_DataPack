@@ -6191,7 +6191,7 @@ INSERT INTO `etcitem` (`item_id`,`name`,`crystallizable`,`item_type`,`weight`,`c
  ('8063','Leg of King Araneid','false','quest','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('8064','Visitor\'s Mark','false','quest','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('8065','Faded Visitor\'s Mark','false','quest','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
- ('8066','Necromancer\'s Heart','false','quest','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
+ ('8066','Necromancer\'s Heart','false','quest','0','stackable','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('8067','Pagan\'s Mark','false','quest','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('8068','Pagan Totem','false','quest','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('8069','Monk\'s Scripture','false','quest','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
