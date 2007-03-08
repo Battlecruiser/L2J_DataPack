@@ -1,4 +1,4 @@
-# Originally created by DraX on 2005.07.27, modified by Tempy #
+# Originally created by Ham Wong on 2007.03.07 #
 import sys
 
 from net.sf.l2j.gameserver.model.actor.instance import L2PcInstance
@@ -6,28 +6,10 @@ from net.sf.l2j.gameserver.model.quest          import State
 from net.sf.l2j.gameserver.model.quest          import QuestState
 from net.sf.l2j.gameserver.model.quest.jython   import QuestJython as JQuest
 
-GLUDIN_DAWN = 31078
-GLUDIN_DUSK = 31085
-GLUDIO_DAWN = 31079
-GLUDIO_DUSK = 31086
-DION_DAWN = 31080
-DION_DUSK = 31087
-GIRAN_DAWN = 31081
-GIRAN_DUSK = 31088
-OREN_DAWN = 31083
-OREN_DUSK = 31090
-ADEN_DAWN = 31084
-ADEN_DUSK = 31091
-HEINE_DAWN = 31082
-HEINE_DUSK = 31089
-GODDARD_DAWN = 31962
-GODDARD_DUSK = 31963
-RUNE_DAWN = 31964
-RUNE_DUSK = 31965
-SCHUTTGART_DAWN = 31997
-SCHUTTGART_DUSK = 31998
-HV_DAWN = 31168
-HV_DUSK = 31169
+TOWN_DAWN = [31078,31079,31080,31081,31083,31084,31082,31692,31694,31997,31168]
+TOWN_DUSK = [31085,31086,31087,31088,31090,31091,31089,31693,31695,31998,31169]
+TEMPLE_PRIEST = [31127,31128,31129,31130,31131,31137,31138,31139,31140,31141]
+
 
 class Quest (JQuest) :
 
@@ -35,261 +17,48 @@ class Quest (JQuest) :
 
  def onTalk (Self, npc, st):
     npcId = npc.getNpcId()
-   #############
-   # Dawn Locations #
-   #############
-    if npcId == GLUDIN_DAWN :
-     st.player.teleToLocation(-80157, 111344, -4901)
-     st.setState(STARTED)
-     st.set("id", "1")
-     st.set("cabal", "2")
-     return
- 
-    if npcId == GLUDIO_DAWN: 
-     st.player.teleToLocation(-80157, 111344, -4901)
-     st.setState(STARTED)
-     st.set("id", "2")   
-     st.set("cabal", "2")
-     return
- 
-    if npcId == DION_DAWN: 
-     st.player.teleToLocation(-80157, 111344, -4901)
-     st.setState(STARTED)
-     st.set("id", "3")   
-     st.set("cabal", "2")
-     return
- 
-    if npcId == GIRAN_DAWN: 
-     st.player.teleToLocation(-80157, 111344, -4901)
-     st.setState(STARTED)
-     st.set("id", "4")   
-     st.set("cabal", "2")
-     return
- 
-    if npcId == OREN_DAWN: 
-     st.player.teleToLocation(-80157, 111344, -4901)
-     st.setState(STARTED)
-     st.set("id", "5")   
-     st.set("cabal", "2")
-     return
- 
-    if npcId == ADEN_DAWN: 
-     st.player.teleToLocation(-80157, 111344, -4901)
-     st.setState(STARTED)
-     st.set("id", "6")   
-     st.set("cabal", "2")
-     return
- 
-    if npcId == HEINE_DAWN: 
-     st.player.teleToLocation(-80157, 111344, -4901)
-     st.setState(STARTED)
-     st.set("id", "7")   
-     st.set("cabal", "2")
-     return
-      
-    if npcId == GODDARD_DAWN: 
-     st.player.teleToLocation(-80157, 111344, -4901)
-     st.setState(STARTED)
-     st.set("id", "8")   
-     st.set("cabal", "2")
-     return
-
-    if npcId == RUNE_DAWN: 
-     st.player.teleToLocation(-80157, 111344, -4901)
-     st.setState(STARTED)
-     st.set("id", "9")   
-     st.set("cabal", "2")
-     return
-
-    if npcId == SCHUTTGART_DAWN: 
-     st.player.teleToLocation(-80157, 111344, -4901)
-     st.setState(STARTED)
-     st.set("id", "10")   
-     st.set("cabal", "2")
-     return
-     
-    if npcId == HV_DAWN: 
-     st.player.teleToLocation(-80157, 111344, -4901)
-     st.setState(STARTED)
-     st.set("id", "11")   
-     st.set("cabal", "2")
-     return
-     
-   ############
-   # Dusk Locations #
-   ############
- 
-    if npcId == GLUDIN_DUSK: 
-        st.player.teleToLocation(-81261, 86531, -5157)
-        st.setState(STARTED)
-        st.set("id", "1")    
-        st.set("cabal", "1")
-        return
-
-    if npcId == GLUDIO_DUSK: 
-        st.player.teleToLocation(-81261, 86531, -5157)
-        st.setState(STARTED)
-        st.set("id", "2")    
-        st.set("cabal", "1")
-        return
-
-    if npcId == DION_DUSK: 
-        st.player.teleToLocation(-81261, 86531, -5157)
-        st.setState(STARTED)
-        st.set("id", "3")    
-        st.set("cabal", "1")
-        return
-
-    if npcId == GIRAN_DUSK: 
-        st.player.teleToLocation(-81261, 86531, -5157)
-        st.setState(STARTED)
-        st.set("id", "4")    
-        st.set("cabal", "1")
-        return
-
-    if npcId == OREN_DUSK: 
-        st.player.teleToLocation(-81261, 86531, -5157)
-        st.setState(STARTED)
-        st.set("id", "5")    
-        st.set("cabal", "1")
-        return
-
-    if npcId == ADEN_DUSK: 
-        st.player.teleToLocation(-81261, 86531, -5157)
-        st.setState(STARTED)
-        st.set("id", "6")    
-        st.set("cabal", "1")
-        return
-
-    if npcId == HEINE_DUSK: 
-        st.player.teleToLocation(-81261, 86531, -5157)
-        st.setState(STARTED)
-        st.set("id", "7")    
-        st.set("cabal", "1")
-        return
-
-    if npcId == GODDARD_DUSK: 
-     	st.player.teleToLocation(-81261, 86531, -5157)
-     	st.setState(STARTED)
-     	st.set("id", "8")   
-     	st.set("cabal", "1")
-     	return
-
-    if npcId == RUNE_DUSK: 
-    	st.player.teleToLocation(-81261, 86531, -5157)
-     	st.setState(STARTED)
-     	st.set("id", "9")   
-     	st.set("cabal", "1")
-     	return
-
-    if npcId == SCHUTTGART_DUSK: 
-    	st.player.teleToLocation(-81261, 86531, -5157)
-     	st.setState(STARTED)
-     	st.set("id", "10")   
-     	st.set("cabal", "1")
-     	return
-     	
-    if npcId == HV_DUSK: 
-    	st.player.teleToLocation(-81261, 86531, -5157)
-     	st.setState(STARTED)
-     	st.set("id", "11")   
-     	st.set("cabal", "1")
-     	return
-     	
-   ################
-   # Oracle of Dusk/Dawn #
-   ################
+    ##################
+    # Dawn Locations #
+    ##################
+    if npcId in TOWN_DAWN: 
+       st.setState(STARTED)
+       st.set("X",str(int(st.getPlayer().getX())))
+       st.set("Y",str(int(st.getPlayer().getY())))
+       st.set("Z",str(int(st.getPlayer().getZ())))
+       st.player.teleToLocation(-80157,111344,-4901)
+    ##################
+    # Dusk Locations #
+    ##################
+    elif npcId in TOWN_DUSK: 
+       st.setState(STARTED)
+       st.set("X",str(int(st.getPlayer().getX())))
+       st.set("Y",str(int(st.getPlayer().getY())))
+       st.set("Z",str(int(st.getPlayer().getZ())))
+       st.player.teleToLocation(-81261,86531,-5157)
+    #######################
+    # Oracle of Dusk/Dawn #
+    #######################
+    elif npcId in TEMPLE_PRIEST:
+       xx = st.getInt("X")
+       yy = st.getInt("Y")
+       zz = st.getInt("Z")
+       st.player.teleToLocation(xx,yy,zz) 
+       st.exitQuest(1)
+    return
    
-   # back to Gludin Village
-    if st.getInt("id") == 1:
-        st.player.teleToLocation(-80826, 149775, -3043)
-        st.setState(COMPLETED)
-        st.exitQuest(1)
-        return
-   
-   # back to Gludio Castle Town
-    if st.getInt("id") == 2:
-        st.player.teleToLocation(-12672, 122776, -3116)
-        st.setState(COMPLETED)
-        st.exitQuest(1)
-        return
-  
-   # back to Dion Castle Town
-    if st.getInt("id") == 3:
-        st.player.teleToLocation(15670, 142983, -2705)
-        st.setState(COMPLETED)
-        st.exitQuest(1)
-        return
-
-   # back to Giran Castle Town
-    if st.getInt("id") == 4:
-        st.player.teleToLocation(83400, 147943, -3404)
-        st.setState(COMPLETED)
-        st.exitQuest(1)
-        return
-
-   # back to Town of Oren
-    if st.getInt("id") == 5:
-        st.player.teleToLocation(82956, 53162, -1495)
-        st.setState(COMPLETED)
-        st.exitQuest(1)
-        return
-
-   # back to Town of Aden
-    if st.getInt("id") == 6:
-        st.player.teleToLocation(146331, 25762, -2018)
-        st.setState(COMPLETED)
-        st.exitQuest(1)
-        return
-
-    # back to Heine
-    if st.getInt("id") == 7:
-        st.player.teleToLocation(111409, 219364, -3545)
-        st.setState(COMPLETED)
-        st.exitQuest(1)
-        return
-
-    # back to Goddard
-    if st.getInt("id") == 8:
-        st.player.teleToLocation(147928, -55273, -2734)
-        st.setState(COMPLETED)
-        st.exitQuest(1)
-        return
-
-    # back to Rune
-    if st.getInt("id") == 9:
-        st.player.teleToLocation(43799, -47727, -798)
-        st.setState(COMPLETED)
-        st.exitQuest(1)
-        return
-
-    # back to Schuttgart
-    if st.getInt("id") == 10:
-        st.player.teleToLocation(87386, -143246, -1293)
-        st.setState(COMPLETED)
-        st.exitQuest(1)
-        return
         
-    # back to Hunters Village
-    if st.getInt("id") == 11:
-        st.player.teleToLocation(116819, 76994, -2714)
-        st.setState(COMPLETED)
-        st.exitQuest(1)
-        return
-        
-QUEST    = Quest(1103, "1103_OracleTeleport", "Teleports")
+QUEST      = Quest(1103, "1103_OracleTeleport", "Teleports")
 CREATED    = State('Start', QUEST)
 STARTED    = State('Started', QUEST)
-COMPLETED    = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 
-for i in range(31078,31092)+range(31168,31170)+range(31692,31696)+range(31997,31999) :
+for i in TOWN_DAWN+TOWN_DUSK :
     QUEST.addStartNpc(i)
     CREATED.addTalkId(i)
     STARTED.addTalkId(i)
 
-for j in range(31127,31142) :
+for j in TEMPLE_PRIEST :
     STARTED.addTalkId(j)
 
 print "importing teleport data: 1103_OracleTeleport"
