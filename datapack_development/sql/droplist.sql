@@ -21268,7 +21268,7 @@ INSERT INTO `droplist` VALUES
 (22091,383,1,1,1,20), -- Zubei\'s Gaiters
 (22091,1869,1,5,-1,535000), -- Iron Ore
 (22091,4614,1,1,-1,6535), -- Greater Dye of Strength <Str+4 Dex-4>
-(22091,8306,1,1,-1,5000), -- Recipe: Wizard\'s Tear (60%)
+(22091,8306,1,1,-1,500), -- Recipe: Wizard\'s Tear (60%)
 (22092,57,680,2410,0,700000), -- Adena
 (22092,8385,1,1,2,11111), -- Spellbook: Mass Surrender to Wind
 (22092,8388,1,1,2,10752), -- Spellbook: Greater Might
@@ -21299,8 +21299,8 @@ INSERT INTO `droplist` VALUES
 (22093,4042,1,1,2,1828), -- Enria
 (22093,4157,1,1,2,653), -- Recipe: Blue Wolf Gaiters
 (22093,4615,1,1,-1,6406), -- Greater Dye of Constitution <Con+4 Str-4>
-(22093,8300,1,1,-1,4125), -- Recipe: Infernal Master (60%)
-(22093,8316,1,1,-1,4125), -- Recipe: Flaming Dragon Skull (60%)
+(22093,8300,1,1,-1,425), -- Recipe: Infernal Master (60%)
+(22093,8316,1,1,-1,425), -- Recipe: Flaming Dragon Skull (60%)
 (22094,57,605,1227,0,700000), -- Adena
 (22094,8391,1,1,2,4444), -- Amulet: Earth Chant
 (22094,8389,1,1,2,4310), -- Spellbook: Greater Shield
@@ -21722,7 +21722,7 @@ INSERT INTO `droplist` VALUES
 (22156,6326,1,1,1,88), -- Sealed Majestic Necklace
 (22156,6901,1,1,-1,5000), -- Recipe: Shining Arrow (100%)
 (22156,6696,1,1,-1,25000), -- Heavens Divider Edge
-(22156,959,1,1,-1,5000), -- Scroll: Enchant Weapon (Grade S)
+(22156,959,1,1,-1,2000), -- Scroll: Enchant Weapon (Grade S)
 (22156,6689,1,1,-1,25000), -- Basalt Battlehammer Head
 (22157,57,6157,12570,0,700000), -- Adena
 (22157,1895,1,1,2,200000), -- Metallic Fiber
@@ -21828,7 +21828,7 @@ INSERT INTO `droplist` VALUES
 (22162,151,1,1,1,8), -- Sword of Miracles 
 (22162,2500,1,1,1,8), -- Dark Legion\'s Edge
 (22162,6901,1,1,2,1166), -- Recipe: Shining Arrow (100%)
-(22162,959,1,1,-1,5000), -- Scroll: Enchant Weapon (Grade S)
+(22162,959,1,1,-1,2000), -- Scroll: Enchant Weapon (Grade S)
 (22162,4041,1,1,-1,50000), -- Mold Hardener
 (22162,4044,1,1,-1,50000), -- Thons
 (22162,1877,1,1,-1,50000), -- Adamantite Nugget
@@ -21917,7 +21917,7 @@ INSERT INTO `droplist` VALUES
 (22167,5329,1,1,1,88), -- Sealed Majestic Robe
 (22167,5326,1,1,1,88), -- Sealed Robe of Nightmare
 (22167,6708,1,1,-1,32108), -- Sealed Draconic Leather Gloves Fabric
-(22167,959,1,1,-1,5000), -- Scroll: Enchant Weapon (Grade S)
+(22167,959,1,1,-1,2000), -- Scroll: Enchant Weapon (Grade S)
 (22167,1894,1,1,-1,32108), -- Crafted Leather
 (22168,57,6437,13190,0,700000), -- Adena
 (22168,1870,2,6,2,142855), -- Coal
@@ -21989,7 +21989,7 @@ INSERT INTO `droplist` VALUES
 (22172,5315,1,1,1,88), -- Sealed Shield of Nightmare
 (22172,6901,1,1,-1,5000), -- Recipe: Shining Arrow (100%)
 (22172,6714,1,1,-1,25000), -- Sealed Major Arcana Circlet Pattern
-(22172,959,1,1,-1,5000), -- Scroll: Enchant Weapon (Grade S)
+(22172,959,1,1,-1,2000), -- Scroll: Enchant Weapon (Grade S)
 (22173,57,6297,12880,0,700000), -- Adena
 (22173,1868,3,9,2,200000), -- Thread
 (22173,1873,2,6,2,66066), -- Silver Nugget
@@ -22094,7 +22094,7 @@ INSERT INTO `droplist` VALUES
 (22190,5317,1,1,1,88), -- Sealed Majestic Circlet
 (22190,5312,1,1,1,88), -- Sealed Helm of Nightmare
 (22190,5315,1,1,1,88), -- Sealed Shield of Nightmare
-(22190,959,1,1,-1,5000), -- Scroll: Enchant Weapon (Grade S)
+(22190,959,1,1,-1,2000), -- Scroll: Enchant Weapon (Grade S)
 (22190,1895,1,1,-1,25000), -- Metallic Fiber
 (22190,4040,1,1,-1,50000); -- Mold Lubricant
 
