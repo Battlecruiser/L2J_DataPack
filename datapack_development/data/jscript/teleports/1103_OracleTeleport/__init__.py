@@ -17,6 +17,9 @@ class Quest (JQuest) :
 
  def onTalk (Self, npc, st):
     npcId = npc.getNpcId()
+    xx = st.getInt("X")
+    yy = st.getInt("Y")
+    zz = st.getInt("Z")
     ##################
     # Dawn Locations #
     ##################
@@ -38,10 +41,7 @@ class Quest (JQuest) :
     #######################
     # Oracle of Dusk/Dawn #
     #######################
-    elif npcId in TEMPLE_PRIEST:
-       xx = st.getInt("X")
-       yy = st.getInt("Y")
-       zz = st.getInt("Z")
+    elif npcId in TEMPLE_PRIEST and xx+yy+zz:
        st.player.teleToLocation(xx,yy,zz) 
        st.exitQuest(1)
     return
