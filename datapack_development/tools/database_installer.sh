@@ -325,18 +325,18 @@ newbie_helper
 }
 
 experimental(){
-echo ""
-echo ""
-echo "WARNING: legacy spawnlist contains more mobs and lesser chests, but many z values are wrong and doesnt match retail in many areas."
-echo -ne "Install experimental gameserver DB tables: (y) yes or (n) no or (q) quit?"
-read ASKXP
-case "$ASKXP" in
-	"y"|"Y") expinstall;;
-	"n"|"N") finish;;
-	"q"|"Q") finish;;
-	*) experimental;;
-esac
-finish
+#echo ""
+#echo ""
+#echo "WARNING: legacy spawnlist contains more mobs and lesser chests, but many z values are wrong and doesnt match retail in many areas."
+#echo -ne "Install experimental gameserver DB tables: (y) yes or (n) no or (q) quit?"
+#read ASKXP
+#case "$ASKXP" in
+#	"y"|"Y") expinstall;;
+#	"n"|"N") finish;;
+#	"q"|"Q") finish;;
+#	*) experimental;;
+#esac
+#finish
 }
 
 expinstall(){
@@ -375,7 +375,7 @@ newbie_helper(){
 while :
   do
    echo ""
-   echo -ne "If you're not that skilled applying changes within 'updates' folder, i can try to do it for you (y). If you wish to do it on your own, choose (n). Shall i parse updates files? (Y/n)"
+   echo -ne "If you're not that skilled applying changes within 'updates' folder, i can try to do it for you (y). If you wish to do it on your own, choose (n). Should i parse updates files? (Y/n)"
    read NOB
    if [ "$NOB" == "Y" -o "$NOB" == "y" -o "$NOB" == "" ]; then
      echo ""
