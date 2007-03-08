@@ -65,11 +65,15 @@ echo.
 echo Making a backup of the original loginserver database.
 %mysqldumpPath% --add-drop-table -h %lshost% -u %lsuser% --password=%lspass% %lsdb% > loginserver_backup.sql
 echo.
-echo WARNING: A full install (f) will destroy data in your `accounts` and `gameserver` tables.
-echo          Choose upgrade (u) if you already have an `accounts` table but no `gameserver` 
-echo          table (ie. your server is a pre LS/GS split version.)
-echo          Choose skip (s) to skip loginserver DB installation and go to gameserver DB 
-echo          installation/upgrade.
+echo WARNING: Full install (f) will destroy data in your `accounts` and `gameserver`
+echo tables.
+echo.
+echo Choose upgrade (u) if you already have an `accounts` table but no `gameserver`
+echo table (ie. your server is a pre LS/GS split version.)
+echo.
+echo Choose skip (s) to skip loginserver DB installation and go to gameserver DB 
+echo installation/upgrade.
+echo.
 :asklogin
 set loginprompt=x
 set /p loginprompt=LOGINSERVER DB install type: (f) full or (u) upgrade or {s} skip or (q) quit? 
@@ -191,31 +195,32 @@ echo Installing new gameserver content.
 %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/zone.sql
 
 :experimental
-echo.
-echo.
-echo WARNING: legacy spawnlist contains more mobs and lesser chests, but many z values are wrong and doesnt match retail in many areas.
+REM echo.
+REM echo.
+REM echo WARNING: legacy spawnlist contains more mobs and lesser chests, but many z values are wrong and doesnt match retail in many areas.
 :askexp
-set expprompt=x
-set /p expprompt=Install experimental gameserver DB tables: (y) yes or (n) no or (q) quit? 
-if /i %expprompt%==y goto expinstall
-if /i %expprompt%==n goto newbie_helper
-if /i %expprompt%==q goto end
-goto end
+REM set expprompt=x
+REM set /p expprompt=Install experimental gameserver DB tables: (y) yes or (n) no or (q) quit? 
+REM if /i %expprompt%==y goto expinstall
+REM if /i %expprompt%==n goto newbie_helper
+REM if /i %expprompt%==q goto end
+REM goto end
 :expinstall
-echo Making a backup of the default gameserver tables.
-%mysqldumpPath% --add-drop-table -h %gshost% -u %gsuser% --password=%gspass% %gsdb% > experimental_backup.sql
-echo Installing new content.
+REM echo Making a backup of the default gameserver tables.
+REM %mysqldumpPath% --add-drop-table -h %gshost% -u %gsuser% --password=%gspass% %gsdb% > experimental_backup.sql
+REM echo Installing new content.
 REM %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/experimental/npc.sql
 REM %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/experimental/npcskills.sql
-%mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/experimental/spawnlist.sql
+REM %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/experimental/spawnlist.sql
 
 :newbie_helper
 echo.
 echo.
 echo If you're not that skilled applying changes within 'updates' folder, i can try to do it for you (y). If you wish to do it on your own, choose (n).
+echo.
 :asknb
 set nbprompt=y
-set /p nbprompt=Shall i parse updates files? (Y/n)
+set /p nbprompt=Should i parse updates files? (Y/n)
 if /i %nbprompt%==y goto nbinstall
 if /i %nbprompt%==n goto end
 goto asknb
