@@ -5,6 +5,7 @@ __all__ = [
 '1102_toivortex_blue',
 '1102_toivortex_red',
 '1103_OracleTeleport',
+'1630_PaganTeleporters',
 '2211_HuntingGroundsTeleport'
 ]
 print ""
