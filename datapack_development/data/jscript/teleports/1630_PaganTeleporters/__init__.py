@@ -17,21 +17,24 @@ class Quest (JQuest):
 
   def onTalk (self,npc,st):
     npcId = npc.getNpcId()
-    htmltext = ""
-    if not st.getQuestItemsCount(8067) or st.getPlayer().getLevel() < 73 :
+    htmltext = "You have been teleported."
+    if st.getPlayer().getLevel() < 73 :
        htmltext = '<html><head>Teleport available only for characters with Pagans Mark and level 73 or above.</body></html>'
-    else:
-       if npcId == 32034 :
-          st.getPlayer().teleToLocation(-16324,-37147,-10724)
-       elif npcId == 32036 :
-          st.getPlayer().teleToLocation(-16324,-44638,-10724)
-       elif not st.getQuestItemsCount(8064) :
-          htmltext = '<html><head>Teleport available only for characters with Pagans Mark or Visitors Mark and level 73 or above.</body></html>'
-       else :
-          if npcId == 32039 :
-             st.getPlayer().teleToLocation(-12241,-35884,-10856)
-          elif npcId == 32040 :
-             st.getPlayer().teleToLocation(36640,-51218,718)
+    elif npcId in [32034,32036]:
+       if not st.getQuestItemsCount(8067) :
+          htmltext = '<html><head>Teleport available only for characters with Pagans Mark and level 73 or above.</body></html>'
+       else:
+          if npcId == 32034 :
+             st.getPlayer().teleToLocation(-16324,-37147,-10724)
+          else :
+             st.getPlayer().teleToLocation(-16324,-44638,-10724)
+    elif not st.getQuestItemsCount(8064)+st.getQuestItemsCount(8067) :
+       htmltext = '<html><head>Teleport available only for characters with Pagans Mark or Visitors Mark and level 73 or above.</body></html>'
+    else :
+       if npcId == 32039 :
+          st.getPlayer().teleToLocation(-12241,-35884,-10856)
+       elif npcId == 32040 :
+          st.getPlayer().teleToLocation(36640,-51218,718)
     st.exitQuest(1)
     return htmltext
 
