@@ -6041,7 +6041,7 @@ INSERT INTO `etcitem` (`item_id`,`name`,`crystallizable`,`item_type`,`weight`,`c
  ('7913','Water Crystal','false','none','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('7914','Wind Crystal','false','none','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('7915','Earth Crystal','false','none','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
- ('7916','Dark Crystal','false','none','0','normal','stackable','none','0','0','0','true','true','true','true','C5Item','none'),
+ ('7916','Dark Crystal','false','none','0','stackable','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('7917','Sanctity Crystal','false','none','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('7918','Mercenary Posting Ticket (Sword/Stationary)','false','castle_guard','0','stackable','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('7919','Mercenary Posting Ticket (Spear/Stationary)','false','castle_guard','0','stackable','paper','none','0','0','0','true','true','true','true','C5Item','none'),
