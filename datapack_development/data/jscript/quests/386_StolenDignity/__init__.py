@@ -17,7 +17,7 @@ REQUIRED_ORE=100 #how many items will be paid for a game (affects onkill sounds 
 SI_ORE = 6363
 
 #Rewards
-REWARDS=[5529]+range(5532,5540)+range(5541,5549)
+REWARDS=[5529]+range(5532,5540)+range(5541,5549)+[8331]+range(8341,8343)+[8346]+[8349]
  
 #Messages
 default   = "<html><head><body>I have nothing to say to you.</body></html>"
