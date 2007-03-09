@@ -21391,6 +21391,256 @@ INSERT INTO `droplist` VALUES
 (22098,3035,1,1,-1,3141), -- Recipe: Spiritshot A
 (22098,4077,1,1,-1,105674), -- Doom Shield Fragment
 (22098,4039,1,1,-1,61038), -- Mold Glue
+(22122,57,5689,11610,0,700000), -- Adena
+(22122,1870,1,3,2,250000), -- Coal
+(22122,1879,1,1,2,111111), -- Cokes
+(22122,1865,4,12,2,90909), -- Varnish
+(22122,1875,1,1,2,45454), -- Stone of Purity
+(22122,4040,1,1,2,14084), -- Mold Lubricant
+(22122,5514,1,1,1,8620), -- Sealed Gloves of Nightmare Design
+(22122,5502,1,1,1,8547), -- Sealed Boots of Nightmare Lining
+(22122,5515,1,1,1,8196), -- Sealed Majestic Gloves Design
+(22122,5503,1,1,1,8064), -- Sealed Majestic Boots Lining
+(22122,960,1,1,2,194), -- Scroll: Enchant Armor (Grade S)
+(22122,5314,1,1,1,136), -- Sealed Boots of Nightmare
+(22122,5319,1,1,1,87), -- Sealed Majestic Boots
+(22122,5313,1,1,1,68), -- Sealed Gloves of Nightmare
+(22122,5318,1,1,1,48), -- Sealed Majestic Gloves
+(22122,1875,1,1,-1,50000), -- Stone of Purity
+(22122,4040,1,1,-1,62500), -- Mold Lubricant
+(22122,5528,1,1,-1,25000), -- Sealed Majestic Circlet Design
+(22122,6346,1,2,-1,125000), -- Sealed Majestic Ring Gemstone
+(22122,6901,1,1,-1,5000), -- Recipe: Shining Arrow (100%)
+(22123,57,5742,11760,0,700000), -- Adena
+(22123,1895,1,1,2,250000), -- Metallic Fiber
+(22123,4043,1,1,2,27777), -- Asofe
+(22123,4040,1,1,2,16129), -- Mold Lubricant
+(22123,4042,1,1,2,13888), -- Enria
+(22123,5495,1,1,1,10638), -- Sealed Shield of Nightmare Fragment
+(22123,5527,1,1,1,8928), -- Sealed Helm of Nightmare Design
+(22123,5528,1,1,1,8474), -- Sealed Majestic Circlet Design
+(22123,6901,1,1,2,635), -- Recipe: Shining Arrow (100%)
+(22123,5317,1,1,1,88), -- Sealed Majestic Circlet
+(22123,5529,1,1,1,250), -- Dragon Slayer Edge
+(22123,5546,1,1,1,250), -- Sword of Miracles Edge
+(22123,5545,1,1,1,250), -- Dark Legion\'s Edge Blade
+(22123,81,1,1,1,8), -- Dragon Slayer
+(22123,151,1,1,1,8), -- Sword of Miracles 
+(22123,2500,1,1,1,8), -- Dark Legion\'s Edge
+(22123,3036,1,1,-1,5000), -- Recipe: Spiritshot S
+(22123,5529,1,1,-1,25000), -- Dragon Slayer Edge
+(22123,3957,1,1,-1,5000), -- Recipe: Blessed Spiritshot S
+(22123,6342,1,1,-1,25000), -- Sealed Majestic Earring Gemstone
+(22123,6346,1,1,-1,25000), -- Sealed Majestic Ring Gemstone
+(22123,5282,1,1,-1,5000), -- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)
+(22123,6344,1,1,-1,25000), -- Sealed Majestic Necklace Beads
+(22124,57,4553,9323,0,700000), -- Adena
+(22124,1868,3,9,2,166066), -- Thread
+(22124,1895,1,1,2,142857), -- Metallic Fiber
+(22124,1876,1,1,2,100000), -- Mithril Ore
+(22124,1873,2,6,2,45454), -- Silver Nugget
+(22124,7917,1,1,3,30303), -- Sanctity Crystal
+(22124,6346,1,1,1,17857), -- Sealed Majestic Ring Gemstone
+(22124,6342,1,1,1,12820), -- Sealed Majestic Earring Gemstone
+(22124,4042,1,1,2,7751), -- Enria
+(22124,6344,1,1,1,7751), -- Sealed Majestic Necklace Beads
+(22124,6328,1,1,1,139), -- Sealed Majestic Ring
+(22124,959,1,1,2,55), -- Scroll: Enchant Weapon (Grade S)
+(22124,6327,1,1,1,55), -- Sealed Majestic Earring
+(22124,6326,1,1,1,27), -- Sealed Majestic Necklace
+(22124,305,1,1,1,8), -- Tallum Glaive
+(22124,5541,1,1,1,50), -- Tallum Glaive Edge
+(22124,5533,1,1,-1,25000), -- Elysian Head
+(22124,1876,1,1,-1,50000), -- Mithril Ore
+(22124,1895,1,1,-1,50000), -- Metallic Fiber
+(22124,4040,1,1,-1,50000), -- Mold Lubricant
+(22124,5480,1,1,-1,25000), -- Sealed Leather Armor of Nightmare Fabric
+(22124,1808,1,1,-1,5000), -- Recipe: Soulshot: S Grade
+(22125,57,4562,9342,0,700000), -- Adena
+(22125,1895,1,1,2,166066), -- Metallic Fiber
+(22125,7911,1,1,3,22727), -- Blessing of Sanctity
+(22125,4043,1,1,2,17857), -- Asofe
+(22125,4040,1,1,2,11363), -- Mold Lubricant
+(22125,4042,1,1,2,8849), -- Enria
+(22125,5541,1,1,1,4465), -- Tallum Glaive Edge
+(22125,960,1,1,2,178), -- Scroll: Enchant Armor (Grade S)
+(22125,305,1,1,1,8), -- Tallum Glaive
+(22125,5534,1,1,-1,25000), -- Soul Bow Stave
+(22125,5157,1,1,-1,2500), -- Recipe: Soulshot (S) Compressed Package (100%)
+(22125,5537,1,1,-1,25000), -- Soul Separator Head
+(22125,5481,1,1,-1,125000), -- Sealed Majestic Leather Armor Fabric
+(22125,5487,1,1,-1,120000), -- Sealed Robe of Nightmare Fabric
+(22125,3036,1,1,-1,5000), -- Recipe: Spiritshot S
+(22126,57,4672,9570,0,700000), -- Adena
+(22126,1873,1,1,2,200000), -- Silver Nugget
+(22126,1868,3,9,2,166066), -- Thread
+(22126,5549,1,1,2,50000), -- Metallic Thread
+(22126,7917,1,1,3,32258), -- Sanctity Crystal
+(22126,1889,1,1,2,31250), -- Compound Braid
+(22126,4044,1,1,2,16129), -- Thons
+(22126,5523,1,1,1,3164), -- Sealed Majestic Plate Armor Pattern
+(22126,5522,1,1,1,2816), -- Sealed Armor of Nightmare Pattern
+(22126,6901,1,1,2,678), -- Recipe: Shining Arrow (100%)
+(22126,5527,1,1,1,1408), -- Sealed Helm of Nightmare Design
+(22126,5528,1,1,1,1408), -- Sealed Majestic Circlet Design
+(22126,5495,1,1,1,1408), -- Sealed Shield of Nightmare Fragment
+(22126,5316,1,1,1,44), -- Sealed Majestic Plate Armor
+(22126,5312,1,1,1,88), -- Sealed Helm of Nightmare
+(22126,5315,1,1,1,88), -- Sealed Shield of Nightmare
+(22126,5317,1,1,1,88), -- Sealed Majestic Circlet
+(22126,5162,1,1,-1,5000), -- Recipe: Spiritshot (S) Compressed Package (100%)
+(22126,5538,1,1,-1,25000), -- Dragon Grinder Edge
+(22126,4044,1,1,-1,50000), -- Thons
+(22126,4043,1,1,-1,50000), -- Asofe
+(22126,5488,1,1,-1,25000), -- Sealed Majestic Robe Fabric
+(22126,5550,1,1,-1,50000), -- Durable Metal Plate
+(22128,57,1381,2814,0,700000), -- Adena
+(22128,1864,1,1,2,333333), -- Stem
+(22128,1869,1,1,2,14285), -- Iron Ore
+(22128,1880,1,1,2,16129), -- Steel
+(22128,7917,1,1,3,9708), -- Sanctity Crystal
+(22128,4043,1,1,2,5494), -- Asofe
+(22128,5550,1,1,2,2123), -- Durable Metal Plate
+(22128,5534,1,1,1,1060), -- Soul Bow Stave
+(22128,960,1,1,2,187), -- Scroll: Enchant Armor (Grade S)
+(22128,289,1,1,1,8), -- Soul Bow
+(22128,6689,1,1,-1,25000), -- Basalt Battlehammer Head
+(22128,6901,1,1,-1,5000), -- Recipe: Shining Arrow (100%)
+(22128,6690,1,1,-1,25000), -- Imperial Staff Head
+(22128,1875,1,1,-1,50000), -- Stone of Purity
+(22128,4041,1,1,-1,50000), -- Mold Hardener
+(22129,57,4923,10040,0,700000), -- Adena
+(22129,1895,1,1,2,166066), -- Metallic Fiber
+(22129,8056,1,1,3,37037), -- Key of Splendor Room
+(22129,7911,1,1,3,23809), -- Blessing of Sanctity
+(22129,4043,1,1,2,18867), -- Asofe
+(22129,4040,1,1,2,10309), -- Mold Lubricant
+(22129,4042,1,1,2,10101), -- Enria
+(22129,5480,1,1,1,4291), -- Sealed Leather Armor of Nightmare Fabric
+(22129,5481,1,1,1,3717), -- Sealed Majestic Leather Armor Fabric
+(22129,6901,1,1,2,928), -- Recipe: Shining Arrow (100%)
+(22129,5529,1,1,1,250), -- Dragon Slayer Edge
+(22129,5545,1,1,1,250), -- Dark Legion\'s Edge Blade
+(22129,5546,1,1,1,250), -- Sword of Miracles Edge
+(22129,81,1,1,1,8), -- Dragon Slayer
+(22129,151,1,1,1,8), -- Sword of Miracles 
+(22129,2500,1,1,1,8), -- Dark Legion\'s Edge
+(22129,959,1,1,-1,500), -- Scroll: Enchant Weapon (Grade S)
+(22129,4042,1,2,-1,5000), -- Enria
+(22129,4043,1,2,-1,5000), -- Asofe
+(22129,6698,1,1,-1,50000), -- Sealed Tateossian Earring  Part
+(22129,6699,1,1,-1,50000), -- Sealed Tateossian Ring Gem
+(22129,6700,1,1,-1,25000), -- Sealed Tateossian Ring Wire
+(22130,57,7234,14770,0,700000), -- Adena
+(22130,5549,1,1,2,76923), -- Metallic Thread
+(22130,1873,2,6,2,76923), -- Silver Nugget
+(22130,1889,1,1,2,55555), -- Compound Braid
+(22130,1868,15,45,2,47619), -- Thread
+(22130,7917,1,1,3,43478), -- Sanctity Crystal
+(22130,8056,1,1,3,31250), -- Key of Splendor Room
+(22130,4044,1,1,2,25000), -- Thons
+(22130,5537,1,1,1,6993), -- Soul Separator Head
+(22130,236,1,1,1,8), -- Soul Separator
+(22130,959,1,1,2,180), -- Scroll: Enchant Weapon (Grade S)
+(22130,6691,1,1,-1,25000), -- Angel Slayer Blade
+(22130,6901,1,1,-1,5000), -- Recipe: Shining Arrow (100%)
+(22130,6693,1,1,-1,25000), -- Dragon Hunter Axe Blade
+(22130,1894,1,1,-1,50000), -- Crafted Leather
+(22130,4039,1,1,-1,50000), -- Mold Glue
+(22131,57,7789,15900,0,700000), -- Adena
+(22131,7911,1,1,3,37037), -- Blessing of Sanctity
+(22131,1894,1,1,2,34482), -- Crafted Leather
+(22131,8056,1,1,3,32258), -- Key of Splendor Room
+(22131,4039,1,1,2,32258), -- Mold Glue
+(22131,4044,1,1,2,28571), -- Thons
+(22131,4041,1,1,2,7751), -- Mold Hardener
+(22131,5488,1,1,1,7299), -- Sealed Majestic Robe Fabric
+(22131,5487,1,1,1,6622), -- Sealed Robe of Nightmare Fabric
+(22131,960,1,1,2,414), -- Scroll: Enchant Armor (Grade S)
+(22131,5326,1,1,1,44), -- Sealed Robe of Nightmare
+(22131,5329,1,1,1,44), -- Sealed Majestic Robe
+(22131,1868,1,1,2,5000), -- Thread
+(22131,1873,1,1,2,5000), -- Silver Nugget
+(22131,5549,1,1,2,5000), -- Metallic Thread
+(22131,1889,1,1,2,5000), -- Compound Braid
+(22131,6901,1,1,-1,5000), -- Recipe: Shining Arrow (100%)
+(22131,6694,1,1,-1,25000), -- Saint Spear Blade
+(22131,960,1,1,-1,1500), -- Scroll: Enchant Armor (Grade S)
+(22131,6706,1,1,-1,25000), -- Sealed Imperial Crusader Helmet Pattern
+(22131,6705,1,1,-1,25000), -- Sealed Imperial Crusader Shield Part
+(22132,57,5057,10350,0,700000), -- Adena
+(22132,1867,1,3,2,250000), -- Animal Skin
+(22132,1872,4,12,2,83333), -- Animal Bone
+(22132,1881,1,1,2,71428), -- Coarse Bone Powder
+(22132,7917,1,1,3,40000), -- Sanctity Crystal
+(22132,1875,1,1,2,34482), -- Stone of Purity
+(22132,8056,1,1,2,31250), -- Key of Splendor Room
+(22132,4041,1,1,2,4901), -- Mold Hardener
+(22132,5546,1,1,1,1801), -- Sword of Miracles Edge
+(22132,5529,1,1,1,1545), -- Dragon Slayer Edge
+(22132,5545,1,1,1,1545), -- Dark Legion\'s Edge Blade
+(22132,6901,1,1,2,772), -- Recipe: Shining Arrow (100%)
+(22132,81,1,1,1,8), -- Dragon Slayer
+(22132,151,1,1,1,8), -- Sword of Miracles 
+(22132,2500,1,1,1,8), -- Dark Legion\'s Edge
+(22132,1872,1,1,-1,25000), -- Animal Bone
+(22132,4041,1,1,-1,25000), -- Mold Hardener
+(22132,6695,1,1,-1,15000), -- Demon Splinter Blade
+(22132,6702,1,1,-1,50000), -- Sealed Imperial Crusader Gaiters Pattern
+(22132,6701,1,1,-1,50000), -- Sealed Imperial Crusader Breastplate Part
+(22132,6703,1,1,-1,50000), -- Sealed Imperial Crusader Gauntlets Design
+(22133,57,1989,4005,0,700000), -- Adena
+(22133,1867,1,1,2,250000), -- Animal Skin
+(22133,1872,1,3,2,142857), -- Animal Bone
+(22133,1881,1,1,2,26315), -- Coarse Bone Powder
+(22133,8056,1,1,3,18867), -- Key of Splendor Room
+(22133,1875,1,1,2,15151), -- Stone of Purity
+(22133,7911,1,1,2,9174), -- Blessing of Sanctity
+(22133,5537,1,1,1,1838), -- Soul Separator Head
+(22133,4041,1,1,2,1377), -- Mold Hardener
+(22133,236,1,1,1,8), -- Soul Separator
+(22133,959,1,1,2,180), -- Scroll: Enchant Weapon (Grade S)
+(22133,6901,1,1,-1,5000), -- Recipe: Shining Arrow (100%)
+(22133,6696,1,1,-1,25000), -- Heavens Divider Edge
+(22134,57,5144,10540,0,700000), -- Adena
+(22134,7917,1,1,3,40000), -- Sanctity Crystal
+(22134,8056,1,1,3,33333), -- Key of Splendor Room
+(22134,1894,1,1,2,23809), -- Crafted Leather
+(22134,4044,1,1,2,20408), -- Thons
+(22134,4039,1,1,2,20000), -- Mold Glue
+(22134,4041,1,1,2,5319), -- Mold Hardener
+(22134,5529,1,1,1,1040), -- Dragon Slayer Edge
+(22134,5545,1,1,1,3636), -- Dark Legion\'s Edge Blade
+(22134,5546,1,1,1,3636), -- Sword of Miracles Edge
+(22134,960,1,1,2,759), -- Scroll: Enchant Armor (Grade S)
+(22134,81,1,1,1,8), -- Dragon Slayer
+(22134,151,1,1,1,8), -- Sword of Miracles 
+(22134,2500,1,1,1,8), -- Dark Legion\'s Edge
+(22134,6697,1,1,-1,7500), -- Arcana Mace Head
+(22134,959,1,1,-1,500), -- Scroll: Enchant Weapon (Grade S)
+(22134,4044,1,1,-1,7500), -- Thons
+(22134,6709,1,1,-1,25000), -- Sealed Draconic Leather Boots Design
+(22134,6707,1,1,-1,12500), -- Sealed Draconic Leather Armor Part
+(22134,6708,1,1,-1,25000), -- Sealed Draconic Leather Gloves Fabric
+(22135,57,8288,16990,0,700000), -- Adena
+(22135,1895,1,1,2,333333), -- Metallic Fiber
+(22135,7911,1,1,3,45454), -- Blessing of Sanctity
+(22135,6346,1,1,1,34482), -- Sealed Majestic Ring Gemstone
+(22135,4043,1,1,2,34482), -- Asofe
+(22135,8056,1,1,3,31250), -- Key of Splendor Room
+(22135,4040,1,1,2,21739), -- Mold Lubricant
+(22135,6342,1,1,1,21276), -- Sealed Majestic Earring Gemstone
+(22135,4042,1,1,2,16393), -- Enria
+(22135,6344,1,1,1,14285), -- Sealed Majestic Necklace Beads
+(22135,6901,1,1,2,697), -- Recipe: Shining Arrow (100%)
+(22135,6326,1,1,1,139), -- Sealed Majestic Necklace
+(22135,6327,1,1,1,139), -- Sealed Majestic Earring
+(22135,6328,1,1,1,139), -- Sealed Majestic Ring
+(22135,1895,1,1,-1,50000), -- Metallic Fiber
+(22135,6698,1,1,-1,25000), -- Sealed Tateossian Earring  Part
+(22135,6901,1,1,-1,5000), -- Recipe: Shining Arrow (100%)
+(22135,6694,1,1,-1,25000), -- Saint Spear Blade
+(22135,6691,1,1,-1,25000), -- Angel Slayer Blade
 (22137,57,492,1008,0,700000), -- Adena
 (22137,1344,10,30,2,66066), -- Mithril Arrow
 (22137,1871,1,1,2,55555), -- Charcoal
