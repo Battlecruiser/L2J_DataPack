@@ -17,9 +17,9 @@ SPIDER_LEG4,SPIDER_LEG5 = range(3417,3428)
 SPIDER_LEG_DROP = 100
 #mobs
 #1 humans
-SPIDER_H1 = 20103 #Giant Spider
-SPIDER_H2 = 20106 #Talon Spider
-SPIDER_H3 = 20108 #Blade Spider
+SPIDER_H1 = 20103 # Giant Spider
+SPIDER_H2 = 20106 # Talon Spider
+SPIDER_H3 = 20108 # Blade Spider
 #2 elves
 SPIDER_LE1 = 20460 # Crimson Spider
 SPIDER_LE2 = 20308 # Hook Spider
@@ -70,7 +70,6 @@ def check_questions(st) :
     htmltext = "419_q"+str(question)+".htm"
     return htmltext
   elif answers == 10 :
-    st.setState(COMPLETED)
     st.giveItems(WOLF_COLLAR,1)
     st.exitQuest(1)
     st.playSound("ItemSound.quest_finish")
@@ -145,6 +144,7 @@ class Quest (JQuest):
   def onTalk (self,npc,st):
     npcid = npc.getNpcId()
     id = st.getState()
+    if id == COMPLETED: st.setState(CREATED)
     if npcid == PET_MANAGER_MARTIN :
       if id == CREATED  :
          if st.getPlayer().getLevel() < 15 :
@@ -164,16 +164,16 @@ class Quest (JQuest):
             if race == 0:
                 st.takeItems(SPIDER_LEG1,REQUIRED_SPIDER_LEGS)
                 st.takeItems(ANIMAL_SLAYER_LIST1,1)
-            if race == 1:
+            elif race == 1:
                 st.takeItems(SPIDER_LEG2,REQUIRED_SPIDER_LEGS)
                 st.takeItems(ANIMAL_SLAYER_LIST2,1)
-            if race == 2:
+            elif race == 2:
                 st.takeItems(SPIDER_LEG3,REQUIRED_SPIDER_LEGS)
                 st.takeItems(ANIMAL_SLAYER_LIST3,1)
-            if race == 3:
+            elif race == 3:
                 st.takeItems(SPIDER_LEG4,REQUIRED_SPIDER_LEGS)
                 st.takeItems(ANIMAL_SLAYER_LIST4,1)
-            if race == 4:
+            else:
                 st.takeItems(SPIDER_LEG5,REQUIRED_SPIDER_LEGS)
                 st.takeItems(ANIMAL_SLAYER_LIST5,1)
             return "Slayed.htm"
@@ -228,7 +228,7 @@ QUEST       = Quest(419, "419_GetAPet", "Wolf Collar")
 CREATED     = State('Start',       QUEST)
 STARTED     = State('Started',     QUEST)
 SLAYED      = State('Slayed',      QUEST)
-TALKED      = State('Talked',     QUEST)
+TALKED      = State('Talked',      QUEST)
 COMPLETED   = State('Completed',   QUEST)
 
 # Quest initialization
@@ -237,44 +237,12 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(PET_MANAGER_MARTIN)
 
 # Quest Item Drop initialization
-STARTED.addQuestDrop(SPIDER_H1,SPIDER_LEG1,1)
-STARTED.addQuestDrop(SPIDER_H2,SPIDER_LEG1,1)
-STARTED.addQuestDrop(SPIDER_H3,SPIDER_LEG1,1)
-
-STARTED.addQuestDrop(SPIDER_LE1,SPIDER_LEG2,1)
-STARTED.addQuestDrop(SPIDER_LE2,SPIDER_LEG2,1)
-STARTED.addQuestDrop(SPIDER_LE3,SPIDER_LEG2,1)
-
-STARTED.addQuestDrop(SPIDER_DE1,SPIDER_LEG3,1)
-STARTED.addQuestDrop(SPIDER_DE2,SPIDER_LEG3,1)
-STARTED.addQuestDrop(SPIDER_DE3,SPIDER_LEG3,1)
-
-STARTED.addQuestDrop(SPIDER_O1,SPIDER_LEG4,1)
-STARTED.addQuestDrop(SPIDER_O2,SPIDER_LEG4,1)
-STARTED.addQuestDrop(SPIDER_O3,SPIDER_LEG4,1)
-
-STARTED.addQuestDrop(SPIDER_D1,SPIDER_LEG5,1)
-STARTED.addQuestDrop(SPIDER_D2,SPIDER_LEG5,1)
+for item in range(3417,3428):
+    STARTED.addQuestDrop(MARTIN,SPIDER_LEG1,1)
 
 # Quest mob initialization
-STARTED.addKillId(SPIDER_H1)
-STARTED.addKillId(SPIDER_H2)
-STARTED.addKillId(SPIDER_H3)
-
-STARTED.addKillId(SPIDER_LE1)
-STARTED.addKillId(SPIDER_LE2)
-STARTED.addKillId(SPIDER_LE3)
-
-STARTED.addKillId(SPIDER_DE1)
-STARTED.addKillId(SPIDER_DE2)
-STARTED.addKillId(SPIDER_DE3)
-
-STARTED.addKillId(SPIDER_O1)
-STARTED.addKillId(SPIDER_O2)
-STARTED.addKillId(SPIDER_O3)
-
-STARTED.addKillId(SPIDER_D1)
-STARTED.addKillId(SPIDER_D2)
+for mob in [SPIDER_H1,SPIDER_H2,SPIDER_H3,SPIDER_LE1,SPIDER_LE2,SPIDER_LE3,SPIDER_DE1,SPIDER_DE2,SPIDER_DE3,SPIDER_O1,SPIDER_O2,SPIDER_O3,SPIDER_D1,SPIDER_D2]:
+    STARTED.addKillId(mob)
 
 # Quest NPC initialization
 CREATED.addTalkId(PET_MANAGER_MARTIN)
