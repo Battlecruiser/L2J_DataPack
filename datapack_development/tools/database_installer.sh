@@ -224,9 +224,9 @@ echo "WARNING: A full install (f) will destroy all existing character data."
 echo -ne "GAMESERVER DB install type: (f) full install, (u) upgrade, (s) skip or (q) quit? "
 read INSTALLTYPE
 case "$INSTALLTYPE" in
-	"f"|"F") fullinstall; upgradeinstall I; experimental; expinstall;;
-	"u"|"U") upgradeinstall U; experimental; expinstall;;
-	"s"|"S") experimental; expinstall;;
+	"f"|"F") fullinstall; upgradeinstall I; experimental;;
+	"u"|"U") upgradeinstall U; experimental;;
+	"s"|"S") experimental;;
 	"q"|"Q") finish;;
 	*) asktype;;
 esac
@@ -325,7 +325,7 @@ newbie_helper
 }
 
 experimental(){
-#echo ""
+echo ""
 #echo ""
 #echo "WARNING: legacy spawnlist contains more mobs and lesser chests, but many z values are wrong and doesnt match retail in many areas."
 #echo -ne "Install experimental gameserver DB tables: (y) yes or (n) no or (q) quit?"
