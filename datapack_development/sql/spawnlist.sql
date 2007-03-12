@@ -36717,7 +36717,6 @@ INSERT INTO `spawnlist` VALUES
 (70581,'near_the_dwarven_village',1,'31031',116056,-182419,-1464,0,0,16384,5,0,0);
 
 INSERT INTO `spawnlist` VALUES 
-(NULL,'Crypts of Disgrace',1,32017,47674,-115928,-3749,0,0,12603,60,0,0),
 (NULL,'Crypts of Disgrace',1,22001,46734,-115708,-3815,0,0,31429,60,0,0),
 (NULL,'Crypts of Disgrace',1,22001,46259,-115912,-3718,0,0,37476,60,0,0),
 (NULL,'Crypts of Disgrace',1,22001,49727,-115513,-3787,0,0,1982,60,0,0),
