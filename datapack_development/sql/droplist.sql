@@ -25311,6 +25311,88 @@ INSERT INTO `droplist` VALUES
 (21572,5352,1,1,2,86), -- Recipe: Sealed Majestic Robe(60%)
 (21596,5350,1,1,2,184); -- Recipe: Sealed Robe of Nightmare(60%)
 
+INSERT INTO `droplist` VALUES
+-- Canyon Antelop
+(21294,8332,1,1,1,800), -- Infernal Master Blade
+(21294,7884,1,1,1,4), -- Infernal Master
+
+-- Canyon Antelop Slave
+(21295,8332,1,1,1,855), -- Infernal Master Blade
+(21295,7884,1,1,1,5), -- Infernal Master
+
+-- Grendel Slave
+(21304,8346,1,1,1,1663), -- Hammer Piece of Destroyer
+(21304,7899,1,1,1,9), -- Destroyer Hammer
+(21304,8341,1,1,1,1261), -- Spiritual Eye Piece
+(21304,7894,1,1,1,9), -- Spiritual Eye
+
+-- Elder Homunculus
+(21307,8332,1,1,1,1628), -- Infernal Master Blade
+(21307,7884,1,1,1,9), -- Infernal Master
+
+-- Shrine Guard
+(21651,8346,1,1,1,677), -- Hammer Piece of Destroyer
+(21651,7899,1,1,1,3), -- Destroyer Hammer
+(21651,8341,1,1,1,351), -- Spiritual Eye Piece
+(21651,7894,1,1,1,3), -- Spiritual Eye
+
+-- Disciples of Punishment
+(21309,8346,1,1,1,2197), -- Hammer Piece of Destroyer
+(21309,7899,1,1,1,12), -- Destroyer Hammer
+(21309,8341,1,1,1,1757), -- Spiritual Eye Piece
+(21309,7894,1,1,1,12), -- Spiritual Eye
+
+-- Disciples of Authority
+(21310,8332,1,1,1,3134), -- Infernal Master Blade
+(21310,7884,1,1,1,12), -- Infernal Master
+
+-- Bandersnatch
+(21282,8332,1,1,1,206), -- Infernal Master Blade
+(21282,7884,1,1,1,2), -- Infernal Master
+(21283,8332,1,1,1,206), -- Infernal Master Blade
+(21283,7884,1,1,1,2), -- Infernal Master
+(21284,8332,1,1,1,206), -- Infernal Master Blade
+(21284,7884,1,1,1,2), -- Infernal Master
+(21285,8332,1,1,1,78), -- Infernal Master Blade
+(21285,7884,1,1,1,1), -- Infernal Master
+
+-- Eye of Guide
+(21300,8346,1,1,1,1243), -- Hammer Piece of Destroyer
+(21300,7899,1,1,1,7), -- Destroyer Hammer
+(21300,8341,1,1,1,746), -- Spiritual Eye Piece
+(21300,7894,1,1,1,7), -- Spiritual Eye
+
+-- Eye of Pilgrim
+(21305,8346,1,1,1,829), -- Hammer Piece of Destroyer
+(21305,7899,1,1,1,7), -- Destroyer Hammer
+(21305,8341,1,1,1,737), -- Spiritual Eye Piece
+(21305,7894,1,1,1,7), -- Spiritual Eye
+
+-- Disciples of Punishment
+(21308,8346,1,1,1,1760), -- Hammer Piece of Destroyer
+(21308,7899,1,1,1,11), -- Destroyer Hammer
+(21308,8341,1,1,1,2183), -- Spiritual Eye Piece
+(21308,7894,1,1,1,11), -- Spiritual Eye
+
+-- Elmo-Aden's Archer Escort
+(20978,8336,1,1,1,1515), -- Blade of the Wizard's Tear
+(20978,7889,1,1,1,1515), -- Wizard's Tear
+
+-- Hallate's Commander
+(20824,5424,1,1,-1,21739), -- recipe: sealed Dark Crystal Gaiters(60%)
+
+-- Mul's Wizard
+(20981,8326,1,1,2,125), -- Recipe: Doom Crusher (60%)
+
+-- Platinum Tribe Soldier
+(20823,8316,1,1,2,135), -- Recipe: Flaming Dragon Skull (60%)
+(20824,5416,1,1,-1,30303), -- recipe: sealed Dark Crystal Breastplate(60%)
+
+-- Messenger Angel
+(21063,8314,1,1,2,514); -- Recipe: Spiritual Eye (60%)
+
+
+
 -- RB drops for clan skill items (25% chance drop until chances are confirmed)
 -- admins who have drop multipliers might want to edit chances
 INSERT INTO `droplist` VALUES 
