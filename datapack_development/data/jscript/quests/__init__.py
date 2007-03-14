@@ -210,9 +210,11 @@ __all__ = [
 '605_AllianceWithKetraOrcs',
 '607_ProveYourCourage_Ketra',
 '608_SlayTheEnemyCommander_Ketra',
+'609_MagicalPowerOfWaterPart1',
 '611_AllianceWithVarkaSilenos',
 '613_ProveYourCourage_Varka',
 '614_SlayTheEnemyCommander_Varka',
+'615_MagicalPowerOfFirePart1',
 '621_EggDelivery',
 '622_DeliveryOfSpecialLiquor',
 '623_TheFinestFood',
@@ -226,6 +228,7 @@ __all__ = [
 '636_TruthBeyond',
 '637_ThroughOnceMore',
 '647_InfluxOfMachines',
+'649_ALooterAndARailroadMan',
 '999_C3Tutorial'
 ]
 print ""
