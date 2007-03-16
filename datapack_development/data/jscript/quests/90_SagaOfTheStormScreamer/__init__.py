@@ -135,7 +135,7 @@ class Quest (JQuest) :
      if cond >= 19 :
        st.getPlayer().setClassId(110)
        st.getPlayer().setBaseClass(110)
-       st.player.broadcastUserInfo()
+       st.getPlayer().broadcastUserInfo()
        st.playSound("ItemSound.quest_fanfare_2")
        st.set("cond","0")
        st.setState(COMPLETED)

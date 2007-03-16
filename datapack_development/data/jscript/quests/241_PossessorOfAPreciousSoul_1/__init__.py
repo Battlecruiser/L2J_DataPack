@@ -42,91 +42,91 @@ class Quest (JQuest) :
    htmltext = event
    cond = st.getInt("cond")
    if event == "31739-4.htm" :
-     if cond == 0 and st.player.isSubClassActive() :
+     if cond == 0 and st.getPlayer().isSubClassActive() :
        st.setState(STARTED)
        st.set("cond","1")
        st.playSound("ItemSound.quest_accept")
    if event == "30753-2.htm" :
-     if cond == 1 and st.player.isSubClassActive() :
+     if cond == 1 and st.getPlayer().isSubClassActive() :
        st.set("cond","2")
        st.playSound("ItemSound.quest_middle")
    if event == "30754-2.htm" :
-     if cond == 2 and st.player.isSubClassActive() :
+     if cond == 2 and st.getPlayer().isSubClassActive() :
        st.set("cond","3")
        st.playSound("ItemSound.quest_middle")
    if event == "31739-8.htm" :
-     if cond == 4 and st.player.isSubClassActive() :
+     if cond == 4 and st.getPlayer().isSubClassActive() :
        st.set("cond","5")
        st.takeItems(LEGEND_OF_SEVENTEEN,1)
        st.playSound("ItemSound.quest_middle")
    if event == "31042-2.htm" :
-     if cond == 5 and st.player.isSubClassActive() :
+     if cond == 5 and st.getPlayer().isSubClassActive() :
        st.set("cond","6")
        st.playSound("ItemSound.quest_middle")
    if event == "31042-5.htm" :
-     if cond == 7 and st.player.isSubClassActive() :
+     if cond == 7 and st.getPlayer().isSubClassActive() :
        st.set("cond","8")
        st.takeItems(MALRUK_SUCCUBUS_CLAW,10)
        st.giveItems(ECHO_CRYSTAL,1)
        st.playSound("ItemSound.quest_middle")
    if event == "31739-12.htm" :
-     if cond == 8 and st.player.isSubClassActive() :
+     if cond == 8 and st.getPlayer().isSubClassActive() :
        st.set("cond","9")
        st.takeItems(ECHO_CRYSTAL,1)
        st.playSound("ItemSound.quest_accept")
    if event == "30692-2.htm" :
-     if cond == 9 and st.player.isSubClassActive() :
+     if cond == 9 and st.getPlayer().isSubClassActive() :
        st.set("cond","10")
        st.giveItems(POETRY_BOOK,1)
        st.playSound("ItemSound.quest_accept")
    if event == "31739-15.htm" :
-     if cond == 10 and st.player.isSubClassActive() :
+     if cond == 10 and st.getPlayer().isSubClassActive() :
        st.set("cond","11")
        st.takeItems(POETRY_BOOK,1)
        st.playSound("ItemSound.quest_accept")
    if event == "31742-2.htm" :
-     if cond == 11 and st.player.isSubClassActive() :
+     if cond == 11 and st.getPlayer().isSubClassActive() :
        st.set("cond","12")
        st.playSound("ItemSound.quest_accept")
    if event == "31744-2.htm" :
-     if cond == 12 and st.player.isSubClassActive() :
+     if cond == 12 and st.getPlayer().isSubClassActive() :
        st.set("cond","13")
        st.playSound("ItemSound.quest_accept")
    if event == "31336-2.htm" :
-     if cond == 13 and st.player.isSubClassActive() :
+     if cond == 13 and st.getPlayer().isSubClassActive() :
        st.set("cond","14")
        st.playSound("ItemSound.quest_accept")
    if event == "31336-5.htm" :
-     if cond == 15 and st.player.isSubClassActive() :
+     if cond == 15 and st.getPlayer().isSubClassActive() :
        st.set("cond","16")
        st.takeItems(CRIMSON_MOSS,5)
        st.giveItems(RAHORAKTIS_MEDICINE,1)
        st.playSound("ItemSound.quest_accept")
    if event == "31743-2.htm" :
-     if cond == 16 and st.player.isSubClassActive() :
+     if cond == 16 and st.getPlayer().isSubClassActive() :
        st.set("cond","17")
        st.takeItems(RAHORAKTIS_MEDICINE,1)
        st.playSound("ItemSound.quest_accept")
    if event == "31742-5.htm" :
-     if cond == 17 and st.player.isSubClassActive() :
+     if cond == 17 and st.getPlayer().isSubClassActive() :
        st.set("cond","18")
        st.playSound("ItemSound.quest_accept")
    if event == "31740-2.htm" :
-     if cond == 18 and st.player.isSubClassActive() :
+     if cond == 18 and st.getPlayer().isSubClassActive() :
        st.set("cond","19")
        st.playSound("ItemSound.quest_accept")
    if event == "31272-2.htm" :
-     if cond == 19 and st.player.isSubClassActive() :
+     if cond == 19 and st.getPlayer().isSubClassActive() :
        st.set("cond","20")
        st.playSound("ItemSound.quest_accept")
    if event == "31272-5.htm" :
-     if cond == 20 and st.player.isSubClassActive() :
+     if cond == 20 and st.getPlayer().isSubClassActive() :
        st.takeItems(LUNARGENT,5)
        st.takeItems(HELLFIRE_OIL,1)
        st.set("cond","21")
        st.playSound("ItemSound.quest_accept")
    if event == "31740-5.htm" :
-     if cond == 21 and st.player.isSubClassActive() :
+     if cond == 21 and st.getPlayer().isSubClassActive() :
        st.giveItems(VIRGILS_LETTER,1)
        st.set("cond","0")
        st.playSound("ItemSound.quest_finish")

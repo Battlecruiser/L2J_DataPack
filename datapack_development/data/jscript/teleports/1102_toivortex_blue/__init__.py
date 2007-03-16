@@ -18,7 +18,7 @@ class Quest (JQuest) :
    if npcId in [ DIMENSION_VORTEX_1,DIMENSION_VORTEX_3 ] :
      if st.getQuestItemsCount(BLUE_DIMENSION_STONE) >= 1 :
        st.takeItems(BLUE_DIMENSION_STONE,1)
-       st.player.teleToLocation(114097,19935,935)
+       st.getPlayer().teleToLocation(114097,19935,935)
        st.exitQuest(1)
        return
      else :

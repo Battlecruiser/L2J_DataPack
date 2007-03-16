@@ -88,9 +88,9 @@ class Quest (JQuest) :
           htmltext = "30288-20.htm"
         if Level >= 20 and st.getQuestItemsCount(ELVEN_KNIGHT_BROOCH_ID) >= 1:
           st.takeItems(ELVEN_KNIGHT_BROOCH_ID,1)
-          st.player.setClassId(19)
-          st.player.setBaseClass(19)
-          st.player.broadcastUserInfo()
+          st.getPlayer().setClassId(19)
+          st.getPlayer().setBaseClass(19)
+          st.getPlayer().broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "30288-21.htm"
 
@@ -104,9 +104,9 @@ class Quest (JQuest) :
           htmltext = "30288-24.htm"
         if Level >= 20 and st.getQuestItemsCount(REORIA_RECOMMENDATION_ID) >= 1:
           st.takeItems(REORIA_RECOMMENDATION_ID,1)
-          st.player.setClassId(22)
-          st.player.setBaseClass(22)
-          st.player.broadcastUserInfo()
+          st.getPlayer().setClassId(22)
+          st.getPlayer().setBaseClass(22)
+          st.getPlayer().broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "30288-25.htm"
 
@@ -120,9 +120,9 @@ class Quest (JQuest) :
           htmltext = "30288-28.htm"
         if Level >= 20 and st.getQuestItemsCount(MEDALLION_OF_WARRIOR_ID) >= 1:
           st.takeItems(MEDALLION_OF_WARRIOR_ID,1)
-          st.player.setClassId(1)
-          st.player.setBaseClass(1)
-          st.player.broadcastUserInfo()
+          st.getPlayer().setClassId(1)
+          st.getPlayer().setBaseClass(1)
+          st.getPlayer().broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "30288-29.htm"
 
@@ -136,9 +136,9 @@ class Quest (JQuest) :
           htmltext = "30288-32.htm"
         if Level >= 20 and st.getQuestItemsCount(SWORD_OF_RITUAL_ID) >= 1:
           st.takeItems(SWORD_OF_RITUAL_ID,1)
-          st.player.setClassId(4)
-          st.player.setBaseClass(4)
-          st.player.broadcastUserInfo()
+          st.getPlayer().setClassId(4)
+          st.getPlayer().setBaseClass(4)
+          st.getPlayer().broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "30288-33.htm"
 
@@ -152,9 +152,9 @@ class Quest (JQuest) :
           htmltext = "30288-36.htm"
         if Level >= 20 and st.getQuestItemsCount(BEZIQUES_RECOMMENDATION_ID) >= 1:
           st.takeItems(BEZIQUES_RECOMMENDATION_ID,1)
-          st.player.setClassId(7)
-          st.player.setBaseClass(7)
-          st.player.broadcastUserInfo()
+          st.getPlayer().setClassId(7)
+          st.getPlayer().setBaseClass(7)
+          st.getPlayer().broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "30288-37.htm"
           
