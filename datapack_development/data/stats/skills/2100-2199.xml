@@ -590,17 +590,17 @@
   </for>
 </skill>
 <skill id="2166" levels="2" name="CP Gauge Potion">
-  <table name="#val"> 25 100 </table>
+  <table name="#val"> 50 200 </table>
   <table name="#power"> 1.0 2.0 </table>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CPHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="2000"/>
+  <set name="buffDuration" val="1000"/>
   <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect count="2" name="CombatPointHealOverTime" val="#val" stackOrder="30" stackType="CpRecover"/>
+    <effect count="1" name="CombatPointHealOverTime" val="#val" stackOrder="30" stackType="CpRecover"/>
   </for>
 </skill>
 <skill id="2167" levels="3" name="Scroll of SP">
