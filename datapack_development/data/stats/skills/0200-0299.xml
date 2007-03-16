@@ -1557,7 +1557,7 @@
 <skill id="288" levels="4" name="Guard Stance">
   <table name="#mpConsume"> 8 10 12 13 </table>
   <table name="#pDef"> 122 161 212 256 </table>
-  <table name="#ShieldRate"> 50 50 50 50 </table>
+  <table name="#ShieldRate"> 1.5 1.5 1.5 1.5 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1568,7 +1568,7 @@
   <for>
 	<effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume">
       <add order="0x40" stat="pDef" val="#pDef"/>
-	  <add order="0x40" stat="rShld" val="#ShieldRate"/>
+	  <mul order="0x30" stat="rShld" val="#ShieldRate"/>
     </effect>
   </for>
 </skill>
