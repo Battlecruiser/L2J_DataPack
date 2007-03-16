@@ -23,7 +23,7 @@ class Quest (JQuest) :
    if npcId == TAMIL: 
      if st.getQuestItemsCount(ORC_GATEKEEPER_CHARM) >= 1:
        st.takeItems(ORC_GATEKEEPER_CHARM,1)
-       st.player.teleToLocation(-80826,149775,-3043)
+       st.getPlayer().teleToLocation(-80826,149775,-3043)
        st.exitQuest(1)
        return
      else:
@@ -33,7 +33,7 @@ class Quest (JQuest) :
    elif npcId == WHIRPY: 
      if st.getQuestItemsCount(DWARF_GATEKEEPER_TOKEN) >= 1:
        st.takeItems(DWARF_GATEKEEPER_TOKEN,1)
-       st.player.teleToLocation(-80826,149775,-3043)
+       st.getPlayer().teleToLocation(-80826,149775,-3043)
        st.exitQuest(1)
        return
      else:

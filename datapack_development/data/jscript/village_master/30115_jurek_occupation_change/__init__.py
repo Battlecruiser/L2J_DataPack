@@ -99,9 +99,9 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_SCHOLAR_ID,1)
             st.takeItems(MARK_OF_LIFE_ID,1)
             st.takeItems(MARK_OF_MAGUS_ID,1)
-            st.player.setClassId(27)
-            st.player.setBaseClass(27)
-            st.player.broadcastUserInfo()
+            st.getPlayer().setClassId(27)
+            st.getPlayer().setBaseClass(27)
+            st.getPlayer().broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "30115-21.htm"
 
@@ -119,9 +119,9 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_SCHOLAR_ID,1)
             st.takeItems(MARK_OF_LIFE_ID,1)
             st.takeItems(MARK_OF_SUMMONER_ID,1)
-            st.player.setClassId(28)
-            st.player.setBaseClass(28)
-            st.player.broadcastUserInfo()
+            st.getPlayer().setClassId(28)
+            st.getPlayer().setBaseClass(28)
+            st.getPlayer().broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "30115-25.htm"
 
@@ -139,9 +139,9 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_SCHOLAR_ID,1)
             st.takeItems(MARK_OF_TRUST_ID,1)
             st.takeItems(MARK_OF_MAGUS_ID,1)
-            st.player.setClassId(12)
-            st.player.setBaseClass(12)
-            st.player.broadcastUserInfo()
+            st.getPlayer().setClassId(12)
+            st.getPlayer().setBaseClass(12)
+            st.getPlayer().broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "30115-29.htm"
 
@@ -159,9 +159,9 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_SCHOLAR_ID,1)
             st.takeItems(MARK_OF_TRUST_ID,1)
             st.takeItems(MARK_OF_WITCHCRFAT_ID,1)
-            st.player.setClassId(13)
-            st.player.setBaseClass(13)
-            st.player.broadcastUserInfo()
+            st.getPlayer().setClassId(13)
+            st.getPlayer().setBaseClass(13)
+            st.getPlayer().broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "30115-33.htm"
 
@@ -179,9 +179,9 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_SCHOLAR_ID,1)
             st.takeItems(MARK_OF_TRUST_ID,1)
             st.takeItems(MARK_OF_SUMMONER_ID,1)
-            st.player.setClassId(14)
-            st.player.setBaseClass(14)
-            st.player.broadcastUserInfo()
+            st.getPlayer().setClassId(14)
+            st.getPlayer().setBaseClass(14)
+            st.getPlayer().broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "30115-37.htm"
           

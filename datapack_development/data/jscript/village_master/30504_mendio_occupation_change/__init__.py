@@ -45,9 +45,9 @@ class Quest (JQuest) :
           htmltext = "30504-07.htm"
         if Level >= 20 and st.getQuestItemsCount(PASS_FINAL_ID) >= 1:
           st.takeItems(PASS_FINAL_ID,1)
-          st.player.setClassId(56)
-          st.player.setBaseClass(56)
-          st.player.broadcastUserInfo()
+          st.getPlayer().setClassId(56)
+          st.getPlayer().setBaseClass(56)
+          st.getPlayer().broadcastUserInfo()
           st.playSound("ItemSound.quest_fanfare_2")
           htmltext = "30504-08.htm"
 

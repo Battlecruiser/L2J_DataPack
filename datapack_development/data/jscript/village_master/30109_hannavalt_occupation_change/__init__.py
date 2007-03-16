@@ -157,9 +157,9 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_DUTY_ID,1)
             st.takeItems(MARK_OF_LIFE_ID,1)
             st.takeItems(MARK_OF_HEALER_ID,1)
-            st.player.setClassId(20)
-            st.player.setBaseClass(20)
-            st.player.broadcastUserInfo()
+            st.getPlayer().setClassId(20)
+            st.getPlayer().setBaseClass(20)
+            st.getPlayer().broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "30109-39.htm"
 
@@ -177,9 +177,9 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_CHALLENGER_ID,1)
             st.takeItems(MARK_OF_LIFE_ID,1)
             st.takeItems(MARK_OF_DUELIST_ID,1)
-            st.player.setClassId(21)
-            st.player.setBaseClass(21)
-            st.player.broadcastUserInfo()
+            st.getPlayer().setClassId(21)
+            st.getPlayer().setBaseClass(21)
+            st.getPlayer().broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "30109-43.htm"
 
@@ -197,9 +197,9 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_DUTY_ID,1)
             st.takeItems(MARK_OF_TRUST_ID,1)
             st.takeItems(MARK_OF_HEALER_ID,1)
-            st.player.setClassId(5)
-            st.player.setBaseClass(5)
-            st.player.broadcastUserInfo()
+            st.getPlayer().setClassId(5)
+            st.getPlayer().setBaseClass(5)
+            st.getPlayer().broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "30109-47.htm"
 
@@ -217,9 +217,9 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_DUTY_ID,1)
             st.takeItems(MARK_OF_TRUST_ID,1)
             st.takeItems(MARK_OF_WITCHCRAFT_ID,1)
-            st.player.setClassId(6)
-            st.player.setBaseClass(6)
-            st.player.broadcastUserInfo()
+            st.getPlayer().setClassId(6)
+            st.getPlayer().setBaseClass(6)
+            st.getPlayer().broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "30109-51.htm"
 
@@ -237,9 +237,9 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_SEEKER_ID,1)
             st.takeItems(MARK_OF_TRUST_ID,1)
             st.takeItems(MARK_OF_SEARCHER_ID,1)
-            st.player.setClassId(8)
-            st.player.setBaseClass(8)
-            st.player.broadcastUserInfo()
+            st.getPlayer().setClassId(8)
+            st.getPlayer().setBaseClass(8)
+            st.getPlayer().broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "30109-55.htm"
 
@@ -257,9 +257,9 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_SEEKER_ID,1)
             st.takeItems(MARK_OF_TRUST_ID,1)
             st.takeItems(MARK_OF_SAGITTARIUS_ID,1)
-            st.player.setClassId(9)
-            st.player.setBaseClass(9)
-            st.player.broadcastUserInfo()
+            st.getPlayer().setClassId(9)
+            st.getPlayer().setBaseClass(9)
+            st.getPlayer().broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "30109-59.htm"
 
@@ -277,9 +277,9 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_SEEKER_ID,1)
             st.takeItems(MARK_OF_LIFE_ID,1)
             st.takeItems(MARK_OF_SEARCHER_ID,1)
-            st.player.setClassId(23)
-            st.player.setBaseClass(23)
-            st.player.broadcastUserInfo()
+            st.getPlayer().setClassId(23)
+            st.getPlayer().setBaseClass(23)
+            st.getPlayer().broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "30109-63.htm"
 
@@ -297,9 +297,9 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_SEEKER_ID,1)
             st.takeItems(MARK_OF_LIFE_ID,1)
             st.takeItems(MARK_OF_SAGITTARIUS_ID,1)
-            st.player.setClassId(24)
-            st.player.setBaseClass(24)
-            st.player.broadcastUserInfo()
+            st.getPlayer().setClassId(24)
+            st.getPlayer().setBaseClass(24)
+            st.getPlayer().broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "30109-67.htm"
 
@@ -317,9 +317,9 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_CHALLENGER_ID,1)
             st.takeItems(MARK_OF_TRUST_ID,1)
             st.takeItems(MARK_OF_DUELIST_ID,1)
-            st.player.setClassId(2)
-            st.player.setBaseClass(2)
-            st.player.broadcastUserInfo()
+            st.getPlayer().setClassId(2)
+            st.getPlayer().setBaseClass(2)
+            st.getPlayer().broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "30109-71.htm"
 
@@ -337,9 +337,9 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_CHALLENGER_ID,1)
             st.takeItems(MARK_OF_TRUST_ID,1)
             st.takeItems(MARK_OF_CHAMPION_ID,1)
-            st.player.setClassId(3)
-            st.player.setBaseClass(3)
-            st.player.broadcastUserInfo()
+            st.getPlayer().setClassId(3)
+            st.getPlayer().setBaseClass(3)
+            st.getPlayer().broadcastUserInfo()
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "30109-75.htm"
           

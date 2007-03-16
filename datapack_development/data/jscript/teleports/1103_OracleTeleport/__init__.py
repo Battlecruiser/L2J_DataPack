@@ -28,7 +28,7 @@ class Quest (JQuest) :
        st.set("X",str(int(st.getPlayer().getX())))
        st.set("Y",str(int(st.getPlayer().getY())))
        st.set("Z",str(int(st.getPlayer().getZ())))
-       st.player.teleToLocation(-80157,111344,-4901)
+       st.getPlayer().teleToLocation(-80157,111344,-4901)
     ##################
     # Dusk Locations #
     ##################
@@ -37,12 +37,12 @@ class Quest (JQuest) :
        st.set("X",str(int(st.getPlayer().getX())))
        st.set("Y",str(int(st.getPlayer().getY())))
        st.set("Z",str(int(st.getPlayer().getZ())))
-       st.player.teleToLocation(-81261,86531,-5157)
+       st.getPlayer().teleToLocation(-81261,86531,-5157)
     #######################
     # Oracle of Dusk/Dawn #
     #######################
     elif npcId in TEMPLE_PRIEST and xx+yy+zz:
-       st.player.teleToLocation(xx,yy,zz) 
+       st.getPlayer().teleToLocation(xx,yy,zz) 
        st.exitQuest(1)
     return
    
