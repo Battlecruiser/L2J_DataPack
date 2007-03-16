@@ -538,7 +538,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="15" name="HealOverTime" time="1" val="#hot" stackOrder="#hot" stackType="HpRecover"/>
+    <effect count="15" name="HealOverTime" time="1" val="#hot" stackOrder="#hot" stackType="LifeForce"/>
   </for>
 </skill>
 <skill id="1230" levels="28" name="Prominence" enchantLevels1="30" enchantLevels2="30" >
@@ -1213,7 +1213,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="15" name="HealOverTime" time="1" val="#hot" stackOrder="#hot" stackType="HpRecover"/>
+    <effect count="15" name="HealOverTime" time="1" val="#hot" stackOrder="#hot" stackType="LifeForce"/>
   </for>
 </skill>
 <skill id="1257" levels="3" name="Decrease Weight">
