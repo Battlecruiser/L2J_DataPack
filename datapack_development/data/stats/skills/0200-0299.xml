@@ -1737,6 +1737,12 @@
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd">
         <using kind="Dual Sword"/>
       </mul>
+      <mul order="0x30" stat="pvpPhysDmg" val="1.10">
+        <using kind="Dual Sword"/>
+      </mul>
+      <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.25"> 
+        <using kind="Dual Sword"/>
+      </mul>
     </effect>
   </for> 
 </skill>
