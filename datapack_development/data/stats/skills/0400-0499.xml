@@ -158,12 +158,12 @@
     <mul order="0x30" stat="regHp" val="0.2"/>
     <add order="0x40" stat="rCrit" val="#rCrit">
       <and>
-        <using kind="Sword,Big Sword,Dual Sword,Pole"/>
+        <using kind="Sword,Big Sword,Pole"/>
       </and>
     </add>
     <mul order="0x30" stat="cAtk" val="#cAtk">
       <and>
-        <using kind="Blunt,Big Blunt,Fist"/>
+        <using kind="Blunt,Big Blunt,Fist,Dual Fist"/>
       </and>
     </mul>
   </effect>
@@ -492,12 +492,12 @@
     <mul order="0x30" stat="cAtk" val="#cAtk"/>
     <add order="0x40" stat="rCrit" val="#rCrit">
       <and>
-        <using kind="Sword,Big Sword,Dual Sword,Pole"/>
+        <using kind="Sword,Big Sword,Pole"/>
       </and>
     </add>
     <mul order="0x30" stat="cAtk" val="#cAtk">
       <and>
-        <using kind="Blunt,Big Blunt,Fist"/>
+        <using kind="Blunt,Big Blunt,Fist,Dual Fist"/>
       </and>
     </mul> 
   </effect>
