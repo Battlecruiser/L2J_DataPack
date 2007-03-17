@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "163_LegacyOfPoet"
+
 RUMIELS_POEM_1_ID = 1038
 RUMIELS_POEM_3_ID = 1039
 RUMIELS_POEM_4_ID = 1040
@@ -128,7 +130,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(163,"163_LegacyOfPoet","Legacy Of Poet")
+QUEST       = Quest(163,qn,"Legacy Of Poet")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

@@ -6,6 +6,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "637_ThroughOnceMore"
+
 #Drop rate
 CHANCE=40
 #Npc
@@ -58,7 +60,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(637,"637_ThroughOnceMore","Through the Gate Once More")
+QUEST       = Quest(637,qn,"Through the Gate Once More")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

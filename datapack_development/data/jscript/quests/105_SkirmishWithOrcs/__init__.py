@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "105_SkirmishWithOrcs"
+
 KENDNELLS_ORDER1_ID = 1836
 KENDNELLS_ORDER2_ID = 1837
 KENDNELLS_ORDER3_ID = 1838
@@ -170,7 +172,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_middle")
    return
 
-QUEST       = Quest(105,"105_SkirmishWithOrcs","Skirmish With Orcs")
+QUEST       = Quest(105,qn,"Skirmish With Orcs")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

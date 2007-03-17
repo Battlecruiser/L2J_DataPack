@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "413_PathToShillienOracle"
+
 SIDRAS_LETTER1_ID = 1262
 BLANK_SHEET1_ID = 1263
 BLOODY_RUNE1_ID = 1264
@@ -172,7 +174,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(413,"413_PathToShillienOracle","Path To Shillien Oracle")
+QUEST       = Quest(413,qn,"Path To Shillien Oracle")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

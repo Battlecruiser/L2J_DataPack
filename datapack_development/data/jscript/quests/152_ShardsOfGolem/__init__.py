@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "152_ShardsOfGolem"
+
 HARRYS_RECEIPT1_ID = 1008
 HARRYS_RECEIPT2_ID = 1009
 GOLEM_SHARD_ID = 1010
@@ -86,7 +88,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(152,"152_ShardsOfGolem","Shards Of Golem")
+QUEST       = Quest(152,qn,"Shards Of Golem")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

@@ -1,6 +1,8 @@
 # Made by Fulminus
 # Quest 347: Go Get The Calculator.
 
+qn = "347_GoGetTheCalculator"
+
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -111,7 +113,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(347,"347_GoGetTheCalculator","Calculator")
+QUEST       = Quest(347,qn,"Calculator")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

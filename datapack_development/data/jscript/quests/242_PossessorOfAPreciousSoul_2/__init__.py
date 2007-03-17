@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "242_PossessorOfAPreciousSoul_2"
+
 #NPC
 VIRGIL = 31742
 KASSANDRA = 31743
@@ -180,7 +182,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_itemget")
     return 
 
-QUEST       = Quest(242,"242_PossessorOfAPreciousSoul_2","Possessor Of A Precious Soul - 2")
+QUEST       = Quest(242,qn,"Possessor Of A Precious Soul - 2")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 COMPLETED   = State('Completed', QUEST)

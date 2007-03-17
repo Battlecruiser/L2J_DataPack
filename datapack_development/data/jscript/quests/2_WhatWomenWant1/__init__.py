@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "2_WhatWomenWant1"
+
 #NPCs 
 ARUJIEN = 30223 
 MIRABEL = 30146 
@@ -119,7 +121,7 @@ class Quest (JQuest) :
      htmltext = "30157-01.htm" 
    return htmltext
 
-QUEST     = Quest(2,"2_WhatWomenWant1","What Women Want") 
+QUEST     = Quest(2,qn,"What Women Want") 
 CREATED   = State('Start',     QUEST) 
 STARTED   = State('Started',   QUEST) 
 COMPLETED = State('Completed', QUEST) 

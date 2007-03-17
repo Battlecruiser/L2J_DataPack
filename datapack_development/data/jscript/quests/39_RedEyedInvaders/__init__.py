@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "39_RedEyedInvaders"
+
 #NPC
 BABENCO = 30334
 BATHIS = 30332
@@ -113,7 +115,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")	
    return
 
-QUEST       = Quest(39,"39_RedEyedInvaders","Red Eyed Invaders")
+QUEST       = Quest(39,qn,"Red Eyed Invaders")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 COMPLETED   = State('Completed', QUEST)

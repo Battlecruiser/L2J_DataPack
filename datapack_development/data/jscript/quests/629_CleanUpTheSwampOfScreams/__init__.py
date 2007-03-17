@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "629_CleanUpTheSwampOfScreams"
+
 #NPC
 CAPTAIN = 31553
 #ITEMS
@@ -87,7 +89,7 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_itemget")
     return
 
-QUEST       = Quest(629,"629_CleanUpTheSwampOfScreams","Clean Up the Swamp of Screams")
+QUEST       = Quest(629,qn,"Clean Up the Swamp of Screams")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 

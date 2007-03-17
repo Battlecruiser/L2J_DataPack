@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "32_AnObviousLie"
+
 #NPC
 MAXIMILIAN = 30120
 GENTLER = 30094
@@ -142,7 +144,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")	
    return
 
-QUEST       = Quest(32,"32_AnObviousLie","An Obvious Lie")
+QUEST       = Quest(32,qn,"An Obvious Lie")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

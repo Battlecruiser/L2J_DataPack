@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "415_PathToOrcMonk"
+
 POMEGRANATE_ID = 1593
 LEATHER_POUCH1_ID = 1594
 LEATHER_POUCH2_ID = 1595
@@ -256,7 +258,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(415,"415_PathToOrcMonk","Path To Orc Monk")
+QUEST       = Quest(415,qn,"Path To Orc Monk")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

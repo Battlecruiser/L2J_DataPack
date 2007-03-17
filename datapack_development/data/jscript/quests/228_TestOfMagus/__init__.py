@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "228_TestOfMagus"
+
 MARK_OF_MAGUS_ID = 2840
 RUKALS_LETTER_ID = 2841
 PARINAS_LETTER_ID = 2842
@@ -254,7 +256,7 @@ class Quest (JQuest) :
    return
 
 
-QUEST       = Quest(228,"228_TestOfMagus","Test Of Magus")
+QUEST       = Quest(228,qn,"Test Of Magus")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

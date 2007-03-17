@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "266_PleaOfPixies"
+
 PREDATORS_FANG = 1334
 EMERALD = 1337
 BLUE_ONYX = 1338
@@ -82,7 +84,7 @@ class Quest (JQuest) :
         st.giveItems(PREDATORS_FANG,qty)
    return
 
-QUEST       = Quest(266,"266_PleaOfPixies","Plea Of Pixies")
+QUEST       = Quest(266,qm,"Plea Of Pixies")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

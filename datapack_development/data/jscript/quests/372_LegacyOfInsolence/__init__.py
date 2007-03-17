@@ -7,6 +7,8 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 print "importing quests:",
 
+qn = "372_LegacyOfInsolence"
+
 # 1- Variables: Maybe you would like to change something here:
 # If a non-zero value is set here, recipes will be 100% instead of 60%
 # (default setting matches retail rewards)

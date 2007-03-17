@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "611_AllianceWithVarkaSilenos"
+
 #NPC
 Naran_Ashanuk = 31378
 
@@ -383,7 +385,7 @@ class Quest (JQuest) :
                         decreaseAlliance(pst)
     return
 
-QUEST       = Quest(611,"611_AllianceWithVarkaSilenos","Alliance With Varka Silenos")
+QUEST       = Quest(611,qn,"Alliance With Varka Silenos")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST, True)
 

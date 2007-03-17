@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "103_SpiritOfCraftsman"
+
 KAROYDS_LETTER_ID = 968
 CECKTINONS_VOUCHER1_ID = 969
 CECKTINONS_VOUCHER2_ID = 970
@@ -115,7 +117,7 @@ class Quest (JQuest) :
             st.takeItems(PRESERVE_OIL_ID,1)
    return
 
-QUEST       = Quest(103,"103_SpiritOfCraftsman","Spirit Of Craftsman")
+QUEST       = Quest(103,qn,"Spirit Of Craftsman")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

@@ -6,6 +6,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "233_TestOfWarspirit"
+
 MARK_OF_WARSPIRIT_ID = 2879
 VENDETTA_TOTEM_ID = 2880
 TAMLIN_ORC_HEAD_ID = 2881
@@ -342,7 +344,7 @@ class Quest (JQuest) :
 
 
 
-QUEST		= Quest(233,"233_TestOfWarspirit","Test Of Warspirit")
+QUEST		= Quest(233,qn,"Test Of Warspirit")
 CREATED		= State('Start', QUEST)
 PART1		= State('Part1', QUEST)
 PART2		= State('Part2', QUEST)

@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "259_RanchersPlea"
+
 GIANT_SPIDER_SKIN = 1495
 ADENA = 57
 HEALING_POTION = 1061
@@ -77,7 +79,7 @@ class Quest (JQuest) :
    st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(259,"259_RanchersPlea","Ranchers Plea")
+QUEST       = Quest(259,qn,"Ranchers Plea")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

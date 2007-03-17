@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "329_CuriosityOfDwarf"
+
 GOLEM_HEARTSTONE = 1346
 BROKEN_HEARTSTONE = 1365
 ADENA = 57
@@ -66,7 +68,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(329,"329_CuriosityOfDwarf","Curiosity Of Dwarf")
+QUEST       = Quest(329,qn,"Curiosity Of Dwarf")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

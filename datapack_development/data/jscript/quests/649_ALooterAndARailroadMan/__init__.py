@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "649_ALooterAndARailroadMan"
+
 #NPC
 OBI = 32052
 
@@ -65,7 +67,7 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_itemget")	
    return
 
-QUEST       = Quest(649,"649_ALooterAndARailroadMan","A Looter and a Railroad Man")
+QUEST       = Quest(649,qn,"A Looter and a Railroad Man")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

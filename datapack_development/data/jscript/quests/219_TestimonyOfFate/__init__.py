@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "219_TestimonyOfFate"
+
 MARK_OF_FATE_ID = 3172
 KAIRAS_LETTER1_ID = 3173
 METHEUS_FUNERAL_JAR_ID = 3174
@@ -369,7 +371,7 @@ class Quest (JQuest) :
           st.playSound("Itemsound.quest_itemget")
    return
 
-QUEST       = Quest(219,"219_TestimonyOfFate","Testimony Of Fate")
+QUEST       = Quest(219,qn,"Testimony Of Fate")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

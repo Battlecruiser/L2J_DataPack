@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "35_FindGlitteringJewelry"
+
 ROUGH_JEWEL = 7162
 ORIHARUKON = 1893
 SILVER_NUGGET = 1873
@@ -75,7 +77,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")	
    return
 
-QUEST       = Quest(35,"35_FindGlitteringJewelry","Find Glittering Jewelry")
+QUEST       = Quest(35,qn,"Find Glittering Jewelry")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 

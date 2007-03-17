@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "325_GrimCollector"
+
 ZOMBIE_HEAD1_ID = 1350
 ZOMBIE_HEART1_ID = 1351
 ZOMBIE_LIVER1_ID = 1352
@@ -223,7 +225,7 @@ class Quest (JQuest) :
          st.giveItems(ZOMBIE_LIVER1_ID,1)
    return
 
-QUEST       = Quest(325,"325_GrimCollector","Grim Collector")
+QUEST       = Quest(325,qn,"Grim Collector")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

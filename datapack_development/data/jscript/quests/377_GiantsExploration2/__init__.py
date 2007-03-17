@@ -9,6 +9,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #Quest info
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 377,"GiantsExploration2","Exploration of Giants Cave, part 2"
+qn = "377_GiantsExploration2"
 
 #Variables
 #Titan Ancient Books drop rate in %

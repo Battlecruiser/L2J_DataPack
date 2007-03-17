@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "409_PathToOracle"
+
 CRYSTAL_MEDALLION_ID = 1231
 MONEY_OF_SWINDLER_ID = 1232
 DAIRY_OF_ALLANA_ID = 1233
@@ -144,7 +146,7 @@ class Quest (JQuest) :
           st.set("cond","5")
    return
 
-QUEST       = Quest(409,"409_PathToOracle","Path To Oracle")
+QUEST       = Quest(409,qn,"Path To Oracle")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

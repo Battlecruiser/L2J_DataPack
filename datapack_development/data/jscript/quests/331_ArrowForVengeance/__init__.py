@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "331_ArrowForVengeance"
+
 HARPY_FEATHER = 1452
 MEDUSA_VENOM = 1453
 WYRMS_TOOTH = 1454
@@ -61,7 +63,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(331,"331_ArrowForVengeance","Arrow For Vengeance")
+QUEST       = Quest(331,qn,"Arrow For Vengeance")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

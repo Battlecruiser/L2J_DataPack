@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "330_AdeptOfTaste"
+
 INGREDIENT_LIST_ID = 1420
 SONIAS_BOTANYBOOK_ID = 1421
 RED_MANDRAGORA_ROOT_ID = 1422
@@ -466,7 +468,7 @@ class Quest (JQuest) :
                 st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(330,"330_AdeptOfTaste","Adept Of Taste")
+QUEST       = Quest(330,qn,"Adept Of Taste")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

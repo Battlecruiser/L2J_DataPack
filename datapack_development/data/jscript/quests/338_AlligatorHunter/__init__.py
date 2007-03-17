@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "338_AlligatorHunter"
+
 ADENA = 57
 ALLIGATOR = 20135
 ALLIGATOR_PELTS = 4337
@@ -55,7 +57,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
      return
 
-QUEST       = Quest(338,"338_AlligatorHunter","Alligator Hunter")
+QUEST       = Quest(338,qn,"Alligator Hunter")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "234_FatesWhisper"
+
 PIPETTE_KNIFE = 4665
 REIRIAS_SOUL_ORB = 4666
 KERMONS_INFERNIUM_SCEPTER = 4667
@@ -276,7 +278,7 @@ class Quest (JQuest) :
 		return		
 
 
-QUEST		= Quest(234,"234_FatesWhisper","Fate's Whisper")
+QUEST		= Quest(234,qn,"Fate's Whisper")
 CREATED		= State('Start', QUEST)
 STARTED		= State('Started', QUEST)
 COMPLETED	= State('Completed', QUEST)

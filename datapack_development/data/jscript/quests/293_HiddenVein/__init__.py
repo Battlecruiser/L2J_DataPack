@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "293_HiddenVein"
+
 CHRYSOLITE_ORE = 1488
 TORN_MAP_FRAGMENT = 1489
 HIDDEN_VEIN_MAP = 1490
@@ -79,7 +81,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(293,"293_HiddenVein","Hidden Vein")
+QUEST       = Quest(293,qn,"Hidden Vein")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "47_IntoTheDarkForest"
+
 TRADER_GALLADUCCI_ID = 30097
 GALLADUCCIS_ORDER_DOCUMENT_ID_1 = 7563
 GALLADUCCIS_ORDER_DOCUMENT_ID_2 = 7564
@@ -106,7 +108,7 @@ class Quest (JQuest) :
 
         return htmltext
 
-QUEST       = Quest(47,"47_IntoTheDarkForest","Into The Dark Forest")
+QUEST       = Quest(47,qn,"Into The Dark Forest")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

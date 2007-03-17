@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "327_ReclaimTheLand"
+
 ADENA = 57
 
 TUREK_DOGTAG,        TUREK_MEDALLION,     CLAY_URN_FRAGMENT,    \
@@ -162,7 +164,7 @@ class Quest (JQuest) :
         st.giveItems(JADE_NECKLACE_BEAD,1)
    return
 
-QUEST       = Quest(327,"327_ReclaimTheLand","Reclaim The Land")
+QUEST       = Quest(327,qn,"Reclaim The Land")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

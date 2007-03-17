@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "328_SenseForBusiness"
+
 MONSTER_EYE_CARCASS = 1347
 MONSTER_EYE_LENS = 1366
 BASILISK_GIZZARD = 1348
@@ -92,7 +94,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(328,"328_SenseForBusiness","Sense For Business")
+QUEST       = Quest(328,qn,"Sense For Business")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

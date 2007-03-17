@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "212_TrialOfDuty"
+
 MARK_OF_DUTY_ID = 2633
 LETTER_OF_DUSTIN_ID = 2634
 KNIGHTS_TEAR_ID = 2635
@@ -263,7 +265,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(212,"212_TrialOfDuty","Trial Of Duty")
+QUEST       = Quest(212,qn,"Trial Of Duty")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

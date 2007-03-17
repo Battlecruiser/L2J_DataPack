@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "257_GuardIsBusy1"
+
 GLUDIO_LORDS_MARK = 1084
 ORC_AMULET = 752
 ORC_NECKLACE = 1085
@@ -69,7 +71,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(257,"257_GuardIsBusy1","Guard Is Busy1")
+QUEST       = Quest(257,qn,"Guard Is Busy1")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

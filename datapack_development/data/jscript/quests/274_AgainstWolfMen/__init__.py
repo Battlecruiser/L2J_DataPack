@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "274_AgainstWolfMen"
+
 MARAKU_WEREWOLF_HEAD = 1477
 NECKLACE_OF_VALOR = 1507
 NECKLACE_OF_COURAGE = 1506
@@ -71,7 +73,7 @@ class Quest (JQuest) :
        st.giveItems(MARAKU_WOLFMEN_TOTEM,1)
    return
 
-QUEST       = Quest(274,"274_AgainstWolfMen","Against Wolf Men")
+QUEST       = Quest(274,qn,"Against Wolf Men")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

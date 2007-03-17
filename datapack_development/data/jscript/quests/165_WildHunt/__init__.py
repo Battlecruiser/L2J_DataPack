@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "165_WildHunt"
+
 DARK_BEZOAR_ID = 1160
 LESSER_HEALING_POTION_ID = 1060
 
@@ -105,7 +107,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(165,"165_WildHunt","Wild Hunt")
+QUEST       = Quest(165,qn,"Wild Hunt")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

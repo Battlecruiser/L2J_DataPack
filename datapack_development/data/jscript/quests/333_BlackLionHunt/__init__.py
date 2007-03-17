@@ -1,6 +1,8 @@
 #written by Rolarga
 ##################################FEEL FREE TO CHANGE IDs, REWARDS, PRICES, NPCs AND DROPDATAS THEY ARE JUST CUSTOM BY ME##################################
 
+qn = "333_BlackLionHunt"
+
 #Technical relatet Items
 BLACK_LION_MARK = 1369
 ADENA_ID = 57
@@ -569,7 +571,7 @@ class Quest (JQuest) :
 		return
 
 
-QUEST       = Quest(333,"333_BlackLionHunt","BlackLionHunt")
+QUEST       = Quest(333,qn,"BlackLionHunt")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

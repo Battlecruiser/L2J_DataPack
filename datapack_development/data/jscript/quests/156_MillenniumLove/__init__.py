@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "156_MillenniumLove"
+
 RYLITHS_LETTER_ID = 1022
 THEONS_DIARY_ID = 1023
 ADENA_ID = 57
@@ -66,9 +68,9 @@ class Quest (JQuest) :
          htmltext = "30369-05.htm"
    return htmltext
 
-QUEST       = Quest(156,"156_MillenniumLove","Millennium Love")
+QUEST       = Quest(156,qn,"Millennium Love")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
+STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 

@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "161_FruitsOfMothertree"
+
 ANDELLRIAS_LETTER = 1036
 MOTHERTREE_FRUIT = 1037
 ADENA = 57
@@ -63,7 +65,7 @@ class Quest (JQuest) :
          htmltext = "30371-02.htm"
    return htmltext
 
-QUEST       = Quest(161,"161_FruitsOfMothertree","Fruits Of Mothertree")
+QUEST       = Quest(161,qn,"Fruits Of Mothertree")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

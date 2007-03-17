@@ -1,6 +1,7 @@
 # Coins of Magic version 0.1 by DrLecter
 
 #Quest info
+qn = "336_CoinOfMagic"
 QUEST_NUMBER      = 336
 QUEST_NAME        = "CoinOfMagic"
 QUEST_DESCRIPTION = "Coins of Magic"

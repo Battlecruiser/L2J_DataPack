@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "432_BirthdayPartySong"
+
 MELODY_MAESTRO_OCTAVIA_ID = 31043
 RED_CRYSTALS_ID = 7541
 ROUGH_HEWN_ROCK_GOLEMS_ID = 21103
@@ -54,7 +56,7 @@ class Quest (JQuest) :
                  st.playSound("ItemSound.quest_itemget")
      return
  
-QUEST       = Quest(432,"432_BirthdayPartySong","Birthday Party Song")
+QUEST       = Quest(432,qn,"Birthday Party Song")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

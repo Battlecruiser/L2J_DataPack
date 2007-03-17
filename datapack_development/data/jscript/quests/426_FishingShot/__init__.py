@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "426_FishingShot"
+
 SWEET_FLUID = 7586
 
 class Quest (JQuest) :
@@ -40,7 +42,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")  
    return
 
-QUEST       = Quest(426,"426_FishingShot","Quest for Fishing Shot")
+QUEST       = Quest(426,qn,"Quest for Fishing Shot")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 

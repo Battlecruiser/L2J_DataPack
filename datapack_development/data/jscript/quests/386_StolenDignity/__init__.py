@@ -8,6 +8,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #Quest info
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 386,"StolenDignity","Stolen Dignity"
+qn = "386_StolenDignity"
 
 #Variables
 DROP_RATE=15*Config.RATE_DROP_QUEST

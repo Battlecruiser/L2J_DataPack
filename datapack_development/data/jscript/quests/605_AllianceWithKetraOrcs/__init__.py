@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "605_AllianceWithKetraOrcs"
+
 #NPC
 Wahkan = 31371
 
@@ -385,7 +387,7 @@ class Quest (JQuest) :
                         decreaseAlliance(pst)
     return
 
-QUEST       = Quest(605,"605_AllianceWithKetraOrcs","Alliance With Ketra Orcs")
+QUEST       = Quest(605,qn,"Alliance With Ketra Orcs")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 

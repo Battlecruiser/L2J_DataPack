@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "5_MinersFavor"
+
 #NPCs 
 BOLTER = 30554 
 SHARI  = 30517 
@@ -115,7 +117,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_middle") 
    return htmltext
 
-QUEST     = Quest(5,"5_MinersFavor","Miner's Favor") 
+QUEST     = Quest(5,qn,"Miner's Favor") 
 CREATED   = State('Start',     QUEST) 
 STARTING  = State('Starting',  QUEST) 
 STARTED   = State('Started',   QUEST) 

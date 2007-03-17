@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "357_WarehouseKeepersAmbition"
+
 #CUSTOM VALUES
 DROPRATE=50
 REWARD1=900  #This is paid per item
@@ -64,7 +66,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")	
    return
 
-QUEST       = Quest(357,"357_WarehouseKeepersAmbition","Warehouse Keepers Ambition")
+QUEST       = Quest(357,qn,"Warehouse Keepers Ambition")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 

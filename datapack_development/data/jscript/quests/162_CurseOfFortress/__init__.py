@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "162_CurseOfFortress"
+
 BONE_FRAGMENT3 = 1158
 ELF_SKULL = 1159
 BONE_SHIELD = 625
@@ -73,7 +75,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(162,"162_CurseOfFortress","Curse Of Fortress")
+QUEST       = Quest(162,qn,"Curse Of Fortress")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

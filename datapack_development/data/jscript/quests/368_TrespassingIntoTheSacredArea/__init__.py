@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "368_TrespassingIntoTheSacredArea"
+
 ADENA = 57
 BLADE_STAKATO_FANG = 5881
 CHANCE = 9
@@ -53,7 +55,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
      return
 
-QUEST       = Quest(368,"368_TrespassingIntoTheSacredArea","Trespassing Into The Sacred Area")
+QUEST       = Quest(368,qn,"Trespassing Into The Sacred Area")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 

@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "352_HelpRoodRaiseANewPet"
+
 ADENA = 57
 LIENRIK_EGG1 = 5860
 LIENRIK_EGG2 = 5861
@@ -69,7 +71,7 @@ class Quest (JQuest) :
          st.giveItems(LIENRIK_EGG2,1)
      return
 
-QUEST       = Quest(352,"352_HelpRoodRaiseANewPet","Help Rood Raise A New Pet")
+QUEST       = Quest(352,qn,"Help Rood Raise A New Pet")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

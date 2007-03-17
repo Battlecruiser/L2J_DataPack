@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "354_ConquestOfAlligatorIsland"
+
 ADENA = 57
 ALLIGATOR_TOOTH = 5863
 TORN_MAP_FRAGMENT = 5864
@@ -86,7 +88,7 @@ class Quest (JQuest) :
          st.giveItems(TORN_MAP_FRAGMENT,1)
      return
 
-QUEST       = Quest(354,"354_ConquestOfAlligatorIsland","Conquest Of Alligator Island")
+QUEST       = Quest(354,qn,"Conquest Of Alligator Island")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 

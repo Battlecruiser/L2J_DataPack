@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "169_NightmareChildren"
+
 CRACKED_SKULL_ID = 1030
 PERFECT_SKULL_ID = 1031
 BONE_GAITERS_ID = 31
@@ -93,7 +95,7 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(169,"169_NightmareChildren","Nightmare Children")
+QUEST       = Quest(169,qn,"Nightmare Children")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

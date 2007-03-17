@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "171_ActsOfEvil"
+
 BLADE_MOLD,TYRAS_BILL,RANGERS_REPORT1,RANGERS_REPORT2,RANGERS_REPORT3,RANGERS_REPORT4,\
 WEAPON_TRADE_CONTRACT,ATTACK_DIRECTIVES,CERTIFICATE,CARGOBOX,OL_MAHUM_HEAD = range(4239,4250)
 
@@ -189,7 +191,7 @@ class Quest (JQuest) :
                st.playSound("ItemSound.quest_itemget")
      return
 
-QUEST       = Quest(171,"171_ActsOfEvil","Acts of Evil")
+QUEST       = Quest(171,qn,"Acts of Evil")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

@@ -5,6 +5,7 @@
 QUEST_NUMBER      = 421
 QUEST_NAME        = "LittleWingAdventures"
 QUEST_DESCRIPTION = "Little Wing's Big Adventures"
+qn = "421_LittleWingAdventures"
 
 #Configuration
 

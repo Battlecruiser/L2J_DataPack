@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "273_InvadersOfHolyland"
+
 BLACK_SOULSTONE = 1475
 RED_SOULSTONE = 1476
 ADENA = 57
@@ -76,7 +78,7 @@ class Quest (JQuest) :
    st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(273,"273_InvadersOfHolyland","Invaders Of Holyland")
+QUEST       = Quest(273,qn,"Invaders Of Holyland")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

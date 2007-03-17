@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "170_DangerousAllure"
+
 NIGHTMARE_CRYSTAL = 1046
 
 class Quest (JQuest) :
@@ -55,7 +57,7 @@ class Quest (JQuest) :
       st.set("cond","2")
    return
 
-QUEST       = Quest(170,"170_DangerousAllure","Dangerous Allure")
+QUEST       = Quest(170,qn,"Dangerous Allure")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

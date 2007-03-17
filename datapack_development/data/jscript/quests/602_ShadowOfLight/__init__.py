@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "602_ShadowOfLight"
+
 #NPC
 EYE_OF_ARGOS = 31683
 #ITEMS
@@ -81,7 +83,7 @@ class Quest (JQuest) :
      st.giveItems(EYE_OF_DARKNESS,int(numItems))
    return
 
-QUEST       = Quest(602,"602_ShadowOfLight","Shadow Of Light")
+QUEST       = Quest(602,qn,"Shadow Of Light")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 

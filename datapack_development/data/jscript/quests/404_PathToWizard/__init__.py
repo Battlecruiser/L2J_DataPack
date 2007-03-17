@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "404_PathToWizard"
+
 MAP_OF_LUSTER_ID = 1280
 KEY_OF_FLAME_ID = 1281
 FLAME_EARING_ID = 1282
@@ -238,7 +240,7 @@ class Quest (JQuest) :
             st.set("cond","12")
    return
 
-QUEST       = Quest(404,"404_PathToWizard","Path To Wizard")
+QUEST       = Quest(404,qn,"Path To Wizard")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

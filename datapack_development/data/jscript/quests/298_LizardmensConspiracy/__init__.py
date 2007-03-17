@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "298_LizardmensConspiracy"
+
 PATROLS_REPORT = 7182
 SHINING_GEM = 7183
 SHINING_RED_GEM = 7184
@@ -74,7 +76,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(298,"298_LizardmensConspiracy","Lizardmen's Conspiracy")
+QUEST       = Quest(298,qn,"Lizardmen's Conspiracy")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST, True)
 

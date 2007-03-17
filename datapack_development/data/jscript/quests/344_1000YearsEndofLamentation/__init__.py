@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "344_1000YearsEndofLamentation"
+
 #Rewards
 ADENA = 57
 
@@ -178,7 +180,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
      return
 
-QUEST       = Quest(344,"344_1000YearsEndofLamentation","1000 Years, the End of Lamentation")
+QUEST       = Quest(344,qn,"1000 Years, the End of Lamentation")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

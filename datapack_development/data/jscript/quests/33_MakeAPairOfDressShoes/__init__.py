@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "33_MakeAPairOfDressShoes"
+
 LEATHER = 1882
 THREAD = 1868
 ADENA = 57
@@ -71,7 +73,7 @@ class Quest (JQuest) :
      htmltext = "30838-6.htm"
    return htmltext
 
-QUEST       = Quest(33,"33_MakeAPairOfDressShoes","Make A Pair Of Dress Shoes")
+QUEST       = Quest(33,qn,"Make A Pair Of Dress Shoes")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 

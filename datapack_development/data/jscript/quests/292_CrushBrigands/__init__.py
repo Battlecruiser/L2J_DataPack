@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "292_CrushBrigands"
+
 GOBLIN_NECKLACE = 1483
 GOBLIN_PENDANT = 1484
 GOBLIN_LORD_PENDANT = 1485
@@ -99,7 +101,7 @@ class Quest (JQuest) :
             st.set("cond","2")
    return
 
-QUEST       = Quest(292,"292_CrushBrigands","Crush Brigands")
+QUEST       = Quest(292,qn,"Crush Brigands")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "615_MagicalPowerOfFirePart1"
+
 #NPC
 Naran = 31378
 Udan = 31379
@@ -126,7 +128,7 @@ class Quest (JQuest) :
     return
         
 
-QUEST       = Quest(615,"615_MagicalPowerOfFirePart1","Magical Power of Fire - Part 1")
+QUEST       = Quest(615,qn,"Magical Power of Fire - Part 1")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

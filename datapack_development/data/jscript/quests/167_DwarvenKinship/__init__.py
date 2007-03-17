@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "167_DwarvenKinship"
+
 COLLETTE_LETTER = 1076
 NORMANS_LETTER = 1106
 ADENA = 57
@@ -71,7 +73,7 @@ class Quest (JQuest) :
       htmltext = "30210-01.htm"
    return htmltext
 
-QUEST       = Quest(167,"167_DwarvenKinship","Dwarven Kinship")
+QUEST       = Quest(167,qn,"Dwarven Kinship")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "267_WrathOfVerdure"
+
 GOBLIN_CLUB = 1335
 SILVERY_LEAF = 1340
 
@@ -52,7 +54,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(267,"267_WrathOfVerdure","Wrath Of Verdure")
+QUEST       = Quest(267,qn,"Wrath Of Verdure")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

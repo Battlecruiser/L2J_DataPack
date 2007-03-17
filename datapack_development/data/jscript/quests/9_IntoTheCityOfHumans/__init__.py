@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "9_IntoTheCityOfHumans"
+
 #NPCs 
 PETUKAI = 30583 
 TANAPI  = 30571 
@@ -66,7 +68,7 @@ class Quest (JQuest) :
 
    return htmltext 
 
-QUEST     = Quest(9,"9_IntoTheCityOfHumans","Into the City of Humans") 
+QUEST     = Quest(9,qn,"Into the City of Humans") 
 CREATED   = State('Start',     QUEST) 
 STARTED   = State('Started',   QUEST) 
 COMPLETED = State('Completed', QUEST) 

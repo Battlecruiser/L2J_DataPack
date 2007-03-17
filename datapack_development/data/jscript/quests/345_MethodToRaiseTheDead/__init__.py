@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "345_MethodToRaiseTheDead"
+
 ADENA = 57
 VICTIMS_ARM_BONE = 4274
 VICTIMS_THIGH_BONE = 4275
@@ -106,7 +108,7 @@ class Quest (JQuest) :
          st.giveItems(USELESS_BONE_PIECES,st.getRandom(8)+1)
      return
 
-QUEST       = Quest(345,"345_MethodToRaiseTheDead","Method To Raise The Dead")
+QUEST       = Quest(345,qn,"Method To Raise The Dead")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

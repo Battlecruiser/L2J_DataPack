@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "31_SecretBuriedInTheSwamp"
+
 #NPC
 ABERCROMBIE = 31555
 FORGOTTEN_MONUMENT_1,FORGOTTEN_MONUMENT_2,FORGOTTEN_MONUMENT_3,FORGOTTEN_MONUMENT_4,CORPSE_OF_DWARF = range(31661,31666)
@@ -97,7 +99,7 @@ class Quest (JQuest) :
        htmltext = "31664-2.htm"
    return htmltext
 
-QUEST       = Quest(31,"31_SecretBuriedInTheSwamp","Secret Buried In The Swamp")
+QUEST       = Quest(31,qn,"Secret Buried In The Swamp")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 COMPLETED   = State('Completed', QUEST)

@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "294_CovertBusiness"
+
 BAT_FANG = 1491
 RING_OF_RACCOON = 1508
 ADENA = 57
@@ -71,7 +73,7 @@ class Quest (JQuest) :
      st.giveItems(BAT_FANG,qty)
    return
 
-QUEST       = Quest(294,"294_CovertBusiness","Covert Business")
+QUEST       = Quest(294,qn,"Covert Business")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "606_WarWithVarkaSilenos"
+
 #NPC
 Kadun = 31370
 
@@ -85,7 +87,7 @@ class Quest (JQuest) :
          st.exitQuest(1)
      return
 
-QUEST       = Quest(606, "606_WarWithVarkaSilenos", "War With Varka Silenos")
+QUEST       = Quest(606, qn, "War With Varka Silenos")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "154_SacrificeToSea"
+
 FOX_FUR_ID = 1032
 FOX_FUR_YARN_ID = 1033
 MAIDEN_DOLL_ID = 1034
@@ -108,7 +110,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(154,"154_SacrificeToSea","Sacrifice To Sea")
+QUEST       = Quest(154,qn,"Sacrifice To Sea")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

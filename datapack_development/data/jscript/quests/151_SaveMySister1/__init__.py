@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "151_SaveMySister1"
+
 POISON_SAC = 703
 FEVER_MEDICINE = 704
 
@@ -64,7 +66,7 @@ class Quest (JQuest) :
          st.set("cond","2")
    return
 
-QUEST       = Quest(151,"151_SaveMySister1","Save My Sister1")
+QUEST       = Quest(151,qn,"Save My Sister1")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "297_GatekeepersFavor"
+
 STARSTONE2_ID = 1573
 GATEKEEPER_TOKEN_ID = 1659
 
@@ -56,7 +58,7 @@ class Quest (JQuest) :
                st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(297,"297_GatekeepersFavor","Gatekeepers Favor")
+QUEST       = Quest(297,qn,"Gatekeepers Favor")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "158_SeedOfEvil"
+
 CLAY_TABLET_ID = 1025
 ENCHANT_ARMOR_D = 956
 
@@ -70,7 +72,7 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_middle")
    return
 
-QUEST       = Quest(158,"158_SeedOfEvil","Seed Of Evil")
+QUEST       = Quest(158,qn,"Seed Of Evil")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

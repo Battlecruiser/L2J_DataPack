@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "247_PossessorOfAPreciousSoul_4"
+
 #NPC
 CARADINE = 31740
 LADY_OF_LAKE = 31745
@@ -78,7 +80,7 @@ class Quest (JQuest) :
        htmltext = "31745-1.htm"
    return htmltext
 
-QUEST       = Quest(247,"247_PossessorOfAPreciousSoul_4","Possessor Of A Precious Soul - 4")
+QUEST       = Quest(247,qn,"Possessor Of A Precious Soul - 4")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

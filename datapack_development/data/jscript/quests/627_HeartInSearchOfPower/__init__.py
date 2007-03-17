@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "627_HeartInSearchOfPower"
+
 #NPC
 M_NECROMANCER,ENFEUX = 31518,31519
 
@@ -90,7 +92,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")	
   return
 
-QUEST       = Quest(627,"627_HeartInSearchOfPower","Heart In Search Of Power")
+QUEST       = Quest(627,qn,"Heart In Search Of Power")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

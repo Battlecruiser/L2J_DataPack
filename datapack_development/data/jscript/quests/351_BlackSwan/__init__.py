@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "351_BlackSwan"
+
 ADENA = 57
 ORDER_OF_GOSTA = 4296
 LIZARD_FANG = 4297
@@ -78,7 +80,7 @@ class Quest (JQuest) :
          st.set("cond","2")
      return
 
-QUEST       = Quest(351,"351_BlackSwan","Black Swan")
+QUEST       = Quest(351,qn,"Black Swan")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "164_BloodFiend"
+
 KIRUNAK_SKULL_ID = 1044
 ADENA_ID = 57
 
@@ -73,7 +75,7 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_middle")
    return
 
-QUEST       = Quest(164,"164_BloodFiend","Blood Fiend")
+QUEST       = Quest(164,qn,"Blood Fiend")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
