@@ -354,6 +354,7 @@
   <table name="#mpConsume"> 18 22 27 31 34 </table>
   <!-- table name="#crit"> 0 0 0 0 0 </table> -->
   <table name="#Accuracy"> 3 3 3 5 5 </table>
+  <table name="#atkCountMax"> 1 1 1 1 1 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="reuseDelay" val="12000"/>
   <set name="target" val="TARGET_SELF"/>
@@ -366,8 +367,13 @@
   <for>
     <effect name="Buff" time="120" count="1" val="0">
       <!-- <add order="0x40" stat="cAtk" val="#crit"> -->
-      <add order="0x40" stat="accCombat" val="#Accuracy"/>
-   </effect>
+      <add order="0x40" stat="accCombat" val="#Accuracy">
+        <using kind="Pole"/>
+      </add>
+      <add order="0x40" stat="atkCountMax" val="#atkCountMax">
+        <using kind="Pole"/>
+      </add>
+    </effect>
   </for>
 </skill>
 <skill id="318" levels="1" name="Aegis Stance">
