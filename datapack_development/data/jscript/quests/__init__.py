@@ -9,6 +9,8 @@ __all__ = [
 '8_AnAdventureBegins',
 '9_IntoTheCityOfHumans',
 '10_IntoTheWorld',
+'11_SecretMeetingWithKetraOrcs',
+'12_SecretMeetingWithVarkaSilenos',
 '13_ParcelDelivery',
 '14_WhereaboutsOfTheArchaeologist',
 '15_SweetWhisper',
