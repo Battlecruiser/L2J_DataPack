@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "350_EnhanceYourWeapon"
+
 NPC=[30115,30856,30194]
 
 RED_SOUL_CRYSTAL0_ID,RED_SOUL_CRYSTAL1_ID,RED_SOUL_CRYSTAL2_ID,RED_SOUL_CRYSTAL3_ID,\
@@ -57,7 +59,7 @@ class Quest (JQuest) :
      htmltext = npcId+"-21.htm"
    return htmltext
 
-QUEST       = Quest(350,"350_EnhanceYourWeapon","Enhance Your Weapon")
+QUEST       = Quest(350,qn,"Enhance Your Weapon")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

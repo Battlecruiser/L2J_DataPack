@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "417_PathToScavenger"
+
 RING_OF_RAVEN = 1642
 PIPIS_LETTER = 1643
 ROUTS_TP_SCROLL = 1644
@@ -305,7 +307,7 @@ class Quest (JQuest) :
                 st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(417,"417_PathToScavenger","Path To Scavenger")
+QUEST       = Quest(417,qn,"Path To Scavenger")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "16_TheComingDarkness"
+
 #NPC
 HIERARCH = 31517
 EVIL_ALTAR_1 = 31512
@@ -89,7 +91,7 @@ class Quest (JQuest) :
      htmltext = "31517-3.htm"
    return htmltext
 
-QUEST       = Quest(16,"16_TheComingDarkness","The Coming Darkness")
+QUEST       = Quest(16,qn,"The Coming Darkness")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

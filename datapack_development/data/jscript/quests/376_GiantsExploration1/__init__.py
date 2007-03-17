@@ -8,6 +8,7 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 #Quest info
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 376,"GiantsExploration1","Exploration of Giants Cave, part 1"
+qn = "376_GiantsExploration1"
 
 #Variables
 #Ancient parchment drop rate in %

@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "275_BlackWingedSpies"
+
 DARKWING_BAT_FANG = 1478
 VARANGKAS_PARASITE = 1479
 ADENA = 57
@@ -72,7 +74,7 @@ class Quest (JQuest) :
         st.takeItems(VARANGKAS_PARASITE,-1)
    return
 
-QUEST       = Quest(275,"275_BlackWingedSpies","Black Winged Spies")
+QUEST       = Quest(275,qn,"Black Winged Spies")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

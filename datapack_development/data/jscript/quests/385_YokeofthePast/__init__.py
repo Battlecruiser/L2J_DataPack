@@ -3,6 +3,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "385_YokeofthePast"
+
 ANCIENT_SCROLL = 5902
 
 class Quest (JQuest) :
@@ -45,7 +47,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_itemget")
     return
 
-QUEST       = Quest(385,"385_YokeofthePast","Yoke of the Past")
+QUEST       = Quest(385,qn,"Yoke of the Past")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 

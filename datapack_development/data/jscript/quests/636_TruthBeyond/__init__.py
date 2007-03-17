@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "636_TruthBeyond"
+
 #Npc
 ELIYAH = 31329
 FLAURON = 32010
@@ -52,7 +54,7 @@ class Quest (JQuest) :
    return htmltext
 
 
-QUEST       = Quest(636,"636_TruthBeyond","The Truth Beyond the Gate")
+QUEST       = Quest(636,qn,"The Truth Beyond the Gate")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "36_MakeASewingKit"
+
 REINFORCED_STEEL = 7163
 ARTISANS_FRAME = 1891
 ORIHARUKON = 1893
@@ -60,7 +62,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")	
    return
 
-QUEST       = Quest(36,"36_MakeASewingKit","Make A Sewing Kit")
+QUEST       = Quest(36,qn,"Make A Sewing Kit")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 

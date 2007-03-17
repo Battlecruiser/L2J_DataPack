@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "341_HuntingForWildBeasts"
+
 BEAR_SKIN = 4259
 ADENA = 57
 CHANCE = 400000
@@ -50,7 +52,7 @@ class Quest (JQuest) :
          st.dropQuestItems(BEAR_SKIN,1,20,CHANCE,1)
      return
 
-QUEST       = Quest(341,"341_HuntingForWildBeasts","Hunting For Wild Beasts")
+QUEST       = Quest(341,qn,"Hunting For Wild Beasts")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

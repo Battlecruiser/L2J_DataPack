@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "416_PathToOrcShaman"
+
 FIRE_CHARM_ID = 1616
 KASHA_BEAR_PELT_ID = 1617
 KASHA_BSPIDER_HUSK_ID = 1618
@@ -254,7 +256,7 @@ class Quest (JQuest) :
           st.set("cond","10")
    return
 
-QUEST       = Quest(416,"416_PathToOrcShaman","Path To Orc Shaman")
+QUEST       = Quest(416,qn,"Path To Orc Shaman")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

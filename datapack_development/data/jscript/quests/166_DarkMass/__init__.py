@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "166_DarkMass"
+
 UNDRES_LETTER_ID = 1088
 CEREMONIAL_DAGGER_ID = 1089
 DREVIANT_WINE_ID = 1090
@@ -80,7 +82,7 @@ class Quest (JQuest) :
             htmltext = "30143-02.htm"
    return htmltext
 
-QUEST       = Quest(166,"166_DarkMass","Dark Mass")
+QUEST       = Quest(166,qn,"Dark Mass")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

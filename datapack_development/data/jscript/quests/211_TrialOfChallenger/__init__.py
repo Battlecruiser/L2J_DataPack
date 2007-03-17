@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "211_TrialOfChallenger"
+
 LETTER_OF_KASH_ID = 2628
 SCROLL_OF_SHYSLASSY_ID = 2631
 WATCHERS_EYE1_ID = 2629
@@ -193,7 +195,7 @@ class Quest (JQuest) :
            return "Raldo has spawned at X=176643 Y=-185803 Z=-3677"
    return
 
-QUEST       = Quest(211,"211_TrialOfChallenger","Trial Of Challenger")
+QUEST       = Quest(211,qn,"Trial Of Challenger")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

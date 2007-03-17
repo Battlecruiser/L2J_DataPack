@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "296_SilkOfTarantula"
+
 TARANTULA_SPIDER_SILK = 1493
 TARANTULA_SPINNERETTE = 1494
 RING_OF_RACCOON = 1508
@@ -71,7 +73,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(296,"296_SilkOfTarantula","Silk Of Tarantula")
+QUEST       = Quest(296,qn,"Silk Of Tarantula")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

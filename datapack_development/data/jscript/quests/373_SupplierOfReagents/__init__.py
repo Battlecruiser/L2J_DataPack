@@ -8,6 +8,8 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 #Quest info
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 373,"SupplierOfReagents","Supplier of Reagents"
+qn = "373_SupplierOfReagents"
+
 #Variables
 #Rewards
 SHOP_LIST={#itemid:[qty,required_id,required_qty]

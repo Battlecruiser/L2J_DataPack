@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "628_HuntGoldenRam"
+
 #Npcs
 KAHMAN = 31554
 
@@ -110,7 +112,7 @@ class Quest (JQuest) :
        st.giveItems(item,int(numItems))
    return
            
-QUEST       = Quest(628,"628_HuntGoldenRam","Hunt of the Golden Ram Mercenary Force")
+QUEST       = Quest(628,qn,"Hunt of the Golden Ram Mercenary Force")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST,True)
 STARTED     = State('Started', QUEST,True)

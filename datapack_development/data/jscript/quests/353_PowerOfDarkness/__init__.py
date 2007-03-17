@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "353_PowerOfDarkness"
+
 #NPC
 GALMAN=31044
 #Items
@@ -54,7 +56,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(353,"353_PowerOfDarkness","Power of Darkness")
+QUEST       = Quest(353,qn,"Power of Darkness")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "263_KillAllSylphs1"
+
 ORC_AMULET = 1116
 ORC_NECKLACE = 1117
 ADENA_ID = 57
@@ -58,7 +60,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(263,"263_KillAllSylphs1","Kill All Sylphs1")
+QUEST       = Quest(263,qn,"Kill All Sylphs1")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

@@ -8,6 +8,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 QuestNumber      = 382
 QuestName        = "KailsMagicCoin"
 QuestDescription = "Kail's Magic Coin"
+qn = "382_Kail's Magic Coin"
 
 #Messages
 default = "<html><head><body>I have nothing to say to you.</body></html>"

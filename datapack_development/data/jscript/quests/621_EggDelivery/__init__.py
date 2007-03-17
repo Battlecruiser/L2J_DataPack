@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "621_EggDelivery"
+
 #NPC
 JEREMY = 31521
 PULIN = 31543
@@ -138,7 +140,7 @@ class Quest (JQuest) :
      htmltext = "31521-2.htm"
    return htmltext
 
-QUEST       = Quest(621,"621_EggDelivery","Egg Delivery")
+QUEST       = Quest(621,qn,"Egg Delivery")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

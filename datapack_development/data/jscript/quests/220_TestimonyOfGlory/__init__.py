@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "220_TestimonyOfGlory"
+
 # if the cross compatible is turned on,
 # the code will try convert the info of database from old code
 # to a compatible with the new one
@@ -493,7 +495,7 @@ class Quest (JQuest) :
        st.playSound("Itemsound.quest_middle")
    return
 
-QUEST       = Quest(220,"220_TestimonyOfGlory","Testimony Of Glory")
+QUEST       = Quest(220,qn,"Testimony Of Glory")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

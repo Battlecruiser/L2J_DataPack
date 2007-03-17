@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "108_DiamondGambit"
+
 GOUPHS_CONTRACT_ID = 1559
 REEPS_CONTRACT_ID = 1560
 ELVEN_WINE_ID = 1561
@@ -200,7 +202,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_middle")
    return
 
-QUEST       = Quest(108,"108_DiamondGambit","Diamond Gambit")
+QUEST       = Quest(108,qn,"Diamond Gambit")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

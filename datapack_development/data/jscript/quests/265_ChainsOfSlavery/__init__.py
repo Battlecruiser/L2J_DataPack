@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "265_ChainsOfSlavery"
+
 IMP_SHACKLES = 1368
 ADENA = 57
 
@@ -56,7 +58,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(265,"265_ChainsOfSlavery","Chains Of Slavery")
+QUEST       = Quest(265,qn,"Chains Of Slavery")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

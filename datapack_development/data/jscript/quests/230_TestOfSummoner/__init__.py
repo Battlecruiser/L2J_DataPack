@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "230_TestOfSummoner"
+
 #Item declaration
 
 # The Mark
@@ -319,7 +321,7 @@ class Quest (JQuest) :
                st.giveItems(foul,1)
       return
 
-QUEST       = Quest(230,"230_TestOfSummoner","Test Of Summoner")
+QUEST       = Quest(230,qn,"Test Of Summoner")
 CREATED     = State('Start', QUEST)
 PROGRESS    = State('Progress', QUEST)
 COMPLETED   = State('Completed', QUEST)

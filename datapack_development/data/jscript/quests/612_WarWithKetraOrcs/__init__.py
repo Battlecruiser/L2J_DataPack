@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "612_WarWithKetraOrcs"
+
 #NPC
 Ashas = 31377
 
@@ -84,7 +86,7 @@ class Quest (JQuest) :
          st.exitQuest(1)
      return
 
-QUEST       = Quest(612, "612_WarWithKetraOrcs", "War With Ketra Orcs")
+QUEST       = Quest(612, qn, "War With Ketra Orcs")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

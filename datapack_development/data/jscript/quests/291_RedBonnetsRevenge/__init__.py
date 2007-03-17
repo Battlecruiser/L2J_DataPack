@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "291_RedBonnetsRevenge"
+
 BLACK_WOLF_PELT = 1482
 GRANDMAS_PEARL,GRANDMAS_MIRROR,GRANDMAS_NECKLACE,GRANDMAS_HAIRPIN = range(1502,1506)
 SOE=736
@@ -63,7 +65,7 @@ class Quest (JQuest) :
      st.giveItems(BLACK_WOLF_PELT,1)
    return
 
-QUEST       = Quest(291,"291_RedBonnetsRevenge","Red Bonnets Revenge")
+QUEST       = Quest(291,qn,"Red Bonnets Revenge")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "9_IntoTheCityOfHumans"
+
 #NPC
 FAIREN = 30175
 KAMILEN = 31287
@@ -277,7 +279,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(90,"90_SagaOfTheStormScreamer","Saga Of The Storm Screamer")
+QUEST       = Quest(90,qn,"Saga Of The Storm Screamer")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "613_ProveYourCourage_Varka"
+
 #NPC
 Ashas = 31377
 Hekaton = 25299
@@ -71,7 +73,7 @@ class Quest (JQuest) :
                     st.set("cond","2")
     return
 
-QUEST       = Quest(613,"613_ProveYourCourage_Varka","Prove Your Courage!")
+QUEST       = Quest(613,qn,"Prove Your Courage!")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

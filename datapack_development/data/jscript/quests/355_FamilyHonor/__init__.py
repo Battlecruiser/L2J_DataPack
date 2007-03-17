@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "355_FamilyHonor"
+
 #NPC
 GALIBREDO = 30181
 PATRIN = 30929
@@ -109,7 +111,7 @@ class Quest (JQuest) :
        st.giveItems(BUST_OF_ANCIENT_GODDESS,1)      
    return
 
-QUEST       = Quest(355,"355_FamilyHonor","Family Honor")
+QUEST       = Quest(355,qn,"Family Honor")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

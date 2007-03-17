@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "102_FungusFever"
+
 ALBERRYUS_LETTER_ID = 964
 EVERGREEN_AMULET_ID = 965
 DRYAD_TEARS_ID = 966

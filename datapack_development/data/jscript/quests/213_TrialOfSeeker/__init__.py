@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "213_TrialOfSeeker"
+
 DUFNERS_LETTER_ID,  TERYS_ORDER1_ID,    TERYS_ORDER2_ID,           TERYS_LETTER_ID,      \
 VIKTORS_LETTER_ID,  HAWKEYES_LETTER_ID, MYSTERIOUS_RUNESTONE_ID,   OL_MAHUM_RUNESTONE_ID,\
 TUREK_RUNESTONE_ID, ANT_RUNESTONE_ID,   TURAK_BUGBEAR_RUNESTONE_ID,TERYS_BOX_ID,         \
@@ -206,7 +208,7 @@ class Quest (JQuest) :
            st.playSound("Itemsound.quest_itemget")
    return
 
-QUEST       = Quest(213,"213_TrialOfSeeker","Trial Of Seeker")
+QUEST       = Quest(213,qn,"Trial Of Seeker")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "4_LongLiveLordOfFlame"
+
 HONEY_KHANDAR,BEAR_FUR_CLOAK,BLOODY_AXE,ANCESTOR_SKULL,SPIDER_DUST,DEEP_SEA_ORB = range(1541,1547)
 NPC_GIFTS = {30585:BEAR_FUR_CLOAK,30566:HONEY_KHANDAR,30562:BLOODY_AXE,30560:ANCESTOR_SKULL,30559:SPIDER_DUST,30587:DEEP_SEA_ORB}
 
@@ -67,7 +69,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
    return htmltext
 
-QUEST     = Quest(4,"4_LongLiveLordOfFlame","Long Live the Paagrio Lord")
+QUEST     = Quest(4,qn,"Long Live the Paagrio Lord")
 CREATED   = State('Start',     QUEST)
 STARTING  = State('Starting',  QUEST)
 STARTED   = State('Started',   QUEST)

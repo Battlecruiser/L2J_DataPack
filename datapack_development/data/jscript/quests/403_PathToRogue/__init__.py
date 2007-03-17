@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "403_PathToRogue"
+
 BEZIQUES_LETTER_ID = 1180
 SPATOIS_BONES_ID = 1183
 HORSESHOE_OF_LIGHT_ID = 1184
@@ -148,7 +150,7 @@ class Quest (JQuest) :
                   st.set("cond","6")
    return
 
-QUEST       = Quest(403,"403_PathToRogue","Path To Rogue")
+QUEST       = Quest(403,qn,"Path To Rogue")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

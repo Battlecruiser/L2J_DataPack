@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "101_SwordOfSolidarityQuest"
+
 ROIENS_LETTER_ID = 796
 HOWTOGO_RUINS_ID = 937
 BROKEN_SWORD_HANDLE_ID = 739
@@ -108,7 +110,7 @@ class Quest (JQuest) :
          st.set("cond","3")
    return
 
-QUEST       = Quest(101,"101_SwordOfSolidarityQuest","Sword Of Solidarity Quest")
+QUEST       = Quest(101,qn,"Sword Of Solidarity Quest")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

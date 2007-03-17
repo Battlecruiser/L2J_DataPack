@@ -6,6 +6,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "225_TestOfSearcher"
+
 LUTHERS_LETTER_ID,     ALANKELLS_WARRANT_ID,LEIRYNNS_ORDER1_ID,DELU_TOTEM_ID,  \
 LEIRYNNS_ORDER2_ID,    CHIEF_KALKIS_FANG_ID,LEIRYNNS_REPORT_ID,STRANGE_MAP_ID, \
 LAMBERTS_MAP_ID,       ALANKELLS_LETTER_ID, ALANKELLS_ORDER_ID,WINE_CATALOG_ID,\
@@ -252,7 +254,7 @@ class Quest (JQuest) :
    return
 
 
-QUEST       = Quest(225,"225_TestOfSearcher","Test Of Searcher")
+QUEST       = Quest(225,qn,"Test Of Searcher")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

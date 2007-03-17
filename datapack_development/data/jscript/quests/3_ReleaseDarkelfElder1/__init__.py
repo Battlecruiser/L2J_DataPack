@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "3_ReleaseDarkelfElder1"
+
 #NPC
 TALLOTH = 30141
 
@@ -78,7 +80,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST     = Quest(3,"3_ReleaseDarkelfElder1","Will the Seal be Broken?")
+QUEST     = Quest(3,qn,"Will the Seal be Broken?")
 CREATED   = State('Start',     QUEST)
 STARTING  = State('Starting',  QUEST)
 STARTED   = State('Started',   QUEST)

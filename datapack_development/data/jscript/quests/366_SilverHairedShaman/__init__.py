@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "366_SilverHairedShaman"
+
 #NPC
 DIETER=30111
 #Items
@@ -54,7 +56,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(366,"366_SilverHairedShaman","Silver Haired Shaman")
+QUEST       = Quest(366,qn,"Silver Haired Shaman")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 

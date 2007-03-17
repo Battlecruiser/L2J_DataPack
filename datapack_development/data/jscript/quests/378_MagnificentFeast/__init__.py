@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "378_MagnificentFeast"
+
 #NPC
 RANSPO = 30594
 
@@ -121,7 +123,7 @@ class Quest (JQuest) :
         htmltext = "30594-9.htm"
    return htmltext
 
-QUEST       = Quest(378,"378_MagnificentFeast","Magnificent Feast")
+QUEST       = Quest(378,qn,"Magnificent Feast")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

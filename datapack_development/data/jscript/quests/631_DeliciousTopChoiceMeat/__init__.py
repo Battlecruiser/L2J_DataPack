@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "631_DeliciousTopChoiceMeat"
+
 #NPC
 TUNATUN = 31537
 
@@ -69,7 +71,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")	
    return
 
-QUEST       = Quest(631,"631_DeliciousTopChoiceMeat","Delicious Top Choice Meat")
+QUEST       = Quest(631,qn,"Delicious Top Choice Meat")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST, True)
 

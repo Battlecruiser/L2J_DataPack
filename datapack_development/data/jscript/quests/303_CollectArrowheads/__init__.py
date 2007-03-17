@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "303_CollectArrowheads"
+
 ORCISH_ARROWHEAD = 963
 ADENA = 57
 
@@ -53,7 +55,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(303,"303_CollectArrowheads","Collect Arrowheads")
+QUEST       = Quest(303,qn,"Collect Arrowheads")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

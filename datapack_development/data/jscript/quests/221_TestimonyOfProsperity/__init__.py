@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "221_TestimonyOfProsperity"
+
 MARK_OF_PROSPERITY_ID = 3238
 RING_OF_TESTIMONY1_ID = 3239
 RING_OF_TESTIMONY2_ID = 3240
@@ -447,7 +449,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_middle")
    return
 
-QUEST       = Quest(221,"221_TestimonyOfProsperity","Testimony Of Prosperity")
+QUEST       = Quest(221,qn,"Testimony Of Prosperity")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

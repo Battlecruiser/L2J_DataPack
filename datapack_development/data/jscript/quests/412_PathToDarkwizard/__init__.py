@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "412_PathToDarkwizard"
+
 SEEDS_OF_DESPAIR_ID = 1254
 SEEDS_OF_ANGER_ID = 1253
 SEEDS_OF_HORROR_ID = 1255
@@ -189,7 +191,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(412,"412_PathToDarkwizard","Path To Darkwizard")
+QUEST       = Quest(412,qn,"Path To Darkwizard")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "316_DestroyPlaguebringers"
+
 WERERAT_FANG = 1042
 VAROOL_FOULCLAWS_FANG = 1043
 ADENA = 57
@@ -63,7 +65,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(316,"316_DestroyPlaguebringers","Destroy Plaguebringers")
+QUEST       = Quest(316,qn,"Destroy Plaguebringers")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

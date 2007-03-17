@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "258_BringWolfPelt1"
+
 WOLF_PELT = 702
 REWARDS={429:[1,6],42:[1,19],41:[1,19],462:[1,19],18:[1,20],426:[1,5],29:[1,2],22:[1,2],390:[1,3]}
 
@@ -60,7 +62,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(258,"258_BringWolfPelt1","Bring Wolf Pelt1")
+QUEST       = Quest(258,qn,"Bring Wolf Pelt1")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

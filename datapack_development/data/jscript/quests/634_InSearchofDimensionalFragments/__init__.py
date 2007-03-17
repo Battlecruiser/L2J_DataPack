@@ -3,6 +3,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "634_InSearchofDimensionalFragments"
+
 DIMENSION_FRAGMENT_ID = 7079
 
 class Quest (JQuest) :
@@ -40,7 +42,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(634, "634_InSearchofDimensionalFragments", "In Search of Dimensional Fragments")
+QUEST       = Quest(634, qn, "In Search of Dimensional Fragments")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 COMPLETED   = State('Completed', QUEST)

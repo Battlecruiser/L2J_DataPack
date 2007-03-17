@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "155_FindSirWindawood"
+
 OFFICIAL_LETTER_ID = 1019
 HASTE_POTION_ID = 734
 
@@ -45,7 +47,7 @@ class Quest (JQuest) :
       htmltext = "30311-01.htm"
    return htmltext
 
-QUEST       = Quest(155,"155_FindSirWindawood","Find Sir Windawood")
+QUEST       = Quest(155,qn,"Find Sir Windawood")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

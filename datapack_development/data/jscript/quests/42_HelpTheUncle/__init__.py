@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "42_HelpTheUncle"
+
 WATERS=30828
 SOPHYA=30735
 
@@ -97,7 +99,7 @@ class Quest (JQuest) :
 				st.playSound("ItemSound.quest_middle")
 				st.set("cond", "3")
 
-QUEST=Quest(42,"42_HelpTheUncle","Help The Uncle!")
+QUEST=Quest(42,qn,"Help The Uncle!")
 CREATED=State('Start', QUEST)
 STARTED=State('Started', QUEST)
 COMPLETED=State('Completed', QUEST)

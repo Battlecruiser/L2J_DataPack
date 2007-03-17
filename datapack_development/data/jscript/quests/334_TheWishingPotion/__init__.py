@@ -7,6 +7,8 @@ from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "334_TheWishingPotion"
+
 #### CONSTANTS
 ####
 
@@ -415,7 +417,7 @@ class Quest (JQuest) :
    return
 
 
-QUEST     = Quest(334,"334_TheWishingPotion","The Wishing Potion")
+QUEST     = Quest(334,qn,"The Wishing Potion")
 CREATED   = State('Start',     QUEST)
 STARTED   = State('started',   QUEST)
 MIDDLE    = State('middle',    QUEST)

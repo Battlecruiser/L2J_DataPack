@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "367_ElectrifyingRecharge"
+
 #NPC
 LORAIN = 30673
 #MOBS
@@ -79,7 +81,7 @@ class Quest (JQuest) :
             break
    return
 
-QUEST       = Quest(367,"367_ElectrifyingRecharge","Electrifying Recharge")
+QUEST       = Quest(367,qn,"Electrifying Recharge")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "261_DreamOfMoneylender1"
+
 GIANT_SPIDER_LEG = 1087
 ADENA = 57
 
@@ -53,7 +55,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(261,"261_DreamOfMoneylender1","Dream Of Moneylender1")
+QUEST       = Quest(261,qn,"Dream Of Moneylender1")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

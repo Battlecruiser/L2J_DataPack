@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "118_ToLeadAndBeLed"
+
 #CONFIG
 DEBUG=1
 #ITEMS 
@@ -177,7 +179,7 @@ class Quest (JQuest) :
     return
      
 
-QUEST     = Quest(118,"118_ToLeadAndBeLed","To Lead And Be Led") 
+QUEST     = Quest(118,qn,"To Lead And Be Led") 
 CREATED   = State('Start',     QUEST) 
 PROGRESS  = State('Progress',   QUEST) 
 COMPLETED = State('Completed', QUEST) 

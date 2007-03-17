@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "408_PathToElvenwizard"
+
 ROGELLIAS_LETTER_ID = 1218
 RED_DOWN_ID = 1219
 MAGICAL_POWERS_RUBY_ID = 1220
@@ -192,7 +194,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(408,"408_PathToElvenwizard","Path To Elvenwizard")
+QUEST       = Quest(408,qn,"Path To Elvenwizard")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

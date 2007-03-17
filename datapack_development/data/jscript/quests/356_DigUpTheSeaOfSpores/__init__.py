@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "356_DigUpTheSeaOfSpores"
+
 #NPC
 GAUEN = 30717
 
@@ -84,7 +86,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")	
    return
 
-QUEST       = Quest(356,"356_DigUpTheSeaOfSpores","Dig Up The Sea Of Spores")
+QUEST       = Quest(356,qn,"Dig Up The Sea Of Spores")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

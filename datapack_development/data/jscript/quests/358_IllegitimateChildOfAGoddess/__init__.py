@@ -8,6 +8,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #Quest info
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 358,"IllegitimateChildOfAGoddess","Illegitimate Child Of A Goddess"
+qn = "358_IllegitimateChildOfAGoddess"
 
 #Variables
 DROP_RATE=12  #in %

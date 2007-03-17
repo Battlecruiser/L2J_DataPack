@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "106_ForgottenTruth"
+
 ONYX_TALISMAN1,      ONYX_TALISMAN2,     ANCIENT_SCROLL,  \
 ANCIENT_CLAY_TABLET, KARTAS_TRANSLATION, ELDRITCH_DAGGER  \
 = range(984,990)
@@ -103,7 +105,7 @@ class Quest (JQuest) :
          st.set("cond","3")
    return
 
-QUEST       = Quest(106,"106_ForgottenTruth","Forgotten Truth")
+QUEST       = Quest(106,qn,"Forgotten Truth")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

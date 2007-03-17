@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "343_UnderTheShadowOfTheIvoryTower"
+
 ORB = 4364
 ECTOPLASM = 4365
 ADENA = 57
@@ -186,7 +188,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
      return
 
-QUEST       = Quest(343,"343_UnderTheShadowOfTheIvoryTower","Under The Shadow Of The Ivory Tower")
+QUEST       = Quest(343,qn,"Under The Shadow Of The Ivory Tower")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

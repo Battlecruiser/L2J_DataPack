@@ -8,6 +8,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 #Quest info
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 359,"ForSleeplessDeadmen","For Sleepless Deadmen"
+qn = "359_ForSleeplessDeadmen"
 
 #Variables
 DROP_RATE = 10  #in %

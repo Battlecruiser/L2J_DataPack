@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "614_SlayTheEnemyCommander_Varka"
+
 #NPC
 Ashas = 31377
 Tayr = 25302
@@ -71,7 +73,7 @@ class Quest (JQuest) :
                     st.set("cond","2")
     return
 
-QUEST       = Quest(614,"614_SlayTheEnemyCommander_Varka","Slay The Enemy Commander!")
+QUEST       = Quest(614,qn,"Slay The Enemy Commander!")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

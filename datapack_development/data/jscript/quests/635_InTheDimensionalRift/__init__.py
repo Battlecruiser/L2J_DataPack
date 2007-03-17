@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "635_InTheDimensionalRift"
+
 DIMENSION_FRAGMENT = 7079
 
 # Unconfirmed info:
@@ -80,7 +82,7 @@ class Quest (JQuest) :
          st.exitQuest(1)
    return htmltext
 
-QUEST       = Quest(635, "635_InTheDimensionalRift", "In The Dimensional Rift")
+QUEST       = Quest(635, qn, "In The Dimensional Rift")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

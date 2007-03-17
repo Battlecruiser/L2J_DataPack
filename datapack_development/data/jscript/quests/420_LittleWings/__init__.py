@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "420_LittleWings"
+
 # variables section
 REQUIRED_EGGS = 20
 
@@ -513,7 +515,7 @@ class Quest (JQuest):
 
 
 # Quest class and state definition
-QUEST       = Quest(420, "420_LittleWings", "Little Wings")
+QUEST       = Quest(420, qn, "Little Wings")
 CREATED     = State('Start',     QUEST)
 STARTING    = State('Starting',  QUEST)
 STARTED     = State('Started',   QUEST)

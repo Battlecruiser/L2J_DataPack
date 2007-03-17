@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "410_PathToPalusKnight"
+
 PALLUS_TALISMAN_ID = 1237
 LYCANTHROPE_SKULL_ID = 1238
 VIRGILS_LETTER_ID = 1239
@@ -136,7 +138,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(410,"410_PathToPalusKnight","Path To Palus Knight")
+QUEST       = Quest(410,qn,"Path To Palus Knight")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

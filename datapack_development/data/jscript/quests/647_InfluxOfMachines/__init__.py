@@ -6,6 +6,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "647_InfluxOfMachines"
+
 #Settings: drop chance in %
 DROP_CHANCE=30
 #Set this to non-zero to use 100% recipes as reward instead of default 60%
@@ -76,7 +78,7 @@ class Quest (JQuest) :
           st.giveItems(DESTROYED_GOLEM_SHARD,int(numItems))
     return
 
-QUEST       = Quest(647,"647_InfluxOfMachines","Influx of Machines")
+QUEST       = Quest(647,qn,"Influx of Machines")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 

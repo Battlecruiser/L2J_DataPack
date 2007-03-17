@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "271_ProofOfValor"
+
 KASHA_WOLF_FANG = 1473
 NECKLACE_OF_VALOR = 1507
 NECKLACE_OF_COURAGE = 1506
@@ -70,7 +72,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(271,"271_ProofOfValor","Proof Of Valor")
+QUEST       = Quest(271,qn,"Proof Of Valor")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST) # kept just for backwards compatibility
 STARTED     = State('Started', QUEST)

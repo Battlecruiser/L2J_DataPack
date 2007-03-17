@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "264_KeenClaws"
+
 WOLF_CLAW = 1367
 
 DROP={20003:[[5,10,8],[0,5,2]],20456:[[16,20,2],[0,16,1]]}
@@ -66,7 +68,7 @@ class Quest (JQuest) :
         st.giveItems(WOLF_CLAW,qty)
    return
 
-QUEST       = Quest(264,"264_KeenClaws","Keen Claws")
+QUEST       = Quest(264,qn,"Keen Claws")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

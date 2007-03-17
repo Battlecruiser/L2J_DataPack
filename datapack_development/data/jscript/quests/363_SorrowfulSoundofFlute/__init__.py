@@ -5,6 +5,7 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "363_SorrowfulSoundofFlute"
 
 class Quest (JQuest) :
 
@@ -57,7 +58,7 @@ class Quest (JQuest) :
    return htmltext
 
 
-QUEST       = Quest(363,"363_SorrowfulSoundofFlute","Sorrowful Sounds of Flute")
+QUEST       = Quest(363,qn,"Sorrowful Sounds of Flute")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

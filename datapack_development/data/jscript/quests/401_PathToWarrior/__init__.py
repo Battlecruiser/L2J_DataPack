@@ -6,6 +6,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "401_PathToWarrior"
+
 EINS_LETTER_ID = 1138
 WARRIOR_GUILD_MARK_ID = 1139
 RUSTED_BRONZE_SWORD1_ID = 1140
@@ -132,7 +134,7 @@ class Quest (JQuest) :
 
    return
 
-QUEST       = Quest(401,"401_PathToWarrior","Path To Warrior")
+QUEST       = Quest(401,qn,"Path To Warrior")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

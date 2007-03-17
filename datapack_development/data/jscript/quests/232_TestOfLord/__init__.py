@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "232_TestOfLord"
+
 MARK_OF_LORD_ID            = 3390
 ORDEAL_NECKLACE_ID         = 3391
 VARKEES_CHARM_ID           = 3392
@@ -358,7 +360,7 @@ class Quest (JQuest) :
 	
 	
 	
-QUEST     = Quest(232,"232_TestOfLord","Test Of Lord")
+QUEST     = Quest(232,qn,"Test Of Lord")
 CREATED   = State('Start', QUEST)
 STARTED   = State('Started', QUEST)
 COMPLETED = State('Completed', QUEST)

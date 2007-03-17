@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "295_DreamsOfFlight"
+
 FLOATING_STONE = 1492
 RING_OF_FIREFLY = 1509
 ADENA = 57
@@ -61,7 +63,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(295,"295_DreamsOfFlight","Dreams Of Flight")
+QUEST       = Quest(295,qn,"Dreams Of Flight")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

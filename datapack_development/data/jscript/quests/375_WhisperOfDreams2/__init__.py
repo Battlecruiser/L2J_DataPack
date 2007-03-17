@@ -9,7 +9,8 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
  
 #Quest info
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 375,"WhisperOfDreams2","Whisper of Dreams, part 2"
- 
+qn = "375_WhisperOfDreams2"
+
 #Variables
 #Alternative rewards. Set this to a non-zero value and recipes will be 100% instead of 60%
 ALT_RP_100=0

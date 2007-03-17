@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "224_TestOfSagittarius"
+
 RECOMMENDATION_OF_BALANKI_ID = 2864
 RECOMMENDATION_OF_FILAUR_ID = 2865
 RECOMMENDATION_OF_ARIN_ID = 2866
@@ -248,7 +250,7 @@ class Quest (JQuest) :
    
 
   
-QUEST       = Quest(224,"224_TestOfSagittarius","Test Of Sagittarius")
+QUEST       = Quest(224,qn,"Test Of Sagittarius")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

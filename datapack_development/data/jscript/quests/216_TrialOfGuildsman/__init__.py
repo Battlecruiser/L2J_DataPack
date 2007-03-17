@@ -7,6 +7,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "216_TrialOfGuildsman"
+
 MARK_OF_GUILDSMAN_ID = 3119
 VALKONS_RECOMMEND_ID = 3120
 MANDRAGORA_BERRY_ID = 3121
@@ -284,7 +286,7 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_middle")
    return
 
-QUEST       = Quest(216,"216_TrialOfGuildsman","Trial Of Guildsman")
+QUEST       = Quest(216,qn,"Trial Of Guildsman")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

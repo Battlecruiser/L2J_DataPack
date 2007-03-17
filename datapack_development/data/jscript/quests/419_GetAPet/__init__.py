@@ -6,6 +6,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "419_GetAPet"
+
 # constants section
 
 REQUIRED_SPIDER_LEGS = 50
@@ -224,7 +226,7 @@ class Quest (JQuest):
       return
 
 # Quest class and state definition
-QUEST       = Quest(419, "419_GetAPet", "Wolf Collar")
+QUEST       = Quest(419, qn, "Wolf Collar")
 CREATED     = State('Start',       QUEST)
 STARTED     = State('Started',     QUEST)
 SLAYED      = State('Slayed',      QUEST)

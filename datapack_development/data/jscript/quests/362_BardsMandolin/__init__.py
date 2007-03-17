@@ -4,6 +4,7 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "362_BardsMandolin"
 
 class Quest (JQuest) :
 
@@ -56,7 +57,7 @@ class Quest (JQuest) :
    return htmltext
 
 
-QUEST       = Quest(362,"362_BardsMandolin","Bards Mandolin")
+QUEST       = Quest(362,qn,"Bards Mandolin")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

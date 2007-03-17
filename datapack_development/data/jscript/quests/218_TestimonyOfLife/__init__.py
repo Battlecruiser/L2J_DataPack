@@ -6,6 +6,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "218_TestimonyOfLife"
+
 MARK_OF_LIFE_ID = 3140
 CARDIENS_LETTER_ID = 3141
 CAMOMILE_CHARM_ID = 3142
@@ -361,7 +363,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_middle")
    return
 
-QUEST       = Quest(218,"218_TestimonyOfLife","Testimony of Life")
+QUEST       = Quest(218,qn,"Testimony of Life")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

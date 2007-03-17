@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "104_SpiritOfMirror"
+
 GALLINS_OAK_WAND_ID = 748
 WAND_SPIRITBOUND1_ID = 1135
 WAND_SPIRITBOUND2_ID = 1136
@@ -92,7 +94,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(104,"104_SpiritOfMirror","Spirit Of Mirror")
+QUEST       = Quest(104,qn,"Spirit Of Mirror")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

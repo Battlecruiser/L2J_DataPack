@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "299_GatherIngredientsForPie"
+
 #NPC
 LARA = 30063
 BRIGHT = 30466
@@ -89,7 +91,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")	
    return
 
-QUEST       = Quest(299,"299_GatherIngredientsForPie","Gather Ingredients For A Pie")
+QUEST       = Quest(299,qn,"Gather Ingredients For A Pie")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 

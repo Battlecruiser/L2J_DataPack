@@ -7,6 +7,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "215_TrialOfPilgrim"
+
 MARK_OF_PILGRIM_ID = 2721
 BOOK_OF_SAGE_ID = 2722
 VOUCHER_OF_TRIAL_ID = 2723
@@ -216,7 +218,7 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_middle")
    return
 
-QUEST       = Quest(215,"215_TrialOfPilgrim","Trial Of Pilgrim")
+QUEST       = Quest(215,qn,"Trial Of Pilgrim")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

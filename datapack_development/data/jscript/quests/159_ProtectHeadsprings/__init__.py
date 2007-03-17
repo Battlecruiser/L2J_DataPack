@@ -7,6 +7,8 @@ from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "159_ProtectHeadsprings"
+
 ADENA           = 57
 PLAGUE_DUST     = 1035
 HYACINTH_CHARM1 = 1071
@@ -81,7 +83,7 @@ class Quest (JQuest) :
       st.giveItems(PLAGUE_DUST,1)
    return
 
-QUEST     = Quest(159,"159_ProtectHeadsprings","Protect Headsprings")
+QUEST     = Quest(159,qn,"Protect Headsprings")
 CREATED   = State('Start',     QUEST)
 STARTING  = State('Starting',  QUEST)
 STARTED   = State('Started',   QUEST)

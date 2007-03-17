@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "217_TestimonyOfTrust"
+
 MARK_OF_TRUST_ID = 2734
 LETTER_TO_ELF_ID = 1558
 LETTER_TO_DARKELF_ID = 1556
@@ -316,7 +318,7 @@ class Quest (JQuest) :
           st.playSound("Itemsound.quest_itemget")
    return
 
-QUEST       = Quest(217,"217_TestimonyOfTrust","Testimony Of Trust")
+QUEST       = Quest(217,qn,"Testimony Of Trust")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

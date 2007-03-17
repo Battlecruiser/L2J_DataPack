@@ -2,6 +2,7 @@
 QuestNumber      = 381
 QuestName        = "LetsBecomeARoyalMember"
 QuestDescription = "Let's become a Royal Member"
+qn = "381_LetsBecomeARoyalMember"
 
 #Messages
 default = "<html><head><body>I have nothing to say to you.</body></html>"

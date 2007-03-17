@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "14_WhereaboutsOfTheArchaeologist"
+
 #NPC
 LIESEL = 31263
 GHOST_OF_ADVENTURER = 31538
@@ -56,7 +58,7 @@ class Quest (JQuest) :
      htmltext = "31538-0.htm"
    return htmltext
 
-QUEST       = Quest(14,"14_WhereaboutsOfTheArchaeologist","Whereabouts Of The Archaeologist")
+QUEST       = Quest(14,qn,"Whereabouts Of The Archaeologist")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

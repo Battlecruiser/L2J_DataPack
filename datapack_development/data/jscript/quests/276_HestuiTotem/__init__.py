@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "276_HestuiTotem"
+
 KASHA_PARASITE_ID = 1480
 KASHA_CRYSTAL_ID = 1481
 HESTUIS_TOTEM_ID = 1500
@@ -73,7 +75,7 @@ class Quest (JQuest) :
         st.set("cond","2")
    return
 
-QUEST       = Quest(276,"276_HestuiTotem","Hestui Totem")
+QUEST       = Quest(276,qn,"Hestui Totem")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

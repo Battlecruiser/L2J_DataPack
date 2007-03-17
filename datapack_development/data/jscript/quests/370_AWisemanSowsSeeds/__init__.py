@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "370_AWisemanSowsSeeds"
+
 #NPC
 CASIAN = 30612
 
@@ -71,7 +73,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_middle")
    return
 
-QUEST       = Quest(370,"370_AWisemanSowsSeeds","A Wiseman Sows Seeds")
+QUEST       = Quest(370,qn,"A Wiseman Sows Seeds")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 

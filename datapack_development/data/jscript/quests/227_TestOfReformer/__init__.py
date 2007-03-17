@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "227_TestOfReformer"
+
 MARK_OF_REFORMER = 2821
 BOOK_OF_REFORM = 2822
 LETTER_OF_INTRODUCTION = 2823
@@ -219,7 +221,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(227,"227_TestOfReformer","Test Of Reformer")
+QUEST       = Quest(227,qn,"Test Of Reformer")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

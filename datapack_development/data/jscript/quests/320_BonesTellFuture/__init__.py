@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "320_BonesTellFuture"
+
 BONE_FRAGMENT = 809
 ADENA = 57
 
@@ -56,7 +58,7 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(320,"320_BonesTellFuture","Bones Tell Future")
+QUEST       = Quest(320,qn,"Bones Tell Future")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

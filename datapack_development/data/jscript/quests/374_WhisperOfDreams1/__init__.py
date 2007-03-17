@@ -8,7 +8,8 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 #Quest info
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 374,"WhisperOfDreams1","Whisper of Dreams, part 1"
- 
+qn = "374_WhisperOfDreams1"
+
 #Variables
 #Quest items drop rate
 DROP_RATE   = 50*Config.RATE_DROP_QUEST

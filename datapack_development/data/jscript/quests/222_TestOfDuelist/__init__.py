@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "222_TestOfDuelist"
+
 MARK_OF_DUELIST_ID,  ORDER_GLUDIO_ID,      ORDER_DION_ID,        ORDER_GIRAN_ID,      ORDER_OREN_ID,      \
 ORDER_ADEN_ID,       PUNCHERS_SHARD_ID,    NOBLE_ANTS_FEELER_ID, DRONES_CHITIN_ID,    DEADSEEKER_FANG_ID, \
 OVERLORD_NECKLACE_ID,CRIMSONBINDS_CHAIN_ID,CHIEFS_AMULET_ID,     TEMPERED_EYE_MEAT_ID,TAMRIN_ORCS_RING_ID,\
@@ -136,7 +138,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")
   return
 
-QUEST       = Quest(222,"222_TestOfDuelist","Test Of Duelist")
+QUEST       = Quest(222,qn,"Test Of Duelist")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

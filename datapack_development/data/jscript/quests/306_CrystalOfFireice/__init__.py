@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "306_CrystalOfFireice"
+
 FLAME_SHARD = 1020
 ICE_SHARD = 1021
 ADENA = 57
@@ -66,7 +68,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(306,"306_CrystalOfFireice","Crystal Of Fireice")
+QUEST       = Quest(306,qn,"Crystal Of Fireice")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

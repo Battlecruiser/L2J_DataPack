@@ -4,6 +4,7 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "231_TestOfMaestro"
 
 #item definition
 RECOMMENDATION_OF_BALANKI = 2864
@@ -221,7 +222,7 @@ class Quest (JQuest) :
           st.playSound("Itemsound.quest_itemget")
    return
 
-QUEST       = Quest(231,"231_TestOfMaestro","Test Of Maestro")
+QUEST       = Quest(231,qn,"Test Of Maestro")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

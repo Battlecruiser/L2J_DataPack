@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "431_WeddingMarch"
+
 MELODY_MAESTRO_KANTABILON_ID = 31042
 SILVER_CRYSTAL_ID = 7540
 LIENRIKS_ID = 20786
@@ -55,7 +57,7 @@ class Quest (JQuest) :
                  st.playSound("ItemSound.quest_itemget")
      return
  
-QUEST       = Quest(431,"431_WeddingMarch","Wedding March")
+QUEST       = Quest(431,qn,"Wedding March")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST,True)
 COMPLETED   = State('Completed', QUEST)

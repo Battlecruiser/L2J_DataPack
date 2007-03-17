@@ -4,6 +4,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
+qn = "272_WrathOfAncestors"
+
 GRAVE_ROBBERS_HEAD = 1474
 ADENA = 57
 
@@ -56,7 +58,7 @@ class Quest (JQuest) :
          st.set("cond","2")
    return
 
-QUEST       = Quest(272,"272_WrathOfAncestors","Wrath Of Ancestors")
+QUEST       = Quest(272,qn,"Wrath Of Ancestors")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
