@@ -3,8 +3,8 @@
 <skill id="400" levels="10" name="Tribunal">
   <table name="#mpConsume"> 55 58 62 64 66 68 70 72 74 76</table>
   <table name="#power"> 240.0 262.0 284.0 308.0 332.0 357.0 382.0 407.0 432.0 457.0</table>
-  <table name="#accCombat"> 0.7 0.7 0.7 0.7 0.7 0.7 0.6 0.6 0.6 0.5</table>
-  <set name="weaponsAllowed" val="2060"/>
+  <table name="#rCrit"> 0.7 0.7 0.7 0.7 0.7 0.7 0.6 0.6 0.6 0.5 </table>
+  <set name="weaponsAllowed" val="12"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="element" val="5"/>
@@ -22,15 +22,15 @@
   <set name="effectPower" val="40"/>
   <for>
     <effect count="1" name="Buff" time="10" val="0">
-      <mul order="0x30" stat="accCombat" val="#accCombat"/>
+      <mul order="0x30" stat="rCrit" val="#rCrit"/>
     </effect>
   </for>
 </skill>
 <skill id="401" levels="10" name="Judgment">
   <table name="#mpConsume"> 55 58 62 64 66 68 70 72 74 76</table>
   <table name="#power"> 306.0 349.0 379.0 410.0 443.0 457.0 509.0 542.0 576.0 609.0</table>
-  <table name="#rCrit"> 0.7 0.7 0.7 0.7 0.7 0.7 0.6 0.6 0.6 0.5</table>
-  <set name="weaponsAllowed" val="2060"/>
+  <table name="#cAtk"> 0.75 0.75 0.75 0.75 0.75 0.7 0.7 0.7 0.7 0.65 </table>
+  <set name="weaponsAllowed" val="12"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="element" val="6"/>
@@ -48,7 +48,7 @@
   <set name="effectPower" val="40"/>
   <for>
      <effect count="1" name="Buff" time="10" val="0">
-       <mul order="0x30" stat="rCrit" val="#rCrit"/>
+       <mul order="0x30" stat="cAtk" val="#cAtk"/>
      </effect>
   </for>
 </skill>
@@ -476,7 +476,7 @@
      <add order="0x40" stat="accCombat" val="6"/>
      <add order="0x40" stat="runSpd" val="#runSpd"/>
      <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
-     <mul order="0x30" stat="regHp" val="0.3"/>
+     <mul order="0x30" stat="regHp" val="0.5"/>
      <mul order="0x30" stat="cAtk" val="#cAtk"/>
    </effect>
 </for>
