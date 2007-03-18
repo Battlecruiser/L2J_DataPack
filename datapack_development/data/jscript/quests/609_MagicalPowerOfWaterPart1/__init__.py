@@ -21,6 +21,7 @@ Ketra_Orcs = [ 21324, 21325, 21327, 21328, 21329, 21331, 21332, 21334, 21335, \
 Key = 1661
 Totem = 7237
 Wisdom_Stone = 7081
+Totem2 = 7238
 
 class Quest (JQuest) :
 
@@ -64,7 +65,7 @@ class Quest (JQuest) :
     cond = st.getInt("cond")
     id = st.getInt("id")
     aggro = st.getInt("aggro")
-    Red_Totem = st.getQuestItemsCount(Totem)
+    Green_Totem = st.getQuestItemsCount(Totem)
     Stone = st.getQuestItemsCount(Wisdom_Stone)
     if npcId == Wahkan :
         if Stone :
@@ -86,9 +87,10 @@ class Quest (JQuest) :
                 htmltext = "31372-03.htm"
                 st.set("id","3")
                 st.set("aggro","0")
-            elif id == 5 and Red_Totem :
+            elif id == 5 and Green_Totem :
                 htmltext = "31372-04.htm"
                 st.giveItems(Wisdom_Stone,1)
+                st.giveItems(Totem2,1)
                 st.takeItems(Totem,1)
                 st.unset("id")
                 st.unset("aggro")
@@ -127,7 +129,7 @@ class Quest (JQuest) :
         if Red_Totem:
             st.takeItems(Totem,-1)
     return
-        
+
 
 QUEST       = Quest(609,qn,"Magical Power of Water - Part 1")
 CREATED     = State('Start', QUEST)
