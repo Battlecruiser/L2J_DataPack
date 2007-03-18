@@ -46,7 +46,7 @@ INSERT INTO teleport VALUES
 ('TI -> Singing Waterfall',1004,-107456,242669,-3493,770,0),
 ('Dwarf Town  -> Town of Gludio',16,-12672,122776,-3116,32000,0),
 ('Dwarf Town -> The Northeast Coast',17,169008,-208272,-3504,2400,0),
-('Dwarven Town -> Abandoned Coal Mines',418,155535,-173560,2495,690,0),
+('Dwarven Town -> Abandoned Coal Mines',418,139714,-177456,-1536,690,0),
 ('Dwarven Town -> Mithril Mines',419,179039,-184080,-319,2200,0),
 ('Dion Town -> Town of Gludio',18,-12672,122776,-3116,3400,0),
 ('Dion Town -> Town of Giran',19,83400,147943,-3404,6800,0),
