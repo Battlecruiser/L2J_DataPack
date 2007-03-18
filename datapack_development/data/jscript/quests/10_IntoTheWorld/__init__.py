@@ -5,7 +5,7 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-qn = "1_LettersOfLove1"
+qn = "10_IntoTheWorld"
 
 VERY_EXPENSIVE_NECKLACE = 7574
 SCROLL_OF_ESCAPE_GIRAN = 7559
