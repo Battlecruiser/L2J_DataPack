@@ -101,6 +101,9 @@
 			<using slotitem="6580;14;4"/>
 		</and>
 	</mul>
+	<!-- Enhances damage to target during PvP -->
+    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
+    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6581' name="forgotten_blade_haste">
@@ -114,6 +117,9 @@
     <enchant val='0' order='0x0C' stat='mAtk'/>
     <!-- SA: Haste -->
     <mul val='1.07' order='0x30' stat='pAtkSpd'/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
+    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6582' name="forgotten_blade_health">
@@ -127,6 +133,9 @@
     <enchant val='0' order='0x0C' stat='mAtk'/>
     <!-- SA: Health -->
     <mul val='1.25' order='0x30' stat='maxHp'/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
+    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6583' name="forgotten_blade_focus">
@@ -140,6 +149,9 @@
     <enchant val='0' order='0x0C' stat='mAtk'/>
     <!-- SA: Focus -->
     <add val='84' order='0x40' stat='rCrit'/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
+    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6584' name="basalt_battlehammer_hp_drain">
@@ -151,6 +163,9 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
+    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6585' name="basalt_battlehammer_health">
@@ -164,6 +179,9 @@
     <enchant val='0' order='0x0C' stat='mAtk'/>
     <!-- SA: Health -->
     <mul val='1.25' order='0x30' stat='maxHp'/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
+    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6586' name="basalt_battlehammer_hp_regeneration">
@@ -177,6 +195,9 @@
     <enchant val='0' order='0x0C' stat='mAtk'/>
     <!-- SA: HP Regeneration -->
     <add val='2.04' order='0x40' stat='regHp'/> 
+    <!-- Enhances damage to target during PvP -->
+    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
+    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6587' name="imperial_staff_empower">
@@ -190,6 +211,9 @@
     <enchant val='0' order='0x0C' stat='mAtk'/>
     <!-- SA: Empower -->
     <add val='60' order='0x40' stat='mAtk'/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
+    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6588' name="imperial_staff_mp_regeneration">
@@ -203,6 +227,9 @@
     <enchant val='0' order='0x0C' stat='mAtk'/>
     <!-- SA: MP Regeneration -->
     <add val='0.54' order='0x40' stat='regMp'/> 
+    <!-- Enhances damage to target during PvP -->
+    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
+    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/> 
   </for>
 </item>
 <item id='6589' name="imperial_staff_magic_hold">
@@ -214,6 +241,9 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
+    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6590' name="angel_slayer__crt._damage">
@@ -227,6 +257,9 @@
     <enchant val='0' order='0x0C' stat='mAtk'/>
     <!-- SA: Critical Damage -->
     <add val='265' order='0x40' stat='cAtk'/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
+    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6591' name="angel_slayer__hp_drain">
@@ -238,6 +271,9 @@
     <set val='433' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
+    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6592' name="angel_slayer__haste">
@@ -251,6 +287,9 @@
     <enchant val='0' order='0x0C' stat='mAtk'/>
     <!-- SA: Haste -->
     <mul val='1.07' order='0x30' stat='pAtkSpd'/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
+    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6593' name="shining_bow_cheap_shot">
@@ -299,6 +338,9 @@
     <enchant val='0' order='0x0C' stat='mAtk'/>
     <!-- SA: HP Regeneration -->
     <add val='2.04' order='0x40' stat='regHp'/> 
+    <!-- Enhances damage to target during PvP -->
+    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
+    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/> 
   </for>
 </item>
 <item id='6597' name="dragon_hunter_axe_health">
@@ -312,6 +354,9 @@
     <enchant val='0' order='0x0C' stat='mAtk'/>
     <!-- SA: Health -->
     <mul val='1.25' order='0x30' stat='maxHp'/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
+    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6598' name="dragon_hunter_axe_hp_drain">
@@ -337,6 +382,9 @@
     <enchant val='0' order='0x0C' stat='mAtk'/>
     <!-- SA: Health -->
     <mul val='1.25' order='0x30' stat='maxHp'/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
+    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 </list>
