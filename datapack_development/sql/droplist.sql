@@ -22009,7 +22009,7 @@ INSERT INTO `droplist` VALUES
 (22158,5314,1,1,1,88), -- Sealed Boots of Nightmare
 (22158,5318,1,1,1,88), -- Sealed Majestic Gloves
 (22158,5319,1,1,1,88), -- Sealed Majestic Boots
-(22158,6907,1,1,-1,5000), -- Monocle Piece
+(22158,6901,1,1,-1,5000), -- Shining Arrow 
 (22158,6698,1,1,-1,25000), -- Sealed Tateossian Earring  Part
 (22158,4040,1,1,-1,50000), -- Mold Lubricant
 (22158,1877,1,1,-1,50000), -- Adamantite Nugget
