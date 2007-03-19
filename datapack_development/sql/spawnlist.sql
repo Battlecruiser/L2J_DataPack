@@ -39199,4 +39199,18 @@ INSERT INTO spawnlist VALUES
 (NULL,'Dwarven Village Territory',1,21127,185639,-207123,-3408,0,0,0,120,0,0),
 (NULL,'Dwarven Village Territory',1,21127,185204,-204239,-3368,0,0,0,120,0,0),
 (NULL,'Dwarven Village Territory',1,21127,185636,-204525,-3224,0,0,0,120,0,0),
-(NULL,'Dwarven Village Territory',1,21127,177614,-213031,-3560,0,0,0,120,0,0);
+(NULL,'Dwarven Village Territory',1,21127,177614,-213031,-3560,0,0,0,120,0,0),
+(NULL,'rune_castle_npc',1,35513,27074,-48986,-1296,0,0,0,120,0,0),
+(NULL,'shuttgart_castle_npc',1,35559,75707,-144899,-1296,0,0,0,120,0,0),
+(NULL,"Around Shuttgart Quest",1,27321,94064,-137600,-2979,0,0,52460,60,0,0),
+(NULL,"Around Shuttgart Quest",1,27321,93889,-137494,-2989,0,0,42111,60,0,0),
+(NULL,"Around Shuttgart Quest",1,27321,94324,-137725,-2954,0,0,63438,60,0,0),
+(NULL,"Around Shuttgart Quest",1,27321,93813,-137539,-2989,0,0,27090,60,0,0),
+(NULL,"Around Shuttgart Quest",1,27321,93706,-137005,-2949,0,0,16167,60,0,0),
+(NULL,"Around Shuttgart Quest",1,27322,69910,-137509,-2742,0,0,6353,60,0,0),
+(NULL,"Around Shuttgart Quest",1,27322,69428,-137271,-2682,0,0,28909,60,0,0),
+(NULL,"Around Shuttgart Quest",1,27322,69964,-137073,-2637,0,0,4209,60,0,0),
+(NULL,"Around Shuttgart Quest",1,27322,70050,-138018,-2813,0,0,46457,60,0,0),
+(NULL,"Around Shuttgart Quest",1,27322,70647,-137738,-2860,0,0,63559,60,0,0),
+(NULL,"Around Shuttgart Quest",1,27322,69121,-136896,-2660,0,0,25579,60,0,0);
+ 

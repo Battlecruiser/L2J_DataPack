@@ -22,6 +22,9 @@
   	    <using slotitem="5233;14;4"/>
   	  </and>
   	</mul>
+  	<!-- Enhances damage to target during PvP -->
+    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
+    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='5284' name="zweihander">
