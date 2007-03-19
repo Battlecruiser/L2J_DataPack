@@ -216,7 +216,7 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
-   <effect count="15" name="HealOverTime" time="1" val="#hotValue" stackOrder="#hotValue" stackType="HpRecover"/>
+   <effect count="15" name="HealOverTime" time="1" val="#hotValue" stackOrder="#hotValue" stackType="LifeForce"/>
   </for> 
 </skill>
 <skill id="1218" levels="33" name="Greater Battle Heal" enchantLevels1="30" enchantLevels2="30" >
@@ -281,7 +281,7 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
-   <effect count="15" name="HealOverTime" time="1" val="#hotValue" stackOrder="#hotValue" stackType="HpRecover"/>
+   <effect count="15" name="HealOverTime" time="1" val="#hotValue" stackOrder="#hotValue" stackType="LifeForce"/>
   </for> 
 </skill>
 <skill id="1220" levels="8" name="Blaze">
