@@ -6572,7 +6572,7 @@ INSERT INTO `etcitem` (`item_id`,`name`,`crystallizable`,`item_type`,`weight`,`c
  ('8538','Adventurer\'s Box: B-Grade Accessory (High Grade)','false','none','20','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('8539','Adventurer\'s Box: Hair Accessory','false','none','20','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('8540','Adventurer\'s Box: Cradle of Creation','false','none','20','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
- ('8542','Newbie Travel Token','false','quest','10','normal','paper','none','0','0','0','false','false','true','false','C5Item','none'),
+ ('8542','Newbie Travel Token','false','none','10','stackable','paper','none','0','0','0','false','false','true','false','C5Item','none'),
  ('8543','Bead Parcel','false','quest','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('8544','Timora Orc\'s Head','false','quest','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
  ('8545','Kasha Spider\'s Tooth','false','quest','0','normal','paper','none','0','0','0','true','true','true','true','C5Item','none'),
