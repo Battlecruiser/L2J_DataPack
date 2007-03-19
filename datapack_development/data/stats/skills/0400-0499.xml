@@ -145,8 +145,8 @@
 <set name="buffDuration" val="120000"/>
 <set name="castRange" val="-1"/>
 <set name="effectRange" val="-1"/>
-<cond>
-<player hp="30"/>
+<cond msg="Can be only used when HP is 30% or lower">
+  <player hp="30"/>
 </cond>
 <for>
   <effect count="1" name="Buff" time="120" val="0">
@@ -480,7 +480,7 @@
 <set name="operateType" val="OP_ACTIVE"/>
 <set name="castRange" val="-1"/>
 <set name="effectRange" val="-1"/>
-<cond>
+<cond msg="Can be only used when HP is 30% or lower">
   <player hp="30"/>
 </cond>
 <for>
