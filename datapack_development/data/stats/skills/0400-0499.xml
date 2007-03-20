@@ -328,7 +328,7 @@
 </skill>
 <skill id="413" levels="8" name="Rapid Fire">
   <table name="#mpConsume"> 28 29 30 31 32 33 34 34 </table>
-  <table name="#atk"> 38 48 58 68 78 88 98 108 </table>
+  <table name="#atk"> 62 67 73 78 83 88 94 100 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -353,7 +353,8 @@
 </skill>
 <skill id="414" levels="8" name="Dead Eye">
 <table name="#mpConsume"> 28 29 30 31 32 33 34 35 </table>
-<table name="#pAtk"> 110 119 129 138 148 158 167 177 </table>
+<table name="#pAtk"> 124 134 145 155 166 177 188 199 </table>
+<table name="#Tab-accCombat"> 1 1 2 2 2 3 3 3 </table>
 <table name="#Tab-cAtk"> 1.15 1.15 1.15 1.17 1.17 1.17 1.20 1.20 </table>
 <set name="weaponsAllowed" val="32"/>
 <set name="mpConsume" val="#mpConsume"/>
@@ -371,7 +372,7 @@
    <effect count="1" name="Buff" time="120" val="0">
       <mul order="0x30" stat="pAtkSpd" val="0.8"><using kind="Bow"/></mul>
       <add order="0x40" stat="pAtk" val="#pAtk"><using kind="Bow"/></add>
-      <add order="0x40" stat="accCombat" val="1"><using kind="Bow"/></add>
+      <add order="0x40" stat="accCombat" val="#Tab-accCombat"><using kind="Bow"/></add>
       <mul order="0x30" stat="cAtk" val="#Tab-cAtk"><using kind="Bow"/></mul>
    </effect>
 </for>
