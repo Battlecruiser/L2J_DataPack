@@ -450,7 +450,17 @@ INSERT INTO teleport VALUES
 -- ('Clan Hall -> Plains of Glory',617,177318,48447,-3835,500,0), -- dunno coords !
 ('Clan Hall -> Fields of Massacre',618,179718,48447,-7843,500,0),
 -- ('Clan Hall -> War-Torn Plains',619,179718,48447,-7843,500,0), --- dunno coords !
-('Clan Hall -> Border Outpost(Unknown Side)',620,114172,-18034,-1875,500,0);
+('Clan Hall -> Border Outpost(Unknown Side)',620,114172,-18034,-1875,500,0),
+('Clan Hall -> Rune Castle Town - Shopping Area',621,43835,-47749,-796,0,0),
+('Clan Hall -> Rune Castle Town - Temple',622,38303,-48044,897,0,0),
+('Clan Hall -> Rune Castle Town - North Gate',623,38956,-53648,-1343,0,0),
+('Clan Hall -> Rune Castle Town - Harbor',624,38025,-38359,-3608,0,0),
+('Clan Hall -> Beast Farm',625,42598,-88832,-3124,500,0),
+('Clan Hall -> Forest of the Dead - East Enterance',626,61868,-48890,-3128,500,0),
+('Clan Hall -> Forest of the Dead - West Enterance',627,45555,-56081,-3667,500,0),
+('Clan Hall -> Swamp of Screams - East Enterance',628,94152,-58694,-2832,500,0),
+('Clan Hall -> Swamp of Screams - West Enterance',629,69999,-49929,-3253,500,0),
+('Clan Hall -> Valley of the Saints',630,65800,-71526,-3747,500,0);
 -- Noblesse Teleport
 INSERT INTO teleport VALUES
 -- 1000 adena
