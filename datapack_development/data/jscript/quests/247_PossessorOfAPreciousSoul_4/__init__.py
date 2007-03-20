@@ -64,14 +64,15 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
    if st.getPlayer().isSubClassActive() :
-     if npcId == CARADINE and cond == 0 and st.getQuestItemsCount(CARADINE_LETTER_LAST) == 1 :
-       if id == COMPLETED :
-         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-       elif st.getPlayer().getLevel() < 75 : 
-         htmltext = "31740-2.htm"
-         st.exitQuest(1)
-       elif st.getPlayer().getLevel() >= 75 :
-         htmltext = "31740-1.htm"
+     if npcId == CARADINE and st.getQuestItemsCount(CARADINE_LETTER_LAST) == 1 :
+		if cond == 0 or cond == 1 :
+	       if id == COMPLETED :
+	         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
+	       elif st.getPlayer().getLevel() < 75 : 
+	         htmltext = "31740-2.htm"
+	         st.exitQuest(1)
+	       elif st.getPlayer().getLevel() >= 75 :
+	         htmltext = "31740-1.htm"
      if npcId == CARADINE and cond == 2 :
          htmltext = "31740-6.htm"
      if npcId == LADY_OF_LAKE and cond == 2 :
