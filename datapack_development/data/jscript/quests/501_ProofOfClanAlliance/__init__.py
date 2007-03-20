@@ -79,10 +79,11 @@ def chest_game(st,command) :
        randomize_chests(st)
        for row in range(4) :
            for col in range(4) :
-               leader(st).getPcSpawn().addSpawn(21042+(4*row+col),x+(row*u)+(col*v),y-(w*col),z,60000)
+               leader(st).getPcSpawn().addSpawn(21042+(4*row+col),x+(row*u)+(col*v),y-(w*col),z,61000)
        leader(st).startQuestTimer("chest_timer",60000)
     elif command == "stop" :
-       leader(st).getPcSpawn().removeAllSpawn()
+       try: leader(st).getPcSpawn().removeAllSpawn()
+       except: pass
        leader(st).set("chest_game","0")
 
 def autochat(npc,text) :
