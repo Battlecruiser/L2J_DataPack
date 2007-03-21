@@ -1135,7 +1135,7 @@ INSERT INTO `weapon` VALUES
  ('8151','Flaming Dragon Skull - Magic Power','rhand','true','1530','1','1','oriharukon','a','186','20','blunt','4','4.00000','0','0','0','379','0','152','95','27000000','2160','true','true','true','true'),
  ('8152','Flaming Dragon Skull - Magic Silence','rhand','true','1530','1','1','oriharukon','a','186','20','blunt','4','4.00000','0','0','0','379','0','152','95','27000000','2160','true','true','true','true'),
  ('8190','Demonic Sword Zariche','lrhand','false','1840','0','0','oriharukon','none','361','10','bigsword','12','0.00000','0','0','0','325','0','137','100','0','0','false','true','true','true'),
- ('8203','Monster Only (Venom Sword)','rhand','false','1560','1','1','oriharukon','none','0','10','sword','0','0.00000','0','0','0','325','0','0','95','0','0','true','true','true','true'),
+ ('8203','Monster Only (Venom Sword)','rhand','false','1560','1','1','oriharukon','none','0','10','dual','0','0.00000','0','0','0','325','0','0','95','0','0','true','true','true','true'),
  ('8204','Monster Only (Follower of Frintezza Calibur)','lrhand','false','1560','2','2','oriharukon','none','0','10','bigsword','0','0.00000','0','0','0','379','0','0','95','0','0','true','true','true','true'),
  ('8205','Monster Only (Heretic Priest Sickle)','rhand','false','1920','1','1','oriharukon','none','0','10','blunt','0','0.00000','0','0','0','325','0','0','95','0','0','true','true','true','true'),
  ('8206','Monster Only (Heretic Priest Sword)','rhand','false','2080','1','1','oriharukon','none','0','10','sword','0','0.00000','0','0','0','325','0','0','95','0','0','true','true','true','true'),

@@ -25768,7 +25768,7 @@ INSERT INTO `droplist` VALUES
 
 -- Elmo-Aden's Archer Escort
 (20978,8336,1,1,1,1515), -- Blade of the Wizard's Tear
-(20978,7889,1,1,1,1515), -- Wizard's Tear
+(20978,7889,1,1,1,15), -- Wizard's Tear
 
 -- Mul's Wizard
 (20981,8326,1,1,2,125), -- Recipe: Doom Crusher (60%)
