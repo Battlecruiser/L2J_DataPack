@@ -21540,6 +21540,253 @@ INSERT INTO `droplist` VALUES
 (22098,3035,1,1,-1,3141), -- Recipe: Spiritshot A
 (22098,4077,1,1,-1,105674), -- Doom Shield Fragment
 (22098,4039,1,1,-1,61038), -- Mold Glue
+(22105,57,3454,7046,0,700000), -- Adena
+(22105,1867,1,3,2,200000), -- Animal Skin
+(22105,1881,1,1,2,62500), -- Coarse Bone Powder
+(22105,1872,4,12,2,58823), -- Animal Bone
+(22105,1875,1,1,2,36000), -- Stone of Purity
+(22105,4041,1,1,2,5714), -- Mold Hardener
+(22105,5543,1,1,1,1200), -- Dasparion\'s Staff Edge
+(22105,8346,1,1,1,1200), -- Hammer Piece of Destroyer 
+(22105,5532,1,1,1,900), -- Meteor Shower Head
+(22105,8341,1,1,1,600), -- Spiritual Eye Piece
+(22105,212,1,1,1,8), -- Dasparion\'s Staff
+(22105,2504,1,1,1,8), -- Meteor Shower
+(22105,7894,1,1,1,8), -- Spiritual Eye
+(22105,7899,1,1,1,8), -- Destroyer Hammer
+(22105,1808,1,1,1,500), -- Recipe: Soulshot: S Grade
+(22105,1875,1,1,-1,50000), -- Stone of Purity
+(22105,5478,1,1,-1,25000), -- Sealed Dark Crystal Leather Armor Pattern
+(22105,5434,1,1,-1,5000), -- Recipe: Dragon Slayer(60%)
+(22106,57,3566,7254,0,700000), -- Adena
+(22106,1867,1,3,2,142857), -- Animal Skin
+(22106,1344,40,120,2,100000), -- Mithril Arrow
+(22106,1872,5,15,2,47619), -- Animal Bone
+(22106,1881,1,1,2,41660), -- Coarse Bone Powder
+(22106,1875,1,1,2,21739), -- Stone of Purity
+(22106,4041,1,1,2,3344), -- Mold Hardener
+(22106,5543,1,1,1,1312), -- Dasparion\'s Staff Edge
+(22106,8341,1,1,1,1173), -- Spiritual Eye Piece
+(22106,8346,1,1,1,1173), -- Hammer Piece of Destroyer 
+(22106,5532,1,1,1,262), -- Meteor Shower Head
+(22106,8487,1,1,2,500), -- Recipe: Destroyer Hammer(60%)
+(22106,269,1,1,1,8), -- Blood Tornado
+(22106,5539,1,1,1,500), -- Blood Tornado Edge
+(22106,3036,1,1,2,500), -- Recipe: Spiritshot S
+(22106,5479,1,1,-1,25000), -- Sealed Tallum Leather Armor Pattern
+(22106,5440,1,1,-1,5000), -- Recipe: Elysian(60%)
+(22106,5482,1,1,-1,25000), -- Sealed Dark Crystalline Leggings Design
+(22107,57,3670,7472,0,700000), -- Adena
+(22107,1894,1,1,2,22727), -- Crafted Leather
+(22107,4044,1,1,2,16393), -- Thons
+(22107,4039,1,1,2,13889), -- Mold Glue
+(22107,4041,1,1,2,8197), -- Mold Hardener
+(22107,5542,1,1,1,5747), -- Halberd Edge
+(22107,98,1,1,1,8), -- Halberd
+(22107,3957,1,1,1,304), -- Recipe: Blessed Spiritshot S
+(22107,729,1,1,-1,2500), -- Scroll: Enchant Weapon(Grade A)
+(22107,4039,1,1,-1,50000), -- Mold Glue
+(22107,4041,1,1,-1,50000), -- Mold Hardener
+(22108,57,5120,10410,0,700000), -- Adena
+(22108,1869,2,6,2,125000), -- Iron Ore
+(22108,1864,5,16,2,100000), -- Stem
+(22108,1880,1,1,2,52632), -- Steel
+(22108,1344,186,530,2,34483), -- Mithril Arrow
+(22108,4043,1,1,2,23256), -- Asofe
+(22108,5550,1,1,2,11765), -- Durable Metal Plate
+(22108,5482,1,1,1,5376), -- Sealed Dark Crystalline Leggings Design
+(22108,5479,1,1,1,4695), -- Sealed Tallum Leather Armor Pattern
+(22108,5478,1,1,1,3356), -- Sealed Dark Crystal Leather Armor Pattern
+(22108,5272,1,1,2,563), -- Recipe: Greater Soulshot(S) Compressed Package(100%)
+(22108,5297,1,1,1,88), -- Sealed Dark Crystal Leather Armor
+(22108,5298,1,1,1,88), -- Sealed Dark Crystalline Leggings
+(22108,5301,1,1,1,66), -- Sealed Tallum Leather Armor
+(22108,5485,1,1,-1,25000), -- Sealed Tallum Tunic Texture
+(22108,5442,1,1,-1,5000), -- Recipe: Soul Bow(60%)
+(22108,5486,1,1,-1,25000), -- Sealed Dark Crystal Robe Fabric
+(22109,57,5048,10280,0,700000), -- Adena
+(22109,1864,3,9,2,200000), -- Stem
+(22109,1869,2,6,2,142857), -- Iron Ore
+(22109,1884,2,6,2,71429), -- Cord
+(22109,1878,3,9,2,41667), -- Braided Hemp
+(22109,4039,1,1,2,27727), -- Mold Glue
+(22109,5524,1,1,1,4386), -- Sealed Dark Crystal Gaiters Pattern
+(22109,5521,1,1,1,2632), -- Sealed Tallum Plate Armor Pattern
+(22109,5520,1,1,1,1757), -- Sealed Dark Crystal Breastplate Pattern
+(22109,5162,1,1,2,970), -- Recipe: Spiritshot(S) Compressed Package(100%)
+(22109,5287,1,1,1,88), -- Sealed Dark Crystal breastplate
+(22109,5288,1,1,1,88), -- Sealed Dark Crystal Gaiters
+(22109,5293,1,1,1,66), -- Sealed Tallum Plate Armor
+(22109,5448,1,1,-1,5000), -- Recipe: Soul Separator(60%)
+(22109,5489,1,1,-1,15000), -- Sealed Tallum Stockings Fabric
+(22109,730,1,1,-1,500), -- Scroll: Enchant Armor(Grade A)
+(22110,57,3824,7792,0,700000), -- Adena
+(22110,1871,1,3,2,111111), -- Charcoal
+(22110,1866,2,6,2,71429), -- Suede
+(22110,1344,102,244,2,40000), -- Mithril Arrow
+(22110,1885,1,1,2,32258), -- High Grade Suede
+(22110,5220,1,1,2,12048), -- Metal Hardener
+(22110,4041,1,1,2,4016), -- Mold Hardener
+(22110,5524,1,1,1,4016), -- Sealed Dark Crystal Gaiters Pattern
+(22110,5521,1,1,1,4016), -- Sealed Tallum Plate Armor Pattern
+(22110,5167,1,1,2,4016), -- Recipe: Blessed Spiritshot(S) Compressed Package(100%)
+(22111,57,3695,7508,0,700000), -- Adena
+(22111,1870,1,3,2,250000), -- Coal
+(22111,1865,1,3,2,166666), -- Varnish
+(22111,1874,1,1,2,28571), -- Oriharukon Ore
+(22111,4039,1,1,2,16393), -- Mold Glue
+(22111,4043,1,1,2,10869), -- Asofe
+(22111,5272,1,1,1,1483), -- Recipe: Greater Soulshot(S) Compressed Package(100%)
+(22111,5543,1,1,1,1209), -- Dasparion\'s Staff Edge
+(22111,5532,1,1,1,1209), -- Meteor Shower Head
+(22111,5548,1,1,1,1209), -- Tallum Blade Edge
+(22111,5547,1,1,1,1209), -- Elemental Sword Edge
+(22111,8331,1,1,1,1209), -- Infernal Master Blade
+(22111,80,1,1,1,8), -- Tallum Blade
+(22111,150,1,1,1,8), -- Elemental Sword
+(22111,7884,1,1,1,8), -- Infernal Master
+(22111,1808,1,1,-1,5000), -- Recipe: Soulshot: S Grade
+(22111,5480,1,1,-1,25000), -- Sealed Leather Armor of Nightmare Fabric
+(22111,2514,1,1,-1,5000), -- Spiritshot: S-grade
+(22112,57,4684,9526,0,700000), -- Adena
+(22112,1867,1,3,2,250000), -- Animal Skin
+(22112,1872,4,12,2,83333), -- Animal Bone
+(22112,1881,1,1,2,76923), -- Coarse Bone Powder
+(22112,1875,1,1,2,35714), -- Stone of Purity
+(22112,5494,1,1,1,12048), -- Sealed Dark Crystal Shield Fragment
+(22112,5526,1,1,1,9434), -- Sealed Tallum Helm Design
+(22112,5525,1,1,1,6944), -- Sealed Dark Crystal Helmet Design
+(22112,4041,1,1,2,1264), -- Mold Hardener
+(22112,5289,1,1,1,88), -- Sealed Dark Crystal Helmet
+(22112,5294,1,1,1,88), -- Sealed Tallum Helmet
+(22112,5292,1,1,1,88), -- Sealed Dark Crystal Shield
+(22112,5277,1,1,2,1483), -- Recipe: Greater Spiritshot(S) Compressed Package(100%)
+(22112,5478,1,1,-1,25000), -- Sealed Dark Crystal Leather Armor Pattern
+(22112,729,1,1,-1,2500), -- Scroll: Enchant Weapon(Grade A)
+(22112,4041,1,1,-1,50000), -- Mold Hardener
+(22113,57,5878,11950,0,700000), -- Adena
+(22113,1344,41,120,2,166666), -- Mithril Arrow
+(22113,1881,1,1,2,100000), -- Coarse Bone Powder
+(22113,1872,5,15,2,83333), -- Animal Bone
+(22113,1867,9,27,2,45454), -- Animal Skin
+(22113,1875,1,1,2,35714), -- Stone of Purity
+(22113,4041,1,1,2,3378), -- Mold Hardener
+(22113,5547,1,1,1,2809), -- Elemental Sword Edge
+(22113,8331,1,1,1,1686), -- Infernal Master Blade
+(22113,5548,1,1,1,1125), -- Tallum Blade Edge
+(22113,5277,1,1,2,562), -- Recipe: Greater Spiritshot(S) Compressed Package(100%)
+(22113,80,1,1,1,8), -- Tallum Blade
+(22113,150,1,1,1,8), -- Elemental Sword
+(22113,7884,1,1,1,8), -- Infernal Master
+(22113,1875,1,1,-1,50000), -- Stone of Purity
+(22113,5522,1,1,-1,25000), -- Sealed Armor of Nightmare Pattern
+(22113,3957,1,1,-1,5000), -- Recipe: Blessed Spiritshot S
+(22114,57,4128,7904,0,700000), -- Adena
+(22114,1868,3,9,2,250000), -- Thread
+(22114,1895,1,1,2,125000), -- Metallic Fiber
+(22114,1873,3,6,2,111111), -- Silver Nugget
+(22114,1876,1,1,2,83333), -- Mithril Ore
+(22114,4042,1,1,2,27027), -- Enria
+(22114,8331,1,1,1,13514), -- Infernal Master Blade
+(22115,57,3881,7936,0,700000), -- Adena
+(22115,1867,1,3,2,200000), -- Animal Skin
+(22115,1344,43,118,2,125000), -- Mithril Arrow
+(22115,1881,1,1,2,50000), -- Coarse Bone Powder
+(22115,1872,5,14,2,40000), -- Animal Bone
+(22115,1875,1,1,2,30303), -- Stone of Purity
+(22115,4041,1,1,2,4237), -- Mold Hardener
+(22115,8331,1,1,1,4237), -- Infernal Master Blade
+(22115,5547,1,1,1,3185), -- Elemental Sword Edge
+(22115,5548,1,1,1,3185), -- Tallum Blade Edge
+(22115,150,1,1,1,8), -- Elemental Sword
+(22115,7884,1,1,1,8), -- Infernal Master
+(22115,80,1,1,1,8), -- Tallum Blade
+(22115,3036,1,1,2,500), -- Recipe: Spiritshot S
+(22115,4041,1,1,-1,50000), -- Mold Hardener
+(22115,1875,1,1,-1,50000), -- Stone of Purity
+(22115,5488,1,1,-1,25000), -- Sealed Majestic Robe Fabric
+(22116,57,4003,8164,0,700000), -- Adena
+(22116,1871,1,3,2,200000), -- Charcoal
+(22116,1866,1,3,2,125000), -- Suede
+(22116,1885,1,1,2,38461), -- High Grade Suede
+(22116,5220,1,1,2,12195), -- Metal Hardener
+(22116,5539,1,1,1,9174), -- Blood Tornado Edge
+(22116,4041,1,1,2,2817), -- Mold Hardener
+(22116,269,1,1,1,8), -- Blood Tornado
+(22116,5167,1,1,2,500), -- Recipe: Blessed Spiritshot(S) Compressed Package(100%)
+(22116,5145,1,1,-1,5000), -- Compressed Package of Spiritshots: S-grade
+(22116,5495,1,1,-1,25000), -- Sealed Shield of Nightmare Fragment
+(22116,5151,1,1,-1,5000), -- Compressed Package of Blessed Spiritshots: S-grade
+(22117,57,4121,8365,0,700000), -- Adena
+(22117,1344,30,89,2,200000), -- Mithril Arrow
+(22117,1869,2,6,2,111111), -- Iron Ore
+(22117,1864,7,15,2,83333), -- Stem
+(22117,1880,1,1,2,18868), -- Steel
+(22117,4043,1,1,2,13158), -- Asofe
+(22117,5550,1,1,2,11236), -- Durable Metal Plate
+(22117,5542,1,1,1,5618), -- Halberd Edge
+(22117,98,1,1,1,8), -- Halberd
+(22117,5157,1,1,2,500), -- Recipe: Soulshot(S) Compressed Package(100%)
+(22117,5502,1,1,-1,25000), -- Sealed Boots of Nightmare Lining
+(22117,5550,1,1,-1,50000), -- Durable Metal Plate
+(22117,4043,1,1,-1,50000), -- Asofe
+(22118,57,5774,11740,0,700000), -- Adena
+(22118,1882,1,1,2,166667), -- Leather
+(22118,1867,4,12,2,111111), -- Animal Skin
+(22118,1872,7,21,2,83333), -- Animal Bone
+(22118,6346,1,1,1,27027), -- Sealed Majestic Ring Gemstone
+(22118,6344,1,1,1,20000), -- Sealed Majestic Necklace Beads
+(22118,1894,1,1,2,14925), -- Crafted Leather
+(22118,4042,1,1,2,10000), -- Enria
+(22118,6342,1,1,1,5000), -- Sealed Majestic Earring Gemstone
+(22118,6326,1,1,2,111), -- Sealed Majestic Necklace
+(22118,6327,1,1,2,111), -- Sealed Majestic Earring
+(22118,6328,1,1,2,111), -- Sealed Majestic Ring
+(22118,959,1,1,1,180), -- Scroll: Enchant Weapon(Grade S)
+(22118,5503,1,1,-1,25000), -- Sealed Majestic Boots Lining
+(22118,5272,1,1,-1,5000), -- Recipe: Greater Soulshot(S) Compressed Package(100%)
+(22118,5514,1,1,-1,25000), -- Sealed Gloves of Nightmare Design
+(22119,57,4423,8638,0,700000), -- Adena
+(22119,1868,5,11,2,120000), -- Thread
+(22119,1344,194,443,2,71429), -- Mithril Arrow
+(22119,1895,1,1,2,71429), -- Metallic Fiber
+(22119,1876,1,1,2,37037), -- Mithril Ore
+(22119,6346,1,1,1,18519), -- Sealed Majestic Ring Gemstone
+(22119,6342,1,1,1,18519), -- Sealed Majestic Earring Gemstone
+(22119,6344,1,1,1,18519), -- Sealed Majestic Necklace Beads
+(22119,1873,1,4,2,18519), -- Silver Nugget
+(22120,57,5464,11140,0,700000), -- Adena
+(22120,1870,2,6,2,142857), -- Coal
+(22120,1871,3,9,2,125000), -- Charcoal
+(22120,1872,7,21,2,62500), -- Animal Bone
+(22120,1867,14,34,2,31250), -- Animal Skin
+(22120,1869,18,53,2,18519), -- Iron Ore
+(22120,5514,1,1,1,9259), -- Sealed Gloves of Nightmare Design
+(22120,5502,1,1,1,9259), -- Sealed Boots of Nightmare Lining
+(22120,5515,1,1,1,9259), -- Sealed Majestic Gloves Design
+(22120,5503,1,1,1,3968), -- Sealed Majestic Boots Lining
+(22120,5314,1,1,1,88), -- Sealed Boots of Nightmare
+(22120,5318,1,1,1,88), -- Sealed Majestic Gloves
+(22120,5313,1,1,1,88), -- Sealed Gloves of Nightmare
+(22120,5319,1,1,1,88), -- Sealed Majestic Boots
+(22120,6901,1,1,2,500), -- Recipe: Shining Arrow(100%)
+(22120,5522,1,1,-1,25000), -- Sealed Armor of Nightmare Pattern
+(22120,5282,1,1,-1,5000), -- Recipe: Greater Blessed Spiritshot(S) Compressed Package(100%)
+(22121,57,4283,8641,0,700000), -- Adena
+(22121,1878,1,1,2,200000), -- Braided Hemp
+(22121,1864,4,12,2,142867), -- Stem
+(22121,1869,2,6,2,83333), -- Iron Ore
+(22121,1884,3,8,2,52632), -- Cord
+(22121,1344,217,626,2,43478), -- Mithril Arrow
+(22121,4039,1,1,2,12195), -- Mold Glue
+(22121,5487,1,1,1,7194), -- Sealed Robe of Nightmare Fabric
+(22121,5488,1,1,1,7194), -- Sealed Majestic Robe Fabric
+(22121,5326,1,1,1,66), -- Sealed Robe of Nightmare
+(22121,5329,1,1,1,66), -- Sealed Majestic Robe
+(22121,959,1,1,2,180), -- Scroll: Enchant Weapon(Grade S)
+(22121,5523,1,1,-1,25000), -- Sealed Majestic Plate Armor Pattern
+(22121,1808,1,1,-1,5000), -- Recipe: Soulshot: S Grade
+(22121,5527,1,1,-1,25000), -- Sealed Helm of Nightmare Design
 (22122,57,5689,11610,0,700000), -- Adena
 (22122,1870,1,3,2,250000), -- Coal
 (22122,1879,1,1,2,111111), -- Cokes
@@ -25460,7 +25707,8 @@ INSERT INTO `droplist` VALUES
 (21572,5352,1,1,2,86), -- Recipe: Sealed Majestic Robe(60%)
 (21596,5350,1,1,2,184); -- Recipe: Sealed Robe of Nightmare(60%)
 
-INSERT INTO `droplist` VALUES -- Ant Guard
+INSERT INTO `droplist` VALUES 
+-- Ant Guard
 (20086,8307,1,1,2,186), -- Recipe: Priest Mace (100%)
 
 -- Tyrant
