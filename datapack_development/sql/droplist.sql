@@ -21079,6 +21079,154 @@ INSERT INTO `droplist` VALUES
 -- work in progress C5 mob drops - 22xxx mobs
 -- 
 INSERT INTO `droplist` VALUES 
+(22017,57,208,416,0,700000), -- Adena
+(22017,1864,1,1,2,90909), -- Stem
+(22017,1869,1,1,2,47619), -- Iron Ore
+(22017,1880,1,1,2,5208), -- Steel
+(22017,737,1,1,2,4132), -- Scroll of Resurrection
+(22017,2021,1,1,1,654), -- Spinebone Sword Blade
+(22017,5550,1,1,2,528), -- Durable Metal Plate
+(22017,125,1,1,1,8), -- Spinebone Sword
+(22017,128,1,1,1,8), -- Knight\'s Sword
+(22017,69,1,1,1,8), -- Bastard Sword
+(22017,126,1,1,1,8), -- Artisan\'s Sword
+(22017,1900,1,1,-1,25000), -- Enchanted Necklace Chain
+(22017,2153,1,1,-1,5000), -- Recipe: Tiger\'s Eye Earring
+(22017,1933,1,1,-1,25000), -- Dark Stocking Fabric
+(22018,57,178,355,0,700000), -- Adena
+(22018,1872,1,1,2,71429), -- Animal Bone
+(22018,1867,1,1,2,71429), -- Animal Skin
+(22018,1882,1,1,2,12048), -- Leather
+(22018,392,1,1,1,88), -- Lion Skin Shirt
+(22018,414,1,1,1,88), -- Lion Skin Gaiters
+(22018,955,1,1,2,210), -- Scroll: Enchant Weapon (Grade D)
+(22018,956,1,1,-1,5000), -- Scroll: Enchant Armor (Grade D)
+(22018,1872,1,2,-1,250000), -- Animal Bone
+(22018,1882,1,2,-1,50000), -- Leather
+(22019,57,241,484,0,700000), -- Adena
+(22019,1864,1,1,2,100000), -- Stem
+(22019,1869,1,1,2,52632), -- Iron Ore
+(22019,1061,1,1,2,28571), -- Healing Potion
+(22019,1933,1,1,1,4926), -- Dark Stocking Fabric
+(22019,1880,1,1,2,4673), -- Steel
+(22019,1936,1,1,1,2681), -- White Tunic Pattern
+(22019,956,1,1,2,1727), -- Scroll: Enchant Armor (Grade D)
+(22019,5550,1,1,2,317), -- Durable Metal Plate
+(22019,466,1,1,1,88), -- Elven Stockings
+(22019,433,1,1,1,88), -- Elven Tunic
+(22019,435,1,1,1,88), -- Mystic\'s Tunic
+(22019,467,1,1,1,88), -- Dark Stockings
+(22019,434,1,1,1,88), -- White Tunic
+(22019,468,1,1,1,88), -- Mystic\'s Stockings
+(22019,1834,1,2,-1,50000), -- Emergency Dressing
+(22019,1935,1,1,-1,25000), -- Scale Mail Fragment
+(22019,2183,1,1,-1,5000), -- Recipe: Mithril Banded Mail
+(22020,57,200,399,0,700000), -- Adena
+(22020,1872,1,1,2,66066), -- Animal Bone
+(22020,1867,1,1,2,66066), -- Animal Skin
+(22020,1881,1,1,2,6289), -- Coarse Bone Powder
+(22020,1875,1,1,2,3012), -- Stone of Purity
+(22020,8302,1,1,2,893), -- Recipe: Sword of Magic Fog (100%)
+(22020,378,1,1,1,88), -- Compound Scale Gaiters
+(22020,59,1,1,1,88), -- Mithril Gaiters
+(22020,351,1,1,1,88), -- Blast Plate
+(22020,58,1,1,1,88), -- Mithril Breastplate
+(22020,349,1,1,1,88), -- Compound Scale Mail
+(22020,379,1,1,1,88), -- Dwarven Scale Gaiters
+(22020,350,1,1,1,88), -- Dwarven Scale Mail
+(22020,1901,1,1,-1,25000), -- Tiger\'s Eye Earring Stone
+(22020,2154,1,1,-1,5000), -- Recipe: Elven Earring
+(22020,1938,1,1,-1,25000), -- Mithril Banded Mail Material
+(22021,57,242,484,0,700000), -- Adena
+(22021,1341,10,30,2,142857), -- Bone Arrow
+(22021,1884,1,1,2,27027), -- Cord
+(22021,1878,1,1,2,13514), -- Braided Hemp
+(22021,1893,1,1,2,2618), -- Oriharukon
+(22021,1889,1,1,2,2513), -- Compound Braid
+(22021,2027,1,1,1,1912), -- Spiked Club Head
+(22021,5220,1,1,2,1057), -- Metal Hardener
+(22021,8295,1,1,2,805), -- Recipe: Titan Sword (100%)
+(22021,157,1,1,1,8), -- Spiked Club
+(22021,186,1,1,1,8), -- Staff of Magic
+(22021,5220,1,1,-1,50000), -- Metal Hardener
+(22021,1893,1,1,-1,50000), -- Oriharukon
+(22021,1939,1,1,-1,25000), -- Mithril Banded Gaiters Material
+(22022,57,287,573,0,700000), -- Adena
+(22022,1872,1,1,2,90909), -- Animal Bone
+(22022,1867,1,1,2,83333), -- Animal Skin
+(22022,1881,1,1,2,8928), -- Coarse Bone Powder
+(22022,2156,1,1,2,6803), -- Recipe: Elven Necklace
+(22022,1875,1,1,2,3876), -- Stone of Purity
+(22022,2028,1,1,1,808), -- Shilen Knife Edge
+(22022,238,1,1,1,8), -- Dagger of Mana
+(22022,223,1,1,1,8), -- Kukuri
+(22022,239,1,1,1,8), -- Mystic Knife
+(22022,241,1,1,1,8), -- Shilen Knife
+(22022,2155,1,1,-1,5000), -- Recipe: Elven Ring
+(22022,1940,1,2,-1,25000), -- Iron Boots Design
+(22022,2156,1,1,-1,5000), -- Recipe: Elven Necklace
+(22023,57,327,656,0,700000), -- Adena
+(22023,1868,1,1,2,166066), -- Thread
+(22023,1873,1,1,2,31250), -- Silver Nugget
+(22023,5549,1,1,2,7519), -- Metallic Thread
+(22023,1889,1,1,2,5291), -- Compound Braid
+(22023,2026,1,1,1,763), -- Two-Handed Sword Edge
+(22023,8295,1,1,2,625), -- Recipe: Titan Sword (100%)
+(22023,83,1,1,1,8), -- Sword of Magic
+(22023,124,1,1,1,8), -- Two-Handed Sword
+(22023,127,1,1,1,8), -- Crimson Sword
+(22023,144,1,1,1,8), -- Sword of Occult
+(22023,8295,1,1,-1,25000), -- Recipe: Titan Sword (100%)
+(22023,1868,1,3,-1,50000), -- Thread
+(22023,1873,1,1,-1,50000), -- Silver Nugget
+(22024,57,308,614,0,700000), -- Adena
+(22024,1867,1,1,2,100000), -- Animal Skin
+(22024,1872,1,1,2,90909), -- Animal Bone
+(22024,1881,1,1,2,10000), -- Coarse Bone Powder
+(22024,1943,1,1,1,7299), -- Manticore Skin Gaiters Pattern
+(22024,1825,1,1,2,4785), -- Recipe: Oriharukon
+(22024,1875,1,1,2,4405), -- Stone of Purity
+(22024,1942,1,1,1,4043), -- Manticore Skin Shirt Texture
+(22024,417,1,1,1,88), -- Manticore Skin Gaiters
+(22024,395,1,1,1,88), -- Manticore Skin Shirt
+(22024,6036,1,1,-1,5000), -- Greater Magic Haste Potion
+(22024,1902,1,1,-1,25000), -- Elven Earring Beads
+(22024,1825,1,1,-1,5000), -- Recipe: Oriharukon
+(22025,57,307,613,0,700000), -- Adena
+(22025,1872,1,1,2,100000), -- Animal Bone
+(22025,1867,1,1,2,100000), -- Animal Skin
+(22025,1882,1,1,2,16129), -- Leather
+(22025,2145,1,1,2,5155), -- Recipe: Mithril Alloy
+(22025,2918,1,1,1,5155), -- Mithril Scale Gaiters Material
+(22025,2919,1,1,1,4149), -- Brigandine Gaiters Material
+(22025,1941,1,1,1,2463), -- Brigandine Temper
+(22025,1894,1,1,2,2183), -- Crafted Leather
+(22025,1942,1,1,1,2000), -- Manticore Skin Shirt Texture
+(22025,1943,1,1,1,200), -- Manticore Skin Gaiters Pattern
+(22025,34,1,1,1,88), -- Bronze Gaiters
+(22025,395,1,1,1,88), -- Manticore Skin Shirt
+(22025,417,1,1,1,88), -- Manticore Skin Gaiters
+(22025,1903,1,1,-1,25000), -- Elven Ring Piece
+(22025,2145,1,1,-1,5000), -- Recipe: Mithril Alloy
+(22025,1904,1,1,-1,15000), -- Elven Necklace Beads
+(22026,57,398,795,0,700000), -- Adena
+(22026,1864,1,1,2,200000), -- Stem
+(22026,1869,1,1,2,90909), -- Iron Ore
+(22026,1884,1,1,2,55556), -- Cord
+(22026,1878,1,1,2,37037), -- Braided Hemp
+(22026,2146,1,1,2,7813), -- Recipe: Artisan\'s frame
+(22026,8333,1,1,1,1639), -- Sword of Magic Fog Blade 
+(22026,8328,1,1,1,569), -- Titan Sword Blade 
+(22026,2034,1,1,1,213), -- Sword of Revolution Blade
+(22026,1941,1,1,1,213), -- Brigandine Temper
+(22026,2918,1,1,1,213), -- Mithril Scale Gaiters Material
+(22026,2919,1,1,1,213), -- Brigandine Gaiters Material
+(22026,352,1,1,1,88), -- Brigandine Tunic
+(22026,2377,1,1,1,88), -- Mithril Scale Gaiters
+(22026,2378,1,1,1,88), -- Brigandine Gaiters
+(22026,1864,1,3,-1,50000), -- Stem
+(22026,1869,1,1,-1,50000), -- Iron Ore
+(22026,6036,1,1,-1,5000), -- Greater Magic Haste Potion
 (22079,57,466,1581,0,700000), -- Adena
 (22079,1871,1,1,2,111111), -- Charcoal
 (22079,1866,1,1,2,76923), -- Suede
@@ -21180,6 +21328,7 @@ INSERT INTO `droplist` VALUES
 (22085,1918,1,2,-1,197438), -- Nassen\'s Earring Gemstone
 (22085,4043,1,1,-1,121204), -- Asofe
 (22085,1874,1,1,-1,113674), -- Oriharukon Ore
+(22085,8297,1,1,2,75), -- Recipe: Guardian\'s Sword (100%) 
 (22086,57,534,1091,0,700000), -- Adena
 (22086,8398,1,1,2,6329), -- Spellbook: Mana Burn
 (22086,8401,1,1,2,6329), -- Spellbook: Major Heal
@@ -25311,40 +25460,138 @@ INSERT INTO `droplist` VALUES
 (21572,5352,1,1,2,86), -- Recipe: Sealed Majestic Robe(60%)
 (21596,5350,1,1,2,184); -- Recipe: Sealed Robe of Nightmare(60%)
 
-INSERT INTO `droplist` VALUES
--- Canyon Antelop
-(21294,8332,1,1,1,800), -- Infernal Master Blade
-(21294,7884,1,1,1,4), -- Infernal Master
+INSERT INTO `droplist` VALUES -- Ant Guard
+(20086,8307,1,1,2,186), -- Recipe: Priest Mace (100%)
 
--- Canyon Antelop Slave
-(21295,8332,1,1,1,855), -- Infernal Master Blade
-(21295,7884,1,1,1,5), -- Infernal Master
+-- Tyrant
+(20192,8307,1,1,2,342), -- Recipe: Priest Mace (100%)
 
--- Grendel Slave
-(21304,8346,1,1,1,1663), -- Hammer Piece of Destroyer
-(21304,7899,1,1,1,9), -- Destroyer Hammer
-(21304,8341,1,1,1,1261), -- Spiritual Eye Piece
-(21304,7894,1,1,1,9), -- Spiritual Eye
+-- Malruk Succubus
+(20244,8322,1,1,2,114), -- Recipe: Ice Storm Hammer (60%)
 
--- Elder Homunculus
-(21307,8332,1,1,1,1628), -- Infernal Master Blade
-(21307,7884,1,1,1,9), -- Infernal Master
+-- Malruk Succubus Turen
+(20245,8322,1,1,2,54), -- Recipe: Ice Storm Hammer (60%)
 
--- Shrine Guard
-(21651,8346,1,1,1,677), -- Hammer Piece of Destroyer
-(21651,7899,1,1,1,3), -- Destroyer Hammer
-(21651,8341,1,1,1,351), -- Spiritual Eye Piece
-(21651,7894,1,1,1,3), -- Spiritual Eye
+-- Cave Howler
+(20624,8336,1,1,1,1470), -- Blade of the Wizard\'s Tear
+(20624,7889,1,1,1,16), -- Wizard\'s Tear
+(20624,8330,1,1,1,1430), -- Guardian Sword Blade
+(20624,7883,1,1,1,16), -- Guardian Sword
 
--- Disciples of Punishment
-(21309,8346,1,1,1,2197), -- Hammer Piece of Destroyer
-(21309,7899,1,1,1,12), -- Destroyer Hammer
-(21309,8341,1,1,1,1757), -- Spiritual Eye Piece
-(21309,7894,1,1,1,12), -- Spiritual Eye
+-- Malruk Knight
+(20625,8336,1,1,1,52), -- Blade of the Wizard\'s Tear
+(20625,7889,1,1,1,13), -- Wizard\'s Tear
+(20625,8330,1,1,1,104), -- Guardian Sword Blade
+(20625,7883,1,1,1,13), -- Guardian Sword
 
--- Disciples of Authority
-(21310,8332,1,1,1,3134), -- Infernal Master Blade
-(21310,7884,1,1,1,12), -- Infernal Master
+-- Hamrut
+(20649,8311,1,1,2,14), -- Recipe: Kaim Vanul\'s Bones (100%)
+
+-- Grave Guard
+(20668,8309,1,1,2,35), -- Recipe: Spell Breaker (100%)
+
+-- Falibati
+(20673,8336,1,1,1,362), -- Blade of the Wizard\'s Tear
+(20673,7889,1,1,1,5), -- Wizard''s Tear
+(20673,8330,1,1,1,458), -- Guardian Sword Blade
+(20673,7883,1,1,1,5), -- Guardian Sword
+
+-- Doom Knight
+(20674,8316,1,1,2,32), -- Recipe: Flaming Dragon Skull (60%)
+
+-- Tulben
+(20677,8316,1,1,2,90), -- Recipe: Flaming Dragon Skull (60%)
+
+-- Marsh Drake
+(20680,8311,1,1,2,103), -- Recipe: Kaim Vanul\'s Bones (100%)
+
+-- Platinum Tribe Soldier
+(20823,8316,1,1,2,135), -- Recipe: Flaming Dragon Skull (60%)
+(20823,5416,1,1,-1,30303), -- recipe: sealed Dark Crystal Breastplate(60%)
+
+-- Hallate's Commander
+(20824,5424,1,1,-1,21739), -- recipe: sealed Dark Crystal Gaiters(60%)
+
+-- Hatu Brown Bear
+(20930,8317,1,1,2,150), -- Recipe: Titan Hammer (100%)
+
+-- Pobby
+(20953,8311,1,1,2,49), -- Recipe: Kaim Vanul\'s Bones (100%)
+
+-- Elmo-Aden's Archer Escort
+(20978,8336,1,1,1,1515), -- Blade of the Wizard's Tear
+(20978,7889,1,1,1,1515), -- Wizard's Tear
+
+-- Mul's Wizard
+(20981,8326,1,1,2,125), -- Recipe: Doom Crusher (60%)
+
+-- Doom Scout
+(21002,8311,1,1,2,77), -- Recipe: Kaim Vanul\'s Bones (100%)
+
+-- Ancient Gargoyle
+(21018,8309,1,1,2,77), -- Recipe: Spell Breaker (100%)
+
+-- Messenger Angel
+(21063,8314,1,1,2,514), -- Recipe: Spiritual Eye (60%)
+
+-- Cursed Seer
+(21106,8317,1,1,2,67), -- Recipe: Titan Hammer (100%)
+
+-- Glow Wisp
+(21108,8487,1,1,2,31), -- Recipe: Destroyer Hammer (60%)
+
+-- Marsh Predator
+(21110,8487,1,1,2,94), -- Recipe: Destroyer Hammer (60%)
+
+-- Lava Wyrm
+(21111,8487,1,1,2,69), -- Recipe: Destroyer Hammer (60%)
+
+-- Catacomb Shadow
+(21144,8317,1,1,2,641), -- Recipe: Titan Hammer (100%)
+
+-- Purgatory Tarantula
+(21157,8487,1,1,2,163), -- Recipe: Destroyer Hammer (60%)
+
+-- Hell Keeper Crimson Doll
+(21158,8487,1,1,2,130), -- Recipe: Destroyer Hammer (60%)
+
+-- Purgatory Gargoyle
+(21159,8326,1,1,2,35), -- Recipe: Doom Crusher (60%)
+
+-- Gigant Officer
+(21192,8317,1,1,2,1915), -- Recipe: Titan Hammer (100%)
+
+-- Nephilim Guard
+(21199,8311,1,1,2,101), -- Recipe: Kaim Vanul\'s Bones (100%)
+
+-- Sepulcher Sage
+(21227,8314,1,1,2,163), -- Recipe: Spiritual Eye (60%)
+
+-- Crypt Inquisitor
+(21245,8309,1,1,2,290), -- Recipe: Spell Breaker (100%)
+
+-- Sepulcher Guardian
+(21226,8336,1,1,1,1321), -- Blade of the Wizard\'s Tear
+(21226,7889,1,1,1,15), -- Wizard\'s Tear
+(21226,8330,1,1,1,1288), -- Guardian Sword Blade
+(21226,7883,1,1,1,15), -- Guardian Sword
+(21226,8314,1,1,2,116), -- Recipe: Spiritual Eye (60%)
+
+-- Antelope
+(21278,8332,1,1,1,373), -- Infernal Master Blade
+(21278,7884,1,1,1,2), -- Infernal Master
+
+-- Antelope
+(21279,8332,1,1,1,373), -- Infernal Master Blade
+(21279,7884,1,1,1,2), -- Infernal Master
+
+-- Antelope
+(21280,8332,1,1,1,373), -- Infernal Master Blade
+(21280,7884,1,1,1,2), -- Infernal Master
+
+-- Antelope
+(21281,8332,1,1,1,109), -- Infernal Master Blade
+(21281,7884,1,1,1,1), -- Infernal Master
 
 -- Bandersnatch
 (21282,8332,1,1,1,206), -- Infernal Master Blade
@@ -25356,11 +25603,41 @@ INSERT INTO `droplist` VALUES
 (21285,8332,1,1,1,78), -- Infernal Master Blade
 (21285,7884,1,1,1,1), -- Infernal Master
 
+-- Grendel
+(21290,8332,1,1,1,274), -- Infernal Master Blade
+(21290,7884,1,1,1,2), -- Infernal Master
+
+-- Grendel
+(21291,8332,1,1,1,274), -- Infernal Master Blade
+(21291,7884,1,1,1,2), -- Infernal Master
+
+-- Grendel
+(21292,8332,1,1,1,274), -- Infernal Master Blade
+(21292,7884,1,1,1,2), -- Infernal Master
+
+-- Grendel
+(21293,8332,1,1,1,143), -- Infernal Master Blade
+(21293,7884,1,1,1,1), -- Infernal Master
+
+-- Canyon Antelop
+(21294,8332,1,1,1,800), -- Infernal Master Blade
+(21294,7884,1,1,1,4), -- Infernal Master
+
+-- Canyon Antelop Slave
+(21295,8332,1,1,1,855), -- Infernal Master Blade
+(21295,7884,1,1,1,5), -- Infernal Master
+
 -- Eye of Guide
 (21300,8346,1,1,1,1243), -- Hammer Piece of Destroyer
 (21300,7899,1,1,1,7), -- Destroyer Hammer
 (21300,8341,1,1,1,746), -- Spiritual Eye Piece
 (21300,7894,1,1,1,7), -- Spiritual Eye
+
+-- Grendel Slave
+(21304,8346,1,1,1,1663), -- Hammer Piece of Destroyer
+(21304,7899,1,1,1,9), -- Destroyer Hammer
+(21304,8341,1,1,1,1261), -- Spiritual Eye Piece
+(21304,7894,1,1,1,9), -- Spiritual Eye
 
 -- Eye of Pilgrim
 (21305,8346,1,1,1,829), -- Hammer Piece of Destroyer
@@ -25368,29 +25645,230 @@ INSERT INTO `droplist` VALUES
 (21305,8341,1,1,1,737), -- Spiritual Eye Piece
 (21305,7894,1,1,1,7), -- Spiritual Eye
 
+-- Elder Homunculus
+(21307,8332,1,1,1,1628), -- Infernal Master Blade
+(21307,7884,1,1,1,9), -- Infernal Master
+
 -- Disciples of Punishment
 (21308,8346,1,1,1,1760), -- Hammer Piece of Destroyer
 (21308,7899,1,1,1,11), -- Destroyer Hammer
 (21308,8341,1,1,1,2183), -- Spiritual Eye Piece
 (21308,7894,1,1,1,11), -- Spiritual Eye
 
--- Elmo-Aden's Archer Escort
-(20978,8336,1,1,1,1515), -- Blade of the Wizard's Tear
-(20978,7889,1,1,1,1515), -- Wizard's Tear
+-- Disciples of Punishment
+(21309,8346,1,1,1,2197), -- Hammer Piece of Destroyer
+(21309,7899,1,1,1,12), -- Destroyer Hammer
+(21309,8341,1,1,1,1757), -- Spiritual Eye Piece
+(21309,7894,1,1,1,12), -- Spiritual Eye
 
--- Hallate's Commander
-(20824,5424,1,1,-1,21739), -- recipe: sealed Dark Crystal Gaiters(60%)
+-- Disciples of Authority
+(21310,8332,1,1,1,3134), -- Infernal Master Blade
+(21310,7884,1,1,1,12), -- Infernal Master
 
--- Mul's Wizard
-(20981,8326,1,1,2,125), -- Recipe: Doom Crusher (60%)
+-- Ketra Orc Footman
+(21324,8332,1,1,1,794), -- Infernal Master Blade
+(21324,7884,1,1,1,6), -- Infernal Master
 
--- Platinum Tribe Soldier
-(20823,8316,1,1,2,135), -- Recipe: Flaming Dragon Skull (60%)
-(20824,5416,1,1,-1,30303), -- recipe: sealed Dark Crystal Breastplate(60%)
+-- Ketra\'s War Hound
+(21325,8346,1,1,1,831), -- Hammer Piece of Destroyer
+(21325,7899,1,1,1,6), -- Destroyer Hammer
+(21325,8341,1,1,1,787), -- Spiritual Eye Piece
+(21325,7894,1,1,1,6), -- Spiritual Eye
 
--- Messenger Angel
-(21063,8314,1,1,2,514); -- Recipe: Spiritual Eye (60%)
+-- Ketra Orc Raider
+(21327,8332,1,1,1,1666), -- Infernal Master Blade
+(21327,7884,1,1,1,6), -- Infernal Master
 
+-- Ketra Orc Scout
+(21328,8346,1,1,1,678), -- Hammer Piece of Destroyer
+(21328,7899,1,1,1,6), -- Destroyer Hammer
+(21328,8341,1,1,1,814), -- Spiritual Eye Piece
+(21328,7894,1,1,1,6), -- Spiritual Eye
+
+-- Grazing Kookaburra
+(21330,8342,1,1,1,782), -- Flaming Dragon Skull Piece
+(21330,7895,1,1,1,4), -- Flaming Dragon Skull
+(21330,8349,1,1,1,684), -- Doom Crusher Head
+(21330,7902,1,1,1,4), -- Doom Crusher
+
+-- Ketra Orc Lieutenant
+(21332,8342,1,1,1,594), -- Flaming Dragon Skull Piece
+(21332,7895,1,1,1,4), -- Flaming Dragon Skull
+(21332,8349,1,1,1,594), -- Doom Crusher Head
+(21332,7902,1,1,1,4), -- Doom Crusher
+
+-- Grazing Windsus
+(21333,8342,1,1,1,466), -- Flaming Dragon Skull Piece
+(21333,7895,1,1,1,4), -- Flaming Dragon Skull
+(21333,8349,1,1,1,622), -- Doom Crusher Head
+(21333,7902,1,1,1,4), -- Doom Crusher
+
+-- Ketra Orc Grand Seer
+(21342,8342,1,1,1,825), -- Flaming Dragon Skull Piece
+(21342,7895,1,1,1,6), -- Flaming Dragon Skull
+(21342,8349,1,1,1,891), -- Doom Crusher Head
+(21342,7902,1,1,1,6), -- Doom Crusher
+
+-- Tepra Scarab
+(21380,8342,1,1,1,1828), -- Flaming Dragon Skull Piece
+(21380,7895,1,1,1,7), -- Flaming Dragon Skull
+(21380,8349,1,1,1,914), -- Doom Crusher Head
+(21380,7902,1,1,1,7), -- Doom Crusher
+
+-- Lavasillisk
+(21391,8342,1,1,1,2024), -- Flaming Dragon Skull Piece
+(21391,7895,1,1,1,10), -- Flaming Dragon Skull
+(21391,8349,1,1,1,505), -- Doom Crusher Head
+(21391,7902,1,1,1,10), -- Doom Crusher
+
+-- Carrion Scarab
+(21397,8341,1,1,1,938), -- Spiritual Eye Piece
+(21397,7894,1,1,1,6), -- Spiritual Eye
+
+-- Assassin of Empire
+(21415,8342,1,1,1,1818), -- Flaming Dragon Skull Piece
+(21415,7895,1,1,1,8), -- Flaming Dragon Skull
+(21415,8349,1,1,1,605), -- Doom Crusher Head
+(21415,7902,1,1,1,8), -- Doom Crusher
+
+-- Ashuras
+(21420,8342,1,1,1,1639), -- Flaming Dragon Skull Piece
+(21420,7895,1,1,1,8), -- Flaming Dragon Skull
+(21420,8349,1,1,1,1474), -- Doom Crusher Head
+(21420,7902,1,1,1,8), -- Doom Crusher
+
+-- Ashuras
+(21421,8342,1,1,1,1375), -- Flaming Dragon Skull Piece
+(21421,7895,1,1,1,7), -- Flaming Dragon Skull
+(21421,8349,1,1,1,1547), -- Doom Crusher Head
+(21421,7902,1,1,1,7), -- Doom Crusher
+
+-- Alpen Bandersnatch
+(21445,8336,1,1,1,417), -- Blade of the Wizard\'s Tear
+(21445,7889,1,1,1,5), -- Wizard\'s Tear
+(21445,8330,1,1,1,479), -- Guardian Sword Blade
+(21445,7883,1,1,1,5), -- Guardian Sword
+
+-- Splinter Stakato Drone
+(21511,8346,1,1,1,671), -- Hammer Piece of Destroyer
+(21511,7899,1,1,1,3), -- Destroyer Hammer
+(21511,8341,1,1,1,335), -- Spiritual Eye Piece
+(21511,7894,1,1,1,3), -- Spiritual Eye
+
+-- Needle Stakato Walker
+(21514,8341,1,1,1,1512), -- Spiritual Eye Piece
+(21514,7894,1,1,1,3), -- Spiritual Eye
+
+-- Wisdom of Splendor
+(21526,8336,1,1,1,569), -- Blade of the Wizard\'s Tear
+(21526,7889,1,1,1,7), -- Wizard\'s Tear
+(21526,8330,1,1,1,642), -- Guardian Sword Blade
+(21526,7883,1,1,1,7), -- Guardian Sword
+
+-- Signet of Splendor
+(21535,8336,1,1,1,672), -- Blade of the Wizard\'s Tear
+(21535,7889,1,1,1,7), -- Wizard''s Tear
+(21535,8330,1,1,1,636), -- Guardian Sword Blade
+(21535,7883,1,1,1,7), -- Guardian Sword
+
+-- Pilgrim of Splendor
+(21541,8336,1,1,1,553), -- Blade of the Wizard\'s Tear
+(21541,7889,1,1,1,8), -- Wizard\'s Tear
+(21541,8330,1,1,1,738), -- Guardian Sword Blade
+(21541,7883,1,1,1,8), -- Guardian Sword
+
+-- Bone Scavenger
+(21583,8346,1,1,1,725), -- Hammer Piece of Destroyer
+(21583,7899,1,1,1,4), -- Destroyer Hammer
+(21583,8341,1,1,1,571), -- Spiritual Eye Piece
+(21583,7894,1,1,1,4), -- Spiritual Eye
+
+-- Bone Scavenger
+(21584,8346,1,1,1,682), -- Hammer Piece of Destroyer
+(21584,7899,1,1,1,3), -- Destroyer Hammer
+(21584,8341,1,1,1,682), -- Spiritual Eye Piece
+(21584,7894,1,1,1,3), -- Spiritual Eye
+
+-- Vampire Wizard
+(21588,8332,1,1,1,593), -- Infernal Master Blade
+(21588,7884,1,1,1,3), -- Infernal Master
+
+-- Vampire Wizard
+(21589,8332,1,1,1,435), -- Infernal Master Blade
+(21589,7884,1,1,1,3), -- Infernal Master
+
+-- Requiem Behemoth
+(21600,8332,1,1,1,454), -- Infernal Master Blade
+(21600,7884,1,1,1,3), -- Infernal Master
+
+-- Requiem Behemoth
+(21601,8346,1,1,1,724), -- Hammer Piece of Destroyer
+(21601,7899,1,1,1,3), -- Destroyer Hammer
+(21601,8341,1,1,1,305), -- Spiritual Eye Piece
+(21601,7894,1,1,1,3), -- Spiritual Eye
+
+-- Shrine Guard
+(21651,8346,1,1,1,677), -- Hammer Piece of Destroyer
+(21651,7899,1,1,1,3), -- Destroyer Hammer
+(21651,8341,1,1,1,351), -- Spiritual Eye Piece
+(21651,7894,1,1,1,3), -- Spiritual Eye
+
+-- Punishment of Splendor
+(21658,8336,1,1,1,634), -- Blade of the Wizard\'s Tear
+(21658,7889,1,1,1,7), -- Wizard\'s Tear
+(21658,8330,1,1,1,714), -- Guardian Sword Blade
+(21658,7883,1,1,1,7), -- Guardian Sword
+
+-- Purgatory Invader Elite Soldier
+(21718,8311,1,1,2,723), -- Recipe: Kaim Vanul\'s Bones (100%)
+
+-- Forbidden Path Invader Disciple
+(21738,8336,1,1,1,1119), -- Blade of the Wizard\'s Tear
+(21738,7889,1,1,1,11), -- Wizard\'s Tear
+(21738,8330,1,1,1,959), -- Guardian Sword Blade
+(21738,7883,1,1,1,11), -- Guardian Sword
+
+-- Forbidden Path Invader Elite Soldier
+(21741,8336,1,1,1,2272), -- Blade of the Wizard\'s Tear
+(21741,7889,1,1,1,26), -- Wizard\'s Tear
+(21741,8330,1,1,1,2057), -- Guardian Sword Blade
+(21741,7883,1,1,1,26), -- Guardian Sword
+
+-- Dark Omen Invader Food
+(21763,8346,1,1,1,316), -- Hammer Piece of Destroyer
+(21763,7899,1,1,1,2), -- Destroyer Hammer
+(21763,8341,1,1,1,694), -- Spiritual Eye Piece
+(21763,7894,1,1,1,2), -- Spiritual Eye
+
+-- Messenger Invader Warrior
+(21791,8342,1,1,1,2008), -- Flaming Dragon Skull Piece
+(21791,7895,1,1,1,11), -- Flaming Dragon Skull
+(21791,8349,1,1,1,2141), -- Doom Crusher Head
+(21791,7902,1,1,1,11), -- Doom Crusher
+
+-- Dark Omen Invader Elite Soldier
+(21772,8346,1,1,1,1262), -- Hammer Piece of Destroyer
+(21772,7899,1,1,1,13), -- Destroyer Hammer
+(21772,8341,1,1,1,1727), -- Spiritual Eye Piece
+(21772,7894,1,1,1,13), -- Spiritual Eye
+
+-- Messenger Invader Elite Soldier
+(21789,8342,1,1,1,50), -- Flaming Dragon Skull Piece
+(21789,7895,1,1,1,1), -- Flaming Dragon Skull
+(21789,8349,1,1,1,50), -- Doom Crusher Head
+(21789,7902,1,1,1,1), -- Doom Crusher
+
+-- Ghost of a Gatekeeper
+(21799,8346,1,1,1,723), -- Hammer Piece of Destroyer
+(21799,7899,1,1,1,8), -- Destroyer Hammer
+(21799,8341,1,1,1,1001), -- Spiritual Eye Piece
+(21799,7894,1,1,1,8), -- Spiritual Eye
+
+-- Vassal Ghost
+(21800,8346,1,1,1,374), -- Hammer Piece of Destroyer
+(21800,7899,1,1,1,4), -- Destroyer Hammer
+(21800,8341,1,1,1,436), -- Spiritual Eye Piece
+(21800,7894,1,1,1,4); -- Spiritual Eye
 
 
 -- RB drops for clan skill items (25% chance drop until chances are confirmed)
