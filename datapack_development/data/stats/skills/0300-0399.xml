@@ -214,7 +214,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect name="Buff" time="120" count="1" val="0">
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="8" stackType="vampRage">
       <add stat="absorbDam" val="8" order="0x40"/>
     </effect>
   </for>
