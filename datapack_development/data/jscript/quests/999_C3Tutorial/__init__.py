@@ -1,4 +1,5 @@
-# Made by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! - version 0.2 by Rolarga
+# C5 addons by DrLecter
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -15,15 +16,16 @@ VOUCHER_OF_FLAME = 1496
 SOULSHOT_NOVICE = 5789
 SPIRITSHOT_NOVICE = 5790
 BLUE_GEM=6353
-
+TOKEN = 8542
+SCROLL= 8594
 # event:[htmlfile,radarX,radarY,radarZ,item,classId1,gift1,count1,classId2,gift2,count2]
 EVENTS={
-"30008_02":["30008-03.htm",-84058,243239,-3730,RECOMMENDATION_01,0x00,SOULSHOT_NOVICE,200,0,0,0],
-"30017_02":["30017-03.htm",-84058,243239,-3730,RECOMMENDATION_02,0x0a,SPIRITSHOT_NOVICE,100,0,0,0],
-"30370_02":["30370-03.htm",45491,48359,-3086,LEAF_OF_MOTHERTREE,0x19,SPIRITSHOT_NOVICE,100,0x12,SOULSHOT_NOVICE,200],
-"30129_02":["30129-03.htm",12116,16666,-4610,BLOOD_OF_JUNDIN,0x26,SPIRITSHOT_NOVICE,100,0x1f,SOULSHOT_NOVICE,200],
-"30528_02":["30528-03.htm",115642,-178046,-941,LICENSE_OF_MINER,0x35,SOULSHOT_NOVICE,200,0,0,0],
-"30573_02":["30573-03.htm",-45067,-113549,-235,VOUCHER_OF_FLAME,0x31,SPIRITSHOT_NOVICE,100,0x2c,SOULSHOT_NOVICE,200]
+"30008_02":["30008-03.htm",-84058, 243239,-3730,RECOMMENDATION_01 ,0x00,SOULSHOT_NOVICE  ,200,0x00,              0,  0],
+"30017_02":["30017-03.htm",-84058, 243239,-3730,RECOMMENDATION_02 ,0x0a,SPIRITSHOT_NOVICE,100,0x00,              0,  0],
+"30370_02":["30370-03.htm", 45491,  48359,-3086,LEAF_OF_MOTHERTREE,0x19,SPIRITSHOT_NOVICE,100,0x12,SOULSHOT_NOVICE,200],
+"30129_02":["30129-03.htm", 12116,  16666,-4610,BLOOD_OF_JUNDIN   ,0x26,SPIRITSHOT_NOVICE,100,0x1f,SOULSHOT_NOVICE,200],
+"30528_02":["30528-03.htm",115642,-178046, -941,LICENSE_OF_MINER  ,0x35,SOULSHOT_NOVICE  ,200,0x00,              0,  0],
+"30573_02":["30573-03.htm",-45067,-113549, -235,VOUCHER_OF_FLAME  ,0x31,SPIRITSHOT_NOVICE,100,0x2c,SOULSHOT_NOVICE,200]
 }
 
 # npcId:[raceId,[htmlfiles],npcTyp,item]
@@ -62,43 +64,51 @@ class Quest (JQuest) :
     htmlfile,radarX,radarY,radarZ,item,classId1,gift1,count1,classId2,gift2,count2 = EVENTS[event]
     st.addRadar(radarX,radarY,radarZ);
     htmltext=htmlfile
-    if st.getQuestItemsCount(item) and int(st.get("onlyone")) == 0:
-         if st.getPlayer().getClassId().getId() == classId1 :
-          st.addExpAndSp(0,50)
-          st.takeItems(item,1)
-          st.giveItems(gift1,count1)
-          st.set("cond","0")
-          st.set("onlyone","1")
-          st.setState(COMPLETED)
-          st.playSound("ItemSound.quest_finish")
-         elif st.getPlayer().getClassId().getId() == classId2 :
-          st.addExpAndSp(0,50)
-          st.takeItems(item,1)
-          if gift2:
+    if st.getQuestItemsCount(item) and st.getInt("onlyone") == 0:
+      st.addExpAndSp(0,50)
+      st.takeItems(item,1)
+      if st.getPlayer().getClassId().getId() == classId1 :
+        st.giveItems(gift1,count1)
+      elif st.getPlayer().getClassId().getId() == classId2 :
+        if gift2:
            st.giveItems(gift2,count2)
-          st.set("cond","0")
-          st.set("onlyone","1")
-          st.setState(COMPLETED)
-          st.playSound("ItemSound.quest_finish")
+      st.unset("cond")
+      st.set("onlyone","1")
+      st.setState(COMPLETED)
+      st.playSound("ItemSound.quest_finish")
     return htmltext
 
  def onTalk (Self,npc,st):
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have no tasks for you right now.</body></html>"
-   raceId,htmlfiles,npcTyp,item = TALKS[npcId]
+   cond=st.getInt("cond")
+   onlyone=st.getInt("onlyone")
    id = st.getState()
+   level=st.getPlayer().getLevel()
+   npcTyp=0
    if id == CREATED :
      st.setState(STARTING)
-     st.set("cond","0")
      st.set("onlyone","0")
-     st.set("id","0")
-   if (st.getPlayer().getLevel() >= 10 or int(st.get("onlyone"))) and npcTyp == 1:
+   if npcId in [30600, 30601, 30602, 30598, 30599] :
+     if id == COMPLETED and onlyone == 1:
+       st.set("onlyone","2")
+       if st.getPlayer().getClassId().isMage() :
+         st.giveItems(SPIRITSHOT_NOVICE,100)
+       else:
+         st.giveItems(SOULSHOT_NOVICE,200)
+       st.giveItems(TOKEN,12)
+       if st.getRandom(2):
+         st.giveItems(SCROLL,2)
+       return
+   else :
+     raceId,htmlfiles,npcTyp,item = TALKS[npcId]
+   if (level >= 10 or onlyone) and npcTyp == 1:
        htmltext = "30575-05.htm"
-   elif int(st.get("onlyone")) == 0 and st.getPlayer().getLevel() < 10 :
+   elif onlyone == 0 and level < 10 :
     if st.getPlayer().getRace().ordinal() == raceId :
       htmltext=htmlfiles[0]
       if npcTyp==1:
-       if int(st.get("cond"))==0 :
+       if cond==0 :
         if st.getPlayer().getClassId().isMage() :
          st.set("cond","1")
          st.setState(STARTED)
@@ -108,7 +118,7 @@ class Quest (JQuest) :
          st.set("cond","1")
          st.setState(STARTED)
          st.playSound("ItemSound.quest_tutorial")
-       elif int(st.get("cond"))==1 and st.getQuestItemsCount(item)==0 :
+       elif cond==1 and st.getQuestItemsCount(item)==0 :
          if st.getQuestItemsCount(BLUE_GEM) :
            st.takeItems(BLUE_GEM,st.getQuestItemsCount(BLUE_GEM))
            st.giveItems(item,1)
@@ -131,29 +141,29 @@ class Quest (JQuest) :
               htmltext = "30575-02.htm"
            else:
              htmltext = "30530-02.htm"
-       elif int(st.get("cond"))==2 :
+       elif cond==2 :
         htmltext = htmlfiles[3]
       elif npcTyp == 0 :
-        if int(st.get("cond"))==1 :
+        if cond==1 :
           htmltext = htmlfiles[0]
-        elif int(st.get("cond"))==2 :
+        elif cond==2 :
           htmltext = htmlfiles[1]
-        elif int(st.get("cond"))==3 :
+        elif cond==3 :
           htmltext = htmlfiles[2] 
    else:
        htmltext = "<html><head><body>You are too experienced now.</body></html>"
    return htmltext
 
  def onKill (self,npc,st):
-   if int(st.get("cond"))==1 and st.getRandom(100) < 25 and st.getQuestItemsCount(BLUE_GEM) == 0 :
+   if st.getInt("cond")==1 and st.getRandom(100) < 25 and st.getQuestItemsCount(BLUE_GEM) == 0 :
       st.giveItems(BLUE_GEM,1)
       st.playSound("ItemSound.quest_itemget")
       st.playSound("ItemSound.quest_tutorial")
    return
 
-QUEST       = Quest(999,qn,"C3 Tutorial")
+QUEST       = Quest(999,qn,"C5 Tutorial")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
+STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
@@ -165,8 +175,10 @@ for startNpc in [30008,30009,30017,30019,30129,30131,30404,30056,30011,30012,304
   STARTING.addTalkId(startNpc)
   STARTED.addTalkId(startNpc)
 
+for npc in [30600, 30601, 30602, 30598, 30599]:
+  COMPLETED.addTalkId(npc)
 
 STARTED.addKillId(20001)
 STARTED.addKillId(27198)
 
-print "importing quests: 999: C3 Tutorial"
+print "importing quests: 999: C5 Tutorial"
