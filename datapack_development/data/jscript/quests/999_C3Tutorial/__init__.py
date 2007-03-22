@@ -4,7 +4,7 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-qn = "999_C3Tutorial
+qn = "999_C3Tutorial"
 
 RECOMMENDATION_01 = 1067
 RECOMMENDATION_02 = 1068
@@ -151,7 +151,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_tutorial")
    return
 
-QUEST       = Quest(999,qn","C3 Tutorial")
+QUEST       = Quest(999,qn,"C3 Tutorial")
 CREATED     = State('Start', QUEST)
 STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
