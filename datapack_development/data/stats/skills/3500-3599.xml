@@ -1120,10 +1120,14 @@
       Temporarily decreases P. Def. Effect 3
 -->
   <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="WEAPON_SA"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="120" val="0">
+      <mul order="0x30" stat="pDef" val="0.77"/>
+    </effect>
   </for>
 </skill>
 <skill id="3580" levels="1" name="Special Ability: Infinity Axe">
@@ -1148,10 +1152,12 @@
       none
 -->
   <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="WEAPON_SA"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="5" name="ConfuseMob" time="6" val="0"/>
   </for>
 </skill>
 <skill id="3582" levels="1" name="Special Ability: Infinity Cleaver">
@@ -1189,11 +1195,15 @@
   Description(s):
       Instantly throws enemy into a state of shock, immobilizing them.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="WEAPON_SA"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="2" stackType="Stun">
+    </effect>
   </for>
 </skill>
 <skill id="3585" levels="1" name="Infinity Wing">
@@ -1218,10 +1228,12 @@
       Temporarily blocks opponent's ability to use physical skills.
 -->
   <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="WEAPON_SA"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="PsychicalMute" time="60" val="0" stackOrder="1" stackType="silence"/>
   </for>
 </skill>
 <skill id="3587" levels="1" name="Special Ability: Infinity Fang">
@@ -1245,11 +1257,15 @@
   Description(s):
       Instantly throws enemy into a state of shock, immobilizing them.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="WEAPON_SA"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="2" stackType="Stun">
+    </effect>
   </for>
 </skill>
 <skill id="3589" levels="1" name="Special Ability: Infinity Stinger">
@@ -1274,10 +1290,12 @@
       Temporarily blocks the use of magic skills.
 -->
   <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="WEAPON_SA"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Mute" time="120" val="0" stackOrder="1" stackType="silence"/>
   </for>
 </skill>
 <skill id="3591" levels="1" name="Special Ability: Infinity Spear">
@@ -1330,10 +1348,14 @@
       Temporarily reduces target's Speed. Effect 3.
 -->
   <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="WEAPON_SA"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="120" val="0">
+      <mul order="0x30" stat="runSpd" val="0.5"/>
+    </effect>
   </for>
 </skill>
 <skill id="3595" levels="1" name="Special Ability: Infinity Scepter">
