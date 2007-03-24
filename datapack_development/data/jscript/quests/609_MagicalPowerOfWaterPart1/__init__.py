@@ -67,39 +67,41 @@ class Quest (JQuest) :
     aggro = st.getInt("aggro")
     Green_Totem = st.getQuestItemsCount(Totem)
     Stone = st.getQuestItemsCount(Wisdom_Stone)
-    if npcId == Wahkan :
-        if Stone :
-            htmltext = "<html><head><body>You already have the stone!</body></html>"
-        else :
-            if st.getState()== CREATED :
-                htmltext = "31371-01.htm"
-            elif id == 2 :
-                htmltext = "31371-05.htm"
-    elif npcId == Asefa :
-        if st.getPlayer().getAllianceWithVarkaKetra() >= 2 :
-            if id == 2 :
-                htmltext = "31372-01.htm"
-                st.set("cond","2")
-                st.set("id","3")
-            elif id == 3 :
-                htmltext = "31372-02.htm"
-            elif id == 4 or aggro == 1 :
-                htmltext = "31372-03.htm"
-                st.set("id","3")
-                st.set("aggro","0")
-            elif id == 5 and Green_Totem :
-                htmltext = "31372-04.htm"
-                st.giveItems(Wisdom_Stone,1)
-                st.giveItems(Totem2,1)
-                st.takeItems(Totem,1)
-                st.unset("id")
-                st.unset("aggro")
-                st.playSound("ItemSound.quest_middle")
-                st.exitQuest(1)
-    elif npcId == Udan_Box :
-        if st.getPlayer().getAllianceWithVarkaKetra() >= 2 :
-            if id == 3 :
-                htmltext = "31561-01.htm"
+    if st.getInt("onlyone") != 1 :
+        if npcId == Wahkan :
+            if Stone :
+                htmltext = "<html><head><body>You already have the stone!</body></html>"
+            else :
+                if st.getState()== CREATED :
+                    htmltext = "31371-01.htm"
+                elif id == 2 :
+                    htmltext = "31371-05.htm"
+        elif npcId == Asefa :
+            if st.getPlayer().getAllianceWithVarkaKetra() >= 2 :
+                if id == 2 :
+                    htmltext = "31372-01.htm"
+                    st.set("cond","2")
+                    st.set("id","3")
+                elif id == 3 :
+                    htmltext = "31372-02.htm"
+                elif id == 4 or aggro == 1 :
+                    htmltext = "31372-03.htm"
+                    st.set("id","3")
+                    st.set("aggro","0")
+                elif id == 5 and Green_Totem :
+                    htmltext = "31372-04.htm"
+                    st.giveItems(Wisdom_Stone,1)
+                    st.giveItems(Totem2,1)
+                    st.takeItems(Totem,1)
+                    st.unset("id")
+                    st.unset("aggro")
+                    st.playSound("ItemSound.quest_middle")
+                    st.setState(COMPLETED)
+                    st.set("onlyone","1")
+        elif npcId == Udan_Box :
+            if st.getPlayer().getAllianceWithVarkaKetra() >= 2 :
+                if id == 3 :
+                    htmltext = "31561-01.htm"
     return htmltext
 
  def onAttack (self, npc, st): #TODO: Instead of onAttack, this should best be \
@@ -134,6 +136,7 @@ class Quest (JQuest) :
 QUEST       = Quest(609,qn,"Magical Power of Water - Part 1")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
+COMPLETED 	= State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Wahkan)
