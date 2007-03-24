@@ -31,7 +31,7 @@ class Quest (JQuest) :
     elif event == "32069-06.htm" :
        if st.getQuestItemsCount(DESTROYED_GOLEM_SHARD) >= 500:
           st.takeItems(DESTROYED_GOLEM_SHARD,500)
-          if ALT_RP_100 :
+          if ALT_RP_100 == 0 :
             item = RECIPES_60[st.getRandom(len(RECIPES_60))]
           else :
             item = RECIPES_100[st.getRandom(len(RECIPES_100))]
