@@ -59,77 +59,89 @@ class Quest (JQuest) :
            htmltext = "31561-02.htm"
    return htmltext
 
- def onTalk (self, npc, st):
-    npcId = npc.getNpcId()
+ def onTalk (self, npc, player):
+    st = player.getQuestState(qn)
     htmltext = "<html><head><body>I have nothing to say you</body></html>"
-    cond = st.getInt("cond")
-    id = st.getInt("id")
-    aggro = st.getInt("aggro")
-    Green_Totem = st.getQuestItemsCount(Totem)
-    Stone = st.getQuestItemsCount(Wisdom_Stone)
-    if st.getInt("onlyone") != 1 :
-        if npcId == Wahkan :
-            if Stone :
-                htmltext = "<html><head><body>You already have the stone!</body></html>"
-            else :
-                if st.getState()== CREATED :
-                    htmltext = "31371-01.htm"
-                elif id == 2 :
-                    htmltext = "31371-05.htm"
-        elif npcId == Asefa :
-            if st.getPlayer().getAllianceWithVarkaKetra() >= 2 :
-                if id == 2 :
-                    htmltext = "31372-01.htm"
-                    st.set("cond","2")
-                    st.set("id","3")
-                elif id == 3 :
-                    htmltext = "31372-02.htm"
-                elif id == 4 or aggro == 1 :
-                    htmltext = "31372-03.htm"
-                    st.set("id","3")
-                    st.set("aggro","0")
-                elif id == 5 and Green_Totem :
-                    htmltext = "31372-04.htm"
-                    st.giveItems(Wisdom_Stone,1)
-                    st.giveItems(Totem2,1)
-                    st.takeItems(Totem,1)
-                    st.unset("id")
-                    st.unset("aggro")
-                    st.playSound("ItemSound.quest_middle")
-                    st.setState(COMPLETED)
-                    st.set("onlyone","1")
-        elif npcId == Udan_Box :
-            if st.getPlayer().getAllianceWithVarkaKetra() >= 2 :
-                if id == 3 :
-                    htmltext = "31561-01.htm"
+    if st :
+	    npcId = npc.getNpcId()
+	    cond = st.getInt("cond")
+	    id = st.getInt("id")
+	    aggro = st.getInt("aggro")
+	    Green_Totem = st.getQuestItemsCount(Totem)
+	    Stone = st.getQuestItemsCount(Wisdom_Stone)
+	    if st.getInt("onlyone") != 1 :
+	    	if st.getState() == CREATED :
+		        if npcId == Wahkan :
+		            if Stone :
+		                htmltext = "<html><head><body>You already have the stone!</body></html>"
+		            else :
+		                htmltext = "31371-01.htm"
+		    elif st.getState() == STARTED :
+			    if npcId == Wahkan :
+			            if Stone :
+			                htmltext = "<html><head><body>You already have the stone!</body></html>"
+		                elif id == 2 :
+		                    htmltext = "31371-05.htm"
+		        elif npcId == Asefa :
+		            if st.getPlayer().getAllianceWithVarkaKetra() >= 2 :
+		                if id == 2 :
+		                    htmltext = "31372-01.htm"
+		                    st.set("cond","2")
+		                    st.set("id","3")
+		                elif id == 3 :
+		                    htmltext = "31372-02.htm"
+		                elif id == 4 or aggro == 1 :
+		                    htmltext = "31372-03.htm"
+		                    st.set("id","3")
+		                    st.set("aggro","0")
+		                elif id == 5 and Green_Totem :
+		                    htmltext = "31372-04.htm"
+		                    st.giveItems(Wisdom_Stone,1)
+		                    st.giveItems(Totem2,1)
+		                    st.takeItems(Totem,1)
+		                    st.unset("id")
+		                    st.unset("aggro")
+		                    st.playSound("ItemSound.quest_middle")
+		                    st.setState(COMPLETED)
+		                    st.set("onlyone","1")
+		        elif npcId == Udan_Box :
+		            if st.getPlayer().getAllianceWithVarkaKetra() >= 2 :
+		                if id == 3 :
+		                    htmltext = "31561-01.htm"
     return htmltext
 
- def onAttack (self, npc, st): #TODO: Instead of onAttack, this should best be \
-    npcId = npc.getNpcId()     #onAgro/onSee. Change this when supported.
-    cond = st.getInt("cond")
-    id = st.getInt("id")
-    aggro = st.getInt("aggro")
-    Red_Totem = st.getQuestItemsCount(Totem)
-    if npcId in Varka_Mobs :
-        if id > 2 :
-            st.set("aggro","1")
-            st.set("cond","1")
-            st.set("id","4")
-            if Red_Totem :
-                st.takeItems(Totem,-1)
+ def onAttack (self, npc, player):
+    st = player.getQuestState(qn)
+    if st :
+   	   if st.getState() == STARTED :
+		    npcId = npc.getNpcId()
+		    cond = st.getInt("cond")
+		    id = st.getInt("id")
+		    aggro = st.getInt("aggro")
+		    Red_Totem = st.getQuestItemsCount(Totem)
+		    if npcId in Varka_Mobs :
+		        if id > 2 :
+		            st.set("aggro","1")
+		            st.set("cond","1")
+		            st.set("id","4")
+		            if Red_Totem :
+		                st.takeItems(Totem,-1)
     return
 
- def onKill (self, npc, st):
-    npcId = npc.getNpcId()
-    cond = st.getInt("cond")
-    id = st.getInt("id")
-    Red_Totem = st.getQuestItemsCount(Totem)
-    if npcId in Ketra_Orcs :
-        st.unset("id")
-        st.unset("aggro")
-        st.exitQuest(1)
-        if Red_Totem:
-            st.takeItems(Totem,-1)
+ def onKill (self, npc, player):
+    st = player.getQuestState(qn)
+    if st :
+   	   if st.getState() == STARTED :
+		    npcId = npc.getNpcId()
+		    cond = st.getInt("cond")
+		    id = st.getInt("id")
+		    Red_Totem = st.getQuestItemsCount(Totem)
+		    if npcId in Ketra_Orcs :
+		        st.unset("id")
+		        st.unset("aggro")
+		        st.exitQuest(1)
+		        if Red_Totem:
+		            st.takeItems(Totem,-1)
     return
 
 
@@ -140,16 +152,14 @@ COMPLETED 	= State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Wahkan)
-
-CREATED.addTalkId(Wahkan)
-STARTED.addTalkId(Wahkan)
-STARTED.addTalkId(Asefa)
-STARTED.addTalkId(Udan_Box)
+QUEST.addTalkId(Wahkan)
+QUEST.addTalkId(Asefa)
+QUEST.addTalkId(Udan_Box)
 
 STARTED.addQuestDrop(Udan_Box,Totem,1)
 for mobId in Varka_Mobs:
-    STARTED.addAttackId(mobId)
+    QUEST.addAttackId(mobId)
 for mobId in Ketra_Orcs:
-    STARTED.addKillId(mobId)
+    QUEST.addKillId(mobId)
 
 print "importing quests: 609: Magical Power of Water - Part 1"

@@ -56,44 +56,48 @@ class Quest (JQuest) :
         htmltext = "31683-4a.htm"
    return htmltext
 
- def onTalk (self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   cond = st.getInt("cond")
-   if cond == 0 :
-      htmltext = "31683-0.htm"
-   elif cond == 1 :
-      htmltext = "31683-2.htm"
-   elif cond == 2 :
-      htmltext = "31683-3.htm"
+   st = player.getQuestState(qn)
+   if st :
+	   cond = st.getInt("cond")
+	   if cond == 0 :
+	      htmltext = "31683-0.htm"
+	   elif cond == 1 :
+	      htmltext = "31683-2.htm"
+	   elif cond == 2 :
+	      htmltext = "31683-3.htm"
    return htmltext
 
- def onKill (self,npc,st):
-   count = st.getQuestItemsCount(EYE_OF_DARKNESS)
-   chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
-   numItems, chance = divmod(chance,100)
-   if st.getInt("cond") == 1 :
-     if st.getRandom(100) < chance :
-         numItems = numItems + 1
-     if count+numItems>=100 :
-        numItems =100-count
-        st.playSound("ItemSound.quest_middle")
-        st.set("cond","2")
-     else :
-        st.playSound("ItemSound.quest_itemget")
-     st.giveItems(EYE_OF_DARKNESS,int(numItems))
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if st :
+      if st.getState() == STARTED :	
+		   count = st.getQuestItemsCount(EYE_OF_DARKNESS)
+		   chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
+		   numItems, chance = divmod(chance,100)
+		   if st.getInt("cond") == 1 :
+		     if st.getRandom(100) < chance :
+		         numItems = numItems + 1
+		     if count+numItems>=100 :
+		        numItems =100-count
+		        st.playSound("ItemSound.quest_middle")
+		        st.set("cond","2")
+		     else :
+		        st.playSound("ItemSound.quest_itemget")
+		     st.giveItems(EYE_OF_DARKNESS,int(numItems))
    return
 
 QUEST       = Quest(602,qn,"Shadow Of Light")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST,True)
+STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(EYE_OF_ARGOS)
-CREATED.addTalkId(EYE_OF_ARGOS)
-STARTED.addTalkId(EYE_OF_ARGOS)
+QUEST.addTalkId(EYE_OF_ARGOS)
 
 for i in MOBS :
-  STARTED.addKillId(i)
+  QUEST.addKillId(i)
 
 STARTED.addQuestDrop(EYE_OF_ARGOS,EYE_OF_DARKNESS,1)
 

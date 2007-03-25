@@ -78,96 +78,99 @@ class Quest (JQuest) :
           htmltext = "You don't have required items"
     return htmltext
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (Self,npc,player):
+   st = player.getQuestState(qn)
    htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
-   cond = st.getInt("cond")
-   id = st.getState()
-   if id == COMPLETED :
-     st.setState(STARTED)
-     st.set("cond","3")
-   chitin1=st.getQuestItemsCount(CHITIN)
-   chitin2=st.getQuestItemsCount(CHITIN2)
-   if cond == 0 : #Starting the quest
-      if st.getPlayer().getLevel()>= 66 : #Succesful start: Kill Splinter Stakato
-         htmltext = "31554-02.htm"
-         st.set("cond","1")
-         st.setState(STARTED)
-         st.playSound("ItemSound.quest_accept")
-      else :
-         htmltext = "31554-01.htm" #not qualified
-         st.exitQuest(1)
-   elif cond == 1 : #Bringin Splinter Stakato chitins
-      if npcId == KAHMAN :
-         if chitin1>=count :
-            htmltext = "31554-03.htm" #Enough. Ready to give
-         else:
-            htmltext = "31554-03a.htm" # Need more chitins
-   elif cond == 2 : # Bring more chitins of Splinter and Needle Stakato
-      if npcId == ABERCROMBIE : # Trader: first multisell
-         htmltext = "31555-1.htm" 
-         return htmltext
-      if npcId == SELINA : # Buffer: not qualified
-         return htmltext
-      elif chitin1>=count and chitin2>=count : #Enough chitins. Ending the quest, Soldier mark.
-         htmltext = "31554-05.htm"
-         st.takeItems(CHITIN,-1)
-         st.takeItems(CHITIN2,-1)
-         st.takeItems(RECRUIT,1)
-         st.giveItems(SOLDIER,1)
-         st.set("cond","3")
-         st.playSound("ItemSound.quest_finish")
-      elif not chitin1 and not chitin2: #Have no chitins. Can stop the quest
-         htmltext = "31554-04b.htm"
-      else :
-         htmltext = "31554-04a.htm" #Not enough chitins. Bring more
-   elif cond == 3 : #Soldier mark - last stage
-      htmltext = "31554-05a.htm" #Can stop the quest
-      if npcId == ABERCROMBIE :
-         htmltext = "31555-2.htm" #Trader: second multisell
-      elif npcId == SELINA :
-         htmltext = "31556-1.htm" #Buffer: buffs list
+   if st :
+	   npcId = npc.getNpcId()
+	   cond = st.getInt("cond")
+	   id = st.getState()
+	   if id == COMPLETED :
+	     st.setState(STARTED)
+	     st.set("cond","3")
+	   chitin1=st.getQuestItemsCount(CHITIN)
+	   chitin2=st.getQuestItemsCount(CHITIN2)
+	   if cond == 0 : #Starting the quest
+	      if st.getPlayer().getLevel()>= 66 : #Succesful start: Kill Splinter Stakato
+	         htmltext = "31554-02.htm"
+	         st.set("cond","1")
+	         st.setState(STARTED)
+	         st.playSound("ItemSound.quest_accept")
+	      else :
+	         htmltext = "31554-01.htm" #not qualified
+	         st.exitQuest(1)
+	   elif id == STARTED :
+		   if cond == 1 : #Bringin Splinter Stakato chitins
+		      if npcId == KAHMAN :
+		         if chitin1>=count :
+		            htmltext = "31554-03.htm" #Enough. Ready to give
+		         else:
+		            htmltext = "31554-03a.htm" # Need more chitins
+		   elif cond == 2 : # Bring more chitins of Splinter and Needle Stakato
+		      if npcId == ABERCROMBIE : # Trader: first multisell
+		         htmltext = "31555-1.htm" 
+		         return htmltext
+		      if npcId == SELINA : # Buffer: not qualified
+		         return htmltext
+		      elif chitin1>=count and chitin2>=count : #Enough chitins. Ending the quest, Soldier mark.
+		         htmltext = "31554-05.htm"
+		         st.takeItems(CHITIN,-1)
+		         st.takeItems(CHITIN2,-1)
+		         st.takeItems(RECRUIT,1)
+		         st.giveItems(SOLDIER,1)
+		         st.set("cond","3")
+		         st.playSound("ItemSound.quest_finish")
+		      elif not chitin1 and not chitin2: #Have no chitins. Can stop the quest
+		         htmltext = "31554-04b.htm"
+		      else :
+		         htmltext = "31554-04a.htm" #Not enough chitins. Bring more
+		   elif cond == 3 : #Soldier mark - last stage
+		      htmltext = "31554-05a.htm" #Can stop the quest
+		      if npcId == ABERCROMBIE :
+		         htmltext = "31555-2.htm" #Trader: second multisell
+		      elif npcId == SELINA :
+		         htmltext = "31556-1.htm" #Buffer: buffs list
    return htmltext
 
- def onKill (Self,npc,st):
-   npcId = npc.getNpcId()
-   cond = st.getInt("cond")
-   chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
-   numItems, chance = divmod(chance,MAX)
-   if st.getRandom(100) <chance :
-       numItems = numItems + 1
-   item = 0
-   if cond in [1,2] and npcId in range(21508,21513): #Splinter Stakatos
-       item = CHITIN       
-   elif cond==2 and npcId in range(21513,21518): #Needle Stakatos
-       item = CHITIN2
-   if item :
-       prevItems = st.getQuestItemsCount(item)
-       if count <= (prevItems + numItems) : #100 is maximum
-           numItems = count - prevItems
-       else :
-           st.playSound("ItemSound.quest_itemget")
-       st.giveItems(item,int(numItems))
+ def onKill (Self,npc,player):
+   st = player.getQuestState(qn)
+   if st :
+   	   if st.getState() == STARTED :
+		   npcId = npc.getNpcId()
+		   cond = st.getInt("cond")
+		   chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
+		   numItems, chance = divmod(chance,MAX)
+		   if st.getRandom(100) <chance :
+		       numItems = numItems + 1
+		   item = 0
+		   if cond in [1,2] and npcId in range(21508,21513): #Splinter Stakatos
+		       item = CHITIN       
+		   elif cond==2 and npcId in range(21513,21518): #Needle Stakatos
+		       item = CHITIN2
+		   if item :
+		       prevItems = st.getQuestItemsCount(item)
+		       if count <= (prevItems + numItems) : #100 is maximum
+		           numItems = count - prevItems
+		       else :
+		           st.playSound("ItemSound.quest_itemget")
+		       st.giveItems(item,int(numItems))
    return
            
 QUEST       = Quest(628,qn,"Hunt of the Golden Ram Mercenary Force")
 CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST,True)
-STARTED     = State('Started', QUEST,True)
+STARTING    = State('Starting', QUEST)
+STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(KAHMAN)
 
-CREATED.addTalkId(KAHMAN)
-STARTING.addTalkId(KAHMAN)
-STARTED.addTalkId(KAHMAN)
-STARTED.addTalkId(ABERCROMBIE)
-STARTED.addTalkId(SELINA)
-COMPLETED.addTalkId(KAHMAN)
+QUEST.addTalkId(KAHMAN)
+QUEST.addTalkId(ABERCROMBIE)
+QUEST.addTalkId(SELINA)
 
 for mob in range(21508,21518):
-    STARTED.addKillId(mob)
+    QUEST.addKillId(mob)
 
 for item in range(7246,7250):
     STARTED.addQuestDrop(KAHMAN,item,1)

@@ -31,26 +31,29 @@ class Quest (JQuest) :
        st.setState(COMPLETED)
     return htmltext
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say to you</body></html>"
-   id = st.getState()
-   cond = st.getInt("cond")
-   if npcId == ELIYAH :
-      if cond == 0 and id == CREATED:
-         if st.getPlayer().getLevel()>72 :
-            htmltext = "31329-02.htm"
-         else:
-            htmltext = "31329-01.htm"
-            st.exitQuest(1)
-      else :
-         htmltext = "31329-05.htm"
-   elif npcId == FLAURON :
-      if cond == 1 :
-         htmltext = "32010-01.htm"
-         st.set("cond","2")
-      else :
-         htmltext = "32010-03.htm"
+ def onTalk (Self,npc,player):
+   st = player.getQuestState(qn)
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   if st :
+	   npcId = npc.getNpcId()
+	   id = st.getState()
+	   cond = st.getInt("cond")
+	   if cond == 0 and id == CREATED:
+	   	   if npcId == ELIYAH :
+	          if st.getPlayer().getLevel()>72 :
+	             htmltext = "31329-02.htm"
+	          else:
+	             htmltext = "31329-01.htm"
+	            st.exitQuest(1)
+	   elif id == STARTED :
+	       if npcId == ELIYAH :
+	          htmltext = "31329-05.htm"
+		   elif npcId == FLAURON :
+		      if cond == 1 :
+		         htmltext = "32010-01.htm"
+		         st.set("cond","2")
+		      else :
+		         htmltext = "32010-03.htm"
    return htmltext
 
 
@@ -62,8 +65,7 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(ELIYAH)
 
-CREATED.addTalkId(ELIYAH)
-STARTED.addTalkId(ELIYAH)
-STARTED.addTalkId(FLAURON)
+QUEST.addTalkId(ELIYAH)
+QUEST.addTalkId(FLAURON)
 
 print "importing quests: 636: The Truth Beyond the Gate"

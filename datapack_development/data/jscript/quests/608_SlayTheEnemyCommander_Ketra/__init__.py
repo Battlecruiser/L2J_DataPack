@@ -43,34 +43,39 @@ class Quest (JQuest) :
        st.exitQuest(1)
    return htmltext
 
- def onTalk (self,npc,st):
-    npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
     htmltext = "<html><head><body>I have nothing to say you</body></html>"
-    cond = st.getInt("cond")
-    Head = st.getQuestItemsCount(Mos_Head)
-    Wisdom = st.getQuestItemsCount(Wisdom_Totem)
-    if npcId == Kadun :
-        if Wisdom == 0 :
-            if Head == 0:
-                if cond != 1 :
-                    htmltext = "31370-01.htm"
-                else:
-                    htmltext = "31370-06.htm"
-            else :
-                htmltext = "31370-05.htm"
-        #else:
-            #htmltext="<html><head><body>This quest has already been completed</body></html>"
+	st = player.getQuestState(qn)
+    if st :
+	    npcId = npc.getNpcId()
+	    cond = st.getInt("cond")
+	    Head = st.getQuestItemsCount(Mos_Head)
+	    Wisdom = st.getQuestItemsCount(Wisdom_Totem)
+	    if npcId == Kadun :
+	        if Wisdom == 0 :
+	            if Head == 0:
+	                if cond != 1 :
+	                    htmltext = "31370-01.htm"
+	                else:
+	                    htmltext = "31370-06.htm"
+	            else :
+	                htmltext = "31370-05.htm"
+	        #else:
+	            #htmltext="<html><head><body>This quest has already been completed</body></html>"
     return htmltext
 
- def onKill (self,npc,st):
-    npcId = npc.getNpcId()
-    cond = st.getInt("cond")
-    if npcId == Mos :
-        if st.getPlayer().isAlliedWithKetra() :
-            if cond == 1:
-                if st.getPlayer().getAllianceWithVarkaKetra() == 4 and st.getQuestItemsCount(Ketra_Alliance_Four) :
-                    st.giveItems(Mos_Head,1)
-                    st.set("cond","2")
+ def onKill (self,npc,player):
+    st = player.getQuestState(qn)
+    if st :
+    	if st.getState() == STARTED :
+		    npcId = npc.getNpcId()
+		    cond = st.getInt("cond")
+		    if npcId == Mos :
+		        if st.getPlayer().isAlliedWithKetra() :
+		            if cond == 1:
+		                if st.getPlayer().getAllianceWithVarkaKetra() == 4 and st.getQuestItemsCount(Ketra_Alliance_Four) :
+		                    st.giveItems(Mos_Head,1)
+		                    st.set("cond","2")
     return
 
 QUEST       = Quest(608,qn,"Slay The Enemy Commander!")
@@ -79,11 +84,9 @@ STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Kadun)
-
-CREATED.addTalkId(Kadun)
-STARTED.addTalkId(Kadun)
+QUEST.addTalkId(Kadun)
 
 STARTED.addQuestDrop(Mos,Mos_Head,1)
-STARTED.addKillId(Mos)
+QUEST.addKillId(Mos)
 
 print "importing quests: 608: Slay The Enemy Commander! (Ketra)"
