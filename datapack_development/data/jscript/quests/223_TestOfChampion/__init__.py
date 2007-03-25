@@ -95,11 +95,15 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if npcId != 30624 and id != STARTED : return htmltext
+   if id == CREATED :
      st.set("cond","0")
      st.set("step","0")
    if npcId == 30624 and st.getInt("step") == 0 :
@@ -186,7 +190,11 @@ class Quest (JQuest) :
    return htmltext
 
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    step, maxcount, chance, itemid = DROPLIST[npcId]
    if int(st.get("step")) == step and st.getQuestItemsCount(itemid) < maxcount and st.getRandom(100) < chance:
@@ -208,15 +216,13 @@ COMPLETED = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30624)
 
-CREATED.addTalkId(30624)
-STARTING.addTalkId(30624)
-COMPLETED.addTalkId(30624)
+QUEST.addTalkId(30624)
 
-for npcId in [30093,30196,30624,30625]:
-    STARTED.addTalkId(npcId)
+for npcId in [30093,30196,30625]:
+    QUEST.addTalkId(npcId)
 
 for mobId in [20145,20158,27088,27089,20551,20553,20577,20578,20579,20580,20581,20582,20780]:
-    STARTED.addKillId(mobId)
+    QUEST.addKillId(mobId)
 
 for item in range(3277,3293):
     STARTED.addQuestDrop(30093,item,1)

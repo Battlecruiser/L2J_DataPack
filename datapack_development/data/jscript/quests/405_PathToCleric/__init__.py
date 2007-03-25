@@ -43,10 +43,15 @@ class Quest (JQuest) :
             htmltext = "30022-04.htm"
     return htmltext
 
-
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
 
    npcId = npc.getNpcId()
+   id = st.getState()
+   if npcId != 30022 and id != STARTED : return htmltext
+   npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
@@ -136,8 +141,11 @@ class Quest (JQuest) :
             htmltext = "30017-02.htm"
    return htmltext
 
- def onKill (self,npc,st):
-
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if npcId == 20026 :
         st.set("id","0")
@@ -161,17 +169,16 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30022)
 
-STARTING.addTalkId(30022)
+QUEST.addTalkId(30022)
 
-STARTED.addTalkId(30017)
-STARTED.addTalkId(30022)
-STARTED.addTalkId(30030)
-STARTED.addTalkId(30253)
-STARTED.addTalkId(30333)
-STARTED.addTalkId(30408)
+QUEST.addTalkId(30017)
+QUEST.addTalkId(30030)
+QUEST.addTalkId(30253)
+QUEST.addTalkId(30333)
+QUEST.addTalkId(30408)
 
-STARTED.addKillId(20026)
-STARTED.addKillId(20029)
+QUEST.addKillId(20026)
+QUEST.addKillId(20029)
 
 STARTED.addQuestDrop(30408,LEMONIELLS_COVENANT_ID,1)
 STARTED.addQuestDrop(30022,LETTER_OF_ORDER2_ID,1)

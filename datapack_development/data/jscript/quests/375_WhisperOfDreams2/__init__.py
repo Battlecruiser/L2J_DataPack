@@ -28,7 +28,7 @@ default   = "<html><head><body>I have nothing to say to you.</body></html>"
 MANAKIA = 30515
  
 #Mobs & Drop
-DROPLIST = {20624:[CH_SKULL],20629:[K_HORN]}
+DROPLIST = {20624:[CH_SKULL,"awaitSkull"],20629:[K_HORN,"awaitHorn"]}
  
 class Quest (JQuest) :
  
@@ -40,6 +40,8 @@ class Quest (JQuest) :
        if st.getQuestItemsCount(MSTONE):
          st.takeItems(MSTONE,1)
          st.setState(STARTED)
+         st.set("awaitSkull","1")
+         st.set("awaitHorn","1")
          st.set("cond","1")
          st.playSound("ItemSound.quest_accept")
        else:
@@ -49,8 +51,12 @@ class Quest (JQuest) :
        st.exitQuest(1)
     return htmltext
  
- def onTalk (self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = default
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
       st.set("cond","0")
@@ -73,14 +79,18 @@ class Quest (JQuest) :
          htmltext = "30515-5.htm"
    return htmltext
  
- def onKill (self,npc,st) :
+ def onKill (self,npc,player) :
     npcid = npc.getNpcId()
-    item  = DROPLIST[npcid][0]
+    item, partyCond  = DROPLIST[npcid]
+    partyMember = self.getRandomPartyMember(player, partyCond, "1")
+    if not partyMember : return
+    st = partyMember.getQuestState(qn)
     count = st.getQuestItemsCount(item)
     if count < 100 :
        st.giveItems(item,1)
        if count + 1 >= 100 :
           st.playSound("ItemSound.quest_middle")
+          st.unset(partyCond)
        else :
           st.playSound("ItemSound.quest_itemget")
     return  
@@ -89,7 +99,7 @@ class Quest (JQuest) :
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
  
 CREATED     = State('Start',     QUEST)
-STARTED     = State('Started',   QUEST,True)
+STARTED     = State('Started',   QUEST)
 COMPLETED   = State('Completed', QUEST)
  
 QUEST.setInitialState(CREATED)
@@ -97,11 +107,10 @@ QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
 QUEST.addStartNpc(MANAKIA)
 # Quest initialization
-CREATED.addTalkId(MANAKIA)
-STARTED.addTalkId(MANAKIA)
+QUEST.addTalkId(MANAKIA)
  
 for i in DROPLIST.keys() :
-  STARTED.addKillId(i)
+  QUEST.addKillId(i)
   STARTED.addQuestDrop(i,DROPLIST[i][0],1)
  
 print str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

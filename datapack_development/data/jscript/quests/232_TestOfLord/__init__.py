@@ -144,10 +144,15 @@ class Quest (JQuest) :
 				htmltext = "30643-03.htm"
 		return htmltext
 		
-	def onTalk (self,npc,st):
-		npcId = npc.getNpcId()
+	def onTalk (self,npc,player):
 		htmltext = "<html><head><body>I have nothing to say you</body></html>"
+		st = player.getQuestState(qn)
+		if not st : return htmltext
+
+		npcId = npc.getNpcId()
 		id = st.getState()
+		if npcId != NPC[4] and id != STARTED : return htmltext
+		
 		if id == CREATED:
 			for var in STATS[1]:
 			 st.set(var,"0")
@@ -329,7 +334,11 @@ class Quest (JQuest) :
 						htmltext = "30565-11.htm"
 		return htmltext			
 
-	def onKill (self,npc,st):
+	def onKill (self,npc,player):
+		st = player.getQuestState(qn)
+		if not st : return 
+		if st.getState() != STARTED : return 
+
 		npcId = npc.getNpcId()
 		var,value,newValue,chance,maxcount,item=DROPLIST[npcId]
 		random=st.getRandom(100)
@@ -358,26 +367,19 @@ class Quest (JQuest) :
 				st.playSound("ItemSound.quest_itemget")
 		return
 	
-	
-	
 QUEST     = Quest(232,qn,"Test Of Lord")
 CREATED   = State('Start', QUEST)
 STARTED   = State('Started', QUEST)
 COMPLETED = State('Completed', QUEST)
-	
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(NPC[4])
 
-CREATED.addTalkId(NPC[4])
-
-COMPLETED.addTalkId(NPC[4])
-
 for npcId in NPC:
-	STARTED.addTalkId(npcId)
+	QUEST.addTalkId(npcId)
 
 for mobId in MOBS:
-	STARTED.addKillId(mobId)
+	QUEST.addKillId(mobId)
 
 for item in range(3391,3417):
 	STARTED.addQuestDrop(NPC[4],item,1)

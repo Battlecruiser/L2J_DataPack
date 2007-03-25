@@ -30,10 +30,12 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
 
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
      st.setState(STARTING)
@@ -72,28 +74,29 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_finish")
           st.set("onlyone","1")
           st.giveItems(ADENA_ID,820)
-   elif npcId == 30360 and int(st.get("cond"))==1 and st.getQuestItemsCount(JENNIES_LETTER_ID)==1 :
-        htmltext = "30360-01.htm"
-        st.takeItems(JENNIES_LETTER_ID,1)
-        st.giveItems(SENTRY_BLADE1_ID,1)
-        st.giveItems(SENTRY_BLADE2_ID,1)
-        st.giveItems(SENTRY_BLADE3_ID,1)
-   elif npcId == 30360 and int(st.get("cond"))==1 and (st.getQuestItemsCount(SENTRY_BLADE1_ID)+st.getQuestItemsCount(SENTRY_BLADE2_ID)+st.getQuestItemsCount(SENTRY_BLADE3_ID))>0 :
-        htmltext = "30360-02.htm"
-   elif npcId == 30355 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE2_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==0 :
-        htmltext = "30355-01.htm"
-        st.takeItems(SENTRY_BLADE2_ID,1)
-        st.giveItems(OLD_BRONZE_SWORD_ID,1)
-   elif npcId == 30355 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE2_ID)==0 :
-        htmltext = "30355-02.htm"
-        st.takeItems(SENTRY_BLADE2_ID,1)
-   elif npcId == 30357 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE3_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==0 :
-        htmltext = "30357-01.htm"
-        st.takeItems(SENTRY_BLADE3_ID,1)
-        st.giveItems(OLD_BRONZE_SWORD_ID,1)
-   elif npcId == 30357 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE3_ID)==0 :
-        htmltext = "30357-02.htm"
-        st.takeItems(SENTRY_BLADE3_ID,1)
+   elif id == STARTED :       
+       if npcId == 30360 and int(st.get("cond"))==1 and st.getQuestItemsCount(JENNIES_LETTER_ID)==1 :
+            htmltext = "30360-01.htm"
+            st.takeItems(JENNIES_LETTER_ID,1)
+            st.giveItems(SENTRY_BLADE1_ID,1)
+            st.giveItems(SENTRY_BLADE2_ID,1)
+            st.giveItems(SENTRY_BLADE3_ID,1)
+       elif npcId == 30360 and int(st.get("cond"))==1 and (st.getQuestItemsCount(SENTRY_BLADE1_ID)+st.getQuestItemsCount(SENTRY_BLADE2_ID)+st.getQuestItemsCount(SENTRY_BLADE3_ID))>0 :
+            htmltext = "30360-02.htm"
+       elif npcId == 30355 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE2_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==0 :
+            htmltext = "30355-01.htm"
+            st.takeItems(SENTRY_BLADE2_ID,1)
+            st.giveItems(OLD_BRONZE_SWORD_ID,1)
+       elif npcId == 30355 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE2_ID)==0 :
+            htmltext = "30355-02.htm"
+            st.takeItems(SENTRY_BLADE2_ID,1)
+       elif npcId == 30357 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE3_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==0 :
+            htmltext = "30357-01.htm"
+            st.takeItems(SENTRY_BLADE3_ID,1)
+            st.giveItems(OLD_BRONZE_SWORD_ID,1)
+       elif npcId == 30357 and int(st.get("cond"))==1 and st.getQuestItemsCount(SENTRY_BLADE3_ID)==0 :
+            htmltext = "30357-02.htm"
+            st.takeItems(SENTRY_BLADE3_ID,1)
    return htmltext
 
 QUEST       = Quest(168,qn,"Deliver Supplies")
@@ -106,13 +109,11 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30349)
 
-STARTING.addTalkId(30349)
+QUEST.addTalkId(30349)
 
-STARTED.addTalkId(30349)
-STARTED.addTalkId(30355)
-STARTED.addTalkId(30357)
-STARTED.addTalkId(30360)
-
+QUEST.addTalkId(30355)
+QUEST.addTalkId(30357)
+QUEST.addTalkId(30360)
 
 STARTED.addQuestDrop(30360,SENTRY_BLADE1_ID,1)
 STARTED.addQuestDrop(30355,OLD_BRONZE_SWORD_ID,1)

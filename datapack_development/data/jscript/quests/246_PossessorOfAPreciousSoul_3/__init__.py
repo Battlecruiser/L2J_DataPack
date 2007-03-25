@@ -43,6 +43,8 @@ class Quest (JQuest) :
    if event == "31741-2.htm" :
      if cond == 1 :
        st.set("cond","2")
+       st.set("awaitsWaterbinder","1")
+       st.set("awaitsEvergreen","1")
        st.playSound("ItemSound.quest_middle")
    if event == "31741-5.htm" :
      if cond == 3 :
@@ -65,11 +67,15 @@ class Quest (JQuest) :
        st.setState(COMPLETED)
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   cond = st.getInt("cond")
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
    id = st.getState()
+   if npcId != CARADINE and id != STARTED : return htmltext
+
    if id == CREATED :
      st.set("cond","0")
    if st.getPlayer().isSubClassActive() :
@@ -99,50 +105,67 @@ class Quest (JQuest) :
        htmltext = "30721-1.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
    npcId = npc.getNpcId()
-   chance = st.getRandom(100)
-   cond = st.getInt("cond")
    if npcId == PILGRIM_OF_SPLENDOR :
-     if cond == 2 and st.getQuestItemsCount(WATERBINDER) < 1 :
-       if chance < CHANCE_FOR_DROP :
-         st.giveItems(WATERBINDER,1)
-         if st.getQuestItemsCount(EVERGREEN) < 1 :
-           st.playSound("ItemSound.quest_itemget")
-         else:
-           st.playSound("ItemSound.quest_middle")
-           st.set("cond","3")
-   if npcId == JUDGE_OF_SPLENDOR :
-     if cond == 2 and st.getQuestItemsCount(EVERGREEN) < 1 :
-       if chance < CHANCE_FOR_DROP :
-         st.giveItems(EVERGREEN,1)
+     #get a random party member who is doing this quest and needs this drop 
+     partyMember = self.getRandomPartyMember(player,"awaitsWaterbinder","1")
+     if partyMember :
+         st = partyMember.getQuestState(qn)
+         chance = st.getRandom(100)
+         cond = st.getInt("cond")
          if st.getQuestItemsCount(WATERBINDER) < 1 :
-           st.playSound("ItemSound.quest_itemget")
-         else:
-           st.playSound("ItemSound.quest_middle")
-           st.set("cond","3")
+           if chance < CHANCE_FOR_DROP :
+             st.giveItems(WATERBINDER,1)
+             st.unset("awaitsWaterbinder")
+             if st.getQuestItemsCount(EVERGREEN) < 1 :
+               st.playSound("ItemSound.quest_itemget")
+             else:
+               st.playSound("ItemSound.quest_middle")
+               st.set("cond","3")
+   if npcId == JUDGE_OF_SPLENDOR :
+     #get a random party member who is doing this quest and needs this drop 
+     partyMember = self.getRandomPartyMember(player,"awaitsEvergreen","1")
+     if partyMember :
+         st = partyMember.getQuestState(qn)
+         chance = st.getRandom(100)
+         cond = st.getInt("cond")
+         if cond == 2 and st.getQuestItemsCount(EVERGREEN) < 1 :
+           if chance < CHANCE_FOR_DROP :
+             st.giveItems(EVERGREEN,1)
+             st.unset("awaitsEvergreen")
+             if st.getQuestItemsCount(WATERBINDER) < 1 :
+               st.playSound("ItemSound.quest_itemget")
+             else:
+               st.playSound("ItemSound.quest_middle")
+               st.set("cond","3")
    if npcId == BARAKIEL :
-     if cond == 4 and st.getQuestItemsCount(RAIN_SONG) < 1 :
-       st.giveItems(RAIN_SONG,1)
-       st.playSound("ItemSound.quest_middle")
-       st.set("cond","5")
+     #get a random party member who is doing this quest and needs this drop (cond == 4)
+     partyMember = self.getRandomPartyMember(player,"4")
+     if partyMember :
+         st = partyMember.getQuestState(qn)
+         cond = st.getInt("cond")
+         if cond == 4 and st.getQuestItemsCount(RAIN_SONG) < 1 :
+           st.giveItems(RAIN_SONG,1)
+           st.playSound("ItemSound.quest_middle")
+           st.set("cond","5")
    return 
 
 QUEST       = Quest(246,qn,"Possessor Of A Precious Soul - 3")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST,True)
+STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(CARADINE)
-CREATED.addTalkId(CARADINE)
-STARTED.addTalkId(CARADINE)
-STARTED.addTalkId(OSSIAN)
-STARTED.addTalkId(LADD)
+QUEST.addTalkId(CARADINE)
 
-STARTED.addKillId(PILGRIM_OF_SPLENDOR)
-STARTED.addKillId(JUDGE_OF_SPLENDOR)
-STARTED.addKillId(BARAKIEL)
+QUEST.addTalkId(OSSIAN)
+QUEST.addTalkId(LADD)
+
+QUEST.addKillId(PILGRIM_OF_SPLENDOR)
+QUEST.addKillId(JUDGE_OF_SPLENDOR)
+QUEST.addKillId(BARAKIEL)
 
 STARTED.addQuestDrop(CARADINE,CARADINE_LETTER_LAST,1)
 STARTED.addQuestDrop(CARADINE,WATERBINDER,1)

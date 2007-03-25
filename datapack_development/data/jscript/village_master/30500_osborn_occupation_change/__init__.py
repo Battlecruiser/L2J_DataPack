@@ -7,7 +7,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
+qn = "30500_osborn_occupation_change"
 MARK_OF_RAIDER_ID   = 1592
 KHAVATARI_TOTEM_ID  = 1615
 MASK_OF_MEDIUM_ID   = 1631
@@ -101,8 +101,8 @@ class Quest (JQuest) :
    st.exitQuest(1)
    return htmltext
 
- def onTalk (Self,npc,st):
-
+ def onTalk (Self,npc,player):
+   st = player.getQuestState(qn)
    npcId = npc.getNpcId()
 
    Race    = st.getPlayer().getRace()
@@ -135,7 +135,7 @@ class Quest (JQuest) :
      st.exitQuest(1)
      return "30500-23.htm"
 
-QUEST   = Quest(30500,"30500_osborn_occupation_change","village_master")
+QUEST   = Quest(30500,qn,"village_master")
 CREATED   = State('Start',     QUEST)
 STARTED   = State('Started',   QUEST)
 COMPLETED = State('Completed', QUEST)
@@ -145,5 +145,5 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30500)
 QUEST.addStartNpc(32097)
 
-STARTED.addTalkId(30500)
-STARTED.addTalkId(32097)
+QUEST.addTalkId(30500)
+QUEST.addTalkId(32097)

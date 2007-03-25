@@ -27,8 +27,10 @@ class Quest (JQuest) :
      st.set("cond","3")
    return htmltext
 
- def onTalk (Self,npc,st) :
+ def onTalk (self,npc,player) :
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
    id = st.getState()
    cond = st.getInt("cond")
    if cond == 0 and st.getQuestItemsCount(SEWING_KIT) == 0 :
@@ -51,7 +53,11 @@ class Quest (JQuest) :
      st.exitQuest(1)
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return
+   
    count = st.getQuestItemsCount(REINFORCED_STEEL)
    if count < 5 :
      st.giveItems(REINFORCED_STEEL,1)
@@ -68,9 +74,8 @@ STARTED     = State('Started', QUEST,True)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30847)
-CREATED.addTalkId(30847)
-STARTED.addTalkId(30847)
-STARTED.addKillId(20566)
+QUEST.addTalkId(30847)
+QUEST.addKillId(20566)
 STARTED.addQuestDrop(20566,REINFORCED_STEEL,1)
 
 print "importing quests: 36: Make A Sewing Kit"

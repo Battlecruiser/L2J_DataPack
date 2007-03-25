@@ -24,6 +24,7 @@ class Quest (JQuest) :
    if event == "30612-1.htm" :
      st.set("cond","1")
      st.setState(STARTED)
+     st.set("awaitsPartyDrop","1")
      st.playSound("ItemSound.quest_accept")
    elif event == "30612-6.htm" :
      if st.getQuestItemsCount(CHAPTER_OF_FIRE) and \
@@ -41,8 +42,12 @@ class Quest (JQuest) :
      st.exitQuest(1)
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    cond=st.getInt("cond")
    if cond == 0 :
@@ -55,7 +60,11 @@ class Quest (JQuest) :
      htmltext = "30612-4.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   partyMember = self.getRandomPartyMember(player,"awaitsPartyDrop","1")
+   if not partyMember : return
+   st = partyMember.getQuestState(qn)
+
    chance = st.getRandom(100)
    if chance in range(1,15) and st.getQuestItemsCount(CHAPTER_OF_FIRE) == 0 :
      st.giveItems(CHAPTER_OF_FIRE,1)
@@ -71,18 +80,19 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")
    if st.getQuestItemsCount(CHAPTER_OF_FIRE) and st.getQuestItemsCount(CHAPTER_OF_WATER) and st.getQuestItemsCount(CHAPTER_OF_WIND) and st.getQuestItemsCount(CHAPTER_OF_EARTH) :
        st.playSound("ItemSound.quest_middle")
+       st.unset("awaitsPartyDrop")
    return
 
 QUEST       = Quest(370,qn,"A Wiseman Sows Seeds")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST,True)
+STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(CASIAN)
-CREATED.addTalkId(CASIAN)
-STARTED.addTalkId(CASIAN)
+QUEST.addTalkId(CASIAN)
+
 for i in MOBS :
-  STARTED.addKillId(i)
+  QUEST.addKillId(i)
 
 for i in range(5917,5921):
     STARTED.addQuestDrop(CASIAN,i,1)

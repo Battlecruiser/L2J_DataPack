@@ -53,11 +53,15 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if npcId != 30416 and id != STARTED : return htmltext
+   if id == CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
    if npcId == 30416 and int(st.get("cond"))==0 :
@@ -119,7 +123,11 @@ class Quest (JQuest) :
             htmltext = "30382-09.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if npcId == 27036 :
         if int(st.get("cond")) >= 1 and st.getQuestItemsCount(SHILENS_TEARS_ID) == 0 :
@@ -145,16 +153,13 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30416)
 
-CREATED.addTalkId(30416)
-STARTING.addTalkId(30416)
-COMPLETED.addTalkId(30416)
+QUEST.addTalkId(30416)
 
-STARTED.addTalkId(30382)
-STARTED.addTalkId(30416)
-STARTED.addTalkId(30419)
+QUEST.addTalkId(30382)
+QUEST.addTalkId(30419)
 
-STARTED.addKillId(20369)
-STARTED.addKillId(27036)
+QUEST.addKillId(20369)
+QUEST.addKillId(27036)
 
 STARTED.addQuestDrop(30419,ARKENIA_RECOMMEND_ID,1)
 STARTED.addQuestDrop(27036,SHILENS_TEARS_ID,1)

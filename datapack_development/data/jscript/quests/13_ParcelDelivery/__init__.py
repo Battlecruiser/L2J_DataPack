@@ -37,8 +37,11 @@ class Quest (JQuest) :
        htmltext = "You don't have required items"
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
@@ -54,7 +57,7 @@ class Quest (JQuest) :
        htmltext = "31274-0.htm"
    elif npcId == FUNDIN and cond == 1 :
      htmltext = "31274-2.htm"
-   elif npcId == VULCAN and cond == 1 :
+   elif npcId == VULCAN and cond == 1 and id = STARTED:
      htmltext = "31539-0.htm"
    return htmltext
 
@@ -65,9 +68,8 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(31274)
-CREATED.addTalkId(31274)
-STARTED.addTalkId(31274)
-STARTED.addTalkId(31539)
+QUEST.addTalkId(31274)
+QUEST.addTalkId(31539)
 
 STARTED.addQuestDrop(31539,PACKAGE,1)
 

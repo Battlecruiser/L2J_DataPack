@@ -19,15 +19,19 @@ class Quest (JQuest) :
      if event == "30926-02.htm" :
          st.set("cond","1")
          st.setState(STARTED)
+         st.set("awaitsPartyDrop","1")
          st.playSound("ItemSound.quest_accept")
      elif event == "30926-05.htm" :
          st.playSound("ItemSound.quest_finish")
          st.exitQuest(1)
      return htmltext
 
- def onTalk (Self,npc,st):
-     npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
      htmltext = "<html><head><body>I have nothing to say you</body></html>"
+     st = player.getQuestState(qn)
+     if not st : return htmltext
+
+     npcId = npc.getNpcId()
      id = st.getState()
      level = st.getPlayer().getLevel()
      cond = st.getInt("cond")
@@ -45,8 +49,15 @@ class Quest (JQuest) :
          st.takeItems(BLADE_STAKATO_FANG,-1)
          st.playSound("ItemSound.quest_middle")
      return htmltext
-
- def onKill (self,npc,st):
+    
+ def onKill (self,npc,player):
+     partyMember = self.getRandomPartyMember(player,"awaitsPartyDrop","1")
+     st = 0
+     if partyMember :
+         st = partyMember.getQuestState(qn)
+     if not st : return 
+     if st.getState() != STARTED : return 
+   
      npcId = npc.getNpcId()
      random = st.getRandom(100)
      chance = CHANCE + npcId - 20794
@@ -57,18 +68,17 @@ class Quest (JQuest) :
 
 QUEST       = Quest(368,qn,"Trespassing Into The Sacred Area")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST,True)
+STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30926)
 
-CREATED.addTalkId(30926)
-STARTED.addTalkId(30926)
+QUEST.addTalkId(30926)
 
 STARTED.addQuestDrop(30926,BLADE_STAKATO_FANG,1)
 
 for i in range(20794,20798) :
-    STARTED.addKillId(i)
+    QUEST.addKillId(i)
 
 print "importing quests: 368: Trespassing Into The Sacred Area"
 

@@ -71,12 +71,15 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
 
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
-   if id == CREATED :
+   if npcId != 30118 and id != STARTED : return htmltext
+   if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
      st.set("onlyone","0")
@@ -170,7 +173,11 @@ class Quest (JQuest) :
         htmltext = "30667-02.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if npcId == 27099 :
     if int(st.get("cond")) == 1 and st.getQuestItemsCount(RIPPED_DIARY) < 7 and st.getQuestItemsCount(BOOK_OF_REFORM) >= 1 :
@@ -231,14 +238,12 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30118)
 
-CREATED.addTalkId(30118)
-STARTING.addTalkId(30118)
-COMPLETED.addTalkId(30118)
+QUEST.addTalkId(30118)
 
-for npcId in [30118,30666,30667,30669,30670,30732,30668]:
- STARTED.addTalkId(npcId)
+for npcId in [30666,30667,30669,30670,30732,30668]:
+ QUEST.addTalkId(npcId)
 for mobId in [20100,20102,20104,20404,20022,27099,27128,27130,27129,27132,27131]:
- STARTED.addKillId(mobId)
+ QUEST.addKillId(mobId)
 for item in range(2822,2840)+[3037]:
  STARTED.addQuestDrop(20102,item,1)
 

@@ -85,11 +85,15 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
 
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
+   if npcId != 30502 and id != STARTED : return htmltext
+
    if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
@@ -157,8 +161,11 @@ class Quest (JQuest) :
         htmltext = "30593-06.htm"
    return htmltext
 
- def onKill (self,npc,st):
-
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if npcId == 20479 :
         st.set("id","0")
@@ -266,20 +273,19 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30585)
 
-STARTING.addTalkId(30585)
+QUEST.addTalkId(30585)
 
-STARTED.addTalkId(30502)
-STARTED.addTalkId(30585)
-STARTED.addTalkId(30592)
-STARTED.addTalkId(30593)
+QUEST.addTalkId(30502)
+QUEST.addTalkId(30592)
+QUEST.addTalkId(30593)
 
-STARTED.addKillId(20335)
-STARTED.addKillId(20038)
-STARTED.addKillId(20415)
-STARTED.addKillId(20043)
-STARTED.addKillId(20478)
-STARTED.addKillId(20479)
-STARTED.addKillId(27056)
+QUEST.addKillId(20335)
+QUEST.addKillId(20038)
+QUEST.addKillId(20415)
+QUEST.addKillId(20043)
+QUEST.addKillId(20478)
+QUEST.addKillId(20479)
+QUEST.addKillId(27056)
 
 STARTED.addQuestDrop(30592,TOTEM_SPIRIT_CLAW_ID,1)
 STARTED.addQuestDrop(30585,FIRE_CHARM_ID,1)

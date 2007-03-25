@@ -63,8 +63,10 @@ class Quest (JQuest) :
          htmltext = "You don't have enough materials"
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
    npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
@@ -77,22 +79,23 @@ class Quest (JQuest) :
      else:
        htmltext = "30842-2.htm"
        st.exitQuest(1)
-   elif npcId == 31520 and cond == 1 :
-     htmltext = "31520-0.htm"
-   elif npcId == 31521 and st.getQuestItemsCount(SIGNET_RING) :
-     st.takeItems(SIGNET_RING,1)
-     htmltext = "31521-0.htm"
-   elif npcId == 31627 and st.getQuestItemsCount(ICE_WINE) :
-     htmltext = "31627-0.htm"
-   elif npcId == 31521 and cond == 4 :
-     htmltext = "31521-2.htm"
-   elif npcId == 31520 and st.getQuestItemsCount(BOX_OF_COOKIES) :
-     st.takeItems(BOX_OF_COOKIES,1)
-     htmltext = "31520-2.htm"
-   elif npcId == 31520 and st.getQuestItemsCount(MYSTERIOUS_CLOTH) and st.getQuestItemsCount(JEWEL_BOX) and st.getQuestItemsCount(SEWING_KIT) :
-     htmltext = "31520-4.htm"
-   elif npcId == 31520 and st.getQuestItemsCount(DRESS_SHOES_BOX) :
-     htmltext = "31520-6.htm"
+   elif id = STARTED :    
+       elif npcId == 31520 and cond == 1 :
+         htmltext = "31520-0.htm"
+       elif npcId == 31521 and st.getQuestItemsCount(SIGNET_RING) :
+         st.takeItems(SIGNET_RING,1)
+         htmltext = "31521-0.htm"
+       elif npcId == 31627 and st.getQuestItemsCount(ICE_WINE) :
+         htmltext = "31627-0.htm"
+       elif npcId == 31521 and cond == 4 :
+         htmltext = "31521-2.htm"
+       elif npcId == 31520 and st.getQuestItemsCount(BOX_OF_COOKIES) :
+         st.takeItems(BOX_OF_COOKIES,1)
+         htmltext = "31520-2.htm"
+       elif npcId == 31520 and st.getQuestItemsCount(MYSTERIOUS_CLOTH) and st.getQuestItemsCount(JEWEL_BOX) and st.getQuestItemsCount(SEWING_KIT) :
+         htmltext = "31520-4.htm"
+       elif npcId == 31520 and st.getQuestItemsCount(DRESS_SHOES_BOX) :
+         htmltext = "31520-6.htm"
    return htmltext
 
 QUEST       = Quest(37,qn,"Please Make Me Formal Wear")
@@ -102,9 +105,10 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30842)
-CREATED.addTalkId(30842)
-STARTED.addTalkId(31520)
-STARTED.addTalkId(31521)
-STARTED.addTalkId(31627)
+QUEST.addTalkId(30842)
+
+QUEST.addTalkId(31520)
+QUEST.addTalkId(31521)
+QUEST.addTalkId(31627)
 
 print "importing quests: 37: Please Make Me Formal Wear"

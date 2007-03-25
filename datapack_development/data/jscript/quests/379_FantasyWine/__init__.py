@@ -47,8 +47,11 @@ class Quest (JQuest) :
      st.exitQuest(1)
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    cond = st.getInt("cond")
    leaf = st.getQuestItemsCount(LEAF)
    stone = st.getQuestItemsCount(STONE)
@@ -69,7 +72,11 @@ class Quest (JQuest) :
        htmltext = "30074-5.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    chance = st.getRandom(100)
    npcId = npc.getNpcId()
    if npcId == ENKU_CHAMPION and chance < CHANCE and st.getQuestItemsCount(LEAF) < 80 :
@@ -94,11 +101,10 @@ STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(HARLAN)
-CREATED.addTalkId(HARLAN)
-STARTED.addTalkId(HARLAN)
+QUEST.addTalkId(HARLAN)
 
-STARTED.addKillId(ENKU_CHAMPION)
-STARTED.addKillId(ENKU_SHAMAN)
+QUEST.addKillId(ENKU_CHAMPION)
+QUEST.addKillId(ENKU_SHAMAN)
 
 STARTED.addQuestDrop(HARLAN,LEAF,1)
 STARTED.addQuestDrop(HARLAN,STONE,1)

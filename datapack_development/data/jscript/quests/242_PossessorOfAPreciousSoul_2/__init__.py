@@ -75,17 +75,23 @@ class Quest (JQuest) :
    if event == "30759-5.htm" :
      if cond == 8 :
        st.set("cond","9")
+       st.set("awaitsDrops","1")
        st.takeItems(GOLDEN_HAIR,1)
        st.takeItems(SORCERY_INGREDIENT,1)
        st.playSound("ItemSound.quest_middle")
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   chance = st.getRandom(100)
-   cornerstones = st.getInt("cornerstones")
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
    id = st.getState()
+   if npcId != VIRGIL and id != STARTED : return htmltext
+
+   chance = st.getRandom(100)
+   cornerstones = st.getInt("cornerstones")
    if id == CREATED :
      st.set("cond","0")
      st.set("cornerstones","0")
@@ -176,32 +182,37 @@ class Quest (JQuest) :
        st.setState(COMPLETED)
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+    # get a random party member that awaits for drops from this quest 
+    partyMember = self.getRandomPartyMember(player,"awaitsDrops","1")
+    st = partyMember.getQuestState(qn)
     if int(st.get("cond")) == 9 and st.getQuestItemsCount(ORB_oF_BINDING) <= 4 :
       st.giveItems(ORB_oF_BINDING,1)
       st.playSound("ItemSound.quest_itemget")
+      if st.getQuestItemsCount(ORB_oF_BINDING) == 5 :
+          st.set("awaitsDrops","0")
     return 
 
 QUEST       = Quest(242,qn,"Possessor Of A Precious Soul - 2")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST,True)
+STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(VIRGIL)
-CREATED.addTalkId(VIRGIL)
-STARTED.addTalkId(VIRGIL)
-STARTED.addTalkId(KASSANDRA)
-STARTED.addTalkId(OGMAR)
-STARTED.addTalkId(MYSTERIOUS_KNIGHT)
-STARTED.addTalkId(ANGEL_CORPSE)
-STARTED.addTalkId(KALIS)
-STARTED.addTalkId(MATILD)
-STARTED.addTalkId(FALLEN_UNICORN)
-STARTED.addTalkId(CORNERSTONE)
-STARTED.addTalkId(PURE_UNICORN)
+QUEST.addTalkId(VIRGIL)
 
-STARTED.addKillId(RESTRAINER_OF_GLORY)
+QUEST.addTalkId(KASSANDRA)
+QUEST.addTalkId(OGMAR)
+QUEST.addTalkId(MYSTERIOUS_KNIGHT)
+QUEST.addTalkId(ANGEL_CORPSE)
+QUEST.addTalkId(KALIS)
+QUEST.addTalkId(MATILD)
+QUEST.addTalkId(FALLEN_UNICORN)
+QUEST.addTalkId(CORNERSTONE)
+QUEST.addTalkId(PURE_UNICORN)
+
+QUEST.addKillId(RESTRAINER_OF_GLORY)
 
 STARTED.addQuestDrop(VIRGIL,GOLDEN_HAIR,1)
 STARTED.addQuestDrop(VIRGIL,ORB_oF_BINDING,1)

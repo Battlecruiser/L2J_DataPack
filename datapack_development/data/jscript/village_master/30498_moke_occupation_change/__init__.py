@@ -7,7 +7,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
+qn = "30498_moke_occupation_change"
 RING_OF_RAVEN_ID        = 1642
 WAREHOUSE_CHIEF_MOKE    = 30498
 
@@ -56,8 +56,8 @@ class Quest (JQuest) :
    return htmltext
 
 
- def onTalk (Self,npc,st):
-
+ def onTalk (Self,npc,player):
+   st = player.getQuestState(qn)
    npcId = npc.getNpcId()
    
    Race    = st.getPlayer().getRace()
@@ -83,7 +83,7 @@ class Quest (JQuest) :
      st.exitQuest(1)
      return "30498-11.htm"
 
-QUEST     = Quest(30498,"30498_moke_occupation_change","village_master")
+QUEST     = Quest(30498,qn,"village_master")
 CREATED   = State('Start',     QUEST)
 STARTED   = State('Started',   QUEST)
 COMPLETED = State('Completed', QUEST)
@@ -92,4 +92,4 @@ QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(30498)
 
-STARTED.addTalkId(30498)
+QUEST.addTalkId(30498)

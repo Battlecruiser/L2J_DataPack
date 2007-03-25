@@ -289,10 +289,16 @@ class Quest (JQuest) :
           htmltext=npc+"-"+next+".htm"
     return htmltext
 
- def onTalk (self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = default
-   id = st.getState()
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
+   id = st.getState()
+   if npcId != SORINT and id == CREATED : return htmltext
+   if npcId != SORINT and npcId != BERNARD and id == SOLO : return htmltext
+   
    cond=st.getInt("cond")
    grade = st.getInt("grade")
    if npcId == SORINT :
@@ -309,6 +315,7 @@ class Quest (JQuest) :
               st.takeItems(COIN_DIAGRAM,-1)
               st.giveItems(MEMBERSHIP_3,1)
               st.setState(PARTY)
+              st.set("awaitsPartyDrops","1")
               st.set("grade","3")
               st.set("cond","4")
               st.playSound("ItemSound.quest_fanfare_middle")
@@ -331,11 +338,24 @@ class Quest (JQuest) :
       htmltext = str(npcId)+"-01.htm"
    return htmltext
 
- def onKill (self,npc,st) :
+ def onKill (self,npc,player):
+   npcId=npc.getNpcId()
+   st = 0
+   # solo section of the quest
+   if npcId in [HARITMATR, HARITSHA] :
+      st = player.getQuestState(qn)
+      if not st: return
+      if st.getState() != SOLO : return
+   if not npcId in [HARITMATR, HARITSHA] :
+      # for party-kill mobs of this quest, get a random player among those who await a drop
+      partyMember = self.getRandomPartyMember(player,"awaitsPartyDrops","1")
+      st = partyMember.getQuestState(qn) 
+      if not st : return 
+      if st.getState() != PARTY : return 
+   
    cond=st.getInt("cond")
    grade=st.getInt("grade")
    chance=int((npc.getLevel() - grade * 3 - 20)*Config.RATE_DROP_QUEST)
-   npcId=npc.getNpcId()
    item=DROP_LIST[npcId][0]
    random = st.getRandom(100)
    if item == KALDIS_COIN :
@@ -353,7 +373,7 @@ class Quest (JQuest) :
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
 CREATED     = State('Start',     QUEST)
 SOLO        = State('Solo',   QUEST)
-PARTY       = State('Party',   QUEST,True)
+PARTY       = State('Party',   QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
@@ -361,19 +381,11 @@ QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
 QUEST.addStartNpc(SORINT)
 # Quest initialization
-CREATED.addTalkId(SORINT)
-
-SOLO.addTalkId(SORINT)
-SOLO.addTalkId(BERNARD)
-
 for npc in [SORINT, BERNARD, PAGE, HAGGER, STAN, RALFORD, FERRIS, COLLOB, PANO, DUNING, LORAIN]:
-   PARTY.addTalkId(npc)
+   QUEST.addTalkId(npc)
 
 for mob in DROP_LIST.keys():
-   if mob in [HARITMATR, HARITSHA]:
-      SOLO.addKillId(mob)
-   else :
-      PARTY.addKillId(mob)
+   QUEST.addKillId(mob)
 
 SOLO.addQuestDrop(SORINT,3811,1)
 SOLO.addQuestDrop(SORINT,3812,1)

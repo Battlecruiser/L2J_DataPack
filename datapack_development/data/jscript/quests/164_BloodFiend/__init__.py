@@ -25,10 +25,12 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
 
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
      st.setState(STARTING)
@@ -65,7 +67,10 @@ class Quest (JQuest) :
             st.set("onlyone","1")
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return
+   if st.getState() != STARTED: return
 
    npcId = npc.getNpcId()
    if npcId == 27021 :
@@ -85,10 +90,8 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30149)
 
-STARTING.addTalkId(30149)
+QUEST.addTalkId(30149)
 
-STARTED.addTalkId(30149)
-
-STARTED.addKillId(27021)
+QUEST.addKillId(27021)
 
 STARTED.addQuestDrop(27021,KIRUNAK_SKULL_ID,1)

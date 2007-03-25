@@ -2,14 +2,12 @@
 # Created by DraX on 2005.08.20
 #
 
-print "importing village master data: Giran Castle Town      ...done"
-
 import sys
 
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
+qn = "30474_angus_occupation_change"
 MARK_OF_CHALLENGER_ID  = 2627
 MARK_OF_DUTY_ID        = 2633
 MARK_OF_SEEKER_ID      = 2673
@@ -262,7 +260,8 @@ class Quest (JQuest) :
    return htmltext
 
 
- def onTalk (Self,npc,st):
+ def onTalk (Self,npc,player):
+   st = player.getQuestState(qn)
 
    npcId = npc.getNpcId()
    
@@ -326,7 +325,7 @@ class Quest (JQuest) :
      st.exitQuest(1)
      return "30474-56.htm"
 
-QUEST   = Quest(30474,"30474_angus_occupation_change","village_master")
+QUEST   = Quest(30474,qn,"village_master")
 CREATED   = State('Start',     QUEST)
 STARTED   = State('Started',   QUEST)
 COMPLETED = State('Completed', QUEST)
@@ -334,4 +333,6 @@ COMPLETED = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 for i in [31328,30195,30699,30474,31324,30862,30175,30910,31285,31331,31334,31974,32096]:
     QUEST.addStartNpc(i)
-    STARTED.addTalkId(i)
+    QUEST.addTalkId(i)
+
+print "importing village master data: Giran Castle Town      ...done"

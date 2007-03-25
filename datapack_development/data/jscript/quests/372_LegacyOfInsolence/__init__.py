@@ -129,10 +129,15 @@ class Quest (JQuest) :
           htmltext = "30844-12.htm"
     return htmltext
 
- def onTalk (self,npc,st):
-   npcId = npc.getNpcId()  
-   htmltext = default
+ def onTalk (self,npc,player):
+   htmltext = dafaulte
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
+   if npcId != WALDERAL and id != STARTED : return htmltext
+
    if id == CREATED :
       st.set("cond","0")
       htmltext = "30844-4.htm"
@@ -143,13 +148,20 @@ class Quest (JQuest) :
       htmltext = str(npcId)+"-1.htm"
    return htmltext
 
- def onKill (self,npc,st) :
+ def onKill (self,npc,player) :
+     partyMember = self.getRandomPartyMemberState(player,STARTED)
+     if not partyMember : return
+     st = partyMember.getQuestState(qn)
+     
      npcId = npc.getNpcId()
      item,chance=MOB[npcId]
      chance*=Config.RATE_DROP_QUEST
-     bonus = int(divmod(chance,101)[0])
+     chance = int(chance)
+     numItems,chance = divmod(chance,100)
      if st.getRandom(100) < chance :
-        st.giveItems(item,1+bonus)
+         numItems = numItems + 1
+     if numItems :
+        st.giveItems(item,numItems)
         st.playSound("ItemSound.quest_itemget")
      return
 
@@ -157,17 +169,16 @@ class Quest (JQuest) :
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
 
 CREATED     = State('Start',     QUEST)
-STARTED     = State('Started',   QUEST,True)
+STARTED     = State('Started',   QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(WALDERAL)
-CREATED.addTalkId(WALDERAL)
 
 for i in NPC.keys() :
-  STARTED.addTalkId(i)
+  QUEST.addTalkId(i)
 
 for i in MOB.keys() :
-  STARTED.addKillId(i)
+  QUEST.addKillId(i)
 
 print str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

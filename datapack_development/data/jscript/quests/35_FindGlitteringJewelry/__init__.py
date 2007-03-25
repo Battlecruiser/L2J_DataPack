@@ -40,7 +40,10 @@ class Quest (JQuest) :
        htmltext = "You don't have enough materials"
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
    id = st.getState()
@@ -58,15 +61,19 @@ class Quest (JQuest) :
        st.exitQuest(1)
    elif npcId == 30879 and cond == 1 :
      htmltext = "30879-0.htm"
-   elif npcId == 30091 and st.getQuestItemsCount(ROUGH_JEWEL) == 10 :
-     htmltext = "30091-2.htm"
-   elif npcId == 30091 and cond == 4 and st.getQuestItemsCount(ORIHARUKON) >= 5 and st.getQuestItemsCount(SILVER_NUGGET) >= 500 and st.getQuestItemsCount(THONS) >= 150 :
-     htmltext = "30091-4.htm"
-   else : htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   elif id == STARTED :  
+       if npcId == 30091 and st.getQuestItemsCount(ROUGH_JEWEL) == 10 :
+         htmltext = "30091-2.htm"
+       elif npcId == 30091 and cond == 4 and st.getQuestItemsCount(ORIHARUKON) >= 5 and st.getQuestItemsCount(SILVER_NUGGET) >= 500 and st.getQuestItemsCount(THONS) >= 150 :
+         htmltext = "30091-4.htm"
    return htmltext
 
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return
+   
    count = st.getQuestItemsCount(ROUGH_JEWEL)
    if count<10 :
      st.giveItems(ROUGH_JEWEL,1)
@@ -83,10 +90,10 @@ STARTED     = State('Started', QUEST,True)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30091)
-CREATED.addTalkId(30091)
-STARTED.addTalkId(30091)
-STARTED.addTalkId(30879)
-STARTED.addKillId(20135)
+QUEST.addTalkId(30091)
+
+QUEST.addTalkId(30879)
+QUEST.addKillId(20135)
 STARTED.addQuestDrop(20135,ROUGH_JEWEL,1)
 
 print "importing quests: 35: Find Glittering Jewelry"

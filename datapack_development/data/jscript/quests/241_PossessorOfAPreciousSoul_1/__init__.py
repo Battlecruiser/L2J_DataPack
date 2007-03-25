@@ -135,9 +135,15 @@ class Quest (JQuest) :
        st.setState(COMPLETED)
    return htmltext
 
- def onTalk (Self,npc,st) :
-   htmltext = "<html><body>I have nothing to say you</body></html>"
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
+   id = st.getState()
+   if npcId != TALIEN and id != STARTED : return htmltext
+
    cond = st.getInt("cond")
    id = st.getState()
    if id == CREATED :
@@ -239,61 +245,73 @@ class Quest (JQuest) :
      st.exitQuest(1)
    return htmltext
 
- def onKill (self,npc,st) :
+ def onKill (self,npc,player):
    npcId = npc.getNpcId()
-   cond = st.getInt("cond")
-   chance = st.getRandom(100)
-   if npcId == BARAHAM and cond == 3 :
-     st.set("cond","4")
-     st.giveItems(LEGEND_OF_SEVENTEEN,1)
-     st.playSound("ItemSound.quest_itemget")
+   if npcId == BARAHAM:
+     # get a random party member who is doing this quest and is at cond == 3  
+     partyMember = self.getRandomPartyMember(player, "3")
+     if partyMember :
+         st = partyMember.getQuestState(qn)
+         st.set("cond","4")
+         st.giveItems(LEGEND_OF_SEVENTEEN,1)
+         st.playSound("ItemSound.quest_itemget")
    if npcId in [20244,20245,20283,21508] :
-     if cond == 6 and CHANCE_FOR_QUEST_ITEMS > chance and st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) < 10 :
-       st.giveItems(MALRUK_SUCCUBUS_CLAW,1)
-       st.playSound("ItemSound.quest_itemget")
-       if st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) == 10 :
-         st.set("cond","7")
-         st.playSound("ItemSound.quest_middle")
+     # get a random party member who is doing this quest and is at cond == 6  
+     partyMember = self.getRandomPartyMember(player, "6")
+     if partyMember :
+         st = partyMember.getQuestState(qn)
+         chance = st.getRandom(100)
+         if CHANCE_FOR_QUEST_ITEMS > chance and st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) < 10 :
+           st.giveItems(MALRUK_SUCCUBUS_CLAW,1)
+           st.playSound("ItemSound.quest_itemget")
+           if st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) == 10 :
+             st.set("cond","7")
+             st.playSound("ItemSound.quest_middle")
    if npcId in range(21508,215013) :
-     if cond == 14 and CHANCE_FOR_QUEST_ITEMS > chance and st.getQuestItemsCount(CRIMSON_MOSS) < 5 :
-       st.giveItems(CRIMSON_MOSS,1)
-       st.playSound("ItemSound.quest_itemget")
-       if st.getQuestItemsCount(CRIMSON_MOSS) == 5 :
-         st.set("cond","15")
-         st.playSound("ItemSound.quest_middle")
+     # get a random party member who is doing this quest and is at cond == 14  
+     partyMember = self.getRandomPartyMember(player, "14")
+     if partyMember :
+         st = partyMember.getQuestState(qn)
+         chance = st.getRandom(100)
+         if CHANCE_FOR_QUEST_ITEMS > chance and st.getQuestItemsCount(CRIMSON_MOSS) < 5 :
+           st.giveItems(CRIMSON_MOSS,1)
+           st.playSound("ItemSound.quest_itemget")
+           if st.getQuestItemsCount(CRIMSON_MOSS) == 5 :
+             st.set("cond","15")
+             st.playSound("ItemSound.quest_middle")
    return
 
 QUEST       = Quest(241,qn,"Possessor Of A Precious Soul - 1")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST,True)
+STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(TALIEN)
-CREATED.addTalkId(TALIEN)
-STARTED.addTalkId(TALIEN)
-STARTED.addTalkId(STEDMIEL)
-STARTED.addTalkId(GABRIELLE)
-STARTED.addTalkId(GILMORE)
-STARTED.addTalkId(KANTABILON)
-STARTED.addTalkId(NOEL)
-STARTED.addTalkId(RAHORAKTI)
-STARTED.addTalkId(CARADINE)
-STARTED.addTalkId(VIRGIL)
-STARTED.addTalkId(KASSANDRA)
-STARTED.addTalkId(OGMAR)
+QUEST.addTalkId(TALIEN)
 
-STARTED.addKillId(BARAHAM)
-STARTED.addKillId(20244)
-STARTED.addKillId(20245)
-STARTED.addKillId(20283)
-STARTED.addKillId(21508)
+QUEST.addTalkId(STEDMIEL)
+QUEST.addTalkId(GABRIELLE)
+QUEST.addTalkId(GILMORE)
+QUEST.addTalkId(KANTABILON)
+QUEST.addTalkId(NOEL)
+QUEST.addTalkId(RAHORAKTI)
+QUEST.addTalkId(CARADINE)
+QUEST.addTalkId(VIRGIL)
+QUEST.addTalkId(KASSANDRA)
+QUEST.addTalkId(OGMAR)
 
-STARTED.addKillId(21508)
-STARTED.addKillId(21509)
-STARTED.addKillId(21510)
-STARTED.addKillId(21511)
-STARTED.addKillId(21512)
+QUEST.addKillId(BARAHAM)
+QUEST.addKillId(20244)
+QUEST.addKillId(20245)
+QUEST.addKillId(20283)
+QUEST.addKillId(21508)
+
+QUEST.addKillId(21508)
+QUEST.addKillId(21509)
+QUEST.addKillId(21510)
+QUEST.addKillId(21511)
+QUEST.addKillId(21512)
 
 STARTED.addQuestDrop(BARAHAM,LEGEND_OF_SEVENTEEN,1)
 STARTED.addQuestDrop(BARAHAM,MALRUK_SUCCUBUS_CLAW,1)

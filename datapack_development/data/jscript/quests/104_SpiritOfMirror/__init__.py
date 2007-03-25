@@ -42,9 +42,11 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
+ def onTalk (Self,npc,player):
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st: return htmltext
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
@@ -60,29 +62,34 @@ class Quest (JQuest) :
         st.exitQuest(1)
    elif npcId == 30017 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 30017 and int(st.get("cond")) and st.getQuestItemsCount(GALLINS_OAK_WAND_ID)>=1 and not HaveAllQuestItems(st) :
-      htmltext = "30017-04.htm"
-   elif npcId == 30017 and int(st.get("cond"))==3 and HaveAllQuestItems(st) :
-      for mobId in DROPLIST.keys() :
-        st.takeItems(DROPLIST[mobId],-1)
-      st.giveItems(WAND_OF_ADEPT_ID,1)
-      htmltext = "30017-05.htm"
-      st.set("cond","0")
-      st.setState(COMPLETED)
-      st.playSound("ItemSound.quest_finish")
-      st.set("onlyone","1")
-   elif npcId == 30045 and int(st.get("cond")) :
-      htmltext = "30045-01.htm"
-      st.set("cond","2")
-   elif npcId == 30043 and int(st.get("cond")) :
-      htmltext = "30043-01.htm"
-      st.set("cond","2")
-   elif npcId == 30041 and int(st.get("cond")) :
-      htmltext = "30041-01.htm"
-      st.set("cond","2")
+   elif id == STARTED : 
+     if npcId == 30017 and int(st.get("cond")) and st.getQuestItemsCount(GALLINS_OAK_WAND_ID)>=1 and not HaveAllQuestItems(st) :
+        htmltext = "30017-04.htm"
+     elif npcId == 30017 and int(st.get("cond"))==3 and HaveAllQuestItems(st) :
+        for mobId in DROPLIST.keys() :
+          st.takeItems(DROPLIST[mobId],-1)
+        st.giveItems(WAND_OF_ADEPT_ID,1)
+        htmltext = "30017-05.htm"
+        st.set("cond","0")
+        st.setState(COMPLETED)
+        st.playSound("ItemSound.quest_finish")
+        st.set("onlyone","1")
+     elif npcId == 30045 and int(st.get("cond")) :
+        htmltext = "30045-01.htm"
+        st.set("cond","2")
+     elif npcId == 30043 and int(st.get("cond")) :
+        htmltext = "30043-01.htm"
+        st.set("cond","2")
+     elif npcId == 30041 and int(st.get("cond")) :
+        htmltext = "30041-01.htm"
+        st.set("cond","2")
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st: return
+   if st.getState() != STARTED : return
+   
    npcId = npc.getNpcId()
    if int(st.get("cond")) >= 1 and st.getItemEquipped(7) == GALLINS_OAK_WAND_ID and not st.getQuestItemsCount(DROPLIST[npcId]) : # (7) means weapon slot
      st.takeItems(GALLINS_OAK_WAND_ID,1)
@@ -103,15 +110,14 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30017)
 
-CREATED.addTalkId(30017)
+QUEST.addTalkId(30017)
 
-STARTED.addTalkId(30017)
-STARTED.addTalkId(30041)
-STARTED.addTalkId(30043)
-STARTED.addTalkId(30045)
+QUEST.addTalkId(30041)
+QUEST.addTalkId(30043)
+QUEST.addTalkId(30045)
 
 for mobId in DROPLIST.keys():
-  STARTED.addKillId(mobId)
+  QUEST.addKillId(mobId)
   STARTED.addQuestDrop(mobId,DROPLIST[mobId],1)
 
 STARTED.addQuestDrop(30017,GALLINS_OAK_WAND_ID,1)

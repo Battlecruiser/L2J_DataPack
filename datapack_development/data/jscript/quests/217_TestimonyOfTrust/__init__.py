@@ -86,10 +86,15 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
+   if npcId != 30191 and id != STARTED : return htmltext
+
    if id == CREATED :                                      # Check if is starting the quest
      st.set("cond","0")
      st.set("id","0")
@@ -250,7 +255,11 @@ class Quest (JQuest) :
    return htmltext
 
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return
+   if st.getState() != STARTED : return
+
    npcId = npc.getNpcId()
    cond = int(st.get("cond"))
    if cond == 2 and npcId in [ 20013, 20019, 20036, 20044 ] :          # Condition 2 kill the Luel of Zephy and Aktea of the Woods
@@ -328,23 +337,20 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30191)
 
-CREATED.addTalkId(30191)
-STARTING.addTalkId(30191)
-COMPLETED.addTalkId(30191)
+QUEST.addTalkId(30191)
 
-STARTED.addTalkId(30031)
-STARTED.addTalkId(30154)
-STARTED.addTalkId(30191)
-STARTED.addTalkId(30358)
-STARTED.addTalkId(30464)
-STARTED.addTalkId(30515)
-STARTED.addTalkId(30531)
-STARTED.addTalkId(30565)
-STARTED.addTalkId(30621)
-STARTED.addTalkId(30657)
+QUEST.addTalkId(30031)
+QUEST.addTalkId(30154)
+QUEST.addTalkId(30358)
+QUEST.addTalkId(30464)
+QUEST.addTalkId(30515)
+QUEST.addTalkId(30531)
+QUEST.addTalkId(30565)
+QUEST.addTalkId(30621)
+QUEST.addTalkId(30657)
 
 for i in DROPLIST.keys()+[20013,20019,20036,20044,20553] :
-    STARTED.addKillId(i)
+    QUEST.addKillId(i)
 
 STARTED.addQuestDrop(30358,SCROLL_OF_DARKELF_TRUST_ID,1)
 STARTED.addQuestDrop(30154,SCROLL_OF_ELF_TRUST_ID,1)

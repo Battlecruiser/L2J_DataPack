@@ -135,10 +135,14 @@ class Quest (JQuest) :
 
 
 
-	def onTalk(self,npc,st):
-		npcId=npc.getNpcId()
-		id =  st.getState()
-		htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
+	def onTalk (self,npc,player):
+		htmltext = "<html><head><body>I have nothing to say you</body></html>"
+		st = player.getQuestState(qn)
+		if not st : return htmltext
+
+		npcId = npc.getNpcId()
+		id = st.getState()
+		
 		# first time when a player join the quest
 		if id == CREATED:
 			for var in STATS:
@@ -295,8 +299,14 @@ class Quest (JQuest) :
 					htmltext = "30649-01.htm"										# ah thx.. i will give you the mark of War Spirit
 		return htmltext		
 				
-	def onKill (self,npc,st):
+	def onKill (self,npc,player):
+		st = player.getQuestState(qn)
+		if not st : return 
 		npcId=npc.getNpcId()
+
+		if (st.getState() == PART1) and not (npcId in PART1_MOBS) : return 
+		if (st.getState() == PART2) and not (npcId in PART2_MOBS) : return 
+
 #		[accepted values for this part],variable for the current part from the mob,maxcount,chance in %, items to give(one per kill max)=DROPLIST[npcId]
 		value,var,maxcount,chance,itemList=DROPLIST[npcId]
 		random=st.getRandom(100)
@@ -354,18 +364,14 @@ COMPLETED	= State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30510)
 
-CREATED.addTalkId(30510)
-COMPLETED.addTalkId(30510)
-
 for npcId in NPC:
-	PART1.addTalkId(npcId)
-	PART2.addTalkId(npcId)
+	QUEST.addTalkId(npcId)
 
 for mobId in PART1_MOBS:
-	PART1.addKillId(mobId)
+	QUEST.addKillId(mobId)
 	
 for mobId in PART2_MOBS:
-	PART2.addKillId(mobId)
+	QUEST.addKillId(mobId)
 
 for item in range(2880,2915):
 	PART2.addQuestDrop(30510,item,1)

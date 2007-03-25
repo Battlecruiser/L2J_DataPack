@@ -44,11 +44,15 @@ class Quest (JQuest) :
             htmltext="30969-07.htm"
      return htmltext
 
- def onTalk (Self,npc,st):
-     npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
      htmltext = "<html><head><body>I have nothing to say you</body></html>"
+     st = player.getQuestState(qn)
+     if not st : return htmltext
+
+     npcId = npc.getNpcId()
      id = st.getState()
-     level = st.getPlayer().getLevel()
+     if npcId != 30916 and id != STARTED : return htmltext
+       level = st.getPlayer().getLevel()
      cond = st.getInt("cond")
      if npcId==30916 :
          if id == CREATED :
@@ -68,7 +72,11 @@ class Quest (JQuest) :
             htmltext="30897-02.htm"
      return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+     st = player.getQuestState(qn)
+     if not st : return 
+     if st.getState() != STARTED : return 
+   
      npcId = npc.getNpcId()
      cond = st.getInt("cond")
      random = st.getRandom(100)
@@ -87,21 +95,19 @@ STARTED     = State('Started', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30916)
 
-CREATED.addTalkId(30916)
-STARTED.addTalkId(30916)
+QUEST.addTalkId(30916)
 
-STARTED.addTalkId(30969)
-STARTED.addTalkId(30897)
+QUEST.addTalkId(30897)
 
 STARTED.addQuestDrop(30916,ORDER_OF_GOSTA,1)
 STARTED.addQuestDrop(30916,BARREL_OF_LEAGUE,1)
 STARTED.addQuestDrop(30916,LIZARD_FANG,1)
 
-STARTED.addKillId(20784)
-STARTED.addKillId(20785)
-STARTED.addKillId(21639)
-STARTED.addKillId(21640)
-STARTED.addKillId(21642)
-STARTED.addKillId(21643)
+QUEST.addKillId(20784)
+QUEST.addKillId(20785)
+QUEST.addKillId(21639)
+QUEST.addKillId(21640)
+QUEST.addKillId(21642)
+QUEST.addKillId(21643)
 
 print "importing quests: 351: Black Swan"

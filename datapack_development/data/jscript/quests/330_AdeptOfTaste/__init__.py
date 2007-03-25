@@ -105,12 +105,15 @@ class Quest (JQuest) :
         st.giveItems(GREEN_MOSS_BUNDLE_ID,1)
     return htmltext
 
-
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if npcId != 30469 and id != STARTED : return htmltext
+   if id == CREATED :
      st.set("cond","0")
    if npcId == 30469 and int(st.get("cond"))==0 :
       if st.getPlayer().getLevel() >= 24 :
@@ -289,7 +292,11 @@ class Quest (JQuest) :
         htmltext = "30069-04.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if npcId == 20265 :
         if int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(ROLANTS_CREATUREBOOK_ID) and st.getQuestItemsCount(MONSTER_EYE_BODY_ID)<30 :
@@ -477,27 +484,26 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30469)
 
-CREATED.addTalkId(30469)
+QUEST.addTalkId(30469)
 
-STARTED.addTalkId(30062)
-STARTED.addTalkId(30067)
-STARTED.addTalkId(30069)
-STARTED.addTalkId(30073)
-STARTED.addTalkId(30078)
-STARTED.addTalkId(30461)
-STARTED.addTalkId(30469)
+QUEST.addTalkId(30062)
+QUEST.addTalkId(30067)
+QUEST.addTalkId(30069)
+QUEST.addTalkId(30073)
+QUEST.addTalkId(30078)
+QUEST.addTalkId(30461)
 
-STARTED.addKillId(20147)
-STARTED.addKillId(20154)
-STARTED.addKillId(20155)
-STARTED.addKillId(20156)
-STARTED.addKillId(20204)
-STARTED.addKillId(20223)
-STARTED.addKillId(20226)
-STARTED.addKillId(20228)
-STARTED.addKillId(20229)
-STARTED.addKillId(20265)
-STARTED.addKillId(20266)
+QUEST.addKillId(20147)
+QUEST.addKillId(20154)
+QUEST.addKillId(20155)
+QUEST.addKillId(20156)
+QUEST.addKillId(20204)
+QUEST.addKillId(20223)
+QUEST.addKillId(20226)
+QUEST.addKillId(20228)
+QUEST.addKillId(20229)
+QUEST.addKillId(20265)
+QUEST.addKillId(20266)
 
 STARTED.addQuestDrop(30469,INGREDIENT_LIST_ID,1)
 STARTED.addQuestDrop(30062,RED_MANDRAGORA_SAP_ID,1)

@@ -46,9 +46,12 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    collette = st.getQuestItemsCount(COLLETTE_LETTER)
    norman = st.getQuestItemsCount(NORMANS_LETTER)
    id = st.getState()
@@ -64,13 +67,14 @@ class Quest (JQuest) :
          st.exitQuest(1)
      elif cond == 1 and collette :
        htmltext = "30350-05.htm"
-   elif npcId == HAPROCK :
-     if cond == 1 and collette :
-       htmltext = "30255-01.htm"
-     elif cond == 2 and norman :
-       htmltext = "30255-05.htm"
-   elif npcId == NORMAN and cond == 2 and norman :
-      htmltext = "30210-01.htm"
+   elif id == STARTED :    
+       if npcId == HAPROCK :
+         if cond == 1 and collette :
+           htmltext = "30255-01.htm"
+         elif cond == 2 and norman :
+           htmltext = "30255-05.htm"
+       elif npcId == NORMAN and cond == 2 and norman :
+          htmltext = "30210-01.htm"
    return htmltext
 
 QUEST       = Quest(167,qn,"Dwarven Kinship")
@@ -81,12 +85,10 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(COLLETTE)
 
-CREATED.addTalkId(COLLETTE)
-COMPLETED.addTalkId(COLLETTE)
+QUEST.addTalkId(COLLETTE)
 
-STARTED.addTalkId(NORMAN)
-STARTED.addTalkId(HAPROCK)
-STARTED.addTalkId(COLLETTE)
+QUEST.addTalkId(NORMAN)
+QUEST.addTalkId(HAPROCK)
 
 STARTED.addQuestDrop(NORMAN,COLLETTE_LETTER,1)
 STARTED.addQuestDrop(NORMAN,NORMANS_LETTER,1)

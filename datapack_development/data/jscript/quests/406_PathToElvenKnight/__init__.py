@@ -51,11 +51,15 @@ class Quest (JQuest) :
           htmltext = default
     return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
-   htmltext = default
    id = st.getState()
-   if id == CREATED :
+   if npcId != 30327 and id != STARTED : return htmltext
+   if id == CREATED :
      st.set("cond","0")
      cond=0
    else :
@@ -103,7 +107,11 @@ class Quest (JQuest) :
             htmltext = "30317-06.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if npcId != 20782 :
         if int(st.get("cond"))==1 and st.getQuestItemsCount(TOPAZ_PIECE_ID)<20 and st.getRandom(100)<70 :
@@ -133,20 +141,18 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30327)
 
-CREATED.addTalkId(30327)
-STARTING.addTalkId(30327)
-COMPLETED.addTalkId(30327)
+QUEST.addTalkId(30327)
 
-STARTED.addTalkId(30317)
-STARTED.addTalkId(30327)
+QUEST.addTalkId(30317)
+QUEST.addTalkId(30327)
 
-STARTED.addKillId(20035)
-STARTED.addKillId(20042)
-STARTED.addKillId(20045)
-STARTED.addKillId(20051)
-STARTED.addKillId(20054)
-STARTED.addKillId(20060)
-STARTED.addKillId(20782)
+QUEST.addKillId(20035)
+QUEST.addKillId(20042)
+QUEST.addKillId(20045)
+QUEST.addKillId(20051)
+QUEST.addKillId(20054)
+QUEST.addKillId(20060)
+QUEST.addKillId(20782)
 
 STARTED.addQuestDrop(30327,SORIUS_LETTER1_ID,1)
 STARTED.addQuestDrop(20782,EMERALD_PIECE_ID,1)

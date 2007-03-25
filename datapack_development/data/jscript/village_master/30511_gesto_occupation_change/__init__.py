@@ -9,7 +9,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
+qn = "30511_gesto_occupation_change"
 MARK_OF_SEARCHER_ID     = 2809
 MARK_OF_GUILDSMAN_ID    = 3119
 MARK_OF_PROSPERITY_ID   = 3238
@@ -69,8 +69,8 @@ class Quest (JQuest) :
    st.exitQuest(1)
    return htmltext
 
- def onTalk (Self,npc,st):
-
+ def onTalk (Self,npc,player):
+   st = player.getQuestState(qn)
    npcId = npc.getNpcId()
 
    Race    = st.getPlayer().getRace()
@@ -104,7 +104,7 @@ class Quest (JQuest) :
      st.exitQuest(1)
      return "30511-11.htm"
 
-QUEST   = Quest(30511,"30511_gesto_occupation_change","village_master")
+QUEST   = Quest(30511,qn,"village_master")
 CREATED   = State('Start',     QUEST)
 STARTED   = State('Started',   QUEST)
 COMPLETED = State('Completed', QUEST)
@@ -120,11 +120,11 @@ QUEST.addStartNpc(31269)
 QUEST.addStartNpc(31314)
 QUEST.addStartNpc(31958)
 
-STARTED.addTalkId(30511)
-STARTED.addTalkId(30676)
-STARTED.addTalkId(30685)
-STARTED.addTalkId(30845)
-STARTED.addTalkId(30894)
-STARTED.addTalkId(31269)
-STARTED.addTalkId(31314)
-STARTED.addTalkId(31958)
+QUEST.addTalkId(30511)
+QUEST.addTalkId(30676)
+QUEST.addTalkId(30685)
+QUEST.addTalkId(30845)
+QUEST.addTalkId(30894)
+QUEST.addTalkId(31269)
+QUEST.addTalkId(31314)
+QUEST.addTalkId(31958)

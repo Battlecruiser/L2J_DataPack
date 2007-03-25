@@ -58,8 +58,11 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_middle")
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have no task for you right now.</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
    id = st.getState()
@@ -73,22 +76,23 @@ class Quest (JQuest) :
      else:
        return htmltext
        st.exitQuest(1)
-   if npcId == EVIL_ALTAR_1 and cond == 1 :
-     htmltext = "31512-0.htm"
-   if npcId == EVIL_ALTAR_2 and cond == 2 :
-     htmltext = "31513-0.htm"
-   if npcId == EVIL_ALTAR_3 and cond == 3 :
-     htmltext = "31514-0.htm"
-   if npcId == EVIL_ALTAR_4 and cond== 4 :
-     htmltext = "31515-0.htm"
-   if npcId == EVIL_ALTAR_5 and cond == 5 :
-     htmltext = "31516-0.htm"
-   if npcId == HIERARCH and cond == 6 :
-     st.addExpAndSp(221958,0)
-     st.set("cond","0")
-     st.setState(COMPLETED)
-     st.playSound("ItemSound.quest_finish")
-     htmltext = "31517-3.htm"
+   if id == STARTED :    
+       if npcId == EVIL_ALTAR_1 and cond == 1 :
+         htmltext = "31512-0.htm"
+       if npcId == EVIL_ALTAR_2 and cond == 2 :
+         htmltext = "31513-0.htm"
+       if npcId == EVIL_ALTAR_3 and cond == 3 :
+         htmltext = "31514-0.htm"
+       if npcId == EVIL_ALTAR_4 and cond== 4 :
+         htmltext = "31515-0.htm"
+       if npcId == EVIL_ALTAR_5 and cond == 5 :
+         htmltext = "31516-0.htm"
+       if npcId == HIERARCH and cond == 6 :
+         st.addExpAndSp(221958,0)
+         st.set("cond","0")
+         st.setState(COMPLETED)
+         st.playSound("ItemSound.quest_finish")
+         htmltext = "31517-3.htm"
    return htmltext
 
 QUEST       = Quest(16,qn,"The Coming Darkness")
@@ -98,10 +102,9 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(31517)
-CREATED.addTalkId(31517)
-STARTED.addTalkId(31517)
+QUEST.addTalkId(31517)
 
 for altars in range(31512,31517):
-  STARTED.addTalkId(altars)
+  QUEST.addTalkId(altars)
 
 print "importing quests: 16: The Coming Darkness"

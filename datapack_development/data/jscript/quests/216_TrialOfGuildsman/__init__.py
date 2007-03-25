@@ -124,10 +124,15 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
+   if npcId != 30103 and id != STARTED : return htmltext
+
    if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
@@ -209,7 +214,11 @@ class Quest (JQuest) :
         htmltext = "30298-08.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+
    npcId = npc.getNpcId()
    if npcId == 20223 :
      st.set("id","0")
@@ -296,31 +305,30 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30103)
 
-STARTING.addTalkId(30103)
+QUEST.addTalkId(30103)
 
-STARTED.addTalkId(30103)
-STARTED.addTalkId(30210)
-STARTED.addTalkId(30283)
-STARTED.addTalkId(30298)
-STARTED.addTalkId(30688)
+QUEST.addTalkId(30210)
+QUEST.addTalkId(30283)
+QUEST.addTalkId(30298)
+QUEST.addTalkId(30688)
 
-STARTED.addKillId(20154)
-STARTED.addKillId(20155)
-STARTED.addKillId(20156)
-STARTED.addKillId(20168)
-STARTED.addKillId(20200)
-STARTED.addKillId(20201)
-STARTED.addKillId(20202)
-STARTED.addKillId(20223)
-STARTED.addKillId(20267)
-STARTED.addKillId(20268)
-STARTED.addKillId(20269)
-STARTED.addKillId(20270)
-STARTED.addKillId(20271)
-STARTED.addKillId(20079)
-STARTED.addKillId(20080)
-STARTED.addKillId(20081)
-STARTED.addKillId(20083)
+QUEST.addKillId(20154)
+QUEST.addKillId(20155)
+QUEST.addKillId(20156)
+QUEST.addKillId(20168)
+QUEST.addKillId(20200)
+QUEST.addKillId(20201)
+QUEST.addKillId(20202)
+QUEST.addKillId(20223)
+QUEST.addKillId(20267)
+QUEST.addKillId(20268)
+QUEST.addKillId(20269)
+QUEST.addKillId(20270)
+QUEST.addKillId(20271)
+QUEST.addKillId(20079)
+QUEST.addKillId(20080)
+QUEST.addKillId(20081)
+QUEST.addKillId(20083)
 
 STARTED.addQuestDrop(30283,RP_JOURNEYMAN_RING_ID,1)
 STARTED.addQuestDrop(30283,ALLTRANS_INSTRUCTIONS_ID,1)

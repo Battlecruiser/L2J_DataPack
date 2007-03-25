@@ -35,8 +35,11 @@ class Quest (JQuest) :
        htmltext = "You don't have required items"
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
@@ -47,14 +50,18 @@ class Quest (JQuest) :
        htmltext = "30333-0a.htm"
      else:
        st.exitQuest(1)
-   elif npcId == 30344 :
+   elif npcId == 30344 and id == STARTED:
      if cond == 1 :
        htmltext = "30344-0.htm"
      elif cond == 3 :
        htmltext = "30344-2.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if npcId in [20926,20927] :
      count = st.getQuestItemsCount(SHINING_RED_GEM)
@@ -83,12 +90,12 @@ STARTED     = State('Started', QUEST, True)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30333)
 
-CREATED.addTalkId(30333)
-STARTED.addTalkId(30333)
-STARTED.addTalkId(30344)
+QUEST.addTalkId(30333)
+
+QUEST.addTalkId(30344)
 
 for i in range(20922,20928) :
-    STARTED.addKillId(i)
+    QUEST.addKillId(i)
 
 STARTED.addQuestDrop(20926,SHINING_RED_GEM,1)
 STARTED.addQuestDrop(20924,SHINING_GEM,1)

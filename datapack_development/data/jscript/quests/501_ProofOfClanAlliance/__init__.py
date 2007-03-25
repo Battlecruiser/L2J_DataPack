@@ -150,9 +150,15 @@ class Quest (JQuest) :
         st.takeItems(RETRY_ITEMS,RETRY_PRICE) 
    return htmltext
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "no_quest.htm"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
+   id = st.getState()
+   if not npcId in [SIR_KRISTOF_RODEMAI,STATUE_OF_OFFERING,WITCH_KALIS,WITCH_ATHREA] and id == CREATED : return htmltext
+
    if npcId == SIR_KRISTOF_RODEMAI:
      if st.getPlayer().getClan() == None or st.getPlayer().isClanLeader() == 0:
        st.exitQuest(1) 
@@ -292,8 +298,11 @@ class Quest (JQuest) :
              if DEBUG: htmltext = "DEBUG: Athrea can't find clan leader info. Leader d/c?"
    return htmltext
 
-
- def onKill(self,npc,st) :
+ def onKill (self,npc,player):
+     st = player.getQuestState(qn)
+     if not st : return 
+     if st.getState() != CREATED : return 
+   
      ### first part, general checking
      npcId=npc.getNpcId()
      if leader(st) == None :
@@ -365,17 +374,11 @@ QUEST.setInitialState(CREATED)
 
 for i in [SIR_KRISTOF_RODEMAI,STATUE_OF_OFFERING] :
     QUEST.addStartNpc(i)
-    CREATED.addTalkId(i)
+    QUEST.addTalkId(i)
 
 for i in [WITCH_KALIS,WITCH_ATHREA] :
-    CREATED.addTalkId(i)
+    QUEST.addTalkId(i)
     
-for i in [SIR_KRISTOF_RODEMAI,WITCH_KALIS] :
-    PART2.addTalkId(i)
-    PART3.addTalkId(i)
-    PART4.addTalkId(i)
-
-
 CREATED.addQuestDrop(STATUE_OF_OFFERING,SYMBOL_OF_LOYALTY,1)
 PART3.addQuestDrop(WITCH_KALIS,ANTIDOTE_RECIPE,1)
 PART4.addQuestDrop(WITCH_KALIS,VOUCHER_OF_FAITH,1)
@@ -383,10 +386,10 @@ PART4.addQuestDrop(WITCH_KALIS,POTION_OF_RECOVERY,1)
 PART4.addQuestDrop(WITCH_KALIS,ANTIDOTE_RECIPE,1)
 
 for i in range(len(MOBS)) :
-    CREATED.addKillId(MOBS[i][0])
+    QUEST.addKillId(MOBS[i][0])
     CREATED.addQuestDrop(MOBS[i][0],MOBS[i][1],1)
 
 for i in CHESTS :
-    CREATED.addKillId(i)
+    QUEST.addKillId(i)
 
 print "importing quests: 501: "+qd

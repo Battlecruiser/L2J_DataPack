@@ -5,6 +5,7 @@
 ### ---------------------------------------------------------------------------
 
 ### Settings
+qn = "3995_echo"
 NPC         = [31042,31043]
 QuestId     = 3995
 QuestName   = "echo"
@@ -58,12 +59,12 @@ class Quest (JQuest) :
       st.exitQuest(1)
     return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (Self,npc,player):
    htmltext = "<html><head><body>I have nothing to say with you</body></html>"
    return InitialHtml
 
 ### Quest class and state definition
-QUEST       = Quest(QuestId,str(QuestId) + "_" + QuestName,QuestDesc)
+QUEST       = Quest(QuestId,qn,QuestDesc)
 CREATED     = State('Start',     QUEST)
 COMPLETED   = State('Completed', QUEST)
 
@@ -74,6 +75,6 @@ for item in NPC:
 ### Quest NPC starter initialization
    QUEST.addStartNpc(item)
 ### Quest NPC initialization
-   CREATED.addTalkId(item)
+   QUEST.addTalkId(item)
 
 print "...done"

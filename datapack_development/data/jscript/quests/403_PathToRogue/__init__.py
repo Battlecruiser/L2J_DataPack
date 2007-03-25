@@ -74,11 +74,15 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
 
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
+   if npcId != 30379 and id != STARTED : return htmltext
+
    if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
@@ -125,7 +129,11 @@ class Quest (JQuest) :
         htmltext = "30425-08.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if st.getItemEquipped(7) == NETIS_BOW_ID or st.getItemEquipped(7) == NETIS_DAGGER_ID :
      if npcId in (20035, 20042, 20045, 20051, 20054, 20060) :
@@ -160,18 +168,17 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30379)
 
-STARTING.addTalkId(30379)
+QUEST.addTalkId(30379)
 
-STARTED.addTalkId(30379)
-STARTED.addTalkId(30425)
+QUEST.addTalkId(30425)
 
-STARTED.addKillId(27038)
+QUEST.addKillId(27038)
 
 for StolenItemId in STOLEN_ITEM.keys():
   STARTED.addQuestDrop(27038,STOLEN_ITEM[StolenItemId],1)
 
 for mobId in (20035,20042,20045,20051,20054,20060) :
-  STARTED.addKillId(mobId)
+  QUEST.addKillId(mobId)
   STARTED.addQuestDrop(mobId,SPATOIS_BONES_ID,1)
 
 STARTED.addQuestDrop(30425,NETIS_BOW_ID,1)

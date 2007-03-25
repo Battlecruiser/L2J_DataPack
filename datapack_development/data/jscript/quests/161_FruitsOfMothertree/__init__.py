@@ -24,9 +24,12 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
      if st.getPlayer().getRace().ordinal() != 1 :
@@ -39,7 +42,7 @@ class Quest (JQuest) :
        st.exitQuest(1)
    elif id == COMPLETED :
      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   else :
+   elif id == STARTED :
      try :
        cond = int(st.get("cond"))
      except :
@@ -67,19 +70,15 @@ class Quest (JQuest) :
 
 QUEST       = Quest(161,qn,"Fruits Of Mothertree")
 CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30362)
 
-CREATED.addTalkId(30362)
-STARTING.addTalkId(30362)
-COMPLETED.addTalkId(30362)
+QUEST.addTalkId(30362)
 
-STARTED.addTalkId(30362)
-STARTED.addTalkId(30371)
+QUEST.addTalkId(30371)
 
 STARTED.addQuestDrop(30371,MOTHERTREE_FRUIT,1)
 STARTED.addQuestDrop(30362,ANDELLRIAS_LETTER,1)

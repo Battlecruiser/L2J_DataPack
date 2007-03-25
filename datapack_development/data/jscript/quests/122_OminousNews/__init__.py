@@ -37,9 +37,12 @@ class Quest (JQuest) :
          htmltext=default
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (Self,npc,player):
    npcId = npc.getNpcId()
    htmltext = default
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    id = st.getState()
    cond = st.getInt("cond")
    if id == COMPLETED :
@@ -53,7 +56,7 @@ class Quest (JQuest) :
             st.exitQuest(1)
       else:
          htmltext = "31979-03.htm"
-   elif npcId == KARUDA and cond==1 :
+   elif npcId == KARUDA and cond==1 and id == STARTED:
       htmltext = "32017-01.htm"
       st.set("ok","1")
    return htmltext
@@ -66,10 +69,8 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(MOIRA)
 
-CREATED.addTalkId(MOIRA)
-STARTED.addTalkId(MOIRA)
-COMPLETED.addTalkId(MOIRA)
+QUEST.addTalkId(MOIRA)
 
-STARTED.addTalkId(KARUDA)
+QUEST.addTalkId(KARUDA)
 
 print "importing quests: 122: Ominous News"

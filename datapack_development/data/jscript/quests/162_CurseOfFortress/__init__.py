@@ -22,9 +22,12 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
@@ -53,7 +56,11 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_finish")
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return
+   if st.getState() != STARTED : return
+   
    if st.getRandom(4) == 1 :
      npcId = npc.getNpcId()
      bones = st.getQuestItemsCount(BONE_FRAGMENT3)
@@ -77,24 +84,20 @@ class Quest (JQuest) :
 
 QUEST       = Quest(162,qn,"Curse Of Fortress")
 CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30147)
 
-CREATED.addTalkId(30147)
-STARTING.addTalkId(30147)
-STARTED.addTalkId(30147)
-COMPLETED.addTalkId(30147)
+QUEST.addTalkId(30147)
 
-STARTED.addKillId(20033)
-STARTED.addKillId(20345)
-STARTED.addKillId(20371)
-STARTED.addKillId(20463)
-STARTED.addKillId(20464)
-STARTED.addKillId(20504)
+QUEST.addKillId(20033)
+QUEST.addKillId(20345)
+QUEST.addKillId(20371)
+QUEST.addKillId(20463)
+QUEST.addKillId(20464)
+QUEST.addKillId(20504)
 
 STARTED.addQuestDrop(20371,ELF_SKULL,1)
 STARTED.addQuestDrop(20464,BONE_FRAGMENT3,1)

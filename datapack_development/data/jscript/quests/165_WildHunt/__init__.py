@@ -25,10 +25,12 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
 
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
      st.setState(STARTING)
@@ -66,7 +68,10 @@ class Quest (JQuest) :
             st.set("onlyone","1")
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
 
    npcId = npc.getNpcId()
    if npcId == 20529 :
@@ -117,14 +122,12 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30348)
 
-STARTING.addTalkId(30348)
+QUEST.addTalkId(30348)
 
-STARTED.addTalkId(30348)
-
-STARTED.addKillId(20456)
-STARTED.addKillId(20529)
-STARTED.addKillId(20532)
-STARTED.addKillId(20536)
+QUEST.addKillId(20456)
+QUEST.addKillId(20529)
+QUEST.addKillId(20532)
+QUEST.addKillId(20536)
 
 STARTED.addQuestDrop(20529,DARK_BEZOAR_ID,1)
 STARTED.addQuestDrop(20532,DARK_BEZOAR_ID,1)

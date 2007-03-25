@@ -43,9 +43,12 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_finish")
      return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (Self,npc,player):
      npcId = npc.getNpcId()
      htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
+     st = player.getQuestState(qn)
+     if not st : return htmltext
+
      cond = st.getInt("cond")
      onlyone = st.getInt("onlyone")
      if st.getState() == CREATED :
@@ -57,13 +60,13 @@ class Quest (JQuest) :
                  htmltext = "31296-01.htm"
              elif cond == 1 :
                  htmltext = "31296-04.htm"
-         elif npcId == Helmut :
-             if cond == 1 :
-                 htmltext = "31258-01.htm"
-             elif cond == 2 :
-                 htmltext = "31258-03.htm"
-         elif npcId == Naran :
-             if cond == 2 :
+         elif st.getState() == STARTED :   
+             if npcId == Helmut :
+                 if cond == 1 :
+                     htmltext = "31258-01.htm"
+                 elif cond == 2 :
+                     htmltext = "31258-03.htm"
+             elif npcId == Naran and cond == 2 :
                  htmltext = "31378-01.htm"
      return htmltext
      
@@ -75,9 +78,9 @@ COMPLETED   = State('Completed',QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Cadmon)
 
-CREATED.addTalkId(Cadmon)
-STARTED.addTalkId(Cadmon)
-STARTED.addTalkId(Helmut)
-STARTED.addTalkId(Naran)
+QUEST.addTalkId(Cadmon)
+
+QUEST.addTalkId(Helmut)
+QUEST.addTalkId(Naran)
 
 print "importing quests: 12 : Secret Meeting With Varka Silenos"

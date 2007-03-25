@@ -123,10 +123,15 @@ class Quest (JQuest) :
                st.giveItems(CRUCIFIX,1)
      return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+     htmltext = "<html><head><body>I have nothing to say you</body></html>"
+     st = player.getQuestState(qn)
+     if not st : return htmltext
+
      npcId = npc.getNpcId()
-     htmltext = default
      id = st.getState()
+     if npcId != GILMORE and id != STARTED : return htmltext
+     
      level = st.getPlayer().getLevel()
      cond = st.getInt("cond")
      amount = st.getQuestItemsCount(ARTICLES_DEAD_HEROES)
@@ -171,7 +176,11 @@ class Quest (JQuest) :
          htmltext = str(npcId)+"-02.htm"
      return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+     st = player.getQuestState(qn)
+     if not st : return 
+     if st.getState() != STARTED : return 
+   
      npcId = npc.getNpcId()
      chance = (CHANCE+(npcId-20234)*2)*Config.RATE_DROP_QUEST
      bonus = int(divmod(chance,100)[0])
@@ -187,16 +196,15 @@ STARTED     = State('Started', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(GILMORE)
 
-CREATED.addTalkId(GILMORE)
-STARTED.addTalkId(GILMORE)
+QUEST.addTalkId(GILMORE)
 
-STARTED.addTalkId(RODEMAI)
-STARTED.addTalkId(ORVEN)
-STARTED.addTalkId(GARVARENTZ)
-STARTED.addTalkId(KAIEN)
+QUEST.addTalkId(RODEMAI)
+QUEST.addTalkId(ORVEN)
+QUEST.addTalkId(GARVARENTZ)
+QUEST.addTalkId(KAIEN)
 
 for mob in range(20236,20241):
-    STARTED.addKillId(mob)
+    QUEST.addKillId(mob)
 
 for item in range(4269,4274):
     STARTED.addQuestDrop(GILMORE,item,1)

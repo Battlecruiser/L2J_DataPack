@@ -22,9 +22,12 @@ class Quest (JQuest) :
       st.exitQuest(1)
     return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say to you</body></html>"
    id = st.getState()
    if id == CREATED :
        htmltext = "10.htm"
@@ -40,7 +43,11 @@ class Quest (JQuest) :
      st.exitQuest(1)  # cond is always 1 if he acceptet the quest, but we have no way to check if he hasnt the quest, so we delete it if he didnt accept by first talk
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+    partyMember = self.getRandomPartyMemberState(player, STARTED)
+    if not partyMember : return
+    st = partyMember.getQuestState(qn)
+   
     npcId = npc.getNpcId()
     if st.getRandom(10)<6 :
       st.giveItems(ANCIENT_SCROLL,1)
@@ -49,19 +56,18 @@ class Quest (JQuest) :
 
 QUEST       = Quest(385,qn,"Yoke of the Past")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST,True)
+STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 
 for npcId in range(31095,31126):
     if npcId in [31111,31112,31113]:
         continue
-    STARTED.addTalkId(npcId)
-    CREATED.addTalkId(npcId)
+    QUEST.addTalkId(npcId)
     QUEST.addStartNpc(npcId)
 
 for mobs in range(21208,21256):
-    STARTED.addKillId(mobs)
+    QUEST.addKillId(mobs)
 
 STARTED.addQuestDrop(20986,ANCIENT_SCROLL,1)
 

@@ -22,10 +22,14 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == CREATED :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getLevel() >= 3 :
@@ -48,7 +52,11 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_finish")
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    if st.getInt("cond") == 1:
       npcId = npc.getNpcId()
       count=st.getQuestItemsCount(WOLF_CLAW)
@@ -77,13 +85,10 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30136)
 
-CREATED.addTalkId(30136)
-STARTING.addTalkId(30136)
-STARTED.addTalkId(30136)
-COMPLETED.addTalkId(30136)
+QUEST.addTalkId(30136)
 
-STARTED.addKillId(20003)
-STARTED.addKillId(20456)
+QUEST.addKillId(20003)
+QUEST.addKillId(20456)
 
 STARTED.addQuestDrop(20003,WOLF_CLAW,1)
 

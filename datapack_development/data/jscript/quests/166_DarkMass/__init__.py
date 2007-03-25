@@ -26,9 +26,12 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
@@ -59,27 +62,28 @@ class Quest (JQuest) :
             st.set("cond","0")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
-   elif npcId == 30135 :
-      if st.getQuestItemsCount(UNDRES_LETTER_ID) :
-         if not st.getQuestItemsCount(CEREMONIAL_DAGGER_ID) :
-            st.giveItems(CEREMONIAL_DAGGER_ID,1)
-            htmltext = "30135-01.htm"
-         else :
-            htmltext = "30135-02.htm"
-   elif npcId == 30139 :
-      if st.getQuestItemsCount(UNDRES_LETTER_ID) :
-         if not st.getQuestItemsCount(DREVIANT_WINE_ID) :
-            st.giveItems(DREVIANT_WINE_ID,1)
-            htmltext = "30139-01.htm"
-         else :
-            htmltext = "30139-02.htm"
-   elif npcId == 30143 :
-      if st.getQuestItemsCount(UNDRES_LETTER_ID) :
-         if not st.getQuestItemsCount(GARMIELS_SCRIPTURE_ID) :
-            st.giveItems(GARMIELS_SCRIPTURE_ID,1)
-            htmltext = "30143-01.htm"
-         else :
-            htmltext = "30143-02.htm"
+   elif id == STARTED: 
+       if npcId == 30135 :
+          if st.getQuestItemsCount(UNDRES_LETTER_ID) :
+             if not st.getQuestItemsCount(CEREMONIAL_DAGGER_ID) :
+                st.giveItems(CEREMONIAL_DAGGER_ID,1)
+                htmltext = "30135-01.htm"
+             else :
+                htmltext = "30135-02.htm"
+       elif npcId == 30139 :
+          if st.getQuestItemsCount(UNDRES_LETTER_ID) :
+             if not st.getQuestItemsCount(DREVIANT_WINE_ID) :
+                st.giveItems(DREVIANT_WINE_ID,1)
+                htmltext = "30139-01.htm"
+             else :
+                htmltext = "30139-02.htm"
+       elif npcId == 30143 :
+          if st.getQuestItemsCount(UNDRES_LETTER_ID) :
+             if not st.getQuestItemsCount(GARMIELS_SCRIPTURE_ID) :
+                st.giveItems(GARMIELS_SCRIPTURE_ID,1)
+                htmltext = "30143-01.htm"
+             else :
+                htmltext = "30143-02.htm"
    return htmltext
 
 QUEST       = Quest(166,qn,"Dark Mass")
@@ -92,14 +96,11 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30130)
 
-CREATED.addTalkId(30130)
-STARTING.addTalkId(30130)
-COMPLETED.addTalkId(30130)
+QUEST.addTalkId(30130)
 
-STARTED.addTalkId(30130)
-STARTED.addTalkId(30135)
-STARTED.addTalkId(30139)
-STARTED.addTalkId(30143)
+QUEST.addTalkId(30135)
+QUEST.addTalkId(30139)
+QUEST.addTalkId(30143)
 
 STARTED.addQuestDrop(30135,CEREMONIAL_DAGGER_ID,1)
 STARTED.addQuestDrop(30139,DREVIANT_WINE_ID,1)

@@ -24,9 +24,12 @@ class Quest (JQuest) :
       htmltext = "30571-03.htm"
     return htmltext
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
@@ -52,7 +55,11 @@ class Quest (JQuest) :
         st.giveItems(LEATHER_PANTS_ID,1)
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if npcId == 20479 :
       if int(st.get("cond"))==1 and st.getQuestItemsCount(KASHA_CRYSTAL_ID) == 0 :
@@ -83,11 +90,10 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(30571)
-CREATED.addTalkId(30571)
-STARTED.addTalkId(30571)
+QUEST.addTalkId(30571)
 
-STARTED.addKillId(20479)
-STARTED.addKillId(27044)
+QUEST.addKillId(20479)
+QUEST.addKillId(27044)
 
 STARTED.addQuestDrop(27044,KASHA_CRYSTAL_ID,1)
 STARTED.addQuestDrop(20479,KASHA_PARASITE_ID,1)

@@ -77,9 +77,12 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
      st.set("step","0")
@@ -126,7 +129,11 @@ class Quest (JQuest) :
           htmltext = "30623-17.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+  st = player.getQuestState(qn)
+  if not st : return 
+  if st.getState() != STARTED : return 
+   
   npcId = npc.getNpcId()
   step,maxcount,item=DROPLIST[npcId]
   count=st.getQuestItemsCount(item)
@@ -148,12 +155,9 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30623)
 
-CREATED.addTalkId(30623)
-STARTING.addTalkId(30623)
-STARTED.addTalkId(30623)
-COMPLETED.addTalkId(30623)
+QUEST.addTalkId(30623)
 
 for i in DROPLIST.keys():
-    STARTED.addKillId(i)
+    QUEST.addKillId(i)
 
 print "importing quests: 222: Test Of Duelist"

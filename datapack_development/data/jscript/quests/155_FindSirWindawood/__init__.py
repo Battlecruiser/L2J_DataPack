@@ -23,9 +23,12 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == COMPLETED:
       htmltext = "<html><head><body>This quest have already been completed.</body></html>" 
@@ -38,7 +41,7 @@ class Quest (JQuest) :
             st.exitQuest(1)
       elif st.getInt("cond") and st.getQuestItemsCount(OFFICIAL_LETTER_ID) :
          htmltext = "30042-05.htm"
-   elif npcId == 30311 and st.getInt("cond") and st.getQuestItemsCount(OFFICIAL_LETTER_ID) :
+   elif npcId == 30311 and st.getInt("cond") and st.getQuestItemsCount(OFFICIAL_LETTER_ID) and id == STARTED:
       st.takeItems(OFFICIAL_LETTER_ID,-1)
       st.giveItems(HASTE_POTION_ID,1)
       st.unset("cond")
@@ -57,12 +60,9 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30042)
 
-CREATED.addTalkId(30042)
-STARTING.addTalkId(30042)
-STARTED.addTalkId(30042)
-COMPLETED.addTalkId(30042)
+QUEST.addTalkId(30042)
 
-STARTED.addTalkId(30311)
+QUEST.addTalkId(30311)
 
 STARTED.addQuestDrop(30042,OFFICIAL_LETTER_ID,1)
 

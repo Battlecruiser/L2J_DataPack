@@ -2,7 +2,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
+qn = "1004_create"
 SMITHS = [7283,7298,7300,7317,7458,7471,7526,7527,7536,7621,7678,7688,7846,7898,8002,8044,8271,8274,8316,8539,8583,8626,8668]
 
 class Quest (JQuest) :
@@ -355,9 +355,10 @@ class Quest (JQuest) :
 
     return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (Self,npc,player):
 
    npcId = npc.getNpcId()
+   st = player.getQuestState(qn)
    htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
    st.set("cond","0")
    st.setState(STARTED)
@@ -372,6 +373,6 @@ QUEST.setInitialState(CREATED)
 
 for npcId in SMITHS :
     QUEST.addStartNpc(npcId)
-    STARTED.addTalkId(npcId)
+    QUEST.addTalkId(npcId)
 
 print "importing blacksmith data: 1004_create"

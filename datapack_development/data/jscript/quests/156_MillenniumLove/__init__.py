@@ -41,9 +41,12 @@ class Quest (JQuest) :
        htmltext = "30369-04.htm"
     return htmltext
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == COMPLETED :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
@@ -61,7 +64,7 @@ class Quest (JQuest) :
            st.addExpAndSp(3000,0)
            st.giveItems(5250,1)
            htmltext = "30368-08.htm"
-   elif npcId == 30369 :
+   elif npcId == 30369 and id = STARTED:
       if st.getQuestItemsCount(RYLITHS_LETTER_ID) :
          htmltext = "30369-02.htm"
       elif st.getQuestItemsCount(THEONS_DIARY_ID) :
@@ -77,12 +80,9 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30368)
 
-CREATED.addTalkId(30368)
-STARTING.addTalkId(30368)
-STARTED.addTalkId(30368)
-COMPLETED.addTalkId(30368)
+QUEST.addTalkId(30368)
 
-STARTED.addTalkId(30369)
+QUEST.addTalkId(30369)
 
 STARTED.addQuestDrop(30368,RYLITHS_LETTER_ID,1)
 STARTED.addQuestDrop(30369,THEONS_DIARY_ID,1)

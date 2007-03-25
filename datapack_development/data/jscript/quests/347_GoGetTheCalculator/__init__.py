@@ -74,10 +74,15 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
-    npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
     htmltext = "<html><head><body>I have nothing to say you</body></html>"
+    st = player.getQuestState(qn)
+    if not st : return htmltext
+
+    npcId = npc.getNpcId()
     id = st.getState()
+    if npcId != BRUNON and id != STARTED : return htmltext
+
     if npcId == BRUNON and id==CREATED :
         st.set("id","0")
         st.set("cond","0")
@@ -103,7 +108,11 @@ class Quest (JQuest) :
         htmltext = str(BRUNON)+"-04.htm"
     return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if npcId == GEMSTONE_BEAST and int(st.get("cond"))==5 and st.getRandom(2)==1 and st.getQuestItemsCount(GEMSTONE_BEAST_CRYSTAL)<10 :
         st.giveItems(GEMSTONE_BEAST_CRYSTAL,1)
@@ -122,14 +131,13 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(BRUNON)
 
-CREATED.addTalkId(BRUNON)
+QUEST.addTalkId(BRUNON)
 
-STARTED.addTalkId(BRUNON)
-STARTED.addTalkId(SILVERA)
-STARTED.addTalkId(SPIRON)
-STARTED.addTalkId(BALANKI)
+QUEST.addTalkId(SILVERA)
+QUEST.addTalkId(SPIRON)
+QUEST.addTalkId(BALANKI)
 
-STARTED.addKillId(GEMSTONE_BEAST)
+QUEST.addKillId(GEMSTONE_BEAST)
 STARTED.addQuestDrop(GEMSTONE_BEAST, GEMSTONE_BEAST_CRYSTAL, 1)
 
 print "importing quests: 347: Go Get The Calculator"

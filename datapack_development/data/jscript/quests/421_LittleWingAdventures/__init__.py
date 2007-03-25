@@ -153,7 +153,7 @@ class Quest (JQuest) :
         st.giveItems(item,1)
         st.exitQuest(1)
         st.playSound("ItemSound.quest_finish")
-   else:
+   elif id == STARTING :
      leafs = st.getQuestItemsCount(FT_LEAF)
      if 0 < leafs :
         for i in range(4) :
@@ -164,14 +164,14 @@ class Quest (JQuest) :
               htmltext = FAIRY_TREES[i][5]
    return htmltext
 
- def onKill (self,npc,st) :
+ def onKill (self,npc,player) :
    return  
 
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
 CREATED     = State('Start',     QUEST)
-STARTING    = State('Starting',  QUEST,True)
-STARTED     = State('Started',   QUEST,True)
+STARTING    = State('Starting',  QUEST)
+STARTED     = State('Started',   QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
@@ -179,17 +179,13 @@ QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
 QUEST.addStartNpc(SG_CRONOS)
 # Quest initialization
-CREATED.addTalkId(SG_CRONOS)
-COMPLETED.addTalkId(SG_CRONOS)
+QUEST.addTalkId(SG_CRONOS)
 
-STARTING.addTalkId(SG_CRONOS)
-STARTING.addTalkId(FY_MYMYU)
-
-STARTED.addTalkId(FY_MYMYU)
+QUEST.addTalkId(FY_MYMYU)
 
 STARTING.addQuestDrop(SG_CRONOS,FT_LEAF,1)
 
 for i in range(4) :
-  STARTING.addTalkId(FAIRY_TREES[i][0])
+  QUEST.addTalkId(FAIRY_TREES[i][0])
 
 print "importing quests: "+str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

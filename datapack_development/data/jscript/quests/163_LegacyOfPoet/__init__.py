@@ -28,11 +28,13 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
-
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    id = st.getState()
+   npcId = npc.getNpcId()
    if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
@@ -71,7 +73,10 @@ class Quest (JQuest) :
         htmltext = "30220-08.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
 
    npcId = npc.getNpcId()
    if npcId == 20372 :
@@ -140,12 +145,10 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30220)
 
-STARTING.addTalkId(30220)
+QUEST.addTalkId(30220)
 
-STARTED.addTalkId(30220)
-
-STARTED.addKillId(20372)
-STARTED.addKillId(20373)
+QUEST.addKillId(20372)
+QUEST.addKillId(20373)
 
 STARTED.addQuestDrop(20372,RUMIELS_POEM_1_ID,1)
 STARTED.addQuestDrop(20373,RUMIELS_POEM_1_ID,1)

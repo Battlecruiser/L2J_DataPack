@@ -37,7 +37,7 @@ default   = "<html><head><body>I have nothing to say to you.</body></html>"
 MANAKIA,TORAI = 30515, 30557
  
 #Mobs & Drop
-DROPLIST = {20620:[CB_TOOTH],20621:[DW_LIGHT]}
+DROPLIST = {20620:[CB_TOOTH,"awaitTooth"],20621:[DW_LIGHT,"awaitLight"]}
  
 def render_shop() :
     html = "<html><head><body><font color=\"LEVEL\">Robe Armor Fabrics:</font><table border=0 width=300>"
@@ -57,6 +57,7 @@ class Quest (JQuest) :
     htmltext = event
     if event == "30515-4.htm" :
        st.setState(STARTING)
+       st.set("awaitSealedMStone","1")
        st.set("cond","1")
        st.playSound("ItemSound.quest_accept")
     elif event == "30515-5.htm" :
@@ -75,6 +76,8 @@ class Quest (JQuest) :
           if id == STARTING :
              st.setState(STARTED)
              st.set("cond","2")
+             st.set("awaitTooth","1")
+             st.set("awaitLight","1")
              htmltext = "30515-9.htm"
           elif id == STARTED :
              htmltext = "30515-10.htm"
@@ -88,10 +91,15 @@ class Quest (JQuest) :
        htmltext = "30515-11.htm"
     return htmltext
  
- def onTalk (self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = default
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
-   npcid = npc.getNpcId()
+   if npcId != MANAKIA and id != STARTED : return htmltext
+
    if npcid == MANAKIA:
       if id == CREATED :
          st.set("cond","0")
@@ -114,28 +122,38 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_middle")
    return htmltext
  
- def onKill (self,npc,st) :
-     npcid = npc.getNpcId()
-     item  = DROPLIST[npcid][0]
-     count = st.getQuestItemsCount(item)
-     if count < 65 and st.getRandom(DROP_MAX) < DROP_RATE :
-        st.giveItems(item,1)
-        if count + 1 >= 65 :
-           st.playSound("ItemSound.quest_middle")
-        else :
-           st.playSound("ItemSound.quest_itemget")
-     if st.getState() == STARTING :   
+ def onKill (self,npc,player) :
+     #both mobs may give SEALD_MSTONE to a player
+     partyMember = self.getRandomPartyMember(player,"awaitSealedMStone","1")
+     if partyMember :
+        st = partyMember.getQuestState(qn)
         if st.getRandom(DROP_MAX_2) < DROP_RATE_2  and not st.getQuestItemsCount(SEALD_MSTONE) :
            st.giveItems(SEALD_MSTONE,1)
+           st.unset("awaitSealedMStone")
            st.playSound("ItemSound.quest_middle")
+
+     #also, each mob might give a CB_TOOTH or DW_LIGHT
+     npcId = npc.getNpcId()
+     item, partyCond = DROPLIST[npcid]
+     partyMember = self.getRandomPartyMember(player,partyCond,"1")
+     if partyMember :
+         st = partyMember.getQuestState(qn)
+         count = st.getQuestItemsCount(item)
+         if count < 65 and st.getRandom(DROP_MAX) < DROP_RATE :
+            st.giveItems(item,1)
+            if count + 1 >= 65 :
+               st.playSound("ItemSound.quest_middle")
+               st.unset(partyCond)
+            else :
+               st.playSound("ItemSound.quest_itemget")
      return  
  
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
  
 CREATED     = State('Start',     QUEST)
-STARTING    = State('Starting',  QUEST,True)
-STARTED     = State('Started',   QUEST,True)
+STARTING    = State('Starting',  QUEST)
+STARTED     = State('Started',   QUEST)
 COMPLETED   = State('Completed', QUEST)
  
 QUEST.setInitialState(CREATED)
@@ -143,14 +161,12 @@ QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
 QUEST.addStartNpc(MANAKIA)
 # Quest initialization
-CREATED.addTalkId(MANAKIA)
-STARTING.addTalkId(MANAKIA)
-STARTED.addTalkId(MANAKIA)
-STARTED.addTalkId(TORAI)
+QUEST.addTalkId(MANAKIA)
+
+QUEST.addTalkId(TORAI)
  
 for i in DROPLIST.keys() :
-  STARTING.addKillId(i)
-  STARTED.addKillId(i)
+  QUEST.addKillId(i)
   STARTING.addQuestDrop(i,DROPLIST[i][0],1)
  
 print str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

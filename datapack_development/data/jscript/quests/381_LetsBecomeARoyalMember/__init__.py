@@ -43,10 +43,16 @@ class Quest (JQuest) :
             htmltext = default
       return htmltext
 
-  def onTalk(self,npc,st):
-      cond=st.getInt("cond")
-      npcId = npc.getNpcId()
+  def onTalk (self,npc,player):
       htmltext = default
+      st = player.getQuestState(qn)
+      if not st : return htmltext
+
+      npcId = npc.getNpcId()
+      id = st.getState()
+      if npcId != SORINT and id != STARTED : return htmltext
+      
+      cond=st.getInt("cond")
       album = st.getQuestItemsCount(COIN_ALBUM)
       if npcId == SORINT :
          if cond == 0 :
@@ -81,7 +87,11 @@ class Quest (JQuest) :
                     htmltext = "30090-03.htm"
       return htmltext
 
-  def onKill (self,npc,st):
+  def onKill (self,npc,player):
+      st = player.getQuestState(qn)
+      if not st : return 
+      if st.getState() != STARTED : return 
+   
       npcId = npc.getNpcId()
       album = st.getQuestItemsCount(COIN_ALBUM)
       coin = st.getQuestItemsCount(KAILS_COIN)
@@ -109,12 +119,12 @@ STARTED     = State('Started',   QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(SORINT)
 
-CREATED.addTalkId(SORINT)
-STARTED.addTalkId(SORINT)
-STARTED.addTalkId(SANDRA)
+QUEST.addTalkId(SORINT)
 
-STARTED.addKillId(ANCIENT_GARGOYLE)
-STARTED.addKillId(VEGUS)
+QUEST.addTalkId(SANDRA)
+
+QUEST.addKillId(ANCIENT_GARGOYLE)
+QUEST.addKillId(VEGUS)
 
 STARTED.addQuestDrop(KAILS_COIN, SORINT,1)
 STARTED.addQuestDrop(COIN_ALBUM, SORINT,1)

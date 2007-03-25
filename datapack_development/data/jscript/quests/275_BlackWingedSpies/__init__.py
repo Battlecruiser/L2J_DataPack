@@ -23,8 +23,12 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
@@ -50,7 +54,11 @@ class Quest (JQuest) :
        st.takeItems(VARANGKAS_PARASITE,-1)
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if npcId == 20316 :
      if st.getQuestItemsCount(DARKWING_BAT_FANG) < 70 :
@@ -84,13 +92,10 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30567)
 
-CREATED.addTalkId(30567)
-STARTING.addTalkId(30567)
-STARTED.addTalkId(30567)
-COMPLETED.addTalkId(30567)
+QUEST.addTalkId(30567)
 
-STARTED.addKillId(20316)
-STARTED.addKillId(27043)
+QUEST.addKillId(20316)
+QUEST.addKillId(27043)
 
 STARTED.addQuestDrop(20316,DARKWING_BAT_FANG,1)
 STARTED.addQuestDrop(20316,VARANGKAS_PARASITE,1)

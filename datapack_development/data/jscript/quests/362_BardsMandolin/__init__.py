@@ -24,11 +24,15 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say to you</body></html>"
    id = st.getState()
-   if id == CREATED :
+   if npcId != 30957 and id != STARTED : return htmltext
+   if id == CREATED :
      st.set("cond","0")
    cond = int(st.get("cond"))
    if npcId == 30957 and cond == 0 :
@@ -64,12 +68,11 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30957)
-CREATED.addTalkId(30957)
+QUEST.addTalkId(30957)
 
-STARTED.addTalkId(30957)
-STARTED.addTalkId(30956)
-STARTED.addTalkId(30958)
-STARTED.addTalkId(30837)
+QUEST.addTalkId(30956)
+QUEST.addTalkId(30958)
+QUEST.addTalkId(30837)
 
 STARTED.addQuestDrop(30957,4316,1)
 STARTED.addQuestDrop(30957,4317,1)

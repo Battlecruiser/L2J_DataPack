@@ -32,9 +32,12 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_finish")
      return htmltext
  
- def onTalk (Self,npc,st):
-     npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
      htmltext = "<html><head><body>I have nothing to say you</body></html>"
+     st = player.getQuestState(qn)
+     if not st : return htmltext
+
+     npcId = npc.getNpcId()
      id = st.getState()
      cond = st.getInt("cond")
      if id == CREATED :
@@ -45,7 +48,11 @@ class Quest (JQuest) :
          htmltext = "31043-04.htm"
      return htmltext
  
- def onKill(self,npc,st):
+ def onKill (self,npc,player):
+     st = player.getQuestState(qn)
+     if not st : return 
+     if st.getState() != STARTED : return 
+
      count = st.getQuestItemsCount(RED_CRYSTALS_ID)
      if st.getInt("cond") == 1 and count < 50 :
              st.giveItems(RED_CRYSTALS_ID,1)
@@ -64,8 +71,7 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(31043)
 
-CREATED.addTalkId(31043)
-STARTED.addTalkId(31043)
+QUEST.addTalkId(31043)
 
 STARTED.addKillId(21103)
 STARTED.addQuestDrop(21103,RED_CRYSTALS_ID,1)

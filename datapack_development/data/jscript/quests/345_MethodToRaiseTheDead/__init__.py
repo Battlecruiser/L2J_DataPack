@@ -52,11 +52,15 @@ class Quest (JQuest) :
          st.set("cond","6")
      return htmltext
 
- def onTalk (Self,npc,st):
-     npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
      htmltext = "<html><head><body>I have nothing to say you</body></html>"
+     st = player.getQuestState(qn)
+     if not st : return htmltext
+
+     npcId = npc.getNpcId()
      id = st.getState()
-     level = st.getPlayer().getLevel()
+     if npcId != 30970 and id != STARTED : return htmltext
+     level = st.getPlayer().getLevel()
      cond = st.getInt("cond")
      amount = st.getQuestItemsCount(USELESS_BONE_PIECES)
      if npcId==30970 :
@@ -90,7 +94,11 @@ class Quest (JQuest) :
              htmltext = "30973-01.htm"
      return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+     st = player.getQuestState(qn)
+     if not st : return 
+     if st.getState() != STARTED : return 
+   
      npcId = npc.getNpcId()
      random = st.getRandom(100)
      if random<=CHANCE :
@@ -115,10 +123,10 @@ STARTED     = State('Started', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30970)
 
-CREATED.addTalkId(30970)
-STARTED.addTalkId(30970)
-STARTED.addTalkId(30912)
-STARTED.addTalkId(30973)
+QUEST.addTalkId(30970)
+
+QUEST.addTalkId(30912)
+QUEST.addTalkId(30973)
 
 STARTED.addQuestDrop(30970,VICTIMS_ARM_BONE,1)
 STARTED.addQuestDrop(30970,VICTIMS_THIGH_BONE,1)
@@ -127,7 +135,7 @@ STARTED.addQuestDrop(30970,VICTIMS_RIB_BONE,1)
 STARTED.addQuestDrop(30970,VICTIMS_SPINE,1)
 STARTED.addQuestDrop(30912,POWDER_TO_SUMMON_DEAD_SOULS,1)
 
-STARTED.addKillId(20789)
-STARTED.addKillId(20791)
+QUEST.addKillId(20789)
+QUEST.addKillId(20791)
 
 print "importing quests: 345: Method To Raise The Dead"

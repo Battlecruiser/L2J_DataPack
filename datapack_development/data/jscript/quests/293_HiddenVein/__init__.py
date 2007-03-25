@@ -32,10 +32,15 @@ class Quest (JQuest) :
         st.takeItems(TORN_MAP_FRAGMENT,4)
     return htmltext
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
+   if npcId != 30535 and id != STARTED : return htmltext
+   
    if id == CREATED :
      st.set("cond","0")
    if npcId == 30535 :
@@ -71,7 +76,11 @@ class Quest (JQuest) :
       htmltext = "30539-01.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    n = st.getRandom(100)
    if n > 50 :
      st.giveItems(CHRYSOLITE_ORE,1)
@@ -90,16 +99,13 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30535)
 
-CREATED.addTalkId(30535)
-STARTING.addTalkId(30535)
-STARTED.addTalkId(30535)
-COMPLETED.addTalkId(30535)
+QUEST.addTalkId(30535)
 
-STARTED.addTalkId(30539)
+QUEST.addTalkId(30539)
 
-STARTED.addKillId(20446)
-STARTED.addKillId(20447)
-STARTED.addKillId(20448)
+QUEST.addKillId(20446)
+QUEST.addKillId(20447)
+QUEST.addKillId(20448)
 
 STARTED.addQuestDrop(30539,HIDDEN_VEIN_MAP,1)
 STARTED.addQuestDrop(20446,CHRYSOLITE_ORE,1)
