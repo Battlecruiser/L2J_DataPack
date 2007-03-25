@@ -490,7 +490,6 @@
     <add order="0x40" stat="runSpd" val="#runSpd"/>
     <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
     <mul order="0x30" stat="regHp" val="0.5"/>
-    <mul order="0x30" stat="cAtk" val="#cAtk"/>
     <add order="0x40" stat="rCrit" val="#rCrit">
       <and>
         <using kind="Sword,Big Sword,Pole"/>
