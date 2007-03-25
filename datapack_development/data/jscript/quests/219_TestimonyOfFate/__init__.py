@@ -90,10 +90,15 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
+   if npcId != 30476 and id != STARTED : return htmltext
+
    if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
@@ -245,7 +250,11 @@ class Quest (JQuest) :
       htmltext = "31850-05.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return
+   if st.getState() != STARTED : return
+
    npcId = npc.getNpcId()
    if npcId == 20144 :
       if int(st.get("cond")) and st.getQuestItemsCount(METHEUS_FUNERAL_JAR_ID) and st.getQuestItemsCount(KASANDRAS_REMAINS_ID) == 0 :
@@ -381,34 +390,33 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30476)
 
-STARTING.addTalkId(30476)
+QUEST.addTalkId(30476)
 
-STARTED.addTalkId(31845)
-STARTED.addTalkId(31850)
-STARTED.addTalkId(30114)
-STARTED.addTalkId(30210)
-STARTED.addTalkId(30358)
-STARTED.addTalkId(30419)
-STARTED.addTalkId(30463)
-STARTED.addTalkId(30476)
-STARTED.addTalkId(30613)
-STARTED.addTalkId(30614)
+QUEST.addTalkId(31845)
+QUEST.addTalkId(31850)
+QUEST.addTalkId(30114)
+QUEST.addTalkId(30210)
+QUEST.addTalkId(30358)
+QUEST.addTalkId(30419)
+QUEST.addTalkId(30463)
+QUEST.addTalkId(30613)
+QUEST.addTalkId(30614)
 
-STARTED.addKillId(20144)
-STARTED.addKillId(20157)
-STARTED.addKillId(20158)
-STARTED.addKillId(20192)
-STARTED.addKillId(20193)
-STARTED.addKillId(20202)
-STARTED.addKillId(20230)
-STARTED.addKillId(20232)
-STARTED.addKillId(20233)
-STARTED.addKillId(20234)
-STARTED.addKillId(20270)
-STARTED.addKillId(27079)
-STARTED.addKillId(20554)
-STARTED.addKillId(20582)
-STARTED.addKillId(20600)
+QUEST.addKillId(20144)
+QUEST.addKillId(20157)
+QUEST.addKillId(20158)
+QUEST.addKillId(20192)
+QUEST.addKillId(20193)
+QUEST.addKillId(20202)
+QUEST.addKillId(20230)
+QUEST.addKillId(20232)
+QUEST.addKillId(20233)
+QUEST.addKillId(20234)
+QUEST.addKillId(20270)
+QUEST.addKillId(27079)
+QUEST.addKillId(20554)
+QUEST.addKillId(20582)
+QUEST.addKillId(20600)
 
 STARTED.addQuestDrop(30614,ALDERS_SKULL1_ID,1)
 STARTED.addQuestDrop(30476,KAIRAS_INSTRUCTIONS_ID,1)

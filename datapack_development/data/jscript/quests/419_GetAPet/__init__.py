@@ -143,9 +143,15 @@ class Quest (JQuest):
         return check_questions(st)
     return
 
-  def onTalk (self,npc,st):
-    npcid = npc.getNpcId()
+ def onTalk (self,npc,player):
+    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+    st = player.getQuestState(qn)
+    if not st : return htmltext
+
+    npcId = npc.getNpcId()
     id = st.getState()
+    if npcId != PET_MANAGER_MARTIN and id != SLAYED : return htmltext
+
     if id == COMPLETED: st.setState(CREATED)
     if npcid == PET_MANAGER_MARTIN :
       if id == CREATED  :
@@ -196,7 +202,11 @@ class Quest (JQuest):
          return "419_metty_1.htm"
     return
 
-  def onKill (self,npc,st):
+  def onKill (self,npc,player):
+      st = player.getQuestState(qn)
+      if not st : return 
+      if st.getState() != STARTED : return 
+   
       npcId = npc.getNpcId()
       collected = getCount_proof(st)
       if collected < REQUIRED_SPIDER_LEGS:
@@ -244,16 +254,13 @@ for item in range(3417,3428):
 
 # Quest mob initialization
 for mob in [SPIDER_H1,SPIDER_H2,SPIDER_H3,SPIDER_LE1,SPIDER_LE2,SPIDER_LE3,SPIDER_DE1,SPIDER_DE2,SPIDER_DE3,SPIDER_O1,SPIDER_O2,SPIDER_O3,SPIDER_D1,SPIDER_D2]:
-    STARTED.addKillId(mob)
+    QUEST.addKillId(mob)
 
 # Quest NPC initialization
-CREATED.addTalkId(PET_MANAGER_MARTIN)
-STARTED.addTalkId(PET_MANAGER_MARTIN)
-SLAYED.addTalkId(PET_MANAGER_MARTIN)
-TALKED.addTalkId(PET_MANAGER_MARTIN)
+QUEST.addTalkId(PET_MANAGER_MARTIN)
 
-SLAYED.addTalkId(GK_BELLA)
-SLAYED.addTalkId(MC_ELLIE)
-SLAYED.addTalkId(GD_METTY)
+QUEST.addTalkId(GK_BELLA)
+QUEST.addTalkId(MC_ELLIE)
+QUEST.addTalkId(GD_METTY)
 
 print "importing quests: 419: Get a Pet"

@@ -78,19 +78,24 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_finish")
     return htmltext
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have no tasks for you right now.</body></html>"
-   cond=st.getInt("cond")
-   onlyone=st.getInt("onlyone")
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
+   if id == COMPLETED and not npcId in [30600, 30601, 30602, 30598, 30599] : return htmltext
+   if id != COMPLETED and npcId in [30600, 30601, 30602, 30598, 30599] : return htmltext
+   cond=st.getInt("cond")
+   onlyone=st.getInt("onlyone")
    level=st.getPlayer().getLevel()
    npcTyp=0
    if id == CREATED :
      st.setState(STARTING)
      st.set("onlyone","0")
-   if npcId in [30600, 30601, 30602, 30598, 30599] :
-     if id == COMPLETED and onlyone == 1:
+   if id == COMPLETED and onlyone == 1:
+     if npcId in [30600, 30601, 30602, 30598, 30599] :
        st.set("onlyone","2")
        if st.getPlayer().getClassId().isMage() :
          st.giveItems(SPIRITSHOT_NOVICE,100)
@@ -154,7 +159,11 @@ class Quest (JQuest) :
        htmltext = "<html><head><body>You are too experienced now.</body></html>"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    if st.getInt("cond")==1 and st.getRandom(100) < 25 and st.getQuestItemsCount(BLUE_GEM) == 0 :
       st.giveItems(BLUE_GEM,1)
       st.playSound("ItemSound.quest_itemget")
@@ -172,13 +181,12 @@ QUEST.setInitialState(CREATED)
 
 for startNpc in [30008,30009,30017,30019,30129,30131,30404,30056,30011,30012,30401,30403,30402,30018,30021,30020,30574,30370,30400,30528,30530,30573,30575]:
   QUEST.addStartNpc(startNpc)
-  STARTING.addTalkId(startNpc)
-  STARTED.addTalkId(startNpc)
+  QUEST.addTalkId(startNpc)
 
 for npc in [30600, 30601, 30602, 30598, 30599]:
-  COMPLETED.addTalkId(npc)
+  QUEST.addTalkId(npc)
 
-STARTED.addKillId(20001)
-STARTED.addKillId(27198)
+QUEST.addKillId(20001)
+QUEST.addKillId(27198)
 
 print "importing quests: 999: C5 Tutorial"

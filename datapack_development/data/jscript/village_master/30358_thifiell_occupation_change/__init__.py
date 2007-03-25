@@ -9,7 +9,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
+qn = "30358_thifiell_occupation_change"
 TETRARCH_THIFIELL = 30358
 
 class Quest (JQuest) :
@@ -50,8 +50,8 @@ class Quest (JQuest) :
    if event == "30358-10.htm":
      return "30358-10.htm"
 
- def onTalk (Self,npc,st):
-
+ def onTalk (Self,npc,player):
+   st = player.getQuestState(qn)
    npcId = npc.getNpcId()
    
    Race    = st.getPlayer().getRace()
@@ -80,7 +80,7 @@ class Quest (JQuest) :
      st.exitQuest(1)
      return "30358-11.htm"
 
-QUEST     = Quest(30358,"30358_thifiell_occupation_change","village_master")
+QUEST     = Quest(30358,qn,"village_master")
 CREATED   = State('Start',     QUEST)
 STARTED   = State('Started',   QUEST)
 COMPLETED = State('Completed', QUEST)
@@ -89,4 +89,4 @@ QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(30358)
 
-STARTED.addTalkId(30358)
+QUEST.addTalkId(30358)

@@ -48,8 +48,10 @@ class Quest (JQuest) :
        htmltext = "You don't have enough materials"
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
    npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
@@ -62,20 +64,25 @@ class Quest (JQuest) :
          st.exitQuest(1)
      else :
        st.exitQuest(1)
-   elif npcId == 30294 and cond == 1 :
-     htmltext = "30294-0.htm"
-   elif npcId == 30088 and cond == 2 :
-     htmltext = "30088-2.htm"
-   elif npcId == 30165 and cond == 3 :
-     htmltext = "30165-0.htm"
-   elif npcId == 30165 and cond == 5 :
-     htmltext = "30165-2.htm"
-   elif npcId == 30088 and cond == 6 :
-      htmltext = "30088-4.htm"
-   else : htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   elif id == STARTED :    
+       if npcId == 30294 and cond == 1 :
+         htmltext = "30294-0.htm"
+       elif npcId == 30088 and cond == 2 :
+         htmltext = "30088-2.htm"
+       elif npcId == 30165 and cond == 3 :
+         htmltext = "30165-0.htm"
+       elif npcId == 30165 and cond == 5 :
+         htmltext = "30165-2.htm"
+       elif npcId == 30088 and cond == 6 :
+          htmltext = "30088-4.htm"
+       else : htmltext = "<html><head><body>I have nothing to say you</body></html>"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return
+   
    count = st.getQuestItemsCount(SPINNERET)
    if count < 10 :
      st.giveItems(SPINNERET,1)
@@ -92,11 +99,11 @@ STARTED     = State('Started', QUEST,True)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30088)
-CREATED.addTalkId(30088)
-STARTED.addTalkId(30088)
-STARTED.addTalkId(30165)
-STARTED.addTalkId(30294)
-STARTED.addKillId(20560)
+QUEST.addTalkId(30088)
+
+QUEST.addTalkId(30165)
+QUEST.addTalkId(30294)
+QUEST.addKillId(20560)
 STARTED.addQuestDrop(20560,SPINNERET,1)
 
 print "importing quests: 34: In Search of Clothes"

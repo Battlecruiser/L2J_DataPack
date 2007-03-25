@@ -35,8 +35,11 @@ class Quest (JQuest) :
        st.giveItems(DARINGS_LETTER,1) 
    return htmltext 
 
- def onTalk (Self,npc,st):
+ def onTalk (Self,npc,player):
+   st = player.getQuestState(qn)
    htmltext = "<html><head><body>I have nothing to say you</body></html>" 
+   if not st: return htmltext
+
    npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
@@ -63,49 +66,50 @@ class Quest (JQuest) :
        htmltext = "<html><head><body>Quest for characters level 2 and above.</body></html>" 
        st.exitQuest(1) 
    elif npcId == DARIN and cond == 0 and onlyone == 1 : 
-     htmltext = "<html><head><body>This quest have already been completed.</body></html>" 
-   elif npcId == ROXXY and cond and onlyone == 0 : 
-     if ItemsCount_RK == 0 and ItemsCount_DL : 
-       htmltext = "30006-01.htm" 
-       st.takeItems(DARINGS_LETTER,-1) 
-       st.giveItems(RAPUNZELS_KERCHIEF,1) 
-       st.set("cond","2") 
-       st.set("id","2") 
-       st.playSound("ItemSound.quest_middle") 
-     elif ItemsCount_BP or ItemsCount_DR : 
-       htmltext = "30006-03.htm" 
-     elif ItemsCount_RK : 
-       htmltext = "30006-02.htm" 
-   elif npcId == DARIN and cond and ItemsCount_RK > 0 and onlyone == 0 : 
-     htmltext = "30048-08.htm" 
-     st.takeItems(RAPUNZELS_KERCHIEF,-1) 
-     st.giveItems(DARINGS_RECEIPT,1) 
-     st.set("cond","3") 
-     st.set("id","3") 
-     st.playSound("ItemSound.quest_middle") 
-   elif npcId == BAULRO and cond and onlyone == 0 : 
-     if ItemsCount_DR > 0 : 
-       htmltext = "30033-01.htm" 
-       st.takeItems(DARINGS_RECEIPT,-1) 
-       st.giveItems(BAULS_POTION,1) 
-       st.set("cond","4") 
-       st.set("id","4") 
-       st.playSound("ItemSound.quest_middle") 
-     elif ItemsCount_BP > 0 : 
-       htmltext = "30033-02.htm" 
-   elif npcId == DARIN and cond and ItemsCount_RK == 0 and onlyone == 0 : 
-     if ItemsCount_DR > 0 : 
-       htmltext = "30048-09.htm" 
-     elif ItemsCount_BP > 0 : 
-       htmltext = "30048-10.htm" 
-       st.takeItems(BAULS_POTION,-1) 
-       st.giveItems(NECKLACE,1) 
-       st.set("cond","0") 
-       st.set("onlyone","1") 
-       st.setState(COMPLETED)
-       st.playSound("ItemSound.quest_finish") 
-     else: 
-       htmltext = "30048-07.htm" 
+     htmltext = "<html><head><body>This quest have already been completed.</body></html>"
+   elif id == STARTED :
+       if npcId == ROXXY and cond and onlyone == 0: 
+         if ItemsCount_RK == 0 and ItemsCount_DL : 
+           htmltext = "30006-01.htm" 
+           st.takeItems(DARINGS_LETTER,-1) 
+           st.giveItems(RAPUNZELS_KERCHIEF,1) 
+           st.set("cond","2") 
+           st.set("id","2") 
+           st.playSound("ItemSound.quest_middle") 
+         elif ItemsCount_BP or ItemsCount_DR : 
+           htmltext = "30006-03.htm" 
+         elif ItemsCount_RK : 
+           htmltext = "30006-02.htm" 
+       elif npcId == DARIN and cond and ItemsCount_RK > 0 and onlyone == 0 : 
+         htmltext = "30048-08.htm" 
+         st.takeItems(RAPUNZELS_KERCHIEF,-1) 
+         st.giveItems(DARINGS_RECEIPT,1) 
+         st.set("cond","3") 
+         st.set("id","3") 
+         st.playSound("ItemSound.quest_middle") 
+       elif npcId == BAULRO and cond and onlyone == 0 : 
+         if ItemsCount_DR > 0 : 
+           htmltext = "30033-01.htm" 
+           st.takeItems(DARINGS_RECEIPT,-1) 
+           st.giveItems(BAULS_POTION,1) 
+           st.set("cond","4") 
+           st.set("id","4") 
+           st.playSound("ItemSound.quest_middle") 
+         elif ItemsCount_BP > 0 : 
+           htmltext = "30033-02.htm" 
+       elif npcId == DARIN and cond and ItemsCount_RK == 0 and onlyone == 0 : 
+         if ItemsCount_DR > 0 : 
+           htmltext = "30048-09.htm" 
+         elif ItemsCount_BP > 0 : 
+           htmltext = "30048-10.htm" 
+           st.takeItems(BAULS_POTION,-1) 
+           st.giveItems(NECKLACE,1) 
+           st.set("cond","0") 
+           st.set("onlyone","1") 
+           st.setState(COMPLETED)
+           st.playSound("ItemSound.quest_finish") 
+         else: 
+           htmltext = "30048-07.htm" 
    return htmltext
 
 QUEST     = Quest(1,qn,"Letters of Love") 
@@ -117,11 +121,10 @@ COMPLETED = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(DARIN) 
 
-STARTING.addTalkId(DARIN) 
+QUEST.addTalkId(DARIN) 
 
-STARTED.addTalkId(ROXXY) 
-STARTED.addTalkId(BAULRO) 
-STARTED.addTalkId(DARIN) 
+QUEST.addTalkId(ROXXY) 
+QUEST.addTalkId(BAULRO) 
 
 STARTED.addQuestDrop(DARIN,DARINGS_LETTER,1) 
 STARTED.addQuestDrop(DARIN,RAPUNZELS_KERCHIEF,1) 

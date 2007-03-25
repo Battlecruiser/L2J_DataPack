@@ -48,12 +48,14 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_finish") 
    return htmltext 
 
- def onTalk (Self,npc,st): 
+ def onTalk (self,npc,player): 
    htmltext = "<html><head><body>I have nothing to say you</body></html>" 
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId() 
    cond  = st.getInt("cond") 
    id    = st.getState() 
-
    if id == CREATED : 
      st.set("cond","0") 
      if st.getPlayer().getRace().ordinal() == 1 : 
@@ -68,17 +70,17 @@ class Quest (JQuest) :
    elif npcId == MIRABEL and id == COMPLETED : 
      htmltext = "<html><head><body>I can't supply you with another Giran Scroll of Escape. Sorry traveller.</body></html>" 
    elif npcId == MIRABEL and cond == 1 : 
-     htmltext = "30146-04.htm" 
-   elif npcId == ARIEL and cond : 
-     if st.getQuestItemsCount(ARIELS_RECOMMENDATION) == 0 : 
-       htmltext = "30148-01.htm" 
-     else : 
-       htmltext = "30148-03.htm" 
-   elif npcId == ASTERIOS and cond == 2 and st.getQuestItemsCount(ARIELS_RECOMMENDATION) > 0 : 
-     htmltext = "30154-01.htm" 
-   elif npcId == MIRABEL and cond == 3 : 
-     htmltext = "30146-05.htm" 
-
+     htmltext = "30146-04.htm"
+   elif id == STARTED :  
+       if npcId == ARIEL and cond : 
+         if st.getQuestItemsCount(ARIELS_RECOMMENDATION) == 0 : 
+           htmltext = "30148-01.htm" 
+         else : 
+           htmltext = "30148-03.htm" 
+       elif npcId == ASTERIOS and cond == 2 and st.getQuestItemsCount(ARIELS_RECOMMENDATION) > 0 : 
+         htmltext = "30154-01.htm" 
+       elif npcId == MIRABEL and cond == 3 : 
+         htmltext = "30146-05.htm" 
    return htmltext 
 
 QUEST     = Quest(7,qn,"A Trip Begins") 
@@ -89,12 +91,10 @@ COMPLETED = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(MIRABEL) 
 
-CREATED.addTalkId(MIRABEL) 
-COMPLETED.addTalkId(MIRABEL) 
+QUEST.addTalkId(MIRABEL) 
 
-STARTED.addTalkId(MIRABEL) 
-STARTED.addTalkId(ARIEL) 
-STARTED.addTalkId(ASTERIOS) 
+QUEST.addTalkId(ARIEL) 
+QUEST.addTalkId(ASTERIOS) 
 
 STARTED.addQuestDrop(MIRABEL,ARIELS_RECOMMENDATION,1) 
 

@@ -35,11 +35,15 @@ class Quest (JQuest) :
       st.exitQuest(1)
     return htmltext
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if npcId != 30519 and id != STARTED : return htmltext
+   if id == CREATED :
      st.set("cond","0")
    if npcId == 30519 :
      if int(st.get("cond"))==0 :
@@ -63,7 +67,11 @@ class Quest (JQuest) :
      htmltext = "30548-01.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    n = st.getRandom(100)
    if n > 95 :
      st.giveItems(TARANTULA_SPINNERETTE,1)
@@ -82,16 +90,13 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30519)
 
-CREATED.addTalkId(30519)
-STARTING.addTalkId(30519)
-COMPLETED.addTalkId(30519)
+QUEST.addTalkId(30519)
 
-STARTED.addTalkId(30519)
-STARTED.addTalkId(30548)
+QUEST.addTalkId(30548)
 
-STARTED.addKillId(20394)
-STARTED.addKillId(20403)
-STARTED.addKillId(20508)
+QUEST.addKillId(20394)
+QUEST.addKillId(20403)
+QUEST.addKillId(20508)
 
 STARTED.addQuestDrop(20508,TARANTULA_SPIDER_SILK,1)
 STARTED.addQuestDrop(20394,TARANTULA_SPINNERETTE,1)

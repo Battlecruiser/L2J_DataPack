@@ -143,8 +143,11 @@ class Quest (JQuest) :
        st.setState(COMPLETED)
    return htmltext
 
- def onTalk (Self,npc,st) :
+ def onTalk (self,npc,player) :
    htmltext = "<html><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    ClassId = st.getPlayer().getClassId()
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
@@ -173,88 +176,93 @@ class Quest (JQuest) :
          htmltext = "30175-5.htm"
        else :
          htmltext = "30175-7.htm"
-   if npcId == KAMILEN :
-     if cond == 1 :
-       htmltext = "31287-0.htm"
-     if cond == 2 :
-       htmltext = "31287-4.htm"
-     if cond == 4 and st.getQuestItemsCount(INVESTIGATIVE_REPORT) == 1 :
-       htmltext = "31287-2.htm"
-     if cond == 5 :
-       htmltext = "31287-5.htm"
-     if cond == 10 :
-       htmltext = "31287-6.htm"
-     if cond == 11 :
-       if st.getQuestItemsCount(DIVINE_STONE) == 1 :
-         htmltext = "31287-10.htm"
-       else :
-         htmltext = "31287-9.htm"
-     if cond == 12 :
-       if st.getQuestItemsCount(DIVINE_STONE) == 1 :
-         htmltext = "31287-10.htm"
-       else :
-         htmltext = "31287-9.htm"
-     if cond == 13 :
-       htmltext = "31287-11.htm"
-     if cond == 14 :
-       htmltext = "31287-14.htm"
-     if cond == 15 :
-       htmltext = "31287-15.htm"
-   if npcId == MIST :
-     if cond == 2 :
-       htmltext = "31627-0.htm"
-     if cond == 3 :
-       htmltext = "31627-4.htm"
-     if cond == 3 and st.getQuestItemsCount(CRYOLITE) == 1 :
-       htmltext = "31627-2.htm"
-     if cond == 4 :
-       htmltext = "31627-3.htm"
-   if npcId == TABLET_OF_VISION1 and st.getQuestItemsCount(RESONANCE_AMULET_1) == 1 :
-     if cond == 5 :
-       htmltext = "31646-0.htm"
-     if cond == 6 :
-       htmltext = "31646-2.htm"
-   if npcId == TABLET_OF_VISION2 :
-     if cond == 6 and st.getQuestItemsCount(RESONANCE_AMULET_2) == 0 :
-       htmltext = "31649-0.htm"
-     if cond == 7 and st.getQuestItemsCount(RESONANCE_AMULET_2) == 1 :
-       htmltext = "31649-1.htm"
-     if cond == 8 :
-       htmltext = "31649-3.htm"
-   if npcId == TABLET_OF_VISION3 :
-     if cond == 8 :
-       htmltext = "31652-0.htm"
-     if cond == 9 and st.getQuestItemsCount(RESONANCE_AMULET_3) == 1 :
-       htmltext = "31652-4.htm"
-     if cond == 10 :
-       htmltext = "31652-6.htm"
-   if npcId == TABLET_OF_VISION4 :
-     if cond == 13 and st.getQuestItemsCount(RESONANCE_AMULET_4) == 1 :
-       htmltext = "31654-0.htm"
-     if cond == 14 :
-       htmltext = "31654-2.htm"
-   if npcId == TABLET_OF_VISION5 :
-     if cond == 15 :
-       htmltext = "31655-0.htm"
-     if cond == 16 and st.getQuestItemsCount(RESONANCE_AMULET_5) == 1 :
-       htmltext = "31655-1.htm"
-     if cond == 17 :
-       htmltext = "31655-3.htm"
-   if npcId == MEDINA_BLACKHEART :
-     if cond == 17 :
-       htmltext = "31598-0.htm"
-     if cond == 18 :
-       htmltext = "31598-7.htm"
-   if npcId == TABLET_OF_VISION6 :
-     if cond == 17 :
-       htmltext = "31659-0.htm"
-     if cond == 18 and st.getQuestItemsCount(RESONANCE_AMULET_6) == 1 :
-       htmltext = "31659-4.htm"
-     if cond == 19 :
-       htmltext = "31659-6.htm"
+   elif id == STARTED :      
+       if npcId == KAMILEN :
+         if cond == 1 :
+           htmltext = "31287-0.htm"
+         if cond == 2 :
+           htmltext = "31287-4.htm"
+         if cond == 4 and st.getQuestItemsCount(INVESTIGATIVE_REPORT) == 1 :
+           htmltext = "31287-2.htm"
+         if cond == 5 :
+           htmltext = "31287-5.htm"
+         if cond == 10 :
+           htmltext = "31287-6.htm"
+         if cond == 11 :
+           if st.getQuestItemsCount(DIVINE_STONE) == 1 :
+             htmltext = "31287-10.htm"
+           else :
+             htmltext = "31287-9.htm"
+         if cond == 12 :
+           if st.getQuestItemsCount(DIVINE_STONE) == 1 :
+             htmltext = "31287-10.htm"
+           else :
+             htmltext = "31287-9.htm"
+         if cond == 13 :
+           htmltext = "31287-11.htm"
+         if cond == 14 :
+           htmltext = "31287-14.htm"
+         if cond == 15 :
+           htmltext = "31287-15.htm"
+       if npcId == MIST :
+         if cond == 2 :
+           htmltext = "31627-0.htm"
+         if cond == 3 :
+           htmltext = "31627-4.htm"
+         if cond == 3 and st.getQuestItemsCount(CRYOLITE) == 1 :
+           htmltext = "31627-2.htm"
+         if cond == 4 :
+           htmltext = "31627-3.htm"
+       if npcId == TABLET_OF_VISION1 and st.getQuestItemsCount(RESONANCE_AMULET_1) == 1 :
+         if cond == 5 :
+           htmltext = "31646-0.htm"
+         if cond == 6 :
+           htmltext = "31646-2.htm"
+       if npcId == TABLET_OF_VISION2 :
+         if cond == 6 and st.getQuestItemsCount(RESONANCE_AMULET_2) == 0 :
+           htmltext = "31649-0.htm"
+         if cond == 7 and st.getQuestItemsCount(RESONANCE_AMULET_2) == 1 :
+           htmltext = "31649-1.htm"
+         if cond == 8 :
+           htmltext = "31649-3.htm"
+       if npcId == TABLET_OF_VISION3 :
+         if cond == 8 :
+           htmltext = "31652-0.htm"
+         if cond == 9 and st.getQuestItemsCount(RESONANCE_AMULET_3) == 1 :
+           htmltext = "31652-4.htm"
+         if cond == 10 :
+           htmltext = "31652-6.htm"
+       if npcId == TABLET_OF_VISION4 :
+         if cond == 13 and st.getQuestItemsCount(RESONANCE_AMULET_4) == 1 :
+           htmltext = "31654-0.htm"
+         if cond == 14 :
+           htmltext = "31654-2.htm"
+       if npcId == TABLET_OF_VISION5 :
+         if cond == 15 :
+           htmltext = "31655-0.htm"
+         if cond == 16 and st.getQuestItemsCount(RESONANCE_AMULET_5) == 1 :
+           htmltext = "31655-1.htm"
+         if cond == 17 :
+           htmltext = "31655-3.htm"
+       if npcId == MEDINA_BLACKHEART :
+         if cond == 17 :
+           htmltext = "31598-0.htm"
+         if cond == 18 :
+           htmltext = "31598-7.htm"
+       if npcId == TABLET_OF_VISION6 :
+         if cond == 17 :
+           htmltext = "31659-0.htm"
+         if cond == 18 and st.getQuestItemsCount(RESONANCE_AMULET_6) == 1 :
+           htmltext = "31659-4.htm"
+         if cond == 19 :
+           htmltext = "31659-6.htm"
    return htmltext
 
- def onKill (self,npc,st) :
+ def onKill (self,npc,player) :
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
    chance = st.getRandom(100)
@@ -286,23 +294,23 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(FAIREN)
-CREATED.addTalkId(FAIREN)
-STARTED.addTalkId(FAIREN)
-STARTED.addTalkId(KAMILEN)
-STARTED.addTalkId(MEDINA_BLACKHEART)
-STARTED.addTalkId(MIST)
-STARTED.addTalkId(TABLET_OF_VISION1)
-STARTED.addTalkId(TABLET_OF_VISION2)
-STARTED.addTalkId(TABLET_OF_VISION3)
-STARTED.addTalkId(TABLET_OF_VISION4)
-STARTED.addTalkId(TABLET_OF_VISION5)
-STARTED.addTalkId(TABLET_OF_VISION6)
+QUEST.addTalkId(FAIREN)
 
-STARTED.addKillId(GUARDIAN_OF_KNOWLEDGE)
-STARTED.addKillId(ANGEL_ALLECTOR)
-STARTED.addKillId(ARCHON_OF_HALISHA)
+QUEST.addTalkId(KAMILEN)
+QUEST.addTalkId(MEDINA_BLACKHEART)
+QUEST.addTalkId(MIST)
+QUEST.addTalkId(TABLET_OF_VISION1)
+QUEST.addTalkId(TABLET_OF_VISION2)
+QUEST.addTalkId(TABLET_OF_VISION3)
+QUEST.addTalkId(TABLET_OF_VISION4)
+QUEST.addTalkId(TABLET_OF_VISION5)
+QUEST.addTalkId(TABLET_OF_VISION6)
+
+QUEST.addKillId(GUARDIAN_OF_KNOWLEDGE)
+QUEST.addKillId(ANGEL_ALLECTOR)
+QUEST.addKillId(ARCHON_OF_HALISHA)
 for i in range(21646,21652) :
-  STARTED.addKillId(i)
+  QUEST.addKillId(i)
 
 STARTED.addQuestDrop(KAMILEN,CRYOLITE,1)
 STARTED.addQuestDrop(KAMILEN,DIVINE_STONE,1)

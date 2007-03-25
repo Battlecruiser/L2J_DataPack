@@ -45,9 +45,12 @@ class Quest (JQuest) :
         st.exitQuest(1)
     return htmltext
 
- def onTalk (Self,npc,st):
-   npcId = str(npc.getNpcId())
-   htmltext = "<html><head><body>I have nothing to say to you</body></html>"
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
@@ -68,9 +71,7 @@ QUEST.setInitialState(CREATED)
 
 for npcId in NPC:
   QUEST.addStartNpc(npcId)
-  CREATED.addTalkId(npcId)
-  STARTING.addTalkId(npcId)
-  STARTED.addTalkId(npcId)
+  QUEST.addTalkId(npcId)
 
 STARTED.addQuestDrop(4629,RED_SOUL_CRYSTAL0_ID,1)
 STARTED.addQuestDrop(4640,GREEN_SOUL_CRYSTAL0_ID,1)

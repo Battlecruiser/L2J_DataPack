@@ -181,7 +181,15 @@ class Quest (JQuest) :
          takeBeginnerArcanas(st)
       return htmltext
 
-   def onTalk (self, npc, st):
+   def onTalk (self,npc,player):
+      htmltext = "<html><head><body>I have nothing to say you</body></html>"
+      st = player.getQuestState(qn)
+      if not st : return htmltext
+
+      npcId = npc.getNpcId()
+      id = st.getState()
+      if npcId != NPC[1] and id != PROGRESS : return htmltext
+      
       htmltext = "<html><head><body>I have nothing to say you</body></html>"
       id = st.getState()
       npcId = npc.getNpcId()
@@ -277,9 +285,13 @@ class Quest (JQuest) :
             st.giveItems(defeat,1)
       return
 
-   def onAttack (self, npc, st):                   # on the first attack, the stat is in battle... anytime gives crystal and set stat
+   def onAttack (self, npc, player):                   # on the first attack, the stat is in battle... anytime gives crystal and set stat
+      st = player.getQuestState(qn)
+      if not st : return 
+      if st.getState() != PROGRESS : return 
+
       npcId = npc.getNpcId()
-      # var means the variable of the SummonerManager, the rest are all Crystalls wich mark the status
+      # var means the variable of the SummonerManager, the rest are all Crystalls which mark the status
       if npcId in DROPLIST_SUMMON.keys() :
          var,start,progress,foul,defeat,victory = DROPLIST_SUMMON[npcId]
          if int(st.get(var)) == 2:
@@ -289,7 +301,11 @@ class Quest (JQuest) :
             st.playSound("Itemsound.quest_itemget")
       return
 
-   def onKill (self, npc, st):
+   def onKill (self,npc,player):
+      st = player.getQuestState(qn)
+      if not st : return 
+      if st.getState() != PROGRESS : return 
+
       npcId = npc.getNpcId()                    # this part is just for laras parts
       if npcId in DROPLIST_LARA.keys() :
          random = st.getRandom(100)
@@ -331,14 +347,13 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(NPC[1])
 
 # adds all npcs, mobs to the progress state
-CREATED.addTalkId(NPC[1])
 for npcId in NPC:
-   PROGRESS.addTalkId(npcId)
+   QUEST.addTalkId(npcId)
 for mobId in DROPLIST_LARA.keys():
-   PROGRESS.addKillId(mobId)
+   QUEST.addKillId(mobId)
 for mobId in DROPLIST_SUMMON.keys():
-   PROGRESS.addKillId(mobId)
-   PROGRESS.addAttackId(mobId)
+   QUEST.addKillId(mobId)
+   QUEST.addAttackId(mobId)
 #for summonId in PLAYER_SUMMONS:
 #   PROGRESS.addKillId(summonId)
 

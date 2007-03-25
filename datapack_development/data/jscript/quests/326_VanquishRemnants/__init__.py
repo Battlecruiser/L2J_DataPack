@@ -37,9 +37,12 @@ class Quest (JQuest) :
       st.exitQuest(1)
     return htmltext
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
@@ -68,7 +71,11 @@ class Quest (JQuest) :
            htmltext = "30435-06.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    item,chance=DROPLIST[npc.getNpcId()]
    if st.getRandom(100)<chance :
      st.giveItems(item,1)
@@ -84,20 +91,17 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30435)
 
-CREATED.addTalkId(30435)
-STARTING.addTalkId(30435)
-STARTED.addTalkId(30435)
-COMPLETED.addTalkId(30435)
+QUEST.addTalkId(30435)
 
-STARTED.addKillId(20436)
-STARTED.addKillId(20437)
-STARTED.addKillId(20438)
-STARTED.addKillId(20439)
-STARTED.addKillId(20053)
-STARTED.addKillId(20058)
-STARTED.addKillId(20061)
-STARTED.addKillId(20063)
-STARTED.addKillId(20066)
+QUEST.addKillId(20436)
+QUEST.addKillId(20437)
+QUEST.addKillId(20438)
+QUEST.addKillId(20439)
+QUEST.addKillId(20053)
+QUEST.addKillId(20058)
+QUEST.addKillId(20061)
+QUEST.addKillId(20063)
+QUEST.addKillId(20066)
 
 STARTED.addQuestDrop(20053,RED_CROSS_BADGE,1)
 STARTED.addQuestDrop(20061,BLUE_CROSS_BADGE,1)

@@ -180,11 +180,15 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :                                       # Check if is starting the quest
+   if npcId != 30514 and id != STARTED : return htmltext
+   if id == CREATED :                                       # Check if is starting the quest
      st.set("cond","0")
      st.set("id","0")
      if npcId == 30514 :
@@ -426,7 +430,11 @@ class Quest (JQuest) :
          htmltext = "30565-01.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return
+   if st.getState() != STARTED : return
+
    npcId = npc.getNpcId()
    cond = int(st.get("cond"))
    if cond == 1 and npcId in DROPLIST_COND_1.keys():
@@ -505,24 +513,21 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30514)
 
-CREATED.addTalkId(30514)
-STARTING.addTalkId(30514)
-COMPLETED.addTalkId(30514)
+QUEST.addTalkId(30514)
 
-STARTED.addTalkId(30501)
-STARTED.addTalkId(30514)
-STARTED.addTalkId(30515)
-STARTED.addTalkId(30565)
-STARTED.addTalkId(30571)
-STARTED.addTalkId(30615)
-STARTED.addTalkId(30616)
-STARTED.addTalkId(30617)
-STARTED.addTalkId(30618)
-STARTED.addTalkId(30619)
-STARTED.addTalkId(30642)
+QUEST.addTalkId(30501)
+QUEST.addTalkId(30515)
+QUEST.addTalkId(30565)
+QUEST.addTalkId(30571)
+QUEST.addTalkId(30615)
+QUEST.addTalkId(30616)
+QUEST.addTalkId(30617)
+QUEST.addTalkId(30618)
+QUEST.addTalkId(30619)
+QUEST.addTalkId(30642)
 
 for i in DROPLIST_COND_1.keys()+DROPLIST_COND_4.keys()+DROPLIST_COND_6.keys()+[20778,20779,27086] :
-    STARTED.addKillId(i)
+    QUEST.addKillId(i)
 
 STARTED.addQuestDrop(30514,VOKIYANS_ORDER1,1)
 STARTED.addQuestDrop(20563,MANASHEN_SHARD,1)

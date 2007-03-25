@@ -45,8 +45,11 @@ class Quest (JQuest) :
      st.exitQuest(1)
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
@@ -61,16 +64,17 @@ class Quest (JQuest) :
          st.exitQuest(1)
      else:
        st.exitQuest(1)
-   elif npcId == 31520 and cond == 1 :
-     htmltext = "31520-0.htm"
-   elif npcId == 30838 and cond == 2 :
-     htmltext = "30838-2.htm"
-   elif npcId == 30838 and cond == 3 :
-     htmltext = "30838-4.htm"
-   elif npcId == 30164 and cond == 4 :
-     htmltext = "30164-0.htm"
-   elif npcId == 30838 and cond == 5 :
-     htmltext = "30838-6.htm"
+   elif id == STARTED :    
+       if npcId == 31520 and cond == 1 :
+         htmltext = "31520-0.htm"
+       elif npcId == 30838 and cond == 2 :
+         htmltext = "30838-2.htm"
+       elif npcId == 30838 and cond == 3 :
+         htmltext = "30838-4.htm"
+       elif npcId == 30164 and cond == 4 :
+         htmltext = "30164-0.htm"
+       elif npcId == 30838 and cond == 5 :
+         htmltext = "30838-6.htm"
    return htmltext
 
 QUEST       = Quest(33,qn,"Make A Pair Of Dress Shoes")
@@ -79,9 +83,9 @@ STARTED     = State('Started', QUEST,True)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30838)
-CREATED.addTalkId(30838)
-STARTED.addTalkId(30838)
-STARTED.addTalkId(30164)
-STARTED.addTalkId(31520)
+QUEST.addTalkId(30838)
+
+QUEST.addTalkId(30164)
+QUEST.addTalkId(31520)
 
 print "importing quests: 33: Make A Pair Of Dress Shoes"

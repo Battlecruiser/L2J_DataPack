@@ -21,8 +21,12 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    cond=st.getInt("cond")
    if cond == 0 :
@@ -42,7 +46,11 @@ class Quest (JQuest) :
        st.exitQuest(1)
    return htmltext
 
- def onKill(self,npc,st) :
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    if st.getQuestItemsCount(FUNGUS_SAC)<10 and st.getRandom(100) < 50 :
      st.giveItems(FUNGUS_SAC,1)
      if st.getQuestItemsCount(FUNGUS_SAC) == 10 :
@@ -60,12 +68,9 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30150)
 
-CREATED.addTalkId(30150)
-STARTING.addTalkId(30150)
-STARTED.addTalkId(30150)
-COMPLETED.addTalkId(30150)
+QUEST.addTalkId(30150)
 
-STARTED.addKillId(20509)
+QUEST.addKillId(20509)
 
 STARTED.addQuestDrop(20509,FUNGUS_SAC,1)
 

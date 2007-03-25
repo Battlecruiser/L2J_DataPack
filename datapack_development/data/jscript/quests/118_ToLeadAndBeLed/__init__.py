@@ -75,9 +75,12 @@ class Quest (JQuest) :
      st.exitQuest(1)
    return htmltext 
 
- def onTalk (Self,npc,st):
+ def onTalk (Self,npc,player):
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say to you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    id = st.getState()
    cond = st.getInt("cond") 
    if id==COMPLETED:
@@ -154,7 +157,10 @@ class Quest (JQuest) :
      st.exitQuest(1)
    return htmltext
 
- def onKill (Self,npc,st):
+ def onKill (Self,npc,player):
+    if not st : return
+    if st.getState() != PROGRESS : return
+
     sponsor = st.getPlayer().getSponsor()
     if not sponsor:
       st.exitQuest(1)
@@ -188,10 +194,10 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(PINTER) 
 
 CREATED.addTalkId(PINTER)
-PROGRESS.addTalkId(PINTER)
+QUEST.addTalkId(PINTER)
 
 for mob in DROPLIST.keys():
-    PROGRESS.addKillId(mob)
+    QUEST.addKillId(mob)
 
 PROGRESS.addQuestDrop(PINTER,BLOOD,1)
 PROGRESS.addQuestDrop(PINTER,LEG,1)

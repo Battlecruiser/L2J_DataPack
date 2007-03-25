@@ -47,10 +47,14 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
+   if npcId != 30109 and id != STARTED : return htmltext
    if id == CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
@@ -163,7 +167,10 @@ class Quest (JQuest) :
       htmltext = "30311-02.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
 
    npcId = npc.getNpcId()
    if npcId in [20190,20191] :
@@ -274,30 +281,28 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30109)
 
-CREATED.addTalkId(30109)
-COMPLETED.addTalkId(30109)
+QUEST.addTalkId(30109)
 
-STARTED.addTalkId(30109)
-STARTED.addTalkId(30116)
-STARTED.addTalkId(30311)
-STARTED.addTalkId(30653)
-STARTED.addTalkId(30654)
-STARTED.addTalkId(30655)
-STARTED.addTalkId(30656)
+QUEST.addTalkId(30116)
+QUEST.addTalkId(30311)
+QUEST.addTalkId(30653)
+QUEST.addTalkId(30654)
+QUEST.addTalkId(30655)
+QUEST.addTalkId(30656)
 
-STARTED.addKillId(20144)
-STARTED.addKillId(20190)
-STARTED.addKillId(20191)
-STARTED.addKillId(20200)
-STARTED.addKillId(20201)
-STARTED.addKillId(20270)
-STARTED.addKillId(27119)
-STARTED.addKillId(20577)
-STARTED.addKillId(20578)
-STARTED.addKillId(20579)
-STARTED.addKillId(20580)
-STARTED.addKillId(20581)
-STARTED.addKillId(20582)
+QUEST.addKillId(20144)
+QUEST.addKillId(20190)
+QUEST.addKillId(20191)
+QUEST.addKillId(20200)
+QUEST.addKillId(20201)
+QUEST.addKillId(20270)
+QUEST.addKillId(27119)
+QUEST.addKillId(20577)
+QUEST.addKillId(20578)
+QUEST.addKillId(20579)
+QUEST.addKillId(20580)
+QUEST.addKillId(20581)
+QUEST.addKillId(20582)
 
 STARTED.addQuestDrop(30116,LETTER_OF_DUSTIN_ID,1)
 STARTED.addQuestDrop(27119,KNIGHTS_TEAR_ID,1)

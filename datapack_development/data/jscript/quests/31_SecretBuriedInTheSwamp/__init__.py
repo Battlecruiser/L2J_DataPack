@@ -50,8 +50,11 @@ class Quest (JQuest) :
      htmltext = default
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = default
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+   
    npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
@@ -72,31 +75,32 @@ class Quest (JQuest) :
        htmltext = "31555-5.htm"
      elif cond == 7 :
        htmltext = "31555-6.htm"
-   elif npcId == CORPSE_OF_DWARF :
-     if cond == 1 :
-       htmltext = "31665-0.htm"
-     elif cond == 2 :
-       htmltext = "31665-2.htm"
-   elif npcId == FORGOTTEN_MONUMENT_1 :
-     if cond == 3 :
-       htmltext = "31661-0.htm"
-     elif cond > 3 :
-       htmltext = "31661-2.htm"
-   elif npcId == FORGOTTEN_MONUMENT_2:
-     if cond == 4 :
-       htmltext = "31662-0.htm"
-     elif cond > 4 :
-       htmltext = "31662-2.htm"
-   elif npcId == FORGOTTEN_MONUMENT_3 :
-     if cond == 5 :
-       htmltext = "31663-0.htm"
-     elif cond > 5 :
-       htmltext = "31663-2.htm"
-   elif npcId == FORGOTTEN_MONUMENT_4 :
-     if cond == 6 :
-       htmltext = "31664-0.htm"
-     elif cond > 6 :
-       htmltext = "31664-2.htm"
+   elif id == STARTED : 
+       if npcId == CORPSE_OF_DWARF :
+         if cond == 1 :
+           htmltext = "31665-0.htm"
+         elif cond == 2 :
+           htmltext = "31665-2.htm"
+       elif npcId == FORGOTTEN_MONUMENT_1 :
+         if cond == 3 :
+           htmltext = "31661-0.htm"
+         elif cond > 3 :
+           htmltext = "31661-2.htm"
+       elif npcId == FORGOTTEN_MONUMENT_2:
+         if cond == 4 :
+           htmltext = "31662-0.htm"
+         elif cond > 4 :
+           htmltext = "31662-2.htm"
+       elif npcId == FORGOTTEN_MONUMENT_3 :
+         if cond == 5 :
+           htmltext = "31663-0.htm"
+         elif cond > 5 :
+           htmltext = "31663-2.htm"
+       elif npcId == FORGOTTEN_MONUMENT_4 :
+         if cond == 6 :
+           htmltext = "31664-0.htm"
+         elif cond > 6 :
+           htmltext = "31664-2.htm"
    return htmltext
 
 QUEST       = Quest(31,qn,"Secret Buried In The Swamp")
@@ -107,12 +111,10 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(ABERCROMBIE)
 
-CREATED.addTalkId(ABERCROMBIE)
-STARTED.addTalkId(ABERCROMBIE)
-COMPLETED.addTalkId(ABERCROMBIE)
+QUEST.addTalkId(ABERCROMBIE)
 
 for i in range(31661,31666):
-    STARTED.addTalkId(i)
+    QUEST.addTalkId(i)
 
 STARTED.addQuestDrop(ABERCROMBIE,KRORINS_JOURNAL,1)
 

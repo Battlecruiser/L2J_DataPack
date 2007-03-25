@@ -9,7 +9,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
+qn = "30565_kakai_occupation_change"
 KAKAI_LORD_OF_FLAME = 30565
 
 class Quest (JQuest) :
@@ -52,8 +52,8 @@ class Quest (JQuest) :
    st.exitQuest(1)
    return htmltext
 
- def onTalk (Self,npc,st):
-
+ def onTalk (Self,npc,player):
+   st = player.getQuestState(qn)
    npcId = npc.getNpcId()
 
    Race    = st.getPlayer().getRace()
@@ -86,7 +86,7 @@ class Quest (JQuest) :
      st.exitQuest(1)
      return "30565-11.htm"
 
-QUEST   = Quest(30565,"30565_kakai_occupation_change","village_master")
+QUEST   = Quest(30565,qn,"village_master")
 CREATED   = State('Start',     QUEST)
 STARTED   = State('Started',   QUEST)
 COMPLETED = State('Completed', QUEST)
@@ -95,4 +95,4 @@ QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(30565)
 
-STARTED.addTalkId(30565)
+QUEST.addTalkId(30565)

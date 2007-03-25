@@ -5,7 +5,7 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver.datatables import ItemTable
-
+qn = "1011_enhance_mammon_s"
 
 ############################## Feel Free to add more Weapons ##########################################################################################################3
 
@@ -136,7 +136,8 @@ class Quest (JQuest) :
     
     
 # this just return new html, if the player can talk with this npc about that enhance stuff
- def onTalk (self,npc,st):
+ def onTalk (self,npc,player):
+   st = player.getQuestState(qn)
    npcId = npc.getNpcId()
    st.set("cond","0")
    st.setState(STARTED)
@@ -168,7 +169,7 @@ QUEST.setInitialState(CREATED)
 # init all npc to the correct stats
 for npcId in [31126]:
 	QUEST.addStartNpc(npcId)
-	STARTED.addTalkId(npcId)
+	QUEST.addTalkId(npcId)
 	
 # always at the end, then it shows only up if anything is correct in the code.. no jython error.. because we cant check jython errors with idle
 print "importing blacksmith data: 1011_enhance_mammon_s, items count: "+str(len(EnhanceList))

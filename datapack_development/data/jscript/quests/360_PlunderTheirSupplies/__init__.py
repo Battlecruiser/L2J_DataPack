@@ -36,8 +36,12 @@ class Quest (JQuest) :
      st.exitQuest(1)
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    cond=st.getInt("cond")
    supplies = st.getQuestItemsCount(SUPPLY_ITEM)
@@ -58,7 +62,11 @@ class Quest (JQuest) :
      htmltext = "30873-5.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    st.giveItems(SUPPLY_ITEM,1)  
    if st.getRandom(10) == 1 :        # % chance is custom
      st.giveItems(SUSPICIOUS_DOCUMENT,1)
@@ -75,11 +83,10 @@ STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(COLEMAN)
-CREATED.addTalkId(COLEMAN)
-STARTED.addTalkId(COLEMAN)
+QUEST.addTalkId(COLEMAN)
 
-STARTED.addKillId(TAIK_SEEKER)
-STARTED.addKillId(TAIK_LEADER)
+QUEST.addKillId(TAIK_SEEKER)
+QUEST.addKillId(TAIK_LEADER)
 
 STARTED.addQuestDrop(COLEMAN,RECIPE_OF_SUPPLY,1)
 STARTED.addQuestDrop(COLEMAN,SUPPLY_ITEM,1)

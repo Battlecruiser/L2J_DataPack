@@ -30,10 +30,13 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_finish")
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
-   cond=st.getInt("cond")
    if cond == 0 :
      if st.getPlayer().getLevel() >= 55 :
        htmltext = "31044-02.htm"
@@ -50,7 +53,11 @@ class Quest (JQuest) :
        htmltext = "31044-06.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    if st.getRandom(100) < CHANCE :
      st.giveItems(STONE,1)
      st.playSound("ItemSound.quest_itemget")
@@ -63,11 +70,10 @@ STARTED     = State('Started', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(GALMAN)
 
-CREATED.addTalkId(GALMAN)
-STARTED.addTalkId(GALMAN)
+QUEST.addTalkId(GALMAN)
 
 for mob in [20284,20245,20244,20283] :
-    STARTED.addKillId(mob)
+    QUEST.addKillId(mob)
 
 STARTED.addQuestDrop(GALMAN,STONE,1)
 

@@ -3,10 +3,12 @@
 
 import sys
 from java.util									import Iterator
+from net.sf.l2j.gameserver.lib					import Rnd
 from net.sf.l2j.gameserver.serverpackets		import CreatureSay 
 from net.sf.l2j.gameserver.model.quest			import State
 from net.sf.l2j.gameserver.model.quest			import QuestState
 from net.sf.l2j.gameserver.model.quest.jython	import QuestJython as JQuest
+
 from net.sf.l2j								import L2DatabaseFactory
 
 qn = "503_PursuitClanAmbition"
@@ -196,7 +198,9 @@ def exit503(completed,st):
 
 class Quest (JQuest) :
 
-	def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+	def __init__(self,id,name,descr):
+		JQuest.__init__(self,id,name,descr)
+		self.ImpGraveKepperStat = 1
 
 	def onEvent (self,event,st) :
 		htmltext = event
@@ -293,11 +297,16 @@ class Quest (JQuest) :
 		return htmltext
 
 
-	def onTalk(self,npc,st):
+	def onTalk (self,npc,player):
+		htmltext = "<html><head><body>I have nothing to say you</body></html>"
+		st = player.getQuestState(qn)
+		if not st : return htmltext
+
 		npcId = npc.getNpcId()
-		id =  st.getState()
+		id = st.getState()
+		if npcId != NPC[3] and id == CREATED : return htmltext
+
 		Martien,Athrea,Kalis,Gustaf,Fritz,Lutz,Kurtz,Kusto,Balthazar,Rodemai,Coffer,Cleo = 30645,30758,30759,30760,30761,30762,30763,30512,30764,30868,30765,30766
-		htmltext = "<html><head><body>I have nothing to say.</body></html>"
 		isLeader = st.getPlayer().isClanLeader()
 		if id == CREATED and npcId == Gustaf:
 			for var in STATS:																	# adds all the  vars for initialisation
@@ -470,32 +479,31 @@ class Quest (JQuest) :
 						htmltext = "30766-24t.htm"
 				return htmltext
 
-	def onAttack(self, npc, st):
+	def onAttack(self, npc, player):
 		npdId = npc.getNpcId()
 		if (npc.getMaxHp()/2) > npc.getCurrentHp():
-			if st.getRandom(100) < 4:
-				ImpGraveKepperStat = getLeaderVar(st,"ImpGraveKeeper")
-				if ImpGraveKepperStat == 1:
+			if Rnd.get(100) < 4:
+				if self.ImpGraveKepperStat == 1:
 					for j in range(2):
 						for k in range(2): 
-							st.getPcSpawn().addSpawn(27180,npc.getX()+70*pow(-1,j%2),npc.getY()+70*pow(-1,k%2),npc.getZ())
-					setLeaderVar(st,"ImpGraveKeeper","2")
+							self.getPcSpawn().addSpawn(27180,npc.getX()+70*pow(-1,j%2),npc.getY()+70*pow(-1,k%2),npc.getZ())
+					self.ImpGraveKepperStat = 2
 				else:
 					players = npc.getKnownList().getKnownPlayers().values().toArray()
 					if len(players) :
-						player = players[st.getRandom(int(len(players)))]
-						player.setXYZ(185462,20342,-3250)
+						playerToTP = players[Rnd.get(int(len(players)))]
+						playerToTP.setXYZ(185462,20342,-3250)
 		return
 
-	def onKill (self,npc,st):
+	def onKill (self,npc,player):
 		# all kill events triggered by the leader occur automatically.
 		# However, kill events that were triggered by members occur via the leader and
 		# only if the leader is online and within a certain distance!
 		leader_st = 0
-		if st.getPlayer().isClanLeader() :
-			leader_st = st
+		if player.isClanLeader() :
+			leader_st = player.getQuestState(qn)
 		else :
-			clan = st.getPlayer().getClan()
+			clan = player.getClan()
 			if clan:
 				leader=clan.getLeader().getPlayerInstance()
 				if leader :
@@ -503,6 +511,7 @@ class Quest (JQuest) :
 						leader_st = leader.getQuestState(qn)
 		
 		if leader_st :
+			if leader_st.getState() != PROGRESS : return
 			npcId=npc.getNpcId()
 			condition,maxcount,chance,itemList = DROPLIST[npcId]
 			random = leader_st.getRandom(100)
@@ -522,6 +531,7 @@ class Quest (JQuest) :
 					if npcId == 27181:								# Imperial Gravekeeper
 						leader_st.getPcSpawn().addSpawn(30765,6000000,["Curse of the gods on the one that defiles the property of the empire!"],0)
 						leader_st.set("ImpGraveKeeper","3")
+						self.ImpGraveKepperStat = 1
 					else:
 						leader_st.getPcSpawn().addSpawn(27179)
 		return
@@ -534,15 +544,13 @@ COMPLETED	= State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(NPC[3])
 
-CREATED.addTalkId(NPC[3])
-
 for npcId in NPC:
-	PROGRESS.addTalkId(npcId)
+	QUEST.addTalkId(npcId)
 
 for mobId in DROPLIST.keys():
-	PROGRESS.addKillId(mobId)
+	QUEST.addKillId(mobId)
 
-PROGRESS.addAttackId(27181)
+QUEST.addAttackId(27181)
 
 for i in range(3839,3848)+range(3866,3870):
     PROGRESS.addQuestDrop(27181,i,1)

@@ -7,7 +7,7 @@ from net.sf.l2j.gameserver.model.actor.instance import      L2PcInstance
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
+qn = "1100_teleport_with_charm"
 ORC_GATEKEEPER_CHARM   	= 1658
 DWARF_GATEKEEPER_TOKEN 	= 1659
 WHIRPY			= 30540
@@ -17,7 +17,8 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onTalk (Self,npc,st):
+ def onTalk (Self,npc,player):
+   st = player.getQuestState(qn)
    npcId = npc.getNpcId()
    # ORC_VILLAGE
    if npcId == TAMIL: 
@@ -40,13 +41,13 @@ class Quest (JQuest) :
        st.exitQuest(1)
        return "30540-01.htm"
 
-QUEST       = Quest(1100,"1100_teleport_with_charm","Teleports")
+QUEST       = Quest(1100,qn,"Teleports")
 CREATED     = State('Start',QUEST)
 
 QUEST.setInitialState(CREATED)
 
 for i in [ WHIRPY, TAMIL ] :
     QUEST.addStartNpc(i)
-    CREATED.addTalkId(i)
+    QUEST.addTalkId(i)
 
 print "importing teleport data: 1100_teleport_with_charm"

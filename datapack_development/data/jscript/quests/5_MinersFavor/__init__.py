@@ -48,10 +48,12 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget") 
    return htmltext 
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
 
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
  
    if id == CREATED :
@@ -84,37 +86,38 @@ class Quest (JQuest) :
      st.set("cond","0") 
      st.set("onlyone","1") 
      st.setState(COMPLETED) 
-     st.playSound("ItemSound.quest_finish") 
-   elif npcId == SHARI and cond == 1 and st.getQuestItemsCount(BOLTERS_LIST) : 
-     if st.getQuestItemsCount(BOOMBOOM_POWDER) == 0 : 
-       htmltext = "30517-01.htm" 
-       st.giveItems(BOOMBOOM_POWDER,1) 
-       st.playSound("ItemSound.quest_itemget") 
-     else: 
-       htmltext = "30517-02.htm" 
-   elif npcId == GARITA and cond == 1 and st.getQuestItemsCount(BOLTERS_LIST) : 
-     if st.getQuestItemsCount(MINING_BOOTS) == 0 : 
-       htmltext = "30518-01.htm" 
-       st.giveItems(MINING_BOOTS,1) 
-       st.playSound("ItemSound.quest_itemget") 
-     else: 
-       htmltext = "30518-02.htm" 
-   elif npcId == REED and cond == 1 and st.getQuestItemsCount(BOLTERS_LIST) : 
-     if st.getQuestItemsCount(REDSTONE_BEER) == 0 : 
-       htmltext = "30520-01.htm" 
-       st.giveItems(REDSTONE_BEER,1) 
-       st.playSound("ItemSound.quest_itemget") 
-     else: 
-       htmltext = "30520-02.htm" 
-   elif npcId == BRUNON and cond == 1 and st.getQuestItemsCount(BOLTERS_LIST) : 
-     if st.getQuestItemsCount(MINERS_PICK) == 0 : 
-       htmltext = "30526-01.htm" 
-     else: 
-       htmltext = "30526-03.htm" 
-   if st.getQuestItemsCount(BOLTERS_LIST) and (st.getQuestItemsCount(MINING_BOOTS) + st.getQuestItemsCount(MINERS_PICK) + st.getQuestItemsCount(BOOMBOOM_POWDER) + st.getQuestItemsCount(REDSTONE_BEER) >= 4) : 
-     st.set("cond","2") 
-     st.set("id","2") 
-     st.playSound("ItemSound.quest_middle") 
+     st.playSound("ItemSound.quest_finish")
+   elif id == STARTED :  
+       if npcId == SHARI and cond == 1 and st.getQuestItemsCount(BOLTERS_LIST) : 
+         if st.getQuestItemsCount(BOOMBOOM_POWDER) == 0 : 
+           htmltext = "30517-01.htm" 
+           st.giveItems(BOOMBOOM_POWDER,1) 
+           st.playSound("ItemSound.quest_itemget") 
+         else: 
+           htmltext = "30517-02.htm" 
+       elif npcId == GARITA and cond == 1 and st.getQuestItemsCount(BOLTERS_LIST) : 
+         if st.getQuestItemsCount(MINING_BOOTS) == 0 : 
+           htmltext = "30518-01.htm" 
+           st.giveItems(MINING_BOOTS,1) 
+           st.playSound("ItemSound.quest_itemget") 
+         else: 
+           htmltext = "30518-02.htm" 
+       elif npcId == REED and cond == 1 and st.getQuestItemsCount(BOLTERS_LIST) : 
+         if st.getQuestItemsCount(REDSTONE_BEER) == 0 : 
+           htmltext = "30520-01.htm" 
+           st.giveItems(REDSTONE_BEER,1) 
+           st.playSound("ItemSound.quest_itemget") 
+         else: 
+           htmltext = "30520-02.htm" 
+       elif npcId == BRUNON and cond == 1 and st.getQuestItemsCount(BOLTERS_LIST) : 
+         if st.getQuestItemsCount(MINERS_PICK) == 0 : 
+           htmltext = "30526-01.htm" 
+         else: 
+           htmltext = "30526-03.htm" 
+       if st.getQuestItemsCount(BOLTERS_LIST) and (st.getQuestItemsCount(MINING_BOOTS) + st.getQuestItemsCount(MINERS_PICK) + st.getQuestItemsCount(BOOMBOOM_POWDER) + st.getQuestItemsCount(REDSTONE_BEER) >= 4) : 
+         st.set("cond","2") 
+         st.set("id","2") 
+         st.playSound("ItemSound.quest_middle") 
    return htmltext
 
 QUEST     = Quest(5,qn,"Miner's Favor") 
@@ -126,13 +129,13 @@ COMPLETED = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(BOLTER) 
 
-STARTING.addTalkId(BOLTER) 
+QUEST.addTalkId(BOLTER) 
 
-STARTED.addTalkId(SHARI) 
-STARTED.addTalkId(GARITA) 
-STARTED.addTalkId(REED) 
-STARTED.addTalkId(BRUNON) 
-STARTED.addTalkId(BOLTER) 
+QUEST.addTalkId(SHARI) 
+QUEST.addTalkId(GARITA) 
+QUEST.addTalkId(REED) 
+QUEST.addTalkId(BRUNON) 
+QUEST.addTalkId(BOLTER) 
 
 STARTED.addQuestDrop(BOLTER,MINING_BOOTS,1) 
 STARTED.addQuestDrop(BOLTER,MINERS_PICK,1) 

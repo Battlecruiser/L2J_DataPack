@@ -49,9 +49,11 @@ class Quest (JQuest) :
 			st.exitQuest(0)
 		return htmltext
 
-	def onTalk(self, npc, st):
-		npcId=npc.getNpcId()
+	def onTalk(self, npc, player):
 		htmltext="<html><head><body>I have nothing to say you</body></html>"
+		st = player.getQuestState(qn)
+		if not st : return htmltext
+		npcId=npc.getNpcId()
 		id=st.getState()
 		if id==CREATED:
 			if st.getPlayer().getLevel()>=MIN_LEVEL:
@@ -75,7 +77,7 @@ class Quest (JQuest) :
 					htmltext="30828-05a.htm"
 				elif cond==5:
 					htmltext="30828-06.htm"
-			elif npcId==SOPHYA:
+			elif npcId==SOPHYA and id == STARTED:
 				cond=int(st.get("cond"))
 				if cond==4 and st.getQuestItemsCount(MAP):
 					htmltext="30735-05.htm"
@@ -86,7 +88,11 @@ class Quest (JQuest) :
 			htmltext="<html><head><body>This quest have already been completed.</body></html>"
 		return htmltext
 
-	def onKill(self, npc, st):
+	def onKill(self, npc, player):
+		st = player.getQuestState(qn)
+		if not st : return 
+		if st.getState() != STARTED : return
+		
 		npcId = npc.getNpcId()
 		cond=int(st.get("cond"))
 		if cond==2:
@@ -107,12 +113,11 @@ COMPLETED=State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(WATERS)
 
-CREATED.addTalkId(WATERS)
+QUEST.addTalkId(WATERS)
 
-STARTED.addTalkId(WATERS)
-STARTED.addTalkId(SOPHYA)
+QUEST.addTalkId(SOPHYA)
 
-STARTED.addKillId(MONSTER_EYE_DESTROYER)
-STARTED.addKillId(MONSTER_EYE_GAZER)
+QUEST.addKillId(MONSTER_EYE_DESTROYER)
+QUEST.addKillId(MONSTER_EYE_GAZER)
 
 print "importing quests: 42: Help The Uncle!"

@@ -25,10 +25,14 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   totems=st.getQuestItemsCount(MARAKU_WOLFMEN_TOTEM)
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
+   totems=st.getQuestItemsCount(MARAKU_WOLFMEN_TOTEM)
    if id == CREATED :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
@@ -60,7 +64,11 @@ class Quest (JQuest) :
        st.exitQuest(1)
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    count=st.getQuestItemsCount(MARAKU_WEREWOLF_HEAD)
    if count < 40 :
      if count < 39 :
@@ -82,13 +90,10 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30569)
 
-CREATED.addTalkId(30569)
-STARTING.addTalkId(30569)
-STARTED.addTalkId(30569)
-COMPLETED.addTalkId(30569)
+QUEST.addTalkId(30569)
 
-STARTED.addKillId(20363)
-STARTED.addKillId(20364)
+QUEST.addKillId(20363)
+QUEST.addKillId(20364)
 
 STARTED.addQuestDrop(20363,MARAKU_WEREWOLF_HEAD,1)
 

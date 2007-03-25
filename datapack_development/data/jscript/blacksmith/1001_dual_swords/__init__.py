@@ -2,7 +2,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
+qn = "1001_dual_swords"
 SMITHS = [30283,30298,30300,30317,30458,30471,30526,30527,30536,30621,30678,30688,30846,30898,31002,31044,31271,31274,31316,31539,31583,31626,31668]
 class Quest (JQuest) :
 
@@ -911,9 +911,10 @@ class Quest (JQuest) :
 
     return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (Self,npc,player):
 
    npcId = npc.getNpcId()
+   st = player.getQuestState(qn)
    htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
    st.set("cond","0")
    st.setState(STARTED)
@@ -929,6 +930,6 @@ QUEST.setInitialState(CREATED)
 
 for npcId in SMITHS :
     QUEST.addStartNpc(npcId)
-    STARTED.addTalkId(npcId)
+    QUEST.addTalkId(npcId)
 
 print "importing blacksmith data: 1001_dual swords"

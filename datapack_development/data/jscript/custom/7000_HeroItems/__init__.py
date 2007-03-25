@@ -4,7 +4,7 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver.datatables import ItemTable
-
+qn = "7000_HeroItems"
 MONUMENTS=[31690]+range(31769,31773)
 
 HERO_ITEMS={
@@ -69,22 +69,23 @@ class Quest (JQuest) :
           st.exitQuest(1)
      return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (Self,npc,player):
      id = st.getState()
+     st = player.getQuestState(qn)
      htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
-     if st.getPlayer().isHero():
+     if player.isHero():
         htmltext=render_list("list",0)
      else :
         st.exitQuest(1)
      return htmltext
 
-QUEST       = Quest(7000,"7000_HeroItems","Hero Items")
+QUEST       = Quest(7000,qn,"Hero Items")
 CREATED     = State('Start', QUEST)
 
 QUEST.setInitialState(CREATED)
 
 for i in MONUMENTS:
     QUEST.addStartNpc(i)
-    CREATED.addTalkId(i)
+    QUEST.addTalkId(i)
 
 print "importing custom: 7000: Hero Items"

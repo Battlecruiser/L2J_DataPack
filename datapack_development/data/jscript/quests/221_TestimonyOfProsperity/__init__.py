@@ -153,11 +153,15 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if npcId != 30104 and id != STARTED : return htmltext
+   if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
      st.set("onlyone","0")
@@ -376,7 +380,11 @@ class Quest (JQuest) :
         htmltext = "30622-03.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if npcId == 20223 :
     st.set("id","0")
@@ -459,40 +467,39 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30104)
 
-STARTING.addTalkId(30104)
+QUEST.addTalkId(30104)
 
-STARTED.addTalkId(30005)
-STARTED.addTalkId(30104)
-STARTED.addTalkId(30368)
-STARTED.addTalkId(30466)
-STARTED.addTalkId(30517)
-STARTED.addTalkId(30519)
-STARTED.addTalkId(30531)
-STARTED.addTalkId(30532)
-STARTED.addTalkId(30533)
-STARTED.addTalkId(30534)
-STARTED.addTalkId(30535)
-STARTED.addTalkId(30536)
-STARTED.addTalkId(30553)
-STARTED.addTalkId(30554)
-STARTED.addTalkId(30555)
-STARTED.addTalkId(30556)
-STARTED.addTalkId(30597)
-STARTED.addTalkId(30620)
-STARTED.addTalkId(30621)
-STARTED.addTalkId(30622)
+QUEST.addTalkId(30005)
+QUEST.addTalkId(30368)
+QUEST.addTalkId(30466)
+QUEST.addTalkId(30517)
+QUEST.addTalkId(30519)
+QUEST.addTalkId(30531)
+QUEST.addTalkId(30532)
+QUEST.addTalkId(30533)
+QUEST.addTalkId(30534)
+QUEST.addTalkId(30535)
+QUEST.addTalkId(30536)
+QUEST.addTalkId(30553)
+QUEST.addTalkId(30554)
+QUEST.addTalkId(30555)
+QUEST.addTalkId(30556)
+QUEST.addTalkId(30597)
+QUEST.addTalkId(30620)
+QUEST.addTalkId(30621)
+QUEST.addTalkId(30622)
 
-STARTED.addKillId(20154)
-STARTED.addKillId(20155)
-STARTED.addKillId(20156)
-STARTED.addKillId(20157)
-STARTED.addKillId(20223)
-STARTED.addKillId(20228)
-STARTED.addKillId(20230)
-STARTED.addKillId(20231)
-STARTED.addKillId(20232)
-STARTED.addKillId(20233)
-STARTED.addKillId(20234)
+QUEST.addKillId(20154)
+QUEST.addKillId(20155)
+QUEST.addKillId(20156)
+QUEST.addKillId(20157)
+QUEST.addKillId(20223)
+QUEST.addKillId(20228)
+QUEST.addKillId(20230)
+QUEST.addKillId(20231)
+QUEST.addKillId(20232)
+QUEST.addKillId(20233)
+QUEST.addKillId(20234)
 
 for item in range(3239,3276)+[3428,3023,3030]:
     STARTED.addQuestDrop(30621,item,1)

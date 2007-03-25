@@ -40,8 +40,10 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_finish") 
    return htmltext 
 
- def onTalk (Self,npc,st): 
+ def onTalk (self,npc,player): 
    htmltext = "<html><head><body>I have nothing to say you</body></html>" 
+   st = player.getQuestState(qn)
+   if not st : return htmltext
    npcId = npc.getNpcId() 
    cond  = st.getInt("cond") 
    id    = st.getState() 
@@ -60,12 +62,12 @@ class Quest (JQuest) :
    elif npc == PETUKAI and id == COMPLETED : 
      htmltext = "<html><head><body>I can't supply you with another Giran Scroll of Escape. Sorry traveller.</body></html>" 
    elif npc == PETUKAI and cond == 1 : 
-     htmltext = "30583-04.htm" 
-   elif npcId == TANAPI and cond : 
-     htmltext = "30571-01.htm" 
-   elif npcId == TAMIL and cond == 2 : 
-     htmltext = "30576-01.htm" 
-
+     htmltext = "30583-04.htm"
+   if id == STARTED :  
+       if npcId == TANAPI and cond : 
+         htmltext = "30571-01.htm" 
+       elif npcId == TAMIL and cond == 2 : 
+         htmltext = "30576-01.htm" 
    return htmltext 
 
 QUEST     = Quest(9,qn,"Into the City of Humans") 
@@ -76,11 +78,9 @@ COMPLETED = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(PETUKAI) 
 
-CREATED.addTalkId(PETUKAI) 
-COMPLETED.addTalkId(PETUKAI) 
+QUEST.addTalkId(PETUKAI) 
 
-STARTED.addTalkId(PETUKAI) 
-STARTED.addTalkId(TANAPI) 
-STARTED.addTalkId(TAMIL) 
+QUEST.addTalkId(TANAPI) 
+QUEST.addTalkId(TAMIL) 
 
 print "importing quests: 9: Into the City of Humans" 

@@ -13,9 +13,13 @@ class Quest (JQuest) :
  def onEvent (self,event,st):
     return
  
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+     htmltext = "<html><head><body>I have nothing to say you</body></html>"
+     st = player.getQuestState(qn)
+     if not st : return htmltext
+
      npcId = npc.getNpcId()
-     htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
+     id = st.getState()
      Alevel = st.getPlayer().getAllianceWithVarkaKetra()
      if Alevel == -2 :
         htmltext = "1.htm"
@@ -33,6 +37,6 @@ COMPLETED   = State('Completed',   QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(31382)
-CREATED.addTalkId(31382)
+QUEST.addTalkId(31382)
 
 print "importing quests: 6051: Varka Silenos Support"

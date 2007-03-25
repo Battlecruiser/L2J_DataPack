@@ -21,8 +21,12 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
@@ -43,7 +47,11 @@ class Quest (JQuest) :
        htmltext = "30351-06.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    chance=22+(((npc.getNpcId()-20000)^34)/4)
    count=st.getQuestItemsCount(VENOM_SAC)
    if count < 10 and st.getRandom(100) < chance :
@@ -64,14 +72,11 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30351)
 
-CREATED.addTalkId(30351)
-STARTING.addTalkId(30351)
-STARTED.addTalkId(30351)
-COMPLETED.addTalkId(30351)
+QUEST.addTalkId(30351)
 
-STARTED.addKillId(20034)
-STARTED.addKillId(20038)
-STARTED.addKillId(20043)
+QUEST.addKillId(20034)
+QUEST.addKillId(20038)
+QUEST.addKillId(20043)
 
 STARTED.addQuestDrop(20034,VENOM_SAC,1)
 

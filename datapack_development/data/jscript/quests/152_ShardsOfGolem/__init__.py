@@ -34,10 +34,12 @@ class Quest (JQuest) :
           st.set("cond","2")
     return htmltext
 
-
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
    receipt1 = st.getQuestItemsCount(HARRYS_RECEIPT1_ID)
@@ -64,7 +66,7 @@ class Quest (JQuest) :
         st.giveItems(WOODEN_BP_ID,1)
         st.addExpAndSp(5000,0)
         htmltext = "30035-06.htm"
-   elif npcId == ALTRAN :
+   elif npcId == ALTRAN and id == STARTED:
       if cond == 1 and receipt1 :
         htmltext = "30283-01.htm"
       elif cond == 2 and receipt2 and shards < 5 and not toolbox :
@@ -77,7 +79,11 @@ class Quest (JQuest) :
         htmltext = "30283-05.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return
+   if st.getState() != STARTED : return
+
    count=st.getQuestItemsCount(GOLEM_SHARD_ID)
    if st.getInt("cond")==2 and st.getRandom(100) < 30 and count < 5 :
       st.giveItems(GOLEM_SHARD_ID,1)
@@ -98,12 +104,9 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(HARRIS)
 
-CREATED.addTalkId(HARRIS)
-STARTING.addTalkId(HARRIS)
-COMPLETED.addTalkId(HARRIS)
+QUEST.addTalkId(HARRIS)
 
-STARTED.addTalkId(HARRIS)
-STARTED.addTalkId(ALTRAN)
+QUEST.addTalkId(ALTRAN)
 
 STARTED.addKillId(20016)
 

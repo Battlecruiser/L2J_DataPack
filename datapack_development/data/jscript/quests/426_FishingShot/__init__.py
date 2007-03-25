@@ -24,9 +24,12 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_finish")
     return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   id = st.getState()
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    cond=st.getInt("cond")
    if cond==0 :
      htmltext = "01.htm"
@@ -36,7 +39,11 @@ class Quest (JQuest) :
      htmltext = "03.htm"
    return htmltext
 
- def onKill(self,npc,st) :
+ def onKill(self,npc,player) :
+   partyMember = getRandomPartyMemberState(player, STARTED)
+   if not partyMember : return 
+   st = partyMember.getQuestState(qn)
+   
    if st.getRandom(20) == 0 :
      st.giveItems(SWEET_FLUID,int(Config.RATE_DROP_QUEST))
      st.playSound("ItemSound.quest_itemget")  
@@ -50,8 +57,7 @@ QUEST.setInitialState(CREATED)
 
 for npc in range(31562,31580)+[31616,31696,31697]:
     QUEST.addStartNpc(npc)
-    CREATED.addTalkId(npc)
-    STARTED.addTalkId(npc)
+    QUEST.addTalkId(npc)
 
 
 for mob in [20005,20013,20016,20017,20024,20025,20043,20044,20046,20047,20050,20058,20063,20066,20070,20074,20077,20078,20079,20080,20081,20082,20083,20084,20085,20088,20089,20100,20106,20115,20120,20131,20132,20135,20157,20176,20211,20225,20227,20230,20232,20234,20241,20267,20268,20269,20270,20271,20286,20308,20312,20317,20324,20333,\
@@ -60,7 +66,7 @@ for mob in [20005,20013,20016,20017,20024,20025,20043,20044,20046,20047,20050,20
 20936,20937,20939,20940,20941,20943,20944,20978,20979,20983,20985,20991,20994,21023,21024,21025,21026,21058,21060,21061,21066,21067,21068,21070,21071,21072,21075,21078,21081,21100,21101,21102,21103,21104,21105,21106,21107,21117,21125,21261,21262,21263,21264,\
 21269,21270,21271,21272,21273,21314,21316,21318,21320,21322,21376,21378,21380,21393,21508,21510,21511,21514,21516,21518,21520,21526,21529,21530,21532,21536,21544,21605,21606,21611,21612,21617,21618,21629,21630,21635,21636,21652,21657,30739,\
 29024,29026,29027]:
-    STARTED.addKillId(mob)
+    QUEST.addKillId(mob)
 
 STARTED.addQuestDrop(20005,SWEET_FLUID,1)
 

@@ -68,9 +68,11 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_finish")
         return htmltext
 
-    def onTalk (Self,npc,st):
-        npcId = npc.getNpcId()
+    def onTalk (self,npc,player):
         htmltext = "<html><head><body>I have nothing to say you</body></html>"
+        st = player.getQuestState(qn)
+        if not st : return htmltext
+        npcId = npc.getNpcId()
         id = st.getState()
         if id == CREATED :
             st.set("cond","0")
@@ -93,18 +95,19 @@ class Quest (JQuest) :
             htmltext = "30097-10.htm"
         elif npcId == 30097 and int(st.get("cond"))==6 :
             htmltext = "30097-11.htm"
-        elif npcId == 30094 and int(st.get("cond"))==1 :
-            htmltext = "30094-01.htm"
-        elif npcId == 30094 and int(st.get("cond"))==2 :
-            htmltext = "30094-03.htm"
-        elif npcId == 30090 and int(st.get("cond"))==3 :
-            htmltext = "30090-01.htm"
-        elif npcId == 30090 and int(st.get("cond"))==4 :
-            htmltext = "30090-03.htm"
-        elif npcId == 30116 and int(st.get("cond"))==5 :
-            htmltext = "30116-01.htm"
-        elif npcId == 30116 and int(st.get("cond"))==6 :
-            htmltext = "30116-03.htm"
+        elif id == STARTED :    
+            if npcId == 30094 and int(st.get("cond"))==1 :
+                htmltext = "30094-01.htm"
+            elif npcId == 30094 and int(st.get("cond"))==2 :
+                htmltext = "30094-03.htm"
+            elif npcId == 30090 and int(st.get("cond"))==3 :
+                htmltext = "30090-01.htm"
+            elif npcId == 30090 and int(st.get("cond"))==4 :
+                htmltext = "30090-03.htm"
+            elif npcId == 30116 and int(st.get("cond"))==5 :
+                htmltext = "30116-01.htm"
+            elif npcId == 30116 and int(st.get("cond"))==6 :
+                htmltext = "30116-03.htm"
 
         return htmltext
 
@@ -116,13 +119,11 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30097)
 
-CREATED.addTalkId(30097)
-COMPLETED.addTalkId(30097)
+QUEST.addTalkId(30097)
 
-STARTED.addTalkId(30097)
-STARTED.addTalkId(30094)
-STARTED.addTalkId(30090)
-STARTED.addTalkId(30116)
+QUEST.addTalkId(30094)
+QUEST.addTalkId(30090)
+QUEST.addTalkId(30116)
 
 STARTED.addQuestDrop(30097,GALLADUCCIS_ORDER_DOCUMENT_ID_1,1)
 STARTED.addQuestDrop(30097,GALLADUCCIS_ORDER_DOCUMENT_ID_2,1)

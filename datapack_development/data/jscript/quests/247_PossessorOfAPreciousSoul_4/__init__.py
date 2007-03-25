@@ -56,11 +56,15 @@ class Quest (JQuest) :
        st.setState(COMPLETED)
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   cond = st.getInt("cond")
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
    id = st.getState()
+   if npcId != CARADINE and id != STARTED : return htmltext
+   cond = st.getInt("cond")
    if id == CREATED :
      st.set("cond","0")
    if st.getPlayer().isSubClassActive() :
@@ -88,8 +92,8 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(CARADINE)
-CREATED.addTalkId(CARADINE)
-STARTED.addTalkId(CARADINE)
+QUEST.addTalkId(CARADINE)
+
 STARTED.addTalkId(LADY_OF_LAKE)
 
 print "importing quests: 247: Possessor Of A Precious Soul - 4"

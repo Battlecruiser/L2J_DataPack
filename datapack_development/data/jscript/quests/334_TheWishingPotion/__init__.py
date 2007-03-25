@@ -240,9 +240,16 @@ class Quest (JQuest) :
        htmltext = "30738-14.htm"
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
-   if npcId == TORAI:
+   id = st.getState()
+   if npcId in [RUPINA,WISDOM_CHEST] and id in [CREATED,STARTED] : return htmltext
+   if npcId == TORAI and id in [MIDDLE,END] : return htmltext
+   if npcId == TORAI:
      if st.get("cond") == None or int(st.get("cond")) == 0:
        st.exitQuest(1)
      if st.getQuestItemsCount(FORBIDDEN_LOVE_SCROLL_ID) >= 1:
@@ -310,13 +317,19 @@ class Quest (JQuest) :
        else:
          return "30738-01.htm"
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
+
    npcId = npc.getNpcId()
    id = st.getState()
    # hm, you already collected all items. but now you have lost one (destroyed maybe). will give you a second try 
    if id == END:
      if npcId in [AMBER_BASILISK, WHISPERING_WIND, GLASS_JAGUAR, HORROR_MIST_RIPPER, SILENOS, ANT_RECRUIT, ANT_WARRIOR_CAPTAIN, TYRANT, TYRANT_KINGPIN, TURAK_BUGBEAR, TURAK_BUGBEAR_WARRIOR]:
        if not check_ingredients(st,1,1,1,1,1,1,1,1): st.setState(MIDDLE)
+    # todo: Shouldn't SUCCUBUS_OF_SEDUCTION be handled here, too?
    elif id == STARTED:
      if npcId == SECRET_KEEPER_TREE:
        if st.getQuestItemsCount(SECRET_BOOK_ID) == 0:
@@ -380,7 +393,7 @@ class Quest (JQuest) :
            st.playSound("ItemSound.quest_middle")
            st.setState(END)
          else: st.playSound("ItemSound.quest_itemget")
-   else :
+   elif id == MIDDLE :
      DROP_CHANCE = st.getRandom(MAX_VALUE)
      if npcId == SUCCUBUS_OF_SEDUCTION:
        if DROP_CHANCE <= DROP_CHANCE_FORBIDDEN_LOVE_SCROLL_ID:
@@ -429,60 +442,52 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(ALCHEMIST_MATILD)
 QUEST.addStartNpc(TORAI)
 
-CREATED.addTalkId(ALCHEMIST_MATILD)
-CREATED.addTalkId(TORAI)
+QUEST.addTalkId(ALCHEMIST_MATILD)
+QUEST.addTalkId(TORAI)
 
-STARTED.addTalkId(ALCHEMIST_MATILD)
-STARTED.addTalkId(TORAI)
+QUEST.addTalkId(RUPINA)
+QUEST.addTalkId(WISDOM_CHEST)
 
-MIDDLE.addTalkId(ALCHEMIST_MATILD)
-MIDDLE.addTalkId(RUPINA)
-MIDDLE.addTalkId(WISDOM_CHEST)
+QUEST.addKillId(SECRET_KEEPER_TREE)
 
-END.addTalkId(ALCHEMIST_MATILD)
-END.addTalkId(RUPINA)
-END.addTalkId(WISDOM_CHEST)
+QUEST.addKillId(AMBER_BASILISK)
+QUEST.addKillId(WHISPERING_WIND)
+QUEST.addKillId(GLASS_JAGUAR)
+QUEST.addKillId(HORROR_MIST_RIPPER)
+QUEST.addKillId(SILENOS)
+QUEST.addKillId(ANT_RECRUIT)
+QUEST.addKillId(ANT_WARRIOR_CAPTAIN)
+QUEST.addKillId(TYRANT)
+QUEST.addKillId(TYRANT_KINGPIN)
+QUEST.addKillId(TURAK_BUGBEAR)
+QUEST.addKillId(TURAK_BUGBEAR_WARRIOR)
 
-STARTED.addKillId(SECRET_KEEPER_TREE)
+QUEST.addKillId(SUCCUBUS_OF_SEDUCTION)
+# END.addKillId(SUCCUBUS_OF_SEDUCTION) todo: This was in the old code but was not handled...
 
-MIDDLE.addKillId(AMBER_BASILISK)
-MIDDLE.addKillId(WHISPERING_WIND)
-MIDDLE.addKillId(GLASS_JAGUAR)
-MIDDLE.addKillId(HORROR_MIST_RIPPER)
-MIDDLE.addKillId(SILENOS)
-MIDDLE.addKillId(ANT_RECRUIT)
-MIDDLE.addKillId(ANT_WARRIOR_CAPTAIN)
-MIDDLE.addKillId(TYRANT)
-MIDDLE.addKillId(TYRANT_KINGPIN)
-MIDDLE.addKillId(TURAK_BUGBEAR)
-MIDDLE.addKillId(TURAK_BUGBEAR_WARRIOR)
+QUEST.addKillId(GRIMA)
+QUEST.addKillId(SANCHES)
+QUEST.addKillId(RAMSEBALIUS)
+QUEST.addKillId(BONAPARTERIUS)
+QUEST.addKillId(GREAT_DEMON_KING)
 
-MIDDLE.addKillId(SUCCUBUS_OF_SEDUCTION)
-END.addKillId(SUCCUBUS_OF_SEDUCTION)
+QUEST.addKillId(GRIMA)
+QUEST.addKillId(SANCHES)
+QUEST.addKillId(RAMSEBALIUS)
+QUEST.addKillId(BONAPARTERIUS)
+QUEST.addKillId(GREAT_DEMON_KING)
 
-MIDDLE.addKillId(GRIMA)
-MIDDLE.addKillId(SANCHES)
-MIDDLE.addKillId(RAMSEBALIUS)
-MIDDLE.addKillId(BONAPARTERIUS)
-MIDDLE.addKillId(GREAT_DEMON_KING)
-
-END.addKillId(GRIMA)
-END.addKillId(SANCHES)
-END.addKillId(RAMSEBALIUS)
-END.addKillId(BONAPARTERIUS)
-END.addKillId(GREAT_DEMON_KING)
-
-END.addKillId(AMBER_BASILISK)
-END.addKillId(WHISPERING_WIND)
-END.addKillId(GLASS_JAGUAR)
-END.addKillId(HORROR_MIST_RIPPER)
-END.addKillId(SILENOS)
-END.addKillId(ANT_RECRUIT)
-END.addKillId(ANT_WARRIOR_CAPTAIN)
-END.addKillId(TYRANT)
-END.addKillId(TYRANT_KINGPIN)
-END.addKillId(TURAK_BUGBEAR)
-END.addKillId(TURAK_BUGBEAR_WARRIOR)
+QUEST.addKillId(AMBER_BASILISK)
+QUEST.addKillId(WHISPERING_WIND)
+QUEST.addKillId(GLASS_JAGUAR)
+QUEST.addKillId(HORROR_MIST_RIPPER)
+QUEST.addKillId(SILENOS)
+QUEST.addKillId(ANT_RECRUIT)
+QUEST.addKillId(ANT_WARRIOR_CAPTAIN)
+QUEST.addKillId(TYRANT)
+QUEST.addKillId(TYRANT_KINGPIN)
+QUEST.addKillId(TURAK_BUGBEAR)
+QUEST.addKillId(TURAK_BUGBEAR_WARRIOR)
 
 STARTED.addQuestDrop(ALCHEMIST_MATILD,ALCHEMY_TEXT_ID,1)
 STARTED.addQuestDrop(SECRET_KEEPER_TREE,SECRET_BOOK_ID,1)

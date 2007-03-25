@@ -29,8 +29,12 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_finish")
     return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
@@ -54,7 +58,11 @@ class Quest (JQuest) :
        htmltext = "30039-07.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    chance=5
    if npcId in [20130,20131,20006] :
@@ -80,20 +88,17 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30039)
 
-CREATED.addTalkId(30039)
-STARTING.addTalkId(30039)
-STARTED.addTalkId(30039)
-COMPLETED.addTalkId(30039)
+QUEST.addTalkId(30039)
 
-STARTED.addKillId(20130)
-STARTED.addKillId(20131)
-STARTED.addKillId(20132)
-STARTED.addKillId(20342)
-STARTED.addKillId(20343)
-STARTED.addKillId(20006)
-STARTED.addKillId(20093)
-STARTED.addKillId(20096)
-STARTED.addKillId(20098)
+QUEST.addKillId(20130)
+QUEST.addKillId(20131)
+QUEST.addKillId(20132)
+QUEST.addKillId(20342)
+QUEST.addKillId(20343)
+QUEST.addKillId(20006)
+QUEST.addKillId(20093)
+QUEST.addKillId(20096)
+QUEST.addKillId(20098)
 
 STARTED.addQuestDrop(20130,ORC_AMULET,1)
 STARTED.addQuestDrop(20093,ORC_NECKLACE,1)

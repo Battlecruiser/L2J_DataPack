@@ -85,8 +85,11 @@ class Quest (JQuest) :
        htmltext="???"
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
    id = st.getState()
    cond=st.getInt("cond")
@@ -101,37 +104,42 @@ class Quest (JQuest) :
          st.exitQuest(1)
      elif cond == 1 :
        htmltext = "30120-2.htm"
-   if npcId == GENTLER :
-     if cond == 1 :
-       htmltext = "30094-0.htm"
-     elif cond == 2 :
-       htmltext = "30094-2.htm"
-     elif cond == 4 :
-       htmltext = "30094-3.htm"
-     elif cond == 5 and st.getQuestItemsCount(SPIRIT_ORES) < 500 :
-       htmltext = "30094-5.htm"
-     elif cond == 5 and st.getQuestItemsCount(SPIRIT_ORES) >= 500 :
-       htmltext = "30094-6.htm"
-     elif cond == 6 :
-       htmltext = "30094-8.htm"
-     elif cond == 7 :
-       htmltext = "30094-9.htm"
-     elif cond == 8 and (st.getQuestItemsCount(THREAD) < 1000 or st.getQuestItemsCount(SUEDE) < 500) :
-       htmltext = "30094-11.htm"
-     elif cond == 8 and st.getQuestItemsCount(THREAD) >= 1000 and st.getQuestItemsCount(SUEDE) >= 500 :
-       htmltext = "30094-12.htm"
-   if npcId == MIKI_THE_CAT :
-     if cond == 2 :
-       htmltext = "31706-0.htm"
-     elif cond == 3 :
-       htmltext = "31706-2.htm"
-     elif cond == 6 :
-       htmltext = "31706-3.htm"
-     elif cond == 7 :
-       htmltext = "31706-5.htm"
+   if id == STARTED :    
+       if npcId == GENTLER :
+         if cond == 1 :
+           htmltext = "30094-0.htm"
+         elif cond == 2 :
+           htmltext = "30094-2.htm"
+         elif cond == 4 :
+           htmltext = "30094-3.htm"
+         elif cond == 5 and st.getQuestItemsCount(SPIRIT_ORES) < 500 :
+           htmltext = "30094-5.htm"
+         elif cond == 5 and st.getQuestItemsCount(SPIRIT_ORES) >= 500 :
+           htmltext = "30094-6.htm"
+         elif cond == 6 :
+           htmltext = "30094-8.htm"
+         elif cond == 7 :
+           htmltext = "30094-9.htm"
+         elif cond == 8 and (st.getQuestItemsCount(THREAD) < 1000 or st.getQuestItemsCount(SUEDE) < 500) :
+           htmltext = "30094-11.htm"
+         elif cond == 8 and st.getQuestItemsCount(THREAD) >= 1000 and st.getQuestItemsCount(SUEDE) >= 500 :
+           htmltext = "30094-12.htm"
+       if npcId == MIKI_THE_CAT :
+         if cond == 2 :
+           htmltext = "31706-0.htm"
+         elif cond == 3 :
+           htmltext = "31706-2.htm"
+         elif cond == 6 :
+           htmltext = "31706-3.htm"
+         elif cond == 7 :
+           htmltext = "31706-5.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+   if st.getState() : return
+   
    chance = st.getRandom(100)
    count = st.getQuestItemsCount(MEDICINAL_HERB)
    if chance < CHANCE_FOR_DROP and st.getInt("cond")== 3 :
@@ -151,11 +159,11 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(MAXIMILIAN)
-CREATED.addTalkId(MAXIMILIAN)
-STARTED.addTalkId(MAXIMILIAN)
-STARTED.addTalkId(GENTLER)
-STARTED.addTalkId(MIKI_THE_CAT)
-STARTED.addKillId(ALLIGATOR)
+QUEST.addTalkId(MAXIMILIAN)
+
+QUEST.addTalkId(GENTLER)
+QUEST.addTalkId(MIKI_THE_CAT)
+QUEST.addKillId(ALLIGATOR)
 
 STARTED.addQuestDrop(ALLIGATOR,MEDICINAL_HERB,1)
 STARTED.addQuestDrop(GENTLER,MAP,1)

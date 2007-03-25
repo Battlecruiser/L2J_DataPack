@@ -62,9 +62,12 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_finish")
      return htmltext
 
- def onTalk (Self,npc,st):
-     npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
      htmltext = "<html><head><body>I have nothing to say you</body></html>"
+     st = player.getQuestState(qn)
+     if not st : return htmltext
+
+     npcId = npc.getNpcId()
      id = st.getState()
      level = st.getPlayer().getLevel()
      cond = st.getInt("cond")
@@ -77,7 +80,11 @@ class Quest (JQuest) :
          htmltext = "30895-03.htm"
      return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+     st = player.getQuestState(qn)
+     if not st : return 
+     if st.getState() != STARTED : return 
+   
      npcId = npc.getNpcId()
      cond = st.getInt("cond")
      random = st.getRandom(100)
@@ -95,13 +102,12 @@ STARTED     = State('Started', QUEST,True)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30895)
 
-CREATED.addTalkId(30895)
-STARTED.addTalkId(30895)
+QUEST.addTalkId(30895)
 
 STARTED.addQuestDrop(20991,ALLIGATOR_TOOTH,1)
 STARTED.addQuestDrop(20991,TORN_MAP_FRAGMENT,1)
 
 for i in range(20804,20809)+[20991] :
-    STARTED.addKillId(i)
+    QUEST.addKillId(i)
 
 print "importing quests: 354: Conquest Of Alligator Island"

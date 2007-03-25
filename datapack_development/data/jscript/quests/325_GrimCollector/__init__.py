@@ -88,11 +88,15 @@ class Quest (JQuest) :
          htmltext = "30342-02.htm"
     return htmltext
 
-
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   cond = st.getInt("cond")
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
+   id = st.getState()
+   if npcId != 30336 and id != STARTED : return htmltext
+   cond = st.getInt("cond")
    if npcId == 30336 and cond==0 :
       if st.getPlayer().getLevel() >= 15 :
          htmltext = "30336-02.htm"
@@ -116,7 +120,11 @@ class Quest (JQuest) :
       htmltext = "30342-01.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) :
     n = st.getRandom(100)
@@ -232,14 +240,13 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30336)
-CREATED.addTalkId(30336)
+QUEST.addTalkId(30336)
 
-STARTED.addTalkId(30336)
-STARTED.addTalkId(30342)
-STARTED.addTalkId(30434)
+QUEST.addTalkId(30342)
+QUEST.addTalkId(30434)
 
 for i in [20026,20029,20035,20042,20045,20457,20458,20051,20514,20515] :
-    STARTED.addKillId(i)
+    QUEST.addKillId(i)
 
 STARTED.addQuestDrop(20026,ZOMBIE_HEAD1_ID,1)
 STARTED.addQuestDrop(20026,ZOMBIE_HEART1_ID,1)

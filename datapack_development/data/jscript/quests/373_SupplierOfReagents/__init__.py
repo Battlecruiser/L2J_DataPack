@@ -298,10 +298,13 @@ class Quest (JQuest) :
           htmltext="31149-6a.htm"
     return htmltext
 
- def onTalk (self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = default
-   id = st.getState()
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
+   id = st.getState()
    if npcId == WESLEY :
       if id == CREATED :
          st.set("cond","0")
@@ -311,11 +314,14 @@ class Quest (JQuest) :
             htmltext = "30166-2.htm"
       else :
          htmltext = "30166-3.htm"
-   else :
+   elif id == STARTED :
       htmltext = render_urn(st,"Start")
    return htmltext
 
- def onKill (self,npc,st) :
+ def onKill (self,npc,player) :
+     partyMember = self.getRandomPartyMemberState(player, STARTED)
+     if not partyMember : return
+     st = partyMember.getQuestState(qn)
      npcId = npc.getNpcId()
      drop = st.getRandom(100)
      for entry in DROPLIST[npcId] :
@@ -331,19 +337,19 @@ class Quest (JQuest) :
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
 
 CREATED     = State('Start',     QUEST)
-STARTED     = State('Started',   QUEST,True)
+STARTED     = State('Started',   QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
 QUEST.addStartNpc(WESLEY)
 # Quest initialization
-CREATED.addTalkId(WESLEY)
-STARTED.addTalkId(WESLEY)
-STARTED.addTalkId(URN)
+QUEST.addTalkId(WESLEY)
+
+QUEST.addTalkId(URN)
 
 for i in DROPLIST.keys():
-  STARTED.addKillId(i)
+  QUEST.addKillId(i)
 
 for i in range(6007,6035)+[6317,5904] :
   STARTED.addQuestDrop(31149,i,1)

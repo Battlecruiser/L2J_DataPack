@@ -7,7 +7,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
+qn = "30066_pabris_occupation_change"
 MEDALLION_OF_WARRIOR_ID    = 1145
 SWORD_OF_RITUAL_ID         = 1161
 BEZIQUES_RECOMMENDATION_ID = 1190
@@ -163,8 +163,8 @@ class Quest (JQuest) :
    return htmltext
 
 
- def onTalk (Self,npc,st):
-
+ def onTalk (Self,npc,player):
+   st = player.getQuestState(qn)
    npcId = npc.getNpcId()
    
    Race    = st.getPlayer().getRace()
@@ -199,7 +199,7 @@ class Quest (JQuest) :
      st.exitQuest(1)
      return "30066-40.htm"
 
-QUEST     = Quest(30066,"30066_pabris_occupation_change","village_master")
+QUEST     = Quest(30066,qn,"village_master")
 CREATED   = State('Start',     QUEST)
 STARTED   = State('Started',   QUEST)
 COMPLETED = State('Completed', QUEST)
@@ -208,4 +208,4 @@ QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(30066)
 
-STARTED.addTalkId(30066)
+QUEST.addTalkId(30066)

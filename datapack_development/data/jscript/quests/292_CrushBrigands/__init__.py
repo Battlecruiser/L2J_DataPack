@@ -30,11 +30,15 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_finish")
     return htmltext
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if npcId != 30532 and id != STARTED : return htmltext
+   if id == CREATED :
      st.set("cond","0")
    if npcId == 30532 :
      if int(st.get("cond"))==0 :
@@ -79,7 +83,11 @@ class Quest (JQuest) :
         st.takeItems(SUSPICIOUS_CONTRACT,-1)
    return htmltext
 
- def onKill (self,npc,st) :
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if npcId in [20322, 20323]: item = GOBLIN_NECKLACE
    if npcId in [20324, 20327]: item = GOBLIN_PENDANT
@@ -110,18 +118,15 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30532)
 
-CREATED.addTalkId(30532)
-STARTING.addTalkId(30532)
-STARTED.addTalkId(30532)
-COMPLETED.addTalkId(30532)
+QUEST.addTalkId(30532)
 
-STARTED.addTalkId(30533)
+QUEST.addTalkId(30533)
 
-STARTED.addKillId(20322)
-STARTED.addKillId(20323)
-STARTED.addKillId(20324)
-STARTED.addKillId(20327)
-STARTED.addKillId(20528)
+QUEST.addKillId(20322)
+QUEST.addKillId(20323)
+QUEST.addKillId(20324)
+QUEST.addKillId(20327)
+QUEST.addKillId(20528)
 
 STARTED.addQuestDrop(20327,GOBLIN_NECKLACE,1)
 STARTED.addQuestDrop(20323,GOBLIN_PENDANT,1)

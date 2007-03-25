@@ -28,10 +28,14 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == CREATED :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getRace().ordinal() != 1 :
@@ -64,7 +68,11 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_finish")
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    if st.getInt("cond") == 1:
       npcId = npc.getNpcId()
       count = st.getQuestItemsCount(PREDATORS_FANG)
@@ -93,15 +101,12 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(31852)
 
-CREATED.addTalkId(31852)
-STARTING.addTalkId(31852)
-STARTED.addTalkId(31852)
-COMPLETED.addTalkId(31852)
+QUEST.addTalkId(31852)
 
-STARTED.addKillId(20525)
-STARTED.addKillId(20530)
-STARTED.addKillId(20534)
-STARTED.addKillId(20537)
+QUEST.addKillId(20525)
+QUEST.addKillId(20530)
+QUEST.addKillId(20534)
+QUEST.addKillId(20537)
 
 STARTED.addQuestDrop(20530,PREDATORS_FANG,1)
 

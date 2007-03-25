@@ -56,11 +56,15 @@ class Quest (JQuest) :
      st.exitQuest(1)
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
    id = st.getState()
-   cond = st.getInt("cond")
+   if npcId != 30620 and id != STARTED : return htmltext
+   cond = st.getInt("cond")
    if npcId == EMILY and cond == 0 :
      if st.getPlayer().getLevel() >= 34 and st.getPlayer().getLevel() <= 40 :
        htmltext = "30620-0.htm"
@@ -79,7 +83,11 @@ class Quest (JQuest) :
      htmltext = "30620-6.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    count = st.getQuestItemsCount(HONEY_POUCH)
    if int(st.get("cond")) == 1 and count < 100 :
@@ -97,14 +105,15 @@ STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30620)
-CREATED.addTalkId(30620)
-STARTED.addTalkId(30620)
-STARTED.addTalkId(30063)
-STARTED.addTalkId(30466)
-STARTED.addKillId(WASP_LEADER)
-STARTED.addKillId(WASP_WORKER)
-STARTED.addQuestDrop(WASP_WORKER,HONEY_POUCH,1)
-STARTED.addQuestDrop(EMILY,AVELLAN_SPICE,1)
-STARTED.addQuestDrop(EMILY,FRUIT_BASKET,1)
+QUEST.addTalkId(30620)
+
+QUEST.addTalkId(30063)
+QUEST.addTalkId(30466)
+
+QUEST.addKillId(WASP_LEADER)
+QUEST.addKillId(WASP_WORKER)
+QUEST.addQuestDrop(WASP_WORKER,HONEY_POUCH,1)
+QUEST.addQuestDrop(EMILY,AVELLAN_SPICE,1)
+QUEST.addQuestDrop(EMILY,FRUIT_BASKET,1)
 
 print "importing quests: 299: Gather Ingredients For A Pie"

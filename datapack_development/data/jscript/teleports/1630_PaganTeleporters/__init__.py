@@ -7,7 +7,7 @@ from net.sf.l2j.gameserver.model.actor.instance import L2PcInstance
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
+qn = "1630_PaganTeleporters"
 NPCS=[32034,32036,32039,32040]
 
 # Main Quest Code
@@ -16,6 +16,7 @@ class Quest (JQuest):
   def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
   def onTalk (self,npc,st):
+    st = player.getQuestState(qn)
     npcId = npc.getNpcId()
     htmltext = "You have been teleported."
     if st.getPlayer().getLevel() < 73 :
@@ -39,7 +40,7 @@ class Quest (JQuest):
     return htmltext
 
 # Quest class and state definition
-QUEST       = Quest(1630, "1630_PaganTeleporters", "Teleporters")
+QUEST       = Quest(1630, qn, "Teleporters")
 CREATED     = State('Start', QUEST)
 
 # Quest initialization
@@ -47,6 +48,6 @@ QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
 for npc in NPCS :
     QUEST.addStartNpc(npc)
-    CREATED.addTalkId(npc)
+    QUEST.addTalkId(npc)
 
 print "importing teleport data: 1630_PaganTeleporters"

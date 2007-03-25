@@ -146,8 +146,12 @@ class Quest (JQuest) :
               htmltext=default
     return htmltext
 
- def onTalk (self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = default
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
       st.set("cond","0")
@@ -163,7 +167,11 @@ class Quest (JQuest) :
          htmltext = starting2 
    return htmltext
 
- def onKill (self,npc,st) :
+ def onKill (self,npc,player):
+     partyMember = self.getRandomPartyMemberState(player, STARTED)
+     if not partyMember : return
+     st = partyMember.getQuestState(qn)
+     
      count = st.getQuestItemsCount(SI_ORE)
      if st.getRandom(100) < DROP_RATE :
         st.giveItems(SI_ORE,1)
@@ -176,16 +184,15 @@ class Quest (JQuest) :
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
 CREATED     = State('Start',     QUEST)
-STARTED     = State('Started',   QUEST,True)
+STARTED     = State('Started',   QUEST)
 
 QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
 QUEST.addStartNpc(WK_ROMP)
 # Quest initialization
-CREATED.addTalkId(WK_ROMP)
-STARTED.addTalkId(WK_ROMP)
+QUEST.addTalkId(WK_ROMP)
 
 for i in MOBS :
-  STARTED.addKillId(i)
+  QUEST.addKillId(i)
 
 print "importing quests: "+str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

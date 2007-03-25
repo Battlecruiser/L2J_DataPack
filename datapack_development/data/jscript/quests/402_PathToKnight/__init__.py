@@ -117,10 +117,15 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
-   htmltext = default
    id = st.getState()
+   if npcId != 30417 and id != STARTED : return htmltext
+
    squire = st.getQuestItemsCount(MARK_OF_ESQUIRE)
    coin1,coin2,coin3,coin4,coin5,coin6 = st.getQuestItemsCount(COIN_OF_LORDS1),st.getQuestItemsCount(COIN_OF_LORDS2),st.getQuestItemsCount(COIN_OF_LORDS3),st.getQuestItemsCount(COIN_OF_LORDS4),st.getQuestItemsCount(COIN_OF_LORDS5),st.getQuestItemsCount(COIN_OF_LORDS6)
    guards_mark1,guards_mark2,guards_mark3=st.getQuestItemsCount(GLUDIO_GUARDS_MARK1),st.getQuestItemsCount(GLUDIO_GUARDS_MARK2),st.getQuestItemsCount(GLUDIO_GUARDS_MARK3)
@@ -231,7 +236,11 @@ class Quest (JQuest) :
         htmltext = "30653-01.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    if st.getInt("cond") :
       item_required,item,max,chance=DROPLIST[npc.getNpcId()]
       if st.getQuestItemsCount(item_required) and st.getQuestItemsCount(item)<max and st.getRandom(100)<chance :
@@ -252,22 +261,20 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30417)
 
-CREATED.addTalkId(30417)
-STARTING.addTalkId(30417)
-COMPLETED.addTalkId(30417)
+QUEST.addTalkId(30417)
 
-STARTED.addTalkId(30031)
-STARTED.addTalkId(30037)
-STARTED.addTalkId(30039)
-STARTED.addTalkId(30289)
-STARTED.addTalkId(30311)
-STARTED.addTalkId(30332)
-STARTED.addTalkId(30379)
-STARTED.addTalkId(30417)
-STARTED.addTalkId(30653)
+QUEST.addTalkId(30031)
+QUEST.addTalkId(30037)
+QUEST.addTalkId(30039)
+QUEST.addTalkId(30289)
+QUEST.addTalkId(30311)
+QUEST.addTalkId(30332)
+QUEST.addTalkId(30379)
+QUEST.addTalkId(30417)
+QUEST.addTalkId(30653)
 
 for mob in DROPLIST.keys():
-    STARTED.addKillId(mob)
+    QUEST.addKillId(mob)
 
 for item in range(1162,1180)+[MARK_OF_ESQUIRE] :
     STARTED.addQuestDrop(20775,item,1)

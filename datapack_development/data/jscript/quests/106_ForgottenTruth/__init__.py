@@ -26,9 +26,12 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_accept")
     return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (Self,npc,player):
    npcId = npc.getNpcId()
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    id = st.getState()
    if id == CREATED :                                      # Check if is starting the quest
      st.set("cond","0")
@@ -51,7 +54,7 @@ class Quest (JQuest) :
      if cond == 1 :
        if npcId == 30358 :
          htmltext = "30358-06.htm"
-       elif npcId == 30133 and st.getQuestItemsCount(ONYX_TALISMAN1) :
+       elif npcId == 30133 and st.getQuestItemsCount(ONYX_TALISMAN1) and id == STARTED : 
          htmltext = "30133-01.htm"
          st.takeItems(ONYX_TALISMAN1,1)
          st.giveItems(ONYX_TALISMAN2,1)
@@ -64,7 +67,7 @@ class Quest (JQuest) :
      elif cond == 3 :
        if npcId == 30358 :
          htmltext = "30358-06.htm"
-       elif npcId == 30133 and st.getQuestItemsCount(ANCIENT_SCROLL) and st.getQuestItemsCount(ANCIENT_CLAY_TABLET) :
+       elif npcId == 30133 and st.getQuestItemsCount(ANCIENT_SCROLL) and st.getQuestItemsCount(ANCIENT_CLAY_TABLET) and id == STARTED :
          htmltext = "30133-03.htm"
          st.takeItems(ONYX_TALISMAN2,1)
          st.takeItems(ANCIENT_SCROLL,1)
@@ -89,11 +92,15 @@ class Quest (JQuest) :
          st.unset("cond")
          st.setState(COMPLETED)
          st.playSound("ItemSound.quest_finish")
-       elif npcId == 30133 :
+       elif npcId == 30133 and id == STARTED :
          htmltext = "30133-04.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return
+   if st.getState() != STARTED : return
+   
    if int(st.get("cond")) == 2 :
      if st.getRandom(100) < 20 :
        if st.getQuestItemsCount(ANCIENT_SCROLL) == 0 :
@@ -114,14 +121,11 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30358)
 
-CREATED.addTalkId(30358)
-STARTING.addTalkId(30358)
-COMPLETED.addTalkId(30358)
+QUEST.addTalkId(30358)
 
-STARTED.addTalkId(30133)
-STARTED.addTalkId(30358)
+QUEST.addTalkId(30133)
 
-STARTED.addKillId(27070)
+QUEST.addKillId(27070)
 
 STARTED.addQuestDrop(30133,KARTAS_TRANSLATION,1)
 STARTED.addQuestDrop(30358,ONYX_TALISMAN1,1)

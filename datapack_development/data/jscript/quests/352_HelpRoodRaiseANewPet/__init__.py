@@ -27,9 +27,12 @@ class Quest (JQuest) :
          st.exitQuest(1)
      return htmltext
 
- def onTalk (Self,npc,st):
-     npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
      htmltext = "<html><head><body>I have nothing to say you</body></html>"
+     st = player.getQuestState(qn)
+     if not st : return htmltext
+
+     npcId = npc.getNpcId()
      id = st.getState()
      level = st.getPlayer().getLevel()
      cond = st.getInt("cond")
@@ -62,7 +65,10 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_itemget")
      return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+     st = player.getQuestState(qn)
+     if not st : return 
+     if st.getState() != STARTED : return 
      npcId = npc.getNpcId()
      random = st.getRandom(100)
      if random<=CHANCE :
@@ -78,14 +84,13 @@ STARTED     = State('Started', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(31067)
 
-CREATED.addTalkId(31067)
-STARTED.addTalkId(31067)
+QUEST.addTalkId(31067)
 
 STARTED.addQuestDrop(31067,LIENRIK_EGG1,1)
 STARTED.addQuestDrop(31067,LIENRIK_EGG2,1)
 
-STARTED.addKillId(20786)
-STARTED.addKillId(20787)
+QUEST.addKillId(20786)
+QUEST.addKillId(20787)
 
 print "importing quests: 352: Help Rood Raise A New Pet"
 

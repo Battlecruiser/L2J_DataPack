@@ -32,8 +32,11 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_finish")
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
@@ -48,7 +51,7 @@ class Quest (JQuest) :
          st.exitQuest(1)
      else :
        htmltext = "31302-2.htm"
-   else :
+   elif id == STARTED :
        htmltext = "31537-0.htm"
    return htmltext
 
@@ -60,9 +63,8 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(VLADIMIR)
 
-CREATED.addTalkId(VLADIMIR)
-STARTED.addTalkId(VLADIMIR)
-STARTED.addTalkId(TUNATUN)
+QUEST.addTalkId(VLADIMIR)
+QUEST.addTalkId(TUNATUN)
 
 STARTED.addQuestDrop(VLADIMIR,BEAST_MEAT,1)
 print "importing quests: 19: Go To The Pastureland"

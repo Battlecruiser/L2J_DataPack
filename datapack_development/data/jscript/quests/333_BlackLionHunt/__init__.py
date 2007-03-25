@@ -459,10 +459,15 @@ class Quest (JQuest) :
 		elif event == "r_exit":
 			return r_exit
 		
-	def onTalk (self,npc,st):
-		npcId = npc.getNpcId()
+	def onTalk (self,npc,player):
 		htmltext = "<html><head><body>I have nothing to say you</body></html>"
+		st = player.getQuestState(qn)
+		if not st : return htmltext
+
+		npcId = npc.getNpcId()
 		id = st.getState()
+		if npcId != NPC[0] and id != STARTED : return htmltext
+
 		if id == CREATED :
 			st.setState(STARTING)
 			st.set("cond","0")
@@ -550,7 +555,11 @@ class Quest (JQuest) :
 				else:
 					return m_no_box
 					
-	def onKill (self,npc,st):
+	def onKill (self,npc,player):
+		st = player.getQuestState(qn)
+		if not st : return 
+		if st.getState() != STARTED : return 
+
 		npcId = npc.getNpcId()
 		part,allowDrop,chancePartItem,chanceBox,partItem=DROPLIST[npcId]
 		random1 = st.getRandom(101)
@@ -580,13 +589,10 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(NPC[0])
 
-STARTING.addTalkId(NPC[0])
-
-
 for npcId in NPC:
-	STARTED.addTalkId(npcId)
+	QUEST.addTalkId(npcId)
 
 for mobId in MOBS:
-	STARTED.addKillId(mobId)
+	QUEST.addKillId(mobId)
 	
 print "importing quests: 333: BlackLionHunt"

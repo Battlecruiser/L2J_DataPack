@@ -25,8 +25,12 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_finish")
     return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
@@ -54,7 +58,11 @@ class Quest (JQuest) :
        htmltext = "30155-05.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if npcId == 27020 :
      if st.getQuestItemsCount(VAROOL_FOULCLAWS_FANG) == 0 and st.getRandom(10)>7:
@@ -75,14 +83,11 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30155)
 
-CREATED.addTalkId(30155)
-STARTING.addTalkId(30155)
-STARTED.addTalkId(30155)
-COMPLETED.addTalkId(30155)
+QUEST.addTalkId(30155)
 
-STARTED.addKillId(20040)
-STARTED.addKillId(20047)
-STARTED.addKillId(27020)
+QUEST.addKillId(20040)
+QUEST.addKillId(20047)
+QUEST.addKillId(27020)
 
 STARTED.addQuestDrop(20040,WERERAT_FANG,1)
 STARTED.addQuestDrop(27020,VAROOL_FOULCLAWS_FANG,1)

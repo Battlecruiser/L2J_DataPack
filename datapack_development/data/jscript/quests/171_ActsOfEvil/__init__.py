@@ -54,9 +54,12 @@ class Quest (JQuest) :
          st.set("cond","10")
      return htmltext
 
- def onTalk (Self,npc,st):
-     npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
      htmltext = "<html><head><body>I have nothing to say you</body></html>"
+     st = player.getQuestState(qn)
+     if not st : return htmltext
+
+     npcId = npc.getNpcId()
      id = st.getState()
      level = st.getPlayer().getLevel()
      cond = st.getInt("cond")
@@ -95,59 +98,64 @@ class Quest (JQuest) :
              st.giveItems(ADENA,90000)
              st.playSound("ItemSound.quest_finish")
              st.setState(COMPLETED)
-     elif npcId==ARODIN :
-         if cond==1 :
-             htmltext = "30207-01.htm"
-         elif cond==2 :
-             htmltext = "30207-01a.htm"
-         elif cond==3 :
-             if st.getQuestItemsCount(TYRAS_BILL) :
-                 st.takeItems(TYRAS_BILL,-1)
-                 htmltext = "30207-03.htm"
-                 st.set("cond","4")
-             else :
+     elif id == STARTED :
+         if npcId==ARODIN :
+             if cond==1 :
+                 htmltext = "30207-01.htm"
+             elif cond==2 :
                  htmltext = "30207-01a.htm"
-         elif cond==4 :
-             htmltext = "30207-03a.htm"
-     elif npcId==TYRA :
-         if cond==2 :
-            if st.getQuestItemsCount(BLADE_MOLD)>=20 :
-               st.takeItems(BLADE_MOLD,-1)
-               st.giveItems(TYRAS_BILL,1)
-               htmltext = "30420-01.htm"
-               st.set("cond","3")
-            else :
-               htmltext = "30420-01b.htm"
-         elif cond==3 :
-             htmltext = "30420-01a.htm"
-         elif cond > 3 :
-             htmltext = "30420-02.htm"
-     elif npcId==NETI :
-         if cond==7 :
-             htmltext = "30425-01.htm"
-             st.set("cond","8")
-         elif cond==8 :
-             htmltext = "30425-02.htm"
-     elif npcId==ROLENTO :
-         if cond==8 :
-             htmltext = "30437-01.htm"
-         elif cond==9 :
-             htmltext = "30437-03a.htm"
-     elif npcId==BURAI :
-         if cond==9 and st.getQuestItemsCount(CERTIFICATE) and st.getQuestItemsCount(CARGOBOX) and st.getQuestItemsCount(ATTACK_DIRECTIVES) :
-             htmltext = "30617-01.htm"
-         if cond==10 :
-             if st.getQuestItemsCount(OL_MAHUM_HEAD)>=30 :
-                htmltext = "30617-05.htm"
-                st.giveItems(ADENA,8000)
-                st.takeItems(OL_MAHUM_HEAD,-1)
-                st.set("cond","11")
-                st.playSound("ItemSound.quest_itemget")
-             else :
-                htmltext = "30617-04a.htm"
+             elif cond==3 :
+                 if st.getQuestItemsCount(TYRAS_BILL) :
+                     st.takeItems(TYRAS_BILL,-1)
+                     htmltext = "30207-03.htm"
+                     st.set("cond","4")
+                 else :
+                     htmltext = "30207-01a.htm"
+             elif cond==4 :
+                 htmltext = "30207-03a.htm"
+         elif npcId==TYRA :
+             if cond==2 :
+                if st.getQuestItemsCount(BLADE_MOLD)>=20 :
+                   st.takeItems(BLADE_MOLD,-1)
+                   st.giveItems(TYRAS_BILL,1)
+                   htmltext = "30420-01.htm"
+                   st.set("cond","3")
+                else :
+                   htmltext = "30420-01b.htm"
+             elif cond==3 :
+                 htmltext = "30420-01a.htm"
+             elif cond > 3 :
+                 htmltext = "30420-02.htm"
+         elif npcId==NETI :
+             if cond==7 :
+                 htmltext = "30425-01.htm"
+                 st.set("cond","8")
+             elif cond==8 :
+                 htmltext = "30425-02.htm"
+         elif npcId==ROLENTO :
+             if cond==8 :
+                 htmltext = "30437-01.htm"
+             elif cond==9 :
+                 htmltext = "30437-03a.htm"
+         elif npcId==BURAI :
+             if cond==9 and st.getQuestItemsCount(CERTIFICATE) and st.getQuestItemsCount(CARGOBOX) and st.getQuestItemsCount(ATTACK_DIRECTIVES) :
+                 htmltext = "30617-01.htm"
+             if cond==10 :
+                 if st.getQuestItemsCount(OL_MAHUM_HEAD)>=30 :
+                    htmltext = "30617-05.htm"
+                    st.giveItems(ADENA,8000)
+                    st.takeItems(OL_MAHUM_HEAD,-1)
+                    st.set("cond","11")
+                    st.playSound("ItemSound.quest_itemget")
+                 else :
+                    htmltext = "30617-04a.htm"
      return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+     st = player.getQuestState(qn)
+     if not st : return 
+     if st.getState != STARTED : return 
+
      npcId = npc.getNpcId()
      cond = st.getInt("cond")
      chance=st.getRandom(100)
@@ -199,15 +207,13 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(ALVAH)
 
-CREATED.addTalkId(ALVAH)
-STARTED.addTalkId(ALVAH)
-COMPLETED.addTalkId(ALVAH)
+QUEST.addTalkId(ALVAH)
 
-STARTED.addTalkId(ARODIN)
-STARTED.addTalkId(TYRA)
-STARTED.addTalkId(ROLENTO)
-STARTED.addTalkId(NETI)
-STARTED.addTalkId(BURAI)
+QUEST.addTalkId(ARODIN)
+QUEST.addTalkId(TYRA)
+QUEST.addTalkId(ROLENTO)
+QUEST.addTalkId(NETI)
+QUEST.addTalkId(BURAI)
 
 STARTED.addQuestDrop(ALVAH,RANGERS_REPORT1,1)
 STARTED.addQuestDrop(ALVAH,RANGERS_REPORT2,1)
@@ -221,6 +227,6 @@ STARTED.addQuestDrop(ALVAH,BLADE_MOLD,1)
 STARTED.addQuestDrop(ALVAH,WEAPON_TRADE_CONTRACT,1)
 
 for i in range(20494,20500)+[20062,20066,20438] :
-    STARTED.addKillId(i)
+    QUEST.addKillId(i)
 
 print "importing quests: 171: Acts of Evil"

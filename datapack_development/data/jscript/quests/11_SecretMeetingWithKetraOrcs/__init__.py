@@ -43,9 +43,12 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_finish")
      return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (Self,npc,player):
      npcId = npc.getNpcId()
      htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
+     st = player.getQuestState(qn)
+     if not st : return htmltext
+
      cond = st.getInt("cond")
      onlyone = st.getInt("onlyone")
      if st.getState() == CREATED :
@@ -57,13 +60,13 @@ class Quest (JQuest) :
                  htmltext = "31296-01.htm"
              elif cond == 1 :
                  htmltext = "31296-04.htm"
-         elif npcId == Leon :
-             if cond == 1 :
-                 htmltext = "31256-01.htm"
-             elif cond == 2 :
-                 htmltext = "31256-03.htm"
-         elif npcId == Wahkan :
-             if cond == 2 :
+         if st.getState() == STARTED :
+             if npcId == Leon :
+                 if cond == 1 :
+                     htmltext = "31256-01.htm"
+                 elif cond == 2 :
+                     htmltext = "31256-03.htm"
+             elif npcId == Wahkan and cond == 2 :
                  htmltext = "31371-01.htm"
      return htmltext
      
@@ -75,9 +78,9 @@ COMPLETED   = State('Completed',QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Cadmon)
 
-CREATED.addTalkId(Cadmon)
-STARTED.addTalkId(Cadmon)
-STARTED.addTalkId(Leon)
-STARTED.addTalkId(Wahkan)
+QUEST.addTalkId(Cadmon)
+
+QUEST.addTalkId(Leon)
+QUEST.addTalkId(Wahkan)
 
 print "importing quests: 11: Secret Meeting With Ketra Orcs"

@@ -56,8 +56,12 @@ class Quest (JQuest) :
           htmltext = "30862-4.htm"
     return htmltext
 
- def onTalk (self,npc,st):
-   htmltext = default
+ def onTalk (self,npc,player):
+   htmltext = dafault
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
       st.set("cond","0")
@@ -73,7 +77,11 @@ class Quest (JQuest) :
          htmltext = "30862-4.htm"
    return htmltext
 
- def onKill (self,npc,st) :
+ def onKill (self,npc,player):
+     st = player.getQuestState(qn)
+     if not st : return 
+     if st.getState() != STARTED : return 
+   
      count = st.getQuestItemsCount(SN_SCALE)
      if count < REQUIRED and st.getRandom(100) < DROP_RATE :
         st.giveItems(SN_SCALE,1)
@@ -96,11 +104,10 @@ QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
 QUEST.addStartNpc(OLTLIN)
 # Quest initialization
-CREATED.addTalkId(OLTLIN)
-STARTED.addTalkId(OLTLIN)
+QUEST.addTalkId(OLTLIN)
 
 for i in MOBS :
-  STARTED.addKillId(i)
+  QUEST.addKillId(i)
   STARTED.addQuestDrop(i,SN_SCALE,1)
 
 print str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

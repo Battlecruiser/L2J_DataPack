@@ -21,10 +21,14 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == CREATED :
      st.set("cond","0")
    if int(st.get("cond")) == 0 :
      if st.getPlayer().getRace().ordinal() != 3 :
@@ -47,7 +51,11 @@ class Quest (JQuest) :
         st.takeItems(GRAVE_ROBBERS_HEAD,-1)
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    count = st.getQuestItemsCount(GRAVE_ROBBERS_HEAD)  
    if count < 50 :
       st.giveItems(GRAVE_ROBBERS_HEAD,1)
@@ -67,12 +75,10 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30572)
 
-CREATED.addTalkId(30572)
-STARTING.addTalkId(30572)
-STARTED.addTalkId(30572)
+QUEST.addTalkId(30572)
 
-STARTED.addKillId(20319)
-STARTED.addKillId(20320)
+QUEST.addKillId(20319)
+QUEST.addKillId(20320)
 
 STARTED.addQuestDrop(20319,GRAVE_ROBBERS_HEAD,1)
 

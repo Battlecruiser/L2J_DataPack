@@ -49,7 +49,9 @@ class Quest (JQuest) :
 			st.exitQuest(0)
 		return htmltext
 
-	def onTalk(self, npc, st):
+	def onTalk(self, npc, player):
+		st = player.getQuestState(qn)
+		if not st : return htmltext
 		npcId=npc.getNpcId()
 		htmltext="<html><head><body>I have nothing to say you</body></html>"
 		id=st.getState()
@@ -85,7 +87,10 @@ class Quest (JQuest) :
 			htmltext="<html><head><body>This quest have already been completed.</body></html>"
 		return htmltext
 
-	def onKill(self, npc, st):
+	def onKill(self, npc, player):
+		st = player.getQuestState(qn)
+		if not st : return 
+		if st.getState() != STARTED : return 
 		npcId = npc.getNpcId()
 		cond=int(st.get("cond"))
 		if cond==2:
@@ -106,13 +111,12 @@ COMPLETED=State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(LUNDY)
 
-CREATED.addTalkId(LUNDY)
+QUEST.addTalkId(LUNDY)
 
-STARTED.addTalkId(LUNDY)
-STARTED.addTalkId(DRIKUS)
+QUEST.addTalkId(DRIKUS)
 
-STARTED.addKillId(MAILLE_GUARD)
-STARTED.addKillId(MAILLE_SCOUT)
-STARTED.addKillId(MAILLE_LIZARDMAN)
+QUEST.addKillId(MAILLE_GUARD)
+QUEST.addKillId(MAILLE_SCOUT)
+QUEST.addKillId(MAILLE_LIZARDMAN)
 
 print "importing quests: 44: Help The Son!"

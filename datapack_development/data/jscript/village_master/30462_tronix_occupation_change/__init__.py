@@ -9,7 +9,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
+qn = "30462_tronix_occupation_change"
 GAZE_OF_ABYSS_ID     = 1244
 IRON_HEART_ID        = 1252
 JEWEL_OF_DARKNESS_ID = 1261
@@ -139,8 +139,8 @@ class Quest (JQuest) :
    return htmltext
 
 
- def onTalk (Self,npc,st):
-
+ def onTalk (Self,npc,player):
+   st = player.getQuestState(qn)
    npcId = npc.getNpcId()
    
    Race    = st.getPlayer().getRace()
@@ -173,7 +173,7 @@ class Quest (JQuest) :
      st.exitQuest(1)
      return "30462-33.htm"
 
-QUEST     = Quest(30462,"30462_tronix_occupation_change","village_master")
+QUEST     = Quest(30462,qn,"village_master")
 CREATED   = State('Start',     QUEST)
 STARTED   = State('Started',   QUEST)
 COMPLETED = State('Completed', QUEST)
@@ -182,4 +182,4 @@ QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(30462)
 
-STARTED.addTalkId(30462)
+QUEST.addTalkId(30462)

@@ -29,9 +29,12 @@ class Quest (JQuest) :
         htmltext = "30154-04.htm"
     return htmltext
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you.</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
    count = st.getQuestItemsCount(PLAGUE_DUST)
@@ -66,7 +69,12 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_finish")
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   st = player.getQuestState(qn)
+   if st.getState() != STARTED : return
+   
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
    count = st.getQuestItemsCount(PLAGUE_DUST)
@@ -93,12 +101,9 @@ COMPLETED = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30154)
 
-CREATED.addTalkId(30154)
-STARTING.addTalkId(30154)
-STARTED.addTalkId(30154)
-COMPLETED.addTalkId(30154)
+QUEST.addTalkId(30154)
 
-STARTED.addKillId(27017)
+QUEST.addKillId(27017)
 
 STARTED.addQuestDrop(27017,PLAGUE_DUST,1)
 STARTED.addQuestDrop(30154,HYACINTH_CHARM1,1)

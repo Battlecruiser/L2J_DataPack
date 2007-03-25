@@ -63,11 +63,15 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
 
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
+   if npcId != 30587 and id != STARTED : return htmltext
+
    if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
@@ -157,8 +161,11 @@ class Quest (JQuest) :
         htmltext = "30591-04.htm"
    return htmltext
 
- def onKill (self,npc,st):
-
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if npcId == 20479 :
         st.set("id","0")
@@ -268,22 +275,21 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30587)
 
-STARTING.addTalkId(30587)
+QUEST.addTalkId(30587)
 
-STARTED.addTalkId(30501)
-STARTED.addTalkId(30587)
-STARTED.addTalkId(30590)
-STARTED.addTalkId(30591)
+QUEST.addTalkId(30501)
+QUEST.addTalkId(30590)
+QUEST.addTalkId(30591)
 
-STARTED.addKillId(20014)
-STARTED.addKillId(20017)
-STARTED.addKillId(20024)
-STARTED.addKillId(20359)
-STARTED.addKillId(20415)
-STARTED.addKillId(20478)
-STARTED.addKillId(20479)
+QUEST.addKillId(20014)
+QUEST.addKillId(20017)
+QUEST.addKillId(20024)
+QUEST.addKillId(20359)
+QUEST.addKillId(20415)
+QUEST.addKillId(20478)
+QUEST.addKillId(20479)
 
 for item in range(1593,1615):
     STARTED.addQuestDrop(30587,item,1)
 
-print "importing quests: 415: Path To Orc Monk"
+print "importing quests: 415: Path To Orc Monk" 

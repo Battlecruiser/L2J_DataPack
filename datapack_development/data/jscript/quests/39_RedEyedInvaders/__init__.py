@@ -61,8 +61,11 @@ class Quest (JQuest) :
        htmltext = "You don't have required items"
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
@@ -73,7 +76,7 @@ class Quest (JQuest) :
        htmltext = "30334-0.htm"
      else :
        st.exitQuest(1)
-   elif npcId == BATHIS :
+   elif npcId == BATHIS and id == STARTED:
      if cond == 1 :
        htmltext = "30332-0.htm"
      elif st.getQuestItemsCount(BLACK_BONE_NECKLACE) == st.getQuestItemsCount(RED_BONE_NECKLACE) == 100 :
@@ -82,7 +85,11 @@ class Quest (JQuest) :
        htmltext = "30332-4.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return
+   
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
    if npcId in [20919,20920] and cond == 2 and st.getQuestItemsCount(BLACK_BONE_NECKLACE) < 100 :
@@ -122,14 +129,14 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(BABENCO)
+QUEST.addTalkId(BABENCO)
 
-CREATED.addTalkId(BABENCO)
-STARTED.addTalkId(BATHIS)
+QUEST.addTalkId(BATHIS)
 
-STARTED.addKillId(20919)
-STARTED.addKillId(20920)
-STARTED.addKillId(20921)
-STARTED.addKillId(20925)
+QUEST.addKillId(20919)
+QUEST.addKillId(20920)
+QUEST.addKillId(20921)
+QUEST.addKillId(20925)
 STARTED.addQuestDrop(BABENCO,BLACK_BONE_NECKLACE,1)
 STARTED.addQuestDrop(BABENCO,RED_BONE_NECKLACE,1)
 STARTED.addQuestDrop(BABENCO,INCENSE_POUCH,1)

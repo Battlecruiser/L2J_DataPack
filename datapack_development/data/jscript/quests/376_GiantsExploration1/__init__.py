@@ -69,6 +69,7 @@ class Quest (JQuest) :
        htmltext = starting
        st.setState(STARTING)
        st.set("cond","1")
+       st.set("awaitBook","1")
        st.giveItems(DICT1,1)
        st.playSound("ItemSound.quest_accept")
     elif event == "0" :
@@ -106,10 +107,13 @@ class Quest (JQuest) :
            htmltext = no_part2
     return htmltext
 
- def onTalk (self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = default
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
-   npcid = npc.getNpcId()
    if npcid == HR_SOBLING:
       if id == CREATED :
          st.set("cond","0")
@@ -131,23 +135,47 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_middle")
    return htmltext
 
- def onKill (self,npc,st) :
+ def onKill (self,npc,player) :
+     # a Mysterious Book may drop to any party member that still hasn't gotten it
+     partyMember = self.getRandomPartyMember(player,"awaitBook","1")
+     if partyMember :
+        st = partyMember.getQuestState(qn) 
+        if drop < DROP_RATE_2  and not st.getQuestItemsCount(MST_BK):
+           st.giveItems(MST_BK,1)
+           st.unset("awaitBook")
+           st.playSound("ItemSound.quest_middle")
+     
+     # In addition, drops go to one party member among those who are either in
+     # STARTING or in STARTED state
+     partyMember1 = self.getRandomPartyMemberState(player, STARTING)
+     partyMember2 = self.getRandomPartyMemberState(player, STARTED)
+     partyMember = partyMember1  # initialize
+     # if there exist no party members for either state, do nothing
+     if not partyMember1 and not partyMember2 : return
+     # if there exist only party members for STARTED, use the one we got from STARTED
+     elif not partyMember1 :
+         partyMember =  partyMember2
+     # if there exist only party members for STARTING, use the one we got from STARTING
+     elif not partyMember2 :
+         partyMember =  partyMember1
+     # if there exist party members from both states, choose one randomly
+     else :
+         if selectedPartyMember.getQuestState(qn).getRandom(2) :
+             partyMember = partyMember2
+     st = partyMember.getQuestState(qn)  
+     
      drop = st.getRandom(100)
      if drop < DROP_RATE :
         st.giveItems(ANC_SCROLL,1)
         st.playSound("ItemSound.quest_itemget")
-     if st.getState() == STARTING :   
-        if drop < DROP_RATE_2  and not st.getQuestItemsCount(MST_BK):
-           st.giveItems(MST_BK,1)
-           st.playSound("ItemSound.quest_middle")
      return  
 
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
 
 CREATED     = State('Start',     QUEST)
-STARTING    = State('Starting',  QUEST,True)
-STARTED     = State('Started',   QUEST,True)
+STARTING    = State('Starting',  QUEST)
+STARTED     = State('Started',   QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
@@ -155,15 +183,13 @@ QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
 QUEST.addStartNpc(HR_SOBLING)
 # Quest initialization
-CREATED.addTalkId(HR_SOBLING)
-STARTING.addTalkId(HR_SOBLING)
-STARTED.addTalkId(HR_SOBLING)
-STARTED.addTalkId(WF_CLIFF)
+QUEST.addTalkId(HR_SOBLING)
+
+QUEST.addTalkId(WF_CLIFF)
 
 for i in MOBS :
-  STARTING.addKillId(i)
-  STARTED.addKillId(i)
-
+  QUEST.addKillId(i)
+  
 STARTED.addQuestDrop(HR_SOBLING,DICT1,1)
 STARTED.addQuestDrop(HR_SOBLING,MST_BK,1)
 

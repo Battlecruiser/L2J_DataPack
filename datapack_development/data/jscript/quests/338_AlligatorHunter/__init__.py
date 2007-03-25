@@ -29,9 +29,12 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_finish")
      return htmltext
 
- def onTalk (Self,npc,st):
-     npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
      htmltext = "<html><head><body>I have nothing to say you</body></html>"
+     st = player.getQuestState(qn)
+     if not st : return htmltext
+
+     npcId = npc.getNpcId()
      id = st.getState()
      level = st.getPlayer().getLevel()
      cond = st.getInt("cond")
@@ -50,7 +53,11 @@ class Quest (JQuest) :
            htmltext = "30892-04.htm"
      return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+     st = player.getQuestState(qn)
+     if not st : return 
+     if st.getState() != STARTED : return 
+   
      npcId = npc.getNpcId()
      if st.getRandom(100)<CHANCE :
          st.giveItems(ALLIGATOR_PELTS,1)
@@ -64,10 +71,9 @@ STARTED     = State('Started', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30892)
 
-CREATED.addTalkId(30892)
-STARTED.addTalkId(30892)
+QUEST.addTalkId(30892)
 
-STARTED.addKillId(ALLIGATOR)
+QUEST.addKillId(ALLIGATOR)
 STARTED.addQuestDrop(ALLIGATOR,ALLIGATOR_PELTS,1)
 
 print "importing quests: 338: Alligator Hunter"

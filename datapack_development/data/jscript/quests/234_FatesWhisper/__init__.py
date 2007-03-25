@@ -123,10 +123,14 @@ class Quest (JQuest) :
 				#st.exitQuest(1)
 		return htmltext
 
-	def onTalk(self,npc,st):
-		npcId=npc.getNpcId()
-		id =  st.getState()
-		htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
+	def onTalk (self,npc,player):
+		htmltext = "<html><head><body>I have nothing to say you</body></html>"
+		st = player.getQuestState(qn)
+		if not st : return htmltext
+
+		npcId = npc.getNpcId()
+		id = st.getState()
+		
 		# first time when a player join the quest
 		if id == CREATED:
 			if st.getPlayer().getLevel() >= 75:
@@ -253,7 +257,11 @@ class Quest (JQuest) :
 					htmltext = "<html><head><body>This chest looks empty</body></html>"
 		return htmltext		
 
-	def onAttack (self, npc, st):                   
+	def onAttack (self, npc, player):                   
+		st = player.getQuestState(qn)
+		if not st : return 
+		if st.getState() != STARTED : return 
+
 		npcId = npc.getNpcId()
 		value,dummy,dropId,chance = DROPLIST[npcId]
 		if value == st.getInt("cond") and npcId==29020 :
@@ -263,7 +271,11 @@ class Quest (JQuest) :
 				st.playSound("Itemsound.quest_itemget")
 		return
 
-	def onKill (self,npc,st):
+	def onKill (self,npc,player):
+		st = player.getQuestState(qn)
+		if not st : return 
+		if st.getState() != STARTED : return 
+
 		npcId=npc.getNpcId()
 		value,spawnId,dropId,chance = DROPLIST[npcId]
 		if st.getInt("cond") == value:
@@ -286,14 +298,12 @@ COMPLETED	= State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(NPC[0])
 
-CREATED.addTalkId(NPC[0])
-
 for npcId in NPC:
-	STARTED.addTalkId(npcId)
+	QUEST.addTalkId(npcId)
 	
 for mobId in DROPLIST.keys() :
-	STARTED.addKillId(mobId)
+	QUEST.addKillId(mobId)
 
-STARTED.addAttackId(29020)
+QUEST.addAttackId(29020)
 	
 print "importing quests: 234: Fate's Whisper"

@@ -67,12 +67,15 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
 
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
-   if id == CREATED :
+   if npcId != 30421 and id != STARTED : return htmltext
+   if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
      st.set("onlyone","0")
@@ -141,8 +144,11 @@ class Quest (JQuest) :
             st.takeItems(KNEE_BONE_ID,2)
    return htmltext
 
- def onKill (self,npc,st):
-
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if npcId == 20015 :
         st.set("id","0")
@@ -201,18 +207,17 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30421)
 
-STARTING.addTalkId(30421)
+QUEST.addTalkId(30421)
 
-STARTED.addTalkId(30415)
-STARTED.addTalkId(30418)
-STARTED.addTalkId(30419)
-STARTED.addTalkId(30421)
+QUEST.addTalkId(30415)
+QUEST.addTalkId(30418)
+QUEST.addTalkId(30419)
 
-STARTED.addKillId(20015)
-STARTED.addKillId(20022)
-STARTED.addKillId(20045)
-STARTED.addKillId(20517)
-STARTED.addKillId(20518)
+QUEST.addKillId(20015)
+QUEST.addKillId(20022)
+QUEST.addKillId(20045)
+QUEST.addKillId(20517)
+QUEST.addKillId(20518)
 
 STARTED.addQuestDrop(30418,SEEDS_OF_HORROR_ID,1)
 STARTED.addQuestDrop(30415,SEEDS_OF_ANGER_ID,1)

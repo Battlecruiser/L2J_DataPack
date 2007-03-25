@@ -26,9 +26,12 @@ class Quest (JQuest) :
         st.exitQuest(1)
     return htmltext
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
@@ -53,7 +56,11 @@ class Quest (JQuest) :
         htmltext = "30436-04.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    n = st.getRandom(100)
    if npcId == 20055 :
@@ -102,11 +109,10 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(30436)
-CREATED.addTalkId(30436)
-STARTED.addTalkId(30436)
+QUEST.addTalkId(30436)
 
 for i in [ 20055,20059,20067,20068,20070,20072 ] :
-    STARTED.addKillId(i)
+    QUEST.addKillId(i)
 
 STARTED.addQuestDrop(20055,MONSTER_EYE_CARCASS,1)
 STARTED.addQuestDrop(20055,MONSTER_EYE_LENS,1)

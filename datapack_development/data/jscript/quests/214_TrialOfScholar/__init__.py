@@ -236,10 +236,15 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
+   if npcId != 30461 and id != STARTED : return htmltext
+
    if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
@@ -467,7 +472,11 @@ class Quest (JQuest) :
         htmltext = "30612-08.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return
+   if st.getState() != STARTED : return
+   
    npcId = npc.getNpcId()
    if npcId == 20580 :
     if int(st.get("cond")) and st.getQuestItemsCount(MIRIENS_SIGIL1_ID) and st.getQuestItemsCount(HIGHPRIESTS_SIGIL_ID) and st.getQuestItemsCount(CRETAS_PAINTING3_ID) and st.getQuestItemsCount(BROWN_SCROLL_SCRAP_ID)<5 :
@@ -545,32 +554,31 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30461)
 
-STARTING.addTalkId(30461)
+QUEST.addTalkId(30461)
 
-STARTED.addTalkId(30070)
-STARTED.addTalkId(30071)
-STARTED.addTalkId(30103)
-STARTED.addTalkId(30111)
-STARTED.addTalkId(30115)
-STARTED.addTalkId(30230)
-STARTED.addTalkId(30316)
-STARTED.addTalkId(30458)
-STARTED.addTalkId(30461)
-STARTED.addTalkId(30608)
-STARTED.addTalkId(30609)
-STARTED.addTalkId(30610)
-STARTED.addTalkId(30611)
-STARTED.addTalkId(30612)
+QUEST.addTalkId(30070)
+QUEST.addTalkId(30071)
+QUEST.addTalkId(30103)
+QUEST.addTalkId(30111)
+QUEST.addTalkId(30115)
+QUEST.addTalkId(30230)
+QUEST.addTalkId(30316)
+QUEST.addTalkId(30458)
+QUEST.addTalkId(30608)
+QUEST.addTalkId(30609)
+QUEST.addTalkId(30610)
+QUEST.addTalkId(30611)
+QUEST.addTalkId(30612)
 
-STARTED.addKillId(20158)
-STARTED.addKillId(20201)
-STARTED.addKillId(20235)
-STARTED.addKillId(20269)
-STARTED.addKillId(20552)
-STARTED.addKillId(20554)
-STARTED.addKillId(20567)
-STARTED.addKillId(20580)
-STARTED.addKillId(20068)
+QUEST.addKillId(20158)
+QUEST.addKillId(20201)
+QUEST.addKillId(20235)
+QUEST.addKillId(20269)
+QUEST.addKillId(20552)
+QUEST.addKillId(20554)
+QUEST.addKillId(20567)
+QUEST.addKillId(20580)
+QUEST.addKillId(20068)
 
 STARTED.addQuestDrop(30115,SYMBOL_OF_JUREK_ID,1)
 STARTED.addQuestDrop(30461,MIRIENS_SIGIL2_ID,1)

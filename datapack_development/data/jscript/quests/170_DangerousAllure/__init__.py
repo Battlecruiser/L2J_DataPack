@@ -22,9 +22,12 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
-   npcId = npc.getNpcId()
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
    cond=st.getInt("cond")
    if id == COMPLETED :
@@ -49,7 +52,11 @@ class Quest (JQuest) :
          htmltext = "30305-05.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return
+
    npcId = npc.getNpcId()
    if int(st.get("cond")) == 1 :
       st.giveItems(NIGHTMARE_CRYSTAL,1)
@@ -67,12 +74,9 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30305)
 
-CREATED.addTalkId(30305)
-STARTING.addTalkId(30305)
-STARTED.addTalkId(30305)
-COMPLETED.addTalkId(30305)
+QUEST.addTalkId(30305)
 
-STARTED.addKillId(27022)
+QUEST.addKillId(27022)
 STARTED.addQuestDrop(27022,NIGHTMARE_CRYSTAL,1)
 
 print "importing quests: 170: Dangerous Allure"

@@ -26,10 +26,13 @@ class Quest (JQuest) :
           htmltext = "30576-01.htm"
     return htmltext
 
- def onTalk (Self,npc,st): 
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say you</body></html>" 
-   id = st.getState() 
+   id = st.getState()
    if id == CREATED : 
       st.set("cond","0")
    if npcId == 30576 :
@@ -45,7 +48,11 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_finish") 
    return htmltext 
 
- def onKill (self,npc,st): 
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if npcId == 20333 : 
       if int(st.get("cond")) == 1 and st.getQuestItemsCount(STARSTONE1_ID) < 20 :
@@ -67,10 +74,9 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(30576)
-CREATED.addTalkId(30576)
-STARTED.addTalkId(30576) 
+QUEST.addTalkId(30576)
 
-STARTED.addKillId(20333)
-STARTED.addQuestDrop(20333,STARSTONE1_ID,1)
+QUEST.addKillId(20333)
+QUEST.addQuestDrop(20333,STARSTONE1_ID,1)
 
 print "importing quests: 277: Gatekeepers Offering" 

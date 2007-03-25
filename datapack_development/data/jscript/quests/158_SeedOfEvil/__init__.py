@@ -25,10 +25,12 @@ class Quest (JQuest) :
     return htmltext
 
 
- def onTalk (Self,npc,st):
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
 
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
    id = st.getState()
    if id == CREATED :
      st.setState(STARTING)
@@ -62,7 +64,10 @@ class Quest (JQuest) :
           htmltext = "30031-06.htm"
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
 
    npcId = npc.getNpcId()
    if npcId == 27016 :
@@ -82,10 +87,8 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30031)
 
-STARTING.addTalkId(30031)
+QUEST.addTalkId(30031)
 
-STARTED.addTalkId(30031)
-
-STARTED.addKillId(27016)
+QUEST.addKillId(27016)
 
 STARTED.addQuestDrop(27016,CLAY_TABLET_ID,1)

@@ -5,7 +5,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
+qn = "12535_WakeBaium"
 # Main Quest Code
 class Quest (JQuest):
 
@@ -14,7 +14,8 @@ class Quest (JQuest):
   def onEvent (self,event,st):
     return
 
-  def onTalk (self,npc,st):
+  def onTalk (self,npc,player):
+    st = player.getQuestState(qn)
     npcId = npc.getNpcId()
     if npcId == 29025 :
       if st.getInt("ok"):
@@ -46,7 +47,7 @@ QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
 QUEST.addStartNpc(29025)
 QUEST.addStartNpc(31862)
-CREATED.addTalkId(29025)
-CREATED.addTalkId(31862)
+QUEST.addTalkId(29025)
+QUEST.addTalkId(31862)
 
 print "importing quests: 12535: Wake Up Baium"

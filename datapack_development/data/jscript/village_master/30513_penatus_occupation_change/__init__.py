@@ -9,7 +9,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
+qn = "30513_penatus_occupation_change"
 MARK_OF_CHALLENGER_ID   = 2627
 MARK_OF_PILGRIM_ID      = 2721
 MARK_OF_DUELIST_ID      = 2762
@@ -167,8 +167,8 @@ class Quest (JQuest) :
    st.exitQuest(1)
    return htmltext
 
- def onTalk (Self,npc,st):
-
+ def onTalk (Self,npc,player):
+   st = player.getQuestState(qn)
    npcId = npc.getNpcId()
 
    Race    = st.getPlayer().getRace()
@@ -210,7 +210,7 @@ class Quest (JQuest) :
      st.exitQuest(1)
      return "30513-34.htm"
 
-QUEST   = Quest(30513,"30513_penatus_occupation_change","village_master")
+QUEST   = Quest(30513,qn,"village_master")
 CREATED   = State('Start',     QUEST)
 STARTED   = State('Started',   QUEST)
 COMPLETED = State('Completed', QUEST)
@@ -226,11 +226,11 @@ QUEST.addStartNpc(31288)
 QUEST.addStartNpc(31326)
 QUEST.addStartNpc(31977)
 
-STARTED.addTalkId(30513)
-STARTED.addTalkId(30681)
-STARTED.addTalkId(30704)
-STARTED.addTalkId(30865)
-STARTED.addTalkId(30913)
-STARTED.addTalkId(31288)
-STARTED.addTalkId(31326)
-STARTED.addTalkId(31977)
+QUEST.addTalkId(30513)
+QUEST.addTalkId(30681)
+QUEST.addTalkId(30704)
+QUEST.addTalkId(30865)
+QUEST.addTalkId(30913)
+QUEST.addTalkId(31288)
+QUEST.addTalkId(31326)
+QUEST.addTalkId(31977)

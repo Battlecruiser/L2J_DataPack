@@ -6,7 +6,7 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver.datatables import ItemTable
-
+qn = "1012_upgrade"
 
 ############################## Feel Free to add more Weapons ##########################################################################################################3
 # Weapon exchangeable definition  WeaponID:[Name, Icon]]
@@ -457,7 +457,8 @@ class Quest (JQuest) :
     st.exitQuest(1)
     return htmltext
    
- def onTalk (self,npc,st) :
+ def onTalk (self,npc,player) :
+   st = player.getQuestState(qn)
    npcId = npc.getNpcId()
    st.set("cond","0")
    st.setState(STARTED)
@@ -472,6 +473,6 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(31126)
-STARTED.addTalkId(31126)
+QUEST.addTalkId(31126)
 
 print "importing blacksmith data: 1012_upgrade"

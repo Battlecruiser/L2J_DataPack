@@ -36,10 +36,14 @@ class Quest (JQuest) :
             st.exitQuest(1)
       return htmltext
 
-  def onTalk(self,npc,st):
-      cond=st.getInt("cond")
-      npcId = npc.getNpcId()
+  def onTalk (self,npc,player):
       htmltext = default
+      st = player.getQuestState(qn)
+      if not st : return htmltext
+
+      npcId = npc.getNpcId()
+      id = st.getState()
+      cond=st.getInt("cond")
       if st.getQuestItemsCount(ROYAL_MEMBERSHIP) == 0 or st.getPlayer().getLevel() < 55 :
          htmltext = "30687-01.htm"
          st.exitQuest(1)
@@ -50,7 +54,11 @@ class Quest (JQuest) :
             htmltext = "30687-04.htm"
       return htmltext
 
-  def onKill (self,npc,st):
+  def onKill (self,npc,player):
+      st = player.getQuestState(qn)
+      if not st : return 
+      if st.getState() != STARTED : return 
+   
       if st.getRandom(100) < CHANCE and st.getQuestItemsCount(ROYAL_MEMBERSHIP) :
          npcId = npc.getNpcId()
          st.giveItems(MOBS[npcId][st.getRandom(len(MOBS[npcId]))],1)
@@ -64,11 +72,10 @@ STARTED     = State('Started',   QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(VERGARA)
 
-CREATED.addTalkId(VERGARA)
-STARTED.addTalkId(VERGARA)
+QUEST.addTalkId(VERGARA)
 
 for npc in MOBS.keys():
-    STARTED.addKillId(npc)
+    QUEST.addKillId(npc)
 
 for coin in range(5961,5964):
     STARTED.addQuestDrop(coin,VERGARA,1)

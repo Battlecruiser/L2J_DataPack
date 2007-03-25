@@ -179,10 +179,16 @@ class Quest (JQuest) :
 		return htmltext
 
 
-	def onTalk (self,npc,st):
-		npcId = npc.getNpcId()
+	def onTalk (self,npc,player):
 		htmltext = "<html><head><body>I have nothing to say you</body></html>"
+		
+		st = player.getQuestState(qn)
+		if not st : return htmltext
+
+		npcId = npc.getNpcId()
 		id = st.getState()
+		if npcId != 30630 and id != STARTED : return htmltext
+		
 		# Start the Quest, initialisation and check if the player can take it
 		if id == CREATED:
 			for var in STATS:
@@ -353,7 +359,11 @@ class Quest (JQuest) :
 					htmltext = "30633-03.htm"
 			return htmltext	
 
-	def onKill (self,npc,st):
+	def onKill (self,npc,player):
+		st = player.getQuestState(qn)
+		if not st : return 
+		if st.getState() != STARTED : return 
+
 		npcId = npc.getNpcId()
 		var,value,maxcount,chance,giveList,takeList=DROPLIST[npcId]
 		random=st.getRandom(100)
@@ -403,16 +413,15 @@ COMPLETED   = State('Completed', QUEST)
 
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(30630)
-CREATED.addTalkId(30630)
+#QUEST.addStartNpc(30630)
 
 for npcId in NPC:
-	STARTED.addTalkId(npcId)
+	QUEST.addTalkId(npcId)
 
 for mobId in DROPLIST.keys():
-	STARTED.addKillId(mobId)
+	QUEST.addKillId(mobId)
 
 for item in range(3308,3336)+[3029]:
 	STARTED.addQuestDrop(30630,item,1)
- 
+
 print "importing quests: 229: Test Of Witchcraft"

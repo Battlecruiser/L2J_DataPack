@@ -5,7 +5,7 @@ from net.sf.l2j.gameserver.model.actor.instance import      L2PcInstance
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
+qn = "1104_NewbieTravelToken"
 TOKEN = 8542
 
 DATA={
@@ -36,22 +36,23 @@ class Quest (JQuest) :
    st.exitQuest(1)
    return
 
- def onTalk (Self,npc,st):
+ def onTalk (Self,npc,player):
+   st = player.getQuestState(qn)  
    npcId = npc.getNpcId()
-   if st.getPlayer().getLevel() >= 20:
+   if player.getLevel() >= 20:
      htmltext="1.htm"
      st.exitQuest(1)
    else:
      htmltext=str(npcId)+".htm"
    return htmltext
 
-QUEST       = Quest(1104,"1104_NewbieTravelToken","Teleports")
+QUEST       = Quest(1104,qn,"Teleports")
 CREATED     = State('Start',QUEST)
 
 QUEST.setInitialState(CREATED)
 
 for i in DATA.keys() :
     QUEST.addStartNpc(i)
-    CREATED.addTalkId(i)
+    QUEST.addTalkId(i)
 
 print "importing teleport data: 1104_NewbieTravelToken"

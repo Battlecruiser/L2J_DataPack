@@ -25,10 +25,14 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_finish")
     return htmltext
 
- def onTalk (self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
    id = st.getState()
-   if id in [CREATED,COMPLETED] :
+   if id in [CREATED,COMPLETED] :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getRace().ordinal() != 3 :
@@ -66,7 +70,11 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_finish")
    return htmltext
 
- def onKill (self,npc,st):
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return 
+   
    npcId = npc.getNpcId()
    if npcId == 20311 : chance = 90
    if npcId == 20312 : chance = 87
@@ -87,14 +95,11 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30566)
 
-CREATED.addTalkId(30566)
-STARTING.addTalkId(30566)
-STARTED.addTalkId(30566)
-COMPLETED.addTalkId(30566)
+QUEST.addTalkId(30566)
 
-STARTED.addKillId(20311)
-STARTED.addKillId(20312)
-STARTED.addKillId(20313)
+QUEST.addKillId(20311)
+QUEST.addKillId(20312)
+QUEST.addKillId(20313)
 
 STARTED.addQuestDrop(20311,BLACK_SOULSTONE,1)
 STARTED.addQuestDrop(20313,RED_SOULSTONE,1)
