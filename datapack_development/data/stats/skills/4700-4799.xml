@@ -3,7 +3,7 @@
 <skill id="4700" levels="13" name="Gift of Queen">
   <table name="#mpConsume"> 122 157 194 202 207 212 215 220 224 229 233 237 242 </table>
   <table name="#Tab-pAtk"> 1.06 1.08 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 </table>
-  <table name="#Tab-accCombat"> 3 3 3 3 3 3 3 3 3 3 3 3 3 </table>
+  <table name="#Tab-accCombat"> 2 2 3 3 3 3 3 3 3 3 3 3 3 </table>
   <table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
   <table name="#dur"> 120000 120000 120000 150000 165000 180000 195000 210000 225000 240000 255000 270000 285000 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -11,7 +11,7 @@
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="20000"/>
+  <set name="reuseDelay" val="480000"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
