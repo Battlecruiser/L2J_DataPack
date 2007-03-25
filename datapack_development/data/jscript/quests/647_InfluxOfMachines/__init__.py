@@ -46,42 +46,44 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     htmltext = "<html><head><body>I have nothing to say you</body></html>"
     if st :
-	    npcId = npc.getNpcId()
-	    cond = st.getInt("cond")
-	    count = st.getQuestItemsCount(DESTROYED_GOLEM_SHARD)
-	    if cond == 0 :
-	       if st.getPlayer().getLevel() >= 46 :
-	          htmltext = "32069-01.htm"
-	       else:
-	          htmltext = "32069-03.htm"
-	          st.exitQuest(1)
-	    elif st.getState() == STARTED :
-		    if cond==1 or count < 500 :
-		       htmltext = "32069-04.htm"
-		    elif cond==2 and count >= 500 :
-		       htmltext = "32069-05.htm"
+        npcId = npc.getNpcId()
+        cond = st.getInt("cond")
+        count = st.getQuestItemsCount(DESTROYED_GOLEM_SHARD)
+        if cond == 0 :
+            if st.getPlayer().getLevel() >= 46 :
+                htmltext = "32069-01.htm"
+            else:
+                htmltext = "32069-03.htm"
+                st.exitQuest(1)
+        elif st.getState() == STARTED :
+            if cond==1 or count < 500 :
+                htmltext = "32069-04.htm"
+            elif cond==2 and count >= 500 :
+                htmltext = "32069-05.htm"
     return htmltext
 
  def onKill (self, npc, player):
-    st = player.getQuestState(qn)
+    partyMember = self.getRandomPartyMember(player,"1")
+    if not partyMember: return
+    st = partyMember.getQuestState(qn)
     if st :
-		if st.getState() == STARTED :
-		    npcId = npc.getNpcId()
-		    cond = st.getInt("cond")
-		    count = st.getQuestItemsCount(DESTROYED_GOLEM_SHARD)
-		    if cond == 1 and count < 500:
-		       chance = DROP_CHANCE*Config.RATE_DROP_QUEST
-		       numItems, chance = divmod(chance,100)
-		       if st.getRandom(100) < chance : 
-		          numItems += 1
-		       if numItems :
-		          if count + numItems >= 500 :
-		             numItems = 500 - count
-		             st.playSound("ItemSound.quest_middle")
-		             st.set("cond","2")
-		          else:
-		             st.playSound("ItemSound.quest_itemget")
-		          st.giveItems(DESTROYED_GOLEM_SHARD,int(numItems))
+        if st.getState() == STARTED :
+            npcId = npc.getNpcId()
+            cond = st.getInt("cond")
+            count = st.getQuestItemsCount(DESTROYED_GOLEM_SHARD)
+            if cond == 1 and count < 500:
+                chance = DROP_CHANCE*Config.RATE_DROP_QUEST
+                numItems, chance = divmod(chance,100)
+                if st.getRandom(100) < chance : 
+                    numItems += 1
+                if numItems :
+                    if count + numItems >= 500 :
+                        numItems = 500 - count
+                        st.playSound("ItemSound.quest_middle")
+                        st.set("cond","2")
+                    else:
+                        st.playSound("ItemSound.quest_itemget")
+                    st.giveItems(DESTROYED_GOLEM_SHARD,int(numItems))
     return
 
 QUEST       = Quest(647,qn,"Influx of Machines")

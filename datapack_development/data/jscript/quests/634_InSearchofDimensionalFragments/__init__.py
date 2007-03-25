@@ -22,30 +22,31 @@ class Quest (JQuest) :
       st.exitQuest(1)
     return htmltext
 
- def onTalk (Self,npc,player):
+ def onTalk (self,npc,player):
    st = player.getQuestState(qn)
    if st :
-	   npcId = npc.getNpcId()
-	   htmltext = "<html><head><body>I have nothing to say to you</body></html>"
-	   id = st.getState()
-	   if id == CREATED :
-	      if st.getPlayer().getLevel() < 20 :
-	         st.exitQuest(1)
-	         htmltext="1.htm"
-	      else:
-	         htmltext="2.htm"
-	   elif id == STARTED :
-	      htmltext = "4.htm"
+        npcId = npc.getNpcId()
+        htmltext = "<html><head><body>I have nothing to say to you</body></html>"
+        id = st.getState()
+        if id == CREATED :
+            if st.getPlayer().getLevel() < 20 :
+                st.exitQuest(1)
+                htmltext="1.htm"
+            else:
+                htmltext="2.htm"
+        elif id == STARTED :
+            htmltext = "4.htm"
    return htmltext
 
  def onKill (self,npc,player):
-   st = player.getQuestState(qn)
-   if st :
-   	   if st.getState() == STARTED :
-		   if st.getRandom(10)<6 :
-		      st.giveItems(DIMENSION_FRAGMENT_ID,1)
-		      st.playSound("ItemSound.quest_itemget")
-   return
+    partyMember = self.getRandomPartyMemberState(player, STARTED) 
+    st = player.getQuestState(qn)
+    if st :
+        if st.getState() == STARTED :
+            if st.getRandom(10)<6 :
+                st.giveItems(DIMENSION_FRAGMENT_ID,1)
+                st.playSound("ItemSound.quest_itemget")
+    return
 
 QUEST       = Quest(634, qn, "In Search of Dimensional Fragments")
 CREATED     = State('Start', QUEST)

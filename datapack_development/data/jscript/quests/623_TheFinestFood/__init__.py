@@ -65,38 +65,44 @@ class Quest (JQuest) :
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if st :
-	   cond = st.getInt("cond")
-	   leaf = st.getQuestItemsCount(LEAF_OF_FLAVA)
-	   meat = st.getQuestItemsCount(BUFFALO_MEAT)
-	   horn = st.getQuestItemsCount(ANTELOPE_HORN)
-	   if cond == 0 :
-	      htmltext = "31521-01.htm"
-	   elif st.getState() == STARTED :
-		   if cond == 1 :
-		      htmltext = "31521-05.htm"
-		   elif cond == 2 and leaf == meat == horn == 100 :
-		      htmltext = "31521-04.htm"
+       cond = st.getInt("cond")
+       leaf = st.getQuestItemsCount(LEAF_OF_FLAVA)
+       meat = st.getQuestItemsCount(BUFFALO_MEAT)
+       horn = st.getQuestItemsCount(ANTELOPE_HORN)
+       if cond == 0 :
+          htmltext = "31521-01.htm"
+       elif st.getState() == STARTED :
+           if cond == 1 :
+              htmltext = "31521-05.htm"
+           elif cond == 2 and leaf == meat == horn == 100 :
+              htmltext = "31521-04.htm"
    return htmltext
 
- def onKill (self,npc,player) :
-   st = player.getQuestState(qn)
+ def onKill (self,npc,player):
+   # todo: with the current code, a player who has completed up to 2 out of 3
+   # item collections may consume the party drop (i.e. become the selected
+   # player in the random, but get nothing because it was the wrong mob)
+   # this ought to be corrected later...
+   partyMember = self.getRandomPartyMember(player,"1")
+   if not partyMember: return
+   st = partyMember.getQuestState(qn)
    if st :
-   	   if st.getState() == STARTED :
-		   cond = st.getInt("cond")
-		   item,chance = DROPLIST[npc.getNpcId()]
-		   prevItems = st.getQuestItemsCount(item)
-		   numItems, chance = divmod(chance*Config.RATE_DROP_QUEST,100)
-		   if st.getRandom(100) < chance :
-		      numItems = numItems + 1
-		   if count < (prevItems + numItems) :
-		      numItems = count - prevItems
-		   if numItems != 0 :
-		      st.giveItems(item,int(numItems))
-		      if st.getQuestItemsCount(LEAF_OF_FLAVA) == st.getQuestItemsCount(BUFFALO_MEAT) == st.getQuestItemsCount(ANTELOPE_HORN) == count :
-		         st.set("cond","2")
-		         st.playSound("ItemSound.quest_middle")
-		      else :
-		         st.playSound("ItemSound.quest_itemget")
+        if st.getState() == STARTED :
+            cond = st.getInt("cond")
+            item,chance = DROPLIST[npc.getNpcId()]
+            prevItems = st.getQuestItemsCount(item)
+            numItems, chance = divmod(chance*Config.RATE_DROP_QUEST,100)
+            if st.getRandom(100) < chance :
+              numItems = numItems + 1
+            if count < (prevItems + numItems) :
+              numItems = count - prevItems
+            if numItems != 0 :
+              st.giveItems(item,int(numItems))
+              if st.getQuestItemsCount(LEAF_OF_FLAVA) == st.getQuestItemsCount(BUFFALO_MEAT) == st.getQuestItemsCount(ANTELOPE_HORN) == count :
+                 st.set("cond","2")
+                 st.playSound("ItemSound.quest_middle")
+              else :
+                 st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST       = Quest(623,qn,"The Finest Food")

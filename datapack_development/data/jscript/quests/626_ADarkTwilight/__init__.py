@@ -51,34 +51,36 @@ class Quest (JQuest) :
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if st :
-	   npcId = npc.getNpcId()
-	   id = st.getState()
-	   cond = st.getInt("cond")
-	   if cond == 0 :
-	     if st.getPlayer().getLevel() >= 60 : # and st.getPlayer().getLevel() <= 71
-	       htmltext = "31517-0.htm"
-	     else:
-	       htmltext = "31517-0a.htm"
-	       st.exitQuest(1)
-	   elif id == STARTED :
-		   if st.getQuestItemsCount(BLOOD_OF_SAINT) == 300 :
-		     htmltext = "31517-2.htm"
-		   else :
-		     htmltext = "31517-2a.htm"
+       npcId = npc.getNpcId()
+       id = st.getState()
+       cond = st.getInt("cond")
+       if cond == 0 :
+         if st.getPlayer().getLevel() >= 60 : # and st.getPlayer().getLevel() <= 71
+           htmltext = "31517-0.htm"
+         else:
+           htmltext = "31517-0a.htm"
+           st.exitQuest(1)
+       elif id == STARTED :
+           if st.getQuestItemsCount(BLOOD_OF_SAINT) == 300 :
+             htmltext = "31517-2.htm"
+           else :
+             htmltext = "31517-2a.htm"
    return htmltext
 
- def onKill (self,npc,st):
-   st = player.getQuestState(qn)
+ def onKill (self,npc,player):
+   partyMember = self.getRandomPartyMember(player,"1")
+   if not partyMember : return
+   st = partyMember.getQuestState(qn)
    if st :
-   	   if st.getState() == STARTED :
-		   count = st.getQuestItemsCount(BLOOD_OF_SAINT)
-		   if st.getInt("cond") == 1 and count < 300 :
-		      st.giveItems(BLOOD_OF_SAINT,1)
-		      if count == 299 :
-		        st.playSound("ItemSound.quest_middle")
-		        st.set("cond","2")
-		      else:
-		        st.playSound("ItemSound.quest_itemget")	
+        if st.getState() == STARTED :
+            count = st.getQuestItemsCount(BLOOD_OF_SAINT)
+            if st.getInt("cond") == 1 and count < 300 :
+              st.giveItems(BLOOD_OF_SAINT,1)
+              if count == 299 :
+                st.playSound("ItemSound.quest_middle")
+                st.set("cond","2")
+              else:
+                st.playSound("ItemSound.quest_itemget")	
    return
 
 QUEST       = Quest(626,qn,"A Dark Twilight")

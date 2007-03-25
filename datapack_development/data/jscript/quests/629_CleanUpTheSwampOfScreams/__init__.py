@@ -58,41 +58,43 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    htmltext = default
    if st :
-	   npcId = npc.getNpcId()
-	   id = st.getState()
-	   cond = st.getInt("cond")
-	   if (st.getQuestItemsCount(7246) or st.getQuestItemsCount(7247)) :
-	     if cond == 0 :
-	       if st.getPlayer().getLevel() >= 66 :
-	         htmltext = "31553-0.htm"
-	       else:
-	         htmltext = "31553-0a.htm"
-	         st.exitQuest(1)
-	     elif id == STARTED :
-		     if st.getQuestItemsCount(CLAWS) >= 100 :
-		       htmltext = "31553-2.htm"
-		     else :
-		       htmltext = "31553-1a.htm"
-	   else :
-	     htmltext = "31553-6.htm"
-	     st.exitQuest(1)
+       npcId = npc.getNpcId()
+       id = st.getState()
+       cond = st.getInt("cond")
+       if (st.getQuestItemsCount(7246) or st.getQuestItemsCount(7247)) :
+         if cond == 0 :
+           if st.getPlayer().getLevel() >= 66 :
+             htmltext = "31553-0.htm"
+           else:
+             htmltext = "31553-0a.htm"
+             st.exitQuest(1)
+         elif id == STARTED :
+             if st.getQuestItemsCount(CLAWS) >= 100 :
+               htmltext = "31553-2.htm"
+             else :
+               htmltext = "31553-1a.htm"
+       else :
+         htmltext = "31553-6.htm"
+         st.exitQuest(1)
    return htmltext
 
  def onKill (self,npc,player):
-    st = player.getQuestState(qn)
+    partyMember = self.getRandomPartyMemberState(player, STARTED)
+    if not partyMember : return
+    st = partyMember.getQuestState(qn)
     if st :
-   	   if st.getState() == STARTED :
-		    prevItems = st.getQuestItemsCount(CLAWS)
-		    random = st.getRandom(MAX)
-		    chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
-		    numItems, chance = divmod(chance,MAX)
-		    if random<chance :
-		        numItems += 1
-		    st.giveItems(CLAWS,int(numItems))
-		    if int(prevItems+numItems)/100 > int(prevItems)/100 :
-		        st.playSound("ItemSound.quest_middle")
-		    else:
-		        st.playSound("ItemSound.quest_itemget")
+        if st.getState() == STARTED :
+            prevItems = st.getQuestItemsCount(CLAWS)
+            random = st.getRandom(MAX)
+            chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
+            numItems, chance = divmod(chance,MAX)
+            if random<chance :
+                numItems += 1
+            st.giveItems(CLAWS,int(numItems))
+            if int(prevItems+numItems)/100 > int(prevItems)/100 :
+                st.playSound("ItemSound.quest_middle")
+            else:
+                st.playSound("ItemSound.quest_itemget")
     return
 
 QUEST       = Quest(629,qn,"Clean Up the Swamp of Screams")

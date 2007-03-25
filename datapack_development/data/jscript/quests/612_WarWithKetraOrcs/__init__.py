@@ -55,40 +55,40 @@ class Quest (JQuest) :
  def onTalk (Self,npc,player):
      st = player.getQuestState(qn)
      htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
-   	 if st :
-	     npcId = npc.getNpcId()
-	     id = st.getInt("id")
-	     cond = st.getInt("cond")
-	     Molars = st.getQuestItemsCount(Molar)
-	     if npcId == Ashas and st.getPlayer().getAllianceWithVarkaKetra() <= -1 : #the alliance check is only temporary, should be done on core side/AI
-	         if id == 1 :
-	             if Molars :
-	                 htmltext = "31377-04.htm"
-	             else :
-	                htmltext = "31377-05.htm"
-	         else :
-	             htmltext = "31377-01.htm"
+    if st :
+         npcId = npc.getNpcId()
+         id = st.getInt("id")
+         cond = st.getInt("cond")
+         Molars = st.getQuestItemsCount(Molar)
+         if npcId == Ashas and st.getPlayer().getAllianceWithVarkaKetra() <= -1 : #the alliance check is only temporary, should be done on core side/AI
+             if id == 1 :
+                 if Molars :
+                     htmltext = "31377-04.htm"
+                 else :
+                    htmltext = "31377-05.htm"
+             else :
+                 htmltext = "31377-01.htm"
      return htmltext
 
  def onKill (self,npc,player):
- 	st = player.getQuestState(qn)
-    if st :
-   	   if st.getState() == STARTED :
-		     npcId = npc.getNpcId()
-		     Molars = st.getQuestItemsCount(Molar)
-		     st2 = st.getPlayer().getQuestState("611_AllianceWithVarkaSilenos")
-		     if npcId in Ketra_Orcs and st.getPlayer().getAllianceWithVarkaKetra() <= -1 :
-		#see comments in 611 : Alliance with Varka Silenos for reason for doing st2 check
-		        if not st2 :
-		            st.giveItems(Molar,1)
-		            if Molars == 100 :
-		                st.playSound("ItemSound.quest_middle")
-		            else :
-		                st.playSound("ItemSound.quest_itemget")
-		     elif npcId in Varka_Mobs :
-		         st.unset("id")
-		         st.takeItems(Molar,-1)
-		         st.exitQuest(1)
+     partyMember = self.getRandomPartyMemberState(player,STARTED)
+     if not partyMember : return
+     st = partyMember.getQuestState(qn)
+     npcId = npc.getNpcId()
+     Molars = st.getQuestItemsCount(Molar)
+     st2 = st.getPlayer().getQuestState("611_AllianceWithVarkaSilenos")
+     if npcId in Ketra_Orcs and st.getPlayer().getAllianceWithVarkaKetra() <= -1 :
+    #see comments in 611 : Alliance with Varka Silenos for reason for doing st2 check
+        if not st2 :
+            st.giveItems(Molar,1)
+            if Molars == 100 :
+                st.playSound("ItemSound.quest_middle")
+            else :
+                st.playSound("ItemSound.quest_itemget")
+     elif npcId in Varka_Mobs :
+         st.unset("id")
+         st.takeItems(Molar,-1)
+         st.exitQuest(1)
      return
 
 QUEST       = Quest(612, qn, "War With Ketra Orcs")

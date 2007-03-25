@@ -56,40 +56,42 @@ class Quest (JQuest) :
      htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
      st = player.getQuestState(qn)
      if st :
-	     npcId = npc.getNpcId()
-	     id = st.getInt("id")
-	     cond = st.getInt("cond")
-	     manes = st.getQuestItemsCount(Mane)
-	     if npcId == Kadun :
-	         if id == 1 :
-	             if manes :
-	                 htmltext = "31370-04.htm"
-	                 st.set("cond","2")
-	             else :
-	                htmltext = "31370-05.htm"
-	         else :
-	             htmltext = "31370-01.htm"
+        npcId = npc.getNpcId()
+        id = st.getInt("id")
+        cond = st.getInt("cond")
+        manes = st.getQuestItemsCount(Mane)
+        if npcId == Kadun :
+         if id == 1 :
+             if manes :
+                 htmltext = "31370-04.htm"
+                 st.set("cond","2")
+             else :
+                htmltext = "31370-05.htm"
+         else :
+             htmltext = "31370-01.htm"
      return htmltext
 
  def onKill (self,npc,player):
-     st = player.getQuestState(qn)
+     partyMember = self.getRandomPartyMemberState(player, STARTED)
+     if not partyMember: return
+     st = partyMember.getQuestState(qn)
      if st :
-   	     if st.getState() == STARTED :
-		     npcId = npc.getNpcId()
-		     manes = st.getQuestItemsCount(Mane)
-		     st2 = st.getPlayer().getQuestState("605_AllianceWithKetraOrcs")
-		     if npcId in Varka_Mobs and st.getPlayer().getAllianceWithVarkaKetra() >= 1 :
-		#see comments in 605 : Alliance with Ketra Orcs for reason for doing st2 check
-		        if not st2 :
-		            st.giveItems(Mane,1)
-		            if manes == 100 :
-		                st.playSound("ItemSound.quest_middle")
-		            else :
-		                st.playSound("ItemSound.quest_itemget")
-		     elif npcId in Ketra_Orcs :
-		         st.unset("id")
-		         st.takeItems(Mane,-1)
-		         st.exitQuest(1)
+        if st.getState() == STARTED :
+         npcId = npc.getNpcId()
+         manes = st.getQuestItemsCount(Mane)
+         st2 = st.getPlayer().getQuestState("605_AllianceWithKetraOrcs")
+         if npcId in Varka_Mobs and st.getPlayer().getAllianceWithVarkaKetra() >= 1 :
+        #see comments in 605 : Alliance with Ketra Orcs for reason for doing st2 check
+            if not st2 :
+                st.giveItems(Mane,1)
+                if manes == 100 :
+                    st.playSound("ItemSound.quest_middle")
+                else :
+                    st.playSound("ItemSound.quest_itemget")
+         elif npcId in Ketra_Orcs :
+             st.unset("id")
+             st.takeItems(Mane,-1)
+             st.exitQuest(1)
      return
 
 QUEST       = Quest(606, qn, "War With Varka Silenos")

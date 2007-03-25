@@ -60,32 +60,34 @@ class Quest (JQuest) :
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if st :
-	   cond = st.getInt("cond")
-	   if cond == 0 :
-	      htmltext = "31683-0.htm"
-	   elif cond == 1 :
-	      htmltext = "31683-2.htm"
-	   elif cond == 2 :
-	      htmltext = "31683-3.htm"
+        cond = st.getInt("cond")
+        if cond == 0 :
+          htmltext = "31683-0.htm"
+        elif cond == 1 :
+          htmltext = "31683-2.htm"
+        elif cond == 2 :
+          htmltext = "31683-3.htm"
    return htmltext
 
  def onKill (self,npc,player):
-   st = player.getQuestState(qn)
-   if st :
-      if st.getState() == STARTED :	
-		   count = st.getQuestItemsCount(EYE_OF_DARKNESS)
-		   chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
-		   numItems, chance = divmod(chance,100)
-		   if st.getInt("cond") == 1 :
-		     if st.getRandom(100) < chance :
-		         numItems = numItems + 1
-		     if count+numItems>=100 :
-		        numItems =100-count
-		        st.playSound("ItemSound.quest_middle")
-		        st.set("cond","2")
-		     else :
-		        st.playSound("ItemSound.quest_itemget")
-		     st.giveItems(EYE_OF_DARKNESS,int(numItems))
+     partyMember = self.getRandomPartyMember(player,"1")
+     if not partyMember: return
+     st = partyMember.getQuestState(qn)
+     if st :
+        if st.getState() == STARTED :	
+           count = st.getQuestItemsCount(EYE_OF_DARKNESS)
+           chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
+           numItems, chance = divmod(chance,100)
+           if st.getInt("cond") == 1 :
+             if st.getRandom(100) < chance :
+                 numItems = numItems + 1
+             if count+numItems>=100 :
+                numItems =100-count
+                st.playSound("ItemSound.quest_middle")
+                st.set("cond","2")
+             else :
+                st.playSound("ItemSound.quest_itemget")
+             st.giveItems(EYE_OF_DARKNESS,int(numItems))
    return
 
 QUEST       = Quest(602,qn,"Shadow Of Light")
