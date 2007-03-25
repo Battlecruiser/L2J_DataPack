@@ -57,39 +57,45 @@ class Quest (JQuest) :
      st.exitQuest(1)
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk (Self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   npcId = npc.getNpcId()
-   id = st.getState()
-   cond = st.getInt("cond")
-   if npcId == M_NECROMANCER :
-      if cond == 0 :
-        if st.getPlayer().getLevel() >= 60 : # and st.getPlayer().getLevel() <= 71
-          htmltext = "31518-0.htm"
-        else:
-          htmltext = "31518-0a.htm"
-          st.exitQuest(1)
-      elif cond == 1 :
-        htmltext = "31518-1a.htm"
-      elif st.getQuestItemsCount(GEM_OF_SUBMISSION) == 300 :
-        htmltext = "31518-2.htm"
-      elif st.getQuestItemsCount(GEM_OF_SAINTS) :
-        htmltext = "31518-4.htm"
-      elif cond == 5 :
-        htmltext = "31518-5.htm"
-   elif npcId == ENFEUX and st.getQuestItemsCount(SEAL_OF_LIGHT) :
-     htmltext = "31519-0.htm"
+   st = player.getQuestState(qn)
+   if st :
+	   npcId = npc.getNpcId()
+	   id = st.getState()
+	   cond = st.getInt("cond")
+       if cond == 0 :
+          if st.getPlayer().getLevel() >= 60 : # and st.getPlayer().getLevel() <= 71
+            htmltext = "31518-0.htm"
+          else:
+            htmltext = "31518-0a.htm"
+            st.exitQuest(1)
+       elif id == STARTED 
+		   if npcId == M_NECROMANCER :
+		      elif cond == 1 :
+		        htmltext = "31518-1a.htm"
+		      elif st.getQuestItemsCount(GEM_OF_SUBMISSION) == 300 :
+		        htmltext = "31518-2.htm"
+		      elif st.getQuestItemsCount(GEM_OF_SAINTS) :
+		        htmltext = "31518-4.htm"
+		      elif cond == 5 :
+		        htmltext = "31518-5.htm"
+		   elif npcId == ENFEUX and st.getQuestItemsCount(SEAL_OF_LIGHT) :
+		     htmltext = "31519-0.htm"
    return htmltext
 
- def onKill (self,npc,st):
-  count = st.getQuestItemsCount(GEM_OF_SUBMISSION)
-  if int(st.get("cond")) == 1 and count < 300 :
-     st.giveItems(GEM_OF_SUBMISSION,1)
-     if count == 299 :
-       st.playSound("ItemSound.quest_middle")
-       st.set("cond","2")
-     else:
-       st.playSound("ItemSound.quest_itemget")	
+ def onKill (self,npc,player):
+  st = player.getQuestState(qn)
+  if st :
+   	   if st.getState() == STARTED :
+		  count = st.getQuestItemsCount(GEM_OF_SUBMISSION)
+		  if int(st.get("cond")) == 1 and count < 300 :
+		     st.giveItems(GEM_OF_SUBMISSION,1)
+		     if count == 299 :
+		       st.playSound("ItemSound.quest_middle")
+		       st.set("cond","2")
+		     else:
+		       st.playSound("ItemSound.quest_itemget")	
   return
 
 QUEST       = Quest(627,qn,"Heart In Search Of Power")
@@ -99,12 +105,11 @@ STARTED     = State('Started', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(31518)
 
-CREATED.addTalkId(31518)
-STARTED.addTalkId(31518)
-STARTED.addTalkId(31519)
+QUEST.addTalkId(31518)
+QUEST.addTalkId(31519)
 
 for mobs in range(21520,21541):
-  STARTED.addKillId(mobs)
+  QUEST.addKillId(mobs)
 
 STARTED.addQuestDrop(21520,GEM_OF_SUBMISSION,1)
 

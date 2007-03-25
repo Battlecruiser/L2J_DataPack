@@ -39,32 +39,38 @@ class Quest (JQuest) :
         st.exitQuest(1)
    return htmltext
 
- def onTalk (Self,npc,st):
+ def onTalk(self, npc, player):
+   st = player.getQuestState(qn)
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   npcId = npc.getNpcId()
-   id = st.getState()
-   cond = st.getInt("cond")
-   if cond == 0 :
-     if st.getPlayer().getLevel() >= 30 :
-       htmltext = "32052-0.htm"
-     else:
-       htmltext = "32052-0a.htm"
-       st.exitQuest(1)
-   elif st.getQuestItemsCount(THIEF_GUILD_MARK) == 200 :
-     htmltext = "32052-2.htm"
-   else :
-     htmltext = "32052-2a.htm"
+   if st :
+       npcId = npc.getNpcId()
+       id = st.getState()
+       cond = st.getInt("cond")
+	   if cond == 0 :
+	     if st.getPlayer().getLevel() >= 30 :
+	       htmltext = "32052-0.htm"
+	     else:
+	       htmltext = "32052-0a.htm"
+	       st.exitQuest(1)
+	   elif id == STARTED :
+		   if st.getQuestItemsCount(THIEF_GUILD_MARK) == 200 :
+		     htmltext = "32052-2.htm"
+		   else :
+		     htmltext = "32052-2a.htm"
    return htmltext
 
- def onKill (self,npc,st):
-   count = st.getQuestItemsCount(THIEF_GUILD_MARK)
-   if st.getInt("cond") == 1 and count < 200 and st.getRandom(100)<CHANCE :
-      st.giveItems(THIEF_GUILD_MARK,1)
-      if count == 199 :
-        st.playSound("ItemSound.quest_middle")
-        st.set("cond","2")
-      else:
-        st.playSound("ItemSound.quest_itemget")	
+ def onKill(self, npc, player):
+   st = player.getQuestState(qn)
+   if st :
+   	   if st.getState() == STARTED :
+	       count = st.getQuestItemsCount(THIEF_GUILD_MARK)
+		   if st.getInt("cond") == 1 and count < 200 and st.getRandom(100)<CHANCE :
+		      st.giveItems(THIEF_GUILD_MARK,1)
+		      if count == 199 :
+		        st.playSound("ItemSound.quest_middle")
+		        st.set("cond","2")
+		      else:
+		        st.playSound("ItemSound.quest_itemget")	
    return
 
 QUEST       = Quest(649,qn,"A Looter and a Railroad Man")
@@ -73,11 +79,10 @@ STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(OBI)
-CREATED.addTalkId(OBI)
-STARTED.addTalkId(OBI)
+QUEST.addTalkId(OBI)
 
 for BANDITS in [22017,22018,22019,22021,22022,22023,22024,22026]:
-  STARTED.addKillId(BANDITS)
+  QUEST.addKillId(BANDITS)
 
 STARTED.addQuestDrop(OBI,THIEF_GUILD_MARK,1)
 

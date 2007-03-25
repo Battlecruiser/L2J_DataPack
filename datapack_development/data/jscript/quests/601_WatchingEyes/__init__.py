@@ -53,33 +53,38 @@ class Quest (JQuest) :
         htmltext="31683-4a.htm"
    return htmltext
 
- def onTalk (self,npc,st):
+ def onTalk (self,npc,party):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   npcId = npc.getNpcId()
-   id = st.getState()
-   cond = st.getInt("cond")
-   if cond == 0 :
-       htmltext = "31683-0.htm"
-   elif cond == 1 :
-       htmltext = "31683-2.htm"
-   elif cond == 2 :
-       htmltext = "31683-3.htm"
+   st = player.getQuestState(qn)
+   if st :
+	   npcId = npc.getNpcId()
+	   id = st.getState()
+	   cond = st.getInt("cond")
+	   if cond == 0 :
+	       htmltext = "31683-0.htm"
+	   elif cond == 1 :
+	       htmltext = "31683-2.htm"
+	   elif cond == 2 :
+	       htmltext = "31683-3.htm"
    return htmltext
 
- def onKill (self,npc,st):
-   count = st.getQuestItemsCount(PROOF_OF_AVENGER)
-   if st.getInt("cond") == 1 and count < 100 :
-     chance = DROP_CHANCE * Config.RATE_DROP_QUEST
-     numItems, chance = divmod(chance,100)
-     if st.getRandom(100) < chance : 
-       numItems = numItems + 1
-     if count + numItems >= 100 :
-       numItems = 100 - count
-       st.playSound("ItemSound.quest_middle")
-       st.set("cond","2")
-     else:
-       st.playSound("ItemSound.quest_itemget")	 
-     st.giveItems(PROOF_OF_AVENGER,int(numItems))       
+ def onKill (self,npc,player):
+   st = player.getQuestState(qn)
+   if st :
+   	   if st.getState() == STARTED :
+		   count = st.getQuestItemsCount(PROOF_OF_AVENGER)
+		   if st.getInt("cond") == 1 and count < 100 :
+		     chance = DROP_CHANCE * Config.RATE_DROP_QUEST
+		     numItems, chance = divmod(chance,100)
+		     if st.getRandom(100) < chance : 
+		       numItems = numItems + 1
+		     if count + numItems >= 100 :
+		       numItems = 100 - count
+		       st.playSound("ItemSound.quest_middle")
+		       st.set("cond","2")
+		     else:
+		       st.playSound("ItemSound.quest_itemget")	 
+		     st.giveItems(PROOF_OF_AVENGER,int(numItems))       
    return
 
 QUEST       = Quest(601,qn,"Watching Eyes")
@@ -88,11 +93,10 @@ STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(EYE_OF_ARGOS)
-CREATED.addTalkId(EYE_OF_ARGOS)
-STARTED.addTalkId(EYE_OF_ARGOS)
+QUEST.addTalkId(EYE_OF_ARGOS)
 
 for i in MOBS :
-  STARTED.addKillId(i)
+  QUEST.addKillId(i)
 
 STARTED.addQuestDrop(EYE_OF_ARGOS,PROOF_OF_AVENGER,1)
 
