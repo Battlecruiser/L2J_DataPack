@@ -31,7 +31,9 @@ HELLFIRE_OIL = 6033
 VIRGILS_LETTER = 7677
 
 #CHANCE
-CHANCE_FOR_QUEST_ITEMS = 100
+#
+CRIMSON_MOSS_CHANCE = 5
+MALRUK_SUCCUBUS_CLAW = 10
 
 #MOB
 BARAHAM = 27113
@@ -130,6 +132,7 @@ class Quest (JQuest) :
    if event == "31740-5.htm" :
      if cond == 21 and st.getPlayer().isSubClassActive() :
        st.giveItems(VIRGILS_LETTER,1)
+       st.addExpAndSp(263043,0)
        st.set("cond","0")
        st.playSound("ItemSound.quest_finish")
        st.setState(COMPLETED)
@@ -261,7 +264,7 @@ class Quest (JQuest) :
      if partyMember :
          st = partyMember.getQuestState(qn)
          chance = st.getRandom(100)
-         if CHANCE_FOR_QUEST_ITEMS > chance and st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) < 10 :
+         if MALRUK_SUCCUBUS_CLAW_CHANCE >= chance and st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) < 10 :
            st.giveItems(MALRUK_SUCCUBUS_CLAW,1)
            st.playSound("ItemSound.quest_itemget")
            if st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) == 10 :
@@ -273,7 +276,7 @@ class Quest (JQuest) :
      if partyMember :
          st = partyMember.getQuestState(qn)
          chance = st.getRandom(100)
-         if CHANCE_FOR_QUEST_ITEMS > chance and st.getQuestItemsCount(CRIMSON_MOSS) < 5 :
+         if CRIMSON_MOSS_CHANCE >= chance and st.getQuestItemsCount(CRIMSON_MOSS) < 5 :
            st.giveItems(CRIMSON_MOSS,1)
            st.playSound("ItemSound.quest_itemget")
            if st.getQuestItemsCount(CRIMSON_MOSS) == 5 :

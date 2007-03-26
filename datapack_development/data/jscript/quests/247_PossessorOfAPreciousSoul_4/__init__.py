@@ -33,7 +33,7 @@ class Quest (JQuest) :
      if cond == 1 :
        st.set("cond","2")
        st.takeItems(CARADINE_LETTER_LAST,1)
-       st.getPlayer().teleToLocation(143200,44000,-3040)
+       st.getPlayer().teleToLocation(143209,43968,-3038)
        return htmltext
    if event == "31740-5.htm" :
      if cond == 2 :
