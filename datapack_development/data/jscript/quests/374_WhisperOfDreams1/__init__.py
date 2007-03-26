@@ -134,7 +134,7 @@ class Quest (JQuest) :
 
      #also, each mob might give a CB_TOOTH or DW_LIGHT
      npcId = npc.getNpcId()
-     item, partyCond = DROPLIST[npcid]
+     item, partyCond = DROPLIST[npcId]
      partyMember = self.getRandomPartyMember(player,partyCond,"1")
      if partyMember :
          st = partyMember.getQuestState(qn)
