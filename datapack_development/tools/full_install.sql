@@ -17,6 +17,7 @@ DROP TABLE IF EXISTS character_hennas;
 DROP TABLE IF EXISTS character_macroses;
 DROP TABLE IF EXISTS character_quests;
 DROP TABLE IF EXISTS character_recipebook;
+DROP TABLE IF EXISTS character_recommends;
 DROP TABLE IF EXISTS character_shortcuts;
 DROP TABLE IF EXISTS character_skills;
 DROP TABLE IF EXISTS character_skills_save;

@@ -262,6 +262,7 @@ $MYG < ../sql/character_hennas.sql &> /dev/null
 $MYG < ../sql/character_macroses.sql &> /dev/null
 $MYG < ../sql/character_quests.sql &> /dev/null
 $MYG < ../sql/character_recipebook.sql &> /dev/null
+$MYG < ../sql/character_recommends.sql &> /dev/null
 $MYG < ../sql/character_shortcuts.sql &> /dev/null
 $MYG < ../sql/character_skills.sql &> /dev/null
 $MYG < ../sql/character_skills_save.sql &> /dev/null
