@@ -86,9 +86,9 @@ class Quest (JQuest) :
    if npcId in DROPLIST_FREEZE.keys() :
        partyMember = self.getRandomPartyMember(player,"awaitsFreezing","1")
        item,chance=DROPLIST_FREEZE[npc.getNpcId()]
-   elif npcId in DROPLIST_FLARES.keys() :
+   elif npcId in DROPLIST_FLARE.keys() :
        partyMember = self.getRandomPartyMember(player,"awaitsFlare","1")
-       item,chance=DROPLIST_FLARES[npc.getNpcId()]
+       item,chance=DROPLIST_FLARE[npc.getNpcId()]
 
    if partyMember :
        st = partyMember.getQuestState(qn)
@@ -128,7 +128,7 @@ QUEST.addTalkId(NELL)
 
 for mob in DROPLIST_FREEZE.keys() :
     QUEST.addKillId(mob)
-for mob in DROPLIST_FLARES.keys() :
+for mob in DROPLIST_FLARE.keys() :
     QUEST.addKillId(mob)
 
 STARTED.addQuestDrop(NELL,FLARE_SHARD,1)
