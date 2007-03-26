@@ -34,7 +34,7 @@
     <!-- SA: Cheap Shot -->
     <set val='1' order='0x08' stat='MpConsume'> 
        <and>
-          <game chance="26"/> 
+          <game skill="false" chance="26"/> 
        </and> 
     </set>
     <!-- Enhances damage to target during PvP -->
