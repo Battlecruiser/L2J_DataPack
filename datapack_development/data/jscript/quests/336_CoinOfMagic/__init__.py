@@ -315,7 +315,6 @@ class Quest (JQuest) :
               st.takeItems(COIN_DIAGRAM,-1)
               st.giveItems(MEMBERSHIP_3,1)
               st.setState(PARTY)
-              st.set("awaitsPartyDrops","1")
               st.set("grade","3")
               st.set("cond","4")
               st.playSound("ItemSound.quest_fanfare_middle")
@@ -348,10 +347,9 @@ class Quest (JQuest) :
       if st.getState() != SOLO : return
    if not npcId in [HARITMATR, HARITSHA] :
       # for party-kill mobs of this quest, get a random player among those who await a drop
-      partyMember = self.getRandomPartyMember(player,"awaitsPartyDrops","1")
+      partyMember = self.getRandomPartyMemberState(player,PARTY)
+      if not partyMember : return
       st = partyMember.getQuestState(qn) 
-      if not st : return 
-      if st.getState() != PARTY : return 
    
    cond=st.getInt("cond")
    grade=st.getInt("grade")

@@ -190,7 +190,7 @@ class Quest (JQuest) :
       st.giveItems(ORB_oF_BINDING,1)
       st.playSound("ItemSound.quest_itemget")
       if st.getQuestItemsCount(ORB_oF_BINDING) == 5 :
-          st.set("awaitsDrops","0")
+          st.unset("awaitsDrops")
     return 
 
 QUEST       = Quest(242,qn,"Possessor Of A Precious Soul - 2")

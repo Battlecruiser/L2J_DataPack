@@ -24,7 +24,6 @@ class Quest (JQuest) :
    if event == "30111-2.htm" and cond == 0 :
      st.set("cond","1")
      st.setState(STARTED)
-     st.set("awaitsPartyDrops","1")
      st.playSound("ItemSound.quest_accept")
    elif event == "30111-6.htm" :
      st.exitQuest(1)
@@ -56,11 +55,9 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,player):
-   partyMember = self.getRandomPartyMember(player,"awaitsPartyDrops","1")
-   if partyMember :
-       st = partyMember.getQuestState(qn)
-   if not st : return 
-   if st.getState() != STARTED : return 
+   partyMember = self.getRandomPartyMemberState(player,STARTED)
+   if not partyMember : return
+   st = partyMember.getQuestState(qn)
    
    if st.getRandom(100) < CHANCE + ((npc.getNpcId() - 20985) * 2) :
      st.giveItems(HAIR,1)
