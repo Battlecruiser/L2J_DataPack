@@ -56,11 +56,11 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 
 for npcId in range(31494,31508):
-	QUEST.addTalkId(npcId)
-	QUEST.addStartNpc(npcId)
+  QUEST.addTalkId(npcId)
+  QUEST.addStartNpc(npcId)
 
 for mobs in range(21208,21256):
-	QUEST.addKillId(mobs)
+  QUEST.addKillId(mobs)
 
 STARTED.addQuestDrop(7079,DIMENSION_FRAGMENT_ID,1)
 

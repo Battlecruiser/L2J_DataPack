@@ -48,7 +48,7 @@ class Quest (JQuest) :
         while i < len(REWARDS) :
             item,adena,chance,chance2=REWARDS[i]
             if chance<=random<= chance2 :
-            	break
+              break
             i = i+1
         st.giveItems(57,adena)
         if item :

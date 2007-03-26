@@ -44,39 +44,39 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   	st = player.getQuestState(qn)
+    st = player.getQuestState(qn)
     htmltext = "<html><head><body>I have nothing to say you</body></html>"
-   	if st :
-    npcId = npc.getNpcId()
-	    cond = st.getInt("cond")
-	    Head = st.getQuestItemsCount(Hekaton_Head)
-	    Valor = st.getQuestItemsCount(Valor_Feather)
-	    if npcId == Ashas :
-	        if Valor == 0 :
-	            if Head == 0:
-	                if cond != 1 :
-	                    htmltext = "31377-01.htm"
-	                else:
-	                    htmltext = "31377-06.htm"
-	            else :
-	                htmltext = "31377-05.htm"
-	        #else:
-	            #htmltext="<html><head><body>This quest has already been completed</body></html>"
+    if st :
+      npcId = npc.getNpcId()
+      cond = st.getInt("cond")
+      Head = st.getQuestItemsCount(Hekaton_Head)
+      Valor = st.getQuestItemsCount(Valor_Feather)
+      if npcId == Ashas :
+          if Valor == 0 :
+              if Head == 0:
+                  if cond != 1 :
+                      htmltext = "31377-01.htm"
+                  else:
+                      htmltext = "31377-06.htm"
+              else :
+                  htmltext = "31377-05.htm"
+          #else:
+              #htmltext="<html><head><body>This quest has already been completed</body></html>"
     return htmltext
 
  def onKill (self,npc,player):
    st = player.getQuestState(qn)
    if st :
-   	   if st.getState() == STARTED :
-		    npcId = npc.getNpcId()
-		    cond = st.getInt("cond")
-		    if npcId == Hekaton :
-		        if st.getPlayer().isAlliedWithVarka() :
-		            if cond == 1:
-		                if st.getPlayer().getAllianceWithVarkaKetra() == -3 and st.getQuestItemsCount(Varka_Alliance_Three) :
-		                    st.giveItems(Hekaton_Head,1)
-		                    st.set("cond","2")
-    return
+     if st.getState() == STARTED :
+        npcId = npc.getNpcId()
+        cond = st.getInt("cond")
+        if npcId == Hekaton :
+            if st.getPlayer().isAlliedWithVarka() :
+                if cond == 1:
+                    if st.getPlayer().getAllianceWithVarkaKetra() == -3 and st.getQuestItemsCount(Varka_Alliance_Three) :
+                        st.giveItems(Hekaton_Head,1)
+                        st.set("cond","2")
+   return
 
 QUEST       = Quest(613,qn,"Prove Your Courage!")
 CREATED     = State('Start', QUEST)

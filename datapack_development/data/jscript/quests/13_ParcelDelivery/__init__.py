@@ -57,7 +57,7 @@ class Quest (JQuest) :
        htmltext = "31274-0.htm"
    elif npcId == FUNDIN and cond == 1 :
      htmltext = "31274-2.htm"
-   elif npcId == VULCAN and cond == 1 and id = STARTED:
+   elif npcId == VULCAN and cond == 1 and id == STARTED:
      htmltext = "31539-0.htm"
    return htmltext
 

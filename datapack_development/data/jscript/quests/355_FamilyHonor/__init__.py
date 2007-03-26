@@ -78,7 +78,8 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    if npcId != GALIBREDO and id != STARTED : return htmltext
-   cond = st.getInt("cond")
+
+   cond = st.getInt("cond")
    count = st.getQuestItemsCount(GALFREDOS_BUST)
    if npcId == GALIBREDO :
      if cond == 0 :
@@ -114,7 +115,7 @@ class Quest (JQuest) :
      chance_2 = st.getRandom(100)
      if chance_1 < CHANCE_FOR_GALFREDOS_BUST :
        st.giveItems(GALFREDOS_BUST,1)
-       st.playSound("ItemSound.quest_itemget")	
+       st.playSound("ItemSound.quest_itemget")
      if chance_2 < CHANCE_FOR_GODDESS_BUST :
        st.giveItems(BUST_OF_ANCIENT_GODDESS,1)      
    return
@@ -130,7 +131,7 @@ QUEST.addTalkId(PATRIN)
 
 #MOBS TIMAK ORC TROOPS
 for MOBS in range(20767,20771) :
-  STARTED.addKillId(MOBS)
+  QUEST.addKillId(MOBS)
 
 STARTED.addQuestDrop(20767,GALFREDOS_BUST,1)
 STARTED.addQuestDrop(20767,BUST_OF_ANCIENT_GODDESS,1)

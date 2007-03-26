@@ -80,7 +80,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_middle")
          st.set("cond","2")
      else :
-       st.playSound("ItemSound.quest_itemget")	
+       st.playSound("ItemSound.quest_itemget")
    elif npcId == ROTTING_TREE and herb < 50 :
      st.giveItems(HERBIBOROUS_SPORE,1)
      if herb == 49 :
@@ -91,7 +91,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_middle")
          st.set("cond","2")
      else:
-       st.playSound("ItemSound.quest_itemget")	
+       st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST       = Quest(356,qn,"Dig Up The Sea Of Spores")

@@ -35,7 +35,8 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+
+   if id == CREATED :
      st.set("cond","0")
    if int(st.get("cond"))==0 :
      if st.getPlayer().getRace().ordinal() != 1 :
@@ -92,7 +93,7 @@ class Quest (JQuest) :
         st.giveItems(PREDATORS_FANG,qty)
    return
 
-QUEST       = Quest(266,qm,"Plea Of Pixies")
+QUEST       = Quest(266,qn,"Plea Of Pixies")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)

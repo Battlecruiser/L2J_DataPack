@@ -58,7 +58,7 @@ class Quest (JQuest) :
        cond = st.getInt("cond")
        if cond == 0 :
           htmltext = "31521-0.htm"
-       elif st.getState() == STARTED
+       elif st.getState() == STARTED:
            if cond <> 3 :
               htmltext = "31521-2.htm"
            else :
@@ -86,21 +86,21 @@ class Quest (JQuest) :
                  st.set("cond","3")
                  st.playSound("ItemSound.quest_middle")
                else:
-                 st.playSound("ItemSound.quest_itemget")	
+                 st.playSound("ItemSound.quest_itemget")  
              elif npcId == HOT_SPRINGS_BANDERSNATCH and count_foot < 50 :
                st.giveItems(FOOT_OF_BANDERSNATCHLING,1)
                if count_trunk == 50 and count_foot == count_spice == 50 :
                  st.set("cond","3")
                  st.playSound("ItemSound.quest_middle")
                else:
-                 st.playSound("ItemSound.quest_itemget")	
+                 st.playSound("ItemSound.quest_itemget")  
              elif npcId in [ HOT_SPRINGS_ATROX,HOT_SPRINGS_ATROXSPAWN ] and count_spice < 50 :
                st.giveItems(SECRET_SPICE,1)
                if count_trunk == count_foot == 50 and count_spice == 49 :
                  st.set("cond","3")
                  st.playSound("ItemSound.quest_middle")
                else:
-                 st.playSound("ItemSound.quest_itemget")	
+                 st.playSound("ItemSound.quest_itemget")  
    return
 
 QUEST       = Quest(624,qn,"The Finest Ingredients - Part 1")

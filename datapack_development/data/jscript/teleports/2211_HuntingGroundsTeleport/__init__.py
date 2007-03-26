@@ -41,7 +41,7 @@ class Quest (JQuest) :
     elif npcId in [SCHUTTGART_DAWN,SCHUTTGART_DUSK] :
           htmltext = "hg_schuttgart.htm"
     else:
-    	  htmltext = "hg_wrong.htm"
+          htmltext = "hg_wrong.htm"
     st.exitQuest(1)
     return htmltext
 

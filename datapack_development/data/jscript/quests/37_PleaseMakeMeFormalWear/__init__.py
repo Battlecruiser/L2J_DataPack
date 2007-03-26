@@ -79,8 +79,8 @@ class Quest (JQuest) :
      else:
        htmltext = "30842-2.htm"
        st.exitQuest(1)
-   elif id = STARTED :    
-       elif npcId == 31520 and cond == 1 :
+   elif id == STARTED :    
+       if npcId == 31520 and cond == 1 :
          htmltext = "31520-0.htm"
        elif npcId == 31521 and st.getQuestItemsCount(SIGNET_RING) :
          st.takeItems(SIGNET_RING,1)

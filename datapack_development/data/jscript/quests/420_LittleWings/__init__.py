@@ -538,7 +538,7 @@ for i in [3499]+range(3816,3832):
 
 # Quest mob initialization
 #back skins
-STARTING.addKillId(TD_LORD)
+QUEST.addKillId(TD_LORD)
 #fairy stone dlx destroyers
 for i in range(20589,20600)+[20719]:
     QUEST.addKillId(i)

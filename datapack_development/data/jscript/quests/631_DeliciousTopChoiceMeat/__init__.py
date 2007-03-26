@@ -68,15 +68,15 @@ class Quest (JQuest) :
    if not partyMember: return
    st = partyMember.getQuestState(qn)
    if st :
-   	   if st.getState() == STARTED :
-   	       count = st.getQuestItemsCount(TOP_QUALITY_MEAT)
-   	       if st.getInt("cond") == 1 and count < 120 :
-   	         st.giveItems(TOP_QUALITY_MEAT,1)
-   	         if count == 119 :
-   	           st.playSound("ItemSound.quest_middle")
-   	           st.set("cond","2")
-   	         else:
-   	           st.playSound("ItemSound.quest_itemget")	
+        if st.getState() == STARTED :
+            count = st.getQuestItemsCount(TOP_QUALITY_MEAT)
+            if st.getInt("cond") == 1 and count < 120 :
+              st.giveItems(TOP_QUALITY_MEAT,1)
+              if count == 119 :
+                st.playSound("ItemSound.quest_middle")
+                st.set("cond","2")
+              else:
+                st.playSound("ItemSound.quest_itemget")  
    return
 
 QUEST       = Quest(631,qn,"Delicious Top Choice Meat")
@@ -86,12 +86,11 @@ STARTED     = State('Started', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(TUNATUN)
 
-CREATED.addTalkId(TUNATUN)
-STARTED.addTalkId(TUNATUN)
+QUEST.addTalkId(TUNATUN)
 
-STARTED.addKillId(21451)
-STARTED.addKillId(21470)
-STARTED.addKillId(21489)
+QUEST.addKillId(21451)
+QUEST.addKillId(21470)
+QUEST.addKillId(21489)
 
 STARTED.addQuestDrop(21451,TOP_QUALITY_MEAT,1)
 

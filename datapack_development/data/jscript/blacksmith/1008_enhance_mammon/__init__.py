@@ -182,8 +182,8 @@ QUEST.setInitialState(CREATED)
 
 # init all npc to the correct stats
 for npcId in [31126]:
-	QUEST.addStartNpc(npcId)
-	QUEST.addTalkId(npcId)
-	
+  QUEST.addStartNpc(npcId)
+  QUEST.addTalkId(npcId)
+  
 # always at the end, then it shows only up if anything is correct in the code.. no jython error.. because we cant check jython errors with idle
 print "importing blacksmith data: 1008_enhance_mammon"

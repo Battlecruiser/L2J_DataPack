@@ -43,7 +43,7 @@ class Quest (JQuest) :
         while i < len(REWARDS) :
             item,adena,exp,sp,chance,chance2=REWARDS[i]
             if chance<=random<= chance2 :
-            	break
+              break
             i = i+1
         st.giveItems(57,adena)
         if item :
@@ -74,7 +74,7 @@ class Quest (JQuest) :
      if not partyMember: return
      st = partyMember.getQuestState(qn)
      if st :
-        if st.getState() == STARTED :	
+        if st.getState() == STARTED :  
            count = st.getQuestItemsCount(EYE_OF_DARKNESS)
            chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
            numItems, chance = divmod(chance,100)
@@ -88,7 +88,7 @@ class Quest (JQuest) :
              else :
                 st.playSound("ItemSound.quest_itemget")
              st.giveItems(EYE_OF_DARKNESS,int(numItems))
-   return
+     return
 
 QUEST       = Quest(602,qn,"Shadow Of Light")
 CREATED     = State('Start', QUEST)

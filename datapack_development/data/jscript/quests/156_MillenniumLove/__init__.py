@@ -64,7 +64,7 @@ class Quest (JQuest) :
            st.addExpAndSp(3000,0)
            st.giveItems(5250,1)
            htmltext = "30368-08.htm"
-   elif npcId == 30369 and id = STARTED:
+   elif npcId == 30369 and id == STARTED:
       if st.getQuestItemsCount(RYLITHS_LETTER_ID) :
          htmltext = "30369-02.htm"
       elif st.getQuestItemsCount(THEONS_DIARY_ID) :

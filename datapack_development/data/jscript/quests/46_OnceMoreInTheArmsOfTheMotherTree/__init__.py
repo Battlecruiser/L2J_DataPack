@@ -99,7 +99,7 @@ class Quest (JQuest) :
             if npcId == 30094 and int(st.get("cond"))==1 :
                 htmltext = "30094-01.htm"
             elif npcId == 30094 and int(st.get("cond"))==2 :
-            htmltext = "30094-03.htm"
+                htmltext = "30094-03.htm"
             elif npcId == 30090 and int(st.get("cond"))==3 :
                 htmltext = "30090-01.htm"
             elif npcId == 30090 and int(st.get("cond"))==4 :
@@ -108,7 +108,6 @@ class Quest (JQuest) :
                 htmltext = "30116-01.htm"
             elif npcId == 30116 and int(st.get("cond"))==6 :
                 htmltext = "30116-03.htm"
-
         return htmltext
 
 QUEST       = Quest(46,qn,"Once More In The Arms Of The Mother Tree")

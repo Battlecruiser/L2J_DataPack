@@ -83,7 +83,8 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    if npcId != 30690 and id != STARTED : return htmltext
-   if id == CREATED :
+
+   if id == CREATED :
      st.set("cond","0")
      st.set("phase","0")
      if npcId == NPC[3]:
@@ -229,7 +230,7 @@ class Quest (JQuest) :
         if phase==20 :
           htmltext = "30628-01.htm"
         else:
-          htmltext = "<html><head><body>You haven't got a Key for this Chest.</body></html>"	
+          htmltext = "<html><head><body>You haven't got a Key for this Chest.</body></html>"
    return htmltext
 
  def onKill (self,npc,player):

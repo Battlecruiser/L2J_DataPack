@@ -131,8 +131,8 @@ class Quest (JQuest) :
      if cm_apprentice.isOnline():
         apprentice = cm_apprentice.getPlayerInstance()
         if apprentice :
-           ap_quest=apprentice.getQuestState("118_ToLeadAndBeLed")
-           if ap_quest <> None :
+           ap_quest=apprentice.getQuestState(qn)
+           if ap_quest :
               ap_cond=ap_quest.getInt("cond")
               if ap_cond == 3 :
                  htmltext = "30517-09a.htm"
@@ -158,6 +158,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (Self,npc,player):
+    st = player.getQuestState(qn)
     if not st : return
     if st.getState() != PROGRESS : return
 
@@ -193,7 +194,6 @@ COMPLETED = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(PINTER) 
 
-CREATED.addTalkId(PINTER)
 QUEST.addTalkId(PINTER)
 
 for mob in DROPLIST.keys():
