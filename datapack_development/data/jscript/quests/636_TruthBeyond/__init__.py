@@ -39,21 +39,21 @@ class Quest (JQuest) :
      id = st.getState()
      cond = st.getInt("cond")
      if cond == 0 and id == CREATED:
-          if npcId == ELIYAH :
-            if st.getPlayer().getLevel()>72 :
-               htmltext = "31329-02.htm"
-            else:
-               htmltext = "31329-01.htm"
-              st.exitQuest(1)
+       if npcId == ELIYAH :
+         if st.getPlayer().getLevel()>72 :
+           htmltext = "31329-02.htm"
+       else:
+         htmltext = "31329-01.htm"
+         st.exitQuest(1)
      elif id == STARTED :
-         if npcId == ELIYAH :
-            htmltext = "31329-05.htm"
+       if npcId == ELIYAH :
+         htmltext = "31329-05.htm"
        elif npcId == FLAURON :
-          if cond == 1 :
-             htmltext = "32010-01.htm"
-             st.set("cond","2")
-          else :
-             htmltext = "32010-03.htm"
+         if cond == 1 :
+           htmltext = "32010-01.htm"
+           st.set("cond","2")
+         else :
+           htmltext = "32010-03.htm"
    return htmltext
 
 

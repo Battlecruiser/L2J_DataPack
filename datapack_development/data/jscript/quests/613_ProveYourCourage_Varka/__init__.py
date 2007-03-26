@@ -85,10 +85,10 @@ STARTED     = State('Started', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Ashas)
 
-CREATED.addTalkId(Ashas)
-STARTED.addTalkId(Ashas)
+QUEST.addTalkId(Ashas)
 
 STARTED.addQuestDrop(Hekaton,Hekaton_Head,1)
-STARTED.addKillId(Hekaton)
+
+QUEST.addKillId(Hekaton)
 
 print "importing quests: 613: Prove Your Courage! (Varka)" 

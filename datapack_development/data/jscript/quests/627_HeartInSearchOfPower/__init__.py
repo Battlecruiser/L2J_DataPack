@@ -64,15 +64,15 @@ class Quest (JQuest) :
      npcId = npc.getNpcId()
      id = st.getState()
      cond = st.getInt("cond")
-       if cond == 0 :
-          if st.getPlayer().getLevel() >= 60 : # and st.getPlayer().getLevel() <= 71
-            htmltext = "31518-0.htm"
-          else:
-            htmltext = "31518-0a.htm"
-            st.exitQuest(1)
-       elif id == STARTED 
+     if cond == 0 :
+       if st.getPlayer().getLevel() >= 60 : # and st.getPlayer().getLevel() <= 71
+         htmltext = "31518-0.htm"
+       else:
+         htmltext = "31518-0a.htm"
+         st.exitQuest(1)
+     elif id == STARTED :
        if npcId == M_NECROMANCER :
-          elif cond == 1 :
+          if cond == 1 :
             htmltext = "31518-1a.htm"
           elif st.getQuestItemsCount(GEM_OF_SUBMISSION) == 300 :
             htmltext = "31518-2.htm"
@@ -87,7 +87,7 @@ class Quest (JQuest) :
  def onKill (self,npc,player):
   st = player.getQuestState(qn)
   if st :
-        if st.getState() == STARTED :
+    if st.getState() == STARTED :
       count = st.getQuestItemsCount(GEM_OF_SUBMISSION)
       if int(st.get("cond")) == 1 and count < 300 :
          st.giveItems(GEM_OF_SUBMISSION,1)
