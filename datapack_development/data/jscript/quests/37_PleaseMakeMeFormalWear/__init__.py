@@ -100,7 +100,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(37,qn,"Please Make Me Formal Wear")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST,True)
+STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)

@@ -79,7 +79,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(33,qn,"Make A Pair Of Dress Shoes")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST,True)
+STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30838)
