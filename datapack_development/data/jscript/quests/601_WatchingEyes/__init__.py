@@ -53,7 +53,7 @@ class Quest (JQuest) :
         htmltext="31683-4a.htm"
    return htmltext
 
- def onTalk (self,npc,party):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if st :
