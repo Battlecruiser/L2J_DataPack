@@ -64,7 +64,8 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    if npcId != CARADINE and id != STARTED : return htmltext
-   cond = st.getInt("cond")
+
+   cond = st.getInt("cond")
    if id == CREATED :
      st.set("cond","0")
    if st.getPlayer().isSubClassActive() :
@@ -94,6 +95,6 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(CARADINE)
 QUEST.addTalkId(CARADINE)
 
-STARTED.addTalkId(LADY_OF_LAKE)
+QUEST.addTalkId(LADY_OF_LAKE)
 
 print "importing quests: 247: Possessor Of A Precious Soul - 4"

@@ -109,7 +109,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_middle")
        st.set("cond","5")
      else :
-       st.playSound("ItemSound.quest_itemget")	
+       st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST       = Quest(34,qn,"In Search of Clothes")

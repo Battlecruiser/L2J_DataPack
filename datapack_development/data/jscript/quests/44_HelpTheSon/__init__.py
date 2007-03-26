@@ -22,86 +22,86 @@ MAX_COUNT=30
 MIN_LEVEL=24
 
 class Quest (JQuest) :
-	def onEvent(self, event, st):
-		htmltext=event
-		if event=="1":
-			htmltext="30827-01.htm"
-			st.set("cond","1")
-			st.setState(STARTED)
-			st.playSound("ItemSound.quest_accept")
-		if event=="3" and st.getQuestItemsCount(WORK_HAMMER):
-			htmltext="30827-03.htm"
-			st.takeItems(WORK_HAMMER,1)
-			st.set("cond","2")
-		if event=="4" and st.getQuestItemsCount(GEMSTONE_FRAGMENT)>=MAX_COUNT:
-			htmltext="30827-05.htm"
-			st.takeItems(GEMSTONE_FRAGMENT,MAX_COUNT)
-			st.giveItems(GEMSTONE,1)
-			st.set("cond", "4")
-		if event=="5" and st.getQuestItemsCount(GEMSTONE):
-			htmltext="30505-06.htm"
-			st.takeItems(GEMSTONE,1)
-			st.set("cond","5")
-		if event=="7":
-			htmltext="30827-07.htm"
-			st.giveItems(PET_TICKET,1)
-			st.setState(COMPLETED)
-			st.exitQuest(0)
-		return htmltext
+  def onEvent(self, event, st):
+    htmltext=event
+    if event=="1":
+      htmltext="30827-01.htm"
+      st.set("cond","1")
+      st.setState(STARTED)
+      st.playSound("ItemSound.quest_accept")
+    if event=="3" and st.getQuestItemsCount(WORK_HAMMER):
+      htmltext="30827-03.htm"
+      st.takeItems(WORK_HAMMER,1)
+      st.set("cond","2")
+    if event=="4" and st.getQuestItemsCount(GEMSTONE_FRAGMENT)>=MAX_COUNT:
+      htmltext="30827-05.htm"
+      st.takeItems(GEMSTONE_FRAGMENT,MAX_COUNT)
+      st.giveItems(GEMSTONE,1)
+      st.set("cond", "4")
+    if event=="5" and st.getQuestItemsCount(GEMSTONE):
+      htmltext="30505-06.htm"
+      st.takeItems(GEMSTONE,1)
+      st.set("cond","5")
+    if event=="7":
+      htmltext="30827-07.htm"
+      st.giveItems(PET_TICKET,1)
+      st.setState(COMPLETED)
+      st.exitQuest(0)
+    return htmltext
 
-	def onTalk(self, npc, player):
-		st = player.getQuestState(qn)
-		if not st : return htmltext
-		npcId=npc.getNpcId()
-		htmltext="<html><head><body>I have nothing to say you</body></html>"
-		id=st.getState()
-		if id==CREATED:
-			if st.getPlayer().getLevel()>=MIN_LEVEL:
-				htmltext="30827-00.htm"
-			else:
-				st.exitQuest(1)
-				htmltext="<html><head><body>This quest can only be taken by characters that have a minimum level of %s. Return when you are more experienced.</body></html>" % MIN_LEVEL
-		elif id==STARTED:
-			cond=int(st.get("cond"))
-			if npcId==LUNDY:
-				if cond==1:
-					if not st.getQuestItemsCount(WORK_HAMMER):
-						htmltext="30827-01a.htm"
-					else:
-						htmltext="30827-02.htm"
-				elif cond==2:
-					htmltext="30827-03a.htm"
-				elif cond==3:
-						htmltext="30827-04.htm"
-				elif cond==4:
-					htmltext="30827-05a.htm"
-				elif cond==5:
-					htmltext="30827-06.htm"
-			elif npcId==DRIKUS:
-				if cond==4 and st.getQuestItemsCount(GEMSTONE):
-					htmltext="30505-05.htm"
-				elif cond==5:
-					htmltext="30505-06a.htm"
-		elif id==COMPLETED:
-			st.exitQuest(0)
-			htmltext="<html><head><body>This quest have already been completed.</body></html>"
-		return htmltext
+  def onTalk(self, npc, player):
+    st = player.getQuestState(qn)
+    if not st : return htmltext
+    npcId=npc.getNpcId()
+    htmltext="<html><head><body>I have nothing to say you</body></html>"
+    id=st.getState()
+    if id==CREATED:
+      if st.getPlayer().getLevel()>=MIN_LEVEL:
+        htmltext="30827-00.htm"
+      else:
+        st.exitQuest(1)
+        htmltext="<html><head><body>This quest can only be taken by characters that have a minimum level of %s. Return when you are more experienced.</body></html>" % MIN_LEVEL
+    elif id==STARTED:
+      cond=int(st.get("cond"))
+      if npcId==LUNDY:
+        if cond==1:
+          if not st.getQuestItemsCount(WORK_HAMMER):
+            htmltext="30827-01a.htm"
+          else:
+            htmltext="30827-02.htm"
+        elif cond==2:
+          htmltext="30827-03a.htm"
+        elif cond==3:
+            htmltext="30827-04.htm"
+        elif cond==4:
+          htmltext="30827-05a.htm"
+        elif cond==5:
+          htmltext="30827-06.htm"
+      elif npcId==DRIKUS:
+        if cond==4 and st.getQuestItemsCount(GEMSTONE):
+          htmltext="30505-05.htm"
+        elif cond==5:
+          htmltext="30505-06a.htm"
+    elif id==COMPLETED:
+      st.exitQuest(0)
+      htmltext="<html><head><body>This quest have already been completed.</body></html>"
+    return htmltext
 
-	def onKill(self, npc, player):
-		st = player.getQuestState(qn)
-		if not st : return 
-		if st.getState() != STARTED : return 
-		npcId = npc.getNpcId()
-		cond=int(st.get("cond"))
-		if cond==2:
-			pieces=st.getQuestItemsCount(GEMSTONE_FRAGMENT)
-			if pieces<MAX_COUNT-1:
-				st.giveItems(GEMSTONE_FRAGMENT,1)
-				st.playSound("ItemSound.quest_itemget")
-			elif pieces==MAX_COUNT-1:
-				st.giveItems(GEMSTONE_FRAGMENT,1)
-				st.playSound("ItemSound.quest_middle")
-				st.set("cond", "3")
+  def onKill(self, npc, player):
+    st = player.getQuestState(qn)
+    if not st : return 
+    if st.getState() != STARTED : return 
+    npcId = npc.getNpcId()
+    cond=int(st.get("cond"))
+    if cond==2:
+      pieces=st.getQuestItemsCount(GEMSTONE_FRAGMENT)
+      if pieces<MAX_COUNT-1:
+        st.giveItems(GEMSTONE_FRAGMENT,1)
+        st.playSound("ItemSound.quest_itemget")
+      elif pieces==MAX_COUNT-1:
+        st.giveItems(GEMSTONE_FRAGMENT,1)
+        st.playSound("ItemSound.quest_middle")
+        st.set("cond", "3")
 
 QUEST=Quest(44,qn,"Help The Son!")
 CREATED=State('Start', QUEST)

@@ -118,29 +118,29 @@ class Quest (JQuest) :
    htmltext = default
    st = player.getQuestState(qn)
    if st :
-	   npcId = npc.getNpcId()
-	   id = st.getState()
-	   if id == CREATED :
-	     st.set("cond","0")
-	   cond = int(st.get("cond"))
-	   if npcId == 31521 and cond == 0 :
-	     if st.getPlayer().getLevel() >= 68 and st.getPlayer().getLevel() <= 73 :
-	       htmltext = "31521-0.htm"
-	     else :
-	       st.exitQuest(1)
-	   elif id == STARTED :
-		   if npcId == 31543 and cond == 1 and st.getQuestItemsCount(BOILED_EGGS) :
-		     htmltext = "31543-0.htm"
-		   elif npcId == 31544 and cond == 2 and st.getQuestItemsCount(BOILED_EGGS) :
-		     htmltext = "31544-0.htm"
-		   elif npcId == 31545 and cond == 3 and st.getQuestItemsCount(BOILED_EGGS) :
-		     htmltext = "31545-0.htm"
-		   elif npcId == 31546 and cond == 4 and st.getQuestItemsCount(BOILED_EGGS) :
-		     htmltext = "31546-0.htm"
-		   elif npcId == 31547 and cond == 5 and st.getQuestItemsCount(BOILED_EGGS) :
-		     htmltext = "31547-0.htm"
-		   elif npcId == 31521 and cond == 6 and st.getQuestItemsCount(FEE_OF_EGGS) == 5 :
-		     htmltext = "31521-2.htm"
+     npcId = npc.getNpcId()
+     id = st.getState()
+     if id == CREATED :
+       st.set("cond","0")
+     cond = int(st.get("cond"))
+     if npcId == 31521 and cond == 0 :
+       if st.getPlayer().getLevel() >= 68 and st.getPlayer().getLevel() <= 73 :
+         htmltext = "31521-0.htm"
+       else :
+         st.exitQuest(1)
+     elif id == STARTED :
+       if npcId == 31543 and cond == 1 and st.getQuestItemsCount(BOILED_EGGS) :
+         htmltext = "31543-0.htm"
+       elif npcId == 31544 and cond == 2 and st.getQuestItemsCount(BOILED_EGGS) :
+         htmltext = "31544-0.htm"
+       elif npcId == 31545 and cond == 3 and st.getQuestItemsCount(BOILED_EGGS) :
+         htmltext = "31545-0.htm"
+       elif npcId == 31546 and cond == 4 and st.getQuestItemsCount(BOILED_EGGS) :
+         htmltext = "31546-0.htm"
+       elif npcId == 31547 and cond == 5 and st.getQuestItemsCount(BOILED_EGGS) :
+         htmltext = "31547-0.htm"
+       elif npcId == 31521 and cond == 6 and st.getQuestItemsCount(FEE_OF_EGGS) == 5 :
+         htmltext = "31521-2.htm"
    return htmltext
 
 QUEST       = Quest(621,qn,"Egg Delivery")

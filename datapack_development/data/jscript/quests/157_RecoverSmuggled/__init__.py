@@ -67,7 +67,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(157,qn,"Recover Smuggled")
 CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
+STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
@@ -76,7 +76,6 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30005)
 
 QUEST.addTalkId(30005)
-
 QUEST.addKillId(20121)
 
 STARTED.addQuestDrop(20121,ADAMANTITE_ORE_ID,1)

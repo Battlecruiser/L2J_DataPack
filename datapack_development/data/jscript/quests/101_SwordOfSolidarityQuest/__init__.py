@@ -60,7 +60,7 @@ class Quest (JQuest) :
         st.exitQuest(1)
    elif npcId == 30008 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   if id = STARTED: 
+   if id == STARTED: 
        if npcId == 30008 and int(st.get("cond"))==1 and (st.getQuestItemsCount(ROIENS_LETTER_ID)==1) :
             htmltext = "30008-05.htm"
        elif npcId == 30008 and int(st.get("cond"))>=2 and st.getQuestItemsCount(ROIENS_LETTER_ID)==0 and st.getQuestItemsCount(ALLTRANS_NOTE_ID)==0 :

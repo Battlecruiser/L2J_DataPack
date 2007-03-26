@@ -64,7 +64,8 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    if npcId != 30620 and id != STARTED : return htmltext
-   cond = st.getInt("cond")
+
+   cond = st.getInt("cond")
    if npcId == EMILY and cond == 0 :
      if st.getPlayer().getLevel() >= 34 and st.getPlayer().getLevel() <= 40 :
        htmltext = "30620-0.htm"
@@ -96,7 +97,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_middle")
        st.set("cond","2")
      else :
-       st.playSound("ItemSound.quest_itemget")	
+       st.playSound("ItemSound.quest_itemget")  
    return
 
 QUEST       = Quest(299,qn,"Gather Ingredients For A Pie")
@@ -112,8 +113,9 @@ QUEST.addTalkId(30466)
 
 QUEST.addKillId(WASP_LEADER)
 QUEST.addKillId(WASP_WORKER)
-QUEST.addQuestDrop(WASP_WORKER,HONEY_POUCH,1)
-QUEST.addQuestDrop(EMILY,AVELLAN_SPICE,1)
-QUEST.addQuestDrop(EMILY,FRUIT_BASKET,1)
+
+STARTED.addQuestDrop(WASP_WORKER,HONEY_POUCH,1)
+STARTED.addQuestDrop(EMILY,AVELLAN_SPICE,1)
+STARTED.addQuestDrop(EMILY,FRUIT_BASKET,1)
 
 print "importing quests: 299: Gather Ingredients For A Pie"

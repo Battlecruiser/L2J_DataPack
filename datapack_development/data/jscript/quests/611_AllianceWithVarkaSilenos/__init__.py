@@ -394,7 +394,7 @@ class Quest (JQuest) :
                           pst = player.getQuestState("611_AllianceWithVarkaSilenos")
                           if pst :
                               decreaseAlliance(pst)
-    return
+   return
 
 QUEST       = Quest(611,qn,"Alliance With Varka Silenos")
 CREATED     = State('Start', QUEST)

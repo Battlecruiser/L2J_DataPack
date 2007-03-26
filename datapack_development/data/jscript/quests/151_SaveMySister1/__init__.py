@@ -81,10 +81,9 @@ COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30050)
-
 QUEST.addTalkId(30050)
 
-STARTED.addTalkId(30032)
+QUEST.addTalkId(30032)
 
 for mob in [20103,20106,20108] :
    QUEST.addKillId(mob)

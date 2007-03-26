@@ -80,7 +80,7 @@ class Quest (JQuest) :
                 st.playSound("ItemSound.quest_middle")
                 st.set("cond","2")
               else:
-                st.playSound("ItemSound.quest_itemget")	
+                st.playSound("ItemSound.quest_itemget")  
    return
 
 QUEST       = Quest(626,qn,"A Dark Twilight")

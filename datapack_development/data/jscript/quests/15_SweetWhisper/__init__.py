@@ -55,7 +55,7 @@ class Quest (JQuest) :
        st.exitQuest(1)
    if npcId == VLADIMIR and cond == 1 :
        htmltext = "31302-1a.htm"
-   if id = STARTED :
+   if id == STARTED :
        if npcId == M_NECROMANCER and cond == 1 :
          htmltext = "31518-0.htm"
        elif npcId == M_NECROMANCER and cond == 2 :

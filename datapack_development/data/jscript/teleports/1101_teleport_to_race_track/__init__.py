@@ -8,16 +8,16 @@ from net.sf.l2j.gameserver.model.quest          import State
 from net.sf.l2j.gameserver.model.quest          import QuestState
 from net.sf.l2j.gameserver.model.quest.jython   import QuestJython as JQuest
 qn = "1101_teleport_to_race_track"
-TRISHA	     = 30059
+TRISHA       = 30059
 CLARISSA     = 30080
 VALENTIA     = 30177
 ESMERALDA    = 30233
 BELLA        = 30256
-RICHLIN	     = 30320
+RICHLIN       = 30320
 ELISA        = 30848
 FLAUEN       = 30899
-TATIANA	     = 31275
-ILYANA	     = 31320
+TATIANA       = 31275
+ILYANA       = 31320
 RACE_MANAGER = 30995
 BILIA        = 31964
 MINERVA      = 30836
@@ -231,6 +231,8 @@ QUEST.addStartNpc(FLAUEN)
 QUEST.addStartNpc(ILYANA)
 QUEST.addStartNpc(TATIANA)
 QUEST.addStartNpc(BILIA)
+QUEST.addStartNpc(MINERVA)
+QUEST.addStartNpc(VERONA)
 
 QUEST.addTalkId(TRISHA)
 QUEST.addTalkId(CLARISSA)
@@ -243,6 +245,8 @@ QUEST.addTalkId(FLAUEN)
 QUEST.addTalkId(ILYANA)
 QUEST.addTalkId(TATIANA)
 QUEST.addTalkId(BILIA)
+QUEST.addTalkId(MINERVA)
+QUEST.addTalkId(VERONA)
 
 QUEST.addTalkId(RACE_MANAGER)
 

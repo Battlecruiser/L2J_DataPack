@@ -40,7 +40,7 @@ class Quest (JQuest) :
         while i < len(REWARDS) :
             item,adena,chance,chance2=REWARDS[i]
             if chance<=random<= chance2 :
-            	break
+              break
             i = i+1
         st.giveItems(57,adena)
         if item :
@@ -57,34 +57,35 @@ class Quest (JQuest) :
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if st :
-	   npcId = npc.getNpcId()
-	   id = st.getState()
-	   cond = st.getInt("cond")
-	   if cond == 0 :
-	       htmltext = "31683-0.htm"
-	   elif cond == 1 :
-	       htmltext = "31683-2.htm"
-	   elif cond == 2 :
-	       htmltext = "31683-3.htm"
+     npcId = npc.getNpcId()
+     id = st.getState()
+     cond = st.getInt("cond")
+     if cond == 0 :
+         htmltext = "31683-0.htm"
+     elif cond == 1 :
+         htmltext = "31683-2.htm"
+     elif cond == 2 :
+         htmltext = "31683-3.htm"
    return htmltext
 
  def onKill (self,npc,player):
    st = player.getQuestState(qn)
    if st :
-   	   if st.getState() == STARTED :
-		   count = st.getQuestItemsCount(PROOF_OF_AVENGER)
-		   if st.getInt("cond") == 1 and count < 100 :
-		     chance = DROP_CHANCE * Config.RATE_DROP_QUEST
-		     numItems, chance = divmod(chance,100)
-		     if st.getRandom(100) < chance : 
-		       numItems = numItems + 1
-		     if count + numItems >= 100 :
-		       numItems = 100 - count
-		       st.playSound("ItemSound.quest_middle")
-		       st.set("cond","2")
-		     else:
-		       st.playSound("ItemSound.quest_itemget")	 
-		     st.giveItems(PROOF_OF_AVENGER,int(numItems))       
+     if st.getState() == STARTED :
+       count = st.getQuestItemsCount(PROOF_OF_AVENGER)
+       if st.getInt("cond") == 1 and count < 100 :
+         chance = DROP_CHANCE * Config.RATE_DROP_QUEST
+         numItems, chance = divmod(chance,100)
+         if st.getRandom(100) < chance : 
+           numItems = numItems + 1
+         if numItems :
+           if count + numItems >= 100 :
+             numItems = 100 - count
+             st.playSound("ItemSound.quest_middle")
+             st.set("cond","2")
+           else:
+             st.playSound("ItemSound.quest_itemget")   
+           st.giveItems(PROOF_OF_AVENGER,int(numItems))       
    return
 
 QUEST       = Quest(601,qn,"Watching Eyes")

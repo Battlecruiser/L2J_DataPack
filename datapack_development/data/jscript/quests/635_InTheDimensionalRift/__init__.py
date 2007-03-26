@@ -55,33 +55,33 @@ class Quest (JQuest) :
  def onTalk (Self,npc,player):
    st = player.getQuestState(qn)
    if st :
-	   npcId = npc.getNpcId()
-	   cond=st.getInt("cond")
-	   id=st.getInt("id")
-	   if npcId in range(31494,31508) :
-	      if st.getPlayer().getLevel() < 20 :
-	         st.exitQuest(1)
-	         htmltext="1.htm"
-	      elif len(st.getPlayer().getAllActiveQuests()) > MAX_QUEST :
-	         st.exitQuest(1)
-	         htmltext="1a.htm"
-	      elif not st.getQuestItemsCount(DIMENSION_FRAGMENT) :
-	         htmltext="3.htm"
-	      else :
-	         st.setState(CREATED)
-	         id=str(npcId-31493)
-	         st.set("id",id)
-	         htmltext="4.htm"
-	   elif st.getState() == STARTED :
-	      if id :
-	         x,y,z=COORD[id]
-	         st.getPlayer().teleToLocation(x,y,z)
-	         st.unset("cond")
-	         st.setState(COMPLETED)
-	         htmltext="7.htm"
-	      else :
-	         htmltext="Where?"
-	         st.exitQuest(1)
+     npcId = npc.getNpcId()
+     cond=st.getInt("cond")
+     id=st.getInt("id")
+     if npcId in range(31494,31508) :
+        if st.getPlayer().getLevel() < 20 :
+           st.exitQuest(1)
+           htmltext="1.htm"
+        elif len(st.getPlayer().getAllActiveQuests()) > MAX_QUEST :
+           st.exitQuest(1)
+           htmltext="1a.htm"
+        elif not st.getQuestItemsCount(DIMENSION_FRAGMENT) :
+           htmltext="3.htm"
+        else :
+           st.setState(CREATED)
+           id=str(npcId-31493)
+           st.set("id",id)
+           htmltext="4.htm"
+     elif st.getState() == STARTED :
+        if id :
+           x,y,z=COORD[id]
+           st.getPlayer().teleToLocation(x,y,z)
+           st.unset("cond")
+           st.setState(COMPLETED)
+           htmltext="7.htm"
+        else :
+           htmltext="Where?"
+           st.exitQuest(1)
    return htmltext
 
 QUEST       = Quest(635, qn, "In The Dimensional Rift")

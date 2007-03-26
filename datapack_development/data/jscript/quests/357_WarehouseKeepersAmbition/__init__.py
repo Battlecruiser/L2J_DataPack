@@ -71,7 +71,7 @@ class Quest (JQuest) :
    chance = st.getRandom(100) 
    if chance < DROPRATE :
      st.giveItems(JADE_CRYSTAL,1)
-     st.playSound("ItemSound.quest_itemget")	
+     st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST       = Quest(357,qn,"Warehouse Keepers Ambition")

@@ -8,10 +8,10 @@ from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "1100_teleport_with_charm"
-ORC_GATEKEEPER_CHARM   	= 1658
-DWARF_GATEKEEPER_TOKEN 	= 1659
-WHIRPY			= 30540
-TAMIL			= 30576
+ORC_GATEKEEPER_CHARM     = 1658
+DWARF_GATEKEEPER_TOKEN   = 1659
+WHIRPY      = 30540
+TAMIL      = 30576
 
 class Quest (JQuest) :
 

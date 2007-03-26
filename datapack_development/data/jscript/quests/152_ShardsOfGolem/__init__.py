@@ -108,7 +108,7 @@ QUEST.addTalkId(HARRIS)
 
 QUEST.addTalkId(ALTRAN)
 
-STARTED.addKillId(20016)
+QUEST.addKillId(20016)
 
 for item in range(1008,1012) :
     STARTED.addQuestDrop(HARRIS,item,1)

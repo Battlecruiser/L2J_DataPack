@@ -149,7 +149,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_middle")
          st.set("cond","4")
        else:
-         st.playSound("ItemSound.quest_itemget")	
+         st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST       = Quest(32,qn,"An Obvious Lie")

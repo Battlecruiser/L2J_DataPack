@@ -3,7 +3,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "1001_dual_swords"
-SMITHS = [30283,30298,30300,30317,30458,30471,30526,30527,30536,30621,30678,30688,30846,30898,31002,31044,31271,31274,31316,31539,31583,31626,31668]
+SMITHS = [30283,30298,30300,30317,30458,30471,30526,30527,30536,30621,30678,30688,30846,30898,31002,31044,31271,31274,31316,31539,31583,31626,31668]
+
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -149,120 +150,120 @@ class Quest (JQuest) :
 # Bastard Sword*Bastard Sword
     if event == "10":
          if st.getQuestItemsCount(69) >= 1 and st.getQuestItemsCount(1458) >= 286:
-	     st.takeItems(69,1)
-	     if st.getQuestItemsCount(69) >= 1:
+             st.takeItems(69,1)
+             if st.getQuestItemsCount(69) >= 1:
                 st.takeItems(69,1)
                 st.takeItems(1458,286)
-		st.giveItems(2525,1)
-		htmltext = "Item has been succesfully created."
+                st.giveItems(2525,1)
+                htmltext = "Item has been succesfully created."
              else:
-		st.giveItems(69,1)
-		htmltext = "You need one more sword."
+                st.giveItems(69,1)
+                htmltext = "You need one more sword."
          else:
              htmltext = "You do not have enough materials."
 
 # Bastard Sword*Spinebone Sword
     if event == "11":
          if st.getQuestItemsCount(69) >= 1 and st.getQuestItemsCount(125) >= 1 and st.getQuestItemsCount(1458) >= 286:
-	     st.takeItems(69,1)
-	     if st.getQuestItemsCount(125) >= 1:
+             st.takeItems(69,1)
+             if st.getQuestItemsCount(125) >= 1:
                 st.takeItems(125,1)
                 st.takeItems(1458,286)
                 st.giveItems(2526,1)
                 htmltext = "Item has been succesfully created."
              else:
-		st.giveItems(69,1)
-		htmltext = "You need one more sword."
+                st.giveItems(69,1)
+                htmltext = "You need one more sword."
          else:
              htmltext = "You do not have enough materials."
 
 # Bastard Sword*Artisan's Sword
     if event == "12":
          if st.getQuestItemsCount(69) >= 1 and st.getQuestItemsCount(126) >= 1 and st.getQuestItemsCount(1458) >= 286:
-	     st.takeItems(69,1)
-	     if st.getQuestItemsCount(126) >= 1:
+             st.takeItems(69,1)
+             if st.getQuestItemsCount(126) >= 1:
                 st.takeItems(126,1)
                 st.takeItems(1458,286)
                 st.giveItems(2527,1)
                 htmltext = "Item has been succesfully created."
              else:
-		st.giveItems(69,1)
-		htmltext = "You need one more sword."
+                st.giveItems(69,1)
+                htmltext = "You need one more sword."
          else:
              htmltext = "You do not have enough materials."
 
 # Bastard Sword*Knight's Sword
     if event == "13":
          if st.getQuestItemsCount(69) >= 1 and st.getQuestItemsCount(128) >= 1 and st.getQuestItemsCount(1458) >= 286:
-	     st.takeItems(69,1)
-	     if st.getQuestItemsCount(128) >= 1:
+             st.takeItems(69,1)
+             if st.getQuestItemsCount(128) >= 1:
                 st.takeItems(128,1)
                 st.takeItems(1458,286)
                 st.giveItems(2528,1)
                 htmltext = "Item has been succesfully created."
              else:
-		st.giveItems(69,1)
-		htmltext = "You need one more sword."
+                st.giveItems(69,1)
+                htmltext = "You need one more sword."
          else:
              htmltext = "You do not have enough materials."
 
 # Bastard Sword*Crimson Sword
     if event == "14":
          if st.getQuestItemsCount(69) >= 1 and st.getQuestItemsCount(127) >= 1 and st.getQuestItemsCount(1458) >= 117:
-	     st.takeItems(69,1)
-	     if st.getQuestItemsCount(127) >= 1:
+             st.takeItems(69,1)
+             if st.getQuestItemsCount(127) >= 1:
                 st.takeItems(127,1)
                 st.takeItems(1458,117)
                 st.giveItems(2529,1)
                 htmltext = "Item has been succesfully created."
              else:
-		st.giveItems(69,1)
-		htmltext = "You need one more sword."
+                st.giveItems(69,1)
+                htmltext = "You need one more sword."
          else:
              htmltext = "You do not have enough materials."
 
 # Bastard Sword*Elven Sword
     if event == "15":
          if st.getQuestItemsCount(69) >= 1 and st.getQuestItemsCount(130) >= 1 and st.getQuestItemsCount(1458) >= 117:
-	     st.takeItems(69,1)
-	     if st.getQuestItemsCount(130) >= 1:
+             st.takeItems(69,1)
+             if st.getQuestItemsCount(130) >= 1:
                 st.takeItems(130,1)
                 st.takeItems(1458,117)
                 st.giveItems(2530,1)
                 htmltext = "Item has been succesfully created."
              else:
-		st.giveItems(69,1)
-		htmltext = "You need one more sword."
+                st.giveItems(69,1)
+                htmltext = "You need one more sword."
          else:
              htmltext = "You do not have enough materials."
 
 # Bastard Sword*Sword of Revolution
     if event == "16":
          if st.getQuestItemsCount(69) >= 1 and st.getQuestItemsCount(129) >= 1 and st.getQuestItemsCount(1458) >= 185:
-	     st.takeItems(69,1)
-	     if st.getQuestItemsCount(129) >= 1:
+             st.takeItems(69,1)
+             if st.getQuestItemsCount(129) >= 1:
                 st.takeItems(129,1)
                 st.takeItems(1458,185)
                 st.giveItems(2531,1)
                 htmltext = "Item has been succesfully created."
              else:
-		st.giveItems(69,1)
-		htmltext = "You need one more sword."
+                st.giveItems(69,1)
+                htmltext = "You need one more sword."
          else:
              htmltext = "You do not have enough materials."
 
 # Bastard Sword*Elven Long Sword
     if event == "17":
          if st.getQuestItemsCount(69) >= 1 and st.getQuestItemsCount(2499) >= 1 and st.getQuestItemsCount(1458) >= 75:
-	     st.takeItems(69,1)
-	     if st.getQuestItemsCount(2499) >= 1:
+             st.takeItems(69,1)
+             if st.getQuestItemsCount(2499) >= 1:
                 st.takeItems(2499,1)
                 st.takeItems(1458,75)
                 st.giveItems(2532,1)
                 htmltext = "Item has been succesfully created."
              else:
-		st.giveItems(69,1)
-		htmltext = "You need one more sword."
+                st.giveItems(69,1)
+                htmltext = "You need one more sword."
          else:
              htmltext = "You do not have enough materials."
 
