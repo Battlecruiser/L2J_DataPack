@@ -70,10 +70,19 @@ class Quest (JQuest) :
 
 
  def onKill (self,npc,player):
-   st = player.getQuestState(qn)
-   if not st : return 
-   if st.getState() != STARTED : return
+   partyMember1 = self.getRandomPartyMember(player,"1")
+   partyMember2 = self.getRandomPartyMember(player,"2")
+   partyMember = partyMember1 # initialize
+   if not partyMember1 and not partyMember2: return
+   elif not partyMember2 : partyMember = partyMember1
+   elif not partyMember1 : partyMember = partyMember2
+   else :
+       if Rnd.get(2): partyMember = partyMember2
    
+   if not partyMember : return
+   st = partyMember.getQuestState(qn)
+   if not st : return 
+   if st.getState() != STARTED : return   
    count = st.getQuestItemsCount(ROUGH_JEWEL)
    if count<10 :
      st.giveItems(ROUGH_JEWEL,1)
@@ -86,7 +95,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(35,qn,"Find Glittering Jewelry")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST,True)
+STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30091)

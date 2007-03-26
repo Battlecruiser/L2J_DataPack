@@ -54,9 +54,9 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,player):
-   st = player.getQuestState(qn)
-   if not st : return 
-   if st.getState() != STARTED : return
+   partyMember = self.getRandomPartyMemberState(player,"1")
+   if not partyMember : return
+   st = partyMember.getQuestState(qn)
    
    count = st.getQuestItemsCount(REINFORCED_STEEL)
    if count < 5 :
@@ -70,7 +70,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(36,qn,"Make A Sewing Kit")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST,True)
+STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30847)

@@ -64,9 +64,9 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,player):
-   st = player.getQuestState(qn)
-   if not st : return 
-   if st.getState() != STARTED : return 
+   partyMember = self.getRandomPartyMemberState(player,STARTED)
+   if not partyMember: return
+   st = partyMember.getQuestState(qn)
    
    chance = st.getRandom(100) 
    if chance < DROPRATE :
@@ -76,7 +76,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(357,qn,"Warehouse Keepers Ambition")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST,True)
+STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(SILVA)

@@ -86,45 +86,55 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,player):
-   st = player.getQuestState(qn)
-   if not st : return 
-   if st.getState() != STARTED : return
-   
    npcId = npc.getNpcId()
-   cond = st.getInt("cond")
-   if npcId in [20919,20920] and cond == 2 and st.getQuestItemsCount(BLACK_BONE_NECKLACE) < 100 :
-     st.giveItems(BLACK_BONE_NECKLACE,1)
-     if st.getQuestItemsCount(BLACK_BONE_NECKLACE) == 100 and st.getQuestItemsCount(RED_BONE_NECKLACE) == 100:
-       st.playSound("ItemSound.quest_middle")
-       st.set("cond","3")
-     else:
-       st.playSound("ItemSound.quest_itemget")	
-   elif npcId == 20921 and cond == 2 and st.getQuestItemsCount(RED_BONE_NECKLACE) < 100 :
-     st.giveItems(RED_BONE_NECKLACE,1)
-     if st.getQuestItemsCount(BLACK_BONE_NECKLACE) == 100 and st.getQuestItemsCount(RED_BONE_NECKLACE) == 100:
-       st.playSound("ItemSound.quest_middle")
-       st.set("cond","3")
-     else:
-       st.playSound("ItemSound.quest_itemget")	
-   elif npcId in [20920,20921] and cond == 4 and st.getQuestItemsCount(INCENSE_POUCH) < 30 :
-     st.giveItems(INCENSE_POUCH,1)
-     if st.getQuestItemsCount(INCENSE_POUCH) == 30 and st.getQuestItemsCount(GEM_OF_MAILLE) == 30:
-       st.playSound("ItemSound.quest_middle")
-       st.set("cond","5")
-     else:
-       st.playSound("ItemSound.quest_itemget")	
-   elif npcId == 20925 and cond == 4 and st.getQuestItemsCount(GEM_OF_MAILLE) < 30 :
-     st.giveItems(GEM_OF_MAILLE,1)
-     if st.getQuestItemsCount(INCENSE_POUCH) == 30 and st.getQuestItemsCount(GEM_OF_MAILLE) == 30:
-       st.playSound("ItemSound.quest_middle")
-       st.set("cond","5")
-     else:
-       st.playSound("ItemSound.quest_itemget")	
+   if npcId in [20919,20920] :
+       partyMember = self.getRandomPartyMemberState(player,"2")
+       if partyMember : 
+           st = partyMember.getQuestState(qn)
+           if st.getQuestItemsCount(BLACK_BONE_NECKLACE) < 100 :
+              st.giveItems(BLACK_BONE_NECKLACE,1)
+              return
+   if npcId == 20921
+       partyMember = self.getRandomPartyMemberState(player,"2")
+       if partyMember : 
+           st = partyMember.getQuestState(qn)
+           if st.getQuestItemsCount(RED_BONE_NECKLACE) < 100 :
+             st.giveItems(RED_BONE_NECKLACE,1)
+             if st.getQuestItemsCount(BLACK_BONE_NECKLACE) == 100 and st.getQuestItemsCount(RED_BONE_NECKLACE) == 100:
+               st.playSound("ItemSound.quest_middle")
+               st.set("cond","3")
+             else:
+               st.playSound("ItemSound.quest_itemget")
+             return
+   if npcId in [20919,20920] :
+       partyMember = self.getRandomPartyMemberState(player,"4")
+       if partyMember : 
+           st = partyMember.getQuestState(qn)
+           if st.getQuestItemsCount(INCENSE_POUCH) < 30 :
+             st.giveItems(INCENSE_POUCH,1)
+             if st.getQuestItemsCount(INCENSE_POUCH) == 30 and st.getQuestItemsCount(GEM_OF_MAILLE) == 30:
+               st.playSound("ItemSound.quest_middle")
+               st.set("cond","5")
+             else:
+               st.playSound("ItemSound.quest_itemget")
+             return
+   if npcId == 20925 :
+       partyMember = self.getRandomPartyMemberState(player,"4")
+       if partyMember : 
+           st = partyMember.getQuestState(qn)
+           if st.getQuestItemsCount(GEM_OF_MAILLE) < 30 :
+             st.giveItems(GEM_OF_MAILLE,1)
+             if st.getQuestItemsCount(INCENSE_POUCH) == 30 and st.getQuestItemsCount(GEM_OF_MAILLE) == 30:
+               st.playSound("ItemSound.quest_middle")
+               st.set("cond","5")
+             else:
+               st.playSound("ItemSound.quest_itemget")
+             return  
    return
 
 QUEST       = Quest(39,qn,"Red Eyed Invaders")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST,True)
+STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)

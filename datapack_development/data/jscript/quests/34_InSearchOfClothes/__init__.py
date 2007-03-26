@@ -1,5 +1,6 @@
 # Made by disKret
 import sys
+from net.sf.l2j.gameserver.lib import Rnd
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -79,7 +80,25 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,player):
-   st = player.getQuestState(qn)
+   # get 1 party member among those with cond between 1 and 4
+   partyMember = 0
+   j = 0
+   for i in range(1,5) :  # i between 1 and 4 inclusive
+       partyMember = self.getRandomPartyMember(player,str(i))
+       if partyMember :
+           j = i
+           break
+   if not partyMember : return
+   
+   # if at least 1 cond exists with a party member, check if there also exist in a different cond as well
+   for i in range(j+1,5) :
+       partyMember2 = self.getRandomPartyMember(player,str(i))
+       # if a party member is found in another cond, randomly choose between
+       # the new one and the previous one
+       if partyMember2 :
+           if Rnd.get(2) : partyMember = partyMember2
+           
+   st = partyMember.getQuestState(qn)
    if not st : return 
    if st.getState() != STARTED : return
    
@@ -95,7 +114,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(34,qn,"In Search of Clothes")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST,True)
+STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30088)

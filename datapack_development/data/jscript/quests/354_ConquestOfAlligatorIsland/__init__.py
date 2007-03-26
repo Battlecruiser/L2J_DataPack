@@ -81,10 +81,10 @@ class Quest (JQuest) :
      return htmltext
 
  def onKill (self,npc,player):
-     st = player.getQuestState(qn)
-     if not st : return 
-     if st.getState() != STARTED : return 
-   
+     partyMember = self.getRandomPartyMemberState(player,STARTED)
+     if not partyMember : return
+     st = partyMember.getQuestState(qn)
+
      npcId = npc.getNpcId()
      cond = st.getInt("cond")
      random = st.getRandom(100)
@@ -97,7 +97,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(354,qn,"Conquest Of Alligator Island")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST,True)
+STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30895)

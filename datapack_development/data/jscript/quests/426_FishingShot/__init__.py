@@ -51,7 +51,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(426,qn,"Quest for Fishing Shot")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST,True)
+STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 

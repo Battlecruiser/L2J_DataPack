@@ -105,7 +105,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(31,qn,"Secret Buried In The Swamp")
 CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST,True)
+STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
