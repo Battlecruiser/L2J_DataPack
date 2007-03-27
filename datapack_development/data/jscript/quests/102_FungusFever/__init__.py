@@ -134,7 +134,7 @@ class Quest (JQuest) :
 
  def onKill (self,npc,player):
    st = player.getQuestState(qn)
-   if not st: return htmltext
+   if not st: return 
 
    if st.getState() == STARTED :       
       npcId = npc.getNpcId()
