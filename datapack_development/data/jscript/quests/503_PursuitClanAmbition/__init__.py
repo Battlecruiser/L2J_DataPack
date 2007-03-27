@@ -486,7 +486,7 @@ class Quest (JQuest) :
         if self.ImpGraveKepperStat == 1:
           for j in range(2):
             for k in range(2): 
-              self.getPcSpawn().addSpawn(27180,npc.getX()+70*pow(-1,j%2),npc.getY()+70*pow(-1,k%2),npc.getZ())
+              self.getPcSpawn(player).addSpawn(27180,npc.getX()+70*pow(-1,j%2),npc.getY()+70*pow(-1,k%2),npc.getZ())
           self.ImpGraveKepperStat = 2
         else:
           players = npc.getKnownList().getKnownPlayers().values().toArray()
