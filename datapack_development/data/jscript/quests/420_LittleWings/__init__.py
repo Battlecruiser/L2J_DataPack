@@ -364,14 +364,14 @@ class Quest (JQuest):
        st.setState(CREATED)
        id = CREATED
     progress = st.getInt("progress")
-    if npcid == PM_COOPER :
+    if npcId == PM_COOPER :
       if id == CREATED :
         return check_level(st)
       elif id == STARTING and progress == 0 :
         return "Starting.htm"
       else :
         return "Started.htm"
-    elif npcid == SG_CRONOS :
+    elif npcId == SG_CRONOS :
       if id == STARTING :
          if progress == 0 :
             return "420_cronos_1.htm"
@@ -384,13 +384,13 @@ class Quest (JQuest):
          elif progress == 7 :
             return "420_cronos_10.htm"
 
-    elif npcid == MC_MARIA :
+    elif npcId == MC_MARIA :
       if id == STARTING :
          if ((progress in [ 1,8 ] )  and st.getQuestItemsCount(FSN_LIST)==1) or ((progress in [ 2,9 ] ) and st.getQuestItemsCount(FSN_LIST_DLX)==1):
             return check_elements(st)
          elif progress in [ 3,4,5,6,7,10,11 ] :
             return "420_maria_6.htm"
-    elif npcid == GD_BYRON :
+    elif npcId == GD_BYRON :
        if id == STARTING :
           if ((progress in [ 1,8 ] )  and st.getQuestItemsCount(FSN_LIST)==1) or ((progress in [ 2,9 ] ) and st.getQuestItemsCount(FSN_LIST_DLX)==1):
              return "420_byron_10.htm"
@@ -408,7 +408,7 @@ class Quest (JQuest):
              return "420_byron_7.htm"
           elif progress in [6,13] :
              return "420_byron_8.htm"
-    elif npcid == FR_MYMYU :
+    elif npcId == FR_MYMYU :
        if id == STARTING :
           if ( progress in [5,12] ) and st.getQuestItemsCount(FRY_STN) == 1 :
              return "420_mymyu_1.htm"
@@ -419,7 +419,7 @@ class Quest (JQuest):
              return "420_mymyu_7.htm"
           elif progress > 13 :
              return check_eggs(st,"mymyu")
-    elif npcid == DK_EXARION :
+    elif npcId == DK_EXARION :
        if id == STARTED :
           if progress in [ 5,6,12,13 ] and st.getQuestItemsCount(JUICE) == 1:
              st.takeItems(JUICE,1) 
@@ -428,7 +428,7 @@ class Quest (JQuest):
               return check_eggs(st,"exarion")
           elif progress in [ 19,20 ] and st.getQuestItemsCount(EX_EGG) == 1 :
               return "420_exarion_5.htm"
-    elif npcid == DK_ZWOV :
+    elif npcId == DK_ZWOV :
        if id == STARTED :
           if progress in [ 5,6,12,13 ]  and st.getQuestItemsCount(JUICE) == 1:
              st.takeItems(JUICE,1)  
@@ -437,7 +437,7 @@ class Quest (JQuest):
               return check_eggs(st,"zwov")
           elif progress in [ 19,20 ] and st.getQuestItemsCount(ZW_EGG) == 1 :
               return "420_zwov_5.htm"
-    elif npcid == DK_KALIBRAN :
+    elif npcId == DK_KALIBRAN :
        if id == STARTED :
           if progress in [ 5,6,12,13 ] and st.getQuestItemsCount(JUICE) == 1:
              st.takeItems(JUICE,1)  
@@ -446,7 +446,7 @@ class Quest (JQuest):
               return check_eggs(st,"kalibran")
           elif progress in [ 19,20 ] and st.getQuestItemsCount(KA_EGG) == 1 :
               return "420_kalibran_6.htm"
-    elif npcid == WM_SUZET :
+    elif npcId == WM_SUZET :
        if id == STARTED :
           if progress in [ 5,6,12,13 ] and st.getQuestItemsCount(JUICE) == 1:
              st.takeItems(JUICE,1)  
@@ -455,7 +455,7 @@ class Quest (JQuest):
               return check_eggs(st,"suzet")
           elif progress in [ 19,20 ] and st.getQuestItemsCount(SU_EGG) == 1 :
               return "420_suzet_6.htm"
-    elif npcid == WM_SHAMHAI :
+    elif npcId == WM_SHAMHAI :
        if id == STARTED :
           if progress in [ 5,6,12,13 ] and st.getQuestItemsCount(JUICE) == 1:
              st.takeItems(JUICE,1)  
@@ -471,10 +471,10 @@ class Quest (JQuest):
     if not st : return 
    
     id   = st.getState()
-    npcid = npc.getNpcId()
+    npcId = npc.getNpcId()
   #incipios drop
     if id == STARTING and (st.getQuestItemsCount(FSN_LIST) == 1 and st.getQuestItemsCount(TD_BCK_SKN) < 10) or (st.getQuestItemsCount(FSN_LIST_DLX) == 1 and st.getQuestItemsCount(TD_BCK_SKN) < 20) :
-      if npcid ==  TD_LORD :
+      if npcId ==  TD_LORD :
         if st.getRandom(100) < BACK_DROP :
            st.giveItems(TD_BCK_SKN,1)
            if (st.getQuestItemsCount(FSN_LIST) and st.getQuestItemsCount(TD_BCK_SKN) == 10) or (st.getQuestItemsCount(FSN_LIST_DLX) and st.getQuestItemsCount(TD_BCK_SKN) == 20) :
@@ -505,7 +505,7 @@ class Quest (JQuest):
          scale = SCALE_5
          eggdropper = DD_SEEKER
       if st.getQuestItemsCount(scale) == 1 and st.getQuestItemsCount(eggs) < REQUIRED_EGGS :
-         if npcid == eggdropper :
+         if npcId == eggdropper :
             if st.getRandom(100) < EGG_DROP :
                st.giveItems(eggs,1)
                if st.getQuestItemsCount(eggs) < REQUIRED_EGGS :
@@ -514,7 +514,7 @@ class Quest (JQuest):
                   st.playSound("ItemSound.quest_middle")
   #fairy stone destruction    
     elif id == STARTING and st.getQuestItemsCount(FRY_STN_DLX) == 1 :
-      if npcid in range(20589,20600)+[20719]:
+      if npcId in range(20589,20600)+[20719]:
          st.takeItems(FRY_STN_DLX,1)
          st.set("progress","7")
          return "you lost fairy stone deluxe!"
