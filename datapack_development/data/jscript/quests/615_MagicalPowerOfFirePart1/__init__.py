@@ -128,7 +128,7 @@ class Quest (JQuest) :
                     st.takeItems(Totem,-1)
    return
 
- def onKill (self, npc, st):
+ def onKill (self, npc, player):
    st = player.getQuestState(qn)
    if st :
      if st.getState() == STARTED :
