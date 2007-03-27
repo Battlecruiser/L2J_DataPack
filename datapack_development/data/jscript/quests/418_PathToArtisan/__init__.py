@@ -156,8 +156,8 @@ class Quest (JQuest) :
  def onKill (self,npc,player):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
-   
+   if st.getState() != STARTED : return
+   npcId = npc.getNpcId()
    if npcId == 20389 :
         st.set("id","0")
         if int(st.get("cond")) and st.getQuestItemsCount(SILVERYS_RING_ID) == 1 and st.getQuestItemsCount(RATMAN_TOOTH_ID)<10 :
