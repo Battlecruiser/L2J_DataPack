@@ -50,7 +50,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = str(npc.getNpcId())
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
