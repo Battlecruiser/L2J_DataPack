@@ -109,11 +109,11 @@ class Quest (JQuest) :
    if id == COMPLETED :
       st.setState(CREATED)
       id = CREATED
-   npcid = npc.getNpcId()
+   npcId = npc.getNpcId()
    if st.getPlayer().getPet() == None :
        htmltext = error_1
        st.exitQuest(1)
-   elif st.getPlayer().getPet().getTemplate().npcId not in [12311,12312,12313] : #npcids for hatchlings
+   elif st.getPlayer().getPet().getTemplate().npcId not in [12311,12312,12313] : #npcIds for hatchlings
        htmltext = error_5
        st.exitQuest(1)
    elif st.getPlayer().getPet().getLevel() < MIN_PET_LEVEL :
@@ -125,7 +125,7 @@ class Quest (JQuest) :
    elif get_control_item(st) == 0 :
        st.exitQuest(1)
        htmltext = error_2
-   elif npcid == SG_CRONOS :
+   elif npcId == SG_CRONOS :
       if id == CREATED :
          if st.getPlayer().getLevel() < MIN_PLAYER_LEVEL :
             st.exitQuest(1)
@@ -134,7 +134,7 @@ class Quest (JQuest) :
             htmltext = qston_1
       else :
          htmltext = qston_2
-   elif npcid == FY_MYMYU :
+   elif npcId == FY_MYMYU :
      if id == STARTING :
         if st.getQuestItemsCount(FT_LEAF) == 0 and int(st.get("id")) == 0 :
            st.set("cond","2")
@@ -157,7 +157,7 @@ class Quest (JQuest) :
      leafs = st.getQuestItemsCount(FT_LEAF)
      if 0 < leafs :
         for i in range(4) :
-           if npcid == FAIRY_TREES[i][0] and (int(st.get("id")) | FAIRY_TREES[i][1] != int(st.get("id"))) :
+           if npcId == FAIRY_TREES[i][0] and (int(st.get("id")) | FAIRY_TREES[i][1] != int(st.get("id"))) :
               for j in range(2):
                  for k in range(2): 
                     st.getPcSpawn().addSpawn(GUARDIAN,FAIRY_TREES[i][2]+70*pow(-1,j%2),FAIRY_TREES[i][3]+70*pow(-1,k%2),FAIRY_TREES[i][4])

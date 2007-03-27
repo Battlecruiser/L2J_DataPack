@@ -114,7 +114,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcid == HR_SOBLING:
+   if npcId == HR_SOBLING:
       if id == CREATED :
          st.set("cond","0")
          htmltext = start
@@ -126,7 +126,7 @@ class Quest (JQuest) :
             htmltext = checkout
          else :
             htmltext = checkout2
-   elif npcid == WF_CLIFF :
+   elif npcId == WF_CLIFF :
       if id == STARTED and st.getQuestItemsCount(MST_BK) :
             htmltext = ok_part2
             st.takeItems(MST_BK,1)

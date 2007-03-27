@@ -153,7 +153,7 @@ class Quest (JQuest):
     if npcId != PET_MANAGER_MARTIN and id != SLAYED : return htmltext
 
     if id == COMPLETED: st.setState(CREATED)
-    if npcid == PET_MANAGER_MARTIN :
+    if npcId == PET_MANAGER_MARTIN :
       if id == CREATED  :
          if st.getPlayer().getLevel() < 15 :
             st.exitQuest(1)
@@ -194,11 +194,11 @@ class Quest (JQuest):
            return "Talked.htm"
         return "419_pending_talk.htm"
     elif id == SLAYED:
-      if npcid == GK_BELLA :
+      if npcId == GK_BELLA :
          return "419_bella_1.htm"
-      elif npcid == MC_ELLIE :
+      elif npcId == MC_ELLIE :
          return "419_ellie_1.htm"
-      elif npcid == GD_METTY :
+      elif npcId == GD_METTY :
          return "419_metty_1.htm"
     return
 

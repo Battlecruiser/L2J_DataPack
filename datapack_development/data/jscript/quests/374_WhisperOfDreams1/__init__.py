@@ -100,7 +100,7 @@ class Quest (JQuest) :
    id = st.getState()
    if npcId != MANAKIA and id != STARTED : return htmltext
 
-   if npcid == MANAKIA:
+   if npcId == MANAKIA:
       if id == CREATED :
          st.set("cond","0")
          st.set("allow","0")
@@ -113,7 +113,7 @@ class Quest (JQuest) :
             htmltext = "30515-3.htm"
          else :
             htmltext = "30515-3a.htm"
-   elif npcid == TORAI :
+   elif npcId == TORAI :
       if st.getQuestItemsCount(SEALD_MSTONE) :
          htmltext = "30557-1.htm"
          st.takeItems(SEALD_MSTONE,1)
