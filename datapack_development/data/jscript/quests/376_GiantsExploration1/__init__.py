@@ -138,13 +138,13 @@ class Quest (JQuest) :
  def onKill (self,npc,player) :
      # a Mysterious Book may drop to any party member that still hasn't gotten it
      partyMember = self.getRandomPartyMember(player,"awaitBook","1")
+     drop = st.getRandom(100)
      if partyMember :
         st = partyMember.getQuestState(qn) 
         if drop < DROP_RATE_2  and not st.getQuestItemsCount(MST_BK):
            st.giveItems(MST_BK,1)
            st.unset("awaitBook")
            st.playSound("ItemSound.quest_middle")
-     
      # In addition, drops go to one party member among those who are either in
      # STARTING or in STARTED state
      partyMember1 = self.getRandomPartyMemberState(player, STARTING)
@@ -160,11 +160,9 @@ class Quest (JQuest) :
          partyMember =  partyMember1
      # if there exist party members from both states, choose one randomly
      else :
-         if selectedPartyMember.getQuestState(qn).getRandom(2) :
+         if partyMember.getQuestState(qn).getRandom(2) :
              partyMember = partyMember2
      st = partyMember.getQuestState(qn)  
-     
-     drop = st.getRandom(100)
      if drop < DROP_RATE :
         st.giveItems(ANC_SCROLL,1)
         st.playSound("ItemSound.quest_itemget")
