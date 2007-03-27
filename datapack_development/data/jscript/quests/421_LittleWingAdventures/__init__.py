@@ -103,8 +103,10 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_accept")
     return htmltext
 
- def onTalk (self,npc,st):
+ def onTalk (self,npc,player):
    htmltext = default
+   st = player.getQuestState(qn)
+   if not st : return htmltext
    id = st.getState()
    if id == COMPLETED :
       st.setState(CREATED)
