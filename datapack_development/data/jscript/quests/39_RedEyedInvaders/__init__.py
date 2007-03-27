@@ -88,14 +88,14 @@ class Quest (JQuest) :
  def onKill (self,npc,player):
    npcId = npc.getNpcId()
    if npcId in [20919,20920] :
-       partyMember = self.getRandomPartyMemberState(player,"2")
+       partyMember = self.getRandomPartyMember(player,"2")
        if partyMember : 
            st = partyMember.getQuestState(qn)
            if st.getQuestItemsCount(BLACK_BONE_NECKLACE) < 100 :
               st.giveItems(BLACK_BONE_NECKLACE,1)
               return
    if npcId == 20921 :
-       partyMember = self.getRandomPartyMemberState(player,"2")
+       partyMember = self.getRandomPartyMember(player,"2")
        if partyMember : 
            st = partyMember.getQuestState(qn)
            if st.getQuestItemsCount(RED_BONE_NECKLACE) < 100 :
@@ -107,7 +107,7 @@ class Quest (JQuest) :
                st.playSound("ItemSound.quest_itemget")
              return
    if npcId in [20919,20920] :
-       partyMember = self.getRandomPartyMemberState(player,"4")
+       partyMember = self.getRandomPartyMember(player,"4")
        if partyMember : 
            st = partyMember.getQuestState(qn)
            if st.getQuestItemsCount(INCENSE_POUCH) < 30 :
@@ -119,7 +119,7 @@ class Quest (JQuest) :
                st.playSound("ItemSound.quest_itemget")
              return
    if npcId == 20925 :
-       partyMember = self.getRandomPartyMemberState(player,"4")
+       partyMember = self.getRandomPartyMember(player,"4")
        if partyMember : 
            st = partyMember.getQuestState(qn)
            if st.getQuestItemsCount(GEM_OF_MAILLE) < 30 :
