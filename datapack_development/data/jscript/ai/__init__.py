@@ -7,3 +7,4 @@ print "importing scriptable AI ..."
 from group_template import *
 from individual import *
 print"... done"
+print ""
