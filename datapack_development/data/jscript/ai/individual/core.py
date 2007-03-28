@@ -18,7 +18,7 @@ class core(JQuest) :
 
     def onAttack (self,npc,player):
         objId=npc.getObjectId()
-        if self.FirstAttack:
+        if self.FirstAttacked:
            if Rnd.get(100) : return
            npc.broadcastPacket(CreatureSay(objId,0,"Core","Removing intruders."))
         else :
