@@ -138,9 +138,9 @@ class Quest (JQuest) :
  def onKill (self,npc,player) :
      # a Mysterious Book may drop to any party member that still hasn't gotten it
      partyMember = self.getRandomPartyMember(player,"awaitBook","1")
-     drop = st.getRandom(100)
      if partyMember :
-        st = partyMember.getQuestState(qn) 
+        st = partyMember.getQuestState(qn)
+        drop = st.getRandom(100)
         if drop < DROP_RATE_2  and not st.getQuestItemsCount(MST_BK):
            st.giveItems(MST_BK,1)
            st.unset("awaitBook")
