@@ -87,15 +87,16 @@ class Quest (JQuest) :
    id = st.getState()
    if id == COMPLETED and not npcId in [30600, 30601, 30602, 30598, 30599] : return htmltext
    if id != COMPLETED and npcId in [30600, 30601, 30602, 30598, 30599] : return htmltext
-   cond=st.getInt("cond")
+
+   cond=st.getInt("cond")
    onlyone=st.getInt("onlyone")
    level=st.getPlayer().getLevel()
    npcTyp=0
    if id == CREATED :
      st.setState(STARTING)
      st.set("onlyone","0")
-   if id == COMPLETED and onlyone == 1:
-     if npcId in [30600, 30601, 30602, 30598, 30599] :
+   if npcId in [30600, 30601, 30602, 30598, 30599] :
+     if id == COMPLETED and onlyone == 1:
        st.set("onlyone","2")
        if st.getPlayer().getClassId().isMage() :
          st.giveItems(SPIRITSHOT_NOVICE,100)

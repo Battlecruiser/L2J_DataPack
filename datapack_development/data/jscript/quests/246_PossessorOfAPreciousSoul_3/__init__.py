@@ -76,8 +76,7 @@ class Quest (JQuest) :
    id = st.getState()
    if npcId != CARADINE and id != STARTED : return htmltext
 
-   if id == CREATED :
-     st.set("cond","0")
+   cond=st.getInt("cond")
    if st.getPlayer().isSubClassActive() :
      if npcId == CARADINE and cond == 0 and st.getQuestItemsCount(CARADINE_LETTER) == 1 :
        if id == COMPLETED :
