@@ -156,7 +156,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,player):
-   st = player.getQuestState(qn)  
+   st = player.getQuestState(qn)
    if not st : return
    if st.getState() != STARTED : return
 
