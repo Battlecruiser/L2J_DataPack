@@ -37,6 +37,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
+   cond=st.getInt("cond")
    if cond == 0 :
      if st.getPlayer().getLevel() >= 55 :
        htmltext = "31044-02.htm"
