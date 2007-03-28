@@ -163,7 +163,7 @@ class Quest (JQuest) :
          if partyMember.getQuestState(qn).getRandom(2) :
              partyMember = partyMember2
      st = partyMember.getQuestState(qn)  
-     if drop < DROP_RATE :
+     if st.getRandom(100) < DROP_RATE :
         st.giveItems(ANC_SCROLL,1)
         st.playSound("ItemSound.quest_itemget")
      return  
