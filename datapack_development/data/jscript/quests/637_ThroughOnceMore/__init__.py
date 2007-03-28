@@ -31,6 +31,7 @@ class Quest (JQuest) :
 
  def onTalk (self, npc, player):
    htmltext = "<html><head><body>I have nothing to say to you</body></html>"
+   st = player.getQuestState(qn)
    if st :
      id = st.getState()
      cond = st.getInt("cond")
