@@ -130,7 +130,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = dafault
+   htmltext = default
    st = player.getQuestState(qn)
    if not st : return htmltext
 
