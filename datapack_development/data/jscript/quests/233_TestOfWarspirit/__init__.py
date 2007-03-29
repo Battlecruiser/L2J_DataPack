@@ -311,8 +311,8 @@ class Quest (JQuest) :
     value,var,maxcount,chance,itemList=DROPLIST[npcId]
     random=st.getRandom(100)
 #    return the current value of the var
-    isValue = int(st.get(var))
-    if int(st.get(var)) in value and random<chance:
+    isValue = st.getInt(var)
+    if st.getInt(var) in value and random<chance:
       # special part for Noble Ants
       if npcId in [20089,20090]:
         if random>70:
