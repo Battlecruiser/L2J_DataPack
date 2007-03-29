@@ -185,6 +185,7 @@ class Quest (JQuest) :
  def onKill (self,npc,player):
     # get a random party member that awaits for drops from this quest 
     partyMember = self.getRandomPartyMember(player,"awaitsDrops","1")
+    if not partyMember : return
     st = partyMember.getQuestState(qn)
     if int(st.get("cond")) == 9 and st.getQuestItemsCount(ORB_oF_BINDING) <= 4 :
       st.giveItems(ORB_oF_BINDING,1)
