@@ -48,11 +48,11 @@ class Quest (JQuest) :
      htmltext = "<html><head><body>I have nothing to say you</body></html>"
      st = player.getQuestState(qn)
      if not st : return htmltext
-
      npcId = npc.getNpcId()
      id = st.getState()
      if npcId != 30916 and id != STARTED : return htmltext
-       level = st.getPlayer().getLevel()
+  
+     level = st.getPlayer().getLevel()
      cond = st.getInt("cond")
      if npcId==30916 :
          if id == CREATED :
@@ -76,7 +76,6 @@ class Quest (JQuest) :
      st = player.getQuestState(qn)
      if not st : return 
      if st.getState() != STARTED : return 
-   
      npcId = npc.getNpcId()
      cond = st.getInt("cond")
      random = st.getRandom(100)
@@ -96,7 +95,7 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30916)
 
 QUEST.addTalkId(30916)
-
+QUEST.addTalkId(30969)
 QUEST.addTalkId(30897)
 
 STARTED.addQuestDrop(30916,ORDER_OF_GOSTA,1)
