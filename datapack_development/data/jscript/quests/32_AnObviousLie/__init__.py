@@ -138,7 +138,7 @@ class Quest (JQuest) :
  def onKill (self,npc,player):
    st = player.getQuestState(qn)
    if not st : return
-   if st.getState() : return
+   if st.getState()<>STARTED : return
    
    chance = st.getRandom(100)
    count = st.getQuestItemsCount(MEDICINAL_HERB)
