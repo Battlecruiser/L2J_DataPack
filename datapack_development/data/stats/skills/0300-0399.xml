@@ -352,8 +352,8 @@
   <!-- has estimations for values based on L2P - needs to be finished -->
   <set name="weaponsAllowed" val="64"/>
   <table name="#mpConsume"> 18 22 27 31 34 </table>
-  <!-- table name="#crit"> 0 0 0 0 0 </table> -->
-  <table name="#Accuracy"> 3 3 3 5 5 </table>
+  <table name="#crit"> 1.1 1.1 1.1 1.1 1.1 </table>
+  <table name="#Accuracy"> 3 3 4 5 5 </table>
   <table name="#atkCountMax"> 1 1 1 1 1 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="reuseDelay" val="12000"/>
@@ -366,7 +366,9 @@
   <set name="skillTime" val="2000"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <!-- <add order="0x40" stat="cAtk" val="#crit"> -->
+      <mul order="0x30" stat="cAtk" val="#crit">
+        <using kind="Pole"/>
+      </mul>
       <add order="0x40" stat="accCombat" val="#Accuracy">
         <using kind="Pole"/>
       </add>
