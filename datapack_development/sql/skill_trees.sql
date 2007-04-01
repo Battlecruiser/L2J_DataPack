@@ -16,26 +16,26 @@ CREATE TABLE skill_trees (
 /* GLOSSARY FOR CLASS ID'S (thx Mr_Pleb_Mgoo) - Updated by DJ MELERIX
 
 HUMANS
-0=Human Fighter       | 1=Human Warrior    | 2=Gladiator        | 3=Warlord          | 4=Human Knight 
-5=Paladin             | 6=Dark Avenger     | 7=Rogue            | 8=Treasure Hunter  | 9=Hawkeye      
+0=Human Fighter       | 1=Human Warrior    | 2=Gladiator        | 3=Warlord          | 4=Human Knight
+5=Paladin             | 6=Dark Avenger     | 7=Rogue            | 8=Treasure Hunter  | 9=Hawkeye
 10=Human Mage         | 11=Human Wizard    | 12=Sorcerer/ss     | 13=Necromancer     | 14=Warlock
-15=Cleric             | 16=Bishop          | 17=Prophet 
+15=Cleric             | 16=Bishop          | 17=Prophet
 
-ELVES 
-18=Elven Fighter      | 19=Elven Knight    | 20=Temple Knight   | 21=Swordsinger     | 22=Elven Scout      
-23=Plainswalker       | 24=Silver Ranger   | 25=Elven Mage      | 26=Elven Wizard    | 27=Spellsinger 
-28=Elemental Summoner | 29=Elven Oracle    | 30=Elven Elder 
+ELVES
+18=Elven Fighter      | 19=Elven Knight    | 20=Temple Knight   | 21=Swordsinger     | 22=Elven Scout
+23=Plainswalker       | 24=Silver Ranger   | 25=Elven Mage      | 26=Elven Wizard    | 27=Spellsinger
+28=Elemental Summoner | 29=Elven Oracle    | 30=Elven Elder
 
 DARK ELVES
-31=Dark Elven Fighter | 32=Palus Knight    | 33=Shillien Knight | 34=Bladedancer     | 35=Assassin 
-36=Abyss Walker       | 37=Phantom Ranger  | 38=Dark Elven Mage | 39=Dark Wizard     | 40=Spellhowler 
-41=Phantom Summoner   | 42=Shillien Oracle | 43=Shillien Elder 
+31=Dark Elven Fighter | 32=Palus Knight    | 33=Shillien Knight | 34=Bladedancer     | 35=Assassin
+36=Abyss Walker       | 37=Phantom Ranger  | 38=Dark Elven Mage | 39=Dark Wizard     | 40=Spellhowler
+41=Phantom Summoner   | 42=Shillien Oracle | 43=Shillien Elder
 
-ORCS 
-44=Orc Fighter        | 45=Orc Raider      | 46=Destroyer       | 47=Monk            | 48=Tyrant 
-49=Orc Mage           | 50=Orc Shaman      | 51=Overlord        | 52=Warcryer 
+ORCS
+44=Orc Fighter        | 45=Orc Raider      | 46=Destroyer       | 47=Monk            | 48=Tyrant
+49=Orc Mage           | 50=Orc Shaman      | 51=Overlord        | 52=Warcryer
 
-DWARVES 
+DWARVES
 53=Dwarven Fighter    | 54=Scavenger       | 55=Bounty Hunter   | 56=Artisan         | 57=Warsmith
 
 HUMANS 3rd Professions
@@ -2424,7 +2424,7 @@ INSERT INTO skill_trees VALUES (9,417,5,'Pain of Sagittarius',2170000,74);
 INSERT INTO skill_trees VALUES (9,418,1,'Quiver of Holding',223000,58);
 INSERT INTO skill_trees VALUES (9,418,2,'Quiver of Holding',580000,66);
 INSERT INTO skill_trees VALUES (9,418,3,'Quiver of Holding',2170000,74);
-INSERT INTO skill_trees VALUES (10,118,1,'Magicians Movement',0,1);
+INSERT INTO skill_trees VALUES (10,118,1,'Magician\'s Movement',0,1);
 INSERT INTO skill_trees VALUES (10,146,1,'Anti Magic',240,7);
 INSERT INTO skill_trees VALUES (10,146,2,'Anti Magic',240,7);
 INSERT INTO skill_trees VALUES (10,146,3,'Anti Magic',1100,14);
@@ -3728,6 +3728,7 @@ INSERT INTO skill_trees VALUES (14,1386,7,'Arcane Disruption',550000,68);
 INSERT INTO skill_trees VALUES (14,1386,8,'Arcane Disruption',550000,70);
 INSERT INTO skill_trees VALUES (14,1386,9,'Arcane Disruption',1070000,72);
 INSERT INTO skill_trees VALUES (14,1386,10,'Arcane Disruption',1350000,74);
+INSERT INTO skill_trees VALUES (14,1403,12,'Summon Friend',105000,56);
 INSERT INTO skill_trees VALUES (15,146,5,'Anti Magic',1600,20);
 INSERT INTO skill_trees VALUES (15,146,6,'Anti Magic',1600,20);
 INSERT INTO skill_trees VALUES (15,146,7,'Anti Magic',3400,25);
@@ -6133,7 +6134,7 @@ INSERT INTO skill_trees VALUES (24,415,3,'Spirit of Sagittarius',2000000,74);
 INSERT INTO skill_trees VALUES (24,416,1,'Blessing of Sagittarius',200000,58);
 INSERT INTO skill_trees VALUES (24,416,2,'Blessing of Sagittarius',540000,66);
 INSERT INTO skill_trees VALUES (24,416,3,'Blessing of Sagittarius',2000000,74);
-INSERT INTO skill_trees VALUES (25,118,1,'Magicians Movement',0,1);
+INSERT INTO skill_trees VALUES (25,118,1,'Magician\'s Movement',0,1);
 INSERT INTO skill_trees VALUES (25,146,1,'Anti Magic',260,7);
 INSERT INTO skill_trees VALUES (25,146,2,'Anti Magic',260,7);
 INSERT INTO skill_trees VALUES (25,146,3,'Anti Magic',1100,14);
@@ -7044,6 +7045,7 @@ INSERT INTO skill_trees VALUES (28,1384,2,'Mass Surrender to Water',250000,62);
 INSERT INTO skill_trees VALUES (28,1384,3,'Mass Surrender to Water',440000,66);
 INSERT INTO skill_trees VALUES (28,1384,4,'Mass Surrender to Water',550000,70);
 INSERT INTO skill_trees VALUES (28,1384,5,'Mass Surrender to Water',1350000,74);
+INSERT INTO skill_trees VALUES (28,1403,12,'Summon Friend',105000,56);
 INSERT INTO skill_trees VALUES (29,146,5,'Anti Magic',1600,20);
 INSERT INTO skill_trees VALUES (29,146,6,'Anti Magic',1600,20);
 INSERT INTO skill_trees VALUES (29,146,7,'Anti Magic',3200,25);
@@ -9276,7 +9278,7 @@ INSERT INTO skill_trees VALUES (37,417,2,'Pain of Sagittarius',270000,62);
 INSERT INTO skill_trees VALUES (37,417,3,'Pain of Sagittarius',410000,66);
 INSERT INTO skill_trees VALUES (37,417,4,'Pain of Sagittarius',620000,70);
 INSERT INTO skill_trees VALUES (37,417,5,'Pain of Sagittarius',1530000,74);
-INSERT INTO skill_trees VALUES (38,118,1,'Magicians Movement',0,1);
+INSERT INTO skill_trees VALUES (38,118,1,'Magician\'s Movement',0,1);
 INSERT INTO skill_trees VALUES (38,146,1,'Anti Magic',240,7);
 INSERT INTO skill_trees VALUES (38,146,2,'Anti Magic',240,7);
 INSERT INTO skill_trees VALUES (38,146,3,'Anti Magic',1100,14);
@@ -10188,6 +10190,7 @@ INSERT INTO skill_trees VALUES (41,1385,2,'Mass Surrender to Wind',250000,62);
 INSERT INTO skill_trees VALUES (41,1385,3,'Mass Surrender to Wind',440000,66);
 INSERT INTO skill_trees VALUES (41,1385,4,'Mass Surrender to Wind',550000,70);
 INSERT INTO skill_trees VALUES (41,1385,5,'Mass Surrender to Wind',1350000,74);
+INSERT INTO skill_trees VALUES (41,1403,12,'Summon Friend',105000,56);
 INSERT INTO skill_trees VALUES (42,146,5,'Anti Magic',1600,20);
 INSERT INTO skill_trees VALUES (42,146,6,'Anti Magic',1600,20);
 INSERT INTO skill_trees VALUES (42,146,7,'Anti Magic',3200,25);
@@ -11536,7 +11539,7 @@ INSERT INTO skill_trees VALUES (48,424,1,'War Frenzy',223000,58);
 INSERT INTO skill_trees VALUES (48,424,2,'War Frenzy',540000,66);
 INSERT INTO skill_trees VALUES (48,424,3,'War Frenzy',2000000,74);
 INSERT INTO skill_trees VALUES (48,425,1,'Hawk Spirit Totem',2000000,74);
-INSERT INTO skill_trees VALUES (49,118,1,'Magicians Movement',0,1);
+INSERT INTO skill_trees VALUES (49,118,1,'Magician\'s Movement',0,1);
 INSERT INTO skill_trees VALUES (49,134,1,'Toughness',0,1);
 INSERT INTO skill_trees VALUES (49,146,1,'Anti Magic',260,7);
 INSERT INTO skill_trees VALUES (49,146,2,'Anti Magic',260,7);
@@ -11631,7 +11634,7 @@ INSERT INTO skill_trees VALUES (50,253,10,'Heavy Armor Mastery',8800,35);
 INSERT INTO skill_trees VALUES (50,1001,3,'Soul Cry',5800,25);
 INSERT INTO skill_trees VALUES (50,1001,4,'Soul Cry',18000,35);
 INSERT INTO skill_trees VALUES (50,1002,1,'Flame Chant',11000,30);
-INSERT INTO skill_trees VALUES (50,1003,1,'Paagrian Gift',11000,30);
+INSERT INTO skill_trees VALUES (50,1003,1,'Pa\'agrian Gift',11000,30);
 INSERT INTO skill_trees VALUES (50,1005,1,'Blessings of Pa\'agrio',18000,35);
 INSERT INTO skill_trees VALUES (50,1006,1,'Chant of Fire',2900,20);
 INSERT INTO skill_trees VALUES (50,1007,2,'Chant of Battle',5800,25);
@@ -11906,8 +11909,8 @@ INSERT INTO skill_trees VALUES (51,1001,7,'Soul Cry',67000,56);
 INSERT INTO skill_trees VALUES (51,1001,8,'Soul Cry',130000,60);
 INSERT INTO skill_trees VALUES (51,1001,9,'Soul Cry',290000,66);
 INSERT INTO skill_trees VALUES (51,1001,10,'Soul Cry',600000,72);
-INSERT INTO skill_trees VALUES (51,1003,2,'Paagrian Gift',22000,40);
-INSERT INTO skill_trees VALUES (51,1003,3,'Paagrian Gift',40000,48);
+INSERT INTO skill_trees VALUES (51,1003,2,'Pa\'agrian Gift',22000,40);
+INSERT INTO skill_trees VALUES (51,1003,3,'Pa\'agrian Gift',40000,48);
 INSERT INTO skill_trees VALUES (51,1004,1,'The Wisdom of Pa\'agrio',22000,40);
 INSERT INTO skill_trees VALUES (51,1004,2,'The Wisdom of Pa\'agrio',40000,48);
 INSERT INTO skill_trees VALUES (51,1004,3,'The Wisdom of Pa\'agrio',67000,56);
@@ -12115,8 +12118,8 @@ INSERT INTO skill_trees VALUES (51,1260,2,'The Tact of Pa\'agrio',40000,48);
 INSERT INTO skill_trees VALUES (51,1260,3,'The Tact of Pa\'agrio',67000,56);
 INSERT INTO skill_trees VALUES (51,1261,1,'The Rage of Pa\'agrio',28000,44);
 INSERT INTO skill_trees VALUES (51,1261,2,'The Rage of Pa\'agrio',64000,52);
-INSERT INTO skill_trees VALUES (51,1282,1,'Paagrian Haste',100000,58);
-INSERT INTO skill_trees VALUES (51,1282,2,'Paagrian Haste',200000,64);
+INSERT INTO skill_trees VALUES (51,1282,1,'Pa\'agrian Haste',100000,58);
+INSERT INTO skill_trees VALUES (51,1282,2,'Pa\'agrian Haste',200000,64);
 INSERT INTO skill_trees VALUES (51,1283,1,'Soul Guard',28000,44);
 INSERT INTO skill_trees VALUES (51,1283,2,'Soul Guard',40000,48);
 INSERT INTO skill_trees VALUES (51,1283,3,'Soul Guard',64000,52);
@@ -12496,7 +12499,6 @@ INSERT INTO skill_trees VALUES (53,142,3,'Armor Mastery',550,10);
 INSERT INTO skill_trees VALUES (53,142,4,'Armor Mastery',3300,15);
 INSERT INTO skill_trees VALUES (53,142,5,'Armor Mastery',3300,15);
 INSERT INTO skill_trees VALUES (53,150,1,'Weight Limit',1100,10);
-/* INSERT INTO skill_trees VALUES (53,165,1,'Trade',6700,15); -- where did this come from? */
 INSERT INTO skill_trees VALUES (53,254,1,'Spoil',1100,10);
 INSERT INTO skill_trees VALUES (54,34,1,'Bandage',4100,20);
 INSERT INTO skill_trees VALUES (54,100,1,'Stun Attack',1400,20);
@@ -13526,223 +13528,86 @@ INSERT INTO skill_trees VALUES (43,1035,4,'Mental Shield',125000,56);
 -- Create Common Item 1320 (Done by DJ MELERIX)
 
 INSERT INTO skill_trees VALUES (0,1320,1,'Create Common Item',0,1);
-INSERT INTO skill_trees VALUES (1,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (1,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (1,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (2,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (2,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (2,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (2,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (2,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (3,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (3,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (3,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (3,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (3,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (4,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (4,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (4,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (5,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (5,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (5,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (5,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (5,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (6,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (6,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (6,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (6,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (6,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (7,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (7,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (7,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (8,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (8,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (8,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (8,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (8,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (9,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (9,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (9,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (9,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (9,1320,9,'Create Common Item',0,70);
+INSERT INTO skill_trees VALUES (0,1320,2,'Create Common Item',0,20);
+INSERT INTO skill_trees VALUES (0,1320,3,'Create Common Item',0,28);
+INSERT INTO skill_trees VALUES (0,1320,4,'Create Common Item',0,36);
+INSERT INTO skill_trees VALUES (0,1320,5,'Create Common Item',0,43);
+INSERT INTO skill_trees VALUES (0,1320,6,'Create Common Item',0,49);
+INSERT INTO skill_trees VALUES (0,1320,7,'Create Common Item',0,55);
+INSERT INTO skill_trees VALUES (0,1320,8,'Create Common Item',0,62);
+INSERT INTO skill_trees VALUES (0,1320,9,'Create Common Item',0,70);
 INSERT INTO skill_trees VALUES (10,1320,1,'Create Common Item',0,1);
-INSERT INTO skill_trees VALUES (11,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (11,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (11,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (12,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (12,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (12,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (12,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (12,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (13,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (13,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (13,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (13,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (13,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (14,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (14,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (14,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (14,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (14,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (15,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (15,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (15,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (16,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (16,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (16,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (16,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (16,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (17,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (17,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (17,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (17,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (17,1320,9,'Create Common Item',0,70);
+INSERT INTO skill_trees VALUES (10,1320,2,'Create Common Item',0,20);
+INSERT INTO skill_trees VALUES (10,1320,3,'Create Common Item',0,28);
+INSERT INTO skill_trees VALUES (10,1320,4,'Create Common Item',0,36);
+INSERT INTO skill_trees VALUES (10,1320,5,'Create Common Item',0,43);
+INSERT INTO skill_trees VALUES (10,1320,6,'Create Common Item',0,49);
+INSERT INTO skill_trees VALUES (10,1320,7,'Create Common Item',0,55);
+INSERT INTO skill_trees VALUES (10,1320,8,'Create Common Item',0,62);
+INSERT INTO skill_trees VALUES (10,1320,9,'Create Common Item',0,70);
 INSERT INTO skill_trees VALUES (18,1320,1,'Create Common Item',0,1);
-INSERT INTO skill_trees VALUES (19,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (19,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (19,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (20,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (20,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (20,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (20,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (20,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (21,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (21,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (21,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (21,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (21,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (22,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (22,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (22,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (23,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (23,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (23,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (23,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (23,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (24,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (24,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (24,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (24,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (24,1320,9,'Create Common Item',0,70);
+INSERT INTO skill_trees VALUES (18,1320,2,'Create Common Item',0,20);
+INSERT INTO skill_trees VALUES (18,1320,3,'Create Common Item',0,28);
+INSERT INTO skill_trees VALUES (18,1320,4,'Create Common Item',0,36);
+INSERT INTO skill_trees VALUES (18,1320,5,'Create Common Item',0,43);
+INSERT INTO skill_trees VALUES (18,1320,6,'Create Common Item',0,49);
+INSERT INTO skill_trees VALUES (18,1320,7,'Create Common Item',0,55);
+INSERT INTO skill_trees VALUES (18,1320,8,'Create Common Item',0,62);
+INSERT INTO skill_trees VALUES (18,1320,9,'Create Common Item',0,70);
 INSERT INTO skill_trees VALUES (25,1320,1,'Create Common Item',0,1);
-INSERT INTO skill_trees VALUES (26,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (26,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (26,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (27,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (27,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (27,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (27,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (27,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (28,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (28,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (28,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (28,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (28,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (29,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (29,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (29,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (30,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (30,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (30,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (30,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (30,1320,9,'Create Common Item',0,70);
+INSERT INTO skill_trees VALUES (25,1320,2,'Create Common Item',0,20);
+INSERT INTO skill_trees VALUES (25,1320,3,'Create Common Item',0,28);
+INSERT INTO skill_trees VALUES (25,1320,4,'Create Common Item',0,36);
+INSERT INTO skill_trees VALUES (25,1320,5,'Create Common Item',0,43);
+INSERT INTO skill_trees VALUES (25,1320,6,'Create Common Item',0,49);
+INSERT INTO skill_trees VALUES (25,1320,7,'Create Common Item',0,55);
+INSERT INTO skill_trees VALUES (25,1320,8,'Create Common Item',0,62);
+INSERT INTO skill_trees VALUES (25,1320,9,'Create Common Item',0,70);
 INSERT INTO skill_trees VALUES (31,1320,1,'Create Common Item',0,1);
-INSERT INTO skill_trees VALUES (32,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (32,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (32,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (33,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (33,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (33,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (33,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (33,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (34,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (34,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (34,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (34,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (34,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (35,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (35,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (35,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (36,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (36,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (36,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (36,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (36,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (37,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (37,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (37,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (37,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (37,1320,9,'Create Common Item',0,70);
+INSERT INTO skill_trees VALUES (31,1320,2,'Create Common Item',0,20);
+INSERT INTO skill_trees VALUES (31,1320,3,'Create Common Item',0,28);
+INSERT INTO skill_trees VALUES (31,1320,4,'Create Common Item',0,36);
+INSERT INTO skill_trees VALUES (31,1320,5,'Create Common Item',0,43);
+INSERT INTO skill_trees VALUES (31,1320,6,'Create Common Item',0,49);
+INSERT INTO skill_trees VALUES (31,1320,7,'Create Common Item',0,55);
+INSERT INTO skill_trees VALUES (31,1320,8,'Create Common Item',0,62);
+INSERT INTO skill_trees VALUES (31,1320,9,'Create Common Item',0,70);
 INSERT INTO skill_trees VALUES (38,1320,1,'Create Common Item',0,1);
-INSERT INTO skill_trees VALUES (39,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (39,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (39,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (40,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (40,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (40,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (40,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (40,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (41,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (41,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (41,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (41,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (41,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (42,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (42,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (42,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (43,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (43,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (43,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (43,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (43,1320,9,'Create Common Item',0,70);
+INSERT INTO skill_trees VALUES (38,1320,2,'Create Common Item',0,20);
+INSERT INTO skill_trees VALUES (38,1320,3,'Create Common Item',0,28);
+INSERT INTO skill_trees VALUES (38,1320,4,'Create Common Item',0,36);
+INSERT INTO skill_trees VALUES (38,1320,5,'Create Common Item',0,43);
+INSERT INTO skill_trees VALUES (38,1320,6,'Create Common Item',0,49);
+INSERT INTO skill_trees VALUES (38,1320,7,'Create Common Item',0,55);
+INSERT INTO skill_trees VALUES (38,1320,8,'Create Common Item',0,62);
+INSERT INTO skill_trees VALUES (38,1320,9,'Create Common Item',0,70);
 INSERT INTO skill_trees VALUES (44,1320,1,'Create Common Item',0,1);
-INSERT INTO skill_trees VALUES (45,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (45,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (45,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (46,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (46,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (46,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (46,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (46,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (47,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (47,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (47,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (48,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (48,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (48,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (48,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (48,1320,9,'Create Common Item',0,70);
+INSERT INTO skill_trees VALUES (44,1320,2,'Create Common Item',0,20);
+INSERT INTO skill_trees VALUES (44,1320,3,'Create Common Item',0,28);
+INSERT INTO skill_trees VALUES (44,1320,4,'Create Common Item',0,36);
+INSERT INTO skill_trees VALUES (44,1320,5,'Create Common Item',0,43);
+INSERT INTO skill_trees VALUES (44,1320,6,'Create Common Item',0,49);
+INSERT INTO skill_trees VALUES (44,1320,7,'Create Common Item',0,55);
+INSERT INTO skill_trees VALUES (44,1320,8,'Create Common Item',0,62);
+INSERT INTO skill_trees VALUES (44,1320,9,'Create Common Item',0,70);
 INSERT INTO skill_trees VALUES (49,1320,1,'Create Common Item',0,1);
-INSERT INTO skill_trees VALUES (50,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (50,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (50,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (51,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (51,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (51,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (51,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (51,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (52,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (52,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (52,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (52,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (52,1320,9,'Create Common Item',0,70);
+INSERT INTO skill_trees VALUES (49,1320,2,'Create Common Item',0,20);
+INSERT INTO skill_trees VALUES (49,1320,3,'Create Common Item',0,28);
+INSERT INTO skill_trees VALUES (49,1320,4,'Create Common Item',0,36);
+INSERT INTO skill_trees VALUES (49,1320,5,'Create Common Item',0,43);
+INSERT INTO skill_trees VALUES (49,1320,6,'Create Common Item',0,49);
+INSERT INTO skill_trees VALUES (49,1320,7,'Create Common Item',0,55);
+INSERT INTO skill_trees VALUES (49,1320,8,'Create Common Item',0,62);
+INSERT INTO skill_trees VALUES (49,1320,9,'Create Common Item',0,70);
 INSERT INTO skill_trees VALUES (53,1320,1,'Create Common Item',0,1);
-INSERT INTO skill_trees VALUES (54,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (54,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (54,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (55,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (55,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (55,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (55,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (55,1320,9,'Create Common Item',0,70);
-INSERT INTO skill_trees VALUES (56,1320,2,'Create Common Item',0,20);
-INSERT INTO skill_trees VALUES (56,1320,3,'Create Common Item',0,28);
-INSERT INTO skill_trees VALUES (56,1320,4,'Create Common Item',0,36);
-INSERT INTO skill_trees VALUES (57,1320,5,'Create Common Item',0,43);
-INSERT INTO skill_trees VALUES (57,1320,6,'Create Common Item',0,49);
-INSERT INTO skill_trees VALUES (57,1320,7,'Create Common Item',0,55);
-INSERT INTO skill_trees VALUES (57,1320,8,'Create Common Item',0,62);
-INSERT INTO skill_trees VALUES (57,1320,9,'Create Common Item',0,70);
+INSERT INTO skill_trees VALUES (53,1320,2,'Create Common Item',0,20);
+INSERT INTO skill_trees VALUES (53,1320,3,'Create Common Item',0,28);
+INSERT INTO skill_trees VALUES (53,1320,4,'Create Common Item',0,36);
+INSERT INTO skill_trees VALUES (53,1320,5,'Create Common Item',0,43);
+INSERT INTO skill_trees VALUES (53,1320,6,'Create Common Item',0,49);
+INSERT INTO skill_trees VALUES (53,1320,7,'Create Common Item',0,55);
+INSERT INTO skill_trees VALUES (53,1320,8,'Create Common Item',0,62);
+INSERT INTO skill_trees VALUES (53,1320,9,'Create Common Item',0,70);
 
 -- Common Craft 1322 (Done by DJ MELERIX)
 
