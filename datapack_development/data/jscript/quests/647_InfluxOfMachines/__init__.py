@@ -50,7 +50,7 @@ class Quest (JQuest) :
         cond = st.getInt("cond")
         count = st.getQuestItemsCount(DESTROYED_GOLEM_SHARD)
         if cond == 0 :
-            if st.getPlayer().getLevel() >= 46 :
+            if player.getLevel() >= 46 :
                 htmltext = "32069-01.htm"
             else:
                 htmltext = "32069-03.htm"
@@ -98,7 +98,7 @@ QUEST.addTalkId(32069)
 for i in range(22052,22079):
    QUEST.addKillId(i)
 
-STARTED.addQuestDrop(8100,DESTROYED_GOLEM_SHARD,1)
+STARTED.addQuestDrop(32069,DESTROYED_GOLEM_SHARD,1)
 
 print "importing quests: 647: Influx of Machines"
 
