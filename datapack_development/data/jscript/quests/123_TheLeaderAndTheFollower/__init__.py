@@ -83,11 +83,11 @@ class Quest (JQuest) :
    cond = st.getInt("cond") 
    if id==COMPLETED:
      htmltext = "<html><head><body>This quest have already been completed.</body></html>" 
-   elif st.getPlayer().getClan() == None :
+   elif player.getClan() == None :
      htmltext = "31961-00.htm"
      st.exitQuest(1)
-   elif st.getPlayer().getPledgeType() == -1 :
-     if st.getPlayer().getLevel() < 19 or not st.getPlayer().getSponsor() :
+   elif player.getPledgeType() == -1 :
+     if player.getLevel() < 19 or not player.getSponsor() :
        htmltext = "31961-00.htm"
        st.exitQuest(1)
      else :
@@ -124,43 +124,46 @@ class Quest (JQuest) :
          st.unset("settype")
          st.setState(COMPLETED) 
          st.playSound("ItemSound.quest_finish")
-   elif st.getPlayer().getApprentice() :
-     cm_apprentice = st.getPlayer().getClan().getClanMember(st.getPlayer().getApprentice())
-     if cm_apprentice.isOnline():
-        apprentice = cm_apprentice.getPlayerInstance()
-        if apprentice :
-           ap_quest=apprentice.getQuestState(qn)
-           if ap_quest :
-              ap_cond=ap_quest.getInt("cond")
-              if ap_cond == 3 :
-                 htmltext = "31961-09a.htm"
-              elif ap_cond == 4 :
-                 htmltext = "31961-09b.htm"
-              elif ap_cond == 5 :
-                 htmltext = "31961-09c.htm"
+   elif player.getApprentice() :
+     cm_apprentice = player.getClan().getClanMember(player.getApprentice())
+     if cm_apprentice:
+        if cm_apprentice.isOnline():
+           apprentice = cm_apprentice.getPlayerInstance()
+           if apprentice :
+              ap_quest=apprentice.getQuestState(qn)
+              if ap_quest :
+                 ap_cond=ap_quest.getInt("cond")
+                 if ap_cond == 3 :
+                    htmltext = "31961-09a.htm"
+                 elif ap_cond == 4 :
+                    htmltext = "31961-09b.htm"
+                 elif ap_cond == 5 :
+                    htmltext = "31961-09c.htm"
+                 else :
+                    if DEBUG : htmltext = "31961-FF.htm"
+                    st.exitQuest(1)
               else :
-                 if DEBUG : htmltext = "31961-FF.htm"
-                 st.exitQuest(1)
+                if DEBUG: htmltext = "31961-FE.htm"
+                st.exitQuest(1)
            else :
-             if DEBUG: htmltext = "31961-FE.htm"
+             if DEBUG: htmltext = "31961-FD.htm"
              st.exitQuest(1)
         else :
-          if DEBUG: htmltext = "31961-FD.htm"
-          st.exitQuest(1)
+           if DEBUG:htmltext = "31961-FC.htm"
+           st.exitQuest(1)
      else :
-       if DEBUG:htmltext = "31961-FC.htm"
+       if DEBUG:htmltext = "31961-FB.htm"
        st.exitQuest(1)
    else :
-     if DEBUG:htmltext = "31961-FB.htm"
+     if DEBUG:htmltext = "31961-FA.htm"
      st.exitQuest(1)
    return htmltext
 
  def onKill (Self,npc,player):
     st = player.getQuestState(qn)
     if not st : return
-    if st.getState() != PROGRESS : return
-     
-    sponsor = st.getPlayer().getSponsor()
+    if st.getState() <> PROGRESS : return
+    sponsor = player.getSponsor()
     if not sponsor:
       st.exitQuest(1)
       return
@@ -168,11 +171,12 @@ class Quest (JQuest) :
     count,enabled=st.getQuestItemsCount(item),True
     if check :
        enabled=False
-       cm_sponsor = st.getPlayer().getClan().getClanMember(st.getPlayer().getSponsor())
-       if cm_sponsor.isOnline():
-          sponsor = cm_sponsor.getPlayerInstance()
-          if sponsor :
-            if st.getPlayer().isInsideRadius(sponsor, 1100, 1, 0) :
+       cm_sponsor = player.getClan().getClanMember(sponsor)
+       if cm_sponsor :
+         if cm_sponsor.isOnline():
+           sponsor = cm_sponsor.getPlayerInstance()
+           if sponsor :
+             if player.isInsideRadius(sponsor, 1100, 1, 0) :
                enabled=True
     if st.getInt("cond") == cond and count < max and st.getRandom(100) < chance and enabled :
        st.giveItems(item,1)
