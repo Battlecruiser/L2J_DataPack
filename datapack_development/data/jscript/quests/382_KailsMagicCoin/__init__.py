@@ -5,10 +5,7 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-QuestNumber      = 382
-QuestName        = "KailsMagicCoin"
-QuestDescription = "Kail's Magic Coin"
-qn = "382_Kail's Magic Coin"
+qn = "382_KailsMagicCoin"
 
 #Messages
 default = "<html><head><body>I have nothing to say to you.</body></html>"
@@ -40,11 +37,10 @@ class Quest (JQuest) :
       htmltext = default
       st = player.getQuestState(qn)
       if not st : return htmltext
-
       npcId = npc.getNpcId()
       id = st.getState()
       cond=st.getInt("cond")
-      if st.getQuestItemsCount(ROYAL_MEMBERSHIP) == 0 or st.getPlayer().getLevel() < 55 :
+      if st.getQuestItemsCount(ROYAL_MEMBERSHIP) == 0 or player.getLevel() < 55 :
          htmltext = "30687-01.htm"
          st.exitQuest(1)
       else :
@@ -57,15 +53,14 @@ class Quest (JQuest) :
   def onKill (self,npc,player):
       st = player.getQuestState(qn)
       if not st : return 
-      if st.getState() != STARTED : return 
-   
+      if st.getState() <> STARTED : return 
       if st.getRandom(100) < CHANCE and st.getQuestItemsCount(ROYAL_MEMBERSHIP) :
          npcId = npc.getNpcId()
          st.giveItems(MOBS[npcId][st.getRandom(len(MOBS[npcId]))],1)
          st.playSound("ItemSound.quest_itemget")
       return
 
-QUEST       = Quest(QuestNumber, str(QuestNumber)+"_"+QuestName, QuestDescription)
+QUEST       = Quest(382, qn, "Kail's Magic Coin")
 CREATED     = State('Start',     QUEST)
 STARTED     = State('Started',   QUEST)
 
@@ -80,4 +75,4 @@ for npc in MOBS.keys():
 for coin in range(5961,5964):
     STARTED.addQuestDrop(coin,VERGARA,1)
 
-print "importing quests: "+str(QuestNumber)+": "+QuestDescription
+print "importing quests: 382: Kail's Magic Coin"
