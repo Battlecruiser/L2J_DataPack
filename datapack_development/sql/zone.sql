@@ -31,9 +31,9 @@ insert into zone values (3, 'Castle Area', 'Giran', 105737, 140128, 121331, 1498
 insert into zone values (4, 'Castle Area', 'Oren', 72876, 32336, 87556, 40457, 0, 0 ,5);
 insert into zone values (5, 'Castle Area', 'Aden', 134790, -2552, 154760, 20850, 0, 0, 0);
 insert into zone values (6, 'Castle Area', 'Innadril', 111975, 241396, 120720, 253425, 0, 0 ,5);
-insert into zone values (7, 'Castle Area', 'Goddard', 142931, -52434, 152986, -38558, 0, 0 ,8);
-insert into zone values (8, 'Castle Area', 'Rune', 7000, -55500, 27000, -41716, 0, 0, 8);
-insert into zone values (9, 'Castle Area', 'Schuttgart', 73000, -156600, 80740, -147592, 0, 0, 8);
+insert into zone values (7, 'Castle Area', 'Goddard', 139904, -61248, 1552712, -43712, 0, 0 ,8);
+insert into zone values (8, 'Castle Area', 'Rune', 768, -58048, 25152, -42624, 0, 0, 8);
+insert into zone values (9, 'Castle Area', 'Schuttgart', 71104, 160960, 84672, -147776, 0, 0, 8);
 
 insert into zone values (1, 'Castle HQ', 'Gludio', -20400, 106800, -15700, 113750, 0, 0 ,5);
 insert into zone values (2, 'Castle HQ', 'Dion', 19650, 163000, 24350, 155950, 0, 0 ,5);
@@ -43,7 +43,17 @@ insert into zone values (5, 'Castle HQ', 'Aden', 144600, 550, 150300, 8550, 0, 0
 insert into zone values (6, 'Castle HQ', 'Innadril', 111975, 241396, 120720, 253425, 0, 0 ,5);
 insert into zone values (7, 'Castle HQ', 'Goddard', 142931, -52434, 152986, -41716, 0, 0 ,8);
 insert into zone values (8, 'Castle HQ', 'Rune', 7000, -52500, 18493, -45900, -547, 0, 8);
-insert into zone values (9, 'Castle HQ', 'Schuttgart', 77200, -153000, 77900, -478700, -545, 0, 8);
+insert into zone values (9, 'Castle HQ', 'Schuttgart', 73694, -156000, 81286, -149400, -700, 1750, 8);
+
+insert into zone values (1, 'Siege Battlefield', 'Gludio', -22900, 104000, -14567, 116513, 0, 0, 0);
+insert into zone values (2, 'Siege Battlefield', 'Dion', 18438, 152343, 25757, 164097, 0, 0, 0);
+insert into zone values (3, 'Siege Battlefield', 'Giran', 105737, 140128, 121331, 149842, 0, 0, 0);
+insert into zone values (4, 'Siege Battlefield', 'Oren', 72876, 32336, 87556, 40457, 0, 0, 0);
+insert into zone values (5, 'Siege Battlefield', 'Aden', 134790, -2552, 154760, 20850, 0, 0, 0);
+insert into zone values (6, 'Siege Battlefield', 'Innadril', 111975, 241396, 120720, 253425, 0, 0, 0);
+insert into zone values (7, 'Siege Battlefield', 'Goddard', 142931, -52434, 152986, -38558, 0, 0, 0);
+insert into zone values (8, 'Siege Battlefield', 'Rune', 7000, -55500, 27000, -41716, 0, 0, 0);
+insert into zone values (9, 'Siege Battlefield', 'Schuttgart', 73000, -156600, 80740, -147592, 0, 0, 0);
 
 insert into zone values (1, 'Castle Defender Spawn', 'Gludio', -18105, 110303, 0, 0, -2146, 0, 0);
 insert into zone values (2, 'Castle Defender Spawn', 'Dion', 22080, 159450, 0, 0, -2441, 0, 0);
@@ -131,16 +141,6 @@ insert into zone values (4, 'Peace', 'Monster Track', 11703, 183017, 11955, 1842
 insert into zone values (4, 'Peace', 'Monster Track', 11955, 184008, 12937, 184260, -3564, 0, 0);
 insert into zone values (4, 'Peace', 'Monster Track', 12937, 183017, 13192, 184260, -3564, 0, 0);
 
-insert into zone values (1, 'Siege Battlefield', 'Gludio', -22900, 104000, -14567, 116513, 0, 0, 0);
-insert into zone values (2, 'Siege Battlefield', 'Dion', 18438, 152343, 25757, 164097, 0, 0, 0);
-insert into zone values (3, 'Siege Battlefield', 'Giran', 105737, 140128, 121331, 149842, 0, 0, 0);
-insert into zone values (4, 'Siege Battlefield', 'Oren', 72876, 32336, 87556, 40457, 0, 0, 0);
-insert into zone values (5, 'Siege Battlefield', 'Aden', 134790, -2552, 154760, 20850, 0, 0, 0);
-insert into zone values (6, 'Siege Battlefield', 'Innadril', 111975, 241396, 120720, 253425, 0, 0, 0);
-insert into zone values (7, 'Siege Battlefield', 'Goddard', 142931, -52434, 152986, -38558, 0, 0, 0);
-insert into zone values (8, 'Siege Battlefield', 'Rune', 7000, -55500, 27000, -41716, 0, 0, 0);
-insert into zone values (9, 'Siege Battlefield', 'Schuttgart', 73000, -156600, 80740, -147592, 0, 0, 0);
-
 insert into zone values (1, 'Town', 'DE Village', 6063, 19664, 17248, 14019, 0,0, 4);
 insert into zone values (2, 'Town', 'Talking Island', -87312, 240096, -81129, 246345, 0,0, 1);
 insert into zone values (3, 'Town', 'Elven Village', 48294, 52995, 42402, 46155, 0,0, 4);
@@ -187,7 +187,7 @@ insert into zone values (5, 'Underground', 'School of Dark Arts', -38741, 55152,
 insert into zone values (6, 'Underground', 'Ants Nest', 917, 165166, -45452, 201937, -6000, 0, 0);
 insert into zone values (7, 'Underground', 'Elven Fortress', 6068, 88790, 36734, 69188, -6000, 0, 0);
 insert into zone values (8, 'Underground', 'Ivory Tower', 76563, 27040, 98577, 7238, -6000, 0, 0);
-insert into zone values (9, 'Underground', 'Hunter Village', 1234573, 68112, 98542, 92245, -6000, 0, 0);
+insert into zone values (9, 'Underground', 'Hunter Village', 123457, 68112, 98542, 92245, -6000, 0, 0);
 insert into zone values (10, 'Underground', 'DE Village', 34061, 8905, -7877, 26384, -6000, 0, 0);
 insert into zone values (11, 'Underground', 'Ruins of Despair', -1231, 131977, -31364, 160147, -5000, 0, 0);
 insert into zone values (12, 'Underground', 'Gludin North Road', -77276, 134858, -69590, 120547, -5000, 0, 0);
