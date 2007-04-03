@@ -31,7 +31,7 @@ insert into zone values (3, 'Castle Area', 'Giran', 105737, 140128, 121331, 1498
 insert into zone values (4, 'Castle Area', 'Oren', 72876, 32336, 87556, 40457, 0, 0 ,5);
 insert into zone values (5, 'Castle Area', 'Aden', 134790, -2552, 154760, 20850, 0, 0, 0);
 insert into zone values (6, 'Castle Area', 'Innadril', 111975, 241396, 120720, 253425, 0, 0 ,5);
-insert into zone values (7, 'Castle Area', 'Goddard', 139904, -61248, 1552712, -43712, 0, 0 ,8);
+insert into zone values (7, 'Castle Area', 'Goddard', 139904, -61248, 154256, -43712, 0, 0 ,8);
 insert into zone values (8, 'Castle Area', 'Rune', 768, -58048, 25152, -42624, 0, 0, 8);
 insert into zone values (9, 'Castle Area', 'Schuttgart', 71104, 160960, 84672, -147776, 0, 0, 8);
 
