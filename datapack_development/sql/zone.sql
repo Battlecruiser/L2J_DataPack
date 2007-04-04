@@ -155,7 +155,7 @@ insert into zone values (9, 'Town', 'Giran Castle Town', 76995, 141424, 90565, 1
 insert into zone values (10, 'Town', 'Town of Oren', 76696, 57199, 84511, 50120, 0,0, 4);
 insert into zone values (11, 'Town', 'Hunter Village', 121308, 73941, 114667, 80383, 0,0, 5);
 insert into zone values (12, 'Town', 'Town of Aden', 142312, 32317, 152163, 19708, 0,0, 5);
-insert into zone values (13, 'Town', 'Goddard', 143488, -56800, 151955, -52451, 0,0, 7);
+insert into zone values (13, 'Town', 'Goddard', 143444, -59854, 152043, -51601, 0,0, 7);
 insert into zone values (14, 'Town', 'Rune Castle Town', 47150, -44815, 32531, -52045, 0,0, 8);
 insert into zone values (15, 'Town', 'Heine', 103598, 216010, 118991, 225905, 0,0, 6);
 insert into zone values (16, 'Town', 'Floran Village', 0, 0, 0, 0, 0,0, 2);

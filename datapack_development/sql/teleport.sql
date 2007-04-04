@@ -412,7 +412,7 @@ INSERT INTO teleport VALUES
  -- ('Clan Hall -> Gorgon Flower Garden',529,79798,130624,-3677,500,0),  -- dunno coords !
  -- -----------------
 ('Clan Hall -> Ivory Tower',581,85348,16142,-3699,500,0),
-('Clan Hall -> Town of Oren',582,85348,16142,-3699,500,0),
+('Clan Hall -> Town of Oren',582,82956,53162,-1495,500,0),
  -- 583
 ('Clan Hall -> Plains of Lizardmen',584,87252,85514,-3056,500,0),
 ('Clan Hall -> Skyshadow Meadow',585,82764,61145,-3502,500,0),
