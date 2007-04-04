@@ -92,7 +92,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30502 and id != STARTED : return htmltext
+   if npcId != 30585 and id != STARTED : return htmltext
 
    if id == CREATED :
      st.setState(STARTING)
