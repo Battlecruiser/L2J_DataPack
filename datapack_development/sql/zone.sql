@@ -31,7 +31,8 @@ insert into zone values (3, 'Castle Area', 'Giran', 112509, 143148, 119010, 1473
 insert into zone values (4, 'Castle Area', 'Oren', 78585, 35243, 85086, 39484, 0, 0 ,5);
 insert into zone values (5, 'Castle Area', 'Aden', 144599, 577, 150295, 8521, 0, 0, 0);
 insert into zone values (6, 'Castle Area', 'Innadril', 113727, 245080, 117971, 251617, 0, 0 ,5);
-insert into zone values (7, 'Castle Area', 'Goddard', 144023, -51768, 154256, -45106, 0, 0 ,8); -- Y2 should be -51298 & X2 should be 150893 but then Daven gets confused - also needs an n-poly to curve around south wall
+insert into zone values (7, 'Castle Area', 'Goddard', 144023, -51298, 150893, -45106, 0, 0 ,8); -- needs an n-poly to curve around south wall
+insert into zone values (7, 'Castle Area', 'Goddard', 154000, -52000, 154500, -51000, 0, 0 ,8); -- so Daven registers sieges to Goddard
 insert into zone values (8, 'Castle Area', 'Rune', 11264, -52736, 18688, -45584, 0, 0, 8); -- needs an n-poly to curve around west & east walls
 insert into zone values (9, 'Castle Area', 'Schuttgart', 74288, -154128, 80800, -149136, 0, 0, 8); -- needs an n-poly to curve around south wall
 
