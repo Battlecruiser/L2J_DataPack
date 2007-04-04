@@ -25,16 +25,18 @@ insert into zone values (2, 'Arena Spawn', 'Gludin Arena', -86979, 142402, 0, 0,
 insert into zone values (3, 'Arena Spawn', 'Collusieum', 147451, 46728, 0, 0, -3410, 0, 0);
 insert into zone values (4, 'Arena Spawn', 'Monster Track', 12312, 182752, 0, 0, -3558, 0, 0);
 
-insert into zone values (1, 'Castle Area', 'Gludio', -22900, 104000, -14567, 116730, 0, 0 ,5);
-insert into zone values (2, 'Castle Area', 'Dion', 18438, 152343, 25757, 164097, 0, 0 ,5);
-insert into zone values (3, 'Castle Area', 'Giran', 105737, 140128, 121331, 149842, 0, 0 ,5);
-insert into zone values (4, 'Castle Area', 'Oren', 72876, 32336, 87556, 40457, 0, 0 ,5);
-insert into zone values (5, 'Castle Area', 'Aden', 134790, -2552, 154760, 20850, 0, 0, 0);
-insert into zone values (6, 'Castle Area', 'Innadril', 111975, 241396, 120720, 253425, 0, 0 ,5);
-insert into zone values (7, 'Castle Area', 'Goddard', 139904, -61248, 154256, -43712, 0, 0 ,8);
-insert into zone values (8, 'Castle Area', 'Rune', 768, -58048, 25152, -42624, 0, 0, 8);
-insert into zone values (9, 'Castle Area', 'Schuttgart', 71104, 160960, 84672, -147776, 0, 0, 8);
+insert into zone values (1, 'Castle Area', 'Gludio', -20060, 106912, -15816, 113449, 0, 0 ,5);
+insert into zone values (2, 'Castle Area', 'Dion', 19776, 156301, 24020, 162838, 0, 0 ,5);
+insert into zone values (3, 'Castle Area', 'Giran', 112509, 143148, 119010, 147389, 0, 0 ,5);
+insert into zone values (4, 'Castle Area', 'Oren', 78585, 35243, 85086, 39484, 0, 0 ,5);
+insert into zone values (5, 'Castle Area', 'Aden', 144599, 577, 150295, 8521, 0, 0, 0);
+insert into zone values (6, 'Castle Area', 'Innadril', 113727, 245080, 117971, 251617, 0, 0 ,5);
+insert into zone values (7, 'Castle Area', 'Goddard', 144023, -51768, 154256, -45106, 0, 0 ,8); -- Y2 should be -51298 & X2 should be 150893 but then Daven gets confused - also needs an n-poly to curve around south wall
+insert into zone values (8, 'Castle Area', 'Rune', 11264, -52736, 18688, -45584, 0, 0, 8); -- needs an n-poly to curve around west & east walls
+insert into zone values (9, 'Castle Area', 'Schuttgart', 74288, -154128, 80800, -149136, 0, 0, 8); -- needs an n-poly to curve around south wall
 
+-- is this even used ???
+-- no mention of 'Castle HQ' in ZoneType.java - try commenting out and see what breaks :)
 insert into zone values (1, 'Castle HQ', 'Gludio', -20400, 106800, -15700, 113750, 0, 0 ,5);
 insert into zone values (2, 'Castle HQ', 'Dion', 19650, 163000, 24350, 155950, 0, 0 ,5);
 insert into zone values (3, 'Castle HQ', 'Giran', 119200, 142750, 112200, 147450, 0, 0 ,5);
@@ -45,15 +47,15 @@ insert into zone values (7, 'Castle HQ', 'Goddard', 142931, -52434, 152986, -417
 insert into zone values (8, 'Castle HQ', 'Rune', 7000, -52500, 18493, -45900, -547, 0, 8);
 insert into zone values (9, 'Castle HQ', 'Schuttgart', 73694, -156000, 81286, -149400, -700, 1750, 8);
 
-insert into zone values (1, 'Siege Battlefield', 'Gludio', -22900, 104000, -14567, 116513, 0, 0, 0);
-insert into zone values (2, 'Siege Battlefield', 'Dion', 18438, 152343, 25757, 164097, 0, 0, 0);
-insert into zone values (3, 'Siege Battlefield', 'Giran', 105737, 140128, 121331, 149842, 0, 0, 0);
-insert into zone values (4, 'Siege Battlefield', 'Oren', 72876, 32336, 87556, 40457, 0, 0, 0);
-insert into zone values (5, 'Siege Battlefield', 'Aden', 134790, -2552, 154760, 20850, 0, 0, 0);
-insert into zone values (6, 'Siege Battlefield', 'Innadril', 111975, 241396, 120720, 253425, 0, 0, 0);
-insert into zone values (7, 'Siege Battlefield', 'Goddard', 142931, -52434, 152986, -38558, 0, 0, 0);
-insert into zone values (8, 'Siege Battlefield', 'Rune', 7000, -55500, 27000, -41716, 0, 0, 0);
-insert into zone values (9, 'Siege Battlefield', 'Schuttgart', 73000, -156600, 80740, -147592, 0, 0, 0);
+insert into zone values (1, 'Siege Battlefield', 'Gludio', -22615, 104510, -13313, 116950, 0, 0, 0);
+insert into zone values (2, 'Siege Battlefield', 'Dion', 17273, 152800, 26575, 165240, 0, 0, 0);
+insert into zone values (3, 'Siege Battlefield', 'Giran', 109026, 140571, 121358, 149919, 0, 0, 0);
+insert into zone values (4, 'Siege Battlefield', 'Oren', 75102, 32666, 87434, 42014, 0, 0, 0);
+insert into zone values (5, 'Siege Battlefield', 'Aden', 142431, 362, 152282, 15197, 0, 0, 0);
+insert into zone values (6, 'Siege Battlefield', 'Innadril', 111224, 241579, 120526, 254019, 0, 0, 0);
+insert into zone values (7, 'Siege Battlefield', 'Goddard', 141457, -51510, 151949, -39107, 0, 0, 0); -- should be an n-poly
+insert into zone values (8, 'Siege Battlefield', 'Rune', 7000, -55500, 27000, -41716, 0, 0, 0); -- need official info
+insert into zone values (9, 'Siege Battlefield', 'Schuttgart', 73000, -156600, 82560, -145920, 0, 0, 0); -- need official info
 
 insert into zone values (1, 'Castle Defender Spawn', 'Gludio', -18105, 110303, 0, 0, -2146, 0, 0);
 insert into zone values (2, 'Castle Defender Spawn', 'Dion', 22080, 159450, 0, 0, -2441, 0, 0);
