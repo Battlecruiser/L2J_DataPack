@@ -1808,11 +1808,11 @@
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="60000"/>
+  <set name="buffDuration" val="90000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="60" val="0" stackOrder="#uprate" stackType="pAtks">
+    <effect count="1" name="Buff" time="90" val="0" stackOrder="#uprate" stackType="pAtks">
       <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
       <sub order="0x40" stat="rEvas" val="#Tab-rEvas"/>
       <add order="0x40" stat="accCombat" val="#Tab-accCombat">
