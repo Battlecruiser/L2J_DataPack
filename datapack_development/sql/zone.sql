@@ -102,25 +102,25 @@ INSERT INTO  zone VALUES
  (47, 'Clan Hall', 'Goddard 1', 146399, -55682, 145652, -55386, -2773, 0, 1),
  (48, 'Clan Hall', 'Goddard 2', 147238, -56636, 146564, -57078, -2783, 0, 1),
  (49, 'Clan Hall', 'Goddard 3', 148479, -56473, 148479, -57275, -2773, 0, 1),
- (50, 'Clan Hall', 'Goddard 4', 149717, -55824, 149063, -55350, -2783, 0, 1);
+ (50, 'Clan Hall', 'Goddard 4', 149717, -55824, 149063, -55350, -2783, 0, 1),
+ (51, 'Clan Hall', 'Rune 1', 37461, -50973, 38006, -50589, 900, 0, 8),
+ (52, 'Clan Hall', 'Rune 2', 38401, -50516, 39054, -50404, 900, 0, 8),
+ (53, 'Clan Hall', 'Rune 3', 39173, -50020, 39774, -49340, 900, 0, 8),
+ (54, 'Clan Hall', 'Rune 4', 39426, -48619, 39820, -47871, 899, 0, 8),
+ (55, 'Clan Hall', 'Rune 5', 39437, -47141, 39760, -46668, 900, 0, 8),
+ (56, 'Clan Hall', 'Rune 6', 38433, -46322, 39062, -45731, 900, 0, 8),
+ (57, 'Clan Hall', 'Rune 7', 37437, -45872, 38024, -45460, 900, 0, 8),
+ (58, 'Clan Hall', 'Schuttgart 1', 85426, -143448, 86069, -142769, -1342, 0, 8),
+ (59, 'Clan Hall', 'Schuttgart 2', 86162, -142094, 87003, -141727, -1340, 0, 8),
+ (60, 'Clan Hall', 'Schuttgart 3', 88600, -142111, 87724, -141750, -1341, 0, 8),
+ (61, 'Clan Hall', 'Schuttgart 4', 88500, -143500, 89500, -142880, -1340, 0, 8);
 
 -- -------------------------------
--- C5 Clan Halls (these are not correct, but just to avoid NPEs)
+-- Other Clan Halls (these are not correct, but just to avoid NPEs)
 -- -------------------------------
 
 INSERT INTO zone (id, type, name, x1, y1, x2, y2, z, taxById) VALUES
   (34, "Clan Hall", "Devastated Castle", 0, 0, 0, 0, 0, 0),
-  (51, "Clan Hall", "Mont Chamber", 37437, -45872, 38024, -45460, 900, 8),
-  (52, "Clan Hall", "Astaire Chamber", 38433, -46322, 39062, -45731, 900, 8),
-  (53, "Clan Hall", "Aria Chamber", 39437, -47141, 39760, -46668, 900, 8),
-  (54, "Clan Hall", "Yiana Chamber", 39426, -48619, 39820, -47871, 899, 8),
-  (55, "Clan Hall", "Roien Chamber", 39173, -50020, 39774, -49340, 900, 8),
-  (56, "Clan Hall", "Luna Chamber", 38401, -50516, 39054, -50404, 900, 8),
-  (57, "Clan Hall", "Traban Chamber", 37461, -50973, 38006, -50589, 900, 8),
-  (58, "Clan Hall", "Eisen Hall", 85426, -143448, 86069, -142769, -1342, 8),
-  (59, "Clan Hall", "Heavy Metal Hall", 86162, -142094, 87003, -141727, -1340, 8),
-  (60, "Clan Hall", "Molten Ore Hall", 88600, -142111, 87724, -141750, -1341, 8),
-  (61, "Clan Hall", "Titan Hall", 88500, -143500, 89500, -142880, -1340, 8),
   (62, "Clan Hall", "Hot Springs Guild House", 141414, -124508, 140590, -124706, -1896, 1),
   (63, "Clan Hall", "Beast Farm", 0, 0, 0, 0, 0, 0),
   (64, "Clan Hall", "Fortress of the Dead", 0, 0, 0, 0, 0, 0);
