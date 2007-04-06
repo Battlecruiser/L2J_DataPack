@@ -2142,10 +2142,16 @@
   <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="regMp" val="#Tab-regMp-Walk">
-      <player walking="true"/>
+      <and>
+        <player moving="true"/>
+        <player running="false"/>
+      </and> 
     </add>
     <add order="0x40" stat="regMp" val="#Tab-regMp-Stand">
-      <player standing="true"/>
+      <and>
+        <player moving="false"/>
+        <player resting="false"/>
+      </and> 
     </add>
   </for>
 </skill>
