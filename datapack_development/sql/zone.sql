@@ -26,15 +26,23 @@ insert into zone values (3, 'Arena Spawn', 'Collusieum', 147451, 46728, 0, 0, -3
 insert into zone values (4, 'Arena Spawn', 'Monster Track', 12312, 182752, 0, 0, -3558, 0, 0);
 
 insert into zone values (1, 'Castle Area', 'Gludio', -20060, 106912, -15816, 113449, 0, 0 ,5);
+insert into zone values (1, 'Castle Area', 'Gludio', -15500, 116500, -15000, 117000, 0, 0 ,5); -- Tyron (-15172,116723) registers sieges to Gludio
 insert into zone values (2, 'Castle Area', 'Dion', 19776, 156301, 24020, 162838, 0, 0 ,5);
+insert into zone values (2, 'Castle Area', 'Dion', 19000, 152750, 19500, 153250, 0, 0 ,5); -- Gibbson (19132,153027) registers sieges to Dion
 insert into zone values (3, 'Castle Area', 'Giran', 112509, 143148, 119010, 147389, 0, 0 ,5);
+insert into zone values (3, 'Castle Area', 'Giran', 107000, 145500, 107500, 146000, 0, 0 ,5); -- Holmes (107386,145807) registers sieges to Giran
 insert into zone values (4, 'Castle Area', 'Oren', 78585, 35243, 85086, 39484, 0, 0 ,5);
+insert into zone values (4, 'Castle Area', 'Oren', 75000, 40000, 75500, 40500, 0, 0 ,5); -- Sherwood (75275,40132) registers sieges to Oren
 insert into zone values (5, 'Castle Area', 'Aden', 144599, 577, 150295, 8521, 0, 0, 0);
+insert into zone values (5, 'Castle Area', 'Aden', 147250, 19250, 147750, 19750, 0, 0, 0); -- Ruford (147551,19577) registers sieges to Aden
 insert into zone values (6, 'Castle Area', 'Innadril', 113727, 245080, 117971, 251617, 0, 0 ,5);
+insert into zone values (6, 'Castle Area', 'Innadril', 117000, 241500, 117500, 242000, 0, 0 ,5); -- Raybell (117136,241763) registers sieges to Innadril
 insert into zone values (7, 'Castle Area', 'Goddard', 144023, -51298, 150893, -45106, 0, 0 ,8); -- needs an n-poly to curve around south wall
-insert into zone values (7, 'Castle Area', 'Goddard', 154000, -52000, 154500, -51000, 0, 0 ,8); -- so Daven registers sieges to Goddard
+insert into zone values (7, 'Castle Area', 'Goddard', 154000, -52000, 154500, -51000, 0, 0 ,8); -- Daven (154208,-51648) registers sieges to Goddard
 insert into zone values (8, 'Castle Area', 'Rune', 11264, -52736, 18688, -45584, 0, 0, 8); -- needs an n-poly to curve around west & east walls
+insert into zone values (8, 'Castle Area', 'Rune', 26750, -49250, 27250, -48750, 0, 0, 8);-- Sherman (27074,-48986) registers sieges to Rune
 insert into zone values (9, 'Castle Area', 'Schuttgart', 74288, -154128, 80800, -149136, 0, 0, 8); -- needs an n-poly to curve around south wall
+insert into zone values (9, 'Castle Area', 'Schuttgart', 75500, -145250, 76000, -144750, 0, 0, 8); -- Daguerre (75707,-144899) registers sieges to Schuttgart
 
 -- is this even used ???
 -- no mention of 'Castle HQ' in ZoneType.java - try commenting out and see what breaks :)
