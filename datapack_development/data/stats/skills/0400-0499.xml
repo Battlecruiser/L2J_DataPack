@@ -189,8 +189,8 @@
      <mul order="0x30" stat="runSpd" val="0.5"/>
      <mul order="0x30" stat="pAtkSpd" val="0.8"/>
      <mul order="0x30" stat="mAtkSpd" val="0.8"/>
-  </effect> 
-</for> 
+  </effect>
+</for>
 </skill>
 <skill id="408" levels="10" name="Demonic Blade Dance">
 <table name="#mpConsume"> 83 88 92 95 98 101 105 108 111 113</table>
@@ -213,7 +213,7 @@
      <mul order="0x30" stat="mAtk" val="0.65"/>
      <mul order="0x30" stat="pAtk" val="0.65"/>
   </effect>
-</for> 
+</for>
 </skill>
 <skill id="409" levels="10" name="Critical Blow">
 <table name="#mpConsume"> 55 59 62 63 66 68 70 72 74 76 </table>
@@ -322,9 +322,9 @@
 <set name="effectRange" val="-1"/>
 <for>
    <effect count="1" name="Buff" time="30" val="0" stackOrder="#Tab-accCombat" stackType="accuracyDown">
-      <sub order="0x40" stat="accCombat" val="#Tab-accCombat"/> 
-   </effect> 
-</for> 
+      <sub order="0x40" stat="accCombat" val="#Tab-accCombat"/>
+   </effect>
+</for>
 </skill>
 <skill id="413" levels="8" name="Rapid Fire">
   <table name="#mpConsume"> 28 29 30 31 32 33 34 34 </table>
@@ -343,13 +343,19 @@
   <cond msg="Bow required.">
     <using kind="Bow"/>
   </cond>
-  <for> 
-     <effect count="1" name="Buff" time="120" val="0"> 
-        <add order="0x40" stat="pAtk" val="#atk"><using kind="Bow"/></add>
-        <mul order="0x30" stat="pAtkSpd" val="1.20"><using kind="Bow"/></mul>
-        <sub order="0x40" stat="pAtkRange" val="300"><using kind="Bow"/></sub>
-     </effect> 
-   </for> 
+  <for>
+     <effect count="1" name="Buff" time="120" val="0">
+        <add order="0x40" stat="pAtk" val="#atk">
+          <using kind="Bow"/>
+        </add>
+        <mul order="0x30" stat="pAtkSpd" val="1.20">
+          <using kind="Bow"/>
+        </mul>
+        <sub order="0x40" stat="pAtkRange" val="300">
+          <using kind="Bow"/>
+       </sub>
+     </effect>
+   </for>
 </skill>
 <skill id="414" levels="8" name="Dead Eye">
 <table name="#mpConsume"> 28 29 30 31 32 33 34 35 </table>
@@ -370,33 +376,41 @@
 <set name="effectRange" val="-1"/>
 <for>
    <effect count="1" name="Buff" time="120" val="0">
-      <mul order="0x30" stat="pAtkSpd" val="0.8"><using kind="Bow"/></mul>
-      <add order="0x40" stat="pAtk" val="#pAtk"><using kind="Bow"/></add>
-      <add order="0x40" stat="accCombat" val="#Tab-accCombat"><using kind="Bow"/></add>
-      <mul order="0x30" stat="cAtk" val="#Tab-cAtk"><using kind="Bow"/></mul>
+      <mul order="0x30" stat="pAtkSpd" val="0.8">
+        <using kind="Bow"/>
+      </mul>
+      <add order="0x40" stat="pAtk" val="#pAtk">
+        <using kind="Bow"/>
+      </add>
+      <add order="0x40" stat="accCombat" val="#Tab-accCombat">
+        <using kind="Bow"/>
+      </add>
+      <mul order="0x30" stat="cAtk" val="#Tab-cAtk">
+        <using kind="Bow"/>
+      </mul>
    </effect>
 </for>
 </skill>
-<skill id="415" levels="3" name="Spirit of Sagittarius"> 
-<!-- Hawkeye, Silver Ranger, Phantom Ranger --> 
-<table name="#mpConsume"> 27 31 34 </table> 
-<table name="#MpConsumeRate"> 0.9 0.8 0.7 </table> 
-<set name="mpConsume" val="#mpConsume"/> 
-<set name="power" val="0.0"/> 
-<set name="target" val="TARGET_SELF"/> 
-<set name="hitTime" val="2000"/> 
-<set name="reuseDelay" val="300000"/> 
-<set name="skillTime" val="2000"/> 
-<set name="skillType" val="BUFF"/> 
-<set name="operateType" val="OP_ACTIVE"/> 
-<set name="buffDuration" val="600000"/> 
-<set name="castRange" val="-1"/> 
+<skill id="415" levels="3" name="Spirit of Sagittarius">
+<!-- Hawkeye, Silver Ranger, Phantom Ranger -->
+<table name="#mpConsume"> 27 31 34 </table>
+<table name="#MpConsumeRate"> 0.9 0.8 0.7 </table>
+<set name="mpConsume" val="#mpConsume"/>
+<set name="power" val="0.0"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="hitTime" val="2000"/>
+<set name="reuseDelay" val="300000"/>
+<set name="skillTime" val="2000"/>
+<set name="skillType" val="BUFF"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="buffDuration" val="600000"/>
+<set name="castRange" val="-1"/>
 <set name="effectRange" val="-1"/>
-<for> 
-<effect count="1" name="Buff" time="600" val="0"> 
-<mul order="0x30" stat="MpConsumeRate" val="0.7"/> 
-</effect> 
-</for> 
+<for>
+  <effect count="1" name="Buff" time="600" val="0">
+    <mul order="0x30" stat="MpConsumeRate" val="0.7"/>
+  </effect>
+</for>
 </skill>
 <skill id="416" levels="3" name="Blessing of Sagittarius">
 <table name="#mpConsume"> 27 31 34 </table>
@@ -499,7 +513,7 @@
       <and>
         <using kind="Blunt,Big Blunt,Fist,Dual Fist"/>
       </and>
-    </mul> 
+    </mul>
   </effect>
 </for>
 </skill>
@@ -525,7 +539,7 @@
     </effect>
   </for>
 </skill>
-<skill id="422" levels="3" name="Polearm Accuracy"> 
+<skill id="422" levels="3" name="Polearm Accuracy">
 <table name="#mpConsume"> 11 13 14 </table>
 <table name="#Tab-accCombat"> 2 3 4 </table>
 <set name="weaponsAllowed" val="64"/>
@@ -574,8 +588,8 @@
 <set name="effectRange" val="-1"/>
 <for>
    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume">
-      <add order="0x40" stat="stunRes" val="#res"/>
-      <add order="0x40" stat="sleepRes" val="#res"/>
+     <add order="0x40" stat="stunRes" val="#res"/>
+     <add order="0x40" stat="sleepRes" val="#res"/>
    </effect>
 </for>
 </skill>
@@ -597,7 +611,7 @@
     <add order="0x40" stat="accCombat" val="6"/>
     <add order="0x40" stat="rCrit" val="100"/>
     <mul order="0x30" stat="cAtk" val="1.5"/>
-  </effect> 
-</for> 
+  </effect>
+</for>
 </skill>
 </list>
