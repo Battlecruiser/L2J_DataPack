@@ -1849,7 +1849,9 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="effectType" val="STUN"/>
-  <set name="effectPower" val="40"/>
+  <set name="effectPower" val="50"/>
+  <enchant1 name="effectPower" val="#ench1effectPower"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
