@@ -896,18 +896,18 @@
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-	  <add order="0x40" stat="rootRes" val="#res"/>
-	  <add order="0x40" stat="sleepRes" val="#res"/>
-	  <add order="0x40" stat="confusionRes" val="#res"/>
-	  <add order="0x40" stat="muteRes" val="#res"/>
+      <add order="0x40" stat="rootRes" val="#res"/>
+      <add order="0x40" stat="sleepRes" val="#res"/>
+      <add order="0x40" stat="confusionRes" val="#res"/>
+      <add order="0x40" stat="muteRes" val="#res"/>
     </effect>
   </for>
   <enchant1for>
     <effect count="1" name="Buff" time="#ench1time" val="0">
-	  <add order="0x40" stat="rootRes" val="50"/>
-	  <add order="0x40" stat="sleepRes" val="50"/>
-	  <add order="0x40" stat="confusionRes" val="50"/>
-	  <add order="0x40" stat="muteRes" val="50"/>
+      <add order="0x40" stat="rootRes" val="50"/>
+      <add order="0x40" stat="sleepRes" val="50"/>
+      <add order="0x40" stat="confusionRes" val="50"/>
+      <add order="0x40" stat="muteRes" val="50"/>
     </effect>
   </enchant1for>
 </skill>
@@ -2066,7 +2066,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-	<effect count="5" name="Fear" time="6" val="0"/>
+    <effect count="5" name="Fear" time="6" val="0"/>
   </for>
 </skill>
 <skill id="1095" levels="5" name="Venom">
