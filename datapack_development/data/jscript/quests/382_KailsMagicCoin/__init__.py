@@ -53,7 +53,7 @@ class Quest (JQuest) :
   def onKill (self,npc,player):
       st = player.getQuestState(qn)
       if not st : return 
-      if st.getState() <> STARTED : return 
+      if st.getState() != STARTED : return 
       if st.getRandom(100) < CHANCE and st.getQuestItemsCount(ROYAL_MEMBERSHIP) :
          npcId = npc.getNpcId()
          st.giveItems(MOBS[npcId][st.getRandom(len(MOBS[npcId]))],1)

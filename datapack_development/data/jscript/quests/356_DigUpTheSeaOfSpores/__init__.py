@@ -56,7 +56,7 @@ class Quest (JQuest) :
    herb=st.getQuestItemsCount(HERBIBOROUS_SPORE)
    if cond == 0 :
      htmltext = "30717-0.htm"
-   elif cond <> 3 :
+   elif cond != 3 :
      htmltext = "30717-6.htm"
    elif cond == 3 or (carn>=50 and herb>=50) :
      htmltext = "30717-7.htm"

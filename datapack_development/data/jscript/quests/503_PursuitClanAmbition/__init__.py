@@ -512,7 +512,7 @@ class Quest (JQuest) :
              if player.isInsideRadius(leader, 1600, 1, 0) :
                leader_st = leader.getQuestState(qn)
     if leader_st :
-      if leader_st.getState() <> PROGRESS : return
+      if leader_st.getState() != PROGRESS : return
       npcId=npc.getNpcId()
       condition,maxcount,chance,itemList = DROPLIST[npcId]
       random = leader_st.getRandom(100)

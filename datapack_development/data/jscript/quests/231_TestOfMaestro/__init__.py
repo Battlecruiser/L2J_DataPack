@@ -49,7 +49,7 @@ class Quest (JQuest) :
     htmltext = event
     progress = st.getInt("progress")
     id=st.getState()
-    if id <> COMPLETED :
+    if id != COMPLETED :
        if event == "1" and progress == 0 :
           htmltext = "30531-04.htm"
           st.setState(STARTED)

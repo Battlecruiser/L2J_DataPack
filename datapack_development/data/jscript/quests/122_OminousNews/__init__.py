@@ -20,7 +20,7 @@ class Quest (JQuest) :
    htmltext = default
    id = st.getState()
    cond = st.getInt("cond")
-   if id <> COMPLETED :
+   if id != COMPLETED :
      htmltext = event
      if htmltext == "31979-03.htm" and cond == 0 :
        st.set("cond","1")

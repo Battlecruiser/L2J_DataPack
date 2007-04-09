@@ -30,7 +30,7 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
      htmltext = event
      cond = st.getInt("cond")
-     if st.getState() <> COMPLETED :
+     if st.getState() != COMPLETED :
        if event == "30381-02.htm" and cond == 0 :
          st.setState(STARTED)
          st.set("cond","1")

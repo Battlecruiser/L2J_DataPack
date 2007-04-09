@@ -59,7 +59,7 @@ class Quest (JQuest) :
        if cond == 0 :
           htmltext = "31521-0.htm"
        elif st.getState() == STARTED:
-           if cond <> 3 :
+           if cond != 3 :
               htmltext = "31521-2.htm"
            else :
               htmltext = "31521-3.htm"
