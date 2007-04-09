@@ -505,13 +505,14 @@ class Quest (JQuest) :
     else :
       clan = player.getClan()
       if clan:
-        leader=clan.getLeader().getPlayerInstance()
-        if leader :
-          if player.isInsideRadius(leader, 1600, 1, 0) :
-            leader_st = leader.getQuestState(qn)
-    
+        c_leader=clan.getLeader()
+        if c_leader:
+           leader=c_leader.getPlayerInstance()
+           if leader :
+             if player.isInsideRadius(leader, 1600, 1, 0) :
+               leader_st = leader.getQuestState(qn)
     if leader_st :
-      if leader_st.getState() != PROGRESS : return
+      if leader_st.getState() <> PROGRESS : return
       npcId=npc.getNpcId()
       condition,maxcount,chance,itemList = DROPLIST[npcId]
       random = leader_st.getRandom(100)
@@ -536,10 +537,10 @@ class Quest (JQuest) :
             leader_st.getPcSpawn().addSpawn(27179)
     return
 
-QUEST    = Quest(503,qn,"Pursuit of Clan Ambition")
-CREATED    = State('Start', QUEST)
+QUEST     = Quest(503,qn,"Pursuit of Clan Ambition")
+CREATED   = State('Start', QUEST)
 PROGRESS  = State('Progress', QUEST)
-COMPLETED  = State('Completed', QUEST)
+COMPLETED = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(NPC[3])
