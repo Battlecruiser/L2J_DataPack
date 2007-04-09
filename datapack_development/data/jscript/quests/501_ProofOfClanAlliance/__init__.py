@@ -174,7 +174,7 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_fanfare_2")
           st.takeItems(VOUCHER_OF_FAITH,1)
           st.giveItems(PROOF_OF_ALLIANCE,1)
-          st.addExpAndSp(120000,0)
+          st.addExpAndSp(0,120000)
           htmltext="30756-07.htm"
           st.exitQuest(1)
        elif st.getState() in [PART2,PART3] :
