@@ -84,7 +84,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId <> 30648 and id <> STARTED : return htmltext
+   if npcId != 30648 and id != STARTED : return htmltext
 
    cond=st.getInt("cond")
    if npcId == 30648 and cond==0 and id == CREATED :
@@ -201,7 +201,7 @@ class Quest (JQuest) :
  def onKill (self,npc,player):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() <> STARTED : return 
+   if st.getState() != STARTED : return 
    npcId = npc.getNpcId()
    cond=st.getInt("cond")
    if npcId == 27116 :

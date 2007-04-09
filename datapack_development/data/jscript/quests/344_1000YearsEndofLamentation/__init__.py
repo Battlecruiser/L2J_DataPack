@@ -104,7 +104,7 @@ class Quest (JQuest) :
             st.set("amount",str(amount))
           st.takeItems(ARTICLES_DEAD_HEROES,-1)
      elif event == "30754-11.htm" and cond == 1 :
-         if st.getInt("ok") <> 1:
+         if st.getInt("ok") != 1:
             htmltext=default
          else :
             random = st.getRandom(100)

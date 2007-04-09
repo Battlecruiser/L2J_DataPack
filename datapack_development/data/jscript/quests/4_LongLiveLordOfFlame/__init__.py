@@ -34,7 +34,7 @@ class Quest (JQuest) :
      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 30578 :
      if cond == 0 :
-       if st.getPlayer().getRace().ordinal() <> 3 :
+       if st.getPlayer().getRace().ordinal() != 3 :
          htmltext = "30578-00.htm"
          st.exitQuest(1)
        elif st.getPlayer().getLevel() >= 2 :

@@ -197,7 +197,7 @@ class Quest (JQuest) :
         elif npcId in ARKS.keys():
             # if you do not have the key (first meeting)
             if st.getQuestItemsCount(ARKS[npcId][0])==0:
-                if ARKS[npcId][1] <> 0 :    # spawn the NPC, if appropriate
+                if ARKS[npcId][1] != 0 :    # spawn the NPC, if appropriate
                     st.getPcSpawn().addSpawn(ARKS[npcId][1],st.getPlayer().getClientX(),st.getPlayer().getClientY(),st.getPlayer().getClientZ(),120000)
                 return ARKS[npcId][2]
             # if the player already has openned the chest and has its content, show "chest empty"
@@ -231,7 +231,7 @@ class Quest (JQuest) :
          if (st.getInt("cond") == cond) and (st.getQuestItemsCount(DROPS[npcId][1]) < DROPS[npcId][2]) and (st.getRandom(100) < DROPS[npcId][3]) :
              st.giveItems(DROPS[npcId][1],DROPS[npcId][2])
              st.playSound("ItemSound.quest_itemget")
-             if DROPS[npcId][4] <> 0:
+             if DROPS[npcId][4] != 0:
                  st.takeItems(DROPS[npcId][4],1)
              # in accordance to http://forum.l2jdp.com/viewtopic.php?t=2974
              # quest ends when you get the blooded fabric

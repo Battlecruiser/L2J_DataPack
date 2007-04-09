@@ -58,7 +58,7 @@ class Quest (JQuest) :
         apprentice = cm_apprentice.getPlayerInstance()
         if apprentice :
            ap_quest=apprentice.getQuestState("123_TheLeaderAndTheFollower")
-           if ap_quest <> None :
+           if ap_quest != None :
               ap_cond=ap_quest.getInt("cond")
               if  ap_cond == 3 :
                  crystals=922
@@ -162,7 +162,7 @@ class Quest (JQuest) :
  def onKill (Self,npc,player):
     st = player.getQuestState(qn)
     if not st : return
-    if st.getState() <> PROGRESS : return
+    if st.getState() != PROGRESS : return
     sponsor = player.getSponsor()
     if not sponsor:
       st.exitQuest(1)
