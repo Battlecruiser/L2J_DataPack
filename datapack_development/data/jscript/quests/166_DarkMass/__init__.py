@@ -84,6 +84,9 @@ class Quest (JQuest) :
                 htmltext = "30143-01.htm"
              else :
                 htmltext = "30143-02.htm"
+       if st.getQuestItemsCount(UNDRES_LETTER_ID) and (st.getQuestItemsCount(CEREMONIAL_DAGGER_ID) + st.getQuestItemsCount(DREVIANT_WINE_ID) + st.getQuestItemsCount(GARMIELS_SCRIPTURE_ID) >= 3) :
+         st.set("cond","2")
+         st.playSound("ItemSound.quest_middle")
    return htmltext
 
 QUEST       = Quest(166,qn,"Dark Mass")
