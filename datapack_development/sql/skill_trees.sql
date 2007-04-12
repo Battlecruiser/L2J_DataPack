@@ -3728,7 +3728,7 @@ INSERT INTO skill_trees VALUES (14,1386,7,'Arcane Disruption',550000,68);
 INSERT INTO skill_trees VALUES (14,1386,8,'Arcane Disruption',550000,70);
 INSERT INTO skill_trees VALUES (14,1386,9,'Arcane Disruption',1070000,72);
 INSERT INTO skill_trees VALUES (14,1386,10,'Arcane Disruption',1350000,74);
-INSERT INTO skill_trees VALUES (14,1403,12,'Summon Friend',105000,56);
+INSERT INTO skill_trees VALUES (14,1403,1,'Summon Friend',105000,56); -- client only knows 1 lvl
 INSERT INTO skill_trees VALUES (15,146,5,'Anti Magic',1600,20);
 INSERT INTO skill_trees VALUES (15,146,6,'Anti Magic',1600,20);
 INSERT INTO skill_trees VALUES (15,146,7,'Anti Magic',3400,25);
@@ -7045,7 +7045,7 @@ INSERT INTO skill_trees VALUES (28,1384,2,'Mass Surrender to Water',250000,62);
 INSERT INTO skill_trees VALUES (28,1384,3,'Mass Surrender to Water',440000,66);
 INSERT INTO skill_trees VALUES (28,1384,4,'Mass Surrender to Water',550000,70);
 INSERT INTO skill_trees VALUES (28,1384,5,'Mass Surrender to Water',1350000,74);
-INSERT INTO skill_trees VALUES (28,1403,12,'Summon Friend',105000,56);
+INSERT INTO skill_trees VALUES (28,1403,1,'Summon Friend',105000,56); -- client only knows 1 lvl
 INSERT INTO skill_trees VALUES (29,146,5,'Anti Magic',1600,20);
 INSERT INTO skill_trees VALUES (29,146,6,'Anti Magic',1600,20);
 INSERT INTO skill_trees VALUES (29,146,7,'Anti Magic',3200,25);
@@ -10190,7 +10190,7 @@ INSERT INTO skill_trees VALUES (41,1385,2,'Mass Surrender to Wind',250000,62);
 INSERT INTO skill_trees VALUES (41,1385,3,'Mass Surrender to Wind',440000,66);
 INSERT INTO skill_trees VALUES (41,1385,4,'Mass Surrender to Wind',550000,70);
 INSERT INTO skill_trees VALUES (41,1385,5,'Mass Surrender to Wind',1350000,74);
-INSERT INTO skill_trees VALUES (41,1403,12,'Summon Friend',105000,56);
+INSERT INTO skill_trees VALUES (41,1403,1,'Summon Friend',105000,56); -- client only knows 1 lvl
 INSERT INTO skill_trees VALUES (42,146,5,'Anti Magic',1600,20);
 INSERT INTO skill_trees VALUES (42,146,6,'Anti Magic',1600,20);
 INSERT INTO skill_trees VALUES (42,146,7,'Anti Magic',3200,25);
