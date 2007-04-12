@@ -92,8 +92,13 @@ class Quest (JQuest) :
        if partyMember : 
            st = partyMember.getQuestState(qn)
            if st.getQuestItemsCount(BLACK_BONE_NECKLACE) < 100 :
-              st.giveItems(BLACK_BONE_NECKLACE,1)
-              return
+             st.giveItems(BLACK_BONE_NECKLACE,1)
+             if st.getQuestItemsCount(BLACK_BONE_NECKLACE) == 100 and st.getQuestItemsCount(RED_BONE_NECKLACE) == 100:
+               st.playSound("ItemSound.quest_middle")
+               st.set("cond","3")
+             else:
+               st.playSound("ItemSound.quest_itemget")
+             return
    if npcId == 20921 :
        partyMember = self.getRandomPartyMember(player,"2")
        if partyMember : 
