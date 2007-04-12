@@ -122,7 +122,7 @@ class Quest (JQuest) :
              else:
                st.playSound("ItemSound.quest_middle")
                st.set("cond","3")
-   if npcId == JUDGE_OF_SPLENDOR :
+   elif npcId == JUDGE_OF_SPLENDOR :
      #get a random party member who is doing this quest and needs this drop 
      partyMember = self.getRandomPartyMember(player,"awaitsEvergreen","1")
      if partyMember :
@@ -138,16 +138,19 @@ class Quest (JQuest) :
              else:
                st.playSound("ItemSound.quest_middle")
                st.set("cond","3")
-   if npcId == BARAKIEL :
-     #get a random party member who is doing this quest and needs this drop (cond == 4)
-     partyMember = self.getRandomPartyMember(player,"4")
-     if partyMember :
-         st = partyMember.getQuestState(qn)
-         cond = st.getInt("cond")
-         if cond == 4 and st.getQuestItemsCount(RAIN_SONG) < 1 :
-           st.giveItems(RAIN_SONG,1)
-           st.playSound("ItemSound.quest_middle")
-           st.set("cond","5")
+   elif npcId == BARAKIEL :
+     #give the quest item and update variables for ALL PARTY MEMBERS who are doing the quest,
+     #so long as they each qualify for the drop (cond == 4 and item not in inventory)
+     #note: the killer WILL participate in the loop as a party member (no need to handle separately)
+     party = player.getParty()
+     if party :
+        for partyMember in party.getPartyMembers().toArray() :
+            pst = partyMember.getQuestState(qn)
+            if pst :
+                if pst.getInt("cond") == 4 and pst.getQuestItemsCount(RAIN_SONG) < 1 :
+                    pst.giveItems(RAIN_SONG,1)
+                    pst.playSound("ItemSound.quest_middle")
+                    pst.set("cond","5")
    return 
 
 QUEST       = Quest(246,qn,"Possessor Of A Precious Soul - 3")
