@@ -1,35 +1,20 @@
-<html><title>Spawn NPC menu</title><body><center>
+<html><title>Spawn NPC menu</title><body>
+<center>
 <table width=260>
-	<tr>
-		<td width=40>
-			<button value="Main" action="bypass -h admin_admin" width=40 height=15 back="sek.cbui94" fore="sek.cbui92">
-		</td>
-		<td width=180>
-			<center><button value="Spawn Mobs" action="bypass -h admin_show_spawns" width=70 height=15 back="sek.cbui94" fore="sek.cbui92"></center>
-		</td>
-		<td width=40>
-			<button value="Back" action="bypass -h admin_show_spawns" width=40 height=15 back="sek.cbui94" fore="sek.cbui92">
-		</td>
-	</tr>
-</table>
-<br><br>Spawn an NPC by id or name: <font color="LEVEL">[*]</font>
+<tr>
+<td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td width=180><center><button value="Spawn Mobs" action="bypass -h admin_show_spawns" width=70 height=15 back="sek.cbui94" fore="sek.cbui92"></center></td>
+<td width=40><button value="Back" action="bypass -h admin_show_spawns" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+</tr>
+</table><br><br>
+Spawn an NPC by ID or name: <font color="LEVEL">[*]</font>
 <table width=260 height=16>
-	<tr>
-		<td width=105>
-			<center>ID or name/qty:</center>
-		</td>
-		<td width=75>
-			<center><edit var="id" width=70 height=15>
-		</td>
-		<td width=15>
-			<edit var="qty" width=15 height=15></center>
-		</td>
-		<td width=75>
-			<center><button value="Spawn" action="bypass -h admin_spawn_monster $id $qty" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></center>
-		</td>
-	</tr>
-</table>
-<br><br>
+<tr>
+<td width=105><center>ID or name/qty:</center></td>
+<td width=75><center><edit var="id" width=70 height=15></td><td width=15><edit var="qty" width=15 height=15></center></td>
+<td width=75><center><button value="Spawn" action="bypass -h admin_spawn_monster $id $qty" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></center></td>
+</tr>
+</table><br><br>
 Show NPCs whose name start with:
 <table width=240>
 <tr><td><a action="bypass -h admin_npc_index A">Letter A</a></td><td><a action="bypass -h admin_npc_index B">Letter B</a></td><td><a action="bypass -h admin_npc_index C">Letter C</a></td></tr>
@@ -42,8 +27,6 @@ Show NPCs whose name start with:
 <tr><td><a action="bypass -h admin_npc_index V">Letter V</a></td><td><a action="bypass -h admin_npc_index W">Letter W</a></td><td><a action="bypass -h admin_npc_index X">Letter X</a></td></tr>
 <tr><td><a action="bypass -h admin_npc_index Y">Letter Y</a></td><td><a action="bypass -h admin_npc_index Z">Letter Z</a></td><td>&nbsp;</td></tr>
 </table>
-</center>
-<br><br>
-[*]: Names are case insensitive, but you must use underscores instead of spaces.<br1>You can leave qty field empty if you don't need more than one mob.
-</body>
-</html>
+</center><br><br>
+[*]: Names are case insensitive, but you must use underscores instead of spaces.<br>You can leave qty field empty if you don't need more than one mob.
+</body></html>
