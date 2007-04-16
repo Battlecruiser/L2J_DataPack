@@ -1608,10 +1608,10 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <!-- missing Cancel Resistance -->
     <effect self="1" count="1" name="ImobileBuff" time="30" val="0" stackOrder="3" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="5400"/>
       <add order="0x40" stat="mDef" val="4050"/>
+      <add order="0x40" stat="cancelRes" val="10"/> <!-- value to be confirmed -->
     </effect>
   </for>
 </skill>

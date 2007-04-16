@@ -1754,6 +1754,7 @@
   <table name="#rate"> 1.25 1.27 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 </table>
   <table name="#crit"> 1.20 1.22 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 </table>
   <table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
+  <table name="#dur"> 120000 120000 120000 150000 165000 180000 195000 210000 225000 240000 255000 270000 285000 </table>
   <table name="#mpConsume"> 122 157 194 202 207 212 215 220 224 229 233 237 242 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
@@ -1764,7 +1765,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
+  <set name="buffDuration" val="#dur"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>

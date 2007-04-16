@@ -3001,7 +3001,7 @@
   <set name="lvlDepend" val="1"/>
   <set name="power" val="40"/>
   <set name="save" val="5"/>
-  <set name="target" val="TARGET_AURA"/>
+  <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="hitTime" val="4000"/>
   <set name="skillTime" val="4000"/>
@@ -3010,8 +3010,8 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <set name="castRange" val="500"/>
+  <set name="effectRange" val="1000"/>
   <enchant1 name="power" val="#ench1power"/>
   <enchant2 name="hpConsume" val="#ench2hpConsume"/>
   <for>
