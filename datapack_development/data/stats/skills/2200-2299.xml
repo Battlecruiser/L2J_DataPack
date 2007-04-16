@@ -632,6 +632,7 @@
 </skill>
 <skill id="2274" levels="9" name="Fisherman's Potion">
   <table name="#power"> 2 5 8 11 14 17 20 23 26 </table>
+  <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
