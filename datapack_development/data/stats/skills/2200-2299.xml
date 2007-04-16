@@ -802,28 +802,37 @@
   </for>
 </skill>
 <skill id="2287" levels="6" name="Elixir of Life">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="800"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="HEAL_STATIC"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="300000"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="skillTime" val="1500"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="isPotion" val="true"/>
 </skill>
 <skill id="2288" levels="6" name="Elixir of Mental Strength">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="800"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="MANAHEAL"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="540000"/>
+  <set name="reuseDelay" val="540000"/>
+  <set name="skillTime" val="1500"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="isPotion" val="true"/>
 </skill>
-<skill id="2289" levels="6" name="Elixir of CP (No Grade)">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="2289" levels="6" name="Elixir of CP">
+  <set name="power" val="800"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="COMBATPOINTHEAL"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="300000"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="skillTime" val="1500"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="isPotion" val="true"/>
 </skill>
 <skill id="2290" levels="1" name="Halloween Box">
   <set name="target" val="TARGET_NONE"/>
