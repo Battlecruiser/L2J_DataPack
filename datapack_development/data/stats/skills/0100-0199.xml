@@ -255,7 +255,6 @@
   </for>
 </skill>
 <skill id="110" levels="2" name="Ultimate Defense" enchantLevels1="30" enchantLevels2="30" >
-  <!-- missing Cancel Resistance -->
   <table name="#pDef"> 1800 3600 </table>
   <table name="#mDef"> 1350 2700 </table>
   <table name="#ench1pDef">
@@ -301,23 +300,25 @@
     <effect count="1" name="ImobileBuff" time="30" val="0" stackOrder="1" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="#pDef"/>
       <add order="0x40" stat="mDef" val="#mDef"/>
+      <add order="0x40" stat="cancelRes" val="10"/> <!-- value to be confirmed -->
     </effect>
   </for>
   <enchant1for>
     <effect count="1" name="ImobileBuff" time="#ench1time" val="0" stackOrder="1" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="#ench1pDef"/>
       <add order="0x40" stat="mDef" val="#ench1mDef"/>
+      <add order="0x40" stat="cancelRes" val="10"/> <!-- value to be confirmed -->
     </effect>
   </enchant1for>
   <enchant2for>
     <effect count="1" name="ImobileBuff" time="30" val="0" stackOrder="1" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="#ench1pDef"/>
       <add order="0x40" stat="mDef" val="#ench1mDef"/>
+      <add order="0x40" stat="cancelRes" val="10"/> <!-- value to be confirmed -->
     </effect>
   </enchant2for>
 </skill>
 <skill id="111" levels="2" name="Ultimate Evasion" enchantLevels1="30" enchantLevels2="30" >
-  <!-- missing Cancel Resistance -->
   <table name="#Tab-rEvas"> 20 25 </table>
   <table name="#mpConsume"> 13 25 </table>
   <table name="#ench1time">
@@ -351,11 +352,13 @@
   <for>
     <effect count="1" name="Buff" time="30" val="0" stackOrder="#Tab-rEvas" stackType="rEvasSpec">
       <add order="0x40" stat="rEvas" val="#Tab-rEvas"/>
+      <add order="0x40" stat="cancelRes" val="10"/> <!-- value to be confirmed -->
     </effect>
   </for>
   <enchant1for>
     <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="25" stackType="rEvasSpec">
       <add order="0x40" stat="rEvas" val="25"/>
+      <add order="0x40" stat="cancelRes" val="10"/> <!-- value to be confirmed -->
     </effect>
   </enchant1for>
 </skill>
@@ -1117,7 +1120,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1500"/>
   <set name="condition" val="32"/>
-  <set name="reuseDelay" val="10800000"/>
+  <set name="reuseDelay" val="3600000"/>
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
