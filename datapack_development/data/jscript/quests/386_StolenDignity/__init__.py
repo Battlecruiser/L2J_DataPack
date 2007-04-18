@@ -36,6 +36,34 @@ WK_ROMP = 30843
 
 #Mobs
 MOBS = [ 20670,20671,20954,20956,20958,20959,20960,20964,20969,20967,20970,20971,20974,20975,21001,21003,21005,21020,21021,21089,21108,21110,21113,21114,21116 ]
+MOB={
+    20670:14,
+    20671:14,
+    20954:11,
+    20956:13,
+    20958:13,
+    20959:13,
+    20960:11,
+    20964:13,
+    20969:19,
+    20967:18,
+    20970:18,
+    20971:18,
+    20974:28,
+    20975:28,
+    21001:14,
+    21003:18,
+    21005:14,
+    21020:16,
+    21021:15,
+    21089:13,
+    21108:19,
+    21110:18,
+    21113:25,
+    21114:23,
+    21116:25    
+}
+MAX = 100
 
 #templates
 number  = ["second","third","fourth","fifth","sixth"]
@@ -171,11 +199,13 @@ class Quest (JQuest) :
      partyMember = self.getRandomPartyMemberState(player, STARTED)
      if not partyMember : return
      st = partyMember.getQuestState(qn)
-     
-     count = st.getQuestItemsCount(SI_ORE)
-     if st.getRandom(100) < DROP_RATE :
-        st.giveItems(SI_ORE,1)
-        if (count + 1) % REQUIRED_ORE == 0 :
+     numItems,chance = divmod(MOB[npc.getNpcId()]*Config.RATE_DROP_QUEST,MAX)
+     prevItems = st.getQuestItemsCount(SI_ORE)
+     if st.getRandom(MAX) < chance :
+        numItems = numItems + 1
+     if numItems != 0 :   
+        st.giveItems(SI_ORE,int(numItems))
+        if int(prevItems+numItems)/REQUIRED_ORE > int(prevItems)/REQUIRED_ORE :
            st.playSound("ItemSound.quest_middle")
         else :
            st.playSound("ItemSound.quest_itemget")

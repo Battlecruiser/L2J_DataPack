@@ -1,6 +1,7 @@
 # Maked by Mr. Have fun! Version 0.2
 print "importing quests: 153: Wharf Oldtimers Favor"
 import sys
+from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -79,7 +80,7 @@ class Quest (JQuest) :
             st.takeItems(CLOTH_BUNDLE_ID,st.getQuestItemsCount(CLOTH_BUNDLE_ID))
             if st.getQuestItemsCount(SILVIAS_RECEIPT_ID) == 0 :
               st.giveItems(SILVIAS_RECEIPT_ID,1)
-              st.giveItems(LESSER_HEALING_POTION_ID,1)
+              st.giveItems(LESSER_HEALING_POTION_ID,int(Config.RATE_QUESTS_REWARD))
             htmltext = "30003-01.htm"
        elif npcId == 30003 and int(st.get("cond"))!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 :
             htmltext = "30003-02.htm"

@@ -15,7 +15,8 @@ ROYAL_MEMBERSHIP = 5898
 VERGARA = 30687
 #MOBs and CHANCES
 MOBS={21017:[5961],21019:[5962],21020:[5963],21022:[5961,5962,5963]}
-CHANCE = 10*Config.RATE_DROP_QUEST
+CHANCE = 10
+MAX = 100
 
 class Quest (JQuest) :
 
@@ -54,10 +55,14 @@ class Quest (JQuest) :
       st = player.getQuestState(qn)
       if not st : return 
       if st.getState() != STARTED : return 
-      if st.getRandom(100) < CHANCE and st.getQuestItemsCount(ROYAL_MEMBERSHIP) :
+      numItems,chance = divmod(CHANCE*Config.RATE_DROP_QUEST,MAX)
+      if st.getQuestItemsCount(ROYAL_MEMBERSHIP) :
+         if st.getRandom(MAX) < chance :
+            numItems = numItems + 1
          npcId = npc.getNpcId()
-         st.giveItems(MOBS[npcId][st.getRandom(len(MOBS[npcId]))],1)
-         st.playSound("ItemSound.quest_itemget")
+         if numItems != 0 :
+            st.giveItems(MOBS[npcId][st.getRandom(len(MOBS[npcId]))],int(numItems))
+            st.playSound("ItemSound.quest_itemget")
       return
 
 QUEST       = Quest(382, qn, "Kail's Magic Coin")

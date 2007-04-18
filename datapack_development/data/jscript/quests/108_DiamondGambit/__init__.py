@@ -1,5 +1,6 @@
 # Maked by Mr. Have fun! Version 0.2
 import sys
+from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -80,8 +81,8 @@ class Quest (JQuest) :
             htmltext = "30523-08.htm"
             st.giveItems(SILVERSMITH_HAMMER_ID,1)
             for item in range(4412,4417) :
-               st.giveItems(item,10)   # Echo crystals
-            st.giveItems(1060,100)     # Lesser Healing Potions
+               st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))   # Echo crystals
+            st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))     # Lesser Healing Potions
             st.takeItems(STAR_DIAMOND_ID,-1)
             st.set("cond","0")
             st.setState(COMPLETED)

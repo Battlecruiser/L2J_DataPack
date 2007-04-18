@@ -1,5 +1,6 @@
 # Made by Mr. Have fun! - Version 0.3 by DrLecter
 import sys
+from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -61,13 +62,17 @@ class Quest (JQuest) :
    if st.getState() != STARTED : return 
    
    count = st.getQuestItemsCount(WOLF_PELT)
-   if count<40 :
-     st.giveItems(WOLF_PELT,1)
-     if count == 39 :
+   numItems, chance = divmod(100*Config.RATE_DROP_QUEST,100)
+   if st.getRandom(100) <chance :
+     numItems = numItems + 1
+   if count+numItems>=40 :
+     numItems = 40 - count
+     if numItems != 0 :
        st.playSound("ItemSound.quest_middle")
        st.set("cond","2")
-     else:
-       st.playSound("ItemSound.quest_itemget")
+   else :
+     st.playSound("ItemSound.quest_itemget")
+   st.giveItems(WOLF_PELT,int(numItems))
    return
 
 QUEST       = Quest(258,qn,"Bring Wolf Pelt1")

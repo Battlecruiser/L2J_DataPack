@@ -1,6 +1,7 @@
 # Created by CubicVirtuoso
 # Any problems feel free to drop by #l2j-datapack on irc.freenode.net
 import sys
+from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -52,15 +53,19 @@ class Quest (JQuest) :
      st = player.getQuestState(qn)
      if not st : return 
      if st.getState() != STARTED : return 
-
-     count = st.getQuestItemsCount(RED_CRYSTALS_ID)
-     if st.getInt("cond") == 1 and count < 50 :
-             st.giveItems(RED_CRYSTALS_ID,1)
-             if count == 49 :
-                 st.playSound("ItemSound.quest_middle")
-                 st.set("cond","2")
+     if st.getInt("cond") == 1 :
+             numItems, chance = divmod(100*Config.RATE_DROP_QUEST,100)
+             if st.getRandom(100) < chance :
+                 numItems = numItems + 1
+             count = st.getQuestItemsCount(RED_CRYSTALS_ID)
+             if count + numItems >= 50:
+                 numItems = 50 - count
+                 if numItems != 0 :    
+                     st.playSound("ItemSound.quest_middle")
+                     st.set("cond","2")
              else :
                  st.playSound("ItemSound.quest_itemget")
+             st.giveItems(RED_CRYSTALS_ID,int(numItems))
      return
  
 QUEST       = Quest(432,qn,"Birthday Party Song")

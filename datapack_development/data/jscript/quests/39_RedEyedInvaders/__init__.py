@@ -1,5 +1,6 @@
 # Made by disKret
 import sys
+from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -26,6 +27,31 @@ GREEN_COLORED_LURE_HG = 6521
 BABy_DUCK_RODE = 6529
 FISHING_SHOT_NG = 6535
 
+DROPLIST={20925:[GEM_OF_MAILLE,30,INCENSE_POUCH,"5"],
+          20919:[INCENSE_POUCH,30,GEM_OF_MAILLE,"5"],
+          20920:[INCENSE_POUCH,30,GEM_OF_MAILLE,"5"]
+}
+NECKLACE={20921:[RED_BONE_NECKLACE,100,BLACK_BONE_NECKLACE,"3"],
+          20919:[BLACK_BONE_NECKLACE,100,RED_BONE_NECKLACE,"3"],
+          20920:[BLACK_BONE_NECKLACE,100,RED_BONE_NECKLACE,"3"]
+}
+def drop(partyMember,array) :
+    item,max,item2,condition = array
+    st = partyMember.getQuestState(qn)
+    count = st.getQuestItemsCount(item)
+    numItems,chance = divmod(100*Config.RATE_QUESTS_REWARD,100)
+    if st.getRandom(100) < chance :
+        numItems = numItems + 1
+    if count+numItems > max :
+        numItems = max - count
+    st.giveItems(item,int(numItems))
+    if st.getQuestItemsCount(item) == max and st.getQuestItemsCount(item2) == max:
+        st.playSound("ItemSound.quest_middle")
+        st.set("cond",condition)
+    else:
+        st.playSound("ItemSound.quest_itemget")
+    return
+    
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -87,54 +113,13 @@ class Quest (JQuest) :
 
  def onKill (self,npc,player):
    npcId = npc.getNpcId()
-   if npcId in [20919,20920] :
-       partyMember = self.getRandomPartyMember(player,"2")
-       if partyMember : 
-           st = partyMember.getQuestState(qn)
-           if st.getQuestItemsCount(BLACK_BONE_NECKLACE) < 100 :
-             st.giveItems(BLACK_BONE_NECKLACE,1)
-             if st.getQuestItemsCount(BLACK_BONE_NECKLACE) == 100 and st.getQuestItemsCount(RED_BONE_NECKLACE) == 100:
-               st.playSound("ItemSound.quest_middle")
-               st.set("cond","3")
-             else:
-               st.playSound("ItemSound.quest_itemget")
-             return
-   if npcId == 20921 :
-       partyMember = self.getRandomPartyMember(player,"2")
-       if partyMember : 
-           st = partyMember.getQuestState(qn)
-           if st.getQuestItemsCount(RED_BONE_NECKLACE) < 100 :
-             st.giveItems(RED_BONE_NECKLACE,1)
-             if st.getQuestItemsCount(BLACK_BONE_NECKLACE) == 100 and st.getQuestItemsCount(RED_BONE_NECKLACE) == 100:
-               st.playSound("ItemSound.quest_middle")
-               st.set("cond","3")
-             else:
-               st.playSound("ItemSound.quest_itemget")
-             return
-   if npcId in [20919,20920] :
+   partyMember = self.getRandomPartyMember(player,"2")
+   if (partyMember and npcId != 20925) :
+       drop(partyMember,NECKLACE[npcId])
+   else:
        partyMember = self.getRandomPartyMember(player,"4")
-       if partyMember : 
-           st = partyMember.getQuestState(qn)
-           if st.getQuestItemsCount(INCENSE_POUCH) < 30 :
-             st.giveItems(INCENSE_POUCH,1)
-             if st.getQuestItemsCount(INCENSE_POUCH) == 30 and st.getQuestItemsCount(GEM_OF_MAILLE) == 30:
-               st.playSound("ItemSound.quest_middle")
-               st.set("cond","5")
-             else:
-               st.playSound("ItemSound.quest_itemget")
-             return
-   if npcId == 20925 :
-       partyMember = self.getRandomPartyMember(player,"4")
-       if partyMember : 
-           st = partyMember.getQuestState(qn)
-           if st.getQuestItemsCount(GEM_OF_MAILLE) < 30 :
-             st.giveItems(GEM_OF_MAILLE,1)
-             if st.getQuestItemsCount(INCENSE_POUCH) == 30 and st.getQuestItemsCount(GEM_OF_MAILLE) == 30:
-               st.playSound("ItemSound.quest_middle")
-               st.set("cond","5")
-             else:
-               st.playSound("ItemSound.quest_itemget")
-             return  
+       if (partyMember and npcId != 20921) :     
+           drop(partyMember,DROPLIST[npcId])
    return
 
 QUEST       = Quest(39,qn,"Red Eyed Invaders")

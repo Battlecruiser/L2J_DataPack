@@ -1,6 +1,7 @@
 # Made by Mr. Have fun! Version 0.2
 # Version 0.3 by H1GHL4ND3R
 import sys
+from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -80,15 +81,15 @@ class Quest (JQuest) :
          st.takeItems(KARTAS_TRANSLATION,1)
          st.giveItems(ELDRITCH_DAGGER,1)
          for item in range(4412,4417) :
-               st.giveItems(item,10)
-         st.giveItems(1060,100)
+               st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))
+         st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))
          if st.getPlayer().getClassId().isMage():
            item = 2509
-           qty = 300
+           qty = 500
          else :
            item = 1835
-           qty = 100
-         st.giveItems(item,qty)
+           qty = 1000
+         st.giveItems(item,int(qty*Config.RATE_QUESTS_REWARD))
          st.unset("cond")
          st.setState(COMPLETED)
          st.playSound("ItemSound.quest_finish")

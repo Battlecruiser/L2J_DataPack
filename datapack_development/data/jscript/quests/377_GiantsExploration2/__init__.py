@@ -14,6 +14,7 @@ qn = "377_GiantsExploration2"
 #Variables
 #Titan Ancient Books drop rate in %
 DROP_RATE=15*Config.RATE_DROP_QUEST
+MAX = 100
 #Alternative rewards. Set this to a non-zero value and recipes will be 100% instead of 60%
 ALT_RP_100=0
 
@@ -107,10 +108,12 @@ class Quest (JQuest) :
      partyMember = self.getRandomPartyMemberState(player,STARTED)
      if not partyMember : return
      st = partyMember.getQuestState(qn)
-     
-     drop = st.getRandom(100)
-     if drop < DROP_RATE :
-        st.giveItems(ANC_BOOK,1)
+     numItems, chance = divmod(DROP_RATE,MAX)
+     drop = st.getRandom(MAX)
+     if drop < chance :
+        numItems = numItems +1
+     if int(numItems) != 0 :
+        st.giveItems(ANC_BOOK,int(numItems))
         st.playSound("ItemSound.quest_itemget")
      return  
 

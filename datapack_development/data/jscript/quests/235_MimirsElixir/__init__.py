@@ -9,7 +9,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "235_MimirsElixir"
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 235,"MimirsElixir","Mimir's Elixir"
 
-DROP_RATE = 45
+DROP_RATE = 20
 
 #prerequisites:
 STAR_OF_DESTINY = 5011

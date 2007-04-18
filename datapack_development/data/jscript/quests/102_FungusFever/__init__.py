@@ -1,5 +1,6 @@
 # Made by Mr. Have fun! Version 0.2
 import sys
+from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -123,13 +124,13 @@ class Quest (JQuest) :
            st.set("onlyone","1")
            if st.getPlayer().getClassId().getId() in range(18,25) :
              st.giveItems(SWORD_OF_SENTINEL_ID,1)
-             st.giveItems(1835,1000)
+             st.giveItems(1835,int(1000*Config.RATE_QUESTS_REWARD))
            else:
              st.giveItems(STAFF_OF_SENTINEL_ID,1)
-             st.giveItems(2509,1000)
+             st.giveItems(2509,int(1000*Config.RATE_QUESTS_REWARD))
            for item in range(4412,4417) :
-             st.giveItems(item,10)
-           st.giveItems(1060,100)
+             st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))
+           st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))
    return htmltext
 
  def onKill (self,npc,player):
