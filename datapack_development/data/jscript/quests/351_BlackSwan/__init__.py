@@ -1,5 +1,6 @@
 # Made by mtrix
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -35,7 +36,7 @@ class Quest (JQuest) :
          if amount2 :
              htmltext = "30969-03.htm"
              st.giveItems(ADENA,amount2*3880)
-             st.giveItems(BILL_OF_IASON_HEINE,amount2)
+             st.giveItems(BILL_OF_IASON_HEINE,int(amount2*Config.RATE_QUESTS_REWARD))
              st.takeItems(BARREL_OF_LEAGUE,-1)
      elif event == "30969-06.htm" :
          if not (amount + amount2) :

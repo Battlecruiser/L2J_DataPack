@@ -1,6 +1,7 @@
 # Maked by Mr. Have fun! Version 0.2
 print "importing quests: 165: Wild Hunt"
 import sys
+from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -60,7 +61,7 @@ class Quest (JQuest) :
             st.set("id","165")
             htmltext = "30348-05.htm"
             st.takeItems(DARK_BEZOAR_ID,st.getQuestItemsCount(DARK_BEZOAR_ID))
-            st.giveItems(LESSER_HEALING_POTION_ID,5)
+            st.giveItems(LESSER_HEALING_POTION_ID,int(5*Config.RATE_QUESTS_REWARD))
             st.addExpAndSp(1000,0)
             st.set("cond","0")
             st.setState(COMPLETED)

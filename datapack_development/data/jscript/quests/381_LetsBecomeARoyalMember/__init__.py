@@ -1,4 +1,10 @@
 # Lets Become A Royal Member ver. 0.1 by DrLecter
+import sys
+from net.sf.l2j import Config
+from net.sf.l2j.gameserver.model.quest import State
+from net.sf.l2j.gameserver.model.quest import QuestState
+from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+
 QuestNumber      = 381
 QuestName        = "LetsBecomeARoyalMember"
 QuestDescription = "Let's become a Royal Member"
@@ -13,13 +19,9 @@ SORINT, SANDRA = 30232, 30090
 #MOBs
 ANCIENT_GARGOYLE, VEGUS = 21018,27316
 #CHANCES (custom values, feel free to change them)
-GARGOYLE_CHANCE = 5
-VEGUS_CHANCE = 100
+GARGOYLE_CHANCE = 5*Config.RATE_DROP_QUEST
+VEGUS_CHANCE = 100*Config.RATE_DROP_QUEST
 
-import sys
-from net.sf.l2j.gameserver.model.quest import State
-from net.sf.l2j.gameserver.model.quest import QuestState
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 class Quest (JQuest) :
 

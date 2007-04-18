@@ -1,5 +1,6 @@
 #quest by zerghase
-
+import sys
+from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -96,14 +97,19 @@ class Quest (JQuest) :
     npcId = npc.getNpcId()
     cond=int(st.get("cond"))
     if cond==2:
+      numItems,chance = divmod(100*Config.RATE_QUESTS_REWARD,100)
+      if st.getRandom(100) < chance :
+        numItems = numItems +1  
       pieces=st.getQuestItemsCount(MAP_PIECE)
-      if pieces<MAX_COUNT-1:
-        st.giveItems(MAP_PIECE,1)
+      if pieces + numItems >= MAX_COUNT :
+        numItems = MAX_COUNT - pieces
+        if numItems != 0:
+          st.playSound("ItemSound.quest_middle")
+          st.set("cond", "3")
+      else :  
         st.playSound("ItemSound.quest_itemget")
-      elif pieces==MAX_COUNT-1:
-        st.giveItems(MAP_PIECE,1)
-        st.playSound("ItemSound.quest_middle")
-        st.set("cond", "3")
+      st.giveItems(MAP_PIECE,int(numItems))
+    return        
 
 QUEST=Quest(42,qn,"Help The Uncle!")
 CREATED=State('Start', QUEST)

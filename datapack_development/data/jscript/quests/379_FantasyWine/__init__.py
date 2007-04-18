@@ -1,5 +1,6 @@
 # Made by disKret & DrLecter
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -13,12 +14,14 @@ HARLAN = 30074
 ENKU_CHAMPION = 20291
 ENKU_SHAMAN = 20292
 
-#CHANCE FOR DROP
-CHANCE = 100
-
 #ITEMS
 LEAF = 5893
 STONE = 5894
+
+MOB = {
+ENKU_CHAMPION:[LEAF,80],
+ENKU_SHAMAN:[STONE,100]
+}
 
 class Quest (JQuest) :
 
@@ -77,22 +80,23 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != STARTED : return 
    
-   chance = st.getRandom(100)
    npcId = npc.getNpcId()
-   if npcId == ENKU_CHAMPION and chance < CHANCE and st.getQuestItemsCount(LEAF) < 80 :
-      st.giveItems(LEAF,1)
-      if st.getQuestItemsCount(LEAF) == 80 and st.getQuestItemsCount(STONE) == 100 :
-         st.playSound("ItemSound.quest_middle")
-         st.set("cond","2")
-      else :
-         st.playSound("ItemSound.quest_itemget")
-   elif npcId == ENKU_SHAMAN and chance < CHANCE and st.getQuestItemsCount(STONE) < 100 :
-      st.giveItems(STONE,1)
-      if st.getQuestItemsCount(LEAF) == 80 and st.getQuestItemsCount(STONE) == 100 :
-         st.playSound("ItemSound.quest_middle")
-         st.set("cond","2")
-      else :
-         st.playSound("ItemSound.quest_itemget")
+   numItems,chance = divmod(100*Config.RATE_DROP_QUEST,100)
+   item,count = MOB[npcId]
+   if item :
+      if st.getRandom(100) <chance :
+         numItems = numItems + 1
+      prevItems = st.getQuestItemsCount(item)
+      if prevItems < count :
+         if prevItems + numItems > count :
+            numItems = count - prevItems
+         if int(numItems) != 0 :
+            st.giveItems(item,int(numItems))
+         if (st.getQuestItemsCount(LEAF) != 80 and st.getQuestItemsCount(STONE) != 100) :
+            st.playSound("ItemSound.quest_itemget")
+         else :
+            st.playSound("ItemSound.quest_middle")
+            st.set("cond","2")
    return
 
 QUEST       = Quest(379,qn,"Fantasy Wine")

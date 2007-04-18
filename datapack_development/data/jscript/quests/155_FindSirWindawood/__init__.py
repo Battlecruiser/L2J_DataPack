@@ -1,5 +1,6 @@
 # Made by Mr. - Version 0.3 by DrLecter
 import sys
+from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -43,7 +44,7 @@ class Quest (JQuest) :
          htmltext = "30042-05.htm"
    elif npcId == 30311 and st.getInt("cond") and st.getQuestItemsCount(OFFICIAL_LETTER_ID) and id == STARTED:
       st.takeItems(OFFICIAL_LETTER_ID,-1)
-      st.giveItems(HASTE_POTION_ID,1)
+      st.giveItems(HASTE_POTION_ID,int(Config.RATE_QUESTS_REWARD))
       st.unset("cond")
       st.setState(COMPLETED)
       st.playSound("ItemSound.quest_finish")

@@ -1,5 +1,6 @@
 # Made by disKret
 import sys
+from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -34,6 +35,8 @@ HALISHA_MARKS = 7485
 GUARDIAN_OF_KNOWLEDGE = 27216
 ANGEL_ALLECTOR = 27250
 ARCHON_OF_HALISHA = 27219
+
+max = 700
 
 class Quest (JQuest) :
 
@@ -274,9 +277,16 @@ class Quest (JQuest) :
      st.set("cond","9")
      st.giveItems(RESONANCE_AMULET_3,1)
      st.playSound("ItemSound.quest_itemget")
-   if npcId in range(21646,21652) and cond == 15 and st.getQuestItemsCount(HALISHA_MARKS) < 700 :
-     st.giveItems(HALISHA_MARKS,1)
-     st.playSound("ItemSound.quest_itemget")
+   if npcId in range(21646,21652) and cond == 15 :
+     numItems,chance = divmod(100*Config.RATE_QUESTS_REWARD,100)
+     if st.getRandom(100) < chance :
+       numItems = numItems + 1
+     count = st.getQuestItemsCount(HALISHA_MARKS)
+     if count + numItems > max :
+       numItems = max - count
+     else :
+       st.playSound("ItemSound.quest_itemget")
+     st.giveItems(HALISHA_MARKS,int(numItems))
      if st.getQuestItemsCount(HALISHA_MARKS) == 700 :
        st.takeItems(HALISHA_MARKS,700)
        st.playSound("ItemSound.quest_middle")

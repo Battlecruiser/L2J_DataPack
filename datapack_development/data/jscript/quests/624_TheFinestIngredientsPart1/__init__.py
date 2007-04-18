@@ -1,5 +1,6 @@
 # by disKret
 import sys
+from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -15,7 +16,12 @@ CRYOLITE=7080
 
 #MOBS
 MOBS = HOT_SPRINGS_ATROX,HOT_SPRINGS_ATROXSPAWN,HOT_SPRINGS_BANDERSNATCH,HOT_SPRINGS_NEPENTHES = 21321,21317,21322,21319
-
+ITEMS={
+    HOT_SPRINGS_ATROX:SECRET_SPICE,
+    HOT_SPRINGS_ATROXSPAWN:SECRET_SPICE,
+    HOT_SPRINGS_BANDERSNATCH:FOOT_OF_BANDERSNATCHLING,
+    HOT_SPRINGS_NEPENTHES:TRUNK_OF_NEPENTHES
+}
 
 class Quest (JQuest) :
 
@@ -75,28 +81,22 @@ class Quest (JQuest) :
    st = partyMember.getQuestState(qn)
    if st :
         if st.getState() == STARTED :
-            count_trunk = st.getQuestItemsCount(TRUNK_OF_NEPENTHES)
-            count_foot = st.getQuestItemsCount(FOOT_OF_BANDERSNATCHLING)
-            count_spice = st.getQuestItemsCount(SECRET_SPICE)
             npcId = npc.getNpcId()
             if st.getInt("cond") == 1:
-             if npcId == HOT_SPRINGS_NEPENTHES and count_trunk < 50 :
-               st.giveItems(TRUNK_OF_NEPENTHES,1)
-               if count_trunk == 49 and count_foot == count_spice == 50 :
-                 st.set("cond","3")
-                 st.playSound("ItemSound.quest_middle")
-               else:
-                 st.playSound("ItemSound.quest_itemget")  
-             elif npcId == HOT_SPRINGS_BANDERSNATCH and count_foot < 50 :
-               st.giveItems(FOOT_OF_BANDERSNATCHLING,1)
-               if count_trunk == 50 and count_foot == count_spice == 50 :
-                 st.set("cond","3")
-                 st.playSound("ItemSound.quest_middle")
-               else:
-                 st.playSound("ItemSound.quest_itemget")  
-             elif npcId in [ HOT_SPRINGS_ATROX,HOT_SPRINGS_ATROXSPAWN ] and count_spice < 50 :
-               st.giveItems(SECRET_SPICE,1)
-               if count_trunk == count_foot == 50 and count_spice == 49 :
+             numItems,chance = divmod(100*Config.RATE_DROP_QUEST,100)
+             if st.getRandom(100) <chance :
+               numItems = numItems + 1
+             numItems = int(numItems)
+             item = ITEMS[npcId]
+             count = st.getQuestItemsCount(item)
+             if count < 50 :
+               if count + numItems > 50 :
+                 numItems = 50 - count
+               st.giveItems(item,numItems)
+               count_trunk = st.getQuestItemsCount(TRUNK_OF_NEPENTHES)
+               count_foot = st.getQuestItemsCount(FOOT_OF_BANDERSNATCHLING)
+               count_spice = st.getQuestItemsCount(SECRET_SPICE)
+               if count_trunk == count_foot == count_spice == 50 :
                  st.set("cond","3")
                  st.playSound("ItemSound.quest_middle")
                else:

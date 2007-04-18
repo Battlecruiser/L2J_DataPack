@@ -44,7 +44,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_middle") 
    elif event == "30223-10.htm" : 
      st.takeItems(ARUJIENS_LETTER3,-1) 
-     st.giveItems(ADENA,450) 
+     st.giveItems(113,1) 
      st.set("cond","0") 
      st.setState(COMPLETED) 
      st.playSound("ItemSound.quest_finish") 
@@ -86,7 +86,7 @@ class Quest (JQuest) :
      elif st.getQuestItemsCount(GREENIS_LETTER) : 
        htmltext = "30223-10.htm" 
        st.takeItems(GREENIS_LETTER,-1) 
-       st.giveItems(BEGINNERS_POTION,5) 
+       st.giveItems(113,1)
        st.set("cond","0") 
        st.setState(COMPLETED) 
        st.playSound("ItemSound.quest_finish")

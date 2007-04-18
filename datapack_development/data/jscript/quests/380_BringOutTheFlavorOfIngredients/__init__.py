@@ -1,5 +1,6 @@
 # Made by disKret & DrLecter
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -101,13 +102,21 @@ class Quest (JQuest) :
    
    if st.getInt("cond") == 1 :
       chance,item,max = DROPLIST[npc.getNpcId()]
-      if st.getRandom(100) < chance and st.getQuestItemsCount(item) < max :
-         st.giveItems(item,1)
-         if st.getQuestItemsCount(RITRONS_FRUIT) == 4 and st.getQuestItemsCount(MOON_FACE_FLOWER) == 20 and st.getQuestItemsCount(LEECH_FLUIDS) == 10 :
-            st.set("cond","2")
-            st.playSound("ItemSound.quest_middle")
-         else :
-            st.playSound("ItemSound.quest_itemget")
+      numItems,chance = divmod(chance*Config.RATE_DROP_QUEST,100)
+      count = st.getQuestItemsCount(item)
+      if count < max :
+         if st.getRandom(100) < chance :
+            numItems = numItems + 1
+         numItems = int(numItems)
+         if count + numItems > max :
+            numItems = max - count
+         if numItems != 0 :
+            st.giveItems(item,numItems)
+            if st.getQuestItemsCount(RITRONS_FRUIT) == 4 and st.getQuestItemsCount(MOON_FACE_FLOWER) == 20 and st.getQuestItemsCount(LEECH_FLUIDS) == 10 :
+               st.set("cond","2")
+               st.playSound("ItemSound.quest_middle")
+            else :
+               st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST       = Quest(380,qn,"Bring Out The Flavor Of Ingredients")

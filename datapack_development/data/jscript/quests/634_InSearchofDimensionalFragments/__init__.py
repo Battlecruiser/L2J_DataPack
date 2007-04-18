@@ -1,4 +1,5 @@
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -43,8 +44,11 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     if st :
         if st.getState() == STARTED :
-            if st.getRandom(10)<6 :
-                st.giveItems(DIMENSION_FRAGMENT_ID,1)
+            numItems = int((npc.getLevel() * 0.15 +1.6)*Config.RATE_DROP_QUEST)
+            if st.getRandom(100)>=10 :
+                numItems = 0
+            if numItems > 0 :    
+                st.giveItems(DIMENSION_FRAGMENT_ID,numItems)
                 st.playSound("ItemSound.quest_itemget")
     return
 

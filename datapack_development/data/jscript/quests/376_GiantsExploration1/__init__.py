@@ -13,8 +13,9 @@ qn = "376_GiantsExploration1"
 #Variables
 #Ancient parchment drop rate in %
 DROP_RATE   = 15*Config.RATE_DROP_QUEST
+MAX = 100
 #Mysterious Book drop rate in %
-DROP_RATE_2 = 5
+DROP_RATE_2 = 5*Config.RATE_DROP_QUEST
 #By changing this setting you can make a group of recipes harder to get
 RP_BALANCE = 50
 #Changing this value to non-zero, will turn recipes to 100% instead of 60%
@@ -163,8 +164,11 @@ class Quest (JQuest) :
          if partyMember.getQuestState(qn).getRandom(2) :
              partyMember = partyMember2
      st = partyMember.getQuestState(qn)  
-     if st.getRandom(100) < DROP_RATE :
-        st.giveItems(ANC_SCROLL,1)
+     numItems, chance = divmod(DROP_RATE,MAX)
+     if st.getRandom(MAX) < chance :
+        numItems = numItems + 1
+     if int(numItems) != 0 :
+        st.giveItems(ANC_SCROLL,int(numItems))
         st.playSound("ItemSound.quest_itemget")
      return  
 

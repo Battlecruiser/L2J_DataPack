@@ -2,6 +2,7 @@
 # by DrLecter
 print "importing quests:",
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -11,7 +12,7 @@ QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 358,"IllegitimateChildOfAGoddess","I
 qn = "358_IllegitimateChildOfAGoddess"
 
 #Variables
-DROP_RATE=12  #in %
+DROP_RATE=12*Config.RATE_DROP_QUEST  #in %
 REQUIRED=108 #how many items will be paid for a reward (affects onkill sounds too)
 
 #Quest items
@@ -83,13 +84,18 @@ class Quest (JQuest) :
      if st.getState() != STARTED : return 
    
      count = st.getQuestItemsCount(SN_SCALE)
-     if count < REQUIRED and st.getRandom(100) < DROP_RATE :
-        st.giveItems(SN_SCALE,1)
-        if count + 1 == REQUIRED :
-           st.playSound("ItemSound.quest_middle")
-           st.set("cond","2")
+     numItems, chance = divmod(DROP_RATE,100)
+     if st.getRandom(100) < chance :
+        numItems += 1
+     if numItems != 0 :
+        if count + numItems >= REQUIRED :
+           numItems = REQUIRED - count
+           if numItems != 0 :
+              st.playSound("ItemSound.quest_middle")
+              st.set("cond","2")
         else :
            st.playSound("ItemSound.quest_itemget")
+        st.giveItems(SN_SCALE,int(numItems))   
      return
 
 # Quest class and state definition
