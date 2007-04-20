@@ -21141,7 +21141,7 @@ INSERT INTO `droplist` VALUES
 (22021,1341,10,30,2,142857), -- Bone Arrow
 (22021,1884,1,1,2,27027), -- Cord
 (22021,1878,1,1,2,13514), -- Braided Hemp
-(22021,1893,1,1,2,2618), -- Oriharukon
+(22021,1874,1,1,2,2618), -- Oriharukon
 (22021,1889,1,1,2,2513), -- Compound Braid
 (22021,2027,1,1,1,1912), -- Spiked Club Head
 (22021,5220,1,1,2,1057), -- Metal Hardener
@@ -21149,7 +21149,7 @@ INSERT INTO `droplist` VALUES
 (22021,157,1,1,1,8), -- Spiked Club
 (22021,186,1,1,1,8), -- Staff of Magic
 (22021,5220,1,1,-1,50000), -- Metal Hardener
-(22021,1893,1,1,-1,50000), -- Oriharukon
+(22021,1874,1,1,-1,50000), -- Oriharukon
 (22021,1939,1,1,-1,25000), -- Mithril Banded Gaiters Material
 (22022,57,287,573,0,700000), -- Adena
 (22022,1872,1,1,2,90909), -- Animal Bone
