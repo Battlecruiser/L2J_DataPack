@@ -1,4 +1,4 @@
-﻿--
+--
 -- Table structure for table `npc`
 -- 
 DROP TABLE IF EXISTS `npc`;
