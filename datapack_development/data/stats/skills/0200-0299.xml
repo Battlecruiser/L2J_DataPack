@@ -1430,7 +1430,7 @@
     </effect>
   </enchant1for>
 </skill>
-<skill id="271" levels="1" name="Dance of Warrior" enchantLevels1="30" enchantLevels2="30" >
+<skill id="271" levels="1" name="Dance of the Warrior" enchantLevels1="30" enchantLevels2="30" >
   <table name="#ench1time">
   125 131 136 142 147 153 158 164 169 175
   180 186 191 197 202 208 213 219 224 230
@@ -1518,7 +1518,7 @@
     </effect>
   </enchant1for>
 </skill>
-<skill id="273" levels="1" name="Dance of Mystic" enchantLevels1="30" enchantLevels2="30" >
+<skill id="273" levels="1" name="Dance of the Mystic" enchantLevels1="30" enchantLevels2="30" >
   <table name="#ench1time">
   125 131 136 142 147 153 158 164 169 175
   180 186 191 197 202 208 213 219 224 230
@@ -2170,7 +2170,7 @@
   <for>
   </for>
 </skill>
-<skill id="296" levels="1" name="Rest of Chameleon">
+<skill id="296" levels="1" name="Chameleon Rest">
   <table name="#mpConsume"> 9 </table> 
   <set name="power" val="0.0"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -2187,7 +2187,7 @@
 </skill>
 <skill id="297" levels="2" name="Duelist Spirit">
   <table name="#Tab-pAtkSpd"> 1.08 1.12 </table>
-  <table name="#mpConsume"> 30 44 </table>
+  <table name="#mpConsume"> 30 34 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>

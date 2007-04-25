@@ -401,4 +401,135 @@
   <for>
   </for>
 </skill>
+<skill id="3626" levels="1" name="Kabokula">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Used when trapping a roaring Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3627" levels="1" name="Tapirawa">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Used on a quivering Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3628" levels="1" name="Shabonoba">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Used on a struggling Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3629" levels="10" name="Blood Sword Akamanah">
+<!--
+  Needs to be finished - below is a copy of 3603 Demon Sword Zariche
+  Description(s):
+      Lvl 1-10 - A demonic twin blade forged in blood by Gran Kain, the god of chaos. The blade dies over and over again when it touches the air, and it craves blood to forge it anew. It becomes stronger every time it is supplied with blood.
+-->
+  <table name="#maxCp"> 12 13 14 15 17 19 21 23 25 27 </table>
+  <table name="#pAtk"> 3 4.5 6 7.5 9 10.5 11 11.5 12 12.5 </table>
+  <table name="#mAtk"> 3 3.25 3.50 3.75 4 4.25 4.50 5 5.50 5.75 </table>
+  <table name="#pDef"> 2.5 2.6 2.7 2.8 2.9 3 3.25 3.50 3.75 4 </table>
+  <table name="#mDef"> 3 3.1 3.2 3.3 3.4 3.5 3.75 4 4.25 4.5 </table>
+  <table name="#runSpd"> 4 6 8 10 12 14 16 18 19 20 </table>
+  <table name="#accCombat"> 15 20 25 30 35 40 45 50 55 60 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="-1"/>
+  <set name="minPledgeClass" val="2"/>
+  <for>
+        <mul stat="maxCp" val="#maxCp" order="0x30"/>
+        <mul stat="pAtk" val="#pAtk" order="0x30"/>
+        <mul stat="mAtk" val="#mAtk" order="0x30"/>
+        <mul stat="pDef" val="#pDef" order="0x30"/>
+        <mul stat="mDef" val="#mDef" order="0x30"/>
+        <add stat="accCombat" val="#accCombat" order="0x40"/>
+        <add stat="runSpd" val="#runSpd" order="0x40"/>
+        <add order="0x40" stat="absorbDam" val="100"/>
+        <mul order="0x30" stat="regCp" val="20"/>
+  </for>
+</skill>
+<skill id="3630" levels="1" name="Void Burst">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Discharges cursed energy to attack nearby enemies.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3631" levels="1" name="Void Flow">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Emits cursed energy to strike a distant enemy.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3632" levels="1" name="Clan Gate">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Active: Creates a gate that summons clan members. You cannot move while this skill is active.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3633" levels="2" name="Residential Shock Immunity">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1 - Active: Momentarily increases resistance to shock attacks.
+	  Lvl 2 - Active: Momentarily gives complete resistance to shock attacks.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
 </list>
