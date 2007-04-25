@@ -25304,7 +25304,7 @@ INSERT INTO `droplist` VALUES
 (25500,1539,1,1,2,124267); -- Greater Healing Potion
 
 INSERT INTO `droplist` VALUES 
-(27198,57,7,13,0,1000000); -- Adena
+(18342,57,7,13,0,1000000); -- Adena
 
 -- 
 -- Category Explanation (GrandBoss)
