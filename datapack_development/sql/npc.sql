@@ -1,4 +1,4 @@
--- 
+﻿--
 -- Table structure for table `npc`
 -- 
 DROP TABLE IF EXISTS `npc`;
@@ -6219,7 +6219,7 @@ INSERT INTO `npc` (`id`,`idTemplate`,`name`,`serverSideName`,`title`,`serverSide
 	(35274,35274,'Logan',0,'Chamberlain',0,'NPC.a_chamberlain_MHuman',9.50,22.50,70,'male','L2CastleChamberlain',40,3862,1493,11.85,2.78,40,43,30,21,20,10,490,10,1314,470,780,382,282,0,333,0,0,0,55,132,NULL,0,1,0),
 	(35275,35275,'Kruger',0,'Wyvern Manager',0,'NPC.a_fighterguild_teacher_MHuman',20.00,31.00,99,'male','L2WyvernManager',80,400000,9999,13.43,3.09,40,43,30,21,20,10,0,0,9000,5000,6000,6000,300,0,333,0,0,0,88,132,NULL,0,0,0),
 	(35276,35276,'Eldon',0,'Mercenary Manager',0,'NPC.a_common_peopleA_MHuman',8.00,21.50,70,'male','L2MercManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,490,10,1335,470,780,382,278,0,333,0,0,0,55,132,NULL,0,1,0),
-	(35277,35277,'Manor Manager',0,'Aden',0,'NPC.a_chamberlain_MHuman',9.50,22.50,70,'male','L2Npc',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,132,NULL,0,1,0);
+	(35277,35277,'Manor Manager',0,'Aden',0,'NPC.a_chamberlain_MHuman',9.50,22.50,70,'male','L2Npc',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,132,NULL,0,1,0),
 	(35278,35278,'Messenger Ruford',0,'Messenger',0,'NPC.a_guard_MHuman',8.00,24.00,70,'male','L2SiegeNpc',40,3862,1493,11.85,2.78,40,43,30,21,20,10,490,10,1335,470,780,382,278,0,333,135,0,0,55,176,NULL,0,1,0),
 	(35279,35279,'Innadril Holy Artifact',0,'',0,'NPC.castle_kent_statue_jewel',25.00,98.00,20,'etc','L2Artefact',40,541,213,3.95,1.21,40,43,30,21,20,10,40,10,57,94,23,76,282,0,333,0,0,0,55,0,NULL,0,1,0),
 	(35280,35280,'Baron Lionel Hunter',0,'',0,'NPC.a_lord_MHuman',7.00,23.00,65,'male','L2SiegeGuard',40,55449,3958,11.85,2.78,40,43,30,21,20,10,422,1,4308,418,619,340,278,0,333,79,0,0,55,132,'innadrile_siege_clan',1200,1,0),
