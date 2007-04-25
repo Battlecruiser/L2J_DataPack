@@ -64,7 +64,7 @@ class Quest (JQuest) :
  def onKill (self,npc,player):
    st = player.getQuestState(qn)
    if not st : return
-   if not st.getState() != STARTED: return
+   if st.getState() != STARTED: return
    
    if not st.getQuestItemsCount(POISON_SAC) and st.getInt("cond") == 1 :
       if st.getRandom(5) == 0 :
