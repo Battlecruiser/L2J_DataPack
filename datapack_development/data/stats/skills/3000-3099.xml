@@ -108,7 +108,7 @@
   <for>
   </for>
 </skill>
-<skill id="3010" levels="6" name="Special Ability: Focus">
+<skill id="3010" levels="7" name="Special Ability: Focus">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -159,7 +159,7 @@
   <for>
   </for>
 </skill>
-<skill id="3013" levels="2" name="Special Ability: Health">
+<skill id="3013" levels="5" name="Special Ability: Health">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -176,7 +176,7 @@
   <for>
   </for>
 </skill>
-<skill id="3014" levels="2" name="Special Ability: Mana Up">
+<skill id="3014" levels="3" name="Special Ability: Mana Up">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -570,7 +570,7 @@
   <for>
   </for>
 </skill>
-<skill id="3039" levels="6" name="Special Ability: Critical Drain">
+<skill id="3039" levels="7" name="Special Ability: Critical Drain">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -710,7 +710,7 @@
   <for>
   </for>
 </skill>
-<skill id="3047" levels="2" name="Special Ability: Acumen">
+<skill id="3047" levels="3" name="Special Ability: Acumen">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -727,7 +727,7 @@
   <for>
   </for>
 </skill>
-<skill id="3048" levels="2" name="Special Ability: Conversion">
+<skill id="3048" levels="3" name="Special Ability: Conversion">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -759,7 +759,7 @@
   <for>
   </for>
 </skill>
-<skill id="3050" levels="1" name="Special Ability: Focus">
+<skill id="3050" levels="2" name="Special Ability: Focus">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -775,7 +775,7 @@
   <for>
   </for>
 </skill>
-<skill id="3051" levels="1" name="Special Ability: Focus">
+<skill id="3051" levels="2" name="Special Ability: Focus">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -867,7 +867,7 @@
   <for>
   </for>
 </skill>
-<skill id="3056" levels="2" name="Special Ability: Rsk. Haste">
+<skill id="3056" levels="3" name="Special Ability: Rsk. Haste">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -884,7 +884,7 @@
   <for>
   </for>
 </skill>
-<skill id="3057" levels="2" name="Special Ability: Anger">
+<skill id="3057" levels="3" name="Special Ability: Anger">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -948,7 +948,7 @@
   <for>
   </for>
 </skill>
-<skill id="3061" levels="2" name="Special Ability: Critical Poison">
+<skill id="3061" levels="3" name="Special Ability: Critical Poison">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -956,9 +956,10 @@
   Descriptions:
   1: Causes poisoning. Effect 7.
   2: Causes poisoning. Effect 7.
+  3: Causes poisoning. Effect 7.  <- to be confirmed
   created 2005-05-29 23:34:31
 -->
-  <table name="#power"> 7.0 7.0 </table>
+  <table name="#power"> 7.0 7.0 7.0 </table>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -988,7 +989,7 @@
   <for>
   </for>
 </skill>
-<skill id="3063" levels="1" name="Special Ability: Back Blow">
+<skill id="3063" levels="2" name="Special Ability: Back Blow">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1036,7 +1037,7 @@
   <for>
   </for>
 </skill>
-<skill id="3066" levels="2" name="Special Ability: Critical Damage">
+<skill id="3066" levels="3" name="Special Ability: Critical Damage">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1070,7 +1071,7 @@
   <for>
   </for>
 </skill>
-<skill id="3068" levels="2" name="Special Ability: Haste">
+<skill id="3068" levels="3" name="Special Ability: Haste">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1103,7 +1104,7 @@
   <for>
   </for>
 </skill>
-<skill id="3070" levels="2" name="Special Ability: Critical Stun">
+<skill id="3070" levels="3" name="Special Ability: Critical Stun">
 <!---
   Automatically generated from C3 client files.
   Need to be checked/fixed.
@@ -1279,6 +1280,340 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1000"/>
+  <for>
+  </for>
+</skill>
+<skill id="3080" levels="10" name="Item Skill: Aggression">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1 - Chance: Provokes a target to attack during an ordinary physical attack. Power 438.
+	  Lvl 2 - Provokes a target to attack during an ordinary physical attack. Power 467.
+	  Lvl 3 - Chance: Provokes a target to attack during an ordinary physical attack. Power 495.
+	  Lvl 4 - Chance: Provokes a target to attack during an ordinary physical attack. Power 523.
+	  Lvl 5 - Chance: Provokes a target to attack during an ordinary physical attack. Power 549.
+	  Lvl 6 - Chance: Provokes a target to attack during an ordinary physical attack. Power 574.
+	  Lvl 7 - Chance: Provokes a target to attack during an ordinary physical attack. Power 597.
+	  Lvl 8 - Chance: Provokes a target to attack during an ordinary physical attack. Power 617.
+	  Lvl 9 - Chance: Provokes a target to attack during an ordinary physical attack. Power 635.
+	  Lvl 10 - Chance: Provokes a target to attack during an ordinary physical attack. Power 659.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3081" levels="10" name="Item Skill: Charm">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1 - Chance: Decreases a target's urge to attack during a general physical attack. Power 219.
+      Lvl 2 - Chance: Decreases a target's urge to attack during a general physical attack. Power 234.
+      Lvl 3 - Chance: Decreases a target's urge to attack during a general physical attack. Power 248.
+      Lvl 4 - Chance: Decreases a target's urge to attack during a general physical attack. Power 262.
+      Lvl 5 - Chance: Decreases a target's urge to attack during a general physical attack. Power 275.
+      Lvl 6 - Chance: Decreases a target's urge to attack during a general physical attack. Power 287.
+      Lvl 7 - Chance: Decreases a target's urge to attack during a general physical attack. Power 299.
+      Lvl 8 - Chance: Decreases a target's urge to attack during a general physical attack. Power 309.
+      Lvl 9 - Chance: Decreases a target's urge to attack during a general physical attack. Power 318.
+      Lvl 10 - Chance: Decreases a target's urge to attack during a general physical attack. Power 330.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3082" levels="10" name="Item Skill: Mana Burn">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1 - Chance: Burns up a target's MP during an ordinary physical attack. Power 49.
+      Lvl 2 - Chance: Burns up a target's MP during an ordinary physical attack. Power 53.
+      Lvl 3 - Chance: Burns up a target's MP during an ordinary physical attack. Power 57.
+      Lvl 4 - Chance: Burns up a target's MP during an ordinary physical attack. Power 61.
+      Lvl 5 - Chance: Burns up a target's MP during an ordinary physical attack. Power 66.
+      Lvl 6 - Chance: Burns up a target's MP during an ordinary physical attack. Power 70.
+      Lvl 7 - Chance: Burns up a target's MP during an ordinary physical attack. Power 74.
+      Lvl 8 - Chance: Burns up a target's MP during an ordinary physical attack. Power 78.
+      Lvl 9 - Chance: Burns up a target's MP during an ordinary physical attack. Power 82.
+      Lvl 10 - Chance: Burns up a target's MP during an ordinary physical attack. Power 88.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3083" levels="10" name="Item Skill: Slow">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1-10 - Chance: Momentarily decreases a target's speed during an ordinary physical attack. Effect 3.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3084" levels="10" name="Item Skill: Winter">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1-10 - Chance: Momentarily decreases a target's Atk. Spd. during an ordinary physical attack. Effect 3.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3085" levels="10" name="Item Skill: Stun">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1-10 - Chance: Momentarily throws the target into a state of shock during an ordinary physical attack.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3086" levels="10" name="Item Skill: Hold">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1-10 - Chance: Momentarily throws the target into a state of hold during an ordinary physical attack. The target cannot be affected by any additional hold attacks while the effect lasts.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3087" levels="10" name="Item Skill: Sleep">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1-10 - Chance: Momentarily throws the target into a state of sleep during a general physical attack. The target cannot be affected by any additional sleep attacks while the effect lasts.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3088" levels="10" name="Item Skill: Paralyze">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1-10 - Chance: Momentarily throws the target into a state of paralysis during an ordinary physical attack.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3089" levels="10" name="Item Skill: Medusa">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1-10 - Chance: Momentarily throws the target into a petrified state during a general physical attack.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3090" levels="10" name="Item Skill: Fear">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1-10 - Chance: Momentarily throws the target into a state of fear and causes him to flee during a general physical attack.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3091" levels="10" name="Item Skill: Poison">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 5.
+      Lvl 2 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 5.
+      Lvl 3 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 6.
+      Lvl 4 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 6.
+      Lvl 5 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 6.
+      Lvl 6 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 7.
+      Lvl 7 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 7.
+      Lvl 8 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 7.
+      Lvl 9 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 8.
+      Lvl 10 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 8.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3092" levels="10" name="Item Skill: Bleed">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 5.
+      Lvl 2 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 5.
+      Lvl 3 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 6.
+      Lvl 4 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 6.
+      Lvl 5 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 6.
+      Lvl 6 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 7.
+      Lvl 7 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 7.
+      Lvl 8 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 7.
+      Lvl 9 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 8.
+      Lvl 10 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 8.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3093" levels="10" name="Item Skill: Silence">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1-10 - Chance: Momentarily blocks the target's magic skill during a general physical attack.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3094" levels="10" name="Item Skill: Doom">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1-10 - Chance: Momentarily blocks all of the target's physical and magic skills during a general physical attack.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3095" levels="10" name="Item Skill: Mana Burn">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1 - Chance: Burns up a target's MP during magic use. Power 49.
+      Lvl 2 - Chance: Burns up a target's MP during magic use. Power 53.
+      Lvl 3 - Chance: Burns up a target's MP during magic use. Power 57.
+      Lvl 4 - Chance: Burns up a target's MP during magic use. Power 61.
+      Lvl 5 - Chance: Burns up a target's MP during magic use. Power 66.
+      Lvl 6 - Chance: Burns up a target's MP during magic use. Power 70.
+      Lvl 7 - Chance: Burns up a target's MP during magic use. Power 74.
+      Lvl 8 - Chance: Burns up a target's MP during magic use. Power 78.
+      Lvl 9 - Chance: Burns up a target's MP during magic use. Power 82.
+      Lvl 10 - Chance: Burns up a target's MP during magic use. Power 88.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3096" levels="10" name="Item Skill: Slow">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1-10 - Chance: Momentarily decreases the target's speed during magic use. Effect 3.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3097" levels="10" name="Item Skill: Winter">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1-10 - Chance: Momentarily decreases the target's Atk. Spd. during magic use. Effect 3.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3098" levels="10" name="Item Skill: Stun">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1-10 - Chance: Momentarily throws the target into a state of shock during magic use.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="3099" levels="10" name="Item Skill: Hold">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Lvl 1-10 - Chance: Momentarily throws the target into a state of hold during magic use. The target cannot be affected by any additional hold attacks while the effect lasts.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>

@@ -310,8 +310,8 @@
   <set name="skillTime" val="720"/>
   <set name="skillType" val="CHARGEDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="500"/>
-  <set name="effectRange" val="1000"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="500"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <!-- charge values -->
@@ -464,7 +464,7 @@
     </add>
   </for>
 </skill>
-<skill id="17" levels="34" name="Force Buster" enchantLevels1="30" enchantLevels2="30" >
+<skill id="17" levels="34" name="Force Bust" enchantLevels1="30" enchantLevels2="30" >
   <table name="#magicLvl"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#mpConsume">
    59  61  63  65  67  69  71  73  75  77

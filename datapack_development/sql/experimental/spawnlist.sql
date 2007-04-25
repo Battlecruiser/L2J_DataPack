@@ -36514,3 +36514,80 @@ INSERT INTO `spawnlist` VALUES
 (36459,'Wyvern_Manager',1,31167,147449,1899,216,0,0,49000,60,0,0),
 (36460,'Wyvern_Manager',1,31446,147470,-49083,-503,0,0,16500,60,0,0),
 (36461,'Wyvern_Manager',1,31749,177408,-17904,-2229,0,0,6000,60,0,0);
+
+/*
+
+JUST IN CASE SOMEONE IS SILLY ENOUGH TO USE THIS SPAWNLIST :)
+
+The following is a list of IDs for NPCs that spawn in L2J but no longer exist in the client.
+
+Temp Fix - following this is a DELETE statement to remove them
+Proper Fix - work out what replaced them or if they were wrong to begin with
+
+npcskills, droplist, buylist, random_spawns, etc may need syncing with whatever choice is made
+
+
+
+npcID	Name				Title
+-----	----				-----
+13009	High Quality Squash	
+13010	Low Quality Squash	
+13011	Large Young Squash	
+13012	High Quality Large Squash	
+13013	Low Quality Large Squash	
+30491	Mass				Gatekeeper	
+30775	Luce				Clan Hall Gatekeeper
+30777	Amiel				Clan Hall Gatekeeper
+30779	Faolan				Clan Hall Gatekeeper
+30781	Kogan				Clan Hall Gatekeeper
+30783	Merton				Clan Hall Gatekeeper
+30785	Renny				Clan Hall Gatekeeper
+30787	Latif				Clan Hall Gatekeeper
+30789	Baback				Clan Hall Gatekeeper
+30791	Loring				Clan Hall Gatekeeper
+30801	Borna				Clan Hall Gatekeeper
+30803	Jamal				Clan Hall Gatekeeper
+30996	Manor Manager			Gludio
+30996	Manor Manager			Gludio
+30997	Manor Manager			Dion
+30999	Manor Manager			Innadril
+31000	Manor Manager			Aden
+31055	Doorman of Hell	
+31056	Doorman of Hell	
+31058	Manor Manager			Oren
+31059	Manor Manager			Oren
+31060	Manor Manager			Oren
+31061	Blacksmith			Gludio
+31062	Blacksmith			Dion
+31064	Blacksmith			Oren
+31065	Blacksmith			Aden
+31066	Blacksmith			Innadril
+31069	Warehouse Keeper		Dion
+31070	Warehouse Keeper		Giran
+31071	Warehouse Keeper		Oren
+31072	Warehouse Keeper		Aden
+31073	Warehouse Keeper		Innadril
+31153	Jacques				Clan Hall Gatekeeper
+31155	Joff				Clan Hall Gatekeeper
+31157	Niels				Clan Hall Gatekeeper
+31159	Rudy				Clan Hall Gatekeeper
+31161	Gellar				Clan Hall Gatekeeper
+31163	Bryce				Wyvern Manager
+31164	Hodler				Wyvern Manager
+31165	Finrod				Wyvern Manager
+31167	Kruger				Wyvern Manager
+31352	Lambert				Clan Hall Gatekeeper
+31353	Gerard				Clan Hall Gatekeeper
+31354	Volfrem				Clan Hall Gatekeeper
+31355	Kalmer				Clan Hall Gatekeeper
+31402	Manor Manager			Goddard
+31403	Manor Manager			Rune 
+31447	Rosconne			Clan Hall Gatekeeper
+31448	Stewart				Clan Hall Gatekeeper
+31449	Theobolt			Clan Hall Gatekeeper
+31450	Theron				Clan Hall Gatekeeper
+31753	Blacksmith			Goddard
+31754	Warehouse Keeper		Goddard
+*/
+
+DELETE FROM spawnlist WHERE npc_templateid IN (13009,13010,13011,13012,13013,27198,30491,30775,30777,30779,30781,30783,30785,30787,30789,30791,30801,30803,30996,30996,30997,30999,31000,31055,31056,31058,31059,31060,31061,31062,31064,31065,31066,31069,31070,31071,31072,31073,31153,31155,31157,31159,31161,31163,31164,31165,31167,31352,31353,31354,31355,31402,31403,31447,31448,31449,31450,31753,31754);

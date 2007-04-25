@@ -387,8 +387,8 @@
       Lvl 16 Name - Two-handed Blunt Weapons
       Lvl 17 Name - Hand-to-hand weapons
       Lvl 18 Name - Hand-to-hand weapons
-      Lvl 19 Name - Two-Sword Weapons
-      Lvl 20 Name - Two-Sword Weapons
+      Lvl 19 Name - Dual-Sword Weapons
+      Lvl 20 Name - Dual-Sword Weapons
 -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -397,7 +397,7 @@
   <for>
   </for>
 </skill>
-<skill id="4416" levels="23" name="Races">
+<skill id="4416" levels="24" name="Races">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
@@ -425,6 +425,7 @@
       Lvl 21 Name - Siege Weapons
       Lvl 22 Name - Defending Army
       Lvl 23 Name - Mercenaries
+	  Lvl 24 Name - Unknown Creature
 -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -596,7 +597,7 @@
   <for>
   </for>
 </skill>
-<skill id="4426" levels="5" name="Resist Two-Sword Weapons">
+<skill id="4426" levels="5" name="Resist Dual-Sword Weapons">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
@@ -876,7 +877,7 @@
   <for>
   </for>
 </skill>
-<skill id="4446" levels="5" name="Greater Resist Two-Sword Weapons">
+<skill id="4446" levels="5" name="Greater Resist Dual-Sword Weapons">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
@@ -1058,7 +1059,7 @@
   <for>
   </for>
 </skill>
-<skill id="4459" levels="5" name="Two-Sword Weapon Weak Point">
+<skill id="4459" levels="5" name="Dual-Sword Weapon Weak Point">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
