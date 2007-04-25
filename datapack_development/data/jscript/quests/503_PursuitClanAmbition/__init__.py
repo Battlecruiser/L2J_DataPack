@@ -2,8 +2,8 @@
 # questdevs Team
 
 import sys
-from java.util                  import Iterator
-from net.sf.l2j.gameserver.lib          import Rnd
+from java.util                              import Iterator
+from net.sf.l2j.util                        import Rnd
 from net.sf.l2j.gameserver.serverpackets    import CreatureSay 
 from net.sf.l2j.gameserver.model.quest      import State
 from net.sf.l2j.gameserver.model.quest      import QuestState
