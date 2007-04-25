@@ -34,7 +34,7 @@ ANTIDOTE_RECIPE   = 3872
 POTION_OF_RECOVERY= 3889
 
 #Quest mobs, drop, rates and prices
-CHESTS=range(21042,21058)
+CHESTS=range(18257,18264)
 MOBS=[[20685,HERB_OF_VANOR],[20644,HERB_OF_HARIT],[20576,HERB_OF_OEL_MAHUM]]
 RATE=35
 #stackable items paid to retry chest game: (default 10k adena)
@@ -58,9 +58,9 @@ def members_finnish(st) :
              except : pass
 
 def randomize_chests(st) :
-    chests = [ 1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1]
+    chests = [ 1,0,0,1,1,0,0,1]
     for i in range(len(chests)-1, 0, -1) :
-        j = st.getRandom(15)
+        j = st.getRandom(7)
         chests[i], chests[j] = chests[j], chests[i]
     for i in range(len(chests)): chests[i]=str(chests[i])
     leader(st).set("chests"," ".join(chests))
@@ -74,12 +74,12 @@ def chest_game(st,command) :
     if command == "start" :
        leader(st).set("chest_game","1")
        leader(st).set("chest_count","0")
-       attempts = int(leader(st).get("chest_try"))
+       attempts = leader(st).getInt("chest_try")
        leader(st).set("chest_try",str(attempts+1))
        randomize_chests(st)
-       for row in range(4) :
-           for col in range(4) :
-               leader(st).getPcSpawn().addSpawn(21042+(4*row+col),x+(row*u)+(col*v),y-(w*col),z,61000)
+       for row in range(2) :
+           for col in range(2) :
+               leader(st).getPcSpawn().addSpawn(18257+(4*row+col),x+(row*u)+(col*v),y-(w*col),z,61000)
        leader(st).startQuestTimer("chest_timer",60000)
     elif command == "stop" :
        try: leader(st).getPcSpawn().removeAllSpawn()
@@ -278,7 +278,7 @@ class Quest (JQuest) :
           if leader(st) :
              game_state=leader(st).getInt("chest_game")  
              if game_state == 0 :  
-                if int(leader(st).get("chest_try")) == 0 :  
+                if leader(st).getInt("chest_try") == 0 :  
                    htmltext="30758-01.htm"  
                 else :  
                    htmltext="30758-05.htm"
@@ -337,7 +337,7 @@ class Quest (JQuest) :
            #if timer == None : chest_game(st,"stop");return "Time is up!"
            chests = leader(st).get("chests").split()
            for i in range(len(chests)) :
-               if npcId == 21042+i and chests[i] == '1' :
+               if npcId == 18257+i and chests[i] == '1' :
                   autochat(npc,"###### BINGO! ######")
                   count=int(leader(st).get("chest_count"))
                   if count < 4 :
