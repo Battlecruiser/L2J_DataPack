@@ -41,8 +41,7 @@ def check_level(st) :
     return "420_low_level.htm"
   return "Start.htm"
 
-def check_stone(st) :
-    progress = int(st.get("progress"))
+def check_stone(st,progress) :
     if st.getQuestItemsCount(FRY_STN) == 1 :
        st.set("cond","3") 
        if progress == 1 :
@@ -61,8 +60,7 @@ def check_stone(st) :
     else :
        return "420_cronos_7.htm"
 
-def check_elements(st) :
-  progress  = int(st.get("progress"))
+def check_elements(st,progress) :
   coal  = st.getQuestItemsCount(1870)
   char  = st.getQuestItemsCount(1871)
   gemd  = st.getQuestItemsCount(2130)
@@ -82,8 +80,7 @@ def check_elements(st) :
         return "420_maria_1.htm"
 
 
-def craft_stone(st) :
-    progress = int(st.get("progress"))
+def craft_stone(st,progress) :
     if progress in [1,8]:
        st.takeItems(1870,10)
        st.takeItems(1871,10)
@@ -106,8 +103,7 @@ def craft_stone(st) :
        st.playSound("ItemSound.quest_itemget")
        return "420_maria_5.htm"
 
-def check_eggs(st, npc) :
-    progress = int(st.get("progress"))
+def check_eggs(st, npc, progress) :
     whom = int(st.get("dragon"))
     if   whom == 1 : eggs = EX_EGG
     elif whom == 2 : eggs = ZW_EGG
@@ -194,7 +190,7 @@ class Quest (JQuest):
   
   def onEvent (self,event,st):
     id   = st.getState()
-    if id != CREATED : progress = int(st.get("progress"))
+    progress = st.getInt("progress")
     if id == CREATED :
       st.set("cond","0")
       if event == "ido" :
@@ -206,7 +202,7 @@ class Quest (JQuest):
          return "Starting.htm"
     elif id == STARTING :
          if event == "wait" :
-            return craft_stone(st)
+            return craft_stone(st,progress)
          elif event == "cronos_2" :
             return "420_cronos_2.htm" 
          elif event == "cronos_3" :
@@ -376,7 +372,7 @@ class Quest (JQuest):
          if progress == 0 :
             return "420_cronos_1.htm"
          elif progress in [ 1,2,8,9 ] :
-            return check_stone(st)
+            return check_stone(st,progress)
          elif progress in [ 3,4,10,11 ] :
             return "420_cronos_9.htm"
          elif progress in  [5,6,12,13 ]:
@@ -387,7 +383,7 @@ class Quest (JQuest):
     elif npcId == MC_MARIA :
       if id == STARTING :
          if ((progress in [ 1,8 ] )  and st.getQuestItemsCount(FSN_LIST)==1) or ((progress in [ 2,9 ] ) and st.getQuestItemsCount(FSN_LIST_DLX)==1):
-            return check_elements(st)
+            return check_elements(st,progress)
          elif progress in [ 3,4,5,6,7,10,11 ] :
             return "420_maria_6.htm"
     elif npcId == GD_BYRON :
@@ -418,14 +414,14 @@ class Quest (JQuest):
           if progress < 14 and st.getQuestItemsCount(JUICE) == 1  :
              return "420_mymyu_7.htm"
           elif progress > 13 :
-             return check_eggs(st,"mymyu")
+             return check_eggs(st,"mymyu",progress)
     elif npcId == DK_EXARION :
        if id == STARTED :
           if progress in [ 5,6,12,13 ] and st.getQuestItemsCount(JUICE) == 1:
              st.takeItems(JUICE,1) 
              return "420_exarion_1.htm"
           elif progress > 13 and st.getQuestItemsCount(SCALE_1) == 1:
-              return check_eggs(st,"exarion")
+              return check_eggs(st,"exarion",progress)
           elif progress in [ 19,20 ] and st.getQuestItemsCount(EX_EGG) == 1 :
               return "420_exarion_5.htm"
     elif npcId == DK_ZWOV :
@@ -434,7 +430,7 @@ class Quest (JQuest):
              st.takeItems(JUICE,1)  
              return "420_zwov_1.htm"
           elif progress > 13 and st.getQuestItemsCount(SCALE_2) == 1:
-              return check_eggs(st,"zwov")
+              return check_eggs(st,"zwov",progress)
           elif progress in [ 19,20 ] and st.getQuestItemsCount(ZW_EGG) == 1 :
               return "420_zwov_5.htm"
     elif npcId == DK_KALIBRAN :
@@ -443,7 +439,7 @@ class Quest (JQuest):
              st.takeItems(JUICE,1)  
              return "420_kalibran_1.htm"
           elif progress > 13 and st.getQuestItemsCount(SCALE_3) == 1:
-              return check_eggs(st,"kalibran")
+              return check_eggs(st,"kalibran",progress)
           elif progress in [ 19,20 ] and st.getQuestItemsCount(KA_EGG) == 1 :
               return "420_kalibran_6.htm"
     elif npcId == WM_SUZET :
@@ -452,7 +448,7 @@ class Quest (JQuest):
              st.takeItems(JUICE,1)  
              return "420_suzet_1.htm"
           elif progress > 13 and st.getQuestItemsCount(SCALE_4) == 1:
-              return check_eggs(st,"suzet")
+              return check_eggs(st,"suzet",progress)
           elif progress in [ 19,20 ] and st.getQuestItemsCount(SU_EGG) == 1 :
               return "420_suzet_6.htm"
     elif npcId == WM_SHAMHAI :
@@ -461,7 +457,7 @@ class Quest (JQuest):
              st.takeItems(JUICE,1)  
              return "420_shamhai_1.htm"
           elif progress > 13 and st.getQuestItemsCount(SCALE_5) == 1:
-              return check_eggs(st,"shamhai")
+              return check_eggs(st,"shamhai",progress)
           elif progress in [ 19,20 ] and st.getQuestItemsCount(SH_EGG) == 1 :
               return "420_shamhai_5.htm"
     return "<html><head><body>I have nothing to say to you</body></html>"
