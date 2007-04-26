@@ -38,7 +38,11 @@ class Quest (JQuest) :
     htmltext = event
     if event == "30515-6.htm" :
        if st.getQuestItemsCount(MSTONE):
-         st.takeItems(MSTONE,1)
+         ### do not take the item.  Players must remove it manually if they wish.
+         ### However, if the players choose not to delete the item, they ARE ALLOWED
+         ### to abort the quest and restart it later without having to redo Part 1!
+         ### to abort the quest and restart it later without having to redo Part 1!
+         #st.takeItems(MSTONE,1)  
          st.setState(STARTED)
          st.set("awaitSkull","1")
          st.set("awaitHorn","1")
@@ -49,6 +53,9 @@ class Quest (JQuest) :
     elif event == "30515-7.htm" :
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(1)
+    elif event == "30515-8.htm" :
+       st.set("awaitSkull","1")
+       st.set("awaitHorn","1")
     return htmltext
  
  def onTalk (self,npc,player):
