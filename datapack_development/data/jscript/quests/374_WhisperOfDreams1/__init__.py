@@ -58,6 +58,8 @@ class Quest (JQuest) :
     if event == "30515-4.htm" :
        st.setState(STARTING)
        st.set("awaitSealedMStone","1")
+       st.set("awaitTooth","1")
+       st.set("awaitLight","1")
        st.set("cond","1")
        st.playSound("ItemSound.quest_accept")
     elif event == "30515-5.htm" :
@@ -70,14 +72,14 @@ class Quest (JQuest) :
           st.set("allow","1")
           st.takeItems(CB_TOOTH,-1)
           st.takeItems(DW_LIGHT,-1)
+          st.set("awaitTooth","1")
+          st.set("awaitLight","1")
           htmltext = "30515-7.htm"
     elif event == "30515-8.htm" :
        if st.getQuestItemsCount(SEALD_MSTONE) :
           if id == STARTING :
              st.setState(STARTED)
              st.set("cond","2")
-             st.set("awaitTooth","1")
-             st.set("awaitLight","1")
              htmltext = "30515-9.htm"
           elif id == STARTED :
              htmltext = "30515-10.htm"
