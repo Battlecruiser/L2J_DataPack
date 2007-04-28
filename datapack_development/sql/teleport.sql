@@ -164,17 +164,17 @@ INSERT INTO teleport VALUES
 ('TOI - 14th Floor Outside Door',214,112714,14111,10077,800000,0),
 ('TOI - 14th Floor Inside On Roof',215,113098,14532,10077,900000,0),
 
-('Cat Heretics Entrance',250,43050,143933,-5383,0,0),
+('Cat Heretics Entrance',250,-53174,-250275,-7911,0,0), -- Interlude (undersea)
 ('Cat Heretics Exit',251,42514,143917,-5385,0,0),
 ('Cat Branded Entrance',252,46217,170290,-4983,0,0),
 ('Cat Branded Exit',253,45770,170299,-4985,0,0),
-('Cat Apostate Entrance',254,78042,78404,-5128,0,0),
+('Cat Apostate Entrance',254,-20230,-250780,-8168,0,0), -- Interlude (undersea)
 ('Cat Apostate Exit',255,77225,78362,-5119,0,0),
 ('Cat Witch Entrance',256,140404,79678,-5431,0,0),
 ('Cat Witch Exit',257,139965,79678,-5433,0,0),
 ('Cat DarkOmen Entrance',258,-19500,13508,-4905,0,0),
 ('Cat DarkOmen Exit',259,-19931,13502,-4905,0,0),
-('Cat ForbiddenPath Entrance',260,113865,84543,-6545,0,0),
+('Cat ForbiddenPath Entrance',260,12521,-248481,-9585,0,0), -- Interlude (undersea)
 ('Cat ForbiddenPath Exit',261,113429,84540,-6545,0,0),
 ('Necro Sacrifice Entrance',262,-41570,209785,-5089,0,0),
 ('Necro Sacrifice Exit',263,-41567,209292,-5091,0,0),
