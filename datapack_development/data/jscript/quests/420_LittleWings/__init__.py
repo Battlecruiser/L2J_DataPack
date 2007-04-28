@@ -514,7 +514,6 @@ class Quest (JQuest):
          st.takeItems(FRY_STN_DLX,1)
          st.set("progress","7")
          return "you lost fairy stone deluxe!"
-            
 
 
 # Quest class and state definition
@@ -536,7 +535,7 @@ for i in [3499]+range(3816,3832):
 #back skins
 QUEST.addKillId(TD_LORD)
 #fairy stone dlx destroyers
-for i in range(20589,20600)+[20719]:
+for i in range(20589,20600)+[21797]:
     QUEST.addKillId(i)
 #eggs
 QUEST.addKillId(LO_LZRD_W)
@@ -547,12 +546,9 @@ QUEST.addKillId(BO_OVERLD)
 
 # Quest NPC initialization
 QUEST.addTalkId(PM_COOPER)
-
 QUEST.addTalkId(SG_CRONOS)
 QUEST.addTalkId(GD_BYRON)
 QUEST.addTalkId(MC_MARIA)
-QUEST.addTalkId(FR_MYMYU)
-
 QUEST.addTalkId(FR_MYMYU)
 for i in range(30748,30753):
     QUEST.addTalkId(i)
