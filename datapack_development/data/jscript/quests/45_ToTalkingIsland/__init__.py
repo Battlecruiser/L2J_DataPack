@@ -62,8 +62,9 @@ class Quest (JQuest) :
         elif event == "7" :
             st.giveItems(SCROLL_OF_ESCAPE_SPECIAL,1)
             st.takeItems(PURIFIED_MAGIC_NECKLACE_ID,1)
+            st.takeItems(MARK_OF_TRAVELER_ID,-1)
             htmltext = "30097-12.htm"
-            st.set("cond","0")
+            st.unset("cond")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
         return htmltext
