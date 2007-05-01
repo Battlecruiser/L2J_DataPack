@@ -26239,3 +26239,8 @@ INSERT INTO `droplist` VALUES
 (25325,8619,1,1,102,250000), -- Flame of Splendor Barakiel (70)
 (25470,8619,1,1,102,250000), -- Last Titan Utenus (66)
 (25296,8619,1,1,102,250000); -- Icicle Emperor Bumbalump (74)
+
+-- Temp drop for a late C5 spellbook... needs to be done properly later
+--
+-- Kadios
+INSERT INTO `droplist` VALUES (20671, 8616, 1, 1, 2, 10000); -- Spellbook: Summon Friend
