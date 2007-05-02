@@ -20,8 +20,10 @@ class polymorphing_angel(JQuest) :
 
     def onKill (self,npc,player):
         npcId = npc.getNpcId()
+        heading=npc.getHeading()
         if self.AngelSpawns.has_key(npcId) :
-            self.getPcSpawn(player).addSpawn(self.AngelSpawns[npcId],npc.getX(),npc.getY(),npc.getZ())
+            objId=self.getPcSpawn(player).addSpawn(self.AngelSpawns[npcId],npc.getX(),npc.getY(),npc.getZ())
+            self.getPcSpawn(player).getSpawn(objId).getLastSpawn().setHeading(heading)
         return 
 
 # now call the constructor (starts up the ai)
