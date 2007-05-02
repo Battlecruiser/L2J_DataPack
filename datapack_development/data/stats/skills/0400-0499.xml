@@ -626,6 +626,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- needs core support -->
   </for>
 </skill>
 <skill id="427" levels="1" name="Spell Force">
@@ -640,6 +641,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- needs core support -->
   </for>
 </skill>
 <skill id="428" levels="1" name="Inner Rhythm">
@@ -654,118 +656,207 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- needs core support -->
   </for>
 </skill>
 <skill id="429" levels="1" name="Knighthood">
 <!--
   Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+
   Description(s):
       Increases P. Def. when wearing heavy armor. Shield defense is increased.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="pDef" val="86.5">
+      <and>
+        <using kind="Heavy"/>
+        <not>
+          <using kind="Light,Magic"/>
+        </not>
+      </and>
+    </add>
+<!-- need to add Shield defense increase
+    <add order="0x40" stat="sDef" val="?">
+      <and>
+        <using kind="Heavy"/>
+        <not>
+          <using kind="Light,Magic"/>
+        </not>
+      </and>
+    </add>
+-->
   </for>
 </skill>
 <skill id="430" levels="1" name="Master of Combat">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases the attack strength of a sword, blunt weapon, spear, dual-bladed or hand-to-hand combat weapon. Also increases maximum CP.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="weaponsAllowed" val="20300"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="pAtk" val="80">
+      <and>       
+        <using kind="Sword,Big Sword,Blunt,Big Blunt,Pole,Dual Sword,Fist,Dual Fist"/>
+      </and>
+    </add>
+    <add order="0x40" stat="maxCp" val="200">
+      <and>       
+        <using kind="Sword,Big Sword,Blunt,Big Blunt,Pole,Dual Sword,Fist,Dual Fist"/>
+      </and>
+    </add>
   </for>
 </skill>
 <skill id="431" levels="1" name="Archery">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases attack strength and maximum attack range while using a bow.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="weaponsAllowed" val="32"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="pAtk" val="200">
+      <using kind="Bow"/>
+    </add>
+    <add order="0x40" stat="pAtkRange" val="300">
+      <using kind="Bow"/>
+    </add>
   </for>
 </skill>
 <skill id="432" levels="1" name="Assassination">
 <!--
   Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+
   Description(s):
       Increases attack strength and the rate of deadly attack while using a dagger.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="weaponsAllowed" val="16"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="pAtk" val="70">
+      <using kind="Dagger"/>
+    </add>
+<!-- need to add increase of deadly attack rate (Criticial Attack afaik)
+	<add order="0x40" stat="rCrit" val="?">
+      <using kind="Dagger"/>
+    </add>
+-->
   </for>
 </skill>
-<skill id="433" levels="1" name="Arcane Roar">
+<skill id="433" levels="1" name="Arcane Roar"> <!-- perhaps "Arcane Lore" -->
 <!--
   Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+
   Description(s):
       Increases resistance to elemental attacks and increases magic power.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+<!-- need to add resistance increase to elemental attacks
+    <add order="0x40" stat="fireRes" val="?"/>
+    <add order="0x40" stat="windRes" val="?"/>
+    <add order="0x40" stat="waterRes" val="?"/>
+    <add order="0x40" stat="earthRes" val="?"/>
+    <add order="0x40" stat="holyRes" val="?"/>
+    <add order="0x40" stat="darkRes" val="?"/>
+-->
+    <mul order="0x30" stat="mAtk" val="1.03"/>
   </for>
 </skill>
 <skill id="434" levels="1" name="Necromancy">
 <!--
   Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+
   Description(s):
       Increases resistance to dark attacks and increases magic power.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+<!-- need to add resistance increase to dark attacks
+    <add order="0x40" stat="darkRes" val="?"/>
+-->
+    <mul order="0x30" stat="mAtk" val="1.03"/>
   </for>
 </skill>
 <skill id="435" levels="1" name="Summon Lore">
 <!--
   Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+
   Description(s):
       Increases P. Def. when equipped with Robe/Light Armor and increases Casting Speed. Decreases MP consumption for magic skills.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pDef" val="1.10">
+      <and>
+        <using kind="Magic,Light"/>
+        <not>
+          <using kind="Heavy"/>
+        </not>
+      </and>
+    </mul>
+    <mul order="0x30" stat="mAtkSpd" val="1.07">
+      <and>
+        <using kind="Magic,Light"/>
+        <not>
+          <using kind="Heavy"/>
+        </not>
+      </and>
+    </mul>
+<!-- need to add MP consumption decrease and check whether armor restriction applies to it as well
+    <mul order="0x30" stat="MpConsumeRate" val="?"/>
+-->
   </for>
 </skill>
 <skill id="436" levels="1" name="Divine Lore">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       MP consumption for magical skills is decreased.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="MpConsumeRate" val="0.95"/>
   </for>
 </skill>
 <skill id="437" levels="1" name="Song of Silence">
