@@ -5,6 +5,8 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.serverpackets import SocialAction
+
 qn = "12535_WakeBaium"
 # Main Quest Code
 class Quest (JQuest):
@@ -22,8 +24,12 @@ class Quest (JQuest):
         if not npc.isBusy():
            npc.setBusy(True)
            npc.setBusyMessage("Attending another player's request")
-           st.getPcSpawn().addSpawn(29020,npc.getX(),npc.getY(),npc.getZ())
+           heading=npc.getHeading()
+           objId=st.getPcSpawn().addSpawn(29020,npc.getX(),npc.getY(),npc.getZ())
            npc.reduceCurrentHp(9999999, npc)
+           baium=st.getPcSpawn().getSpawn(objId).getLastSpawn()
+           baium.setHeading(heading)
+           baium.broadcastPacket(SocialAction(objId,2))
         st.exitQuest(1)
       else:
         st.exitQuest(1)
