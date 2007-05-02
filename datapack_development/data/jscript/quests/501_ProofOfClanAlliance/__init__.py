@@ -82,9 +82,11 @@ def chest_game(st,command) :
                leader(st).getPcSpawn().addSpawn(18257+(4*row+col),x+(row*u)+(col*v),y-(w*col),z,61000)
        leader(st).startQuestTimer("chest_timer",60000)
     elif command == "stop" :
-       try: leader(st).getPcSpawn().removeAllSpawn()
+       try:
+           leader(st).getPcSpawn().removeAllSpawn()
+           leader(st).set("chest_game","0")
        except: pass
-       leader(st).set("chest_game","0")
+       
 
 def autochat(npc,text) :
     chars = npc.getKnownList().getKnownPlayers().values().toArray()
