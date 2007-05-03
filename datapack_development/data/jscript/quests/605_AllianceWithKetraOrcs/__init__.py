@@ -392,7 +392,7 @@ class Quest (JQuest) :
                   party = st.getPlayer().getParty()
                   if party :
                       for player in party.getPartyMembers().toArray() :
-                          pst = player.getQuestState("605_AllianceWithKetraOrcs")
+                          pst = player.getQuestState(qn)
                           if pst :
                               decreaseAlliance(pst)
    return

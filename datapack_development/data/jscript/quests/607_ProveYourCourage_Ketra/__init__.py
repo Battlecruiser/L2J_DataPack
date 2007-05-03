@@ -15,6 +15,17 @@ Shadith_Head = 7235
 Valor_Totem = 7219
 Ketra_Alliance_Three = 7213
 
+def giveReward(st,npc):
+    if st.getState() == STARTED :
+        npcId = npc.getNpcId()
+        cond = st.getInt("cond")
+        if npcId == Shadith :
+            if st.getPlayer().isAlliedWithKetra() :
+                if cond == 1:
+                    if st.getPlayer().getAllianceWithVarkaKetra() == 3 and st.getQuestItemsCount(Ketra_Alliance_Three) :
+                        st.giveItems(Shadith_Head,1)
+                        st.set("cond","2")
+
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -65,17 +76,17 @@ class Quest (JQuest) :
     return htmltext
 
  def onKill (self,npc,player):
-    st = player.getQuestState(qn)
+    partyMember = self.getRandomPartyMemberState(player,STARTED)
+    if not partyMember : return
+    st = partyMember.getQuestState(qn)
     if st :
-         if st.getState() == STARTED :
-            npcId = npc.getNpcId()
-            cond = st.getInt("cond")
-            if npcId == Shadith :
-                if st.getPlayer().isAlliedWithKetra() :
-                    if cond == 1:
-                        if st.getPlayer().getAllianceWithVarkaKetra() == 3 and st.getQuestItemsCount(Ketra_Alliance_Three) :
-                            st.giveItems(Shadith_Head,1)
-                            st.set("cond","2")
+       giveReward(st,npc)
+       party = st.getPlayer().getParty()
+       if party :
+           for player in party.getPartyMembers().toArray() :
+               pst = player.getQuestState(qn)
+               if pst :
+                   giveReward(pst,npc)
     return
 
 QUEST       = Quest(607,qn,"Prove Your Courage!")

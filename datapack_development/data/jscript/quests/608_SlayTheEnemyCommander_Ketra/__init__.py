@@ -15,6 +15,17 @@ Mos_Head = 7236
 Wisdom_Totem = 7220
 Ketra_Alliance_Four = 7214
 
+def giveReward(st,npc):
+    if st.getState() == STARTED :
+        npcId = npc.getNpcId()
+        cond = st.getInt("cond")
+        if npcId == Mos :
+            if st.getPlayer().isAlliedWithKetra() :
+                if cond == 1:
+                    if st.getPlayer().getAllianceWithVarkaKetra() == 4 and st.getQuestItemsCount(Ketra_Alliance_Four) :
+                        st.giveItems(Mos_Head,1)
+                        st.set("cond","2")
+
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -65,17 +76,17 @@ class Quest (JQuest) :
     return htmltext
 
  def onKill (self,npc,player):
-    st = player.getQuestState(qn)
+    partyMember = self.getRandomPartyMemberState(player,STARTED)
+    if not partyMember : return
+    st = partyMember.getQuestState(qn)
     if st :
-      if st.getState() == STARTED :
-        npcId = npc.getNpcId()
-        cond = st.getInt("cond")
-        if npcId == Mos :
-            if st.getPlayer().isAlliedWithKetra() :
-                if cond == 1:
-                    if st.getPlayer().getAllianceWithVarkaKetra() == 4 and st.getQuestItemsCount(Ketra_Alliance_Four) :
-                        st.giveItems(Mos_Head,1)
-                        st.set("cond","2")
+       giveReward(st,npc)
+       party = st.getPlayer().getParty()
+       if party :
+           for player in party.getPartyMembers().toArray() :
+               pst = player.getQuestState(qn)
+               if pst :
+                   giveReward(pst,npc)
     return
 
 QUEST       = Quest(608,qn,"Slay The Enemy Commander!")
