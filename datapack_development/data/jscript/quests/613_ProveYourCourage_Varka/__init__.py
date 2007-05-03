@@ -15,6 +15,17 @@ Hekaton_Head = 7240
 Valor_Feather = 7229
 Varka_Alliance_Three = 7223
 
+def giveReward(st,npc):
+    if st.getState() == STARTED :
+        npcId = npc.getNpcId()
+        cond = st.getInt("cond")
+        if npcId == Hekaton :
+            if st.getPlayer().isAlliedWithVarka() :
+                if cond == 1:
+                    if st.getPlayer().getAllianceWithVarkaKetra() == -3 and st.getQuestItemsCount(Varka_Alliance_Three) :
+                        st.giveItems(Hekaton_Head,1)
+                        st.set("cond","2")
+
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -65,18 +76,18 @@ class Quest (JQuest) :
     return htmltext
 
  def onKill (self,npc,player):
-   st = player.getQuestState(qn)
-   if st :
-     if st.getState() == STARTED :
-        npcId = npc.getNpcId()
-        cond = st.getInt("cond")
-        if npcId == Hekaton :
-            if st.getPlayer().isAlliedWithVarka() :
-                if cond == 1:
-                    if st.getPlayer().getAllianceWithVarkaKetra() == -3 and st.getQuestItemsCount(Varka_Alliance_Three) :
-                        st.giveItems(Hekaton_Head,1)
-                        st.set("cond","2")
-   return
+    partyMember = self.getRandomPartyMemberState(player,STARTED)
+    if not partyMember : return
+    st = partyMember.getQuestState(qn)
+    if st :
+       giveReward(st,npc)
+       party = st.getPlayer().getParty()
+       if party :
+           for player in party.getPartyMembers().toArray() :
+               pst = player.getQuestState(qn)
+               if pst :
+                   giveReward(pst,npc)
+    return
 
 QUEST       = Quest(613,qn,"Prove Your Courage!")
 CREATED     = State('Start', QUEST)

@@ -15,6 +15,17 @@ Tayr_Head = 7241
 Wisdom_Feather = 7230
 Varka_Alliance_Four = 7224
 
+def giveReward(st,npc):
+    if st.getState() == STARTED :
+        npcId = npc.getNpcId()
+        cond = st.getInt("cond")
+        if npcId == Tayr :
+            if st.getPlayer().isAlliedWithVarka() :
+                if cond == 1:
+                    if st.getPlayer().getAllianceWithVarkaKetra() == -4 and st.getQuestItemsCount(Varka_Alliance_Four) :
+                        st.giveItems(Tayr_Head,1)
+                        st.set("cond","2")
+
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -65,18 +76,18 @@ class Quest (JQuest) :
     return htmltext
 
  def onKill (self,npc,player):
-   st = player.getQuestState(qn)
-   if st :
-     if st.getState() == STARTED :
-        npcId = npc.getNpcId()
-        cond = st.getInt("cond")
-        if npcId == Tayr :
-            if st.getPlayer().isAlliedWithVarka() :
-                if cond == 1:
-                    if st.getPlayer().getAllianceWithVarkaKetra() == -4 and st.getQuestItemsCount(Varka_Alliance_Four) :
-                        st.giveItems(Tayr_Head,1)
-                        st.set("cond","2")
-   return
+    partyMember = self.getRandomPartyMemberState(player,STARTED)
+    if not partyMember : return
+    st = partyMember.getQuestState(qn)
+    if st :
+       giveReward(st,npc)
+       party = st.getPlayer().getParty()
+       if party :
+           for player in party.getPartyMembers().toArray() :
+               pst = player.getQuestState(qn)
+               if pst :
+                   giveReward(pst,npc)
+    return
 
 QUEST       = Quest(614,qn,"Slay The Enemy Commander!")
 CREATED     = State('Start', QUEST)
