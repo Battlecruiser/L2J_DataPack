@@ -71,12 +71,13 @@ class Quest (JQuest) :
     if cond == 0 :
       st.set("cond","1")
       st.setState(STARTED)
-  elif event.isdigit() and int(event) in REWARDS_LIST.keys():
-    st.set("raid",event)
-    htmltext="30868-"+event+".htm"
-    x,y,z=RADAR[int(event)]
-    if x+y+z: st.addRadar(x,y,z)
-    st.playSound("ItemSound.quest_accept")
+  elif event.isdigit() :
+    if int(event) in REWARDS_LIST.keys():
+      st.set("raid",event)
+      htmltext="30868-"+event+".htm"
+      x,y,z=RADAR[int(event)]
+      if x+y+z: st.addRadar(x,y,z)
+      st.playSound("ItemSound.quest_accept")
   elif event == "30868-7.htm" :
     st.playSound("ItemSound.quest_finish")
     st.exitQuest(1)
@@ -99,7 +100,7 @@ class Quest (JQuest) :
      id = st.getState()
      if id == CREATED and cond == 0 :
         htmltext =  "30868-0c.htm"
-     elif id == STARTED and cond == 1 :
+     elif id == STARTED and cond == 1 and raid in REWARDS_LIST.keys() :
         npc,item=REWARDS_LIST[raid]
         count = st.getQuestItemsCount(item)
         if not count :
