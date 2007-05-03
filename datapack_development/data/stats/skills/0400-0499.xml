@@ -861,30 +861,51 @@
 </skill>
 <skill id="437" levels="1" name="Song of Silence">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Needs to be verified.
+
   Description(s):
       Sing the Song of Silence to temporarily disable all enemy physical and magical skills.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="79"/>
+  <set name="mpConsume" val="54"/>
+  <set name="skillRadius" val="150"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillType" val="MUTE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="skillTime" val="2500"/>
+  <set name="hitTime" val="2500"/>
+  <set name="reuseDelay" val="480000"/>
   <for>
+    <effect count="1" name="Mute" time="120" val="0"/>
+    <effect count="1" name="PsychicalMute" time="120" val="0"/>
   </for>
 </skill>
 <skill id="438" levels="1" name="Soul of the Phoenix">
 <!--
   Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+
   Description(s):
       Revives target from death and restores them to full health, retaining all buff/debuff effects except for Noblesse Blessing and Lucky Charm. Consumes 1 Blood of the Phoenix.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="magicLvl" val="79"/>
+  <set name="mpConsume" val="250"/>
+  <set name="itemConsumeId" val="8873"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1800000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+<!-- needs core support - similiar effect to Blessing of Noblesse -->
   </for>
 </skill>
 <skill id="439" levels="1" name="Shield of Revenge">
@@ -899,19 +920,28 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- needs core support - not really a reflect -> http://www.l2guru.com/forum/showthread.php?t=74337 -->
   </for>
 </skill>
 <skill id="440" levels="1" name="Braveheart">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Needs to be verified.
+
   Description(s):
-      Manifests a potion that regenerates CP. Power 1000.
+      Recovers 1000 CP by increasing your will to fight. Power 1000.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="57"/>
+  <set name="power" val="1000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="600000"/>
+  <set name="skillTime" val="1500"/>
+  <set name="skillType" val="COMBATPOINTHEAL"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="20000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -927,6 +957,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- needs core support for effect stopping when attacked -->
   </for>
 </skill>
 <skill id="442" levels="1" name="Sonic Barrier">
@@ -941,6 +972,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- need core support for invincibility effect... or lots off crazy values here -> http://www.l2guru.com/forum/showthread.php?t=74269 -->
   </for>
 </skill>
 <skill id="443" levels="1" name="Force Barrier">
@@ -955,6 +987,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- need core support for invincibility effect... or lots of BIG values here -> http://www.l2guru.com/forum/showthread.php?t=74269 -->
   </for>
 </skill>
 <skill id="444" levels="1" name="Festive Sweeper">
@@ -969,6 +1002,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- needs core support -->
   </for>
 </skill>
 <skill id="445" levels="1" name="Mirage">
@@ -983,6 +1017,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- needs core support -->
   </for>
 </skill>
 <skill id="446" levels="1" name="Dodge">
@@ -997,6 +1032,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- needs core support or a BIG physical only evasion rate -->
   </for>
 </skill>
 <skill id="447" levels="1" name="Counterattack">
@@ -1011,36 +1047,69 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- needs core support - not really a reflect -> http://www.l2guru.com/forum/showthread.php?t=74337 -->
   </for>
 </skill>
 <skill id="448" levels="1" name="Summon Swoop Cannon">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Needs to be verified. Is enchantable but no stats for the +Power versions.
+
   Description(s):
       Summons a Swoop Cannon. Requires 46 Crystals: A-Grade. Consumes 21 Gemstones: B-Grade per minute.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpInitialConsume" val="530"/>
+  <set name="itemConsumeIdOT" val="2132"/>
+  <set name="itemConsumeCountOT" val="21"/>
+  <set name="itemConsumeTime" val="60000"/>
+  <set name="itemConsumeCount" val="120"/>
+  <set name="itemConsumeId" val="1461"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="10000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="10000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <!-- Summon-specific -->
+  <set name="npcId" val="14839"/>
+  <set name="expPenalty" val="0.0"/>
+  <set name="isCubic" val="false"/>
   <for>
   </for>
 </skill>
 <skill id="449" levels="4" name="Summon Attractive Cubic">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Needs to be finished. L2CubicInstance.java has to be updated to support cubic id and hate/hold skills.
+
   Description(s):
       Lvl 1 - Summons Attract Cubic. Attract Cubic can continuously use hate and hold magic on an enemy. Requires 10 D-Grade Crystals.
       Lvl 2 - Summons Attract Cubic. Attract Cubic can continuously use hate and hold magic on an enemy. Requires 11 D-Grade Crystals.
       Lvl 3 - Summons Attract Cubic. Attract Cubic can continuously use hate and hold magic on an enemy. Requires 12 D-Grade Crystals.
-	  Lvl 4 - Summons Attract Cubic. Attract Cubic can continuously use hate and hold magic on an enemy. Requires 13 D-Grade Crystals.
+      Lvl 4 - Summons Attract Cubic. Attract Cubic can continuously use hate and hold magic on an enemy. Requires 13 D-Grade Crystals.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume"> 58 62 65 69 </table>
+  <table name="#itemConsumeCount"> 10 11 12 13 </table>
+  <table name="#magicLvl"> 62 66 70 74 </table> <!-- guessed -->
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="itemConsumeId" val="1458"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="6000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="6000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <!-- Summon-specific -->
+  <set name="npcId" val="9"/>
+  <set name="expPenalty" val="0.0"/>
+  <set name="isCubic" val="true"/>
   <for>
   </for>
 </skill>
@@ -1065,6 +1134,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- needs core support -->
   </for>
 </skill>
 <skill id="451" levels="2" name="Sonic Move">
@@ -1080,12 +1150,13 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- how can I use num_charges when skillType is not CHARGEDAM ? -->
   </for>
 </skill>
 <skill id="452" levels="5" name="Shock Stomp">
 <!--
   Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+
   Description(s):
       Lvl 1 - Temporarily shocks nearby enemies, canceling their targets. Usable when equipped with a spear.
 	  Lvl 2 - Temporarily shocks nearby enemies, canceling their targets. Usable when equipped with a spear.
@@ -1093,11 +1164,30 @@
 	  Lvl 4 - Temporarily shocks nearby enemies, canceling their targets. Usable when equipped with a spear.
 	  Lvl 5 - Temporarily shocks nearby enemies, canceling their targets. Usable when equipped with a spear.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#magicLvl"> 62 66 70 74 78 </table> <!-- guessed -->
+  <table name="#mpConsume"> 55 55 55 55 55 </table>
+  <set name="weaponsAllowed" val="64"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="save" val="4"/> <!-- guessed -->
+  <set name="power" val="80"/> <!-- guessed -->
+  <set name="lvlDepend" val="2"/> <!-- guessed -->
+  <set name="target" val="TARGET_AURA"/>
+  <set name="hitTime" val="500"/>
+  <set name="reuseDelay" val="12000"/> <!-- guessed -->
+  <set name="skillTime" val="500"/>
+  <set name="skillType" val="STUN"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="5000"/> <!-- guessed -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Stun" time="5" val="0"> <!-- guessed -->
+       <using kind="Pole"/>
+    </effect>
+    <effect count="1" name="RemoveTarget" time="1" val="0">
+       <using kind="Pole"/>
+    </effect>
   </for>
 </skill>
 <skill id="453" levels="1" name="Escape Shackle">
@@ -1107,12 +1197,18 @@
   Description(s):
       Allows you to escape from a captured state.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="mpConsume" val="60"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillTime" val="4000"/>
+  <set name="reuseDelay" val="120000"/> <!-- guessed -->
+  <set name="skillType" val="NEGATE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="negateStats" val="ROOT PARALYZE"/>
+  <set name="negatePower" val="3.0"/> <!-- guessed -->
 </skill>
 <skill id="454" levels="1" name="Symbol of Defense">
 <!--
@@ -1126,6 +1222,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- needs core support -->
   </for>
 </skill>
 <skill id="455" levels="1" name="Symbol of Noise">
@@ -1140,6 +1237,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- needs core support -->
   </for>
 </skill>
 <skill id="456" levels="1" name="Symbol of Resistance">
@@ -1154,6 +1252,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- needs core support -->
   </for>
 </skill>
 <skill id="457" levels="1" name="Symbol of Honor">
@@ -1168,6 +1267,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- needs core support -->
   </for>
 </skill>
 <skill id="458" levels="1" name="Symbol of Energy">
@@ -1182,6 +1282,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- needs core support -->
   </for>
 </skill>
 <skill id="459" levels="1" name="Symbol of the Sniper">
@@ -1196,6 +1297,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- needs core support -->
   </for>
 </skill>
 <skill id="460" levels="1" name="Symbol of the Assassin">
@@ -1210,6 +1312,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- needs core support -->
   </for>
 </skill>
 <skill id="461" levels="2" name="Break Duress">
@@ -1225,6 +1328,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+<!-- how can I use num_charges when skillType is not CHARGEDAM ? -->
   </for>
 </skill>
 </list>

@@ -148,15 +148,25 @@
 </skill>
 <skill id="1409" levels="1" name="Cleanse">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Cancels your target's debuffs. Consumes 1 Einhasad Holy Water.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="itemConsumeId" val="8874"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="mpInitialConsume" val="21"/> <!-- Guessing -->
+  <set name="mpConsume" val="58"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="15000"/> <!-- Guessing -->
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="NEGATE"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="negateStats" val="MUTE FEAR CONFUSION POISON BLEED DEBUFF WEAKNESS"/>
+  <set name="negatePower" val="9.0"/> <!-- Guessing -->
   <for>
   </for>
 </skill>
@@ -209,11 +219,32 @@
   Description(s):
       Allows the Ancient Soul of Magnus to temporarily possess a party member. Consumes 40 Spirit Ores.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="40"/>
+  <set name="mpInitialConsume" val="59"/> <!-- Guessing -->
+  <set name="mpConsume" val="287"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="1000"/>
+  <set name="hitTime" val="2500"/>
+  <set name="reuseDelay" val="1200000"/> <!-- Guessing -->
+  <set name="skillTime" val="2500"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="300000"/> <!-- Guessing -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="CoV"> <!-- Does it stacks with CoV ? -->
+      <mul order="0x30" stat="regMp" val="1.5"/>
+      <mul order="0x30" stat="mAtkSpd" val="1.20"/>
+      <mul order="0x30" stat="mDef" val="1.20"/>
+      <mul order="0x30" stat="mAtk" val="1.30"/>
+      <mul order="0x30" stat="maxMp" val="1.20"/>
+      <mul order="0x30" stat="MpConsumeRate" val="0.80"/>
+      <mul order="0x30" stat="mCritRate" val="1.2"/> <!-- Guessing -->
+    </effect>
   </for>
 </skill>
 <skill id="1414" levels="1" name="Victories of Pa'agrio">
@@ -223,11 +254,47 @@
   Description(s):
       Allows the Ancient Hero's Soul to temporarily possesses an alliance member. Consumes 40 Spirit Ores.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="40"/>
+  <set name="mpInitialConsume" val="57"/>
+  <set name="mpConsume" val="284"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ALLY"/>
+  <set name="skillRadius" val="1000"/>
+  <set name="hitTime" val="2500"/>
+  <set name="reuseDelay" val="1200000"/>
+  <set name="skillTime" val="2500"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="300000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="CoV">
+    <!-- This skills seems to be exacly same as CoV but it applies on ally -->
+      <mul order="0x30" stat="pAtk" val="1.1"/>
+      <mul order="0x30" stat="pDef" val="1.2"/>
+      <mul order="0x30" stat="rCrit" val="1.2"/>
+      <add order="0x40" stat="accCombat" val="4"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.2"/>
+      <mul order="0x30" stat="mAtkSpd" val="1.2"/>
+      <mul order="0x30" stat="cAtk" val="1.2"/>
+      <mul order="0x30" stat="mAtk" val="1.20"/>
+      <mul order="0x30" stat="mDef" val="1.20"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
+      <mul order="0x30" stat="maxHp" val="1.20"/>
+      <add order="0x40" stat="sleepRes" val="20"/>
+      <add order="0x40" stat="confusionRes" val="20"/>
+      <add order="0x40" stat="muteRes" val="20"/>
+      <add order="0x40" stat="rootRes" val="20"/>
+      <add order="0x40" stat="paralyzeRes" val="20"/>
+      <add order="0x40" stat="movementRes" val="20"/>
+      <add order="0x40" stat="darkRes" val="20"/>
+      <add order="0x40" stat="bleedRes" val="20"/>
+      <add order="0x40" stat="poisonRes" val="20"/>
+      <add order="0x40" stat="stunRes" val="20"/>
+    </effect>
   </for>
 </skill>
 <skill id="1415" levels="1" name="Pa'agrio's Emblem">
@@ -251,11 +318,24 @@
   Description(s):
       Increases an alliance member's maximum CP and fully restores it. Consumes 20 Spirit Ores.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpInitialConsume" val="57"/> <!-- Guessing -->
+  <set name="mpConsume" val="284"/>
+  <set name="power" val="800.0"/>
+  <set name="target" val="TARGET_ALLY"/>
+  <set name="skillRadius" val="1000"/>
+  <set name="hitTime" val="2500"/>
+  <set name="reuseDelay" val="200000"/> <!-- Guessing -->
+  <set name="skillTime" val="2500"/>
+  <set name="skillType" val="BUFF"/> <!-- Needs core support for CP Heal & Buff at once -->
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0">
+      <add order="0x40" stat="maxCp" val="800"/>
+    </effect>
   </for>
 </skill>
 <skill id="1417" levels="5" name="Aura Flash">
