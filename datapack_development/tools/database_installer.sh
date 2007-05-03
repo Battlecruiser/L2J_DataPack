@@ -245,6 +245,7 @@ echo "Upgrading gameserver content"
 fi
 $MYG < ../sql/account_data.sql &> /dev/null
 $MYG < ../sql/armor.sql &> /dev/null
+$MYG < ../sql/armorsets.sql &> /dev/null
 $MYG < ../sql/auction.sql &> /dev/null
 $MYG < ../sql/auction_bid.sql &> /dev/null
 $MYG < ../sql/auction_watch.sql &> /dev/null
