@@ -17,6 +17,25 @@ CREATE TABLE `mapregion` (
 PRIMARY KEY (`region`)
 ) TYPE=MyISAM;
 
+-- 0 = "Talking Island Village"
+-- 1 = "Elven Village"
+-- 2 = "Dark Elven Village"
+-- 3 = "Orc Village"
+-- 4 = "Dwarven Village"
+-- 5 = "Town of Gludio"
+-- 6 = "Gludin Village"
+-- 7 = "Town of Dion"
+-- 8 = "Town of Giran"
+-- 9 = "Town of Oren"
+-- 10 = "Town of Aden"
+-- 11 = "Hunters Village"
+-- 12 = "Giran Harbor"
+-- 13 = "Heine"
+-- 14 = "Rune Township"
+-- 15 = "Town of Goddard"
+-- 16 = "Town of Shuttgart"
+-- default = "Town of Aden"
+
 --
 -- Dumping data for table `mapregion`
 -- 
@@ -24,7 +43,7 @@ PRIMARY KEY (`region`)
 INSERT INTO mapregion VALUES 
 (0, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4),
 (1, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4),
-(2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4),
+(2, 3, 7, 9, 11, 3, 4, 4, 4, 4, 4), -- 16_10 -> 25_10
 (3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4),
 (4, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4),
 (5, 3, 3, 3, 3, 3, 16, 16, 16, 15, 15),
@@ -39,4 +58,4 @@ INSERT INTO mapregion VALUES
 (14, 6, 6, 6, 5, 7, 7, 8, 8, 8, 8),
 (15, 0, 6, 6, 5, 7, 12, 13, 13, 13, 13),
 (16, 0, 0, 6, 6, 12, 12, 13, 13, 13, 13),
-(17, 0, 0, 0, 0, 0, 0, 13, 13, 13, 13);
+(17, 0, 0, 0, 0, 0, 0, 13, 13, 13, 13); -- 16_25 -> 25_25
