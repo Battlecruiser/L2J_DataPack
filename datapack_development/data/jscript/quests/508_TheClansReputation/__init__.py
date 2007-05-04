@@ -15,6 +15,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.serverpackets      import SystemMessage
 
 qn="508_TheClansReputation"
 qd="The Clans Reputation"
@@ -109,7 +110,7 @@ class Quest (JQuest) :
            htmltext = "30868-"+str(raid)+"b.htm"
            st.takeItems(item,1)
            player.getClan().setReputationScore(player.getClan().getReputationScore()+CLAN_POINTS_REWARD,True)
-           player.sendMessage("Your clan gets "+str(CLAN_POINTS_REWARD)+" Reputations Points")
+           player.sendPacket(SystemMessage(1777).addNumber(CLAN_POINTS_REWARD))
   return htmltext
 
  def onKill (self,npc,player) :
