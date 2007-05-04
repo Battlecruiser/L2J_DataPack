@@ -812,15 +812,15 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-	<add val='445' order='0x40' stat='maxHp'/>
-	<mul val='1.04' order='0x30' stat='pAtk'/>
-	<mul val='1.08' order='0x30' stat='mAtk'/>
-	<mul val='2' order='0x30' stat='mCritRate'/>
-	<add val='15' order='0x40' stat='fireRes'/>
-	<add val='80' order='0x40' stat='sleepRes'/>
-	<mul val='0.90' order='0x30' stat='mReuse'/>
-	<mul val='0.90' order='0x30' stat='atkReuse'/>
-	<add val='5' order='0x10' stat="reflectDam"/>
+    <add val='445' order='0x40' stat='maxHp'/>
+    <mul val='1.04' order='0x30' stat='pAtk'/>
+    <mul val='1.08' order='0x30' stat='mAtk'/>
+    <mul val='2' order='0x30' stat='mCritRate'/>
+    <add val='15' order='0x40' stat='fireRes'/>
+    <add val='80' order='0x40' stat='sleepRes'/>
+    <mul val='0.90' order='0x30' stat='mReuse'/>
+    <mul val='0.90' order='0x30' stat='atkReuse'/>
+    <add val='5' order='0x10' stat="reflectDam"/>
   </for>
 </skill>
 <skill id="3558" levels="1" name="Earring of Antharas">
@@ -831,12 +831,12 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-	<add val='80' order='0x40' stat='bleedRes'/>
-	<mul val='1.10' order='0x30' stat='gainHp'/>
-	<add val='4' order='0x40' stat='absorbDam'/>
-	<add val='60' order='0x40' stat='stunRes'/>
-	<add val='60' order='0x40' stat='muteRes'/>
-	<add val='15' order='0x40' stat='earthRes'/>
+    <add val='80' order='0x40' stat='bleedRes'/>
+    <mul val='1.10' order='0x30' stat='gainHp'/>
+    <add val='4' order='0x40' stat='absorbDam'/>
+    <add val='60' order='0x40' stat='stunRes'/>
+    <add val='60' order='0x40' stat='muteRes'/>
+    <add val='15' order='0x40' stat='earthRes'/>
   </for>
 </skill>
 <skill id="3559" levels="1" name="Earring of Zaken">
@@ -847,11 +847,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-	<add val='60' order='0x40' stat='bleedRes'/>
-	<mul val='1.1' order='0x30' stat='gainHp'/>
-	<add val='4' order='0x40' stat='absorbDam'/>
-	<add val='40' order='0x40' stat='stunRes'/>
-	<add val='40' order='0x40' stat='muteRes'/>
+    <add val='60' order='0x40' stat='bleedRes'/>
+    <mul val='1.1' order='0x30' stat='gainHp'/>
+    <add val='4' order='0x40' stat='absorbDam'/>
+    <add val='40' order='0x40' stat='stunRes'/>
+    <add val='40' order='0x40' stat='muteRes'/>
   </for>
 </skill>
 <skill id="3560" levels="1" name="Earring of Orfen">
@@ -862,8 +862,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-	<add val='40' order='0x40' stat='bleedRes'/>
-	<mul val='1.06' order='0x30' stat='gainHp'/>
+    <add val='40' order='0x40' stat='bleedRes'/>
+    <mul val='1.06' order='0x30' stat='gainHp'/>
   </for>
 </skill>
 <skill id="3561" levels="1" name="Ring of Baium">
@@ -874,13 +874,13 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-	<add val='80' order='0x40' stat='poisonRes'/>
-	<add val='2' order='0x40' stat='accCombat'/>
-	<mul val='1.15' order='0x30' stat='cAtk'/>
-	<add val='60' order='0x40' stat='rootRes'/>
-	<mul val='1.04' order='0x30' stat='pAtkSpd'/>
-	<mul val='1.04' order='0x30' stat='mAtkSpd'/>
-	
+    <add val='80' order='0x40' stat='poisonRes'/>
+    <add val='2' order='0x40' stat='accCombat'/>
+    <mul val='1.15' order='0x30' stat='cAtk'/>
+    <add val='60' order='0x40' stat='rootRes'/>
+    <mul val='1.04' order='0x30' stat='pAtkSpd'/>
+    <mul val='1.04' order='0x30' stat='mAtkSpd'/>
+    
   </for>
 </skill>
 <skill id="3562" levels="1" name="Ring of Ant Queen">
@@ -891,10 +891,10 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-	<add val='60' order='0x40' stat='poisonRes'/>
-	<add val='2' order='0x10' stat='accCombat'/>
-	<mul val='1.15' order='0x30' stat='cAtk'/>
-	<add val='40' order='0x40' stat='rootRes'/>
+    <add val='60' order='0x40' stat='poisonRes'/>
+    <add val='2' order='0x10' stat='accCombat'/>
+    <mul val='1.15' order='0x30' stat='cAtk'/>
+    <add val='40' order='0x40' stat='rootRes'/>
   </for>
 </skill>
 <skill id="3563" levels="1" name="Ring of Core">
@@ -905,8 +905,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-	<add val='40' order='0x40' stat='poisonRes'/>
-	<add val='1' order='0x40' stat='accCombat'/>
+    <add val='40' order='0x40' stat='poisonRes'/>
+    <add val='1' order='0x40' stat='accCombat'/>
   </for>
 </skill>
 <skill id="3564" levels="1" name="Special Ability: Haste">
