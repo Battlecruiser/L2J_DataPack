@@ -1294,7 +1294,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="30" stackType="MagicDefUpAtr">
+    <effect count="1" name="Buff" time="1200" val="0">
       <add stat="waterRes" val="20" order="0x40"/>
       <add stat="fireRes" val="30" order="0x40"/>
       <add stat="windRes" val="20" order="0x40"/>

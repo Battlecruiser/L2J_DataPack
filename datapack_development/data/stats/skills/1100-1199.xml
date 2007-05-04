@@ -1358,12 +1358,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="MagicDefUpAtr">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="AquaAtr">
       <add order="0x40" stat="waterRes" val="#res"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1" stackType="MagicDefUpAtr">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1" stackType="AquaAtr">
       <add order="0x40" stat="waterRes" val="30"/>
     </effect>
   </enchant1for>
@@ -1465,12 +1465,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="MagicDefUpAtr">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="WindAtr">
       <add order="0x40" stat="windRes" val="#res"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1" stackType="MagicDefUpAtr">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1" stackType="WindAtr">
       <add order="0x40" stat="windRes" val="30"/>
     </effect>
   </enchant1for>
@@ -1516,12 +1516,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="MagicDefUpAtr">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="FireAtr">
       <add order="0x40" stat="fireRes" val="#res"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1" stackType="MagicDefUpAtr">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1" stackType="FireAtr">
       <add order="0x40" stat="fireRes" val="30"/>
     </effect>
   </enchant1for>
