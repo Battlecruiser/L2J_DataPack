@@ -1567,7 +1567,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0" stackOrder="2" stackType="surrender">
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="2" stackType="AquaAtr">
       <sub order="0x40" stat="waterRes" val="30"/>
     </effect>
   </for>
@@ -1700,7 +1700,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0" stackOrder="2" stackType="surrender">
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="2" stackType="WindAtr">
       <sub order="0x40" stat="windRes" val="30"/>
     </effect>
   </for>
@@ -1867,7 +1867,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0" stackOrder="2" stackType="surrender">
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="2" stackType="FireAtr">
       <sub order="0x40" stat="fireRes" val="#Tab-fireRes"/>
     </effect>
   </for>
