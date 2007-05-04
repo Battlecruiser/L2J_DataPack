@@ -805,101 +805,108 @@
   </for>
 </skill>
 <skill id="3557" levels="1" name="Necklace of Valakas">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Increases resistance to fire/water attacks, MaxHP, P. Atk., M. Atk. and damage magic critical attack rate. Decreases skill re-use time. Reflects some of the physical damage received back upon the enemy (does not include damage from skill or range attacks).
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+	<add val='445' order='0x40' stat='maxHp'/>
+	<mul val='1.04' order='0x30' stat='pAtk'/>
+	<mul val='1.08' order='0x30' stat='mAtk'/>
+	<mul val='2' order='0x30' stat='mCritRate'/>
+	<add val='15' order='0x40' stat='fireRes'/>
+	<add val='80' order='0x40' stat='sleepRes'/>
+	<mul val='0.90' order='0x30' stat='mReuse'/>
+	<mul val='0.90' order='0x30' stat='atkReuse'/>
+	<add val='5' order='0x10' stat="reflectDam"/>
   </for>
 </skill>
 <skill id="3558" levels="1" name="Earring of Antharas">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Increases resistance to earth attacks and bleed/shock/mental attacks, and improves the effectiveness of HP recovery magic. Decreases skill MP consumption and restores HP by using some of the damage inflicted upon the enemy (does not include damage from skill or range attacks).
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+	<add val='80' order='0x40' stat='bleedRes'/>
+	<mul val='1.10' order='0x30' stat='gainHp'/>
+	<add val='4' order='0x40' stat='absorbDam'/>
+	<add val='60' order='0x40' stat='stunRes'/>
+	<add val='60' order='0x40' stat='muteRes'/>
+	<add val='15' order='0x40' stat='earthRes'/>
   </for>
 </skill>
 <skill id="3559" levels="1" name="Earring of Zaken">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Increases resistance to bleed/shock/mental attacks, improves the effect of HP regeneration magic and restores HP by using some of the damage inflicted upon the enemy (does not include damage from skill or range attacks).
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+	<add val='60' order='0x40' stat='bleedRes'/>
+	<mul val='1.1' order='0x30' stat='gainHp'/>
+	<add val='4' order='0x40' stat='absorbDam'/>
+	<add val='40' order='0x40' stat='stunRes'/>
+	<add val='40' order='0x40' stat='muteRes'/>
   </for>
 </skill>
 <skill id="3560" levels="1" name="Earring of Orfen">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Increases healing from heal spells and resistance to Bleed attack.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+	<add val='40' order='0x40' stat='bleedRes'/>
+	<mul val='1.06' order='0x30' stat='gainHp'/>
   </for>
 </skill>
 <skill id="3561" levels="1" name="Ring of Baium">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Increases resistance to poison/hold attacks and critical attack damage. Also increases Accuracy, Atk. Spd. and Casting Spd.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+	<add val='80' order='0x40' stat='poisonRes'/>
+	<add val='2' order='0x40' stat='accCombat'/>
+	<mul val='1.15' order='0x30' stat='cAtk'/>
+	<add val='60' order='0x40' stat='rootRes'/>
+	<mul val='1.04' order='0x30' stat='pAtkSpd'/>
+	<mul val='1.04' order='0x30' stat='mAtkSpd'/>
+	
   </for>
 </skill>
 <skill id="3562" levels="1" name="Ring of Ant Queen">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Increases resistance to poison/hold attacks and critical attack damage. Also increases Accuracy.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+	<add val='60' order='0x40' stat='poisonRes'/>
+	<add val='2' order='0x10' stat='accCombat'/>
+	<mul val='1.15' order='0x30' stat='cAtk'/>
+	<add val='40' order='0x40' stat='rootRes'/>
   </for>
 </skill>
 <skill id="3563" levels="1" name="Ring of Core">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Increases Accuracy, and resistance to Poison attack.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+	<add val='40' order='0x40' stat='poisonRes'/>
+	<add val='1' order='0x40' stat='accCombat'/>
   </for>
 </skill>
 <skill id="3564" levels="1" name="Special Ability: Haste">

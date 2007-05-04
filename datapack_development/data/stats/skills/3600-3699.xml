@@ -95,16 +95,24 @@
 </skill>
 <skill id="3604" levels="1" name="Frintezza's Necklace">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
+Description(s):
       Increases resistance to dark/poison/bleed/paralysis/sleep attacks. Reduces skill re-use time. Reflects some of the damage received back to the enemy (does not include damage from skill or range attacks).
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add val='30' order='0x40' stat='sleepRes'/>
+    <add val='50' order='0x40' stat='poisonRes'/>
+    <add val='50' order='0x40' stat='bleedRes'/>
+    <add val='30' order='0x40' stat='paralyzeRes'/>
+    <add val='30' order='0x40' stat='stunRes'/>
+    <add val='20' order='0x40' stat='darkRes'/>
+    <add val='15' order='0x40' stat='reflectDam'/>
+    <mul val='0.75' order='0x30' stat='atkReuse'/>
   </for>
 </skill>
 <skill id="3605" levels="1" name="Clan Oath Heavy Armor Set">
