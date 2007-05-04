@@ -168,11 +168,15 @@
       Lvl 19 Name - HP Increase (11x)
       Lvl 20 Name - HP Increase (12x)      
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#maxhp"> 1 1.2 1.3 2 2 4 4 0.25 0.50 2 3 4 5 6 7 8 9 10 11 12 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="maxHp" val="#maxhp"/>
   </for>
 </skill>
 <skill id="4409" levels="20" name="MP Modifiers">
@@ -201,11 +205,15 @@
       Lvl 19 Name - MP Increase (11x)
       Lvl 20 Name - MP Increase (12x)
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#maxmp"> 1 1.2 1.3 2 2 4 4 0.25 0.50 2 3 4 5 6 7 8 9 10 11 12 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="maxMp" val="#maxmp"/>
   </for>
 </skill>
 <skill id="4410" levels="22" name="P. Atk. Modifiers">
@@ -236,11 +244,15 @@
       Lvl 21 Name - Extremely Strong P. Atk.
       Lvl 22 Name - Ultra Strong P. Atk.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#patk"> 0.1 0.15 0.20 0.25 0.30 0.35 0.40 0.45 0.5 0.7 1.0 1.1 1.2 1.3 1.5 1.6 1.7 1.8 1.9 2.0 2.1 2.2 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pAtk" val="#patk"/>
   </for>
 </skill>
 <skill id="4411" levels="22" name="M. Atk. Modifiers">
@@ -271,11 +283,15 @@
       Lvl 21 Name - Extremely Strong M. Atk.
       Lvl 22 Name - Ultra Strong M. Atk.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#matk"> 0.1 0.15 0.20 0.25 0.30 0.35 0.40 0.45 0.5 0.7 1.0 1.1 1.2 1.3 1.5 1.6 1.7 1.8 1.9 2.0 2.1 2.2 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="mAtk" val="#matk"/>
   </for>
 </skill>
 <skill id="4412" levels="22" name="P. Def. Modifiers">
@@ -306,11 +322,15 @@
       Lvl 21 Name - Extremely Strong P. Def.
       Lvl 22 Name - Ultra Strong P. Def.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#pdef"> 0.1 0.15 0.20 0.25 0.30 0.35 0.40 0.45 0.5 0.7 1.0 1.1 1.2 1.3 1.5 1.6 1.7 1.8 1.9 2.0 2.1 2.2 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pDef" val="#pdef"/>
   </for>
 </skill>
 <skill id="4413" levels="22" name="M. Def. Modifiers">
@@ -341,11 +361,15 @@
       Lvl 21 Name - Extremely Strong M. Def.
       Lvl 22 Name - Ultra Strong M. Def.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#mdef"> 0.1 0.15 0.20 0.25 0.30 0.35 0.40 0.45 0.5 0.7 1.0 1.1 1.2 1.3 1.5 1.6 1.7 1.8 1.9 2.0 2.1 2.2 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="mDef" val="#mdef"/>
   </for>
 </skill>
 <skill id="4414" levels="3" name="Armor Type">
