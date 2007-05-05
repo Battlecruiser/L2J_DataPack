@@ -32,4 +32,4 @@ insert  into helper_buff_list values
 (11, 4329, 'Acumen', 1, 13, 22, 'true'), 
 (12, 4330, 'Concentration', 1, 14, 21, 'true'), 
 (13, 4331, 'Empower', 1, 15, 20, 'true');
-
+-- (14, 5182, 'Blessing of Protection', 1, 1, 39, 'false'); -- Keeps you safe from an attack by a chaotic character who is more than 10 levels apart from you.
