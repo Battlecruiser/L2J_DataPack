@@ -1871,8 +1871,16 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
-      <mul order="0x30" stat="pAtkSpd" val="1.20"/>
-      <add order="0x40" stat="accCombat" val="6"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.20">
+        <and>
+          <using kind="Fist,Dual Fist"/>
+        </and>
+      </mul>
+      <add order="0x40" stat="accCombat" val="6">
+        <and>
+          <using kind="Fist,Dual Fist"/>
+        </and>
+      </add>
     </effect>
   </for>
 </skill>
