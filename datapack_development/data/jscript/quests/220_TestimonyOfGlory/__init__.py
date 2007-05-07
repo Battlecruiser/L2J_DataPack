@@ -157,10 +157,10 @@ class Quest (JQuest) :
           st.takeItems(MANAKIAS_LETTER1,1)
     elif event == "30616-04.htm" :                           # Chief of Enku Orcs
           st.playSound("Itemsound.quest_before_battle")
-          st.getPcSpawn().addSpawn(27082,17710,189813,-3581)
-          st.getPcSpawn().addSpawn(27082,17674,189798,-3581)
-          st.getPcSpawn().addSpawn(27082,17770,189852,-3581)
-          st.getPcSpawn().addSpawn(27082,17803,189873,-3581)
+          st.getPcSpawn().addSpawn(27082,19456,192245,-3730)
+          st.getPcSpawn().addSpawn(27082,19539,192343,-3728)
+          st.getPcSpawn().addSpawn(27082,19500,192449,-3729)
+          st.getPcSpawn().addSpawn(27082,19569,192482,-3728) 
           st.giveItems(GLOVE_OF_KEPRA,1)
           st.takeItems(MANAKIAS_LETTER2,1)
     elif event == "30617-04.htm" :                           # Chief of Turek Orcs
