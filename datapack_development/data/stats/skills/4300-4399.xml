@@ -741,7 +741,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#res" stackType="MentalShield">
 	 <add stat="rootRes" val="#res" order="0x40"/>
 	 <add stat="sleepRes" val="#res" order="0x40"/>
 	 <add stat="confusionRes" val="#res" order="0x40"/>
@@ -820,7 +820,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#res" stackType="ShockRes>
       <add stat="stunRes" val="#res" order="0x40"/>
     </effect>
   </for>
