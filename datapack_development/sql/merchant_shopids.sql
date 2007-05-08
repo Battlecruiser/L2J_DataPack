@@ -486,6 +486,8 @@ INSERT INTO merchant_shopids VALUES (300511,'gm');
 INSERT INTO merchant_shopids VALUES (300510,'gm');
 INSERT INTO merchant_shopids VALUES (300410,'gm');
 INSERT INTO merchant_shopids VALUES (300542,'gm');
+INSERT INTO merchant_shopids VALUES (71031, 'gm');
+INSERT INTO merchant_shopids VALUES (71032, 'gm');
 --
 -- Clan Halls Item creation
 --
