@@ -820,7 +820,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#res" stackType="ShockRes>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#res" stackType="ShockRes">
       <add stat="stunRes" val="#res" order="0x40"/>
     </effect>
   </for>
