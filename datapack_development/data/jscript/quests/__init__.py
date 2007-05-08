@@ -239,6 +239,7 @@ __all__ = [
 '637_ThroughOnceMore',
 '647_InfluxOfMachines',
 '649_ALooterAndARailroadMan',
+'651_RunawayYouth',
 '999_C3Tutorial'
 ]
 print ""
