@@ -895,7 +895,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#res" stackType="MentalShield">
       <add order="0x40" stat="rootRes" val="#res"/>
       <add order="0x40" stat="sleepRes" val="#res"/>
       <add order="0x40" stat="confusionRes" val="#res"/>

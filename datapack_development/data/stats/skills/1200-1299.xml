@@ -1884,12 +1884,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#res" stackType="ShockRes">
       <add order="0x40" stat="stunRes" val="#res"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="#res" stackType="ShockRes">
       <add order="0x40" stat="stunRes" val="40"/>
     </effect>
   </enchant1for>
