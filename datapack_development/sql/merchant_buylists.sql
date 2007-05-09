@@ -15291,7 +15291,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (7679,0,300542,31);
 
 -- INTERLUDE GM SHOP START
---Accessory
+-- Accessory
 INSERT INTO `merchant_buylists`(`item_id`,`price`,`shop_id`,`order`) VALUES 
 (8910,0,71032,1),
 (8911,0,71032,2),
@@ -15322,7 +15322,7 @@ INSERT INTO `merchant_buylists`(`item_id`,`price`,`shop_id`,`order`) VALUES
 (8568,0,71032,27),
 (8569,0,71032,28),
 
---Weapon
+-- Weapon
 (8678,0,71031,1),
 (8788,0,71031,2),
 (8788,0,71031,3),
