@@ -3626,7 +3626,7 @@ INSERT INTO `etcitem` (`item_id`,`name`,`crystallizable`,`item_type`,`weight`,`c
  ('5008','Recipe: Pata (60%)','false','recipe','30','stackable','liquid','none','0','0','0','true','true','true','true','rp_pata_i','recipe'),
  ('5009','Trophy of Alliance','false','none','0','normal','steel','none','0','0','0','false','false','true','false','trophy_of_alliance','none'),
  ('5010','Echo Crystal - Theme of Victory','false','none','10','stackable','paper','none','0','0','0','true','true','true','true','echo_crystal_victory','none'),
- ('5011','Star of Destiny','false','quest','0','stackable','steel','none','0','0','0','true','true','true','true','q_star_of_destiny','none'),
+ ('5011','Star of Destiny','false','quest','0','stackable','steel','none','0','0','0','false','false','false','false','q_star_of_destiny','none'),
  ('5012','Leikan\'s Letter','false','quest','0','stackable','paper','none','0','0','0','true','true','true','true','leikans_letter','none'),
  ('5013','Spellbook: Elemental Assault','false','spellbook','120','normal','paper','none','0','7200','0','true','true','true','true','sb_elemental_symphony_h1','none'),
  ('5014','Spellbook: Elemental Symphony','false','spellbook','120','normal','paper','none','0','7200','0','true','true','true','true','sb_elemental_symphony_e1','none'),
