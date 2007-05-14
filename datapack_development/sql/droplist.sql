@@ -26053,4 +26053,221 @@ INSERT INTO `droplist` VALUES
 -- Temp drop for a late C5 spellbook... needs to be done properly later
 --
 -- Kadios
-INSERT INTO `droplist` VALUES (20671, 8616, 1, 1, 2, 10000); -- Spellbook: Summon Friend
+INSERT INTO `droplist` VALUES (20671,8616,1,1,2,10000); -- Spellbook: Summon Friend
+
+-- WIP - Primeval Isle Droplist (There are still missing spoils/drops due lack of info)
+INSERT INTO `droplist` VALUES
+-- Velociraptor
+(22196,57,10430,20910,0,700000), -- Adena
+(22196,8633,1,1,2,41666), -- Elixir of Mental Strength (S-Grade)
+(22196,8627,1,1,2,25641), -- Elixir of Life (S-Grade)
+(22196,5529,1,1,1,5181), -- Dragon Slayer Edge
+(22196,5545,1,1,1,5181), -- Dark Legion\'s Edge Blade
+(22196,8956,1,1,2,5181), -- Red Primeval Crystal
+-- Velociraptor
+(22197,57,4496,9199,0,700000), -- Adena
+(22197,8633,1,1,2,5714), -- Elixir of Mental Strength (S-Grade)
+(22197,5546,1,1,1,3703), -- Sword of Miracles Edge
+(22197,8627,1,1,2,3367), -- Elixir of Life (S-Grade)
+(22197,5529,1,1,1,1680), -- Dragon Slayer Edge
+(22197,8954,1,1,2,1344), -- Blue Primeval Crystal
+(22197,8885,1,1,2,1344), -- Amulet: Magnus\' Chant
+(22197,5545,1,1,1,1344), -- Dark Legion\'s Edge Blade
+(22197,8955,1,1,2,672), -- Green Primeval Crystal
+(22197,8956,1,1,2,672), -- Red Primeval Crystal
+(22197,6689,1,1,-1,17241), -- Basalt Battlehammer Head
+-- Velociraptor
+(22198,57,10320,21090,0,700000), -- Adena
+(22198,8633,1,1,2,8403), -- Elixir of Mental Strength (S-Grade)
+(22198,8627,1,1,2,7462), -- Elixir of Life (S-Grade)
+(22198,8954,1,1,2,3717), -- Blue Primeval Crystal
+(22198,8956,1,1,2,2793), -- Red Primeval Crystal
+(22198,5529,1,1,1,2793), -- Dragon Slayer Edge
+(22198,5546,1,1,1,1862), -- Sword of Miracles Edge
+(22198,8902,1,1,2,1862), -- Ancient Spellbook: Day of Doom
+(22198,8893,1,1,2,1862), -- Ancient Tactical Manual: Symbol of Noise
+(22198,8955,1,1,2,931), -- Green Primeval Crystal
+(22198,5545,1,1,1,931), -- Dark Legion\'s Edge Blade
+-- Velociraptor
+(22218,57,4232,8612,0,700000), -- Adena
+(22218,8633,1,1,2,8000), -- Elixir of Mental Strength (S-Grade)
+(22218,5529,1,1,1,6410), -- Dragon Slayer Edge
+(22218,8627,1,1,2,3194), -- Elixir of Life (S-Grade)
+(22218,5546,1,1,1,3194), -- Sword of Miracles Edge
+(22218,8954,1,1,2,1597), -- Blue Primeval Crystal
+-- Velociraptor
+(22223,57,4432,9023,0,700000), -- Adena
+(22223,8633,1,1,2,4149), -- Elixir of Mental Strength (S-Grade)
+(22223,8627,1,1,2,2070), -- Elixir of Life (S-Grade)
+(22223,5545,1,1,1,2070), -- Dark Legion\'s Edge Blade
+-- Pterosaur
+(22199,57,18270,36670,0,700000), -- Adena
+(22199,6346,1,1,1,71428), -- Sealed Majestic Ring Gemstone
+(22199,6342,1,1,1,37037), -- Sealed Majestic Earring Gemstone
+(22199,6344,1,1,1,37037), -- Sealed Majestic Necklace Beads
+(22199,8627,1,1,2,16666), -- Elixir of Life (S-Grade)
+(22199,8899,1,1,2,6711), -- Ancient Spellbook: Volcano
+(22199,8633,1,1,2,6711), -- Elixir of Mental Strength (S-Grade)
+(22199,8954,1,1,2,3344), -- Blue Primeval Crystal
+(22199,6327,1,1,1,3344), -- Sealed Majestic Earring
+(22199,8881,1,1,2,3344), -- Spellbook: Cleanse
+-- Ornithomimus
+(22200,57,4460,9095,0,700000), -- Adena
+(22200,8633,1,1,2,6493), -- Elixir of Mental Strength (S-Grade)
+(22200,8627,1,1,2,6329), -- Elixir of Life (S-Grade)
+(22200,8888,1,1,2,1675), -- Amulet: Pa\'agrio\'s Fist
+(22200,5544,1,1,1,1488), -- Branch of The Mother Tree Head
+(22200,8342,1,1,1,1302), -- Flaming Dragon Skull Piece
+(22200,8954,1,1,2,930), -- Blue Primeval Crystal
+(22200,8955,1,1,2,744), -- Green Primeval Crystal
+(22200,5533,1,1,1,744), -- Elysian Head
+(22200,8886,1,1,2,558), -- Amulet: Victories of Pa\'agrio
+(22200,8956,1,1,2,371), -- Red Primeval Crystal
+(22200,8349,1,1,1,185), -- Doom Crusher Head
+(22200,1895,1,5,-1,500250), -- Metallic Fiber
+(22200,6695,1,1,-1,18181), -- Demon Splinter Blade
+(22200,4040,1,1,-1,333333), -- Mold Lubricant
+-- Ornithomimus
+(22201,57,4468,9089,0,700000), -- Adena
+(22201,8633,1,1,2,6622), -- Elixir of Mental Strength (S-Grade)
+(22201,8627,1,1,2,5882), -- Elixir of Life (S-Grade)
+(22201,8342,1,1,1,1468), -- Flaming Dragon Skull Piece
+(22201,8889,1,1,2,1468), -- Amulet: Gate Chant
+(22201,8954,1,1,2,733), -- Blue Primeval Crystal
+(22201,8349,1,1,1,733), -- Doom Crusher Head
+(22201,6696,1,1,-1,18867), -- Heavens Divider Edge
+-- Ornithomimus
+(22202,57,4059,8279,0,700000), -- Adena
+(22202,8627,1,1,2,10309), -- Elixir of Life (S-Grade)
+(22202,8633,1,1,2,3164), -- Elixir of Mental Strength (S-Grade)
+(22202,8342,1,1,1,2375), -- Flaming Dragon Skull Piece
+(22202,8954,1,1,2,1584), -- Blue Primeval Crystal
+(22202,5544,1,1,1,1584), -- Branch of The Mother Tree Head
+(22202,8349,1,1,1,791), -- Doom Crusher Head
+(22202,8896,1,1,2,791), -- Ancient Tactical Manual: Symbol of Energy
+(22202,8955,1,1,2,395), -- Green Primeval Crystal
+(22202,5533,1,1,1,395), -- Elysian Head
+-- Ornithomimus
+(22219,57,4165,8486,0,700000), -- Adena
+(22219,5533,1,1,1,1919), -- Elysian Head
+(22219,5544,1,1,1,1919), -- Branch of The Mother Tree Head
+(22219,8342,1,1,1,958), -- Flaming Dragon Skull Piece
+(22219,8955,1,1,2,958), -- Green Primeval Crystal
+(22219,8954,1,1,2,958), -- Blue Primeval Crystal
+(22219,6901,1,1,-1,7812), -- Recipe: Shining Arrow (100%)
+-- Ornithomimus
+(22224,57,4589,9014,0,700000), -- Adena
+(22224,8627,1,1,2,6849), -- Elixir of Life (S-Grade)
+(22224,8955,1,1,2,6849), -- Green Primeval Crystal
+-- Deinonychus
+(22203,57,4308,8702,0,700000), -- Adena
+(22203,8633,1,1,2,7092), -- Elixir of Mental Strength (S-Grade)
+(22203,8627,1,1,2,5586), -- Elixir of Life (S-Grade)
+(22203,5534,1,1,1,3378), -- Soul Bow Stave
+(22203,8954,1,1,2,1862), -- Blue Primeval Crystal
+(22203,8883,1,1,2,846), -- Spellbook: Mystic Immunity
+(22203,8955,1,1,2,338), -- Green Primeval Crystal
+(22203,8956,1,1,2,169), -- Red Primeval Crystal
+(22203,1885,1,1,-1,352641), -- High Grade Suede
+(22203,6698,1,1,-1,166666), -- Sealed Tateossian Earring Part
+(22203,6901,1,1,-1,7936), -- Recipe: Shining Arrow (100%)
+-- Deinonychus
+(22204,57,4278,8729,0,700000), -- Adena
+(22204,8633,1,1,2,10869), -- Elixir of Mental Strength (S-Grade)
+(22204,8627,1,1,2,6666), -- Elixir of Life (S-Grade)
+(22204,8954,1,1,2,3344), -- Blue Primeval Crystal
+(22204,8887,1,1,2,2506), -- Amulet: Pa\'agrio\'s Emblem
+(22204,5534,1,1,1,2506), -- Soul Bow Stave
+(22204,8955,1,1,2,835), -- Green Primeval Crystal
+(22204,6700,1,1,-1,250000), -- Sealed Tateossian Necklace Chain
+(22204,6699,1,1,-1,250000), -- Sealed Tateossian Ring Gem
+-- Deinonychus
+(22205,57,3531,7199,0,700000), -- Adena
+(22205,8627,1,1,2,7847), -- Elixir of Life (S-Grade)
+(22205,5534,1,1,1,2247), -- Soul Bow Stave
+(22205,8633,1,1,2,1123), -- Elixir of Mental Strength (S-Grade)
+(22205,8954,1,1,2,561), -- Blue Primeval Crystal
+(22205,1875,1,1,-1,680000), -- Stone of Purity
+-- Deinonychus
+(22220,57,3866,7871,0,700000), -- Adena
+(22220,8627,1,1,2,5649), -- Elixir of Life (S-Grade)
+(22220,8633,1,1,2,2824), -- Elixir of Mental Strength (S-Grade)
+(22220,1875,1,1,-1,620000), -- Stone of Purity
+-- Deinonychus
+(22225,57,4308,8702,0,700000), -- Adena
+(22225,8627,1,1,2,34842), -- Elixir of Life (S-Grade)
+(22225,5534,1,1,1,6849), -- Soul Bow Stave
+-- Pachycephalosaurus
+(22221,57,4503,9017,0,700000), -- Adena
+(22221,5537,1,1,1,5586), -- Soul Separator Head
+-- Pachycephalosaurus
+(22208,57,4602,9334,0,700000), -- Adena
+(22208,5537,1,1,1,2932), -- Soul Separator Head
+(22208,960,1,1,2,1464), -- Scroll: Enchant Armor (Grade S)
+(22208,8954,1,1,2,732), -- Blue Primeval Crystal
+(22208,6704,1,1,-1,250000), -- Sealed Imperial Crusader Boots Design
+(22208,1894,1,1,-1,640000), -- Crafted Leather
+-- Pachycephalosaurus
+(22209,57,5021,10140,0,700000), -- Adena
+(22209,5537,1,1,1,11363), -- Soul Separator Head
+(22209,8954,1,1,2,7633), -- Blue Primeval Crystal
+-- Pachycephalosaurus
+(22210,57,3927,7993,0,700000), -- Adena
+(22210,8633,1,1,2,9523), -- Elixir of Mental Strength (S-Grade)
+(22210,5537,1,1,1,3802), -- Soul Separator Head
+-- Pachycephalosaurus
+(22226,57,5409,9915,0,700000), -- Adena
+-- Wild Strider
+(22211,57,4493,9173,0,700000), -- Adena
+(22211,5538,1,1,1,8771), -- Dragon Grinder Edge
+(22211,8954,1,1,2,730), -- Blue Primeval Crystal
+(22211,8956,1,1,2,730), -- Red Primeval Crystal
+-- Wild Strider
+(22212,57,4695,9552,0,700000), -- Adena
+(22212,8954,1,1,2,6024), -- Blue Primeval Crystal
+-- Wild Strider
+(22213,57,3914,7955,0,700000), -- Adena
+(22213,8955,1,1,2,1402), -- Green Primeval Crystal
+(22213,5538,1,1,1,1402), -- Dragon Grinder Edge
+(22213,1875,1,1,-1,630000), -- Stone of Purity
+-- Wild Strider
+(22222,57,4400,8907,0,700000), -- Adena
+(22222,5538,1,1,1,13513), -- Dragon Grinder Edge
+(22222,1875,1,1,-1,620000), -- Stone of Purity
+-- Wild Strider
+(22227,57,4826,9524,0,700000), -- Adena
+(22227,5538,1,1,1,37037), -- Dragon Grinder Edge
+-- Elroki
+(22214,57,4478,9052,0,700000), -- Adena
+(22214,5514,1,1,1,27027), -- Sealed Gauntlets of Nightmare Design
+(22214,5502,1,1,1,2057), -- Sealed Boots of Nightmare Lining
+(22214,5515,1,1,1,2057), -- Sealed Majestic Gauntlets Design
+(22214,5503,1,1,1,2057), -- Sealed Majestic Boots Lining
+(22214,8954,1,1,2,2057), -- Blue Primeval Crystal
+(22214,1889,1,1,-1,510000), -- Compound Braid
+(22214,5549,1,1,-1,750000), -- Metallic Thread
+-- Sprigant
+(18345,8787,1,1,2,250000), -- Sprigant\'s Fruit
+-- Sprigant
+(18346,8787,1,1,2,250000), -- Sprigant\'s Fruit
+-- Tyrannosaurus
+(22215,57,55210,110520,0,700000), -- Adena
+(22215,5541,1,1,1,66666), -- Tallum Glaive Edge
+(22215,8633,1,1,2,58823), -- Elixir of Mental Strength (S-Grade)
+(22215,8627,1,1,2,45454), -- Elixir of Life (S-Grade)
+(22215,8894,1,1,2,14925), -- Ancient Tactical Manual: Symbol of Resistance
+(22215,8956,1,1,2,4975), -- Red Primeval Crystal
+-- Tyrannosaurus
+(22216,57,57070,100100,0,700000), -- Adena
+(22216,8627,1,1,2,350000), -- Elixir of Life (S-Grade)
+-- (22216,8762,1,1,3,58823), -- Top-Grade Life Stone: level 76
+(22216,8633,1,1,2,58823), -- Elixir of Mental Strength (S-Grade)
+(22216,5541,1,1,1,58823), -- Tallum Glaive Edge
+-- Tyrannosaurus
+(22217,57,55710,109660,0,700000), -- Adena
+(22217,8633,1,1,2,90909), -- Elixir of Mental Strength (S-Grade)
+(22217,5541,1,1,1,45454), -- Tallum Glaive Edge
+(22217,8627,1,1,2,33333), -- Elixir of Life (S-Grade)
+(22217,8903,1,1,2,11235), -- Ancient Spellbook: Gehenna
+(22217,8954,1,1,2,11235), -- Blue Primeval Crystal
+(22217,4042,1,3,-1,300000); -- Enria
