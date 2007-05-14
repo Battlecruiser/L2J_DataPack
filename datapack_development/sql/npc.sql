@@ -1311,9 +1311,9 @@ INSERT INTO `npc` (`id`,`idTemplate`,`name`,`serverSideName`,`title`,`serverSide
 	(18341,18341,'Hall Keeper Suicidal Soldier',0,'',0,'Monster3.self_blaster',11.00,20.00,80,'male','L2Monster',80,400000,9999,13.43,3.09,40,43,30,21,20,10,440000,40000,9000,5000,6000,6000,300,500,333,0,0,0,88,132,NULL,0,0,0),
 	(18342,18342,'Gremlin',0,'',0,'Monster.gremlin',10.00,15.00,1,'male','L2Monster',40,62,44,3.16,0.91,40,43,30,21,20,10,29,2,9,39,3,32,278,0,333,0,0,0,22,55,NULL,0,0,0),
 	(18343,18343,'Gatekeeper Zombie',0,'',0,'Monster3.zombie_gateguard',11.00,20.00,81,'male','L2Monster',80,400000,9999,13.43,3.09,40,43,30,21,20,10,440000,40000,9000,5000,6000,6000,300,500,333,0,0,0,88,132,NULL,0,0,0),
-	(18344,18344,'Ancient Egg',0,'',0,'NpcEV.dinosaur_nest',43.00,33.50,99,'male','L2Monster',40,400000,9999,13.43,3.09,40,43,30,21,20,10,0,0,9000,5000,6000,6000,300,0,333,0,0,0,0,0,NULL,0,0,0),
-	(18345,18345,'Sprigant',0,'',0,'Monster3.Arachnoid',45.00,67.00,99,'male','L2Monster',40,400000,9999,13.43,3.09,40,43,30,21,20,10,0,0,9000,5000,6000,6000,300,0,333,0,0,0,88,132,NULL,0,0,0),
-	(18346,18346,'Sprigant',0,'',0,'Monster3.Arachnoid',45.00,67.00,99,'male','L2Monster',40,400000,9999,13.43,3.09,40,43,30,21,20,10,0,0,9000,5000,6000,6000,300,0,333,0,0,0,88,132,NULL,0,0,0);
+	(18344,18344,'Ancient Egg',0,'',0,'NpcEV.dinosaur_nest',43.00,33.50,80,'male','L2Monster',0,3,3,4.74,3.09,40,43,30,21,20,10,0,0,1,606,1,1182,300,0,333,0,0,0,0,0,NULL,0,0,0),
+	(18345,18345,'Sprigant',0,'',0,'Monster3.Arachnoid',45.00,67.00,80,'male','L2Monster',40,1179,2057,13.43,3.09,40,43,30,21,20,10,0,0,2129,615,2129,511,300,500,333,0,0,0,0,0,NULL,0,0,0),
+	(18346,18346,'Sprigant',0,'',0,'Monster3.Arachnoid',45.00,67.00,80,'male','L2Monster',40,1179,2057,13.43,3.09,40,43,30,21,20,10,0,0,2129,615,2129,511,300,500,333,0,0,0,0,0,NULL,0,0,0);
 
 INSERT INTO `npc` (`id`,`idTemplate`,`name`,`serverSideName`,`title`,`serverSideTitle`,`class`,`collision_radius`,`collision_height`,`level`,`sex`,`type`,`attackrange`,`hp`,`mp`,`hpreg`,`mpreg`,`str`,`con`,`dex`,`int`,`wit`,`men`,`exp`,`sp`,`patk`,`pdef`,`matk`,`mdef`,`atkspd`,`aggro`,`matkspd`,`rhand`,`lhand`,`armor`,`walkspd`,`runspd`,`faction_id`,`faction_range`,`isUndead`,`absorb_level`) VALUES
 	(20001,20001,'Gremlin',0,'',0,'Monster.gremlin',10.00,15.00,1,'male','L2Monster',40,62,44,3.16,0.91,40,43,30,21,20,10,29,2,9,39,3,32,278,0,333,0,0,0,22,55,NULL,0,0,0),
