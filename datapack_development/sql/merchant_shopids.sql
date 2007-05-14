@@ -230,6 +230,7 @@ INSERT INTO merchant_shopids VALUES (361,'31415');
 INSERT INTO merchant_shopids VALUES (362,'30138');
 INSERT INTO merchant_shopids VALUES (363,'30560');
 INSERT INTO merchant_shopids VALUES (364,'31424');
+INSERT INTO merchant_shopids VALUES (365,'32106');
 INSERT INTO merchant_shopids VALUES (5600,'30892');
 INSERT INTO merchant_shopids VALUES (5601,'30893');
 INSERT INTO merchant_shopids VALUES (5710,'31067');
