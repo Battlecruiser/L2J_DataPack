@@ -50,6 +50,9 @@ These functions, their triggers, and the parameters passed into the script are d
 		the same one NPC cannot respond to an "onFirstTalk" request from two different quests.
 		Attempting to register an NPC in two different quests for this function will result in one of the
 		two registration being ignored.
+	NOTE: Since a Quest link isn't clicked in order to reach this, a quest state can be invalid within this
+		function.  The coder of the script may need to create a new quest state (if necessary), by using:
+		st = self.newQuestState(player)	
 	All parameters are the same as in onAttack.
 6) onDeath (self, npc, character, st) 
 	This function is called whenever an exact INSTANCE of a character who was previously registered for this 
