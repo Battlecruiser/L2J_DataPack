@@ -1,11 +1,12 @@
 #
-# Created by DraX on 2005.09.08
+# Created by DraX on 2005.09.08 // edited by Kerb
 #
 
 import sys
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+
 
 qn = "334_TheWishingPotion"
 
@@ -117,8 +118,7 @@ class Quest (JQuest) :
      # first time 
      if st.getQuestItemsCount(MATILDS_ORB_ID) == 0 and st.getQuestItemsCount(WISH_POTION_ID) == 0:
        st.playSound("ItemSound.quest_accept")
-       st.set("cond","2")
-       st.setState(MIDDLE)
+       st.set("cond","3")
        if st.getQuestItemsCount(ALCHEMY_TEXT_ID) >= 1: st.takeItems(ALCHEMY_TEXT_ID,-1)
        if st.getQuestItemsCount(SECRET_BOOK_ID) >= 1: st.takeItems(SECRET_BOOK_ID,-1)
        if st.getQuestItemsCount(POTION_RECIPE_1_ID) >= 2: st.takeItems(POTION_RECIPE_1_ID,-1)
@@ -129,8 +129,7 @@ class Quest (JQuest) :
      # you did already this quest
      if st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and st.getQuestItemsCount(WISH_POTION_ID) == 0:
        st.playSound("ItemSound.quest_accept")
-       st.set("cond","2")
-       st.setState(MIDDLE)
+       st.set("cond","3")
        if st.getQuestItemsCount(ALCHEMY_TEXT_ID) >= 1: st.takeItems(ALCHEMY_TEXT_ID,-1)
        if st.getQuestItemsCount(SECRET_BOOK_ID) >= 1: st.takeItems(SECRET_BOOK_ID,-1)
        if st.getQuestItemsCount(POTION_RECIPE_1_ID) >= 2: st.takeItems(POTION_RECIPE_1_ID,-1)
@@ -175,11 +174,11 @@ class Quest (JQuest) :
        st.takeItems(WISH_POTION_ID,1)
        WISH_CHANCE = st.getRandom(100)
        if WISH_CHANCE <= 50:
-         st.getPcSpawn().addSpawn(SUCCUBUS_OF_SEDUCTION)
-         st.getPcSpawn().addSpawn(SUCCUBUS_OF_SEDUCTION)
-         st.getPcSpawn().addSpawn(SUCCUBUS_OF_SEDUCTION)
+         st.getPcSpawn().addSpawn(SUCCUBUS_OF_SEDUCTION,69988,18197,-3647)
+         st.getPcSpawn().addSpawn(SUCCUBUS_OF_SEDUCTION,69988,18197,-3647)
+         st.getPcSpawn().addSpawn(SUCCUBUS_OF_SEDUCTION,69988,18197,-3647)
        else:
-         st.getPcSpawn().addSpawn(RUPINA)
+         st.getPcSpawn().addSpawn(RUPINA,69988,18197,-3647)
        htmltext = "30738-16.htm"
      else:
        htmltext = "30738-14.htm"
@@ -191,18 +190,18 @@ class Quest (JQuest) :
        st.takeItems(WISH_POTION_ID,1)
        WISH_CHANCE = st.getRandom(100)
        if WISH_CHANCE <= 33:
-         st.getPcSpawn().addSpawn(GRIMA)
-         st.getPcSpawn().addSpawn(GRIMA)
-         st.getPcSpawn().addSpawn(GRIMA)
+         st.getPcSpawn().addSpawn(GRIMA,69988,18197,-3647)
+         st.getPcSpawn().addSpawn(GRIMA,69988,18197,-3647)
+         st.getPcSpawn().addSpawn(GRIMA,69988,18197,-3647)
        elif WISH_CHANCE >= 66:
          st.giveItems(ADENA_ID,10000)
        else:
          if st.getRandom(100) <= 1:
            st.giveItems(ADENA_ID,((st.getRandom(9)+1)*1000000))
          else:
-           st.getPcSpawn().addSpawn(GRIMA)
-           st.getPcSpawn().addSpawn(GRIMA)
-           st.getPcSpawn().addSpawn(GRIMA)
+           st.getPcSpawn().addSpawn(GRIMA,69988,18197,-3647)
+           st.getPcSpawn().addSpawn(GRIMA,69988,18197,-3647)
+           st.getPcSpawn().addSpawn(GRIMA,69988,18197,-3647)
        htmltext = "30738-17.htm"
      else:
        htmltext = "30738-14.htm"
@@ -218,7 +217,7 @@ class Quest (JQuest) :
        elif WISH_CHANCE >= 66:
          st.giveItems(ANCIENT_CROWN_ID,1)
        else:
-         st.getPcSpawn().addSpawn(SANCHES)
+         st.getPcSpawn().addSpawn(SANCHES,69988,18197,-3647)
        htmltext = "30738-18.htm"
      else:
        htmltext = "30738-14.htm"
@@ -246,8 +245,9 @@ class Quest (JQuest) :
    if not st : return htmltext
 
    npcId = npc.getNpcId()
+   cond = st.getInt("cond")
    id = st.getState()
-   if npcId in [RUPINA,WISDOM_CHEST] and id in [CREATED,STARTED] : return htmltext
+   if npcId in [RUPINA,WISDOM_CHEST] and id in [CREATED] : return htmltext
    if npcId == TORAI and id in [MIDDLE,END] : return htmltext
    if npcId == TORAI:
      if st.get("cond") == None or int(st.get("cond")) == 0:
@@ -288,29 +288,29 @@ class Quest (JQuest) :
        st.exitQuest(1)
        return "30738-21.htm"
      else:
-       if st.getState() == CREATED:
+       if st.getState() == STARTED:
          st.set("cond","0")
-       if st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and check_ingredients(st,0,0,0,0,0,0,0,0) and st.getState() != MIDDLE:
+       if st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and check_ingredients(st,0,0,0,0,0,0,0,0) and st.getState() != STARTED:
          if st.get("cond") == None:
            st.set("cond","0")
          return "30738-11.htm"
        elif st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and check_ingredients(st,1,1,1,1,1,1,1,1):
          return "30738-08.htm"
-       elif st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and st.getQuestItemsCount(WISH_POTION_ID) == 0 and st.getState() != MIDDLE:
-         st.set("cond","2")
-         st.setState(MIDDLE)
+       elif st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and st.getQuestItemsCount(WISH_POTION_ID) == 0 and st.getState() != STARTED:
+         st.set("cond","3")
+         st.setState(STARTED)
          if st.getQuestItemsCount(POTION_RECIPE_1_ID) == 0: st.giveItems(POTION_RECIPE_1_ID,1)
          if st.getQuestItemsCount(POTION_RECIPE_2_ID) == 0: st.giveItems(POTION_RECIPE_2_ID,1)
          return "30738-12.htm"
-       elif st.getState() == END and not check_ingredients(st,1,1,1,1,1,1,1,1):
+       if cond == 3 and not check_ingredients(st,1,1,1,1,1,1,1,1):
          return "30738-07.htm"       
        elif check_ingredients(st,1,1,1,1,1,1,1,1):
          return "30738-08.htm"
        elif st.getQuestItemsCount(ALCHEMY_TEXT_ID) >= 1 and st.getQuestItemsCount(SECRET_BOOK_ID) >= 1:
          return "30738-05.htm"
-       elif st.getState() == MIDDLE and st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and st.getQuestItemsCount(POTION_RECIPE_1_ID) == 0 and st.getQuestItemsCount(POTION_RECIPE_2_ID) == 0:
+       elif st.getState() == STARTED and st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and st.getQuestItemsCount(POTION_RECIPE_1_ID) == 0 and st.getQuestItemsCount(POTION_RECIPE_2_ID) == 0:
          return "30738-11.htm"
-       elif st.getState() == MIDDLE and st.getQuestItemsCount(POTION_RECIPE_1_ID) >= 1 and st.getQuestItemsCount(POTION_RECIPE_2_ID) >= 1:
+       elif st.getState() == STARTED and st.getQuestItemsCount(POTION_RECIPE_1_ID) >= 1 and st.getQuestItemsCount(POTION_RECIPE_2_ID) >= 1:
          return "30738-07.htm"
        elif st.getState() == STARTED and st.getQuestItemsCount(ALCHEMY_TEXT_ID) >= 1 and st.getQuestItemsCount(SECRET_BOOK_ID) == 0:
          return "30738-04.htm"
@@ -333,9 +333,9 @@ class Quest (JQuest) :
    elif id == STARTED:
      if npcId == SECRET_KEEPER_TREE:
        if st.getQuestItemsCount(SECRET_BOOK_ID) == 0:
+         st.set("cond","2")
          st.giveItems(SECRET_BOOK_ID,1)
          st.playSound("ItemSound.quest_itemget")
-   elif id == MIDDLE and st.getQuestItemsCount(POTION_RECIPE_1_ID) >= 1 and st.getQuestItemsCount(POTION_RECIPE_2_ID) >= 1: 
      DROP_CHANCE = st.getRandom(MAX_VALUE)
      if npcId == AMBER_BASILISK:
        if (st.getQuestItemsCount(AMBER_SCALE_ID) == 0) and (DROP_CHANCE <= DROP_CHANCE_AMBER_SCALE_ID): 
@@ -393,8 +393,6 @@ class Quest (JQuest) :
            st.playSound("ItemSound.quest_middle")
            st.setState(END)
          else: st.playSound("ItemSound.quest_itemget")
-   elif id == MIDDLE :
-     DROP_CHANCE = st.getRandom(MAX_VALUE)
      if npcId == SUCCUBUS_OF_SEDUCTION:
        if DROP_CHANCE <= DROP_CHANCE_FORBIDDEN_LOVE_SCROLL_ID:
          st.playSound("ItemSound.quest_itemget")
@@ -405,13 +403,13 @@ class Quest (JQuest) :
          st.giveItems(GOLD_BAR_ID,st.getRandom(4)+1)
      elif npcId == SANCHES:
        if st.getRandom(100) <= 50:
-         st.getPcSpawn().addSpawn(BONAPARTERIUS)
+         st.getPcSpawn().addSpawn(BONAPARTERIUS,69988,18197,-3647)
      elif npcId == BONAPARTERIUS:
        if st.getRandom(100) <= 50:
-         st.getPcSpawn().addSpawn(RAMSEBALIUS)
+         st.getPcSpawn().addSpawn(RAMSEBALIUS,69988,18197,-3647)
      elif npcId == RAMSEBALIUS:
        if st.getRandom(100) <= 50:
-         st.getPcSpawn().addSpawn(GREAT_DEMON_KING)
+         st.getPcSpawn().addSpawn(GREAT_DEMON_KING,69988,18197,-3647)
      elif npcId == GREAT_DEMON_KING:
        if st.getRandom(100) <= 50:
          DEMON_DROP_CHANCE = st.getRandom(100)
@@ -491,18 +489,18 @@ QUEST.addKillId(TURAK_BUGBEAR_WARRIOR)
 
 STARTED.addQuestDrop(ALCHEMIST_MATILD,ALCHEMY_TEXT_ID,1)
 STARTED.addQuestDrop(SECRET_KEEPER_TREE,SECRET_BOOK_ID,1)
-MIDDLE.addQuestDrop(ALCHEMIST_MATILD,POTION_RECIPE_1_ID,1)
-MIDDLE.addQuestDrop(ALCHEMIST_MATILD,POTION_RECIPE_2_ID,1)
-MIDDLE.addQuestDrop(ALCHEMIST_MATILD,MATILDS_ORB_ID,1)
-MIDDLE.addQuestDrop(ALCHEMIST_MATILD,AMBER_SCALE_ID,1)
-MIDDLE.addQuestDrop(ALCHEMIST_MATILD,WIND_SOULSTONE_ID,1)
-MIDDLE.addQuestDrop(ALCHEMIST_MATILD,GLASS_EYE_ID,1)
-MIDDLE.addQuestDrop(ALCHEMIST_MATILD,HORROR_ECTOPLASM_ID,1)
-MIDDLE.addQuestDrop(ALCHEMIST_MATILD,SILENOS_HORN_ID,1)
-MIDDLE.addQuestDrop(ALCHEMIST_MATILD,ANT_SOLDIER_APHID_ID,1)
-MIDDLE.addQuestDrop(ALCHEMIST_MATILD,TYRANTS_CHITIN_ID,1)
-MIDDLE.addQuestDrop(ALCHEMIST_MATILD,BUGBEAR_BLOOD_ID,1)
-MIDDLE.addQuestDrop(ALCHEMIST_MATILD,AMBER_SCALE_ID,1)
-MIDDLE.addQuestDrop(ALCHEMIST_MATILD,AMBER_SCALE_ID,1)
+STARTED.addQuestDrop(ALCHEMIST_MATILD,POTION_RECIPE_1_ID,1)
+STARTED.addQuestDrop(ALCHEMIST_MATILD,POTION_RECIPE_2_ID,1)
+STARTED.addQuestDrop(ALCHEMIST_MATILD,MATILDS_ORB_ID,1)
+STARTED.addQuestDrop(ALCHEMIST_MATILD,AMBER_SCALE_ID,1)
+STARTED.addQuestDrop(ALCHEMIST_MATILD,WIND_SOULSTONE_ID,1)
+STARTED.addQuestDrop(ALCHEMIST_MATILD,GLASS_EYE_ID,1)
+STARTED.addQuestDrop(ALCHEMIST_MATILD,HORROR_ECTOPLASM_ID,1)
+STARTED.addQuestDrop(ALCHEMIST_MATILD,SILENOS_HORN_ID,1)
+STARTED.addQuestDrop(ALCHEMIST_MATILD,ANT_SOLDIER_APHID_ID,1)
+STARTED.addQuestDrop(ALCHEMIST_MATILD,TYRANTS_CHITIN_ID,1)
+STARTED.addQuestDrop(ALCHEMIST_MATILD,BUGBEAR_BLOOD_ID,1)
+STARTED.addQuestDrop(ALCHEMIST_MATILD,AMBER_SCALE_ID,1)
+STARTED.addQuestDrop(ALCHEMIST_MATILD,AMBER_SCALE_ID,1)
 
 print "importing quests: 334: The Wishing Potion"
