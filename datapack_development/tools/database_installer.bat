@@ -214,7 +214,7 @@ set stage=1
 title L2JDP installer - Login Server database setup
 echo.
 echo Trying to make a backup of your loginserver database.
-set cmdline=%mysqldumpPath% --add-drop-table -h %lshost% -u %lsuser% --password=%lspass% %lsdb% ^> %backup%\loginserver_backup.sql 2^> NUL
+set cmdline="%mysqldumpPath%" --add-drop-table -h %lshost% -u %lsuser% --password=%lspass% %lsdb% ^> %backup%\loginserver_backup.sql 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto lsdbok
 if %safe_mode% == 1 goto omfg
@@ -287,7 +287,7 @@ set stage=2
 title L2JDP installer - Login Server database setup - DB Creation
 echo.
 echo Trying to create a Login Server database...
-set cmdline=%mysqlPath% -h %lshost% -u %lsuser% --password=%lspass% -e "CREATE DATABASE %lsdb%" 2^> NUL
+set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -e "CREATE DATABASE %lsdb%" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto logininstall
 if %safe_mode% == 1 goto omfg
@@ -361,7 +361,7 @@ call :colors 17
 set cmdline=
 title L2JDP installer - Login Server database setup - Full install
 echo Deleting loginserver tables for new content.
-set cmdline=%mysqlPath% -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< login_install.sql 2^> NUL
+set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< login_install.sql 2^> NUL
 %cmdline%
 if not %ERRORLEVEL% == 0 goto omfg
 set full=1
@@ -376,7 +376,7 @@ title L2JDP installer - Game server database setup
 cls
 echo.
 echo Making a backup of the original gameserver database.
-set cmdline=%mysqldumpPath% --add-drop-table -h %gshost% -u %gsuser% --password=%gspass% %gsdb% ^> %backup%\gameserver_backup.sql 2^> NUL
+set cmdline="%mysqldumpPath%" --add-drop-table -h %gshost% -u %gsuser% --password=%gspass% %gsdb% ^> %backup%\gameserver_backup.sql 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto gsdbok
 if %safe_mode% == 1 goto omfg
@@ -416,7 +416,7 @@ set cmdline=
 title L2JDP installer - Game Server database setup - DB Creation
 cls
 echo Trying to create Game Server database...
-set cmdline=%mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -e "CREATE DATABASE %gsdb%" 2^> NUL
+set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -e "CREATE DATABASE %gsdb%" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto fullinstall
 if %safe_mode% == 1 goto omfg
@@ -481,7 +481,7 @@ set stage=6
 set cmdline=
 title L2JDP installer - Game Server database setup - Full install
 echo Deleting all gameserver tables for new content...
-set cmdline=%mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< full_install.sql 2^> NUL
+set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< full_install.sql 2^> NUL
 %cmdline%
 if not %ERRORLEVEL% == 0 goto omfg
 set full=1
@@ -597,8 +597,8 @@ set cmdline=
 if /i %full% == 1 (set action=Installing) else (set action=Upgrading)
 echo %action% %1>>%output%
 echo %action% %~nx1
-if "%dest%"=="ls" set cmdline=%mysqlPath% -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< ..\sql\%1 2^>^>%output%
-if "%dest%"=="gs" set cmdline=%mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< ..\sql\%1 2^>^>%output%
+if "%dest%"=="ls" set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< ..\sql\%1 2^>^>%output%
+if "%dest%"=="gs" set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< ..\sql\%1 2^>^>%output%
 %cmdline%
 if %logging%==0 if NOT %ERRORLEVEL%==0 call :omfg2 %1
 goto :eof
@@ -657,7 +657,7 @@ echo or anything, instead i'll just overwrite it.
 echo.
 echo When you're done or if you don't mind, press any key to start.
 pause>NUL
-set cmdline=%mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^<..\sql\%1 2^>^>%output%
+set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^<..\sql\%1 2^>^>%output%
 date /t >%output%
 time /t >>%output%
 %cmdline%
