@@ -106,43 +106,109 @@
 </skill>
 <skill id="1406" levels="1" name="Summon Feline King">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Needs to be verified.
+
   Description(s):
       Summons Feline King. Requires 2 Crystals: A-Grade. Consumes 1 additional crystal at 14 regular intervals.  Takes away 10% of earned Exp.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume_Init"> 30 </table> <!-- Guessing -->
+  <table name="#mpConsume"> 114 </table> <!-- Guessing -->
+  <table name="#itemConsumeCount"> 2 </table>
+  <table name="#itemConsumeCountOT"> 1 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="itemConsumeId" val="1461"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
+  <set name="itemConsumeIdOT" val="1461"/>
+  <set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
+  <set name="itemConsumeTime" val="240000"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="15000"/>
+  <set name="reuseDelay" val="20000"/> <!-- Guessing -->
+  <set name="skillTime" val="15000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <!-- Summon-specific -->
+  <table name="#npcIds"> 14836 </table>
+  <set name="npcId" val="#npcIds"/>
+  <set name="expPenalty" val="0.1"/>
+  <set name="isCubic" val="false"/>
   <for>
   </for>
 </skill>
 <skill id="1407" levels="1" name="Summon Magnus the Unicorn">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Needs to be verified.
+
   Description(s):
       Summons Magnus the Unicorn. Requires 2 Crystals: A-Grade. Consumes 1 additional crystal at 14 regular intervals. Takes away 10% of earned Exp.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume_Init"> 30 </table> <!-- Guessing -->
+  <table name="#mpConsume"> 114 </table> <!-- Guessing -->
+  <table name="#itemConsumeCount"> 2 </table>
+  <table name="#itemConsumeCountOT"> 1 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="itemConsumeId" val="1461"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
+  <set name="itemConsumeIdOT" val="1461"/>
+  <set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
+  <set name="itemConsumeTime" val="240000"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="15000"/>
+  <set name="reuseDelay" val="20000"/> <!-- Guessing -->
+  <set name="skillTime" val="15000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <!-- Summon-specific -->
+  <table name="#npcIds"> 14837 </table>
+  <set name="npcId" val="#npcIds"/>
+  <set name="expPenalty" val="0.1"/>
+  <set name="isCubic" val="false"/>
   <for>
   </for>
 </skill>
 <skill id="1408" levels="1" name="Summon Spectral Lord">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Needs to be verified.
+
   Description(s):
       Summons Spectral Lord. Requires 2 Crystals: A-Grade. Consumes 1 additional crystal at 14 regular intervals. Takes away 10% of earned Exp.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume_Init"> 30 </table> <!-- Guessing -->
+  <table name="#mpConsume"> 114 </table> <!-- Guessing -->
+  <table name="#itemConsumeCount"> 2 </table>
+  <table name="#itemConsumeCountOT"> 1 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="itemConsumeId" val="1461"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
+  <set name="itemConsumeIdOT" val="1461"/>
+  <set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
+  <set name="itemConsumeTime" val="240000"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="15000"/>
+  <set name="reuseDelay" val="20000"/> <!-- Guessing -->
+  <set name="skillTime" val="15000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <!-- Summon-specific -->
+  <table name="#npcIds"> 14838 </table>
+  <set name="npcId" val="#npcIds"/>
+  <set name="expPenalty" val="0.1"/>
+  <set name="isCubic" val="false"/>
   <for>
   </for>
 </skill>
@@ -320,6 +386,8 @@
 -->
   <set name="mpInitialConsume" val="57"/> <!-- Guessing -->
   <set name="mpConsume" val="284"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="20"/> 
   <set name="power" val="800.0"/>
   <set name="target" val="TARGET_ALLY"/>
   <set name="skillRadius" val="1000"/>
