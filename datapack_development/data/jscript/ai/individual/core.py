@@ -40,7 +40,7 @@ class core(JQuest) :
             self.getPcSpawn(player).addSpawn(31842,16502,110165,-6394,900000)
             self.getPcSpawn(player).addSpawn(31842,18948,110166,-6397,900000)
         elif self.FirstAttacked :
-            self.getPcSpawn(player).addSpawn(npcId, npc.getX(), npc.getY(), npc.getZ())
+            self.getPcSpawn(player).addSpawn(npcId,17726,108915,-6480,npc.getHeading(),True,0)
         return 
 
 # now call the constructor (starts up the ai)

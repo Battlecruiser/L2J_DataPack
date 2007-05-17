@@ -1,3 +1,5 @@
 __all__ = [
-'core'
+'core',
+'antharas',
+'baium'
 ]

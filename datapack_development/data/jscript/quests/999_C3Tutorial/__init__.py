@@ -170,7 +170,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_tutorial")
    return
 
-QUEST       = Quest(999,qn,"C5 Tutorial")
+QUEST       = Quest(999,qn,"Interlude Tutorial")
 CREATED     = State('Start', QUEST)
 STARTING    = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
@@ -187,4 +187,4 @@ for npc in [30600, 30601, 30602, 30598, 30599]:
 
 QUEST.addKillId(18342)
 QUEST.addKillId(20001)
-print "importing quests: 999: C5 Tutorial"
+print "importing quests: 999: Interlude Tutorial"
