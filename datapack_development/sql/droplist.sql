@@ -21079,6 +21079,162 @@ INSERT INTO `droplist` VALUES
 -- work in progress C5 mob drops - 22xxx mobs
 -- 
 INSERT INTO `droplist` VALUES 
+(22001,57,136,255,0,700000), -- Adena
+(22001,1872,1,1,2,58824), -- Animal Bone
+(22001,1867,1,1,2,58824), -- Animal Skin
+(22001,1882,1,1,2,11364), -- Leather
+(22001,2152,1,1,2,7937), -- Recipe: Enchanted Necklace (Grade D)
+(22001,391,1,1,1,166), -- Puma Skin Shirt (Grade D)
+(22001,413,1,1,1,483), -- Puma Skin Gaiters (Grade D)
+(22001,1867,1,2,-1,250000), -- Animal Skin
+(22001,1899,1,1,-1,25000), -- Necklace of Devotion Chain
+(22001,2152,1,1,-1,6500), -- Recipe: Enchanted Necklace (Grade D)
+(22002,57,141,270,0,700000), -- Adena
+(22002,1872,1,1,2,58824), -- Animal Bone
+(22002,1867,1,1,2,41667), -- Animal Skin
+(22002,1881,1,1,2,10753), -- Coarse Bone Powder
+(22002,1875,1,1,2,4651), -- Stone of Purity
+(22002,258,1,1,1,8), -- Bagh-Nakh (Grade D)
+(22002,1931,1,1,-1,25000), -- Leather Boot Lining
+(22002,2178,1,1,-1,6000), -- Recipe: Dark Stockings
+(22002,1932,1,1,-1,25000), -- Bone Helmet Design
+(22003,57,173,334,0,700000), -- Adena
+(22003,1884,1,1,2,25000), -- Cord
+(22003,1878,1,1,2,10526), -- Braided Hemp
+(22003,1889,1,1,2,3086), -- Compound Braid
+(22003,1874,1,1,2,2320), -- Oriharukon ore
+(22003,5220,1,1,2,1030), -- Metal Hardener
+(22003,274,1,1,1,8), -- Strengthened Bow (Grade D)
+(22003,2180,1,1,2,6000), -- Recipe: Scale Mail
+(22003,1874,1,1,-1,150000), -- Oriharukon ore
+(22003,1878,1,1,-1,250000), -- Braided Hemp
+(22003,1934,1,1,-1,25000), -- Crafted Leather Gloves Lining
+(22004,57,207,397,0,700000), -- Adena
+(22004,1061,1,1,2,16129), -- Healing Potion
+(22004,1879,1,1,2,8475), -- Cokes
+(22004,2181,1,1,2,5348), -- Recipe: White Tunic (Grade D)
+(22004,1875,1,1,2,4464), -- Stone of Purity
+(22004,5549,1,1,2,2681), -- Metallic Thread
+(22004,5550,1,1,2,2232), -- Durable Metal Plate
+(22004,2017,1,1,2,1786), -- Saber Blade
+(22004,1885,1,3,2,40000), -- High Grade Suede
+(22004,8327,1,1,2,1786), -- Steel Sword Blade
+(22004,5531,1,1,2,1786), -- Heavy Sword Edge
+(22004,123,1,1,1,12), -- Saber Sword (Grade D)
+(22004,2180,1,1,-1,6280), -- Recipe: Scale Mail (Grade D)
+(22004,2017,1,1,-1,6786), -- Saber Blade
+(22004,2181,1,1,-1,6348), -- Recipe: White Tunic (Grade D)
+(22005,57,182,353,0,700000), -- Adena
+(22005,1880,1,1,2,11364), -- Steel
+(22005,1881,1,1,2,2268), -- Coarse Bone Powder
+(22005,2182,1,1,2,2268), -- Recipe: Scale Gaiters (Grade D)
+(22005,220,1,1,1,8), -- Crafted Dagger (Grade D)
+(22005,1876,1,1,2,10000), -- Mithril Ore
+(22005,1877,1,1,2,4115), -- Adamantite Nugget
+(22005,1882,1,1,2,11364), -- Leather
+(22005,2018,1,1,-1,5000), -- Assassin Knife Edge
+(22005,1876,1,1,-1,150000), -- Mithril Ore
+(22005,1880,1,1,-1,250000), -- Steel
+(22006,57,187,371,0,700000), -- Adena
+(22006,1878,1,1,2,23256), -- Braided Hemp
+(22006,1884,1,1,2,20000), -- Cord
+(22006,1889,1,1,2,6711), -- Compound Braid
+(22006,292,1,1,1,12), -- Pike (Grade D)
+(22006,1874,1,1,2,5000), -- Oriharukon ore
+(22006,5220,1,1,2,1030), -- Metal Hardener
+(22006,737,1,1,2,4132), -- Scroll of Resurrection
+(22006,1061,1,1,-1,26129), -- Healing Potion
+(22006,1900,1,1,-1,25000), -- Enchanted Necklace Chain
+(22006,2153,1,1,-1,5000), -- Recipe: Tiger\'s Eye Earring
+(22007,57,204,404,0,700000), -- Adena
+(22007,1876,1,1,2,6211), -- Mithril Ore
+(22007,1880,1,1,2,3906), -- Steel
+(22007,1877,1,1,2,1949), -- Adamantite Nugget
+(22007,1881,1,1,2,5000), -- Coarse Bone Powder
+(22007,1882,1,1,2,9709), -- Leather
+(22007,955,1,1,2,300), -- Scroll: Enchant Weapon (Grade D)
+(22007,2022,1,1,2,550), -- Mace of Judgment Head
+(22007,2023,1,1,2,350), -- Conjuror\'s Staff Head
+(22007,1933,1,1,-1,5000), -- Dark Stocking Fabric
+(22007,2183,1,1,-1,6280), -- Recipe: Mithril Banded Mail (Grade D)
+(22007,1935,1,1,-1,5000), -- Scale Mail Fragment
+(22008,57,200,390,0,700000), -- Adena
+(22008,1876,1,1,2,7813), -- Mithril Ore
+(22008,1880,1,1,2,3891), -- Steel
+(22008,1877,1,1,2,1733), -- Adamantite Nugget
+(22008,1881,1,1,2,4878), -- Coarse Bone Powder
+(22008,1882,1,1,2,8333), -- Leather
+(22008,956,1,1,2,1727), -- Scroll: Enchant Armor (Grade D)
+(22008,1937,1,1,2,5714), -- Scale Gaiters Fragment
+(22008,1935,1,1,2,2660), -- Scale Mail Fragment
+(22008,377,1,1,1,162), -- Scale Gaiters (Grade D)
+(22008,955,1,1,-1,5000), -- Scroll: Enchant Weapon (Grade D)
+(22008,1877,1,1,-1,25000), -- Adamantite Nugget
+(22008,1881,1,3,-1,58667), -- Coarse Bone Powder
+(22009,57,226,451,0,700000), -- Adena
+(22009,848,1,1,1,204), -- Enchanted Earring (Grade D)
+(22009,879,1,1,1,321), -- Enchanted Ring (Grade D)
+(22009,911,1,1,1,409), -- Enchanted Necklace (Grade D)
+(22009,1900,1,1,2,7092), -- Enchanted Necklace Chain
+(22009,1875,1,1,2,2188), -- Stone of Purity
+(22009,1879,1,1,2,7246), -- Cokes
+(22009,1885,1,1,2,3096), -- High Grade Suede
+(22009,5550,1,1,2,963), -- Durable Metal Plate
+(22009,5549,1,1,2,4464), -- Metallic Thread
+(22009,1829,1,1,2,19608), -- Scroll of Escape: Clan Hall
+(22009,1832,1,1,2,47619), -- Greater Antidote
+(22009,1832,1,3,-1,25641), -- Greater Antidote
+(22009,1936,1,1,-1,6882), -- White Tunic Pattern
+(22009,2184,1,1,-1,58192), -- Recipe: Mithril Banded Gaiters
+(22010,57,239,479,0,700000), -- Adena
+(22010,1868,1,1,2,125000), -- Thread
+(22010,1873,1,1,2,24390), -- Silver Nugget
+(22010,1829,1,1,2,22222), -- Scroll of Escape: Clan Hall
+(22010,5549,1,1,2,5128), -- Metallic Thread
+(22010,1889,1,1,2,3597), -- Compound Braid
+(22010,46,1,1,1,981), -- Bronze Helmet (Grade D)
+(22010,627,1,1,1,588), -- Aspis (Grade D)
+(22010,1937,1,1,-1,5714), -- Scale Gaiters Fragment
+(22010,2185,1,1,-1,8192), -- Recipe: Iron Boots
+(22010,2021,1,1,-1,6882), -- Spinebone Sword Blade
+(22011,57,276,547,0,700000), -- Adena
+(22011,1871,1,1,2,111111), -- Charcoal
+(22011,1866,1,1,2,55555), -- Suede
+(22011,2154,1,1,2,12500), -- Recipe: Elven Earring
+(22011,1877,1,1,2,3125), -- Adamantite Nugget
+(22011,1871,1,3,-1,250000), -- Charcoal
+(22011,1866,1,3,-1,76923), -- Suede
+(22012,57,278,539,0,700000), -- Adena
+(22012,1871,1,1,2,125000), -- Charcoal
+(22012,1866,1,1,2,47619), -- Suede
+(22012,1877,1,1,2,5181), -- Adamantite Nugget
+(22012,2155,1,1,2,5181), -- Recipe: Elven Ring
+(22012,2154,1,1,-1,25000), -- Recipe: Elven Earring
+(22012,2155,1,1,-1,25000), -- Recipe: Elven Ring
+(22013,57,274,546,0,700000), -- Adena
+(22013,1865,1,1,2,62500), -- Varnish
+(22013,1870,1,1,2,37037), -- Coal
+(22013,1879,1,1,2,9434), -- Cokes
+(22013,2156,1,1,2,9434), -- Recipe: Elven Necklace
+(22013,1939,1,1,-1,5000), -- Mithril Banded Gaiters Material
+(22013,1865,1,1,-1,25000), -- Varnish
+(22013,1870,1,1,-1,25000), -- Coal
+(22014,57,275,548,0,700000), -- Adena
+(22014,1341,10,29,2,200000), -- Bone Arrow
+(22014,1870,1,1,2,52632), -- Coal
+(22014,1865,1,1,2,22222), -- Varnish
+(22014,1879,1,1,2,7353), -- Cokes
+(22015,57,277,546,0,700000), -- Adena
+(22015,1884,1,1,2,34483), -- Cord
+(22015,5220,1,1,2,13699), -- Metal Hardener
+(22015,1878,1,1,2,6849), -- Braided Hemp
+(22015,1884,1,1,-1,250000), -- Cord
+(22016,57,275,544,0,700000), -- Adena
+(22016,1884,1,1,2,37037), -- Cord
+(22016,1878,1,1,2,25000), -- Braided Hemp
+(22016,1889,1,1,2,12500), -- Compound Braid
+(22016,1889,1,1,-1,250000), -- Compound Braid
+(22016,2187,1,1,-1,5862), -- Recipe: Manticore Skin Shirt
 (22017,57,208,416,0,700000), -- Adena
 (22017,1864,1,1,2,90909), -- Stem
 (22017,1869,1,1,2,47619), -- Iron Ore
