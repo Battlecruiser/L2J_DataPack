@@ -130,7 +130,10 @@ echo usually means you could just type 'use path' below. In fact,
 echo I'll use this as default unless you change it.
 set mysqlBinPath=use path
 ) else (
-echo Additionally, I can't find "MYSQL" in your PATH.
+echo Additionally, I can't find "MYSQL" in your PATH environment
+echo variable. If the default directory i used above and this detection
+echo failed, you'll have to find out the values i need. If both succeed
+echo prefer path.
 )
 echo.
 echo Write the path to your MySQL binaries (no trailing slash needed):
