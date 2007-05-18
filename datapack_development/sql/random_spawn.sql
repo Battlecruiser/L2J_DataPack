@@ -97,7 +97,7 @@ INSERT INTO `random_spawn` VALUES
 (80,31093,1,-1,60,0,'false','false'),
 (81,31093,1,-1,60,0,'false','false'),
 (82,31170,1,-1,60,0,'false','false'),
-(83,31169,1,-1,60,0,'false','false'),
+(83,31171,1,-1,60,0,'false','false'),
 (84,31170,1,-1,60,0,'false','false'),
 (85,31171,1,-1,60,0,'false','false'),
 (86,31170,1,-1,60,0,'false','false'),
