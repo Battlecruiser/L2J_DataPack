@@ -138,7 +138,7 @@
 <item id='7857' name="Clan Oath Aketon">
   <for>
     <add val='79' order='0x10' stat='pDef'/>
-    <add val='239' order='0x10' stat='maxMp'/>
+    <add val='239' order='0x60' stat='maxMp'/>
     <mul val='1.05' order='0x30' stat='pDef'>
       <and>
         <using slotitem="7850;6"/>
@@ -241,7 +241,7 @@
 <item id='7867' name="Apella Doublet">
   <for>
     <add val='139' order='0x10' stat='pDef'/>
-    <add val='665' order='0x10' stat='maxMp'/>
+    <add val='665' order='0x60' stat='maxMp'/>
     <add val='177' order='0x40' stat='maxCp'>
       <and>
         <using slotitem="7860;6"/>
