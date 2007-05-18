@@ -288,9 +288,15 @@ class Quest (JQuest) :
 # Events Cleo
     elif event == "30766-04.htm":
       st.set("cond","9")
-      st.getPcSpawn().addSpawn(30766,160622,21230,-3710,90000,["Blood and Honour"],60000)
-      st.getPcSpawn().addSpawn(30759,160665,21209,-3710,90000,["Ambition and Power"],60000)
-      st.getPcSpawn().addSpawn(30758,160665,21291,-3710,90000,["War and Death"],60000)
+      objId=st.getPcSpawn().addSpawn(30766,160622,21230,-3710,90000)
+      npc=st.getPcSpawn().getSpawn(objId).getLastSpawn()
+      npc.broadcastPacket(CreatureSay(objId,0,npc.getName(),"Blood and Honour."))
+      objId=st.getPcSpawn().addSpawn(30759,160665,21209,-3710,90000)
+      npc=st.getPcSpawn().getSpawn(objId).getLastSpawn()
+      npc.broadcastPacket(CreatureSay(objId,0,npc.getName(),"Ambition and Power"))
+      objId=st.getPcSpawn().addSpawn(30758,160665,21291,-3710,90000)
+      npc=st.getPcSpawn().getSpawn(objId).getLastSpawn()
+      npc.broadcastPacket(CreatureSay(objId,0,npc.getName(),"War and Death"))
     elif event == "30766-08.htm":
       st.takeItems(Scepter_Judgement,-1)
       exit503(0,st)
@@ -442,7 +448,7 @@ class Quest (JQuest) :
               st.giveItems(Scepter_Judgement,1)
               st.getPcSpawn().removeAllSpawn()
             else:
-              htmltext = "<html><head><body>(You and your Clan didn't kill the Imperial Gravekeeper by your own, do it try again.)</body></html>"
+              htmltext = "<html><head><body>(You and your Clan didn't kill the Imperial Gravekeeper by your own, go and try again.)</body></html>"
           else:
               htmltext = "<html><head><body>(You already have the Scepter of Judgement.)</body></html>"
         elif npcId == Kalis:
@@ -530,7 +536,9 @@ class Quest (JQuest) :
           giveItem(itemList[0],maxcount,leader_st)
         else:
           if npcId == 27181:                # Imperial Gravekeeper
-            leader_st.getPcSpawn().addSpawn(30765,120000,["Curse of the gods on the one that defiles the property of the empire!"],60000)
+            objId=leader_st.getPcSpawn().addSpawn(30765,120000)
+            npc=st.getPcSpawn().getSpawn(objId).getLastSpawn()
+            npc.broadcastPacket(CreatureSay(objId,0,npc.getName(),"Curse of the gods on the one that defiles the property of the empire!"))
             leader_st.set("ImpGraveKeeper","3")
             self.ImpGraveKepperStat = 1
           else:

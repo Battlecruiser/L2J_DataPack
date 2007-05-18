@@ -3,7 +3,6 @@
 # v0.1.r0 2005.12.05
 
 import sys
-from java.util                                import Iterator
 from net.sf.l2j.gameserver.datatables         import SkillTable
 from net.sf.l2j.gameserver.serverpackets      import CreatureSay 
 from net.sf.l2j.gameserver.model.quest        import State
@@ -87,14 +86,6 @@ def chest_game(st,command) :
            leader(st).set("chest_game","0")
        except: pass
        
-
-def autochat(npc,text) :
-    chars = npc.getKnownList().getKnownPlayers().values().toArray()
-    if chars != None:
-       for pc in chars :
-          sm = CreatureSay(npc.getObjectId(), 0, npc.getName(), text)
-          pc.sendPacket(sm)
-
 
 class Quest (JQuest) :
 
@@ -340,7 +331,7 @@ class Quest (JQuest) :
            chests = leader(st).get("chests").split()
            for i in range(len(chests)) :
                if npcId == 18257+i and chests[i] == '1' :
-                  autochat(npc,"###### BINGO! ######")
+                  npc.broadcastPacket(CreatureSay(npc.getObjectId(),0,npc.getName(),"###### BINGO! ######"))
                   count=int(leader(st).get("chest_count"))
                   if count < 4 :
                      count+=1
