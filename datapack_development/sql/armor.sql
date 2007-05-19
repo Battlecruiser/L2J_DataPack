@@ -904,7 +904,7 @@ INSERT INTO `armor` VALUES
  ('8188','Little Angel Wings','hair','false','none','10','wood','none','0','-1','0','0','0','0','0','true','true','true','true','0','0'),
  ('8189','Fairy Antennae','hair','false','none','10','wood','none','0','-1','0','0','0','0','0','true','true','true','true','0','0'),
  ('8191','Frintezza\'s Necklace','neck','true','none','150','gold','a','0','-1','0','95','42','0','0','true','true','true','true','3604','1'),
- ('8541','Little Harness','chest','false','light','160','leather','none','0','-1','10','25','0','0','0','true','true','true','true','0','0'),
+ ('8541','Little Harness','babypet','false','pet','160','leather','none','0','-1','10','25','0','0','0','true','true','true','true','0','0'),
  ('8552','Mask of Spirits','face','false','none','10','paper','none','0','-1','0','0','0','0','0','true','true','true','true','0','0'),
  ('8557','Blue Party Hat','dhair','false','none','10','wood','none','0','-1','0','0','0','0','0','true','true','true','true','0','0'),
  ('8558','Eva\'s Mark','face','false','none','10','steel','none','0','-1','0','0','0','0','0','true','true','true','true','0','0'),
