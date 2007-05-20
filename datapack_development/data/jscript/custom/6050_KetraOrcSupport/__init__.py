@@ -37,10 +37,11 @@ class Quest (JQuest) :
             htmltext = "a4.htm"
     return
 
- def onTalk (self,npc,player):
+ def onFirstTalk (self,npc,player):
     htmltext = "<html><head><body>I have nothing to say you</body></html>"
     st = player.getQuestState(qn)
-    if not st : return htmltext
+    if not st :
+        st = self.newQuestState(player)
     npcId = npc.getNpcId()
     id = st.getState()
     Alevel = st.getPlayer().getAllianceWithVarkaKetra()
@@ -70,9 +71,7 @@ QUEST       = Quest(6050, qn, "custom")
 CREATED     = State('Start', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(Jumara)
-QUEST.addTalkId(Jumara)
-QUEST.addStartNpc(Asefa)
-QUEST.addTalkId(Asefa)
+QUEST.addFirstTalkId(Jumara)
+QUEST.addFirstTalkId(Asefa)
 
 print "importing quests: 6050: Ketra Orc Support"
