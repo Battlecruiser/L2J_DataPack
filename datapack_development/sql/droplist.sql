@@ -23587,8 +23587,6 @@ INSERT INTO `droplist` VALUES
 (25163,959,1,1,2,43681), -- Scroll: Enchant Weapon (Grade S)
 (25163,960,1,1,2,436810), -- Scroll: Enchant Armor (Grade S)
 (25163,6577,1,1,2,7281), -- Blessed Scroll: Enchant Weapon (Grade S)
-(25164,1344,20,60,2,898500), -- Mithril Arrow
-(25165,1344,20,60,2,898500), -- Mithril Arrow
 (25166,849,4,10,0,85622), -- Tiger\'s Eye Earring
 (25166,880,3,9,0,150071), -- Black Pearl Ring
 (25166,912,4,12,0,56211), -- Near Forest Necklace
