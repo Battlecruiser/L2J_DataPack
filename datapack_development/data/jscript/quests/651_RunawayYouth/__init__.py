@@ -41,14 +41,14 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_accept")
         st.takeItems(SOE,1)
         htmltext = "32014-03.htm"
-        npc=findNpc(32014,player)
+        npc=findNpc(IVAN,player)
         npc.broadcastPacket(MagicSkillUser(npc,npc,2013,1,20000,0))
         st.startQuestTimer("ivan_timer",20000)
     elif event == "32014-04a.htm" :
         st.exitQuest(1)
         st.playSound("ItemSound.quest_giveup")
     elif event == "ivan_timer":
-        npc=findNpc(32014,player)
+        npc=findNpc(IVAN,player)
         npc.deleteMe()
         htmltext=None
     return htmltext

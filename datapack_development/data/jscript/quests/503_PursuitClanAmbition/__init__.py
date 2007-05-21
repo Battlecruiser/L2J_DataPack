@@ -2,14 +2,13 @@
 # questdevs Team
 
 import sys
-from java.util                              import Iterator
-from net.sf.l2j.util                        import Rnd
-from net.sf.l2j.gameserver.serverpackets    import CreatureSay 
-from net.sf.l2j.gameserver.model.quest      import State
-from net.sf.l2j.gameserver.model.quest      import QuestState
+from java.util                                 import Iterator
+from net.sf.l2j.util                           import Rnd
+from net.sf.l2j.gameserver.serverpackets       import CreatureSay
+from net.sf.l2j.gameserver.model.quest         import State
+from net.sf.l2j.gameserver.model.quest         import QuestState
 from net.sf.l2j.gameserver.model.quest.jython  import QuestJython as JQuest
-
-from net.sf.l2j                import L2DatabaseFactory
+from net.sf.l2j                                import L2DatabaseFactory
 
 qn = "503_PursuitClanAmbition"
 qd = "Pursuit Clan Ambition"
@@ -537,7 +536,7 @@ class Quest (JQuest) :
         else:
           if npcId == 27181:                # Imperial Gravekeeper
             objId=leader_st.getPcSpawn().addSpawn(30765,120000)
-            npc=st.getPcSpawn().getSpawn(objId).getLastSpawn()
+            npc=leader_st.getPcSpawn().getSpawn(objId).getLastSpawn()
             npc.broadcastPacket(CreatureSay(objId,0,npc.getName(),"Curse of the gods on the one that defiles the property of the empire!"))
             leader_st.set("ImpGraveKeeper","3")
             self.ImpGraveKepperStat = 1
