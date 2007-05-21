@@ -78,24 +78,11 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_finish")
     return htmltext
 
- def onTalk (self,npc,player):
-   htmltext = "<html><head><body>I have no tasks for you right now.</body></html>"
+ def onFirstTalk (self,npc,player):
    st = player.getQuestState(qn)
-   if not st : return htmltext
-
-   npcId = npc.getNpcId()
-   id = st.getState()
-   if id == COMPLETED and not npcId in [30600, 30601, 30602, 30598, 30599] : return htmltext
-   if id != COMPLETED and npcId in [30600, 30601, 30602, 30598, 30599] : return htmltext
-
-   cond=st.getInt("cond")
-   onlyone=st.getInt("onlyone")
-   level=st.getPlayer().getLevel()
-   npcTyp=0
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("onlyone","0")
-   if npcId in [30600, 30601, 30602, 30598, 30599] :
+   if st :
+     id = st.getState()
+     onlyone=st.getInt("onlyone")
      if id == COMPLETED and onlyone == 1:
        st.set("onlyone","2")
        if st.getPlayer().getClassId().isMage() :
@@ -105,9 +92,23 @@ class Quest (JQuest) :
        st.giveItems(TOKEN,12)
        if st.getRandom(2):
          st.giveItems(SCROLL,2)
-       return
-   else :
-     raceId,htmlfiles,npcTyp,item = TALKS[npcId]
+   return
+
+
+ def onTalk (self,npc,player):
+   htmltext = "<html><head><body>I have no tasks for you right now.</body></html>"
+   st = player.getQuestState(qn)
+   if not st : return htmltext
+   npcId = npc.getNpcId()
+   id = st.getState()
+   cond=st.getInt("cond")
+   onlyone=st.getInt("onlyone")
+   level=st.getPlayer().getLevel()
+   npcTyp=0
+   if id == CREATED :
+     st.setState(STARTING)
+     st.set("onlyone","0")
+   raceId,htmlfiles,npcTyp,item = TALKS[npcId]
    if (level >= 10 or onlyone) and npcTyp == 1:
        htmltext = "30575-05.htm"
    elif onlyone == 0 and level < 10 :
@@ -183,7 +184,7 @@ for startNpc in [30008,30009,30017,30019,30129,30131,30573,30575,30370,30528,305
   QUEST.addTalkId(startNpc)
 
 for npc in [30600, 30601, 30602, 30598, 30599]:
-  QUEST.addTalkId(npc)
+  QUEST.addFirstTalkId(npc)
 
 QUEST.addKillId(18342)
 QUEST.addKillId(20001)

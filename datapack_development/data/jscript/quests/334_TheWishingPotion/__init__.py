@@ -1,49 +1,30 @@
 #
-# Created by DraX on 2005.09.08 // edited by Kerb
+# Created by DraX on 2005.09.08
+# C4 Update by DrLecter
 #
 
 import sys
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-
+from net.sf.l2j.gameserver.serverpackets      import CreatureSay
+from net.sf.l2j.gameserver.datatables         import SpawnTable
 
 qn = "334_TheWishingPotion"
 
-#### CONSTANTS
-####
-
-#rewards
-ADENA_ID                  =   57
-DEMONS_TUNIC_ID           =  441
-DEMONS_STOCKINGS_ID       =  472
-SCROLL_OF_ESCAPE_ID       =  736
-NECKLACE_OF_GRACE_ID      =  931
-SPELLBOOK_ICEBOLT_ID      = 1049
-SPELLBOOK_BATTLEHEAL_ID   = 1050
-DEMONS_BOOTS_ID           = 2435
-DEMONS_GLOVES_ID          = 2459
-WISH_POTION_ID            = 3467
-ANCIENT_CROWN_ID          = 3468
-CERTIFICATE_OF_ROYALTY_ID = 3469
-GOLD_BAR_ID               = 3470
-ALCHEMY_TEXT_ID           = 3678
-SECRET_BOOK_ID            = 3679
-POTION_RECIPE_1_ID        = 3680
-POTION_RECIPE_2_ID        = 3681
-MATILDS_ORB_ID            = 3682
-FORBIDDEN_LOVE_SCROLL_ID  = 3683
-HEART_OF_PAAGRIO_ID       = 3943
-#quest items (ingredients)
-AMBER_SCALE_ID            = 3684
-WIND_SOULSTONE_ID         = 3685
-GLASS_EYE_ID              = 3686
-HORROR_ECTOPLASM_ID       = 3687
-SILENOS_HORN_ID           = 3688
-ANT_SOLDIER_APHID_ID      = 3689
-TYRANTS_CHITIN_ID         = 3690
-BUGBEAR_BLOOD_ID          = 3691
-#npcs
+# General Rewards
+ADENA                  =   57
+NECKLACE_OF_GRACE      =  931
+HEART_OF_PAAGRIO       = 3943
+R1=[3081,3076,3075,3074,4917,3077,3080,3079,3078,4928,4931,4932,5013,3067,3064,3061,3062,3058,4206,3065,3060,3063,4208,3057,3059,3066,4911,4918,3092,3039,4922,3091,3093,3431]
+R2=[3430,3429,3073,3941,3071,3069,3072,4200,3068,3070,4912,3100,3101,3098,3094,3102,4913,3095,3096,3097,3099,3085,3086,3082,4907,3088,4207,3087,3084,3083,4929,4933,4919,3045]
+R3=[4923,4201,4914,3942,3090,4909,3089,4930,4934,4920,3041,4924,3114,3105,3110,3104,3113,3103,4204,3108,4926,3112,3107,4205,3109,3111,3106,4925,3117,3115,3118,3116,4927]
+R4=[1979,1980,2952,2953]
+#Quest ingredients and rewards
+WISH_POTION,ANCIENT_CROWN,CERTIFICATE_OF_ROYALTY = range(3467,3450)
+ALCHEMY_TEXT,SECRET_BOOK,POTION_RECIPE_1,POTION_RECIPE_2,MATILDS_ORB,FORBIDDEN_LOVE_SCROLL  = range(3678,3684)
+AMBER_SCALE,WIND_SOULSTONE,GLASS_EYE,HORROR_ECTOPLASM,SILENOS_HORN,ANT_SOLDIER_APHID,TYRANTS_CHITIN,BUGBEAR_BLOOD = range(3684,3692)
+#NPCs
 GRIMA                     = 27135
 SUCCUBUS_OF_SEDUCTION     = 27136
 GREAT_DEMON_KING          = 27138
@@ -55,9 +36,9 @@ TORAI                     = 30557
 ALCHEMIST_MATILD          = 30738
 RUPINA                    = 30742
 WISDOM_CHEST              = 30743
-#mobs
+#MOBs
 WHISPERING_WIND           = 20078
-ANT_RECRUIT               = 20082
+ANT_RECRUIT               = 20087
 ANT_WARRIOR_CAPTAIN       = 20088
 SILENOS                   = 20168
 TYRANT                    = 20192
@@ -67,370 +48,353 @@ HORROR_MIST_RIPPER        = 20227
 TURAK_BUGBEAR             = 20248
 TURAK_BUGBEAR_WARRIOR     = 20249
 GLASS_JAGUAR              = 20250
+#DROPLIST
+DROPLIST={AMBER_BASILISK:[AMBER_SCALE,15],WHISPERING_WIND:[WIND_SOULSTONE,20],GLASS_JAGUAR:[GLASS_EYE,35],HORROR_MIST_RIPPER:[HORROR_ECTOPLASM,15],
+          SILENOS:[SILENOS_HORN,30],ANT_RECRUIT:[ANT_SOLDIER_APHID,40],ANT_WARRIOR_CAPTAIN:[ANT_SOLDIER_APHID,40],TYRANT:[TYRANTS_CHITIN,50],
+          TYRANT_KINGPIN:[TYRANTS_CHITIN,50],TURAK_BUGBEAR:[BUGBEAR_BLOOD,25],TURAK_BUGBEAR_WARRIOR:[BUGBEAR_BLOOD,25]}
 
-### DROP CHANCE CONFIGURATION 
-###
-### 100 = 100% ( every kill/drop )
-###
+# set of random messages
+MESSAGES={SUCCUBUS_OF_SEDUCTION:["Do you wanna be loved?","Do you need love?","Let me love you...","Want to know what love is?","Are you in need of love?","Me love you long time"],
+          GRIMA:["hey hum hum!","boom! boom!","...","Ki ab kya karein hum"],
+          }
 
-MAX_VALUE                            = 100
-DROP_CHANCE_AMBER_SCALE_ID           = 15
-DROP_CHANCE_WIND_SOULSTONE_ID        = 20
-DROP_CHANCE_GLASS_EYE_ID             = 35
-DROP_CHANCE_HORROR_ECTOPLASM_ID      = 15
-DROP_CHANCE_SILENOS_HORN_ID          = 30
-DROP_CHANCE_ANT_SOLDIER_APHID_ID     = 40
-DROP_CHANCE_TYRANTS_CHITIN_ID        = 50
-DROP_CHANCE_BUGBEAR_BLOOD_ID         = 25
-DROP_CHANCE_FORBIDDEN_LOVE_SCROLL_ID = 3
-DROP_CHANCE_NECKLACE_OF_GRACE_ID     = 4
-DROP_CHANCE_GOLD_BAR_ID              = 10
-
-def check_ingredients(st,amber,wind,glass,ecto,horn,aphid,chit,blood) :
-    if st.getQuestItemsCount(AMBER_SCALE_ID) != amber : return 0
-    if st.getQuestItemsCount(WIND_SOULSTONE_ID) != wind : return 0
-    if st.getQuestItemsCount(GLASS_EYE_ID) != glass : return 0
-    if st.getQuestItemsCount(HORROR_ECTOPLASM_ID) != ecto : return 0
-    if st.getQuestItemsCount(SILENOS_HORN_ID) != horn : return 0
-    if st.getQuestItemsCount(ANT_SOLDIER_APHID_ID) != aphid : return 0
-    if st.getQuestItemsCount(TYRANTS_CHITIN_ID) != chit : return 0
-    if st.getQuestItemsCount(BUGBEAR_BLOOD_ID) != blood : return 0
+def check_ingredients(st,required) :
+    if st.getQuestItemsCount(AMBER_SCALE) != required : return 0
+    if st.getQuestItemsCount(WIND_SOULSTONE) != required : return 0
+    if st.getQuestItemsCount(GLASS_EYE) != required : return 0
+    if st.getQuestItemsCount(HORROR_ECTOPLASM) != required : return 0
+    if st.getQuestItemsCount(SILENOS_HORN) != required : return 0
+    if st.getQuestItemsCount(ANT_SOLDIER_APHID) != required : return 0
+    if st.getQuestItemsCount(TYRANTS_CHITIN) != required : return 0
+    if st.getQuestItemsCount(BUGBEAR_BLOOD) != required : return 0
     return 1
+
+def findnpc(npcId,player):
+    npclist=[]
+    instance=None
+    for spawn in SpawnTable.getInstance().getSpawnTable().values():
+        if spawn.getNpcid() == npcId:
+            instance=spawn.getLastSpawn()
+            npclist.append(instance)
+    for npc in npclist:
+        if player.isInsideRadius(npc, 1600, 1, 0):
+           instance=npc
+           break
+    return instance
+
+def autochat(npcId,player,text) :
+    n=findnpc(npcId,player)
+    if n: n.broadcastPacket(CreatureSay(n.getObjectId(),0,n.getName(),text))
+    return
+
+def autochat2(st,objId,text):
+    n=st.getPcSpawn().getSpawn(objId).getLastSpawn()
+    if n: n.broadcastPacket(CreatureSay(objId,0,n.getName(),text))
+    return
 
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onEvent (self,event,st):
-
    htmltext = event
-
-   if st.get("cond") == None: st.set("cond","0")
-
+   player=st.getPlayer()
    if event == "30738-03.htm":
      st.set("cond","1")
      st.setState(STARTED)
      st.playSound("ItemSound.quest_accept")
-     if st.getQuestItemsCount(ALCHEMY_TEXT_ID) >= 2: st.takeItems(ALCHEMY_TEXT_ID,-1)
-     if st.getQuestItemsCount(ALCHEMY_TEXT_ID) == 0: st.giveItems(ALCHEMY_TEXT_ID,1)
+     if st.getQuestItemsCount(ALCHEMY_TEXT) >= 2: st.takeItems(ALCHEMY_TEXT,-1)
+     if st.getQuestItemsCount(ALCHEMY_TEXT) == 0: st.giveItems(ALCHEMY_TEXT,1)
      htmltext = "30738-03.htm"
    if event == "30738-06.htm":
-     # first time 
-     if st.getQuestItemsCount(MATILDS_ORB_ID) == 0 and st.getQuestItemsCount(WISH_POTION_ID) == 0:
-       st.playSound("ItemSound.quest_accept")
-       st.set("cond","3")
-       if st.getQuestItemsCount(ALCHEMY_TEXT_ID) >= 1: st.takeItems(ALCHEMY_TEXT_ID,-1)
-       if st.getQuestItemsCount(SECRET_BOOK_ID) >= 1: st.takeItems(SECRET_BOOK_ID,-1)
-       if st.getQuestItemsCount(POTION_RECIPE_1_ID) >= 2: st.takeItems(POTION_RECIPE_1_ID,-1)
-       if st.getQuestItemsCount(POTION_RECIPE_1_ID) == 0: st.giveItems(POTION_RECIPE_1_ID,1)
-       if st.getQuestItemsCount(POTION_RECIPE_2_ID) >= 2: st.takeItems(POTION_RECIPE_2_ID,-1)
-       if st.getQuestItemsCount(POTION_RECIPE_2_ID) == 0: st.giveItems(POTION_RECIPE_2_ID,1)
-       htmltext = "30738-06.htm"
-     # you did already this quest
-     if st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and st.getQuestItemsCount(WISH_POTION_ID) == 0:
-       st.playSound("ItemSound.quest_accept")
-       st.set("cond","3")
-       if st.getQuestItemsCount(ALCHEMY_TEXT_ID) >= 1: st.takeItems(ALCHEMY_TEXT_ID,-1)
-       if st.getQuestItemsCount(SECRET_BOOK_ID) >= 1: st.takeItems(SECRET_BOOK_ID,-1)
-       if st.getQuestItemsCount(POTION_RECIPE_1_ID) >= 2: st.takeItems(POTION_RECIPE_1_ID,-1)
-       if st.getQuestItemsCount(POTION_RECIPE_1_ID) == 0: st.giveItems(POTION_RECIPE_1_ID,1)
-       if st.getQuestItemsCount(POTION_RECIPE_2_ID) >= 2: st.takeItems(POTION_RECIPE_2_ID,-1)
-       if st.getQuestItemsCount(POTION_RECIPE_2_ID) == 0: st.giveItems(POTION_RECIPE_2_ID,1)
-       htmltext = "30738-12.htm"
-     # you did already this quest, but you dont have taken your wish potion yet
-     if st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and st.getQuestItemsCount(WISH_POTION_ID) >= 1:
+     if st.getQuestItemsCount(WISH_POTION) :
        htmltext = "30738-13.htm"
+     else :
+       st.playSound("ItemSound.quest_accept")
+       st.set("cond","3")
+       if st.getQuestItemsCount(ALCHEMY_TEXT) >= 1: st.takeItems(ALCHEMY_TEXT,-1)
+       if st.getQuestItemsCount(SECRET_BOOK) >= 1: st.takeItems(SECRET_BOOK,-1)
+       if st.getQuestItemsCount(POTION_RECIPE_1) >= 2: st.takeItems(POTION_RECIPE_1,-1)
+       if st.getQuestItemsCount(POTION_RECIPE_1) == 0: st.giveItems(POTION_RECIPE_1,1)
+       if st.getQuestItemsCount(POTION_RECIPE_2) >= 2: st.takeItems(POTION_RECIPE_2,-1)
+       if st.getQuestItemsCount(POTION_RECIPE_2) == 0: st.giveItems(POTION_RECIPE_2,1)
+       if st.getQuestItemsCount(MATILDS_ORB) : htmltext = "30738-12.htm"
    if event == "30738-10.htm":
-     if check_ingredients(st,1,1,1,1,1,1,1,1) :
+     if check_ingredients(st,1) :
        st.playSound("ItemSound.quest_finish")
-       st.takeItems(ALCHEMY_TEXT_ID,-1)
-       st.takeItems(SECRET_BOOK_ID,-1)
-       st.takeItems(POTION_RECIPE_1_ID,-1)
-       st.takeItems(POTION_RECIPE_2_ID,-1)
-       st.takeItems(AMBER_SCALE_ID,-1)
-       st.takeItems(WIND_SOULSTONE_ID,-1)
-       st.takeItems(GLASS_EYE_ID,-1)
-       st.takeItems(HORROR_ECTOPLASM_ID,-1)
-       st.takeItems(SILENOS_HORN_ID,-1)
-       st.takeItems(ANT_SOLDIER_APHID_ID,-1)
-       st.takeItems(TYRANTS_CHITIN_ID,-1)
-       st.takeItems(BUGBEAR_BLOOD_ID,-1)
-       if st.getQuestItemsCount(MATILDS_ORB_ID) == 0 : st.giveItems(MATILDS_ORB_ID,1)
-       st.giveItems(WISH_POTION_ID,1)
-       st.set("cond","0")
+       st.takeItems(ALCHEMY_TEXT,-1)
+       st.takeItems(SECRET_BOOK,-1)
+       st.takeItems(POTION_RECIPE_1,-1)
+       st.takeItems(POTION_RECIPE_2,-1)
+       st.takeItems(AMBER_SCALE,-1)
+       st.takeItems(WIND_SOULSTONE,-1)
+       st.takeItems(GLASS_EYE,-1)
+       st.takeItems(HORROR_ECTOPLASM,-1)
+       st.takeItems(SILENOS_HORN,-1)
+       st.takeItems(ANT_SOLDIER_APHID,-1)
+       st.takeItems(TYRANTS_CHITIN,-1)
+       st.takeItems(BUGBEAR_BLOOD,-1)
+       if not st.getQuestItemsCount(MATILDS_ORB) : st.giveItems(MATILDS_ORB,1)
+       st.giveItems(WISH_POTION,1)
+       st.set("cond","5")
      else :
        htmltext="You don't have required items"
-   if event == "30738-14.htm":
-     if st.getQuestItemsCount(WISH_POTION_ID) >= 1:
+   elif event == "30738-14.htm":
+     # if you dropped or destroyed your wish potion, you are not able to see the wish list
+     if st.getQuestItemsCount(WISH_POTION) :
        htmltext = "30738-15.htm"
-     # if you dropped or destroyed your wish potion, you are not able to see the list
-     else:
-       htmltext = "30738-14.htm"
 #### WISH I : Please make me into a loving person.
-   if event == "30738-16.htm":
-     # if you dropped or destroyed your wish potion, you are not able to make a wish
-     if st.getQuestItemsCount(WISH_POTION_ID) >= 1:
-       ### autochat should begin here !!!!
-       st.takeItems(WISH_POTION_ID,1)
-       WISH_CHANCE = st.getRandom(100)
-       if WISH_CHANCE <= 50:
-         st.getPcSpawn().addSpawn(SUCCUBUS_OF_SEDUCTION,69988,18197,-3647)
-         st.getPcSpawn().addSpawn(SUCCUBUS_OF_SEDUCTION,69988,18197,-3647)
-         st.getPcSpawn().addSpawn(SUCCUBUS_OF_SEDUCTION,69988,18197,-3647)
-       else:
-         st.getPcSpawn().addSpawn(RUPINA,69988,18197,-3647)
-       htmltext = "30738-16.htm"
+   elif event == "30738-16.htm":
+     if st.getQuestItemsCount(WISH_POTION) :
+       st.set("wish","1")
+       st.startQuestTimer("matild_timer1",3000)
+       st.takeItems(WISH_POTION,1)
+       matild=findnpc(ALCHEMIST_MATILD,player)
+       matild.setBusy(True)
      else:
        htmltext = "30738-14.htm"
 #### WISH II : I want to become an extremely rich person. How about 100 million adena?! 
-   if event == "30738-17.htm":
-     # if you dropped or destroyed your wish potion, you are not able to make a wish
-     if st.getQuestItemsCount(WISH_POTION_ID) >= 1:
-       ### autochat should begin here !!!!
-       st.takeItems(WISH_POTION_ID,1)
-       WISH_CHANCE = st.getRandom(100)
-       if WISH_CHANCE <= 33:
-         st.getPcSpawn().addSpawn(GRIMA,69988,18197,-3647)
-         st.getPcSpawn().addSpawn(GRIMA,69988,18197,-3647)
-         st.getPcSpawn().addSpawn(GRIMA,69988,18197,-3647)
-       elif WISH_CHANCE >= 66:
-         st.giveItems(ADENA_ID,10000)
-       else:
-         if st.getRandom(100) <= 1:
-           st.giveItems(ADENA_ID,((st.getRandom(9)+1)*1000000))
-         else:
-           st.getPcSpawn().addSpawn(GRIMA,69988,18197,-3647)
-           st.getPcSpawn().addSpawn(GRIMA,69988,18197,-3647)
-           st.getPcSpawn().addSpawn(GRIMA,69988,18197,-3647)
-       htmltext = "30738-17.htm"
+   elif event == "30738-17.htm":
+     if st.getQuestItemsCount(WISH_POTION) :
+       st.set("wish","2")
+       st.startQuestTimer("matild_timer1",3000)
+       st.takeItems(WISH_POTION,1)
+       matild=findnpc(ALCHEMIST_MATILD,player)
+       matild.setBusy(True)
      else:
        htmltext = "30738-14.htm"
 #### WISH III : I want to be a king in this world.
-   if event == "30738-18.htm":
-     # if you dropped or destroyed your wish potion, you are not able to make a wish
-     if st.getQuestItemsCount(WISH_POTION_ID) >= 1:
-       ### autochat should begin here !!!!
-       st.takeItems(WISH_POTION_ID,1)
-       WISH_CHANCE = st.getRandom(100)
-       if WISH_CHANCE <= 33:
-         st.giveItems(CERTIFICATE_OF_ROYALTY_ID,1)
-       elif WISH_CHANCE >= 66:
-         st.giveItems(ANCIENT_CROWN_ID,1)
-       else:
-         st.getPcSpawn().addSpawn(SANCHES,69988,18197,-3647)
-       htmltext = "30738-18.htm"
+   elif event == "30738-18.htm":
+     if st.getQuestItemsCount(WISH_POTION) :
+       st.set("wish","3")
+       st.startQuestTimer("matild_timer1",3000)
+       st.takeItems(WISH_POTION,1)
+       matild=findnpc(ALCHEMIST_MATILD,player)
+       matild.setBusy(True)
      else:
        htmltext = "30738-14.htm"
 #### WISH IV : I'd like to become the wisest person in the world.
-   if event == "30738-19.htm":
-     # if you dropped or destroyed your wish potion, you are not able to make a wish
-     if st.getQuestItemsCount(WISH_POTION_ID) >= 1:
-       ### autochat should begin here !!!!
-       st.takeItems(WISH_POTION_ID,1)
-       WISH_CHANCE = st.getRandom(100)
-       if WISH_CHANCE <= 33:
-         st.giveItems(SPELLBOOK_ICEBOLT_ID,1)
-       elif WISH_CHANCE >= 66:
-         st.giveItems(SPELLBOOK_BATTLEHEAL_ID,1)
-       else:
-         st.getPcSpawn().addSpawn(WISDOM_CHEST,69988,18197,-3647)
-       htmltext = "30738-19.htm"
+   elif event == "30738-19.htm":
+     if st.getQuestItemsCount(WISH_POTION) >= 1:
+       st.set("wish","4")
+       st.startQuestTimer("matild_timer1",3000)
+       st.takeItems(WISH_POTION,1)
+       matild=findnpc(ALCHEMIST_MATILD,player)
+       matild.setBusy(True)
      else:
        htmltext = "30738-14.htm"
+   elif event == "matild_timer1":
+     autochat(ALCHEMIST_MATILD,player,"OK, everybody pray fervently!")
+     st.startQuestTimer("matild_timer2",4000)
+     return
+   elif event == "matild_timer2":
+     autochat(ALCHEMIST_MATILD,player,"Both hands to heaven, everybody yell together!")
+     st.startQuestTimer("matild_timer3",4000)
+     return
+   elif event == "matild_timer3":
+     autochat(ALCHEMIST_MATILD,player,"One! Two! May your dreams come true!")
+     wish = st.getInt("wish")
+     WISH_CHANCE = st.getRandom(100)
+     if wish == 1 :
+       if WISH_CHANCE <= 50:
+         autochat2(st,st.getPcSpawn().addSpawn(SUCCUBUS_OF_SEDUCTION,200000),MESSAGES[SUCCUBUS_OF_SEDUCTION][st.getRandom(len(MESSAGES))])
+         autochat2(st,st.getPcSpawn().addSpawn(SUCCUBUS_OF_SEDUCTION,200000),MESSAGES[SUCCUBUS_OF_SEDUCTION][st.getRandom(len(MESSAGES))])
+         autochat2(st,st.getPcSpawn().addSpawn(SUCCUBUS_OF_SEDUCTION,200000),MESSAGES[SUCCUBUS_OF_SEDUCTION][st.getRandom(len(MESSAGES))])
+       else:
+         autochat2(st,st.getPcSpawn().addSpawn(RUPINA,120000),"Your love... love!")
+     elif wish == 2 :
+       if WISH_CHANCE <= 33 :
+         autochat2(st,st.getPcSpawn().addSpawn(GRIMA,200000),MESSAGES[GRIMA][st.getRandom(len(MESSAGES))])
+         autochat2(st,st.getPcSpawn().addSpawn(GRIMA,200000),MESSAGES[GRIMA][st.getRandom(len(MESSAGES))])
+         autochat2(st,st.getPcSpawn().addSpawn(GRIMA,200000),MESSAGES[GRIMA][st.getRandom(len(MESSAGES))])
+       else :
+         st.giveItems(ADENA,10000)
+     elif wish == 3 :
+       if WISH_CHANCE <= 33 :
+         st.giveItems(CERTIFICATE_OF_ROYALTY,1)
+       elif WISH_CHANCE >= 66 :
+         st.giveItems(ANCIENT_CROWN,1)
+       else:
+         objId=st.getPcSpawn().addSpawn(SANCHES,player,True)
+         autochat2(st,objId,"Who dares to call the dark Monarch?!")
+         st.set("objId",str(objId))
+         st.startQuestTimer("sanches_timer1",200000)
+     elif wish == 4 :
+       if WISH_CHANCE <= 33:
+         st.giveItems(R1[st.getRandom(len(R1))],1)
+         st.giveItems(R2[st.getRandom(len(R2))],1)
+         st.giveItems(R3[st.getRandom(len(R3))],1)
+         if not st.getRandom(3):
+            st.giveItems(HEART_OF_PAAGRIO,1)
+       else:
+         autochat2(st,st.getPcSpawn().addSpawn(WISDOM_CHEST,120000),"I contain the wisdom, I am the wisdom box!")
+     matild=findnpc(ALCHEMIST_MATILD,player)
+     matild.setBusy(False)
+     return
+   elif event == "sanches_timer1" :
+     objId=st.getInt("objId")
+     if objId:
+       sanches=st.getPcSpawn().getSpawn(objId).getLastSpawn()
+       autochat2(st,objId,"Hehehe, i'm just wasting my time here!")
+       sanches.deleteMe()
+       st.unset("objId")
+     return
+   elif event == "bonaparterius_timer1" :
+     objId=st.getInt("objId")
+     if objId:
+       bonaparterius=st.getPcSpawn().getSpawn(objId).getLastSpawn()
+       autochat2(st,objId,"A worth opponent would be a good thing")
+       bonaparterius.deleteMe()
+       st.unset("objId")
+     return
+   elif event == "ramsebalius_timer1" :
+     objId=st.getInt("objId")
+     if objId:
+       ramsebalius=st.getPcSpawn().getSpawn(objId).getLastSpawn()
+       autochat2(st,objId,"Your time is up!")
+       ramsebalius.deleteMe()
+       st.unset("objId")
+     return
+   elif event == "greatdemon_timer1" :
+     objId=st.getInt("objId")
+     if objId:
+       greatdemon=st.getPcSpawn().getSpawn(objId).getLastSpawn()
+       autochat2(st,objId,"Do not interrupt my eternal rest again!")
+       greatdemon.deleteMe()
+       st.unset("objId")
+     return
    return htmltext
 
  def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
-
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
    id = st.getState()
-   if npcId in [RUPINA,WISDOM_CHEST] and id in [CREATED] : return htmltext
-   if npcId == TORAI and id in [MIDDLE,END] : return htmltext
-   if npcId == TORAI:
-     if st.get("cond") == None or int(st.get("cond")) == 0:
+   if npcId != ALCHEMIST_MATILD and id == CREATED : return htmltext
+   if npcId == TORAI and st.getQuestItemsCount(FORBIDDEN_LOVE_SCROLL) :
+       st.takeItems(FORBIDDEN_LOVE_SCROLL,1)     
+       st.giveItems(ADENA,500000)
+       htmltext = "30557-01.htm"
+   elif npcId == WISDOM_CHEST :
+     st.giveItems(R1[st.getRandom(len(R1))],1)
+     st.giveItems(R2[st.getRandom(len(R2))],1)
+     st.giveItems(R3[st.getRandom(len(R3))],1)
+     if not st.getRandom(3):
+        st.giveItems(HEART_OF_PAAGRIO,1)
+     st.giveItems(4409,1)
+     st.giveItems(4408,1)
+     htmltext = "30743-0"+str(st.getRandom(6)+1)+".htm"
+     npc.decayMe()
+   elif npcId == RUPINA:
+     if st.getRandom(100) <= 4:
+       st.giveItems(NECKLACE_OF_GRACE,1)
+       htmltext = "30742-01.htm"
+     else:
+       st.giveItems(R4[st.getRandom(len(R4))],1)
+       htmltext = "30742-02.htm"
+     npc.decayMe()
+   elif npcId == ALCHEMIST_MATILD:
+     if npc.isBusy() :
+       htmltext = "30738-20.htm"
+     elif player.getLevel() <= 29 :
+       htmltext = "30738-21.htm"
        st.exitQuest(1)
-     if st.getQuestItemsCount(FORBIDDEN_LOVE_SCROLL_ID) >= 1:
-       st.takeItems(FORBIDDEN_LOVE_SCROLL_ID,1)     
-       st.giveItems(ADENA_ID,500000)
-       return "30557-01.htm"
+     elif cond == 5 and st.getQuestItemsCount(MATILDS_ORB) :
+       htmltext = "30738-11.htm"
+     elif cond == 4 and check_ingredients(st,1):
+       htmltext = "30738-08.htm"
+     elif cond == 3 and not check_ingredients(st,1):
+       htmltext = "30738-07.htm"       
+     elif cond == 2 or (st.getQuestItemsCount(ALCHEMY_TEXT) and st.getQuestItemsCount(SECRET_BOOK)) :
+       htmltext = "30738-05.htm"
+     elif cond == 1 or (st.getQuestItemsCount(ALCHEMY_TEXT) and not st.getQuestItemsCount(SECRET_BOOK)) :
+       htmltext = "30738-04.htm"
      else:
-       return "no_quest.htm"
-
-   if npcId == WISDOM_CHEST:
-     DROP_CHANCE = st.getRandom(100)
-     if DROP_CHANCE <= 20:
-       st.giveItems(SPELLBOOK_ICEBOLT_ID,1)
-       st.giveItems(SPELLBOOK_BATTLEHEAL_ID,1)
-       st.getPlayer().getTarget().decayMe()
-       return "30743-06.htm"
-     elif DROP_CHANCE <= 30:
-       st.giveItems(HEART_OF_PAAGRIO_ID,1)
-       st.getPlayer().getTarget().decayMe()
-       return "30743-06.htm"
-     else:
-       st.getPlayer().getTarget().decayMe()
-       return "30743-0" + str(st.getRandom(4)+1) + ".htm"
-
-   if npcId == RUPINA:
-     DROP_CHANCE = st.getRandom(MAX_VALUE)
-     if DROP_CHANCE <= DROP_CHANCE_NECKLACE_OF_GRACE_ID:
-       st.giveItems(NECKLACE_OF_GRACE_ID,1)
-     else:
-       st.giveItems(SCROLL_OF_ESCAPE_ID,1)
-     st.getPlayer().getTarget().decayMe()
-     return "30742-01.htm"
-
-   if npcId == ALCHEMIST_MATILD:
-     if st.getPlayer().getLevel() <= 29:
-       st.exitQuest(1)
-       return "30738-21.htm"
-     else:
-       if st.getState() == STARTED:
-         st.set("cond","0")
-       if st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and check_ingredients(st,0,0,0,0,0,0,0,0) and st.getState() != STARTED:
-         if st.get("cond") == None:
-           st.set("cond","0")
-         return "30738-11.htm"
-       elif st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and check_ingredients(st,1,1,1,1,1,1,1,1):
-         return "30738-08.htm"
-       elif st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and st.getQuestItemsCount(WISH_POTION_ID) == 0 and st.getState() != STARTED:
-         st.set("cond","3")
-         st.setState(STARTED)
-         if st.getQuestItemsCount(POTION_RECIPE_1_ID) == 0: st.giveItems(POTION_RECIPE_1_ID,1)
-         if st.getQuestItemsCount(POTION_RECIPE_2_ID) == 0: st.giveItems(POTION_RECIPE_2_ID,1)
-         return "30738-12.htm"
-       if cond == 3 and not check_ingredients(st,1,1,1,1,1,1,1,1):
-         return "30738-07.htm"       
-       elif check_ingredients(st,1,1,1,1,1,1,1,1):
-         return "30738-08.htm"
-       elif st.getQuestItemsCount(ALCHEMY_TEXT_ID) >= 1 and st.getQuestItemsCount(SECRET_BOOK_ID) >= 1:
-         return "30738-05.htm"
-       elif st.getState() == STARTED and st.getQuestItemsCount(MATILDS_ORB_ID) >= 1 and st.getQuestItemsCount(POTION_RECIPE_1_ID) == 0 and st.getQuestItemsCount(POTION_RECIPE_2_ID) == 0:
-         return "30738-11.htm"
-       elif st.getState() == STARTED and st.getQuestItemsCount(POTION_RECIPE_1_ID) >= 1 and st.getQuestItemsCount(POTION_RECIPE_2_ID) >= 1:
-         return "30738-07.htm"
-       elif st.getState() == STARTED and st.getQuestItemsCount(ALCHEMY_TEXT_ID) >= 1 and st.getQuestItemsCount(SECRET_BOOK_ID) == 0:
-         return "30738-04.htm"
-       else:
-         return "30738-01.htm"
+       htmltext = "30738-01.htm"
+   return htmltext
 
  def onKill (self,npc,player):
    st = player.getQuestState(qn)
-   if not st : return 
-   if st.getState() != STARTED : return 
-   
-
-   npcId = npc.getNpcId()
+   if not st : return
    id = st.getState()
-   # hm, you already collected all items. but now you have lost one (destroyed maybe). will give you a second try 
-   if id == END:
-     if npcId in [AMBER_BASILISK, WHISPERING_WIND, GLASS_JAGUAR, HORROR_MIST_RIPPER, SILENOS, ANT_RECRUIT, ANT_WARRIOR_CAPTAIN, TYRANT, TYRANT_KINGPIN, TURAK_BUGBEAR, TURAK_BUGBEAR_WARRIOR]:
-       if not check_ingredients(st,1,1,1,1,1,1,1,1): st.setState(MIDDLE)
-    # todo: Shouldn't SUCCUBUS_OF_SEDUCTION be handled here, too?
-   elif id == STARTED:
-     if npcId == SECRET_KEEPER_TREE:
-       if st.getQuestItemsCount(SECRET_BOOK_ID) == 0:
-         st.set("cond","2")
-         st.giveItems(SECRET_BOOK_ID,1)
-         st.playSound("ItemSound.quest_itemget")
-     DROP_CHANCE = st.getRandom(MAX_VALUE)
-     if npcId == AMBER_BASILISK:
-       if (st.getQuestItemsCount(AMBER_SCALE_ID) == 0) and (DROP_CHANCE <= DROP_CHANCE_AMBER_SCALE_ID): 
-         st.giveItems(AMBER_SCALE_ID,1)
-         if check_ingredients(st,1,1,1,1,1,1,1,1):
-           st.playSound("ItemSound.quest_middle")
-           st.setState(END)
-         else: st.playSound("ItemSound.quest_itemget")          
-     elif npcId == WHISPERING_WIND:
-       if (st.getQuestItemsCount(WIND_SOULSTONE_ID) == 0) and (DROP_CHANCE <= DROP_CHANCE_WIND_SOULSTONE_ID):
-         st.giveItems(WIND_SOULSTONE_ID,1)
-         if check_ingredients(st,1,1,1,1,1,1,1,1):
-           st.playSound("ItemSound.quest_middle")
-           st.setState(END)
+   if id == CREATED: return
+   if id != STARTED: st.setState(STARTED)
+   npcId = npc.getNpcId()
+   cond = st.getInt("cond")
+   if npcId == SECRET_KEEPER_TREE and cond == 1 and not st.getQuestItemsCount(SECRET_BOOK):
+      st.set("cond","2")
+      st.giveItems(SECRET_BOOK,1)
+      st.playSound("ItemSound.quest_itemget")
+   elif npcId in DROPLIST.keys() and cond == 3 :
+      item,chance=DROPLIST[npcId]
+      if st.getRandom(100) <= chance and not st.getQuestItemsCount(item) :
+         st.giveItems(item,1)
+         if check_ingredients(st,1):
+            st.playSound("ItemSound.quest_middle")
+            st.set("cond","4")
          else: st.playSound("ItemSound.quest_itemget")
-     elif npcId == GLASS_JAGUAR:
-       if (st.getQuestItemsCount(GLASS_EYE_ID) == 0) and (DROP_CHANCE <= DROP_CHANCE_GLASS_EYE_ID):
-         st.giveItems(GLASS_EYE_ID,1)
-         if check_ingredients(st,1,1,1,1,1,1,1,1):
-           st.playSound("ItemSound.quest_middle")
-           st.setState(END)
-         else: st.playSound("ItemSound.quest_itemget")
-     elif npcId == HORROR_MIST_RIPPER:
-       if (st.getQuestItemsCount(HORROR_ECTOPLASM_ID) == 0) and (DROP_CHANCE <= DROP_CHANCE_HORROR_ECTOPLASM_ID):
-         st.giveItems(HORROR_ECTOPLASM_ID,1)
-         if check_ingredients(st,1,1,1,1,1,1,1,1):
-           st.playSound("ItemSound.quest_middle")
-           st.setState(END)
-         else: st.playSound("ItemSound.quest_itemget")
-     elif npcId == SILENOS:
-       if (st.getQuestItemsCount(SILENOS_HORN_ID) == 0) and (DROP_CHANCE <= DROP_CHANCE_SILENOS_HORN_ID):
-         st.giveItems(SILENOS_HORN_ID,1)
-         if check_ingredients(st,1,1,1,1,1,1,1,1):
-           st.playSound("ItemSound.quest_middle")
-           st.setState(END)
-         else: st.playSound("ItemSound.quest_itemget")
-     elif npcId == ANT_RECRUIT or npcId == ANT_WARRIOR_CAPTAIN:
-       if (st.getQuestItemsCount(ANT_SOLDIER_APHID_ID) == 0) and (DROP_CHANCE <= DROP_CHANCE_ANT_SOLDIER_APHID_ID):
-         st.giveItems(ANT_SOLDIER_APHID_ID,1)
-         if check_ingredients(st,1,1,1,1,1,1,1,1):
-           st.playSound("ItemSound.quest_middle")
-           st.setState(END)
-         else: st.playSound("ItemSound.quest_itemget")
-     elif npcId == TYRANT or npcId == TYRANT_KINGPIN:
-       if (st.getQuestItemsCount(TYRANTS_CHITIN_ID) == 0) and (DROP_CHANCE <= DROP_CHANCE_TYRANTS_CHITIN_ID):
-         st.giveItems(TYRANTS_CHITIN_ID,1)
-         if check_ingredients(st,1,1,1,1,1,1,1,1):
-           st.playSound("ItemSound.quest_middle")
-           st.setState(END)
-         else: st.playSound("ItemSound.quest_itemget")
-     elif npcId == TURAK_BUGBEAR or npcId == TURAK_BUGBEAR_WARRIOR:
-       if (st.getQuestItemsCount(BUGBEAR_BLOOD_ID) == 0) and (DROP_CHANCE <= DROP_CHANCE_BUGBEAR_BLOOD_ID):
-         st.giveItems(BUGBEAR_BLOOD_ID,1)
-         if check_ingredients(st,1,1,1,1,1,1,1,1):
-           st.playSound("ItemSound.quest_middle")
-           st.setState(END)
-         else: st.playSound("ItemSound.quest_itemget")
+   else:
      if npcId == SUCCUBUS_OF_SEDUCTION:
-       if DROP_CHANCE <= DROP_CHANCE_FORBIDDEN_LOVE_SCROLL_ID:
+       if st.getRandom(100) <= 3 :
          st.playSound("ItemSound.quest_itemget")
-         st.giveItems(FORBIDDEN_LOVE_SCROLL_ID,1)
+         st.giveItems(FORBIDDEN_LOVE_SCROLL,1)
      elif npcId == GRIMA:
-       if DROP_CHANCE <= DROP_CHANCE_GOLD_BAR_ID:
-         st.playSound("ItemSound.quest_itemget") 
-         st.giveItems(GOLD_BAR_ID,st.getRandom(4)+1)
-     elif npcId == SANCHES:
-       if st.getRandom(100) <= 50:
-         st.getPcSpawn().addSpawn(BONAPARTERIUS,69988,18197,-3647)
+       if st.getRandom(100) < 4 :
+          st.playSound("ItemSound.quest_itemget")
+          if st.getRandom(1000) == 0 :
+             st.giveItems(ADENA,100000000)
+          else:
+             st.giveItems(ADENA,900000)
+     elif npcId == SANCHES :
+       try :
+         st.getQuestTimer("sanches_timer1").cancel()
+         if st.getRandom(100) <= 50 :
+            autochat2(st,npc.getObjectId(),"It's time to come out my Remless... Bonaparterius!")
+            objId=st.getPcSpawn().addSpawn(BONAPARTERIUS,npc,True)
+            autochat2(st,objId,"I am the Great Emperor's son!")
+            st.set("objId",str(objId))
+            st.startQuestTimer("bonaparterius_timer1",600000)
+         else :
+            st.giveItems(R4[st.getRandom(len(R4))],1)
+       except : pass
      elif npcId == BONAPARTERIUS:
-       if st.getRandom(100) <= 50:
-         st.getPcSpawn().addSpawn(RAMSEBALIUS,69988,18197,-3647)
+       try :
+         st.getQuestTimer("bonaparterius_timer1").cancel()
+         autochat2(st,npc.getObjectId(),"Only Ramsebalius would be able to avenge me!")
+         if st.getRandom(100) <= 50 :
+           objId=st.getPcSpawn().addSpawn(RAMSEBALIUS,npc,True)
+           autochat2(st,objId,"Meet the absolute ruler!")
+           st.startQuestTimer("ramsebalius_timer1",600000)
+           st.set("objId",str(objId))
+         else :
+           st.giveItems(R4[st.getRandom(len(R4))],1)
+       except : pass
      elif npcId == RAMSEBALIUS:
-       if st.getRandom(100) <= 50:
-         st.getPcSpawn().addSpawn(GREAT_DEMON_KING,69988,18197,-3647)
+       try :
+         st.getQuestTimer("ramsebalius_timer1").cancel()
+         autochat2(st,npc.getObjectId(),"You evil piece of...")
+         if st.getRandom(100) <= 50 :
+           objId=st.getPcSpawn().addSpawn(GREAT_DEMON_KING,npc,True)
+           autochat2(st,objId,"Who dares to kill my fiendly minion?!")
+           st.startQuestTimer("greatdemon_timer1",600000)
+           st.set("objId",str(objId))
+         else :
+           st.giveItems(R4[st.getRandom(len(R4))],1)
+       except: pass
      elif npcId == GREAT_DEMON_KING:
-       if st.getRandom(100) <= 50:
-         DEMON_DROP_CHANCE = st.getRandom(100)
-         if DEMON_DROP_CHANCE <= 20:
-           st.playSound("ItemSound.quest_itemget") 
-           st.giveItems(DEMONS_BOOTS_ID,1)
-         elif DEMON_DROP_CHANCE <= 40:
-           st.playSound("ItemSound.quest_itemget") 
-           st.giveItems(DEMONS_GLOVES_ID,1)
-         elif DEMON_DROP_CHANCE <= 60:
-           st.playSound("ItemSound.quest_itemget") 
-           st.giveItems(DEMONS_STOCKINGS_ID,1)
-         elif DEMON_DROP_CHANCE <= 80:
-           st.playSound("ItemSound.quest_itemget") 
-           st.giveItems(DEMONS_TUNIC_ID,1)
+       try :
+         st.getQuestTimer("greatdemon_timer1").cancel()
+         st.giveItems(ADENA,1412965)
+         st.playSound("ItemSound.quest_itemget")
+       except: pass
    return
-
 
 QUEST     = Quest(334,qn,"The Wishing Potion")
 CREATED   = State('Start',     QUEST)
 STARTED   = State('started',   QUEST)
+#Following states kept for backwards compatibility only.
 MIDDLE    = State('middle',    QUEST)
 END       = State('end',       QUEST)
 COMPLETED = State('completed', QUEST)
@@ -438,69 +402,26 @@ COMPLETED = State('completed', QUEST)
 QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(ALCHEMIST_MATILD)
-QUEST.addStartNpc(TORAI)
 
 QUEST.addTalkId(ALCHEMIST_MATILD)
 QUEST.addTalkId(TORAI)
-
 QUEST.addTalkId(RUPINA)
 QUEST.addTalkId(WISDOM_CHEST)
 
 QUEST.addKillId(SECRET_KEEPER_TREE)
 
-QUEST.addKillId(AMBER_BASILISK)
-QUEST.addKillId(WHISPERING_WIND)
-QUEST.addKillId(GLASS_JAGUAR)
-QUEST.addKillId(HORROR_MIST_RIPPER)
-QUEST.addKillId(SILENOS)
-QUEST.addKillId(ANT_RECRUIT)
-QUEST.addKillId(ANT_WARRIOR_CAPTAIN)
-QUEST.addKillId(TYRANT)
-QUEST.addKillId(TYRANT_KINGPIN)
-QUEST.addKillId(TURAK_BUGBEAR)
-QUEST.addKillId(TURAK_BUGBEAR_WARRIOR)
+for mob in DROPLIST.keys():
+    QUEST.addKillId(mob)
+    STARTED.addQuestDrop(mob,DROPLIST[mob][0],1)
 
 QUEST.addKillId(SUCCUBUS_OF_SEDUCTION)
-# END.addKillId(SUCCUBUS_OF_SEDUCTION) todo: This was in the old code but was not handled...
-
 QUEST.addKillId(GRIMA)
 QUEST.addKillId(SANCHES)
 QUEST.addKillId(RAMSEBALIUS)
 QUEST.addKillId(BONAPARTERIUS)
 QUEST.addKillId(GREAT_DEMON_KING)
 
-QUEST.addKillId(GRIMA)
-QUEST.addKillId(SANCHES)
-QUEST.addKillId(RAMSEBALIUS)
-QUEST.addKillId(BONAPARTERIUS)
-QUEST.addKillId(GREAT_DEMON_KING)
-
-QUEST.addKillId(AMBER_BASILISK)
-QUEST.addKillId(WHISPERING_WIND)
-QUEST.addKillId(GLASS_JAGUAR)
-QUEST.addKillId(HORROR_MIST_RIPPER)
-QUEST.addKillId(SILENOS)
-QUEST.addKillId(ANT_RECRUIT)
-QUEST.addKillId(ANT_WARRIOR_CAPTAIN)
-QUEST.addKillId(TYRANT)
-QUEST.addKillId(TYRANT_KINGPIN)
-QUEST.addKillId(TURAK_BUGBEAR)
-QUEST.addKillId(TURAK_BUGBEAR_WARRIOR)
-
-STARTED.addQuestDrop(ALCHEMIST_MATILD,ALCHEMY_TEXT_ID,1)
-STARTED.addQuestDrop(SECRET_KEEPER_TREE,SECRET_BOOK_ID,1)
-STARTED.addQuestDrop(ALCHEMIST_MATILD,POTION_RECIPE_1_ID,1)
-STARTED.addQuestDrop(ALCHEMIST_MATILD,POTION_RECIPE_2_ID,1)
-STARTED.addQuestDrop(ALCHEMIST_MATILD,MATILDS_ORB_ID,1)
-STARTED.addQuestDrop(ALCHEMIST_MATILD,AMBER_SCALE_ID,1)
-STARTED.addQuestDrop(ALCHEMIST_MATILD,WIND_SOULSTONE_ID,1)
-STARTED.addQuestDrop(ALCHEMIST_MATILD,GLASS_EYE_ID,1)
-STARTED.addQuestDrop(ALCHEMIST_MATILD,HORROR_ECTOPLASM_ID,1)
-STARTED.addQuestDrop(ALCHEMIST_MATILD,SILENOS_HORN_ID,1)
-STARTED.addQuestDrop(ALCHEMIST_MATILD,ANT_SOLDIER_APHID_ID,1)
-STARTED.addQuestDrop(ALCHEMIST_MATILD,TYRANTS_CHITIN_ID,1)
-STARTED.addQuestDrop(ALCHEMIST_MATILD,BUGBEAR_BLOOD_ID,1)
-STARTED.addQuestDrop(ALCHEMIST_MATILD,AMBER_SCALE_ID,1)
-STARTED.addQuestDrop(ALCHEMIST_MATILD,AMBER_SCALE_ID,1)
+for item in range(3678,3683):
+    STARTED.addQuestDrop(ALCHEMIST_MATILD,item,1)
 
 print "importing quests: 334: The Wishing Potion"
