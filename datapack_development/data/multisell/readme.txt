@@ -20,6 +20,7 @@ of this directory a little bit.
 506.xml  -> Seven Signs - Blacksmith of Mammon - Unseal A-grade armor
 507.xml  -> Seven Signs - Blacksmith of Mammon - Unseal A-grade jewelry
 508.xml  -> Seven Signs - Blacksmith of Mammon - Reseal A-grade armor
+999.xml  -> Upgrade hatchling to strider equipment
 1000.xml -> Upgrade pet equipment
 1001.xml -> Dual Swords up to C-grade
 3361.xml -> Quest 336: Coins of Magic, Rewards level 1
