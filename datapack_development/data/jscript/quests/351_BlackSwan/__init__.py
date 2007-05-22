@@ -12,8 +12,9 @@ ORDER_OF_GOSTA = 4296
 LIZARD_FANG = 4297
 BARREL_OF_LEAGUE = 4298
 BILL_OF_IASON_HEINE = 4310
-CHANCE = 80
-CHANCE2 = 7
+CHANCE = 10
+CHANCE2 = 15
+CHANCE_barrel = 0
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -35,7 +36,7 @@ class Quest (JQuest) :
      elif event == "30969-03a.htm" :
          if amount2 :
              htmltext = "30969-03.htm"
-             st.giveItems(ADENA,amount2*3880)
+             st.giveItems(ADENA,3880)
              st.giveItems(BILL_OF_IASON_HEINE,int(amount2*Config.RATE_QUESTS_REWARD))
              st.takeItems(BARREL_OF_LEAGUE,-1)
      elif event == "30969-06.htm" :
@@ -79,12 +80,22 @@ class Quest (JQuest) :
      if st.getState() != STARTED : return 
      npcId = npc.getNpcId()
      cond = st.getInt("cond")
-     random = st.getRandom(100)
-     if random<=CHANCE :
-         st.giveItems(LIZARD_FANG,st.getRandom(5)+1)
+     random = st.getRandom(20)
+     if random<CHANCE :
+         st.giveItems(LIZARD_FANG,1)
          st.playSound("ItemSound.quest_itemget")
-     if random<=CHANCE2 :
+         if random==CHANCE_barrel :
+	          st.giveItems(BARREL_OF_LEAGUE,1)
+	          st.set("cond","2")
+     elif random<CHANCE2 :
+         st.giveItems(LIZARD_FANG,2)
+         st.playSound("ItemSound.quest_itemget")
+         if random==CHANCE_barrel :
+             st.giveItems(BARREL_OF_LEAGUE,1)
+             st.set("cond","2")
+     elif st.getRandom(100)<4:
          st.giveItems(BARREL_OF_LEAGUE,1)
+         st.playSound("ItemSound.quest_itemget")
          st.set("cond","2")
      return
 
