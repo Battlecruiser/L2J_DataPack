@@ -24,9 +24,9 @@
     <effect count="5" name="Fear" time="6" val="0"/>
   </for>
 </skill>
-<skill id="1401" levels="10" name="Major Heal">
-  <table name="#mpConsume"> 60 64 65 67 69 72 74 77 78 80 </table>
-  <table name="#power"> 690 722 753 783 812 840 867 892 915 936 </table>
+<skill id="1401" levels="11" name="Major Heal">
+  <table name="#mpConsume"> 60 64 65 67 69 72 74 77 78 80 80 </table>
+  <table name="#power"> 690 722 753 783 812 840 867 892 915 936 946 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="1"/>   
