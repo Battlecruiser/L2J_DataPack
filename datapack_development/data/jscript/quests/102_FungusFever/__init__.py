@@ -55,10 +55,10 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
    if npcId == 30284 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-      if st.getPlayer().getRace().ordinal() != 1 :
+      if player.getRace().ordinal() != 1 :
          htmltext = "30284-00.htm"
          st.exitQuest(1)
-      elif st.getPlayer().getLevel() >= 12 :
+      elif player.getLevel() >= 12 :
          htmltext = "30284-07.htm"
          return htmltext
       else:
@@ -122,7 +122,7 @@ class Quest (JQuest) :
            st.playSound("ItemSound.quest_finish")
            htmltext = "30284-06.htm"
            st.set("onlyone","1")
-           if st.getPlayer().getClassId().getId() in range(18,25) :
+           if player.getClassId().getId() in range(18,25) :
              st.giveItems(SWORD_OF_SENTINEL_ID,1)
              st.giveItems(1835,int(1000*Config.RATE_QUESTS_REWARD))
            else:

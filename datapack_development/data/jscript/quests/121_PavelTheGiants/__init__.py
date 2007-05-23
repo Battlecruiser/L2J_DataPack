@@ -34,7 +34,7 @@ class Quest (JQuest) :
     if id == COMPLETED:
        htmltext = "<html><head><body>This quest have already been completed.</body></html>"
     elif id == CREATED and npcId == NEWYEAR :
-      if st.getPlayer().getLevel() >= 46 :
+      if player.getLevel() >= 46 :
         htmltext = "31961-1.htm"
         st.set("cond","1")
         st.setState(STARTED)
