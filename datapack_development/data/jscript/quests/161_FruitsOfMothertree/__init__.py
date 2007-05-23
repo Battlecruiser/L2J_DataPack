@@ -32,9 +32,9 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    if id == CREATED :
-     if st.getPlayer().getRace().ordinal() != 1 :
+     if player.getRace().ordinal() != 1 :
        htmltext = "30362-00.htm"
-     elif st.getPlayer().getLevel() >= 3 :
+     elif player.getLevel() >= 3 :
        htmltext = "30362-03.htm"
        st.set("cond","0")
      else:

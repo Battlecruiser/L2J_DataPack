@@ -44,7 +44,7 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
    if npcId == VLADIMIR and int(st.get("cond")) == 0 :
-     if st.getPlayer().getLevel() >= 60 :
+     if player.getLevel() >= 60 :
        htmltext = "31302-0.htm"
        return htmltext
      if id == COMPLETED :

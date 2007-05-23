@@ -56,7 +56,7 @@ class Quest (JQuest) :
    ItemsCount_BP = st.getQuestItemsCount(BAULS_POTION) 
  
    if npcId == DARIN and cond == 0 and onlyone == 0 : 
-     if st.getPlayer().getLevel() >= 2 : 
+     if player.getLevel() >= 2 : 
        if cond < 15 : 
          htmltext = "30048-02.htm" 
        else: 

@@ -55,7 +55,7 @@ class Quest (JQuest) :
      st.set("id","0")
    if npcId == 30041 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
         if int(st.get("cond"))<15 :
-          if st.getPlayer().getLevel() >= 2 :
+          if player.getLevel() >= 2 :
             htmltext = "30041-03.htm"
             return htmltext
           else:

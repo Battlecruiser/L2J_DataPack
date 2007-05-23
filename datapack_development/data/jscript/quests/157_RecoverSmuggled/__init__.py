@@ -34,7 +34,7 @@ class Quest (JQuest) :
    if id == COMPLETED :
      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif cond == 0 :
-     if st.getPlayer().getLevel() >= 5 :
+     if player.getLevel() >= 5 :
         htmltext = "30005-03.htm"
      else :
         htmltext = "30005-02.htm"

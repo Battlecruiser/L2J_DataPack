@@ -60,10 +60,10 @@ class Quest (JQuest) :
      st.set("id","0")
    if npcId == 30218 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
       if int(st.get("cond")) < 15 :
-        if st.getPlayer().getLevel() >= 10 and st.getPlayer().getRace().ordinal() == 1 :
+        if player.getLevel() >= 10 and player.getRace().ordinal() == 1 :
           htmltext = "30218-02.htm"
           return htmltext
-        elif st.getPlayer().getRace().ordinal() != 1 :
+        elif player.getRace().ordinal() != 1 :
           htmltext = "30218-00.htm"
           st.exitQuest(1)
         else:
@@ -110,10 +110,10 @@ class Quest (JQuest) :
           if st.getQuestItemsCount(KENDNELLS_ORDER8_ID) :
             st.takeItems(KENDNELLS_ORDER8_ID,1)
           st.takeItems(KABOO_CHIEF_TORC2_ID,1)
-          if (st.getPlayer().getClassId().getId() == 0x00 or st.getPlayer().getClassId().getId() == 0x12 or st.getPlayer().getClassId().getId() == 0x1f or st.getPlayer().getClassId().getId() == 0x07 or st.getPlayer().getClassId().getId() == 0x01 or st.getPlayer().getClassId().getId() == 0x13 or st.getPlayer().getClassId().getId() == 0x16 or st.getPlayer().getClassId().getId() == 0x23 or st.getPlayer().getClassId().getId() == 0x04 or st.getPlayer().getClassId().getId() == 0x20 or st.getPlayer().getClassId().getId() == 0x2c or st.getPlayer().getClassId().getId() == 0x2f or st.getPlayer().getClassId().getId() == 0x35 or st.getPlayer().getClassId().getId() == 0x36 or st.getPlayer().getClassId().getId() == 0x38 or st.getPlayer().getClassId().getId() == 0x2d) and int(st.get("onlyone")) == 0 :
-            st.giveItems(RED_SUNSET_SWORD_ID,1)
-          elif int(st.get("onlyone")) == 0 :
+          if player.getClassId().isMage() and st.getInt("onlyone") == 0:
             st.giveItems(RED_SUNSET_STAFF_ID,1)
+          elif st.getInt("onlyone") == 0 :
+            st.giveItems(RED_SUNSET_SWORD_ID,1)
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
           st.set("onlyone","1")

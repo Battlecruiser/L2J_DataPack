@@ -43,7 +43,7 @@ class Quest (JQuest) :
         id = st.getState()
         if id == CREATED :
             st.set("cond","0")
-            if st.getPlayer().getRace().ordinal() == 4 :
+            if player.getRace().ordinal() == 4 :
                 htmltext = "30533-02.htm"
             else :
                 htmltext = "30533-01.htm"
