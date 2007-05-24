@@ -1795,7 +1795,7 @@
   <!-- Decrease Weight 1 - Weight Penalty +3000 (does not increase capacity) -->
   <!-- Decrease Weight 2 - Weight Penalty +6000 (does not increase capacity) -->
   <!-- Decrease Weight 3 - Weight Penalty +9000 (does not increase capacity) -->
-  <table name="#Weight"> 1.5 2 2.5 </table>
+  <table name="#Weight"> 3000 6000 9000 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -1814,12 +1814,12 @@
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Weight" stackType="Weight">
-      <mul order="0x30" stat="maxLoad" val="#Weight"/>
+      <add order="0x40" stat="maxLoad" val="#Weight"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="2.5" stackType="Weight">
-      <mul order="0x30" stat="maxLoad" val="2.5"/>
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="9000" stackType="Weight">
+      <add order="0x40" stat="maxLoad" val="9000"/>
     </effect>
   </enchant1for>
 </skill>
