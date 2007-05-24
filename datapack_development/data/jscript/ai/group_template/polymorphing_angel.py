@@ -25,7 +25,7 @@ class polymorphing_angel(JQuest) :
         if self.AngelSpawns.has_key(npcId) :
             objId = self.getPcSpawn(player).addSpawn(self.AngelSpawns[npcId],npc, False)
             newNpc = self.getPcSpawn(player).getSpawn(objId).getLastSpawn()
-            newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+            newNpc.addDamageHate(player,0,100)
         return 
 
 # now call the constructor (starts up the ai)
