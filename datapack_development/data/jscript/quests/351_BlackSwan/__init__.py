@@ -23,16 +23,18 @@ class Quest (JQuest) :
      htmltext = event
      amount = st.getQuestItemsCount(LIZARD_FANG)
      amount2 = st.getQuestItemsCount(BARREL_OF_LEAGUE)
+     bonus=0
      if event == "30916-03.htm" :
          st.setState(STARTED)
          st.set("cond","1")
          st.giveItems(ORDER_OF_GOSTA,1)
          st.playSound("ItemSound.quest_accept")
-     elif event == "30969-02a.htm" :
-         if amount:
-             htmltext = "30969-02.htm"
-             st.giveItems(ADENA,amount*20)
-             st.takeItems(LIZARD_FANG,-1)
+     elif event == "30969-02a.htm" and amount :
+         if amount > 10 :
+            bonus=3880
+         htmltext = "30969-02.htm"
+         st.giveItems(ADENA,amount*20+bonus)
+         st.takeItems(LIZARD_FANG,-1)
      elif event == "30969-03a.htm" :
          if amount2 :
              htmltext = "30969-03.htm"
