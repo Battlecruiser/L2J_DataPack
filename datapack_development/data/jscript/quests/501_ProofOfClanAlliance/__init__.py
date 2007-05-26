@@ -33,7 +33,7 @@ ANTIDOTE_RECIPE   = 3872
 POTION_OF_RECOVERY= 3889
 
 #Quest mobs, drop, rates and prices
-CHESTS=range(18257,18264)
+CHESTS=range(18257,18265)
 MOBS=[[20685,HERB_OF_VANOR],[20644,HERB_OF_HARIT],[20576,HERB_OF_OEL_MAHUM]]
 RATE=35
 #stackable items paid to retry chest game: (default 10k adena)
@@ -77,7 +77,7 @@ def chest_game(st,command) :
        leader(st).set("chest_try",str(attempts+1))
        randomize_chests(st)
        for row in range(2) :
-           for col in range(2) :
+           for col in range(4) :
                leader(st).getPcSpawn().addSpawn(18257+(4*row+col),x+(row*u)+(col*v),y-(w*col),z,61000)
        leader(st).startQuestTimer("chest_timer",60000)
     elif command == "stop" :
