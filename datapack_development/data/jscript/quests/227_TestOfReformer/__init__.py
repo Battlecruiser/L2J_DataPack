@@ -79,7 +79,8 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    if npcId != 30118 and id != STARTED : return htmltext
-   if id == CREATED :
+
+   if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
      st.set("onlyone","0")
@@ -177,14 +178,12 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return 
    if st.getState() != STARTED : return 
-   
    npcId = npc.getNpcId()
    if npcId == 27099 :
     if int(st.get("cond")) == 1 and st.getQuestItemsCount(RIPPED_DIARY) < 7 and st.getQuestItemsCount(BOOK_OF_REFORM) >= 1 :
       if st.getQuestItemsCount(RIPPED_DIARY) == 6 :
         st.set("cond","2")
-        st.getPcSpawn().addSpawn(27128,53668,143283,-3863,300000)
-        return "Aruraune has spawned at X=53668 Y=143283 Z=-3863"
+        st.getPcSpawn().addSpawn(27128,npc.getX(),npc.getY(),npc.getZ(),npc.getHeading(),True,300000)
         st.takeItems(RIPPED_DIARY,st.getQuestItemsCount(RIPPED_DIARY))
       else:
         st.giveItems(RIPPED_DIARY,1)
