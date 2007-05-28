@@ -258,8 +258,7 @@ class Quest (JQuest) :
      else:
       st.playSound("Itemsound.quest_itemget")
    if npcId==20781 and random<30 and count<maxcount:
-     st.getPcSpawn().addSpawn(27094,55841,176464,-2993,300000)
-     return "Delu Lizardman Assassin has spawned at X=55841 Y=176464 Z=-2993"
+     st.getPcSpawn().addSpawn(27094,npc.getX(),npc.getY(),npc.getZ(),npc.getHeading(),True,300000)
    return
 
 
