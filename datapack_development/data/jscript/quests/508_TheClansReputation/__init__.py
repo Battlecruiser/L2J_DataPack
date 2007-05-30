@@ -127,8 +127,9 @@ class Quest (JQuest) :
       if player.isInsideRadius(pleader, 1600, 1, 0) :
        st = pleader.getQuestState(qn)
   if not st : return
-  if st.getInt("cond") == 1 and st.getState() == STARTED :
-   raid,item = REWARDS_LIST[st.getInt("raid")]
+  option=st.getInt("raid")
+  if st.getInt("cond") == 1 and st.getState() == STARTED and option in REWARDS_LIST.keys():
+   raid,item = REWARDS_LIST[option]
    npcId=npc.getNpcId()
    if npcId == raid and not st.getQuestItemsCount(item) :
       st.giveItems(item,1)
