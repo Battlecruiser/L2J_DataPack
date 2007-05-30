@@ -23,6 +23,7 @@ __all__ = [
 '35_FindGlitteringJewelry',
 '36_MakeASewingKit',
 '37_PleaseMakeMeFormalWear',
+'38_DragonFangs',
 '39_RedEyedInvaders',
 '42_HelpTheUncle',
 '43_HelpTheSister',
