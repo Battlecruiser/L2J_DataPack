@@ -4,7 +4,8 @@
 -- In general, category 0 is for adena and 1 seal stone color (each seal stone color should be in a different category).
 -- In general, category 1 is for full drops and parts of equipable items.  However, you can change this.
 -- In general, category 2 is for all other items.  However, you can change this.
--- In general, more categories are only used for RBs who have 1 item per category (i.e. do not really drop categorized)
+-- In general, more categories are only used for RBs who have 1 item per category (i.e. do not really drop categorized),
+-- with the sole exception of category 200 that is used for Life Stones. However, you can change this too.
 -- You can create more categories as you see fit.  Just make sure the "category" number is non-negative!!
 -- Also, it is NOT a problem if category numbers are skipped (so you can have -1, 1, 5, 10 as your categories).
 --
@@ -26425,3 +26426,99 @@ INSERT INTO `droplist` VALUES
 (22217,8903,1,1,2,11235), -- Ancient Spellbook: Gehenna
 (22217,8954,1,1,2,11235), -- Blue Primeval Crystal
 (22217,4042,1,3,-1,300000); -- Enria
+
+-- WIP - Interlude Life Stones
+INSERT INTO `droplist` VALUES
+--  Top-Grade Life Stone: level 46
+(20236,8753,1,1,200,104), -- Cave Servant
+(21242,8753,1,1,200,32), -- Grave Overlord
+--  Top-Grade Life Stone: level 49
+(20995,8754,1,1,200,72), -- Garden Guard
+--  Top-Grade Life Stone: level 52
+(20146,8755,1,1,200,43), -- Headless Knight
+(20596,8755,1,1,200,34), -- Liele Elder
+--  Top-Grade Life Stone: level 70
+(29047,8761,1,1,200,43478), -- Scarlet van Halisha
+(21306,8761,1,1,200,115), -- Disciples of Protection
+(21770,8761,1,1,200,59), -- Dark Omen Invader Elite Soldier
+(21773,8761,1,1,200,39), -- Dark Omen Invader Magus
+(21772,8761,1,1,200,29), -- Dark Omen Invader Elite Soldier
+-- (29025,8761,1,1,200,chance), -- Baium
+-- (25276,8761,1,1,200,chance), -- Death Lord Ipos
+--  Top-Grade Life Stone: level 76
+(29047,8762,1,2,200,166666), -- Scarlet van Halisha
+(22215,8762,1,1,200,38461), -- Tyrannosaurus
+(22199,8762,1,1,200,2403), -- Pterosaur
+-- (29025,8762,1,1,200,chance), -- Baium
+--  High-Grade Life Stone: level 46
+(20219,8743,1,1,200,415), -- Validus
+(21195,8743,1,1,200,126), -- Gigant Commander
+(21149,8743,1,1,200,87), -- Decayed Ancient Pikeman
+(20569,8743,1,1,200,27), -- Formor Elder
+--  High-Grade Life Stone: level 49
+(29014,8744,1,3,200,1000000), -- Orfen
+(20239,8744,1,1,200,126), -- Cave Servant Captain
+(20591,8744,1,1,200,69), -- Valley Treant
+(20683,8744,1,1,200,38), -- Vanor Silenos Scout
+(22053,8744,1,1,200,25), -- Horrifying Cannon Golem I
+(22056,8744,1,1,200,10), -- Probe Golem Champion I
+--  High-Grade Life Stone: level 52
+(29006,8745,2,4,200,1000000), -- Core
+(20595,8745,1,1,200,73), -- Fline Elder
+(21176,8745,1,1,200,59), -- Lilim Magus
+(20574,8745,1,1,200,19), -- Elder Tarlk Basilisk
+(21245,8745,1,1,200,15), -- Crypt Inquisitor
+--  High-Grade Life Stone: level 55
+(21222,8746,1,1,200,53), -- Sepulcher Archon
+(22083,8746,1,1,200,45), -- Baby Panthera
+(20597,8746,1,1,200,35), -- Valley treant Elder
+--  High-Grade Life Stone: level 58
+(21154,8747,1,1,200,22), -- Hell Keeper Medusa
+--  High-Grade Life Stone: level 61
+(21748,8748,1,1,200,170), -- Forbidden Path Invader Elite Soldier
+(22094,8748,1,1,200,93), -- Frost Buffalo
+(21156,8748,1,1,200,26), -- Purgatory Shadow
+(21155,8748,1,1,200,21), -- Purgatory Conjurer
+(21179,8748,1,1,200,3), -- Lilim Priest
+--  High-Grade Life Stone: level 64
+(20821,8749,1,1,200,390), -- Erin Ediunce
+(21747,8749,1,1,200,149), -- Forbidden Path Invader Elite Soldier
+(21749,8749,1,1,200,122), -- Forbidden Path Invader Elite Soldier
+(21750,8749,1,1,200,117), -- Forbidden Path Invader Magus
+(20625,8749,1,1,200,60), -- Malruk Knight
+(21743,8749,1,1,200,49), -- Forbidden Path Invader Elite Soldier
+(21531,8749,1,1,200,20), -- Punishment of Splendor
+(20674,8749,1,1,200,15), -- Doom Knight
+(21526,8749,1,1,200,14), -- Wisdom of Splendor
+-- (25444,8749,1,1,200,chance), -- Enmity Ghost Ramdal
+-- (25322,8749,1,1,200,chance), -- Demon's Agent Falston
+--  High-Grade Life Stone: level 67
+(21771,8750,1,1,200,246), -- Dark Omen Invader Elite Soldier
+(21299,8750,1,1,200,172), -- Buffalo Slave
+(21599,8750,1,1,200,131), -- Requiem Priest
+--  High-Grade Life Stone: level 70
+(29028,8751,1,4,200,1000000), -- Valakas
+(29047,8751,2,4,200,500000), -- Scarlet van Halisha
+(29019,8751,2,4,200,166666), -- Antharas
+(21089,8751,1,1,200,70), -- Bloody Lord
+(21230,8751,1,1,200,63), -- Sepulcher Guard
+(21768,8751,1,1,200,36), -- Dark Omen Invader Warrior
+(21315,8751,1,1,200,20), -- Hot Springs Buffalo
+(21320,8751,1,1,200,17), -- Hot Springs Yeti
+-- (29025,8751,1,2,200,chance), -- Baium
+-- (25523,8751,1,1,200,chance), -- Plague Golem
+-- (25245,8751,1,1,200,chance), -- Last Lesser Giant Glaki
+-- (25249,8751,1,1,200,chance), -- Palatanos of Horrific Power
+-- (25220,8751,1,1,200,chance), -- Death Lord Hallate
+-- (25229,8751,1,1,200,chance), -- Storm Winged Naga
+-- (25244,8751,1,1,200,chance), -- Last Lesser Giant Olkuth
+--  High-Grade Life Stone: level 76
+(29019,8752,3,4,200,540000), -- Antharas
+(29047,8752,2,4,200,333333), -- Scarlet van Halisha
+(22123,8752,1,1,200,53), -- Monastic Crusader
+(22143,8752,1,1,200,44), -- Triol's Believer
+(21186,8752,1,1,200,27), -- Lilim Court Knight
+(21185,8752,1,1,200,25), -- Lilim Great Mystic
+(21164,8752,1,1,200,24), -- Guardian Spirit of Ancient Holy Ground
+(22122,8752,1,1,200,18), -- Monastic Pilgrim
+-- (29025,8752,1,2,200,chance), -- Baium
