@@ -562,10 +562,7 @@
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="itemConsumeIdOT" val="1458"/>
   <set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
-  <set name="itemConsumeSteps" val="4"/>  <!-- consume items 4 times during the life of the summon -->
-  <set name="summonTotalLifeTime" val="1200000"/>  <!-- total lifetime -->
-  <set name="summonTimeLostIdle" val="500" />  <!-- each second that passes, if the summon is NOT fighting, lose this much lifetime --> 
-  <set name="summonTimeLostActive" val="1000" />  <!-- each second that passes, if the summon is fighting, lose this much lifetime --> 
+  <set name="itemConsumeTime" val="240000"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
