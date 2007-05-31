@@ -793,18 +793,26 @@
   </for>
 </skill>
 <skill id="2188" levels="1" name="Golden Spice">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="BEAST_FEED"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="itemConsumeId" val="6643" />
+  <set name="itemConsumeCount" val="1"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
   <for>
   </for>
 </skill>
 <skill id="2189" levels="1" name="Crystal Spice">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="BEAST_FEED"/>
+  <set name="itemConsumeId" val="6644" />
+  <set name="itemConsumeCount" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
   <for>
   </for>
 </skill>
