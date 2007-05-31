@@ -110,7 +110,7 @@
   </table>
   <table name="#mpConsume_Init"> 11 13 14 </table>
   <table name="#mpConsume"> 43 49 53 </table>
-  <table name="#Tab-rShld"> 1.6 1.8 2 </table>
+  <table name="#Tab-sDef"> 1.6 1.8 2 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -129,12 +129,12 @@
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-      <mul order="0x30" stat="rShld" val="#Tab-rShld"/>
+      <mul order="0x30" stat="sDef" val="#Tab-sDef"/>
     </effect>
   </for>
   <enchant1for>
     <effect count="1" name="Buff" time="#ench1time" val="0">
-      <mul order="0x30" stat="rShld" val="2"/>
+      <mul order="0x30" stat="sDef" val="2"/>
     </effect>
   </enchant1for>
 </skill>
