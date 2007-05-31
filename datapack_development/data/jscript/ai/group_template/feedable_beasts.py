@@ -1,12 +1,14 @@
 # Growth-capable mobs: Polymorphing upon successful feeding.
 # Written by Fulminus
 # # # # # # # # # # #
-
 import sys
+from net.sf.l2j.gameserver.ai import CtrlIntention
+from net.sf.l2j.gameserver.idfactory import IdFactory
+from net.sf.l2j.gameserver.datatables import NpcTable
+from net.sf.l2j.gameserver.model.actor.instance import L2TamedBeastInstance
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver.serverpackets import CreatureSay
 from net.sf.l2j.gameserver.serverpackets import SocialAction
-from net.sf.l2j.gameserver.ai import CtrlIntention
 from net.sf.l2j.util import Rnd;
 
 GOLDEN_SPICE = 6643
@@ -15,14 +17,18 @@ SKILL_GOLDEN_SPICE = 2188
 SKILL_CRYSTAL_SPICE = 2189
 foodSkill = {GOLDEN_SPICE:SKILL_GOLDEN_SPICE, CRYSTAL_SPICE:SKILL_CRYSTAL_SPICE}
 
-class growing_beasts(JQuest) :
+class feedable_beasts(JQuest) :
 
     # init function.  Add in here variables that you'd like to be inherited by subclasses (if any)
     def __init__(self,id,name,descr):
         # firstly, don't forget to call the parent constructor to prepare the event triggering
         # mechanisms etc.
         JQuest.__init__(self,id,name,descr)
-        # DEFINE MEMBER VARIABLES FOR THIS AI 
+        # DEFINE MEMBER VARIABLES FOR THIS AI
+        # all mobs that can eat...
+        self.tamedBeasts = range(16013,16019)
+        self.feedableBeasts = range(21451,21508)+range(21824,21830)+ self.tamedBeasts
+        # all mobs that grow by eating
         # mobId: current_growth_level, {food: [list of possible mobs[possible sublist of tamed pets]]}, chance of growth
         self.growthCapableMobs = {
             # Alpen Kookabura
@@ -81,19 +87,17 @@ class growing_beasts(JQuest) :
             21505: [2,{GOLDEN_SPICE:[],CRYSTAL_SPICE:[[21507,21829],[16015,16016]]},25]
             }
         self.Text = [["What did you just do to me?","You want to tame me, huh?","Do not give me this. Perhaps you will be in danger.","Bah bah. What is this unpalatable thing?","My belly has been complaining.  This hit the spot.","What is this? Can I eat it?","You don't need to worry about me.","Delicious food, thanks.","I am starting to like you!","Gulp"], 
-                    ["I do not think you have given up on the idea of taming me.","That is just food to me.  Perhaps I can eat your hand too.","Will eating this make me fat? Ha my ha","Why do you always feed me?","Do not trust me.  I may betray you"], 
+                    ["I do not think you have given up on the idea of taming me.","That is just food to me.  Perhaps I can eat your hand too.","Will eating this make me fat? Ha ha","Why do you always feed me?","Do not trust me.  I may betray you"], 
                     ["Destroy","Look what you have done!","Strange feeling...!  Evil intentions grow in my heart...!","It is happenning!","This is sad...Good is sad...!"]]
 
         self.feedInfo = [] # will hold tuples of: [objectId of mob, objectId of player feeding it]
-        
-        for i in self.growthCapableMobs.keys() :
+
+        for i in self.feedableBeasts :
             self.addSkillUseId(i)
             self.addKillId(i)
 
-
     def spawnNext(self, npc, growthLevel,player,food) :
         npcId = npc.getNpcId()
-        isTrained = 0
         nextNpcId = 0
 
         # find the next mob to spawn, based on the current npcId, growthlevel, and food.
@@ -101,11 +105,11 @@ class growing_beasts(JQuest) :
             rand = Rnd.get(2)
             # if tamed, the mob that will spawn depends on the class type (fighter/mage) of the player!
             if rand == 1 :
-                isTrained = 1
                 if player.getClassId().isMage() :
                     nextNpcId = self.growthCapableMobs[npcId][1][food][1][1]
                 else :
                     nextNpcId = self.growthCapableMobs[npcId][1][food][1][0]
+  
             # if not tamed, there is a small chance that have "mad cow" disease.
             # that is a stronger-than-normal animal that attacks its feeder
             else :
@@ -118,39 +122,58 @@ class growing_beasts(JQuest) :
             nextNpcId = self.growthCapableMobs[npcId][1][food][Rnd.get(len(self.growthCapableMobs[npcId][1][food]))]
         
         # remove the feedinfo of the mob that got despawned, if any
-        if self.feedInfo.count([npc.getObjectId(),player.getObjectId()]) :
+        if [npc.getObjectId(),player.getObjectId()] in self.feedInfo :
             self.feedInfo.remove([npc.getObjectId(),player.getObjectId()])
         
         # despawn the old mob
         npc.onDecay()
         
-        # spawn the new mob
-        spawnObjId = self.getPcSpawn(player).addSpawn(nextNpcId,npc,False)
-        nextNpc = self.getPcSpawn(player).getSpawn(spawnObjId).getLastSpawn()
-        
-        # register the player in the feedinfo for the mob that just spawned
-        self.feedInfo = self.feedInfo + [[nextNpc.getObjectId(),player.getObjectId()]]
-
         # if this is finally a trained mob, then despawn any other trained mobs that the
-        # player might have.  
-        if isTrained :
+        # player might have and initialize the Tamed Beast.
+        if nextNpcId in self.tamedBeasts :
             oldTrained = player.getTrainedBeast()
             if oldTrained :
-                oldTrained.onDecay()
-            player.setTrainedBeast(nextNpc)
-            nextNpc.setFoodType(foodSkill[food])
+                oldTrained.doDespawn()
+
+            #the following 5 commented lines are not needed, but they provide a plausible alternate implementation...just in case...
+            #spawnObjId = self.getPcSpawn(player).addSpawn(nextNpcId,npc,False)
+            #nextNpc = self.getPcSpawn(player).getSpawn(spawnObjId).getLastSpawn()
+            #nextNpc.setOwner(player)
+            #nextNpc.setFoodType(foodSkill[food])
+            #nextNpc.setHome(npc)
+                
+            template = NpcTable.getInstance().getTemplate(nextNpcId)
+            nextNpc = L2TamedBeastInstance(IdFactory.getInstance().getNextId(), template, player, foodSkill[food], npc.getX(), npc.getY(), npc.getZ())
+
+            objectId = nextNpc.getObjectId()
+            
+            # also, perform a rare random chat
+            rand = Rnd.get(20)
+            if rand > 4 : pass
+            elif rand == 0 : npc.broadcastPacket(CreatureSay(objectId,0,nextNpc.getName(), player.getName()+", will you show me your hideaway?"))
+            elif rand == 1 : npc.broadcastPacket(CreatureSay(objectId,0,nextNpc.getName(), player.getName()+", whenever I look at spice, I think about you."))
+            elif rand == 2 : npc.broadcastPacket(CreatureSay(objectId,0,nextNpc.getName(), player.getName()+", you do not need to return to the village.  I will give you strength"))
+            elif rand == 3 : npc.broadcastPacket(CreatureSay(objectId,0,nextNpc.getName(), "Thanks, "+player.getName()+".  I hope I can help you"))
+            elif rand == 4 : npc.broadcastPacket(CreatureSay(objectId,0,nextNpc.getName(), player.getName()+", what can I do to help you?"))
+
         # if not trained, the newly spawned mob will automatically be agro against its feeder
         # (what happened to "never bite the hand that feeds you" anyway?!)
-        else :            
+        else :
+            # spawn the new mob
+            spawnObjId = self.getPcSpawn(player).addSpawn(nextNpcId,npc,False)
+            nextNpc = self.getPcSpawn(player).getSpawn(spawnObjId).getLastSpawn()
+            
+            # register the player in the feedinfo for the mob that just spawned
+            self.feedInfo = self.feedInfo + [[nextNpc.getObjectId(),player.getObjectId()]]
             nextNpc.addDamageHate(player,0,99999)
-            nextNpc.setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
+            nextNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
 
     def onSkillUse (self,npc,player,skill):
         # gather some values on local variables
         npcId = npc.getNpcId()
         skillId = skill.getId()
         # check if the npc and skills used are valid for this script.  Exit if invalid.
-        if npcId not in self.growthCapableMobs.keys() : return
+        if npcId not in self.feedableBeasts : return
         if skillId not in [SKILL_GOLDEN_SPICE,SKILL_CRYSTAL_SPICE] : return
 
         food = 0
@@ -159,28 +182,43 @@ class growing_beasts(JQuest) :
         elif skillId == SKILL_CRYSTAL_SPICE :
             food = CRYSTAL_SPICE
 
-        # do nothing if this mob doesn't eat the specified food (food gets consumed but has no effect).
-        if len(self.growthCapableMobs[npcId][1][food]) == 0 : return
-
-        # more value gathering on local variables       
         objectId = npc.getObjectId()
-        growthLevel = self.growthCapableMobs[npcId][0]
-
         # display the social action of the beast eating the food.
         npc.broadcastPacket(SocialAction(objectId,2))
 
-        # rare random talk...
-        if Rnd.get(20) == 0 :
-            npc.broadcastPacket(CreatureSay(objectId,0,npc.getName(),self.Text[growthLevel][Rnd.get(len(self.Text[growthLevel]))]))
+        # if this pet can't grow, it's all done.
+        if npcId in self.growthCapableMobs.keys() :
+            # do nothing if this mob doesn't eat the specified food (food gets consumed but has no effect).
+            if len(self.growthCapableMobs[npcId][1][food]) == 0 : return
 
-        if growthLevel > 0 :
-            # check if this is the same player as the one who raised it from growth 0.
-            # if no, then do not allow a chance to raise the pet (food gets consumed but has no effect).
-            if not self.feedInfo.count([objectId,player.getObjectId()]) : return
+            # more value gathering on local variables       
+            growthLevel = self.growthCapableMobs[npcId][0]
 
-        # Polymorph the mob, with a certain chance, given its current growth level
-        if Rnd.get(100) < self.growthCapableMobs[npcId][2] :
-            self.spawnNext(npc, growthLevel,player,food)
+            # rare random talk...
+            if Rnd.get(20) == 0 :
+                npc.broadcastPacket(CreatureSay(objectId,0,npc.getName(),self.Text[growthLevel][Rnd.get(len(self.Text[growthLevel]))]))
+
+            if growthLevel > 0 :
+                # check if this is the same player as the one who raised it from growth 0.
+                # if no, then do not allow a chance to raise the pet (food gets consumed but has no effect).
+                if not self.feedInfo.count([objectId,player.getObjectId()]) : return
+
+            # Polymorph the mob, with a certain chance, given its current growth level
+            if Rnd.get(100) < self.growthCapableMobs[npcId][2] :
+                self.spawnNext(npc, growthLevel,player,food)
+        elif npcId in self.tamedBeasts :
+            if skillId == npc.getFoodType() :
+                npc.onReceiveFood()
+                mytext = ["Refills! Yeah!","I am such a gluttonous beast, it is embarrassing! Ha ha",
+                          "Your cooperative feeling has been getting better and better.",
+                          "I will help you!",
+                          "The weather is really good.  Wanna go for a picnic?",
+                          "I really like you! This is tasty...",
+                          "If you do not have to leave this place, then I can help you.",
+                          "What can I helped you with?",
+                          "I am not here only for food!",
+                          "Yam, yam, yam, yam, yam!"]
+                npc.broadcastPacket(CreatureSay(objectId,0,npc.getName(),mytext[Rnd.get(len(mytext))]))
         return
 
     def onKill (self,npc,player):
@@ -188,7 +226,8 @@ class growing_beasts(JQuest) :
         if self.feedInfo.count([npc.getObjectId(),player.getObjectId()]) :
             self.feedInfo.remove([npc.getObjectId(),player.getObjectId()])
 
+
 # now call the constructor (starts up the ai)
-QUEST		= growing_beasts(-1,"group_template","ai")
+QUEST		= feedable_beasts(-1,"group_template","ai")
     
 print "AI: group template: Feedable Beasts...loaded!"
