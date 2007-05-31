@@ -26520,5 +26520,5 @@ INSERT INTO `droplist` VALUES
 (21186,8752,1,1,200,27), -- Lilim Court Knight
 (21185,8752,1,1,200,25), -- Lilim Great Mystic
 (21164,8752,1,1,200,24), -- Guardian Spirit of Ancient Holy Ground
-(22122,8752,1,1,200,18), -- Monastic Pilgrim
+(22122,8752,1,1,200,18); -- Monastic Pilgrim
 -- (29025,8752,1,2,200,chance), -- Baium
