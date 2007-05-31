@@ -151,6 +151,13 @@ class Quest (JQuest) :
                     pst.giveItems(RAIN_SONG,1)
                     pst.playSound("ItemSound.quest_middle")
                     pst.set("cond","5")
+     else :
+        pst = player.getQuestState(qn)
+        if pst :
+            if pst.getInt("cond") == 4 and pst.getQuestItemsCount(RAIN_SONG) < 1 :
+                pst.giveItems(RAIN_SONG,1)
+                pst.playSound("ItemSound.quest_middle")
+                pst.set("cond","5")
    return 
 
 QUEST       = Quest(246,qn,"Possessor Of A Precious Soul - 3")
