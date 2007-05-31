@@ -142,15 +142,11 @@ class Quest (JQuest) :
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
-
    npcId = npc.getNpcId()
    id = st.getState()
    if npcId != TALIEN and id != STARTED : return htmltext
-
    cond = st.getInt("cond")
    id = st.getState()
-   if id == CREATED :
-     st.set("cond","0")
    if st.getPlayer().isSubClassActive() :
      if npcId == TALIEN :
        if cond == 0 :
@@ -161,87 +157,87 @@ class Quest (JQuest) :
            st.exitQuest(1)
          elif st.getPlayer().getLevel() >= 50 :
            htmltext = "31739-1.htm"
-       if cond == 1 :
+       elif cond == 1 :
          htmltext = "31739-5.htm"
-       if cond == 4 and st.getQuestItemsCount(LEGEND_OF_SEVENTEEN) == 1 :
+       elif cond == 4 and st.getQuestItemsCount(LEGEND_OF_SEVENTEEN) == 1 :
          htmltext = "31739-6.htm"
-       if cond == 5 :
+       elif cond == 5 :
          htmltext = "31739-9.htm"
-       if cond == 8 and st.getQuestItemsCount(ECHO_CRYSTAL) == 1 :
+       elif cond == 8 and st.getQuestItemsCount(ECHO_CRYSTAL) == 1 :
          htmltext = "31739-11.htm"
-       if cond == 9 :
+       elif cond == 9 :
          htmltext = "31739-13.htm"
-       if cond == 10 and st.getQuestItemsCount(POETRY_BOOK) == 1 :
+       elif cond == 10 and st.getQuestItemsCount(POETRY_BOOK) == 1 :
          htmltext = "31739-14.htm"
-       if cond == 11 :
+       elif cond == 11 :
          htmltext = "31739-16.htm"
-     if npcId == GABRIELLE :
+     elif npcId == GABRIELLE :
        if cond == 1 :
          htmltext = "30753-1.htm"
-       if cond == 2 :
+       elif cond == 2 :
          htmltext = "30753-3.htm"
-     if npcId == GILMORE :
+     elif npcId == GILMORE :
        if cond == 2 :
          htmltext = "30754-1.htm"
-       if cond == 3 :
+       elif cond == 3 :
          htmltext = "30754-3.htm"
-     if npcId == KANTABILON :
+     elif npcId == KANTABILON :
        if cond == 5 :
          htmltext = "31042-1.htm"
-       if cond == 6 :
+       elif cond == 6 :
          htmltext = "31042-4.htm"
-       if cond == 7 and st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) == 10 :
+       elif cond == 7 and st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) == 10 :
          htmltext = "31042-3.htm"
-       if cond == 8 :
+       elif cond == 8 :
          htmltext = "31042-6.htm"
-     if npcId == STEDMIEL :
+     elif npcId == STEDMIEL :
        if cond == 9 :
          htmltext = "30692-1.htm"
-       if cond == 10 :
+       elif cond == 10 :
          htmltext = "30692-3.htm"
-     if npcId == VIRGIL :
+     elif npcId == VIRGIL :
        if cond == 11 :
          htmltext = "31742-1.htm"
-       if cond == 12 :
+       elif cond == 12 :
          htmltext = "31742-3.htm"
-       if cond == 17 :
+       elif cond == 17 :
          htmltext = "31742-4.htm"
-       if cond == 18 :
+       elif cond == 18 :
          htmltext = "31742-6.htm"
-     if npcId == OGMAR :
+     elif npcId == OGMAR :
        if cond == 12 :
          htmltext = "31744-1.htm"
-       if cond == 13 :
+       elif cond == 13 :
          htmltext = "31744-3.htm"
-     if npcId == RAHORAKTI :
+     elif npcId == RAHORAKTI :
        if cond == 13 :
          htmltext = "31336-1.htm"
-       if cond == 14 :
+       elif cond == 14 :
          htmltext = "31336-4.htm"
-       if cond == 15 and st.getQuestItemsCount(CRIMSON_MOSS) == 5 :
+       elif cond == 15 and st.getQuestItemsCount(CRIMSON_MOSS) == 5 :
          htmltext = "31336-3.htm"
-       if cond == 16 :
+       elif cond == 16 :
          htmltext = "31336-6.htm"
-     if npcId == KASSANDRA :
+     elif npcId == KASSANDRA :
        if cond == 16 and st.getQuestItemsCount(RAHORAKTIS_MEDICINE) == 1 :
          htmltext = "31743-1.htm"
-       if cond == 17 :
+       elif cond == 17 :
          htmltext = "31743-3.htm"
-     if npcId == CARADINE :
+     elif npcId == CARADINE :
        if cond == 18 :
          htmltext = "31740-1.htm"
-       if cond == 19 :
+       elif cond == 19 :
          htmltext = "31740-3.htm"
-       if cond == 21 :
+       elif cond == 21 :
          htmltext = "31740-4.htm"
-     if npcId == NOEL :
+     elif npcId == NOEL :
        if cond == 19 :
          htmltext = "31272-1.htm"
-       if cond == 20 and st.getQuestItemsCount(LUNARGENT) < 5 and st.getQuestItemsCount(HELLFIRE_OIL) < 1 :
+       elif cond == 20 and st.getQuestItemsCount(LUNARGENT) < 5 and not st.getQuestItemsCount(HELLFIRE_OIL) :
          htmltext = "31272-4.htm"
-       if cond == 20 and st.getQuestItemsCount(LUNARGENT) >= 5 and st.getQuestItemsCount(HELLFIRE_OIL) >= 1 :
+       elif cond == 20 and st.getQuestItemsCount(LUNARGENT) >= 5 and st.getQuestItemsCount(HELLFIRE_OIL) :
          htmltext = "31272-3.htm"
-       if cond == 21 :
+       elif cond == 21 :
          htmltext = "31272-7.htm"
    else :
      htmltext = "31739-2.htm"
@@ -258,7 +254,7 @@ class Quest (JQuest) :
          st.set("cond","4")
          st.giveItems(LEGEND_OF_SEVENTEEN,1)
          st.playSound("ItemSound.quest_itemget")
-   if npcId in [20244,20245,20283,21508] :
+   elif npcId in [20244,20245,20283,21508] :
      # get a random party member who is doing this quest and is at cond == 6  
      partyMember = self.getRandomPartyMember(player, "6")
      if partyMember :
@@ -270,7 +266,7 @@ class Quest (JQuest) :
            if st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) == 10 :
              st.set("cond","7")
              st.playSound("ItemSound.quest_middle")
-   if npcId in range(21508,215013) :
+   elif npcId in range(21508,21513) :
      # get a random party member who is doing this quest and is at cond == 14  
      partyMember = self.getRandomPartyMember(player, "14")
      if partyMember :
@@ -310,7 +306,6 @@ QUEST.addKillId(20245)
 QUEST.addKillId(20283)
 QUEST.addKillId(21508)
 
-QUEST.addKillId(21508)
 QUEST.addKillId(21509)
 QUEST.addKillId(21510)
 QUEST.addKillId(21511)
