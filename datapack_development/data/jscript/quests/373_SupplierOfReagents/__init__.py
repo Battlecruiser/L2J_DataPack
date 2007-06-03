@@ -1,5 +1,7 @@
-# Supplier of Reagents version 0.1 
-# by DrLecter
+# Supplier of Reagents version 0.2
+# by DrLecter for the Official L2J Datapack Project.
+# Visit http://forum.l2jdp.com for more details.
+
 print "importing quests:",
 import sys
 from net.sf.l2j import Config
@@ -11,52 +13,8 @@ QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 373,"SupplierOfReagents","Supplier o
 qn = "373_SupplierOfReagents"
 
 #Variables
-#Rewards
-SHOP_LIST={#itemid:[qty,required_id,required_qty]
-4042:[1,  6025,8],4043:[1,  6021,6],4044:[1,  6024,4],2508:[100,6016,4],735: [10, 6025,7],
-737: [10, 6023,8],4953:[1,  6027,1],4960:[1,  6027,1],4959:[1,  6030,1],4958:[1,  6030,1],
-4998:[1,  6030,1],4992:[1,  6030,1],4993:[1,  6030,1],4999:[1,  6030,1],5524:[1,  6029,1],
-5478:[1,  6029,1],5520:[1,  6031,1],5479:[1,  6031,1],5521:[1,  6032,1],5480:[1,  6032,1],
-5481:[1,  6032,1],5522:[1,  6028,1],5523:[1,  6028,1],103: [1,  6031,8],2437:[1,  6032,8],
-630: [1,  6029,5],612: [1,  6033,1],2464:[1,  6033,1],554: [1,  6033,1],600: [1,  6033,1],
-601: [1,  6034,4],2439:[1,  6034,4],2475:[1,  6034,4],2487:[1,  6034,4]
-}
 #itemId:[icon,name,description]
 ITEMS={
-4042:["etc_gem_red_i00","Enria",""],
-4043:["etc_gem_blue_i00","Asofe",""],
-4044:["etc_gem_clear_i00","Thons",""],
-2508:["etc_piece_bone_red_i00","Cursed Bone",""],
-735:["etc_reagent_green_i00","Potion of Alacrity",""],
-737:["etc_scroll_of_resurrection_i00","Scroll of Resurrection",""],
-4953:["etc_recipe_red_i00","Recipe: Avadon Gloves (60%)",""],
-4960:["etc_recipe_red_i00","Recipe: Zubei's Gauntlets (60%)",""],
-4959:["etc_recipe_red_i00","Recipe: Avadon Boots (60%)",""],
-4958:["etc_recipe_red_i00","Recipe: Zubei's Boots (60%)",""],
-4998:["etc_recipe_red_i00","Recipe: Blue Wolf Gloves (60%)",""],
-4992:["etc_recipe_red_i00","Recipe: Blue Wolf Boots (60%)",""],
-4993:["etc_recipe_red_i00","Recipe: Doom Gloves (60%)",""],
-4999:["etc_recipe_red_i00","Recipe: Doom Boots (60%)",""],
-5524:["etc_letter_red_i00","Sealed Dark Crystal Gaiters Pattern",""],
-5478:["etc_letter_red_i00","Sealed Dark Crystal Leather Armor Pattern",""],
-5520:["etc_letter_red_i00","Sealed Dark Crystal Breastplate Pattern",""],
-5479:["etc_letter_red_i00","Sealled Tallum Leather Armor Pattern",""],
-5521:["etc_letter_red_i00","Sealed Tallum Plate Armor Pattern",""],
-5480:["etc_leather_gray_i00","Sealed Leather Armor of Nightmare Fabric",""],
-5481:["etc_leather_gray_i00","Sealed Majestic Leather Armor Fabric",""],
-5522:["etc_letter_red_i00","Sealed Armor of Nightmare Pattern",""],
-5523:["etc_letter_red_i00","Sealed Majestic Plate Armor Pattern",""],
-103:["shield_tower_shield_i00","Tower Shield","Shield"],
-2437:["armor_t21_b_i00","Drake Leather Boots","Boots"],
-630:["shield_square_shield_i00","Square Shield","Shield"],
-612:["armor_t64_g_i00","Zubei's Gauntlets","Gloves"],
-2464:["armor_t66_g_i00","Avadon Gloves","Gloves"],
-554:["armor_t64_b_i00","Zubei's Boots","Boots"],
-600:["armor_t66_b_i00","Avadon Boots","Boots"],
-601:["armor_t68_b_i00","Blue Wolf Boots","Boots"],
-2439:["armor_t71_b_i00","Boots of Doom","Boots"],
-2475:["armor_t68_g_i00","Blue Wolf Gloves","Gloves"],
-2487:["armor_t71_g_i00","Doom Gloves","Gloves"],
 6011:["etc_reagent_red_i00","Wyrm's Blood",""],
 6012:["etc_inf_ore_high_i00","Lava Stone",""],
 6013:["etc_broken_crystal_silver_i00","Moonstone Shard",""],
@@ -123,16 +81,6 @@ HELLFIRE_OIL:    [FIRE_ESSENCE,1,DEMONIC_ESSENCE,1],NIGHTMARE_OIL:  [LUNARGENT,1
 MIMIRS_ELIXIR:   [PURE_SILVER,1,TRUE_GOLD,1],
 }
 
-def render_shop(mode,item) :
-    html = "<html><body><font color=\"LEVEL\">List:</font><table border=0 width=300>"
-    if mode == "list" :
-       for i in SHOP_LIST.keys() :
-          html += "<tr><td width=35 height=45><img src=icon."+ITEMS[i][0]+" width=32 height=32 align=left></td><td valign=top><a action=\"bypass -h Quest 373_SupplierOfReagents _"+str(i)+"\"><font color=\"FFFFFF\">"+ITEMS[i][1]+" x"+str(SHOP_LIST[i][0])+"</font></a></td></tr>"
-    else :
-       html += "<tr><td align=left><font color=\"LEVEL\">Item Information</font></td><td align=right><button value=Back action=\"bypass -h Quest 373_SupplierOfReagents buy\" width=40 height=15 back=sek.cbui94 fore=sek.cbui92></td><td width=5><br></td></tr></table><table border=0 bgcolor=\"000000\" width=500 height=160><tr><td valign=top><table border=0><tr><td valign=top width=35><img src=icon."+ITEMS[item][0]+" width=32 height=32 align=left></td><td valign=top width=400><table border=0 width=100%><tr><td><font color=\"FFFFFF\">"+ITEMS[item][1]+" x"+str(SHOP_LIST[item][0])+"</font></td></tr><tr><td><font color=\"B09878\">"+ITEMS[item][2]+"</font></td></tr></table></td></tr></table><br><font color=\"LEVEL\">Item Required:</font><table border=0 bgcolor=\"000000\" width=500 height=120><tr><td valign=top><table border=0><tr><td valign=top width=35><img src=icon."+ITEMS[SHOP_LIST[item][1]][0]+" width=32 height=32 align=left></td><td valign=top width=400><table border=0 width=100%><tr><td><font color=\"FFFFFF\">"+ITEMS[SHOP_LIST[item][1]][1]+" x"+str(SHOP_LIST[item][2])+"</font></td></tr><tr><td><font color=\"B09878\">"+ITEMS[SHOP_LIST[item][1]][2]+"</font></td></tr></table></td></tr></table><br><table border=0 width=300><tr><td align=center><button value=Exchange action=\"bypass -h Quest 373_SupplierOfReagents "+str(item)+"\" width=60 height=15 back=sek.cbui94 fore=sek.cbui92></td></tr></table></td></tr></table></td></tr>"
-    html += "</table></body></html>"
-    return html
-
 def render_urn(st, page) :
     stone,ingredient,catalyst = int(st.get("mixing")),int(st.get("ingredient")),int(st.get("catalyst"))
     if page == "Start" :
@@ -151,8 +99,12 @@ def render_urn(st, page) :
        else : html = html.replace("CACT","Insert")
     elif isinstance(page,list) :
        html = "<html><body>Insert:<table border=0>"
+       amt = 0
        for i in MATS :
-          html += "<tr><td height=45><img src=icon."+ITEMS[i][0]+" height=32 width=32></td><td>"+ITEMS[i][1]+"</td><td><button value=X1 action=\"bypass -h Quest 373_SupplierOfReagents x_1_"+page[1]+"_"+str(i)+"\" width=40 height=15 fore=sek.cbui92><button value=X10 action=\"bypass -h Quest 373_SupplierOfReagents x_2_"+page[1]+"_"+str(i)+"\" width=40 height=15 fore=sek.cbui92></td></tr>"
+         if st.getQuestItemsCount(i):
+           amt += 1
+           html += "<tr><td height=45><img src=icon."+ITEMS[i][0]+" height=32 width=32></td><td width=180>"+ITEMS[i][1]+"</td><td><button value=X1 action=\"bypass -h Quest 373_SupplierOfReagents x_1_"+page[1]+"_"+str(i)+"\" width=40 height=15 fore=sek.cbui92><button value=X10 action=\"bypass -h Quest 373_SupplierOfReagents x_2_"+page[1]+"_"+str(i)+"\" width=40 height=15 fore=sek.cbui92></td></tr>"
+       if not amt : html += "<tr><td>You don't have any material that could be used with this Urn. Read the Mixing Manual.</td></tr>"
        html += "</table><center><a action=\"bypass -h Quest 373_SupplierOfReagents urn\">Back</a></center></body></html>"
     return html
 
@@ -182,18 +134,6 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_finish")
     elif event == "urn" :
         htmltext = render_urn(st,"Start")
-    elif event == "buy" :
-       htmltext = render_shop("list",None)
-    elif event.startswith("_") :
-       htmltext = render_shop("item",int(event.lstrip("_")))
-    elif event.isdigit() and int(event) in SHOP_LIST.keys() :
-       item = int(event)
-       if st.getQuestItemsCount(SHOP_LIST[item][1]) >= SHOP_LIST[item][2] :
-          st.takeItems(SHOP_LIST[item][1],SHOP_LIST[item][2])
-          st.giveItems(item,SHOP_LIST[item][0])
-          htmltext = render_shop("item",item)
-       else :
-          htmltext = "You don't have enough materials"
     elif event.startswith("U_") :
        event = event.split("_")
        if event[1]=="M" :
@@ -246,6 +186,7 @@ class Quest (JQuest) :
           st.takeItems(int(item),int(qty))
           st.set(dest,item)
           st.set(count,qty)
+          st.playSound("SkillSound5.liquid_mix_01")
           htmltext = "31149-4a.htm"
        else :
           htmltext = "31149-4b.htm"
@@ -267,14 +208,18 @@ class Quest (JQuest) :
                  if [ingredient,iq,catalyst,cq] == FORMULAS[i] :
                     item=i
                     break
-             if item == PURE_SILVER and temp != 1: return "31149-7c.htm"
+             if item == PURE_SILVER and temp != 1:
+                st.playSound("SkillSound5.liquid_fail_01")
+                return "31149-7c.htm"
              if item == MIMIRS_ELIXIR :
                 if temp == 3 :
                   if st.getQuestItemsCount(BLOOD_FIRE) :
                      st.takeItems(BLOOD_FIRE,1)
                   else :
+                     st.playSound("SkillSound5.liquid_fail_01")
                      return "31149-7a.htm"
                 else :
+                  st.playSound("SkillSound5.liquid_fail_01")
                   return "31149-7b.htm"
              if item :
                 chance,qty=TEMPERATURE[temp]
@@ -285,16 +230,22 @@ class Quest (JQuest) :
                       qty = 1
                       mimirs.set("cond","8")
                    else :
+                      st.playSound("SkillSound5.liquid_fail_01")
                       return "31149-7d.htm"
                 if st.getRandom(100) < chance :
                    st.giveItems(item,qty)
+                   st.playSound("SkillSound5.liquid_success_01")
                 else :
+                   st.playSound("SkillSound5.liquid_fail_01")
                    htmltext = "31149-6c.htm"
              else :
+                st.playSound("SkillSound5.liquid_fail_01")
                 htmltext = "31149-6d.htm"
           else :
+             st.playSound("SkillSound5.liquid_fail_01")
              htmltext = "31149-6b.htm"
        else :
+          st.playSound("SkillSound5.liquid_fail_01")
           htmltext="31149-6a.htm"
     return htmltext
 
@@ -355,6 +306,6 @@ for i in DROPLIST.keys():
   QUEST.addKillId(i)
 
 for i in range(6007,6035)+[6317,5904] :
-  STARTED.addQuestDrop(31149,i,1)
+  STARTED.addQuestDrop(WESLEY,i,1)
 
 print str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION
