@@ -1994,7 +1994,7 @@
   <set name="mpConsume" val="72"/>
   <set name="itemConsumeId" val="1785"/>
   <set name="itemConsumeCount" val="40"/>
-  <set name="weaponsAllowed" val="2"/>
+<!--  <set name="weaponsAllowed" val="2"/> -->
   <set name="skillTime" val="1000"/>
   <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="1200000"/>
@@ -2006,9 +2006,11 @@
   <set name="effectRange" val="-1"/>
   <set name="buffDuration" val="30000"/>
   <for>
+  <!-- 
     <cond>
       <using kind="Shield"/>
     </cond>
+  -->
     <effect name="Buff" time="30" count="1" val="0" stackOrder="1" stackType="hero">
       <add order="0x40" stat="pDef" val="5400"/>
       <add order="0x40" stat="mDef" val="4050"/>
@@ -2043,7 +2045,7 @@
       <add order="0x40" stat="mAtkSpd" val="100"/>
       <add order="0x40" stat="runSpd" val="20"/>
       <mul order="0x30" stat="pDef" val="0.75"/>
-      <mul order="0x30" stat="mDef" val="0.75"/>
+      <sub order="0x40" stat="mDef" val="25"/> <!-- possibly -25% mDef -->
       <!--mul order="0x30" stat="gainHp" val="1.10"/-->
       <!-- Missing Cancel/Debuff resistance +??, Heals are ??% more effective  (custom value)-->
     </effect>

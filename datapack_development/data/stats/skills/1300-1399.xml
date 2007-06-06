@@ -1818,7 +1818,6 @@
   <set name="itemConsumeCount" val="80"/>
   <set name="hitTime" val="2500"/>
   <set name="skillTime" val="2500"/>
-  <!-- 20 minute recharge -->
   <set name="reuseDelay" val="1200000"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="skillRadius" val="400"/>
@@ -1828,9 +1827,7 @@
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <for>
-    <!-- 2 minute duration -->
-    <effect count="1" name="Buff" time="1200" val="0">
-     <!-- suspect this was custom before... still not 100% -->
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="hero">
      <add order="0x40" stat="pAtk" val="250"/>
      <add order="0x40" stat="pDef" val="500"/>
    </effect>
@@ -1839,11 +1836,13 @@
 <skill id="1375" levels="1" name="Heroic Grandeur">
 <!-- Done by KID -->
   <set name="mpConsume" val="109"/>
+  <set name="power" val="80"/>
+  <set name="magicLvl" val="78"/>
+  <set name="lvlDepend" val="1"/> 
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="80"/>
   <set name="hitTime" val="2500"/>
   <set name="skillTime" val="2500"/>
-  <!-- 20 minute recharge -->
   <set name="reuseDelay" val="1200000"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
@@ -1853,25 +1852,24 @@
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <for>
-    <!-- 30 seconds duration -->
     <effect count="1" name="Buff" time="30" val="0">
-     <!-- suspect this is custom -->
-     <div order="0x30" stat="mDef" val="1.23"/>
-     <div order="0x30" stat="pDef" val="1.2"/>
-     <div order="0x30" stat="rShld" val="1.4"/>
-     <sub order="0x40" stat="accCombat" val="19"/>
-     <add order="0x40" stat="cancel" val="65"/>
-   </effect>
+      <sub order="0x40" stat="mDef" val="50"/>
+      <mul order="0x30" stat="pDef" val="0.5"/>
+      <sub order="0x40" stat="rEvas" val="16"/>
+      <mul order="0x30" stat="rShld" val="0.5"/>
+    </effect>
   </for>
 </skill>
 <skill id="1376" levels="1" name="Heroic Dread">
 <!-- Done by KID -->
   <set name="mpConsume" val="109"/>
+  <set name="power" val="80"/>
+  <set name="magicLvl" val="78"/>
+  <set name="lvlDepend" val="1"/> 
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="80"/>
   <set name="hitTime" val="2500"/>
   <set name="skillTime" val="2500"/>
-  <!-- 20 minute recharge -->
   <set name="reuseDelay" val="1200000"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
@@ -1881,10 +1879,8 @@
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <for>
-     <!-- 30 seconds duration -->
      <effect count="5" name="Fear" time="6" val="0">
-        <!-- suspect this is custom -->
-        <add order="0x40" stat="runSpd" val="64"/>
+       <mul order="0x30" stat="runSpd" val="1.52"/>
      </effect>
   </for>
 </skill>
