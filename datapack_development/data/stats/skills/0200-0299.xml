@@ -1035,10 +1035,12 @@
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
-<skill id="261" levels="22" name="Triple Sonic Slash">
+<skill id="261" levels="22" name="Triple Sonic Slash" enchantLevels1="30" enchantLevels2="30">
   <table name="#mpConsume"> 114 117 120 123 125 128 131 134 134 137 139 142 144 147 149 152 154 156 158 161 163 165 </table>
+  <table name="#ench2MpConsume"> 162 160 157 155 152 150 147 145 142 140 137 135 133 130 128 125 123 120 118 115 113 110 108 105 103 100 98 95 93 90 </table>
   <table name="#magicLvl"> 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#power"> 1948.0 2042.0 2138.0 2236.0 2337.0 2439.0 2544.0 2651.0 2760.0 2870.0 2982.0 3095.0 3210.0 3325.0 3442.0 3559.0 3676.0 3794.0 3911.0 4029.0 4146.0 4262.0 </table>
+  <table name="#ench1Power"> 4299 4338 4376 4415 4453 4491 4530 4568 4607 4645 4683 4722 4760 4799 4837 4875 4914 4952 4991 5029 5067 5106 5144 5183 5221 5259 5298 5336 5375 5413 </table>
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1056,6 +1058,8 @@
   <!-- charge values -->
   <set name="num_charges" val="4"/>
   <set name="charge_skill_id" val="8"/> <!-- Focus Sonic is the charger -->
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/> 
   <for>
   </for>
 </skill>
