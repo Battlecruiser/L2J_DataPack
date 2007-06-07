@@ -7,7 +7,6 @@ CREATE TABLE IF NOT EXISTS clan_data (
   clan_level INT,
   reputation_score INT NOT NULL default 0,
   hasCastle INT,
-  hasHideout INT,
   ally_id INT,
   ally_name varchar(45),
   leader_id INT,
