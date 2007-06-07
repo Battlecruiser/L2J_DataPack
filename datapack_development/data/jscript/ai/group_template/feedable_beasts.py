@@ -86,6 +86,7 @@ class feedable_beasts(JQuest) :
             21504: [2,{GOLDEN_SPICE:[],CRYSTAL_SPICE:[[21506,21828],[16015,16016]]},25],
             21505: [2,{GOLDEN_SPICE:[],CRYSTAL_SPICE:[[21507,21829],[16015,16016]]},25]
             }
+        self.madCowPolymorph = {21824:21468,21825:21469,21826:21487,21827:21488,21828:21506,21829:21507}
         self.Text = [["What did you just do to me?","You want to tame me, huh?","Do not give me this. Perhaps you will be in danger.","Bah bah. What is this unpalatable thing?","My belly has been complaining.  This hit the spot.","What is this? Can I eat it?","You don't need to worry about me.","Delicious food, thanks.","I am starting to like you!","Gulp"], 
                     ["I do not think you have given up on the idea of taming me.","That is just food to me.  Perhaps I can eat your hand too.","Will eating this make me fat? Ha ha","Why do you always feed me?","Do not trust me.  I may betray you"], 
                     ["Destroy","Look what you have done!","Strange feeling...!  Evil intentions grow in my heart...!","It is happenning!","This is sad...Good is sad...!"]]
@@ -95,6 +96,23 @@ class feedable_beasts(JQuest) :
         for i in self.feedableBeasts :
             self.addSkillUseId(i)
             self.addKillId(i)
+
+    def onAdvEvent(self,event,npc,player) :
+        if event == "polymorph Mad Cow" and npc and player:
+            if npc.getNpcId() in self.madCowPolymorph.keys() :
+                # remove the feed info from the previous mob
+                if [npc.getObjectId(),player.getObjectId()] in self.feedInfo :
+                    self.feedInfo.remove([npc.getObjectId(),player.getObjectId()])
+                # despawn the mad cow
+                npc.onDecay()
+                # spawn the new mob 
+                spawnObjId = self.getPcSpawn(player).addSpawn(self.madCowPolymorph[npc.getNpcId()],npc,False)
+                nextNpc = self.getPcSpawn(player).getSpawn(spawnObjId).getLastSpawn()
+                
+                # register the player in the feedinfo for the mob that just spawned
+                self.feedInfo = self.feedInfo + [[nextNpc.getObjectId(),player.getObjectId()]]
+                nextNpc.addDamageHate(player,0,99999)
+                nextNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
 
     def spawnNext(self, npc, growthLevel,player,food) :
         npcId = npc.getNpcId()
@@ -162,6 +180,9 @@ class feedable_beasts(JQuest) :
             # spawn the new mob
             spawnObjId = self.getPcSpawn(player).addSpawn(nextNpcId,npc,False)
             nextNpc = self.getPcSpawn(player).getSpawn(spawnObjId).getLastSpawn()
+
+            if nextNpcId in self.madCowPolymorph :
+                self.startQuestTimer("polymorph Mad Cow", 10000, nextNpc, player)            
             
             # register the player in the feedinfo for the mob that just spawned
             self.feedInfo = self.feedInfo + [[nextNpc.getObjectId(),player.getObjectId()]]
