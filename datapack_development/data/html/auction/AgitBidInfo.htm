@@ -19,7 +19,7 @@
 <img src="L2UI.SquareGray" width=270 height=1> <img src="L2UI.SquareBlank" width=1 height=3>
 <table width=280 border=0>
 <tr><td width=140><font color="a2a0a2">Auction ends at</font></td>
-<td width=140><font color="b09979">%AGIT_AUCTION_END_YY%/%AGIT_AUCTION_END_MM%/%AGIT_AUCTION_END_DD% %AGIT_AUCTION_END_HH% hour </font></td></tr>
+<td width=140><font color="b09979">%AGIT_AUCTION_END%</font></td></tr>
 <tr><td><font color="a2a0a2">Time remaining</font></td>
 <td><font color="b09979">%AGIT_AUCTION_REMAIN%</font></td></tr>
 <tr><td><font color="a2a0a2">Minimum bid price</font></td>
@@ -39,7 +39,7 @@
 </tr>
 <tr>
 <td width=130></td>
-<td width=70 align=center><button action="bypass -h npc_%objectId%_start" value="Back" width=70 height=21 back="L2UI.DefaultButton_click" fore="L2UI.DefaultButton"></td>
+<td width=70 align=center><button action="%AGIT_LINK_BACK%" value="Back" width=70 height=21 back="L2UI.DefaultButton_click" fore="L2UI.DefaultButton"></td>
 <td width=70 align=center><button action="bypass -h npc_%objectId%_rebid" value="Rebid" width=70 height=21 back="L2UI.DefaultButton_click" fore="L2UI.DefaultButton"></td>
 </tr>
 </table>

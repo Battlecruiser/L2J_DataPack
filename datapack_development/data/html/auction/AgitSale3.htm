@@ -8,7 +8,7 @@
 <tr><td width=140>Auction period</td>
 <td width=140>%x% days</td></tr>
 <tr><td width=140>Auction closing date</td>
-<td width=140>%AGIT_AUCTION_END_YY% year %AGIT_AUCTION_END_MM% month %AGIT_AUCTION_END_DD% day %AGIT_AUCTION_END_HH% hour</td></tr>
+<td width=140>%AGIT_AUCTION_END%</td></tr>
 </table>
 <table width=280 border=0 bgcolor=333333>
 <tr><td width=280>%AGIT_AUCTION_DESC%</td></tr>
@@ -17,7 +17,7 @@ You can re-enter information by clicking the "Back" button<br> Do you want to re
 <table width=280 border=0>
 <tr>
 <td width=130></td>
-<td width=70 align=center><button action="bypass -h npc_%objectId%_sale2" value="Back" width=70 height=21 back="L2UI.DefaultButton_click" fore="L2UI.DefaultButton"></td> 
+<td width=70 align=center><button action="%AGIT_LINK_BACK%" value="Back" width=70 height=21 back="L2UI.DefaultButton_click" fore="L2UI.DefaultButton"></td> 
 <td width=70 align=center><button action="bypass -h npc_%objectId%_confirmAuction" value="Confirm" width=70 height=21 back="L2UI.DefaultButton_click" fore="L2UI.DefaultButton"></td> 
 </tr>
 </table>
