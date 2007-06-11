@@ -36,7 +36,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_accept")
      else :
        htmltext = "31517-02a.htm"
-       st.exitQuest()
+       st.exitQuest(1)
    if event == "31508-02.htm" and cond == 1 and blood :
      htmltext = "31508-01.htm"
      st.takeItems(BLOOD_OF_SAINT,1)
