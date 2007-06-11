@@ -1646,7 +1646,7 @@
 <!-- CLAN SKILLS - temp addition until proper implementation is done - see http://l2p.bravehost.com/passives.html for partial data -->
 <skill id="370" levels="3" name="Clan Vitality">
   <!-- Increases clan members' Max HP. It only effects those who are of an Heir class or higher. -->
-  <table name="#maxHp"> 1.1 1.2 1.3 </table>
+  <table name="#maxHp"> 1.03 1.05 1.06 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1660,9 +1660,8 @@
   </for>
 </skill>
 <skill id="371" levels="3" name="Clan Spirituality">
-<!--Increases clan members' Max CP. It only effects those who are of a Baron class or higher.
- -->
-  <table name="#maxCp"> 1.1 1.2 1.3 </table>
+  <!-- Increases clan members' Max CP. It only effects those who are of a Baron class or higher. -->
+  <table name="#maxCp"> 1.06 1.10 1.12 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1676,9 +1675,8 @@
   </for>
 </skill>
 <skill id="372" levels="3" name="Clan Essence">
-<!--Increases clan members' Max MP. It only effects those who are of a Viscount class or higher.
- -->
-  <table name="#maxMp"> 1.1 1.2 1.3 </table>
+  <!-- Increases clan members' Max MP. It only effects those who are of a Viscount class or higher. -->
+  <table name="#maxMp"> 1.03 1.05 1.06 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1692,9 +1690,8 @@
   </for>
 </skill>
 <skill id="373" levels="3" name="Clan Lifeblood">
-<!--Increases the clan members' HP regeneration. Only affects Heir class and above.
- -->
-  <table name="#regHp"> 1.1 1.2 1.3 </table>
+  <!-- Increases the clan members' HP regeneration. Only affects Heir class and above. -->
+  <table name="#regHp"> 1.03 1.05 1.06 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1708,9 +1705,8 @@
   </for>
 </skill>
 <skill id="374" levels="3" name="Clan Morale">
-<!--Increases the clan members' CP regeneration. Only affects Wise Man class and above.
- -->
-  <table name="#regHp"> 1.1 1.2 1.3 </table>
+  <!-- Increases the clan members' CP regeneration. Only affects Wise Man class and above. -->
+  <table name="#regCp"> 1.03 1.05 1.06 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1720,13 +1716,12 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="4"/>
   <for>
-    <mul stat="regCp" val="#regHp" order="0x30"/>
+    <mul stat="regCp" val="#regCp" order="0x30"/>
   </for>
 </skill>
 <skill id="375" levels="3" name="Clan Clarity">
-<!-- Increases the clan members' MP regeneration. Only affects Viscount class and above.
--->
-  <table name="#regHp"> 1.1 1.2 1.3 </table>
+  <!-- Increases the clan members' MP regeneration. Only affects Viscount class and above. -->
+  <table name="#regMp"> 1.03 1.05 1.06 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1736,13 +1731,12 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="6"/>
   <for>
-    <mul stat="regMp" val="#regHp" order="0x30"/>
+    <mul stat="regMp" val="#regMp" order="0x30"/>
   </for>
 </skill>
 <skill id="376" levels="3" name="Clan Might">
-<!--Increases the clan members' P. Atk. Only affects Knight class and above.
- -->
-  <table name="#regHp"> 1.1 1.2 1.3 </table>
+  <!-- Increases the clan members' P. Atk. Only affects Knight class and above. -->
+  <table name="#pAtk"> 1.03 1.05 1.06 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1752,13 +1746,12 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="3"/>
   <for>
-    <mul stat="pAtk" val="#regHp" order="0x30"/>
+    <mul stat="pAtk" val="#pAtk" order="0x30"/>
   </for>
 </skill>
 <skill id="377" levels="3" name="Clan Aegis">
-<!-- Increases clan members' P. Def. It only effects those who are of a Knight class or higher.
--->
-  <table name="#regHp"> 1.1 1.2 1.3 </table>
+  <!-- Increases clan members' P. Def. It only effects those who are of a Knight class or higher. -->
+  <table name="#pDef"> 1.03 1.04 1.05 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1768,13 +1761,12 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="3"/>
   <for>
-    <mul stat="pDef" val="#regHp" order="0x30"/>
+    <mul stat="pDef" val="#pDef" order="0x30"/>
   </for>
 </skill>
 <skill id="378" levels="3" name="Clan Empowerment">
-<!--Increases clan members' M. Atk. It only effects those who are of a Viscount class or higher.
- -->
-  <table name="#regHp"> 1.1 1.2 1.3 </table>
+  <!-- Increases clan members' M. Atk. It only effects those who are of a Viscount class or higher. -->
+  <table name="#mAtk"> 1.03 1.05 1.06 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1784,13 +1776,12 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="6"/>
   <for>
-    <mul stat="mAtk" val="#regHp" order="0x30"/>
+    <mul stat="mAtk" val="#mAtk" order="0x30"/>
   </for>
 </skill>
 <skill id="379" levels="3" name="Clan Magic Protection">
-<!--Increases clan members' M. Def. It only effects those who are of an Heir class or higher.
- -->
-  <table name="#regHp"> 1.1 1.2 1.3 </table>
+  <!-- Increases clan members' M. Def. It only effects those who are of an Heir class or higher. -->
+  <table name="#mDef"> 1.06 1.10 1.12 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1800,13 +1791,12 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="2"/>
   <for>
-    <mul stat="mDef" val="#regHp" order="0x30"/>
+    <mul stat="mDef" val="#mDef" order="0x30"/>
   </for>
 </skill>
 <skill id="380" levels="3" name="Clan Guidance">
-<!--Increases the clan members' Accuracy. Only affects Baron class and above.
- -->
-  <table name="#regHp"> 1.1 1.2 1.3 </table>
+  <!-- Increases the clan members' Accuracy. Only affects Baron class and above. -->
+  <table name="#accCombat"> 1 2 3 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1816,13 +1806,12 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="5"/>
   <for>
-    <mul stat="accCombat" val="#regHp" order="0x30"/>
+    <add stat="accCombat" val="#accCombat" order="0x40"/>
   </for>
 </skill>
 <skill id="381" levels="3" name="Clan Agility">
-<!--Increases the clan members' Evasion. Only affects Baron class and above.
- -->
-  <table name="#regHp"> 1.1 1.2 1.3 </table>
+  <!-- Increases the clan members' Evasion. Only affects Baron class and above. -->
+  <table name="#rEvas"> 1 2 3 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1832,13 +1821,12 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="5"/>
   <for>
-    <mul stat="rEvas" val="#regHp" order="0x30"/>
+    <add stat="rEvas" val="#rEvas" order="0x40"/>
   </for>
 </skill>
 <skill id="382" levels="3" name="Clan Withstand-Attack">
-<!-- Increases clan members' Shield defense probability. It only effects those who are of a Viscount class or higher.
--->
-  <table name="#regHp"> 1.1 1.2 1.3 </table>
+  <!-- Increases clan members' Shield defense probability. It only effects those who are of a Viscount class or higher. -->
+  <table name="#rShld"> 1.03 1.05 1.06 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1848,13 +1836,12 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="6"/>
   <for>
-    <mul stat="rShld" val="#regHp" order="0x30"/>
+    <mul stat="rShld" val="#rShld" order="0x30"/>
   </for>
 </skill>
 <skill id="383" levels="3" name="Clan Shield Boost">
-<!-- Increases clan members' Shield P. Def. It only effects those who are of a Baron class or higher.
--->
-  <table name="#regHp"> 1.1 1.2 1.3 </table>
+  <!-- Increases clan members' Shield P. Def. It only effects those who are of a Baron class or higher. -->
+  <table name="#sDef"> 1.03 1.05 1.06 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1864,13 +1851,12 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="5"/>
   <for>
-    <mul stat="sDef" val="#regHp" order="0x30"/>
+    <mul stat="sDef" val="#sDef" order="0x30"/>
   </for>
 </skill>
 <skill id="384" levels="3" name="Clan Cyclonic Resistance">
-<!--Increases clan members' resistance to water/wind attacks. It only effects those who are of a Viscount class or higher.
- -->
-  <table name="#regHp"> 1.1 1.2 1.3 </table>
+  <!-- Increases clan members' resistance to water/wind attacks. It only effects those who are of a Viscount class or higher. -->
+  <table name="#res"> 1.03 1.05 1.06 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1880,14 +1866,13 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="6"/>
   <for>
-    <mul stat="windRes" val="#regHp" order="0x30"/>
-    <mul stat="waterRes" val="#regHp" order="0x30"/>
+    <mul stat="windRes" val="#res" order="0x30"/>
+    <mul stat="waterRes" val="#res" order="0x30"/>
   </for>
 </skill>
 <skill id="385" levels="3" name="Clan Magmatic Resistance">
-<!--Increases clan members' resistance to fire/earth attacks. It only effects those who are of a Viscount class or higher.
--->
-  <table name="#regHp"> 1.1 1.2 1.3 </table>
+  <!-- Increases clan members' resistance to fire/earth attacks. It only effects those who are of a Viscount class or higher. -->
+  table name="#res"> 1.03 1.05 1.06 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1897,14 +1882,13 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="6"/>
   <for>
-    <mul stat="fireRes" val="#regHp" order="0x30"/>
-    <mul stat="earthRes" val="#regHp" order="0x30"/>
+    <mul stat="fireRes" val="#res" order="0x30"/>
+    <mul stat="earthRes" val="#res" order="0x30"/>
   </for>
 </skill>
 <skill id="386" levels="3" name="Clan Fortitude">
-<!--Increases the clan members' resistance to shock attacks. Only affects Viscount class and above.
- -->
-  <table name="#regHp"> 1.1 1.2 1.3 </table>
+  <!-- Increases the clan members' resistance to shock attacks. Only affects Viscount class and above. -->
+  <table name="#res"> 1.03 1.05 1.06 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1914,13 +1898,12 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="6"/>
   <for>
-    <mul stat="stunRes" val="#regHp" order="0x30"/>
+    <mul stat="stunRes" val="#res" order="0x30"/>
   </for>
 </skill>
 <skill id="387" levels="3" name="Clan Freedom">
-<!-- Increases the clan members' resistance to hold attacks. Only affects Viscount class and above.
--->
-  <table name="#regHp"> 1.1 1.2 1.3 </table>
+  <!-- Increases the clan members' resistance to hold attacks. Only affects Viscount class and above. -->
+  <table name="#res"> 1.03 1.05 1.06 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1930,13 +1913,12 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="6"/>
   <for>
-    <mul stat="rootRes" val="#regHp" order="0x30"/>
+    <mul stat="rootRes" val="#res" order="0x30"/>
   </for>
 </skill>
 <skill id="388" levels="3" name="Clan Vigilance">
-<!--Increases the clan members' resistance to sleep attacks. Only affects Viscount class and above.
- -->
-  <table name="#regHp"> 1.1 1.2 1.3 </table>
+  <!-- Increases the clan members' resistance to sleep attacks. Only affects Viscount class and above. -->
+  <table name="#res"> 1.03 1.05 1.06 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1946,13 +1928,12 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="6"/>
   <for>
-    <mul stat="sleepRes" val="#regHp" order="0x30"/>
+    <mul stat="sleepRes" val="#res" order="0x30"/>
   </for>
 </skill>
 <skill id="389" levels="3" name="Clan March">
-<!--Increases clan members' Speed. It only effects those who are of a Count class or higher.
- -->
- <table name="#runSpd"> 1.1 1.2 1.3 </table>
+  <!-- Increases clan members' Speed. It only effects those who are of a Count class or higher. -->
+  <table name="#runSpd"> 3 5 6 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1962,7 +1943,7 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="7"/>
   <for>
-    <mul stat="runSpd" val="#runSpd" order="0x30"/>
+    <add stat="runSpd" val="#runSpd" order="0x40"/>
   </for>
 </skill>
 <skill id="390" levels="3" name="Clan Luck">
@@ -1977,8 +1958,7 @@
   </for>
 </skill>
 <skill id="391" levels="3" name="Clan Imperium">
-<!--Gives authority to open up a command channel. Only affects Wise Man class and above.
- -->
+  <!-- Gives authority to open up a command channel. Only affects Wise Man class and above. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
