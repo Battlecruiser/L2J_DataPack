@@ -37,8 +37,8 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30149 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-      if int(st.get("cond"))<15 :
+   if npcId == 30149 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+      if st.getInt("cond")<15 :
         if player.getRace().ordinal() == 2 :
           htmltext = "30149-00.htm"
         elif player.getLevel() >= 21 :
@@ -50,9 +50,9 @@ class Quest (JQuest) :
       else:
         htmltext = "30149-02.htm"
         st.exitQuest(1)
-   elif npcId == 30149 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30149 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 30149 and int(st.get("cond")) :
+   elif npcId == 30149 and st.getInt("cond") :
       if st.getQuestItemsCount(KIRUNAK_SKULL_ID)<1 :
         htmltext = "30149-05.htm"
       elif st.getQuestItemsCount(KIRUNAK_SKULL_ID) >= 1 and int(st.get("onlyone")) == 0 :
@@ -75,7 +75,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 27021 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(KIRUNAK_SKULL_ID) == 0 :
+        if st.getInt("cond") == 1 and st.getQuestItemsCount(KIRUNAK_SKULL_ID) == 0 :
           st.giveItems(KIRUNAK_SKULL_ID,1)
           st.playSound("ItemSound.quest_middle")
    return

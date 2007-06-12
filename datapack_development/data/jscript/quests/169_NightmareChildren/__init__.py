@@ -50,8 +50,8 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30145 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-      if int(st.get("cond"))<15 :
+   if npcId == 30145 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+      if st.getInt("cond")<15 :
         if player.getRace().ordinal() != 2 :
           htmltext = "30145-00.htm"
         elif player.getLevel() >= 15 :
@@ -63,9 +63,9 @@ class Quest (JQuest) :
       else:
         htmltext = "30145-02.htm"
         st.exitQuest(1)
-   elif npcId == 30145 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30145 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 30145 and int(st.get("cond")) :
+   elif npcId == 30145 and st.getInt("cond") :
       if st.getQuestItemsCount(CRACKED_SKULL_ID) >= 1 and st.getQuestItemsCount(PERFECT_SKULL_ID) == 0 :
         htmltext = "30145-06.htm"
       elif st.getQuestItemsCount(PERFECT_SKULL_ID) >= 1 :
@@ -82,7 +82,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 20105 :
       st.set("id","0")
-      if int(st.get("cond")) == 1 :
+      if st.getInt("cond") == 1 :
         if st.getRandom(10)>7 and st.getQuestItemsCount(PERFECT_SKULL_ID) == 0 :
           st.giveItems(PERFECT_SKULL_ID,1)
           st.playSound("ItemSound.quest_middle")
@@ -91,7 +91,7 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_itemget")
    elif npcId == 20025 :
       st.set("id","0")
-      if int(st.get("cond")) == 1 :
+      if st.getInt("cond") == 1 :
         if st.getRandom(10)>7 and st.getQuestItemsCount(PERFECT_SKULL_ID) == 0 :
           st.giveItems(PERFECT_SKULL_ID,1)
           st.playSound("ItemSound.quest_middle")

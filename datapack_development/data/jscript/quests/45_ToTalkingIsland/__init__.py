@@ -85,30 +85,30 @@ class Quest (JQuest) :
                 st.exitQuest(1)
         elif npcId == 30097 and id == COMPLETED :
             htmltext = "<html><head><body>I can't supply you with another Scroll of Escape. Sorry traveller.</body></html>"
-        elif npcId == 30097 and int(st.get("cond"))==1 :
+        elif npcId == 30097 and st.getInt("cond")==1 :
             htmltext = "30097-04.htm"
-        elif npcId == 30097 and int(st.get("cond"))==2 :
+        elif npcId == 30097 and st.getInt("cond")==2 :
             htmltext = "30097-05.htm"
-        elif npcId == 30097 and int(st.get("cond"))==3 :
+        elif npcId == 30097 and st.getInt("cond")==3 :
             htmltext = "30097-07.htm"
-        elif npcId == 30097 and int(st.get("cond"))==4 :
+        elif npcId == 30097 and st.getInt("cond")==4 :
             htmltext = "30097-08.htm"
-        elif npcId == 30097 and int(st.get("cond"))==5 :
+        elif npcId == 30097 and st.getInt("cond")==5 :
             htmltext = "30097-10.htm"
-        elif npcId == 30097 and int(st.get("cond"))==6 :
+        elif npcId == 30097 and st.getInt("cond")==6 :
             htmltext = "30097-11.htm"
         elif id == STARTED :    
-            if npcId == 30094 and int(st.get("cond"))==1 :
+            if npcId == 30094 and st.getInt("cond")==1 :
                 htmltext = "30094-01.htm"
-            elif npcId == 30094 and int(st.get("cond"))==2 :
+            elif npcId == 30094 and st.getInt("cond")==2 :
                 htmltext = "30094-03.htm"
-            elif npcId == 30090 and int(st.get("cond"))==3 :
+            elif npcId == 30090 and st.getInt("cond")==3 :
                 htmltext = "30090-01.htm"
-            elif npcId == 30090 and int(st.get("cond"))==4 :
+            elif npcId == 30090 and st.getInt("cond")==4 :
                 htmltext = "30090-03.htm"
-            elif npcId == 30116 and int(st.get("cond"))==5 :
+            elif npcId == 30116 and st.getInt("cond")==5 :
                 htmltext = "30116-01.htm"
-            elif npcId == 30116 and int(st.get("cond"))==6 :
+            elif npcId == 30116 and st.getInt("cond")==6 :
                 htmltext = "30116-03.htm"
 
         return htmltext

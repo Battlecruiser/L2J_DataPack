@@ -76,12 +76,12 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30330 and int(st.get("cond"))==0 :
-        if int(st.get("cond"))<15 :
+   if npcId == 30330 and st.getInt("cond")==0 :
+        if st.getInt("cond")<15 :
           htmltext = "30330-01.htm"
         else:
           htmltext = "30330-01.htm"
-   elif npcId == 30330 and int(st.get("cond")) :
+   elif npcId == 30330 and st.getInt("cond") :
         if st.getQuestItemsCount(SIDRAS_LETTER1) == 1 :
           htmltext = "30330-07.htm"
         elif st.getQuestItemsCount(BLANK_SHEET1)>0 or st.getQuestItemsCount(BLOODY_RUNE1) == 1 :
@@ -97,7 +97,7 @@ class Quest (JQuest) :
             st.set("cond","0")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
-   elif npcId == 30377 and int(st.get("cond")) :
+   elif npcId == 30377 and st.getInt("cond") :
         if st.getQuestItemsCount(SIDRAS_LETTER1) == 1 :
           htmltext = "30377-01.htm"
         elif st.getQuestItemsCount(BLANK_SHEET1) == 5 and st.getQuestItemsCount(BLOODY_RUNE1) == 0 :
@@ -114,7 +114,7 @@ class Quest (JQuest) :
             htmltext = "30377-06.htm"
         elif st.getQuestItemsCount(ANDARIEL_BOOK) == 1 and st.getQuestItemsCount(GARMIEL_BOOK) == 1 :
             htmltext = "30377-07.htm"
-   elif npcId == 30375 and int(st.get("cond")) :
+   elif npcId == 30375 and st.getInt("cond") :
       if st.getQuestItemsCount(PRAYER_OF_ADON) == 1 :
         htmltext = "30375-01.htm"
       elif st.getQuestItemsCount(PENITENTS_MARK) == 1 and st.getQuestItemsCount(ASHEN_BONES) == 0 and st.getQuestItemsCount(ANDARIEL_BOOK) == 0 :
@@ -139,7 +139,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 20776 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(BLANK_SHEET1)>0 :
+        if st.getInt("cond") and st.getQuestItemsCount(BLANK_SHEET1)>0 :
           st.giveItems(BLOODY_RUNE1,1)
           st.takeItems(BLANK_SHEET1,1)
           if st.getQuestItemsCount(BLANK_SHEET1) == 0 :
@@ -149,7 +149,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_itemget")
    elif npcId == 20514 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(PENITENTS_MARK) == 1 and st.getQuestItemsCount(ASHEN_BONES)<10 :
+        if st.getInt("cond") and st.getQuestItemsCount(PENITENTS_MARK) == 1 and st.getQuestItemsCount(ASHEN_BONES)<10 :
           st.giveItems(ASHEN_BONES,1)
           if st.getQuestItemsCount(ASHEN_BONES) == 10 :
             st.playSound("ItemSound.quest_middle")
@@ -158,7 +158,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_itemget")
    elif npcId == 20515 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(PENITENTS_MARK) == 1 and st.getQuestItemsCount(ASHEN_BONES)<10 :
+        if st.getInt("cond") and st.getQuestItemsCount(PENITENTS_MARK) == 1 and st.getQuestItemsCount(ASHEN_BONES)<10 :
           st.giveItems(ASHEN_BONES,1)
           if st.getQuestItemsCount(ASHEN_BONES) == 10 :
             st.playSound("ItemSound.quest_middle")
@@ -167,7 +167,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_itemget")
    elif npcId == 20457 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(PENITENTS_MARK) == 1 and st.getQuestItemsCount(ASHEN_BONES)<10 :
+        if st.getInt("cond") and st.getQuestItemsCount(PENITENTS_MARK) == 1 and st.getQuestItemsCount(ASHEN_BONES)<10 :
           st.giveItems(ASHEN_BONES,1)
           if st.getQuestItemsCount(ASHEN_BONES) == 10 :
             st.playSound("ItemSound.quest_middle")
@@ -176,7 +176,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_itemget")
    elif npcId == 20458 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(PENITENTS_MARK) == 1 and st.getQuestItemsCount(ASHEN_BONES)<10 :
+        if st.getInt("cond") and st.getQuestItemsCount(PENITENTS_MARK) == 1 and st.getQuestItemsCount(ASHEN_BONES)<10 :
           st.giveItems(ASHEN_BONES,1)
           if st.getQuestItemsCount(ASHEN_BONES) == 10 :
             st.playSound("ItemSound.quest_middle")

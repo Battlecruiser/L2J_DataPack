@@ -47,7 +47,7 @@ class Quest (JQuest) :
      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif id == STARTED :
      try :
-       cond = int(st.get("cond"))
+       cond = st.getInt("cond")
      except :
        cond = None
      if cond == 1 :

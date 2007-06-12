@@ -35,7 +35,7 @@ class Quest (JQuest) :
      st.set("cond","0")
    if id == COMPLETED :
      htmltext = "30577-06.htm"
-   elif int(st.get("cond")) == 0 :
+   elif st.getInt("cond") == 0 :
      if st.getPlayer().getRace().ordinal() != 3 :
         htmltext = "30577-00.htm"
         st.exitQuest(1)
@@ -45,7 +45,7 @@ class Quest (JQuest) :
            st.exitQuest(1)
         else :
            htmltext = "30577-02.htm"
-   elif int(st.get("cond")) == 1 :
+   elif st.getInt("cond") == 1 :
      htmltext = "30577-04.htm"
    elif st.getQuestItemsCount(KASHA_WOLF_FANG) >= 50 :
      st.set("cond","0")

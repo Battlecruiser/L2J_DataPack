@@ -56,7 +56,7 @@ class Quest (JQuest) :
    if st.getState() != STARTED : return 
 
    npcId = npc.getNpcId()
-   if int(st.get("cond"))==1 and st.getQuestItemsCount(ADAMANTITE_ORE)<20 and st.getRandom(10)<4 :
+   if st.getInt("cond")==1 and st.getQuestItemsCount(ADAMANTITE_ORE)<20 and st.getRandom(10)<4 :
       st.giveItems(ADAMANTITE_ORE,1)
       if st.getQuestItemsCount(ADAMANTITE_ORE) == 20 :
          st.playSound("ItemSound.quest_middle")

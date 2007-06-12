@@ -65,7 +65,7 @@ class Quest (JQuest) :
             elif not st.getQuestItemsCount(STAR_OF_DESTINY) :
                 st.exitQuest(1)
                 htmltext = "30166-01a.htm"     #not qualified
-            elif int(st.get("cond"))==0 :
+            elif st.getInt("cond")==0 :
                 htmltext = "30166-02.htm"    # Successful start: Bring me Pure silver from Reagents quest
         elif id == COMPLETED :
             htmltext = "<html><head><body>You have already completed this quest.</body></html>"

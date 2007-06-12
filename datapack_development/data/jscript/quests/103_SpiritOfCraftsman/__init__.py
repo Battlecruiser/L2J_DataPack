@@ -40,7 +40,7 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
-   if npcId == 30307 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30307 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
      if player.getRace().ordinal() != 2 :
         htmltext = "30307-00.htm"
      elif player.getLevel() >= 10 :
@@ -49,48 +49,48 @@ class Quest (JQuest) :
      else:
         htmltext = "30307-02.htm"
         st.exitQuest(1)
-   elif npcId == 30307 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30307 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif id == STARTED : 
-       if npcId == 30307 and int(st.get("cond"))>=1 and (st.getQuestItemsCount(KAROYDS_LETTER_ID)>=1 or st.getQuestItemsCount(CECKTINONS_VOUCHER1_ID)>=1 or st.getQuestItemsCount(CECKTINONS_VOUCHER2_ID)>=1) :
+       if npcId == 30307 and st.getInt("cond")>=1 and (st.getQuestItemsCount(KAROYDS_LETTER_ID)>=1 or st.getQuestItemsCount(CECKTINONS_VOUCHER1_ID)>=1 or st.getQuestItemsCount(CECKTINONS_VOUCHER2_ID)>=1) :
             htmltext = "30307-06.htm"
-       elif npcId == 30132 and int(st.get("cond"))==1 and st.getQuestItemsCount(KAROYDS_LETTER_ID)==1 :
+       elif npcId == 30132 and st.getInt("cond")==1 and st.getQuestItemsCount(KAROYDS_LETTER_ID)==1 :
             htmltext = "30132-01.htm"
             st.set("cond","2")
             st.takeItems(KAROYDS_LETTER_ID,1)
             st.giveItems(CECKTINONS_VOUCHER1_ID,1)
-       elif npcId == 30132 and int(st.get("cond"))>=2 and (st.getQuestItemsCount(CECKTINONS_VOUCHER1_ID)>=1 or st.getQuestItemsCount(CECKTINONS_VOUCHER2_ID)>=1) :
+       elif npcId == 30132 and st.getInt("cond")>=2 and (st.getQuestItemsCount(CECKTINONS_VOUCHER1_ID)>=1 or st.getQuestItemsCount(CECKTINONS_VOUCHER2_ID)>=1) :
             htmltext = "30132-02.htm"
-       elif npcId == 30144 and int(st.get("cond"))==2 and st.getQuestItemsCount(CECKTINONS_VOUCHER1_ID)>=1 :
+       elif npcId == 30144 and st.getInt("cond")==2 and st.getQuestItemsCount(CECKTINONS_VOUCHER1_ID)>=1 :
             htmltext = "30144-01.htm"
             st.set("cond","3")
             st.takeItems(CECKTINONS_VOUCHER1_ID,1)
             st.giveItems(CECKTINONS_VOUCHER2_ID,1)
-       elif npcId == 30144 and int(st.get("cond"))==3 and st.getQuestItemsCount(CECKTINONS_VOUCHER2_ID)>=1 and st.getQuestItemsCount(BONE_FRAGMENT1_ID)<10 :
+       elif npcId == 30144 and st.getInt("cond")==3 and st.getQuestItemsCount(CECKTINONS_VOUCHER2_ID)>=1 and st.getQuestItemsCount(BONE_FRAGMENT1_ID)<10 :
             htmltext = "30144-02.htm"
-       elif npcId == 30144 and int(st.get("cond"))==4 and st.getQuestItemsCount(CECKTINONS_VOUCHER2_ID)==1 and st.getQuestItemsCount(BONE_FRAGMENT1_ID)>=10 :
+       elif npcId == 30144 and st.getInt("cond")==4 and st.getQuestItemsCount(CECKTINONS_VOUCHER2_ID)==1 and st.getQuestItemsCount(BONE_FRAGMENT1_ID)>=10 :
             htmltext = "30144-03.htm"
             st.set("cond","5")
             st.takeItems(CECKTINONS_VOUCHER2_ID,1)
             st.takeItems(BONE_FRAGMENT1_ID,10)
             st.giveItems(SOUL_CATCHER_ID,1)
-       elif npcId == 30144 and int(st.get("cond"))==5 and st.getQuestItemsCount(SOUL_CATCHER_ID)==1 :
+       elif npcId == 30144 and st.getInt("cond")==5 and st.getQuestItemsCount(SOUL_CATCHER_ID)==1 :
             htmltext = "30144-04.htm"
-       elif npcId == 30132 and int(st.get("cond"))==5 and st.getQuestItemsCount(SOUL_CATCHER_ID)==1 :
+       elif npcId == 30132 and st.getInt("cond")==5 and st.getQuestItemsCount(SOUL_CATCHER_ID)==1 :
             htmltext = "30132-03.htm"
             st.set("cond","6")
             st.takeItems(SOUL_CATCHER_ID,1)
             st.giveItems(PRESERVE_OIL_ID,1)
-       elif npcId == 30132 and int(st.get("cond"))==6 and st.getQuestItemsCount(PRESERVE_OIL_ID)==1 and st.getQuestItemsCount(ZOMBIE_HEAD_ID)==0 and st.getQuestItemsCount(STEELBENDERS_HEAD_ID)==0 :
+       elif npcId == 30132 and st.getInt("cond")==6 and st.getQuestItemsCount(PRESERVE_OIL_ID)==1 and st.getQuestItemsCount(ZOMBIE_HEAD_ID)==0 and st.getQuestItemsCount(STEELBENDERS_HEAD_ID)==0 :
             htmltext = "30132-04.htm"
-       elif npcId == 30132 and int(st.get("cond"))==7 and st.getQuestItemsCount(ZOMBIE_HEAD_ID)==1 :
+       elif npcId == 30132 and st.getInt("cond")==7 and st.getQuestItemsCount(ZOMBIE_HEAD_ID)==1 :
             htmltext = "30132-05.htm"
             st.set("cond","8")
             st.takeItems(ZOMBIE_HEAD_ID,1)
             st.giveItems(STEELBENDERS_HEAD_ID,1)
-       elif npcId == 30132 and int(st.get("cond"))==8 and st.getQuestItemsCount(STEELBENDERS_HEAD_ID)==1 :
+       elif npcId == 30132 and st.getInt("cond")==8 and st.getQuestItemsCount(STEELBENDERS_HEAD_ID)==1 :
             htmltext = "30132-06.htm"
-       elif npcId == 30307 and int(st.get("cond"))==8 and st.getQuestItemsCount(STEELBENDERS_HEAD_ID)==1 :
+       elif npcId == 30307 and st.getInt("cond")==8 and st.getQuestItemsCount(STEELBENDERS_HEAD_ID)==1 :
             htmltext = "30307-07.htm"
             st.takeItems(STEELBENDERS_HEAD_ID,1)
             st.giveItems(BLOODSABER_ID,1)

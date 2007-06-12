@@ -49,7 +49,7 @@ class Quest (JQuest) :
      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    else :                                                  # The quest itself
      try :
-       cond = int(st.get("cond"))
+       cond = st.getInt("cond")
      except :
        cond = None
      if cond == 1 :
@@ -102,7 +102,7 @@ class Quest (JQuest) :
    if not st : return
    if st.getState() != STARTED : return
    
-   if int(st.get("cond")) == 2 :
+   if st.getInt("cond") == 2 :
      if st.getRandom(100) < 20 :
        if st.getQuestItemsCount(ANCIENT_SCROLL) == 0 :
          st.giveItems(ANCIENT_SCROLL,1)

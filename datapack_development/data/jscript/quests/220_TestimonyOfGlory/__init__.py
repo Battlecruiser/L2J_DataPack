@@ -206,7 +206,7 @@ class Quest (JQuest) :
         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    else :                                                   # The quest it self
      try :
-       cond = int(st.get("cond"))
+       cond = st.getInt("cond")
      except :
        cond = None
      # Default text after condition 4 for the bellow NPCs
@@ -436,7 +436,7 @@ class Quest (JQuest) :
    if st.getState() != STARTED : return
 
    npcId = npc.getNpcId()
-   cond = int(st.get("cond"))
+   cond = st.getInt("cond")
    if cond == 1 and npcId in DROPLIST_COND_1.keys():
      required,item,maxquanty=DROPLIST_COND_1[npcId]
      count = st.getQuestItemsCount(item)

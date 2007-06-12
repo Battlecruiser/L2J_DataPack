@@ -113,7 +113,7 @@ class Quest (JQuest) :
         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    else :                                                  # The quest it self
      try :
-       cond = int(st.get("cond"))
+       cond = st.getInt("cond")
      except :
        cond = None
      if cond == 1 :                                        # Condition 1 take the letter to Hierarch Asterios (Elven Master)
@@ -261,7 +261,7 @@ class Quest (JQuest) :
    if st.getState() != STARTED : return
 
    npcId = npc.getNpcId()
-   cond = int(st.get("cond"))
+   cond = st.getInt("cond")
    if cond == 2 and npcId in [ 20013, 20019, 20036, 20044 ] :          # Condition 2 kill the Luel of Zephy and Aktea of the Woods
      if npcId in [ 20036,20044 ] and st.getQuestItemsCount(BREATH_OF_WINDS_ID) == 0 :
        st.set("id",str(int(st.get("id"))+1))

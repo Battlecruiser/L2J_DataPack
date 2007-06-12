@@ -43,7 +43,7 @@ class Quest (JQuest) :
        st.setState(STARTED)
        st.playSound("ItemSound.quest_accept")
     elif event == "30317-02.htm" :
-       if int(st.get("cond")) == 3 :
+       if st.getInt("cond") == 3 :
           st.takeItems(SORIUS_LETTER1,-1)
           if st.getQuestItemsCount(KLUTO_MEMO) == 0 :
              st.giveItems(KLUTO_MEMO,1)
@@ -67,7 +67,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      cond=0
    else :
-     cond=int(st.get("cond"))
+     cond=st.getInt("cond")
    if npcId == 30327 :
         if cond == 0 :
             htmltext = "30327-01.htm"
@@ -119,7 +119,7 @@ class Quest (JQuest) :
    
    npcId = npc.getNpcId()
    if npcId != 20782 :
-        if int(st.get("cond"))==1 and st.getQuestItemsCount(TOPAZ_PIECE)<20 and st.getRandom(100)<70 :
+        if st.getInt("cond")==1 and st.getQuestItemsCount(TOPAZ_PIECE)<20 and st.getRandom(100)<70 :
             st.giveItems(TOPAZ_PIECE,1)
             if st.getQuestItemsCount(TOPAZ_PIECE) == 20 :
               st.playSound("ItemSound.quest_middle")
@@ -127,7 +127,7 @@ class Quest (JQuest) :
             else:
               st.playSound("ItemSound.quest_itemget")
    else :
-        if int(st.get("cond"))==4 and st.getQuestItemsCount(EMERALD_PIECE)<20 and st.getRandom(100)<50 :
+        if st.getInt("cond")==4 and st.getQuestItemsCount(EMERALD_PIECE)<20 and st.getRandom(100)<50 :
             st.giveItems(EMERALD_PIECE,1)
             if st.getQuestItemsCount(EMERALD_PIECE) == 20 :
               st.playSound("ItemSound.quest_middle")

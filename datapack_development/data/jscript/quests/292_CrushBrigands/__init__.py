@@ -41,7 +41,7 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
    if npcId == 30532 :
-     if int(st.get("cond"))==0 :
+     if st.getInt("cond")==0 :
        if st.getPlayer().getRace().ordinal() != 4 :
          htmltext = "30532-00.htm"
          st.exitQuest(1)
@@ -92,7 +92,7 @@ class Quest (JQuest) :
    if npcId in [20322, 20323]: item = GOBLIN_NECKLACE
    if npcId in [20324, 20327]: item = GOBLIN_PENDANT
    if npcId == 20528 : item = GOBLIN_LORD_PENDANT
-   if int(st.get("cond")) :
+   if st.getInt("cond") :
      n = st.getRandom(10)
      if n > 5 :
        st.giveItems(item,1)

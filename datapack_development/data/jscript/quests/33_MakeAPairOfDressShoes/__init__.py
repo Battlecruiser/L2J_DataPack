@@ -54,7 +54,7 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
-   cond = int(st.get("cond"))
+   cond = st.getInt("cond")
    if npcId == 30838 and cond == 0 and st.getQuestItemsCount(DRESS_SHOES_BOX) == 0 :
      fwear=st.getPlayer().getQuestState("37_PleaseMakeMeFormalWear")
      if fwear :

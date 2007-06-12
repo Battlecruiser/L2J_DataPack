@@ -89,7 +89,7 @@ class Quest (JQuest) :
   if st :
     if st.getState() == STARTED :
       count = st.getQuestItemsCount(GEM_OF_SUBMISSION)
-      if int(st.get("cond")) == 1 and count < 300 :
+      if st.getInt("cond") == 1 and count < 300 :
          st.giveItems(GEM_OF_SUBMISSION,1)
          if count == 299 :
            st.playSound("ItemSound.quest_middle")

@@ -83,12 +83,12 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30329 and int(st.get("cond"))==0 :
-        if int(st.get("cond"))<15 :
+   if npcId == 30329 and st.getInt("cond")==0 :
+        if st.getInt("cond")<15 :
           htmltext = "30329-01.htm"
         else:
           htmltext = "30329-01.htm"
-   elif npcId == 30329 and int(st.get("cond")) :
+   elif npcId == 30329 and st.getInt("cond") :
         if st.getQuestItemsCount(PALLUS_TALISMAN) == 1 and st.getQuestItemsCount(LYCANTHROPE_SKULL) == 0 :
           htmltext = "30329-07.htm"
         elif st.getQuestItemsCount(PALLUS_TALISMAN) == 1 and st.getQuestItemsCount(LYCANTHROPE_SKULL)>0 and st.getQuestItemsCount(LYCANTHROPE_SKULL)<13 :
@@ -105,7 +105,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_finish")
         elif st.getQuestItemsCount(MORTE_TALISMAN) or st.getQuestItemsCount(VIRGILS_LETTER) :
             htmltext = "30329-12.htm"
-   elif npcId == 30422 and int(st.get("cond")) :
+   elif npcId == 30422 and st.getInt("cond") :
         if st.getQuestItemsCount(VIRGILS_LETTER) :
           htmltext = "30422-01.htm"
         elif st.getQuestItemsCount(MORTE_TALISMAN) and st.getQuestItemsCount(TRIMDEN_SILK) == 0 and st.getQuestItemsCount(PREDATOR_CARAPACE) == 0 :
@@ -126,7 +126,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 20049 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(PALLUS_TALISMAN) == 1 and st.getQuestItemsCount(LYCANTHROPE_SKULL)<13 :
+        if st.getInt("cond") and st.getQuestItemsCount(PALLUS_TALISMAN) == 1 and st.getQuestItemsCount(LYCANTHROPE_SKULL)<13 :
           st.giveItems(LYCANTHROPE_SKULL,1)
           if st.getQuestItemsCount(LYCANTHROPE_SKULL) == 13 :
             st.playSound("ItemSound.quest_middle")
@@ -135,14 +135,14 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_itemget")
    elif npcId == 20038 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(MORTE_TALISMAN) == 1 and st.getQuestItemsCount(PREDATOR_CARAPACE)<1 :
+        if st.getInt("cond") and st.getQuestItemsCount(MORTE_TALISMAN) == 1 and st.getQuestItemsCount(PREDATOR_CARAPACE)<1 :
           st.giveItems(PREDATOR_CARAPACE,1)
           st.playSound("ItemSound.quest_middle")
           if st.getQuestItemsCount(TRIMDEN_SILK) >= 5 and st.getQuestItemsCount(PREDATOR_CARAPACE)>0 :
             st.set("cond","5")
    elif npcId == 20043 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(MORTE_TALISMAN) == 1 and st.getQuestItemsCount(TRIMDEN_SILK)<5 :
+        if st.getInt("cond") and st.getQuestItemsCount(MORTE_TALISMAN) == 1 and st.getQuestItemsCount(TRIMDEN_SILK)<5 :
           st.giveItems(TRIMDEN_SILK,1)
           if st.getQuestItemsCount(TRIMDEN_SILK) == 5 :
             st.playSound("ItemSound.quest_middle")

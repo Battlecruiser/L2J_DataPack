@@ -48,7 +48,7 @@ class Quest (JQuest) :
    elif id == COMPLETED :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 30130 :
-      if int(st.get("cond")) and st.getQuestItemsCount(UNDRES_LETTER_ID):
+      if st.getInt("cond") and st.getQuestItemsCount(UNDRES_LETTER_ID):
          if (st.getQuestItemsCount(GARMIELS_SCRIPTURE_ID)+st.getQuestItemsCount(DREVIANT_WINE_ID)+st.getQuestItemsCount(CEREMONIAL_DAGGER_ID)==0) :
             htmltext = "30130-05.htm"
          elif st.getQuestItemsCount(CEREMONIAL_DAGGER_ID)==st.getQuestItemsCount(DREVIANT_WINE_ID)==st.getQuestItemsCount(GARMIELS_SCRIPTURE_ID)==1 :

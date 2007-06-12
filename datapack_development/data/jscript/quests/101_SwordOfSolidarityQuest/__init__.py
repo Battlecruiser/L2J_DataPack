@@ -49,7 +49,7 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
-   if npcId == 30008 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30008 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
       if player.getRace().ordinal() != 0 :
         htmltext = "30008-00.htm"
       elif player.getLevel() >= 9 :
@@ -58,12 +58,12 @@ class Quest (JQuest) :
       else:
         htmltext = "30008-08.htm"
         st.exitQuest(1)
-   elif npcId == 30008 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30008 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    if id == STARTED: 
-       if npcId == 30008 and int(st.get("cond"))==1 and (st.getQuestItemsCount(ROIENS_LETTER_ID)==1) :
+       if npcId == 30008 and st.getInt("cond")==1 and (st.getQuestItemsCount(ROIENS_LETTER_ID)==1) :
             htmltext = "30008-05.htm"
-       elif npcId == 30008 and int(st.get("cond"))>=2 and st.getQuestItemsCount(ROIENS_LETTER_ID)==0 and st.getQuestItemsCount(ALLTRANS_NOTE_ID)==0 :
+       elif npcId == 30008 and st.getInt("cond")>=2 and st.getQuestItemsCount(ROIENS_LETTER_ID)==0 and st.getQuestItemsCount(ALLTRANS_NOTE_ID)==0 :
             if st.getQuestItemsCount(BROKEN_BLADE_TOP_ID) and st.getQuestItemsCount(BROKEN_BLADE_BOTTOM_ID) :
               htmltext = "30008-12.htm"
             if (st.getQuestItemsCount(BROKEN_BLADE_TOP_ID) + st.getQuestItemsCount(BROKEN_BLADE_BOTTOM_ID)) <= 1 :
@@ -72,14 +72,14 @@ class Quest (JQuest) :
               htmltext = "30008-07.htm"
             if st.getQuestItemsCount(HOWTOGO_RUINS_ID) == 1 :
               htmltext = "30008-10.htm"
-       elif npcId == 30008 and int(st.get("cond"))==4 and st.getQuestItemsCount(ROIENS_LETTER_ID)==0 and st.getQuestItemsCount(ALLTRANS_NOTE_ID) :
+       elif npcId == 30008 and st.getInt("cond")==4 and st.getQuestItemsCount(ROIENS_LETTER_ID)==0 and st.getQuestItemsCount(ALLTRANS_NOTE_ID) :
             htmltext = "30008-06.htm"
             st.set("cond","5")
             st.takeItems(ALLTRANS_NOTE_ID,st.getQuestItemsCount(ALLTRANS_NOTE_ID))
             st.giveItems(BROKEN_SWORD_HANDLE_ID,1)
-       elif npcId == 30283 and int(st.get("cond"))==1 and st.getQuestItemsCount(ROIENS_LETTER_ID)>0 :
+       elif npcId == 30283 and st.getInt("cond")==1 and st.getQuestItemsCount(ROIENS_LETTER_ID)>0 :
             htmltext = "30283-01.htm"
-       elif npcId == 30283 and int(st.get("cond"))>=2 and st.getQuestItemsCount(ROIENS_LETTER_ID)==0 and st.getQuestItemsCount(HOWTOGO_RUINS_ID)>0 :
+       elif npcId == 30283 and st.getInt("cond")>=2 and st.getQuestItemsCount(ROIENS_LETTER_ID)==0 and st.getQuestItemsCount(HOWTOGO_RUINS_ID)>0 :
             if (st.getQuestItemsCount(BROKEN_BLADE_TOP_ID) + st.getQuestItemsCount(BROKEN_BLADE_BOTTOM_ID)) == 1 :
               htmltext = "30283-08.htm"
             if (st.getQuestItemsCount(BROKEN_BLADE_TOP_ID) + st.getQuestItemsCount(BROKEN_BLADE_BOTTOM_ID)) == 0 :
@@ -91,9 +91,9 @@ class Quest (JQuest) :
               st.takeItems(BROKEN_BLADE_TOP_ID,st.getQuestItemsCount(BROKEN_BLADE_TOP_ID))
               st.takeItems(BROKEN_BLADE_BOTTOM_ID,st.getQuestItemsCount(BROKEN_BLADE_BOTTOM_ID))
               st.giveItems(ALLTRANS_NOTE_ID,1)
-       elif npcId == 30283 and int(st.get("cond"))==4 and st.getQuestItemsCount(ALLTRANS_NOTE_ID) :
+       elif npcId == 30283 and st.getInt("cond")==4 and st.getQuestItemsCount(ALLTRANS_NOTE_ID) :
             htmltext = "30283-05.htm"
-       elif npcId == 30283 and int(st.get("cond"))==5 and st.getQuestItemsCount(BROKEN_SWORD_HANDLE_ID) :
+       elif npcId == 30283 and st.getInt("cond")==5 and st.getQuestItemsCount(BROKEN_SWORD_HANDLE_ID) :
             htmltext = "30283-06.htm"
        return htmltext
 

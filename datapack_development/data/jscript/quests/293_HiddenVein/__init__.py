@@ -44,7 +44,7 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
    if npcId == 30535 :
-     if int(st.get("cond"))==0 :
+     if st.getInt("cond")==0 :
        if st.getPlayer().getRace().ordinal() != 4 :
          htmltext = "30535-00.htm"
          st.exitQuest(1)

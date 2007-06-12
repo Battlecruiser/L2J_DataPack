@@ -41,7 +41,7 @@ class Quest (JQuest) :
         elif st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x19 and st.getQuestItemsCount(LEAF_OF_ORACLE) == 1 :
             htmltext = "30293-04.htm"
     elif event == "30424-08.htm" :
-        if int(st.get("cond")) :
+        if st.getInt("cond") :
            st.getPcSpawn().addSpawn(27032)
            st.getPcSpawn().addSpawn(27033)
            st.getPcSpawn().addSpawn(27034)
@@ -49,13 +49,13 @@ class Quest (JQuest) :
     elif event == "30424_1" :
         htmltext=""
     elif event == "30428_1" :
-        if int(st.get("cond")) :
+        if st.getInt("cond") :
            htmltext = "30428-02.htm"
     elif event == "30428_2" :
-        if int(st.get("cond")) :
+        if st.getInt("cond") :
            htmltext = "30428-03.htm"
     elif event == "30428_3" :
-        if int(st.get("cond")) :
+        if st.getInt("cond") :
            st.getPcSpawn().addSpawn(27035)
     return htmltext
 
@@ -74,15 +74,15 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30293 and int(st.get("cond"))==0 :
+   if npcId == 30293 and st.getInt("cond")==0 :
       if st.getQuestItemsCount(LEAF_OF_ORACLE) == 0 :
          htmltext = "30293-01.htm"
          return htmltext
       else:
          htmltext = "30293-04.htm"
-   elif npcId == 30293 and int(st.get("cond")) and st.getQuestItemsCount(CRYSTAL_MEDALLION) :
+   elif npcId == 30293 and st.getInt("cond") and st.getQuestItemsCount(CRYSTAL_MEDALLION) :
     if st.getQuestItemsCount(MONEY_OF_SWINDLER) == 0 and st.getQuestItemsCount(DAIRY_OF_ALLANA) == 0 and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER) == 0 and st.getQuestItemsCount(HALF_OF_DAIRY) == 0 :
-        if int(st.get("cond")) :
+        if st.getInt("cond") :
             htmltext = "30293-09.htm"
         else:
             htmltext = "30293-06.htm"
@@ -100,9 +100,9 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_finish")
           else:
             htmltext = "30293-07.htm"
-   elif npcId == 30424 and int(st.get("cond")) and st.getQuestItemsCount(CRYSTAL_MEDALLION) :
+   elif npcId == 30424 and st.getInt("cond") and st.getQuestItemsCount(CRYSTAL_MEDALLION) :
         if st.getQuestItemsCount(MONEY_OF_SWINDLER) == 0 and st.getQuestItemsCount(DAIRY_OF_ALLANA) == 0 and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER) == 0 and st.getQuestItemsCount(HALF_OF_DAIRY) == 0 :
-          if int(st.get("cond")) > 2:
+          if st.getInt("cond") > 2:
             htmltext = "30424-05.htm"
           else:
             htmltext = "30424-01.htm"
@@ -111,7 +111,7 @@ class Quest (JQuest) :
             st.giveItems(HALF_OF_DAIRY,1)
             st.set("cond","4")
         elif st.getQuestItemsCount(MONEY_OF_SWINDLER) == 0 and st.getQuestItemsCount(DAIRY_OF_ALLANA) == 0 and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER) == 1 and st.getQuestItemsCount(HALF_OF_DAIRY) == 1 :
-              if int(st.get("cond")) and st.getQuestItemsCount(TAMATOS_NECKLACE) == 0 :
+              if st.getInt("cond") and st.getQuestItemsCount(TAMATOS_NECKLACE) == 0 :
                 htmltext = "30424-06.htm"
               else:
                 htmltext = "30424-03.htm"
@@ -123,7 +123,7 @@ class Quest (JQuest) :
         else:
                 if st.getQuestItemsCount(MONEY_OF_SWINDLER) == 1 and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER) == 1 and st.getQuestItemsCount(HALF_OF_DAIRY) == 0 and st.getQuestItemsCount(DAIRY_OF_ALLANA) :
                   htmltext = "30424-05.htm"
-   elif npcId == 30428 and int(st.get("cond")) and st.getQuestItemsCount(CRYSTAL_MEDALLION) and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER) :
+   elif npcId == 30428 and st.getInt("cond") and st.getQuestItemsCount(CRYSTAL_MEDALLION) and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER) :
         if st.getQuestItemsCount(TAMATOS_NECKLACE) == 1 :
           st.giveItems(MONEY_OF_SWINDLER,1)
           st.takeItems(TAMATOS_NECKLACE,1)
@@ -133,7 +133,7 @@ class Quest (JQuest) :
           if st.getQuestItemsCount(MONEY_OF_SWINDLER)>0 :
             htmltext = "30428-05.htm"
           else:
-            if int(st.get("cond")) > 4 :
+            if st.getInt("cond") > 4 :
               htmltext = "30428-06.htm"
             else:
               htmltext = "30428-01.htm"
@@ -147,13 +147,13 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 27032 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER) == 0 :
+        if st.getInt("cond") and st.getQuestItemsCount(LIZARD_CAPTAIN_ORDER) == 0 :
           st.giveItems(LIZARD_CAPTAIN_ORDER,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","3")
    elif npcId == 27035 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(TAMATOS_NECKLACE) == 0 :
+        if st.getInt("cond") and st.getQuestItemsCount(TAMATOS_NECKLACE) == 0 :
           st.giveItems(TAMATOS_NECKLACE,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","5")

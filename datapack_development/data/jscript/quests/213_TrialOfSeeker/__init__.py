@@ -99,7 +99,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30106 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30106 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
      if st.getPlayer().getClassId().getId() in [ 0x07, 0x16, 0x23 ] :
        if st.getPlayer().getLevel() >= 35 :
          htmltext = "30106-03.htm"
@@ -109,9 +109,9 @@ class Quest (JQuest) :
      else:
        htmltext = "30106-00.htm"
        st.exitQuest(1)
-   elif npcId == 30106 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30106 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 30106 and int(st.get("cond")) == 1 and int(st.get("onlyone")) == 0:
+   elif npcId == 30106 and st.getInt("cond") == 1 and int(st.get("onlyone")) == 0:
           if st.getQuestItemsCount(DUFNERS_LETTER_ID) == 1 and st.getQuestItemsCount(TERYS_REPORT_ID) == 0 :
             htmltext = "30106-06.htm"
           elif st.getQuestItemsCount(DUFNERS_LETTER_ID) == 0 and st.getQuestItemsCount(TERYS_REPORT_ID) == 0 :
@@ -126,39 +126,39 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_finish")
               st.takeItems(TERYS_REPORT_ID,1)
               st.giveItems(MARK_OF_SEEKER_ID,1)
-   elif npcId == 30064 and int(st.get("cond"))==1 and st.getQuestItemsCount(DUFNERS_LETTER_ID)==1 :
+   elif npcId == 30064 and st.getInt("cond")==1 and st.getQuestItemsCount(DUFNERS_LETTER_ID)==1 :
         htmltext = "30064-01.htm"
-   elif npcId == 30064 and int(st.get("cond"))==1 and st.getQuestItemsCount(TERYS_ORDER1_ID)==1 :
+   elif npcId == 30064 and st.getInt("cond")==1 and st.getQuestItemsCount(TERYS_ORDER1_ID)==1 :
       if st.getQuestItemsCount(MYSTERIOUS_RUNESTONE_ID) == 0 :
         htmltext = "30064-04.htm"
       else:
         htmltext = "30064-05.htm"
-   elif npcId == 30064 and int(st.get("cond"))==1 and st.getQuestItemsCount(TERYS_ORDER2_ID)==1 :
+   elif npcId == 30064 and st.getInt("cond")==1 and st.getQuestItemsCount(TERYS_ORDER2_ID)==1 :
       if st.getQuestItemsCount(TERYS_ORDER2_ID) == 1 :
         if st.getQuestItemsCount(OL_MAHUM_RUNESTONE_ID)+st.getQuestItemsCount(TUREK_RUNESTONE_ID)+st.getQuestItemsCount(ANT_RUNESTONE_ID)+st.getQuestItemsCount(TURAK_BUGBEAR_RUNESTONE_ID)<4 :
           htmltext = "30064-08.htm"
         else:
           htmltext = "30064-09.htm"
-   elif npcId == 30064 and int(st.get("cond"))==1 and st.getQuestItemsCount(TERYS_LETTER_ID)==1 :
+   elif npcId == 30064 and st.getInt("cond")==1 and st.getQuestItemsCount(TERYS_LETTER_ID)==1 :
       htmltext = "30064-11.htm"
-   elif npcId == 30064 and int(st.get("cond"))==1 and st.getQuestItemsCount(VIKTORS_LETTER_ID)==1 :
+   elif npcId == 30064 and st.getInt("cond")==1 and st.getQuestItemsCount(VIKTORS_LETTER_ID)==1 :
       htmltext = "30064-12.htm"
       st.takeItems(VIKTORS_LETTER_ID,1)
       st.giveItems(HAWKEYES_LETTER_ID,1)
-   elif npcId == 30064 and int(st.get("cond"))==1 and st.getQuestItemsCount(HAWKEYES_LETTER_ID)==1 :
+   elif npcId == 30064 and st.getInt("cond")==1 and st.getQuestItemsCount(HAWKEYES_LETTER_ID)==1 :
       htmltext = "30064-13.htm"
-   elif npcId == 30064 and int(st.get("cond"))==1 and (st.getQuestItemsCount(VIKTORS_REQUEST_ID)==1 or st.getQuestItemsCount(ANALYSIS_REQUEST_ID)==1 or st.getQuestItemsCount(MARINAS_LETTER_ID)==1 or st.getQuestItemsCount(EXPERIMENT_TOOLS_ID)==1) :
+   elif npcId == 30064 and st.getInt("cond")==1 and (st.getQuestItemsCount(VIKTORS_REQUEST_ID)==1 or st.getQuestItemsCount(ANALYSIS_REQUEST_ID)==1 or st.getQuestItemsCount(MARINAS_LETTER_ID)==1 or st.getQuestItemsCount(EXPERIMENT_TOOLS_ID)==1) :
       htmltext = "30064-14.htm"
-   elif npcId == 30064 and int(st.get("cond"))==1 and st.getQuestItemsCount(ANALYSIS_RESULT_ID)==1 :
+   elif npcId == 30064 and st.getInt("cond")==1 and st.getQuestItemsCount(ANALYSIS_RESULT_ID)==1 :
       htmltext = "30064-15.htm"
-   elif npcId == 30064 and int(st.get("cond"))==1 and st.getQuestItemsCount(TERYS_ORDER3_ID)==1 :
+   elif npcId == 30064 and st.getInt("cond")==1 and st.getQuestItemsCount(TERYS_ORDER3_ID)==1 :
       if st.getPlayer().getLevel()<36 :
         htmltext = "30064-20.htm"
       else:
         htmltext = "30064-21.htm"
         st.giveItems(LIST_OF_HOST_ID,1)
         st.takeItems(TERYS_ORDER3_ID,1)
-   elif npcId == 30064 and int(st.get("cond"))==1 and st.getQuestItemsCount(LIST_OF_HOST_ID)==1 :
+   elif npcId == 30064 and st.getInt("cond")==1 and st.getQuestItemsCount(LIST_OF_HOST_ID)==1 :
       if st.getQuestItemsCount(ABYSS_RUNESTONE1_ID)+st.getQuestItemsCount(ABYSS_RUNESTONE2_ID)+st.getQuestItemsCount(ABYSS_RUNESTONE3_ID)+st.getQuestItemsCount(ABYSS_RUNESTONE4_ID)<4 :
         htmltext = "30064-22.htm"
       else:
@@ -169,34 +169,34 @@ class Quest (JQuest) :
         st.takeItems(ABYSS_RUNESTONE2_ID,1)
         st.takeItems(ABYSS_RUNESTONE3_ID,1)
         st.takeItems(ABYSS_RUNESTONE4_ID,1)
-   elif npcId == 30064 and int(st.get("cond"))==1 and st.getQuestItemsCount(TERYS_REPORT_ID)==1 :
+   elif npcId == 30064 and st.getInt("cond")==1 and st.getQuestItemsCount(TERYS_REPORT_ID)==1 :
       htmltext = "30064-24.htm"
-   elif npcId == 30684 and int(st.get("cond"))==1 and st.getQuestItemsCount(TERYS_LETTER_ID)==1 :
+   elif npcId == 30684 and st.getInt("cond")==1 and st.getQuestItemsCount(TERYS_LETTER_ID)==1 :
       htmltext = "30684-01.htm"
-   elif npcId == 30684 and int(st.get("cond"))==1 and st.getQuestItemsCount(HAWKEYES_LETTER_ID)==1 :
+   elif npcId == 30684 and st.getInt("cond")==1 and st.getQuestItemsCount(HAWKEYES_LETTER_ID)==1 :
       htmltext = "30684-12.htm"
-   elif npcId == 30684 and int(st.get("cond"))==1 and st.getQuestItemsCount(VIKTORS_REQUEST_ID)==1 :
+   elif npcId == 30684 and st.getInt("cond")==1 and st.getQuestItemsCount(VIKTORS_REQUEST_ID)==1 :
       if st.getQuestItemsCount(MEDUSAS_SCALES_ID)<10 :
         htmltext = "30684-13.htm"
       else:
         htmltext = "30684-14.htm"
-   elif npcId == 30684 and int(st.get("cond"))==1 and st.getQuestItemsCount(SILENS_RUNESTONE_ID)==1 and st.getQuestItemsCount(ANALYSIS_REQUEST_ID)==1 :
+   elif npcId == 30684 and st.getInt("cond")==1 and st.getQuestItemsCount(SILENS_RUNESTONE_ID)==1 and st.getQuestItemsCount(ANALYSIS_REQUEST_ID)==1 :
       htmltext = "30684-16.htm"
-   elif npcId == 30684 and int(st.get("cond"))==1 and (st.getQuestItemsCount(MARINAS_LETTER_ID)==1 and st.getQuestItemsCount(EXPERIMENT_TOOLS_ID)==1 and st.getQuestItemsCount(ANALYSIS_RESULT_ID)==1 and st.getQuestItemsCount(TERYS_REPORT_ID)==1) :
+   elif npcId == 30684 and st.getInt("cond")==1 and (st.getQuestItemsCount(MARINAS_LETTER_ID)==1 and st.getQuestItemsCount(EXPERIMENT_TOOLS_ID)==1 and st.getQuestItemsCount(ANALYSIS_RESULT_ID)==1 and st.getQuestItemsCount(TERYS_REPORT_ID)==1) :
       htmltext = "30684-17.htm"
-   elif npcId == 30715 and int(st.get("cond"))==1 and st.getQuestItemsCount(SILENS_RUNESTONE_ID)==1 and st.getQuestItemsCount(ANALYSIS_REQUEST_ID)==1 :
+   elif npcId == 30715 and st.getInt("cond")==1 and st.getQuestItemsCount(SILENS_RUNESTONE_ID)==1 and st.getQuestItemsCount(ANALYSIS_REQUEST_ID)==1 :
       htmltext = "30715-01.htm"
-   elif npcId == 30715 and int(st.get("cond"))==1 and st.getQuestItemsCount(MARINAS_LETTER_ID)==1 :
+   elif npcId == 30715 and st.getInt("cond")==1 and st.getQuestItemsCount(MARINAS_LETTER_ID)==1 :
       htmltext = "30715-03.htm"
-   elif npcId == 30715 and int(st.get("cond"))==1 and st.getQuestItemsCount(EXPERIMENT_TOOLS_ID)==1 :
+   elif npcId == 30715 and st.getInt("cond")==1 and st.getQuestItemsCount(EXPERIMENT_TOOLS_ID)==1 :
       htmltext = "30715-04.htm"
-   elif npcId == 30715 and int(st.get("cond"))==1 and (st.getQuestItemsCount(ANALYSIS_RESULT_ID)==1 or st.getQuestItemsCount(TERYS_REPORT_ID)==1) :
+   elif npcId == 30715 and st.getInt("cond")==1 and (st.getQuestItemsCount(ANALYSIS_RESULT_ID)==1 or st.getQuestItemsCount(TERYS_REPORT_ID)==1) :
       htmltext = "30715-06.htm"
-   elif npcId == 30526 and int(st.get("cond"))==1 and st.getQuestItemsCount(MARINAS_LETTER_ID)==1 :
+   elif npcId == 30526 and st.getInt("cond")==1 and st.getQuestItemsCount(MARINAS_LETTER_ID)==1 :
       htmltext = "30526-01.htm"
       st.takeItems(MARINAS_LETTER_ID,1)
       st.giveItems(EXPERIMENT_TOOLS_ID,1)
-   elif npcId == 30526 and int(st.get("cond"))==1 and st.getQuestItemsCount(EXPERIMENT_TOOLS_ID)==1 :
+   elif npcId == 30526 and st.getInt("cond")==1 and st.getQuestItemsCount(EXPERIMENT_TOOLS_ID)==1 :
       htmltext = "30526-02.htm"
    return htmltext
 

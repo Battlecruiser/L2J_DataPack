@@ -68,12 +68,12 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
-   if npcId == 30416 and int(st.get("cond"))==0 :
+   if npcId == 30416 and st.getInt("cond")==0 :
      if st.getQuestItemsCount(IRON_HEART) == 0 :
         htmltext = "30416-01.htm"
      else:
         htmltext = "30416-04.htm"
-   elif npcId == 30416 and int(st.get("cond"))>=1 :
+   elif npcId == 30416 and st.getInt("cond")>=1 :
         if st.getQuestItemsCount(ARKENIAS_LETTER) == 0 and st.getQuestItemsCount(LEIKANS_NOTE) == 0 and st.getQuestItemsCount(SHILENS_TEARS) == 0 and st.getQuestItemsCount(ARKENIA_RECOMMEND) == 1 and st.getQuestItemsCount(IRON_HEART) == 0 :
           htmltext = "30416-06.htm"
           st.takeItems(ARKENIA_RECOMMEND,1)
@@ -92,7 +92,7 @@ class Quest (JQuest) :
             htmltext = "30416-10.htm"
         elif st.getQuestItemsCount(ARKENIAS_LETTER) == 0 and st.getQuestItemsCount(LEIKANS_NOTE) == 0 and st.getQuestItemsCount(SHILENS_TEARS) == 0 and st.getQuestItemsCount(ARKENIA_RECOMMEND) == 0 and st.getQuestItemsCount(IRON_HEART) == 0 and st.getQuestItemsCount(SHILENS_CALL) == 1 :
             htmltext = "30416-11.htm"
-   elif npcId == 30419 and int(st.get("cond"))>=1 :
+   elif npcId == 30419 and st.getInt("cond")>=1 :
         if st.getQuestItemsCount(ARKENIAS_LETTER) == 0 and st.getQuestItemsCount(LEIKANS_NOTE) == 0 and st.getQuestItemsCount(SHILENS_TEARS) == 0 and st.getQuestItemsCount(ARKENIA_RECOMMEND) == 0 and st.getQuestItemsCount(IRON_HEART) == 0 and st.getQuestItemsCount(SHILENS_CALL) == 1 :
           htmltext = "30419-01.htm"
         elif st.getQuestItemsCount(ARKENIAS_LETTER) == 1 and st.getQuestItemsCount(LEIKANS_NOTE) == 0 and st.getQuestItemsCount(SHILENS_TEARS) == 0 and st.getQuestItemsCount(ARKENIA_RECOMMEND) == 0 and st.getQuestItemsCount(IRON_HEART) == 0 and st.getQuestItemsCount(SHILENS_CALL) == 0 :
@@ -109,7 +109,7 @@ class Quest (JQuest) :
             htmltext = "30419-10.htm"
         elif st.getQuestItemsCount(ARKENIAS_LETTER) == 0 and st.getQuestItemsCount(LEIKANS_NOTE) == 0 and st.getQuestItemsCount(SHILENS_TEARS) == 0 and st.getQuestItemsCount(ARKENIA_RECOMMEND) == 0 and st.getQuestItemsCount(IRON_HEART) == 0 and st.getQuestItemsCount(SHILENS_CALL) == 0 :
             htmltext = "30419-11.htm"
-   elif npcId == 30382 and int(st.get("cond"))>=1 :
+   elif npcId == 30382 and st.getInt("cond")>=1 :
         if st.getQuestItemsCount(ARKENIAS_LETTER) == 1 and st.getQuestItemsCount(LEIKANS_NOTE) == 0 and st.getQuestItemsCount(SHILENS_TEARS) == 0 and st.getQuestItemsCount(ARKENIA_RECOMMEND) == 0 and st.getQuestItemsCount(IRON_HEART) == 0 and st.getQuestItemsCount(SHILENS_CALL) == 0 and st.getQuestItemsCount(ONYX_BEASTS_MOLAR) == 0 :
           htmltext = "30382-01.htm"
         elif st.getQuestItemsCount(ARKENIAS_LETTER) == 0 and st.getQuestItemsCount(LEIKANS_NOTE) == 1 and st.getQuestItemsCount(SHILENS_TEARS) == 0 and st.getQuestItemsCount(ARKENIA_RECOMMEND) == 0 and st.getQuestItemsCount(IRON_HEART) == 0 and st.getQuestItemsCount(SHILENS_CALL) == 0 and st.getQuestItemsCount(ONYX_BEASTS_MOLAR) == 0 :
@@ -124,7 +124,7 @@ class Quest (JQuest) :
             st.takeItems(LEIKANS_NOTE,1)
         elif st.getQuestItemsCount(SHILENS_TEARS) == 1 :
             htmltext = "30382-08.htm"
-        elif int(st.get("cond")) >= 1 and st.getQuestItemsCount(ARKENIAS_LETTER) == 0 and st.getQuestItemsCount(LEIKANS_NOTE) == 0 and st.getQuestItemsCount(SHILENS_TEARS) == 0 and st.getQuestItemsCount(ARKENIA_RECOMMEND) == 0 and st.getQuestItemsCount(IRON_HEART) == 0 and st.getQuestItemsCount(SHILENS_CALL) == 0 and st.getQuestItemsCount(ONYX_BEASTS_MOLAR) == 0 :
+        elif st.getInt("cond") >= 1 and st.getQuestItemsCount(ARKENIAS_LETTER) == 0 and st.getQuestItemsCount(LEIKANS_NOTE) == 0 and st.getQuestItemsCount(SHILENS_TEARS) == 0 and st.getQuestItemsCount(ARKENIA_RECOMMEND) == 0 and st.getQuestItemsCount(IRON_HEART) == 0 and st.getQuestItemsCount(SHILENS_CALL) == 0 and st.getQuestItemsCount(ONYX_BEASTS_MOLAR) == 0 :
             htmltext = "30382-09.htm"
    return htmltext
 
@@ -135,12 +135,12 @@ class Quest (JQuest) :
    
    npcId = npc.getNpcId()
    if npcId == 27036 :
-        if int(st.get("cond")) >= 1 and st.getQuestItemsCount(SHILENS_TEARS) == 0 :
+        if st.getInt("cond") >= 1 and st.getQuestItemsCount(SHILENS_TEARS) == 0 :
           st.giveItems(SHILENS_TEARS,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","6")
    elif npcId == 20369 :
-        if int(st.get("cond")) >= 1 and st.getQuestItemsCount(LEIKANS_NOTE) == 1 and st.getQuestItemsCount(ONYX_BEASTS_MOLAR)<10 :
+        if st.getInt("cond") >= 1 and st.getQuestItemsCount(LEIKANS_NOTE) == 1 and st.getQuestItemsCount(ONYX_BEASTS_MOLAR)<10 :
           st.giveItems(ONYX_BEASTS_MOLAR,1)
           if st.getQuestItemsCount(ONYX_BEASTS_MOLAR) == 10 :
               st.playSound("ItemSound.quest_middle")

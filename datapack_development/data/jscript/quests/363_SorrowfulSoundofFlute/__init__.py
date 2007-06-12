@@ -36,28 +36,28 @@ class Quest (JQuest) :
    if npcId != 30956 and id != STARTED : return htmltext
    if id == CREATED :
      st.set("cond","0")
-   if npcId == 30956 and int(st.get("cond")) == 0 :
+   if npcId == 30956 and st.getInt("cond") == 0 :
         htmltext = "30956_1.htm"
-   elif npcId == 30956 and int(st.get("cond")) == 1 :
+   elif npcId == 30956 and st.getInt("cond") == 1 :
         htmltext = "<html><head><body>Find Blacksmith Opix..</body></html>"
-   elif npcId == 30595 and int(st.get("cond")) == 1 :
+   elif npcId == 30595 and st.getInt("cond") == 1 :
         st.set("cond","2")
         htmltext = "30595_1.htm"
-   elif npcId == 30595 and int(st.get("cond")) > 1 :
+   elif npcId == 30595 and st.getInt("cond") > 1 :
         htmltext = "<html><head><body>Go back to Nanarin..</body></html>"
-   elif npcId == 30956 and int(st.get("cond")) == 2 :
+   elif npcId == 30956 and st.getInt("cond") == 2 :
         st.giveItems(4319,1)
         st.set("cond","3")
         htmltext = "30956_3.htm"
-   elif npcId == 30956 and int(st.get("cond")) == 3 :
+   elif npcId == 30956 and st.getInt("cond") == 3 :
         htmltext = "<html><head><body>Find Barbado..</body></html>"
-   elif npcId == 30959 and int(st.get("cond")) == 3 :
+   elif npcId == 30959 and st.getInt("cond") == 3 :
         st.takeItems(4319,1)
         st.set("cond","4")
         htmltext = "30959_1.htm"
-   elif npcId == 30959 and int(st.get("cond")) == 4 :
+   elif npcId == 30959 and st.getInt("cond") == 4 :
         htmltext = "<html><head><body>Go back to Nanarin..</body></html>"
-   elif npcId == 30956 and int(st.get("cond")) == 4 :
+   elif npcId == 30956 and st.getInt("cond") == 4 :
         htmltext = "30956_4.htm"
    return htmltext
 

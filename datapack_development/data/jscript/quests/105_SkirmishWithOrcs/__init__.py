@@ -58,8 +58,8 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30218 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-      if int(st.get("cond")) < 15 :
+   if npcId == 30218 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+      if st.getInt("cond") < 15 :
         if player.getLevel() >= 10 and player.getRace().ordinal() == 1 :
           htmltext = "30218-02.htm"
           return htmltext
@@ -72,9 +72,9 @@ class Quest (JQuest) :
       else:
         htmltext = "30218-10.htm"
         st.exitQuest(1)
-   elif npcId == 30218 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30218 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 30218 and int(st.get("cond")) :
+   elif npcId == 30218 and st.getInt("cond") :
       if st.getQuestItemsCount(KABOO_CHIEF_TORC1_ID) :
         htmltext = "30218-06.htm"
         if st.getQuestItemsCount(KENDNELLS_ORDER1_ID) :
@@ -129,49 +129,49 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 27059 :
     st.set("id","0")
-    if int(st.get("cond")) == 1 :
+    if st.getInt("cond") == 1 :
      if st.getQuestItemsCount(KENDNELLS_ORDER1_ID) and st.getQuestItemsCount(KABOO_CHIEF_TORC1_ID) == 0 :
       st.giveItems(KABOO_CHIEF_TORC1_ID,1)
       st.playSound("ItemSound.quest_middle")
    elif npcId == 27060 :
     st.set("id","0")
-    if int(st.get("cond")) == 1 :
+    if st.getInt("cond") == 1 :
      if st.getQuestItemsCount(KENDNELLS_ORDER2_ID) and st.getQuestItemsCount(KABOO_CHIEF_TORC1_ID) == 0 :
       st.giveItems(KABOO_CHIEF_TORC1_ID,1)
       st.playSound("ItemSound.quest_middle")
    elif npcId == 27061 :
     st.set("id","0")
-    if int(st.get("cond")) == 1 :
+    if st.getInt("cond") == 1 :
      if st.getQuestItemsCount(KENDNELLS_ORDER3_ID) and st.getQuestItemsCount(KABOO_CHIEF_TORC1_ID) == 0 :
       st.giveItems(KABOO_CHIEF_TORC1_ID,1)
       st.playSound("ItemSound.quest_middle")
    elif npcId == 27062 :
     st.set("id","0")
-    if int(st.get("cond")) == 1 :
+    if st.getInt("cond") == 1 :
      if st.getQuestItemsCount(KENDNELLS_ORDER4_ID) and st.getQuestItemsCount(KABOO_CHIEF_TORC1_ID) == 0 :
       st.giveItems(KABOO_CHIEF_TORC1_ID,1)
       st.playSound("ItemSound.quest_middle")
    elif npcId == 27064 :
     st.set("id","0")
-    if int(st.get("cond")) == 1 :
+    if st.getInt("cond") == 1 :
      if st.getQuestItemsCount(KENDNELLS_ORDER5_ID) and st.getQuestItemsCount(KABOO_CHIEF_TORC2_ID) == 0 :
       st.giveItems(KABOO_CHIEF_TORC2_ID,1)
       st.playSound("ItemSound.quest_middle")
    elif npcId == 27065 :
     st.set("id","0")
-    if int(st.get("cond")) == 1 :
+    if st.getInt("cond") == 1 :
      if st.getQuestItemsCount(KENDNELLS_ORDER6_ID) and st.getQuestItemsCount(KABOO_CHIEF_TORC2_ID) == 0 :
       st.giveItems(KABOO_CHIEF_TORC2_ID,1)
       st.playSound("ItemSound.quest_middle")
    elif npcId == 27067 :
     st.set("id","0")
-    if int(st.get("cond")) == 1 :
+    if st.getInt("cond") == 1 :
      if st.getQuestItemsCount(KENDNELLS_ORDER7_ID) and st.getQuestItemsCount(KABOO_CHIEF_TORC2_ID) == 0 :
       st.giveItems(KABOO_CHIEF_TORC2_ID,1)
       st.playSound("ItemSound.quest_middle")
    elif npcId == 27068 :
     st.set("id","0")
-    if int(st.get("cond")) == 1 :
+    if st.getInt("cond") == 1 :
      if st.getQuestItemsCount(KENDNELLS_ORDER8_ID) and st.getQuestItemsCount(KABOO_CHIEF_TORC2_ID) == 0 :
       st.giveItems(KABOO_CHIEF_TORC2_ID,1)
       st.playSound("ItemSound.quest_middle")

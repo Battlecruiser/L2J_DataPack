@@ -36,11 +36,11 @@ class Quest (JQuest) :
    if id == CREATED : 
       st.set("cond","0")
    if npcId == 30576 :
-      if int(st.get("cond"))==0 : 
+      if st.getInt("cond")==0 : 
          htmltext = "30576-02.htm" 
-      elif int(st.get("cond"))==1 and st.getQuestItemsCount(STARSTONE1_ID)<20 : 
+      elif st.getInt("cond")==1 and st.getQuestItemsCount(STARSTONE1_ID)<20 : 
          htmltext = "30576-04.htm" 
-      elif int(st.get("cond"))==2 and st.getQuestItemsCount(STARSTONE1_ID)>=20 : 
+      elif st.getInt("cond")==2 and st.getQuestItemsCount(STARSTONE1_ID)>=20 : 
          htmltext = "30576-05.htm" 
          st.takeItems(STARSTONE1_ID,-1) 
          st.giveItems(GATEKEEPER_CHARM_ID,2) 
@@ -55,7 +55,7 @@ class Quest (JQuest) :
    
    npcId = npc.getNpcId()
    if npcId == 20333 : 
-      if int(st.get("cond")) == 1 and st.getQuestItemsCount(STARSTONE1_ID) < 20 :
+      if st.getInt("cond") == 1 and st.getQuestItemsCount(STARSTONE1_ID) < 20 :
          if st.getRandom(2) == 0 :
             st.giveItems(STARSTONE1_ID,1)
             if st.getQuestItemsCount(STARSTONE1_ID) == 20 :
