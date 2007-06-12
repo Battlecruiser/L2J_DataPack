@@ -24,7 +24,7 @@ CREATE TABLE `weapon` (
   `atk_speed` decimal(3,0) default NULL,
   `mp_consume` decimal(2,0) default NULL,
   `m_dam` decimal(3,0) default NULL,
-  `durability` decimal(3,0) default NULL,
+  `duration` decimal(3,0) default NULL,
   `price` decimal(11,0) default NULL,
   `crystal_count` int(4) default NULL,
   `sellable` varchar(5) default NULL,

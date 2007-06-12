@@ -12,7 +12,7 @@ CREATE TABLE `etcitem` (
   `consume_type` varchar(9) default NULL,
   `material` varchar(11) default NULL,
   `crystal_type` varchar(4) default NULL,
-  `durability` decimal(3,0) default NULL,
+  `duration` decimal(3,0) default NULL,
   `price` decimal(11,0) default NULL,
   `crystal_count` int(4) default NULL,
   `sellable` varchar(5) default NULL,
@@ -27,7 +27,7 @@ CREATE TABLE `etcitem` (
 -- 
 -- Dumping data for table `etcitem`
 -- 
-INSERT INTO `etcitem` (`item_id`,`name`,`crystallizable`,`item_type`,`weight`,`consume_type`,`material`,`crystal_type`,`durability`,`price`,`crystal_count`,`sellable`,`dropable`,`destroyable`,`tradeable`,`oldname`,`oldtype`) VALUES 
+INSERT INTO `etcitem` (`item_id`,`name`,`crystallizable`,`item_type`,`weight`,`consume_type`,`material`,`crystal_type`,`duration`,`price`,`crystal_count`,`sellable`,`dropable`,`destroyable`,`tradeable`,`oldname`,`oldtype`) VALUES 
  ('17','Wooden Arrow','false','arrow','6','stackable','wood','none','-1','2','0','true','true','true','true','wooden_arrow','arrow'),
  ('57','Adena','false','none','0','asset','gold','none','-1','1','0','true','true','true','true','adena','none'),
  ('65','Red Potion','false','potion','80','stackable','liquid','none','-1','40','0','true','true','true','true','red_potion','potion'),
@@ -3614,7 +3614,7 @@ INSERT INTO `etcitem` (`item_id`,`name`,`crystallizable`,`item_type`,`weight`,`c
  ('4998','Recipe: Blue Wolf Gloves (60%)','false','recipe','30','stackable','liquid','none','-1','16080','0','true','true','true','true','rp_blue_wolve\'s_gloves_i','recipe'),
  ('4999','Recipe: Doom Boots (60%)','false','recipe','30','stackable','liquid','none','-1','16080','0','true','true','true','true','rp_doom_boots_i','recipe');
 
-INSERT INTO `etcitem` (`item_id`,`name`,`crystallizable`,`item_type`,`weight`,`consume_type`,`material`,`crystal_type`,`durability`,`price`,`crystal_count`,`sellable`,`dropable`,`destroyable`,`tradeable`,`oldname`,`oldtype`) VALUES 
+INSERT INTO `etcitem` (`item_id`,`name`,`crystallizable`,`item_type`,`weight`,`consume_type`,`material`,`crystal_type`,`duration`,`price`,`crystal_count`,`sellable`,`dropable`,`destroyable`,`tradeable`,`oldname`,`oldtype`) VALUES 
  ('5000','Recipe: Sword of Damascus (60%)','false','recipe','30','stackable','liquid','none','-1','262000','0','true','true','true','true','rp_sword_of_damascus_i','recipe'),
  ('5001','Recipe: Lance (60%)','false','recipe','30','stackable','liquid','none','-1','262000','0','true','true','true','true','rp_lancia_i','recipe'),
  ('5002','Recipe: Deadman\'s Glory (60%)','false','recipe','30','stackable','liquid','none','-1','262000','0','true','true','true','true','rp_deadman\'s_glory_i','recipe'),
