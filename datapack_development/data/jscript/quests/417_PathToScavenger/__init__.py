@@ -280,7 +280,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 20777 :
         if st.getInt("cond") and st.getQuestItemsCount(BEAR_PIC) == 1 and st.getQuestItemsCount(HONEY_JAR) < 5 :
-          if int(st.get("id") > 20) :
+          if st.getInt("id") > 20 :
             n = ((st.getInt("id")-20)*10)
             if st.getRandom(100) <= n :
               st.getPcSpawn().addSpawn(27058)

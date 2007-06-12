@@ -108,7 +108,7 @@ class Quest (JQuest) :
    elif id==COMPLETED :
      htmltext = "<html><head><body>This quest has already been completed.</body></html>"
    else:
-     phase=int(st.get("phase"))
+     phase=st.getInt("phase")
      if npcId== NPC[3]:
        if phase==1 :
          htmltext = "30690-06.htm"
@@ -215,7 +215,7 @@ class Quest (JQuest) :
       if phase==13 :
         htmltext = "30730-01.htm"
       elif phase == 14:
-       if int(st.get("soltsMap"))==2 and int(st.get("makelsMap"))==2:
+       if st.getInt("soltsMap")==2 and st.getInt("makelsMap")==2:
          htmltext = "30730-03.htm"
          st.takeItems(LAMBERTS_MAP,1)
          st.takeItems(TORN_MAP_PIECE2,4)

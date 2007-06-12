@@ -264,7 +264,7 @@ class Quest (JQuest) :
                   if chosen[i]==grid[i]:
                      count+=1
               if count == 3:
-                 st.giveItems(int(st.get("coin")),1)
+                 st.giveItems(st.getInt("coin"),1)
                  next = "20"
               else:
                  if tries :

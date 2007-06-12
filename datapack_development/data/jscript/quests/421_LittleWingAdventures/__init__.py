@@ -64,7 +64,7 @@ def get_control_item(st) :
   if st.getState() == CREATED :
       st.set("item",str(item))
   else :
-      if  int(st.get("item")) != item : item = 0
+      if  st.getInt("item") != item : item = 0
   return item  
 
 def get_distance(st) :

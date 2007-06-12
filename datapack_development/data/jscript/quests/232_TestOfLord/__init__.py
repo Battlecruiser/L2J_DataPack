@@ -69,7 +69,7 @@ class Quest (JQuest) :
   
   def onEvent (self,event,st):
     htmltext=event
-    if int(st.get("phase"))==0:
+    if st.getInt("phase")==0:
       if event=="1":
         st.setState(STARTED)
         st.giveItems(ORDEAL_NECKLACE,1)
@@ -79,7 +79,7 @@ class Quest (JQuest) :
           st.set(var,"0")
         st.set("cond","1")
         st.set("phase","1")
-    elif int(st.get("phase"))==1:
+    elif st.getInt("phase")==1:
       if event == "30565_1" :
         htmltext = "30565-08.htm"
         st.takeItems(SWORD_INTO_SKULL,1)
@@ -116,7 +116,7 @@ class Quest (JQuest) :
         st.set("gandiStat","1")
         htmltext = "30642-02.htm"
         st.giveItems(CHIANTA_CHARM,1)
-    elif int(st.get("phase"))==2:
+    elif st.getInt("phase")==2:
       if event == "30565_2":
         htmltext = "30565-12.htm"
         st.addExpAndSp(92955,16250)
@@ -178,12 +178,12 @@ class Quest (JQuest) :
     elif id == COMPLETED:
       htmltext = "<html><head><body>This quest has already been completed.</body></html>"
     else:
-      if int(st.get("phase")) == 1:
-        atuba=int(st.get("atubaStat"))
-        neruga=int(st.get("nerugaStat"))
-        urutu=int(st.get("urutuStat"))
-        duda=int(st.get("dudaStat"))
-        gandi=int(st.get("gandiStat"))
+      if st.getInt("phase") == 1:
+        atuba=st.getInt("atubaStat")
+        neruga=st.getInt("nerugaStat")
+        urutu=st.getInt("urutuStat")
+        duda=st.getInt("dudaStat")
+        gandi=st.getInt("gandiStat")
 #             Atuba Part
         if npcId == NPC[5]:
           if atuba==0:
@@ -245,7 +245,7 @@ class Quest (JQuest) :
         elif npcId == NPC[7]:
           if urutu==0:
             htmltext = "30568-01.htm"
-          elif urutu==3 and int(st.get("urutuDrop"))==1:
+          elif urutu==3 and st.getInt("urutuDrop")==1:
             st.set("urutuStat","4")
             htmltext = "30568-04.htm"
             st.takeItems(HATOS_CHARM,1)
@@ -306,8 +306,8 @@ class Quest (JQuest) :
             htmltext = "30565-07.htm"
           else:
             htmltext = "30565-06.htm"
-      elif int(st.get("phase"))==2:
-        markantus=int(st.get("markantusStat"))
+      elif st.getInt("phase")==2:
+        markantus=st.getInt("markantusStat")
         if npcId == NPC[11]:
           if markantus==0:
             htmltext = "30649-01.htm"

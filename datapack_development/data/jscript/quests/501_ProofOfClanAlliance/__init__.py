@@ -201,7 +201,7 @@ class Quest (JQuest) :
               st.getQuestItemsCount(HERB_OF_OEL_MAHUM) and \
               st.getQuestItemsCount(BLOOD_OF_EVA) and \
               st.getQuestItemsCount(ANTIDOTE_RECIPE) and \
-              int(st.get("chest_game"))== 3 :
+              st.getInt("chest_game")== 3 :
              st.takeItems(ANTIDOTE_RECIPE,1)
              st.takeItems(HERB_OF_HARIT,1)
              st.takeItems(HERB_OF_VANOR,1)

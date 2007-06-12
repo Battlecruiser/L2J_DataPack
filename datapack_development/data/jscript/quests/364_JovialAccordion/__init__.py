@@ -63,7 +63,7 @@ class Quest (JQuest) :
    elif npcId == 30957 :
      if cond == 1 :
         htmltext = "30957-01.htm"
-     elif cond == 2 and not st.getQuestItemsCount(KEY_1) and int(st.get("ok")):
+     elif cond == 2 and not st.getQuestItemsCount(KEY_1) and st.getInt("ok"):
         st.set("cond","3")
         htmltext = "30957-04.htm"
      elif cond == 3 :
