@@ -55,7 +55,7 @@ class Quest (JQuest) :
           else:
             htmltext = "30103-05a.htm"
     elif event == "30103_3" :
-          if st.getGameTicks() != int(st.get("id")) :
+          if st.getGameTicks() != st.getInt("id") :
             st.set("id",str(st.getGameTicks()))
             htmltext = "30103-09a.htm"
             st.set("cond","0")
@@ -138,7 +138,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30103 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30103 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
           if st.getPlayer().getClassId().getId() in [0x38, 0x36] :
             if st.getPlayer().getLevel() < 35 :
               htmltext = "30103-02.htm"
@@ -148,7 +148,7 @@ class Quest (JQuest) :
           else:
             htmltext = "30103-01.htm"
             st.exitQuest(1)
-   elif npcId == 30103 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30103 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 30103 and st.getInt("cond")>=1 and st.getQuestItemsCount(VALKONS_RECOMMEND_ID)==1 :
         htmltext = "30103-07.htm"

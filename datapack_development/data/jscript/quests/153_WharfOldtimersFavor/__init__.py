@@ -53,7 +53,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30041 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30041 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
         if st.getInt("cond")<15 :
           if player.getLevel() >= 2 :
             htmltext = "30041-03.htm"
@@ -64,7 +64,7 @@ class Quest (JQuest) :
         else:
           htmltext = "30041-02.htm"
           st.exitQuest(1)
-   elif npcId == 30041 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30041 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 30041 and st.getInt("cond")!=0 and (st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0)==0 :
         htmltext = "30041-05.htm"
@@ -91,8 +91,8 @@ class Quest (JQuest) :
             htmltext = "30054-01.htm"
        elif npcId == 30054 and st.getInt("cond")!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0 :
             htmltext = "30054-02.htm"
-       elif npcId == 30041 and st.getInt("cond")!=0 and (st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0)!=0 and int(st.get("onlyone"))==0 :
-            if int(st.get("id")) != 153 :
+       elif npcId == 30041 and st.getInt("cond")!=0 and (st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0)!=0 and st.getInt("onlyone")==0 :
+            if st.getInt("id") != 153 :
               st.set("id","153")
               st.set("cond","0")
               st.setState(COMPLETED)

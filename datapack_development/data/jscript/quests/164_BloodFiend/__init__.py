@@ -37,7 +37,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30149 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30149 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
       if st.getInt("cond")<15 :
         if player.getRace().ordinal() == 2 :
           htmltext = "30149-00.htm"
@@ -50,13 +50,13 @@ class Quest (JQuest) :
       else:
         htmltext = "30149-02.htm"
         st.exitQuest(1)
-   elif npcId == 30149 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30149 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 30149 and st.getInt("cond") :
       if st.getQuestItemsCount(KIRUNAK_SKULL_ID)<1 :
         htmltext = "30149-05.htm"
-      elif st.getQuestItemsCount(KIRUNAK_SKULL_ID) >= 1 and int(st.get("onlyone")) == 0 :
-          if int(st.get("id")) != 164 :
+      elif st.getQuestItemsCount(KIRUNAK_SKULL_ID) >= 1 and st.getInt("onlyone") == 0 :
+          if st.getInt("id") != 164 :
             st.set("id","164")
             htmltext = "30149-06.htm"
             st.giveItems(ADENA_ID,42000)

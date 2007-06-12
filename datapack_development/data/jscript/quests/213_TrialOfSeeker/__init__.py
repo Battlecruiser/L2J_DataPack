@@ -99,7 +99,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30106 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30106 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
      if st.getPlayer().getClassId().getId() in [ 0x07, 0x16, 0x23 ] :
        if st.getPlayer().getLevel() >= 35 :
          htmltext = "30106-03.htm"
@@ -109,9 +109,9 @@ class Quest (JQuest) :
      else:
        htmltext = "30106-00.htm"
        st.exitQuest(1)
-   elif npcId == 30106 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30106 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 30106 and st.getInt("cond") == 1 and int(st.get("onlyone")) == 0:
+   elif npcId == 30106 and st.getInt("cond") == 1 and st.getInt("onlyone") == 0:
           if st.getQuestItemsCount(DUFNERS_LETTER_ID) == 1 and st.getQuestItemsCount(TERYS_REPORT_ID) == 0 :
             htmltext = "30106-06.htm"
           elif st.getQuestItemsCount(DUFNERS_LETTER_ID) == 0 and st.getQuestItemsCount(TERYS_REPORT_ID) == 0 :

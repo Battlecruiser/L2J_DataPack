@@ -88,7 +88,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30118 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30118 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
       if st.getPlayer().getClassId().getId() in [ 0x0f,0x2a ] :
          if st.getPlayer().getLevel() >= 39 :
             htmltext = "30118-03.htm"
@@ -98,7 +98,7 @@ class Quest (JQuest) :
       else:
          htmltext = "30118-02.htm"
          st.exitQuest(1)
-   elif npcId == 30118 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30118 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
       htmltext = "<html><head><body>This quest has already been completed.</body></html>"
    elif npcId == 30118 and st.getInt("cond")==3 and st.getQuestItemsCount(HUGE_NAIL)>=1:
         htmltext = "30118-05.htm"

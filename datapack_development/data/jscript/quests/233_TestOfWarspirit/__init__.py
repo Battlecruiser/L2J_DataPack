@@ -169,11 +169,11 @@ class Quest (JQuest) :
       return "<html><head><body>This quest has already been completed.</body></html>"
     # if quest is accepted and in progress
     elif id == PART1:
-        step=int(st.get("step"))
-        Orim=int(st.get("Orim"))
-        Racoy=int(st.get("Racoy"))
-        Perkiron=int(st.get("Perkiron"))
-        Manakia=int(st.get("Manakia"))
+        step=st.getInt("step")
+        Orim=st.getInt("Orim")
+        Racoy=st.getInt("Racoy")
+        Perkiron=st.getInt("Perkiron")
+        Manakia=st.getInt("Manakia")
         #Somak 
         if npcId == NPC[3]:
           if Orim == 6 and Racoy == 11 and Perkiron == 8 and Manakia == 7:          # Step 1 finished
@@ -270,7 +270,7 @@ class Quest (JQuest) :
               htmltext = "30515-01.htm"
             elif Manakia == 7:                            # this part is finished for this npc
               htmltext = "30515-05.htm"
-            elif Manakia == 6 and int(st.get("Manakia_Queen"))==3:        # ah you got both items i need
+            elif Manakia == 6 and st.getInt("Manakia_Queen")==3:        # ah you got both items i need
               htmltext = "30515-04.htm"
               st.takeItems(MANAKIAS_TOTEM,1)
               st.takeItems(HERMODTS_SKULL,1)
@@ -283,7 +283,7 @@ class Quest (JQuest) :
             else:                                  # bring me more, because two vars are required , Manakia and Manakia_Queen
               htmltext = "30515-03.htm"
     elif id == PART2:
-        step=int(st.get("step"))
+        step=st.getInt("step")
         if npcId == NPC[3]:                                
           if step == 1:                                # explain Part 2 again or bring more skulls
             htmltext = "30510-08.htm"

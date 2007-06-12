@@ -80,9 +80,9 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30587 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30587 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
         htmltext = "30587-01.htm"
-   elif npcId == 30587 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30587 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
       htmltext = "30587-04.htm"
    elif npcId == 30587 and st.getInt("cond") and st.getQuestItemsCount(SCROLL_FIERY_SPIRIT)==0 and st.getQuestItemsCount(POMEGRANATE)==1 and st.getQuestItemsCount(GANTAKIS_LETTER)==0 and st.getQuestItemsCount(ROSHEEKS_LETTER)==0 and ((st.getQuestItemsCount(LEATHER_POUCH1)+st.getQuestItemsCount(LEATHER_POUCH2)+st.getQuestItemsCount(LEATHER_POUCH3)+st.getQuestItemsCount(LEATHER_POUCH1FULL)+st.getQuestItemsCount(LEATHER_POUCH2FULL)+st.getQuestItemsCount(LEATHER_POUCH3FULL))==0) :
         htmltext = "30587-07.htm"

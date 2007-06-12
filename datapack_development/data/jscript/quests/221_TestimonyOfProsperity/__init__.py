@@ -166,7 +166,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30104 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30104 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
         if st.getPlayer().getRace().ordinal() != 4 :
           htmltext = "30104-01.htm"
           st.exitQuest(1)
@@ -176,7 +176,7 @@ class Quest (JQuest) :
             st.exitQuest(1)
           else:
             htmltext = "30104-03.htm"
-   elif npcId == 30104 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30104 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 30104 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 :
         if st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) and st.getQuestItemsCount(BLESSED_SEED_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) :

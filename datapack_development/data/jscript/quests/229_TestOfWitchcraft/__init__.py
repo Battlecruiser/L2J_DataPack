@@ -145,7 +145,7 @@ class Quest (JQuest) :
       st.giveItems(SOULTRAP_CRYSTAL,1)
       st.giveItems(IKERS_AMULET,1)
       st.takeItems(ORIMS_LETTER2,1)
-      st.set("step",str(int(st.get("step"))+1))
+      st.set("step",str(st.getInt("step")+1))
     # Kairas Events
     elif event == "30476_1" :
       htmltext = "30476-02.htm"
@@ -174,7 +174,7 @@ class Quest (JQuest) :
       htmltext = "30417-03.htm"
       st.giveItems(SIR_VASPERS_LETTER,1)
       st.takeItems(ORIMS_LETTER1,1)
-      st.set("step",str(int(st.get("step"))+2))
+      st.set("step",str(st.getInt("step")+2))
     # Everts Events
     elif event == "30633_1" :
       htmltext = "30633-02.htm"
@@ -215,11 +215,11 @@ class Quest (JQuest) :
       return "<html><head><body>This quest has already been completed.</body></html>"
     # in progress, player is working on the quest
     else:
-      step = int(st.get("step"))        # var init for easier working with it
-      gem1 = int(st.get("gem1"))
-      gem2 = int(st.get("gem2"))
-      gem3 = int(st.get("gem3"))
-      gem456 = int(st.get("gem456"))
+      step = st.getInt("step")        # var init for easier working with it
+      gem1 = st.getInt("gem1")
+      gem2 = st.getInt("gem2")
+      gem3 = st.getInt("gem3")
+      gem456 = st.getInt("gem456")
       
       if npcId == NPC[8]: # orim
         if step == 1:

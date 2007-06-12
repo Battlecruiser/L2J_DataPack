@@ -54,7 +54,7 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
-   if npcId == 30284 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30284 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
       if player.getRace().ordinal() != 1 :
          htmltext = "30284-00.htm"
          st.exitQuest(1)
@@ -64,7 +64,7 @@ class Quest (JQuest) :
       else:
          htmltext = "30284-08.htm"
          st.exitQuest(1)
-   elif npcId == 30284 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30284 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif id == STARTED :
       if npcId == 30284 and st.getInt("cond")==1 and st.getQuestItemsCount(ALBERRYUS_LETTER_ID)==1 :

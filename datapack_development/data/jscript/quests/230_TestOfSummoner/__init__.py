@@ -103,7 +103,7 @@ DROPLIST_SUMMON = {
 # Reduces the Beginner Arcanas on every try to kill a Summon by one, item and stat!
 def takeBeginnerArcanas(st):
    st.takeItems(BEGINNERS_ARCANA,1)
-   st.set("Beginner_Arcanas",str(int(st.get("Beginner_Arcanas"))-1))
+   st.set("Beginner_Arcanas",str(st.getInt("Beginner_Arcanas")-1))
 
 class Quest (JQuest) :
    def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -130,7 +130,7 @@ class Quest (JQuest) :
          st.giveItems(LISTS[random][0],1)
          st.set("Lara_Part",str(random))
       elif event == "30635-02.htm" :                  # Almors' Part, this is the same just other items below.. so just one time comments
-         if int(st.get("Beginner_Arcanas")) :        # if the player has more then one beginners' arcana he can start a fight against the masters summon
+         if st.getInt("Beginner_Arcanas") :        # if the player has more then one beginners' arcana he can start a fight against the masters summon
             htmltext = "30635-03.htm"
             st.set("Almors","2")                     # set state ready to fight
       elif event == "30635-04.htm" :
@@ -139,7 +139,7 @@ class Quest (JQuest) :
          st.takeItems(CRYSTAL_OF_DEFEAT1,-1)
          takeBeginnerArcanas(st)                     # this takes one Beginner Arcana and set Beginner_Arcana stat -1
       elif event == "30636-02.htm" :                  # Camoniell's Part
-         if int(st.get("Beginner_Arcanas")) :
+         if st.getInt("Beginner_Arcanas") :
             htmltext = "30636-03.htm"
             st.set("Camoniell","2")
       elif event == "30636-04.htm" :
@@ -148,7 +148,7 @@ class Quest (JQuest) :
          st.takeItems(CRYSTAL_OF_DEFEAT2,-1)
          takeBeginnerArcanas(st)
       elif event == "30637-02.htm" :                  # Belthus' Part
-         if int(st.get("Beginner_Arcanas")) :
+         if st.getInt("Beginner_Arcanas") :
             htmltext = "30637-03.htm"
             st.set("Belthus","2")
       elif event == "30637-04.htm" :
@@ -157,7 +157,7 @@ class Quest (JQuest) :
          st.takeItems(CRYSTAL_OF_DEFEAT3,-1)
          takeBeginnerArcanas(st)
       elif event == "30638-02.htm" :                  # Basilla's Part
-         if int(st.get("Beginner_Arcanas")) :
+         if st.getInt("Beginner_Arcanas") :
             htmltext = "30638-03.htm"
             st.set("Basilla","2")
       elif event == "30638-04.htm" :
@@ -166,7 +166,7 @@ class Quest (JQuest) :
          st.takeItems(CRYSTAL_OF_DEFEAT4,-1)
          takeBeginnerArcanas(st)
       elif event == "30639-02.htm" :                  # Celestiel's Part
-         if int(st.get("Beginner_Arcanas")) :
+         if st.getInt("Beginner_Arcanas") :
             htmltext = "30639-03.htm"
             st.set("Celestiel","2")
       elif event == "30639-04.htm" :
@@ -175,7 +175,7 @@ class Quest (JQuest) :
          st.takeItems(CRYSTAL_OF_DEFEAT5,-1)
          takeBeginnerArcanas(st)
       elif event == "30640-02.htm" :                  # Brynthea's Part
-         if int(st.get("Beginner_Arcanas")) :
+         if st.getInt("Beginner_Arcanas") :
             htmltext = "30640-03.htm"
             st.set("Brynthea","2")
       elif event == "30640-04.htm" :
@@ -213,10 +213,10 @@ class Quest (JQuest) :
       elif id == COMPLETED:                     # quest already done, not repeatable
          htmltext = "<html><head><body>This quest have already been completed.</body></html>"
       elif id == PROGRESS:
-         step = int(st.get("step"))             # stats as short vars if the player has state <Progress>
-         LaraPart = int(st.get("Lara_Part"))
-         Arcanas = int(st.get("Arcanas"))
-         BeginnerArcanas = int(st.get("Beginner_Arcanas"))
+         step = st.getInt("step")             # stats as short vars if the player has state <Progress>
+         LaraPart = st.getInt("Lara_Part")
+         Arcanas = st.getInt("Arcanas")
+         BeginnerArcanas = st.getInt("Beginner_Arcanas")
          if npcId == Galatea :            # Start and End Npc Galatea related stuff
             if step == 1 :                # step 1 means just started
                htmltext = "30634-09.htm"

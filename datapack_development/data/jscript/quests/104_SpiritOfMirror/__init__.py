@@ -51,7 +51,7 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
-   if npcId == 30017 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30017 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
      if player.getRace().ordinal() != 0 :
         htmltext = "30017-00.htm"
      elif player.getLevel() >= 10 :
@@ -60,7 +60,7 @@ class Quest (JQuest) :
      else:
         htmltext = "30017-06.htm"
         st.exitQuest(1)
-   elif npcId == 30017 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30017 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif id == STARTED : 
      if npcId == 30017 and st.getInt("cond") and st.getQuestItemsCount(GALLINS_OAK_WAND_ID)>=1 and not HaveAllQuestItems(st) :

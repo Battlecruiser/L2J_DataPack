@@ -39,7 +39,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30312 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30312 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
         if st.getInt("cond")<15 :
           if player.getLevel() >= 2 :
             htmltext = "30312-03.htm"
@@ -50,7 +50,7 @@ class Quest (JQuest) :
         else:
           htmltext = "30312-02.htm"
           st.exitQuest(1)
-   elif npcId == 30312 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30312 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    if id == STARTED:     
        if npcId == 30312 and st.getInt("cond")==1 and (st.getQuestItemsCount(FOX_FUR_YARN_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==0) and st.getQuestItemsCount(FOX_FUR_ID)<10 :
@@ -77,8 +77,8 @@ class Quest (JQuest) :
             htmltext = "30055-02.htm"
        elif npcId == 30055 and st.getInt("cond")==1 and st.getQuestItemsCount(FOX_FUR_YARN_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==0 :
             htmltext = "30055-03.htm"
-       elif npcId == 30312 and st.getInt("cond")==1 and st.getQuestItemsCount(MAIDEN_DOLL_ID)>=1 and int(st.get("onlyone"))==0 :
-          if int(st.get("id")) != 154 :
+       elif npcId == 30312 and st.getInt("cond")==1 and st.getQuestItemsCount(MAIDEN_DOLL_ID)>=1 and st.getInt("onlyone")==0 :
+          if st.getInt("id") != 154 :
             st.set("id","154")
             htmltext = "30312-07.htm"
             st.giveItems(EARING_ID,1)
