@@ -104,7 +104,7 @@ def craft_stone(st,progress) :
        return "420_maria_5.htm"
 
 def check_eggs(st, npc, progress) :
-    whom = int(st.get("dragon"))
+    whom = st.getInt("dragon")
     if   whom == 1 : eggs = EX_EGG
     elif whom == 2 : eggs = ZW_EGG
     elif whom == 3 : eggs = KA_EGG
@@ -309,7 +309,7 @@ class Quest (JQuest):
              st.set("progress",str(progress+9))
              return "420_suzet_3.htm"
          elif event == "hatch" :
-             whom = int(st.get("dragon"))
+             whom = st.getInt("dragon")
              if   whom == 1 : eggs = EX_EGG
              elif whom == 2 : eggs = ZW_EGG
              elif whom == 3 : eggs = KA_EGG
@@ -479,7 +479,7 @@ class Quest (JQuest):
               st.playSound("ItemSound.quest_itemget")
   #dragon detection
     elif id == STARTED and (st.get("progress") in [ "14","15","21","22" ]) :
-      whom = int(st.get("dragon"))
+      whom = st.getInt("dragon")
       if whom == 1 :
          eggs = EX_EGG
          scale = SCALE_1

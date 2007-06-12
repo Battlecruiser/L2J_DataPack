@@ -60,7 +60,7 @@ def getCount_proof(st) :
 def check_questions(st) :
   question = 1  
   quiz = st.get("quiz")
-  answers = int(st.get("answers"))
+  answers = st.getInt("answers")
   if answers < 10 :
     questions = quiz.split()
     index = st.getRandom(len(questions) - 1)
@@ -120,13 +120,13 @@ class Quest (JQuest):
       if event == "talk1" :
         return "419_bella_2.htm"
       if event == "talk2" :
-        st.set("progress", str(int(st.get("progress")) | 1))
+        st.set("progress", str(st.getInt("progress") | 1))
         return "419_bella_3.htm"
       if event == "talk3" :
-        st.set("progress", str(int(st.get("progress")) | 2))
+        st.set("progress", str(st.getInt("progress") | 2))
         return "419_ellie_2.htm"
       if event == "talk4" :
-        st.set("progress", str(int(st.get("progress")) | 4))
+        st.set("progress", str(st.getInt("progress") | 4))
         return "419_metty_2.htm"
     elif id == TALKED :
       if event == "tryme" :
@@ -139,7 +139,7 @@ class Quest (JQuest):
         st.giveItems(ANIMAL_LOVERS_LIST1,1)
         return "419_failed.htm"
       elif event == "right" :
-        st.set("answers",str(int(st.get("answers")) + 1))
+        st.set("answers",str(st.getInt("answers") + 1))
         return check_questions(st)
     return
 
@@ -186,7 +186,7 @@ class Quest (JQuest):
                 st.takeItems(ANIMAL_SLAYER_LIST5,1)
             return "Slayed.htm"
       if id == SLAYED :
-        if int(st.get("progress")) == 7 :
+        if st.getInt("progress") == 7 :
            st.takeItems(ANIMAL_LOVERS_LIST1,1)
            st.setState(TALKED)
            st.set("quiz","1 2 3 4 5 6 7 8 9 10 11 12 13 14")

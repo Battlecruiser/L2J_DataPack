@@ -111,7 +111,7 @@ class Quest (JQuest) :
             st.exitQuest(1)
             htmltext = "30515-2.htm"
       else :
-         if int(st.get("allow")) :
+         if st.getInt("allow") :
             htmltext = "30515-3.htm"
          else :
             htmltext = "30515-3a.htm"

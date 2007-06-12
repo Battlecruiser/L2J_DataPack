@@ -199,7 +199,7 @@ class Quest (JQuest) :
   def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
   def onEvent (self,event,st) :
-    part = int(st.get("part"))
+    part = st.getInt("part")
     if event == "start" :
       st.set("cond","1")
       st.setState(STARTED)
@@ -285,7 +285,7 @@ class Quest (JQuest) :
         st.takeItems(order,1)
       return p_leave_mission
     elif event == "f_info":
-      text = int(st.get("text"))
+      text = st.getInt("text")
       if text<4:
         rnd=int(st.getRandom(20))
         st.set("text",str(text+1))
@@ -485,7 +485,7 @@ class Quest (JQuest) :
           st.exitQuest(1)
           return start_error2
     else: 
-      part=int(st.get("part"))
+      part=st.getInt("part")
       if npcId==NPC[0]:
           if part == 1:
             item = UNDEAD_ASH
@@ -570,7 +570,7 @@ class Quest (JQuest) :
     if playerLevel - mobLevel > 8:
       chancePartItem/=3
       chanceBox/=3
-    if allowDrop and int(st.get("part"))==part :
+    if allowDrop and st.getInt("part")==part :
       if random1<chancePartItem :
         st.giveItems(partItem,1)
         st.playSound("ItemSound.quest_itemget")
