@@ -1,6 +1,8 @@
 # completely rewritten by Rolarga, original from Mr
 # modified by Ariakas 08.12.2005
 # Version 0.4 by DrLecter
+# Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
+# Visit http://forum.l2jdp.com for more details
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -8,22 +10,25 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "225_TestOfSearcher"
 
-LUTHERS_LETTER_ID,     ALANKELLS_WARRANT_ID,LEIRYNNS_ORDER1_ID,DELU_TOTEM_ID,  \
-LEIRYNNS_ORDER2_ID,    CHIEF_KALKIS_FANG_ID,LEIRYNNS_REPORT_ID,STRANGE_MAP_ID, \
-LAMBERTS_MAP_ID,       ALANKELLS_LETTER_ID, ALANKELLS_ORDER_ID,WINE_CATALOG_ID,\
-TWEETYS_CONTRACT_ID,   RED_SPORE_DUST_ID,   MALRUKIAN_WINE_ID, OLD_ORDER_ID,   \
-REXS_DIARY_ID,         TORN_MAP_PIECE1_ID,  TORN_MAP_PIECE2_ID,SOLTS_MAP_ID,   \
-MAKELS_MAP_ID,         COMBINED_MAP_ID,     RUSTED_KEY1_ID,    GOLD_BAR_ID,    \
-ALANKELLS_RECOMMEND_ID,MARK_OF_SEARCHER_ID = range(2784,2810)
+LUTHERS_LETTER,     ALANKELLS_WARRANT,LEIRYNNS_ORDER1,DELU_TOTEM,  \
+LEIRYNNS_ORDER2,    CHIEF_KALKIS_FANG,LEIRYNNS_REPORT,STRANGE_MAP, \
+LAMBERTS_MAP,       ALANKELLS_LETTER, ALANKELLS_ORDER,WINE_CATALOG,\
+TWEETYS_CONTRACT,   RED_SPORE_DUST,   MALRUKIAN_WINE, OLD_ORDER,   \
+REXS_DIARY,         TORN_MAP_PIECE1,  TORN_MAP_PIECE2,SOLTS_MAP,   \
+MAKELS_MAP,         COMBINED_MAP,     RUSTED_KEY1,    GOLD_BAR,    \
+ALANKELLS_RECOMMEND,MARK_OF_SEARCHER = range(2784,2810)
+
+#Shadow Weapon Exchange Coupon
+SHADOW_WEAPON_COUPON_CGRADE = 8870
 
 #This handle all mob drops   npcId:[condition,maxcount,chance,itemid]
 DROPLIST={
-20781:["phase",3,10,100,DELU_TOTEM_ID],
-27094:["phase",3,10,100,DELU_TOTEM_ID],
-27093:["phase",5,1,100,CHIEF_KALKIS_FANG_ID],
-20555:["phase",10,10,100,RED_SPORE_DUST_ID],
-20551:["soltsMap",1,4,50,TORN_MAP_PIECE1_ID],
-20144:["makelsMap",1,4,50,TORN_MAP_PIECE2_ID]
+20781:["phase",3,10,100,DELU_TOTEM],
+27094:["phase",3,10,100,DELU_TOTEM],
+27093:["phase",5,1,100,CHIEF_KALKIS_FANG],
+20555:["phase",10,10,100,RED_SPORE_DUST],
+20551:["soltsMap",1,4,50,TORN_MAP_PIECE1],
+20144:["makelsMap",1,4,50,TORN_MAP_PIECE2]
 }
 
 NPC=[30291,30420,30628,30690,30728,30729,30730,30627]
@@ -45,32 +50,32 @@ class Quest (JQuest) :
          st.set(var,"0")
         st.setState(STARTED)
         st.playSound("ItemSound.quest_accept")
-        st.giveItems(LUTHERS_LETTER_ID,1)
+        st.giveItems(LUTHERS_LETTER,1)
     elif event == "30291-07.htm" :
-        st.giveItems(LAMBERTS_MAP_ID,1)
-        st.takeItems(LEIRYNNS_REPORT_ID,1)
-        st.giveItems(ALANKELLS_LETTER_ID,1)
-        st.takeItems(STRANGE_MAP_ID,1)
-        st.giveItems(ALANKELLS_ORDER_ID,1)
+        st.giveItems(LAMBERTS_MAP,1)
+        st.takeItems(LEIRYNNS_REPORT,1)
+        st.giveItems(ALANKELLS_LETTER,1)
+        st.takeItems(STRANGE_MAP,1)
+        st.giveItems(ALANKELLS_ORDER,1)
         st.set("phase","8")
     elif event == "30420-01a.htm" :
-        st.giveItems(TWEETYS_CONTRACT_ID,1)
-        st.takeItems(WINE_CATALOG_ID,1)
+        st.giveItems(TWEETYS_CONTRACT,1)
+        st.takeItems(WINE_CATALOG,1)
         st.set("phase","10")
     elif event == "30730-01d.htm" :
-        st.giveItems(REXS_DIARY_ID,1)
-        st.takeItems(OLD_ORDER_ID,1)
+        st.giveItems(REXS_DIARY,1)
+        st.takeItems(OLD_ORDER,1)
         st.set("phase","14")
         for var in STATS[1]:
           st.set(var,"1")
     elif event == "30627-01a.htm" :
-        st.giveItems(RUSTED_KEY1_ID,1)
+        st.giveItems(RUSTED_KEY1,1)
 #        st.getPcSpawn().addSpawn(30628,10011,157449,-2374,300000)
         st.getPcSpawn().addSpawn(30628,10098,157287,-2406,300000)
         st.set("phase","20")
     elif event == "30628-01a.htm" :
-        st.giveItems(GOLD_BAR_ID,20)
-        st.takeItems(RUSTED_KEY1_ID,1)
+        st.giveItems(GOLD_BAR,20)
+        st.takeItems(RUSTED_KEY1,1)
         st.set("phase","21")
     return htmltext
 
@@ -118,13 +123,14 @@ class Quest (JQuest) :
           st.unset(var)
          st.setState(COMPLETED)
          st.playSound("ItemSound.quest_finish")
-         st.giveItems(MARK_OF_SEARCHER_ID,1)
-         st.takeItems(ALANKELLS_RECOMMEND_ID,1)
+         st.giveItems(MARK_OF_SEARCHER,1)
+         st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
+         st.takeItems(ALANKELLS_RECOMMEND,1)
      elif npcId == NPC[0] :
       if phase==1 :
         htmltext = "30291-01.htm"
-        st.giveItems(ALANKELLS_WARRANT_ID,1)
-        st.takeItems(LUTHERS_LETTER_ID,1)
+        st.giveItems(ALANKELLS_WARRANT,1)
+        st.takeItems(LUTHERS_LETTER,1)
         st.set("phase","2")
       elif phase == 2:
         htmltext = "30291-02.htm"
@@ -140,10 +146,10 @@ class Quest (JQuest) :
         htmltext = "30291-10.htm"
       elif phase==21 :
         htmltext = "30291-11.htm"
-        st.giveItems(ALANKELLS_RECOMMEND_ID,1)
-        st.takeItems(ALANKELLS_ORDER_ID,1)
-        st.takeItems(COMBINED_MAP_ID,1)
-        st.takeItems(GOLD_BAR_ID,-1)
+        st.giveItems(ALANKELLS_RECOMMEND,1)
+        st.takeItems(ALANKELLS_ORDER,1)
+        st.takeItems(COMBINED_MAP,1)
+        st.takeItems(GOLD_BAR,-1)
         st.removeRadar(10133,157155,-2383);
         st.set("phase","22")
       elif phase==22 :
@@ -151,24 +157,24 @@ class Quest (JQuest) :
      elif npcId == NPC[4] :
       if phase==2 :
         htmltext = "30728-01.htm"
-        st.giveItems(LEIRYNNS_ORDER1_ID,1)
-        st.takeItems(ALANKELLS_WARRANT_ID,1)
+        st.giveItems(LEIRYNNS_ORDER1,1)
+        st.takeItems(ALANKELLS_WARRANT,1)
         st.set("phase","3")
       elif phase==3 :
         htmltext = "30728-02.htm"
       elif phase==4 :
         htmltext = "30728-03.htm"
-        st.takeItems(DELU_TOTEM_ID,-1)
-        st.takeItems(LEIRYNNS_ORDER1_ID,1)
-        st.giveItems(LEIRYNNS_ORDER2_ID,1)
+        st.takeItems(DELU_TOTEM,-1)
+        st.takeItems(LEIRYNNS_ORDER1,1)
+        st.giveItems(LEIRYNNS_ORDER2,1)
         st.set("phase","5")
       elif phase==5 :
         htmltext = "30728-04.htm"
       elif phase==6 :
         htmltext = "30728-05.htm"
-        st.giveItems(LEIRYNNS_REPORT_ID,1)
-        st.takeItems(CHIEF_KALKIS_FANG_ID,1)
-        st.takeItems(LEIRYNNS_ORDER2_ID,1)
+        st.giveItems(LEIRYNNS_REPORT,1)
+        st.takeItems(CHIEF_KALKIS_FANG,1)
+        st.takeItems(LEIRYNNS_ORDER2,1)
         st.set("phase","7")
       elif phase==7 :
         htmltext = "30728-06.htm"
@@ -177,16 +183,16 @@ class Quest (JQuest) :
      elif npcId == NPC[5]: 
       if phase==8 :
         htmltext = "30729-01.htm"
-        st.giveItems(WINE_CATALOG_ID,1)
-        st.takeItems(ALANKELLS_LETTER_ID,1)
+        st.giveItems(WINE_CATALOG,1)
+        st.takeItems(ALANKELLS_LETTER,1)
         st.set("phase","9")
       elif phase==9 :
         htmltext = "30729-02.htm"
       elif phase==12 :
         htmltext = "30729-03.htm"
-        st.giveItems(OLD_ORDER_ID,1)
-        st.takeItems(WINE_CATALOG_ID,1)
-        st.takeItems(MALRUKIAN_WINE_ID,1)
+        st.giveItems(OLD_ORDER,1)
+        st.takeItems(WINE_CATALOG,1)
+        st.takeItems(MALRUKIAN_WINE,1)
         st.set("phase","13")
       elif phase==13 :
         htmltext = "30729-04.htm"
@@ -197,9 +203,9 @@ class Quest (JQuest) :
         htmltext = "30420-02.htm"
       elif phase==11 :
           htmltext = "30420-03.htm"
-          st.giveItems(MALRUKIAN_WINE_ID,1)
-          st.takeItems(TWEETYS_CONTRACT_ID,1)
-          st.takeItems(RED_SPORE_DUST_ID,-1)
+          st.giveItems(MALRUKIAN_WINE,1)
+          st.takeItems(TWEETYS_CONTRACT,1)
+          st.takeItems(RED_SPORE_DUST,-1)
           st.set("phase","12")
       elif phase in [12,13]  :
         htmltext = "30420-04.htm"
@@ -211,13 +217,13 @@ class Quest (JQuest) :
       elif phase == 14:
        if int(st.get("soltsMap"))==2 and int(st.get("makelsMap"))==2:
          htmltext = "30730-03.htm"
-         st.takeItems(LAMBERTS_MAP_ID,1)
-         st.takeItems(TORN_MAP_PIECE2_ID,4)
-         st.takeItems(TORN_MAP_PIECE1_ID,4)
-         st.takeItems(REXS_DIARY_ID,1)
-         st.takeItems(SOLTS_MAP_ID,1)
-         st.giveItems(COMBINED_MAP_ID,1)
-         st.takeItems(MAKELS_MAP_ID,1)
+         st.takeItems(LAMBERTS_MAP,1)
+         st.takeItems(TORN_MAP_PIECE2,4)
+         st.takeItems(TORN_MAP_PIECE1,4)
+         st.takeItems(REXS_DIARY,1)
+         st.takeItems(SOLTS_MAP,1)
+         st.giveItems(COMBINED_MAP,1)
+         st.takeItems(MAKELS_MAP,1)
          st.addRadar(10133,157155,-2383);
          st.set("phase","18")
        else:
@@ -248,13 +254,13 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_middle")
       st.set(var,str(status+1))
       if npcId == 27093:
-       st.giveItems(STRANGE_MAP_ID,1)
+       st.giveItems(STRANGE_MAP,1)
       elif npcId==20144:
-       st.giveItems(MAKELS_MAP_ID,1)
-       st.takeItems(TORN_MAP_PIECE2_ID,4)
+       st.giveItems(MAKELS_MAP,1)
+       st.takeItems(TORN_MAP_PIECE2,4)
       elif npcId==20551:
-       st.giveItems(SOLTS_MAP_ID,1)
-       st.takeItems(TORN_MAP_PIECE1_ID,4)
+       st.giveItems(SOLTS_MAP,1)
+       st.takeItems(TORN_MAP_PIECE1,4)
      else:
       st.playSound("Itemsound.quest_itemget")
    if npcId==20781 and random<30 and count<maxcount:

@@ -1,4 +1,6 @@
 # Maked by Mr. Have fun! Version 0.2
+# Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
+# Visit http://forum.l2jdp.com for more details
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -24,6 +26,7 @@ HEAD_OF_BETRAYER      = 1591
  
 #REWARD 
 MARK_OF_RAIDER = 1592 
+SHADOW_WEAPON_COUPON_DGRADE = 8869 
  
 class Quest (JQuest) :
 
@@ -97,7 +100,8 @@ class Quest (JQuest) :
      st.takeItems(HEAD_OF_BETRAYER,-1) 
      st.takeItems(BETRAYER_UMBAR_REPORT,-1) 
      st.giveItems(MARK_OF_RAIDER,1) 
-     st.set("cond","0") 
+     st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15) 
+     st.unset("cond") 
      st.setState(COMPLETED) 
      st.playSound("ItemSound.quest_finish") 
    return htmltext

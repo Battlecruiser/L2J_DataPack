@@ -1,5 +1,7 @@
 # Maked by Mr. Have fun! Version 0.2
 # rewritten by Rolarga Version 0.3
+# Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
+# Visit http://forum.l2jdp.com for more details
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -7,28 +9,31 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "222_TestOfDuelist"
 
-MARK_OF_DUELIST_ID,  ORDER_GLUDIO_ID,      ORDER_DION_ID,        ORDER_GIRAN_ID,      ORDER_OREN_ID,      \
-ORDER_ADEN_ID,       PUNCHERS_SHARD_ID,    NOBLE_ANTS_FEELER_ID, DRONES_CHITIN_ID,    DEADSEEKER_FANG_ID, \
-OVERLORD_NECKLACE_ID,CRIMSONBINDS_CHAIN_ID,CHIEFS_AMULET_ID,     TEMPERED_EYE_MEAT_ID,TAMRIN_ORCS_RING_ID,\
-TAMRIN_ORCS_ARROW_ID,FINAL_ORDER_ID,       EXCUROS_SKIN_ID,      KRATORS_SHARD_ID,    GRANDIS_SKIN_ID,    \
-TIMAK_ORCS_BELT_ID,  RAKINS_MACE_ID = range(2762,2784)
+MARK_OF_DUELIST,  ORDER_GLUDIO,      ORDER_DION,        ORDER_GIRAN,      ORDER_OREN,      \
+ORDER_ADEN,       PUNCHERS_SHARD,    NOBLE_ANTS_FEELER, DRONES_CHITIN,    DEADSEEKER_FANG, \
+OVERLORD_NECKLACE,CRIMSONBINDS_CHAIN,CHIEFS_AMULET,     TEMPERED_EYE_MEAT,TAMRIN_ORCS_RING,\
+TAMRIN_ORCS_ARROW,FINAL_ORDER,       EXCUROS_SKIN,      KRATORS_SHARD,    GRANDIS_SKIN,    \
+TIMAK_ORCS_BELT,  RAKINS_MACE = range(2762,2784)
+
+#Shadow Weapon Exchange Coupon
+SHADOW_WEAPON_COUPON_CGRADE = 8870
 
 DROPLIST={
-20085:(1,10,PUNCHERS_SHARD_ID),
-20090:(1,10,NOBLE_ANTS_FEELER_ID),
-20234:(1,10,DRONES_CHITIN_ID),
-20202:(1,10,DEADSEEKER_FANG_ID),
-20270:(1,10,OVERLORD_NECKLACE_ID),
-20552:(1,10,CRIMSONBINDS_CHAIN_ID),
-20582:(1,10,CHIEFS_AMULET_ID),
-20564:(1,10,TEMPERED_EYE_MEAT_ID),
-20601:(1,10,TAMRIN_ORCS_RING_ID),
-20602:(1,10,TAMRIN_ORCS_ARROW_ID),
-20604:(2,3,RAKINS_MACE_ID),
-20214:(2,3,EXCUROS_SKIN_ID),
-20217:(2,3,KRATORS_SHARD_ID),
-20588:(2,3,TIMAK_ORCS_BELT_ID),
-20554:(2,3,GRANDIS_SKIN_ID)
+20085:(1,10,PUNCHERS_SHARD),
+20090:(1,10,NOBLE_ANTS_FEELER),
+20234:(1,10,DRONES_CHITIN),
+20202:(1,10,DEADSEEKER_FANG),
+20270:(1,10,OVERLORD_NECKLACE),
+20552:(1,10,CRIMSONBINDS_CHAIN),
+20582:(1,10,CHIEFS_AMULET),
+20564:(1,10,TEMPERED_EYE_MEAT),
+20601:(1,10,TAMRIN_ORCS_RING),
+20602:(1,10,TAMRIN_ORCS_ARROW),
+20604:(2,3,RAKINS_MACE),
+20214:(2,3,EXCUROS_SKIN),
+20217:(2,3,KRATORS_SHARD),
+20588:(2,3,TIMAK_ORCS_BELT),
+20554:(2,3,GRANDIS_SKIN)
 }
 
 
@@ -44,36 +49,36 @@ class Quest (JQuest) :
            st.set("step","1")
            st.setState(STARTED)
            st.playSound("ItemSound.quest_accept")
-           st.giveItems(ORDER_GLUDIO_ID,1)
-           st.giveItems(ORDER_DION_ID,1)
-           st.giveItems(ORDER_GIRAN_ID,1)
-           st.giveItems(ORDER_OREN_ID,1)
-           st.giveItems(ORDER_ADEN_ID,1)
+           st.giveItems(ORDER_GLUDIO,1)
+           st.giveItems(ORDER_DION,1)
+           st.giveItems(ORDER_GIRAN,1)
+           st.giveItems(ORDER_OREN,1)
+           st.giveItems(ORDER_ADEN,1)
     elif event == "30623-04.htm" :
           if st.getPlayer().getRace().ordinal() == 3 :
             htmltext = "30623-05.htm"
     elif event == "30623-16.htm" :
-        if st.getQuestItemsCount(FINAL_ORDER_ID)==0:
+        if st.getQuestItemsCount(FINAL_ORDER)==0:
             for i in [
-            PUNCHERS_SHARD_ID,
-            NOBLE_ANTS_FEELER_ID,
-            DEADSEEKER_FANG_ID,
-            DRONES_CHITIN_ID,
-            OVERLORD_NECKLACE_ID,
-            CRIMSONBINDS_CHAIN_ID,
-            CHIEFS_AMULET_ID,
-            TEMPERED_EYE_MEAT_ID,
-            TAMRIN_ORCS_RING_ID,
-            TAMRIN_ORCS_ARROW_ID,
-            ORDER_GLUDIO_ID,
-            ORDER_DION_ID,
-            ORDER_GIRAN_ID,
-            ORDER_OREN_ID,
-            ORDER_ADEN_ID
+            PUNCHERS_SHARD,
+            NOBLE_ANTS_FEELER,
+            DEADSEEKER_FANG,
+            DRONES_CHITIN,
+            OVERLORD_NECKLACE,
+            CRIMSONBINDS_CHAIN,
+            CHIEFS_AMULET,
+            TEMPERED_EYE_MEAT,
+            TAMRIN_ORCS_RING,
+            TAMRIN_ORCS_ARROW,
+            ORDER_GLUDIO,
+            ORDER_DION,
+            ORDER_GIRAN,
+            ORDER_OREN,
+            ORDER_ADEN
             ]:
              st.takeItems(i,-1)
             st.set("step","2")
-            st.giveItems(FINAL_ORDER_ID,1)
+            st.giveItems(FINAL_ORDER,1)
     return htmltext
 
 
@@ -100,26 +105,27 @@ class Quest (JQuest) :
          htmltext = "30623-02.htm"
          st.exitQuest(1)
    elif int(st.get("step"))==1 :
-      if st.getQuestItemsCount(ORDER_GLUDIO_ID) and st.getQuestItemsCount(ORDER_DION_ID) and st.getQuestItemsCount(ORDER_GIRAN_ID) and st.getQuestItemsCount(ORDER_OREN_ID) and st.getQuestItemsCount(ORDER_ADEN_ID) :
-        if st.getQuestItemsCount(PUNCHERS_SHARD_ID)==st.getQuestItemsCount(NOBLE_ANTS_FEELER_ID)==st.getQuestItemsCount(DRONES_CHITIN_ID)==st.getQuestItemsCount(DEADSEEKER_FANG_ID)==st.getQuestItemsCount(OVERLORD_NECKLACE_ID)==st.getQuestItemsCount(CRIMSONBINDS_CHAIN_ID)==st.getQuestItemsCount(CHIEFS_AMULET_ID)==st.getQuestItemsCount(TEMPERED_EYE_MEAT_ID)==st.getQuestItemsCount(TAMRIN_ORCS_RING_ID)==st.getQuestItemsCount(TAMRIN_ORCS_ARROW_ID) == 10 :
+      if st.getQuestItemsCount(ORDER_GLUDIO) and st.getQuestItemsCount(ORDER_DION) and st.getQuestItemsCount(ORDER_GIRAN) and st.getQuestItemsCount(ORDER_OREN) and st.getQuestItemsCount(ORDER_ADEN) :
+        if st.getQuestItemsCount(PUNCHERS_SHARD)==st.getQuestItemsCount(NOBLE_ANTS_FEELER)==st.getQuestItemsCount(DRONES_CHITIN)==st.getQuestItemsCount(DEADSEEKER_FANG)==st.getQuestItemsCount(OVERLORD_NECKLACE)==st.getQuestItemsCount(CRIMSONBINDS_CHAIN)==st.getQuestItemsCount(CHIEFS_AMULET)==st.getQuestItemsCount(TEMPERED_EYE_MEAT)==st.getQuestItemsCount(TAMRIN_ORCS_RING)==st.getQuestItemsCount(TAMRIN_ORCS_ARROW) == 10 :
           htmltext = "30623-13.htm"
         else:
           htmltext = "30623-14.htm"
       else:
           htmltext = "30623-14.htm"
-          for i in [ORDER_GLUDIO_ID,ORDER_DION_ID,ORDER_GIRAN_ID,ORDER_OREN_ID,ORDER_ADEN_ID]:
+          for i in [ORDER_GLUDIO,ORDER_DION,ORDER_GIRAN,ORDER_OREN,ORDER_ADEN]:
             if st.getQuestItemsCount(i)==0:
                 st.giveItems(i,1) 
-   elif int(st.get("step"))==2 and st.getQuestItemsCount(FINAL_ORDER_ID) :
-        if st.getQuestItemsCount(EXCUROS_SKIN_ID)==st.getQuestItemsCount(KRATORS_SHARD_ID)==st.getQuestItemsCount(RAKINS_MACE_ID)==st.getQuestItemsCount(GRANDIS_SKIN_ID)==st.getQuestItemsCount(TIMAK_ORCS_BELT_ID)>2 :
-            st.takeItems(EXCUROS_SKIN_ID,-1)
-            st.takeItems(KRATORS_SHARD_ID,-1)
-            st.takeItems(GRANDIS_SKIN_ID,-1)
-            st.takeItems(TIMAK_ORCS_BELT_ID,-1)
-            st.takeItems(RAKINS_MACE_ID,-1)
+   elif int(st.get("step"))==2 and st.getQuestItemsCount(FINAL_ORDER) :
+        if st.getQuestItemsCount(EXCUROS_SKIN)==st.getQuestItemsCount(KRATORS_SHARD)==st.getQuestItemsCount(RAKINS_MACE)==st.getQuestItemsCount(GRANDIS_SKIN)==st.getQuestItemsCount(TIMAK_ORCS_BELT)>2 :
+            st.takeItems(EXCUROS_SKIN,-1)
+            st.takeItems(KRATORS_SHARD,-1)
+            st.takeItems(GRANDIS_SKIN,-1)
+            st.takeItems(TIMAK_ORCS_BELT,-1)
+            st.takeItems(RAKINS_MACE,-1)
             st.addExpAndSp(47015,20000)
-            st.giveItems(MARK_OF_DUELIST_ID,1)
-            st.takeItems(FINAL_ORDER_ID,1)
+            st.giveItems(MARK_OF_DUELIST,1)
+            st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
+            st.takeItems(FINAL_ORDER,1)
             htmltext = "30623-18.htm"
             st.unset("step")
             st.set("cond","0")

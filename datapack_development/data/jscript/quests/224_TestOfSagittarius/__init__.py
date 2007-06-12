@@ -1,5 +1,7 @@
 # Made by Mr. Have fun! Version 0.2
 # rewritten by Rolarga, Version 0.3
+# Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
+# Visit http://forum.l2jdp.com for more details
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -38,6 +40,7 @@ STAKATO_CHITIN = 3303
 ST_BOWSTRING = 3304
 MANASHENS_HORN = 3305
 WOODEN_ARROW = 17
+SHADOW_WEAPON_COUPON_CGRADE = 8870
 
 #This adds all Info to a Mobs ->npcId:(step,dropcond,maxcount,chance,item)
 HUNTERS = (3,1,10,50,HUNTERS_RUNE1)
@@ -169,6 +172,7 @@ class Quest (JQuest) :
    elif npcId == 30626 and step==14 :
       htmltext = "30626-13.htm"
       st.giveItems(MARK_OF_SAGITTARIUS,1)
+      st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
       st.takeItems(CRESCENT_MOON_BOW,1)
       st.takeItems(TALISMAN_OF_KADESH,1)
       st.takeItems(BLOOD_OF_LIZARDMAN,st.getQuestItemsCount(BLOOD_OF_LIZARDMAN))

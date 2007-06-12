@@ -1,4 +1,6 @@
 # Maked by Mr. Have fun! Version 0.2
+# Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
+# Visit http://forum.l2jdp.com for more details
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -6,19 +8,20 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "404_PathToWizard"
 
-MAP_OF_LUSTER_ID = 1280
-KEY_OF_FLAME_ID = 1281
-FLAME_EARING_ID = 1282
-BROKEN_BRONZE_MIRROR_ID = 1283
-WIND_FEATHER_ID = 1284
-WIND_BANGEL_ID = 1285
-RAMAS_DIARY_ID = 1286
-SPARKLE_PEBBLE_ID = 1287
-WATER_NECKLACE_ID = 1288
-RUST_GOLD_COIN_ID = 1289
-RED_SOIL_ID = 1290
-EARTH_RING_ID = 1291
-BEAD_OF_SEASON_ID = 1292
+MAP_OF_LUSTER = 1280
+KEY_OF_FLAME = 1281
+FLAME_EARING = 1282
+BROKEN_BRONZE_MIRROR = 1283
+WIND_FEATHER = 1284
+WIND_BANGEL = 1285
+RAMAS_DIARY = 1286
+SPARKLE_PEBBLE = 1287
+WATER_NECKLACE = 1288
+RUST_GOLD_COIN = 1289
+RED_SOIL = 1290
+EARTH_RING = 1291
+BEAD_OF_SEASON = 1292
+SHADOW_WEAPON_COUPON_DGRADE = 8869
 
 class Quest (JQuest) :
 
@@ -30,7 +33,7 @@ class Quest (JQuest) :
       st.set("id","0")
       if st.getPlayer().getClassId().getId() == 0x0a :
         if st.getPlayer().getLevel() >= 19 :
-          if st.getQuestItemsCount(BEAD_OF_SEASON_ID) :
+          if st.getQuestItemsCount(BEAD_OF_SEASON) :
             htmltext = "30391-03.htm"
           else:
             htmltext = "30391-08.htm"
@@ -45,9 +48,9 @@ class Quest (JQuest) :
         else:
           htmltext = "30391-01.htm"
     elif event == "30410_1" :
-          if st.getQuestItemsCount(WIND_FEATHER_ID) == 0 :
+          if st.getQuestItemsCount(WIND_FEATHER) == 0 :
             htmltext = "30410-03.htm"
-            st.giveItems(WIND_FEATHER_ID,1)
+            st.giveItems(WIND_FEATHER,1)
             st.set("cond","6")
     return htmltext
 
@@ -60,7 +63,8 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    if npcId != 30391 and id != STARTED : return htmltext
-   if id == CREATED :
+
+   if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
      st.set("onlyone","0")
@@ -72,143 +76,144 @@ class Quest (JQuest) :
         return htmltext
       else:
         htmltext = "30391-04.htm"
-   elif npcId == 30391 and int(st.get("cond"))!=0 and (st.getQuestItemsCount(FLAME_EARING_ID)==0 or st.getQuestItemsCount(WIND_BANGEL_ID)==0 or st.getQuestItemsCount(WATER_NECKLACE_ID)==0 or st.getQuestItemsCount(EARTH_RING_ID)==0) :
+   elif npcId == 30391 and int(st.get("cond"))!=0 and (st.getQuestItemsCount(FLAME_EARING)==0 or st.getQuestItemsCount(WIND_BANGEL)==0 or st.getQuestItemsCount(WATER_NECKLACE)==0 or st.getQuestItemsCount(EARTH_RING)==0) :
       htmltext = "30391-05.htm"
-   elif npcId == 30411 and int(st.get("cond"))!=0 and st.getQuestItemsCount(MAP_OF_LUSTER_ID)==0 and st.getQuestItemsCount(FLAME_EARING_ID)==0 :
+   elif npcId == 30411 and int(st.get("cond"))!=0 and st.getQuestItemsCount(MAP_OF_LUSTER)==0 and st.getQuestItemsCount(FLAME_EARING)==0 :
         #Taking to the Flame salamander for the first time
-        #gains us the MAP_OF_LUSTER_ID
+        #gains us the MAP_OF_LUSTER
         #and flags cond = 2
-        if st.getQuestItemsCount(MAP_OF_LUSTER_ID) == 0 :
-          st.giveItems(MAP_OF_LUSTER_ID,1)
+        if st.getQuestItemsCount(MAP_OF_LUSTER) == 0 :
+          st.giveItems(MAP_OF_LUSTER,1)
         htmltext = "30411-01.htm"
         st.set("cond","2")
-   elif npcId == 30411 and int(st.get("cond"))!=0 and st.getQuestItemsCount(MAP_OF_LUSTER_ID)!=0 and st.getQuestItemsCount(KEY_OF_FLAME_ID)==0 :
+   elif npcId == 30411 and int(st.get("cond"))!=0 and st.getQuestItemsCount(MAP_OF_LUSTER)!=0 and st.getQuestItemsCount(KEY_OF_FLAME)==0 :
         #Talking to the Flame Salamander more than once
-        #without the KEY_OF_FLAME_ID
-        #But with the MAP_OF_LUSTER_ID
+        #without the KEY_OF_FLAME
+        #But with the MAP_OF_LUSTER
         #results in the following text
         htmltext = "30411-02.htm"
-   elif npcId == 30411 and int(st.get("cond"))!=0 and st.getQuestItemsCount(MAP_OF_LUSTER_ID)!=0 and st.getQuestItemsCount(KEY_OF_FLAME_ID)!=0 :
+   elif npcId == 30411 and int(st.get("cond"))!=0 and st.getQuestItemsCount(MAP_OF_LUSTER)!=0 and st.getQuestItemsCount(KEY_OF_FLAME)!=0 :
         #Talking to the Flame Salamander when Cond != 0
-        #while we have a KEY_OF_FLAME_ID from the ratmen and the MAP_OF_LUSTER_ID
+        #while we have a KEY_OF_FLAME from the ratmen and the MAP_OF_LUSTER
 
-        #Remove both Items and give a FLAME_EARING_ID
+        #Remove both Items and give a FLAME_EARING
         #Set the cond flag to 4 to signify we have completed the first part
-        st.takeItems(KEY_OF_FLAME_ID,st.getQuestItemsCount(KEY_OF_FLAME_ID))
-        st.takeItems(MAP_OF_LUSTER_ID,st.getQuestItemsCount(MAP_OF_LUSTER_ID))
-        if st.getQuestItemsCount(FLAME_EARING_ID) == 0 :
-          st.giveItems(FLAME_EARING_ID,1)
+        st.takeItems(KEY_OF_FLAME,st.getQuestItemsCount(KEY_OF_FLAME))
+        st.takeItems(MAP_OF_LUSTER,st.getQuestItemsCount(MAP_OF_LUSTER))
+        if st.getQuestItemsCount(FLAME_EARING) == 0 :
+          st.giveItems(FLAME_EARING,1)
         htmltext = "30411-03.htm"
         st.set("cond","4")
-   elif npcId == 30411 and int(st.get("cond"))!=0 and st.getQuestItemsCount(FLAME_EARING_ID)!=0 :
+   elif npcId == 30411 and int(st.get("cond"))!=0 and st.getQuestItemsCount(FLAME_EARING)!=0 :
         #Talking to the Flame Salamander
         #after finishing the Fire component results
         #in the following text
         htmltext = "30411-04.htm"
-   elif npcId == 30412 and int(st.get("cond"))!=0 and st.getQuestItemsCount(FLAME_EARING_ID)!=0 and st.getQuestItemsCount(BROKEN_BRONZE_MIRROR_ID)==0 and st.getQuestItemsCount(WIND_BANGEL_ID)==0 :
+   elif npcId == 30412 and int(st.get("cond"))!=0 and st.getQuestItemsCount(FLAME_EARING)!=0 and st.getQuestItemsCount(BROKEN_BRONZE_MIRROR)==0 and st.getQuestItemsCount(WIND_BANGEL)==0 :
         #Talking to the Wind Sylph for the first time
-        #With a FLAME_EARING_ID (fire component complete)
+        #With a FLAME_EARING (fire component complete)
 
-        #Gives us a BROKEN_BRONZE_MIRROR_ID
+        #Gives us a BROKEN_BRONZE_MIRROR
         #and sets cond = 5
-        if st.getQuestItemsCount(BROKEN_BRONZE_MIRROR_ID) == 0 :
-          st.giveItems(BROKEN_BRONZE_MIRROR_ID,1)
+        if st.getQuestItemsCount(BROKEN_BRONZE_MIRROR) == 0 :
+          st.giveItems(BROKEN_BRONZE_MIRROR,1)
         htmltext = "30412-01.htm"
         st.set("cond","5")
-   elif npcId == 30412 and int(st.get("cond"))!=0 and st.getQuestItemsCount(BROKEN_BRONZE_MIRROR_ID)!=0 and st.getQuestItemsCount(WIND_FEATHER_ID)==0 :
+   elif npcId == 30412 and int(st.get("cond"))!=0 and st.getQuestItemsCount(BROKEN_BRONZE_MIRROR)!=0 and st.getQuestItemsCount(WIND_FEATHER)==0 :
         #Talking to the Wind Sylph for a second time
         #results in the following text
         htmltext = "30412-02.htm"
-   elif npcId == 30412 and int(st.get("cond"))!=0 and st.getQuestItemsCount(BROKEN_BRONZE_MIRROR_ID)!=0 and st.getQuestItemsCount(WIND_FEATHER_ID)!=0 :
+   elif npcId == 30412 and int(st.get("cond"))!=0 and st.getQuestItemsCount(BROKEN_BRONZE_MIRROR)!=0 and st.getQuestItemsCount(WIND_FEATHER)!=0 :
         #Talking to the Wind Sylph with cond != 0
-        #while having a BROKEN_BRONZE_MIRROR_ID and a WIND_FEATHER_ID
+        #while having a BROKEN_BRONZE_MIRROR and a WIND_FEATHER
 
         #Removes both items
-        #Gives a WIND_BANGEL_ID
+        #Gives a WIND_BANGEL
         #and sets cond = 7
-        st.takeItems(WIND_FEATHER_ID,st.getQuestItemsCount(WIND_FEATHER_ID))
-        st.takeItems(BROKEN_BRONZE_MIRROR_ID,st.getQuestItemsCount(BROKEN_BRONZE_MIRROR_ID))
-        if st.getQuestItemsCount(WIND_BANGEL_ID) == 0 :
-          st.giveItems(WIND_BANGEL_ID,1)
+        st.takeItems(WIND_FEATHER,st.getQuestItemsCount(WIND_FEATHER))
+        st.takeItems(BROKEN_BRONZE_MIRROR,st.getQuestItemsCount(BROKEN_BRONZE_MIRROR))
+        if st.getQuestItemsCount(WIND_BANGEL) == 0 :
+          st.giveItems(WIND_BANGEL,1)
         htmltext = "30412-03.htm"
         st.set("cond","7")
-   elif npcId == 30412 and int(st.get("cond"))!=0 and st.getQuestItemsCount(WIND_BANGEL_ID)!=0 :
-        #Talking to the Wind Sylph after we get the WIND_BANGLE_ID
+   elif npcId == 30412 and int(st.get("cond"))!=0 and st.getQuestItemsCount(WIND_BANGEL)!=0 :
+        #Talking to the Wind Sylph after we get the WIND_BANGLE
         #results in the following text
         htmltext = "30412-04.htm"
-   elif npcId == 30410 and int(st.get("cond"))!=0 and st.getQuestItemsCount(BROKEN_BRONZE_MIRROR_ID)!=0 and st.getQuestItemsCount(WIND_FEATHER_ID)==0 :
+   elif npcId == 30410 and int(st.get("cond"))!=0 and st.getQuestItemsCount(BROKEN_BRONZE_MIRROR)!=0 and st.getQuestItemsCount(WIND_FEATHER)==0 :
         #Talking to the Lizardman of the Wastelands for the first time
         #begins this conversation
         htmltext = "30410-01.htm"
-   elif npcId == 30410 and int(st.get("cond"))!=0 and st.getQuestItemsCount(BROKEN_BRONZE_MIRROR_ID)!=0 and st.getQuestItemsCount(WIND_FEATHER_ID)!=0 :
+   elif npcId == 30410 and int(st.get("cond"))!=0 and st.getQuestItemsCount(BROKEN_BRONZE_MIRROR)!=0 and st.getQuestItemsCount(WIND_FEATHER)!=0 :
         #Talking to the Lizardman of the Wastelands after obtaining
-        #the WIND_FEATHER_ID
+        #the WIND_FEATHER
         htmltext = "30410-04.htm"
-   elif npcId == 30413 and int(st.get("cond"))!=0 and st.getQuestItemsCount(WIND_BANGEL_ID)!=0 and st.getQuestItemsCount(RAMAS_DIARY_ID)==0 and st.getQuestItemsCount(WATER_NECKLACE_ID)==0 :
+   elif npcId == 30413 and int(st.get("cond"))!=0 and st.getQuestItemsCount(WIND_BANGEL)!=0 and st.getQuestItemsCount(RAMAS_DIARY)==0 and st.getQuestItemsCount(WATER_NECKLACE)==0 :
         #Talking to the Water Undine for the first time
-        #gives RAMAS_DIARY_ID
+        #gives RAMAS_DIARY
         #and sets cond = 8
-        if st.getQuestItemsCount(RAMAS_DIARY_ID) == 0 :
-          st.giveItems(RAMAS_DIARY_ID,1)
+        if st.getQuestItemsCount(RAMAS_DIARY) == 0 :
+          st.giveItems(RAMAS_DIARY,1)
         htmltext = "30413-01.htm"
         st.set("cond","8")
-   elif npcId == 30413 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RAMAS_DIARY_ID)!=0 and st.getQuestItemsCount(SPARKLE_PEBBLE_ID)<2 :
+   elif npcId == 30413 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RAMAS_DIARY)!=0 and st.getQuestItemsCount(SPARKLE_PEBBLE)<2 :
         #Talking to the Water Undine for a second time
-        #without 2 SPARKLE_PEBLE_ID
+        #without 2 SPARKLE_PEBLE
         htmltext = "30413-02.htm"
-   elif npcId == 30413 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RAMAS_DIARY_ID)!=0 and st.getQuestItemsCount(SPARKLE_PEBBLE_ID)>=2 :
-        #Talking to the Water Undine with the 2 SPARKLE_PEBLE_ID
+   elif npcId == 30413 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RAMAS_DIARY)!=0 and st.getQuestItemsCount(SPARKLE_PEBBLE)>=2 :
+        #Talking to the Water Undine with the 2 SPARKLE_PEBLE
 
         #removes both items
-        #and gives WATER_NECKLACE_ID
+        #and gives WATER_NECKLACE
         #sets cond = 10
-        st.takeItems(SPARKLE_PEBBLE_ID,st.getQuestItemsCount(SPARKLE_PEBBLE_ID))
-        st.takeItems(RAMAS_DIARY_ID,st.getQuestItemsCount(RAMAS_DIARY_ID))
-        if st.getQuestItemsCount(WATER_NECKLACE_ID) == 0 :
-          st.giveItems(WATER_NECKLACE_ID,1)
+        st.takeItems(SPARKLE_PEBBLE,st.getQuestItemsCount(SPARKLE_PEBBLE))
+        st.takeItems(RAMAS_DIARY,st.getQuestItemsCount(RAMAS_DIARY))
+        if st.getQuestItemsCount(WATER_NECKLACE) == 0 :
+          st.giveItems(WATER_NECKLACE,1)
         htmltext = "30413-03.htm"
         st.set("cond","10")
-   elif npcId == 30413 and int(st.get("cond"))!=0 and st.getQuestItemsCount(WATER_NECKLACE_ID)!=0 :
+   elif npcId == 30413 and int(st.get("cond"))!=0 and st.getQuestItemsCount(WATER_NECKLACE)!=0 :
         #Talking to the Water Undine after completing it's task
         htmltext = "30413-04.htm"
-   elif npcId == 30409 and int(st.get("cond"))!=0 and st.getQuestItemsCount(WATER_NECKLACE_ID)!=0 and st.getQuestItemsCount(RUST_GOLD_COIN_ID)==0 and st.getQuestItemsCount(EARTH_RING_ID)==0 :
+   elif npcId == 30409 and int(st.get("cond"))!=0 and st.getQuestItemsCount(WATER_NECKLACE)!=0 and st.getQuestItemsCount(RUST_GOLD_COIN)==0 and st.getQuestItemsCount(EARTH_RING)==0 :
         #Talking to the Earth Snake for the first time
-        if st.getQuestItemsCount(RUST_GOLD_COIN_ID) == 0 :
-          st.giveItems(RUST_GOLD_COIN_ID,1)
+        if st.getQuestItemsCount(RUST_GOLD_COIN) == 0 :
+          st.giveItems(RUST_GOLD_COIN,1)
         htmltext = "30409-01.htm"
         st.set("cond","11")
-   elif npcId == 30409 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RUST_GOLD_COIN_ID)!=0 and st.getQuestItemsCount(RED_SOIL_ID)==0 :
+   elif npcId == 30409 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RUST_GOLD_COIN)!=0 and st.getQuestItemsCount(RED_SOIL)==0 :
         #Talking to the Earth Snake for a second time
-        #without RED_SOIL_ID
+        #without RED_SOIL
         htmltext = "30409-02.htm"
-   elif npcId == 30409 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RUST_GOLD_COIN_ID)!=0 and st.getQuestItemsCount(RED_SOIL_ID)!=0 :
-        #Talking to the Earth Snake afket collecting the RED_SOIL_ID
+   elif npcId == 30409 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RUST_GOLD_COIN)!=0 and st.getQuestItemsCount(RED_SOIL)!=0 :
+        #Talking to the Earth Snake afket collecting the RED_SOIL
 
-        #Gives EARTH_RING_ID
+        #Gives EARTH_RING
         #and sets cond = 13
-        st.takeItems(RED_SOIL_ID,st.getQuestItemsCount(RED_SOIL_ID))
-        st.takeItems(RUST_GOLD_COIN_ID,st.getQuestItemsCount(RUST_GOLD_COIN_ID))
-        if st.getQuestItemsCount(EARTH_RING_ID) == 0 :
-          st.giveItems(EARTH_RING_ID,1)
+        st.takeItems(RED_SOIL,st.getQuestItemsCount(RED_SOIL))
+        st.takeItems(RUST_GOLD_COIN,st.getQuestItemsCount(RUST_GOLD_COIN))
+        if st.getQuestItemsCount(EARTH_RING) == 0 :
+          st.giveItems(EARTH_RING,1)
         htmltext = "30409-03.htm"
         st.set("cond","13")
-   elif npcId == 30409 and int(st.get("cond"))!=0 and st.getQuestItemsCount(EARTH_RING_ID)!=0 :
+   elif npcId == 30409 and int(st.get("cond"))!=0 and st.getQuestItemsCount(EARTH_RING)!=0 :
         #Talking to the Earth Snake after completing his task
         htmltext = "30409-03.htm"
-   elif npcId == 30391 and int(st.get("cond"))!=0 and st.getQuestItemsCount(FLAME_EARING_ID)!=0 and st.getQuestItemsCount(WIND_BANGEL_ID)!=0 and st.getQuestItemsCount(WATER_NECKLACE_ID)!=0 and st.getQuestItemsCount(EARTH_RING_ID)!=0 :
+   elif npcId == 30391 and int(st.get("cond"))!=0 and st.getQuestItemsCount(FLAME_EARING)!=0 and st.getQuestItemsCount(WIND_BANGEL)!=0 and st.getQuestItemsCount(WATER_NECKLACE)!=0 and st.getQuestItemsCount(EARTH_RING)!=0 :
         #Talking to Parina after gathering all 4 tokens
         #Gains BEAD_OF_SEASON
         #Resets cond so these NPC's will no longer speak to you
         #and Sets the quest as completed
-        st.takeItems(FLAME_EARING_ID,st.getQuestItemsCount(FLAME_EARING_ID))
-        st.takeItems(WIND_BANGEL_ID,st.getQuestItemsCount(WIND_BANGEL_ID))
-        st.takeItems(WATER_NECKLACE_ID,st.getQuestItemsCount(WATER_NECKLACE_ID))
-        st.takeItems(EARTH_RING_ID,st.getQuestItemsCount(EARTH_RING_ID))
+        st.takeItems(FLAME_EARING,st.getQuestItemsCount(FLAME_EARING))
+        st.takeItems(WIND_BANGEL,st.getQuestItemsCount(WIND_BANGEL))
+        st.takeItems(WATER_NECKLACE,st.getQuestItemsCount(WATER_NECKLACE))
+        st.takeItems(EARTH_RING,st.getQuestItemsCount(EARTH_RING))
         st.set("cond","0")
         st.setState(COMPLETED)
         st.playSound("ItemSound.quest_finish")
-        if st.getQuestItemsCount(BEAD_OF_SEASON_ID) == 0 :
-          st.giveItems(BEAD_OF_SEASON_ID,1)
+        if st.getQuestItemsCount(BEAD_OF_SEASON) == 0 :
+          st.giveItems(BEAD_OF_SEASON,1)
+          st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
         htmltext = "30391-06.htm"
         
    return htmltext
@@ -221,27 +226,27 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 20359 :    #Ratman Warrior, as of C3.
         st.set("id","0")
-        #Only get a KEY_OF_FLAME_ID if we are on the quest for the Fire Salamander
+        #Only get a KEY_OF_FLAME if we are on the quest for the Fire Salamander
         if int(st.get("cond")) == 2 :
-            st.giveItems(KEY_OF_FLAME_ID,1)
+            st.giveItems(KEY_OF_FLAME,1)
             st.playSound("ItemSound.quest_middle")
             #Increase the Cond so we can only get one key
             st.set("cond","3")
    elif npcId == 27030 : #water seer
         st.set("id","0")
-        #Only get a SPARKLE_PEBBLE_ID if we are on the quest for the Water Undine
-        if int(st.get("cond")) == 8 and st.getQuestItemsCount(SPARKLE_PEBBLE_ID) < 2:
-            st.giveItems(SPARKLE_PEBBLE_ID,1)
-            if st.getQuestItemsCount(SPARKLE_PEBBLE_ID) == 2 :
+        #Only get a SPARKLE_PEBBLE if we are on the quest for the Water Undine
+        if int(st.get("cond")) == 8 and st.getQuestItemsCount(SPARKLE_PEBBLE) < 2:
+            st.giveItems(SPARKLE_PEBBLE,1)
+            if st.getQuestItemsCount(SPARKLE_PEBBLE) == 2 :
               st.playSound("ItemSound.quest_middle")
               st.set("cond","9")
             else:
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 20021 :   #Red Bear
         st.set("id","0")
-        #Only get a RED_SOIL_ID if we are on the quest for the Earth Snake
+        #Only get a RED_SOIL if we are on the quest for the Earth Snake
         if int(st.get("cond")) == 11 :
-            st.giveItems(RED_SOIL_ID,1)
+            st.giveItems(RED_SOIL,1)
             st.playSound("ItemSound.quest_middle")
             st.set("cond","12")
    return
@@ -268,17 +273,19 @@ QUEST.addKillId(20021)
 QUEST.addKillId(20359)
 QUEST.addKillId(27030)
 
-STARTED.addQuestDrop(20359,KEY_OF_FLAME_ID,1)
-STARTED.addQuestDrop(30411,MAP_OF_LUSTER_ID,1)
-STARTED.addQuestDrop(30410,WIND_FEATHER_ID,1)
-STARTED.addQuestDrop(30412,BROKEN_BRONZE_MIRROR_ID,1)
-STARTED.addQuestDrop(27030,SPARKLE_PEBBLE_ID,1)
-STARTED.addQuestDrop(30413,RAMAS_DIARY_ID,1)
-STARTED.addQuestDrop(20021,RED_SOIL_ID,1)
-STARTED.addQuestDrop(30409,RUST_GOLD_COIN_ID,1)
-STARTED.addQuestDrop(30411,FLAME_EARING_ID,1)
-STARTED.addQuestDrop(30412,WIND_BANGEL_ID,1)
-STARTED.addQuestDrop(30413,WATER_NECKLACE_ID,1)
-STARTED.addQuestDrop(30409,EARTH_RING_ID,1)
+STARTED.addQuestDrop(20359,KEY_OF_FLAME,1)
+STARTED.addQuestDrop(30411,MAP_OF_LUSTER,1)
+STARTED.addQuestDrop(30410,WIND_FEATHER,1)
+STARTED.addQuestDrop(30412,BROKEN_BRONZE_MIRROR,1)
+STARTED.addQuestDrop(27030,SPARKLE_PEBBLE,1)
+STARTED.addQuestDrop(30413,RAMAS_DIARY,1)
+STARTED.addQuestDrop(20021,RED_SOIL,1)
+STARTED.addQuestDrop(30409,RUST_GOLD_COIN,1)
+STARTED.addQuestDrop(30411,FLAME_EARING,1)
+STARTED.addQuestDrop(30412,WIND_BANGEL,1)
+STARTED.addQuestDrop(30413,WATER_NECKLACE,1)
+STARTED.addQuestDrop(30409,EARTH_RING,1)
 
-print "importing quests: 404: Path To Wizard"
+print "importing quests: 404: Path To Wizard"
+
+
