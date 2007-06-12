@@ -1,4 +1,6 @@
 # Made by Mr. - Version 0.3 by DrLecter 
+# Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
+# Visit http://forum.l2jdp.com for more details
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -23,6 +25,7 @@ WEIRD_BEES_NEEDLE = 2876
 MARSH_SPIDERS_WEB = 2877
 BLOOD_OF_LEECH = 2878
 BROKEN_TELEPORT_DEVICE = 2916
+SHADOW_WEAPON_COUPON_CGRADE = 8870
 
 #This handle all Mob-Drop Data.  npcId:[progress,maxcount,item]
 DROPLIST={
@@ -94,7 +97,8 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    if npcId != 30531 and id != STARTED : return htmltext
-   if id == CREATED :
+
+   if id == CREATED :
      st.setState(STARTING)
    progress = st.getInt("progress")
    if npcId == 30531:
@@ -115,6 +119,7 @@ class Quest (JQuest) :
        st.addExpAndSp(154499,37500)
        htmltext = "30531-06.htm"
        st.giveItems(MARK_OF_MAESTRO,1)
+       st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
        st.takeItems(RECOMMENDATION_OF_BALANKI,1)
        st.takeItems(RECOMMENDATION_OF_FILAUR,1)
        st.takeItems(RECOMMENDATION_OF_ARIN,1)

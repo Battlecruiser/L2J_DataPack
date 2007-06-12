@@ -1,4 +1,6 @@
 # Made by Mr. Have fun! Version 0.2
+# Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
+# Visit http://forum.l2jdp.com for more details
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -26,6 +28,7 @@ BONE_FRAGMENT7 = 2837
 BONE_FRAGMENT8 = 2838
 BONE_FRAGMENT9 = 2839
 KAKANS_LETTER = 3037
+SHADOW_WEAPON_COUPON_CGRADE = 8870
 
 class Quest (JQuest) :
 
@@ -112,6 +115,7 @@ class Quest (JQuest) :
         st.giveItems(GREETINGS,3)
    elif npcId == 30666 and int(st.get("cond"))==18 and st.getQuestItemsCount(KATARIS_LETTER)>0 and st.getQuestItemsCount(KAKANS_LETTER)>0 and st.getQuestItemsCount(NYAKURIS_LETTER)>0 and st.getQuestItemsCount(RAMUSS_LETTER)>0 :
           st.giveItems(MARK_OF_REFORMER,1)
+          st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
           st.addExpAndSp(164032,17500)
           htmltext = "30666-07.htm"
           st.set("cond","0")

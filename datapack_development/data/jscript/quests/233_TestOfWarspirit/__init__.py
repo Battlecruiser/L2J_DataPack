@@ -1,5 +1,7 @@
 # Maked by Mr. Have fun! Version 0.2
 # rewritten by Rolarga, Version 0.3
+# Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
+# Visit http://forum.l2jdp.com for more details
 
 import sys
 from net.sf.l2j.gameserver.model.quest import State
@@ -8,42 +10,43 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "233_TestOfWarspirit"
 
-MARK_OF_WARSPIRIT_ID = 2879
-VENDETTA_TOTEM_ID = 2880
-TAMLIN_ORC_HEAD_ID = 2881
-WARSPIRIT_TOTEM_ID = 2882
-ORIMS_CONTRACT_ID = 2883
-PORTAS_EYE_ID = 2884
-BRAKIS_REMAINS1_ID = 2887
-HERMODTS_REMAINS1_ID = 2901
-KIRUNAS_REMAINS1_ID = 2910
-TONARS_REMAINS1_ID = 2894
-BRAKIS_REMAINS2_ID = 2911
-HERMODTS_REMAINS2_ID = 2913
-KIRUNAS_REMAINS2_ID = 2914
-TONARS_REMAINS2_ID = 2912
-EXCUROS_SCALE_ID = 2885
-MORDEOS_TALON_ID = 2886
-PEKIRONS_TOTEM_ID = 2888
-TONARS_SKULL_ID = 2889
-TONARS_RIB_BONE_ID = 2890
-TONARS_SPINE_ID = 2891
-TONARS_ARM_BONE_ID = 2892
-TONARS_THIGH_BONE_ID = 2893
-MANAKIAS_TOTEM_ID = 2895
-HERMODTS_SKULL_ID = 2896
-HERMODTS_RIB_BONE_ID = 2897
-HERMODTS_SPINE_ID = 2898
-HERMODTS_ARM_BONE_ID = 2899
-HERMODTS_THIGH_BONE_ID = 2900
-RACOYS_TOTEM_ID = 2902
-KIRUNAS_SKULL_ID = 2905
-KIRUNAS_RIB_BONE_ID = 2906
-KIRUNAS_SPINE_ID = 2907
-KIRUNAS_ARM_BONE_ID = 2908
-KIRUNAS_THIGH_BONE_ID = 2909
-INSECT_DIAGRAM_BOOK_ID = 2904
-VIVIANTES_LETTER_ID = 2903
+MARK_OF_WARSPIRIT = 2879
+VENDETTA_TOTEM = 2880
+TAMLIN_ORC_HEAD = 2881
+WARSPIRIT_TOTEM = 2882
+ORIMS_CONTRACT = 2883
+PORTAS_EYE = 2884
+BRAKIS_REMAINS1 = 2887
+HERMODTS_REMAINS1 = 2901
+KIRUNAS_REMAINS1 = 2910
+TONARS_REMAINS1 = 2894
+BRAKIS_REMAINS2 = 2911
+HERMODTS_REMAINS2 = 2913
+KIRUNAS_REMAINS2 = 2914
+TONARS_REMAINS2 = 2912
+EXCUROS_SCALE = 2885
+MORDEOS_TALON = 2886
+PEKIRONS_TOTEM = 2888
+TONARS_SKULL = 2889
+TONARS_RIB_BONE = 2890
+TONARS_SPINE = 2891
+TONARS_ARM_BONE = 2892
+TONARS_THIGH_BONE = 2893
+MANAKIAS_TOTEM = 2895
+HERMODTS_SKULL = 2896
+HERMODTS_RIB_BONE = 2897
+HERMODTS_SPINE = 2898
+HERMODTS_ARM_BONE = 2899
+HERMODTS_THIGH_BONE = 2900
+RACOYS_TOTEM = 2902
+KIRUNAS_SKULL = 2905
+KIRUNAS_RIB_BONE = 2906
+KIRUNAS_SPINE = 2907
+KIRUNAS_ARM_BONE = 2908
+KIRUNAS_THIGH_BONE = 2909
+INSECT_DIAGRAM_BOOK = 2904
+VIVIANTES_LETTER = 2903
+SHADOW_WEAPON_COUPON_CGRADE = 8870
 
 NPC=[30030,30436,30507,30510,30515,30630,30649,30682]
 
@@ -52,17 +55,17 @@ STATS=["cond","step","Orim","Racoy","Perkiron","Manakia","Manakia_Queen"]
 
 #npcId=[[accepted values for this part],variable for the current part from the mob,maxcount,chance in %, items to give(one per kill max)]
 DROPLIST={
-20213:[[2,3,4],"Orim",10,100,[PORTAS_EYE_ID]],
-20214:[[2,3,4],"Orim",10,100,[EXCUROS_SCALE_ID]],
-20215:[[2,3,4],"Orim",10,100,[MORDEOS_TALON_ID]],
-20601:[[1],"step",13,50,[TAMLIN_ORC_HEAD_ID]],
-20602:[[1],"step",13,50,[TAMLIN_ORC_HEAD_ID]],
-27108:[[2],"Manakia_Queen",1,100,[HERMODTS_SKULL_ID]],
-20581:[[2,3,4,5,6],"Perkiron",1,50,[TONARS_RIB_BONE_ID,TONARS_SPINE_ID,TONARS_ARM_BONE_ID,TONARS_SKULL_ID,TONARS_THIGH_BONE_ID]],
-20582:[[2,3,4,5,6],"Perkiron",1,50,[TONARS_SKULL_ID,TONARS_ARM_BONE_ID,TONARS_RIB_BONE_ID,TONARS_SPINE_ID,TONARS_THIGH_BONE_ID]],
-20158:[[2,3,4,5],"Manakia",1,50,[HERMODTS_RIB_BONE_ID,HERMODTS_SPINE_ID,HERMODTS_ARM_BONE_ID,HERMODTS_THIGH_BONE_ID]],
-20089:[[4,5,6,7,8,9],"Racoy",1,100,[[KIRUNAS_THIGH_BONE_ID,KIRUNAS_ARM_BONE_ID],[KIRUNAS_SPINE_ID,KIRUNAS_RIB_BONE_ID],[KIRUNAS_SKULL_ID]]],
-20090:[[4,5,6,7,8,9],"Racoy",1,100,[[KIRUNAS_THIGH_BONE_ID,KIRUNAS_ARM_BONE_ID],[KIRUNAS_SPINE_ID,KIRUNAS_RIB_BONE_ID],[KIRUNAS_SKULL_ID]]]
+20213:[[2,3,4],"Orim",10,100,[PORTAS_EYE]],
+20214:[[2,3,4],"Orim",10,100,[EXCUROS_SCALE]],
+20215:[[2,3,4],"Orim",10,100,[MORDEOS_TALON]],
+20601:[[1],"step",13,50,[TAMLIN_ORC_HEAD]],
+20602:[[1],"step",13,50,[TAMLIN_ORC_HEAD]],
+27108:[[2],"Manakia_Queen",1,100,[HERMODTS_SKULL]],
+20581:[[2,3,4,5,6],"Perkiron",1,50,[TONARS_RIB_BONE,TONARS_SPINE,TONARS_ARM_BONE,TONARS_SKULL,TONARS_THIGH_BONE]],
+20582:[[2,3,4,5,6],"Perkiron",1,50,[TONARS_SKULL,TONARS_ARM_BONE,TONARS_RIB_BONE,TONARS_SPINE,TONARS_THIGH_BONE]],
+20158:[[2,3,4,5],"Manakia",1,50,[HERMODTS_RIB_BONE,HERMODTS_SPINE,HERMODTS_ARM_BONE,HERMODTS_THIGH_BONE]],
+20089:[[4,5,6,7,8,9],"Racoy",1,100,[[KIRUNAS_THIGH_BONE,KIRUNAS_ARM_BONE],[KIRUNAS_SPINE,KIRUNAS_RIB_BONE],[KIRUNAS_SKULL]]],
+20090:[[4,5,6,7,8,9],"Racoy",1,100,[[KIRUNAS_THIGH_BONE,KIRUNAS_ARM_BONE],[KIRUNAS_SPINE,KIRUNAS_RIB_BONE],[KIRUNAS_SKULL]]]
 }
 
 # Mob List initialisation for the different Parts
@@ -93,20 +96,20 @@ class Quest (JQuest) :
       htmltext = "30630-03.htm"
     elif event == "30630_3" :
       htmltext = "30630-04.htm"
-      st.giveItems(ORIMS_CONTRACT_ID,1)
+      st.giveItems(ORIMS_CONTRACT,1)
       st.set("Orim","2")
     elif event == "30682_1" :
       htmltext = "30682-02.htm"
-      st.giveItems(PEKIRONS_TOTEM_ID,1)
+      st.giveItems(PEKIRONS_TOTEM,1)
       st.set("Perkiron","2")
     elif event == "30515_1" :
       htmltext = "30515-02.htm"
-      st.giveItems(MANAKIAS_TOTEM_ID,1)
+      st.giveItems(MANAKIAS_TOTEM,1)
       st.set("Manakia","2")
       st.set("Manakia_Queen","2")
     elif event == "30507_1" :
       htmltext = "30507-02.htm"
-      st.giveItems(RACOYS_TOTEM_ID,1)
+      st.giveItems(RACOYS_TOTEM,1)
       st.set("Racoy","2")
     elif event == "30030_1" :
       htmltext = "30030-02.htm"
@@ -114,18 +117,19 @@ class Quest (JQuest) :
       htmltext = "30030-03.htm"
     elif event == "30030_3" :
       htmltext = "30030-04.htm"
-      st.giveItems(VIVIANTES_LETTER_ID,1)
+      st.giveItems(VIVIANTES_LETTER,1)
       st.set("Racoy","3")
     elif event == "30649_1" :
       htmltext = "30649-02.htm"
     elif event == "30649_2" :
-      st.takeItems(WARSPIRIT_TOTEM_ID,-1)
-      st.takeItems(BRAKIS_REMAINS2_ID,-1)
-      st.takeItems(HERMODTS_REMAINS2_ID,-1)
-      st.takeItems(KIRUNAS_REMAINS2_ID,-1)
+      st.takeItems(WARSPIRIT_TOTEM,-1)
+      st.takeItems(BRAKIS_REMAINS2,-1)
+      st.takeItems(HERMODTS_REMAINS2,-1)
+      st.takeItems(KIRUNAS_REMAINS2,-1)
       st.addExpAndSp(63483,17500)
-      st.takeItems(TONARS_REMAINS2_ID,-1)
-      st.giveItems(MARK_OF_WARSPIRIT_ID,1)
+      st.takeItems(TONARS_REMAINS2,-1)
+      st.giveItems(MARK_OF_WARSPIRIT,1)
+      st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
       htmltext = "30649-03.htm"
       for var in STATS:
         st.unset(var)
@@ -174,11 +178,11 @@ class Quest (JQuest) :
         if npcId == NPC[3]:
           if Orim == 6 and Racoy == 11 and Perkiron == 8 and Manakia == 7:          # Step 1 finished
             htmltext = "30510-07.htm"
-            st.takeItems(BRAKIS_REMAINS1_ID,1)
-            st.takeItems(HERMODTS_REMAINS1_ID,1)
-            st.takeItems(KIRUNAS_REMAINS1_ID,1)
-            st.takeItems(TONARS_REMAINS1_ID,1)
-            st.giveItems(VENDETTA_TOTEM_ID,1)
+            st.takeItems(BRAKIS_REMAINS1,1)
+            st.takeItems(HERMODTS_REMAINS1,1)
+            st.takeItems(KIRUNAS_REMAINS1,1)
+            st.takeItems(TONARS_REMAINS1,1)
+            st.giveItems(VENDETTA_TOTEM,1)
             st.setState(PART2)
           else:                                        # shows you again his List
             htmltext = "30510-06.htm"
@@ -190,11 +194,11 @@ class Quest (JQuest) :
             htmltext = "30630-05.htm"
           elif Orim == 5:
             htmltext = "30630-06.htm"
-            st.takeItems(ORIMS_CONTRACT_ID,-1)
-            st.takeItems(PORTAS_EYE_ID,-1)
-            st.takeItems(EXCUROS_SCALE_ID,-1)
-            st.takeItems(MORDEOS_TALON_ID,-1)
-            st.giveItems(BRAKIS_REMAINS1_ID,1)
+            st.takeItems(ORIMS_CONTRACT,-1)
+            st.takeItems(PORTAS_EYE,-1)
+            st.takeItems(EXCUROS_SCALE,-1)
+            st.takeItems(MORDEOS_TALON,-1)
+            st.giveItems(BRAKIS_REMAINS1,1)
             st.set("Orim","6")
           else:
             htmltext = "30630-07.htm"
@@ -210,14 +214,14 @@ class Quest (JQuest) :
             htmltext = "30507-05.htm"
           elif Racoy == 10:
             htmltext = "30507-06.htm"
-            st.takeItems(RACOYS_TOTEM_ID,-1)
-            st.takeItems(KIRUNAS_SKULL_ID,-1)
-            st.takeItems(KIRUNAS_RIB_BONE_ID,-1)
-            st.takeItems(KIRUNAS_SPINE_ID,-1)
-            st.takeItems(KIRUNAS_ARM_BONE_ID,-1)
-            st.takeItems(KIRUNAS_THIGH_BONE_ID,-1)
-            st.takeItems(INSECT_DIAGRAM_BOOK_ID,-1)
-            st.giveItems(KIRUNAS_REMAINS1_ID,1)
+            st.takeItems(RACOYS_TOTEM,-1)
+            st.takeItems(KIRUNAS_SKULL,-1)
+            st.takeItems(KIRUNAS_RIB_BONE,-1)
+            st.takeItems(KIRUNAS_SPINE,-1)
+            st.takeItems(KIRUNAS_ARM_BONE,-1)
+            st.takeItems(KIRUNAS_THIGH_BONE,-1)
+            st.takeItems(INSECT_DIAGRAM_BOOK,-1)
+            st.giveItems(KIRUNAS_REMAINS1,1)
             st.set("Racoy","11")
           else:
             htmltext = "30507-07.htm"
@@ -235,8 +239,8 @@ class Quest (JQuest) :
         elif npcId == NPC[1]:
           if Racoy == 3:                # explanation about hunting noble ants
             htmltext = "30436-01.htm"
-            st.giveItems(INSECT_DIAGRAM_BOOK_ID,1)
-            st.takeItems(VIVIANTES_LETTER_ID,1)
+            st.giveItems(INSECT_DIAGRAM_BOOK,1)
+            st.takeItems(VIVIANTES_LETTER,1)
             st.set("Racoy","4")
           elif 10 > Racoy > 3:             # bring more
             htmltext = "30436-02.htm"
@@ -250,13 +254,13 @@ class Quest (JQuest) :
             htmltext = "30682-03.htm"
           elif Perkiron == 7:            # ah you got anything i need
             htmltext = "30682-04.htm"
-            st.takeItems(PEKIRONS_TOTEM_ID,1)
-            st.takeItems(TONARS_SKULL_ID,1)
-            st.takeItems(TONARS_RIB_BONE_ID,1)
-            st.takeItems(TONARS_SPINE_ID,1)
-            st.takeItems(TONARS_ARM_BONE_ID,1)
-            st.takeItems(TONARS_THIGH_BONE_ID,1)
-            st.giveItems(TONARS_REMAINS1_ID,1)
+            st.takeItems(PEKIRONS_TOTEM,1)
+            st.takeItems(TONARS_SKULL,1)
+            st.takeItems(TONARS_RIB_BONE,1)
+            st.takeItems(TONARS_SPINE,1)
+            st.takeItems(TONARS_ARM_BONE,1)
+            st.takeItems(TONARS_THIGH_BONE,1)
+            st.giveItems(TONARS_REMAINS1,1)
             st.set("Perkiron","8")
           else:                    # part is finished for this npc
             htmltext = "30682-05.htm"
@@ -268,13 +272,13 @@ class Quest (JQuest) :
               htmltext = "30515-05.htm"
             elif Manakia == 6 and int(st.get("Manakia_Queen"))==3:        # ah you got both items i need
               htmltext = "30515-04.htm"
-              st.takeItems(MANAKIAS_TOTEM_ID,1)
-              st.takeItems(HERMODTS_SKULL_ID,1)
-              st.takeItems(HERMODTS_RIB_BONE_ID,1)
-              st.takeItems(HERMODTS_SPINE_ID,1)
-              st.takeItems(HERMODTS_ARM_BONE_ID,1)
-              st.takeItems(HERMODTS_THIGH_BONE_ID,1)
-              st.giveItems(HERMODTS_REMAINS1_ID,1)
+              st.takeItems(MANAKIAS_TOTEM,1)
+              st.takeItems(HERMODTS_SKULL,1)
+              st.takeItems(HERMODTS_RIB_BONE,1)
+              st.takeItems(HERMODTS_SPINE,1)
+              st.takeItems(HERMODTS_ARM_BONE,1)
+              st.takeItems(HERMODTS_THIGH_BONE,1)
+              st.giveItems(HERMODTS_REMAINS1,1)
               st.set("Manakia","7")  
             else:                                  # bring me more, because two vars are required , Manakia and Manakia_Queen
               htmltext = "30515-03.htm"
@@ -285,13 +289,13 @@ class Quest (JQuest) :
             htmltext = "30510-08.htm"
           elif step == 2:                                # ah you got the items i need
             htmltext = "30510-09.htm"
-            st.takeItems(VENDETTA_TOTEM_ID,1)
-            st.takeItems(TAMLIN_ORC_HEAD_ID,st.getQuestItemsCount(TAMLIN_ORC_HEAD_ID))
-            st.giveItems(WARSPIRIT_TOTEM_ID,1)
-            st.giveItems(BRAKIS_REMAINS2_ID,1)
-            st.giveItems(HERMODTS_REMAINS2_ID,1)
-            st.giveItems(KIRUNAS_REMAINS2_ID,1)
-            st.giveItems(TONARS_REMAINS2_ID,1)
+            st.takeItems(VENDETTA_TOTEM,1)
+            st.takeItems(TAMLIN_ORC_HEAD,st.getQuestItemsCount(TAMLIN_ORC_HEAD))
+            st.giveItems(WARSPIRIT_TOTEM,1)
+            st.giveItems(BRAKIS_REMAINS2,1)
+            st.giveItems(HERMODTS_REMAINS2,1)
+            st.giveItems(KIRUNAS_REMAINS2,1)
+            st.giveItems(TONARS_REMAINS2,1)
             st.set("step","3")
           else:                              # this part is finished for this npc
             htmltext = "30510-10.htm"
@@ -319,7 +323,7 @@ class Quest (JQuest) :
           list=0
         elif random>40:
           list=1
-        elif random>10 and st.getQuestItemsCount(KIRUNAS_SKULL_ID)==0:
+        elif random>10 and st.getQuestItemsCount(KIRUNAS_SKULL)==0:
           list=2
         else:
           return
@@ -328,7 +332,7 @@ class Quest (JQuest) :
           st.giveItems(item,1)
           if int(st.get(var)) < 9:
             st.set(var,str(isValue+1))
-          if st.getQuestItemsCount(KIRUNAS_SKULL_ID) and int(st.get(var))>6:
+          if st.getQuestItemsCount(KIRUNAS_SKULL) and int(st.get(var))>6:
             st.set(var,"10")
             st.playSound("ItemdSound.quest_middle")
             return
