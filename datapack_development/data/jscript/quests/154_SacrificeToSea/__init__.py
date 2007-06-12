@@ -39,8 +39,8 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30312 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-        if int(st.get("cond"))<15 :
+   if npcId == 30312 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+        if st.getInt("cond")<15 :
           if player.getLevel() >= 2 :
             htmltext = "30312-03.htm"
             return htmltext
@@ -50,34 +50,34 @@ class Quest (JQuest) :
         else:
           htmltext = "30312-02.htm"
           st.exitQuest(1)
-   elif npcId == 30312 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30312 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    if id == STARTED:     
-       if npcId == 30312 and int(st.get("cond"))==1 and (st.getQuestItemsCount(FOX_FUR_YARN_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==0) and st.getQuestItemsCount(FOX_FUR_ID)<10 :
+       if npcId == 30312 and st.getInt("cond")==1 and (st.getQuestItemsCount(FOX_FUR_YARN_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==0) and st.getQuestItemsCount(FOX_FUR_ID)<10 :
             htmltext = "30312-05.htm"
-       elif npcId == 30312 and int(st.get("cond"))==1 and st.getQuestItemsCount(FOX_FUR_ID)>=10 :
+       elif npcId == 30312 and st.getInt("cond")==1 and st.getQuestItemsCount(FOX_FUR_ID)>=10 :
             htmltext = "30312-08.htm"
-       elif npcId == 30051 and int(st.get("cond"))==1 and st.getQuestItemsCount(FOX_FUR_ID)<10 and st.getQuestItemsCount(FOX_FUR_ID)>0 :
+       elif npcId == 30051 and st.getInt("cond")==1 and st.getQuestItemsCount(FOX_FUR_ID)<10 and st.getQuestItemsCount(FOX_FUR_ID)>0 :
             htmltext = "30051-01.htm"
-       elif npcId == 30051 and int(st.get("cond"))==1 and st.getQuestItemsCount(FOX_FUR_ID)>=10 and st.getQuestItemsCount(FOX_FUR_YARN_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)<10 :
+       elif npcId == 30051 and st.getInt("cond")==1 and st.getQuestItemsCount(FOX_FUR_ID)>=10 and st.getQuestItemsCount(FOX_FUR_YARN_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)<10 :
             htmltext = "30051-02.htm"
             st.giveItems(FOX_FUR_YARN_ID,1)
             st.takeItems(FOX_FUR_ID,st.getQuestItemsCount(FOX_FUR_ID))
-       elif npcId == 30051 and int(st.get("cond"))==1 and st.getQuestItemsCount(FOX_FUR_YARN_ID)>=1 :
+       elif npcId == 30051 and st.getInt("cond")==1 and st.getQuestItemsCount(FOX_FUR_YARN_ID)>=1 :
             htmltext = "30051-03.htm"
-       elif npcId == 30051 and int(st.get("cond"))==1 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==1 :
+       elif npcId == 30051 and st.getInt("cond")==1 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==1 :
             htmltext = "30051-04.htm"
-       elif npcId == 30312 and int(st.get("cond"))==1 and st.getQuestItemsCount(FOX_FUR_YARN_ID)>=1 :
+       elif npcId == 30312 and st.getInt("cond")==1 and st.getQuestItemsCount(FOX_FUR_YARN_ID)>=1 :
             htmltext = "30312-06.htm"
-       elif npcId == 30055 and int(st.get("cond"))==1 and st.getQuestItemsCount(FOX_FUR_YARN_ID)>=1 :
+       elif npcId == 30055 and st.getInt("cond")==1 and st.getQuestItemsCount(FOX_FUR_YARN_ID)>=1 :
             htmltext = "30055-01.htm"
             st.giveItems(MAIDEN_DOLL_ID,1)
             st.takeItems(FOX_FUR_YARN_ID,st.getQuestItemsCount(FOX_FUR_YARN_ID))
-       elif npcId == 30055 and int(st.get("cond"))==1 and st.getQuestItemsCount(MAIDEN_DOLL_ID)>=1 :
+       elif npcId == 30055 and st.getInt("cond")==1 and st.getQuestItemsCount(MAIDEN_DOLL_ID)>=1 :
             htmltext = "30055-02.htm"
-       elif npcId == 30055 and int(st.get("cond"))==1 and st.getQuestItemsCount(FOX_FUR_YARN_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==0 :
+       elif npcId == 30055 and st.getInt("cond")==1 and st.getQuestItemsCount(FOX_FUR_YARN_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==0 :
             htmltext = "30055-03.htm"
-       elif npcId == 30312 and int(st.get("cond"))==1 and st.getQuestItemsCount(MAIDEN_DOLL_ID)>=1 and int(st.get("onlyone"))==0 :
+       elif npcId == 30312 and st.getInt("cond")==1 and st.getQuestItemsCount(MAIDEN_DOLL_ID)>=1 and int(st.get("onlyone"))==0 :
           if int(st.get("id")) != 154 :
             st.set("id","154")
             htmltext = "30312-07.htm"
@@ -98,7 +98,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 20481 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(FOX_FUR_ID)<10 and st.getQuestItemsCount(FOX_FUR_YARN_ID) == 0 :
+        if st.getInt("cond") == 1 and st.getQuestItemsCount(FOX_FUR_ID)<10 and st.getQuestItemsCount(FOX_FUR_YARN_ID) == 0 :
           if st.getRandom(10)<4 :
             st.giveItems(FOX_FUR_ID,1)
             if st.getQuestItemsCount(FOX_FUR_ID) == 10 :
@@ -107,7 +107,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 20545 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 and st.getQuestItemsCount(FOX_FUR_ID)<10 and st.getQuestItemsCount(FOX_FUR_YARN_ID) == 0 :
+        if st.getInt("cond") == 1 and st.getQuestItemsCount(FOX_FUR_ID)<10 and st.getQuestItemsCount(FOX_FUR_YARN_ID) == 0 :
           if st.getRandom(10)<4 :
             st.giveItems(FOX_FUR_ID,1)
             if st.getQuestItemsCount(FOX_FUR_ID) == 10 :

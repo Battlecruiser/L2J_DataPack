@@ -35,14 +35,14 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
       st.set("cond","0")
-   if npcId == 30125 and int(st.get("cond"))==0 :
+   if npcId == 30125 and st.getInt("cond")==0 :
       if st.getPlayer().getLevel() >= 32 :
          htmltext = "30125-02.htm"
          return htmltext
       else:
          htmltext = "30125-01.htm"
          st.exitQuest(1)
-   elif npcId == 30125 and int(st.get("cond"))==1 :
+   elif npcId == 30125 and st.getInt("cond")==1 :
      if st.getQuestItemsCount(HARPY_FEATHER)+st.getQuestItemsCount(MEDUSA_VENOM)+st.getQuestItemsCount(WYRMS_TOOTH)>0 :
         st.giveItems(ADENA,80*st.getQuestItemsCount(HARPY_FEATHER)+90*st.getQuestItemsCount(MEDUSA_VENOM)+100*st.getQuestItemsCount(WYRMS_TOOTH))
         st.takeItems(HARPY_FEATHER,-1)

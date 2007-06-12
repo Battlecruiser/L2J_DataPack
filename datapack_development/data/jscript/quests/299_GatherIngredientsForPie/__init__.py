@@ -91,7 +91,7 @@ class Quest (JQuest) :
    
    npcId = npc.getNpcId()
    count = st.getQuestItemsCount(HONEY_POUCH)
-   if int(st.get("cond")) == 1 and count < 100 :
+   if st.getInt("cond") == 1 and count < 100 :
      st.giveItems(HONEY_POUCH,1)
      if count == 99 :
        st.playSound("ItemSound.quest_middle")

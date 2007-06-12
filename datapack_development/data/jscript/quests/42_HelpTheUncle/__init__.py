@@ -63,7 +63,7 @@ class Quest (JQuest) :
         htmltext="<html><head><body>This quest can only be taken by characters that have a minimum level of %s. Return when you are more experienced.</body></html>" % MIN_LEVEL
         st.exitQuest(1)
     elif id==STARTED:
-      cond=int(st.get("cond"))
+      cond=st.getInt("cond")
       if npcId==WATERS:
         if cond==1:
           if not st.getQuestItemsCount(TRIDENT):
@@ -79,7 +79,7 @@ class Quest (JQuest) :
         elif cond==5:
           htmltext="30828-06.htm"
       elif npcId==SOPHYA and id == STARTED:
-        cond=int(st.get("cond"))
+        cond=st.getInt("cond")
         if cond==4 and st.getQuestItemsCount(MAP):
           htmltext="30735-05.htm"
         elif cond==5:
@@ -95,7 +95,7 @@ class Quest (JQuest) :
     if st.getState() != STARTED : return
     
     npcId = npc.getNpcId()
-    cond=int(st.get("cond"))
+    cond=st.getInt("cond")
     if cond==2:
       numItems,chance = divmod(100*Config.RATE_QUESTS_REWARD,100)
       if st.getRandom(100) < chance :

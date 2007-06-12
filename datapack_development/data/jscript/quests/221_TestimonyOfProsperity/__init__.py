@@ -166,7 +166,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30104 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30104 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
         if st.getPlayer().getRace().ordinal() != 4 :
           htmltext = "30104-01.htm"
           st.exitQuest(1)
@@ -176,14 +176,14 @@ class Quest (JQuest) :
             st.exitQuest(1)
           else:
             htmltext = "30104-03.htm"
-   elif npcId == 30104 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30104 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 30104 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 :
+   elif npcId == 30104 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 :
         if st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) and st.getQuestItemsCount(BLESSED_SEED_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) :
           htmltext = "30104-06.htm"
         else:
           htmltext = "30104-05.htm"
-   elif npcId == 30104 and int(st.get("cond"))>=1 and st.getQuestItemsCount(PARMANS_INSTRUCTIONS_ID)==1 :
+   elif npcId == 30104 and st.getInt("cond")>=1 and st.getQuestItemsCount(PARMANS_INSTRUCTIONS_ID)==1 :
         if st.getPlayer().getLevel() < 38 :
           htmltext = "30104-09.htm"
         else:
@@ -191,11 +191,11 @@ class Quest (JQuest) :
           st.giveItems(RING_OF_TESTIMONY2_ID,1)
           st.takeItems(PARMANS_INSTRUCTIONS_ID,1)
           st.giveItems(PARMANS_LETTER_ID,1)
-   elif npcId == 30104 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(PARMANS_LETTER_ID) and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) == 0 :
+   elif npcId == 30104 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(PARMANS_LETTER_ID) and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) == 0 :
         htmltext = "30104-11.htm"
-   elif npcId == 30104 and int(st.get("cond"))>=1 and (st.getQuestItemsCount(CLAY_DOUGH_ID) or st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) or st.getQuestItemsCount(NIKOLAS_LIST_ID)) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
+   elif npcId == 30104 and st.getInt("cond")>=1 and (st.getQuestItemsCount(CLAY_DOUGH_ID) or st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) or st.getQuestItemsCount(NIKOLAS_LIST_ID)) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
         htmltext = "30104-12.htm"
-   elif npcId == 30104 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) :
+   elif npcId == 30104 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) :
           st.addExpAndSp(12969,1000)
           st.giveItems(7562,16)
           st.takeItems(RING_OF_TESTIMONY2_ID,1)
@@ -206,9 +206,9 @@ class Quest (JQuest) :
           st.set("onlyone","1")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
-   elif npcId == 30531 and int(st.get("cond"))>=1 and st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) == 0 and st.getQuestItemsCount(COLLECTION_LICENSE_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 :
+   elif npcId == 30531 and st.getInt("cond")>=1 and st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) == 0 and st.getQuestItemsCount(COLLECTION_LICENSE_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 :
         htmltext = "30531-01.htm"
-   elif npcId == 30531 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
+   elif npcId == 30531 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
         if st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION1_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION3_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION4_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION5_ID) :
           htmltext = "30531-05.htm"
           st.giveItems(OLD_ACCOUNT_BOOK_ID,1)
@@ -220,78 +220,78 @@ class Quest (JQuest) :
           st.takeItems(RECEIPT_OF_CONTRIBUTION5_ID,1)
         else:
           htmltext = "30531-04.htm"
-   elif npcId == 30531 and int(st.get("cond")) >= 1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID)==0 :
+   elif npcId == 30531 and st.getInt("cond") >= 1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID)==0 :
         htmltext = "30531-06.htm"
-   elif npcId == 30531 and int(st.get("cond")) >= 1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 :
+   elif npcId == 30531 and st.getInt("cond") >= 1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 :
         htmltext = "30531-07.htm"
-   elif npcId == 30532 and int(st.get("cond")) >= 1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE1_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION1_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_CHALI_ID) == 0 :
+   elif npcId == 30532 and st.getInt("cond") >= 1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE1_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION1_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_CHALI_ID) == 0 :
         htmltext = "30532-01.htm"
         st.takeItems(LOCKIRINS_NOTICE1_ID,1)
-   elif npcId == 30532 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION1_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_CHALI_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE1_ID) == 0 :
+   elif npcId == 30532 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION1_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_CHALI_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE1_ID) == 0 :
         htmltext = "30532-02.htm"
-   elif npcId == 30532 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(CONTRIBUTION_OF_CHALI_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION1_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE1_ID) == 0 :
+   elif npcId == 30532 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(CONTRIBUTION_OF_CHALI_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION1_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE1_ID) == 0 :
         htmltext = "30532-03.htm"
         st.giveItems(RECEIPT_OF_CONTRIBUTION1_ID,1)
         st.takeItems(CONTRIBUTION_OF_CHALI_ID,1)
-   elif npcId == 30532 and int(st.get("cond"))>=1 and st.getQuestItemsCount(CONTRIBUTION_OF_CHALI_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE1_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION1_ID) :
+   elif npcId == 30532 and st.getInt("cond")>=1 and st.getQuestItemsCount(CONTRIBUTION_OF_CHALI_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE1_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION1_ID) :
         htmltext = "30532-04.htm"
-   elif npcId == 30533 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID)==1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID)==0 and (st.getQuestItemsCount(CONTRIBUTION_OF_MION_ID)+st.getQuestItemsCount(CONTRIBUTION_OF_MARIFE_ID)<2) :
+   elif npcId == 30533 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID)==1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID)==0 and (st.getQuestItemsCount(CONTRIBUTION_OF_MION_ID)+st.getQuestItemsCount(CONTRIBUTION_OF_MARIFE_ID)<2) :
         htmltext = "30533-01.htm"
         st.takeItems(LOCKIRINS_NOTICE2_ID,1)
-   elif npcId == 30533 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID)==0 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID)==0 and (st.getQuestItemsCount(CONTRIBUTION_OF_MION_ID)+st.getQuestItemsCount(CONTRIBUTION_OF_MARIFE_ID)<2) :
+   elif npcId == 30533 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID)==0 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID)==0 and (st.getQuestItemsCount(CONTRIBUTION_OF_MION_ID)+st.getQuestItemsCount(CONTRIBUTION_OF_MARIFE_ID)<2) :
         htmltext = "30533-02.htm"
-   elif npcId == 30533 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID) == 0 and (st.getQuestItemsCount(CONTRIBUTION_OF_MION_ID)+st.getQuestItemsCount(CONTRIBUTION_OF_MARIFE_ID)>=2) :
+   elif npcId == 30533 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID) == 0 and (st.getQuestItemsCount(CONTRIBUTION_OF_MION_ID)+st.getQuestItemsCount(CONTRIBUTION_OF_MARIFE_ID)>=2) :
         htmltext = "30533-03.htm"
         st.takeItems(CONTRIBUTION_OF_MARIFE_ID,1)
         st.giveItems(RECEIPT_OF_CONTRIBUTION2_ID,1)
         st.takeItems(CONTRIBUTION_OF_MION_ID,1)
-   elif npcId == 30533 and int(st.get("cond"))>=1 and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID)==0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID) and (st.getQuestItemsCount(CONTRIBUTION_OF_MION_ID)+st.getQuestItemsCount(CONTRIBUTION_OF_MARIFE_ID)<2) :
+   elif npcId == 30533 and st.getInt("cond")>=1 and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID)==0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID) and (st.getQuestItemsCount(CONTRIBUTION_OF_MION_ID)+st.getQuestItemsCount(CONTRIBUTION_OF_MARIFE_ID)<2) :
         htmltext = "30533-04.htm"
-   elif npcId == 30534 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE3_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION3_ID) == 0 and st.getQuestItemsCount(PROCURATION_OF_TOROCCO_ID) == 0 :
+   elif npcId == 30534 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE3_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION3_ID) == 0 and st.getQuestItemsCount(PROCURATION_OF_TOROCCO_ID) == 0 :
         htmltext = "30534-01.htm"
         st.takeItems(LOCKIRINS_NOTICE3_ID,1)
-   elif npcId == 30534 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION3_ID) == 0 and st.getQuestItemsCount(PROCURATION_OF_TOROCCO_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE3_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
+   elif npcId == 30534 and st.getInt("cond")>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION3_ID) == 0 and st.getQuestItemsCount(PROCURATION_OF_TOROCCO_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE3_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
         htmltext = "30534-02.htm"
-   elif npcId == 30534 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(PROCURATION_OF_TOROCCO_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE3_ID) == 0 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION3_ID) == 0 :
+   elif npcId == 30534 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(PROCURATION_OF_TOROCCO_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE3_ID) == 0 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION3_ID) == 0 :
         htmltext = "30534-03.htm"
-   elif npcId == 30534 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION3_ID) and st.getQuestItemsCount(PROCURATION_OF_TOROCCO_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE3_ID) == 0 :
+   elif npcId == 30534 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION3_ID) and st.getQuestItemsCount(PROCURATION_OF_TOROCCO_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE3_ID) == 0 :
         htmltext = "30534-04.htm"
-   elif npcId == 30535 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE4_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION4_ID) == 0 and st.getQuestItemsCount(RECEIPT_OF_BOLTER_ID) == 0 :
+   elif npcId == 30535 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE4_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION4_ID) == 0 and st.getQuestItemsCount(RECEIPT_OF_BOLTER_ID) == 0 :
         htmltext = "30535-01.htm"
         st.takeItems(LOCKIRINS_NOTICE4_ID,1)
-   elif npcId == 30535 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION4_ID) == 0 and st.getQuestItemsCount(RECEIPT_OF_BOLTER_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE4_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
+   elif npcId == 30535 and st.getInt("cond")>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION4_ID) == 0 and st.getQuestItemsCount(RECEIPT_OF_BOLTER_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE4_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
         htmltext = "30535-02.htm"
-   elif npcId == 30535 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_BOLTER_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION4_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE4_ID) == 0 :
+   elif npcId == 30535 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_BOLTER_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION4_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE4_ID) == 0 :
         htmltext = "30535-03.htm"
         st.giveItems(RECEIPT_OF_CONTRIBUTION4_ID,1)
         st.takeItems(RECEIPT_OF_BOLTER_ID,1)
-   elif npcId == 30535 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION4_ID) and st.getQuestItemsCount(RECEIPT_OF_BOLTER_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE4_ID) == 0 :
+   elif npcId == 30535 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION4_ID) and st.getQuestItemsCount(RECEIPT_OF_BOLTER_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE4_ID) == 0 :
         htmltext = "30535-04.htm"
-   elif npcId == 30536 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE5_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION5_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_TOMA_ID) == 0 :
+   elif npcId == 30536 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE5_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION5_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_TOMA_ID) == 0 :
         htmltext = "30536-01.htm"
         st.takeItems(LOCKIRINS_NOTICE5_ID,1)
-   elif npcId == 30536 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION5_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_TOMA_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE5_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
+   elif npcId == 30536 and st.getInt("cond")>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION5_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_TOMA_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE5_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
         htmltext = "30536-02.htm"
-   elif npcId == 30536 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(CONTRIBUTION_OF_TOMA_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION5_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE5_ID) == 0 :
+   elif npcId == 30536 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(CONTRIBUTION_OF_TOMA_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION5_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE5_ID) == 0 :
         htmltext = "30536-03.htm"
         st.giveItems(RECEIPT_OF_CONTRIBUTION5_ID,1)
         st.takeItems(CONTRIBUTION_OF_TOMA_ID,1)
-   elif npcId == 30536 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION5_ID) and st.getQuestItemsCount(CONTRIBUTION_OF_TOMA_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE5_ID) == 0 :
+   elif npcId == 30536 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION5_ID) and st.getQuestItemsCount(CONTRIBUTION_OF_TOMA_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE5_ID) == 0 :
         htmltext = "30536-04.htm"
-   elif npcId == 30517 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION1_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_CHALI_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE1_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
+   elif npcId == 30517 and st.getInt("cond")>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION1_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_CHALI_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE1_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
         htmltext = "30517-01.htm"
         st.giveItems(CONTRIBUTION_OF_CHALI_ID,1)
-   elif npcId == 30517 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(CONTRIBUTION_OF_CHALI_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE1_ID) == 0 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION1_ID) == 0 :
+   elif npcId == 30517 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(CONTRIBUTION_OF_CHALI_ID) and st.getQuestItemsCount(LOCKIRINS_NOTICE1_ID) == 0 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION1_ID) == 0 :
         htmltext = "30517-02.htm"
-   elif npcId == 30519 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_MION_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
+   elif npcId == 30519 and st.getInt("cond")>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_MION_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
         htmltext = "30519-01.htm"
         st.giveItems(CONTRIBUTION_OF_MION_ID,1)
-   elif npcId == 30519 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(CONTRIBUTION_OF_MION_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID) == 0 :
+   elif npcId == 30519 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(CONTRIBUTION_OF_MION_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID) == 0 :
         htmltext = "30519-02.htm"
-   elif npcId == 30553 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_MARIFE_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID) == 0 and st.getQuestItemsCount(MARIFES_REQUEST_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
+   elif npcId == 30553 and st.getInt("cond")>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_MARIFE_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID) == 0 and st.getQuestItemsCount(MARIFES_REQUEST_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
         htmltext = "30553-01.htm"
         st.giveItems(MARIFES_REQUEST_ID,1)
-   elif npcId == 30553 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(MARIFES_REQUEST_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_MARIFE_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID) == 0 :
+   elif npcId == 30553 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(MARIFES_REQUEST_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_MARIFE_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID) == 0 :
         if st.getQuestItemsCount(ANIMAL_SKIN_ID) < 100 :
           htmltext = "30553-02.htm"
         else:
@@ -299,45 +299,45 @@ class Quest (JQuest) :
           st.takeItems(ANIMAL_SKIN_ID,100)
           st.giveItems(CONTRIBUTION_OF_MARIFE_ID,1)
           st.takeItems(MARIFES_REQUEST_ID,1)
-   elif npcId == 30553 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(CONTRIBUTION_OF_MARIFE_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID) == 0 and st.getQuestItemsCount(MARIFES_REQUEST_ID) == 0 :
+   elif npcId == 30553 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(CONTRIBUTION_OF_MARIFE_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION2_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE2_ID) == 0 and st.getQuestItemsCount(MARIFES_REQUEST_ID) == 0 :
         htmltext = "30553-04.htm"
-   elif npcId == 30555 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION3_ID) == 0 and st.getQuestItemsCount(PROCURATION_OF_TOROCCO_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE3_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
+   elif npcId == 30555 and st.getInt("cond")>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION3_ID) == 0 and st.getQuestItemsCount(PROCURATION_OF_TOROCCO_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE3_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
         htmltext = "30555-01.htm"
-   elif npcId == 30555 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(PROCURATION_OF_TOROCCO_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION3_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE3_ID) == 0 :
+   elif npcId == 30555 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(PROCURATION_OF_TOROCCO_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION3_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE3_ID) == 0 :
         htmltext = "30555-03.htm"
-   elif npcId == 30554 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION4_ID) == 0 and st.getQuestItemsCount(RECEIPT_OF_BOLTER_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE4_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
+   elif npcId == 30554 and st.getInt("cond")>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION4_ID) == 0 and st.getQuestItemsCount(RECEIPT_OF_BOLTER_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE4_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
         htmltext = "30554-01.htm"
         st.giveItems(RECEIPT_OF_BOLTER_ID,1)
-   elif npcId == 30554 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_BOLTER_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION4_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE4_ID) == 0 :
+   elif npcId == 30554 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(RECEIPT_OF_BOLTER_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION4_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE4_ID) == 0 :
         htmltext = "30554-02.htm"
-   elif npcId == 30556 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION5_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_TOMA_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE5_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
+   elif npcId == 30556 and st.getInt("cond")>=1 and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION5_ID) == 0 and st.getQuestItemsCount(CONTRIBUTION_OF_TOMA_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE5_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
         htmltext = "30556-01.htm"
         st.giveItems(CONTRIBUTION_OF_TOMA_ID,1)
-   elif npcId == 30556 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(CONTRIBUTION_OF_TOMA_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION5_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE5_ID) == 0 :
+   elif npcId == 30556 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) and st.getQuestItemsCount(CONTRIBUTION_OF_TOMA_ID) and st.getQuestItemsCount(RECEIPT_OF_CONTRIBUTION5_ID) == 0 and st.getQuestItemsCount(LOCKIRINS_NOTICE5_ID) == 0 :
         htmltext = "30556-02.htm"
-   elif npcId == 30597 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 and st.getQuestItemsCount(BLESSED_SEED_ID)==0 :
+   elif npcId == 30597 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 and st.getQuestItemsCount(BLESSED_SEED_ID)==0 :
         htmltext = "30597-01.htm"
-   elif npcId == 30597 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 and st.getQuestItemsCount(BLESSED_SEED_ID)==1 :
+   elif npcId == 30597 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 and st.getQuestItemsCount(BLESSED_SEED_ID)==1 :
         htmltext = "30597-03.htm"
-   elif npcId == 30597 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
+   elif npcId == 30597 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
         htmltext = "30597-04.htm"
-   elif npcId == 30005 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) == 0 and st.getQuestItemsCount(CRYSTAL_BROOCH_ID) == 0 :
+   elif npcId == 30005 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) == 0 and st.getQuestItemsCount(CRYSTAL_BROOCH_ID) == 0 :
         htmltext = "30005-01.htm"
-   elif npcId == 30005 and int(st.get("cond"))>=1 and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID)==0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(CRYSTAL_BROOCH_ID) :
+   elif npcId == 30005 and st.getInt("cond")>=1 and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID)==0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(CRYSTAL_BROOCH_ID) :
         htmltext = "30005-05.htm"
-   elif npcId == 30005 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) :
+   elif npcId == 30005 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) :
         htmltext = "30005-06.htm"
-   elif npcId == 30005 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
+   elif npcId == 30005 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
         htmltext = "30005-07.htm"
-   elif npcId == 30368 and int(st.get("cond"))>=1 and st.getQuestItemsCount(CRYSTAL_BROOCH_ID) and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID)==0 :
+   elif npcId == 30368 and st.getInt("cond")>=1 and st.getQuestItemsCount(CRYSTAL_BROOCH_ID) and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID)==0 :
         htmltext = "30368-01.htm"
-   elif npcId == 30368 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) and st.getQuestItemsCount(CRYSTAL_BROOCH_ID)==0 :
+   elif npcId == 30368 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) and st.getQuestItemsCount(CRYSTAL_BROOCH_ID)==0 :
         htmltext = "30368-04.htm"
-   elif npcId == 30368 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
+   elif npcId == 30368 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
         htmltext = "30368-05.htm"
-   elif npcId == 30466 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) == 0 and st.getQuestItemsCount(BRIGHTS_LIST_ID) == 0 and st.getQuestItemsCount(MANDRAGORA_BOUQUET_ID) == 0 :
+   elif npcId == 30466 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) == 0 and st.getQuestItemsCount(BRIGHTS_LIST_ID) == 0 and st.getQuestItemsCount(MANDRAGORA_BOUQUET_ID) == 0 :
         htmltext = "30466-01.htm"
-   elif npcId == 30466 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID)==0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(BRIGHTS_LIST_ID) :
+   elif npcId == 30466 and st.getInt("cond")>=1 and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID)==0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(BRIGHTS_LIST_ID) :
         if st.getQuestItemsCount(MANDRAGORA_PETAL_ID) < 20 or st.getQuestItemsCount(CRIMSON_MOSS_ID) < 10 :
           htmltext = "30466-04.htm"
         else:
@@ -346,37 +346,37 @@ class Quest (JQuest) :
           st.takeItems(CRIMSON_MOSS_ID,st.getQuestItemsCount(CRIMSON_MOSS_ID))
           st.giveItems(MANDRAGORA_BOUQUET_ID,1)
           st.takeItems(BRIGHTS_LIST_ID,1)
-   elif npcId == 30466 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(MANDRAGORA_BOUQUET_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) == 0 and st.getQuestItemsCount(BRIGHTS_LIST_ID) == 0 :
+   elif npcId == 30466 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(MANDRAGORA_BOUQUET_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) == 0 and st.getQuestItemsCount(BRIGHTS_LIST_ID) == 0 :
         htmltext = "30466-06.htm"
-   elif npcId == 30466 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) :
+   elif npcId == 30466 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) :
         htmltext = "30466-07.htm"
-   elif npcId == 30466 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
+   elif npcId == 30466 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
         htmltext = "30466-08.htm"
-   elif npcId == 30620 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(MANDRAGORA_BOUQUET_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) == 0 and st.getQuestItemsCount(BRIGHTS_LIST_ID) == 0 :
+   elif npcId == 30620 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(MANDRAGORA_BOUQUET_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) == 0 and st.getQuestItemsCount(BRIGHTS_LIST_ID) == 0 :
         htmltext = "30620-01.htm"
-   elif npcId == 30620 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) :
+   elif npcId == 30620 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) :
         htmltext = "30620-04.htm"
-   elif npcId == 30620 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
+   elif npcId == 30620 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
         htmltext = "30620-05.htm"
-   elif npcId == 30621 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 and st.getQuestItemsCount(CLAY_DOUGH_ID) == 0 and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) == 0 and st.getQuestItemsCount(NIKOLAS_LIST_ID) == 0 and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) == 0 :
+   elif npcId == 30621 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 and st.getQuestItemsCount(CLAY_DOUGH_ID) == 0 and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) == 0 and st.getQuestItemsCount(NIKOLAS_LIST_ID) == 0 and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) == 0 :
         htmltext = "30621-01.htm"
-   elif npcId == 30621 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(CLAY_DOUGH_ID) and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) == 0 and st.getQuestItemsCount(NIKOLAS_LIST_ID) == 0 and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) == 0 :
+   elif npcId == 30621 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(CLAY_DOUGH_ID) and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) == 0 and st.getQuestItemsCount(NIKOLAS_LIST_ID) == 0 and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) == 0 :
         htmltext = "30621-05.htm"
-   elif npcId == 30621 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) and st.getQuestItemsCount(CLAY_DOUGH_ID) == 0 and st.getQuestItemsCount(NIKOLAS_LIST_ID) == 0 and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) == 0 :
+   elif npcId == 30621 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) and st.getQuestItemsCount(CLAY_DOUGH_ID) == 0 and st.getQuestItemsCount(NIKOLAS_LIST_ID) == 0 and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) == 0 :
         htmltext = "30621-06.htm"
         st.giveItems(NIKOLAS_LIST_ID,1)
         st.takeItems(PATTERN_OF_KEYHOLE_ID,1)
         st.giveItems(RP_TITAN_KEY_ID,1)
         st.takeItems(PARMANS_LETTER_ID,1)
-   elif npcId == 30621 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(NIKOLAS_LIST_ID) and st.getQuestItemsCount(CLAY_DOUGH_ID) == 0 and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) == 0 and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) == 0 and st.getQuestItemsCount(KEY_OF_TITAN_ID) == 0 :
+   elif npcId == 30621 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(NIKOLAS_LIST_ID) and st.getQuestItemsCount(CLAY_DOUGH_ID) == 0 and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) == 0 and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) == 0 and st.getQuestItemsCount(KEY_OF_TITAN_ID) == 0 :
         htmltext = "30621-07.htm"
-   elif npcId == 30621 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(NIKOLAS_LIST_ID) and st.getQuestItemsCount(KEY_OF_TITAN_ID) and st.getQuestItemsCount(CLAY_DOUGH_ID) == 0 and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) == 0 and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) == 0 :
+   elif npcId == 30621 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(NIKOLAS_LIST_ID) and st.getQuestItemsCount(KEY_OF_TITAN_ID) and st.getQuestItemsCount(CLAY_DOUGH_ID) == 0 and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) == 0 and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) == 0 :
         htmltext = "30621-08.htm"
-   elif npcId == 30621 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) and st.getQuestItemsCount(CLAY_DOUGH_ID) == 0 and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) == 0 and st.getQuestItemsCount(NIKOLAS_LIST_ID) == 0 :
+   elif npcId == 30621 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) and st.getQuestItemsCount(CLAY_DOUGH_ID) == 0 and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) == 0 and st.getQuestItemsCount(NIKOLAS_LIST_ID) == 0 :
         htmltext = "30621-09.htm"
-   elif npcId == 30622 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(CLAY_DOUGH_ID) and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID)==0 :
+   elif npcId == 30622 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(CLAY_DOUGH_ID) and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID)==0 :
         htmltext = "30622-01.htm"
-   elif npcId == 30622 and int(st.get("cond"))>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(KEY_OF_TITAN_ID) and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID)==0 :
+   elif npcId == 30622 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(KEY_OF_TITAN_ID) and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID)==0 :
         htmltext = "30622-03.htm"
    return htmltext
 
@@ -388,31 +388,31 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 20223 :
     st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :
+    if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :
      if st.getQuestItemsCount(MANDRAGORA_PETAL_ID)<20 and st.getRandom(100)<30 :
       st.giveItems(MANDRAGORA_PETAL_ID,1)
       st.playSound("ItemSound.quest_middle")
    elif npcId == 20154 :
     st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :
+    if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :
      if st.getQuestItemsCount(MANDRAGORA_PETAL_ID)<20 and st.getRandom(100)<60 :
       st.giveItems(MANDRAGORA_PETAL_ID,1)
       st.playSound("ItemSound.quest_middle")
    elif npcId == 20155 :
     st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :
+    if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :
      if st.getQuestItemsCount(MANDRAGORA_PETAL_ID)<20 and st.getRandom(100)<80 :
       st.giveItems(MANDRAGORA_PETAL_ID,1)
       st.playSound("ItemSound.quest_middle")
    elif npcId == 20156 :
     st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :
+    if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :
      if st.getQuestItemsCount(MANDRAGORA_PETAL_ID)<20 :
       st.giveItems(MANDRAGORA_PETAL_ID,1)
       st.playSound("ItemSound.quest_middle")
    elif npcId == 20228 :
     st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1 and st.getQuestItemsCount(CRIMSON_MOSS_ID)<10 :
+    if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1 and st.getQuestItemsCount(CRIMSON_MOSS_ID)<10 :
      if st.getQuestItemsCount(CRIMSON_MOSS_ID) == 9 :
       st.giveItems(CRIMSON_MOSS_ID,1)
       st.playSound("ItemSound.quest_middle")
@@ -421,37 +421,37 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_itemget")
    elif npcId == 20157 :
     st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(STAKATO_SHELL_ID) <20  :
+    if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(STAKATO_SHELL_ID) <20  :
      if st.getRandom(100)<20 :
       st.giveItems(STAKATO_SHELL_ID,1)
       st.playSound("ItemSound.quest_middle")
    elif npcId == 20230 :
     st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(STAKATO_SHELL_ID) <20  :
+    if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(STAKATO_SHELL_ID) <20  :
      if st.getRandom(100)<30 :
       st.giveItems(STAKATO_SHELL_ID,1)
       st.playSound("ItemSound.quest_middle")
    elif npcId == 20232 :
     st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(STAKATO_SHELL_ID) <20  :
+    if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(STAKATO_SHELL_ID) <20  :
      if st.getRandom(100)<50 :
       st.giveItems(STAKATO_SHELL_ID,1)
       st.playSound("ItemSound.quest_middle")
    elif npcId == 20234 :
     st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(STAKATO_SHELL_ID) <20 :
+    if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(STAKATO_SHELL_ID) <20 :
      if st.getRandom(100)<60 :
       st.giveItems(STAKATO_SHELL_ID,1)
       st.playSound("ItemSound.quest_middle")
    elif npcId == 20231 :
     st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(INPICIO_SAC_ID) <10  :
+    if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(INPICIO_SAC_ID) <10  :
      if st.getRandom(100)<50 :
       st.giveItems(INPICIO_SAC_ID,1)
       st.playSound("ItemSound.quest_middle")
    elif npcId == 20233 :
     st.set("id","0")
-    if int(st.get("cond")) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(SPIDER_THORN_ID) <10  :
+    if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(SPIDER_THORN_ID) <10  :
      if st.getRandom(100)<50 :
       st.giveItems(SPIDER_THORN_ID,1)
       st.playSound("ItemSound.quest_middle")

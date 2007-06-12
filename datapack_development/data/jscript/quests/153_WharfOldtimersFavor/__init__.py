@@ -53,8 +53,8 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30041 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-        if int(st.get("cond"))<15 :
+   if npcId == 30041 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+        if st.getInt("cond")<15 :
           if player.getLevel() >= 2 :
             htmltext = "30041-03.htm"
             return htmltext
@@ -64,34 +64,34 @@ class Quest (JQuest) :
         else:
           htmltext = "30041-02.htm"
           st.exitQuest(1)
-   elif npcId == 30041 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30041 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 30041 and int(st.get("cond"))!=0 and (st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0)==0 :
+   elif npcId == 30041 and st.getInt("cond")!=0 and (st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0)==0 :
         htmltext = "30041-05.htm"
    if id == STARTED :     
-       if npcId == 30002 and int(st.get("cond"))!=0 and st.getQuestItemsCount(HEAVY_WOOD_BOX_ID)!=0 :
+       if npcId == 30002 and st.getInt("cond")!=0 and st.getQuestItemsCount(HEAVY_WOOD_BOX_ID)!=0 :
             st.takeItems(HEAVY_WOOD_BOX_ID,st.getQuestItemsCount(HEAVY_WOOD_BOX_ID))
             if st.getQuestItemsCount(JACKSONS_RECEIPT_ID) == 0 :
               st.giveItems(JACKSONS_RECEIPT_ID,1)
             htmltext = "30002-01.htm"
-       elif npcId == 30002 and int(st.get("cond"))!=0 and st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 :
+       elif npcId == 30002 and st.getInt("cond")!=0 and st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 :
             htmltext = "30002-02.htm"
-       elif npcId == 30003 and int(st.get("cond"))!=0 and st.getQuestItemsCount(CLOTH_BUNDLE_ID)!=0 :
+       elif npcId == 30003 and st.getInt("cond")!=0 and st.getQuestItemsCount(CLOTH_BUNDLE_ID)!=0 :
             st.takeItems(CLOTH_BUNDLE_ID,st.getQuestItemsCount(CLOTH_BUNDLE_ID))
             if st.getQuestItemsCount(SILVIAS_RECEIPT_ID) == 0 :
               st.giveItems(SILVIAS_RECEIPT_ID,1)
               st.giveItems(LESSER_HEALING_POTION_ID,int(Config.RATE_QUESTS_REWARD))
             htmltext = "30003-01.htm"
-       elif npcId == 30003 and int(st.get("cond"))!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 :
+       elif npcId == 30003 and st.getInt("cond")!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 :
             htmltext = "30003-02.htm"
-       elif npcId == 30054 and int(st.get("cond"))!=0 and st.getQuestItemsCount(CLAY_POT_ID)!=0 :
+       elif npcId == 30054 and st.getInt("cond")!=0 and st.getQuestItemsCount(CLAY_POT_ID)!=0 :
             st.takeItems(CLAY_POT_ID,st.getQuestItemsCount(CLAY_POT_ID))
             if st.getQuestItemsCount(RANTS_RECEIPT_ID) == 0 :
               st.giveItems(RANTS_RECEIPT_ID,1)
             htmltext = "30054-01.htm"
-       elif npcId == 30054 and int(st.get("cond"))!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0 :
+       elif npcId == 30054 and st.getInt("cond")!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0 :
             htmltext = "30054-02.htm"
-       elif npcId == 30041 and int(st.get("cond"))!=0 and (st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0)!=0 and int(st.get("onlyone"))==0 :
+       elif npcId == 30041 and st.getInt("cond")!=0 and (st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0)!=0 and int(st.get("onlyone"))==0 :
             if int(st.get("id")) != 153 :
               st.set("id","153")
               st.set("cond","0")

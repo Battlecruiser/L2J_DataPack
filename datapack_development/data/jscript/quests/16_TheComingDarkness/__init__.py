@@ -68,7 +68,7 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
-   if npcId == HIERARCH and int(st.get("cond")) == 0 :
+   if npcId == HIERARCH and st.getInt("cond") == 0 :
      if player.getLevel() >= 62 :
        htmltext = "31517-0.htm"
      if id == COMPLETED :

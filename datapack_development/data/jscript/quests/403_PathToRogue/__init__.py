@@ -91,9 +91,9 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30379 and int(st.get("cond"))==0 :
+   if npcId == 30379 and st.getInt("cond")==0 :
      htmltext = "30379-01.htm"
-   elif npcId == 30379 and int(st.get("cond")) :
+   elif npcId == 30379 and st.getInt("cond") :
         if st.getQuestItemsCount(HORSESHOE_OF_LIGHT) == 0 and HaveAllStolenItems(st) :
           htmltext = "30379-09.htm"
           st.giveItems(BEZIQUES_RECOMMENDATION,1)
@@ -117,9 +117,9 @@ class Quest (JQuest) :
           htmltext = "30379-10.htm"
         elif st.getQuestItemsCount(WANTED_BILL) :
           htmltext = "30379-11.htm"
-   elif npcId == 30425 and int(st.get("cond")) and st.getQuestItemsCount(BEZIQUES_LETTER)>0 :
+   elif npcId == 30425 and st.getInt("cond") and st.getQuestItemsCount(BEZIQUES_LETTER)>0 :
         htmltext = "30425-01.htm"
-   elif npcId == 30425 and int(st.get("cond")) and st.getQuestItemsCount(HORSESHOE_OF_LIGHT)==0 and st.getQuestItemsCount(BEZIQUES_LETTER)==0 :
+   elif npcId == 30425 and st.getInt("cond") and st.getQuestItemsCount(HORSESHOE_OF_LIGHT)==0 and st.getQuestItemsCount(BEZIQUES_LETTER)==0 :
         if st.getQuestItemsCount(SPATOIS_BONES)<10 :
           htmltext = "30425-06.htm"
         elif st.getQuestItemsCount(WANTED_BILL) :
@@ -129,7 +129,7 @@ class Quest (JQuest) :
           st.takeItems(SPATOIS_BONES,st.getQuestItemsCount(SPATOIS_BONES))
           st.giveItems(HORSESHOE_OF_LIGHT,1)
           st.set("cond","4")
-   elif npcId == 30425 and int(st.get("cond")) and st.getQuestItemsCount(HORSESHOE_OF_LIGHT)>0 :
+   elif npcId == 30425 and st.getInt("cond") and st.getQuestItemsCount(HORSESHOE_OF_LIGHT)>0 :
         htmltext = "30425-08.htm"
    return htmltext
 
@@ -142,7 +142,7 @@ class Quest (JQuest) :
    if st.getItemEquipped(7) == NETIS_BOW or st.getItemEquipped(7) == NETIS_DAGGER :
      if npcId in (20035, 20042, 20045, 20051, 20054, 20060) :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(SPATOIS_BONES)<10 and st.getRandom(10)<DROP_CHANCE[npcId] :
+        if st.getInt("cond") and st.getQuestItemsCount(SPATOIS_BONES)<10 and st.getRandom(10)<DROP_CHANCE[npcId] :
             st.giveItems(SPATOIS_BONES,1)
             if st.getQuestItemsCount(SPATOIS_BONES) == 10 :
               st.playSound("ItemSound.quest_middle")
@@ -151,7 +151,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
      elif npcId == 27038 :
         st.set("id","0")
-        if int(st.get("cond")) and st.getQuestItemsCount(WANTED_BILL)>0 :
+        if st.getInt("cond") and st.getQuestItemsCount(WANTED_BILL)>0 :
             n = st.getRandom(4)
             if st.getQuestItemsCount(STOLEN_ITEM[n]) == 0 :
                 st.giveItems(STOLEN_ITEM[n],1)

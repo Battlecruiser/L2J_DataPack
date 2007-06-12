@@ -58,7 +58,7 @@ class Quest (JQuest) :
    if st.getState() != STARTED : return
 
    npcId = npc.getNpcId()
-   if int(st.get("cond")) == 1 :
+   if st.getInt("cond") == 1 :
       st.giveItems(NIGHTMARE_CRYSTAL,1)
       st.playSound("ItemSound.quest_middle")
       st.set("cond","2")

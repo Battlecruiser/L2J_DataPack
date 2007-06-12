@@ -33,7 +33,7 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
-   if npcId == 30571 and int(st.get("cond"))==0 :
+   if npcId == 30571 and st.getInt("cond")==0 :
       if st.getPlayer().getRace().ordinal() != 3 :
         htmltext = "30571-00.htm"
         st.exitQuest(1)
@@ -42,7 +42,7 @@ class Quest (JQuest) :
         st.exitQuest(1)
       else:
          htmltext = "30571-02.htm"
-   elif npcId == 30571 and int(st.get("cond")) :
+   elif npcId == 30571 and st.getInt("cond") :
       if st.getQuestItemsCount(KASHA_CRYSTAL_ID) == 0 :
         htmltext = "30571-04.htm"
       else:
@@ -62,7 +62,7 @@ class Quest (JQuest) :
    
    npcId = npc.getNpcId()
    if npcId == 20479 :
-      if int(st.get("cond"))==1 and st.getQuestItemsCount(KASHA_CRYSTAL_ID) == 0 :
+      if st.getInt("cond")==1 and st.getQuestItemsCount(KASHA_CRYSTAL_ID) == 0 :
         count = st.getQuestItemsCount(KASHA_PARASITE_ID)
         random = st.getRandom(100)
         if (count >= 70 and random < 90) or \
@@ -76,7 +76,7 @@ class Quest (JQuest) :
                 st.giveItems(KASHA_PARASITE_ID,1)
                 st.playSound("ItemSound.quest_itemget")
    elif npcId == 27044 :
-      if int(st.get("cond"))==1 and st.getQuestItemsCount(KASHA_CRYSTAL_ID) == 0 :
+      if st.getInt("cond")==1 and st.getQuestItemsCount(KASHA_CRYSTAL_ID) == 0 :
         st.giveItems(KASHA_CRYSTAL_ID,1)
         st.playSound("ItemSound.quest_middle")
         st.set("cond","2")

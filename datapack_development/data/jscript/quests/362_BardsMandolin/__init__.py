@@ -34,7 +34,7 @@ class Quest (JQuest) :
    if npcId != 30957 and id != STARTED : return htmltext
    if id == CREATED :
      st.set("cond","0")
-   cond = int(st.get("cond"))
+   cond = st.getInt("cond")
    if npcId == 30957 and cond == 0 :
         htmltext = "30957_1.htm"
    elif npcId == 30837 and cond == 1 :

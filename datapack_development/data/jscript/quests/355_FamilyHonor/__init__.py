@@ -110,7 +110,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != STARTED : return 
    
-   if int(st.get("cond")) == 1 :
+   if st.getInt("cond") == 1 :
      chance_1 = st.getRandom(100)
      chance_2 = st.getRandom(100)
      if chance_1 < CHANCE_FOR_GALFREDOS_BUST :

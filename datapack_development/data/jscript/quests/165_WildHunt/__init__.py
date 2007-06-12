@@ -38,8 +38,8 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30348 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-      if int(st.get("cond"))<15 :
+   if npcId == 30348 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+      if st.getInt("cond")<15 :
         if player.getRace().ordinal() != 2 :
           htmltext = "30348-00.htm"
         elif player.getLevel() >= 3 :
@@ -51,9 +51,9 @@ class Quest (JQuest) :
       else:
         htmltext = "30348-01.htm"
         st.exitQuest(1)
-   elif npcId == 30348 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30348 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 30348 and int(st.get("cond"))==1 :
+   elif npcId == 30348 and st.getInt("cond")==1 :
       if st.getQuestItemsCount(DARK_BEZOAR_ID)<13 :
         htmltext = "30348-04.htm"
       elif st.getQuestItemsCount(DARK_BEZOAR_ID) >= 13 and int(st.get("onlyone")) == 0 :
@@ -77,7 +77,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 20529 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 :
+        if st.getInt("cond") == 1 :
           if st.getRandom(10)<4 and st.getQuestItemsCount(DARK_BEZOAR_ID)<13 :
             st.giveItems(DARK_BEZOAR_ID,1)
             if st.getQuestItemsCount(DARK_BEZOAR_ID) == 13 :
@@ -86,7 +86,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 20532 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 :
+        if st.getInt("cond") == 1 :
           if st.getRandom(10)<4 and st.getQuestItemsCount(DARK_BEZOAR_ID)<13 :
             st.giveItems(DARK_BEZOAR_ID,1)
             if st.getQuestItemsCount(DARK_BEZOAR_ID) == 13 :
@@ -95,7 +95,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 20536 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 :
+        if st.getInt("cond") == 1 :
           if st.getRandom(10)<4 and st.getQuestItemsCount(DARK_BEZOAR_ID)<13 :
             st.giveItems(DARK_BEZOAR_ID,1)
             if st.getQuestItemsCount(DARK_BEZOAR_ID) == 13 :
@@ -104,7 +104,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 20456 :
         st.set("id","0")
-        if int(st.get("cond")) == 1 :
+        if st.getInt("cond") == 1 :
           if st.getRandom(10)<4 and st.getQuestItemsCount(DARK_BEZOAR_ID)<13 :
             st.giveItems(DARK_BEZOAR_ID,1)
             if st.getQuestItemsCount(DARK_BEZOAR_ID) == 13 :

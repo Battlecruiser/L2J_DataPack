@@ -54,7 +54,7 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
      st.set("cond","0")
-   if int(st.get("cond")) == 0:   
+   if st.getInt("cond") == 0:   
      htmltext = npcId+"-01.htm"
    elif check(st) :
      htmltext = npcId+"-03.htm"

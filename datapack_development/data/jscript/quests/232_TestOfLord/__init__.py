@@ -161,7 +161,7 @@ class Quest (JQuest) :
       for var in STATS[1]:
        st.set(var,"0")
       if npcId == NPC[4]:
-        if int(st.get("cond"))==0:
+        if st.getInt("cond")==0:
           if st.getPlayer().getRace().ordinal() != 3 :
             htmltext = "30565-01.htm"
             st.exitQuest(1)

@@ -85,9 +85,9 @@ class Quest (JQuest) :
    if id == CREATED :
        htmltext = "10.htm"
        st.set("cond","0")
-   elif int(st.get("cond")) == 1 and st.getQuestItemsCount(ANCIENT_SCROLL) == 0 :
+   elif st.getInt("cond") == 1 and st.getQuestItemsCount(ANCIENT_SCROLL) == 0 :
        htmltext = "17.htm"
-   elif int(st.get("cond")) == 1 and st.getQuestItemsCount(ANCIENT_SCROLL):
+   elif st.getInt("cond") == 1 and st.getQuestItemsCount(ANCIENT_SCROLL):
         htmltext = "16.htm"
         numancientscrolls = st.getQuestItemsCount(ANCIENT_SCROLL)
         st.giveItems(5965,numancientscrolls)

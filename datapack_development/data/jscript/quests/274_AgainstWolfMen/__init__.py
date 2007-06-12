@@ -35,7 +35,7 @@ class Quest (JQuest) :
    totems=st.getQuestItemsCount(MARAKU_WOLFMEN_TOTEM)
    if id == CREATED :
      st.set("cond","0")
-   if int(st.get("cond"))==0 :
+   if st.getInt("cond")==0 :
      if st.getPlayer().getRace().ordinal() == 3 :
        if st.getPlayer().getLevel() > 8 :
          if st.getQuestItemsCount(NECKLACE_OF_VALOR) or st.getQuestItemsCount(NECKLACE_OF_COURAGE) :

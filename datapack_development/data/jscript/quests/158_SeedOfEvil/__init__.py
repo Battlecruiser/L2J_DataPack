@@ -37,8 +37,8 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30031 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
-        if int(st.get("cond"))<15 :
+   if npcId == 30031 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+        if st.getInt("cond")<15 :
           if player.getLevel() >= 21 :
             htmltext = "30031-03.htm"
             return htmltext
@@ -48,11 +48,11 @@ class Quest (JQuest) :
         else:
           htmltext = "30031-02.htm"
           st.exitQuest(1)
-   elif npcId == 30031 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30031 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-   elif npcId == 30031 and int(st.get("cond"))!=0 and st.getQuestItemsCount(CLAY_TABLET_ID)==0 :
+   elif npcId == 30031 and st.getInt("cond")!=0 and st.getQuestItemsCount(CLAY_TABLET_ID)==0 :
         htmltext = "30031-05.htm"
-   elif npcId == 30031 and int(st.get("cond"))!=0 and st.getQuestItemsCount(CLAY_TABLET_ID)!=0 and int(st.get("onlyone"))==0 :
+   elif npcId == 30031 and st.getInt("cond")!=0 and st.getQuestItemsCount(CLAY_TABLET_ID)!=0 and int(st.get("onlyone"))==0 :
         if int(st.get("id")) != 158 :
           st.set("id","158")
           st.takeItems(CLAY_TABLET_ID,st.getQuestItemsCount(CLAY_TABLET_ID))
@@ -72,7 +72,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 27016 :
         st.set("id","0")
-        if int(st.get("cond")) != 0 and st.getQuestItemsCount(CLAY_TABLET_ID) == 0 :
+        if st.getInt("cond") != 0 and st.getQuestItemsCount(CLAY_TABLET_ID) == 0 :
           st.giveItems(CLAY_TABLET_ID,1)
           st.playSound("ItemSound.quest_middle")
    return

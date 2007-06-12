@@ -51,7 +51,7 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
-   if npcId == 30017 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30017 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
      if player.getRace().ordinal() != 0 :
         htmltext = "30017-00.htm"
      elif player.getLevel() >= 10 :
@@ -60,12 +60,12 @@ class Quest (JQuest) :
      else:
         htmltext = "30017-06.htm"
         st.exitQuest(1)
-   elif npcId == 30017 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30017 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif id == STARTED : 
-     if npcId == 30017 and int(st.get("cond")) and st.getQuestItemsCount(GALLINS_OAK_WAND_ID)>=1 and not HaveAllQuestItems(st) :
+     if npcId == 30017 and st.getInt("cond") and st.getQuestItemsCount(GALLINS_OAK_WAND_ID)>=1 and not HaveAllQuestItems(st) :
         htmltext = "30017-04.htm"
-     elif npcId == 30017 and int(st.get("cond"))==3 and HaveAllQuestItems(st) :
+     elif npcId == 30017 and st.getInt("cond")==3 and HaveAllQuestItems(st) :
         for mobId in DROPLIST.keys() :
           st.takeItems(DROPLIST[mobId],-1)
         st.giveItems(WAND_OF_ADEPT_ID,1)
@@ -74,13 +74,13 @@ class Quest (JQuest) :
         st.setState(COMPLETED)
         st.playSound("ItemSound.quest_finish")
         st.set("onlyone","1")
-     elif npcId == 30045 and int(st.get("cond")) :
+     elif npcId == 30045 and st.getInt("cond") :
         htmltext = "30045-01.htm"
         st.set("cond","2")
-     elif npcId == 30043 and int(st.get("cond")) :
+     elif npcId == 30043 and st.getInt("cond") :
         htmltext = "30043-01.htm"
         st.set("cond","2")
-     elif npcId == 30041 and int(st.get("cond")) :
+     elif npcId == 30041 and st.getInt("cond") :
         htmltext = "30041-01.htm"
         st.set("cond","2")
    return htmltext
@@ -91,7 +91,7 @@ class Quest (JQuest) :
    if st.getState() != STARTED : return
    
    npcId = npc.getNpcId()
-   if int(st.get("cond")) >= 1 and st.getItemEquipped(7) == GALLINS_OAK_WAND_ID and not st.getQuestItemsCount(DROPLIST[npcId]) : # (7) means weapon slot
+   if st.getInt("cond") >= 1 and st.getItemEquipped(7) == GALLINS_OAK_WAND_ID and not st.getQuestItemsCount(DROPLIST[npcId]) : # (7) means weapon slot
      st.takeItems(GALLINS_OAK_WAND_ID,1)
      st.giveItems(DROPLIST[npcId],1)
      if HaveAllQuestItems(st) :

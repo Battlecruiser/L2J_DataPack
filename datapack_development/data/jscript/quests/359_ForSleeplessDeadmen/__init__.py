@@ -64,7 +64,7 @@ class Quest (JQuest) :
       else :
          htmltext = "30857-2.htm"
    elif id == STARTED :
-      cond=int(st.get("cond"))
+      cond=st.getInt("cond")
       if cond == 3 :
          htmltext = "30857-3.htm"
       elif cond == 2 and st.getQuestItemsCount(REMAINS) >= REQUIRED :

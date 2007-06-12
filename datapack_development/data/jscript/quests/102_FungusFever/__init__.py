@@ -54,7 +54,7 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
-   if npcId == 30284 and int(st.get("cond"))==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30284 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
       if player.getRace().ordinal() != 1 :
          htmltext = "30284-00.htm"
          st.exitQuest(1)
@@ -64,23 +64,23 @@ class Quest (JQuest) :
       else:
          htmltext = "30284-08.htm"
          st.exitQuest(1)
-   elif npcId == 30284 and int(st.get("cond"))==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30284 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif id == STARTED :
-      if npcId == 30284 and int(st.get("cond"))==1 and st.getQuestItemsCount(ALBERRYUS_LETTER_ID)==1 :
+      if npcId == 30284 and st.getInt("cond")==1 and st.getQuestItemsCount(ALBERRYUS_LETTER_ID)==1 :
            htmltext = "30284-03.htm"
-      elif npcId == 30284 and int(st.get("cond"))==1 and st.getQuestItemsCount(EVERGREEN_AMULET_ID)==1 :
+      elif npcId == 30284 and st.getInt("cond")==1 and st.getQuestItemsCount(EVERGREEN_AMULET_ID)==1 :
            htmltext = "30284-09.htm"
-      elif npcId == 30156 and int(st.get("cond"))==1 and st.getQuestItemsCount(ALBERRYUS_LETTER_ID)==1 :
+      elif npcId == 30156 and st.getInt("cond")==1 and st.getQuestItemsCount(ALBERRYUS_LETTER_ID)==1 :
            st.giveItems(EVERGREEN_AMULET_ID,1)
            st.takeItems(ALBERRYUS_LETTER_ID,1)
            st.set("cond","2")
            htmltext = "30156-03.htm"
-      elif npcId == 30156 and int(st.get("cond"))==2 and st.getQuestItemsCount(EVERGREEN_AMULET_ID)>0 and st.getQuestItemsCount(DRYAD_TEARS_ID)<10 :
+      elif npcId == 30156 and st.getInt("cond")==2 and st.getQuestItemsCount(EVERGREEN_AMULET_ID)>0 and st.getQuestItemsCount(DRYAD_TEARS_ID)<10 :
            htmltext = "30156-04.htm"
-      elif npcId == 30156 and int(st.get("cond"))==5 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)>0 :
+      elif npcId == 30156 and st.getInt("cond")==5 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)>0 :
            htmltext = "30156-07.htm"
-      elif npcId == 30156 and int(st.get("cond"))==3 and st.getQuestItemsCount(EVERGREEN_AMULET_ID)>0 and st.getQuestItemsCount(DRYAD_TEARS_ID)>=10 :
+      elif npcId == 30156 and st.getInt("cond")==3 and st.getQuestItemsCount(EVERGREEN_AMULET_ID)>0 and st.getQuestItemsCount(DRYAD_TEARS_ID)>=10 :
            st.takeItems(EVERGREEN_AMULET_ID,1)
            st.takeItems(DRYAD_TEARS_ID,-1)
            st.giveItems(COBS_MEDICINE1_ID,1)
@@ -90,32 +90,32 @@ class Quest (JQuest) :
            st.giveItems(COBS_MEDICINE5_ID,1)
            st.set("cond","4")
            htmltext = "30156-05.htm"
-      elif npcId == 30156 and int(st.get("cond"))==4 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==0 and (st.getQuestItemsCount(COBS_MEDICINE1_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE2_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE3_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE4_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE5_ID)==1) :
+      elif npcId == 30156 and st.getInt("cond")==4 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==0 and (st.getQuestItemsCount(COBS_MEDICINE1_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE2_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE3_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE4_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE5_ID)==1) :
            htmltext = "30156-06.htm"
-      elif npcId == 30284 and int(st.get("cond"))==4 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==0 and st.getQuestItemsCount(COBS_MEDICINE1_ID)==1 :
+      elif npcId == 30284 and st.getInt("cond")==4 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==0 and st.getQuestItemsCount(COBS_MEDICINE1_ID)==1 :
            st.takeItems(COBS_MEDICINE1_ID,1)
            st.giveItems(ALBERRYUS_LIST_ID,1)
            st.set("cond","5")
            htmltext = "30284-04.htm"
-      elif npcId == 30284 and int(st.get("cond"))==5 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==1 and (st.getQuestItemsCount(COBS_MEDICINE1_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE2_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE3_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE4_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE5_ID)==1) :
+      elif npcId == 30284 and st.getInt("cond")==5 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==1 and (st.getQuestItemsCount(COBS_MEDICINE1_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE2_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE3_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE4_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE5_ID)==1) :
            htmltext = "30284-05.htm"
-      elif npcId == 30217 and int(st.get("cond"))==5 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==1 and st.getQuestItemsCount(COBS_MEDICINE2_ID)==1 :
+      elif npcId == 30217 and st.getInt("cond")==5 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==1 and st.getQuestItemsCount(COBS_MEDICINE2_ID)==1 :
            st.takeItems(COBS_MEDICINE2_ID,1)
            check(st)
            htmltext = "30217-01.htm"
-      elif npcId == 30219 and int(st.get("cond"))==5 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==1 and st.getQuestItemsCount(COBS_MEDICINE3_ID)==1 :
+      elif npcId == 30219 and st.getInt("cond")==5 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==1 and st.getQuestItemsCount(COBS_MEDICINE3_ID)==1 :
            st.takeItems(COBS_MEDICINE3_ID,1)
            check(st)
            htmltext = "30219-01.htm"
-      elif npcId == 30221 and int(st.get("cond"))==5 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==1 and st.getQuestItemsCount(COBS_MEDICINE4_ID)==1 :
+      elif npcId == 30221 and st.getInt("cond")==5 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==1 and st.getQuestItemsCount(COBS_MEDICINE4_ID)==1 :
            st.takeItems(COBS_MEDICINE4_ID,1)
            check(st)
            htmltext = "30221-01.htm"
-      elif npcId == 30285 and int(st.get("cond"))==5 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==1 and st.getQuestItemsCount(COBS_MEDICINE5_ID)==1 :
+      elif npcId == 30285 and st.getInt("cond")==5 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==1 and st.getQuestItemsCount(COBS_MEDICINE5_ID)==1 :
            st.takeItems(COBS_MEDICINE5_ID,1)
            check(st)
            htmltext = "30285-01.htm"
-      elif npcId == 30284 and int(st.get("cond"))==6 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==1 :
+      elif npcId == 30284 and st.getInt("cond")==6 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==1 :
            st.takeItems(ALBERRYUS_LIST_ID,1)
            st.set("cond","0")
            st.setState(COMPLETED)

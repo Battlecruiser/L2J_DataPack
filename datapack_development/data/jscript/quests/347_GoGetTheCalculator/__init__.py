@@ -38,7 +38,7 @@ class Quest (JQuest) :
     elif event == "30533_1" :
         if st.getQuestItemsCount(ADENA)>100 :
             st.takeItems(ADENA, 100)
-            if int(st.get("cond"))== 1:
+            if st.getInt("cond")== 1:
                 st.set("cond","2")
             else :
                 st.set("cond","4")
@@ -47,7 +47,7 @@ class Quest (JQuest) :
             htmltext = str(BALANKI)+"-03.htm"
     elif event == "30532_1" :
         htmltext = str(SPIRON)+"-02a.htm"
-        if int(st.get("cond"))== 1:
+        if st.getInt("cond")== 1:
             st.set("cond","3")
         else :
             st.set("cond","4")
@@ -87,24 +87,24 @@ class Quest (JQuest) :
         st.set("id","0")
         st.set("cond","0")
         htmltext = str(BRUNON)+"-01.htm"
-    elif npcId == BRUNON and int(st.get("cond"))>0 and st.getQuestItemsCount(CALCULATOR_Q)==0 :
+    elif npcId == BRUNON and st.getInt("cond")>0 and st.getQuestItemsCount(CALCULATOR_Q)==0 :
         htmltext = str(BRUNON)+"-03.htm"
-    elif npcId == BALANKI and (int(st.get("cond"))==1 or int(st.get("cond"))==3):
+    elif npcId == BALANKI and (st.getInt("cond")==1 or st.getInt("cond")==3):
         htmltext = str(BALANKI)+"-01.htm"
-    elif npcId == SPIRON and (int(st.get("cond"))==1 or int(st.get("cond"))==2) :
+    elif npcId == SPIRON and (st.getInt("cond")==1 or st.getInt("cond")==2) :
         htmltext = str(SPIRON)+"-01.htm"
-    elif npcId == SILVERA and int(st.get("cond"))==4 :
+    elif npcId == SILVERA and st.getInt("cond")==4 :
         st.set("cond","5")
         htmltext = str(SILVERA)+"-01.htm"
-    elif npcId == SILVERA and int(st.get("cond"))==5 and st.getQuestItemsCount(GEMSTONE_BEAST_CRYSTAL)<10 :
+    elif npcId == SILVERA and st.getInt("cond")==5 and st.getQuestItemsCount(GEMSTONE_BEAST_CRYSTAL)<10 :
         htmltext = str(SILVERA)+"-02.htm"
-    elif npcId == SILVERA and int(st.get("cond"))==5 and st.getQuestItemsCount(GEMSTONE_BEAST_CRYSTAL)==10 :
+    elif npcId == SILVERA and st.getInt("cond")==5 and st.getQuestItemsCount(GEMSTONE_BEAST_CRYSTAL)==10 :
         htmltext = str(SILVERA)+"-03.htm"
         st.takeItems(GEMSTONE_BEAST_CRYSTAL,10)
         st.giveItems(CALCULATOR_Q,1)
         st.playSound("ItemSound.quest_itemget")
         st.set("cond","6")
-    elif npcId == BRUNON and int(st.get("cond"))==6 and st.getQuestItemsCount(CALCULATOR_Q)==1 :
+    elif npcId == BRUNON and st.getInt("cond")==6 and st.getQuestItemsCount(CALCULATOR_Q)==1 :
         htmltext = str(BRUNON)+"-04.htm"
     return htmltext
 
@@ -114,7 +114,7 @@ class Quest (JQuest) :
    if st.getState() != STARTED : return 
    
    npcId = npc.getNpcId()
-   if npcId == GEMSTONE_BEAST and int(st.get("cond"))==5 and st.getRandom(2)==1 and st.getQuestItemsCount(GEMSTONE_BEAST_CRYSTAL)<10 :
+   if npcId == GEMSTONE_BEAST and st.getInt("cond")==5 and st.getRandom(2)==1 and st.getQuestItemsCount(GEMSTONE_BEAST_CRYSTAL)<10 :
         st.giveItems(GEMSTONE_BEAST_CRYSTAL,1)
         if st.getQuestItemsCount(GEMSTONE_BEAST_CRYSTAL) == 10 :
             st.playSound("ItemSound.quest_middle")

@@ -31,7 +31,7 @@ class Quest (JQuest) :
    if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
-   if int(st.get("cond"))==0 :
+   if st.getInt("cond")==0 :
      if st.getPlayer().getRace().ordinal() != 2 :
        htmltext = "30359-00.htm"
        st.exitQuest(1)

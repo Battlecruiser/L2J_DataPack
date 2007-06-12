@@ -49,7 +49,7 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
      st.set("ok","0")
-   cond=int(st.get("cond"))
+   cond=st.getInt("cond")
    if npcId == 30959 :
      if cond == 0 :
         htmltext = "30959-01.htm"

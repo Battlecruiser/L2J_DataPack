@@ -115,16 +115,16 @@ class Quest (JQuest) :
    if npcId != 30469 and id != STARTED : return htmltext
    if id == CREATED :
      st.set("cond","0")
-   if npcId == 30469 and int(st.get("cond"))==0 :
+   if npcId == 30469 and st.getInt("cond")==0 :
       if st.getPlayer().getLevel() >= 24 :
          htmltext = "30469-02.htm"
          return htmltext
       else:
          htmltext = "30469-01.htm"
          st.exitQuest(1)
-   elif npcId == 30469 and int(st.get("cond")) and has_list(st) and ingredients_count(st) < 5 :
+   elif npcId == 30469 and st.getInt("cond") and has_list(st) and ingredients_count(st) < 5 :
         htmltext = "30469-04.htm"
-   elif npcId == 30469 and int(st.get("cond")) and has_list(st) and ingredients_count(st) >= 5 :
+   elif npcId == 30469 and st.getInt("cond") and has_list(st) and ingredients_count(st) >= 5 :
           if special_ingredients(st) == 0 :
             if st.getRandom(10)<1 :
               htmltext = "30469-05t2.htm"
@@ -163,9 +163,9 @@ class Quest (JQuest) :
           st.takeItems(GREEN_MOSS_BUNDLE_ID,1)
           st.takeItems(BROWN_MOSS_BUNDLE_ID,1)
           st.takeItems(MONSTER_EYE_MEAT_ID,1)
-   elif npcId == 30469 and int(st.get("cond")) and ingredients_count(st) == 0 and not has_list(st) and has_dish(st) and not has_review(st) :
+   elif npcId == 30469 and st.getInt("cond") and ingredients_count(st) == 0 and not has_list(st) and has_dish(st) and not has_review(st) :
         htmltext = "30469-06.htm"
-   elif npcId == 30469 and int(st.get("cond")) and ingredients_count(st) == 0 and not has_list(st) and not has_dish(st) and has_review(st) :
+   elif npcId == 30469 and st.getInt("cond") and ingredients_count(st) == 0 and not has_list(st) and not has_dish(st) and has_review(st) :
         if st.getQuestItemsCount(MIRIENS_REVIEW1_ID) :
           htmltext = "30469-06t1.htm"
           st.takeItems(MIRIENS_REVIEW1_ID,1)
@@ -196,9 +196,9 @@ class Quest (JQuest) :
           st.addExpAndSp(12000,0)
         st.playSound("ItemSound.quest_finish")
         st.exitQuest(1)
-   elif npcId == 30461 and int(st.get("cond")) and has_list(st) :
+   elif npcId == 30461 and st.getInt("cond") and has_list(st) :
         htmltext = "30461-01.htm"
-   elif npcId == 30461 and int(st.get("cond")) and ingredients_count(st) == 0 and not has_list(st) and has_dish(st) and not has_review(st) :
+   elif npcId == 30461 and st.getInt("cond") and ingredients_count(st) == 0 and not has_list(st) and has_dish(st) and not has_review(st) :
         if st.getQuestItemsCount(JONAS_STEAK_DISH1_ID) :
           htmltext = "30461-02t1.htm"
           st.takeItems(JONAS_STEAK_DISH1_ID,1)
@@ -219,76 +219,76 @@ class Quest (JQuest) :
           htmltext = "30461-02t5.htm"
           st.takeItems(JONAS_STEAK_DISH5_ID,1)
           st.giveItems(MIRIENS_REVIEW5_ID,1)
-   elif npcId == 30461 and int(st.get("cond")) and ingredients_count(st) == 0 and not has_list(st) and not has_dish(st) and has_review(st) :
+   elif npcId == 30461 and st.getInt("cond") and ingredients_count(st) == 0 and not has_list(st) and not has_dish(st) and has_review(st) :
         htmltext = "30461-04.htm"
-   elif npcId == 30062 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and not st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID)==0) :
+   elif npcId == 30062 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and not st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID)==0) :
         htmltext = "30062-01.htm"
         st.giveItems(SONIAS_BOTANYBOOK_ID,1)
-   elif npcId == 30062 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_ROOT_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_ROOT_ID))<40 and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID)==0) :
+   elif npcId == 30062 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_ROOT_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_ROOT_ID))<40 and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID)==0) :
         htmltext = "30062-02.htm"
-   elif npcId == 30062 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_ROOT_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_ROOT_ID))>=40 and st.getQuestItemsCount(WHITE_MANDRAGORA_ROOT_ID)<40 and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID)==0) :
+   elif npcId == 30062 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_ROOT_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_ROOT_ID))>=40 and st.getQuestItemsCount(WHITE_MANDRAGORA_ROOT_ID)<40 and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID)==0) :
         htmltext = "30062-03.htm"
-   elif npcId == 30062 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_ROOT_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_ROOT_ID))>=40 and st.getQuestItemsCount(WHITE_MANDRAGORA_ROOT_ID)>=40 and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID)==0) :
+   elif npcId == 30062 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_ROOT_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_ROOT_ID))>=40 and st.getQuestItemsCount(WHITE_MANDRAGORA_ROOT_ID)>=40 and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID)==0) :
         htmltext = "30062-06.htm"
         st.takeItems(SONIAS_BOTANYBOOK_ID,1)
         st.takeItems(RED_MANDRAGORA_ROOT_ID,-1)
         st.takeItems(WHITE_MANDRAGORA_ROOT_ID,-1)
         st.giveItems(WHITE_MANDRAGORA_SAP_ID,1)
-   elif npcId == 30062 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID)==0 and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID)>0) :
+   elif npcId == 30062 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID)==0 and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID)>0) :
         htmltext = "30062-07.htm"
-   elif npcId == 30073 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(JAYCUBS_INSECTBOOK_ID)==0 and (st.getQuestItemsCount(HONEY_ID)+st.getQuestItemsCount(GOLDEN_HONEY_ID)==0) :
+   elif npcId == 30073 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(JAYCUBS_INSECTBOOK_ID)==0 and (st.getQuestItemsCount(HONEY_ID)+st.getQuestItemsCount(GOLDEN_HONEY_ID)==0) :
         htmltext = "30073-01.htm"
         st.giveItems(JAYCUBS_INSECTBOOK_ID,1)
-   elif npcId == 30073 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(JAYCUBS_INSECTBOOK_ID) and st.getQuestItemsCount(NECTAR_ID)<20 :
+   elif npcId == 30073 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(JAYCUBS_INSECTBOOK_ID) and st.getQuestItemsCount(NECTAR_ID)<20 :
         htmltext = "30073-02.htm"
-   elif npcId == 30073 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(JAYCUBS_INSECTBOOK_ID) and st.getQuestItemsCount(NECTAR_ID)>=20 and st.getQuestItemsCount(ROYAL_JELLY_ID)<10 :
+   elif npcId == 30073 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(JAYCUBS_INSECTBOOK_ID) and st.getQuestItemsCount(NECTAR_ID)>=20 and st.getQuestItemsCount(ROYAL_JELLY_ID)<10 :
         htmltext = "30073-03.htm"
-   elif npcId == 30073 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(JAYCUBS_INSECTBOOK_ID) and st.getQuestItemsCount(NECTAR_ID)>=20 and st.getQuestItemsCount(ROYAL_JELLY_ID)>=10 :
+   elif npcId == 30073 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(JAYCUBS_INSECTBOOK_ID) and st.getQuestItemsCount(NECTAR_ID)>=20 and st.getQuestItemsCount(ROYAL_JELLY_ID)>=10 :
         htmltext = "30073-06.htm"
         st.takeItems(JAYCUBS_INSECTBOOK_ID,1)
         st.takeItems(NECTAR_ID,-1)
         st.takeItems(ROYAL_JELLY_ID,-1)
         st.giveItems(GOLDEN_HONEY_ID,1)
-   elif npcId == 30073 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(JAYCUBS_INSECTBOOK_ID)==0 and (st.getQuestItemsCount(HONEY_ID)+st.getQuestItemsCount(GOLDEN_HONEY_ID)==1) :
+   elif npcId == 30073 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(JAYCUBS_INSECTBOOK_ID)==0 and (st.getQuestItemsCount(HONEY_ID)+st.getQuestItemsCount(GOLDEN_HONEY_ID)==1) :
         htmltext = "30073-07.htm"
-   elif npcId == 30078 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(PANOS_CONTRACT_ID)==0 and st.getQuestItemsCount(DIONIAN_POTATO_ID)==0 :
+   elif npcId == 30078 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(PANOS_CONTRACT_ID)==0 and st.getQuestItemsCount(DIONIAN_POTATO_ID)==0 :
         htmltext = "30078-01.htm"
         st.giveItems(PANOS_CONTRACT_ID,1)
-   elif npcId == 30078 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(PANOS_CONTRACT_ID) and st.getQuestItemsCount(HOBGOBLIN_AMULET_ID)<30 :
+   elif npcId == 30078 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(PANOS_CONTRACT_ID) and st.getQuestItemsCount(HOBGOBLIN_AMULET_ID)<30 :
         htmltext = "30078-02.htm"
-   elif npcId == 30078 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(PANOS_CONTRACT_ID) and st.getQuestItemsCount(HOBGOBLIN_AMULET_ID)>=30 :
+   elif npcId == 30078 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(PANOS_CONTRACT_ID) and st.getQuestItemsCount(HOBGOBLIN_AMULET_ID)>=30 :
         htmltext = "30078-03.htm"
         st.takeItems(PANOS_CONTRACT_ID,1)
         st.takeItems(HOBGOBLIN_AMULET_ID,-1)
         st.giveItems(DIONIAN_POTATO_ID,1)
-   elif npcId == 30078 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(PANOS_CONTRACT_ID)==0 and st.getQuestItemsCount(DIONIAN_POTATO_ID) :
+   elif npcId == 30078 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(PANOS_CONTRACT_ID)==0 and st.getQuestItemsCount(DIONIAN_POTATO_ID) :
         htmltext = "30078-04.htm"
-   elif npcId == 30067 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(GLYVKAS_BOTANYBOOK_ID)==0 and (st.getQuestItemsCount(GREEN_MOSS_BUNDLE_ID)+st.getQuestItemsCount(BROWN_MOSS_BUNDLE_ID)==0) :
+   elif npcId == 30067 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(GLYVKAS_BOTANYBOOK_ID)==0 and (st.getQuestItemsCount(GREEN_MOSS_BUNDLE_ID)+st.getQuestItemsCount(BROWN_MOSS_BUNDLE_ID)==0) :
         htmltext = "30067-01.htm"
         st.giveItems(GLYVKAS_BOTANYBOOK_ID,1)
-   elif npcId == 30067 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(GLYVKAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(GREEN_MARSH_MOSS_ID)+st.getQuestItemsCount(BROWN_MARSH_MOSS_ID)<20) :
+   elif npcId == 30067 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(GLYVKAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(GREEN_MARSH_MOSS_ID)+st.getQuestItemsCount(BROWN_MARSH_MOSS_ID)<20) :
         htmltext = "30067-02.htm"
-   elif npcId == 30067 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(GLYVKAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(GREEN_MARSH_MOSS_ID)+st.getQuestItemsCount(BROWN_MARSH_MOSS_ID)>=20) and st.getQuestItemsCount(BROWN_MARSH_MOSS_ID)<20 :
+   elif npcId == 30067 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(GLYVKAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(GREEN_MARSH_MOSS_ID)+st.getQuestItemsCount(BROWN_MARSH_MOSS_ID)>=20) and st.getQuestItemsCount(BROWN_MARSH_MOSS_ID)<20 :
         htmltext = "30067-03.htm"
-   elif npcId == 30067 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(GLYVKAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(GREEN_MARSH_MOSS_ID)+st.getQuestItemsCount(BROWN_MARSH_MOSS_ID)>=20) and st.getQuestItemsCount(BROWN_MARSH_MOSS_ID)>=20 :
+   elif npcId == 30067 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(GLYVKAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(GREEN_MARSH_MOSS_ID)+st.getQuestItemsCount(BROWN_MARSH_MOSS_ID)>=20) and st.getQuestItemsCount(BROWN_MARSH_MOSS_ID)>=20 :
         htmltext = "30067-06.htm"
         st.takeItems(GLYVKAS_BOTANYBOOK_ID,1)
         st.takeItems(GREEN_MARSH_MOSS_ID,-1)
         st.takeItems(BROWN_MARSH_MOSS_ID,-1)
         st.giveItems(BROWN_MOSS_BUNDLE_ID,1)
-   elif npcId == 30067 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(GLYVKAS_BOTANYBOOK_ID)==0 and (st.getQuestItemsCount(GREEN_MOSS_BUNDLE_ID)+st.getQuestItemsCount(BROWN_MOSS_BUNDLE_ID)==1) :
+   elif npcId == 30067 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(GLYVKAS_BOTANYBOOK_ID)==0 and (st.getQuestItemsCount(GREEN_MOSS_BUNDLE_ID)+st.getQuestItemsCount(BROWN_MOSS_BUNDLE_ID)==1) :
         htmltext = "30067-07.htm"
-   elif npcId == 30069 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(ROLANTS_CREATUREBOOK_ID)==0 and st.getQuestItemsCount(MONSTER_EYE_MEAT_ID)==0 :
+   elif npcId == 30069 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(ROLANTS_CREATUREBOOK_ID)==0 and st.getQuestItemsCount(MONSTER_EYE_MEAT_ID)==0 :
         htmltext = "30069-01.htm"
         st.giveItems(ROLANTS_CREATUREBOOK_ID,1)
-   elif npcId == 30069 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(ROLANTS_CREATUREBOOK_ID) and st.getQuestItemsCount(MONSTER_EYE_BODY_ID)<30 :
+   elif npcId == 30069 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(ROLANTS_CREATUREBOOK_ID) and st.getQuestItemsCount(MONSTER_EYE_BODY_ID)<30 :
         htmltext = "30069-02.htm"
-   elif npcId == 30069 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(ROLANTS_CREATUREBOOK_ID) and st.getQuestItemsCount(MONSTER_EYE_BODY_ID)>=30 :
+   elif npcId == 30069 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(ROLANTS_CREATUREBOOK_ID) and st.getQuestItemsCount(MONSTER_EYE_BODY_ID)>=30 :
         htmltext = "30069-03.htm"
         st.takeItems(ROLANTS_CREATUREBOOK_ID,1)
         st.takeItems(MONSTER_EYE_BODY_ID,-1)
         st.giveItems(MONSTER_EYE_MEAT_ID,1)
-   elif npcId == 30069 and int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(ROLANTS_CREATUREBOOK_ID)==0 and st.getQuestItemsCount(MONSTER_EYE_MEAT_ID)==1 :
+   elif npcId == 30069 and st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(ROLANTS_CREATUREBOOK_ID)==0 and st.getQuestItemsCount(MONSTER_EYE_MEAT_ID)==1 :
         htmltext = "30069-04.htm"
    return htmltext
 
@@ -299,7 +299,7 @@ class Quest (JQuest) :
    
    npcId = npc.getNpcId()
    if npcId == 20265 :
-        if int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(ROLANTS_CREATUREBOOK_ID) and st.getQuestItemsCount(MONSTER_EYE_BODY_ID)<30 :
+        if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(ROLANTS_CREATUREBOOK_ID) and st.getQuestItemsCount(MONSTER_EYE_BODY_ID)<30 :
           n = st.getRandom(100)
           if n<75 :
             st.giveItems(MONSTER_EYE_BODY_ID,1)
@@ -315,7 +315,7 @@ class Quest (JQuest) :
               st.giveItems(MONSTER_EYE_BODY_ID,2)
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 20266 :
-        if int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(ROLANTS_CREATUREBOOK_ID) and st.getQuestItemsCount(MONSTER_EYE_BODY_ID)<30 :
+        if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(ROLANTS_CREATUREBOOK_ID) and st.getQuestItemsCount(MONSTER_EYE_BODY_ID)<30 :
           n = st.getRandom(10)
           if n<7 :
             st.giveItems(MONSTER_EYE_BODY_ID,1)
@@ -331,7 +331,7 @@ class Quest (JQuest) :
               st.giveItems(MONSTER_EYE_BODY_ID,2)
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 20226 :
-        if int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(GLYVKAS_BOTANYBOOK_ID) :
+        if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(GLYVKAS_BOTANYBOOK_ID) :
           n = st.getRandom(10)
           if n<9 :
             if st.getQuestItemsCount(GREEN_MARSH_MOSS_ID)<20 :
@@ -348,7 +348,7 @@ class Quest (JQuest) :
               else:
                 st.playSound("ItemSound.quest_itemget")
    elif npcId == 20228 :
-        if int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(GLYVKAS_BOTANYBOOK_ID) :
+        if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(GLYVKAS_BOTANYBOOK_ID) :
           n = st.getRandom(100)
           if n<88 :
             if st.getQuestItemsCount(GREEN_MARSH_MOSS_ID)<20 :
@@ -365,14 +365,14 @@ class Quest (JQuest) :
               else:
                 st.playSound("ItemSound.quest_itemget")
    elif npcId == 20147 :
-        if int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(PANOS_CONTRACT_ID) and st.getQuestItemsCount(HOBGOBLIN_AMULET_ID)<30 :
+        if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(PANOS_CONTRACT_ID) and st.getQuestItemsCount(HOBGOBLIN_AMULET_ID)<30 :
           st.giveItems(HOBGOBLIN_AMULET_ID,1)
           if st.getQuestItemsCount(HOBGOBLIN_AMULET_ID) == 30 :
             st.playSound("ItemSound.quest_middle")
           else:
             st.playSound("ItemSound.quest_itemget")
    elif npcId == 20204 :
-        if int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(JAYCUBS_INSECTBOOK_ID) :
+        if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(JAYCUBS_INSECTBOOK_ID) :
           n = st.getRandom(100)
           if n<80 :
             if st.getQuestItemsCount(NECTAR_ID)<20 :
@@ -389,7 +389,7 @@ class Quest (JQuest) :
               else:
                 st.playSound("ItemSound.quest_itemget")
    elif npcId == 20229 :
-        if int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(JAYCUBS_INSECTBOOK_ID) :
+        if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(JAYCUBS_INSECTBOOK_ID) :
           n = st.getRandom(100)
           if n<92 :
             if st.getQuestItemsCount(NECTAR_ID)<20 :
@@ -406,7 +406,7 @@ class Quest (JQuest) :
               else:
                 st.playSound("ItemSound.quest_itemget")
    elif npcId == 20223 :
-        if int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID) == 0) :
+        if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID) == 0) :
           n = st.getRandom(100)
           if n<67 :
             if st.getQuestItemsCount(RED_MANDRAGORA_ROOT_ID)<40 :
@@ -423,7 +423,7 @@ class Quest (JQuest) :
               else:
                 st.playSound("ItemSound.quest_itemget")
    elif npcId == 20154 :
-        if int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID) == 0) :
+        if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID) == 0) :
           n = st.getRandom(100)
           if n<74 :
             if st.getQuestItemsCount(RED_MANDRAGORA_ROOT_ID)<40 :
@@ -440,7 +440,7 @@ class Quest (JQuest) :
               else:
                 st.playSound("ItemSound.quest_itemget")
    elif npcId == 20155 :
-        if int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID) == 0) :
+        if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID) == 0) :
           n = st.getRandom(100)
           if n<80 :
             if st.getQuestItemsCount(RED_MANDRAGORA_ROOT_ID)<40 :
@@ -457,7 +457,7 @@ class Quest (JQuest) :
               else:
                 st.playSound("ItemSound.quest_itemget")
    elif npcId == 20156 :
-        if int(st.get("cond")) and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID) == 0) :
+        if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID) == 0) :
           n = st.getRandom(100)
           if n<90 :
             if st.getQuestItemsCount(RED_MANDRAGORA_ROOT_ID)<40 :
