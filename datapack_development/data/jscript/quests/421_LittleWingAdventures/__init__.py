@@ -86,12 +86,12 @@ class Quest (JQuest) :
     leafs = st.getQuestItemsCount(FT_LEAF) 
     for i in range(4) :
        if event == str(FAIRY_TREES[i][1]) :
-           st.set("id", str(int(st.get("id")) | FAIRY_TREES[i][1]))
+           st.set("id", str(st.getInt("id") | FAIRY_TREES[i][1]))
            htmltext = FAIRY_TREES[i][6]
            st.takeItems(FT_LEAF,1)
            if 1 < leafs <= 4 :
               st.playSound("ItemSound.quest_itemget")
-           elif leafs == 1 and int(st.get("id")) == 15:
+           elif leafs == 1 and st.getInt("id") == 15:
               st.playSound("ItemSound.quest_middle")
               st.set("cond","3")
               st.setState(STARTED)
@@ -138,7 +138,7 @@ class Quest (JQuest) :
          htmltext = qston_2
    elif npcId == FY_MYMYU :
      if id == STARTING :
-        if st.getQuestItemsCount(FT_LEAF) == 0 and int(st.get("id")) == 0 :
+        if st.getQuestItemsCount(FT_LEAF) == 0 and st.getInt("id") == 0 :
            st.set("cond","2")
            st.giveItems(FT_LEAF,4)
            st.playSound("ItemSound.quest_itemget")
@@ -159,7 +159,7 @@ class Quest (JQuest) :
      leafs = st.getQuestItemsCount(FT_LEAF)
      if 0 < leafs :
         for i in range(4) :
-           if npcId == FAIRY_TREES[i][0] and (int(st.get("id")) | FAIRY_TREES[i][1] != int(st.get("id"))) :
+           if npcId == FAIRY_TREES[i][0] and (st.getInt("id") | FAIRY_TREES[i][1] != st.getInt("id")) :
               for j in range(2):
                  for k in range(2): 
                     st.getPcSpawn().addSpawn(GUARDIAN,FAIRY_TREES[i][2]+70*pow(-1,j%2),FAIRY_TREES[i][3]+70*pow(-1,k%2),FAIRY_TREES[i][4])

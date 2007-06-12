@@ -49,7 +49,7 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
-   if npcId == 30008 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30008 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
       if player.getRace().ordinal() != 0 :
         htmltext = "30008-00.htm"
       elif player.getLevel() >= 9 :
@@ -58,7 +58,7 @@ class Quest (JQuest) :
       else:
         htmltext = "30008-08.htm"
         st.exitQuest(1)
-   elif npcId == 30008 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30008 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    if id == STARTED: 
        if npcId == 30008 and st.getInt("cond")==1 and (st.getQuestItemsCount(ROIENS_LETTER_ID)==1) :

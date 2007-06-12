@@ -38,7 +38,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30348 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30348 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
       if st.getInt("cond")<15 :
         if player.getRace().ordinal() != 2 :
           htmltext = "30348-00.htm"
@@ -51,13 +51,13 @@ class Quest (JQuest) :
       else:
         htmltext = "30348-01.htm"
         st.exitQuest(1)
-   elif npcId == 30348 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30348 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 30348 and st.getInt("cond")==1 :
       if st.getQuestItemsCount(DARK_BEZOAR_ID)<13 :
         htmltext = "30348-04.htm"
-      elif st.getQuestItemsCount(DARK_BEZOAR_ID) >= 13 and int(st.get("onlyone")) == 0 :
-          if int(st.get("id")) != 165 :
+      elif st.getQuestItemsCount(DARK_BEZOAR_ID) >= 13 and st.getInt("onlyone") == 0 :
+          if st.getInt("id") != 165 :
             st.set("id","165")
             htmltext = "30348-05.htm"
             st.takeItems(DARK_BEZOAR_ID,st.getQuestItemsCount(DARK_BEZOAR_ID))

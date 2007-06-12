@@ -139,7 +139,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30460 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30460 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
         if st.getInt("cond") < 15 :
           if st.getPlayer().getRace().ordinal() != 1 :
             htmltext = "30460-01.htm"
@@ -154,14 +154,14 @@ class Quest (JQuest) :
         else:
           htmltext = "30460-03.htm"
           st.exitQuest(1)
-   elif npcId == 30460 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30460 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 30460 and st.getInt("cond")==1 and st.getQuestItemsCount(CARDIENS_LETTER_ID)==1 :
         htmltext = "30460-05.htm"
    elif npcId == 30460 and st.getInt("cond")==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID)==1 :
         htmltext = "30460-06.htm"
    elif npcId == 30460 and st.getInt("cond")==1 and st.getQuestItemsCount(CAMOMILE_CHARM_ID)==1 :
-        if st.getGameTicks() != int(st.get("id")) :
+        if st.getGameTicks() != st.getInt("id") :
           st.set("id",str(st.getGameTicks()))
           st.addExpAndSp(104591,11250)
           st.giveItems(7562,16)

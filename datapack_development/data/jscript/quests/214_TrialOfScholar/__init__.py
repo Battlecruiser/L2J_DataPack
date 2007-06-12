@@ -250,7 +250,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30461 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30461 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
      if st.getPlayer().getClassId().getId() == 0x0b or st.getPlayer().getClassId().getId() == 0x1a or st.getPlayer().getClassId().getId() == 0x27 :
        if st.getPlayer().getLevel() >= 35 :
          htmltext = "30461-03.htm"
@@ -260,7 +260,7 @@ class Quest (JQuest) :
      else:
        htmltext = "30461-01.htm"
        st.exitQuest(1)
-   elif npcId == 30461 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30461 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 30461 and st.getInt("cond")==1 and st.getQuestItemsCount(MIRIENS_SIGIL1_ID)==1 and st.getQuestItemsCount(SYMBOL_OF_SYLVAIN_ID)==0 :
         htmltext = "30461-05.htm"

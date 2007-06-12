@@ -44,7 +44,7 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30623-07.htm" :
-        if int(st.get("step"))==0 :
+        if st.getInt("step")==0 :
            st.set("cond","1")
            st.set("step","1")
            st.setState(STARTED)
@@ -94,7 +94,7 @@ class Quest (JQuest) :
      st.set("cond","0")
    if id == COMPLETED :
       htmltext = "<html><head><body>This quest has already been completed.</body></html>"
-   elif int(st.get("step"))==0 :
+   elif st.getInt("step")==0 :
       if st.getPlayer().getClassId().getId() in [0x01,0x2f,0x13,0x20] :
          if st.getPlayer().getLevel() >= 39 :
             htmltext = "30623-03.htm"
@@ -104,7 +104,7 @@ class Quest (JQuest) :
       else:
          htmltext = "30623-02.htm"
          st.exitQuest(1)
-   elif int(st.get("step"))==1 :
+   elif st.getInt("step")==1 :
       if st.getQuestItemsCount(ORDER_GLUDIO) and st.getQuestItemsCount(ORDER_DION) and st.getQuestItemsCount(ORDER_GIRAN) and st.getQuestItemsCount(ORDER_OREN) and st.getQuestItemsCount(ORDER_ADEN) :
         if st.getQuestItemsCount(PUNCHERS_SHARD)==st.getQuestItemsCount(NOBLE_ANTS_FEELER)==st.getQuestItemsCount(DRONES_CHITIN)==st.getQuestItemsCount(DEADSEEKER_FANG)==st.getQuestItemsCount(OVERLORD_NECKLACE)==st.getQuestItemsCount(CRIMSONBINDS_CHAIN)==st.getQuestItemsCount(CHIEFS_AMULET)==st.getQuestItemsCount(TEMPERED_EYE_MEAT)==st.getQuestItemsCount(TAMRIN_ORCS_RING)==st.getQuestItemsCount(TAMRIN_ORCS_ARROW) == 10 :
           htmltext = "30623-13.htm"
@@ -115,7 +115,7 @@ class Quest (JQuest) :
           for i in [ORDER_GLUDIO,ORDER_DION,ORDER_GIRAN,ORDER_OREN,ORDER_ADEN]:
             if st.getQuestItemsCount(i)==0:
                 st.giveItems(i,1) 
-   elif int(st.get("step"))==2 and st.getQuestItemsCount(FINAL_ORDER) :
+   elif st.getInt("step")==2 and st.getQuestItemsCount(FINAL_ORDER) :
         if st.getQuestItemsCount(EXCUROS_SKIN)==st.getQuestItemsCount(KRATORS_SHARD)==st.getQuestItemsCount(RAKINS_MACE)==st.getQuestItemsCount(GRANDIS_SKIN)==st.getQuestItemsCount(TIMAK_ORCS_BELT)>2 :
             st.takeItems(EXCUROS_SKIN,-1)
             st.takeItems(KRATORS_SHARD,-1)
@@ -143,7 +143,7 @@ class Quest (JQuest) :
   npcId = npc.getNpcId()
   step,maxcount,item=DROPLIST[npcId]
   count=st.getQuestItemsCount(item)
-  if int(st.get("step"))==step and count<maxcount:
+  if st.getInt("step")==step and count<maxcount:
    st.giveItems(item,1)
    if count == maxcount-1:
      st.playSound("ItemSound.quest_middle")

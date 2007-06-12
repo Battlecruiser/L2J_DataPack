@@ -23,8 +23,8 @@ class Quest (JQuest) :
       st.set("cond","1")
       st.setState(STARTED)
       st.playSound("ItemSound.quest_accept")
-    elif event == "169_1" and int(st.get("onlyone")) == 0 :
-          if int(st.get("id")) != 169 :
+    elif event == "169_1" and st.getInt("onlyone") == 0 :
+          if st.getInt("id") != 169 :
             st.set("id","169")
             htmltext = "30145-08.htm"
             st.giveItems(BONE_GAITERS_ID,1)
@@ -50,7 +50,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30145 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30145 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
       if st.getInt("cond")<15 :
         if player.getRace().ordinal() != 2 :
           htmltext = "30145-00.htm"
@@ -63,7 +63,7 @@ class Quest (JQuest) :
       else:
         htmltext = "30145-02.htm"
         st.exitQuest(1)
-   elif npcId == 30145 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30145 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 30145 and st.getInt("cond") :
       if st.getQuestItemsCount(CRACKED_SKULL_ID) >= 1 and st.getQuestItemsCount(PERFECT_SKULL_ID) == 0 :

@@ -104,7 +104,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30476 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30476 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
       if st.getInt("cond") < 15 :
         if st.getPlayer().getRace().ordinal() == 2 and st.getPlayer().getLevel() >= 37 :
           htmltext = "30476-03.htm"
@@ -117,7 +117,7 @@ class Quest (JQuest) :
       else:    
         htmltext = "30476-01.htm"
         st.exitQuest(1)
-   elif npcId == 30476 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30476 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 30476 and st.getInt("cond")==1 and st.getQuestItemsCount(KAIRAS_LETTER1_ID) :
       htmltext = "30476-06.htm"

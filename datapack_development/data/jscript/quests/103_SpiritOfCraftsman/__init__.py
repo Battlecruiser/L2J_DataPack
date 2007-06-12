@@ -40,7 +40,7 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
-   if npcId == 30307 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30307 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
      if player.getRace().ordinal() != 2 :
         htmltext = "30307-00.htm"
      elif player.getLevel() >= 10 :
@@ -49,7 +49,7 @@ class Quest (JQuest) :
      else:
         htmltext = "30307-02.htm"
         st.exitQuest(1)
-   elif npcId == 30307 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30307 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif id == STARTED : 
        if npcId == 30307 and st.getInt("cond")>=1 and (st.getQuestItemsCount(KAROYDS_LETTER_ID)>=1 or st.getQuestItemsCount(CECKTINONS_VOUCHER1_ID)>=1 or st.getQuestItemsCount(CECKTINONS_VOUCHER2_ID)>=1) :

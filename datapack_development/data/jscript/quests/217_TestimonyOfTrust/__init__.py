@@ -264,16 +264,16 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    if cond == 2 and npcId in [ 20013, 20019, 20036, 20044 ] :          # Condition 2 kill the Luel of Zephy and Aktea of the Woods
      if npcId in [ 20036,20044 ] and st.getQuestItemsCount(BREATH_OF_WINDS_ID) == 0 :
-       st.set("id",str(int(st.get("id"))+1))
-       if st.getRandom(100)<(int(st.get("id"))*33) :
+       st.set("id",str(st.getInt("id")+1))
+       if st.getRandom(100)<(st.getInt("id")*33) :
          st.playSound("Itemsound.quest_before_battle")
          st.getPcSpawn().addSpawn(27120,9410,50301,-3713,600000)   ### FIXME ### Temp fix for spawn
          st.addRadar(9410,50301,-3713)
          return "Luell Of Zephyr Winds has spawned at X=9410 Y=50301 Z=-3713"
 #         st.getPcSpawn().addSpawn(27120)                   # The original spawn code
      elif npcId in [ 20013,20019 ] and st.getQuestItemsCount(SEED_OF_VERDURE_ID) == 0 :
-       st.set("id",str(int(st.get("id"))+1))
-       if st.getRandom(100)<(int(st.get("id"))*33) :
+       st.set("id",str(st.getInt("id")+1))
+       if st.getRandom(100)<(st.getInt("id")*33) :
          st.playSound("Itemsound.quest_before_battle")
          st.getPcSpawn().addSpawn(27121,16895,47210,-3673,600000)  ### FIXME ### Temp fix for spawn
          st.addRadar(16895,47210,-3673)

@@ -42,7 +42,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30349 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30349 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
       if st.getInt("cond")<15 :
         if player.getRace().ordinal() != 2 :
           htmltext = "30349-00.htm"
@@ -55,7 +55,7 @@ class Quest (JQuest) :
       else:
         htmltext = "30349-01.htm"
         st.exitQuest(1)
-   elif npcId == 30349 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30349 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 30349 and st.getInt("cond")==1 and st.getQuestItemsCount(JENNIES_LETTER_ID) :
         htmltext = "30349-04.htm"
@@ -64,8 +64,8 @@ class Quest (JQuest) :
         st.takeItems(SENTRY_BLADE1_ID,1)
    elif npcId == 30349 and st.getInt("cond")==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==0 and (st.getQuestItemsCount(SENTRY_BLADE2_ID)==1 or st.getQuestItemsCount(SENTRY_BLADE3_ID)==1) :
         htmltext = "30349-07.htm"
-   elif npcId == 30349 and st.getInt("cond")==1 and st.getQuestItemsCount(OLD_BRONZE_SWORD_ID)==2 and int(st.get("onlyone"))==0 :
-        if int(st.get("id")) != 168 :
+   elif npcId == 30349 and st.getInt("cond")==1 and st.getQuestItemsCount(OLD_BRONZE_SWORD_ID)==2 and st.getInt("onlyone")==0 :
+        if st.getInt("id") != 168 :
           st.set("id","168")
           htmltext = "30349-06.htm"
           st.takeItems(OLD_BRONZE_SWORD_ID,2)

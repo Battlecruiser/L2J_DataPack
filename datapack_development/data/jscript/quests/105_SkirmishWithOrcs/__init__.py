@@ -58,7 +58,7 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
-   if npcId == 30218 and st.getInt("cond")==0 and int(st.get("onlyone"))==0 :
+   if npcId == 30218 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
       if st.getInt("cond") < 15 :
         if player.getLevel() >= 10 and player.getRace().ordinal() == 1 :
           htmltext = "30218-02.htm"
@@ -72,7 +72,7 @@ class Quest (JQuest) :
       else:
         htmltext = "30218-10.htm"
         st.exitQuest(1)
-   elif npcId == 30218 and st.getInt("cond")==0 and int(st.get("onlyone"))==1 :
+   elif npcId == 30218 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == 30218 and st.getInt("cond") :
       if st.getQuestItemsCount(KABOO_CHIEF_TORC1_ID) :
@@ -98,7 +98,7 @@ class Quest (JQuest) :
       elif st.getQuestItemsCount(KENDNELLS_ORDER1_ID) or st.getQuestItemsCount(KENDNELLS_ORDER2_ID) or st.getQuestItemsCount(KENDNELLS_ORDER3_ID) or st.getQuestItemsCount(KENDNELLS_ORDER4_ID) :
         htmltext = "30218-05.htm"
       elif st.getQuestItemsCount(KABOO_CHIEF_TORC2_ID) :
-        if int(st.get("id")) != 105 :
+        if st.getInt("id") != 105 :
           st.set("id","105")
           htmltext = "30218-08.htm"
           if st.getQuestItemsCount(KENDNELLS_ORDER5_ID) :

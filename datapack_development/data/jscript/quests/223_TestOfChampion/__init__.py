@@ -123,21 +123,21 @@ class Quest (JQuest) :
           st.exitQuest(1)
    elif npcId == 30624 and id == COMPLETED :
       htmltext = "<html><head><body>This quest has already been completed.</body></html>"
-   elif npcId == 30624 and int(st.get("step")) == 1 :
+   elif npcId == 30624 and st.getInt("step") == 1 :
       htmltext = "30624-07.htm"
-   elif npcId == 30624 and int(st.get("step")) == 2  and st.getQuestItemsCount(MASONS_LETTER) :
+   elif npcId == 30624 and st.getInt("step") == 2  and st.getQuestItemsCount(MASONS_LETTER) :
       htmltext = "30624-09.htm"
-   elif npcId == 30624 and int(st.get("step")) == 2  and st.getQuestItemsCount(ASCALONS_LETTER2) :
+   elif npcId == 30624 and st.getInt("step") == 2  and st.getQuestItemsCount(ASCALONS_LETTER2) :
       htmltext = "30624-11.htm"
-   elif npcId == 30624 and int(st.get("step")) == 2 :
+   elif npcId == 30624 and st.getInt("step") == 2 :
       htmltext = "30624-08.htm"
-   elif npcId == 30624 and int(st.get("step")) == 3 and st.getQuestItemsCount(WHITE_ROSE_INSIGNIA) :
+   elif npcId == 30624 and st.getInt("step") == 3 and st.getQuestItemsCount(WHITE_ROSE_INSIGNIA) :
       htmltext = "30624-12.htm"
-   elif npcId == 30624 and int(st.get("step")) == 3 and st.getQuestItemsCount(GROOTS_LETTER) :
+   elif npcId == 30624 and st.getInt("step") == 3 and st.getQuestItemsCount(GROOTS_LETTER) :
       htmltext = "30624-13.htm"
-   elif npcId == 30624 and int(st.get("step")) == 3 and st.getQuestItemsCount(ASCALONS_LETTER3) :
+   elif npcId == 30624 and st.getInt("step") == 3 and st.getQuestItemsCount(ASCALONS_LETTER3) :
       htmltext = "30624-15.htm"
-   elif npcId == 30624 and int(st.get("step")) == 5 and st.getQuestItemsCount(MOUENS_LETTER) :
+   elif npcId == 30624 and st.getInt("step") == 5 and st.getQuestItemsCount(MOUENS_LETTER) :
       st.addExpAndSp(117454,25000)
       htmltext = "30624-17.htm"
       st.giveItems(MARK_OF_CHAMPION,1)
@@ -147,50 +147,50 @@ class Quest (JQuest) :
       st.set("cond","0")
       st.setState(COMPLETED)
       st.playSound("ItemSound.quest_finish")
-   elif npcId == 30624 and int(st.get("step")) in [4,5] :
+   elif npcId == 30624 and st.getInt("step") in [4,5] :
       htmltext = "30624-16.htm"
-   elif npcId == 30625 and int(st.get("step")) == 1 and st.getQuestItemsCount(ASCALONS_LETTER1) :
+   elif npcId == 30625 and st.getInt("step") == 1 and st.getQuestItemsCount(ASCALONS_LETTER1) :
       htmltext = "30625-01.htm"
-   elif npcId == 30625 and int(st.get("step")) == 2 and st.getQuestItemsCount(BLOODY_AXE_HEAD) < 100 :
+   elif npcId == 30625 and st.getInt("step") == 2 and st.getQuestItemsCount(BLOODY_AXE_HEAD) < 100 :
       htmltext = "30625-04.htm"
-   elif npcId == 30625 and int(st.get("step")) == 2 and st.getQuestItemsCount(BLOODY_AXE_HEAD) > 99 :
+   elif npcId == 30625 and st.getInt("step") == 2 and st.getQuestItemsCount(BLOODY_AXE_HEAD) > 99 :
       htmltext = "30625-05.htm"
       st.giveItems(MASONS_LETTER,1)
       st.takeItems(IRON_ROSE_RING,1)
       st.takeItems(BLOODY_AXE_HEAD,st.getQuestItemsCount(BLOODY_AXE_HEAD))
-   elif npcId == 30625 and int(st.get("step")) == 2 and st.getQuestItemsCount(MASONS_LETTER) :
+   elif npcId == 30625 and st.getInt("step") == 2 and st.getQuestItemsCount(MASONS_LETTER) :
       htmltext = "30625-06.htm"
-   elif npcId == 30625 and int(st.get("step")) == 2 and (st.getQuestItemsCount(ASCALONS_LETTER2) or st.getQuestItemsCount(WHITE_ROSE_INSIGNIA) or st.getQuestItemsCount(ASCALONS_LETTER2) or st.getQuestItemsCount(WHITE_ROSE_INSIGNIA) or st.getQuestItemsCount(GROOTS_LETTER) or st.getQuestItemsCount(ASCALONS_LETTER3) or st.getQuestItemsCount(MOUENS_ORDER1) or st.getQuestItemsCount(MOUENS_ORDER2) or st.getQuestItemsCount(MOUENS_LETTER) or st.getQuestItemsCount(GROOTS_LETTER)) :
+   elif npcId == 30625 and st.getInt("step") == 2 and (st.getQuestItemsCount(ASCALONS_LETTER2) or st.getQuestItemsCount(WHITE_ROSE_INSIGNIA) or st.getQuestItemsCount(ASCALONS_LETTER2) or st.getQuestItemsCount(WHITE_ROSE_INSIGNIA) or st.getQuestItemsCount(GROOTS_LETTER) or st.getQuestItemsCount(ASCALONS_LETTER3) or st.getQuestItemsCount(MOUENS_ORDER1) or st.getQuestItemsCount(MOUENS_ORDER2) or st.getQuestItemsCount(MOUENS_LETTER) or st.getQuestItemsCount(GROOTS_LETTER)) :
       htmltext = "30625-07.htm"
-   elif npcId == 30093 and int(st.get("step")) == 2 and st.getQuestItemsCount(ASCALONS_LETTER2) :
+   elif npcId == 30093 and st.getInt("step") == 2 and st.getQuestItemsCount(ASCALONS_LETTER2) :
       htmltext = "30093-01.htm"
-   elif npcId == 30093 and int(st.get("step")) == 3 and st.getQuestItemsCount(WHITE_ROSE_INSIGNIA) and (st.getQuestItemsCount(HARPYS_EGG1) < 30 or st.getQuestItemsCount(MEDUSA_VENOM1) < 30 or st.getQuestItemsCount(WINDSUS_BILE1)<30) :
+   elif npcId == 30093 and st.getInt("step") == 3 and st.getQuestItemsCount(WHITE_ROSE_INSIGNIA) and (st.getQuestItemsCount(HARPYS_EGG1) < 30 or st.getQuestItemsCount(MEDUSA_VENOM1) < 30 or st.getQuestItemsCount(WINDSUS_BILE1)<30) :
       htmltext = "30093-03.htm"
-   elif npcId == 30093 and int(st.get("step")) == 3 and st.getQuestItemsCount(WHITE_ROSE_INSIGNIA) and st.getQuestItemsCount(HARPYS_EGG1) >= 30 and st.getQuestItemsCount(MEDUSA_VENOM1) >= 30 and st.getQuestItemsCount(WINDSUS_BILE1) >= 30 :
+   elif npcId == 30093 and st.getInt("step") == 3 and st.getQuestItemsCount(WHITE_ROSE_INSIGNIA) and st.getQuestItemsCount(HARPYS_EGG1) >= 30 and st.getQuestItemsCount(MEDUSA_VENOM1) >= 30 and st.getQuestItemsCount(WINDSUS_BILE1) >= 30 :
       htmltext = "30093-04.htm"
       st.giveItems(GROOTS_LETTER,1)
       st.takeItems(WHITE_ROSE_INSIGNIA,1)
       st.takeItems(HARPYS_EGG1,st.getQuestItemsCount(HARPYS_EGG1))
       st.takeItems(MEDUSA_VENOM1,st.getQuestItemsCount(MEDUSA_VENOM1))
       st.takeItems(WINDSUS_BILE1,st.getQuestItemsCount(WINDSUS_BILE1))
-   elif npcId == 30093 and int(st.get("step")) == 3 and st.getQuestItemsCount(GROOTS_LETTER) :
+   elif npcId == 30093 and st.getInt("step") == 3 and st.getQuestItemsCount(GROOTS_LETTER) :
       htmltext = "30093-05.htm"
-   elif npcId == 30093 and int(st.get("step")) == 3 and (st.getQuestItemsCount(ASCALONS_LETTER3) or st.getQuestItemsCount(MOUENS_ORDER1) or st.getQuestItemsCount(MOUENS_ORDER2) or st.getQuestItemsCount(MOUENS_LETTER)) :
+   elif npcId == 30093 and st.getInt("step") == 3 and (st.getQuestItemsCount(ASCALONS_LETTER3) or st.getQuestItemsCount(MOUENS_ORDER1) or st.getQuestItemsCount(MOUENS_ORDER2) or st.getQuestItemsCount(MOUENS_LETTER)) :
       htmltext = "30093-06.htm"
-   elif npcId == 30196 and int(st.get("step")) == 3 and st.getQuestItemsCount(ASCALONS_LETTER3) :
+   elif npcId == 30196 and st.getInt("step") == 3 and st.getQuestItemsCount(ASCALONS_LETTER3) :
       htmltext = "30196-01.htm"
-   elif npcId == 30196 and int(st.get("step")) == 4 and st.getQuestItemsCount(MOUENS_ORDER1) and st.getQuestItemsCount(ROAD_RATMAN_HEAD) < 100 :
+   elif npcId == 30196 and st.getInt("step") == 4 and st.getQuestItemsCount(MOUENS_ORDER1) and st.getQuestItemsCount(ROAD_RATMAN_HEAD) < 100 :
       htmltext = "30196-04.htm"
-   elif npcId == 30196 and int(st.get("step")) == 4 and st.getQuestItemsCount(MOUENS_ORDER1) and st.getQuestItemsCount(ROAD_RATMAN_HEAD) >= 100 :
+   elif npcId == 30196 and st.getInt("step") == 4 and st.getQuestItemsCount(MOUENS_ORDER1) and st.getQuestItemsCount(ROAD_RATMAN_HEAD) >= 100 :
       htmltext = "30196-05.htm"
-   elif npcId == 30196 and int(st.get("step")) == 5 and st.getQuestItemsCount(MOUENS_ORDER2) and st.getQuestItemsCount(LETO_LIZARDMAN_FANG1) < 100 :
+   elif npcId == 30196 and st.getInt("step") == 5 and st.getQuestItemsCount(MOUENS_ORDER2) and st.getQuestItemsCount(LETO_LIZARDMAN_FANG1) < 100 :
       htmltext = "30196-07.htm"
-   elif npcId == 30196 and int(st.get("step")) == 5 and st.getQuestItemsCount(MOUENS_ORDER2) and st.getQuestItemsCount(LETO_LIZARDMAN_FANG1) >= 100 :
+   elif npcId == 30196 and st.getInt("step") == 5 and st.getQuestItemsCount(MOUENS_ORDER2) and st.getQuestItemsCount(LETO_LIZARDMAN_FANG1) >= 100 :
       htmltext = "30196-08.htm"
       st.giveItems(MOUENS_LETTER,1)
       st.takeItems(MOUENS_ORDER2,1)
       st.takeItems(LETO_LIZARDMAN_FANG1,st.getQuestItemsCount(LETO_LIZARDMAN_FANG1))
-   elif npcId == 30196 and int(st.get("step")) == 5 and st.getQuestItemsCount(MOUENS_LETTER) :
+   elif npcId == 30196 and st.getInt("step") == 5 and st.getQuestItemsCount(MOUENS_LETTER) :
       htmltext = "30196-09.htm"
    return htmltext
 
@@ -202,7 +202,7 @@ class Quest (JQuest) :
    
    npcId = npc.getNpcId()
    step, maxcount, chance, itemid = DROPLIST[npcId]
-   if int(st.get("step")) == step and st.getQuestItemsCount(itemid) < maxcount and st.getRandom(100) < chance:
+   if st.getInt("step") == step and st.getQuestItemsCount(itemid) < maxcount and st.getRandom(100) < chance:
      if st.getQuestItemsCount(itemid) == (maxcount-1):
        st.giveItems(itemid,1)
        st.playSound("Itemsound.quest_middle")
