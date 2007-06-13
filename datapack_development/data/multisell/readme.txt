@@ -1,4 +1,4 @@
-Given the fact that no convention seems to be useful for the naming of these files, 
+Given the fact that no convention is widely adopted for the naming of these files yet, 
 i decided to keep a list of what each file is meant to be, to improve the usability
 of this directory a little bit.
 
@@ -61,3 +61,7 @@ of this directory a little bit.
 313750003.xml -> Ketra alliance - Lv3
 
 301660373.xml -> Quest 373: Supplier of Reagents - Wesley
+
+306893001.xml -> Shadow weaponry system. D-grade coupons exchange
+313213001.xml -> Shadow weaponry system. C-grade coupons exchange
+319463001.xml -> Shadow weaponry system. Adena exchange
