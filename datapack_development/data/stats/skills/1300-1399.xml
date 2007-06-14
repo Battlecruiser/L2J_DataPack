@@ -855,11 +855,11 @@
   <set name="skillType" val="MUTE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
+  <set name="buffDuration" val="30000"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-   <effect count="1" name="SilenceMagicPhysical" time="120" val="0"/>
+   <effect count="1" name="SilenceMagicPhysical" time="30" val="0"/>
   </for>
 </skill>
 <skill id="1337" levels="1" name="Curse of Abyss">
@@ -2045,21 +2045,25 @@
 <skill id="1386" levels="10" name="Arcane Distruption">
 <!-- Done by KID -->
   <table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table>
+  <table name="#magicLvl"> 56 58 60 62 64 66 68 70 72 74 </table>
   <!-- L2P still need to confirm mAtkSpd reduction values - says about -23% -->
   <table name="#mAtkSpd"> 1.11 1.13 1.15 1.16 1.18 1.21 1.24 1.26 1.29 1.32 </table>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="80"/>
+  <set name="lvlDepend" val="2"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="18000"/>
   <set name="skillTime" val="4000"/>
-  <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
+  <set name="isMagic" val="true"/> 
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="30000"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <set name="isMagic" val="true"/>
   <for>
-    <!-- time might be wrong -->
-    <effect count="1" name="Buff" time="10" val="0">
+    <effect count="1" name="Buff" time="30" val="0">
       <div order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
     </effect>
   </for>
