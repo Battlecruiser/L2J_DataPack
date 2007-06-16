@@ -42,8 +42,8 @@ class Quest (JQuest) :
  def onFirstTalk (self,npc,player):
      htmltext = "<html><head><body>I have nothing to say you</body></html>"
      st = player.getQuestState(qn)
-    if not st :
-        st = self.newQuestState(player)
+     if not st :
+         st = self.newQuestState(player)
      npcId = npc.getNpcId()
      id = st.getState()
      Alevel = st.getPlayer().getAllianceWithVarkaKetra()
