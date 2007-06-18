@@ -1,5 +1,6 @@
 # Maked by Mr. - Version 0.3 by DrLecter
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -53,16 +54,22 @@ class Quest (JQuest) :
  def onKill (self,npc,player):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
-
-   npcId = npc.getNpcId()
-   if st.getInt("cond")==1 and st.getQuestItemsCount(ADAMANTITE_ORE)<20 and st.getRandom(10)<4 :
-      st.giveItems(ADAMANTITE_ORE,1)
-      if st.getQuestItemsCount(ADAMANTITE_ORE) == 20 :
-         st.playSound("ItemSound.quest_middle")
-         st.set("cond","2")
-      else:
-         st.playSound("ItemSound.quest_itemget")
+   if st.getState() != STARTED : return
+   adamantite = st.getQuestItemsCount(ADAMANTITE_ORE)
+   if st.getInt("cond") == 1 and adamantite < 20 :
+       npcId = npc.getNpcId()
+       numItems, chance = divmod(40*Config.RATE_DROP_QUEST,100)
+       if st.getRandom(100) <= chance :
+          numItems += 1
+       numItems = int(numItems)   
+       if numItems != 0 :
+          if 20 <= (adamantite + numItems) :
+             numItems = 20 - adamantite
+             st.playSound("ItemSound.quest_middle")
+             st.set("cond","2")
+          else:
+             st.playSound("ItemSound.quest_itemget")
+          st.giveItems(ADAMANTITE_ORE,numItems)
    return
 
 QUEST       = Quest(157,qn,"Recover Smuggled")
