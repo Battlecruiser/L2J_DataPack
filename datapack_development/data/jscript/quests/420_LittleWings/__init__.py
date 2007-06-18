@@ -1,6 +1,7 @@
 # version 0.1 
 # by DrLecter
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -104,7 +105,7 @@ def craft_stone(st,progress) :
        return "420_maria_5.htm"
 
 def check_eggs(st, npc, progress) :
-    whom = st.getInt("dragon")
+    whom = int(st.get("dragon"))
     if   whom == 1 : eggs = EX_EGG
     elif whom == 2 : eggs = ZW_EGG
     elif whom == 3 : eggs = KA_EGG
@@ -309,7 +310,7 @@ class Quest (JQuest):
              st.set("progress",str(progress+9))
              return "420_suzet_3.htm"
          elif event == "hatch" :
-             whom = st.getInt("dragon")
+             whom = int(st.get("dragon"))
              if   whom == 1 : eggs = EX_EGG
              elif whom == 2 : eggs = ZW_EGG
              elif whom == 3 : eggs = KA_EGG
@@ -469,17 +470,28 @@ class Quest (JQuest):
     id   = st.getState()
     npcId = npc.getNpcId()
   #incipios drop
-    if id == STARTING and (st.getQuestItemsCount(FSN_LIST) == 1 and st.getQuestItemsCount(TD_BCK_SKN) < 10) or (st.getQuestItemsCount(FSN_LIST_DLX) == 1 and st.getQuestItemsCount(TD_BCK_SKN) < 20) :
+    skins = st.getQuestItemsCount(TD_BCK_SKN)
+    if id == STARTING and (st.getQuestItemsCount(FSN_LIST) == 1 and skins < 10) or (st.getQuestItemsCount(FSN_LIST_DLX) == 1 and skins < 20) :
       if npcId ==  TD_LORD :
-        if st.getRandom(100) < BACK_DROP :
-           st.giveItems(TD_BCK_SKN,1)
-           if (st.getQuestItemsCount(FSN_LIST) and st.getQuestItemsCount(TD_BCK_SKN) == 10) or (st.getQuestItemsCount(FSN_LIST_DLX) and st.getQuestItemsCount(TD_BCK_SKN) == 20) :
+        count = 0
+        if st.getQuestItemsCount(FSN_LIST) == 1 :
+           count = 10
+        else :
+           count = 20
+        numItems, chance = divmod(BACK_DROP*Config.RATE_DROP_QUEST,100)
+        if st.getRandom(100) <= chance :
+          numItems += 1
+        numItems = int(numItems)
+        if numItems != 0 :
+          if count <= (skins + numItems) :
+              numItems = count - skins
               st.playSound("ItemSound.quest_middle")
-           else :
+          else :
               st.playSound("ItemSound.quest_itemget")
+          st.giveItems(TD_BCK_SKN,numItems)
   #dragon detection
     elif id == STARTED and (st.get("progress") in [ "14","15","21","22" ]) :
-      whom = st.getInt("dragon")
+      whom = int(st.get("dragon"))
       if whom == 1 :
          eggs = EX_EGG
          scale = SCALE_1
@@ -500,14 +512,21 @@ class Quest (JQuest):
          eggs = SH_EGG
          scale = SCALE_5
          eggdropper = DD_SEEKER
-      if st.getQuestItemsCount(scale) == 1 and st.getQuestItemsCount(eggs) < REQUIRED_EGGS :
+      prevItems = st.getQuestItemsCount(eggs)
+      if st.getQuestItemsCount(scale) == 1 and prevItems < REQUIRED_EGGS :
          if npcId == eggdropper :
-            if st.getRandom(100) < EGG_DROP :
-               st.giveItems(eggs,1)
-               if st.getQuestItemsCount(eggs) < REQUIRED_EGGS :
-                  st.playSound("ItemSound.quest_itemget")
-               else :
+            chance = EGG_DROP*Config.RATE_DROP_QUEST
+            numItems, chance = divmod(chance,100)
+            if st.getRandom(100) <= chance :
+               numItems += 1
+            numItems = int(numItems)
+            if numItems != 0 :
+               if REQUIRED_EGGS <= (prevItems + numItems) :
+                  numItems = REQUIRED_EGGS - prevItems
                   st.playSound("ItemSound.quest_middle")
+               else:
+                  st.playSound("ItemSound.quest_itemget")   
+               st.giveItems(eggs,numItems)                 
   #fairy stone destruction    
     elif id == STARTING and st.getQuestItemsCount(FRY_STN_DLX) == 1 :
       if npcId in range(20589,20600)+[20719]:

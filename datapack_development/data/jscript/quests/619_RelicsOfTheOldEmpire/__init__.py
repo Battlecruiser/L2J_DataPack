@@ -1,5 +1,6 @@
 # Created by t0rm3nt0r
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -77,9 +78,12 @@ class Quest (JQuest) :
      if st :
        if st.getState() == STARTED :
          entr = st.getQuestItemsCount(ENTRANCE)
-         st.giveItems(RELICS,1)
+         numItems, chance = divmod(100*Config.RATE_DROP_QUEST,100)
+         if st.getRandom(100) < chance :
+            numItems += 1
+         st.giveItems(RELICS,int(numItems))
          st.playSound("ItemSound.quest_itemget")
-         if not entr and st.getRandom(100) < 5 :
+         if not entr and st.getRandom(100) < (5*Config.RATE_DROP_QUEST) :
              st.giveItems(ENTRANCE,1)
              st.playSound("ItemSound.quest_middle")
      return
