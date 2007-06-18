@@ -1,5 +1,6 @@
 #Made by Emperorc
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -24,6 +25,48 @@ Ketra_Three = [ 21339, 21340, 21342, 21345, 21346, 21347, 21348, 21349 ]
 Varka_Silenos = [ 21350, 21351, 21353, 21354, 21355, 21357, 21358, 21360, 21361, \
 21362, 21369, 21370, 21364, 21365, 21366, 21368, 21371, 21372, 21373, 21374, 21375 ]
 
+Chance = {
+  21325:500,
+  21339:500,
+  21340:500,
+  21324:500,
+  21336:500,
+  21331:500,
+  21342:508,
+  21327:509,
+  21334:509,
+  21335:518,
+  21343:518,
+  21329:519,
+  21328:521,
+  21338:527,
+  21344:604,
+  21346:604,
+  21348:626,
+  21349:626,
+  21345:627,
+  21332:628,
+  21347:649
+}
+
+Chance_molar = {
+  21339:568,
+  21340:568,
+  21324:500,
+  21336:529,
+  21331:529,
+  21342:578,
+  21327:510,
+  21334:539,
+  21343:548,
+  21329:519,
+  21328:522,
+  21338:558,
+  21345:713,
+  21332:664,
+  21347:638
+}
+
 #Quest Items
 Varka_Badge_Soldier, Varka_Badge_Officer, Varka_Badge_Captain = [7216, 7217, 7218]
 Ketra_Alliance_One, Ketra_Alliance_Two, Ketra_Alliance_Three, \
@@ -33,6 +76,26 @@ Varka_Alliance_Four, Varka_Alliance_Five  = [7221, 7222, 7223, 7224, 7225]
 Ketra_Badge_Soldier, Ketra_Badge_Officer, Ketra_Badge_Captain  = [7226, 7227,7228]
 Valor_Feather, Wisdom_Feather = [ 7229, 7230 ]
 Molar = 7234
+
+#drop system - cond:[item_id,max,drop_id]
+One ={
+  1:[57,100,Ketra_Badge_Soldier],
+  2:[Varka_Alliance_One,200,Ketra_Badge_Soldier],
+  3:[Varka_Alliance_Two,300,Ketra_Badge_Soldier],
+  4:[Varka_Alliance_Three,300,Ketra_Badge_Soldier],
+  5:[Varka_Alliance_Four,400,Ketra_Badge_Soldier]
+}
+Two ={   
+  2:[Varka_Alliance_One,100,Ketra_Badge_Officer],
+  3:[Varka_Alliance_Two,200,Ketra_Badge_Officer],
+  4:[Varka_Alliance_Three,300,Ketra_Badge_Officer],
+  5:[Varka_Alliance_Four,400,Ketra_Badge_Officer]
+}
+Three ={   
+  3:[Varka_Alliance_Two,100,Ketra_Badge_Captain],
+  4:[Varka_Alliance_Three,200,Ketra_Badge_Captain],
+  5:[Varka_Alliance_Four,200,Ketra_Badge_Captain]
+}
 
 def decreaseAlliance(st) :
   if st.getPlayer().isAlliedWithVarka() :
@@ -76,104 +139,23 @@ def decreaseAlliance(st) :
       st.takeItems(Varka_Alliance_Five,-1)
       st.giveItems(Varka_Alliance_Four,1)
 
-def giveReward(st,npcId) :
-    cond = st.getInt("cond")
-    id = st.getInt("id")
-    KBadgeS = st.getQuestItemsCount(Ketra_Badge_Soldier)
-    KBadgeO = st.getQuestItemsCount(Ketra_Badge_Officer)
-    KBadgeC = st.getQuestItemsCount(Ketra_Badge_Captain)
-    VAlliance1 = st.getQuestItemsCount(Varka_Alliance_One)
-    VAlliance2 = st.getQuestItemsCount(Varka_Alliance_Two)
-    VAlliance3 = st.getQuestItemsCount(Varka_Alliance_Three)
-    VAlliance4 = st.getQuestItemsCount(Varka_Alliance_Four)
-    VAlliance5 = st.getQuestItemsCount(Varka_Alliance_Five)
-    if npcId in Ketra_One :
-        if cond == 1 and id == 2 :
-            if KBadgeS == 99 :
-                st.giveItems(Ketra_Badge_Soldier,1)
-                st.playSound("ItemSound.quest_middle")
-            else :
-                st.giveItems(Ketra_Badge_Soldier,1)
-                st.playSound("ItemSound.quest_itemget")
-        elif cond == 2 and VAlliance1 and id == 2 :
-            if KBadgeS == 199  :
-                st.giveItems(Ketra_Badge_Soldier,1)
-                st.playSound("ItemSound.quest_middle")
-            else :
-                st.giveItems(Ketra_Badge_Soldier,1)
-                st.playSound("ItemSound.quest_itemget")
-        elif cond == 3 and VAlliance2 and id == 2 :
-            if KBadgeS == 299 :
-                st.giveItems(Ketra_Badge_Soldier,1)
-                st.playSound("ItemSound.quest_middle")
-            else :
-                st.giveItems(Ketra_Badge_Soldier,1)
-                st.playSound("ItemSound.quest_itemget")
-        elif cond == 4 and VAlliance3 and id == 2 :
-            if KBadgeS == 299 :
-                st.giveItems(Ketra_Badge_Soldier,1)
-                st.playSound("ItemSound.quest_middle")
-            else :
-                st.giveItems(Ketra_Badge_Soldier,1)
-                st.playSound("ItemSound.quest_itemget")
-        elif cond == 5 and VAlliance4 and id == 2 :
-            if KBadgeS == 399 :
-                st.giveItems(Ketra_Badge_Soldier,1)
-                st.playSound("ItemSound.quest_middle")
-            else :
-                st.giveItems(Ketra_Badge_Soldier,1)
-                st.playSound("ItemSound.quest_itemget")
-    elif npcId in Ketra_Two :
-        if cond == 2 and VAlliance1 and id == 2 :
-            if KBadgeO == 99 :
-                st.giveItems(Ketra_Badge_Officer,1)
-                st.playSound("ItemSound.quest_middle")
-            else :
-                st.giveItems(Ketra_Badge_Officer,1)
-                st.playSound("ItemSound.quest_itemget")
-        elif cond == 3 and VAlliance2 and id == 2 :
-            if KBadgeO == 199 :
-                st.giveItems(Ketra_Badge_Officer,1)
-                st.playSound("ItemSound.quest_middle")
-            else :
-                st.giveItems(Ketra_Badge_Officer,1)
-                st.playSound("ItemSound.quest_itemget")
-        elif cond == 4 and VAlliance3 and id == 2 :
-            if KBadgeO == 299 :
-                st.giveItems(Ketra_Badge_Officer,1)
-                st.playSound("ItemSound.quest_middle")
-            else :
-                st.giveItems(Ketra_Badge_Officer,1)
-                st.playSound("ItemSound.quest_itemget")
-        elif cond == 5 and VAlliance4 and id == 2 :
-            if KBadgeO == 399 :
-                st.giveItems(Ketra_Badge_Officer,1)
-                st.playSound("ItemSound.quest_middle")
-            else :
-                st.giveItems(Ketra_Badge_Officer,1)
-                st.playSound("ItemSound.quest_itemget")
-    elif npcId in Ketra_Three :
-        if cond == 3 and VAlliance2 and id == 2 :
-            if KBadgeO == 99 :
-                st.giveItems(Ketra_Badge_Captain,1)
-                st.playSound("ItemSound.quest_middle")
-            else :
-                st.giveItems(Ketra_Badge_Captain,1)
-                st.playSound("ItemSound.quest_itemget")
-        elif cond == 4 and VAlliance3 and id == 2 :
-            if KBadgeO == 199 :
-                st.giveItems(Ketra_Badge_Captain,1)
-                st.playSound("ItemSound.quest_middle")
-            else :
-                st.giveItems(Ketra_Badge_Captain,1)
-                st.playSound("ItemSound.quest_itemget")
-        elif cond == 5 and VAlliance4 and id == 2 :
-            if KBadgeO == 199 :
-                st.giveItems(Ketra_Badge_Captain,1)
-                st.playSound("ItemSound.quest_middle")
-            else :
-                st.giveItems(Ketra_Badge_Captain,1)
-                st.playSound("ItemSound.quest_itemget")
+def giveReward(st,item,chance,MAX,drop) :
+  if st.getQuestItemsCount(item) > 0 :
+    count = st.getQuestItemsCount(drop)
+    if count < MAX or drop == Molar :
+      numItems,chance = divmod(chance*Config.RATE_DROP_QUEST,1000)
+      if st.getRandom(1000) < chance :
+        numItems += 1
+      numItems = int(numItems)
+      if numItems != 0 :
+        if count + numItems >= MAX and drop != Molar :
+          numItems = MAX - count
+          st.playSound("ItemSound.quest_middle")
+        elif drop == Molar and int((count+numItems)/100) > int(count/100) :
+          st.playSound("ItemSound.quest_middle")
+        else :
+          st.playSound("ItemSound.quest_itemget")
+        st.giveItems(drop,numItems)
 
 class Quest (JQuest) :
 
@@ -358,33 +340,33 @@ class Quest (JQuest) :
           npcId = npc.getNpcId()
           cond = st.getInt("cond")
           id = st.getInt("id")
-          KBadgeS = st.getQuestItemsCount(Ketra_Badge_Soldier)
-          KBadgeO = st.getQuestItemsCount(Ketra_Badge_Officer)
-          KBadgeC = st.getQuestItemsCount(Ketra_Badge_Captain)
-          VAlliance1 = st.getQuestItemsCount(Varka_Alliance_One)
-          VAlliance2 = st.getQuestItemsCount(Varka_Alliance_Two)
-          VAlliance3 = st.getQuestItemsCount(Varka_Alliance_Three)
-          VAlliance4 = st.getQuestItemsCount(Varka_Alliance_Four)
-          VAlliance5 = st.getQuestItemsCount(Varka_Alliance_Five)
           st2 = st.getPlayer().getQuestState("612_WarWithKetraOrcs")
-          Molars = st.getQuestItemsCount(Molar)
           if not st.getPlayer().isAlliedWithKetra() :
               if (npcId in Ketra_One) or (npcId in Ketra_Two) or (npcId in Ketra_Three):
+                  item = 0
+                  if cond <= 5 :
+                    if npcId in Ketra_One :
+                      item,MAX,drop = One[cond]
+                    elif npcId in Ketra_Two and cond > 1:
+                      item,MAX,drop = Two[cond]
+                    elif npcId in Ketra_Three and cond > 2 :
+                      item,MAX,drop = Three[cond]
+                  if item != 0 :
+                    if st.getQuestItemsCount(drop) == MAX :
+                      item = 0
+                  chance = Chance[npcId]
       #This is support for quest 612: War With Ketra Orcs. Basically, if the person has both this quest and 612, then they only get one quest item, 50% chance for 612 quest item and 50% chance for this quest's item
                   if st2 :
-                      if st.getRandom(2) == 1 :
-                          if st.getRandom(2) == 1 :
-                              st.giveItems(Molar,1)
-                              if Molars == 100 :
-                                  st.playSound("ItemSound.quest_middle")
-                              else :
-                                  st.playSound("ItemSound.quest_itemget")
-                      else :
-                          if st.getRandom(2) == 1 :
-                              giveReward(st,npcId)
-                  else :
-                      if st.getRandom(2) == 1 :
-                          giveReward(st,npcId)
+                      if (st.getRandom(2) == 1 or item == 0) and npcId in Chance_molar.keys() :
+                          item = 57
+                          MAX = 100
+                          drop = Molar
+                          chance = Chance_molar[npcId]
+                          giveReward(st,item,chance,MAX,drop)
+                      elif id == 2 and item != 0 :
+                          giveReward(st,item,chance,MAX,drop)
+                  elif id == 2 and item != 0 :
+                      giveReward(st,item,chance,MAX,drop)
               elif npcId in Varka_Silenos :
                   decreaseAlliance(st)
                   party = st.getPlayer().getParty()
@@ -404,16 +386,12 @@ QUEST.addStartNpc(Naran_Ashanuk)
 
 QUEST.addTalkId(Naran_Ashanuk)
 
-for mobId in Ketra_One :
+for mobId in Chance.keys() :
     QUEST.addKillId(mobId)
-    STARTED.addQuestDrop(Naran_Ashanuk,Ketra_Badge_Soldier,1)
-for mobId in Ketra_Two :
-    QUEST.addKillId(mobId)
-    STARTED.addQuestDrop(Naran_Ashanuk,Ketra_Badge_Officer,1)
-for mobId in Ketra_Three :
-    QUEST.addKillId(mobId)
-    STARTED.addQuestDrop(Naran_Ashanuk,Ketra_Badge_Captain,1)
+STARTED.addQuestDrop(Naran_Ashanuk,Ketra_Badge_Soldier,1)
+STARTED.addQuestDrop(Naran_Ashanuk,Ketra_Badge_Officer,1)
+STARTED.addQuestDrop(Naran_Ashanuk,Ketra_Badge_Captain,1)
 for mobId in Varka_Silenos :
     QUEST.addKillId(mobId)
 
-print "importing quests: 611: Alliance With Varka Silenos" 
+print "importing quests: 611: Alliance With Varka Silenos"
