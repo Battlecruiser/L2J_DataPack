@@ -147,7 +147,7 @@ class Quest (JQuest) :
                item = CHITIN       
             elif cond==2 and npcId in range(21513,21518): #Needle Stakatos
                item = CHITIN2
-            if item and numItems > 1 :
+            if item != 0 and numItems > 1 :
                prevItems = st.getQuestItemsCount(item)
                if count > prevItems :
                    if count <= (prevItems + numItems) : #100 is maximum
