@@ -1,5 +1,6 @@
 # Made by mtrix - v0.2 by DrLecter
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -9,7 +10,7 @@ qn = "343_UnderTheShadowOfTheIvoryTower"
 ORB = 4364
 ECTOPLASM = 4365
 ADENA = 57
-CHANCE = 65
+CHANCE = 50
 RANDOM_REWARDS=[[951,1],   #Enchant Weapon C
                 [955,1],   #Enchant Weapon D
                 [2511,550],#SpiritShot: Grade C
@@ -59,7 +60,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(ECTOPLASM) :
            st.takeItems(ECTOPLASM,1)
            item=RANDOM_REWARDS[st.getRandom(len(RANDOM_REWARDS))]
-           st.giveItems(item[0],item[1])
+           st.giveItems(item[0],int(item[1]*Config.RATE_QUESTS_REWARD))
            htmltext="30835-02a.htm"
      elif event == "30934-02.htm" :
         if orbs < 10 :
@@ -204,6 +205,8 @@ QUEST.addStartNpc(30834)
 
 QUEST.addTalkId(30834)
 QUEST.addTalkId(30835)
+QUEST.addTalkId(30935)
+QUEST.addTalkId(30934)
 
 for i in range(20563,20567) :
     QUEST.addKillId(i)

@@ -147,13 +147,15 @@ class Quest (JQuest) :
                item = CHITIN       
             elif cond==2 and npcId in range(21513,21518): #Needle Stakatos
                item = CHITIN2
-            if item :
+            if item and numItems > 1 :
                prevItems = st.getQuestItemsCount(item)
-               if count <= (prevItems + numItems) : #100 is maximum
-                   numItems = count - prevItems
-               else :
-                   st.playSound("ItemSound.quest_itemget")
-               st.giveItems(item,int(numItems))
+               if count > prevItems :
+                   if count <= (prevItems + numItems) : #100 is maximum
+                       numItems = count - prevItems
+                       st.playSound("ItemSound.quest_middle")
+                   else :
+                       st.playSound("ItemSound.quest_itemget")
+                   st.giveItems(item,int(numItems))
    return
            
 QUEST       = Quest(628,qn,"Hunt of the Golden Ram Mercenary Force")
