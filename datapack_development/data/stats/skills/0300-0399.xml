@@ -1343,8 +1343,10 @@
   </for>
 </skill>
 <skill id="355" levels="1" name="Focus Death">
-  <!-- WRONG -->
+  <!-- by DJ MELERIX -->
+  <!--  Critical -30%, Blow land rate +60%, Critical Damage from front -30%, Critical Damage from back +90%  -->
   <set name="mpConsume" val="36"/>
+  <set name="weaponsAllowed" val="16"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1356,14 +1358,23 @@
   <set name="hitTime" val="2000"/>
   <set name="buffDuration" val="120000"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="FoC">
       <mul order="0x30" stat="rCrit" val="0.7"/>
+      <!-- Missing Blow land rate +60% -->
+      <!-- Missing Critical Damage from front -30% -->
+      <mul order="0x30" stat="cAtk" val="1.9"> <!-- Critical Damage from back +90% -->
+        <and>
+          <player behind="true"/>
+        </and>
+      </mul>
     </effect>
   </for>
 </skill>
 <skill id="356" levels="1" name="Focus Chance">
-  <!-- WRONG -->
+  <!-- by DJ MELERIX -->
+  <!-- Critical Chance from front -30%, Critical Chance from side +30%, Critical Chance from back +60% -->
   <set name="mpConsume" val="36"/>
+  <set name="weaponsAllowed" val="16"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1375,11 +1386,22 @@
   <set name="hitTime" val="2000"/>
   <set name="buffDuration" val="120000"/>
   <for>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="FoC">
+      <!-- Missing Critical Chance from front -30% -->
+      <!-- Missing Critical Chance from side +30% -->
+      <mul order="0x30" stat="rCrit" val="1.6"> <!-- Critical Chance from back +60% -->
+        <and>
+          <player behind="true"/>
+        </and>
+      </mul>
+    </effect>
   </for>
 </skill>
 <skill id="357" levels="1" name="Focus Power">
-  <!-- WRONG -->
+  <!-- by DJ MELERIX -->
+  <!-- Critical Damage from front -30%, Critical Damage from side +30%, Critical Damage from back +60% -->
   <set name="mpConsume" val="36"/>
+  <set name="weaponsAllowed" val="16"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1391,6 +1413,15 @@
   <set name="hitTime" val="2000"/>
   <set name="buffDuration" val="120000"/>
   <for>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="FoC">
+      <!-- Missing Critical Damage from front -30% -->
+      <!-- Missing Critical Damage from side +30% -->
+      <mul order="0x30" stat="cAtk" val="1.6"> <!-- Critical Damage from back +60% -->
+        <and>
+          <player behind="true"/>
+        </and>
+      </mul>
+    </effect>
   </for>
 </skill>
 <skill id="358" levels="1" name="Bluff">
@@ -1980,8 +2011,6 @@
   </for>
 </skill>
 <skill id="395" levels="1" name="Heroic Miracle">
-  <!-- Instantly and significantly increases P.Def., M.Def., and resistance to buff canceling attacks as well as increases Speed. An equipped shield is required in order to use this skill. Consumes 40 Soul Ores. Effect 3. -->
-  <!-- P.Def. +5400, M.Def. +4050, Speed +5, Cancel resistance +??, requires Shield to function -->
   <set name="mpConsume" val="72"/>
   <set name="itemConsumeId" val="1785"/>
   <set name="itemConsumeCount" val="40"/>
@@ -1989,9 +2018,10 @@
   <set name="skillTime" val="1000"/>
   <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="1200000"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -2011,17 +2041,16 @@
   </for>
 </skill>
 <skill id="396" levels="1" name="Heroic Berserker">
-  <!-- Temporarily yet significantly increases Accuracy, P. Atk., M. Atk., Atk. Spd., Casting Spd., Speed, resistance to buff canceling attacks and debuff attacks, and the effects of HP regeneration magic. Significantly decreases P. Def., M. Def., and Evasion while the effect lasts. Consumes 40 Soul Ores. -->
-  <!-- Accuracy +8, Evasion -8, P.Atk. +500, M.Atk. +500, P.Def. -25%, M.Def. -25%, Atk. Speed +100, Casting Spd. +100, Speed +20, Cancel/Debuff resistance +??, Heals are ??% more effective -->
   <set name="mpConsume" val="72"/>
   <set name="itemConsumeId" val="1785"/>
   <set name="itemConsumeCount" val="40"/>
   <set name="skillTime" val="1000"/>
   <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="1200000"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -2037,8 +2066,7 @@
       <add order="0x40" stat="runSpd" val="20"/>
       <mul order="0x30" stat="pDef" val="0.75"/>
       <sub order="0x40" stat="mDef" val="25"/> <!-- possibly -25% mDef -->
-      <!--mul order="0x30" stat="gainHp" val="1.10"/-->
-      <!-- Missing Cancel/Debuff resistance +??, Heals are ??% more effective  (custom value)-->
+      <!-- Missing Cancel/Debuff resistance +??, Heals are ??% more effective  (custom value) -->
     </effect>
   </for>
 </skill>

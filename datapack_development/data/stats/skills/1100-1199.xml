@@ -57,7 +57,7 @@
   <table name="#mpConsume_Init"> 7 9 12 15 18 20 </table>
   <table name="#mpConsume"> 27 36 47 55 71 78 </table>
   <table name="#magicLvl"> 25 35 44 52 64 70 </table>
-  <table name="#dmg"> 22 44 66 88 110 132 </table>
+  <table name="#dmg"> 4 5 7 8 10 11 </table>
   <table name="#power"> 16 22 29 36 46 51 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -77,7 +77,7 @@
   <set name="effectRange" val="1100"/>
   <set name="effectPower" val="80"/>
   <for>
-    <effect count="15" name="ManaDamOverTime" time="5" val="#dmg"/>
+    <effect count="6" name="ManaDamOverTime" time="5" val="#dmg"/>
   </for>
 </skill>
 <skill id="1104" levels="14" name="Seal of Winter" enchantLevels1="30" enchantLevels2="30" >

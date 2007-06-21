@@ -1562,7 +1562,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-   <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="detect_weakness">
+   <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="detect_weakness">
      <mul order="0x30" stat="pAtk-insects" val="1.2"/>
        <target kind="insect"/>
    </effect>
@@ -1578,7 +1578,7 @@
   <set name="skillTime" val="2000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="90000"/>
+  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
@@ -1655,7 +1655,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-   <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="detect_weakness">
+   <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="detect_weakness">
       <mul order="0x30" stat="pAtk-monsters" val="1.2"/>
       <target kind="monster"/>
    </effect>
@@ -1723,7 +1723,7 @@
   <set name="skillTime" val="2000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="90000"/>
+  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
@@ -1837,7 +1837,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="detect_weakness">
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="detect_weakness">
       <mul order="0x30" stat="pAtk-animals" val="1.2"/>
       <target kind="animal"/>
     </effect>
@@ -1856,7 +1856,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="detect_weakness">
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="detect_weakness">
       <mul order="0x30" stat="pAtk-dragons" val="1.2"/>
       <target kind="dragon"/>
     </effect>

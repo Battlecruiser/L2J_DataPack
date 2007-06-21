@@ -906,7 +906,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="5" name="ManaDamOverTime" time="2" val="46">
+    <effect count="6" name="ManaDamOverTime" time="5" val="24">
       <sub order="0x40" stat="cancelRes" val="30"/>
       <mul order="0x30" stat="MpConsumeRate" val="1.30"/>
       <sub order="0x40" stat="sleepRes" val="30"/>
@@ -1698,7 +1698,7 @@
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="12000"/>
+  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
@@ -1816,11 +1816,12 @@
   <set name="mpConsume" val="289"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="80"/>
+  <set name="power" val="80"/>
   <set name="hitTime" val="2500"/>
   <set name="skillTime" val="2500"/>
   <set name="reuseDelay" val="1200000"/>
   <set name="target" val="TARGET_ALLY"/>
-  <set name="skillRadius" val="400"/>
+  <set name="skillRadius" val="1000"/> <!-- not sure -->
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -1844,7 +1845,7 @@
   <set name="hitTime" val="2500"/>
   <set name="skillTime" val="2500"/>
   <set name="reuseDelay" val="1200000"/>
-  <set name="target" val="TARGET_AREA"/>
+  <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1857,12 +1858,15 @@
       <mul order="0x30" stat="pDef" val="0.5"/>
       <sub order="0x40" stat="rEvas" val="16"/>
       <mul order="0x30" stat="rShld" val="0.5"/>
+      <!-- increases the chance of negating the effects of magical damage -->
     </effect>
+	<effect count="1" name="SilenceMagicPhysical" time="30" val="0"/>
   </for>
 </skill>
 <skill id="1376" levels="1" name="Heroic Dread">
 <!-- Done by KID -->
   <set name="mpConsume" val="109"/>
+  <set name="save" val="2"/>
   <set name="power" val="80"/>
   <set name="magicLvl" val="78"/>
   <set name="lvlDepend" val="1"/> 
@@ -1873,7 +1877,7 @@
   <set name="reuseDelay" val="1200000"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
-  <set name="skillType" val="FEAR"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1954,7 +1958,7 @@
   <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="21000"/>
   <set name="skillTime" val="6000"/>
-  <set name="target" val="TARGET_AURA"/>
+  <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="230"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
