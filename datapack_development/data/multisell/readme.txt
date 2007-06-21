@@ -36,6 +36,7 @@ of this directory a little bit.
 7897.xml -> Quest 351: BlackSwan, exchange Bills
 
 310922001.xml -> Seven Signs - Black Marketeer of Mammon - SA Removal for AA
+310922002.xml -> Seven Signs - Black Marketeer of Mammon - Black Market Items
 311352501.xml -> Seven Signs - Merchant of Mammons - Buy Etc Items
 311262501.xml -> Seven Signs - Blacksmith of Mammon - SA: S-Grade
 311262502.xml -> Seven Signs - Blacksmith of Mammons - A-grade duals
