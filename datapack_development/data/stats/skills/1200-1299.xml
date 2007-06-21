@@ -166,7 +166,7 @@
   <set name="skillType" val="ROOT"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="3000"/>
+  <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <enchant1 name="power" val="#ench1Power"/>
@@ -200,7 +200,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="10" name="DamOverTime" time="3" val="#dmg"/>
+    <effect count="6" name="DamOverTime" time="5" val="#dmg"/>
   </for>
 </skill>
 <skill id="1210" levels="4" name="Seal of Gloom">
@@ -208,7 +208,7 @@
   <table name="#mpConsume_Init"> 18 21 27 30 </table>
   <table name="#mpConsume"> 70 84 107 120 </table>
   <table name="#magicLvl"> 44 52 64 72 </table>
-  <table name="#dmg"> 77 94 111 128 </table>
+  <table name="#dmg"> 7 8 10 12 </table>
   <table name="#power"> 29 36 46 53 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -228,7 +228,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="15" name="ManaDamOverTime" time="1" val="#dmg"/>
+    <effect count="6" name="ManaDamOverTime" time="5" val="#dmg"/>
   </for>
 </skill>
 <skill id="1213" levels="13" name="Seal of Mirage">
@@ -1370,7 +1370,7 @@
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="12000"/>
+  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <enchant1 name="power" val="#ench1Power"/>
@@ -1414,7 +1414,7 @@
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="12000"/>
+  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <enchant1 name="power" val="#ench1Power"/>
@@ -2313,6 +2313,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <cond>
+    <!-- need core support for <player mp="25"/> -->
     <player hp="25"/>
   </cond>
   <for>
