@@ -11,25 +11,25 @@ qn = "606_WarWithVarkaSilenos"
 Kadun = 31370
 
 #Mobs
-Ketra_Orcs = [ 21324, 21325, 21327, 21328, 21329, 21331, 21332, 21334, 21335, \
-21336, 21338, 21339, 21340, 21342, 21343, 21344, 21345, 21346, 21347, 21348, 21349 ]
+Varka_Mobs = [ 21350, 21353, 21354, 21355, 21357, 21358, 21360, 21362, 21364, 21365, 21366, 21368, 21369, 21371, 21373 ]
+Ketra_Orcs = [ 21324, 21325, 21327, 21328, 21329, 21331, 21332, 21334, 21335, 21336, 21338, 21339, 21340, 21342, 21343, 21344, 21345, 21346, 21347, 21348, 21349 ]
 
 Chance = {
-  21366:664,#General
-  21365:568,#Great Magus
-  21368:568,#Great Seer
-  21354:522,#Hunter
-  21360:539,#Medium
-  21362:568,#Officer
-  21357:529,#Priest
   21350:500,#Recruit
   21353:510,#Scout
-  21364:558,#Seer
+  21354:522,#Hunter
   21355:519,#Shaman
-  21358:529,#Warrior
+  21357:529,#Priest
+  21358:529,#Warrior  
+  21360:539,#Medium
+  21362:568,#Officer
+  21364:558,#Seer
+  21365:568,#Great Magus
+  21366:664,#General
+  21368:568,#Great Seer
   21369:548,#Commander
   21371:713,#Head magus
-  21373:738#Prophet
+  21373:738 #Prophet
 }
 
 #Items
@@ -125,9 +125,11 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Kadun)
 QUEST.addTalkId(Kadun)
 
-for mobId in Chance.keys() :
+for mobId in Varka_Mobs :
   QUEST.addKillId(mobId)
+
 STARTED.addQuestDrop(Kadun,Mane,1)
+
 for mobId in Ketra_Orcs :
   QUEST.addKillId(mobId)
 
