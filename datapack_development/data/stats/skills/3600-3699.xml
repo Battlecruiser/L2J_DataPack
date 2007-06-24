@@ -201,212 +201,226 @@ Description(s):
 </skill>
 <skill id="3611" levels="1" name="Enchant Heavy Armor (Grade D)">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases P. Def. and MP regeneration by enchanting set items.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+      <add order="0x40" stat="pDef" val="25"/>
+      <add order="0x40" stat="regMp" val="2"/> 
   </for>
-</skill>
-<skill id="3612" levels="1" name="Enchant Light Armor (Grade D)">
+</skill><skill id="3612" levels="1" name="Enchant Light Armor (Grade D)">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases M. Def. and Evasion by enchanting set items.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="rEvas" val="2"/>
+    <add order="0x40" stat="mDef" val="12"/>
   </for>
 </skill>
 <skill id="3613" levels="1" name="Enchant Robe (Grade D)">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases P. Def. and weight capacity by enchanting set items.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="pDef" val="16"/>
+    <mul order="0x30" stat="maxLoad" val="1.3"/>
   </for>
 </skill>
 <skill id="3614" levels="1" name="Enchant Heavy Armor (Grade C)">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases P. Def. and MP regeneration by enchanting set items.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+      <add order="0x40" stat="pDef" val="38"/>
+      <add order="0x40" stat="regMp" val="2"/> 
   </for>
 </skill>
 <skill id="3615" levels="1" name="Enchant Light Armor (Grade C)">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases M. Def. and Evasion by enchanting set items.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="rEvas" val="2"/>
+    <add order="0x40" stat="mDef" val="20"/>
   </for>
 </skill>
 <skill id="3616" levels="1" name="Enchant Robe (Grade C)">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases P. Def. and weight capacity by enchanting set items.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="pDef" val="24"/>
+    <mul order="0x30" stat="maxLoad" val="1.3"/>
   </for>
 </skill>
 <skill id="3617" levels="1" name="Enchant Heavy Armor (Grade B)">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases P. Def. and MP regeneration by enchanting set items.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+      <add order="0x40" stat="pDef" val="44"/>
+      <add order="0x40" stat="regMp" val="2"/> 
   </for>
 </skill>
 <skill id="3618" levels="1" name="Enchant Light Armor (Grade B)">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases M. Def. and Evasion by enchanting set items.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="rEvas" val="2"/>
+    <add order="0x40" stat="mDef" val="24"/>
   </for>
 </skill>
 <skill id="3619" levels="1" name="Enchant Robe (Grade B)">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases P. Def. and weight capacity by enchanting set items.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="pDef" val="28"/>
+    <mul order="0x30" stat="maxLoad" val="1.3"/>
   </for>
 </skill>
 <skill id="3620" levels="1" name="Enchant Heavy Armor (Grade A)">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases P. Def. and MP regeneration by enchanting set items.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+      <add order="0x40" stat="pDef" val="50"/>
+      <add order="0x40" stat="regMp" val="2"/> 
   </for>
 </skill>
 <skill id="3621" levels="1" name="Enchant Light Armor (Grade A)">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases M. Def. and Evasion by enchanting set items.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="rEvas" val="2"/>
+    <add order="0x40" stat="mDef" val="28"/>
   </for>
 </skill>
 <skill id="3622" levels="1" name="Enchant Robe (Grade A)">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases P. Def. and weight capacity by enchanting set items.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="pDef" val="32"/>
+    <mul order="0x30" stat="maxLoad" val="1.3"/>
   </for>
 </skill>
 <skill id="3623" levels="1" name="Enchant Heavy Armor (Grade S)">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases P. Def. and MP regeneration by enchanting set items.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+      <add order="0x40" stat="pDef" val="56"/>
+      <add order="0x40" stat="regMp" val="2"/> 
   </for>
 </skill>
 <skill id="3624" levels="1" name="Enchant Light Armor (Grade S)">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases M. Def. and Evasion by enchanting set items.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="rEvas" val="2"/>
+    <add order="0x40" stat="mDef" val="32"/>
   </for>
 </skill>
 <skill id="3625" levels="1" name="Enchant Robe (Grade S)">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases P. Def. and weight capacity by enchanting set items.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="pDef" val="36"/>
+    <mul order="0x30" stat="maxLoad" val="1.3"/>
   </for>
 </skill>
 <skill id="3626" levels="1" name="Kabokula">
