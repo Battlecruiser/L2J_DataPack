@@ -322,9 +322,9 @@ class Quest (JQuest) :
           if st.getQuestItemsCount(Proof_Aspiration):                  # if he has the proof already, tell him what to do now
             htmltext = "30760-03.htm"
             st.exitQuest(1)
-          elif clanLevel > 3:                              # if clanLevel > 3 you can take this quest, because repeatable
+          elif clanLevel == 4:                     # if clanLevel == 4 you can take this quest, because repeatable
             htmltext = "30760-04.htm"
-          else:                                    # if clanLevel < 4 you cant take it
+          else:                                    # if clanLevel is too low or too high you cant take it
             htmltext = "30760-02.htm"
             st.exitQuest(1)
         else:                                      # player isnt a leader
@@ -334,7 +334,7 @@ class Quest (JQuest) :
         htmltext = "30760-01.htm"
         st.exitQuest(1)
       return htmltext
-    elif st.getPlayer().getClan() and st.getPlayer().getClan().getLevel() == 5:        # player has level 5 clan already
+    elif st.getPlayer().getClan() and st.getPlayer().getClan().getLevel() >= 5:        # player has level 5 clan already
       return "<html><head><body>This quest has already been completed.</body></html>"
     elif id == COMPLETED:                                  # player has proof, and has finished quest as leader
       return "<html><head><body>This quest has already been completed.</body></html>"
