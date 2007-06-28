@@ -9,7 +9,8 @@ __all__ = [
 '1630_PaganTeleporters',
 '2000_NoblesseTeleport',
 '2211_HuntingGroundsTeleport',
-'2400_toivortex_exit'
+'2400_toivortex_exit',
+'6111_ElrokiTeleporters'
 ]
 print ""
 print "importing teleport data ..."
