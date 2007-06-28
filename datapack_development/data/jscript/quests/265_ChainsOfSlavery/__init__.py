@@ -34,11 +34,11 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
    if st.getInt("cond")==0 :
-     if st.getPlayer().getRace().ordinal() != 2 :
+     if player.getRace().ordinal() != 2 :
        htmltext = "30357-00.htm"
        st.exitQuest(1)
      else :
-       if st.getPlayer().getLevel()<6 :
+       if player.getLevel()<6 :
           htmltext = "30357-01.htm"
           st.exitQuest(1)
        else:

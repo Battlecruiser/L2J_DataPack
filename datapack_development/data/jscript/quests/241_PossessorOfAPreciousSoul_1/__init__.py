@@ -147,15 +147,15 @@ class Quest (JQuest) :
    if npcId != TALIEN and id != STARTED : return htmltext
    cond = st.getInt("cond")
    id = st.getState()
-   if st.getPlayer().isSubClassActive() :
+   if player.isSubClassActive() :
      if npcId == TALIEN :
        if cond == 0 :
          if id == COMPLETED :
            htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-         elif st.getPlayer().getLevel() < 50 : 
+         elif player.getLevel() < 50 : 
            htmltext = "31739-2.htm"
            st.exitQuest(1)
-         elif st.getPlayer().getLevel() >= 50 :
+         elif player.getLevel() >= 50 :
            htmltext = "31739-1.htm"
        elif cond == 1 :
          htmltext = "31739-5.htm"

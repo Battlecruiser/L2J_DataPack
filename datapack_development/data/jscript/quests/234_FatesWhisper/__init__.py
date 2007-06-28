@@ -133,7 +133,7 @@ class Quest (JQuest) :
     
     # first time when a player join the quest
     if id == CREATED:
-      if st.getPlayer().getLevel() >= 75:
+      if player.getLevel() >= 75:
         htmltext = "31002-02.htm"
       else:
         htmltext = "31002-01.htm"
@@ -265,7 +265,7 @@ class Quest (JQuest) :
     npcId = npc.getNpcId()
     value,dummy,dropId,chance = DROPLIST[npcId]
     if value == st.getInt("cond") and npcId==29020 :
-      if st.getPlayer().getActiveWeaponItem() and st.getPlayer().getActiveWeaponItem().getItemId() == PIPETTE_KNIFE and st.getRandom(100)<chance and st.getQuestItemsCount(dropId) == 0:
+      if player.getActiveWeaponItem() and player.getActiveWeaponItem().getItemId() == PIPETTE_KNIFE and st.getRandom(100)<chance and st.getQuestItemsCount(dropId) == 0:
         st.giveItems(dropId,1)
         st.takeItems(PIPETTE_KNIFE,1)
         st.playSound("Itemsound.quest_itemget")

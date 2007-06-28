@@ -93,9 +93,9 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("phase","0")
      if npcId == NPC[3]:
-          if st.getPlayer().getClassId().getId() in [ 0x07, 0x16, 0x23, 0x36] :
-           if st.getPlayer().getLevel() > 38 :
-            if st.getPlayer().getClassId().getId() == 0x36 :
+          if player.getClassId().getId() in [ 0x07, 0x16, 0x23, 0x36] :
+           if player.getLevel() > 38 :
+            if player.getClassId().getId() == 0x36 :
               htmltext = "30690-04.htm"
             else:
               htmltext = "30690-03.htm"

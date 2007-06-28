@@ -111,12 +111,12 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("step","0")
    if npcId == 30624 and st.getInt("step") == 0 :
-        if st.getPlayer().getClassId().getId() in [0x01, 0x2d] and st.getPlayer().getLevel() > 38 :
-          if st.getPlayer().getClassId().getId() == 0x01 :
+        if player.getClassId().getId() in [0x01, 0x2d] and player.getLevel() > 38 :
+          if player.getClassId().getId() == 0x01 :
             htmltext = "30624-03.htm"
           else:
             htmltext = "30624-04.htm"
-        elif st.getPlayer().getClassId().getId() in [0x01, 0x2d] :
+        elif player.getClassId().getId() in [0x01, 0x2d] :
           htmltext = "30624-02.htm"
         else:
           htmltext = "30624-01.htm"

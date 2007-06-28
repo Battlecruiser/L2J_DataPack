@@ -59,7 +59,7 @@ class Quest (JQuest) :
     if npcId == LADD :
         if id == CREATED :
             st.set("cond","0")
-            if st.getPlayer().getLevel() < MINLEVEL :
+            if player.getLevel() < MINLEVEL :
                 st.exitQuest(1)
                 htmltext = "30166-01.htm"     #not qualified
             elif not st.getQuestItemsCount(STAR_OF_DESTINY) :

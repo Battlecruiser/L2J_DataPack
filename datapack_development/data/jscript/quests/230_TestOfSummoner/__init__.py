@@ -201,8 +201,8 @@ class Quest (JQuest) :
       if id == CREATED and npcId == Galatea:    # start part, Galatea
          for var in STATS:
             st.set(var,"0")
-         if st.getPlayer().getClassId().getId() in [0x0b, 0x1a, 0x27]:
-            if st.getPlayer().getLevel() > 38:  # conditions are ok, lets start
+         if player.getClassId().getId() in [0x0b, 0x1a, 0x27]:
+            if player.getLevel() > 38:  # conditions are ok, lets start
                htmltext = "30634-03.htm"
             else:
                htmltext = "30634-02.htm"         # too young.. not now
@@ -262,8 +262,8 @@ class Quest (JQuest) :
                   htmltext = str(npcId)+"-08.htm"
                elif SummonerStat == 3:          # in battle...
                   # this will add the player and his pet to the list of notified objects in onDeath Part
-                  st.addNotifyOfDeath(st.getPlayer())
-                  st.addNotifyOfDeath(st.getPlayer().getPet())
+                  st.addNotifyOfDeath(player)
+                  st.addNotifyOfDeath(player.getPet())
                   htmltext = str(npcId)+"-09.htm"
                elif SummonerStat == 4:          # haha... your summon lose
                   htmltext = str(npcId)+"-05.htm"
@@ -333,7 +333,7 @@ class Quest (JQuest) :
                if isName != 1:
                   st.takeItems(item,-1)
                isName = 0
-            if attackerCount == 1 and attackerList.contains(st.getPlayer().getPet()):
+            if attackerCount == 1 and attackerList.contains(player.getPet()):
                st.set(var,"6")                        
                st.giveItems(victory,1)       # if he wons without cheating, set stat won and give victory crystal
                st.playSound("Itemsound.quest_middle")

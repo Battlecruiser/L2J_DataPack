@@ -68,15 +68,15 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    if id == CREATED :
      st.set("cond","0")
-   if st.getPlayer().isSubClassActive() :
+   if player.isSubClassActive() :
      if npcId == CARADINE and st.getQuestItemsCount(CARADINE_LETTER_LAST) == 1 :
        if cond in [0,1] :
          if id == COMPLETED :
            htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-         elif st.getPlayer().getLevel() < 75 : 
+         elif player.getLevel() < 75 : 
            htmltext = "31740-2.htm"
            st.exitQuest(1)
-         elif st.getPlayer().getLevel() >= 75 :
+         elif player.getLevel() >= 75 :
            htmltext = "31740-1.htm"
      if npcId == CARADINE and cond == 2 :
          htmltext = "31740-6.htm"

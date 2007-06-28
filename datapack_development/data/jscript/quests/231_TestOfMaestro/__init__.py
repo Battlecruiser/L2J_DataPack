@@ -105,9 +105,9 @@ class Quest (JQuest) :
      if id == COMPLETED :
        htmltext = "<html><head><body>This quest has already been completed.</body></html>"
      elif progress==0 :
-        if st.getPlayer().getClassId().getId() == 0x38 and st.getPlayer().getLevel() > 38 :
+        if player.getClassId().getId() == 0x38 and player.getLevel() > 38 :
           htmltext = "30531-03.htm"
-        elif st.getPlayer().getClassId().getId() == 0x38 :
+        elif player.getClassId().getId() == 0x38 :
           htmltext = "30531-01.htm"
           st.exitQuest(1)
         else:
