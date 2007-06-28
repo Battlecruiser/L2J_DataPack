@@ -141,10 +141,10 @@ class Quest (JQuest) :
      st.set("id","0")
    if npcId == 30460 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
         if st.getInt("cond") < 15 :
-          if st.getPlayer().getRace().ordinal() != 1 :
+          if player.getRace().ordinal() != 1 :
             htmltext = "30460-01.htm"
           else:
-            if st.getPlayer().getLevel() < 37 :
+            if player.getLevel() < 37 :
               htmltext = "30460-02.htm"
               st.exitQuest(1)
             else:
@@ -200,7 +200,7 @@ class Quest (JQuest) :
    elif npcId == 30371 and st.getInt("cond")==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(STARDUST_ID) :
         htmltext = "30371-09.htm"
    elif npcId == 30371 and st.getInt("cond")==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID) and st.getQuestItemsCount(THALIAS_INSTRUCTIONS_ID) :
-        if st.getPlayer().getLevel() < 38 :
+        if player.getLevel() < 38 :
           htmltext = "30371-12.htm"
         else:
           htmltext = "30371-13.htm"

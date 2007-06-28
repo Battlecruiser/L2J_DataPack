@@ -251,8 +251,8 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 30461 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
-     if st.getPlayer().getClassId().getId() == 0x0b or st.getPlayer().getClassId().getId() == 0x1a or st.getPlayer().getClassId().getId() == 0x27 :
-       if st.getPlayer().getLevel() >= 35 :
+     if player.getClassId().getId() in [0x0b,  0x1a, 0x27] :
+       if player.getLevel() >= 35 :
          htmltext = "30461-03.htm"
        else:
          htmltext = "30461-02.htm"
@@ -275,7 +275,7 @@ class Quest (JQuest) :
    elif npcId == 30461 and st.getInt("cond")==1 and st.getQuestItemsCount(MIRIENS_SIGIL2_ID)==1 and st.getQuestItemsCount(SYMBOL_OF_JUREK_ID)==1 :
         htmltext = "30461-08.htm"
    elif npcId == 30461 and st.getInt("cond")==1 and st.getQuestItemsCount(MIRIENS_INSTRUCTION_ID)==1 :
-        if st.getPlayer().getLevel()<36 :
+        if player.getLevel()<36 :
           htmltext = "30461-11.htm"
         else:
           htmltext = "30461-12.htm"
