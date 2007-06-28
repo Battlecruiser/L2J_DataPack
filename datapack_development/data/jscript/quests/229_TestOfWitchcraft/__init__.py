@@ -197,12 +197,12 @@ class Quest (JQuest) :
     if id == CREATED:
       for var in STATS:
         st.set(var,"0")
-      if st.getPlayer().getClassId().getId() in [0x0b, 0x04, 0x20] :
-        if st.getPlayer().getLevel() < 39:
+      if player.getClassId().getId() in [0x0b, 0x04, 0x20] :
+        if player.getLevel() < 39:
           htmltext = "30630-02.htm"
           st.exitQuest(1)
         else:
-          if st.getPlayer().getClassId().getId() == 0x0b :
+          if player.getClassId().getId() == 0x0b :
             htmltext = "30630-03.htm"
           else:
             htmltext = "30630-05.htm"

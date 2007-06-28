@@ -89,8 +89,8 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 30118 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
-      if st.getPlayer().getClassId().getId() in [ 0x0f,0x2a ] :
-         if st.getPlayer().getLevel() >= 39 :
+      if player.getClassId().getId() in [ 0x0f,0x2a ] :
+         if player.getLevel() >= 39 :
             htmltext = "30118-03.htm"
          else:
             htmltext = "30118-01.htm"

@@ -36,8 +36,8 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
    if st.getInt("cond")==0 :
-     if st.getPlayer().getRace().ordinal() == 3 :
-       if st.getPlayer().getLevel() > 8 :
+     if player.getRace().ordinal() == 3 :
+       if player.getLevel() > 8 :
          if st.getQuestItemsCount(NECKLACE_OF_VALOR) or st.getQuestItemsCount(NECKLACE_OF_COURAGE) :
            htmltext = "30569-02.htm"
          else :

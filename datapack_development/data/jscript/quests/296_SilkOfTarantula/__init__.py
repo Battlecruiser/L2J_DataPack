@@ -47,7 +47,7 @@ class Quest (JQuest) :
      st.set("cond","0")
    if npcId == 30519 :
      if st.getInt("cond")==0 :
-       if st.getPlayer().getLevel() >= 15 :
+       if player.getLevel() >= 15 :
          if st.getQuestItemsCount(RING_OF_RACCOON)==st.getQuestItemsCount(RING_OF_FIREFLY)==0 :
            htmltext = "30519-08.htm"
          else:

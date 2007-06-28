@@ -167,11 +167,11 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 30104 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
-        if st.getPlayer().getRace().ordinal() != 4 :
+        if player.getRace().ordinal() != 4 :
           htmltext = "30104-01.htm"
           st.exitQuest(1)
         else:
-          if st.getPlayer().getLevel() < 37 :
+          if player.getLevel() < 37 :
             htmltext = "30104-02.htm"
             st.exitQuest(1)
           else:
@@ -184,7 +184,7 @@ class Quest (JQuest) :
         else:
           htmltext = "30104-05.htm"
    elif npcId == 30104 and st.getInt("cond")>=1 and st.getQuestItemsCount(PARMANS_INSTRUCTIONS_ID)==1 :
-        if st.getPlayer().getLevel() < 38 :
+        if player.getLevel() < 38 :
           htmltext = "30104-09.htm"
         else:
           htmltext = "30104-10.htm"

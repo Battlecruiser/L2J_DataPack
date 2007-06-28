@@ -34,10 +34,10 @@ class Quest (JQuest) :
    if id == CREATED :
      st.set("cond","0")
    if npcId == 30571 and st.getInt("cond")==0 :
-      if st.getPlayer().getRace().ordinal() != 3 :
+      if player.getRace().ordinal() != 3 :
         htmltext = "30571-00.htm"
         st.exitQuest(1)
-      elif st.getPlayer().getLevel() < 15 :
+      elif player.getLevel() < 15 :
         htmltext = "30571-01.htm"
         st.exitQuest(1)
       else:

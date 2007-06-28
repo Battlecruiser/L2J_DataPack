@@ -96,14 +96,14 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("cornerstones","0")
    cond = st.getInt("cond")
-   if st.getPlayer().isSubClassActive() :
+   if player.isSubClassActive() :
      if npcId == VIRGIL and cond == 0 and st.getQuestItemsCount(VIRGILS_LETTER) == 1 :
        if id == COMPLETED :
          htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-       elif st.getPlayer().getLevel() < 60 : 
+       elif player.getLevel() < 60 : 
          htmltext = "31742-2.htm"
          st.exitQuest(1)
-       elif st.getPlayer().getLevel() >= 60 :
+       elif player.getLevel() >= 60 :
          htmltext = "31742-1.htm"
      if npcId == VIRGIL and cond == 1 :
        htmltext = "31742-4.htm"
