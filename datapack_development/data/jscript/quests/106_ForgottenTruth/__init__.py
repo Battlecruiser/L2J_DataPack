@@ -37,7 +37,7 @@ class Quest (JQuest) :
    if id == CREATED :                                      # Check if is starting the quest
      st.set("cond","0")
      if player.getRace().ordinal() == 2 :
-       if st.getPlayer().getLevel() >= 10 :
+       if player.getLevel() >= 10 :
          htmltext = "30358-03.htm"
        else:
          htmltext = "30358-02.htm"
@@ -83,7 +83,7 @@ class Quest (JQuest) :
          for item in range(4412,4417) :
                st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))
          st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))
-         if st.getPlayer().getClassId().isMage():
+         if player.getClassId().isMage():
            item = 2509
            qty = 500
          else :

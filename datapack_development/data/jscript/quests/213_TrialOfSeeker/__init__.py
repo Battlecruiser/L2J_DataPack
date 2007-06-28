@@ -100,8 +100,8 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 30106 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
-     if st.getPlayer().getClassId().getId() in [ 0x07, 0x16, 0x23 ] :
-       if st.getPlayer().getLevel() >= 35 :
+     if player.getClassId().getId() in [ 0x07, 0x16, 0x23 ] :
+       if player.getLevel() >= 35 :
          htmltext = "30106-03.htm"
        else:
          htmltext = "30106-02.htm"
@@ -152,7 +152,7 @@ class Quest (JQuest) :
    elif npcId == 30064 and st.getInt("cond")==1 and st.getQuestItemsCount(ANALYSIS_RESULT_ID)==1 :
       htmltext = "30064-15.htm"
    elif npcId == 30064 and st.getInt("cond")==1 and st.getQuestItemsCount(TERYS_ORDER3_ID)==1 :
-      if st.getPlayer().getLevel()<36 :
+      if player.getLevel()<36 :
         htmltext = "30064-20.htm"
       else:
         htmltext = "30064-21.htm"

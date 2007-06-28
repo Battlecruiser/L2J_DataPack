@@ -101,8 +101,8 @@ class Quest (JQuest) :
    cond=st.getInt("cond")
    if id == CREATED :
      if npcId == 30644 :
-        if st.getPlayer().getClassId().ordinal() in [0x01,0x13,0x20,0x2d,0x2f] :
-           if st.getPlayer().getLevel() >= 35 :
+        if player.getClassId().ordinal() in [0x01,0x13,0x20,0x2d,0x2f] :
+           if player.getLevel() >= 35 :
               htmltext = "30644-03.htm"
            else :
               htmltext = "30644-01.htm"
@@ -154,7 +154,7 @@ class Quest (JQuest) :
       st.getPcSpawn().removeAllSpawn()
       st.set("cond","0")
    elif npcId == 30535 and cond == 7 :
-      if st.getPlayer().getLevel() >= 36 :
+      if player.getLevel() >= 36 :
         htmltext = "30535-01.htm"
         st.addRadar(176560,-184969,-3729);
         st.set("cond","8")

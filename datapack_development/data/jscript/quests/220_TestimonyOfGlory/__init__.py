@@ -192,8 +192,8 @@ class Quest (JQuest) :
      st.set("cond","0")
      st.set("id","0")
      if npcId == 30514 :
-       if st.getPlayer().getRace().ordinal() == 3 and st.getPlayer().getClassId().getId() in [ 45, 47, 50 ] :
-         if st.getPlayer().getLevel() >= 37 :
+       if player.getRace().ordinal() == 3 and player.getClassId().getId() in [ 45, 47, 50 ] :
+         if player.getLevel() >= 37 :
            htmltext = "30514-03.htm"
          else:
            htmltext = "30514-01.htm"
@@ -378,7 +378,7 @@ class Quest (JQuest) :
            if st.getQuestItemsCount(CHIANTAS_ORDER1) and st.getQuestItemsCount(SCEPTER_OF_BREKA) and st.getQuestItemsCount(SCEPTER_OF_VUKU) and st.getQuestItemsCount(SCEPTER_OF_TUREK) and st.getQuestItemsCount(SCEPTER_OF_TUNATH) and st.getQuestItemsCount(SCEPTER_OF_ENKU) :
              htmltext = "30642-05.htm"
            elif st.getQuestItemsCount(CHIANTAS_ORDER2) :
-             if st.getPlayer().getLevel() >= 38 :
+             if player.getLevel() >= 38 :
                htmltext = "30642-09.htm"
                st.giveItems(CHIANTAS_ORDER3,1)
                st.set("cond","6")

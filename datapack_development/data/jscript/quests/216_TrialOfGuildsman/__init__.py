@@ -139,8 +139,8 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 30103 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
-          if st.getPlayer().getClassId().getId() in [0x38, 0x36] :
-            if st.getPlayer().getLevel() < 35 :
+          if player.getClassId().getId() in [0x38, 0x36] :
+            if player.getLevel() < 35 :
               htmltext = "30103-02.htm"
               st.exitQuest(1)
             else:
@@ -196,7 +196,7 @@ class Quest (JQuest) :
    elif npcId == 30688 and st.getInt("cond")>=1 and st.getQuestItemsCount(NORMANS_RECEIPT_ID) == 0 and st.getQuestItemsCount(DUNINGS_INSTRUCTIONS_ID) == 0 and st.getQuestItemsCount(DUNINGS_KEY_ID) == 0 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID)==1 :
         htmltext = "30688-01.htm"
    elif npcId == 30298 and st.getInt("cond")>=1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) and st.getQuestItemsCount(ALLTRANS_RECOMMEND2_ID) :
-        if st.getPlayer().getLevel() < 36 :
+        if player.getLevel() < 36 :
           htmltext = "30298-01.htm"
         else:
           htmltext = "30298-02.htm"
@@ -283,7 +283,7 @@ class Quest (JQuest) :
     st.set("id","0")
     if st.getInt("cond") >= 1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) == 1 and st.getQuestItemsCount(PINTERS_INSTRUCTIONS_ID) == 1 :
      if st.getQuestItemsCount(AMBER_BEAD_ID) < 70 :
-      if st.getRandom(100) < 50 and st.getPlayer().getClassId().getId() == 0x36: #and IsSpoiled() == 1 :
+      if st.getRandom(100) < 50 and player.getClassId().getId() == 0x36: #and IsSpoiled() == 1 :
         st.giveItems(AMBER_BEAD_ID,1)
         st.playSound("Itemsound.quest_itemget")
       if st.getRandom(100) < 50 :

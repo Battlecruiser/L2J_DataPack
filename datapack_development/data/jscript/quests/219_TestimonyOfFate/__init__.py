@@ -106,9 +106,9 @@ class Quest (JQuest) :
      st.set("id","0")
    if npcId == 30476 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
       if st.getInt("cond") < 15 :
-        if st.getPlayer().getRace().ordinal() == 2 and st.getPlayer().getLevel() >= 37 :
+        if player.getRace().ordinal() == 2 and player.getLevel() >= 37 :
           htmltext = "30476-03.htm"
-        elif st.getPlayer().getRace().ordinal() == 2 :
+        elif player.getRace().ordinal() == 2 :
           htmltext = "30476-02.htm"
           st.exitQuest(1)
         else:
@@ -134,13 +134,13 @@ class Quest (JQuest) :
       htmltext = "30476-10.htm"
    elif npcId == 30476 and st.getInt("cond")==1 and st.getQuestItemsCount(REVELATIONS_MANUSCRIPT_ID) :
       htmltext = "30476-11.htm"
-   elif npcId == 30476 and st.getInt("cond")==1 and st.getQuestItemsCount(KAIRAS_INSTRUCTIONS_ID) and st.getPlayer().getLevel()<38 :
+   elif npcId == 30476 and st.getInt("cond")==1 and st.getQuestItemsCount(KAIRAS_INSTRUCTIONS_ID) and player.getLevel()<38 :
       htmltext = "30476-14.htm"
-   elif npcId == 30476 and st.getInt("cond")==1 and st.getQuestItemsCount(KAIRAS_INSTRUCTIONS_ID) and st.getPlayer().getLevel()>=38 :
+   elif npcId == 30476 and st.getInt("cond")==1 and st.getQuestItemsCount(KAIRAS_INSTRUCTIONS_ID) and player.getLevel()>=38 :
       htmltext = "30476-15.htm"
       st.giveItems(KAIRAS_RECOMMEND_ID,1)
       st.takeItems(KAIRAS_INSTRUCTIONS_ID,1)
-   elif npcId == 30476 and st.getInt("cond")==1 and st.getQuestItemsCount(KAIRAS_RECOMMEND_ID) and st.getPlayer().getLevel()>=38 :
+   elif npcId == 30476 and st.getInt("cond")==1 and st.getQuestItemsCount(KAIRAS_RECOMMEND_ID) and player.getLevel()>=38 :
       htmltext = "30476-16.htm"
    elif npcId == 30476 and st.getInt("cond")==1 and st.getQuestItemsCount(PALUS_CHARM_ID) :
       htmltext = "30476-17.htm"

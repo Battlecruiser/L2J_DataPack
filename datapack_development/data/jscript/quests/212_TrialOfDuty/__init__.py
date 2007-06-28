@@ -60,8 +60,8 @@ class Quest (JQuest) :
      st.set("onlyone","0")
      st.set("id","0")
    if npcId == 30109 and cond == 0 and st.getInt("onlyone")==0 :
-      if st.getPlayer().getClassId().ordinal() in [ 0x04, 0x13, 0x20] :
-         if st.getPlayer().getLevel() >= 35 :
+      if player.getClassId().ordinal() in [ 0x04, 0x13, 0x20] :
+         if player.getLevel() >= 35 :
             htmltext = "30109-03.htm"
          else :
             htmltext = "30109-01.htm"
@@ -122,7 +122,7 @@ class Quest (JQuest) :
       st.giveItems(TEAR_OF_CONFESSION,1)
       st.set("cond","7")
    elif npcId == 30655 and cond == 8 :
-      if st.getPlayer().getLevel() >= 36 :
+      if player.getLevel() >= 36 :
         htmltext = "30655-02.htm"
         st.set("cond","9")
       else:
