@@ -13,12 +13,11 @@ class Quest (JQuest) :
    JQuest.__init__(self,id,name,descr)
  
  def onTalk (self,npc,player):
-    st = player.getQuestState(qn)
     npcId = npc.getNpcId()
     if npcId == 32111 :
-        st.getPlayer().teleToLocation(4990,-1879,-3178)
+        player.teleToLocation(4990,-1879,-3178)
     if npcId == 32112 :
-        st.getPlayer().teleToLocation(7557,-5513,-3221)
+        player.teleToLocation(7557,-5513,-3221)
     return
 
 QUEST       = Quest(6111, qn, "Teleports")
