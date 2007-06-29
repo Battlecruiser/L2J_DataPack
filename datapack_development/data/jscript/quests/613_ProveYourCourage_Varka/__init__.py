@@ -76,17 +76,14 @@ class Quest (JQuest) :
     return htmltext
 
  def onKill (self,npc,player):
-    partyMember = self.getRandomPartyMemberState(player,STARTED)
-    if not partyMember : return
-    st = partyMember.getQuestState(qn)
-    if st :
-       giveReward(st,npc)
-       party = st.getPlayer().getParty()
-       if party :
-           for player in party.getPartyMembers().toArray() :
-               pst = player.getQuestState(qn)
-               if pst :
-                   giveReward(pst,npc)
+    partyMembers = [player]
+    party = player.getParty()
+    if party :
+        partyMembers = party.getPartyMembers().toArray()
+    for player in party.getPartyMembers().toArray() :
+        pst = player.getQuestState(qn)
+        if pst :
+            giveReward(pst,npc)
     return
 
 QUEST       = Quest(613,qn,"Prove Your Courage!")
