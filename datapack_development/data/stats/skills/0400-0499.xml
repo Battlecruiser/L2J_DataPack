@@ -688,7 +688,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <add order="0x40" stat="pDef" val="86.5">
+    <add order="0x40" stat="pDef" val="86.9">
       <and>
         <using kind="Heavy"/>
         <not>
@@ -696,16 +696,14 @@
         </not>
       </and>
     </add>
-<!-- need to add Shield defense increase
-    <add order="0x40" stat="sDef" val="?">
+    <mul order="0x30" stat="sDef" val="1.10">
       <and>
         <using kind="Heavy"/>
         <not>
           <using kind="Light,Magic"/>
         </not>
       </and>
-    </add>
--->
+    </mul>
   </for>
 </skill>
 <skill id="430" levels="1" name="Master of Combat">
@@ -726,11 +724,11 @@
         <using kind="Sword,Big Sword,Blunt,Big Blunt,Pole,Dual Sword,Fist,Dual Fist"/>
       </and>
     </add>
-    <add order="0x40" stat="maxCp" val="200">
+    <mul order="0x30" stat="maxCp" val="1.05">
       <and>       
         <using kind="Sword,Big Sword,Blunt,Big Blunt,Pole,Dual Sword,Fist,Dual Fist"/>
       </and>
-    </add>
+    </mul>
   </for>
 </skill>
 <skill id="431" levels="1" name="Archery">
