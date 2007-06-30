@@ -13620,3 +13620,389 @@ INSERT INTO skill_trees VALUES (38,1322,1,'Common Craft',0,1);
 INSERT INTO skill_trees VALUES (44,1322,1,'Common Craft',0,1);
 INSERT INTO skill_trees VALUES (49,1322,1,'Common Craft',0,1);
 INSERT INTO skill_trees VALUES (53,1322,1,'Common Craft',0,1);
+
+
+-- Interlude Skills (Done by DJ MELERIX)
+
+-- Inner Rhythm 428
+/*
+INSERT INTO skill_trees VALUES (100,428,1,'Inner Rhythm',32000000,78); -- Sword Muse --
+INSERT INTO skill_trees VALUES (107,428,1,'Inner Rhythm',32000000,78); -- Spectral Dancer --
+*/
+
+-- Knighthood 429
+INSERT INTO skill_trees VALUES (90,429,1,'Knighthood',21340000,78); -- Phoenix Knight --
+INSERT INTO skill_trees VALUES (91,429,1,'Knighthood',21340000,78); -- Hell Knight --
+INSERT INTO skill_trees VALUES (99,429,1,'Knighthood',21340000,78); -- Evas Templar --
+INSERT INTO skill_trees VALUES (106,429,1,'Knighthood',21340000,78); -- Shillien Templar --
+
+-- Master of Combat 430
+INSERT INTO skill_trees VALUES (89,430,1,'Master of Combat',12800000,78); -- Dreadnought --
+INSERT INTO skill_trees VALUES (113,430,1,'Master of Combat',16000000,78); -- Titan --
+INSERT INTO skill_trees VALUES (114,430,1,'Master of Combat',21340000,78); -- Grand Khavatari --
+INSERT INTO skill_trees VALUES (117,430,1,'Master of Combat',16000000,78); -- Fortune Seeker --
+INSERT INTO skill_trees VALUES (118,430,1,'Master of Combat',16000000,78); -- Maestro --
+INSERT INTO skill_trees VALUES (88,430,1,'Master of Combat',16000000,78); -- Duelist --
+
+-- Archery 431
+INSERT INTO skill_trees VALUES (92,431,1,'Archery',32000000,78); -- Sagittarius --
+INSERT INTO skill_trees VALUES (102,431,1,'Archery',21340000,78); -- Moonlight Sentinel --
+INSERT INTO skill_trees VALUES (109,431,1,'Archery',21340000,78); -- Ghost Sentinel --
+
+-- Assassination 432
+INSERT INTO skill_trees VALUES (93,432,1,'Assassination',16000000,78); -- Adventurer --
+INSERT INTO skill_trees VALUES (101,432,1,'Assassination',16000000,78); -- Wind Rider --
+INSERT INTO skill_trees VALUES (108,432,1,'Assassination',16000000,78); -- Ghost Hunter --
+
+-- Arcane Roar 433
+INSERT INTO skill_trees VALUES (94,433,1,'Arcane Roar',21340000,78); -- Archmage --
+INSERT INTO skill_trees VALUES (103,433,1,'Arcane Roar',21340000,78); -- Mystic Muse --
+INSERT INTO skill_trees VALUES (110,433,1,'Arcane Roar',21340000,78); -- Storm Screamer --
+
+-- Necromancy 434
+INSERT INTO skill_trees VALUES (95,434,1,'Necromancy',16000000,78); -- Soultaker --
+
+-- Summon Lore 435
+INSERT INTO skill_trees VALUES (96,435,1,'Summon Lore',21340000,78); -- Arcana Lord --
+INSERT INTO skill_trees VALUES (104,435,1,'Summon Lore',21340000,78); -- Elemental Master --
+INSERT INTO skill_trees VALUES (111,435,1,'Summon Lore',21340000,78); -- Spectral Master --
+
+-- Divine Lore 436
+INSERT INTO skill_trees VALUES (97,436,1,'Divine Lore',16000000,78); -- Cardinal --
+INSERT INTO skill_trees VALUES (98,436,1,'Divine Lore',21340000,78); -- Hierophant --
+INSERT INTO skill_trees VALUES (105,436,1,'Divine Lore',21340000,78); -- Evas Saint --
+INSERT INTO skill_trees VALUES (112,436,1,'Divine Lore',21340000,78); -- Shillien Saint --
+INSERT INTO skill_trees VALUES (115,436,1,'Divine Lore',16000000,78); -- Dominator --
+INSERT INTO skill_trees VALUES (116,436,1,'Divine Lore',16000000,78); -- Doomcryer --
+
+-- Song of Silence 437
+INSERT INTO skill_trees VALUES (100,437,1,'Song of Silence',80000000,79); -- Sword Muse --
+
+-- Soul of the Phoenix 438
+INSERT INTO skill_trees VALUES (90,438,1,'Soul of the Phoenix',80000000,79); -- Phoenix Knight --
+
+-- Shield of Revenge 439
+/*
+INSERT INTO skill_trees VALUES (91,439,1,'Shield of Revenge',80000000,79); -- Hell Knight --
+*/
+
+-- Braveheart 440
+INSERT INTO skill_trees VALUES (88,440,1,'Braveheart',12800000,78); -- Duelist --
+INSERT INTO skill_trees VALUES (89,440,1,'Braveheart',12800000,78); -- Dreadnought --
+INSERT INTO skill_trees VALUES (113,440,1,'Braveheart',12800000,78); -- Titan --
+INSERT INTO skill_trees VALUES (117,440,1,'Braveheart',12800000,78); -- Fortune Seeker --
+INSERT INTO skill_trees VALUES (118,440,1,'Braveheart',12800000,78); -- Maestro --
+
+-- Force Meditation 441
+/*
+INSERT INTO skill_trees VALUES (114,441,1,'Force Meditation',21340000,78); -- Grand Khavatari --
+*/
+
+-- Sonic Barrier 442
+/*
+INSERT INTO skill_trees VALUES (88,442,1,'Sonic Barrier',80000000,79); -- Duelist --
+*/
+
+-- Force Barrier 443
+/*
+INSERT INTO skill_trees VALUES (114,443,1,'Force Barrier',80000000,79); -- Grand Khavatari --
+*/
+
+-- Mirage 445
+/*
+INSERT INTO skill_trees VALUES (93,445,1,'Mirage',80000000,79); -- Adventurer --
+*/
+
+-- Dodge 446
+/*
+INSERT INTO skill_trees VALUES (101,446,1,'Dodge',80000000,79); -- Wind Rider --
+*/
+
+-- Counterattack 447
+/*
+INSERT INTO skill_trees VALUES (108,447,1,'Counterattack',80000000,79); -- Ghost Hunter --
+*/
+
+-- Summon Swoop Cannon 448
+INSERT INTO skill_trees VALUES (57,448,1,'Summon Swoop Cannon',3300000,68); -- Warsmith --
+
+-- Summon Attractive Cubic 449
+INSERT INTO skill_trees VALUES (20,449,1,'Summon Attractive Cubic',250000,62); -- Temple Knight --
+INSERT INTO skill_trees VALUES (20,449,2,'Summon Attractive Cubic',470000,66); -- Temple Knight --
+INSERT INTO skill_trees VALUES (20,449,3,'Summon Attractive Cubic',580000,70); -- Temple Knight --
+INSERT INTO skill_trees VALUES (20,449,4,'Summon Attractive Cubic',1730000,74); -- Temple Knight --
+
+-- Banish Seraph 450
+/*
+INSERT INTO skill_trees VALUES (6,450,1,'Banish Seraph',138000,55); -- Dark Avenger --
+INSERT INTO skill_trees VALUES (6,450,2,'Banish Seraph',141000,58); -- Dark Avenger --
+INSERT INTO skill_trees VALUES (6,450,3,'Banish Seraph',208000,60); -- Dark Avenger --
+INSERT INTO skill_trees VALUES (6,450,4,'Banish Seraph',250000,62); -- Dark Avenger --
+INSERT INTO skill_trees VALUES (6,450,5,'Banish Seraph',300000,64); -- Dark Avenger --
+INSERT INTO skill_trees VALUES (6,450,6,'Banish Seraph',440000,66); -- Dark Avenger --
+INSERT INTO skill_trees VALUES (6,450,7,'Banish Seraph',520000,68); -- Dark Avenger --
+INSERT INTO skill_trees VALUES (6,450,8,'Banish Seraph',550000,70); -- Dark Avenger --
+INSERT INTO skill_trees VALUES (6,450,9,'Banish Seraph',750000,72); -- Dark Avenger --
+INSERT INTO skill_trees VALUES (6,450,10,'Banish Seraph',1630000,74); -- Dark Avenger --
+INSERT INTO skill_trees VALUES (33,450,1,'Banish Seraph',110000,55); -- Shillien Knight --
+INSERT INTO skill_trees VALUES (33,450,2,'Banish Seraph',120000,58); -- Shillien Knight --
+INSERT INTO skill_trees VALUES (33,450,3,'Banish Seraph',153000,60); -- Shillien Knight --
+INSERT INTO skill_trees VALUES (33,450,4,'Banish Seraph',200000,62); -- Shillien Knight --
+INSERT INTO skill_trees VALUES (33,450,5,'Banish Seraph',240000,64); -- Shillien Knight --
+INSERT INTO skill_trees VALUES (33,450,6,'Banish Seraph',350000,66); -- Shillien Knight --
+INSERT INTO skill_trees VALUES (33,450,7,'Banish Seraph',410000,68); -- Shillien Knight --
+INSERT INTO skill_trees VALUES (33,450,8,'Banish Seraph',470000,70); -- Shillien Knight --
+INSERT INTO skill_trees VALUES (33,450,9,'Banish Seraph',600000,72); -- Shillien Knight --
+INSERT INTO skill_trees VALUES (33,450,10,'Banish Seraph',1300000,74); -- Shillien Knight --
+*/
+
+-- Sonic Move 451
+/*
+INSERT INTO skill_trees VALUES (2,451,1,'Sonic Move',250000,62); -- Gladiator --
+INSERT INTO skill_trees VALUES (2,451,2,'Sonic Move',490000,68); -- Gladiator --
+*/
+
+-- Shock Stomp 452
+INSERT INTO skill_trees VALUES (3,452,1,'Shock Stomp',154000,55); -- Warlord --
+INSERT INTO skill_trees VALUES (3,452,2,'Shock Stomp',290000,60); -- Warlord --
+INSERT INTO skill_trees VALUES (3,452,3,'Shock Stomp',480000,64); -- Warlord --
+INSERT INTO skill_trees VALUES (3,452,4,'Shock Stomp',710000,68); -- Warlord --
+INSERT INTO skill_trees VALUES (3,452,5,'Shock Stomp',1200000,72); -- Warlord --
+
+-- Escape Shackle 453
+INSERT INTO skill_trees VALUES (8,453,1,'Escape Shackle',242000,60); -- Treasure Hunter --
+INSERT INTO skill_trees VALUES (23,453,1,'Escape Shackle',223000,60); -- Plainswalker --
+INSERT INTO skill_trees VALUES (36,453,1,'Escape Shackle',181000,60); -- Abyss Walker --
+
+-- Symbol of Defense 454
+/*
+INSERT INTO skill_trees VALUES (90,454,1,'Symbol of Defense',150000000,80); -- Phoenix Knight --
+INSERT INTO skill_trees VALUES (91,454,1,'Symbol of Defense',150000000,80); -- Hell Knight --
+INSERT INTO skill_trees VALUES (99,454,1,'Symbol of Defense',150000000,80); -- Evas Templar --
+INSERT INTO skill_trees VALUES (106,454,1,'Symbol of Defense',150000000,80); -- Shillien Templar --
+*/
+
+-- Symbol of Noise 455
+/*
+INSERT INTO skill_trees VALUES (100,455,1,'Symbol of Noise',150000000,80); -- Sword Muse --
+INSERT INTO skill_trees VALUES (107,455,1,'Symbol of Noise',150000000,80); -- Spectral Dancer --
+*/
+
+-- Symbol of Resistance 456
+/*
+INSERT INTO skill_trees VALUES (113,456,1,'Symbol of Resistance',150000000,80); -- Titan --
+INSERT INTO skill_trees VALUES (117,456,1,'Symbol of Resistance',150000000,80); -- Fortune Seeker --
+*/
+
+-- Symbol of Honor 457
+/*
+INSERT INTO skill_trees VALUES (89,457,1,'Symbol of Honor',150000000,80); -- Dreadnought --
+INSERT INTO skill_trees VALUES (118,457,1,'Symbol of Honor',150000000,80); -- Maestro --
+*/
+
+-- Symbol of Energy 458
+/*
+INSERT INTO skill_trees VALUES (88,458,1,'Symbol of Energy',150000000,80); -- Duelist --
+INSERT INTO skill_trees VALUES (114,458,1,'Symbol of Energy',150000000,80); -- Grand Khavatari --
+*/
+
+-- Symbol of the Sniper 459
+/*
+INSERT INTO skill_trees VALUES (92,459,1,'Symbol of the Sniper',150000000,80); -- Sagittarius --
+INSERT INTO skill_trees VALUES (102,459,1,'Symbol of the Sniper',150000000,80); -- Moonlight Sentinel --
+INSERT INTO skill_trees VALUES (109,459,1,'Symbol of the Sniper',150000000,80); -- Ghost Sentinel --
+*/
+
+-- Symbol of the Assassin 460
+/*
+INSERT INTO skill_trees VALUES (93,460,1,'Symbol of the Assassin',150000000,80); -- Adventurer --
+INSERT INTO skill_trees VALUES (101,460,1,'Symbol of the Assassin',150000000,80); -- Wind Rider --
+INSERT INTO skill_trees VALUES (108,460,1,'Symbol of the Assassin',150000000,80); -- Ghost Hunter --
+*/
+
+-- Break Duress 461
+/*
+INSERT INTO skill_trees VALUES (48,461,1,'Break Duress',264000,60); -- Tyrant --
+INSERT INTO skill_trees VALUES (48,461,2,'Break Duress',500000,66); -- Tyrant --
+*/
+
+-- Summon Feline King 1406
+INSERT INTO skill_trees VALUES (96,1406,1,'Summon Feline King',80000000,79); -- Arcana Lord --
+
+-- Summon Magnus the Unicorn 1407
+INSERT INTO skill_trees VALUES (104,1407,1,'Summon Magnus the Unicorn',80000000,79); -- Elemental Master --
+
+-- Summon Spectral Lord 1408
+INSERT INTO skill_trees VALUES (111,1408,1,'Summon Spectral Lord',80000000,79); -- Spectral Master --
+
+-- Cleanse 1409
+INSERT INTO skill_trees VALUES (97,1409,1,'Cleanse',16000000,78); -- Cardinal --
+
+-- Salvation 1410
+/*
+INSERT INTO skill_trees VALUES (97,1410,1,'Salvation',80000000,79); -- Cardinal --
+*/
+
+-- Mystic Immunity 1411
+/*
+INSERT INTO skill_trees VALUES (98,1411,1,'Mystic Immunity',80000000,79); -- Hierophant --
+*/
+
+-- Spell Turning 1412
+/*
+INSERT INTO skill_trees VALUES (98,1412,1,'Spell Turning',80000000,79); -- Hierophant --
+*/
+
+-- Magnus' Chant 1413
+INSERT INTO skill_trees VALUES (116,1413,1,'Magnus\' Chant',80000000,79); -- Doomcryer --
+
+-- Victories of Pa'agrio 1414
+INSERT INTO skill_trees VALUES (115,1414,1,'Victories of Pa\'agrio',80000000,79); -- Dominator --
+
+-- Pa'agrio's Emblem 1415
+/*
+INSERT INTO skill_trees VALUES (115,1415,1,'Pa\'agrio\'s Emblem',16000000,78); -- Dominator --
+*/
+
+-- Pa'agrio's Fist 1416
+INSERT INTO skill_trees VALUES (115,1416,1,'Pa\'agrio\'s Fist',80000000,79); -- Dominator --
+
+-- Aura Flash 1417
+/*
+INSERT INTO skill_trees VALUES (12,1417,1,'Aura Flash',129000,58); -- Sorcerer/ss --
+INSERT INTO skill_trees VALUES (12,1417,2,'Aura Flash',220000,62); -- Sorcerer/ss --
+INSERT INTO skill_trees VALUES (12,1417,3,'Aura Flash',370000,66); -- Sorcerer/ss --
+INSERT INTO skill_trees VALUES (12,1417,4,'Aura Flash',520000,70); -- Sorcerer/ss --
+INSERT INTO skill_trees VALUES (12,1417,5,'Aura Flash',1150000,74); -- Sorcerer/ss --
+INSERT INTO skill_trees VALUES (27,1417,1,'Aura Flash',110000,58); -- Spellsinger --
+INSERT INTO skill_trees VALUES (27,1417,2,'Aura Flash',190000,62); -- Spellsinger --
+INSERT INTO skill_trees VALUES (27,1417,3,'Aura Flash',320000,66); -- Spellsinger --
+INSERT INTO skill_trees VALUES (27,1417,4,'Aura Flash',430000,70); -- Spellsinger --
+INSERT INTO skill_trees VALUES (27,1417,5,'Aura Flash',1000000,74); -- Spellsinger --
+INSERT INTO skill_trees VALUES (40,1417,1,'Aura Flash',105000,58); -- Spellhowler --
+INSERT INTO skill_trees VALUES (40,1417,2,'Aura Flash',190000,62); -- Spellhowler --
+INSERT INTO skill_trees VALUES (40,1417,3,'Aura Flash',320000,66); -- Spellhowler --
+INSERT INTO skill_trees VALUES (40,1417,4,'Aura Flash',470000,70); -- Spellhowler --
+INSERT INTO skill_trees VALUES (40,1417,5,'Aura Flash',1000000,74); -- Spellhowler --
+*/
+
+-- Celestial Shield 1418
+/*
+INSERT INTO skill_trees VALUES (16,1418,1,'Celestial Shield',190000,64); -- Bishop --
+*/
+
+-- Volcano 1419
+/*
+INSERT INTO skill_trees VALUES (94,1419,1,'Volcano',150000000,80); -- Archmage --
+*/
+
+-- Cyclone 1420
+/*
+INSERT INTO skill_trees VALUES (110,1420,1,'Cyclone',150000000,80); -- Storm Screamer --
+*/
+
+-- Raging Waves 1421
+/*
+INSERT INTO skill_trees VALUES (103,1421,1,'Raging Waves',150000000,80); -- Mystic Muse --
+*/
+
+-- Day of Doom 1422
+/*
+INSERT INTO skill_trees VALUES (95,1422,1,'Day of Doom',150000000,80); -- Soultaker --
+*/
+
+-- Gehenna 1423
+/*
+INSERT INTO skill_trees VALUES (95,1423,1,'Gehenna',150000000,80); -- Soultaker --
+*/
+
+-- Anti-Summoning Field 1424
+/*
+INSERT INTO skill_trees VALUES (96,1424,1,'Anti-Summoning Field',150000000,80); -- Arcana Lord --
+INSERT INTO skill_trees VALUES (104,1424,1,'Anti-Summoning Field',150000000,80); -- Elemental Master --
+INSERT INTO skill_trees VALUES (111,1424,1,'Anti-Summoning Field',150000000,80); -- Spectral Master --
+*/
+
+-- Purification Field 1425
+/*
+INSERT INTO skill_trees VALUES (97,1425,1,'Purification Field',150000000,80); -- Cardinal --
+*/
+
+-- Miracle 1426
+/*
+INSERT INTO skill_trees VALUES (97,1426,1,'Miracle',150000000,80); -- Cardinal --
+*/
+
+-- Flames of Invincibility 1427
+/*
+INSERT INTO skill_trees VALUES (115,1427,1,'Flames of Invincibility',150000000,80); -- Dominator --
+*/
+
+-- Mass Recharge 1428
+/*
+INSERT INTO skill_trees VALUES (105,1428,1,'Mass Recharge',150000000,80); -- Evas Saint --
+INSERT INTO skill_trees VALUES (112,1428,1,'Mass Recharge',150000000,80); -- Shillien Saint --
+*/
+
+-- Gate Chant 1429
+/*
+INSERT INTO skill_trees VALUES (116,1429,1,'Gate Chant',16000000,78); -- Doomcryer --
+*/
+
+-- Invocation 1430
+/*
+INSERT INTO skill_trees VALUES (16,1430,1,'Invocation',81000,56); -- Bishop --
+INSERT INTO skill_trees VALUES (16,1430,2,'Invocation',120000,60); -- Bishop --
+INSERT INTO skill_trees VALUES (16,1430,3,'Invocation',190000,64); -- Bishop --
+INSERT INTO skill_trees VALUES (16,1430,4,'Invocation',320000,68); -- Bishop --
+INSERT INTO skill_trees VALUES (16,1430,5,'Invocation',650000,72); -- Bishop --
+INSERT INTO skill_trees VALUES (30,1430,1,'Invocation',88000,56); -- Elven Elder --
+INSERT INTO skill_trees VALUES (30,1430,2,'Invocation',150000,60); -- Elven Elder --
+INSERT INTO skill_trees VALUES (30,1430,3,'Invocation',240000,64); -- Elven Elder --
+INSERT INTO skill_trees VALUES (30,1430,4,'Invocation',410000,68); -- Elven Elder --
+INSERT INTO skill_trees VALUES (30,1430,5,'Invocation',750000,72); -- Elven Elder --
+INSERT INTO skill_trees VALUES (43,1430,1,'Invocation',118000,56); -- Shillien Elder --
+INSERT INTO skill_trees VALUES (43,1430,2,'Invocation',200000,60); -- Shillien Elder --
+INSERT INTO skill_trees VALUES (43,1430,3,'Invocation',370000,64); -- Shillien Elder --
+INSERT INTO skill_trees VALUES (43,1430,4,'Invocation',550000,68); -- Shillien Elder --
+INSERT INTO skill_trees VALUES (43,1430,5,'Invocation',1070000,72); -- Shillien Elder --
+*/
+
+-- Battle Force 5104
+/*
+INSERT INTO skill_trees VALUES (89,5104,1,'Battle Force',12250000,77); -- Dreadnought --
+INSERT INTO skill_trees VALUES (88,5104,1,'Battle Force',12250000,77); -- Duelist --
+INSERT INTO skill_trees VALUES (90,5104,1,'Battle Force',13000000,77); -- Phoenix Knight --
+INSERT INTO skill_trees VALUES (91,5104,1,'Battle Force',13000000,77); -- Hell Knight  --
+INSERT INTO skill_trees VALUES (93,5104,1,'Battle Force',14670000,77); -- Adventurer --
+INSERT INTO skill_trees VALUES (92,5104,1,'Battle Force',14670000,77); -- Sagittarius --
+INSERT INTO skill_trees VALUES (99,5104,1,'Battle Force',13000000,77); -- Evas Templar --
+INSERT INTO skill_trees VALUES (100,5104,1,'Battle Force',14670000,77); -- Sword Muse --
+INSERT INTO skill_trees VALUES (101,5104,1,'Battle Force',14670000,77); -- Wind Rider --
+INSERT INTO skill_trees VALUES (102,5104,1,'Battle Force',14670000,77); -- Moonlight Sentinel --
+INSERT INTO skill_trees VALUES (106,5104,1,'Battle Force',13000000,77); -- Shillien Templar --
+INSERT INTO skill_trees VALUES (107,5104,1,'Battle Force',14670000,77); -- Spectral Dancer --
+INSERT INTO skill_trees VALUES (108,5104,1,'Battle Force',14670000,77); -- Ghost Hunter --
+INSERT INTO skill_trees VALUES (109,5104,1,'Battle Force',14670000,77); -- Ghost Sentinel --
+INSERT INTO skill_trees VALUES (113,5104,1,'Battle Force',13000000,77); -- Titan --
+INSERT INTO skill_trees VALUES (114,5104,1,'Battle Force',13000000,77); -- Grand Khavatari --
+INSERT INTO skill_trees VALUES (117,5104,1,'Battle Force',11000000,77); -- Fortune Seeker --
+INSERT INTO skill_trees VALUES (118,5104,1,'Battle Force',12250000,77); -- Maestro --
+*/
+
+-- Spell Force 5105
+/*
+INSERT INTO skill_trees VALUES (94,5105,1,'Spell Force',18000000,77); -- Archmage --
+INSERT INTO skill_trees VALUES (95,5105,1,'Spell Force',11000000,77); -- Soultaker --
+INSERT INTO skill_trees VALUES (96,5105,1,'Spell Force',12250000,77); -- Arcana Lord --
+INSERT INTO skill_trees VALUES (97,5105,1,'Spell Force',11000000,77); -- Cardinal --
+INSERT INTO skill_trees VALUES (98,5105,1,'Spell Force',11000000,77); -- Hierophant --
+INSERT INTO skill_trees VALUES (103,5105,1,'Spell Force',14670000,77); -- Mystic Muse --
+INSERT INTO skill_trees VALUES (104,5105,1,'Spell Force',14670000,77); -- Elemental Master --
+INSERT INTO skill_trees VALUES (105,5105,1,'Spell Force',11000000,77); -- Evas Saint --
+INSERT INTO skill_trees VALUES (110,5105,1,'Spell Force',13000000,77); -- Storm Screamer --
+INSERT INTO skill_trees VALUES (111,5105,1,'Spell Force',12250000,77); -- Spectral Master --
+INSERT INTO skill_trees VALUES (112,5105,1,'Spell Force',13000000,77); -- Shillien Saint --
+INSERT INTO skill_trees VALUES (115,5105,1,'Spell Force',11000000,77); -- Dominator --
+INSERT INTO skill_trees VALUES (116,5105,1,'Spell Force',14670000,77); -- Doomcryer --
+*/
