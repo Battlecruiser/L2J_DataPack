@@ -238,11 +238,12 @@
 </skill>
 <skill id="109" levels="1" name="Ogre Spirit Totem">
   <set name="mpConsume" val="21"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="120000"/>
   <set name="skillTime" val="2000"/>
-  <set name="skillType" val="HEAL_PERCENT"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
