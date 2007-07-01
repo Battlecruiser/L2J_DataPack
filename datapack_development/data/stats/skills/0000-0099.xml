@@ -1662,7 +1662,7 @@
   </for>
 </skill>
 <skill id="81" levels="3" name="Punch of Doom" enchantLevels1="30" enchantLevels2="30" >
-  <table name="#ench2MpConsume"> 493 488 484 479 474 470 465 461 456 451 447 442 438 433 429 424 419 415 410 406 401 396 392 387 383 378 374 369 364 360 </table>
+  <table name="#ench2HpConsume"> 493 488 484 479 474 470 465 461 456 451 447 442 438 433 429 424 419 415 410 406 401 396 392 387 383 378 374 369 364 360 </table>
   <table name="#magicLvl"> 55 64 74 </table>
   <table name="#hpConsume"> 399 455 499 </table>
   <table name="#power"> 4580.0 6332.0 9132.0 </table>
@@ -1686,7 +1686,7 @@
   <set name="effectType" val="STUN"/>
   <set name="effectPower" val="80"/>
   <enchant1 name="power" val="#ench1Power"/>
-  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
+  <enchant2 name="hpConsume" val="#ench2HpConsume"/>
   <for>
     <effect count="1" name="StunSelf" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
