@@ -35,7 +35,7 @@ class Quest (JQuest) :
        st.giveItems(DARINGS_LETTER,1) 
    return htmltext 
 
- def onTalk (Self,npc,player):
+ def onTalk (self,npc,player):
    st = player.getQuestState(qn)
    htmltext = "<html><head><body>I have nothing to say you</body></html>" 
    if not st: return htmltext

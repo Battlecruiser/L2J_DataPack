@@ -60,7 +60,7 @@ class Quest (JQuest) :
      npcId = npc.getNpcId()
      id = st.getState()
      if npcId != 30970 and id != STARTED : return htmltext
-     level = st.getPlayer().getLevel()
+     level = player.getLevel()
      cond = st.getInt("cond")
      amount = st.getQuestItemsCount(USELESS_BONE_PIECES)
      if npcId==30970 :

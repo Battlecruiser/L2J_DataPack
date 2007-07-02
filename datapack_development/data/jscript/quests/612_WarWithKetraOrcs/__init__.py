@@ -70,7 +70,7 @@ class Quest (JQuest) :
          st.exitQuest(1)
      return htmltext
 
- def onTalk (Self,npc,player):
+ def onTalk (self,npc,player):
      st = player.getQuestState(qn)
      htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
      if st :
@@ -78,7 +78,7 @@ class Quest (JQuest) :
          id = st.getInt("id")
          cond = st.getInt("cond")
          Molars = st.getQuestItemsCount(Molar)
-         if npcId == Ashas and st.getPlayer().getAllianceWithVarkaKetra() <= -1 : #the alliance check is only temporary, should be done on core side/AI
+         if npcId == Ashas and player.getAllianceWithVarkaKetra() <= -1 : #the alliance check is only temporary, should be done on core side/AI
              if id == 1 :
                  if Molars :
                      htmltext = "31377-04.htm"
@@ -94,8 +94,8 @@ class Quest (JQuest) :
      st = partyMember.getQuestState(qn)
      npcId = npc.getNpcId()
      count = st.getQuestItemsCount(Molar)
-     st2 = st.getPlayer().getQuestState("611_AllianceWithVarkaSilenos")
-     if npcId in Ketra_Orcs and st.getPlayer().getAllianceWithVarkaKetra() <= -1 :
+     st2 = partyMember.getQuestState("611_AllianceWithVarkaSilenos")
+     if npcId in Ketra_Orcs and partyMember.getAllianceWithVarkaKetra() <= -1 :
     #see comments in 611 : Alliance with Varka Silenos for reason for doing st2 check
        if not st2 :
          numItems,chance = divmod(Chance[npcId]*Config.RATE_DROP_QUEST,1000)

@@ -52,7 +52,7 @@ class Quest (JQuest) :
    cond=st.getInt("cond")
    jade = st.getQuestItemsCount(JADE_CRYSTAL)
    if cond == 0 :
-     if st.getPlayer().getLevel() >= 47 :
+     if player.getLevel() >= 47 :
        htmltext = "30686-0.htm"
      else:
        htmltext = "30686-0a.htm"

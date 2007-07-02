@@ -53,7 +53,7 @@ class Quest (JQuest) :
         htmltext=None
     return htmltext
 
- def onTalk (Self,npc,player):
+ def onTalk (self,npc,player):
    st = player.getQuestState(qn)
    htmltext = "<html><head><body>I have nothing to say you!</body></html>"
    if not st : return htmltext
@@ -61,7 +61,7 @@ class Quest (JQuest) :
    id = st.getState()
    cond=st.getInt("cond")
    if npcId == SUKI and id == CREATED:
-       if st.getPlayer().getLevel() >= 36 :
+       if player.getLevel() >= 36 :
            htmltext = "32013-02.htm"
        else:
            htmltext = "32013-01.htm"

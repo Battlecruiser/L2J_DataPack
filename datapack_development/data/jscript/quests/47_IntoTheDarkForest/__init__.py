@@ -77,7 +77,7 @@ class Quest (JQuest) :
         id = st.getState()
         if id == CREATED :
             st.set("cond","0")
-            if st.getPlayer().getRace().ordinal() == RACE and st.getQuestItemsCount(MARK_OF_TRAVELER_ID) > 0:
+            if player.getRace().ordinal() == RACE and st.getQuestItemsCount(MARK_OF_TRAVELER_ID) > 0:
                 htmltext = "30097-02.htm"
             else :
                 htmltext = "30097-01.htm"

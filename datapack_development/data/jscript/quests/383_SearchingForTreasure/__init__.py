@@ -73,7 +73,7 @@ class Quest (JQuest) :
      npcId = npc.getNpcId()
      id = st.getState()
      if id == CREATED :
-       if st.getPlayer().getLevel() >= 42:  
+       if player.getLevel() >= 42:  
           if st.getQuestItemsCount(PIRATES_TREASURE_MAP) :
             htmltext = "30890-01.htm"
           else :

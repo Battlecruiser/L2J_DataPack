@@ -59,7 +59,7 @@ class Quest (JQuest) :
    leaf = st.getQuestItemsCount(LEAF)
    stone = st.getQuestItemsCount(STONE)
    if cond == 0 :
-     if st.getPlayer().getLevel() >= 20 :
+     if player.getLevel() >= 20 :
        htmltext = "30074-0.htm"
      else:
        htmltext = "30074-0a.htm"

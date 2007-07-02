@@ -36,7 +36,7 @@ class Quest (JQuest) :
 
      npcId = npc.getNpcId()
      id = st.getState()
-     level = st.getPlayer().getLevel()
+     level = player.getLevel()
      cond = st.getInt("cond")
      amount = st.getQuestItemsCount(ALLIGATOR_PELTS)*40
      if id == CREATED :

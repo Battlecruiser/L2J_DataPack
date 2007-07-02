@@ -132,7 +132,7 @@ class Quest (JQuest) :
      id = st.getState()
      if npcId != GILMORE and id != STARTED : return htmltext
      
-     level = st.getPlayer().getLevel()
+     level = player.getLevel()
      cond = st.getInt("cond")
      amount = st.getQuestItemsCount(ARTICLES_DEAD_HEROES)
      if id == CREATED : 

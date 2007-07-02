@@ -43,7 +43,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_finish")
      return htmltext
 
- def onTalk (Self,npc,player):
+ def onTalk (self,npc,player):
      npcId = npc.getNpcId()
      htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
      st = player.getQuestState(qn)

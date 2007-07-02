@@ -49,7 +49,7 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    id = st.getState()
    if npcId == 30091 and cond == 0 and st.getQuestItemsCount(JEWEL_BOX) == 0 :
-     fwear=st.getPlayer().getQuestState("37_PleaseMakeMeFormalWear")
+     fwear=player.getQuestState("37_PleaseMakeMeFormalWear")
      if not fwear is None :
        if fwear.get("cond") == "6" :
          htmltext = "30091-0.htm"

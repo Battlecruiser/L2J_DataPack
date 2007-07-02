@@ -32,7 +32,7 @@ class Quest (JQuest) :
 
      npcId = npc.getNpcId()
      id = st.getState()
-     level = st.getPlayer().getLevel()
+     level = player.getLevel()
      cond = st.getInt("cond")
      amount = st.getQuestItemsCount(BLADE_STAKATO_FANG)
      if id == CREATED :

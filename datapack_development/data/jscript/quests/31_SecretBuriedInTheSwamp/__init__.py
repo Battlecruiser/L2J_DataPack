@@ -62,7 +62,7 @@ class Quest (JQuest) :
      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
    elif npcId == ABERCROMBIE :
      if cond == 0 :
-       if st.getPlayer().getLevel() >= 66 :
+       if player.getLevel() >= 66 :
          htmltext = "31555-0.htm"
        else :
          htmltext = "31555-0a.htm"

@@ -30,7 +30,7 @@ class Quest (JQuest) :
         htmltext = "<html><head><body>I have nothing to say to you</body></html>"
         id = st.getState()
         if id == CREATED :
-            if st.getPlayer().getLevel() < 20 :
+            if player.getLevel() < 20 :
                 st.exitQuest(1)
                 htmltext="1.htm"
             else:

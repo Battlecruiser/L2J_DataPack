@@ -56,7 +56,7 @@ class Quest (JQuest) :
      st.set("cond","0")
    cond = st.getInt("cond")
    if npcId == 30838 and cond == 0 and st.getQuestItemsCount(DRESS_SHOES_BOX) == 0 :
-     fwear=st.getPlayer().getQuestState("37_PleaseMakeMeFormalWear")
+     fwear=player.getQuestState("37_PleaseMakeMeFormalWear")
      if fwear :
        if fwear.get("cond") == "7" :
          htmltext = "30838-0.htm"

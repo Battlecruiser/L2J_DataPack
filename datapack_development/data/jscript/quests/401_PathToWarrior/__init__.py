@@ -25,9 +25,10 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
+    player = st.getPlayer()
     if event == "401_1" :
-          if st.getPlayer().getClassId().getId() == 0x00 :
-            if st.getPlayer().getLevel() >= 19 :
+          if player.getClassId().getId() == 0x00 :
+            if player.getLevel() >= 19 :
               if st.getQuestItemsCount(MEDALLION_OF_WARRIOR)>0 :
                 htmltext = "30010-04.htm"
               else:
@@ -36,7 +37,7 @@ class Quest (JQuest) :
             else :
               htmltext = "30010-02.htm"
           else:
-            if st.getPlayer().getClassId().getId() == 0x01 :
+            if player.getClassId().getId() == 0x01 :
               htmltext = "30010-02a.htm"
             else:
               htmltext = "30010-03.htm"

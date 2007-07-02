@@ -29,10 +29,11 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
+    player = st.getPlayer()
     if event == "1" :
       st.set("id","0")
-      if st.getPlayer().getClassId().getId() == 0x0a :
-        if st.getPlayer().getLevel() >= 19 :
+      if player.getClassId().getId() == 0x0a :
+        if player.getLevel() >= 19 :
           if st.getQuestItemsCount(BEAD_OF_SEASON) :
             htmltext = "30391-03.htm"
           else:
@@ -43,7 +44,7 @@ class Quest (JQuest) :
         else:
             htmltext = "30391-02.htm"
       else:
-        if st.getPlayer().getClassId().getId() == 0x0b :
+        if player.getClassId().getId() == 0x0b :
           htmltext = "30391-02a.htm"
         else:
           htmltext = "30391-01.htm"

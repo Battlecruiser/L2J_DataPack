@@ -120,7 +120,7 @@ class Quest (JQuest) :
         htmltext=default
    return htmltext
 
- def onTalk (Self,npc,player):
+ def onTalk (self,npc,player):
    htmltext = default
    st = player.getQuestState(qn)
    if st :
@@ -130,7 +130,7 @@ class Quest (JQuest) :
              st.set("cond","0")
         cond = st.getInt("cond")
         if npcId == 31521 and cond == 0 :
-         if st.getPlayer().getLevel() >= 68 :
+         if player.getLevel() >= 68 :
                htmltext = "31521-0.htm"
          else:
                st.exitQuest(1)

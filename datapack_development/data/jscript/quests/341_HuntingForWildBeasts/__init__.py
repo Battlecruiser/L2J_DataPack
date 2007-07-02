@@ -29,7 +29,7 @@ class Quest (JQuest) :
 
      npcId = npc.getNpcId()
      id = st.getState()
-     level = st.getPlayer().getLevel()
+     level = player.getLevel()
      cond = st.getInt("cond")
      if id == CREATED :
          if level>=20 :

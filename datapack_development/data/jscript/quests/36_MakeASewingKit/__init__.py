@@ -34,7 +34,7 @@ class Quest (JQuest) :
    id = st.getState()
    cond = st.getInt("cond")
    if cond == 0 and st.getQuestItemsCount(SEWING_KIT) == 0 :
-     fwear=st.getPlayer().getQuestState("37_PleaseMakeMeFormalWear")
+     fwear=player.getQuestState("37_PleaseMakeMeFormalWear")
      if fwear:
          if fwear.get("cond") == "6" :
            htmltext = "30847-0.htm"

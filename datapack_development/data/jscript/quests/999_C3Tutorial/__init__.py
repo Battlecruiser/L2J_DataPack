@@ -85,7 +85,7 @@ class Quest (JQuest) :
      onlyone=st.getInt("onlyone")
      if id == COMPLETED and onlyone == 1:
        st.set("onlyone","2")
-       if st.getPlayer().getClassId().isMage() :
+       if player.getClassId().isMage() :
          st.giveItems(SPIRITSHOT_NOVICE,100)
        else:
          st.giveItems(SOULSHOT_NOVICE,200)
@@ -103,7 +103,8 @@ class Quest (JQuest) :
    id = st.getState()
    cond=st.getInt("cond")
    onlyone=st.getInt("onlyone")
-   level=st.getPlayer().getLevel()
+   level=player.getLevel()
+   isMage = player.getClassId().isMage()
    npcTyp=0
    if id == CREATED :
      st.setState(STARTING)
@@ -112,11 +113,11 @@ class Quest (JQuest) :
    if (level >= 10 or onlyone) and npcTyp == 1:
        htmltext = "30575-05.htm"
    elif onlyone == 0 and level < 10 :
-    if st.getPlayer().getRace().ordinal() == raceId :
+    if player.getRace().ordinal() == raceId :
       htmltext=htmlfiles[0]
       if npcTyp==1:
        if cond==0 :
-        if st.getPlayer().getClassId().isMage() :
+        if isMage :
          st.set("cond","1")
          st.setState(STARTED)
          st.playSound("ItemSound.quest_tutorial")
@@ -131,7 +132,7 @@ class Quest (JQuest) :
            st.giveItems(item,1)
            st.set("cond","2")
            st.playSound("ItemSound.quest_middle")
-           if st.getPlayer().getClassId().isMage() :
+           if isMage :
              st.giveItems(SPIRITSHOT_NOVICE,100)
              htmltext = htmlfiles[2]
              if htmltext == 0 :
@@ -142,9 +143,9 @@ class Quest (JQuest) :
              if htmltext == 0 :
                  htmltext = "<html><head><body>I am sorry.  I only help mystics.  Please go to another Newbie Helper who may assist you.</body></html>"
          else:
-           if st.getPlayer().getClassId().isMage() :
+           if isMage :
              htmltext = "30131-02.htm"
-             if st.getPlayer().getRace().ordinal() == 3 :
+             if player.getRace().ordinal() == 3 :
               htmltext = "30575-02.htm"
            else:
              htmltext = "30530-02.htm"

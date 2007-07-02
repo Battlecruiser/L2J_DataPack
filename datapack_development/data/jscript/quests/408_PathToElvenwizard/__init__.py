@@ -30,15 +30,16 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
+    player = st.getPlayer()
     if event == "1" :
         st.set("id","0")
-        if st.getPlayer().getClassId().getId() != 0x19 :
-          if st.getPlayer().getClassId().getId() == 0x1a :
+        if player.getClassId().getId() != 0x19 :
+          if player.getClassId().getId() == 0x1a :
             htmltext = "30414-02a.htm"
           else:
             htmltext = "30414-03.htm"
         else:
-          if st.getPlayer().getLevel()<19 :
+          if player.getLevel()<19 :
             htmltext = "30414-04.htm"
           else:
             if st.getQuestItemsCount(ETERNITY_DIAMOND) != 0 :

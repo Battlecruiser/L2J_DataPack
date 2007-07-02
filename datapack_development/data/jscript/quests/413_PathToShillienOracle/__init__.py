@@ -25,6 +25,8 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
+    level = st.getPlayer().getLevel()
+    classId = st.getPlayer().getClassId().getId()
     if event == "1" :
         st.set("id","0")
         htmltext = "30330-06.htm"
@@ -33,17 +35,17 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_accept")
         st.giveItems(SIDRAS_LETTER1,1)
     elif event == "413_1" :
-          if st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x26 and st.getQuestItemsCount(ORB_OF_ABYSS) == 0 :
+          if level >= 19 and classId == 0x26 and st.getQuestItemsCount(ORB_OF_ABYSS) == 0 :
             htmltext = "30330-05.htm"
             return htmltext
-          elif st.getPlayer().getClassId().getId() != 0x26 :
-              if st.getPlayer().getClassId().getId() == 0x2a :
+          elif classId != 0x26 :
+              if classId == 0x2a :
                 htmltext = "30330-02a.htm"
               else:
                 htmltext = "30330-03.htm"
-          elif st.getPlayer().getLevel()<19 and st.getPlayer().getClassId().getId() == 0x26 :
+          elif level<19 and classId == 0x26 :
               htmltext = "30330-02.htm"
-          elif st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x26 and st.getQuestItemsCount(ORB_OF_ABYSS) == 1 :
+          elif level >= 19 and classId == 0x26 and st.getQuestItemsCount(ORB_OF_ABYSS) == 1 :
               htmltext = "30330-04.htm"
     elif event == "30377_1" :
           htmltext = "30377-02.htm"

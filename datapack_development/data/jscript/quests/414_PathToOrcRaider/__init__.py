@@ -52,8 +52,8 @@ class Quest (JQuest) :
    id = st.getState()
    if npcId != KARUKIA and id != STARTED : return htmltext
 
-   playerClassID = st.getPlayer().getClassId().getId() 
-   playerLvl     = st.getPlayer().getLevel() 
+   playerClassID = player.getClassId().getId() 
+   playerLvl     = player.getLevel() 
    if id == CREATED :
      st.setState(STARTING)
      st.set("cond","0")
@@ -113,9 +113,9 @@ class Quest (JQuest) :
    
    cond = st.getInt("cond") 
    npcId = npc.getNpcId()
-   xx = int(st.getPlayer().getX())
-   yy = int(st.getPlayer().getY())
-   zz = int(st.getPlayer().getZ())
+   xx = int(player.getX())
+   yy = int(player.getY())
+   zz = int(player.getZ())
    if npcId == GOBLIN_TOMB_RAIDER_LEADER : 
      if cond and st.getQuestItemsCount(GOBLIN_DWELLING_MAP) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH) < 10 and st.getQuestItemsCount(GREEN_BLOOD) < 40 : 
        if st.getQuestItemsCount(GREEN_BLOOD) > 20 : 

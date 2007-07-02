@@ -57,7 +57,7 @@ class Quest (JQuest) :
     npcId=npc.getNpcId()
     id=st.getState()
     if id==CREATED:
-      if st.getPlayer().getLevel()>=MIN_LEVEL:
+      if player.getLevel()>=MIN_LEVEL:
         htmltext="30829-00.htm"
       else:
         st.exitQuest(1)

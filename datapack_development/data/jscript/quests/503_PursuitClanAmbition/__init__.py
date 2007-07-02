@@ -312,13 +312,13 @@ class Quest (JQuest) :
     if npcId != NPC[3] and id == CREATED : return htmltext
 
     Martien,Athrea,Kalis,Gustaf,Fritz,Lutz,Kurtz,Kusto,Balthazar,Rodemai,Coffer,Cleo = 30645,30758,30759,30760,30761,30762,30763,30512,30764,30868,30765,30766
-    isLeader = st.getPlayer().isClanLeader()
+    isLeader = player.isClanLeader()
     if id == CREATED and npcId == Gustaf:
       for var in STATS:                                  # adds all the  vars for initialisation
         st.set(var,"0")
-      if st.getPlayer().getClan():                            # has Clan
+      if player.getClan():                            # has Clan
         if isLeader:                                  # check if player is clan leader
-          clanLevel = st.getPlayer().getClan().getLevel()
+          clanLevel = player.getClan().getLevel()
           if st.getQuestItemsCount(Proof_Aspiration):                  # if he has the proof already, tell him what to do now
             htmltext = "30760-03.htm"
             st.exitQuest(1)
@@ -334,7 +334,7 @@ class Quest (JQuest) :
         htmltext = "30760-01.htm"
         st.exitQuest(1)
       return htmltext
-    elif st.getPlayer().getClan() and st.getPlayer().getClan().getLevel() >= 5:        # player has level 5 clan already
+    elif player.getClan() and player.getClan().getLevel() >= 5:        # player has level 5 clan already
       return "<html><head><body>This quest has already been completed.</body></html>"
     elif id == COMPLETED:                                  # player has proof, and has finished quest as leader
       return "<html><head><body>This quest has already been completed.</body></html>"
