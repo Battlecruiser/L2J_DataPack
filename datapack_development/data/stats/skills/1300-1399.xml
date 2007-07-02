@@ -909,16 +909,7 @@
     <effect count="6" name="ManaDamOverTime" time="5" val="24">
       <sub order="0x40" stat="cancelRes" val="30"/>
       <mul order="0x30" stat="MpConsumeRate" val="1.30"/>
-      <sub order="0x40" stat="sleepRes" val="30"/>
-      <sub order="0x40" stat="confusionRes" val="30"/>
-      <sub order="0x40" stat="muteRes" val="30"/>
-      <sub order="0x40" stat="rootRes" val="30"/>
-      <sub order="0x40" stat="paralyzeRes" val="30"/>
-      <sub order="0x40" stat="movementRes" val="30"/>
-      <sub order="0x40" stat="darkRes" val="30"/>
-      <sub order="0x40" stat="bleedRes" val="30"/>
-      <sub order="0x40" stat="poisonRes" val="30"/>
-      <sub order="0x40" stat="stunRes" val="30"/>
+      <sub order="0x40" stat="debuffRes" val="30"/>
     </effect>
   </for>
 </skill>
@@ -1112,16 +1103,7 @@
       <mul stat="maxHp" val="1.2" order="0x30"/>
       <mul stat="regHp" val="1.2" order="0x30"/>
       <mul stat="runSpd" val="0.9" order="0x30"/>
-      <sub order="0x40" stat="sleepRes" val="10"/>
-      <sub order="0x40" stat="confusionRes" val="10"/>
-      <sub order="0x40" stat="muteRes" val="10"/>
-      <sub order="0x40" stat="rootRes" val="10"/>
-      <sub order="0x40" stat="paralyzeRes" val="10"/>
-      <sub order="0x40" stat="movementRes" val="10"/>
-      <sub order="0x40" stat="darkRes" val="10"/>
-      <sub order="0x40" stat="bleedRes" val="10"/>
-      <sub order="0x40" stat="poisonRes" val="10"/>
-      <sub order="0x40" stat="stunRes" val="10"/>
+      <add order="0x40" stat="debuffRes" val="10"/>
     </effect>
   </for>
 </skill>
@@ -1147,16 +1129,7 @@
       <mul stat="mAtk" val="1.2" order="0x30"/>
       <mul stat="mAtkSpd" val="1.2" order="0x30"/>
       <mul stat="runSpd" val="0.8" order="0x30"/>
-      <sub order="0x40" stat="sleepRes" val="10"/>
-      <sub order="0x40" stat="confusionRes" val="10"/>
-      <sub order="0x40" stat="muteRes" val="10"/>
-      <sub order="0x40" stat="rootRes" val="10"/>
-      <sub order="0x40" stat="paralyzeRes" val="10"/>
-      <sub order="0x40" stat="movementRes" val="10"/>
-      <sub order="0x40" stat="darkRes" val="10"/>
-      <sub order="0x40" stat="bleedRes" val="10"/>
-      <sub order="0x40" stat="poisonRes" val="10"/>
-      <sub order="0x40" stat="stunRes" val="10"/>
+      <add order="0x40" stat="debuffRes" val="10"/>
     </effect>
   </for>
 </skill>
@@ -1192,16 +1165,7 @@
           <player behind="True"/>
         </and>
       </mul>
-      <sub order="0x40" stat="sleepRes" val="10"/>
-      <sub order="0x40" stat="confusionRes" val="10"/>
-      <sub order="0x40" stat="muteRes" val="10"/>
-      <sub order="0x40" stat="rootRes" val="10"/>
-      <sub order="0x40" stat="paralyzeRes" val="10"/>
-      <sub order="0x40" stat="movementRes" val="10"/>
-      <sub order="0x40" stat="darkRes" val="10"/>
-      <sub order="0x40" stat="bleedRes" val="10"/>
-      <sub order="0x40" stat="poisonRes" val="10"/>
-      <sub order="0x40" stat="stunRes" val="10"/>
+      <add order="0x40" stat="debuffRes" val="10"/>
     </effect>
   </for>
 </skill>
@@ -1232,16 +1196,7 @@
       <mul stat="mDef" val="1.2" order="0x30"/>
       <mul stat="mAtk" val="1.2" order="0x30"/>
       <mul stat="mAtkSpd" val="1.2" order="0x30"/>
-      <sub order="0x40" stat="sleepRes" val="20"/>
-      <sub order="0x40" stat="confusionRes" val="20"/>
-      <sub order="0x40" stat="muteRes" val="20"/>
-      <sub order="0x40" stat="rootRes" val="20"/>
-      <sub order="0x40" stat="paralyzeRes" val="20"/>
-      <sub order="0x40" stat="movementRes" val="20"/>
-      <sub order="0x40" stat="darkRes" val="20"/>
-      <sub order="0x40" stat="bleedRes" val="20"/>
-      <sub order="0x40" stat="poisonRes" val="20"/>
-      <sub order="0x40" stat="stunRes" val="20"/>
+      <add order="0x40" stat="debuffRes" val="20"/>
     </effect>
   </for>
 </skill>
@@ -1337,16 +1292,7 @@
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="cancelRes">
       <add stat="cancelRes" val="30" order="0x40"/>
-      <add order="0x40" stat="sleepRes" val="20"/>
-      <add order="0x40" stat="confusionRes" val="20"/>
-      <add order="0x40" stat="muteRes" val="20"/>
-      <add order="0x40" stat="rootRes" val="20"/>
-      <add order="0x40" stat="paralyzeRes" val="20"/>
-      <add order="0x40" stat="movementRes" val="20"/>
-      <add order="0x40" stat="darkRes" val="20"/>
-      <add order="0x40" stat="bleedRes" val="20"/>
-      <add order="0x40" stat="poisonRes" val="20"/>
-      <add order="0x40" stat="stunRes" val="20"/>
+      <add order="0x40" stat="debuffRes" val="20"/>
     </effect>
   </for>
 </skill>
@@ -1374,16 +1320,7 @@
     <mul order="0x30" stat="mCritRate" val="2.00"/>
     <mul order="0x30" stat="regMp" val="1.2"/>
     <mul order="0x30" stat="runSpd" val="0.80"/>
-    <add order="0x40" stat="sleepRes" val="10"/>
-    <add order="0x40" stat="confusionRes" val="10"/>
-    <add order="0x40" stat="muteRes" val="10"/>
-    <add order="0x40" stat="rootRes" val="10"/>
-    <add order="0x40" stat="paralyzeRes" val="10"/>
-    <add order="0x40" stat="movementRes" val="10"/>
-    <add order="0x40" stat="darkRes" val="10"/>
-    <add order="0x40" stat="bleedRes" val="10"/>
-    <add order="0x40" stat="poisonRes" val="10"/>
-    <add order="0x40" stat="stunRes" val="10"/>
+    <add order="0x40" stat="debuffRes" val="10"/>
   </effect>
 </for>
 </skill>
@@ -1412,16 +1349,7 @@
     <mul order="0x30" stat="runSpd" val="0.90"/>
     <mul order="0x30" stat="maxHp" val="1.20"/>
     <mul order="0x30" stat="regHp" val="1.20"/>
-    <add order="0x40" stat="sleepRes" val="10"/>
-    <add order="0x40" stat="confusionRes" val="10"/>
-    <add order="0x40" stat="muteRes" val="10"/>
-    <add order="0x40" stat="rootRes" val="10"/>
-    <add order="0x40" stat="paralyzeRes" val="10"/>
-    <add order="0x40" stat="movementRes" val="10"/>
-    <add order="0x40" stat="darkRes" val="10"/>
-    <add order="0x40" stat="bleedRes" val="10"/>
-    <add order="0x40" stat="poisonRes" val="10"/>
-    <add order="0x40" stat="stunRes" val="10"/>
+    <add order="0x40" stat="debuffRes" val="10"/>
   </effect>
 </for>
 </skill>
@@ -1457,16 +1385,7 @@
          <player behind="True"/>
        </and>
      </mul>
-     <add order="0x40" stat="sleepRes" val="10"/>
-     <add order="0x40" stat="confusionRes" val="10"/>
-     <add order="0x40" stat="muteRes" val="10"/>
-     <add order="0x40" stat="rootRes" val="10"/>
-     <add order="0x40" stat="paralyzeRes" val="10"/>
-     <add order="0x40" stat="movementRes" val="10"/>
-     <add order="0x40" stat="darkRes" val="10"/>
-     <add order="0x40" stat="bleedRes" val="10"/>
-     <add order="0x40" stat="poisonRes" val="10"/>
-     <add order="0x40" stat="stunRes" val="10"/>
+     <add order="0x40" stat="debuffRes" val="10"/>
   </effect>
 </for>
 </skill>
@@ -1586,16 +1505,7 @@
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="cancelRes">
       <add stat="cancelRes" val="30" order="0x40"/>
-      <add order="0x40" stat="sleepRes" val="20"/>
-      <add order="0x40" stat="confusionRes" val="20"/>
-      <add order="0x40" stat="muteRes" val="20"/>
-      <add order="0x40" stat="rootRes" val="20"/>
-      <add order="0x40" stat="paralyzeRes" val="20"/>
-      <add order="0x40" stat="movementRes" val="20"/>
-      <add order="0x40" stat="darkRes" val="20"/>
-      <add order="0x40" stat="bleedRes" val="20"/>
-      <add order="0x40" stat="poisonRes" val="20"/>
-      <add order="0x40" stat="stunRes" val="20"/>
+      <add order="0x40" stat="debuffRes" val="20"/>
     </effect>
   </for>
 </skill>
@@ -1629,16 +1539,7 @@
       <mul order="0x30" stat="mDef" val="1.20"/>
       <mul order="0x30" stat="runSpd" val="0.8"/>
       <mul order="0x30" stat="maxHp" val="1.20"/>
-      <add order="0x40" stat="sleepRes" val="20"/>
-      <add order="0x40" stat="confusionRes" val="20"/>
-      <add order="0x40" stat="muteRes" val="20"/>
-      <add order="0x40" stat="rootRes" val="20"/>
-      <add order="0x40" stat="paralyzeRes" val="20"/>
-      <add order="0x40" stat="movementRes" val="20"/>
-      <add order="0x40" stat="darkRes" val="20"/>
-      <add order="0x40" stat="bleedRes" val="20"/>
-      <add order="0x40" stat="poisonRes" val="20"/>
-      <add order="0x40" stat="stunRes" val="20"/>
+      <add order="0x40" stat="debuffRes" val="20"/>
     </effect>
   </for>
 </skill>
