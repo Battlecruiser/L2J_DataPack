@@ -1639,7 +1639,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect name="SilentMove" time="120" count="1" val="0">
+    <effect name="SilentMove" time="120" abnormal="stealth" count="1" val="0">
       <mul order="0x30" stat="runSpd" val="0.5"/>
     </effect>
   </for>
