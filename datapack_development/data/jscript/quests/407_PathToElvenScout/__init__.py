@@ -27,10 +27,11 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
+    player = st.getPlayer()
     if event == "1" :
       st.set("id","0")
-      if st.getPlayer().getClassId().getId() == 0x12 :
-        if st.getPlayer().getLevel() >= 19 :
+      if player.getClassId().getId() == 0x12 :
+        if player.getLevel() >= 19 :
           if st.getQuestItemsCount(REORIA_RECOMMENDATION)>0 :
             htmltext = "30328-04.htm"
           else:
@@ -42,7 +43,7 @@ class Quest (JQuest) :
         else :
           htmltext = "30328-03.htm"
       else:
-        if st.getPlayer().getClassId().getId() == 0x16 :
+        if player.getClassId().getId() == 0x16 :
           htmltext = "30328-02a.htm"
         else:
           htmltext = "30328-02.htm"

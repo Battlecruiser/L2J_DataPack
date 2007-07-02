@@ -44,9 +44,10 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
+    player = st.getPlayer()
     if event == "30379_2" :
-          if st.getPlayer().getClassId().getId() == 0x00 :
-            if st.getPlayer().getLevel() >= 19 :
+          if player.getClassId().getId() == 0x00 :
+            if player.getLevel() >= 19 :
               if st.getQuestItemsCount(BEZIQUES_RECOMMENDATION)>0 :
                 htmltext = "30379-04.htm"
               else:
@@ -55,7 +56,7 @@ class Quest (JQuest) :
             else :
               htmltext = "30379-03.htm"
           else:
-            if st.getPlayer().getClassId().getId() == 0x07 :
+            if player.getClassId().getId() == 0x07 :
               htmltext = "30379-02a.htm"
             else:
               htmltext = "30379-02.htm"

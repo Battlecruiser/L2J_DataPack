@@ -54,7 +54,9 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc,player) :
+    st = player.getQuestState(qn)
+    if not st: return
     htmltext = event
     cond = st.getInt("cond")
     if htmltext == "31554-03a.htm" : #Giving 100 Splinter Stakato Chitins. Getting Recruit mark
@@ -70,14 +72,14 @@ class Quest (JQuest) :
         skillId,level,coins=BUFF[event]
         if st.getQuestItemsCount(GOLDEN_RAM_COIN) >= coins :
           st.takeItems(GOLDEN_RAM_COIN,coins)
-          st.getPlayer().setTarget(st.getPlayer())
-          st.getPlayer().doCast(SkillTable.getInstance().getInfo(skillId,level))
+          npc.setTarget(player)
+          npc.doCast(SkillTable.getInstance().getInfo(skillId,level))
           htmltext = "31556-1.htm"
         else :
           htmltext = "You don't have required items"
     return htmltext
 
- def onTalk (Self,npc,player):
+ def onTalk (self,npc,player):
    st = player.getQuestState(qn)
    htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
    if st :
@@ -90,7 +92,7 @@ class Quest (JQuest) :
        chitin1=st.getQuestItemsCount(CHITIN)
        chitin2=st.getQuestItemsCount(CHITIN2)
        if cond == 0 : #Starting the quest
-          if st.getPlayer().getLevel()>= 66 : #Succesful start: Kill Splinter Stakato
+          if player.getLevel()>= 66 : #Succesful start: Kill Splinter Stakato
              htmltext = "31554-02.htm"
              st.set("cond","1")
              st.setState(STARTED)
@@ -132,7 +134,7 @@ class Quest (JQuest) :
    return htmltext
 
  #todo: Currently this quest is solo, it needs to be party
- def onKill (Self,npc,player):
+ def onKill (self,npc,player):
    st = player.getQuestState(qn)
    if st :
         if st.getState() == STARTED :

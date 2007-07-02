@@ -58,7 +58,7 @@ class Quest (JQuest) :
    id = st.getState()
    if id == CREATED :
       st.set("cond","0")
-      if st.getPlayer().getLevel() < 60 :
+      if player.getLevel() < 60 :
          st.exitQuest(1)
          htmltext = "30857-1.htm"
       else :

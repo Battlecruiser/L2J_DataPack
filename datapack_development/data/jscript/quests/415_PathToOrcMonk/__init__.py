@@ -39,16 +39,17 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
+    player = st.getPlayer()
     if event == "30587_1" :
-          if st.getPlayer().getClassId().getId() != 0x2c :
-            if st.getPlayer().getClassId().getId() == 0x2f :
+          if player.getClassId().getId() != 0x2c :
+            if player.getClassId().getId() == 0x2f :
               htmltext = "30587-02a.htm"
               st.exitQuest(1)
             else:
               htmltext = "30587-02.htm"
               st.exitQuest(1)
           else:
-            if st.getPlayer().getLevel()<19 :
+            if player.getLevel()<19 :
               htmltext = "30587-03.htm"
             else:
               if st.getQuestItemsCount(KHAVATARI_TOTEM) != 0 :

@@ -23,23 +23,25 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
+    level = st.getPlayer().getLevel()
+    classId = st.getPlayer().getClassId().getId()
     if event == "1" :
-        if st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x1f and st.getQuestItemsCount(IRON_HEART) == 0 :
+        if level >= 19 and classId == 0x1f and st.getQuestItemsCount(IRON_HEART) == 0 :
           st.set("cond","1")
           st.setState(STARTED)
           st.playSound("ItemSound.quest_accept")
           st.giveItems(SHILENS_CALL,1)
           htmltext = "30416-05.htm"
-        elif st.getPlayer().getClassId().getId() != 0x1f :
-            if st.getPlayer().getClassId().getId() == 0x23 :
+        elif classId != 0x1f :
+            if classId == 0x23 :
               htmltext = "30416-02a.htm"
             else:
               htmltext = "30416-02.htm"
               st.exitQuest(1)
-        elif st.getPlayer().getLevel()<19 and st.getPlayer().getClassId().getId() == 0x1f :
+        elif level<19 and classId == 0x1f :
             htmltext = "30416-03.htm"
             st.exitQuest(1)
-        elif st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x1f and st.getQuestItemsCount(IRON_HEART) == 1 :
+        elif level >= 19 and classId == 0x1f and st.getQuestItemsCount(IRON_HEART) == 1 :
             htmltext = "30416-04.htm"
     elif event == "30419_1" :
           htmltext = "30419-05.htm"

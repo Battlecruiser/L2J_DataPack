@@ -97,7 +97,7 @@ class Quest (JQuest) :
                 if id == 2 :
                     htmltext = "31378-05.htm"
             elif npcId == Udan :
-                if st.getPlayer().getAllianceWithVarkaKetra() <= -2 :
+                if player.getAllianceWithVarkaKetra() <= -2 :
                     if id == 2 :
                         htmltext = "31379-01.htm"
                         st.set("cond","2")
@@ -121,7 +121,7 @@ class Quest (JQuest) :
                         st.playSound("ItemSound.quest_middle")
                         st.exitQuest(1)
             elif npcId == Asefa_Box :
-                    if st.getPlayer().getAllianceWithVarkaKetra() <= -2 :
+                    if player.getAllianceWithVarkaKetra() <= -2 :
                         if id == 3 :
                             htmltext = "31559-01.htm"
     return htmltext
@@ -136,9 +136,9 @@ class Quest (JQuest) :
         if st.getInt("spawned") == 0 and npc.getObjectId() != st.getInt("npcid"):
             if npcId in Ketra_Orcs :
                 if id > 2 :
-                    xx = int(st.getPlayer().getX())
-                    yy = int(st.getPlayer().getY())
-                    zz = int(st.getPlayer().getZ())
+                    xx = int(player.getX())
+                    yy = int(player.getY())
+                    zz = int(player.getZ())
                     st.set("aggro","1")
                     st.set("cond","1")
                     st.set("id","4")

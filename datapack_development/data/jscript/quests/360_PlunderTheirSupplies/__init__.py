@@ -46,7 +46,7 @@ class Quest (JQuest) :
    cond=st.getInt("cond")
    supplies = st.getQuestItemsCount(SUPPLY_ITEM)
    if cond == 0 :
-     if st.getPlayer().getLevel() >= 52 :
+     if player.getLevel() >= 52 :
        htmltext = "30873-0.htm"
      else:
        htmltext = "<html><head><body>Quest for characters level 52 or above.</body></html>"

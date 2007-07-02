@@ -155,7 +155,7 @@ class Quest (JQuest):
     if id == COMPLETED: st.setState(CREATED)
     if npcId == PET_MANAGER_MARTIN :
       if id == CREATED  :
-         if st.getPlayer().getLevel() < 15 :
+         if player.getLevel() < 15 :
             st.exitQuest(1)
             return "419_low_level.htm"
          return "Start.htm"
@@ -168,7 +168,7 @@ class Quest (JQuest):
             st.setState(SLAYED)
             st.clearQuestDrops()
             st.set("progress","0")
-            race = st.getPlayer().getRace().ordinal()
+            race = player.getRace().ordinal()
             if race == 0:
                 st.takeItems(SPIDER_LEG1,REQUIRED_SPIDER_LEGS)
                 st.takeItems(ANIMAL_SLAYER_LIST1,1)
@@ -210,7 +210,7 @@ class Quest (JQuest):
       npcId = npc.getNpcId()
       collected = getCount_proof(st)
       if collected < REQUIRED_SPIDER_LEGS:
-         race = st.getPlayer().getRace().ordinal()
+         race = player.getRace().ordinal()
          if race == 0 :
             npcs = [ SPIDER_H1, SPIDER_H2, SPIDER_H3 ]
             item = SPIDER_LEG1

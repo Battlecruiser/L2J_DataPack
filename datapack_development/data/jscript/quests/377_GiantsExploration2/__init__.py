@@ -94,7 +94,7 @@ class Quest (JQuest) :
    elif id == CREATED :
       st.set("cond","0")
       htmltext = start
-      if st.getPlayer().getLevel() < 57 :
+      if player.getLevel() < 57 :
          st.exitQuest(1)
          htmltext = error_1
    elif id == STARTED :

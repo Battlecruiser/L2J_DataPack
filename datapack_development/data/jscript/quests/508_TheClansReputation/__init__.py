@@ -89,10 +89,10 @@ class Quest (JQuest) :
   st = player.getQuestState(qn)
   if not st : return htmltext
   npcId = npc.getNpcId()
-  if st.getPlayer().getClan() == None or st.getPlayer().isClanLeader() == 0 :
+  if player.getClan() == None or player.isClanLeader() == 0 :
      st.exitQuest(1)
      htmltext = "30868-0a.htm"
-  elif st.getPlayer().getClan().getLevel() < 5 :
+  elif player.getClan().getLevel() < 5 :
      st.exitQuest(1)
      htmltext =  "30868-0b.htm"
   else :

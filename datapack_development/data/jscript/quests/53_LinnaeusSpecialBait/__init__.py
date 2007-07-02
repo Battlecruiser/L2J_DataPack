@@ -57,7 +57,7 @@ class Quest (JQuest):
         id = st.getState()
         if id == COMPLETED: htmltext = "<html><head><body>This quest have already been completed.</body></html>"           
         elif id == CREATED :
-           if st.getPlayer().getLevel() > 59 and fishing_level(player) > 19 :
+           if player.getLevel() > 59 and fishing_level(player) > 19 :
               htmltext= "31577-0.htm"
            else:
               st.exitQuest(1)

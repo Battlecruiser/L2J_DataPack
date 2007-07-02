@@ -133,7 +133,7 @@ class Quest (JQuest) :
                 st.exitQuest(1)
             else : #else, start the quest normally
                 st.set("cond","0")
-                if st.getPlayer().getLevel() < 60 :
+                if player.getLevel() < 60 :
                     st.exitQuest(1)
                     htmltext = "30864-01.htm"     #not qualified
                     st.exitQuest(1)
@@ -187,18 +187,18 @@ class Quest (JQuest) :
             if st.getQuestItemsCount(ARK_OWNERS[npcId][0])==1:
                 st.takeItems(ARK_OWNERS[npcId][0],1)
                 htmltext = ARK_OWNERS[npcId][2]
-                st.getPlayer().sendPacket(RadarControl(0,1,ARK_OWNERS[npcId][5][0],ARK_OWNERS[npcId][5][1],ARK_OWNERS[npcId][5][2]))
+                player.sendPacket(RadarControl(0,1,ARK_OWNERS[npcId][5][0],ARK_OWNERS[npcId][5][1],ARK_OWNERS[npcId][5][2]))
             # do not have letter and do not have the item
             elif st.getQuestItemsCount(ARK_OWNERS[npcId][1]) < 1:
                 htmltext = ARK_OWNERS[npcId][3]
-                st.getPlayer().sendPacket(RadarControl(0,1,ARK_OWNERS[npcId][5][0],ARK_OWNERS[npcId][5][1],ARK_OWNERS[npcId][5][2]))
+                player.sendPacket(RadarControl(0,1,ARK_OWNERS[npcId][5][0],ARK_OWNERS[npcId][5][1],ARK_OWNERS[npcId][5][2]))
             else:   #have the item (done)
                 htmltext = ARK_OWNERS[npcId][4]
         elif npcId in ARKS.keys():
             # if you do not have the key (first meeting)
             if st.getQuestItemsCount(ARKS[npcId][0])==0:
                 if ARKS[npcId][1] != 0 :    # spawn the NPC, if appropriate
-                    st.getPcSpawn().addSpawn(ARKS[npcId][1],st.getPlayer().getClientX(),st.getPlayer().getClientY(),st.getPlayer().getClientZ(),120000)
+                    st.getPcSpawn().addSpawn(ARKS[npcId][1],player.getClientX(),player.getClientY(),player.getClientZ(),120000)
                 return ARKS[npcId][2]
             # if the player already has openned the chest and has its content, show "chest empty"
             elif st.getQuestItemsCount(ARKS[npcId][5])==1:  
@@ -210,7 +210,7 @@ class Quest (JQuest) :
         elif npcId == ARK_GUARDIANS_CORPSE :
             # if you do not have the key (first meeting)
             if st.getQuestItemsCount(FIRST_KEY_OF_ARK)==0 and st.getInt("angelKillerIsDefeated")==0 :
-                st.getPcSpawn().addSpawn(ANGEL_KILLER,st.getPlayer().getClientX(),st.getPlayer().getClientY(),st.getPlayer().getClientZ(),120000)
+                st.getPcSpawn().addSpawn(ANGEL_KILLER,player.getClientX(),player.getClientY(),player.getClientZ(),120000)
                 htmltext = "30980-01.htm"
             elif st.getQuestItemsCount(FIRST_KEY_OF_ARK)==0 and st.getInt("angelKillerIsDefeated")==1 :
                 st.giveItems(FIRST_KEY_OF_ARK,1)

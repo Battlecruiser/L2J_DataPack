@@ -25,6 +25,8 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
+    level = st.getPlayer().getLevel()
+    classId = st.getPlayer().getClassId().getId()
     if event == "1" :
         st.set("id","0")
         st.set("cond","1")
@@ -33,17 +35,17 @@ class Quest (JQuest) :
         htmltext = "30329-06.htm"
         st.giveItems(PALLUS_TALISMAN,1)
     elif event == "410_1" :
-          if st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x1f and st.getQuestItemsCount(GAZE_OF_ABYSS) == 0 :
+          if level >= 19 and classId == 0x1f and st.getQuestItemsCount(GAZE_OF_ABYSS) == 0 :
             htmltext = "30329-05.htm"
             return htmltext
-          elif st.getPlayer().getClassId().getId() != 0x1f :
-              if st.getPlayer().getClassId().getId() == 0x20 :
+          elif classId != 0x1f :
+              if classId == 0x20 :
                 htmltext = "30329-02a.htm"
               else:
                 htmltext = "30329-03.htm"
-          elif st.getPlayer().getLevel()<19 and st.getPlayer().getClassId().getId() == 0x1f :
+          elif level<19 and classId == 0x1f :
               htmltext = "30329-02.htm"
-          elif st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x1f and st.getQuestItemsCount(GAZE_OF_ABYSS) == 1 :
+          elif level >= 19 and classId == 0x1f and st.getQuestItemsCount(GAZE_OF_ABYSS) == 1 :
               htmltext = "30329-04.htm"
     elif event == "30329_2" :
             htmltext = "30329-10.htm"

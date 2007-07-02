@@ -52,17 +52,17 @@ class Quest (JQuest) :
       st.exitQuest(1)
     return htmltext
 
- def onTalk (Self,npc,player):
+ def onTalk (self,npc,player):
    st = player.getQuestState(qn)
    if st :
      npcId = npc.getNpcId()
      cond=st.getInt("cond")
      id=st.getInt("id")
      if npcId in range(31494,31508) :
-        if st.getPlayer().getLevel() < 20 :
+        if player.getLevel() < 20 :
            st.exitQuest(1)
            htmltext="1.htm"
-        elif len(st.getPlayer().getAllActiveQuests()) > MAX_QUEST :
+        elif len(player.getAllActiveQuests()) > MAX_QUEST :
            st.exitQuest(1)
            htmltext="1a.htm"
         elif not st.getQuestItemsCount(DIMENSION_FRAGMENT) :
@@ -75,7 +75,7 @@ class Quest (JQuest) :
      elif st.getState() == STARTED :
         if id :
            x,y,z=COORD[id]
-           st.getPlayer().teleToLocation(x,y,z)
+           player.teleToLocation(x,y,z)
            st.unset("cond")
            st.setState(COMPLETED)
            htmltext="7.htm"

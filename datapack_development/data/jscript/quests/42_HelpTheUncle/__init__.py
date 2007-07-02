@@ -57,7 +57,7 @@ class Quest (JQuest) :
     npcId=npc.getNpcId()
     id=st.getState()
     if id==CREATED:
-      if st.getPlayer().getLevel()>=MIN_LEVEL:
+      if player.getLevel()>=MIN_LEVEL:
         htmltext="30828-00.htm"
       else:
         htmltext="<html><head><body>This quest can only be taken by characters that have a minimum level of %s. Return when you are more experienced.</body></html>" % MIN_LEVEL

@@ -69,7 +69,7 @@ class Quest (JQuest) :
          st.exitQuest(1)
      return htmltext
 
- def onTalk (Self,npc,player):
+ def onTalk (self,npc,player):
      htmltext = "<html><head><body>I have nothing to say to you.</body></html>"
      st = player.getQuestState(qn)
      if st :
@@ -96,8 +96,8 @@ class Quest (JQuest) :
         if st.getState() == STARTED :
          npcId = npc.getNpcId()
          count = st.getQuestItemsCount(Mane)
-         st2 = st.getPlayer().getQuestState("605_AllianceWithKetraOrcs")
-         if npcId in Varka_Mobs and st.getPlayer().getAllianceWithVarkaKetra() >= 1 :
+         st2 = partyMember.getQuestState("605_AllianceWithKetraOrcs")
+         if npcId in Varka_Mobs and partyMember.getAllianceWithVarkaKetra() >= 1 :
         #see comments in 605 : Alliance with Ketra Orcs for reason for doing st2 check
             if not st2 :
                 numItems,chance = divmod(Chance[npcId]*Config.RATE_DROP_QUEST,1000)

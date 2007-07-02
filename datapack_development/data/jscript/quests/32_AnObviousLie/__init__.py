@@ -95,7 +95,7 @@ class Quest (JQuest) :
    cond=st.getInt("cond")
    if npcId == MAXIMILIAN :
      if cond == 0 :
-       if st.getPlayer().getLevel() >= 45 :
+       if player.getLevel() >= 45 :
          htmltext = "30120-0.htm"
        elif id == COMPLETED :
          htmltext = "<html><head><body>This quest have already been completed.</body></html>"

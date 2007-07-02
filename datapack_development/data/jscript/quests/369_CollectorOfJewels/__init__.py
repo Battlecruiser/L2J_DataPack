@@ -53,7 +53,7 @@ class Quest (JQuest) :
    flare = st.getQuestItemsCount(FLARE_SHARD)
    freezing = st.getQuestItemsCount(FREEZING_SHARD)
    if cond == 0 :
-     if st.getPlayer().getLevel() >= 25 :
+     if player.getLevel() >= 25 :
        htmltext = "30376-02.htm"
      else:
        htmltext = "30376-01.htm"

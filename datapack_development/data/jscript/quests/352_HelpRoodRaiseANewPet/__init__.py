@@ -34,7 +34,7 @@ class Quest (JQuest) :
 
      npcId = npc.getNpcId()
      id = st.getState()
-     level = st.getPlayer().getLevel()
+     level = player.getLevel()
      cond = st.getInt("cond")
      eggs1 = st.getQuestItemsCount(LIENRIK_EGG1)
      eggs2 = st.getQuestItemsCount(LIENRIK_EGG2)

@@ -303,7 +303,7 @@ class Quest (JQuest) :
    grade = st.getInt("grade")
    if npcId == SORINT :
       if id == CREATED :
-         if st.getPlayer().getLevel() < 40 :
+         if player.getLevel() < 40 :
              htmltext = "30232-01.htm"
              st.exitQuest(1)
          else :

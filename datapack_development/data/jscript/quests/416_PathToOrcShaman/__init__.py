@@ -35,6 +35,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
+    player = st.getPlayer()
     if event == "1" :
         st.set("id","0")
         st.set("cond","1")
@@ -43,13 +44,13 @@ class Quest (JQuest) :
         htmltext = "30585-06.htm"
         st.giveItems(FIRE_CHARM,1)
     elif event == "30585_1" :
-          if st.getPlayer().getClassId().getId() != 0x31 :
-            if st.getPlayer().getClassId().getId() == 0x32 :
+          if player.getClassId().getId() != 0x31 :
+            if player.getClassId().getId() == 0x32 :
               htmltext = "30585-02a.htm"
             else:
               htmltext = "30585-02.htm"
           else:
-            if st.getPlayer().getLevel()<19 :
+            if player.getLevel()<19 :
               htmltext = "30585-03.htm"
             else:
               if st.getQuestItemsCount(MASK_OF_MEDIUM) != 0 :

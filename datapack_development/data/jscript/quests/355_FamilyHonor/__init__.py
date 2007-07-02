@@ -83,7 +83,7 @@ class Quest (JQuest) :
    count = st.getQuestItemsCount(GALFREDOS_BUST)
    if npcId == GALIBREDO :
      if cond == 0 :
-       if st.getPlayer().getLevel() >= 36 : 
+       if player.getLevel() >= 36 : 
          htmltext = "30181-0.htm"
        else:
          htmltext = "30181-0a.htm"

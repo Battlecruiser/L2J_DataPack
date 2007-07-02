@@ -98,7 +98,7 @@ class Quest (JQuest) :
    if npcId == BABENCO and cond == 0 :
      if id == COMPLETED :
        htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-     elif st.getPlayer().getLevel() >= 20 : # and st.getPlayer().getLevel() <= 28:
+     elif player.getLevel() >= 20 : # and player.getLevel() <= 28:
        htmltext = "30334-0.htm"
      else :
        st.exitQuest(1)

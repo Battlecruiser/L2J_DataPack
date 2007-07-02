@@ -67,13 +67,13 @@ def get_control_item(st) :
       if  st.getInt("item") != item : item = 0
   return item  
 
-def get_distance(st) :
+def get_distance(player) :
     is_far = False
-    if abs(st.getPlayer().getPet().getX() - st.getPlayer().getX()) > MAX_DISTANCE :
+    if abs(player.getPet().getX() - player.getX()) > MAX_DISTANCE :
         is_far = True
-    if abs(st.getPlayer().getPet().getY() - st.getPlayer().getY()) > MAX_DISTANCE :
+    if abs(player.getPet().getY() - player.getY()) > MAX_DISTANCE :
         is_far = True
-    if abs(st.getPlayer().getPet().getZ() - st.getPlayer().getZ()) > MAX_DISTANCE :
+    if abs(player.getPet().getZ() - player.getZ()) > MAX_DISTANCE :
         is_far = True
     return is_far
 
@@ -112,16 +112,16 @@ class Quest (JQuest) :
       st.setState(CREATED)
       id = CREATED
    npcId = npc.getNpcId()
-   if st.getPlayer().getPet() == None :
+   if player.getPet() == None :
        htmltext = error_1
        st.exitQuest(1)
-   elif st.getPlayer().getPet().getTemplate().npcId not in [12311,12312,12313] : #npcIds for hatchlings
+   elif player.getPet().getTemplate().npcId not in [12311,12312,12313] : #npcIds for hatchlings
        htmltext = error_5
        st.exitQuest(1)
-   elif st.getPlayer().getPet().getLevel() < MIN_PET_LEVEL :
+   elif player.getPet().getLevel() < MIN_PET_LEVEL :
        st.exitQuest(1)
        htmltext = error_4
-   elif get_distance(st) :
+   elif get_distance(player) :
        st.exitQuest(1)
        htmltext = error_6
    elif get_control_item(st) == 0 :
@@ -129,7 +129,7 @@ class Quest (JQuest) :
        htmltext = error_2
    elif npcId == SG_CRONOS :
       if id == CREATED :
-         if st.getPlayer().getLevel() < MIN_PLAYER_LEVEL :
+         if player.getLevel() < MIN_PLAYER_LEVEL :
             st.exitQuest(1)
             htmltext = error_3
          else :   
@@ -146,12 +146,12 @@ class Quest (JQuest) :
         else :
             htmltext = qston_3
      elif id == STARTED :
-        name = st.getPlayer().getPet().getName()
+        name = player.getPet().getName()
         if name == None : name = " "
         else : name = " "+name+" "
         htmltext = end_msg+name+end_msg2
-        item=CONTROL_ITEMS[st.getPlayer().getInventory().getItemByObjectId(st.getPlayer().getPet().getControlItemId()).getItemId()]
-        st.getPlayer().getPet().deleteMe(st.getPlayer()) #both despawn pet and delete controlitem
+        item=CONTROL_ITEMS[player.getInventory().getItemByObjectId(player.getPet().getControlItemId()).getItemId()]
+        player.getPet().deleteMe(player) #both despawn pet and delete controlitem
         st.giveItems(item,1)
         st.exitQuest(1)
         st.playSound("ItemSound.quest_finish")

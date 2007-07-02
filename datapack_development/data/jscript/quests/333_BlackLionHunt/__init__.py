@@ -476,7 +476,7 @@ class Quest (JQuest) :
       st.set("text","0")
       if npcId == NPC[0]:
         if st.getQuestItemsCount(BLACK_LION_MARK) :
-          if st.getPlayer().getLevel() >24 :
+          if player.getLevel() >24 :
             return  start_start
           else:
             st.exitQuest(1)
@@ -566,7 +566,7 @@ class Quest (JQuest) :
     random1 = st.getRandom(101)
     random2 = st.getRandom(101)
     mobLevel = npc.getLevel()
-    playerLevel = st.getPlayer().getLevel()
+    playerLevel = player.getLevel()
     if playerLevel - mobLevel > 8:
       chancePartItem/=3
       chanceBox/=3

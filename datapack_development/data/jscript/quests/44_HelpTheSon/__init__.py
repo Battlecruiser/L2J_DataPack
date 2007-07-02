@@ -57,7 +57,7 @@ class Quest (JQuest) :
     htmltext="<html><head><body>I have nothing to say you</body></html>"
     id=st.getState()
     if id==CREATED:
-      if st.getPlayer().getLevel()>=MIN_LEVEL:
+      if player.getLevel()>=MIN_LEVEL:
         htmltext="30827-00.htm"
       else:
         st.exitQuest(1)

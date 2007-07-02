@@ -32,22 +32,24 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
+    level = st.getPlayer().getLevel()
+    classId = st.getPlayer().getClassId().getId()
     if event == "1" :
           st.set("id","0")
-          if st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x35 and st.getQuestItemsCount(RING_OF_RAVEN) == 0 :
+          if level >= 19 and classId == 0x35 and st.getQuestItemsCount(RING_OF_RAVEN) == 0 :
             st.set("cond","1")
             st.setState(STARTED)
             st.playSound("ItemSound.quest_accept")
             st.giveItems(PIPIS_LETTER,1)
             htmltext = "30524-05.htm"
-          elif st.getPlayer().getClassId().getId() != 0x35 :
-                if st.getPlayer().getClassId().getId() == 0x36 :
+          elif classId != 0x35 :
+                if classId == 0x36 :
                   htmltext = "30524-02a.htm"
                 else:
                   htmltext = "30524-08.htm"
-          elif st.getPlayer().getLevel() < 19 and st.getPlayer().getClassId().getId() == 0x35 :
+          elif level < 19 and classId == 0x35 :
                 htmltext = "30524-02.htm"
-          elif st.getPlayer().getLevel() >= 19 and st.getPlayer().getClassId().getId() == 0x35 and st.getQuestItemsCount(RING_OF_RAVEN) == 1 :
+          elif level >= 19 and classId == 0x35 and st.getQuestItemsCount(RING_OF_RAVEN) == 1 :
                 htmltext = "30524-04.htm"
     elif event == "30519_1" :
         if st.getQuestItemsCount(PIPIS_LETTER):

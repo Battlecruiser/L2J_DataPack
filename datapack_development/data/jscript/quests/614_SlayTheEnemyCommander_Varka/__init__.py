@@ -81,7 +81,7 @@ class Quest (JQuest) :
     st = partyMember.getQuestState(qn)
     if st :
        giveReward(st,npc)
-       party = st.getPlayer().getParty()
+       party = partyMember.getParty()
        if party :
            for player in party.getPartyMembers().toArray() :
                pst = player.getQuestState(qn)

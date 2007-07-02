@@ -56,7 +56,7 @@ class Quest (JQuest) :
      id = st.getState()
      if npcId != 30916 and id != STARTED : return htmltext
   
-     level = st.getPlayer().getLevel()
+     level = player.getLevel()
      cond = st.getInt("cond")
      if npcId==30916 :
          if id == CREATED :

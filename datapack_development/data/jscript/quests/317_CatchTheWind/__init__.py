@@ -33,7 +33,7 @@ class Quest (JQuest) :
    id = st.getState()
    cond=st.getInt("cond")
    if cond == 0 :
-     if st.getPlayer().getLevel() >= 18 :
+     if player.getLevel() >= 18 :
        htmltext = "30361-03.htm"
      else:
        htmltext = "30361-02.htm"

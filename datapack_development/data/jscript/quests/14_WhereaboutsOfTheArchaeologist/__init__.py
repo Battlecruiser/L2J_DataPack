@@ -37,7 +37,7 @@ class Quest (JQuest) :
        htmltext = "You don't have required items"
    return htmltext
 
- def onTalk (Self,npc,player):
+ def onTalk (self,npc,player):
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext

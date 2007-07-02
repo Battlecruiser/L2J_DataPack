@@ -168,8 +168,9 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    id = st.getInt("id")
    htmltext = event
+   player = st.getPlayer()
    if event == "31371-03a.htm" :
-       if st.getPlayer().getLevel() >= 74 :
+       if player.getLevel() >= 74 :
             st.set("cond","1")
             st.set("id","2")
             st.setState(STARTED)
@@ -178,13 +179,13 @@ class Quest (JQuest) :
        else :
             htmltext = "31371-02b.htm"
             st.exitQuest(1)
-            st.getPlayer().setAllianceWithVarkaKetra(0)
+            player.setAllianceWithVarkaKetra(0)
    elif event == "31371-10-1.htm" :
        htmltext = "31371-10-1.htm"
        st.set("id","3")
        st.takeItems(Varka_Badge_Soldier, 100)
        st.giveItems(Ketra_Alliance_One, 1)
-       st.getPlayer().setAllianceWithVarkaKetra(1)
+       player.setAllianceWithVarkaKetra(1)
        st.playSound("ItemSound.quest_middle")
    elif event == "31371-10-2.htm" :
        htmltext = "31371-10-2.htm"
@@ -193,7 +194,7 @@ class Quest (JQuest) :
        st.takeItems(Varka_Badge_Officer, 100)
        st.takeItems(Ketra_Alliance_One, -1)
        st.giveItems(Ketra_Alliance_Two, 1)
-       st.getPlayer().setAllianceWithVarkaKetra(2)
+       player.setAllianceWithVarkaKetra(2)
        st.playSound("ItemSound.quest_middle")
    elif event == "31371-10-3.htm" :
        htmltext = "31371-10-3.htm"
@@ -203,7 +204,7 @@ class Quest (JQuest) :
        st.takeItems(Varka_Badge_Captain, 100)
        st.takeItems(Ketra_Alliance_Two, -1)
        st.giveItems(Ketra_Alliance_Three, 1)
-       st.getPlayer().setAllianceWithVarkaKetra(3)
+       player.setAllianceWithVarkaKetra(3)
        st.playSound("ItemSound.quest_middle")
    elif event == "31371-10-4.htm" :
        htmltext = "31371-10-4.htm"
@@ -214,7 +215,7 @@ class Quest (JQuest) :
        st.takeItems(Ketra_Alliance_Three, -1)
        st.takeItems(Valor_Totem,-1)
        st.giveItems(Ketra_Alliance_Four, 1)
-       st.getPlayer().setAllianceWithVarkaKetra(4)
+       player.setAllianceWithVarkaKetra(4)
        st.playSound("ItemSound.quest_middle")
    elif event == "31371-11a.htm" :
        htmltext = "31371-11a.htm"
@@ -234,7 +235,7 @@ class Quest (JQuest) :
        st.takeItems(Ketra_Alliance_Five, -1)
        st.takeItems(Valor_Totem,-1)
        st.takeItems(Wisdom_Totem,-1)
-       st.getPlayer().setAllianceWithVarkaKetra(0)
+       player.setAllianceWithVarkaKetra(0)
        st.exitQuest(1)
    return htmltext
 
@@ -261,7 +262,7 @@ class Quest (JQuest) :
       Wisdom = st.getQuestItemsCount(Wisdom_Totem)
       if npcId == Wahkan :
           st.set("id","1")
-          if st.getPlayer().isAlliedWithVarka() or VAlliance :
+          if player.isAlliedWithVarka() or VAlliance :
               htmltext= "31371-02a.htm"
               st.exitQuest(1)
           elif KAlliance == 0 :
@@ -280,7 +281,7 @@ class Quest (JQuest) :
                   if cond != 2 :
                       htmltext = "31371-04.htm"
                       st.set("cond","2")
-                      st.getPlayer().setAllianceWithVarkaKetra(1)
+                      player.setAllianceWithVarkaKetra(1)
                   else :
                       if VBadgeS < 200 or VBadgeO < 100 :
                           htmltext = "31371-12.htm"
@@ -290,7 +291,7 @@ class Quest (JQuest) :
                   if cond != 3 :
                       htmltext = "31371-05.htm"
                       st.set("cond","3")
-                      st.getPlayer().setAllianceWithVarkaKetra(2)
+                      player.setAllianceWithVarkaKetra(2)
                   else :
                       if VBadgeS < 300 or VBadgeO < 200 or VBadgeC < 100 :
                           htmltext = "31371-15.htm"
@@ -300,7 +301,7 @@ class Quest (JQuest) :
                   if cond != 4 :
                       htmltext = "31371-06.htm"
                       st.set("cond","4")
-                      st.getPlayer().setAllianceWithVarkaKetra(3)
+                      player.setAllianceWithVarkaKetra(3)
                   else:
                       if VBadgeS < 300 or VBadgeO < 300 or VBadgeC < 200 or Valor == 0 :
                           htmltext = "31371-21.htm"
@@ -310,7 +311,7 @@ class Quest (JQuest) :
                   if cond != 5 :
                       htmltext = "31371-07.htm"
                       st.set("cond","5")
-                      st.getPlayer().setAllianceWithVarkaKetra(4)
+                      player.setAllianceWithVarkaKetra(4)
                   else :
                       if VBadgeS < 400 or VBadgeO < 400 or VBadgeC < 200 or Wisdom == 0 :
                           htmltext = "31371-17.htm"
@@ -322,14 +323,14 @@ class Quest (JQuest) :
                           st.takeItems(Ketra_Alliance_Four, -1)
                           st.takeItems(Wisdom_Totem,-1)
                           st.giveItems(Ketra_Alliance_Five, 1)
-                          st.getPlayer().setAllianceWithVarkaKetra(5)
+                          player.setAllianceWithVarkaKetra(5)
                           st.set("id","3")
                           st.playSound("ItemSound.quest_middle")
               elif KAlliance5 :
                   if cond != 6 :
                       htmltext = "31371-18.htm"
                       st.set("cond","6")
-                      st.getPlayer().setAllianceWithVarkaKetra(5)
+                      player.setAllianceWithVarkaKetra(5)
                   else:
                       htmltext = "31371-08.htm"
     return htmltext
@@ -343,8 +344,8 @@ class Quest (JQuest) :
           npcId = npc.getNpcId()
           cond = st.getInt("cond")
           id = st.getInt("id")
-          st2 = st.getPlayer().getQuestState("606_WarWithVarkaSilenos")
-          if not st.getPlayer().isAlliedWithVarka() :
+          st2 = partyMember.getQuestState("606_WarWithVarkaSilenos")
+          if not partyMember.isAlliedWithVarka() :
               if (npcId in Varka_One) or (npcId in Varka_Two) or (npcId in Varka_Three) :
                   item = 0
                   if cond <= 5 :
@@ -372,7 +373,7 @@ class Quest (JQuest) :
                       giveReward(st,item,chance,MAX,drop)
               elif npcId in Ketra_Orcs :
                   decreaseAlliance(st)
-                  party = st.getPlayer().getParty()
+                  party = partyMember.getParty()
                   if party :
                       for player in party.getPartyMembers().toArray() :
                           pst = player.getQuestState(qn)
