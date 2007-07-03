@@ -138,6 +138,7 @@ class Quest (JQuest) :
  def findRightState(self, player,mob) :
      mobid = mob.getObjectId()
      name = player.getName()
+     st1 = None
      if [mobid,name] in self.Spawn_List :
          st1 = L2World.getInstance().getPlayer(name)
      else :
@@ -146,8 +147,9 @@ class Quest (JQuest) :
                  name = entry[1]
                  st1 = L2World.getInstance().getPlayer(name)
                  break
-     st = st1.getQuestState(self.qn)
-     return st
+     if st1 :
+         return st1.getQuestState(self.qn)
+     return st1
 
  def onEvent (self,event,st) :
    htmltext = ""  # simple initialization...if none of the events match, return nothing.  
