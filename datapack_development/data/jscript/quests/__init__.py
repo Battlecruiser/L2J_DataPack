@@ -35,6 +35,7 @@ __all__ = [
 '47_IntoTheDarkForest',
 '48_ToTheImmortalPlateau',
 '49_TheRoadHome',
+'51_OFullesSpecialBait',
 '53_LinnaeusSpecialBait',
 'SagasSuperclass',
 '70_SagaOfThePhoenixKnight',
