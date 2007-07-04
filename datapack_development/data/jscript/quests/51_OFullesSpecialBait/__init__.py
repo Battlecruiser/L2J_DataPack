@@ -42,7 +42,9 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
-   if cond == 0 :
+   if id == COMPLETED :
+      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
+   elif cond == 0 :
       if player.getLevel() >= 36 :
          htmltext = "31572-01.htm"
       else:
@@ -73,6 +75,7 @@ class Quest (JQuest) :
 QUEST       = Quest(51,qn,"O'Fulle's Special Bait")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
+COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(OFULLE)
