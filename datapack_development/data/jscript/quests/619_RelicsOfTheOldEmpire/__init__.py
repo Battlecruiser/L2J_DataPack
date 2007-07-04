@@ -30,7 +30,7 @@ class Quest (JQuest) :
      htmltext = event
      relics = st.getQuestItemsCount(RELICS)
      if event == "31538-03.htm" :
-       if st.getPlayer().getLevel() >= 75 :
+       if st.getPlayer().getLevel() >= 74 :
           st.set("cond","1")
           st.setState(STARTED)
           st.playSound("ItemSound.quest_accept")
@@ -57,7 +57,7 @@ class Quest (JQuest) :
         relics = st.getQuestItemsCount(RELICS)
         entrance = st.getQuestItemsCount(ENTRANCE)
         if id==CREATED:
-           if player.getLevel() >= 75 :
+           if player.getLevel() >= 74 :
               htmltext="31538-01.htm"
            else :
               htmltext="31538-02.htm"
