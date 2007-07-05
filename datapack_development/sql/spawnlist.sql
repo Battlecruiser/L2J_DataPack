@@ -33862,6 +33862,17 @@ INSERT INTO `spawnlist` VALUES
 (70576,'Monastery Silence',1,22135,114482,-80787,-50,0,0,33991,0,0,0),
 (70577,'Forsaken Plains',1,27316,171715,44028,-4904,0,0,0,21600,0,0);
 
+INSERT INTO `spawnlist` VALUES
+(NULL,'rune_chamberlain_etc',1,35503,18376,-49020,-1212,0,0,37945,60,0,0),
+(NULL,'rune_chamberlain_etc',1,35503,18625,-49359,-1220,0,0,64153,60,0,0),
+(NULL,'rune_chamberlain_etc',1,35504,15668,-49024,-1058,0,0,34435,60,0,0),
+(NULL,'rune_chamberlain_etc',1,35504,15868,-49283,-1058,0,0,65149,60,0,0),
+(NULL,'rune_chamberlain_etc',1,35505,15272,-49075,-1058,0,0,31547,60,0,0),
+(NULL,'rune_chamberlain_etc',1,35505,15428,-49274,-1058,0,0,1523,60,0,0),
+(NULL,'rune_chamberlain_etc',1,35509,10211,-49084,-307,0,0,36736,60,0,0),
+(NULL,'rune_chamberlain_etc',1,35510,12318,-47703,1296,0,0,22879,60,0,0),
+(NULL,'rune_chamberlain_etc',1,35511,10840,-49273,-565,0,0,2366,60,0,0);
+
 INSERT INTO `spawnlist` VALUES 
 (NULL,'Crypts of Disgrace',1,22001,46734,-115708,-3815,0,0,31429,60,0,0),
 (NULL,'Crypts of Disgrace',1,22001,46259,-115912,-3718,0,0,37476,60,0,0),
