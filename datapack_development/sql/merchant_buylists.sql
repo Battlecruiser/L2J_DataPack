@@ -15293,7 +15293,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (7679,0,300542,31);
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
-(6779,30000,355111,1)
+(6779,30000,355111,1),
 (6793,90000,355111,12),
 (6794,200000,355111,13),
 (6795,300000,355111,14),
