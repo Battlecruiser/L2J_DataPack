@@ -39,6 +39,7 @@ TopBGradeWeaponData = { \
 "Etc":(170,143), \
 "Pole":(194,99), \
 "Sword":(194,122),\
+"Big Blunt":(236,99), \
 "Dual Sword":(236,99)}
 
 class Quest (JQuest) :
@@ -108,7 +109,7 @@ class Quest (JQuest) :
     elif event.startswith("selectAGrade_"):
       if st.getInt("bypass"):
         aGradeItemId = int(event.replace("selectAGrade_", ""))
-        if aGradeItemId in (80,98,150,212,235,269,288,2504,5233):
+        if aGradeItemId in (80,98,150,212,235,269,288,2504,5233,7884,7894,7899):
           htmltext = "31002-12.htm"
           st.giveItems(aGradeItemId,1)
           st.giveItems(STAR_OF_DESTINY,1)
