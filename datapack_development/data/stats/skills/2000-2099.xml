@@ -822,9 +822,9 @@
   </for>
 </skill>
 <skill id="2065" levels="8" name="Box Key">
-  <set name="target" val="TARGET_UNLOCKABLE"/>
+  <set name="target" val="TARGET_NONE"/>
   <set name="skillTime" val="500"/>
-  <set name="skillType" val="UNLOCK"/>
+  <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
