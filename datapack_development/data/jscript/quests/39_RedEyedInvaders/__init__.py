@@ -1,4 +1,7 @@
-# Made by disKret
+# Made by disKret, as a part of the
+# Official L2J Datapack Project, please visit
+# http://forum.l2jdp.com to meet the community behind it, or
+# http://l2jdp.com/trac if you need to report a bug.
 import sys
 from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State
@@ -15,26 +18,24 @@ BATHIS = 30332
 M_LIZARDMAN = 20919
 M_LIZARDMAN_SCOUT = 20920
 M_LIZARDMAN_GUARD = 20921
+ARANEID = 20925
 
 #QUEST DROPS
-BLACK_BONE_NECKLACE = 7178
-RED_BONE_NECKLACE = 7179
-INCENSE_POUCH = 7180
-GEM_OF_MAILLE = 7181
+BLACK_BONE_NECKLACE,RED_BONE_NECKLACE,INCENSE_POUCH,GEM_OF_MAILLE = range(7178,7182)
 
+NECKLACE={M_LIZARDMAN_GUARD:[RED_BONE_NECKLACE,100,BLACK_BONE_NECKLACE,"3"],
+          M_LIZARDMAN:[BLACK_BONE_NECKLACE,100,RED_BONE_NECKLACE,"3"],
+          M_LIZARDMAN_SCOUT:[BLACK_BONE_NECKLACE,100,RED_BONE_NECKLACE,"3"]
+}
+DROPLIST={ARANEID:[GEM_OF_MAILLE,30,INCENSE_POUCH,"5"],
+          M_LIZARDMAN_GUARD:[INCENSE_POUCH,30,GEM_OF_MAILLE,"5"],
+          M_LIZARDMAN_SCOUT:[INCENSE_POUCH,30,GEM_OF_MAILLE,"5"]
+}
 #REWARDS
 GREEN_COLORED_LURE_HG = 6521
-BABy_DUCK_RODE = 6529
+BABY_DUCK_RODE = 6529
 FISHING_SHOT_NG = 6535
 
-DROPLIST={20925:[GEM_OF_MAILLE,30,INCENSE_POUCH,"5"],
-          20919:[INCENSE_POUCH,30,GEM_OF_MAILLE,"5"],
-          20920:[INCENSE_POUCH,30,GEM_OF_MAILLE,"5"]
-}
-NECKLACE={20921:[RED_BONE_NECKLACE,100,BLACK_BONE_NECKLACE,"3"],
-          20919:[BLACK_BONE_NECKLACE,100,RED_BONE_NECKLACE,"3"],
-          20920:[BLACK_BONE_NECKLACE,100,RED_BONE_NECKLACE,"3"]
-}
 def drop(partyMember,array) :
     item,max,item2,condition = array
     st = partyMember.getQuestState(qn)
@@ -78,11 +79,11 @@ class Quest (JQuest) :
        st.takeItems(INCENSE_POUCH,30)
        st.takeItems(GEM_OF_MAILLE,30)  
        st.giveItems(GREEN_COLORED_LURE_HG,60)
-       st.giveItems(BABy_DUCK_RODE,1)
+       st.giveItems(BABY_DUCK_RODE,1)
        st.giveItems(FISHING_SHOT_NG,500)
-       st.setState(COMPLETED)
        st.unset("cond")
        st.playSound("ItemSound.quest_finish")
+       st.setState(COMPLETED)
      else :
        htmltext = "You don't have required items"
    return htmltext
@@ -91,17 +92,20 @@ class Quest (JQuest) :
    htmltext = "<html><head><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
-
    npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
-   if npcId == BABENCO and cond == 0 :
-     if id == COMPLETED :
+   if id == COMPLETED :
        htmltext = "<html><head><body>This quest have already been completed.</body></html>"
-     elif player.getLevel() >= 20 : # and player.getLevel() <= 28:
-       htmltext = "30334-0.htm"
+   elif npcId == BABENCO :
+     if id == CREATED :     
+       if player.getLevel() >= 20 :
+         htmltext = "30334-0.htm"
+       else :
+         st.exitQuest(1)
+         htmltext = "30334-2.htm"
      else :
-       st.exitQuest(1)
+       htmltext = "30334-3.htm"
    elif npcId == BATHIS and id == STARTED:
      if cond == 1 :
        htmltext = "30332-0.htm"
@@ -114,11 +118,11 @@ class Quest (JQuest) :
  def onKill (self,npc,player):
    npcId = npc.getNpcId()
    partyMember = self.getRandomPartyMember(player,"2")
-   if (partyMember and npcId != 20925) :
+   if (partyMember and npcId != ARANEID) :
        drop(partyMember,NECKLACE[npcId])
    else:
        partyMember = self.getRandomPartyMember(player,"4")
-       if (partyMember and npcId != 20921) :     
+       if (partyMember and npcId != M_LIZARDMAN) :     
            drop(partyMember,DROPLIST[npcId])
    return
 
@@ -130,16 +134,14 @@ COMPLETED   = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(BABENCO)
 QUEST.addTalkId(BABENCO)
-
 QUEST.addTalkId(BATHIS)
 
-QUEST.addKillId(20919)
-QUEST.addKillId(20920)
-QUEST.addKillId(20921)
-QUEST.addKillId(20925)
-STARTED.addQuestDrop(BABENCO,BLACK_BONE_NECKLACE,1)
-STARTED.addQuestDrop(BABENCO,RED_BONE_NECKLACE,1)
-STARTED.addQuestDrop(BABENCO,INCENSE_POUCH,1)
-STARTED.addQuestDrop(BABENCO,GEM_OF_MAILLE,1)
+QUEST.addKillId(M_LIZARDMAN)
+QUEST.addKillId(M_LIZARDMAN_SCOUT)
+QUEST.addKillId(M_LIZARDMAN_GUARD)
+QUEST.addKillId(ARANEID)
+
+for item in range(7178,7182) :
+    STARTED.addQuestDrop(BABENCO,item,1)
 
 print "importing quests: 39: Red Eyed Invaders"
