@@ -569,6 +569,7 @@ merchant_lease.sql
 merchant_shopids.sql
 merchants.sql
 minions.sql
+mods_wedding.sql
 npc.sql
 npcskills.sql
 olympiad_nobles.sql
