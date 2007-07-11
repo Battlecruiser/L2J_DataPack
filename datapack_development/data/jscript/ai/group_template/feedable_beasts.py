@@ -104,7 +104,7 @@ class feedable_beasts(JQuest) :
                 if [npc.getObjectId(),player.getObjectId()] in self.feedInfo :
                     self.feedInfo.remove([npc.getObjectId(),player.getObjectId()])
                 # despawn the mad cow
-                npc.onDecay()
+                npc.deleteMe()
                 # spawn the new mob 
                 spawnObjId = self.getPcSpawn(player).addSpawn(self.madCowPolymorph[npc.getNpcId()],npc,False)
                 nextNpc = self.getPcSpawn(player).getSpawn(spawnObjId).getLastSpawn()
@@ -144,7 +144,7 @@ class feedable_beasts(JQuest) :
             self.feedInfo.remove([npc.getObjectId(),player.getObjectId()])
         
         # despawn the old mob
-        npc.onDecay()
+        npc.deleteMe()
         
         # if this is finally a trained mob, then despawn any other trained mobs that the
         # player might have and initialize the Tamed Beast.
