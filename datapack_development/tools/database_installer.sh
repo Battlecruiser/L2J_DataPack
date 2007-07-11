@@ -5,6 +5,7 @@
 ## Based on Tiago Tagliaferri's script    ##
 ## E-mail: tiago_tagliaferri@msn.com      ##
 ## From "L2J-DataPack"                    ##
+## Bug reports: http://l2jdp.com/trac     ##
 ############################################
 trap finish 2
 
