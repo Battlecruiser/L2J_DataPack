@@ -144,7 +144,10 @@ class feedable_beasts(JQuest) :
             self.feedInfo.remove([npc.getObjectId(),player.getObjectId()])
         
         # despawn the old mob
-        npc.deleteMe()
+        if self.growthCapableMobs[npcId][0] == 0 :
+            npc.decayMe()
+        else :
+            npc.deleteMe()
         
         # if this is finally a trained mob, then despawn any other trained mobs that the
         # player might have and initialize the Tamed Beast.
