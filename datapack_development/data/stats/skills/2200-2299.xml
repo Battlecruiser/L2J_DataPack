@@ -242,10 +242,17 @@
   </for>
 </skill>
 <skill id="2229" levels="8" name="Treasure Chest Key">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#itemConsume">6665 6666 6667 6668 6669 6670 6671 6672</table>
+  <set name="power" val="0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="DELUXE_KEY_UNLOCK"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="itemConsumeId" val="#itemConsume" />
+  <set name="itemConsumeCount" val="1"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
   <for>
   </for>
 </skill>
@@ -385,8 +392,8 @@
   <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-  </for> 
- </skill> 
+  </for>
+ </skill>
 <skill id="2246" levels="1" name="Herb of Power">
   <!-- Orignally done by ettore85a -->
   <set name="power" val="0.0"/>
@@ -421,7 +428,7 @@
     <mul order="0x30" stat="mAtk" val="1.75"/>
    </effect>
   </for>
-</skill> 
+</skill>
 <skill id="2248" levels="1" name="Bless of Fire">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
