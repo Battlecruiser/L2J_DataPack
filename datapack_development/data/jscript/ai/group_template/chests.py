@@ -57,11 +57,11 @@ class chests(JQuest) :
                     # failure, despawn without any rewards:  npc.deleteMe()
                     else :
                         # todo: perhaps a self-destruct bomb with random chance goes here?
-                        npc.decayMe()
+                        npc.onDecay()
                 # any other skill used: despawn without any rewards
                 else :
                     # todo: perhaps a self-destruct bomb with random chance goes here?
-                    npc.decayMe()
+                    npc.onDecay()
             else :  # if this weren't a box, upon interaction start the mimic behaviors...
                 # todo: perhaps a self-buff (skill id 4245) with random chance goes here?
                 npc.addDamageHate(player,0,999)
@@ -77,7 +77,7 @@ class chests(JQuest) :
         if not npc.isInteracted() :
             npc.setInteracted()
             if npc.isBox() :
-                npc.decayMe()
+                npc.onDecay()
             else :  # if this weren't a box, upon interaction start the mimic behaviors...
                 # todo: perhaps a self-buff (skill id 4245) with random chance goes here?
                 npc.addDamageHate(player,0,999)

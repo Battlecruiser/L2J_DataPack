@@ -286,7 +286,7 @@ class Quest (JQuest) :
      st.giveItems(4409,1)
      st.giveItems(4408,1)
      htmltext = "30743-0"+str(st.getRandom(6)+1)+".htm"
-     npc.decayMe()
+     npc.deleteMe()
    elif npcId == RUPINA:
      if st.getRandom(100) <= 4:
        st.giveItems(NECKLACE_OF_GRACE,1)
