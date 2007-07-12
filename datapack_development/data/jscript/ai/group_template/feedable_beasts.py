@@ -145,7 +145,7 @@ class feedable_beasts(JQuest) :
         
         # despawn the old mob
         if self.growthCapableMobs[npcId][0] == 0 :
-            npc.decayMe()
+            npc.onDecay()
         else :
             npc.deleteMe()
         
