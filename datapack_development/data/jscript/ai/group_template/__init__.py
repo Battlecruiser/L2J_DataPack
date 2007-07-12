@@ -1,4 +1,5 @@
 __all__ = [
 'polymorphing_angel',
-'feedable_beasts'
+'feedable_beasts',
+'chests'
 ]
