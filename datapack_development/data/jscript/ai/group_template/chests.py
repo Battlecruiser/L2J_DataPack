@@ -9,6 +9,15 @@ from net.sf.l2j.util import Rnd;
 
 SKILL_DELUXE_KEY = 2229
 
+#Base chance for chest to be opened
+BASE_CHANCE = 86
+
+# Percent to decrease base chance when grade of DELUXE key not match
+LEVEL_DECREASE = 20
+
+# Chance for chest to disapear when attacked
+ATTACK_DISAPEAR = 50
+
 class chests(JQuest) :
 
     # init function.  Add in here variables that you'd like to be inherited by subclasses (if any)
@@ -38,34 +47,26 @@ class chests(JQuest) :
         # if this was a mimic, set the target, start the skills and become agro
         if not npc.isInteracted() :
             npc.setInteracted()
-            if npc.isBox() :
-                if skillId == SKILL_DELUXE_KEY :
-                    # check the chance to open the box
-                    chance = 0
-                    keyLevelNeeded = npc.getLevel()/10
+            if skillId == SKILL_DELUXE_KEY :
+            	# check the chance to open the box
+		keyLevelNeeded = int(npc.getLevel()/10)
+		levelDiff = keyLevelNeeded - skillLevel
+		if levelDiff < 0 :
+		    levelDiff = levelDiff * (-1)
+		chance = (Rnd.get(10) + BASE_CHANCE) - levelDiff * LEVEL_DECREASE
 
-                    if skillLevel > keyLevelNeeded :
-                        player.sendMessage("The key seems not to be adapted.")
-                        player.sendPacket(PlaySound("interfacesound.system_close_01"))
-                    else :
-                        chance = 100 - 40 * (keyLevelNeeded - skillLevel)
-
-                    # success, pretend-death with rewards:  npc.reduceCurrentHp(99999999, player)
-                    if Rnd.get(100) < chance :
-                        npc.setSpecialDrop();
-                        npc.reduceCurrentHp(99999999, player)
-                    # failure, despawn without any rewards:  npc.deleteMe()
-                    else :
-                        # todo: perhaps a self-destruct bomb with random chance goes here?
-                        npc.onDecay()
-                # any other skill used: despawn without any rewards
-                else :
-                    # todo: perhaps a self-destruct bomb with random chance goes here?
-                    npc.onDecay()
-            else :  # if this weren't a box, upon interaction start the mimic behaviors...
-                # todo: perhaps a self-buff (skill id 4245) with random chance goes here?
-                npc.addDamageHate(player,0,999)
-                npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
+		# success, pretend-death with rewards:  npc.reduceCurrentHp(99999999, player)
+		if Rnd.get(100) < chance :
+		    npc.setMustRewardExpSp(False)
+		    npc.setSpecialDrop();
+		    npc.reduceCurrentHp(99999999, player)
+		    return
+	    # if it fail to open, start attacking
+            if Rnd.get(100) < ATTACK_DISAPEAR :
+                npc.decayMe()
+                return
+  	    npc.addDamageHate(player,0,999)
+  	    npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
         return
 
     def onAttack(self,npc,player) :
@@ -76,8 +77,8 @@ class chests(JQuest) :
         # if this was a mimic, set the target, start the skills and become agro
         if not npc.isInteracted() :
             npc.setInteracted()
-            if npc.isBox() :
-                npc.onDecay()
+            if Rnd.get(100) < ATTACK_DISAPEAR :
+                npc.decayMe()
             else :  # if this weren't a box, upon interaction start the mimic behaviors...
                 # todo: perhaps a self-buff (skill id 4245) with random chance goes here?
                 npc.addDamageHate(player,0,999)
