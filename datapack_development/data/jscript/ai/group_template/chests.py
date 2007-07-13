@@ -9,14 +9,14 @@ from net.sf.l2j.util import Rnd;
 
 SKILL_DELUXE_KEY = 2229
 
-#Base chance for chest to be opened
-BASE_CHANCE = 86
+#Base chance for BOX to be opened
+BASE_CHANCE = 100
 
 # Percent to decrease base chance when grade of DELUXE key not match
-LEVEL_DECREASE = 20
+LEVEL_DECREASE = 40
 
-# Chance for chest to disapear when attacked
-ATTACK_DISAPEAR = 50
+# Chance for a chest to actually be a BOX (as opposed to being a mimic).
+IS_BOX = 40
 
 class chests(JQuest) :
 
@@ -44,29 +44,31 @@ class chests(JQuest) :
         # check if the npc and skills used are valid for this script.  Exit if invalid.
         if npcId not in self.chests : return
 
-        # if this was a mimic, set the target, start the skills and become agro
+        # if this has already been interacted, no further ai decisions are needed
+        # if it's the first interaction, check if this is a box or mimic
         if not npc.isInteracted() :
             npc.setInteracted()
-            if skillId == SKILL_DELUXE_KEY :
-            	# check the chance to open the box
-		keyLevelNeeded = int(npc.getLevel()/10)
-		levelDiff = keyLevelNeeded - skillLevel
-		if levelDiff < 0 :
-		    levelDiff = levelDiff * (-1)
-		chance = (Rnd.get(10) + BASE_CHANCE) - levelDiff * LEVEL_DECREASE
+            if Rnd.get(100) < IS_BOX :
+                # if it's a box, either it will be successfully openned by a proper key, or instantly disappear
+                if skillId == SKILL_DELUXE_KEY :
+                    # check the chance to open the box
+                    keyLevelNeeded = int(npc.getLevel()/10)
+                    levelDiff = keyLevelNeeded - skillLevel
+                    if levelDiff < 0 :
+                        levelDiff = levelDiff * (-1)
+                    chance = BASE_CHANCE - levelDiff * LEVEL_DECREASE
 
-		# success, pretend-death with rewards:  npc.reduceCurrentHp(99999999, player)
-		if Rnd.get(100) < chance :
-		    npc.setMustRewardExpSp(False)
-		    npc.setSpecialDrop();
-		    npc.reduceCurrentHp(99999999, player)
-		    return
-	    # if it fail to open, start attacking
-            if Rnd.get(100) < ATTACK_DISAPEAR :
+                    # success, pretend-death with rewards:  npc.reduceCurrentHp(99999999, player)
+                    if Rnd.get(100) < chance :
+                        npc.setMustRewardExpSp(False)
+                        npc.setSpecialDrop();
+                        npc.reduceCurrentHp(99999999, player)
+                        return
+                # used a skill other than chest-key, or used a chest-key but failed to open: disappear with no rewards    
                 npc.onDecay()
-                return
-  	    npc.addDamageHate(player,0,999)
-  	    npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
+            else :
+                npc.addDamageHate(player,0,999)
+                npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
         return
 
     def onAttack(self,npc,player) :
@@ -77,7 +79,7 @@ class chests(JQuest) :
         # if this was a mimic, set the target, start the skills and become agro
         if not npc.isInteracted() :
             npc.setInteracted()
-            if Rnd.get(100) < ATTACK_DISAPEAR :
+            if Rnd.get(100) < IS_BOX :
                 npc.onDecay()
             else :  # if this weren't a box, upon interaction start the mimic behaviors...
                 # todo: perhaps a self-buff (skill id 4245) with random chance goes here?
