@@ -63,7 +63,7 @@ class chests(JQuest) :
 		    return
 	    # if it fail to open, start attacking
             if Rnd.get(100) < ATTACK_DISAPEAR :
-                npc.decayMe()
+                npc.onDecay()
                 return
   	    npc.addDamageHate(player,0,999)
   	    npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
@@ -78,7 +78,7 @@ class chests(JQuest) :
         if not npc.isInteracted() :
             npc.setInteracted()
             if Rnd.get(100) < ATTACK_DISAPEAR :
-                npc.decayMe()
+                npc.onDecay()
             else :  # if this weren't a box, upon interaction start the mimic behaviors...
                 # todo: perhaps a self-buff (skill id 4245) with random chance goes here?
                 npc.addDamageHate(player,0,999)
