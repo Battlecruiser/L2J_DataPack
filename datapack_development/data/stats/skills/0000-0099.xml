@@ -153,6 +153,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
+  <set name="baseCritRate" val="15"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <!-- charge values -->
@@ -205,6 +206,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="baseCritRate" val="15"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <!-- charge values -->
@@ -248,6 +250,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
+  <set name="baseCritRate" val="15"/>
   <set name="magicLvl" val="#magicLvl"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
@@ -318,6 +321,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="500"/>
+  <set name="baseCritRate" val="15"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <!-- charge values -->
@@ -508,6 +512,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
+  <set name="baseCritRate" val="15"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <!-- charge values -->
@@ -585,6 +590,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
+  <set name="baseCritRate" val="15"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
 </skill>
@@ -848,6 +854,7 @@
   <set name="reuseDelay" val="11000"/>
   <set name="skillTime" val="1080"/>
   <set name="skillType" val="PDAM"/>
+  <set name="baseCritRate" val="15"/>
   <set name="lethal1" val="5"/>
   <set name="lethal2" val="2"/>
   <set name="dmgDirectlyToHp" val="true"/>
@@ -941,6 +948,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
+  <set name="baseCritRate" val="15"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <!-- charge values -->
@@ -1277,6 +1285,7 @@
   <set name="effectRange" val="1100"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
+  <set name="baseCritRate" val="15"/>
   <!-- charge values -->
   <set name="num_charges" val="1"/>
   <set name="charge_skill_id" val="50"/> <!-- Force Focus is the charger -->
