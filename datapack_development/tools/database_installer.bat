@@ -58,7 +58,7 @@ echo    saved, you'll see this menu again next time.
 echo.
 echo (2) Import and configure: This tool has some new options
 echo    available, you choose the values that fit your needs
-echo    using former settings as base.
+echo    using former settings as a base.
 echo.
 echo (3) Ignose stored settings: I'll let you configure me 
 echo    with a fresh set of default values as a base.
@@ -125,15 +125,19 @@ if not "%mysqlBinPath%" == "use path" call :binaryfind
 echo.
 path|find "MySQL">NUL
 if %errorlevel% == 0 (
-echo Additionally, i found the "MySQL" string in your PATH, this
-echo usually means you could just type 'use path' below. In fact,
-echo I'll use this as default unless you change it.
+echo I found MySQL is in your PATH, this will be used by default.
+echo If you want to use something different, change 'use path' for 
+echo something else.
 set mysqlBinPath=use path
 ) else (
-echo Additionally, I can't find "MYSQL" in your PATH environment
-echo variable. If the default directory i used above and this detection
-echo failed, you'll have to find out the values i need. If both succeed
-echo prefer path.
+echo Look, I can't find "MYSQL" in your PATH environment variable.
+echo It would be good if you go and find out where "mysql.exe" and 
+echo "mysqldump.exe" are.
+echo.
+echo If you have no idea about the meaning of words such as MYSQL
+echo or PATH, you'd better close this window, and consider googling
+echo and reading about it. Setup and host an L2J server requires a
+echo minimum of technical skills.
 )
 echo.
 echo Write the path to your MySQL binaries (no trailing slash needed):
@@ -217,10 +221,10 @@ set stage=1
 title L2JDP installer - Login Server database setup
 echo.
 echo Trying to make a backup of your loginserver database.
-set cmdline="%mysqldumpPath%" --add-drop-table -h %lshost% -u %lsuser% --password=%lspass% %lsdb% ^> %backup%\loginserver_backup.sql 2^> NUL
+set cmdline="%mysqldumpPath%" --add-drop-table -h %lshost% -u %lsuser% --password=%lspass% %lsdb% ^> "%backup%\loginserver_backup.sql" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto lsdbok
-if %safe_mode% == 1 goto omfg
+REM if %safe_mode% == 1 goto omfg
 :ls_err1
 call :colors 47
 title L2JDP installer - Login Server database setup ERROR!!!
@@ -379,7 +383,7 @@ title L2JDP installer - Game server database setup
 cls
 echo.
 echo Making a backup of the original gameserver database.
-set cmdline="%mysqldumpPath%" --add-drop-table -h %gshost% -u %gsuser% --password=%gspass% %gsdb% ^> %backup%\gameserver_backup.sql 2^> NUL
+set cmdline="%mysqldumpPath%" --add-drop-table -h %gshost% -u %gsuser% --password=%gspass% %gsdb% ^> "%backup%\gameserver_backup.sql" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto gsdbok
 if %safe_mode% == 1 goto omfg
@@ -600,10 +604,10 @@ goto experimental
 :dump
 set cmdline=
 if /i %full% == 1 (set action=Installing) else (set action=Upgrading)
-echo %action% %1>>%output%
+echo %action% %1>>"%output%"
 echo %action% %~nx1
-if "%dest%"=="ls" set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< ..\sql\%1 2^>^>%output%
-if "%dest%"=="gs" set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< ..\sql\%1 2^>^>%output%
+if "%dest%"=="ls" set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< ..\sql\%1 2^>^>"%output%"
+if "%dest%"=="gs" set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< ..\sql\%1 2^>^>"%output%"
 %cmdline%
 if %logging%==0 if NOT %ERRORLEVEL%==0 call :omfg2 %1
 goto :eof
@@ -662,9 +666,9 @@ echo or anything, instead i'll just overwrite it.
 echo.
 echo When you're done or if you don't mind, press any key to start.
 pause>NUL
-set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^<..\sql\%1 2^>^>%output%
-date /t >%output%
-time /t >>%output%
+set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^<..\sql\%1 2^>^>"%output%"
+date /t >"%output%"
+time /t >>"%output%"
 %cmdline%
 echo Log file created, resuming normal operations...
 call :colors 17
@@ -724,7 +728,7 @@ goto asknb
 cd ..\sql\updates\
 echo @echo off> temp.bat
 if exist errors.txt del errors.txt
-for %%i in (*.sql) do echo %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> errors.txt >> temp.bat
+for %%i in (*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> errors.txt >> temp.bat
 call temp.bat> nul
 del temp.bat
 move errors.txt %workdir%
@@ -806,7 +810,7 @@ call :colors 17
 title L2JDP installer - Script execution finished
 cls
 echo.
-echo L2JDP database_installer version 0.2
+echo L2JDP database_installer version 0.2.1
 echo (C) 2007 L2J Datapack Team
 echo database_installer comes with ABSOLUTELY NO WARRANTY;
 echo This is free software, and you are welcome to redistribute it
