@@ -3,9 +3,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.model.actor.instance import L2NpcInstance
 from net.sf.l2j.gameserver.serverpackets import MagicSkillUser
-from net.sf.l2j.gameserver.datatables import SpawnTable
 
 qn = "653_WildMaiden"
 #Npc
@@ -15,25 +13,14 @@ GALIBREDO = 30181
 #Items
 SOE = 736
 
-def findNpc(npcId,player) :
-    npclist=[]
-    for spawn in SpawnTable.getInstance().getSpawnTable().values():
-        if spawn.getNpcid() == npcId:
-            instance=spawn.getLastSpawn()
-            npclist.append(instance)
-    for npc in npclist:
-        if player.isInsideRadius(npc, 1600, 1, 0):
-           return npc
-    return instance
-
-
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc,player) :
     htmltext = event
-    player=st.getPlayer()
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "32013-04.htm" :
       if st.getQuestItemsCount(SOE):
         st.set("cond","1")
@@ -41,14 +28,12 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_accept")
         st.takeItems(SOE,1)
         htmltext = "32013-03.htm"
-        npc=findNpc(SUKI,player)
         npc.broadcastPacket(MagicSkillUser(npc,npc,2013,1,20000,0))
-        st.startQuestTimer("suki_timer",20000)
+        self.startQuestTimer("suki_timer",20000,npc,player)
     elif event == "32013-04a.htm" :
         st.exitQuest(1)
         st.playSound("ItemSound.quest_giveup")
     elif event == "suki_timer":
-        npc=findNpc(SUKI,player)
         npc.deleteMe()
         htmltext=None
     return htmltext
