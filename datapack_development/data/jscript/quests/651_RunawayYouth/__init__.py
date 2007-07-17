@@ -15,25 +15,14 @@ BATIDAE = 31989
 #Items
 SOE = 736
 
-def findNpc(npcId,player) :
-    npclist=[]
-    for spawn in SpawnTable.getInstance().getSpawnTable().values():
-        if spawn.getNpcid() == npcId:
-            instance=spawn.getLastSpawn()
-            npclist.append(instance)
-    for npc in npclist:
-        if player.isInsideRadius(npc, 1600, 1, 0):
-           return npc
-    return instance
-
-
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc,player) :
     htmltext = event
-    player=st.getPlayer()
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "32014-04.htm" :
       if st.getQuestItemsCount(SOE):
         st.set("cond","1")
@@ -41,14 +30,12 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_accept")
         st.takeItems(SOE,1)
         htmltext = "32014-03.htm"
-        npc=findNpc(IVAN,player)
         npc.broadcastPacket(MagicSkillUser(npc,npc,2013,1,20000,0))
-        st.startQuestTimer("ivan_timer",20000)
+        self.startQuestTimer("ivan_timer",20000,npc,player)
     elif event == "32014-04a.htm" :
         st.exitQuest(1)
         st.playSound("ItemSound.quest_giveup")
     elif event == "ivan_timer":
-        npc=findNpc(IVAN,player)
         npc.deleteMe()
         htmltext=None
     return htmltext
@@ -61,16 +48,16 @@ class Quest (JQuest) :
    id = st.getState()
    cond=st.getInt("cond")
    if npcId == IVAN and id == CREATED:
-       if player.getLevel()>=26 :
-           htmltext = "32014-02.htm"
-       else:
-           htmltext = "32014-01.htm"
-           st.exitQuest(1)
+      if player.getLevel()>=26 :
+         htmltext = "32014-02.htm"
+      else:
+         htmltext = "32014-01.htm"
+         st.exitQuest(1)
    elif npcId == BATIDAE and st.getInt("cond")==1 :
-       htmltext = "31989-01.htm"
-       st.giveItems(57,2883)
-       st.playSound("ItemSound.quest_finish")
-       st.exitQuest(1)
+      htmltext = "31989-01.htm"
+      st.giveItems(57,2883)
+      st.playSound("ItemSound.quest_finish")
+      st.exitQuest(1)
    return htmltext
 
 
