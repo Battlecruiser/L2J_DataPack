@@ -1192,16 +1192,10 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
   <set name="skillTime" val="830"/>
-  <set name="skillType" val="PDAM"/>
+  <set name="skillType" val="BLOW"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
-  <for>
-    <!-- 0x10 appears to be the correct order -->
-    <add order="0x10" stat="rCrit" val="45">
-      <using kind="Dagger" skill="0016"/>
-    </add>
-  </for>
 </skill>
 <skill id="4171" levels="12" name="BOSS Spinning Slash">
   <table name="#power"> 61.0 163.0 447.0 1169.0 2942.0 5686.0 8732.0 10131.0 11622.0 13182.0 14784.0 16398.0 </table>
@@ -1431,16 +1425,10 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
   <set name="skillTime" val="830"/>
-  <set name="skillType" val="PDAM"/>
+  <set name="skillType" val="BLOW"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
-  <for>
-    <!-- 0x10 appears to be the correct order -->
-    <add order="0x10" stat="rCrit" val="45">
-      <using kind="Dagger" skill="0016"/>
-    </add>
-  </for>
 </skill>
 <skill id="4182" levels="12" name="Poison">
   <table name="#dmg"> 12 18 24 31 38 44 48 48 49 49 48 48 </table>

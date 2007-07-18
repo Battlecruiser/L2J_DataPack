@@ -740,7 +740,7 @@
   <set name="condition" val="16"/>
   <set name="reuseDelay" val="180000"/>
   <set name="skillTime" val="1080"/>
-  <set name="skillType" val="PDAM"/>
+  <set name="skillType" val="BLOW"/>
   <set name="lethal1" val="5"/>
   <set name="lethal2" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -947,6 +947,7 @@
   </for>
 </skill>
 <skill id="334" levels="1" name="Focus Skill Mastery">
+  <!-- Skill for dagger and archer Need to be chance/corrected -->
   <set name="mpConsume" val="36"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -954,8 +955,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="78">
-      <mul order="0x30" stat="mCritRate" val="11"/>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="36">
+      <mul order="0x50" stat="blowRate" val="1.3"/>
     </effect>
   </for>
 </skill>
@@ -1126,12 +1127,13 @@
   <set name="magicLvl" val="76"/>
   <set name="power" val="5773"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="PDAM"/>
+  <set name="skillType" val="BLOW"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="reuseDelay" val="15000"/>
   <set name="overHit" val="true"/>
+  <set name="condition" val="16"/>
   <set name="lethal1" val="5"/>
   <set name="lethal2" val="2"/>
   <set name="skillTime" val="1800"/>
@@ -1349,107 +1351,122 @@
   </for>
 </skill>
 <skill id="355" levels="1" name="Focus Death">
-  <!-- by DJ MELERIX -->
-  <!--  Critical -30%, Blow land rate +60%, Critical Damage from front -30%, Critical Damage from back +90%  -->
   <set name="mpConsume" val="36"/>
+  <set name="effectPoint" val="669"/>
+  <set name="magicLevel" val="78"/>
   <set name="weaponsAllowed" val="16"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="reuseDelay" val="120000"/>
   <set name="skillTime" val="2000"/>
-  <set name="hitTime" val="2000"/>
-  <set name="buffDuration" val="120000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="FoC">
-      <mul order="0x30" stat="rCrit" val="0.7"/>
-      <!-- Missing Blow land rate +60% -->
-      <!-- Missing Critical Damage from front -30% -->
-      <mul order="0x30" stat="cAtk" val="1.9"> <!-- Critical Damage from back +90% -->
-        <and>
-          <player behind="true"/>
-        </and>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="focus">
+      <mul order="0x50" stat="rCrit" val="0.3"/>
+      <mul order="0x30" stat="blowRate" val="1.6">
+        <using kind="Dagger"/>
       </mul>
+      <mul order="0x30" stat="cAtk" val="0.7">
+	    <and>
+	      <player front="True"/>
+		</and>
+	  </mul>
+	  <mul order="0x30" stat="cAtk" val="1.6">
+		<and>
+		  <player front="False"/>
+		  <player behind="False"/>
+		</and>
+      </mul>
+	  <mul order="0x30" stat="cAtk" val="1.9">
+		<and>
+		  <player behind="True"/>
+		</and>
+	  </mul>
     </effect>
   </for>
 </skill>
 <skill id="356" levels="1" name="Focus Chance">
-  <!-- by DJ MELERIX -->
-  <!-- Critical Chance from front -30%, Critical Chance from side +30%, Critical Chance from back +60% -->
   <set name="mpConsume" val="36"/>
+  <set name="effectPoint" val="669"/>
+  <set name="magicLevel" val="78"/>
   <set name="weaponsAllowed" val="16"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="reuseDelay" val="120000"/>
   <set name="skillTime" val="2000"/>
-  <set name="hitTime" val="2000"/>
-  <set name="buffDuration" val="120000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="FoC">
-      <!-- Missing Critical Chance from front -30% -->
-      <!-- Missing Critical Chance from side +30% -->
-      <mul order="0x30" stat="rCrit" val="1.6"> <!-- Critical Chance from back +60% -->
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="focus">
+      <mul order="0x30" stat="rCrit" val="0.7">
         <and>
-          <player behind="true"/>
+          <player front="True"/>
+	    </and>
+      </mul>
+      <mul order="0x30" stat="rCrit" val="1.3">
+        <and>
+          <player front="False"/>
+	      <player behind="False"/>
         </and>
       </mul>
+	  <mul order="0x30" stat="rCrit" val="1.6">
+	    <and>
+	      <player behind="True"/>
+        </and>
+	   </mul>
     </effect>
   </for>
 </skill>
 <skill id="357" levels="1" name="Focus Power">
-  <!-- by DJ MELERIX -->
-  <!-- Critical Damage from front -30%, Critical Damage from side +30%, Critical Damage from back +60% -->
   <set name="mpConsume" val="36"/>
+  <set name="effectPoint" val="669"/>
+  <set name="magicLevel" val="78"/>
   <set name="weaponsAllowed" val="16"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="reuseDelay" val="120000"/>
   <set name="skillTime" val="2000"/>
-  <set name="hitTime" val="2000"/>
-  <set name="buffDuration" val="120000"/>
-  <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="FoC">
-      <!-- Missing Critical Damage from front -30% -->
-      <!-- Missing Critical Damage from side +30% -->
-      <mul order="0x30" stat="cAtk" val="1.6"> <!-- Critical Damage from back +60% -->
-        <and>
-          <player behind="true"/>
-        </and>
-      </mul>
-    </effect>
-  </for>
-</skill>
-<skill id="358" levels="1" name="Bluff">
-  <!-- WRONG -->
-  <set name="weaponsAllowed" val="16"/>
-  <set name="mpConsume" val="35"/>
-  <set name="power" val="40"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="STUN"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="40"/>
-  <set name="effectRange" val="400"/>
-  <set name="reuseDelay" val="30000"/>
-  <set name="skillTime" val="1000"/>
-  <set name="hitTime" val="1000"/>
   <for>
-    <effect count="1" name="Stun" time="9" val="0">
-      <sub order="0x40" stat="aggression" val="100000"/>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="focus">
+	    <mul order="0x30" stat="cAtk" val="0.7">
+	      <and>
+	        <player front="True"/>
+	      </and>
+	    </mul>
+	    <mul order="0x30" stat="cAtk" val="1.3">
+	      <and>
+	        <player front="False"/>
+	         <player behind="False"/>
+	      </and>
+	    </mul>
+	    <mul order="0x30" stat="cAtk" val="1.6">
+	      <and>
+	        <player behind="True"/>
+	      </and>
+	    </mul>
     </effect>
-    <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </for>
 </skill>
+<skill id="358" levels="1" name="Bluff"> 
+  <!-- WRONG --> 
+  <set name="weaponsAllowed" val="16"/> 
+  <set name="mpConsume" val="35"/> 
+  <set name="power" val="80"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="skillType" val="STUN"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="40"/> 
+  <set name="effectRange" val="400"/> 
+  <set name="reuseDelay" val="30000"/> 
+  <set name="skillTime" val="1000"/> 
+  <set name="hitTime" val="1000"/> 
+  <for> 
+    <effect count="1" name="Bluff" time="3" val="0"> 
+      <sub order="0x40" stat="aggression" val="100000"/> 
+    </effect> 
+    <effect count="1" name="RemoveTarget" time="1" val="0"/> 
+  </for> 
+</skill> 
 <skill id="359" levels="1" name="Eye of Hunter">
   <set name="mpConsume" val="70"/>
   <set name="power" val="0.0"/>
