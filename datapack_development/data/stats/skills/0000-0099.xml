@@ -463,16 +463,10 @@
   <set name="reuseDelay" val="11000"/>
   <set name="skillRadius" val="40"/>
   <set name="skillTime" val="1080"/>
-  <set name="skillType" val="PDAM"/>
+  <set name="skillType" val="BLOW"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
-  <for>
-    <!-- 0x10 appears to be the correct order -->
-    <add order="0x10" stat="rCrit" val="45">
-      <using kind="Dagger" skill="0016"/>
-    </add>
-  </for>
 </skill>
 <skill id="17" levels="34" name="Force Burst" enchantLevels1="30" enchantLevels2="30" >
   <table name="#magicLvl"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
@@ -853,7 +847,7 @@
   <set name="condition" val="8"/>
   <set name="reuseDelay" val="11000"/>
   <set name="skillTime" val="1080"/>
-  <set name="skillType" val="PDAM"/>
+  <set name="skillType" val="BLOW"/>
   <set name="baseCritRate" val="15"/>
   <set name="lethal1" val="5"/>
   <set name="lethal2" val="2"/>
@@ -861,6 +855,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
+  <set name="SSBoost" val="1.5"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>

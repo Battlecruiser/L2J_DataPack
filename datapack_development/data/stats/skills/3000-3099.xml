@@ -512,11 +512,14 @@
   6: Increases the success rate of Mortal Blow and Deadly Blow.
   created 2005-05-29 23:34:31
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#rate"> 50 48 46 44 42 40 </table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <for>
+    <add order="0x60" stat="blowRate" val="#rate">
+      <using kind="Dagger"/>
+    </add>
   </for>
 </skill>
 <skill id="3036" levels="6" name="Special Ability: Haste">
