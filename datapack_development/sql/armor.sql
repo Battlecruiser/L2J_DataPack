@@ -894,7 +894,7 @@ INSERT INTO `armor` VALUES
  ('8178','Raid Adventurer\'s Circlet','face','false','none','10','wood','none','0','-1','0','0','0','0','0','false','false','false','false','0','0'),
  ('8179','Raid Master\'s Circlet','face','false','none','10','wood','none','0','-1','0','0','0','0','0','false','false','false','false','0','0'),
  ('8180','Circlet of Ice Fairy Sirra','face','false','none','10','wood','none','0','-1','0','0','0','0','0','true','true','true','true','0','0'),
- ('8181','Academy Circlet','face','false','none','10','wood','none','0','-1','0','0','0','0','0','false','false','false','false','0','0'),
+ ('8181','Academy Circlet','face','false','none','10','wood','none','0','-1','0','0','0','0','0','false','false','true','false','0','0'),
  ('8182','Circlet of Rune','face','false','none','10','wood','none','0','-1','0','0','0','0','0','false','false','false','false','0','0'),
  ('8183','Circlet of Schuttgart','face','false','none','10','wood','none','0','-1','0','0','0','0','0','false','false','false','false','0','0'),
  ('8184','Party Hat','dhair','false','none','10','wood','none','0','-1','0','0','0','0','0','true','true','true','true','0','0'),
