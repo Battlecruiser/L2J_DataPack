@@ -827,6 +827,7 @@
 </skill>
 <skill id="4351" levels="6" name="Clan Hall: Concentration">
   <table name="#mpConsume"> 0 200 0 0 0 400 </table>
+  <table name="#cancel"> 18 25 36 42 48 53 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -838,8 +839,8 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="Concentration">
-      <sub order="0x40" stat="cancel" val="1"/>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#cancel" stackType="Concentration">
+      <sub order="0x40" stat="cancel" val="#cancel"/>
     </effect>
   </for>
 </skill>
