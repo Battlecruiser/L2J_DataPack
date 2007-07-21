@@ -207,7 +207,10 @@
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="itemConsumeIdOT" val="1458"/>
   <set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
-  <set name="itemConsumeTime" val="240000" />
+  <set name="itemConsumeSteps" val="4"/>
+  <set name="summonTotalLifeTime" val="1200000"/>
+  <set name="summonTimeLostIdle" val="500"/>
+  <set name="summonTimeLostActive" val="1000"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -306,7 +309,10 @@
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="itemConsumeIdOT" val="1458"/>
   <set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
-  <set name="itemConsumeTime" val="240000" />
+  <set name="itemConsumeSteps" val="4"/>
+  <set name="summonTotalLifeTime" val="1200000"/>
+  <set name="summonTimeLostIdle" val="500"/>
+  <set name="summonTimeLostActive" val="1000"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="15000"/>
@@ -336,7 +342,10 @@
   <set name="itemConsumeCount" val="#itemConsumeCount" />
   <set name="itemConsumeIdOT" val="1459" />
   <set name="itemConsumeCountOT" val="#itemConsumeCountOT" />
-  <set name="itemConsumeTime" val="240000" />
+  <set name="itemConsumeSteps" val="4"/>
+  <set name="summonTotalLifeTime" val="1200000"/>
+  <set name="summonTimeLostIdle" val="500"/>
+  <set name="summonTimeLostActive" val="1000"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_CORPSE_MOB"/>
   <set name="hitTime" val="1500"/>
@@ -742,6 +751,10 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeCount" val="3" />
   <set name="itemConsumeId" val="1458" />
+  <set name="itemConsumeSteps" val="0"/>
+  <set name="summonTotalLifeTime" val="1200000"/>
+  <set name="summonTimeLostIdle" val="500"/>
+  <set name="summonTimeLostActive" val="1000"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_CORPSE_MOB"/>
   <set name="hitTime" val="1500"/>
