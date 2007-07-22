@@ -281,7 +281,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="SilentMove" time="120" val="0">
+    <effect count="1" name="SilentMove" abnormal="stealth" time="120" val="0">
       <div order="0x30" stat="pAtk" val="#pAtk"/>
       <div order="0x30" stat="accCombat" val="#accCombat"/>
       <div order="0x30" stat="rCrit" val="#rCrit"/>
@@ -889,7 +889,7 @@
   <set name="itemConsumeId" val="8873"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="skillTime" val="4000"/>
