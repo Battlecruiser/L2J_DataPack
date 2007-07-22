@@ -2204,7 +2204,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="SilentMove" time="1" val="8">
+    <effect count="0x7fffffff" name="SilentMove" abnormal="stealth" time="1" val="8">
       <add order="0x40" stat="regHp" val="5"/>
     </effect>
   </for>
