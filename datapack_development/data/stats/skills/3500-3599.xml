@@ -815,7 +815,7 @@
     <add val='445' order='0x40' stat='maxHp'/>
     <mul val='1.04' order='0x30' stat='pAtk'/>
     <mul val='1.08' order='0x30' stat='mAtk'/>
-    <mul val='2' order='0x30' stat='mCritRate'/>
+    <mul val='2.0' order='0x30' stat='mCritRate'/>
     <add val='15' order='0x40' stat='fireRes'/>
     <add val='80' order='0x40' stat='sleepRes'/>
     <mul val='0.90' order='0x30' stat='mReuse'/>
@@ -849,7 +849,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <add val='60' order='0x40' stat='bleedRes'/>
-    <mul val='1.1' order='0x30' stat='gainHp'/>
+    <mul val='1.10' order='0x30' stat='gainHp'/>
     <add val='4' order='0x40' stat='absorbDam'/>
     <add val='40' order='0x40' stat='stunRes'/>
     <add val='40' order='0x40' stat='derangementRes'/>
@@ -881,7 +881,6 @@
     <add val='60' order='0x40' stat='rootRes'/>
     <mul val='1.04' order='0x30' stat='pAtkSpd'/>
     <mul val='1.04' order='0x30' stat='mAtkSpd'/>
-    
   </for>
 </skill>
 <skill id="3562" levels="1" name="Ring of Ant Queen">

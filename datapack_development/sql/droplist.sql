@@ -21871,9 +21871,9 @@ INSERT INTO `droplist` VALUES
 (22116,4041,1,1,2,2817), -- Mold Hardener
 (22116,269,1,1,1,8), -- Blood Tornado
 (22116,5167,1,1,2,500), -- Recipe: Blessed Spiritshot(S) Compressed Package(100%)
-(22116,5145,1,1,-1,5000), -- Compressed Package of Spiritshots: S-grade
+-- (22116,5145,1,1,-1,5000), -- Compressed Package of Spiritshots: S-grade
 (22116,5495,1,1,-1,25000), -- Sealed Shield of Nightmare Fragment
-(22116,5151,1,1,-1,5000), -- Compressed Package of Blessed Spiritshots: S-grade
+-- (22116,5151,1,1,-1,5000), -- Compressed Package of Blessed Spiritshots: S-grade
 (22117,57,4121,8365,0,700000), -- Adena
 (22117,1344,30,89,2,200000), -- Mithril Arrow
 (22117,1869,2,6,2,111111), -- Iron Ore
