@@ -20,7 +20,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="#time" val="0">
+    <effect count="1" name="Buff" time="#time" val="0" stackOrder="1" stackType="QueenBuff">
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
       <add order="0x40" stat="accCombat" val="#Tab-accCombat"/>
     </effect>
@@ -65,7 +65,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-  	<effect name="Buff" time="#time" count="1" val="0">
+  	<effect name="Buff" time="#time" count="1" val="0" stackOrder="1" stackType="SeraphimBuff">
   		<mul order="0x30" stat="regMp" val="#Tab-regMp"/>
   	</effect>
   </for>
@@ -89,7 +89,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-  	<effect name="Buff" time="#time" count="1" val="0">
+  	<effect name="Buff" time="#time" count="1" val="0" stackOrder="1" stackType="SeraphimBuff">
   		<mul order="0x30" stat="mReuse" val="#Tab-mReuse"/>
   	</effect>
   </for>
