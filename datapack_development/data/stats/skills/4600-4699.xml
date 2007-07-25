@@ -462,7 +462,7 @@
   </for>
 </skill>
 <skill id="4626" levels="12" name="NPC Buff - Physical Barrier">
-  <table name="#Tab-pDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2.0 2.33 10.0 10.0 10.0 </table>
+  <table name="#Tab-pDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2.0 2.33 2.67 3.0 3.33 </table>
   <table name="#mpConsume"> 7 10 14 18 23 28 33 35 37 38 39 39 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -482,7 +482,7 @@
   </for>
 </skill>
 <skill id="4627" levels="12" name="NPC Buff - Magical Barrier">
-  <table name="#mDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2.0 2.33 10.0 10.0 10.0 </table>
+  <table name="#mDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2.0 2.33 2.67 3.0 3.33 </table>
   <table name="#mpConsume"> 7 10 14 18 23 28 33 35 37 38 39 39 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -1769,7 +1769,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-	<effect count="1" name="Buff" time="#time" val="0">
+	<effect count="1" name="Buff" time="#time" val="0" stackOrder="1" stackType="QueenBuff">
       <mul order="0x30" stat="rCrit" val="#rate"/>
       <mul order="0x30" stat="cAtk" val="#crit"/>
     </effect>
