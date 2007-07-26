@@ -280,6 +280,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
@@ -330,12 +331,14 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
 <skill id="4025" levels="12" name="Master Recharge">
   <table name="#mpConsume"> 24 39 53 70 90 110 130 128 145 150 153 155 </table>
   <table name="#power"> 23.0 38.0 52.0 70.0 90.0 110.0 129.0 138.0 144.0 149.0 153.0 155.0 </table>
+  <table name="#aggro"> 138 204 285 379 477 566 635 659 676 689 700 709 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -347,6 +350,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
+  <set name="aggroPoints" val="#aggro"/>
   <for>
   </for>
 </skill>
@@ -369,6 +373,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
@@ -386,6 +391,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-pAtk" stackType="pAtk">
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
@@ -406,6 +412,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-pDef" stackType="pDef">
       <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
@@ -428,6 +435,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtk" stackType="pAtk">
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
@@ -450,6 +458,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pDef" stackType="pDef">
       <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
@@ -706,6 +715,7 @@
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
@@ -1034,6 +1044,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
@@ -1213,6 +1224,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpeedUp">
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
@@ -1338,6 +1350,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
@@ -1612,6 +1625,7 @@
   <set name="buffDuration" val="300000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect name="Buff" time="300" count="1" val="0" stackOrder="#Tab-accCombat" stackType="HawkEye">
       <add order="0x40" stat="accCombat" val="#Tab-accCombat"/>
@@ -1635,6 +1649,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="aggroPoints" val="100"/>
   <for>
 	<effect count="5" name="HealOverTime" time="3" val="#hot" stackOrder="#hot" stackType="LifeForce"/>
   </for>
@@ -1680,6 +1695,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="berserk">
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>

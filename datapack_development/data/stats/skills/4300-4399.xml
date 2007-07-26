@@ -261,6 +261,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0" stackOrder="#Tab-pAtk" stackType="pAtk">
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
@@ -281,6 +282,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="1" name="Buff" time="15" val="0">
       <mul order="0x30" stat="pAtk" val="1.83"/>
@@ -623,6 +625,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="1" name="Buff" time="15" val="0">
       <mul order="0x30" stat="pAtk" val="5"/>
@@ -643,6 +646,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="1" name="Buff" time="15" val="0">
       <mul order="0x30" stat="pDef" val="5"/>
@@ -1348,6 +1352,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
@@ -1357,6 +1362,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
@@ -1366,6 +1372,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
@@ -1375,6 +1382,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
