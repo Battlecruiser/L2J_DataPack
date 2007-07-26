@@ -217,6 +217,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
@@ -239,6 +240,7 @@
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
+  <set name="aggroPoints" val="100"/>
   <for>
 	<effect count="5" name="HealOverTime" time="3" val="#hot" stackOrder="#hot" stackType="LifeForce"/>
   </for>
@@ -260,6 +262,7 @@
   <set name="buffDuration" val="60000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0" stackOrder="99" stackType="pAtk">
       <mul order="0x30" stat="pAtk" val="1.5"/>
@@ -283,6 +286,7 @@
   <set name="buffDuration" val="60000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0" stackOrder="99" stackType="pDef">
       <mul order="0x30" stat="pDef" val="1.5"/>
@@ -306,6 +310,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0" stackOrder="99" stackType="pAtkSpeedUp">
       <mul order="0x30" stat="pAtkSpd" val="1.5"/>
@@ -329,6 +334,7 @@
   <set name="buffDuration" val="60000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0" stackOrder="99" stackType="DmgShield">
       <add order="0x40" stat="reflectDam" val="20"/>
@@ -1071,6 +1077,7 @@
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="aggroPoints" val="285"/>
   <for>
   </for>
 </skill>
@@ -1081,6 +1088,7 @@
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="aggroPoints" val="418"/>
   <for>
   </for>
 </skill>
@@ -1091,6 +1099,7 @@
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="aggroPoints" val="243"/>
   <for>
   </for>
 </skill>
@@ -1101,6 +1110,7 @@
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="aggroPoints" val="379"/>
   <for>
   </for>
 </skill>
@@ -1111,6 +1121,7 @@
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="aggroPoints" val="418"/>
   <for>
   </for>
 </skill>

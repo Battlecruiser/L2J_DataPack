@@ -76,6 +76,7 @@
   1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.35
   1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 
   </table>
+  <table name="#aggro"> 438 549 597 635 </table>
   <set name="weaponsAllowed" val="32"/>
   <set name="hpConsume" val="#hpConsume"/>
   <set name="power" val="0.0"/>
@@ -89,6 +90,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="#aggro"/>
   <enchant1 name="hpConsume" val="#ench1hpConsume"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#mp" stackType="MPregen">
@@ -135,6 +137,9 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="611"/>
+  <enchant1 name="aggroPoints" val="655"/>
+  <enchant2 name="aggroPoints" val="655"/>
   <enchant1 name="buffDuration" val="#buffDuration"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
@@ -178,6 +183,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="655"/>
   <enchant1 name="buffDuration" val="#buffDuration"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
@@ -221,6 +227,9 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="582"/>
+  <enchant1 name="aggroPoints" val="655"/>
+  <enchant2 name="aggroPoints" val="655"/>
   <enchant1 name="buffDuration" val="#buffDuration"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
@@ -265,6 +274,9 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="635"/>
+  <enchant1 name="aggroPoints" val="655"/>
+  <enchant2 name="aggroPoints" val="655"/>
   <enchant1 name="buffDuration" val="#buffDuration"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
@@ -308,6 +320,9 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="635"/>
+  <enchant1 name="aggroPoints" val="655"/>
+  <enchant2 name="aggroPoints" val="655"/>
   <enchant1 name="buffDuration" val="#buffDuration"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
@@ -352,6 +367,9 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="582"/>
+  <enchant1 name="aggroPoints" val="655"/>
+  <enchant2 name="aggroPoints" val="655"/>
   <enchant1 name="buffDuration" val="#buffDuration"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
@@ -396,6 +414,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="655"/>
   <enchant1 name="buffDuration" val="#buffDuration"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
@@ -440,6 +459,9 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="611"/>
+  <enchant1 name="aggroPoints" val="655"/>
+  <enchant2 name="aggroPoints" val="655"/>
   <enchant1 name="buffDuration" val="#buffDuration"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
@@ -508,6 +530,7 @@
   29 28 28 28 27 27 26 26 25 25
   25 24 24 23 23 22 22 21 20 20
   </table>
+  <table name="#aggro"> 566 582 597 611 624 635 646 655 </table>
   <set name="weaponsAllowed" val="32"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -520,6 +543,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="#aggro"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <cond>
@@ -876,6 +900,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="buffDuration" val="9000"/>
+  <set name="aggroPoints" val="662"/>
   <cond msg="You can only use Wyvern Aegis when flying"><player flying="true"/></cond>
   <for>
     <effect count="1" name="Buff" time="9" val="0" stackOrder="3" stackType="pDefSpec">
@@ -1072,6 +1097,7 @@
   <set name="skillTime" val="1800"/>
   <set name="hitTime" val="1800"/>
   <set name="isMagic" val="true"/>
+  <set name="aggroPoints" val="811"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
       <mul order="0x30" stat="maxHp" val="1.5"/>
@@ -1238,6 +1264,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="666"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
       <mul order="0x30" stat="mReuse" val="0.7"/>
@@ -1259,6 +1286,7 @@
   <set name="buffDuration" val="300000"/>
   <set name="skillTime" val="2000"/>
   <set name="hitTime" val="2000"/>
+  <set name="aggroPoints" val="669"/>
   <for>
     <effect name="Buff" time="300" count="1" val="0">
       <add order="0x40" stat="reflectSkillPhysic" val="30"/>
@@ -1279,6 +1307,7 @@
   <set name="buffDuration" val="300000"/>
   <set name="skillTime" val="2000"/>
   <set name="hitTime" val="2000"/>
+  <set name="aggroPoints" val="669"/>
   <for>
     <effect name="Buff" time="300" count="1" val="0">
       <add order="0x40" stat="reflectSkillPhysic" val="10"/>
@@ -1363,6 +1392,7 @@
   <set name="skillTime" val="2000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="aggroPoints" val="669"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="focus">
       <mul order="0x50" stat="rCrit" val="0.3"/>
@@ -1398,6 +1428,7 @@
   <set name="skillTime" val="2000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="aggroPoints" val="669"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="focus">
       <mul order="0x30" stat="rCrit" val="0.7">
@@ -1429,6 +1460,7 @@
   <set name="skillTime" val="2000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="aggroPoints" val="669"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="focus">
 	    <mul order="0x30" stat="cAtk" val="0.7">
@@ -1482,6 +1514,7 @@
   <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="666"/>
   <for>
     <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="detect_weakness">
       <mul order="0x30" stat="pAtk-insects" val="1.4"/>
@@ -1502,6 +1535,7 @@
   <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="669"/>
   <for>
     <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="detect_weakness">
       <mul order="0x30" stat="pAtk-monsters" val="1.4"/>
@@ -1581,6 +1615,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="666"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
       <mul order="0x30" stat="regMp" val="1.2"/>
@@ -1603,6 +1638,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="669"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
       <mul order="0x30" stat="atkReuse" val="0.7"/>
@@ -1626,6 +1662,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="669"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
       <mul order="0x30" stat="mCritRate" val="3"/>
@@ -1648,6 +1685,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="666"/>
   <for>
     <effect name="SilentMove" time="120" abnormal="stealth" count="1" val="0">
       <mul order="0x30" stat="runSpd" val="0.5"/>

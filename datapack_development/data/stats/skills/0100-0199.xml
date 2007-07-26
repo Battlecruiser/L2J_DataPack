@@ -144,6 +144,7 @@
   <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="438"/>
   <for>
     <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="detect_weakness">
       <mul order="0x30" stat="pAtk-plants" val="1.2"/>
@@ -248,6 +249,7 @@
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="438"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
       <mul order="0x30" stat="pDef" val="1.30"/>
@@ -286,6 +288,7 @@
   1580000 1560000 1540000 1520000 1500000 1480000 1460000 1440000 1420000 1400000
   1380000 1360000 1340000 1320000 1300000 1280000 1260000 1240000 1220000 1200000
   </table>
+  <table name="#aggro"> 204 438  </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -297,6 +300,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="#aggro"/>
   <enchant1 name="buffDuration" val="#ench1buffDuration"/>
   <enchant2 name="reuseDelay" val="#ench2reuseDelay"/>
   <for>
@@ -339,6 +343,7 @@
   1580000 1560000 1540000 1520000 1500000 1480000 1460000 1440000 1420000 1400000
   1380000 1360000 1340000 1320000 1300000 1280000 1260000 1240000 1220000 1200000
   </table>
+  <table name="#aggro"> 268 523 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -350,6 +355,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="#aggro"/>
   <enchant1 name="buffDuration" val="#ench1buffDuration"/>
   <enchant2 name="reuseDelay" val="#ench2reuseDelay"/>
   <for>
@@ -383,6 +389,7 @@
   16 16 16 15 15 14 14 14 13 13
   12 12 12 11 11 10 10 10  9  9
   </table>
+  <table name="#aggro"> 10 20 30 40 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -394,6 +401,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="#aggro"/>
   <enchant1 name="buffDuration" val="#buffDuration"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
@@ -547,6 +555,7 @@
   <table name="#mpConsume"> 13 18 22 27 30 33 </table>
   <table name="#Tab-maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35</table>
   <table name="#reg-HP"> 9.1 13 16.6 20 23 25.7</table>
+  <table name="#aggro"> 268 379 467 549 597 635 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#reg-HP"/>
   <set name="target" val="TARGET_SELF"/>
@@ -558,6 +567,7 @@
   <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="#aggro"/>
   <for>
     <effect count="1" name="Buff" time="600" val="0" stackOrder="#Tab-maxHp" stackType="MaxHPUp">
       <mul order="0x30" stat="maxHp" val="#Tab-maxHp"/>
@@ -624,6 +634,7 @@
   <table name="#Tab-mDef"> 1.15 1.23 1.3 </table>
   <table name="#mpConsume_Init"> 4 5 6 </table>
   <table name="#mpConsume"> 14 18 22 </table>
+  <table name="#aggro"> 379 467 549 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -637,6 +648,7 @@
   <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="#aggro"/>
   <enchant1 name="buffDuration" val="#buffDuration"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
@@ -715,6 +727,7 @@
   0.88 0.88 0.89 0.90 0.90 0.91 0.92 0.92 0.93 0.94
   0.94 0.95 0.96 0.96 0.97 0.98 0.98 0.99 1.00 1.00
   </table>
+  <table name="#aggro"> 438 523 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -726,6 +739,7 @@
   <set name="buffDuration" val="300000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="#aggro"/>
   <for>
     <effect name="Buff" time="300" count="1" val="0">
       <mul order="0x30" stat="runSpd" val="0.8"/>
@@ -753,6 +767,7 @@
   <table name="#Tab-accCombat"> 6 8 10 </table>
   <table name="#Tab-pDef"> 0.9 0.9 0.9 </table>
   <table name="#mpConsume"> 18 22 27 </table>
+  <table name="#aggro"> 379 467 549 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -764,6 +779,7 @@
   <set name="buffDuration" val="300000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="#aggro"/>
   <enchant1 name="buffDuration" val="#buffDuration"/>
   <for>
     <effect name="Buff" time="300" count="1" val="0" stackOrder="#Tab-accCombat" stackType="HawkEye">
@@ -807,6 +823,7 @@
   <!-- Done by dc, completed by NewAge -->
   <table name="#Tab-pDef"> 2.0 2.5 3.0 </table>
   <table name="#mpConsume"> 16 19 24 </table>
+  <table name="#aggro"> 341 408 495 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -819,6 +836,7 @@
   <set name="buffDuration" val="90000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="#aggro"/>
   <cond msg="Can be only used when HP is 30% or lower">
     <player hp="30"/>
   </cond>
@@ -1073,6 +1091,7 @@
   <table name="#other"> 1.15 1.20 1.25 </table>
   <table name="#Tab-accCombat"> 4 4 4 </table>
   <table name="#mpConsume"> 14 21 25 </table>
+  <table name="#aggro"> 303 438 523 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1085,6 +1104,7 @@
   <set name="buffDuration" val="90000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="#aggro"/>
   <cond msg="Can be only used when HP is 30% or lower">
     <player hp="30"/>
   </cond>
@@ -1130,6 +1150,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="181"/>
   <cond>
     <player hp="5"/>
   </cond>

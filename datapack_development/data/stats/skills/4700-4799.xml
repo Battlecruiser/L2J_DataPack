@@ -6,6 +6,7 @@
   <table name="#Tab-accCombat"> 2 2 3 3 3 3 3 3 3 3 3 3 3 </table>
   <table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
   <table name="#dur"> 120000 120000 120000 150000 165000 180000 195000 210000 225000 240000 255000 270000 285000 </table>
+  <table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
@@ -19,6 +20,7 @@
   <set name="buffDuration" val="#dur"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="#power"/>
   <for>
     <effect count="1" name="Buff" time="#time" val="0" stackOrder="1" stackType="QueenBuff">
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
@@ -28,6 +30,7 @@
 </skill>
 <skill id="4701" levels="13" name="Cure of Queen">
   <table name="#mpConsume"> 62 79 98 102 104 107 108 110 113 115 117 119 122 </table>
+  <table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
   <set name="mpConsume" val="#mpConsume"/> 
   <set name="power" val="0.0"/> 
   <set name="target" val="TARGET_PARTY"/> 
@@ -42,6 +45,7 @@
   <set name="effectRange" val="-1"/> 
   <set name="negateStats" val="MUTE FEAR CONFUSION POISON BLEED DEBUFF WEAKNESS"/> 
   <set name="negatePower" val="9.0"/> 
+  <set name="aggroPoints" val="#power"/>
   <for> 
   </for>
 </skill>
@@ -51,6 +55,7 @@
   <table name="#Tab-regMp"> 1.3 1.32 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 </table>
   <table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
   <table name="#dur"> 120000 120000 120000 150000 165000 180000 195000 210000 225000 240000 255000 270000 285000 </table>
+  <table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="hitTime" val="4000"/>
@@ -64,6 +69,7 @@
   <set name="buffDuration" val="#dur"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="#power"/>
   <for>
   	<effect name="Buff" time="#time" count="1" val="0" stackOrder="1" stackType="SeraphimBuff">
   		<mul order="0x30" stat="regMp" val="#Tab-regMp"/>
@@ -75,6 +81,7 @@
   <table name="#Tab-mReuse"> 0.7 0.68 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 </table>
   <table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
   <table name="#dur"> 120000 120000 120000 150000 165000 180000 195000 210000 225000 240000 255000 270000 285000 </table>
+  <table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="hitTime" val="4000"/>
@@ -88,6 +95,7 @@
   <set name="buffDuration" val="#dur"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="#power"/>
   <for>
   	<effect name="Buff" time="#time" count="1" val="0" stackOrder="1" stackType="SeraphimBuff">
   		<mul order="0x30" stat="mReuse" val="#Tab-mReuse"/>
@@ -96,6 +104,7 @@
 </skill>
 <skill id="4704" levels="13" name="Cure of Seraphim">
   <table name="#mpConsume"> 62 79 98 102 104 107 108 110 113 115 117 119 122 </table>
+  <table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="hitTime" val="2000"/>
@@ -109,6 +118,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="negateStats" val="SLEEP STUN SILENCE PARALYZE ROOT"/>
+  <set name="aggroPoints" val="#power"/>
   <for>
   </for>
 </skill>
@@ -161,7 +171,7 @@
 </skill>
 <skill id="4707" levels="13" name="Shade Sacrifice">
   <table name="#hpConsume"> 706 840 946 964 973 980 988 994 1000 1005 1010 1014 1017 </table>
-  <table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
+  <table name="#power"> 588 700 789 804 811 817 823 828 833 838 842 845 848 </table>
   <set name="hpConsume" val="#hpConsume"/>
   <set name="power" val="#power"/>
   <set name="hitTime" val="2000"/>
@@ -173,6 +183,7 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="aggroPoints" val="#power"/>
   <for>
   </for>
 </skill>
@@ -239,6 +250,7 @@
 <skill id="4711" levels="12" name="Wild Defense">
   <table name="#mpConsume"> 46 76 104 139 179 220 258 275 288 298 305 309 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+  <table name="#aggro"> 138 204 285 379 477 566 635 659 676 689 700 709 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -251,6 +263,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="#aggro"/>
   <for>
    <effect count="1" name="ImobileBuff" time="30" val="0">
       <mul order="0x30" stat="mDef" val="5.0"/>
@@ -283,6 +296,7 @@
   <table name="#mpConsume"> 5 9 11 15 19 23 27 28 30 30 32 32 </table>
   <table name="#power"> 33.0 61.0 98.0 145.0 198.0 251.0 298.0 316.0 330.0 338.0 341.0 342.0 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+  <table name="#aggro"> 33 34 35 36 37 38 39 40 41 42 43 44 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -295,6 +309,7 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="#aggro"/>
   <for>
   </for>
 </skill>
@@ -332,6 +347,7 @@
   <table name="#mpConsume"> 5 8 12 17 20 25 29 32 33 33 34 34 </table>
   <table name="#power"> 9.0 16.0 25.0 37.0 50.0 63.0 75.0 79.0 83.0 85.0 86.0 86.0 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+  <table name="#aggro"> 9 16 25 37 50 63 75 79 83 85 86 86 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -344,12 +360,13 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="aggroPoints" val="#aggro"/>
   <for>
   </for>
 </skill>
 <skill id="4718" levels="12" name="Greater Heal Trick">
   <table name="#mpConsume"> 33 59 88 122 162 195 228 242 252 259 262 262 </table>
-  <table name="#power"> 37.0 64.0 99.0 139.0 171.0 205.0 236.0 266.0 300.0 332.0 355.0 368.0 </table>
+  <table name="#power"> 62 113 184 272 371 471 558 592 617 634 640 640 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -363,6 +380,7 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="aggroPoints" val="#power"/>
   <for>
   </for>
 </skill>
@@ -1321,6 +1339,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
@@ -1336,6 +1355,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
@@ -1351,6 +1371,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
@@ -1366,6 +1387,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
@@ -1381,6 +1403,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
@@ -1398,6 +1421,7 @@
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
   <set name="buffDuration" val="15000"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="15" name="HealOverTime" time="1" val="#hot" stackOrder="#hot" stackType="HpRecover"/>
   </for>
@@ -1416,6 +1440,7 @@
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
   <set name="buffDuration" val="15000"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="15" name="HealOverTime" time="1" val="#hot" stackOrder="#hot" stackType="HpRecover"/>
   </for>
@@ -1434,6 +1459,7 @@
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
   <set name="buffDuration" val="15000"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="15" name="HealOverTime" time="1" val="#hot" stackOrder="#hot" stackType="HpRecover"/>
   </for>
@@ -1452,6 +1478,7 @@
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
   <set name="buffDuration" val="15000"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="15" name="HealOverTime" time="1" val="#hot" stackOrder="#hot" stackType="HpRecover"/>
   </for>
@@ -1470,6 +1497,7 @@
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
   <set name="buffDuration" val="15000"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="15" name="HealOverTime" time="1" val="#hot" stackOrder="#hot" stackType="HpRecover"/>
   </for>

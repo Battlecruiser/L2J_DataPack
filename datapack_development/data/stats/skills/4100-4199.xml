@@ -81,6 +81,7 @@
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect name="Buff" time="30" count="1" val="0" stackOrder="#Tab-rEvas" stackType="rEvasSpec">
       <add order="0x40" stat="rEvas" val="#Tab-rEvas"/>
@@ -302,6 +303,7 @@
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
@@ -591,6 +593,7 @@
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
@@ -611,6 +614,7 @@
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
@@ -1254,6 +1258,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0" stackOrder="99" stackType="pAtk">
       <mul order="0x30" stat="pAtk" val="1.5"/>
@@ -1276,6 +1281,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0" stackOrder="99" stackType="pDef">
       <mul order="0x30" stat="pDef" val="1.5"/>
@@ -1298,6 +1304,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0" stackOrder="99" stackType="pAtkSpeedUp">
       <mul order="0x30" stat="pAtkSpd" val="1.5"/>
@@ -1320,6 +1327,7 @@
   <set name="buffDuration" val="60000"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
+  <set name="aggroPoints" val="100"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0" stackOrder="99" stackType="DmgShield">
       <add order="0x40" stat="reflectDam" val="20"/>
