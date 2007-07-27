@@ -37,9 +37,9 @@ of this directory a little bit.
 
 310922001.xml -> Seven Signs - Black Marketeer of Mammon - SA Removal for AA
 310922002.xml -> Seven Signs - Black Marketeer of Mammon - Black Market Items
-311352501.xml -> Seven Signs - Merchant of Mammons - Buy Etc Items
+311352501.xml -> Seven Signs - Merchant of Mammon - Buy Etc Items
 311262501.xml -> Seven Signs - Blacksmith of Mammon - SA: S-Grade
-311262502.xml -> Seven Signs - Blacksmith of Mammons - A-grade duals
+311262502.xml -> Seven Signs - Blacksmith of Mammon - A-grade duals
 311262503.xml -> Seven Signs - Blacksmith of Mammon - Duals S-Grade.
 311262504.xml -> Seven Signs - Blacksmith of Mammon - Unseal S-Grade Armor.
 311262505.xml -> Seven Signs - Blacksmith of Mammon - Unseal S-grade Accesories
