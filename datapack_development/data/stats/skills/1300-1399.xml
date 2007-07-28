@@ -963,7 +963,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="6" name="ManaDamOverTime" time="5" val="24">
+    <effect count="6" name="ManaDamOverTime" time="5" val="24" stackOrder="1" stackType="multiple_debuff">
       <sub order="0x40" stat="cancelRes" val="30"/>
       <mul order="0x30" stat="MpConsumeRate" val="1.30"/>
       <sub order="0x40" stat="debuffRes" val="30"/>
@@ -989,7 +989,7 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
-   <effect count="5" name="ManaDamOverTime" time="2" val="40">
+   <effect count="5" name="ManaDamOverTime" time="2" val="40" stackOrder="1" stackType="multiple_debuff">
       <mul order="0x30" stat="runSpd" val="0.9"/>
       <mul order="0x30" stat="pAtkSpd" val="0.7"/>
       <mul order="0x30" stat="mAtkSpd" val="0.9"/>
@@ -1016,7 +1016,7 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
-     <effect count="5" name="ManaDamOverTime" time="2" val="40">
+     <effect count="5" name="ManaDamOverTime" time="2" val="40" stackOrder="1" stackType="multiple_debuff">
       <mul order="0x30" stat="runSpd" val="0.7"/>
       <mul order="0x30" stat="pAtkSpd" val="0.9"/>
       <mul order="0x30" stat="mAtkSpd" val="0.9"/>
@@ -1043,7 +1043,7 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
-     <effect count="5" name="ManaDamOverTime" time="2" val="40">
+     <effect count="5" name="ManaDamOverTime" time="2" val="40" stackOrder="1" stackType="multiple_debuff">
       <mul order="0x30" stat="runSpd" val="0.9"/>
       <mul order="0x30" stat="pAtkSpd" val="0.9"/>
       <mul order="0x30" stat="mAtkSpd" val="0.7"/>
@@ -1069,7 +1069,7 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
-     <effect count="5" name="ManaDamOverTime" time="2" val="40">
+     <effect count="5" name="ManaDamOverTime" time="2" val="40" stackOrder="1" stackType="multiple_debuff">
       <sub order="0x40" stat="accCombat" val="6"/>
       <sub order="0x40" stat="holyRes" val="30"/>
     </effect>
@@ -1096,7 +1096,7 @@
   <set name="effectPower" val="80"/>
   <for>
   <!-- MDOT effect needs fixing - DRAIN appears to not allow MDOT to land [28/12/2006] -->
-    <effect count="5" name="ManaDamOverTime" time="2" val="40">
+    <effect count="5" name="ManaDamOverTime" time="2" val="40" stackOrder="1" stackType="multiple_debuff">
       <sub order="0x40" stat="darkRes" val="30"/>
     </effect>
   </for>
