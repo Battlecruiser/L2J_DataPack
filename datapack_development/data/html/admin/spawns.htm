@@ -1,23 +1,20 @@
-<html><title>Spawn Mob Menu</title><body>
+<html><title>Spawn Menu</title><body>
 <center>
-<table width=260>
-<tr>
+<table width=270><tr>
 <td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
 <td width=180><center><button value="Spawn NPCs" action="bypass -h admin_show_npcs" width=70 height=15 back="sek.cbui94" fore="sek.cbui92"></center></td>
 <td width=40><button value="Back" action="bypass -h admin_admin" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
-</tr>
-</table><br><br>
-Spawn a Monster by ID:<font color="LEVEL"> [*]</font>
-<table width=260 height=16>
-<tr>
-<td width=105><center>ID or name/qty:</center></td>
-<td width=75><center><edit var="id" width=70 height=15></td>
-<td width=15><edit var="qty" width=15 height=15></center></td>
-<td width=75><center><button value="Spawn" action="bypass -h admin_spawn_monster $id $qty" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></center></td>
-</tr>
-</table><br><br>
+</tr></table><br>
+Spawn NPC/Mob by ID:<font color="LEVEL"> [*]</font>
+<table width=270><tr>
+<td width=90>ID|name/qty:</td>
+<td width=70><edit var="id" width=70 height=15></td>
+<td width=20><edit var="qty" width=15 height=15></td>
+<td width=45><button value="Spawn" action="bypass -h admin_spawn_monster $id $qty" width=45 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td width=45><button value="Spwn1" action="bypass -h admin_spawn_once $id $qty" width=45 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+</tr></table><br>
 Spawn by Level:
-<table width=240>
+<table width=270>
 <tr><td><a action="bypass -h admin_spawn_index 1">Level 1</a></td><td><a action="bypass -h admin_spawn_index 21">Level 21</a></td><td><a action="bypass -h admin_spawn_index 41">Level 41</a></td><td><a action="bypass -h admin_spawn_index 61">Level 61</a></td></tr>
 <tr><td><a action="bypass -h admin_spawn_index 2">Level 2</a></td><td><a action="bypass -h admin_spawn_index 22">Level 22</a></td><td><a action="bypass -h admin_spawn_index 42">Level 42</a></td><td><a action="bypass -h admin_spawn_index 62">Level 62</a></td></tr>
 <tr><td><a action="bypass -h admin_spawn_index 3">Level 3</a></td><td><a action="bypass -h admin_spawn_index 23">Level 23</a></td><td><a action="bypass -h admin_spawn_index 43">Level 43</a></td><td><a action="bypass -h admin_spawn_index 63">Level 63</a></td></tr>
@@ -38,7 +35,21 @@ Spawn by Level:
 <tr><td><a action="bypass -h admin_spawn_index 18">Level 18</a></td><td><a action="bypass -h admin_spawn_index 38">Level 38</a></td><td><a action="bypass -h admin_spawn_index 58">Level 58</a></td><td><a action="bypass -h admin_spawn_index 78">Level 78</a></td></tr>
 <tr><td><a action="bypass -h admin_spawn_index 19">Level 19</a></td><td><a action="bypass -h admin_spawn_index 39">Level 39</a></td><td><a action="bypass -h admin_spawn_index 59">Level 59</a></td><td><a action="bypass -h admin_spawn_index 79">Level 79</a></td></tr>
 <tr><td><a action="bypass -h admin_spawn_index 20">Level 20</a></td><td><a action="bypass -h admin_spawn_index 40">Level 40</a></td><td><a action="bypass -h admin_spawn_index 60">Level 60</a></td><td><a action="bypass -h admin_spawn_index 80">Level 80</a></td></tr>
+</table><br>
+Special:
+<table width=270>
+<tr>
+	<td><button value="Reload" action="bypass -h admin_spawn_reload" width=90 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+	<td><button value="Unspawn All" action="bypass -h admin_unspawnall" width=90 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+	<td><button value="Respawn All" action="bypass -h admin_respawnall" width=90 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+</tr>
+<tr>
+<td><button value="Spawn Night" action="bypass -h admin_spawnnight" width=90 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td><button value="Spawn Day" action="bypass -h admin_spawnday" width=90 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td></td>
+</tr>
 </table>
+<br>
 </center>
 <br><br>[*]: Names are case insensitive, but you must use underscores instead of spaces.<br1>You can leave qty field empty if you don't need more than one mob.
 </body></html>
