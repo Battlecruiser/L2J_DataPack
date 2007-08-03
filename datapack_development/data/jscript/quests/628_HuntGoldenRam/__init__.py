@@ -140,7 +140,7 @@ class Quest (JQuest) :
         if st.getState() == STARTED :
             npcId = npc.getNpcId()
             cond = st.getInt("cond")
-            chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
+            chance = CHANCE[npcId]*Config.RATE_DROP_QUEST
             numItems, chance = divmod(chance,MAX)
             if st.getRandom(100) <chance :
                numItems = numItems + 1
@@ -149,7 +149,7 @@ class Quest (JQuest) :
                item = CHITIN       
             elif cond==2 and npcId in range(21513,21518): #Needle Stakatos
                item = CHITIN2
-            if item != 0 and numItems > 1 :
+            if item != 0 and numItems > 0 :
                prevItems = st.getQuestItemsCount(item)
                if count > prevItems :
                    if count <= (prevItems + numItems) : #100 is maximum
