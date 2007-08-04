@@ -412,7 +412,7 @@ INSERT INTO teleport VALUES
 ('Clan Hall -> Giran Arena',526,73890,142656,-3778,500,0),
  -- 527
 ('Clan Hall -> Breka\'s Stronghold',528,79798,130624,-3677,500,0),
- -- ('Clan Hall -> Gorgon Flower Garden',529,79798,130624,-3677,500,0),  -- dunno coords !
+('Clan Hall -> Gorgon Flower Garden',529,113553,134813,-3640,500,0),  -- needs confirming
  -- -----------------
 ('Clan Hall -> Ivory Tower',581,85348,16142,-3699,500,0),
 ('Clan Hall -> Town of Oren',582,82956,53162,-1495,500,0),
