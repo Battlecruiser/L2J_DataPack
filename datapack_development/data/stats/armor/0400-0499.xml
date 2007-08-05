@@ -3,23 +3,12 @@
 <item id='400' name="Theca Leather Armor">
   <for>
     <add stat='pDef' order='0x10'  val='106'/>
-    <mul stat='pDef' order='0x30' val='1.05'>
-      <and>
-        <using slotitem="420;11"/>
-        <using slotitem="2436;12"/>
-      </and>
-    </mul>
     <enchant val='0' order='0x0C' stat='pDef'/>
   </for>
 </item>
 <item id='401' name="Drake Leather Armor">
   <for>
     <add stat='pDef' order='0x10'  val='179'/>
-    <mul stat='mDef' order='0x30' val='1.05'>
-      <and>
-        <using slotitem="2437;12"/>
-      </and>
-    </mul>
     <enchant val='0' order='0x0C' stat='pDef'/>
   </for>
 </item>
@@ -255,18 +244,6 @@
   <for>
     <add val='60' order='0x10' stat='pDef'/>
     <add val='225' order='0x60' stat='maxMp'/>
-    <mul stat='mAtkSpd' order='0x30' val='1.15'>
-      <and>
-        <using slotitem="471;11"/>
-        <using slotitem="2454;9"/>
-      </and>
-    </mul>
-    <mul stat='pDef' order='0x30' val='1.05'>
-      <and>
-        <using slotitem="471;11"/>
-        <using slotitem="2454;9"/>
-      </and>
-    </mul>
     <enchant val='0' order='0x0C' stat='pDef'/>
   </for>
 </item>
@@ -281,24 +258,6 @@
   <for>
     <add val='69' order='0x10' stat='pDef'/>
     <add val='284' order='0x60' stat='maxMp'/>
-    <sub stat='maxHp' order='0x40' val='270'>
-      <and>
-        <using slotitem="472;11"/>
-        <using slotitem="2459;9"/>
-      </and>
-    </sub>
-    <add stat='INT' order='0x40' val='4'>
-      <and>
-        <using slotitem="472;11"/>
-        <using slotitem="2459;9"/>
-      </and>
-    </add>
-    <add stat='WIT' order='0x40' val='-1'>
-      <and>
-        <using slotitem="472;11"/>
-        <using slotitem="2459;9"/>
-      </and>
-    </add>
     <enchant val='0' order='0x0C' stat='pDef'/>
   </for>
 </item>
@@ -306,30 +265,6 @@
   <for>
     <add val='74' order='0x10' stat='pDef'/>
     <add val='314' order='0x60' stat='maxMp'/>
-    <add val='170' order='0x40' stat='maxMp'>
-      <and>
-        <using slotitem="473;11"/>
-        <using slotitem="2463;9"/>
-      </and>
-    </add>
-    <add stat='WIT' order='0x40' val='1'>
-      <and>
-        <using slotitem="473;11"/>
-        <using slotitem="2463;9"/>
-      </and>
-    </add>
-    <sub stat='INT' order='0x40' val='1'>
-      <and>
-        <using slotitem="473;11"/>
-        <using slotitem="2463;9"/>
-      </and>
-    </sub>
-    <mul stat='pDef' order='0x30' val='1.05'>
-      <and>
-        <using slotitem="473;11"/>
-        <using slotitem="2463;9"/>
-      </and>
-    </mul>
     <enchant val='0' order='0x0C' stat='pDef'/>
   </for>
 </item>
@@ -624,81 +559,81 @@
   </for>
 </item>
 <item id='485' name="Tattoo of Power">
- <for>
-  <add val='53' order='0x10' stat='pDef'/>
+  </for>
+    <add val='53' order='0x10' stat='pDef'/>
     <enchant val='0' order='0x0C' stat='pDef'/>
- </for>
+  </for>
 </item>
 <item id='486' name="Tattoo of Fire">
- <for>
+  </for>
     <add val='73' order='0x10' stat='pDef'/>
     <enchant val='0' order='0x0C' stat='pDef'/>
- </for>
+  </for>
 </item>
 <item id='487' name="Tattoo of Resolve">
- <for>
-  <add val='73' order='0x10' stat='pDef'/>
+  </for>
+    <add val='73' order='0x10' stat='pDef'/>
     <enchant val='0' order='0x0C' stat='pDef'/>
- </for>
+  </for>
 </item>
 <item id='488' name="Tattoo of Flame">
- <for>
-  <add val='139' order='0x10' stat='pDef'/>
+  </for>
+    <add val='139' order='0x10' stat='pDef'/>
     <enchant val='0' order='0x0C' stat='pDef'/>
- </for>
+  </for>
 </item>
 <item id='489' name="Tattoo of Bravery">
- <for>
-  <add val='110' order='0x10' stat='pDef'/>
+  </for>
+    <add val='110' order='0x10' stat='pDef'/>
     <enchant val='0' order='0x0C' stat='pDef'/>
- </for>
+  </for>
 </item>
 <item id='490' name="Tattoo of Blood">
- <for>
-  <add val='132' order='0x10' stat='pDef'/>
+  </for>
+    <add val='132' order='0x10' stat='pDef'/>
     <enchant val='0' order='0x0C' stat='pDef'/>
- </for>
+  </for>
 </item>
 <item id='491' name="Tattoo of Absolute">
- <for>
-  <add val='146' order='0x10' stat='pDef'/>
+  </for>
+    <add val='146' order='0x10' stat='pDef'/>
     <enchant val='0' order='0x0C' stat='pDef'/>
- </for>
+  </for>
 </item>
 <item id='492' name="Tattoo of Soul">
- <for>
-  <add val='65' order='0x10' stat='pDef'/>
+  </for>
+    <add val='65' order='0x10' stat='pDef'/>
     <enchant val='0' order='0x0C' stat='pDef'/>
- </for>
+  </for>
 </item>
 <item id='493' name="Tattoo of Avadon">
- <for>
-  <add val='117' order='0x10' stat='pDef'/>
+  </for>
+    <add val='117' order='0x10' stat='pDef'/>
     <enchant val='0' order='0x0C' stat='pDef'/>
- </for>
+  </for>
 </item>
 <item id='494' name="Tattoo of Doom">
- <for>
-  <add val='125' order='0x10' stat='pDef'/>
+  <for>
+    <add val='125' order='0x10' stat='pDef'/>
     <enchant val='0' order='0x0C' stat='pDef'/>
- </for>
+  </for>
 </item>
 <item id='495' name="Tattoo of Pledge">
- <for>
-  <add val='124' order='0x10' stat='pDef'/>
+  <for>
+    <add val='124' order='0x10' stat='pDef'/>
     <enchant val='0' order='0x0C' stat='pDef'/>
- </for>
+  </for>
 </item>
 <item id='496' name="Tattoo of Divine">
- <for>
-  <add val='131' order='0x10' stat='pDef'/>
+  <for>
+    <add val='131' order='0x10' stat='pDef'/>
     <enchant val='0' order='0x0C' stat='pDef'/>
- </for>
+  </for>
 </item>
 <item id='497' name="Chain Helmet">
   <for>
-   <add val='45' order='0x10' stat='pDef'/>
-   <enchant val='0' order='0x0C' stat='pDef'/>
+    <add val='45' order='0x10' stat='pDef'/>
+    <enchant val='0' order='0x0C' stat='pDef'/>
   </for>
 </item>
 <item id='498' name="Steel Plate Helmet">

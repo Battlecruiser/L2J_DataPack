@@ -45,20 +45,6 @@
 <item id='354' name="Chain Mail Shirt">
   <for>
     <add val='120' order='0x10' stat='pDef'/>
-    <mul val='1.0524' order='0x30' stat='pDef'>
-      <and>
-        <using slotitem="381;11"/>
-        <using slotitem="2413;6"/>
-        <target using="Dagger"/>
-      </and>
-    </mul>
-    <add val='198' order='0x40' stat='maxHp'>
-      <and>
-        <using slotitem="381;11"/>
-        <using slotitem="2413;6"/>
-        <using slotitem="2495;8"/>
-      </and>
-    </add>
     <enchant val='0' order='0x0C' stat='pDef'/>
   </for>
 </item>
@@ -71,17 +57,6 @@
 <item id='356' name="Full Plate Armor">
   <for>
     <add stat='pDef' order='0x10'  val='239'/>
-    <add stat='maxHp' order='0x40' val='270'>
-      <and>
-        <using slotitem="2414;6"/>
-      </and>
-    </add>
-    <mul stat='rShld' order='0x30' val='1.05'>
-      <and>
-        <using slotitem="2414;6"/>
-        <using slotitem="2497;8"/>
-      </and>
-    </mul>
     <enchant val='0' order='0x0C' stat='pDef'/>
   </for>
 </item>
@@ -470,30 +445,12 @@
 <item id='397' name="Mithril Shirt">
   <for>
     <add stat='pDef' order='0x10'  val='90'/>
-    <add stat='rEvas' order='0x40' val='4'>
-      <and>
-        <using slotitem="2387;11"/>
-        <using slotitem="62;12"/>
-      </and>
-    </add>
     <enchant val='0' order='0x0C' stat='pDef'/>
   </for>
 </item>
 <item id='398' name="Plated Leather">
   <for>
     <add val='94' order='0x10' stat='pDef'/>
-    <add stat='STR' order='0x40' val='4'>
-      <and>
-        <using slotitem="418;11"/>
-        <using slotitem="2431;12"/>
-      </and>
-    </add>
-    <sub stat='CON' order='0x40' val='1'>
-      <and>
-        <using slotitem="418;11"/>
-        <using slotitem="2431;12"/>
-      </and>
-    </sub>
     <enchant val='0' order='0x0C' stat='pDef'/>
   </for>
 </item>
