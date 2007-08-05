@@ -401,10 +401,21 @@
       Lvl 9 - Active: Immediately recovers your HP. Power 520.
       Lvl 10 - Active: Immediately recovers your HP. Power 552.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 2 3 3 4 4 5 5 6 6 7 </table>
+  <table name="#mpConsume"> 8 10 11 13 15 17 19 21 24 26 </table>
+  <table name="#power"> 308 337 365 393 421 448 474 498 520 552 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="5000"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="skillTime" val="5000"/>
+  <set name="skillType" val="HEAL"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <for>
   </for>
 </skill>
@@ -424,11 +435,26 @@
       Lvl 9 - Active: Increases the maximum HP by 270 temporarily.
       Lvl 10 - Active: Increases the maximum HP by 300 temporarily.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 8 9 10 11 12 14 15 16 19 10 </table>
+  <table name="#mpConsume"> 31 35 38 41 48 53 57 63 70 75 </table>
+  <table name="#Tab-maxHp"> 30 60 90 120 150 180 210 240 270 300 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxHp" stackType="MaxHPUp">
+      <add order="0x30" stat="maxHp" val="#Tab-maxHp"/>
+    </effect>
   </for>
 </skill>
 <skill id="3125" levels="10" name="Item Skill: Battle Roar">
@@ -438,11 +464,24 @@
   Description(s):
       Lvl 1-10 - Active: Increases the maximum HP temporarily and restores HP by the increased amount.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume"> 13 18 22 27 30 33 40 50 60 70 </table>
+  <table name="#Tab-maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 1.40 1.45 1.50 1.55</table>
+  <table name="#reg-HP"> 9.1 13 16.6 20 23 25.7 26 28 30 32 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#reg-HP"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="600000"/>
+  <set name="skillTime" val="1500"/>
+  <set name="skillType" val="HEAL_PERCENT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="#Tab-maxHp" stackType="MaxHPUp">
+      <mul order="0x30" stat="maxHp" val="#Tab-maxHp"/>
+    </effect>
   </for>
 </skill>
 <skill id="3126" levels="10" name="Item Skill: Prayer">
@@ -452,11 +491,26 @@
   Description(s):
       Lvl 1-10 - Active: Increases the effectiveness of HP recovery magic temporarily.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume_Init"> 49 52 55 60 70 80 90 100 110 120 </table>
+  <table name="#mpConsume"> 195 207 217 227 237 248 257 268 278 288 </table>
+  <table name="#tab-gainHp"> 1.08 1.10 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect name="Buff" time="1200" count="1" val="0">
+      <mul order="0x30" stat="gainHp" val="#tab-gainHp"/>
+    </effect>
   </for>
 </skill>
 <skill id="3127" levels="10" name="Item Skill: Recharge">
@@ -475,10 +529,21 @@
       Lvl 9 - Active: Regenerates MP. Power 65.
       Lvl 10 - Active: Regenerates MP. Power 69.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 10 11 12 12 14 14 15 16 17 18  </table>
+  <table name="#mpConsume"> 39 42 45 48 53 56 59 62 65 69 </table>
+  <table name="#power"> 41 44 47 50 53 57 59 62 65 69 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="6000"/>
+  <set name="reuseDelay" val="12000"/>
+  <set name="skillTime" val="6000"/>
+  <set name="skillType" val="MANARECHARGE"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
   </for>
 </skill>
@@ -498,11 +563,26 @@
       Lvl 9 - Active: Increases the maximum MP by 180 temporarily.
       Lvl 10 - Active: Increases the maximum MP by 200 temporarily.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 8 9 10 11 12 13 14 15 16 17 </table>
+  <table name="#mpConsume"> 31 35 38 41 46 52 58 65 70 75 </table>
+  <table name="#Tab-maxMp"> 1.1 1.15 1.2 1.25 1.3 1.35 1.40 1.45 1.50 1.55 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxMp" stackType="MPregen">
+      <mul order="0x30" stat="maxMp" val="#Tab-maxMp"/>
+    </effect>
   </for>
 </skill>
 <skill id="3129" levels="10" name="Item Skill: Mana Gain">
@@ -512,11 +592,26 @@
   Description(s):
       Lvl 1-10 - Active: Increases the recharge recover rate of MP.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 8 9 10 11 12 13 14 15 16 17 </table>
+  <table name="#mpConsume"> 31 35 38 41 46 52 58 65 70 75 </table>
+  <table name="#Tab-maxMp"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxMp" stackType="MPregen">
+      <mul order="0x30" stat="gainMp" val="#Tab-maxMp"/>
+    </effect>
   </for>
 </skill>
 <skill id="3130" levels="10" name="Item Skill: Ritual">
@@ -535,10 +630,21 @@
       Lvl 9 - Active: Regenerates CP. Power 446.
       Lvl 10 - Active: Regenerates CP. Power 473.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 21 22 23 23 24 24 25 25 26 26 </table>
+  <table name="#mpConsume"> 83 86 89 91 93 96 99 102 105 108 </table>
+  <table name="#rateCp"> 264 289 313 337 361 384 406 428 446 473 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#rateCp"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillTime" val="5000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="hitTime" val="5000"/>
+  <set name="skillType" val="COMBATPOINTHEAL"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <for>
   </for>
 </skill>
@@ -558,11 +664,26 @@
       Lvl 9 - Active: Increases the maximum CP by 270 temporarily.
       Lvl 10 - Active: Increases the maximum CP by 300 temporarily.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 8 9 10 11 12 13 14 15 16 17 </table>
+  <table name="#mpConsume"> 31 35 38 41 46 52 58 65 70 75 </table>
+  <table name="#Tab-maxMp"> 30 60 90 120 150 180 210 240 270 300 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxMp" stackType="MPregen">
+      <add order="0x30" stat="maxCp" val="#Tab-maxMp"/>
+    </effect>
   </for>
 </skill>
 <skill id="3132" levels="10" name="Item Skill: Might">
@@ -572,11 +693,26 @@
   Description(s):
       Lvl 1-10 - Active: Increases P. Atk. temporarily.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
+  <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
+  <table name="#rate"> 1.08 1.12 1.15 1.17 1.20 1.23 1.25 1.27 1.30 1.32 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pAtk">
+      <mul order="0x30" stat="pAtk" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3133" levels="10" name="Item Skill: Empower">
@@ -586,11 +722,26 @@
   Description(s):
       Lvl 1-10 - Active: Increases M. Atk. temporarily.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
+  <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
+  <table name="#rate"> 1.08 1.12 1.15 1.17 1.20 1.23 1.25 1.27 1.30 1.32 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="mAtk">
+      <mul order="0x30" stat="mAtk" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3134" levels="10" name="Item Skill: Duel Might">
@@ -600,11 +751,26 @@
   Description(s):
       Lvl 1-10 - Active: Increases PVP P. Atk. temporarily.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
+  <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
+  <table name="#rate"> 1.08 1.12 1.15 1.17 1.20 1.23 1.25 1.27 1.30 1.32 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pvpPhysDmg">
+      <mul order="0x30" stat="pvpPhysDmg" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3135" levels="10" name="Item Skill: Shield">
@@ -614,11 +780,26 @@
   Description(s):
       Lvl 1-10 - Active: Increases P. Def. temporarily.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
+  <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
+  <table name="#rate"> 1.08 1.12 1.15 1.17 1.20 1.23 1.25 1.27 1.30 1.32 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pDef">
+      <mul order="0x30" stat="pDef" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3136" levels="10" name="Item Skill: Magic Barrier">
@@ -628,11 +809,26 @@
   Description(s):
       Lvl 1-10 - Active: Increases M. Def. temporarily.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
+  <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
+  <table name="#rate"> 1.08 1.12 1.15 1.17 1.20 1.23 1.25 1.27 1.30 1.32 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="mDef">
+      <mul order="0x30" stat="mDef" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3137" levels="10" name="Item Skill: Duel Weakness">
@@ -642,11 +838,26 @@
   Description(s):
       Lvl 1-10 - Active: Decreases the opponent's PVP P. Atk. temporarily.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
+  <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
+  <table name="#rate"> 0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.9 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pvpPhysDmg">
+      <mul order="0x30" stat="pvpPhysDmg" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3138" levels="10" name="Item Skill: Heal Empower">
@@ -656,11 +867,26 @@
   Description(s):
       Lvl 1-10 - Active: Increases the power of HP recovery magic temporarily.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
+  <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
+  <table name="#rate"> 1.08 1.12 1.15 1.17 1.20 1.23 1.25 1.27 1.30 1.32 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="gainHp">
+      <mul order="0x30" stat="gainHp" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3139" levels="10" name="Item Skill: Agility">
@@ -670,11 +896,26 @@
   Description(s):
       Lvl 1-10 - Active: Increases Dodge temporarily.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
+  <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
+  <table name="#rate"> 1.08 1.12 1.15 1.17 1.20 1.23 1.25 1.27 1.30 1.32 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="rEvas">
+      <mul order="0x30" stat="rEvas" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3140" levels="10" name="Item Skill: Guidance">
@@ -684,11 +925,26 @@
   Description(s):
       Lvl 1-10 - Active: Increases Accuracy temporarily.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
+  <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
+  <table name="#rate"> 1.08 1.12 1.15 1.17 1.20 1.23 1.25 1.27 1.30 1.32 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="accCombat">
+      <mul order="0x30" stat="accCombat" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3141" levels="10" name="Item Skill: Focus">
@@ -698,11 +954,26 @@
   Description(s):
       Lvl 1-10 - Active: Increases the chance of a critical attack temporarily.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
+  <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
+  <table name="#rate"> 1.08 1.12 1.15 1.17 1.20 1.23 1.25 1.27 1.30 1.32 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="rCrit">
+      <mul order="0x30" stat="rCrit" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3142" levels="10" name="Item Skill: Wild Magic">
@@ -712,11 +983,26 @@
   Description(s):
       Lvl 1-10 - Active: Increases the critical attack rate of magic attacks temporarily.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
+  <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
+  <table name="#rate"> 1.08 1.12 1.15 1.17 1.20 1.23 1.25 1.27 1.30 1.32 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="mCritRate">
+      <mul order="0x30" stat="mCritRate" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3143" levels="10" name="Item Skill: Kiss of Eva">
@@ -819,11 +1105,22 @@
       Lvl 9 - Active: Increases the target's urge to attack. Power 635.
       Lvl 10 - Active: Increases the target's urge to attack. Power 659.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume"> 20 21 22 23 24 25 26 27 28 29 </table>
+  <table name="#power"> 438 467 495 523 549 574 597 617 635 659 </table>
+  <table name="#castRange"> 400 400 400 400 400 400 400 400 400 400 </table>
+  <table name="#effectRange"> 900  900  900  900  900  900  900  900  900  900 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="3000"/>
+  <set name="skillTime" val="1000"/>
+  <set name="skillType" val="AGGDAMAGE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="#castRange"/>
+  <set name="effectRange" val="#effectRange"/>
   <for>
+    <effect count="1" name="TargetMe" time="1" val="0"/>
   </for>
 </skill>
 <skill id="3150" levels="10" name="Item Skill: Charm">
@@ -842,11 +1139,26 @@
       Lvl 9 - Active: Decreases a target's urge to attack. Power 318.
       Lvl 10 - Active: Decreases a target's urge to attack. Power 330.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 2 2 2 2 3 3 3 3 3 3 </table>
+  <table name="#mpConsume"> 8 8 8 8 9 9 10 10 10 11 </table>
+  <table name="#aggr"> 219 234 248 262 275 287 299 309 318 330 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="60000"/>
+  <set name="skillTime" val="1500"/>
+  <set name="skillType" val="AGGREDUCE"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="60000"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <for>
+    <effect name="Buff" time="60" count="1" val="0">
+      <sub order="0x40" stat="aggression" val="#aggr"/>
+    </effect>
   </for>
 </skill>
 <skill id="3151" levels="10" name="Item Skill: Peace">
@@ -893,10 +1205,23 @@
       Lvl 9 - Active: Absorbs HP. Power 82.
       Lvl 10 - Active: Absorbs HP. Power 88.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 5 6 7 7 8 8 9 9 10 10 </table>
+  <table name="#mpConsume"> 20 22 25 28 30 32 34 36 38 40 </table>
+  <table name="#power"> 48 53 57 61 66 70 74 78 82 88 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="element" val="6"/>
+  <set name="reuseDelay" val="12000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="DRAIN"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="absorbPart" val="0.4" /><!-- absorbs 40% of damage -->
   <for>
   </for>
 </skill>
@@ -916,12 +1241,19 @@
       Lvl 9 - Active: Burns up the enemy's MP. Power 112.
       Lvl 10 - Active: Burns up the enemy's MP. Power 120.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <table name="#mpConsume"> 77 80 83 87 89 93 95 98 100 103 </table>
+  <table name="#power"> 68 73 79 84 90 96 101 107 112 120 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="13000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="MANADAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
+  <set name="isMagic" val="true"/>
 </skill>
 <skill id="3155" levels="10" name="Item Skill: Unlock">
 <!--
@@ -995,11 +1327,30 @@
   Description(s):
       Lvl 1-3 - Active: Temporarily blocks a monster's pre-emptive attack. Fighting ability significantly decreases while in effect.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+<table name="#mpConsume"> 27 31 34 </table>
+  <table name="#pAtk"> 1.2 1.3 1.4 </table>
+  <table name="#accCombat"> 1.1 1.15 1.2 </table>
+  <table name="#rCrit"> 1.1 1.2 1.3 </table>
+  <table name="#pDef"> 1.1 1.2 1.3 </table>
+  <table name="#mDef"> 1.15 1.25 1.35 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="2000"/>
+  <set name="skillTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="reuseDelay" val="60000"/>
+  <set name="buffDuration" val="120000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="SilentMove" time="120" val="0">
+      <div order="0x30" stat="pAtk" val="#pAtk"/>
+      <div order="0x30" stat="accCombat" val="#accCombat"/>
+      <div order="0x30" stat="rCrit" val="#rCrit"/>
+      <div order="0x30" stat="pDef" val="#pDef"/>
+      <div order="0x30" stat="mDef" val="#mDef"/>
+    </effect>
   </for>
 </skill>
 <skill id="3160" levels="9" name="Item Skill: Resurrection">
@@ -1017,10 +1368,21 @@
       Lvl 8 - Active: Resurrects a corpse. Restores about 65% of additional Exp.
       Lvl 9 - Active: Resurrects a corpse. Restores about 70% of additional Exp.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 12 18 25 31 36 39 42 46 48 </table>
+  <table name="#mpConsume"> 47 70 97 121 144 156 165 182 191 </table>
+  <table name="#power"> 0.0 20.0 30.0 40.0 50.0 55.0 60.0 65.0 70.0 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_CORPSE_PLAYER"/>
+  <set name="hitTime" val="6000"/>
+  <set name="reuseDelay" val="120000"/>
+  <set name="skillTime" val="6000"/>
+  <set name="skillType" val="RESURRECT"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
   </for>
 </skill>
@@ -1096,10 +1458,22 @@
       Lvl 9 - Active: Detonates a fireball by compressing the air around the caster. Power 102.
       Lvl 10 - Active: Detonates a fireball by compressing the air around the caster. Power 110.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 7 7 8 8 9 9 9 10 10 11 </table>
+  <table name="#mpConsume"> 27 28 30 31 33 35 36 38 39 41 </table>
+  <table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="element" val="2"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <for>
   </for>
 </skill>
@@ -1119,10 +1493,22 @@
       Lvl 9 - Active: Unleashes a spray of highly pressurized water. Power 102.
       Lvl 10 - Active: Unleashes a spray of highly pressurized water. Power 110.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 7 7 8 8 9 9 9 10 10 11 </table>
+  <table name="#mpConsume"> 27 28 30 31 33 35 36 38 39 41 </table>
+  <table name="#power"> 61 66 72 77 82 78 92 78 102 110 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="element" val="3"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <for>
   </for>
 </skill>
@@ -1142,10 +1528,22 @@
       Lvl 9 - Active: Creates a whirlwind of destruction. Power 102.
       Lvl 10 - Active: Creates a whirlwind of destruction. Power 110.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 7 7 8 8 9 9 9 10 10 11 </table>
+  <table name="#mpConsume"> 27 28 30 31 33 35 36 38 39 41 </table>
+  <table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="element" val="1"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <for>
   </for>
 </skill>
@@ -1165,10 +1563,22 @@
       Lvl 9 - Active: Attacks the target with a stone boulder. Power 102.
       Lvl 10 - Active: Attacks the target with a stone boulder. Power 110.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 7 7 8 8 9 9 9 10 10 11 </table>
+  <table name="#mpConsume"> 27 28 30 31 33 35 36 38 39 41 </table>
+  <table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="element" val="1"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <for>
   </for>
 </skill>
@@ -1188,10 +1598,22 @@
       Lvl 9 - Active: Unleashes a sacred attack. Power 102.
       Lvl 10 - Active: Unleashes a sacred attack. Power 110.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 7 7 8 8 9 9 9 10 10 11 </table>
+  <table name="#mpConsume"> 27 28 30 31 33 35 36 38 39 41 </table>
+  <table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="element" val="1"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <for>
   </for>
 </skill>
@@ -1211,10 +1633,22 @@
       Lvl 9 - Active: Unleashes a dark attack. Power 102.
       Lvl 10 - Active: Unleashes a dark attack. Power 110.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 7 7 8 8 9 9 9 10 10 11 </table>
+  <table name="#mpConsume"> 27 28 30 31 33 35 36 38 39 41 </table>
+  <table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="element" val="1"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <for>
   </for>
 </skill>
@@ -1234,10 +1668,22 @@
       Lvl 9 - Active: Unleashes an elementally challenged attack. Power 102.
       Lvl 10 - Active: Unleashes an elementally challenged attack. Power 110.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 7 7 8 8 9 9 9 10 10 11 </table>
+  <table name="#mpConsume"> 27 28 30 31 33 35 36 38 39 41 </table>
+  <table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="element" val="1"/>
+  <set name="reuseDelay" val="2500"/>
+  <set name="skillTime" val="1500"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="200"/>
+  <set name="effectRange" val="1400"/>
   <for>
   </for>
 </skill>
@@ -1257,10 +1703,22 @@
       Lvl 9 - Active: Unleashes a flaming attack against the enemies near a target. Power 51.
       Lvl 10 - Active: Unleashes a flaming attack against the enemies near a target. Power 55.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 16 17 18 18 19 19 20 20 21 22 </table>
+  <table name="#mpConsume"> 64 66 69 71 74 76 78 80 82 83 </table>
+  <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillTime" val="5000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="25000"/>
+  <set name="hitTime" val="5000"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1000"/>
   <for>
   </for>
 </skill>
@@ -1280,10 +1738,22 @@
       Lvl 9 - Active: Unleashes a powerful liquidy attack against the enemies near a target. Power 51.
       Lvl 10 - Active: Unleashes a powerful liquidy attack against the enemies near a target. Power 55.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 16 17 18 18 19 19 20 20 21 22 </table>
+  <table name="#mpConsume"> 64 66 69 71 74 76 78 80 82 83 </table>
+  <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillTime" val="5000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="25000"/>
+  <set name="hitTime" val="5000"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1000"/>
   <for>
   </for>
 </skill>
@@ -1303,10 +1773,22 @@
       Lvl 9 - Active: Unleashes a powerful gusting attack against the enemies near a target. Power 51.
       Lvl 10 - Active: Unleashes a powerful gusting attack against the enemies near a target. Power 55.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 16 17 18 18 19 19 20 20 21 22 </table>
+  <table name="#mpConsume"> 64 66 69 71 74 76 78 80 82 83 </table>
+  <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillTime" val="5000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="25000"/>
+  <set name="hitTime" val="5000"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1000"/>
   <for>
   </for>
 </skill>
@@ -1326,10 +1808,22 @@
       Lvl 9 - Active: Attacks the enemies near a target with a stone boulder. Power 51.
       Lvl 10 - Active: Attacks the enemies near a target with a stone boulder. Power 55.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 16 17 18 18 19 19 20 20 21 22 </table>
+  <table name="#mpConsume"> 64 66 69 71 74 76 78 80 82 83 </table>
+  <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillTime" val="5000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="25000"/>
+  <set name="hitTime" val="5000"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="500"/>
+  <set name="effectRange" val="1000"/>
   <for>
   </for>
 </skill>
@@ -1349,10 +1843,22 @@
       Lvl 9 - Active: Unleashes a sacred attack against the enemies near a target. Power 51.
       Lvl 10 - Active: Unleashes a sacred attack against the enemies near a target. Power 55.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 16 17 18 18 19 19 20 20 21 22 </table>
+  <table name="#mpConsume"> 64 66 69 71 74 76 78 80 82 83 </table>
+  <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillTime" val="5000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="25000"/>
+  <set name="hitTime" val="5000"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="500"/>
+  <set name="effectRange" val="1000"/>
   <for>
   </for>
 </skill>
@@ -1372,10 +1878,22 @@
       Lvl 9 - Active: Unleashes a dark attack against the enemies near a target. Power 51.
       Lvl 10 - Active: Unleashes a dark attack against the enemies near a target. Power 55.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 16 17 18 18 19 19 20 20 21 22 </table>
+  <table name="#mpConsume"> 64 66 69 71 74 76 78 80 82 83 </table>
+  <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillTime" val="5000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="25000"/>
+  <set name="hitTime" val="5000"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="500"/>
+  <set name="effectRange" val="1000"/>
   <for>
   </for>
 </skill>
@@ -1395,10 +1913,22 @@
       Lvl 9 - Active: Unleashes an elementally challenged attack against the enemies near a target. Power 51.
       Lvl 10 - Active: Unleashes an elementally challenged attack against the enemies near a target. Power 55.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 16 17 18 18 19 19 20 20 21 22 </table>
+  <table name="#mpConsume"> 64 66 69 71 74 76 78 80 82 83 </table>
+  <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillTime" val="1500"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="2500"/>
+  <set name="hitTime" val="1000"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1000"/>
   <for>
   </for>
 </skill>
@@ -1418,10 +1948,22 @@
       Lvl 9 - Active: Unleashes a flaming attack against nearby enemies. Power 51.
       Lvl 10 - Active: Unleashes a flaming attack against nearby enemies. Power 55.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume_Init"> 16 17 18 18 19 19 20 20 21 22 </table>
+  <table name="#mpConsume"> 64 66 69 71 74 76 78 80 82 83 </table>
+  <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="350"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="hitTime" val="6000"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="1000"/>
   <for>
   </for>
 </skill>
@@ -1441,10 +1983,22 @@
       Lvl 9 - Active: Unleashes a powerful liquidy attack against nearby enemies. Power 51.
       Lvl 10 - Active: Unleashes a powerful liquidy attack against nearby enemies. Power 55.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume_Init"> 16 17 18 18 19 19 20 20 21 22 </table>
+  <table name="#mpConsume"> 64 66 69 71 74 76 78 80 82 83 </table>
+  <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="350"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="hitTime" val="6000"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="1000"/>
   <for>
   </for>
 </skill>
@@ -1464,10 +2018,22 @@
       Lvl 9 - Active: Unleashes a powerful gusting attack against nearby enemies. Power 51.
       Lvl 10 - Active: Unleashes a powerful gusting attack against nearby enemies. Power 55.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume_Init"> 16 17 18 18 19 19 20 20 21 22 </table>
+  <table name="#mpConsume"> 64 66 69 71 74 76 78 80 82 83 </table>
+  <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="350"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="hitTime" val="6000"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="1000"/>
   <for>
   </for>
 </skill>
@@ -1487,10 +2053,22 @@
       Lvl 9 - Active: Unleashes an earthen attack against nearby enemies. Power 51.
       Lvl 10 - Active: Unleashes an earthen attack against nearby enemies. Power 55.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume_Init"> 16 17 18 18 19 19 20 20 21 22 </table>
+  <table name="#mpConsume"> 64 66 69 71 74 76 78 80 82 83 </table>
+  <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="350"/>
+  <set name="skillTime" val="5000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="hitTime" val="5000"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="1000"/>
   <for>
   </for>
 </skill>
@@ -1510,10 +2088,23 @@
       Lvl 9 - Active: Unleashes a sacred attack against nearby enemies. Power 51.
       Lvl 10 - Active: Unleashes a sacred attack against nearby enemies. Power 55.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume_Init"> 16 17 18 18 19 19 20 20 21 22 </table>
+  <table name="#mpConsume"> 64 66 69 71 74 76 78 80 82 83 </table>
+  <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="350"/>
+  <set name="skillTime" val="5000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="hitTime" val="5000"/>
+  <set name="element" val="6"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="1000"/>
   <for>
   </for>
 </skill>
@@ -1533,10 +2124,23 @@
       Lvl 9 - Active: Unleashes a dark attack against nearby enemies. Power 51.
       Lvl 10 - Active: Unleashes a dark attack against nearby enemies. Power 55.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume_Init"> 16 17 18 18 19 19 20 20 21 22 </table>
+  <table name="#mpConsume"> 64 66 69 71 74 76 78 80 82 83 </table>
+  <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="350"/>
+  <set name="skillTime" val="5000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="hitTime" val="5000"/>
+  <set name="element" val="6"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="1000"/>
   <for>
   </for>
 </skill>
@@ -1556,10 +2160,22 @@
       Lvl 9 - Active: Unleashes an elementally challenged attack against nearby enemies. Power 51.
       Lvl 10 - Active: Unleashes an elementally challenged attack against nearby enemies. Power 55.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume_Init"> 16 17 18 18 19 19 20 20 21 22 </table>
+  <table name="#mpConsume"> 64 66 69 71 74 76 78 80 82 83 </table>
+  <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="350"/>
+  <set name="skillTime" val="1500"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="2500"/>
+  <set name="hitTime" val="1000"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="1000"/>
   <for>
   </for>
 </skill>
@@ -1570,11 +2186,29 @@
   Description(s):
       Lvl 1-10 - Active: Temporarily decreases a target's speed.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 6 7 8 9 10 11 11 11 12 12 </table>
+  <table name="#mpConsume"> 24 28 31 35 38 41 43 44 46 48 </table>
+  <table name="#magicLvl"> 35 40 44 48 52 56 58 60 62 64 </table>
+  <table name="#Tab-runSpd"> 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="save" val="5"/>
+  <set name="power" val="80"/>
+  <set name="lvlDepend" val="2"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="7000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="30000"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <for>
+    <effect count="1" name="Buff" time="30" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
+      <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
+    </effect>
   </for>
 </skill>
 <skill id="3188" levels="10" name="Item Skill: Winter">
@@ -1728,11 +2362,27 @@
   Description(s):
       Lvl 1-10 - Active: Temporarily blocks the target's magic skills.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 7 8 9 10 11 11 11 12 12 13 </table>
+  <table name="#mpConsume"> 28 31 35 38 41 43 44 46 48 49 </table>
+  <table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="save" val="2"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="80"/>
+  <set name="lvlDepend" val="2"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="60000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="MUTE"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="30000"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <for>
+    <effect count="1" name="Mute" time="30" val="0" stackOrder="1" stackType="silence"/>
   </for>
 </skill>
 <skill id="3198" levels="10" name="Item Skill: Doom">
@@ -1756,11 +2406,23 @@
   Description(s):
       Lvl 1-3 - Active: Temporarily decreases the re-use time for physical skills.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume"> 27 31 34 </table>
+  <table name="#mReuseRate"> 0.9 0.8 0.7 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="2000"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="skillTime" val="2000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0">
+      <mul order="0x30" stat="mReuse" val="#mReuseRate"/>
+    </effect>
   </for>
 </skill>
 </list>

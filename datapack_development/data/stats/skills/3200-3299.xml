@@ -7,11 +7,23 @@
   Description(s):
       Lvl 1-3 - Active: Temporarily decreases the re-use time for magic skills.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume"> 27 31 34 </table>
+  <table name="#mReuseRate"> 0.9 0.8 0.7 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="2000"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="skillTime" val="2000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0">
+      <mul order="0x30" stat="mReuse" val="#mReuseRate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3201" levels="3" name="Item Skill: Music Refresh">
@@ -21,11 +33,23 @@
   Description(s):
       Lvl 1-3 - Active: Temporarily decreases the re-use time for song/dance skills.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume"> 27 31 34 </table>
+  <table name="#mReuseRate"> 0.9 0.8 0.7 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="2000"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="skillTime" val="2000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0">
+      <mul order="0x30" stat="mReuse" val="#mReuseRate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3202" levels="3" name="Item Skill: Refresh">
@@ -35,11 +59,23 @@
   Description(s):
       Lvl 1-3 - Active: Temporarily decreases the re-use times for all skills.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume"> 27 31 34 </table>
+  <table name="#mReuseRate"> 0.9 0.8 0.7 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="2000"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="skillTime" val="2000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0">
+      <mul order="0x30" stat="mReuse" val="#mReuseRate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3203" levels="1" name="Item Skill: Problem Skill">
@@ -63,11 +99,26 @@
   Description(s):
       Lvl 1-10 - Active: Allows you to reflect some of the damage you incurred back to the enemy for a certain amount of time. Excludes damage from skill or remote attacks.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume_Init"> 4 5 5 </table>
+  <table name="#mpConsume"> 14 17 19 </table>
+  <table name="#power"> 10.0 15.0 20.0 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="REFLECT"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#power" stackType="DmgShield">
+      <add order="0x40" stat="reflectDam" val="#power"/>
+    </effect>
   </for>
 </skill>
 <skill id="3205" levels="2" name="Item Skill: Party Recall">
@@ -77,10 +128,23 @@
   Description(s):
       Lvl 1-2 - Active: Teleports party members to a village. Cannot be used in a specially designated place such as the GM Consultation Service.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume_Init"> 52 61 </table>
+  <table name="#mpConsume"> 205 244 </table>
+  <table name="#hitTime"> 20000 3500 </table>
+  <table name="#skillTime"> 20000 3500 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="1000"/>
+  <set name="hitTime" val="#hitTime"/>
+  <set name="reuseDelay" val="600000"/>
+  <set name="skillTime" val="#skillTime"/>
+  <set name="skillType" val="RECALL"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -557,11 +621,15 @@
   Description(s):
       Lvl 1-10 - Passive: Increases the effect of HP recovery magic when equipped.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="gainHp" val="#rate"/>
   </for>
 </skill>
 <skill id="3239" levels="10" name="Item Skill: Mana Gain">
@@ -571,11 +639,15 @@
   Description(s):
       Lvl 1-10 - Passive: Increases the recharge recovery rate of MP when equipped.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="regMp" val="#rate"/>
   </for>
 </skill>
 <skill id="3240" levels="10" name="Item Skill: Might">
@@ -585,11 +657,15 @@
   Description(s):
       Lvl 1-10 - Passive: Increases P. Atk. when equipped.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pAtk" val="#rate"/>
   </for>
 </skill>
 <skill id="3241" levels="10" name="Item Skill: Empower">
@@ -599,11 +675,15 @@
   Description(s):
       Lvl 1-10 - Passive: Increases M. Atk. when equipped.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="mAtk" val="#rate"/>
   </for>
 </skill>
 <skill id="3243" levels="10" name="Item Skill: Duel Might">
@@ -613,11 +693,15 @@
   Description(s):
       Lvl 1-10 - Passive: Increases PVP P. Atk. when equipped.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pvpPhysDmg" val="#rate"/>
   </for>
 </skill>
 <skill id="3244" levels="10" name="Item Skill: Shield">
@@ -627,11 +711,15 @@
   Description(s):
       Lvl 1-10 - Passive: Increases P. Def. when equipped.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pDef" val="#rate"/>
   </for>
 </skill>
 <skill id="3245" levels="10" name="Item Skill: Magic Barrier">
@@ -641,11 +729,15 @@
   Description(s):
       Lvl 1-10 - Passive: Increases M. Def. when equipped.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="mDef" val="#rate"/>
   </for>
 </skill>
 <skill id="3246" levels="10" name="Item Skill: Heal Empower">
@@ -655,11 +747,15 @@
   Description(s):
       Lvl 1-10 - Passive: Increases the power of HP recovery magic when equipped.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="gainHp" val="#rate"/>
   </for>
 </skill>
 <skill id="3247" levels="10" name="Item Skill: Agility">
@@ -669,11 +765,15 @@
   Description(s):
       Lvl 1-10 - Passive: Increases evasion when equipped.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="rEvas" val="#rate"/>
   </for>
 </skill>
 <skill id="3248" levels="10" name="Item Skill: Guidance">
@@ -683,11 +783,15 @@
   Description(s):
       Lvl 1-10 - Passive: Increases accuracy when equipped.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="accCombat" val="#rate"/>
   </for>
 </skill>
 <skill id="3249" levels="10" name="Item Skill: Focus">
@@ -697,11 +801,15 @@
   Description(s):
       Lvl 1-10 - Passive: Increases critical attack rate when equipped.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="rCrit" val="#rate"/>
   </for>
 </skill>
 <skill id="3250" levels="10" name="Item Skill: Wild Magic">
@@ -711,11 +819,15 @@
   Description(s):
       Lvl 1-10 - Passive: Increases the critical attack rate of magic attacks when equipped.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="mCritRate" val="#rate"/>
   </for>
 </skill>
 <skill id="3251" levels="10" name="Item Skill: Weight Limit">
@@ -725,11 +837,15 @@
   Description(s):
       Lvl 1-10 - Passive: Increases the weapon weight limit by 2 times when equipped.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#rate"> 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="maxLoad" val="#rate"/>
   </for>
 </skill>
 <skill id="3252" levels="10" name="Item Skill: Kiss of Eva">
@@ -781,11 +897,15 @@
   Description(s):
       Lvl 1-3 - Passive: Decreases the MP consumption rate for physical skills when equipped.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-Atk"> 0.95 0.92 0.9 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="MpConsumeRate" val="#Tab-Atk"/>
   </for>
 </skill>
 <skill id="3256" levels="3" name="Item Skill: Spell Clarity">
@@ -795,11 +915,15 @@
   Description(s):
       Lvl 1-3 - Passive: Decreases the MP consumption rate for magic skills when equipped.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-Atk"> 0.95 0.92 0.9 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="MpConsumeRate" val="#Tab-Atk"/>
   </for>
 </skill>
 <skill id="3257" levels="3" name="Item Skill: Music Clarity">
@@ -809,11 +933,15 @@
   Description(s):
       Lvl 1-3 - Passive: Decreases the MP consumption rate for song/dance skills when equipped.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-Atk"> 0.95 0.92 0.9 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="MpConsumeRate" val="#Tab-Atk"/>
   </for>
 </skill>
 <skill id="3258" levels="3" name="Item Skill: Clarity">
@@ -823,11 +951,15 @@
   Description(s):
       Lvl 1-3 - Passive: Decreases the MP consumption rate for all skills when equipped.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-Atk"> 0.95 0.92 0.9 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="MpConsumeRate" val="#Tab-Atk"/>
   </for>
 </skill>
 <skill id="3259" levels="3" name="Item Skill: Reflect Damage">
@@ -837,11 +969,15 @@
   Description(s):
       Lvl 1-3 - Passive: Increases the ability to reflect some of the damage you incur back to the enemy when equipped. Excludes damage by skill or long-range attacks.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#Tab-Atk"> 1.1 1.12 1.13 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="reflectDam" val="#Tab-Atk"/>
   </for>
 </skill>
 <skill id="3260" levels="1" name="Heart Shot">
