@@ -10,12 +10,6 @@
  <for>
    <add stat='pDef' order='0x10'  val='30'/>
    <add val='67' order='0x60' stat='maxMp'/>
-   <mul stat='mAtkSpd' order='0x30' val='1.15'>
-     <and>
-     <using slotitem="1104;11"/>
-     <using slotitem="44;6"/>
-     </and>
-   </mul>
  </for>
 </item>
 <item id='1102' name="Tunic of Magic">
