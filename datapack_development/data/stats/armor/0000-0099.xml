@@ -124,20 +124,20 @@
 <item id='45' name="Bone Helmet">
   <for>
     <add val='29' order='0x10' stat='pDef'/>
-  <enchant val='0' order='0x0C' stat='pDef'/>
-</for>
+    <enchant val='0' order='0x0C' stat='pDef'/>
+  </for>
 </item>
 <item id='46' name="Bronze Helmet">
   <for>
     <add val='33' order='0x10' stat='pDef'/>
-  <enchant val='0' order='0x0C' stat='pDef'/>
-</for>
+    <enchant val='0' order='0x0C' stat='pDef'/>
+  </for>
 </item>
 <item id='47' name="Helmet">
   <for>
     <add val='37' order='0x10' stat='pDef'/>
-  <enchant val='0' order='0x0C' stat='pDef'/>
-</for>
+    <enchant val='0' order='0x0C' stat='pDef'/>
+  </for>
 </item>
 <item id='48' name="Short Gloves">
   <for>
@@ -185,39 +185,20 @@
   </for>
 </item>
 <item id='58' name="Mithril Breastplate">
-<for>
- <add val='95' order='0x10' stat='pDef'/>
- <add val='41' order='0x40' stat='maxHp'>
-  <and>
-	<using slotitem="59;11"/>
-	<using slotitem="47;6"/>
-  </and>
- </add>
- <mul val='1.02' order='0x30' stat='pDef'>
-  <and>
-	<using slotitem="59;11"/>
-	<using slotitem="47;6"/>
-  </and>
- </mul>
- <add val='126' order='0x40' stat='maxHp'>
-  <and>
-	<using slotitem="59;11"/>
-	<using slotitem="47;6"/>
-	<using slotitem="628;8"/>
-  </and>
- </add>
-<enchant val='0' order='0x0C' stat='pDef'/>
-</for>
+  <for>
+    <add val='95' order='0x10' stat='pDef'/>
+    <enchant val='0' order='0x0C' stat='pDef'/>
+  </for>
 </item>
 <item id='59' name="Mithril Gaiters">
   <for>
     <add val='61' order='0x10' stat='pDef'/>
-  <enchant val='0' order='0x0C' stat='pDef'/>
-</for>
+    <enchant val='0' order='0x0C' stat='pDef'/>
+  </for>
 </item>
 <item id='60' name="Composite Armor">
   <for>
-   <add val='224' order='0x10' stat='pDef'/>
+    <add val='224' order='0x10' stat='pDef'/>
     <add val='5759' order='0x40' stat='maxLoad'>
     <and>
       <using slotitem="517;6"/>
@@ -229,31 +210,31 @@
       <using slotitem="107;8"/>
     </and>
     </mul>
-  <enchant val='0' order='0x0C' stat='pDef'/>
- </for>
+    <enchant val='0' order='0x0C' stat='pDef'/>
+  </for>
 </item>
 <item id='61' name="Mithril Gloves">
   <for>
     <add val='29' order='0x10' stat='pDef'/>
-  <enchant val='0' order='0x0C' stat='pDef'/>
-</for>
+    <enchant val='0' order='0x0C' stat='pDef'/>
+  </for>
 </item>
 <item id='62' name="Mithril Boots">
   <for>
     <add val='32' order='0x10' stat='pDef'/>
-  <enchant val='0' order='0x0C' stat='pDef'/>
-</for>
+    <enchant val='0' order='0x0C' stat='pDef'/>
+  </for>
 </item>
 <item id='63' name="Gauntlets">
   <for>
     <add val='24' order='0x10' stat='pDef'/>
-  <enchant val='0' order='0x0C' stat='pDef'/>
-</for>
+    <enchant val='0' order='0x0C' stat='pDef'/>
+  </for>
 </item>
 <item id='64' name="Composite Boots">
   <for>
     <add val='36' order='0x10' stat='pDef'/>
-  <enchant val='0' order='0x0C' stat='pDef'/>
-</for>
+    <enchant val='0' order='0x0C' stat='pDef'/>
+  </for>
 </item>
 </list>
