@@ -162,9 +162,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <!-- which way is most accurate?
-	<add order="0x40" stat="daggerWpnRes" val="5.24"/> <!-- P. Def. against daggers +5.24% -->
-	<mul val='1.0524' order='0x30' stat='pDef'>
+    <!-- which way is most accurate? --> <!-- P. Def. against daggers +5.24% -->
+    <!-- <add order="0x40" stat="daggerWpnRes" val="5.24"/> -->
+    <mul val='1.0524' order='0x30' stat='pDef'>
       <and>
         <target using="Dagger"/>
       </and>
