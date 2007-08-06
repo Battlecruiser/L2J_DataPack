@@ -1,6 +1,6 @@
 <html><title>Admin Help</title><body>
 <table width=260>
-<tr><td width 90>GM commands page:</td><td>1</td><td><a action="bypass -h admin_help gmcommands2.htm">2</a></td><td><a action="bypass -h admin_help gmcommands3.htm">3</a></td></tr>
+<tr><td width 90>GM commands page:</td><td>1</td><td><a action="bypass -h admin_help help/gmcommands2.htm">2</a></td><td><a action="bypass -h admin_help help/gmcommands3.htm">3</a></td></tr>
 </table><br>
 <font color="FF0000">These are the available GM commands in game.</font><br><br>
 <font color="LEVEL">//admin</font> - Brings up the admin menu.<br>
@@ -25,8 +25,8 @@
 <font color="LEVEL">//server_restart</font> - Starts the restart process.<br><font color="FF9933">Usage: //server_restart Number of seconds</font><br>
 <font color="LEVEL">//server_abort</font> - Stops the server shutdown.<br>
 <font color="LEVEL">//show_spawns</font> - Opens spawn menu.<br>
-<font color="LEVEL">//spawn</font> - Spawns a Mob on current target.<br><font color="FF9933">Usage: //spawn npc_id </font><br>
-<font color="LEVEL">//spawn_monster</font> - Spawns a Mob on current target.<br><font color="FF9933">Usage: //spawn_monster npc_id </font><br>
+<font color="LEVEL">//spawn</font> - Spawns a Mob on current target. Will respawn after server restart<br><font color="FF9933">Usage: //spawn npc_id </font><br>
+<font color="LEVEL">//spawn_once</font> - Spawns a Mob on current target. Won't respawn again.<br><font color="FF9933">Usage: //spawn_monster npc_id </font><br>
 <font color="LEVEL">//spawn_index</font> - Shows menu for monsters with respective level.<br><font color="FF9933">Usage: //spawn_index level </font><br>
 <font color="LEVEL">//show_skills</font> - Lists targetted players skills.<br>
 <font color="LEVEL">//remove_skills</font> - Removes the targetted players skills.<br>
@@ -35,7 +35,7 @@
 <font color="LEVEL">//add_skill</font> - Adds a skill to a targetted player.<br><font color="FF9933">Usage: //add_skill Skill_id level </font><br>
 <font color="LEVEL">//remove_skill</font> - Removes a skill from a targetted player.<br><font color="FF9933">Usage: //remove_skill Skill_id </font><br>
 <font color="LEVEL">//get_skills</font> - Temporarily gives you the skills of a targetted player.<br>
-<font color="LEVEL">//reset_skills</font> - Restores your skills from before the get_skills command.<br>
+<font color="LEVEL">//reset_skills</font> - Restores your skills to the way they were before the get_skills command.<br>
 <font color="LEVEL">//add_exp_sp_to_character</font> - Opens the xp sp menu of the targetted player.<br>
 <font color="LEVEL">//add_exp_sp</font> - Adds xp sp to targetted player.<br><font color="FF9933">Usage: //add_exp_sp xp_number sp_number</font><br>
 <font color="LEVEL">//remove_exp_sp</font> - Removes xp sp to targetted player.<br><font color="FF9933">Usage: //remove_exp_sp xp_number sp_number</font><br>
@@ -55,5 +55,5 @@
 <font color="LEVEL">//recall</font> - Summons a named player to you.<br><font color="FF9933">Usage: //recall kadar </font><br>
 <font color="LEVEL">//restore</font> - Restores a broken player info.<br>
 <font color="LEVEL">//repair</font> - Repairs a broken player info.<br>
-<center><button value="Back" action="bypass -h admin_help admhelp.htm" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></center>
+<center><button value="Index" action="bypass -h admin_help admhelp.htm" width=60 height=15 back="sek.cbui94" fore="sek.cbui92"></center>
 </body></html>
