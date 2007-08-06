@@ -312,7 +312,7 @@
   <set name="castRange" val="1500"/>
   <set name="effectRange" val="2000"/>
   <for>
-	<effect count="1" name="Paralyze" time="120" val="0"/>
+    <effect count="1" name="Paralyze" time="120" val="0"/>
   </for>
 </skill>
 <skill id="4320" levels="12" name="Poison">
@@ -669,7 +669,7 @@
   <set name="effectRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
-	  <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
+      <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>
 </skill>
@@ -689,7 +689,7 @@
   <set name="effectRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Weight" stackType="Weight">
-	  <add order="0x40" stat="maxLoad" val="#Weight"/>
+      <add order="0x40" stat="maxLoad" val="#Weight"/>
     </effect>
   </for>
 </skill>
@@ -726,10 +726,10 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pAtk">
-    <mul order="0x30" stat="pAtk" val="#rate"/>
-  </effect>
-</for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pAtk">
+      <mul order="0x30" stat="pAtk" val="#rate"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4346" levels="4" name="Clan Hall: Mental Shield">
   <table name="#mpConsume"> 50 0 0 100 </table>
@@ -746,10 +746,10 @@
   <set name="effectRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#res" stackType="MentalShield">
-	 <add stat="rootRes" val="#res" order="0x40"/>
-	 <add stat="sleepRes" val="#res" order="0x40"/>
-	 <add stat="confusionRes" val="#res" order="0x40"/>
-	 <add stat="derangementRes" val="#res" order="0x40"/>
+      <add stat="rootRes" val="#res" order="0x40"/>
+      <add stat="sleepRes" val="#res" order="0x40"/>
+      <add stat="confusionRes" val="#res" order="0x40"/>
+      <add stat="derangementRes" val="#res" order="0x40"/>
     </effect>
   </for>
 </skill>
@@ -856,6 +856,7 @@
   <table name="#Tab-mAtkSpd"> 1.05 1.08 </table>
   <table name="#Tab-pAtkSpd"> 1.05 1.08 </table>
   <table name="#Tab-runSpd"> 5 8 </table>
+  <table name="#Tab-rEvas"> 2 4 </table>
   <table name="#mpConsume"> 200 400 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -876,6 +877,7 @@
       <mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
       <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
+      <sub order="0x40" stat="rEvas" val="#Tab-rEvas"/>
     </effect>
   </for>
 </skill>
@@ -1301,7 +1303,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-	<add order="0x40" stat="poleWpnRes" val="#Tab-poleRes"/>
+    <add order="0x40" stat="poleWpnRes" val="#Tab-poleRes"/>
   </for>
 </skill>
 <skill id="4380" levels="1" name="Arena CP Recovery">
@@ -1451,24 +1453,24 @@
   </for>
 </skill>
 <skill id="4393" levels="3" name="Might">
-	<!-- by DrLecter -->
+  <!-- by DrLecter -->
   <set name="hitTime" val="100"/>
   <set name="reuseDelay" val="100"/>
   <set name="skillTime" val="100"/>
-	<table name="#pAtk"> 1.08 1.12 1.15 </table>
-	<set name="target" val="TARGET_ONE"/>
-	<set name="skillType" val="BUFF"/>
-	<set name="operateType" val="OP_ACTIVE"/>
+  <table name="#pAtk"> 1.08 1.12 1.15 </table>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="3600000"/>
-	<set name="castRange" val="400"/>
-	<set name="effectRange" val="900"/>
-	<for>
-		<effect count="1" name="Buff" time="3600" val="0" stackOrder="#pAtk" stackType="pAtk">
-			<mul order="0x30" stat="pAtk" val="#pAtk"/>
-		</effect>
-	</for>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
+  <for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="#pAtk" stackType="pAtk">
+      <mul order="0x30" stat="pAtk" val="#pAtk"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4394" levels="6" name="Blessed Body">
 <!--
@@ -1524,35 +1526,35 @@
   </for>
 </skill>
 <skill id="4397" levels="2" name="Berserker Spirit">
-	<!-- by DrLecter -->
-	<table name="#pAtk"> 1.05 1.08 </table>
-	<table name="#pAtkSpd"> 1.05 1.08 </table>
-	<table name="#mAtk"> 1.1 1.16 </table>
-	<table name="#mAtkSpd"> 1.05 1.08 </table>
-	<table name="#runSpd"> 5 8 </table>
-	<table name="#pDef"> 0.95 0.92 </table>
-	<table name="#mDef"> 0.90 0.84 </table>
+  <!-- by DrLecter -->
+  <table name="#pAtk"> 1.05 1.08 </table>
+  <table name="#pAtkSpd"> 1.05 1.08 </table>
+  <table name="#mAtk"> 1.1 1.16 </table>
+  <table name="#mAtkSpd"> 1.05 1.08 </table>
+  <table name="#runSpd"> 5 8 </table>
+  <table name="#pDef"> 0.95 0.92 </table>
+  <table name="#mDef"> 0.90 0.84 </table>
   <set name="hitTime" val="100"/>
   <set name="reuseDelay" val="100"/>
   <set name="skillTime" val="100"/>
-	<set name="target" val="TARGET_ONE"/>
-	<set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="3600000"/>
-	<set name="castRange" val="400"/>
-	<set name="effectRange" val="900"/>
-	<for>
-		<effect count="1" name="Buff" time="3600" val="0" stackOrder="1" stackType="berserk">
-			<mul order="0x30" stat="pAtk" val="#pAtk"/>
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
-			<mul order="0x30" stat="mAtk" val="#mAtk"/>
-			<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
-			<sub order="0x40" stat="runSpd" val="#runSpd"/>
-			<mul order="0x30" stat="mDef" val="#mDef"/>
-			<mul order="0x30" stat="pDef" val="#pDef"/>
-		</effect>
-	</for>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
+  <for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1" stackType="berserk">
+      <mul order="0x30" stat="pAtk" val="#pAtk"/>
+      <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+      <mul order="0x30" stat="mAtk" val="#mAtk"/>
+      <mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
+      <sub order="0x40" stat="runSpd" val="#runSpd"/>
+      <mul order="0x30" stat="mDef" val="#mDef"/>
+      <mul order="0x30" stat="pDef" val="#pDef"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4398" levels="6" name="Bless Shield">
 <!--
@@ -1574,7 +1576,7 @@
   </for>
 </skill>
 <skill id="4399" levels="4" name="Vampiric Rage">
-	<!-- by DrLecter -->
+  <!-- by DrLecter -->
   <table name="#Tab-absorbDam"> 6 7 8 9 </table>
   <set name="hitTime" val="100"/>
   <set name="reuseDelay" val="100"/>
