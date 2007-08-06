@@ -1482,7 +1482,7 @@
 	<effect count="10" name="DamOverTime" time="3" val="#damage"/>
   </for>
 </skill>
-<skill id="4089" levels="1" name="NPC Bear Stun">
+<skill id="4089" levels="1" name="NPC Bear Spirit Totem">
   <!-- Done by dc -->
   <set name="mpConsume" val="18"/>
   <set name="power" val="0.0"/>
@@ -1502,7 +1502,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4090" levels="1" name="NPC Wolf Stun">
+<skill id="4090" levels="1" name="NPC Wolf Spirit Totem">
   <!-- Done by dc -->
   <set name="mpConsume" val="18"/>
   <set name="power" val="0.0"/>
@@ -1521,14 +1521,14 @@
     </effect>
   </for>
 </skill>
-<skill id="4091" levels="1" name="NPC Ogre Stun">
+<skill id="4091" levels="1" name="NPC Ogre Spirit Totem">
   <set name="mpConsume" val="18"/>
   <set name="power" val="14.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1500"/>
   <set name="reuseDelay" val="8000"/>
   <set name="skillTime" val="1500"/>
-  <set name="skillType" val="HEAL_PERCENT"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
@@ -1536,16 +1536,13 @@
   <for>
     <effect name="Buff" time="600" count="1" val="0">
       <mul order="0x30" stat="runSpd" val="0.85"/>
-      <mul order="0x30" stat="pAtk" val="1.05"/>
+      <mul order="0x30" stat="mDef" val="1.1"/>
       <mul order="0x30" stat="pDef" val="1.1"/>
-      <mul order="0x30" stat="regHp" val="1.14"/>
-      <add order="0x40" stat="accCombat" val="3"/>
-      <mul order="0x30" stat="maxHp" val="1.14"/>
       <sub order="0x40" stat="rEvas" val="10"/>
     </effect>
   </for>
 </skill>
-<skill id="4092" levels="1" name="NPC Puma Stun">
+<skill id="4092" levels="1" name="NPC Puma Spirit Totem">
   <!-- Done by dc -->
   <set name="mpConsume" val="18"/>
   <set name="power" val="0.0"/>
