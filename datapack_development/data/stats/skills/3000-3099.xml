@@ -714,20 +714,14 @@
   </for>
 </skill>
 <skill id="3047" levels="3" name="Special Ability: Acumen">
-<!--
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Increases Casting Spd.
-  2: Increases Casting Spd. Increases damage inflicted during PvP.
-  created 2005-05-29 23:34:31
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
   </for>
 </skill>
 <skill id="3048" levels="3" name="Special Ability: Conversion">
