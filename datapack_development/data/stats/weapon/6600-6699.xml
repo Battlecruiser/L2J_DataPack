@@ -139,9 +139,6 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6609' name="arcana_mace_mp_regeneration">
@@ -169,11 +166,6 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- SA: Mana Up -->
-    <mul val='1.3' order='0x30' stat='maxMp'/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6611' name="infinity_blade">
