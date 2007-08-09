@@ -26,26 +26,26 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onEvent (self,event,st):
-     htmltext = event
-     if event in BUFF.keys() :
+ def onAdvEvent (self,event,npc,player) :
+    htmltext = event
+    st = player.getQuestState(qn)
+    if not st: return
+    if str(event) in BUFF.keys() :
         skillId,level,seeds=BUFF[event]
         if st.getQuestItemsCount(Seed) >= seeds :
-          a = st.getPlayer().getCurrentMp()
-          st.takeItems(Seed,seeds)
-          st.getPlayer().setTarget(st.getPlayer())
-          st.getPlayer().doCast(SkillTable.getInstance().getInfo(skillId,level))
-          st.getPlayer().setCurrentMp(a)
-          htmltext = "a4.htm"
-     return
+            st.takeItems(Seed,seeds)
+            npc.setTarget(player)
+            npc.doCast(SkillTable.getInstance().getInfo(skillId,level))
+            npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp())
+            htmltext = "a4.htm"
+    return htmltext
 
  def onFirstTalk (self,npc,player):
-     htmltext = "<html><head><body>I have nothing to say you</body></html>"
+     htmltext = "<html><head><body>I have nothing to say to you</body></html>"
      st = player.getQuestState(qn)
      if not st :
          st = self.newQuestState(player)
      npcId = npc.getNpcId()
-     id = st.getState()
      Alevel = st.getPlayer().getAllianceWithVarkaKetra()
      Seeds = st.getQuestItemsCount(Seed)
      if npcId == Shikon :
@@ -58,6 +58,7 @@ class Quest (JQuest) :
          else :
              htmltext = "no.htm"
      elif npcId == Udan :
+        st.setState(STARTED)
         if Alevel > -1 :
             htmltext = "a3.htm"
         elif Alevel > -3 and Alevel < 0:
@@ -71,9 +72,11 @@ class Quest (JQuest) :
 
 QUEST       = Quest(6051, qn, "custom")
 CREATED     = State('Start', QUEST)
+STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addFirstTalkId(Shikon)
 QUEST.addFirstTalkId(Udan)
+QUEST.addTalkId(Udan)
 
 print "importing quests: 6051: Varka Silenos Support"

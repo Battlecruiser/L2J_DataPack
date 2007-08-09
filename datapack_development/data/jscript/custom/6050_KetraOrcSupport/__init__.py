@@ -25,25 +25,26 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onEvent (self,event,st):
-    if event in BUFF.keys() :
+ def onAdvEvent (self,event,npc,player) :
+    htmltext = event
+    st = player.getQuestState(qn)
+    if not st: return
+    if str(event) in BUFF.keys() :
         skillId,level,horns=BUFF[event]
         if st.getQuestItemsCount(Horn) >= horns :
-            a = st.getPlayer().getCurrentMp()
             st.takeItems(Horn,horns)
-            st.getPlayer().setTarget(st.getPlayer())
-            st.getPlayer().doCast(SkillTable.getInstance().getInfo(skillId,level))
-            st.getPlayer().setCurrentMp(a)
+            npc.setTarget(player)
+            npc.doCast(SkillTable.getInstance().getInfo(skillId,level))
+            npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp())
             htmltext = "a4.htm"
-    return
+    return htmltext
 
  def onFirstTalk (self,npc,player):
-    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+    htmltext = "<html><head><body>I have nothing to say to you</body></html>"
     st = player.getQuestState(qn)
     if not st :
         st = self.newQuestState(player)
     npcId = npc.getNpcId()
-    id = st.getState()
     Alevel = st.getPlayer().getAllianceWithVarkaKetra()
     Horns = st.getQuestItemsCount(Horn)
     if npcId == Jumara :
@@ -56,6 +57,7 @@ class Quest (JQuest) :
         else :
             htmltext = "no.htm"
     elif npcId == Asefa :
+        st.setState(STARTED)
         if Alevel < 1 :
             htmltext = "a3.htm"
         elif Alevel < 3 and Alevel > 0:
@@ -69,9 +71,11 @@ class Quest (JQuest) :
 
 QUEST       = Quest(6050, qn, "custom")
 CREATED     = State('Start', QUEST)
+STARTED     = State('Started', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addFirstTalkId(Jumara)
 QUEST.addFirstTalkId(Asefa)
+QUEST.addTalkId(Asefa)
 
 print "importing quests: 6050: Ketra Orc Support"
