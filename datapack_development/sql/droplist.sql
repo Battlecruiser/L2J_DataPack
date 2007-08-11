@@ -21804,7 +21804,6 @@ INSERT INTO `droplist` VALUES
 (22111,7884,1,1,1,8), -- Infernal Master
 (22111,1808,1,1,-1,5000), -- Recipe: Soulshot: S Grade
 (22111,5480,1,1,-1,25000), -- Sealed Leather Armor of Nightmare Fabric
-(22111,2514,1,1,-1,5000), -- Spiritshot: S-grade
 (22112,57,4684,9526,0,700000), -- Adena
 (22112,1867,1,3,2,250000), -- Animal Skin
 (22112,1872,4,12,2,83333), -- Animal Bone
