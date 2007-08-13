@@ -264,12 +264,12 @@
   </for>
 </skill>
 <skill id="411" levels="3" name="Stealth">
-<table name="#mpConsume"> 27 31 34 </table>
-  <table name="#pAtk"> 1.2 1.3 1.4 </table>
-  <table name="#accCombat"> 1.1 1.15 1.2 </table>
-  <table name="#rCrit"> 1.1 1.2 1.3 </table>
-  <table name="#pDef"> 1.1 1.2 1.3 </table>
-  <table name="#mDef"> 1.15 1.25 1.35 </table>
+  <table name="#mpConsume"> 27 31 34 </table>
+  <table name="#pAtk"> 0.55 0.55 0.55 </table>
+  <table name="#accCombat"> 12 12 12 </table>
+  <table name="#rEvas"> 12 8 4 </table>
+  <table name="#pDef"> 0.55 0.7 0.85 </table>
+  <table name="#mDef"> 0.55 0.7 0.85 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="2000"/>
   <set name="skillTime" val="2000"/>
@@ -282,16 +282,16 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="SilentMove" abnormal="stealth" time="120" val="0">
-      <div order="0x30" stat="pAtk" val="#pAtk"/>
-      <div order="0x30" stat="accCombat" val="#accCombat"/>
-      <div order="0x30" stat="rCrit" val="#rCrit"/>
-      <div order="0x30" stat="pDef" val="#pDef"/>
-      <div order="0x30" stat="mDef" val="#mDef"/>
+      <mul order="0x50" stat="pAtk" val="#pAtk"/>
+      <sub order="0x40" stat="accCombat" val="#accCombat"/>
+      <sub order="0x40" stat="rEvas" val="#rEvas"/>
+      <mul order="0x50" stat="pDef" val="#pDef"/>
+      <mul order="0x50" stat="mDef" val="#mDef"/>
     </effect>
   </for>
 </skill>
 <skill id="412" levels="10" name="Sand Bomb">
-<table name="#mpConsume"> 25 27 28 29 30 31 32 33 34 34</table>
+  <table name="#mpConsume"> 25 27 28 29 30 31 32 33 34 34</table>
   <table name="#Tab-accCombat"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
@@ -344,7 +344,7 @@
   </for>
 </skill>
 <skill id="414" levels="8" name="Dead Eye">
-<table name="#mpConsume"> 28 29 30 31 32 33 34 35 </table>
+  <table name="#mpConsume"> 28 29 30 31 32 33 34 35 </table>
   <table name="#pAtk"> 124 134 145 155 166 177 188 199 </table>
   <table name="#Tab-accCombat"> 1 1 2 2 2 3 3 3 </table>
   <table name="#Tab-cAtk"> 1.15 1.15 1.15 1.17 1.17 1.17 1.20 1.20 </table>
@@ -399,7 +399,7 @@
   </for>
 </skill>
 <skill id="416" levels="3" name="Blessing of Sagittarius">
-<table name="#mpConsume"> 27 31 34 </table>
+  <table name="#mpConsume"> 27 31 34 </table>
   <table name="#mReuseRate"> 0.9 0.8 0.7 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -419,7 +419,7 @@
   </for>
 </skill>
 <skill id="417" levels="5" name="Pain of Sagittarius">
-<table name="#hpConsume"> 318 343 366 387 407</table>
+  <table name="#hpConsume"> 318 343 366 387 407</table>
   <table name="#power"> 35.0 38.0 41.0 43.0 45.0 </table>
   <set name="hpConsume" val="#hpConsume"/>
   <set name="power" val="#power"/>
@@ -463,7 +463,7 @@
   <set name="effectRange" val="-1"/>
 </skill>
 <skill id="420" levels="3" name="Zealot">
-<table name="#hpConsume"> 159 183 204 </table>
+  <table name="#hpConsume"> 159 183 204 </table>
   <table name="#mpConsume"> 106 122 136 </table>
   <table name="#runSpd"> 10 20 30 </table>
   <table name="#pAtkSpd"> 1.1 1.2 1.3 </table>
@@ -504,7 +504,7 @@
   </for>
 </skill>
 <skill id="421" levels="5" name="Fell Swoop">
-<table name="#mpConsume"> 27 29 31 33 34 </table>
+  <table name="#mpConsume"> 27 29 31 33 34 </table>
   <!-- probably these values're incorrect -->
   <table name="#atkCountMax"> 1 2 3 4 5 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -526,7 +526,7 @@
   </for>
 </skill>
 <skill id="422" levels="3" name="Polearm Accuracy">
-<table name="#mpConsume"> 11 13 14 </table>
+  <table name="#mpConsume"> 11 13 14 </table>
   <table name="#Tab-accCombat"> 2 3 4 </table>
   <set name="weaponsAllowed" val="64"/>
   <set name="power" val="0.0"/>
@@ -543,7 +543,7 @@
   </for>
 </skill>
 <skill id="423" levels="3" name="Infernal Form">
-<table name="#mpConsume"> 27 31 34 </table>
+  <table name="#mpConsume"> 27 31 34 </table>
   <table name="#res"> 15 23 30 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -564,7 +564,7 @@
   </for>
 </skill>
 <skill id="424" levels="3" name="War Frenzy">
-<table name="#mpConsume"> 13 14 15 </table>
+  <table name="#mpConsume"> 13 14 15 </table>
   <table name="#res"> 40 60 80 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
