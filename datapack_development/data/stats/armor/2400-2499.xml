@@ -94,20 +94,6 @@
   <for>
     <add val='127' order='0x10' stat='pDef'/>
     <add val='561' order='0x60' stat='maxMp'/>
-    <mul val='1.05' order='0x30' stat='pDef'>
-      <and>
-        <using slotitem="2415;6"/>
-        <using slotitem="5732;12"/>
-        <using slotitem="5716;9"/>
-      </and>
-    </mul>
-    <mul val='1.15' order='0x30' stat='mAtkSpd'>
-      <and>
-        <using slotitem="2415;6"/>
-        <using slotitem="5732;12"/>
-        <using slotitem="5716;9"/>
-      </and>
-    </mul>
     <enchant val='0' order='0x0C' stat='pDef'/>
   </for>
 </item>

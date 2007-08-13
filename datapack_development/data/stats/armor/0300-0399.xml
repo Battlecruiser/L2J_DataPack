@@ -65,69 +65,10 @@
     <add val='157' order='0x10' stat='pDef'/>
     <enchant val='0' order='0x0C' stat='pDef'/>
   </for>
-  <for>
-    <mul val='1.05' order='0x30' stat='pDef'>
-      <and>
-        <using slotitem="383;11"/>
-        <using slotitem="503;6"/>
-        <using slotitem="5726;12"/>
-        <using slotitem="5710;9"/>
-      </and>
-    </mul>
-    <add val='294' order='0x40' stat='maxHp'>
-      <and>
-        <using slotitem="383;11"/>
-        <using slotitem="503;6"/>
-        <using slotitem="5726;12"/>
-        <using slotitem="5710;9"/>
-      </and>
-    </add>
-    <enchant val='0' order='0x0C' stat='pDef'/>
-  </for>
 </item>
 <item id='358' name="Blue Wolf Breastplate">
   <for>
     <add val='166' order='0x10' stat='pDef'/>
-    <add val='7' order='0x40' stat='runSpd'>
-      <and>
-        <using slotitem="2380;11"/>
-        <using slotitem="2416;6"/>
-        <using slotitem="5734;12"/>
-        <using slotitem="5718;9"/>
-      </and>
-    </add>
-    <mul val='1.05' order='0x30' stat='regHp'>
-      <and>
-        <using slotitem="2380;11"/>
-        <using slotitem="2416;6"/>
-        <using slotitem="5734;12"/>
-        <using slotitem="5718;9"/>
-      </and>
-    </mul>
-    <add val='3' order='0x40' stat='STR'>
-      <and>
-        <using slotitem="2380;11"/>
-        <using slotitem="2416;6"/>
-        <using slotitem="5734;12"/>
-        <using slotitem="5718;9"/>
-      </and>
-    </add>
-    <add val='-1' order='0x40' stat='CON'>
-      <and>
-        <using slotitem="2380;11"/>
-        <using slotitem="2416;6"/>
-        <using slotitem="5734;12"/>
-        <using slotitem="5718;9"/>
-      </and>
-    </add>
-    <add val='-2' order='0x40' stat='DEX'>
-      <and>
-        <using slotitem="2380;11"/>
-        <using slotitem="2416;6"/>
-        <using slotitem="5734;12"/>
-        <using slotitem="5718;9"/>
-      </and>
-    </add>
     <enchant val='0' order='0x0C' stat='pDef'/>
   </for>
 </item>
