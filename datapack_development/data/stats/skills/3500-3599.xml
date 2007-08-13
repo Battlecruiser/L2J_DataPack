@@ -953,58 +953,84 @@
 </skill>
 <skill id="3553" levels="1" name="Imperial Crusader Heavy Armor Set">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases MaxHP, P. Def and resistance to sleep/hold attacks. STR+2, DEX-2
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pDef" val="1.08"/> <!-- P Def. +8% -->
+    <add order="0x40" stat="maxHp" val="445"/> <!-- Maximum HP +445 -->
+    <add order="0x40" stat="sleepRes" val="70"/> <!-- Sleep Probability -70% -->
+    <add order="0x40" stat="rootRes" val="70"/> <!-- Hold Probability -70% -->
+    <sub order="0x40" stat="DEX" val="2"/> <!-- DEX -2 -->
+    <add order="0x40" stat="STR" val="2"/> <!-- STR +2 -->
   </for>
 </skill>
 <skill id="3554" levels="1" name="Equipped with Shield">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Additional resistance to Poison/Bleed.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add val='80' order='0x40' stat='poisonRes'/>
+    <add val='80' order='0x40' stat='bleedRes'/>
   </for>
 </skill>
 <skill id="3555" levels="1" name="Draconic Light Armor Set">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases MaxHP, Atk. Spd, P. Atk, and maximum weight limit. DEX+1, STR+1, CON-2
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pAtkSpd" val="1.04"/> <!-- Attack Speed +4% -->
+    <mul order="0x30" stat="pAtk" val="1.04"/> <!-- P. Atk +4% -->
+    <add order="0x40" stat="maxMp" val="289"/> <!-- Maximum MP +289 -->
+    <add order="0x40" stat="maxLoad" val="5759"/> <!-- Weight Limit +5759 -->
+    <add order="0x40" stat="DEX" val="1"/> <!-- DEX +1 -->
+    <add order="0x40" stat="STR" val="1"/> <!-- STR +1 -->
+    <sub order="0x40" stat="CON" val="2"/> <!-- CON -2 -->
   </for>
 </skill>
 <skill id="3556" levels="1" name="Major Arcana Robe Set">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Decreases chance of magic casting being canceled. Increases resistance to shock attacks, M. Atk., Speed and maximum weight limit. WIT+1, INT+1, MEN-2
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="mAtk" val="1.17"/> <!-- M. Atk +17% -->
+    <add order="0x40" stat="runSpd" val="7"/> <!-- Movement Speed +7 -->
+    <sub order="0x40" stat="cancel" val="50"/> <!-- Casting Cancel Probability -50% -->
+    <add order="0x40" stat="maxLoad" val="5759"/> <!-- Weight Limit +5759 -->
+    <add order="0x40" stat="WIT" val="1"/> <!-- WIT +1 -->
+    <add order="0x40" stat="INT" val="1"/> <!-- INT +1 -->
+    <sub order="0x40" stat="MEN" val="2"/> <!-- MEN -2 -->
+    <add order="0x40" stat="stunRes" val="50"/> <!-- Stun resistance +50% -->
   </for>
 </skill>
 <skill id="3557" levels="1" name="Necklace of Valakas">
