@@ -528,174 +528,258 @@
     <add order="0x40" stat="INT" val="2"/> <!-- INT +2 -->
     <add order="0x40" stat="MEN" val="1"/> <!-- MEN +1 -->
     <sub order="0x40" stat="WIT" val="3"/> <!-- WIT -3 -->
-  </for> 
+  </for>
 </skill>
 <skill id="3530" levels="1" name="Dark Crystal Breastplate Heavy Armor Set">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases resistance to paralysis attacks and improves effectiveness of HP recovery magic. STR-2, CON+2
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="gainHp" val="1.04"/> <!-- Heal +4% -->
+    <add order="0x40" stat="paralyzeRes" val="50"/> <!-- Paralysis Resistance +50% -->
+    <sub order="0x40" stat="STR" val="2"/> <!-- STR -2 -->
+    <add order="0x40" stat="CON" val="2"/> <!-- CON +2 -->
   </for>
 </skill>
 <skill id="3531" levels="1" name="Tallum Heavy Armor Set">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases resistance to poison/bleeding attacks. Atk. Spd. and maximum weight limit are also increased. STR+2, CON-2
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pAtkSpd" val="1.08"/> <!-- Atk. Spd. +8% -->
+    <add order="0x40" stat="maxLoad" val="5759"/> <!-- Weight increased plus the point at which a weight penalty is applied +5759 -->
+    <add order="0x40" stat="poisonRes" val="80"/> <!-- Poison Resistance +80% -->
+    <add order="0x40" stat="bleedRes" val="80"/> <!-- Bleed Resistance +80% -->
+    <add order="0x40" stat="STR" val="2"/> <!-- STR +2 -->
+    <sub order="0x40" stat="CON" val="2"/> <!-- CON -2 -->
   </for>
 </skill>
 <skill id="3532" levels="1" name="Dark Crystal Light Armor Set">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases resistance to paralysis attacks. Atk. Spd. and P. Atk. are also increased. STR+1, CON-1
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pAtkSpd" val="1.04"/> <!-- Atk. Spd. +4% -->
+    <mul order="0x30" stat="pAtk" val="1.04"/> <!-- P. Atk. +4% -->
+    <add order="0x40" stat="paralyzeRes" val="50"/> <!-- Paralysis Resistance +50% -->
+    <add order="0x40" stat="STR" val="1"/> <!-- STR +1 -->
+    <sub order="0x40" stat="CON" val="1"/> <!-- CON -1 -->
   </for>
 </skill>
 <skill id="3533" levels="1" name="Tallum Light Armor Set">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases resistance to poison/bleeding attacks. MP recovery rate and MaxMP are also increased. MEN+2, WIT-2
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="regMp" val="1.08"/> <!-- MP Regeneration +8% -->
+    <add order="0x40" stat="maxMp" val="222"/> <!-- MP +222 -->
+    <add order="0x40" stat="poisonRes" val="80"/> <!-- Poison Resistance +80% -->
+    <add order="0x40" stat="bleedRes" val="80"/> <!-- Bleed Resistance +80% -->
+    <add order="0x40" stat="MEN" val="2"/> <!-- MEN +2 -->
+    <sub order="0x40" stat="WIT" val="2"/> <!-- WIT -2 -->
   </for>
 </skill>
 <skill id="3534" levels="1" name="Tallum Robe Set">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases resistance to poison/bleeding attacks. Casting Spd. and M. Def. are also increased. INT-2, WIT+2
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
+    <mul order="0x30" stat="mDef" val="1.08"/> <!-- M. Def. +8% -->
+    <add order="0x40" stat="poisonRes" val="80"/> <!-- Poison Resistance +80% -->
+    <add order="0x40" stat="bleedRes" val="80"/> <!-- Bleed Resistance +80% -->
+    <sub order="0x40" stat="INT" val="2"/> <!-- INT -2 -->
+    <add order="0x40" stat="WIT" val="2"/> <!-- WIT +2 -->
   </for>
 </skill>
 <skill id="3535" levels="1" name="Dark Crystal Robe Set">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Decreases magic cancel rate and increases resistance to paralysis attacks. P. Def., Casting Spd. and Speed are also increased. WIT+2, MEN-2
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pDef" val="1.08"/> <!-- P. Def. +8% -->
+    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
+    <add order="0x40" stat="runSpd" val="7"/> <!-- Speed +7 -->
+    <add order="0x40" stat="cancel" val="50"/> <!-- Small decrease in chance of spell interruption - TO CHECK -->
+    <add order="0x40" stat="paralyzeRes" val="50"/> <!-- Paralysis Resistance +50% -->
+    <add order="0x40" stat="WIT" val="2"/> <!-- WIT +2 -->
+    <sub order="0x40" stat="MEN" val="2"/> <!-- MEN -2 -->
   </for>
 </skill>
 <skill id="3536" levels="1" name="Nightmare Heavy Armor Set">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases P. Atk. and resistance to Sleep/Hold attack.. CON+2, DEX-2
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pAtk" val="1.04"/> <!-- P. Atk. +4% -->
+    <add order="0x40" stat="sleepRes" val="70"/> <!-- Sleep Resistance +70% -->
+    <add order="0x40" stat="rootRes" val="70"/> <!-- Hold Resistance +70% -->
+    <add order="0x40" stat="CON" val="2"/> <!-- CON +2 -->
+    <sub order="0x40" stat="DEX" val="2"/> <!-- DEX -2 -->
   </for>
 </skill>
 <skill id="3537" levels="1" name="Majestic Heavy Armor Set">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases resistance to shock attacks. P. Atk. and Accuracy are also increased. STR+2. CON-2
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pAtk" val="1.04"/> <!-- P. Atk. +4% -->
+    <add order="0x40" stat="accCombat" val="3"/> <!-- Accuracy +3 -->
+    <add order="0x40" stat="stunRes" val="50"/> <!-- Stun Resistance +50% -->
+    <add order="0x40" stat="STR" val="2"/> <!-- STR +2 -->
+    <sub order="0x40" stat="CON" val="2"/> <!-- CON -2 -->
   </for>
 </skill>
 <skill id="3538" levels="1" name="Nightmarish Leather Light Armor Set">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases resistance to Sleep/Hold attack and M. Def. Restores HP by using part of the damage inflicted upon the enemy, excluding damage caused by skill or remote attack. DEX+1, CON-1
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="mDef" val="1.04"/> <!-- M. Def. +4% -->
+    <add order="0x40" stat="sleepRes" val="70"/> <!-- Sleep Resistance +70% -->
+    <add order="0x40" stat="rootRes" val="70"/> <!-- Hold Resistance +70% -->
+    <add order="0x40" stat="absorbDam" val="3"/> <!-- Restores 3% of melee damage inflicted on the enemy to oneself -->
+    <add order="0x40" stat="DEX" val="1"/> <!-- DEX +1 -->
+    <sub order="0x40" stat="CON" val="1"/> <!-- CON -1 -->
   </for>
 </skill>
 <skill id="3539" levels="1" name="Majestic Light Armor Set">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases resistance to shock attacks. P. Atk., MaxMP and maximum weight limit are also increased. DEX+1, CON-1
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pAtk" val="1.08"> <!-- Archery P. Atk. +8% -->
+      <and>
+        <using kind='Bow'/>
+      </and>
+    </mul>	
+    <add order="0x40" stat="maxMp" val="240"/> <!-- MP +240 -->
+    <add order="0x40" stat="maxLoad" val="5759"/> <!-- Weight increased plus the point at which a weight penalty is applied +5759 -->
+    <add order="0x40" stat="stunRes" val="50"/> <!-- Stun Resistance +50% -->
+    <add order="0x40" stat="DEX" val="1"/> <!-- DEX +1 -->
+    <sub order="0x40" stat="CON" val="1"/> <!-- CON -1 -->
   </for>
 </skill>
 <skill id="3540" levels="1" name="Nightmare Robe Set">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases MP regeneration, M. Atk. and resistance to sleep/hold attacks. INT+2, WIT-2
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="regMp" val="1.04"/> <!-- MP Regeneration +4% -->
+    <mul order="0x30" stat="mAtk" val="1.08"/> <!-- M. Atk. +8% -->
+    <add order="0x40" stat="sleepRes" val="70"/> <!-- Sleep Resistance +70% -->
+    <add order="0x40" stat="rootRes" val="70"/> <!-- Hold Resistance +70% -->
+    <add order="0x40" stat="INT" val="2"/> <!-- INT +2 -->
+    <sub order="0x40" stat="WIT" val="2"/> <!-- WIT -2 -->
   </for>
 </skill>
 <skill id="3541" levels="1" name="Majestic Robe Set">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases resistance to shock attacks. MaxMP, Casting Spd. and MP recovery rate are also increased. MEN+1, INT-1
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="maxMp" val="240"/> <!-- MP +240 -->
+    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
+    <mul order="0x30" stat="regMp" val="1.08"/> <!-- MP Regeneration +8% -->
+    <add order="0x40" stat="stunRes" val="50"/> <!-- Stun Resistance +50% -->
+    <add order="0x40" stat="MEN" val="1"/> <!-- MEN +1 -->
+    <sub order="0x40" stat="INT" val="1"/> <!-- INT -1 -->
   </for>
 </skill>
 <skill id="3542" levels="6" name="Special Ability: Critical Damage">
@@ -824,30 +908,32 @@
 </skill>
 <skill id="3550" levels="1" name="Equipped with Shield">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases shield defense rate.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul stat='rShld' order='0x30' val='1.18'/>
   </for>
 </skill>
 <skill id="3551" levels="1" name="Equipped with Shield">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Returns damage inflicted by enemy back upon him. Not applied to damage inflicted by a skill or remote attack.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add val='5' order='0x40' stat='reflectDam'/>
   </for>
 </skill>
 <skill id="3552" levels="2" name="Special Ability: PvP Damage">

@@ -111,47 +111,6 @@
 <item id='365' name="Dark Crystal Breastplate">
  <for>
     <add val='171' order='0x10' stat='pDef'/>
-    <mul val='1.04' order='0x30' stat='gainHp'>
-      <and>
-        <using slotitem="388;11"/>
-        <using slotitem="512;6"/>
-        <using slotitem="5777;12"/>
-        <using slotitem="5765;9"/>
-      </and>
-    </mul>
-    <add val='-2' order='0x40' stat='STR'>
-      <and>
-        <using slotitem="388;11"/>
-        <using slotitem="512;6"/>
-        <using slotitem="5777;12"/>
-        <using slotitem="5765;9"/>
-      </and>
-    </add>
-    <add val='2' order='0x40' stat='CON'>
-      <and>
-        <using slotitem="388;11"/>
-        <using slotitem="512;6"/>
-        <using slotitem="5777;12"/>
-        <using slotitem="5765;9"/>
-      </and>
-    </add>
-    <mul val='2' order='0x30' stat='paralyzeRes'>
-      <and>
-        <using slotitem="388;11"/>
-        <using slotitem="512;6"/>
-        <using slotitem="5777;12"/>
-        <using slotitem="5765;9"/>
-      </and>
-    </mul>
-    <mul val='1.18' order='0x30' stat='rShld'>
-      <and>
-        <using slotitem="388;11"/>
-        <using slotitem="512;6"/>
-        <using slotitem="5777;12"/>
-        <using slotitem="5765;9"/>
-        <using slotitem="641;8"/>
-      </and>
-    </mul>
     <enchant val='0' order='0x0C' stat='pDef'/>
  </for>
 </item>
@@ -206,49 +165,6 @@
 <item id='374' name="Armor of Nightmare">
   <for>
     <add val='293' order='0x10' stat='pDef'/>
-    <mul val='1.04' order='0x30' stat='pAtk'>
-      <and>
-        <using slotitem="2418;6"/>
-        <using slotitem="5783;12"/>
-        <using slotitem="5771;9"/>
-      </and>
-    </mul>
-    <add val='2' order='0x40' stat='CON'>
-      <and>
-        <using slotitem="2418;6"/>
-        <using slotitem="5783;12"/>
-        <using slotitem="5771;9"/>
-     </and>
-    </add>
-    <add val='-2' order='0x40' stat='DEX'>
-      <and>
-        <using slotitem="2418;6"/>
-        <using slotitem="5783;12"/>
-        <using slotitem="5771;9"/>
-      </and>
-    </add>
-    <add val='70' order='0x40' stat='rootRes'>
-      <and>
-        <using slotitem="2418;6"/>
-        <using slotitem="5783;12"/>
-        <using slotitem="5771;9"/>
-      </and>
-    </add>
-    <add val='70' order='0x40' stat='sleepRes'>
-      <and>
-        <using slotitem="2418;6"/>
-        <using slotitem="5783;12"/>
-        <using slotitem="5771;9"/>
-      </and>
-    </add>
-    <add val='5' order='0x40' stat='reflectDam'>
-      <and>
-        <using slotitem="2418;6"/>
-        <using slotitem="5783;12"/>
-        <using slotitem="5771;9"/>
-        <using slotitem="2498;8"/>
-      </and>
-    </add>
     <enchant val='0' order='0x0C' stat='pDef'/>
   </for>
 </item>
