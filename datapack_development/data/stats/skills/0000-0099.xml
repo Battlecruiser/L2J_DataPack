@@ -1864,7 +1864,7 @@
   </table>
   <table name="#magicLvl"> 55 60 72 </table>
   <table name="#mpConsume"> 38 42 50 </table>
-  <table name="#poison-dmg"> 38 44 48 </table>
+  <table name="#poison-dmg"> 114 132 144 </table>
   <table name="#poison-lvl"> 6.0 7.0 8.0 </table>
   <set name="weaponsAllowed" val="512"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1888,6 +1888,8 @@
   <enchant1 name="effectPower" val="#ench1effectPower"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
+    <!-- retail value: 38 44 48/sec; stat update every 5 units (3 1/3 sec) -->
+    <!-- Verified by slyce -  Interlude - Aug 2007 -->
     <effect count="10" name="DamOverTime" time="3" val="#poison-dmg" abnormal="poison"/>
   </for>
 </skill>
@@ -2143,7 +2145,7 @@
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <table name="#ench1MpConsume"> 98 96 95 93 91 90 88 86 85 83 81 80 78 76 75 73 71 70 68 67 65 63 62 60 58 57 55 53 52 50 </table>
   <table name="#magicLvl"> 24 32 49 58 66 70 </table>
-  <table name="#dmg"> 13 17 22 27 31 34 </table>
+  <table name="#dmg"> 39 51 66 81 93 102 </table>
   <table name="#mpConsume"> 32 41 67 81 93 99 </table>
   <table name="#power"> 3.0 4.0 5.0 6.0 7.0 8.0 </table>
   <set name="weaponsAllowed" val="16"/>
@@ -2163,7 +2165,9 @@
   <set name="effectRange" val="400"/>
   <enchant1 name="mpConsume" val="#ench1MpConsume"/>
   <for>
-    <effect count="4" name="DamOverTime" time="5" val="#dmg" abnormal="bleeding"/>
+    <!-- retail value: 13 17 22 27 31 34/sec; stat update every 5 units (3 1/3 sec) -->
+    <!-- Verified by slyce -  Interlude - Aug 2007 -->
+    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding"/>
   </for>
 </skill>
 <skill id="97" levels="11" name="Sanctuary" enchantLevels1="30" enchantLevels2="30" >
