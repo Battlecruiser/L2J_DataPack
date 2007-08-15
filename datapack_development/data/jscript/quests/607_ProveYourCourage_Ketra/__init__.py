@@ -80,7 +80,7 @@ class Quest (JQuest) :
     party = player.getParty()
     if party :
         partyMembers = party.getPartyMembers().toArray()
-    for player in party.getPartyMembers().toArray() :
+    for player in partyMembers :
         pst = player.getQuestState(qn)
         if pst :
             giveReward(pst,npc)
