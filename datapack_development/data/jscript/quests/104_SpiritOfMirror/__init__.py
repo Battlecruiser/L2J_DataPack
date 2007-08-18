@@ -44,7 +44,7 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player):
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if not st: return htmltext
    id = st.getState()
@@ -61,7 +61,7 @@ class Quest (JQuest) :
         htmltext = "30017-06.htm"
         st.exitQuest(1)
    elif npcId == 30017 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
+      htmltext = "<html><body>This quest have already been completed.</body></html>"
    elif id == STARTED : 
      if npcId == 30017 and st.getInt("cond") and st.getQuestItemsCount(GALLINS_OAK_WAND_ID)>=1 and not HaveAllQuestItems(st) :
         htmltext = "30017-04.htm"

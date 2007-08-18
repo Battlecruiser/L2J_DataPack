@@ -27,7 +27,7 @@ CHANCE={
     21517:560
 }
 
-default="<html><head><body>I have nothing to say you</body></html>"
+default="<html><body>I have nothing to say you</body></html>"
 
 class Quest (JQuest) :
 

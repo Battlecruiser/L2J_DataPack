@@ -75,7 +75,7 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player):
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say to you</body></html>"
+   htmltext = "<html><body>I have nothing to say to you</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -86,7 +86,7 @@ class Quest (JQuest) :
      st.exitQuest(1)
    elif player.getPledgeType() == -1 :
      if id==COMPLETED:
-       htmltext = "<html><head><body>This quest have already been completed.</body></html>" 
+       htmltext = "<html><body>This quest have already been completed.</body></html>" 
      elif player.getLevel() < 19 or not player.getSponsor() :
        htmltext = "31961-00.htm"
        st.exitQuest(1)

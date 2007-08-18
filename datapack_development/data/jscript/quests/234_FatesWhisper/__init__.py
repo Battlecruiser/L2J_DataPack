@@ -125,7 +125,7 @@ class Quest (JQuest) :
     return htmltext
 
   def onTalk (self,npc,player):
-    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+    htmltext = "<html><body>I have nothing to say you</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
@@ -142,7 +142,7 @@ class Quest (JQuest) :
       return htmltext
     # if quest is already completed
     elif id == COMPLETED:
-      return "<html><head><body>This quest has already been completed.</body></html>"
+      return "<html><body>This quest has already been completed.</body></html>"
     # if quest is accepted and in progress
     elif id == STARTED:
       cond =st.getInt("cond")
@@ -245,17 +245,17 @@ class Quest (JQuest) :
         if npcId == NPC[5] and st.getQuestItemsCount(KERMONS_INFERNIUM_SCEPTER)==0 :
           htmltext = "31028-01.htm"
         elif npcId == NPC[5] :
-          htmltext = "<html><head><body>This chest looks empty</body></html>"
+          htmltext = "<html><body>This chest looks empty</body></html>"
         # Golkonda's Chest
         elif npcId == NPC[6] and st.getQuestItemsCount(GOLCONDAS_INFERNIUM_SCEPTER)==0 :
           htmltext = "31029-01.htm"
         elif npcId == NPC[6] :
-          htmltext = "<html><head><body>This chest looks empty</body></html>"
+          htmltext = "<html><body>This chest looks empty</body></html>"
         # Hallate's Chest 
         elif npcId == NPC[7] and st.getQuestItemsCount(HALLATES_INFERNIUM_SCEPTER)==0 :
           htmltext = "31030-01.htm"
         elif npcId == NPC[7] :
-          htmltext = "<html><head><body>This chest looks empty</body></html>"
+          htmltext = "<html><body>This chest looks empty</body></html>"
     return htmltext    
 
   def onAttack (self, npc, player):                   

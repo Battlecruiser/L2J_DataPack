@@ -96,7 +96,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><head><body>I have no tasks for you right now.</body></html>"
+   htmltext = "<html><body>I have no tasks for you right now.</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
    npcId = npc.getNpcId()
@@ -136,12 +136,12 @@ class Quest (JQuest) :
              st.giveItems(SPIRITSHOT_NOVICE,100)
              htmltext = htmlfiles[2]
              if htmltext == 0 :
-                 htmltext = "<html><head><body>I am sorry.  I only help warriors.  Please go to another Newbie Helper who may assist you.</body></html>"
+                 htmltext = "<html><body>I am sorry.  I only help warriors.  Please go to another Newbie Helper who may assist you.</body></html>"
            else:
              st.giveItems(SOULSHOT_NOVICE,200)
              htmltext = htmlfiles[1]
              if htmltext == 0 :
-                 htmltext = "<html><head><body>I am sorry.  I only help mystics.  Please go to another Newbie Helper who may assist you.</body></html>"
+                 htmltext = "<html><body>I am sorry.  I only help mystics.  Please go to another Newbie Helper who may assist you.</body></html>"
          else:
            if isMage :
              htmltext = "30131-02.htm"
@@ -159,7 +159,7 @@ class Quest (JQuest) :
         elif cond==3 :
           htmltext = htmlfiles[2] 
    else:
-       htmltext = "<html><head><body>You are too experienced now.</body></html>"
+       htmltext = "<html><body>You are too experienced now.</body></html>"
    return htmltext
 
  def onKill (self,npc,player):

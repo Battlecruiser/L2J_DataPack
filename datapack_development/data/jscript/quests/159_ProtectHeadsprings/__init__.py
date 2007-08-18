@@ -30,7 +30,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><head><body>I have nothing to say you.</body></html>"
+   htmltext = "<html><body>I have nothing to say you.</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -39,7 +39,7 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    count = st.getQuestItemsCount(PLAGUE_DUST)
    if id == COMPLETED :
-      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
+      htmltext = "<html><body>This quest have already been completed.</body></html>"
    elif cond == 0 :
       if player.getRace().ordinal() != 1 :
          htmltext = "30154-00.htm"

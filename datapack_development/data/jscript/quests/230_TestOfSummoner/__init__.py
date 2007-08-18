@@ -186,7 +186,7 @@ class Quest (JQuest) :
       return htmltext
 
    def onTalk (self,npc,player):
-      htmltext = "<html><head><body>I have nothing to say you</body></html>"
+      htmltext = "<html><body>I have nothing to say you</body></html>"
       st = player.getQuestState(qn)
       if not st : return htmltext
 
@@ -194,7 +194,7 @@ class Quest (JQuest) :
       id = st.getState()
       if npcId != NPC[1] and id != PROGRESS : return htmltext
       
-      htmltext = "<html><head><body>I have nothing to say you</body></html>"
+      htmltext = "<html><body>I have nothing to say you</body></html>"
       id = st.getState()
       npcId = npc.getNpcId()
       Lara, Galatea, Almors, Camoniell, Belthus, Basilla, Celestiel, Brynthea = NPC
@@ -211,7 +211,7 @@ class Quest (JQuest) :
             htmltext = "30634-01.htm"
             st.exitQuest(1)
       elif id == COMPLETED:                     # quest already done, not repeatable
-         htmltext = "<html><head><body>This quest have already been completed.</body></html>"
+         htmltext = "<html><body>This quest have already been completed.</body></html>"
       elif id == PROGRESS:
          step = st.getInt("step")             # stats as short vars if the player has state <Progress>
          LaraPart = st.getInt("Lara_Part")

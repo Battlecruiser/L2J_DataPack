@@ -71,7 +71,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -102,7 +102,7 @@ class Quest (JQuest) :
      if st.getQuestItemsCount(WORK_OF_BERONA) :   
        htmltext = "30929-0.htm"
      else :
-       htmltext = "<html><head><body>You have nothing to appraise.</body></html>"
+       htmltext = "<html><body>You have nothing to appraise.</body></html>"
    return htmltext
 
  def onKill (self,npc,player):

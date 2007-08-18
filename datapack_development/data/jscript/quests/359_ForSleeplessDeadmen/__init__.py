@@ -23,7 +23,7 @@ REMAINS = 5869
 REWARDS=range(6341,6347)+range(5494,5496)
 
 #Messages
-default   = "<html><head><body>I have nothing to say to you.</body></html>"
+default   = "<html><body>I have nothing to say to you.</body></html>"
 
 #NPCs
 ORVEN = 30857

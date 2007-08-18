@@ -378,13 +378,13 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+    htmltext = "<html><body>I have nothing to say you</body></html>"
     st = player.getQuestState(self.qn)
     if st :
       npcId = npc.getNpcId()
       cond = st.getInt("cond")
       if st.getState() == self.COMPLETED and npcId == self.NPC[0] :
-          htmltext == "<html><head><body>You have already completed this quest!</body></html>"#Should be "finishedquest.htm"
+          htmltext == "<html><body>You have already completed this quest!</body></html>"#Should be "finishedquest.htm"
       elif player.getClassId().getId() == self.prevclass :
           if cond == 0 :
               if npcId == self.NPC[0]:

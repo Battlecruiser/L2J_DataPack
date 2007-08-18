@@ -23,7 +23,7 @@ ORVEN = 30857
 KAIEN = 30623
 GARVARENTZ = 30704
 
-default = "<html><head><body>I have nothing to say you</body></html>"
+default = "<html><body>I have nothing to say you</body></html>"
 
 def rewards(st,npcId):
     state=False
@@ -124,7 +124,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onTalk (self,npc,player):
-     htmltext = "<html><head><body>I have nothing to say you</body></html>"
+     htmltext = "<html><body>I have nothing to say you</body></html>"
      st = player.getQuestState(qn)
      if not st : return htmltext
 

@@ -303,7 +303,7 @@ class Quest (JQuest) :
 
 
   def onTalk (self,npc,player):
-    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+    htmltext = "<html><body>I have nothing to say you</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
@@ -335,9 +335,9 @@ class Quest (JQuest) :
         st.exitQuest(1)
       return htmltext
     elif player.getClan() and player.getClan().getLevel() >= 5:        # player has level 5 clan already
-      return "<html><head><body>This quest has already been completed.</body></html>"
+      return "<html><body>This quest has already been completed.</body></html>"
     elif id == COMPLETED:                                  # player has proof, and has finished quest as leader
-      return "<html><head><body>This quest has already been completed.</body></html>"
+      return "<html><body>This quest has already been completed.</body></html>"
     else:
       ######## Leader Area ######
       if isLeader:
@@ -447,9 +447,9 @@ class Quest (JQuest) :
               st.giveItems(Scepter_Judgement,1)
               st.getPcSpawn().removeAllSpawn()
             else:
-              htmltext = "<html><head><body>(You and your Clan didn't kill the Imperial Gravekeeper by your own, go and try again.)</body></html>"
+              htmltext = "<html><body>(You and your Clan didn't kill the Imperial Gravekeeper by your own, go and try again.)</body></html>"
           else:
-              htmltext = "<html><head><body>(You already have the Scepter of Judgement.)</body></html>"
+              htmltext = "<html><body>(You already have the Scepter of Judgement.)</body></html>"
         elif npcId == Kalis:
           htmltext = "30759-01.htm"
         elif npcId == Athrea:

@@ -20,13 +20,12 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
    htmltext = event
    cond = st.getInt("cond")
-   if event == "31263-2.htm" :
-     if cond == 0 :
-       st.set("cond","1")
-       st.setState(STARTED)
-       st.giveItems(LETTER,1)
-       st.playSound("ItemSound.quest_accept")
-   if event == "31538-1.htm" :
+   if event == "31263-2.htm" and cond == 0 :
+     st.set("cond","1")
+     st.setState(STARTED)
+     st.giveItems(LETTER,1)
+     st.playSound("ItemSound.quest_accept")
+   elif event == "31538-1.htm" :
      if cond == 1 and st.getQuestItemsCount(LETTER) == 1 :
        st.takeItems(LETTER,1)
        st.giveItems(57,113228)
@@ -38,18 +37,15 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
-
    npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
-   if id == CREATED :
-     st.set("cond","0")
    if npcId == LIESEL and cond == 0 :
      if id == COMPLETED :
-       htmltext = "<html><head><body>This quest have already been completed.</body></html>"
+       htmltext = "<html><body>This quest have already been completed.</body></html>"
      elif player.getLevel() < 74 : 
        htmltext = "31263-1.htm"
        st.exitQuest(1)
@@ -67,10 +63,10 @@ STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
-QUEST.addStartNpc(31263)
-QUEST.addTalkId(31263)
-QUEST.addTalkId(31538)
+QUEST.addStartNpc(LIESEL)
+QUEST.addTalkId(LIESEL)
+QUEST.addTalkId(GHOST_OF_ADVENTURER)
 
-STARTED.addQuestDrop(7253,LETTER,1)
+STARTED.addQuestDrop(GHOST_OF_ADVENTURER,LETTER,1)
 
 print "importing quests: 14: Whereabouts Of The Archaeologist"

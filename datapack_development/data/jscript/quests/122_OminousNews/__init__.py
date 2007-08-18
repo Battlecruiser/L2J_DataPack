@@ -10,7 +10,7 @@ qn = "122_OminousNews"
 MOIRA = 31979
 KARUDA = 32017
 
-default="<html><head><body>I have nothing to say to you</body></html>"
+default="<html><body>I have nothing to say to you</body></html>"
 
 class Quest (JQuest) :
 
@@ -46,7 +46,7 @@ class Quest (JQuest) :
    id = st.getState()
    cond = st.getInt("cond")
    if id == COMPLETED :
-      htmltext="<html><head><body>This quest have already been completed</body></html>"
+      htmltext="<html><body>This quest have already been completed</body></html>"
    elif npcId == MOIRA :
       if cond == 0 :
          if player.getLevel()>=20 :

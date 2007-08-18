@@ -33,7 +33,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -43,11 +43,11 @@ class Quest (JQuest) :
    if npcId == VLADIMIR :
      if cond == 0 :
        if id == COMPLETED :
-         htmltext = "<html><head><body>This quest has already been completed.</body></html>"
+         htmltext = "<html><body>This quest has already been completed.</body></html>"
        elif player.getLevel() >= 63 :
          htmltext = "31302-0.htm"
        else:
-         htmltext = "<html><head><body>Quest for characters level 63 or above.</body></html>"
+         htmltext = "<html><body>Quest for characters level 63 or above.</body></html>"
          st.exitQuest(1)
      else :
        htmltext = "31302-2.htm"

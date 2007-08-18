@@ -6,7 +6,7 @@ QUEST_NUMBER      = 336
 QUEST_NAME        = "CoinOfMagic"
 QUEST_DESCRIPTION = "Coins of Magic"
 #Messages
-default = "<html><head><body>I have nothing to say to you.</body></html>"
+default = "<html><body>I have nothing to say to you.</body></html>"
 
 #Quest items
 COIN_DIAGRAM,KALDIS_COIN,MEMBERSHIP_1,MEMBERSHIP_2,MEMBERSHIP_3 = range(3811,3816)

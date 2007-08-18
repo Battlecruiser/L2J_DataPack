@@ -13,7 +13,7 @@ QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 348,"ArrogantSearch","An Arrogant Se
 qn = "348_ArrogantSearch"
 
 #Messages
-default   = "<html><head><body>I have nothing to say to you.</body></html>"
+default   = "<html><body>I have nothing to say to you.</body></html>"
 #MOBS TO KILL
 ARK_GUARDIAN_ELBEROTH = 27182
 ARK_GUARDIAN_SHADOWFANG = 27183
@@ -116,7 +116,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+    htmltext = "<html><body>I have nothing to say you</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
