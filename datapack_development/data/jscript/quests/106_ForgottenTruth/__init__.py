@@ -29,7 +29,7 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player):
    npcId = npc.getNpcId()
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -46,7 +46,7 @@ class Quest (JQuest) :
        htmltext = "30358-00.htm"
        st.exitQuest(1)
    elif id == COMPLETED :                                  # Check if the quest is already made
-     htmltext = "<html><head><body>This quest have already been completed.</body></html>"
+     htmltext = "<html><body>This quest have already been completed.</body></html>"
    else :                                                  # The quest itself
      try :
        cond = st.getInt("cond")

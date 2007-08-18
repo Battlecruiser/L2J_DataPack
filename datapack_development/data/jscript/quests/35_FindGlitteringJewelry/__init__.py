@@ -42,7 +42,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
    npcId = npc.getNpcId()
@@ -55,10 +55,10 @@ class Quest (JQuest) :
          htmltext = "30091-0.htm"
          return htmltext
        else:
-         htmltext = "<html><head><body>I have nothing to say you</body></html>"
+         htmltext = "<html><body>I have nothing to say you</body></html>"
          st.exitQuest(1)
      else:
-       htmltext = "<html><head><body>I have nothing to say you</body></html>"
+       htmltext = "<html><body>I have nothing to say you</body></html>"
        st.exitQuest(1)
    elif npcId == 30879 and cond == 1 :
      htmltext = "30879-0.htm"

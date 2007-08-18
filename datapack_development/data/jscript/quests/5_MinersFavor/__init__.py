@@ -49,7 +49,7 @@ class Quest (JQuest) :
    return htmltext 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -67,7 +67,7 @@ class Quest (JQuest) :
  
    if npcId == BOLTER and cond == 0 : 
      if onlyone == 1 : 
-       htmltext = "<html><head><body>This quest have already been completed.</body></html>" 
+       htmltext = "<html><body>This quest have already been completed.</body></html>" 
      elif player.getLevel() >= 2 : 
        htmltext = "30554-02.htm" 
      else: 

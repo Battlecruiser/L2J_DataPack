@@ -351,7 +351,7 @@ class Quest (JQuest):
 
 
   def onTalk (self,npc,player):
-    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+    htmltext = "<html><body>I have nothing to say you</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
@@ -461,7 +461,7 @@ class Quest (JQuest):
               return check_eggs(st,"shamhai",progress)
           elif progress in [ 19,20 ] and st.getQuestItemsCount(SH_EGG) == 1 :
               return "420_shamhai_5.htm"
-    return "<html><head><body>I have nothing to say to you</body></html>"
+    return "<html><body>I have nothing to say to you</body></html>"
 
   def onKill (self,npc,player):
     st = player.getQuestState(qn)

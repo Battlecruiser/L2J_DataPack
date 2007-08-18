@@ -45,7 +45,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if st :
         npcId = npc.getNpcId()
-        htmltext = "<html><head><body>I have nothing to say you</body></html>"
+        htmltext = "<html><body>I have nothing to say you</body></html>"
         id = st.getState()
         cond = st.getInt("cond")
         if cond == 0 :

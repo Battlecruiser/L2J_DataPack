@@ -81,7 +81,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -106,7 +106,7 @@ class Quest (JQuest) :
            htmltext = "30690-01.htm"
            st.exitQuest(1)
    elif id==COMPLETED :
-     htmltext = "<html><head><body>This quest has already been completed.</body></html>"
+     htmltext = "<html><body>This quest has already been completed.</body></html>"
    else:
      phase=st.getInt("phase")
      if npcId== NPC[3]:
@@ -236,7 +236,7 @@ class Quest (JQuest) :
         if phase==20 :
           htmltext = "30628-01.htm"
         else:
-          htmltext = "<html><head><body>You haven't got a Key for this Chest.</body></html>"
+          htmltext = "<html><body>You haven't got a Key for this Chest.</body></html>"
    return htmltext
 
  def onKill (self,npc,player):

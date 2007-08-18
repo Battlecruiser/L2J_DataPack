@@ -8,7 +8,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "382_KailsMagicCoin"
 
 #Messages
-default = "<html><head><body>I have nothing to say to you.</body></html>"
+default = "<html><body>I have nothing to say to you.</body></html>"
 #Quest items
 ROYAL_MEMBERSHIP = 5898
 #NPCs

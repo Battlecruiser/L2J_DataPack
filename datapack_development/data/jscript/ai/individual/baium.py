@@ -50,7 +50,7 @@ class baium (JQuest):
         player.teleToLocation(113100,14500,10077)
         st.set("ok","1")
       else :
-        return '<html><head><body>Angelic Vortex:<br>You do not have enough items</body></html>'      
+        return '<html><body>Angelic Vortex:<br>You do not have enough items</body></html>'      
     return
 
   def onKill(self,npc,player):

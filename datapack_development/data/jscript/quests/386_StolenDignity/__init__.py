@@ -21,7 +21,7 @@ SI_ORE = 6363
 REWARDS=[5529]+range(5532,5540)+range(5541,5549)+[8331]+range(8341,8343)+[8346]+[8349]
  
 #Messages
-default   = "<html><head><body>I have nothing to say to you.</body></html>"
+default   = "<html><body>I have nothing to say to you.</body></html>"
 error_1   = "Low_level.htm"
 start     = "Start.htm"
 starting  = "Starting.htm"
@@ -67,7 +67,7 @@ MAX = 100
 
 #templates
 number  = ["second","third","fourth","fifth","sixth"]
-header  = "<html><head><body>Warehouse Freightman Romp:<br><br>"
+header  = "<html><body>Warehouse Freightman Romp:<br><br>"
 link    = "<td align=center><a action=\"bypass -h Quest 386_StolenDignity "
 middle  = "</tr></table><br><br>Your selection thus far: <br><br><table border=1 width=120 hieght=64>"
 footer  = "</table></body></html>"

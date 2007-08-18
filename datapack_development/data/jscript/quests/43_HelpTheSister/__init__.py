@@ -50,7 +50,7 @@ class Quest (JQuest) :
     return htmltext
 
   def onTalk(self, npc, player):
-    htmltext="<html><head><body>I have nothing to say you</body></html>"
+    htmltext="<html><body>I have nothing to say you</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
@@ -61,7 +61,7 @@ class Quest (JQuest) :
         htmltext="30829-00.htm"
       else:
         st.exitQuest(1)
-        htmltext="<html><head><body>This quest can only be taken by characters that have a minimum level of %s. Return when you are more experienced.</body></html>" % MIN_LEVEL
+        htmltext="<html><body>This quest can only be taken by characters that have a minimum level of %s. Return when you are more experienced.</body></html>" % MIN_LEVEL
     elif id==STARTED:
       cond=st.getInt("cond")
       if npcId==COOPER:
@@ -83,7 +83,7 @@ class Quest (JQuest) :
           htmltext="30097-05.htm"
     elif id==COMPLETED:
       st.exitQuest(0)
-      htmltext="<html><head><body>This quest have already been completed.</body></html>"
+      htmltext="<html><body>This quest have already been completed.</body></html>"
     return htmltext
 
   def onKill(self, npc, player):

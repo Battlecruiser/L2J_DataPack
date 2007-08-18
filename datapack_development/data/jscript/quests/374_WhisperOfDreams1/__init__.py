@@ -31,7 +31,7 @@ ADENA_X=int(Config.RATE_DROP_ADENA)
 #Quest items
 CB_TOOTH, DW_LIGHT, SEALD_MSTONE, MSTONE = range(5884,5888)
 #Messages
-default   = "<html><head><body>I have nothing to say to you.</body></html>"
+default   = "<html><body>I have nothing to say to you.</body></html>"
  
 #NPCs
 MANAKIA,TORAI = 30515, 30557
@@ -40,7 +40,7 @@ MANAKIA,TORAI = 30515, 30557
 DROPLIST = {20620:[CB_TOOTH,"awaitTooth"],20621:[DW_LIGHT,"awaitLight"]}
  
 def render_shop() :
-    html = "<html><head><body><font color=\"LEVEL\">Robe Armor Fabrics:</font><table border=0 width=300>"
+    html = "<html><body><font color=\"LEVEL\">Robe Armor Fabrics:</font><table border=0 width=300>"
     for i in SHOP_LIST.keys() :
        html += "<tr><td width=35 height=45><img src=icon."+SHOP_LIST[i][0]+" width=32 height=32 align=left></td><td width=365 valign=top><table border=0 width=100%>"
        html += "<tr><td><a action=\"bypass -h Quest 374_WhisperOfDreams1 "+str(i)+"\"><font color=\"FFFFFF\">"+SHOP_LIST[i][3]+" x"+str(SHOP_LIST[i][1])+"</font></a></td></tr>"

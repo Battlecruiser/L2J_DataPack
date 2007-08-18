@@ -56,7 +56,7 @@ BLOOD_FIRE, MIMIRS_ELIXIR, PURE_SILVER, TRUE_GOLD = range(6318,6322)
 
 MATS=range(6011,6032)+range(6320,6322)
 #Messages
-default   = "<html><head><body>I have nothing to say to you.</body></html>"
+default   = "<html><body>I have nothing to say to you.</body></html>"
 #NPCs
 WESLEY,URN=30166,31149
 #Mobs & Drop

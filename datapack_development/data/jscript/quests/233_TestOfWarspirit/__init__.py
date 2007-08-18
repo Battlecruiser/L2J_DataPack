@@ -140,7 +140,7 @@ class Quest (JQuest) :
 
 
   def onTalk (self,npc,player):
-    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+    htmltext = "<html><body>I have nothing to say you</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
@@ -166,7 +166,7 @@ class Quest (JQuest) :
       return htmltext
     # if quest is already completed
     elif id == COMPLETED:
-      return "<html><head><body>This quest has already been completed.</body></html>"
+      return "<html><body>This quest has already been completed.</body></html>"
     # if quest is accepted and in progress
     elif id == PART1:
         step=st.getInt("step")

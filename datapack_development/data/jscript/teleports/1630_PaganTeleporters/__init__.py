@@ -20,17 +20,17 @@ class Quest (JQuest):
     npcId = npc.getNpcId()
     htmltext = "You have been teleported."
     if player.getLevel() < 73 :
-       htmltext = '<html><head>Teleport available only for characters with Pagans Mark and level 73 or above.</body></html>'
+       htmltext = '<html>Teleport available only for characters with Pagans Mark and level 73 or above.</body></html>'
     elif npcId in [32034,32036]:
        if not st.getQuestItemsCount(8067) :
-          htmltext = '<html><head>Teleport available only for characters with Pagans Mark and level 73 or above.</body></html>'
+          htmltext = '<html>Teleport available only for characters with Pagans Mark and level 73 or above.</body></html>'
        else:
           if npcId == 32034 :
              player.teleToLocation(-16324,-37147,-10724)
           else :
              player.teleToLocation(-16324,-44638,-10724)
     elif not st.getQuestItemsCount(8064)+st.getQuestItemsCount(8067) :
-       htmltext = '<html><head>Teleport available only for characters with Pagans Mark or Visitors Mark and level 73 or above.</body></html>'
+       htmltext = '<html>Teleport available only for characters with Pagans Mark or Visitors Mark and level 73 or above.</body></html>'
     else :
        if npcId == 32039 :
           player.teleToLocation(-12241,-35884,-10856)

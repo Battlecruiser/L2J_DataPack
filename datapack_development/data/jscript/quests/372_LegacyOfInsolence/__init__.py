@@ -59,7 +59,7 @@ MESSENGER_A1:[WH_PAP,25],
 MESSENGER_A2:[WH_PAP,25]
 }
 #Messages
-default = "<html><head><body>I have nothing to say to you.</body></html>"
+default = "<html><body>I have nothing to say to you.</body></html>"
 #Helpers
 def check_n_take(st,collection) :
     result = False

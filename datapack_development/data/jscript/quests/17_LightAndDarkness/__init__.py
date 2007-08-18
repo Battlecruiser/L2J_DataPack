@@ -60,7 +60,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><head><body>I have no task for you right now.</body></html>"
+   htmltext = "<html><body>I have no task for you right now.</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
    npcId = npc.getNpcId()
@@ -68,7 +68,7 @@ class Quest (JQuest) :
    blood = st.getQuestItemsCount(BLOOD_OF_SAINT)
    id = st.getState()
    if id == COMPLETED :
-      htmltext = "<html><head><body>This quest have already been completed.</body></html>"
+      htmltext = "<html><body>This quest have already been completed.</body></html>"
    elif npcId == HIERARCH :
      if cond == 0 :
         htmltext = "31517-00.htm"

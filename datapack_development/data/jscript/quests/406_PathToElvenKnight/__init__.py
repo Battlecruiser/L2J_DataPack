@@ -16,7 +16,7 @@ EMERALD_PIECE = 1206
 KLUTO_MEMO = 1276
 SHADOW_WEAPON_COUPON_DGRADE = 8869
 #messages
-default="<html><head><body>I have nothing to say you</body></html>"
+default="<html><body>I have nothing to say you</body></html>"
 
 class Quest (JQuest) :
 
@@ -56,7 +56,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><head><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>I have nothing to say you</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 

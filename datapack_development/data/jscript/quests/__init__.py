@@ -278,6 +278,7 @@ __all__ = [
 '634_InSearchofDimensionalFragments',
 '636_TruthBeyond',
 '637_ThroughOnceMore',
+'645_GhostsOfBatur',
 '647_InfluxOfMachines',
 '649_ALooterAndARailroadMan',
 '651_RunawayYouth',

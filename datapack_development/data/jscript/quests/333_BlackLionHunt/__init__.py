@@ -70,7 +70,7 @@ DROPLIST={
 
 #Messages
 #technical relatet messages
-html        = "<html><head><body>"
+html        = "<html><body>"
 htmlend        = "</body></html>"
 back        = "<a action=\"bypass -h Quest 333_BlackLionHunt f_more_help\">Return</a>"
 #Sophya
@@ -461,7 +461,7 @@ class Quest (JQuest) :
       return r_exit
     
   def onTalk (self,npc,player):
-    htmltext = "<html><head><body>I have nothing to say you</body></html>"
+    htmltext = "<html><body>I have nothing to say you</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
