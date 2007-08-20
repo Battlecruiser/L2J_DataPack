@@ -154,11 +154,11 @@ class Quest (JQuest) :
                           if ''.join(chosen[i:9:3]).isdigit() : col += 1
                       if ''.join(chosen[0:9:4]).isdigit() : diag += 1
                       if ''.join(chosen[2:7:2]).isdigit() : diag += 1
-                      if col == 1 and row == 1 and diag == 1 :
+                      if (col + row + diag) == 3 :
                           htmltext += winner
                           st.giveItems(REWARDS[st.getRandom(len(REWARDS))],4)
                           st.playSound("ItemSound.quest_finish")
-                      elif diag == 0 and row == 0 and col == 0 :
+                      elif (diag + row + col) == 0 :
                           htmltext += loser
                           st.giveItems(REWARDS[st.getRandom(len(REWARDS))],10)
                           st.playSound("ItemSound.quest_jackpot")
