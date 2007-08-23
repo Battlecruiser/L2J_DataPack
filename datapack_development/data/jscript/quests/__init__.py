@@ -243,6 +243,7 @@ __all__ = [
 '419_GetAPet',
 '420_LittleWings',
 '421_LittleWingAdventures',
+'422_RepentYourSins',
 '426_FishingShot',
 '431_WeddingMarch',
 '432_BirthdayPartySong',
