@@ -648,7 +648,7 @@
     <mul order="0x30" stat="pDef" val="1.08"/> <!-- P. Def. +8% -->
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
     <add order="0x40" stat="runSpd" val="7"/> <!-- Speed +7 -->
-    <add order="0x40" stat="cancel" val="50"/> <!-- Small decrease in chance of spell interruption - TO CHECK -->
+    <sub order="0x40" stat="cancel" val="18"/> <!-- Small decrease in chance of spell interruption - TO CHECK -->
     <add order="0x40" stat="paralyzeRes" val="50"/> <!-- Paralysis Resistance +50% -->
     <add order="0x40" stat="WIT" val="2"/> <!-- WIT +2 -->
     <sub order="0x40" stat="MEN" val="2"/> <!-- MEN -2 -->
