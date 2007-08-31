@@ -66,7 +66,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -174,5 +174,6 @@ STARTED.addQuestDrop(20043,POISON_SPIDER_LEG2,1)
 STARTED.addQuestDrop(20038,POISON_SPIDER_LEG2,1)
 STARTED.addQuestDrop(30010,RUSTED_BRONZE_SWORD3,1)
 print "importing quests: 401: Path To Warrior"
+
 
 

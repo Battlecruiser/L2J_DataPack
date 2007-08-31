@@ -48,7 +48,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
    cond=st.getInt("cond")
@@ -319,5 +319,6 @@ STARTED.addQuestDrop(30116,SAINTS_ASHES_URN,1)
 STARTED.addQuestDrop(20200,REPORT_PIECE,1)
 
 print "importing quests: 212: Trial Of Duty"
+
 
 

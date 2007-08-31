@@ -237,7 +237,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -626,4 +626,6 @@ STARTED.addQuestDrop(20552,FETTEREDSOULS_ICHOR_ID,1)
 STARTED.addQuestDrop(20567,ENCHT_GARGOYLES_NAIL_ID,1)
 STARTED.addQuestDrop(30458,POITANS_NOTES_ID,1)
 
-print "importing quests: 214: Trial Of Scholar"
+print "importing quests: 214: Trial Of Scholar"
+
+

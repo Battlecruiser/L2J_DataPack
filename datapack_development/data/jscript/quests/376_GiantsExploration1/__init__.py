@@ -38,7 +38,7 @@ EXCHANGE = [
 ]
 
 #Messages
-default   = "<html><body>I have nothing to say to you.</body></html>"
+default   = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
 error_1   = "<html><body>Head Researcher Sobling:<br><br>I think it is too early for you to help me. Come back after you have gained some more experience. <br><font color=\"LEVEL\">(Quest for characters level 51 and above.)</font></body></html>"
 start     = "<html><body>Head Researcher Sobling:<br><br>As leader of the research team i'm looking for experienced adventurers to join us. Actually we're searching for relics from the ancient Giants Culture. There are four scripts we can't find yet: <font color=\"LEVEL\">Plans for the construction of Golems, Basis of the Giant's Magic, Construction Technology Handbook and Giant's Medical Theory.</font><br><br>Given the value of the items we're looking for, there is no need to tell you how generous shall be my rewards.<br><br><a action=\"bypass -h Quest 376_GiantsExploration1 yes\">I will search for ancient items</a><br><a action=\"bypass -h Quest 376_GiantsExploration1 0\">I won't help you</a><br></body></html>"
 starting  = "Starting.htm"

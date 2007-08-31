@@ -186,7 +186,7 @@ class Quest (JQuest) :
       return htmltext
 
    def onTalk (self,npc,player):
-      htmltext = "<html><body>I have nothing to say you</body></html>"
+      htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
       st = player.getQuestState(qn)
       if not st : return htmltext
 
@@ -194,7 +194,7 @@ class Quest (JQuest) :
       id = st.getState()
       if npcId != NPC[1] and id != PROGRESS : return htmltext
       
-      htmltext = "<html><body>I have nothing to say you</body></html>"
+      htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>" 
       id = st.getState()
       npcId = npc.getNpcId()
       Lara, Galatea, Almors, Camoniell, Belthus, Basilla, Celestiel, Brynthea = NPC

@@ -27,7 +27,7 @@ CHANCE={
     21517:560
 }
 
-default="<html><body>I have nothing to say you</body></html>"
+default="<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
 
 class Quest (JQuest) :
 

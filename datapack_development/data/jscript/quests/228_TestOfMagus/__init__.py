@@ -105,7 +105,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -291,5 +291,6 @@ for item in range(2841,2864):
    STARTED.addQuestDrop(30629,item,1)
   
 print "importing quests: 228: Test Of Magus"
+
 
 

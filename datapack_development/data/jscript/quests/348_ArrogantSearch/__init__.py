@@ -116,14 +116,15 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-    htmltext = "<html><body>I have nothing to say you</body></html>"
+    htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
     npcId = npc.getNpcId()
     id = st.getState()
     if npcId != HANELLIN and id != PROGRESS : return htmltext
-    cond = st.getInt("cond")
+
+    cond = st.getInt("cond")
     if npcId == HANELLIN :
         if id == CREATED :
             # if the quest was completed and the player still has a blooded fabric

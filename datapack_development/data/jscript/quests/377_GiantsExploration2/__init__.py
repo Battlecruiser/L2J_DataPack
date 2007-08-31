@@ -29,7 +29,7 @@ EXCHANGE = [
 ]
 
 #Messages
-default   = "<html><body>I have nothing to say to you.</body></html>"
+default   = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
 error_1   = "<html><body>Head Researcher Sobling:<br><br>I think it is too early for you to help me. Come back after you have gained some more experience. <br><font color=\"LEVEL\">(Quest for characters level 57 and above.)</font></body></html>"
 start     = "<html><body>Head Researcher Sobling:<br><br>So Cliff sent us this dictionary, i can see clearly now. It's very impressive... There are more relics for we to find out and maybe you will help us as a future member of our excavation team. We should look for <font color=\"LEVEL\">The book of the Titan's science, and the Book of the Titan's Culture.</font><br><br>Our payment for such a discovery cannot be rejected so easily, <font color=\"LEVEL\">A grade recipes</font> used in the manufacture of top level armors... Of course i won't give you anything just for fragments, you will have to gather every piece of a given book.<br><br><a action=\"bypass -h Quest 377_GiantsExploration2 yes\">I will search for ancient books</a><br><a action=\"bypass -h Quest 377_GiantsExploration2 0\">I won't help you this time</a><br></body></html>"
 starting  = "Starting.htm"

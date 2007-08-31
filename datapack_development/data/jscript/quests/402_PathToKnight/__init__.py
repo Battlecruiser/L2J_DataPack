@@ -14,7 +14,7 @@ SWORD_OF_RITUAL,COIN_OF_LORDS1,COIN_OF_LORDS2,COIN_OF_LORDS3,COIN_OF_LORDS4,COIN
 BUGBEAR_NECKLACE,EINHASAD_CHURCH_MARK1,EINHASAD_CRUCIFIX,GLUDIO_GUARDS_MARK2,POISON_SPIDER_LEG1,EINHASAD_CHURCH_MARK2,LIZARDMAN_TOTEM,\
 GLUDIO_GUARDS_MARK3,GIANT_SPIDER_HUSK,EINHASAD_CHURCH_MARK3,HORRIBLE_SKULL = range(1161,1180)
 
-default = "<html><body>I have nothing to say you</body></html>"
+default = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>" 
 
 DROPLIST={
    20775:[GLUDIO_GUARDS_MARK1,BUGBEAR_NECKLACE,10,100],
@@ -122,7 +122,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
