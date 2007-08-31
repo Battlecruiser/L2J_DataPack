@@ -22,7 +22,7 @@ MSTONE,K_HORN,CH_SKULL=range(5887,5890)
 REWARDS = [5348,5350,5352]
  
 #Messages
-default   = "<html><body>I have nothing to say to you.</body></html>"
+default   = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
  
 #NPCs
 MANAKIA = 30515

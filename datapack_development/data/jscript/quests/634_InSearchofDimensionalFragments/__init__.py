@@ -27,7 +27,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if st :
         npcId = npc.getNpcId()
-        htmltext = "<html><body>I have nothing to say to you</body></html>"
+        htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
         id = st.getState()
         if id == CREATED :
             if player.getLevel() < 20 :

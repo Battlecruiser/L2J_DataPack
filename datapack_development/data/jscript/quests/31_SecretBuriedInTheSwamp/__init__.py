@@ -12,7 +12,7 @@ FORGOTTEN_MONUMENT_1,FORGOTTEN_MONUMENT_2,FORGOTTEN_MONUMENT_3,FORGOTTEN_MONUMEN
 #ITEMS
 KRORINS_JOURNAL = 7252
 #MESSAGES
-default = "<html><body>I have nothing to say you</body></html>"
+default = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)

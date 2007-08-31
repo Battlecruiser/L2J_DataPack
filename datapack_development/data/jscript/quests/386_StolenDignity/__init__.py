@@ -21,7 +21,7 @@ SI_ORE = 6363
 REWARDS=[5529]+range(5532,5540)+range(5541,5549)+[8331]+range(8341,8343)+[8346]+[8349]
  
 #Messages
-default   = "<html><body>I have nothing to say to you.</body></html>"
+default   = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
 error_1   = "Low_level.htm"
 start     = "Start.htm"
 starting  = "Starting.htm"

@@ -28,7 +28,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onTalk (self,npc,player):
-     htmltext = "<html><body>I have nothing to say you</body></html>"
+     htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
      st = player.getQuestState(qn)
      if not st : return htmltext
 
@@ -93,5 +93,6 @@ QUEST.addKillId(20786)
 QUEST.addKillId(20787)
 
 print "importing quests: 352: Help Rood Raise A New Pet"
+
 
 

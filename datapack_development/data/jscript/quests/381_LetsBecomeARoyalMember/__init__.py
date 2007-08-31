@@ -11,7 +11,7 @@ QuestDescription = "Let's become a Royal Member"
 qn = "381_LetsBecomeARoyalMember"
 
 #Messages
-default = "<html><body>I have nothing to say to you.</body></html>"
+default = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
 #Quest items
 KAILS_COIN, COIN_ALBUM, MEMBERSHIP_1, CLOVER_COIN, ROYAL_MEMBERSHIP = 5899, 5900, 3813, 7569, 5898
 #NPCs

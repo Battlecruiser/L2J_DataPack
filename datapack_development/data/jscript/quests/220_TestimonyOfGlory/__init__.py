@@ -181,14 +181,15 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
    npcId = npc.getNpcId()
    id = st.getState()
    if npcId != 30514 and id != STARTED : return htmltext
-   if id == CREATED :                                       # Check if is starting the quest
+
+   if id == CREATED :                                       # Check if is starting the quest
      st.set("cond","0")
      st.set("id","0")
      if npcId == 30514 :

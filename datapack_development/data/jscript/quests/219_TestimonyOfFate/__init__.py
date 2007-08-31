@@ -91,7 +91,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -449,4 +449,6 @@ STARTED.addQuestDrop(27079,BLACK_WILLOW_LEAF_ID,1)
 STARTED.addQuestDrop(31850,TIMIRIRAN_SEED_ID,1)
 STARTED.addQuestDrop(30614,METHEUS_FUNERAL_JAR_ID,1)
 
-print "importing quests: 219: Testimony Of Fate"
+print "importing quests: 219: Testimony Of Fate"
+
+

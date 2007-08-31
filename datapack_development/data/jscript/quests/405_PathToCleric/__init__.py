@@ -49,7 +49,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -58,7 +58,7 @@ class Quest (JQuest) :
    if npcId != 30022 and id != STARTED : return htmltext
 
    npcId = npc.getNpcId()
-   htmltext = "<html><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>" 
    id = st.getState()
    if id == CREATED :
      st.setState(STARTING)
@@ -200,5 +200,6 @@ STARTED.addQuestDrop(30017,CERTIFICATE_OF_GALLINT,1)
 STARTED.addQuestDrop(30408,BOOK_OF_LEMONIELL,1)
 
 print "importing quests: 405: Path To Cleric"
+
 
 

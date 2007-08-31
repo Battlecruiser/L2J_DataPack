@@ -68,7 +68,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>I have nothing to say you</body></html>"
+   htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -298,5 +298,6 @@ for item in range(1593,1615):
     STARTED.addQuestDrop(30587,item,1)
 
 print "importing quests: 415: Path To Orc Monk" 
+
 
 

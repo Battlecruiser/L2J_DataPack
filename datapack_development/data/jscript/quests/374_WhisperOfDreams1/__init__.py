@@ -31,7 +31,7 @@ ADENA_X=int(Config.RATE_DROP_ADENA)
 #Quest items
 CB_TOOTH, DW_LIGHT, SEALD_MSTONE, MSTONE = range(5884,5888)
 #Messages
-default   = "<html><body>I have nothing to say to you.</body></html>"
+default   = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
  
 #NPCs
 MANAKIA,TORAI = 30515, 30557
