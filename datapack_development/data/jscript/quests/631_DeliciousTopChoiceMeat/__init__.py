@@ -88,10 +88,9 @@ QUEST.addStartNpc(TUNATUN)
 
 QUEST.addTalkId(TUNATUN)
 
-QUEST.addKillId(21451)
-QUEST.addKillId(21470)
-QUEST.addKillId(21489)
+for npcId in range(21460,21468)+ range(21479,21487)+range(21498,21506) :
+    QUEST.addKillId(npcId)
 
-STARTED.addQuestDrop(21451,TOP_QUALITY_MEAT,1)
+STARTED.addQuestDrop(21460,TOP_QUALITY_MEAT,1)
 
 print "importing quests: 631: Delicious Top Choice Meat"
