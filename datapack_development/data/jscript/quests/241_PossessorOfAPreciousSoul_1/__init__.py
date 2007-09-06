@@ -254,7 +254,7 @@ class Quest (JQuest) :
          st.set("cond","4")
          st.giveItems(LEGEND_OF_SEVENTEEN,1)
          st.playSound("ItemSound.quest_itemget")
-   elif npcId in [20244,20245,20283,21508] :
+   elif npcId in [20244,20245,20283,20284] :
      # get a random party member who is doing this quest and is at cond == 6  
      partyMember = self.getRandomPartyMember(player, "6")
      if partyMember :
