@@ -295,7 +295,7 @@ class Quest (JQuest) :
                  numItems,chance = divmod(chance*Config.RATE_DROP_QUEST,100)
                  if numItems == 0 or chance > st.getRandom(100) :
                      numItems += 1
-                 st.giveItems(item,numItems)   
+                 st.giveItems(item,int(numItems))
                  st.playSound("ItemSound.quest_itemget")
                  break
      return
