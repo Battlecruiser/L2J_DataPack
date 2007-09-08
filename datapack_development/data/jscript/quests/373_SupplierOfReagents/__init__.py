@@ -61,13 +61,13 @@ default   = "<html><body>You are either not carrying out your quest or don't mee
 WESLEY,URN=30166,31149
 #Mobs & Drop
 DROPLIST = {
-20813: [(QUICKSILVER,60),(ROTTEN_BONE,100)],
-20822: [(VOLCANIC_ASH,40),(REAGENT_POUCH1,100)],
-21061: [(DEMONS_BLOOD,70),(MOONSTONE_SHARD,90)],
-20828: [(REAGENT_POUCH2,70),(QUICKSILVER,30)],
-21066: [(REAGENT_BOX,40)],
-21111: [(WYRMS_BLOOD,50)],
-21115: [(REAGENT_POUCH3,50)]
+20813: [100, (QUICKSILVER,60),(ROTTEN_BONE,40)],
+20822: [100, (VOLCANIC_ASH,40),(REAGENT_POUCH1,60)],
+21061: [90, (DEMONS_BLOOD,70),(MOONSTONE_SHARD,20)],
+20828: [100, (REAGENT_POUCH2,70),(QUICKSILVER,30)],
+21066: [40, (REAGENT_BOX,40)],
+21111: [50, (WYRMS_BLOOD,50)],
+21115: [50, (REAGENT_POUCH3,50)]
 }
 #temperature:[success_%,reagent_qty_obtained]
 TEMPERATURE={1:[100,1],2:[45,2],3:[15,3]}
@@ -274,17 +274,30 @@ class Quest (JQuest) :
      if not partyMember : return
      st = partyMember.getQuestState(qn)
      npcId = npc.getNpcId()
-     drop = st.getRandom(100)
-     for entry in DROPLIST[npcId] :
-        item,chance=entry
-        numItems,chance = divmod(chance*Config.RATE_DROP_QUEST,100)
-        if drop < chance :
-           numItems = numItems +1
-        numItems = int(numItems)
-        st.giveItems(item,numItems)
-        if numItems != 0 :
-           st.playSound("ItemSound.quest_itemget")
-        break
+     # The quest rates increase the rates of dropping "something", but only one
+     # entry will be chosen to drop per kill.  In order to not overshadow entries
+     # that appear later in the list, first check with the sum of all entries to
+     # see if any one of them will drop, then select which one...
+     totalDropChance = DROPLIST[npcId][0]
+     if totalDropChance*Config.RATE_DROP_QUEST > st.getRandom(100) :
+         # At this point, we decided that one entry from this list will definitely be dropped
+         # to select which one, get a random value in the range of the total chance and find
+         # the first item that passes this range.
+         itemToDrop =st.getRandom(totalDropChance)
+         for i in range(1,len(DROPLIST[npcId])) :
+             item, chance = DROPLIST[npcId][i]
+             if chance > itemToDrop :
+                 # Now, we have selected which item to drop.  However, the quest rates are also
+                 # capable of giving this item a bonus amount, if its individual chance surpases
+                 # 100% after rates.  Apply rates to see for bonus amounts...
+                 # definitely give at least 1 item.  If the chance exceeds 100%, then give some
+                 # additional bonus...
+                 numItems,chance = divmod(chance*Config.RATE_DROP_QUEST,100)
+                 if numItems == 0 or chance > st.getRandom(100) :
+                     numItems += 1
+                 st.giveItems(item,numItems)   
+                 st.playSound("ItemSound.quest_itemget")
+                 break
      return
 
 # Quest class and state definition
