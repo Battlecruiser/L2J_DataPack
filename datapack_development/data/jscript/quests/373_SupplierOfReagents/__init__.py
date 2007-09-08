@@ -60,6 +60,7 @@ default   = "<html><body>You are either not carrying out your quest or don't mee
 #NPCs
 WESLEY,URN=30166,31149
 #Mobs & Drop
+#index = mobId, array = [ TotalChance, (item0, chance0),(item1, chance1),...]
 DROPLIST = {
 20813: [100, (QUICKSILVER,60),(ROTTEN_BONE,40)],
 20822: [100, (VOLCANIC_ASH,40),(REAGENT_POUCH1,60)],
@@ -284,9 +285,11 @@ class Quest (JQuest) :
          # to select which one, get a random value in the range of the total chance and find
          # the first item that passes this range.
          itemToDrop =st.getRandom(totalDropChance)
+         indexChance = 0
          for i in range(1,len(DROPLIST[npcId])) :
              item, chance = DROPLIST[npcId][i]
-             if chance > itemToDrop :
+             indexChance += chance
+             if indexChance > itemToDrop :
                  # Now, we have selected which item to drop.  However, the quest rates are also
                  # capable of giving this item a bonus amount, if its individual chance surpases
                  # 100% after rates.  Apply rates to see for bonus amounts...
