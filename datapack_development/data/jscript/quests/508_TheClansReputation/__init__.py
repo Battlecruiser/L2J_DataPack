@@ -28,7 +28,7 @@ NUCLEUS_OF_FLAMESTONE_GIANT = 8494 # Nucleus of Flamestone Giant : Nucleus obtai
 THEMIS_SCALE                = 8277 # Themis' Scale : Obtain this scale by defeating Palibati Queen Themis.
 NUCLEUS_OF_HEKATON_PRIME    = 8279 # Nucleus of Hekaton Prime : Nucleus obtained by defeating Hekaton Prime
 TIPHON_SHARD                = 8280 # Tiphon Shard : Debris obtained by defeating Tiphon, Gargoyle Lord.
-GLAKIS_NECLEUS              = 8281 # Glaki's Necleus : Nucleus obtained by defeating Glaki, the last lesser Giant.
+GLAKIS_NUCLEUS              = 8281 # Glaki's Necleus : Nucleus obtained by defeating Glaki, the last lesser Giant.
 RAHHAS_FANG                 = 8282 # Rahha's Fang : Fangs obtained by defeating Rahha.
 
 #Quest Raid Bosses
@@ -47,7 +47,7 @@ REWARDS_LIST={
     1:[PALIBATI_QUEEN_THEMIS,  THEMIS_SCALE],
     2:[HEKATON_PRIME,          NUCLEUS_OF_HEKATON_PRIME],
     3:[GARGOYLE_LORD_TIPHON,   TIPHON_SHARD],
-    4:[LAST_LESSER_GIANT_GLAKI,GLAKIS_NECLEUS],
+    4:[LAST_LESSER_GIANT_GLAKI,GLAKIS_NUCLEUS],
     5:[RAHHA,                  RAHHAS_FANG],
     6:[FLAMESTONE_GIANT,       NUCLEUS_OF_FLAMESTONE_GIANT]
     }
