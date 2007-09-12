@@ -962,7 +962,8 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="6" name="ManaDamOverTime" time="5" val="24" stackOrder="1" stackType="multiple_debuff">
+    <!-- retail value: 24/sec; stat update every 5 units (3 1/3 sec) -->
+    <effect count="10" name="ManaDamOverTime" time="3" val="72" stackOrder="1" stackType="multiple_debuff">
       <sub order="0x40" stat="cancelRes" val="30"/>
       <mul order="0x30" stat="MpConsumeRate" val="1.30"/>
       <sub order="0x40" stat="debuffRes" val="30"/>
