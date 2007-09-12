@@ -63,7 +63,8 @@
     </effect>
   </enchant1for>
   <enchant2for>
-    <effect count="3" name="DamOverTime" time="5" val="118"/>
+    <!-- retail value: 118HP/sec; stat update every 5 units (3 1/3 sec) -->
+    <effect count="3" name="DamOverTime" time="3" val="354"/>
   </enchant2for>
 </skill>
 <skill id="303" levels="4" name="Soul of Sagittarius" enchantLevels1="30" >
@@ -1060,7 +1061,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="DamOverTime" time="3" val="50">
+    <!-- retail value: 50HP/sec; stat update every 5 units (3 1/3 sec) -->
+    <effect count="0x7fffffff" name="DamOverTime" time="3" val="150">
       <mul order="0x30" stat="mAtkSpd" val="0.9"/>
       <mul order="0x30" stat="MpConsumeRate" val="0.7"/>
     </effect>
@@ -1075,7 +1077,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="DamOverTime" time="3" val="50">
+    <!-- retail value: 50HP/sec; stat update every 5 units (3 1/3 sec) -->
+    <effect count="0x7fffffff" name="DamOverTime" time="3" val="150">
       <mul order="0x30" stat="MpConsumeRate" val="1.1"/>
       <mul order="0x30" stat="mAtk" val="1.3"/>
     </effect>
@@ -1090,7 +1093,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="DamOverTime" time="3" val="50">
+    <!-- retail value: 50HP/sec; stat update every 5 units (3 1/3 sec) -->
+    <effect count="0x7fffffff" name="DamOverTime" time="3" val="150">
       <mul order="0x30" stat="mAtkSpd" val="1.2"/>
       <mul order="0x30" stat="mReuse" val="0.9"/>
       <mul order="0x30" stat="MpConsumeRate" val="1.1"/>
