@@ -191,7 +191,7 @@
   </for>
 </skill>
 <skill id="1209" levels="6" name="Seal of Poison">
-  <table name="#dmg"> 18 24 31 38 44 48 </table>
+  <table name="#dmg"> 54 72 93 114 132 144 </table>
   <table name="#mpConsume_Init"> 6 8 11 14 18 20 </table>
   <table name="#mpConsume"> 23 32 42 56 69 78 </table>
   <table name="#magicLvl"> 20 30 40 52 62 70 </table>
@@ -214,7 +214,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="6" name="DamOverTime" time="5" val="#dmg"/>
+    <!-- retail value: 18 24 31 38 44 48/sec; stat update every 5 units (3 1/3 sec) -->
+    <effect count="10" name="DamOverTime" time="3" val="#dmg"/>
   </for>
 </skill>
 <skill id="1210" levels="4" name="Seal of Gloom">
@@ -222,7 +223,7 @@
   <table name="#mpConsume_Init"> 18 21 27 30 </table>
   <table name="#mpConsume"> 70 84 107 120 </table>
   <table name="#magicLvl"> 44 52 64 72 </table>
-  <table name="#dmg"> 7 8 10 12 </table>
+  <table name="#dmg"> 21 24 30 36 </table>
   <table name="#power"> 29 36 46 53 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -242,7 +243,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="6" name="ManaDamOverTime" time="5" val="#dmg"/>
+    <!-- retail value: 7 8 10 12/sec; stat update every 5 units (3 1/3 sec) -->
+    <effect count="10" name="ManaDamOverTime" time="3" val="#dmg"/>
   </for>
 </skill>
 <skill id="1213" levels="13" name="Seal of Mirage">
@@ -879,7 +881,7 @@
   </enchant1for>
 </skill>
 <skill id="1233" levels="4" name="Decay">
-  <table name="#dmg"> 77 94 111 128 </table>
+  <table name="#dmg"> 77 94 108 118 </table>
   <table name="#mpConsume_Init"> 13 16 18 21 </table>
   <table name="#mpConsume"> 52 61 71 82 </table>
   <table name="#magicLvl"> 48 56 64 74 </table>
@@ -901,6 +903,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
+    <!-- retail value: 77 94 108 118/sec; stat update every time unit (2/3 sec) -->
     <effect count="15" name="DamOverTime" time="1" val="#dmg"/>
   </for>
 </skill>
@@ -1047,7 +1050,7 @@
   <table name="#mpConsume"> 30 32 34 36 38 39 41 43 45 46 48 49 51 53 54 56 57 </table>
   <table name="#magicLvl"> 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 </table>
   <table name="#power"> 28 29 31 33 34 36 38 39 41 43 45 46 48 50 51 53 54 </table>
-  <table name="#bleeddmg"> 22 22 22 22 27 27 27 27 27 27 27 27 27 27 27 27 27 </table>
+  <table name="#bleeddmg"> 66 66 66 66 66 81 81 81 81 93 93 93 93 93 102 102 102 </table>
   <table name="#ench1Power"> 55 55 55 56 56 56 57 57 57 58 58 58 58 59 59 59 60 60 60 61 61 61 62 62 62 63 63 63 64 64 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1072,7 +1075,8 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="4" name="DamOverTime" time="5" val="#bleeddmg" abnormal="bleeding"/>
+    <!-- retail value: 22 27 31 34/sec (depends on powerlevel); stat update every 5 units (3 1/3 sec) -->
+    <effect count="7" name="DamOverTime" time="3" val="#bleeddmg" abnormal="bleeding"/>
   </for>
 </skill>
 <skill id="1238" levels="3" name="Freezing Skin" enchantLevels1="30" enchantLevels2="30" >
@@ -1339,7 +1343,7 @@
   </enchant1for>
 </skill>
 <skill id="1244" levels="4" name="Freezing Flame">
-  <table name="#dmg"> 77 94 111 128 </table>
+  <table name="#dmg"> 77 94 108 118 </table>
   <table name="#mpConsume_Init"> 11 14 18 20 </table>
   <table name="#mpConsume"> 42 56 71 80 </table>
   <table name="#magicLvl"> 40 52 64 72 </table>
@@ -1361,6 +1365,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <for>
+    <!-- retail value: 77 94 108 118/sec; stat update every time unit (2/3 sec) -->
     <effect count="15" name="DamOverTime" time="1" val="#dmg"/>
   </for>
 </skill>
@@ -2842,7 +2847,7 @@
 </skill>
 <skill id="1283" levels="13" name="Soul Guard">
   <table name="#def"> 293.3 333.2 375.9 421.4 445.2 469.7 494.9 520.1 546.0 571.9 598.5 625.8 653.1 </table>
-  <table name="#mpRegen-sub"> 5 6 6 7 8 8 8 8 9 9 9 10 10 </table>
+  <table name="#mpRegen-sub"> 15 18 18 21 24 24 24 24 27 27 27 30 30 </table>
   <table name="#mpConsume_Init"> 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="target" val="TARGET_SELF"/>
@@ -2851,7 +2856,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="#mpRegen-sub">
+    <!-- retail value: 5 6 6 7 8 8 8 8 9 9 9 10 10/sec; stat update every 5 units (3 1/3 sec) -->
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpRegen-sub">
       <add order="0x40" stat="pDef" val="#def"/>
     </effect>
   </for>
@@ -3000,6 +3006,7 @@
   <set name="effectType" val="DOT"/>
   <set name="effectPower" val="350"/>
   <for>
+    <!-- retail value: 118/sec; stat update every time unit (2/3 sec) -->
     <effect count="20" name="DamOverTime" time="1" val="118"/>
   </for>
 </skill>
