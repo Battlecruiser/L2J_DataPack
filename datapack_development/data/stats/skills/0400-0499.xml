@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="400" levels="10" name="Tribunal">
+  <table name="#ench1Power"> 1290 1302 1313 1325 1336 1348 1359 1371 1382 1394 1405 1417 1428 1440 1451 1463 1474 1486 1497 1509 1520 1532 1543 1555 1566 1578 1589 1601 1612 1624 </table>
+  <table name="#ench2MpConsume"> 74 73 72 70 69 68 67 65 64 63 62 60 59 58 57 55 54 53 51 50 49 48 46 45 44 43 41 40 39 38 </table>
   <table name="#mpConsume"> 55 59 62 63 66 68 70 72 74 76 </table>
   <table name="#power"> 642.0 732.0 796.0 861.0 929.0 998.0 1068.0 1139.0 1209.0 1279.0 </table>
   <table name="#rCrit"> 0.7 0.7 0.7 0.7 0.7 0.7 0.6 0.6 0.6 0.5 </table>
@@ -21,6 +23,8 @@
   <set name="effectRange" val="400"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="40"/>
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect count="1" name="Buff" time="10" val="0">
       <mul order="0x30" stat="rCrit" val="#rCrit"/>
@@ -28,6 +32,8 @@
   </for>
 </skill>
 <skill id="401" levels="10" name="Judgment">
+  <table name="#ench1Power"> 1474 1487 1500 1513 1526 1540 1553 1566 1579 1592 1605 1619 1632 1645 1658 1671 1684 1698 1711 1724 1737 1750 1763 1777 1790 1803 1816 1829 1842 1856 </table>
+  <table name="#ench2MpConsume"> 74 73 72 70 69 68 67 65 64 63 62 60 59 58 57 55 54 53 51 50 49 48 46 45 44 43 41 40 39 38 </table>
   <table name="#mpConsume"> 55 59 62 63 66 68 70 72 74 76</table>
   <table name="#power"> 733.0 837.0 909.0 984.0 1062.0 1140.0 1220.0 1301.0 1382.0 1461.0 </table>
   <table name="#cAtk"> 0.75 0.75 0.75 0.75 0.75 0.7 0.7 0.7 0.7 0.65 </table>
@@ -48,6 +54,8 @@
   <set name="effectRange" val="400"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="40"/>
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
      <effect count="1" name="Buff" time="10" val="0">
        <mul order="0x30" stat="cAtk" val="#cAtk"/>
@@ -220,6 +228,8 @@
   </for>
 </skill>
 <skill id="409" levels="10" name="Critical Blow">
+  <table name="#ench1Power"> 3685 3718 3751 3784 3817 3850 3883 3916 3949 3982 4014 4047 4080 4113 4146 4179 4212 4245 4278 4311 4343 4376 4409 4442 4475 4508 4541 4574 4607 4640 </table> 
+  <table name="#ench2MpConsume"> 74 73 72 70 69 68 67 65 64 63 62 60 59 58 57 55 54 53 51 50 49 48 46 45 44 43 41 40 39 38 </table>
   <table name="#mpConsume"> 55 59 62 63 66 68 70 72 74 76 </table>
   <table name="#power"> 1832.0 2091.0 2272.0 2460.0 2653.0 2850.0 3050.0 3252.0 3453.0 3653.0 </table>
   <set name="weaponsAllowed" val="16"/>
@@ -236,6 +246,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect self="1" count="1" name="Buff" time="15" val="0">
       <mul order="0x10" stat="blowRate" val="1.4"/>
