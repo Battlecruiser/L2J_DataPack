@@ -1826,7 +1826,7 @@
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Buff" time="30" val="0">
-      <sub order="0x40" stat="mDef" val="50"/>
+      <mul order="0x30" stat="mDef" val="0.5"/>
       <mul order="0x30" stat="pDef" val="0.5"/>
       <sub order="0x40" stat="rEvas" val="16"/>
       <mul order="0x30" stat="rShld" val="0.5"/>
