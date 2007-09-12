@@ -25,6 +25,8 @@
   </for>
 </skill>
 <skill id="1401" levels="11" name="Major Heal">
+  <table name="#ench1Power"> 947 949 951 954 956 958 960 963 965 967 969 972 974 976 979 981 983 985 988 990 992 994 997 999 1001 1003 1006 1008 1010 1013 </table>
+  <table name="#ench2MpConsume">   78 77 76 75 73 72 72 71 70 68 67 66 65 65 63 62 61 60 58 57 57 56 55 53 52 51 50 50 48 47  </table>
   <table name="#mpConsume"> 60 64 65 67 69 72 74 77 78 80 80 </table>
   <table name="#power"> 690 722 753 783 812 840 867 892 915 936 946 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -41,8 +43,12 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="isMagic" val="true"/>
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
 </skill>
 <skill id="1402" levels="5" name="Major Group Heal">
+  <table name="#ench1Power"> 1173 1176 1179 1182 1186 1189 1192 1195 1199 1202 1205 1208 1212 1215 1218 1221 1224 1228 1231 123 1237 1241 1244 1247 1250 1254 1257 1260 1263 1267 </table>
+  <table name="#ench2MpConsume"> 233 231 227 225 221 218 215 212 208 206 202 198 196 192 190 186 183 180 177 173 171 167 165 161 157 155 151 148 145 142 </table>
   <table name="#mpConsume"> 189 199 214 228 239 </table>
   <table name="#power"> 902 979 1050 1115 1170 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -60,6 +66,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
 </skill>
 <skill id="1403" levels="1" name="Summon Friend">
   <set name="target" val="TARGET_PARTY_MEMBER"/>
