@@ -26508,98 +26508,490 @@ INSERT INTO `droplist` VALUES
 (22217,8954,1,1,2,11235), -- Blue Primeval Crystal
 (22217,4042,1,3,-1,300000); -- Enria
 
--- WIP - Interlude Life Stones
+-- WIP - Interlude Life Stones Droplist by ThePhoenixBird
 INSERT INTO `droplist` VALUES
 --  Top-Grade Life Stone: level 46
-(20236,8753,1,1,200,104), -- Cave Servant
-(21242,8753,1,1,200,32), -- Grave Overlord
+(20236,8753,1,1,200,28), -- Cave Servant
+(21242,8753,1,1,200,18), -- Grave Overlord
 --  Top-Grade Life Stone: level 49
-(20995,8754,1,1,200,72), -- Garden Guard
+(29006,8754,1,1,200,142857), -- Core
+(20995,8754,1,1,200,30), -- Garden Guard
 --  Top-Grade Life Stone: level 52
-(20146,8755,1,1,200,43), -- Headless Knight
-(20596,8755,1,1,200,34), -- Liele Elder
+(29006,8755,1,1,200,142857), -- Core
+(20945,8755,1,1,200,35), -- Cadeine
+(20146,8755,1,1,200,23), -- Headless Knight
+(20596,8755,1,1,200,15), -- Liele Elder
+--  Top-Grade Life Stone: level 55
+(20576,8756,1,1,200,20), -- Oel Mahum Witch Doctor
+--  Top-Grade Life Stone: level 58
+(20647,8757,1,1,200,60), -- Yintzu
+(21154,8757,1,1,200,20), -- Hell Keeper Medusa
+--  Top-Grade Life Stone: level 61
+(21200,8758,1,1,200,4), -- Nephilim Bishop
+--  Top-Grade Life Stone: level 64
+(21531,8759,1,1,200,12), -- Punishment of Splendor
+--  Top-Grade Life Stone: level 67
+(20827,8760,1,1,200,44), -- Platinum Tribe Warrior
+(21769,8760,1,1,200,60), -- Dark Omen Invader Elite Soldier
+(21295,8760,1,1,200,21), -- Canyon Antelope Slave
 --  Top-Grade Life Stone: level 70
-(29047,8761,1,1,200,43478), -- Scarlet van Halisha
-(21306,8761,1,1,200,115), -- Disciples of Protection
-(21770,8761,1,1,200,59), -- Dark Omen Invader Elite Soldier
-(21773,8761,1,1,200,39), -- Dark Omen Invader Magus
-(21772,8761,1,1,200,29), -- Dark Omen Invader Elite Soldier
--- (29025,8761,1,1,200,chance), -- Baium
--- (25276,8761,1,1,200,chance), -- Death Lord Ipos
+(29047,8761,1,2,200,83333), -- Scarlet van Halisha
+(21306,8761,1,1,200,45), -- Disciples of Protection
+(21770,8761,1,1,200,58), -- Dark Omen Invader Elite Soldier
+(21773,8761,1,1,200,18), -- Dark Omen Invader Magus
+(21772,8761,1,1,200,14), -- Dark Omen Invader Elite Soldier
 --  Top-Grade Life Stone: level 76
-(29047,8762,1,2,200,166666), -- Scarlet van Halisha
-(22215,8762,1,1,200,38461), -- Tyrannosaurus
-(22199,8762,1,1,200,2403), -- Pterosaur
--- (29025,8762,1,1,200,chance), -- Baium
+(29019,8762,1,1,200,166666), -- Antharas
+(29047,8762,1,2,200,125000), -- Scarlet van Halisha
+(22215,8762,1,1,200,30303), -- Tyrannosaurus
+(22199,8762,1,1,200,1984), -- Pterosaur
 --  High-Grade Life Stone: level 46
-(20219,8743,1,1,200,415), -- Validus
-(21195,8743,1,1,200,126), -- Gigant Commander
-(21149,8743,1,1,200,87), -- Decayed Ancient Pikeman
-(20569,8743,1,1,200,27), -- Formor Elder
+(20219,8743,1,1,200,168), -- Validus
+(21195,8743,1,1,200,94), -- Gigant Commander
+(21149,8743,1,1,200,66), -- Decayed Ancient Pikeman
+(20235,8743,1,1,200,40), -- Shackle
+(20569,8743,1,1,200,22), -- Formor Elder
 --  High-Grade Life Stone: level 49
 (29014,8744,1,3,200,1000000), -- Orfen
-(20239,8744,1,1,200,126), -- Cave Servant Captain
-(20591,8744,1,1,200,69), -- Valley Treant
-(20683,8744,1,1,200,38), -- Vanor Silenos Scout
-(22053,8744,1,1,200,25), -- Horrifying Cannon Golem I
-(22056,8744,1,1,200,10), -- Probe Golem Champion I
+(29006,8744,1,1,200,250000), -- Core
+(20239,8744,1,1,200,111), -- Cave Servant Captain
+(20593,8744,1,1,200,88), -- Unicorn
+(20591,8744,1,1,200,53), -- Valley Treant
+(20683,8744,1,1,200,33), -- Vanor Silenos Scout
+(22053,8744,1,1,200,20), -- Horrifying Cannon Golem I
+(22056,8744,1,1,200,8), -- Probe Golem Champion I
 --  High-Grade Life Stone: level 52
-(29006,8745,2,4,200,1000000), -- Core
-(20595,8745,1,1,200,73), -- Fline Elder
-(21176,8745,1,1,200,59), -- Lilim Magus
-(20574,8745,1,1,200,19), -- Elder Tarlk Basilisk
-(21245,8745,1,1,200,15), -- Crypt Inquisitor
+(29006,8745,2,4,200,750000), -- Core
+(20996,8745,1,1,200,94), -- Spiteful Ghost of Ruins
+(20595,8745,1,1,200,62), -- Fline Elder
+(21176,8745,1,1,200,49), -- Lilim Magus
+(20574,8745,1,1,200,14), -- Elder Tarlk Basilisk
+(21245,8745,1,1,200,25), -- Crypt Inquisitor
 --  High-Grade Life Stone: level 55
-(21222,8746,1,1,200,53), -- Sepulcher Archon
-(22083,8746,1,1,200,45), -- Baby Panthera
-(20597,8746,1,1,200,35), -- Valley treant Elder
+(21222,8746,1,1,200,40), -- Sepulcher Archon
+(22083,8746,1,1,200,36), -- Baby Panthera
+(20597,8746,1,1,200,54), -- Valley treant Elder
+(21246,8746,1,1,200,107), -- Tomb Archon
+(20947,8746,1,1,200,73), -- Connabi
+(21017,8746,1,1,200,27), -- Fallen Orc
 --  High-Grade Life Stone: level 58
-(21154,8747,1,1,200,22), -- Hell Keeper Medusa
+(21154,8747,1,1,200,10), -- Hell Keeper Medusa
 --  High-Grade Life Stone: level 61
-(21748,8748,1,1,200,170), -- Forbidden Path Invader Elite Soldier
-(22094,8748,1,1,200,93), -- Frost Buffalo
-(21156,8748,1,1,200,26), -- Purgatory Shadow
-(21155,8748,1,1,200,21), -- Purgatory Conjurer
-(21179,8748,1,1,200,3), -- Lilim Priest
+(21748,8748,1,1,200,101), -- Forbidden Path Invader Elite Soldier
+(22094,8748,1,1,200,78), -- Frost Buffalo
+(21156,8748,1,1,200,25), -- Purgatory Shadow
+(21155,8748,1,1,200,58), -- Purgatory Conjurer
+(21179,8748,1,1,200,4), -- Lilim Priest
+(20650,8748,1,1,200,20), -- Kranrot
 --  High-Grade Life Stone: level 64
-(20821,8749,1,1,200,390), -- Erin Ediunce
-(21747,8749,1,1,200,149), -- Forbidden Path Invader Elite Soldier
-(21749,8749,1,1,200,122), -- Forbidden Path Invader Elite Soldier
-(21750,8749,1,1,200,117), -- Forbidden Path Invader Magus
-(20625,8749,1,1,200,60), -- Malruk Knight
-(21743,8749,1,1,200,49), -- Forbidden Path Invader Elite Soldier
-(21531,8749,1,1,200,20), -- Punishment of Splendor
-(20674,8749,1,1,200,15), -- Doom Knight
-(21526,8749,1,1,200,14), -- Wisdom of Splendor
--- (25444,8749,1,1,200,chance), -- Enmity Ghost Ramdal
--- (25322,8749,1,1,200,chance), -- Demon's Agent Falston
+(20821,8749,1,1,200,213), -- Erin Ediunce
+(21747,8749,1,1,200,172), -- Forbidden Path Invader Elite Soldier
+(21749,8749,1,1,200,120), -- Forbidden Path Invader Elite Soldier
+(21750,8749,1,1,200,84), -- Forbidden Path Invader Magus
+(20625,8749,1,1,200,48), -- Malruk Knight
+(21743,8749,1,1,200,35), -- Forbidden Path Invader Elite Soldier
+(21225,8749,1,1,200,24), -- Sepulcher Sage
+(21531,8749,1,1,200,18), -- Punishment of Splendor
+(20674,8749,1,1,200,11), -- Doom Knight
+(21526,8749,1,1,200,10), -- Wisdom of Splendor
 --  High-Grade Life Stone: level 67
-(21771,8750,1,1,200,246), -- Dark Omen Invader Elite Soldier
-(21299,8750,1,1,200,172), -- Buffalo Slave
-(21599,8750,1,1,200,131), -- Requiem Priest
+(21771,8750,1,1,200,182), -- Dark Omen Invader Elite Soldier
+(21299,8750,1,1,200,133), -- Buffalo Slave
+(21599,8750,1,1,200,112), -- Requiem Priest
 --  High-Grade Life Stone: level 70
-(29028,8751,1,4,200,1000000), -- Valakas
-(29047,8751,2,4,200,500000), -- Scarlet van Halisha
-(29019,8751,2,4,200,166666), -- Antharas
-(21089,8751,1,1,200,70), -- Bloody Lord
-(21230,8751,1,1,200,63), -- Sepulcher Guard
-(21768,8751,1,1,200,36), -- Dark Omen Invader Warrior
-(21315,8751,1,1,200,20), -- Hot Springs Buffalo
-(21320,8751,1,1,200,17), -- Hot Springs Yeti
--- (29025,8751,1,2,200,chance), -- Baium
--- (25523,8751,1,1,200,chance), -- Plague Golem
--- (25245,8751,1,1,200,chance), -- Last Lesser Giant Glaki
--- (25249,8751,1,1,200,chance), -- Palatanos of Horrific Power
--- (25220,8751,1,1,200,chance), -- Death Lord Hallate
--- (25229,8751,1,1,200,chance), -- Storm Winged Naga
--- (25244,8751,1,1,200,chance), -- Last Lesser Giant Olkuth
+(29028,8751,4,4,200,1000000), -- Valakas
+(29047,8751,2,4,200,520000), -- Scarlet van Halisha
+(29019,8751,2,4,200,250000), -- Antharas
+(21316,8751,1,1,200,81), -- Hot Springs Flava
+(21089,8751,1,1,200,54), -- Bloody Lord
+(21230,8751,1,1,200,46), -- Sepulcher Guard
+(21768,8751,1,1,200,28), -- Dark Omen Invader Warrior
+(21315,8751,1,1,200,16), -- Hot Springs Buffalo
+(21320,8751,1,1,200,14), -- Hot Springs Yeti
+(21116,8751,1,1,200,10), -- Hames Orc Overlord
 --  High-Grade Life Stone: level 76
-(29019,8752,3,4,200,540000), -- Antharas
+(29019,8752,3,4,200,730000), -- Antharas
 (29047,8752,2,4,200,333333), -- Scarlet van Halisha
-(22123,8752,1,1,200,53), -- Monastic Crusader
-(22143,8752,1,1,200,44), -- Triol's Believer
-(21186,8752,1,1,200,27), -- Lilim Court Knight
-(21185,8752,1,1,200,25), -- Lilim Great Mystic
-(21164,8752,1,1,200,24), -- Guardian Spirit of Ancient Holy Ground
-(22122,8752,1,1,200,18); -- Monastic Pilgrim
--- (29025,8752,1,2,200,chance), -- Baium
+(21382,8752,1,1,200,161), -- Mercenary of Destruction
+(21791,8752,1,1,200,118), -- Messenger Invader Warrior
+(22123,8752,1,1,200,46), -- Monastic Crusader
+(22143,8752,1,1,200,35), -- Triol's Believer
+(21165,8752,1,1,200,34), -- Lesser Ancient Warrior
+(22144,8752,1,1,200,23), -- Resurrected Temple Knight
+(21186,8752,1,1,200,22), -- Lilim Court Knight
+(21185,8752,1,1,200,19), -- Lilim Great Mystic
+(21164,8752,1,1,200,19), -- Guardian Spirit of Ancient Holy Ground
+(22122,8752,1,1,200,15), -- Monastic Pilgrim
+(21163,8752,1,1,200,14), -- Lesser Ancient Shaman
+
+--  Mid-Grade Life Stone: level 52
+(21721,8735,1,1,200,3344), -- Purgatory Invader Elite Soldier
+(21705,8735,1,1,200,2398), -- Purgatory Invader Soldier
+(22064,8735,1,1,200,1695), -- Bloodthirsty Ginzu Golem II
+(21710,8735,1,1,200,1548), -- Purgatory Invader Priest
+(21723,8735,1,1,200,625), -- Purgatory Invader Elite Soldier
+(20136,8735,1,1,200,580), -- Death Knight
+(22062,8735,1,1,200,554), -- Horrifying Jackhammer Golem
+(20994,8735,1,1,200,430), -- Garden Guard Leader
+(21176,8735,1,1,200,324), -- Lilim Magus
+(21244,8735,1,1,200,299), -- Crypt Archon
+(21245,8735,1,1,200,272), -- Crypt Inquisitor
+(20642,8735,1,1,200,268), -- Harit Lizardman Archer
+(20941,8735,1,1,200,260), -- Tanor Silenos Chieftain
+(20596,8735,1,1,200,236), -- Liele Elder
+(21197,8735,1,1,200,228), -- Nephilim Priest
+(22075,8735,1,1,200,170), -- Epic Cannon Golem Adjunct
+(21151,8735,1,1,200,161), -- Decayed Ancient Knight
+(20996,8735,1,1,200,155), -- Spiteful Ghost of Ruins
+(20665,8735,1,1,200,150), -- Taik Orc Supply
+(21221,8735,1,1,200,149), -- Sepulcher Inquisitor
+(20945,8735,1,1,200,142), -- Cadeine
+(20675,8735,1,1,200,124), -- Tairim
+(20946,8735,1,1,200,117), -- Sanhidro
+(20241,8735,1,1,200,112), -- Hunter Gargoyle
+(20595,8735,1,1,200,110), -- Fline Elder
+(20240,8735,1,1,200,94), -- Royal Cave Servant
+(22057,8735,1,1,200,85), -- Spelunking Ant
+(21264,8735,1,1,200,72), -- Ol Mahum Transcender
+(20573,8735,1,1,200,71), -- Tarlk Basilisk
+(20146,8735,1,1,200,70), -- Headless Knight
+(20640,8735,1,1,200,59), -- Harit Lizardman
+(22058,8735,1,1,200,53), -- Horrifying Excavator Golem III
+(20641,8735,1,1,200,53), -- Harit Lizardman Grunt
+(20664,8735,1,1,200,50), -- Deprive
+(20574,8735,1,1,200,42), -- Elder Tarlk Basilisk
+(20666,8735,1,1,200,21), -- Taik Orc Seeker
+--  Mid-Grade Life Stone: level 55
+(20846,8736,1,1,200,6250), -- Doll Blader
+(21724,8736,1,1,200,3195), -- Purgatory Invader Elite Soldier
+(22076,8736,1,1,200,2374), -- Deadly Ginzu Golem V
+(21709,8736,1,1,200,1818), -- Purgatory Invader Shaman
+(21708,8736,1,1,200,1767), -- Purgatory Invader Elite Soldier
+(21718,8736,1,1,200,1314), -- Purgatory Invader Elite Soldier
+(21713,8736,1,1,200,1045), -- Purgatory Invader Warrior
+(21246,8736,1,1,200,661), -- Tomb Archon
+(21727,8736,1,1,200,564), -- Purgatory Invader Magus
+(20597,8736,1,1,200,334), -- Valley treant Elder
+(21177,8736,1,1,200,324), -- Lilim Knight Errant
+(20988,8736,1,1,200,305), -- Sairon's Puppet
+(20987,8736,1,1,200,304), -- Sairon's Doll
+(20645,8736,1,1,200,278), -- Harit Lizardman Matriarch
+(20599,8736,1,1,200,277), -- Unicorn Elder
+(20646,8736,1,1,200,260), -- Halingka
+(20598,8736,1,1,200,238), -- Satyr Elder
+(21198,8736,1,1,200,212), -- Nephilim Swordsman
+(21017,8736,1,1,200,206), -- Fallen Orc
+(22083,8736,1,1,200,179), -- Baby Panthera
+(20576,8736,1,1,200,162), -- Oel Mahum Witch Doctor
+(21222,8736,1,1,200,150), -- Sepulcher Archon
+(21001,8736,1,1,200,133), -- Wretched Archer
+(21719,8736,1,1,200,130), -- Purgatory Invader Elite Soldier
+(20669,8736,1,1,200,124), -- Taik Orc Supply Leader
+(20680,8736,1,1,200,124), -- Marsh Drake
+(21152,8736,1,1,200,117), -- Purgatory Wisp
+(22085,8736,1,1,200,97), -- Lost Gargoyle
+(22080,8736,1,1,200,89), -- Massive Maze Bandersnatch
+(20244,8736,1,1,200,76), -- Malruk Succubus
+(20667,8736,1,1,200,65), -- Farcran
+(20575,8736,1,1,200,64), -- Oel Mahum Warrior
+(22079,8736,1,1,200,61), -- Lost Bandersnatch
+(20947,8736,1,1,200,55), -- Connabi
+(20999,8736,1,1,200,51), -- Roving Soul
+(20678,8736,1,1,200,48), -- Tortured Undead
+(20245,8736,1,1,200,39), -- Malruk Succubus Turen
+(21000,8736,1,1,200,32), -- Soul of Ruins
+(22082,8736,1,1,200,30), -- Elder Lost Watcher
+(20679,8736,1,1,200,19), -- Marsh Stalker
+(20161,8736,1,1,200,12), -- Oel Mahum
+--  Mid-Grade Life Stone: level 58
+(22104,8737,1,1,200,52632), -- Freya's Dog
+(21154,8737,1,1,200,316), -- Hell Keeper Medusa
+(21199,8737,1,1,200,288), -- Nephilim Guard
+(21178,8737,1,1,200,253), -- Lilim Marauder
+(22087,8737,1,1,200,231), -- Pronghorn Spirit
+(21153,8737,1,1,200,218), -- Purgatory Serpent
+(21223,8737,1,1,200,205), -- Sepulcher Inquisitor
+(21247,8737,1,1,200,197), -- Tomb Inquisitor
+(20647,8737,1,1,200,181), -- Yintzu
+(22086,8737,1,1,200,121), -- Lost Gargoyle Youngling
+(20948,8737,1,1,200,117), -- Bartal
+(21003,8737,1,1,200,114), -- Grave Lich
+(21002,8737,1,1,200,113), -- Doom Scout
+(21018,8737,1,1,200,103), -- Ancient Gargoyle
+(20649,8737,1,1,200,96), -- Hamrut
+(22090,8737,1,1,200,89), -- Frost Tarantula
+(21020,8737,1,1,200,88), -- Fallen Orc Shaman
+(22091,8737,1,1,200,78), -- Lost Iron Golem
+(22084,8737,1,1,200,74), -- Panthera
+(22089,8737,1,1,200,66), -- Ice Tarantula
+(21004,8737,1,1,200,64), -- Dismal Pole
+(20949,8737,1,1,200,48), -- Luminun
+(21019,8737,1,1,200,47), -- Fallen Orc Archer
+--  Mid-Grade Life Stone: level 61
+(21728,8738,1,1,200,2740), -- Forbidden Path Invader Elite Soldier
+(21733,8738,1,1,200,492), -- Forbidden Path Invader Priest
+(21060,8738,1,1,200,350), -- Beast Seer
+(20772,8738,1,1,200,257), -- Barif's Pet
+(21521,8738,1,1,200,228), -- Claws of Splendor
+(20620,8738,1,1,200,218), -- Cave Beast
+(21084,8738,1,1,200,184), -- Bloody Lady
+(20811,8738,1,1,200,171), -- Ghastly Warrior
+(21520,8738,1,1,200,140), -- Eye of Splendor
+(21179,8738,1,1,200,129), -- Lilim Priest
+(21748,8738,1,1,200,123), -- Forbidden Path Invader Elite Soldier
+(21020,8738,1,1,200,120), -- Fallen Orc Shaman
+(21156,8738,1,1,200,107), -- Purgatory Shadow
+(20650,8738,1,1,200,104), -- Kranrot
+(21200,8738,1,1,200,97), -- Nephilim Bishop
+(20809,8738,1,1,200,95), -- Ghost of the Tower
+(21155,8738,1,1,200,94), -- Purgatory Conjurer
+(20134,8738,1,1,200,86), -- Cave Maiden
+(20651,8738,1,1,200,79), -- Gamlin
+(21522,8738,1,1,200,68), -- Claws of Splendor
+(21022,8738,1,1,200,62), -- Fallen Orc Captain
+(21224,8738,1,1,200,62), -- Sepulcher Guardian
+(21007,8738,1,1,200,59), -- Doom Guard
+(21524,8738,1,1,200,58), -- Blade of Splendor
+(20810,8738,1,1,200,57), -- Seer of Hallate
+(21525,8738,1,1,200,56), -- Blade of Splendor
+(21021,8738,1,1,200,54), -- Sharp Talon Tiger
+(21248,8738,1,1,200,49), -- Crypt Guardian
+(22093,8738,1,1,200,48), -- Lost Buffalo
+(22092,8738,1,1,200,46), -- Frost Iron Golem
+(22094,8738,1,1,200,40), -- Frost Buffalo
+(21006,8738,1,1,200,34), -- Doom Servant
+(21005,8738,1,1,200,33), -- Grave Predator
+(20954,8738,1,1,200,25), -- Hungered Corpse
+(21523,8738,1,1,200,20), -- Flash of Splendor
+(22095,8738,1,1,200,20), -- Ursus Cub
+(21746,8738,1,1,200,17), -- Forbidden Path Invader Elite Soldier
+--  Mid-Grade Life Stone: level 64
+(21747,8739,1,1,200,1245), -- Forbidden Path Invader Elite Soldier
+(21508,8739,1,1,200,728), -- Splinter Stakato
+(21750,8739,1,1,200,563), -- Forbidden Path Invader Magus
+(21743,8739,1,1,200,531), -- Forbidden Path Invader Elite Soldier
+(21742,8739,1,1,200,386), -- Forbidden Path Invader Elite Soldier
+(20818,8739,1,1,200,368), -- Hallate's Warrior
+(21730,8739,1,1,200,340), -- Forbidden Path Invader Archer
+(21732,8739,1,1,200,336), -- Forbidden Path Invader Shaman
+(21741,8739,1,1,200,274), -- Forbidden Path Invader Elite Soldier
+(21738,8739,1,1,200,264), -- Forbidden Path Invader Disciple
+(20654,8739,1,1,200,257), -- Lesser Giant Soldier
+(20624,8739,1,1,200,252), -- Cave Howler
+(21533,8739,1,1,200,241), -- Alliance of Splendor
+(20819,8739,1,1,200,232), -- Archer of Abyss
+(20815,8739,1,1,200,215), -- Hound Dog of Hallate
+(21731,8739,1,1,200,212), -- Forbidden Path Invader Elite Soldier
+(21447,8739,1,1,200,211), -- Raider of Pastureland
+(21202,8739,1,1,200,200), -- Nephilim Scout
+(20625,8739,1,1,200,174), -- Malruk Knight
+(21536,8739,1,1,200,173), -- Crown of Splendor
+(21557,8739,1,1,200,162), -- Bone Snatcher
+(21549,8739,1,1,200,164), -- Corrupted Guard
+(20814,8739,1,1,200,137), -- Blader of Despair
+(21180,8739,1,1,200,134), -- Lilim Knight
+(21558,8739,1,1,200,129), -- Bone Snatcher
+(20623,8739,1,1,200,119), -- Plando
+(21250,8739,1,1,200,119), -- Tomb Guardian
+(21543,8739,1,1,200,118), -- Page of Pilgrim
+(21225,8739,1,1,200,114), -- Sepulcher Sage
+(21548,8739,1,1,200,112), -- Resurrected Knight
+(21736,8739,1,1,200,108), -- Forbidden Path Invader Warrior
+(22132,8739,1,1,200,106), -- Judge of Light
+(21181,8739,1,1,200,106), -- Lilim Assassin
+(22096,8739,1,1,200,101), -- Ursus
+(20677,8739,1,1,200,100), -- Tulben
+(20822,8739,1,1,200,95), -- Hallate's Maid
+(21553,8739,1,1,200,92), -- Trampled Man
+(20621,8739,1,1,200,91), -- Death Wave
+(20816,8739,1,1,200,89), -- Hallate's Royal Guard
+(21249,8739,1,1,200,88), -- Crypt Sage
+(20674,8739,1,1,200,80), -- Doom Knight
+(20676,8739,1,1,200,79), -- Judge of Marsh
+(20671,8739,1,1,200,77), -- Kadios
+(20672,8739,1,1,200,71), -- Trives
+(21226,8739,1,1,200,70), -- Sepulcher Guardian
+(21535,8739,1,1,200,69), -- Signet of Splendor
+(20813,8739,1,1,200,69), -- Crendion
+(21157,8739,1,1,200,67), -- Purgatory Tarantula
+(20656,8739,1,1,200,66), -- Lesser Giant Scout
+(21451,8739,1,1,200,65), -- Alpen Kookaburra
+(21559,8739,1,1,200,63), -- Bone Maker
+(21444,8739,1,1,200,59), -- Raider of Pastureland
+(20622,8739,1,1,200,54), -- Malruk Soldier
+(21534,8739,1,1,200,51), -- Alliance of Splendor
+(21446,8739,1,1,200,48), -- Raider of Pastureland
+(21526,8739,1,1,200,46), -- Wisdom of Splendor
+(20956,8739,1,1,200,38), -- Past Knight
+(21527,8739,1,1,200,38), -- Anger of Splendor
+(22097,8739,1,1,200,31), -- Lost Yeti
+(22098,8739,1,1,200,30), -- Frost Yeti
+(21532,8739,1,1,200,29), -- Shout of Splendor
+(21531,8739,1,1,200,25), -- Punishment of Splendor
+(21009,8739,1,1,200,22), -- Doom Trooper
+(20955,8739,1,1,200,20), -- Ghostly Warrior
+(21530,8739,1,1,200,19), -- Victory of Splendor
+(20673,8739,1,1,200,14), -- Falibati
+(21658,8739,1,1,200,12), -- Punishment of Splendor
+--  Mid-Grade Life Stone: level 67
+(21767,8740,1,1,200,1459), -- Dark Omen Invader Elite Soldier
+(20830,8740,1,1,200,478), -- Guardian Angel
+(20829,8740,1,1,200,417), -- Platinum Tribe Overlord
+(21769,8740,1,1,200,400), -- Dark Omen Invader Elite Soldier
+(21064,8740,1,1,200,372), -- Platinum Guardian Archer
+(21086,8740,1,1,200,349), -- Bloody Liviona
+(21228,8740,1,1,200,317), -- Sepulcher Guard
+(20628,8740,1,1,200,314), -- Limal Karinness
+(21085,8740,1,1,200,305), -- Bloody Sniper
+(20826,8740,1,1,200,278), -- Platinum Tribe Archer
+(21160,8740,1,1,200,258), -- Purgatory Liviona
+(21229,8740,1,1,200,247), -- Sepulcher Preacher
+(21227,8740,1,1,200,239), -- Sepulcher Sage
+(21297,8740,1,1,200,231), -- Canyon Bandersnatch Slave
+(21204,8740,1,1,200,225), -- Nephilim Praetorian
+(21563,8740,1,1,200,218), -- Bone Collector
+(21296,8740,1,1,200,218), -- Canyon Bandersnatch
+(21566,8740,1,1,200,184), -- Skull Animator
+(20626,8740,1,1,200,168), -- Malruk Berserker
+(21568,8740,1,1,200,166), -- Devil Bat
+(21567,8740,1,1,200,124), -- Bone Slayer
+(21251,8740,1,1,200,123), -- Tomb Sage
+(21062,8740,1,1,200,123), -- Messenger Angel
+(21580,8740,1,1,200,120), -- Bone Caster
+(21065,8740,1,1,200,118), -- Platinum Guardian Warrior
+(20627,8740,1,1,200,117), -- Malruk Lord
+(20774,8740,1,1,200,117), -- Conjurer Bat
+(21600,8740,1,1,200,116), -- Requiem Behemoth
+(21110,8740,1,1,200,102), -- Marsh Predator
+(21061,8740,1,1,200,94), -- Hallate's Guardian
+(21183,8740,1,1,200,93), -- Lilim Knight Banneret
+(21279,8740,1,1,200,88), -- Antelope
+(21564,8740,1,1,200,86), -- Skull Collector
+(21771,8740,1,1,200,86), -- Dark Omen Invader Elite Soldier
+(21756,8740,1,1,200,82), -- Dark Omen Invader Priest
+(21281,8740,1,1,200,79), -- Antelope
+(21159,8740,1,1,200,77), -- Purgatory Gargoyle
+(21450,8740,1,1,200,69), -- Alpen Grendel
+(21182,8740,1,1,200,67), -- Lilim Soldier
+(21293,8740,1,1,200,65), -- Grendel
+(21574,8740,1,1,200,62), -- Bone Grinder
+(21285,8740,1,1,200,58), -- Bandersnatch
+(21203,8740,1,1,200,54), -- Nephilim Archbishop
+(20824,8740,1,1,200,50), -- Hallate's Commander
+(21108,8740,1,1,200,44), -- Glow Wisp
+(21537,8740,1,1,200,39), -- Fang of Splendor
+(21158,8740,1,1,200,39), -- Hell Keeper Crimson Doll
+(21274,8740,1,1,200,36), -- Kookaburra
+(21294,8740,1,1,200,36), -- Canyon Antelope
+(21282,8740,1,1,200,30), -- Bandersnatch
+(21109,8740,1,1,200,29), -- Hames Orc Scout
+(21449,8740,1,1,200,27), -- Raider of Pastureland
+(21539,8740,1,1,200,23), -- Wailing of Splendor
+(21286,8740,1,1,200,22), -- Buffalo
+(21277,8740,1,1,200,22), -- Kookaburra
+(21540,8740,1,1,200,22), -- Wailing of Splendor
+--  Mid-Grade Life Stone: level 70
+(22108,8741,1,1,200,2288), -- Female Spiked Stakato
+(22113,8741,1,1,200,2053), -- Cannibalistic Stakato Leader
+(21770,8741,1,1,200,1838), -- Dark Omen Invader Elite Soldier
+(21070,8741,1,1,200,857), -- Seal Archangel
+(21754,8741,1,1,200,408), -- Dark Omen Invader Elite Soldier
+(21089,8741,1,1,200,382), -- Bloody Lord
+(21305,8741,1,1,200,380), -- Eye of Pilgrim
+(20831,8741,1,1,200,379), -- Seal Angel
+(21161,8741,1,1,200,298), -- Lesser Ancient Soldier
+(21308,8741,1,1,200,287), -- Disciples of Punishment
+(21768,8741,1,1,200,286), -- Dark Omen Invader Warrior
+(21090,8741,1,1,200,275), -- Bloody Guardian
+(21162,8741,1,1,200,239), -- Lesser Ancient Scout
+(20966,8741,1,1,200,235), -- Black Shadow
+(21764,8741,1,1,200,220), -- Dark Omen Invader Elite Soldier
+(21588,8741,1,1,200,197), -- Vampire Wizard
+(21753,8741,1,1,200,187), -- Dark Omen Invader Archer
+(21069,8741,1,1,200,180), -- Platinum Guardian Prefect
+(21254,8741,1,1,200,164), -- Tomb Guard
+(21316,8741,1,1,200,163), -- Hot Springs Flava
+(21184,8741,1,1,200,150), -- Lilim Slayer
+(21773,8741,1,1,200,145), -- Dark Omen Invader Magus
+(21317,8741,1,1,200,143), -- Hot Springs Atroxspawn
+(21314,8741,1,1,200,141), -- Hot Springs Bandersnatchling
+(21302,8741,1,1,200,140), -- Eye of Watchman
+(21067,8741,1,1,200,135), -- Guardian Archangel
+(21087,8741,1,1,200,125), -- Bloody Knight
+(21303,8741,1,1,200,113), -- Homunculus
+(21594,8741,1,1,200,104), -- Vampire Warlord
+(21230,8741,1,1,200,93), -- Sepulcher Guard
+(21306,8741,1,1,200,90), -- Disciples of Protection
+(21205,8741,1,1,200,89), -- Nephilim Royal Guard
+(21765,8741,1,1,200,87), -- Dark Omen Invader Elite Soldier
+(21319,8741,1,1,200,80), -- Hot Springs Nepenthes
+(21320,8741,1,1,200,71), -- Hot Springs Yeti
+(21647,8741,1,1,200,55), -- Scavenger Scarab
+(21648,8741,1,1,200,50), -- Grave Ant
+(21315,8741,1,1,200,50), -- Hot Springs Buffalo
+(21595,8741,1,1,200,44), -- Vampire Warlord
+(21115,8741,1,1,200,42), -- Hames Orc Shaman
+(21116,8741,1,1,200,32), -- Hames Orc Overlord
+(21318,8741,1,1,200,27), -- Hot Springs Antelope
+(21114,8741,1,1,200,13), -- Cursed Guardian
+--  Mid-Grade Life Stone: level 76
+(21792,8742,1,1,200,4273), -- Messenger Invader Elite Soldier
+(21414,8742,1,1,200,2538), -- Assassin of Empire
+(21781,8742,1,1,200,2341), -- Messenger Invader Martyrs
+(21793,8742,1,1,200,2155), -- Messenger Invader Elite Soldier
+(22145,8742,1,1,200,946), -- Ritual Sacrifice
+(22155,8742,1,1,200,942), -- Triol's High Priest
+(21373,8742,1,1,200,882), -- Varka's Prophet
+(21411,8742,1,1,200,862), -- Guardian Scarab
+(22135,8742,1,1,200,632), -- Beholder of Light
+(21430,8742,1,1,200,592), -- Arimanes
+(21336,8742,1,1,200,555), -- Ketra Orc White Captain
+(21434,8742,1,1,200,537), -- Seer of Blood
+(21794,8742,1,1,200,509), -- Messenger Invader Elite Soldier
+(21367,8742,1,1,200,486), -- Grazing Elder Antelope
+(21420,8742,1,1,200,486), -- Ashuras
+(21310,8742,1,1,200,465), -- Disciples of Authority
+(21355,8742,1,1,200,426), -- Varka Silenos Shaman
+(21790,8742,1,1,200,406), -- Messenger Invader Elite Soldier
+(21364,8742,1,1,200,388), -- Varka Silenos Seer
+(22139,8742,1,1,200,371), -- Old Aristocrat's Soldier
+(21186,8742,1,1,200,326), -- Lilim Court Knight
+(22140,8742,1,1,200,326), -- Zombie Worker
+(22131,8742,1,1,200,320), -- Pilgrim of Light
+(21333,8742,1,1,200,320), -- Grazing Windsus
+(22130,8742,1,1,200,318), -- Divine Advocate
+(22143,8742,1,1,200,314), -- Triol's Believer
+(21255,8742,1,1,200,295), -- Tomb Preacher
+(22124,8742,1,1,200,289), -- Solina Brother
+(21653,8742,1,1,200,277), -- Assassin Beetle
+(21823,8742,1,1,200,276), -- Executor of Sacrificial Offerings
+(21652,8742,1,1,200,274), -- Scarlet Stakato Noble
+(22125,8742,1,1,200,249), -- Solina Lay Brother
+(21185,8742,1,1,200,245), -- Lilim Great Mystic
+(21207,8742,1,1,200,231), -- Nephilim Commander
+(21776,8742,1,1,200,229), -- Messenger Invader Archer
+(21789,8742,1,1,200,200), -- Messenger Invader Elite Soldier
+(21357,8742,1,1,200,195), -- Varka Silenos Priest
+(21795,8742,1,1,200,171), -- Messenger Invader Elite Soldier
+(21426,8742,1,1,200,168), -- Abraxion
+(22126,8742,1,1,200,165), -- Silent Seeker
+(22122,8742,1,1,200,163), -- Monastic Pilgrim
+(22154,8742,1,1,200,157), -- Ritual Sacrifice
+(21428,8742,1,1,200,157), -- Hasturan
+(21424,8742,1,1,200,157), -- Ashkenas
+(21436,8742,1,1,200,139), -- Leader of Offering
+(21351,8742,1,1,200,138), -- Varka Silenos Footman
+(21163,8742,1,1,200,137), -- Lesser Ancient Shaman
+(21165,8742,1,1,200,133), -- Lesser Ancient Warrior
+(21377,8742,1,1,200,133), -- Scarlet Stakato Soldier
+(21378,8742,1,1,200,127), -- Scarlet Stakato Noble
+(22144,8742,1,1,200,119), -- Resurrected Temple Knight
+(21352,8742,1,1,200,112), -- Grazing Antelope
+(21360,8742,1,1,200,103), -- Varka Silenos Medium
+(21425,8742,1,1,200,93), -- Ashkenas
+(21350,8742,1,1,200,81), -- Varka Silenos Recruit
+(21206,8742,1,1,200,79), -- Nephilim Cardinal
+(22123,8742,1,1,200,53), -- Monastic Crusader
+(21164,8742,1,1,200,49), -- Guardian Spirit of Ancient Holy Ground
+(21427,8742,1,1,200,34), -- Abraxion
+(22142,8742,1,1,200,21); -- Triol's Layperson
