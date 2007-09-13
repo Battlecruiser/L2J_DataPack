@@ -1,5 +1,5 @@
 Given the fact that no convention is widely adopted for the naming of these files yet, 
-i decided to keep a list of what each file is meant to be, to improve the usability
+I decided to keep a list of what each file is meant to be, to improve the usability
 of this directory a little bit.
 
 001.xml  -> Non-grade items exchange, just for education
@@ -29,11 +29,20 @@ of this directory a little bit.
 6281.xml -> Swamp of Screams: Abercrombie, first list
 6282.xml -> Swamp of Screams: Abercrombie, second list
 
-7097.xml -> Prestigious Items Hall: Galladucci
-7098.xml -> Prestigious Items Hall: Alexandria
-
 7834.xml -> Quest 343: Under The Shadow Of The Ivory Tower, exchange Orbs
 7897.xml -> Quest 351: BlackSwan, exchange Bills
+
+301660373.xml -> Quest 373: Supplier of Reagents - Wesley
+
+310820001.xml -> Varka alliance - Lv1
+310820002.xml -> Varka alliance - Lv2
+310820003.xml -> Varka alliance - Lv3
+313750001.xml -> Ketra alliance - Lv1
+313750002.xml -> Ketra alliance - Lv2
+313750003.xml -> Ketra alliance - Lv3
+
+306781001.xml -> Dual swords: Helton, require dualsword craft stamp
+308461001.xml -> Dual swords: Wilbert, doesn't require dualsword craft stamp
 
 310922001.xml -> Seven Signs - Black Marketeer of Mammon - SA Removal for AA
 310922002.xml -> Seven Signs - Black Marketeer of Mammon - Black Market Items
@@ -51,18 +60,23 @@ of this directory a little bit.
 311262511.xml -> Seven Signs - Blacksmith of Mammon - Weapon Upgrade
 311262512.xml -> Seven Signs - Blacksmith of Mammon - Weapon Exchange
 
-306781001.xml -> Dual swords: Helton, require dualsword craft stamp
-308461001.xml -> Dual swords: Wilbert, doesn't require dualsword craft stamp
-
-310820001.xml -> Varka alliance - Lv1
-310820002.xml -> Varka alliance - Lv2
-310820003.xml -> Varka alliance - Lv3
-313750001.xml -> Ketra alliance - Lv1
-313750002.xml -> Ketra alliance - Lv2
-313750003.xml -> Ketra alliance - Lv3
-
-301660373.xml -> Quest 373: Supplier of Reagents - Wesley
-
 306893001.xml -> Shadow weaponry system. D-grade coupons exchange
 313213001.xml -> Shadow weaponry system. C-grade coupons exchange
 319463001.xml -> Shadow weaponry system. Adena exchange
+
+300974001.xml -> Prestigious Items Hall: Galladucci (weapons)
+300984001.xml -> Prestigious Items Hall: Alexandria (armors)
+300984002.xml -> Prestigious Items Hall: Alexandria (misc)
+
+317325001.xml -> Adventure Guildsman: Use Life Crystal Schuttgart
+317325002.xml -> Adventure Guildsman: Adventurer's Box
+318055002.xml -> Adventure Guildsman: Use Life Crystal Giran
+318145003.xml -> Adventure Guildsman: Use Life Crystal Oren
+318275004.xml -> Adventure Guildsman: Use Life Crystal Aden
+318375005.xml -> Adventure Guildsman: Use Life Crystal Goddard
+318235006.xml -> Adventure Guildsman: Use Life Crystal Hunters Village
+318195007.xml -> Adventure Guildsman: Use Life Crystal Heine
+318335008.xml -> Adventure Guildsman: Use Life Crystal Rune
+317885009.xml -> Adventure Guildsman: Use Life Crystal Gludin
+317925010.xml -> Adventure Guildsman: Use Life Crystal Gludio
+317975011.xml -> Adventure Guildsman: Use Life Crystal Dion
