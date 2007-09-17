@@ -8276,7 +8276,6 @@ INSERT INTO `droplist` VALUES
 (20823,5550,1,1,2,4175), -- Durable Metal Plate
 (20824,4078,1,1,-1,102642), -- Blue Wolf Breastplate Part
 (20824,4081,1,1,-1,69258), -- Doom Plate Armor Temper
-(20824,5230,1,1,-1,9369), -- Recipe: Mithril Arrow (100%)
 (20824,57,2826,5774,0,700000), -- Adena
 (20824,864,1,1,1,75), -- Earring of Black Ore
 (20824,895,1,1,1,113), -- Ring of Black Ore
@@ -16157,7 +16156,6 @@ INSERT INTO `droplist` VALUES
 (21467,1884,1,1,2,129024), -- Cord
 (21467,4039,1,1,2,6989), -- Mold Glue
 (21467,5440,1,1,2,78), -- Recipe: Elysian(60%)
-(21468,1885,1,1,-1,725796), -- High Grade Suede
 (21468,4052,1,1,-1,308357), -- Earring of Black Ore Piece
 (21468,5220,1,1,-1,348382), -- Metal Hardener
 (21468,57,3673,7352,0,700000), -- Adena
@@ -16283,7 +16281,6 @@ INSERT INTO `droplist` VALUES
 (21482,57,2238,4479,0,700000), -- Adena
 (21483,1877,1,1,-1,220665), -- Adamantite Nugget
 (21483,4040,1,1,-1,110332), -- Mold Lubricant
-(21483,4084,1,1,-1,95874), -- Blue Wolf Tunic Fabric
 (21483,287,1,1,1,13), -- Bow of Peril
 (21483,4121,1,1,1,3549), -- Bow of Peril Shaft
 (21483,1343,20,60,2,166279), -- Silver Arrow
@@ -16310,7 +16307,6 @@ INSERT INTO `droplist` VALUES
 (21484,1881,1,1,2,37641), -- Coarse Bone Powder
 (21484,4041,1,1,2,2455), -- Mold Hardener
 (21484,6337,1,1,2,1448), -- Recipe: Sealed Majestic Earring(70%)
-(21485,1875,1,1,-1,367774), -- Stone of Purity
 (21485,4040,1,1,-1,110332), -- Mold Lubricant
 (21485,4086,1,1,-1,129452), -- Blue Wolf Stockings Pattern
 (21485,864,1,1,1,59), -- Earring of Black Ore
@@ -16343,11 +16339,9 @@ INSERT INTO `droplist` VALUES
 (21486,5220,1,1,2,10448), -- Metal Hardener
 (21487,1894,1,1,-1,326320), -- Crafted Leather
 (21487,4089,1,1,-1,351478), -- Doom Helmet Pattern
-(21487,6329,1,1,-1,53449), -- Recipe: Sealed Phoenix Necklace(70%)
 (21487,57,3923,7851,0,700000), -- Adena
 (21488,4044,1,1,-1,295712), -- Thons
 (21488,4090,1,1,-1,398265), -- Blue Wolf Boots Design
-(21488,6331,1,1,-1,67720), -- Recipe: Sealed Phoenix Earring(70%)
 (21488,57,3742,7489,0,700000), -- Adena
 (21489,1877,1,1,-1,42470), -- Adamantite Nugget
 (21489,4040,1,1,-1,21235), -- Mold Lubricant
@@ -16445,7 +16439,6 @@ INSERT INTO `droplist` VALUES
 (21501,57,2386,4775,0,700000), -- Adena
 (21502,730,1,1,-1,4903), -- Scroll: Enchant Armor (Grade A)
 (21502,1885,1,1,-1,490275), -- High Grade Suede
-(21502,4041,1,1,-1,51159), -- Mold Hardener
 (21502,1343,560,1680,2,79166), -- Silver Arrow
 (21502,1866,20,60,2,51722), -- Suede
 (21502,1871,9,27,2,172405), -- Charcoal
@@ -16478,7 +16471,6 @@ INSERT INTO `droplist` VALUES
 (21504,5549,1,1,2,24827), -- Metallic Thread
 (21505,4043,1,1,-1,188604), -- Asofe
 (21505,5532,1,1,-1,19080), -- Meteor Shower Head
-(21505,5550,1,1,-1,75442), -- Durable Metal Plate
 (21505,235,1,1,1,10), -- Bloody Orchid
 (21505,5536,1,1,1,2843), -- Bloody Orchid Head
 (21505,1864,1,3,2,278555), -- Stem
@@ -16491,7 +16483,6 @@ INSERT INTO `droplist` VALUES
 (21506,5456,1,1,-1,3673), -- Recipe: Tallum Glaive(60%)
 (21506,5535,1,1,-1,33842), -- Carnage Bow Stave
 (21506,57,4183,8371,0,700000), -- Adena
-(21507,730,1,1,-1,7884), -- Scroll: Enchant Armor (Grade A)
 (21507,4041,1,1,-1,82270), -- Mold Hardener
 (21507,5536,1,1,-1,32189), -- Bloody Orchid Head
 (21507,57,3990,7985,0,700000), -- Adena
@@ -16897,7 +16888,6 @@ INSERT INTO `droplist` VALUES
 (21533,4041,1,1,2,961), -- Mold Hardener
 (21533,5456,1,1,2,41), -- Recipe: Tallum Glaive(60%)
 (21534,4077,1,1,-1,155732), -- Doom Shield Fragment
-(21534,4078,1,1,-1,50569), -- Blue Wolf Breastplate Part
 (21534,5470,1,1,-1,1892), -- Recipe: Tallum Blade(60%)
 (21534,57,1399,2837,0,700000), -- Adena
 (21534,864,1,1,1,37), -- Earring of Black Ore
@@ -17191,7 +17181,6 @@ INSERT INTO `droplist` VALUES
 (21552,5220,1,1,2,4823), -- Metal Hardener
 (21553,1895,1,1,-1,603815), -- Metallic Fiber
 (21553,4080,1,1,-1,43471), -- Blue Wolf Gaiters Material
-(21553,6329,1,1,-1,12146), -- Recipe: Sealed Phoenix Necklace(70%)
 (21553,57,854,1732,0,700000), -- Adena
 (21553,601,1,1,1,20), -- Boots of Doom
 (21553,2439,1,1,1,20), -- Blue Wolf Boots
@@ -17227,7 +17216,6 @@ INSERT INTO `droplist` VALUES
 (21554,5462,1,1,2,39), -- Recipe: Branch of The Mother Tree(60%)
 (21555,4082,1,1,-1,29030), -- Blue Wolf Leather Armor Texture
 (21555,4083,1,1,-1,29030), -- Leather Armor of Doom Design
-(21555,6333,1,1,-1,29497), -- Recipe: Sealed Phoenix Ring(70%)
 (21555,57,1038,2106,0,700000), -- Adena
 (21555,268,1,1,1,6), -- Bellion Cestus
 (21555,4120,1,1,1,1659), -- Bellion Cestus Edge
@@ -17239,7 +17227,6 @@ INSERT INTO `droplist` VALUES
 (21555,5466,1,1,2,47), -- Recipe: Sword of Miracles(60%)
 (21556,4082,1,1,-1,28328), -- Blue Wolf Leather Armor Texture
 (21556,4083,1,1,-1,28328), -- Leather Armor of Doom Design
-(21556,6333,1,1,-1,28783), -- Recipe: Sealed Phoenix Ring(70%)
 (21556,57,1013,2055,0,700000), -- Adena
 (21556,268,1,1,1,6), -- Bellion Cestus
 (21556,4120,1,1,1,1618), -- Bellion Cestus Edge
@@ -25719,39 +25706,63 @@ INSERT INTO `droplist` VALUES
 -- work in progress drops.. once chance becomes more accurate, can move into known good drops
 -- 
 INSERT INTO `droplist` VALUES 
-(20623,5332,1,1,2,1148), -- Recipe: Sealed Dark Crystal Leather Armor(60%)
-(20624,5340,1,1,2,1084), -- Recipe: Sealed Dark Crystalline Leggings(60%)
-(20626,5334,1,1,2,641), -- Recipe: Sealed Tallum Leather Armor(60%)
-(20761,5338,1,1,2,364), -- Recipe: Sealed Majestic Leather Armor(60%)
-(20762,5336,1,1,2,330), -- Recipe: Sealed Leather Armor of Nightmare(60%)
-(20818,5416,1,1,2,308), -- Recipe: Sealed Dark Crystal Breastplate(60%)
+(21465,5370,1,1,2,3534), -- Recipe: Sealed Tallum Boots(60%)
+(21466,5368,1,1,2,1244), -- Recipe: Sealed Dark Crystal Boots(60%)
+(21467,5368,1,1,2,3049), -- Recipe: Sealed Dark Crystal Boots(60%)
+(21468,5370,1,1,-1,40000),-- Recipe: Sealed Tallum Boots(60%)
+(21470,5364,1,1,2,143), -- Recipe: Sealed Dark Crystal Shield(60%)
+(21483,5364,1,1,-1,36232), -- Recipe: Sealed Dark Crystal Shield(60%)
+(21485,5368,1,1,-1,43478), -- Recipe: Sealed Dark Crystal Boots(60%)
+(21487,5428,1,1,-1,5464), -- Recipe: Sealed Tallum Helmet(60%)
+(21488,5426,1,1,-1,6645), -- Recipe: Sealed Dark Crystal Helmet(60%)
+(21497,5366,1,1,2,342), -- Recipe: Sealed Shield of Nightmare(60%)
+(21502,5432,1,1,-1,28373), -- Recipe: Sealed Majestic Circlet(60%)
+(21504,5432,1,1,2,541), -- Recipe: Sealed Majestic Circlet(60%)
+(21505,5430,1,1,2,68), --Recipe: Sealed Helm of Nightmare(60%)
+(21505,5366,1,1,-1,40323), -- Recipe: Sealed Shield of Nightmare(60%)
+(21507,5430,1,1,-1,15152), --Recipe: Sealed Helm of Nightmare(60%)
+(20984,5420,1,1,2,187), -- Recipe: Sealed Armor of Nightmare(60%)
+(21554,5348,1,1,2,66), -- Recipe: Sealed Dark Crystal Robe(60%)
+(21533,5348,1,1,-1,3099), -- Recipe: Sealed Dark Crystal Robe(60%)
+(21534,5348,1,1,-1,3099), -- Recipe: Sealed Dark Crystal Robe(60%)
+(21075,5418,1,1,2,492), -- Recipe: Sealed Tallum Plate Armor(60%)
+(21555,5354,1,1,-1,28571), -- Recipe: Sealed Tallum Stockings(60%)
+(21556,5354,1,1,-1,28571), -- Recipe: Sealed Tallum Stockings(60%)
+(21553,5346,1,1,-1,14286), -- Recipe: Sealed Tallum Tunic(60%)
+(21554,5346,1,1,-1,14286), -- Recipe: Sealed Tallum Tunic(60%)
+(20623,5332,1,1,2,571), -- Recipe: Sealed Dark Crystal Leather Armor(60%)
+(20624,5340,1,1,2,552), -- Recipe: Sealed Dark Crystalline Leggings(60%)
+(20626,5334,1,1,2,441), -- Recipe: Sealed Tallum Leather Armor(60%)
+(20761,5338,1,1,2,274), -- Recipe: Sealed Majestic Leather Armor(60%)
+(20762,5336,1,1,2,351), -- Recipe: Sealed Leather Armor of Nightmare(60%)
+(20818,5416,1,1,2,210), -- Recipe: Sealed Dark Crystal Breastplate(60%)
 (20820,5424,1,1,2,357), -- Recipe: Sealed Dark Crystal Gaiters(60%)
-(20827,5420,1,1,2,271), -- Recipe: Sealed Armor of Nightmare(60%)
-(21061,5422,1,1,2,281), -- Recipe: Sealed Majestic Plate Armor(60%)
-(21069,5422,1,1,2,504), -- Recipe: Sealed Majestic Plate Armor(60%)
-(21298,5380,1,1,2,563), -- Recipe: Sealed Boots of Nightmare(60%)
-(21299,5382,1,1,2,1394), -- Recipe: Sealed Majestic Boots(60%)
+(20827,5420,1,1,2,509), -- Recipe: Sealed Armor of Nightmare(60%)
+(21061,5422,1,1,2,215), -- Recipe: Sealed Majestic Plate Armor(60%)
+(21069,5422,1,1,2,330), -- Recipe: Sealed Majestic Plate Armor(60%)
+(21298,5380,1,1,2,537), -- Recipe: Sealed Boots of Nightmare(60%)
+(21299,5382,1,1,2,765), -- Recipe: Sealed Majestic Boots(60%) 
 (21299,8331,1,1,1,1114), -- Infernal Master Blade
-(21301,5404,1,1,2,2173), -- Recipe: Sealed Gloves of Nightmare(60%)
-(21302,5382,1,1,2,1508), -- Recipe: Sealed Majestic Boots(60%)
+(21301,5404,1,1,2,693), -- Recipe: Sealed Gloves of Nightmare(60%)
+(21302,5382,1,1,2,694), -- Recipe: Sealed Majestic Boots(60%)
 (21302,8331,1,1,1,1206), -- Infernal Master Blade
-(21303,5406,1,1,2,1436), -- Recipe: Sealed Majestic Gloves(60%)
+(21303,5406,1,1,2,1639), -- Recipe: Sealed Majestic Gloves(60%)
 (21303,7899,1,1,1,6), -- Destroyer Hammer
 (21303,8341,1,1,1,901), -- Spiritual Eye Piece
 (21303,8346,1,1,1,1102), -- Hammer Piece of Destroyer 
-(21313,5380,1,1,2,3012), -- Recipe: Sealed Boots of Nightmare(60%)
-(21531,5392,1,1,2,1172), -- Recipe: Sealed Dark Crystal Gloves(60%)
-(21539,5394,1,1,2,1072), -- Recipe: Sealed Tallum Gloves(60%)
-(21541,5392,1,1,2,1524), -- Recipe: Sealed Dark Crystal Gloves(60%)
-(21544,5392,1,1,2,1422), -- Recipe: Sealed Dark Crystal Gloves(60%)
-(21546,5394,1,1,2,579), -- Recipe: Sealed Tallum Gloves(60%)
-(21547,5346,1,1,2,808), -- Recipe: Sealed Tallum Tunic(60%)
-(21548,5346,1,1,2,97), -- Recipe: Sealed Tallum Tunic(60%)
-(21549,5354,1,1,2,546), -- Recipe: Sealed Tallum Stockings(60%)
-(21550,5354,1,1,2,393), -- Recipe: Sealed Tallum Stockings(60%)
-(21553,5348,1,1,2,328), -- Recipe: Sealed Dark Crystal Robe(60%)
-(21572,5352,1,1,2,86), -- Recipe: Sealed Majestic Robe(60%)
-(21596,5350,1,1,2,184); -- Recipe: Sealed Robe of Nightmare(60%)
+(21313,5380,1,1,2,1972), -- Recipe: Sealed Boots of Nightmare(60%)
+(21531,5392,1,1,2,600), -- Recipe: Sealed Dark Crystal Gloves(60%)
+(21539,5394,1,1,2,786), -- Recipe: Sealed Tallum Gloves(60%)
+(21541,5392,1,1,2,520), -- Recipe: Sealed Dark Crystal Gloves(60%)
+(21544,5392,1,1,2,762), -- Recipe: Sealed Dark Crystal Gloves(60%)
+(21546,5394,1,1,2,757), -- Recipe: Sealed Tallum Gloves(60%)
+(21547,5346,1,1,2,146), -- Recipe: Sealed Tallum Tunic(60%)
+(21548,5346,1,1,2,210), -- Recipe: Sealed Tallum Tunic(60%)
+(21549,5354,1,1,2,173), -- Recipe: Sealed Tallum Stockings(60%)
+(21550,5354,1,1,2,150), -- Recipe: Sealed Tallum Stockings(60%)
+(21553,5348,1,1,2,84), -- Recipe: Sealed Dark Crystal Robe(60%)
+(21572,5352,1,1,2,223), -- Recipe: Sealed Majestic Robe(60%)
+(21596,5350,1,1,2,247); -- Recipe: Sealed Robe of Nightmare(60%) 
 
 INSERT INTO `droplist` VALUES 
 -- Ant Guard
@@ -25804,7 +25815,7 @@ INSERT INTO `droplist` VALUES
 (20823,5416,1,1,-1,30303), -- recipe: sealed Dark Crystal Breastplate(60%)
 
 -- Hallate's Commander
-(20824,5424,1,1,-1,21739), -- recipe: sealed Dark Crystal Gaiters(60%)
+(20824,5424,1,1,-1,19448), -- recipe: sealed Dark Crystal Gaiters(60%)
 
 -- Hatu Brown Bear
 (20930,8317,1,1,2,150), -- Recipe: Titan Hammer (100%)
