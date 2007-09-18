@@ -205,7 +205,7 @@ INSERT INTO `skill_spellbooks` VALUES
 (1262,4206), -- Spellbook: Transfer Pain
 (1263,4208), -- Spellbook: Curse Gloom
 
-/* c3 skill spellbooks (most of them anyway - thx Luno) */
+-- c3 skill spellbooks (most of them anyway - thx Luno)
 
 (1264,4906), -- Spellbook: Solar Spark
 (1265,4907), -- Spellbook: Solar Flare
@@ -254,7 +254,7 @@ INSERT INTO `skill_spellbooks` VALUES
 (1310,6397), -- Amulet: Chant of Vampire
 (1311,6398), -- Spellbook: Body of Avatar
 
-/* C4 Spellbooks and Amulets */
+-- C4 Spellbooks and Amulets
 
 (1328,7638), -- Spellbook - Mass Summon Storm Cubic
 (1329,7639), -- Spellbook - Mass Summon Aqua Cubic
@@ -297,7 +297,7 @@ INSERT INTO `skill_spellbooks` VALUES
 (1366,7676), -- Amulet - Seal of Despair
 (1367,7835); -- Amulet: Seal of Disease
 
-/* C5 Spellbooks and Amulets (tnx ThePhoenixBird) */
+-- C5 Spellbooks and Amulets (tnx ThePhoenixBird)
 
 INSERT INTO `skill_spellbooks` VALUES
 (1380,8380), -- Spellbook: Betray
@@ -324,13 +324,13 @@ INSERT INTO `skill_spellbooks` VALUES
 (1401,8401), -- Spellbook: Major Heal
 (1402,8402); -- Spellbook: Major Group Heal
 
-/* Late C5 Spellbooks and Amulets */
+-- Late C5 Spellbooks and Amulets
 
 INSERT INTO `skill_spellbooks` VALUES 
 (1403,8616), -- Spellbook: Summon Friend
 (1404,8617); -- Spellbook: Word of Invitation
 
-/* Interlude Spellbooks and Amulets */
+-- Interlude Spellbooks and Amulets
 
 INSERT INTO `skill_spellbooks` VALUES 
 (438,8877), -- Spellbook: Soul of the Phoenix
