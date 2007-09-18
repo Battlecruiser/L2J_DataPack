@@ -277,6 +277,7 @@ __all__ = [
 '629_CleanUpTheSwampOfScreams',
 '631_DeliciousTopChoiceMeat',
 '634_InSearchofDimensionalFragments',
+'635_InTheDimensionalRift',
 '636_TruthBeyond',
 '637_ThroughOnceMore',
 '645_GhostsOfBatur',
