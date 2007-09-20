@@ -136,7 +136,6 @@ class Quest (JQuest) :
           st.takeItems(ROUTS_TP_SCROLL,1)
           st.giveItems(SUCCUBUS_UNDIES,1)
           st.set("cond","11")
-          st.getPcSpawn().removeAllSpawn()
         else:
             htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>" 
     return htmltext
@@ -285,7 +284,7 @@ class Quest (JQuest) :
           if st.getInt("id") > 20 :
             n = ((st.getInt("id")-20)*10)
             if st.getRandom(100) <= n :
-              st.getPcSpawn().addSpawn(27058)
+              st.addSpawn(27058)
               st.set("id","0")
             else:
               st.set("id",str(st.getInt("id")+1))

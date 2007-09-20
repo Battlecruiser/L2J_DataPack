@@ -151,7 +151,6 @@ class Quest (JQuest) :
       st.giveItems(MARK_OF_CHALLENGER,1)
       st.setState(COMPLETED)
       st.playSound("ItemSound.quest_finish")
-      st.getPcSpawn().removeAllSpawn()
       st.set("cond","0")
    elif npcId == 30535 and cond == 7 :
       if player.getLevel() >= 36 :
@@ -176,7 +175,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 27110 and cond == 1 and not st.getQuestItemsCount(BROKEN_KEY) :
       st.giveItems(BROKEN_KEY,1)
-      st.getPcSpawn().addSpawn(30647,npc,True)
+      st.addSpawn(30647,npc,True)
       st.playSound("ItemSound.quest_middle")
       st.set("cond","2")
    elif npcId == 27112 and cond == 4 and not st.getQuestItemsCount(WATCHERS_EYE1) :
@@ -187,12 +186,11 @@ class Quest (JQuest) :
       st.giveItems(WATCHERS_EYE2,1)
       st.playSound("ItemSound.quest_middle")
       st.set("cond","7")
-      st.getPcSpawn().addSpawn(30646,npc,True)
+      st.addSpawn(30646,npc,True)
    elif npcId == 27114 and cond == 9 :
       st.set("cond","10")
       st.playSound("ItemSound.quest_middle")
-      st.getPcSpawn().removeAllSpawn()
-      st.getPcSpawn().addSpawn(30646,npc,True)
+      st.addSpawn(30646,npc,True)
    return
 
 QUEST       = Quest(211,qn,"Trial Of Challenger")

@@ -140,7 +140,7 @@ class Quest (JQuest) :
         st.takeItems(BEAR_FANG_NECKLACE,1)
       elif event == "30649_4" :
         htmltext = "30649-07.htm"
-        st.getPcSpawn().addSpawn(30643,21036,-107690,-3038)
+        st.addSpawn(30643,21036,-107690,-3038)
         st.set("markantusStat","4")
       elif event == "30643_1" :
         htmltext = "30643-02.htm"
@@ -322,7 +322,7 @@ class Quest (JQuest) :
             st.takeItems(RAGNA_CHIEF_NOTICE,1)
           elif markantus==3:
             htmltext = "30649-07.htm"
-            st.getPcSpawn().addSpawn(30643,21036,-107690,-3038)
+            st.addSpawn(30643,21036,-107690,-3038)
             st.set("markantusStat","4")
           elif markantus>3:
             htmltext = "30649-08.htm"

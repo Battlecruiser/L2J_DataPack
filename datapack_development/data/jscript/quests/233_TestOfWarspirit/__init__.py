@@ -347,7 +347,7 @@ class Quest (JQuest) :
             # spawns 5 new medusas around the dead queen *muha*
             if npcId == 27108:
               for i in range(5):
-                st.getPcSpawn().addSpawn(20158)
+                st.addSpawn(20158)
             if count == maxcount-1:
               st.playSound("ItemSound.quest_middle")
               st.set(var,str(isValue+1))

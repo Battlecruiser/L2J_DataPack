@@ -162,7 +162,7 @@ class Quest (JQuest) :
            if npcId == FAIRY_TREES[i][0] and (st.getInt("id") | FAIRY_TREES[i][1] != st.getInt("id")) :
               for j in range(2):
                  for k in range(2): 
-                    st.getPcSpawn().addSpawn(GUARDIAN,FAIRY_TREES[i][2]+70*pow(-1,j%2),FAIRY_TREES[i][3]+70*pow(-1,k%2),FAIRY_TREES[i][4])
+                    st.addSpawn(GUARDIAN,FAIRY_TREES[i][2]+70*pow(-1,j%2),FAIRY_TREES[i][3]+70*pow(-1,k%2),FAIRY_TREES[i][4])
               htmltext = FAIRY_TREES[i][5]
    return htmltext
 

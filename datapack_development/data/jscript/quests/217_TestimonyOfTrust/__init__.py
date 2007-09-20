@@ -267,18 +267,18 @@ class Quest (JQuest) :
        st.set("id",str(st.getInt("id")+1))
        if st.getRandom(100)<(st.getInt("id")*33) :
          st.playSound("Itemsound.quest_before_battle")
-         st.getPcSpawn().addSpawn(27120,9410,50301,-3713,600000)   ### FIXME ### Temp fix for spawn
+         st.addSpawn(27120,9410,50301,-3713,600000)   ### FIXME ### Temp fix for spawn
          st.addRadar(9410,50301,-3713)
          return "Luell Of Zephyr Winds has spawned at X=9410 Y=50301 Z=-3713"
-#         st.getPcSpawn().addSpawn(27120)                   # The original spawn code
+#         st.addSpawn(27120)                   # The original spawn code
      elif npcId in [ 20013,20019 ] and st.getQuestItemsCount(SEED_OF_VERDURE_ID) == 0 :
        st.set("id",str(st.getInt("id")+1))
        if st.getRandom(100)<(st.getInt("id")*33) :
          st.playSound("Itemsound.quest_before_battle")
-         st.getPcSpawn().addSpawn(27121,16895,47210,-3673,600000)  ### FIXME ### Temp fix for spawn
+         st.addSpawn(27121,16895,47210,-3673,600000)  ### FIXME ### Temp fix for spawn
          st.addRadar(16895,47210,-3673)
          return "Actea Of Verdant Wilds has spawned at X=16895 Y=47210 Z=-3673"
-#         st.getPcSpawn().addSpawn(27121)                   # The original spawn code
+#         st.addSpawn(27121)                   # The original spawn code
    elif cond == 14 :                                       # Condition 14 get 10 Parasite of lota
      parasite = st.getQuestItemsCount(PARASITE_OF_LOTA_ID)
      if npcId == 20553 and parasite < 10 :

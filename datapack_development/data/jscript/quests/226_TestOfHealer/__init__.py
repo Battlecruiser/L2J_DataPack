@@ -70,7 +70,7 @@ class Quest (JQuest) :
           st.set("onlyone","1")
     elif event == "30428_1" :
           htmltext = "30428-02.htm"
-          st.getPcSpawn().addSpawn(27134,-93254,147559,-2679)
+          st.addSpawn(27134,-93254,147559,-2679)
     elif event == "30658_1" :
           if st.getQuestItemsCount(ADENA) >= 100000 :
             htmltext = "30658-02.htm"
@@ -90,9 +90,9 @@ class Quest (JQuest) :
     elif event == "30674_1" :
           htmltext = "30674-02.htm"
           st.takeItems(ORDER_OF_SORIUS,1)
-          st.getPcSpawn().addSpawn(27122)
-          st.getPcSpawn().addSpawn(27122)
-          st.getPcSpawn().addSpawn(27123)
+          st.addSpawn(27122)
+          st.addSpawn(27122)
+          st.addSpawn(27123)
           st.playSound("Itemsound.quest_before_battle")
     elif event == "30665_1" :
           htmltext = "30665-02.htm"
@@ -205,9 +205,9 @@ class Quest (JQuest) :
    elif npcId == 30674:
      if st.getInt("cond")==6 and st.getQuestItemsCount(ORDER_OF_SORIUS) :
       htmltext = "30674-01.htm"
-      st.getPcSpawn().addSpawn(27122,-97547,106503,-3405)
-      st.getPcSpawn().addSpawn(27122,-97526,106584,-3405)
-      st.getPcSpawn().addSpawn(27123,-97441,106585,-3405)
+      st.addSpawn(27122,-97547,106503,-3405)
+      st.addSpawn(27122,-97526,106584,-3405)
+      st.addSpawn(27123,-97441,106585,-3405)
      elif st.getInt("cond")==6 and st.getQuestItemsCount(SECRET_LETTER1) :
       htmltext = "30674-03.htm"
       st.set("cond","7")
@@ -259,23 +259,23 @@ class Quest (JQuest) :
    elif npcId == 30661:
      if st.getInt("cond")==8 :
       htmltext = "30661-01.htm"
-      st.getPcSpawn().addSpawn(27124,-59863,79210,-3521)
-      st.getPcSpawn().addSpawn(27124,-59848,79300,-3526)
-      st.getPcSpawn().addSpawn(27124,-59763,79263,-3525)
+      st.addSpawn(27124,-59863,79210,-3521)
+      st.addSpawn(27124,-59848,79300,-3526)
+      st.addSpawn(27124,-59763,79263,-3525)
       st.playSound("Itemsound.quest_before_battle")
       st.set("cond","9")
      elif st.getInt("cond")==10:
       htmltext = "30661-02.htm"
-      st.getPcSpawn().addSpawn(27125,-44399,79348,-3713)
-      st.getPcSpawn().addSpawn(27125,-44458,79481,-3713)
-      st.getPcSpawn().addSpawn(27125,-44533,79345,-3713)
+      st.addSpawn(27125,-44399,79348,-3713)
+      st.addSpawn(27125,-44458,79481,-3713)
+      st.addSpawn(27125,-44533,79345,-3713)
       st.playSound("Itemsound.quest_before_battle")
       st.set("cond","11")
      elif st.getInt("cond")==12:
       htmltext = "30661-03.htm"
-      st.getPcSpawn().addSpawn(27126,-14244,44948,-3593)
-      st.getPcSpawn().addSpawn(27126,-14316,44844,-3593)
-      st.getPcSpawn().addSpawn(27127,-14166,44779,-3593)
+      st.addSpawn(27126,-14244,44948,-3593)
+      st.addSpawn(27126,-14316,44844,-3593)
+      st.addSpawn(27127,-14166,44779,-3593)
       st.playSound("Itemsound.quest_before_battle")
       st.set("cond","13")
      elif st.getInt("cond") == 13 :

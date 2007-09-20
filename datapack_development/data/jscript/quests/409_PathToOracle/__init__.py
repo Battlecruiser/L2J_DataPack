@@ -44,9 +44,9 @@ class Quest (JQuest) :
             htmltext = "30293-04.htm"
     elif event == "30424-08.htm" :
         if st.getInt("cond") :
-           st.getPcSpawn().addSpawn(27032)
-           st.getPcSpawn().addSpawn(27033)
-           st.getPcSpawn().addSpawn(27034)
+           st.addSpawn(27032)
+           st.addSpawn(27033)
+           st.addSpawn(27034)
            st.set("cond","2")
     elif event == "30424_1" :
         htmltext=""
@@ -58,7 +58,7 @@ class Quest (JQuest) :
            htmltext = "30428-03.htm"
     elif event == "30428_3" :
         if st.getInt("cond") :
-           st.getPcSpawn().addSpawn(27035)
+           st.addSpawn(27035)
     return htmltext
 
 

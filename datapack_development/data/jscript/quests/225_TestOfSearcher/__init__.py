@@ -70,8 +70,8 @@ class Quest (JQuest) :
           st.set(var,"1")
     elif event == "30627-01a.htm" :
         st.giveItems(RUSTED_KEY1,1)
-#        st.getPcSpawn().addSpawn(30628,10011,157449,-2374,300000)
-        st.getPcSpawn().addSpawn(30628,10098,157287,-2406,300000)
+#        st.addSpawn(30628,10011,157449,-2374,300000)
+        st.addSpawn(30628,10098,157287,-2406,300000)
         st.set("phase","20")
     elif event == "30628-01a.htm" :
         st.giveItems(GOLD_BAR,20)
@@ -264,7 +264,7 @@ class Quest (JQuest) :
      else:
       st.playSound("Itemsound.quest_itemget")
    if npcId==20781 and random<30 and count<maxcount:
-     st.getPcSpawn().addSpawn(27094,npc.getX(),npc.getY(),npc.getZ(),npc.getHeading(),True,300000)
+     st.addSpawn(27094,npc.getX(),npc.getY(),npc.getZ(),npc.getHeading(),True,300000)
    return
 
 

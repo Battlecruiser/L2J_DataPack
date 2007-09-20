@@ -164,7 +164,7 @@ class Quest (JQuest) :
      if npcId == FALLEN_UNICORN and cond == 10 :
        htmltext = "31746-2.htm"
        npc.reduceCurrentHp(10000,npc)
-       st.getPcSpawn().addSpawn(PURE_UNICORN,npc,False)
+       st.addSpawn(PURE_UNICORN,npc,False)
      if npcId == PURE_UNICORN and cond == 10 :
        st.set("cond","11")
        st.playSound("ItemSound.quest_middle")

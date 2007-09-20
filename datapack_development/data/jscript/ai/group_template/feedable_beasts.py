@@ -106,8 +106,7 @@ class feedable_beasts(JQuest) :
                 # despawn the mad cow
                 npc.deleteMe()
                 # spawn the new mob 
-                spawnObjId = self.getPcSpawn(player).addSpawn(self.madCowPolymorph[npc.getNpcId()],npc,False)
-                nextNpc = self.getPcSpawn(player).getSpawn(spawnObjId).getLastSpawn()
+                nextNpc = self.addSpawn(self.madCowPolymorph[npc.getNpcId()],npc)
                 
                 # register the player in the feedinfo for the mob that just spawned
                 self.feedInfo = self.feedInfo + [[nextNpc.getObjectId(),player.getObjectId()]]
@@ -157,8 +156,7 @@ class feedable_beasts(JQuest) :
                 oldTrained.doDespawn()
 
             #the following 5 commented lines are not needed, but they provide a plausible alternate implementation...just in case...
-            #spawnObjId = self.getPcSpawn(player).addSpawn(nextNpcId,npc,False)
-            #nextNpc = self.getPcSpawn(player).getSpawn(spawnObjId).getLastSpawn()
+            #nextNpc = self.addSpawn(nextNpcId,npc)
             #nextNpc.setOwner(player)
             #nextNpc.setFoodType(foodSkill[food])
             #nextNpc.setHome(npc)
@@ -181,8 +179,7 @@ class feedable_beasts(JQuest) :
         # (what happened to "never bite the hand that feeds you" anyway?!)
         else :
             # spawn the new mob
-            spawnObjId = self.getPcSpawn(player).addSpawn(nextNpcId,npc,False)
-            nextNpc = self.getPcSpawn(player).getSpawn(spawnObjId).getLastSpawn()
+            nextNpc = self.addSpawn(nextNpcId,npc)
 
             if nextNpcId in self.madCowPolymorph :
                 self.startQuestTimer("polymorph Mad Cow", 10000, nextNpc, player)            

@@ -199,7 +199,7 @@ class Quest (JQuest) :
             # if you do not have the key (first meeting)
             if st.getQuestItemsCount(ARKS[npcId][0])==0:
                 if ARKS[npcId][1] != 0 :    # spawn the NPC, if appropriate
-                    st.getPcSpawn().addSpawn(ARKS[npcId][1],player.getClientX(),player.getClientY(),player.getClientZ(),120000)
+                    st.addSpawn(ARKS[npcId][1],player.getClientX(),player.getClientY(),player.getClientZ(),120000)
                 return ARKS[npcId][2]
             # if the player already has openned the chest and has its content, show "chest empty"
             elif st.getQuestItemsCount(ARKS[npcId][5])==1:  
@@ -211,7 +211,7 @@ class Quest (JQuest) :
         elif npcId == ARK_GUARDIANS_CORPSE :
             # if you do not have the key (first meeting)
             if st.getQuestItemsCount(FIRST_KEY_OF_ARK)==0 and st.getInt("angelKillerIsDefeated")==0 :
-                st.getPcSpawn().addSpawn(ANGEL_KILLER,player.getClientX(),player.getClientY(),player.getClientZ(),120000)
+                st.addSpawn(ANGEL_KILLER,player.getClientX(),player.getClientY(),player.getClientZ(),120000)
                 htmltext = "30980-01.htm"
             elif st.getQuestItemsCount(FIRST_KEY_OF_ARK)==0 and st.getInt("angelKillerIsDefeated")==1 :
                 st.giveItems(FIRST_KEY_OF_ARK,1)

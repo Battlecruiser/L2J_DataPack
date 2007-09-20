@@ -121,7 +121,7 @@ class Quest (JQuest) :
        if st.getQuestItemsCount(GREEN_BLOOD) > 20 : 
          if st.getRandom(100) < ((st.getQuestItemsCount(GREEN_BLOOD)-20)*5) : 
            st.takeItems(GREEN_BLOOD,-1) 
-           st.getPcSpawn().addSpawn(KURUKA_RATMAN_LEADER,xx,yy,zz) 
+           st.addSpawn(KURUKA_RATMAN_LEADER,xx,yy,zz) 
          else: 
            st.giveItems(GREEN_BLOOD,1) 
            st.playSound("ItemSound.quest_itemget") 

@@ -63,12 +63,12 @@ class Quest (JQuest) :
           htmltext = "30669-02.htm"
     elif event == "30669_2" :
           htmltext = "30669-03.htm"
-          st.getPcSpawn().addSpawn(27131,-9382,-89852,-2333)
+          st.addSpawn(27131,-9382,-89852,-2333)
     elif event == "30669_3" :
           htmltext = "30669-05.htm"
     elif event == "30670_1" :
           htmltext = "30670-03.htm"
-          st.getPcSpawn().addSpawn(27132,126019,-179983,-1781)
+          st.addSpawn(27132,126019,-179983,-1781)
     elif event == "30670_2" :
           htmltext = "30670-02.htm"
     return htmltext
@@ -120,7 +120,6 @@ class Quest (JQuest) :
           htmltext = "30666-07.htm"
           st.set("cond","0")
           st.set("onlyone","1")
-          st.getPcSpawn().removeAllSpawn()
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
           st.takeItems(KATARIS_LETTER,1)
@@ -131,11 +130,11 @@ class Quest (JQuest) :
         htmltext = "30668-01.htm"
         st.set("cond","6")
         st.takeItems(SLAS_LETTER,1)
-        st.getPcSpawn().addSpawn(30732,-4015,40141,-3664)
-        st.getPcSpawn().addSpawn(27129,-4034,40201,-3665)
+        st.addSpawn(30732,-4015,40141,-3664)
+        st.addSpawn(27129,-4034,40201,-3665)
    elif npcId == 30668 and st.getInt("cond")==8:
         htmltext = "30668-02.htm"
-        st.getPcSpawn().addSpawn(27130,-4106,40174,-3660)
+        st.addSpawn(27130,-4106,40174,-3660)
    elif npcId == 30668 and st.getInt("cond")==9 :
         htmltext = "30668-03.htm"
         st.set("cond","10")
@@ -187,7 +186,7 @@ class Quest (JQuest) :
     if st.getInt("cond") == 1 and st.getQuestItemsCount(RIPPED_DIARY) < 7 and st.getQuestItemsCount(BOOK_OF_REFORM) >= 1 :
       if st.getQuestItemsCount(RIPPED_DIARY) == 6 :
         st.set("cond","2")
-        st.getPcSpawn().addSpawn(27128,npc.getX(),npc.getY(),npc.getZ(),npc.getHeading(),True,300000)
+        st.addSpawn(27128,npc.getX(),npc.getY(),npc.getZ(),npc.getHeading(),True,300000)
         st.takeItems(RIPPED_DIARY,st.getQuestItemsCount(RIPPED_DIARY))
       else:
         st.giveItems(RIPPED_DIARY,1)

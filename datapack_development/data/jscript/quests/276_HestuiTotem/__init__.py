@@ -70,7 +70,7 @@ class Quest (JQuest) :
            (count >= 60 and random < 60) or \
            (count >= 52 and random < 45) or \
            (count >  50 and random < 30) :
-                st.getPcSpawn().addSpawn(27044)
+                st.addSpawn(27044)
                 st.takeItems(KASHA_PARASITE_ID,count)
         else :
                 st.giveItems(KASHA_PARASITE_ID,1)

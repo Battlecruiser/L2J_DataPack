@@ -129,7 +129,7 @@ class Quest (JQuest) :
       htmltext = "30476-09.htm"
       st.giveItems(ALDERS_SKULL2_ID,1)
       st.takeItems(ALDERS_SKULL1_ID,1)
-      st.getPcSpawn().addSpawn(30613,78977,149036,-3597,300000)
+      st.addSpawn(30613,78977,149036,-3597,300000)
    elif npcId == 30476 and st.getInt("cond")==1 and (st.getQuestItemsCount(ALDERS_SKULL2_ID) or st.getQuestItemsCount(ALDERS_RECEIPT_ID)) :
       htmltext = "30476-10.htm"
    elif npcId == 30476 and st.getInt("cond")==1 and st.getQuestItemsCount(REVELATIONS_MANUSCRIPT_ID) :
