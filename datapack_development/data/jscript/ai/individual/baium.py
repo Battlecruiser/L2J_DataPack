@@ -15,16 +15,12 @@ class baium (JQuest):
 
   def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
-  def onEvent (self,event,st):
+  def onAdvEvent (self,event,npc,player):
     objId=0
-    if event == "baium_timer1":
-       objId=st.getInt("objId")
-       if objId:
-          player=st.getPlayer()
-          baium=st.getPcSpawn().getSpawn(objId).getLastSpawn()
-          baium.broadcastPacket(SocialAction(objId,1))
-          baium.broadcastPacket(Earthquake(baium.getX(), baium.getY(), baium.getZ(),40,5))
-          st.exitQuest(1)
+    if event == "baium_timer1" and npc:
+      if npc.getNpcId() == 29020 :
+        npc.broadcastPacket(SocialAction(npc.getObjectId(),1))
+        npc.broadcastPacket(Earthquake(npc.getX(), npc.getY(), npc.getZ(),40,5))
     return
 
   def onTalk (self,npc,player):
@@ -36,11 +32,9 @@ class baium (JQuest):
            npc.setBusy(True)
            npc.setBusyMessage("Attending another player's request")
            npc.deleteMe()
-           objId = st.getPcSpawn().addSpawn(29020,npc,False)
-           st.set("objId",str(objId))
-           baium=st.getPcSpawn().getSpawn(objId).getLastSpawn()
+           baium = st.addSpawn(29020,npc)
            baium.broadcastPacket(SocialAction(objId,2))
-           st.startQuestTimer("baium_timer1",15000)
+           self.startQuestTimer("baium_timer1",15000, baium, None)
       else:
         st.exitQuest(1)
         return "Conditions are not right to wake up Baium"
@@ -56,7 +50,7 @@ class baium (JQuest):
   def onKill(self,npc,player):
     objId=npc.getObjectId()
     npc.broadcastPacket(PlaySound(1, "BS02_D", 1, objId, npc.getX(), npc.getY(), npc.getZ()))
-    self.getPcSpawn(player).addSpawn(29055,115203,16620,10078,900000)
+    self.addSpawn(29055,115203,16620,10078,0,False,900000)
 
 # Quest class and state definition
 QUEST       = baium(-1, "baium", "ai")

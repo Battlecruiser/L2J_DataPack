@@ -218,18 +218,18 @@ class Quest (JQuest) :
           n = st.getRandom(10)
           if st.getQuestItemsCount(DURKA_PARASITE) == 5 and n<1 :
             st.takeItems(DURKA_PARASITE,st.getQuestItemsCount(DURKA_PARASITE))
-            st.getPcSpawn().addSpawn(27056)
+            st.addSpawn(27056)
             st.playSound("ItemSound.quest_itemget")
           elif st.getQuestItemsCount(DURKA_PARASITE) == 6 and n<2 :
             st.takeItems(DURKA_PARASITE,st.getQuestItemsCount(DURKA_PARASITE))
             st.playSound("ItemSound.quest_itemget")
-            st.getPcSpawn().addSpawn(27056)
+            st.addSpawn(27056)
           elif st.getQuestItemsCount(DURKA_PARASITE) == 7 and n<2 :
             st.takeItems(DURKA_PARASITE,st.getQuestItemsCount(DURKA_PARASITE))
             st.playSound("ItemSound.quest_itemget")
-            st.getPcSpawn().addSpawn(27056)
+            st.addSpawn(27056)
           elif st.getQuestItemsCount(DURKA_PARASITE) >= 7 :
-            st.getPcSpawn().addSpawn(27056)
+            st.addSpawn(27056)
             st.playSound("ItemSound.quest_itemget")
             st.takeItems(DURKA_PARASITE,st.getQuestItemsCount(DURKA_PARASITE))
           else:
@@ -241,18 +241,18 @@ class Quest (JQuest) :
           n = st.getRandom(10)
           if st.getQuestItemsCount(DURKA_PARASITE) == 5 and n<1 :
             st.takeItems(DURKA_PARASITE,st.getQuestItemsCount(DURKA_PARASITE))
-            st.getPcSpawn().addSpawn(27056)
+            st.addSpawn(27056)
             st.playSound("ItemSound.quest_itemget")
           elif st.getQuestItemsCount(DURKA_PARASITE) == 6 and n<2 :
             st.takeItems(DURKA_PARASITE,st.getQuestItemsCount(DURKA_PARASITE))
             st.playSound("ItemSound.quest_itemget")
-            st.getPcSpawn().addSpawn(27056)
+            st.addSpawn(27056)
           elif st.getQuestItemsCount(DURKA_PARASITE) == 7 and n<2 :
             st.takeItems(DURKA_PARASITE,st.getQuestItemsCount(DURKA_PARASITE))
             st.playSound("ItemSound.quest_itemget")
-            st.getPcSpawn().addSpawn(27056)
+            st.addSpawn(27056)
           elif st.getQuestItemsCount(DURKA_PARASITE) >= 7 :
-            st.getPcSpawn().addSpawn(27056)
+            st.addSpawn(27056)
             st.playSound("ItemSound.quest_itemget")
             st.takeItems(DURKA_PARASITE,st.getQuestItemsCount(DURKA_PARASITE))
           else:

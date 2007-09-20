@@ -45,7 +45,9 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onEvent (self, event, st) :
+ def onAdvEvent (self, event, npc, player) :
+   st = player.getQuestState(qn)
+   if not st: return
    cond = st.getInt("cond")
    id = st.getInt("id")
    Green_Totem = st.getQuestItemsCount(Totem2)
@@ -80,26 +82,22 @@ class Quest (JQuest) :
    elif event == "31558-02.htm" :
        if Green_Totem :
            htmletext = "31558-02.htm"   #TODO add lights from above
-           spawnId = st.getPcSpawn().addSpawn(Nastron,142528,-82528,-6496)
-           st.set("spawnId",str(spawnId))
+           spawnedNpc = st.addSpawn(Nastron,142528,-82528,-6496)
            st.takeItems(Totem2,1)
            st.set("id","2")
-           FindTemplate(Alter).setBusy(True)
+           npc.setBusy(True)
            st.set("cond","2")
-           st.startQuestTimer("Soul of Fire Nastron has despawned",1200000)#1200000)
-           AutoChat(st.getPcSpawn().getSpawn(spawnId).getLastSpawn(),"Hey! I'll kick your aarse!")#this is only a temp message until we find out what it actually is! string = 61050
+           st.startQuestTimer("Soul of Fire Nastron has despawned",1200000,spawnedNpc)
+           AutoChat(spawnedNpc,"Hey! I'll kick your aarse!")#this is only a temp message until we find out what it actually is! string = 61050
        else :
            htmltext = "31558-04.htm"
    elif event == "Soul of Fire Nastron has despawned" :
-       npc1 = st.getPcSpawn().getSpawn(st.getInt("spawnId")).getLastSpawn()
-       npc1.reduceCurrentHp(9999999,npc1)
-       st.getPcSpawn().removeAllSpawn()
+       npc.reduceCurrentHp(9999999,npc1)
        st.unset("id")
        st.unset("cond")
-       st.unset("spawnId")
        FindTemplate(Alter).setBusy(False)
        st.exitQuest(1)
-       AutoChat(npc1,"May the gods forever condemn you! Udan Mardui, your power weakens!") #this is only a temp message until we find out what it actually is! string = 61051
+       AutoChat(npc,"May the gods forever condemn you! Udan Mardui, your power weakens!") #this is only a temp message until we find out what it actually is! string = 61051
    return htmltext
 
  def onTalk (self, npc, player):

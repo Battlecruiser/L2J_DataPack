@@ -22,9 +22,16 @@ CRYSTAL_B = 1460
 #Leorin, Cliff, Ferris, Zenkin, Kaspar, Kernon's Chest, Golkonda's Chest, Hallate's Chest, Cabrio's "Coffer of the Dead"
 NPC=[31002,30182,30847,30178,30833,31028,31029,31030,31027]
 
-#mobId=[cond,spawn,dropId,rate]
+CHEST_SPAWNS = {
+  25035:31027, # Shilen's Messenger Cabrio
+  25054:31028, # Demon Kernon
+  25126:31029, # Golkonda, the Longhorn General
+  25220:31030  # Death Lord Hallate
+  }
+  
+#mobId=[cond,dropId,rate]
 DROPLIST={
-29020: [7,0,RED_PIPETTE_KNIFE,10]        #Baium...NOTE: rate may need adjustment
+29020: [7,RED_PIPETTE_KNIFE,10]        #Baium...NOTE: rate may need adjustment
 }
 
 ## START: Weapon exchange section (any top B grade for 2nd best A grade)
@@ -273,21 +280,23 @@ class Quest (JQuest) :
     return
 
   def onKill (self,npc,player):
-    st = player.getQuestState(qn)
-    if not st : return 
-    if st.getState() != STARTED : return 
-
     npcId=npc.getNpcId()
-    value,spawnId,dropId,chance = DROPLIST[npcId]
-    if st.getInt("cond") == value:
-      if chance > 0:
-        if st.getRandom(100) < chance and st.getQuestItemsCount(dropId) == 0:
-          st.giveItems(dropId,1)
-          st.playSound("Itemsound.quest_itemget")
-          if npcId == 29020:
-            st.takeItems(PIPETTE_KNIFE,1)
-      if spawnId > 0 :
-        st.getPcSpawn().addSpawn(spawnId,npc.getX(),npc.getY(),npc.getZ(),120000)
+    # the chests always spawn, even if the RB is killed with nobody nearby doing the quest.
+    if npcId in CHEST_SPAWNS.keys() :
+      self.addSpawn(CHEST_SPAWNS[npcId], npc.getX(), npc.getY(), npc.getZ(),npc.getHeading(), True, 60000)
+    else :
+      st = player.getQuestState(qn)
+      if not st : return 
+      if st.getState() != STARTED : return
+      if npcId in DROPLIST.keys() :
+        value,dropId,chance = DROPLIST[npcId]
+        if st.getInt("cond") == value:
+          if chance > 0:
+            if st.getRandom(100) < chance and st.getQuestItemsCount(dropId) == 0:
+              st.giveItems(dropId,1)
+              st.playSound("Itemsound.quest_itemget")
+              if npcId == 29020:
+                st.takeItems(PIPETTE_KNIFE,1)
     return    
 
 
@@ -303,6 +312,9 @@ for npcId in NPC:
   QUEST.addTalkId(npcId)
   
 for mobId in DROPLIST.keys() :
+  QUEST.addKillId(mobId)
+
+for mobId in CHEST_SPAWNS.keys() :
   QUEST.addKillId(mobId)
 
 QUEST.addAttackId(29020)

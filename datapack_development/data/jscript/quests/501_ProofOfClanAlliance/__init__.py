@@ -42,7 +42,7 @@ RETRY_ITEMS=57
 RETRY_PRICE=10000
 
 def leader(player) :
-    leaderst = 0
+    leaderst = None
     clan = player.getClan()
     if clan :
         leader=clan.getLeader().getPlayerInstance()  
@@ -70,7 +70,14 @@ def randomize_chests(leaderst) :
     leaderst.set("chests"," ".join(chests))
     return
 
-def chest_game(leaderst,command) :
+class Quest (JQuest) :
+
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     # a hashtable tracking this quest's (chest) spawns, indexed by leaderST
+     self.spawn_tracker = {}    
+
+ def chest_game(self,leaderst,command) :
     #northern point
     x,y,z=102000,103350,-3500
     #row dist,slope,col dist
@@ -81,20 +88,20 @@ def chest_game(leaderst,command) :
        attempts = leaderst.getInt("chest_try")
        leaderst.set("chest_try",str(attempts+1))
        randomize_chests(leaderst)
+       tempList = []
        for row in range(2) :
            for col in range(4) :
-               leaderst.getPcSpawn().addSpawn(18257+(4*row+col),x+(row*u)+(col*v),y-(w*col),z,61000)
+               tempList.append(leaderst.addSpawn(18257+(4*row+col),x+(row*u)+(col*v),y-(w*col),z,61000))
+       self.spawn_tracker[leaderst]=tempList
        leaderst.startQuestTimer("chest_timer",60000)
     elif command == "stop" :
        try:
-           leaderst.getPcSpawn().removeAllSpawn()
            leaderst.set("chest_game","0")
+           if self.spawn_tracker.has_key(leaderst) :
+               trackedSpawns = self.spawn_tracker.pop(leaderst)
+               for chest in trackedSpawns :
+                   chest.decayMe()
        except: pass
-       
-
-class Quest (JQuest) :
-
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onAdvEvent (self,event,npc,player):
    leaderst = 0
@@ -139,7 +146,7 @@ class Quest (JQuest) :
      htmltext = "30759-09.htm"
    elif event == "chest_timer" :
      htmltext = ""
-     chest_game(leaderst,"stop")
+     self.chest_game(leaderst,"stop")
      if DEBUG: htmltext = "DEBUG MESSAGE: chest timer event sent."
 #####  Members area  ######
    elif event == "30757-04.htm" :
@@ -152,7 +159,7 @@ class Quest (JQuest) :
    elif event == "30757-05.htm" :
      st.exitQuest(1)
    elif event == "30758-03.htm" :
-     chest_game(leaderst,"start")
+     self.chest_game(leaderst,"start")
    elif event == "30758-07.htm" :
      if st.getQuestItemsCount(RETRY_ITEMS) < RETRY_PRICE :
         htmltext = "30758-06.htm"
@@ -299,7 +306,7 @@ class Quest (JQuest) :
              elif game_state == 2 :
                 timer=leaderst.getQuestTimer("chest_timer")
                 if timer != None : timer.cancel()
-                chest_game(st,"stop")
+                self.chest_game(st,"stop")
                 leaderst.set("chest_game","3")
                 st.giveItems(BLOOD_OF_EVA,1)
                 st.playSound("ItemSound.quest_middle")
@@ -318,7 +325,7 @@ class Quest (JQuest) :
    
      ### first part, general checking
      npcId=npc.getNpcId()
-     if leaderst == None :
+     if not leaderst :
         st.exitQuest(1)
         if DEBUG: return "DEBUG: onKill can't find leader info. Leader d/c?"
         return "Quest Failed"
@@ -326,7 +333,7 @@ class Quest (JQuest) :
         ingredients = []
         timer=leaderst.getQuestTimer("poison_timer")
         if timer == None :
-           chest_game(st,"stop")
+           self.chest_game(st,"stop")
            if DEBUG: return "DEBUG: onKill can't find poison timer. Too much time have passed"
            return "Quest Failed"
         try : 
@@ -347,7 +354,7 @@ class Quest (JQuest) :
      ### third part, chest game
         if npcId in CHESTS :
            timer=leaderst.getQuestTimer("chest_timer")
-           #if timer == None : chest_game(st,"stop");return "Time is up!"
+           #if timer == None : self.chest_game(st,"stop");return "Time is up!"
            chests = leaderst.get("chests").split()
            for i in range(len(chests)) :
                if npcId == 18257+i and chests[i] == '1' :
@@ -358,7 +365,7 @@ class Quest (JQuest) :
                      leaderst.set("chest_count",str(count))
                      if count == 4 :
                         leaderst.getQuestTimer("chest_timer").cancel()
-                        chest_game(leaderst,"stop")
+                        self.chest_game(leaderst,"stop")
                         leaderst.set("chest_game","2")
                         st.playSound("ItemSound.quest_middle")
                      else :

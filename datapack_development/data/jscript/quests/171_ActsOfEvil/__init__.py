@@ -162,7 +162,7 @@ class Quest (JQuest) :
      if cond==2 and npcId in range(20496,20500) :
         blades = st.getQuestItemsCount(BLADE_MOLD)
         if chance < CHANCE11 :
-           st.getPcSpawn().addSpawn(27190)
+           st.addSpawn(27190)
         if chance < CHANCE1 and blades < 20 :
            st.giveItems(BLADE_MOLD,1)
            if blades == 19 :

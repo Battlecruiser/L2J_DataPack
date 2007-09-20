@@ -9,12 +9,10 @@ class core(JQuest) :
 
     # init function.  Add in here variables that you'd like to be inherited by subclasses (if any)
     def __init__(self,id,name,descr):
+        JQuest.__init__(self,id,name,descr)
         self.Core = 29006
         self.Minions = [29007,29008,29011]
         self.FirstAttacked = False
-        # finally, don't forget to call the parent constructor to prepare the event triggering
-        # mechanisms etc.
-        JQuest.__init__(self,id,name,descr)
 
     def onAttack (self,npc,player):
         objId=npc.getObjectId()
@@ -36,11 +34,10 @@ class core(JQuest) :
             npc.broadcastPacket(CreatureSay(objId,0,"Core","System is being shut down..."))
             npc.broadcastPacket(CreatureSay(objId,0,"Core","......"))
             self.FirstAttacked = False
-            self.getPcSpawn(player).removeAllSpawn()
-            self.getPcSpawn(player).addSpawn(31842,16502,110165,-6394,900000)
-            self.getPcSpawn(player).addSpawn(31842,18948,110166,-6397,900000)
+            self.addSpawn(31842,16502,110165,-6394,0,False,900000)
+            self.addSpawn(31842,18948,110166,-6397,0,False,900000)
         elif self.FirstAttacked :
-            self.getPcSpawn(player).addSpawn(npcId,17726,108915,-6480,npc.getHeading(),True,0)
+            self.addSpawn(npcId,17726,108915,-6480,npc.getHeading(),True,0)
         return 
 
 # now call the constructor (starts up the ai)

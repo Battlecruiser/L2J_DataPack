@@ -23,9 +23,8 @@ class polymorphing_angel(JQuest) :
     def onKill (self,npc,player):
         npcId = npc.getNpcId()
         if self.AngelSpawns.has_key(npcId) :
-            objId = self.getPcSpawn(player).addSpawn(self.AngelSpawns[npcId],npc, False)
-            newNpc = self.getPcSpawn(player).getSpawn(objId).getLastSpawn()
-            newNpc.addDamageHate(player,0,99999)
+            newNpc = self.addSpawn(self.AngelSpawns[npcId],npc)
+            newNpc.addDamageHate(player,0,999)
             newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
         return 
 

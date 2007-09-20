@@ -151,22 +151,22 @@ class Quest (JQuest) :
               st.giveItems(KASMANS_LETTER3,1)
     elif event == "30615-04.htm" :                           # Chief of Breka Orcs
           st.playSound("Itemsound.quest_before_battle")
-          st.getPcSpawn().addSpawn(27080,80117,120039,-2259)
-          st.getPcSpawn().addSpawn(27081,80058,120038,-2259)
+          st.addSpawn(27080,80117,120039,-2259)
+          st.addSpawn(27081,80058,120038,-2259)
           st.giveItems(GLOVE_OF_VOLTAR,1)
           st.takeItems(MANAKIAS_LETTER1,1)
     elif event == "30616-04.htm" :                           # Chief of Enku Orcs
           st.playSound("Itemsound.quest_before_battle")
-          st.getPcSpawn().addSpawn(27082,19456,192245,-3730)
-          st.getPcSpawn().addSpawn(27082,19539,192343,-3728)
-          st.getPcSpawn().addSpawn(27082,19500,192449,-3729)
-          st.getPcSpawn().addSpawn(27082,19569,192482,-3728) 
+          st.addSpawn(27082,19456,192245,-3730)
+          st.addSpawn(27082,19539,192343,-3728)
+          st.addSpawn(27082,19500,192449,-3729)
+          st.addSpawn(27082,19569,192482,-3728) 
           st.giveItems(GLOVE_OF_KEPRA,1)
           st.takeItems(MANAKIAS_LETTER2,1)
     elif event == "30617-04.htm" :                           # Chief of Turek Orcs
           st.playSound("Itemsound.quest_before_battle")
-          st.getPcSpawn().addSpawn(27083,-94292,110781,-3701)
-          st.getPcSpawn().addSpawn(27083,-94293,110861,-3701)
+          st.addSpawn(27083,-94292,110781,-3701)
+          st.addSpawn(27083,-94293,110861,-3701)
           st.giveItems(GLOVE_OF_BURAI,1)
           st.takeItems(KASMANS_LETTER2,1)
     elif event == "30618-03.htm" :                           # Chief of Tunath Orcs
@@ -287,8 +287,8 @@ class Quest (JQuest) :
            elif st.getQuestItemsCount(GLOVE_OF_VOLTAR) :
                htmltext = "30615-05.htm"
                st.playSound("Itemsound.quest_before_battle")
-               st.getPcSpawn().addSpawn(27080,80117,120039,-2259)
-               st.getPcSpawn().addSpawn(27081,80058,120038,-2259)
+               st.addSpawn(27080,80117,120039,-2259)
+               st.addSpawn(27081,80058,120038,-2259)
            elif st.getQuestItemsCount(PASHIKAS_HEAD) and st.getQuestItemsCount(VULTUS_HEAD) :
                htmltext = "30615-06.htm"
                st.giveItems(SCEPTER_OF_BREKA,1)
@@ -309,10 +309,10 @@ class Quest (JQuest) :
            elif st.getQuestItemsCount(GLOVE_OF_KEPRA) :
                htmltext = "30616-05.htm"
                st.playSound("Itemsound.quest_before_battle")
-               st.getPcSpawn().addSpawn(27082,17710,189813,-3581)
-               st.getPcSpawn().addSpawn(27082,17674,189798,-3581)
-               st.getPcSpawn().addSpawn(27082,17770,189852,-3581)
-               st.getPcSpawn().addSpawn(27082,17803,189873,-3581)
+               st.addSpawn(27082,17710,189813,-3581)
+               st.addSpawn(27082,17674,189798,-3581)
+               st.addSpawn(27082,17770,189852,-3581)
+               st.addSpawn(27082,17803,189873,-3581)
            elif st.getQuestItemsCount(ENKU_OVERLORD_HEAD) == 4 :
                htmltext = "30616-06.htm"
                st.giveItems(SCEPTER_OF_ENKU,1)
@@ -332,8 +332,8 @@ class Quest (JQuest) :
            elif st.getQuestItemsCount(GLOVE_OF_BURAI) :
                htmltext = "30617-05.htm"
                st.playSound("Itemsound.quest_before_battle")
-               st.getPcSpawn().addSpawn(27083,-94292,110781,-3701)
-               st.getPcSpawn().addSpawn(27083,-94293,110861,-3701)
+               st.addSpawn(27083,-94292,110781,-3701)
+               st.addSpawn(27083,-94293,110861,-3701)
            elif st.getQuestItemsCount(MAKUM_BUGBEAR_HEAD) == 2 :
                htmltext = "30617-06.htm"
                st.giveItems(SCEPTER_OF_TUREK,1)
@@ -493,11 +493,11 @@ class Quest (JQuest) :
    elif cond == 9 and st.getQuestItemsCount(TANAPIS_ORDER1) and st.getQuestItemsCount(SCEPTER_OF_TANTOS) == 0 :
      if npcId in [ 20778, 20779 ] :
        st.playSound("Itemsound.quest_before_battle")
-       #st.getPcSpawn().addSpawn(27086)
-       st.getPcSpawn().addSpawn(27086, 11839,-106261,-3550,300000)
+       #st.addSpawn(27086)
+       st.addSpawn(27086, 11839,-106261,-3550,300000)
        return "Revenant of Tantos Chief has spawned at X=11839 Y=-106261 Z=-3550"
        # Alternate coord. set:
-       #st.getPcSpawn().addSpawn(27086,11567,-106785,-3520)
+       #st.addSpawn(27086,11567,-106785,-3520)
      elif npcId == 27086 :
        st.giveItems(SCEPTER_OF_TANTOS,1)
        st.set("cond","10")

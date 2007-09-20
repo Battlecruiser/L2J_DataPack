@@ -57,6 +57,7 @@ PartyQuestMembers = []
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
      # All of these are overridden in the subclasses
      self.NPC = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
      self.Items = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -70,7 +71,6 @@ class Quest (JQuest) :
      self.Text = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
      self.Spawn_List = []
      #all these are not overridden by the subclasses (either cause they are constant or used only for this script)
-     JQuest.__init__(self,id,name,descr)
      self.CREATED     = State('Start', self)
      self.STARTED     = State('Started', self)
      self.COMPLETED   = State('Completed', self)
@@ -105,15 +105,24 @@ class Quest (JQuest) :
           sm = CreatureSay(npc.getObjectId(), 0, npc.getName(), text)
           pc.sendPacket(sm)
 
- def AddSpawn(self, st,mobid) :
+ def AddSpawn(self, st,mob) :
     name = st.getPlayer().getName()
-    self.Spawn_List.append([mobid,name])
+    self.Spawn_List.append([mob.getObjectId(),name,mob])
     return
+
+ def FindSpawn (self, player, npcObjectId) :
+    for mobId, playerName, mob in self.Spawn_List:
+        if mobId == npcObjectId and playerName == player.getName():
+            return mob
+    return None
 
  def DeleteSpawn(self, st,mobid) :
     name = st.getPlayer().getName()
-    if [mobid,name] in self.Spawn_List:
-        self.Spawn_List.remove([mobid,name])
+    for npcId,playerName,mob in self.Spawn_List:
+        if (mobid,name) ==  (npcId,playerName):
+            self.Spawn_List.remove([mobid,name,mob])
+            mob.decayMe()
+            return
     return
 
  def giveHallishaMark(self, st2) :
@@ -123,14 +132,15 @@ class Quest (JQuest) :
             xx = int(st2.getPlayer().getX())
             yy = int(st2.getPlayer().getY())
             zz = int(st2.getPlayer().getZ())
-            Archon = st2.getPcSpawn().addSpawn(self.Mob[1],xx,yy,zz)
-            st2.set("Archon",str(Archon))
+            Archon = st2.addSpawn(self.Mob[1],xx,yy,zz)
+            ArchonId = Archon.getObjectId()
+            st2.set("Archon",str(ArchonId))
             self.AddSpawn(st2,Archon)
             st2.set("spawned","1")
-            st2.startQuestTimer("Archon Hellisha has despawned",600000)
-            self.AutoChat(st2.getPcSpawn().getSpawn(st2.getInt("Archon")).getLastSpawn(),self.Text[13].replace('PLAYERNAME',st2.getPlayer().getName()))
-            st2.getPcSpawn().getSpawn(st2.getInt("Archon")).getLastSpawn().addDamageHate(st2.getPlayer(),0,99999)
-            st2.getPcSpawn().getSpawn(st2.getInt("Archon")).getLastSpawn().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK,st2.getPlayer(),None)
+            st2.startQuestTimer("Archon Hellisha has despawned",600000,Archon)
+            self.AutoChat(Archon,self.Text[13].replace('PLAYERNAME',st2.getPlayer().getName()))
+            Archon.addDamageHate(st2.getPlayer(),0,99999)
+            Archon.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK,st2.getPlayer(),None)
         else :
             st2.giveItems(self.Items[3],1)
      return
@@ -151,7 +161,9 @@ class Quest (JQuest) :
          return st1.getQuestState(self.qn)
      return st1
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
+   st = player.getQuestState(self.qn)
+   if not st: return
    htmltext = ""  # simple initialization...if none of the events match, return nothing.  
    cond = st.getInt("cond")
    id = st.getInt("id")
@@ -228,10 +240,10 @@ class Quest (JQuest) :
    elif event == "4-3" :
        st.giveItems(self.Items[9],1)
        st.set("cond","18")
-       self.AutoChat(st.getPcSpawn().getSpawn(st.getInt("Mob_2")).getLastSpawn(),self.Text[13].replace('PLAYERNAME',player.getName()))
+       Mob_2 = self.FindSpawn(st, st.getInt("Mob_2"))
+       self.AutoChat(Mob_2,self.Text[13].replace('PLAYERNAME',player.getName()))
        st.set("Quest0","0")
-       st.getPcSpawn().removeSpawn(self.NPC[4])
-       self.DeleteSpawn(st,st.getInt("Mob_2"))
+       self.DeleteSpawn(st,Mob_2.getObjectId())
        st.playSound("ItemSound.quest_middle")
        return
    elif event == "5-1" :
@@ -250,11 +262,11 @@ class Quest (JQuest) :
        if st.getInt("spawned") == 1 :
            htmltext = "7-03.htm"
        elif st.getInt("spawned") == 0 :
-           Mob_1 = st.getPcSpawn().addSpawn(self.Mob[0],self.X[0],self.Y[0],self.Z[0])
-           st.set("Mob_1",str(Mob_1))
+           Mob_1 = st.addSpawn(self.Mob[0],self.X[0],self.Y[0],self.Z[0])
+           st.set("Mob_1",str(Mob_1.getObjectId()))
            st.set("spawned","1")
-           st.startQuestTimer("Mob_1 Timer 1",500)
-           st.startQuestTimer("Mob_1 has despawned",300000)
+           st.startQuestTimer("Mob_1 Timer 1",500,Mob_1)
+           st.startQuestTimer("Mob_1 has despawned",300000,Mob_1)
            self.AddSpawn(st,Mob_1)
            htmltext = "7-02.htm"
        else :
@@ -279,18 +291,18 @@ class Quest (JQuest) :
        htmltext = "9-03.htm"
    elif event == "10-1" :
        if st.getInt("Quest0") == 0 :
-           Mob_3 = st.getPcSpawn().addSpawn(self.Mob[2],self.X[1],self.Y[1],self.Z[1])
-           Mob_2 = st.getPcSpawn().addSpawn(self.NPC[4],self.X[2],self.Y[2],self.Z[2])
+           Mob_3 = st.addSpawn(self.Mob[2],self.X[1],self.Y[1],self.Z[1])
+           Mob_2 = st.addSpawn(self.NPC[4],self.X[2],self.Y[2],self.Z[2])
            self.AddSpawn(st,Mob_3)
            self.AddSpawn(st,Mob_2)
-           st.set("Mob_3",str(Mob_3))
-           st.set("Mob_2",str(Mob_2))
+           st.set("Mob_3",str(Mob_3.getObjectId()))
+           st.set("Mob_2",str(Mob_2.getObjectId()))
            st.set("Quest0","1")
            st.set("Quest1","45")
-           st.startQuestTimer("Mob_3 Timer 1",500)
-           st.startQuestTimer("Mob_3 has despawned",59000)
-           st.startQuestTimer("Mob_2 Timer 1",500)
-           st.startQuestTimer("Mob_2 has despawned",60000)
+           st.startQuestTimer("Mob_3 Timer 1",500,Mob_3)
+           st.startQuestTimer("Mob_3 has despawned",59000,Mob_3)
+           st.startQuestTimer("Mob_2 Timer 1",500,Mob_2)
+           st.startQuestTimer("Mob_2 has despawned",60000,Mob_2)
            htmltext = "10-02.htm"
        elif st.getInt("Quest1") == 45 :
            htmltext = "10-03.htm"
@@ -306,74 +318,66 @@ class Quest (JQuest) :
        st.set("cond","15")
        htmltext = "11-03.htm"
    elif event == "Mob_1 Timer 1" :
-       self.AutoChat(st.getPcSpawn().getSpawn(st.getInt("Mob_1")).getLastSpawn(),self.Text[0].replace('PLAYERNAME',player.getName()))
+       self.AutoChat(npc,self.Text[0].replace('PLAYERNAME',player.getName()))
        return
    elif event == "Mob_1 has despawned" :
-       Mob_1 = st.getPcSpawn().getSpawn(st.getInt("Mob_1")).getLastSpawn()
-       self.AutoChat(Mob_1,self.Text[1].replace('PLAYERNAME',player.getName()))    
-       st.getPcSpawn().removeAllSpawn()
-       self.DeleteSpawn(st,st.getInt("Mob_1"))
+       self.AutoChat(npc,self.Text[1].replace('PLAYERNAME',player.getName()))
+       self.DeleteSpawn(st,npc.getObjectId())
        st.set("spawned","0")
        return
    elif event == "Archon of Hellisha has despawned" :
-       Archon = st.getPcSpawn().getSpawn(st.getInt("Archon")).getLastSpawn()
-       self.AutoChat(Archon,self.Text[6].replace('PLAYERNAME',player.getName()))
-       st.getPcSpawn().removeAllSpawn()
-       self.DeleteSpawn(st,st.getInt("Archon"))
+       self.AutoChat(npc,self.Text[6].replace('PLAYERNAME',player.getName()))
+       self.DeleteSpawn(st,npc.getObjectId())
        st.set("spawned","0")
        return
    elif event == "Mob_3 Timer 1" :
-       Mob_3 = st.getPcSpawn().getSpawn(st.getInt("Mob_3")).getLastSpawn()
-       Mob_2 = st.getPcSpawn().getSpawn(st.getInt("Mob_2")).getLastSpawn()
-       if Mob_3.getKnownList().knowsObject(Mob_2) :
-           Mob_3.addDamageHate(Mob_2,0,99999)
-           Mob_3.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK,Mob_2,None)
-           #Mob_2.addDamageHate(Mob_3,0,99999)
-           Mob_2.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK,Mob_3,None)
-           self.AutoChat(Mob_3,self.Text[14].replace('PLAYERNAME',player.getName()))
+       Mob_2 = self.FindSpawn(player,st.getInt("Mob_2"))
+       if npc.getKnownList().knowsObject(Mob_2) :
+           npc.addDamageHate(Mob_2,0,99999)
+           npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK,Mob_2,None)
+           #Mob_2.addDamageHate(npc,0,99999)
+           Mob_2.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK,npc,None)
+           self.AutoChat(npc,self.Text[14].replace('PLAYERNAME',player.getName()))
        else :
-           st.startQuestTimer("Mob_3 Timer 1",500)
+           st.startQuestTimer("Mob_3 Timer 1",500,npc)
        return
    elif event == "Mob_3 has despawned" :
-       Mob = st.getPcSpawn().getSpawn(st.getInt("Mob_3")).getLastSpawn()
-       self.AutoChat(Mob,self.Text[15].replace('PLAYERNAME',player.getName()))
+       self.AutoChat(npc,self.Text[15].replace('PLAYERNAME',player.getName()))
        st.set("Quest0","2")
-       Mob.reduceCurrentHp(9999999,Mob)
-       st.getPcSpawn().removeSpawn(self.Mob[2])
-       self.DeleteSpawn(st,st.getInt("Mob_3"))
+       npc.reduceCurrentHp(9999999,npc)
+       self.DeleteSpawn(st,npc.getObjectId())
+       self.DeleteSpawn(st,st.getInt("Mob_2"))
        return
    elif event == "Mob_2 Timer 1" :
-       self.AutoChat(st.getPcSpawn().getSpawn(st.getInt("Mob_2")).getLastSpawn(),self.Text[7].replace('PLAYERNAME',player.getName()))
-       st.startQuestTimer("Mob_2 Timer 2",1500)
+       self.AutoChat(npc,self.Text[7].replace('PLAYERNAME',player.getName()))
+       st.startQuestTimer("Mob_2 Timer 2",1500,npc)
        if st.getInt("Quest1") == 45 :
            st.set("Quest1","0")
        return
    elif event == "Mob_2 Timer 2" :
-       self.AutoChat(st.getPcSpawn().getSpawn(st.getInt("Mob_2")).getLastSpawn(),self.Text[8].replace('PLAYERNAME',player.getName()))
-       st.startQuestTimer("Mob_2 Timer 3",10000)
+       self.AutoChat(npc,self.Text[8].replace('PLAYERNAME',player.getName()))
+       st.startQuestTimer("Mob_2 Timer 3",10000,npc)
        return
    elif event == "Mob_2 Timer 3" :
        if st.getInt("Quest0") == 0 :
-           st.startQuestTimer("Mob_2 Timer 3",13000)
+           st.startQuestTimer("Mob_2 Timer 3",13000,npc)
            if st.getRandom(2) == 0 :
-               self.AutoChat(st.getPcSpawn().getSpawn(st.getInt("Mob_2")).getLastSpawn(),self.Text[9].replace('PLAYERNAME',player.getName()))
+               self.AutoChat(npc,self.Text[9].replace('PLAYERNAME',player.getName()))
            else :
-               self.AutoChat(st.getPcSpawn().getSpawn(st.getInt("Mob_2")).getLastSpawn(),self.Text[10].replace('PLAYERNAME',player.getName()))
+               self.AutoChat(npc,self.Text[10].replace('PLAYERNAME',player.getName()))
        return
    elif event == "Mob_2 has despawned" :
        st.set("Quest1",str(st.getInt("Quest1")+1))
        if st.getInt("Quest0") == 1 or st.getInt("Quest0") == 2 or st.getInt("Quest1") > 3 :
            st.set("Quest0","0")
-           Mob = st.getPcSpawn().getSpawn(st.getInt("Mob_2")).getLastSpawn()
            if st.getInt("Quest0") == 1 :
-               self.AutoChat(Mob,self.Text[11].replace('PLAYERNAME',player.getName()))
+               self.AutoChat(npc,self.Text[11].replace('PLAYERNAME',player.getName()))
            else :
-               self.AutoChat(Mob,self.Text[12].replace('PLAYERNAME',player.getName()))
-           Mob.reduceCurrentHp(9999999,Mob)
-           st.getPcSpawn().removeSpawn(self.NPC[4])
-           self.DeleteSpawn(st,st.getInt("Mob_2"))
+               self.AutoChat(npc,self.Text[12].replace('PLAYERNAME',player.getName()))
+           npc.reduceCurrentHp(9999999,npc)
+           self.DeleteSpawn(st,npc.getObjectId())
        else :
-           st.startQuestTimer("Mob_2 has despawned",1000)
+           st.startQuestTimer("Mob_2 has despawned",1000,npc)
        return
    return htmltext
 
@@ -544,10 +548,9 @@ class Quest (JQuest) :
                     st.set("Quest0","1")
                     self.AutoChat(npc,self.Text[17].replace('PLAYERNAME',player.getName()))
                     npc.reduceCurrentHp(9999999,npc)
-                    st.getPcSpawn().removeSpawn(self.Mob[2])
+                    self.DeleteSpawn(st,st.getInt("Mob_2"))
                     st.getQuestTimer("Mob_3 has despawned").cancel()
                     st.set("Tab","1")
-                    self.DeleteSpawn(st,st.getInt("Mob_3"))
    return
 
  def onKill (self,npc,player):
@@ -613,7 +616,6 @@ class Quest (JQuest) :
                         st.giveItems(self.Items[6],1)
                         st.set("cond","9")
                         st.playSound("ItemSound.quest_middle")
-                st2.getPcSpawn().removeAllSpawn()
                 st2.getQuestTimer("Mob_1 has despawned").cancel()
                 self.DeleteSpawn(st2,st2.getInt("Mob_1"))
                 st2.set("spawned","0")
@@ -631,14 +633,12 @@ class Quest (JQuest) :
                         else :
                             self.AutoChat(npc,self.Text[5].replace('PLAYERNAME',player.getName()))
                     st2.getQuestTimer("Archon Hellisha has despawned").cancel()
-                    st2.getPcSpawn().removeAllSpawn()
                     self.DeleteSpawn(st2,st2.getInt("Archon"))
                     st2.set("spawned","0")
     else :
         if npcId == self.Mob[0] :
             st = self.findRightState(player,npc)
             if st:
-                st.getPcSpawn().removeAllSpawn()
                 st.getQuestTimer("Mob_1 has despawned").cancel()
                 self.DeleteSpawn(st,st.getInt("Mob_1"))
                 st.set("spawned","0")
@@ -646,7 +646,6 @@ class Quest (JQuest) :
             st = self.findRightState(player,npc)
             if st:
                 st.getQuestTimer("Archon Hellisha has despawned").cancel()
-                st.getPcSpawn().removeAllSpawn()
                 self.DeleteSpawn(st,st.getInt("Archon"))
                 st.set("spawned","0")
     return

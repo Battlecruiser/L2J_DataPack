@@ -46,7 +46,6 @@ class Quest (JQuest) :
        htmltext = "30567-04.htm"
      else:
        htmltext = "30567-05.htm"
-       st.getPcSpawn().removeAllSpawn()
        st.exitQuest(1)
        st.playSound("ItemSound.quest_finish")
        st.giveItems(ADENA,4200)
@@ -69,7 +68,7 @@ class Quest (JQuest) :
           st.set("cond","2")
         st.giveItems(DARKWING_BAT_FANG,1)
         if 66>st.getQuestItemsCount(DARKWING_BAT_FANG)>10 and st.getRandom(100) < 10 :
-          st.getPcSpawn().addSpawn(27043)
+          st.addSpawn(27043)
           st.giveItems(VARANGKAS_PARASITE,1)
    else :
       if st.getQuestItemsCount(DARKWING_BAT_FANG) < 66 and st.getQuestItemsCount(VARANGKAS_PARASITE) :

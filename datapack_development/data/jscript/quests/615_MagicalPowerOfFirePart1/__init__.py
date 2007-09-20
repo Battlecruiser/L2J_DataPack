@@ -37,7 +37,9 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onEvent (self, event, st) :
+ def onAdvEvent (self, event, npc, player) :
+   st = player.getQuestState(qn)
+   if not st: return
    cond = st.getInt("cond")
    id = st.getInt("id")
    aggro = st.getInt("aggro")
@@ -48,7 +50,6 @@ class Quest (JQuest) :
             st.set("cond","1")
             st.set("id","2")
             st.set("aggro","0")
-            st.set("spawnId","0")
             st.set("spawned","0")
             st.set("npcid","0")
             st.setState(STARTED)
@@ -71,11 +72,8 @@ class Quest (JQuest) :
        else :
            htmltext = "31559-02.htm"
    elif event == "Eye of Udan has despawned" :
-        npc1 = st.getPcSpawn().getSpawn(st.getInt("spawnId")).getLastSpawn()
-        AutoChat(npc1,"I'll be waiting for your return")
-        npc1.reduceCurrentHp(9999999,npc1)
-        st.getPcSpawn().removeAllSpawn()
-        st.set("spawnId","0")
+        AutoChat(npc,"I'll be waiting for your return")
+        npc.reduceCurrentHp(9999999,npc1)
         st.set("spawned","0")
    return htmltext
 
@@ -108,7 +106,6 @@ class Quest (JQuest) :
                         htmltext = "31379-03.htm"
                         st.set("id","3")
                         st.set("aggro","0")
-                        st.set("spawnId","0")
                         st.set("spawned","0")
                         st.set("npcid","0")
                     elif id == 5 and Red_Totem :
@@ -142,12 +139,11 @@ class Quest (JQuest) :
                     st.set("aggro","1")
                     st.set("cond","1")
                     st.set("id","4")
-                    spawnId = st.getPcSpawn().addSpawn(Eye,xx,yy,zz)
-                    st.set("spawnId",str(spawnId))
+                    spawnedNpc = st.addSpawn(Eye,xx,yy,zz)
                     st.set("spawned","1")
                     st.set("npcid",str(npc.getObjectId()))
-                    AutoChat(st.getPcSpawn().getSpawn(spawnId).getLastSpawn(),"You cannot escape Udan's eyes!")#this is only a temp message until we find out what it actually is! string = 61503
-                    st.startQuestTimer("Eye of Udan has despawned",10000)
+                    AutoChat(spawnedNpc,"You cannot escape Udan's eyes!")#this is only a temp message until we find out what it actually is! string = 61503
+                    st.startQuestTimer("Eye of Udan has despawned",10000,spawnedNpc)
                     if Red_Totem :
                         st.takeItems(Totem,-1)
     return

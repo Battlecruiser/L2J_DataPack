@@ -81,7 +81,6 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
       st.set("cond","0")
-      st.getPcSpawn().removeAllSpawn()
    elif npcId == 30109 and cond == 1 :
       htmltext = "30109-04.htm"
    elif npcId == 30653 and cond == 1 :
@@ -176,7 +175,7 @@ class Quest (JQuest) :
    if npcId in [20190,20191] :
       if cond == 2 :
         if st.getRandom(50)<2 :
-          st.getPcSpawn().addSpawn(27119,npc,True)
+          st.addSpawn(27119,npc,True)
           st.playSound("Itemsound.quest_before_battle")
    elif npcId == 27119 :
       if cond == 2 and st.getQuestItemsCount(OLD_KNIGHT_SWORD) > 0 :
@@ -206,7 +205,7 @@ class Quest (JQuest) :
    elif npcId == 20144 :
       if cond == 6 :
         if st.getRandom(100)<33 :
-           st.getPcSpawn().addSpawn(30656,npc.getX(),npc.getY(),npc.getZ(),npc.getHeading(),True,300000)
+           st.addSpawn(30656,npc.getX(),npc.getY(),npc.getZ(),npc.getHeading(),True,300000)
            st.playSound("ItemSound.quest_middle")
    elif npcId == 20577 :
       if cond == 9 and st.getQuestItemsCount(MILITAS_ARTICLE) < 20 :
