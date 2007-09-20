@@ -247,7 +247,7 @@ __all__ = [
 '426_FishingShot',
 '431_WeddingMarch',
 '432_BirthdayPartySong',
-'q501_ProofOfClanAlliance',
+'501_ProofOfClanAlliance',
 '503_PursuitClanAmbition',
 '508_TheClansReputation',
 '601_WatchingEyes',
