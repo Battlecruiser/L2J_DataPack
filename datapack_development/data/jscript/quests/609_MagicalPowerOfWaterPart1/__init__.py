@@ -73,7 +73,7 @@ class Quest (JQuest) :
            htmltext = "31561-02.htm"
    elif event == "Asefa's Eye has despawned" :
         AutoChat(npc,"I'll be waiting for your return")
-        npc.reduceCurrentHp(9999999,npc1)
+        npc.reduceCurrentHp(9999999,npc)
         st.set("spawned","0")
    return htmltext
 

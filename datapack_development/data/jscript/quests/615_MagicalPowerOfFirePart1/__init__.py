@@ -73,7 +73,7 @@ class Quest (JQuest) :
            htmltext = "31559-02.htm"
    elif event == "Eye of Udan has despawned" :
         AutoChat(npc,"I'll be waiting for your return")
-        npc.reduceCurrentHp(9999999,npc1)
+        npc.reduceCurrentHp(9999999,npc)
         st.set("spawned","0")
    return htmltext
 
