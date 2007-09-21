@@ -33,7 +33,7 @@ class baium (JQuest):
            npc.setBusyMessage("Attending another player's request")
            npc.deleteMe()
            baium = st.addSpawn(29020,npc)
-           baium.broadcastPacket(SocialAction(objId,2))
+           baium.broadcastPacket(SocialAction(baium,2))
            self.startQuestTimer("baium_timer1",15000, baium, None)
       else:
         st.exitQuest(1)
