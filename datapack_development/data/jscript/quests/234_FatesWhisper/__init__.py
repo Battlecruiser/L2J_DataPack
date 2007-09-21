@@ -271,7 +271,7 @@ class Quest (JQuest) :
     if st.getState() != STARTED : return 
 
     npcId = npc.getNpcId()
-    value,dummy,dropId,chance = DROPLIST[npcId]
+    value,dropId,chance = DROPLIST[npcId]
     if value == st.getInt("cond") and npcId==29020 :
       if player.getActiveWeaponItem() and player.getActiveWeaponItem().getItemId() == PIPETTE_KNIFE and st.getRandom(100)<chance and st.getQuestItemsCount(dropId) == 0:
         st.giveItems(dropId,1)
