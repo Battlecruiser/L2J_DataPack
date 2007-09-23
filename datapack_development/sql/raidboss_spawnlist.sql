@@ -232,10 +232,10 @@ INSERT INTO `raidboss_spawnlist` VALUES
 -- (25506,1,127900,-160600,-1100,0,43200,129600,0,184670,9999), -- Rayito The Looter (37) -- stats & proper coords to be done
 -- (25509,1,74000,-102000,900,0,43200,129600,0,418874,9999), -- Dark Shaman Varangka (53) -- stats & proper coords to be done
 -- (25512,1,96524,-111070,-3335,0,43200,129600,0,804638,9999), -- Gigantic Chaos Golem (52) -- stats to be done
--- (25514,1,80000,-55000,-6000,0,43200,129600,0,714778,9999), -- Queen Shyeed (80) -- stats & proper coords to be done
+(25514,1,79635,-55434,-6135,0,43200,129600,0,714778,3718); -- Queen Shyeed (80)
 -- (25517,1,113000,-76000,200,0,43200,129600,0,1069643,9999), -- Master Anays (87) -- stats & proper coords to be done
 -- (25523,1,170000,-60000,-3500,0,43200,129600,0,1848045,9999), -- Plague Golem (73) -- stats & proper coords to be done
--- (25524,1,144600,-5500,-4100,0,43200,129600,0,956490,9999), -- Flamestone Giant (76) -- stats & proper coords to be done
+(25524,1,144143,-5731,-4722,0,43200,129600,0,956490,3247), -- Flamestone Giant (76)
 -- (25527,1,3776,-6768,-32,0,43200,129600,0,1532678,9999), -- Uruka (87) -- stats to be done
 
 
