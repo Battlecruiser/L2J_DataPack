@@ -25334,7 +25334,37 @@ INSERT INTO `droplist` VALUES
 (25498,4602,2,4,2,101507), -- Greater Dye of Strength <Str+3 Dex-3>
 (25498,4603,1,1,2,304522), -- Greater Dye of Constitution <Con+3 Str-3>
 (25499,1342,20,60,2,559200), -- Fine Steel Arrow
-(25500,1539,1,1,2,124267); -- Greater Healing Potion
+(25500,1539,1,1,2,124267), -- Greater Healing Potion 
+(25514,6714,16,45,0,148367), -- Sealed Major Arcana Circlet Pattern 
+(25514,6710,14,30,0,185083), -- Sealed Draconic Leather Helmet Pattern 
+(25514,6706,9,18,0,39565), -- Sealed Imperial Crusader Helmet Pattern 
+(25514,6705,3,6,0,423191), -- Sealed Imperial Crusader Shield Part 
+(25514,6691,3,9,1,350234), -- Angel Slayer Blade 
+(25514,6689,16,48,1,45752), -- Basalt Battlehammer Head 
+(25514,6690,11,31,1,71191), -- Imperial Staff Head 
+(25514,6697,3,7,1,186193), -- Arcana Mace Head 
+(25514,6693,6,18,1,80504), -- Dragon Hunter Axe Blade 
+(25514,6679,1,1,2,52901), -- Sealed Imperial Crusader Helmet 
+(25514,6683,1,1,2,47901), -- Sealed Draconic Leather Helmet 
+(25514,6678,1,1,2,58620), -- Sealed Imperial Crusader Shield 
+(25514,8732,1,1,3,232743), -- Life Stone: level 76 
+(25514,8742,1,1,3,112321), -- Mid-Grade Life Stone: level 76 
+(25514,8752,2,4,3,88231), -- High-Grade Life Stone: level 76 
+(25515,1344,20,60,2,403000), -- Mithril Arrow 
+(25516,1344,20,60,2,403000), -- Mithril Arrow
+(25524,6699,43,108,0,106317), -- Sealed Tateossian Ring Gem 
+(25524,6700,25,37,0,166845), -- Sealed Tateossian Necklace Chain 
+(25524,6698,11,27,0,425832), -- Sealed Tateossian Earring  Part 
+(25524,6689,2,6,1,322913), -- Bassalt Battlehammer Head 
+(25524,6697,3,6,1,115235), -- Arcana Mace Head 
+(25524,6690,2,4,1,425832), -- Imperial Staff Head 
+(25524,6725,1,1,2,31598), -- Sealed Tateossian Ring 
+(25524,6726,1,1,2,15799), -- Sealed Tateossian Necklace 
+(25524,8731,1,1,3,512715), -- Life Stone: level 70 
+(25524,8751,1,1,3,152713), -- High-Grade Life Stone: level 70 
+(25524,8761,1,1,3,86125), -- Top-Grade Life Stone: level 70 
+(25525,1344,60,180,2,359667), -- Mithril Arrow 
+(25526,1344,60,180,2,359667); -- Mithril Arrow
 
 INSERT INTO `droplist` VALUES 
 (18342,57,7,13,0,1000000); -- Adena
