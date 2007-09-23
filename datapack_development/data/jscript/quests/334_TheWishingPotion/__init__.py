@@ -194,7 +194,7 @@ class Quest (JQuest) :
        elif WISH_CHANCE >= 66 :
          st.giveItems(ANCIENT_CROWN,1)
        else:
-         spawnedNpc=st.addSpawn(SANCHES,player,True)
+         spawnedNpc=st.addSpawn(SANCHES,player,True,0)
          autochat(spawnedNpc,"Who dares to call the dark Monarch?!")
          st.startQuestTimer("sanches_timer1",200000,spawnedNpc)
      elif wish == 4 :
@@ -312,7 +312,7 @@ class Quest (JQuest) :
          st.getQuestTimer("sanches_timer1").cancel()
          if st.getRandom(100) <= 50 :
             autochat(npc,"It's time to come out my Remless... Bonaparterius!")
-            spawnedNpc=st.addSpawn(BONAPARTERIUS,npc,True)
+            spawnedNpc=st.addSpawn(BONAPARTERIUS,npc,True,0)
             autochat(spawnedNpc,"I am the Great Emperor's son!")
             st.startQuestTimer("bonaparterius_timer1",600000,spawnedNpc)
          else :
@@ -323,7 +323,7 @@ class Quest (JQuest) :
          st.getQuestTimer("bonaparterius_timer1").cancel()
          autochat(npc,"Only Ramsebalius would be able to avenge me!")
          if st.getRandom(100) <= 50 :
-           spawnedNpc=st.addSpawn(RAMSEBALIUS,npc,True)
+           spawnedNpc=st.addSpawn(RAMSEBALIUS,npc,True,0)
            autochat(spawnedNpc,"Meet the absolute ruler!")
            st.startQuestTimer("ramsebalius_timer1",600000,spawnedNpc)
          else :
@@ -334,7 +334,7 @@ class Quest (JQuest) :
          st.getQuestTimer("ramsebalius_timer1").cancel()
          autochat(npc,"You evil piece of...")
          if st.getRandom(100) <= 50 :
-           spawnedNpc=st.addSpawn(GREAT_DEMON_KING,npc,True)
+           spawnedNpc=st.addSpawn(GREAT_DEMON_KING,npc,True,0)
            autochat(spawnedNpc,"Who dares to kill my fiendly minion?!")
            st.startQuestTimer("greatdemon_timer1",600000,spawnedNpc)
          else :
