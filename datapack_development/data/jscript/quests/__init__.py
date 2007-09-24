@@ -81,6 +81,7 @@ __all__ = [
 '106_ForgottenTruth',
 '107_ShowNoMercy',
 '108_DiamondGambit',
+'110_ToThePrimevalIsle',
 '118_ToLeadAndBeLed',
 '121_PavelTheGiants',
 '122_OminousNews',
