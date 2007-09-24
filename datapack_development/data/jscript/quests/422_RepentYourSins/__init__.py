@@ -143,7 +143,7 @@ class Quest (JQuest) :
                st.exitQuest(1)
        elif condition <= 9 :
            htmltext = "30981-07.htm"
-       elif condition == 13 and st.getQuestItemsCount(MANUAL_OF_MANACLES) == 0 :
+       elif condition <= 13 and condition > 9 and st.getQuestItemsCount(MANUAL_OF_MANACLES) == 0 :
            htmltext = "30981-08.htm"
            st.set("cond","14")
            st.giveItems(MANUAL_OF_MANACLES,1)
