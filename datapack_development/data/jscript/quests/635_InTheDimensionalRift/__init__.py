@@ -18,7 +18,7 @@ COORD={
 3: [ 45256,123906,-5411], #Pilgrim's Necropolis
 4: [ 46192,170290,-4981], #Catacomb of the Branded
 5: [111273,174015,-5437], #Necropolis of Worship
-6: [ 77637, 78399,-5125], #Catacomb of Apostate
+6: [-20604,-250789,-8165],#Catacomb of Apostate
 7: [-21726, 77385,-5171], #Patriot's Necropolis
 8: [140405, 79679,-5427], #Catacomb of the Witch
 9: [-52366, 79097,-4741], #Necropolis of Devotion (ex Ascetics)
