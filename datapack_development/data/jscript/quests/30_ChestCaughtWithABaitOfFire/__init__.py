@@ -70,7 +70,7 @@ class Quest (JQuest) :
       else :
         htmltext = "30629-01.htm"
     elif id == COMPLETED :
-      htmltext = "<html><body>This quest have already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been completed.</body></html>"
     return htmltext
 
 QUEST=Quest(30,qn,"Chest Caught With A Bait Of Fire")

@@ -83,7 +83,7 @@ class Quest (JQuest) :
           htmltext="30097-05.htm"
     elif id==COMPLETED:
       st.exitQuest(0)
-      htmltext="<html><body>This quest have already been completed.</body></html>"
+      htmltext="<html><body>This quest has already been completed.</body></html>"
     return htmltext
 
   def onKill(self, npc, player):

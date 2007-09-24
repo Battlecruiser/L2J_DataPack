@@ -52,7 +52,7 @@ class Quest (JQuest) :
         htmltext = "30348-01.htm"
         st.exitQuest(1)
    elif npcId == 30348 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest have already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been completed.</body></html>"
    elif npcId == 30348 and st.getInt("cond")==1 :
       if st.getQuestItemsCount(DARK_BEZOAR_ID)<13 :
         htmltext = "30348-04.htm"

@@ -211,7 +211,7 @@ class Quest (JQuest) :
             htmltext = "30634-01.htm"
             st.exitQuest(1)
       elif id == COMPLETED:                     # quest already done, not repeatable
-         htmltext = "<html><body>This quest have already been completed.</body></html>"
+         htmltext = "<html><body>This quest has already been completed.</body></html>"
       elif id == PROGRESS:
          step = st.getInt("step")             # stats as short vars if the player has state <Progress>
          LaraPart = st.getInt("Lara_Part")

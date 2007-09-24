@@ -56,7 +56,7 @@ class Quest (JQuest) :
         htmltext = "30349-01.htm"
         st.exitQuest(1)
    elif npcId == 30349 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest have already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been completed.</body></html>"
    elif npcId == 30349 and st.getInt("cond")==1 and st.getQuestItemsCount(JENNIES_LETTER_ID) :
         htmltext = "30349-04.htm"
    elif npcId == 30349 and st.getInt("cond")==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE2_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE3_ID)==1 :

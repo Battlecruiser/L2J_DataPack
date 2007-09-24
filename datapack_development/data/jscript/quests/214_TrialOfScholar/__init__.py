@@ -261,7 +261,7 @@ class Quest (JQuest) :
        htmltext = "30461-01.htm"
        st.exitQuest(1)
    elif npcId == 30461 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest have already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been completed.</body></html>"
    elif npcId == 30461 and st.getInt("cond")==1 and st.getQuestItemsCount(MIRIENS_SIGIL1_ID)==1 and st.getQuestItemsCount(SYMBOL_OF_SYLVAIN_ID)==0 :
         htmltext = "30461-05.htm"
    elif npcId == 30461 and st.getInt("cond")==1 and st.getQuestItemsCount(MIRIENS_SIGIL1_ID)==1 and st.getQuestItemsCount(SYMBOL_OF_SYLVAIN_ID)==1 :

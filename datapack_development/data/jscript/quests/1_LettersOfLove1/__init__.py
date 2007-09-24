@@ -66,7 +66,7 @@ class Quest (JQuest) :
        htmltext = "<html><body>Quest for characters level 2 and above.</body></html>" 
        st.exitQuest(1) 
    elif npcId == DARIN and cond == 0 and onlyone == 1 : 
-     htmltext = "<html><body>This quest have already been completed.</body></html>"
+     htmltext = "<html><body>This quest has already been completed.</body></html>"
    elif id == STARTED :
        if npcId == ROXXY and cond and onlyone == 0: 
          if ItemsCount_RK == 0 and ItemsCount_DL : 

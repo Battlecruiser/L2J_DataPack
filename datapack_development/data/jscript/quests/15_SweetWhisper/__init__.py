@@ -48,7 +48,7 @@ class Quest (JQuest) :
        htmltext = "31302-0.htm"
        return htmltext
      if id == COMPLETED :
-       htmltext = "<html><body>This quest have already been completed.</body></html>"
+       htmltext = "<html><body>This quest has already been completed.</body></html>"
        return htmltext
      else:
        htmltext = "31302-0a.htm"

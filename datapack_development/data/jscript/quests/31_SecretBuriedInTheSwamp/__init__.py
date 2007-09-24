@@ -59,7 +59,7 @@ class Quest (JQuest) :
    id = st.getState()
    cond = st.getInt("cond")
    if id == COMPLETED :
-     htmltext = "<html><body>This quest have already been completed.</body></html>"
+     htmltext = "<html><body>This quest has already been completed.</body></html>"
    elif npcId == ABERCROMBIE :
      if cond == 0 :
        if player.getLevel() >= 66 :

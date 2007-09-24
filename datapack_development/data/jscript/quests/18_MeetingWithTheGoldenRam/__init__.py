@@ -49,7 +49,7 @@ class Quest (JQuest) :
      id = st.getState()
      cond = st.getInt("cond")
      if id == COMPLETED :
-       htmltext = htmltext = "<html><body>This quest have already been completed.</body></html>"
+       htmltext = htmltext = "<html><body>This quest has already been completed.</body></html>"
      elif id == CREATED and npcId == DONAL :
        htmltext = "31314-01.htm"
      elif id == STARTED :

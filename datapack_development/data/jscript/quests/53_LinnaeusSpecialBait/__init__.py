@@ -55,7 +55,7 @@ class Quest (JQuest):
         htmltext="<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
         if not st: return htmltext
         id = st.getState()
-        if id == COMPLETED: htmltext = "<html><body>This quest have already been completed.</body></html>"           
+        if id == COMPLETED: htmltext = "<html><body>This quest has already been completed.</body></html>"           
         elif id == CREATED :
            if player.getLevel() > 59 and fishing_level(player) > 19 :
               htmltext= "31577-0.htm"

@@ -73,7 +73,7 @@ class Quest (JQuest) :
        htmltext = "30223-01.htm" 
        st.exitQuest(1) 
    elif npcId == ARUJIEN and id == COMPLETED : 
-     htmltext = "<html><body>This quest have already been completed.</body></html>" 
+     htmltext = "<html><body>This quest has already been completed.</body></html>" 
    elif npcId == ARUJIEN and cond >= 1 : 
      if st.getQuestItemsCount(ARUJIENS_LETTER1) : 
        htmltext = "30223-05.htm" 

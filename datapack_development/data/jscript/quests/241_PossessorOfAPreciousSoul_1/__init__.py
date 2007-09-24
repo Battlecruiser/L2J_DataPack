@@ -151,7 +151,7 @@ class Quest (JQuest) :
      if npcId == TALIEN :
        if cond == 0 :
          if id == COMPLETED :
-           htmltext = "<html><body>This quest have already been completed.</body></html>"
+           htmltext = "<html><body>This quest has already been completed.</body></html>"
          elif player.getLevel() < 50 : 
            htmltext = "31739-2.htm"
            st.exitQuest(1)

@@ -67,7 +67,7 @@ class Quest (JQuest) :
  
    if npcId == BOLTER and cond == 0 : 
      if onlyone == 1 : 
-       htmltext = "<html><body>This quest have already been completed.</body></html>" 
+       htmltext = "<html><body>This quest has already been completed.</body></html>" 
      elif player.getLevel() >= 2 : 
        htmltext = "30554-02.htm" 
      else: 
