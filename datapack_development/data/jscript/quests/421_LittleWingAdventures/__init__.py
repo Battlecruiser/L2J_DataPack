@@ -17,7 +17,7 @@ MAX_DISTANCE = 100
 
 #Messages
 default = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
-event_1 = "<html><body>Sage Cronos:<br>Then go and see <font color=\"LEVEL\">Fairy Mymyu</font>, she will help you</body></html>"
+event_1 = "<html><body>Sage Cronos:<br>Then go and see <font color=\"LEVEL\">Fairy Mimyu</font>, she will help you</body></html>"
 error_1 = "<html><body>You're suppossed to own a hatchling and have it summoned to complete this quest.</body></html>"
 error_2 = "<html><body>Hey! What happened with the other hatchling you had? This one is different.</body></html>"
 error_3 = "<html><body>Sage Cronos:<br>You need to be level "+str(MIN_PLAYER_LEVEL)+" to complete this quest.</body></html>"
@@ -25,9 +25,9 @@ error_4 = "<html><body>Sage Cronos:<br>Your pet need to be level "+str(MIN_PET_L
 error_5 = "Your pet is not a hatchling. Quest Aborted."
 error_6 = "Your pet should be nearby. Quest aborted"
 qston_1 = "<html><body>Sage Cronos:<br>So, you want to turn your hatchling into a more powerful creature?<br><br><a action=\"bypass -h Quest "+str(QUEST_NUMBER)+"_"+QUEST_NAME+" 16\">Yes, please tell me how</a><br></body></html>"
-qston_2 = "<html><body>Sage Cronos:<br>I've said you need to talk to <font color=\"LEVEL\">Fairy Mymyu</font>!!!. Am i clear???</body></html>"
-qston_3 = "<html><body>Fairy Mymyu:<br>You weren't yet able to find the <font color=\"LEVEL\">Fairy Trees of Wind, Star, Twilight and Abyss</font>? Don't give up! They are all in <font color=\"LEVEL\">Hunter's Valley</font></body></html>"
-order_1 = "<html><body>Fairy Mymyu:<br>Your pet must drink the sap of <font color=\"LEVEL\">Fairy Trees of Wind, Star, Twilight and Abyss</font> to grow up. The trees will probably agree but as we don't want to hurt them, take that leafs to heal any wound your hatchling could cause them</body></html>"
+qston_2 = "<html><body>Sage Cronos:<br>I've said you need to talk to <font color=\"LEVEL\">Fairy Mimyu</font>!!!. Am i clear???</body></html>"
+qston_3 = "<html><body>Fairy Mimyu:<br>You weren't yet able to find the <font color=\"LEVEL\">Fairy Trees of Wind, Star, Twilight and Abyss</font>? Don't give up! They are all in <font color=\"LEVEL\">Hunter's Valley</font></body></html>"
+order_1 = "<html><body>Fairy Mimyu:<br>Your pet must drink the sap of <font color=\"LEVEL\">Fairy Trees of Wind, Star, Twilight and Abyss</font> to grow up. The trees will probably agree but as we don't want to hurt them, take that leafs to heal any wound your hatchling could cause them</body></html>"
 ftm_11  = "<html><body>Fairy Tree of Wind: <br>I'll let your hatchling drink from my sap, but you will have to cover the wound your pet will do on me with one of these leafs you have, they are hypoallergenic<br><br><a action=\"bypass -h Quest "+str(QUEST_NUMBER)+"_"+QUEST_NAME+" 1\">It's ok</a></body></html>"
 ftm_12  = "The hatchling has drunk the sap of the fairy tree of the wind."
 ftm_21  = "<html><body>Fairy Tree of Star: <br>Oh! One of those nasty ghosts hurted my bark... look! Only a fairy leaf could cure my wound... <br><br><a action=\"bypass -h Quest "+str(QUEST_NUMBER)+"_"+QUEST_NAME+" 2\">Give it a leaf</a></body></html>"
@@ -36,7 +36,7 @@ ftm_31  = "<html><body>Fairy Tree of Twilight: <br>Ok, i do know the way this is
 ftm_32  = "The hatchling has drunk the sap of the fairy tree of the twilight."
 ftm_41  = "<html><body>Fairy Tree of Abyss: <br>That your pet will bite me and you gonna put a leaf in my wound? No way! No! Wait!... argh... if i could run like Black Willows do...<br><br><a action=\"bypass -h Quest "+str(QUEST_NUMBER)+"_"+QUEST_NAME+" 8\">Say sorry</a></body></html>"
 ftm_42  = "The hatchling has drunk the sap of the fairy tree of the abyss."
-end_msg = "<html><body>Fairy Mymyu:<br>Great job, your hatchling"
+end_msg = "<html><body>Fairy Mimyu:<br>Great job, your hatchling"
 end_msg2= "has become an strider, enjoy!</body></html>"
 
 #Quest items
