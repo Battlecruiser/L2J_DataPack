@@ -51,7 +51,7 @@ class Quest (JQuest) :
  def onTalk (self,npc,player): 
 
    npcId = npc.getNpcId() 
-   htmltext = "<html><head><body>I have nothing to say you</body></html>" 
+   htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>" 
    st = player.getQuestState(qn) 
    if not st : return htmltext 
 
@@ -59,7 +59,7 @@ class Quest (JQuest) :
    if id == CREATED : 
      st.set("cond","0") 
    if npcId == 30523 and id == COMPLETED : 
-      htmltext = "<html><head><body>This quest have already been completed.</body></html>" 
+      htmltext = "<html><body>This quest has already been completed.</body></html>" 
    elif npcId == 30523 and st.getInt("cond")==0 : 
           if player.getRace().ordinal() != 4 : 
             htmltext = "30523-00.htm" 

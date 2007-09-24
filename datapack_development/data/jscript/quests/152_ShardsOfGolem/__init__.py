@@ -47,7 +47,7 @@ class Quest (JQuest) :
    toolbox = st.getQuestItemsCount(TOOL_BOX_ID)
    shards = st.getQuestItemsCount(GOLEM_SHARD_ID)
    if id == COMPLETED :
-      htmltext = "<html><body>This quest have already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been completed.</body></html>"
    elif npcId == HARRIS :
       if cond == 0 :
          if player.getLevel() >= 10 :

@@ -64,7 +64,7 @@ class Quest (JQuest) :
         htmltext = "30145-02.htm"
         st.exitQuest(1)
    elif npcId == 30145 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest have already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been completed.</body></html>"
    elif npcId == 30145 and st.getInt("cond") :
       if st.getQuestItemsCount(CRACKED_SKULL_ID) >= 1 and st.getQuestItemsCount(PERFECT_SKULL_ID) == 0 :
         htmltext = "30145-06.htm"

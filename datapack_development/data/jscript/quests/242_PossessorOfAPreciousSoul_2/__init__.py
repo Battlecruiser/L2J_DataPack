@@ -99,7 +99,7 @@ class Quest (JQuest) :
    if player.isSubClassActive() :
      if npcId == VIRGIL and cond == 0 and st.getQuestItemsCount(VIRGILS_LETTER) == 1 :
        if id == COMPLETED :
-         htmltext = "<html><body>This quest have already been completed.</body></html>"
+         htmltext = "<html><body>This quest has already been completed.</body></html>"
        elif player.getLevel() < 60 : 
          htmltext = "31742-2.htm"
          st.exitQuest(1)

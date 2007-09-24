@@ -49,7 +49,7 @@ class Quest (JQuest) :
      st.set("cond","0")
    if npcId == FUNDIN and cond == 0 :
      if id == COMPLETED :
-       htmltext = "<html><body>This quest have already been completed.</body></html>"
+       htmltext = "<html><body>This quest has already been completed.</body></html>"
      elif player.getLevel() < 74 : 
        htmltext = "31274-1.htm"
        st.exitQuest(1)
