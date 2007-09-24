@@ -236,7 +236,7 @@ class feedable_beasts(JQuest) :
                           "The weather is really good.  Wanna go for a picnic?",
                           "I really like you! This is tasty...",
                           "If you do not have to leave this place, then I can help you.",
-                          "What can I helped you with?",
+                          "What can I help you with?",
                           "I am not here only for food!",
                           "Yam, yam, yam, yam, yam!"]
                 npc.broadcastPacket(CreatureSay(objectId,0,npc.getName(),mytext[Rnd.get(len(mytext))]))
