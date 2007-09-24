@@ -5,7 +5,7 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-qn = "101_SwordOfSolidarityQuest"
+qn = "101_SwordOfSolidarity"
 
 ROIENS_LETTER_ID = 796
 HOWTOGO_RUINS_ID = 937
