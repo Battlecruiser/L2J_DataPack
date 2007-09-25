@@ -24,7 +24,6 @@ TARANTULA_PIC = 1654
 HONEY_JAR = 1655
 BEAD = 1656
 BEAD_PARCEL = 1657
-SHADOW_WEAPON_COUPON_DGRADE = 8869
 
 class Quest (JQuest) :
 
@@ -265,7 +264,6 @@ class Quest (JQuest) :
           htmltext = "30316-05.htm"
           st.takeItems(SUCCUBUS_UNDIES,1)
           st.giveItems(RING_OF_RAVEN,1)
-          st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")

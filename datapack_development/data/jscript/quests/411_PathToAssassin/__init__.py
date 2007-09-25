@@ -15,7 +15,6 @@ ONYX_BEASTS_MOLAR = 1248
 SHILENS_TEARS = 1250
 ARKENIA_RECOMMEND = 1251
 IRON_HEART = 1252
-SHADOW_WEAPON_COUPON_DGRADE = 8869
 
 class Quest (JQuest) :
 
@@ -80,7 +79,6 @@ class Quest (JQuest) :
           htmltext = "30416-06.htm"
           st.takeItems(ARKENIA_RECOMMEND,1)
           st.giveItems(IRON_HEART,1)
-          st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")

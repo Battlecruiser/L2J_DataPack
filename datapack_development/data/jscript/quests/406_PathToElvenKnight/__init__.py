@@ -14,7 +14,6 @@ ELVEN_KNIGHT_BROOCH = 1204
 TOPAZ_PIECE = 1205
 EMERALD_PIECE = 1206
 KLUTO_MEMO = 1276
-SHADOW_WEAPON_COUPON_DGRADE = 8869
 #messages
 default="<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>" 
 
@@ -91,7 +90,6 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_finish")
             if st.getQuestItemsCount(ELVEN_KNIGHT_BROOCH) == 0 :
               st.giveItems(ELVEN_KNIGHT_BROOCH,1)
-              st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
             htmltext = "30327-10.htm"
    elif npcId == 30317 :
         if cond == 3 :

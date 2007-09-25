@@ -22,7 +22,6 @@ ETERNITY_DIAMOND = 1230
 CHARM_OF_GRAIN = 1272
 SAP_OF_WORLD_TREE = 1273
 LUCKY_POTPOURI = 1274
-SHADOW_WEAPON_COUPON_DGRADE = 8869
 
 class Quest (JQuest) :
 
@@ -170,7 +169,6 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_finish")
         if st.getQuestItemsCount(ETERNITY_DIAMOND) == 0 :
           st.giveItems(ETERNITY_DIAMOND,1)
-          st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
         htmltext = "30414-24.htm"
    return htmltext
 

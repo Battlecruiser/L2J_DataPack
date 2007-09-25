@@ -17,6 +17,8 @@ LEAF_OF_ORACLE   = 1235
 BEAD_OF_SEASON   = 1292
 #SYLVAIN,RAYMOND,LEVIAN
 NPCS=[30070,30289,30037]
+#Reward Item
+SHADOW_WEAPON_COUPON_DGRADE = 8869
 #event:[newclass,req_class,req_race,low_ni,low_i,ok_ni,ok_i,req_item]
 #low_ni : level too low, and you dont have quest item
 #low_i: level too low, despite you have the item
@@ -68,6 +70,7 @@ class Quest (JQuest) :
               suffix = "-"+ok_ni+".htm"
            else :
               suffix = "-"+ok_i+".htm"
+              st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
               change(st,player,newclass,req_item)
      st.exitQuest(1)
      htmltext = str(npcId)+suffix

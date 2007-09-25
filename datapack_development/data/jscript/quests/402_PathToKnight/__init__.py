@@ -8,7 +8,6 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "402_PathToKnight"
 
-SHADOW_WEAPON_COUPON_DGRADE = 8869
 MARK_OF_ESQUIRE = 1271
 SWORD_OF_RITUAL,COIN_OF_LORDS1,COIN_OF_LORDS2,COIN_OF_LORDS3,COIN_OF_LORDS4,COIN_OF_LORDS5,COIN_OF_LORDS6,GLUDIO_GUARDS_MARK1,\
 BUGBEAR_NECKLACE,EINHASAD_CHURCH_MARK1,EINHASAD_CRUCIFIX,GLUDIO_GUARDS_MARK2,POISON_SPIDER_LEG1,EINHASAD_CHURCH_MARK2,LIZARDMAN_TOTEM,\
@@ -112,7 +111,6 @@ class Quest (JQuest) :
                st.takeItems(item,-1)
           st.takeItems(MARK_OF_ESQUIRE,-1)
           st.giveItems(SWORD_OF_RITUAL,1)
-          st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")

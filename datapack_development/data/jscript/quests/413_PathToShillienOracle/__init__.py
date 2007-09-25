@@ -17,7 +17,6 @@ PENITENTS_MARK = 1267
 ASHEN_BONES = 1268
 ANDARIEL_BOOK = 1269
 ORB_OF_ABYSS = 1270
-SHADOW_WEAPON_COUPON_DGRADE = 8869
 
 class Quest (JQuest) :
 
@@ -95,7 +94,6 @@ class Quest (JQuest) :
             st.takeItems(ANDARIEL_BOOK,1)
             st.takeItems(GARMIEL_BOOK,1)
             st.giveItems(ORB_OF_ABYSS,1)
-            st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
             st.set("cond","0")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
@@ -221,6 +219,7 @@ STARTED.addQuestDrop(30377,PRAYER_OF_ADON,1)
 STARTED.addQuestDrop(30377,BLANK_SHEET1,1)
 
 print "importing quests: 413: Path To Shillien Oracle"
+
 
 
 

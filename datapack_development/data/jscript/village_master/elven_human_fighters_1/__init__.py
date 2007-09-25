@@ -16,6 +16,8 @@ SWORD_OF_RITUAL         = 1161
 BEZIQUES_RECOMMENDATION = 1190
 ELVEN_KNIGHT_BROOCH     = 1204
 REORIA_RECOMMENDATION   = 1217
+#Reward Item
+SHADOW_WEAPON_COUPON_DGRADE = 8869
 #PABRIS,RAINS,RAMOS
 NPCS=[30066,30288,30373]
 #event:[newclass,req_class,req_race,low_ni,low_i,ok_ni,ok_i,req_item]
@@ -70,6 +72,7 @@ class Quest (JQuest) :
               suffix = "-"+ok_ni+".htm"
            else :
               suffix = "-"+ok_i+".htm"
+              st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
               change(st,player,newclass,req_item)
      st.exitQuest(1)
      htmltext = str(npcId)+suffix

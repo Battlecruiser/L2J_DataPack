@@ -17,7 +17,6 @@ SIMPLONS_LETTER = 1143
 POISON_SPIDER_LEG2 = 1144
 MEDALLION_OF_WARRIOR = 1145
 RUSTED_BRONZE_SWORD3 = 1142
-SHADOW_WEAPON_COUPON_DGRADE = 8869
 
 class Quest (JQuest) :
 
@@ -110,7 +109,6 @@ class Quest (JQuest) :
           st.takeItems(POISON_SPIDER_LEG2,st.getQuestItemsCount(POISON_SPIDER_LEG2))
           st.takeItems(RUSTED_BRONZE_SWORD3,1)
           st.giveItems(MEDALLION_OF_WARRIOR,1)
-          st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
           htmltext = "30010-13.htm"
           st.set("cond","0")
           st.setState(COMPLETED)
@@ -174,6 +172,7 @@ STARTED.addQuestDrop(20043,POISON_SPIDER_LEG2,1)
 STARTED.addQuestDrop(20038,POISON_SPIDER_LEG2,1)
 STARTED.addQuestDrop(30010,RUSTED_BRONZE_SWORD3,1)
 print "importing quests: 401: Path To Warrior"
+
 
 
 

@@ -17,7 +17,6 @@ PREDATOR_CARAPACE = 1241
 TRIMDEN_SILK = 1242
 COFFIN_ETERNAL_REST = 1243
 GAZE_OF_ABYSS = 1244
-SHADOW_WEAPON_COUPON_DGRADE = 8869
 
 class Quest (JQuest) :
 
@@ -101,7 +100,6 @@ class Quest (JQuest) :
             htmltext = "30329-11.htm"
             st.takeItems(COFFIN_ETERNAL_REST,1)
             st.giveItems(GAZE_OF_ABYSS,1)
-            st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
             st.set("cond","0")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")

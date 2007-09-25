@@ -27,7 +27,6 @@ BOUND_DURKA_SPIRIT = 1628
 DURKA_PARASITE = 1629
 TOTEM_SPIRIT_BLOOD = 1630
 MASK_OF_MEDIUM = 1631
-SHADOW_WEAPON_COUPON_DGRADE = 8869
 
 class Quest (JQuest) :
 
@@ -75,7 +74,6 @@ class Quest (JQuest) :
           htmltext = "30502-07.htm"
           st.takeItems(TOTEM_SPIRIT_BLOOD,st.getQuestItemsCount(TOTEM_SPIRIT_BLOOD))
           st.giveItems(MASK_OF_MEDIUM,1)
-          st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
           st.addExpAndSp(3200,2600)
           st.set("cond","0")
           st.setState(COMPLETED)
@@ -310,6 +308,7 @@ STARTED.addQuestDrop(20043,DURKA_PARASITE,1)
 STARTED.addQuestDrop(30593,SPIRIT_NET,1)
 
 print "importing quests: 416: Path To Orc Shaman"
+
 
 
 

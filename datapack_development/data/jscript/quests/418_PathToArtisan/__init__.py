@@ -20,7 +20,6 @@ SECRET_BOX1 = 1640
 SECRET_BOX2 = 1641
 TOTEM_SPIRIT_CLAW = 1622
 TATARUS_LETTER = 1623
-SHADOW_WEAPON_COUPON_DGRADE = 8869
 
 class Quest (JQuest) :
 
@@ -78,7 +77,6 @@ class Quest (JQuest) :
           st.takeItems(PASS_2ND,1)
           st.takeItems(SECRET_BOX2,1)
           st.giveItems(PASS_FINAL,1)
-          st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
           st.set("cond","0")
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")

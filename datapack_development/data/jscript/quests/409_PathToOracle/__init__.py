@@ -15,7 +15,6 @@ LIZARD_CAPTAIN_ORDER = 1234
 LEAF_OF_ORACLE = 1235
 HALF_OF_DAIRY = 1236
 TAMATOS_NECKLACE = 1275
-SHADOW_WEAPON_COUPON_DGRADE = 8869
 
 class Quest (JQuest) :
 
@@ -96,7 +95,6 @@ class Quest (JQuest) :
             st.takeItems(LIZARD_CAPTAIN_ORDER,1)
             st.takeItems(CRYSTAL_MEDALLION,1)
             st.giveItems(LEAF_OF_ORACLE,1)
-            st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
             st.set("cond","0")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
