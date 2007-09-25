@@ -23,12 +23,18 @@ SCAV_NPCS=[30503,30594,30498,32092,32093]
 ARTI_MARKS = [1635]
 #MENDIO,OPIX,TAPOY
 ARTI_NPCS=[30504,30595,30499]
-
+#TRANSFER REWARDS
+SHADOW_WEAPON_COUPON_DGRADE = 8869
+SHADOW_WEAPON_COUPON_CGRADE = 8870
+#Classes dictionary goes like this:
+#event:[default_npc_prefix,race,req_class,1_class_denied,2_class_denied,[req_items],min_level,new_class,shadow_coupon_itemid]
+#bountyhunter transfer rewards on hold until the rest of VMs get updated, so
+#dont report this zero as a bug :)
 CLASSES={
-   "BH":["30511-",4,[0x36],[0x35],[0x37,0x39,0x75,0x76],BH_MARKS,40,0x37],
-   "WS":["30512-",4,[0x38],[0x35],[0x37,0x39,0x75,0x76],WS_MARKS,40,0x39],
-   "SC":["30503-",4,[0x35],[0x36,0x38],[0x37,0x39,0x75,0x76],SCAV_MARKS,20,0x36],
-   "AR":["30504-",4,[0x35],[0x36,0x38],[0x37,0x39,0x75,0x76],ARTI_MARKS,20,0x38],
+   "BH":["30511-",4,[0x36],[0x35],[0x37,0x39,0x75,0x76],BH_MARKS,40,0x37,0],
+   "WS":["30512-",4,[0x38],[0x35],[0x37,0x39,0x75,0x76],WS_MARKS,40,0x39,SHADOW_WEAPON_COUPON_CGRADE],
+   "SC":["30503-",4,[0x35],[0x36,0x38],[0x37,0x39,0x75,0x76],SCAV_MARKS,20,0x36,SHADOW_WEAPON_COUPON_DGRADE],
+   "AR":["30504-",4,[0x35],[0x36,0x38],[0x37,0x39,0x75,0x76],ARTI_MARKS,20,0x38,SHADOW_WEAPON_COUPON_DGRADE],
 }
 
 UNIQUE_DIALOGS=[30594,30595,30498,30499]
@@ -48,7 +54,7 @@ class Quest (JQuest) :
    classid  = player.getClassId().getId()
    level    = player.getLevel()
    if event in CLASSES.keys():
-      prefix,intended_race,required_class,denial1,denial2,required_marks,required_level,new_class = CLASSES[event]
+      prefix,intended_race,required_class,denial1,denial2,required_marks,required_level,new_class,reward = CLASSES[event]
       if npcId in UNIQUE_DIALOGS : prefix = str(npcId)+"-"
       if classid in required_class and race == intended_race :
          marks=0
@@ -66,6 +72,8 @@ class Quest (JQuest) :
            else :
             for item in required_marks :
                st.takeItems(item,1)
+            if reward :
+               st.giveItems(reward,15)
             player.setClassId(new_class)
             player.setBaseClass(new_class)
             player.broadcastUserInfo()
@@ -91,7 +99,7 @@ class Quest (JQuest) :
    elif npcId in SCAV_NPCS : key = "SC"
    elif npcId in ARTI_NPCS : key = "AR"
    if key :
-     prefix,intended_race,required_class,denial1,denial2,required_marks,required_level,new_class = CLASSES[key]
+     prefix,intended_race,required_class,denial1,denial2,required_marks,required_level,new_class,reward = CLASSES[key]
      if npcId in UNIQUE_DIALOGS : prefix = str(npcId)+"-"
      htmltext=prefix+"11.htm"
      if race == intended_race :

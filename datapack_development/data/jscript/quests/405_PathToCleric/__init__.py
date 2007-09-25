@@ -19,7 +19,6 @@ PENDANT_OF_MOTHER = 1198
 NECKLACE_OF_MOTHER = 1199
 LEMONIELLS_COVENANT = 1200
 MARK_OF_FAITH = 1201
-SHADOW_WEAPON_COUPON_DGRADE = 8869
 
 class Quest (JQuest) :
 
@@ -81,7 +80,6 @@ class Quest (JQuest) :
         st.takeItems(LEMONIELLS_COVENANT,1)
         st.takeItems(LETTER_OF_ORDER2,1)
         st.giveItems(MARK_OF_FAITH,1)
-        st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
         st.set("cond","0")
         st.setState(COMPLETED)
         st.playSound("ItemSound.quest_finish")

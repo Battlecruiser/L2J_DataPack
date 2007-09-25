@@ -15,7 +15,8 @@ GAZE_OF_ABYSS     = 1244
 IRON_HEART        = 1252
 JEWEL_OF_DARKNESS = 1261
 ORB_OF_ABYSS      = 1270
-
+#Reward Item
+SHADOW_WEAPON_COUPON_DGRADE = 8869
 #XENOS,TOBIAS,TRONIX
 NPCS=[30290,30297,30462]
 #event:[newclass,req_class,req_race,low_ni,low_i,ok_ni,ok_i,req_item]
@@ -69,6 +70,7 @@ class Quest (JQuest) :
               suffix = "-"+ok_ni+".htm"
            else :
               suffix = "-"+ok_i+".htm"
+              st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
               change(st,player,newclass,req_item)
      st.exitQuest(1)
      htmltext = str(npcId)+suffix

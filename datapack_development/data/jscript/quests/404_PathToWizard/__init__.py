@@ -21,7 +21,6 @@ RUST_GOLD_COIN = 1289
 RED_SOIL = 1290
 EARTH_RING = 1291
 BEAD_OF_SEASON = 1292
-SHADOW_WEAPON_COUPON_DGRADE = 8869
 
 class Quest (JQuest) :
 
@@ -214,7 +213,6 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_finish")
         if st.getQuestItemsCount(BEAD_OF_SEASON) == 0 :
           st.giveItems(BEAD_OF_SEASON,1)
-          st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
         htmltext = "30391-06.htm"
         
    return htmltext

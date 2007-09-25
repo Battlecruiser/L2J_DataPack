@@ -14,7 +14,8 @@ qn = "orc_occupation_change_1"
 MARK_OF_RAIDER   = 1592
 KHAVATARI_TOTEM  = 1615
 MASK_OF_MEDIUM   = 1631
-
+#Reward Item
+SHADOW_WEAPON_COUPON_DGRADE = 8869
 #OSBORN,DRIKUS,CASTOR
 NPCS=[30500,30505,30508]
 #event:[newclass,req_class,req_race,low_ni,low_i,ok_ni,ok_i,req_item]
@@ -67,6 +68,7 @@ class Quest (JQuest) :
               suffix = "-"+ok_ni+".htm"
            else :
               suffix = "-"+ok_i+".htm"
+              st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
               change(st,player,newclass,req_item)
      st.exitQuest(1)
      htmltext = str(npcId)+suffix

@@ -19,7 +19,6 @@ PRIGUNS_LETTER = 1215
 HONORARY_GUARD = 1216
 REORIA_RECOMMENDATION = 1217
 RUSTED_KEY = 1293
-SHADOW_WEAPON_COUPON_DGRADE = 8869
 
 class Quest (JQuest) :
 
@@ -123,7 +122,6 @@ class Quest (JQuest) :
         htmltext = "30328-07.htm"
         st.takeItems(HONORARY_GUARD,1)
         st.giveItems(REORIA_RECOMMENDATION,1)
-        st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
         st.set("cond","0")
         st.setState(COMPLETED)
         st.playSound("ItemSound.quest_finish")
@@ -210,6 +208,7 @@ STARTED.addQuestDrop(30426,PRIGUNS_LETTER,1)
 STARTED.addQuestDrop(30337,HONORARY_GUARD,1)
 
 print "importing quests: 407: Path To Elven Scout"
+
 
 
 

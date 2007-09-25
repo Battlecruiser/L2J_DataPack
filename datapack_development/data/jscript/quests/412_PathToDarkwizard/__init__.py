@@ -19,7 +19,6 @@ JEWEL_OF_DARKNESS = 1261
 LUCKY_KEY = 1277
 CANDLE = 1278
 HUB_SCENT = 1279
-SHADOW_WEAPON_COUPON_DGRADE = 8869
 
 class Quest (JQuest) :
 
@@ -104,7 +103,6 @@ class Quest (JQuest) :
             st.takeItems(SEEDS_OF_LUNACY,1)
             st.takeItems(SEEDS_OF_DESPAIR,1)
             st.giveItems(JEWEL_OF_DARKNESS,1)
-            st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
             st.set("cond","0")
             st.setState(COMPLETED)
             st.playSound("ItemSound.quest_finish")
@@ -240,6 +238,7 @@ STARTED.addQuestDrop(20518,KNEE_BONE,1)
 STARTED.addQuestDrop(20022,KNEE_BONE,1)
 
 print "importing quests: 412: Path To Darkwizard"
+
 
 
 

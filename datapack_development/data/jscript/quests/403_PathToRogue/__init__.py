@@ -19,7 +19,6 @@ STOLEN_NECKLACE = 1189
 BEZIQUES_RECOMMENDATION = 1190
 NETIS_BOW = 1181
 NETIS_DAGGER = 1182
-SHADOW_WEAPON_COUPON_DGRADE = 8869
 
 DROP_CHANCE = { 20035:2, 20042:3, 20045:2, 20051:2, 20054:8, 20060:8 }
 
@@ -98,7 +97,6 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(HORSESHOE_OF_LIGHT) == 0 and HaveAllStolenItems(st) :
           htmltext = "30379-09.htm"
           st.giveItems(BEZIQUES_RECOMMENDATION,1)
-          st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
           st.takeItems(NETIS_BOW,1)
           st.takeItems(NETIS_DAGGER,1)
           st.takeItems(WANTED_BILL,1)
@@ -193,6 +191,7 @@ STARTED.addQuestDrop(30425,HORSESHOE_OF_LIGHT,1)
 STARTED.addQuestDrop(30379,BEZIQUES_LETTER,1)
 
 print "importing quests: 403: Path To Rogue"
+
 
 
 

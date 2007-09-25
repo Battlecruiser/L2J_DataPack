@@ -31,7 +31,6 @@ FELIM_TOOTH = 1612
 SCROLL_IRON_WILL = 1613
 TORUKUS_LETTER = 1614
 KHAVATARI_TOTEM = 1615
-SHADOW_WEAPON_COUPON_DGRADE = 8869
 
 class Quest (JQuest) :
 
@@ -144,7 +143,6 @@ class Quest (JQuest) :
         st.takeItems(SCROLL_FIERY_SPIRIT,1)
         st.takeItems(TORUKUS_LETTER,1)
         st.giveItems(KHAVATARI_TOTEM,1)
-        st.giveItems(SHADOW_WEAPON_COUPON_DGRADE,15)
         st.set("cond","0")
         st.set("onlyone","1")
         st.setState(COMPLETED)
@@ -298,6 +296,7 @@ for item in range(1593,1615):
     STARTED.addQuestDrop(30587,item,1)
 
 print "importing quests: 415: Path To Orc Monk" 
+
 
 
 
