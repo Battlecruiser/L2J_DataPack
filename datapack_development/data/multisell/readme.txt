@@ -61,7 +61,8 @@ of this directory a little bit.
 311262512.xml -> Seven Signs - Blacksmith of Mammon - Weapon Exchange
 
 306893001.xml -> Shadow weaponry system. D-grade coupons exchange
-313213001.xml -> Shadow weaponry system. C-grade coupons exchange
+306893002.xml -> Shadow weaponry system. C-grade coupons exchange
+306893003.xml -> Shadow weaponry system. D/C-grade coupons exchange
 319463001.xml -> Shadow weaponry system. Adena exchange
 
 300974001.xml -> Prestigious Items Hall: Galladucci (weapons)
