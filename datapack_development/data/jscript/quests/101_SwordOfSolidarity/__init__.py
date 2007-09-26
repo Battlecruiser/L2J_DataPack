@@ -95,7 +95,7 @@ class Quest (JQuest) :
             htmltext = "30283-05.htm"
        elif npcId == 30283 and st.getInt("cond")==5 and st.getQuestItemsCount(BROKEN_SWORD_HANDLE_ID) :
             htmltext = "30283-06.htm"
-       return htmltext
+   return htmltext
 
  def onKill (self,npc,player):
    st = player.getQuestState(qn)
