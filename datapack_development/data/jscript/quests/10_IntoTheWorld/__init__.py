@@ -66,7 +66,7 @@ class Quest (JQuest) :
                     htmltext = "30650-01.htm"
             elif npcId == 30533 and st.getInt("cond")==4 :
                 htmltext = "30533-05.htm"
-            return htmltext
+    	return htmltext
 
 QUEST       = Quest(10,qn,"Into The World")
 CREATED     = State('Start', QUEST)
