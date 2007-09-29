@@ -488,7 +488,6 @@ class Quest (JQuest) :
                       st.setState(self.COMPLETED)
                       st.set("cond","0")
                       htmltext = "0-07.htm"
-                      st.takeItems(self.Items[10],-1)
                       st.addExpAndSp(2299404,0)
                       st.giveItems(57,5000000)
                       st.giveItems(6622,1)
@@ -549,7 +548,7 @@ class Quest (JQuest) :
                     st.set("Quest0","1")
                     self.AutoChat(npc,self.Text[17].replace('PLAYERNAME',player.getName()))
                     npc.reduceCurrentHp(9999999,npc)
-                    self.DeleteSpawn(st,st.getInt("Mob_2"))
+                    self.DeleteSpawn(st,st.getInt("Mob_3"))
                     st.getQuestTimer("Mob_3 has despawned").cancel()
                     st.set("Tab","1")
    return
