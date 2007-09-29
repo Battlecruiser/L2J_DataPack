@@ -802,7 +802,6 @@
   <table name="#mpConsume"> 67 68 69 70 71 72 73 74 75 76 </table>
   <table name="#magicLvl"> 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#power"> 2751.0 2850.0 2950.0 3050.0 3151.0 3252.0 3353.0 3453.0 3553.0 3653.0 </table>
-  <table name="#runSpeed"> 40 40 40 40 40 40 40 40 40 40 </table>
   <set name="weaponsAllowed" val="16"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -819,7 +818,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect self="1" count="1" name="Buff" time="10" val="0" stackOrder="40" stackType="SpeedUpS">
+    <effect self="1" count="1" name="Buff" time="15" val="0" stackOrder="40" stackType="SpeedUpS">
       <!-- 0x10 appears to be the correct order -->
       <add order="0x10" stat="rCrit" val="45">
         <using kind="Dagger" skill="0321"/>
