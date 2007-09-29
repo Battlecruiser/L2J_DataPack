@@ -118,12 +118,12 @@ class Quest (JQuest) :
             if player.getClassId().isMage() and st.getInt("onlyone") == 0:
                 st.giveItems(RED_SUNSET_STAFF_ID,1)
                 st.giveItems(SPIRITSHOT_NO_GRADE_ID,500)
-                if player.getLevel() < 25 : #TODO: Should only be given to the first character created (Newbie)
+                if player.getLevel() < 25 and player.isNewbie():
                     st.giveItems(SPIRITSHOT_NO_GRADE_FOR_BEGINNERS_ID,3000)
             elif st.getInt("onlyone") == 0 : 
                 st.giveItems(RED_SUNSET_SWORD_ID,1)
                 st.giveItems(SOULSHOT_NO_GRADE_ID,1000)
-                if player.getLevel() < 25 : #TODO: Should only be given to the first character created (Newbie)
+                if player.getLevel() < 25 and player.isNewbie():
                     st.giveItems(SOULSHOT_NO_GRADE_FOR_BEGINNERS_ID,7000)
             st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))     # Lesser Healing Potions 
             for item in range(4412,4417) : 

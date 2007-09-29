@@ -119,7 +119,7 @@ class Quest (JQuest) :
             st.giveItems(CRYSTAL_SOLITUDE,int(10*Config.RATE_QUESTS_REWARD)) 
             st.giveItems(CRYSTAL_FEAST,int(10*Config.RATE_QUESTS_REWARD)) 
             st.giveItems(CRYSTAL_CELEBRATION,int(10*Config.RATE_QUESTS_REWARD))
-            if player.getLevel() < 25 and st.getInt("onlyone") == 0 : #TODO: Should only be given to the first character created (Newbie)
+            if player.getLevel() < 25 and st.getInt("onlyone") == 0 and player.isNewbie():
                 st.giveItems(SOULSHOT_NO_GRADE_FOR_BEGINNERS_ID,7000) 
             st.set("cond","0") 
             st.setState(COMPLETED) 
