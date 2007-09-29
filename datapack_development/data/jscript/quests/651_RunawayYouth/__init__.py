@@ -29,7 +29,7 @@ class Quest (JQuest) :
         st.takeItems(SOE,1)
         htmltext = "32014-03.htm"
         npc.broadcastPacket(MagicSkillUser(npc,npc,2013,1,20000,0))
-        self.startQuestTimer("ivan_timer",20000,npc,player)
+        st.startQuestTimer("ivan_timer",20000,npc)
     elif event == "32014-04a.htm" :
         st.exitQuest(1)
         st.playSound("ItemSound.quest_giveup")
