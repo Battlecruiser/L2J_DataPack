@@ -82,7 +82,7 @@ class Quest (JQuest) :
           htmltext = "30523-07.htm" 
    elif npcId == 30523 and st.getInt("cond")==1 and st.getQuestItemsCount(STAR_DIAMOND_ID) : 
             htmltext = "30523-08.htm"
-            if player.getLevel() < 25 and st.getInt("onlyone") == 0: #TODO: Should only be given to the first character created (Newbie)
+            if player.getLevel() < 25 and st.getInt("onlyone") == 0 and player.isNewbie():
                 if player.getClassId().isMage() :
                     st.giveItems(SPIRITSHOT_NO_GRADE_FOR_BEGINNERS_ID,3000)
                 else :

@@ -85,7 +85,7 @@ class Quest (JQuest) :
          st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))
          if player.getClassId().isMage() and st.getInt("onlyone") == 0:
              st.giveItems(2509,500)
-             if player.getLevel() < 25 : #TODO: Should only be given to the first character created (Newbie)
+             if player.getLevel() < 25 and player.isNewbie():
                  st.giveItems(5790,3000)
          elif st.getInt("onlyone") == 0:
              st.giveItems(1835,1000)

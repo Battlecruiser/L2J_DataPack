@@ -1,17 +1,17 @@
 # Made by Emperorc
 import sys
+from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver.serverpackets import CreatureSay
-from java.util import Iterator
 from net.sf.l2j.gameserver.datatables import SpawnTable
 from net.sf.l2j.gameserver.model import L2Spawn
 from net.sf.l2j.gameserver.ai import CtrlIntention
 from net.sf.l2j.gameserver.ai import CtrlEvent
 from net.sf.l2j.gameserver.serverpackets import MagicSkillUser
-from net.sf.l2j.util import Rnd
 from net.sf.l2j.gameserver.model import L2World
+from java.util import Iterator
+from net.sf.l2j.util import Rnd
 
 qn = "SagasSuperclass"
 Archon_Minions = range(21646,21652)
@@ -182,18 +182,18 @@ class Quest (JQuest) :
            htmltext = "0-05.htm"
    elif event == "0-2" :
        if player.getLevel() >= 76 :
-           self.Cast(self.FindTemplate(self.NPC[0]),player,4339,1)
+           st.setState(self.COMPLETED)
+           st.set("cond","0")
+           htmltext = "0-07.htm"
            st.takeItems(self.Items[10],-1)
+           st.addExpAndSp(2299404,0)
+           st.giveItems(57,5000000)
+           st.giveItems(6622,1)
            player.setClassId(self.classid)
            if not player.isSubClassActive() and player.getBaseClass() == self.prevclass :
                player.setBaseClass(self.classid)
            player.broadcastUserInfo()
-           st.addExpAndSp(2299404,0)
-           st.giveItems(57,5000000)
-           st.giveItems(6622,1)
-           st.setState(self.COMPLETED)
-           st.set("cond","0")
-           htmltext = "0-07.htm"
+           self.Cast(self.FindTemplate(self.NPC[0]),player,4339,1)
        else :
            st.takeItems(self.Items[10],-1)
            st.playSound("ItemSound.quest_middle")
@@ -388,7 +388,7 @@ class Quest (JQuest) :
       npcId = npc.getNpcId()
       cond = st.getInt("cond")
       if st.getState() == self.COMPLETED and npcId == self.NPC[0] :
-          htmltext == "<html><body>You have already completed this quest!</body></html>"#Should be "finishedquest.htm"
+          htmltext == "<html><body>You have already completed this quest!</body></html>"
       elif player.getClassId().getId() == self.prevclass :
           if cond == 0 :
               if npcId == self.NPC[0]:
@@ -485,17 +485,18 @@ class Quest (JQuest) :
           elif cond == 20 :
               if npcId == self.NPC[0] :
                   if player.getLevel() >= 76 :
-                      self.Cast(self.FindTemplate(self.NPC[0]),player,4339,1)
+                      st.setState(self.COMPLETED)
+                      st.set("cond","0")
+                      htmltext = "0-07.htm"
+                      st.takeItems(self.Items[10],-1)
+                      st.addExpAndSp(2299404,0)
+                      st.giveItems(57,5000000)
+                      st.giveItems(6622,1)
                       player.setClassId(self.classid)
                       if not player.isSubClassActive() and player.getBaseClass() == self.prevclass :
                           player.setBaseClass(self.classid)
                       player.broadcastUserInfo()
-                      st.addExpAndSp(2299404,0)
-                      st.giveItems(57,5000000)
-                      st.giveItems(6622,1)
-                      htmltext = "0-09.htm"
-                      st.setState(self.COMPLETED)
-                      st.set("cond","0")
+                      self.Cast(self.FindTemplate(self.NPC[0]),player,4339,1)
                   else :
                       htmltext = "0-010.htm"
     return htmltext
@@ -548,7 +549,7 @@ class Quest (JQuest) :
                     st.set("Quest0","1")
                     self.AutoChat(npc,self.Text[17].replace('PLAYERNAME',player.getName()))
                     npc.reduceCurrentHp(9999999,npc)
-                    self.DeleteSpawn(st,st.getInt("Mob_3"))
+                    self.DeleteSpawn(st,st.getInt("Mob_2"))
                     st.getQuestTimer("Mob_3 has despawned").cancel()
                     st.set("Tab","1")
    return

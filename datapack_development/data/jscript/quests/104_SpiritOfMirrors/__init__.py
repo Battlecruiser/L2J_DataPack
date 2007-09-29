@@ -74,7 +74,7 @@ class Quest (JQuest) :
             st.takeItems(DROPLIST[mobId],-1)
         if player.getClassId().isMage() and st.getInt("onlyone") == 0:
           st.giveItems(SPIRITSHOT_NO_GRADE,500)
-          if player.getLevel() < 25 : #TODO: Should only be given to the first character created (Newbie)
+          if player.getLevel() < 25 and player.isNewbie(): 
             st.giveItems(SPIRITSHOT_NO_GRADE_FOR_BEGINNERS_ID,3000)
         elif st.getInt("onlyone") == 0:
           st.giveItems(SOULSHOT_NO_GRADE,1000)
