@@ -577,16 +577,11 @@
   </for>
 </skill>
 <skill id="5041" levels="1" name="Charm of Courage">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Prevents experience value from decreasing if killed during a siege war.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -1123,31 +1118,37 @@
 </skill>
 <skill id="5076" levels="15" name="Death Penalty">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
-      Lvl 1 - Combat ability is decreased due to death.  Effect 1.
-      Lvl 2 - Combat ability is decreased due to death.  Effect 2.
-      Lvl 3 - Combat ability is decreased due to death.  Effect 3.
-      Lvl 4 - Combat ability is decreased due to death.  Effect 4.
-      Lvl 5 - Combat ability is decreased due to death.  Effect 5.
-      Lvl 6 - Combat ability is decreased due to death.  Effect 6.
-      Lvl 7 - Combat ability is decreased due to death.  Effect 7.
-      Lvl 8 - Combat ability is decreased due to death.  Effect 8.
-      Lvl 9 - Combat ability is decreased due to death.  Effect 9.
-      Lvl 10 - Combat ability is decreased due to death.  Effect 10.
-      Lvl 11 - Combat ability is decreased due to death.  Effect 11.
-      Lvl 12 - Combat ability is decreased due to death.  Effect 12.
-      Lvl 13 - Combat ability is decreased due to death.  Effect 13.
-      Lvl 14 - Combat ability is decreased due to death.  Effect 14.
-      Lvl 15 - Combat ability is decreased due to death.  Effect 15.
+      Lvl [1-15] - Combat ability is decreased due to death.  Effect [1-15].
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#power"> 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 </table> 
+  <table name="#pAtk"> 1 0.958 0.907 0.856 0.805 0.754 0.703 0.652 0.601 0.550 0.499 0.448 0.397 0.356 0.305 0.254 </table> 
+  <table name="#mAtk"> 1 0.949 0.898 0.847 0.796 0.745 0.694 0.643 0.592 0.591 0.540 0.489 0.438 0.387 0.336 0.285 </table> 
+  <table name="#pDef"> 1 0.969 0.942 0.915 0.888 0.861 0.834 0.807 0.780 0.753 0.726 0.699 0.672 0.645 0.618 0.591 </table> 
+  <table name="#mDef"> 1 0.965 0.929 0.893 0.857 0.821 0.785 0.749 0.713 0.677 0.641 0.605 0.569 0.553 0.497 0.461 </table> 
+  <table name="#pAtkSpd"> 1 0.949 0.898 0.847 0.796 0.745 0.694 0.643 0.592 0.591 0.540 0.489 0.438 0.387 0.336 0.285 </table> 
+  <table name="#mAtkSpd"> 1 0.949 0.898 0.847 0.796 0.745 0.694 0.643 0.592 0.591 0.540 0.489 0.438 0.387 0.336 0.285 </table> 
+  <table name="#runSpd"> 1 0.949 0.898 0.847 0.796 0.745 0.694 0.643 0.592 0.591 0.540 0.489 0.438 0.387 0.336 0.285 </table> 
+  <table name="#rEvas"> 1 0.949 0.898 0.847 0.796 0.745 0.694 0.643 0.592 0.591 0.540 0.489 0.438 0.387 0.336 0.285 </table> 
+  <table name="#cAtk"> 1 0.949 0.898 0.847 0.796 0.745 0.694 0.643 0.592 0.591 0.540 0.489 0.438 0.387 0.336 0.285 </table> 
+  <table name="#accCombat"> 1 0.949 0.898 0.847 0.796 0.745 0.694 0.643 0.592 0.591 0.540 0.489 0.438 0.387 0.336 0.285 </table> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="operateType" val="OP_PASSIVE"/> 
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <for> 
+    <mul order="0x50" stat="pAtk" val="#pAtk"/> 
+    <mul order="0x50" stat="mAtk" val="#mAtk"/> 
+    <mul order="0x50" stat="pDef" val="#pDef"/> 
+    <mul order="0x50" stat="mDef" val="#mDef"/> 
+    <mul order="0x50" stat="pAtkSpd" val="#pAtkSpd"/> 
+    <mul order="0x50" stat="mAtkSpd" val="#mAtkSpd"/> 
+    <mul order="0x50" stat="runSpd" val="#runSpd"/> 
+    <mul order="0x50" stat="rEvas" val="#rEvas"/> 
+    <mul order="0x50" stat="cAtk" val="#cAtk"/> 
+    <mul order="0x50" stat="accCombat" val="#accCombat"/> 
+  </for>  
 </skill>
 <skill id="5077" levels="1" name="NPC Remove Death Penalty">
 <!--
