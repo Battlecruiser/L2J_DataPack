@@ -5,7 +5,6 @@ from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver.model.actor.instance import L2NpcInstance
 from net.sf.l2j.gameserver.datatables import SpawnTable
-from net.sf.l2j.gameserver.serverpackets import MagicSkillUser
 
 qn = "652_AnAgedExAdventurer"
 #Npc
@@ -30,14 +29,10 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_accept")
         st.takeItems(CSS,100)
         htmltext = "32012-03.htm"
-        npc.broadcastPacket(MagicSkillUser(npc,npc,2013,1,20000,0))
-        st.startQuestTimer("tantan_timer",20000,npc)
+        npc.deleteMe()
     elif event == "32012-02a.htm" :
         st.exitQuest(1)
         st.playSound("ItemSound.quest_giveup")
-    elif event == "tantan_timer":
-        npc.deleteMe()
-        htmltext=None
     return htmltext
 
  def onTalk (Self,npc,player):
