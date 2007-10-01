@@ -209,6 +209,7 @@ __all__ = [
 '368_TrespassingIntoTheSacredArea',
 '369_CollectorOfJewels',
 '370_AWisemanSowsSeeds',
+'371_ShriekOfGhosts',
 '372_LegacyOfInsolence',
 '373_SupplierOfReagents',
 '374_WhisperOfDreams1',
