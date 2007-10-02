@@ -240,7 +240,7 @@ class Quest (JQuest) :
    elif event == "4-3" :
        st.giveItems(self.Items[9],1)
        st.set("cond","18")
-       Mob_2 = self.FindSpawn(st, st.getInt("Mob_2"))
+       Mob_2 = self.FindSpawn(player, st.getInt("Mob_2"))
        self.AutoChat(Mob_2,self.Text[13].replace('PLAYERNAME',player.getName()))
        st.set("Quest0","0")
        self.DeleteSpawn(st,Mob_2.getObjectId())
