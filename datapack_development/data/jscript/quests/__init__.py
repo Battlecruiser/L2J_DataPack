@@ -278,6 +278,7 @@ __all__ = [
 '628_HuntGoldenRam',
 '629_CleanUpTheSwampOfScreams',
 '631_DeliciousTopChoiceMeat',
+'633_InTheForgottenVillage',
 '634_InSearchofDimensionalFragments',
 '635_InTheDimensionalRift',
 '636_TruthBeyond',
