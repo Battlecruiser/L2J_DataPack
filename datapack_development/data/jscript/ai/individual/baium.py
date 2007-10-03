@@ -39,12 +39,15 @@ class baium (JQuest):
         st.exitQuest(1)
         return "Conditions are not right to wake up Baium"
     elif npcId == 31862 :
+      if player.isFlying() :
+        print "Player "+player.getName()+" attempted to enter Baium's layer while flying!"
+        return '<html><body>Angelic Vortex:<br>You may not enter while flying a wyvern</body></html>'
       if st.getQuestItemsCount(4295) : # bloody fabric
         st.takeItems(4295,1)
         player.teleToLocation(113100,14500,10077)
         st.set("ok","1")
       else :
-        return '<html><body>Angelic Vortex:<br>You do not have enough items</body></html>'      
+        return '<html><body>Angelic Vortex:<br>You do not have enough items</body></html>'
     return
 
   def onKill(self,npc,player):
