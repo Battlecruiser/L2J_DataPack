@@ -13,7 +13,9 @@ from net.sf.l2j.gameserver.ai import CtrlIntention
 # Boss: Baium
 class baium (JQuest):
 
-  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+  def __init__(self,id,name,descr):
+    JQuest.__init__(self,id,name,descr)
+    self.playersInside = []
 
   def onAdvEvent (self,event,npc,player):
     objId=0
@@ -35,6 +37,9 @@ class baium (JQuest):
            baium = st.addSpawn(29020,npc)
            baium.broadcastPacket(SocialAction(baium.getObjectId(),2))
            self.startQuestTimer("baium_timer1",15000, baium, None)
+           for playerSt in self.playersInside :
+             if playerSt :
+               playerSt.unset("ok")
       else:
         st.exitQuest(1)
         return "Conditions are not right to wake up Baium"
@@ -46,6 +51,7 @@ class baium (JQuest):
         st.takeItems(4295,1)
         player.teleToLocation(113100,14500,10077)
         st.set("ok","1")
+        self.playersInside.append(st)
       else :
         return '<html><body>Angelic Vortex:<br>You do not have enough items</body></html>'
     return
