@@ -15,6 +15,7 @@ class baium (JQuest):
 
   def __init__(self,id,name,descr):
     JQuest.__init__(self,id,name,descr)
+    self.isBaiumAwake = False
     self.playersInside = []
 
   def onAdvEvent (self,event,npc,player):
@@ -40,6 +41,7 @@ class baium (JQuest):
            for playerSt in self.playersInside :
              if playerSt :
                playerSt.unset("ok")
+           self.playersInside = []
       else:
         st.exitQuest(1)
         return "Conditions are not right to wake up Baium"
@@ -50,8 +52,9 @@ class baium (JQuest):
       if st.getQuestItemsCount(4295) : # bloody fabric
         st.takeItems(4295,1)
         player.teleToLocation(113100,14500,10077)
-        st.set("ok","1")
-        self.playersInside.append(st)
+        if not self.isBaiumAwake :
+          st.set("ok","1")
+          self.playersInside.append(st)
       else :
         return '<html><body>Angelic Vortex:<br>You do not have enough items</body></html>'
     return
