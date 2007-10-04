@@ -79,7 +79,7 @@ class Quest (JQuest) :
      st.exitQuest(1)
    return htmltext
 
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
    partyMember, st, item, chance = 0,0,0,0
    npcId = npc.getNpcId()
    # get a random party member that still awaits drop from this NPC

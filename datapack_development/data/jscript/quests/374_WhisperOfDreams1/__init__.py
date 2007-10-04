@@ -124,7 +124,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_middle")
    return htmltext
  
- def onKill (self,npc,player) :
+ def onKill(self,npc,player,isPet) :
      #both mobs may give SEALD_MSTONE to a player
      partyMember = self.getRandomPartyMember(player,"awaitSealedMStone","1")
      if partyMember :

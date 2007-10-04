@@ -115,7 +115,7 @@ class Quest (JQuest) :
        htmltext = "30332-4.htm"
    return htmltext
 
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
    npcId = npc.getNpcId()
    partyMember = self.getRandomPartyMember(player,"2")
    if (partyMember and npcId != ARANEID) :

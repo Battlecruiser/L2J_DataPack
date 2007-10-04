@@ -166,7 +166,7 @@ class Quest (JQuest) :
               htmltext = FAIRY_TREES[i][5]
    return htmltext
 
- def onKill (self,npc,player) :
+ def onKill(self,npc,player,isPet) :
    return  
 
 # Quest class and state definition

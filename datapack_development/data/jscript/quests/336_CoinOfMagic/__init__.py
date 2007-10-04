@@ -337,7 +337,7 @@ class Quest (JQuest) :
       htmltext = str(npcId)+"-01.htm"
    return htmltext
 
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
    npcId=npc.getNpcId()
    st = 0
    # solo section of the quest

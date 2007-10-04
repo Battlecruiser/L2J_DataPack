@@ -59,7 +59,7 @@ class baium (JQuest):
         return '<html><body>Angelic Vortex:<br>You do not have enough items</body></html>'
     return
 
-  def onKill(self,npc,player):
+  def onKill(self,npc,player,isPet):
     objId=npc.getObjectId()
     npc.broadcastPacket(PlaySound(1, "BS02_D", 1, objId, npc.getX(), npc.getY(), npc.getZ()))
     self.addSpawn(29055,115203,16620,10078,0,False,900000)

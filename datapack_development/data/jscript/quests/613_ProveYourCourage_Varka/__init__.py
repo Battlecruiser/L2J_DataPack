@@ -75,7 +75,7 @@ class Quest (JQuest) :
               #htmltext="<html><body>This quest has already been completed</body></html>"
     return htmltext
 
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
     partyMembers = [player]
     party = player.getParty()
     if party :

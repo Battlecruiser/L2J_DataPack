@@ -242,7 +242,7 @@ class feedable_beasts(JQuest) :
                 npc.broadcastPacket(CreatureSay(objectId,0,npc.getName(),mytext[Rnd.get(len(mytext))]))
         return
 
-    def onKill (self,npc,player):
+    def onKill (self,npc,player,isPet):
         # remove the feedinfo of the mob that got killed, if any
         if self.feedInfo.count([npc.getObjectId(),player.getObjectId()]) :
             self.feedInfo.remove([npc.getObjectId(),player.getObjectId()])

@@ -20,12 +20,15 @@ class polymorphing_angel(JQuest) :
         # mechanisms etc.
         JQuest.__init__(self,id,name,descr)
 
-    def onKill (self,npc,player):
+    def onKill (self,npc,player,isPet):
         npcId = npc.getNpcId()
         if self.AngelSpawns.has_key(npcId) :
             newNpc = self.addSpawn(self.AngelSpawns[npcId],npc)
-            newNpc.addDamageHate(player,0,999)
-            newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
+            killer = player
+            if isPet :
+                killer = player.getPet()
+            newNpc.addDamageHate(killer,0,999)
+            newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, killer)
         return 
 
 # now call the constructor (starts up the ai)

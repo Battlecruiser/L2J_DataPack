@@ -14,7 +14,7 @@ class core(JQuest) :
         self.Minions = [29007,29008,29011]
         self.FirstAttacked = False
 
-    def onAttack (self,npc,player):
+    def onAttack (self,npc,player,damage,isPet):
         objId=npc.getObjectId()
         if self.FirstAttacked:
            if Rnd.get(100) : return
@@ -25,7 +25,7 @@ class core(JQuest) :
            npc.broadcastPacket(CreatureSay(objId,0,"Core","Starting intruder removal system."))
         return 
 
-    def onKill (self,npc,player):
+    def onKill(self,npc,player,isPet):
         npcId = npc.getNpcId()
         if npcId == self.Core:
             objId=npc.getObjectId()

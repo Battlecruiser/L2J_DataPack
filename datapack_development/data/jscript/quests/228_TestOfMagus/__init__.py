@@ -244,7 +244,7 @@ class Quest (JQuest) :
         htmltext = "30409-06.htm"
    return htmltext
                              
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
    if st.getState() != STARTED : return 

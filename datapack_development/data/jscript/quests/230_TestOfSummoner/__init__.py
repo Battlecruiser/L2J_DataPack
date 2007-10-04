@@ -290,7 +290,8 @@ class Quest (JQuest) :
             st.giveItems(defeat,1)
       return
 
-   def onAttack (self, npc, player):                   # on the first attack, the stat is in battle... anytime gives crystal and set stat
+   # on the first attack, the stat is in battle... anytime gives crystal and set stat
+   def onAttack (self, npc, player,damage,isPet):
       st = player.getQuestState(qn)
       if not st : return 
       if st.getState() != PROGRESS : return 
@@ -306,7 +307,7 @@ class Quest (JQuest) :
             st.playSound("Itemsound.quest_itemget")
       return
 
-   def onKill (self,npc,player):
+   def onKill(self,npc,player,isPet):
       st = player.getQuestState(qn)
       if not st : return 
       if st.getState() != PROGRESS : return 

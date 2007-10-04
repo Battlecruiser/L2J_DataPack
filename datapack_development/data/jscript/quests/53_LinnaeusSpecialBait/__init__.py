@@ -69,7 +69,7 @@ class Quest (JQuest):
                htmltext = "31577-2.htm"
         return htmltext
 
-    def onKill (self,npc,player):
+    def onKill(self,npc,player,isPet):
         partyMember = self.getRandomPartyMember(player,"1")
         if not partyMember: return
         st = partyMember.getQuestState(qn)

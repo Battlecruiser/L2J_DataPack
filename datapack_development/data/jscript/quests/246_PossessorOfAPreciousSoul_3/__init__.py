@@ -104,7 +104,7 @@ class Quest (JQuest) :
        htmltext = "30721-1.htm"
    return htmltext
 
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
    npcId = npc.getNpcId()
    if npcId == PILGRIM_OF_SPLENDOR :
      #get a random party member who is doing this quest and needs this drop 

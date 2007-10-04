@@ -479,7 +479,7 @@ class Quest (JQuest) :
             htmltext = "30766-24t.htm"
         return htmltext
 
-  def onAttack(self, npc, player):
+  def onAttack(self, npc, player, damage, isPet):
     npdId = npc.getNpcId()
     if (npc.getMaxHp()/2) > npc.getCurrentHp():
       if Rnd.get(100) < 4:
@@ -495,7 +495,7 @@ class Quest (JQuest) :
             playerToTP.setXYZ(185462,20342,-3250)
     return
 
-  def onKill (self,npc,player):
+  def onKill(self,npc,player,isPet):
     # all kill events triggered by the leader occur automatically.
     # However, kill events that were triggered by members occur via the leader and
     # only if the leader is online and within a certain distance!
