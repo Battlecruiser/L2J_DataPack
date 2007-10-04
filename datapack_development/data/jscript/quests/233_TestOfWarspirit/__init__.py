@@ -303,7 +303,7 @@ class Quest (JQuest) :
           htmltext = "30649-01.htm"                    # ah thx.. i will give you the mark of War Spirit
     return htmltext    
         
-  def onKill (self,npc,player):
+  def onKill(self,npc,player,isPet):
     st = player.getQuestState(qn)
     if not st : return 
     npcId=npc.getNpcId()

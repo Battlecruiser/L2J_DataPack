@@ -265,7 +265,7 @@ class Quest (JQuest) :
           htmltext = "<html><body>This chest looks empty</body></html>"
     return htmltext    
 
-  def onAttack (self, npc, player):                   
+  def onAttack (self, npc, player, damage, isPet):                   
     st = player.getQuestState(qn)
     if not st : return 
     if st.getState() != STARTED : return 
@@ -279,7 +279,7 @@ class Quest (JQuest) :
         st.playSound("Itemsound.quest_itemget")
     return
 
-  def onKill (self,npc,player):
+  def onKill(self,npc,player,isPet):
     npcId=npc.getNpcId()
     # the chests always spawn, even if the RB is killed with nobody nearby doing the quest.
     if npcId in CHEST_SPAWNS.keys() :

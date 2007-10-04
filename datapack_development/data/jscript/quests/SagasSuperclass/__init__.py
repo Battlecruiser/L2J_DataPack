@@ -534,7 +534,7 @@ class Quest (JQuest) :
               htmltext = "4-08.htm"
     return htmltext
 
- def onAttack (self, npc, player):
+ def onAttack (self, npc, player, damage, isPet):
    st = player.getQuestState(self.qn)
    if st :
     if st.getInt("cond") == 17 :
@@ -553,7 +553,7 @@ class Quest (JQuest) :
                     st.set("Tab","1")
    return
 
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
     npcId = npc.getNpcId()
     st = player.getQuestState(self.qn)
     if npcId in Archon_Minions :

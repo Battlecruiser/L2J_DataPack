@@ -70,7 +70,7 @@ class Quest (JQuest) :
    return htmltext
 
 
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
    partyMember1 = self.getRandomPartyMember(player,"1")
    partyMember2 = self.getRandomPartyMember(player,"2")
    partyMember = partyMember1 # initialize

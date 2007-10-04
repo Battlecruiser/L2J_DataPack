@@ -317,7 +317,7 @@ class Quest (JQuest) :
              if DEBUG: htmltext = "DEBUG: Athrea can't find clan leader info. Leader d/c?"
    return htmltext
 
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
      st = player.getQuestState(qn)
      if not st : return 
      if st.getState() != CREATED : return 

@@ -113,7 +113,7 @@ class Quest (JQuest) :
            player.sendPacket(SystemMessage(1777).addNumber(CLAN_POINTS_REWARD))
   return htmltext
 
- def onKill (self,npc,player) :
+ def onKill(self,npc,player,isPet) :
   st = 0
   if player.isClanLeader() :
    st = player.getQuestState(qn)

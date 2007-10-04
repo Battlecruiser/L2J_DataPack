@@ -96,7 +96,7 @@ class Quest (JQuest) :
      st.exitQuest(1)  # cond is always 1 if he acceptet the quest, but we have no way to check if he hasnt the quest, so we delete it if he didnt accept by first talk
    return htmltext
 
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
     partyMember = self.getRandomPartyMemberState(player, STARTED)
     if not partyMember : return
     st = partyMember.getQuestState(qn)

@@ -71,7 +71,7 @@ class Quest (JQuest) :
               htmltext = "31521-3.htm"
    return htmltext
 
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
    # todo: with the current code, a player who has completed up to 2 out of 3
    # item collections may consume the party drop (i.e. become the selected
    # player in the random, but get nothing because it was the wrong mob)

@@ -86,7 +86,7 @@ class Quest (JQuest) :
          htmltext = "30515-5.htm"
    return htmltext
  
- def onKill (self,npc,player) :
+ def onKill(self,npc,player,isPet) :
     npcId = npc.getNpcId()
     item, partyCond  = DROPLIST[npcId]
     partyMember = self.getRandomPartyMember(player, partyCond, "1")

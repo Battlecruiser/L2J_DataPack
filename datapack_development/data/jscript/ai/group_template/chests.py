@@ -73,7 +73,7 @@ class chests(JQuest) :
                 npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
         return
 
-    def onAttack(self,npc,player) :
+    def onAttack(self,npc,player,damage,isPet) :
         npcId = npc.getNpcId()
         # check if the npc and skills used are valid for this script.  Exit if invalid.
         if npcId not in self.chests : return
@@ -85,8 +85,11 @@ class chests(JQuest) :
                 npc.onDecay()
             else :  # if this weren't a box, upon interaction start the mimic behaviors...
                 # todo: perhaps a self-buff (skill id 4245) with random chance goes here?
-                npc.addDamageHate(player,0,999)
-                npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
+                attacker = player
+                if isPet:
+                    attacker = player.getPet()
+                npc.addDamageHate(attacker,0,999)
+                npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker)
         return
 
 # now call the constructor (starts up the ai)

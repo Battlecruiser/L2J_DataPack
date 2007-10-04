@@ -79,7 +79,7 @@ class Quest (JQuest) :
        else : htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>" 
    return htmltext
 
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
    # get 1 party member among those with cond between 1 and 4
    partyMember = 0
    j = 0

@@ -68,7 +68,7 @@ class Quest (JQuest) :
          htmltext = "32017-01.htm"
    return htmltext
 
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return
    count = st.getQuestItemsCount(GRAVE_GOODS)

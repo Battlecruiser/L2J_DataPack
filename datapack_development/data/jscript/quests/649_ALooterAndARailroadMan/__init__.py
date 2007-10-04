@@ -59,7 +59,7 @@ class Quest (JQuest) :
          htmltext = "32052-2a.htm"
    return htmltext
 
- def onKill(self, npc, player):
+ def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if st :
      if st.getState() == STARTED :

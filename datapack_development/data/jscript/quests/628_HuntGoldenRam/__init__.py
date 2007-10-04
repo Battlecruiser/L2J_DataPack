@@ -134,7 +134,7 @@ class Quest (JQuest) :
    return htmltext
 
  #todo: Currently this quest is solo, it needs to be party
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if st :
         if st.getState() == STARTED :

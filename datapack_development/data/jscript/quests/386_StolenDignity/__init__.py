@@ -195,7 +195,7 @@ class Quest (JQuest) :
          htmltext = starting2 
    return htmltext
 
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
      partyMember = self.getRandomPartyMemberState(player, STARTED)
      if not partyMember : return
      st = partyMember.getQuestState(qn)

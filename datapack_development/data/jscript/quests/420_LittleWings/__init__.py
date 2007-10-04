@@ -463,7 +463,7 @@ class Quest (JQuest):
               return "420_shamhai_5.htm"
     return "<html><body>I have nothing to say to you</body></html>"
 
-  def onKill (self,npc,player):
+  def onKill(self,npc,player,isPet):
     st = player.getQuestState(qn)
     if not st : return 
    

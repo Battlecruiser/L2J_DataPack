@@ -136,7 +136,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_middle")
    return htmltext
 
- def onKill (self,npc,player) :
+ def onKill(self,npc,player,isPet) :
      # a Mysterious Book may drop to any party member that still hasn't gotten it
      partyMember = self.getRandomPartyMember(player,"awaitBook","1")
      if partyMember :

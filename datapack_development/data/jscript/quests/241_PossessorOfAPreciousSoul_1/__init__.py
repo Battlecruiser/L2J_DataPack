@@ -244,7 +244,7 @@ class Quest (JQuest) :
      st.exitQuest(1)
    return htmltext
 
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
    npcId = npc.getNpcId()
    if npcId == BARAHAM:
      # get a random party member who is doing this quest and is at cond == 3  

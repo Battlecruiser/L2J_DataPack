@@ -123,7 +123,7 @@ class Quest (JQuest) :
                         htmltext = "31561-01.htm"
     return htmltext
 
- def onAttack (self, npc, player):
+ def onAttack (self, npc, player, damage, isPet):
     st = player.getQuestState(qn)
     if st :
         if st.getState() == STARTED :
@@ -148,7 +148,7 @@ class Quest (JQuest) :
                             st.takeItems(Totem,-1)
     return
 
- def onKill (self, npc, player):
+ def onKill(self,npc,player,isPet):
     st = player.getQuestState(qn)
     if st :
         if st.getState() == STARTED :

@@ -182,7 +182,7 @@ class Quest (JQuest) :
        st.setState(COMPLETED)
    return htmltext
 
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
     # get a random party member that awaits for drops from this quest 
     partyMember = self.getRandomPartyMember(player,"awaitsDrops","1")
     if not partyMember : return
