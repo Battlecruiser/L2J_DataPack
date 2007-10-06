@@ -597,6 +597,9 @@ teleport.sql
 topic.sql
 weapon.sql
 zone.sql
+zone_cuboid.sql
+zone_cylinder.sql
+zone_npoly.sql
 ) do call :dump %%i
 echo done...
 echo.
