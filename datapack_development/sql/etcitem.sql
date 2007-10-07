@@ -4904,7 +4904,7 @@ INSERT INTO `etcitem` (`item_id`,`name`,`crystallizable`,`item_type`,`weight`,`c
  ('6551','Alternative Desert Coba','false','none',2,'stackable','paper','none',-1,2000,0,'true','true','true','true','C5Item','none'),
  ('6552','Alternative Sea Coba','false','none',2,'stackable','paper','none',-1,2250,0,'true','true','true','true','C5Item','none'),
  ('6553','Alternative Twin Coba','false','none',2,'stackable','paper','none',-1,2500,0,'true','true','true','true','C5Item','none'),
- ('6554','Alternative King Coba','false','none',2,'stackable','paper','none',-1,2750,0,'true','true','true','true','C5Item','none')
+ ('6554','Alternative King Coba','false','none',2,'stackable','paper','none',-1,2750,0,'true','true','true','true','C5Item','none'),
  ('6555','Ripe Blue Coba','false','none',1,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
  ('6556','Ripe Red Coba','false','none',1,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
  ('6557','Ripe Gold Coba','false','none',1,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
@@ -4918,7 +4918,7 @@ INSERT INTO `etcitem` (`item_id`,`name`,`crystallizable`,`item_type`,`weight`,`c
  ('6565','Ripe Alternative Desert Coba','false','none',1,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
  ('6566','Ripe Alternative Sea Coba','false','none',1,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
  ('6567','Ripe Alternative Twin Coba','false','none',1,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
- ('6568','Ripe Alternative King Coba','false','none',1,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none')
+ ('6568','Ripe Alternative King Coba','false','none',1,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
  ('6569','Blessed Scroll: Enchant Weapon (Grade A)','false','scroll','120','normal','paper','none','-1','1750000','0','true','true','true','true','C4Item','castle_guard'),
  ('6570','Blessed Scroll: Enchant Armor (Grade A)','false','scroll','120','normal','paper','none','-1','750000','0','true','true','true','true','C4Item','castle_guard'),
  ('6571','Blessed Scroll: Enchant Weapon (Grade B)','false','scroll','120','normal','paper','none','-1','1250000','0','true','true','true','true','C4Item','castle_guard'),
@@ -6565,7 +6565,7 @@ INSERT INTO `etcitem` (`item_id`,`name`,`crystallizable`,`item_type`,`weight`,`c
  ('8523','Seed: Twin Coba','false','seed',1,'stackable','paper','none',-1,1000,0,'true','true','true','true','C5Item','none'),
  ('8524','Seed: Alternative Twin Coba','false','seed',1,'stackable','paper','none',-1,1000,0,'true','true','true','true','C5Item','none'),
  ('8525','Seed: Great Coba','false','seed',1,'stackable','paper','none',-1,1200,0,'true','true','true','true','C5Item','none'),
- ('8526','Seed: Alternative Great Coba','false','seed',1,'stackable','paper','none',-1,1200,0,'true','true','true','true','C5Item','none')
+ ('8526','Seed: Alternative Great Coba','false','seed',1,'stackable','paper','none',-1,1200,0,'true','true','true','true','C5Item','none'),
  ('8534','Adventurer\'s Box: C-Grade Accessory (Low Grade)','false','none','20','stackable','steel','none','-1','0','0','true','true','true','true','C5Item','none'),
  ('8535','Adventurer\'s Box: C-Grade Accessory (Medium Grade)','false','none','20','stackable','steel','none','-1','0','0','true','true','true','true','C5Item','none'),
  ('8536','Adventurer\'s Box: C-Grade Accessory (High Grade)','false','none','20','stackable','steel','none','-1','0','0','true','true','true','true','C5Item','none'),

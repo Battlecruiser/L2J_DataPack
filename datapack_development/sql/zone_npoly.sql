@@ -1,7 +1,7 @@
 -- 
 -- Table structure for table `zone_npoly`
 -- 
-DROP TABLE IF EXISTS `zone_npoly`
+DROP TABLE IF EXISTS `zone_npoly`;
 CREATE TABLE `zone_npoly` (
   `id` int(11) NOT NULL,
   `order` int(11) NOT NULL,
