@@ -38,7 +38,7 @@ class Quest (JQuest):
            st.setState(STARTED)
            st.set("cond","1")
            st.playSound("ItemSound.quest_accept")
-        elif event == "31577-5.htm":
+        elif event == "31577-3.htm":
            cond = st.getInt("cond")
            if cond == 2 and st.getQuestItemsCount(CRIMSON_DRAKE_HEART) == 100:
               st.giveItems(FLAMING_FISHING_LURE, 4)
@@ -47,7 +47,7 @@ class Quest (JQuest):
               st.unset("cond") # we dont need it in db if quest is already completed
               st.playSound("ItemSound.quest_finish")
            else :
-              htmltext = "31577-4.htm"
+              htmltext = "31577-5.htm"
         return htmltext
 
     def onTalk (self,npc,player):

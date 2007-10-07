@@ -81,7 +81,7 @@ class Quest (JQuest) :
 
    id = st.getState()
    cond = st.getInt("cond") 
-   elif player.getClan() == None :
+   if player.getClan() == None :
      htmltext = "31961-00.htm"
      st.exitQuest(1)
    elif player.getPledgeType() == -1 :
