@@ -82,3 +82,5 @@ DROP TABLE IF EXASIS zone;
 DROP TABLE IF EXISTS zone_cuboid;
 DROP TABLE IF EXISTS zone_cylinder;
 DROP TABLE IF EXISTS zone_npoly;
+DROP TABLE IF EXISTS castle_manor_procure;
+DROP TABLE IF EXISTS castle_manor_production;

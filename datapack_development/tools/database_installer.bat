@@ -600,6 +600,8 @@ zone.sql
 zone_cuboid.sql
 zone_cylinder.sql
 zone_npoly.sql
+castle_manor_procure.sql
+castle_manor_production.sql
 ) do call :dump %%i
 echo done...
 echo.

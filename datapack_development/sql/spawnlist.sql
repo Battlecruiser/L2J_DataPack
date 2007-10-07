@@ -39056,6 +39056,33 @@ INSERT INTO `spawnlist` VALUES
 (NULL,'primeval_isle',1,32117,6263,-2183,-2970,0,0,32416,60,0,0),
 (NULL,'primeval_isle',1,32122,13122,-8892,-3096,0,0,60107,60,0,0);
 
+INSERT INTO spawnlist VALUES
+(NULL,'giran_blacksmith',1,35182,116494,145516,-2723,0,0,58824,60,0,0),
+(NULL,'giran_warehouse',1,35183,115910,145101,-2723,0,0,1353,60,0,0),
+
+(NULL,'aden_blacksmith',1,35272,147908,5595,-884,0,0,48126,60,0,0),
+(NULL,'aden_warehouse',1,35273,147056,5595,-884,0,0,58383,60,0,0),
+
+(NULL,'goddard_blacksmith',1,35361,147037,-48781,-2639,0,0,14839,60,0,0),
+(NULL,'goddard_warehouse',1,35362,147908,-48807,-2639,0,0,20214,60,0,0),
+
+(NULL,'oren_blacksmith',1,35225,82043,37132,-2450,0,0,65001,60,0,0),
+(NULL,'oren_warehouse',1,35224,82464,37592,-2450,0,0,44984,60,0,0),
+
+(NULL,'dion_blacksmith',1,35140,21649,160199,-2850,0,0,61379,60,0,0),
+(NULL,'dion_warehouse',1,35141,22100,159781,-2877,0,0,6134,60,0,0),
+   
+(NULL,'gludio_blacksmith',1,35098,-17680,109519,-2656,0,0,29609,60,0,0),
+(NULL,'gludio_warehouse',1,35099,-18113,109956,-2683,0,0,48351,60,0,0),
+
+(NULL,'innadril_blacksmith',1,35314,115649,249072,-973,0,0,868,60,0,0),
+(NULL,'innadril_warehouse',1,35315,116015,248558,-946,0,0,18052,60,0,0),
+
+(NULL,'rune_blacksmith',1,35507,12124,-49706,-1088,0,0,13641,60,0,0),
+(NULL,'rune_warehouse',1,35508,12681,-48578,-1088,0,0,39746,60,0,0),
+
+(NULL,'schuttgart_blacksmith',1,35553,77105,-152827,-907,0,0,11176,60,0,0),
+(NULL,'schuttgart_warehouse',1,35554,77906,-152872,-934,0,0,25468,60,0,0);
 
 -- The following is a list of IDs for NPCs that spawn in L2J but no longer exist in the client.
 

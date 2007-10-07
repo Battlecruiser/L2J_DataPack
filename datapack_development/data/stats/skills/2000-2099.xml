@@ -1097,24 +1097,33 @@
   <for>
   </for>
 </skill>
+<!-- Done by l3x-->
 <skill id="2097" levels="3" name="Sowing">
   <table name="#mpConsume"> 4 6 8 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="1800"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1800"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillTime" val="1400"/>
+  <set name="skillType" val="SOW"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="150"/>
+  <set name="effectRange" val="400"/>
+  <set name="castRange" val="40"/>
   <for>
   </for>
 </skill>
+<!-- Done by l3x-->
 <skill id="2098" levels="1" name="Harvesting">
   <set name="mpConsume" val="3"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_CORPSE_MOB"/>
   <set name="skillTime" val="500"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="HARVEST"/>
+  <set name="reuseDelay" val="8000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="20"/>
+  <set name="effectRange" val="100"/>
   <for>
   </for>
 </skill>

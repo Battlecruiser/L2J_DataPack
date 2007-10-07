@@ -17120,3 +17120,19 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335586,31,1,1),
 (7012,29000,335586,32,1,1),
 (7013,29000,335586,33,1,1);
+--
+-- Castle
+--
+INSERT INTO `merchant_buylists` VALUES ('5125', '575', '335103', '1', -1, -1, 0, '0');
+INSERT INTO `merchant_buylists` VALUES ('5125', '575', '335145', '1', -1, -1, 0, '0');
+INSERT INTO `merchant_buylists` VALUES ('5125', '575', '335187', '1', -1, -1, 0, '0');
+INSERT INTO `merchant_buylists` VALUES ('5125', '575', '335229', '1', -1, -1, 0, '0');
+INSERT INTO `merchant_buylists` VALUES ('5125', '575', '335230', '1', -1, -1, 0, '0');
+INSERT INTO `merchant_buylists` VALUES ('5125', '575', '335231', '1', -1, -1, 0, '0');
+INSERT INTO `merchant_buylists` VALUES ('5125', '575', '335277', '1', -1, -1, 0, '0');
+INSERT INTO `merchant_buylists` VALUES ('5125', '575', '335319', '1', -1, -1, 0, '0');
+INSERT INTO `merchant_buylists` VALUES ('5125', '575', '335366', '1', -1, -1, 0, '0');
+INSERT INTO `merchant_buylists` VALUES ('5125', '575', '335512', '1', -1, -1, 0, '0');
+INSERT INTO `merchant_buylists` VALUES ('5125', '575', '335558', '1', -1, -1, 0, '0');
+INSERT INTO `merchant_buylists` VALUES ('5125', '575', '335644', '1', -1, -1, 0, '0');
+INSERT INTO `merchant_buylists` VALUES ('5125', '575', '335645', '1', -1, -1, 0, '0');
