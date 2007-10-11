@@ -39082,7 +39082,10 @@ INSERT INTO spawnlist VALUES
 (NULL,'rune_warehouse',1,35508,12681,-48578,-1088,0,0,39746,60,0,0),
 
 (NULL,'schuttgart_blacksmith',1,35553,77105,-152827,-907,0,0,11176,60,0,0),
-(NULL,'schuttgart_warehouse',1,35554,77906,-152872,-934,0,0,25468,60,0,0);
+(NULL,'schuttgart_warehouse',1,35554,77906,-152872,-934,0,0,25468,60,0,0),
+
+(NULL,'IvoryTower1stFloor',1,31606,85731,16380,-4299,0,0,46905,60,0,0),
+(NULL,'RuneTemple',1,32009,36006,-48748,891,0,0,10970,60,0,0);
 
 -- The following is a list of IDs for NPCs that spawn in L2J but no longer exist in the client.
 
