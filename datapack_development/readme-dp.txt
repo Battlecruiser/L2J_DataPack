@@ -1,4 +1,4 @@
-	Copyright 2006 L2J-DataPack team
+	Copyright 2005-2007 L2J-DataPack team
 
 	This file is part of the L2J-DataPack.
 
@@ -57,7 +57,7 @@ IMPORTANT: 	There may also be changes to character data tables, to update these 
 
 -the l2j-datapack team
 
-    L2JDP, Copyright (C) 2006 
+    L2JDP, Copyright (C) 2005-2007
     L2JDP comes with ABSOLUTELY NO WARRANTY.
     This is free software, and you are welcome to redistribute it
     under certain conditions.

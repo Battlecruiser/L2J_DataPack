@@ -1,5 +1,15 @@
 #!/bin/bash
 ############################################
+## WARNING!  WARNING!  WARNING!  WARNING! ##
+##                                        ##
+## DON'T USE NOTEPAD TO CHANGE THIS FILE  ##
+## INSTEAD USE SOME DECENT TEXT EDITOR.   ##
+## NEWLINE CHARACTERS DIFFER BETWEEN DOS  ##
+## AND UNIX.                              ##
+##                                        ##
+## USING NOTEPAD TO SAVE THIS FILE LEAVE  ##
+## IT IN A BROKEN STATE!!!                ##
+############################################
 ## Writen by DrLecter                     ##
 ## License: GNU GPL                       ##
 ## Based on Tiago Tagliaferri's script    ##
