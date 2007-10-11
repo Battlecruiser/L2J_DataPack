@@ -69,8 +69,12 @@ class chests(JQuest) :
                 # used a skill other than chest-key, or used a chest-key but failed to open: disappear with no rewards    
                 npc.onDecay()
             else :
-                npc.addDamageHate(player,0,999)
-                npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
+                attacker = player
+                if isPet:
+                    attacker = player.getPet()
+                npc.setRunning()
+                npc.addDamageHate(attacker,0,999)
+                npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker)
         return
 
     def onAttack(self,npc,player,damage,isPet) :
@@ -88,11 +92,12 @@ class chests(JQuest) :
                 attacker = player
                 if isPet:
                     attacker = player.getPet()
-                npc.addDamageHate(attacker,0,999)
+                npc.setRunning()
+                npc.addDamageHate(attacker,0,(damage*100)/(npc.getLevel()+7))
                 npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker)
         return
 
 # now call the constructor (starts up the ai)
-QUEST           = chests(-1,"group_template","ai")
+QUEST           = chests(-1,"chests","ai")
 
 print "AI: group template: Treasure Chests...loaded!"
