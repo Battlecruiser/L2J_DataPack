@@ -27,7 +27,7 @@ class polymorphing_angel(JQuest) :
             killer = player
             if isPet :
                 killer = player.getPet()
-            npc.setRunning()
+            newNpc.setRunning()
             newNpc.addDamageHate(killer,0,999)
             newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, killer)
         return 
