@@ -91,7 +91,7 @@ class feedable_beasts(JQuest) :
                     ["I do not think you have given up on the idea of taming me.","That is just food to me.  Perhaps I can eat your hand too.","Will eating this make me fat? Ha ha","Why do you always feed me?","Do not trust me.  I may betray you"], 
                     ["Destroy","Look what you have done!","Strange feeling...!  Evil intentions grow in my heart...!","It is happenning!","This is sad...Good is sad...!"]]
 
-        self.feedInfo = [] # will hold tuples of: [objectId of mob, objectId of player feeding it]
+        self.feedInfo = {} # : feedInfo[objectId of mob] = objectId of player feeding it
 
         for i in self.feedableBeasts :
             self.addSkillUseId(i)
@@ -101,15 +101,16 @@ class feedable_beasts(JQuest) :
         if event == "polymorph Mad Cow" and npc and player:
             if npc.getNpcId() in self.madCowPolymorph.keys() :
                 # remove the feed info from the previous mob
-                if [npc.getObjectId(),player.getObjectId()] in self.feedInfo :
-                    self.feedInfo.remove([npc.getObjectId(),player.getObjectId()])
+                if self.feedInfo[npc.getObjectId()] == player.getObjectId() :
+                    self.feedInfo.pop(npc.getObjectId())
                 # despawn the mad cow
                 npc.deleteMe()
                 # spawn the new mob 
                 nextNpc = self.addSpawn(self.madCowPolymorph[npc.getNpcId()],npc)
                 
                 # register the player in the feedinfo for the mob that just spawned
-                self.feedInfo = self.feedInfo + [[nextNpc.getObjectId(),player.getObjectId()]]
+                self.feedInfo[nextNpc.getObjectId()] = player.getObjectId()
+                nextNpc.setRunning()
                 nextNpc.addDamageHate(player,0,99999)
                 nextNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
 
@@ -139,8 +140,8 @@ class feedable_beasts(JQuest) :
             nextNpcId = self.growthCapableMobs[npcId][1][food][Rnd.get(len(self.growthCapableMobs[npcId][1][food]))]
         
         # remove the feedinfo of the mob that got despawned, if any
-        if [npc.getObjectId(),player.getObjectId()] in self.feedInfo :
-            self.feedInfo.remove([npc.getObjectId(),player.getObjectId()])
+        if self.feedInfo[npc.getObjectId()] == player.getObjectId() :
+            self.feedInfo.pop(npc.getObjectId())
         
         # despawn the old mob
         if self.growthCapableMobs[npcId][0] == 0 :
@@ -163,6 +164,7 @@ class feedable_beasts(JQuest) :
                 
             template = NpcTable.getInstance().getTemplate(nextNpcId)
             nextNpc = L2TamedBeastInstance(IdFactory.getInstance().getNextId(), template, player, foodSkill[food], npc.getX(), npc.getY(), npc.getZ())
+            nextNpc.setRunning()
 
             objectId = nextNpc.getObjectId()
             
@@ -185,7 +187,8 @@ class feedable_beasts(JQuest) :
                 self.startQuestTimer("polymorph Mad Cow", 10000, nextNpc, player)            
             
             # register the player in the feedinfo for the mob that just spawned
-            self.feedInfo = self.feedInfo + [[nextNpc.getObjectId(),player.getObjectId()]]
+            self.feedInfo[nextNpc.getObjectId()] = player.getObjectId()
+            nextNpc.setRunning()
             nextNpc.addDamageHate(player,0,99999)
             nextNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
 
@@ -196,6 +199,15 @@ class feedable_beasts(JQuest) :
         # check if the npc and skills used are valid for this script.  Exit if invalid.
         if npcId not in self.feedableBeasts : return
         if skillId not in [SKILL_GOLDEN_SPICE,SKILL_CRYSTAL_SPICE] : return
+        # more value gathering on local variables       
+        growthLevel = self.growthCapableMobs[npcId][0]
+        objectId = npc.getObjectId()
+        
+        # prevent exploit which allows 2 players to simultaneously raise the same 0-growth beast
+        if (growthLevel==0) and self.feedInfo.has_key(objectId):
+            return
+        else :
+            self.feedInfo[objectId] = player.getObjectId()
 
         food = 0
         if skillId == SKILL_GOLDEN_SPICE :
@@ -203,7 +215,6 @@ class feedable_beasts(JQuest) :
         elif skillId == SKILL_CRYSTAL_SPICE :
             food = CRYSTAL_SPICE
 
-        objectId = npc.getObjectId()
         # display the social action of the beast eating the food.
         npc.broadcastPacket(SocialAction(objectId,2))
 
@@ -212,9 +223,6 @@ class feedable_beasts(JQuest) :
             # do nothing if this mob doesn't eat the specified food (food gets consumed but has no effect).
             if len(self.growthCapableMobs[npcId][1][food]) == 0 : return
 
-            # more value gathering on local variables       
-            growthLevel = self.growthCapableMobs[npcId][0]
-
             # rare random talk...
             if Rnd.get(20) == 0 :
                 npc.broadcastPacket(CreatureSay(objectId,0,npc.getName(),self.Text[growthLevel][Rnd.get(len(self.Text[growthLevel]))]))
@@ -222,7 +230,7 @@ class feedable_beasts(JQuest) :
             if growthLevel > 0 :
                 # check if this is the same player as the one who raised it from growth 0.
                 # if no, then do not allow a chance to raise the pet (food gets consumed but has no effect).
-                if not self.feedInfo.count([objectId,player.getObjectId()]) : return
+                if self.feedInfo[objectId] != player.getObjectId() : return
 
             # Polymorph the mob, with a certain chance, given its current growth level
             if Rnd.get(100) < self.growthCapableMobs[npcId][2] :
@@ -244,11 +252,11 @@ class feedable_beasts(JQuest) :
 
     def onKill (self,npc,player,isPet):
         # remove the feedinfo of the mob that got killed, if any
-        if self.feedInfo.count([npc.getObjectId(),player.getObjectId()]) :
-            self.feedInfo.remove([npc.getObjectId(),player.getObjectId()])
+        if self.feedInfo.has_key(npc.getObjectId()) :
+            self.feedInfo.pop(npc.getObjectId())
 
 
 # now call the constructor (starts up the ai)
-QUEST		= feedable_beasts(-1,"group_template","ai")
+QUEST		= feedable_beasts(-1,"feedable_beasts","ai")
     
 print "AI: group template: Feedable Beasts...loaded!"

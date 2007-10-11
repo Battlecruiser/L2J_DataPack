@@ -27,12 +27,13 @@ class polymorphing_angel(JQuest) :
             killer = player
             if isPet :
                 killer = player.getPet()
+            npc.setRunning()
             newNpc.addDamageHate(killer,0,999)
             newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, killer)
         return 
 
 # now call the constructor (starts up the ai)
-QUEST		= polymorphing_angel(-1,"group_template","ai")
+QUEST		= polymorphing_angel(-1,"polymorphing_angel","ai")
 for i in QUEST.AngelSpawns.keys() :
     QUEST.addKillId(i)
 
