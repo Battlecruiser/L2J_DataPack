@@ -70,7 +70,7 @@ class chests(JQuest) :
                 npc.onDecay()
             else :
                 attacker = player
-                if isPet:
+                if npc.getAttackByList().contains(player.getPet()):
                     attacker = player.getPet()
                 npc.setRunning()
                 npc.addDamageHate(attacker,0,999)

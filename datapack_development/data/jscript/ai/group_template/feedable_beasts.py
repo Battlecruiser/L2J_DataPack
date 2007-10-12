@@ -140,8 +140,9 @@ class feedable_beasts(JQuest) :
             nextNpcId = self.growthCapableMobs[npcId][1][food][Rnd.get(len(self.growthCapableMobs[npcId][1][food]))]
         
         # remove the feedinfo of the mob that got despawned, if any
-        if self.feedInfo[npc.getObjectId()] == player.getObjectId() :
-            self.feedInfo.pop(npc.getObjectId())
+        if self.feedInfo.has_key(npc.getObjectId()) :
+            if self.feedInfo[npc.getObjectId()] == player.getObjectId() :
+                self.feedInfo.pop(npc.getObjectId())
         
         # despawn the old mob
         if self.growthCapableMobs[npcId][0] == 0 :
@@ -199,11 +200,15 @@ class feedable_beasts(JQuest) :
         # check if the npc and skills used are valid for this script.  Exit if invalid.
         if npcId not in self.feedableBeasts : return
         if skillId not in [SKILL_GOLDEN_SPICE,SKILL_CRYSTAL_SPICE] : return
-        # more value gathering on local variables       
-        growthLevel = self.growthCapableMobs[npcId][0]
+
+        # first gather some values on local variables
         objectId = npc.getObjectId()
-        
+        growthLevel = 3  # if a mob is in feedableBeasts but not in growthCapableMobs, then it's at max growth (3)
+        if self.growthCapableMobs.has_key(npcId) :
+            growthLevel = self.growthCapableMobs[npcId][0]
+
         # prevent exploit which allows 2 players to simultaneously raise the same 0-growth beast
+        # If the mob is at 0th level (when it still listens to all feeders) lock it to the first feeder!       
         if (growthLevel==0) and self.feedInfo.has_key(objectId):
             return
         else :
