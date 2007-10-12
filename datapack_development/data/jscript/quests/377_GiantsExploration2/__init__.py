@@ -1,6 +1,5 @@
 # Exploration of Giants Cave, part 2 version 0.1 
 # by DrLecter
-print "importing quests:",
 import sys
 from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
@@ -135,5 +134,3 @@ for i in MOBS :
   QUEST.addKillId(i)
 
 STARTED.addQuestDrop(HR_SOBLING,DICT2,1)
-
-print str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

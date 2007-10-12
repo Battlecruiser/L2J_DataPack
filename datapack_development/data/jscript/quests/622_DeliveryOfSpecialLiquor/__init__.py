@@ -163,5 +163,3 @@ for i in range(31543,31548):
 
 STARTED.addQuestDrop(31521,SPECIAL_DRINK,1)
 STARTED.addQuestDrop(31521,FEE_OF_DRINK,1)
-
-print "importing quests: 622: Delivery of special liquor"

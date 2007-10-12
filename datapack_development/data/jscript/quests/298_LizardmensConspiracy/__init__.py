@@ -107,5 +107,3 @@ for i in range(20922,20928) :
 
 STARTED.addQuestDrop(20926,SHINING_RED_GEM,1)
 STARTED.addQuestDrop(20924,SHINING_GEM,1)
-
-print "importing quests: 298: Lizardmen's Conspiracy"

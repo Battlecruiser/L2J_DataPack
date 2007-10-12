@@ -77,5 +77,3 @@ QUEST.addTalkId(30595)
 QUEST.addTalkId(30959)
 
 STARTED.addQuestDrop(30959,4319,1)
-
-print "importing quests: 363: Sorrowful Sound of Flute"

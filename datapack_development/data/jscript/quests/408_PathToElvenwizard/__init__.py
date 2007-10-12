@@ -237,8 +237,3 @@ STARTED.addQuestDrop(30157,MAGICAL_POWERS_RUBY,1)
 STARTED.addQuestDrop(30371,PURE_AQUAMARINE,1)
 STARTED.addQuestDrop(30423,NOBILITY_AMETHYST,1)
 STARTED.addQuestDrop(30414,FERTILITY_PERIDOT,1)
-
-print "importing quests: 408: Path To Elvenwizard"
-
-
-

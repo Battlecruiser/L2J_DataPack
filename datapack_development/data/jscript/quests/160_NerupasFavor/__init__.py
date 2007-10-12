@@ -114,5 +114,3 @@ STARTED.addQuestDrop(30370,SILVERY_SPIDERSILK,1)
 STARTED.addQuestDrop(30147,UNOS_RECEIPT,1)
 STARTED.addQuestDrop(30149,CELS_TICKET,1)
 STARTED.addQuestDrop(30152,NIGHTSHADE_LEAF,1)
-
-print "importing quests: 160: Nerupas Favor"

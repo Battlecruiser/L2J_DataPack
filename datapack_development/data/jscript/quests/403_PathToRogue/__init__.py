@@ -189,9 +189,3 @@ STARTED.addQuestDrop(30425,NETIS_DAGGER,1)
 STARTED.addQuestDrop(30379,WANTED_BILL,1)
 STARTED.addQuestDrop(30425,HORSESHOE_OF_LIGHT,1)
 STARTED.addQuestDrop(30379,BEZIQUES_LETTER,1)
-
-print "importing quests: 403: Path To Rogue"
-
-
-
-

@@ -189,4 +189,3 @@ for npc in [30600, 30601, 30602, 30598, 30599]:
 
 QUEST.addKillId(18342)
 QUEST.addKillId(20001)
-print "importing quests: 999: Interlude Tutorial"

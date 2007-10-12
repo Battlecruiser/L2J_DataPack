@@ -222,5 +222,3 @@ STARTED.addQuestDrop(30298,SECRET_BOX2,1)
 STARTED.addQuestDrop(30317,KLUTOS_LETTER,1)
 STARTED.addQuestDrop(20017,SECRET_BOX1,1)
 STARTED.addQuestDrop(30298,FOOTPRINT,1)
-
-print "importing quests: 418: Path To Artisan"

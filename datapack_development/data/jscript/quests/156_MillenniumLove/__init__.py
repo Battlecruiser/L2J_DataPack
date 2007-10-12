@@ -86,5 +86,3 @@ QUEST.addTalkId(30369)
 
 STARTED.addQuestDrop(30368,RYLITHS_LETTER_ID,1)
 STARTED.addQuestDrop(30369,THEONS_DIARY_ID,1)
-
-print "importing quests: 156: Millennium Love"

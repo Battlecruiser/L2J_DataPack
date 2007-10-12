@@ -92,5 +92,3 @@ for npcId in range(21460,21468)+ range(21479,21487)+range(21498,21506) :
     QUEST.addKillId(npcId)
 
 STARTED.addQuestDrop(21460,TOP_QUALITY_MEAT,1)
-
-print "importing quests: 631: Delicious Top Choice Meat"

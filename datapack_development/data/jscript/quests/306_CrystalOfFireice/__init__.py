@@ -96,5 +96,3 @@ QUEST.addKillId(20115)
 
 STARTED.addQuestDrop(20109,FLAME_SHARD,1)
 STARTED.addQuestDrop(20110,ICE_SHARD,1)
-
-print "importing quests: 306: Crystal Of Fireice"

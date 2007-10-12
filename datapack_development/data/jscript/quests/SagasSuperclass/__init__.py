@@ -654,5 +654,3 @@ QUEST = Quest(-1,qn,"Saga's Superclass")
 
 for mobid in Mobs_Norm :
     QUEST.addKillId(mobid)
-
-print "importing quests: Saga's Superclass"

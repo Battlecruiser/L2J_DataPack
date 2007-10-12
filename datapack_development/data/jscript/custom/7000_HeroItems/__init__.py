@@ -86,5 +86,3 @@ QUEST.setInitialState(CREATED)
 for i in MONUMENTS:
     QUEST.addStartNpc(i)
     QUEST.addTalkId(i)
-
-print "importing custom: 7000: Hero Items"

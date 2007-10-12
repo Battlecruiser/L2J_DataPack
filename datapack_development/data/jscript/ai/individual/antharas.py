@@ -20,5 +20,3 @@ QUEST      = antharas(-1,"antharas","ai")
 
 QUEST.addKillId(QUEST.antharas)
 QUEST.addAttackId(QUEST.antharas)
-
-print "AI: individuals: Antharas...loaded!"

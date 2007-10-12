@@ -100,5 +100,3 @@ for i in MOBS :
   QUEST.addKillId(i)
 
 STARTED.addQuestDrop(KARUDA,GRAVE_GOODS,1)
-
-print "importing quests: 645: Ghosts of Batur"

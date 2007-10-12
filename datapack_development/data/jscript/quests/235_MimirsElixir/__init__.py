@@ -1,6 +1,5 @@
 # Mimir's Elixir version 0.1 
 # by Fulminus
-print "importing quests:",
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -149,5 +148,3 @@ QUEST.addTalkId(JOAN)
 
 for i in DROPLIST.keys():
   QUEST.addKillId(i)
-
-print str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

@@ -74,5 +74,3 @@ QUEST.addKillId(20021)
 QUEST.addKillId(20203)
 QUEST.addKillId(20310)
 QUEST.addKillId(20335)
-
-print "importing quests: 341: Hunting For Wild Beasts"

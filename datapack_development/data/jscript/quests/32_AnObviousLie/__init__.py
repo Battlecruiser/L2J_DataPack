@@ -167,5 +167,3 @@ QUEST.addKillId(ALLIGATOR)
 
 STARTED.addQuestDrop(ALLIGATOR,MEDICINAL_HERB,1)
 STARTED.addQuestDrop(GENTLER,MAP,1)
-
-print "importing quests: 32: An Obvious Lie"

@@ -221,5 +221,3 @@ STARTED.addQuestDrop(30644,LETTER_OF_KASH,1)
 STARTED.addQuestDrop(27112,WATCHERS_EYE1,1)
 STARTED.addQuestDrop(27110,BROKEN_KEY,1)
 STARTED.addQuestDrop(27113,WATCHERS_EYE2,1)
-
-print "importing quests: 211: Trial Of Challenger"

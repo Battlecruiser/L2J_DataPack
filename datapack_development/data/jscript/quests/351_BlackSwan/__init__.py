@@ -122,5 +122,3 @@ QUEST.addKillId(21639)
 QUEST.addKillId(21640)
 QUEST.addKillId(21642)
 QUEST.addKillId(21643)
-
-print "importing quests: 351: Black Swan"

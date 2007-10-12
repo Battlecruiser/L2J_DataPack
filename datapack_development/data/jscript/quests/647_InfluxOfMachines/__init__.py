@@ -99,9 +99,3 @@ for i in range(22052,22079):
    QUEST.addKillId(i)
 
 STARTED.addQuestDrop(32069,DESTROYED_GOLEM_SHARD,1)
-
-print "importing quests: 647: Influx of Machines"
-
-
-
-

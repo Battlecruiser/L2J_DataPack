@@ -110,5 +110,3 @@ QUEST.addTalkId(30842)
 QUEST.addTalkId(31520)
 QUEST.addTalkId(31521)
 QUEST.addTalkId(31627)
-
-print "importing quests: 37: Please Make Me Formal Wear"

@@ -2,8 +2,6 @@
 # Created by DraX on 2005.08.23
 #
 
-print "importing village master data: Heine                  ...done"
-
 import sys
 
 from net.sf.l2j.gameserver.model.quest        import State

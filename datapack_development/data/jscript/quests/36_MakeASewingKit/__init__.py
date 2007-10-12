@@ -77,5 +77,3 @@ QUEST.addStartNpc(30847)
 QUEST.addTalkId(30847)
 QUEST.addKillId(20566)
 STARTED.addQuestDrop(20566,REINFORCED_STEEL,1)
-
-print "importing quests: 36: Make A Sewing Kit"

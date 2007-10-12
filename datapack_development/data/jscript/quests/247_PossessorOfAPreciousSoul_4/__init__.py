@@ -96,5 +96,3 @@ QUEST.addStartNpc(CARADINE)
 QUEST.addTalkId(CARADINE)
 
 QUEST.addTalkId(LADY_OF_LAKE)
-
-print "importing quests: 247: Possessor Of A Precious Soul - 4"

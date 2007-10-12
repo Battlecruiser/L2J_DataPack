@@ -96,6 +96,4 @@ QUEST.addTalkId(MIRABEL)
 QUEST.addTalkId(ARIEL) 
 QUEST.addTalkId(ASTERIOS) 
 
-STARTED.addQuestDrop(MIRABEL,ARIELS_RECOMMENDATION,1) 
-
-print "importing quests: 7: A Trip Begins" 
+STARTED.addQuestDrop(MIRABEL,ARIELS_RECOMMENDATION,1)

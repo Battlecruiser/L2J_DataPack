@@ -108,5 +108,3 @@ QUEST.addKillId(ROTTING_TREE)
 
 STARTED.addQuestDrop(GAUEN,CARNIVORE_SPORE,1)
 STARTED.addQuestDrop(GAUEN,HERBIBOROUS_SPORE,1)
-
-print "importing quests: 356: Dig Up The Sea Of Spores"

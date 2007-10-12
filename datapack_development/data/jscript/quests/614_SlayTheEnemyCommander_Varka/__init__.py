@@ -96,5 +96,3 @@ QUEST.addTalkId(Ashas)
 
 STARTED.addQuestDrop(Tayr,Tayr_Head,1)
 QUEST.addKillId(Tayr)
-
-print "importing quests: 614: Slay The Enemy Commander! (Varka)"

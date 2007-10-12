@@ -334,5 +334,3 @@ QUEST.setInitialState(CREATED)
 for i in [31328,30195,30699,30474,31324,30862,30175,30910,31285,31331,31334,31974,32096]:
     QUEST.addStartNpc(i)
     QUEST.addTalkId(i)
-
-print "importing village master data: Giran Castle Town      ...done"

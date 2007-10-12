@@ -2,8 +2,6 @@
 # Created by DraX on 2005.08.08
 #
 
-print "importing village master data: Dark Elven Temple      ...done"
-
 import sys
 
 from net.sf.l2j.gameserver.model.quest        import State

@@ -14,6 +14,10 @@ __all__ = [
 ]
 print ""
 print "importing teleport data ..."
-from data.jscript.teleports import *
+for name in __all__ :
+    try :
+        __import__('data.jscript.teleports.'+name,globals(), locals(), ['__init__'], -1)
+    except:
+        print "failed to import quest : ",name
 print "... done"
 print ""

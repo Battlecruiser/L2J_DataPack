@@ -322,5 +322,3 @@ for mobId in [20150,27123,27124,27125,27127,27134]:
 
 for item in range(2810,2820):
   STARTED.addQuestDrop(30743,item,1)
-
-print "importing quests: 226: Test Of Healer"

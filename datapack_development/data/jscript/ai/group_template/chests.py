@@ -99,5 +99,3 @@ class chests(JQuest) :
 
 # now call the constructor (starts up the ai)
 QUEST           = chests(-1,"chests","ai")
-
-print "AI: group template: Treasure Chests...loaded!"

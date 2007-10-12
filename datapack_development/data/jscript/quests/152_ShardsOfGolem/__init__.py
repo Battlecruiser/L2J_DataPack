@@ -112,5 +112,3 @@ QUEST.addKillId(20016)
 
 for item in range(1008,1012) :
     STARTED.addQuestDrop(HARRIS,item,1)
-
-print "importing quests: 152: Shards Of Golem"

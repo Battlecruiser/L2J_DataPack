@@ -49,5 +49,3 @@ QUEST.setInitialState(CREATED)
 for npc in NPCS :
     QUEST.addStartNpc(npc)
     QUEST.addTalkId(npc)
-
-print "importing teleport data: 1630_PaganTeleporters"

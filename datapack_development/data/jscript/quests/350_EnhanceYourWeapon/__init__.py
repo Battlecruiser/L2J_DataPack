@@ -76,5 +76,3 @@ for npcId in NPC:
 STARTED.addQuestDrop(4629,RED_SOUL_CRYSTAL0_ID,1)
 STARTED.addQuestDrop(4640,GREEN_SOUL_CRYSTAL0_ID,1)
 STARTED.addQuestDrop(4651,BLUE_SOUL_CRYSTAL0_ID,1)
-
-print "importing quests: 350: Enhance Your Weapon"

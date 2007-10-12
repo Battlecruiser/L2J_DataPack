@@ -359,5 +359,3 @@ STARTED.addQuestDrop(30556,TARANTULA_PIC,1)
 STARTED.addQuestDrop(30557,SUCCUBUS_UNDIES,1)
 STARTED.addQuestDrop(30556,BEAD_PARCEL,1)
 STARTED.addQuestDrop(30316,ROUTS_TP_SCROLL,1)
-
-print "importing quests: 417: Path To Scavenger"

@@ -143,5 +143,3 @@ QUEST.addKillId(ARANEID)
 
 for item in range(7178,7182) :
     STARTED.addQuestDrop(BABENCO,item,1)
-
-print "importing quests: 39: Red Eyed Invaders"

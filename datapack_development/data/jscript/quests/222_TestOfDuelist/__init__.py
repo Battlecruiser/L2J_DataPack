@@ -165,5 +165,3 @@ QUEST.addTalkId(30623)
 
 for i in DROPLIST.keys():
     QUEST.addKillId(i)
-
-print "importing quests: 222: Test Of Duelist"

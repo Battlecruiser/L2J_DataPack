@@ -124,5 +124,3 @@ QUEST.addTalkId(30165)
 QUEST.addTalkId(30294)
 QUEST.addKillId(20560)
 STARTED.addQuestDrop(20560,SPINNERET,1)
-
-print "importing quests: 34: In Search of Clothes"

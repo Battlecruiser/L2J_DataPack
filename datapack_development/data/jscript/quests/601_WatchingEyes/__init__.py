@@ -100,5 +100,3 @@ for i in MOBS :
   QUEST.addKillId(i)
 
 STARTED.addQuestDrop(EYE_OF_ARGOS,PROOF_OF_AVENGER,1)
-
-print "importing quests: 601: Watching Eyes"

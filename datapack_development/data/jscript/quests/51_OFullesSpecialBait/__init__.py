@@ -83,5 +83,3 @@ QUEST.addTalkId(OFULLE)
 
 QUEST.addKillId(FETTERED_SOUL)
 STARTED.addQuestDrop(FETTERED_SOUL,LOST_BAIT,1)
-
-print "importing quests: 51: O'Fulle's Special Bait"

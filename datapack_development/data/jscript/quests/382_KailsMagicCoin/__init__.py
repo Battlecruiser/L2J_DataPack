@@ -79,5 +79,3 @@ for npc in MOBS.keys():
 
 for coin in range(5961,5964):
     STARTED.addQuestDrop(coin,VERGARA,1)
-
-print "importing quests: 382: Kail's Magic Coin"

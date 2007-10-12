@@ -1,6 +1,5 @@
 # For Sleepless Deadmen version 0.1 
 # by DrLecter
-print "importing quests:",
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -107,5 +106,3 @@ QUEST.addTalkId(ORVEN)
 for i in MOBS :
   QUEST.addKillId(i)
   STARTED.addQuestDrop(i,REMAINS,1)
-
-print str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

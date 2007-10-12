@@ -87,5 +87,3 @@ QUEST.addTalkId(30838)
 
 QUEST.addTalkId(30164)
 QUEST.addTalkId(31520)
-
-print "importing quests: 33: Make A Pair Of Dress Shoes"

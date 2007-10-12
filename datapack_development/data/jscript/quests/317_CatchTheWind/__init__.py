@@ -76,5 +76,3 @@ QUEST.addKillId(20036)
 QUEST.addKillId(20044)
 
 STARTED.addQuestDrop(20036,WIND_SHARD,1)
-
-print "importing quests: 317: Catch The Wind"

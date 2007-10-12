@@ -396,5 +396,3 @@ STARTED.addQuestDrop(Wahkan,Varka_Badge_Officer,1)
 STARTED.addQuestDrop(Wahkan,Varka_Badge_Captain,1)
 for mobId in Ketra_Orcs :
     QUEST.addKillId(mobId)
-
-print "importing quests: 605: Alliance With Ketra Orcs"

@@ -75,5 +75,3 @@ QUEST.addStartNpc(DONAL)
 QUEST.addTalkId(DONAL)
 QUEST.addTalkId(DAISY)
 QUEST.addTalkId(ABERCROMBIE)
-
-print "importing quests: 18: Meeting With The Golden Ram"

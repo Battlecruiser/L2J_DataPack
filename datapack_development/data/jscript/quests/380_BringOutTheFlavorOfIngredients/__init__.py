@@ -133,5 +133,3 @@ for mob in DROPLIST.keys():
 
 for item in range(5895,5898):
     STARTED.addQuestDrop(ROLLANT,item,1)
-
-print "importing quests: 380: Bring Out The Flavor Of Ingredients"

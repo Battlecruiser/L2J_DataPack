@@ -68,5 +68,3 @@ QUEST.addTalkId(LIESEL)
 QUEST.addTalkId(GHOST_OF_ADVENTURER)
 
 STARTED.addQuestDrop(GHOST_OF_ADVENTURER,LETTER,1)
-
-print "importing quests: 14: Whereabouts Of The Archaeologist"

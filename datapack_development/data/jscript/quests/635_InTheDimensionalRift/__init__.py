@@ -98,5 +98,3 @@ for npcId in range(31494,31508):
 
 for npcId in range(31488,31494) :
     QUEST.addTalkId(npcId)
-
-print "importing quests: 635: In The Dimensional Rift"

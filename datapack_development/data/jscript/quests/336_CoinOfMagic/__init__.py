@@ -389,5 +389,3 @@ SOLO.addQuestDrop(SORINT,3811,1)
 SOLO.addQuestDrop(SORINT,3812,1)
 for item in range(3472,3499)+range(3813,3816):
    PARTY.addQuestDrop(SORINT,item,1)
-
-print "importing quests: "+str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

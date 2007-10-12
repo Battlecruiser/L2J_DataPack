@@ -80,5 +80,3 @@ QUEST.addKillId(20460)
 QUEST.addKillId(20466)
 
 STARTED.addQuestDrop(20460,GIANT_SPIDER_LEG,1)
-
-print "importing quests: 261: Dream Of Moneylender1"

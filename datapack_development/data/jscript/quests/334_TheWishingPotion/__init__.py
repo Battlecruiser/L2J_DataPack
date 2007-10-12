@@ -380,5 +380,3 @@ QUEST.addKillId(GREAT_DEMON_KING)
 
 for item in range(3678,3683):
     STARTED.addQuestDrop(ALCHEMIST_MATILD,item,1)
-
-print "importing quests: 334: The Wishing Potion"

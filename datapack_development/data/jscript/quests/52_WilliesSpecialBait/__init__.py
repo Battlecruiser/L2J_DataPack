@@ -84,5 +84,3 @@ QUEST.addTalkId(WILLIE)
 
 QUEST.addKillId(TARLK_BASILISK)
 STARTED.addQuestDrop(TARLK_BASILISK,TARLK_EYE,1)
-
-print "importing quests: 52: Willie's Special Bait"

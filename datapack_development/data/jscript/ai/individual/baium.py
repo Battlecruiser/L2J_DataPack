@@ -76,5 +76,3 @@ QUEST.addStartNpc(31862)
 QUEST.addTalkId(29025)
 QUEST.addTalkId(31862)
 QUEST.addKillId(29020)
-
-print "AI: individuals: Baium...loaded!"

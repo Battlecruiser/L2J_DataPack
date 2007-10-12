@@ -132,5 +132,3 @@ STARTED.addQuestDrop(30358,ONYX_TALISMAN1,1)
 STARTED.addQuestDrop(30133,ONYX_TALISMAN2,1)
 STARTED.addQuestDrop(27070,ANCIENT_SCROLL,1)
 STARTED.addQuestDrop(27070,ANCIENT_CLAY_TABLET,1)
-
-print "importing quests: 106: Forgotten Truth"

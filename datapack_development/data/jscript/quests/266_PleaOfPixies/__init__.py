@@ -110,5 +110,3 @@ QUEST.addKillId(20534)
 QUEST.addKillId(20537)
 
 STARTED.addQuestDrop(20530,PREDATORS_FANG,1)
-
-print "importing quests: 266: Plea Of Pixies"

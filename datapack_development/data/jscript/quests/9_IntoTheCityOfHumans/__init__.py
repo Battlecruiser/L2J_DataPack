@@ -82,5 +82,3 @@ QUEST.addTalkId(PETUKAI)
 
 QUEST.addTalkId(TANAPI) 
 QUEST.addTalkId(TAMIL) 
-
-print "importing quests: 9: Into the City of Humans" 

@@ -161,5 +161,3 @@ STARTED.addQuestDrop(30132,PRESERVE_OIL_ID,1)
 STARTED.addQuestDrop(20015,ZOMBIE_HEAD_ID,1)
 STARTED.addQuestDrop(20020,ZOMBIE_HEAD_ID,1)
 STARTED.addQuestDrop(30132,STEELBENDERS_HEAD_ID,1)
-
-print "importing quests: 103: Spirit Of Craftsman"

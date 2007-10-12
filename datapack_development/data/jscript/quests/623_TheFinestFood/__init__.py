@@ -118,5 +118,3 @@ for mob in DROPLIST.keys() :
 
 for item in range(7199,7202):
     STARTED.addQuestDrop(JEREMY,item,1)
-
-print "importing quests: 623: The Finest Food"

@@ -90,5 +90,3 @@ for mob in [20103,20106,20108] :
 
 STARTED.addQuestDrop(30032,FEVER_MEDICINE,1)
 STARTED.addQuestDrop(20108,POISON_SAC,1)
-
-print "importing quests: 151: Save My Sister1"

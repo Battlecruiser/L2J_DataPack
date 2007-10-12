@@ -95,5 +95,3 @@ for mobs in range(21520,21541):
   QUEST.addKillId(mobs)
 
 STARTED.addQuestDrop(21520,BLOOD_OF_SAINT,1)
-
-print "importing quests: 626: A Dark Twilight"

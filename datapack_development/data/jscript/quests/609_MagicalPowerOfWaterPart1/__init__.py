@@ -180,5 +180,3 @@ for mobId in Varka_Mobs:
     QUEST.addAttackId(mobId)
 for mobId in Ketra_Orcs:
     QUEST.addKillId(mobId)
-
-print "importing quests: 609: Magical Power of Water - Part 1"

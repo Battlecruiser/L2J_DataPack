@@ -394,5 +394,3 @@ STARTED.addQuestDrop(Naran_Ashanuk,Ketra_Badge_Officer,1)
 STARTED.addQuestDrop(Naran_Ashanuk,Ketra_Badge_Captain,1)
 for mobId in Varka_Silenos :
     QUEST.addKillId(mobId)
-
-print "importing quests: 611: Alliance With Varka Silenos"

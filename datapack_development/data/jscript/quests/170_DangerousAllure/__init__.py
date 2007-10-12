@@ -78,5 +78,3 @@ QUEST.addTalkId(30305)
 
 QUEST.addKillId(27022)
 STARTED.addQuestDrop(27022,NIGHTMARE_CRYSTAL,1)
-
-print "importing quests: 170: Dangerous Allure"

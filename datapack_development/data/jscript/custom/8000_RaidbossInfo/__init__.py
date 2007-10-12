@@ -252,5 +252,3 @@ QUEST.setInitialState(CREATED)
 for i in NPC:
     QUEST.addStartNpc(i)
     QUEST.addTalkId(i)
-
-print "importing custom: 8000: Raidboss Info"

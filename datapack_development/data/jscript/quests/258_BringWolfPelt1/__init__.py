@@ -90,5 +90,3 @@ QUEST.addKillId(20120)
 QUEST.addKillId(20442)
 
 STARTED.addQuestDrop(20120,WOLF_PELT,1)
-
-print "importing quests: 258: Bring Wolf Pelt1"

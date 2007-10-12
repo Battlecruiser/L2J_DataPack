@@ -284,8 +284,3 @@ STARTED.addQuestDrop(30411,FLAME_EARING,1)
 STARTED.addQuestDrop(30412,WIND_BANGEL,1)
 STARTED.addQuestDrop(30413,WATER_NECKLACE,1)
 STARTED.addQuestDrop(30409,EARTH_RING,1)
-
-print "importing quests: 404: Path To Wizard"
-
-
-

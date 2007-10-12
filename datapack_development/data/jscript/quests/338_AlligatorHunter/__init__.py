@@ -75,5 +75,3 @@ QUEST.addTalkId(30892)
 
 QUEST.addKillId(ALLIGATOR)
 STARTED.addQuestDrop(ALLIGATOR,ALLIGATOR_PELTS,1)
-
-print "importing quests: 338: Alligator Hunter"

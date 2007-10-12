@@ -263,5 +263,3 @@ class feedable_beasts(JQuest) :
 
 # now call the constructor (starts up the ai)
 QUEST		= feedable_beasts(-1,"feedable_beasts","ai")
-    
-print "AI: group template: Feedable Beasts...loaded!"

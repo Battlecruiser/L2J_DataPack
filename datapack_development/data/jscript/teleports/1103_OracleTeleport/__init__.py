@@ -61,5 +61,3 @@ for i in TOWN_DAWN+TOWN_DUSK :
 
 for j in TEMPLE_PRIEST :
     QUEST.addTalkId(j)
-
-print "importing teleport data: 1103_OracleTeleport"

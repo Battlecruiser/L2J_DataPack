@@ -39,5 +39,3 @@ QUEST.setInitialState(CREATED)
 for item in NPC:
    QUEST.addStartNpc(item)
    QUEST.addTalkId(item)
-
-print "importing teleport data: 2400_toivortex_exit"

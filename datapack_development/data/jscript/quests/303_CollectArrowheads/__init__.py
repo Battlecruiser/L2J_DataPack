@@ -76,5 +76,3 @@ QUEST.addTalkId(30029)
 
 QUEST.addKillId(20361)
 STARTED.addQuestDrop(20361,ORCISH_ARROWHEAD,1)
-
-print "importing quests: 303: Collect Arrowheads"

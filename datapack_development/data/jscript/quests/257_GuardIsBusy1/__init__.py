@@ -104,5 +104,3 @@ STARTED.addQuestDrop(20130,ORC_AMULET,1)
 STARTED.addQuestDrop(20093,ORC_NECKLACE,1)
 STARTED.addQuestDrop(20132,WEREWOLF_FANG,1)
 STARTED.addQuestDrop(30039,GLUDIO_LORDS_MARK,1)
-
-print "importing quests: 257: Guard Is Busy1"

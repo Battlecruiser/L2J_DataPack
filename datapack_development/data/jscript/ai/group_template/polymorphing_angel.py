@@ -36,5 +36,3 @@ class polymorphing_angel(JQuest) :
 QUEST		= polymorphing_angel(-1,"polymorphing_angel","ai")
 for i in QUEST.AngelSpawns.keys() :
     QUEST.addKillId(i)
-
-print "AI: group template: Angel Spawns...loaded!"

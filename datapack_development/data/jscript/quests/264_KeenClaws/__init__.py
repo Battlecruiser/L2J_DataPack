@@ -92,7 +92,3 @@ QUEST.addKillId(20003)
 QUEST.addKillId(20456)
 
 STARTED.addQuestDrop(20003,WOLF_CLAW,1)
-
-print "importing quests: 264: Keen Claws"
-
-

@@ -117,5 +117,3 @@ for i in [ 20055,20059,20067,20068,20070,20072 ] :
 STARTED.addQuestDrop(20055,MONSTER_EYE_CARCASS,1)
 STARTED.addQuestDrop(20055,MONSTER_EYE_LENS,1)
 STARTED.addQuestDrop(20070,BASILISK_GIZZARD,1)
-
-print "importing quests: 328: Sense For Business"

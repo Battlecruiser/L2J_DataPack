@@ -104,5 +104,3 @@ QUEST.addKillId(20313)
 
 STARTED.addQuestDrop(20311,BLACK_SOULSTONE,1)
 STARTED.addQuestDrop(20313,RED_SOULSTONE,1)
-
-print "importing quests: 273: Invaders Of Holyland"

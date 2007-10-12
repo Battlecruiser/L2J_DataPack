@@ -135,5 +135,3 @@ for MOBS in range(20767,20771) :
 
 STARTED.addQuestDrop(20767,GALFREDOS_BUST,1)
 STARTED.addQuestDrop(20767,BUST_OF_ANCIENT_GODDESS,1)
-
-print "importing quests: 355: Family Honor"

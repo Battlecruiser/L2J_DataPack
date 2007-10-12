@@ -130,5 +130,3 @@ STARTED.addQuestDrop(Ashas,Molar,1)
 
 for mobId in Varka_Mobs :
   QUEST.addKillId(mobId)
-
-print "importing quests: 612: War With Ketra Orcs"

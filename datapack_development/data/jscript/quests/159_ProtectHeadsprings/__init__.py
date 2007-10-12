@@ -108,5 +108,3 @@ QUEST.addKillId(27017)
 STARTED.addQuestDrop(27017,PLAGUE_DUST,1)
 STARTED.addQuestDrop(30154,HYACINTH_CHARM1,1)
 STARTED.addQuestDrop(30154,HYACINTH_CHARM2,1)
-
-print "importing quests: 159: Protect Headsprings"

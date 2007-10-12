@@ -80,5 +80,3 @@ QUEST.addTalkId(31043)
 
 QUEST.addKillId(21103)
 STARTED.addQuestDrop(21103,RED_CRYSTALS_ID,1)
-
-print "importing quests: 432: Birthday Party Song"

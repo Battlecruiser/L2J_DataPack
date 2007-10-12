@@ -96,5 +96,3 @@ QUEST.addTalkId(Kadun)
 
 STARTED.addQuestDrop(Mos,Mos_Head,1)
 QUEST.addKillId(Mos)
-
-print "importing quests: 608: Slay The Enemy Commander! (Ketra)"

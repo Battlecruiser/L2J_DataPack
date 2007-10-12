@@ -72,5 +72,3 @@ QUEST.addTalkId(31274)
 QUEST.addTalkId(31539)
 
 STARTED.addQuestDrop(31539,PACKAGE,1)
-
-print "importing quests: 13: Parcel Delivery"

@@ -97,5 +97,3 @@ QUEST.addKillId(27044)
 
 STARTED.addQuestDrop(27044,KASHA_CRYSTAL_ID,1)
 STARTED.addQuestDrop(20479,KASHA_PARASITE_ID,1)
-
-print "importing quests: 276: Hestui Totem"

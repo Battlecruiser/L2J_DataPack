@@ -139,5 +139,3 @@ for mob in MOBSspecial.keys():
     QUEST.addKillId(mob)
 
 STARTED.addQuestDrop(20005,SWEET_FLUID,1)
-
-print "importing quests: 426: Quest for Fishing Shot"

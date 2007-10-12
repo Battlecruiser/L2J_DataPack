@@ -81,4 +81,3 @@ for mob in MOBS:
     QUEST.addKillId(mob)
 
 STARTED.addQuestDrop(RANDOLF,TREASURE_CHEST,1)
-print "importing quests: 365: Devil's Legacy"

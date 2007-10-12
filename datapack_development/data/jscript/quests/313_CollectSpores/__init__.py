@@ -73,5 +73,3 @@ QUEST.addTalkId(30150)
 QUEST.addKillId(20509)
 
 STARTED.addQuestDrop(20509,FUNGUS_SAC,1)
-
-print "importing quests: 313: Collect Spores"

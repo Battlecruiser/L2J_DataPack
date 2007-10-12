@@ -87,5 +87,3 @@ QUEST.addKillId(20176)
 STARTED.addQuestDrop(20145,HARPY_FEATHER,1)
 STARTED.addQuestDrop(20158,MEDUSA_VENOM,1)
 STARTED.addQuestDrop(20176,WYRMS_TOOTH,1)
-
-print "importing quests: 331: Arrow For Vengeance"

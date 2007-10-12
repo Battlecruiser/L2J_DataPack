@@ -2,8 +2,6 @@
 # Created by DraX on 2005.08.21 modified by Ariakas on 2005.09.19
 #
 
-print "importing village master data: Tower of Aden          ...done"
-
 import sys
 
 from net.sf.l2j.gameserver.model.quest        import State

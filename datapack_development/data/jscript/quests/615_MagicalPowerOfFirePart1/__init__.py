@@ -181,5 +181,3 @@ for mobId in Varka_Mobs:
     QUEST.addKillId(mobId)
 for mobId in Ketra_Orcs:
     QUEST.addAttackId(mobId)
-
-print "importing quests: 615: Magical Power of Fire - Part 1"

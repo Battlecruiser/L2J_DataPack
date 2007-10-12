@@ -82,5 +82,3 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(LINNAEUS)
 QUEST.addTalkId(LINNAEUS)
 QUEST.addTalkId(RUKAL)
-
-print "importing quests: 30: Chest Caught With A Bait Of Fire"

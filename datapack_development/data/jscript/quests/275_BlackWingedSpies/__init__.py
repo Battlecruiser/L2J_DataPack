@@ -98,5 +98,3 @@ QUEST.addKillId(27043)
 
 STARTED.addQuestDrop(20316,DARKWING_BAT_FANG,1)
 STARTED.addQuestDrop(20316,VARANGKAS_PARASITE,1)
-
-print "importing quests: 275: Black Winged Spies"

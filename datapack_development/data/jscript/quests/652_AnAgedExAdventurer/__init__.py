@@ -67,5 +67,3 @@ QUEST.addStartNpc(TANTAN)
 
 QUEST.addTalkId(TANTAN)
 QUEST.addTalkId(SARA)
-
-print "importing quests: 652: An Aged Ex-Adventurer"

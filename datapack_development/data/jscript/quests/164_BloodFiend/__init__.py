@@ -1,5 +1,4 @@
 # Maked by Mr. Have fun! Version 0.2
-print "importing quests: 164: Blood Fiend"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState

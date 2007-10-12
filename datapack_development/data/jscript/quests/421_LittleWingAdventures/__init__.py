@@ -189,5 +189,3 @@ STARTING.addQuestDrop(SG_CRONOS,FT_LEAF,1)
 
 for i in range(4) :
   QUEST.addTalkId(FAIRY_TREES[i][0])
-
-print "importing quests: "+str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

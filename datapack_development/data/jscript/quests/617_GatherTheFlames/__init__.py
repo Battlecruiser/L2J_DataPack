@@ -112,5 +112,3 @@ for mob in DROPLIST.keys() :
   QUEST.addKillId(mob)
 
 STARTED.addQuestDrop(VULCAN,TORCH,1)
-
-print "importing quests: 617: Gather The Flames"

@@ -82,5 +82,3 @@ QUEST.addTalkId(Cadmon)
 
 QUEST.addTalkId(Leon)
 QUEST.addTalkId(Wahkan)
-
-print "importing quests: 11: Secret Meeting With Ketra Orcs"

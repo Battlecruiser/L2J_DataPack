@@ -81,5 +81,3 @@ QUEST.addKillId(20517)
 QUEST.addKillId(20518)
 
 STARTED.addQuestDrop(20517,BONE_FRAGMENT,1)
-
-print "importing quests: 320: Bones Tell Future"

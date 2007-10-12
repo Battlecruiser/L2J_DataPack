@@ -91,5 +91,3 @@ QUEST.addKillId(TAIK_LEADER)
 STARTED.addQuestDrop(COLEMAN,RECIPE_OF_SUPPLY,1)
 STARTED.addQuestDrop(COLEMAN,SUPPLY_ITEM,1)
 STARTED.addQuestDrop(COLEMAN,SUSPICIOUS_DOCUMENT,1)
-
-print "importing quests: 360: Plunder Their Supplies"

@@ -203,5 +203,3 @@ for mob in DROPLIST.keys():
 
 PROGRESS.addQuestDrop(NEWYEAR,BLOOD,1)
 PROGRESS.addQuestDrop(NEWYEAR,LEG,1)
-
-print "importing quests: 123: The Leader and the Follower"

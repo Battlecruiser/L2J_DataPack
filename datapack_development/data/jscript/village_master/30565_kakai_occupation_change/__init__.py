@@ -2,8 +2,6 @@
 # Created by DraX on 2005.08.08 modified by Ariakas on 2005.09.19
 #
 
-print "importing village master data: Orc Village            ...done"
-
 import sys
 
 from net.sf.l2j.gameserver.model.quest        import State

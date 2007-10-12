@@ -172,5 +172,3 @@ STARTED.addQuestDrop(30416,SHILENS_CALL,1)
 STARTED.addQuestDrop(20369,ONYX_BEASTS_MOLAR,1)
 STARTED.addQuestDrop(30382,LEIKANS_NOTE,1)
 STARTED.addQuestDrop(30419,ARKENIAS_LETTER,1)
-
-print "importing quests: 411: Path To Assassin"

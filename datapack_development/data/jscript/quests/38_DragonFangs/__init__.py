@@ -139,5 +139,3 @@ for mob in DROPLIST.keys():
 
 for item in range(7173,7178):
     STARTED.addQuestDrop(LUIS,item,1)
-
-print "importing quests: 38: Dragon Fangs"

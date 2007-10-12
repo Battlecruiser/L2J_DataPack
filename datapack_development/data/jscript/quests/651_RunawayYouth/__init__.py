@@ -68,5 +68,3 @@ QUEST.addStartNpc(IVAN)
 
 QUEST.addTalkId(IVAN)
 QUEST.addTalkId(BATIDAE)
-
-print "importing quests: 651: Runaway Youth"

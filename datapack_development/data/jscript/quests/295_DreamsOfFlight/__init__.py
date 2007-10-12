@@ -86,4 +86,3 @@ QUEST.addTalkId(30536)
 QUEST.addKillId(20153)
 
 STARTED.addQuestDrop(20153,FLOATING_STONE,1)
-print "importing quests: 295: Dreams Of Flight"

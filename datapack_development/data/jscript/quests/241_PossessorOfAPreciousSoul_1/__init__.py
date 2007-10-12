@@ -318,5 +318,3 @@ STARTED.addQuestDrop(BARAHAM,POETRY_BOOK,1)
 STARTED.addQuestDrop(BARAHAM,CRIMSON_MOSS,1)
 STARTED.addQuestDrop(BARAHAM,RAHORAKTIS_MEDICINE,1)
 STARTED.addQuestDrop(BARAHAM,VIRGILS_LETTER,1)
-
-print "importing quests: 241: Possessor Of A Precious Soul - 1"

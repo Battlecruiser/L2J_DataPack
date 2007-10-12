@@ -92,5 +92,3 @@ QUEST.addTalkId(HAPROCK)
 
 STARTED.addQuestDrop(NORMAN,COLLETTE_LETTER,1)
 STARTED.addQuestDrop(NORMAN,NORMANS_LETTER,1)
-
-print "importing quests: 167: Dwarven Kinship"

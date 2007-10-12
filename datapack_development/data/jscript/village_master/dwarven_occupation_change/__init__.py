@@ -125,19 +125,15 @@ QUEST.setInitialState(CREATED)
 for npc in SCAV_NPCS :
     QUEST.addStartNpc(npc)
     QUEST.addTalkId(npc)
-print "importing village master data: Scavengers             ...done"
 
 for npc in ARTI_NPCS :
     QUEST.addStartNpc(npc)
     QUEST.addTalkId(npc)
-print "importing village master data: Artisans               ...done"
 
 for npc in BH_NPCS :
     QUEST.addStartNpc(npc)
     QUEST.addTalkId(npc)
-print "importing village master data: Bounty Hunters         ...done"
 
 for npc in WS_NPCS :
     QUEST.addStartNpc(npc)
     QUEST.addTalkId(npc)
-print "importing village master data: Warsmiths              ...done"

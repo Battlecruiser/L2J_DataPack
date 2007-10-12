@@ -79,5 +79,3 @@ QUEST.addKillId(20786)
 QUEST.addKillId(20787)
 
 STARTED.addQuestDrop(20786,SILVER_CRYSTAL_ID,1)
-
-print "importing quests: 431: Wedding March"

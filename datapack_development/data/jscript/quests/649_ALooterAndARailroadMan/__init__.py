@@ -85,5 +85,3 @@ for BANDITS in [22017,22018,22019,22021,22022,22023,22024,22026]:
   QUEST.addKillId(BANDITS)
 
 STARTED.addQuestDrop(OBI,THIEF_GUILD_MARK,1)
-
-print "importing quests: 649: A Looter and a Railroad Man"

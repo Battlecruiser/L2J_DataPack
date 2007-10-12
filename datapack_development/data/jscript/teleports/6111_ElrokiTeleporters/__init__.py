@@ -29,5 +29,3 @@ QUEST.addStartNpc(32111)
 QUEST.addTalkId(32111)
 QUEST.addStartNpc(32112)
 QUEST.addTalkId(32112)
-
-print "importing teleport data: 6111_ElrokiTeleporters"

@@ -77,5 +77,3 @@ for mob in range(20986,20989) :
     QUEST.addKillId(mob)
 
 STARTED.addQuestDrop(DIETER,HAIR,1)
-
-print "importing quests: 366: Silver Haired Shaman"

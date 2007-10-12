@@ -82,5 +82,3 @@ QUEST.addKillId(20319)
 QUEST.addKillId(20320)
 
 STARTED.addQuestDrop(20319,GRAVE_ROBBERS_HEAD,1)
-
-print "importing quests: 272: Wrath Of Ancestors"

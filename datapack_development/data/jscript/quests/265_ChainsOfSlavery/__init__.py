@@ -82,5 +82,3 @@ QUEST.addKillId(20004)
 QUEST.addKillId(20005)
 
 STARTED.addQuestDrop(20004,IMP_SHACKLES,1)
-
-print "importing quests: 265: Chains Of Slavery"

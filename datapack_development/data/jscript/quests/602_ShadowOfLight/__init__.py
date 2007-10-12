@@ -102,5 +102,3 @@ for i in MOBS :
   QUEST.addKillId(i)
 
 STARTED.addQuestDrop(EYE_OF_ARGOS,EYE_OF_DARKNESS,1)
-
-print "importing quests: 602: Shadow Of Light"

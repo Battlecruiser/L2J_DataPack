@@ -82,5 +82,3 @@ QUEST.addTalkId(30371)
 
 STARTED.addQuestDrop(30371,MOTHERTREE_FRUIT,1)
 STARTED.addQuestDrop(30362,ANDELLRIAS_LETTER,1)
-
-print "importing quests: 161: Fruits Of Mothertree"

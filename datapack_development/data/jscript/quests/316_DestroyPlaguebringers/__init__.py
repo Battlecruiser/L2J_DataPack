@@ -91,5 +91,3 @@ QUEST.addKillId(27020)
 
 STARTED.addQuestDrop(20040,WERERAT_FANG,1)
 STARTED.addQuestDrop(27020,VAROOL_FOULCLAWS_FANG,1)
-
-print "importing quests: 316: Destroy Plaguebringers"

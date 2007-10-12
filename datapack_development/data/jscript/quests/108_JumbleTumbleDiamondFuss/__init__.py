@@ -254,6 +254,4 @@ STARTED.addQuestDrop(30523,COAL_PIECE_ID,1)
 STARTED.addQuestDrop(30529,BRONPS_DICE_ID,1) 
 STARTED.addQuestDrop(30526,BRONPS_LETTER_ID,1) 
 STARTED.addQuestDrop(30521,BERRY_TART_ID,1) 
-STARTED.addQuestDrop(30522,BAT_DIAGRAM_ID,1) 
-
-print "importing quests: 108: Jumble Tumble Diamond Fuss"
+STARTED.addQuestDrop(30522,BAT_DIAGRAM_ID,1)

@@ -132,5 +132,3 @@ STARTED.addQuestDrop(Kadun,Mane,1)
 
 for mobId in Ketra_Orcs :
   QUEST.addKillId(mobId)
-
-print "importing quests: 606: War With Varka Silenos"

@@ -48,5 +48,3 @@ QUEST.addAttackId(QUEST.Core)
 
 for minion in QUEST.Minions :
     QUEST.addKillId(minion)
-
-print "AI: individuals: Core...loaded!"

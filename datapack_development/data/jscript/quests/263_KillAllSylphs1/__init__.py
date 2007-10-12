@@ -88,5 +88,3 @@ QUEST.addKillId(20388)
 
 STARTED.addQuestDrop(20385,ORC_AMULET,1)
 STARTED.addQuestDrop(20386,ORC_NECKLACE,1)
-
-print "importing quests: 263: Kill All Sylphs1"

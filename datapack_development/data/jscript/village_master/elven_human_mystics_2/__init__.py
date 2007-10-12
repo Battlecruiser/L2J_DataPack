@@ -119,9 +119,3 @@ QUEST.setInitialState(CREATED)
 for npc in NPCS :
     QUEST.addStartNpc(npc)
     QUEST.addTalkId(npc)
-
-print "importing village master data: Spellsingers           ...done"
-print "importing village master data: Elemental Summoners    ...done"
-print "importing village master data: Sorcerers              ...done"
-print "importing village master data: Warlocks               ...done"
-print "importing village master data: Necromancers           ...done"

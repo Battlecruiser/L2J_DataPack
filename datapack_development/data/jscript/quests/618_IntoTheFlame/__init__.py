@@ -107,5 +107,3 @@ for mob in range(21274,21278)+range(21282,21286)+range(21290,21294) :
 
 for item in range(7265,7267) :
     STARTED.addQuestDrop(KLEIN,item,1)
-      
-print "importing quests: 618: Into the Flame"

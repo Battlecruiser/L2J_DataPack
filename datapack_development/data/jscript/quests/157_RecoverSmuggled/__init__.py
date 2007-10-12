@@ -86,5 +86,3 @@ QUEST.addTalkId(30005)
 QUEST.addKillId(20121)
 
 STARTED.addQuestDrop(20121,ADAMANTITE_ORE,1)
-
-print "importing quests: 157: Recover Smuggled"
