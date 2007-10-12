@@ -571,5 +571,3 @@ QUEST.addTalkId(MC_MARIA)
 QUEST.addTalkId(FR_MYMYU)
 for i in range(30748,30753):
     QUEST.addTalkId(i)
-
-print "importing quests: 420: Little Wings"

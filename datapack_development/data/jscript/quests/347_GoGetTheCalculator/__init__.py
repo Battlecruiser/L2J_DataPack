@@ -139,5 +139,3 @@ QUEST.addTalkId(BALANKI)
 
 QUEST.addKillId(GEMSTONE_BEAST)
 STARTED.addQuestDrop(GEMSTONE_BEAST, GEMSTONE_BEAST_CRYSTAL, 1)
-
-print "importing quests: 347: Go Get The Calculator"

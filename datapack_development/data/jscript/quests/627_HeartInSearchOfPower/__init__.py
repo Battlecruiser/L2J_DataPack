@@ -112,5 +112,3 @@ for mobs in range(21520,21541):
   QUEST.addKillId(mobs)
 
 STARTED.addQuestDrop(21520,GEM_OF_SUBMISSION,1)
-
-print "importing quests: 627: Heart In Search Of Power"

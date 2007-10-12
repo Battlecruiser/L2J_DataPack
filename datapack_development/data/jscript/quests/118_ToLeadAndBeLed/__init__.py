@@ -206,5 +206,3 @@ for mob in DROPLIST.keys():
 
 PROGRESS.addQuestDrop(PINTER,BLOOD,1)
 PROGRESS.addQuestDrop(PINTER,LEG,1)
-
-print "importing quests: 118: To Lead And Be Led"

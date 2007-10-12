@@ -24,7 +24,6 @@ LIST={
 }
 
 
-print "importing " + QuestDesc + ": " + str(QuestId) + ": " + QuestName + ": " + str(len(LIST)) + " crystals",
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -66,5 +65,3 @@ QUEST.setInitialState(CREATED)
 for npc in NPCS:
    QUEST.addStartNpc(npc)
    QUEST.addTalkId(npc)
-
-print "...done"

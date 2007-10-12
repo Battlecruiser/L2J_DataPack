@@ -219,5 +219,3 @@ STARTED.addQuestDrop(VIRGIL,GOLDEN_HAIR,1)
 STARTED.addQuestDrop(VIRGIL,ORB_oF_BINDING,1)
 STARTED.addQuestDrop(VIRGIL,SORCERY_INGREDIENT,1)
 STARTED.addQuestDrop(VIRGIL,CARADINE_LETTER,1)
-
-print "importing quests: 242: Possessor Of A Precious Soul - 2"

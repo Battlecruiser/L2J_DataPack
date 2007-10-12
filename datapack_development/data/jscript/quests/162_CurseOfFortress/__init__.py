@@ -101,5 +101,3 @@ QUEST.addKillId(20504)
 
 STARTED.addQuestDrop(20371,ELF_SKULL,1)
 STARTED.addQuestDrop(20464,BONE_FRAGMENT3,1)
-
-print "importing quests: 162: Curse Of Fortress"

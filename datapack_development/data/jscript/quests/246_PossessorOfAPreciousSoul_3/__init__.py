@@ -181,5 +181,3 @@ STARTED.addQuestDrop(CARADINE,WATERBINDER,1)
 STARTED.addQuestDrop(CARADINE,EVERGREEN,1)
 STARTED.addQuestDrop(CARADINE,RAIN_SONG,1)
 STARTED.addQuestDrop(CARADINE,RELIC_BOX,1)
-
-print "importing quests: 246: Possessor Of A Precious Soul - 3"

@@ -96,5 +96,3 @@ for npcId in [30959,30957,30060,30961,30960]:
 STARTED.addQuestDrop(30959,KEY_1,1)
 STARTED.addQuestDrop(30959,KEY_2,1)
 STARTED.addQuestDrop(30960,BEER,1)
-
-print "importing quests: 364: Jovial Accordion"

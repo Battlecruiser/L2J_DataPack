@@ -228,5 +228,3 @@ STARTED.addQuestDrop(ALVAH,WEAPON_TRADE_CONTRACT,1)
 
 for i in range(20494,20500)+[20062,20066,20438] :
     QUEST.addKillId(i)
-
-print "importing quests: 171: Acts of Evil"

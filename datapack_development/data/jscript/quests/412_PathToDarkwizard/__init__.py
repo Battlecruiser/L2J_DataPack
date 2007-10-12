@@ -236,9 +236,3 @@ STARTED.addQuestDrop(30418,CANDLE,1)
 STARTED.addQuestDrop(20517,KNEE_BONE,1)
 STARTED.addQuestDrop(20518,KNEE_BONE,1)
 STARTED.addQuestDrop(20022,KNEE_BONE,1)
-
-print "importing quests: 412: Path To Darkwizard"
-
-
-
-

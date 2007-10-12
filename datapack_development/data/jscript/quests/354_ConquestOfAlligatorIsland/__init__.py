@@ -110,5 +110,3 @@ STARTED.addQuestDrop(20991,TORN_MAP_FRAGMENT,1)
 
 for i in range(20804,20809)+[20991] :
     QUEST.addKillId(i)
-
-print "importing quests: 354: Conquest Of Alligator Island"

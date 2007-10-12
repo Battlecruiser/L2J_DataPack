@@ -86,5 +86,3 @@ for MOBS in range(20594,20598) :
   QUEST.addKillId(MOBS)
 
 STARTED.addQuestDrop(SILVA,JADE_CRYSTAL,1)
-
-print "importing quests: 357: Warehouse Keepers Ambition"

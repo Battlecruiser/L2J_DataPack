@@ -58,5 +58,3 @@ COMPLETED = State('Completed', QUEST)
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(GRAND_MASTER_BITZ)
 QUEST.addTalkId(GRAND_MASTER_BITZ)
-
-print "importing village master data: Talking Island Village ...done"

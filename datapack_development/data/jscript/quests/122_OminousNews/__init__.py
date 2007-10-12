@@ -72,5 +72,3 @@ QUEST.addStartNpc(MOIRA)
 QUEST.addTalkId(MOIRA)
 
 QUEST.addTalkId(KARUDA)
-
-print "importing quests: 122: Ominous News"

@@ -208,5 +208,3 @@ for mob in range(20236,20241):
 
 for item in range(4269,4274):
     STARTED.addQuestDrop(GILMORE,item,1)
-
-print "importing quests: 344: 1000 Years, the End of Lamentation"

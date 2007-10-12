@@ -163,5 +163,3 @@ STARTED.addQuestDrop(20782,EMERALD_PIECE,1)
 STARTED.addQuestDrop(20054,TOPAZ_PIECE,1)
 STARTED.addQuestDrop(30317,KLUTO_MEMO,1)
 STARTED.addQuestDrop(30317,KLUTO_BOX,1)
-
-print "importing quests: 406: Path To Elven Knight"

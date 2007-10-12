@@ -1,5 +1,4 @@
 # Maked by Mr. Have fun! Version 0.3 updated by Sh1ning for www.l2jdp.com 
-print "importing quests: 105: Skirmish With Orcs" 
 import sys 
 from net.sf.l2j.gameserver.model.quest import State 
 from net.sf.l2j.gameserver.model.quest import QuestState 
@@ -220,5 +219,3 @@ STARTED.addQuestDrop(30218,KENDNELLS_ORDER5_ID,1)
 STARTED.addQuestDrop(30218,KENDNELLS_ORDER6_ID,1) 
 STARTED.addQuestDrop(30218,KENDNELLS_ORDER7_ID,1) 
 STARTED.addQuestDrop(30218,KENDNELLS_ORDER8_ID,1) 
-
-print "importing quests: 105: Skirmish With Orcs"

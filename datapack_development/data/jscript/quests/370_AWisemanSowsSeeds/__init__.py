@@ -96,5 +96,3 @@ for i in MOBS :
 
 for i in range(5917,5921):
     STARTED.addQuestDrop(CASIAN,i,1)
-    
-print "importing quests: 370: A Wiseman Sows Seeds"

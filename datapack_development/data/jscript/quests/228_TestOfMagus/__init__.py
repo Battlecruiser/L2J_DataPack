@@ -289,8 +289,3 @@ for mobId in [20145,20157,20176,20230,20231,20232,20234,27095,27096,27097,27098,
 
 for item in range(2841,2864):
    STARTED.addQuestDrop(30629,item,1)
-  
-print "importing quests: 228: Test Of Magus"
-
-
-

@@ -108,5 +108,3 @@ QUEST.addKillId(LESSER_SUCCUBUS_TILFO)
 STARTED.addQuestDrop(TALLOTH,ONYX_BEAST_EYE,1)
 STARTED.addQuestDrop(TALLOTH,TAINT_STONE,1)
 STARTED.addQuestDrop(TALLOTH,SUCCUBUS_BLOOD,1)
-
-print "importing quests: 3: Will the Seal be Broken?"

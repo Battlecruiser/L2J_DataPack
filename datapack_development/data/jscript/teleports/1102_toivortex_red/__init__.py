@@ -34,5 +34,3 @@ QUEST.setInitialState(CREATED)
 for i in [DIMENSION_VORTEX_1,DIMENSION_VORTEX_2] :
    QUEST.addStartNpc(i)
    QUEST.addTalkId(i)
-
-print "importing teleport data: 1102_toivortex_red"

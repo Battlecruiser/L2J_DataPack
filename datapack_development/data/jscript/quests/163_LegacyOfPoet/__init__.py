@@ -1,5 +1,4 @@
 # Maked by Mr. Have fun! Version 0.2
-print "importing quests: 163: Legacy Of Poet"
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState

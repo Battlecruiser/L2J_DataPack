@@ -72,5 +72,3 @@ QUEST.addStartNpc(ANTON)
 QUEST.addTalkId (ANTON)
 
 QUEST.addTalkId(MARQUEZ)
-
-print "importing quests: 110: To The Primeval Isle"

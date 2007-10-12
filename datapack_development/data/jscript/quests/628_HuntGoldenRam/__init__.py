@@ -178,5 +178,3 @@ for mob in range(21508,21518):
 
 for item in range(7246,7250):
     STARTED.addQuestDrop(KAHMAN,item,1)
-
-print "importing quests: 628: Hunt of the Golden Ram Mercenary Force"

@@ -135,5 +135,3 @@ QUEST.addStartNpc(MINA)
 QUEST.addTalkId(MINA)
 STARTED.addQuestDrop(MINA,RIB_BONE,1)
 STARTED.addQuestDrop(MINA,Z_LIVER,1)
-
-print "importing quests: 633: In The Forgotten Village"

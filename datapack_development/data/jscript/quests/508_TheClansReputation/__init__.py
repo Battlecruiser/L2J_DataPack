@@ -149,5 +149,3 @@ QUEST.addTalkId(SIR_ERIC_RODEMAI)
 for npc,item in REWARDS_LIST.values():
     QUEST.addKillId(npc)
     STARTED.addQuestDrop(npc,item,1)
-
-print "importing quests: 508: "+qd

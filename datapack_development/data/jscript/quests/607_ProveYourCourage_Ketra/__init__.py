@@ -96,5 +96,3 @@ QUEST.addTalkId(Kadun)
 
 STARTED.addQuestDrop(Shadith,Shadith_Head,1)
 QUEST.addKillId(Shadith)
-
-print "importing quests: 607: Prove Your Courage! (Ketra)" 

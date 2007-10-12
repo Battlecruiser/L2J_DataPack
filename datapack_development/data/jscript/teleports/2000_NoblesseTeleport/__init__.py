@@ -29,5 +29,3 @@ QUEST.setInitialState(CREATED)
 for item in NPC:
    QUEST.addStartNpc(item)
    QUEST.addTalkId(item)
-
-print "importing teleport data: 2000_NoblesseTeleport"

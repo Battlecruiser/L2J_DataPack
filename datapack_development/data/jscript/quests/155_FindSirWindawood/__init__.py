@@ -66,5 +66,3 @@ QUEST.addTalkId(30042)
 QUEST.addTalkId(30311)
 
 STARTED.addQuestDrop(30042,OFFICIAL_LETTER_ID,1)
-
-print "importing quests: 155: Find Sir Windawood"

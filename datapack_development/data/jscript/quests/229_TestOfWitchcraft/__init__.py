@@ -426,5 +426,3 @@ for mobId in DROPLIST.keys():
 
 for item in range(3308,3336)+[3029]:
   STARTED.addQuestDrop(30630,item,1)
-
-print "importing quests: 229: Test Of Witchcraft"

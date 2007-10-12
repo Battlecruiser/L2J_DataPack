@@ -1,6 +1,5 @@
 # Whisper of Dreams, part 1 version 0.1 
 # by DrLecter
-print "importing quests:",
 import sys
 from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
@@ -170,5 +169,3 @@ QUEST.addTalkId(TORAI)
 for i in DROPLIST.keys() :
   QUEST.addKillId(i)
   STARTING.addQuestDrop(i,DROPLIST[i][0],1)
- 
-print str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

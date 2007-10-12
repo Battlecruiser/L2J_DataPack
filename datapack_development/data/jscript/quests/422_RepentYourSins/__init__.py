@@ -4,10 +4,6 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.model.actor.instance import L2PetInstance
-from net.sf.l2j.gameserver.datatables import NpcTable
-from net.sf.l2j.gameserver.datatables import SummonItemsData
-from net.sf.l2j.gameserver.handler.itemhandlers import PetSummon
 
 qn = "422_RepentYourSins"
 
@@ -309,5 +305,3 @@ STARTED.addQuestDrop(30981,MANUAL_OF_MANACLES,1)
 STARTED.addQuestDrop(30981,PENITENTS_MANACLES,1)
 STARTED.addQuestDrop(30981,PENITENTS_MANACLES2,1)
 STARTED.addQuestDrop(30300,PENITENTS_MANACLES1,1)
-
-print "importing quests: 422: Repent your Sins" 

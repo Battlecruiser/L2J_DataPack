@@ -294,9 +294,3 @@ QUEST.addKillId(20479)
 
 for item in range(1593,1615):
     STARTED.addQuestDrop(30587,item,1)
-
-print "importing quests: 415: Path To Orc Monk" 
-
-
-
-

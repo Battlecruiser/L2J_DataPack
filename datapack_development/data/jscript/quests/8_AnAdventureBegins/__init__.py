@@ -98,5 +98,3 @@ QUEST.addTalkId(ROSELYN)
 QUEST.addTalkId(HARNE) 
 
 STARTED.addQuestDrop(JASMINE,ROSELYNS_NOTE,1) 
-
-print "importing quests: 8: An Adventure Begins" 

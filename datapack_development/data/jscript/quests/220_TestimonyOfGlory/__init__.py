@@ -565,5 +565,3 @@ STARTED.addQuestDrop(30619,DRIKOS_CONTRACT,1)
 STARTED.addQuestDrop(27086,SCEPTER_OF_TANTOS,1)
 STARTED.addQuestDrop(30642,SCEPTER_BOX,1)
 STARTED.addQuestDrop(30571,RITUAL_BOX,1)
-
-print "importing quests: 220: Testimony Of Glory"

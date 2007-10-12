@@ -2,7 +2,6 @@
 # by DrLecter for the Official L2J Datapack Project.
 # Visit http://forum.l2jdp.com for more details.
 
-print "importing quests:",
 import sys
 from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
@@ -323,5 +322,3 @@ for i in DROPLIST.keys():
 
 for i in range(6007,6035)+[6317,5904] :
   STARTED.addQuestDrop(WESLEY,i,1)
-
-print str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

@@ -110,5 +110,3 @@ for mobs in range(21508,21518) :
   QUEST.addKillId(mobs)
 
 STARTED.addQuestDrop(CAPTAIN,CLAWS,1)
-
-print "importing quests: 629: Clean Up the Swamp of Screams"

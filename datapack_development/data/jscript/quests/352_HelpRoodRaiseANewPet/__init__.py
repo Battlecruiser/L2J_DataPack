@@ -91,8 +91,3 @@ STARTED.addQuestDrop(31067,LIENRIK_EGG2,1)
 
 QUEST.addKillId(20786)
 QUEST.addKillId(20787)
-
-print "importing quests: 352: Help Rood Raise A New Pet"
-
-
-

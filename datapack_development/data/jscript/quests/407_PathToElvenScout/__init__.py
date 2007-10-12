@@ -206,9 +206,3 @@ STARTED.addQuestDrop(30337,MORETTIS_HERB,1)
 STARTED.addQuestDrop(30337,MORETTIS_LETTER,1)
 STARTED.addQuestDrop(30426,PRIGUNS_LETTER,1)
 STARTED.addQuestDrop(30337,HONORARY_GUARD,1)
-
-print "importing quests: 407: Path To Elven Scout"
-
-
-
-

@@ -136,5 +136,3 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(RANSPO)
 
 QUEST.addTalkId(RANSPO)
-
-print "importing quests: 378: Magnificent Feast"

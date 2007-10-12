@@ -97,6 +97,4 @@ QUEST.addTalkId(ROXXY)
 QUEST.addTalkId(BAULRO) 
 QUEST.addTalkId(SIR_COLLIN) 
 
-STARTED.addQuestDrop(ROXXY,BAULRO_LETTER,1) 
-
-print "importing quests: 6: Step into the Future" 
+STARTED.addQuestDrop(ROXXY,BAULRO_LETTER,1)

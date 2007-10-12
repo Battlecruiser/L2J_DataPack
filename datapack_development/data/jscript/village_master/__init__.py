@@ -21,6 +21,10 @@ __all__ = [
 ]
 print ""
 print "importing village master data ..."
-from data.jscript.village_master import *
+for name in __all__ :
+    try :
+        __import__('data.jscript.village_master.'+name,globals(), locals(), ['__init__'], -1)
+    except:
+        print "failed to import quest : ",name
 print "... done"
 print ""

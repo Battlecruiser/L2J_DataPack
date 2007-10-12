@@ -105,5 +105,3 @@ QUEST.addTalkId(30091)
 QUEST.addTalkId(30879)
 QUEST.addKillId(20135)
 STARTED.addQuestDrop(20135,ROUGH_JEWEL,1)
-
-print "importing quests: 35: Find Glittering Jewelry"

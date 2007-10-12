@@ -110,5 +110,3 @@ QUEST.addKillId(20448)
 STARTED.addQuestDrop(30539,HIDDEN_VEIN_MAP,1)
 STARTED.addQuestDrop(20446,CHRYSOLITE_ORE,1)
 STARTED.addQuestDrop(20447,TORN_MAP_FRAGMENT,1)
-
-print "importing quests: 293: Hidden Vein"

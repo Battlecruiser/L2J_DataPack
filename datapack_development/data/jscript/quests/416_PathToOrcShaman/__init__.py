@@ -306,9 +306,3 @@ STARTED.addQuestDrop(27056,BOUND_DURKA_SPIRIT,1)
 STARTED.addQuestDrop(20038,DURKA_PARASITE,1)
 STARTED.addQuestDrop(20043,DURKA_PARASITE,1)
 STARTED.addQuestDrop(30593,SPIRIT_NET,1)
-
-print "importing quests: 416: Path To Orc Shaman"
-
-
-
-

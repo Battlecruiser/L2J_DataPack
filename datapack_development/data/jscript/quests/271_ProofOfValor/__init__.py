@@ -94,5 +94,3 @@ QUEST.addTalkId(30577)
 
 QUEST.addKillId(20475)
 STARTED.addQuestDrop(20475,KASHA_WOLF_FANG,1)
-
-print "importing quests: 271: Proof Of Valor"

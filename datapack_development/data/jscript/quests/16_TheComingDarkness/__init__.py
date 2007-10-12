@@ -106,5 +106,3 @@ QUEST.addTalkId(31517)
 
 for altars in range(31512,31517):
   QUEST.addTalkId(altars)
-
-print "importing quests: 16: The Coming Darkness"

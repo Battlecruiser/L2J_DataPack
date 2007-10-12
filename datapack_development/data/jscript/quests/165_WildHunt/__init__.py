@@ -1,5 +1,4 @@
 # Maked by Mr. Have fun! Version 0.2
-print "importing quests: 165: Wild Hunt"
 import sys
 from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State

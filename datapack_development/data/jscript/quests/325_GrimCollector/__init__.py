@@ -259,5 +259,3 @@ STARTED.addQuestDrop(20051,ARM_BONE1_ID,1)
 STARTED.addQuestDrop(20514,THIGH_BONE1_ID,1)
 STARTED.addQuestDrop(30342,COMPLETE_SKELETON_ID,1)
 STARTED.addQuestDrop(30434,ANATOMY_DIAGRAM_ID,1)
-
-print "importing quests: 325: Grim Collector"

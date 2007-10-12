@@ -77,5 +77,3 @@ QUEST.addTalkId(30540)
 
 QUEST.addKillId(20521)
 STARTED.addQuestDrop(20521,STARSTONE2_ID,1)
-
-print "importing quests: 297: Gatekeepers Favor"

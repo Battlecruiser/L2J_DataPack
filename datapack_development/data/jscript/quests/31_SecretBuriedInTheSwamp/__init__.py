@@ -117,5 +117,3 @@ for i in range(31661,31666):
     QUEST.addTalkId(i)
 
 STARTED.addQuestDrop(ABERCROMBIE,KRORINS_JOURNAL,1)
-
-print "importing quests: 31: Secret Buried In The Swamp"

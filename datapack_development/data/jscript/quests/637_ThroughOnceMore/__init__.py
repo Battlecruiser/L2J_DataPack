@@ -80,5 +80,3 @@ for mob in range(21565,21568):
     QUEST.addKillId(mob)
 
 STARTED.addQuestDrop(FLAURON,NECROHEART,1)
-
-print "importing quests: 637: Through the Gate Once More"

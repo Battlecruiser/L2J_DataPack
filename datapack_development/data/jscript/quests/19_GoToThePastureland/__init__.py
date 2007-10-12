@@ -67,4 +67,3 @@ QUEST.addTalkId(VLADIMIR)
 QUEST.addTalkId(TUNATUN)
 
 STARTED.addQuestDrop(VLADIMIR,BEAST_MEAT,1)
-print "importing quests: 19: Go To The Pastureland"

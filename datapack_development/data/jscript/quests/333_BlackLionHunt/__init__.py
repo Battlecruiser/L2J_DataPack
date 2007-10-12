@@ -595,5 +595,3 @@ for npcId in NPC:
 
 for mobId in MOBS:
   QUEST.addKillId(mobId)
-  
-print "importing quests: 333: BlackLionHunt"

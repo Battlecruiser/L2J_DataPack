@@ -168,5 +168,3 @@ STARTED.addQuestDrop(Ashutar,Ice_Heart,1)
 
 for mobId in Ketra_Orcs:
     QUEST.addKillId(mobId)
-
-print "importing quests: 610: Magical Power of Water - Part 2"

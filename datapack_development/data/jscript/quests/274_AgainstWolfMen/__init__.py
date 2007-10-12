@@ -96,5 +96,3 @@ QUEST.addKillId(20363)
 QUEST.addKillId(20364)
 
 STARTED.addQuestDrop(20363,MARAKU_WEREWOLF_HEAD,1)
-
-print "importing quests: 274: Against Wolf Men"

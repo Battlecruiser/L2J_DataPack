@@ -79,5 +79,3 @@ QUEST.addKillId(20015)
 QUEST.addKillId(20020)
 
 STARTED.addQuestDrop(20015,ZOMBIE_SKIN,1)
-
-print "importing quests: 319: Scent Of Death"

@@ -130,5 +130,3 @@ for mob in MOBS.keys() :
 
 for rew in PORC.keys() :
   STARTED.addQuestDrop(PATRIN,rew,1)
-
-print "importing quests: 371: Shriek Of Ghosts"

@@ -316,8 +316,3 @@ STARTED.addQuestDrop(30311,LETTER_OF_WINDAWOOD,1)
 STARTED.addQuestDrop(30655,TEAR_OF_LOYALTY,1)
 STARTED.addQuestDrop(30116,SAINTS_ASHES_URN,1)
 STARTED.addQuestDrop(20200,REPORT_PIECE,1)
-
-print "importing quests: 212: Trial Of Duty"
-
-
-

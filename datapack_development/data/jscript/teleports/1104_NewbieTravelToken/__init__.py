@@ -54,5 +54,3 @@ QUEST.setInitialState(CREATED)
 for i in DATA.keys() :
     QUEST.addStartNpc(i)
     QUEST.addTalkId(i)
-
-print "importing teleport data: 1104_NewbieTravelToken"

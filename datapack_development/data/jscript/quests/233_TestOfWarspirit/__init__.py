@@ -377,5 +377,3 @@ for mobId in PART2_MOBS:
 
 for item in range(2880,2915):
   PART2.addQuestDrop(30510,item,1)
-
-print "importing quests: 233: Test Of Warspirit"

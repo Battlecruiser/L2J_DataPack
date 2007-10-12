@@ -82,5 +82,3 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(LANOSCO)
 QUEST.addTalkId(LANOSCO)
 QUEST.addTalkId(SHALING)
-
-print "importing quests: 27: Chest Caught With A Bait Of Wind"

@@ -130,5 +130,3 @@ STARTED.addQuestDrop(DARIN,DARINGS_LETTER,1)
 STARTED.addQuestDrop(DARIN,RAPUNZELS_KERCHIEF,1) 
 STARTED.addQuestDrop(DARIN,DARINGS_RECEIPT,1) 
 STARTED.addQuestDrop(DARIN,BAULS_POTION,1) 
-
-print "importing quests: 1: Letters Of Love" 

@@ -112,5 +112,3 @@ QUEST.addKillId(ENKU_SHAMAN)
 
 STARTED.addQuestDrop(HARLAN,LEAF,1)
 STARTED.addQuestDrop(HARLAN,STONE,1)
-
-print "importing quests: 379: Fantasy Wine"

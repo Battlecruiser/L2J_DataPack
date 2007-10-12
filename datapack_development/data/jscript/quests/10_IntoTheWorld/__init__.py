@@ -81,5 +81,3 @@ QUEST.addTalkId(30520)
 QUEST.addTalkId(30650)
 
 STARTED.addQuestDrop(30520,VERY_EXPENSIVE_NECKLACE,1)
-
-print "importing quests: 10: Into The World"

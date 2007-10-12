@@ -106,5 +106,3 @@ QUEST.addKillId(20066)
 STARTED.addQuestDrop(20053,RED_CROSS_BADGE,1)
 STARTED.addQuestDrop(20061,BLUE_CROSS_BADGE,1)
 STARTED.addQuestDrop(20066,BLACK_CROSS_BADGE,1)
-
-print "importing quests: 326: Vanquish Remnants"

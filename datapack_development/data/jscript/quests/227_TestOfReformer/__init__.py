@@ -248,5 +248,3 @@ for mobId in [20100,20102,20104,20404,20022,27099,27128,27130,27129,27132,27131]
  QUEST.addKillId(mobId)
 for item in range(2822,2840)+[3037]:
  STARTED.addQuestDrop(20102,item,1)
-
-print "importing quests: 227: Test Of Reformer"

@@ -280,5 +280,3 @@ for mob in DROPLIST.keys():
 
 for item in range(1162,1180)+[MARK_OF_ESQUIRE] :
     STARTED.addQuestDrop(20775,item,1)
-
-print "importing quests: 402: Path To Knight"

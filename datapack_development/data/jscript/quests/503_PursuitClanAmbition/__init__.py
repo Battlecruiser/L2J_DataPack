@@ -556,5 +556,3 @@ QUEST.addAttackId(27181)
 
 for i in range(3839,3848)+range(3866,3870):
     PROGRESS.addQuestDrop(27181,i,1)
-
-print "importing quests: 503: " + qd

@@ -293,5 +293,9 @@ __all__ = [
 ]
 print ""
 print "importing quests ..."
-from data.jscript.quests import *
+for name in __all__ :
+    try :
+        __import__('data.jscript.quests.'+name,globals(), locals(), ['__init__'], -1)
+    except:
+        print "failed to import quest : ",name
 print"... done"

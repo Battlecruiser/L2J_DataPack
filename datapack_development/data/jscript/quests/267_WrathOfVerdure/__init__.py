@@ -76,5 +76,3 @@ QUEST.addTalkId(31853)
 QUEST.addKillId(20325)
 
 STARTED.addQuestDrop(20325,GOBLIN_CLUB,1)
-
-print "importing quests: 267: Wrath Of Verdure"

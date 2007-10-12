@@ -96,5 +96,3 @@ QUEST.addKillId(20370)
 QUEST.addKillId(20480)
 
 STARTED.addQuestDrop(20480,BAT_FANG,1)
-
-print "importing quests: 294: Covert Business"

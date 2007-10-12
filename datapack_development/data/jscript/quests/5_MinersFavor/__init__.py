@@ -143,5 +143,3 @@ STARTED.addQuestDrop(BOLTER,BOOMBOOM_POWDER,1)
 STARTED.addQuestDrop(BOLTER,REDSTONE_BEER,1) 
 STARTED.addQuestDrop(BOLTER,BOLTERS_LIST,1) 
 STARTED.addQuestDrop(BOLTER,BOLTERS_SMELLY_SOCKS,1) 
-
-print "importing quests: 5: Miner's Favor" 

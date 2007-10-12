@@ -101,5 +101,3 @@ QUEST.addKillId(20508)
 
 STARTED.addQuestDrop(20508,TARANTULA_SPIDER_SILK,1)
 STARTED.addQuestDrop(20394,TARANTULA_SPINNERETTE,1)
-
-print "importing quests: 296: Silk Of Tarantula"

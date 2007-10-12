@@ -67,5 +67,3 @@ for mobs in range(21208,21256):
   QUEST.addKillId(mobs)
 
 STARTED.addQuestDrop(7079,DIMENSION_FRAGMENT_ID,1)
-
-print "importing quests: 634: In Search of Dimensional Fragments"

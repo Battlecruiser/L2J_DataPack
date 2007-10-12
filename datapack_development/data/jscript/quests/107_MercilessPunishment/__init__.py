@@ -1,5 +1,4 @@
 # Maked by Mr. Have fun! Version 0.3 updated by Censor for www.l2jdp.com 
-print "importing quests: 107: Merciless Punishment" 
 import sys 
 from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State 
@@ -171,5 +170,3 @@ STARTED.addQuestDrop(27041,LETTER_TO_HUMAN_ID,1)
 STARTED.addQuestDrop(27041,LETTER_TO_ELF_ID,1) 
 STARTED.addQuestDrop(30568,HATOSS_ORDER1_ID,1) 
 STARTED.addQuestDrop(30568,HATOSS_ORDER3_ID,1) 
-
-print "importing quests: 107: Merciless Punishment"

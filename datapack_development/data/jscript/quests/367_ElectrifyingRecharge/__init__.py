@@ -101,5 +101,3 @@ QUEST.addAttackId(CATHEROK)
 
 for item in range(5875,5881):
     STARTED.addQuestDrop(LORAIN,item,1)
-
-print "importing quests: 367: Electrifying Recharge!"

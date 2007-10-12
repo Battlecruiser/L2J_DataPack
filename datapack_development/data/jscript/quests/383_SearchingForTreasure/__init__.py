@@ -98,5 +98,3 @@ QUEST.addStartNpc(ESPEN)
 QUEST.addTalkId(ESPEN)
 
 QUEST.addTalkId(PIRATES_CHEST)
-
-print "importing quests: 383: Searching For Treasure"

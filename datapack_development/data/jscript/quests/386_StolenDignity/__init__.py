@@ -224,5 +224,3 @@ QUEST.addTalkId(WK_ROMP)
 
 for i in MOBS :
   QUEST.addKillId(i)
-
-print "importing quests: "+str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

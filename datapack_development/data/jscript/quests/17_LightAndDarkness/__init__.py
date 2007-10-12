@@ -131,5 +131,3 @@ QUEST.addTalkId(HIERARCH)
 
 for altars in range(31508,31512):
   QUEST.addTalkId(altars)
-
-print "importing quests: 17: Light and Darkness"

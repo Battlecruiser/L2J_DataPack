@@ -125,5 +125,3 @@ for mobs in range(21208,21256):
     QUEST.addKillId(mobs)
 
 STARTED.addQuestDrop(20986,ANCIENT_SCROLL,1)
-
-print "importing quests: 385: Yoke of the Past"

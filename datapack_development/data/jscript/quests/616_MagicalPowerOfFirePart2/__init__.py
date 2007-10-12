@@ -168,5 +168,3 @@ STARTED.addQuestDrop(Nastron,Fire_Heart,1)
 
 for mobId in Varka_Mobs:
     QUEST.addKillId(mobId)
-
-print "importing quests: 616: Magical Power of Fire - Part 2"

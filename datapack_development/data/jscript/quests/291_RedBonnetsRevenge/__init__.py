@@ -88,5 +88,3 @@ QUEST.addTalkId(30553)
 QUEST.addKillId(20317)
 
 STARTED.addQuestDrop(20317,BLACK_WOLF_PELT,1)
-
-print "importing quests: 291: Red Bonnets Revenge"

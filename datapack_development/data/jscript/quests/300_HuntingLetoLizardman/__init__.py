@@ -84,5 +84,3 @@ for mob in range(20577,20581)+[20582] :
     QUEST.addKillId(mob)
 
 STARTED.addQuestDrop(RATH,BRACELET,1)
-
-print "importing quests: 300: Hunting Leto Lizardman"

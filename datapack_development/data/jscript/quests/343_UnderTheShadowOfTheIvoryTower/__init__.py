@@ -212,5 +212,3 @@ for i in range(20563,20567) :
     QUEST.addKillId(i)
 
 STARTED.addQuestDrop(30834,ORB,1)
-
-print "importing quests: 343: Under The Shadow Of The Ivory Tower"

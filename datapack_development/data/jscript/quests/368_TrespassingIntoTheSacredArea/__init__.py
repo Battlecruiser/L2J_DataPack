@@ -75,8 +75,3 @@ STARTED.addQuestDrop(30926,BLADE_STAKATO_FANG,1)
 
 for i in range(20794,20798) :
     QUEST.addKillId(i)
-
-print "importing quests: 368: Trespassing Into The Sacred Area"
-
-
-

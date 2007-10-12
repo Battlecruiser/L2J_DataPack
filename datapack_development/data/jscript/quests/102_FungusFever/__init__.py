@@ -179,5 +179,3 @@ STARTED.addQuestDrop(30156,COBS_MEDICINE3_ID,1)
 STARTED.addQuestDrop(30156,COBS_MEDICINE4_ID,1)
 STARTED.addQuestDrop(30156,COBS_MEDICINE5_ID,1)
 STARTED.addQuestDrop(30284,ALBERRYUS_LIST_ID,1)
-
-print "importing quests: 102: Sea of Spores Fever"

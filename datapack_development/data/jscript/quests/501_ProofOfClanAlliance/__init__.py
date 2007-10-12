@@ -411,5 +411,3 @@ for i in range(len(MOBS)) :
 
 for i in CHESTS :
     QUEST.addKillId(i)
-
-print "importing quests: 501: "+qd

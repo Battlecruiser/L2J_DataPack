@@ -125,5 +125,3 @@ QUEST.addTalkId(SOPHYA)
 
 QUEST.addKillId(MONSTER_EYE_DESTROYER)
 QUEST.addKillId(MONSTER_EYE_GAZER)
-
-print "importing quests: 42: Help The Uncle!"

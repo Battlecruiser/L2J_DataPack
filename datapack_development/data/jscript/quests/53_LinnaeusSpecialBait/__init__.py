@@ -95,5 +95,3 @@ QUEST.addTalkId(LINNAEUS)
 
 QUEST.addKillId(CRIMSON_DRAKE)
 STARTED.addQuestDrop(LINNAEUS,CRIMSON_DRAKE_HEART,1)
-
-print "importing quests: 53: Linnaeus Special Bait"

@@ -92,5 +92,3 @@ QUEST.addTalkId(30587)
 
 for i in range(1541,1547) :
    STARTED.addQuestDrop(30578,i,1)
-
-print "importing quests: 4: Long Live the Paagrio Lord"

@@ -253,5 +253,3 @@ for mobId in [20225,20229,20233,27133]:
 
 for item in range(2864,2867)+range(2868,2879)+[2916]:
   STARTED.addQuestDrop(30531,item,1)
-
-print "importing quests: 231: Test Of Maestro"

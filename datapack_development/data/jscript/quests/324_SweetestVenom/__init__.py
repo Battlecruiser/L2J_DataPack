@@ -79,5 +79,3 @@ QUEST.addKillId(20038)
 QUEST.addKillId(20043)
 
 STARTED.addQuestDrop(20034,VENOM_SAC,1)
-
-print "importing quests: 324: Sweetest Venom"

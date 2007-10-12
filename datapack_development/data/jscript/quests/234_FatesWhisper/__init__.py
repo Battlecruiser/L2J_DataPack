@@ -318,5 +318,3 @@ for mobId in CHEST_SPAWNS.keys() :
   QUEST.addKillId(mobId)
 
 QUEST.addAttackId(29020)
-  
-print "importing quests: 234: Fate's Whisper"

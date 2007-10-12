@@ -69,5 +69,3 @@ for npcId in TELEPORTERS.keys() :
     QUEST.addTalkId(npcId)
 
 QUEST.addTalkId(RACE_MANAGER)
-
-print "importing teleport data: 1101_teleport_to_race_track"

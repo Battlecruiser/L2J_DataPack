@@ -138,5 +138,3 @@ STARTED.addQuestDrop(30912,POWDER_TO_SUMMON_DEAD_SOULS,1)
 
 QUEST.addKillId(20789)
 QUEST.addKillId(20791)
-
-print "importing quests: 345: Method To Raise The Dead"

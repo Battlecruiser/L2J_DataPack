@@ -82,5 +82,3 @@ QUEST.addTalkId(Cadmon)
 
 QUEST.addTalkId(Helmut)
 QUEST.addTalkId(Naran)
-
-print "importing quests: 12 : Secret Meeting With Varka Silenos"

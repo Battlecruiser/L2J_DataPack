@@ -133,5 +133,3 @@ for mob in DROPLIST_FLARE.keys() :
 
 STARTED.addQuestDrop(NELL,FLARE_SHARD,1)
 STARTED.addQuestDrop(NELL,FREEZING_SHARD,1)
-
-print "importing quests: 369: Collector of Jewels"

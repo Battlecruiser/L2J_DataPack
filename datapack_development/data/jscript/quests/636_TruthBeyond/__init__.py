@@ -67,5 +67,3 @@ QUEST.addStartNpc(ELIYAH)
 
 QUEST.addTalkId(ELIYAH)
 QUEST.addTalkId(FLAURON)
-
-print "importing quests: 636: The Truth Beyond the Gate"

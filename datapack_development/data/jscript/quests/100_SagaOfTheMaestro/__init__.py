@@ -36,5 +36,3 @@ class Quest (JQuest) :
 QUEST       = Quest(qnu,qn,qna)
 
 QUEST.setInitialState(QUEST.CREATED)
-
-print "importing quests: "+str(qnu)+": "+qna

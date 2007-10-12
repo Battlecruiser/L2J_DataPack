@@ -78,5 +78,3 @@ QUEST.addTalkId(30576)
 
 QUEST.addKillId(20333)
 STARTED.addQuestDrop(20333,STARSTONE1_ID,1)
-
-print "importing quests: 277: Gatekeepers Offering" 

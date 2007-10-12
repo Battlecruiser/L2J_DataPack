@@ -2,7 +2,6 @@
 # by Fulminus
 # in this version, the quest only works as total solo (no option to work with friends) and
 # only for the purpose of gaining access to Baium's floor (not for making money via rewards).
-print "importing quests:",
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -263,5 +262,3 @@ for i in ARKS.keys() :
 
 for i in DROPS.keys():
   QUEST.addKillId(i)
-
-print str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

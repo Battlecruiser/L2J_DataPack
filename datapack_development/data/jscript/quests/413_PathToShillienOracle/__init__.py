@@ -217,9 +217,3 @@ STARTED.addQuestDrop(20458,ASHEN_BONES,1)
 STARTED.addQuestDrop(30375,PENITENTS_MARK,1)
 STARTED.addQuestDrop(30377,PRAYER_OF_ADON,1)
 STARTED.addQuestDrop(30377,BLANK_SHEET1,1)
-
-print "importing quests: 413: Path To Shillien Oracle"
-
-
-
-

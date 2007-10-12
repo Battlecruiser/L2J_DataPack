@@ -80,5 +80,3 @@ QUEST.addKillId(20400)
 QUEST.addKillId(20007)
 
 STARTED.addQuestDrop(20400,FUNGUS_SAC,1)
-
-print "importing quests: 262: Bring Me Mushrooms1"

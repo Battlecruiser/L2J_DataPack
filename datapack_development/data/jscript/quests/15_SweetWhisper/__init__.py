@@ -75,5 +75,3 @@ QUEST.addTalkId(31302)
 
 QUEST.addTalkId(31517)
 QUEST.addTalkId(31518)
-
-print "importing quests: 15: Sweet Whisper"

@@ -262,5 +262,3 @@ STARTED.addQuestDrop(27118,DEBRIS_OF_WILLOW,1)
 STARTED.addQuestDrop(30651,GREY_BADGE,1)
 STARTED.addQuestDrop(30649,SPIRIT_OF_FLAME,1)
 STARTED.addQuestDrop(30036,STATUE_OF_EINHASAD,1)
-
-print "importing quests: 215: Trial Of Pilgrim"

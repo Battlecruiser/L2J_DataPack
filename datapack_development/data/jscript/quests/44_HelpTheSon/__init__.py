@@ -124,5 +124,3 @@ QUEST.addTalkId(DRIKUS)
 QUEST.addKillId(MAILLE_GUARD)
 QUEST.addKillId(MAILLE_SCOUT)
 QUEST.addKillId(MAILLE_LIZARDMAN)
-
-print "importing quests: 44: Help The Son!"

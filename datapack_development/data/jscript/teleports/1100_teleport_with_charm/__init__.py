@@ -49,5 +49,3 @@ QUEST.setInitialState(CREATED)
 for i in [ WHIRPY, TAMIL ] :
     QUEST.addStartNpc(i)
     QUEST.addTalkId(i)
-
-print "importing teleport data: 1100_teleport_with_charm"

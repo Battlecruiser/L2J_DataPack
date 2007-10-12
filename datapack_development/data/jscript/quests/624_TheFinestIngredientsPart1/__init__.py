@@ -117,5 +117,3 @@ for i in MOBS :
 STARTED.addQuestDrop(JEREMY,TRUNK_OF_NEPENTHES,1)
 STARTED.addQuestDrop(JEREMY,FOOT_OF_BANDERSNATCHLING,1)
 STARTED.addQuestDrop(JEREMY,SECRET_SPICE,1)
-
-print "importing quests: 624: The Finest Ingredients - Part 1"

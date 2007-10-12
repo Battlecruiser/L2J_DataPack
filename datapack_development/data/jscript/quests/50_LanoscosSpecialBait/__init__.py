@@ -84,5 +84,3 @@ QUEST.addTalkId(LANOSCO)
 
 QUEST.addKillId(SINGING_WIND)
 STARTED.addQuestDrop(SINGING_WIND,ESSENCE_OF_WIND,1)
-
-print "importing quests: 50: Lanosco's Special Bait"

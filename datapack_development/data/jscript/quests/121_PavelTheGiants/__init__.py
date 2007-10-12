@@ -59,5 +59,3 @@ QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(NEWYEAR)
 QUEST.addTalkId (NEWYEAR)
 QUEST.addTalkId(YUMI)
-
-print "importing quests: 121: Pavel The Giants"

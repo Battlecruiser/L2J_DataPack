@@ -78,5 +78,3 @@ QUEST.setInitialState(CREATED)
 QUEST.addFirstTalkId(Shikon)
 QUEST.addFirstTalkId(Udan)
 QUEST.addTalkId(Udan)
-
-print "importing quests: 6051: Varka Silenos Support"

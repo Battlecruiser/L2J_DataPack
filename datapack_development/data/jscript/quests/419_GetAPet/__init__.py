@@ -262,5 +262,3 @@ QUEST.addTalkId(PET_MANAGER_MARTIN)
 QUEST.addTalkId(GK_BELLA)
 QUEST.addTalkId(MC_ELLIE)
 QUEST.addTalkId(GD_METTY)
-
-print "importing quests: 419: Get a Pet"

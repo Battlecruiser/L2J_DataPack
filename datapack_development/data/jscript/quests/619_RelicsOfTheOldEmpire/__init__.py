@@ -101,5 +101,3 @@ for mobId in MOBS :
 
 STARTED.addQuestDrop(GHOST,RELICS,1)
 STARTED.addQuestDrop(GHOST,ENTRANCE,1)
-
-print "importing quests: 619: Relics of the Old Empire"

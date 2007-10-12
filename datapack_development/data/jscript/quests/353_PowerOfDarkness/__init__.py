@@ -77,5 +77,3 @@ for mob in [20284,20245,20244,20283] :
     QUEST.addKillId(mob)
 
 STARTED.addQuestDrop(GALMAN,STONE,1)
-
-print "importing quests: 353: Power of Darkness"

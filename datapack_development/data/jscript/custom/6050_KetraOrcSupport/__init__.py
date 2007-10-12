@@ -77,5 +77,3 @@ QUEST.setInitialState(CREATED)
 QUEST.addFirstTalkId(Jumara)
 QUEST.addFirstTalkId(Asefa)
 QUEST.addTalkId(Asefa)
-
-print "importing quests: 6050: Ketra Orc Support"

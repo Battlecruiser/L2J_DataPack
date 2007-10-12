@@ -371,5 +371,3 @@ STARTED        = State('Started', QUEST)
 
 for item in range(3337,3390):
     STARTED.addQuestDrop(30063,item,1)
-
-print "importing quests: 230: Test Of Summoner"

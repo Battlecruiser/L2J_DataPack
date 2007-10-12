@@ -282,5 +282,3 @@ for mobId in [20230,20232,20233,20234,20269,20270,27090,20551,20563,20577,20578,
 
 for item in range(2864,2867)+range(2868,2879)+range(3293,3307)+[3028]:
     STARTED.addQuestDrop(30514,item,1)
-
-print "importing quests: 224: Test Of Sagittarius"

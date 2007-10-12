@@ -133,5 +133,3 @@ for mobId in DROPLIST.keys():
 STARTED.addQuestDrop(30017,GALLINS_OAK_WAND_ID,1) 
 STARTED.addQuestDrop(30017,GALLINS_OAK_WAND_ID,1) 
 STARTED.addQuestDrop(30017,GALLINS_OAK_WAND_ID,1) 
-
-print "importing quests: 104: Spirit Of Mirrors" 

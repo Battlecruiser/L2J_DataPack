@@ -98,5 +98,3 @@ QUEST.addTalkId(Ashas)
 STARTED.addQuestDrop(Hekaton,Hekaton_Head,1)
 
 QUEST.addKillId(Hekaton)
-
-print "importing quests: 613: Prove Your Courage! (Varka)" 

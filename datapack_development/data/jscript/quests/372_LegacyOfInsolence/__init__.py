@@ -5,7 +5,6 @@ from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-print "importing quests:",
 
 qn = "372_LegacyOfInsolence"
 
@@ -180,5 +179,3 @@ for i in NPC.keys() :
 
 for i in MOB.keys() :
   QUEST.addKillId(i)
-
-print str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

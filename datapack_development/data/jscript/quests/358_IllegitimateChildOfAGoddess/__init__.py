@@ -1,6 +1,5 @@
 # Illegitimate Child Of A Goddess version 0.1 
 # by DrLecter
-print "importing quests:",
 import sys
 from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
@@ -115,5 +114,3 @@ QUEST.addTalkId(OLTLIN)
 for i in MOBS :
   QUEST.addKillId(i)
   STARTED.addQuestDrop(i,SN_SCALE,1)
-
-print str(QUEST_NUMBER)+": "+QUEST_DESCRIPTION

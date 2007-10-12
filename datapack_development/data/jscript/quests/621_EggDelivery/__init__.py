@@ -157,5 +157,3 @@ for i in range(31543,31548):
 
 STARTED.addQuestDrop(31521,BOILED_EGGS,1)
 STARTED.addQuestDrop(31521,FEE_OF_EGGS,1)
-
-print "importing quests: 621: Egg Delivery"

@@ -68,5 +68,3 @@ QUEST.addStartNpc(SUKI)
 
 QUEST.addTalkId(SUKI)
 QUEST.addTalkId(GALIBREDO)
-
-print "importing quests: 653: Wild Maiden"

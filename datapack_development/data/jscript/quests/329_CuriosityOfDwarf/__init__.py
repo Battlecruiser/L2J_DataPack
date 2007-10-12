@@ -90,5 +90,3 @@ QUEST.addKillId(20085)
 
 STARTED.addQuestDrop(20085,BROKEN_HEARTSTONE,1)
 STARTED.addQuestDrop(20085,GOLEM_HEARTSTONE,1)
-
-print "importing quests: 329: Curiosity Of Dwarf"

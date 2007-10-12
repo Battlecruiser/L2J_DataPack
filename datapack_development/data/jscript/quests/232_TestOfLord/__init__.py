@@ -387,5 +387,3 @@ for mobId in MOBS:
 
 for item in range(3391,3417):
   STARTED.addQuestDrop(NPC[4],item,1)
-
-print "importing quests: 232: Test Of Lord"

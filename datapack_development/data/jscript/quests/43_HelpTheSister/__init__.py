@@ -122,5 +122,3 @@ QUEST.addTalkId(GALLADUCCI)
 
 QUEST.addKillId(SPECTER)
 QUEST.addKillId(SORROW_MAIDEN)
-
-print "importing quests: 43: Help The Sister!"
