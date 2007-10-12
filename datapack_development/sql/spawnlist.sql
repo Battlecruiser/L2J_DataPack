@@ -39054,6 +39054,7 @@ INSERT INTO `spawnlist` VALUES
 (NULL,'primeval_isle',1,32115,6381,-2595,-2943,0,0,54153,60,0,0),
 (NULL,'primeval_isle',1,32116,12716,-14499,-3178,0,0,55023,60,0,0),
 (NULL,'primeval_isle',1,32117,6263,-2183,-2970,0,0,32416,60,0,0),
+(NULL,'primeval_isle',1,32118,14960,-19836,-3020,0,0,801,60,0,0),
 (NULL,'primeval_isle',1,32122,13122,-8892,-3096,0,0,60107,60,0,0);
 
 INSERT INTO spawnlist VALUES
