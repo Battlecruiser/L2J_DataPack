@@ -18,7 +18,7 @@ PRIMARY KEY  (`id`)
 #----------------------------
 
 insert  into helper_buff_list values 
-(0, 4322, 'WindWalk', 1, 10, 24, 'false'),
+(0, 4322, 'WindWalk', 1, 8, 24, 'false'),
 (1, 4323, 'Shield', 1, 11, 23, 'false'),
 (2, 4338, 'Life Cubic', 1, 16, 19, 'false'), 
 (3, 4324, 'Bless the Body', 1, 12, 22, 'false'),
