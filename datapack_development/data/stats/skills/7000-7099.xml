@@ -887,7 +887,7 @@
       <mul order="0x30" stat="mCritRate" val="2.00"/>
       <mul order="0x30" stat="regMp" val="1.2"/>
       <mul order="0x30" stat="runSpd" val="0.80"/>
-      <add order="0x40" stat="debuffRes" val="10"/>
+      <mul order="0x30" stat="debuffVuln" val="0.9"/>
     </effect>
   </for>
 </skill>
@@ -920,7 +920,7 @@
       <mul order="0x30" stat="runSpd" val="0.90"/>
       <mul order="0x30" stat="maxHp" val="1.20"/>
       <mul order="0x30" stat="regHp" val="1.20"/>
-      <add order="0x40" stat="debuffRes" val="10"/>
+      <mul order="0x30" stat="debuffVuln" val="0.9"/>
     </effect>
   </for>
 </skill>
@@ -960,7 +960,7 @@
          <player behind="True"/>
        </and>
      </mul>
-     <add order="0x40" stat="debuffRes" val="10"/>
+     <mul order="0x30" stat="debuffVuln" val="0.9"/>
   </effect>
 </for>
 </skill>
@@ -997,7 +997,7 @@
       <mul order="0x30" stat="mDef" val="1.20"/>
       <mul order="0x30" stat="runSpd" val="0.8"/>
       <mul order="0x30" stat="maxHp" val="1.20"/>
-      <add order="0x40" stat="debuffRes" val="20"/>
+      <mul order="0x30" stat="debuffVuln" val="0.8"/>
     </effect>
   </for>
 </skill>

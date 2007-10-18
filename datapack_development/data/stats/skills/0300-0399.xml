@@ -249,12 +249,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <add stat="fireRes" val="30" order="0x40"/>
+      <mul stat="fireVuln" val="0.7" order="0x30"/>
     </effect>
   </for>
   <enchant1for>
     <effect name="Buff" time="#ench1time" count="1" val="0">
-      <add stat="fireRes" val="30" order="0x40"/>
+      <mul stat="fireVuln" val="0.7" order="0x30"/>
     </effect>
   </enchant1for>
 </skill>
@@ -299,12 +299,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <add stat="waterRes" val="30" order="0x40"/>
+      <mul stat="waterVuln" val="0.7" order="0x30"/>
     </effect>
   </for>
   <enchant1for>
     <effect name="Buff" time="#ench1time" count="1" val="0">
-      <add stat="waterRes" val="30" order="0x40"/>
+      <mul stat="waterVuln" val="0.7" order="0x30"/>
     </effect>
   </enchant1for>
 </skill>
@@ -348,12 +348,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <add stat="windRes" order="0x40" val="30"/>
+      <mul stat="windVuln" order="0x30" val="0.7"/>
     </effect>
   </for>
   <enchant1for>
     <effect name="Buff" time="#ench1time" count="1" val="0">
-      <add stat="windRes" order="0x40" val="30"/>
+      <mul stat="windVuln" order="0x30" val="0.7"/>
     </effect>
   </enchant1for>
 </skill>
@@ -398,12 +398,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <add stat="earthRes" val="30" order="0x40"/>
+      <mul stat="earthVuln" val="0.7" order="0x30"/>
     </effect>
   </for>
   <enchant1for>
     <effect name="Buff" time="#ench1time" count="1" val="0">
-      <add stat="earthRes" val="30" order="0x40"/>
+      <mul stat="earthVuln" val="0.7" order="0x30"/>
     </effect>
   </enchant1for>
 </skill>
@@ -496,12 +496,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <add stat="earthRes" val="30" order="0x40"/>
+      <mul stat="earthVuln" val="0.7" order="0x30"/>
     </effect>
   </for>
   <enchant1for>
     <effect name="Buff" time="#ench1time" count="1" val="0">
-      <add stat="earthRes" val="30" order="0x40"/>
+      <mul stat="earthVuln" val="0.7" order="0x30"/>
     </effect>
   </enchant1for>
 </skill>
@@ -968,9 +968,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <add stat="rootRes" val="20" order="0x40"/>
-    <add stat="sleepRes" val="20" order="0x40"/>
-    <add stat="derangementRes" val="20" order="0x40"/>
+    <mul stat="rootVuln" val="0.8" order="0x30"/>
+    <mul stat="sleepVuln" val="0.8" order="0x30"/>
+    <mul stat="derangementVuln" val="0.8" order="0x30"/>
   </for>
 </skill>
 <skill id="329" levels="1" name="Health">
@@ -981,8 +981,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <add stat="bleedRes" order="0x40" val="20"/>
-    <add stat="poisonRes" order="0x40" val="20"/>
+    <mul stat="bleedVuln" order="0x30" val="0.8"/>
+    <mul stat="poisonVuln" order="0x30" val="0.8"/>
   </for>
 </skill>
 <skill id="330" levels="1" name="Skill Mastery">
@@ -1045,8 +1045,8 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="35">
-      <add order="0x40" stat="paralyzeRes" val="30"/>
-      <add order="0x40" stat="stunRes" val="30"/>
+      <mul order="0x30" stat="paralyzeVuln" val="0.7"/>
+      <mul order="0x30" stat="stunVuln" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -1152,8 +1152,8 @@
     <effect count="1" name="Buff" time="120" val="0">
       <mul order="0x30" stat="maxHp" val="1.5"/>
       <add order="0x40" stat="regHp" val="50"/>
-      <add order="0x40" stat="cancelRes" val="60"/>
-      <add order="0x40" stat="debuffRes" val="30"/>
+      <mul order="0x30" stat="cancelVuln" val="0.4"/>
+      <mul order="0x30" stat="debuffVuln" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -1176,7 +1176,7 @@
     <effect count="1" name="Buff" time="120" val="0">
       <mul order="0x30" stat="maxCp" val="0.1"/>
       <mul order="0x30" stat="regHp" val="0.7"/>
-      <sub order="0x40" stat="debuffRes" val="30"/>
+      <mul order="0x30" stat="debuffVuln" val="1.3"/>
     </effect>
   </for>
 </skill>
@@ -1777,7 +1777,7 @@
     <effect self="1" count="1" name="ImobileBuff" time="30" val="0" stackOrder="3" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="5400"/>
       <add order="0x40" stat="mDef" val="4050"/>
-      <add order="0x40" stat="cancelRes" val="10"/> <!-- value to be confirmed -->
+      <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
     </effect>
   </for>
 </skill>
@@ -2014,7 +2014,7 @@
 </skill>
 <skill id="384" levels="3" name="Clan Cyclonic Resistance">
   <!-- Increases clan members' resistance to water/wind attacks. It only effects those who are of a Viscount class or higher. -->
-  <table name="#res"> 1.03 1.05 1.06 </table>
+  <table name="#vuln"> 0.97 0.95 0.94 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -2024,13 +2024,13 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="6"/>
   <for>
-    <mul stat="windRes" val="#res" order="0x30"/>
-    <mul stat="waterRes" val="#res" order="0x30"/>
+    <mul stat="windVuln" val="#vuln" order="0x30"/>
+    <mul stat="waterVuln" val="#vuln" order="0x30"/>
   </for>
 </skill>
 <skill id="385" levels="3" name="Clan Magmatic Resistance">
   <!-- Increases clan members' resistance to fire/earth attacks. It only effects those who are of a Viscount class or higher. -->
-  <table name="#res"> 1.03 1.05 1.06 </table>
+  <table name="#vuln"> 0.97 0.95 0.94 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -2040,13 +2040,13 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="6"/>
   <for>
-    <mul stat="fireRes" val="#res" order="0x30"/>
-    <mul stat="earthRes" val="#res" order="0x30"/>
+    <mul stat="fireVuln" val="#vuln" order="0x30"/>
+    <mul stat="earthVuln" val="#vuln" order="0x30"/>
   </for>
 </skill>
 <skill id="386" levels="3" name="Clan Fortitude">
   <!-- Increases the clan members' resistance to shock attacks. Only affects Viscount class and above. -->
-  <table name="#res"> 1.03 1.05 1.06 </table>
+  <table name="#vuln"> 0.97 0.95 0.94 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -2056,12 +2056,12 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="6"/>
   <for>
-    <mul stat="stunRes" val="#res" order="0x30"/>
+    <mul stat="stunVuln" val="#vuln" order="0x30"/>
   </for>
 </skill>
 <skill id="387" levels="3" name="Clan Freedom">
   <!-- Increases the clan members' resistance to hold attacks. Only affects Viscount class and above. -->
-  <table name="#res"> 1.03 1.05 1.06 </table>
+  <table name="#vuln"> 0.97 0.95 0.94 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -2071,12 +2071,12 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="6"/>
   <for>
-    <mul stat="rootRes" val="#res" order="0x30"/>
+    <mul stat="rootVuln" val="#vuln" order="0x30"/>
   </for>
 </skill>
 <skill id="388" levels="3" name="Clan Vigilance">
   <!-- Increases the clan members' resistance to sleep attacks. Only affects Viscount class and above. -->
-  <table name="#res"> 1.03 1.05 1.06 </table>
+  <table name="#vuln"> 0.97 0.95 0.94 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -2086,7 +2086,7 @@
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="6"/>
   <for>
-    <mul stat="sleepRes" val="#res" order="0x30"/>
+    <mul stat="sleepVuln" val="#vuln" order="0x30"/>
   </for>
 </skill>
 <skill id="389" levels="3" name="Clan March">

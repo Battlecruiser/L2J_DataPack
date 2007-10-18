@@ -321,21 +321,21 @@
     <effect count="1" name="ImobileBuff" time="30" val="0" stackOrder="1" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="#pDef"/>
       <add order="0x40" stat="mDef" val="#mDef"/>
-      <add order="0x40" stat="cancelRes" val="10"/> <!-- value to be confirmed -->
+      <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
     </effect>
   </for>
   <enchant1for>
     <effect count="1" name="ImobileBuff" time="#ench1time" val="0" stackOrder="1" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="#ench1pDef"/>
       <add order="0x40" stat="mDef" val="#ench1mDef"/>
-      <add order="0x40" stat="cancelRes" val="10"/> <!-- value to be confirmed -->
+      <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
     </effect>
   </enchant1for>
   <enchant2for>
     <effect count="1" name="ImobileBuff" time="30" val="0" stackOrder="1" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="#ench1pDef"/>
       <add order="0x40" stat="mDef" val="#ench1mDef"/>
-      <add order="0x40" stat="cancelRes" val="10"/> <!-- value to be confirmed -->
+      <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
     </effect>
   </enchant2for>
 </skill>
@@ -378,13 +378,13 @@
   <for>
     <effect count="1" name="Buff" time="30" val="0" stackOrder="#Tab-rEvas" stackType="rEvasSpec">
       <add order="0x40" stat="rEvas" val="#Tab-rEvas"/>
-      <add order="0x40" stat="cancelRes" val="10"/> <!-- value to be confirmed -->
+      <mul order="0x40" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
     </effect>
   </for>
   <enchant1for>
     <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="25" stackType="rEvasSpec">
       <add order="0x40" stat="rEvas" val="25"/>
-      <add order="0x40" stat="cancelRes" val="10"/> <!-- value to be confirmed -->
+      <mul order="0x40" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
     </effect>
   </enchant1for>
 </skill>
@@ -402,7 +402,7 @@
   1640000 1680000 1720000 1760000 1800000 1840000 1880000 1920000 1960000 2000000
   2040000 2080000 2120000 2160000 2200000 2240000 2280000 2320000 2360000 2400000
   </table>
-  <table name="#Tab-bowRes"> 1.16 1.24 1.32 1.40 </table>
+  <table name="#Tab-bowVuln"> 0.84 0.76 0.68 0.60 </table>
   <table name="#mpConsume"> 11 14 19 22 </table>
   <table name="#ench2MpConsume">
   21 21 20 20 19 19 18 18 17 17
@@ -426,12 +426,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-      <mul order="0x30" stat="bowWpnRes" val="#Tab-bowRes"/>
+      <mul order="0x30" stat="bowWpnVuln" val="#Tab-bowVuln"/>
     </effect>
   </for>
   <enchant1for>
     <effect count="1" name="Buff" time="#ench1time" val="0">
-      <mul order="0x30" stat="bowWpnRes" val="1.40"/>
+      <mul order="0x30" stat="bowWpnVuln" val="0.60"/>
     </effect>
   </enchant1for>
 </skill>
@@ -847,9 +847,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <add stat="rootRes" val="20" order="0x40"/>
-    <add stat="sleepRes" val="20" order="0x40"/>
-    <add stat="poisonRes" val="20" order="0x40"/>
+    <mul stat="rootVuln" val="0.8" order="0x30"/>
+    <mul stat="sleepVuln" val="0.8" order="0x30"/>
+    <mul stat="poisonVuln" val="0.8" order="0x30"/>
   </for>
 </skill>
 <skill id="137" levels="3" name="Critical Chance">
@@ -1295,7 +1295,7 @@
   </for>
 </skill>
 <skill id="197" levels="2" name="Holy Armor">
-  <table name="#darkRes"> 7 10 </table>
+  <table name="#darkVuln"> 0.93 0.9 </table>
   <table name="#mpConsume"> 7 9 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -1306,7 +1306,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="0">
-      <add order="0x40" stat="darkRes" val="#darkRes"/>
+      <mul order="0x30" stat="darkVuln" val="#darkVuln"/>
     </effect>
   </for>
 </skill>
