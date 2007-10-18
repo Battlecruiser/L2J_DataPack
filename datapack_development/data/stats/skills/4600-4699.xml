@@ -106,7 +106,7 @@
 <skill id="4605" levels="12" name="Fire Weakness">
   <table name="#mpConsume"> 25 41 57 77 100 123 143 153 161 166 170 172 </table>
   <table name="#power"> 46 106 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
-  <table name="#fireRes"> 20 25 25 30 30 30 30 30 30 30 30 30 </table>
+  <table name="#fireVuln"> 1.2 1.25 1.25 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="hitTime" val="1800"/>
@@ -117,7 +117,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
-    <sub order="0x40" stat="fireRes" val="#fireRes"/>
+    <mul order="0x30" stat="fireVuln" val="#fireVuln"/>
   </for>
 </skill>
 <skill id="4606" levels="12" name="Poison">
@@ -1470,8 +1470,8 @@
   <set name="negateStats" val="DEBUFF"/>
   <set name="negatePower" val="9.0"/>
    <for>
-    <add order="0x40" stat="waterRes" val="30"/>
-    <sub order="0x40" stat="fireRes" val="30"/>
+    <mul order="0x30" stat="waterVuln" val="0.7"/>
+    <mul order="0x30" stat="fireVuln" val="1.3"/>
    </for>
 </skill>
 <skill id="4680" levels="1" name="Valakas Lava Skin">

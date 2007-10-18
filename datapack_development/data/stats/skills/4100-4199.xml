@@ -42,7 +42,7 @@
   </for>
 </skill>
 <skill id="4102" levels="2" name="Become weak against line of fire">
-  <table name="#Tab-fireRes"> 15 20 </table>
+  <table name="#Tab-fireVuln"> 1.15 1.2 </table>
   <table name="#mpConsume"> 35 65 </table>
   <table name="#magicLvl"> 20 70 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -62,7 +62,7 @@
   <set name="effectRange" val="1100"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
-      <sub order="0x40" stat="fireRes" val="#Tab-fireRes"/>
+      <mul order="0x30" stat="fireVuln" val="#Tab-fireVuln"/>
     </effect>
   </for>
 </skill>

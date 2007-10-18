@@ -556,7 +556,8 @@
 </skill>
 <skill id="423" levels="3" name="Infernal Form">
   <table name="#mpConsume"> 27 31 34 </table>
-  <table name="#res"> 15 23 30 </table>
+  <table name="#vuln"> 0.85 0.77 0.7 </table>
+  <table name="#stack"> 15 23 30 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -570,14 +571,14 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="#res" stackType="MagicDefUpAtr">
-      <add order="0x40" stat="fireRes" val="#res"/>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="#stack" stackType="MagicDefUpAtr">
+      <mul order="0x30" stat="fireVuln" val="#vuln"/>
     </effect>
   </for>
 </skill>
 <skill id="424" levels="3" name="War Frenzy">
   <table name="#mpConsume"> 13 14 15 </table>
-  <table name="#res"> 40 60 80 </table>
+  <table name="#vuln"> 0.6 0.4 0.2 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
@@ -586,8 +587,8 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume">
-      <add order="0x40" stat="stunRes" val="#res"/>
-      <add order="0x40" stat="sleepRes" val="#res"/>
+      <add order="0x30" stat="stunVuln" val="#vuln"/>
+      <add order="0x30" stat="sleepVuln" val="#vuln"/>
     </effect>
   </for>
 </skill>
@@ -786,12 +787,12 @@
   <set name="effectRange" val="-1"/>
   <for>
 <!-- need to add resistance increase to elemental attacks
-    <add order="0x40" stat="fireRes" val="?"/>
-    <add order="0x40" stat="windRes" val="?"/>
-    <add order="0x40" stat="waterRes" val="?"/>
-    <add order="0x40" stat="earthRes" val="?"/>
-    <add order="0x40" stat="holyRes" val="?"/>
-    <add order="0x40" stat="darkRes" val="?"/>
+    <mul order="0x30" stat="fireVuln" val="?"/>
+    <mul order="0x30" stat="windVuln" val="?"/>
+    <mul order="0x30" stat="waterVuln" val="?"/>
+    <mul order="0x30" stat="earthVuln" val="?"/>
+    <mul order="0x30" stat="holyVuln" val="?"/>
+    <mul order="0x30" stat="darkVuln" val="?"/>
 -->
     <mul order="0x30" stat="mAtk" val="1.03"/>
   </for>
@@ -811,7 +812,7 @@
   <set name="effectRange" val="-1"/>
   <for>
 <!-- need to add resistance increase to dark attacks
-    <add order="0x40" stat="darkRes" val="?"/>
+    <mul order="0x30" stat="darkVuln" val="?"/>
 -->
     <mul order="0x30" stat="mAtk" val="1.03"/>
   </for>
