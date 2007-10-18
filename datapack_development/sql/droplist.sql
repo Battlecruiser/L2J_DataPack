@@ -25913,53 +25913,53 @@ INSERT INTO `droplist` VALUES
 (21226,8314,1,1,2,116), -- Recipe: Spiritual Eye (60%)
 
 -- Antelope
-(21278,8332,1,1,1,373), -- Infernal Master Blade
+(21278,8331,1,1,1,373), -- Infernal Master Blade
 (21278,7884,1,1,1,2), -- Infernal Master
 
 -- Antelope
-(21279,8332,1,1,1,373), -- Infernal Master Blade
+(21279,8331,1,1,1,373), -- Infernal Master Blade
 (21279,7884,1,1,1,2), -- Infernal Master
 
 -- Antelope
-(21280,8332,1,1,1,373), -- Infernal Master Blade
+(21280,8331,1,1,1,373), -- Infernal Master Blade
 (21280,7884,1,1,1,2), -- Infernal Master
 
 -- Antelope
-(21281,8332,1,1,1,109), -- Infernal Master Blade
+(21281,8331,1,1,1,109), -- Infernal Master Blade
 (21281,7884,1,1,1,1), -- Infernal Master
 
 -- Bandersnatch
-(21282,8332,1,1,1,206), -- Infernal Master Blade
+(21282,8331,1,1,1,206), -- Infernal Master Blade
 (21282,7884,1,1,1,2), -- Infernal Master
-(21283,8332,1,1,1,206), -- Infernal Master Blade
+(21283,8331,1,1,1,206), -- Infernal Master Blade
 (21283,7884,1,1,1,2), -- Infernal Master
-(21284,8332,1,1,1,206), -- Infernal Master Blade
+(21284,8331,1,1,1,206), -- Infernal Master Blade
 (21284,7884,1,1,1,2), -- Infernal Master
-(21285,8332,1,1,1,78), -- Infernal Master Blade
+(21285,8331,1,1,1,78), -- Infernal Master Blade
 (21285,7884,1,1,1,1), -- Infernal Master
 
 -- Grendel
-(21290,8332,1,1,1,274), -- Infernal Master Blade
+(21290,8331,1,1,1,274), -- Infernal Master Blade
 (21290,7884,1,1,1,2), -- Infernal Master
 
 -- Grendel
-(21291,8332,1,1,1,274), -- Infernal Master Blade
+(21291,8331,1,1,1,274), -- Infernal Master Blade
 (21291,7884,1,1,1,2), -- Infernal Master
 
 -- Grendel
-(21292,8332,1,1,1,274), -- Infernal Master Blade
+(21292,8331,1,1,1,274), -- Infernal Master Blade
 (21292,7884,1,1,1,2), -- Infernal Master
 
 -- Grendel
-(21293,8332,1,1,1,143), -- Infernal Master Blade
+(21293,8331,1,1,1,143), -- Infernal Master Blade
 (21293,7884,1,1,1,1), -- Infernal Master
 
 -- Canyon Antelop
-(21294,8332,1,1,1,800), -- Infernal Master Blade
+(21294,8331,1,1,1,800), -- Infernal Master Blade
 (21294,7884,1,1,1,4), -- Infernal Master
 
 -- Canyon Antelop Slave
-(21295,8332,1,1,1,855), -- Infernal Master Blade
+(21295,8331,1,1,1,855), -- Infernal Master Blade
 (21295,7884,1,1,1,5), -- Infernal Master
 
 -- Eye of Guide
@@ -25981,7 +25981,7 @@ INSERT INTO `droplist` VALUES
 (21305,7894,1,1,1,7), -- Spiritual Eye
 
 -- Elder Homunculus
-(21307,8332,1,1,1,1628), -- Infernal Master Blade
+(21307,8331,1,1,1,1628), -- Infernal Master Blade
 (21307,7884,1,1,1,9), -- Infernal Master
 
 -- Disciples of Punishment
@@ -25997,11 +25997,11 @@ INSERT INTO `droplist` VALUES
 (21309,7894,1,1,1,12), -- Spiritual Eye
 
 -- Disciples of Authority
-(21310,8332,1,1,1,3134), -- Infernal Master Blade
+(21310,8331,1,1,1,3134), -- Infernal Master Blade
 (21310,7884,1,1,1,12), -- Infernal Master
 
 -- Ketra Orc Footman
-(21324,8332,1,1,1,794), -- Infernal Master Blade
+(21324,8331,1,1,1,794), -- Infernal Master Blade
 (21324,7884,1,1,1,6), -- Infernal Master
 
 -- Ketra\'s War Hound
@@ -26011,7 +26011,7 @@ INSERT INTO `droplist` VALUES
 (21325,7894,1,1,1,6), -- Spiritual Eye
 
 -- Ketra Orc Raider
-(21327,8332,1,1,1,1666), -- Infernal Master Blade
+(21327,8331,1,1,1,1666), -- Infernal Master Blade
 (21327,7884,1,1,1,6), -- Infernal Master
 
 -- Ketra Orc Scout
@@ -26125,15 +26125,15 @@ INSERT INTO `droplist` VALUES
 (21584,7894,1,1,1,3), -- Spiritual Eye
 
 -- Vampire Wizard
-(21588,8332,1,1,1,593), -- Infernal Master Blade
+(21588,8331,1,1,1,593), -- Infernal Master Blade
 (21588,7884,1,1,1,3), -- Infernal Master
 
 -- Vampire Wizard
-(21589,8332,1,1,1,435), -- Infernal Master Blade
+(21589,8331,1,1,1,435), -- Infernal Master Blade
 (21589,7884,1,1,1,3), -- Infernal Master
 
 -- Requiem Behemoth
-(21600,8332,1,1,1,454), -- Infernal Master Blade
+(21600,8331,1,1,1,454), -- Infernal Master Blade
 (21600,7884,1,1,1,3), -- Infernal Master
 
 -- Requiem Behemoth
