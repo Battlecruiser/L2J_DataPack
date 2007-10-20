@@ -13223,6 +13223,8 @@ INSERT INTO skill_trees VALUES (57,422,3,'Polearm Accuracy',2170000,74);
 INSERT INTO skill_trees VALUES (57,424,1,'War Frenzy',242000,58);
 INSERT INTO skill_trees VALUES (57,424,2,'War Frenzy',640000,66);
 INSERT INTO skill_trees VALUES (57,424,3,'War Frenzy',2170000,74);
+INSERT INTO skill_trees VALUES (88,328,1,'Wisdom',10000000,76);
+INSERT INTO skill_trees VALUES (88,329,1,'Health',10000000,76);
 INSERT INTO skill_trees VALUES (88,340,1,'Riposte Stance',12250000,77);
 INSERT INTO skill_trees VALUES (88,345,1,'Sonic Rage',16000000,78);
 INSERT INTO skill_trees VALUES (88,359,1,'Eye of Hunter',12250000,77);
