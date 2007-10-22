@@ -22,6 +22,8 @@ of this directory a little bit.
 1004.xml -> Blacksmith crafting service
 1005.xml -> Blacksmith Special Abilities bestowing service
 
+1235.xml -> Apella shop
+
 3361.xml -> Quest 336: Coins of Magic, Rewards level 1
 3362.xml -> Quest 336: Coins of Magic, Rewards level 2
 3363.xml -> Quest 336: Coins of Magic, Rewards level 3
