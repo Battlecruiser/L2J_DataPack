@@ -346,7 +346,6 @@ class Quest (JQuest) :
        st.set("Quest0","2")
        npc.reduceCurrentHp(9999999,npc)
        self.DeleteSpawn(st,npc.getObjectId())
-       self.DeleteSpawn(st,st.getInt("Mob_2"))
        return
    elif event == "Mob_2 Timer 1" :
        self.AutoChat(npc,self.Text[7].replace('PLAYERNAME',player.getName()))
