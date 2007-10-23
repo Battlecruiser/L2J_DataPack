@@ -641,7 +641,17 @@ INSERT INTO teleport VALUES
 ('Garden of Eva, 2nd ring - 1 Noble Gate Pass',10024,79248,247390,-8816,1,1),
 ('Garden of Eva, 3rd ring - 1 Noble Gate Pass',10025,77868,250400,-9328,1,1),
 ('Garden of Eva, 4th ring - 1 Noble Gate Pass',10026,78721,253309,-9840,1,1),
-('Garden of Eva, 5th level - 1 Noble Gate Pass',10027,82951,252354,-10592,1,1);
+('Garden of Eva, 5th level - 1 Noble Gate Pass',10027,82951,252354,-10592,1,1),
+('Ketra teleport - Goddard Castle Town',10028,147978,-55408,-2728,4900,0),
+('Ketra teleport - Rune Castle Town',10029,43849,-47877,-792,22000,0),
+('Ketra teleport - Aden Castle Town',10030,146705,25840,-2000,21000,0),
+('Ketra teleport - Wall of Argos',10031,164564,-48145,-3536,7000,0),
+('Ketra teleport - Hot Springs',10032,144880,-113468,-2560,6700,0),
+('Varka teleport - Goddard Castle Town',10033,147978,-55408,-2728,8000,0),
+('Varka teleport - Rune Castle Town',10034,43849,-47877,-792,12000,0),
+('Varka teleport - Aden Castle Town',10035,146705,25840,-2000,17000,0),
+('Varka teleport - Wall of Argos',10036,164564,-48145,-3536,11000,0),
+('Varka teleport - Hot Springs',10037,144880,-113468,-2560,14000,0);
 
 INSERT INTO teleport VALUES
 ('Clan Hall -> Center Town of Aden',12000,147450,28081,-2294,0,0),
