@@ -13340,7 +13340,7 @@ INSERT INTO skill_trees VALUES (106,351,1,'Magical Mirror',21340000,78);
 INSERT INTO skill_trees VALUES (106,352,1,'Shield Bash',13000000,77);
 INSERT INTO skill_trees VALUES (106,368,1,'Vengeance',13000000,77);
 INSERT INTO skill_trees VALUES (107,328,1,'Wisdom',12500000,76);
-INSERT INTO skill_trees VALUES (107,329,1,'Health',125000000,76);
+INSERT INTO skill_trees VALUES (107,329,1,'Health',12500000,76);
 INSERT INTO skill_trees VALUES (107,365,1,'Dance of Siren',32000000,78);
 INSERT INTO skill_trees VALUES (107,366,1,'Dance of Shadow',14670000,77);
 INSERT INTO skill_trees VALUES (107,367,1,'Dance of Medusa',14670000,77);
