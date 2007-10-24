@@ -5,6 +5,8 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver.datatables import SkillTable
+from net.sf.l2j.gameserver.serverpackets import WareHouseWithdrawalList
+from net.sf.l2j.gameserver.serverpackets import ActionFailed
 
 qn = "6050_KetraOrcSupport"
 
@@ -50,7 +52,9 @@ class Quest (JQuest) :
         if player.getWarehouse().getSize() == 0 :
             htmltext = "31374-0.htm"
         else :
-            npc.showRetrieveWindow(player)
+            player.sendPacket(ActionFailed())
+            player.setActiveWarehouse(player.getWarehouse())
+            player.sendPacket(WareHouseWithdrawalList(player, 1))
     elif event == "Teleport" :
         if Alevel == 4 :
             htmltext = "31376-4.htm"
