@@ -57,31 +57,25 @@
   </for>
 </skill>
 <skill id="5104" levels="3" name="Battle Force">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-3 - Status that delivers energy to a party member. Raises P. Atk.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="1000"/> <!-- Must be validated -->
   <for>
+    <effect count="0x7fffffff" name="BattleForce" time="3" val="15" stackOrder="0" stackType="BattleForce">
+       <mul order="0x30" stat="pAtk" val="1.10"/> <!-- Guessed -->
+    </effect>
   </for>
 </skill>
 <skill id="5105" levels="3" name="Spell Force">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-3 - Status that delivers magic power to a party member. Raises M. Atk.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="1000"/> <!-- Must be validated -->
   <for>
+    <effect count="0x7fffffff" name="SpellForce" time="3" val="15" stackOrder="0" stackType="SpellForce">
+      <mul order="0x30" stat="mAtk" val="1.10"/><!-- Guessed -->
+    </effect>
   </for>
 </skill>
 <skill id="5106" levels="4" name="Capture A State">

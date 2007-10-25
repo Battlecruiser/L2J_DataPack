@@ -625,33 +625,35 @@
   </for>
 </skill>
 <skill id="426" levels="1" name="Battle Force">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Transfers your strength to a party member. The effect can be cancelled if you incur damage.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpInitialConsume" val="12"/>
+  <set name="magicLvl" val="77"/>
+  <set name="mpConsume" val="46"/>
+  <set name="forceId" val="5104"/>
+  <set name="target" val="TARGET_PARTY_OTHER"/>
+  <set name="skillTime" val="17000"/>
+  <set name="skillType" val="FORCE_BUFF"/>
+  <set name="hitTime" val="17000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="1400"/>
+  <set name="reuseDelay" val="30000"/>
   <for>
-<!-- needs core support -->
   </for>
 </skill>
 <skill id="427" levels="1" name="Spell Force">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Transfers your magical powers to a party member. The effect can be cancelled if you incur damage.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpInitialConsume" val="12"/>
+  <set name="magicLvl" val="77"/>
+  <set name="mpConsume" val="46"/>
+  <set name="forceId" val="5105"/>
+  <set name="target" val="TARGET_PARTY_OTHER"/>
+  <set name="skillTime" val="17000"/>
+  <set name="skillType" val="FORCE_BUFF"/>
+  <set name="hitTime" val="17000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="1400"/>
+  <set name="reuseDelay" val="30000"/>
   <for>
-<!-- needs core support -->
   </for>
 </skill>
 <skill id="428" levels="1" name="Inner Rhythm">
