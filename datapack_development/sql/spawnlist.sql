@@ -35957,13 +35957,12 @@ INSERT INTO spawnlist VALUES
 (NULL,'talking_island_broadcast',1,31031,145319,-56567,-2976,0,0,16384,5,0,0),
 (NULL,'talking_island_broadcast',1,31031,43259,-50167,-792,0,0,16384,5,0,0),
 (NULL,'monster_race_broadcast',1,31031,13168,182594,-3500,0,0,16384,5,0,0),
-(NULL,'coliseum_broadcast',1,31031,13582,181667,-3500,0,0,16384,5,0,0),
+(NULL,'monster_race_broadcast',1,31031,13582,181667,-3500,0,0,16384,5,0,0),
 (NULL,'coliseum_broadcast',1,31031,147446,47033,-3350,0,0,16384,5,0,0),
 (NULL,'coliseum_broadcast',1,31031,151539,46381,-3350,0,0,16384,5,0,0),
 (NULL,'schuttgart_broadcast',1,31031,88034,-140676,-1542,0,0,16384,5,0,0),
 -- Goddard?
 -- Rune?
-(NULL,'monster_race_broadcast',1,31031,13648,181662,-3563,0,0,49406,5,0,0),
 
 -- these are meant to observe different group of areas compared to those above
 (NULL,'blood_of_sacrifice_broadcast',1,31031,-79884,86529,-5182,0,0,16384,5,0,0),
