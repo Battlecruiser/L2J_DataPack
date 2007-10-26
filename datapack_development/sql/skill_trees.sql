@@ -13897,37 +13897,37 @@ INSERT INTO skill_trees VALUES (115,1416,1,'Pa\'agrio\'s Fist',80000000,79); -- 
 -- INSERT INTO skill_trees VALUES (43,1430,4,'Invocation',550000,68); -- Shillien Elder --
 -- INSERT INTO skill_trees VALUES (43,1430,5,'Invocation',1070000,72); -- Shillien Elder --
 
--- Battle Force 5104
-INSERT INTO skill_trees VALUES (89,5104,1,'Battle Force',12250000,77); -- Dreadnought --
-INSERT INTO skill_trees VALUES (88,5104,1,'Battle Force',12250000,77); -- Duelist --
-INSERT INTO skill_trees VALUES (90,5104,1,'Battle Force',13000000,77); -- Phoenix Knight --
-INSERT INTO skill_trees VALUES (91,5104,1,'Battle Force',13000000,77); -- Hell Knight  --
-INSERT INTO skill_trees VALUES (93,5104,1,'Battle Force',14670000,77); -- Adventurer --
-INSERT INTO skill_trees VALUES (92,5104,1,'Battle Force',14670000,77); -- Sagittarius --
-INSERT INTO skill_trees VALUES (99,5104,1,'Battle Force',13000000,77); -- Evas Templar --
-INSERT INTO skill_trees VALUES (100,5104,1,'Battle Force',14670000,77); -- Sword Muse --
-INSERT INTO skill_trees VALUES (101,5104,1,'Battle Force',14670000,77); -- Wind Rider --
-INSERT INTO skill_trees VALUES (102,5104,1,'Battle Force',14670000,77); -- Moonlight Sentinel --
-INSERT INTO skill_trees VALUES (106,5104,1,'Battle Force',13000000,77); -- Shillien Templar --
-INSERT INTO skill_trees VALUES (107,5104,1,'Battle Force',14670000,77); -- Spectral Dancer --
-INSERT INTO skill_trees VALUES (108,5104,1,'Battle Force',14670000,77); -- Ghost Hunter --
-INSERT INTO skill_trees VALUES (109,5104,1,'Battle Force',14670000,77); -- Ghost Sentinel --
-INSERT INTO skill_trees VALUES (113,5104,1,'Battle Force',13000000,77); -- Titan --
-INSERT INTO skill_trees VALUES (114,5104,1,'Battle Force',13000000,77); -- Grand Khavatari --
-INSERT INTO skill_trees VALUES (117,5104,1,'Battle Force',11000000,77); -- Fortune Seeker --
-INSERT INTO skill_trees VALUES (118,5104,1,'Battle Force',12250000,77); -- Maestro --
+-- Battle Force 426
+INSERT INTO skill_trees VALUES (89,426,1,'Battle Force',12250000,77); -- Dreadnought --
+INSERT INTO skill_trees VALUES (88,426,1,'Battle Force',12250000,77); -- Duelist --
+INSERT INTO skill_trees VALUES (90,426,1,'Battle Force',13000000,77); -- Phoenix Knight --
+INSERT INTO skill_trees VALUES (91,426,1,'Battle Force',13000000,77); -- Hell Knight  --
+INSERT INTO skill_trees VALUES (93,426,1,'Battle Force',14670000,77); -- Adventurer --
+INSERT INTO skill_trees VALUES (92,426,1,'Battle Force',14670000,77); -- Sagittarius --
+INSERT INTO skill_trees VALUES (99,426,1,'Battle Force',13000000,77); -- Evas Templar --
+INSERT INTO skill_trees VALUES (100,426,1,'Battle Force',14670000,77); -- Sword Muse --
+INSERT INTO skill_trees VALUES (101,426,1,'Battle Force',14670000,77); -- Wind Rider --
+INSERT INTO skill_trees VALUES (102,426,1,'Battle Force',14670000,77); -- Moonlight Sentinel --
+INSERT INTO skill_trees VALUES (106,426,1,'Battle Force',13000000,77); -- Shillien Templar --
+INSERT INTO skill_trees VALUES (107,426,1,'Battle Force',14670000,77); -- Spectral Dancer --
+INSERT INTO skill_trees VALUES (108,426,1,'Battle Force',14670000,77); -- Ghost Hunter --
+INSERT INTO skill_trees VALUES (109,426,1,'Battle Force',14670000,77); -- Ghost Sentinel --
+INSERT INTO skill_trees VALUES (113,426,1,'Battle Force',13000000,77); -- Titan --
+INSERT INTO skill_trees VALUES (114,426,1,'Battle Force',13000000,77); -- Grand Khavatari --
+INSERT INTO skill_trees VALUES (117,426,1,'Battle Force',11000000,77); -- Fortune Seeker --
+INSERT INTO skill_trees VALUES (118,426,1,'Battle Force',12250000,77); -- Maestro --
 
 -- Spell Force 5105
-INSERT INTO skill_trees VALUES (94,5105,1,'Spell Force',18000000,77); -- Archmage --
-INSERT INTO skill_trees VALUES (95,5105,1,'Spell Force',11000000,77); -- Soultaker --
-INSERT INTO skill_trees VALUES (96,5105,1,'Spell Force',12250000,77); -- Arcana Lord --
-INSERT INTO skill_trees VALUES (97,5105,1,'Spell Force',11000000,77); -- Cardinal --
-INSERT INTO skill_trees VALUES (98,5105,1,'Spell Force',11000000,77); -- Hierophant --
-INSERT INTO skill_trees VALUES (103,5105,1,'Spell Force',14670000,77); -- Mystic Muse --
-INSERT INTO skill_trees VALUES (104,5105,1,'Spell Force',14670000,77); -- Elemental Master --
-INSERT INTO skill_trees VALUES (105,5105,1,'Spell Force',11000000,77); -- Evas Saint --
-INSERT INTO skill_trees VALUES (110,5105,1,'Spell Force',13000000,77); -- Storm Screamer --
-INSERT INTO skill_trees VALUES (111,5105,1,'Spell Force',12250000,77); -- Spectral Master --
-INSERT INTO skill_trees VALUES (112,5105,1,'Spell Force',13000000,77); -- Shillien Saint --
-INSERT INTO skill_trees VALUES (115,5105,1,'Spell Force',11000000,77); -- Dominator --
-INSERT INTO skill_trees VALUES (116,5105,1,'Spell Force',14670000,77); -- Doomcryer --
+INSERT INTO skill_trees VALUES (94,427,1,'Spell Force',18000000,77); -- Archmage --
+INSERT INTO skill_trees VALUES (95,427,1,'Spell Force',11000000,77); -- Soultaker --
+INSERT INTO skill_trees VALUES (96,427,1,'Spell Force',12250000,77); -- Arcana Lord --
+INSERT INTO skill_trees VALUES (97,427,1,'Spell Force',11000000,77); -- Cardinal --
+INSERT INTO skill_trees VALUES (98,427,1,'Spell Force',11000000,77); -- Hierophant --
+INSERT INTO skill_trees VALUES (103,427,1,'Spell Force',14670000,77); -- Mystic Muse --
+INSERT INTO skill_trees VALUES (104,427,1,'Spell Force',14670000,77); -- Elemental Master --
+INSERT INTO skill_trees VALUES (105,427,1,'Spell Force',11000000,77); -- Evas Saint --
+INSERT INTO skill_trees VALUES (110,427,1,'Spell Force',13000000,77); -- Storm Screamer --
+INSERT INTO skill_trees VALUES (111,427,1,'Spell Force',12250000,77); -- Spectral Master --
+INSERT INTO skill_trees VALUES (112,427,1,'Spell Force',13000000,77); -- Shillien Saint --
+INSERT INTO skill_trees VALUES (115,427,1,'Spell Force',11000000,77); -- Dominator --
+INSERT INTO skill_trees VALUES (116,427,1,'Spell Force',14670000,77); -- Doomcryer --
