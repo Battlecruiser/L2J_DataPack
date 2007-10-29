@@ -92,7 +92,7 @@ class Quest (JQuest) :
        else :
            htmltext = "31558-04.htm"
    elif event == "Soul of Fire Nastron has despawned" :
-       npc.reduceCurrentHp(9999999,npc1)
+       npc.reduceCurrentHp(9999999,npc)
        st.unset("id")
        st.unset("cond")
        FindTemplate(Alter).setBusy(False)
