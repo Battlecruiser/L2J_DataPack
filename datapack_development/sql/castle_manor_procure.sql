@@ -1,8 +1,7 @@
 -- ---------------------------
 -- Table structure for `castle_manor_procure`
 -- ---------------------------
-DROP TABLE IF EXISTS `castle_manor_procure`;
-CREATE TABLE `castle_manor_procure` (
+CREATE TABLE IF NOT EXISTS `castle_manor_procure` (
   `castle_id` INT NOT NULL DEFAULT '0',
   `crop_id` int(11) NOT NULL DEFAULT '0',
   `can_buy` int(11) NOT NULL DEFAULT '0',
