@@ -121,7 +121,7 @@ class Quest (JQuest) :
         elif Alevel == -5 :
             htmltext = "31382-3.htm"
         else :
-            htmltext = "no.htm"
+            htmltext = "31382-no.htm"
     elif npcId == Teranu :
         if Alevel >= 0 :
             htmltext = "31383-no.htm"
