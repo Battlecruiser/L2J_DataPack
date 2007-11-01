@@ -21453,6 +21453,102 @@ INSERT INTO `droplist` VALUES
 (22052,1912,1,1,-1,8521),   -- Ring of Protection Gemstone 
 (22052,2166,1,1,-1,13584),   -- Recipe: Earrings of Binding (100%) 
 (22052,2167,1,1,-1,15241),   -- Recipe: Ring of Ages
+(22053,57,580,1179,0,700000),   -- Adena 
+(22053,1871,1,1,1,6250),   -- Charcoal 
+(22053,1866,1,1,1,40000),   -- Suede 
+(22053,1972,1,1,2,7812),   -- Knight's Shield Fragment 
+(22053,2947,1,1,2,7092),   -- Dwarven Chain Shield Fragment 
+(22053,1971,1,1,2,5952),   -- Great Helmet Material 
+(22053,1885,1,2,1,5263),   -- High Grade Suede 
+(22053,5220,1,1,1,2369),   -- Metal Hardener 
+(22053,2166,1,1,1,2016),   -- Recipe: Earrings of Binding (100%) 
+(22053,8724,1,1,2,924),      -- Life Stone: level 49 
+(22053,4041,1,1,1,645),      -- Mold Hardener 
+(22053,8734,1,1,2,356),      -- Mid-Grade Life Stone: level 49 
+(22053,632,1,1,2,211),      -- Knight's Shield 
+(22053,2496,1,1,2,133),      -- Dwarven Chain Shield 
+(22053,500,1,1,2,66),      -- Great Helmet 
+(22053,8744,1,1,2,11),      -- High-Grade Life Stone: level 49 
+(22053,1866,1,3,-1,16725),   -- suede 
+(22053,1913,1,2,-1,8125),   -- Necklace of Protection Gemstone 
+(22053,952,1,1,-1,5235),   -- Scroll: Enchant Armor (Grade C) 
+(22053,1870,1,6,-1,13522),   -- Coal 
+(22054,57,598,1216,0,700000),   -- Adena 
+(22054,1864,1,50,1,125000),   -- Stem 
+(22054,1869,1,51,1,66667),   -- Iron Ore 
+(22054,1884,1,1,1,37037),   -- Cord 
+(22054,1878,1,1,1,28571),   -- Braided Hemp 
+(22054,2949,1,1,2,4651),   -- Dwarven Chain Gloves Design 
+(22054,2167,1,1,2,4566),   -- Recipe: Ring of Ages 
+(22054,2948,1,1,2,4464),   -- Rind Leather Boot Lining 
+(22054,2951,1,1,2,4273),   -- Rind Leather Gloves Design 
+(22054,1974,1,1,2,4081),   -- Crimson Boot Fabric 
+(22054,2950,1,1,2,3496),   -- Gloves of Seal Pattern 
+(22054,2946,1,1,2,3012),   -- Plate Leather Gloves Design 
+(22054,4039,1,1,1,2816),   -- Mold Glue 
+(22054,8734,1,1,2,291),      -- Mid-Grade Life Stone: level 49 
+(22054,8724,1,1,2,291),      -- Life Stone: level 49 
+(22054,2434,1,1,2,194),      -- Rind Leather Boots 
+(22054,1126,1,1,2,97),      -- Crimson Boots 
+(22054,2458,1,1,2,90),      -- Rind Leather Gloves 
+(22054,2457,1,1,2,84),      -- Gloves of Seal 
+(22054,2456,1,1,2,81),      -- Dwarven Chain Gloves 
+(22054,1884,1,1,-1,370370),   -- Cord 
+(22054,4590,1,1,-1,17325),   -- Greater Dye of STR <Str+2 Dex-2> 
+(22054,1966,1,1,-1,35012),   -- Plated Leather Fragment 
+(22055,57,642,1309,0,700000),   -- Adena 
+(22055,1870,1,1,1,62500),   -- Coal 
+(22055,1865,1,1,1,58823),   -- Varnish 
+(22055,1539,1,1,2,13157),   -- Greater Healing Potion 
+(22055,1879,1,1,1,10526),   -- Cokes 
+(22055,1972,1,1,2,8695),   -- Knight's Shield Fragment 
+(22055,2947,1,1,2,7936),   -- Dwarven Chain Shield Fragment 
+(22055,1971,1,1,2,6802),   -- Great Helmet Material 
+(22055,1875,1,1,1,4149),   -- Stone of Purity 
+(22055,4040,1,1,1,1257),   -- Mold Lubricant 
+(22055,8724,1,1,2,1021),   -- Life Stone: level 49 
+(22055,8734,1,1,2,497),      -- Mid-Grade Life Stone: level 49 
+(22055,632,1,1,2,139),      -- Knight's Shield 
+(22055,8318,1,1,2,139),      -- Recipe: Dwarven Hammer (100%) 
+(22055,2496,1,1,2,113),      -- Dwarven Chain Shield 
+(22055,500,1,1,2,52),      -- Great Helmet 
+(22055,2168,1,1,-1,26541),   -- Recipe: Necklace of Mermaid 
+(22055,1967,1,1,-1,25123),   -- Plated Leather Gaiters Material 
+(22055,2222,1,1,-1,13211),   -- Recipe: Composite Armor 
+(22056,57,577,1177,0,700000),   -- Adena 
+(22056,1873,1,50,1,27027),   -- Silver Nugget 
+(22056,1895,1,15,1,19607),   -- Metalic Fibber 
+(22056,1876,1,50,1,13698),   -- Mithril Ore 
+(22056,1969,1,1,2,5813),   -- Dwarven Chain Gaiters Material 
+(22056,1968,1,1,2,3717),   -- Dwarven Chain Mail Shirt Material 
+(22056,4042,1,1,1,1261),   -- Enria 
+(22056,8724,1,1,2,1142),   -- Life Stone: level 49 
+(22056,2222,1,1,2,440),      -- Recipe: Composite Armor 
+(22056,8734,1,1,2,368),      -- Mid-Grade Life Stone: level 49 
+(22056,382,1,1,2,97),      -- Dwarven Chain Gaiters 
+(22056,355,1,1,2,46),      -- Dwarven Chain mail Shirt 
+(22056,8744,1,1,2,5),      -- High-Grade Life Stone: level 49 
+(22056,1876,1,2,-1,216210),   -- Mithril Ore 
+(22056,1968,1,1,-1,83717),   -- Dwarven Chain Mail Shirt Material 
+(22056,951,1,1,-1,5195),   -- Scroll: Enchant Weapon (Grade C) 
+(22057,57,457,930,0,700000),   -- Adena 
+(22057,1872,1,1,1,62500),   -- Animal Bone 
+(22057,1867,1,1,1,58823),   -- Animal Skin 
+(22057,1881,1,1,1,6802),   -- Coarse Bone Powder 
+(22057,1915,1,1,2,6211),   -- Ring of Ages Gemstone 
+(22057,1914,1,1,2,4201),   -- Earring of Binding Gemstone 
+(22057,1916,1,1,2,3717),   -- Necklace of Mermaid Teardrop 
+(22057,1875,1,1,1,2985),   -- Stone of Purity 
+(22057,2169,1,1,2,662),      -- Recipe: Necklace of Binding 
+(22057,4041,1,1,1,431),    -- Mold Hardener 
+(22057,8725,1,1,2,323),      -- Life Stone: level 52 
+(22057,885,1,1,2,77),      -- Ring of Ages 
+(22057,8735,1,1,2,77),      -- Mid-Grade Life Stone: level 52 
+(22057,917,1,1,2,46),      -- Necklace of Mermaid 
+(22057,854,1,1,2,31),      -- Earring of Binding 
+(22057,1539,1,3,-1,131157),   -- Greater Healing Potion 
+(22057,1875,1,1,-1,91969),   -- Stone of Purity 
+(22057,4601,1,1,-1,25142),   -- Greater Dye of STR <Str+3 Con-3>
 (22079,57,466,1581,0,700000), -- Adena
 (22079,1871,1,1,2,111111), -- Charcoal
 (22079,1866,1,1,2,76923), -- Suede
@@ -26599,8 +26695,6 @@ INSERT INTO `droplist` VALUES
 (20593,8744,1,1,200,88), -- Unicorn
 (20591,8744,1,1,200,53), -- Valley Treant
 (20683,8744,1,1,200,33), -- Vanor Silenos Scout
-(22053,8744,1,1,200,20), -- Horrifying Cannon Golem I
-(22056,8744,1,1,200,8), -- Probe Golem Champion I
 --  High-Grade Life Stone: level 52
 (29006,8745,2,4,200,750000), -- Core
 (20996,8745,1,1,200,94), -- Spiteful Ghost of Ruins
