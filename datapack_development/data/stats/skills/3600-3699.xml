@@ -110,9 +110,10 @@ Description(s):
     <mul val='0.5' order='0x30' stat='bleedVuln'/>
     <mul val='0.7' order='0x30' stat='paralyzeVuln'/>
     <mul val='0.7' order='0x30' stat='stunVuln'/>
-    <mul val='0.8' order='0x30' stat='darkVuln'/>
-    <add val='15' order='0x40' stat='reflectDam'/>
-    <mul val='0.75' order='0x30' stat='atkReuse'/>
+    <mul val='0.85' order='0x30' stat='darkVuln'/>
+    <add val='5' order='0x40' stat='reflectDam'/>
+    <mul val='0.90' order='0x30' stat='mReuse'/>
+    <mul val='0.90' order='0x30' stat='atkReuse'/>
   </for>
 </skill>
 <skill id="3605" levels="1" name="Clan Oath Heavy Armor Set">
