@@ -619,16 +619,34 @@
   <set name="create_item_id" val="5592"/>
   <set name="create_item_count" val="20"/>
 </skill>
-<skill id="1325" levels="1" name="Fortune of Noblesse">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="aggroPoints" val="659"/>
-  <for>
-  </for>
-</skill>
+<skill id="1325" levels="1" name="Fortune of Noblesse"> 
+<!-- 
+  Description(s): 
+     Confers the ability of the Lucky Charm to all party members regardless of level. 
+     Preventing reduced combat capability if killed by a Boss or a Raid Monster. 
+     Consumes 4 Lucky Charm: A Grade 
+--> 
+  <set name="itemConsumeId" val="5806"/> 
+  <set name="itemConsumeCount" val="4"/> 
+  <set name="mpInitialConsume" val="75"/> 
+  <set name="mpConsume" val="200"/> 
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_PARTY"/> 
+  <set name="skillRadius" val="1000"/> 
+  <set name="reuseDelay" val="8000"/> 
+  <set name="skillTime" val="6000"/> 
+  <set name="hitTime" val="6000"/> 
+  <set name="skillType" val="BUFF"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="buffDuration" val="3600000"/> 
+  <set name="castRange" val="-1"/> 
+  <set name="effectRange" val="-1"/> 
+  <set name="aggroPoints" val="659"/> 
+  <for> 
+    <effect name="CharmOfLuck" time="3600" count="1" val="0" stackOrder="1" stackType="LuckyCharm"/> 
+  </for> 
+</skill> 
 <skill id="1326" levels="1" name="Harmony of Noblesse">
   <set name="mpInitialConsume" val="10"/>
   <set name="mpConsume" val="40"/>
