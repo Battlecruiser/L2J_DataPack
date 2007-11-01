@@ -631,3 +631,4 @@ INSERT INTO merchant_shopids VALUES (335584, '35584');
 INSERT INTO merchant_shopids VALUES (335586, '35586');
 INSERT INTO merchant_shopids VALUES (135586, '35586');
 INSERT INTO merchant_shopids VALUES (235586, '35586');
+INSERT INTO merchant_shopids VALUES (355111, '35511');
