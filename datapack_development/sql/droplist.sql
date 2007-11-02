@@ -9550,17 +9550,17 @@ INSERT INTO `droplist` VALUES
 (20973,7657,1,1,2,3758), -- Spellbook - Wizard Servitor
 (20973,7658,1,1,2,3758), -- Spellbook - Assassin Servitor
 (20973,7659,1,1,2,3758), -- Spellbook - Final Servitor
-(20974,4052,1,1,-1,140541), -- Earring of Black Ore Piece
-(20974,5230,1,1,-1,5293), -- Recipe: Mithril Arrow (100%)
-(20974,57,1605,3253,0,700000), -- Adena
-(20974,268,1,1,1,9), -- Bellion Cestus
-(20974,4120,1,1,1,2563), -- Bellion Cestus Edge
-(20974,1866,1,1,2,111672), -- Suede
-(20974,1871,1,1,2,167508), -- Charcoal
-(20974,1885,1,1,2,13960), -- High Grade Suede
-(20974,4041,1,1,2,1457), -- Mold Hardener
-(20974,4912,1,1,2,4086), -- Spellbook: Benediction
-(20974,5220,1,1,2,6701), -- Metal Hardener
+(20974,4052,1,1,-1,142857), -- Earring of Black Ore Piece
+(20974,5230,1,1,-1,5291), -- Recipe: Mithril Arrow (100%)
+(20974,57,1605,3252,0,700000), -- Adena
+(20974,1871,1,1,2,100000), -- Charcoal
+(20974,1866,1,1,2,58824), -- Suede
+(20974,1885,1,1,2,5682), -- High Grade Suede
+(20974,5220,1,1,2,3311), -- Metal Hardener
+(20974,4912,1,1,2,2571), -- Spellbook: Benediction
+(20974,4120,1,1,1,2386), -- Bellion Cestus Edge
+(20974,8909,1,1,1,2386), -- Blueprint: Summon Swoop Cannon
+(20974,4041,1,1,2,551), -- Mold Hardener
 (20974,5276,1,1,2,224), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
 (20975,4053,1,1,-1,150882), -- Ring of Black Ore Gemstone
 (20975,4078,1,1,-1,51418), -- Blue Wolf Breastplate Part
