@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `clanhall` (
   `Grade` decimal(1,0) NOT NULL default '0',
   `paid` int( 1 ) NOT NULL default '0',
   KEY `id` (`id`)
-,'0');
+);
 
 -- ----------------------------
 -- Records 
