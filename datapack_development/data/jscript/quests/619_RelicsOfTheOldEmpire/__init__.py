@@ -21,6 +21,10 @@ MOBS = [ 21396,21397,21398,21399,21400,21401,21402,21403,21404,21405,21406,21407
 18244,18245,18246,18247,18248,18249,18250,18251,18252,18253,18254,18255,18256,13008,13009,13010,13011,13012,13013,13016,13017]
 
 REWARDS = [ 6881,6883,6885,6887,6891,6893,6895,6897,6899,7580 ]
+REWARDS2= [ 6882,6884,6886,6888,6892,6894,6896,6898,6900,7581 ]
+
+#Change this value to 1 if you wish 100% recipes, default 60%
+ALT_RP100=0
 
 class Quest (JQuest) :
 
@@ -41,7 +45,10 @@ class Quest (JQuest) :
        if relics >= 1000 :
           htmltext = "31538-07.htm"
           st.takeItems(RELICS,1000)
-          st.giveItems(REWARDS[st.getRandom(len(REWARDS))],1)
+          if ALT_RP100 == 1:
+             st.giveItems(REWARDS2[st.getRandom(len(REWARDS2))],1)
+          else:
+             st.giveItems(REWARDS[st.getRandom(len(REWARDS))],1)
        else :
           htmltext = "31538-05.htm"
      elif event == "31538-08.htm" :
