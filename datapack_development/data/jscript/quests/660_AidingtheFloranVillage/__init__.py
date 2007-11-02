@@ -159,7 +159,7 @@ class Quest (JQuest) :
        htmltext = "30291-03.htm"  
    return htmltext
 
- def onKill (self,npc,player):
+ def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st: return
    npcId = npc.getNpcId()
