@@ -6635,4 +6635,6 @@ INSERT INTO `npc` (`id`,`idTemplate`,`name`,`serverSideName`,`title`,`serverSide
 	(35885,35885,'Cresson',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
 	(35886,35886,'Crothers',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT');
 
-INSERT INTO `npc` VALUES (50007,31324,'Andromeda',1,'Wedding Manager',1,'NPC.a_casino_FDarkElf',8.00,23.00,70,'female','L2WeddingManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,316,0,0,55,132,NULL,0,1,0,'LAST_HIT');
+INSERT INTO `npc` VALUES
+	(50007,31324,'Andromeda',1,'Wedding Manager',1,'NPC.a_casino_FDarkElf',8.00,23.00,70,'female','L2WeddingManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,316,0,0,55,132,NULL,0,1,0,'LAST_HIT'),
+	(70010,31606,'Catrina',0,'TvT Event Manager',0,'Monster2.queen_of_cat',8.00,15.00,70,'female','L2TvTEventNpc',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,28,132,NULL,0,0,0,'LAST_HIT');
