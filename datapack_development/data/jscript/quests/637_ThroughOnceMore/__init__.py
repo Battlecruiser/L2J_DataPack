@@ -46,6 +46,7 @@ class Quest (JQuest) :
           htmltext = "32010-05.htm"
           st.takeItems(NECROHEART,10)
           st.giveItems(MARK,1)
+          st.giveItems(8273,10)
           st.setState(COMPLETED)
           st.playSound("ItemSound.quest_finish")
        else :
