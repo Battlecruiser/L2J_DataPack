@@ -13917,7 +13917,7 @@ INSERT INTO skill_trees VALUES (114,426,1,'Battle Force',13000000,77); -- Grand 
 INSERT INTO skill_trees VALUES (117,426,1,'Battle Force',11000000,77); -- Fortune Seeker --
 INSERT INTO skill_trees VALUES (118,426,1,'Battle Force',12250000,77); -- Maestro --
 
--- Spell Force 5105
+-- Spell Force 427
 INSERT INTO skill_trees VALUES (94,427,1,'Spell Force',18000000,77); -- Archmage --
 INSERT INTO skill_trees VALUES (95,427,1,'Spell Force',11000000,77); -- Soultaker --
 INSERT INTO skill_trees VALUES (96,427,1,'Spell Force',12250000,77); -- Arcana Lord --
