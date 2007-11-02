@@ -69,12 +69,12 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet):
-   partyMember = self.getRandomPartyMember(player,"1")
-   if not partyMember: return
-   st = partyMember.getQuestState(qn)
-   if st :
-   count = st.getQuestItemsCount(GRAVE_GOODS)
-   if st.getInt("cond") == 1 and count < 180 :
+  partyMember = self.getRandomPartyMember(player,"1")
+  if not partyMember: return
+  st = partyMember.getQuestState(qn)
+  if st :
+    count = st.getQuestItemsCount(GRAVE_GOODS)
+    if st.getInt("cond") == 1 and count < 180 :
       chance = DROP_CHANCE * Config.RATE_DROP_QUEST
       numItems, chance = divmod(chance,100)
       if st.getRandom(100) < chance : 
@@ -87,7 +87,7 @@ class Quest (JQuest) :
          else:
             st.playSound("ItemSound.quest_itemget")   
          st.giveItems(GRAVE_GOODS,int(numItems))       
-   return
+  return
 
 
 QUEST       = Quest(645, qn, "Ghosts of Batur")
