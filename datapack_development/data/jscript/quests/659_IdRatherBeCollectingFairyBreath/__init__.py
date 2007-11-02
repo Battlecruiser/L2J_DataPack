@@ -67,7 +67,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if st.getInt("cond") == 1 :
       chance = st.getRandom(100)
-      if npcId in MOBS and chance < 30 :
+      if npcId in MOBS and chance < 90 :
          st.giveItems(FAIRY_BREATH,1)
          st.playSound("ItemSound.quest_itemget")
    return
