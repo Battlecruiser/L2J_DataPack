@@ -26970,7 +26970,7 @@ INSERT INTO `droplist` VALUES
 (21658,8739,1,1,200,12), -- Punishment of Splendor
 --  Mid-Grade Life Stone: level 67
 (21767,8740,1,1,200,1459), -- Dark Omen Invader Elite Soldier
-(20830,8740,1,1,200,478), -- Guardian Angel
+(20859,8740,1,1,200,478), -- Guardian Angel
 (20829,8740,1,1,200,417), -- Platinum Tribe Overlord
 (21769,8740,1,1,200,400), -- Dark Omen Invader Elite Soldier
 (21064,8740,1,1,200,372), -- Platinum Guardian Archer
@@ -26991,7 +26991,7 @@ INSERT INTO `droplist` VALUES
 (21568,8740,1,1,200,166), -- Devil Bat
 (21567,8740,1,1,200,124), -- Bone Slayer
 (21251,8740,1,1,200,123), -- Tomb Sage
-(21062,8740,1,1,200,123), -- Messenger Angel
+(21063,8740,1,1,200,123), -- Messenger Angel
 (21580,8740,1,1,200,120), -- Bone Caster
 (21065,8740,1,1,200,118), -- Platinum Guardian Warrior
 (20627,8740,1,1,200,117), -- Malruk Lord
@@ -27029,11 +27029,11 @@ INSERT INTO `droplist` VALUES
 (22108,8741,1,1,200,2288), -- Female Spiked Stakato
 (22113,8741,1,1,200,2053), -- Cannibalistic Stakato Leader
 (21770,8741,1,1,200,1838), -- Dark Omen Invader Elite Soldier
-(21070,8741,1,1,200,857), -- Seal Archangel
+(21071,8741,1,1,200,857), -- Seal Archangel
 (21754,8741,1,1,200,408), -- Dark Omen Invader Elite Soldier
 (21089,8741,1,1,200,382), -- Bloody Lord
 (21305,8741,1,1,200,380), -- Eye of Pilgrim
-(20831,8741,1,1,200,379), -- Seal Angel
+(20860,8741,1,1,200,379), -- Seal Angel
 (21161,8741,1,1,200,298), -- Lesser Ancient Soldier
 (21308,8741,1,1,200,287), -- Disciples of Punishment
 (21768,8741,1,1,200,286), -- Dark Omen Invader Warrior
@@ -27051,7 +27051,7 @@ INSERT INTO `droplist` VALUES
 (21317,8741,1,1,200,143), -- Hot Springs Atroxspawn
 (21314,8741,1,1,200,141), -- Hot Springs Bandersnatchling
 (21302,8741,1,1,200,140), -- Eye of Watchman
-(21067,8741,1,1,200,135), -- Guardian Archangel
+(21068,8741,1,1,200,135), -- Guardian Archangel
 (21087,8741,1,1,200,125), -- Bloody Knight
 (21303,8741,1,1,200,113), -- Homunculus
 (21594,8741,1,1,200,104), -- Vampire Warlord
