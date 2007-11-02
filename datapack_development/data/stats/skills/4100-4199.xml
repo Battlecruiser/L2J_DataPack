@@ -175,7 +175,7 @@
   <set name="lvlDepend" val="1"/>
   <set name="save" val="2"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_AREA"/>
+  <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="400"/>
   <set name="hitTime" val="2300"/>
   <set name="skillTime" val="2300"/>
@@ -185,6 +185,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
+    <effect count="5" name="Fear" time="13" val="0"/>
   </for>
 </skill>
 <skill id="4109" levels="1" name="Curse of Antharas">
