@@ -58,7 +58,7 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player):
      npcId = npc.getNpcId()
-     htmltext = "<html><body>I have nothing to say to you.</body></html>"
+     htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
      st = player.getQuestState(qn)
      if not st : return htmltext
      id = st.getState()
@@ -68,7 +68,7 @@ class Quest (JQuest) :
      holy = st.getQuestItemsCount(HOLY)
      totem = st.getQuestItemsCount(TOTEM)
      if id == COMPLETED :
-       htmltext = "<html><body>This quest have already been completed.</body></html>"
+       htmltext = "<html><body>This quest has already been completed.</body></html>"
      elif id == CREATED and npcId == WEIZ :
        if player.getLevel() < 17 :
          htmltext = "30385-01.htm"
@@ -161,3 +161,6 @@ QUEST.addTalkId(LEVIAN)
 QUEST.addTalkId(CHEST)
 
 STARTED.addQuestDrop(CHEST,TOTEM,1)
+
+for i in MOBS_1 + MOBS_2 + [25146] :
+    QUEST.addKillId(i)

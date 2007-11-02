@@ -15,8 +15,6 @@ MOBS=[20078,21026,21025,21024,21023]
 #QUEST ITEMS
 FAIRY_BREATH = 8286
 
-#REWARDS
-ADENA = 57
 
 class Quest (JQuest) :
 
@@ -36,7 +34,7 @@ class Quest (JQuest) :
           else :
              reward = count*50+5365
           st.takeItems(FAIRY_BREATH,-1)
-          st.giveItems(ADENA,reward)
+          st.giveItems(57,reward)
     elif event == "30634-08.htm" :
        st.exitQuest(1)
     return htmltext
@@ -75,7 +73,6 @@ class Quest (JQuest) :
 QUEST       = Quest(659,qn,"I'd Rather Be Collecting Fairy Breath")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(GALATEA)
@@ -85,5 +82,3 @@ for mob in MOBS:
    QUEST.addKillId(mob)
 
 STARTED.addQuestDrop(GALATEA,FAIRY_BREATH,1)
-
-print "importing quests: 659: I'd Rather Be Collecting Fairy Breath"
