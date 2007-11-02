@@ -188,6 +188,7 @@ __all__ = [
 '334_TheWishingPotion',
 '336_CoinOfMagic',
 '338_AlligatorHunter',
+'340_SubjugationOfLizardmen',
 '341_HuntingForWildBeasts',
 '343_UnderTheShadowOfTheIvoryTower',
 '344_1000YearsEndofLamentation',
