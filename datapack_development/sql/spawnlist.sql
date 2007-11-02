@@ -33411,6 +33411,11 @@ INSERT INTO `spawnlist` VALUES
 (NULL,'rune_chamberlain_etc',1,35510,12318,-47703,1296,0,0,22879,60,0,0),
 (NULL,'rune_chamberlain_etc',1,35511,10840,-49273,-565,0,0,2366,60,0,0);
 
+INSERT INTO `spawnlist` VALUES
+(NULL,'schuttgart_chmberlain_etc',1,35555,77495,-153314,-415,0,0,2059,60,0,0),
+(NULL,'schuttgart_chmberlain_etc',1,35556,77502,-152695,1225,0,0,9673,60,0,0),
+(NULL,'schuttgart_chmberlain_etc',1,35557,77736,-152938,-546,0,0,22667,60,0,0);
+
 INSERT INTO `spawnlist` VALUES 
 (NULL,'Crypts of Disgrace',1,22001,46734,-115708,-3815,0,0,31429,60,0,0),
 (NULL,'Crypts of Disgrace',1,22001,46259,-115912,-3718,0,0,37476,60,0,0),
