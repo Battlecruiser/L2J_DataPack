@@ -69,8 +69,10 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet):
-   st = player.getQuestState(qn)
-   if not st : return
+   partyMember = self.getRandomPartyMember(player,"1")
+   if not partyMember: return
+   st = partyMember.getQuestState(qn)
+   if st :
    count = st.getQuestItemsCount(GRAVE_GOODS)
    if st.getInt("cond") == 1 and count < 180 :
       chance = DROP_CHANCE * Config.RATE_DROP_QUEST

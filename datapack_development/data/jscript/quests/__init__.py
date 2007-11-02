@@ -288,6 +288,7 @@ __all__ = [
 '635_InTheDimensionalRift',
 '636_TruthBeyond',
 '637_ThroughOnceMore',
+'644_GraveRobberAnnihilation',
 '645_GhostsOfBatur',
 '647_InfluxOfMachines',
 '649_ALooterAndARailroadMan',
@@ -295,6 +296,7 @@ __all__ = [
 '651_RunawayYouth',
 '652_AnAgedExAdventurer',
 '653_WildMaiden',
+'660_AidingtheFloranVillage',
 '999_C3Tutorial'
 ]
 print ""
