@@ -69,7 +69,9 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet):
-   st = player.getQuestState(qn)
+   partyMember = self.getRandomPartyMember(player,"1")
+   if not partyMember: return
+   st = partyMember.getQuestState(qn)
    if st :
      if st.getState() == STARTED :
        count = st.getQuestItemsCount(PROOF_OF_AVENGER)
