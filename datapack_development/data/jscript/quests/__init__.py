@@ -296,6 +296,7 @@ __all__ = [
 '651_RunawayYouth',
 '652_AnAgedExAdventurer',
 '653_WildMaiden',
+'659_IdRatherBeCollectingFairyBreath',
 '660_AidingtheFloranVillage',
 '999_C3Tutorial'
 ]
