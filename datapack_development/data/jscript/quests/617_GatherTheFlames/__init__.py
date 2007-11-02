@@ -18,9 +18,13 @@ ROONEY = 32049
 DROPLIST = {21381:51,21653:51,21387:53,21655:53,21390:56,21656:69,21389:55,21388:53,\
             21383:51,21392:56,21382:60,21654:52,21384:64,21394:51,21395:56,21385:52,\
             21391:55,21393:58,21657:57,21386:52,21652:49,21378:49,21376:48,21377:48,\
-            21379:59,21380:49}
+            21379:59,21380:49,21420:51,21421:49,21430:53,21431:52}
 
 REWARDS = [ 6881,6883,6885,6887,6891,6893,6895,6897,6899,7580 ]
+REWARDS2= [ 6882,6884,6886,6888,6892,6894,6896,6898,6900,7581 ]
+
+#Change this value to 1 if you wish 100% recipes, default 60%
+ALT_RP100=0
 
 class Quest (JQuest) :
 
@@ -40,14 +44,20 @@ class Quest (JQuest) :
      elif event == "31539-05.htm" and torches >= 1000 :
        htmltext = "31539-07.htm"
        st.takeItems(TORCH,1000)
-       st.giveItems(REWARDS[st.getRandom(len(REWARDS))],1)
+       if ALT_RP100 == 1:
+         st.giveItems(REWARDS2[st.getRandom(len(REWARDS2))],1)
+       else:
+         st.giveItems(REWARDS[st.getRandom(len(REWARDS))],1)
      elif event == "31539-08.htm" :
        st.takeItems(TORCH,-1)
        st.exitQuest(1)
      elif event.isdigit() and int(event) in REWARDS :
        if torches >= 1200 :
           st.takeItems(TORCH,1200)
-          st.giveItems(int(event),1)
+          if ALT_RP100 == 1:
+            st.giveItems(int(event+1),1)
+          else:
+            st.giveItems(int(event),1)
           htmltext = None
        else :
           htmltext = "Incorrect item count"
