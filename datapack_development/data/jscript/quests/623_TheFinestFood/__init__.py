@@ -19,7 +19,6 @@ DROPLIST = {BUFFALO:[BUFFALO_MEAT,99],FLAVA:[LEAF_OF_FLAVA,99],ANTELOPE:[ANTELOP
 REWARDS = [[6849,25000,0,11],[6847,65000,12,23],[6851,25000,24,33],[0,73000,34,100]]
 
 #needed count
-count = 100
 
 class Quest (JQuest) :
 
@@ -87,18 +86,18 @@ class Quest (JQuest) :
    if not partyMember: return
    st = partyMember.getQuestState(qn)
    if st :
-        if st.getState() == STARTED :
-            cond = st.getInt("cond")
-            item,chance = DROPLIST[npc.getNpcId()]
-            prevItems = st.getQuestItemsCount(item)
+      if st.getState() == STARTED :
+         item,chance = DROPLIST[npc.getNpcId()]
+         count = st.getQuestItemsCount(item)
+         if st.getInt("cond") == 1 and count < 100 :
             numItems, chance = divmod(chance*Config.RATE_DROP_QUEST,100)
             if st.getRandom(100) < chance :
-              numItems = numItems + 1
-            if count < (prevItems + numItems) :
-              numItems = count - prevItems
+               numItems += 1
+            if count + numItems >= 100 :
+              numItems = 100 - count
             if numItems != 0 :
               st.giveItems(item,int(numItems))
-              if st.getQuestItemsCount(LEAF_OF_FLAVA) == st.getQuestItemsCount(BUFFALO_MEAT) == st.getQuestItemsCount(ANTELOPE_HORN) == count :
+              if st.getQuestItemsCount(LEAF_OF_FLAVA) == st.getQuestItemsCount(BUFFALO_MEAT) == st.getQuestItemsCount(ANTELOPE_HORN) == 100 :
                  st.set("cond","2")
                  st.playSound("ItemSound.quest_middle")
               else :
