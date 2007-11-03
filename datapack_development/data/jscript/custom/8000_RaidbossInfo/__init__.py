@@ -219,8 +219,8 @@ RADAR={
 25283:[184410,-10111,-5488],  #Lilith (lvl80)
 25286:[185000,-13000,-5488],  #Anakim (lvl80)
 25306:[142368,-82512,-6487],  #Nastron, Spirit of Fire (lvl87)
-25316:[105452,-36775,-1050]   #Ashutar, Spirit of water (lvl87)
-#25527:[,,,],                 #Uruka (lvl86) - not spawned yet
+25316:[105452,-36775,-1050],  #Ashutar, Spirit of water (lvl87)
+25527:[3776,-6768,-3288]      #Uruka (lvl86)
 #29065:[,,,]                  #Sailren (lvl87) - not spawned yet
 }
 
