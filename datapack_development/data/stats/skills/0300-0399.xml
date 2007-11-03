@@ -657,6 +657,7 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1620"/>
+  <set name="ignoreShld" val="true"/>
   <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="26000"/>
@@ -1144,7 +1145,6 @@
   <set name="reuseDelay" val="1200000"/>
   <set name="skillTime" val="1800"/>
   <set name="hitTime" val="1800"/>
-  <set name="isMagic" val="true"/>
   <set name="aggroPoints" val="811"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
@@ -1166,7 +1166,6 @@
   <set name="reuseDelay" val="1200000"/>
   <set name="skillTime" val="1800"/>
   <set name="hitTime" val="1800"/>
-  <set name="isMagic" val="true"/>
   <cond>
     <player hp="75"/>
   </cond>
@@ -1261,6 +1260,7 @@
   <set name="weaponsAllowed" val="64"/>
   <set name="magicLvl" val="78"/>
   <set name="power" val="4040"/>
+  <set name="ignoreShld" val="true"/>
   <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>
   <set name="target" val="TARGET_AURA"/>
@@ -1599,6 +1599,7 @@
   <set name="save" val="4"/>
   <set name="power" val="2072"/>
   <set name="target" val="TARGET_AREA"/>
+  <set name="ignoreShld" val="true"/>
   <set name="skillRadius" val="150"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1633,6 +1634,7 @@
   <set name="reuseDelay" val="15000"/>
   <set name="skillTime" val="2000"/>
   <set name="hitTime" val="2000"/>
+  <set name="ignoreShld" val="true"/>
   <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>
   <set name="castRange" val="40"/>
