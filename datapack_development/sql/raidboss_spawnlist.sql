@@ -148,29 +148,29 @@ INSERT INTO `raidboss_spawnlist` VALUES
 (25319,1,184542,-106330,-6304,0,43200,129600,0,1048567,3718), -- Ember (85)
 (25322,1,93296,-75104,-1824,0,43200,129600,0,834231,3718), -- Demon's Agent Falston (66)
 (25325,1,91008,-85904,-2736,0,43200,129600,0,888658,3718), -- Flame Of Splendor Barakiel (70)
--- (25328,1,59331,-42403,-3003,0,7200,10800,0,900867,3718), -- Eilhalder Von Hellmann (71) -- (Only Spawn at Night) -- should be event spawn ???
--- (25333,1,000000,000000,000000,0,43200,129600,0,193763,3718), -- Anakazel (28) -- no known cords (Spawn by Dimensional Instance)
--- (25334,1,000000,000000,000000,0,43200,129600,0,306698,3718), -- Anakazel (38) -- no known cords (Spawn by Dimensional Instance)
--- (25335,1,000000,000000,000000,0,43200,129600,0,494363,3718), -- Anakazel (48) -- no known cords (Spawn by Dimensional Instance)
--- (25336,1,000000,000000,000000,0,43200,129600,0,705074,3718), -- Anakazel (58) -- no known cords (Spawn by Dimensional Instance)
--- (25337,1,000000,000000,000000,0,43200,129600,0,865808,3718), -- Anakazel (68) -- no known cords (Spawn by Dimensional Instance)
--- (25338,1,000000,000000,000000,0,43200,129600,0,977523,3718), -- Anakazel (78) -- no known cords (Spawn by Dimensional Instance)
--- (25339,1,191544,-85575,-7184,-33016,60,60,0,211425,3718), -- Shadow Of Halisha (81) -- should be event spawn ???
--- (25339,1,189801,-88965,-7184,-33016,60,60,0,243663,3718), -- Shadow Of Halisha (81) -- should be event spawn ???
--- (25339,1,173193,-76299,-7184,-15992,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- should be event spawn ???
--- (25339,1,175610,-72453,-7184,-15992,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- should be event spawn ???
--- (25342,1,191544,-85575,-7184,-33016,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- should be event spawn ???
--- (25342,1,189801,-88965,-7184,-33016,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- should be event spawn ???
--- (25342,1,173193,-76299,-7184,-15992,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- should be event spawn ???
--- (25342,1,175610,-72453,-7184,-15992,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- should be event spawn ???
--- (25346,1,191544,-85575,-7184,-33016,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- should be event spawn ???
--- (25346,1,189801,-88965,-7184,-33016,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- should be event spawn ???
--- (25346,1,173193,-76299,-7184,-15992,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- should be event spawn ???
--- (25346,1,175610,-72453,-7184,-15992,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- should be event spawn ???
--- (25349,1,191544,-85575,-7184,-33016,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- should be event spawn ???
--- (25349,1,189801,-88965,-7184,-33016,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- should be event spawn ???
--- (25349,1,173193,-76299,-7184,-15992,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- should be event spawn ???
--- (25349,1,175610,-72453,-7184,-15992,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- should be event spawn ???
+-- (25328,1,59331,-42403,-3003,0,7200,10800,0,900867,3718), -- Eilhalder Von Hellmann (71) -- (Only Spawn at Night)
+-- (25333,1,000000,000000,000000,0,43200,129600,0,193763,3718), -- Anakazel (28) -- (Spawn by Dimensional Instance)
+-- (25334,1,000000,000000,000000,0,43200,129600,0,306698,3718), -- Anakazel (38) -- (Spawn by Dimensional Instance)
+-- (25335,1,000000,000000,000000,0,43200,129600,0,494363,3718), -- Anakazel (48) -- (Spawn by Dimensional Instance)
+-- (25336,1,000000,000000,000000,0,43200,129600,0,705074,3718), -- Anakazel (58) -- (Spawn by Dimensional Instance)
+-- (25337,1,000000,000000,000000,0,43200,129600,0,865808,3718), -- Anakazel (68) -- (Spawn by Dimensional Instance)
+-- (25338,1,000000,000000,000000,0,43200,129600,0,977523,3718), -- Anakazel (78) -- (Spawn by Dimensional Instance)
+-- (25339,1,191544,-85575,-7184,-33016,60,60,0,211425,3718), -- Shadow Of Halisha (81) -- (Spawn by Quest)
+-- (25339,1,189801,-88965,-7184,-33016,60,60,0,243663,3718), -- Shadow Of Halisha (81) -- (Spawn by Quest)
+-- (25339,1,173193,-76299,-7184,-15992,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- (Spawn by Quest)
+-- (25339,1,175610,-72453,-7184,-15992,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- (Spawn by Quest)
+-- (25342,1,191544,-85575,-7184,-33016,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- (Spawn by Quest)
+-- (25342,1,189801,-88965,-7184,-33016,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- (Spawn by Quest)
+-- (25342,1,173193,-76299,-7184,-15992,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- (Spawn by Quest)
+-- (25342,1,175610,-72453,-7184,-15992,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- (Spawn by Quest)
+-- (25346,1,191544,-85575,-7184,-33016,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- (Spawn by Quest)
+-- (25346,1,189801,-88965,-7184,-33016,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- (Spawn by Quest)
+-- (25346,1,173193,-76299,-7184,-15992,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- (Spawn by Quest)
+-- (25346,1,175610,-72453,-7184,-15992,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- (Spawn by Quest)
+-- (25349,1,191544,-85575,-7184,-33016,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- (Spawn by Quest)
+-- (25349,1,189801,-88965,-7184,-33016,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- (Spawn by Quest)
+-- (25349,1,173193,-76299,-7184,-15992,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- (Spawn by Quest)
+-- (25349,1,175610,-72453,-7184,-15992,60,60,0,96646,3718), -- Shadow Of Halisha (81) -- (Spawn by Quest)
 (25352,1,-16912,174912,-3264,0,43200,129600,0,127782,3718), -- Giant Wasteland Basilisk (30)
 (25354,1,-16096,184288,-3817,0,43200,129600,0,165289,3718), -- Gargoyle Lord Sirocco (35)
 (25357,1,-3456,112864,-3456,0,43200,129600,0,90169,3718), -- Sukar Wererat Chief (21)
@@ -233,18 +233,18 @@ INSERT INTO `raidboss_spawnlist` VALUES
 -- (25509,1,74000,-102000,900,0,43200,129600,0,418874,9999), -- Dark Shaman Varangka (53) -- stats & proper coords to be done
 -- (25512,1,96524,-111070,-3335,0,43200,129600,0,804638,9999), -- Gigantic Chaos Golem (52) -- stats to be done
 (25514,1,79635,-55434,-6135,0,43200,129600,0,714778,3718), -- Queen Shyeed (80)
--- (25517,1,113000,-76000,200,0,43200,129600,0,1069643,9999), -- Master Anays (87) -- stats & proper coords to be done
+-- (25517,1,113000,-76000,200,0,43200,129600,0,1069643,9999), -- Master Anays (87) -- (Spawn by Quest)
 -- (25523,1,170000,-60000,-3500,0,43200,129600,0,1848045,9999), -- Plague Golem (73) -- stats & proper coords to be done
-(25524,1,144143,-5731,-4722,0,43200,129600,0,956490,3247); -- Flamestone Giant (76)
--- (25527,1,3776,-6768,-32,0,43200,129600,0,1532678,9999), -- Uruka (87) -- stats to be done
+(25524,1,144143,-5731,-4722,0,43200,129600,0,956490,3247), -- Flamestone Giant (76)
+(25527,1,3776,-6768,-3288,0,43200,129600,0,1532678,3718); -- Uruka (86)
 
 
 --
 -- Following mobs need their type checked, corrected & determined whether they actually belong in here
 --
--- (29054,1,11882,-49216,-3008,0,43200,129600,0,1352750,1494), -- Benom (75)
--- (29056,1,102800,-126000,-2500,0,43200,129600,0,350000,9999), -- Ice Fairy Sirra (60) -- stats to be done
+-- (29054,1,11882,-49216,-3008,0,43200,129600,0,1352750,1494), -- Benom (75) (spawn 1hr before siege in rune start)
+-- (29056,1,102800,-126000,-2500,0,43200,129600,0,350000,9999), -- Ice Fairy Sirra (60) -- stats to be done (Spawn by Quest)
 -- (29060,1,106000,-128000,-3000,0,43200,129600,0,350000,9999), -- Captain Of The Ice Queen's Royal Guard (59) -- stats to be done
--- (29062,1,-16382,-53450,-10432,0,43200,129600,0,400000,9999), -- High Priestess Van Halter (87) -- stats to be done
--- (29065,1,26528,-8244,-20,0,43200,129600,0,400000,9999), -- Sailren (87) -- stats to be done
--- (29095,1,000000,000000,000000,0,43200,129600,0,400000,9999); -- Gordon (87) -- no known cords (Spawn by Cursed Weapons Instance)
+-- (29062,1,-16382,-53450,-10432,0,43200,129600,0,400000,9999), -- High Priestess Van Halter (87) -- stats to be done (Spawn by Quest)
+-- (29065,1,26528,-8244,-20,0,43200,129600,0,400000,9999), -- Sailren (87) -- stats to be done (Spawn by Quest)
+-- (29095,1,000000,000000,000000,0,43200,129600,0,400000,9999); -- Gordon (87) -- walking arround Goddard
