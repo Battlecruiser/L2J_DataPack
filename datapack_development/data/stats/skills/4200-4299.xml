@@ -1134,14 +1134,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul order="0x30" stat="pAtkSpd" val="#rate"/>
-    <mul order="0x30" stat="mAtkSpd" val="#rate"/>
-    <mul order="0x30" stat="rEvas" val="#rate"/>
     <mul order="0x30" stat="rExp" val="#rate"/>
-    <mul order="0x30" stat="runSpd" val="#rate"/>
     <mul order="0x30" stat="regHp" val="#rate"/>
     <mul order="0x30" stat="regCp" val="#rate"/>
     <mul order="0x30" stat="regMp" val="#rate"/>
+    <sub order="0x40" stat="accCombat" val="20"/>
   </for>
 </skill>
 <skill id="4268" levels="1" name="Danger Area">
