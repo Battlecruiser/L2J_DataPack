@@ -86,170 +86,244 @@
 </skill>
 <skill id="5206" levels="1" name="Decrease Speed">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Curse of the Pig: Instantly reduces Speed. Effect 1.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="save" val="5"/>
+  <set name="power" val="542.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="2200"/>
+  <set name="skillTime" val="2200"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="30000"/>
+  <set name="castRange" val="500"/>
+  <set name="effectRange" val="1000"/>
+  <set name="effectType" val="DEBUFF"/>
+  <set name="effectPower" val="70"/>
   <for>
+    <effect name="Buff" time="30" count="1" val="0" stackOrder="0.5" stackType="RunSpeedDown">
+      <mul order="0x30" stat="runSpd" val="0.5"/>
+    </effect>
   </for>
 </skill>
 <skill id="5207" levels="1" name="Decrease Atk. Spd.">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Curse of the Pig: Instantly reduces Atk. Spd. Effect 1.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="save" val="5"/>
+  <set name="power" val="10"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="0.77" stackType="pAtkSpdDown">
+      <mul order="0x30" stat="pAtkSpd" val="0.77"/>
+    </effect>
   </for>
 </skill>
 <skill id="5208" levels="1" name="Golden Pig Wind Walk">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Temporarily increases Speed. Effect 2.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillTime" val="0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="33" stackType="SpeedUp">
+      <add order="0x40" stat="runSpd" val="33"/>
+    </effect>
   </for>
 </skill>
 <skill id="5209" levels="1" name="Golden Pig Shield">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Temporarily increases P. Def. Effect 3.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillTime" val="0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="4" stackType="pDef">
+      <mul order="0x30" stat="pDef" val="1.15"/>
+    </effect>
   </for>
 </skill>
 <skill id="5210" levels="1" name="Golden Pig Blessed Body">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Temporarily increases maximum HP. Effect 6.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillTime" val="0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.35" stackType="MaxHPUp">
+      <mul order="0x30" stat="maxHp" val="1.35"/>
+    </effect>
   </for>
 </skill>
 <skill id="5211" levels="1" name="Golden Pig Vampiric Rage">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Uses damage inflicted upon an enemy to temporarily restore HP. Excludes damage inflicted by skill or remote attack. Effect 4.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillTime" val="0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="7" stackType="vampRage">
+      <add order="0x40" stat="absorbDam" val="9"/>
+    </effect>
   </for>
 </skill>
 <skill id="5212" levels="1" name="Golden Pig Regeneration">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Temporarily increases ability to restore HP. Effect 3.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillTime" val="0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.20" stackType="HPregen">
+      <mul order="0x30" stat="regHp" val="1.20"/>
+    </effect>
   </for>
 </skill>
 <skill id="5213" levels="1" name="Golden Pig Haste">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Temporarily increases Atk. Spd. Effect 1.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillTime" val="0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.15" stackType="pAtkSpeedUp">
+      <mul order="0x30" stat="pAtkSpd" val="1.15"/>
+    </effect>
   </for>
 </skill>
 <skill id="5214" levels="1" name="Golden Pig Blessed Soul">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Temporarily increases maximum MP. Effect 6.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillTime" val="0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.35" stackType="MPregen">
+      <mul order="0x30" stat="maxMp" val="1.35"/>
+    </effect>
   </for>
 </skill>
 <skill id="5215" levels="1" name="Golden Pig Acumen">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Temporarily increases Casting Spd. Effect 3.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillTime" val="0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="4" stackType="mAtkSpeedUp">
+      <mul order="0x30" stat="mAtkSpd" val="1.30"/>
+    </effect>
   </for>
 </skill>
 <skill id="5216" levels="1" name="Golden Pig Concentration">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Temporarily decreases the probability of magic being canceled due to damage taken. Effect 1.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillTime" val="0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="18" stackType="Concentration">
+      <sub order="0x40" stat="cancel" val="18"/>
+    </effect>
   </for>
 </skill>
 <skill id="5217" levels="1" name="Golden Pig Empower">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Temporarily increases M. Atk. Effect 1.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="power" val="1.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillTime" val="0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="3600000"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.55" stackType="mAtk">
+      <mul order="0x30" stat="mAtk" val="1.55"/>
+    </effect>
   </for>
 </skill>
 <skill id="5218" levels="1" name="Production: Event Teleport">
@@ -268,30 +342,47 @@
 </skill>
 <skill id="5219" levels="1" name="Huge Pig Stun">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Curse of the Huge Pig: Target is temporarily stunned and immoblized.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="magicLvl" val="99"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="power" val="47895.0"/>
+  <set name="mpConsume" val="192"/>
+  <set name="save" val="4"/>
+  <set name="hitTime" val="4500"/>
+  <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillTime" val="4500"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="9000"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
+  <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="80"/>
   <for>
+	<effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="5220" levels="1" name="Huge Pig Fear">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Curse of the Huge Pig: Target is temporarily overcome with fear, causing it to flee mindlessly.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpConsume" val="150"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillTime" val="4000"/>
+  <set name="skillType" val="FEAR"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <for>
+    <effect count="5" name="Fear" time="6" val="0"/>
   </for>
 </skill>
 </list>
