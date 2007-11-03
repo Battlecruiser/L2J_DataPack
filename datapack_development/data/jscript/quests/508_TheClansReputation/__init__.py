@@ -15,6 +15,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.serverpackets      import PledgeShowInfoUpdate
 from net.sf.l2j.gameserver.serverpackets      import SystemMessage
 
 qn="508_TheClansReputation"
@@ -88,6 +89,7 @@ class Quest (JQuest) :
   htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
   st = player.getQuestState(qn)
   if not st : return htmltext
+  clan = player.getClan()
   npcId = npc.getNpcId()
   if player.getClan() == None or player.isClanLeader() == 0 :
      st.exitQuest(1)
@@ -109,8 +111,9 @@ class Quest (JQuest) :
         elif count == 1 :
            htmltext = "30868-"+str(raid)+"b.htm"
            st.takeItems(item,1)
-           player.getClan().setReputationScore(player.getClan().getReputationScore()+CLAN_POINTS_REWARD,True)
+           clan.setReputationScore(clan.getReputationScore()+CLAN_POINTS_REWARD,True)
            player.sendPacket(SystemMessage(1777).addNumber(CLAN_POINTS_REWARD))
+           clan.broadcastToOnlineMembers(PledgeShowInfoUpdate(clan))
   return htmltext
 
  def onKill(self,npc,player,isPet) :
