@@ -1,6 +1,7 @@
 # For Sleepless Deadmen version 0.1 
 # by DrLecter
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -80,13 +81,19 @@ class Quest (JQuest) :
      if st.getState() != STARTED : return 
    
      count = st.getQuestItemsCount(REMAINS)
-     if count < REQUIRED and st.getRandom(DROP_MAX) < DROP_RATE :
-        st.giveItems(REMAINS,1)
-        if count + 1 >= REQUIRED :
-           st.playSound("ItemSound.quest_middle")
-           st.set("cond","2")
-        else :
-           st.playSound("ItemSound.quest_itemget")
+     if count < REQUIRED :
+        chance = DROP_RATE * Config.RATE_DROP_QUEST
+        numItems, chance = divmod(chance,100)
+        if st.getRandom(DROP_MAX) < chance :
+           numItems += 1
+        if numItems :
+           if count + numItems >= REQUIRED :
+              numItems = REQUIRED - count
+              st.playSound("ItemSound.quest_middle")
+              st.set("cond","2")
+           else:
+              st.playSound("ItemSound.quest_itemget")   
+           st.giveItems(REMAINS,int(numItems))
      return
 
 # Quest class and state definition
