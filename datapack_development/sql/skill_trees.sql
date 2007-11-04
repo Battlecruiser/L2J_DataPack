@@ -4326,6 +4326,7 @@ INSERT INTO skill_trees VALUES (16,1401,7,'Major Heal',330000,68);
 INSERT INTO skill_trees VALUES (16,1401,8,'Major Heal',390000,70);
 INSERT INTO skill_trees VALUES (16,1401,9,'Major Heal',680000,72);
 INSERT INTO skill_trees VALUES (16,1401,10,'Major Heal',880000,74);
+INSERT INTO skill_trees VALUES (16,1401,11,'Major Heal',880000,74);
 INSERT INTO skill_trees VALUES (16,1402,1,'Major Group Heal',88000,58);
 INSERT INTO skill_trees VALUES (16,1402,2,'Major Group Heal',170000,62);
 INSERT INTO skill_trees VALUES (16,1402,3,'Major Group Heal',280000,66);
