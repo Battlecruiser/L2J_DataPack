@@ -587,8 +587,8 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume">
-      <add order="0x30" stat="stunVuln" val="#vuln"/>
-      <add order="0x30" stat="sleepVuln" val="#vuln"/>
+      <mul order="0x30" stat="stunVuln" val="#vuln"/>
+      <mul order="0x30" stat="sleepVuln" val="#vuln"/>
     </effect>
   </for>
 </skill>
