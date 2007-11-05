@@ -50,7 +50,7 @@ class Quest (JQuest) :
      elif event == "30037-02.htm" :
        st.set("cond","5")
        st.playSound("ItemSound.quest_middle")
-     elif event == "30983-02.htm" :
+     elif event == "30989-02.htm" :
        st.giveItems(TOTEM,1)
        st.set("cond","6")
        st.playSound("ItemSound.quest_middle")
@@ -118,9 +118,9 @@ class Quest (JQuest) :
            htmltext = "30037-05.htm"
        elif npcId == CHEST :
          if cond == 5 :
-           htmltext = "30983-01.htm"
+           htmltext = "30989-01.htm"
          elif cond == 6 :
-           htmltext = "30983-03.htm"
+           htmltext = "30989-03.htm"
      return htmltext
     
  def onKill(self,npc,player,isPet):
