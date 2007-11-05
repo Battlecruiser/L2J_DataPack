@@ -6600,40 +6600,6 @@ INSERT INTO `npc` (`id`,`idTemplate`,`name`,`serverSideName`,`title`,`serverSide
 	(35654,35654,'Court Magician',0,'Goddard',0,'Monster3.Elite_Mage',6.50,21.96,70,'male','L2Npc',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,88,132,NULL,0,0,0,'LAST_HIT'),
 	(35655,35655,'Court Magician',0,'Rune',0,'Monster3.Elite_Mage',6.50,21.96,70,'male','L2Npc',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,88,132,NULL,0,0,0,'LAST_HIT'),
 	(35656,35656,'Court Magician',0,'Schuttgart',0,'Monster3.Elite_Mage',6.50,21.96,70,'male','L2Npc',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,88,132,NULL,0,0,0,'LAST_HIT');
-	
--- 
--- the following IDs are custom and not found in the client
--- 
-INSERT INTO `npc` (`id`,`idTemplate`,`name`,`serverSideName`,`title`,`serverSideTitle`,`class`,`collision_radius`,`collision_height`,`level`,`sex`,`type`,`attackrange`,`hp`,`mp`,`hpreg`,`mpreg`,`str`,`con`,`dex`,`int`,`wit`,`men`,`exp`,`sp`,`patk`,`pdef`,`matk`,`mdef`,`atkspd`,`aggro`,`matkspd`,`rhand`,`lhand`,`armor`,`walkspd`,`runspd`,`faction_id`,`faction_range`,`isUndead`,`absorb_level`,`absorb_type`) VALUES
-	(35855,35855,'Lowell',0,'Clan Hall Manager',0,'NPC.a_trader_MElf',6.00,24.50,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35856,35856,'Paranos',0,'Clan Hall Manager',0,'NPC.a_trader_MElf',6.00,24.50,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35857,35857,'Klingel',0,'Clan Hall Manager',0,'NPC.a_trader_MElf',6.00,24.50,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35858,35858,'Keffer',0,'Clan Hall Manager',0,'NPC.a_trader_MElf',6.00,24.50,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35859,35859,'Sand',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35860,35860,'Teters',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35864,35864,'Watkins',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35865,35865,'Cohen',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35866,35866,'Bint',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35867,35867,'Bourdon',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35868,35868,'Pery',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35869,35869,'Gampert',0,'Clan Hall Manager',0,'NPC.a_warehouse_keeper_MDwarf',8.00,17.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35870,35870,'Gonti',0,'Clan Hall Manager',0,'NPC.a_warehouse_keeper_MDwarf',8.00,17.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35871,35871,'Baraha',0,'Clan Hall Manager',0,'NPC.e_trader_MOrc',8.00,23.50,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35872,35872,'Vanhal',0,'Clan Hall Manager',0,'NPC.e_trader_MOrc',8.00,23.50,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35873,35873,'Dan',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35874,35874,'Briggs',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35875,35875,'Stegmann',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35876,35876,'Randolph',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35877,35877,'Trotter',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35878,35878,'Veder',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35879,35879,'Danas',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35880,35880,'Corey',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35881,35881,'Barney',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35882,35882,'Klett',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35883,35883,'Tairee',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35884,35884,'Tanner',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35885,35885,'Cresson',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT'),
-	(35886,35886,'Crothers',0,'Clan Hall Manager',0,'NPC.a_casino_MHuman',8.00,23.00,70,'male','L2ClanHallManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,0,NULL,0,1,0,'LAST_HIT');
 
 INSERT INTO `npc` VALUES
 	(50007,31324,'Andromeda',1,'Wedding Manager',1,'NPC.a_casino_FDarkElf',8.00,23.00,70,'female','L2WeddingManager',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,316,0,0,55,132,NULL,0,1,0,'LAST_HIT'),
