@@ -509,6 +509,27 @@ INSERT INTO `merchant_shopids` VALUES (335558, '35558');
 INSERT INTO `merchant_shopids` VALUES (335644, '35644');
 INSERT INTO `merchant_shopids` VALUES (335645, '35645');
 --
+-- Castles Item creation
+--
+INSERT INTO merchant_shopids VALUES (351001,'35100');
+INSERT INTO merchant_shopids VALUES (351002,'35100');
+INSERT INTO merchant_shopids VALUES (351421,'35142');
+INSERT INTO merchant_shopids VALUES (351422,'35142');
+INSERT INTO merchant_shopids VALUES (351841,'35184');
+INSERT INTO merchant_shopids VALUES (351842,'35184');
+INSERT INTO merchant_shopids VALUES (352261,'35226');
+INSERT INTO merchant_shopids VALUES (352262,'35226');
+INSERT INTO merchant_shopids VALUES (352741,'35274');
+INSERT INTO merchant_shopids VALUES (352742,'35274');
+INSERT INTO merchant_shopids VALUES (353161,'35316');
+INSERT INTO merchant_shopids VALUES (353162,'35316');
+INSERT INTO merchant_shopids VALUES (353631,'35363');
+INSERT INTO merchant_shopids VALUES (353632,'35363');
+INSERT INTO merchant_shopids VALUES (355091,'35509');
+INSERT INTO merchant_shopids VALUES (355092,'35509');
+INSERT INTO merchant_shopids VALUES (355551,'35555');
+INSERT INTO merchant_shopids VALUES (355552,'35555');
+--
 -- Clan Halls Item creation
 --
 INSERT INTO merchant_shopids VALUES (135445, '35445');
