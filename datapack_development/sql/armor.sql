@@ -896,7 +896,7 @@ INSERT INTO `armor` VALUES
  ('8180','Circlet of Ice Fairy Sirra','face','false','none','10','wood','none','0','-1','0','0','0','0','0','true','true','true','true','0','0'),
  ('8181','Academy Circlet','face','false','none','10','wood','none','0','-1','0','0','0','0','0','true','true','true','true','0','0'),
  ('8182','Circlet of Rune','face','false','none','10','wood','none','0','-1','0','0','0','500000','0','true','true','true','true','3633','1'),
- ('8183','Circlet of Schuttgart','face','false','none','10','wood','none','0','-1','0','500000','0','0','0','true','true','true','true','3633','1'),
+ ('8183','Circlet of Schuttgart','face','false','none','10','wood','none','0','-1','0','0','0','500000','0','true','true','true','true','3633','1'),
  ('8184','Party Hat','dhair','false','none','10','wood','none','0','-1','0','0','0','0','0','true','true','true','true','0','0'),
  ('8185','Feathered Hat','dhair','false','none','10','wood','none','0','-1','0','0','0','0','0','true','true','true','true','0','0'),
  ('8186','Artisan\'s Goggles','dhair','false','none','10','wood','none','0','-1','0','0','0','0','0','true','true','true','true','0','0'),
