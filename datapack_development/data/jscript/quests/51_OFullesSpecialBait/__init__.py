@@ -2,6 +2,7 @@
 # with little cleanups by DrLecter.
 # Visit http://www.l2jdp.com/trac if you find a bug.
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -61,15 +62,21 @@ class Quest (JQuest) :
    partyMember = self.getRandomPartyMember(player,"1")
    if not partyMember : return
    st = partyMember.getQuestState(qn)
-   if st.getState() == STARTED :
+   if st :
       count = st.getQuestItemsCount(LOST_BAIT)
       if st.getInt("cond") == 1 and count < 100 :
-         st.giveItems(LOST_BAIT,1)
-      if count == 99 :
-         st.playSound("ItemSound.quest_middle")
-         st.set("cond","2")
-      else :
-         st.playSound("ItemSound.quest_itemget")
+         chance = 33 * Config.RATE_DROP_QUEST
+         numItems, chance = divmod(chance,100)
+         if st.getRandom(100) < chance : 
+            numItems += 1
+         if numItems :
+            if count + numItems >= 100 :
+               numItems = 100 - count
+               st.playSound("ItemSound.quest_middle")
+               st.set("cond","2")
+            else:
+               st.playSound("ItemSound.quest_itemget")
+            st.giveItems(LOST_BAIT,1)
    return
 
 QUEST       = Quest(51,qn,"O'Fulle's Special Bait")
