@@ -463,7 +463,7 @@
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="20000"/>
+  <set name="reuseDelay" val="600000"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="isMagic" val="true"/>
@@ -1957,7 +1957,7 @@
   <set name="effectRange" val="1400"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="matkdebuff">
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="1" stackType="matkdebuff">
       <div order="0x30" stat="mDef" val="#mDef"/>
     </effect>
   </for>
