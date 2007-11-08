@@ -1,5 +1,6 @@
 # Maked by Mr. Have fun! Version 0.3 updated by Sh1ning for www.l2jdp.com 
-import sys 
+import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State 
 from net.sf.l2j.gameserver.model.quest import QuestState 
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest 
