@@ -1,6 +1,7 @@
 # Created by CubicVirtuoso
 # Any problems feel free to drop by #l2j-datapack on irc.freenode.net
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -53,16 +54,21 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
      partyMember = self.getRandomPartyMember(player,"1")
      if not partyMember : return
-     st = partyMember.getQuestState(qn)
-     
+     st = partyMember.getQuestState(qn) 
      count = st.getQuestItemsCount(SILVER_CRYSTAL_ID)
      if st.getInt("cond") == 1 and count < 50 :
-             st.giveItems(SILVER_CRYSTAL_ID,1)
-             if count == 49 :
-                 st.playSound("ItemSound.quest_middle")
-                 st.set("cond","2")
-             else :
-                 st.playSound("ItemSound.quest_itemget")
+        chance = 100 * Config.RATE_DROP_QUEST
+        numItems, chance = divmod(chance,100)
+        if st.getRandom(100) < chance : 
+           numItems += 1
+        if numItems :
+           if count + numItems >= 50 :
+              numItems = 50 - count
+              st.playSound("ItemSound.quest_middle")
+              st.set("cond","2")
+           else:
+              st.playSound("ItemSound.quest_itemget")
+           st.giveItems(SILVER_CRYSTAL_ID,int(numItems))
      return
  
 QUEST       = Quest(431,qn,"Wedding March")

@@ -227,12 +227,17 @@ class Quest (JQuest):
             npcs = [ SPIDER_D1, SPIDER_D2 ]
             item = SPIDER_LEG5
          if npcId in npcs :
-            if st.getRandom(100) < SPIDER_LEG_DROP :
-               st.giveItems(item,1)
-               if collected + 1 < REQUIRED_SPIDER_LEGS :
-                  st.playSound("ItemSound.quest_itemget")
-               else :
+            chance = SPIDER_LEG_DROP * Config.RATE_DROP_QUEST
+            numItems, chance = divmod(chance,100)
+            if st.getRandom(100) < chance :
+               numItems += 1
+            if numItems :
+               if count + numItems >= REQUIRED_SPIDER_LEGS :
+                  numItems = REQUIRED_SPIDER_LEGS - count
                   st.playSound("ItemSound.quest_middle")
+               else:
+                  st.playSound("ItemSound.quest_itemget")
+               st.giveItems(item,int(numItems))
       return
 
 # Quest class and state definition

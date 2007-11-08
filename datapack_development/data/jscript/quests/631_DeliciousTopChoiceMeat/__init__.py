@@ -68,15 +68,21 @@ class Quest (JQuest) :
    if not partyMember: return
    st = partyMember.getQuestState(qn)
    if st :
-        if st.getState() == STARTED :
-            count = st.getQuestItemsCount(TOP_QUALITY_MEAT)
-            if st.getInt("cond") == 1 and count < 120 :
-              st.giveItems(TOP_QUALITY_MEAT,1)
-              if count == 119 :
-                st.playSound("ItemSound.quest_middle")
-                st.set("cond","2")
-              else:
-                st.playSound("ItemSound.quest_itemget")  
+      if st.getState() == STARTED :
+         count = st.getQuestItemsCount(TOP_QUALITY_MEAT)
+         if st.getInt("cond") == 1 and count < 120 :
+            chance = 100 * Config.RATE_DROP_QUEST
+            numItems, chance = divmod(chance,100)
+            if st.getRandom(100) < chance : 
+               numItems += 1
+            if numItems :
+               if count + numItems >= 120 :
+                  numItems = 120 - count
+                  st.playSound("ItemSound.quest_middle")
+                  st.set("cond","2")
+               else:
+                  st.playSound("ItemSound.quest_itemget")
+               st.giveItems(TOP_QUALITY_MEAT,int(numItems))
    return
 
 QUEST       = Quest(631,qn,"Delicious Top Choice Meat")

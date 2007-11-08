@@ -38,37 +38,37 @@ class Quest (JQuest) :
      st.setState(STARTED)
    elif event == "VARNISH" :
      st.takeItems(ORC_GOODS,-1)
-     st.giveItems(VARNISH_ID,30)
+     st.giveItems(VARNISH_ID,int(30*Config.RATE_QUESTS_REWARD))
      st.playSound("ItemSound.quest_finish")
      st.exitQuest(1)
      return
    elif event == "ANIMAL_SKIN" :
      st.takeItems(ORC_GOODS,-1)
-     st.giveItems(ANIMAL_SKIN_ID,40)
+     st.giveItems(ANIMAL_SKIN_ID,int(40*Config.RATE_QUESTS_REWARD))
      st.playSound("ItemSound.quest_finish")
      st.exitQuest(1)
      return
    elif event == "ANIMAL_BONE" :
      st.takeItems(ORC_GOODS,-1)
-     st.giveItems(ANIMAL_BONE_ID,40)
+     st.giveItems(ANIMAL_BONE_ID,int(40*Config.RATE_QUESTS_REWARD))
      st.playSound("ItemSound.quest_finish")
      st.exitQuest(1)
      return
    elif event == "CHARCOAL" :
      st.takeItems(ORC_GOODS,-1)
-     st.giveItems(CHARCOAL_ID,30)
+     st.giveItems(CHARCOAL_ID,int(30*Config.RATE_QUESTS_REWARD))
      st.playSound("ItemSound.quest_finish")
      st.exitQuest(1)
      return
    elif event == "COAL" :
      st.takeItems(ORC_GOODS,-1)
-     st.giveItems(COAL_ID,30)
+     st.giveItems(COAL_ID,int(30*Config.RATE_QUESTS_REWARD))
      st.playSound("ItemSound.quest_finish")
      st.exitQuest(1)
      return
    elif event == "IRON_ORE" :
      st.takeItems(ORC_GOODS,-1)
-     st.giveItems(IRON_ORE_ID,30)
+     st.giveItems(IRON_ORE_ID,int(30*Config.RATE_QUESTS_REWARD))
      st.playSound("ItemSound.quest_finish")
      st.exitQuest(1)
      return

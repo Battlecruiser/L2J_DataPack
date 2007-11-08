@@ -9,7 +9,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "637_ThroughOnceMore"
 
 #Drop rate
-CHANCE=40
+DROP_CHANCE=40
 #Npc
 FLAURON = 32010
 #Items
@@ -58,13 +58,19 @@ class Quest (JQuest) :
    if st :
      if st.getState() == STARTED :
        count = st.getQuestItemsCount(NECROHEART)
-       if st.getInt("cond")==1 and st.getRandom(100)<CHANCE and count<10 :
-          st.giveItems(NECROHEART,1)
-          if count == 9 :
-             st.playSound("ItemSound.quest_middle")
-             st.set("cond","2")
-          else:
-             st.playSound("ItemSound.quest_itemget")
+       if st.getInt("cond") == 1 and count < 10 :
+          chance = DROP_CHANCE * Config.RATE_DROP_QUEST
+          numItems, chance = divmod(chance,100)
+          if st.getRandom(100) < chance : 
+             numItems += 1
+          if numItems :
+             if count + numItems >= 10 :
+                numItems = 10 - count
+                st.playSound("ItemSound.quest_middle")
+                st.set("cond","2")
+             else:
+                st.playSound("ItemSound.quest_itemget")
+             st.giveItems(NECROHEART,1)
    return
 
 QUEST       = Quest(637,qn,"Through the Gate Once More")

@@ -1,5 +1,6 @@
 # Made by disKret
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -72,15 +73,20 @@ class Quest (JQuest) :
    if not partyMember : return
    st = partyMember.getQuestState(qn)
    if st :
-        if st.getState() == STARTED :
-            count = st.getQuestItemsCount(BLOOD_OF_SAINT)
-            if st.getInt("cond") == 1 and count < 300 :
-              st.giveItems(BLOOD_OF_SAINT,1)
-              if count == 299 :
-                st.playSound("ItemSound.quest_middle")
-                st.set("cond","2")
-              else:
-                st.playSound("ItemSound.quest_itemget")  
+     count = st.getQuestItemsCount(BLOOD_OF_SAINT)
+     if st.getInt("cond") == 1 and count < 300 :
+       chance = 100 * Config.RATE_DROP_QUEST
+       numItems, chance = divmod(chance,100)
+       if st.getRandom(100) < chance : 
+          numItems += 1
+       if numItems :
+          if count + numItems >= 300 :
+             numItems = 300 - count
+             st.playSound("ItemSound.quest_middle")
+             st.set("cond","2")
+          else:
+             st.playSound("ItemSound.quest_itemget")   
+          st.giveItems(BLOOD_OF_SAINT,int(numItems))
    return
 
 QUEST       = Quest(626,qn,"A Dark Twilight")
