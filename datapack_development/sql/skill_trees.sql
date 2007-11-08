@@ -13252,7 +13252,7 @@ INSERT INTO skill_trees VALUES (91,350,1,'Physical Mirror',21340000,78);
 INSERT INTO skill_trees VALUES (91,353,1,'Shield Slam',13000000,77);
 INSERT INTO skill_trees VALUES (91,368,1,'Vengeance',13000000,77);
 INSERT INTO skill_trees VALUES (92,328,1,'Wisdom',12500000,76);
-INSERT INTO skill_trees VALUES (92,334,1,'Focus Skill Mastery',64000000,78);
+INSERT INTO skill_trees VALUES (92,334,1,'Focus Skill Mastery',32000000,78);
 INSERT INTO skill_trees VALUES (92,343,1,'Lethal Shot',12500000,76);
 INSERT INTO skill_trees VALUES (92,354,1,'Hamstring Shot',14670000,77);
 INSERT INTO skill_trees VALUES (93,328,1,'Wisdom',12500000,76);
