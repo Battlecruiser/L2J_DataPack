@@ -1,5 +1,6 @@
 # Made by Kerb
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -53,7 +54,7 @@ class Quest (JQuest) :
        EAD_CHANCE = st.getRandom(100)
        st.giveItems(57,5026)
        if EAD_CHANCE <= 50:
-          st.giveItems(956,1)
+          st.giveItems(956,int(1*Config.RATE_QUESTS_REWARD))
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(1)
    return htmltext

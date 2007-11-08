@@ -79,11 +79,15 @@ class Quest (JQuest) :
     partyMembers = [player]
     party = player.getParty()
     if party :
-        partyMembers = party.getPartyMembers().toArray()
-    for player in partyMembers :
-        pst = player.getQuestState(qn)
-        if pst :
-            giveReward(pst,npc)
+       partyMembers = party.getPartyMembers().toArray()
+       for player in partyMembers :
+           pst = player.getQuestState(qn)
+           if pst :
+              giveReward(pst,npc)
+    else :
+       pst = player.getQuestState(qn)
+       if pst :
+          giveReward(pst,npc)
     return
 
 QUEST       = Quest(608,qn,"Slay The Enemy Commander!")

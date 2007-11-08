@@ -2,6 +2,7 @@
 # this script is part of the Official L2J Datapack Project.
 # Visit http://forum.l2jdp.com for more details.
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -82,15 +83,20 @@ class Quest (JQuest) :
       if not partyMember : return
       st = partyMember.getQuestState(qn) 
       if not st : return
-      chance = st.getRandom(100)
       count = st.getQuestItemsCount(VACUALITE_ORE)
-      if CHANCE_FOR_QUEST_ITEMS > chance and count < 50 :
-         st.giveItems(VACUALITE_ORE,1)
-         if count == 49 :
-            st.set("cond","3")
-            st.playSound("ItemSound.quest_middle")
-         else :
-            st.playSound("ItemSound.quest_itemget")
+      if st.getInt("cond") == 2 and count < 50 :
+         chance = CHANCE_FOR_QUEST_ITEMS * Config.RATE_DROP_QUEST
+         numItems, chance = divmod(chance,100)
+         if st.getRandom(100) < chance : 
+            numItems += 1
+         if numItems :
+            if count + numItems >= 50 :
+               numItems = 50 - count
+               st.playSound("ItemSound.quest_middle")
+               st.set("cond","3")
+            else:
+               st.playSound("ItemSound.quest_itemget")   
+            st.giveItems(VACUALITE_ORE,int(numItems)) 
       return
 
 QUEST       = Quest(618,qn,"Into the Flame")

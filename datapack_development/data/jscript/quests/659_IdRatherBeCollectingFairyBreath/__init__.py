@@ -1,5 +1,6 @@
 #Made by Kerb
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -64,9 +65,11 @@ class Quest (JQuest) :
    if not st: return
    npcId = npc.getNpcId()
    if st.getInt("cond") == 1 :
-      chance = st.getRandom(100)
-      if npcId in MOBS and chance < 90 :
-         st.giveItems(FAIRY_BREATH,1)
+      chance = 90 * Config.RATE_DROP_QUEST
+      numItems, chance = divmod(chance,100)
+      if npcId in MOBS and st.getRandom(100) < chance :
+         numItems += 1
+         st.giveItems(FAIRY_BREATH,int(numItems))
          st.playSound("ItemSound.quest_itemget")
    return
 

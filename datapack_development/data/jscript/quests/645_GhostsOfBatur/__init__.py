@@ -42,7 +42,7 @@ class Quest (JQuest) :
       if st.getQuestItemsCount(GRAVE_GOODS) == 180 :
          item,qty = REWARDS[event]
          st.takeItems(GRAVE_GOODS,-1)
-         st.giveItems(item,qty)
+         st.giveItems(item,int(qty*Config.RATE_QUESTS_REWARD))
          st.playSound("ItemSound.quest_finish")
          st.exitQuest(1)
          htmltext = "32017-07.htm"
