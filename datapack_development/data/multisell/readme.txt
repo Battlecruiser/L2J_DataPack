@@ -34,9 +34,11 @@ of this directory a little bit.
 7834.xml -> Quest 343: Under The Shadow Of The Ivory Tower, exchange Orbs
 7897.xml -> Quest 351: BlackSwan, exchange Bills
 
-301660373.xml -> Quest 373: Supplier of Reagents - Wesley
+31522.xml -> Quest 632: Necromancers Request
 
+301660373.xml -> Quest 373: Supplier of Reagents - Wesley
 313880001.xml -> Quest 633: In The Forgotten Village - Exchange Livers
+320540001.xml -> Quest 650: A Broken Dream
 
 310820001.xml -> Varka alliance - Lv1
 310820002.xml -> Varka alliance - Lv2
