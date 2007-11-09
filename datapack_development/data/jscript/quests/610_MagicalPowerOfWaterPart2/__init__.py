@@ -132,32 +132,40 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    npcId = npc.getNpcId()
    if npcId == Ashutar :
+      FindTemplate(Alter).setBusy(False)
       party = player.getParty()
       if party :
          for partyMember in party.getPartyMembers().toArray() :
              pst = partyMember.getQuestState(qn)
              if pst :
-                if pst.getInt("cond") == 2 and pst.getQuestItemsCount(Ice_Heart) < 1 :
-                   FindTemplate(Alter).setBusy(False)
+                if pst.getInt("cond") >= 1 :
+                    if pst.getInt("cond") == 1 :
+                        st.takeItems(Totem2,1)
+                    if pst.getQuestItemsCount(Ice_Heart) < 1 :
+                       pst.giveItems(Ice_Heart,1)
+                       pst.playSound("ItemSound.quest_middle")
+                       pst.set("cond","3")
+                       pst.set("id","3")
+                    if pst.getQuestTimer("Soul of Water Ashutar has despawned") :
+                       pst.getQuestTimer("Soul of Water Ashutar has despawned").cancel()
+      else :
+         pst = player.getQuestState(qn)
+         if pst :
+            if pst.getInt("cond") >= 1 :
+                if pst.getInt("cond") == 1 :
+                    st.takeItems(Totem2,1)
+                if pst.getQuestItemsCount(Ice_Heart) < 1 :
                    pst.giveItems(Ice_Heart,1)
                    pst.playSound("ItemSound.quest_middle")
                    pst.set("cond","3")
                    pst.set("id","3")
+                if pst.getQuestTimer("Soul of Water Ashutar has despawned") :
                    pst.getQuestTimer("Soul of Water Ashutar has despawned").cancel()
-      else :
-         pst = player.getQuestState(qn)
-         if pst :
-            if pst.getInt("cond") == 2 and pst.getQuestItemsCount(Ice_Heart) < 1 :
-               FindTemplate(Alter).setBusy(False)
-               pst.giveItems(Ice_Heart,1)
-               pst.playSound("ItemSound.quest_middle")
-               pst.set("cond","3")
-               pst.set("id","3")
-               pst.getQuestTimer("Soul of Water Ashutar has despawned").cancel()
    elif npcId in Ketra_Orcs :
       st = player.getQuestState(qn)
-      if st.getQuestItemsCount(Ice_Heart) :
-         st.takeItems(Ice_Heart,-1)
+      if st :
+         if st.getQuestItemsCount(Ice_Heart) :
+             st.takeItems(Ice_Heart,-1)
          st.unset("cond")
          st.unset("id")
          st.exitQuest(1)

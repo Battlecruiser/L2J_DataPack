@@ -26,7 +26,9 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
  
- def onEvent (self,event,st) :
+ def onAdvEvent (self, event, npc, player) :
+     st = player.getQuestState(qn)
+     if not st: return
      htmltext = event
      if event == "30385-03.htm" :
        st.set("cond","1")
@@ -54,6 +56,7 @@ class Quest (JQuest) :
        st.giveItems(TOTEM,1)
        st.set("cond","6")
        st.playSound("ItemSound.quest_middle")
+       npc.reduceCurrentHp(9999999,npc)
      return htmltext
 
  def onTalk (self,npc,player):
