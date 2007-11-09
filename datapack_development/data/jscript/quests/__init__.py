@@ -284,6 +284,7 @@ __all__ = [
 '628_HuntGoldenRam',
 '629_CleanUpTheSwampOfScreams',
 '631_DeliciousTopChoiceMeat',
+'632_NecromancersRequest',
 '633_InTheForgottenVillage',
 '634_InSearchofDimensionalFragments',
 '635_InTheDimensionalRift',
