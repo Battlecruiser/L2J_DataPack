@@ -106,7 +106,10 @@ def takeBeginnerArcanas(st):
    st.set("Beginner_Arcanas",str(st.getInt("Beginner_Arcanas")-1))
 
 class Quest (JQuest) :
-   def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+   def __init__(self,id,name,descr): 
+      JQuest.__init__(self,id,name,descr) 
+      # list to hold the player and pet instance of the player in the duel and an "isFoul" flag, indexed by npcId 
+      self.inProgressDuelMobs = {} # [player, player.getPet(), True/False]
 
    def onEvent (self,event,st) :
       htmltext = event
@@ -292,28 +295,40 @@ class Quest (JQuest) :
 
    # on the first attack, the stat is in battle... anytime gives crystal and set stat
    def onAttack (self, npc, player,damage,isPet):
-      st = player.getQuestState(qn)
-      if not st : return 
-      if st.getState() != PROGRESS : return 
-
       npcId = npc.getNpcId()
-      # var means the variable of the SummonerManager, the rest are all Crystalls which mark the status
+      st = player.getQuestState(qn)
       if npcId in DROPLIST_SUMMON.keys() :
          var,start,progress,foul,defeat,victory = DROPLIST_SUMMON[npcId]
-         if int(st.get(var)) == 2:
-            st.set(var,"3")
-            st.giveItems(progress,1)
-            st.takeItems(start,1)
-            st.playSound("Itemsound.quest_itemget")
+         # check if this npc has been attacked before
+         if self.inProgressDuelMobs.has_key(npcId) :
+            if self.inProgressDuelMobs[npcId][2] : # if a foul already occured, skip all other checks
+                return
+            # check if the attacker is the same pet as the one that attacked before.
+            # if not, mark this as a foul.
+            if not isPet :
+               self.inProgressDuelMobs[npcId][2] = True
+            elif player.getPet() != self.inProgressDuelMobs[npcId][1] :
+               self.inProgressDuelMobs[npcId][2] = True
+         # if the npc had never before been attacked, check if it's time to mark a duel in progress
+         elif not st : return
+         elif st.getState() != PROGRESS : return
+         elif not isPet and st.getInt(var) == 2: self.inProgressDuelMobs[npcId] = [player, player.getPet(), True] # foul
+         else :
+            # var means the variable of the SummonerManager, the rest are all Crystalls which mark the status
+            if st.getInt(var) == 2:
+               st.set(var,"3")
+               st.giveItems(progress,1)
+               st.takeItems(start,1)
+               st.playSound("Itemsound.quest_itemget")
+               self.inProgressDuelMobs[npcId] = [player, player.getPet(), False] #mark the attack
       return
 
    def onKill(self,npc,player,isPet):
+      npcId = npc.getNpcId() 
       st = player.getQuestState(qn)
-      if not st : return 
-      if st.getState() != PROGRESS : return 
-
-      npcId = npc.getNpcId()                    # this part is just for laras parts
+      # this part is just for laras parts.  It is only available to players who are doing the quest
       if npcId in DROPLIST_LARA.keys() :
+         if not st : return
          random = st.getRandom(100)
          var, value, chance, item = DROPLIST_LARA[npcId]
          count = st.getQuestItemsCount(item)
@@ -323,24 +338,47 @@ class Quest (JQuest) :
                st.playSound("Itemsound.quest_middle")
             else:
                st.playSound("Itemsound.quest_itemget")
-      elif npcId in DROPLIST_SUMMON.keys():             # if a summon dies
-         # var means the variable of the SummonerManager, the rest are all Crystalls which mark the status
+      # Part for npc summon death (duels part).  Some of this must run for all players.
+      else :  # if npcId in DROPLIST_SUMMON.keys():
          var,start,progress,foul,defeat,victory = DROPLIST_SUMMON[npcId]
-         if int(st.get(var)) == 3:
-            attackerList = npc.getAttackByList()
-            attackerCount = npc.getAttackByList().size()
-            isName = 1     # first entry in the droplist is a name (string).  Skip it.
-            for item in DROPLIST_SUMMON[npcId] :        # take all crystal of this summoner away from the player
-               if isName != 1:
-                  st.takeItems(item,-1)
-               isName = 0
-            if attackerCount == 1 and attackerList.contains(player.getPet()):
-               st.set(var,"6")                        
-               st.giveItems(victory,1)       # if he wons without cheating, set stat won and give victory crystal
-               st.playSound("Itemsound.quest_middle")
-            else:
-               st.set(var,"5")               # if the player cheats, give foul crystal and set stat to cheat
-               st.giveItems(foul,1)
+         # 1-hit kill and bad synch may make onKill run before onAttack, having no previous attacker
+         # If the attacker is the pet of a player who is doing the quest, mark it as a valid hit.
+         if not self.inProgressDuelMobs.has_key(npcId) and isPet and st :
+            if st.getInt(var) == 2:
+               self.inProgressDuelMobs[npcId] = [player, player.getPet(), False]
+
+         # if the killed mob is now in the progress list, there is work to be done...
+         if self.inProgressDuelMobs.has_key(npcId) :
+            # check if the attacker is the same pet as the one that attacked before.
+            # if not, mark this as a foul.
+            if not isPet :
+               self.inProgressDuelMobs[npcId][2] = True
+            elif player.getPet() != self.inProgressDuelMobs[npcId][1] :
+               self.inProgressDuelMobs[npcId][2] = True
+
+            # if a foul has NOT occured, give the player the victory crystal
+            if not self.inProgressDuelMobs[npcId][2] :
+               # var means the variable of the SummonerManager, the rest are all Crystalls which mark the status
+               var,start,progress,foul,defeat,victory = DROPLIST_SUMMON[npcId]
+               if st.getInt(var) == 3:
+                  isName = 1     # first entry in the droplist is a name (string).  Skip it.
+                  for item in DROPLIST_SUMMON[npcId] :        # take all crystal of this summoner away from the player
+                     if isName != 1:
+                         st.takeItems(item,-1)
+                     isName = 0
+                  st.set(var,"6")
+                  st.giveItems(victory,1)       # if he wons without cheating, set stat won and give victory crystal
+                  st.playSound("Itemsound.quest_middle")
+            # if a foul has occured, find the player who had the duel in progress and give a foul crystal
+            else :
+               foulPlayer = self.inProgressDuelMobs[npcId][0]
+               if foulPlayer :  # if not null (perhaps the player went offline)...
+                  st = foulPlayer.getQuestState(qn)
+                  if st :  # the original player has not aborted the quest
+                     st.set(var,"5")               # if the player cheats, give foul crystal and set stat to cheat
+                     st.giveItems(foul,1)
+            # finally, clear the inProgress mob info.
+            self.inProgressDuelMobs.pop(npcId)
       return
 
 QUEST       = Quest(230,qn,"Test Of Summoner")
