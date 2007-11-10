@@ -1128,11 +1128,14 @@
   </for>
 </skill>
 <skill id="2099" levels="1" name="Escape: 5 minutes">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="100000"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="300000"/>
+  <set name="skillTime" val="300000"/>
+  <set name="skillType" val="RECALL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
