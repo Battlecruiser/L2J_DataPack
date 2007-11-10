@@ -1,11 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="2100" levels="1" name="Escape: 1 second">
-  <set name="target" val="TARGET_NONE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="1000"/>
   <set name="skillTime" val="1000"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="RECALL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
