@@ -329,6 +329,7 @@ class Quest (JQuest) :
       # this part is just for laras parts.  It is only available to players who are doing the quest
       if npcId in DROPLIST_LARA.keys() :
          if not st : return
+         if st.getState() == COMPLETED : return
          random = st.getRandom(100)
          var, value, chance, item = DROPLIST_LARA[npcId]
          count = st.getQuestItemsCount(item)
