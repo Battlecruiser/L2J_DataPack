@@ -177,16 +177,6 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <mul val='1.25' order='0x30' stat='maxHp'/>
-    <mul val='1.30' order='0x30' stat='maxMp'/>
-    <mul val='1.50' order='0x30' stat='maxCp'/>
-    <mul val='1.33' order='0x30' stat='rShld'/>
-    <mul val='1.09' order='0x30' stat='reflectDam'/>
-    <skill onCrit='1' id='3579' lvl='1' chance='4'/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpPhysSkillsDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6612' name="infinity_cleaver">
@@ -198,16 +188,6 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <mul val='1.25' order='0x30' stat='maxHp'/>
-    <mul val='1.50' order='0x30' stat='maxCp'/>
-    <add val='504' order='0x40' stat='cAtk'/>
-    <add val='78.7' order='0x40' stat='rCrit'/>
-    <add val="10" order="0x40" stat="reflectSkillPhysic"/>
-    <add val="10" order="0x40" stat="reflectSkillMagic"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpPhysSkillsDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6613' name="infinity_axe">
@@ -219,15 +199,6 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <mul val='1.25' order='0x30' stat='maxHp'/>
-    <mul val='1.30' order='0x30' stat='maxMp'/>
-    <mul val='1.39' order='0x30' stat='rShld'/>
-    <mul val='1.09' order='0x30' stat='reflectDam'/>
-    <skill onCrit='1' id='3581' lvl='1' chance='5'/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpPhysSkillsDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6614' name="infinity_rod">
@@ -239,15 +210,6 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <mul val='1.30' order='0x30' stat='maxMp'/>
-    <mul val='1.50' order='0x30' stat='maxCp'/>
-    <mul val='1.15' order='0x30' stat='mAtkSpd'/>
-    <add val='0.51' order='0x40' stat='regMp'/>
-    <!-- Missing 3% chance to full heal target's HP when "good" magic is cast -->
-    <!-- Enhances damage to target during PvP -->
-    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpPhysSkillsDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6615' name="infinity_crusher">
@@ -259,16 +221,6 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <mul val='1.25' order='0x30' stat='maxHp'/>
-    <mul val='1.50' order='0x30' stat='maxCp'/>
-    <mul val='1.07' order='0x30' stat='pAtkSpd'/>
-    <add val="10" order="0x40" stat="reflectSkillPhysic"/>
-    <add val="10" order="0x40" stat="reflectSkillMagic"/>
-    <skill onCrit='1' id='3584' lvl='1' chance='25'/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpPhysSkillsDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6616' name="infinity_scepter">
@@ -280,17 +232,6 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <mul val='1.30' order='0x30' stat='maxMp'/>
-    <mul val='1.50' order='0x30' stat='maxCp'/>
-    <add val='29.67' order='0x40' stat='mAtk'/>
-    <mul val='1.54' order='0x30' stat='mCritRate'/>
-    <mul val='0.96' order='0x30' stat='MpConsumeRate'/>
-    <sub val='106' order='0x40' stat='cancel'/>
-    <!-- Missing 3% chance to full heal target's HP when "good" magic is cast -->
-    <!-- Enhances damage to target during PvP -->
-    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpPhysSkillsDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6617' name="infinity_stinger">
@@ -302,21 +243,6 @@
     <set val='433' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <mul val='1.30' order='0x30' stat='maxMp'/>
-    <mul val='1.50' order='0x30' stat='maxCp'/>
-    <mul val='1.03' order='0x30' stat='pAtkSpd'/>
-    <add val='0.51' order='0x40' stat='regMp'/>
-    <add order='0x40' stat='cAtk' val='220'>
-      <and>
-        <player behind='True'/>
-      </and>
-    </add>
-    <mul val='1.02' order='0x30' stat='absorbDam'/>
-    <skill onCrit='1' id='3590' lvl='1' chance='5'/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpPhysSkillsDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6618' name="infinity_fang">
@@ -328,15 +254,6 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <mul val='1.25' order='0x30' stat='maxHp'/>
-    <mul val='1.30' order='0x30' stat='maxMp'/>
-    <mul val='1.50' order='0x30' stat='maxCp'/>
-    <add val='3.15' order='0x40' stat='rEvas'/>
-    <skill onCrit='1' id='3588' lvl='1' chance='25'/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpPhysSkillsDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6619' name="infinity_bow">
@@ -348,13 +265,6 @@
     <set val='293' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <mul val='1.30' order='0x30' stat='maxMp'/>
-    <mul val='1.50' order='0x30' stat='maxCp'/>
-    <skill onCrit='1' id='3594' lvl='1' chance='7'/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpPhysSkillsDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6620' name="infinity_wing">
@@ -366,17 +276,6 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <mul val='1.25' order='0x30' stat='maxHp'/>
-    <mul val='1.30' order='0x30' stat='maxMp'/>
-    <mul val='1.50' order='0x30' stat='maxCp'/>
-    <add val='78.7' order='0x40' stat='rCrit'/>
-    <add val="10" order="0x40" stat="reflectSkillPhysic"/>
-    <add val="10" order="0x40" stat="reflectSkillMagic"/>
-    <skill onCrit='1' id='3586' lvl='1' chance='10'/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpPhysSkillsDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6621' name="infinity_spear">
@@ -389,17 +288,6 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <mul val='1.25' order='0x30' stat='maxHp'/>
-    <mul val='1.50' order='0x30' stat='maxCp'/>
-    <mul val='1.07' order='0x30' stat='pAtkSpd'/>
-    <add val='4.89' order='0x40' stat='accCombat'/>
-    <!-- Missing 10% chance to cancel each buff from target on a critical hit (for comparison, Cancel is 25% but Cancel also relies on M.Atk. vs. M.Def. while this weapon does not) -->
-    <add val="10" order="0x40" stat="reflectSkillPhysic"/>
-    <add val="10" order="0x40" stat="reflectSkillMagic"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpPhysSkillsDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
   </for>
 </item>
 <item id='6678' name="sealed_imperial_crusader_shield">

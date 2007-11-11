@@ -1335,17 +1335,23 @@
   </for>
 </skill>
 <skill id="3578" levels="1" name="Special Ability: Infinity Blade">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Decreases enemy's P. Def. during critical attacks. Also increases MaxHP, MaxMP, MaxCP, shield defense capability and damage inflicted during PvP.  Reflects some of the damage received back to the enemy (does not include damage from skill or range attacks).
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="maxHp" val="1.25"/> <!-- HP +25% -->
+    <mul order="0x30" stat="maxMp" val="1.30"/> <!-- MP +30% -->
+    <mul order="0x30" stat="maxCp" val="1.50"/> <!-- CP +50% -->
+    <mul order="0x30" stat="sDef" val="1.33"/> <!-- Shield P.Def. +33% -->
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <add order="0x40" stat="reflectDam" val="9"/> <!-- Reflect Damage 9% -->
+    <skill onCrit="1" id="3579" lvl="1" chance="4"/> <!-- on a critical hit the target's P.Def. is dropped by 23% at a 4% chance (MEN resists it) -->
   </for>
 </skill>
 <skill id="3579" levels="1" name="Decrease P. Def.">
@@ -1367,17 +1373,22 @@
   </for>
 </skill>
 <skill id="3580" levels="1" name="Special Ability: Infinity Axe">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Dazzles the enemy to distraction during a critical attack. Also increases MaxHP, MaxMP, MaxCP, shield defense capability and damage inflicted during PvP. Reflects some of the damage received back to the enemy (does not include damage from skill or range attacks).
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="maxHp" val="1.25"/> <!-- HP +25% -->
+    <mul order="0x30" stat="maxMp" val="1.30"/> <!-- MP +30% -->
+    <mul order="0x30" stat="rShld" val="1.39"/> <!-- Shield Block Rate +39% -->
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <add order="0x40" stat="reflectDam" val="9"/> <!-- Reflect Damage 9% -->
+    <skill onCrit="1" id="3581" lvl="1" chance="5"/> <!-- chance of Curse Discord effect on a critical hit -->
   </for>
 </skill>
 <skill id="3581" levels="1" name="Discord">
@@ -1397,31 +1408,43 @@
   </for>
 </skill>
 <skill id="3582" levels="1" name="Special Ability: Infinity Cleaver">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Increases critical attack success rate/power, MaxHP, MaxCP and damage inflicted during PvP. Inflicts extra damage on critical attack. Reflects debuff attack back on enemy.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="cAtk" val="504"/> <!-- P.Atk. +504 on a critical hit -->
+    <mul order="0x30" stat="maxHp" val="1.25"/> <!-- HP +25% -->
+    <mul order="0x30" stat="maxCp" val="1.50"/> <!-- CP +50% -->
+    <add order="0x40" stat="rCrit" val="78.7"/> <!-- Critical +78.7 -->
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <add order="0x40" stat="reflectSkillPhysic" val="10"/> <!-- Reflect Skills 10% of the time -->
+    <add order="0x40" stat="reflectSkillMagic" val="10"/> <!-- Reflect Skills 10% of the time -->
   </for>
 </skill>
 <skill id="3583" levels="1" name="Special Ability: Infinity Crusher">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Throws enemy into a state of shock during a critical attack. Increases MaxHP, MaxCP, Atk. Spd. and damage inflicted during PvP. Reflects debuff attack back on enemy.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="maxHp" val="1.25"/> <!-- HP +25% -->
+    <mul order="0x30" stat="maxCp" val="1.50"/> <!-- CP +50% -->
+    <mul order="0x30" stat="pAtkSpd" val="1.07"/> <!-- Atk. Spd. +7% -->
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <add order="0x40" stat="reflectSkillPhysic" val="10"/> <!-- Reflect Skills 10% of the time -->
+    <add order="0x40" stat="reflectSkillMagic" val="10"/> <!-- Reflect Skills 10% of the time -->
+    <skill onCrit="1" id="3584" lvl="1" chance="25"/> <!-- 25% chance to stun target on a critical hit (CON resists it) -->
   </for>
 </skill>
 <skill id="3584" levels="1" name="Shock">
@@ -1442,18 +1465,25 @@
     </effect>
   </for>
 </skill>
-<skill id="3585" levels="1" name="Infinity Wing">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Blocks enemy's ability to use physical skills during a critical attack. Increases MaxHP, MaxMP, MaxCP, critical attack rate and damage inflicted during PvP. Reflects debuff attack back on enemy.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="3585" levels="1" name="Special Ability: Infinity Wing">
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="maxHp" val="1.25"/> <!-- HP +25% -->
+    <mul order="0x30" stat="maxMp" val="1.30"/> <!-- MP +30% -->
+    <mul order="0x30" stat="maxCp" val="1.50"/> <!-- CP +50% -->
+    <add order="0x40" stat="rCrit" val="78.7"/> <!-- Critical +78.7 -->
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <add order="0x40" stat="reflectSkillPhysic" val="10"/> <!-- Reflect Skills 10% of the time -->
+    <add order="0x40" stat="reflectSkillMagic" val="10"/> <!-- Reflect Skills 10% of the time -->
+    <skill onCrit="1" id="3586" lvl="1" chance="10"/> <!-- 10% chance to inflict Physical Skill Silence on a critical hit (MEN resists it) -->
   </for>
 </skill>
 <skill id="3586" levels="1" name="Physical Skill Restraint">
@@ -1473,17 +1503,24 @@
   </for>
 </skill>
 <skill id="3587" levels="1" name="Special Ability: Infinity Fang">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Throws the enemy into a state of shock during a critical attack. Increases MaxHP, MaxMP, MaxCP, Evasion and damage inflicted during PvP. Reflects debuff attack back on enemy.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="maxHp" val="1.25"/> <!-- HP +25% -->
+    <mul order="0x30" stat="maxMp" val="1.30"/> <!-- MP +30% -->
+    <mul order="0x30" stat="maxCp" val="1.50"/> <!-- CP +50% -->
+    <add order="0x40" stat="rEvas" val="3.15"/> <!-- Evasion +3.15 -->
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <add order="0x40" stat="reflectSkillPhysic" val="10"/> <!-- Reflect Skills 10% of the time -->
+    <add order="0x40" stat="reflectSkillMagic" val="10"/> <!-- Reflect Skills 10% of the time -->
+    <skill onCrit="1" id="3588" lvl="1" chance="25"/> <!-- 25% chance to stun target on a critical hit (CON resists it) -->
   </for>
 </skill>
 <skill id="3588" levels="1" name="Shock">
@@ -1505,17 +1542,28 @@
   </for>
 </skill>
 <skill id="3589" levels="1" name="Special Ability: Infinity Stinger">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Blocks enemy's ability to use magic skills during a critical attack. Increases MaxMP, MaxCP, Atk. Spd., MP regeneration rate, critical attack rate when attacking the enemy from behind, and damage inflicted during PvP. Restores HP by using some of the damage inflicted upon the enemy (does not include damage from skill or range attacks).
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="maxMp" val="1.30"/> <!-- MP +30% -->
+    <mul order="0x30" stat="maxCp" val="1.50"/> <!-- CP +50% -->
+    <mul order="0x30" stat="pAtkSpd" val="1.03"/> <!-- Atk. Spd. +3% -->
+    <add order="0x40" stat="regMp" val="0.51"/> <!-- MP regen per tick +0.51 -->
+    <add order="0x40" stat="rCrit" val="220"> <!-- Critical +220 from behind target -->
+      <and>
+        <player behind="True"/>
+      </and>
+    </add>
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="absorbDam" val="1.02"/> <!-- Vampiric Rage effect 2% -->
+    <skill onCrit="1" id="3590" lvl="1" chance="5"/> <!-- 5% chance to Silence target on a critical hit (MEN resists) -->
   </for>
 </skill>
 <skill id="3590" levels="1" name="Silence">
@@ -1535,17 +1583,24 @@
   </for>
 </skill>
 <skill id="3591" levels="1" name="Special Ability: Infinity Spear">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      During a critical attack, this ability removes one or more of the enemy's buffs. It increases the character's Maximum HP, Maximum CP, Atk. Spd., and Accuracy, and gives a bonus to damage inflicted on an enemy during PvP. It reflects debuffs targeted upon the character back upon the enemy. It enables the character to attack multiple enemies.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="maxHp" val="1.25"/> <!-- HP +25% -->
+    <mul order="0x30" stat="maxCp" val="1.50"/> <!-- CP +50% -->
+    <mul order="0x30" stat="pAtkSpd" val="1.07"/> <!-- Atk. Spd. +7% -->
+    <add order="0x40" stat="accCombat" val="4.89"/> <!-- Accuracy +4.89 -->
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <add order="0x40" stat="reflectSkillPhysic" val="10"/> <!-- Reflect Skills 10% of the time -->
+    <add order="0x40" stat="reflectSkillMagic" val="10"/> <!-- Reflect Skills 10% of the time -->
+    <!-- Missing 10% chance to cancel each buff from target on a critical hit (for comparison, Cancel is 25% but Cancel also relies on M.Atk. vs. M.Def. while this weapon does not) -->
   </for>
 </skill>
 <skill id="3592" levels="1" name="Dispell">
@@ -1563,17 +1618,20 @@
   </for>
 </skill>
 <skill id="3593" levels="1" name="Special Ability: Infinity Bow">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Decreases enemy's Speed during a critical attack. Increases MaxMP, MaxCP and damage inflicted during PvP. The skill re-use time is shortened, and MP consumption is reduced.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="maxMp" val="1.30"/> <!-- MP +30% -->
+    <mul order="0x30" stat="maxCp" val="1.50"/> <!-- CP +50% -->
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <skill onCrit="1" id="3594" lvl="1" chance="7"/> <!-- 7% chance to inflict slow (-50% speed) on a critical hit (MEN resists it) -->
   </for>
 </skill>
 <skill id="3594" levels="1" name="Slow">
@@ -1595,17 +1653,24 @@
   </for>
 </skill>
 <skill id="3595" levels="1" name="Special Ability: Infinity Scepter">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      When using good magic, regenerates HP by 100%. Also increases MaxHP, MaxCP, M. Atk., damage magic critical attack rate and damage inflicted during PvP. When casting magic, reduces MP consumption and cancel rate.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="maxMp" val="1.30"/> <!-- MP +30% -->
+    <mul order="0x30" stat="maxCp" val="1.50"/> <!-- CP +50% -->
+    <add order="0x40" stat="mAtk" val="29.67"/> <!-- M.Atk. +29.67 -->
+    <mul order="0x30" stat="mCritRate" val="1.54"/> <!-- Magic Critical Rate +54% -->
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="MpConsumeRate" val="0.96"/> <!-- Magic MP Cost -4% -->
+    <sub order="0x40" stat="cancel" val="106"/> <!-- Chance of Magic Cancelation -106 -->
+    <!-- Missing 3% chance to full heal target's HP when "good" magic is cast -->
   </for>
 </skill>
 <skill id="3596" levels="1" name="Full Recover">
@@ -1624,17 +1689,22 @@
   </for>
 </skill>
 <skill id="3597" levels="1" name="Special Ability: Infinity Rod">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      When using good magic, regenerates HP by 100%. Also increases MaxHP, MaxCP, Casting Spd., MP regeneration rate and damage inflicted during PvP.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="maxMp" val="1.30"/> <!-- MP +30% -->
+    <mul order="0x30" stat="maxCp" val="1.50"/> <!-- CP +50% -->
+    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
+    <add order="0x40" stat="regMp" val="0.51"/> <!-- MP regen per tick +0.51 -->
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
+    <!-- Missing 3% chance to full heal target's HP when "good" magic is cast -->
   </for>
 </skill>
 <skill id="3598" levels="1" name="Full Recover">
