@@ -1351,7 +1351,6 @@
     <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <add order="0x40" stat="reflectDam" val="9"/> <!-- Reflect Damage 9% -->
-    <skill onCrit="1" id="3579" lvl="1" chance="4"/> <!-- on a critical hit the target's P.Def. is dropped by 23% at a 4% chance (MEN resists it) -->
   </for>
 </skill>
 <skill id="3579" levels="1" name="Decrease P. Def.">
@@ -1388,7 +1387,6 @@
     <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <add order="0x40" stat="reflectDam" val="9"/> <!-- Reflect Damage 9% -->
-    <skill onCrit="1" id="3581" lvl="1" chance="5"/> <!-- chance of Curse Discord effect on a critical hit -->
   </for>
 </skill>
 <skill id="3581" levels="1" name="Discord">
@@ -1444,7 +1442,6 @@
     <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <add order="0x40" stat="reflectSkillPhysic" val="10"/> <!-- Reflect Skills 10% of the time -->
     <add order="0x40" stat="reflectSkillMagic" val="10"/> <!-- Reflect Skills 10% of the time -->
-    <skill onCrit="1" id="3584" lvl="1" chance="25"/> <!-- 25% chance to stun target on a critical hit (CON resists it) -->
   </for>
 </skill>
 <skill id="3584" levels="1" name="Shock">
@@ -1483,7 +1480,6 @@
     <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <add order="0x40" stat="reflectSkillPhysic" val="10"/> <!-- Reflect Skills 10% of the time -->
     <add order="0x40" stat="reflectSkillMagic" val="10"/> <!-- Reflect Skills 10% of the time -->
-    <skill onCrit="1" id="3586" lvl="1" chance="10"/> <!-- 10% chance to inflict Physical Skill Silence on a critical hit (MEN resists it) -->
   </for>
 </skill>
 <skill id="3586" levels="1" name="Physical Skill Restraint">
@@ -1520,7 +1516,6 @@
     <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <add order="0x40" stat="reflectSkillPhysic" val="10"/> <!-- Reflect Skills 10% of the time -->
     <add order="0x40" stat="reflectSkillMagic" val="10"/> <!-- Reflect Skills 10% of the time -->
-    <skill onCrit="1" id="3588" lvl="1" chance="25"/> <!-- 25% chance to stun target on a critical hit (CON resists it) -->
   </for>
 </skill>
 <skill id="3588" levels="1" name="Shock">
@@ -1563,7 +1558,6 @@
     <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="absorbDam" val="1.02"/> <!-- Vampiric Rage effect 2% -->
-    <skill onCrit="1" id="3590" lvl="1" chance="5"/> <!-- 5% chance to Silence target on a critical hit (MEN resists) -->
   </for>
 </skill>
 <skill id="3590" levels="1" name="Silence">
@@ -1631,7 +1625,6 @@
     <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
-    <skill onCrit="1" id="3594" lvl="1" chance="7"/> <!-- 7% chance to inflict slow (-50% speed) on a critical hit (MEN resists it) -->
   </for>
 </skill>
 <skill id="3594" levels="1" name="Slow">
