@@ -882,7 +882,7 @@
   </for>
   <enchant1for>
     <effect count="1" name="Buff" time="15" val="0" stackOrder="23" stackType="pAtkSpdDown">
-      <sub order="0x40" stat="pAtkSpd" val="23"/>
+      <mul order="0x30" stat="pAtkSpd" val="0.77"/>
     </effect>
   </enchant1for>
   <enchant2for>
