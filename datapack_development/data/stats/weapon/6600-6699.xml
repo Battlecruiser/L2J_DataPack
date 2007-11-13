@@ -177,6 +177,7 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <skill onCrit='1' id='3579' lvl='1' chance='4'/> <!-- on a critical hit the target's P.Def. is dropped by 23% at a 4% chance (MEN resists it) -->
   </for>
 </item>
 <item id='6612' name="infinity_cleaver">
@@ -199,6 +200,7 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <skill onCrit='1' id='3581' lvl='1' chance='5'/> <!-- chance of Curse Discord effect on a critical hit -->
   </for>
 </item>
 <item id='6614' name="infinity_rod">
@@ -221,6 +223,7 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <skill onCrit='1' id='3584' lvl='1' chance='25'/> <!-- 25% chance to stun target on a critical hit (CON resists it) -->
   </for>
 </item>
 <item id='6616' name="infinity_scepter">
@@ -243,6 +246,7 @@
     <set val='433' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <skill onCrit='1' id='3590' lvl='1' chance='5'/> <!-- 5% chance to Silence target on a critical hit (MEN resists) -->
   </for>
 </item>
 <item id='6618' name="infinity_fang">
@@ -254,6 +258,7 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <skill onCrit='1' id='3588' lvl='1' chance='25'/> <!-- 25% chance to stun target on a critical hit (CON resists it) -->
   </for>
 </item>
 <item id='6619' name="infinity_bow">
@@ -265,6 +270,7 @@
     <set val='293' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <skill onCrit='1' id='3594' lvl='1' chance='7'/> <!-- 7% chance to inflict slow (-50% speed) on a critical hit (MEN resists it) -->
   </for>
 </item>
 <item id='6620' name="infinity_wing">
@@ -276,6 +282,7 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <skill onCrit='1' id='3586' lvl='1' chance='10'/> <!-- 10% chance to inflict Physical Skill Silence on a critical hit (MEN resists it) -->
   </for>
 </item>
 <item id='6621' name="infinity_spear">
