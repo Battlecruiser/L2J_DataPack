@@ -104,7 +104,6 @@
   <set name="skillTime" val="1000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="15000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
@@ -461,7 +460,6 @@
   <set name="skillType" val="AGGREDUCE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="60000"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
@@ -1203,7 +1201,6 @@
   <set name="skillTime" val="1080"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="9000"/>
   <set name="ignoreShld" val="true"/>
   <enchant1 name="effectPower" val="#ench1effPower"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
@@ -1608,11 +1605,6 @@
   1640 1680 1720 1760 1800 1840 1880 1920 1960 2000
   2040 2080 2120 2160 2200 2240 2280 2320 2360 2400
   </table>
-  <table name="#buffDuration">
-  1240000 1280000 1320000 1360000 1400000 1440000 1480000 1520000 1560000 1600000
-  1640000 1680000 1720000 1760000 1800000 1840000 1880000 1920000 1960000 2000000
-  2040000 2080000 2120000 2160000 2200000 2240000 2280000 2320000 2360000 2400000
-  </table>
   <table name="#ench2MpConsume">
   20 20 19 19 19 18 18 18 17 17
   17 16 16 16 15 15 15 14 14 14
@@ -1637,11 +1629,9 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
-  <enchant1 name="buffDuration" val="#buffDuration"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
@@ -1664,7 +1654,6 @@
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="303"/>
@@ -1685,7 +1674,6 @@
   <set name="skillTime" val="2000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="268"/>
@@ -1720,7 +1708,6 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
@@ -1744,7 +1731,6 @@
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="60000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
@@ -1763,7 +1749,6 @@
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="495"/>
@@ -1797,7 +1782,6 @@
   <set name="skillTime" val="1360"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="9000"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="effectType" val="STUN"/>
@@ -1821,7 +1805,6 @@
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="300000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
@@ -1842,7 +1825,6 @@
   <set name="skillTime" val="2000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="204"/>
@@ -1882,7 +1864,6 @@
   <set name="skillTime" val="1833"/>
   <set name="skillType" val="POISON"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="30000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="effectType" val="PDAM"/>
@@ -1903,11 +1884,6 @@
   1240 1280 1320 1360 1400 1440 1480 1520 1560 1600
   1640 1680 1720 1760 1800 1840 1880 1920 1960 2000
   2040 2080 2120 2160 2200 2240 2280 2320 2360 2400
-  </table>
-  <table name="#buffDuration">
-  1240000 1280000 1320000 1360000 1400000 1440000 1480000 1520000 1560000 1600000
-  1640000 1680000 1720000 1760000 1800000 1840000 1880000 1920000 1960000 2000000
-  2040000 2080000 2120000 2160000 2200000 2240000 2280000 2320000 2360000 2400000
   </table>
   <table name="#ench2MpConsume">
   19 19 19 18 18 18 18 17 17 17
@@ -1933,11 +1909,9 @@
   <set name="skillType" val="REFLECT"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
-  <enchant1 name="buffDuration" val="#buffDuration"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
@@ -1960,7 +1934,6 @@
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="379"/>
@@ -1980,7 +1953,6 @@
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="600000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="549"/>
@@ -2006,7 +1978,6 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
@@ -2040,7 +2011,6 @@
   <set name="skillTime" val="1200"/>
   <set name="skillType" val="STUN"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="9000"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <enchant1 name="reuseDelay" val="#ench1Reuse"/>
@@ -2070,7 +2040,6 @@
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="90000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
@@ -2130,7 +2099,6 @@
   <set name="skillTime" val="1604"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="30000"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <enchant1 name="power" val="#ench1Power"/>
@@ -2162,7 +2130,6 @@
   <set name="skillTime" val="1080"/>
   <set name="skillType" val="BLEED"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="20000"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <enchant1 name="mpConsume" val="#ench1MpConsume"/>
@@ -2200,7 +2167,6 @@
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="60000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <enchant1 name="power" val="#ench1Power"/>
@@ -2243,11 +2209,6 @@
   1640 1680 1720 1760 1800 1840 1880 1920 1960 2000
   2040 2080 2120 2160 2200 2240 2280 2320 2360 2400
   </table>
-  <table name="#buffDuration">
-  1240000 1280000 1320000 1360000 1400000 1440000 1480000 1520000 1560000 1600000
-  1640000 1680000 1720000 1760000 1800000 1840000 1880000 1920000 1960000 2000000
-  2040000 2080000 2120000 2160000 2200000 2240000 2280000 2320000 2360000 2400000
-  </table>
   <table name="#ench2MpConsume">
   20 20 19 19 19 18 18 18 17 17
   17 16 16 16 15 15 15 14 14 14
@@ -2272,11 +2233,9 @@
   <set name="skillTime" val="1500"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
-  <enchant1 name="buffDuration" val="#buffDuration"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
