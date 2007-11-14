@@ -875,6 +875,7 @@
 <skill id="323" levels="1" name="Quiver of Arrow: Grade A">
   <set name="mpConsume" val="366"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="3000"/>
   <set name="skillTime" val="3000"/>
   <set name="skillType" val="CREATE_ITEM"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -891,6 +892,7 @@
 <skill id="324" levels="1" name="Quiver of Arrow: Grade S">
   <set name="mpConsume" val="398"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="3000"/>
   <set name="skillTime" val="3000"/>
   <set name="skillType" val="CREATE_ITEM"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1290,8 +1292,8 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="reuseDelay" val="30000"/>
-  <set name="skillTime" val="1800"/>
-  <set name="hitTime" val="1800"/>
+  <set name="skillTime" val="1700"/>
+  <set name="hitTime" val="1700"/>
   <set name="SSBoost" val="2.0"/>
   <set name="baseCritRate" val="15"/>
   <for>
@@ -1632,8 +1634,8 @@
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="15000"/>
-  <set name="skillTime" val="2000"/>
-  <set name="hitTime" val="2000"/>
+  <set name="skillTime" val="1900"/>
+  <set name="hitTime" val="1900"/>
   <set name="ignoreShld" val="true"/>
   <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>
