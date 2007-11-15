@@ -182,6 +182,7 @@
 </skill>
 <skill id="2122" levels="1" name="Facelifting Potion">
   <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -191,6 +192,7 @@
 </skill>
 <skill id="2123" levels="1" name="Facelifting Potion">
   <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -200,6 +202,7 @@
 </skill>
 <skill id="2124" levels="1" name="Facelifting Potion">
   <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -209,6 +212,7 @@
 </skill>
 <skill id="2125" levels="1" name="Dye Potion">
   <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -218,6 +222,7 @@
 </skill>
 <skill id="2126" levels="1" name="Dye Potion">
   <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -227,6 +232,7 @@
 </skill>
 <skill id="2127" levels="1" name="Dye Potion">
   <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -236,6 +242,7 @@
 </skill>
 <skill id="2128" levels="1" name="Dye Potion">
   <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -245,6 +252,7 @@
 </skill>
 <skill id="2129" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -254,6 +262,7 @@
 </skill>
 <skill id="2130" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -263,6 +272,7 @@
 </skill>
 <skill id="2131" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -272,6 +282,7 @@
 </skill>
 <skill id="2132" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -281,6 +292,7 @@
 </skill>
 <skill id="2133" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -290,6 +302,7 @@
 </skill>
 <skill id="2134" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -299,6 +312,7 @@
 </skill>
 <skill id="2135" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -606,7 +620,8 @@
 </skill>
 <skill id="2167" levels="3" name="Scroll of SP">
   <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="100000"/>
+  <set name="hitTime" val="200"/>
+  <set name="skillTime" val="200"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -620,7 +635,8 @@
 --> 
   <set name="power" val="0.0"/> 
   <set name="target" val="TARGET_SELF"/> 
-  <set name="skillTime" val="2000"/> 
+  <set name="hitTime" val="2000"/>
+  <set name="skillTime" val="2000"/>
   <set name="skillType" val="BUFF"/> 
   <set name="operateType" val="OP_ACTIVE"/> 
   <set name="castRange" val="-1"/> 
@@ -709,7 +725,8 @@
 </skill>
 <skill id="2177" levels="1" name="Blessed Scroll of Escape: Clan Hall">
   <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="100000"/>
+  <set name="hitTime" val="200"/>
+  <set name="skillTime" val="200"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -718,7 +735,8 @@
 </skill>
 <skill id="2178" levels="1" name="Blessed Scroll of Escape: Castle">
   <set name="target" val="TARGET_NONE"/>
-  <set name="skillTime" val="100000"/>
+  <set name="hitTime" val="200"/>
+  <set name="skillTime" val="200"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
