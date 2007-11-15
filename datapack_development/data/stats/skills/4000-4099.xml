@@ -117,7 +117,8 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="0"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="0"/>
+  <set name="skillTime" val="0"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -131,9 +132,9 @@
   <table name="#vuln"> 0.85 0.7 0.5 0.3 0.1 0.0 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="0"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="0"/>
+  <set name="skillTime" val="0"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -147,9 +148,9 @@
   <table name="#vuln"> 0.85 0.7 0.5 0.3 0.1 0.0 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="0"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="0"/>
+  <set name="skillTime" val="0"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -163,9 +164,9 @@
   <table name="#vuln"> 0.85 0.7 0.5 0.3 0.1 0.0 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="0"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="0"/>
+  <set name="skillTime" val="0"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -355,9 +356,10 @@
   </for>
 </skill>
 <skill id="4026" levels="1" name="Gludio Flame">
-  <!-- NOT USED IN C4 -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="900"/>
@@ -366,9 +368,10 @@
   </for>
 </skill>
 <skill id="4027" levels="1" name="Gludio Heal">
-  <!-- NOT USED IN C4 -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="5000"/>
+  <set name="skillTime" val="5000"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="600"/>
@@ -672,9 +675,10 @@
   </for>
 </skill>
 <skill id="4041" levels="2" name="Cruma Blaze">
-  <!-- NOT USED IN C4 -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
@@ -699,9 +703,10 @@
   </for>
 </skill>
 <skill id="4043" levels="1" name="Partisan Flame">
-  <!-- NOT USED IN C4 -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
@@ -709,9 +714,10 @@
   </for>
 </skill>
 <skill id="4044" levels="1" name="Partisan Heal">
-  <!-- NOT USED IN C4 -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="5000"/>
+  <set name="skillTime" val="5000"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
@@ -1001,8 +1007,8 @@
   <set name="save" val="3"/>
   <set name="power" val="916.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="3599"/>
-  <set name="skillTime" val="3000"/>
+  <set name="hitTime" val="3600"/>
+  <set name="skillTime" val="3600"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
@@ -1021,7 +1027,7 @@
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="hitTime" val="4000"/>
-  <set name="skillTime" val="5000"/>
+  <set name="skillTime" val="4000"/>
   <set name="skillType" val="PARALYZE"/>
   <set name="isMagic" val="false"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1511,7 +1517,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1500"/>
   <set name="reuseDelay" val="8000"/>
-  <set name="skillTime" val="1000"/>
+  <set name="skillTime" val="1500"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="600000"/>
@@ -1551,7 +1557,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1500"/>
   <set name="reuseDelay" val="8000"/>
-  <set name="skillTime" val="1000"/>
+  <set name="skillTime" val="1500"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="600000"/>

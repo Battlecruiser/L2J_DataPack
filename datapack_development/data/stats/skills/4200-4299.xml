@@ -363,9 +363,11 @@
 <skill id="4217" levels="1" name="None">
   <!-- Zaken skills -->
   <set name="target" val="TARGET_NONE"/>
+  <set name="hitTime" val="2900"/>
+  <set name="skillTime" val="2900"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="800"/>
   <for>
   </for>
 </skill>
@@ -448,6 +450,8 @@
   <!-- Zaken skills - change face -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="1100"/>
+  <set name="skillTime" val="1100"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
@@ -458,6 +462,8 @@
   <!-- Zaken skills - change face -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="1100"/>
+  <set name="skillTime" val="1100"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
@@ -599,12 +605,13 @@
   </for>
 </skill>
 <skill id="4234" levels="12" name="BOSS Power Throw">
-  <!-- NOT USED IN C4 -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4500"/>
+  <set name="hitTime" val="4500"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="900"/>
   <for>
   </for>
 </skill>
@@ -613,7 +620,8 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
-  <set name="skillTime" val="1500"/>
+  <set name="hitTime" val="15000"/>
+  <set name="skillTime" val="15000"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
@@ -989,9 +997,10 @@
   </for>
 </skill>
 <skill id="4258" levels="1" name="Anti Strider Slow">
-  <!-- NOT USED IN C4 -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="500"/>
+  <set name="skillTime" val="500"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>

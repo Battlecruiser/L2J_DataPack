@@ -288,9 +288,10 @@
   </for>
 </skill>
 <skill id="4114" levels="1" name="Aden Flame">
-  <!-- NOT USED IN C4 -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillTime" val="4000"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
@@ -298,9 +299,10 @@
   </for>
 </skill>
 <skill id="4115" levels="1" name="Aden Heal">
-  <!-- NOT USED IN C4 -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="5000"/>
+  <set name="skillTime" val="5000"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
@@ -588,30 +590,33 @@
   </for>
 </skill>
 <skill id="4133" levels="1" name="Angel Heal">
-  <!-- NOT USED IN C4 -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="2000"/>
+  <set name="skillTime" val="2000"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="600"/>
   <set name="aggroPoints" val="100"/>
   <for>
   </for>
 </skill>
 <skill id="4134" levels="1" name="Seal Skill">
-  <!-- NOT USED IN C4 -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="20000"/>
+  <set name="skillTime" val="20000"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="700"/>
   <for>
   </for>
 </skill>
 <skill id="4135" levels="1" name="Baium Heal">
-  <!-- NOT USED IN C4 -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="100"/>
+  <set name="skillTime" val="100"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
@@ -753,12 +758,13 @@
   </for>
 </skill>
 <skill id="4144" levels="80" name="Mimic Strong Attack">
-  <!-- NOT USED IN C4 -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="1000"/>
+  <set name="skillTime" val="1000"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="40"/>
   <for>
   </for>
 </skill>

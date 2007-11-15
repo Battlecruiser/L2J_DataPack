@@ -1,5 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
+<skill id="7000" levels="1" name="NPC Default">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="0"/>
+  <for>
+  </for>
+</skill>
 <skill id="7001" levels="1" name="Dispel Buff">
   <!-- TODO -->
   <set name="save" val="3"/>
@@ -100,7 +109,15 @@
   <for>
   </for>
 </skill>
-<!-- ID 7008 thru 7028 are not used. Check skillname.dat to verify -->
+<skill id="7028" levels="1" name="For Stationary NPCs">
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
 <skill id="7029" levels="4" name="Super Haste">
   <table name="#Tab-runSpd"> 1.5 2 3 4 </table>
   <table name="#Tab-mReuse"> 1 2 4 30 </table>
