@@ -245,8 +245,8 @@
   <table name="#itemConsume">6665 6666 6667 6668 6669 6670 6671 6672</table>
   <set name="power" val="0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="1000"/>
-  <set name="skillTime" val="1000"/>
+  <set name="hitTime" val="500"/>
+  <set name="skillTime" val="500"/>
   <set name="skillType" val="DELUXE_KEY_UNLOCK"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="itemConsumeId" val="#itemConsume" />
@@ -719,7 +719,6 @@
     <mul order="0x30" stat="pAtk" val="1.15"/>
    </effect>
   </for>
-
 </skill>
 <skill id="2281" levels="1" name="Herb of Magic">
   <set name="power" val="0.0"/>
@@ -817,8 +816,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="300000"/>
   <set name="reuseDelay" val="300000"/>
-  <set name="skillTime" val="100"/>
-  <set name="hitTime" val="100"/>
+  <set name="skillTime" val="0"/>
+  <set name="hitTime" val="0"/>
   <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
 </skill>
@@ -829,8 +828,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="540000"/>
   <set name="reuseDelay" val="540000"/>
-  <set name="skillTime" val="100"/>
-  <set name="hitTime" val="100"/>
+  <set name="skillTime" val="0"/>
+  <set name="hitTime" val="0"/>
   <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
 </skill>
@@ -841,8 +840,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="300000"/>
   <set name="reuseDelay" val="300000"/>
-  <set name="skillTime" val="100"/>
-  <set name="hitTime" val="100"/>
+  <set name="skillTime" val="0"/>
+  <set name="hitTime" val="0"/>
   <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
 </skill>
