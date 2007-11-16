@@ -10,9 +10,8 @@
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="save" val="6"/>  
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="9000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_AREA_UNDEAD"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="FEAR"/>
@@ -33,10 +32,9 @@
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="1"/>   
   <set name="power" val="#power"/>
-  <set name="hitTime" val="5000"/>
   <!-- reuse is meant to be "almost instant" -->
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="5000"/>
+  <set name="hitTime" val="5000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="HEAL"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -55,10 +53,9 @@
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="4"/>     
   <set name="power" val="#power"/>
-  <set name="hitTime" val="7000"/>
   <!-- reuse time needs verifying... left this high to be safe -->
   <set name="reuseDelay" val="19000"/>
-  <set name="skillTime" val="7000"/>
+  <set name="hitTime" val="7000"/>
   <set name="skillRadius" val="1000"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillType" val="HEAL"/>
@@ -75,7 +72,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="mpConsume" val="180"/>
   <set name="hitTime" val="15000"/>
-  <set name="skillTime" val="15000"/>
   <set name="reuseDelay" val="20000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -91,7 +87,6 @@
   <set name="itemConsumeCount" val="3"/>
   <set name="mpConsume" val="320"/>
   <set name="hitTime" val="15000"/>
-  <set name="skillTime" val="15000"/>
   <set name="reuseDelay" val="60000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -135,9 +130,8 @@
   <set name="summonTimeLostActive" val="1000"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="15000"/>
   <set name="reuseDelay" val="20000"/> <!-- Guessing -->
-  <set name="skillTime" val="15000"/>
+  <set name="hitTime" val="15000"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -174,9 +168,8 @@
   <set name="summonTimeLostActive" val="1000"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="15000"/>
   <set name="reuseDelay" val="20000"/> <!-- Guessing -->
-  <set name="skillTime" val="15000"/>
+  <set name="hitTime" val="15000"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -213,9 +206,8 @@
   <set name="summonTimeLostActive" val="1000"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="15000"/>
   <set name="reuseDelay" val="20000"/> <!-- Guessing -->
-  <set name="skillTime" val="15000"/>
+  <set name="hitTime" val="15000"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -240,9 +232,8 @@
   <set name="mpConsume" val="58"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="15000"/> <!-- Guessing -->
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="NEGATE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -309,9 +300,8 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
-  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="1200000"/> <!-- Guessing -->
-  <set name="skillTime" val="2500"/>
+  <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -344,9 +334,8 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ALLY"/>
   <set name="skillRadius" val="1000"/>
-  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="1200000"/>
-  <set name="skillTime" val="2500"/>
+  <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -399,9 +388,8 @@
   <set name="power" val="800.0"/>
   <set name="target" val="TARGET_ALLY"/>
   <set name="skillRadius" val="1000"/>
-  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="200000"/> <!-- Guessing -->
-  <set name="skillTime" val="2500"/>
+  <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/> <!-- Needs core support for CP Heal & Buff at once -->
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
