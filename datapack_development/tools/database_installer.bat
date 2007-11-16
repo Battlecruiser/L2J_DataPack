@@ -582,6 +582,7 @@ pets.sql
 pets_stats.sql
 pledge_skill_trees.sql
 posts.sql
+quest_global_data.sql
 raidboss_spawnlist.sql
 random_spawn.sql
 random_spawn_loc.sql
