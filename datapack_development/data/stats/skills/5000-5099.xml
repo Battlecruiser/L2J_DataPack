@@ -1361,30 +1361,32 @@
   </for>
 </skill>
 <skill id="5092" levels="1" name="Antharas Terror">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Temporarily overcome with fear and mindlessly fleeing.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Antharas Skills -->
+  <set name="magicLvl" val="70"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="save" val="2"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="400"/>
+  <set name="hitTime" val="2300"/>
+  <set name="skillTime" val="2300"/>
+  <set name="skillType" val="FEAR"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="17000"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <for>
+    <effect count="5" name="Fear" time="13" val="0"/>
   </for>
 </skill>
 <skill id="5093" levels="1" name="Antharas Meteor">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      none
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Antharas Skills -->
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="hitTime" val="8000"/>
+  <set name="skillTime" val="8000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
   <for>
   </for>
 </skill>

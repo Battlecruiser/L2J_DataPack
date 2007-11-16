@@ -1099,16 +1099,19 @@
   </for>
 </skill>
 <skill id="342" levels="1" name="Touch of Death">
+  <!-- Temp Working Fix by DJ MELERIX -->
   <set name="hpConsume" val="1004"/>
   <set name="power" val="40"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="CANCEL"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="reuseDelay" val="1200000"/>
   <set name="skillTime" val="1800"/>
   <set name="hitTime" val="1800"/>
+  <set name="negateStats" val="BUFF"/> <!-- Need core support to DEBUFF type + negate for cancellation -->
+  <set name="negatePower" val="4.0"/> <!-- Need core support to DEBUFF type + negate for cancellation -->
   <cond>
     <player hp="75"/>
   </cond>
@@ -1468,7 +1471,7 @@
     </effect>
   </for>
 </skill>
-<skill id="358" levels="1" name="Bluff"> 
+<skill id="358" levels="1" name="Bluff">
   <!-- WRONG --> 
   <set name="weaponsAllowed" val="16"/> 
   <set name="mpConsume" val="35"/> 
