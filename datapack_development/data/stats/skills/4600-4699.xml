@@ -121,7 +121,7 @@
   </for>
 </skill>
 <skill id="4606" levels="12" name="Poison">
-  <table name="#dot"> 12 18 24 31 38 44 48 48 50 50 51 51 </table>
+  <table name="#dot"> 36 54 72 93 114 132 144 144 150 150 153 153 </table>
   <table name="#power"> 46 106 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
   <table name="#mpConsume"> 37 62 86 116 149 184 215 229 241 249 255 258 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -299,7 +299,7 @@
   </for>
 </skill>
 <skill id="4615" levels="12" name="Bleed">
-  <table name="#dmg"> 9 13 17 22 27 31 34 34 35 35 36 36 </table>
+  <table name="#dmg"> 27 39 51 66 81 93 102 102 105 105 108 108 </table>
   <table name="#mpConsume"> 22 34 48 64 83 102 119 127 133 138 140 143 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -312,7 +312,7 @@
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
   <for>
-    <effect count="1" name="DamOverTime" time="20" val="#dmg" abnormal="bleed"/>
+    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleed"/>
   </for>
 </skill>
 <skill id="4616" levels="1" name="Fake Petrification">
@@ -961,7 +961,7 @@
   </for>
 </skill>
 <skill id="4649" levels="12" name="Poison">
-  <table name="#dot"> 12 18 24 31 38 44 48 48 50 50 51 51 </table>
+  <table name="#dot"> 36 54 72 93 114 132 144 144 150 150 153 153 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1535,33 +1535,35 @@
   <set name="hitTime" val="3000"/>
   <set name="reuseDelay" val="20000"/>
   <set name="skillTime" val="3000"/>
-  <set name="skillType" val="POISON"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="element" val="2"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="60000"/>
+  <set name="buffDuration" val="10000"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
    <for>
-    <effect count="6" name="DamOverTime" time="10" val="72" abnormal="poison"/>
+    <effect count="3" name="DamOverTime" time="3" val="216"/>
    </for>
 </skill>
 <skill id="4684" levels="1" name="Valakas Dragon Breath">
   <set name="mpConsume" val="0"/>
   <set name="save" val="3"/>
-  <set name="power" val="22.0"/>
+  <set name="power" val="499.0"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="1400"/>
   <set name="hitTime" val="3000"/>
   <set name="reuseDelay" val="20000"/>
   <set name="skillTime" val="3000"/>
-  <set name="skillType" val="POISON"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="element" val="2"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="60000"/>
+  <set name="buffDuration" val="10000"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
    <for>
-    <effect count="6" name="DamOverTime" time="10" val="72" abnormal="poison"/>
+    <effect count="3" name="DamOverTime" time="3" val="216"/>
    </for>
 </skill>
 <skill id="4685" levels="1" name="Valakas Tail Stomp">
@@ -1801,7 +1803,7 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#power"/>
   <for>
-	<effect count="1" name="Buff" time="#time" val="0" stackOrder="1" stackType="QueenBuff">
+    <effect count="1" name="Buff" time="#time" val="0" stackOrder="1" stackType="QueenBuff">
       <mul order="0x30" stat="rCrit" val="#rate"/>
       <mul order="0x30" stat="cAtk" val="#crit"/>
     </effect>

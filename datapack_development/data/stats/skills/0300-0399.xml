@@ -1386,21 +1386,21 @@
         <using kind="Dagger"/>
       </mul>
       <mul order="0x30" stat="cAtk" val="0.7">
-	    <and>
-	      <player front="True"/>
-		</and>
-	  </mul>
-	  <mul order="0x30" stat="cAtk" val="1.6">
-		<and>
-		  <player front="False"/>
-		  <player behind="False"/>
-		</and>
+        <and>
+          <player front="True"/>
+        </and>
       </mul>
-	  <mul order="0x30" stat="cAtk" val="1.9">
-		<and>
-		  <player behind="True"/>
-		</and>
-	  </mul>
+      <mul order="0x30" stat="cAtk" val="1.6">
+        <and>
+          <player front="False"/>
+          <player behind="False"/>
+        </and>
+      </mul>
+      <mul order="0x30" stat="cAtk" val="1.9">
+        <and>
+          <player behind="True"/>
+        </and>
+      </mul>
     </effect>
   </for>
 </skill>
@@ -1420,19 +1420,19 @@
       <mul order="0x30" stat="rCrit" val="0.7">
         <and>
           <player front="True"/>
-	    </and>
+        </and>
       </mul>
       <mul order="0x30" stat="rCrit" val="1.3">
         <and>
           <player front="False"/>
-	      <player behind="False"/>
+          <player behind="False"/>
         </and>
       </mul>
-	  <mul order="0x30" stat="rCrit" val="1.6">
-	    <and>
-	      <player behind="True"/>
+      <mul order="0x30" stat="rCrit" val="1.6">
+        <and>
+          <player behind="True"/>
         </and>
-	   </mul>
+       </mul>
     </effect>
   </for>
 </skill>
@@ -1449,22 +1449,22 @@
   <set name="aggroPoints" val="669"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="focus">
-	    <mul order="0x30" stat="cAtk" val="0.7">
-	      <and>
-	        <player front="True"/>
-	      </and>
-	    </mul>
-	    <mul order="0x30" stat="cAtk" val="1.3">
-	      <and>
-	        <player front="False"/>
-	         <player behind="False"/>
-	      </and>
-	    </mul>
-	    <mul order="0x30" stat="cAtk" val="1.6">
-	      <and>
-	        <player behind="True"/>
-	      </and>
-	    </mul>
+        <mul order="0x30" stat="cAtk" val="0.7">
+          <and>
+            <player front="True"/>
+          </and>
+        </mul>
+        <mul order="0x30" stat="cAtk" val="1.3">
+          <and>
+            <player front="False"/>
+             <player behind="False"/>
+          </and>
+        </mul>
+        <mul order="0x30" stat="cAtk" val="1.6">
+          <and>
+            <player behind="True"/>
+          </and>
+        </mul>
     </effect>
   </for>
 </skill>
