@@ -379,7 +379,7 @@
   <for>
   </for>
 </skill>
-<skill id="4028" levels="3" name="Enhance P.Atk">
+<skill id="4028" levels="3" name="NPC Might">
   <table name="#Tab-pAtk"> 1.08 1.12 1.15 </table>
   <table name="#mpConsume"> 10 18 33 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -400,7 +400,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4029" levels="3" name="Enhance P.Def">
+<skill id="4029" levels="3" name="NPC Shield">
   <table name="#Tab-pDef"> 1.08 1.12 1.15 </table>
   <table name="#mpConsume"> 10 18 33 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -421,7 +421,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4030" levels="3" name="Enhance P.Atk">
+<skill id="4030" levels="3" name="NPC Clan Might">
   <!-- SHOULD BUFF FACTION MOBS -->
   <table name="#Tab-pAtk"> 1.08 1.12 1.15 </table>
   <table name="#mpConsume"> 10 18 33 </table>
@@ -444,7 +444,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4031" levels="3" name="Enhance P.Def">
+<skill id="4031" levels="3" name="NPC Clan Aegis">
   <!-- SHOULD BUFF FACTION MOBS -->
   <table name="#Tab-pDef"> 1.08 1.12 1.15 </table>
   <table name="#mpConsume"> 10 18 33 </table>
@@ -536,7 +536,7 @@
   </for>
 </skill>
 <skill id="4035" levels="12" name="Poison">
-  <table name="#dmg"> 12 18 24 31 38 44 48 48 50 50 51 51 </table>
+  <table name="#dmg"> 36 54 72 93 114 132 144 144 150 150 153 153 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 83 77 78 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -560,7 +560,7 @@
   </for>
 </skill>
 <skill id="4036" levels="12" name="Poison">
-  <table name="#dmg"> 12 18 24 31 38 44 48 48 50 50 51 51 </table>
+  <table name="#dmg"> 36 54 72 93 114 132 144 144 150 150 153 153 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -584,7 +584,7 @@
     <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison"/>
   </for>
 </skill>
-<skill id="4037" levels="2" name="Weaken P.Atk">
+<skill id="4037" levels="2" name="Decrease P.Atk">
   <table name="#Tab-pAtk"> 0.8 0.77 </table>
   <table name="#mpConsume"> 27 65 </table>
   <table name="#magicLvl"> 30 70 </table>
@@ -1016,7 +1016,7 @@
   <set name="effectType" val="PARALYZE"/>
   <set name="effectPower" val="90"/>
   <for>
-	<effect count="1" name="Paralyze" time="120" val="0"/>
+    <effect count="1" name="Paralyze" time="120" val="0"/>
   </for>
 </skill>
 <skill id="4064" levels="1" name="Paralysis">
@@ -1034,7 +1034,7 @@
   <set name="castRange" val="800"/>
   <set name="effectRange" val="1300"/>  
   <for>
-	<effect count="1" name="Paralyze" time="120" val="0"/>
+    <effect count="1" name="Paralyze" time="120" val="0"/>
   </for>
 </skill>
 <skill id="4065" levels="12" name="NPC Heal">
@@ -1161,7 +1161,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-  	<mul order="0x30" stat="bowWpnVuln" val="#vuln"/>
+      <mul order="0x30" stat="bowWpnVuln" val="#vuln"/>
   </for>
 </skill>
 <skill id="4072" levels="12" name="Shock">
@@ -1187,7 +1187,7 @@
   <set name="effectType" val="STUN"/>
   <set name="effectPower" val="30"/>
   <for>
-	<effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="4073" levels="12" name="Shock">
@@ -1212,7 +1212,7 @@
   <set name="effectType" val="STUN"/>
   <set name="effectPower" val="50"/>
   <for>
-	<effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="4074" levels="2" name="NPC Haste">
@@ -1391,7 +1391,7 @@
   <for>
     <effect count="1" name="ImobileBuff" time="4200" val="0"/>
     <effect count="1" name="Root" time="4200" val="0"/>
-    <effect count="4200" name="DamOverTime" time="1" val="20" abnormal="poison"/>
+    <effect count="4200" name="DamOverTime" time="3" val="60" abnormal="poison"/>
   </for>
 </skill>
 <skill id="4083" levels="1" name="Die! You fool!">
@@ -1466,7 +1466,7 @@
   </for>
 </skill>
 <skill id="4088" levels="12" name="Bleed">
-  <table name="#damage">2 3 5 6 8 9 10 11 12 13 14 15</table>
+  <table name="#damage">27 39 51 66 81 93 102 102 105 105 108 108 </table>
   <table name="#mpConsume"> 9 13 17 22 27 31 34 34 35 35 36 36 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1482,11 +1482,11 @@
   <set name="skillType" val="BLEED"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="30000"/>
+  <set name="buffDuration" val="20000"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
-	<effect count="10" name="DamOverTime" time="3" val="#damage"/>
+    <effect count="7" name="DamOverTime" time="3" val="#damage"/>
   </for>
 </skill>
 <skill id="4089" levels="1" name="NPC Bear Spirit Totem">
@@ -1655,7 +1655,7 @@
   <set name="effectRange" val="1100"/>
   <set name="aggroPoints" val="100"/>
   <for>
-	<effect count="5" name="HealOverTime" time="3" val="#hot" stackOrder="#hot" stackType="LifeForce"/>
+    <effect count="5" name="HealOverTime" time="3" val="#hot" stackOrder="#hot" stackType="LifeForce"/>
   </for>
 </skill>
 <skill id="4098" levels="12" name="Magic Skill Block">
@@ -1677,7 +1677,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-	<effect count="1" name="Mute" time="30" val="0" stackOrder="1" stackType="silence"/>
+    <effect count="1" name="Mute" time="30" val="0" stackOrder="1" stackType="silence"/>
   </for>
 </skill>
 <skill id="4099" levels="2" name="NPC Berserk">

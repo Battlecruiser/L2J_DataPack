@@ -45,7 +45,7 @@
   <set name="buffDuration" val="20000"/>
   <set name="castRange" val="-1"/>
   <for>
-	<effect count="4" name="DamOverTime" time="5" val="22"/>
+    <effect count="7" name="DamOverTime" time="3" val="66"/>
   </for>
 </skill>
 <skill id="3006" levels="1" name="Equip Set Items">
@@ -177,7 +177,7 @@
   </for>
 </skill>
 <skill id="3014" levels="3" name="Special Ability: Mana Up">
-	<table name="#pvpBonus"> 1.0 1.05 1.15 </table>
+  <table name="#pvpBonus"> 1.0 1.05 1.15 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -712,7 +712,7 @@
   </for>
 </skill>
 <skill id="3047" levels="3" name="Special Ability: Acumen">
-	<table name="#pvpBonus"> 1.0 1.05 1.10 </table>
+  <table name="#pvpBonus"> 1.0 1.05 1.10 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1287,15 +1287,15 @@
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Lvl 1 - Chance: Provokes a target to attack during an ordinary physical attack. Power 438.
-	  Lvl 2 - Provokes a target to attack during an ordinary physical attack. Power 467.
-	  Lvl 3 - Chance: Provokes a target to attack during an ordinary physical attack. Power 495.
-	  Lvl 4 - Chance: Provokes a target to attack during an ordinary physical attack. Power 523.
-	  Lvl 5 - Chance: Provokes a target to attack during an ordinary physical attack. Power 549.
-	  Lvl 6 - Chance: Provokes a target to attack during an ordinary physical attack. Power 574.
-	  Lvl 7 - Chance: Provokes a target to attack during an ordinary physical attack. Power 597.
-	  Lvl 8 - Chance: Provokes a target to attack during an ordinary physical attack. Power 617.
-	  Lvl 9 - Chance: Provokes a target to attack during an ordinary physical attack. Power 635.
-	  Lvl 10 - Chance: Provokes a target to attack during an ordinary physical attack. Power 659.
+      Lvl 2 - Provokes a target to attack during an ordinary physical attack. Power 467.
+      Lvl 3 - Chance: Provokes a target to attack during an ordinary physical attack. Power 495.
+      Lvl 4 - Chance: Provokes a target to attack during an ordinary physical attack. Power 523.
+      Lvl 5 - Chance: Provokes a target to attack during an ordinary physical attack. Power 549.
+      Lvl 6 - Chance: Provokes a target to attack during an ordinary physical attack. Power 574.
+      Lvl 7 - Chance: Provokes a target to attack during an ordinary physical attack. Power 597.
+      Lvl 8 - Chance: Provokes a target to attack during an ordinary physical attack. Power 617.
+      Lvl 9 - Chance: Provokes a target to attack during an ordinary physical attack. Power 635.
+      Lvl 10 - Chance: Provokes a target to attack during an ordinary physical attack. Power 659.
 -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>

@@ -106,11 +106,11 @@
   <set name="skillType" val="DOT"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="90000"/>
+  <set name="buffDuration" val="45000"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="30" name="DamOverTime" time="3" val="#dmg"/>
+    <effect count="45" name="DamOverTime" time="1" val="#dmg"/>
   </for>
 </skill>
 <skill id="4105" levels="12" name="NPC Straight Beam Cannon">
@@ -148,7 +148,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-	<effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="4107" levels="1" name="Antharas Shock">
@@ -166,8 +166,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-	<effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
-	<!-- FLY AWAY SKILL -->
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
+    <!-- FLY AWAY SKILL -->
   </for>
 </skill>
 <skill id="4108" levels="1" name="Antharas Terror">
@@ -252,7 +252,7 @@
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="1500"/>
   <for>
-	<effect count="1" name="Paralyze" time="120" val="0"/>
+    <effect count="1" name="Paralyze" time="120" val="0"/>
   </for>
 </skill>
 <skill id="4112" levels="1" name="Ordinary Attack">
@@ -415,7 +415,7 @@
   <set name="effectType" val="STUN"/>
   <set name="effectPower" val="50"/>
   <for>
-	<effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="4121" levels="1" name="Summoned Monster Magic Protection">
@@ -1098,7 +1098,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-	<effect count="1" name="Paralyze" time="120" val="0"/>
+    <effect count="1" name="Paralyze" time="120" val="0"/>
   </for>
 </skill>
 <skill id="4165" levels="9" name="Icy Air">
@@ -1247,7 +1247,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-	<effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="4173" levels="12" name="BOSS Might">
@@ -1447,7 +1447,7 @@
   <set name="effectRange" val="200"/>
 </skill>
 <skill id="4182" levels="12" name="Poison">
-  <table name="#dmg"> 12 18 24 31 38 44 48 48 49 49 48 48 </table>
+  <table name="#dmg"> 36 54 72 93 114 132 144 144 147 147 144 144 </table>
   <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -1589,7 +1589,7 @@
   </for>
 </skill>
 <skill id="4188" levels="12" name="Bleed">
-  <table name="#damage"> 9 13 17 22 27 31 34 34 35 35 34 34 </table>
+  <table name="#damage"> 27 39 51 66 81 93 102 102 105 105 102 102 </table>
   <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -1609,7 +1609,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-	<effect count="10" name="DamOverTime" time="2" val="#damage"/>
+    <effect count="7" name="DamOverTime" time="3" val="#damage"/>
   </for>
 </skill>
 <skill id="4189" levels="12" name="Paralysis">
@@ -1807,7 +1807,7 @@
   </for>
 </skill>
 <skill id="4198" levels="12" name="Poison">
-  <table name="#dmg"> 12 18 24 31 38 44 48 48 49 49 48 48 </table>
+  <table name="#dmg"> 36 54 72 93 114 132 144 144 147 147 144 144 </table>
   <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>

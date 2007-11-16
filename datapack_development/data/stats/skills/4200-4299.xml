@@ -90,7 +90,7 @@
   </for>
 </skill>
 <skill id="4204" levels="12" name="Bleed">
-  <table name="#damage"> 9 13 17 22 27 31 34 34 35 35 34 34 </table>
+  <table name="#damage"> 27 39 51 66 81 93 102 102 105 105 102 102 </table>
   <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -109,7 +109,7 @@
   <set name="castRange" val="750"/>
   <set name="effectRange" val="1250"/>
   <for>
-	<effect count="10" name="DamOverTime" time="2" val="#damage"/>
+    <effect count="7" name="DamOverTime" time="3" val="#damage"/>
   </for>
 </skill>
 <skill id="4205" levels="12" name="Paralysis">
@@ -197,7 +197,7 @@
   <set name="effectType" val="STUN"/>
   <set name="effectPower" val="80"/>
   <for>
-	<effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="4209" levels="12" name="BOSS Heal">
@@ -242,7 +242,7 @@
   <set name="effectRange" val="1200"/>
   <set name="aggroPoints" val="100"/>
   <for>
-	<effect count="5" name="HealOverTime" time="3" val="#hot" stackOrder="#hot" stackType="LifeForce"/>
+    <effect count="5" name="HealOverTime" time="3" val="#hot" stackOrder="#hot" stackType="LifeForce"/>
   </for>
 </skill>
 <skill id="4211" levels="12" name="BOSS Might">
@@ -1008,7 +1008,7 @@
   </for>
 </skill>
 <skill id="4259" levels="12" name="Toxic Smoke">
-  <table name="#dot"> 12.0 18.0 24.0 31.0 38.0 44.0 48.0 48.0 50.0 50.0 51.0 51.0 </table>
+  <table name="#dot"> 36 54 72 93 114 132 144 144 150 150 153 153 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <table name="#cast"> 500 600 600 750 750 750 750 750 750 750 750 750 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
