@@ -282,7 +282,7 @@ class Quest (JQuest) :
                   htmltext = str(npcId)+"-10.htm"
       return htmltext
 
-   def onDeath(self, deadPerson, killer,st) :               # if players summon dies, the crystal of defeat is given to the player and set stat to lose
+   def onDeath(self,killer,deadPerson,st) :               # if players summon dies, the crystal of defeat is given to the player and set stat to lose
       npcId = killer.getNpcId()
 ##      if (deadPerson == st.getPlayer() or deadPerson = st.getPlayer().getPet()) and npcId in DROPLIST_SUMMON.keys() :
       if npcId in DROPLIST_SUMMON.keys() :
