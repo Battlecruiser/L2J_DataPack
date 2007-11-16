@@ -8,10 +8,9 @@
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_PET"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="150000"/>
   <set name="skillType" val="NEGATE"/>
-  <set name="hitTime" val="4000"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
@@ -26,10 +25,9 @@
   <set name="mpInitialConsume" val="12"/>
   <set name="mpConsume" val="46"/>
   <set name="target" val="TARGET_PET"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="150000"/>
   <set name="skillType" val="NEGATE"/>
-  <set name="hitTime" val="4000"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
@@ -74,9 +72,8 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="buffDuration" val="1200000"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
@@ -128,9 +125,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -180,9 +176,8 @@
   <set name="power" val="#rateCp"/>
   <set name="target" val="TARGET_ALLY"/>
   <set name="skillRadius" val="400"/>
-  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="2500"/>
+  <set name="hitTime" val="2500"/>
   <set name="skillType" val="COMBATPOINTHEAL"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -219,9 +214,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#rateCp"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillTime" val="5000"/>
-  <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="5000"/>
+  <set name="reuseDelay" val="20000"/>
   <set name="skillType" val="COMBATPOINTHEAL"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -244,9 +238,8 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -293,9 +286,8 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
-  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="2500"/>
+  <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -350,9 +342,8 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
-  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="2500"/>
+  <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -404,9 +395,8 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
-  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="2500"/>
+  <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -462,9 +452,8 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="600000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -491,9 +480,8 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillRadius" val="0"/>
-  <set name="hitTime" val="0"/>
   <set name="reuseDelay" val="0"/>
-  <set name="skillTime" val="0"/>
+  <set name="hitTime" val="0"/>
   <set name="skillType" val="FISHING"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -508,9 +496,8 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillRadius" val="0"/>
-  <set name="hitTime" val="0"/>
   <set name="reuseDelay" val="2000"/>
-  <set name="skillTime" val="0"/>
+  <set name="hitTime" val="0"/>
   <set name="skillType" val="PUMPING"/>
   <set name="isMagic" val="false"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -525,9 +512,8 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillRadius" val="0"/>
-  <set name="hitTime" val="0"/>
   <set name="reuseDelay" val="2000"/>
-  <set name="skillTime" val="0"/>
+  <set name="hitTime" val="0"/>
   <set name="skillType" val="REELING"/>
   <set name="isMagic" val="false"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -595,9 +581,8 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillRadius" val="0"/>
-  <set name="hitTime" val="450"/>
   <set name="reuseDelay" val="0"/>
-  <set name="skillTime" val="450"/>
+  <set name="hitTime" val="450"/>
   <set name="skillType" val="DWARVEN_CRAFT"/>
   <set name="isMagic" val="false"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -611,9 +596,8 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillRadius" val="0"/>
-  <set name="hitTime" val="450"/>
   <set name="reuseDelay" val="0"/>
-  <set name="skillTime" val="450"/>
+  <set name="hitTime" val="450"/>
   <set name="skillType" val="COMMON_CRAFT"/>
   <set name="isMagic" val="false"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -629,9 +613,8 @@
   <set name="itemConsumeCount" val="5"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -647,7 +630,6 @@
   <set name="mpConsume" val="412"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="20000"/>
-  <set name="skillTime" val="20000"/>
   <set name="skillType" val="CREATE_ITEM"/>
   <set name="reuseDelay" val="1800000"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -672,7 +654,6 @@
   <set name="target" val="TARGET_PARTY"/> 
   <set name="skillRadius" val="1000"/> 
   <set name="reuseDelay" val="8000"/> 
-  <set name="skillTime" val="4000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/> 
   <set name="operateType" val="OP_ACTIVE"/> 
@@ -691,9 +672,8 @@
   <set name="power" val="250"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="100"/>
-  <set name="hitTime" val="7000"/>
   <set name="reuseDelay" val="3600000"/>
-  <set name="skillTime" val="7000"/>
+  <set name="hitTime" val="7000"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -711,9 +691,8 @@
   <set name="power" val="400"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
-  <set name="hitTime" val="7000"/>
   <set name="reuseDelay" val="3600000"/>
-  <set name="skillTime" val="7000"/>
+  <set name="hitTime" val="7000"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -735,9 +714,8 @@
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="6000"/>
+  <set name="hitTime" val="6000"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -760,9 +738,8 @@
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="6000"/>
+  <set name="hitTime" val="6000"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -785,9 +762,8 @@
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="6000"/>
+  <set name="hitTime" val="6000"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -818,9 +794,8 @@
   <!-- should be consumed over 4 regular intervals -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="15000"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="15000"/>
+  <set name="hitTime" val="15000"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -852,9 +827,8 @@
   <!-- should be consumed over 4 regular intervals -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="15000"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="15000"/>
+  <set name="hitTime" val="15000"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -886,9 +860,8 @@
   <!-- should be consumed over 4 regular intervals -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="15000"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="15000"/>
+  <set name="hitTime" val="15000"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -920,9 +893,8 @@
   <!-- should be consumed over 4 regular intervals -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_CORPSE_MOB"/>
-  <set name="hitTime" val="1500"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="1500"/>
+  <set name="hitTime" val="1500"/>
   <set name="skillType" val="SUMMON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -942,9 +914,8 @@
   <set name="power" val="1000"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
-  <set name="hitTime" val="5000"/>
   <set name="reuseDelay" val="60000"/>
-  <set name="skillTime" val="5000"/>
+  <set name="hitTime" val="5000"/>
   <set name="skillType" val="BALANCE_LIFE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -961,9 +932,8 @@
   <set name="power" val="80"/>
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="120000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="MUTE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -981,9 +951,8 @@
   <set name="power" val="80"/>
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="300000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1008,9 +977,8 @@
   <set name="power" val="40"/>
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="60000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
@@ -1034,7 +1002,6 @@
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="6000"/>
-  <set name="skillTime" val="6000"/>
   <set name="element" val="2"/>
   <set name="reuseDelay" val="60000"/>
   <set name="skillType" val="MDAM"/>
@@ -1062,7 +1029,6 @@
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="6000"/>
-  <set name="skillTime" val="6000"/>
   <set name="element" val="3"/>
   <set name="reuseDelay" val="60000"/>
   <set name="skillType" val="MDAM"/>
@@ -1090,7 +1056,6 @@
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="6000"/>
-  <set name="skillTime" val="6000"/>
   <set name="element" val="1"/>
   <set name="reuseDelay" val="60000"/>
   <set name="skillType" val="MDAM"/>
@@ -1118,7 +1083,6 @@
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="6000"/>
-  <set name="skillTime" val="6000"/>
   <set name="element" val="5"/>
   <set name="reuseDelay" val="60000"/>
   <set name="skillType" val="MDAM"/>
@@ -1143,7 +1107,6 @@
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="6000"/>
-  <set name="skillTime" val="6000"/>
   <set name="element" val="6"/>
   <set name="reuseDelay" val="60000"/>
   <set name="skillType" val="DRAIN"/>
@@ -1169,9 +1132,8 @@
   <set name="power" val="25"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="300"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="30000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="WARRIOR_BANE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1187,9 +1149,8 @@
   <set name="power" val="25"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="300"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="30000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="MAGE_BANE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1203,7 +1164,6 @@
   <set name="mpConsume" val="56"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="10"/>
-  <set name="skillTime" val="4000"/>
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="300000"/>
   <set name="target" val="TARGET_PET"/>
@@ -1231,7 +1191,6 @@
   <set name="mpConsume" val="56"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="10"/>
-  <set name="skillTime" val="4000"/>
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="300000"/>
   <set name="target" val="TARGET_PET"/>
@@ -1260,9 +1219,8 @@
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="10"/>
   <set name="target" val="TARGET_PET"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="300000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1295,7 +1253,6 @@
   <set name="mpConsume" val="57"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="20"/>
-  <set name="skillTime" val="4000"/>
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="600000"/>
   <set name="target" val="TARGET_PET"/>
@@ -1328,9 +1285,8 @@
   <set name="magicLvl" val="76"/>
   <set name="power" val="25"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="10000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="WARRIOR_BANE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1345,9 +1301,8 @@
   <set name="magicLvl" val="77"/>
   <set name="power" val="25"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="10000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="MAGE_BANE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1361,9 +1316,8 @@
   <set name="mpConsume" val="56"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="10000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1385,9 +1339,8 @@
   <set name="mpConsume" val="56"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="10000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
@@ -1406,9 +1359,8 @@
   <set name="mpConsume" val="70"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="10000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
@@ -1527,9 +1479,8 @@
   <set name="power" val="80"/>
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="30000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1551,9 +1502,8 @@
   <set name="power" val="80"/>
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="30000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1576,9 +1526,8 @@
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="120000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1601,9 +1550,8 @@
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="120000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1622,9 +1570,8 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="900"/>
-  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="2500"/>
+  <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1647,9 +1594,8 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
-  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="1200000"/>
-  <set name="skillTime" val="2500"/>
+  <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1680,9 +1626,8 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ALLY"/>
   <set name="skillRadius" val="400"/>
-  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="2500"/>
+  <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1702,9 +1647,8 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ALLY"/>
   <set name="skillRadius" val="400"/>
-  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="2500"/>
+  <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1726,9 +1670,8 @@
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="300000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1757,9 +1700,8 @@
   <set name="power" val="40"/>
   <set name="lvlDepend" val="1"/>
   <set name="reuseDelay" val="60000"/>
-  <set name="skillTime" val="4000"/>
-  <set name="skillType" val="DEBUFF"/>
   <set name="hitTime" val="4000"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
@@ -1852,7 +1794,6 @@
   <set name="itemConsumeCount" val="80"/>
   <set name="power" val="80"/>
   <set name="hitTime" val="2500"/>
-  <set name="skillTime" val="2500"/>
   <set name="reuseDelay" val="1200000"/>
   <set name="target" val="TARGET_ALLY"/>
   <set name="skillRadius" val="1000"/> <!-- not sure -->
@@ -1877,7 +1818,6 @@
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="80"/>
   <set name="hitTime" val="2500"/>
-  <set name="skillTime" val="2500"/>
   <set name="reuseDelay" val="1200000"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
@@ -1907,7 +1847,6 @@
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="80"/>
   <set name="hitTime" val="2500"/>
-  <set name="skillTime" val="2500"/>
   <set name="reuseDelay" val="1200000"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
@@ -1949,7 +1888,6 @@
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="hitTime" val="4000"/>
-  <set name="skillTime" val="4000"/>
   <set name="reuseDelay" val="22000"/>
   <set name="target" val="TARGET_ENEMY_SUMMON"/>
   <set name="skillType" val="BETRAY"/>
@@ -1966,9 +1904,8 @@
 <!-- Done by KID -->
   <table name="#mpConsume"> 80 87 93 98 103 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="21000"/>
-  <set name="skillTime" val="6000"/>
+  <set name="hitTime" val="6000"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="FEAR"/>
@@ -1989,9 +1926,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="2508"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="21000"/>
-  <set name="skillTime" val="6000"/>
+  <set name="hitTime" val="6000"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="230"/>
   <set name="skillType" val="DEBUFF"/>
@@ -2014,9 +1950,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="21000"/>
-  <set name="skillTime" val="6000"/>
+  <set name="hitTime" val="6000"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="WEAKNESS"/>
@@ -2039,9 +1974,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="21000"/>
-  <set name="skillTime" val="6000"/>
+  <set name="hitTime" val="6000"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="WEAKNESS"/>
@@ -2064,9 +1998,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="21000"/>
-  <set name="skillTime" val="6000"/>
+  <set name="hitTime" val="6000"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="WEAKNESS"/>
@@ -2091,9 +2024,8 @@
   <set name="power" val="80"/>
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="18000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/> 
   <set name="operateType" val="OP_ACTIVE"/>
@@ -2113,7 +2045,6 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="10000"/>
-  <set name="skillTime" val="10000"/>
   <set name="skillType" val="CREATE_ITEM"/>
   <set name="reuseDelay" val="18000"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -2133,9 +2064,8 @@
   <set name="itemConsumeCount" val="#spiritOre"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="buffDuration" val="1200000"/>
@@ -2158,9 +2088,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="#spiritOre"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="buffDuration" val="1200000"/>
@@ -2182,9 +2111,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="#spiritOre"/>
-  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="2500"/>
+  <set name="hitTime" val="2500"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="skillType" val="BUFF"/>
@@ -2208,9 +2136,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="#spiritOre"/>
-  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="2500"/>
+  <set name="hitTime" val="2500"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="skillType" val="BUFF"/>
@@ -2231,9 +2158,8 @@
   <!-- L2P still need to confirm res values -->
   <table name="#holyVuln"> 0.85 0.77 0.7 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="7000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="buffDuration" val="1200000"/>
@@ -2253,9 +2179,8 @@
   <!-- L2P still need to confirm res values -->
   <table name="#darkVuln"> 0.85 0.77 0.7 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="7000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="buffDuration" val="1200000"/>
@@ -2276,10 +2201,9 @@
   <set name="save" val="2"/>
   <set name="power" val="80"/>
   <set name="lvlDepend" val="2"/>
-  <set name="hitTime" val="3000"/>
   <!-- reuse delay should be "nearly instant" -->
   <set name="reuseDelay" val="4000"/>
-  <set name="skillTime" val="3000"/>
+  <set name="hitTime" val="3000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="SLEEP"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -2297,10 +2221,9 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="hitTime" val="4000"/>
   <!-- resuseDelay needs to be confirmed -->
   <set name="reuseDelay" val="7000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_ENEMY_SUMMON"/>
   <set name="skillType" val="ERASE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -2315,7 +2238,6 @@
   <table name="#mpConsumeRate"> 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.13 1.15 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="4000"/>
-  <set name="skillTime" val="4000"/>
   <set name="reuseDelay" val="27000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
@@ -2336,9 +2258,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="#SpiritOre"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -2359,9 +2280,8 @@
   <table name="#power"> 117 123 128 133 138 143 148 153 157 162 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="13000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MANADAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -2379,9 +2299,8 @@
   <table name="#power"> 62 67 72 77 81 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
-  <set name="hitTime" val="6000"/>
   <set name="reuseDelay" val="17000"/>
-  <set name="skillTime" val="6000"/>
+  <set name="hitTime" val="6000"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="MANADAM"/>

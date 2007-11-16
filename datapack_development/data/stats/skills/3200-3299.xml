@@ -12,9 +12,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="300000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
@@ -38,9 +37,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="300000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
@@ -64,9 +62,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="300000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="1200000"/>
@@ -106,9 +103,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="REFLECT"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -131,15 +127,13 @@
   <table name="#mpConsume_Init"> 52 61 </table>
   <table name="#mpConsume"> 205 244 </table>
   <table name="#hitTime"> 20000 3500 </table>
-  <table name="#skillTime"> 20000 3500 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
-  <set name="hitTime" val="#hitTime"/>
   <set name="reuseDelay" val="600000"/>
-  <set name="skillTime" val="#skillTime"/>
+  <set name="hitTime" val="#hitTime"/>
   <set name="skillType" val="RECALL"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>

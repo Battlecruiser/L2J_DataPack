@@ -93,7 +93,6 @@
   <set name="power" val="542.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2200"/>
-  <set name="skillTime" val="2200"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="30000"/>
@@ -134,7 +133,7 @@
 -->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillTime" val="0"/>
+  <set name="hitTime" val="0"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -154,7 +153,7 @@
 -->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillTime" val="0"/>
+  <set name="hitTime" val="0"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -174,7 +173,7 @@
 -->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillTime" val="0"/>
+  <set name="hitTime" val="0"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -194,7 +193,7 @@
 -->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillTime" val="0"/>
+  <set name="hitTime" val="0"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="3600000"/>
@@ -213,7 +212,7 @@
 -->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillTime" val="0"/>
+  <set name="hitTime" val="0"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -233,7 +232,7 @@
 -->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillTime" val="0"/>
+  <set name="hitTime" val="0"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -253,7 +252,7 @@
 -->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillTime" val="0"/>
+  <set name="hitTime" val="0"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -273,7 +272,7 @@
 -->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillTime" val="0"/>
+  <set name="hitTime" val="0"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -293,7 +292,7 @@
 -->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillTime" val="0"/>
+  <set name="hitTime" val="0"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -313,7 +312,7 @@
 -->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillTime" val="0"/>
+  <set name="hitTime" val="0"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -350,10 +349,9 @@
   <set name="power" val="47895.0"/>
   <set name="mpConsume" val="192"/>
   <set name="save" val="4"/>
-  <set name="hitTime" val="4500"/>
   <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillTime" val="4500"/>
+  <set name="hitTime" val="4500"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="9000"/>
@@ -373,9 +371,8 @@
   <set name="mpConsume" val="150"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="skillTime" val="4000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="FEAR"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
