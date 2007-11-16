@@ -219,7 +219,8 @@
   <for>
   </for>
 </skill>
-<skill id="4017" levels="1" name="Brandish Queen Ant">
+<skill id="4017" levels="1" name="Queen Ant Brandish">
+  <!-- Queen Ant Skills -->
   <set name="power" val="271.0"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="250"/>
@@ -233,6 +234,7 @@
 </for>
 </skill>
 <skill id="4018" levels="1" name="Decrease Speed">
+  <!-- Queen Ant Skills -->
   <set name="save" val="5"/>
   <set name="power" val="542.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -252,7 +254,7 @@
   </for>
 </skill>
 <skill id="4019" levels="1" name="Decrease Speed">
-  <!-- Done by dc -->
+  <!-- Queen Ant Skills -->
   <set name="save" val="5"/>
   <set name="power" val="40"/>
   <set name="target" val="TARGET_AREA"/>
@@ -270,7 +272,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4020" levels="1" name="Heal Queen Ant 1">
+<skill id="4020" levels="1" name="Heal Queen Ant1">
   <set name="power" val="10845.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="3000"/>
@@ -284,7 +286,8 @@
   <for>
   </for>
 </skill>
-<skill id="4021" levels="1" name="Body Of Queent Ant">
+<skill id="4021" levels="1" name="Queen Ant">
+  <!-- Queen Ant Skills -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -321,7 +324,7 @@
   <for>
   </for>
 </skill>
-<skill id="4024" levels="1" name="Heal Queen Ant 2">
+<skill id="4024" levels="1" name="Heal Queen Ant2">
   <set name="power" val="10845.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="3000"/>
@@ -985,6 +988,7 @@
   </for>
 </skill>
 <skill id="4062" levels="1" name="Orfen">
+  <!-- Orfen Skills -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
@@ -1001,6 +1005,7 @@
   </for>
 </skill>
 <skill id="4063" levels="1" name="Paralysis">
+  <!-- Orfen Skills -->
   <set name="magicLvl" val="50"/>
   <set name="lvlDepend" val="1"/>
   <set name="save" val="3"/>
@@ -1020,6 +1025,7 @@
   </for>
 </skill>
 <skill id="4064" levels="1" name="Paralysis">
+  <!-- Orfen Skills -->
   <set name="magicLvl" val="50"/>
   <set name="save" val="3"/>
   <set name="power" val="30"/>
