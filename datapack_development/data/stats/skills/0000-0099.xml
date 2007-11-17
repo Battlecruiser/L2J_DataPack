@@ -511,6 +511,7 @@
   <set name="condition" val="128"/>
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="783"/>
+  <set name="coolTime" val="217" />
   <set name="skillType" val="CHARGEDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -593,6 +594,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="25000"/>
   <set name="hitTime" val="3000"/>
+  <set name="coolTime" val="1000" />
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
@@ -691,6 +693,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="25000"/>
   <set name="hitTime" val="3200"/>
+  <set name="coolTime" val="800" />
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
@@ -803,6 +806,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="3000"/>
   <set name="hitTime" val="1000"/>
+  <set name="coolTime" val="200" />
   <set name="skillType" val="AGGDAMAGE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="#castRange"/>
@@ -826,6 +830,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="15000"/>
   <set name="hitTime" val="1604"/>
+  <set name="coolTime" val="296" />
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -867,6 +872,7 @@
   <set name="condition" val="8"/>
   <set name="reuseDelay" val="11000"/>
   <set name="hitTime" val="1080"/>
+  <set name="coolTime" val="720" />
   <set name="skillType" val="BLOW"/>
   <set name="baseCritRate" val="15"/>
   <set name="lethal1" val="5"/>
@@ -1012,6 +1018,7 @@
   <set name="reuseDelay" val="17000"/>
   <set name="ignoreShld" val="true"/>
   <set name="hitTime" val="1067"/>
+  <set name="coolTime" val="733" />
   <set name="skillType" val="PDAM"/>
   <set name="effectRange" val="-1"/>
   <set name="castRange" val="-1"/>
@@ -1169,6 +1176,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="1080"/>
+  <set name="coolTime" val="720" />
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="ignoreShld" val="true"/>
@@ -1333,6 +1341,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="25000"/>
   <set name="hitTime" val="3200"/>
+  <set name="coolTime" val="800" />
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
@@ -1732,6 +1741,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="120000"/>
   <set name="hitTime" val="1360"/>
+  <set name="coolTime" val="440" />
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -1811,6 +1821,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="60000"/>
   <set name="hitTime" val="1833"/>
+  <set name="coolTime" val="167" />
   <set name="skillType" val="POISON"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -1953,6 +1964,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="12000"/>
   <set name="hitTime" val="1200"/>
+  <set name="coolTime" val="300" />
   <set name="skillType" val="STUN"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -2039,6 +2051,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="7000"/>
   <set name="hitTime" val="1604"/>
+  <set name="coolTime" val="296" />
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -2069,6 +2082,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="13000"/>
   <set name="hitTime" val="1080"/>
+  <set name="coolTime" val="720" />
   <set name="skillType" val="BLEED"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
