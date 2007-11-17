@@ -1,4 +1,4 @@
-Given the fact that no convention is widely adopted for the naming of these files yet, 
+Given the fact that no convention is widely adopted for the naming of these files yet,
 I decided to keep a list of what each file is meant to be, to improve the usability
 of this directory a little bit.
 
@@ -52,7 +52,7 @@ of this directory a little bit.
 
 310922001.xml -> Seven Signs - Black Marketeer of Mammon - SA Removal for AA
 310922002.xml -> Seven Signs - Black Marketeer of Mammon - Black Market Items
-311352501.xml -> Seven Signs - Merchant of Mammon - Buy Etc Items
+311132501.xml -> Seven Signs - Merchant of Mammon - Buy Etc Items
 311262501.xml -> Seven Signs - Blacksmith of Mammon - SA: S-Grade
 311262502.xml -> Seven Signs - Blacksmith of Mammon - A-grade duals
 311262503.xml -> Seven Signs - Blacksmith of Mammon - Duals S-Grade.
