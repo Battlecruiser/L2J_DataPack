@@ -39107,37 +39107,3 @@ INSERT INTO spawnlist VALUES
 
 (NULL,'schuttgart',1,'30768',86986,-142001,-1367,0,0,60246,60,0,0),
 (NULL,'schuttgart',1,'35644',87735,-140700,-1567,0,0,12555,60,0,0);
-
--- The following is a list of IDs for NPCs that spawn in L2J but no longer exist in the client.
-
--- Temp Fix - following this is a DELETE statement to remove them
--- Proper Fix - work out what replaced them or if they were wrong to begin with
-
--- npcskills, droplist, buylist, random_spawns, etc may need syncing with whatever choice is made
-
-
-
--- npcID	Name				Title
--- -----	----				-----
--- 13009	High Quality Squash	
--- 13010	Low Quality Squash	
--- 13011	Large Young Squash	
--- 13012	High Quality Large Squash	
--- 13013	Low Quality Large Squash	
--- 30491	Mass				Gatekeeper	
--- 31055	Doorman of Hell	
--- 31056	Doorman of Hell	
--- 31061	Blacksmith			Gludio
--- 31062	Blacksmith			Dion
--- 31064	Blacksmith			Oren
--- 31065	Blacksmith			Aden
--- 31066	Blacksmith			Innadril
--- 31069	Warehouse Keeper		Dion
--- 31070	Warehouse Keeper		Giran
--- 31071	Warehouse Keeper		Oren
--- 31072	Warehouse Keeper		Aden
--- 31073	Warehouse Keeper		Innadril
--- 31753	Blacksmith			Goddard
--- 31754	Warehouse Keeper		Goddard
-
-DELETE FROM spawnlist WHERE npc_templateid IN (13009,13010,13011,13012,13013,30491,31055,31056,31061,31062,31064,31065,31066,31069,31070,31071,31072,31073,31753,31754);
