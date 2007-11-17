@@ -39103,7 +39103,10 @@ INSERT INTO spawnlist VALUES
 
 (NULL,'IvoryTower1stFloor',1,31606,85731,16380,-4299,0,0,46905,60,0,0),
 (NULL,'RuneTemple',1,32009,36006,-48748,891,0,0,10970,60,0,0),
-(NULL,'godard02_npc2416_45',1,'35366',150144,-56597,-2982,0,0,39000,60,0,0);
+(NULL,'godard02_npc2416_45',1,'35366',150144,-56597,-2982,0,0,39000,60,0,0),
+
+(NULL,'schuttgart',1,'30768',86986,-142001,-1367,0,0,60246,60,0,0),
+(NULL,'schuttgart',1,'35644',87735,-140700,-1567,0,0,12555,60,0,0);
 
 -- The following is a list of IDs for NPCs that spawn in L2J but no longer exist in the client.
 
