@@ -13,7 +13,6 @@
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="15000"/>
   <set name="castRange" val="750"/>
   <set name="effectRange" val="1250"/>
   <for>
@@ -35,7 +34,6 @@
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="SLEEP"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="30000"/>
   <set name="castRange" val="750"/>
   <set name="effectRange" val="1250"/>
   <for>
@@ -55,7 +53,6 @@
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="ROOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="30000"/>
   <set name="castRange" val="750"/>
   <set name="effectRange" val="1250"/>
   <for>
@@ -76,7 +73,6 @@
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="30000"/>
   <set name="castRange" val="750"/>
   <set name="effectRange" val="1250"/>
   <for>
@@ -100,7 +96,6 @@
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="BLEED"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="20000"/>
   <set name="castRange" val="750"/>
   <set name="effectRange" val="1250"/>
   <for>
@@ -120,7 +115,6 @@
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="PARALYZE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="750"/>
   <set name="effectRange" val="1250"/>
   <for>
@@ -140,7 +134,6 @@
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="30000"/>
   <set name="castRange" val="750"/>
   <set name="effectRange" val="1250"/>
   <for>
@@ -182,7 +175,6 @@
   <set name="hitTime" val="4500"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="9000"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="STUN"/>
@@ -226,7 +218,6 @@
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="HOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="15000"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
   <set name="aggroPoints" val="100"/>
@@ -247,7 +238,6 @@
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="60000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
@@ -270,7 +260,6 @@
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="60000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
@@ -292,7 +281,6 @@
   <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="BUFF"/>
-  <set name="buffDuration" val="60000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -316,7 +304,6 @@
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="REFLECT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="60000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
@@ -607,7 +594,6 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="DEBUFF"/>
@@ -632,7 +618,6 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
@@ -795,7 +780,6 @@
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="1500"/>
   <for>
@@ -978,7 +962,6 @@
   <set name="skillType" val="POISON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="30000"/>
   <set name="castRange" val="#cast"/>
   <set name="effectRange" val="1000"/>
   <for>
