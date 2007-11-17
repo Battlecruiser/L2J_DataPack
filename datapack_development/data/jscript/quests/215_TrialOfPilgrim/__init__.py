@@ -1,6 +1,7 @@
 # Made by Mr. Have fun! Version 0.2
 # Updated by ElgarL
 # Improved a lil' bit by DrLecter
+# Latest update by Kerberos
 
 import sys
 from net.sf.l2j import Config
@@ -52,12 +53,14 @@ class Quest (JQuest) :
           st.giveItems(SPIRIT_OF_FLAME,1)
           st.takeItems(ESSENSE_OF_FLAME,1)
           st.set("cond","5")
+          st.playSound("ItemSound.quest_middle")
     elif event == "30650_1" :
           if st.getQuestItemsCount(ADENA) >= 100000*int(Config.RATE_DROP_ADENA) :
             htmltext = "30650-02.htm"
             st.giveItems(BOOK_OF_GERALD,1)
             st.takeItems(ADENA,100000*int(Config.RATE_DROP_ADENA))
-            st.set("cond","7")
+            st.set("cond","8")
+            st.playSound("ItemSound.quest_middle")
           else:
             htmltext = "30650-03.htm"
     elif event == "30650_2" :
@@ -66,16 +69,18 @@ class Quest (JQuest) :
           htmltext = "30362-05.htm"
           st.takeItems(BOOK_OF_DARKNESS,1)
           st.set("cond","16")
+          st.playSound("ItemSound.quest_middle")
     elif event == "30362_2" :
           htmltext = "30362-04.htm"
           st.set("cond","16")
+          st.playSound("ItemSound.quest_middle")
     elif event == "30652_1" :
           htmltext = "30652-02.htm"
           st.giveItems(BOOK_OF_DARKNESS,1)
           st.takeItems(DEBRIS_OF_WILLOW,1)
           st.set("cond","15")
+          st.playSound("ItemSound.quest_middle")
     return htmltext
-
 
  def onTalk (self,npc,player):
    htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
@@ -114,52 +119,61 @@ class Quest (JQuest) :
       htmltext = "30571-01.htm"
       st.takeItems(VOUCHER_OF_TRIAL,1)
       st.set("cond","2")
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 30571 and cond==2 :
       htmltext = "30571-02.htm"
-   elif npcId == 30571 and cond==5 and st.getQuestItemsCount(SPIRIT_OF_FLAME) :
+   elif npcId == 30571 and cond in [5,6] and st.getQuestItemsCount(SPIRIT_OF_FLAME) :
       htmltext = "30571-03.htm"
+      st.set("cond","6")
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 30649 and cond==2 :
       htmltext = "30649-01.htm"
       st.set("cond","3")
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 30649 and cond==3 :
       htmltext = "30649-02.htm"
    elif npcId == 30649 and cond==4 and st.getQuestItemsCount(ESSENSE_OF_FLAME) :
       htmltext = "30649-03.htm"
-   elif npcId == 30550 and cond==5 and st.getQuestItemsCount(SPIRIT_OF_FLAME) :
+   elif npcId == 30550 and cond==6 and st.getQuestItemsCount(SPIRIT_OF_FLAME) :
       htmltext = "30550-01.htm"
       st.giveItems(TAG_OF_RUMOR,1)
-      st.set("cond","6")
-   elif npcId == 30550 and cond==6 :
+      st.set("cond","7")
+      st.playSound("ItemSound.quest_middle")
+   elif npcId == 30550 and cond==7 :
       htmltext = "30550-02.htm"
-   elif npcId == 30650 and cond==6 and st.getQuestItemsCount(TAG_OF_RUMOR) :
+   elif npcId == 30650 and cond==7 and st.getQuestItemsCount(TAG_OF_RUMOR) :
       htmltext = st.showHtmlFile("30650-01.htm").replace("RequiredAdena", str(100000*int(Config.RATE_DROP_ADENA)))
-   elif npcId == 30650 and cond>=8 and st.getQuestItemsCount(GREY_BADGE) and st.getQuestItemsCount(BOOK_OF_GERALD) :
+   elif npcId == 30650 and cond>=9 and st.getQuestItemsCount(GREY_BADGE) and st.getQuestItemsCount(BOOK_OF_GERALD) :
       htmltext = "30650-04.htm"
       rate=int(Config.RATE_QUESTS_REWARD)
       if rate == 0 : rate = 1
       st.giveItems(ADENA,int(100000*Config.RATE_DROP_ADENA/rate))
       st.takeItems(BOOK_OF_GERALD,1)
-   elif npcId == 30651 and cond==6 and st.getQuestItemsCount(TAG_OF_RUMOR) :
+   elif npcId == 30651 and cond==7 and st.getQuestItemsCount(TAG_OF_RUMOR) :
       htmltext = "30651-01.htm"
       st.giveItems(GREY_BADGE,1)
       st.takeItems(TAG_OF_RUMOR,1)
-      st.set("cond","8")
-   elif npcId == 30651 and cond==7 and st.getQuestItemsCount(TAG_OF_RUMOR) :
+      st.set("cond","9")
+      st.playSound("ItemSound.quest_middle")
+   elif npcId == 30651 and cond==8 and st.getQuestItemsCount(TAG_OF_RUMOR) :
       htmltext = "30651-02.htm"
       st.giveItems(GREY_BADGE,1)
       st.takeItems(TAG_OF_RUMOR,1)
-      st.set("cond","8")
-   elif npcId == 30651 and cond==8 :
+      st.set("cond","9")
+      st.playSound("ItemSound.quest_middle")
+   elif npcId == 30651 and cond==9 :
       htmltext = "30651-03.htm"
    elif npcId == 30117 and cond==8 :
       htmltext = "30117-01.htm"
       st.set("cond","9")
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 30117 and cond==9 :
       htmltext = "30117-02.htm"
    elif npcId == 30036 and cond==9 :
       htmltext = "30036-01.htm"
       st.giveItems(PICTURE_OF_NAHIR,1)
       st.set("cond","10")
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 30036 and cond==10 :
       htmltext = "30036-02.htm"
    elif npcId == 30036 and cond==11 :
@@ -168,11 +182,13 @@ class Quest (JQuest) :
       st.takeItems(PICTURE_OF_NAHIR,1)
       st.takeItems(HAIR_OF_NAHIR,1)
       st.set("cond","12")
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 30036 and cond==12 and st.getQuestItemsCount(STATUE_OF_EINHASAD) :
       htmltext = "30036-04.htm"
    elif npcId == 30362 and cond==12 :
       htmltext = "30362-01.htm"
       st.set("cond","13")
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 30362 and cond==13 :
       htmltext = "30362-02.htm"
    elif npcId == 30362 and cond==15 and st.getQuestItemsCount(BOOK_OF_DARKNESS) :
@@ -191,6 +207,7 @@ class Quest (JQuest) :
       if st.getQuestItemsCount(BOOK_OF_DARKNESS) :
         st.takeItems(BOOK_OF_DARKNESS,1)
       st.set("cond","17")
+      st.playSound("ItemSound.quest_middle")
       st.takeItems(GREY_BADGE,1)
       st.takeItems(SPIRIT_OF_FLAME,1)
       st.takeItems(STATUE_OF_EINHASAD,1)
@@ -229,36 +246,12 @@ STARTING     = State('Starting', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)
 
-
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30648)
 
-QUEST.addTalkId(30648)
-
-QUEST.addTalkId(30036)
-QUEST.addTalkId(30117)
-QUEST.addTalkId(30362)
-QUEST.addTalkId(30550)
-QUEST.addTalkId(30571)
-QUEST.addTalkId(30612)
-QUEST.addTalkId(30649)
-QUEST.addTalkId(30650)
-QUEST.addTalkId(30651)
-QUEST.addTalkId(30652)
-
-QUEST.addKillId(27116)
-QUEST.addKillId(27117)
-QUEST.addKillId(27118)
-
-STARTED.addQuestDrop(30612,BOOK_OF_SAGE,1)
-STARTED.addQuestDrop(30648,VOUCHER_OF_TRIAL,1)
-STARTED.addQuestDrop(27116,ESSENSE_OF_FLAME,1)
-STARTED.addQuestDrop(30650,BOOK_OF_GERALD,1)
-STARTED.addQuestDrop(30550,TAG_OF_RUMOR,1)
-STARTED.addQuestDrop(30036,PICTURE_OF_NAHIR,1)
-STARTED.addQuestDrop(27117,HAIR_OF_NAHIR,1)
-STARTED.addQuestDrop(30652,BOOK_OF_DARKNESS,1)
-STARTED.addQuestDrop(27118,DEBRIS_OF_WILLOW,1)
-STARTED.addQuestDrop(30651,GREY_BADGE,1)
-STARTED.addQuestDrop(30649,SPIRIT_OF_FLAME,1)
-STARTED.addQuestDrop(30036,STATUE_OF_EINHASAD,1)
+for npcId in [30648,30036,30117,30362,30550,30571,30612,30649,30650,30651,30652] :
+  for itemId in range(2721,2734):
+    QUEST.addTalkId(npcId)
+    STARTED.addQuestDrop(npcId,itemId,1)
+for mobId in range(27116,27119):
+    QUEST.addKillId(mobId)
