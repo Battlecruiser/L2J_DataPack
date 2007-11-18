@@ -13695,10 +13695,10 @@ INSERT INTO skill_trees VALUES (118,440,1,'Braveheart',12800000,78); -- Maestro 
 -- INSERT INTO skill_trees VALUES (114,441,1,'Force Meditation',21340000,78); -- Grand Khavatari --
 
 -- Sonic Barrier 442
--- INSERT INTO skill_trees VALUES (88,442,1,'Sonic Barrier',80000000,79); -- Duelist --
+INSERT INTO skill_trees VALUES (88,442,1,'Sonic Barrier',80000000,79); -- Duelist --
 
 -- Force Barrier 443
--- INSERT INTO skill_trees VALUES (114,443,1,'Force Barrier',80000000,79); -- Grand Khavatari --
+INSERT INTO skill_trees VALUES (114,443,1,'Force Barrier',80000000,79); -- Grand Khavatari --
 
 -- Mirage 445
 -- INSERT INTO skill_trees VALUES (93,445,1,'Mirage',80000000,79); -- Adventurer --
@@ -13741,8 +13741,8 @@ INSERT INTO skill_trees VALUES (20,449,4,'Summon Attractive Cubic',1730000,74); 
 -- INSERT INTO skill_trees VALUES (33,450,10,'Banish Seraph',1300000,74); -- Shillien Knight --
 
 -- Sonic Move 451
--- INSERT INTO skill_trees VALUES (2,451,1,'Sonic Move',250000,62); -- Gladiator --
--- INSERT INTO skill_trees VALUES (2,451,2,'Sonic Move',490000,68); -- Gladiator --
+INSERT INTO skill_trees VALUES (2,451,1,'Sonic Move',250000,62); -- Gladiator --
+INSERT INTO skill_trees VALUES (2,451,2,'Sonic Move',490000,68); -- Gladiator --
 
 -- Shock Stomp 452
 INSERT INTO skill_trees VALUES (3,452,1,'Shock Stomp',154000,55); -- Warlord --
@@ -13843,7 +13843,7 @@ INSERT INTO skill_trees VALUES (115,1416,1,'Pa\'agrio\'s Fist',80000000,79); -- 
 -- INSERT INTO skill_trees VALUES (40,1417,5,'Aura Flash',1000000,74); -- Spellhowler --
 
 -- Celestial Shield 1418
--- INSERT INTO skill_trees VALUES (16,1418,1,'Celestial Shield',190000,64); -- Bishop --
+INSERT INTO skill_trees VALUES (16,1418,1,'Celestial Shield',190000,64); -- Bishop --
 
 -- Volcano 1419
 -- INSERT INTO skill_trees VALUES (94,1419,1,'Volcano',150000000,80); -- Archmage --

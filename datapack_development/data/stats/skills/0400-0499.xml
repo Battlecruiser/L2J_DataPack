@@ -927,33 +927,47 @@
   </for>
 </skill>
 <skill id="442" levels="1" name="Sonic Barrier">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  <!--
   Description(s):
-      Uses sonic force to create a temporary protective barrier that is impervious to normal strikes, skills, buffs/debuffs. An equipped dual-sword weapon is required to use this skill. Level 5 Sonic Focus charge required.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+      Uses sonic force to create a temporary protective barrier that is impervious to normal strikes, skills, buffs/debuffs.
+      An equipped dual-sword weapon is required to use this skill. Level 5 Sonic Focus charge required.
+  -->
+  <set name="num_charges" val="5"/>  
+  <set name="charge_skill_id" val="8"/>
+  <set name="weaponsAllowed" val="512"/>
+  <set name="mpConsume" val="65"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="2000"/>
+  <set name="reuseDelay" val="1800000"/>
+  <set name="skillType" val="CHARGE_EFFECT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
-<!-- need core support for invincibility effect... or lots off crazy values here -> http://www.l2guru.com/forum/showthread.php?t=74269 -->
+     <effect count="1" name="Invincible" time="30" val="0"/>
   </for>
 </skill>
 <skill id="443" levels="1" name="Force Barrier">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Uses spiritual forces to create a temporary protective barrier that is impervious to normal strikes, skills, buffs/debuffs. An equipped hand-to-hand combat weapon is required to use this skill. Level 4 Focused Force charge required.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!--
+      Description(s):
+      Uses spiritual forces to create a temporary protective barrier that is impervious to normal strikes, skills, buffs/debuffs. 
+      An equipped hand-to-hand combat weapon is required to use this skill. Level 4 Focused Force charge required.
+  -->
+  <set name="weaponsAllowed" val="1024"/>
+  <set name="mpConsume" val="72"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="2000"/>
+  <set name="reuseDelay" val="600000"/>
+  <set name="skillType" val="CHARGE_EFFECT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="num_charges" val="4"/>
+  <set name="charge_skill_id" val="50"/>
   <for>
-<!-- need core support for invincibility effect... or lots of BIG values here -> http://www.l2guru.com/forum/showthread.php?t=74269 -->
+    <effect count="1" name="Invincible" time="30" val="0"/>
   </for>
 </skill>
 <skill id="444" levels="1" name="Festive Sweeper">
@@ -1105,19 +1119,32 @@
   </for>
 </skill>
 <skill id="451" levels="2" name="Sonic Move">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  <!--
+  Values need checking
   Description(s):
       Lvl 1 - A Sonic Force detonation significantly increases your speed. Level 2 Sonic Force charge required. An equipped dual-sword weapon is required to use this skill. Effect 1.
       Lvl 2 - A Sonic Force detonation significantly increases your speed. Level 3 Sonic Force charge required. An equipped dual-sword weapon is required to use this skill. Effect 2.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  -->
+  <table name="#charges"> 2 3 </table>
+  <table name="#spd"> 1.25 1.58 </table>
+  <table name="#mpConsume"> 29 32 </table>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="75000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="charge_skill_id" val="8"/>
+  <set name="num_charges" val="#charges"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="CHARGE_EFFECT"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <cond msg="An equipped dual-sword weapon is required to use this skill.">
+    <using kind="Dual Sword"/>
+  </cond>
   <for>
-<!-- how can I use num_charges when skillType is not CHARGEDAM ? -->
+    <effect name="Buff" time="15" count="1" val="0" stackOrder="#spd" stackType="SpeedUpS"> <!-- changed to 15s duration - retail info -->
+      <mul order="0x30" stat="runSpd" val="#spd"/>
+    </effect>
   </for>
 </skill>
 <skill id="452" levels="5" name="Shock Stomp">
