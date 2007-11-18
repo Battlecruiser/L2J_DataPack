@@ -21549,6 +21549,85 @@ INSERT INTO `droplist` VALUES
 (22057,1539,1,3,-1,131157),   -- Greater Healing Potion 
 (22057,1875,1,1,-1,91969),   -- Stone of Purity 
 (22057,4601,1,1,-1,25142),   -- Greater Dye of STR <Str+3 Con-3>
+(22058,57,699,1421,0,700000),	-- Adena
+(22058,1342,10,30,1,125000),	-- Fine Steel Arrow
+(22058,1864,1,1,1,35714),	-- Stem
+(22058,1869,1,1,1,17544),	-- Iron Ore
+(22058,1915,1,1,2,9524),	-- Ring of Ages Gemstone
+(22058,1914,1,1,2,6250),	-- Earring of Binding Gemstone
+(22058,1916,1,1,2,4878),	-- Necklace of Mermaid Teardrop
+(22058,1880,1,1,1,1709),	-- Steel
+(22058,2170,1,1,2,1377),	-- Recipe: Nassen's Earring
+(22058,4043,1,1,1,700),		-- Asofe
+(22058,5550,1,1,1,356),		-- Durable Metal Plate
+(22058,885,1,1,2,178),		-- Ring of Ages
+(22058,8725,1,1,2,131),		-- Life Stone: level 52
+(22058,854,1,1,2,71),		-- Earring of Binding
+(22058,917,1,1,2,71),		-- Necklace of Mermaid
+(22058,8735,1,1,2,35),		-- Mid-Grade Life Stone: level 52
+(22058,1914,1,1,-1,125051),	-- Earring of Binding Gemstone
+(22058,2169,1,1,-1,91521),	-- Recipe: Necklace of Binding
+(22058,1915,1,1,-1,85712),	-- Ring of Ages Gemstone
+(22059,57,1836,3719,0,700000),	-- Adena
+(22059,1869,1,80,1,200000),	-- Iron Ore
+(22059,1864,1,80,1,200000),	-- Stem
+(22059,1880,1,1,1,20408),	-- Steel
+(22059,4043,1,16,1,9433),	-- Asofe
+(22059,2108,1,1,2,3636),	-- Fisted Blade Piece
+(22059,5550,1,1,2,2183),	-- Durable Metal Plate
+(22059,1869,1,9,-1,352544),	-- Iron Ore
+(22059,2170,1,1,-1,89377),	-- Recipe: Nassen's Earring
+(22059,1916,1,1,-1,84878),	-- Necklace of Mermaid Teardrop
+(22060,57,1633,3292,0,700000),	-- Adena
+(22060,1865,1,1,1,16666),	-- Varnish
+(22060,1870,1,1,1,16666),	-- Coal
+(22060,4039,1,1,1,9259),	-- Mold Glue
+(22060,4043,1,1,1,7246),	-- Asofe
+(22060,1874,1,1,1,6211),	-- Oriharukon Ore
+(22060,8329,1,1,2,2066),	-- Pa'agrian Sword Blade
+(22060,2091,1,1,2,516),		-- Tsurugi Blade
+(22060,2089,1,1,2,515),		-- Caliburs Edge
+(22060,2090,1,1,2,514),		-- Delusional Blade
+(22060,2095,1,1,2,513),		-- Sword of Nightmare Blade
+(22060,2096,1,1,2,512),		-- Sword of Whispering Death Blade
+(22060,1870,1,6,-1,132522),	-- Coal
+(22060,4602,1,1,-1,42852),	-- Greater Dye of STR <Str+3 Dex-3>
+(22060,1539,1,3,-1,131157),	-- Greater Healing Potion
+(22062,57,589,1202,0,700000),	-- Adena
+(22062,1342,10,30,1,11111),	-- Fine Steel Arrow
+(22062,1873,1,1,1,24390),	-- Silver Nugget
+(22062,1895,1,1,1,16129),	-- Metalic Fibber
+(22062,1876,1,1,1,10869),	-- Mithril Ore
+(22062,1969,1,1,2,6135),	-- Dwarven Chain Gaiters Material
+(22062,1968,1,1,2,3289),	-- Dwarven Chain Mail Shirt Material
+(22062,952,1,1,1,731),		-- Scroll: Enchant Weapon (Grade C)
+(22062,4042,1,1,1,557),		-- Enria
+(22062,8724,1,1,2,226),		-- Life Stone: level 49
+(22062,8734,1,1,2,105),		-- Mid-Grade Life Stone: level 49
+(22062,382,1,1,2,87),		-- Dwarven Chain Gaiters
+(22062,355,1,1,2,87),		-- Dwarven Chain mail Shirt
+(22062,1912,1,1,-1,85521),	-- Ring of Protection Gemstone
+(22062,2166,1,1,-1,13584),	-- Recipe: Earrings of Binding (100%)
+(22062,2167,1,1,-1,15241),	-- Recipe: Ring of Ages
+(22063,57,2076,4097,0,700000),	-- Adena
+(22063,1873,1,80,1,11111),	-- Silver Nugget
+(22063,1866,1,1,1,11111),	-- Suede
+(22063,1864,3,80,1,83333),	-- Stem
+(22063,1865,3,86,1,76923),	-- Varnish
+(22063,2091,1,1,2,8772),	-- Tsurugi Blade
+(22063,1864,1,10,-1,200000),	-- Stem
+(22063,1539,1,2,-1,131157),	-- Greater Healing Potion
+(22064,57,1918,3862,0,700000),	-- Adena
+(22064,1868,1,3,1,200000),	-- Thread
+(22064,1342,30,90,2,125000),	-- Fine Steel Arrow
+(22064,1873,1,1,1,66666),	-- Silver Nugget
+(22064,5549,1,1,1,19608),	-- Metallic Thread
+(22064,1889,1,1,1,15625),	-- Compound Braid
+(22064,4044,1,1,1,4950),	-- Thons
+(22064,2108,1,1,2,4237),	-- Fisted Blade Piece
+(22064,1983,1,1,-1,11217),	-- Shining Circlet Pattern
+(22064,2233,1,1,-1,6215),	-- Recipe: Divine Tunic
+(22064,2089,1,1,-1,12504),	-- Caliburs Edge
 (22079,57,466,1581,0,700000), -- Adena
 (22079,1871,1,1,2,111111), -- Charcoal
 (22079,1866,1,1,2,76923), -- Suede
