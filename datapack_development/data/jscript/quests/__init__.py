@@ -18,6 +18,7 @@ __all__ = [
 '17_LightAndDarkness',
 '18_MeetingWithTheGoldenRam',
 '19_GoToThePastureland',
+'20_BringUpWithLove',
 '27_ChestCaughtWithABaitOfWind',
 '28_ChestCaughtWithABaitOfIcyAir',
 '29_ChestCaughtWithABaitOfEarth',

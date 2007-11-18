@@ -169,6 +169,12 @@ class feedable_beasts(JQuest) :
 
             objectId = nextNpc.getObjectId()
             
+            st = player.getQuestState("20_BringUpWithLove")
+            if st :
+                if Rnd.get(100) <= 5 and st.getQuestItemsCount(7185) == 0 :
+                    st.giveItems(7185,1) #if player has quest 20 going, give quest item
+                    st.set("cond","2")   #it's easier to hardcode it in here than to try and repeat this stuff in the quest
+
             # also, perform a rare random chat
             rand = Rnd.get(20)
             if rand > 4 : pass
