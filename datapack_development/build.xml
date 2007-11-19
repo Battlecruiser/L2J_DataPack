@@ -4,8 +4,8 @@
         This script will build the L2J_Datapack.
         
         $Author: DrLecter $
-        $Date: 2007-04-18 14:49:44 -0300 (we, 18 apr 2007) $
-        $Revision: 2928 $  
+        $Date: 2007-11-19 16:57:12 -0300 (mo, 19 nov 2007) $
+        $Revision: 3627 $  
         
         This program is free software; you can redistribute it and/or modify
         it under the terms of the GNU General Public License as published by
@@ -30,65 +30,80 @@
   <property name="build.dist" location="${build}/dist"/>
   <property name="build.dist.game" location="${build.dist}/gameserver"/>
   <property name="build.dist.login" location="${build.dist}/login"/>
+  <property name="build.dist.sql" location="${build.dist}/sql"/>
+  <property name="build.dist.tools" location="${build.dist}/tools"/>
+  <property name="build.dist.doc" location="${build.dist}/doc"/>
   <property name="properties-file" location="${build.dist.game}/config/l2jdp-version.properties"/>
 
     <target name="init"
-      depends="clean"
-      description="Create the output directories.">
+      description="Create the output directories. Do nothing if dirs were already created">
       <mkdir dir="${build}"/>
       <mkdir dir="${build.dist}"/>
       <mkdir dir="${build.dist.game}"/>
+      <mkdir dir="${build.dist.doc}" />
       <mkdir dir="${build.dist.login}" />
     </target>
 
-    <target name="dist"
-      depends="version">
-      <copy todir="${build.dist.game}">
+    <target name="export"
+      depends="version"
+      description="Syncronizes build space contents with project.">
+      <sync todir="${build.dist.doc}">
          <fileset dir="${basedir}">
+          <include name="gpl.txt"/>
+          <include name="readme-dp.txt"/>
+         </fileset>
+      </sync>
+      <sync todir="${build.dist.game}/data">
+         <fileset dir="${basedir}/data">
            <exclude name=".project"/>
-           <exclude name="build.xml"/>
-           <exclude name="build/**"/>
            <exclude name="log/**"/>
-           <exclude name="data/clans/**"/>
-           <exclude name="data/crests/**"/>
+           <exclude name="cachedir/**"/>
+           <exclude name="clans/**"/>
+           <exclude name="crests/**"/>
            <exclude name="**.svn**"/>
            <exclude name="**/*.class"/>
-           <exclude name="sql/**"/>
-           <exclude name="tools/**"/>
+           <exclude name="**/*.jar"/>
            <exclude name="geodata/**"/>
            <exclude name="pathnode/**"/>
            <include name="**/*.*"/>
          </fileset>
-      </copy>
-      <copy todir="${build.dist}">
-         <fileset dir="${basedir}">
-           <exclude name=".project"/>
-           <exclude name="build.xml"/>
-           <exclude name="config/**"/>
-           <exclude name="build/**"/>
-           <exclude name="log/**"/>
-           <exclude name="data/clans/**"/>
-           <exclude name="data/**"/>
-           <exclude name="data/crests/**"/>
-           <exclude name="**.svn**"/>
-           <exclude name="**/*.class"/>
-           <exclude name="geodata/**"/>
-           <exclude name="pathnode/**"/>
-           <include name="sql/*.*"/>
-           <include name="sql/experimental/*.*"/>
-           <include name="sql/updates/*.*"/>
-           <include name="tools/*.*"/>
+      </sync>
+      <sync todir="${build.dist.sql}">
+         <fileset dir="${basedir}/sql">
+            <include name="*.*"/>
+            <include name="experimental/*.*"/>
+            <include name="updates/*.*"/>
          </fileset>
-      </copy>
-      <copy todir="${build.dist.login}">
+      </sync>
+      <sync todir="${build.dist.tools}">
+         <fileset dir="${basedir}/tools">
+           <include name="*.*"/>
+           <exclude name="database_installer.rc"/>
+           <exclude name="*.txt"/>
+           <exclude name="*.log"/>
+           <exclude name="*backup.sql"/>
+         </fileset>
+      </sync>
+      <sync todir="${build.dist.login}">
         <fileset dir="${build.dist.game}/data">
           <include name="servername.xml"/>
         </fileset>
-      </copy>
-      <delete file="${build}/L2J_DataPack.zip"/>
-      <zip destfile="${build}/L2J_DataPack.zip" basedir="${build.dist}"/>
+      </sync>
+   </target>  
+
+    <target name="dist"
+          depends="export"
+          description="Creates a ZIP file. Suitable for distribution but building takes longer. See dist-deflate for faster builds.">
+      <zip destfile="${build}/L2J_DataPack.zip" basedir="${build.dist}" update="true"/>
     </target>
 
+    <target name="dist-deflate"
+          depends="export"
+          description="Creates a datapack ZIP file with NO compression (bigger ZIP file but faster than regular dist target)">
+      <zip destfile="${build}/L2J_DataPack-nocompress.zip" basedir="${build.dist}" update="true" compress="false"/>
+    </target>
+  
+  
     <target name="version"
       depends="init"
       description="Create l2jdp-version.properties file">
@@ -117,8 +132,13 @@
     </target>
 
     <target name="clean" 
-      description="Deletes the zip file">
+      description="Deletes the whole build space and existing packages.">
       <delete dir="${build}"/>
     </target>
 
+  <target name="distclean" 
+      description="Deletes the datapack distribution ZIP file only, preserving synchronized build files.">
+    <delete file="${build}/L2J_DataPack.zip"/>
+      <delete file="${build}/L2J_DataPack-nocompress.zip"/>
+    </target>
 </project>
