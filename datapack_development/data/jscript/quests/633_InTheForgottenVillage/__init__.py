@@ -124,8 +124,8 @@ class Quest (JQuest):
                if st.getRandom(1000) < chance:
                   numItems += 1
                if numItems :
-                  if count + numItems >= 180 :
-                     numItems = 180 - count
+                  if count + numItems >= 200 :
+                     numItems = 200 - count
                      st.playSound("ItemSound.quest_middle")
                      st.set("cond","2")
                   else:
