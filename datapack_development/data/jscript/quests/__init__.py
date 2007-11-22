@@ -188,6 +188,8 @@ __all__ = [
 '333_BlackLionHunt',
 '334_TheWishingPotion',
 '336_CoinOfMagic',
+#'337_AudienceWithTheLandDragon', #quest works, but support for portal stones and antharas is not done yet,
+#so this quest is not imported by default because portal stones will not work. Could be included if desired with no errors.
 '338_AlligatorHunter',
 '340_SubjugationOfLizardmen',
 '341_HuntingForWildBeasts',
