@@ -13869,7 +13869,7 @@ INSERT INTO skill_trees VALUES (16,1418,1,'Celestial Shield',190000,64); -- Bish
 -- INSERT INTO skill_trees VALUES (97,1425,1,'Purification Field',150000000,80); -- Cardinal --
 
 -- Miracle 1426
--- INSERT INTO skill_trees VALUES (97,1426,1,'Miracle',150000000,80); -- Cardinal --
+INSERT INTO skill_trees VALUES (97,1426,1,'Miracle',150000000,80); -- Cardinal --
 
 -- Flames of Invincibility 1427
 -- INSERT INTO skill_trees VALUES (115,1427,1,'Flames of Invincibility',150000000,80); -- Dominator --

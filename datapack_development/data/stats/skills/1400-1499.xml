@@ -535,16 +535,27 @@
 </skill>
 <skill id="1426" levels="1" name="Miracle">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Heartily regenerates the HP of all alliance members in the applicable area. Level 2 or higher Spell Force required. Consumes 1 Magic Symbol.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="itemConsumeId" val="8876"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="mpConsume" val="72"/>
+  <set name="magicLvl" val="80"/>
+  <set name="power" val="100"/>
+  <set name="target" val="TARGET_ALLY"/>
+  <set name="skillType" val="HEAL_PERCENT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="3600000"/> <!-- reuse 60 minutes -->
+  <set name="isMagic" val="false"/> <!-- skill won't be affected by Casting speed -->
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
+  <set name="effectRange" val="-1"/>
+  <cond msg="Proper force required.">
+    <player spell_force="2"/>
+  </cond>
+  <for> 
   </for>
 </skill>
 <skill id="1427" levels="1" name="Flames of Invincibility">
