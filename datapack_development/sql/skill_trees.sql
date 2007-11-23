@@ -13875,8 +13875,8 @@ INSERT INTO skill_trees VALUES (16,1418,1,'Celestial Shield',190000,64); -- Bish
 -- INSERT INTO skill_trees VALUES (115,1427,1,'Flames of Invincibility',150000000,80); -- Dominator --
 
 -- Mass Recharge 1428
--- INSERT INTO skill_trees VALUES (105,1428,1,'Mass Recharge',150000000,80); -- Evas Saint --
--- INSERT INTO skill_trees VALUES (112,1428,1,'Mass Recharge',150000000,80); -- Shillien Saint --
+INSERT INTO skill_trees VALUES (105,1428,1,'Mass Recharge',150000000,80); -- Evas Saint --
+INSERT INTO skill_trees VALUES (112,1428,1,'Mass Recharge',150000000,80); -- Shillien Saint --
 
 -- Gate Chant 1429
 -- INSERT INTO skill_trees VALUES (116,1429,1,'Gate Chant',16000000,78); -- Doomcryer --

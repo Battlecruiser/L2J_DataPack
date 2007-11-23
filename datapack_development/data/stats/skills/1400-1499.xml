@@ -563,15 +563,26 @@
 </skill>
 <skill id="1428" levels="1" name="Mass Recharge">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Greatly regenerates MP of party members. Can be used when Spell Force is level 3 or higher. Consumes 1 Magic Symbol.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="itemConsumeId" val="8876"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="mpConsume" val="73"/>
+  <set name="magicLvl" val="80"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="power" val="1500"/>
+  <set name="skillRadius" val="900"/>
+  <set name="skillType" val="MANARECHARGE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="3600000"/> <!-- reuse 60 minutes -->
+  <set name="isMagic" val="false"/> <!-- skill won't be affected by Casting speed -->
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <cond msg="Proper force required.">
+    <player spell_force="3"/>
+  </cond>
   <for>
   </for>
 </skill>
