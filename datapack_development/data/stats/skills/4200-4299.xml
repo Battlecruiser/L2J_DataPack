@@ -1067,7 +1067,7 @@
   <for>
   </for>
 </skill>
-<skill id="4267" levels="5" name="Grade Penalty">
+<skill id="4267" levels="1" name="Grade Penalty">
   <table name="#rate"> 0.22 0.19 0.16 0.13 0.10 </table>
   <set name="power" val="0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1076,7 +1076,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pAtkSpd" val="#rate"/>
+    <mul order="0x30" stat="mAtkSpd" val="#rate"/>
+    <mul order="0x30" stat="rEvas" val="#rate"/>
     <mul order="0x30" stat="rExp" val="#rate"/>
+    <mul order="0x30" stat="runSpd" val="#rate"/>
     <mul order="0x30" stat="regHp" val="#rate"/>
     <mul order="0x30" stat="regCp" val="#rate"/>
     <mul order="0x30" stat="regMp" val="#rate"/>
