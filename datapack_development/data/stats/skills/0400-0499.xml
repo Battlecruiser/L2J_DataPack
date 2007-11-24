@@ -932,7 +932,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-     <effect count="1" name="Invincible" time="30" val="0"/>
+     <effect count="1" name="Invincible" time="10" val="0"/>
   </for>
 </skill>
 <skill id="443" levels="1" name="Force Barrier">
@@ -954,7 +954,7 @@
   <set name="num_charges" val="4"/>
   <set name="charge_skill_id" val="50"/>
   <for>
-    <effect count="1" name="Invincible" time="30" val="0"/>
+    <effect count="1" name="Invincible" time="10" val="0"/>
   </for>
 </skill>
 <skill id="444" levels="1" name="Festive Sweeper">
