@@ -1795,7 +1795,7 @@
   <table name="#magicLvl"> 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#power"> 431.0 458.0 486.0 516.0 547.0 579.0 612.0 647.0 683.0 721.0 760.0 800.0 842.0 885.0 929.0 974.0 1021.0 1069.0 1118.0 1169.0 1220.0 1272.0 1326.0 1380.0 1435.0 1491.0 1548.0 1605.0 1663.0 1721.0 1780.0 1838.0 1897.0 1956.0 2015.0 2073.0 2131.0 </table>
   <table name="#ench1Power"> 2151 2170 2189 2209 2228 2247 2266 2285 2305 2324 2343 2362 2381 2401 2420 2439 2458 2477 2497 2516 2535 2554 2573 2593 2612 2631 2650 2670 2689 2708 </table>
-  <set name="weaponsAllowed" val="1024"/>
+  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -1835,7 +1835,7 @@
   55 54 53 52 51 50 49 48 47 46
   </table>
   <table name="#ench2power"> 2027.0 2045.0 2063.0 2081.0 2099.0 2117.0 2135.0 2153.0 2171.0 2190.0 2208.0 2226.0 2244.0 2262.0 2280.0 2298.0 2316.0 2334.0 2352.0 2371.0 2389.0 2407.0 2425.0 2443.0 2461.0 2479.0 2497.0 2515.0 2533.0 2552.0 </table>
-  <set name="weaponsAllowed" val="1024"/>
+  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="4"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1863,6 +1863,7 @@
 </skill>
 <skill id="282" levels="1" name="Puma Spirit Totem">
   <!-- Done by dc -->
+  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="18"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1875,15 +1876,7 @@
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
       <mul order="0x30" stat="pAtkSpd" val="1.20">
-        <and>
-          <using kind="Fist,Dual Fist"/>
-        </and>
-      </mul>
       <add order="0x40" stat="accCombat" val="6">
-        <and>
-          <using kind="Fist,Dual Fist"/>
-        </and>
-      </add>
     </effect>
   </for>
 </skill>
@@ -1928,7 +1921,7 @@
   <table name="#magicLvl"> 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#power"> 501.0 535.0 570.0 607.0 646.0 729.0 773.0 820.0 868.0 918.0 971.0 1025.0 1081.0 1140.0 1200.0 1262.0 1327.0 1393.0 1461.0 1531.0 1603.0 1677.0 1753.0 1830.0 1908.0 1988.0 2070.0 2153.0 2237.0 2322.0 2408.0 2494.0 2581.0 2669.0 2757.0 2846.0 2934.0 3022.0 3109.0 3196.0 </table>
   <table name="#ench1Power"> 3225 3254 3283 3312 3340 3369 3398 3427 3456 3484 3513 3542 3571 3600 3628 3657 3686 3715 3744 3772 3801 3830 3859 3888 3916 3945 3974 4003 4032 4061 </table>
-  <set name="weaponsAllowed" val="1024"/>
+  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -2124,6 +2117,7 @@
   </for>
 </skill>
 <skill id="292" levels="1" name="Bison Spirit Totem">
+  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="32"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -2243,6 +2237,7 @@
   </for> 
 </skill>
 <skill id="298" levels="1" name="Rabbit Spirit Totem">
+  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="29"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
