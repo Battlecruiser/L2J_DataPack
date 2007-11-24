@@ -13679,7 +13679,7 @@ INSERT INTO skill_trees VALUES (116,436,1,'Divine Lore',16000000,78); -- Doomcry
 INSERT INTO skill_trees VALUES (100,437,1,'Song of Silence',80000000,79); -- Sword Muse --
 
 -- Soul of the Phoenix 438
-INSERT INTO skill_trees VALUES (90,438,1,'Soul of the Phoenix',80000000,79); -- Phoenix Knight --
+-- INSERT INTO skill_trees VALUES (90,438,1,'Soul of the Phoenix',80000000,79); -- Phoenix Knight --
 
 -- Shield of Revenge 439
 -- INSERT INTO skill_trees VALUES (91,439,1,'Shield of Revenge',80000000,79); -- Hell Knight --
