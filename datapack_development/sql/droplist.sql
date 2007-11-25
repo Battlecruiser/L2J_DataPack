@@ -5613,6 +5613,7 @@ INSERT INTO `droplist` VALUES
 (20598,3078,1,1,2,15125), -- Spellbook: Decay
 (20598,3079,1,1,2,15125), -- Spellbook: Cancel
 (20598,3089,1,1,2,15125), -- Spellbook: Tempest
+(20598,7846,1,1,2,4717), -- Spellbook: Invocation
 (20599,2120,1,1,-1,18800), -- Great Pata Blade
 (20599,4146,1,1,-1,25088), -- Recipe: Tunic of Zubei
 (20599,4590,1,1,-1,13046), -- Greater Dye of Strength <Str+2 Dex-2>
@@ -6813,6 +6814,7 @@ INSERT INTO `droplist` VALUES
 (20671,4040,1,1,2,1878), -- Mold Lubricant
 (20671,4042,1,1,2,1565), -- Enria
 (20671,4043,1,1,2,3130), -- Asofe
+(20671,8890,1,1,2,2358), -- Spellbook: Summon Attractive Cubic
 (20671,4973,1,1,2,1017), -- Recipe: Earring of Black Ore (70%)
 (20671,5276,1,1,2,126), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
 (20672,4052,1,1,-1,68521), -- Earring of Black Ore Piece
@@ -8115,7 +8117,8 @@ INSERT INTO `droplist` VALUES
 (20813,4085,1,1,1,2753), -- Tunic of Doom Pattern
 (20813,4086,1,1,1,3717), -- Blue Wolf Stockings Pattern
 (20813,4087,1,1,1,3717), -- Stockings of Doom Pattern
-(20813,4927,1,1,2,32922), -- Amulet: Chant of Revenge
+(20813,8945,1,1,2,6536), -- Spellbook: Celestial Shield
+(20813,4927,1,1,2,4184), -- Amulet: Chant of Revenge
 (20814,948,1,1,-1,12387), -- Scroll: Enchant Armor (Grade B)
 (20814,4053,1,1,-1,212371), -- Ring of Black Ore Gemstone
 (20814,5230,1,1,-1,6606), -- Recipe: Mithril Arrow (100%)
@@ -21628,6 +21631,16 @@ INSERT INTO `droplist` VALUES
 (22064,1983,1,1,-1,11217),	-- Shining Circlet Pattern
 (22064,2233,1,1,-1,6215),	-- Recipe: Divine Tunic
 (22064,2089,1,1,-1,12504),	-- Caliburs Edge
+(22065,57,1984,4023,0,700000),	-- Adena
+(22065,1873,1,1,1,71428),	-- Silver Nugget
+(22065,1895,1,1,1,50000),	-- Metalic Fibber
+(22065,1876,1,1,1,33333),	-- Mithril Ore
+(22065,4042,1,1,1,12658),	-- Enria
+(22065,2120,1,1,2,4201),	-- Great Pata Blade
+(22065,1806,1,1,2,1331),	-- Recipe: Soulshot: B-Grade
+(22065,1864,13,13,-1,189351),	-- Stem
+(22065,1895,1,3,-1,127027),	-- Metalic Fibber
+(22065,1918,1,1,-1,87027),	-- Nassen's Earring Gemstone
 (22079,57,466,1581,0,700000), -- Adena
 (22079,1871,1,1,2,111111), -- Charcoal
 (22079,1866,1,1,2,76923), -- Suede
@@ -26640,6 +26653,7 @@ INSERT INTO `droplist` VALUES
 (22196,5529,1,1,1,5181), -- Dragon Slayer Edge
 (22196,5545,1,1,1,5181), -- Dark Legion\'s Edge Blade
 (22196,8956,1,1,2,5181), -- Red Primeval Crystal
+(22196,8877,1,1,2,2494), -- Spellbook: Soul of the Phoenix
 -- Velociraptor
 (22197,57,4496,9199,0,700000), -- Adena
 (22197,8633,1,1,2,5714), -- Elixir of Mental Strength (S-Grade)
@@ -26649,6 +26663,7 @@ INSERT INTO `droplist` VALUES
 (22197,8954,1,1,2,1344), -- Blue Primeval Crystal
 (22197,8885,1,1,2,1344), -- Amulet: Magnus\' Chant
 (22197,5545,1,1,1,1344), -- Dark Legion\'s Edge Blade
+(22197,8907,1,1,1,1284), -- Ancient Spellbook: Flames of Invincibility
 (22197,8955,1,1,2,672), -- Green Primeval Crystal
 (22197,8956,1,1,2,672), -- Red Primeval Crystal
 (22197,6689,1,1,-1,17241), -- Basalt Battlehammer Head
@@ -26671,11 +26686,13 @@ INSERT INTO `droplist` VALUES
 (22218,8627,1,1,2,3194), -- Elixir of Life (S-Grade)
 (22218,5546,1,1,1,3194), -- Sword of Miracles Edge
 (22218,8954,1,1,2,1597), -- Blue Primeval Crystal
+(22218,8906,1,1,2,711), -- Ancient Spellbook: Miracle
 -- Velociraptor
 (22223,57,4432,9023,0,700000), -- Adena
 (22223,8633,1,1,2,4149), -- Elixir of Mental Strength (S-Grade)
 (22223,8627,1,1,2,2070), -- Elixir of Life (S-Grade)
 (22223,5545,1,1,1,2070), -- Dark Legion\'s Edge Blade
+(22223,8898,1,1,1,857), -- Ancient Tactical Manual: Symbol of the Assassin
 -- Pterosaur
 (22199,57,18270,36670,0,700000), -- Adena
 (22199,6346,1,1,1,71428), -- Sealed Majestic Ring Gemstone
@@ -26687,6 +26704,7 @@ INSERT INTO `droplist` VALUES
 (22199,8954,1,1,2,3344), -- Blue Primeval Crystal
 (22199,6327,1,1,1,3344), -- Sealed Majestic Earring
 (22199,8881,1,1,2,3344), -- Spellbook: Cleanse
+(22199,8904,1,1,2,1284), -- Ancient Spellbook: Anti-Summoning Field
 -- Ornithomimus
 (22200,57,4460,9095,0,700000), -- Adena
 (22200,8633,1,1,2,6493), -- Elixir of Mental Strength (S-Grade)
@@ -26710,6 +26728,7 @@ INSERT INTO `droplist` VALUES
 (22201,8342,1,1,1,1468), -- Flaming Dragon Skull Piece
 (22201,8889,1,1,2,1468), -- Amulet: Gate Chant
 (22201,8954,1,1,2,733), -- Blue Primeval Crystal
+(22201,8882,1,1,2,733), -- Spellbook: Salvation
 (22201,8349,1,1,1,733), -- Doom Crusher Head
 (22201,6696,1,1,-1,18867), -- Heavens Divider Edge
 -- Ornithomimus
@@ -26735,6 +26754,7 @@ INSERT INTO `droplist` VALUES
 (22224,57,4589,9014,0,700000), -- Adena
 (22224,8627,1,1,2,6849), -- Elixir of Life (S-Grade)
 (22224,8955,1,1,2,6849), -- Green Primeval Crystal
+(22224,8897,1,1,2,847), -- Ancient Tactical Manual: Symbol of the Sniper
 -- Deinonychus
 (22203,57,4308,8702,0,700000), -- Adena
 (22203,8633,1,1,2,7092), -- Elixir of Mental Strength (S-Grade)
@@ -26762,6 +26782,7 @@ INSERT INTO `droplist` VALUES
 (22205,8627,1,1,2,7847), -- Elixir of Life (S-Grade)
 (22205,5534,1,1,1,2247), -- Soul Bow Stave
 (22205,8633,1,1,2,1123), -- Elixir of Mental Strength (S-Grade)
+(22205,8880,1,1,2,758), -- Spellbook: Summon Spectral Knight
 (22205,8954,1,1,2,561), -- Blue Primeval Crystal
 (22205,1875,1,1,-1,680000), -- Stone of Purity
 -- Deinonychus
@@ -26791,6 +26812,7 @@ INSERT INTO `droplist` VALUES
 (22210,57,3927,7993,0,700000), -- Adena
 (22210,8633,1,1,2,9523), -- Elixir of Mental Strength (S-Grade)
 (22210,5537,1,1,1,3802), -- Soul Separator Head
+(22210,8884,1,1,2,239), -- Spellbook: Spell Turning
 -- Pachycephalosaurus
 (22226,57,5409,9915,0,700000), -- Adena
 -- Wild Strider
@@ -26832,6 +26854,7 @@ INSERT INTO `droplist` VALUES
 (22215,8633,1,1,2,58823), -- Elixir of Mental Strength (S-Grade)
 (22215,8627,1,1,2,45454), -- Elixir of Life (S-Grade)
 (22215,8894,1,1,2,14925), -- Ancient Tactical Manual: Symbol of Resistance
+(22215,8894,1,1,2,9804), -- Ancient Tactical Manual: Symbol of Honor
 (22215,8956,1,1,2,4975), -- Red Primeval Crystal
 -- Tyrannosaurus
 (22216,57,57070,100100,0,700000), -- Adena
@@ -26839,6 +26862,7 @@ INSERT INTO `droplist` VALUES
 -- (22216,8762,1,1,3,58823), -- Top-Grade Life Stone: level 76
 (22216,8633,1,1,2,58823), -- Elixir of Mental Strength (S-Grade)
 (22216,5541,1,1,1,58823), -- Tallum Glaive Edge
+(22216,8905,1,1,1,24390), -- Ancient Spellbook: Purification Field
 -- Tyrannosaurus
 (22217,57,55710,109660,0,700000), -- Adena
 (22217,8633,1,1,2,90909), -- Elixir of Mental Strength (S-Grade)
