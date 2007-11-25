@@ -26854,7 +26854,7 @@ INSERT INTO `droplist` VALUES
 (22215,8633,1,1,2,58823), -- Elixir of Mental Strength (S-Grade)
 (22215,8627,1,1,2,45454), -- Elixir of Life (S-Grade)
 (22215,8894,1,1,2,14925), -- Ancient Tactical Manual: Symbol of Resistance
-(22215,8894,1,1,2,9804), -- Ancient Tactical Manual: Symbol of Honor
+(22215,8895,1,1,2,9804), -- Ancient Tactical Manual: Symbol of Honor
 (22215,8956,1,1,2,4975), -- Red Primeval Crystal
 -- Tyrannosaurus
 (22216,57,57070,100100,0,700000), -- Adena
