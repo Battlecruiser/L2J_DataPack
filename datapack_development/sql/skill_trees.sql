@@ -13826,21 +13826,21 @@ INSERT INTO skill_trees VALUES (115,1414,1,'Victories of Pa\'agrio',80000000,79)
 INSERT INTO skill_trees VALUES (115,1416,1,'Pa\'agrio\'s Fist',80000000,79); -- Dominator --
 
 -- Aura Flash 1417
--- INSERT INTO skill_trees VALUES (12,1417,1,'Aura Flash',129000,58); -- Sorcerer/ss --
--- INSERT INTO skill_trees VALUES (12,1417,2,'Aura Flash',220000,62); -- Sorcerer/ss --
--- INSERT INTO skill_trees VALUES (12,1417,3,'Aura Flash',370000,66); -- Sorcerer/ss --
--- INSERT INTO skill_trees VALUES (12,1417,4,'Aura Flash',520000,70); -- Sorcerer/ss --
--- INSERT INTO skill_trees VALUES (12,1417,5,'Aura Flash',1150000,74); -- Sorcerer/ss --
--- INSERT INTO skill_trees VALUES (27,1417,1,'Aura Flash',110000,58); -- Spellsinger --
--- INSERT INTO skill_trees VALUES (27,1417,2,'Aura Flash',190000,62); -- Spellsinger --
--- INSERT INTO skill_trees VALUES (27,1417,3,'Aura Flash',320000,66); -- Spellsinger --
--- INSERT INTO skill_trees VALUES (27,1417,4,'Aura Flash',430000,70); -- Spellsinger --
--- INSERT INTO skill_trees VALUES (27,1417,5,'Aura Flash',1000000,74); -- Spellsinger --
--- INSERT INTO skill_trees VALUES (40,1417,1,'Aura Flash',105000,58); -- Spellhowler --
--- INSERT INTO skill_trees VALUES (40,1417,2,'Aura Flash',190000,62); -- Spellhowler --
--- INSERT INTO skill_trees VALUES (40,1417,3,'Aura Flash',320000,66); -- Spellhowler --
--- INSERT INTO skill_trees VALUES (40,1417,4,'Aura Flash',470000,70); -- Spellhowler --
--- INSERT INTO skill_trees VALUES (40,1417,5,'Aura Flash',1000000,74); -- Spellhowler --
+INSERT INTO skill_trees VALUES (12,1417,1,'Aura Flash',129000,58); -- Sorcerer/ss --
+INSERT INTO skill_trees VALUES (12,1417,2,'Aura Flash',220000,62); -- Sorcerer/ss --
+INSERT INTO skill_trees VALUES (12,1417,3,'Aura Flash',370000,66); -- Sorcerer/ss --
+INSERT INTO skill_trees VALUES (12,1417,4,'Aura Flash',520000,70); -- Sorcerer/ss --
+INSERT INTO skill_trees VALUES (12,1417,5,'Aura Flash',1150000,74); -- Sorcerer/ss --
+INSERT INTO skill_trees VALUES (27,1417,1,'Aura Flash',110000,58); -- Spellsinger --
+INSERT INTO skill_trees VALUES (27,1417,2,'Aura Flash',190000,62); -- Spellsinger --
+INSERT INTO skill_trees VALUES (27,1417,3,'Aura Flash',320000,66); -- Spellsinger --
+INSERT INTO skill_trees VALUES (27,1417,4,'Aura Flash',430000,70); -- Spellsinger --
+INSERT INTO skill_trees VALUES (27,1417,5,'Aura Flash',1000000,74); -- Spellsinger --
+INSERT INTO skill_trees VALUES (40,1417,1,'Aura Flash',105000,58); -- Spellhowler --
+INSERT INTO skill_trees VALUES (40,1417,2,'Aura Flash',190000,62); -- Spellhowler --
+INSERT INTO skill_trees VALUES (40,1417,3,'Aura Flash',320000,66); -- Spellhowler --
+INSERT INTO skill_trees VALUES (40,1417,4,'Aura Flash',470000,70); -- Spellhowler --
+INSERT INTO skill_trees VALUES (40,1417,5,'Aura Flash',1000000,74); -- Spellhowler --
 
 -- Celestial Shield 1418
 INSERT INTO skill_trees VALUES (16,1418,1,'Celestial Shield',190000,64); -- Bishop --
