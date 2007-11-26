@@ -106,8 +106,8 @@ class baium (JQuest):
         if player.isFlying() :
           print "Player "+player.getName()+" attempted to enter Baium's layer while flying!"
           htmltext = '<html><body>Angelic Vortex:<br>You may not enter while flying a wyvern</body></html>'
-        if st.getQuestItemsCount(4295) : # bloody fabric
-          st.takeItems(4295,1)
+        if player.getQuestState("baium").getQuestItemsCount(4295) : # bloody fabric
+          player.getQuestState("baium").takeItems(4295,1)
           player.teleToLocation(113100,14500,10077)
           if not self.isBaiumAwake :
             self.playersInside.append(st)
