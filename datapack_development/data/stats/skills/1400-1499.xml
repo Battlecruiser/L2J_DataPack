@@ -239,7 +239,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <set name="negateStats" val="MUTE FEAR CONFUSION POISON BLEED DEBUFF WEAKNESS"/>
+  <set name="negateStats" val="BLEED CONFUSION DEBUFF FEAR MUTE PARALYZE ROOT SLEEP STUN POISON WEAKNESS"/>
   <set name="negatePower" val="9.0"/> <!-- Guessing -->
   <for>
   </for>
@@ -408,7 +408,7 @@
   <set name="effectRange" val="-1"/>
   <set name="hitTime" val="1000"/>
   <set name="isMagic" val="true"/>
-  <set name="itemConsumeId" val="3031" />
+  <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>

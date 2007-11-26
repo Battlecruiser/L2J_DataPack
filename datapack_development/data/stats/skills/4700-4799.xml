@@ -39,7 +39,7 @@
   <set name="operateType" val="OP_ACTIVE"/> 
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/> 
-  <set name="negateStats" val="MUTE FEAR CONFUSION POISON BLEED DEBUFF WEAKNESS"/> 
+  <set name="negateStats" val="DEBUFF"/>
   <set name="negatePower" val="9.0"/> 
   <set name="aggroPoints" val="#power"/>
   <for> 
@@ -106,7 +106,7 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="negateStats" val="SLEEP STUN SILENCE PARALYZE ROOT"/>
+  <set name="negateStats" val="SLEEP ROOT STUN MUTE PARALYZE"/>
   <set name="aggroPoints" val="#power"/>
   <for>
   </for>
