@@ -130,7 +130,7 @@ class Quest (JQuest) :
    elif event == "30738-16.htm":
      if st.getQuestItemsCount(WISH_POTION) :
        st.set("wish","1")
-       st.startQuestTimer("matild_timer1",3000,npc)
+       st.startQuestTimer("matild_timer1",3000,npc,None)
        st.takeItems(WISH_POTION,1)
        npc.setBusy(True)
      else:
@@ -139,7 +139,7 @@ class Quest (JQuest) :
    elif event == "30738-17.htm":
      if st.getQuestItemsCount(WISH_POTION) :
        st.set("wish","2")
-       st.startQuestTimer("matild_timer1",3000,npc)
+       st.startQuestTimer("matild_timer1",3000,npc,None)
        st.takeItems(WISH_POTION,1)
        npc.setBusy(True)
      else:
@@ -148,7 +148,7 @@ class Quest (JQuest) :
    elif event == "30738-18.htm":
      if st.getQuestItemsCount(WISH_POTION) :
        st.set("wish","3")
-       st.startQuestTimer("matild_timer1",3000,npc)
+       st.startQuestTimer("matild_timer1",3000,npc,None)
        st.takeItems(WISH_POTION,1)
        npc.setBusy(True)
      else:
@@ -157,18 +157,18 @@ class Quest (JQuest) :
    elif event == "30738-19.htm":
      if st.getQuestItemsCount(WISH_POTION) >= 1:
        st.set("wish","4")
-       st.startQuestTimer("matild_timer1",3000,npc)
+       st.startQuestTimer("matild_timer1",3000,npc,None)
        st.takeItems(WISH_POTION,1)
        npc.setBusy(True)
      else:
        htmltext = "30738-14.htm"
    elif event == "matild_timer1":
      autochat(npc,"OK, everybody pray fervently!")
-     st.startQuestTimer("matild_timer2",4000,npc)
+     st.startQuestTimer("matild_timer2",4000,npc,None)
      return
    elif event == "matild_timer2":
      autochat(npc,"Both hands to heaven, everybody yell together!")
-     st.startQuestTimer("matild_timer3",4000,npc)
+     st.startQuestTimer("matild_timer3",4000,npc,None)
      return
    elif event == "matild_timer3":
      autochat(npc,"One! Two! May your dreams come true!")
@@ -196,7 +196,7 @@ class Quest (JQuest) :
        else:
          spawnedNpc=st.addSpawn(SANCHES,player,True,0)
          autochat(spawnedNpc,"Who dares to call the dark Monarch?!")
-         st.startQuestTimer("sanches_timer1",200000,spawnedNpc)
+         st.startQuestTimer("sanches_timer1",200000,spawnedNpc,None)
      elif wish == 4 :
        if WISH_CHANCE <= 33:
          st.giveItems(R1[st.getRandom(len(R1))],1)
@@ -314,7 +314,7 @@ class Quest (JQuest) :
             autochat(npc,"It's time to come out my Remless... Bonaparterius!")
             spawnedNpc=st.addSpawn(BONAPARTERIUS,npc,True,0)
             autochat(spawnedNpc,"I am the Great Emperor's son!")
-            st.startQuestTimer("bonaparterius_timer1",600000,spawnedNpc)
+            st.startQuestTimer("bonaparterius_timer1",600000,spawnedNpc,None)
          else :
             st.giveItems(R4[st.getRandom(len(R4))],1)
        except : pass
@@ -325,7 +325,7 @@ class Quest (JQuest) :
          if st.getRandom(100) <= 50 :
            spawnedNpc=st.addSpawn(RAMSEBALIUS,npc,True,0)
            autochat(spawnedNpc,"Meet the absolute ruler!")
-           st.startQuestTimer("ramsebalius_timer1",600000,spawnedNpc)
+           st.startQuestTimer("ramsebalius_timer1",600000,spawnedNpc,None)
          else :
            st.giveItems(R4[st.getRandom(len(R4))],1)
        except : pass
@@ -336,7 +336,7 @@ class Quest (JQuest) :
          if st.getRandom(100) <= 50 :
            spawnedNpc=st.addSpawn(GREAT_DEMON_KING,npc,True,0)
            autochat(spawnedNpc,"Who dares to kill my fiendly minion?!")
-           st.startQuestTimer("greatdemon_timer1",600000,spawnedNpc)
+           st.startQuestTimer("greatdemon_timer1",600000,spawnedNpc,None)
          else :
            st.giveItems(R4[st.getRandom(len(R4))],1)
        except: pass

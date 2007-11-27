@@ -87,7 +87,7 @@ class Quest (JQuest) :
            st.set("id","2")
            npc.setBusy(True)
            st.set("cond","2")
-           st.startQuestTimer("Soul of Fire Nastron has despawned",1200000,spawnedNpc)
+           st.startQuestTimer("Soul of Fire Nastron has despawned",1200000,spawnedNpc,None)
            AutoChat(spawnedNpc,"Hey! I'll kick your aarse!")#this is only a temp message until we find out what it actually is! string = 61050
        else :
            htmltext = "31558-04.htm"
