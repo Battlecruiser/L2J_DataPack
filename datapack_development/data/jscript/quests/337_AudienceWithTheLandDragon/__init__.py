@@ -258,11 +258,11 @@ class Quest (JQuest) :
                     st.addSpawn(GUARDIAN1,-81260,75639+i,-3300,180000)
                     st.addSpawn(GUARDIAN1,-81240,75639+i,-3300,180000)
                  st.set("aspawned","1")
-                 st.startQuestTimer("Jewel1_Timer1",900000,npc,player)
+                 st.startQuestTimer("Jewel1_Timer1",900000,npc)
              elif nowHp < maxHp*0.4 and st.getQuestItemsCount(FIRST_FRAGMENT_OF_ABYSS_JEWEL)==0 :
                  st.giveItems(FIRST_FRAGMENT_OF_ABYSS_JEWEL,1)
                  st.playSound("ItemSound.quest_itemget")
-                 st.startQuestTimer("Jewel1_Timer2",240000,npc,player)
+                 st.startQuestTimer("Jewel1_Timer2",240000,npc)
          if nowHp < maxHp*0.1 :
              npc.decayMe()
              st.getQuestTimer("Jewel1_Timer1").cancel()
@@ -274,11 +274,11 @@ class Quest (JQuest) :
                     st.addSpawn(GUARDIAN2,63766+i,31139,-3400,180000)
                     st.addSpawn(GUARDIAN2,63706,31139+i,-3400,180000)
                  st.set("bspawned","1")
-                 st.startQuestTimer("Jewel2_Timer1",900000,npc,player)
+                 st.startQuestTimer("Jewel2_Timer1",900000,npc)
              elif nowHp < maxHp*0.4 and st.getQuestItemsCount(SECOND_FRAGMENT_OF_ABYSS_JEWEL)==0 :
                  st.giveItems(SECOND_FRAGMENT_OF_ABYSS_JEWEL,1)
                  st.playSound("ItemSound.quest_itemget")
-                 st.startQuestTimer("Jewel2_Timer2",240000,npc,player)
+                 st.startQuestTimer("Jewel2_Timer2",240000,npc)
          if nowHp < maxHp*0.1 :
              npc.decayMe()
              st.getQuestTimer("Jewel2_Timer1").cancel()
