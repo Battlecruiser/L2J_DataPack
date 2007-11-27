@@ -9,7 +9,7 @@ from net.sf.l2j.gameserver.serverpackets import SocialAction
 from net.sf.l2j.gameserver.serverpackets import Earthquake
 from net.sf.l2j.gameserver.serverpackets import PlaySound
 from net.sf.l2j.gameserver.ai import CtrlIntention
-from net.sf.l2j.util import Rnd;
+from net.sf.l2j.util import Rnd
 from java.lang import System
 
 STONE_BAIUM = 29025
@@ -40,8 +40,8 @@ LIVE_BAIUM = 29020
 #   * once someone starts attacking Baium no one else can port into the chamber where he is.
 #       Unlike with the otehr raid bosses, you can just show up at any time as long as you are there
 #       when they die. Not true with Baium. Once he gets attacked, the port to Baium closes. byebye,
-#       see you in 5 days.
-#       [ what happens if everybody leaves and Baium never despawns? ]
+#       see you in 5 days.  If nobody attacks baium for 30 minutes, he auto-despawns and unlocks the 
+#       vortex
 class baium (JQuest):
 
   def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -51,11 +51,14 @@ class baium (JQuest):
     self.isBaiumAwake = False
     self.playersInside = []
     self.isBaiumLocked = False
+    self.lastAttackVsBaiumTime = 0
 
     # load the unlock date and time for baium from DB
     temp = self.loadGlobalQuestVar("unlockDatetime")
     # if baium is locked until a certain time, mark it so and start the unlock timer
-    if temp != "" :
+    if temp == "" :
+      self.addSpawn(STONE_BAIUM,115213,16623,10080,41740,False,0)
+    else :
       # the unlock time has not yet expired.  Mark Baium as currently locked.  Setup a timer
       # to fire at the correct time (calculate the time between now and the unlock time,
       # setup a timer to fire after that many msec)
@@ -72,18 +75,34 @@ class baium (JQuest):
 
   def onAdvEvent (self,event,npc,player):
     objId=0
-    if event == "baium_timer1" and npc:
-      if npc.getNpcId() == LIVE_BAIUM :
-        npc.broadcastPacket(SocialAction(npc.getObjectId(),1))
-        npc.broadcastPacket(Earthquake(npc.getX(), npc.getY(), npc.getZ(),40,5))
-        # once Baium is awaken, no more people may enter until he dies (or server reboots)[???]
-        self.isBaiumLocked = True
-        # TODO: the person who woke baium up should be knocked accross the room, onto a wall, and
-        # lose massive amounts of HP.
-    elif event == "baium_unlock" :
+    if event == "baium_unlock" :
       self.isBaiumLocked = False
       self.deleteGlobalQuestVar("unlockDatetime")
       self.addSpawn(STONE_BAIUM,115213,16623,10080,41740,False,0)
+    elif event == "baium_wakeup" and npc:
+      if npc.getNpcId() == LIVE_BAIUM :
+        npc.broadcastPacket(SocialAction(npc.getObjectId(),1))
+        npc.broadcastPacket(Earthquake(npc.getX(), npc.getY(), npc.getZ(),40,5))
+        # once Baium is awaken, no more people may enter until he dies, the server reboots, or 
+        # 30 pass with no attacks made against Baium.
+        self.isBaiumLocked = True
+        # start monitoring baium's inactivity
+        self.lastAttackVsBaiumTime = System.currentTimeMillis()
+        self.startQuestTimer("baium_despawn", 60000, npc, None)
+        # TODO: the person who woke baium up should be knocked across the room, onto a wall, and
+        # lose massive amounts of HP.
+    # despawn the live baium after 30 minutes of inactivity  
+    elif event == "baium_despawn" and npc:
+      if (npc.getNpcId() == LIVE_BAIUM) and (self.lastAttackVsBaiumTime + 1800000 < System.currentTimeMillis()) :
+        npc.deleteMe()   # despawn the live-baium
+        self.addSpawn(STONE_BAIUM,115213,16623,10080,41740,False,0)  # spawn stone-baium
+        self.deleteGlobalQuestVar("unlockDatetime")  # make sure that all locks are deleted from the DB
+        self.isBaiumAwake = False       # mark that Baium is not awake any more 
+        self.isBaiumLocked = False      # unlock the entrance
+        self.playersInside = []
+      else :
+        # if baium's inactivity is still younger than 30 minutes, just re-add the timer
+        self.startQuestTimer("baium_despawn", 60000, npc, None)
     return
 
   def onTalk (self,npc,player):
@@ -97,7 +116,7 @@ class baium (JQuest):
            npc.deleteMe()
            baium = st.addSpawn(LIVE_BAIUM,npc)
            baium.broadcastPacket(SocialAction(baium.getObjectId(),2))
-           self.startQuestTimer("baium_timer1",15000, baium, None)
+           self.startQuestTimer("baium_wakeup",15000, baium, None)
            self.playersInside = []
       else:
         htmltext = "Conditions are not right to wake up Baium"
@@ -116,7 +135,11 @@ class baium (JQuest):
       else :
         htmltext = '<html><body>Angelic Vortex:<br>You may not enter at this time</body></html>'
     return htmltext
-
+    
+  def onAttack(self, npc, player, damage, isPet) :
+    # update a variable with the last action against baium
+    self.lastAttackVsBaiumTime = System.currentTimeMillis()
+    
   def onKill(self,npc,player,isPet):
     objId=npc.getObjectId()
     npc.broadcastPacket(PlaySound(1, "BS02_D", 1, objId, npc.getX(), npc.getY(), npc.getZ()))
@@ -138,8 +161,10 @@ CREATED     = State('Start', QUEST)
 # Quest initialization
 QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
-QUEST.addStartNpc(29025)
-QUEST.addStartNpc(31862)
-QUEST.addTalkId(29025)
-QUEST.addTalkId(31862)
-QUEST.addKillId(29020)
+QUEST.addStartNpc(STONE_BAIUM)
+QUEST.addStartNpc(ANGELIC_VORTEX)
+QUEST.addTalkId(STONE_BAIUM)
+QUEST.addTalkId(ANGELIC_VORTEX)
+
+QUEST.addKillId(LIVE_BAIUM)
+QUEST.addAttackId(LIVE_BAIUM)
