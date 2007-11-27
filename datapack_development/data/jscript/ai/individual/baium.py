@@ -114,7 +114,7 @@ class baium (JQuest):
            npc.setBusy(True)
            npc.setBusyMessage("Attending another player's request")
            npc.deleteMe()
-           baium = st.addSpawn(LIVE_BAIUM,npc)
+           baium = self.addSpawn(LIVE_BAIUM,npc)
            baium.broadcastPacket(SocialAction(baium.getObjectId(),2))
            self.startQuestTimer("baium_wakeup",15000, baium, None)
            self.playersInside = []
@@ -129,7 +129,7 @@ class baium (JQuest):
           player.getQuestState("baium").takeItems(4295,1)
           player.teleToLocation(113100,14500,10077)
           if not self.isBaiumAwake :
-            self.playersInside.append(st)
+            self.playersInside.append(player.getQuestState("baium"))
         else :
           htmltext = '<html><body>Angelic Vortex:<br>You do not have enough items</body></html>'
       else :
