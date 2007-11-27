@@ -70,7 +70,7 @@ class Quest (JQuest) :
                 st.set("cond","2")
              else:
                 st.playSound("ItemSound.quest_itemget")
-             st.giveItems(NECROHEART,1)
+             st.giveItems(NECROHEART,numItems)
    return
 
 QUEST       = Quest(637,qn,"Through the Gate Once More")

@@ -55,7 +55,7 @@ class Quest (JQuest) :
        if torches >= 1200 :
           st.takeItems(TORCH,1200)
           if ALT_RP100 == 1:
-            st.giveItems(int(event+1),1)
+            st.giveItems(int(event)+1,1)
           else:
             st.giveItems(int(event),1)
           htmltext = None
