@@ -5613,7 +5613,7 @@ INSERT INTO `droplist` VALUES
 (20598,3078,1,1,2,15125), -- Spellbook: Decay
 (20598,3079,1,1,2,15125), -- Spellbook: Cancel
 (20598,3089,1,1,2,15125), -- Spellbook: Tempest
-(20598,7846,1,1,2,4717), -- Spellbook: Invocation
+(20598,8946,1,1,2,4717), -- Spellbook: Invocation
 (20599,2120,1,1,-1,18800), -- Great Pata Blade
 (20599,4146,1,1,-1,25088), -- Recipe: Tunic of Zubei
 (20599,4590,1,1,-1,13046), -- Greater Dye of Strength <Str+2 Dex-2>
