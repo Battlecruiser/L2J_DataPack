@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `clanhall` (
   `paidUntil` decimal(20,0) NOT NULL default '0',
   `Grade` decimal(1,0) NOT NULL default '0',
   `paid` int( 1 ) NOT NULL default '0',
-  KEY `id` (`id`)
+  PRIMARY KEY `id` (`id`)
 );
 
 -- ----------------------------
