@@ -5,6 +5,7 @@
   <table name="#mpConsume"> 28 35 44 </table>
   <table name="#negatePower"> 3.0 7.0 9.0 </table>
   <table name="#aggro"> 379 457 566 </table>
+  <table name="#magicLvl"> 40 48 60 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_PET"/>
@@ -18,10 +19,12 @@
   <set name="negateStats" val="POISON BLEED"/>
   <set name="negatePower" val="#negatePower"/>
   <set name="aggroPoints" val="#aggro"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <for>
   </for>
 </skill>
 <skill id="1301" levels="1" name="Servitor Blessing">
+  <set name="magicLvl" val="62"/>
   <set name="mpInitialConsume" val="12"/>
   <set name="mpConsume" val="46"/>
   <set name="target" val="TARGET_PET"/>
