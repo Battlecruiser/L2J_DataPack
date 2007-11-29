@@ -410,7 +410,10 @@
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul stat="windVuln" val="1.5" order="0x30"/>
+    <mul stat="earthVuln" val="0.05" order="0x30"/>
   </for>
 </skill>
 <skill id="4123" levels="12" name="Hostile Feeling">
