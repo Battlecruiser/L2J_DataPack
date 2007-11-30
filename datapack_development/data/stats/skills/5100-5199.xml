@@ -419,57 +419,93 @@
 </skill>
 <skill id="5130" levels="1" name="Volcano">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
-      none
+      Shot Fusion skill. Hits for skill 1419, called 16 times and hits the targets with fire element. additional mp is used each time this skill is called upon.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpInitialConsume" val="0"/>
+  <set name="mpConsume" val="36"/>
+  <set name="magicLvl" val="80"/>
+  <set name="power" val="240"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="500"/>
+  <set name="skillTime" val="0"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="0"/>
+  <set name="hitTime" val="0"/>
+  <set name="element" val="2"/>    <!-- Fire -->
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="500"/>
+  <set name="effectRange" val="500"/>
   <for>
   </for>
 </skill>
 <skill id="5131" levels="1" name="Tsunami">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       none
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpInitialConsume" val="0"/>
+  <set name="mpConsume" val="36"/>
+  <set name="magicLvl" val="80"/>
+  <set name="power" val="240"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="500"/>
+  <set name="skillTime" val="0"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="0"/>
+  <set name="hitTime" val="0"/>
+  <set name="element" val="3"/>    <!-- Water -->
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="500"/>
+  <set name="effectRange" val="500"/>
   <for>
   </for>
 </skill>
 <skill id="5132" levels="1" name="Cyclone">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       none
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpInitialConsume" val="0"/>
+  <set name="mpConsume" val="36"/>
+  <set name="magicLvl" val="80"/>
+  <set name="power" val="240"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="500"/>
+  <set name="skillTime" val="0"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="0"/>
+  <set name="hitTime" val="0"/>
+  <set name="element" val="1"/>    <!-- Wind -->
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="500"/>
+  <set name="effectRange" val="500"/>
   <for>
   </for>
 </skill>
 <skill id="5133" levels="1" name="Gehenna">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       none
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpInitialConsume" val="0"/>
+  <set name="mpConsume" val="36"/>
+  <set name="magicLvl" val="80"/>
+  <set name="power" val="240"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="500"/>
+  <set name="skillTime" val="0"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="0"/>
+  <set name="hitTime" val="0"/>
+  <set name="element" val="6"/>    <!-- Dark -->
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="500"/>
+  <set name="effectRange" val="500"/>
   <for>
   </for>
 </skill>
