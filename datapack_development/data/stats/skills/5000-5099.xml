@@ -1367,15 +1367,15 @@
   <set name="save" val="2"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_AURA"/>
-  <set name="skillRadius" val="400"/>
+  <set name="skillRadius" val="900"/>
+  <set name="coolTime" val="2700"/>
   <set name="hitTime" val="2300"/>
   <set name="skillType" val="FEAR"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="reuseDelay" val="17000"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="5" name="Fear" time="13" val="0"/>
+    <effect count="1" name="Fear" time="30" val="0"/>
   </for>
 </skill>
 <skill id="5093" levels="1" name="Antharas Meteor">
