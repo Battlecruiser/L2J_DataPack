@@ -1323,20 +1323,19 @@
   </for>
 </skill>
 <skill id="1355" levels="1" name="Prophecy of Water">
-<set name="mpInitialConsume" val="15"/>
-<set name="mpConsume" val="57"/>
-<set name="itemConsumeId" val="3031"/>
-<set name="itemConsumeCount" val="5"/>
-<set name="power" val="0.0"/>
-<set name="target" val="TARGET_ONE"/>
-<set name="hitTime" val="4000"/>
-<set name="reuseDelay" val="120000"/>
-<set name="skillTime" val="4000"/>
-<set name="skillType" val="BUFF"/>
-<set name="isMagic" val="true"/>
-<set name="operateType" val="OP_ACTIVE"/>
-<set name="castRange" val="400"/>
-<set name="effectRange" val="900"/>
+  <set name="mpInitialConsume" val="15"/>
+  <set name="mpConsume" val="57"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="5"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="120000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="669"/>
 <for>
   <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="CoV">
@@ -1359,7 +1358,6 @@
 <set name="target" val="TARGET_ONE"/>
 <set name="hitTime" val="4000"/>
 <set name="reuseDelay" val="120000"/>
-<set name="skillTime" val="4000"/>
 <set name="skillType" val="BUFF"/>
 <set name="isMagic" val="true"/>
 <set name="operateType" val="OP_ACTIVE"/>
@@ -1388,7 +1386,6 @@
 <set name="target" val="TARGET_ONE"/>
 <set name="hitTime" val="4000"/>
 <set name="reuseDelay" val="120000"/>
-<set name="skillTime" val="4000"/>
 <set name="skillType" val="BUFF"/>
 <set name="isMagic" val="true"/>
 <set name="operateType" val="OP_ACTIVE"/>

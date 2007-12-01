@@ -1726,14 +1726,13 @@
   <table name="#mpConsume_Init"> 52 61 </table>
   <table name="#mpConsume"> 205 244 </table>
   <table name="#hitTime"> 20000 3500 </table>
-  <table name="#skillTime"> 20000 3500 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="600000"/>
-  <set name="hitTime" val="#skillTime"/>
+  <set name="hitTime" val="#hitTime"/>
   <set name="skillType" val="RECALL"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
