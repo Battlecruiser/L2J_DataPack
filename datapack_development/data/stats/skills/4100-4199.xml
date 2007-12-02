@@ -166,7 +166,7 @@
   <set name="lvlDepend" val="1"/>
   <set name="save" val="2"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_AURA"/>
+  <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="900"/>
   <set name="coolTime" val="2700"/>
   <set name="hitTime" val="2300"/>
@@ -175,7 +175,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Fear" time="30" val="0"/>
+    <effect count="5" name="Fear" time="6" val="0"/>
   </for>
 </skill>
 <skill id="4109" levels="1" name="Curse of Antharas">
@@ -212,7 +212,7 @@
   <set name="magicLvl" val="70"/>
   <set name="lvlDepend" val="1"/>
   <set name="power" val="250"/>
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_AREA"/>
   <set name="element" val="2"/>
   <set name="coolTime" val="2700"/>
   <set name="hitTime" val="2300"/>
