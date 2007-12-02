@@ -84,18 +84,22 @@ class Quest (JQuest) :
          npc.decayMe()
          if st.getQuestTimer("Jewel1_Timer2") :
              st.getQuestTimer("Jewel1_Timer2").cancel()
+         return
      elif event == "Jewel1_Timer2" :
          npc.decayMe()
          if st.getQuestTimer("Jewel1_Timer1") :
              st.getQuestTimer("Jewel1_Timer1").cancel()
+         return
      elif event == "Jewel2_Timer1" :
          npc.decayMe()
          if st.getQuestTimer("Jewel2_Timer2") :
              st.getQuestTimer("Jewel2_Timer2").cancel()
+         return
      elif event == "Jewel2_Timer2" :
          npc.decayMe()
          if st.getQuestTimer("Jewel2_Timer1") :
              st.getQuestTimer("Jewel2_Timer1").cancel()
+         return
      return htmltext
 
  def onTalk (self,npc,player):

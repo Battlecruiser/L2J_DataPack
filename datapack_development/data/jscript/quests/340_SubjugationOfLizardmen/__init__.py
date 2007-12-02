@@ -147,7 +147,7 @@ class Quest (JQuest) :
            st.giveItems(ROSARY,1)
            st.playSound("ItemSound.quest_middle")
        elif npcId == BIFRON :
-         st.addSpawn(CHEST,npc,False)
+         st.addSpawn(CHEST,npc,30000)
      return
 
 QUEST       = Quest(340, qn, "Subjugation of Lizardmen")
