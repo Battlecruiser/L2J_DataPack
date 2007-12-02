@@ -1466,7 +1466,7 @@
   <set name="save" val="3"/>
   <set name="power" val="499"/>
   <set name="target" val="TARGET_AREA"/>
-  <set name="skillRadius" val="1400"/>
+  <set name="skillRadius" val="1700"/>
   <set name="coolTime" val="2000"/>
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="MDAM"/>
@@ -1557,13 +1557,13 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Fear" time="30" val="0"/>
+    <effect count="5" name="Fear" time="6" val="0"/>
   </for>
 </skill>
 <skill id="4690" levels="1" name="Valakas Meteor Storm">
   <!-- Valakas Skills -->
   <set name="magicLvl" val="75"/>
-  <set name="mpConsume" val="900" />
+  <set name="mpConsume" val="00" />
   <set name="power" val="834" />
   <set name="target" val="TARGET_AURA" />
   <set name="skillRadius" val="300"/>
