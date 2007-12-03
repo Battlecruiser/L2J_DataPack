@@ -2,7 +2,7 @@
 -- Table structure for table `zone_vertices`
 -- 
 DROP TABLE IF EXISTS `zone_vertices`;
-CREATE TABLE `zone_npoly` (
+CREATE TABLE `zone_vertices` (
   `id` int(11) NOT NULL,
   `order` int(11) NOT NULL,
   `x` int(11) NOT NULL,
