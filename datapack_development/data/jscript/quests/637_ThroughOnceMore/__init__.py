@@ -60,7 +60,7 @@ class Quest (JQuest) :
        count = st.getQuestItemsCount(NECROHEART)
        if st.getInt("cond") == 1 and count < 10 :
           chance = DROP_CHANCE * Config.RATE_DROP_QUEST
-          numItems, chance = divmod(chance,100)
+          numItems, chance = divmod(int(chance),100)
           if st.getRandom(100) < chance : 
              numItems += 1
           if numItems :
@@ -70,7 +70,7 @@ class Quest (JQuest) :
                 st.set("cond","2")
              else:
                 st.playSound("ItemSound.quest_itemget")
-             st.giveItems(NECROHEART,numItems)
+             st.giveItems(NECROHEART,int(numItems))
    return
 
 QUEST       = Quest(637,qn,"Through the Gate Once More")
