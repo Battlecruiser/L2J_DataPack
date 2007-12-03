@@ -106,7 +106,7 @@ class Quest (JQuest):
             st = partyMember.getQuestState(qn)
             if not st : return
             chance = UNDEADS[npcId] * Config.RATE_DROP_QUEST
-            numItems, chance = divmod(chance,100)
+            numItems, chance = divmod(chance,1000)
             if st.getRandom(1000) < chance:
                numItems += 1
             if numItems :
@@ -120,7 +120,7 @@ class Quest (JQuest):
             count = st.getQuestItemsCount(RIB_BONE)
             if st.getInt("cond") == 1 and count < 200 :
                chance = DAMOBS[npcId] * Config.RATE_DROP_QUEST
-               numItems, chance = divmod(chance,100)
+               numItems, chance = divmod(chance,1000)
                if st.getRandom(1000) < chance:
                   numItems += 1
                if numItems :
