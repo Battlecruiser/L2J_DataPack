@@ -2,7 +2,6 @@
 ###  Create by Skeleton!!!
 ### ---------------------------------------------------------------------------
 import sys
-from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -105,32 +104,21 @@ class Quest (JQuest):
             if not partyMember: return
             st = partyMember.getQuestState(qn)
             if not st : return
-            chance = UNDEADS[npcId] * Config.RATE_DROP_QUEST
-            numItems, chance = divmod(chance,1000)
-            if st.getRandom(1000) < chance:
-               numItems += 1
-            if numItems :
-               st.giveItems(Z_LIVER, int(numItems))
-               st.playSound("ItemSound.quest_itemget")
+            if st.getRandom(1000) < UNDEADS[npcId]:  
+                st.giveItems(Z_LIVER, 1)  
+                st.playSound("ItemSound.quest_itemget")  
         elif npcId in DAMOBS.keys():
             partyMember = self.getRandomPartyMember(player, "cond", "1")
             if not partyMember: return                
             st = partyMember.getQuestState(qn)
             if not st : return
-            count = st.getQuestItemsCount(RIB_BONE)
-            if st.getInt("cond") == 1 and count < 200 :
-               chance = DAMOBS[npcId] * Config.RATE_DROP_QUEST
-               numItems, chance = divmod(chance,1000)
-               if st.getRandom(1000) < chance:
-                  numItems += 1
-               if numItems :
-                  if count + numItems >= 200 :
-                     numItems = 200 - count
-                     st.playSound("ItemSound.quest_middle")
-                     st.set("cond","2")
-                  else:
-                     st.playSound("ItemSound.quest_itemget")
-                  st.giveItems(RIB_BONE,int(numItems))
+            if st.getRandom(1000) < DAMOBS[npcId]:                  
+                st.giveItems(RIB_BONE, 1)  
+                if st.getQuestItemsCount(RIB_BONE) == 200:  
+                    st.set("cond","2")  
+                    st.playSound("ItemSound.quest_middle")  
+                else:  
+                    st.playSound("ItemSound.quest_itemget") 
         return        
 
 QUEST       = Quest(633, qn, "In The Forgotten Village")
