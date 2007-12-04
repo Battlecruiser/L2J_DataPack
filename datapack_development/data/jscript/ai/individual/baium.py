@@ -129,7 +129,7 @@ class baium (JQuest):
           player.getQuestState("baium").takeItems(4295,1)
           player.teleToLocation(113100,14500,10077)
           if not self.isBaiumAwake :
-            self.playersInside.append(player.getQuestState("baium"))
+            self.playersInside.append(player)
         else :
           htmltext = '<html><body>Angelic Vortex:<br>You do not have enough items</body></html>'
       else :
