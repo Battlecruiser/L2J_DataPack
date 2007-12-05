@@ -38,6 +38,7 @@ PRIMARY KEY (`region`)
 -- 14 = "Rune Township"
 -- 15 = "Town of Goddard"
 -- 16 = "Town of Shuttgart"
+-- 17 = "Floran Village"
 -- default = "Town of Aden"
 
 INSERT INTO mapregion VALUES 
@@ -57,6 +58,6 @@ INSERT INTO mapregion VALUES
 (12,	6,	6,	2,	5,	1,	1,	9,	11,	11,	11),	-- _20
 (13,	6,	6,	5,	5,	7,	7,	8,	8,	8,	8),	-- _21
 (14,	6,	6,	6,	5,	7,	7,	8,	8,	8,	8),	-- _22
-(15,	0,	6,	6,	5,	7,	12,	13,	13,	13,	13),	-- _23
+(15,	0,	6,	6,	5,	17,	12,	13,	13,	13,	13),	-- _23
 (16,	0,	0,	6,	6,	12,	12,	13,	13,	13,	13),	-- _24
 (17,	0,	0,	0,	0,	0,	0,	13,	13,	13,	13);	-- _25
