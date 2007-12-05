@@ -53,54 +53,50 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onEvent (self,event,st) :
-     htmltext = event
-     if event == "30753-02.htm" :
-         st.exitQuest(1)
-     elif event == "30753-06.htm" :
-         st.setState(STARTED)
-         st.set("cond","1")
-         st.set("all","0")
-         st.set("orven","0")
-         st.set("kendra","0")
-         st.set("chakiris","0")
-         st.set("kaiena","0")
-         st.set("moke","0")
-         st.set("helton","0")
-         st.giveItems(FEATHER_OF_GABRIELLE,1)
-         st.playSound("ItemSound.quest_accept")
-     elif event == "30753-10.htm" :
-         st.set("cond","2")
-         st.takeItems(MARK_OF_WATCHMAN,-1)
-     elif event == "30754-03.htm" :
-         st.set("cond","4")
-     elif event == "30755-05.htm" :
-         st.giveItems(PORTAL_STONE,1)
-         st.takeItems(HERALD_OF_SLAYER,-1)
-         st.takeItems(THIRD_FRAGMENT_OF_ABYSS_JEWEL,-1)
-         st.playSound("ItemSound.quest_finish")
-         st.exitQuest(1)
+ def onAdvEvent (self,event,npc,player):
+     if player :
+         st = player.getQuestState(qn)
+         if not st : return
+         htmltext = event
+         if event == "30753-02.htm" :
+             st.exitQuest(1)
+         elif event == "30753-06.htm" :
+             st.setState(STARTED)
+             st.set("cond","1")
+             st.set("all","0")
+             st.set("orven","0")
+             st.set("kendra","0")
+             st.set("chakiris","0")
+             st.set("kaiena","0")
+             st.set("moke","0")
+             st.set("helton","0")
+             st.giveItems(FEATHER_OF_GABRIELLE,1)
+             st.playSound("ItemSound.quest_accept")
+         elif event == "30753-10.htm" :
+             st.set("cond","2")
+             st.takeItems(MARK_OF_WATCHMAN,-1)
+         elif event == "30754-03.htm" :
+             st.set("cond","4")
+         elif event == "30755-05.htm" :
+             st.giveItems(PORTAL_STONE,1)
+             st.takeItems(HERALD_OF_SLAYER,-1)
+             st.takeItems(THIRD_FRAGMENT_OF_ABYSS_JEWEL,-1)
+             st.playSound("ItemSound.quest_finish")
+             st.exitQuest(1)
+         return htmltext
      elif event == "Jewel1_Timer1" :
          npc.decayMe()
-         if st.getQuestTimer("Jewel1_Timer2") :
-             st.getQuestTimer("Jewel1_Timer2").cancel()
-         return
+         self.cancelQuestTimer("Jewel1_Timer2",npc,None)
      elif event == "Jewel1_Timer2" :
          npc.decayMe()
-         if st.getQuestTimer("Jewel1_Timer1") :
-             st.getQuestTimer("Jewel1_Timer1").cancel()
-         return
+         self.cancelQuestTimer("Jewel1_Timer1",npc,None)
      elif event == "Jewel2_Timer1" :
          npc.decayMe()
-         if st.getQuestTimer("Jewel2_Timer2") :
-             st.getQuestTimer("Jewel2_Timer2").cancel()
-         return
+         self.cancelQuestTimer("Jewel2_Timer2",npc,None)
      elif event == "Jewel2_Timer2" :
          npc.decayMe()
-         if st.getQuestTimer("Jewel2_Timer1") :
-             st.getQuestTimer("Jewel2_Timer1").cancel()
-         return
-     return htmltext
+         self.cancelQuestTimer("Jewel2_Timer1",npc,None)
+     return
 
  def onTalk (self,npc,player):
     htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
@@ -262,15 +258,15 @@ class Quest (JQuest) :
                     st.addSpawn(GUARDIAN1,-81260,75639+i,-3300,180000)
                     st.addSpawn(GUARDIAN1,-81240,75639+i,-3300,180000)
                  st.set("aspawned","1")
-                 st.startQuestTimer("Jewel1_Timer1",900000,npc)
+                 self.startQuestTimer("Jewel1_Timer1",900000,npc,None)
              elif nowHp < maxHp*0.4 and st.getQuestItemsCount(FIRST_FRAGMENT_OF_ABYSS_JEWEL)==0 :
                  st.giveItems(FIRST_FRAGMENT_OF_ABYSS_JEWEL,1)
                  st.playSound("ItemSound.quest_itemget")
-                 st.startQuestTimer("Jewel1_Timer2",240000,npc)
+                 self.startQuestTimer("Jewel1_Timer2",240000,npc,None)
          if nowHp < maxHp*0.1 :
              npc.decayMe()
-             st.getQuestTimer("Jewel1_Timer1").cancel()
-             st.getQuestTimer("Jewel1_Timer2").cancel()
+             self.cancelQuestTimer("Jewel1_Timer1",npc,None)
+             self.cancelQuestTimer("Jewel1_Timer2",npc,None)
      if npcId == ABYSS_JEWEL2 :
          if cond == 2 and st.getInt("helton")<>1:
              if nowHp < maxHp*0.8 and st.getInt("bspawned")<>1 :
@@ -278,15 +274,15 @@ class Quest (JQuest) :
                     st.addSpawn(GUARDIAN2,63766+i,31139,-3400,180000)
                     st.addSpawn(GUARDIAN2,63706,31139+i,-3400,180000)
                  st.set("bspawned","1")
-                 st.startQuestTimer("Jewel2_Timer1",900000,npc)
+                 self.startQuestTimer("Jewel2_Timer1",900000,npc,None)
              elif nowHp < maxHp*0.4 and st.getQuestItemsCount(SECOND_FRAGMENT_OF_ABYSS_JEWEL)==0 :
                  st.giveItems(SECOND_FRAGMENT_OF_ABYSS_JEWEL,1)
                  st.playSound("ItemSound.quest_itemget")
-                 st.startQuestTimer("Jewel2_Timer2",240000,npc)
+                 self.startQuestTimer("Jewel2_Timer2",240000,npc,None)
          if nowHp < maxHp*0.1 :
              npc.decayMe()
-             st.getQuestTimer("Jewel2_Timer1").cancel()
-             st.getQuestTimer("Jewel2_Timer2").cancel()
+             self.cancelQuestTimer("Jewel2_Timer1",npc,None)
+             self.cancelQuestTimer("Jewel2_Timer2",npc,None)
      if npcId == ABYSS_JEWEL3 :
          if cond == 4 :
              if nowHp < maxHp*0.8 and st.getInt("cspawned")<>1 :
@@ -303,43 +299,49 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
     npcId = npc.getNpcId()
     st = player.getQuestState(qn)
-    if not st : return
-    cond = st.getInt("cond")
-    if cond == 1 :
-        if npcId == HAMRUT and st.getQuestItemsCount(HAMRUT_LEG)==0 and st.getInt("chakiris") == 0 :
-            st.giveItems(HAMRUT_LEG,1)
-            st.playSound("ItemSound.quest_itemget")
-        elif npcId == KRANROT and st.getQuestItemsCount(KRANROT_SKIN)==0 and st.getInt("chakiris") == 0 :
-            st.giveItems(KRANROT_SKIN,1)
-            st.playSound("ItemSound.quest_itemget")
-        elif npcId == MARSH_STALKER and st.getQuestItemsCount(MARSH_STALKER_HORN)==0 and st.getInt("kaiena") == 0 :
-            st.giveItems(MARSH_STALKER_HORN,1)
-            st.playSound("ItemSound.quest_itemget")
-        elif npcId == MARSH_DRAKE and st.getQuestItemsCount(MARSH_DRAKE_TALONS)==0 and st.getInt("kaiena") == 0 :
-            st.giveItems(MARSH_DRAKE_TALONS,1)
-            st.playSound("ItemSound.quest_itemget")
-        elif npcId in (BLOODY_QUEEN, BLOODY_QUEEN2) and st.getQuestItemsCount(REMAINS_OF_SACRIFICED)==0 and st.getInt("orven")== 0 :
-            for i in range(8) :
-                st.addSpawn(SACRIFICE_OF_THE_SACRIFICED,180000)
-        elif npcId == SACRIFICE_OF_THE_SACRIFICED and st.getQuestItemsCount(REMAINS_OF_SACRIFICED)==0 and st.getInt("orven")== 0 :
-            st.giveItems(REMAINS_OF_SACRIFICED,1)
-            st.playSound("ItemSound.quest_itemget")
-        elif npcId == HARIT_LIZARDMAN_SHAMAN and st.getRandom(5) == 0 and st.getQuestItemsCount(TOTEM_OF_LAND_DRAGON)==0 and st.getInt("kendra")== 0 :
-            for i in range(3) :
-                st.addSpawn(HARIT_LIZARDMAN_ZEALOT,180000)
-        elif npcId == HARIT_LIZARDMAN_ZEALOT and st.getQuestItemsCount(TOTEM_OF_LAND_DRAGON)==0 and st.getInt("kendra")== 0 :
-            st.giveItems(TOTEM_OF_LAND_DRAGON,1)
-            st.playSound("ItemSound.quest_itemget")
-    elif cond == 2 :
-        if npcId == GUARDIAN1 and st.getQuestItemsCount(MARA_FANG)==0 and st.getInt("moke")<>1 :
-            st.giveItems(MARA_FANG,1)
-            st.playSound("ItemSound.quest_itemget")
-        elif npcId == GUARDIAN2 and st.getQuestItemsCount(MUSFEL_FANG)==0 and st.getInt("helton")<>1 :
-            st.giveItems(MUSFEL_FANG,1)
-            st.playSound("ItemSound.quest_itemget")
-    elif cond == 4:
-        if npcId in (CAVE_MAIDEN, CAVE_KEEPER, CAVE_KEEPER1, CAVE_MAIDEN1) and st.getQuestItemsCount(THIRD_FRAGMENT_OF_ABYSS_JEWEL)==0 and st.getRandom(5) == 0 :
-            mob = st.addSpawn(ABYSS_JEWEL3,180000)
+    if st :
+        cond = st.getInt("cond")
+        if cond == 1 :
+            if npcId == HAMRUT and st.getQuestItemsCount(HAMRUT_LEG)==0 and st.getInt("chakiris") == 0 :
+                st.giveItems(HAMRUT_LEG,1)
+                st.playSound("ItemSound.quest_itemget")
+            elif npcId == KRANROT and st.getQuestItemsCount(KRANROT_SKIN)==0 and st.getInt("chakiris") == 0 :
+                st.giveItems(KRANROT_SKIN,1)
+                st.playSound("ItemSound.quest_itemget")
+            elif npcId == MARSH_STALKER and st.getQuestItemsCount(MARSH_STALKER_HORN)==0 and st.getInt("kaiena") == 0 :
+                st.giveItems(MARSH_STALKER_HORN,1)
+                st.playSound("ItemSound.quest_itemget")
+            elif npcId == MARSH_DRAKE and st.getQuestItemsCount(MARSH_DRAKE_TALONS)==0 and st.getInt("kaiena") == 0 :
+                st.giveItems(MARSH_DRAKE_TALONS,1)
+                st.playSound("ItemSound.quest_itemget")
+            elif npcId in (BLOODY_QUEEN, BLOODY_QUEEN2) and st.getQuestItemsCount(REMAINS_OF_SACRIFICED)==0 and st.getInt("orven")== 0 :
+                for i in range(8) :
+                    st.addSpawn(SACRIFICE_OF_THE_SACRIFICED,180000)
+            elif npcId == SACRIFICE_OF_THE_SACRIFICED and st.getQuestItemsCount(REMAINS_OF_SACRIFICED)==0 and st.getInt("orven")== 0 :
+                st.giveItems(REMAINS_OF_SACRIFICED,1)
+                st.playSound("ItemSound.quest_itemget")
+            elif npcId == HARIT_LIZARDMAN_SHAMAN and st.getRandom(5) == 0 and st.getQuestItemsCount(TOTEM_OF_LAND_DRAGON)==0 and st.getInt("kendra")== 0 :
+                for i in range(3) :
+                    st.addSpawn(HARIT_LIZARDMAN_ZEALOT,180000)
+            elif npcId == HARIT_LIZARDMAN_ZEALOT and st.getQuestItemsCount(TOTEM_OF_LAND_DRAGON)==0 and st.getInt("kendra")== 0 :
+                st.giveItems(TOTEM_OF_LAND_DRAGON,1)
+                st.playSound("ItemSound.quest_itemget")
+        elif cond == 2 :
+            if npcId == GUARDIAN1 and st.getQuestItemsCount(MARA_FANG)==0 and st.getInt("moke")<>1 :
+                st.giveItems(MARA_FANG,1)
+                st.playSound("ItemSound.quest_itemget")
+            elif npcId == GUARDIAN2 and st.getQuestItemsCount(MUSFEL_FANG)==0 and st.getInt("helton")<>1 :
+                st.giveItems(MUSFEL_FANG,1)
+                st.playSound("ItemSound.quest_itemget")
+        elif cond == 4:
+            if npcId in (CAVE_MAIDEN, CAVE_KEEPER, CAVE_KEEPER1, CAVE_MAIDEN1) and st.getQuestItemsCount(THIRD_FRAGMENT_OF_ABYSS_JEWEL)==0 and st.getRandom(5) == 0 :
+                mob = st.addSpawn(ABYSS_JEWEL3,180000)
+    elif npcId == ABYSS_JEWEL1 :
+        self.cancelQuestTimer("Jewel1_Timer1",npc,None)
+        self.cancelQuestTimer("Jewel1_Timer2",npc,None)
+    elif npcId == ABYSS_JEWEL2 :
+        self.cancelQuestTimer("Jewel2_Timer1",npc,None)
+        self.cancelQuestTimer("Jewel2_Timer2",npc,None)
     return
 
 QUEST       = Quest(337,qn,"Audience With The Land Dragon")
