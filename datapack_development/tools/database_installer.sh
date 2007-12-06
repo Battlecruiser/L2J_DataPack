@@ -338,9 +338,7 @@ $MYG < ../sql/teleport.sql &> /dev/null
 $MYG < ../sql/topic.sql &> /dev/null
 $MYG < ../sql/weapon.sql &> /dev/null
 $MYG < ../sql/zone.sql &> /dev/null
-$MYG < ../sql/zone_cuboid.sql &> /dev/null
-$MYG < ../sql/zone_cylinder.sql &> /dev/null
-$MYG < ../sql/zone_npoly.sql &> /dev/null
+$MYG < ../sql/zone_vertices.sql &> /dev/null
 $MYG < ../sql/castle_manor_procure.sql &> /dev/null
 $MYG < ../sql/castle_manor_production.sql &> /dev/null
 newbie_helper

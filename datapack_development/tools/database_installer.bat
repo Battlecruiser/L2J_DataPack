@@ -598,9 +598,7 @@ teleport.sql
 topic.sql
 weapon.sql
 zone.sql
-zone_cuboid.sql
-zone_cylinder.sql
-zone_npoly.sql
+zone_vertices.sql
 castle_manor_procure.sql
 castle_manor_production.sql
 ) do call :dump %%i
