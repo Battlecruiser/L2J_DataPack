@@ -62,7 +62,7 @@ class baium (JQuest):
       # the unlock time has not yet expired.  Mark Baium as currently locked.  Setup a timer
       # to fire at the correct time (calculate the time between now and the unlock time,
       # setup a timer to fire after that many msec)
-      temp = int(temp) - System.currentTimeMillis()
+      temp = long(temp) - System.currentTimeMillis()
       if temp > 0 :
         self.isBaiumLocked = True
         self.startQuestTimer("baium_unlock", temp, None, None)
