@@ -216,7 +216,7 @@ RADAR={
 25315:[105654,-42995,-1240],  #Varka's Chief Horus (lv87)
 25319:[185700,-106066,-6184], #Ember (lv85)
 25514:[79635,-55612,-5980],   #Spiked stakato Queen Shyeed (lvl80)
-25517:[112793,76080,286],     #Master Anays (lvl87)
+25517:[112793,-76080,286],     #Master Anays (lvl87)
 29062:[-16373,-53562,-10197], #High Priestess van Halter (lvl87)
 25283:[185060,-9622,-5104],   #Lilith (lvl80)
 25286:[185065,-12612,-5104],  #Anakim (lvl80)
