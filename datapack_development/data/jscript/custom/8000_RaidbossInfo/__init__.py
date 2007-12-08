@@ -1,3 +1,5 @@
+#made by Kerberos
+#latest sync with retail on 12/8/2007
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -12,30 +14,30 @@ NPC = range(31729,31842)
 RADAR={
 
 # lvl20 list
-25001:[-54416,146480,-2887],  #Greyclaw Kutus (lv23)
-25019:[7376,169376,-3600],    #Pan Dryad (lv25)
-25038:[-57360,186272,-4967],  #Tirak (lv28)
-25060:[-60428,188264,-4512],  #Unrequited Kael (lv24)
-25076:[-60976,127552,-2960],  #Princess Molrang (lv25)
-25095:[-37856,198128,-2672],  #Elf Renoa (lv29)
-25127:[-47552,219232,-2413],  #Langk Matriarch Rashkos (lv24)
-25146:[-13056,215680,-3760],  #Evil spirit Bifrons (lv21)
-25149:[-12656,138176,-3584],  #Zombie Lord Crowl (lv25)
-25166:[-21800,152000,-2900],  #Ikuntai (lv25)
-25272:[49248,127792,-3552],   #Partisan Leader Talakin (lv28)
-25357:[-3456,112864,-3456],   #Sukar Wererat Chief (lv21)
-25360:[29216,179280,-3624],   #Tiger Hornet (lv26)
-25362:[-55920,186768,-3336],  #Tracker Leader Sharuk (lv23)
-25365:[-62000,190256,-3687],  #Patriarch Kuroboros (lv26)
-25366:[-62368,179440,-3594],  #Kuroboros' Priest (lv23)
-25369:[-45616,111024,-3808],  #Soul Scavenger (lv25)
-25372:[48000,243376,-6611],   #Discarded Guardian (lv20)
-25373:[9649,77467,-3808],     #Malex, Herald of Dagoniel (lv21)
-25375:[22500,80300,-2772],    #Zombie Lord Farakelsus (lv20)
-25378:[-54096,84288,-3512],   #Madness Beast (lv20)
-25380:[-47367,51548,-5904],   #Kaysha, Herald of Icarus (lv21)
-25426:[-18048,-101264,-2112], #Freki, Betrayer of Urutu (lv25)
-25429:[172064,-214752,-3565], #Mammon's Collector Talloth (lv25)
+25001:[-54464,146572,-2400],  #Greyclaw Kutus (lv23)
+25019:[7352,169433,-3172],    #Pan Dryad (lv25)
+25038:[-57366,186276,-4804],  #Tirak (lv28)
+25060:[-60427,188266,-4352],  #Unrequited Kael (lv24)
+25076:[-61041,127347,-2512],  #Princess Molrang (lv25)
+25095:[-37799,198120,-2200],  #Elf Renoa (lv29)
+25127:[-47634,219274,-1936],  #Langk Matriarch Rashkos (lv24)
+25146:[-13698,213796,-3300],  #Evil spirit Bifrons (lv21)
+25149:[-12652,138200,-3120],  #Zombie Lord Crowl (lv25)
+25166:[-21778,152065,-2636],  #Ikuntai (lv25)
+25272:[49194,127999,-3161],   #Partisan Leader Talakin (lv28)
+25357:[-3451,112819,-3032],   #Sukar Wererat Chief (lv21)
+25360:[29064,179362,-3128],   #Tiger Hornet (lv26)
+25362:[-55791,186903,-2856],  #Tracker Leader Sharuk (lv23)
+25365:[-62171,190489,-3160],  #Patriarch Kuroboros (lv26)
+25366:[-62342,179572,-3088],  #Kuroboros' Priest (lv23)
+25369:[-45713,111186,-3280],  #Soul Scavenger (lv25)
+25372:[48003,243395,-6562],   #Discarded Guardian (lv20)
+25373:[9661,76976,-3652],     #Malex, Herald of Dagoniel (lv21)
+25375:[22523,80431,-2772],    #Zombie Lord Farakelsus (lv20)
+25378:[-53970,84334,-3048],   #Madness Beast (lv20)
+25380:[-47412,51647,-5659],   #Kaysha, Herald of Icarus (lv21)
+25426:[-18053,-101274,-1580], #Freki, Betrayer of Urutu (lv25)
+25429:[172122,-214776,-3064], #Mammon's Collector Talloth (lv25)
 
 #lvl30 list
 25004:[-94208,100240,-3520],  #Turek Mercenary Captain (lv30)
@@ -206,22 +208,22 @@ RADAR={
 #25290:[,,,],                 #Daimon The White-Eyed (lvl78) - quest spawn - not spawned yet
 
 #lvl80 list
-25299:[148160,-73808,-4919],  #Ketra's Hero Hekaton (lv80)
-25302:[145504,-81664,-6016],  #Ketra's Commander Tayr (lv84)
-25305:[145008,-84992,-6240],  #Ketra's Chief Braki (lv87)
-25309:[115552,-39200,-2480],  #Varka's Hero Shadith (lv80)
-25312:[109216,-36160,-938],   #Varka's Commander Mos (lv84)
-25315:[105584,-43024,-1728],  #Varka's Chief Horus (lv87)
-25319:[184542,-106330,-6304], #Ember (lv85)
-25514:[79635,-55434,-6135],   #Spiked stakato Queen Shyeed (lvl80)
-#25517:[,,,],                 #Master Anays (lvl87) - not spawned yet
-#29062:[,,,],                 #High Priestess van Halter (lvl87) - not spawned yet
-25283:[184410,-10111,-5488],  #Lilith (lvl80)
-25286:[185000,-13000,-5488],  #Anakim (lvl80)
+25299:[148154,-73782,-4364],  #Ketra's Hero Hekaton (lv80)
+25302:[145553,-81651,-5464],  #Ketra's Commander Tayr (lv84)
+25305:[144997,-84948,-5712],  #Ketra's Chief Braki (lv87)
+25309:[115537,-39046,-1940],  #Varka's Hero Shadith (lv80)
+25312:[109296,-36103,-648],   #Varka's Commander Mos (lv84)
+25315:[105654,-42995,-1240],  #Varka's Chief Horus (lv87)
+25319:[185700,-106066,-6184], #Ember (lv85)
+25514:[79635,-55612,-5980],   #Spiked stakato Queen Shyeed (lvl80)
+25517:[112793,76080,286],     #Master Anays (lvl87)
+29062:[-16373,-53562,-10197], #High Priestess van Halter (lvl87)
+25283:[185060,-9622,-5104],   #Lilith (lvl80)
+25286:[185065,-12612,-5104],  #Anakim (lvl80)
 25306:[142368,-82512,-6487],  #Nastron, Spirit of Fire (lvl87)
 25316:[105452,-36775,-1050],  #Ashutar, Spirit of water (lvl87)
-25527:[3776,-6768,-3288]      #Uruka (lvl86)
-#29065:[,,,]                  #Sailren (lvl87) - not spawned yet
+25527:[3776,-6768,-3276],     #Uruka (lvl86)
+29065:[26528,-8244,-2007]     #Sailren (lvl87)
 }
 
 
@@ -238,6 +240,7 @@ class Quest (JQuest) :
      rbid = int(event)
      if rbid in RADAR.keys():
        x,y,z=RADAR[rbid]
+       player.sendPacket(RadarControl(2, 2, x, y, z))
        player.sendPacket(RadarControl(0, 1, x, y, z))
      st.exitQuest(1)
    return htmltext
