@@ -16,6 +16,7 @@ from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver.serverpackets      import PledgeShowInfoUpdate
+from net.sf.l2j.gameserver.serverpackets      import RadarControl
 from net.sf.l2j.gameserver.serverpackets      import SystemMessage
 
 qn="508_TheClansReputation"
@@ -66,7 +67,9 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr) : JQuest.__init__(self,id,name,descr)
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc,player) :
+  st = player.getQuestState(qn)
+  if not st: return
   cond = st.getInt("cond")
   htmltext=event
   if event == "30868-0.htm" :
@@ -78,7 +81,9 @@ class Quest (JQuest) :
       st.set("raid",event)
       htmltext="30868-"+event+".htm"
       x,y,z=RADAR[int(event)]
-      if x+y+z: st.addRadar(x,y,z)
+      if x+y+z:
+        player.sendPacket(RadarControl(2, 2, x, y, z))
+        player.sendPacket(RadarControl(0, 1, x, y, z))
       st.playSound("ItemSound.quest_accept")
   elif event == "30868-7.htm" :
     st.playSound("ItemSound.quest_finish")
