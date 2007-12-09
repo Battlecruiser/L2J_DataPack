@@ -13,7 +13,7 @@ DROP_CHANCE=40
 #Npc
 FLAURON = 32010
 #Items
-VISITORSMARK,NECROHEART,MARK = 8064,8066,8067
+FADED,NECROHEART,MARK = 8065,8066,8067
 
 class Quest (JQuest) :
 
@@ -35,8 +35,8 @@ class Quest (JQuest) :
    if st :
      id = st.getState()
      cond = st.getInt("cond")
-     if cond == 0 and id == CREATED :
-        if player.getLevel()>72 and st.getQuestItemsCount(VISITORSMARK) :
+     if id == CREATED :
+        if player.getLevel()>72 and st.getQuestItemsCount(FADEDMARK) :
            htmltext = "32010-02.htm"
         else:
            htmltext = "32010-01.htm"

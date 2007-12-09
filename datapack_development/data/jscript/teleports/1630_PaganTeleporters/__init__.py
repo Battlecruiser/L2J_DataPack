@@ -20,7 +20,12 @@ class Quest (JQuest):
     npcId = npc.getNpcId()
     htmltext = "You have been teleported."
     if player.getLevel() < 73 :
-       htmltext = '<html>Teleport available only for characters with Pagans Mark and level 73 or above.</body></html>'
+       htmltext = "<html>Teleport available only for characters with Pagans Mark and level 73 or above.</body></html>"
+    elif npcId == 32034 and st.getQuestItemsCount(8064) :
+          st.takeItems(8064,1)
+          htmltext = "<html><body>As you pass through the gates your mark fades. Make a note to return to <font color="LEVEL">Priest Flauron</font> to inquire about this!</body></html>"
+          st.giveItems(8065,1)
+          player.teleToLocation(-16324,-37147,-10724)
     elif npcId in [32034,32036]:
        if not st.getQuestItemsCount(8067) :
           htmltext = '<html>Teleport available only for characters with Pagans Mark and level 73 or above.</body></html>'
@@ -29,6 +34,8 @@ class Quest (JQuest):
              player.teleToLocation(-16324,-37147,-10724)
           else :
              player.teleToLocation(-16324,-44638,-10724)
+    elif npcId == 32040 and st.getQuestItemsCount(8065) :
+       player.teleToLocation(36640,-51218,718)
     elif not st.getQuestItemsCount(8064)+st.getQuestItemsCount(8067) :
        htmltext = '<html>Teleport available only for characters with Pagans Mark or Visitors Mark and level 73 or above.</body></html>'
     else :
