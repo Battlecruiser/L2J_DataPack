@@ -39088,4 +39088,18 @@ INSERT INTO spawnlist VALUES
 
 (NULL,'schuttgart',1,'30768',86986,-142001,-1367,0,0,60246,60,0,0),
 (NULL,'schuttgart',1,'35644',87735,-140700,-1567,0,0,12555,60,0,0),
+(NULL,'Schuttgart',1,'32070',90271,-143869,-1547,0,0,10701,60,0,0),
+(NULL,'Schuttgart',1,'32072',84429,-144065,-1542,0,0,15666,60,0,0),
 (NULL,'ValleyOfLords',1,'32090',35652,-117571,-1272,0,0,0,60,0,0);
+
+-- Set first location as actual spawn locs on spawtable to avoid visual bugs on first cycle run
+UPDATE `spawnlist` SET `locx` = '-81681', `locy` = '241109', `locz` = '-3712' WHERE `id` = '57697' AND `npc_templateid` = '31356';
+UPDATE `spawnlist` SET `locx` = '-86328', `locy` = '241120', `locz` = '-3734' WHERE `id` = '57698' AND `npc_templateid` = '31357';
+UPDATE `spawnlist` SET `locx` = '47015', `locy` = '51278', `locz` = '-2992' WHERE `id` = '57829' AND `npc_templateid` = '31358';
+UPDATE `spawnlist` SET `locx` = '45744', `locy` = '50561', `locz` = '-3065' WHERE `id` = '57828' AND `npc_templateid` = '31359';
+UPDATE `spawnlist` SET `locx` = '10826', `locy` = '14777', `locz` = '-4240' WHERE `id` = '57781' AND `npc_templateid` = '31360';
+UPDATE `spawnlist` SET `locx` = '22418', `locy` = '10249', `locz` = '-3648' WHERE `id` = '57782' AND `npc_templateid` = '31361';
+UPDATE `spawnlist` SET `locx` = '114847', `locy` = '-180066', `locz` = '-877' WHERE `id` = '57883' AND `npc_templateid` = '31362';
+UPDATE `spawnlist` SET `locx` = '116731', `locy` = '-182477', `locz` = '-1512' WHERE `id` = '57882' AND `npc_templateid` = '31363';
+UPDATE `spawnlist` SET `locx` = '-46506', `locy` = '-109402', `locz` = '-238' WHERE `id` = '57938' AND `npc_templateid` = '31364';
+UPDATE `spawnlist` SET `locx` = '-48807', `locy` = '-113489', `locz` = '-241' WHERE `id` = '57937' AND `npc_templateid` = '31365';
