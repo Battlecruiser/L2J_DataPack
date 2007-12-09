@@ -596,6 +596,7 @@ skill_trees.sql
 spawnlist.sql
 teleport.sql
 topic.sql
+walker_routes.sql
 weapon.sql
 zone.sql
 zone_vertices.sql
