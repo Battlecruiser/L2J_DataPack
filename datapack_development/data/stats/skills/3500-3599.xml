@@ -1048,7 +1048,7 @@
     <mul val='0.85' order='0x30' stat='fireVuln'/>
     <mul val='0.2' order='0x30' stat='sleepVuln'/>
     <mul val='0.90' order='0x30' stat='mReuse'/>
-    <mul val='0.90' order='0x30' stat='atkReuse'/>
+    <!-- Need core support for <mul val='0.90' order='0x30' stat='pReuse'/> -->
     <add val='5' order='0x40' stat="reflectDam"/>
   </for>
 </skill>
