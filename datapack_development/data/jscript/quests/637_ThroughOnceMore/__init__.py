@@ -13,7 +13,7 @@ DROP_CHANCE=40
 #Npc
 FLAURON = 32010
 #Items
-FADED,NECROHEART,MARK = 8065,8066,8067
+FADEDMARK,NECROHEART,MARK = 8065,8066,8067
 
 class Quest (JQuest) :
 
@@ -25,7 +25,7 @@ class Quest (JQuest) :
     if htmltext == "32010-04.htm" :
        st.set("cond","1")
        st.setState(STARTED)
-       st.takeItems(VISITORSMARK,1)
+       st.takeItems(FADEDMARK,1)
        st.playSound("ItemSound.quest_accept")
     return htmltext
 
