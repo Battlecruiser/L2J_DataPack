@@ -15,9 +15,14 @@ KARUDA = 32017
 #Items
 ORC_GOODS = 8088
 #Rewards
-VARNISH_ID = 1865
-ANIMAL_SKIN_ID = 1867
-IRON_ORE_ID,COAL_ID,CHARCOAL_ID,ANIMAL_BONE_ID, = range(1869,1873)
+REWARDS = {
+    "1" : [1865 , 30], #Varnish
+    "2" : [1867 , 40], #Animal Skin
+    "3" : [1872 , 40], #Animal Bone
+    "4" : [1871 , 30], #Charcoal
+    "5" : [1870 , 30], #Coal
+    "6" : [1869 , 30], #Iron Ore
+    }
 #Mobs
 MOBS = [ 22003,22004,22005,22006,22008 ]
 
@@ -32,47 +37,15 @@ class Quest (JQuest) :
          st.exitQuest(1)
       else :
          st.set("cond","1")
-         st.setState(STARTING)
+         st.setState(STARTED)
          st.playSound("ItemSound.quest_accept")
-   elif event == "32017-06.htm" :
-     st.setState(STARTED)
-   elif event == "VARNISH" :
-     st.takeItems(ORC_GOODS,-1)
-     st.giveItems(VARNISH_ID,int(30*Config.RATE_QUESTS_REWARD))
-     st.playSound("ItemSound.quest_finish")
-     st.exitQuest(1)
-     return
-   elif event == "ANIMAL_SKIN" :
-     st.takeItems(ORC_GOODS,-1)
-     st.giveItems(ANIMAL_SKIN_ID,int(40*Config.RATE_QUESTS_REWARD))
-     st.playSound("ItemSound.quest_finish")
-     st.exitQuest(1)
-     return
-   elif event == "ANIMAL_BONE" :
-     st.takeItems(ORC_GOODS,-1)
-     st.giveItems(ANIMAL_BONE_ID,int(40*Config.RATE_QUESTS_REWARD))
-     st.playSound("ItemSound.quest_finish")
-     st.exitQuest(1)
-     return
-   elif event == "CHARCOAL" :
-     st.takeItems(ORC_GOODS,-1)
-     st.giveItems(CHARCOAL_ID,int(30*Config.RATE_QUESTS_REWARD))
-     st.playSound("ItemSound.quest_finish")
-     st.exitQuest(1)
-     return
-   elif event == "COAL" :
-     st.takeItems(ORC_GOODS,-1)
-     st.giveItems(COAL_ID,int(30*Config.RATE_QUESTS_REWARD))
-     st.playSound("ItemSound.quest_finish")
-     st.exitQuest(1)
-     return
-   elif event == "IRON_ORE" :
-     st.takeItems(ORC_GOODS,-1)
-     st.giveItems(IRON_ORE_ID,int(30*Config.RATE_QUESTS_REWARD))
-     st.playSound("ItemSound.quest_finish")
-     st.exitQuest(1)
-     return
-
+   elif event in REWARDS.keys() :
+       item, amount = REWARDS[event]
+       st.takeItems(ORC_GOODS,-1)
+       st.giveItems(item, amount)
+       st.playSound("ItemSound.quest_finish")
+       st.exitQuest(1)
+       return
    return htmltext
 
  def onTalk (self,npc,player):
@@ -82,17 +55,15 @@ class Quest (JQuest) :
      npcId = npc.getNpcId()
      id = st.getState()
      cond = st.getInt("cond")
-     if id == STARTED :
-       if st.getQuestItemsCount(ORC_GOODS) == 120 : 
-          htmltext = "32017-06.htm"
-       else :
-          htmltext = "32017-01.htm"
-     elif cond == 0 :
+     if cond == 0 :
          htmltext = "32017-01.htm"
      elif cond == 1 :
          htmltext = "32017-04.htm"
      elif cond == 2 :
-         htmltext = "32017-05.htm"
+         if st.getQuestItemsCount(ORC_GOODS) >= 120 :
+             htmltext = "32017-05.htm"
+         else :
+             htmltext = "32017-04.htm"
    return htmltext
 
  def onKill(self,npc,player,isPet):
@@ -100,7 +71,7 @@ class Quest (JQuest) :
    if not partyMember: return
    st = partyMember.getQuestState(qn)
    if st :
-      if st.getState() == STARTING :
+      if st.getState() == STARTED :
          count = st.getQuestItemsCount(ORC_GOODS)
          if st.getInt("cond") == 1 and count < 120 :
             chance = DROP_CHANCE * Config.RATE_DROP_QUEST
@@ -120,9 +91,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(644, qn, "Grave Robber Annihilation")
 CREATED     = State('Start', QUEST)
-STARTING    = State('Starting',  QUEST)
 STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
 QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(KARUDA)
