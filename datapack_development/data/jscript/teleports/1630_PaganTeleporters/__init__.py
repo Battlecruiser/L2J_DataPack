@@ -23,7 +23,7 @@ class Quest (JQuest):
        htmltext = "<html>Teleport available only for characters with Pagans Mark and level 73 or above.</body></html>"
     elif npcId == 32034 and st.getQuestItemsCount(8064) :
           st.takeItems(8064,1)
-          htmltext = "<html><body>As you pass through the gates your mark fades. Make a note to return to <font color="LEVEL">Priest Flauron</font> to inquire about this!</body></html>"
+          htmltext = "<html><body>As you pass through the gates your mark fades. Make a note to return to <font color='LEVEL'>Priest Flauron</font> to inquire about this!</body></html>"
           st.giveItems(8065,1)
           player.teleToLocation(-16324,-37147,-10724)
     elif npcId in [32034,32036]:
