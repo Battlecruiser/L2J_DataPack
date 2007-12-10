@@ -302,9 +302,10 @@ QUEST.addStartNpc(INNOCENTIN)
 QUEST.addStartNpc(TIFAREN)
 
 for npcid in NPCS :
-    for item in range(7142,7148):
-        QUEST.addTalkId(npcid)
-        STARTED.addQuestDrop(npcid,item,1)
+    QUEST.addTalkId(npcid)
+
+for item in range(7141,7148) :
+    STARTED.addQuestDrop(INNOCENTIN,item,1)
 
 QUEST.addAttackId(SOUL_OF_WELL)
 
