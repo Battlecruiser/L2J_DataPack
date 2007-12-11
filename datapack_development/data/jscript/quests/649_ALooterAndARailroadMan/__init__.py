@@ -64,7 +64,7 @@ class Quest (JQuest) :
    if st :
      if st.getState() == STARTED :
        count = st.getQuestItemsCount(THIEF_GUILD_MARK)
-       if st.getInt("cond") == 1 and count < 200 and st.getRandom(100)<CHANCE :  
+       if st.getInt("cond") == 1 and count < 200 and st.getRandom(100)<DROP_CHANCE :  
           st.giveItems(THIEF_GUILD_MARK,1)  
           if count == 199 :  
             st.playSound("ItemSound.quest_middle")  
