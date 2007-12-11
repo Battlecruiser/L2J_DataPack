@@ -1380,11 +1380,13 @@
 </skill>
 <skill id="5093" levels="1" name="Antharas Meteor">
   <!-- Antharas Skills -->
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="8000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <for>
   </for>
 </skill>
