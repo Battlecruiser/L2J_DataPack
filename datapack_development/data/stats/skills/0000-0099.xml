@@ -501,7 +501,6 @@
   345.0 359.0 373.0 387.0 402.0 416.0 431.0 445.0 460.0 475.0
   489.0 504.0 519.0 533.0
   </table>
-  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -519,6 +518,9 @@
   <set name="baseCritRate" val="15"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
+  <cond msg="An equipped hand-to-hand combat weapon is required to use this skill.">
+  <using kind="Fist, Dual Fist"/>
+  </cond>
   <!-- charge values -->
   <set name="itemConsumeId" val="5589"/>
   <set name="itemConsumeCount" val="2"/>
@@ -957,7 +959,6 @@
   634.0 638.0 643.0 648.0 653.0 658.0 663.0 667.0 672.0 677.0
   </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
@@ -973,6 +974,9 @@
   <set name="baseCritRate" val="15"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
+  <cond msg="An equipped hand-to-hand combat weapon is required to use this skill.">
+  <using kind="Fist, Dual Fist"/>
+  </cond>
   <!-- charge values -->
   <set name="itemConsumeId" val="5589"/>
   <set name="itemConsumeCount" val="2"/>
@@ -1240,7 +1244,6 @@
 <skill id="50" levels="7" name="Focused Force">
   <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 </table>
   <table name="#charges"> 1 2 3 4 5 6 7 </table>
-  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="5"/>
   <set name="hpConsume" val="20"/>
   <set name="power" val="#power"/>
@@ -1253,6 +1256,9 @@
   <set name="effectRange" val="-1"/>
   <set name="num_charges" val="#charges"/>
   <set name="aggroPoints" val="150"/>
+  <cond msg="An equipped hand-to-hand combat weapon is required to use this skill.">
+  <using kind="Fist, Dual Fist"/>
+  </cond>
   <for>
     <effect count="1" name="Charge" time="0x7fffffff" val="1"/>
   </for>
@@ -1306,7 +1312,6 @@
   2343 2362 2381 2401 2420 2439 2458 2477 2497 2516
   2535 2554 2573 2593 2612 2631 2650 2670 2689 2708
   </table>
-  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1322,6 +1327,9 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <set name="baseCritRate" val="15"/>
+  <cond msg="An equipped hand-to-hand combat weapon is required to use this skill.">
+  <using kind="Fist, Dual Fist"/>
+  </cond>
   <!-- charge values -->
   <set name="num_charges" val="1"/>
   <set name="charge_skill_id" val="50"/> <!-- Force Focus is the charger -->
@@ -1632,7 +1640,6 @@
 </skill>
 <skill id="76" levels="1" name="Bear Spirit Totem">
   <!-- Done by dc -->
-  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="13"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1643,6 +1650,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="268"/>
+  <cond msg="An equipped hand-to-hand combat weapon is required to use this skill.">
+  <using kind="Fist, Dual Fist"/>
+  </cond>
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
       <mul order="0x30" stat="runSpd" val="0.7"/>
@@ -1723,7 +1733,6 @@
   <table name="#hpConsume"> 399 455 499 </table>
   <table name="#power"> 4580.0 6332.0 9132.0 </table>
   <table name="#ench1Power"> 9214 9296 9378 9461 9543 9625 9708 9790 9872 9955 10037 10119 10201 10284 10366 10448 10531 10613 10695 10778 10860 10942 11024 11107 11189 11271 11354 11436 11518 11601 </table>
-  <set name="weaponsAllowed" val="1280"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="hpConsume" val="#hpConsume"/>
   <set name="save" val="4"/>
@@ -1743,6 +1752,9 @@
   <set name="effectPower" val="80"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="hpConsume" val="#ench2HpConsume"/>
+  <cond msg="An equipped hand-to-hand combat weapon is required to use this skill.">
+  <using kind="Fist, Dual Fist"/>
+  </cond>
   <for>
     <effect count="1" name="StunSelf" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
@@ -1771,7 +1783,6 @@
 </skill>
 <skill id="83" levels="1" name="Wolf Spirit Totem">
   <!-- Done by Scott -->
-  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="10"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1782,6 +1793,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="204"/>
+  <cond msg="An equipped hand-to-hand combat weapon is required to use this skill.">
+  <using kind="Fist, Dual Fist"/>
+  </cond>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="possession">
       <mul order="0x30" stat="runSpd" val="1.20"/>
@@ -2036,7 +2050,6 @@
   <table name="#magicLvl"> 20 24 28 32 36 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
   <table name="#mpConsume"> 10 11 13 14 16 18 19 21 22 24 25 27 28 29 30 31 32 33 34 34 </table>
   <table name="#Tab-runSpd"> 0.7 0.7 0.7 0.7 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </table>
-  <set name="weaponsAllowed" val="1280"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="save" val="5"/>
@@ -2052,6 +2065,9 @@
   <set name="effectRange" val="400"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
+  <cond msg="An equipped hand-to-hand combat weapon is required to use this skill.">
+  <using kind="Fist, Dual Fist"/>
+  </cond>
   <for>
     <effect name="Buff" time="30" count="1" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>

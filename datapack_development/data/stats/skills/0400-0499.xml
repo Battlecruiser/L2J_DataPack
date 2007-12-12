@@ -556,7 +556,6 @@
   </for>
 </skill>
 <skill id="425" levels="1" name="Hawk Spirit Totem">
-  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="34"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -566,6 +565,9 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <cond msg="An equipped hand-to-hand combat weapon is required to use this skill.">
+  <using kind="Fist, Dual Fist"/>
+  </cond>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="possession">
       <add order="0x40" stat="accCombat" val="6"/>
@@ -941,7 +943,6 @@
       Uses spiritual forces to create a temporary protective barrier that is impervious to normal strikes, skills, buffs/debuffs. 
       An equipped hand-to-hand combat weapon is required to use this skill. Level 4 Focused Force charge required.
   -->
-  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="72"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -953,6 +954,9 @@
   <set name="effectRange" val="-1"/>
   <set name="num_charges" val="4"/>
   <set name="charge_skill_id" val="50"/>
+  <cond msg="An equipped hand-to-hand combat weapon is required to use this skill.">
+  <using kind="Fist, Dual Fist"/>
+  </cond>
   <for>
     <effect count="1" name="Invincible" time="10" val="0"/>
   </for>
