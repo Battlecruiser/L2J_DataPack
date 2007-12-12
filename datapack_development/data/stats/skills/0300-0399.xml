@@ -1163,7 +1163,6 @@
   <set name="baseCritRate" val="15"/>
 </skill>
 <skill id="346" levels="1" name="Raging Force">
-  <set name="weaponsAllowed" val="1280"/>
   <set name="magicLvl" val="78"/>
   <set name="hpConsume" val="50"/>
   <set name="mpConsume" val="5"/>
@@ -1178,6 +1177,9 @@
   <set name="effectRange" val="1000"/>
   <set name="num_charges" val="7"/>
   <set name="baseCritRate" val="15"/>
+  <cond msg="An equipped hand-to-hand combat weapon is required to use this skill.">
+  <using kind="Fist, Dual Fist"/>
+  </cond>
 </skill>
 <skill id="347" levels="1" name="Earthquake">
   <set name="hpConsume" val="340"/>
