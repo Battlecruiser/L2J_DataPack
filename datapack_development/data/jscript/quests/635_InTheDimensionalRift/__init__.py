@@ -14,7 +14,7 @@ MAX_QUEST = 23
 # Rift Posts should take you back to the place you came from
 COORD={
 1: [-41572,209731,-5087], #Necropolis of Sacrifice 
-2: [ 42950,143934,-5381], #Catacomb of the Heretic
+2: [-52872,-250283,-7908], #Catacomb of the Heretic
 3: [ 45256,123906,-5411], #Pilgrim's Necropolis
 4: [ 46192,170290,-4981], #Catacomb of the Branded
 5: [111273,174015,-5437], #Necropolis of Worship
