@@ -320,5 +320,4 @@ QUEST.addTalkId(URN)
 for i in DROPLIST.keys():
   QUEST.addKillId(i)
 
-for i in range(6007,6035)+[6317,5904] :
-  STARTED.addQuestDrop(WESLEY,i,1)
+STARTED.addQuestDrop(WESLEY,5904,1)
