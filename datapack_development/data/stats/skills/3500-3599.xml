@@ -429,10 +429,6 @@
   </for>
 </skill>
 <skill id="3525" levels="1" name="Doom Heavy Armor Set">
-<!--
-  Description(s):
-      Increases MaxHP and lung capacity. STR-3, CON+3
--->
   <!-- Done by DJ MELERIX -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -442,7 +438,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="maxHp" val="320"/> <!-- HP +320 -->
-    <!-- <mul order="0x30" stat="breath" val="?"/> --> <!-- Breath Gauge increased -->
+    <add order="0x40" stat="breath" val="200"/> <!-- Breath Gauge increased +200 -->
     <sub order="0x40" stat="STR" val="3"/> <!-- STR -3 -->
     <add order="0x40" stat="CON" val="3"/> <!-- CON +3 -->
   </for>
@@ -468,10 +464,6 @@
   </for>
 </skill>
 <skill id="3527" levels="1" name="Doom Light Armor Set">
-<!--
-  Description(s):
-      Increases lung capacity, P. Atk., MP recovery rate and resistance to poison attacks. STR-1, CON-2, DEX+3
--->
   <!-- Done by DJ MELERIX -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -480,7 +472,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul order="0x30" stat="breath" val="3"/> <!-- Breath Gauge increased -->
+    <add order="0x40" stat="breath" val="200"/> <!-- Breath Gauge increased +200 -->
     <mul order="0x30" stat="pAtk" val="1.027"/> <!-- P. Atk. +2.7% -->
     <mul order="0x30" stat="regMp" val="1.025"/> <!-- MP Regeneration +2.5% -->
     <sub order="0x40" stat="STR" val="1"/> <!-- STR -1 -->
@@ -510,10 +502,6 @@
   </for>
 </skill>
 <skill id="3529" levels="1" name="Doom Robe Set">
-<!--
-  Description(s):
-      Increases Speed, lung capacity and MP recovery rate. INT+2, MEN+1, WIT-3
--->
   <!-- Done by DJ MELERIX -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -523,7 +511,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="runSpd" val="7"/> <!-- Speed + 7 -->
-    <mul order="0x30" stat="breath" val="3"/> <!-- Breath Gauge increased -->
+    <add order="0x40" stat="breath" val="200"/> <!-- Breath Gauge increased +200 -->
     <mul order="0x30" stat="regMp" val="1.0524"/> <!-- MP Regeneration +5.24% -->
     <add order="0x40" stat="INT" val="2"/> <!-- INT +2 -->
     <add order="0x40" stat="MEN" val="1"/> <!-- MEN +1 -->
