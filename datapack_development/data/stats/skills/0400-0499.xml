@@ -468,7 +468,7 @@
       <add order="0x40" stat="accCombat" val="6"/>
       <add order="0x40" stat="runSpd" val="#runSpd"/>
       <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
-      <mul order="0x30" stat="regHp" val="0.5"/>
+      <mul order="0x30" stat="gainHp" val="0.5"/>
       <add order="0x40" stat="rCrit" val="#rCrit">
         <and>
           <using kind="Sword,Big Sword,Pole"/>

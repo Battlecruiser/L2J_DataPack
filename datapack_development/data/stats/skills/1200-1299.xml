@@ -2297,7 +2297,7 @@
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul stat="regHp" val="0.5" order="0x30"/>
+      <mul stat="gainHp" val="0.5" order="0x30"/>
     </effect>
   </for>
 </skill>
@@ -2840,7 +2840,7 @@
   <set name="effectPower" val="350"/>
   <for>
   <effect count="1" name="Buff" time="120" val="0">
-    <mul order="0x30" stat="regHp" val="0.5"/>
+    <mul order="0x30" stat="gainHp" val="0.5"/>
   </effect>
   </for>
 </skill>

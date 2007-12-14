@@ -1062,7 +1062,7 @@
 </skill>
 <skill id="341" levels="1" name="Touch of Life">
   <set name="hpConsume" val="1216"/>
-  <set name="power" val="30.0"/>
+  <set name="power" val="50"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="magicLvl" val="78"/>
@@ -1073,9 +1073,8 @@
   <set name="hitTime" val="1800"/>
   <set name="aggroPoints" val="811"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
-      <mul order="0x30" stat="maxHp" val="1.5"/>
-      <add order="0x40" stat="regHp" val="50"/>
+    <effect count="40" name="HealOverTime" time="3" val="150">
+      <mul order="0x30" stat="gainHp" val="1.3"/>
       <mul order="0x30" stat="cancelVuln" val="0.4"/>
       <mul order="0x30" stat="debuffVuln" val="0.7"/>
     </effect>
@@ -1101,7 +1100,7 @@
   <for>
     <effect count="1" name="Buff" time="120" val="0">
       <mul order="0x30" stat="maxCp" val="0.1"/>
-      <mul order="0x30" stat="regHp" val="0.7"/>
+      <mul order="0x30" stat="gainHp" val="0.7"/>
       <mul order="0x30" stat="debuffVuln" val="1.3"/>
     </effect>
   </for>
