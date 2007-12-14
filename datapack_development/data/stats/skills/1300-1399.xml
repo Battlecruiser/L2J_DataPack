@@ -1641,7 +1641,7 @@
   <set name="effectRange" val="1100"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul stat="regHp" val="0.5" order="0x30"/>
+      <mul stat="gainHp" val="0.5" order="0x30"/>
     </effect>
   </for>
 </skill>
