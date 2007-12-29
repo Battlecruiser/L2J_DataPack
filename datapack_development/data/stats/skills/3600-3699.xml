@@ -105,11 +105,11 @@ Description(s):
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='0.7' order='0x30' stat='sleepVuln'/>
-    <mul val='0.5' order='0x30' stat='poisonVuln'/>
+    <mul val='0.85' order='0x30' stat='sleepVuln'/>
+    <mul val='0.75' order='0x30' stat='poisonVuln'/>
     <mul val='0.5' order='0x30' stat='bleedVuln'/>
-    <mul val='0.7' order='0x30' stat='paralyzeVuln'/>
-    <mul val='0.7' order='0x30' stat='stunVuln'/>
+    <mul val='0.85' order='0x30' stat='paralyzeVuln'/>
+    <mul val='0.85' order='0x30' stat='stunVuln'/>
     <mul val='0.85' order='0x30' stat='darkVuln'/>
     <add val='5' order='0x40' stat='reflectDam'/>
     <mul val='0.90' order='0x30' stat='mReuse'/>

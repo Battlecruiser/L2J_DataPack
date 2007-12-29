@@ -1034,7 +1034,7 @@
     <mul val='1.08' order='0x30' stat='mAtk'/>
     <mul val='2.0' order='0x30' stat='mCritRate'/>
     <mul val='0.85' order='0x30' stat='fireVuln'/>
-    <mul val='0.2' order='0x30' stat='sleepVuln'/>
+    <mul val='0.6' order='0x30' stat='sleepVuln'/>
     <mul val='0.90' order='0x30' stat='mReuse'/>
     <!-- Need core support for <mul val='0.90' order='0x30' stat='pReuse'/> -->
     <add val='5' order='0x40' stat="reflectDam"/>
@@ -1048,11 +1048,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='0.2' order='0x30' stat='bleedVuln'/>
+    <mul val='0.6' order='0x30' stat='bleedVuln'/>
     <mul val='1.10' order='0x30' stat='gainHp'/>
     <add val='4' order='0x40' stat='absorbDam'/>
-    <mul val='0.4' order='0x30' stat='stunVuln'/>
-    <mul val='0.4' order='0x30' stat='derangementVuln'/>
+    <mul val='0.7' order='0x30' stat='stunVuln'/>
+    <mul val='0.7' order='0x30' stat='derangementVuln'/>
     <mul val='0.95' order='0x30' stat='MpConsumeRate'/>
     <mul val='0.85' order='0x30' stat='earthVuln'/>
   </for>
@@ -1065,11 +1065,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='0.4' order='0x30' stat='bleedVuln'/>
+    <mul val='0.7' order='0x30' stat='bleedVuln'/>
     <mul val='1.10' order='0x30' stat='gainHp'/>
     <add val='4' order='0x40' stat='absorbDam'/>
-    <mul val='0.6' order='0x30' stat='stunVuln'/>
-    <mul val='0.6' order='0x40' stat='derangementVuln'/>
+    <mul val='0.8' order='0x30' stat='stunVuln'/>
+    <mul val='0.8' order='0x40' stat='derangementVuln'/>
   </for>
 </skill>
 <skill id="3560" levels="1" name="Earring of Orfen">
@@ -1080,7 +1080,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='0.6' order='0x40' stat='bleedVuln'/>
+    <mul val='0.8' order='0x40' stat='bleedVuln'/>
     <mul val='1.06' order='0x30' stat='gainHp'/>
   </for>
 </skill>
@@ -1092,10 +1092,10 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='0.2' order='0x30' stat='poisonVuln'/>
+    <mul val='0.6' order='0x30' stat='poisonVuln'/>
     <add val='2' order='0x40' stat='accCombat'/>
     <mul val='1.15' order='0x30' stat='cAtk'/>
-    <mul val='0.4' order='0x30' stat='rootVuln'/>
+    <mul val='0.7' order='0x30' stat='rootVuln'/>
     <mul val='1.04' order='0x30' stat='pAtkSpd'/>
     <mul val='1.04' order='0x30' stat='mAtkSpd'/>
   </for>
@@ -1108,10 +1108,10 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='0.4' order='0x30' stat='poisonVuln'/>
+    <mul val='0.7' order='0x30' stat='poisonVuln'/>
     <add val='2' order='0x10' stat='accCombat'/>
     <mul val='1.15' order='0x30' stat='cAtk'/>
-    <mul val='0.6' order='0x30' stat='rootVuln'/>
+    <mul val='0.8' order='0x30' stat='rootVuln'/>
   </for>
 </skill>
 <skill id="3563" levels="1" name="Ring of Core">
@@ -1122,7 +1122,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='0.6' order='0x30' stat='poisonVuln'/>
+    <mul val='0.8' order='0x30' stat='poisonVuln'/>
     <add val='1' order='0x40' stat='accCombat'/>
   </for>
 </skill>
