@@ -4,7 +4,7 @@ REM ## L2JDP Database Installer - (by DrLecter) ##
 REM ##############################################
 REM ## Interactive script setup -  (by TanelTM) ##
 REM ##############################################
-REM Copyright (C) 2007 L2J DataPack
+REM Copyright (C) 2008 L2J DataPack
 REM This program is free software; you can redistribute it and/or modify 
 REM it under the terms of the GNU General Public License as published by 
 REM the Free Software Foundation; either version 2 of the License, or (at
@@ -18,7 +18,7 @@ REM
 REM You should have received a copy of the GNU General Public License along 
 REM with this program; if not, write to the Free Software Foundation, Inc., 
 REM 675 Mass Ave, Cambridge, MA 02139, USA. Or contact the Official L2J
-REM DataPack Project at http://www.l2jdp.com, http://forum.l2jdp.com or
+REM DataPack Project at http://www.l2jdp.com, http://www.l2jdp.com/forum or
 REM #l2j-datapack @ irc://irc.freenode.net
 
 set config_file=vars.txt
@@ -56,8 +56,8 @@ echo (1) Import and continue: I'll read your old settings and
 echo    continue execution, but since no new settings will be
 echo    saved, you'll see this menu again next time.
 echo.
-echo (2) Import and configure: This tool has some new options
-echo    available, you choose the values that fit your needs
+echo (2) Import and configure: This tool has some new available
+echo    options, you choose the values that fit your needs
 echo    using former settings as a base.
 echo.
 echo (3) Ignose stored settings: I'll let you configure me 
@@ -528,6 +528,8 @@ boxes.sql
 castle.sql
 castle_door.sql
 castle_doorupgrade.sql
+castle_manor_procure.sql
+castle_manor_production.sql
 castle_siege_guards.sql
 char_templates.sql
 character_friends.sql
@@ -600,8 +602,6 @@ walker_routes.sql
 weapon.sql
 zone.sql
 zone_vertices.sql
-castle_manor_procure.sql
-castle_manor_production.sql
 ) do call :dump %%i
 echo done...
 echo.
@@ -745,7 +745,7 @@ echo Automagic processing finished, i'm leaving an 'errors.txt'
 echo file for your consideration.
 echo.
 echo Remember that some of these files could have tried to add stuff that were 
-echo in the database already, so don't go out yelling about 
+echo part of your database structure already, so don't go out yelling about 
 echo.
 echo 'Duplicate column name'
 echo.
@@ -772,9 +772,9 @@ echo This wasn't a clean run, but don't worry.
 echo You can get help and support:
 echo.
 echo 1-Read the L2J Datapack project wiki :
-echo       (http://l2jdp.com/trac/wiki)
+echo       (http://www.l2jdp.com/trac/wiki)
 echo 2-Search for a similar problem in our forums
-echo       (http://forum.l2jdp.com/)
+echo       (http://www.l2jdp.com/forum)
 echo.
 echo You can ask for support in our forums or irc channel:
 echo irc://irc.freenode.net channel: #l2j-datapack
@@ -787,7 +787,9 @@ svnversion -n 2>NUL
 echo.
 if %ERRORLEVEL% == 9009 (
 echo   SVN commandline tools not found!
-echo   Please download and install a copy from :
+echo   Please download and install "Windows installer with 
+echo   the basic win32 binaries" (or something that fits our
+echo   binaries needs) from :
 echo   http://subversion.tigris.org/servlets/ProjectDocumentList?folderID=91
 echo.
 )
@@ -816,8 +818,8 @@ call :colors 17
 title L2JDP installer - Script execution finished
 cls
 echo.
-echo L2JDP database_installer version 0.2.1
-echo (C) 2007 L2J Datapack Team
+echo L2JDP database_installer version 0.2.1a
+echo (C) 2007-2008 L2J Datapack Team
 echo database_installer comes with ABSOLUTELY NO WARRANTY;
 echo This is free software, and you are welcome to redistribute it
 echo under certain conditions; See the file gpl.txt for further

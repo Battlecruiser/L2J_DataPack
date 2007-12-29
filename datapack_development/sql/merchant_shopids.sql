@@ -255,6 +255,14 @@ INSERT INTO merchant_shopids VALUES (5802,'30891');
 INSERT INTO merchant_shopids VALUES (5803,'30891');
 INSERT INTO merchant_shopids VALUES (5804,'31044');
 INSERT INTO merchant_shopids VALUES (5805,'31045');
+INSERT INTO merchant_shopids VALUES (3216400,'32164');
+INSERT INTO merchant_shopids VALUES (3216401,'32164');
+INSERT INTO merchant_shopids VALUES (3216500,'32165');
+INSERT INTO merchant_shopids VALUES (3216501,'32165');
+INSERT INTO merchant_shopids VALUES (3216600,'32166');
+INSERT INTO merchant_shopids VALUES (3216700,'32167');
+INSERT INTO merchant_shopids VALUES (3216800,'32168');
+INSERT INTO merchant_shopids VALUES (3216900,'32169');
 INSERT INTO merchant_shopids VALUES (350071,'35007');
 
 -- Mercenary Managers
@@ -294,6 +302,7 @@ INSERT INTO merchant_shopids VALUES (418,'31616');
 INSERT INTO merchant_shopids VALUES (419,'31696'); 
 INSERT INTO merchant_shopids VALUES (420,'31697');
 INSERT INTO merchant_shopids VALUES (421,'31989');
+INSERT INTO merchant_shopids VALUES (422,'32348');
 INSERT INTO merchant_shopids VALUES (423,'32105');
 
 -- GM Shops

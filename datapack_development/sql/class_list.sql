@@ -102,4 +102,21 @@ INSERT INTO `class_list` VALUES
 ('D_FortuneSeeker', 117, 55), 
 ('D_Artisan', 56, 53), 
 ('D_Warsmith', 57, 56), 
-('D_Maestro', 118, 57);
+('D_Maestro', 118, 57),
+('K_Male_Soldier', 123, -1),
+('K_Male_Trooper', 125, 123),
+('K_Male_Berserker', 127, 125),
+('K_Male_Doombringer', 131, 127),
+('K_Male_Soulbreaker', 128, 125),
+('K_Male_Soulhound', 132, 128),
+('K_Male_Inspector', 135, 125),
+('K_Male_Judicator', 136, 135),
+('K_Female_Soldier', 124, -1),
+('K_Female_Warder', 126, 124),
+('K_Female_Soulbreaker', 129, 126),
+('K_Female_Soulhound', 133, 129),
+('K_Female_Arbalester', 130, 126),
+('K_Female_Trickster', 134, 130);
+-- Temporarily disabled coz of duplicated classes >.<
+-- ('K_Female_Inspector', 135, 126),
+-- ('K_Female_Judicator', 136, 135);
