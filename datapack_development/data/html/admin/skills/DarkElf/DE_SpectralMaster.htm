@@ -1,14 +1,22 @@
-<html><title>Choose skill to add</title><body>
-<center>
-<a action="bypass -h admin_add_skill 328 1">Wisdom 1 (Lv 76)</a>
-<a action="bypass -h admin_add_skill 329 1">Health 1 (Lv 76)</a>
-<a action="bypass -h admin_add_skill 331 1">Skill Mastery 1 (Lv 77)</a>
-<a action="bypass -h admin_add_skill 1348 1">Assassin Servitor 1 (Lv 77)</a>
-<a action="bypass -h admin_add_skill 1351 1">Mage Bane 1 (Lv 77)</a>
-<a action="bypass -h admin_add_skill 338 1">Arcane Agility 1 (Lv 78)</a>
-<a action="bypass -h admin_add_skill 1349 1">Final Servitor 1 (Lv 78)</a>
-</center>
-Add a custom skill :
-<center><table><tr><td>Id:<edit var="id" width=40></td><td>Level:<edit var="level" width=40></td><td>&nbsp;<button value="Add" action="bypass -h admin_add_skill $id $level" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr></table><br>
-<button value="Back" action="bypass -h admin_show_skills" width=40 height=15></center>
+<html><body><table width=260>
+<tr><td width=40>
+<button value="Main" action="bypass -h admin_admin" width=40 height=15 back="sek.cbui94" fore="sek.cbui92">
+</td><td width=180>
+<center>Spectral Master Skill Menu</center>
+</td><td width=40>
+<button value="Back" action="bypass -h admin_help skills/DarkElf/delf.htm" width=40 height=15 back="sek.cbui94" fore="sek.cbui92">
+</td></tr></table>
+<img src="sek.cbui355" width=260 height=2><br>
+<center><table width=260>
+<tr><td>Level:</td><td><edit var="level" width=110 height=15></td></tr>
+</table><br>
+<font color="a5aace"><table width=260>
+<tr><td>Wisdom (max 1)</td><td><button value="Add" action="bypass -h admin_add_skill 328 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Health (max 1)</td><td><button value="Add" action="bypass -h admin_add_skill 329 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Skill Mastery (max 1)</td><td><button value="Add" action="bypass -h admin_add_skill 331 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Assassin Servitor (max 1)</td><td><button value="Add" action="bypass -h admin_add_skill 1348 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Mage Bane (max 1)</td><td><button value="Add" action="bypass -h admin_add_skill 1351 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Arcane Agility (max 1)</td><td><button value="Add" action="bypass -h admin_add_skill 338 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Final Servitor (max 1)</td><td><button value="Add" action="bypass -h admin_add_skill 1349 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+</table></center></font>
 </body></html>

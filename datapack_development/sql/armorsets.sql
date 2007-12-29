@@ -99,3 +99,23 @@ INSERT INTO armorsets VALUES(48, 7857, 0,    7850, 7858, 7859,   3607,   0,    0
 INSERT INTO armorsets VALUES(49, 7861, 0,    7860, 7862, 7863,   3608,   0,    0,     3620);    -- Apella plate armor set (heavy)
 INSERT INTO armorsets VALUES(50, 7864, 0,    7860, 7865, 7866,   3609,   0,    0,     3621);    -- Apella Brigandine set (light)
 INSERT INTO armorsets VALUES(51, 7867, 0,    7860, 7868, 7869,   3610,   0,    0,     3622);    -- Apella Doublet set (robe)
+
+--                Dynasty Sets              -------------
+-- ######################## id chest  legs head gloves feet    skill  shield sh_skill enchant6
+INSERT INTO `armorsets` VALUES ('52', '9432', '9437', '9438', '9439', '9440', '3416', '0', '0', '0');
+INSERT INTO `armorsets` VALUES ('53', '9433', '9437', '9438', '9439', '9440', '3354', '0', '0', '0');
+INSERT INTO `armorsets` VALUES ('54', '9434', '9437', '9438', '9439', '9440', '3355', '0', '0', '0');
+INSERT INTO `armorsets` VALUES ('55', '9435', '9437', '9438', '9439', '9440', '3356', '0', '0', '0');
+INSERT INTO `armorsets` VALUES ('56', '9436', '9437', '9438', '9439', '9440', '3357', '0', '0', '0');
+INSERT INTO `armorsets` VALUES ('57', '9416', '9421', '9422', '9423', '9424', '3412', '9441', '3417', '0');
+INSERT INTO `armorsets` VALUES ('58', '9417', '9421', '9422', '9423', '9424', '3348', '9441', '3417', '0');
+INSERT INTO `armorsets` VALUES ('59', '9418', '9421', '9422', '9423', '9424', '3349', '9441', '3417', '0');
+INSERT INTO `armorsets` VALUES ('60', '9419', '9421', '9422', '9423', '9424', '3350', '9441', '3417', '0');
+INSERT INTO `armorsets` VALUES ('61', '9420', '9421', '9422', '9423', '9424', '3351', '9441', '3417', '0');
+INSERT INTO `armorsets` VALUES ('62', '9425', '9428', '9429', '9430', '9431', '3420', '0', '0', '0');
+INSERT INTO `armorsets` VALUES ('63', '9426', '9428', '9429', '9430', '9431', '3353', '0', '0', '0');
+INSERT INTO `armorsets` VALUES ('64', '9427', '9428', '9429', '9430', '9431', '3352', '0', '0', '0');
+INSERT INTO `armorsets` VALUES ('65', '10126', '9428', '9429', '9430', '9431', '3413', '0', '0', '0');
+INSERT INTO `armorsets` VALUES ('66', '10127', '9428', '9429', '9430', '9431', '3414', '0', '0', '0');
+INSERT INTO `armorsets` VALUES ('67', '10168', '9428', '9429', '9430', '9431', '3415', '0', '0', '0');
+INSERT INTO `armorsets` VALUES ('68', '10214', '9428', '9429', '9430', '9431', '3420', '0', '0', '0');

@@ -1,49 +1,30 @@
-<html><title>Choose skill to add</title><body>
-<center>
-<a action="bypass -h admin_add_skill 118 1">Magicians Movement 1 (Lv 1)</a>
-<a action="bypass -h admin_add_skill 146 1">Anti Magic 1 (Lv 7)</a>
-<a action="bypass -h admin_add_skill 146 2">Anti Magic 2 (Lv 7)</a>
-<a action="bypass -h admin_add_skill 146 3">Anti Magic 3 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 146 4">Anti Magic 4 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 163 1">Spellcraft 1 (Lv 1)</a>
-<a action="bypass -h admin_add_skill 194 1">Lucky 1 (Lv 1)</a>
-<a action="bypass -h admin_add_skill 214 1">Mana Recovery 1 (Lv 1)</a>
-<a action="bypass -h admin_add_skill 244 1">Armor Mastery 1 (Lv 7)</a>
-<a action="bypass -h admin_add_skill 244 2">Armor Mastery 2 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 244 3">Armor Mastery 3 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 249 1">Weapon Mastery 1 (Lv 7)</a>
-<a action="bypass -h admin_add_skill 249 2">Weapon Mastery 2 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 1011 1">Heal 1 (Lv 7)</a>
-<a action="bypass -h admin_add_skill 1011 2">Heal 2 (Lv 7)</a>
-<a action="bypass -h admin_add_skill 1011 3">Heal 3 (Lv 7)</a>
-<a action="bypass -h admin_add_skill 1011 4">Heal 4 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 1011 5">Heal 5 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 1011 6">Heal 6 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 1012 1">Cure Poison 1 (Lv 7)</a>
-<a action="bypass -h admin_add_skill 1015 1">Battle Heal 1 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 1015 2">Battle Heal 2 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 1015 3">Battle Heal 3 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 1027 1">Group Heal 1 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 1027 2">Group Heal 2 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 1027 3">Group Heal 3 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 1040 1">Shield 1 (Lv 7)</a>
-<a action="bypass -h admin_add_skill 1068 1">Might 1 (Lv 7)</a>
-<a action="bypass -h admin_add_skill 1147 1">Vampiric Touch 1 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 1147 2">Vampiric Touch 2 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 1164 1">Curse: Weakness 1 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 1168 1">Curse:Poison 1 (Lv 7)</a>
-<a action="bypass -h admin_add_skill 1177 1">Wind Strike 1 (Lv 1)</a>
-<a action="bypass -h admin_add_skill 1177 2">Wind Strike 2 (Lv 7)</a>
-<a action="bypass -h admin_add_skill 1177 3">Wind Strike 3 (Lv 7)</a>
-<a action="bypass -h admin_add_skill 1177 4">Wind Strike 4 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 1177 5">Wind Strike 5 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 1184 1">Ice Bolt 1 (Lv 7)</a>
-<a action="bypass -h admin_add_skill 1184 2">Ice Bolt 2 (Lv 7)</a>
-<a action="bypass -h admin_add_skill 1184 3">Ice Bolt 3 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 1184 4">Ice Bolt 4 (Lv 14)</a>
-<a action="bypass -h admin_add_skill 1216 1">Self Heal 1 (Lv 1)</a>
-</center>
-Add a custom skill :
-<center><table><tr><td>Id:<edit var="id" width=40></td><td>Level:<edit var="level" width=40></td><td>&nbsp;<button value="Add" action="bypass -h admin_add_skill $id $level" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr></table>
-<button value="Back" action="bypass -h admin_show_skills" width=40 height=15></center>
+<html><body><table width=260>
+<tr><td width=40>
+<button value="Main" action="bypass -h admin_admin" width=40 height=15 back="sek.cbui94" fore="sek.cbui92">
+</td><td width=180>
+<center>Human Mystic Skill Menu</center>
+</td><td width=40>
+<button value="Back" action="bypass -h admin_help skills/Human/human.htm" width=40 height=15 back="sek.cbui94" fore="sek.cbui92">
+</td></tr></table>
+<img src="sek.cbui355" width=260 height=2><br>
+<center><table width=260>
+<tr><td>Level:</td><td><edit var="level" width=110 height=15></td></tr>
+</table><br>
+<font color="b5ba6b"><table width=260>
+<tr><td>Anti Magic (max 4)</td><td><button value="Add" action="bypass -h admin_add_skill 146 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Armor Mastery (max 3)</td><td><button value="Add" action="bypass -h admin_add_skill 244 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Weapon Mastery (max 2)</td><td><button value="Add" action="bypass -h admin_add_skill 249 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Heal (max 6)</td><td><button value="Add" action="bypass -h admin_add_skill 1011 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Cure Poison (max 1)</td><td><button value="Add" action="bypass -h admin_add_skill 1012 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Battle Heal (max 3)</td><td><button value="Add" action="bypass -h admin_add_skill 1015 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Group Heal (max 3)</td><td><button value="Add" action="bypass -h admin_add_skill 1027 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Shield (max 1)</td><td><button value="Add" action="bypass -h admin_add_skill 1040 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Might (max 1)</td><td><button value="Add" action="bypass -h admin_add_skill 1068 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Vampiric Touch (max 2)</td><td><button value="Add" action="bypass -h admin_add_skill 1147 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Curse: Weakness (max 1)</td><td><button value="Add" action="bypass -h admin_add_skill 1164 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Curse: Poison (max 1)</td><td><button value="Add" action="bypass -h admin_add_skill 1168 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Wind Strike (max 5)</td><td><button value="Add" action="bypass -h admin_add_skill 1177 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Ice Bolt (max 4)</td><td><button value="Add" action="bypass -h admin_add_skill 1184 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+<tr><td>Self Heal (max 1)</td><td><button value="Add" action="bypass -h admin_add_skill 1216 $level" width=55 height=15 back="sek.cbui94" fore="sek.cbui92"></td></tr>
+</table></center></font>
 </body></html>

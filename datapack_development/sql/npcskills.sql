@@ -13,7 +13,7 @@ CREATE TABLE npcskills (
 -- Dumping data for table `npcskills`
 -- 
 
-INSERT INTO `npcskills` (`npcid`, `skillid`, `level`) VALUES 
+INSERT INTO `npcskills` VALUES 
 (12077,4121,1),
 (12077,4416,4),
 (12311,4121,1),

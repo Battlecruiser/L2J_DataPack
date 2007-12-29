@@ -26,15 +26,16 @@ echo "# No change will be performed in your DB    #"
 echo "# I will just ask you some questions about  #"
 echo "# your hosts and DB.                        #"
 echo "#############################################"
-MYSQLDUMPPATH=`which mysqldump 2>/dev/null`
-MYSQLPATH=`which mysql 2>/dev/null`
+MYSQLDUMPPATH=`which -a mysqldump 2>/dev/null`
+MYSQLPATH=`which -a mysql 2>/dev/null`
 if [ $? -ne 0 ]; then
 echo "We were unable to find MySQL binaries on your path"
 while :
  do
   echo -ne "\nPlease enter MySQL binaries directory (no trailing slash): "
   read MYSQLBINPATH
-    if [ -e "$MYSQLBINPATH" ] && [ -d "$MYSQLBINPATH" ] && [ -e "$MYSQLBINPATH/mysqldump" ] && [ -e "$MYSQLBINPATH/mysql" ]; then
+    if [ -e "$MYSQLBINPATH" ] && [ -d "$MYSQLBINPATH" ] && \
+       [ -e "$MYSQLBINPATH/mysqldump" ] && [ -e "$MYSQLBINPATH/mysql" ]; then
        MYSQLDUMPPATH="$MYSQLBINPATH/mysqldump"
        MYSQLPATH="$MYSQLBINPATH/mysql"
        break
@@ -160,15 +161,14 @@ echo "# information. Read questions carefully     #"
 echo "# before you reply.                         #"
 echo "#############################################"
 echo ""
-echo "Choose upgrade (u) if you already have an 'accounts' table but no"
-echo "'gameserver' table (ie. your server is a pre LS/GS split version.)"
+#echo "Choose upgrade (u) if you already have an 'accounts' table but no"
+#echo "'gameserver' table (ie. your server is a pre LS/GS split version.)"
 echo "Choose skip (s) to skip loginserver DB installation and go to"
 echo "gameserver DB installation/upgrade."
-echo -ne "LOGINSERVER DB install type: (f) full, (u) upgrade or (s) skip or (q) quit? "
+echo -ne "LOGINSERVER DB install type: (f) full, (s) skip or (q) quit? "
 read LOGINPROMPT
 case "$LOGINPROMPT" in
 	"f"|"F") logininstall; loginupgrade; gsbackup; asktype;;
-	"u"|"U") loginupgrade; gsbackup; asktype;;
 	"s"|"S") gsbackup; asktype;;
 	"q"|"Q") finish;;
 	*) asklogin;;
@@ -178,12 +178,6 @@ esac
 logininstall(){
 echo "Deleting loginserver tables for new content."
 $MYL < login_install.sql &> /dev/null
-}
-
-loginupgrade(){
-echo "Installling new loginserver content."
-$MYL < ../sql/accounts.sql &> /dev/null
-$MYL < ../sql/gameservers.sql &> /dev/null
 }
 
 gsbackup(){
@@ -268,6 +262,8 @@ $MYG < ../sql/boxes.sql &> /dev/null
 $MYG < ../sql/castle.sql &> /dev/null
 $MYG < ../sql/castle_door.sql &> /dev/null
 $MYG < ../sql/castle_doorupgrade.sql &> /dev/null
+$MYG < ../sql/castle_manor_procure.sql &> /dev/null
+$MYG < ../sql/castle_manor_production.sql &> /dev/null
 $MYG < ../sql/castle_siege_guards.sql &> /dev/null
 $MYG < ../sql/char_templates.sql &> /dev/null
 $MYG < ../sql/character_friends.sql &> /dev/null
@@ -340,8 +336,6 @@ $MYG < ../sql/walker_routes.sql &> /dev/null
 $MYG < ../sql/weapon.sql &> /dev/null
 $MYG < ../sql/zone.sql &> /dev/null
 $MYG < ../sql/zone_vertices.sql &> /dev/null
-$MYG < ../sql/castle_manor_procure.sql &> /dev/null
-$MYG < ../sql/castle_manor_production.sql &> /dev/null
 newbie_helper
 }
 
