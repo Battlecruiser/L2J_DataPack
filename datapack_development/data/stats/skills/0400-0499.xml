@@ -1313,4 +1313,677 @@
 <!-- how can I use num_charges when skillType is not CHARGEDAM ? -->
   </for>
 </skill>
+<skill id="462" levels="1" name="Guilted Body">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Body of Original Sin. Only able to equip light armor and effect of recovery magic reduces in half.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="463" levels="3" name="Weapon Mastery">
+<!--
+  Description(s):
+      Attack power increase.
+-->
+  <table name="#pAtk"> 2 3 4 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <for>
+    <mul order="0x30" stat="pAtk" val="1.085"/>
+    <add order="0x40" stat="pAtk" val="#pAtk"/>
+  </for>
+</skill>
+<skill id="464" levels="5" name="Armor Mastery">
+<!--
+  Description(s):
+      Increases P. Def. (lvl4 and lvl5 Increases P. Def. and Evasion.)
+-->
+  <table name="#pDef"> 9 11 12 13 14 </table>
+  <table name="#rEvas"> 0 0 0 3 3 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <for>
+    <add order="0x40" stat="pDef" val="#pDef"/>
+    <add order="0x40" stat="rEvas" val="#rEvas">
+      <and>
+        <using kind="Light"/>
+        <not>
+          <using kind="Heavy,Magic"/>
+        </not>
+      </and>
+    </add>
+  </for>
+</skill>
+<skill id="465" levels="50" name="Light Armor Mastery">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases P. Def. when wearing light armor.
+-->
+  <table name="#pDef"> 4.2 5.3 6.5 7.7 9 9.9 10.8 12.7 13.7 14.8 16.9 18 19.1 21.5 22.7 24 25.3 26.6 27.9 29.3 30.7 32.1 33.6 35 36.5 38.1 39.6 41.2 42.8 44.5 46.1 47.8 49.5 51.3 53.0 54.8 56.6 58.4 60.2 62.1 64.0 65.8 67.7 69.7 71.6 73.5 75.5 77.4 79.4 81.3 </table>
+  <table name="#rEvas"> 3 3 5 5 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <for>
+    <add order="0x40" stat="pDef" val="#pDef">
+      <and>
+        <using kind="Light"/>
+        <not>
+          <using kind="Heavy,Magic"/>
+        </not>
+      </and>
+    </add>
+  </for>
+</skill>
+<skill id="466" levels="55" name="Magic Immunity">
+<!--
+  Description(s):
+      Increases M. Def.
+-->
+  <table name="#Tab-mDef"> 19 20 22 23 24 26 27 28 30 31 32 35 36 37 40 42 43 44 46 47 49 51 52 54 56 57 59 61 63 64 66 68 70 72 74 76 78 80 82 84 86 88 91 93 95 97 99 102 104 106 108 110 112 115 117</table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <for>
+    <add order="0x40" stat="mDef" val="#Tab-mDef"/>
+  </for>
+</skill>
+<skill id="467" levels="23" name="Soul Mastery">
+<!--
+  Description(s):
+      Absorbs a soul. x or more Exp is needed to absorb a soul. Maximum of x souls can be absorbed.
+-->
+  <table name="#Max-Souls"> 5 7 9 10 12 14 16 18 20 21 22 23 24 25 26 27 28 29 30 31 32 33 35</table>
+  <table name="#Exp"> 73 147 220 294 385 486 614 777 960 1109 1269 1440 1622 1815 2018 2160 2306 2457 2613 2774 2940 3110 3285</table>
+  <table name="#Critic-Chance"> 0 0 0 15 15 15 15 15 20 20 20 20 20 20 25 25 25 25 25 25 30 30 30</table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="num_souls" val="#Max-Souls"/>
+  <set name="expNeeded" val="#Exp"/>
+  <set name="critChance" val="#Critic-Chance"/>
+  <for>
+  </for>
+</skill>
+<skill id="468" levels="9" name="Fallen Attack">
+<!--
+  Description(s):
+      Deal a powerful strike to the enemy. An equipped sword, rapier or blunt weapon is required to use this skill. Over-hit is possible. Power 20-56.
+-->
+  <table name="#mpConsume"> 10 10 11 13 13 14 17 18 19 </table>
+  <table name="#power"> 20.0 22.0 24.0 31.0 34.0 37.0 48.0 52.0 56.0 </table>
+  <table name="#magicLvl"> 3 4 5 8 9 10 13 14 15 </table>
+  <set name="weaponsAllowed" val="149516"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="overHit" val="true"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="reuseDelay" val="13000"/>
+  <set name="hitTime" val="1500"/>
+  <set name="coolTime" val="720" />
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <for>
+  </for>
+</skill>
+<skill id="469" levels="1" name="Rapid Attack">
+<!--
+  Description(s):
+      Temporarily increase Atk. Spd. Consumes 1 Soul.
+-->
+  <set name="mpConsume" val="14"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="hitTime" val="3200"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="soulConsumeCount" val="1"/>
+  <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.15" stackType="pAtkSpeedUp">
+      <mul order="0x30" stat="pAtkSpd" val="1.15"/>
+    </effect>
+  </for>
+</skill>
+<skill id="470" levels="7" name="Detect Trap">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Detect traps below Level 18-78. Consumes 1 Soul
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="471" levels="7" name="Defuse Trap">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Disarm traps below Level 18-78. Consumes 1 Soul.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="472" levels="45" name="Ancient Sword Mastery">
+<!--
+  Description(s):
+      Increases P. Atk. when using two-handed ancient sword weapons.
+-->
+  <table name="#pAtk"> 1.5 3.1 4.1 5.2 6.5 7.9 9.4 11.1 13.0 14.0 15.1 16.2 17.3 18.5 19.8 21.1 22.4 23.8 25.3 26.8 28.3 29.9 31.6 33.3 35.0 36.8 38.6 40.5 42.4 44.4 46.4 48.4 50.4 52.5 54.6 56.8 58.9 61.1 63.3 65.5 67.6 69.8 72.0 74.2 76.4 </table>
+  <set name="weaponsAllowed" val="32768"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <for>
+    <add order="0x40" stat="pAtk" val="#pAtk">
+      <and>       
+        <using kind="Ancient"/>
+      </and>
+    </add>
+  </for> 
+</skill>
+<skill id="473" levels="45" name="Crossbow Mastery">
+<!--
+  Description(s):
+      Increases P. Atk. when using a crossbow.
+-->
+  <table name="#pAtk"> 1.5 3.1 4.1 5.2 6.5 7.9 9.4 11.1 13.0 14.0 15.1 16.2 17.3 18.5 19.8 21.1 22.4 23.8 25.3 26.8 28.3 29.9 31.6 33.3 35.0 36.8 38.6 40.5 42.4 44.4 46.4 48.4 50.4 52.5 54.6 56.8 58.9 61.1 63.3 65.5 67.6 69.8 72.0 74.2 76.4 </table>
+  <set name="weaponsAllowed" val="65536"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <for>
+    <add order="0x40" stat="pAtk" val="#pAtk">
+      <and>       
+        <using kind="Crossbow"/>
+      </and>
+    </add>
+  </for> 
+</skill>
+<skill id="474" levels="45" name="Rapier Mastery">
+<!--
+  Description(s):
+      Increases P. Atk. when using rapiers.
+-->
+  <table name="#pAtk"> 1.5 3.1 4.1 5.2 6.5 7.9 9.4 11.1 13.0 14.0 15.1 16.2 17.3 18.5 19.8 21.1 22.4 23.8 25.3 26.8 28.3 29.9 31.6 33.3 35.0 36.8 38.6 40.5 42.4 44.4 46.4 48.4 50.4 52.5 54.6 56.8 58.9 61.1 63.3 65.5 67.6 69.8 72.0 74.2 76.4 </table>
+  <set name="weaponsAllowed" val="131072"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <for>
+    <add order="0x40" stat="pAtk" val="#pAtk">
+      <and>       
+        <using kind="Rapier"/>
+      </and>
+    </add>
+  </for> 
+</skill>
+<skill id="475" levels="1" name="Strike Back">
+<!--
+  Description(s):
+      Reflects damage caused by a melee attack skill back to your enemy. Consumes MP while active. Consumes 1 Soul.
+-->
+  <set name="mpConsume" val="15"/>
+  <set name="power" val="40"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_TOGGLE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="soulConsumeCount" val="1"/>
+  <for>
+     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="18">
+        <add order="0x40" stat="reflectSkillPhysic" val="40"/>
+     </effect>
+  </for>
+</skill>
+<skill id="476" levels="15" name="Dark Strike">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Summon soul power for a lethal strike. Consumes 1 Soul. A sword, blunt, or ancient sword weapon must be equipped to use this skill. Over-hit is possible. Power 90-326.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="477" levels="37" name="Dark Smash">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Summon power for a lethal strike. Consumes 1 Soul. An ancient sword weapon has to be equipped to use this skill. Over-hit is possible. Power 615-3044.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="478" levels="15" name="Double Thrust">
+<!--
+  Description(s):
+      Makes two quick stabs. Consumes 1 Soul. An equipped rapier is required to use this skill. Power 90-326.
+-->
+  <table name="#mpConsume"> 17 18 18 20 20 21 22 23 24 25 25 26 28 29 30</table>
+  <table name="#power"> 90 97 105 123 132 143 165 177 191 219 235 251 287 306 326</table>
+  <table name="#magicLvl"> 20 21 22 24 25 26 28 29 30 32 33 34 36 37 38 </table>
+  <set name="weaponsAllowed" val="131072"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="reuseDelay" val="13000"/>
+  <set name="hitTime" val="1500"/>
+  <set name="coolTime" val="720" />
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="soulConsumeCount" val="1"/>
+  <for>
+  </for>
+</skill>
+<skill id="479" levels="1" name="Hard March">
+<!--
+  Description(s):
+      Increases own speed. Consumes 1 Soul. MP continually decreases.
+-->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_TOGGLE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="soulConsumeCount" val="1"/>
+  <for>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="2">
+      <add order="0x40" stat="runSpd" val="20"/>
+    </effect>
+  </for>
+</skill>
+<skill id="480" levels="1" name="Dark Blade">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Grants the ability to do dark damage. Consumes 1 Soul.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="481" levels="2" name="Dark Armor">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Increases resistance to dark attacks. Consumes 1 Soul.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="482" levels="2" name="Furious Soul">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Communicates with absorbed soul to increase critical rate and critical damage. Evasion/Defense power is decreased while the effect lasts. Consumes 2 soul.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="483" levels="2" name="Sword Shield">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Greatly increases own P. Def instantly. Greatly decreases own speed while duration of effect lasts. Consumes 2 soul.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="484" levels="1" name="Rush">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Charge an enemy.  An ancient sword or short sword must be equipped to use this skill. Consumes 1 Soul.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="485" levels="7" name="Disarm">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+     Disarms a target. Weapons cannot be re-equipped while the effect lasts. Consumes 1 Soul.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="486" levels="2" name="Increase Range">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+     Increases crossbow range.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="487" levels="15" name="Penetrate Shot">
+<!--
+  Description(s):
+     Releases a powerful bolt at a distant enemy. Consumes 1 Soul. Over-hit is possible. An equipped crossbow is required to use this skill. Power 179-651.
+-->
+  <table name="#mpConsume"> 76 78 79 83 86 90 97 101 105 112 112 116 125 129 134</table>
+  <table name="#power"> 179 194 210 245 264 285 330 354 381 438 469 502 573 611 651</table>
+  <table name="#magicLvl"> 20 21 22 24 25 26 28 29 30 32 33 34 36 37 38 </table>
+  <set name="weaponsAllowed" val="65536"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="overHit" val="true"/>
+  <set name="reuseDelay" val="15000"/>
+  <set name="hitTime" val="3200"/>
+  <set name="coolTime" val="720" />
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="500"/>
+  <set name="effectRange" val="900"/>
+  <set name="soulConsumeCount" val="1"/>
+  <for>
+  </for>
+</skill>
+<skill id="489" levels="1" name="Shift Target">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+     Transfers the Aggression of nearby enemies to a selected party member. Consumes 3 soul. An equipped crossbow is required to use this skill. Can be used on party members only.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="490" levels="2" name="Fast Shot">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+     Temporarily increases your crossbow attack speed. Consumes 1 Soul. Effect 1-2.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="491" levels="1" name="Not In Use">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+     none
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="492" levels="25" name="Spread Wing">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+     Use your wing to attack hostile enemies behind you. Consumes 1 Soul. Over-hit is possible. Power 722-1827.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="493" levels="28" name="Storm Assault">
+<!--
+  Description(s):
+     Charges like a storm to attack nearby enemies. Consumes 3 soul.  An equipped ancient sword weapon is required to use this skill. Power 618-1827.
+-->
+  <table name="#mpConsume"> 51 52 54 55 55 56 58 59 61 62 63 65 66 68 68 69 70 72 73 74 75 77 78 79 80 81 82 83</table>
+  <table name="#power"> 618 651 686 722 758 796 835 875 916 959 1002 1046 1091 1136 1183 1230 1278 1327 1376 1425 1475 1525 1576 1626 1677 1727 1777 1827</table>
+  <table name="#magicLvl"> 46 47 48 49 50 51 52 53 54 55 56 57 58 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75</table>
+  <table name="#castRange">400 400 400 400 400 400 400 400 400 400 400 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500</table>
+  <set name="weaponsAllowed" val="32768"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="reuseDelay" val="13000"/>
+  <set name="hitTime" val="800"/>
+  <set name="coolTime" val="320" />
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="#castRange"/>
+  <set name="effectRange" val="900"/>
+  <set name="soulConsumeCount" val="3"/>
+  <for>
+  </for>
+</skill>
+<skill id="494" levels="37" name="Shoulder Charge">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+     Attack with a powerful charge, ramming an enemy with your shoulder. Instantly puts the enemy into shock. Consumes 1 Soul. An equipped ancient sword weapon is required to use this skill.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="495" levels="10" name="Blade Rush">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+     Charges forward with sword brandished. Causes all enemies in your path to bleed. Consumes 1 Soul.  An equipped ancient sword weapon is required to use this skill. Effect 6-8.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="496" levels="31" name="Slashing Blade">
+<!--
+  Description(s):
+     Swing sword to attack nearby enemies. Consumes 2 soul.  An equipped ancient sword weapon is required to use this skill. Over-hit is possible. Power 656-2283.
+-->
+  <table name="#mpConsume"> 47 48 49 51 52 54 55 55 56 58 59 61 62 63 65 66 68 68 69 70 72 73 74 75 77 78 79 80 81 82 83</table>
+  <table name="#power"> 656 693 732 773 814 857 902 948 995 1044 1094 1145 1198 1252 1307 1363 1420 1479 1538 1598 1658 1720 1782 1844 1907 1970 2033 2096 2158 2221 2283</table>
+  <table name="#magicLvl">46 47 48 49 50 51 52 53 54 55 56 57 58 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75</table>
+  <set name="weaponsAllowed" val="32768"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="overHit" val="true"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="reuseDelay" val="13000"/>
+  <set name="hitTime" val="1500"/>
+  <set name="coolTime" val="720" />
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="soulConsumeCount" val="2"/>
+  <for>
+  </for>
+</skill>
+<skill id="497" levels="16" name="Crushing Pain">
+<!--
+  Description(s):
+     Deals a powerful attack to the enemy. Consumes 1 Soul. An equipped ancient sword weapon is required to use this skill. Shield defense is ignored. Over-hit is possible. Power 4558-7635.
+-->
+  <table name="#mpConsume"> 66 68 68 69 70 72 73 74 75 77 78 79 80 81 82 83</table>
+  <table name="#power"> 4558 4750 4944 5142 5342 5545 5751 5958 6166 6376 6586 6797 7008 7218 7427 7635</table>
+  <table name="#magicLvl"> 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75</table>
+  <set name="weaponsAllowed" val="32768"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="overHit" val="true"/>
+  <set name="ignoreShld" val="true"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="hitTime" val="2200"/>
+  <set name="coolTime" val="720" />
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="soulConsumeCount" val="1"/>
+  <for>
+  </for>
+</skill>
+<skill id="498" levels="12" name="Contagion">
+<!--
+  Description(s):
+     Exacerbates a bleeding wound with additional attacks. Consumes 1 Soul. An equipped ancient sword weapon is required to use this skill. Shield defense is ignored. Over-hit is possible. Power 5342-7635.
+-->
+  <table name="#power"> 5342 5545 5751 5958 6166 6376 6586 6797 7008 7218 7427 7635 </table>  
+  <table name="#magicLvl"> 63 64 65 66 67 68 69 70 71 72 73 74 </table>
+  <table name="#mpConsume"> 70 72 73 74 75 77 78 79 80 81 82 83 </table>
+  <set name="weaponsAllowed" val="32768"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="save" val="4"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="power" val="#power"/>
+  <set name="ignoreShld" val="true"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="overHit" val="true"/>
+  <set name="reuseDelay" val="16000"/>
+  <set name="hitTime" val="2000"/>
+  <set name="coolTime" val="380"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="soulConsumeCount" val="1"/>
+  <for>
+    <effect count="7" name="DamOverTime" time="3" val="74" abnormal="bleeding"/>
+  </for>
+</skill>
+<skill id="499" levels="3" name="Courage">
+<!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+     Greatly increases resistance to mental attacks. Consumes 2 soul. Effect 1-3.
+-->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
 </list>
