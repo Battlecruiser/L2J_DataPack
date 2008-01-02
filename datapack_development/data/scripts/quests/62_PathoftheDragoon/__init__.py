@@ -4,7 +4,7 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-qn = "62_PathoftheDragoon"
+qn = "62_PathoftheTrooper"
 
 #NPCs
 Shubain = 32194
@@ -113,7 +113,7 @@ class Quest (JQuest) :
                 st.playSound("ItemSound.quest_middle")
         return
 
-QUEST       = Quest(62,qn,"Path of the Dragoon")
+QUEST       = Quest(62,qn,"Path of the Trooper")
 CREATED     = State('Start', QUEST)
 STARTED     = State('Started', QUEST)
 COMPLETED   = State('Completed', QUEST)

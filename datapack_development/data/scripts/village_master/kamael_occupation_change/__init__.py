@@ -30,9 +30,9 @@ preffix="32139"
 #ok_ni: level ok, but you don't have quest item
 #ok_i: level ok, you got quest item, class change takes place
 CLASSES = {
-    "DR":[125,123,5,20,"16","17","18","19",[GWAINS_RECOMMENTADION]],#m_kamael -> m_dragoon
+    "DR":[125,123,5,20,"16","17","18","19",[GWAINS_RECOMMENTADION]],#m_kamael -> m_trooper
     "WA":[126,124,5,20,"20","21","22","23",[STEELRAZOR_EVALUATION]], #f_kamael -> f_warder
-    "BE":[127,125,5,40,"24","25","26","27",[ORKURUS_RECOMMENDATION]], #m_dragoon -> m_berserker
+    "BE":[127,125,5,40,"24","25","26","27",[ORKURUS_RECOMMENDATION]], #m_trooper -> m_berserker
     "AR":[130,126,5,40,"28","29","30","31",[KAMAEL_INQUISITOR_MARK]], #f_warder -> f_arbalester
     }
 #Messages
@@ -102,7 +102,7 @@ class Quest (JQuest) :
          return htmltext+"-01.htm"
        elif id == 124 :    # f_fighter
          return htmltext+"-05.htm"
-       elif id == 125 :    # m_dragoon
+       elif id == 125 :    # m_trooper
          return htmltext+"-09.htm"
        elif id == 126 :    # f_warder
          return htmltext+"-13.htm"

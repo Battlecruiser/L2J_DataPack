@@ -75,7 +75,7 @@ class Quest (JQuest) :
             htmltext = "<html><body>This quest has already been completed.</body></html>"
         elif npcId == Orkurus :
             if player.getClassId().getId() != 125 or player.getLevel() < 39:
-                htmltext = "<html><body>Only Dragoons are allowed to take this quest! Go away before I get angry!<br>You must be level 39 or higher to undertake this quest.</body></html>"
+                htmltext = "<html><body>Only Troopers are allowed to take this quest! Go away before I get angry!<br>You must be level 39 or higher to undertake this quest.</body></html>"
                 st.exitQuest(1)
             elif id == CREATED :
                 htmltext = "32207-01.htm"

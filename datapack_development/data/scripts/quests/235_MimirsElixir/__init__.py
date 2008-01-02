@@ -4,6 +4,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.model.base import Race
 #Quest info
 qn = "235_MimirsElixir"
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 235,"MimirsElixir","Mimir's Elixir"
@@ -23,8 +24,6 @@ MIMIRS_ELIXIR = 6319
 
 SCROLL_ENCHANT_WEAPON_A = 729
 
-#Messages
-default   = "<html><body>I have nothing to say to you.</body></html>"
 #NPCs
 LADD,JOAN=30721,30718
 #Mobs, cond, Drop
@@ -58,7 +57,10 @@ class Quest (JQuest) :
     if npcId == LADD :
         if id == CREATED :
             st.set("cond","0")
-            if player.getLevel() < MINLEVEL :
+            if player.getRace() == Race.Kamael :
+                st.exitQuest(1)
+                htmltext = "<html><body>I'm sorry, but I am not allowed to offer this quest to Kamael. Talk to Hierarch Kekropus.</body></html>"
+            elif player.getLevel() < MINLEVEL :
                 st.exitQuest(1)
                 htmltext = "30166-01.htm"     #not qualified
             elif not st.getQuestItemsCount(STAR_OF_DESTINY) :
