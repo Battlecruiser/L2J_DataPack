@@ -505,7 +505,7 @@ class Quest (JQuest) :
               if npcId == self.NPC[0] :
                   if player.getLevel() >= 76 :
                       htmltext = "0-09.htm"
-                      if self.getClassId(player) != 131 : #in that quest, npc wants to chat for a bit before changing class
+                      if not self.getClassId(player) in range(131,135) : #in Kamael quests, npc wants to chat for a bit before changing class
                           st.setState(self.COMPLETED)
                           st.set("cond","0")
                           st.addExpAndSp(2299404,0)
