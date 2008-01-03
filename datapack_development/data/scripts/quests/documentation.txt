@@ -22,28 +22,55 @@ AVAILABLE FUNCTIONS:
 There exist a set of functions that are predefined for quests and are triggered from various actions.
 These functions, their triggers, and the parameters passed into the script are defined below:
 
-1) onEvent(self, event, st)
-	This function is called whenever a player clicks on a link in a quest dialog.  
-	The	parameter "st" contains a reference to the QuestState of the player who used the link.
+1) onAdvEvent(self, event, npc, player)
+	This function is called whenever a player clicks on a link in a quest dialog and whenever 
+		a timer fires.  Also, should other functions (see below - onTalk, onKill, etc) are not 
+		implemented, this function will be called in their place.   
+	The	parameter "npc" contains a reference to the instance of NPC associated with this event.  
+		This may be the NPC registered in a timer, or the NPC with whom a player is speaking, etc.
+		This parameter may be NULL in certain circumstances.
+	The parameter "player" contains a reference to the player participating in this function.  It
+		may be the player speaking to the NPC, or the player who caused a timer to start (and owns 
+		that timer).
+		This parameter may be NULL in certain circumstances.
 	The parameter "event" contains a string identifier for the event.  Generally, this string
 		is passed directly via the link.  For example:
 		<a action="bypass -h Quest 626_ADarkTwilight 31517-1.htm">hello</a>
 		The above link sets the event variable to "31517-1.htm" for the quest 626_ADarkTwilight
+		In the case of timers, this will be the name of the timer.  This parameter serves as a 
+		sort of identifier.
 	The parameter "self" is a reference to the quest itself.  You may use self.XXXX where XXXX is
 		any function defined in the parent class of your quest.
-2) onAttack(self, npc, player)
+2) onEvent(self, event, st)
+	This function is called in place of onAdvEvent if the former is not implemented.  If a script
+		contains BOTH onAdvEvent AND onEvent, then onEvent will never be called unless the script's
+		onAdvEvent explicitely calls onEvent within.  
+	The	parameter "st" contains a reference to the QuestState of the player who used the link or 
+		started the timer.
+	The parameters "event" and "self" are same as in onAdvEvent.
+3) onAttack(self, npc, player, damage, isPet)
 	This function is called whenever a player attacks an NPC that is registered for the quest
 	The parameter "npc" contains a reference to the exact instance of the NPC that got attacked
 	The parameter "player" contains a reference to the exact instance of the player who attacked.
+	The parameter "damage" is a number, representing the total damage that this attack has inflicted to the NPC.
+	The parameter "isPet" is a boolean.  When false it denotes that the attacker was indeed the player.  
+		If true it specifies that the damage was actually dealt by the player's pet.
 	The parameter "self" works the same as in onEvent.
-3) onKill(self, npc, player)
+4) onKill(self, npc, player, isPet)
 	This function is called whenever a player kills an NPC that is registered for the quest
-	All parameters are the same as in onAttack
-4) onTalk(self,npc, player)
+	All parameters are the same as in onAttack, lacking the damage parameter, of course.
+5) onSkillUse(self, npc, player, skill)
+	This function is called whenever a player casts a skill that contains a registered NPC among its targets.
+	The "npc" and "player" parameters are same as with onAttack.
+	The "skill" parameter is a referece to the actual skill that was used (from which info about the id and level
+		of the skill can be obtained).
+	NOTE: if a skill does damage, BOTH onSkillUse AND onAttack will be triggered!  However, only onSkillUse will
+		be triggered if the skill does no damage.
+6) onTalk(self,npc, player)
 	This function is called whenever a player clicks to the "Quest" link of an NPC that is registered 
 	for the quest.
 	All parameters are the same as in onAttack
-5) onFirstTalk(self,npc, player)
+7) onFirstTalk(self,npc, player)
 	This function is called whenever a player talks to an NPC that is registered for the quest.  That is, 
 	it is triggered from the very first click on the NPC, not via another dialog.
 	NOTE: Each NPC can be registered to at most one quest for triggering this function.  In other words, 
@@ -54,7 +81,7 @@ These functions, their triggers, and the parameters passed into the script are d
 		function.  The coder of the script may need to create a new quest state (if necessary), by using:
 		st = self.newQuestState(player)	
 	All parameters are the same as in onAttack.
-6) onDeath (self, npc, character, st) 
+8) onDeath (self, npc, character, st) 
 	This function is called whenever an exact INSTANCE of a character who was previously registered for this 
 	event dies.  The registration for onDeath events is NOT done via the quest itself, but it is instead handled
 	by the QuestState of a particular player.
@@ -62,7 +89,7 @@ These functions, their triggers, and the parameters passed into the script are d
 	The parameter "character" contains a reference to the exact instance of the character that got killed.
 	The parameter "st" contains a reference to the QuestState of whomever was interested (waiting) for this kill
 	The parameter "self" works the same as in onEvent.
-7) REGISTRATION FUNCTIONS:
+9) REGISTRATION FUNCTIONS:
 	The functions described below have a single purpose: To register an NPC for event triggers.  Simply put,
 	an NPC must be registered in a quest for a particular event in order for the NPC to respond to the occurence
 	of thatevent.  
@@ -98,6 +125,12 @@ For example:
 It is often useful to define the quest name in a variable at the top of the script (typically called "qn").  
 In that case, you may register your quest using:
 	QUEST       = Quest(626,qn,"A Dark Twilight")
+In addition, you can register quest items with this quest.  All registered items will be DELETED from the
+player's inventory, as soon as the quest is aborted or completed.  Many quests reward items that are not
+meant to be deleted upon quest completion, even if the items appear in the quest inventory (example: star of destiny).
+Such items should NOT be registered as questItems.  To register items with a quest, simply use:
+	QUEST.registerItem(itemId)
+	for example:  QUEST.registerItem(1234) 
 
 QuestState:
 A QuestState is not part of the quest definition itself, but it contains the information that tracks the 
@@ -140,4 +173,5 @@ The COMPLETED state is mandatory for non-repeatable quests.  It is defined as:
 	COMPLETED     = State('Completed', QUEST)
 Other states can be created arbitarily.  Commonly used states are "Starting","Started","Progress" or 
 states like "PartXXXX" (Part1, Part2, etc)
+NOTE: We are currently working on deprecating STATES or at least changing the way they work, as they are rather useless...
 
