@@ -1315,16 +1315,17 @@
 </skill>
 <skill id="462" levels="1" name="Guilted Body">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Body of Original Sin. Only able to equip light armor and effect of recovery magic reduces in half.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="0.0"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+      <div order="0x60" stat="gainHp" val="2"> 
   </for>
 </skill>
 <skill id="463" levels="3" name="Weapon Mastery">
