@@ -1,4 +1,4 @@
-Most of the scripts found within the jscript folder are initialized on server start, but 
+Most of the scripts found within the "scripts" folder are initialized on server start, but 
 do not run anything except when triggered by a player.  For scripts that need to be ran
 automatically, without any player interaction, cron can be used.  
 Using the format demonstrated in the example.py script, one can setup tasks that run 
