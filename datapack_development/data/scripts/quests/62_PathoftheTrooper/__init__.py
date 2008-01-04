@@ -108,7 +108,7 @@ class Quest (JQuest) :
                 else:
                     st.playSound("ItemSound.quest_itemget")
         elif npcId == Tumran :
-            if not st.getQuestItemsCount(Heart) and st.getRandom(10) < 3 and cond == 4 :
+            if not st.getQuestItemsCount(Heart) and st.getRandom(10) < 3 and cond == 5 :
                 st.giveItems(Heart,1)
                 st.playSound("ItemSound.quest_middle")
         return
