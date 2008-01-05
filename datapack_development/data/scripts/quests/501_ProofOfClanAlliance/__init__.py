@@ -264,7 +264,7 @@ class Quest (JQuest) :
        if DEBUG: htmltext= "DEBUG: Statue said NO CLAN."
      else :
        if player.isClanLeader() == 1 :
-         if st.getState() State.STARTED:
+         if st.getState() == State.STARTED:
            htmltext =  "30757-03.htm"
          else :
            st.exitQuest(1)
