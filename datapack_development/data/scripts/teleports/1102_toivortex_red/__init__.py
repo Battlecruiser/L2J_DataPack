@@ -27,9 +27,6 @@ class Quest (JQuest) :
        return "1.htm"
 
 QUEST       = Quest(1102,qn,"Teleports")
-State.CREATED     = State('Start',QUEST)
-
-
 
 for i in [DIMENSION_VORTEX_1,DIMENSION_VORTEX_2] :
    QUEST.addStartNpc(i)

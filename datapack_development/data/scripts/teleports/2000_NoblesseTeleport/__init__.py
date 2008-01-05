@@ -22,9 +22,6 @@ class Quest (JQuest) :
     return htmltext
 
 QUEST       = Quest(2000,qn,"Teleports")
-State.CREATED     = State('Start', QUEST)
-
-
 
 for item in NPC:
    QUEST.addStartNpc(item)
