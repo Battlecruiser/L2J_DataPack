@@ -175,8 +175,8 @@ def giveItem(item,maxcount,st):
       st.playSound("ItemSound.quest_itemget")
   return
 
-def exit503(State.COMPLETED,st):
-    if State.COMPLETED:
+def exit503(completed,st):
+    if completed:
       st.giveItems(Proof_Aspiration,1)
       st.addExpAndSp(0,250000)
       for var in STATS:
