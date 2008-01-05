@@ -124,7 +124,7 @@ class Quest (JQuest) :
          if player.getLevel() < 51 :
             st.exitQuest(1)
             htmltext = error_1
-      elif id = State.STARTED :
+      elif id == State.STARTED :
          if st.getQuestItemsCount(ANC_SCROLL) == 0 :
             htmltext = checkout
          else :
