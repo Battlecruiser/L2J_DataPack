@@ -26,14 +26,16 @@ VARNISH = 1865
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [HONEY_POUCH, AVELLAN_SPICE, FRUIT_BASKET]
 
  def onEvent (self,event,st) :
    htmltext = event
    cond = st.getInt("cond")
    if event == "30620-1.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "30620-3.htm" and st.getQuestItemsCount(HONEY_POUCH)==100:
      st.takeItems(HONEY_POUCH,100)
@@ -63,7 +65,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30620 and id != STARTED : return htmltext
+   if npcId != 30620 and id != State.STARTED : return htmltext
 
    cond = st.getInt("cond")
    if npcId == EMILY and cond == 0 :
@@ -87,7 +89,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    count = st.getQuestItemsCount(HONEY_POUCH)
@@ -101,10 +103,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(299,qn,"Gather Ingredients For A Pie")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30620)
 QUEST.addTalkId(30620)
 
@@ -113,7 +112,3 @@ QUEST.addTalkId(30466)
 
 QUEST.addKillId(WASP_LEADER)
 QUEST.addKillId(WASP_WORKER)
-
-STARTED.addQuestDrop(WASP_WORKER,HONEY_POUCH,1)
-STARTED.addQuestDrop(EMILY,AVELLAN_SPICE,1)
-STARTED.addQuestDrop(EMILY,FRUIT_BASKET,1)

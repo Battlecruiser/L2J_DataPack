@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # Updated by ElgarL
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://forum.l2jdp.com for more details
@@ -20,7 +20,9 @@ RUSTED_BRONZE_SWORD3 = 1142
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [SIMPLONS_LETTER, RUSTED_BRONZE_SWORD2, EINS_LETTER, WARRIOR_GUILD_MARK, RUSTED_BRONZE_SWORD1, RUSTED_BRONZE_SWORD1, POISON_SPIDER_LEG2, RUSTED_BRONZE_SWORD3]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -52,7 +54,7 @@ class Quest (JQuest) :
       st.set("id","0")
       if st.getQuestItemsCount(EINS_LETTER) == 0 :
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(EINS_LETTER,1)
         htmltext = "30010-06.htm"
@@ -71,13 +73,8 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30010 and id != STARTED : return htmltext
+   if npcId != 30010 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30010 and st.getInt("cond")==0 :
       htmltext = "30010-01.htm"
    elif npcId == 30010 and st.getInt("cond") and st.getQuestItemsCount(EINS_LETTER)>0 :
@@ -111,14 +108,14 @@ class Quest (JQuest) :
           st.giveItems(MEDALLION_OF_WARRIOR,1)
           htmltext = "30010-13.htm"
           st.set("cond","0")
-          st.setState(COMPLETED)
+          st.setState(State.COMPLETED)
           st.playSound("ItemSound.quest_finish")
    return htmltext
 
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId in [20035,20042] :
@@ -144,13 +141,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(401,qn,"Path To Warrior")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30010)
 
 QUEST.addTalkId(30010)
@@ -161,13 +152,3 @@ QUEST.addKillId(20035)
 QUEST.addKillId(20038)
 QUEST.addKillId(20042)
 QUEST.addKillId(20043)
-
-STARTED.addQuestDrop(30253,SIMPLONS_LETTER,1)
-STARTED.addQuestDrop(30253,RUSTED_BRONZE_SWORD2,1)
-STARTED.addQuestDrop(30010,EINS_LETTER,1)
-STARTED.addQuestDrop(30253,WARRIOR_GUILD_MARK,1)
-STARTED.addQuestDrop(20035,RUSTED_BRONZE_SWORD1,1)
-STARTED.addQuestDrop(20042,RUSTED_BRONZE_SWORD1,1)
-STARTED.addQuestDrop(20043,POISON_SPIDER_LEG2,1)
-STARTED.addQuestDrop(20038,POISON_SPIDER_LEG2,1)
-STARTED.addQuestDrop(30010,RUSTED_BRONZE_SWORD3,1)

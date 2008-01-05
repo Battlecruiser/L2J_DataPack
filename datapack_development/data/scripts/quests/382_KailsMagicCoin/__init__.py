@@ -20,14 +20,16 @@ MAX = 100
 
 class Quest (JQuest) :
 
-  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+  def __init__(self,id,name,descr):
+    JQuest.__init__(self,id,name,descr)
+    self.questItemIds = range(5961,5964)
 
   def onEvent (self,event,st) :
       htmltext = event
       if event == "30687-03.htm":
          if st.getPlayer().getLevel() >= 55 and st.getQuestItemsCount(ROYAL_MEMBERSHIP) :
             st.set("cond","1")
-            st.setState(STARTED)
+            st.setState(State.STARTED)
             st.playSound("ItemSound.quest_accept")
          else :
             htmltext = "30687-01.htm"
@@ -54,7 +56,7 @@ class Quest (JQuest) :
   def onKill(self,npc,player,isPet):
       st = player.getQuestState(qn)
       if not st : return 
-      if st.getState() != STARTED : return 
+      if st.getState() != State.STARTED : return 
       numItems,chance = divmod(CHANCE*Config.RATE_DROP_QUEST,MAX)
       if st.getQuestItemsCount(ROYAL_MEMBERSHIP) :
          if st.getRandom(MAX) < chance :
@@ -66,16 +68,10 @@ class Quest (JQuest) :
       return
 
 QUEST       = Quest(382, qn, "Kail's Magic Coin")
-CREATED     = State('Start',     QUEST)
-STARTED     = State('Started',   QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(VERGARA)
 
 QUEST.addTalkId(VERGARA)
 
 for npc in MOBS.keys():
     QUEST.addKillId(npc)
-
-for coin in range(5961,5964):
-    STARTED.addQuestDrop(coin,VERGARA,1)

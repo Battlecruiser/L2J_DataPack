@@ -19,13 +19,15 @@ VACUALITE_ORE,VACUALITE,FLOATING_STONE = range(7265,7268)
 CHANCE_FOR_QUEST_ITEMS = 50
 
 class Quest (JQuest) :
-   def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+   def __init__(self,id,name,descr):
+      JQuest.__init__(self,id,name,descr)
+      self.questItemIds = range(7265,7267)
 
    def onEvent (self,event,st) :
       htmltext = event
       cond = st.getInt("cond")
       if event == "31540-03.htm" and cond == 0 :
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.set("cond","1")
          st.playSound("ItemSound.quest_accept")
       elif event == "31540-05.htm" :
@@ -100,16 +102,10 @@ class Quest (JQuest) :
       return
 
 QUEST       = Quest(618,qn,"Into the Flame")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(KLEIN)
 QUEST.addTalkId(KLEIN)
 QUEST.addTalkId(HILDA)
 
 for mob in range(21274,21278)+range(21282,21286)+range(21290,21294) :
     QUEST.addKillId(mob)
-
-for item in range(7265,7267) :
-    STARTED.addQuestDrop(KLEIN,item,1)

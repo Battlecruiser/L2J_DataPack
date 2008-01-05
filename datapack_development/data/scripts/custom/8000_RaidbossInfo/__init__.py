@@ -249,9 +249,8 @@ class Quest (JQuest) :
    return "info.htm"
 
 QUEST       = Quest(8000,qn,"custom")
-CREATED     = State('Start',   QUEST)
 
-QUEST.setInitialState(CREATED)
+
 for i in NPC:
     QUEST.addStartNpc(i)
     QUEST.addTalkId(i)

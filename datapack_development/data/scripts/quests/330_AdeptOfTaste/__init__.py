@@ -75,13 +75,15 @@ def ingredients_count(st) :
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(1420,1452)
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         htmltext = "30469-03.htm"
         st.giveItems(INGREDIENT_LIST_ID,1)
@@ -112,9 +114,9 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30469 and id != STARTED : return htmltext
+   if npcId != 30469 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if npcId == 30469 and st.getInt("cond")==0 :
       if player.getLevel() >= 24 :
@@ -296,7 +298,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId == 20265 :
@@ -477,12 +479,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(330,qn,"Adept Of Taste")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30469)
 
 QUEST.addTalkId(30469)
@@ -505,36 +502,3 @@ QUEST.addKillId(20228)
 QUEST.addKillId(20229)
 QUEST.addKillId(20265)
 QUEST.addKillId(20266)
-
-STARTED.addQuestDrop(30469,INGREDIENT_LIST_ID,1)
-STARTED.addQuestDrop(30062,RED_MANDRAGORA_SAP_ID,1)
-STARTED.addQuestDrop(30062,WHITE_MANDRAGORA_SAP_ID,1)
-STARTED.addQuestDrop(30073,HONEY_ID,1)
-STARTED.addQuestDrop(30073,GOLDEN_HONEY_ID,1)
-STARTED.addQuestDrop(30078,DIONIAN_POTATO_ID,1)
-STARTED.addQuestDrop(30067,GREEN_MOSS_BUNDLE_ID,1)
-STARTED.addQuestDrop(30067,BROWN_MOSS_BUNDLE_ID,1)
-STARTED.addQuestDrop(30069,MONSTER_EYE_MEAT_ID,1)
-STARTED.addQuestDrop(30461,MIRIENS_REVIEW1_ID,1)
-STARTED.addQuestDrop(30461,MIRIENS_REVIEW2_ID,1)
-STARTED.addQuestDrop(30461,MIRIENS_REVIEW3_ID,1)
-STARTED.addQuestDrop(30461,MIRIENS_REVIEW4_ID,1)
-STARTED.addQuestDrop(30461,MIRIENS_REVIEW5_ID,1)
-STARTED.addQuestDrop(30469,JONAS_STEAK_DISH1_ID,1)
-STARTED.addQuestDrop(30469,JONAS_STEAK_DISH2_ID,1)
-STARTED.addQuestDrop(30469,JONAS_STEAK_DISH3_ID,1)
-STARTED.addQuestDrop(30469,JONAS_STEAK_DISH4_ID,1)
-STARTED.addQuestDrop(30469,JONAS_STEAK_DISH5_ID,1)
-STARTED.addQuestDrop(30062,SONIAS_BOTANYBOOK_ID,1)
-STARTED.addQuestDrop(20223,RED_MANDRAGORA_ROOT_ID,1)
-STARTED.addQuestDrop(20223,WHITE_MANDRAGORA_ROOT_ID,1)
-STARTED.addQuestDrop(30073,JAYCUBS_INSECTBOOK_ID,1)
-STARTED.addQuestDrop(20204,NECTAR_ID,1)
-STARTED.addQuestDrop(20204,ROYAL_JELLY_ID,1)
-STARTED.addQuestDrop(30078,PANOS_CONTRACT_ID,1)
-STARTED.addQuestDrop(20147,HOBGOBLIN_AMULET_ID,1)
-STARTED.addQuestDrop(30067,GLYVKAS_BOTANYBOOK_ID,1)
-STARTED.addQuestDrop(20226,GREEN_MARSH_MOSS_ID,1)
-STARTED.addQuestDrop(20226,BROWN_MARSH_MOSS_ID,1)
-STARTED.addQuestDrop(30069,ROLANTS_CREATUREBOOK_ID,1)
-STARTED.addQuestDrop(20265,MONSTER_EYE_BODY_ID,1)

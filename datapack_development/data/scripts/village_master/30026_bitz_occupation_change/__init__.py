@@ -43,7 +43,7 @@ class Quest (JQuest) :
      #gladiator, darkAvenger, hawkeye,  sagitarius, phoenix knight, duelist
      elif pcId in [2, 6, 9, 92, 90, 88 ]:
        htmltext = "30026-09.htm"
-     st.setState(STARTED)
+     st.setState(State.State.STARTED)
    # All other Races and classes must be out
    else :
      st.exitQuest(1)
@@ -51,10 +51,7 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST     = Quest(30026,qn,"village_master")
-CREATED   = State('Start',     QUEST)
-STARTED   = State('Started',   QUEST)
-COMPLETED = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(GRAND_MASTER_BITZ)
 QUEST.addTalkId(GRAND_MASTER_BITZ)

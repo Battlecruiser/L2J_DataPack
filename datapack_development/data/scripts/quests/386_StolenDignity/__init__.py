@@ -115,7 +115,7 @@ class Quest (JQuest) :
     htmltext = event
     if event == "yes" :
        htmltext = starting
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.set("cond","1")
        st.playSound("ItemSound.quest_accept")
     elif event == "binfo" :
@@ -181,14 +181,14 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
       st.set("cond","0")
       if player.getLevel() < 58 :
          st.exitQuest(1)
          htmltext = error_1
       else :
          htmltext = start
-   elif id == STARTED :
+   elif id == State.STARTED :
       if st.getQuestItemsCount(SI_ORE) >= REQUIRED_ORE :
          htmltext = bingo
       else :
@@ -196,7 +196,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet):
-     partyMember = self.getRandomPartyMemberState(player, STARTED)
+     partyMember = self.getRandomPartyMemberState(player, State.STARTED)
      if not partyMember : return
      st = partyMember.getQuestState(qn)
      numItems,chance = divmod(MOB[npc.getNpcId()]*Config.RATE_DROP_QUEST,MAX)
@@ -213,10 +213,8 @@ class Quest (JQuest) :
 
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
-CREATED     = State('Start',     QUEST)
-STARTED     = State('Started',   QUEST)
 
-QUEST.setInitialState(CREATED)
+
 # Quest NPC starter initialization
 QUEST.addStartNpc(WK_ROMP)
 # Quest initialization

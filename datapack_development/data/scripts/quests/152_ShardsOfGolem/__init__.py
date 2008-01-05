@@ -16,16 +16,18 @@ HARRIS=30035
 ALTRAN=30283
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(1008,1012)
 
  def onEvent (self,event,st) :
     htmltext = event
     id = st.getState()
     cond = st.getInt("cond")
-    if id != COMPLETED :
+    if id != State.COMPLETED :
        if event == "30035-04.htm" and cond == 0 :
           st.set("cond","1")
-          st.setState(STARTED)
+          st.setState(State.STARTED)
           st.playSound("ItemSound.quest_accept")
           st.giveItems(HARRYS_RECEIPT1_ID,1)
        elif event == "30283-02.htm" and cond == 1 and st.getQuestItemsCount(HARRYS_RECEIPT1_ID) :
@@ -46,8 +48,8 @@ class Quest (JQuest) :
    receipt2 = st.getQuestItemsCount(HARRYS_RECEIPT2_ID)
    toolbox = st.getQuestItemsCount(TOOL_BOX_ID)
    shards = st.getQuestItemsCount(GOLEM_SHARD_ID)
-   if id == COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+   if id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == HARRIS :
       if cond == 0 :
          if player.getLevel() >= 10 :
@@ -61,12 +63,12 @@ class Quest (JQuest) :
         st.takeItems(TOOL_BOX_ID,-1)
         st.takeItems(HARRYS_RECEIPT2_ID,-1)
         st.unset("cond")
-        st.setState(COMPLETED)
+        st.setState(State.COMPLETED)
         st.playSound("ItemSound.quest_finish")
         st.giveItems(WOODEN_BP_ID,1)
         st.addExpAndSp(5000,0)
         htmltext = "30035-06.htm"
-   elif npcId == ALTRAN and id == STARTED:
+   elif npcId == ALTRAN and id == State.STARTED:
       if cond == 1 and receipt1 :
         htmltext = "30283-01.htm"
       elif cond == 2 and receipt2 and shards < 5 and not toolbox :
@@ -82,7 +84,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
 
    count=st.getQuestItemsCount(GOLEM_SHARD_ID)
    if st.getInt("cond")==2 and st.getRandom(100) < 30 and count < 5 :
@@ -95,13 +97,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(152,qn,"Shards Of Golem")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(HARRIS)
 
 QUEST.addTalkId(HARRIS)
@@ -109,6 +105,3 @@ QUEST.addTalkId(HARRIS)
 QUEST.addTalkId(ALTRAN)
 
 QUEST.addKillId(20016)
-
-for item in range(1008,1012) :
-    STARTED.addQuestDrop(HARRIS,item,1)

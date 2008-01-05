@@ -31,14 +31,16 @@ default="<html><body>You are either not carrying out your quest or don't meet th
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [CLAWS]
  
  def onEvent (self,event,st) :
    htmltext = event
    if event == "31553-1.htm" :
      if st.getPlayer().getLevel() >= 66 :
        st.set("cond","1")
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
      else:
        htmltext=default
@@ -68,7 +70,7 @@ class Quest (JQuest) :
            else:
              htmltext = "31553-0a.htm"
              st.exitQuest(1)
-         elif id == STARTED :
+         elif id == State.STARTED :
              if st.getQuestItemsCount(CLAWS) >= 100 :
                htmltext = "31553-2.htm"
              else :
@@ -79,11 +81,11 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet):
-    partyMember = self.getRandomPartyMemberState(player, STARTED)
+    partyMember = self.getRandomPartyMemberState(player, State.STARTED)
     if not partyMember : return
     st = partyMember.getQuestState(qn)
     if st :
-        if st.getState() == STARTED :
+        if st.getState() == State.STARTED :
             prevItems = st.getQuestItemsCount(CLAWS)
             random = st.getRandom(MAX)
             chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
@@ -98,15 +100,10 @@ class Quest (JQuest) :
     return
 
 QUEST       = Quest(629,qn,"Clean Up the Swamp of Screams")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(CAPTAIN)
 
 QUEST.addTalkId(CAPTAIN)
 
 for mobs in range(21508,21518) :
   QUEST.addKillId(mobs)
-
-STARTED.addQuestDrop(CAPTAIN,CLAWS,1)

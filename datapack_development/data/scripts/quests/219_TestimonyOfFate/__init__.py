@@ -42,14 +42,21 @@ TIMIRIRAN_SEED_ID = 3199
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ALDERS_SKULL1_ID, KAIRAS_INSTRUCTIONS_ID, REVELATIONS_MANUSCRIPT_ID, KAIRAS_LETTER1_ID, KASANDRAS_REMAINS_ID,
+                BELLADONNA_ID, HERBALISM_TEXTBOOK_ID, IXIAS_LIST_ID, MEDUSA_ICHOR_ID, TYRANTS_BLOOD_ID, M_SPIDER_FLUIDS_ID,
+                DEAD_SEEKER_DUNG_ID, NIGHTSHADE_ROOT_ID, ALDERS_SKULL2_ID, ALDERS_RECEIPT_ID, KAIRAS_RECOMMEND_ID,
+                ARKENIAS_LETTER_ID, PALUS_CHARM_ID, THIFIELS_LETTER_ID, ARKENIAS_NOTE_ID, RED_FAIRY_DUST_ID, TIMIRIRAN_SAP_ID,
+                PIXY_GARNET_ID, GRANDIS_SKULL_ID, KARUL_BUGBEAR_SKULL_ID, BREKA_OVERLORD_SKULL_ID, LETO_OVERLORD_SKULL_ID,
+                BLACK_WILLOW_LEAF_ID, TIMIRIRAN_SEED_ID, METHEUS_FUNERAL_JAR_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
       htmltext = "30476-05.htm"
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
       st.giveItems(KAIRAS_LETTER1_ID,1)
     elif event == "30476_1" :
@@ -97,28 +104,19 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30476 and id != STARTED : return htmltext
+   if npcId != 30476 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30476 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
-      if st.getInt("cond") < 15 :
-        if player.getRace().ordinal() == 2 and player.getLevel() >= 37 :
-          htmltext = "30476-03.htm"
-        elif player.getRace().ordinal() == 2 :
-          htmltext = "30476-02.htm"
-          st.exitQuest(1)
-        else:
-          htmltext = "30476-01.htm"
-          st.exitQuest(1)
-      else:    
-        htmltext = "30476-01.htm"
-        st.exitQuest(1)
+     if player.getRace().ordinal() == 2 and player.getLevel() >= 37 :
+       htmltext = "30476-03.htm"
+     elif player.getRace().ordinal() == 2 :
+       htmltext = "30476-02.htm"
+       st.exitQuest(1)
+     else:
+       htmltext = "30476-01.htm"
+       st.exitQuest(1)
    elif npcId == 30476 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30476 and st.getInt("cond")==1 and st.getQuestItemsCount(KAIRAS_LETTER1_ID) :
       htmltext = "30476-06.htm"
    elif npcId == 30476 and st.getInt("cond")==1 and (st.getQuestItemsCount(METHEUS_FUNERAL_JAR_ID) or st.getQuestItemsCount(KASANDRAS_REMAINS_ID)) :
@@ -212,7 +210,7 @@ class Quest (JQuest) :
       st.takeItems(ARKENIAS_LETTER_ID,1)
       st.takeItems(PALUS_CHARM_ID,1)
       st.set("cond","0")
-      st.setState(COMPLETED)
+      st.setState(State.COMPLETED)
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
    elif npcId == 30419 and st.getInt("cond")==1 and st.getQuestItemsCount(PALUS_CHARM_ID) and st.getQuestItemsCount(THIFIELS_LETTER_ID) :
@@ -253,7 +251,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
 
    npcId = npc.getNpcId()
    if npcId == 20144 :
@@ -381,13 +379,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(219,qn,"Testimony Of Fate")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30476)
 
 QUEST.addTalkId(30476)
@@ -417,34 +409,3 @@ QUEST.addKillId(27079)
 QUEST.addKillId(20554)
 QUEST.addKillId(20582)
 QUEST.addKillId(20600)
-
-STARTED.addQuestDrop(30614,ALDERS_SKULL1_ID,1)
-STARTED.addQuestDrop(30476,KAIRAS_INSTRUCTIONS_ID,1)
-STARTED.addQuestDrop(30210,REVELATIONS_MANUSCRIPT_ID,1)
-STARTED.addQuestDrop(30476,KAIRAS_LETTER1_ID,1)
-STARTED.addQuestDrop(20144,KASANDRAS_REMAINS_ID,1)
-STARTED.addQuestDrop(30463,BELLADONNA_ID,1)
-STARTED.addQuestDrop(30614,HERBALISM_TEXTBOOK_ID,1)
-STARTED.addQuestDrop(30463,IXIAS_LIST_ID,1)
-STARTED.addQuestDrop(20158,MEDUSA_ICHOR_ID,1)
-STARTED.addQuestDrop(20192,TYRANTS_BLOOD_ID,1)
-STARTED.addQuestDrop(20233,M_SPIDER_FLUIDS_ID,1)
-STARTED.addQuestDrop(20202,DEAD_SEEKER_DUNG_ID,1)
-STARTED.addQuestDrop(20230,NIGHTSHADE_ROOT_ID,1)
-STARTED.addQuestDrop(30476,ALDERS_SKULL2_ID,1)
-STARTED.addQuestDrop(30114,ALDERS_RECEIPT_ID,1)
-STARTED.addQuestDrop(30476,KAIRAS_RECOMMEND_ID,1)
-STARTED.addQuestDrop(30419,ARKENIAS_LETTER_ID,1)
-STARTED.addQuestDrop(30358,PALUS_CHARM_ID,1)
-STARTED.addQuestDrop(30358,THIFIELS_LETTER_ID,1)
-STARTED.addQuestDrop(30419,ARKENIAS_NOTE_ID,1)
-STARTED.addQuestDrop(31845,RED_FAIRY_DUST_ID,1)
-STARTED.addQuestDrop(31850,TIMIRIRAN_SAP_ID,1)
-STARTED.addQuestDrop(31845,PIXY_GARNET_ID,1)
-STARTED.addQuestDrop(20554,GRANDIS_SKULL_ID,1)
-STARTED.addQuestDrop(20600,KARUL_BUGBEAR_SKULL_ID,1)
-STARTED.addQuestDrop(20270,BREKA_OVERLORD_SKULL_ID,1)
-STARTED.addQuestDrop(20582,LETO_OVERLORD_SKULL_ID,1)
-STARTED.addQuestDrop(27079,BLACK_WILLOW_LEAF_ID,1)
-STARTED.addQuestDrop(31850,TIMIRIRAN_SEED_ID,1)
-STARTED.addQuestDrop(30614,METHEUS_FUNERAL_JAR_ID,1)

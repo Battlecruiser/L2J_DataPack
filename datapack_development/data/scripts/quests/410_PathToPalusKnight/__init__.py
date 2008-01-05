@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://forum.l2jdp.com for more details
 import sys
@@ -19,7 +19,9 @@ GAZE_OF_ABYSS = 1244
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [PALLUS_TALISMAN, LYCANTHROPE_SKULL, COFFIN_ETERNAL_REST, MORTE_TALISMAN, VIRGILS_LETTER, TRIMDEN_SILK, PREDATOR_CARAPACE]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -28,7 +30,7 @@ class Quest (JQuest) :
     if event == "1" :
         st.set("id","0")
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         htmltext = "30329-06.htm"
         st.giveItems(PALLUS_TALISMAN,1)
@@ -73,21 +75,13 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30329 and id != STARTED : return htmltext
+   if npcId != 30329 and id != State.STARTED : return htmltext
 
    npcId = npc.getNpcId()
    htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>" 
    id = st.getState()
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30329 and st.getInt("cond")==0 :
-        if st.getInt("cond")<15 :
-          htmltext = "30329-01.htm"
-        else:
-          htmltext = "30329-01.htm"
+        htmltext = "30329-01.htm"
    elif npcId == 30329 and st.getInt("cond") :
         if st.getQuestItemsCount(PALLUS_TALISMAN) == 1 and st.getQuestItemsCount(LYCANTHROPE_SKULL) == 0 :
           htmltext = "30329-07.htm"
@@ -100,7 +94,7 @@ class Quest (JQuest) :
             st.takeItems(COFFIN_ETERNAL_REST,1)
             st.giveItems(GAZE_OF_ABYSS,1)
             st.set("cond","0")
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.playSound("ItemSound.quest_finish")
         elif st.getQuestItemsCount(MORTE_TALISMAN) or st.getQuestItemsCount(VIRGILS_LETTER) :
             htmltext = "30329-12.htm"
@@ -120,7 +114,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId == 20049 :
@@ -152,13 +146,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(410,qn,"Path To Palus Knight")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30329)
 
 QUEST.addTalkId(30329)
@@ -168,11 +156,3 @@ QUEST.addTalkId(30422)
 QUEST.addKillId(20038)
 QUEST.addKillId(20043)
 QUEST.addKillId(20049)
-
-STARTED.addQuestDrop(30329,PALLUS_TALISMAN,1)
-STARTED.addQuestDrop(20049,LYCANTHROPE_SKULL,1)
-STARTED.addQuestDrop(30422,COFFIN_ETERNAL_REST,1)
-STARTED.addQuestDrop(30422,MORTE_TALISMAN,1)
-STARTED.addQuestDrop(30329,VIRGILS_LETTER,1)
-STARTED.addQuestDrop(20043,TRIMDEN_SILK,1)
-STARTED.addQuestDrop(20038,PREDATOR_CARAPACE,1)

@@ -16,13 +16,15 @@ LESSER_HEALING_POTION = 1060
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [SILVERY_SPIDERSILK, UNOS_RECEIPT, CELS_TICKET, NIGHTSHADE_LEAF]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30370-04.htm" :
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(SILVERY_SPIDERSILK,1)
     return htmltext
@@ -34,7 +36,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      if player.getRace().ordinal() != 1 :
        htmltext = "30370-00.htm"
      elif player.getLevel() >= 3 :
@@ -43,9 +45,9 @@ class Quest (JQuest) :
      else:
        htmltext = "30370-02.htm"
        st.exitQuest(1)
-   elif id == COMPLETED :
-     htmltext = "<html><body>This quest has already been completed.</body></html>"
-   elif id == STARTED :
+   elif id == State.COMPLETED :
+     htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+   elif id == State.STARTED :
      try :
        cond = st.getInt("cond")
      except :
@@ -90,17 +92,13 @@ class Quest (JQuest) :
           st.giveItems(LESSER_HEALING_POTION,int(Config.RATE_QUESTS_REWARD))
           st.addExpAndSp(1000,0)
           st.unset("cond")
-          st.setState(COMPLETED)
+          st.setState(State.COMPLETED)
           st.playSound("ItemSound.quest_finish")
           htmltext = "30370-06.htm"
    return htmltext
 
 QUEST       = Quest(160,qn,"Nerupas Favor")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30370)
 
 QUEST.addTalkId(30370)
@@ -109,8 +107,3 @@ QUEST.addTalkId(30147)
 QUEST.addTalkId(30149)
 QUEST.addTalkId(30152)
 QUEST.addTalkId(30370)
-
-STARTED.addQuestDrop(30370,SILVERY_SPIDERSILK,1)
-STARTED.addQuestDrop(30147,UNOS_RECEIPT,1)
-STARTED.addQuestDrop(30149,CELS_TICKET,1)
-STARTED.addQuestDrop(30152,NIGHTSHADE_LEAF,1)

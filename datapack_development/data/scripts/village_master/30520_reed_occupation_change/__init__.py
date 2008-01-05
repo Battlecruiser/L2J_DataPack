@@ -34,7 +34,7 @@ class Quest (JQuest) :
    if event == "30520-04.htm":
      return "30520-04.htm"
 
-   st.setState(COMPLETED)
+   st.setState(State.COMPLETED)
    st.exitQuest(1)
    return htmltext
 
@@ -49,31 +49,28 @@ class Quest (JQuest) :
    if npcId == WAREHOUSE_CHIEF_REED and Race in [Race.dwarf]:
      if ClassId in [ClassId.dwarvenFighter]:
        htmltext = "30520-01.htm"
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        return htmltext
      if ClassId in [ClassId.scavenger, ClassId.artisan]:
        htmltext = "30520-05.htm"
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
        st.exitQuest(1)
        return htmltext
      if ClassId in [ClassId.bountyHunter, ClassId.warsmith]:
        htmltext = "30520-06.htm"
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
        st.exitQuest(1)
        return htmltext
 
    # All other Races must be out
    if npcId == WAREHOUSE_CHIEF_REED and Race in [Race.orc, Race.darkelf, Race.elf, Race.human]:
-     st.setState(COMPLETED)
+     st.setState(State.COMPLETED)
      st.exitQuest(1)
      return "30520-07.htm"
 
 QUEST   = Quest(30520,qn,"village_master")
-CREATED   = State('Start',     QUEST)
-STARTED   = State('Started',   QUEST)
-COMPLETED = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 
 QUEST.addStartNpc(30520)
 

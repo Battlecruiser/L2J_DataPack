@@ -43,14 +43,16 @@ def radar3(st):
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+   JQuest.__init__(self,id,name,descr)
+   self.questItemIds = range(2810,2820)
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
       htmltext = "30473-04.htm"
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
       st.giveItems(REPORT_OF_PERRIN,1)
     elif event == "30473_1" :
@@ -65,7 +67,7 @@ class Quest (JQuest) :
           st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
           st.takeItems(GOLDEN_STATUE,1)
           st.set("cond","0")
-          st.setState(COMPLETED)
+          st.setState(State.COMPLETED)
           st.playSound("ItemSound.quest_finish")
           st.set("onlyone","1")
     elif event == "30428_1" :
@@ -112,16 +114,10 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30473 and id != STARTED : return htmltext
+   if npcId != 30473 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30473 :
      if st.getInt("cond")==0 and st.getInt("onlyone")==0 :
-      if st.getInt("cond") < 15 :
         if (player.getClassId().getId() in [0x04, 0x0f, 0x1d, 0x13]) and player.getLevel() > 38 :
           htmltext = "30473-03.htm"
         elif player.getClassId().getId() in [0x04, 0x0f, 0x1d, 0x13] :
@@ -129,11 +125,8 @@ class Quest (JQuest) :
         else:
           htmltext = "30473-02.htm"
           st.exitQuest(1)
-      else:
-        htmltext = "30473-02.htm"
-        st.exitQuest(1)
      elif st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
      elif npcId == 30473 and st.getInt("cond")<10 and st.getInt("cond")>0 :
       htmltext = "30473-05.htm"
      elif st.getInt("cond")==15 and st.getQuestItemsCount(GOLDEN_STATUE)==0 :
@@ -141,7 +134,7 @@ class Quest (JQuest) :
       st.addExpAndSp(32000,4100)
       st.giveItems(MARK_OF_HEALER,1)
       st.set("cond","0")
-      st.setState(COMPLETED)
+      st.setState(State.COMPLETED)
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
      elif st.getInt("cond")==15 and st.getQuestItemsCount(GOLDEN_STATUE) :
@@ -290,7 +283,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    condition,maxcount,item=DROPLIST[npcId] 
@@ -303,13 +296,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(226,qn,"Test Of Healer")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30473)
 
 QUEST.addTalkId(30473)
@@ -319,6 +306,3 @@ for npcId in [30327,30424,30428,30658,30659,30660,30661,30662,30663,30664,30665,
  
 for mobId in [20150,27123,27124,27125,27127,27134]:
   QUEST.addKillId(mobId)
-
-for item in range(2810,2820):
-  STARTED.addQuestDrop(30743,item,1)

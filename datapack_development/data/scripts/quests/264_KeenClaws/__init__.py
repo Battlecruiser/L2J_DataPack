@@ -12,13 +12,15 @@ DROP={20003:[[5,10,8],[0,5,2]],20456:[[16,20,2],[0,16,1]]}
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [WOLF_CLAW]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30136-03.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
@@ -30,7 +32,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
 
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if st.getInt("cond")==0 :
      if player.getLevel() >= 3 :
@@ -56,7 +58,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    if st.getInt("cond") == 1:
       npcId = npc.getNpcId()
@@ -78,17 +80,10 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(264,qn,"Keen Claws")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30136)
 
 QUEST.addTalkId(30136)
 
 QUEST.addKillId(20003)
 QUEST.addKillId(20456)
-
-STARTED.addQuestDrop(20003,WOLF_CLAW,1)

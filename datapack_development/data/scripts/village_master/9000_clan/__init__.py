@@ -32,15 +32,12 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId in NPC:
      st.set("cond","0")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      return "9000-01.htm"
 
 QUEST       = Quest(9000,qn,"village_master")
-CREATED     = State('Start',     QUEST)
-STARTED     = State('Started',   QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 
 
 for item in NPC:

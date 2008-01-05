@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 #
 # Updated by ElgarL
 #
@@ -36,14 +36,18 @@ RP_AMBER_BEAD_ID = 3025
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [RP_JOURNEYMAN_RING_ID, ALLTRANS_INSTRUCTIONS_ID, RP_JOURNEYMAN_RING_ID, VALKONS_RECOMMEND_ID, MANDRAGORA_BERRY_ID,
+                ALLTRANS_RECOMMEND1_ID, DUNINGS_KEY_ID, NORMANS_INSTRUCTIONS_ID, NORMANS_LIST_ID, NORMANS_RECEIPT_ID, ALLTRANS_RECOMMEND2_ID,
+                PINTERS_INSTRUCTIONS_ID, RP_AMBER_BEAD_ID, AMBER_BEAD_ID, DUNINGS_INSTRUCTIONS_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
         htmltext = "30103-06.htm"
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(VALKONS_RECOMMEND_ID,1)
         st.takeItems(ADENA_ID,2000)
@@ -60,7 +64,7 @@ class Quest (JQuest) :
             htmltext = "30103-09a.htm"
             st.set("cond","0")
             st.set("onlyone","1")
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.playSound("ItemSound.quest_finish")
             st.addExpAndSp(32000,3900)
             st.takeItems(JOURNEYMAN_RING_ID,st.getQuestItemsCount(JOURNEYMAN_RING_ID))
@@ -73,7 +77,7 @@ class Quest (JQuest) :
             htmltext = "30103-09b.htm"
             st.set("cond","0")
             st.set("onlyone","1")
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.playSound("ItemSound.quest_finish")
             st.takeItems(JOURNEYMAN_RING_ID,st.getQuestItemsCount(JOURNEYMAN_RING_ID))
             st.takeItems(ALLTRANS_INSTRUCTIONS_ID,1)
@@ -131,13 +135,8 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30103 and id != STARTED : return htmltext
+   if npcId != 30103 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30103 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
           if player.getClassId().getId() in [0x38, 0x36] :
             if player.getLevel() < 35 :
@@ -149,7 +148,7 @@ class Quest (JQuest) :
             htmltext = "30103-01.htm"
             st.exitQuest(1)
    elif npcId == 30103 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30103 and st.getInt("cond")>=1 and st.getQuestItemsCount(VALKONS_RECOMMEND_ID)==1 :
         htmltext = "30103-07.htm"
    elif npcId == 30103 and st.getInt("cond")>=1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID)==1 :
@@ -217,7 +216,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
 
    npcId = npc.getNpcId()
    if npcId == 20223 :
@@ -297,13 +296,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(216,qn,"Trial Of Guildsman")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30103)
 
 QUEST.addTalkId(30103)
@@ -330,19 +323,3 @@ QUEST.addKillId(20079)
 QUEST.addKillId(20080)
 QUEST.addKillId(20081)
 QUEST.addKillId(20083)
-
-STARTED.addQuestDrop(30283,RP_JOURNEYMAN_RING_ID,1)
-STARTED.addQuestDrop(30283,ALLTRANS_INSTRUCTIONS_ID,1)
-STARTED.addQuestDrop(30283,RP_JOURNEYMAN_RING_ID,1)
-STARTED.addQuestDrop(30103,VALKONS_RECOMMEND_ID,1)
-STARTED.addQuestDrop(20223,MANDRAGORA_BERRY_ID,1)
-STARTED.addQuestDrop(30283,ALLTRANS_RECOMMEND1_ID,1)
-STARTED.addQuestDrop(20267,DUNINGS_KEY_ID,1)
-STARTED.addQuestDrop(30210,NORMANS_INSTRUCTIONS_ID,1)
-STARTED.addQuestDrop(30210,NORMANS_LIST_ID,1)
-STARTED.addQuestDrop(30210,NORMANS_RECEIPT_ID,1)
-STARTED.addQuestDrop(30283,ALLTRANS_RECOMMEND2_ID,1)
-STARTED.addQuestDrop(30298,PINTERS_INSTRUCTIONS_ID,1)
-STARTED.addQuestDrop(30298,RP_AMBER_BEAD_ID,1)
-STARTED.addQuestDrop(20079,AMBER_BEAD_ID,1)
-STARTED.addQuestDrop(30688,DUNINGS_INSTRUCTIONS_ID,1)

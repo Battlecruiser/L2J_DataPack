@@ -48,9 +48,9 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(1104,qn,"Teleports")
-CREATED     = State('Start',QUEST)
+State.CREATED     = State('Start',QUEST)
 
-QUEST.setInitialState(CREATED)
+
 
 for i in DATA.keys() :
     QUEST.addStartNpc(i)

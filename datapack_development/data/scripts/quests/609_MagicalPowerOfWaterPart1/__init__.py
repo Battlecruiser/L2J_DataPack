@@ -35,7 +35,9 @@ def AutoChat(npc,text) :
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [Totem]
 
  def onAdvEvent (self, event, npc, player) :
    st = player.getQuestState(qn)
@@ -52,7 +54,7 @@ class Quest (JQuest) :
             st.set("aggro","0")
             st.set("spawned","0")
             st.set("npcid","0")
-            st.setState(STARTED)
+            st.setState(State.STARTED)
             st.playSound("ItemSound.quest_accept")
             htmltext = "31371-04.htm"
        else :
@@ -87,10 +89,10 @@ class Quest (JQuest) :
         aggro = st.getInt("aggro")
         Green_Totem = st.getQuestItemsCount(Totem)
         Stone = st.getQuestItemsCount(Wisdom_Stone)
-        if st.getState() == CREATED :
+        if st.getState() == State.CREATED :
             if npcId == Wahkan :
                 htmltext = "31371-01.htm"
-        elif st.getState() == STARTED :
+        elif st.getState() == State.STARTED :
             if npcId == Wahkan :
                 if id == 2 :
                     htmltext = "31371-05.htm"
@@ -126,7 +128,7 @@ class Quest (JQuest) :
  def onAttack (self, npc, player, damage, isPet):
     st = player.getQuestState(qn)
     if st :
-        if st.getState() == STARTED :
+        if st.getState() == State.STARTED :
             npcId = npc.getNpcId()
             id = st.getInt("id")
             Red_Totem = st.getQuestItemsCount(Totem)
@@ -151,7 +153,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
     st = player.getQuestState(qn)
     if st :
-        if st.getState() == STARTED :
+        if st.getState() == State.STARTED :
             npcId = npc.getNpcId()
             cond = st.getInt("cond")
             id = st.getInt("id")
@@ -166,16 +168,12 @@ class Quest (JQuest) :
 
 
 QUEST       = Quest(609,qn,"Magical Power of Water - Part 1")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Wahkan)
 QUEST.addTalkId(Wahkan)
 QUEST.addTalkId(Asefa)
 QUEST.addTalkId(Udan_Box)
 
-STARTED.addQuestDrop(Udan_Box,Totem,1)
 for mobId in Varka_Mobs:
     QUEST.addAttackId(mobId)
 for mobId in Ketra_Orcs:

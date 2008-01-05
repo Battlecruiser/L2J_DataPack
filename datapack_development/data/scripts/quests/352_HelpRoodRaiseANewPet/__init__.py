@@ -14,13 +14,15 @@ CHANCE2 = 7
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [LIENRIK_EGG1, LIENRIK_EGG2]
 
  def onEvent (self,event,st) :
      htmltext = event
      if event == "31067-04.htm" :
          st.set("cond","1")
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.playSound("ItemSound.quest_accept")
      elif event == "31067-09.htm" :
          st.playSound("ItemSound.quest_finish")
@@ -38,7 +40,7 @@ class Quest (JQuest) :
      cond = st.getInt("cond")
      eggs1 = st.getQuestItemsCount(LIENRIK_EGG1)
      eggs2 = st.getQuestItemsCount(LIENRIK_EGG2)
-     if id == CREATED :
+     if id == State.CREATED :
         if level>=39 :
             htmltext = "31067-01.htm"
         else :
@@ -68,7 +70,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
      st = player.getQuestState(qn)
      if not st : return 
-     if st.getState() != STARTED : return 
+     if st.getState() != State.STARTED : return 
      npcId = npc.getNpcId()
      random = st.getRandom(100)
      if random<=CHANCE :
@@ -78,16 +80,10 @@ class Quest (JQuest) :
      return
 
 QUEST       = Quest(352,qn,"Help Rood Raise A New Pet")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(31067)
 
 QUEST.addTalkId(31067)
-
-STARTED.addQuestDrop(31067,LIENRIK_EGG1,1)
-STARTED.addQuestDrop(31067,LIENRIK_EGG2,1)
 
 QUEST.addKillId(20786)
 QUEST.addKillId(20787)

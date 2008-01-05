@@ -29,14 +29,16 @@ MOBS = [20158,20201,20235,20269,20552,20554,20567,20580,20068]
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range (2713,2721)
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
         htmltext = "30461-04.htm"
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(MIRIENS_SIGIL1_ID,1)
     elif event == "30461_1" :
@@ -236,12 +238,8 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30461 and id != STARTED : return htmltext
+   if npcId != 30461 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-      st.setState(STARTING)
-      st.set("cond","0")
-      st.set("onlyone","0")
    if npcId == 30461 and cond == 0 :
      if st.getInt("onlyone") == 0 :
         if player.getClassId().getId() in [0x0b,  0x1a, 0x27] :
@@ -254,7 +252,7 @@ class Quest (JQuest) :
            htmltext = "30461-01.htm"
            st.exitQuest(1)
      else:
-        htmltext = "<html><body>This quest has already been completed.</body></html>"
+        htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30461 and cond == 1 :
         htmltext = "30461-05.htm"
    elif npcId == 30461 and cond == 14 :
@@ -288,7 +286,7 @@ class Quest (JQuest) :
             st.giveItems(MARK_OF_SCHOLAR_ID,1)
             st.set("cond","0")
             st.set("onlyone","1")
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.playSound("ItemSound.quest_finish")
    elif npcId == 30070 and cond == 1 :
         htmltext = "30070-01.htm"
@@ -476,7 +474,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
    npcId = npc.getNpcId()
    if npcId == 20580 :
     if st.getInt("cond") == 11 and st.getQuestItemsCount(BROWN_SCROLL_SCRAP_ID)<5 :
@@ -560,18 +558,11 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(214,qn,"Trial Of Scholar")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(NPC[0])
 
 for npcId in NPC:
-  for i in range(2674,2721):
-    QUEST.addTalkId(npcId)
-    STARTED.addQuestDrop(npcId,i,1)
+  QUEST.addTalkId(npcId)
 
 for mobId in MOBS:
   QUEST.addKillId(mobId)

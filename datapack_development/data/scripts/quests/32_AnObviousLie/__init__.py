@@ -31,13 +31,15 @@ RABBIT_EAR = 7683
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [MEDICINAL_HERB, MAP]
 
  def onEvent (self,event,st) :
    htmltext = event
    if event == "30120-1.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "30094-1.htm" :
      st.giveItems(MAP,1)
@@ -77,7 +79,7 @@ class Quest (JQuest) :
        elif event=="rabbit":
          item=RABBIT_EAR
        st.giveItems(item,1)
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
        st.unset("cond")
        st.playSound("ItemSound.quest_finish")
        htmltext = "30094-14.htm"
@@ -97,14 +99,14 @@ class Quest (JQuest) :
      if cond == 0 :
        if player.getLevel() >= 45 :
          htmltext = "30120-0.htm"
-       elif id == COMPLETED :
-         htmltext = "<html><body>This quest has already been completed.</body></html>"
+       elif id == State.COMPLETED :
+         htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
        else:
          htmltext = "30120-0a.htm"
          st.exitQuest(1)
      elif cond == 1 :
        htmltext = "30120-2.htm"
-   if id == STARTED :    
+   if id == State.STARTED :    
        if npcId == GENTLER :
          if cond == 1 :
            htmltext = "30094-0.htm"
@@ -138,7 +140,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return
-   if st.getState()!=STARTED : return
+   if st.getState()!=State.STARTED : return
    
    chance = st.getRandom(100)
    count = st.getQuestItemsCount(MEDICINAL_HERB)
@@ -153,17 +155,10 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(32,qn,"An Obvious Lie")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(MAXIMILIAN)
 QUEST.addTalkId(MAXIMILIAN)
 
 QUEST.addTalkId(GENTLER)
 QUEST.addTalkId(MIKI_THE_CAT)
 QUEST.addKillId(ALLIGATOR)
-
-STARTED.addQuestDrop(ALLIGATOR,MEDICINAL_HERB,1)
-STARTED.addQuestDrop(GENTLER,MAP,1)

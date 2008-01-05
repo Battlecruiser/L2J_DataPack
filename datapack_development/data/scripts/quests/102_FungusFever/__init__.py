@@ -31,7 +31,9 @@ def check(st) :
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+    JQuest.__init__(self,id,name,descr)
+    self.questItemIds = [ALBERRYUS_LETTER_ID, EVERGREEN_AMULET_ID, DRYAD_TEARS_ID, COBS_MEDICINE1_ID, COBS_MEDICINE2_ID, COBS_MEDICINE3_ID, COBS_MEDICINE4_ID, COBS_MEDICINE5_ID, ALBERRYUS_LIST_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -39,7 +41,7 @@ class Quest (JQuest) :
         htmltext = "30284-02.htm"
         st.giveItems(ALBERRYUS_LETTER_ID,1)
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
     return htmltext
 
@@ -51,7 +53,7 @@ class Quest (JQuest) :
    if not st: return htmltext
 
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
    if npcId == 30284 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
@@ -65,8 +67,8 @@ class Quest (JQuest) :
          htmltext = "30284-08.htm"
          st.exitQuest(1)
    elif npcId == 30284 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-        htmltext = "<html><body>This quest has already been completed.</body></html>"
-   elif id == STARTED :
+        htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+   elif id == State.STARTED :
       if npcId == 30284 and st.getInt("cond")==1 and st.getQuestItemsCount(ALBERRYUS_LETTER_ID)==1 :
            htmltext = "30284-03.htm"
       elif npcId == 30284 and st.getInt("cond")==1 and st.getQuestItemsCount(EVERGREEN_AMULET_ID)==1 :
@@ -118,7 +120,7 @@ class Quest (JQuest) :
       elif npcId == 30284 and st.getInt("cond")==6 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==1 :
            st.takeItems(ALBERRYUS_LIST_ID,1)
            st.set("cond","0")
-           st.setState(COMPLETED)
+           st.setState(State.COMPLETED)
            st.playSound("ItemSound.quest_finish")
            htmltext = "30284-06.htm"
            st.set("onlyone","1")
@@ -137,7 +139,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st: return 
 
-   if st.getState() == STARTED :       
+   if st.getState() == State.STARTED :       
       npcId = npc.getNpcId()
       if npcId in [20013,20019] :
          if st.getQuestItemsCount(EVERGREEN_AMULET_ID)>0 and st.getQuestItemsCount(DRYAD_TEARS_ID)<10 :
@@ -151,11 +153,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(102,"102_FungusFever","Fungus Fever")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30284)
 QUEST.addTalkId(30284)
 
@@ -165,17 +163,5 @@ QUEST.addTalkId(30219)
 QUEST.addTalkId(30221)
 QUEST.addTalkId(30285)
 
-
 QUEST.addKillId(20013)
 QUEST.addKillId(20019)
-
-STARTED.addQuestDrop(30284,ALBERRYUS_LETTER_ID,1)
-STARTED.addQuestDrop(30156,EVERGREEN_AMULET_ID,1)
-STARTED.addQuestDrop(20013,DRYAD_TEARS_ID,1)
-STARTED.addQuestDrop(20019,DRYAD_TEARS_ID,1)
-STARTED.addQuestDrop(30156,COBS_MEDICINE1_ID,1)
-STARTED.addQuestDrop(30156,COBS_MEDICINE2_ID,1)
-STARTED.addQuestDrop(30156,COBS_MEDICINE3_ID,1)
-STARTED.addQuestDrop(30156,COBS_MEDICINE4_ID,1)
-STARTED.addQuestDrop(30156,COBS_MEDICINE5_ID,1)
-STARTED.addQuestDrop(30284,ALBERRYUS_LIST_ID,1)

@@ -23,13 +23,13 @@ class Quest (JQuest) :
    htmltext = event 
    if event == "31537-09.htm" : 
      st.set("cond","1") 
-     st.setState(STARTED) 
+     st.setState(State.STARTED) 
      st.playSound("ItemSound.quest_accept")
    elif event == "31537-12.htm" :
        st.giveItems(57,68500)
        st.takeItems(GEM,-1)
        st.playSound("ItemSound.quest_finish")
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
        st.set("onlyone","1")
    return htmltext 
 
@@ -42,15 +42,15 @@ class Quest (JQuest) :
    cond = st.getInt("cond") 
    onlyone = st.getInt("onlyone")
    GEM_COUNT = st.getQuestItemsCount(GEM)
-   if id == COMPLETED :
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
-   elif id == CREATED and onlyone == 0 : 
+   if id == State.COMPLETED :
+       htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+   elif id == State.CREATED and onlyone == 0 : 
      if player.getLevel() >= 65 :
          htmltext = "31537-01.htm" 
      else: 
          htmltext = "31537-02.htm" 
          st.exitQuest(1) 
-   elif id == STARTED :
+   elif id == State.STARTED :
        if GEM_COUNT < 1 :
            htmltext = "31537-10.htm"
        else :
@@ -58,10 +58,7 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST     = Quest(20,qn,"Bring up with Love") 
-CREATED   = State('Start',     QUEST) 
-STARTED   = State('Started',   QUEST) 
-COMPLETED = State('Completed', QUEST) 
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(TUNATUN) 
 QUEST.addTalkId(TUNATUN)

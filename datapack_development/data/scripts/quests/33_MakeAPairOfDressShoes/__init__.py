@@ -19,7 +19,7 @@ class Quest (JQuest) :
    htmltext = event
    if event == "30838-1.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    if event == "31520-1.htm" :
      st.set("cond","2")
@@ -52,7 +52,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    cond = st.getInt("cond")
    if npcId == 30838 and cond == 0 and st.getQuestItemsCount(DRESS_SHOES_BOX) == 0 :
@@ -64,7 +64,7 @@ class Quest (JQuest) :
          st.exitQuest(1)
      else:
        st.exitQuest(1)
-   elif id == STARTED :    
+   elif id == State.STARTED :    
        if npcId == 31520 and cond == 1 :
          htmltext = "31520-0.htm"
        elif npcId == 30838 and cond == 2 :
@@ -78,10 +78,8 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(33,qn,"Make A Pair Of Dress Shoes")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(30838)
 QUEST.addTalkId(30838)
 

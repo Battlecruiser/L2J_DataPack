@@ -31,7 +31,9 @@ DROPLIST = {20624:[CH_SKULL,"awaitSkull"],20629:[K_HORN,"awaitHorn"]}
  
 class Quest (JQuest) :
  
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [CH_SKULL, K_HORN]
  
  def onEvent (self,event,st) :
     htmltext = event
@@ -42,7 +44,7 @@ class Quest (JQuest) :
          ### to abort the quest and restart it later without having to redo Part 1!
          ### to abort the quest and restart it later without having to redo Part 1!
          #st.takeItems(MSTONE,1)  
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.set("awaitSkull","1")
          st.set("awaitHorn","1")
          st.set("cond","1")
@@ -64,7 +66,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
       st.set("cond","0")
       htmltext = "30515-1.htm"
       if player.getLevel() < 60 :
@@ -73,7 +75,7 @@ class Quest (JQuest) :
       elif not st.getQuestItemsCount(MSTONE) :
          htmltext = "30515-3.htm"
          st.exitQuest(1)
-   elif id == STARTED :
+   elif id == State.STARTED :
       if st.getQuestItemsCount(CH_SKULL)==st.getQuestItemsCount(K_HORN)==100 :
          st.takeItems(CH_SKULL,-1)
          st.takeItems(K_HORN,-1)
@@ -103,13 +105,7 @@ class Quest (JQuest) :
  
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
- 
-CREATED     = State('Start',     QUEST)
-STARTED     = State('Started',   QUEST)
-COMPLETED   = State('Completed', QUEST)
- 
-QUEST.setInitialState(CREATED)
- 
+
 # Quest NPC starter initialization
 QUEST.addStartNpc(MANAKIA)
 # Quest initialization
@@ -117,4 +113,3 @@ QUEST.addTalkId(MANAKIA)
  
 for i in DROPLIST.keys() :
   QUEST.addKillId(i)
-  STARTED.addQuestDrop(i,DROPLIST[i][0],1)

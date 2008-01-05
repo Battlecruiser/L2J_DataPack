@@ -16,14 +16,16 @@ ORC = 27070
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [KARTAS_TRANSLATION, ONYX_TALISMAN1, ONYX_TALISMAN2, ANCIENT_SCROLL, ANCIENT_CLAY_TABLET]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30358-05.htm" :
         st.giveItems(ONYX_TALISMAN1,1)
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
     return htmltext
 
@@ -34,7 +36,7 @@ class Quest (JQuest) :
    if not st : return htmltext
 
    id = st.getState()
-   if id == CREATED :                                      # Check if is starting the quest
+   if id == State.CREATED :                                      # Check if is starting the quest
      st.set("cond","0")
      if player.getRace().ordinal() == 2 :
        if player.getLevel() >= 10 :
@@ -45,8 +47,8 @@ class Quest (JQuest) :
      else :
        htmltext = "30358-00.htm"
        st.exitQuest(1)
-   elif id == COMPLETED :                                  # Check if the quest is already made
-     htmltext = "<html><body>This quest has already been completed.</body></html>"
+   elif id == State.COMPLETED :                                  # Check if the quest is already made
+     htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    else :                                                  # The quest itself
      try :
        cond = st.getInt("cond")
@@ -55,7 +57,7 @@ class Quest (JQuest) :
      if cond == 1 :
        if npcId == 30358 :
          htmltext = "30358-06.htm"
-       elif npcId == 30133 and st.getQuestItemsCount(ONYX_TALISMAN1) and id == STARTED : 
+       elif npcId == 30133 and st.getQuestItemsCount(ONYX_TALISMAN1) and id == State.STARTED : 
          htmltext = "30133-01.htm"
          st.takeItems(ONYX_TALISMAN1,1)
          st.giveItems(ONYX_TALISMAN2,1)
@@ -68,7 +70,7 @@ class Quest (JQuest) :
      elif cond == 3 :
        if npcId == 30358 :
          htmltext = "30358-06.htm"
-       elif npcId == 30133 and st.getQuestItemsCount(ANCIENT_SCROLL) and st.getQuestItemsCount(ANCIENT_CLAY_TABLET) and id == STARTED :
+       elif npcId == 30133 and st.getQuestItemsCount(ANCIENT_SCROLL) and st.getQuestItemsCount(ANCIENT_CLAY_TABLET) and id == State.STARTED :
          htmltext = "30133-03.htm"
          st.takeItems(ONYX_TALISMAN2,1)
          st.takeItems(ANCIENT_SCROLL,1)
@@ -90,16 +92,16 @@ class Quest (JQuest) :
          elif st.getInt("onlyone") == 0:
              st.giveItems(1835,1000)
          st.unset("cond")
-         st.setState(COMPLETED)
+         st.setState(State.COMPLETED)
          st.playSound("ItemSound.quest_finish")
-       elif npcId == 30133 and id == STARTED :
+       elif npcId == 30133 and id == State.STARTED :
          htmltext = "30133-04.htm"
    return htmltext
 
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
    
    if st.getInt("cond") == 2 :
      if st.getRandom(100) < 20 :
@@ -113,12 +115,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(106,qn,"Forgotten Truth")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30358)
 
 QUEST.addTalkId(30358)
@@ -126,9 +123,3 @@ QUEST.addTalkId(30358)
 QUEST.addTalkId(30133)
 
 QUEST.addKillId(27070)
-
-STARTED.addQuestDrop(30133,KARTAS_TRANSLATION,1)
-STARTED.addQuestDrop(30358,ONYX_TALISMAN1,1)
-STARTED.addQuestDrop(30133,ONYX_TALISMAN2,1)
-STARTED.addQuestDrop(27070,ANCIENT_SCROLL,1)
-STARTED.addQuestDrop(27070,ANCIENT_CLAY_TABLET,1)

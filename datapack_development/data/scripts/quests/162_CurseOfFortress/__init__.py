@@ -12,13 +12,15 @@ BONE_SHIELD = 625
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ELF_SKULL, BONE_FRAGMENT3]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30147-04.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
@@ -29,10 +31,10 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
-   if id == COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+   if id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif st.getInt("cond") == 0 :
       if player.getRace().ordinal() == 2 :
          htmltext = "30147-00.htm"
@@ -52,14 +54,14 @@ class Quest (JQuest) :
          st.takeItems(ELF_SKULL,-1)
          st.takeItems(BONE_FRAGMENT3,-1)
          st.unset("cond")
-         st.setState(COMPLETED)
+         st.setState(State.COMPLETED)
          st.playSound("ItemSound.quest_finish")
    return htmltext
 
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
    
    if st.getRandom(4) == 1 :
      npcId = npc.getNpcId()
@@ -83,11 +85,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(162,qn,"Curse Of Fortress")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30147)
 
 QUEST.addTalkId(30147)
@@ -98,6 +96,3 @@ QUEST.addKillId(20371)
 QUEST.addKillId(20463)
 QUEST.addKillId(20464)
 QUEST.addKillId(20504)
-
-STARTED.addQuestDrop(20371,ELF_SKULL,1)
-STARTED.addQuestDrop(20464,BONE_FRAGMENT3,1)

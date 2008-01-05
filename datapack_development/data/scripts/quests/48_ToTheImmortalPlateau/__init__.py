@@ -24,13 +24,16 @@ RACE = 3
 
 class Quest (JQuest) :
 
-    def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+    def __init__(self,id,name,descr):
+        JQuest.__init__(self,id,name,descr)
+        self.questItemIds = [GALLADUCCIS_ORDER_DOCUMENT_ID_1, GALLADUCCIS_ORDER_DOCUMENT_ID_2, GALLADUCCIS_ORDER_DOCUMENT_ID_3,
+                MAGIC_SWORD_HILT_ID, GEMSTONE_POWDER_ID, PURIFIED_MAGIC_NECKLACE_ID]
 
     def onEvent (self,event,st) :
         htmltext = event
         if event == "1" :
             st.set("cond","1")
-            st.setState(STARTED)
+            st.setState(State.STARTED)
             st.playSound("ItemSound.quest_accept")
             st.giveItems(GALLADUCCIS_ORDER_DOCUMENT_ID_1,1)
             htmltext = "30097-03.htm"
@@ -65,7 +68,7 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_TRAVELER_ID,-1)
             htmltext = "30097-12.htm"
             st.unset("cond")
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.playSound("ItemSound.quest_finish")
         return htmltext
 
@@ -75,14 +78,14 @@ class Quest (JQuest) :
         if not st : return htmltext
         npcId = npc.getNpcId()
         id = st.getState()
-        if id == CREATED :
+        if id == State.CREATED :
             st.set("cond","0")
             if player.getRace().ordinal() == RACE and st.getQuestItemsCount(MARK_OF_TRAVELER_ID) > 0:
                 htmltext = "30097-02.htm"
             else :
                 htmltext = "30097-01.htm"
                 st.exitQuest(1)
-        elif npcId == 30097 and id == COMPLETED :
+        elif npcId == 30097 and id == State.COMPLETED :
             htmltext = "<html><body>I can't supply you with another Scroll of Escape. Sorry traveller.</body></html>"
         elif npcId == 30097 and st.getInt("cond")==1 :
             htmltext = "30097-04.htm"
@@ -96,7 +99,7 @@ class Quest (JQuest) :
             htmltext = "30097-10.htm"
         elif npcId == 30097 and st.getInt("cond")==6 :
             htmltext = "30097-11.htm"
-        elif id == STARTED :    
+        elif id == State.STARTED :    
             if npcId == 30094 and st.getInt("cond")==1 :
                 htmltext = "30094-01.htm"
             elif npcId == 30094 and st.getInt("cond")==2 :
@@ -113,11 +116,7 @@ class Quest (JQuest) :
         return htmltext
 
 QUEST       = Quest(48,qn,"To The Immortal Plateau")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30097)
 
 QUEST.addTalkId(30097)
@@ -125,10 +124,3 @@ QUEST.addTalkId(30097)
 QUEST.addTalkId(30094)
 QUEST.addTalkId(30090)
 QUEST.addTalkId(30116)
-
-STARTED.addQuestDrop(30097,GALLADUCCIS_ORDER_DOCUMENT_ID_1,1)
-STARTED.addQuestDrop(30097,GALLADUCCIS_ORDER_DOCUMENT_ID_2,1)
-STARTED.addQuestDrop(30097,GALLADUCCIS_ORDER_DOCUMENT_ID_3,1)
-STARTED.addQuestDrop(30094,MAGIC_SWORD_HILT_ID,1)
-STARTED.addQuestDrop(30090,GEMSTONE_POWDER_ID,1)
-STARTED.addQuestDrop(30116,PURIFIED_MAGIC_NECKLACE_ID,1)

@@ -45,16 +45,18 @@ def recommendationCount(st):
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+   JQuest.__init__(self,id,name,descr)
+   self.questItemIds = range(2864,2867)+range(2868,2879)+[2916]
 
  def onEvent (self,event,st) :
     htmltext = event
     progress = st.getInt("progress")
     id=st.getState()
-    if id != COMPLETED :
+    if id != State.COMPLETED :
        if event == "1" and progress == 0 :
           htmltext = "30531-04.htm"
-          st.setState(STARTED)
+          st.setState(State.STARTED)
           st.playSound("ItemSound.quest_accept")
           st.set("cond","1")
           st.set("progress","1")
@@ -95,14 +97,12 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30531 and id != STARTED : return htmltext
+   if npcId != 30531 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
    progress = st.getInt("progress")
    if npcId == 30531:
-     if id == COMPLETED :
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
+     if id == State.COMPLETED :
+       htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
      elif progress==0 :
         if player.getClassId().getId() == 0x38 and player.getLevel() > 38 :
           htmltext = "30531-03.htm"
@@ -122,7 +122,7 @@ class Quest (JQuest) :
        st.takeItems(RECOMMENDATION_OF_FILAUR,1)
        st.takeItems(RECOMMENDATION_OF_ARIN,1)
        st.unset("progress")
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
        st.playSound("ItemSound.quest_finish")
    elif npcId == 30533:
      if progress in [1,11,16] and not st.getQuestItemsCount(RECOMMENDATION_OF_BALANKI):
@@ -214,7 +214,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    progress_drop,maxcount,item=DROPLIST[npcId]
@@ -234,13 +234,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(231,qn,"Test Of Maestro")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30531)
 
 QUEST.addTalkId(30531)
@@ -250,6 +244,3 @@ for npcId in [30532,30533,30535,30536,30556,30671,30672,30673,30675]:
 
 for mobId in [20225,20229,20233,27133]:
   QUEST.addKillId(mobId)
-
-for item in range(2864,2867)+range(2868,2879)+[2916]:
-  STARTED.addQuestDrop(30531,item,1)

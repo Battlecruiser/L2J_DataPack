@@ -52,13 +52,15 @@ def payback(st):
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ZOMBIE_HEAD1_ID, ZOMBIE_HEART1_ID, ZOMBIE_LIVER1_ID, SKULL1_ID, RIB_BONE1_ID, SPINE1_ID, ARM_BONE1_ID, THIGH_BONE1_ID, COMPLETE_SKELETON_ID, ANATOMY_DIAGRAM_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30336-03.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "30434-03.htm" :
       st.giveItems(ANATOMY_DIAGRAM_ID,1)
@@ -95,7 +97,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30336 and id != STARTED : return htmltext
+   if npcId != 30336 and id != State.STARTED : return htmltext
 
    cond = st.getInt("cond")
    if npcId == 30336 and cond==0 :
@@ -124,7 +126,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) :
@@ -235,11 +237,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(325,qn,"Grim Collector")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30336)
 QUEST.addTalkId(30336)
 
@@ -248,14 +246,3 @@ QUEST.addTalkId(30434)
 
 for i in [20026,20029,20035,20042,20045,20457,20458,20051,20514,20515] :
     QUEST.addKillId(i)
-
-STARTED.addQuestDrop(20026,ZOMBIE_HEAD1_ID,1)
-STARTED.addQuestDrop(20026,ZOMBIE_HEART1_ID,1)
-STARTED.addQuestDrop(20026,ZOMBIE_LIVER1_ID,1)
-STARTED.addQuestDrop(20035,SKULL1_ID,1)
-STARTED.addQuestDrop(20042,RIB_BONE1_ID,1)
-STARTED.addQuestDrop(20045,SPINE1_ID,1)
-STARTED.addQuestDrop(20051,ARM_BONE1_ID,1)
-STARTED.addQuestDrop(20514,THIGH_BONE1_ID,1)
-STARTED.addQuestDrop(30342,COMPLETE_SKELETON_ID,1)
-STARTED.addQuestDrop(30434,ANATOMY_DIAGRAM_ID,1)

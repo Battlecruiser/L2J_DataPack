@@ -43,7 +43,9 @@ def AutoChat(npc,text) :
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [Ice_Heart]
 
  def onAdvEvent (self, event, npc, player) :
    st = player.getQuestState(qn)
@@ -58,7 +60,7 @@ class Quest (JQuest) :
            if Green_Totem :
                 st.set("cond","1")
                 st.set("id","1")
-                st.setState(STARTED)
+                st.setState(State.STARTED)
                 st.playSound("ItemSound.quest_accept")
                 htmltext = "31372-04.htm"
            else :
@@ -110,7 +112,7 @@ class Quest (JQuest) :
     Green_Totem = st.getQuestItemsCount(Totem2)
     Heart = st.getQuestItemsCount(Ice_Heart)
     if npcId == Asefa :
-        if st.getState()== CREATED :
+        if st.getState()== State.CREATED :
             htmltext = "31372-01.htm"
         elif id == 1 or id == 2 :
             htmltext = "31372-05.htm"
@@ -172,17 +174,13 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(610,qn,"Magical Power of Water - Part 2")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Asefa)
 
 QUEST.addTalkId(Asefa)
 QUEST.addTalkId(Alter)
 
 QUEST.addKillId(Ashutar)
-STARTED.addQuestDrop(Ashutar,Ice_Heart,1)
 
 for mobId in Ketra_Orcs:
     QUEST.addKillId(mobId)

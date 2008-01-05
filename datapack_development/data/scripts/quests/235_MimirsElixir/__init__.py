@@ -38,7 +38,7 @@ class Quest (JQuest) :
  
  def onEvent (self,event,st) :
     if event == "1" :
-        st.setState(PROGRESS)
+        st.setState(State.STARTED)
         st.set("cond","1")
         htmltext = "30166-02a.htm"
     elif event == "30718_1" :
@@ -55,7 +55,7 @@ class Quest (JQuest) :
     id = st.getState()
     cond = st.getInt("cond")
     if npcId == LADD :
-        if id == CREATED :
+        if id == State.CREATED :
             st.set("cond","0")
             if player.getRace() == Race.Kamael :
                 st.exitQuest(1)
@@ -68,8 +68,8 @@ class Quest (JQuest) :
                 htmltext = "30166-01a.htm"     #not qualified
             elif st.getInt("cond")==0 :
                 htmltext = "30166-02.htm"    # Successful start: Bring me Pure silver from Reagents quest
-        elif id == COMPLETED :
-            htmltext = "<html><body>You have already completed this quest.</body></html>"
+        elif id == State.COMPLETED :
+            htmltext = "<html><body>You have already State.COMPLETED this quest.</body></html>"
         # was asked to get pure silver but has not done so yet.  Repeat: get pure silver
         elif cond==1 and not st.getQuestItemsCount(PURE_SILVER) :
             htmltext = "30166-03.htm"    # Bring me Pure silver from Reagents quest
@@ -99,9 +99,9 @@ class Quest (JQuest) :
             htmltext = "30166-10.htm"     # here's what you do...
             st.takeItems(MIMIRS_ELIXIR,-1)  #remove this line for compatibility with L2JServer revisions prior to 376
             st.giveItems(SCROLL_ENCHANT_WEAPON_A,1)
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.unset("cond")
-    elif npcId == JOAN and id == PROGRESS:
+    elif npcId == JOAN and id == State.STARTED:
        # first time talking to Joan: You ask for True Gold, she sends you for Sage's stone
         if cond==2 :
             htmltext = "30718-01.htm"      # You want True Gold?  Please get the sage's stone.  Kill Chimera!
@@ -121,7 +121,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
      st = player.getQuestState(qn)
      if not st : return 
-     if st.getState() != PROGRESS : return 
+     if st.getState() != State.STARTED : return 
    
      npcId = npc.getNpcId()
      drop = st.getRandom(100)
@@ -137,11 +137,7 @@ class Quest (JQuest) :
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, qn, QUEST_DESCRIPTION)
 
-CREATED     = State('Start',     QUEST)
-PROGRESS    = State('Progress',   QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
 QUEST.addStartNpc(LADD)
 # Quest initialization

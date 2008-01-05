@@ -13,7 +13,9 @@ CHANCE = 90
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ALLIGATOR_PELTS]
 
  def onEvent (self,event,st) :
      htmltext = event
@@ -21,7 +23,7 @@ class Quest (JQuest) :
          htmltext = "30892-00a.htm"
          st.exitQuest(1)
      elif event == "30892-02.htm" :
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.set("cond","1")
          st.playSound("ItemSound.quest_accept")
      elif event == "2" :
@@ -39,7 +41,7 @@ class Quest (JQuest) :
      level = player.getLevel()
      cond = st.getInt("cond")
      amount = st.getQuestItemsCount(ALLIGATOR_PELTS)*40
-     if id == CREATED :
+     if id == State.CREATED :
         if level>=40 :
            htmltext = "30892-01.htm"
         else :
@@ -56,7 +58,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
      st = player.getQuestState(qn)
      if not st : return 
-     if st.getState() != STARTED : return 
+     if st.getState() != State.STARTED : return 
    
      npcId = npc.getNpcId()
      if st.getRandom(100)<CHANCE :
@@ -65,13 +67,9 @@ class Quest (JQuest) :
      return
 
 QUEST       = Quest(338,qn,"Alligator Hunter")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30892)
 
 QUEST.addTalkId(30892)
 
 QUEST.addKillId(ALLIGATOR)
-STARTED.addQuestDrop(ALLIGATOR,ALLIGATOR_PELTS,1)

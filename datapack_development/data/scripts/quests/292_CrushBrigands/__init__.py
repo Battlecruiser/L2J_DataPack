@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 import sys
 from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
@@ -16,13 +16,15 @@ ADENA = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [GOBLIN_NECKLACE, GOBLIN_PENDANT, GOBLIN_LORD_PENDANT, SUSPICIOUS_CONTRACT, SUSPICIOUS_MEMO]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30532-03.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "30532-06.htm" :
       st.takeItems(SUSPICIOUS_MEMO,-1)
@@ -37,9 +39,9 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30532 and id != STARTED : return htmltext
+   if npcId != 30532 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if npcId == 30532 :
      if st.getInt("cond")==0 :
@@ -87,7 +89,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId in [20322, 20323]: item = GOBLIN_NECKLACE
@@ -111,12 +113,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(292,qn,"Crush Brigands")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30532)
 
 QUEST.addTalkId(30532)
@@ -128,9 +125,3 @@ QUEST.addKillId(20323)
 QUEST.addKillId(20324)
 QUEST.addKillId(20327)
 QUEST.addKillId(20528)
-
-STARTED.addQuestDrop(20327,GOBLIN_NECKLACE,1)
-STARTED.addQuestDrop(20323,GOBLIN_PENDANT,1)
-STARTED.addQuestDrop(20528,GOBLIN_LORD_PENDANT,1)
-STARTED.addQuestDrop(20528,SUSPICIOUS_CONTRACT,1)
-STARTED.addQuestDrop(20327,SUSPICIOUS_MEMO,1)

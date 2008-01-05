@@ -33,13 +33,15 @@ def HaveAllQuestItems (st) :
 # Main Quest code 
 class Quest (JQuest) : 
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr) 
+ def __init__(self,id,name,descr):
+   JQuest.__init__(self,id,name,descr)
+   self.questItemIds = [GALLINS_OAK_WAND_ID, WAND_SPIRITBOUND1_ID, WAND_SPIRITBOUND2_ID, WAND_SPIRITBOUND3_ID]
 
  def onEvent (self,event,st) : 
     htmltext = event 
     if event == "30017-03.htm" : 
       st.set("cond","1") 
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept") 
       st.giveItems(GALLINS_OAK_WAND_ID,1) 
       st.giveItems(GALLINS_OAK_WAND_ID,1) 
@@ -52,7 +54,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn) 
    if not st: return htmltext 
    id = st.getState() 
-   if id == CREATED : 
+   if id == State.CREATED : 
      st.set("cond","0") 
      st.set("onlyone","0") 
    if npcId == 30017 and st.getInt("cond")==0 and st.getInt("onlyone")==0 : 
@@ -65,8 +67,8 @@ class Quest (JQuest) :
         htmltext = "30017-06.htm" 
         st.exitQuest(1) 
    elif npcId == 30017 and st.getInt("cond")==0 and st.getInt("onlyone")==1 : 
-      htmltext = "<html><body>This quest has already been completed.</body></html>" 
-   elif id == STARTED : 
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>" 
+   elif id == State.STARTED : 
      if npcId == 30017 and st.getInt("cond") and st.getQuestItemsCount(GALLINS_OAK_WAND_ID)>=1 and not HaveAllQuestItems(st) : 
         htmltext = "30017-04.htm" 
      elif npcId == 30017 and st.getInt("cond")==3 and HaveAllQuestItems(st) : 
@@ -84,7 +86,7 @@ class Quest (JQuest) :
             st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))   # Echo crystals
         htmltext = "30017-05.htm" 
         st.set("cond","0") 
-        st.setState(COMPLETED) 
+        st.setState(State.COMPLETED) 
         st.playSound("ItemSound.quest_finish") 
         st.set("onlyone","1")       
      elif npcId == 30045 and st.getInt("cond") : 
@@ -101,7 +103,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet): 
    st = player.getQuestState(qn) 
    if not st: return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    npcId = npc.getNpcId() 
    if st.getInt("cond") >= 1 and st.getItemEquipped(7) == GALLINS_OAK_WAND_ID and not st.getQuestItemsCount(DROPLIST[npcId]) : # (7) means weapon slot 
      st.takeItems(GALLINS_OAK_WAND_ID,1) 
@@ -112,12 +114,8 @@ class Quest (JQuest) :
    return 
 
 QUEST       = Quest(104,qn,"Spirit Of Mirrors") 
-CREATED     = State('Start', QUEST) 
-STARTED     = State('Started', QUEST) 
-COMPLETED   = State('Completed', QUEST) 
 
-
-QUEST.setInitialState(CREATED) 
+ 
 QUEST.addStartNpc(30017) 
 
 QUEST.addTalkId(30017) 
@@ -128,8 +126,3 @@ QUEST.addTalkId(30045)
 
 for mobId in DROPLIST.keys(): 
   QUEST.addKillId(mobId)
-  STARTED.addQuestDrop(mobId,DROPLIST[mobId],1) 
-
-STARTED.addQuestDrop(30017,GALLINS_OAK_WAND_ID,1) 
-STARTED.addQuestDrop(30017,GALLINS_OAK_WAND_ID,1) 
-STARTED.addQuestDrop(30017,GALLINS_OAK_WAND_ID,1) 

@@ -15,14 +15,16 @@ JEWEL_BOX = 7077
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ROUGH_JEWEL]
 
  def onEvent (self,event,st) :
    htmltext = event
    cond = st.getInt("cond")
    if event == "30091-1.htm" and cond == 0 :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    if event == "30879-1.htm" and cond == 1:
      st.set("cond","2")
@@ -62,7 +64,7 @@ class Quest (JQuest) :
        st.exitQuest(1)
    elif npcId == 30879 and cond == 1 :
      htmltext = "30879-0.htm"
-   elif id == STARTED :  
+   elif id == State.STARTED :  
        if npcId == 30091 and st.getQuestItemsCount(ROUGH_JEWEL) == 10 :
          htmltext = "30091-2.htm"
        elif npcId == 30091 and cond == 4 and st.getQuestItemsCount(ORIHARUKON) >= 5 and st.getQuestItemsCount(SILVER_NUGGET) >= 500 and st.getQuestItemsCount(THONS) >= 150 :
@@ -83,7 +85,7 @@ class Quest (JQuest) :
    if not partyMember : return
    st = partyMember.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return   
+   if st.getState() != State.STARTED : return   
    count = st.getQuestItemsCount(ROUGH_JEWEL)
    if count<10 :
      st.giveItems(ROUGH_JEWEL,1)
@@ -95,13 +97,9 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(35,qn,"Find Glittering Jewelry")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30091)
 QUEST.addTalkId(30091)
 
 QUEST.addTalkId(30879)
 QUEST.addKillId(20135)
-STARTED.addQuestDrop(20135,ROUGH_JEWEL,1)

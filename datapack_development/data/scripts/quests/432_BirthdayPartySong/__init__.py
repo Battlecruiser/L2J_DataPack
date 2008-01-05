@@ -15,7 +15,9 @@ BIRTHDAY_ECHO_CRYSTAL_ID = 7061
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [RED_CRYSTALS_ID]
  
  def onEvent (self,event,st) :
      htmltext = event
@@ -23,7 +25,7 @@ class Quest (JQuest) :
      if event == "1" and cond == 0 :
          htmltext = "31043-02.htm"
          st.set("cond","1")
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.playSound("ItemSound.quest_accept")
      elif event == "3" and st.getQuestItemsCount(RED_CRYSTALS_ID) == 50 and cond == 2 :
          st.giveItems(BIRTHDAY_ECHO_CRYSTAL_ID,25)
@@ -41,7 +43,7 @@ class Quest (JQuest) :
      npcId = npc.getNpcId()
      id = st.getState()
      cond = st.getInt("cond")
-     if id == CREATED :
+     if id == State.CREATED :
          htmltext = "31043-01.htm"
      elif cond ==1 :
          htmltext = "31043-03.htm"
@@ -52,7 +54,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
      st = player.getQuestState(qn)
      if not st : return 
-     if st.getState() != STARTED : return 
+     if st.getState() != State.STARTED : return 
      if st.getInt("cond") == 1 :
              numItems, chance = divmod(100*Config.RATE_DROP_QUEST,100)
              if st.getRandom(100) < chance :
@@ -69,14 +71,9 @@ class Quest (JQuest) :
      return
  
 QUEST       = Quest(432,qn,"Birthday Party Song")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(31043)
 
 QUEST.addTalkId(31043)
 
 QUEST.addKillId(21103)
-STARTED.addQuestDrop(21103,RED_CRYSTALS_ID,1)

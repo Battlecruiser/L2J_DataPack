@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # rewritten by Rolarga Version 0.3
 # version 0.4 - fixed on 2005.11.08
 # version 0.5 - updated by Kerberos on 2007.11.10
@@ -50,14 +50,16 @@ DROPLIST ={
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(3277,3293)
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
       htmltext = "30624-06.htm"
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
       st.giveItems(ASCALONS_LETTER1,1)
     elif event == "30624_1" :
@@ -112,10 +114,10 @@ class Quest (JQuest) :
    if not st : return htmltext
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30624 and id != STARTED : return htmltext
-   if id == COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
-   elif id == CREATED :
+   if npcId != 30624 and id != State.STARTED : return htmltext
+   if id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+   elif id == State.CREATED :
      st.set("cond","0")
    if npcId == 30624 and st.getInt("cond") == 0 :
         if player.getClassId().getId() in [0x01, 0x2d] and player.getLevel() > 38 :
@@ -149,7 +151,7 @@ class Quest (JQuest) :
       st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
       st.takeItems(MOUENS_LETTER,1)
       st.set("cond","0")
-      st.setState(COMPLETED)
+      st.setState(State.COMPLETED)
       st.playSound("ItemSound.quest_finish")
    elif npcId == 30624 and st.getInt("step") in [10,11,12,13] :
       htmltext = "30624-16.htm"
@@ -208,7 +210,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    cond = st.getInt("cond")
    npcId = npc.getNpcId()
    step, maxcount, chance, itemid = DROPLIST[npcId]
@@ -230,13 +232,7 @@ class Quest (JQuest) :
    return
 
 QUEST     = Quest(223,qn,"Test Of Champion")
-CREATED   = State('Start',     QUEST)
-STARTING  = State('Starting',  QUEST)
-STARTED   = State('Started',   QUEST)
-COMPLETED = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30624)
 
 QUEST.addTalkId(30624)
@@ -246,6 +242,3 @@ for npcId in [30093,30196,30625]:
 
 for mobId in [20145,20158,27088,27089,20551,20553,20577,20578,20579,20580,20581,20582,20780]:
     QUEST.addKillId(mobId)
-
-for item in range(3277,3293):
-    STARTED.addQuestDrop(30093,item,1)

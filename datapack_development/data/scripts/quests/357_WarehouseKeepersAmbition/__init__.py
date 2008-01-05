@@ -19,13 +19,15 @@ JADE_CRYSTAL = 5867
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [JADE_CRYSTAL]
 
  def onEvent (self,event,st) :
    htmltext = event
    if event == "30686-2.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "30686-7.htm" :
      count = st.getQuestItemsCount(JADE_CRYSTAL)
@@ -64,7 +66,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet):
-   partyMember = self.getRandomPartyMemberState(player,STARTED)
+   partyMember = self.getRandomPartyMemberState(player,State.STARTED)
    if not partyMember: return
    st = partyMember.getQuestState(qn)
    
@@ -75,14 +77,9 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(357,qn,"Warehouse Keepers Ambition")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(SILVA)
 QUEST.addTalkId(SILVA)
 
 for MOBS in range(20594,20598) :
   QUEST.addKillId(MOBS)
-
-STARTED.addQuestDrop(SILVA,JADE_CRYSTAL,1)

@@ -18,14 +18,16 @@ ADENA = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [BLOOD_OF_SAINT]
 
  def onEvent (self,event,st) :
    htmltext = event
    count = st.getQuestItemsCount(BLOOD_OF_SAINT)
    if event == "31517-1.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "31517-3.htm" :
      if count < 300 :
@@ -61,7 +63,7 @@ class Quest (JQuest) :
          else:
            htmltext = "31517-0a.htm"
            st.exitQuest(1)
-       elif id == STARTED :
+       elif id == State.STARTED :
            if st.getQuestItemsCount(BLOOD_OF_SAINT) == 300 :
              htmltext = "31517-2.htm"
            else :
@@ -73,7 +75,7 @@ class Quest (JQuest) :
    if not partyMember : return
    st = partyMember.getQuestState(qn)
    if st :
-      if st.getState() == STARTED :  
+      if st.getState() == State.STARTED :  
          count = st.getQuestItemsCount(BLOOD_OF_SAINT)  
          if st.getInt("cond") == 1 and count < 300 :  
             st.giveItems(BLOOD_OF_SAINT,1)  
@@ -85,14 +87,9 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(626,qn,"A Dark Twilight")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(31517)
 QUEST.addTalkId(31517)
 
 for mobs in range(21520,21541):
   QUEST.addKillId(mobs)
-
-STARTED.addQuestDrop(21520,BLOOD_OF_SAINT,1)

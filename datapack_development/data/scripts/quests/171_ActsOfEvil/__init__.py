@@ -25,14 +25,16 @@ ALVAH,ARODIN,TYRA,ROLENTO,NETI,BURAI=30381,30207,30420,30437,30425,30617
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [RANGERS_REPORT1, RANGERS_REPORT2, RANGERS_REPORT3, RANGERS_REPORT4, OL_MAHUM_HEAD, CARGOBOX, TYRAS_BILL, CERTIFICATE, BLADE_MOLD, WEAPON_TRADE_CONTRACT]
 
  def onEvent (self,event,st) :
      htmltext = event
      cond = st.getInt("cond")
-     if st.getState() != COMPLETED :
+     if st.getState() != State.COMPLETED :
        if event == "30381-02.htm" and cond == 0 :
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.set("cond","1")
          st.playSound("ItemSound.quest_accept")
        elif event == "30207-02.htm" and cond == 1 :
@@ -64,14 +66,14 @@ class Quest (JQuest) :
      level = player.getLevel()
      cond = st.getInt("cond")
      if npcId==ALVAH :
-         if id == CREATED :
+         if id == State.CREATED :
             if level > 26:
                htmltext = "30381-01.htm"
             else :
                htmltext = "30381-01a.htm"
                st.exitQuest(1)
-         elif id == COMPLETED :
-             htmltext = "<html><body>This quest has already been completed!</body></html>"
+         elif id == State.COMPLETED :
+             htmltext = "<html><body>This quest has already been State.COMPLETED!</body></html>"
          elif cond==1 :
              htmltext = "30381-02a.htm"
          elif cond==4 :
@@ -97,8 +99,8 @@ class Quest (JQuest) :
              htmltext = "30381-08.htm"
              st.giveItems(ADENA,90000)
              st.playSound("ItemSound.quest_finish")
-             st.setState(COMPLETED)
-     elif id == STARTED :
+             st.setState(State.COMPLETED)
+     elif id == State.STARTED :
          if npcId==ARODIN :
              if cond==1 :
                  htmltext = "30207-01.htm"
@@ -154,7 +156,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
      st = player.getQuestState(qn)
      if not st : return 
-     if st.getState() != STARTED : return 
+     if st.getState() != State.STARTED : return 
 
      npcId = npc.getNpcId()
      cond = st.getInt("cond")
@@ -200,11 +202,7 @@ class Quest (JQuest) :
      return
 
 QUEST       = Quest(171,qn,"Acts of Evil")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(ALVAH)
 
 QUEST.addTalkId(ALVAH)
@@ -214,17 +212,6 @@ QUEST.addTalkId(TYRA)
 QUEST.addTalkId(ROLENTO)
 QUEST.addTalkId(NETI)
 QUEST.addTalkId(BURAI)
-
-STARTED.addQuestDrop(ALVAH,RANGERS_REPORT1,1)
-STARTED.addQuestDrop(ALVAH,RANGERS_REPORT2,1)
-STARTED.addQuestDrop(ALVAH,RANGERS_REPORT3,1)
-STARTED.addQuestDrop(ALVAH,RANGERS_REPORT4,1)
-STARTED.addQuestDrop(ALVAH,OL_MAHUM_HEAD,1)
-STARTED.addQuestDrop(ALVAH,CARGOBOX,1)
-STARTED.addQuestDrop(ALVAH,TYRAS_BILL,1)
-STARTED.addQuestDrop(ALVAH,CERTIFICATE,1)
-STARTED.addQuestDrop(ALVAH,BLADE_MOLD,1)
-STARTED.addQuestDrop(ALVAH,WEAPON_TRADE_CONTRACT,1)
 
 for i in range(20494,20500)+[20062,20066,20438] :
     QUEST.addKillId(i)

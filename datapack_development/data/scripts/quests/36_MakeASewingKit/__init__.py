@@ -13,14 +13,16 @@ SEWING_KIT = 7078
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [REINFORCED_STEEL]
 
  def onEvent (self,event,st) :
    htmltext = event
    cond = st.getInt("cond")
    if event == "30847-1.htm" and cond == 0 :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    if event == "30847-3.htm" and cond == 2 :
      st.takeItems(REINFORCED_STEEL,5)
@@ -69,11 +71,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(36,qn,"Make A Sewing Kit")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30847)
 QUEST.addTalkId(30847)
 QUEST.addKillId(20566)
-STARTED.addQuestDrop(20566,REINFORCED_STEEL,1)

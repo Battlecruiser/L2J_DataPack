@@ -33,7 +33,9 @@ default="<html><body>You are either not carrying out your quest or don't meet th
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [SPECIAL_DRINK, FEE_OF_DRINK]
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -41,7 +43,7 @@ class Quest (JQuest) :
    if event == "31521-1.htm" :
      if cond==0:
        st.set("cond","1")
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.giveItems(SPECIAL_DRINK,5)
        st.playSound("ItemSound.quest_accept")
      else:
@@ -126,7 +128,7 @@ class Quest (JQuest) :
    if st :
         npcId = npc.getNpcId()
         id = st.getState()
-        if id == CREATED :
+        if id == State.CREATED :
              st.set("cond","0")
         cond = st.getInt("cond")
         if npcId == 31521 and cond == 0 :
@@ -134,7 +136,7 @@ class Quest (JQuest) :
                htmltext = "31521-0.htm"
          else:
                st.exitQuest(1)
-        elif id == STARTED :
+        elif id == State.STARTED :
            if npcId == 31547 and cond == 1 and st.getQuestItemsCount(SPECIAL_DRINK) :
                  htmltext = "31547-0.htm"
            elif npcId == 31546 and cond == 2 and st.getQuestItemsCount(SPECIAL_DRINK) :
@@ -150,16 +152,10 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(622,qn,"Delivery of special liquor")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(31521)
 
 QUEST.addTalkId(31521)
 
 for i in range(31543,31548):
     QUEST.addTalkId(i)
-
-STARTED.addQuestDrop(31521,SPECIAL_DRINK,1)
-STARTED.addQuestDrop(31521,FEE_OF_DRINK,1)

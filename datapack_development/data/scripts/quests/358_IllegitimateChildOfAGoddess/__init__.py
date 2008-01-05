@@ -34,12 +34,14 @@ MOBS = [ 20672,20673 ]
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [SN_SCALE]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30862-5.htm" :
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.set("cond","1")
        st.playSound("ItemSound.quest_accept")
     elif event == "30862-6.htm" :
@@ -63,14 +65,14 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
       st.set("cond","0")
       if player.getLevel() < 63 :
          st.exitQuest(1)
          htmltext = "30862-1.htm"
       else :
          htmltext = "30862-2.htm"
-   elif id == STARTED :
+   elif id == State.STARTED :
       if st.getQuestItemsCount(SN_SCALE) >= REQUIRED :
          htmltext = "30862-3.htm"
       else :
@@ -80,7 +82,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
      st = player.getQuestState(qn)
      if not st : return 
-     if st.getState() != STARTED : return 
+     if st.getState() != State.STARTED : return 
    
      count = st.getQuestItemsCount(SN_SCALE)
      numItems, chance = divmod(DROP_RATE,100)
@@ -100,12 +102,6 @@ class Quest (JQuest) :
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
 
-CREATED     = State('Start',     QUEST)
-STARTED     = State('Started',   QUEST)
-COMPLETED   = State('Completed', QUEST)
-
-QUEST.setInitialState(CREATED)
-
 # Quest NPC starter initialization
 QUEST.addStartNpc(OLTLIN)
 # Quest initialization
@@ -113,4 +109,3 @@ QUEST.addTalkId(OLTLIN)
 
 for i in MOBS :
   QUEST.addKillId(i)
-  STARTED.addQuestDrop(i,SN_SCALE,1)

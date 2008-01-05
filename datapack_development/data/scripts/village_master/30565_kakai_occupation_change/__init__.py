@@ -46,7 +46,7 @@ class Quest (JQuest) :
    if event == "30565-08.htm":
      return "30565-08.htm"
 
-   st.setState(COMPLETED)
+   st.setState(State.COMPLETED)
    st.exitQuest(1)
    return htmltext
 
@@ -61,35 +61,32 @@ class Quest (JQuest) :
    if npcId == KAKAI_LORD_OF_FLAME and Race in [Race.orc]:
      if ClassId in [ClassId.orcFighter]:
        htmltext = "30565-01.htm"
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        return htmltext
      if ClassId in [ClassId.orcRaider, ClassId.orcMonk, ClassId.orcShaman]:
        htmltext = "30565-09.htm"
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
        st.exitQuest(1)
        return htmltext
      if ClassId in [ClassId.destroyer, ClassId.tyrant, ClassId.overlord, ClassId.warcryer]:
        htmltext = "30565-10.htm"
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
        st.exitQuest(1)
        return htmltext
      if ClassId in [ClassId.orcMage]:
        htmltext = "30565-06.htm"
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        return htmltext
 
    # All other Races must be out
    if npcId == KAKAI_LORD_OF_FLAME and Race in [Race.dwarf, Race.darkelf, Race.elf, Race.human]:
-     st.setState(COMPLETED)
+     st.setState(State.COMPLETED)
      st.exitQuest(1)
      return "30565-11.htm"
 
 QUEST   = Quest(30565,qn,"village_master")
-CREATED   = State('Start',     QUEST)
-STARTED   = State('Started',   QUEST)
-COMPLETED = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 
 QUEST.addStartNpc(30565)
 

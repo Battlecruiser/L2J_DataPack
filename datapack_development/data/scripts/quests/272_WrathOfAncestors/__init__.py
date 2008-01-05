@@ -1,4 +1,4 @@
-# Maked by Mr. - Version 0.3 by DrLecter
+# Made by Mr. - Version 0.3 by DrLecter
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -11,13 +11,15 @@ ADENA = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [GRAVE_ROBBERS_HEAD]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30572-03.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
@@ -29,7 +31,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
 
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if st.getInt("cond") == 0 :
      if player.getRace().ordinal() != 3 :
@@ -55,7 +57,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    count = st.getQuestItemsCount(GRAVE_ROBBERS_HEAD)  
    if count < 50 :
@@ -68,17 +70,10 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(272,qn,"Wrath Of Ancestors")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30572)
 
 QUEST.addTalkId(30572)
 
 QUEST.addKillId(20319)
 QUEST.addKillId(20320)
-
-STARTED.addQuestDrop(20319,GRAVE_ROBBERS_HEAD,1)

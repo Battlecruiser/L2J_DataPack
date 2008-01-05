@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # rewritten by Rolarga Version 0.3
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://forum.l2jdp.com for more details
@@ -47,7 +47,7 @@ class Quest (JQuest) :
         if st.getInt("step")==0 :
            st.set("cond","1")
            st.set("step","1")
-           st.setState(STARTED)
+           st.setState(State.STARTED)
            st.playSound("ItemSound.quest_accept")
            st.giveItems(ORDER_GLUDIO,1)
            st.giveItems(ORDER_DION,1)
@@ -89,11 +89,11 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("step","0")
      st.set("cond","0")
-   if id == COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+   if id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif st.getInt("step")==0 :
       if player.getClassId().getId() in [0x01,0x2f,0x13,0x20] :
          if player.getLevel() >= 39 :
@@ -129,7 +129,7 @@ class Quest (JQuest) :
             htmltext = "30623-18.htm"
             st.unset("step")
             st.set("cond","0")
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.playSound("ItemSound.quest_finish")
         else :
           htmltext = "30623-17.htm"
@@ -138,7 +138,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
   st = player.getQuestState(qn)
   if not st : return 
-  if st.getState() != STARTED : return 
+  if st.getState() != State.STARTED : return 
    
   npcId = npc.getNpcId()
   step,maxcount,item=DROPLIST[npcId]
@@ -152,13 +152,8 @@ class Quest (JQuest) :
   return
 
 QUEST       = Quest(222,qn,"Test Of Duelist")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30623)
 
 QUEST.addTalkId(30623)

@@ -23,7 +23,9 @@ MOBS = [ 21299,21304 ]
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [EYE_OF_DARKNESS]
 
  def onEvent (self,event,st) :
    cond = st.getInt("cond")
@@ -31,7 +33,7 @@ class Quest (JQuest) :
    if event == "31683-1.htm" :
      if st.getPlayer().getLevel() >= 68 : 
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
      else :
         htmltext = "31683-0a.htm"
@@ -74,7 +76,7 @@ class Quest (JQuest) :
      if not partyMember: return
      st = partyMember.getQuestState(qn)
      if st :
-        if st.getState() == STARTED :  
+        if st.getState() == State.STARTED :  
            count = st.getQuestItemsCount(EYE_OF_DARKNESS)
            chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
            numItems, chance = divmod(chance,100)
@@ -91,14 +93,9 @@ class Quest (JQuest) :
      return
 
 QUEST       = Quest(602,qn,"Shadow Of Light")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(EYE_OF_ARGOS)
 QUEST.addTalkId(EYE_OF_ARGOS)
 
 for i in MOBS :
   QUEST.addKillId(i)
-
-STARTED.addQuestDrop(EYE_OF_ARGOS,EYE_OF_DARKNESS,1)

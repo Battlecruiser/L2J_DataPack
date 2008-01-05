@@ -26,7 +26,7 @@ class Quest (JQuest) :
     if event == "32012-02.htm" :
       if st.getQuestItemsCount(CSS) > 99 :
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         st.takeItems(CSS,100)
         htmltext = "32012-03.htm"
@@ -43,7 +43,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    cond=st.getInt("cond")
-   if npcId == TANTAN and id == CREATED:
+   if npcId == TANTAN and id == State.CREATED:
        if st.getPlayer().getLevel() >= 46 :
            htmltext = "32012-01.htm"
        else:
@@ -60,10 +60,8 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(652,qn,"AnAgedExAdventurer")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(TANTAN)
 
 QUEST.addTalkId(TANTAN)

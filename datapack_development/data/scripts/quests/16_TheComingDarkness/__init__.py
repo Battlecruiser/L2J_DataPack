@@ -29,7 +29,7 @@ class Quest (JQuest) :
    if event == "31517-2.htm" :
      st.giveItems(CRYSTAL_OF_SEAL,5)
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    if event == "31512-1.htm" :
      if cond == 1 :
@@ -66,17 +66,17 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if npcId == HIERARCH and st.getInt("cond") == 0 :
      if player.getLevel() >= 62 :
        htmltext = "31517-0.htm"
-     if id == COMPLETED :
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
+     if id == State.COMPLETED :
+       htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
      else:
        return htmltext
        st.exitQuest(1)
-   if id == STARTED :    
+   if id == State.STARTED :    
        if npcId == EVIL_ALTAR_1 and cond == 1 :
          htmltext = "31512-0.htm"
        if npcId == EVIL_ALTAR_2 and cond == 2 :
@@ -90,17 +90,14 @@ class Quest (JQuest) :
        if npcId == HIERARCH and cond == 6 :
          st.addExpAndSp(221958,0)
          st.set("cond","0")
-         st.setState(COMPLETED)
+         st.setState(State.COMPLETED)
          st.playSound("ItemSound.quest_finish")
          htmltext = "31517-3.htm"
    return htmltext
 
 QUEST       = Quest(16,qn,"The Coming Darkness")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(31517)
 QUEST.addTalkId(31517)
 

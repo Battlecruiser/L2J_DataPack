@@ -15,14 +15,16 @@ MYSTERIOUS_CLOTH = 7076
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [SPINNERET]
 
  def onEvent (self,event,st) :
    htmltext = event
    cond = st.getInt("cond")
    if event == "30088-1.htm" and cond == 0:
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    if event == "30294-1.htm" and cond == 1 :
      st.set("cond","2")
@@ -65,7 +67,7 @@ class Quest (JQuest) :
          st.exitQuest(1)
      else :
        st.exitQuest(1)
-   elif id == STARTED :    
+   elif id == State.STARTED :    
        if npcId == 30294 and cond == 1 :
          htmltext = "30294-0.htm"
        elif npcId == 30088 and cond == 2 :
@@ -100,7 +102,7 @@ class Quest (JQuest) :
            
    st = partyMember.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
    
    count = st.getQuestItemsCount(SPINNERET)
    if count < 10 :
@@ -113,14 +115,10 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(34,qn,"In Search of Clothes")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30088)
 QUEST.addTalkId(30088)
 
 QUEST.addTalkId(30165)
 QUEST.addTalkId(30294)
 QUEST.addKillId(20560)
-STARTED.addQuestDrop(20560,SPINNERET,1)

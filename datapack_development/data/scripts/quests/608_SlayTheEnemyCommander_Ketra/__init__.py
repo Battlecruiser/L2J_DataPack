@@ -16,7 +16,7 @@ Wisdom_Totem = 7220
 Ketra_Alliance_Four = 7214
 
 def giveReward(st,npc):
-    if st.getState() == STARTED :
+    if st.getState() == State.STARTED :
         npcId = npc.getNpcId()
         cond = st.getInt("cond")
         if npcId == Mos :
@@ -28,7 +28,9 @@ def giveReward(st,npc):
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [Mos_Head]
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -36,7 +38,7 @@ class Quest (JQuest) :
        if st.getPlayer().getAllianceWithVarkaKetra() == 4 and st.getQuestItemsCount(Ketra_Alliance_Four) :
             if st.getPlayer().getLevel() >= 75 :
                     st.set("cond","1")
-                    st.setState(STARTED)
+                    st.setState(State.STARTED)
                     st.playSound("ItemSound.quest_accept")
                     htmltext = "31370-04.htm"
             else :
@@ -72,7 +74,7 @@ class Quest (JQuest) :
               else :
                   htmltext = "31370-05.htm"
           #else:
-              #htmltext="<html><body>This quest has already been completed</body></html>"
+              #htmltext="<html><body>This quest has already been State.COMPLETED</body></html>"
     return htmltext
 
  def onKill(self,npc,player,isPet):
@@ -91,12 +93,8 @@ class Quest (JQuest) :
     return
 
 QUEST       = Quest(608,qn,"Slay The Enemy Commander!")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Kadun)
 QUEST.addTalkId(Kadun)
 
-STARTED.addQuestDrop(Mos,Mos_Head,1)
 QUEST.addKillId(Mos)

@@ -13,14 +13,16 @@ WOODEN_ARROW = 17
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [GIANT_SPIDER_SKIN]
 
  def onEvent (self,event,st) :
     htmltext = event
     count=st.getQuestItemsCount(GIANT_SPIDER_SKIN)
     if event == "30497-03.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "30497-06.htm" :
       st.exitQuest(1)
@@ -49,9 +51,9 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30497 and id != STARTED : return htmltext
+   if npcId != 30497 and id != State.STARTED : return htmltext
 
-   if id != STARTED :
+   if id != State.STARTED :
      st.set("cond","0")
    if st.getInt("cond")==0 :
      if player.getLevel() >= 15 :
@@ -81,7 +83,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    st.giveItems(GIANT_SPIDER_SKIN,1)
@@ -89,12 +91,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(259,qn,"Ranchers Plea")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30497)
 QUEST.addTalkId(30497)
 
@@ -103,5 +100,3 @@ QUEST.addTalkId(30405)
 QUEST.addKillId(20103)
 QUEST.addKillId(20106)
 QUEST.addKillId(20108)
-
-STARTED.addQuestDrop(20103,GIANT_SPIDER_SKIN,1)

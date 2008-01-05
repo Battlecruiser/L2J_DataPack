@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://forum.l2jdp.com for more details
 import sys
@@ -20,7 +20,9 @@ ORB_OF_ABYSS = 1270
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(1262, 1271)
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -30,7 +32,7 @@ class Quest (JQuest) :
         st.set("id","0")
         htmltext = "30330-06.htm"
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(SIDRAS_LETTER1,1)
     elif event == "413_1" :
@@ -70,18 +72,10 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30330 and id != STARTED : return htmltext
+   if npcId != 30330 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30330 and st.getInt("cond")==0 :
-        if st.getInt("cond")<15 :
-          htmltext = "30330-01.htm"
-        else:
-          htmltext = "30330-01.htm"
+        htmltext = "30330-01.htm"
    elif npcId == 30330 and st.getInt("cond") :
         if st.getQuestItemsCount(SIDRAS_LETTER1) == 1 :
           htmltext = "30330-07.htm"
@@ -95,7 +89,7 @@ class Quest (JQuest) :
             st.takeItems(GARMIEL_BOOK,1)
             st.giveItems(ORB_OF_ABYSS,1)
             st.set("cond","0")
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.playSound("ItemSound.quest_finish")
    elif npcId == 30377 and st.getInt("cond") :
         if st.getQuestItemsCount(SIDRAS_LETTER1) == 1 :
@@ -134,7 +128,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId == 20776 :
@@ -186,13 +180,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(413,qn,"Path To Shillien Oracle")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30330)
 
 QUEST.addTalkId(30330)
@@ -205,15 +193,3 @@ QUEST.addKillId(20458)
 QUEST.addKillId(20514)
 QUEST.addKillId(20515)
 QUEST.addKillId(20776)
-
-STARTED.addQuestDrop(30375,ANDARIEL_BOOK,1)
-STARTED.addQuestDrop(30377,GARMIEL_BOOK,1)
-STARTED.addQuestDrop(20776,BLOODY_RUNE1,1)
-STARTED.addQuestDrop(30330,SIDRAS_LETTER1,1)
-STARTED.addQuestDrop(20514,ASHEN_BONES,1)
-STARTED.addQuestDrop(20515,ASHEN_BONES,1)
-STARTED.addQuestDrop(20457,ASHEN_BONES,1)
-STARTED.addQuestDrop(20458,ASHEN_BONES,1)
-STARTED.addQuestDrop(30375,PENITENTS_MARK,1)
-STARTED.addQuestDrop(30377,PRAYER_OF_ADON,1)
-STARTED.addQuestDrop(30377,BLANK_SHEET1,1)

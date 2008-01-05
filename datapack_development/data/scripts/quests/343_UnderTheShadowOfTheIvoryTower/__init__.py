@@ -39,7 +39,9 @@ toss_msg=[["You're right!","You win!"],\
           ["Ho ho! Right again!","You won four times in a row!"]]
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ORB]
 
  def onEvent (self,event,st) :
      htmltext = event
@@ -47,7 +49,7 @@ class Quest (JQuest) :
      random2 = st.getRandom(2)
      orbs = st.getQuestItemsCount(ORB)
      if event == "30834-02.htm" :
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.set("cond","1")
         st.playSound("ItemSound.quest_accept")
      elif event == "30834-05.htm" :
@@ -155,7 +157,7 @@ class Quest (JQuest) :
      level = player.getLevel()
      cond = st.getInt("cond")
      if npcId==30834 :
-         if id == CREATED :
+         if id == State.CREATED :
              if player.getClassId().getId() in [ 0x11,0xc,0xd,0xe,0x10,0x1a,0x1b,0x1c,0x1e,0x28,0x29,0x2b,0x5e,0x5f,0x60,0x61,0x62,0x67,0x68,0x69,0x6e,0x6f,0x70]:
                if level >= 40:
                  htmltext = "30834-01.htm"
@@ -188,7 +190,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
      st = player.getQuestState(qn)
      if not st : return 
-     if st.getState() != STARTED : return 
+     if st.getState() != State.STARTED : return 
    
      npcId = npc.getNpcId()
      if st.getRandom(100) < CHANCE :
@@ -197,10 +199,7 @@ class Quest (JQuest) :
      return
 
 QUEST       = Quest(343,qn,"Under The Shadow Of The Ivory Tower")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30834)
 
 QUEST.addTalkId(30834)
@@ -210,5 +209,3 @@ QUEST.addTalkId(30934)
 
 for i in range(20563,20567) :
     QUEST.addKillId(i)
-
-STARTED.addQuestDrop(30834,ORB,1)

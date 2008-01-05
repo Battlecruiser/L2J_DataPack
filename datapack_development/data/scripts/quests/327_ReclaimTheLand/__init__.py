@@ -32,14 +32,16 @@ DROPLIST = {
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [CLAY_URN_FRAGMENT, BRASS_TRINKET_PIECE, BRONZE_MIRROR_PIECE, JADE_NECKLACE_BEAD, TUREK_DOGTAG, TUREK_MEDALLION]
 
  def onEvent (self,event,st) :
     htmltext = event
     n=st.getRandom(100)
     if event == "30597-03.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "30597-06.htm" :
       st.exitQuest(1)
@@ -128,9 +130,9 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30597 and id != STARTED : return htmltext
+   if npcId != 30597 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if npcId == 30597 :
      if st.getInt("cond")==0 :
@@ -156,7 +158,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    item,chance=DROPLIST[npc.getNpcId()]
    st.giveItems(item,1)
@@ -174,12 +176,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(327,qn,"Reclaim The Land")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30597)
 
 QUEST.addTalkId(30597)
@@ -190,10 +187,3 @@ QUEST.addTalkId(30597)
 
 for i in range(20495,20502) :
     QUEST.addKillId(i)
-
-STARTED.addQuestDrop(20495,CLAY_URN_FRAGMENT,1)
-STARTED.addQuestDrop(20496,BRASS_TRINKET_PIECE,1)
-STARTED.addQuestDrop(20497,BRONZE_MIRROR_PIECE,1)
-STARTED.addQuestDrop(20498,JADE_NECKLACE_BEAD,1)
-STARTED.addQuestDrop(20498,TUREK_DOGTAG,1)
-STARTED.addQuestDrop(20499,TUREK_MEDALLION,1)

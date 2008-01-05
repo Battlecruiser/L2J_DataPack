@@ -32,7 +32,7 @@ class Quest (JQuest) :
      if st.getPlayer().getLevel() >= 61 :
        st.giveItems(BLOOD_OF_SAINT,4)
        st.set("cond","1")
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
      else :
        htmltext = "31517-02a.htm"
@@ -67,8 +67,8 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    blood = st.getQuestItemsCount(BLOOD_OF_SAINT)
    id = st.getState()
-   if id == COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+   if id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == HIERARCH :
      if cond == 0 :
         htmltext = "31517-00.htm"
@@ -82,10 +82,10 @@ class Quest (JQuest) :
      else :
         st.addExpAndSp(105527,0)
         st.unset("cond")
-        st.setState(COMPLETED)
+        st.setState(State.COMPLETED)
         st.playSound("ItemSound.quest_finish")
         htmltext = "31517-03.htm"
-   elif id == STARTED :    
+   elif id == State.STARTED :    
      if npcId == SAINT_ALTAR_1 :
         if cond == 1 :
           if blood :
@@ -121,11 +121,8 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(17,qn,"Light and Darkness")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(HIERARCH)
 QUEST.addTalkId(HIERARCH)
 

@@ -22,7 +22,7 @@ class Quest (JQuest) :
      htmltext = event
      if event == "30890-03.htm" :
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
      elif event == "30890-07.htm" :
         if st.getQuestItemsCount(PIRATES_TREASURE_MAP) :
            st.set("cond","2")
@@ -72,7 +72,7 @@ class Quest (JQuest) :
 
      npcId = npc.getNpcId()
      id = st.getState()
-     if id == CREATED :
+     if id == State.CREATED :
        if player.getLevel() >= 42:  
           if st.getQuestItemsCount(PIRATES_TREASURE_MAP) :
             htmltext = "30890-01.htm"
@@ -84,15 +84,13 @@ class Quest (JQuest) :
           st.exitQuest(1)
      elif npcId == ESPEN :
         htmltext = "30890-03a.htm"
-     elif npcId == PIRATES_CHEST and st.getInt("cond") == 2 and id == STARTED:
+     elif npcId == PIRATES_CHEST and st.getInt("cond") == 2 and id == State.STARTED:
         htmltext = "31148-01.htm"
      return htmltext
 
 QUEST       = Quest(383,qn,"Searching For Treasure")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(ESPEN)
 
 QUEST.addTalkId(ESPEN)

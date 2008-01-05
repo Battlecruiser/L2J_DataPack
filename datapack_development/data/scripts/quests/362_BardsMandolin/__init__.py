@@ -8,13 +8,15 @@ qn = "362_BardsMandolin"
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [4316, 4317]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30957_2.htm" :
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
     elif event == "30957_5.htm" :
         st.giveItems(57,10000)
@@ -31,9 +33,9 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30957 and id != STARTED : return htmltext
+   if npcId != 30957 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    cond = st.getInt("cond")
    if npcId == 30957 and cond == 0 :
@@ -63,17 +65,10 @@ class Quest (JQuest) :
 
 
 QUEST       = Quest(362,qn,"Bards Mandolin")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30957)
 QUEST.addTalkId(30957)
 
 QUEST.addTalkId(30956)
 QUEST.addTalkId(30958)
 QUEST.addTalkId(30837)
-
-STARTED.addQuestDrop(30957,4316,1)
-STARTED.addQuestDrop(30957,4317,1)

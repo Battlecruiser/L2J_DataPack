@@ -162,7 +162,9 @@ def giveReward(st,item,chance,MAX,drop) :
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+   JQuest.__init__(self,id,name,descr)
+   self.questItemIds = [Varka_Badge_Soldier, Varka_Badge_Officer, Varka_Badge_Captain]
 
  def onEvent (self,event,st) :
    cond = st.getInt("cond")
@@ -173,7 +175,7 @@ class Quest (JQuest) :
        if player.getLevel() >= 74 :
             st.set("cond","1")
             st.set("id","2")
-            st.setState(STARTED)
+            st.setState(State.STARTED)
             st.playSound("ItemSound.quest_accept")
             htmltext = "31371-03a.htm"
        else :
@@ -275,7 +277,7 @@ class Quest (JQuest) :
                   elif VBadgeS >= 100 :
                       htmltext = "31371-09.htm"
           elif KAlliance :
-              st.setState(STARTED)
+              st.setState(State.STARTED)
               st.set("id","2")
               if KAlliance1 :
                   if cond != 2 :
@@ -336,11 +338,11 @@ class Quest (JQuest) :
     return htmltext
 
  def onKill(self,npc,player,isPet):
-   partyMember = self.getRandomPartyMemberState(player,STARTED)
+   partyMember = self.getRandomPartyMemberState(player,State.STARTED)
    if not partyMember : return
    st = partyMember.getQuestState(qn)
    if st :
-      if st.getState() == STARTED :
+      if st.getState() == State.STARTED :
           npcId = npc.getNpcId()
           cond = st.getInt("cond")
           id = st.getInt("id")
@@ -382,17 +384,11 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(605,qn,"Alliance With Ketra Orcs")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Wahkan)
 QUEST.addTalkId(Wahkan)
 
 for mobId in Chance.keys() :
     QUEST.addKillId(mobId)
-STARTED.addQuestDrop(Wahkan,Varka_Badge_Soldier,1)
-STARTED.addQuestDrop(Wahkan,Varka_Badge_Officer,1)
-STARTED.addQuestDrop(Wahkan,Varka_Badge_Captain,1)
 for mobId in Ketra_Orcs :
     QUEST.addKillId(mobId)

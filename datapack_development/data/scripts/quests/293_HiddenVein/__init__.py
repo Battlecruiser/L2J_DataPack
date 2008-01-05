@@ -13,13 +13,15 @@ ADENA = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [HIDDEN_VEIN_MAP, CHRYSOLITE_ORE, TORN_MAP_FRAGMENT]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30535-03.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "30535-06.htm" :
       st.takeItems(TORN_MAP_FRAGMENT,-1)
@@ -39,9 +41,9 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30535 and id != STARTED : return htmltext
+   if npcId != 30535 and id != State.STARTED : return htmltext
    
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if npcId == 30535 :
      if st.getInt("cond")==0 :
@@ -79,7 +81,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    n = st.getRandom(100)
    if n > 50 :
@@ -91,12 +93,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(293,qn,"Hidden Vein")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30535)
 
 QUEST.addTalkId(30535)
@@ -106,7 +103,3 @@ QUEST.addTalkId(30539)
 QUEST.addKillId(20446)
 QUEST.addKillId(20447)
 QUEST.addKillId(20448)
-
-STARTED.addQuestDrop(30539,HIDDEN_VEIN_MAP,1)
-STARTED.addQuestDrop(20446,CHRYSOLITE_ORE,1)
-STARTED.addQuestDrop(20447,TORN_MAP_FRAGMENT,1)

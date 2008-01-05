@@ -127,9 +127,6 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST   = Quest(99990,qn,"village_master")
-CREATED = State('Start', QUEST)
-
-QUEST.setInitialState(CREATED)
 
 for npc in NPCS_MALE1 + NPCS_MALE2 + NPCS_FEMALE1 + NPCS_FEMALE2:
     QUEST.addStartNpc(npc)

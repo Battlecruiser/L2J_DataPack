@@ -41,13 +41,19 @@ DROPLIST={
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [SCROLL_OF_DARKELF_TRUST_ID, SCROLL_OF_ELF_TRUST_ID, SCROLL_OF_DWARF_TRUST_ID, SCROLL_OF_ORC_TRUST_ID, BREATH_OF_WINDS_ID,
+                SEED_OF_VERDURE_ID, ORDER_OF_OZZY_ID, LETTER_TO_ELF_ID, ORDER_OF_CLAYTON_ID, BASILISK_PLASMA_ID, STAKATO_ICHOR_ID, HONEY_DEW_ID,
+                LETTER_TO_DARKELF_ID, LETTER_OF_THIFIELL_ID, LETTER_TO_SERESIN_ID, LETTER_TO_ORC_ID, LETTER_OF_MANAKIA_ID, LETTER_TO_MANAKIA_ID,
+                PARASITE_OF_LOTA_ID, LETTER_TO_DWARF_ID, LETTER_TO_NICHOLA_ID, HEART_OF_PORTA_ID, ORDER_OF_NICHOLA_ID, RECOMMENDATION_OF_HOLLIN_ID,
+                BLOOD_OF_GUARDIAN_BASILISK_ID, STAKATOS_FLUIDS_ID, GIANT_APHID_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30191-04.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
       st.giveItems(LETTER_TO_ELF_ID,1)
       st.giveItems(LETTER_TO_DARKELF_ID,1)
@@ -93,9 +99,9 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30191 and id != STARTED : return htmltext
+   if npcId != 30191 and id != State.STARTED : return htmltext
 
-   if id == CREATED :                                      # Check if is starting the quest
+   if id == State.CREATED :                                      # Check if is starting the quest
      st.set("cond","0")
      st.set("id","0")
      if npcId == 30191 :
@@ -108,9 +114,9 @@ class Quest (JQuest) :
        else:
          htmltext = "30191-02.htm"
          st.exitQuest(1)
-   elif id == COMPLETED :                                  # Check if the quest is already made
+   elif id == State.COMPLETED :                                  # Check if the quest is already made
       if npcId == 30191 :
-        htmltext = "<html><body>This quest has already been completed.</body></html>"
+        htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    else :                                                  # The quest it self
      try :
        cond = st.getInt("cond")
@@ -250,7 +256,7 @@ class Quest (JQuest) :
            st.giveItems(MARK_OF_TRUST_ID,1)
            st.unset("cond")
            st.unset("id")
-           st.setState(COMPLETED)
+           st.setState(State.COMPLETED)
            st.playSound("ItemSound.quest_finish")
    return htmltext
 
@@ -258,7 +264,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
 
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
@@ -328,13 +334,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(217,qn,"Testimony Of Trust")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30191)
 
 QUEST.addTalkId(30191)
@@ -351,31 +351,3 @@ QUEST.addTalkId(30657)
 
 for i in DROPLIST.keys()+[20013,20019,20036,20044,20553] :
     QUEST.addKillId(i)
-
-STARTED.addQuestDrop(30358,SCROLL_OF_DARKELF_TRUST_ID,1)
-STARTED.addQuestDrop(30154,SCROLL_OF_ELF_TRUST_ID,1)
-STARTED.addQuestDrop(30531,SCROLL_OF_DWARF_TRUST_ID,1)
-STARTED.addQuestDrop(30565,SCROLL_OF_ORC_TRUST_ID,1)
-STARTED.addQuestDrop(27120,BREATH_OF_WINDS_ID,1)
-STARTED.addQuestDrop(27121,SEED_OF_VERDURE_ID,1)
-STARTED.addQuestDrop(30154,ORDER_OF_OZZY_ID,1)
-STARTED.addQuestDrop(30191,LETTER_TO_ELF_ID,1)
-STARTED.addQuestDrop(30464,ORDER_OF_CLAYTON_ID,1)
-STARTED.addQuestDrop(20550,BASILISK_PLASMA_ID,1)
-STARTED.addQuestDrop(20157,STAKATO_ICHOR_ID,1)
-STARTED.addQuestDrop(20082,HONEY_DEW_ID,1)
-STARTED.addQuestDrop(30191,LETTER_TO_DARKELF_ID,1)
-STARTED.addQuestDrop(30358,LETTER_OF_THIFIELL_ID,1)
-STARTED.addQuestDrop(30191,LETTER_TO_SERESIN_ID,1)
-STARTED.addQuestDrop(30657,LETTER_TO_ORC_ID,1)
-STARTED.addQuestDrop(30515,LETTER_OF_MANAKIA_ID,1)
-STARTED.addQuestDrop(30565,LETTER_TO_MANAKIA_ID,1)
-STARTED.addQuestDrop(20553,PARASITE_OF_LOTA_ID,1)
-STARTED.addQuestDrop(30657,LETTER_TO_DWARF_ID,1)
-STARTED.addQuestDrop(30531,LETTER_TO_NICHOLA_ID,1)
-STARTED.addQuestDrop(20213,HEART_OF_PORTA_ID,1)
-STARTED.addQuestDrop(30621,ORDER_OF_NICHOLA_ID,1)
-STARTED.addQuestDrop(30191,RECOMMENDATION_OF_HOLLIN_ID,1)
-STARTED.addQuestDrop(20550,BLOOD_OF_GUARDIAN_BASILISK_ID,1)
-STARTED.addQuestDrop(20157,STAKATOS_FLUIDS_ID,1)
-STARTED.addQuestDrop(20082,GIANT_APHID_ID,1)

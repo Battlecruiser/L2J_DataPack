@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -15,19 +15,20 @@ ADENA_ID = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [SENTRY_BLADE1_ID, OLD_BRONZE_SWORD_ID, JENNIES_LETTER_ID, SENTRY_BLADE2_ID, SENTRY_BLADE3_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
       st.set("id","0")
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
       htmltext = "30349-03.htm"
       st.giveItems(JENNIES_LETTER_ID,1)
     return htmltext
-
 
  def onTalk (self,npc,player):
    htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
@@ -36,26 +37,17 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30349 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
-      if st.getInt("cond")<15 :
-        if player.getRace().ordinal() != 2 :
-          htmltext = "30349-00.htm"
-        elif player.getLevel() >= 3 :
-          htmltext = "30349-02.htm"
-          return htmltext
-        else:
-          htmltext = "30349-01.htm"
-          st.exitQuest(1)
-      else:
-        htmltext = "30349-01.htm"
-        st.exitQuest(1)
+     if player.getRace().ordinal() != 2 :
+       htmltext = "30349-00.htm"
+     elif player.getLevel() >= 3 :
+       htmltext = "30349-02.htm"
+       return htmltext
+     else:
+       htmltext = "30349-01.htm"
+       st.exitQuest(1)
    elif npcId == 30349 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30349 and st.getInt("cond")==1 and st.getQuestItemsCount(JENNIES_LETTER_ID) :
         htmltext = "30349-04.htm"
    elif npcId == 30349 and st.getInt("cond")==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE2_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE3_ID)==1 :
@@ -69,11 +61,11 @@ class Quest (JQuest) :
           htmltext = "30349-06.htm"
           st.takeItems(OLD_BRONZE_SWORD_ID,2)
           st.set("cond","0")
-          st.setState(COMPLETED)
+          st.setState(State.COMPLETED)
           st.playSound("ItemSound.quest_finish")
           st.set("onlyone","1")
           st.giveItems(ADENA_ID,820)
-   elif id == STARTED :       
+   elif id == State.STARTED :       
        if npcId == 30360 and st.getInt("cond")==1 and st.getQuestItemsCount(JENNIES_LETTER_ID)==1 :
             htmltext = "30360-01.htm"
             st.takeItems(JENNIES_LETTER_ID,1)
@@ -99,13 +91,7 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(168,qn,"Deliver Supplies")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30349)
 
 QUEST.addTalkId(30349)
@@ -113,10 +99,3 @@ QUEST.addTalkId(30349)
 QUEST.addTalkId(30355)
 QUEST.addTalkId(30357)
 QUEST.addTalkId(30360)
-
-STARTED.addQuestDrop(30360,SENTRY_BLADE1_ID,1)
-STARTED.addQuestDrop(30355,OLD_BRONZE_SWORD_ID,1)
-STARTED.addQuestDrop(30357,OLD_BRONZE_SWORD_ID,1)
-STARTED.addQuestDrop(30349,JENNIES_LETTER_ID,1)
-STARTED.addQuestDrop(30360,SENTRY_BLADE2_ID,1)
-STARTED.addQuestDrop(30360,SENTRY_BLADE3_ID,1)

@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -22,14 +22,16 @@ NECKLACE = 906
  
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [DARINGS_LETTER, RAPUNZELS_KERCHIEF, DARINGS_RECEIPT, BAULS_POTION]
 
  def onEvent (self,event,st) :
    htmltext = event 
    if event == "30048-06.htm" : 
      st.set("cond","1") 
      st.set("id","1") 
-     st.setState(STARTED) 
+     st.setState(State.STARTED) 
      st.playSound("ItemSound.quest_accept") 
      if st.getQuestItemsCount(DARINGS_LETTER) == 0 : 
        st.giveItems(DARINGS_LETTER,1) 
@@ -42,12 +44,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
- 
+
    cond = st.getInt("cond") 
    onlyone = st.getInt("onlyone") 
    ItemsCount_DL = st.getQuestItemsCount(DARINGS_LETTER) 
@@ -66,8 +63,8 @@ class Quest (JQuest) :
        htmltext = "<html><body>Quest for characters level 2 and above.</body></html>" 
        st.exitQuest(1) 
    elif npcId == DARIN and cond == 0 and onlyone == 1 : 
-     htmltext = "<html><body>This quest has already been completed.</body></html>"
-   elif id == STARTED :
+     htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+   elif id == State.STARTED :
        if npcId == ROXXY and cond and onlyone == 0: 
          if ItemsCount_RK == 0 and ItemsCount_DL : 
            htmltext = "30006-01.htm" 
@@ -106,27 +103,17 @@ class Quest (JQuest) :
            st.giveItems(NECKLACE,1) 
            st.set("cond","0") 
            st.set("onlyone","1") 
-           st.setState(COMPLETED)
+           st.setState(State.COMPLETED)
            st.playSound("ItemSound.quest_finish") 
          else: 
            htmltext = "30048-07.htm" 
    return htmltext
 
 QUEST     = Quest(1,qn,"Letters of Love") 
-CREATED   = State('Start',     QUEST) 
-STARTING  = State('Starting',  QUEST) 
-STARTED   = State('Started',   QUEST) 
-COMPLETED = State('Completed', QUEST) 
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(DARIN) 
 
 QUEST.addTalkId(DARIN) 
 
 QUEST.addTalkId(ROXXY) 
 QUEST.addTalkId(BAULRO) 
-
-STARTED.addQuestDrop(DARIN,DARINGS_LETTER,1) 
-STARTED.addQuestDrop(DARIN,RAPUNZELS_KERCHIEF,1) 
-STARTED.addQuestDrop(DARIN,DARINGS_RECEIPT,1) 
-STARTED.addQuestDrop(DARIN,BAULS_POTION,1) 

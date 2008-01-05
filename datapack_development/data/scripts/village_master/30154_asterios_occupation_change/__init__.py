@@ -59,32 +59,29 @@ class Quest (JQuest) :
    # Elfs got accepted
    if npcId == HIERARCH_ASTERIOS and Race in [Race.elf]:
      if ClassId in [ClassId.elvenFighter]: 
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        return "30154-01.htm"
      if ClassId in [ClassId.elvenMage]:
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        return "30154-02.htm"
      if ClassId in [ClassId.elvenWizard, ClassId.oracle, ClassId.elvenKnight, ClassId.elvenScout]:
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
        st.exitQuest(1)
        return "30154-12.htm"
      else:
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
        st.exitQuest(1)
        return "30154-13.htm"
 
    # All other Races must be out
    if npcId == HIERARCH_ASTERIOS and Race in [Race.dwarf, Race.human, Race.darkelf, Race.orc]:
-     st.setState(COMPLETED)
+     st.setState(State.COMPLETED)
      st.exitQuest(1)
      return "30154-11.htm"
 
 QUEST     = Quest(30154,qn,"village_master")
-CREATED   = State('Start',     QUEST)
-STARTED   = State('Started',   QUEST)
-COMPLETED = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 
 QUEST.addStartNpc(30154)
 

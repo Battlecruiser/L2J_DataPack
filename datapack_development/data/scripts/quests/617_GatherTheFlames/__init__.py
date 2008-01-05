@@ -28,7 +28,9 @@ ALT_RP100=0
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [TORCH]
 
  def onEvent (self,event,st) :
      htmltext = event
@@ -36,7 +38,7 @@ class Quest (JQuest) :
      if event == "31539-03.htm" :
        if st.getPlayer().getLevel() >= 74 :
          st.set("cond","1")
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.playSound("ItemSound.quest_accept")
        else :
          htmltext = "31539-02.htm"
@@ -72,7 +74,7 @@ class Quest (JQuest) :
      torches = st.getQuestItemsCount(TORCH)
      npcId = npc.getNpcId()
      if npcId == VULCAN :
-       if id == CREATED :
+       if id == State.CREATED :
          if player.getLevel() < 74 :
             st.exitQuest(1)
             htmltext = "31539-02.htm"
@@ -82,7 +84,7 @@ class Quest (JQuest) :
          htmltext = "31539-05.htm"
        else :
          htmltext = "31539-04.htm"
-     elif npcId == ROONEY and id == STARTED :
+     elif npcId == ROONEY and id == State.STARTED :
        if torches >= 1200 :
           htmltext = "32049-01.htm"
        else :
@@ -90,7 +92,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onKill(self,npc,player,isPet):
-     partyMember = self.getRandomPartyMemberState(player, STARTED)
+     partyMember = self.getRandomPartyMemberState(player, State.STARTED)
      if not partyMember: return
      st = partyMember.getQuestState(qn)
      if not st : return
@@ -109,10 +111,7 @@ class Quest (JQuest) :
      return
 
 QUEST       = Quest(617, qn, "Gather The Flames")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(VULCAN)
 
 QUEST.addTalkId(VULCAN)
@@ -120,5 +119,3 @@ QUEST.addTalkId(ROONEY)
 
 for mob in DROPLIST.keys() :
   QUEST.addKillId(mob)
-
-STARTED.addQuestDrop(VULCAN,TORCH,1)

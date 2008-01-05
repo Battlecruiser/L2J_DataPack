@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.3 updated by Censor for www.l2jdp.com 
+# Made by Mr. Have fun! Version 0.3 updated by Censor for www.l2jdp.com 
 import sys 
 from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State 
@@ -24,7 +24,9 @@ SOULSHOT_NO_GRADE_FOR_BEGINNERS_ID = 5789
 
 class Quest (JQuest) : 
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr) 
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [HATOSS_ORDER2_ID, LETTER_TO_DARKELF_ID, LETTER_TO_HUMAN_ID, LETTER_TO_ELF_ID, HATOSS_ORDER1_ID, HATOSS_ORDER3_ID]
 
  def onEvent (self,event,st) : 
     htmltext = event 
@@ -33,7 +35,7 @@ class Quest (JQuest) :
           htmltext = "30568-03.htm" 
           st.giveItems(HATOSS_ORDER1_ID,1) 
           st.set("cond","1") 
-          st.setState(STARTED) 
+          st.setState(State.STARTED) 
           st.playSound("ItemSound.quest_accept") 
     elif event == "30568_1" : 
             htmltext = "30568-06.htm" 
@@ -76,27 +78,18 @@ class Quest (JQuest) :
    if not st : return htmltext 
 
    id = st.getState() 
-   if id == CREATED : 
-     st.setState(STARTING) 
-     st.set("cond","0") 
-     st.set("onlyone","0") 
-     st.set("id","0") 
    if npcId == 30568 and st.getInt("cond")==0 and st.getInt("onlyone")==0 : 
-        if st.getInt("cond") < 15 : 
-          if player.getRace().ordinal() != 3 : 
-            htmltext = "30568-00.htm" 
-            st.exitQuest(1) 
-          elif player.getLevel() >= 12 : 
-            htmltext = "30568-02.htm" 
-            return htmltext 
-          else: 
-            htmltext = "30568-01.htm" 
-            st.exitQuest(1) 
-        else: 
-          htmltext = "30568-01.htm" 
-          st.exitQuest(1) 
+      if player.getRace().ordinal() != 3 : 
+        htmltext = "30568-00.htm" 
+        st.exitQuest(1) 
+      elif player.getLevel() >= 12 : 
+        htmltext = "30568-02.htm" 
+        return htmltext 
+      else: 
+        htmltext = "30568-01.htm" 
+        st.exitQuest(1) 
    elif npcId == 30568 and st.getInt("cond")==0 and st.getInt("onlyone")==1 : 
-      htmltext = "<html><body>This quest has already been completed.</body></html>" 
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>" 
    elif npcId == 30568 and st.getInt("cond")==1 and (st.getQuestItemsCount(HATOSS_ORDER1_ID) or st.getQuestItemsCount(HATOSS_ORDER2_ID) or st.getQuestItemsCount(HATOSS_ORDER3_ID)) and ((st.getQuestItemsCount(LETTER_TO_ELF_ID)+st.getQuestItemsCount(LETTER_TO_HUMAN_ID)+st.getQuestItemsCount(LETTER_TO_DARKELF_ID))==0) : 
           htmltext = "30568-04.htm" 
    elif npcId == 30568 and st.getInt("cond")==1 and (st.getQuestItemsCount(HATOSS_ORDER1_ID) or st.getQuestItemsCount(HATOSS_ORDER2_ID) or st.getQuestItemsCount(HATOSS_ORDER3_ID)) and ((st.getQuestItemsCount(LETTER_TO_ELF_ID)+st.getQuestItemsCount(LETTER_TO_HUMAN_ID)+st.getQuestItemsCount(LETTER_TO_DARKELF_ID))==1) : 
@@ -121,17 +114,17 @@ class Quest (JQuest) :
             if player.getLevel() < 25 and st.getInt("onlyone") == 0 and player.isNewbie():
                 st.giveItems(SOULSHOT_NO_GRADE_FOR_BEGINNERS_ID,7000) 
             st.set("cond","0") 
-            st.setState(COMPLETED) 
+            st.setState(State.COMPLETED) 
             st.playSound("ItemSound.quest_finish") 
             st.set("onlyone","1") 
-   elif npcId == 30580 and st.getInt("cond")==1 and id == STARTED and (st.getQuestItemsCount(HATOSS_ORDER1_ID) or st.getQuestItemsCount(HATOSS_ORDER2_ID) or st.getQuestItemsCount(HATOSS_ORDER3_ID)) : 
+   elif npcId == 30580 and st.getInt("cond")==1 and id == State.STARTED and (st.getQuestItemsCount(HATOSS_ORDER1_ID) or st.getQuestItemsCount(HATOSS_ORDER2_ID) or st.getQuestItemsCount(HATOSS_ORDER3_ID)) : 
           htmltext = "30580-01.htm" 
    return htmltext 
 
  def onKill(self,npc,player,isPet): 
    st = player.getQuestState(qn) 
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
     
    npcId = npc.getNpcId() 
    if npcId == 27041 : 
@@ -149,13 +142,7 @@ class Quest (JQuest) :
    return 
 
 QUEST       = Quest(107,qn,"Merciless Punishment") 
-CREATED     = State('Start', QUEST) 
-STARTING     = State('Starting', QUEST) 
-STARTED     = State('Started', QUEST) 
-COMPLETED   = State('Completed', QUEST) 
 
-
-QUEST.setInitialState(CREATED) 
 QUEST.addStartNpc(30568) 
 
 QUEST.addTalkId(30568) 
@@ -163,10 +150,3 @@ QUEST.addTalkId(30568)
 QUEST.addTalkId(30580) 
 
 QUEST.addKillId(27041) 
-
-STARTED.addQuestDrop(30568,HATOSS_ORDER2_ID,1) 
-STARTED.addQuestDrop(27041,LETTER_TO_DARKELF_ID,1) 
-STARTED.addQuestDrop(27041,LETTER_TO_HUMAN_ID,1) 
-STARTED.addQuestDrop(27041,LETTER_TO_ELF_ID,1) 
-STARTED.addQuestDrop(30568,HATOSS_ORDER1_ID,1) 
-STARTED.addQuestDrop(30568,HATOSS_ORDER3_ID,1) 

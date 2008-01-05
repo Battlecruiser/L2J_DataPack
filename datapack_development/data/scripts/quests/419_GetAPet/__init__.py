@@ -76,22 +76,25 @@ def check_questions(st) :
     st.giveItems(WOLF_COLLAR,1)
     st.exitQuest(1)
     st.playSound("ItemSound.quest_finish")
-    htmltext="Completed.htm"
+    htmltext="State.COMPLETED.htm"
   return htmltext
   
 # Main Quest Code
 class Quest (JQuest):
 
-  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+  def __init__(self,id,name,descr):
+    JQuest.__init__(self,id,name,descr)
+    self.questItemIds = range(3417,3428)
 
   def onEvent (self,event,st):
     id = st.getState()
-    if id == CREATED :
+    if id == State.CREATED :
       st.set("cond","0")
       if event == "details" :
         return "419_confirm.htm"
       elif event == "agree" :
-        st.setState(STARTED)
+        st.setState(State.STARTED)
+        st.set("progress")=="STARTED"
         st.set("cond","1")
         race = st.getPlayer().getRace().ordinal()
         if race == 0:
@@ -114,7 +117,7 @@ class Quest (JQuest):
       elif event == "disagree" :
         st.exitQuest(1)
         return "419_cancelled.htm"
-    elif id == SLAYED :
+    elif id == State.STARTED and st.get("progress")=="SLAYED" :
       if event == "talk"  :
         st.giveItems(ANIMAL_LOVERS_LIST1,1)
         return "419_talk.htm"
@@ -129,11 +132,11 @@ class Quest (JQuest):
       if event == "talk4" :
         st.set("progress", str(st.getInt("progress") | 4))
         return "419_metty_2.htm"
-    elif id == TALKED :
+    elif id == State.STARTED and st.get("progress")=="TALKED" :
       if event == "tryme" :
         return check_questions(st) 
       elif event == "wrong" :
-        st.setState(SLAYED)
+        st.set("progress","SLAYED")
         st.set("progress","0")
         st.unset("quiz")
         st.unset("answers")
@@ -151,22 +154,23 @@ class Quest (JQuest):
 
     npcId = npc.getNpcId()
     id = st.getState()
-    if npcId != PET_MANAGER_MARTIN and id != SLAYED : return htmltext
+    if npcId != PET_MANAGER_MARTIN and id == State.STARTED:
+      if st.get("progress")!="SLAYED" : return htmltext
 
-    if id == COMPLETED: st.setState(CREATED)
+    if id == State.COMPLETED: st.setState(State.CREATED)
     if npcId == PET_MANAGER_MARTIN :
-      if id == CREATED  :
+      if id == State.CREATED  :
          if player.getLevel() < 15 :
             st.exitQuest(1)
             return "419_low_level.htm"
          return "Start.htm"
-      if id == STARTED  :
+      if id == State.STARTED and st.get("progress")=="STARTED" :
          if getCount_proof(st) == 0 :
             return "419_no_slay.htm"  
          elif getCount_proof(st) < REQUIRED_SPIDER_LEGS :
             return "419_pending_slay.htm"
          else :
-            st.setState(SLAYED)
+            st.set("progress","SLAYED")
             st.clearQuestDrops()
             st.set("progress","0")
             race = player.getRace().ordinal()
@@ -186,15 +190,15 @@ class Quest (JQuest):
                 st.takeItems(SPIDER_LEG5,REQUIRED_SPIDER_LEGS)
                 st.takeItems(ANIMAL_SLAYER_LIST5,1)
             return "Slayed.htm"
-      if id == SLAYED :
+      if id == State.STARTED and st.get("progress")=="SLAYED" :
         if st.getInt("progress") == 7 :
            st.takeItems(ANIMAL_LOVERS_LIST1,1)
-           st.setState(TALKED)
+           st.set("progress","TALKED")
            st.set("quiz","1 2 3 4 5 6 7 8 9 10 11 12 13 14")
            st.set("answers","0")
            return "Talked.htm"
         return "419_pending_talk.htm"
-    elif id == SLAYED:
+    elif id == State.STARTED and st.get("progress")=="SLAYED":
       if npcId == GK_BELLA :
          return "419_bella_1.htm"
       elif npcId == MC_ELLIE :
@@ -206,7 +210,7 @@ class Quest (JQuest):
   def onKill(self,npc,player,isPet):
       st = player.getQuestState(qn)
       if not st : return 
-      if st.getState() != STARTED : return 
+      if st.getState() != State.STARTED : return 
    
       npcId = npc.getNpcId()
       collected = getCount_proof(st)
@@ -244,20 +248,9 @@ class Quest (JQuest):
 
 # Quest class and state definition
 QUEST       = Quest(419, qn, "Wolf Collar")
-CREATED     = State('Start',       QUEST)
-STARTED     = State('Started',     QUEST)
-SLAYED      = State('Slayed',      QUEST)
-TALKED      = State('Talked',      QUEST)
-COMPLETED   = State('Completed',   QUEST)
 
-# Quest initialization
-QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
 QUEST.addStartNpc(PET_MANAGER_MARTIN)
-
-# Quest Item Drop initialization
-for item in range(3417,3428):
-    STARTED.addQuestDrop(PET_MANAGER_MARTIN,item,1)
 
 # Quest mob initialization
 for mob in [SPIDER_H1,SPIDER_H2,SPIDER_H3,SPIDER_LE1,SPIDER_LE2,SPIDER_LE3,SPIDER_DE1,SPIDER_DE2,SPIDER_DE3,SPIDER_O1,SPIDER_O2,SPIDER_O3,SPIDER_D1,SPIDER_D2]:

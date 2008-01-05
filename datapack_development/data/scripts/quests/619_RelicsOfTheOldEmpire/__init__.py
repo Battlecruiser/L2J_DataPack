@@ -28,7 +28,9 @@ ALT_RP100=0
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [RELICS, ENTRANCE]
 
  def onEvent (self,event,st) :
      htmltext = event
@@ -36,7 +38,7 @@ class Quest (JQuest) :
      if event == "31538-03.htm" :
        if st.getPlayer().getLevel() >= 74 :
           st.set("cond","1")
-          st.setState(STARTED)
+          st.setState(State.STARTED)
           st.playSound("ItemSound.quest_accept")
        else :
           htmltext = "31538-02.htm"
@@ -63,7 +65,7 @@ class Quest (JQuest) :
         cond = st.getInt("cond")
         relics = st.getQuestItemsCount(RELICS)
         entrance = st.getQuestItemsCount(ENTRANCE)
-        if id==CREATED:
+        if id==State.CREATED:
            if player.getLevel() >= 74 :
               htmltext="31538-01.htm"
            else :
@@ -83,7 +85,7 @@ class Quest (JQuest) :
      if not partyMember: return
      st = partyMember.getQuestState(qn)
      if st :
-       if st.getState() == STARTED :
+       if st.getState() == State.STARTED :
          numItems, chance = divmod(100*Config.RATE_DROP_QUEST,100)
          if st.getRandom(100) < chance :
             numItems += 1
@@ -95,15 +97,9 @@ class Quest (JQuest) :
      return
 
 QUEST       = Quest(619, qn, "Relics of the Old Empire")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(GHOST)
 QUEST.addTalkId(GHOST)
 
 for mobId in MOBS :
   QUEST.addKillId(mobId)
-
-STARTED.addQuestDrop(GHOST,RELICS,1)
-STARTED.addQuestDrop(GHOST,ENTRANCE,1)

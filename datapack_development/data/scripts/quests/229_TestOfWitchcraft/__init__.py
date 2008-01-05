@@ -65,14 +65,16 @@ DROPLIST={
 
 class Quest (JQuest) :
 
-  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+  def __init__(self,id,name,descr):
+    JQuest.__init__(self,id,name,descr)
+    self.questItemIds = range(3308,3336)+[3029]
 
   def onEvent (self,event,st) :
     htmltext = event
     # Orims Events
     if event == "1":
       htmltext = "30630-08.htm"
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
       st.giveItems(ORIMS_DIAGRAM,1)
       for var in STATS:
@@ -122,7 +124,7 @@ class Quest (JQuest) :
       htmltext = "30630-22.htm"
       for var in STATS:
         st.unset(var)
-      st.setState(COMPLETED)
+      st.setState(State.COMPLETED)
       st.playSound("ItemSound.quest_finish")
     # Alexandrias Events
     elif event == "30098_1" :
@@ -190,10 +192,10 @@ class Quest (JQuest) :
 
     npcId = npc.getNpcId()
     id = st.getState()
-    if npcId != 30630 and id != STARTED : return htmltext
+    if npcId != 30630 and id != State.STARTED : return htmltext
     
     # Start the Quest, initialisation and check if the player can take it
-    if id == CREATED:
+    if id == State.CREATED:
       for var in STATS:
         st.set(var,"0")
       if player.getClassId().getId() in [0x0b, 0x04, 0x20] :
@@ -210,8 +212,8 @@ class Quest (JQuest) :
         st.exitQuest(1)
       return htmltext
     # already done
-    elif id == COMPLETED:
-      return "<html><body>This quest has already been completed.</body></html>"
+    elif id == State.COMPLETED:
+      return "<html><body>This quest has already been State.COMPLETED.</body></html>"
     # in progress, player is working on the quest
     else:
       step = st.getInt("step")        # var init for easier working with it
@@ -365,7 +367,7 @@ class Quest (JQuest) :
   def onKill(self,npc,player,isPet):
     st = player.getQuestState(qn)
     if not st : return 
-    if st.getState() != STARTED : return 
+    if st.getState() != State.STARTED : return 
 
     npcId = npc.getNpcId()
     var,value,maxcount,chance,giveList,takeList=DROPLIST[npcId]
@@ -410,12 +412,7 @@ class Quest (JQuest) :
             
 
 QUEST       = Quest(229,qn,"Test Of Witchcraft")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30630)
 
 for npcId in NPC:
@@ -423,6 +420,3 @@ for npcId in NPC:
 
 for mobId in DROPLIST.keys():
   QUEST.addKillId(mobId)
-
-for item in range(3308,3336)+[3029]:
-  STARTED.addQuestDrop(30630,item,1)

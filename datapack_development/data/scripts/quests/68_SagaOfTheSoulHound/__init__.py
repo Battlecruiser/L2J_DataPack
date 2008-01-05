@@ -46,4 +46,3 @@ class Quest (JQuest) :
 
 QUEST       = Quest(qnu,qn,qna)
 
-QUEST.setInitialState(QUEST.CREATED)

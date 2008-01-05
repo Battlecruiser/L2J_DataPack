@@ -13,13 +13,15 @@ ADENA = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [MOTHERTREE_FRUIT, ANDELLRIAS_LETTER]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30362-04.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.giveItems(ANDELLRIAS_LETTER,1)
       st.playSound("ItemSound.quest_accept")
     return htmltext
@@ -31,7 +33,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      if player.getRace().ordinal() != 1 :
        htmltext = "30362-00.htm"
      elif player.getLevel() >= 3 :
@@ -40,9 +42,9 @@ class Quest (JQuest) :
      else:
        htmltext = "30362-02.htm"
        st.exitQuest(1)
-   elif id == COMPLETED :
-     htmltext = "<html><body>This quest has already been completed.</body></html>"
-   elif id == STARTED :
+   elif id == State.COMPLETED :
+     htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+   elif id == State.STARTED :
      try :
        cond = st.getInt("cond")
      except :
@@ -62,23 +64,16 @@ class Quest (JQuest) :
          st.takeItems(MOTHERTREE_FRUIT,1)
          st.addExpAndSp(1000,0)
          st.unset("cond")
-         st.setState(COMPLETED)
+         st.setState(State.COMPLETED)
          st.playSound("ItemSound.quest_finish")
        elif npcId == 30371 and st.getQuestItemsCount(MOTHERTREE_FRUIT) :
          htmltext = "30371-02.htm"
    return htmltext
 
 QUEST       = Quest(161,qn,"Fruits Of Mothertree")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30362)
 
 QUEST.addTalkId(30362)
 
 QUEST.addTalkId(30371)
-
-STARTED.addQuestDrop(30371,MOTHERTREE_FRUIT,1)
-STARTED.addQuestDrop(30362,ANDELLRIAS_LETTER,1)

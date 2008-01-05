@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://forum.l2jdp.com for more details
 import sys
@@ -24,7 +24,10 @@ BEAD_OF_SEASON = 1292
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [KEY_OF_FLAME, MAP_OF_LUSTER, WIND_FEATHER, BROKEN_BRONZE_MIRROR, SPARKLE_PEBBLE, RAMAS_DIARY, RED_SOIL, RUST_GOLD_COIN,
+                FLAME_EARING, WIND_BANGEL, WATER_NECKLACE, EARTH_RING]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -38,7 +41,7 @@ class Quest (JQuest) :
           else:
             htmltext = "30391-08.htm"
             st.set("cond","1")
-            st.setState(STARTED)
+            st.setState(State.STARTED)
             st.playSound("ItemSound.quest_accept")
         else:
             htmltext = "30391-02.htm"
@@ -62,20 +65,12 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30391 and id != STARTED : return htmltext
+   if npcId != 30391 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30391 and st.getInt("cond")==0 :
       #Talking to Parina before completing this quest
-      if st.getInt("cond")<15 :
-        htmltext = "30391-04.htm"
-        return htmltext
-      else:
-        htmltext = "30391-04.htm"
+      htmltext = "30391-04.htm"
+      return htmltext
    elif npcId == 30391 and st.getInt("cond")!=0 and (st.getQuestItemsCount(FLAME_EARING)==0 or st.getQuestItemsCount(WIND_BANGEL)==0 or st.getQuestItemsCount(WATER_NECKLACE)==0 or st.getQuestItemsCount(EARTH_RING)==0) :
       htmltext = "30391-05.htm"
    elif npcId == 30411 and st.getInt("cond")!=0 and st.getQuestItemsCount(MAP_OF_LUSTER)==0 and st.getQuestItemsCount(FLAME_EARING)==0 :
@@ -97,7 +92,7 @@ class Quest (JQuest) :
         #while we have a KEY_OF_FLAME from the ratmen and the MAP_OF_LUSTER
 
         #Remove both Items and give a FLAME_EARING
-        #Set the cond flag to 4 to signify we have completed the first part
+        #Set the cond flag to 4 to signify we have State.COMPLETED the first part
         st.takeItems(KEY_OF_FLAME,st.getQuestItemsCount(KEY_OF_FLAME))
         st.takeItems(MAP_OF_LUSTER,st.getQuestItemsCount(MAP_OF_LUSTER))
         if st.getQuestItemsCount(FLAME_EARING) == 0 :
@@ -203,13 +198,13 @@ class Quest (JQuest) :
         #Talking to Parina after gathering all 4 tokens
         #Gains BEAD_OF_SEASON
         #Resets cond so these NPC's will no longer speak to you
-        #and Sets the quest as completed
+        #and Sets the quest as State.COMPLETED
         st.takeItems(FLAME_EARING,st.getQuestItemsCount(FLAME_EARING))
         st.takeItems(WIND_BANGEL,st.getQuestItemsCount(WIND_BANGEL))
         st.takeItems(WATER_NECKLACE,st.getQuestItemsCount(WATER_NECKLACE))
         st.takeItems(EARTH_RING,st.getQuestItemsCount(EARTH_RING))
         st.set("cond","0")
-        st.setState(COMPLETED)
+        st.setState(State.COMPLETED)
         st.playSound("ItemSound.quest_finish")
         if st.getQuestItemsCount(BEAD_OF_SEASON) == 0 :
           st.giveItems(BEAD_OF_SEASON,1)
@@ -220,7 +215,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId == 20359 :    #Ratman Warrior, as of C3.
@@ -251,13 +246,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(404,qn,"Path To Wizard")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30391)
 
 QUEST.addTalkId(30391)
@@ -271,16 +260,3 @@ QUEST.addTalkId(30413)
 QUEST.addKillId(20021)
 QUEST.addKillId(20359)
 QUEST.addKillId(27030)
-
-STARTED.addQuestDrop(20359,KEY_OF_FLAME,1)
-STARTED.addQuestDrop(30411,MAP_OF_LUSTER,1)
-STARTED.addQuestDrop(30410,WIND_FEATHER,1)
-STARTED.addQuestDrop(30412,BROKEN_BRONZE_MIRROR,1)
-STARTED.addQuestDrop(27030,SPARKLE_PEBBLE,1)
-STARTED.addQuestDrop(30413,RAMAS_DIARY,1)
-STARTED.addQuestDrop(20021,RED_SOIL,1)
-STARTED.addQuestDrop(30409,RUST_GOLD_COIN,1)
-STARTED.addQuestDrop(30411,FLAME_EARING,1)
-STARTED.addQuestDrop(30412,WIND_BANGEL,1)
-STARTED.addQuestDrop(30413,WATER_NECKLACE,1)
-STARTED.addQuestDrop(30409,EARTH_RING,1)

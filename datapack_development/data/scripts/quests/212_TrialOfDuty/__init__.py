@@ -26,13 +26,15 @@ OLD_KNIGHT_SWORD = 3027
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(2633, 2647)+[3027]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
       htmltext = "30109-04.htm"
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
       st.set("cond","1")
     elif event == "30116_1" :
@@ -56,8 +58,8 @@ class Quest (JQuest) :
    cond=st.getInt("cond")
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30109 and id != STARTED : return htmltext
-   if id == CREATED :
+   if npcId != 30109 and id != State.STARTED : return htmltext
+   if id == State.CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("id","0")
@@ -72,14 +74,14 @@ class Quest (JQuest) :
          htmltext = "30109-02.htm"
          st.exitQuest(1)
    elif npcId == 30109 and cond == 0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30109 and cond == 18  and st.getQuestItemsCount(LETTER_OF_DUSTIN):
       st.addExpAndSp(79832,3750)
       st.giveItems(7562,8)
       htmltext = "30109-05.htm"
       st.takeItems(LETTER_OF_DUSTIN,1)
       st.giveItems(MARK_OF_DUTY,1)
-      st.setState(COMPLETED)
+      st.setState(State.COMPLETED)
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
       st.set("cond","0")
@@ -180,7 +182,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
    cond=st.getInt("cond")
    npcId = npc.getNpcId()
    if npcId in [20190,20191] :
@@ -291,12 +293,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(212,qn,"Trial Of Duty")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30109)
 
 QUEST.addTalkId(30109)
@@ -321,18 +318,3 @@ QUEST.addKillId(20579)
 QUEST.addKillId(20580)
 QUEST.addKillId(20581)
 QUEST.addKillId(20582)
-
-STARTED.addQuestDrop(30116,LETTER_OF_DUSTIN,1)
-STARTED.addQuestDrop(27119,KNIGHTS_TEAR,1)
-STARTED.addQuestDrop(30653,OLD_KNIGHT_SWORD,1)
-STARTED.addQuestDrop(30656,TEAR_OF_CONFESSION,1)
-STARTED.addQuestDrop(30654,MIRROR_OF_ORPIC,1)
-STARTED.addQuestDrop(20200,TALIANUSS_REPORT,1)
-STARTED.addQuestDrop(20577,MILITAS_ARTICLE,1)
-STARTED.addQuestDrop(20270,ATEBALTS_SKULL,1)
-STARTED.addQuestDrop(20270,ATEBALTS_RIBS,1)
-STARTED.addQuestDrop(20270,ATEBALTS_SHIN,1)
-STARTED.addQuestDrop(30311,LETTER_OF_WINDAWOOD,1)
-STARTED.addQuestDrop(30655,TEAR_OF_LOYALTY,1)
-STARTED.addQuestDrop(30116,SAINTS_ASHES_URN,1)
-STARTED.addQuestDrop(20200,REPORT_PIECE,1)

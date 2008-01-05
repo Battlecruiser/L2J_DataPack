@@ -43,7 +43,10 @@ def findPetLvl (player, itemid) :
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [SCAVENGER_WERERAT_SKULL, TUREK_WARHOUND_TAIL, TYRANT_KINGPIN_HEART, TRISALIM_TARANTULAS_VENOM_SAC, MANUAL_OF_MANACLES,
+                PENITENTS_MANACLES, PENITENTS_MANACLES2, PENITENTS_MANACLES1]
 
  def onAdvEvent (self,event,npc,player) :
     htmltext = event
@@ -51,7 +54,7 @@ class Quest (JQuest) :
     if not st: return
     if event == "Start" :
         st.playSound("ItemSound.quest_accept")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         if player.getLevel() <= 20 :
             htmltext = "30981-03.htm"
             st.set("cond","1")
@@ -131,7 +134,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    if npcId == 30981 : #Black Judge
-       if id == CREATED :
+       if id == State.CREATED :
            if player.getPkKills() >= 1 and player.getLevel() < 80:
                htmltext = "30981-02.htm"
            else:
@@ -240,7 +243,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet) :
    st = player.getQuestState(qn)
    if not st : return
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
    condition = st.getInt("cond")
    npcId = npc.getNpcId()
    skulls = st.getQuestItemsCount(SCAVENGER_WERERAT_SKULL)
@@ -279,10 +282,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(422,qn,"Repent your Sins")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30981)
 
 QUEST.addTalkId(30981)
@@ -296,12 +296,3 @@ QUEST.addKillId(SCAVENGER_WERERAT)
 QUEST.addKillId(TUREK_WARHOUND)
 QUEST.addKillId(TYRANT_KINGPIN)
 QUEST.addKillId(TRISALIM_TARANTULA)
-
-STARTED.addQuestDrop(SCAVENGER_WERERAT,SCAVENGER_WERERAT_SKULL,1)
-STARTED.addQuestDrop(TUREK_WARHOUND,TUREK_WARHOUND_TAIL,1)
-STARTED.addQuestDrop(TYRANT_KINGPIN,TYRANT_KINGPIN_HEART,1)
-STARTED.addQuestDrop(TRISALIM_TARANTULA,TRISALIM_TARANTULAS_VENOM_SAC,1)
-STARTED.addQuestDrop(30981,MANUAL_OF_MANACLES,1)
-STARTED.addQuestDrop(30981,PENITENTS_MANACLES,1)
-STARTED.addQuestDrop(30981,PENITENTS_MANACLES2,1)
-STARTED.addQuestDrop(30300,PENITENTS_MANACLES1,1)

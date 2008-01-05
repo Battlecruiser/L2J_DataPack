@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://forum.l2jdp.com for more details
 import sys
@@ -29,14 +29,16 @@ MARK_OF_RAIDER = 1592
  
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(1578, 1592)
 
  def onEvent (self,event,st) :
    htmltext = event 
    if event == "30570-05.htm" : 
      st.set("id","1") 
      st.set("cond","1") 
-     st.setState(STARTED) 
+     st.setState(State.STARTED) 
      st.giveItems(GOBLIN_DWELLING_MAP,1) 
      st.playSound("ItemSound.quest_accept") 
    return htmltext 
@@ -49,16 +51,10 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != KARUKIA and id != STARTED : return htmltext
+   if npcId != KARUKIA and id != State.STARTED : return htmltext
 
    playerClassID = player.getClassId().getId() 
    playerLvl     = player.getLevel() 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
- 
    cond = st.getInt("cond") 
  
    if npcId == KARUKIA and cond == 0 : 
@@ -100,14 +96,14 @@ class Quest (JQuest) :
      st.takeItems(BETRAYER_UMBAR_REPORT,-1) 
      st.giveItems(MARK_OF_RAIDER,1) 
      st.unset("cond") 
-     st.setState(COMPLETED) 
+     st.setState(State.COMPLETED) 
      st.playSound("ItemSound.quest_finish") 
    return htmltext
 
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    cond = st.getInt("cond") 
    npcId = npc.getNpcId()
@@ -149,13 +145,7 @@ class Quest (JQuest) :
    return
 
 QUEST     = Quest(414,qn,"Path to an Orc Raider") 
-CREATED   = State('Start',     QUEST) 
-STARTING  = State('Starting',  QUEST) 
-STARTED   = State('Started',   QUEST) 
-COMPLETED = State('Completed', QUEST) 
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(KARUKIA) 
 
 QUEST.addTalkId(KARUKIA) 
@@ -164,10 +154,4 @@ QUEST.addTalkId(KASMAN)
 
 QUEST.addKillId(GOBLIN_TOMB_RAIDER_LEADER) 
 QUEST.addKillId(KURUKA_RATMAN_LEADER) 
-QUEST.addKillId(UMBAR_ORC) 
-
-STARTED.addQuestDrop(KARUKIA,KURUKA_RATMAN_TOOTH,1) 
-STARTED.addQuestDrop(KARUKIA,GOBLIN_DWELLING_MAP,1) 
-STARTED.addQuestDrop(KARUKIA,GREEN_BLOOD,1) 
-STARTED.addQuestDrop(KARUKIA,HEAD_OF_BETRAYER,1) 
-STARTED.addQuestDrop(KARUKIA,BETRAYER_UMBAR_REPORT,1)
+QUEST.addKillId(UMBAR_ORC)

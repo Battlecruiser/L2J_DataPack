@@ -110,13 +110,15 @@ def render_urn(st, page) :
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [5904]
 
  def onEvent (self,event,st) :
     id = st.getState() 
     htmltext = event
     if event == "30166-4.htm" :
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.set("cond","1")
        st.set("ingredient","0")
        st.set("catalyst","0")
@@ -257,7 +259,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    if npcId == WESLEY :
-      if id == CREATED :
+      if id == State.CREATED :
          st.set("cond","0")
          htmltext = "30166-1.htm"
          if player.getLevel() < 57 :
@@ -265,12 +267,12 @@ class Quest (JQuest) :
             htmltext = "30166-2.htm"
       else :
          htmltext = "30166-3.htm"
-   elif id == STARTED :
+   elif id == State.STARTED :
       htmltext = render_urn(st,"Start")
    return htmltext
 
  def onKill(self,npc,player,isPet) :
-     partyMember = self.getRandomPartyMemberState(player, STARTED)
+     partyMember = self.getRandomPartyMemberState(player, State.STARTED)
      if not partyMember : return
      st = partyMember.getQuestState(qn)
      npcId = npc.getNpcId()
@@ -305,11 +307,6 @@ class Quest (JQuest) :
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
 
-CREATED     = State('Start',     QUEST)
-STARTED     = State('Started',   QUEST)
-COMPLETED   = State('Completed', QUEST)
-
-QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
 QUEST.addStartNpc(WESLEY)
 # Quest initialization
@@ -319,5 +316,3 @@ QUEST.addTalkId(URN)
 
 for i in DROPLIST.keys():
   QUEST.addKillId(i)
-
-STARTED.addQuestDrop(WESLEY,5904,1)

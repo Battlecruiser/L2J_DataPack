@@ -28,14 +28,16 @@ ADENA = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(2721,2734)
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
       htmltext = "30648-04.htm"
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
       st.giveItems(VOUCHER_OF_TRIAL,1)
     elif event == "30648_1" :
@@ -89,10 +91,10 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30648 and id != STARTED : return htmltext
+   if npcId != 30648 and id != State.STARTED : return htmltext
 
    cond=st.getInt("cond")
-   if npcId == 30648 and cond==0 and id == CREATED :
+   if npcId == 30648 and cond==0 and id == State.CREATED :
         if (player.getClassId().getId() in [0x0f,0x1d,0x2a,0x32]) :
            if player.getLevel() >= 35 :
               htmltext = "30648-03.htm"
@@ -102,8 +104,8 @@ class Quest (JQuest) :
         else:
           htmltext = "30648-02.htm"
           st.exitQuest(1)
-   elif npcId == 30648 and cond==0 and id == COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+   elif npcId == 30648 and cond==0 and id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30648 and cond==1 and st.getQuestItemsCount(VOUCHER_OF_TRIAL) :
       htmltext = "30648-09.htm"
    elif npcId == 30648 and cond==17 and st.getQuestItemsCount(BOOK_OF_SAGE) :
@@ -112,7 +114,7 @@ class Quest (JQuest) :
       htmltext = "30648-10.htm"
       st.giveItems(MARK_OF_PILGRIM,1)
       st.takeItems(BOOK_OF_SAGE,1)
-      st.setState(COMPLETED)
+      st.setState(State.COMPLETED)
       st.playSound("ItemSound.quest_finish")
       st.unset("cond")
    elif npcId == 30571 and cond==1 and st.getQuestItemsCount(VOUCHER_OF_TRIAL) :
@@ -218,7 +220,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    npcId = npc.getNpcId()
    cond=st.getInt("cond")
    if npcId == 27116 :
@@ -241,17 +243,11 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(215,qn,"Trial Of Pilgrim")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(30648)
 
 for npcId in [30648,30036,30117,30362,30550,30571,30612,30649,30650,30651,30652] :
-  for itemId in range(2721,2734):
-    QUEST.addTalkId(npcId)
-    STARTED.addQuestDrop(npcId,itemId,1)
+  QUEST.addTalkId(npcId)
 for mobId in range(27116,27119):
     QUEST.addKillId(mobId)

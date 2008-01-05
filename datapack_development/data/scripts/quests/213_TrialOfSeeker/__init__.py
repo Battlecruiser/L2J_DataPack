@@ -32,13 +32,15 @@ MOBS=DROPLIST.keys()
 NPCS = [30106,30064,30106,30526,30684,30715]
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(2647,2674)
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30106-05.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
       st.giveItems(DUFNERS_LETTER_ID,1)
     elif event == "30064-03.htm" :
@@ -111,11 +113,11 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30106 and id != STARTED : return htmltext
+   if npcId != 30106 and id != State.STARTED : return htmltext
 
-   if id == COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
-   elif id == CREATED :
+   if id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+   elif id == State.CREATED :
      st.set("cond","0")
      st.set("id","0")
      st.set("onlyone","0")
@@ -142,7 +144,7 @@ class Quest (JQuest) :
               st.set("cond","0")
               st.set("onlyone","1")
               st.set("id","0")
-              st.setState(COMPLETED)
+              st.setState(State.COMPLETED)
               st.playSound("ItemSound.quest_finish")
               st.takeItems(TERYS_REPORT_ID,1)
               st.giveItems(MARK_OF_SEEKER_ID,1)
@@ -227,7 +229,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    cond = st.getInt("cond")
    npcId = npc.getNpcId()
    required,item,chance,maxqty=DROPLIST[npcId]
@@ -252,19 +254,11 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(213,qn,"Trial Of Seeker")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(NPCS[0])
 
 for npcId in NPCS:
-  for i in range(2647,2674):
-    QUEST.addTalkId(npcId)
-    STARTED.addQuestDrop(npcId,i,1)
+  QUEST.addTalkId(npcId)
 
 for mobId in MOBS:
   QUEST.addKillId(mobId)

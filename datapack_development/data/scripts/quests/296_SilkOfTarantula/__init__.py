@@ -14,13 +14,15 @@ ADENA = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [TARANTULA_SPIDER_SILK, TARANTULA_SPINNERETTE]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30519-03.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "30519-06.htm" :
       st.takeItems(TARANTULA_SPINNERETTE,-1)
@@ -42,9 +44,9 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30519 and id != STARTED : return htmltext
+   if npcId != 30519 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if npcId == 30519 :
      if st.getInt("cond")==0 :
@@ -71,7 +73,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    n = st.getRandom(100)
    if n > 95 :
@@ -83,12 +85,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(296,qn,"Silk Of Tarantula")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30519)
 
 QUEST.addTalkId(30519)
@@ -98,6 +95,3 @@ QUEST.addTalkId(30548)
 QUEST.addKillId(20394)
 QUEST.addKillId(20403)
 QUEST.addKillId(20508)
-
-STARTED.addQuestDrop(20508,TARANTULA_SPIDER_SILK,1)
-STARTED.addQuestDrop(20394,TARANTULA_SPINNERETTE,1)

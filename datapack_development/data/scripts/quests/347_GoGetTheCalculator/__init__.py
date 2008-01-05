@@ -25,14 +25,16 @@ CALCULATOR = 4393
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [GEMSTONE_BEAST_CRYSTAL]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
         st.set("id","0")
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         htmltext = str(BRUNON)+"-02.htm"
     elif event == "30533_1" :
@@ -59,7 +61,7 @@ class Quest (JQuest) :
         st.giveItems(CALCULATOR,1)
         st.takeItems(CALCULATOR_Q,1)
         st.playSound("ItemSound.quest_middle")
-        st.setState(COMPLETED)
+        st.setState(State.COMPLETED)
         st.set("cond","0")
         st.exitQuest(1)
         htmltext = str(BRUNON)+"-05.htm"
@@ -67,7 +69,7 @@ class Quest (JQuest) :
         st.giveItems(ADENA,1000)
         st.takeItems(CALCULATOR_Q,1)
         st.playSound("ItemSound.quest_middle")
-        st.setState(COMPLETED)
+        st.setState(State.COMPLETED)
         st.set("cond","0")
         st.exitQuest(1)
         htmltext = str(BRUNON)+"-06.htm"
@@ -81,9 +83,9 @@ class Quest (JQuest) :
 
     npcId = npc.getNpcId()
     id = st.getState()
-    if npcId != BRUNON and id != STARTED : return htmltext
+    if npcId != BRUNON and id != State.STARTED : return htmltext
 
-    if npcId == BRUNON and id==CREATED :
+    if npcId == BRUNON and id==State.CREATED :
         st.set("id","0")
         st.set("cond","0")
         htmltext = str(BRUNON)+"-01.htm"
@@ -111,7 +113,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId == GEMSTONE_BEAST and st.getInt("cond")==5 and st.getRandom(2)==1 and st.getQuestItemsCount(GEMSTONE_BEAST_CRYSTAL)<10 :
@@ -123,12 +125,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(347,qn,"Calculator")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(BRUNON)
 
 QUEST.addTalkId(BRUNON)
@@ -138,4 +135,3 @@ QUEST.addTalkId(SPIRON)
 QUEST.addTalkId(BALANKI)
 
 QUEST.addKillId(GEMSTONE_BEAST)
-STARTED.addQuestDrop(GEMSTONE_BEAST, GEMSTONE_BEAST_CRYSTAL, 1)

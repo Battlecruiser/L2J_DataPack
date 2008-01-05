@@ -12,13 +12,15 @@ CHANCE = 9
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [BLADE_STAKATO_FANG]
 
  def onEvent (self,event,st) :
      htmltext = event
      if event == "30926-02.htm" :
          st.set("cond","1")
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.playSound("ItemSound.quest_accept")
      elif event == "30926-05.htm" :
          st.playSound("ItemSound.quest_finish")
@@ -35,7 +37,7 @@ class Quest (JQuest) :
      level = player.getLevel()
      cond = st.getInt("cond")
      amount = st.getQuestItemsCount(BLADE_STAKATO_FANG)
-     if id == CREATED :
+     if id == State.CREATED :
         if level>=36 :
             htmltext = "30926-01.htm"
         else :
@@ -50,7 +52,7 @@ class Quest (JQuest) :
      return htmltext
     
  def onKill(self,npc,player,isPet):
-     partyMember = self.getRandomPartyMemberState(player,STARTED)
+     partyMember = self.getRandomPartyMemberState(player,State.STARTED)
      if not partyMember : return
      st = partyMember.getQuestState(qn)
    
@@ -63,15 +65,10 @@ class Quest (JQuest) :
      return
 
 QUEST       = Quest(368,qn,"Trespassing Into The Sacred Area")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30926)
 
 QUEST.addTalkId(30926)
-
-STARTED.addQuestDrop(30926,BLADE_STAKATO_FANG,1)
 
 for i in range(20794,20798) :
     QUEST.addKillId(i)

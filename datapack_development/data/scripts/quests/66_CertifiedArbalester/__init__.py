@@ -39,7 +39,7 @@ class Quest (JQuest) :
         player = st.getPlayer()
         if event == "32201-02.htm" :
             st.set("cond","1")
-            st.setState(STARTED)
+            st.setState(State.STARTED)
             st.giveItems(Diamond,64)
         elif event == "32201-03.htm" :
             st.set("cond","2")
@@ -88,13 +88,13 @@ class Quest (JQuest) :
         npcId = npc.getNpcId()
         id = st.getState()
         cond = st.getInt("cond")
-        if id == COMPLETED :
-            htmltext = "<html><body>This quest has already been completed.</body></html>"
+        if id == State.COMPLETED :
+            htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
         elif npcId == Rindy :
             if player.getClassId().getId() != 126 or player.getLevel() < 39:
                 htmltext = "<html><body>Only Warders of level 39 and above are allowed to take this quest! Go away before I get angry!</body></html>"
                 st.exitQuest(1)
-            elif id == CREATED :
+            elif id == State.CREATED :
                 htmltext = "32201-01.htm"
             elif cond == 1 :
                 htmltext = "32201-03.htm"
@@ -143,7 +143,7 @@ class Quest (JQuest) :
                 htmltext = "32220-20.htm"
                 st.takeItems(Research,-1)
                 st.giveItems(Mark,1)
-                st.setState(COMPLETED)
+                st.setState(State.COMPLETED)
                 st.playSound("ItemSound.quest_finish")
                 st.addExpAndSp(108974,12357)
                 st.unset("cond")
@@ -169,7 +169,7 @@ class Quest (JQuest) :
     def onKill(self,npc,player,isPet):
         st = player.getQuestState(qn)
         if not st : return
-        if st.getState() != STARTED : return
+        if st.getState() != State.STARTED : return
         npcId = npc.getNpcId()
         cond = st.getInt("cond")
         if npcId in Floran :
@@ -225,11 +225,7 @@ class Quest (JQuest) :
         return
 
 QUEST       = Quest(66,qn,"Certified Arbalester")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Rindy)
 
 QUEST.addTalkId(Rindy)
@@ -247,6 +243,3 @@ for mob in Floran + EG + Timaks :
 QUEST.addKillId(Grandis)
 QUEST.addKillId(Gargoyle)
 QUEST.addKillId(Lady)
-
-for item in range(9773,9782) :
-    STARTED.addQuestDrop(Rindy,item,1)

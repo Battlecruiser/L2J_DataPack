@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://forum.l2jdp.com for more details
 import sys
@@ -22,7 +22,10 @@ RUSTED_KEY = 1293
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [REORIA_LETTER2, PRIGUNS_TEAR_LETTER1, PRIGUNS_TEAR_LETTER2, PRIGUNS_TEAR_LETTER3, PRIGUNS_TEAR_LETTER4,
+                RUSTED_KEY, MORETTIS_HERB, MORETTIS_LETTER, PRIGUNS_LETTER, HONORARY_GUARD]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -37,7 +40,7 @@ class Quest (JQuest) :
             htmltext = "30328-05.htm"
             st.giveItems(REORIA_LETTER2,1)
             st.set("cond","1")
-            st.setState(STARTED)
+            st.setState(State.STARTED)
             st.playSound("ItemSound.quest_accept")
         else :
           htmltext = "30328-03.htm"
@@ -60,19 +63,11 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30328 and id != STARTED : return htmltext
+   if npcId != 30328 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30328 and st.getInt("cond")==0 :
-        if st.getInt("cond")<15 :
-          htmltext = "30328-01.htm"
-          return htmltext
-        else:
-          htmltext = "30328-01.htm"
+      htmltext = "30328-01.htm"
+      return htmltext
    elif npcId == 30328 and st.getInt("cond") and st.getQuestItemsCount(REORIA_LETTER2)>0 :
         htmltext = "30328-06.htm"
    elif npcId == 30328 and st.getInt("cond") and st.getQuestItemsCount(REORIA_LETTER2)==0 and st.getQuestItemsCount(HONORARY_GUARD)==0 :
@@ -123,14 +118,14 @@ class Quest (JQuest) :
         st.takeItems(HONORARY_GUARD,1)
         st.giveItems(REORIA_RECOMMENDATION,1)
         st.set("cond","0")
-        st.setState(COMPLETED)
+        st.setState(State.COMPLETED)
         st.playSound("ItemSound.quest_finish")
    return htmltext
 
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId == 20053 :
@@ -177,13 +172,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(407,qn,"Path To Elven Scout")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30328)
 
 QUEST.addTalkId(30328)
@@ -192,17 +181,5 @@ QUEST.addTalkId(30334)
 QUEST.addTalkId(30337)
 QUEST.addTalkId(30426)
 
-
 QUEST.addKillId(27031)
 QUEST.addKillId(20053)
-
-STARTED.addQuestDrop(30328,REORIA_LETTER2,1)
-STARTED.addQuestDrop(20053,PRIGUNS_TEAR_LETTER1,1)
-STARTED.addQuestDrop(20053,PRIGUNS_TEAR_LETTER2,1)
-STARTED.addQuestDrop(20053,PRIGUNS_TEAR_LETTER3,1)
-STARTED.addQuestDrop(20053,PRIGUNS_TEAR_LETTER4,1)
-STARTED.addQuestDrop(27031,RUSTED_KEY,1)
-STARTED.addQuestDrop(30337,MORETTIS_HERB,1)
-STARTED.addQuestDrop(30337,MORETTIS_LETTER,1)
-STARTED.addQuestDrop(30426,PRIGUNS_LETTER,1)
-STARTED.addQuestDrop(30337,HONORARY_GUARD,1)

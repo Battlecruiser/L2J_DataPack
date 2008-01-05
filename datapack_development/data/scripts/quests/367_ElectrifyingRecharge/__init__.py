@@ -14,7 +14,9 @@ CATHEROK=21035
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(5875,5881)
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -23,7 +25,7 @@ class Quest (JQuest) :
    if event == "30673-03.htm" and cond == 0 and not lamp:
      if st.getPlayer().getLevel() >= 37 :
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(5875,1)
      else :
@@ -64,7 +66,7 @@ class Quest (JQuest) :
  def onAttack (self,npc,player,damage,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    chance=st.getRandom(100)
    if chance < 3 :
@@ -90,14 +92,8 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(367,qn,"Electrifying Recharge")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(LORAIN)
 QUEST.addTalkId(LORAIN)
 
 QUEST.addAttackId(CATHEROK)
-
-for item in range(5875,5881):
-    STARTED.addQuestDrop(LORAIN,item,1)

@@ -26,7 +26,9 @@ STATUE_FORGERY = 4354
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [GALFREDOS_BUST, BUST_OF_ANCIENT_GODDESS]
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -34,7 +36,7 @@ class Quest (JQuest) :
      return htmltext
    if event == "30181-2.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    if event == "30181-4.htm" :
      count = st.getQuestItemsCount(BUST_OF_ANCIENT_GODDESS)
@@ -77,7 +79,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != GALIBREDO and id != STARTED : return htmltext
+   if npcId != GALIBREDO and id != State.STARTED : return htmltext
 
    cond = st.getInt("cond")
    count = st.getQuestItemsCount(GALFREDOS_BUST)
@@ -108,7 +110,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    if st.getInt("cond") == 1 :
      chance_1 = st.getRandom(100)
@@ -121,10 +123,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(355,qn,"Family Honor")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(GALIBREDO)
 QUEST.addTalkId(GALIBREDO)
 QUEST.addTalkId(PATRIN)
@@ -132,6 +131,3 @@ QUEST.addTalkId(PATRIN)
 #MOBS TIMAK ORC TROOPS
 for MOBS in range(20767,20771) :
   QUEST.addKillId(MOBS)
-
-STARTED.addQuestDrop(20767,GALFREDOS_BUST,1)
-STARTED.addQuestDrop(20767,BUST_OF_ANCIENT_GODDESS,1)

@@ -104,7 +104,7 @@ class Quest (JQuest) :
     htmltext = event
     if event == "30844-6.htm":
        st.set("cond","1")
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
     elif event == "30844-7.htm" :
        st.playSound("ItemSound.quest_finish")
@@ -135,20 +135,20 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != WALDERAL and id != STARTED : return htmltext
+   if npcId != WALDERAL and id != State.STARTED : return htmltext
 
-   if id == CREATED :
+   if id == State.CREATED :
       st.set("cond","0")
       htmltext = "30844-4.htm"
       if player.getLevel() < 59 :
          st.exitQuest(1)
          htmltext = "30844-5.htm"
-   elif id == STARTED :
+   elif id == State.STARTED :
       htmltext = str(npcId)+"-1.htm"
    return htmltext
 
  def onKill(self,npc,player,isPet) :
-     partyMember = self.getRandomPartyMemberState(player,STARTED)
+     partyMember = self.getRandomPartyMemberState(player,State.STARTED)
      if not partyMember : return
      st = partyMember.getQuestState(qn)
      
@@ -167,11 +167,7 @@ class Quest (JQuest) :
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
 
-CREATED     = State('Start',     QUEST)
-STARTED     = State('Started',   QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(WALDERAL)
 
 for i in NPC.keys() :

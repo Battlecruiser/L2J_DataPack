@@ -20,7 +20,9 @@ REWARDS = [[6699,90000,0,19],[6698,80000,20,39],[6700,40000,40,49],[0,230000,50,
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [PROOF_OF_AVENGER]
 
  def onEvent (self,event,st) :
    cond = st.getInt("cond")
@@ -31,7 +33,7 @@ class Quest (JQuest) :
          st.exitQuest(1)
       else :
          st.set("cond","1")
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.playSound("ItemSound.quest_accept")
    elif event == "31683-4.htm" :
      if st.getQuestItemsCount(PROOF_OF_AVENGER) == 100 :
@@ -73,7 +75,7 @@ class Quest (JQuest) :
    if not partyMember: return
    st = partyMember.getQuestState(qn)
    if st :
-     if st.getState() == STARTED :
+     if st.getState() == State.STARTED :
        count = st.getQuestItemsCount(PROOF_OF_AVENGER)
        if st.getInt("cond") == 1 and count < 100 :
          chance = DROP_CHANCE * Config.RATE_DROP_QUEST
@@ -91,14 +93,9 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(601,qn,"Watching Eyes")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(EYE_OF_ARGOS)
 QUEST.addTalkId(EYE_OF_ARGOS)
 
 for i in MOBS :
   QUEST.addKillId(i)
-
-STARTED.addQuestDrop(EYE_OF_ARGOS,PROOF_OF_AVENGER,1)

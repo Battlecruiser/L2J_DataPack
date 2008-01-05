@@ -47,13 +47,15 @@ UNDEADS = {
 
 class Quest (JQuest):
     
-    def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)    
+    def __init__(self,id,name,descr):
+        JQuest.__init__(self,id,name,descr)
+        self.questItemIds = [RIB_BONE, Z_LIVER]
     
     def onEvent (self,event,st):
         htmltext = event
         if event == "accept" :
             st.set("cond","1")                        
-            st.setState(STARTED)
+            st.setState(State.STARTED)
             st.playSound("ItemSound.quest_accept")
             htmltext = "31388-04.htm"
         if event == "quit":
@@ -85,7 +87,7 @@ class Quest (JQuest):
         if npcId == MINA:
             id = st.getState()
             cond = st.getInt("cond")
-            if id == CREATED:
+            if id == State.CREATED:
                 if st.getPlayer().getLevel() > 64:
                     htmltext = "31388-01.htm"
                 else:
@@ -100,7 +102,7 @@ class Quest (JQuest):
     def onKill(self,npc,player,isPet):        
         npcId = npc.getNpcId()
         if npcId in UNDEADS.keys():            
-            partyMember = self.getRandomPartyMemberState(player, STARTED)
+            partyMember = self.getRandomPartyMemberState(player, State.STARTED)
             if not partyMember: return
             st = partyMember.getQuestState(qn)
             if not st : return
@@ -122,16 +124,11 @@ class Quest (JQuest):
         return        
 
 QUEST       = Quest(633, qn, "In The Forgotten Village")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
 for i in DAMOBS.keys():
     QUEST.addKillId(i)
 for i in UNDEADS.keys():
     QUEST.addKillId(i)
     
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(MINA)
 QUEST.addTalkId(MINA)
-STARTED.addQuestDrop(MINA,RIB_BONE,1)
-STARTED.addQuestDrop(MINA,Z_LIVER,1)

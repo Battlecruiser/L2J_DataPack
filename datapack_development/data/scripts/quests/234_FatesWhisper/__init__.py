@@ -58,7 +58,7 @@ class Quest (JQuest) :
     #accept quest
     if event == "1" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       htmltext = "31002-03.htm"
     # talking with cliff...last dialog to get the Infernium Varnish
     elif event == "30182_01" :
@@ -120,7 +120,7 @@ class Quest (JQuest) :
           htmltext = "31002-12.htm"
           st.giveItems(aGradeItemId,1)
           st.giveItems(STAR_OF_DESTINY,1)
-          st.setState(COMPLETED)
+          st.setState(State.COMPLETED)
           st.unset("cond")
           st.unset("bypass")
         else:
@@ -140,18 +140,18 @@ class Quest (JQuest) :
     id = st.getState()
     
     # first time when a player join the quest
-    if id == CREATED:
+    if id == State.CREATED:
       if player.getLevel() >= 75:
         htmltext = "31002-02.htm"
       else:
         htmltext = "31002-01.htm"
         st.exitQuest(1)
       return htmltext
-    # if quest is already completed
-    elif id == COMPLETED:
-      return "<html><body>This quest has already been completed.</body></html>"
+    # if quest is already State.COMPLETED
+    elif id == State.COMPLETED:
+      return "<html><body>This quest has already been State.COMPLETED.</body></html>"
     # if quest is accepted and in progress
-    elif id == STARTED:
+    elif id == State.STARTED:
       cond =st.getInt("cond")
       if npcId == NPC[0] :
         if cond == 1 and not st.getQuestItemsCount(REIRIAS_SOUL_ORB) :  # waiting for the orb
@@ -268,7 +268,7 @@ class Quest (JQuest) :
   def onAttack (self, npc, player, damage, isPet):                   
     st = player.getQuestState(qn)
     if not st : return 
-    if st.getState() != STARTED : return 
+    if st.getState() != State.STARTED : return 
 
     npcId = npc.getNpcId()
     value,dropId,chance = DROPLIST[npcId]
@@ -287,7 +287,7 @@ class Quest (JQuest) :
     else :
       st = player.getQuestState(qn)
       if not st : return 
-      if st.getState() != STARTED : return
+      if st.getState() != State.STARTED : return
       if npcId in DROPLIST.keys() :
         value,dropId,chance = DROPLIST[npcId]
         if st.getInt("cond") == value:
@@ -301,11 +301,8 @@ class Quest (JQuest) :
 
 
 QUEST    = Quest(234,qn,"Fate's Whisper")
-CREATED    = State('Start', QUEST)
-STARTED    = State('Started', QUEST)
-COMPLETED  = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(NPC[0])
 
 for npcId in NPC:

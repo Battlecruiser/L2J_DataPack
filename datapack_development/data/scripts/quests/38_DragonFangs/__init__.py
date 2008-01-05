@@ -23,13 +23,15 @@ ROHMER=30344
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(7173,7178)
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30386-02.htm" :
        st.set("cond","1")
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
     elif event == "30386-04.htm" :
        st.set("cond","3")
@@ -61,7 +63,7 @@ class Quest (JQuest) :
        item,adena=REWARDS[st.getRandom(len(REWARDS))]
        st.giveItems(item,1)
        st.giveItems(57,adena)
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
     return htmltext
 
 
@@ -72,8 +74,8 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    cond=st.getInt("cond")
-   if id == COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+   if id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == LUIS :
       if cond == 0 :
         if player.getLevel() >= 19 :
@@ -108,7 +110,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
    cond = st.getInt("cond")
    cond,item,max,chance=DROPLIST[npc.getNpcId()]
    count=st.getQuestItemsCount(item)
@@ -122,12 +124,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(38,qn,"Dragon Fangs")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(LUIS)
 
 QUEST.addTalkId(LUIS)
@@ -136,6 +133,3 @@ QUEST.addTalkId(ROHMER)
 
 for mob in DROPLIST.keys():
     QUEST.addKillId(mob)
-
-for item in range(7173,7178):
-    STARTED.addQuestDrop(LUIS,item,1)

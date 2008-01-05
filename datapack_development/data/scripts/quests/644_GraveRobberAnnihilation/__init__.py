@@ -27,6 +27,9 @@ REWARDS = {
 MOBS = [ 22003,22004,22005,22006,22008 ]
 
 class Quest (JQuest) :
+ def __init__(self,id,name,descr):
+    JQuest.__init__(self,id,name,descr)
+    self.questItemIds = [ORC_GOODS]
 
  def onEvent (self,event,st) :
    cond = st.getInt("cond")
@@ -37,7 +40,7 @@ class Quest (JQuest) :
          st.exitQuest(1)
       else :
          st.set("cond","1")
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.playSound("ItemSound.quest_accept")
    elif event in REWARDS.keys() :
        item, amount = REWARDS[event]
@@ -71,7 +74,7 @@ class Quest (JQuest) :
    if not partyMember: return
    st = partyMember.getQuestState(qn)
    if st :
-      if st.getState() == STARTED :
+      if st.getState() == State.STARTED :
          count = st.getQuestItemsCount(ORC_GOODS)
          if st.getInt("cond") == 1 and count < 120 :
             chance = DROP_CHANCE * Config.RATE_DROP_QUEST
@@ -88,16 +91,10 @@ class Quest (JQuest) :
                st.giveItems(ORC_GOODS,int(numItems))       
    return
 
-
 QUEST       = Quest(644, qn, "Grave Robber Annihilation")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(KARUDA)
 QUEST.addTalkId(KARUDA) 
 
 for i in MOBS :
   QUEST.addKillId(i)
-
-STARTED.addQuestDrop(KARUDA,ORC_GOODS,1)

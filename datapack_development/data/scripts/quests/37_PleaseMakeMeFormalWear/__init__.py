@@ -22,10 +22,10 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
    htmltext = event
    cond = st.getInt("cond")
-   if st.getState() != COMPLETED :
+   if st.getState() != State.COMPLETED :
     if event == "30842-1.htm" and cond == 0:
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "31520-1.htm" and cond == 1:
       st.giveItems(SIGNET_RING,1)
@@ -56,7 +56,7 @@ class Quest (JQuest) :
        if st.getQuestItemsCount(DRESS_SHOES_BOX) :
          st.takeItems(DRESS_SHOES_BOX,1)
          st.giveItems(FORMAL_WEAR,1)
-         st.setState(COMPLETED)
+         st.setState(State.COMPLETED)
          st.unset("cond")
          st.playSound("ItemSound.quest_finish")
        else :
@@ -71,15 +71,15 @@ class Quest (JQuest) :
    id = st.getState()
    cond = st.getInt("cond")
    if npcId == 30842 and cond == 0 :
-     if id == COMPLETED :
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
+     if id == State.COMPLETED :
+       htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
      elif player.getLevel() >= 60 :
        htmltext = "30842-0.htm"
        return htmltext
      else:
        htmltext = "30842-2.htm"
        st.exitQuest(1)
-   elif id == STARTED :    
+   elif id == State.STARTED :    
        if npcId == 31520 and cond == 1 :
          htmltext = "31520-0.htm"
        elif npcId == 31521 and st.getQuestItemsCount(SIGNET_RING) :
@@ -99,11 +99,8 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(37,qn,"Please Make Me Formal Wear")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(30842)
 QUEST.addTalkId(30842)
 

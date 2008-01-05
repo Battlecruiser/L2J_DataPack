@@ -17,7 +17,9 @@ CHANCE2 = 15
 CHANCE_barrel = 0
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ORDER_OF_GOSTA, BARREL_OF_LEAGUE, LIZARD_FANG]
 
  def onEvent (self,event,st) :
      htmltext = event
@@ -25,7 +27,7 @@ class Quest (JQuest) :
      amount2 = st.getQuestItemsCount(BARREL_OF_LEAGUE)
      bonus=0
      if event == "30916-03.htm" :
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.set("cond","1")
          st.giveItems(ORDER_OF_GOSTA,1)
          st.playSound("ItemSound.quest_accept")
@@ -54,12 +56,12 @@ class Quest (JQuest) :
      if not st : return htmltext
      npcId = npc.getNpcId()
      id = st.getState()
-     if npcId != 30916 and id != STARTED : return htmltext
+     if npcId != 30916 and id != State.STARTED : return htmltext
   
      level = player.getLevel()
      cond = st.getInt("cond")
      if npcId==30916 :
-         if id == CREATED :
+         if id == State.CREATED :
              if level>=32 :
                  htmltext = "30916-01.htm"
              else :
@@ -79,7 +81,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
      st = player.getQuestState(qn)
      if not st : return 
-     if st.getState() != STARTED : return 
+     if st.getState() != State.STARTED : return 
      npcId = npc.getNpcId()
      cond = st.getInt("cond")
      random = st.getRandom(20)
@@ -87,8 +89,8 @@ class Quest (JQuest) :
          st.giveItems(LIZARD_FANG,1)
          st.playSound("ItemSound.quest_itemget")
          if random==CHANCE_barrel :
-	          st.giveItems(BARREL_OF_LEAGUE,1)
-	          st.set("cond","2")
+              st.giveItems(BARREL_OF_LEAGUE,1)
+              st.set("cond","2")
      elif random<CHANCE2 :
          st.giveItems(LIZARD_FANG,2)
          st.playSound("ItemSound.quest_itemget")
@@ -102,19 +104,12 @@ class Quest (JQuest) :
      return
 
 QUEST       = Quest(351,qn,"Black Swan")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30916)
 
 QUEST.addTalkId(30916)
 QUEST.addTalkId(30969)
 QUEST.addTalkId(30897)
-
-STARTED.addQuestDrop(30916,ORDER_OF_GOSTA,1)
-STARTED.addQuestDrop(30916,BARREL_OF_LEAGUE,1)
-STARTED.addQuestDrop(30916,LIZARD_FANG,1)
 
 QUEST.addKillId(20784)
 QUEST.addKillId(20785)

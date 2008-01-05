@@ -17,7 +17,9 @@ REWARDS=[[57,30000],[1867,50],[1872,50]]
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [BRACELET]
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -25,7 +27,7 @@ class Quest (JQuest) :
    count = st.getQuestItemsCount(BRACELET)
    if event == "30126-03.htm" and cond == 0 :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "30126-05.htm" :
      if count == 60 and cond == 2 :
@@ -58,7 +60,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    count = st.getQuestItemsCount(BRACELET)
    cond = st.getInt("cond")
@@ -72,15 +74,10 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(300,qn,"Hunting Leto Lizardman")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(RATH)
 
 QUEST.addTalkId(RATH)
 
 for mob in range(20577,20581)+[20582] :
     QUEST.addKillId(mob)
-
-STARTED.addQuestDrop(RATH,BRACELET,1)

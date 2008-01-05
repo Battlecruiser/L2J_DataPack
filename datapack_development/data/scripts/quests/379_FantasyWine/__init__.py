@@ -25,7 +25,9 @@ ENKU_SHAMAN:[STONE,100]
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [LEAF, STONE]
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -33,7 +35,7 @@ class Quest (JQuest) :
    stone = st.getQuestItemsCount(STONE)
    if event == "30074-3.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "30074-6.htm" :
      if leaf == 80 and stone == 100 :
@@ -78,7 +80,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    numItems,chance = divmod(100*Config.RATE_DROP_QUEST,100)
@@ -100,15 +102,9 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(379,qn,"Fantasy Wine")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(HARLAN)
 QUEST.addTalkId(HARLAN)
 
 QUEST.addKillId(ENKU_CHAMPION)
 QUEST.addKillId(ENKU_SHAMAN)
-
-STARTED.addQuestDrop(HARLAN,LEAF,1)
-STARTED.addQuestDrop(HARLAN,STONE,1)

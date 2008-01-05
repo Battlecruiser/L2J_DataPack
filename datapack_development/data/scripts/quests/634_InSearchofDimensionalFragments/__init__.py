@@ -10,12 +10,14 @@ DIMENSION_FRAGMENT_ID = 7079
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [DIMENSION_FRAGMENT_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "2a.htm" :
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
       st.set("cond","1")
     elif event == "5.htm" :
@@ -29,21 +31,21 @@ class Quest (JQuest) :
         npcId = npc.getNpcId()
         htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
         id = st.getState()
-        if id == CREATED :
+        if id == State.CREATED :
             if player.getLevel() < 20 :
                 st.exitQuest(1)
                 htmltext="1.htm"
             else:
                 htmltext="2.htm"
-        elif id == STARTED :
+        elif id == State.STARTED :
             htmltext = "4.htm"
    return htmltext
 
  def onKill(self,npc,player,isPet):
-    partyMember = self.getRandomPartyMemberState(player, STARTED) 
+    partyMember = self.getRandomPartyMemberState(player, State.STARTED) 
     st = player.getQuestState(qn)
     if st :
-        if st.getState() == STARTED :
+        if st.getState() == State.STARTED :
             numItems = int((npc.getLevel() * 0.15 +1.6)*Config.RATE_DROP_QUEST)
             if st.getRandom(100)>=10 :
                 numItems = 0
@@ -53,11 +55,6 @@ class Quest (JQuest) :
     return
 
 QUEST       = Quest(634, qn, "In Search of Dimensional Fragments")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
-
-QUEST.setInitialState(CREATED)
 
 for npcId in range(31494,31508):
   QUEST.addTalkId(npcId)
@@ -65,5 +62,3 @@ for npcId in range(31494,31508):
 
 for mobs in range(21208,21256):
   QUEST.addKillId(mobs)
-
-STARTED.addQuestDrop(7079,DIMENSION_FRAGMENT_ID,1)

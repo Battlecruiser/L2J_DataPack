@@ -74,8 +74,9 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [HERB_OF_VANOR, HERB_OF_HARIT, HERB_OF_OEL_MAHUM, SYMBOL_OF_LOYALTY, ANTIDOTE_RECIPE, VOUCHER_OF_FAITH, POTION_OF_RECOVERY, ANTIDOTE_RECIPE]
      # a hashtable tracking this quest's (chest) spawns, indexed by leaderST
-     self.spawn_tracker = {}    
+     self.spawn_tracker = {}
 
  def chest_game(self,leaderst,command) :
     #northern point
@@ -117,18 +118,21 @@ class Quest (JQuest) :
    htmltext = event
 #####  Leaders area  ######
    if event == "30756-03.htm" :
-     leaderst.setState(PART2)
+     leaderst.setState(State.STARTED)
+     leaderst.set("progress","PART2")
      leaderst.set("cond","1")
      leaderst.playSound("ItemSound.quest_accept")
    elif event == "30759-03.htm" :
-     leaderst.setState(PART3)
+     leaderst.setState(State.STARTED)
+     leaderst.set("progress","PART3")
      leaderst.set("cond","2")
      leaderst.set("dead_list"," ")
    elif event == "30759-07.htm" :
      for i in range(3) :
         leaderst.takeItems(SYMBOL_OF_LOYALTY,1)
      leaderst.giveItems(ANTIDOTE_RECIPE,1)
-     leaderst.setState(PART4)
+     leaderst.setState(State.STARTED)
+     leaderst.set("progress","PART4")
      leaderst.set("cond","3")
      leaderst.set("ingredients","0 0 0")
      leaderst.set("chest_count","0")
@@ -176,7 +180,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if not npcId in [SIR_KRISTOF_RODEMAI,STATUE_OF_OFFERING,WITCH_KALIS,WITCH_ATHREA] and id == CREATED : return htmltext
+   if not npcId in [SIR_KRISTOF_RODEMAI,STATUE_OF_OFFERING,WITCH_KALIS,WITCH_ATHREA] and id == State.CREATED : return htmltext
 
    if npcId == SIR_KRISTOF_RODEMAI:
      if player.getClan() == None or player.isClanLeader() == 0:
@@ -189,15 +193,16 @@ class Quest (JQuest) :
        elif player.getClan().getLevel() >= 4 :
          st.exitQuest(1)
          htmltext =  "30756-09.htm"
-       elif st.getState() == PART4 and st.getQuestItemsCount(VOUCHER_OF_FAITH):
-          st.playSound("ItemSound.quest_fanfare_2")
-          st.takeItems(VOUCHER_OF_FAITH,1)
-          st.giveItems(PROOF_OF_ALLIANCE,1)
-          st.addExpAndSp(0,120000)
-          htmltext="30756-07.htm"
-          st.exitQuest(1)
-       elif st.getState() in [PART2,PART3] :
-         htmltext =  "30756-06.htm"
+       elif st.getState() == State.STARTED :
+         if st.get("progress") == "PART4" and st.getQuestItemsCount(VOUCHER_OF_FAITH):
+           st.playSound("ItemSound.quest_fanfare_2")
+           st.takeItems(VOUCHER_OF_FAITH,1)
+           st.giveItems(PROOF_OF_ALLIANCE,1)
+           st.addExpAndSp(0,120000)
+           htmltext="30756-07.htm"
+           st.exitQuest(1)
+         elif st.get("progress") in ["PART2","PART3"] :
+           htmltext =  "30756-06.htm"
        elif st.getQuestItemsCount(PROOF_OF_ALLIANCE) == 0 :
          st.set("cond","0")
          htmltext =  "30756-01.htm"
@@ -210,44 +215,46 @@ class Quest (JQuest) :
        if DEBUG: htmltext= "DEBUG: Kalis said NO CLAN."
      else:
        if player.isClanLeader() == 1 :
-         if st.getState() == PART2 :
-           htmltext =  "30759-01.htm"
-         elif st.getState() == PART3 :
-           htmltext = "30759-05.htm"
-           if st.getQuestItemsCount(SYMBOL_OF_LOYALTY) == 3 :
-              try : deads=len(st.get("dead_list").split())
-              finally :
-                 if deads == 3 :
-                    htmltext = "30759-06.htm"
-                 elif DEBUG:
-                    htmltext="DEBUG: 3 clan members MUST die. Quest items aren't enough."
-         elif st.getState() == PART4:
-           if st.getQuestItemsCount(HERB_OF_HARIT) and \
-              st.getQuestItemsCount(HERB_OF_VANOR) and \
-              st.getQuestItemsCount(HERB_OF_OEL_MAHUM) and \
-              st.getQuestItemsCount(BLOOD_OF_EVA) and \
-              st.getQuestItemsCount(ANTIDOTE_RECIPE) and \
-              st.getInt("chest_game")== 3 :
-             st.takeItems(ANTIDOTE_RECIPE,1)
-             st.takeItems(HERB_OF_HARIT,1)
-             st.takeItems(HERB_OF_VANOR,1)
-             st.takeItems(HERB_OF_OEL_MAHUM,1)
-             st.takeItems(BLOOD_OF_EVA,1)
-             st.giveItems(POTION_OF_RECOVERY,1)
-             st.giveItems(VOUCHER_OF_FAITH,1)
-             timer=st.getQuestTimer("poison_timer")
-             if timer != None : timer.cancel()
-             members_finnish(st)
-             htmltext =  "30759-08.htm"
-             st.playSound("ItemSound.quest_finish")
-           elif st.getQuestItemsCount(VOUCHER_OF_FAITH)==0:
-             htmltext =  "30759-10.htm"
+         if st.getState() == State.STARTED:
+           if st.get("progress") == "PART2" :
+             htmltext =  "30759-01.htm"
+           elif  st.get("progress") == "PART3" :
+             htmltext = "30759-05.htm"
+             if st.getQuestItemsCount(SYMBOL_OF_LOYALTY) == 3 :
+                try : deads=len(st.get("dead_list").split())
+                finally :
+                   if deads == 3 :
+                      htmltext = "30759-06.htm"
+                   elif DEBUG:
+                      htmltext="DEBUG: 3 clan members MUST die. Quest items aren't enough."
+           elif st.get("progress") == "PART4":
+             if st.getQuestItemsCount(HERB_OF_HARIT) and \
+                st.getQuestItemsCount(HERB_OF_VANOR) and \
+                st.getQuestItemsCount(HERB_OF_OEL_MAHUM) and \
+                st.getQuestItemsCount(BLOOD_OF_EVA) and \
+                st.getQuestItemsCount(ANTIDOTE_RECIPE) and \
+                st.getInt("chest_game")== 3 :
+               st.takeItems(ANTIDOTE_RECIPE,1)
+               st.takeItems(HERB_OF_HARIT,1)
+               st.takeItems(HERB_OF_VANOR,1)
+               st.takeItems(HERB_OF_OEL_MAHUM,1)
+               st.takeItems(BLOOD_OF_EVA,1)
+               st.giveItems(POTION_OF_RECOVERY,1)
+               st.giveItems(VOUCHER_OF_FAITH,1)
+               timer=st.getQuestTimer("poison_timer")
+               if timer != None : timer.cancel()
+               members_finnish(st)
+               htmltext =  "30759-08.htm"
+               st.playSound("ItemSound.quest_finish")
+             elif st.getQuestItemsCount(VOUCHER_OF_FAITH)==0:
+               htmltext =  "30759-10.htm"
          else :
            st.exitQuest(1)
        else :
          try :
-           if leaderst.getState() == PART4 :
-              htmltext =  "30759-11.htm"
+           if leaderst.getState() == State.STARTED :
+             if st.get("progress") == "PART4" :
+               htmltext =  "30759-11.htm"
          except :
            st.exitQuest(1)
            if DEBUG: htmltext= "DEBUG: Kalis cancels your application, leader conditions aren't right."
@@ -257,7 +264,7 @@ class Quest (JQuest) :
        if DEBUG: htmltext= "DEBUG: Statue said NO CLAN."
      else :
        if player.isClanLeader() == 1 :
-         if st.getState() in [PART2,PART3,PART4] :
+         if st.getState() State.STARTED:
            htmltext =  "30757-03.htm"
          else :
            st.exitQuest(1)
@@ -320,7 +327,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
      st = player.getQuestState(qn)
      if not st : return 
-     if st.getState() != CREATED : return 
+     if st.getState() != State.CREATED : return 
      leaderst = leader(player)
    
      ### first part, general checking
@@ -382,15 +389,7 @@ class Quest (JQuest) :
        st.exitQuest(1)
      if DEBUG: return "DEBUG: Leader died. Quest failed."
 
-
 QUEST       = Quest(501,qn,qd)
-CREATED     = State('Start',     QUEST)
-PART2       = State('Part2',     QUEST)
-PART3       = State('Part3',     QUEST)
-PART4       = State('Part4',     QUEST)
-COMPLETED   = State('Completed', QUEST)
-
-QUEST.setInitialState(CREATED)
 
 for i in [SIR_KRISTOF_RODEMAI,STATUE_OF_OFFERING] :
     QUEST.addStartNpc(i)
@@ -399,15 +398,8 @@ for i in [SIR_KRISTOF_RODEMAI,STATUE_OF_OFFERING] :
 for i in [WITCH_KALIS,WITCH_ATHREA] :
     QUEST.addTalkId(i)
     
-CREATED.addQuestDrop(STATUE_OF_OFFERING,SYMBOL_OF_LOYALTY,1)
-PART3.addQuestDrop(WITCH_KALIS,ANTIDOTE_RECIPE,1)
-PART4.addQuestDrop(WITCH_KALIS,VOUCHER_OF_FAITH,1)
-PART4.addQuestDrop(WITCH_KALIS,POTION_OF_RECOVERY,1)
-PART4.addQuestDrop(WITCH_KALIS,ANTIDOTE_RECIPE,1)
-
 for i in range(len(MOBS)) :
     QUEST.addKillId(MOBS[i][0])
-    CREATED.addQuestDrop(MOBS[i][0],MOBS[i][1],1)
-
+    
 for i in CHESTS :
     QUEST.addKillId(i)

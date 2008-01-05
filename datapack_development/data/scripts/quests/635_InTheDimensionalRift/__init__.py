@@ -42,7 +42,7 @@ class Quest (JQuest) :
          if count:
             htmltext="5a.htm"
          st.set("count",str(count+1))
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.set("cond","1")
          st.getPlayer().teleToLocation(-114790,-180576,-6781)
       else :
@@ -69,16 +69,16 @@ class Quest (JQuest) :
         elif not st.getQuestItemsCount(DIMENSION_FRAGMENT) :
            htmltext="3.htm"
         else :
-           st.setState(CREATED)
+           st.setState(State.CREATED)
            id=str(npcId-31493)
            st.set("id",id)
            htmltext="4.htm"
-     elif st.getState() == STARTED :
+     elif st.getState() == State.STARTED :
         if id :
            x,y,z=COORD[id]
            player.teleToLocation(x,y,z)
            st.unset("cond")
-           st.setState(COMPLETED)
+           st.setState(State.COMPLETED)
            htmltext="7.htm"
         else :
            htmltext="Where?"
@@ -86,11 +86,8 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(635, qn, "In The Dimensional Rift")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 
 for npcId in range(31494,31508):
     QUEST.addTalkId(npcId)

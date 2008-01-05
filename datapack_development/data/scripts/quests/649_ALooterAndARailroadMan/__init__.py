@@ -20,14 +20,16 @@ DROP_CHANCE = 50
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [THIEF_GUILD_MARK]
 
  def onEvent (self,event,st) :
    htmltext = event
    count = st.getQuestItemsCount(THIEF_GUILD_MARK)
    if event == "32052-1.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "32052-3.htm" :
      if count < 200 :
@@ -52,7 +54,7 @@ class Quest (JQuest) :
        else:
          htmltext = "32052-0a.htm"
          st.exitQuest(1)
-     elif id == STARTED :
+     elif id == State.STARTED :
        if st.getQuestItemsCount(THIEF_GUILD_MARK) == 200 :
          htmltext = "32052-2.htm"
        else :
@@ -62,7 +64,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if st :
-     if st.getState() == STARTED :
+     if st.getState() == State.STARTED :
        count = st.getQuestItemsCount(THIEF_GUILD_MARK)
        if st.getInt("cond") == 1 and count < 200 and st.getRandom(100)<DROP_CHANCE :  
           st.giveItems(THIEF_GUILD_MARK,1)  
@@ -74,14 +76,9 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(649,qn,"A Looter and a Railroad Man")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(OBI)
 QUEST.addTalkId(OBI)
 
 for BANDITS in [22017,22018,22019,22021,22022,22023,22024,22026]:
   QUEST.addKillId(BANDITS)
-
-STARTED.addQuestDrop(OBI,THIEF_GUILD_MARK,1)

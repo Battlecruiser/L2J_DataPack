@@ -18,7 +18,9 @@ IRON_HEART = 1252
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ARKENIA_RECOMMEND, SHILENS_TEARS, SHILENS_CALL, ONYX_BEASTS_MOLAR, LEIKANS_NOTE, ARKENIAS_LETTER]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -27,7 +29,7 @@ class Quest (JQuest) :
     if event == "1" :
         if level >= 19 and classId == 0x1f and st.getQuestItemsCount(IRON_HEART) == 0 :
           st.set("cond","1")
-          st.setState(STARTED)
+          st.setState(State.STARTED)
           st.playSound("ItemSound.quest_accept")
           st.giveItems(SHILENS_CALL,1)
           htmltext = "30416-05.htm"
@@ -64,9 +66,9 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30416 and id != STARTED : return htmltext
+   if npcId != 30416 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
    if npcId == 30416 and st.getInt("cond")==0 :
@@ -80,7 +82,7 @@ class Quest (JQuest) :
           st.takeItems(ARKENIA_RECOMMEND,1)
           st.giveItems(IRON_HEART,1)
           st.set("cond","0")
-          st.setState(COMPLETED)
+          st.setState(State.COMPLETED)
           st.playSound("ItemSound.quest_finish")
         elif st.getQuestItemsCount(ARKENIAS_LETTER) == 1 and st.getQuestItemsCount(LEIKANS_NOTE) == 0 and st.getQuestItemsCount(SHILENS_TEARS) == 0 and st.getQuestItemsCount(ARKENIA_RECOMMEND) == 0 and st.getQuestItemsCount(IRON_HEART) == 0 and st.getQuestItemsCount(SHILENS_CALL) == 0 :
             htmltext = "30416-07.htm"
@@ -131,7 +133,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId == 27036 :
@@ -150,12 +152,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(411,qn,"Path To Assassin")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30416)
 
 QUEST.addTalkId(30416)
@@ -165,10 +162,3 @@ QUEST.addTalkId(30419)
 
 QUEST.addKillId(20369)
 QUEST.addKillId(27036)
-
-STARTED.addQuestDrop(30419,ARKENIA_RECOMMEND,1)
-STARTED.addQuestDrop(27036,SHILENS_TEARS,1)
-STARTED.addQuestDrop(30416,SHILENS_CALL,1)
-STARTED.addQuestDrop(20369,ONYX_BEASTS_MOLAR,1)
-STARTED.addQuestDrop(30382,LEIKANS_NOTE,1)
-STARTED.addQuestDrop(30419,ARKENIAS_LETTER,1)

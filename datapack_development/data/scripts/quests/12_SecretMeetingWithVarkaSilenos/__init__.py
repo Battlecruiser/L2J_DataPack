@@ -23,7 +23,7 @@ class Quest (JQuest) :
      if event == "31296-03.htm" :
        if st.getPlayer().getLevel() >= 74 :
             st.set("cond","1")
-            st.setState(STARTED)
+            st.setState(State.STARTED)
             st.playSound("ItemSound.quest_accept")
             htmltext = "31296-03.htm"
        else :
@@ -39,7 +39,7 @@ class Quest (JQuest) :
          st.addExpAndSp(79761,0)
          st.set("cond","0")
          st.set("onlyone","1")
-         st.setState(COMPLETED)
+         st.setState(State.COMPLETED)
          st.playSound("ItemSound.quest_finish")
      return htmltext
 
@@ -51,7 +51,7 @@ class Quest (JQuest) :
 
      cond = st.getInt("cond")
      onlyone = st.getInt("onlyone")
-     if st.getState() == CREATED :
+     if st.getState() == State.CREATED :
         st.set("cond","0")
         st.set("onlyone","0")
      if onlyone == 0 :
@@ -60,7 +60,7 @@ class Quest (JQuest) :
                  htmltext = "31296-01.htm"
              elif cond == 1 :
                  htmltext = "31296-04.htm"
-         elif st.getState() == STARTED :   
+         elif st.getState() == State.STARTED :   
              if npcId == Helmut :
                  if cond == 1 :
                      htmltext = "31258-01.htm"
@@ -71,11 +71,8 @@ class Quest (JQuest) :
      return htmltext
      
 QUEST       = Quest(12, qn, "Secret Meeting With Varka Silenos")
-CREATED     = State('Start',    QUEST)
-STARTED     = State('Started',  QUEST)
-COMPLETED   = State('Completed',QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(Cadmon)
 
 QUEST.addTalkId(Cadmon)

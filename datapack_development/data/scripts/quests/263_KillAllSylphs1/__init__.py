@@ -12,13 +12,15 @@ ADENA_ID = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ORC_AMULET, ORC_NECKLACE]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30346-03.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "30346-06.htm" :
       st.exitQuest(1)
@@ -33,7 +35,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
 
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if st.getInt("cond")==0 :
      if player.getRace().ordinal() != 2 :
@@ -59,7 +61,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    item=ORC_NECKLACE
    if npc.getNpcId() == 20385 :
@@ -70,13 +72,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(263,qn,"Kill All Sylphs1")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30346)
 
 QUEST.addTalkId(30346)
@@ -85,6 +81,3 @@ QUEST.addKillId(20385)
 QUEST.addKillId(20386)
 QUEST.addKillId(20387)
 QUEST.addKillId(20388)
-
-STARTED.addQuestDrop(20385,ORC_AMULET,1)
-STARTED.addQuestDrop(20386,ORC_NECKLACE,1)

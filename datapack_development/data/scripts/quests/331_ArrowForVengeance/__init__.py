@@ -13,13 +13,15 @@ ADENA = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [HARPY_FEATHER, MEDUSA_VENOM, WYRMS_TOOTH]
 
  def onEvent (self,event,st) :
    htmltext = event
    if event == "30125-03.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
    elif event == "30125-06.htm" :
       st.exitQuest(1)
@@ -33,7 +35,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
       st.set("cond","0")
    if npcId == 30125 and st.getInt("cond")==0 :
       if player.getLevel() >= 32 :
@@ -56,7 +58,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    n = st.getRandom(10)
@@ -71,11 +73,6 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(331,qn,"Arrow For Vengeance")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
-
-QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(30125)
 QUEST.addTalkId(30125)
@@ -83,7 +80,3 @@ QUEST.addTalkId(30125)
 QUEST.addKillId(20145)
 QUEST.addKillId(20158)
 QUEST.addKillId(20176)
-
-STARTED.addQuestDrop(20145,HARPY_FEATHER,1)
-STARTED.addQuestDrop(20158,MEDUSA_VENOM,1)
-STARTED.addQuestDrop(20176,WYRMS_TOOTH,1)

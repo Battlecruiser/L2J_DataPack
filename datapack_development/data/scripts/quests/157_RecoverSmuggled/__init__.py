@@ -1,4 +1,4 @@
-# Maked by Mr. - Version 0.3 by DrLecter
+# Made by Mr. - Version 0.3 by DrLecter
 import sys
 from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
@@ -12,13 +12,15 @@ BUCKLER = 20
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ADAMANTITE_ORE]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
        st.set("cond","1")
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
        htmltext = "30005-05.htm"
     elif event == "157_1" :
@@ -32,8 +34,8 @@ class Quest (JQuest) :
 
    id = st.getState()
    cond = st.getInt("cond")
-   if id == COMPLETED :
-     htmltext = "<html><body>This quest has already been completed.</body></html>"
+   if id == State.COMPLETED :
+     htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif cond == 0 :
      if player.getLevel() >= 5 :
         htmltext = "30005-03.htm"
@@ -43,7 +45,7 @@ class Quest (JQuest) :
    elif cond :
      if st.getQuestItemsCount(ADAMANTITE_ORE)>=20 :
         st.takeItems(ADAMANTITE_ORE,-1)
-        st.setState(COMPLETED)
+        st.setState(State.COMPLETED)
         st.playSound("ItemSound.quest_finish")
         st.giveItems(BUCKLER,1)
         htmltext = "30005-07.htm"
@@ -54,7 +56,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
    adamantite = st.getQuestItemsCount(ADAMANTITE_ORE)
    if st.getInt("cond") == 1 and adamantite < 20 :
        npcId = npc.getNpcId()
@@ -73,16 +75,8 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(157,qn,"Recover Smuggled")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30005)
 
 QUEST.addTalkId(30005)
 QUEST.addKillId(20121)
-
-STARTED.addQuestDrop(20121,ADAMANTITE_ORE,1)

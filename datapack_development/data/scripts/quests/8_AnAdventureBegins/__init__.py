@@ -22,13 +22,15 @@ MARK_OF_TRAVELER       = 7570
  
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr) 
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ROSELYNS_NOTE]
 
  def onEvent (self,event,st) : 
    htmltext = event 
    if event == "30134-03.htm" : 
      st.set("cond","1") 
-     st.setState(STARTED) 
+     st.setState(State.STARTED) 
      st.playSound("ItemSound.quest_accept") 
    elif event == "30355-02.htm" : 
      st.giveItems(ROSELYNS_NOTE,1) 
@@ -44,7 +46,7 @@ class Quest (JQuest) :
      st.giveItems(SCROLL_OF_ESCAPE_GIRAN,1) 
      st.giveItems(MARK_OF_TRAVELER, 1) 
      st.set("cond","0") 
-     st.setState(COMPLETED) 
+     st.setState(State.COMPLETED) 
      st.playSound("ItemSound.quest_finish") 
    return htmltext 
 
@@ -56,7 +58,7 @@ class Quest (JQuest) :
    cond  = st.getInt("cond") 
    id    = st.getState() 
 
-   if id == CREATED : 
+   if id == State.CREATED : 
      st.set("cond","0") 
      if player.getRace().ordinal() == 2 : 
        if player.getLevel() >= 3 : 
@@ -67,11 +69,11 @@ class Quest (JQuest) :
      else : 
        htmltext = "30134-01.htm" 
        st.exitQuest(1) 
-   elif npcId == JASMINE and id == COMPLETED : 
+   elif npcId == JASMINE and id == State.COMPLETED : 
      htmltext = "<html><body>I can't supply you with another Giran Scroll of Escape. Sorry traveller.</body></html>" 
    elif npcId == JASMINE and cond == 1 : 
      htmltext = "30134-04.htm"
-   elif id == STARTED :  
+   elif id == State.STARTED :  
        if npcId == ROSELYN and cond : 
          if st.getQuestItemsCount(ROSELYNS_NOTE) == 0 : 
            htmltext = "30355-01.htm" 
@@ -85,16 +87,10 @@ class Quest (JQuest) :
    return htmltext 
 
 QUEST     = Quest(8,qn,"An Adventure Begins") 
-CREATED   = State('Start',     QUEST) 
-STARTED   = State('Started',   QUEST) 
-COMPLETED = State('Completed', QUEST) 
  
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(JASMINE) 
 
 QUEST.addTalkId(JASMINE) 
 
 QUEST.addTalkId(ROSELYN) 
 QUEST.addTalkId(HARNE) 
-
-STARTED.addQuestDrop(JASMINE,ROSELYNS_NOTE,1) 

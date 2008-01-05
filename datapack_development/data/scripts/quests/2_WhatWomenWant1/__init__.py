@@ -25,7 +25,9 @@ BEGINNERS_POTION = 1073
  
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [GREENIS_LETTER, ARUJIENS_LETTER3, ARUJIENS_LETTER1, ARUJIENS_LETTER2, POETRY_BOOK]
 
  def onEvent (self,event,st) :
    htmltext = event 
@@ -34,7 +36,7 @@ class Quest (JQuest) :
        st.giveItems(ARUJIENS_LETTER1,1) 
      st.set("cond","1") 
      st.set("id","1") 
-     st.setState(STARTED) 
+     st.setState(State.STARTED) 
      st.playSound("ItemSound.quest_accept") 
    elif event == "30223-08.htm" : 
      st.takeItems(ARUJIENS_LETTER3,-1) 
@@ -46,7 +48,7 @@ class Quest (JQuest) :
      st.takeItems(ARUJIENS_LETTER3,-1) 
      st.giveItems(113,1) 
      st.set("cond","0") 
-     st.setState(COMPLETED) 
+     st.setState(State.COMPLETED) 
      st.playSound("ItemSound.quest_finish") 
    return htmltext 
 
@@ -58,13 +60,13 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
  
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
      st.set("id","0") 
  
    cond = st.getInt("cond") 
  
-   if npcId == ARUJIEN and id == CREATED : 
+   if npcId == ARUJIEN and id == State.CREATED : 
      if player.getRace().ordinal() != 1 and player.getRace().ordinal() != 0 : 
        htmltext = "30223-00.htm" 
      elif player.getLevel() >= 2 : 
@@ -72,8 +74,8 @@ class Quest (JQuest) :
      else: 
        htmltext = "30223-01.htm" 
        st.exitQuest(1) 
-   elif npcId == ARUJIEN and id == COMPLETED : 
-     htmltext = "<html><body>This quest has already been completed.</body></html>" 
+   elif npcId == ARUJIEN and id == State.COMPLETED : 
+     htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>" 
    elif npcId == ARUJIEN and cond >= 1 : 
      if st.getQuestItemsCount(ARUJIENS_LETTER1) : 
        htmltext = "30223-05.htm" 
@@ -88,9 +90,9 @@ class Quest (JQuest) :
        st.takeItems(GREENIS_LETTER,-1) 
        st.giveItems(113,1)
        st.set("cond","0") 
-       st.setState(COMPLETED) 
+       st.setState(State.COMPLETED) 
        st.playSound("ItemSound.quest_finish")
-   elif id == STARTED :    
+   elif id == State.STARTED :    
        if npcId == MIRABEL and cond == 1 : 
          if st.getQuestItemsCount(ARUJIENS_LETTER1) : 
            htmltext = "30146-01.htm" 
@@ -126,11 +128,7 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST     = Quest(2,qn,"What Women Want") 
-CREATED   = State('Start',     QUEST) 
-STARTED   = State('Started',   QUEST) 
-COMPLETED = State('Completed', QUEST) 
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(ARUJIEN) 
 
 QUEST.addTalkId(ARUJIEN) 
@@ -139,9 +137,3 @@ QUEST.addTalkId(MIRABEL)
 QUEST.addTalkId(HERBIEL) 
 QUEST.addTalkId(GREENIS) 
 QUEST.addTalkId(ARUJIEN) 
-
-STARTED.addQuestDrop(ARUJIEN,GREENIS_LETTER,1) 
-STARTED.addQuestDrop(ARUJIEN,ARUJIENS_LETTER3,1) 
-STARTED.addQuestDrop(ARUJIEN,ARUJIENS_LETTER1,1) 
-STARTED.addQuestDrop(ARUJIEN,ARUJIENS_LETTER2,1) 
-STARTED.addQuestDrop(ARUJIEN,POETRY_BOOK,1) 

@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! - Version 0.3 by kmarty
+# Made by Mr. Have fun! - Version 0.3 by kmarty
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -13,13 +13,15 @@ LEATHER_PANTS_ID = 29
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [KASHA_CRYSTAL_ID, KASHA_PARASITE_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
       htmltext = "30571-03.htm"
     return htmltext
@@ -31,7 +33,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if npcId == 30571 and st.getInt("cond")==0 :
       if player.getRace().ordinal() != 3 :
@@ -58,7 +60,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId == 20479 :
@@ -83,17 +85,9 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(276,qn,"Hestui Totem")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
-
-QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(30571)
 QUEST.addTalkId(30571)
 
 QUEST.addKillId(20479)
 QUEST.addKillId(27044)
-
-STARTED.addQuestDrop(27044,KASHA_CRYSTAL_ID,1)
-STARTED.addQuestDrop(20479,KASHA_PARASITE_ID,1)

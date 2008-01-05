@@ -20,14 +20,16 @@ ROUTES={
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [7140]
 
  def onAdvEvent (self,event,npc,player):
         st = player.getQuestState(qn)
         if not st : return
         htmltext = event
         if event == "31522-02.htm":
-            st.setState(STARTED)
+            st.setState(State.STARTED)
             st.playSound("ItemSound.quest_accept") 
             st.set("cond","1")
         elif event == "timer" :
@@ -38,13 +40,13 @@ class Quest (JQuest) :
             st.unset("AGRIPEL")
             st.unset("DOMINIC")
             st.unset("BENEDICT")
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.takeItems(7140,-1)
             if st.getQuestItemsCount(7141) == 0 :
                 st.giveItems(7141,1)
             st.playSound("ItemSound.quest_finish")
             st.startQuestTimer("timer",1)
-            htmltext = "Congratulations! You are completed this quest!"     + \
+            htmltext = "Congratulations! You are State.COMPLETED this quest!"     + \
                        " \n The Quest \"Tragedy In Von Hellmann Forest\""   + \
                        " become available.\n Show Cross of Einhasad to High"+ \
                        " Priest Tifaren."
@@ -100,8 +102,8 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    onlyone = st.getInt("onlyone")
    state = st.getState()
-   if state == CREATED :
-     st.setState(STARTED)
+   if state == State.CREATED :
+     st.setState(State.STARTED)
      st.set("cond","0")
    if npcId == 31522:
      if cond == 0:
@@ -112,7 +114,7 @@ class Quest (JQuest) :
            htmltext = "31522-03.htm"
            st.exitQuest(1)
        else:
-         htmltext = "This quest have already been completed."
+         htmltext = "This quest have already been State.COMPLETED."
      elif cond == 1:
        htmltext = "31522-05.htm"       
    elif npcId == 31523 :
@@ -185,14 +187,8 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST     = Quest(21,qn,"Hidden Truth")
-CREATED   = State('Start',     QUEST)
-STARTED   = State('Started',   QUEST)
-COMPLETED = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(31522)
 
 for NPC in [31522,31523,31524,31525,31526,31348,31349,31350,31328]:
   QUEST.addTalkId(NPC)
-
-STARTED.addQuestDrop(31526,7140,1)

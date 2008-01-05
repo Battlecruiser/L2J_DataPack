@@ -20,13 +20,15 @@ RECIPES_100= range(4181,4200)+[8297, 8305, 8309, 8311, 8321, 8323]
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [DESTROYED_GOLEM_SHARD]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "32069-02.htm" :
        st.set("cond","1")
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
     elif event == "32069-06.htm" :
        if st.getQuestItemsCount(DESTROYED_GOLEM_SHARD) >= 500:
@@ -55,7 +57,7 @@ class Quest (JQuest) :
             else:
                 htmltext = "32069-03.htm"
                 st.exitQuest(1)
-        elif st.getState() == STARTED :
+        elif st.getState() == State.STARTED :
             if cond==1 or count < 500 :
                 htmltext = "32069-04.htm"
             elif cond==2 and count >= 500 :
@@ -67,7 +69,7 @@ class Quest (JQuest) :
     if not partyMember: return
     st = partyMember.getQuestState(qn)
     if st :
-        if st.getState() == STARTED :
+        if st.getState() == State.STARTED :
             npcId = npc.getNpcId()
             cond = st.getInt("cond")
             count = st.getQuestItemsCount(DESTROYED_GOLEM_SHARD)
@@ -87,15 +89,10 @@ class Quest (JQuest) :
     return
 
 QUEST       = Quest(647,qn,"Influx of Machines")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(32069)
 
 QUEST.addTalkId(32069)
 
 for i in range(22052,22079):
    QUEST.addKillId(i)
-
-STARTED.addQuestDrop(32069,DESTROYED_GOLEM_SHARD,1)

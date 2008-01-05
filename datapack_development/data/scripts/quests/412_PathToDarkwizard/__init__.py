@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://forum.l2jdp.com for more details
 import sys
@@ -22,7 +22,9 @@ HUB_SCENT = 1279
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(1254, 1280)
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -33,7 +35,7 @@ class Quest (JQuest) :
         if st.getInt("cond") == 0 :
           if level >= 19 and classId == 0x26 and st.getQuestItemsCount(JEWEL_OF_DARKNESS) == 0 :
             st.set("cond","1")
-            st.setState(STARTED)
+            st.setState(State.STARTED)
             st.playSound("ItemSound.quest_accept")
             st.giveItems(SEEDS_OF_DESPAIR,1)
             htmltext = "30421-05.htm"
@@ -78,23 +80,15 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30421 and id != STARTED : return htmltext
+   if npcId != 30421 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30421 and st.getInt("cond")==0 :
-        if st.getInt("cond")<15 :
-          if st.getQuestItemsCount(JEWEL_OF_DARKNESS) == 0 :
-            htmltext = "30421-01.htm"
-            st.set("cond","0")
-            return htmltext
-          else:
-            htmltext = "30421-04.htm"
-        else:
-          htmltext = "30421-04.htm"
+      if st.getQuestItemsCount(JEWEL_OF_DARKNESS) == 0 :
+        htmltext = "30421-01.htm"
+        st.set("cond","0")
+        return htmltext
+      else:
+        htmltext = "30421-04.htm"
    elif npcId == 30421 and st.getInt("cond")==1 :
         if st.getQuestItemsCount(SEEDS_OF_DESPAIR) and st.getQuestItemsCount(SEEDS_OF_HORROR) and st.getQuestItemsCount(SEEDS_OF_LUNACY) and st.getQuestItemsCount(SEEDS_OF_ANGER) :
             htmltext = "30421-16.htm"
@@ -104,7 +98,7 @@ class Quest (JQuest) :
             st.takeItems(SEEDS_OF_DESPAIR,1)
             st.giveItems(JEWEL_OF_DARKNESS,1)
             st.set("cond","0")
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.playSound("ItemSound.quest_finish")
         elif st.getQuestItemsCount(SEEDS_OF_DESPAIR) == 1 and st.getQuestItemsCount(FAMILYS_ASHES) == 0 and st.getQuestItemsCount(LUCKY_KEY) == 0 and st.getQuestItemsCount(CANDLE) == 0 and st.getQuestItemsCount(HUB_SCENT) == 0 and st.getQuestItemsCount(KNEE_BONE) == 0 and st.getQuestItemsCount(HEART_OF_LUNACY) == 0 :
           htmltext = "30421-17.htm"
@@ -152,7 +146,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId == 20015 :
@@ -203,13 +197,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(412,qn,"Path To Darkwizard")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30421)
 
 QUEST.addTalkId(30421)
@@ -223,16 +211,3 @@ QUEST.addKillId(20022)
 QUEST.addKillId(20045)
 QUEST.addKillId(20517)
 QUEST.addKillId(20518)
-
-STARTED.addQuestDrop(30418,SEEDS_OF_HORROR,1)
-STARTED.addQuestDrop(30415,SEEDS_OF_ANGER,1)
-STARTED.addQuestDrop(30419,SEEDS_OF_LUNACY,1)
-STARTED.addQuestDrop(30421,SEEDS_OF_DESPAIR,1)
-STARTED.addQuestDrop(20045,HEART_OF_LUNACY,1)
-STARTED.addQuestDrop(30419,HUB_SCENT,1)
-STARTED.addQuestDrop(20015,FAMILYS_ASHES,1)
-STARTED.addQuestDrop(30415,LUCKY_KEY,1)
-STARTED.addQuestDrop(30418,CANDLE,1)
-STARTED.addQuestDrop(20517,KNEE_BONE,1)
-STARTED.addQuestDrop(20518,KNEE_BONE,1)
-STARTED.addQuestDrop(20022,KNEE_BONE,1)

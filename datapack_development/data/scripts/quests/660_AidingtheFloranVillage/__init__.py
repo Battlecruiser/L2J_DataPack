@@ -31,7 +31,9 @@ SCROLL_ENCHANT_WEAPON = 955
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [WATCHING_EYES, DELU_LIZARDMAN_SCALE, ROUGHLY_HEWN_ROCK_GOLEM_SHARD]
 
  def onEvent (self,event,st) :
     EYES=st.getQuestItemsCount(WATCHING_EYES)
@@ -40,7 +42,7 @@ class Quest (JQuest) :
     htmltext = event
     if event =="30608-04.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     if event == "30291-15.htm" :
       st.playSound("ItemSound.quest_middle")
@@ -124,7 +126,7 @@ class Quest (JQuest) :
         htmltext="30291-14.htm"
     elif event == "30291-06.htm" :
        st.set("cond","0")
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
        st.playSound("ItemSound.quest_finish")
     return htmltext
 
@@ -138,8 +140,8 @@ class Quest (JQuest) :
    EYES=st.getQuestItemsCount(WATCHING_EYES)
    id = st.getState()
    cond = st.getInt("cond")
-   if st.getState() == COMPLETED :
-     st.setState(CREATED)
+   if st.getState() == State.COMPLETED :
+     st.setState(State.CREATED)
    if npcId == MARIA and cond == 0 :
      if st.getPlayer().getLevel() >= 30 :
        htmltext = "30608-02.htm"
@@ -177,11 +179,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(660,qn,"Aiding the Floran Village")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(MARIA)
 
 QUEST.addTalkId(MARIA)
@@ -194,7 +192,3 @@ QUEST.addKillId(DELU_LIZARDMAN_SHAMAN)
 QUEST.addKillId(DELU_LIZARDMAN_SAPPLIER)
 QUEST.addKillId(DELU_LIZARDMAN_COMMANDER)
 QUEST.addKillId(DELU_LIZARDMAN_SPESIAL_AGENT)
-
-STARTED.addQuestDrop(MARIA,WATCHING_EYES,1)
-STARTED.addQuestDrop(MARIA,DELU_LIZARDMAN_SCALE,1)
-STARTED.addQuestDrop(MARIA,ROUGHLY_HEWN_ROCK_GOLEM_SHARD,1)

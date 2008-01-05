@@ -12,7 +12,9 @@ ADENA_ID = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [RYLITHS_LETTER_ID, THEONS_DIARY_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -21,7 +23,7 @@ class Quest (JQuest) :
           htmltext = "30368-06.htm"
           st.giveItems(RYLITHS_LETTER_ID,1)
           st.set("cond","1")
-          st.setState(STARTED)
+          st.setState(State.STARTED)
           st.playSound("ItemSound.quest_accept")
        else:
           htmltext = "30368-05.htm"
@@ -34,7 +36,7 @@ class Quest (JQuest) :
     elif event == "156_2" :
        st.takeItems(RYLITHS_LETTER_ID,-1)
        st.unset("cond")
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
        st.playSound("ItemSound.quest_finish")
        st.giveItems(5250,1)
        st.addExpAndSp(3000,0)
@@ -48,8 +50,8 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+   if id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30368 :
       if not st.getInt("cond") :
          htmltext = "30368-04.htm"
@@ -59,12 +61,12 @@ class Quest (JQuest) :
         elif st.getQuestItemsCount(THEONS_DIARY_ID) :
            st.takeItems(THEONS_DIARY_ID,-1)
            st.unset("cond")
-           st.setState(COMPLETED)
+           st.setState(State.COMPLETED)
            st.playSound("ItemSound.quest_finish")
            st.addExpAndSp(3000,0)
            st.giveItems(5250,1)
            htmltext = "30368-08.htm"
-   elif npcId == 30369 and id == STARTED:
+   elif npcId == 30369 and id == State.STARTED:
       if st.getQuestItemsCount(RYLITHS_LETTER_ID) :
          htmltext = "30369-02.htm"
       elif st.getQuestItemsCount(THEONS_DIARY_ID) :
@@ -72,17 +74,9 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(156,qn,"Millennium Love")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30368)
 
 QUEST.addTalkId(30368)
 
 QUEST.addTalkId(30369)
-
-STARTED.addQuestDrop(30368,RYLITHS_LETTER_ID,1)
-STARTED.addQuestDrop(30369,THEONS_DIARY_ID,1)

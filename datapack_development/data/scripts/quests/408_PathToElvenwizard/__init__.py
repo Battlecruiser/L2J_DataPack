@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://forum.l2jdp.com for more details
 import sys
@@ -25,7 +25,10 @@ LUCKY_POTPOURI = 1274
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ROGELLIAS_LETTER, RED_DOWN, CHARM_OF_GRAIN, APPETIZING_APPLE, GOLD_LEAVES, SAP_OF_WORLD_TREE, IMMORTAL_LOVE,
+                AMETHYST, LUCKY_POTPOURI, MAGICAL_POWERS_RUBY, PURE_AQUAMARINE, NOBILITY_AMETHYST, FERTILITY_PERIDOT]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -45,7 +48,7 @@ class Quest (JQuest) :
               htmltext = "30414-05.htm"
             else:
               st.set("cond","1")
-              st.setState(STARTED)
+              st.setState(State.STARTED)
               st.playSound("ItemSound.quest_accept")
               if st.getQuestItemsCount(FERTILITY_PERIDOT) == 0 :
                 st.giveItems(FERTILITY_PERIDOT,1)
@@ -94,18 +97,10 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30414 and id != STARTED : return htmltext
+   if npcId != 30414 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30414 and st.getInt("cond")==0 :
-        if st.getInt("cond")<15 :
-          htmltext = "30414-01.htm"
-        else:
-          htmltext = "30414-01.htm"
+        htmltext = "30414-01.htm"
    elif npcId == 30414 and st.getInt("cond")!=0 and st.getQuestItemsCount(ROGELLIAS_LETTER)==0 and st.getQuestItemsCount(APPETIZING_APPLE)==0 and st.getQuestItemsCount(IMMORTAL_LOVE)==0 and st.getQuestItemsCount(CHARM_OF_GRAIN)==0 and st.getQuestItemsCount(SAP_OF_WORLD_TREE)==0 and st.getQuestItemsCount(LUCKY_POTPOURI)==0 and st.getQuestItemsCount(FERTILITY_PERIDOT)!=0 and (st.getQuestItemsCount(MAGICAL_POWERS_RUBY)==0 or st.getQuestItemsCount(NOBILITY_AMETHYST)==0 or st.getQuestItemsCount(PURE_AQUAMARINE)==0) :
         htmltext = "30414-11.htm"
    elif npcId == 30414 and st.getInt("cond")!=0 and st.getQuestItemsCount(ROGELLIAS_LETTER)!=0 :
@@ -165,7 +160,7 @@ class Quest (JQuest) :
         st.takeItems(NOBILITY_AMETHYST,st.getQuestItemsCount(NOBILITY_AMETHYST))
         st.takeItems(FERTILITY_PERIDOT,st.getQuestItemsCount(FERTILITY_PERIDOT))
         st.set("cond","0")
-        st.setState(COMPLETED)
+        st.setState(State.COMPLETED)
         st.playSound("ItemSound.quest_finish")
         if st.getQuestItemsCount(ETERNITY_DIAMOND) == 0 :
           st.giveItems(ETERNITY_DIAMOND,1)
@@ -175,7 +170,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId == 20466 :
@@ -205,13 +200,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(408,qn,"Path To Elvenwizard")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30414)
 
 QUEST.addTalkId(30414)
@@ -223,17 +212,3 @@ QUEST.addTalkId(30423)
 QUEST.addKillId(20019)
 QUEST.addKillId(20466)
 QUEST.addKillId(20047)
-
-STARTED.addQuestDrop(30414,ROGELLIAS_LETTER,1)
-STARTED.addQuestDrop(20466,RED_DOWN,1)
-STARTED.addQuestDrop(30157,CHARM_OF_GRAIN,1)
-STARTED.addQuestDrop(30414,APPETIZING_APPLE,1)
-STARTED.addQuestDrop(20019,GOLD_LEAVES,1)
-STARTED.addQuestDrop(30371,SAP_OF_WORLD_TREE,1)
-STARTED.addQuestDrop(30414,IMMORTAL_LOVE,1)
-STARTED.addQuestDrop(20047,AMETHYST,1)
-STARTED.addQuestDrop(30423,LUCKY_POTPOURI,1)
-STARTED.addQuestDrop(30157,MAGICAL_POWERS_RUBY,1)
-STARTED.addQuestDrop(30371,PURE_AQUAMARINE,1)
-STARTED.addQuestDrop(30423,NOBILITY_AMETHYST,1)
-STARTED.addQuestDrop(30414,FERTILITY_PERIDOT,1)

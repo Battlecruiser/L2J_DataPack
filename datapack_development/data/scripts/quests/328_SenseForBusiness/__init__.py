@@ -13,13 +13,15 @@ ADENA = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [MONSTER_EYE_CARCASS, MONSTER_EYE_LENS, BASILISK_GIZZARD]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30436-03.htm" :
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
     elif event == "30436-06.htm" :
         st.playSound("ItemSound.quest_finish")
@@ -33,7 +35,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if st.getInt("cond")==0 :
      if player.getLevel() >= 21 :
@@ -59,7 +61,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    n = st.getRandom(100)
@@ -102,18 +104,9 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(328,qn,"Sense For Business")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
-
-QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(30436)
 QUEST.addTalkId(30436)
 
 for i in [ 20055,20059,20067,20068,20070,20072 ] :
     QUEST.addKillId(i)
-
-STARTED.addQuestDrop(20055,MONSTER_EYE_CARCASS,1)
-STARTED.addQuestDrop(20055,MONSTER_EYE_LENS,1)
-STARTED.addQuestDrop(20070,BASILISK_GIZZARD,1)

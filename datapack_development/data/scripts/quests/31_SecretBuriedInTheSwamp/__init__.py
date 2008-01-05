@@ -15,15 +15,17 @@ KRORINS_JOURNAL = 7252
 default = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [KRORINS_JOURNAL]
 
  def onEvent (self,event,st) :
    id = st.getState()
    cond = st.getInt("cond")
    htmltext = event
-   if event == "31555-1.htm" and id == CREATED:
+   if event == "31555-1.htm" and id == State.CREATED:
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "31665-1.htm" and cond == 1:
      st.set("cond","2")
@@ -45,7 +47,7 @@ class Quest (JQuest) :
      st.addExpAndSp(130000,0)
      st.giveItems(57,40000)
      st.playSound("ItemSound.quest_finish")
-     st.setState(COMPLETED)
+     st.setState(State.COMPLETED)
    elif event != "31663-0a.htm":
      htmltext = default
    return htmltext
@@ -58,8 +60,8 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
-   if id == COMPLETED :
-     htmltext = "<html><body>This quest has already been completed.</body></html>"
+   if id == State.COMPLETED :
+     htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == ABERCROMBIE :
      if cond == 0 :
        if player.getLevel() >= 66 :
@@ -75,7 +77,7 @@ class Quest (JQuest) :
        htmltext = "31555-5.htm"
      elif cond == 7 :
        htmltext = "31555-6.htm"
-   elif id == STARTED : 
+   elif id == State.STARTED : 
        if npcId == CORPSE_OF_DWARF :
          if cond == 1 :
            htmltext = "31665-0.htm"
@@ -104,16 +106,10 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(31,qn,"Secret Buried In The Swamp")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(ABERCROMBIE)
 
 QUEST.addTalkId(ABERCROMBIE)
 
 for i in range(31661,31666):
     QUEST.addTalkId(i)
-
-STARTED.addQuestDrop(ABERCROMBIE,KRORINS_JOURNAL,1)

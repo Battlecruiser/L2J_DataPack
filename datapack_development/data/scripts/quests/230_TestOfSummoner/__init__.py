@@ -107,7 +107,8 @@ def takeBeginnerArcanas(st):
 
 class Quest (JQuest) :
    def __init__(self,id,name,descr): 
-      JQuest.__init__(self,id,name,descr) 
+      JQuest.__init__(self,id,name,descr)
+      self.questItemIds = range(3337,3390)
       # list to hold the player and pet instance of the player in the duel and an "isFoul" flag, indexed by npcId 
       self.inProgressDuelMobs = {} # [player, player.getPet(), True/False]
 
@@ -118,7 +119,7 @@ class Quest (JQuest) :
             if var in ["Arcanas","Beginner_Arcanas","Lara_Part"]:
                continue
             st.set(var,"1")
-         st.setState(PROGRESS)
+         st.setState(State.STARTED)
          st.playSound("ItemSound.quest_accept")
       elif event == "30634-07.htm" :
          st.giveItems(GALATEAS_LETTER,1)
@@ -195,13 +196,13 @@ class Quest (JQuest) :
 
       npcId = npc.getNpcId()
       id = st.getState()
-      if npcId != NPC[1] and id != PROGRESS : return htmltext
+      if npcId != NPC[1] and id != State.STARTED : return htmltext
       
       htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>" 
       id = st.getState()
       npcId = npc.getNpcId()
       Lara, Galatea, Almors, Camoniell, Belthus, Basilla, Celestiel, Brynthea = NPC
-      if id == CREATED and npcId == Galatea:    # start part, Galatea
+      if id == State.CREATED and npcId == Galatea:    # start part, Galatea
          for var in STATS:
             st.set(var,"0")
          if player.getClassId().getId() in [0x0b, 0x1a, 0x27]:
@@ -213,15 +214,15 @@ class Quest (JQuest) :
          else:                                  # wrong class.. never
             htmltext = "30634-01.htm"
             st.exitQuest(1)
-      elif id == COMPLETED:                     # quest already done, not repeatable
-         htmltext = "<html><body>This quest has already been completed.</body></html>"
-      elif id == PROGRESS:
-         step = st.getInt("step")             # stats as short vars if the player has state <Progress>
+      elif id == State.COMPLETED:                     # quest already done, not repeatable
+         htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+      elif id == State.STARTED:
+         step = st.getInt("step")             # stats as short vars if the player has state <Started>
          LaraPart = st.getInt("Lara_Part")
          Arcanas = st.getInt("Arcanas")
          BeginnerArcanas = st.getInt("Beginner_Arcanas")
          if npcId == Galatea :            # Start and End Npc Galatea related stuff
-            if step == 1 :                # step 1 means just started
+            if step == 1 :                # step 1 means just State.STARTED
                htmltext = "30634-09.htm"
             elif step == 2 :              # step 2 means already talkd with lara
                if Arcanas == 6:           # finished all battles... the player is able to earn the marks
@@ -229,7 +230,7 @@ class Quest (JQuest) :
                   st.addExpAndSp(148409,30000)
                   for var in STATS:
                      st.unset(var)
-                  st.setState(COMPLETED)
+                  st.setState(State.COMPLETED)
                   st.playSound("ItemSound.quest_finish")
                   st.giveItems(MARK_OF_SUMMONER,1)
                   st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
@@ -311,7 +312,7 @@ class Quest (JQuest) :
                self.inProgressDuelMobs[npcId][2] = True
          # if the npc had never before been attacked, check if it's time to mark a duel in progress
          elif not st : return
-         elif st.getState() != PROGRESS : return
+         elif st.getState() != State.STARTED : return
          elif not isPet and st.getInt(var) == 2: self.inProgressDuelMobs[npcId] = [player, player.getPet(), True] # foul
          else :
             # var means the variable of the SummonerManager, the rest are all Crystalls which mark the status
@@ -329,7 +330,7 @@ class Quest (JQuest) :
       # this part is just for laras parts.  It is only available to players who are doing the quest
       if npcId in DROPLIST_LARA.keys() :
          if not st : return
-         if st.getState() == COMPLETED : return
+         if st.getState() == State.COMPLETED : return
          random = st.getRandom(100)
          var, value, chance, item = DROPLIST_LARA[npcId]
          count = st.getQuestItemsCount(item)
@@ -383,12 +384,7 @@ class Quest (JQuest) :
       return
 
 QUEST       = Quest(230,qn,"Test Of Summoner")
-CREATED     = State('Start', QUEST)
-PROGRESS    = State('Progress', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(NPC[1])
 
 # adds all npcs, mobs to the progress state
@@ -399,14 +395,6 @@ for mobId in DROPLIST_LARA.keys():
 for mobId in DROPLIST_SUMMON.keys():
    QUEST.addKillId(mobId)
    QUEST.addAttackId(mobId)
-#for summonId in PLAYER_SUMMONS:
-#   PROGRESS.addKillId(summonId)
 
 # this will add the player to the list of notified objects in onDeath Part
 #addNotifyOfDeath(st.getPlayer())
-   
-#This is just to formal add the drops, in case that a player abort this quest.. the items should disappear
-STARTED        = State('Started', QUEST)
-
-for item in range(3337,3390):
-    STARTED.addQuestDrop(30063,item,1)

@@ -20,7 +20,7 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    if event == "31302-1.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    if event == "31518-1.htm" :
      if cond == 1 :
@@ -30,7 +30,7 @@ class Quest (JQuest) :
        st.addExpAndSp(60217,0)
        st.set("cond","0")
        st.playSound("ItemSound.quest_finish")
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
    return htmltext
 
  def onTalk (self,npc,player):
@@ -41,21 +41,21 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if npcId == VLADIMIR and st.getInt("cond") == 0 :
      if player.getLevel() >= 60 :
        htmltext = "31302-0.htm"
        return htmltext
-     if id == COMPLETED :
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
+     if id == State.COMPLETED :
+       htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
        return htmltext
      else:
        htmltext = "31302-0a.htm"
        st.exitQuest(1)
    if npcId == VLADIMIR and cond == 1 :
        htmltext = "31302-1a.htm"
-   if id == STARTED :
+   if id == State.STARTED :
        if npcId == M_NECROMANCER and cond == 1 :
          htmltext = "31518-0.htm"
        elif npcId == M_NECROMANCER and cond == 2 :
@@ -65,11 +65,8 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(15,qn,"Sweet Whisper")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(31302)
 QUEST.addTalkId(31302)
 

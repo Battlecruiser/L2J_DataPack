@@ -32,7 +32,9 @@ DROPLIST={
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(1162,1180)
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -59,7 +61,7 @@ class Quest (JQuest) :
         if st.getInt("cond")== 0 and classid == 0x00 and level >= 19 :
            st.set("id","0")
            st.set("cond","1")
-           st.setState(STARTED)
+           st.setState(State.STARTED)
            st.playSound("ItemSound.quest_accept")
            st.giveItems(MARK_OF_ESQUIRE,1)
         else:
@@ -101,7 +103,7 @@ class Quest (JQuest) :
           st.takeItems(MARK_OF_ESQUIRE,-1)
           st.giveItems(SWORD_OF_RITUAL,1)
           st.set("cond","0")
-          st.setState(COMPLETED)
+          st.setState(State.COMPLETED)
           st.playSound("ItemSound.quest_finish")
         else:
           htmltext=default
@@ -112,7 +114,7 @@ class Quest (JQuest) :
           st.takeItems(MARK_OF_ESQUIRE,-1)
           st.giveItems(SWORD_OF_RITUAL,1)
           st.set("cond","0")
-          st.setState(COMPLETED)
+          st.setState(State.COMPLETED)
           st.playSound("ItemSound.quest_finish")
         else:
           htmltext=default
@@ -126,15 +128,15 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30417 and id != STARTED : return htmltext
+   if npcId != 30417 and id != State.STARTED : return htmltext
 
    squire = st.getQuestItemsCount(MARK_OF_ESQUIRE)
    coin1,coin2,coin3,coin4,coin5,coin6 = st.getQuestItemsCount(COIN_OF_LORDS1),st.getQuestItemsCount(COIN_OF_LORDS2),st.getQuestItemsCount(COIN_OF_LORDS3),st.getQuestItemsCount(COIN_OF_LORDS4),st.getQuestItemsCount(COIN_OF_LORDS5),st.getQuestItemsCount(COIN_OF_LORDS6)
    guards_mark1,guards_mark2,guards_mark3=st.getQuestItemsCount(GLUDIO_GUARDS_MARK1),st.getQuestItemsCount(GLUDIO_GUARDS_MARK2),st.getQuestItemsCount(GLUDIO_GUARDS_MARK3)
    church_mark1,church_mark2,church_mark3=st.getQuestItemsCount(EINHASAD_CHURCH_MARK1),st.getQuestItemsCount(EINHASAD_CHURCH_MARK2),st.getQuestItemsCount(EINHASAD_CHURCH_MARK3)
    cond = st.getInt("cond")
-   if id == COMPLETED:
-      htmltext="<html><body>This quest has already been completed.</body></html>"
+   if id == State.COMPLETED:
+      htmltext="<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30417 :
       if cond==0 :
          htmltext = "30417-01.htm"
@@ -152,7 +154,7 @@ class Quest (JQuest) :
            st.takeItems(MARK_OF_ESQUIRE,-1)
            st.giveItems(SWORD_OF_RITUAL,1)
            st.set("cond","0")
-           st.setState(COMPLETED)
+           st.setState(State.COMPLETED)
            st.playSound("ItemSound.quest_finish")
    elif npcId == 30332 and cond==1 and squire :
        if not guards_mark1 and not coin1 :
@@ -241,7 +243,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    if st.getInt("cond") :
       item_required,item,max,chance=DROPLIST[npc.getNpcId()]
@@ -254,13 +256,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(402,qn,"Path To Knight")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30417)
 
 QUEST.addTalkId(30417)
@@ -277,6 +273,3 @@ QUEST.addTalkId(30653)
 
 for mob in DROPLIST.keys():
     QUEST.addKillId(mob)
-
-for item in range(1162,1180)+[MARK_OF_ESQUIRE] :
-    STARTED.addQuestDrop(20775,item,1)

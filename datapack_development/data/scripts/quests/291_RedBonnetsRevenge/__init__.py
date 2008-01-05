@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 
 import sys
 from net.sf.l2j.gameserver.model.quest import State
@@ -13,13 +13,15 @@ SOE=736
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [BLACK_WOLF_PELT]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30553-03.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
@@ -31,7 +33,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if st.getInt("cond")==0 :
       if player.getLevel() < 4 :
@@ -62,7 +64,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    if st.getQuestItemsCount(BLACK_WOLF_PELT) < 40 :
      if st.getQuestItemsCount(BLACK_WOLF_PELT) < 39 :
@@ -74,17 +76,9 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(291,qn,"Red Bonnets Revenge")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30553)
 
 QUEST.addTalkId(30553)
 
 QUEST.addKillId(20317)
-
-STARTED.addQuestDrop(20317,BLACK_WOLF_PELT,1)

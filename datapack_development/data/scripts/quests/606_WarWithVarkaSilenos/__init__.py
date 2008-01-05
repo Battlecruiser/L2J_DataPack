@@ -38,7 +38,9 @@ Mane = 7233
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [Mane]
 
  def onEvent (self,event,st) :
      htmltext = event
@@ -47,7 +49,7 @@ class Quest (JQuest) :
        if st.getPlayer().getLevel() >= 74 and st.getPlayer().getAllianceWithVarkaKetra() >= 1 : #the alliance check is only temporary, should be done on core side/AI
             st.set("cond","1")
             st.set("id","1")
-            st.setState(STARTED)
+            st.setState(State.STARTED)
             st.playSound("ItemSound.quest_accept")
             htmltext = "31370-03.htm"
        else :
@@ -89,11 +91,11 @@ class Quest (JQuest) :
      return htmltext
 
  def onKill(self,npc,player,isPet):
-     partyMember = self.getRandomPartyMemberState(player, STARTED)
+     partyMember = self.getRandomPartyMemberState(player, State.STARTED)
      if not partyMember: return
      st = partyMember.getQuestState(qn)
      if st :
-        if st.getState() == STARTED :
+        if st.getState() == State.STARTED :
          npcId = npc.getNpcId()
          count = st.getQuestItemsCount(Mane)
          st2 = partyMember.getQuestState("605_AllianceWithKetraOrcs")
@@ -118,17 +120,12 @@ class Quest (JQuest) :
      return
 
 QUEST       = Quest(606, qn, "War With Varka Silenos")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Kadun)
 QUEST.addTalkId(Kadun)
 
 for mobId in Varka_Mobs :
   QUEST.addKillId(mobId)
-
-STARTED.addQuestDrop(Kadun,Mane,1)
 
 for mobId in Ketra_Orcs :
   QUEST.addKillId(mobId)

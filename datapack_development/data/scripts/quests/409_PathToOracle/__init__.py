@@ -18,7 +18,9 @@ TAMATOS_NECKLACE = 1275
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [MONEY_OF_SWINDLER, DAIRY_OF_ALLANA, LIZARD_CAPTAIN_ORDER, CRYSTAL_MEDALLION, HALF_OF_DAIRY, TAMATOS_NECKLACE]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -28,7 +30,7 @@ class Quest (JQuest) :
         st.set("id","0")
         if level >= 19 and classId == 0x19 and st.getQuestItemsCount(LEAF_OF_ORACLE) == 0 :
           st.set("cond","1")
-          st.setState(STARTED)
+          st.setState(State.STARTED)
           st.playSound("ItemSound.quest_accept")
           st.giveItems(CRYSTAL_MEDALLION,1)
           htmltext = "30293-05.htm"
@@ -68,13 +70,8 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30293 and id != STARTED : return htmltext
+   if npcId != 30293 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30293 and st.getInt("cond")==0 :
       if st.getQuestItemsCount(LEAF_OF_ORACLE) == 0 :
          htmltext = "30293-01.htm"
@@ -96,7 +93,7 @@ class Quest (JQuest) :
             st.takeItems(CRYSTAL_MEDALLION,1)
             st.giveItems(LEAF_OF_ORACLE,1)
             st.set("cond","0")
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.playSound("ItemSound.quest_finish")
           else:
             htmltext = "30293-07.htm"
@@ -142,7 +139,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId == 27032 :
@@ -160,13 +157,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(409,qn,"Path To Oracle")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30293)
 
 QUEST.addTalkId(30293)
@@ -178,12 +169,3 @@ QUEST.addKillId(27032)
 QUEST.addKillId(27033)
 QUEST.addKillId(27034)
 QUEST.addKillId(27035)
-
-STARTED.addQuestDrop(30428,MONEY_OF_SWINDLER,1)
-STARTED.addQuestDrop(30424,DAIRY_OF_ALLANA,1)
-STARTED.addQuestDrop(27032,LIZARD_CAPTAIN_ORDER,1)
-STARTED.addQuestDrop(27033,LIZARD_CAPTAIN_ORDER,1)
-STARTED.addQuestDrop(27034,LIZARD_CAPTAIN_ORDER,1)
-STARTED.addQuestDrop(30293,CRYSTAL_MEDALLION,1)
-STARTED.addQuestDrop(30424,HALF_OF_DAIRY,1)
-STARTED.addQuestDrop(27035,TAMATOS_NECKLACE,1)

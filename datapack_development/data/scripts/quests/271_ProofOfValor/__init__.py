@@ -1,4 +1,4 @@
-# Maked by Mr. - Version 0.3 by DrLecter
+# Made by Mr. - Version 0.3 by DrLecter
 import sys
 from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
@@ -13,13 +13,15 @@ NECKLACE_OF_COURAGE = 1506
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [KASHA_WOLF_FANG]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30577-03.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
       if st.getQuestItemsCount(NECKLACE_OF_COURAGE) or st.getQuestItemsCount(NECKLACE_OF_VALOR) :
         htmltext = "30577-07.htm"
@@ -32,9 +34,9 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
-   if id == COMPLETED :
+   if id == State.COMPLETED :
      htmltext = "30577-06.htm"
    elif st.getInt("cond") == 0 :
      if player.getRace().ordinal() != 3 :
@@ -50,7 +52,7 @@ class Quest (JQuest) :
      htmltext = "30577-04.htm"
    elif st.getQuestItemsCount(KASHA_WOLF_FANG) >= 50 :
      st.set("cond","0")
-     st.setState(COMPLETED)
+     st.setState(State.COMPLETED)
      st.playSound("ItemSound.quest_finish")
      st.takeItems(KASHA_WOLF_FANG,-1)
      if st.getRandom(100) <= 13 :
@@ -63,7 +65,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    count = st.getQuestItemsCount(KASHA_WOLF_FANG)
    if count < 50 :
@@ -82,15 +84,9 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(271,qn,"Proof Of Valor")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST) # kept just for backwards compatibility
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30577)
 
 QUEST.addTalkId(30577)
 
 QUEST.addKillId(20475)
-STARTED.addQuestDrop(20475,KASHA_WOLF_FANG,1)

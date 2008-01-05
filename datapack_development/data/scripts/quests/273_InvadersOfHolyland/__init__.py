@@ -1,4 +1,4 @@
-# Maked by Mr. - Version 0.3 by DrLecter
+# Made by Mr. - Version 0.3 by DrLecter
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -12,13 +12,15 @@ ADENA = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [BLACK_SOULSTONE, RED_SOULSTONE]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event in ["30566-03.htm","30566-08.htm"] : # -i'll continue- event kept here for backwards compatibility only.. should be removed some day
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "30566-07.htm" :
       st.exitQuest(1)
@@ -33,7 +35,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
 
-   if id in [CREATED,COMPLETED] :
+   if id in [State.CREATED,State.COMPLETED] :
      st.set("cond","0")
    if st.getInt("cond")==0 :
      if player.getRace().ordinal() != 3 :
@@ -74,7 +76,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId == 20311 : chance = 90
@@ -88,12 +90,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(273,qn,"Invaders Of Holyland")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30566)
 
 QUEST.addTalkId(30566)
@@ -101,6 +98,3 @@ QUEST.addTalkId(30566)
 QUEST.addKillId(20311)
 QUEST.addKillId(20312)
 QUEST.addKillId(20313)
-
-STARTED.addQuestDrop(20311,BLACK_SOULSTONE,1)
-STARTED.addQuestDrop(20313,RED_SOULSTONE,1)

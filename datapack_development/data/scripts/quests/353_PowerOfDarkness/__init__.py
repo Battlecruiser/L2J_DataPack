@@ -16,14 +16,16 @@ CHANCE = 50
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [STONE]
 
  def onEvent (self,event,st) :
    htmltext = event
    cond = st.getInt("cond")
    if event == "31044-04.htm" and cond == 0 :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "31044-08.htm" :
      st.exitQuest(1)
@@ -57,7 +59,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    if st.getRandom(100) < CHANCE :
      st.giveItems(STONE,1)
@@ -65,15 +67,10 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(353,qn,"Power of Darkness")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(GALMAN)
 
 QUEST.addTalkId(GALMAN)
 
 for mob in [20284,20245,20244,20283] :
     QUEST.addKillId(mob)
-
-STARTED.addQuestDrop(GALMAN,STONE,1)

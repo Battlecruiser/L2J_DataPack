@@ -11,13 +11,15 @@ ADENA = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [WIND_SHARD]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30361-04.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "30361-08.htm" :
       st.playSound("ItemSound.quest_finish")
@@ -54,7 +56,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    if st.getRandom(100) < 50:
       st.giveItems(WIND_SHARD,1)
@@ -62,17 +64,10 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(317,qn,"Catch The Wind")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30361)
 
 QUEST.addTalkId(30361)
 
 QUEST.addKillId(20036)
 QUEST.addKillId(20044)
-
-STARTED.addQuestDrop(20036,WIND_SHARD,1)

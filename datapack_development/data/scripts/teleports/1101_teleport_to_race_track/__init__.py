@@ -46,12 +46,12 @@ class Quest (JQuest) :
    ###################
    if TELEPORTERS.has_key(npcId) :
      st.getPlayer().teleToLocation(12661,181687,-3560)
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.set("id",str(TELEPORTERS[npcId]))     
    ############################
    # Monster Derby Race Track #
    ############################
-   elif st.getState() == STARTED and npcId == RACE_MANAGER:
+   elif st.getState() == State.STARTED and npcId == RACE_MANAGER:
      # back to start location
      return_id = st.getInt("id") - 1
      st.getPlayer().teleToLocation(RETURN_LOCS[return_id][0],RETURN_LOCS[return_id][1],RETURN_LOCS[return_id][2])
@@ -59,10 +59,10 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(1101,qn,"Teleports")
-CREATED     = State('Start',     QUEST)
-STARTED     = State('Started',   QUEST)
+State.CREATED     = State('Start',     QUEST)
+State.STARTED     = State('State.STARTED',   QUEST)
 
-QUEST.setInitialState(CREATED)
+
 
 for npcId in TELEPORTERS.keys() :
     QUEST.addStartNpc(npcId)
