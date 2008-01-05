@@ -48,9 +48,6 @@ class Quest (JQuest):
 
 # Quest class and state definition
 QUEST       = Quest(1630, qn, "Teleporters")
-State.CREATED     = State('Start', QUEST)
-
-# Quest initialization
 
 # Quest NPC starter initialization
 for npc in NPCS :

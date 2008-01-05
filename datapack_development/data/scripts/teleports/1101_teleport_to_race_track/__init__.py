@@ -59,10 +59,6 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(1101,qn,"Teleports")
-State.CREATED     = State('Start',     QUEST)
-State.STARTED     = State('State.STARTED',   QUEST)
-
-
 
 for npcId in TELEPORTERS.keys() :
     QUEST.addStartNpc(npcId)

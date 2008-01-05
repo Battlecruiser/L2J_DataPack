@@ -32,9 +32,6 @@ class Quest (JQuest) :
     return
 
 QUEST       = Quest(2400,qn,"Teleports")
-State.CREATED     = State('Start', QUEST)
-
-
 
 for item in NPC:
    QUEST.addStartNpc(item)
