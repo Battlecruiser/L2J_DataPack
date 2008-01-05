@@ -17,9 +17,11 @@ KAMAEL_INQUISITOR_MARK = 9782
 #MAYNARD,KHADAVA,GERSHWIN,VALPOR,HOLST,CASCA,BROME,ZENYA,AETONIC,BARTA,
 #MIYA,VITUS,LIANE,EDDY,FERDINAND,TAINE,RUPAUL,MELDINA,HAGEL,CECI,
 #PIECHE,ZOLDART,NIZER,YENICHE
-NPCS=[32145,32202,32196,32146,32199,32139,32221,32140,32205,32217,\
-      32218,32213,32222,32210,32209,32225,32226,32214,32229,32230,\
-      32206,32233,32234,32193]
+NPCS_MALE1=[32139,32196,32199]
+NPCS_MALE2=[32146,32205,32209,32213,32217,32221,32225,32229,32233]
+NPCS_FEMALE1=[32140,32193,32202]
+NPCS_FEMALE2=[32145,32206,32210,32214,32218,32222,32226,32230,32234]
+
 #Filenames are made with the lowest npcId from the NPCs list. Some scripts
 #contain generic dialogs for every npc to use, some others keep separate
 #dialogs for different npcs.
@@ -95,21 +97,32 @@ class Quest (JQuest) :
       st.exitQuest(1)
       return htmltext
    # Kamaels only
-   if npcId in NPCS :
-     htmltext = preffix
-     if race in [5] :
-       if id == 123 :      # m_fighter
-         return htmltext+"-01.htm"
-       elif id == 124 :    # f_fighter
-         return htmltext+"-05.htm"
-       elif id == 125 :    # m_trooper
-         return htmltext+"-09.htm"
-       elif id == 126 :    # f_warder
-         return htmltext+"-13.htm"
-       elif classId.level() >= 2 : # second/third occupation change already made
+   htmltext = preffix
+   if race in [5] :
+      if classId.level() >= 2 : # second/third occupation change already made
          htmltext += "-32.htm"
-     else :
-       htmltext += "-33.htm"  # other races
+      elif npcId in NPCS_MALE1 :
+         if id == 123 :      # m_fighter
+            return htmltext+"-01.htm"
+         else :
+            return htmltext+"-34.htm"
+      elif npcId in NPCS_FEMALE1 :
+         if id == 124 :    # f_fighter
+            return htmltext+"-05.htm"
+         else :
+            return htmltext+"-34.htm"
+      elif npcId in NPCS_MALE2 :
+         if id == 125 :      # m_trooper
+            return htmltext+"-09.htm"
+         else :
+            return htmltext+"-34.htm"
+      elif npcId in NPCS_FEMALE2 :
+         if id == 126 :    # f_warder
+            return htmltext+"-13.htm"
+         else :
+            return htmltext+"-34.htm"
+   else :
+      htmltext += "-33.htm"  # other races
    st.exitQuest(1)
    return htmltext
 
@@ -118,6 +131,6 @@ CREATED = State('Start', QUEST)
 
 QUEST.setInitialState(CREATED)
 
-for npc in NPCS :
+for npc in NPCS_MALE1 + NPCS_MALE2 + NPCS_FEMALE1 + NPCS_FEMALE2:
     QUEST.addStartNpc(npc)
     QUEST.addTalkId(npc)
