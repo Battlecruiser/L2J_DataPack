@@ -724,4 +724,5 @@ INSERT INTO teleport VALUES
 ('Gludio -> Kamael Village',             12050, -117251, 46771, 360, 12000, 0),
 ('Dark Elvin Village -> Kamael Village', 12051, -117251, 46771, 360, 13000, 0),
 ('Orc Village -> Kamael Village',        12052, -117251, 46771, 360, 17000, 0),
-('Elvin Village -> Kamael Village',      12053, -117251, 46771, 360, 16000, 0);
+('Elvin Village -> Kamael Village',      12053, -117251, 46771, 360, 16000, 0),
+('Town of Aden -> Kamael Village',       12054, -117251, 46771, 360, 26000, 0);
