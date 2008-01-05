@@ -14,14 +14,16 @@ ADENA_ID = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [CEREMONIAL_DAGGER_ID, DREVIANT_WINE_ID, GARMIELS_SCRIPTURE_ID, UNDRES_LETTER_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30130-04.htm" :
        st.giveItems(UNDRES_LETTER_ID,1)
        st.set("cond","1")
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
     return htmltext
 
@@ -33,7 +35,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
      if player.getRace().ordinal() == 2 :
         if player.getLevel() >= 2 :
@@ -45,8 +47,8 @@ class Quest (JQuest) :
      else:
         htmltext = "30130-02.htm"
         st.exitQuest(1)
-   elif id == COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+   elif id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30130 :
       if st.getInt("cond") and st.getQuestItemsCount(UNDRES_LETTER_ID):
          if (st.getQuestItemsCount(GARMIELS_SCRIPTURE_ID)+st.getQuestItemsCount(DREVIANT_WINE_ID)+st.getQuestItemsCount(CEREMONIAL_DAGGER_ID)==0) :
@@ -60,9 +62,9 @@ class Quest (JQuest) :
             st.giveItems(ADENA_ID,500)
             st.addExpAndSp(500,0)
             st.set("cond","0")
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.playSound("ItemSound.quest_finish")
-   elif id == STARTED: 
+   elif id == State.STARTED: 
        if npcId == 30135 :
           if st.getQuestItemsCount(UNDRES_LETTER_ID) :
              if not st.getQuestItemsCount(CEREMONIAL_DAGGER_ID) :
@@ -90,13 +92,7 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(166,qn,"Dark Mass")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30130)
 
 QUEST.addTalkId(30130)
@@ -104,8 +100,3 @@ QUEST.addTalkId(30130)
 QUEST.addTalkId(30135)
 QUEST.addTalkId(30139)
 QUEST.addTalkId(30143)
-
-STARTED.addQuestDrop(30135,CEREMONIAL_DAGGER_ID,1)
-STARTED.addQuestDrop(30139,DREVIANT_WINE_ID,1)
-STARTED.addQuestDrop(30143,GARMIELS_SCRIPTURE_ID,1)
-STARTED.addQuestDrop(30130,UNDRES_LETTER_ID,1)

@@ -24,13 +24,15 @@ DROPLIST={
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [RED_CROSS_BADGE, BLUE_CROSS_BADGE, BLACK_CROSS_BADGE]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30435-03.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "30435-07.htm" :
       st.playSound("ItemSound.quest_finish")
@@ -44,7 +46,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if st.getInt("cond")==0 :
      if player.getLevel() >= 21 :
@@ -74,7 +76,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    item,chance=DROPLIST[npc.getNpcId()]
    if st.getRandom(100)<chance :
@@ -83,12 +85,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(326,qn,"Vanquish Remnants")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30435)
 
 QUEST.addTalkId(30435)
@@ -102,7 +99,3 @@ QUEST.addKillId(20058)
 QUEST.addKillId(20061)
 QUEST.addKillId(20063)
 QUEST.addKillId(20066)
-
-STARTED.addQuestDrop(20053,RED_CROSS_BADGE,1)
-STARTED.addQuestDrop(20061,BLUE_CROSS_BADGE,1)
-STARTED.addQuestDrop(20066,BLACK_CROSS_BADGE,1)

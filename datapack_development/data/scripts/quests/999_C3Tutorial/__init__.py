@@ -74,7 +74,7 @@ class Quest (JQuest) :
            st.giveItems(gift2,count2)
       st.unset("cond")
       st.set("onlyone","1")
-      st.setState(COMPLETED)
+      st.setState(State.COMPLETED)
       st.playSound("ItemSound.quest_finish")
     return htmltext
 
@@ -83,7 +83,7 @@ class Quest (JQuest) :
    if st :
      id = st.getState()
      onlyone=st.getInt("onlyone")
-     if id == COMPLETED and onlyone == 1:
+     if id == State.COMPLETED and onlyone == 1:
        st.set("onlyone","2")
        if player.getClassId().isMage() :
          st.giveItems(SPIRITSHOT_NOVICE,100)
@@ -106,9 +106,6 @@ class Quest (JQuest) :
    level=player.getLevel()
    isMage = player.getClassId().isMage()
    npcTyp=0
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("onlyone","0")
    raceId,htmlfiles,npcTyp,item = TALKS[npcId]
    if (level >= 10 or onlyone) and npcTyp == 1:
        htmltext = "30575-05.htm"
@@ -119,12 +116,12 @@ class Quest (JQuest) :
        if cond==0 :
         if isMage :
          st.set("cond","1")
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.playSound("ItemSound.quest_tutorial")
         else:
          htmltext="30530-01.htm"
          st.set("cond","1")
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.playSound("ItemSound.quest_tutorial")
        elif cond==1 and st.getQuestItemsCount(item)==0 :
          if st.getQuestItemsCount(BLUE_GEM) :
@@ -165,7 +162,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    if st.getInt("cond")==1 and st.getRandom(100) < 25 and st.getQuestItemsCount(BLUE_GEM) == 0 :
       st.giveItems(BLUE_GEM,1)
       st.playSound("ItemSound.quest_itemget")
@@ -173,12 +170,8 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(999,qn,"Interlude Tutorial")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 
 for startNpc in [30008,30009,30017,30019,30129,30131,30573,30575,30370,30528,30530,30400,30401,30402,30403,30404]:
   QUEST.addStartNpc(startNpc)

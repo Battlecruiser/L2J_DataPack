@@ -27,13 +27,15 @@ def check(st) :
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     #self.questItemIds = [RED_SOUL_CRYSTAL0_ID, GREEN_SOUL_CRYSTAL0_ID, BLUE_SOUL_CRYSTAL0_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event in ["30115-04.htm","30856-04.htm","30194-04.htm"] :
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
     elif event in ["30115-09.htm","30856-09.htm","30194-09.htm"] :
         st.giveItems(RED_SOUL_CRYSTAL0_ID,1)
@@ -52,7 +54,7 @@ class Quest (JQuest) :
 
    npcId = str(npc.getNpcId())
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if st.getInt("cond") == 0:   
      htmltext = npcId+"-01.htm"
@@ -63,16 +65,7 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(350,qn,"Enhance Your Weapon")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-
-QUEST.setInitialState(CREATED)
 
 for npcId in NPC:
   QUEST.addStartNpc(npcId)
   QUEST.addTalkId(npcId)
-
-STARTED.addQuestDrop(4629,RED_SOUL_CRYSTAL0_ID,1)
-STARTED.addQuestDrop(4640,GREEN_SOUL_CRYSTAL0_ID,1)
-STARTED.addQuestDrop(4651,BLUE_SOUL_CRYSTAL0_ID,1)

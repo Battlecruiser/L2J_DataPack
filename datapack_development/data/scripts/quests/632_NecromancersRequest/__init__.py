@@ -25,7 +25,9 @@ UNDEADS = [ 21547, 21548, 21549, 21551, 21552, 21555, 21556, 21562, 21571, 21576
 
 class Quest (JQuest):
 
-    def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+    def __init__(self,id,name,descr):
+        JQuest.__init__(self,id,name,descr)
+        self.questItemIds = [V_HEART, Z_BRAIN]
 
     def onEvent (self,event,st):
         if event == "0":
@@ -46,7 +48,7 @@ class Quest (JQuest):
            if st.getPlayer().getLevel() > 62 :
               htmltext = "31522-0.htm"
               st.set("cond","1")
-              st.setState(STARTED)
+              st.setState(State.STARTED)
               st.playSound("ItemSound.quest_accept")
            else:
               htmltext = "<html><body>Mysterious Wizard:<br>This quest can only be taken by characters that have a minimum level of <font color=\"LEVEL\">63</font>. Return when you are more experienced."
@@ -56,7 +58,7 @@ class Quest (JQuest):
     def onKill (self,npc,player,isPet):
         npcId = npc.getNpcId()
         if npcId in UNDEADS:
-           partyMember = self.getRandomPartyMemberState(player, STARTED)
+           partyMember = self.getRandomPartyMemberState(player, State.STARTED)
            if not partyMember: return
            st = partyMember.getQuestState(qn)
            if not st: return
@@ -94,27 +96,22 @@ class Quest (JQuest):
            npcId = npc.getNpcId()
            id = st.getState()
            cond = st.getInt("cond")
-           if cond == 0 and id == CREATED:
+           if cond == 0 and id == State.CREATED:
               if npcId == WIZARD:
                  htmltext = "31522.htm"
-           if cond == 1 and id == STARTED:
+           if cond == 1 and id == State.STARTED:
               htmltext = "31522-1.htm"
-           if cond == 2 and id == STARTED:
+           if cond == 2 and id == State.STARTED:
               if st.getQuestItemsCount(V_HEART) == 200:
                  htmltext = "31522-2.htm"
         return htmltext
 
 QUEST       = Quest(632, qn, "Necromancer's Request")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
 for i in VAMPIRES:
     QUEST.addKillId(i)
 for i in UNDEADS:
     QUEST.addKillId(i)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(WIZARD)
 QUEST.addTalkId(WIZARD)
-STARTED.addQuestDrop(WIZARD,V_HEART,1)
-STARTED.addQuestDrop(WIZARD,Z_BRAIN,1)

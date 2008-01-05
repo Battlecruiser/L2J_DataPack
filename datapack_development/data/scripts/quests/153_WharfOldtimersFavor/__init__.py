@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 import sys
 from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State
@@ -19,14 +19,16 @@ RING_ID = 875
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [HEAVY_WOOD_BOX_ID, CLOTH_BUNDLE_ID, CLAY_POT_ID, DELIVERY_LIST_ID, JACKSONS_RECEIPT_ID, SILVIAS_RECEIPT_ID, RANTS_RECEIPT_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
         st.set("id","0")
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         if st.getQuestItemsCount(DELIVERY_LIST_ID) == 0 :
           st.giveItems(DELIVERY_LIST_ID,1)
@@ -47,27 +49,18 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30041 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
-        if st.getInt("cond")<15 :
-          if player.getLevel() >= 2 :
-            htmltext = "30041-03.htm"
-            return htmltext
-          else:
-            htmltext = "30041-02.htm"
-            st.exitQuest(1)
-        else:
-          htmltext = "30041-02.htm"
-          st.exitQuest(1)
+      if player.getLevel() >= 2 :
+        htmltext = "30041-03.htm"
+        return htmltext
+      else:
+        htmltext = "30041-02.htm"
+        st.exitQuest(1)
    elif npcId == 30041 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-        htmltext = "<html><body>This quest has already been completed.</body></html>"
+        htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30041 and st.getInt("cond")!=0 and (st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0)==0 :
         htmltext = "30041-05.htm"
-   if id == STARTED :     
+   if id == State.STARTED :     
        if npcId == 30002 and st.getInt("cond")!=0 and st.getQuestItemsCount(HEAVY_WOOD_BOX_ID)!=0 :
             st.takeItems(HEAVY_WOOD_BOX_ID,st.getQuestItemsCount(HEAVY_WOOD_BOX_ID))
             if st.getQuestItemsCount(JACKSONS_RECEIPT_ID) == 0 :
@@ -94,7 +87,7 @@ class Quest (JQuest) :
             if st.getInt("id") != 153 :
               st.set("id","153")
               st.set("cond","0")
-              st.setState(COMPLETED)
+              st.setState(State.COMPLETED)
               st.playSound("ItemSound.quest_finish")
               st.set("onlyone","1")
               st.giveItems(RING_ID,1)
@@ -108,13 +101,7 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(153,qn,"Wharf Oldtimers Favor")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30041)
 
 QUEST.addTalkId(30041)
@@ -122,11 +109,3 @@ QUEST.addTalkId(30041)
 QUEST.addTalkId(30002)
 QUEST.addTalkId(30003)
 QUEST.addTalkId(30054)
-
-STARTED.addQuestDrop(30041,HEAVY_WOOD_BOX_ID,1)
-STARTED.addQuestDrop(30041,CLOTH_BUNDLE_ID,1)
-STARTED.addQuestDrop(30041,CLAY_POT_ID,1)
-STARTED.addQuestDrop(30041,DELIVERY_LIST_ID,1)
-STARTED.addQuestDrop(30002,JACKSONS_RECEIPT_ID,1)
-STARTED.addQuestDrop(30003,SILVIAS_RECEIPT_ID,1)
-STARTED.addQuestDrop(30054,RANTS_RECEIPT_ID,1)

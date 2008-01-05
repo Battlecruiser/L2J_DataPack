@@ -32,7 +32,7 @@ class Quest (JQuest) :
         if event == "32195-02.htm" :
             st.set("cond","1")
             st.playSound("ItemSound.quest_accept")
-            st.setState(STARTED)
+            st.setState(State.STARTED)
         elif event == "32195-04.htm" :
             st.set("cond","2")
             st.playSound("ItemSound.quest_middle")
@@ -74,16 +74,16 @@ class Quest (JQuest) :
         npcId = npc.getNpcId()
         id = st.getState()
         cond = st.getInt("cond")
-        if id == COMPLETED :
+        if id == State.COMPLETED :
             if npcId == Gobie:
                htmltext = "32198-16.htm"
             else:
-               htmltext = "<html><body>This quest has already been completed.</body></html>"
+               htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
         elif npcId == Sione :
             if player.getClassId().getId() != 124 or player.getLevel() < 19:
                 htmltext = "32195-00.htm"
                 st.exitQuest(1)
-            elif id == CREATED :
+            elif id == State.CREATED :
                 st.set("Tak","0")
                 htmltext = "32195-01.htm"
             elif cond == 1 :
@@ -140,7 +140,7 @@ class Quest (JQuest) :
                 st.giveItems(Eval,1)
                 st.playSound("ItemSound.quest_finish")
                 st.addExpAndSp(3200,5934)
-                st.setState(COMPLETED)
+                st.setState(State.COMPLETED)
                 st.unset("cond")
         elif npcId == Bathis :
             if cond == 5 :
@@ -167,7 +167,7 @@ class Quest (JQuest) :
     def onKill(self,npc,player,isPet):
         st = player.getQuestState(qn)
         if not st : return
-        if st.getState() != STARTED : return
+        if st.getState() != State.STARTED : return
         npcId = npc.getNpcId()
         cond = st.getInt("cond")
         if npcId == Novice :
@@ -203,11 +203,7 @@ class Quest (JQuest) :
         return
 
 QUEST       = Quest(63,qn,"Path of the Warder")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Sione)
 
 QUEST.addTalkId(Sione)
@@ -219,6 +215,3 @@ QUEST.addKillId(Novice)
 QUEST.addKillId(Patrol)
 QUEST.addKillId(Tak)
 QUEST.addKillId(Lizard)
-
-for item in range(9762,9772) :
-    STARTED.addQuestDrop(Sione,item,1)

@@ -187,21 +187,23 @@ def check_eggs(st, npc, progress) :
 
 # Main Quest Code
 class Quest (JQuest):
-  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+  def __init__(self,id,name,descr):
+    JQuest.__init__(self,id,name,descr)
+    self.questItemIds = [3499]+range(3816,3832)
   
   def onEvent (self,event,st):
     id   = st.getState()
     progress = st.getInt("progress")
-    if id == CREATED :
+    if id == State.CREATED :
       st.set("cond","0")
       if event == "ido" :
-         st.setState(STARTING)
+         st.setState(State.STARTED)
          st.set("progress","0")
          st.set("cond","1")
          st.set("dragon","0")
          st.playSound("ItemSound.quest_accept")
          return "Starting.htm"
-    elif id == STARTING :
+    elif id == State.STARTED and cond < 5 :
          if event == "wait" :
             return craft_stone(st,progress)
          elif event == "cronos_2" :
@@ -255,12 +257,11 @@ class Quest (JQuest):
          elif event == "fry_ask" :
             return "420_mymyu_5.htm"
          elif event == "ask_abt" :
-            st.setState(STARTED)
             st.set("cond","5")
             st.giveItems(JUICE,1)
             st.playSound("ItemSound.quest_itemget")
             return "420_mymyu_6.htm"
-    elif id == STARTED :
+    elif id == State.STARTED and cond >= 5:
          if event == "exarion_1" :
              st.giveItems(SCALE_1,1)
              st.playSound("ItemSound.quest_itemget")
@@ -357,19 +358,20 @@ class Quest (JQuest):
 
     npcId = npc.getNpcId()
     id = st.getState()
-    if id == COMPLETED:
-       st.setState(CREATED)
-       id = CREATED
+    cond = st.getInt("cond")
+    if id == State.COMPLETED:
+       st.setState(State.CREATED)
+       id = State.CREATED
     progress = st.getInt("progress")
     if npcId == PM_COOPER :
-      if id == CREATED :
+      if id == State.CREATED :
         return check_level(st)
-      elif id == STARTING and progress == 0 :
+      elif id == State.STARTED and cond < 5 and progress == 0 :
         return "Starting.htm"
       else :
         return "Started.htm"
     elif npcId == SG_CRONOS :
-      if id == STARTING :
+      if id == State.STARTED and cond < 5 :
          if progress == 0 :
             return "420_cronos_1.htm"
          elif progress in [ 1,2,8,9 ] :
@@ -382,13 +384,13 @@ class Quest (JQuest):
             return "420_cronos_10.htm"
 
     elif npcId == MC_MARIA :
-      if id == STARTING :
+      if id == State.STARTED and cond < 5 :
          if ((progress in [ 1,8 ] )  and st.getQuestItemsCount(FSN_LIST)==1) or ((progress in [ 2,9 ] ) and st.getQuestItemsCount(FSN_LIST_DLX)==1):
             return check_elements(st,progress)
          elif progress in [ 3,4,5,6,7,10,11 ] :
             return "420_maria_6.htm"
     elif npcId == GD_BYRON :
-       if id == STARTING :
+       if id == State.STARTED and cond < 5 :
           if ((progress in [ 1,8 ] )  and st.getQuestItemsCount(FSN_LIST)==1) or ((progress in [ 2,9 ] ) and st.getQuestItemsCount(FSN_LIST_DLX)==1):
              return "420_byron_10.htm"
           elif progress == 7 :
@@ -406,18 +408,18 @@ class Quest (JQuest):
           elif progress in [6,13] :
              return "420_byron_8.htm"
     elif npcId == FR_MYMYU :
-       if id == STARTING :
+       if id == State.STARTED and cond < 5 :
           if ( progress in [5,12] ) and st.getQuestItemsCount(FRY_STN) == 1 :
              return "420_mymyu_1.htm"
           elif ( progress in [6,13] ) and st.getQuestItemsCount(FRY_STN_DLX) == 1 :
              return "420_mymyu_3.htm"
-       elif id == STARTED :
+       elif id == State.STARTED and cond >= 5:
           if progress < 14 and st.getQuestItemsCount(JUICE) == 1  :
              return "420_mymyu_7.htm"
           elif progress > 13 :
              return check_eggs(st,"mymyu",progress)
     elif npcId == DK_EXARION :
-       if id == STARTED :
+       if id == State.STARTED and cond >= 5:
           if progress in [ 5,6,12,13 ] and st.getQuestItemsCount(JUICE) == 1:
              st.takeItems(JUICE,1) 
              return "420_exarion_1.htm"
@@ -426,7 +428,7 @@ class Quest (JQuest):
           elif progress in [ 19,20 ] and st.getQuestItemsCount(EX_EGG) == 1 :
               return "420_exarion_5.htm"
     elif npcId == DK_ZWOV :
-       if id == STARTED :
+       if id == State.STARTED and cond >= 5:
           if progress in [ 5,6,12,13 ]  and st.getQuestItemsCount(JUICE) == 1:
              st.takeItems(JUICE,1)  
              return "420_zwov_1.htm"
@@ -435,7 +437,7 @@ class Quest (JQuest):
           elif progress in [ 19,20 ] and st.getQuestItemsCount(ZW_EGG) == 1 :
               return "420_zwov_5.htm"
     elif npcId == DK_KALIBRAN :
-       if id == STARTED :
+       if id == State.STARTED and cond >= 5:
           if progress in [ 5,6,12,13 ] and st.getQuestItemsCount(JUICE) == 1:
              st.takeItems(JUICE,1)  
              return "420_kalibran_1.htm"
@@ -444,7 +446,7 @@ class Quest (JQuest):
           elif progress in [ 19,20 ] and st.getQuestItemsCount(KA_EGG) == 1 :
               return "420_kalibran_6.htm"
     elif npcId == WM_SUZET :
-       if id == STARTED :
+       if id == State.STARTED and cond >= 5:
           if progress in [ 5,6,12,13 ] and st.getQuestItemsCount(JUICE) == 1:
              st.takeItems(JUICE,1)  
              return "420_suzet_1.htm"
@@ -453,7 +455,7 @@ class Quest (JQuest):
           elif progress in [ 19,20 ] and st.getQuestItemsCount(SU_EGG) == 1 :
               return "420_suzet_6.htm"
     elif npcId == WM_SHAMHAI :
-       if id == STARTED :
+       if id == State.STARTED and cond >= 5:
           if progress in [ 5,6,12,13 ] and st.getQuestItemsCount(JUICE) == 1:
              st.takeItems(JUICE,1)  
              return "420_shamhai_1.htm"
@@ -469,9 +471,10 @@ class Quest (JQuest):
    
     id   = st.getState()
     npcId = npc.getNpcId()
+    cond = st.getInt("cond")
   #incipios drop
     skins = st.getQuestItemsCount(TD_BCK_SKN)
-    if id == STARTING and (st.getQuestItemsCount(FSN_LIST) == 1 and skins < 10) or (st.getQuestItemsCount(FSN_LIST_DLX) == 1 and skins < 20) :
+    if id == State.STARTED and cond < 5 and (st.getQuestItemsCount(FSN_LIST) == 1 and skins < 10) or (st.getQuestItemsCount(FSN_LIST_DLX) == 1 and skins < 20) :
       if npcId ==  TD_LORD :
         count = 0
         if st.getQuestItemsCount(FSN_LIST) == 1 :
@@ -490,7 +493,7 @@ class Quest (JQuest):
               st.playSound("ItemSound.quest_itemget")
           st.giveItems(TD_BCK_SKN,numItems)
   #dragon detection
-    elif id == STARTED and (st.get("progress") in [ "14","15","21","22" ]) :
+    elif id == State.STARTED and cond >= 5 and (st.get("progress") in [ "14","15","21","22" ]) :
       whom = int(st.get("dragon"))
       if whom == 1 :
          eggs = EX_EGG
@@ -528,7 +531,7 @@ class Quest (JQuest):
                   st.playSound("ItemSound.quest_itemget")   
                st.giveItems(eggs,numItems)                 
   #fairy stone destruction    
-    elif id == STARTING and st.getQuestItemsCount(FRY_STN_DLX) == 1 :
+    elif id == State.STARTED and cond < 5 and st.getQuestItemsCount(FRY_STN_DLX) == 1 :
       if npcId in range(20589,20600)+[20719]:
          st.takeItems(FRY_STN_DLX,1)
          st.set("progress","7")
@@ -537,18 +540,9 @@ class Quest (JQuest):
 
 # Quest class and state definition
 QUEST       = Quest(420, qn, "Little Wings")
-CREATED     = State('Start',     QUEST)
-STARTING    = State('Starting',  QUEST)
-STARTED     = State('Started',   QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-# Quest initialization
-QUEST.setInitialState(CREATED)
 # Quest NPC starter initialization
 QUEST.addStartNpc(PM_COOPER)
-# Quest Item Drop initialization
-for i in [3499]+range(3816,3832):
-    STARTING.addQuestDrop(PM_COOPER,i,1)
 
 # Quest mob initialization
 #back skins

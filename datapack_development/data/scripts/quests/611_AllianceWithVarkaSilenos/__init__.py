@@ -159,7 +159,9 @@ def giveReward(st,item,chance,MAX,drop) :
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+   JQuest.__init__(self,id,name,descr)
+   self.questItemIds = [Ketra_Badge_Soldier, Ketra_Badge_Officer, Ketra_Badge_Captain]
 
  def onEvent (self,event,st) :
    cond = st.getInt("cond")
@@ -170,7 +172,7 @@ class Quest (JQuest) :
        if player.getLevel() >= 74 :
             st.set("cond","1")
             st.set("id","2")
-            st.setState(STARTED)
+            st.setState(State.STARTED)
             st.playSound("ItemSound.quest_accept")
             htmltext = "31378-03a.htm"
        else :
@@ -272,7 +274,7 @@ class Quest (JQuest) :
                   elif KBadgeS >= 100 :
                       htmltext = "31378-09.htm"
           elif VAlliance :
-              st.setState(STARTED)
+              st.setState(State.STARTED)
               st.set("id","2")
               if VAlliance1 :
                   if cond != 2 :
@@ -333,11 +335,11 @@ class Quest (JQuest) :
     return htmltext
 
  def onKill(self,npc,player,isPet):
-   partyMember = self.getRandomPartyMemberState(player,STARTED)
+   partyMember = self.getRandomPartyMemberState(player,State.STARTED)
    if not partyMember: return
    st = partyMember.getQuestState(qn)
    if st :
-     if st.getState() == STARTED :
+     if st.getState() == State.STARTED :
           npcId = npc.getNpcId()
           cond = st.getInt("cond")
           id = st.getInt("id")
@@ -379,18 +381,13 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(611,qn,"Alliance With Varka Silenos")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Naran_Ashanuk)
 
 QUEST.addTalkId(Naran_Ashanuk)
 
 for mobId in Chance.keys() :
     QUEST.addKillId(mobId)
-STARTED.addQuestDrop(Naran_Ashanuk,Ketra_Badge_Soldier,1)
-STARTED.addQuestDrop(Naran_Ashanuk,Ketra_Badge_Officer,1)
-STARTED.addQuestDrop(Naran_Ashanuk,Ketra_Badge_Captain,1)
+
 for mobId in Varka_Silenos :
     QUEST.addKillId(mobId)

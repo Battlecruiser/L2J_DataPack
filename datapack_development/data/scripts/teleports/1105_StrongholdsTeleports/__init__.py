@@ -24,9 +24,9 @@ class Quest (JQuest) :
     return htmltext
 
 QUEST       = Quest(1105, qn, "Teleports")
-CREATED     = State('Start', QUEST)
+State.CREATED     = State('Start', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 
 for i in [32163,32181,32184,32186]:
    QUEST.addFirstTalkId(i)

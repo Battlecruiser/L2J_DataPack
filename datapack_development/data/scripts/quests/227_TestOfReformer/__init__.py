@@ -32,14 +32,16 @@ SHADOW_WEAPON_COUPON_CGRADE = 8870
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(2822,2840)+[3037]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
         htmltext = "30118-04.htm"
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(BOOK_OF_REFORM,1)
     elif event == "30118_1" :
@@ -81,13 +83,8 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30118 and id != STARTED : return htmltext
+   if npcId != 30118 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30118 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
       if player.getClassId().getId() in [ 0x0f,0x2a ] :
          if player.getLevel() >= 39 :
@@ -99,7 +96,7 @@ class Quest (JQuest) :
          htmltext = "30118-02.htm"
          st.exitQuest(1)
    elif npcId == 30118 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30118 and st.getInt("cond")==3 and st.getQuestItemsCount(HUGE_NAIL)>=1:
         htmltext = "30118-05.htm"
    elif npcId == 30118 and st.getInt("cond")>=4 :
@@ -120,7 +117,7 @@ class Quest (JQuest) :
           htmltext = "30666-07.htm"
           st.set("cond","0")
           st.set("onlyone","1")
-          st.setState(COMPLETED)
+          st.setState(State.COMPLETED)
           st.playSound("ItemSound.quest_finish")
           st.takeItems(KATARIS_LETTER,1)
           st.takeItems(KAKANS_LETTER,1)
@@ -180,7 +177,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    npcId = npc.getNpcId()
    if npcId == 27099 :
     if st.getInt("cond") == 1 and st.getQuestItemsCount(RIPPED_DIARY) < 7 and st.getQuestItemsCount(BOOK_OF_REFORM) >= 1 :
@@ -231,13 +228,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(227,qn,"Test Of Reformer")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30118)
 
 QUEST.addTalkId(30118)
@@ -246,5 +237,3 @@ for npcId in [30666,30667,30669,30670,30732,30668]:
  QUEST.addTalkId(npcId)
 for mobId in [20100,20102,20104,20404,20022,27099,27128,27130,27129,27132,27131]:
  QUEST.addKillId(mobId)
-for item in range(2822,2840)+[3037]:
- STARTED.addQuestDrop(20102,item,1)

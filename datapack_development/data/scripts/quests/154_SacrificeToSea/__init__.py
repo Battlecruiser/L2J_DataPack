@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -13,7 +13,9 @@ EARING_ID = 113
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [FOX_FUR_ID, FOX_FUR_YARN_ID, MAIDEN_DOLL_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -21,7 +23,7 @@ class Quest (JQuest) :
         st.set("id","0")
         htmltext = "30312-04.htm"
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
     return htmltext
 
@@ -33,25 +35,16 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30312 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
-        if st.getInt("cond")<15 :
-          if player.getLevel() >= 2 :
-            htmltext = "30312-03.htm"
-            return htmltext
-          else:
-            htmltext = "30312-02.htm"
-            st.exitQuest(1)
-        else:
-          htmltext = "30312-02.htm"
-          st.exitQuest(1)
+      if player.getLevel() >= 2 :
+        htmltext = "30312-03.htm"
+        return htmltext
+      else:
+        htmltext = "30312-02.htm"
+        st.exitQuest(1)
    elif npcId == 30312 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-        htmltext = "<html><body>This quest has already been completed.</body></html>"
-   if id == STARTED:     
+        htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+   if id == State.STARTED:     
        if npcId == 30312 and st.getInt("cond")==1 and (st.getQuestItemsCount(FOX_FUR_YARN_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==0) and st.getQuestItemsCount(FOX_FUR_ID)<10 :
             htmltext = "30312-05.htm"
        elif npcId == 30312 and st.getInt("cond")==1 and st.getQuestItemsCount(FOX_FUR_ID)>=10 :
@@ -84,7 +77,7 @@ class Quest (JQuest) :
             st.takeItems(MAIDEN_DOLL_ID,-1)
             st.addExpAndSp(100,0)
             st.set("cond","0")
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.playSound("ItemSound.quest_finish")
             st.set("onlyone","1")
    return htmltext
@@ -92,7 +85,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
    
    npcId = npc.getNpcId()
    if npcId == 20481 :
@@ -116,13 +109,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(154,qn,"Sacrifice To Sea")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30312)
 
 QUEST.addTalkId(30312)
@@ -132,8 +119,3 @@ QUEST.addTalkId(30055)
 
 QUEST.addKillId(20481)
 QUEST.addKillId(20545)
-
-STARTED.addQuestDrop(20481,FOX_FUR_ID,1)
-STARTED.addQuestDrop(20545,FOX_FUR_ID,1)
-STARTED.addQuestDrop(30051,FOX_FUR_YARN_ID,1)
-STARTED.addQuestDrop(30055,MAIDEN_DOLL_ID,1)

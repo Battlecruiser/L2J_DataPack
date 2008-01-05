@@ -25,13 +25,15 @@ ADENA = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ONYX_BEAST_EYE, TAINT_STONE, SUCCUBUS_BLOOD]
 
  def onEvent (self,event,st) :
    htmltext = event
    if event == "30141-03.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    return htmltext
 
@@ -43,8 +45,8 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
-   if id == COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+   if id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif cond == 0 :
       if player.getRace().ordinal() != 2 :
          htmltext = "30141-00.htm"
@@ -63,14 +65,14 @@ class Quest (JQuest) :
      st.takeItems(SUCCUBUS_BLOOD,-1)
      st.giveItems(956,1)
      st.unset("cond")
-     st.setState(COMPLETED)
+     st.setState(State.COMPLETED)
      st.playSound("ItemSound.quest_finish")
    return htmltext
 
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
 
    npcId = npc.getNpcId()
    if st.getInt("cond") == 1 :
@@ -88,12 +90,7 @@ class Quest (JQuest) :
    return
 
 QUEST     = Quest(3,qn,"Will the Seal be Broken?")
-CREATED   = State('Start',     QUEST)
-STARTING  = State('Starting',  QUEST)
-STARTED   = State('Started',   QUEST)
-COMPLETED = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(TALLOTH)
 
 QUEST.addTalkId(TALLOTH)
@@ -104,7 +101,3 @@ QUEST.addKillId(STINK_ZOMBIE)
 QUEST.addKillId(LESSER_SUCCUBUS)
 QUEST.addKillId(LESSER_SUCCUBUS_TUREN)
 QUEST.addKillId(LESSER_SUCCUBUS_TILFO)
-
-STARTED.addQuestDrop(TALLOTH,ONYX_BEAST_EYE,1)
-STARTED.addQuestDrop(TALLOTH,TAINT_STONE,1)
-STARTED.addQuestDrop(TALLOTH,SUCCUBUS_BLOOD,1)

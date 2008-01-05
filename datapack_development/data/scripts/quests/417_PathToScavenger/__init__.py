@@ -27,7 +27,9 @@ BEAD_PARCEL = 1657
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(1643,1658)
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -37,7 +39,7 @@ class Quest (JQuest) :
           st.set("id","0")
           if level >= 19 and classId == 0x35 and st.getQuestItemsCount(RING_OF_RAVEN) == 0 :
             st.set("cond","1")
-            st.setState(STARTED)
+            st.setState(State.STARTED)
             st.playSound("ItemSound.quest_accept")
             st.giveItems(PIPIS_LETTER,1)
             htmltext = "30524-05.htm"
@@ -147,20 +149,13 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30524 and id != STARTED : return htmltext
+   if npcId != 30524 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)  
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    cond = st.getInt("cond")
    if npcId == 30524 and cond==0 :
      htmltext = "30524-01.htm"
    elif npcId == 30524 and cond and st.getQuestItemsCount(PIPIS_LETTER) :
           htmltext = "30524-06.htm"
-   elif npcId == 30524 and cond and st.getQuestItemsCount(PIPIS_LETTER)==0 and id==STARTING :
-          htmltext = "30524-01.htm"
    elif npcId == 30524 and cond and st.getQuestItemsCount(PIPIS_LETTER)==0 :
           htmltext = "30524-07.htm"
    elif npcId == 30519 and cond and st.getQuestItemsCount(PIPIS_LETTER) :
@@ -265,7 +260,7 @@ class Quest (JQuest) :
           st.takeItems(SUCCUBUS_UNDIES,1)
           st.giveItems(RING_OF_RAVEN,1)
           st.set("cond","0")
-          st.setState(COMPLETED)
+          st.setState(State.COMPLETED)
           st.playSound("ItemSound.quest_finish")
    elif npcId == 30557 and cond and st.getQuestItemsCount(ROUTS_TP_SCROLL)==1 :
           htmltext = "30557-01.htm"
@@ -274,7 +269,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId == 20777 :
@@ -320,13 +315,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(417,qn,"Path To Scavenger")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30524)
 QUEST.addTalkId(30524)
 
@@ -342,20 +331,3 @@ QUEST.addKillId(20403)
 QUEST.addKillId(27058)
 QUEST.addKillId(20508)
 QUEST.addKillId(20777)
-
-STARTED.addQuestDrop(30517,CHALIS_PAY,1)
-STARTED.addQuestDrop(30538,ZIMENFS_PAY,1)
-STARTED.addQuestDrop(30525,BRONKS_PAY,1)
-STARTED.addQuestDrop(30524,PIPIS_LETTER,1)
-STARTED.addQuestDrop(30519,CHALIS_AXE,1)
-STARTED.addQuestDrop(30519,ZIMENFS_POTION,1)
-STARTED.addQuestDrop(30519,BRONKS_INGOT,1)
-STARTED.addQuestDrop(30519,MIONS_LETTER,1)
-STARTED.addQuestDrop(27058,HONEY_JAR,1)
-STARTED.addQuestDrop(30556,BEAR_PIC,1)
-STARTED.addQuestDrop(30556,BEAD_PARCEL,1)
-STARTED.addQuestDrop(20403,BEAD,1)
-STARTED.addQuestDrop(30556,TARANTULA_PIC,1)
-STARTED.addQuestDrop(30557,SUCCUBUS_UNDIES,1)
-STARTED.addQuestDrop(30556,BEAD_PARCEL,1)
-STARTED.addQuestDrop(30316,ROUTS_TP_SCROLL,1)

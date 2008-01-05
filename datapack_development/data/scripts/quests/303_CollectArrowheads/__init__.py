@@ -11,13 +11,15 @@ ADENA = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ORCISH_ARROWHEAD]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30029-04.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
@@ -28,7 +30,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if st.getInt("cond")==0 :
      if player.getLevel() >= 10 :
@@ -51,7 +53,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    count=st.getQuestItemsCount(ORCISH_ARROWHEAD)
    if count<10 and st.getRandom(100)<40 :
@@ -64,15 +66,9 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(303,qn,"Collect Arrowheads")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30029)
 
 QUEST.addTalkId(30029)
 
 QUEST.addKillId(20361)
-STARTED.addQuestDrop(20361,ORCISH_ARROWHEAD,1)

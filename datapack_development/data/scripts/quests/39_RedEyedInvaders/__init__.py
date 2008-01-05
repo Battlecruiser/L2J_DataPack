@@ -55,15 +55,17 @@ def drop(partyMember,array) :
     
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(7178,7182)
 
  def onEvent (self,event,st) :
    htmltext = event
    cond = st.getInt("cond")
-   if st.getState() != COMPLETED :
+   if st.getState() != State.COMPLETED :
     if event == "30334-1.htm" and cond == 0 :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
     elif event == "30332-1.htm" and cond == 1 :
      st.set("cond","2")
@@ -83,7 +85,7 @@ class Quest (JQuest) :
        st.giveItems(FISHING_SHOT_NG,500)
        st.unset("cond")
        st.playSound("ItemSound.quest_finish")
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
      else :
        htmltext = "You don't have required items"
    return htmltext
@@ -95,10 +97,10 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
-   if id == COMPLETED :
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
+   if id == State.COMPLETED :
+       htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == BABENCO :
-     if id == CREATED :     
+     if id == State.CREATED :     
        if player.getLevel() >= 20 :
          htmltext = "30334-0.htm"
        else :
@@ -106,7 +108,7 @@ class Quest (JQuest) :
          htmltext = "30334-2.htm"
      else :
        htmltext = "30334-3.htm"
-   elif npcId == BATHIS and id == STARTED:
+   elif npcId == BATHIS and id == State.STARTED:
      if cond == 1 :
        htmltext = "30332-0.htm"
      elif st.getQuestItemsCount(BLACK_BONE_NECKLACE) == st.getQuestItemsCount(RED_BONE_NECKLACE) == 100 :
@@ -127,11 +129,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(39,qn,"Red Eyed Invaders")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(BABENCO)
 QUEST.addTalkId(BABENCO)
 QUEST.addTalkId(BATHIS)
@@ -140,6 +138,3 @@ QUEST.addKillId(M_LIZARDMAN)
 QUEST.addKillId(M_LIZARDMAN_SCOUT)
 QUEST.addKillId(M_LIZARDMAN_GUARD)
 QUEST.addKillId(ARANEID)
-
-for item in range(7178,7182) :
-    STARTED.addQuestDrop(BABENCO,item,1)

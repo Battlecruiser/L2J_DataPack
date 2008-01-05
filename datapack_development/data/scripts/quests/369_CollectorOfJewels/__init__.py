@@ -24,14 +24,16 @@ DROPLIST_FLARE={20612:[FLARE_SHARD,77],    #Salamander Rowin
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [FLARE_SHARD, FREEZING_SHARD]
 
  def onEvent (self,event,st) :
    htmltext = event
    cond = st.getInt("cond")
    if event == "30376-03.htm" and cond == 0 :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.set("awaitsFreezing","1")
      st.set("awaitsFlare","1")
      st.playSound("ItemSound.quest_accept")
@@ -93,7 +95,7 @@ class Quest (JQuest) :
    if partyMember :
        st = partyMember.getQuestState(qn)
    if not st: return
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    cond = st.getInt("cond")
    if cond in [1,3] :      
@@ -103,7 +105,7 @@ class Quest (JQuest) :
         max = 200
       if st.getRandom(100) < chance and st.getQuestItemsCount(item) < max :
          st.giveItems(item,1)
-         # if collection of this item is completed, mark it (so that this person
+         # if collection of this item is State.COMPLETED, mark it (so that this person
          # no longer participate in the party-quest pool for this item)
          if st.getQuestItemsCount(FLARE_SHARD) == max :
              st.unset("awaitsFlare")  
@@ -118,10 +120,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(369,qn,"Collector of Jewels")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(NELL)
 
 QUEST.addTalkId(NELL)
@@ -130,6 +129,3 @@ for mob in DROPLIST_FREEZE.keys() :
     QUEST.addKillId(mob)
 for mob in DROPLIST_FLARE.keys() :
     QUEST.addKillId(mob)
-
-STARTED.addQuestDrop(NELL,FLARE_SHARD,1)
-STARTED.addQuestDrop(NELL,FREEZING_SHARD,1)

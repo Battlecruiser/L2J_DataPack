@@ -40,14 +40,16 @@ BARAHAM = 27113
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [LEGEND_OF_SEVENTEEN, MALRUK_SUCCUBUS_CLAW, ECHO_CRYSTAL, POETRY_BOOK, CRIMSON_MOSS, RAHORAKTIS_MEDICINE, VIRGILS_LETTER]
 
  def onEvent (self,event,st) :
    htmltext = event
    cond = st.getInt("cond")
    if event == "31739-4.htm" :
      if cond == 0 and st.getPlayer().isSubClassActive() :
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.set("cond","1")
        st.playSound("ItemSound.quest_accept")
    if event == "30753-2.htm" :
@@ -135,7 +137,7 @@ class Quest (JQuest) :
        st.addExpAndSp(263043,0)
        st.set("cond","0")
        st.playSound("ItemSound.quest_finish")
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
    return htmltext
 
  def onTalk (self,npc,player):
@@ -144,14 +146,14 @@ class Quest (JQuest) :
    if not st : return htmltext
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != TALIEN and id != STARTED : return htmltext
+   if npcId != TALIEN and id != State.STARTED : return htmltext
    cond = st.getInt("cond")
    id = st.getState()
    if player.isSubClassActive() :
      if npcId == TALIEN :
        if cond == 0 :
-         if id == COMPLETED :
-           htmltext = "<html><body>This quest has already been completed.</body></html>"
+         if id == State.COMPLETED :
+           htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
          elif player.getLevel() < 50 : 
            htmltext = "31739-2.htm"
            st.exitQuest(1)
@@ -281,11 +283,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(241,qn,"Possessor Of A Precious Soul - 1")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(TALIEN)
 QUEST.addTalkId(TALIEN)
 
@@ -310,11 +308,3 @@ QUEST.addKillId(21509)
 QUEST.addKillId(21510)
 QUEST.addKillId(21511)
 QUEST.addKillId(21512)
-
-STARTED.addQuestDrop(BARAHAM,LEGEND_OF_SEVENTEEN,1)
-STARTED.addQuestDrop(BARAHAM,MALRUK_SUCCUBUS_CLAW,1)
-STARTED.addQuestDrop(BARAHAM,ECHO_CRYSTAL,1)
-STARTED.addQuestDrop(BARAHAM,POETRY_BOOK,1)
-STARTED.addQuestDrop(BARAHAM,CRIMSON_MOSS,1)
-STARTED.addQuestDrop(BARAHAM,RAHORAKTIS_MEDICINE,1)
-STARTED.addQuestDrop(BARAHAM,VIRGILS_LETTER,1)

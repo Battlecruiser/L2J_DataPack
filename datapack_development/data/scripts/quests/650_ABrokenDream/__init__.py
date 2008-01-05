@@ -21,12 +21,14 @@ CHANCE = 68
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [DREAM_FRAGMENT_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "2a.htm" :
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
       st.set("cond","1")
     elif event == "500.htm" :
@@ -40,19 +42,19 @@ class Quest (JQuest) :
         npcId = npc.getNpcId()
         htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
         id = st.getState()
-        if id == CREATED :
+        if id == State.CREATED :
             Ocean = player.getQuestState("117_OceanOfDistantStar")
             if st.getPlayer().getLevel() < 39:
                 st.exitQuest(1)
                 htmltext="100.htm"
             elif Ocean:
-                if Ocean.getState().getName() == 'Completed':
+                if Ocean.getState().getName() == 'State.COMPLETED':
                     htmltext="200.htm"
                 else :
                 	htmltext = "600.htm"#TODO: This is custom, need to get official text from retail
             else :
             	htmltext = "600.htm" #TODO: This is custom, need to get official text from retail
-        elif id == STARTED :
+        elif id == State.STARTED :
             htmltext = "400.htm"
    return htmltext
 
@@ -61,19 +63,15 @@ class Quest (JQuest) :
    if not partyMember : return
    st = partyMember.getQuestState(qn)
    if st :
-        if st.getState() == STARTED and st.getInt("cond") == 1 :
+        if st.getState() == State.STARTED and st.getInt("cond") == 1 :
             if st.getRandom(100)<CHANCE :
                 st.giveItems(DREAM_FRAGMENT_ID,1)
                 st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST       = Quest(650, qn, "A Broken Dream")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(GHOST)
 QUEST.addTalkId(GHOST)
 QUEST.addKillId(CREWMAN)
 QUEST.addKillId(VAGABOND)
-STARTED.addQuestDrop(CREWMAN,DREAM_FRAGMENT_ID,1)

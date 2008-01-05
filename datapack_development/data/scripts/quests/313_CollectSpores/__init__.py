@@ -11,13 +11,15 @@ ADENA = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [FUNGUS_SAC]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30150-05.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
@@ -49,7 +51,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    if st.getQuestItemsCount(FUNGUS_SAC)<10 and st.getRandom(100) < 50 :
      st.giveItems(FUNGUS_SAC,1)
@@ -60,16 +62,9 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(313,qn,"Collect Spores")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30150)
 
 QUEST.addTalkId(30150)
 
 QUEST.addKillId(20509)
-
-STARTED.addQuestDrop(20509,FUNGUS_SAC,1)

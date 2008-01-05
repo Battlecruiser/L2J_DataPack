@@ -20,13 +20,15 @@ CHANCE2 = 50
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [VICTIMS_ARM_BONE, VICTIMS_THIGH_BONE, VICTIMS_SKULL, VICTIMS_RIB_BONE, VICTIMS_SPINE, POWDER_TO_SUMMON_DEAD_SOULS]
 
  def onEvent (self,event,st) :
      htmltext = event
      if event == "1" :
          st.set("cond","1")
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          htmltext = "30970-02.htm"
          st.playSound("ItemSound.quest_accept")
      elif event == "2" :
@@ -59,13 +61,13 @@ class Quest (JQuest) :
 
      npcId = npc.getNpcId()
      id = st.getState()
-     if npcId != 30970 and id != STARTED : return htmltext
+     if npcId != 30970 and id != State.STARTED : return htmltext
 
      level = player.getLevel()
      cond = st.getInt("cond")
      amount = st.getQuestItemsCount(USELESS_BONE_PIECES)
      if npcId==30970 :
-         if id == CREATED :
+         if id == State.CREATED :
              if level>=35 :
                  htmltext = "30970-01.htm"
              else :
@@ -98,7 +100,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
      st = player.getQuestState(qn)
      if not st : return 
-     if st.getState() != STARTED : return 
+     if st.getState() != State.STARTED : return 
    
      npcId = npc.getNpcId()
      random = st.getRandom(100)
@@ -118,23 +120,13 @@ class Quest (JQuest) :
      return
 
 QUEST       = Quest(345,qn,"Method To Raise The Dead")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30970)
 
 QUEST.addTalkId(30970)
 
 QUEST.addTalkId(30912)
 QUEST.addTalkId(30973)
-
-STARTED.addQuestDrop(30970,VICTIMS_ARM_BONE,1)
-STARTED.addQuestDrop(30970,VICTIMS_THIGH_BONE,1)
-STARTED.addQuestDrop(30970,VICTIMS_SKULL,1)
-STARTED.addQuestDrop(30970,VICTIMS_RIB_BONE,1)
-STARTED.addQuestDrop(30970,VICTIMS_SPINE,1)
-STARTED.addQuestDrop(30912,POWDER_TO_SUMMON_DEAD_SOULS,1)
 
 QUEST.addKillId(20789)
 QUEST.addKillId(20791)

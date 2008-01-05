@@ -61,7 +61,7 @@ HOLY_ARK_OF_SECRECY_2: [SECOND_KEY_OF_ARK,ARK_GUARDIAN_ELBEROTH,"That doesn't be
 HOLY_ARK_OF_SECRECY_3: [THIRD_KEY_OF_ARK,ARK_GUARDIAN_SHADOWFANG, "Get off my sight, you infidels!","30979-02.htm","30979-03.htm",BRANCH_OF_SAINT],
 }
 
-# npc: letter to take, item to check for, 1st time htm, return htm, completed part htm, [x,y,z of chest]
+# npc: letter to take, item to check for, 1st time htm, return htm, State.COMPLETED part htm, [x,y,z of chest]
 ARK_OWNERS={
 HARNE: [HANELLINS_FIRST_LETTER, BLOOD_OF_SAINT, '30144-01.htm', '30144-02.htm', '30144-03.htm', [-418,44174,-3568]],
 CLAUDIA_ATHEBALT: [HANELLINS_SECOND_LETTER, BOOK_OF_SAINT, '31001-01.htm', '31001-02.htm', '31001-03.htm', [181472,7158,-2725]],
@@ -121,12 +121,12 @@ class Quest (JQuest) :
 
     npcId = npc.getNpcId()
     id = st.getState()
-    if npcId != HANELLIN and id != PROGRESS : return htmltext
+    if npcId != HANELLIN and id != State.STARTED : return htmltext
 
     cond = st.getInt("cond")
     if npcId == HANELLIN :
-        if id == CREATED :
-            # if the quest was completed and the player still has a blooded fabric
+        if id == State.CREATED :
+            # if the quest was State.COMPLETED and the player still has a blooded fabric
             # tell them the "secret" that they can use it in order to visit Baium.
             if st.getQuestItemsCount(BLOODED_FABRIC)==1:
                 htmltext = "30864-Baium.htm"
@@ -138,7 +138,7 @@ class Quest (JQuest) :
                     htmltext = "30864-01.htm"     #not qualified
                     st.exitQuest(1)
                 elif cond==0 :
-                    st.setState(PROGRESS)
+                    st.setState(State.STARTED)
                     st.set("cond","1")
                     htmltext = "30864-02.htm"    # Successful start: begin the dialog which will set cond=2
         # Player abandoned in the middle of last dialog...repeat the dialog.
@@ -222,7 +222,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
      st = player.getQuestState(qn)
      if not st : return 
-     if st.getState() != PROGRESS : return 
+     if st.getState() != State.STARTED : return 
    
      npcId = npc.getNpcId()
      if npcId in DROPS.keys() :
@@ -246,11 +246,7 @@ class Quest (JQuest) :
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
 
-CREATED     = State('Start',     QUEST)
-PROGRESS    = State('Progress',   QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(HANELLIN)
 QUEST.addTalkId(HANELLIN)
 

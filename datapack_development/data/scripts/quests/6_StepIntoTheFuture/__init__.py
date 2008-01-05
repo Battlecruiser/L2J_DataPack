@@ -21,14 +21,16 @@ MARK_OF_TRAVELER       = 7570
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [BAULRO_LETTER]
 
  def onEvent (self,event,st) :
    htmltext = event 
    if event == "30006-03.htm" : 
      st.set("cond","1") 
      st.set("id","1") 
-     st.setState(STARTED) 
+     st.setState(State.STARTED) 
      st.playSound("ItemSound.quest_accept") 
    elif event == "30033-02.htm" : 
      st.giveItems(BAULRO_LETTER,1) 
@@ -44,7 +46,7 @@ class Quest (JQuest) :
      st.giveItems(SCROLL_OF_ESCAPE_GIRAN,1) 
      st.giveItems(MARK_OF_TRAVELER, 1) 
      st.unset("cond") 
-     st.setState(COMPLETED) 
+     st.setState(State.COMPLETED) 
      st.playSound("ItemSound.quest_finish") 
    return htmltext 
 
@@ -56,7 +58,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    cond  = st.getInt("cond") 
    id    = st.getState() 
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
      st.set("id","0") 
      if player.getRace().ordinal() == 0 :
@@ -68,11 +70,11 @@ class Quest (JQuest) :
      else :
        htmltext = "30006-01.htm"
        st.exitQuest(1)
-   elif npcId == ROXXY and id == COMPLETED : 
+   elif npcId == ROXXY and id == State.COMPLETED : 
      htmltext = "<html><body>I can't supply you with another Giran Scroll of Escape. Sorry traveller.</body></html>" 
    elif npcId == ROXXY and cond == 1 : 
      htmltext = "30006-04.htm"
-   elif id == STARTED :  
+   elif id == State.STARTED :  
        if npcId == BAULRO : 
          if cond == 1: 
            htmltext = "30033-01.htm" 
@@ -85,16 +87,10 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST     = Quest(6,qn,"Step into the Future") 
-CREATED   = State('Start',     QUEST) 
-STARTED   = State('Started',   QUEST) 
-COMPLETED = State('Completed', QUEST) 
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(ROXXY) 
 
 QUEST.addTalkId(ROXXY) 
 
 QUEST.addTalkId(BAULRO) 
 QUEST.addTalkId(SIR_COLLIN) 
-
-STARTED.addQuestDrop(ROXXY,BAULRO_LETTER,1)

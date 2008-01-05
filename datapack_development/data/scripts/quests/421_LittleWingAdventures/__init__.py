@@ -61,7 +61,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 def get_control_item(st) :
   item = st.getPlayer().getPet().getControlItemId()
-  if st.getState() == CREATED :
+  if st.getState() == State.CREATED :
       st.set("item",str(item))
   else :
       if  st.getInt("item") != item : item = 0
@@ -79,7 +79,9 @@ def get_distance(player) :
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+   JQuest.__init__(self,id,name,descr)
+   self.questItemIds = [FT_LEAF]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -94,10 +96,9 @@ class Quest (JQuest) :
            elif leafs == 1 and st.getInt("id") == 15:
               st.playSound("ItemSound.quest_middle")
               st.set("cond","3")
-              st.setState(STARTED)
     if event == "16" :
        htmltext = event_1
-       st.setState(STARTING)
+       st.setState(State.STARTED)
        st.set("id","0")
        st.set("cond","1")
        st.playSound("ItemSound.quest_accept")
@@ -108,9 +109,10 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
    id = st.getState()
-   if id == COMPLETED :
-      st.setState(CREATED)
-      id = CREATED
+   cond = st.getInt("cond")
+   if id == State.COMPLETED :
+      st.setState(State.CREATED)
+      id = State.CREATED
    npcId = npc.getNpcId()
    if player.getPet() == None :
        htmltext = error_1
@@ -128,7 +130,7 @@ class Quest (JQuest) :
        st.exitQuest(1)
        htmltext = error_2
    elif npcId == SG_CRONOS :
-      if id == CREATED :
+      if id == State.CREATED :
          if player.getLevel() < MIN_PLAYER_LEVEL :
             st.exitQuest(1)
             htmltext = error_3
@@ -137,7 +139,7 @@ class Quest (JQuest) :
       else :
          htmltext = qston_2
    elif npcId == FY_MYMYU :
-     if id == STARTING :
+     if id == State.STARTED and cond < 3 :
         if st.getQuestItemsCount(FT_LEAF) == 0 and st.getInt("id") == 0 :
            st.set("cond","2")
            st.giveItems(FT_LEAF,4)
@@ -145,7 +147,7 @@ class Quest (JQuest) :
            htmltext = order_1
         else :
             htmltext = qston_3
-     elif id == STARTED :
+     elif id == State.STARTED and cond >= 3:
         name = player.getPet().getName()
         if name == None : name = " "
         else : name = " "+name+" "
@@ -155,7 +157,7 @@ class Quest (JQuest) :
         st.giveItems(item,1)
         st.exitQuest(1)
         st.playSound("ItemSound.quest_finish")
-   elif id == STARTING :
+   elif id == State.STARTED and cond < 3 :
      leafs = st.getQuestItemsCount(FT_LEAF)
      if 0 < leafs :
         for i in range(4) :
@@ -171,12 +173,6 @@ class Quest (JQuest) :
 
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
-CREATED     = State('Start',     QUEST)
-STARTING    = State('Starting',  QUEST)
-STARTED     = State('Started',   QUEST)
-COMPLETED   = State('Completed', QUEST)
-
-QUEST.setInitialState(CREATED)
 
 # Quest NPC starter initialization
 QUEST.addStartNpc(SG_CRONOS)
@@ -184,8 +180,6 @@ QUEST.addStartNpc(SG_CRONOS)
 QUEST.addTalkId(SG_CRONOS)
 
 QUEST.addTalkId(FY_MYMYU)
-
-STARTING.addQuestDrop(SG_CRONOS,FT_LEAF,1)
 
 for i in range(4) :
   QUEST.addTalkId(FAIRY_TREES[i][0])

@@ -52,7 +52,9 @@ count = 100
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(7246,7250)
 
  def onAdvEvent (self,event,npc,player) :
     st = player.getQuestState(qn)
@@ -86,8 +88,8 @@ class Quest (JQuest) :
        npcId = npc.getNpcId()
        cond = st.getInt("cond")
        id = st.getState()
-       if id == COMPLETED :
-         st.setState(STARTED)
+       if id == State.COMPLETED :
+         st.setState(State.STARTED)
          st.set("cond","3")
        chitin1=st.getQuestItemsCount(CHITIN)
        chitin2=st.getQuestItemsCount(CHITIN2)
@@ -95,12 +97,12 @@ class Quest (JQuest) :
           if player.getLevel()>= 66 : #Succesful start: Kill Splinter Stakato
              htmltext = "31554-02.htm"
              st.set("cond","1")
-             st.setState(STARTED)
+             st.setState(State.STARTED)
              st.playSound("ItemSound.quest_accept")
           else :
              htmltext = "31554-01.htm" #not qualified
              st.exitQuest(1)
-       elif id == STARTED :
+       elif id == State.STARTED :
            if cond == 1 : #Bringin Splinter Stakato chitins
               if npcId == KAHMAN :
                  if chitin1>=count :
@@ -137,7 +139,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if st :
-        if st.getState() == STARTED :
+        if st.getState() == State.STARTED :
             npcId = npc.getNpcId()
             cond = st.getInt("cond")
             chance = CHANCE[npcId]*Config.RATE_DROP_QUEST
@@ -161,12 +163,7 @@ class Quest (JQuest) :
    return
            
 QUEST       = Quest(628,qn,"Hunt of the Golden Ram Mercenary Force")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(KAHMAN)
 
 QUEST.addTalkId(KAHMAN)
@@ -175,6 +172,3 @@ QUEST.addTalkId(SELINA)
 
 for mob in range(21508,21518):
     QUEST.addKillId(mob)
-
-for item in range(7246,7250):
-    STARTED.addQuestDrop(KAHMAN,item,1)

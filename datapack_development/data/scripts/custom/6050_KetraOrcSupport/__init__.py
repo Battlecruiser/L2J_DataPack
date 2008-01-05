@@ -81,7 +81,7 @@ class Quest (JQuest) :
         else :
             htmltext = "31371-no.htm"
     elif npcId == Asefa :
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         if Alevel < 1 :
             htmltext = "31372-3.htm"
         elif Alevel < 3 and Alevel > 0:
@@ -132,10 +132,8 @@ class Quest (JQuest) :
     return htmltext
 
 QUEST       = Quest(6050, qn, "custom")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 for i in NPCS:
    QUEST.addFirstTalkId(i)
 QUEST.addTalkId(Asefa)

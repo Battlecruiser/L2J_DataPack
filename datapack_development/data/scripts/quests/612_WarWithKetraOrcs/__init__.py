@@ -39,7 +39,9 @@ Molar = 7234
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [Molar]
 
  def onEvent (self,event,st) :
      htmltext = event
@@ -48,7 +50,7 @@ class Quest (JQuest) :
        if st.getPlayer().getLevel() >= 74 and st.getPlayer().getAllianceWithVarkaKetra() <= -1 : #the alliance check is only temporary, should be done on core side/AI
             st.set("cond","1")
             st.set("id","1")
-            st.setState(STARTED)
+            st.setState(State.STARTED)
             st.playSound("ItemSound.quest_accept")
             htmltext = "31377-03.htm"
        else :
@@ -89,7 +91,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onKill(self,npc,player,isPet):
-     partyMember = self.getRandomPartyMemberState(player,STARTED)
+     partyMember = self.getRandomPartyMemberState(player,State.STARTED)
      if not partyMember : return
      st = partyMember.getQuestState(qn)
      npcId = npc.getNpcId()
@@ -115,18 +117,13 @@ class Quest (JQuest) :
      return
 
 QUEST       = Quest(612, qn, "War With Ketra Orcs")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Ashas)
 
 QUEST.addTalkId(Ashas)
 
 for mobId in Ketra_Orcs :
   QUEST.addKillId(mobId)
-
-STARTED.addQuestDrop(Ashas,Molar,1)
 
 for mobId in Varka_Mobs :
   QUEST.addKillId(mobId)

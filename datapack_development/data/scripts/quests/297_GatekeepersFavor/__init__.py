@@ -12,7 +12,9 @@ GATEKEEPER_TOKEN_ID = 1659
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [STARSTONE2_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -20,7 +22,7 @@ class Quest (JQuest) :
        if st.getPlayer().getLevel() >= 15 :
           htmltext = "30540-03.htm"
           st.set("cond","1")
-          st.setState(STARTED)
+          st.setState(State.STARTED)
           st.playSound("ItemSound.quest_accept")
        else:
           htmltext = "30540-01.htm"
@@ -33,7 +35,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
       st.set("cond","0")
    if npcId == 30540 :
       if st.getInt("cond")==0 :
@@ -51,7 +53,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId == 20521 :
@@ -66,14 +68,8 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(297,qn,"Gatekeepers Favor")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
-
-QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(30540)
 QUEST.addTalkId(30540)
 
 QUEST.addKillId(20521)
-STARTED.addQuestDrop(20521,STARSTONE2_ID,1)

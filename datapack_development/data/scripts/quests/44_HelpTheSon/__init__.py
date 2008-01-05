@@ -28,7 +28,7 @@ class Quest (JQuest) :
     if event=="1":
       htmltext="30827-01.htm"
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     if event=="3" and st.getQuestItemsCount(WORK_HAMMER):
       htmltext="30827-03.htm"
@@ -46,7 +46,7 @@ class Quest (JQuest) :
     if event=="7":
       htmltext="30827-07.htm"
       st.giveItems(PET_TICKET,1)
-      st.setState(COMPLETED)
+      st.setState(State.COMPLETED)
       st.exitQuest(0)
     return htmltext
 
@@ -56,13 +56,13 @@ class Quest (JQuest) :
     if not st : return htmltext
     npcId=npc.getNpcId()
     id=st.getState()
-    if id==CREATED:
+    if id==State.CREATED:
       if player.getLevel()>=MIN_LEVEL:
         htmltext="30827-00.htm"
       else:
         st.exitQuest(1)
         htmltext="<html><body>This quest can only be taken by characters that have a minimum level of %s. Return when you are more experienced.</body></html>" % MIN_LEVEL
-    elif id==STARTED:
+    elif id==State.STARTED:
       cond=st.getInt("cond")
       if npcId==LUNDY:
         if cond==1:
@@ -83,15 +83,15 @@ class Quest (JQuest) :
           htmltext="30505-05.htm"
         elif cond==5:
           htmltext="30505-06a.htm"
-    elif id==COMPLETED:
+    elif id==State.COMPLETED:
       st.exitQuest(0)
-      htmltext="<html><body>This quest has already been completed.</body></html>"
+      htmltext="<html><body>This quest has already been State.COMPLETED.</body></html>"
     return htmltext
 
   def onKill(self,npc,player,isPet):
     st = player.getQuestState(qn)
     if not st : return 
-    if st.getState() != STARTED : return 
+    if st.getState() != State.STARTED : return 
     npcId = npc.getNpcId()
     cond=st.getInt("cond")
     if cond==2:
@@ -110,11 +110,8 @@ class Quest (JQuest) :
     return     
 
 QUEST=Quest(44,qn,"Help The Son!")
-CREATED=State('Start', QUEST)
-STARTED=State('Started', QUEST)
-COMPLETED=State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(LUNDY)
 
 QUEST.addTalkId(LUNDY)

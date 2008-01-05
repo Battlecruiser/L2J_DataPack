@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # rewritten by Rolarga, Version 0.3
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://forum.l2jdp.com for more details
@@ -80,7 +80,9 @@ for mob in DROPLIST.keys():
 
 class Quest (JQuest) :
 
-  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+  def __init__(self,id,name,descr):
+    JQuest.__init__(self,id,name,descr)
+    self.questItemIds = range(2880,2915)
 
   def onEvent (self,event,st) :
     htmltext = event
@@ -88,7 +90,8 @@ class Quest (JQuest) :
       htmltext = "30510-05.htm"
       for var in STATS:
         st.set(var,"1")
-      st.setState(PART1)
+      st.setState(State.STARTED)
+      st.set("progress","PART1")
       st.playSound("ItemSound.quest_accept")
     elif event == "30630_1" :
       htmltext = "30630-02.htm"
@@ -133,7 +136,7 @@ class Quest (JQuest) :
       htmltext = "30649-03.htm"
       for var in STATS:
         st.unset(var)
-      st.setState(COMPLETED)
+      st.setState(State.COMPLETED)
       st.playSound("ItemSound.quest_finish")
     return htmltext
 
@@ -148,7 +151,7 @@ class Quest (JQuest) :
     id = st.getState()
     
     # first time when a player join the quest
-    if id == CREATED:
+    if id == State.CREATED:
       for var in STATS:
         st.set(var,"0")
       if player.getClassId().getId() == 0x32:
@@ -164,11 +167,11 @@ class Quest (JQuest) :
         htmltext = "30510-01.htm"
         st.exitQuest(1)
       return htmltext
-    # if quest is already completed
-    elif id == COMPLETED:
-      return "<html><body>This quest has already been completed.</body></html>"
+    # if quest is already State.COMPLETED
+    elif id == State.COMPLETED:
+      return "<html><body>This quest has already been State.COMPLETED.</body></html>"
     # if quest is accepted and in progress
-    elif id == PART1:
+    elif id == State.STARTED and st.get("progress") == "PART1":
         step=st.getInt("step")
         Orim=st.getInt("Orim")
         Racoy=st.getInt("Racoy")
@@ -183,7 +186,8 @@ class Quest (JQuest) :
             st.takeItems(KIRUNAS_REMAINS1,1)
             st.takeItems(TONARS_REMAINS1,1)
             st.giveItems(VENDETTA_TOTEM,1)
-            st.setState(PART2)
+            st.setState(State.STARTED)
+            st.set("progress","PART2")
           else:                                        # shows you again his List
             htmltext = "30510-06.htm"
         # Orim and his Part, he sends you out to hunt Portas, Mordeos and Excuros
@@ -282,7 +286,7 @@ class Quest (JQuest) :
               st.set("Manakia","7")  
             else:                                  # bring me more, because two vars are required , Manakia and Manakia_Queen
               htmltext = "30515-03.htm"
-    elif id == PART2:
+    elif id == State.STARTED and st.get("progress")=="PART2":
         step=st.getInt("step")
         if npcId == NPC[3]:                                
           if step == 1:                                # explain Part 2 again or bring more skulls
@@ -308,8 +312,8 @@ class Quest (JQuest) :
     if not st : return 
     npcId=npc.getNpcId()
 
-    if (st.getState() == PART1) and not (npcId in PART1_MOBS) : return 
-    if (st.getState() == PART2) and not (npcId in PART2_MOBS) : return 
+    if (st.getState() == State.Started) and (st.get("progress")=="PART1") and not (npcId in PART1_MOBS) : return 
+    if (st.getState() == State.Started) and (st.get("progress")=="PART2") and not (npcId in PART2_MOBS) : return 
 
 #    [accepted values for this part],variable for the current part from the mob,maxcount,chance in %, items to give(one per kill max)=DROPLIST[npcId]
     value,var,maxcount,chance,itemList=DROPLIST[npcId]
@@ -357,13 +361,7 @@ class Quest (JQuest) :
 
 
 QUEST     = Quest(233,qn,"Test Of Warspirit")
-CREATED   = State('Start', QUEST)
-PART1     = State('Part1', QUEST)
-PART2     = State('Part2', QUEST)
-COMPLETED = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30510)
 
 for npcId in NPC:
@@ -374,6 +372,3 @@ for mobId in PART1_MOBS:
 
 for mobId in PART2_MOBS:
   QUEST.addKillId(mobId)
-
-for item in range(2880,2915):
-  PART2.addQuestDrop(30510,item,1)

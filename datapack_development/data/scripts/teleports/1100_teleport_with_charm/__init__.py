@@ -42,9 +42,9 @@ class Quest (JQuest) :
        return "30540-01.htm"
 
 QUEST       = Quest(1100,qn,"Teleports")
-CREATED     = State('Start',QUEST)
+State.CREATED     = State('Start',QUEST)
 
-QUEST.setInitialState(CREATED)
+
 
 for i in [ WHIRPY, TAMIL ] :
     QUEST.addStartNpc(i)

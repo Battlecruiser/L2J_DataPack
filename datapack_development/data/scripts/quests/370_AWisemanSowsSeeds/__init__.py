@@ -17,13 +17,15 @@ CHAPTER_OF_FIRE,CHAPTER_OF_WATER,CHAPTER_OF_WIND,CHAPTER_OF_EARTH = range(5917,5
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(5917,5921)
 
  def onEvent (self,event,st) :
    htmltext = event
    if event == "30612-1.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.set("awaitsPartyDrop","1")
      st.playSound("ItemSound.quest_accept")
    elif event == "30612-6.htm" :
@@ -84,15 +86,9 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(370,qn,"A Wiseman Sows Seeds")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(CASIAN)
 QUEST.addTalkId(CASIAN)
 
 for i in MOBS :
   QUEST.addKillId(i)
-
-for i in range(5917,5921):
-    STARTED.addQuestDrop(CASIAN,i,1)

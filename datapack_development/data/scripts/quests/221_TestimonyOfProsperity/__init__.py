@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -52,14 +52,16 @@ KEY_OF_TITAN_ID = 3030
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(3239,3276)+[3428,3023,3030]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
         htmltext = "30104-04.htm"
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(RING_OF_TESTIMONY1_ID,1)
     elif event == "30104_1" :
@@ -160,13 +162,8 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30104 and id != STARTED : return htmltext
+   if npcId != 30104 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30104 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
         if player.getRace().ordinal() != 4 :
           htmltext = "30104-01.htm"
@@ -178,7 +175,7 @@ class Quest (JQuest) :
           else:
             htmltext = "30104-03.htm"
    elif npcId == 30104 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30104 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 :
         if st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) and st.getQuestItemsCount(BLESSED_SEED_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) :
           htmltext = "30104-06.htm"
@@ -205,7 +202,7 @@ class Quest (JQuest) :
           htmltext = "30104-13.htm"
           st.set("cond","0")
           st.set("onlyone","1")
-          st.setState(COMPLETED)
+          st.setState(State.COMPLETED)
           st.playSound("ItemSound.quest_finish")
    elif npcId == 30531 and st.getInt("cond")>=1 and st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) == 0 and st.getQuestItemsCount(COLLECTION_LICENSE_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 :
         htmltext = "30531-01.htm"
@@ -384,7 +381,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId == 20223 :
@@ -459,13 +456,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(221,qn,"Testimony Of Prosperity")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30104)
 
 QUEST.addTalkId(30104)
@@ -501,6 +492,3 @@ QUEST.addKillId(20231)
 QUEST.addKillId(20232)
 QUEST.addKillId(20233)
 QUEST.addKillId(20234)
-
-for item in range(3239,3276)+[3428,3023,3030]:
-    STARTED.addQuestDrop(30621,item,1)

@@ -12,7 +12,9 @@ HASTE_POTION_ID = 734
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [OFFICIAL_LETTER_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -20,7 +22,7 @@ class Quest (JQuest) :
       st.giveItems(OFFICIAL_LETTER_ID,1)
       htmltext = "30042-04.htm"
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
@@ -31,8 +33,8 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == COMPLETED:
-      htmltext = "<html><body>This quest has already been completed.</body></html>" 
+   if id == State.COMPLETED:
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>" 
    elif npcId == 30042 :
       if not st.getInt("cond") :
          if player.getLevel() >= 3 :
@@ -42,27 +44,19 @@ class Quest (JQuest) :
             st.exitQuest(1)
       elif st.getInt("cond") and st.getQuestItemsCount(OFFICIAL_LETTER_ID) :
          htmltext = "30042-05.htm"
-   elif npcId == 30311 and st.getInt("cond") and st.getQuestItemsCount(OFFICIAL_LETTER_ID) and id == STARTED:
+   elif npcId == 30311 and st.getInt("cond") and st.getQuestItemsCount(OFFICIAL_LETTER_ID) and id == State.STARTED:
       st.takeItems(OFFICIAL_LETTER_ID,-1)
       st.giveItems(HASTE_POTION_ID,int(Config.RATE_QUESTS_REWARD))
       st.unset("cond")
-      st.setState(COMPLETED)
+      st.setState(State.COMPLETED)
       st.playSound("ItemSound.quest_finish")
       htmltext = "30311-01.htm"
    return htmltext
 
 QUEST       = Quest(155,qn,"Find Sir Windawood")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30042)
 
 QUEST.addTalkId(30042)
 
 QUEST.addTalkId(30311)
-
-STARTED.addQuestDrop(30042,OFFICIAL_LETTER_ID,1)

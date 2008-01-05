@@ -58,21 +58,18 @@ class Quest (JQuest) :
      else:
        htmltext = "30031-01.htm"
 
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      return htmltext
 
    # All other Races must be out
    if npcId == HIGH_PRIEST_BIOTIN and Race in [Race.dwarf, Race.darkelf, Race.elf, Race.orc]:
-     st.setState(COMPLETED)
+     st.setState(State.COMPLETED)
      st.exitQuest(1)
      return "30031-08.htm"
 
 QUEST     = Quest(30031,qn,"village_master")
-CREATED   = State('Start',     QUEST)
-STARTED   = State('Started',   QUEST)
-COMPLETED = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 
 QUEST.addStartNpc(30031)
 

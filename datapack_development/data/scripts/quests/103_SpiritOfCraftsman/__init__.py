@@ -20,14 +20,16 @@ BLOODSABER_ID = 975
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [KAROYDS_LETTER_ID, CECKTINONS_VOUCHER1_ID, CECKTINONS_VOUCHER2_ID, BONE_FRAGMENT1_ID, SOUL_CATCHER_ID, PRESERVE_OIL_ID, ZOMBIE_HEAD_ID, STEELBENDERS_HEAD_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30307-05.htm" :
         st.giveItems(KAROYDS_LETTER_ID,1)
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
     return htmltext
 
@@ -38,7 +40,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st: return htmltext
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
    if npcId == 30307 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
@@ -51,8 +53,8 @@ class Quest (JQuest) :
         htmltext = "30307-02.htm"
         st.exitQuest(1)
    elif npcId == 30307 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-        htmltext = "<html><body>This quest has already been completed.</body></html>"
-   elif id == STARTED : 
+        htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+   elif id == State.STARTED : 
        if npcId == 30307 and st.getInt("cond")>=1 and (st.getQuestItemsCount(KAROYDS_LETTER_ID)>=1 or st.getQuestItemsCount(CECKTINONS_VOUCHER1_ID)>=1 or st.getQuestItemsCount(CECKTINONS_VOUCHER2_ID)>=1) :
             htmltext = "30307-06.htm"
        elif npcId == 30132 and st.getInt("cond")==1 and st.getQuestItemsCount(KAROYDS_LETTER_ID)==1 :
@@ -96,7 +98,7 @@ class Quest (JQuest) :
             st.takeItems(STEELBENDERS_HEAD_ID,1)
             st.giveItems(BLOODSABER_ID,1)
             st.set("cond","0")
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.playSound("ItemSound.quest_finish")
             st.set("onlyone","1")
    return htmltext
@@ -104,7 +106,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st: return
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    npcId = npc.getNpcId()
    if npcId in [20517,20518,20455] :
       bones = st.getQuestItemsCount(BONE_FRAGMENT1_ID)
@@ -131,12 +133,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(103,qn,"Spirit Of Craftsman")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30307)
 
 QUEST.addTalkId(30307)
@@ -149,15 +146,3 @@ QUEST.addKillId(20020)
 QUEST.addKillId(20455)
 QUEST.addKillId(20517)
 QUEST.addKillId(20518)
-
-STARTED.addQuestDrop(30307,KAROYDS_LETTER_ID,1)
-STARTED.addQuestDrop(30132,CECKTINONS_VOUCHER1_ID,1)
-STARTED.addQuestDrop(30144,CECKTINONS_VOUCHER2_ID,1)
-STARTED.addQuestDrop(20517,BONE_FRAGMENT1_ID,1)
-STARTED.addQuestDrop(20518,BONE_FRAGMENT1_ID,1)
-STARTED.addQuestDrop(20455,BONE_FRAGMENT1_ID,1)
-STARTED.addQuestDrop(30144,SOUL_CATCHER_ID,1)
-STARTED.addQuestDrop(30132,PRESERVE_OIL_ID,1)
-STARTED.addQuestDrop(20015,ZOMBIE_HEAD_ID,1)
-STARTED.addQuestDrop(20020,ZOMBIE_HEAD_ID,1)
-STARTED.addQuestDrop(30132,STEELBENDERS_HEAD_ID,1)

@@ -63,7 +63,14 @@ DROPLIST_COND_6={
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [VOKIYANS_ORDER1, MANASHEN_SHARD, TYRANT_TALON, GUARDIAN_BASILISK_FANG, VOKIYANS_ORDER2, SCEPTER_OF_BREKA,
+                SCEPTER_OF_ENKU, SCEPTER_OF_VUKU, SCEPTER_OF_TUREK, SCEPTER_OF_TUNATH, CHIANTAS_ORDER1, MANAKIAS_LETTER1,
+                MANAKIAS_LETTER2, KASMANS_LETTER1, CHIANTAS_ORDER2, TANAPIS_ORDER1, NECKLACE_OF_AUTHORITY, CHIANTAS_ORDER3,
+                TAMLIN_ORC_SKULL, TIMAK_ORC_HEAD, GLOVE_OF_VOLTAR, GLOVE_OF_KEPRA, GLOVE_OF_BURAI, PASHIKAS_HEAD, VULTUS_HEAD,
+                ENKU_OVERLORD_HEAD, KASMANS_LETTER2, MAKUM_BUGBEAR_HEAD, KASMANS_LETTER3, STAKATO_DRONE_HUSK1, DRIKOS_CONTRACT,
+                SCEPTER_OF_TANTOS, SCEPTER_BOX, RITUAL_BOX]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -71,7 +78,7 @@ class Quest (JQuest) :
           return
     elif event == "30514-05.htm" :                           # Starting
           st.set("cond","1")
-          st.setState(STARTED)
+          st.setState(State.STARTED)
           st.playSound("ItemSound.quest_accept")
           st.giveItems(VOKIYANS_ORDER1,1)
     elif event == "30642-03.htm" :                           # Condition 3
@@ -187,9 +194,9 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30514 and id != STARTED : return htmltext
+   if npcId != 30514 and id != State.STARTED : return htmltext
 
-   if id == CREATED :                                       # Check if is starting the quest
+   if id == State.CREATED :                                       # Check if is starting the quest
      st.set("cond","0")
      st.set("id","0")
      if npcId == 30514 :
@@ -202,9 +209,9 @@ class Quest (JQuest) :
        else:
          htmltext = "30514-02.htm"
          st.exitQuest(1)
-   elif id == COMPLETED :                                   # Check if the quest is already made
+   elif id == State.COMPLETED :                                   # Check if the quest is already made
       if npcId == 30514 :
-        htmltext = "<html><body>This quest has already been completed.</body></html>"
+        htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    else :                                                   # The quest it self
      try :
        cond = st.getInt("cond")
@@ -425,7 +432,7 @@ class Quest (JQuest) :
          st.giveItems(MARK_OF_GLORY,1)
          st.takeItems(RITUAL_BOX,1)
          st.set("cond","0")
-         st.setState(COMPLETED)
+         st.setState(State.COMPLETED)
          st.playSound("ItemSound.quest_finish")
        else :
          htmltext = "30565-01.htm"
@@ -434,7 +441,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
 
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
@@ -505,13 +512,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(220,qn,"Testimony Of Glory")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30514)
 
 QUEST.addTalkId(30514)
@@ -529,39 +530,3 @@ QUEST.addTalkId(30642)
 
 for i in DROPLIST_COND_1.keys()+DROPLIST_COND_4.keys()+DROPLIST_COND_6.keys()+[20778,20779,27086] :
     QUEST.addKillId(i)
-
-STARTED.addQuestDrop(30514,VOKIYANS_ORDER1,1)
-STARTED.addQuestDrop(20563,MANASHEN_SHARD,1)
-STARTED.addQuestDrop(20193,TYRANT_TALON,1)
-STARTED.addQuestDrop(20550,GUARDIAN_BASILISK_FANG,1)
-STARTED.addQuestDrop(30514,VOKIYANS_ORDER2,1)
-STARTED.addQuestDrop(30615,SCEPTER_OF_BREKA,1)
-STARTED.addQuestDrop(30616,SCEPTER_OF_ENKU,1)
-STARTED.addQuestDrop(30619,SCEPTER_OF_VUKU,1)
-STARTED.addQuestDrop(30617,SCEPTER_OF_TUREK,1)
-STARTED.addQuestDrop(30618,SCEPTER_OF_TUNATH,1)
-STARTED.addQuestDrop(30642,CHIANTAS_ORDER1,1)
-STARTED.addQuestDrop(30515,MANAKIAS_LETTER1,1)
-STARTED.addQuestDrop(30515,MANAKIAS_LETTER2,1)
-STARTED.addQuestDrop(30501,KASMANS_LETTER1,1)
-STARTED.addQuestDrop(30642,CHIANTAS_ORDER2,1)
-STARTED.addQuestDrop(30571,TANAPIS_ORDER1,1)
-STARTED.addQuestDrop(30514,NECKLACE_OF_AUTHORITY,1)
-STARTED.addQuestDrop(30642,CHIANTAS_ORDER3,1)
-STARTED.addQuestDrop(20601,TAMLIN_ORC_SKULL,1)
-STARTED.addQuestDrop(20602,TAMLIN_ORC_SKULL,1)
-STARTED.addQuestDrop(20583,TIMAK_ORC_HEAD,1)
-STARTED.addQuestDrop(30615,GLOVE_OF_VOLTAR,1)
-STARTED.addQuestDrop(30616,GLOVE_OF_KEPRA,1)
-STARTED.addQuestDrop(30617,GLOVE_OF_BURAI,1)
-STARTED.addQuestDrop(27080,PASHIKAS_HEAD,1)
-STARTED.addQuestDrop(27081,VULTUS_HEAD,1)
-STARTED.addQuestDrop(27082,ENKU_OVERLORD_HEAD,1)
-STARTED.addQuestDrop(30501,KASMANS_LETTER2,1)
-STARTED.addQuestDrop(27083,MAKUM_BUGBEAR_HEAD,1)
-STARTED.addQuestDrop(30501,KASMANS_LETTER3,1)
-STARTED.addQuestDrop(20234,STAKATO_DRONE_HUSK1,1)
-STARTED.addQuestDrop(30619,DRIKOS_CONTRACT,1)
-STARTED.addQuestDrop(27086,SCEPTER_OF_TANTOS,1)
-STARTED.addQuestDrop(30642,SCEPTER_BOX,1)
-STARTED.addQuestDrop(30571,RITUAL_BOX,1)

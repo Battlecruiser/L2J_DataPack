@@ -12,12 +12,14 @@ CHANCE = 400000
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [BEAR_SKIN]
 
  def onEvent (self,event,st) :
      htmltext = event
      if event == "30078-02.htm" :
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.set("cond","1")
         st.playSound("ItemSound.quest_accept")
      return htmltext
@@ -31,7 +33,7 @@ class Quest (JQuest) :
      id = st.getState()
      level = player.getLevel()
      cond = st.getInt("cond")
-     if id == CREATED :
+     if id == State.CREATED :
          if level>=20 :
              htmltext = "30078-01.htm"
          else:
@@ -51,7 +53,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
      st = player.getQuestState(qn)
      if not st : return 
-     if st.getState() != STARTED : return 
+     if st.getState() != State.STARTED : return 
 
      npcId = npc.getNpcId()
      cond = st.getInt("cond")
@@ -60,15 +62,10 @@ class Quest (JQuest) :
      return
 
 QUEST       = Quest(341,qn,"Hunting For Wild Beasts")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30078)
 
 QUEST.addTalkId(30078)
-
-STARTED.addQuestDrop(30078,BEAR_SKIN,1)
 
 QUEST.addKillId(20021)
 QUEST.addKillId(20203)

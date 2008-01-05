@@ -29,14 +29,16 @@ CHANCE_FOR_DROP = 5
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [CARADINE_LETTER_LAST, WATERBINDER, EVERGREEN, RAIN_SONG, RELIC_BOX]
 
  def onEvent (self,event,st) :
    htmltext = event
    cond = st.getInt("cond")
    if event == "31740-4.htm" :
      if cond == 0 :
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.takeItems(CARADINE_LETTER,1)
        st.set("cond","1")
        st.playSound("ItemSound.quest_accept")
@@ -64,7 +66,7 @@ class Quest (JQuest) :
        st.takeItems(RELIC_BOX,1)
        st.giveItems(CARADINE_LETTER_LAST,1)
        st.playSound("ItemSound.quest_finish")
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
    return htmltext
 
  def onTalk (self,npc,player):
@@ -74,13 +76,13 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != CARADINE and id != STARTED : return htmltext
+   if npcId != CARADINE and id != State.STARTED : return htmltext
 
    cond=st.getInt("cond")
    if player.isSubClassActive() :
      if npcId == CARADINE and cond == 0 and st.getQuestItemsCount(CARADINE_LETTER) == 1 :
-       if id == COMPLETED :
-         htmltext = "<html><body>This quest has already been completed.</body></html>"
+       if id == State.COMPLETED :
+         htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
        elif player.getLevel() < 65 : 
          htmltext = "31740-2.htm"
          st.exitQuest(1)
@@ -161,11 +163,7 @@ class Quest (JQuest) :
    return 
 
 QUEST       = Quest(246,qn,"Possessor Of A Precious Soul - 3")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(CARADINE)
 QUEST.addTalkId(CARADINE)
 
@@ -175,9 +173,3 @@ QUEST.addTalkId(LADD)
 QUEST.addKillId(PILGRIM_OF_SPLENDOR)
 QUEST.addKillId(JUDGE_OF_SPLENDOR)
 QUEST.addKillId(BARAKIEL)
-
-STARTED.addQuestDrop(CARADINE,CARADINE_LETTER_LAST,1)
-STARTED.addQuestDrop(CARADINE,WATERBINDER,1)
-STARTED.addQuestDrop(CARADINE,EVERGREEN,1)
-STARTED.addQuestDrop(CARADINE,RAIN_SONG,1)
-STARTED.addQuestDrop(CARADINE,RELIC_BOX,1)

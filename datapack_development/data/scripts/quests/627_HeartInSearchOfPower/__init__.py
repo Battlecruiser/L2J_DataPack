@@ -19,13 +19,15 @@ MOLD_HARDENER,ENRIA,ASOFE,THONS = 4041,4042,4043,4044
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [GEM_OF_SUBMISSION]
 
  def onEvent (self,event,st) :
    htmltext = event
    if event == "31518-1.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "31518-3.htm" :
      st.takeItems(GEM_OF_SUBMISSION,300)
@@ -70,7 +72,7 @@ class Quest (JQuest) :
        else:
          htmltext = "31518-0a.htm"
          st.exitQuest(1)
-     elif id == STARTED :
+     elif id == State.STARTED :
        if npcId == M_NECROMANCER :
           if cond == 1 :
             htmltext = "31518-1a.htm"
@@ -87,7 +89,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
   st = player.getQuestState(qn)
   if st :
-    if st.getState() == STARTED :
+    if st.getState() == State.STARTED :
       count = st.getQuestItemsCount(GEM_OF_SUBMISSION)
       if st.getInt("cond") == 1 and count < 300 :
          st.giveItems(GEM_OF_SUBMISSION,1)  
@@ -99,10 +101,8 @@ class Quest (JQuest) :
   return
 
 QUEST       = Quest(627,qn,"Heart In Search Of Power")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(31518)
 
 QUEST.addTalkId(31518)
@@ -110,5 +110,3 @@ QUEST.addTalkId(31519)
 
 for mobs in range(21520,21541):
   QUEST.addKillId(mobs)
-
-STARTED.addQuestDrop(21520,GEM_OF_SUBMISSION,1)

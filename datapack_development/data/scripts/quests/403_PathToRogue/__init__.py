@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://forum.l2jdp.com for more details
 import sys
@@ -39,7 +39,9 @@ def HaveAllStolenItems (st) :
 # Main Quest code
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+   JQuest.__init__(self,id,name,descr)
+   self.questItemIds = [SPATOIS_BONES, NETIS_BOW, NETIS_DAGGER, WANTED_BILL, HORSESHOE_OF_LIGHT, BEZIQUES_LETTER, STOLEN_JEWELRY, STOLEN_TOMES, STOLEN_RING, STOLEN_NECKLACE]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -62,7 +64,7 @@ class Quest (JQuest) :
     elif event == "1" :
         st.set("id","0")
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(BEZIQUES_LETTER,1)
         htmltext = "30379-06.htm"
@@ -84,13 +86,8 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30379 and id != STARTED : return htmltext
+   if npcId != 30379 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30379 and st.getInt("cond")==0 :
      htmltext = "30379-01.htm"
    elif npcId == 30379 and st.getInt("cond") :
@@ -103,7 +100,7 @@ class Quest (JQuest) :
           for i in STOLEN_ITEM.keys() :
             st.takeItems(STOLEN_ITEM[i],-1)
           st.set("cond","0")
-          st.setState(COMPLETED)
+          st.setState(State.COMPLETED)
           st.playSound("ItemSound.quest_finish")
         elif st.getQuestItemsCount(HORSESHOE_OF_LIGHT) == 0 and st.getQuestItemsCount(BEZIQUES_LETTER)>0 :
           htmltext = "30379-07.htm"
@@ -135,7 +132,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if st.getItemEquipped(7) == NETIS_BOW or st.getItemEquipped(7) == NETIS_DAGGER :
@@ -162,13 +159,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(403,qn,"Path To Rogue")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30379)
 
 QUEST.addTalkId(30379)
@@ -177,15 +168,5 @@ QUEST.addTalkId(30425)
 
 QUEST.addKillId(27038)
 
-for StolenItemId in STOLEN_ITEM.keys():
-  STARTED.addQuestDrop(27038,STOLEN_ITEM[StolenItemId],1)
-
 for mobId in (20035,20042,20045,20051,20054,20060) :
   QUEST.addKillId(mobId)
-  STARTED.addQuestDrop(mobId,SPATOIS_BONES,1)
-
-STARTED.addQuestDrop(30425,NETIS_BOW,1)
-STARTED.addQuestDrop(30425,NETIS_DAGGER,1)
-STARTED.addQuestDrop(30379,WANTED_BILL,1)
-STARTED.addQuestDrop(30425,HORSESHOE_OF_LIGHT,1)
-STARTED.addQuestDrop(30379,BEZIQUES_LETTER,1)

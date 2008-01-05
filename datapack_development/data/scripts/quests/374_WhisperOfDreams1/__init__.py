@@ -49,13 +49,16 @@ def render_shop() :
  
 class Quest (JQuest) :
  
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [CB_TOOTH, DW_LIGHT]
  
  def onEvent (self,event,st) :
     id = st.getState() 
     htmltext = event
     if event == "30515-4.htm" :
-       st.setState(STARTING)
+       st.setState(State.STARTED)
+       st.set("progress","PART1")
        st.set("awaitSealedMStone","1")
        st.set("awaitTooth","1")
        st.set("awaitLight","1")
@@ -76,11 +79,11 @@ class Quest (JQuest) :
           htmltext = "30515-7.htm"
     elif event == "30515-8.htm" :
        if st.getQuestItemsCount(SEALD_MSTONE) :
-          if id == STARTING :
-             st.setState(STARTED)
+          if id == State.STARTED and st.get("progress")=="PART1" :
+             st.set("progress","PART2")
              st.set("cond","2")
              htmltext = "30515-9.htm"
-          elif id == STARTED :
+          elif id == State.STARTED and st.get("progress")=="PART2":
              htmltext = "30515-10.htm"
     elif event == "buy" :
        htmltext = render_shop()
@@ -99,10 +102,10 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != MANAKIA and id != STARTED : return htmltext
+   if npcId != MANAKIA and id != State.STARTED : return htmltext
 
    if npcId == MANAKIA:
-      if id == CREATED :
+      if id == State.CREATED :
          st.set("cond","0")
          st.set("allow","0")
          htmltext = "30515-1.htm"
@@ -152,20 +155,12 @@ class Quest (JQuest) :
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
  
-CREATED     = State('Start',     QUEST)
-STARTING    = State('Starting',  QUEST)
-STARTED     = State('Started',   QUEST)
-COMPLETED   = State('Completed', QUEST)
- 
-QUEST.setInitialState(CREATED)
- 
 # Quest NPC starter initialization
 QUEST.addStartNpc(MANAKIA)
 # Quest initialization
 QUEST.addTalkId(MANAKIA)
 
 QUEST.addTalkId(TORAI)
- 
+
 for i in DROPLIST.keys() :
   QUEST.addKillId(i)
-  STARTING.addQuestDrop(i,DROPLIST[i][0],1)

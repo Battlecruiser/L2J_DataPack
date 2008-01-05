@@ -75,7 +75,9 @@ def autochat(npc,text) :
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(3678,3683)+range(3684,3692)
 
  def onAdvEvent (self,event,npc,player):
    st = player.getQuestState(qn)
@@ -84,7 +86,7 @@ class Quest (JQuest) :
    player=st.getPlayer()
    if event == "30738-03.htm":
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
      if st.getQuestItemsCount(ALCHEMY_TEXT) >= 2: st.takeItems(ALCHEMY_TEXT,-1)
      if st.getQuestItemsCount(ALCHEMY_TEXT) == 0: st.giveItems(ALCHEMY_TEXT,1)
@@ -232,7 +234,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
    id = st.getState()
-   if npcId != ALCHEMIST_MATILD and id == CREATED : return htmltext
+   if npcId != ALCHEMIST_MATILD and id == State.CREATED : return htmltext
    if npcId == TORAI and st.getQuestItemsCount(FORBIDDEN_LOVE_SCROLL) :
        st.takeItems(FORBIDDEN_LOVE_SCROLL,1)     
        st.giveItems(ADENA,500000)
@@ -279,8 +281,8 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return
    id = st.getState()
-   if id == CREATED: return
-   if id != STARTED: st.setState(STARTED)
+   if id == State.CREATED: return
+   if id != State.STARTED: st.setState(State.STARTED)
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
    if npcId == SECRET_KEEPER_TREE and cond == 1 and not st.getQuestItemsCount(SECRET_BOOK):
@@ -349,14 +351,6 @@ class Quest (JQuest) :
    return
 
 QUEST     = Quest(334,qn,"The Wishing Potion")
-CREATED   = State('Start',     QUEST)
-STARTED   = State('started',   QUEST)
-#Following states kept for backwards compatibility only.
-MIDDLE    = State('middle',    QUEST)
-END       = State('end',       QUEST)
-COMPLETED = State('completed', QUEST)
-
-QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(ALCHEMIST_MATILD)
 
@@ -368,8 +362,7 @@ QUEST.addTalkId(WISDOM_CHEST)
 QUEST.addKillId(SECRET_KEEPER_TREE)
 
 for mob in DROPLIST.keys():
-    QUEST.addKillId(mob)
-    STARTED.addQuestDrop(mob,DROPLIST[mob][0],1)
+  QUEST.addKillId(mob)
 
 QUEST.addKillId(SUCCUBUS_OF_SEDUCTION)
 QUEST.addKillId(GRIMA)
@@ -377,6 +370,3 @@ QUEST.addKillId(SANCHES)
 QUEST.addKillId(RAMSEBALIUS)
 QUEST.addKillId(BONAPARTERIUS)
 QUEST.addKillId(GREAT_DEMON_KING)
-
-for item in range(3678,3683):
-    STARTED.addQuestDrop(ALCHEMIST_MATILD,item,1)

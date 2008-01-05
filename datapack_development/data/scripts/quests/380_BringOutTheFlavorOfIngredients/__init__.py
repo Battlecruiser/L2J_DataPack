@@ -33,13 +33,15 @@ RECIPE_CHANCE = 55
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(5895,5898)
 
  def onEvent (self,event,st) :
    htmltext = event
    if event == "30069-4.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "30069-12.htm" :
      if st.getInt("cond") == 6 :
@@ -98,7 +100,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    if st.getInt("cond") == 1 :
       chance,item,max = DROPLIST[npc.getNpcId()]
@@ -120,16 +122,10 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(380,qn,"Bring Out The Flavor Of Ingredients")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(ROLLANT)
 
 QUEST.addTalkId(ROLLANT)
 
 for mob in DROPLIST.keys():
     QUEST.addKillId(mob)
-
-for item in range(5895,5898):
-    STARTED.addQuestDrop(ROLLANT,item,1)

@@ -8,7 +8,7 @@
 #                                                                   #
 #   Start NPC: Sir Eric Rodemai[30868]                              #
 #                                                                   #
-#   fixed and completed by chris_00 @katmai and DrLecter            #
+#   fixed and State.COMPLETED by chris_00 @katmai and DrLecter            #
 #                                                                   #
 #####################################################################
 import sys
@@ -65,7 +65,9 @@ RADAR={
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr) : JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr) :
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [THEMIS_SCALE, NUCLEUS_OF_HEKATON_PRIME, TIPHON_SHARD, GLAKIS_NUCLEUS, RAHHAS_FANG, NUCLEUS_OF_FLAMESTONE_GIANT]
 
  def onAdvEvent (self,event,npc,player) :
   st = player.getQuestState(qn)
@@ -75,7 +77,7 @@ class Quest (JQuest) :
   if event == "30868-0.htm" :
     if cond == 0 :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
   elif event.isdigit() :
     if int(event) in REWARDS_LIST.keys():
       st.set("raid",event)
@@ -106,9 +108,9 @@ class Quest (JQuest) :
      cond = st.getInt("cond")
      raid = st.getInt("raid")
      id = st.getState()
-     if id == CREATED and cond == 0 :
+     if id == State.CREATED and cond == 0 :
         htmltext =  "30868-0c.htm"
-     elif id == STARTED and cond == 1 and raid in REWARDS_LIST.keys() :
+     elif id == State.STARTED and cond == 1 and raid in REWARDS_LIST.keys() :
         npc,item=REWARDS_LIST[raid]
         count = st.getQuestItemsCount(item)
         if not count :
@@ -136,7 +138,7 @@ class Quest (JQuest) :
        st = pleader.getQuestState(qn)
   if not st : return
   option=st.getInt("raid")
-  if st.getInt("cond") == 1 and st.getState() == STARTED and option in REWARDS_LIST.keys():
+  if st.getInt("cond") == 1 and st.getState() == State.STARTED and option in REWARDS_LIST.keys():
    raid,item = REWARDS_LIST[option]
    npcId=npc.getNpcId()
    if npcId == raid and not st.getQuestItemsCount(item) :
@@ -147,13 +149,9 @@ class Quest (JQuest) :
 
 # Quest class and state definition
 QUEST       = Quest(508,qn,qd)
-CREATED     = State('Start',QUEST)
-STARTED     = State('Started',QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(SIR_ERIC_RODEMAI)
 QUEST.addTalkId(SIR_ERIC_RODEMAI)
 
 for npc,item in REWARDS_LIST.values():
     QUEST.addKillId(npc)
-    STARTED.addQuestDrop(npc,item,1)

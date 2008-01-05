@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # version 0.3 - fixed on 2005.11.08
 # version 0.4 by DrLecter
 
@@ -16,13 +16,15 @@ HYACINTH_CHARM2 = 1072
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [PLAGUE_DUST, HYACINTH_CHARM1, HYACINTH_CHARM2]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         if st.getQuestItemsCount(HYACINTH_CHARM1) == 0 :
            st.giveItems(HYACINTH_CHARM1,1)
@@ -38,8 +40,8 @@ class Quest (JQuest) :
    id = st.getState()
    cond = st.getInt("cond")
    count = st.getQuestItemsCount(PLAGUE_DUST)
-   if id == COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+   if id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif cond == 0 :
       if player.getRace().ordinal() != 1 :
          htmltext = "30154-00.htm"
@@ -65,7 +67,7 @@ class Quest (JQuest) :
       st.giveItems(ADENA,18250)
       htmltext = "30154-08.htm"
       st.unset("cond")
-      st.setState(COMPLETED)
+      st.setState(State.COMPLETED)
       st.playSound("ItemSound.quest_finish")
    return htmltext
 
@@ -73,7 +75,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return 
    st = player.getQuestState(qn)
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
    
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
@@ -92,19 +94,9 @@ class Quest (JQuest) :
    return
 
 QUEST     = Quest(159,qn,"Protect Headsprings")
-CREATED   = State('Start',     QUEST)
-STARTING  = State('Starting',  QUEST)
-STARTED   = State('Started',   QUEST)
-COMPLETED = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30154)
 
 QUEST.addTalkId(30154)
 
 QUEST.addKillId(27017)
-
-STARTED.addQuestDrop(27017,PLAGUE_DUST,1)
-STARTED.addQuestDrop(30154,HYACINTH_CHARM1,1)
-STARTED.addQuestDrop(30154,HYACINTH_CHARM2,1)

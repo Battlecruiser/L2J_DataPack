@@ -124,7 +124,9 @@ def promote(st) :
 # main code
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+    JQuest.__init__(self,id,name,descr)
+    self.questItemIds = range(3472,3499)+range(3811,3816)
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -143,7 +145,8 @@ class Quest (JQuest) :
     elif event == "30702-02.htm":
        st.set("cond","2")
     elif event == "30232-05.htm" :
-       st.setState(SOLO)
+       st.setState(State.STARTED)
+       st.set("part","SOLO")
        st.playSound("ItemSound.quest_accept")
        st.giveItems(COIN_DIAGRAM,1)
        st.set("cond","1")
@@ -296,17 +299,18 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != SORINT and id == CREATED : return htmltext
-   if npcId != SORINT and npcId != BERNARD and id == SOLO : return htmltext
+   if npcId != SORINT and id == State.CREATED : return htmltext
+   if npcId != SORINT and npcId != BERNARD and id == State.STARTED and st.get("part")== "SOLO" : return htmltext
    
    cond=st.getInt("cond")
    grade = st.getInt("grade")
    if npcId == SORINT :
-      if id == CREATED :
+      if id == State.CREATED :
          if player.getLevel() < 40 :
              htmltext = "30232-01.htm"
              st.exitQuest(1)
          else :
+             st.set("part","CREATED")
              htmltext = "30232-02.htm"
       else :
          if st.getQuestItemsCount(COIN_DIAGRAM) :
@@ -314,7 +318,8 @@ class Quest (JQuest) :
               st.takeItems(KALDIS_COIN,-1)
               st.takeItems(COIN_DIAGRAM,-1)
               st.giveItems(MEMBERSHIP_3,1)
-              st.setState(PARTY)
+              st.setState(State.STARTED)
+              st.set("part","PARTY")
               st.set("grade","3")
               st.set("cond","4")
               st.playSound("ItemSound.quest_fanfare_middle")
@@ -344,10 +349,10 @@ class Quest (JQuest) :
    if npcId in [HARITMATR, HARITSHA] :
       st = player.getQuestState(qn)
       if not st: return
-      if st.getState() != SOLO : return
+      if st.getState() != State.STARTED or not st.get("part") or st.get("part") != "SOLO" : return
    if not npcId in [HARITMATR, HARITSHA] :
       # for party-kill mobs of this quest, get a random player among those who await a drop
-      partyMember = self.getRandomPartyMemberState(player,PARTY)
+      partyMember = self.getRandomPartyMember(player,"part","PARTY")
       if not partyMember : return
       st = partyMember.getQuestState(qn) 
    
@@ -369,12 +374,6 @@ class Quest (JQuest) :
 
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
-CREATED     = State('Start',     QUEST)
-SOLO        = State('Solo',   QUEST)
-PARTY       = State('Party',   QUEST)
-COMPLETED   = State('Completed', QUEST)
-
-QUEST.setInitialState(CREATED)
 
 # Quest NPC starter initialization
 QUEST.addStartNpc(SORINT)
@@ -384,8 +383,3 @@ for npc in [SORINT, BERNARD, PAGE, HAGGER, STAN, RALFORD, FERRIS, COLLOB, PANO, 
 
 for mob in DROP_LIST.keys():
    QUEST.addKillId(mob)
-
-SOLO.addQuestDrop(SORINT,3811,1)
-SOLO.addQuestDrop(SORINT,3812,1)
-for item in range(3472,3499)+range(3813,3816):
-   PARTY.addQuestDrop(SORINT,item,1)

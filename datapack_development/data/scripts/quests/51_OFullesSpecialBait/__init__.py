@@ -20,13 +20,15 @@ FETTERED_SOUL = 20552
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [LOST_BAIT]
 
  def onEvent (self,event,st) :
    htmltext = event
    if event == "31572-03.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "31572-07.htm" and st.getQuestItemsCount(LOST_BAIT) == 100 :
      htmltext = "31572-06.htm"
@@ -43,15 +45,15 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
-   if id == COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+   if id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif cond == 0 :
       if player.getLevel() >= 36 :
          htmltext = "31572-01.htm"
       else:
          htmltext = "31572-02.htm"
          st.exitQuest(1)
-   elif id == STARTED :
+   elif id == State.STARTED :
       if st.getQuestItemsCount(LOST_BAIT) == 100 :
          htmltext = "31572-04.htm"
       else :
@@ -80,13 +82,8 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(51,qn,"O'Fulle's Special Bait")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(OFULLE)
 QUEST.addTalkId(OFULLE)
 
 QUEST.addKillId(FETTERED_SOUL)
-STARTED.addQuestDrop(FETTERED_SOUL,LOST_BAIT,1)

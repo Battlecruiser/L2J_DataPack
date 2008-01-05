@@ -94,7 +94,7 @@ start_error2    = html+sophia+"As I said before, our current mission is to drive
 start_start      = html+sophia+"Dear brother of the Black Lion.  Our current situation is as follows.  As I said before, our current mission is to drive out the evil spirits in this area.  However, since the main force of the mercenary troop has been dispatched to Gludio, our military force is suffering a shortage.  The only thing we are managing to do right now is to contain the evil spirits from attacking the village. <br>Fortunately, Captain Leopold of Gludin has sent many newly selected mercenary brothers.  So we can launch our attack on the stronghold of the evil spirits in earnest.  Brother, I would like you to join us in this fight.<br><a action=\"bypass -h Quest 333_BlackLionHunt start\">Tell him that you will join them in the fight.</a>"+htmlend
 start_explain    = html+sophia+"All right!  The time has come for the black lions that have been crouching until now, to bare their claws and start hunting!<br>Now, I will explain our combat situation.  We currently have four targets of attack.  They are the Execution Ground, the Partisan Hideaway, southern shoreline area, and the Cruma Marshlands.  Since we do not have enough combat power to hold a drawn-out war, we will dispatch a small group of soldiers as a strike force to carry out the strategy of hit and run to drive out the evil spirits.<br><a action=\"bypass -h Quest 333_BlackLionHunt start_parts\">Listen to the mission of each area.</a>"+htmlend
 start_parts      = html+sophia+"About which mission would you like to hear about?<br><br><a action=\"bypass -h Quest 333_BlackLionHunt p1_explanation\">Clean out the undead in the Execution Ground.</a><br><a action=\"bypass -h Quest 333_BlackLionHunt p2_explanation\">Drive out the ol mahum in the Partisan Hideaway.</a><br><a action=\"bypass -h Quest 333_BlackLionHunt p3_explanation\">Drive out the delu lizardman in the southern shore area.</a><br><a action=\"bypass -h Quest 333_BlackLionHunt p4_explanation\">Smash the marsh stakato in the Cruma Marshlands.</a>"+htmlend
-start_ask_again    = html+sophia+"Dear Black Lion brother, the war with the evil spirits has already started! Dont you think you should be active in this fight with us?<br><a action=\"bypass -h Quest 333_BlackLionHunt start_parts\">Listen to the explanation about the mission.</a>"+htmlend
+start_ask_again    = html+sophia+"Dear Black Lion brother, the war with the evil spirits has already State.STARTED! Dont you think you should be active in this fight with us?<br><a action=\"bypass -h Quest 333_BlackLionHunt start_parts\">Listen to the explanation about the mission.</a>"+htmlend
 start_continue    = html+sophia+"Hurry!  Rush to the battlefield, destroy your enemies and taste the sweetness of victory!"+htmlend
 #-Part 1
 p1_explanation    = html+sophia+"The Execution Ground is located in the eastern part of the village. It is an eerie place where people can hear the never ending cries of dead souls. Your mission is to clean out the undead that are infesting the place. According to a rumor, in order to pay for the spilled blood of innocent people who were killed during the farmers uprising, the undead came back to this world Well, all I know is that we need to carry out the given assignment. Still, I dont feel good about this for some reason. <br><a action=\"bypass -h Quest 333_BlackLionHunt p1_t\">Take on the mission.</a><br><a action=\"bypass -h Quest 333_BlackLionHunt start_chose_parts\">Listen to the explanation about another mission.</a>"+htmlend
@@ -202,7 +202,7 @@ class Quest (JQuest) :
     part = st.getInt("part")
     if event == "start" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
       #just to go with the official, until we have the option to make the take part invisible, like on officials.
       st.takeItems(BLACK_LION_MARK,1)
@@ -467,13 +467,9 @@ class Quest (JQuest) :
 
     npcId = npc.getNpcId()
     id = st.getState()
-    if npcId != NPC[0] and id != STARTED : return htmltext
+    if npcId != NPC[0] and id != State.STARTED : return htmltext
 
-    if id == CREATED :
-      st.setState(STARTING)
-      st.set("cond","0")
-      st.set("part","0")
-      st.set("text","0")
+    if id == State.CREATED :
       if npcId == NPC[0]:
         if st.getQuestItemsCount(BLACK_LION_MARK) :
           if player.getLevel() >24 :
@@ -559,7 +555,7 @@ class Quest (JQuest) :
   def onKill(self,npc,player,isPet):
     st = player.getQuestState(qn)
     if not st : return 
-    if st.getState() != STARTED : return 
+    if st.getState() != State.STARTED : return 
 
     npcId = npc.getNpcId()
     part,allowDrop,chancePartItem,chanceBox,partItem=DROPLIST[npcId]
@@ -582,12 +578,8 @@ class Quest (JQuest) :
 
 
 QUEST       = Quest(333,qn,"BlackLionHunt")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(NPC[0])
 
 for npcId in NPC:

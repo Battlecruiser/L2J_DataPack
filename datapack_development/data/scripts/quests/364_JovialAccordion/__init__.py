@@ -15,13 +15,15 @@ ECHO = 4421
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [KEY_1, KEY_2, BEER]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30959-02.htm" :
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
     elif event == "30957-02.htm" :
         st.set("cond","2")
@@ -45,9 +47,9 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30959 and id != STARTED : return htmltext
+   if npcId != 30959 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
      st.set("ok","0")
    cond=st.getInt("cond")
@@ -82,17 +84,8 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(364,qn,"Ask What You Need to Do")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30959)
 
 for npcId in [30959,30957,30060,30961,30960]:
   QUEST.addTalkId(npcId)
-
-STARTED.addQuestDrop(30959,KEY_1,1)
-STARTED.addQuestDrop(30959,KEY_2,1)
-STARTED.addQuestDrop(30960,BEER,1)

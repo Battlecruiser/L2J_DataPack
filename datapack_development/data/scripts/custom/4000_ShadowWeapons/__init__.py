@@ -43,9 +43,8 @@ class Quest (JQuest) :
     return htmltext
 
 QUEST       = Quest(4000,qn,"Custom")
-CREATED     = State('Start', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 
 for item in NPC:
    QUEST.addStartNpc(item)

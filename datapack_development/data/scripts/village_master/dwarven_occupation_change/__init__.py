@@ -118,9 +118,8 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST   = Quest(99999,qn,"village_master")
-CREATED   = State('Start',     QUEST)
 
-QUEST.setInitialState(CREATED)
+
 
 for npc in SCAV_NPCS :
     QUEST.addStartNpc(npc)

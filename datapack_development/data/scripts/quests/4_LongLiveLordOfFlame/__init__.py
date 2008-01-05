@@ -11,14 +11,16 @@ NPC_GIFTS = {30585:BEAR_FUR_CLOAK,30566:HONEY_KHANDAR,30562:BLOODY_AXE,30560:ANC
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(1541,1547)
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30578-03.htm" :
       st.set("cond","1")
       st.set("id","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
@@ -30,8 +32,8 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
-   if id == COMPLETED :
-     htmltext = "<html><body>This quest has already been completed.</body></html>"
+   if id == State.COMPLETED :
+     htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30578 :
      if cond == 0 :
        if player.getRace().ordinal() != 3 :
@@ -50,9 +52,9 @@ class Quest (JQuest) :
        for item in NPC_GIFTS.values():
            st.takeItems(item,-1)
        st.unset("cond")
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
        st.playSound("ItemSound.quest_finish")
-   elif npcId in NPC_GIFTS.keys() and cond == 1 and id == STARTED:
+   elif npcId in NPC_GIFTS.keys() and cond == 1 and id == State.STARTED:
      item=NPC_GIFTS[npcId]
      npc=str(npcId)
      if st.getQuestItemsCount(item) :
@@ -72,12 +74,7 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST     = Quest(4,qn,"Long Live the Paagrio Lord")
-CREATED   = State('Start',     QUEST)
-STARTING  = State('Starting',  QUEST)
-STARTED   = State('Started',   QUEST)
-COMPLETED = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30578)
 
 QUEST.addTalkId(30578)
@@ -89,6 +86,3 @@ QUEST.addTalkId(30566)
 QUEST.addTalkId(30578)
 QUEST.addTalkId(30585)
 QUEST.addTalkId(30587)
-
-for i in range(1541,1547) :
-   STARTED.addQuestDrop(30578,i,1)

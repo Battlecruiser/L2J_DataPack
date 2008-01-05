@@ -79,9 +79,8 @@ class Quest (JQuest) :
      return htmltext
 
 QUEST       = Quest(7000,qn,"Hero Items")
-CREATED     = State('Start', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 
 for i in MONUMENTS:
     QUEST.addStartNpc(i)

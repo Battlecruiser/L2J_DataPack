@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://forum.l2jdp.com for more details
 import sys
@@ -22,7 +22,10 @@ MARK_OF_FAITH = 1201
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [LEMONIELLS_COVENANT, LETTER_OF_ORDER2, BOOK_OF_PRAGA, BOOK_OF_VIVI, BOOK_OF_SIMLON, LETTER_OF_ORDER1, NECKLACE_OF_MOTHER,
+                PENDANT_OF_MOTHER, CERTIFICATE_OF_GALLINT, BOOK_OF_LEMONIELL]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -32,7 +35,7 @@ class Quest (JQuest) :
         st.set("id","0")
         if level >= 19 and classId == 0x0a and st.getQuestItemsCount(MARK_OF_FAITH) == 0 :
           st.set("cond","1")
-          st.setState(STARTED)
+          st.setState(State.STARTED)
           st.playSound("ItemSound.quest_accept")
           st.giveItems(LETTER_OF_ORDER1,1)
           htmltext = "30022-05.htm"
@@ -54,25 +57,17 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30022 and id != STARTED : return htmltext
+   if npcId != 30022 and id != State.STARTED : return htmltext
 
    npcId = npc.getNpcId()
    htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>" 
    id = st.getState()
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30022 and st.getInt("cond")==0 :
-        if st.getInt("cond")<15 :
-          if st.getQuestItemsCount(MARK_OF_FAITH) == 0 :
-              htmltext = "30022-01.htm"
-              return htmltext
-          else:
-              htmltext = "30022-04.htm"
-        else:
-            htmltext = "30022-04.htm"
+      if st.getQuestItemsCount(MARK_OF_FAITH) == 0 :
+          htmltext = "30022-01.htm"
+          return htmltext
+      else:
+          htmltext = "30022-04.htm"
    elif npcId == 30022 and st.getInt("cond") and st.getQuestItemsCount(LETTER_OF_ORDER2)==1 and st.getQuestItemsCount(LEMONIELLS_COVENANT)==0 :
         htmltext = "30022-07.htm"
    elif npcId == 30022 and st.getInt("cond") and st.getQuestItemsCount(LETTER_OF_ORDER2)==1 and st.getQuestItemsCount(LEMONIELLS_COVENANT)==1 :
@@ -81,7 +76,7 @@ class Quest (JQuest) :
         st.takeItems(LETTER_OF_ORDER2,1)
         st.giveItems(MARK_OF_FAITH,1)
         st.set("cond","0")
-        st.setState(COMPLETED)
+        st.setState(State.COMPLETED)
         st.playSound("ItemSound.quest_finish")
    elif npcId == 30022 and st.getInt("cond") and st.getQuestItemsCount(LETTER_OF_ORDER1)==1 :
         if st.getQuestItemsCount(BOOK_OF_VIVI) == 1 and st.getQuestItemsCount(BOOK_OF_SIMLON)>0 and st.getQuestItemsCount(BOOK_OF_PRAGA) == 1 :
@@ -149,7 +144,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId == 20026 :
@@ -165,13 +160,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(405,qn,"Path To Cleric")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30022)
 
 QUEST.addTalkId(30022)
@@ -184,15 +173,3 @@ QUEST.addTalkId(30408)
 
 QUEST.addKillId(20026)
 QUEST.addKillId(20029)
-
-STARTED.addQuestDrop(30408,LEMONIELLS_COVENANT,1)
-STARTED.addQuestDrop(30022,LETTER_OF_ORDER2,1)
-STARTED.addQuestDrop(30333,BOOK_OF_PRAGA,1)
-STARTED.addQuestDrop(30030,BOOK_OF_VIVI,1)
-STARTED.addQuestDrop(30253,BOOK_OF_SIMLON,1)
-STARTED.addQuestDrop(30022,LETTER_OF_ORDER1,1)
-STARTED.addQuestDrop(30333,NECKLACE_OF_MOTHER,1)
-STARTED.addQuestDrop(20026,PENDANT_OF_MOTHER,1)
-STARTED.addQuestDrop(20029,PENDANT_OF_MOTHER,1)
-STARTED.addQuestDrop(30017,CERTIFICATE_OF_GALLINT,1)
-STARTED.addQuestDrop(30408,BOOK_OF_LEMONIELL,1)

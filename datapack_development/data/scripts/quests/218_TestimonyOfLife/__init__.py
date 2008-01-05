@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # Quest: Testimony Of Life
 # Fixed by Artful (http://L2PLanet.ru Lineage2 C3 Server)
 import sys
@@ -44,14 +44,20 @@ TALINS_SPEAR_ID = 3026
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [CAMOMILE_CHARM_ID, CARDIENS_LETTER_ID, WATER_OF_LIFE_ID, MOONFLOWER_CHARM_ID, HIERARCHS_LETTER_ID, STARDUST_ID,
+                PURE_MITHRIL_CUP_ID, THALIAS_INSTRUCTIONS_ID, ISAELS_LETTER_ID, TEARS_OF_UNICORN_ID, GRAIL_DIAGRAM_ID, PUSHKINS_LIST_ID,
+                THALIAS_LETTER1_ID, ARKENIAS_CONTRACT_ID, ANDARIEL_SCRIPTURE_COPY_ID, ARKENIAS_INSTRUCTIONS_ID, ADONIUS_LIST_ID,
+                THALIAS_LETTER2_ID, TALINS_SPEAR_BLADE_ID, TALINS_SPEAR_SHAFT_ID, TALINS_RUBY_ID, TALINS_AQUAMARINE_ID, TALINS_AMETHYST_ID,
+                TALINS_PERIDOT_ID, ISAELS_INSTRUCTIONS_ID, GRAIL_OF_PURITY_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1":
         htmltext = "30460-04.htm"
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(CARDIENS_LETTER_ID,1)
     elif event == "30154_1" :
@@ -132,30 +138,21 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30460 and id != STARTED : return htmltext
+   if npcId != 30460 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30460 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
-        if st.getInt("cond") < 15 :
-          if player.getRace().ordinal() != 1 :
-            htmltext = "30460-01.htm"
-          else:
-            if player.getLevel() < 37 :
-              htmltext = "30460-02.htm"
-              st.exitQuest(1)
-            else:
-              htmltext = "30460-03.htm"
-              st.set("cond","1")
-              return htmltext
+      if player.getRace().ordinal() != 1 :
+        htmltext = "30460-01.htm"
+      else:
+        if player.getLevel() < 37 :
+          htmltext = "30460-02.htm"
+          st.exitQuest(1)
         else:
           htmltext = "30460-03.htm"
-          st.exitQuest(1)
+          st.set("cond","1")
+          return htmltext
    elif npcId == 30460 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30460 and st.getInt("cond")==1 and st.getQuestItemsCount(CARDIENS_LETTER_ID)==1 :
         htmltext = "30460-05.htm"
    elif npcId == 30460 and st.getInt("cond")==1 and st.getQuestItemsCount(MOONFLOWER_CHARM_ID)==1 :
@@ -170,7 +167,7 @@ class Quest (JQuest) :
           htmltext = "30460-07.htm"
           st.set("cond","0")
           st.set("onlyone","1")
-          st.setState(COMPLETED)
+          st.setState(State.COMPLETED)
           st.playSound("ItemSound.quest_finish")
    elif npcId == 30154 and st.getInt("cond")==1 and st.getQuestItemsCount(CARDIENS_LETTER_ID)==1 :
         htmltext = "30154-01.htm"
@@ -286,7 +283,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
    npcId = npc.getNpcId()
    if npcId == 20550 :
     st.set("id","0")
@@ -372,13 +369,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(218,qn,"Testimony of Life")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30460)
 
 QUEST.addTalkId(30460)
@@ -402,30 +393,3 @@ QUEST.addKillId(20084)
 QUEST.addKillId(20086)
 QUEST.addKillId(20087)
 QUEST.addKillId(20088)
-
-STARTED.addQuestDrop(30154,CAMOMILE_CHARM_ID,1)
-STARTED.addQuestDrop(30460,CARDIENS_LETTER_ID,1)
-STARTED.addQuestDrop(30371,WATER_OF_LIFE_ID,1)
-STARTED.addQuestDrop(30154,MOONFLOWER_CHARM_ID,1)
-STARTED.addQuestDrop(30154,HIERARCHS_LETTER_ID,1)
-STARTED.addQuestDrop(30419,STARDUST_ID,1)
-STARTED.addQuestDrop(30300,PURE_MITHRIL_CUP_ID,1)
-STARTED.addQuestDrop(30371,THALIAS_INSTRUCTIONS_ID,1)
-STARTED.addQuestDrop(30655,ISAELS_LETTER_ID,1)
-STARTED.addQuestDrop(27077,TEARS_OF_UNICORN_ID,1)
-STARTED.addQuestDrop(30371,GRAIL_DIAGRAM_ID,1)
-STARTED.addQuestDrop(30300,PUSHKINS_LIST_ID,1)
-STARTED.addQuestDrop(30371,THALIAS_LETTER1_ID,1)
-STARTED.addQuestDrop(30419,ARKENIAS_CONTRACT_ID,1)
-STARTED.addQuestDrop(30375,ANDARIEL_SCRIPTURE_COPY_ID,1)
-STARTED.addQuestDrop(30419,ARKENIAS_INSTRUCTIONS_ID,1)
-STARTED.addQuestDrop(30375,ADONIUS_LIST_ID,1)
-STARTED.addQuestDrop(30371,THALIAS_LETTER2_ID,1)
-STARTED.addQuestDrop(20581,TALINS_SPEAR_BLADE_ID,1)
-STARTED.addQuestDrop(20581,TALINS_SPEAR_SHAFT_ID,1)
-STARTED.addQuestDrop(20581,TALINS_RUBY_ID,1)
-STARTED.addQuestDrop(20581,TALINS_AQUAMARINE_ID,1)
-STARTED.addQuestDrop(20581,TALINS_AMETHYST_ID,1)
-STARTED.addQuestDrop(20581,TALINS_PERIDOT_ID,1)
-STARTED.addQuestDrop(30655,ISAELS_INSTRUCTIONS_ID,1)
-STARTED.addQuestDrop(30371,GRAIL_OF_PURITY_ID,1)

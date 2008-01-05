@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.3 by Censor for www.l2jdp.com 
+# Made by Mr. Have fun! Version 0.3 by Censor for www.l2jdp.com 
 import sys 
 from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State 
@@ -27,7 +27,9 @@ SPIRITSHOT_NO_GRADE_FOR_BEGINNERS_ID = 5790
 
 class Quest (JQuest) : 
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr) 
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [GEM_BOX1_ID, STAR_DIAMOND_ID, GOUPHS_CONTRACT_ID, REEPS_CONTRACT_ID, ELVEN_WINE_ID, BRONPS_CONTRACT_ID, AQUAMARINE_ID, CHRYSOBERYL_ID, COAL_PIECE_ID, BRONPS_DICE_ID, BRONPS_LETTER_ID, BERRY_TART_ID, BAT_DIAGRAM_ID]
 
  def onEvent (self,event,st) : 
     htmltext = event 
@@ -35,7 +37,7 @@ class Quest (JQuest) :
           htmltext = "30523-03.htm" 
           st.giveItems(GOUPHS_CONTRACT_ID,1) 
           st.set("cond","1") 
-          st.setState(STARTED) 
+          st.setState(State.STARTED) 
           st.playSound("ItemSound.quest_accept") 
     elif event == "30555_1" : 
           htmltext = "30555-02.htm" 
@@ -56,10 +58,10 @@ class Quest (JQuest) :
    if not st : return htmltext 
 
    id = st.getState() 
-   if id == CREATED : 
+   if id == State.CREATED : 
      st.set("cond","0") 
-   if npcId == 30523 and id == COMPLETED : 
-      htmltext = "<html><body>This quest has already been completed.</body></html>" 
+   if npcId == 30523 and id == State.COMPLETED : 
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>" 
    elif npcId == 30523 and st.getInt("cond")==0 : 
           if player.getRace().ordinal() != 4 : 
             htmltext = "30523-00.htm" 
@@ -93,9 +95,9 @@ class Quest (JQuest) :
                 st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))   # Echo crystals
             st.takeItems(STAR_DIAMOND_ID,-1) 
             st.set("cond","0") 
-            st.setState(COMPLETED) 
+            st.setState(State.COMPLETED) 
             st.playSound("ItemSound.quest_finish") 
-   elif id == STARTED : 
+   elif id == State.STARTED : 
        if npcId == 30516 and st.getInt("cond")==1 and st.getQuestItemsCount(GOUPHS_CONTRACT_ID) and st.getQuestItemsCount(REEPS_CONTRACT_ID)==0 : 
               htmltext = "30516-01.htm" 
               st.giveItems(REEPS_CONTRACT_ID,1) 
@@ -167,7 +169,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet): 
    st = player.getQuestState(qn) 
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
 
    npcId = npc.getNpcId() 
    if npcId == 20323 : 
@@ -219,13 +221,7 @@ class Quest (JQuest) :
    return 
 
 QUEST       = Quest(108,qn,"Jumble Tumble Diamond Fuss") 
-CREATED     = State('Start', QUEST) 
-STARTING     = State('Starting', QUEST) 
-STARTED     = State('Started', QUEST) 
-COMPLETED   = State('Completed', QUEST) 
 
-
-QUEST.setInitialState(CREATED) 
 QUEST.addStartNpc(30523) 
 
 QUEST.addTalkId(30523) 
@@ -241,17 +237,3 @@ QUEST.addTalkId(30555)
 QUEST.addKillId(20323) 
 QUEST.addKillId(20324) 
 QUEST.addKillId(20480) 
-
-STARTED.addQuestDrop(30526,GEM_BOX1_ID,1) 
-STARTED.addQuestDrop(20480,STAR_DIAMOND_ID,1) 
-STARTED.addQuestDrop(30523,GOUPHS_CONTRACT_ID,1) 
-STARTED.addQuestDrop(30516,REEPS_CONTRACT_ID,1) 
-STARTED.addQuestDrop(30555,ELVEN_WINE_ID,1) 
-STARTED.addQuestDrop(30526,BRONPS_CONTRACT_ID,1) 
-STARTED.addQuestDrop(20323,AQUAMARINE_ID,1) 
-STARTED.addQuestDrop(20323,CHRYSOBERYL_ID,1) 
-STARTED.addQuestDrop(30523,COAL_PIECE_ID,1) 
-STARTED.addQuestDrop(30529,BRONPS_DICE_ID,1) 
-STARTED.addQuestDrop(30526,BRONPS_LETTER_ID,1) 
-STARTED.addQuestDrop(30521,BERRY_TART_ID,1) 
-STARTED.addQuestDrop(30522,BAT_DIAGRAM_ID,1)

@@ -73,7 +73,7 @@ def suscribe_members(st) :
       insertion.setInt(1, char_id)
       insertion.setString(2, qn)
       insertion.setString(3, "<state>")
-      insertion.setString(4, "Progress")
+      insertion.setString(4, "Started")
       insertion.executeUpdate()
       insertion.close();
     except :
@@ -175,13 +175,13 @@ def giveItem(item,maxcount,st):
       st.playSound("ItemSound.quest_itemget")
   return
 
-def exit503(completed,st):
-    if completed:
+def exit503(State.COMPLETED,st):
+    if State.COMPLETED:
       st.giveItems(Proof_Aspiration,1)
       st.addExpAndSp(0,250000)
       for var in STATS:
         st.unset(var)
-      st.setState(COMPLETED)
+      st.setState(State.COMPLETED)
     else:
       st.exitQuest(1)
     st.takeItems(Scepter_Judgement,-1)
@@ -198,6 +198,7 @@ class Quest (JQuest) :
 
   def __init__(self,id,name,descr):
     JQuest.__init__(self,id,name,descr)
+    self.questItemIds = range(3839,3848)+range(3866,3870)
     self.ImpGraveKepperStat = 1
 
   def onEvent (self,event,st) :
@@ -207,7 +208,7 @@ class Quest (JQuest) :
       st.giveItems(G_Let_Martien,1)
       for var in STATS:
         st.set(var,"1")
-      st.setState(PROGRESS)
+      st.setState(State.STARTED)
     elif event == "30760-12.htm" :
       st.giveItems(G_Let_Balthazar,1)
       st.set("cond","4")
@@ -229,7 +230,7 @@ class Quest (JQuest) :
         members = st.getPlayer().getClan().getOnlineMembers("")[0]
         for i in members:
           pst = QuestManager.getInstance().getQuest(qn).newQuestState(st.getPlayer().getClan().getClanMember(int(i)).getPlayerInstance())
-          pst.setState(PROGRESS)
+          pst.setState(State.STARTED)
       except:
         return htmltext
 # Events Kurtz
@@ -305,11 +306,11 @@ class Quest (JQuest) :
 
     npcId = npc.getNpcId()
     id = st.getState()
-    if npcId != NPC[3] and id == CREATED : return htmltext
+    if npcId != NPC[3] and id == State.CREATED : return htmltext
 
     Martien,Athrea,Kalis,Gustaf,Fritz,Lutz,Kurtz,Kusto,Balthazar,Rodemai,Coffer,Cleo = 30645,30758,30759,30760,30761,30762,30763,30512,30764,30868,30765,30766
     isLeader = player.isClanLeader()
-    if id == CREATED and npcId == Gustaf:
+    if id == State.CREATED and npcId == Gustaf:
       for var in STATS:                                  # adds all the  vars for initialisation
         st.set(var,"0")
       if player.getClan():                            # has Clan
@@ -331,9 +332,9 @@ class Quest (JQuest) :
         st.exitQuest(1)
       return htmltext
     elif player.getClan() and player.getClan().getLevel() >= 5:        # player has level 5 clan already
-      return "<html><body>This quest has already been completed.</body></html>"
-    elif id == COMPLETED:                                  # player has proof, and has finished quest as leader
-      return "<html><body>This quest has already been completed.</body></html>"
+      return "<html><body>This quest has already been State.COMPLETED.</body></html>"
+    elif id == State.COMPLETED:                                  # player has proof, and has finished quest as leader
+      return "<html><body>This quest has already been State.COMPLETED.</body></html>"
     else:
       ######## Leader Area ######
       if isLeader:
@@ -512,7 +513,7 @@ class Quest (JQuest) :
              if player.isInsideRadius(leader, 1600, 1, 0) :
                leader_st = leader.getQuestState(qn)
     if leader_st :
-      if leader_st.getState() != PROGRESS : return
+      if leader_st.getState() != State.STARTED : return
       npcId=npc.getNpcId()
       condition,maxcount,chance,itemList = DROPLIST[npcId]
       random = leader_st.getRandom(100)
@@ -539,11 +540,7 @@ class Quest (JQuest) :
     return
 
 QUEST     = Quest(503,qn,"Pursuit of Clan Ambition")
-CREATED   = State('Start', QUEST)
-PROGRESS  = State('Progress', QUEST)
-COMPLETED = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(NPC[3])
 
 for npcId in NPC:
@@ -553,6 +550,3 @@ for mobId in DROPLIST.keys():
   QUEST.addKillId(mobId)
 
 QUEST.addAttackId(27181)
-
-for i in range(3839,3848)+range(3866,3870):
-    PROGRESS.addQuestDrop(27181,i,1)

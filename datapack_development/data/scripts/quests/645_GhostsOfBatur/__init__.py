@@ -27,6 +27,9 @@ REWARDS={
 MOBS = [ 22007,22009,22010,22011,22012,22013,22014,22015,22016 ]
 
 class Quest (JQuest) :
+ def __init__(self,id,name,descr):
+    JQuest.__init__(self,id,name,descr)
+    self.questItemIds = [GRAVE_GOODS]
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -36,7 +39,7 @@ class Quest (JQuest) :
          st.exitQuest(1)
       else :
          st.set("cond","1")
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.playSound("ItemSound.quest_accept")
    elif event in REWARDS.keys() :
       if st.getQuestItemsCount(GRAVE_GOODS) == 180 :
@@ -89,16 +92,10 @@ class Quest (JQuest) :
          st.giveItems(GRAVE_GOODS,int(numItems))       
   return
 
-
 QUEST       = Quest(645, qn, "Ghosts of Batur")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(KARUDA)
 QUEST.addTalkId(KARUDA) 
 
 for i in MOBS :
   QUEST.addKillId(i)
-
-STARTED.addQuestDrop(KARUDA,GRAVE_GOODS,1)

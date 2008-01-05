@@ -60,14 +60,17 @@ MOBS = range(20647,20651)
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [DICT1, MST_BK]
 
  def onEvent (self,event,st) :
     id = st.getState() 
     htmltext = event
     if event == "yes" :
        htmltext = starting
-       st.setState(STARTING)
+       st.setState(State.STARTED)
+       st.set("progress","PART1")
        st.set("cond","1")
        st.set("awaitBook","1")
        st.giveItems(DICT1,1)
@@ -97,11 +100,11 @@ class Quest (JQuest) :
               st.giveItems(item,1)
     elif event == "myst" :
        if st.getQuestItemsCount(MST_BK) :
-          if id == STARTING :
-             st.setState(STARTED)
+          if id == State.STARTED and st.get("progress") == "PART1" :
+             st.set("progress","PART2")
              st.set("cond","2")
              htmltext = go_part2
-          elif id == STARTED :
+          elif id == State.STARTED and st.get("progress") == "PART2":
              htmltext = gogogo_2
        else :
            htmltext = no_part2
@@ -115,19 +118,19 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    if npcId == HR_SOBLING:
-      if id == CREATED :
+      if id == State.CREATED :
          st.set("cond","0")
          htmltext = start
          if player.getLevel() < 51 :
             st.exitQuest(1)
             htmltext = error_1
-      elif id in [ STARTING,STARTED ] :
+      elif id = State.STARTED :
          if st.getQuestItemsCount(ANC_SCROLL) == 0 :
             htmltext = checkout
          else :
             htmltext = checkout2
    elif npcId == WF_CLIFF :
-      if id == STARTED and st.getQuestItemsCount(MST_BK) :
+      if id == State.STARTED and st.getQuestItemsCount(MST_BK) and st.get("progress") == "PART2" :
             htmltext = ok_part2
             st.takeItems(MST_BK,1)
             st.giveItems(DICT2,1)
@@ -146,16 +149,16 @@ class Quest (JQuest) :
            st.unset("awaitBook")
            st.playSound("ItemSound.quest_middle")
      # In addition, drops go to one party member among those who are either in
-     # STARTING or in STARTED state
-     partyMember1 = self.getRandomPartyMemberState(player, STARTING)
-     partyMember2 = self.getRandomPartyMemberState(player, STARTED)
+     # progress PART1 or in PART2
+     partyMember1 = self.getRandomPartyMemberState(player, "progress", "PART1")
+     partyMember2 = self.getRandomPartyMemberState(player, "progress", "PART2")
      partyMember = partyMember1  # initialize
      # if there exist no party members for either state, do nothing
      if not partyMember1 and not partyMember2 : return
-     # if there exist only party members for STARTED, use the one we got from STARTED
+     # if there exist only party members for PART2, use the one we got from PART2
      elif not partyMember1 :
          partyMember =  partyMember2
-     # if there exist only party members for STARTING, use the one we got from STARTING
+     # if there exist only party members for PART1, use the one we got from PART1
      elif not partyMember2 :
          partyMember =  partyMember1
      # if there exist party members from both states, choose one randomly
@@ -174,13 +177,6 @@ class Quest (JQuest) :
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
 
-CREATED     = State('Start',     QUEST)
-STARTING    = State('Starting',  QUEST)
-STARTED     = State('Started',   QUEST)
-COMPLETED   = State('Completed', QUEST)
-
-QUEST.setInitialState(CREATED)
-
 # Quest NPC starter initialization
 QUEST.addStartNpc(HR_SOBLING)
 # Quest initialization
@@ -190,6 +186,3 @@ QUEST.addTalkId(WF_CLIFF)
 
 for i in MOBS :
   QUEST.addKillId(i)
-  
-STARTED.addQuestDrop(HR_SOBLING,DICT1,1)
-STARTED.addQuestDrop(HR_SOBLING,MST_BK,1)

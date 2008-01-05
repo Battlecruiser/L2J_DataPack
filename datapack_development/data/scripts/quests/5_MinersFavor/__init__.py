@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -26,7 +26,9 @@ NECKLACE = 906
  
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [MINING_BOOTS, MINERS_PICK, BOOMBOOM_POWDER, REDSTONE_BEER, BOLTERS_LIST, BOLTERS_SMELLY_SOCKS]
 
  def onEvent (self,event,st) :
    htmltext = event 
@@ -35,7 +37,7 @@ class Quest (JQuest) :
      st.giveItems(BOLTERS_SMELLY_SOCKS,1) 
      st.set("cond","1") 
      st.set("id","1") 
-     st.setState(STARTED) 
+     st.setState(State.STARTED) 
      st.playSound("ItemSound.quest_accept") 
    elif event == "30526-02.htm" : 
      st.takeItems(BOLTERS_SMELLY_SOCKS,-1) 
@@ -56,18 +58,12 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
  
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
- 
    cond    = st.getInt("cond") 
    onlyone = st.getInt("onlyone") 
  
    if npcId == BOLTER and cond == 0 : 
      if onlyone == 1 : 
-       htmltext = "<html><body>This quest has already been completed.</body></html>" 
+       htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>" 
      elif player.getLevel() >= 2 : 
        htmltext = "30554-02.htm" 
      else: 
@@ -85,9 +81,9 @@ class Quest (JQuest) :
      st.giveItems(NECKLACE,1) 
      st.set("cond","0") 
      st.set("onlyone","1") 
-     st.setState(COMPLETED) 
+     st.setState(State.COMPLETED) 
      st.playSound("ItemSound.quest_finish")
-   elif id == STARTED :  
+   elif id == State.STARTED :  
        if npcId == SHARI and cond == 1 and st.getQuestItemsCount(BOLTERS_LIST) : 
          if st.getQuestItemsCount(BOOMBOOM_POWDER) == 0 : 
            htmltext = "30517-01.htm" 
@@ -121,12 +117,7 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST     = Quest(5,qn,"Miner's Favor") 
-CREATED   = State('Start',     QUEST) 
-STARTING  = State('Starting',  QUEST) 
-STARTED   = State('Started',   QUEST) 
-COMPLETED = State('Completed', QUEST) 
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(BOLTER) 
 
 QUEST.addTalkId(BOLTER) 
@@ -136,10 +127,3 @@ QUEST.addTalkId(GARITA)
 QUEST.addTalkId(REED) 
 QUEST.addTalkId(BRUNON) 
 QUEST.addTalkId(BOLTER) 
-
-STARTED.addQuestDrop(BOLTER,MINING_BOOTS,1) 
-STARTED.addQuestDrop(BOLTER,MINERS_PICK,1) 
-STARTED.addQuestDrop(BOLTER,BOOMBOOM_POWDER,1) 
-STARTED.addQuestDrop(BOLTER,REDSTONE_BEER,1) 
-STARTED.addQuestDrop(BOLTER,BOLTERS_LIST,1) 
-STARTED.addQuestDrop(BOLTER,BOLTERS_SMELLY_SOCKS,1) 

@@ -57,13 +57,15 @@ MOBSspecial = {
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [SWEET_FLUID]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "02.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "07.htm" :
       st.exitQuest(1)
@@ -86,7 +88,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet) :
-   partyMember = self.getRandomPartyMemberState(player, STARTED)
+   partyMember = self.getRandomPartyMemberState(player, State.STARTED)
    if not partyMember : return 
    st = partyMember.getQuestState(qn)
    npcId = npc.getNpcId()
@@ -116,10 +118,6 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(426,qn,"Quest for Fishing Shot")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-
-QUEST.setInitialState(CREATED)
 
 for npc in range(31562,31580)+[31616,31696,31697]:
     QUEST.addStartNpc(npc)
@@ -137,5 +135,3 @@ for mob in MOBS5.keys():
     QUEST.addKillId(mob)
 for mob in MOBSspecial.keys():
     QUEST.addKillId(mob)
-
-STARTED.addQuestDrop(20005,SWEET_FLUID,1)

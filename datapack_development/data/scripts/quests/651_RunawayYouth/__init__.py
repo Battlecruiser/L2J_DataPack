@@ -24,7 +24,7 @@ class Quest (JQuest) :
     if event == "32014-04.htm" :
       if st.getQuestItemsCount(SOE):
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         st.takeItems(SOE,1)
         htmltext = "32014-03.htm"
@@ -45,7 +45,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    cond=st.getInt("cond")
-   if npcId == IVAN and id == CREATED:
+   if npcId == IVAN and id == State.CREATED:
       if player.getLevel()>=26 :
          htmltext = "32014-02.htm"
       else:
@@ -60,10 +60,8 @@ class Quest (JQuest) :
 
 
 QUEST       = Quest(651,qn,"Runaway Youth")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(IVAN)
 
 QUEST.addTalkId(IVAN)

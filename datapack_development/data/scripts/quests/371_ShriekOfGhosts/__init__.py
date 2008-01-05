@@ -29,7 +29,9 @@ MOBS = {
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = PORC.keys()
  
  def onEvent (self,event,st) :
      htmltext = event
@@ -37,7 +39,7 @@ class Quest (JQuest) :
      porcelain = st.getQuestItemsCount(PORCELAIN)
      if event == "30867-03.htm" :
        st.set("cond","1")
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
      elif event == "TRADE" :
        if urn == 0 :
@@ -79,15 +81,15 @@ class Quest (JQuest) :
      cond = st.getInt("cond")
      urn = st.getQuestItemsCount(URN)
      porcelain = st.getQuestItemsCount(PORCELAIN)
-     if id == COMPLETED :
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
-     elif id == CREATED and npcId == REVA :
+     if id == State.COMPLETED :
+       htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+     elif id == State.CREATED and npcId == REVA :
        if player.getLevel() < 59 :
          htmltext = "30867-01.htm"
          st.exitQuest(1)
        else :
          htmltext = "30867-02.htm"
-     elif id == STARTED :
+     elif id == State.STARTED :
        if npcId == REVA :
          if not porcelain :
            htmltext = "30867-04.htm"
@@ -98,7 +100,7 @@ class Quest (JQuest) :
      return htmltext
     
  def onKill(self,npc,player,isPet) :
-     partyMember = self.getRandomPartyMemberState(player, STARTED)
+     partyMember = self.getRandomPartyMemberState(player, State.STARTED)
      if not partyMember: return
      st = partyMember.getQuestState(qn)
      if not st : return
@@ -115,11 +117,7 @@ class Quest (JQuest) :
      return
 
 QUEST       = Quest(371, qn, "Shriek Of Ghosts")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(REVA)
 
 QUEST.addTalkId(REVA)
@@ -127,6 +125,3 @@ QUEST.addTalkId(PATRIN)
 
 for mob in MOBS.keys() :
     QUEST.addKillId(mob)
-
-for rew in PORC.keys() :
-  STARTED.addQuestDrop(PATRIN,rew,1)

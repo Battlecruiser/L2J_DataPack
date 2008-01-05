@@ -17,13 +17,15 @@ TREASURE_CHEST = 5873
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [TREASURE_CHEST]
 
  def onEvent (self,event,st) :
    htmltext = event
    if event == "30095-1.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "30095-5.htm" :
      count = st.getQuestItemsCount(TREASURE_CHEST)
@@ -60,7 +62,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet):
-   partyMember = self.getRandomPartyMemberState(player,STARTED)
+   partyMember = self.getRandomPartyMemberState(player,State.STARTED)
    if not partyMember : return
    st = partyMember.getQuestState(qn)
    
@@ -71,13 +73,8 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(365,qn,"Devil's Legacy")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(RANDOLF)
 QUEST.addTalkId(RANDOLF)
 for mob in MOBS:
     QUEST.addKillId(mob)
-
-STARTED.addQuestDrop(RANDOLF,TREASURE_CHEST,1)

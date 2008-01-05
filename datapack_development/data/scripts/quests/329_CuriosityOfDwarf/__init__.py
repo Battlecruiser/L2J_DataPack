@@ -12,13 +12,15 @@ ADENA = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [BROKEN_HEARTSTONE, GOLEM_HEARTSTONE]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30437-03.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "30437-06.htm" :
       st.exitQuest(1)
@@ -32,7 +34,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if st.getInt("cond")==0 :
       if player.getLevel() >= 33 :
@@ -55,7 +57,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    n = st.getRandom(100)
@@ -76,17 +78,9 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(329,qn,"Curiosity Of Dwarf")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
-
-QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(30437)
 QUEST.addTalkId(30437)
 
 QUEST.addKillId(20083)
 QUEST.addKillId(20085)
-
-STARTED.addQuestDrop(20085,BROKEN_HEARTSTONE,1)
-STARTED.addQuestDrop(20085,GOLEM_HEARTSTONE,1)

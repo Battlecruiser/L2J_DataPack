@@ -36,7 +36,7 @@ class Quest (JQuest) :
                 st.takeItems(SmallGlassBox,-1)
                 st.giveItems(PlatedLeatherGloves,1)
                 st.set("cond","0")
-                st.setState(COMPLETED)
+                st.setState(State.COMPLETED)
                 st.playSound("ItemSound.quest_finish")
             else :
                 htmltext ="30909-03.htm"
@@ -48,18 +48,18 @@ class Quest (JQuest) :
         if not st : return htmltext
         npcId = npc.getNpcId()
         id = st.getState()
-        if id==CREATED :
-            st.setState(STARTED)
+        if id==State.CREATED :
+            st.setState(State.STARTED)
             st.set("cond","0")
         cond=st.getInt("cond")
         id = st.getState()
         if npcId ==Willie :
-            if cond==0 and id==STARTED :
+            if cond==0 and id==State.STARTED :
                 PlayerLevel = player.getLevel()
                 if PlayerLevel >= 48 :
                     WilliesSpecialBait = player.getQuestState("52_WilliesSpecialBait")
                     if WilliesSpecialBait:
-                        if WilliesSpecialBait.getState().getName() == 'Completed':
+                        if WilliesSpecialBait.getState().getName() == 'State.COMPLETED':
                             htmltext="31574-01.htm"
                         else :
                             htmltext="31574-02.htm"
@@ -70,8 +70,8 @@ class Quest (JQuest) :
                 else :
                    htmltext="31574-02.htm"
                    st.exitQuest(1) 
-            elif cond==0 and id==COMPLETED :
-                htmltext ="<html><body>This quest has already been completed.</body></html>"
+            elif cond==0 and id==State.COMPLETED :
+                htmltext ="<html><body>This quest has already been State.COMPLETED.</body></html>"
             elif cond==1 :
                 htmltext="31574-05.htm"
                 if st.getQuestItemsCount(SmallPurpleTreasureChest)==0 :
@@ -84,11 +84,8 @@ class Quest (JQuest) :
         return htmltext
 
 QUEST       = Quest(29,qn,"Chest Caught With A Bait Of Earth")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(Willie)
 QUEST.addTalkId(Willie)
 QUEST.addTalkId(Anabel)

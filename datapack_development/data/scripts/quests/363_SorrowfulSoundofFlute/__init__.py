@@ -9,13 +9,15 @@ qn = "363_SorrowfulSoundofFlute"
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [4319]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         htmltext = "30956_2.htm"
     elif event == "5" :
@@ -33,9 +35,9 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30956 and id != STARTED : return htmltext
+   if npcId != 30956 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if npcId == 30956 and st.getInt("cond") == 0 :
         htmltext = "30956_1.htm"
@@ -64,16 +66,9 @@ class Quest (JQuest) :
 
 
 QUEST       = Quest(363,qn,"Sorrowful Sounds of Flute")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30956)
 QUEST.addTalkId(30956)
 
 QUEST.addTalkId(30595)
 QUEST.addTalkId(30959)
-
-STARTED.addQuestDrop(30959,4319,1)

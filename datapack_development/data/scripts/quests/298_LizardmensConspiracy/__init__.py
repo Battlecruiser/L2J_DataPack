@@ -12,14 +12,16 @@ SHINING_RED_GEM = 7184
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [SHINING_RED_GEM, SHINING_GEM]
 
  def onEvent (self,event,st) :
    htmltext = event
    if event == "30333-1a.htm" :
      st.set("cond","1")
      st.giveItems(PATROLS_REPORT,1)
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.set("awaitGem","1")
      st.set("awaitRedGem","1")
      st.playSound("ItemSound.quest_accept")
@@ -44,7 +46,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    cond = st.getInt("cond")
    if npcId == 30333 and cond == 0  :
@@ -52,7 +54,7 @@ class Quest (JQuest) :
        htmltext = "30333-0a.htm"
      else:
        st.exitQuest(1)
-   elif npcId == 30344 and id == STARTED:
+   elif npcId == 30344 and id == State.STARTED:
      if cond == 1 :
        htmltext = "30344-0.htm"
      elif cond == 3 :
@@ -92,10 +94,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(298,qn,"Lizardmen's Conspiracy")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30333)
 
 QUEST.addTalkId(30333)
@@ -104,6 +103,3 @@ QUEST.addTalkId(30344)
 
 for i in range(20922,20928) :
     QUEST.addKillId(i)
-
-STARTED.addQuestDrop(20926,SHINING_RED_GEM,1)
-STARTED.addQuestDrop(20924,SHINING_GEM,1)

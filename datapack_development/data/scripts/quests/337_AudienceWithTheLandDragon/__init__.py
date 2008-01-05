@@ -51,7 +51,9 @@ def checkCond(st) :
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range((3852,3865)+[3890]
 
  def onAdvEvent (self,event,npc,player):
      if player :
@@ -61,7 +63,7 @@ class Quest (JQuest) :
          if event == "30753-02.htm" :
              st.exitQuest(1)
          elif event == "30753-06.htm" :
-             st.setState(STARTED)
+             st.setState(State.STARTED)
              st.set("cond","1")
              st.set("all","0")
              st.set("orven","0")
@@ -107,7 +109,7 @@ class Quest (JQuest) :
     id = st.getState()
     level = player.getLevel()
     if npcId == GABRIELLE :
-         if id == CREATED :
+         if id == State.CREATED :
              if level>=50 :
                  htmltext = "30753-03.htm"
              else :
@@ -345,10 +347,6 @@ class Quest (JQuest) :
     return
 
 QUEST       = Quest(337,qn,"Audience With The Land Dragon")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-
-QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(GABRIELLE)
 
@@ -361,6 +359,3 @@ for npc in NPCS :
 
 for mob in MOBS :
     QUEST.addKillId(mob)
-
-for i in range(3852,3865)+[3890] :
-    STARTED.addQuestDrop(GABRIELLE,i,1)

@@ -20,13 +20,15 @@ SINGING_WIND = 21026
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ESSENCE_OF_WIND]
 
  def onEvent (self,event,st) :
    htmltext = event
    if event == "31570-03.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "31570-07.htm" and st.getQuestItemsCount(ESSENCE_OF_WIND) == 100 :
      htmltext = "31570-06.htm"
@@ -34,7 +36,7 @@ class Quest (JQuest) :
      st.takeItems(ESSENCE_OF_WIND,-1)
      st.playSound("ItemSound.quest_finish")
      st.unset("cond")
-     st.setState(COMPLETED)
+     st.setState(State.COMPLETED)
    return htmltext
 
  def onTalk (Self,npc,player):
@@ -44,15 +46,15 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
-   if id == COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+   if id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif cond == 0 :
       if player.getLevel() >= 27 :
          htmltext = "31570-01.htm"
       else:
          htmltext = "31570-02.htm"
          st.exitQuest(1)
-   elif id == STARTED :
+   elif id == State.STARTED :
       if st.getQuestItemsCount(ESSENCE_OF_WIND) == 100 :
          htmltext = "31570-04.htm"
       else :
@@ -81,13 +83,8 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(50,qn,"Lanosco's Special Bait")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(LANOSCO)
 QUEST.addTalkId(LANOSCO)
 
 QUEST.addKillId(SINGING_WIND)
-STARTED.addQuestDrop(SINGING_WIND,ESSENCE_OF_WIND,1)

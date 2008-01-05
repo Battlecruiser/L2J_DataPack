@@ -25,14 +25,16 @@ WATCHERS_EYE2 = 2630
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [SCROLL_OF_SHYSLASSY, LETTER_OF_KASH, WATCHERS_EYE1, BROKEN_KEY, WATCHERS_EYE2]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
       htmltext = "30644-05.htm"
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "30644_1" :
           htmltext = "30644-04.htm"
@@ -97,9 +99,9 @@ class Quest (JQuest) :
    if not st : return htmltext
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30644 and id != STARTED : return htmltext
+   if npcId != 30644 and id != State.STARTED : return htmltext
    cond=st.getInt("cond")
-   if id == CREATED :
+   if id == State.CREATED :
      if npcId == 30644 :
         if player.getClassId().ordinal() in [0x01,0x13,0x20,0x2d,0x2f] :
            if player.getLevel() >= 35 :
@@ -110,8 +112,8 @@ class Quest (JQuest) :
         else :
            htmltext = "30644-02.htm"
            st.exitQuest(1)
-   elif npcId == 30644 and id == COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+   elif npcId == 30644 and id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30644 and cond == 1 :
       htmltext = "30644-06.htm"
    elif npcId == 30644 and cond == 2 and st.getQuestItemsCount(SCROLL_OF_SHYSLASSY) == 1 :
@@ -149,7 +151,7 @@ class Quest (JQuest) :
       htmltext = "30646-07.htm"
       st.takeItems(BROKEN_KEY,1)
       st.giveItems(MARK_OF_CHALLENGER,1)
-      st.setState(COMPLETED)
+      st.setState(State.COMPLETED)
       st.playSound("ItemSound.quest_finish")
       st.set("cond","0")
    elif npcId == 30535 and cond == 7 :
@@ -170,7 +172,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
    cond = st.getInt("cond")
    npcId = npc.getNpcId()
    if npcId == 27110 and cond == 1 and not st.getQuestItemsCount(BROKEN_KEY) :
@@ -194,13 +196,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(211,qn,"Trial Of Challenger")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30644)
 
 QUEST.addTalkId(30535)
@@ -213,9 +209,3 @@ QUEST.addKillId(27110)
 QUEST.addKillId(27112)
 QUEST.addKillId(27113)
 QUEST.addKillId(27114)
-
-STARTED.addQuestDrop(30647,SCROLL_OF_SHYSLASSY,1)
-STARTED.addQuestDrop(30644,LETTER_OF_KASH,1)
-STARTED.addQuestDrop(27112,WATCHERS_EYE1,1)
-STARTED.addQuestDrop(27110,BROKEN_KEY,1)
-STARTED.addQuestDrop(27113,WATCHERS_EYE2,1)

@@ -19,7 +19,9 @@ default="<html><body>You are either not carrying out your quest or don't meet th
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [SORIUS_LETTER1, EMERALD_PIECE, TOPAZ_PIECE, KLUTO_MEMO, KLUTO_BOX]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -40,7 +42,7 @@ class Quest (JQuest) :
                 htmltext = "30327-04.htm"
     elif event == "30327-06.htm" :
        st.set("cond","1")
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
     elif event == "30317-02.htm" :
        if st.getInt("cond") == 3 :
@@ -61,9 +63,9 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30327 and id != STARTED : return htmltext
+   if npcId != 30327 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
      cond=0
    else :
@@ -86,7 +88,7 @@ class Quest (JQuest) :
         elif cond == 6 :
             st.takeItems(KLUTO_BOX,-1)
             st.set("cond","0")
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.playSound("ItemSound.quest_finish")
             if st.getQuestItemsCount(ELVEN_KNIGHT_BROOCH) == 0 :
               st.giveItems(ELVEN_KNIGHT_BROOCH,1)
@@ -114,7 +116,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId != 20782 :
@@ -136,13 +138,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(406,qn,"Path To Elven Knight")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30327)
 
 QUEST.addTalkId(30327)
@@ -157,9 +153,3 @@ QUEST.addKillId(20051)
 QUEST.addKillId(20054)
 QUEST.addKillId(20060)
 QUEST.addKillId(20782)
-
-STARTED.addQuestDrop(30327,SORIUS_LETTER1,1)
-STARTED.addQuestDrop(20782,EMERALD_PIECE,1)
-STARTED.addQuestDrop(20054,TOPAZ_PIECE,1)
-STARTED.addQuestDrop(30317,KLUTO_MEMO,1)
-STARTED.addQuestDrop(30317,KLUTO_BOX,1)

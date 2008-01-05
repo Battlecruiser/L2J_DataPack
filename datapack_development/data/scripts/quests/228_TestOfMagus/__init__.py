@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://forum.l2jdp.com for more details
 import sys
@@ -56,14 +56,16 @@ DROPLIST={
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(2841,2864)
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
         htmltext = "30629-04.htm"
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(RUKALS_LETTER,1)
     elif event == "30629_1" :
@@ -111,16 +113,10 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30629 and id != STARTED : return htmltext
+   if npcId != 30629 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30629 :
      if st.getInt("cond")==0 and st.getInt("onlyone")==0 :
-        if st.getInt("cond") < 15 :
           if player.getClassId().getId() in [ 0x0b, 0x1a, 0x27] :
             if player.getLevel() < 39 :
               htmltext = "30629-02.htm"
@@ -129,11 +125,8 @@ class Quest (JQuest) :
           else:
             htmltext = "30629-01.htm"
             st.exitQuest(1)
-        else:
-          htmltext = "30629-01.htm"
-          st.exitQuest(1)
      elif st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
      elif st.getInt("cond")==1:
         htmltext = "30629-05.htm"
      elif st.getInt("cond")==2:
@@ -155,7 +148,7 @@ class Quest (JQuest) :
             htmltext = "30629-12.htm"
             st.set("cond","0")
             st.set("onlyone","1")
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.playSound("ItemSound.quest_finish")
         else:
           htmltext = "30629-11.htm"
@@ -247,7 +240,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    condition,maxcount,chance,item,part = DROPLIST[npcId]
@@ -270,13 +263,7 @@ class Quest (JQuest) :
 
 
 QUEST       = Quest(228,qn,"Test Of Magus")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30629)
 
 QUEST.addTalkId(30629)
@@ -286,6 +273,3 @@ for npcId in [30391,30409,30411,30412,30413,30612]:
   
 for mobId in [20145,20157,20176,20230,20231,20232,20234,27095,27096,27097,27098,20553,20564,20565,20566]:
    QUEST.addKillId(mobId)
-
-for item in range(2841,2864):
-   STARTED.addQuestDrop(30629,item,1)

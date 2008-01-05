@@ -74,7 +74,9 @@ def rewards(st,npcId):
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(4269,4274)
 
  def onEvent (self,event,st) :
      htmltext = event
@@ -83,7 +85,7 @@ class Quest (JQuest) :
      level = st.getPlayer().getLevel()
      if event == "30754-04.htm" :
         if level>=48 and cond == 0 :
-          st.setState(STARTED)
+          st.setState(State.STARTED)
           st.set("cond","1")
           st.playSound("ItemSound.quest_accept")
         else :
@@ -130,12 +132,12 @@ class Quest (JQuest) :
 
      npcId = npc.getNpcId()
      id = st.getState()
-     if npcId != GILMORE and id != STARTED : return htmltext
+     if npcId != GILMORE and id != State.STARTED : return htmltext
      
      level = player.getLevel()
      cond = st.getInt("cond")
      amount = st.getQuestItemsCount(ARTICLES_DEAD_HEROES)
-     if id == CREATED : 
+     if id == State.CREATED : 
         if level>=48 :
            htmltext = "30754-02.htm"
         else :
@@ -179,7 +181,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
      st = player.getQuestState(qn)
      if not st : return 
-     if st.getState() != STARTED : return 
+     if st.getState() != State.STARTED : return 
    
      npcId = npc.getNpcId()
      chance = (CHANCE+(npcId-20234)*2)*Config.RATE_DROP_QUEST
@@ -190,10 +192,7 @@ class Quest (JQuest) :
      return
 
 QUEST       = Quest(344,qn,"1000 Years, the End of Lamentation")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(GILMORE)
 
 QUEST.addTalkId(GILMORE)
@@ -205,6 +204,3 @@ QUEST.addTalkId(KAIEN)
 
 for mob in range(20236,20241):
     QUEST.addKillId(mob)
-
-for item in range(4269,4274):
-    STARTED.addQuestDrop(GILMORE,item,1)

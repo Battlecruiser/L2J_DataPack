@@ -85,7 +85,9 @@ def giveNormal(st,itemid):
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+   JQuest.__init__(self,id,name,descr)
+   self.questItemIds = range(2864,2867)+range(2868,2879)+range(3293,3307)+[3028]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -93,7 +95,7 @@ class Quest (JQuest) :
        htmltext = "30702-04.htm"
        st.set("cond","1")
        st.set("step","1")
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
        st.giveItems(BERNARDS_INTRODUCTION,1)
     elif event == "30626_1" :
@@ -128,11 +130,11 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30702 and id != STARTED : return htmltext
+   if npcId != 30702 and id != State.STARTED : return htmltext
 
    step = st.getInt("step")
    onlyone = st.getInt("onlyone")
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
      st.set("step","0")
@@ -146,8 +148,8 @@ class Quest (JQuest) :
         else:
           htmltext = "30702-02.htm"
           st.exitQuest(1)
-   elif id == COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+   elif id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30702 and step==1 and st.getQuestItemsCount(BERNARDS_INTRODUCTION) :
       htmltext = "30702-05.htm"
    elif npcId == 30626 and step==1 and st.getQuestItemsCount(BERNARDS_INTRODUCTION) :
@@ -179,7 +181,7 @@ class Quest (JQuest) :
       st.addExpAndSp(54726,20250)
       st.unset("step")
       st.set("cond","0")
-      st.setState(COMPLETED)
+      st.setState(State.COMPLETED)
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
    elif npcId == 30653 and step==2 and st.getQuestItemsCount(LETTER_OF_HAMIL1) :
@@ -218,7 +220,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    step, dropcondition, maxcount, chance, itemid = DROPLIST[npcId]
@@ -264,12 +266,7 @@ class Quest (JQuest) :
 
   
 QUEST       = Quest(224,qn,"Test Of Sagittarius")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30702)
 
 QUEST.addTalkId(30702)
@@ -279,6 +276,3 @@ for npcId in [30514,30626,30653,30717]:
 
 for mobId in [20230,20232,20233,20234,20269,20270,27090,20551,20563,20577,20578,20579,20580,20581,20582,20079,20080,20081,20082,20084,20086,20089,20090]:
     QUEST.addKillId(mobId)
-
-for item in range(2864,2867)+range(2868,2879)+range(3293,3307)+[3028]:
-    STARTED.addQuestDrop(30514,item,1)

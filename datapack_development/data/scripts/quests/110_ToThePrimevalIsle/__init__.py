@@ -25,14 +25,14 @@ class Quest (JQuest) :
       htmltext = "1.htm"
       st.set("cond","1")
       st.giveItems(ANCIENT_BOOK,1)
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     if event == "2" and st.getQuestItemsCount(ANCIENT_BOOK):
       htmltext="3.htm"
       st.playSound("ItemSound.quest_finish")
       st.giveItems(ADENA_ID,169380)
       st.takeItems(ANCIENT_BOOK,-1)
-      st.setState(COMPLETED)
+      st.setState(State.COMPLETED)
       st.exitQuest(0)
     return htmltext
 
@@ -43,13 +43,13 @@ class Quest (JQuest) :
     npcId=npc.getNpcId()
     htmltext="<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>" 
     id = st.getState()
-    if id == CREATED :
+    if id == State.CREATED :
       if st.getPlayer().getLevel() >= 75 :
         htmltext = "0.htm"
       else:
         st.exitQuest(1)
         htmltext = "<html><body>This quest can only be taken by characters that have a minimum level of 75. Return when you are more experienced.</body></html>"
-    elif id == STARTED:
+    elif id == State.STARTED:
       cond = int(st.get("cond"))
       if npcId == MARQUEZ :
         if cond == 1 :
@@ -57,17 +57,14 @@ class Quest (JQuest) :
             htmltext = "1a.htm"
           else :
             htmltext = "2.htm"
-    elif id == COMPLETED:
+    elif id == State.COMPLETED:
       st.exitQuest(0)
-      htmltext = "<html><body>This quest have already been completed.</body></html>"
+      htmltext = "<html><body>This quest have already been State.COMPLETED.</body></html>"
     return htmltext    
 
 QUEST=Quest(110,qn,"To The Primeval Isle")
-CREATED=State('Start', QUEST)
-STARTED=State('Started', QUEST)
-COMPLETED=State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(ANTON)
 QUEST.addTalkId (ANTON)
 

@@ -343,7 +343,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "30109-75.htm"
           
-   st.setState(COMPLETED)
+   st.setState(State.COMPLETED)
    st.exitQuest(1)
    return htmltext
 
@@ -358,53 +358,48 @@ class Quest (JQuest) :
    # Humans and Elfs got accepted
    if npcId == GRAND_MASTER_HANNAVALT or GRAND_MASTER_SIRIA or GRAND_MASTER_BLACKBIRD or GRAND_MASTER_SEDRICK or GRAND_MASTER_MARCUS and Race in [Race.elf, Race.human]:
      if ClassId in [ClassId.elvenKnight]:
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        return "30109-01.htm"
      elif ClassId in [ClassId.knight]:
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        return "30109-08.htm"
      elif ClassId in [ClassId.rogue]:
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        return "30109-15.htm"
      elif ClassId in [ClassId.elvenScout]:
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        return "30109-22.htm"
      elif ClassId in [ClassId.warrior]:
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        return "30109-29.htm"
      elif ClassId in [ClassId.elvenFighter, ClassId.fighter]:
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
        st.exitQuest(1)
        return "30109-76.htm"     
      elif ClassId in [ClassId.templeKnight, ClassId.plainsWalker, ClassId.swordSinger, ClassId.silverRanger]:
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
        st.exitQuest(1)
        return "30109-77.htm"
      elif ClassId in [ClassId.warlord, ClassId.paladin, ClassId.treasureHunter]:
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
        st.exitQuest(1)
        return "30109-77.htm"
      elif ClassId in [ClassId.gladiator, ClassId.darkAvenger, ClassId.hawkeye]:
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
        st.exitQuest(1)
        return "30109-77.htm"
      else:
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
        st.exitQuest(1)
        return "30109-78.htm"
 
    # All other Races must be out
    else:
-     st.setState(COMPLETED)
+     st.setState(State.COMPLETED)
      st.exitQuest(1)
      return "30109-78.htm"
 
 QUEST     = Quest(30109,qn,"village_master")
-CREATED   = State('Start',     QUEST)
-STARTED   = State('Started',   QUEST)
-COMPLETED = State('Completed', QUEST)
-
-QUEST.setInitialState(CREATED)
 
 QUEST.addStartNpc(30109)
 QUEST.addStartNpc(30187)

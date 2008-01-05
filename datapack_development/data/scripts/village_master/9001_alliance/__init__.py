@@ -40,15 +40,12 @@ class Quest (JQuest) :
    Clan = st.getPlayer().getClan();
    if npcId in NPC:
      st.set("cond","0")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      return "9001-01.htm"
 
 QUEST      = Quest(9001,qn,"village_master")
-CREATED    = State('Start',     QUEST)
-STARTED    = State('Started',   QUEST)
-COMPLETED  = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 
 for item in NPC:
 ### Quest NPC starter initialization

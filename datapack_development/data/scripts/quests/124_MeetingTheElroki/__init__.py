@@ -25,7 +25,7 @@ class Quest (JQuest) :
      htmltext = event
 
      if event == "32113-02.htm" :
-       st.setState(STARTED) 
+       st.setState(State.STARTED) 
      if event == "32113-03.htm" :
        if cond == 0 :
          st.set("cond","1")
@@ -44,7 +44,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
      if event == "32117-02.htm" :
        if cond == 4 :
-         st.setState(MIDDLE)
+         st.set("progress","MIDDLE")
      if event == "32117-03.htm" :
        if cond == 4 :
          st.set("cond","5")
@@ -65,10 +65,10 @@ class Quest (JQuest) :
      id = st.getState()
      cond = st.getInt("cond")
 
-     if id == CREATED :
+     if id == State.CREATED :
          st.set("cond","0")
-     elif id == COMPLETED :
-         htmltext = "<html><body>This quest has already been completed.</body></html>"
+     elif id == State.COMPLETED :
+         htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
      if npcId == MARQUEZ:
          if cond == 0 :
              if player.getLevel() < 75 :
@@ -89,14 +89,15 @@ class Quest (JQuest) :
             htmltext = "32115-05.htm"
             st.takeItems(M_EGG,1)
             st.giveItems(57,71318)
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.set("cond","0")
             st.playSound("ItemSound.quest_finish")
      elif npcId == KARAKAWEI :
          if cond == 4 :
              htmltext = "32117-01.htm"
-             if id == MIDDLE :
-                 htmltext = "32117-02.htm"
+             if st.get("progress") : #check if the variable has been set
+                 if st.get("progress")== MIDDLE: #if set, check its value...
+                     htmltext = "32117-02.htm"
          elif cond == 5 :
             htmltext = "32117-04.htm"
      elif npcId == MANTARASA and cond == 5 :
@@ -105,12 +106,9 @@ class Quest (JQuest) :
 
 
 QUEST       = Quest(124,qn,"Meeting The Elroki")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 MIDDLE      = State('Middle', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(MARQUEZ)
 QUEST.addTalkId(MARQUEZ)
 QUEST.addTalkId(MUSHIKA)

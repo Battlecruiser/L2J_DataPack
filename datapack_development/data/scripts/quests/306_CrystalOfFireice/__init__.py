@@ -21,13 +21,15 @@ DROPLIST={
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [FLAME_SHARD, ICE_SHARD]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30004-04.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "30004-08.htm" :
       st.exitQuest(1)
@@ -41,7 +43,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if st.getInt("cond")==0 :
      if player.getLevel() >= 17 :
@@ -67,7 +69,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    chance,item=DROPLIST[npcId]
@@ -77,12 +79,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(306,qn,"Crystal Of Fireice")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30004)
 
 QUEST.addTalkId(30004)
@@ -93,6 +90,3 @@ QUEST.addKillId(20112)
 QUEST.addKillId(20113)
 QUEST.addKillId(20114)
 QUEST.addKillId(20115)
-
-STARTED.addQuestDrop(20109,FLAME_SHARD,1)
-STARTED.addQuestDrop(20110,ICE_SHARD,1)

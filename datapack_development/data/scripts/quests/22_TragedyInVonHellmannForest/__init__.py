@@ -34,6 +34,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(7141,7148)
      self.priest = ""
      self.tifaren = 0
      self.soul = 0
@@ -46,7 +47,7 @@ class Quest (JQuest) :
    if event == "31334-02.htm" :
        st2 = player.getQuestState("21_HiddenTruth")
        if st2 :
-           if not (st2.getState().getName() == 'Completed' and player.getLevel() >= 63) :
+           if not (st2.getState().getName() == 'State.COMPLETED' and player.getLevel() >= 63) :
                htmltext = "31334-03.htm"
                st.exitQuest(1)
        else :
@@ -55,7 +56,7 @@ class Quest (JQuest) :
    elif event == "31334-04.htm" :
        st.set("cond","1")
        st.set("id","1")
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
    elif event == "31334-06.htm" :
        if st.getQuestItemsCount(CROSS) == 0 :
@@ -162,13 +163,13 @@ class Quest (JQuest) :
    ex = st.getInt("ex")
    cond = st.getInt("cond") 
    onlyone = st.getInt("onlyone")
-   if state == COMPLETED :
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
+   if state == State.COMPLETED :
+       htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == INNOCENTIN :
-       if state == CREATED :
+       if state == State.CREATED :
            st2 = player.getQuestState("21_HiddenTruth")
            if st2 :
-               if st2.getState().getName() == 'Completed' :
+               if st2.getState().getName() == 'State.COMPLETED' :
                    htmltext = "31328-00.htm"
        if id < 5 :
            if st.getQuestItemsCount(CROSS) == 0 :
@@ -189,14 +190,14 @@ class Quest (JQuest) :
            htmltext = "31328-14.htm"
        elif id == 14 :
            st.playSound("ItemSound.quest_finish")
-           st.setState(COMPLETED)
+           st.setState(State.COMPLETED)
            st.unset("id")
            if player.getLevel() < 64 :
                htmltext = "31328-23.htm"
            else :
                htmltext = "31328-22.htm"
    elif npcId == TIFAREN :
-       if state == CREATED :
+       if state == State.CREATED :
            htmltext = "31334-01.htm"
        elif id == 1 :
            htmltext = "31334-05.htm"
@@ -293,19 +294,12 @@ class Quest (JQuest) :
    return
 
 QUEST     = Quest(22,qn,"Tragedy In Von Hellmann Forest") 
-CREATED   = State('Start',     QUEST) 
-STARTED   = State('Started',   QUEST) 
-COMPLETED = State('Completed', QUEST) 
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(INNOCENTIN)
 QUEST.addStartNpc(TIFAREN)
 
 for npcid in NPCS :
     QUEST.addTalkId(npcid)
-
-for item in range(7141,7148) :
-    STARTED.addQuestDrop(INNOCENTIN,item,1)
 
 QUEST.addAttackId(SOUL_OF_WELL)
 

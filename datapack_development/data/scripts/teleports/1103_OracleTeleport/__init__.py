@@ -1,4 +1,4 @@
-# Originally created by Ham Wong on 2007.03.07 #
+# Originally Created by Ham Wong on 2007.03.07 #
 import sys
 
 from net.sf.l2j.gameserver.model.actor.instance import L2PcInstance
@@ -55,20 +55,20 @@ class Quest (JQuest) :
     # Dawn Locations #
     ##################
     if npcId in TOWN_DAWN: 
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.set("id",str(TELEPORTERS[npcId]))
        st.getPlayer().teleToLocation(-80157,111344,-4901)
     ##################
     # Dusk Locations #
     ##################
     elif npcId in TOWN_DUSK: 
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.set("id",str(TELEPORTERS[npcId]))
        st.getPlayer().teleToLocation(-81261,86531,-5157)
     #######################
     # Oracle of Dusk/Dawn #
     #######################
-    elif npcId in TEMPLE_PRIEST and st.getState() == STARTED :
+    elif npcId in TEMPLE_PRIEST and st.getState() == State.STARTED :
        return_id = st.getInt("id") - 1
        st.getPlayer().teleToLocation(RETURN_LOCS[return_id][0],RETURN_LOCS[return_id][1],RETURN_LOCS[return_id][2])
        st.exitQuest(1)
@@ -76,10 +76,10 @@ class Quest (JQuest) :
    
         
 QUEST      = Quest(1103, qn, "Teleports")
-CREATED    = State('Start', QUEST)
-STARTED    = State('Started', QUEST)
+State.CREATED    = State('Start', QUEST)
+State.STARTED    = State('State.STARTED', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 
 for i in TELEPORTERS :
     QUEST.addStartNpc(i)

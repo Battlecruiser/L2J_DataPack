@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://forum.l2jdp.com for more details
 import sys
@@ -23,7 +23,9 @@ TATARUS_LETTER = 1623
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(1632, 1635) + range(1636,1642) + [1622, 1623]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -50,7 +52,7 @@ class Quest (JQuest) :
     elif event == "1" :
         st.set("id","0")
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         htmltext = "30527-06.htm"
         st.giveItems(SILVERYS_RING,1)
@@ -78,7 +80,7 @@ class Quest (JQuest) :
           st.takeItems(SECRET_BOX2,1)
           st.giveItems(PASS_FINAL,1)
           st.set("cond","0")
-          st.setState(COMPLETED)
+          st.setState(State.COMPLETED)
           st.playSound("ItemSound.quest_finish")
         else :
           htmltext = "30317-08.htm"
@@ -92,7 +94,7 @@ class Quest (JQuest) :
           st.takeItems(SECRET_BOX2,1)
           st.giveItems(PASS_FINAL,1)
           st.set("cond","0")
-          st.setState(COMPLETED)
+          st.setState(State.COMPLETED)
           st.playSound("ItemSound.quest_finish")
         else :
           htmltext = "30317-08.htm"
@@ -120,13 +122,8 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30527 and id != STARTED : return htmltext
+   if npcId != 30527 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30527 and st.getInt("cond")==0 :
           htmltext = "30527-01.htm"
    elif npcId == 30527 and st.getInt("cond") and st.getQuestItemsCount(SILVERYS_RING)==1 and (st.getQuestItemsCount(RATMAN_TOOTH)+st.getQuestItemsCount(BIG_RATMAN_TOOTH))<12 :
@@ -159,7 +156,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
    npcId = npc.getNpcId()
    if npcId == 20389 :
         st.set("id","0")
@@ -193,12 +190,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(418,qn,"Path To Artisan")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30527)
 
 QUEST.addTalkId(30527)
@@ -209,16 +201,3 @@ QUEST.addTalkId(30317)
 QUEST.addKillId(20017)
 QUEST.addKillId(20389)
 QUEST.addKillId(20390)
-
-STARTED.addQuestDrop(30527,SILVERYS_RING,1)
-STARTED.addQuestDrop(20389,RATMAN_TOOTH,1)
-STARTED.addQuestDrop(20390,BIG_RATMAN_TOOTH,1)
-STARTED.addQuestDrop(30527,PASS_1ST,1)
-STARTED.addQuestDrop(30298,PASS_2ND,1)
-STARTED.addQuestDrop(30298,SECRET_BOX2,1)
-STARTED.addQuestDrop(30527,PASS_1ST,1)
-STARTED.addQuestDrop(30298,PASS_2ND,1)
-STARTED.addQuestDrop(30298,SECRET_BOX2,1)
-STARTED.addQuestDrop(30317,KLUTOS_LETTER,1)
-STARTED.addQuestDrop(20017,SECRET_BOX1,1)
-STARTED.addQuestDrop(30298,FOOTPRINT,1)

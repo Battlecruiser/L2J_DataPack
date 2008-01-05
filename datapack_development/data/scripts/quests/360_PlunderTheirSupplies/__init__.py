@@ -20,13 +20,15 @@ RECIPE_OF_SUPPLY = 5870
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [RECIPE_OF_SUPPLY, SUPPLY_ITEM, SUSPICIOUS_DOCUMENT]
 
  def onEvent (self,event,st) :
    htmltext = event
    if event == "30873-2.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "30873-6.htm" :
      st.takeItems(SUPPLY_ITEM,-1)
@@ -65,7 +67,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    st.giveItems(SUPPLY_ITEM,1)  
    if st.getRandom(10) == 1 :        # % chance is custom
@@ -78,16 +80,9 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(360,qn,"Plunder Their Supplies")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(COLEMAN)
 QUEST.addTalkId(COLEMAN)
 
 QUEST.addKillId(TAIK_SEEKER)
 QUEST.addKillId(TAIK_LEADER)
-
-STARTED.addQuestDrop(COLEMAN,RECIPE_OF_SUPPLY,1)
-STARTED.addQuestDrop(COLEMAN,SUPPLY_ITEM,1)
-STARTED.addQuestDrop(COLEMAN,SUSPICIOUS_DOCUMENT,1)

@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.3 updated by Sh1ning for www.l2jdp.com 
+# Made by Mr. Have fun! Version 0.3 updated by Sh1ning for www.l2jdp.com 
 import sys
 from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State 
@@ -27,14 +27,16 @@ SOULSHOT_NO_GRADE_ID = 1835
 
 class Quest (JQuest) : 
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr) 
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [KENDNELLS_ORDER1_ID, KENDNELLS_ORDER2_ID, KENDNELLS_ORDER3_ID, KENDNELLS_ORDER4_ID, KENDNELLS_ORDER5_ID, KENDNELLS_ORDER6_ID, KENDNELLS_ORDER7_ID, KENDNELLS_ORDER8_ID]
 
  def onEvent (self,event,st) : 
     htmltext = event 
     if event == "1" : 
       st.set("id","0") 
       st.set("cond","1") 
-      st.setState(STARTED) 
+      st.setState(State.STARTED) 
       st.playSound("ItemSound.quest_accept") 
       htmltext = "30218-03.htm" 
       if st.getQuestItemsCount(KENDNELLS_ORDER1_ID)+st.getQuestItemsCount(KENDNELLS_ORDER2_ID)+st.getQuestItemsCount(KENDNELLS_ORDER3_ID)+st.getQuestItemsCount(KENDNELLS_ORDER4_ID) == 0 : 
@@ -58,27 +60,18 @@ class Quest (JQuest) :
    if not st : return htmltext 
     
    id = st.getState() 
-   if id == CREATED : 
-     st.setState(STARTING) 
-     st.set("cond","0") 
-     st.set("onlyone","0") 
-     st.set("id","0") 
    if npcId == 30218 and st.getInt("cond")==0 and st.getInt("onlyone")==0 : 
-      if st.getInt("cond") < 15 : 
-        if player.getLevel() >= 10 and player.getRace().ordinal() == 1 : 
-          htmltext = "30218-02.htm" 
-          return htmltext 
-        elif player.getRace().ordinal() != 1 : 
-          htmltext = "30218-00.htm" 
-          st.exitQuest(1) 
-        else: 
-          htmltext = "30218-10.htm" 
-          st.exitQuest(1) 
+      if player.getLevel() >= 10 and player.getRace().ordinal() == 1 : 
+        htmltext = "30218-02.htm" 
+        return htmltext 
+      elif player.getRace().ordinal() != 1 : 
+        htmltext = "30218-00.htm" 
+        st.exitQuest(1) 
       else: 
         htmltext = "30218-10.htm" 
         st.exitQuest(1) 
    elif npcId == 30218 and st.getInt("cond")==0 and st.getInt("onlyone")==1 : 
-      htmltext = "<html><body>This quest has already been completed.</body></html>" 
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>" 
    elif npcId == 30218 and st.getInt("cond") : 
       if st.getQuestItemsCount(KABOO_CHIEF_TORC1_ID) : 
         htmltext = "30218-06.htm" 
@@ -128,7 +121,7 @@ class Quest (JQuest) :
             st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))     # Lesser Healing Potions 
             for item in range(4412,4417) : 
                 st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))   # Echo crystals 
-            st.setState(COMPLETED) 
+            st.setState(State.COMPLETED) 
             st.playSound("ItemSound.quest_finish") 
             st.set("onlyone","1") 
             st.set("cond","0") 
@@ -139,7 +132,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet): 
    st = player.getQuestState(qn) 
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    npcId = npc.getNpcId() 
    if npcId == 27059 : 
     st.set("id","0") 
@@ -192,13 +185,7 @@ class Quest (JQuest) :
    return 
 
 QUEST       = Quest(105,qn,"Skirmish With Orcs") 
-CREATED     = State('Start', QUEST) 
-STARTING     = State('Starting', QUEST) 
-STARTED     = State('Started', QUEST) 
-COMPLETED   = State('Completed', QUEST) 
 
-
-QUEST.setInitialState(CREATED) 
 QUEST.addStartNpc(30218) 
 
 QUEST.addTalkId(30218) 
@@ -211,12 +198,3 @@ QUEST.addKillId(27064)
 QUEST.addKillId(27065) 
 QUEST.addKillId(27067) 
 QUEST.addKillId(27068) 
-
-STARTED.addQuestDrop(30218,KENDNELLS_ORDER1_ID,1) 
-STARTED.addQuestDrop(30218,KENDNELLS_ORDER2_ID,1) 
-STARTED.addQuestDrop(30218,KENDNELLS_ORDER3_ID,1) 
-STARTED.addQuestDrop(30218,KENDNELLS_ORDER4_ID,1) 
-STARTED.addQuestDrop(30218,KENDNELLS_ORDER5_ID,1) 
-STARTED.addQuestDrop(30218,KENDNELLS_ORDER6_ID,1) 
-STARTED.addQuestDrop(30218,KENDNELLS_ORDER7_ID,1) 
-STARTED.addQuestDrop(30218,KENDNELLS_ORDER8_ID,1) 

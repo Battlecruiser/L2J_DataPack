@@ -16,14 +16,16 @@ CHANCE = 55
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [HAIR]
 
  def onEvent (self,event,st) :
    htmltext = event
    cond = st.getInt("cond")
    if event == "30111-2.htm" and cond == 0 :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "30111-6.htm" :
      st.exitQuest(1)
@@ -55,7 +57,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet):
-   partyMember = self.getRandomPartyMemberState(player,STARTED)
+   partyMember = self.getRandomPartyMemberState(player,State.STARTED)
    if not partyMember : return
    st = partyMember.getQuestState(qn)
    
@@ -65,15 +67,10 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(366,qn,"Silver Haired Shaman")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(DIETER)
 
 QUEST.addTalkId(DIETER)
 
 for mob in range(20986,20989) :
     QUEST.addKillId(mob)
-
-STARTED.addQuestDrop(DIETER,HAIR,1)

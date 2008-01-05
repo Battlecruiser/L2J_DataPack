@@ -58,9 +58,8 @@ class Quest (JQuest) :
 
 
 QUEST       = Quest(QuestId,qn,QuestDesc)
-CREATED     = State('Start',     QUEST)
 
-QUEST.setInitialState(CREATED)
+
 
 for npc in NPCS:
    QUEST.addStartNpc(npc)

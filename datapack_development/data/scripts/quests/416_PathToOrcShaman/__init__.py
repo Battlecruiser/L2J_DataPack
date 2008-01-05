@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://forum.l2jdp.com for more details
 import sys
@@ -30,7 +30,9 @@ MASK_OF_MEDIUM = 1631
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(1616,1631)
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -38,7 +40,7 @@ class Quest (JQuest) :
     if event == "1" :
         st.set("id","0")
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         htmltext = "30585-06.htm"
         st.giveItems(FIRE_CHARM,1)
@@ -76,7 +78,7 @@ class Quest (JQuest) :
           st.giveItems(MASK_OF_MEDIUM,1)
           st.addExpAndSp(3200,2600)
           st.set("cond","0")
-          st.setState(COMPLETED)
+          st.setState(State.COMPLETED)
           st.playSound("ItemSound.quest_finish")
     elif event == "30593_1" :
           htmltext = "30593-02.htm"
@@ -95,18 +97,10 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30585 and id != STARTED : return htmltext
+   if npcId != 30585 and id != State.STARTED : return htmltext
 
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30585 and st.getInt("cond")==0 :
-        if st.getInt("cond")<15 :
-          htmltext = "30585-01.htm"
-        else:
-          htmltext = "30585-01.htm"
+        htmltext = "30585-01.htm"
    elif npcId == 30585 and st.getInt("cond") and st.getQuestItemsCount(FIRE_CHARM)==1 and ((st.getQuestItemsCount(KASHA_BEAR_PELT)+st.getQuestItemsCount(KASHA_BSPIDER_HUSK)+st.getQuestItemsCount(FIERY_EGG1))<3) :
         htmltext = "30585-07.htm"
    elif npcId == 30585 and st.getInt("cond") and st.getQuestItemsCount(FIRE_CHARM)==1 and ((st.getQuestItemsCount(KASHA_BEAR_PELT)+st.getQuestItemsCount(KASHA_BSPIDER_HUSK)+st.getQuestItemsCount(FIERY_EGG1))>=3) :
@@ -167,7 +161,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    if npcId == 20479 :
@@ -267,13 +261,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(416,qn,"Path To Orc Shaman")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30585)
 
 QUEST.addTalkId(30585)
@@ -289,20 +277,3 @@ QUEST.addKillId(20043)
 QUEST.addKillId(20478)
 QUEST.addKillId(20479)
 QUEST.addKillId(27056)
-
-STARTED.addQuestDrop(30592,TOTEM_SPIRIT_CLAW,1)
-STARTED.addQuestDrop(30585,FIRE_CHARM,1)
-STARTED.addQuestDrop(20479,KASHA_BEAR_PELT,1)
-STARTED.addQuestDrop(20478,KASHA_BSPIDER_HUSK,1)
-STARTED.addQuestDrop(20415,FIERY_EGG1,1)
-STARTED.addQuestDrop(30585,HESTUI_MASK,1)
-STARTED.addQuestDrop(30585,FIERY_EGG2,1)
-STARTED.addQuestDrop(30585,TATARUS_LETTER,1)
-STARTED.addQuestDrop(30502,FLAME_CHARM,1)
-STARTED.addQuestDrop(20335,GRIZZLY_BLOOD,1)
-STARTED.addQuestDrop(30593,TOTEM_SPIRIT_BLOOD,1)
-STARTED.addQuestDrop(30502,BLOOD_CAULDRON,1)
-STARTED.addQuestDrop(27056,BOUND_DURKA_SPIRIT,1)
-STARTED.addQuestDrop(20038,DURKA_PARASITE,1)
-STARTED.addQuestDrop(20043,DURKA_PARASITE,1)
-STARTED.addQuestDrop(30593,SPIRIT_NET,1)

@@ -25,7 +25,9 @@ ITEMS={
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [TRUNK_OF_NEPENTHES, FOOT_OF_BANDERSNATCHLING, SECRET_SPICE]
 
  def onEvent (self,event,st) :
    cond = st.getInt("cond")
@@ -36,7 +38,7 @@ class Quest (JQuest) :
    if event == "31521-1.htm" :
      if st.getPlayer().getLevel() >= 73 : 
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")       
      else:
         htmltext = "31521-0a.htm"
@@ -64,7 +66,7 @@ class Quest (JQuest) :
        cond = st.getInt("cond")
        if cond == 0 :
           htmltext = "31521-0.htm"
-       elif st.getState() == STARTED:
+       elif st.getState() == State.STARTED:
            if cond != 3 :
               htmltext = "31521-2.htm"
            else :
@@ -72,7 +74,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet):
-   # todo: with the current code, a player who has completed up to 2 out of 3
+   # todo: with the current code, a player who has State.COMPLETED up to 2 out of 3
    # item collections may consume the party drop (i.e. become the selected
    # player in the random, but get nothing because it was the wrong mob)
    # this ought to be corrected later...
@@ -80,7 +82,7 @@ class Quest (JQuest) :
    if not partyMember: return
    st = partyMember.getQuestState(qn)
    if st :
-        if st.getState() == STARTED :
+        if st.getState() == State.STARTED :
             npcId = npc.getNpcId()
             if st.getInt("cond") == 1:
              numItems,chance = divmod(100*Config.RATE_DROP_QUEST,100)
@@ -104,16 +106,9 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(624,qn,"The Finest Ingredients - Part 1")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(JEREMY)
 QUEST.addTalkId(JEREMY)
 
 for i in MOBS :
   QUEST.addKillId(i)
-
-STARTED.addQuestDrop(JEREMY,TRUNK_OF_NEPENTHES,1)
-STARTED.addQuestDrop(JEREMY,FOOT_OF_BANDERSNATCHLING,1)
-STARTED.addQuestDrop(JEREMY,SECRET_SPICE,1)

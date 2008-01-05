@@ -21,7 +21,7 @@ MATILD = 30738
 #QUEST ITEM
 VIRGILS_LETTER = 7677
 GOLDEN_HAIR = 7590
-ORB_oF_BINDING = 7595
+ORB_OF_BINDING = 7595
 SORCERY_INGREDIENT = 7596
 CARADINE_LETTER = 7678
 
@@ -33,14 +33,16 @@ RESTRAINER_OF_GLORY = 27317
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [GOLDEN_HAIR, ORB_OF_BINDING, SORCERY_INGREDIENT, CARADINE_LETTER]
 
  def onEvent (self,event,st) :
    htmltext = event
    cond = st.getInt("cond")
    if event == "31742-3.htm" :
      if cond == 0 :
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.takeItems(VIRGILS_LETTER,1)
        st.set("cond","1")
        st.playSound("ItemSound.quest_accept")
@@ -53,7 +55,7 @@ class Quest (JQuest) :
    if event == "31743-5.htm" :
      if cond == 1 :
        st.set("cond","2")
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
    if event == "31744-2.htm" :
      if cond == 2 :
@@ -88,18 +90,18 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != VIRGIL and id != STARTED : return htmltext
+   if npcId != VIRGIL and id != State.STARTED : return htmltext
 
    chance = st.getRandom(100)
    cornerstones = st.getInt("cornerstones")
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
      st.set("cornerstones","0")
    cond = st.getInt("cond")
    if player.isSubClassActive() :
      if npcId == VIRGIL and cond == 0 and st.getQuestItemsCount(VIRGILS_LETTER) == 1 :
-       if id == COMPLETED :
-         htmltext = "<html><body>This quest has already been completed.</body></html>"
+       if id == State.COMPLETED :
+         htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
        elif player.getLevel() < 60 : 
          htmltext = "31742-2.htm"
          st.exitQuest(1)
@@ -150,11 +152,11 @@ class Quest (JQuest) :
        htmltext = "30759-6.htm"
      if npcId == FALLEN_UNICORN and cond == 9 :
        htmltext = "31746-1.htm"
-     if npcId == CORNERSTONE and cond == 9 and st.getQuestItemsCount(ORB_oF_BINDING) == 0 :
+     if npcId == CORNERSTONE and cond == 9 and st.getQuestItemsCount(ORB_OF_BINDING) == 0 :
        htmltext = "31748-1.htm"
-     if npcId == CORNERSTONE and cond == 9 and st.getQuestItemsCount(ORB_oF_BINDING) >= 1 :
+     if npcId == CORNERSTONE and cond == 9 and st.getQuestItemsCount(ORB_OF_BINDING) >= 1 :
        htmltext = "31748-2.htm"
-       st.takeItems(ORB_oF_BINDING,1)
+       st.takeItems(ORB_OF_BINDING,1)
        npc.reduceCurrentHp(10000,npc)
        st.set("cornerstones",str(cornerstones+1))
        st.playSound("ItemSound.quest_middle")
@@ -179,7 +181,7 @@ class Quest (JQuest) :
        st.set("cornerstones","0")
        st.giveItems(CARADINE_LETTER,1)
        st.playSound("ItemSound.quest_finish")
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
    return htmltext
 
  def onKill(self,npc,player,isPet):
@@ -187,19 +189,15 @@ class Quest (JQuest) :
     partyMember = self.getRandomPartyMember(player,"awaitsDrops","1")
     if not partyMember : return
     st = partyMember.getQuestState(qn)
-    if st.getInt("cond") == 9 and st.getQuestItemsCount(ORB_oF_BINDING) <= 4 :
-      st.giveItems(ORB_oF_BINDING,1)
+    if st.getInt("cond") == 9 and st.getQuestItemsCount(ORB_OF_BINDING) <= 4 :
+      st.giveItems(ORB_OF_BINDING,1)
       st.playSound("ItemSound.quest_itemget")
-      if st.getQuestItemsCount(ORB_oF_BINDING) == 5 :
+      if st.getQuestItemsCount(ORB_OF_BINDING) == 5 :
           st.unset("awaitsDrops")
     return 
 
 QUEST       = Quest(242,qn,"Possessor Of A Precious Soul - 2")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(VIRGIL)
 QUEST.addTalkId(VIRGIL)
 
@@ -214,8 +212,3 @@ QUEST.addTalkId(CORNERSTONE)
 QUEST.addTalkId(PURE_UNICORN)
 
 QUEST.addKillId(RESTRAINER_OF_GLORY)
-
-STARTED.addQuestDrop(VIRGIL,GOLDEN_HAIR,1)
-STARTED.addQuestDrop(VIRGIL,ORB_oF_BINDING,1)
-STARTED.addQuestDrop(VIRGIL,SORCERY_INGREDIENT,1)
-STARTED.addQuestDrop(VIRGIL,CARADINE_LETTER,1)

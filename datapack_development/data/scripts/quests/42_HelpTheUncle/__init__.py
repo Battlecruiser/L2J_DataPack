@@ -27,7 +27,7 @@ class Quest (JQuest) :
     if event=="1":
       htmltext="30828-01.htm"
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event=="3" and st.getQuestItemsCount(TRIDENT):
       htmltext="30828-03.htm"
@@ -46,7 +46,7 @@ class Quest (JQuest) :
       htmltext="30828-07.htm"
       st.giveItems(PET_TICKET,1)
       st.unset("cond")
-      st.setState(COMPLETED)
+      st.setState(State.COMPLETED)
       st.exitQuest(0)
     return htmltext
 
@@ -56,13 +56,13 @@ class Quest (JQuest) :
     if not st : return htmltext
     npcId=npc.getNpcId()
     id=st.getState()
-    if id==CREATED:
+    if id==State.CREATED:
       if player.getLevel()>=MIN_LEVEL:
         htmltext="30828-00.htm"
       else:
         htmltext="<html><body>This quest can only be taken by characters that have a minimum level of %s. Return when you are more experienced.</body></html>" % MIN_LEVEL
         st.exitQuest(1)
-    elif id==STARTED:
+    elif id==State.STARTED:
       cond=st.getInt("cond")
       if npcId==WATERS:
         if cond==1:
@@ -78,21 +78,21 @@ class Quest (JQuest) :
           htmltext="30828-05a.htm"
         elif cond==5:
           htmltext="30828-06.htm"
-      elif npcId==SOPHYA and id == STARTED:
+      elif npcId==SOPHYA and id == State.STARTED:
         cond=st.getInt("cond")
         if cond==4 and st.getQuestItemsCount(MAP):
           htmltext="30735-05.htm"
         elif cond==5:
           htmltext="30735-06a.htm"
-    elif id==COMPLETED:
+    elif id==State.COMPLETED:
       st.exitQuest(0)
-      htmltext="<html><body>This quest has already been completed.</body></html>"
+      htmltext="<html><body>This quest has already been State.COMPLETED.</body></html>"
     return htmltext
 
   def onKill(self,npc,player,isPet):
     st = player.getQuestState(qn)
     if not st : return 
-    if st.getState() != STARTED : return
+    if st.getState() != State.STARTED : return
     
     npcId = npc.getNpcId()
     cond=st.getInt("cond")
@@ -112,11 +112,8 @@ class Quest (JQuest) :
     return        
 
 QUEST=Quest(42,qn,"Help The Uncle!")
-CREATED=State('Start', QUEST)
-STARTED=State('Started', QUEST)
-COMPLETED=State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(WATERS)
 
 QUEST.addTalkId(WATERS)

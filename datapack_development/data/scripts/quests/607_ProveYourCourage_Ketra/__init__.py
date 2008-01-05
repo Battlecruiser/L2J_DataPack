@@ -16,7 +16,7 @@ Valor_Totem = 7219
 Ketra_Alliance_Three = 7213
 
 def giveReward(st,npc):
-    if st.getState() == STARTED :
+    if st.getState() == State.STARTED :
         npcId = npc.getNpcId()
         cond = st.getInt("cond")
         if npcId == Shadith :
@@ -28,7 +28,9 @@ def giveReward(st,npc):
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [Shadith_Head]
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -36,7 +38,7 @@ class Quest (JQuest) :
        if st.getPlayer().getAllianceWithVarkaKetra() == 3 and st.getQuestItemsCount(Ketra_Alliance_Three) :
             if st.getPlayer().getLevel() >= 75 :
                     st.set("cond","1")
-                    st.setState(STARTED)
+                    st.setState(State.STARTED)
                     st.playSound("ItemSound.quest_accept")
                     htmltext = "31370-04.htm"
             else :
@@ -72,7 +74,7 @@ class Quest (JQuest) :
               else :
                   htmltext = "31370-05.htm"
           #else:
-              #htmltext="<html><body>This quest has already been completed</body></html>"
+              #htmltext="<html><body>This quest has already been State.COMPLETED</body></html>"
     return htmltext
 
  def onKill(self,npc,player,isPet):
@@ -91,12 +93,8 @@ class Quest (JQuest) :
     return
 
 QUEST       = Quest(607,qn,"Prove Your Courage!")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Kadun)
 QUEST.addTalkId(Kadun)
 
-STARTED.addQuestDrop(Shadith,Shadith_Head,1)
 QUEST.addKillId(Shadith)

@@ -24,7 +24,7 @@ class Quest (JQuest) :
    if event == "31740-3.htm" :
      if cond == 0 :
        st.set("cond","1")
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
    if event == "31740-4.htm" :
      if cond == 1 :
@@ -53,7 +53,7 @@ class Quest (JQuest) :
        st.getPlayer().setNoble(True)
        st.giveItems(NOBLESS_TIARA,1)
        st.playSound("ItemSound.quest_finish")
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
    return htmltext
 
  def onTalk (self,npc,player):
@@ -63,16 +63,16 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != CARADINE and id != STARTED : return htmltext
+   if npcId != CARADINE and id != State.STARTED : return htmltext
 
    cond = st.getInt("cond")
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
    if player.isSubClassActive() :
      if npcId == CARADINE and st.getQuestItemsCount(CARADINE_LETTER_LAST) == 1 :
        if cond in [0,1] :
-         if id == COMPLETED :
-           htmltext = "<html><body>This quest has already been completed.</body></html>"
+         if id == State.COMPLETED :
+           htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
          elif player.getLevel() < 75 : 
            htmltext = "31740-2.htm"
            st.exitQuest(1)
@@ -87,11 +87,8 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(247,qn,"Possessor Of A Precious Soul - 4")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(CARADINE)
 QUEST.addTalkId(CARADINE)
 

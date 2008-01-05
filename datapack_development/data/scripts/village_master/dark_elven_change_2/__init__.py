@@ -124,9 +124,8 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST   = Quest(99993,qn,"village_master")
-CREATED   = State('Start',     QUEST)
 
-QUEST.setInitialState(CREATED)
+
 for npc in NPCS:
     QUEST.addStartNpc(npc)
     QUEST.addTalkId(npc)

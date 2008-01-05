@@ -31,12 +31,14 @@ def fishing_level(player):
 
 class Quest (JQuest):
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [CRIMSON_DRAKE_HEART]
 
  def onEvent (self,event,st):
      htmltext = event
      if event == "31577-1.htm":
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.set("cond","1")
         st.playSound("ItemSound.quest_accept")
      elif event == "31577-3.htm":
@@ -44,8 +46,8 @@ class Quest (JQuest):
         if cond == 2 and st.getQuestItemsCount(CRIMSON_DRAKE_HEART) == 100:
            st.giveItems(FLAMING_FISHING_LURE, 4)
            st.takeItems(CRIMSON_DRAKE_HEART, 100)                
-           st.setState(COMPLETED)
-           st.unset("cond") # we dont need it in db if quest is already completed
+           st.setState(State.COMPLETED)
+           st.unset("cond") # we dont need it in db if quest is already State.COMPLETED
            st.playSound("ItemSound.quest_finish")
         else :
            htmltext = "31577-5.htm"
@@ -56,15 +58,15 @@ class Quest (JQuest):
      htmltext="<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
      if not st: return htmltext
      id = st.getState()
-     if id == COMPLETED:
-        htmltext = "<html><body>This quest has already been completed.</body></html>"           
-     elif id == CREATED :
+     if id == State.COMPLETED:
+        htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"           
+     elif id == State.CREATED :
         if player.getLevel() > 59 and fishing_level(player) > 19 :
            htmltext= "31577-0.htm"
         else:
            st.exitQuest(1)
            htmltext= "31577-0a.htm"
-     elif id == STARTED:
+     elif id == State.STARTED:
         if st.getInt("cond") == 1:
             htmltext = "31577-4.htm"
         else :
@@ -93,13 +95,8 @@ class Quest (JQuest):
      return
 
 QUEST       = Quest(53, qn, "Linnaeus Special Bait")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(LINNAEUS)
 QUEST.addTalkId(LINNAEUS)
 
 QUEST.addKillId(CRIMSON_DRAKE)
-STARTED.addQuestDrop(LINNAEUS,CRIMSON_DRAKE_HEART,1)

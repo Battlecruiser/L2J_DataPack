@@ -62,12 +62,14 @@ MAX = 100
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ANCIENT_SCROLL]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "14.htm" :
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
       st.set("cond","1")
     elif event == "16.htm" :
@@ -82,7 +84,7 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
        htmltext = "10.htm"
        st.set("cond","0")
    elif st.getInt("cond") == 1 and st.getQuestItemsCount(ANCIENT_SCROLL) == 0 :
@@ -97,7 +99,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet):
-    partyMember = self.getRandomPartyMemberState(player, STARTED)
+    partyMember = self.getRandomPartyMemberState(player, State.STARTED)
     if not partyMember : return
     st = partyMember.getQuestState(qn)
     chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
@@ -110,10 +112,6 @@ class Quest (JQuest) :
     return
 
 QUEST       = Quest(385,qn,"Yoke of the Past")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-
-QUEST.setInitialState(CREATED)
 
 for npcId in range(31095,31126):
     if npcId in [31111,31112,31113]:
@@ -123,5 +121,3 @@ for npcId in range(31095,31126):
 
 for mobs in range(21208,21256):
     QUEST.addKillId(mobs)
-
-STARTED.addQuestDrop(20986,ANCIENT_SCROLL,1)

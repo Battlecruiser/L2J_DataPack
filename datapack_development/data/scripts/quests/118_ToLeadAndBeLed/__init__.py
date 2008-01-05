@@ -22,13 +22,15 @@ DROPLIST={20919:[BLOOD,90,10,1,0],
  
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [BLOOD, LEG]
 
  def onEvent (self,event,st) :
    htmltext = event
    if event == "30517-02.htm" :
      st.set("cond","1")
-     st.setState(PROGRESS)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "30517-05a.htm" :
      if st.getQuestItemsCount(BLOOD) >= 10 :
@@ -88,13 +90,13 @@ class Quest (JQuest) :
      htmltext = "30517-00.htm"
      st.exitQuest(1)
    elif player.getPledgeType() == -1 :
-     if id==COMPLETED:
-       htmltext = "<html><body>This quest has already been completed.</body></html>" 
+     if id==State.COMPLETED:
+       htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>" 
      elif player.getLevel() < 19 or not player.getSponsor() :
        htmltext = "30517-00.htm"
        st.exitQuest(1)
      else :
-       if id == CREATED :
+       if id == State.CREATED :
          htmltext = "30517-01.htm"
        elif cond == 1 :
          htmltext = "30517-03.htm" 
@@ -125,7 +127,7 @@ class Quest (JQuest) :
             st.giveItems(item,1)
          st.unset("cond")
          st.unset("settype")
-         st.setState(COMPLETED) 
+         st.setState(State.COMPLETED) 
          st.playSound("ItemSound.quest_finish")
    elif player.getApprentice() :
      cm_apprentice = player.getClan().getClanMember(player.getApprentice())
@@ -165,7 +167,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
     st = player.getQuestState(qn)
     if not st : return
-    if st.getState() != PROGRESS : return
+    if st.getState() != State.STARTED : return
     sponsor = player.getSponsor()
     if not sponsor:
       st.exitQuest(1)
@@ -192,17 +194,10 @@ class Quest (JQuest) :
      
 
 QUEST     = Quest(118,qn,"To Lead And Be Led") 
-CREATED   = State('Start',     QUEST) 
-PROGRESS  = State('Progress',   QUEST) 
-COMPLETED = State('Completed', QUEST) 
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(PINTER) 
 
 QUEST.addTalkId(PINTER)
 
 for mob in DROPLIST.keys():
     QUEST.addKillId(mob)
-
-PROGRESS.addQuestDrop(PINTER,BLOOD,1)
-PROGRESS.addQuestDrop(PINTER,LEG,1)

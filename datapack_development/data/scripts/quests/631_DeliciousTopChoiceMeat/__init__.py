@@ -20,13 +20,15 @@ REWARDS={"1":[MOLD_GLUE,15],"2":[ASOFE,15],"3":[THONS,15],"4":[MOLD_LUBRICANT,10
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [TOP_QUALITY_MEAT]
 
  def onEvent (self,event,st) :
    htmltext = event
    if event == "31537-03.htm" :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "31537-05.htm" and st.getQuestItemsCount(TOP_QUALITY_MEAT) == 120 :
      st.set("cond","3")
@@ -54,7 +56,7 @@ class Quest (JQuest) :
             else:
                 htmltext = "31537-02.htm"
                 st.exitQuest(1)
-        elif id == STARTED :
+        elif id == State.STARTED :
             if cond == 1 :
                 htmltext = "31537-01a.htm"
             elif cond == 2 and st.getQuestItemsCount(TOP_QUALITY_MEAT) == 120 :
@@ -68,7 +70,7 @@ class Quest (JQuest) :
    if not partyMember: return
    st = partyMember.getQuestState(qn)
    if st :
-      if st.getState() == STARTED :
+      if st.getState() == State.STARTED :
          count = st.getQuestItemsCount(TOP_QUALITY_MEAT)
          if st.getInt("cond") == 1 and count < 120 :
             chance = 100 * Config.RATE_DROP_QUEST
@@ -86,15 +88,10 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(631,qn,"Delicious Top Choice Meat")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(TUNATUN)
 
 QUEST.addTalkId(TUNATUN)
 
 for npcId in range(21460,21468)+ range(21479,21487)+range(21498,21506) :
     QUEST.addKillId(npcId)
-
-STARTED.addQuestDrop(21460,TOP_QUALITY_MEAT,1)

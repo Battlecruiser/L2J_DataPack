@@ -15,20 +15,22 @@ BEAST_MEAT = 7547
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [BEAST_MEAT]
 
  def onEvent (self,event,st) :
    htmltext = event
    if event == "31302-1.htm" :
      st.giveItems(BEAST_MEAT,1)
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    if event == "31537-1.htm" :
      st.takeItems(BEAST_MEAT,1)
      st.giveItems(57,30000)
      st.unset("cond")
-     st.setState(COMPLETED)
+     st.setState(State.COMPLETED)
      st.playSound("ItemSound.quest_finish")
    return htmltext
 
@@ -42,8 +44,8 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    if npcId == VLADIMIR :
      if cond == 0 :
-       if id == COMPLETED :
-         htmltext = "<html><body>This quest has already been completed.</body></html>"
+       if id == State.COMPLETED :
+         htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
        elif player.getLevel() >= 63 :
          htmltext = "31302-0.htm"
        else:
@@ -51,19 +53,13 @@ class Quest (JQuest) :
          st.exitQuest(1)
      else :
        htmltext = "31302-2.htm"
-   elif id == STARTED :
+   elif id == State.STARTED :
        htmltext = "31537-0.htm"
    return htmltext
 
 QUEST       = Quest(19,qn,"Go To The Pastureland")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(VLADIMIR)
 
 QUEST.addTalkId(VLADIMIR)
 QUEST.addTalkId(TUNATUN)
-
-STARTED.addQuestDrop(VLADIMIR,BEAST_MEAT,1)

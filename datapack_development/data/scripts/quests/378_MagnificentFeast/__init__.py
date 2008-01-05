@@ -37,7 +37,7 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    if event == "30594-2.htm" and cond == 0 :
      st.set("cond","1")
-     st.setState(STARTED)
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "30594-4a.htm" :
      if st.getQuestItemsCount(WINE_15) and cond == 1 :
@@ -129,10 +129,8 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(378,qn,"Magnificent Feast")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(RANSPO)
 
 QUEST.addTalkId(RANSPO)

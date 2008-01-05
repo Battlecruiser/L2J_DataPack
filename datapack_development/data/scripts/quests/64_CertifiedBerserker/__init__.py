@@ -34,7 +34,7 @@ class Quest (JQuest) :
         player = st.getPlayer()
         if event == "32207-02.htm" :
             st.set("cond","1")
-            st.setState(STARTED)
+            st.setState(State.STARTED)
             st.giveItems(Diamond,48)
         elif event == "32215-02.htm" :
             st.set("cond","2")
@@ -55,7 +55,7 @@ class Quest (JQuest) :
             st.set("cond","14")
         if event == "32207-05.htm" :
             st.takeItems(Tenain_Rec,-1)
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.playSound("ItemSound.quest_finish")
             st.giveItems(Orkurus_Rec,1)
             st.addExpAndSp(73590,8344)
@@ -71,13 +71,13 @@ class Quest (JQuest) :
         npcId = npc.getNpcId()
         id = st.getState()
         cond = st.getInt("cond")
-        if id == COMPLETED :
-            htmltext = "<html><body>This quest has already been completed.</body></html>"
+        if id == State.COMPLETED :
+            htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
         elif npcId == Orkurus :
             if player.getClassId().getId() != 125 or player.getLevel() < 39:
                 htmltext = "<html><body>Only Troopers are allowed to take this quest! Go away before I get angry!<br>You must be level 39 or higher to undertake this quest.</body></html>"
                 st.exitQuest(1)
-            elif id == CREATED :
+            elif id == State.CREATED :
                 htmltext = "32207-01.htm"
             elif cond == 1 :
                 htmltext = "32207-03.htm"
@@ -140,7 +140,7 @@ class Quest (JQuest) :
     def onKill(self,npc,player,isPet):
         st = player.getQuestState(qn)
         if not st : return
-        if st.getState() != STARTED : return
+        if st.getState() != State.STARTED : return
         npcId = npc.getNpcId()
         cond = st.getInt("cond")
         if npcId in Brekas :
@@ -180,11 +180,7 @@ class Quest (JQuest) :
         return
 
 QUEST       = Quest(64,qn,"Certified Berserker")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Orkurus)
 
 QUEST.addTalkId(Orkurus)
@@ -199,6 +195,3 @@ QUEST.addKillId(Scavenger)
 QUEST.addKillId(Seeker)
 QUEST.addKillId(Drone)
 QUEST.addKillId(Emissary)
-
-for item in range(9754,9760) :
-    STARTED.addQuestDrop(Orkurus,item,1)

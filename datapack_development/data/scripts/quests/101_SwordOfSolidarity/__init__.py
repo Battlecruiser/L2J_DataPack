@@ -17,13 +17,15 @@ SWORD_OF_SOLIDARITY_ID = 738
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ALLTRANS_NOTE_ID, HOWTOGO_RUINS_ID, BROKEN_BLADE_TOP_ID, BROKEN_BLADE_BOTTOM_ID, ROIENS_LETTER_ID, BROKEN_SWORD_HANDLE_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30008-04.htm" :
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(ROIENS_LETTER_ID,1)
     elif event == "30283-02.htm" :
@@ -34,7 +36,7 @@ class Quest (JQuest) :
         st.takeItems(BROKEN_SWORD_HANDLE_ID,-1)
         st.giveItems(SWORD_OF_SOLIDARITY_ID,1)
         st.set("cond","0")
-        st.setState(COMPLETED)
+        st.setState(State.COMPLETED)
         st.playSound("ItemSound.quest_finish")
         st.set("onlyone","1")        
     return htmltext
@@ -46,7 +48,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st: return htmltext
    id = st.getState()
-   if id == CREATED :
+   if id == State.CREATED :
      st.set("cond","0")
      st.set("onlyone","0")
    if npcId == 30008 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
@@ -59,8 +61,8 @@ class Quest (JQuest) :
         htmltext = "30008-08.htm"
         st.exitQuest(1)
    elif npcId == 30008 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-        htmltext = "<html><body>This quest has already been completed.</body></html>"
-   if id == STARTED: 
+        htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+   if id == State.STARTED: 
        if npcId == 30008 and st.getInt("cond")==1 and (st.getQuestItemsCount(ROIENS_LETTER_ID)==1) :
             htmltext = "30008-05.htm"
        elif npcId == 30008 and st.getInt("cond")>=2 and st.getQuestItemsCount(ROIENS_LETTER_ID)==0 and st.getQuestItemsCount(ALLTRANS_NOTE_ID)==0 :
@@ -100,7 +102,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st: return   
-   if st.getState() == STARTED :
+   if st.getState() == State.STARTED :
        npcId = npc.getNpcId()
        if npcId in [20361,20362] :
           if st.getQuestItemsCount(HOWTOGO_RUINS_ID) :
@@ -117,12 +119,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(101,qn,"Sword Of Solidarity Quest")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30008)
 
 QUEST.addTalkId(30008)
@@ -131,12 +128,3 @@ QUEST.addTalkId(30283)
 
 QUEST.addKillId(20361)
 QUEST.addKillId(20362)
-
-STARTED.addQuestDrop(30283,ALLTRANS_NOTE_ID,1)
-STARTED.addQuestDrop(30283,HOWTOGO_RUINS_ID,1)
-STARTED.addQuestDrop(20362,BROKEN_BLADE_TOP_ID,1)
-STARTED.addQuestDrop(20361,BROKEN_BLADE_TOP_ID,1)
-STARTED.addQuestDrop(20362,BROKEN_BLADE_BOTTOM_ID,1)
-STARTED.addQuestDrop(20361,BROKEN_BLADE_BOTTOM_ID,1)
-STARTED.addQuestDrop(30008,ROIENS_LETTER_ID,1)
-STARTED.addQuestDrop(30008,BROKEN_SWORD_HANDLE_ID,1)

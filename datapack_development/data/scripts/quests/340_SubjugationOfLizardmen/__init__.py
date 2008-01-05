@@ -24,7 +24,9 @@ BIFRON = 25146
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [TOTEM]
  
  def onAdvEvent (self, event, npc, player) :
      st = player.getQuestState(qn)
@@ -32,7 +34,7 @@ class Quest (JQuest) :
      htmltext = event
      if event == "30385-03.htm" :
        st.set("cond","1")
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
      elif event == "30385-07.htm" :
        st.takeItems(CARGO,-1)
@@ -70,15 +72,15 @@ class Quest (JQuest) :
      rosary = st.getQuestItemsCount(ROSARY)
      holy = st.getQuestItemsCount(HOLY)
      totem = st.getQuestItemsCount(TOTEM)
-     if id == COMPLETED :
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
-     elif id == CREATED and npcId == WEIZ :
+     if id == State.COMPLETED :
+       htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+     elif id == State.CREATED and npcId == WEIZ :
        if player.getLevel() < 17 :
          htmltext = "30385-01.htm"
          st.exitQuest(1)
        else :
          htmltext = "30385-02.htm"
-     elif id == STARTED :
+     elif id == State.STARTED :
        if npcId == WEIZ :
          if cond == 1 :
            if kargo < 30 :
@@ -91,7 +93,7 @@ class Quest (JQuest) :
            st.giveItems(57,14700)
            htmltext = "30385-13.htm"
            st.set("cond","0")
-           st.setState(COMPLETED)
+           st.setState(State.COMPLETED)
            st.playSound("ItemSound.quest_finish")
        elif npcId == ADONIUS :
          if cond == 2 :
@@ -151,19 +153,13 @@ class Quest (JQuest) :
      return
 
 QUEST       = Quest(340, qn, "Subjugation of Lizardmen")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(WEIZ)
 
 QUEST.addTalkId(WEIZ)
 QUEST.addTalkId(ADONIUS)
 QUEST.addTalkId(LEVIAN)
 QUEST.addTalkId(CHEST)
-
-STARTED.addQuestDrop(CHEST,TOTEM,1)
 
 for i in MOBS_1 + MOBS_2 + [25146] :
     QUEST.addKillId(i)

@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -14,7 +14,9 @@ ADENA_ID = 57
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(1038, 1042)
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -22,7 +24,7 @@ class Quest (JQuest) :
       st.set("id","0")
       htmltext = "30220-07.htm"
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
@@ -34,26 +36,17 @@ class Quest (JQuest) :
 
    id = st.getState()
    npcId = npc.getNpcId()
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30220 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
-      if st.getInt("cond")<15 :
-        if player.getRace().ordinal() == 2 :
-          htmltext = "30220-00.htm"
-        elif player.getLevel() >= 11 :
-          htmltext = "30220-03.htm"
-          return htmltext
-        else:
-          htmltext = "30220-02.htm"
-          st.exitQuest(1)
-      else:
-        htmltext = "30220-02.htm"
-        st.exitQuest(1)
+     if player.getRace().ordinal() == 2 :
+       htmltext = "30220-00.htm"
+     elif player.getLevel() >= 11 :
+       htmltext = "30220-03.htm"
+       return htmltext
+     else:
+       htmltext = "30220-02.htm"
+       st.exitQuest(1)
    elif npcId == 30220 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30220 and st.getInt("cond") :
       if st.getQuestItemsCount(RUMIELS_POEM_1_ID) == 1 and st.getQuestItemsCount(RUMIELS_POEM_3_ID) == 1 and st.getQuestItemsCount(RUMIELS_POEM_4_ID) == 1 and st.getQuestItemsCount(RUMIELS_POEM_5_ID) == 1 and st.getInt("onlyone") == 0 :
         if st.getInt("id") != 163 :
@@ -65,7 +58,7 @@ class Quest (JQuest) :
           st.takeItems(RUMIELS_POEM_4_ID,1)
           st.takeItems(RUMIELS_POEM_5_ID,1)
           st.set("cond","0")
-          st.setState(COMPLETED)
+          st.setState(State.COMPLETED)
           st.playSound("ItemSound.quest_finish")
           st.set("onlyone","1")
       else:
@@ -75,7 +68,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
 
    npcId = npc.getNpcId()
    if npcId == 20372 :
@@ -135,25 +128,10 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(163,qn,"Legacy Of Poet")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30220)
 
 QUEST.addTalkId(30220)
 
 QUEST.addKillId(20372)
 QUEST.addKillId(20373)
-
-STARTED.addQuestDrop(20372,RUMIELS_POEM_1_ID,1)
-STARTED.addQuestDrop(20373,RUMIELS_POEM_1_ID,1)
-STARTED.addQuestDrop(20372,RUMIELS_POEM_3_ID,1)
-STARTED.addQuestDrop(20373,RUMIELS_POEM_3_ID,1)
-STARTED.addQuestDrop(20372,RUMIELS_POEM_4_ID,1)
-STARTED.addQuestDrop(20373,RUMIELS_POEM_4_ID,1)
-STARTED.addQuestDrop(20372,RUMIELS_POEM_5_ID,1)
-STARTED.addQuestDrop(20373,RUMIELS_POEM_5_ID,1)

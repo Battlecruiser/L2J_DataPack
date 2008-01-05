@@ -21,14 +21,14 @@ Head,Leg,Heart,Shubain_Rec,Gwain_Rec = range(9749,9754)
 class Quest (JQuest) :
     def __init__(self,id,name,descr):
         JQuest.__init__(self,id,name,descr)
-        self.questItemIds = range(9749,9753)
+        self.questItemIds = range(9749,9754)
 
     def onEvent (self,event,st) :
         htmltext = event
         player = st.getPlayer()
         if event == "32197-02.htm" :
            st.set("cond","1")
-           st.setState(STARTED)
+           st.setState(State.STARTED)
         elif event == "32194-02.htm" :
             st.set("cond","2")
         return htmltext
@@ -40,13 +40,13 @@ class Quest (JQuest) :
         npcId = npc.getNpcId()
         id = st.getState()
         cond = st.getInt("cond")
-        if id == COMPLETED :
-            htmltext = "<html><body>This quest has already been completed.</body></html>"
+        if id == State.COMPLETED :
+            htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
         elif npcId == Gwain :
             if player.getClassId().getId() != 123 or player.getLevel() < 19:
                 htmltext = "32197-00.htm"
                 st.exitQuest(1)
-            elif id == CREATED :
+            elif id == State.CREATED :
                 htmltext = "32197-01.htm"
             elif cond < 4 :
                 htmltext = "32197-03.htm"
@@ -61,7 +61,7 @@ class Quest (JQuest) :
                     st.takeItems(Heart,-1)
                     st.giveItems(Gwain_Rec,1)
                     st.addExpAndSp(3200,4736)
-                    st.setState(COMPLETED)
+                    st.setState(State.COMPLETED)
                     st.playSound("ItemSound.quest_finish")
                     st.unset("cond")
                     htmltext = "32197-06.htm"
@@ -90,7 +90,7 @@ class Quest (JQuest) :
     def onKill(self,npc,player,isPet):
         st = player.getQuestState(qn)
         if not st : return
-        if st.getState() != STARTED : return
+        if st.getState() != State.STARTED : return
         npcId = npc.getNpcId()
         cond = st.getInt("cond")
         if npcId == Warrior :
@@ -114,11 +114,7 @@ class Quest (JQuest) :
         return
 
 QUEST       = Quest(62,qn,"Path of the Trooper")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Gwain)
 
 QUEST.addTalkId(Gwain)
@@ -127,8 +123,3 @@ QUEST.addTalkId(Shubain)
 QUEST.addKillId(Warrior)
 QUEST.addKillId(Spider)
 QUEST.addKillId(Tumran)
-
-STARTED.addQuestDrop(Gwain,Head,1)
-STARTED.addQuestDrop(Gwain,Leg,1)
-STARTED.addQuestDrop(Gwain,Heart,1)
-STARTED.addQuestDrop(Gwain,Shubain_Rec,1)

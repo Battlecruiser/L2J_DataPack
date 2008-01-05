@@ -19,7 +19,9 @@ HERBIBOROUS_SPORE = 5866
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [CARNIVORE_SPORE, HERBIBOROUS_SPORE]
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -28,7 +30,7 @@ class Quest (JQuest) :
    if event == "30717-5.htm" :
      if st.getPlayer().getLevel() >= 43 :
        st.set("cond","1")
-       st.setState(STARTED)
+       st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
      else :
        htmltext = "30717-4.htm"
@@ -65,7 +67,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
    carn=st.getQuestItemsCount(CARNIVORE_SPORE)
@@ -95,16 +97,10 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(356,qn,"Dig Up The Sea Of Spores")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(GAUEN)
 
 QUEST.addTalkId(GAUEN)
 
 QUEST.addKillId(SPORE_ZOMBIE)
 QUEST.addKillId(ROTTING_TREE)
-
-STARTED.addQuestDrop(GAUEN,CARNIVORE_SPORE,1)
-STARTED.addQuestDrop(GAUEN,HERBIBOROUS_SPORE,1)

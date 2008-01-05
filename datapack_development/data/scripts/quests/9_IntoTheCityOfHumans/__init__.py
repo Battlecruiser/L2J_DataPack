@@ -26,7 +26,7 @@ class Quest (JQuest) :
    if event == "30583-03.htm" : 
      st.set("cond","1") 
      st.set("id","1") 
-     st.setState(STARTED) 
+     st.setState(State.STARTED) 
      st.playSound("ItemSound.quest_accept") 
    elif event == "30571-02.htm" : 
      st.set("cond","2") 
@@ -36,7 +36,7 @@ class Quest (JQuest) :
      st.giveItems(MARK_OF_TRAVELER, 1)
      st.giveItems(SCROLL_OF_ESCAPE_GIRAN,1) 
      st.set("cond","0") 
-     st.setState(COMPLETED) 
+     st.setState(State.COMPLETED) 
      st.playSound("ItemSound.quest_finish") 
    return htmltext 
 
@@ -48,7 +48,7 @@ class Quest (JQuest) :
    cond  = st.getInt("cond") 
    id    = st.getState() 
 
-   if id == CREATED : 
+   if id == State.CREATED : 
      st.set("cond","0") 
      if player.getRace().ordinal() == 3 : 
        if player.getLevel() >= 3 : 
@@ -59,11 +59,11 @@ class Quest (JQuest) :
      else : 
        htmltext = "30583-01.htm" 
        st.exitQuest(1) 
-   elif npc == PETUKAI and id == COMPLETED : 
+   elif npc == PETUKAI and id == State.COMPLETED : 
      htmltext = "<html><body>I can't supply you with another Giran Scroll of Escape. Sorry traveller.</body></html>" 
    elif npc == PETUKAI and cond == 1 : 
      htmltext = "30583-04.htm"
-   if id == STARTED :  
+   if id == State.STARTED :  
        if npcId == TANAPI and cond : 
          htmltext = "30571-01.htm" 
        elif npcId == TAMIL and cond == 2 : 
@@ -71,11 +71,8 @@ class Quest (JQuest) :
    return htmltext 
 
 QUEST     = Quest(9,qn,"Into the City of Humans") 
-CREATED   = State('Start',     QUEST) 
-STARTED   = State('Started',   QUEST) 
-COMPLETED = State('Completed', QUEST) 
  
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(PETUKAI) 
 
 QUEST.addTalkId(PETUKAI) 

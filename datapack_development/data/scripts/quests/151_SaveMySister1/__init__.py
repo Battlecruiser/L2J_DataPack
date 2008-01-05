@@ -11,13 +11,15 @@ FEVER_MEDICINE = 704
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [FEVER_MEDICINE, POISON_SAC]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30050-03.htm" :
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     return htmltext
 
@@ -32,8 +34,8 @@ class Quest (JQuest) :
    sac = st.getQuestItemsCount(POISON_SAC)
    med = st.getQuestItemsCount(FEVER_MEDICINE)
    if npcId == 30050 :
-      if id == COMPLETED :
-        htmltext = "<html><body>This quest has already been completed.</body></html>"
+      if id == State.COMPLETED :
+        htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
       elif cond == 0 :
         if player.getLevel() >= 15 :
           htmltext = "30050-02.htm"
@@ -49,7 +51,7 @@ class Quest (JQuest) :
         st.takeItems(FEVER_MEDICINE,1)
         htmltext = "30050-06.htm"
         st.unset("cond")
-        st.setState(COMPLETED)
+        st.setState(State.COMPLETED)
         st.playSound("ItemSound.quest_finish")
    elif npcId == 30032 :
       if cond == 2 or sac :
@@ -64,7 +66,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return
-   if st.getState() != STARTED: return
+   if st.getState() != State.STARTED: return
    
    if not st.getQuestItemsCount(POISON_SAC) and st.getInt("cond") == 1 :
       if st.getRandom(5) == 0 :
@@ -74,12 +76,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(151,qn,"Save My Sister1")
-CREATED     = State('Start', QUEST)
-STARTING    = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30050)
 QUEST.addTalkId(30050)
 
@@ -87,6 +84,3 @@ QUEST.addTalkId(30032)
 
 for mob in [20103,20106,20108] :
    QUEST.addKillId(mob)
-
-STARTED.addQuestDrop(30032,FEVER_MEDICINE,1)
-STARTED.addQuestDrop(20108,POISON_SAC,1)

@@ -16,7 +16,9 @@ WEDDING_ECHO_CRYSTAL_ID = 7062
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [SILVER_CRYSTAL_ID]
  
  def onEvent (self,event,st) :
      htmltext = event
@@ -24,7 +26,7 @@ class Quest (JQuest) :
      if event == "1" and cond == 0 :
          htmltext = "31042-02.htm"
          st.set("cond","1")
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.playSound("ItemSound.quest_accept")
      elif event == "3" and st.getQuestItemsCount(SILVER_CRYSTAL_ID) == 50 :
          st.giveItems(WEDDING_ECHO_CRYSTAL_ID,25)
@@ -43,7 +45,7 @@ class Quest (JQuest) :
      id = st.getState()
      cond = st.getInt("cond")
      id = st.getState()
-     if id == CREATED :
+     if id == State.CREATED :
          htmltext = "31042-01.htm"
      elif cond == 1 :
          htmltext = "31042-03.htm"
@@ -72,16 +74,10 @@ class Quest (JQuest) :
      return
  
 QUEST       = Quest(431,qn,"Wedding March")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(31042)
 
 QUEST.addTalkId(31042)
 
 QUEST.addKillId(20786)
 QUEST.addKillId(20787)
-
-STARTED.addQuestDrop(20786,SILVER_CRYSTAL_ID,1)

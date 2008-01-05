@@ -38,13 +38,15 @@ MOB=DROPLIST.keys()
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = range(2784,2809)
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "30690-05.htm" :
         st.set("cond","1")
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
         st.giveItems(LUTHERS_LETTER,1)
     elif event == "30291-07.htm" :
@@ -85,11 +87,11 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    npcId = npc.getNpcId()
    id = st.getState()
-   if npcId != 30690 and id != STARTED : return htmltext
+   if npcId != 30690 and id != State.STARTED : return htmltext
 
-   if id == COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
-   elif id == CREATED :
+   if id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+   elif id == State.CREATED :
      st.set("cond","0")
      if npcId == NPC[3]:
           if player.getClassId().getId() in [ 0x07, 0x16, 0x23, 0x36] :
@@ -114,7 +116,7 @@ class Quest (JQuest) :
          st.addExpAndSp(37831,18750)
          htmltext = "30690-08.htm"
          st.set("cond","0")
-         st.setState(COMPLETED)
+         st.setState(State.COMPLETED)
          st.playSound("ItemSound.quest_finish")
          st.takeItems(ALANKELLS_RECOMMEND,1)
          st.giveItems(MARK_OF_SEARCHER,1)
@@ -240,7 +242,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
    cond = st.getInt("cond")
    npcId = npc.getNpcId()
    status,maxcount,chance,itemid=DROPLIST[npcId]
@@ -284,11 +286,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(225,qn,"Test Of Searcher")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30690)
 
 for npcId in NPC:
@@ -296,6 +294,3 @@ for npcId in NPC:
 
 for mobId in MOB:
  QUEST.addKillId(mobId)
-
-for item in range(2784,2809):
-    STARTED.addQuestDrop(30690,item,1)

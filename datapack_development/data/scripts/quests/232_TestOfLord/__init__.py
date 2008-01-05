@@ -65,13 +65,15 @@ DROPLIST={
 
 class Quest (JQuest) :
 
-  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+  def __init__(self,id,name,descr):
+    JQuest.__init__(self,id,name,descr)
+    self.questItemIds = range(3391,3417)
   
   def onEvent (self,event,st):
     htmltext=event
     if st.getInt("phase")==0:
       if event=="1":
-        st.setState(STARTED)
+        st.setState(State.STARTED)
         st.giveItems(ORDEAL_NECKLACE,1)
         st.playSound("ItemSound.quest_accept")
         htmltext="30565-05.htm"
@@ -128,7 +130,7 @@ class Quest (JQuest) :
           st.unset(var)
         for var in STATS[1]:
           st.unset(var)
-        st.setState(COMPLETED)
+        st.setState(State.COMPLETED)
       elif event == "30649_1" :
         htmltext = "30649-02.htm"
       elif event == "30649_2" :
@@ -155,9 +157,9 @@ class Quest (JQuest) :
 
     npcId = npc.getNpcId()
     id = st.getState()
-    if npcId != NPC[4] and id != STARTED : return htmltext
+    if npcId != NPC[4] and id != State.STARTED : return htmltext
     
-    if id == CREATED:
+    if id == State.CREATED:
       for var in STATS[1]:
        st.set(var,"0")
       if npcId == NPC[4]:
@@ -175,8 +177,8 @@ class Quest (JQuest) :
                 st.exitQuest(1)
               else:
                 htmltext = "30565-04.htm"
-    elif id == COMPLETED:
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+    elif id == State.COMPLETED:
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
     else:
       if st.getInt("phase") == 1:
         atuba=st.getInt("atubaStat")
@@ -341,7 +343,7 @@ class Quest (JQuest) :
   def onKill(self,npc,player,isPet):
     st = player.getQuestState(qn)
     if not st : return 
-    if st.getState() != STARTED : return 
+    if st.getState() != State.STARTED : return 
 
     npcId = npc.getNpcId()
     var,value,newValue,chance,maxcount,item=DROPLIST[npcId]
@@ -372,11 +374,7 @@ class Quest (JQuest) :
     return
 
 QUEST     = Quest(232,qn,"Test Of Lord")
-CREATED   = State('Start', QUEST)
-STARTED   = State('Started', QUEST)
-COMPLETED = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(NPC[4])
 
 for npcId in NPC:
@@ -384,6 +382,3 @@ for npcId in NPC:
 
 for mobId in MOBS:
   QUEST.addKillId(mobId)
-
-for item in range(3391,3417):
-  STARTED.addQuestDrop(NPC[4],item,1)

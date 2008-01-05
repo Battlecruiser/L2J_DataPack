@@ -29,7 +29,9 @@ RANDOM_REWARDS=[[736,int(15*Config.RATE_QUESTS_REWARD)], #SoE
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [ALLIGATOR_TOOTH, TORN_MAP_FRAGMENT]
 
  def onEvent (self,event,st) :
      htmltext = event
@@ -38,7 +40,7 @@ class Quest (JQuest) :
      if event == "30895-00a.htm" :
          st.exitQuest(1)
      elif event == "1" :
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.set("cond","1")
          htmltext = "30895-02.htm"
          st.playSound("ItemSound.quest_accept")
@@ -72,7 +74,7 @@ class Quest (JQuest) :
      id = st.getState()
      level = player.getLevel()
      cond = st.getInt("cond")
-     if id == CREATED :
+     if id == State.CREATED :
         if level>=38 :
            htmltext = "30895-01.htm"
         else :
@@ -82,7 +84,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onKill(self,npc,player,isPet):
-     partyMember = self.getRandomPartyMemberState(player,STARTED)
+     partyMember = self.getRandomPartyMemberState(player,State.STARTED)
      if not partyMember : return
      st = partyMember.getQuestState(qn)
 
@@ -97,16 +99,10 @@ class Quest (JQuest) :
      return
 
 QUEST       = Quest(354,qn,"Conquest Of Alligator Island")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30895)
 
 QUEST.addTalkId(30895)
-
-STARTED.addQuestDrop(20991,ALLIGATOR_TOOTH,1)
-STARTED.addQuestDrop(20991,TORN_MAP_FRAGMENT,1)
 
 for i in range(20804,20809)+[20991] :
     QUEST.addKillId(i)

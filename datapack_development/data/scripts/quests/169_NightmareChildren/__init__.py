@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -12,7 +12,9 @@ BONE_GAITERS_ID = 31
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [CRACKED_SKULL_ID, PERFECT_SKULL_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -20,7 +22,7 @@ class Quest (JQuest) :
       st.set("id","0")
       htmltext = "30145-04.htm"
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "169_1" and st.getInt("onlyone") == 0 :
           if st.getInt("id") != 169 :
@@ -31,7 +33,7 @@ class Quest (JQuest) :
             st.takeItems(CRACKED_SKULL_ID,st.getQuestItemsCount(CRACKED_SKULL_ID))
             st.takeItems(PERFECT_SKULL_ID,st.getQuestItemsCount(PERFECT_SKULL_ID))
             st.set("cond","0")
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.playSound("ItemSound.quest_finish")
             st.set("onlyone","1")
     return htmltext
@@ -44,26 +46,17 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30145 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
-      if st.getInt("cond")<15 :
-        if player.getRace().ordinal() != 2 :
-          htmltext = "30145-00.htm"
-        elif player.getLevel() >= 15 :
-          htmltext = "30145-03.htm"
-          return htmltext
-        else:
-          htmltext = "30145-02.htm"
-          st.exitQuest(1)
-      else:
-        htmltext = "30145-02.htm"
-        st.exitQuest(1)
+     if player.getRace().ordinal() != 2 :
+       htmltext = "30145-00.htm"
+     elif player.getLevel() >= 15 :
+       htmltext = "30145-03.htm"
+       return htmltext
+     else:
+       htmltext = "30145-02.htm"
+       st.exitQuest(1)
    elif npcId == 30145 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30145 and st.getInt("cond") :
       if st.getQuestItemsCount(CRACKED_SKULL_ID) >= 1 and st.getQuestItemsCount(PERFECT_SKULL_ID) == 0 :
         htmltext = "30145-06.htm"
@@ -76,7 +69,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return
-   if st.getState() != STARTED : return
+   if st.getState() != State.STARTED : return
 
    npcId = npc.getNpcId()
    if npcId == 20105 :
@@ -100,21 +93,10 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(169,qn,"Nightmare Children")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30145)
 
 QUEST.addTalkId(30145)
 
 QUEST.addKillId(20105)
 QUEST.addKillId(20025)
-
-STARTED.addQuestDrop(20105,CRACKED_SKULL_ID,1)
-STARTED.addQuestDrop(20025,CRACKED_SKULL_ID,1)
-STARTED.addQuestDrop(20105,PERFECT_SKULL_ID,1)
-STARTED.addQuestDrop(20025,PERFECT_SKULL_ID,1)

@@ -23,7 +23,7 @@ class Quest (JQuest) :
      if event == "31314-03.htm" :
        if st.getPlayer().getLevel() >= 66 :
          st.set("cond","1")
-         st.setState(STARTED)
+         st.setState(State.STARTED)
          st.playSound("ItemSound.quest_accept")
        else :
          htmltext = "31314-02.htm"
@@ -38,7 +38,7 @@ class Quest (JQuest) :
        st.addExpAndSp(50000,0)
        st.unset("cond")
        st.playSound("ItemSound.quest_finish")
-       st.setState(COMPLETED)
+       st.setState(State.COMPLETED)
      return htmltext
 
  def onTalk (self,npc,player):
@@ -48,11 +48,11 @@ class Quest (JQuest) :
      if not st : return htmltext
      id = st.getState()
      cond = st.getInt("cond")
-     if id == COMPLETED :
-       htmltext = htmltext = "<html><body>This quest has already been completed.</body></html>"
-     elif id == CREATED and npcId == DONAL :
+     if id == State.COMPLETED :
+       htmltext = htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+     elif id == State.CREATED and npcId == DONAL :
        htmltext = "31314-01.htm"
-     elif id == STARTED :
+     elif id == State.STARTED :
        if npcId == DONAL : 
          htmltext = "31314-04.htm"
        elif npcId == DAISY :
@@ -65,11 +65,8 @@ class Quest (JQuest) :
      return htmltext
 
 QUEST       = Quest(18, qn, "Meeting With The Golden Ram")
-CREATED     = State('Start', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-QUEST.setInitialState(CREATED)
+
 QUEST.addStartNpc(DONAL)
 
 QUEST.addTalkId(DONAL)

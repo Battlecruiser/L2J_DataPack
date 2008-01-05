@@ -1,4 +1,4 @@
-# Maked by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.2
 import sys
 from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State
@@ -12,14 +12,16 @@ LESSER_HEALING_POTION_ID = 1060
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
+     self.questItemIds = [DARK_BEZOAR_ID]
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "1" :
       st.set("id","0")
       st.set("cond","1")
-      st.setState(STARTED)
+      st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
       htmltext = "30348-03.htm"
     return htmltext
@@ -32,26 +34,17 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == CREATED :
-     st.setState(STARTING)
-     st.set("cond","0")
-     st.set("onlyone","0")
-     st.set("id","0")
    if npcId == 30348 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
-      if st.getInt("cond")<15 :
-        if player.getRace().ordinal() != 2 :
-          htmltext = "30348-00.htm"
-        elif player.getLevel() >= 3 :
-          htmltext = "30348-02.htm"
-          return htmltext
-        else:
-          htmltext = "30348-01.htm"
-          st.exitQuest(1)
-      else:
-        htmltext = "30348-01.htm"
-        st.exitQuest(1)
+     if player.getRace().ordinal() != 2 :
+       htmltext = "30348-00.htm"
+     elif player.getLevel() >= 3 :
+       htmltext = "30348-02.htm"
+       return htmltext
+     else:
+       htmltext = "30348-01.htm"
+       st.exitQuest(1)
    elif npcId == 30348 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
    elif npcId == 30348 and st.getInt("cond")==1 :
       if st.getQuestItemsCount(DARK_BEZOAR_ID)<13 :
         htmltext = "30348-04.htm"
@@ -63,7 +56,7 @@ class Quest (JQuest) :
             st.giveItems(LESSER_HEALING_POTION_ID,int(5*Config.RATE_QUESTS_REWARD))
             st.addExpAndSp(1000,0)
             st.set("cond","0")
-            st.setState(COMPLETED)
+            st.setState(State.COMPLETED)
             st.playSound("ItemSound.quest_finish")
             st.set("onlyone","1")
    return htmltext
@@ -71,7 +64,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != STARTED : return 
+   if st.getState() != State.STARTED : return 
 
    npcId = npc.getNpcId()
    if npcId == 20529 :
@@ -113,13 +106,7 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(165,qn,"Wild Hunt")
-CREATED     = State('Start', QUEST)
-STARTING     = State('Starting', QUEST)
-STARTED     = State('Started', QUEST)
-COMPLETED   = State('Completed', QUEST)
 
-
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(30348)
 
 QUEST.addTalkId(30348)
@@ -128,8 +115,3 @@ QUEST.addKillId(20456)
 QUEST.addKillId(20529)
 QUEST.addKillId(20532)
 QUEST.addKillId(20536)
-
-STARTED.addQuestDrop(20529,DARK_BEZOAR_ID,1)
-STARTED.addQuestDrop(20532,DARK_BEZOAR_ID,1)
-STARTED.addQuestDrop(20536,DARK_BEZOAR_ID,1)
-STARTED.addQuestDrop(20456,DARK_BEZOAR_ID,1)
