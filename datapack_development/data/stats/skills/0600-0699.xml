@@ -161,12 +161,21 @@
   </for>
 </skill>
 <skill id="620" levels="1" name="Quiver of Bolts - Grade B">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="mpConsume" val="366"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="hitTime" val="3000"/> 
+  <set name="skillType" val="CREATE_ITEM"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="-1"/> 
+  <set name="effectRange" val="-1"/> 
+  <set name="itemConsumeId" val="1460"/> 
+  <set name="itemConsumeCount" val="1"/> 
+  <set name="create_item_id" val="9635"/> 
+  <set name="create_item_count" val="700"/> 
+  <set name="random_count" val="4"/> 
+  <for> 
+  </for> 
+</skill>
 </skill>
 <skill id="621" levels="1" name="Create Special Bolt">
   <set name="target" val="TARGET_NONE"/>
