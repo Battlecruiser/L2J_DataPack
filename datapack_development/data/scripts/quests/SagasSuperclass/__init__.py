@@ -184,7 +184,7 @@ class Quest (JQuest) :
    player = st.getPlayer()
    if event == "accept" :
        st.set("cond","1")
-       st.setState(self.State.STARTED)
+       st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
        st.giveItems(self.Items[10],1)
        htmltext = "0-03.htm"
@@ -196,7 +196,7 @@ class Quest (JQuest) :
            htmltext = "0-05.htm"
    elif event == "0-2" :
        if player.getLevel() >= 76 :
-           st.setState(self.State.COMPLETED)
+           st.setState(State.COMPLETED)
            st.set("cond","0")
            htmltext = "0-07.htm"
            st.takeItems(self.Items[10],-1)
@@ -401,7 +401,7 @@ class Quest (JQuest) :
     if st :
       npcId = npc.getNpcId()
       cond = st.getInt("cond")
-      if st.getState() == self.State.COMPLETED and npcId == self.NPC[0] :
+      if st.getState() == State.COMPLETED and npcId == self.NPC[0] :
           htmltext == "<html><body>You have already State.COMPLETED this quest!</body></html>"
       elif player.getClassId().getId() == self.getPrevClass(player) :
           if cond == 0 :
@@ -501,7 +501,7 @@ class Quest (JQuest) :
                   if player.getLevel() >= 76 :
                       htmltext = "0-09.htm"
                       if not self.getClassId(player) in range(131,135) : #in Kamael quests, npc wants to chat for a bit before changing class
-                          st.setState(self.State.COMPLETED)
+                          st.setState(State.COMPLETED)
                           st.set("cond","0")
                           st.addExpAndSp(2299404,0)
                           st.giveItems(57,5000000)
