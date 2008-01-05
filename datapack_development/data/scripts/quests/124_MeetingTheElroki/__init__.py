@@ -96,7 +96,7 @@ class Quest (JQuest) :
          if cond == 4 :
              htmltext = "32117-01.htm"
              if st.get("progress") : #check if the variable has been set
-                 if st.get("progress")== MIDDLE: #if set, check its value...
+                 if st.get("progress")== "MIDDLE": #if set, check its value...
                      htmltext = "32117-02.htm"
          elif cond == 5 :
             htmltext = "32117-04.htm"
@@ -104,10 +104,7 @@ class Quest (JQuest) :
          htmltext = "32118-01.htm"
      return htmltext
 
-
 QUEST       = Quest(124,qn,"Meeting The Elroki")
-MIDDLE      = State('Middle', QUEST)
-
 
 QUEST.addStartNpc(MARQUEZ)
 QUEST.addTalkId(MARQUEZ)
