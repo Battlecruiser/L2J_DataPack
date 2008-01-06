@@ -46,7 +46,7 @@ class Quest (JQuest) :
    ClassId = st.getPlayer().getClassId()
    
    # Dwarfs got accepted
-   if npcId == WAREHOUSE_CHIEF_REED and Race in [Race.dwarf]:
+   if npcId == WAREHOUSE_CHIEF_REED and Race in [Race.Dwarf]:
      if ClassId in [ClassId.dwarvenFighter]:
        htmltext = "30520-01.htm"
        st.setState(State.STARTED)
@@ -63,7 +63,7 @@ class Quest (JQuest) :
        return htmltext
 
    # All other Races must be out
-   if npcId == WAREHOUSE_CHIEF_REED and Race in [Race.orc, Race.darkelf, Race.elf, Race.human]:
+   if npcId == WAREHOUSE_CHIEF_REED and Race in [Race.Orc, Race.DarkElf, Race.Elf, Race.Human, Race.Kamael]:
      st.setState(State.COMPLETED)
      st.exitQuest(1)
      return "30520-07.htm"

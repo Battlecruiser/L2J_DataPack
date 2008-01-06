@@ -58,7 +58,7 @@ class Quest (JQuest) :
    ClassId = st.getPlayer().getClassId()
    
    # Orcs got accepted
-   if npcId == KAKAI_LORD_OF_FLAME and Race in [Race.orc]:
+   if npcId == KAKAI_LORD_OF_FLAME and Race in [Race.Orc]:
      if ClassId in [ClassId.orcFighter]:
        htmltext = "30565-01.htm"
        st.setState(State.STARTED)
@@ -79,7 +79,7 @@ class Quest (JQuest) :
        return htmltext
 
    # All other Races must be out
-   if npcId == KAKAI_LORD_OF_FLAME and Race in [Race.dwarf, Race.darkelf, Race.elf, Race.human]:
+   if npcId == KAKAI_LORD_OF_FLAME and Race in [Race.Dwarf, Race.DarkElf, Race.Elf, Race.Human, Race.Kamael]:
      st.setState(State.COMPLETED)
      st.exitQuest(1)
      return "30565-11.htm"

@@ -30,7 +30,7 @@ class Quest (JQuest) :
    Race  = st.getPlayer().getRace()
    pcId  = st.getPlayer().getClassId().getId()
    # Human fighters get accepted
-   if npcId == GRAND_MASTER_BITZ and Race in [Race.human] and pcId in range(0x0a)+range(88,94) :
+   if npcId == GRAND_MASTER_BITZ and Race in [Race.Human] and pcId in range(0x0a)+range(88,94) :
      #fighter
      if pcId == 0x00:
        htmltext = "30026-01.htm"

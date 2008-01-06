@@ -356,7 +356,7 @@ class Quest (JQuest) :
    ClassId = st.getPlayer().getClassId()
    
    # Humans and Elfs got accepted
-   if npcId == GRAND_MASTER_HANNAVALT or GRAND_MASTER_SIRIA or GRAND_MASTER_BLACKBIRD or GRAND_MASTER_SEDRICK or GRAND_MASTER_MARCUS and Race in [Race.elf, Race.human]:
+   if npcId == GRAND_MASTER_HANNAVALT or GRAND_MASTER_SIRIA or GRAND_MASTER_BLACKBIRD or GRAND_MASTER_SEDRICK or GRAND_MASTER_MARCUS and Race in [Race.Elf, Race.Human]:
      if ClassId in [ClassId.elvenKnight]:
        st.setState(State.STARTED)
        return "30109-01.htm"
