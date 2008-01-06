@@ -56,7 +56,7 @@ class Quest (JQuest) :
    ClassId = st.getPlayer().getClassId()
    
    # DarkElfs got accepted
-   if npcId == TETRARCH_THIFIELL and Race in [Race.darkelf]:
+   if npcId == TETRARCH_THIFIELL and Race in [Race.DarkElf]:
      if ClassId in [ClassId.darkFighter]: 
        st.setState(State.STARTED)
        return "30358-01.htm"
@@ -73,7 +73,7 @@ class Quest (JQuest) :
        return "30358-13.htm"
 
    # All other Races must be out
-   if npcId == TETRARCH_THIFIELL and Race in [Race.dwarf, Race.human, Race.elf, Race.orc]:
+   if npcId == TETRARCH_THIFIELL and Race in [Race.Dwarf, Race.Human, Race.Elf, Race.Orc, Race.Kamael]:
      st.setState(State.COMPLETED)
      st.exitQuest(1)
      return "30358-11.htm"
