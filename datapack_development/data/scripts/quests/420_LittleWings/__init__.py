@@ -194,6 +194,7 @@ class Quest (JQuest):
   def onEvent (self,event,st):
     id   = st.getState()
     progress = st.getInt("progress")
+    cond = st.getInt("cond")
     if id == State.CREATED :
       st.set("cond","0")
       if event == "ido" :
