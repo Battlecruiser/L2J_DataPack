@@ -62,7 +62,7 @@ class Quest (JQuest) :
    race     = player.getRace().ordinal()
    classid  = player.getClassId().getId()
    level    = player.getLevel()
-   if npcId not in NPCS : return
+   if npcId not in NPCS_MALE1 + NPCS_MALE2 + NPCS_FEMALE1 + NPCS_FEMALE2 : return
    if not event in CLASSES.keys() :
      return event
    else :
