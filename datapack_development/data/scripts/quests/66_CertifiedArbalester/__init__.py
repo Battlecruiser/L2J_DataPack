@@ -204,11 +204,11 @@ class Quest (JQuest) :
         elif npcId == Gargoyle :
             count = st.getQuestItemsCount(Talisman)
             if count < 10 and (cond == 14 or cond == 15):
-                if count == 29 :
+                st.giveItems(Talisman,1)
+                if count == 9 :
                     st.playSound("ItemSound.quest_middle")
                     st.set("cond","16")
                 else :
-                    st.giveItems(Talisman,1)
                     st.playSound("ItemSound.quest_itemget")
                     if count == 0 :
                         st.set("cond","15")
