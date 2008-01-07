@@ -59,8 +59,6 @@ class Quest (JQuest) :
 
 QUEST       = Quest(QuestId,qn,QuestDesc)
 
-
-
 for npc in NPCS:
    QUEST.addStartNpc(npc)
    QUEST.addTalkId(npc)

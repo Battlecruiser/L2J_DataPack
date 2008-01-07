@@ -376,7 +376,7 @@ class Quest (JQuest) :
     if int(st.get(var)) in value and random<chance:
       if takeList:
         if npcId == 27101 :
-          if st.getItemEquipped(7) == SWORD_OF_BINDING:
+          if st.getItemEquipped(9) == SWORD_OF_BINDING:
             for give in giveList:
               st.giveItems(give,1)
             for take in takeList:

@@ -243,7 +243,7 @@ class Quest (JQuest) :
      else:
       giveNormal(st,itemid)
     elif dropcondition == 3 :
-     if st.getItemEquipped(7)==CRESCENT_MOON_BOW:
+     if st.getItemEquipped(16)==CRESCENT_MOON_BOW:
       giveMiddle(st,itemid,step)
      else:
       st.addSpawn(27090,npc,True,0)
