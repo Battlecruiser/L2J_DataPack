@@ -130,7 +130,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    elif npcId in [20043,20038] :
       st.set("id","0")
-      if st.getInt("cond") and st.getQuestItemsCount(POISON_SPIDER_LEG2)<20 and st.getQuestItemsCount(RUSTED_BRONZE_SWORD3) == 1 and st.getItemEquipped(7) == RUSTED_BRONZE_SWORD3:
+      if st.getInt("cond") and st.getQuestItemsCount(POISON_SPIDER_LEG2)<20 and st.getQuestItemsCount(RUSTED_BRONZE_SWORD3) == 1 and st.getItemEquipped(9) == RUSTED_BRONZE_SWORD3:
         st.giveItems(POISON_SPIDER_LEG2,1)
         if st.getQuestItemsCount(POISON_SPIDER_LEG2) == 20 :
           st.playSound("ItemSound.quest_middle")

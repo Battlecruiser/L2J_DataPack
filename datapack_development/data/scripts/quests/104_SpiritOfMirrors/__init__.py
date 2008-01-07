@@ -105,7 +105,7 @@ class Quest (JQuest) :
    if not st: return 
    if st.getState() != State.STARTED : return 
    npcId = npc.getNpcId() 
-   if st.getInt("cond") >= 1 and st.getItemEquipped(7) == GALLINS_OAK_WAND_ID and not st.getQuestItemsCount(DROPLIST[npcId]) : # (7) means weapon slot 
+   if st.getInt("cond") >= 1 and st.getItemEquipped(9) == GALLINS_OAK_WAND_ID and not st.getQuestItemsCount(DROPLIST[npcId]) : # (7) means weapon slot 
      st.takeItems(GALLINS_OAK_WAND_ID,1) 
      st.giveItems(DROPLIST[npcId],1) 
      if HaveAllQuestItems(st) : 

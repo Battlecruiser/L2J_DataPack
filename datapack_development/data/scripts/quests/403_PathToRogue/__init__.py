@@ -135,7 +135,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
-   if st.getItemEquipped(7) == NETIS_BOW or st.getItemEquipped(7) == NETIS_DAGGER :
+   if st.getItemEquipped(16) == NETIS_BOW or st.getItemEquipped(9) == NETIS_DAGGER :
      if npcId in (20035, 20042, 20045, 20051, 20054, 20060) :
         st.set("id","0")
         if st.getInt("cond") and st.getQuestItemsCount(SPATOIS_BONES)<10 and st.getRandom(10)<DROP_CHANCE[npcId] :
