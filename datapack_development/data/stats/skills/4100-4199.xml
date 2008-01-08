@@ -1006,9 +1006,9 @@
 </skill>
 <skill id="4161" levels="1" name="Summon PC">
   <!-- Teleports player to mob (Porta/Perum skill) -->
-  <set name="target" val="TARGET_NONE"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2000"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="GET_PLAYER"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
