@@ -102,6 +102,7 @@ class baium (JQuest):
         self.playersInside = []
       else :
         # if baium's inactivity is still younger than 30 minutes, just re-add the timer
+        self.cancelQuestTimer("baium_despawn", npc, None)
         self.startQuestTimer("baium_despawn", 60000, npc, None)
     return
 
