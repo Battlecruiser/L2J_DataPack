@@ -722,7 +722,9 @@ INSERT INTO teleport VALUES
 ('Clan Hall -> East of Goddard Castle Town',12048,150561,-57489,-2976,0,0),
 ('Clan Hall -> West of Goddard Castle Town',12049,144866,-57464,-2976,0,0),
 ('Gludio -> Kamael Village',             12050, -117251, 46771, 360, 12000, 0),
-('Dark Elvin Village -> Kamael Village', 12051, -117251, 46771, 360, 13000, 0),
+('Dark Elf Village -> Kamael Village', 12051, -117251, 46771, 360, 13000, 0),
 ('Orc Village -> Kamael Village',        12052, -117251, 46771, 360, 17000, 0),
-('Elvin Village -> Kamael Village',      12053, -117251, 46771, 360, 16000, 0),
-('Town of Aden -> Kamael Village',       12054, -117251, 46771, 360, 26000, 0);
+('Elven Village -> Kamael Village',      12053, -117251, 46771, 360, 16000, 0),
+('Town of Aden -> Kamael Village',       12054, -117251, 46771, 360, 26000, 0),
+('Talking Village -> Kamael Village',    12055, -117251, 46771, 360, 20000, 0),
+('Dwarven Village -> Kamael Village',    12056, -117251, 46771, 360, 32000, 0);
