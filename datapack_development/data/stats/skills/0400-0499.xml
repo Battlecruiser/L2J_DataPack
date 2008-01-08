@@ -1101,12 +1101,26 @@
       Lvl 9 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 10 Soul Ores.
       Lvl 10 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 10 Soul Ores.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume"> 50 53 55 58 59 61 63 65 67 68</table>
+  <table name="#itemConsumeCount"> 5 6 7 7 8 8 9 9 10 10</table>
+  <table name="#lethal2"> 15 17 18 19 20 11 22 23 24 25</table>
+  <set name="itemConsumeId" val="1785"/>
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="40"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="FEAR"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="lethal2" val="#lethal2"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <cond msg="Banish Seraph cannot be used due to unsuitable terms.">
+  <target race_id="7"/>
+  </cond>
   <for>
-<!-- needs core support -->
+    <effect count="5" name="Fear" time="6" val="0"/>
   </for>
 </skill>
 <skill id="451" levels="2" name="Sonic Move">
@@ -1729,16 +1743,25 @@
 </skill>
 <skill id="485" levels="7" name="Disarm">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-     Disarms a target. Weapons cannot be re-equipped while the effect lasts. Consumes 1 Soul.
+  Disarms a target. Weapons cannot be re-equipped while the effect lasts. Consumes 1 Soul.
+  DP side done by Rnn
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume_Init"> 5 5 6 6 6 7 7 </table>
+  <table name="#mpConsume"> 20 25 29 34 40 44 48 </table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="40"/>
+  <set name="lvlDepend" val="2"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="3000"/>
+  <set name="reuseDelay" val="60000"/>
+  <set name="skillType" val="DISARM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="soulConsumeCount" val="1"/>
   <for>
+   <effect count="1" name="Disarm" time="10" val="0"/>
   </for>
 </skill>
 <skill id="486" levels="2" name="Increase Range">
