@@ -150,8 +150,8 @@ class Quest (JQuest) :
            st.playSound("ItemSound.quest_middle")
      # In addition, drops go to one party member among those who are either in
      # progress PART1 or in PART2
-     partyMember1 = self.getRandomPartyMemberState(player, "progress", "PART1")
-     partyMember2 = self.getRandomPartyMemberState(player, "progress", "PART2")
+     partyMember1 = self.getRandomPartyMember(player, "progress", "PART1")
+     partyMember2 = self.getRandomPartyMember(player, "progress", "PART2")
      partyMember = partyMember1  # initialize
      # if there exist no party members for either state, do nothing
      if not partyMember1 and not partyMember2 : return
