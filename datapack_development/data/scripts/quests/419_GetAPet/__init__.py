@@ -94,7 +94,7 @@ class Quest (JQuest):
         return "419_confirm.htm"
       elif event == "agree" :
         st.setState(State.STARTED)
-        st.set("progress")=="STARTED"
+        st.set("progress","STARTED")
         st.set("cond","1")
         race = st.getPlayer().getRace().ordinal()
         if race == 0:
