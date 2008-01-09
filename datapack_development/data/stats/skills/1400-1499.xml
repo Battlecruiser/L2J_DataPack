@@ -1265,10 +1265,15 @@
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="CHANGEWEAPON"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="2000"/>
+  <set name="reuseDelay" val="10000"/>
   <set name="castRange" val="-1"/>
+  <cond msg="Change Weapon cannot be used due to unsuitable terms.">
+    <using weaponChange="true"/>
+  </cond>
   <for>
   </for>
 </skill>
