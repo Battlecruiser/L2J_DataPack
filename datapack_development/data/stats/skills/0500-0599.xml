@@ -723,6 +723,7 @@
   </for>
 </skill>
 <skill id="578" levels="4" name="Blaze Quake">
+  <set name="element" val="2"/> <!-- Fire -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -811,6 +812,7 @@
   </for>
 </skill>
 <skill id="589" levels="1" name="Darkness Energy Drain">
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>

@@ -92,6 +92,7 @@
 </skill>
 <skill id="7007" levels="4" name="Greater Seal of Flame">
   <!-- TODO -->
+  <set name="element" val="2"/> <!-- Fire -->
   <set name="mpConsume" val="153"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -215,6 +216,7 @@
   Description(s):
       none
 -->
+  <set name="element" val="2"/> <!-- Fire -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>

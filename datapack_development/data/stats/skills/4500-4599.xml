@@ -663,6 +663,7 @@ is increased and MP consumption is decreased. Effect 1-10-->
 <skill id="4562" levels="12" name="NPC Solar Flare">
 <!-- TODO -->
   <table name="#mpConsume"> 15 24 33 44 57 69 82 87 90 94 97 98 </table>
+  <set name="element" val="5"/> <!-- Holy -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -676,6 +677,7 @@ is increased and MP consumption is decreased. Effect 1-10-->
 <skill id="4563" levels="12" name="NPC Solar Flare - Magic">
 <!-- TODO -->
   <table name="#mpConsume"> 15 24 33 44 57 69 82 87 90 94 97 98 </table>
+  <set name="element" val="5"/> <!-- Holy -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -688,6 +690,7 @@ is increased and MP consumption is decreased. Effect 1-10-->
 </skill>
 <skill id="4564" levels="12" name="NPC Solar Flare - Slow">
 <!-- TODO -->
+  <set name="element" val="5"/> <!-- Holy -->
   <table name="#mpConsume"> 15 24 33 44 57 69 82 87 90 94 97 98 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_NONE"/>
@@ -756,6 +759,7 @@ is increased and MP consumption is decreased. Effect 1-10-->
 <skill id="4568" levels="12" name="NPC AE Solar Flare">
 <!-- TODO -->
   <table name="#mpConsume"> 22 37 49 67 84 104 122 129 135 140 144 145 </table>
+  <set name="element" val="5"/> <!-- Holy -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -769,6 +773,7 @@ is increased and MP consumption is decreased. Effect 1-10-->
 <skill id="4569" levels="12" name="NPC AE Solar Flare - Magic">
 <!-- TODO -->
   <table name="#mpConsume"> 22 37 49 67 84 104 122 129 135 140 144 145 </table>
+  <set name="element" val="5"/> <!-- Holy -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -782,6 +787,7 @@ is increased and MP consumption is decreased. Effect 1-10-->
 <skill id="4570" levels="12" name="NPC AE Solar Flare - Slow">
 <!-- TODO -->
   <table name="#mpConsume"> 22 37 49 67 84 104 122 129 135 140 144 145 </table>
+  <set name="element" val="5"/> <!-- Holy -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -799,7 +805,7 @@ is increased and MP consumption is decreased. Effect 1-10-->
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
-  <set name="element" val="2"/>
+  <set name="element" val="2"/> <!-- Fire -->
   <set name="reuseDelay" val="15000"/>
   <set name="hitTime" val="5000"/>
   <set name="skillType" val="MDAM"/>
