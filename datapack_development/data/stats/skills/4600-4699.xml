@@ -768,7 +768,6 @@
 <skill id="4640" levels="12" name="Sleep">
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="save" val="2"/>
   <set name="power" val="80"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="SLEEP"/>
@@ -905,7 +904,6 @@
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="save" val="3"/>
   <set name="power" val="#power"/>
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_AURA"/>
@@ -1444,7 +1442,6 @@
   <!-- Valakas Skills -->
   <set name="magicLvl" val="75"/>
   <set name="mpConsume" val="0"/>
-  <set name="save" val="3"/>
   <set name="power" val="499"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="1200"/>
@@ -1463,7 +1460,6 @@
   <!-- Valakas Skills -->
   <set name="magicLvl" val="75"/>
   <set name="mpConsume" val="0"/>
-  <set name="save" val="3"/>
   <set name="power" val="499"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="1700"/>
