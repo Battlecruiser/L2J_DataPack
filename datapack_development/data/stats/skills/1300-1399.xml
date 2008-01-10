@@ -1416,7 +1416,6 @@
   <!-- needs to remove pDef buffs on target -->
   <set name="mpInitialConsume" val="14"/>
   <set name="mpConsume" val="56"/>
-  <set name="save" val="4"/>
   <set name="magicLvl" val="77"/>
   <set name="power" val="80"/>
   <set name="lvlDepend" val="2"/>
@@ -1438,7 +1437,6 @@
   <!-- needs to remove speed buffs on target -->
   <set name="mpInitialConsume" val="14"/>
   <set name="mpConsume" val="56"/>
-  <set name="save" val="4"/>
   <set name="magicLvl" val="77"/>
   <set name="power" val="80"/>
   <set name="lvlDepend" val="2"/>
@@ -1460,7 +1458,6 @@
   <!-- needs to remove pDef buffs in target aura -->
   <set name="mpInitialConsume" val="21"/>
   <set name="mpConsume" val="84"/>
-  <set name="save" val="5"/>
   <set name="magicLvl" val="77"/>
   <set name="power" val="80"/>
   <set name="lvlDepend" val="1"/>
@@ -1483,7 +1480,6 @@
   <!-- needs to remove speed buffs in target aura -->
   <set name="mpInitialConsume" val="22"/>
   <set name="mpConsume" val="85"/>
-  <set name="save" val="5"/>
   <set name="magicLvl" val="78"/>
   <set name="power" val="80"/>
   <set name="lvlDepend" val="1"/>
@@ -1772,7 +1768,6 @@
 <skill id="1376" levels="1" name="Heroic Dread">
 <!-- Done by KID -->
   <set name="mpConsume" val="109"/>
-  <set name="save" val="2"/>
   <set name="power" val="80"/>
   <set name="magicLvl" val="78"/>
   <set name="lvlDepend" val="1"/> 
@@ -2122,7 +2117,6 @@
 <!-- Done by KID -->
   <table name="#mpConsume"> 27 28 28 29 30 32 33 33 34 35 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="save" val="2"/>
   <set name="power" val="80"/>
   <set name="lvlDepend" val="2"/>
   <!-- reuse delay should be "nearly instant" -->

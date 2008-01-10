@@ -89,7 +89,6 @@
   Description(s):
       Curse of the Pig: Instantly reduces Speed. Effect 1.
 -->
-  <set name="save" val="5"/>
   <set name="power" val="542.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2200"/>
@@ -111,7 +110,6 @@
       Curse of the Pig: Instantly reduces Atk. Spd. Effect 1.
 -->
   <set name="lvlDepend" val="1"/>
-  <set name="save" val="5"/>
   <set name="power" val="10"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
@@ -336,7 +334,6 @@
   <set name="lvlDepend" val="1"/>
   <set name="power" val="47895.0"/>
   <set name="mpConsume" val="192"/>
-  <set name="save" val="4"/>
   <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4500"/>
