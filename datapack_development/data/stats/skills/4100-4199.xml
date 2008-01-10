@@ -227,7 +227,6 @@
   <set name="power" val="10"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="700"/>
-  <set name="element" val="4"/>
   <set name="overHit" val="true"/>
   <set name="coolTime" val="1800"/>
   <set name="hitTime" val="3200"/>
@@ -621,7 +620,7 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
-  <set name="element" val="3"/>
+  <set name="element" val="3"/> <!-- Water -->
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MDAM"/>
@@ -884,7 +883,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="element" val="1"/>
+  <set name="element" val="1"/> <!-- Wind -->
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="3000"/>
@@ -1565,13 +1564,14 @@
   <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
   <table name="#power"> 21.0 31.0 43.0 58.0 75.0 92.0 108.0 115.0 121.0 125.0 129.0 132.0 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+  <set name="element" val="1"/> <!-- Wind -->
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
+  <set name="reuseDelay" val="0"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="750"/>
@@ -1646,8 +1646,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="1"/>
-  <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
+  <set name="element" val="1"/> <!-- Wind -->
+  <set name="reuseDelay" val="0"/>
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>

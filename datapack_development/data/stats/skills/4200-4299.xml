@@ -814,7 +814,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
+  <set name="element" val="1"/> <!-- Wind -->
+  <set name="reuseDelay" val="0"/>
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
@@ -941,8 +942,8 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
-  <set name="element" val="3"/>
-  <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
+  <set name="element" val="3"/> <!-- Water -->
+  <set name="reuseDelay" val="0"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
@@ -1018,7 +1019,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="1"/>
+  <set name="element" val="1"/> <!-- Wind -->
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MDAM"/>

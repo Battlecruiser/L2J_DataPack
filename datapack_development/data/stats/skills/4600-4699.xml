@@ -514,6 +514,7 @@
 <skill id="4630" levels="12" name="NPC MR - Twister">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+  <set name="element" val="1"/> <!-- Wind -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>

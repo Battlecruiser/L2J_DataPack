@@ -690,6 +690,7 @@
   <table name="#mpConsume_Init"> 28 31 35 38 41 46 49 52 55 </table>
   <table name="#mpConsume"> 111 123 137 150 163 183 195 207 217 </table>
   <table name="#itemConsumeCount"> 8 12 12 16 16 20 24 24 28 </table>
+  <set name="element" val="3"/> <!-- Water -->
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="1458"/>
@@ -984,7 +985,7 @@
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="6000"/>
-  <set name="element" val="3"/>
+  <set name="element" val="3"/> <!-- Water -->
   <set name="reuseDelay" val="60000"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
