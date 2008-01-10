@@ -91,7 +91,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="2"/>
+  <set name="element" val="2"/> <!-- Fire -->
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="DOT"/>
@@ -492,7 +492,6 @@
   <set name="power" val="14000.0"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="600"/>
-  <set name="element" val="2"/>
   <set name="coolTime" val="1700"/>
   <set name="hitTime" val="2300"/>
   <set name="skillType" val="PDAM"/>
@@ -802,7 +801,7 @@
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
-  <set name="element" val="1"/>
+  <set name="element" val="1"/> <!-- Wind -->
   <set name="reuseDelay" val="3000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
@@ -924,7 +923,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="2"/>
+  <set name="element" val="2"/> <!-- Fire -->
   <set name="reuseDelay" val="3000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MDAM"/>
@@ -1665,8 +1664,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="3"/>
-  <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
+  <set name="reuseDelay" val="0"/>
   <set name="hitTime" val="2300"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
