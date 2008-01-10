@@ -73,7 +73,7 @@ class Quest (JQuest) :
             st.takeItems(Talisman,-1)
         elif event == "30717-07.htm" :
             st.set("cond","17")
-        elif event == "30720-07.htm" :
+        elif event == "30720-03.htm" :
             st.set("cond","18")
         elif event == "32220-19.htm" :
             st.set("cond","19")
@@ -136,7 +136,7 @@ class Quest (JQuest) :
             elif cond == 11 :
                 htmltext = "32220-11.htm"
             elif cond == 18 :
-                htmltext = "32220-11.htm"
+                htmltext = "32220-12.htm"
             elif cond == 19 :
                 htmltext = "32220-19.htm"
             elif cond == 20 :
