@@ -100,18 +100,24 @@ class Quest (JQuest):
         if race == 0:
            st.giveItems(ANIMAL_SLAYER_LIST1,1)
            htmltext = "419_slay_0.htm"
-        if race == 1:
+        elif race == 1:
            st.giveItems(ANIMAL_SLAYER_LIST2,1)
            htmltext = "419_slay_1.htm"
-        if race == 2:
+        elif race == 2:
            st.giveItems(ANIMAL_SLAYER_LIST3,1)
            htmltext = "419_slay_2.htm"
-        if race == 3:
+        elif race == 3:
            st.giveItems(ANIMAL_SLAYER_LIST4,1)
            htmltext = "419_slay_3.htm"
-        if race == 4:
+        elif race == 4:
            st.giveItems(ANIMAL_SLAYER_LIST5,1)
            htmltext = "419_slay_4.htm"
+        elif race == 5:
+          htmltext = "<html><body>We are sorry, but this quest is not yet available for Kamaels</body></html>"
+          st.exitQuest(1)
+        else :
+          htmltext = "Error: unknown race..."
+          st.exitQuest(1)
         st.playSound("ItemSound.quest_accept")
         return htmltext
       elif event == "disagree" :
