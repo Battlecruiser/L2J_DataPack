@@ -146,8 +146,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="1"/>
-  <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
+  <set name="reuseDelay" val="0"/>
   <set name="hitTime" val="4500"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -349,7 +348,7 @@
   <set name="magicLvl" val="60"/>
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_NONE"/>
-  <set name="element" val="6"/>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="coolTime" val="2000"/>
   <set name="hitTime" val="2000"/>
   <set name="skillRadius" val="100"/>
@@ -630,7 +629,6 @@
   <set name="power" val="72.0"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
-  <set name="element" val="3"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MDAM"/>
@@ -792,8 +790,8 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="3"/>
-  <set name="reuseDelay" val="8000"/> <!-- SHOULD BE 0 -->
+  <set name="element" val="3"/> <!-- Water -->
+  <set name="reuseDelay" val="0"/>
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
