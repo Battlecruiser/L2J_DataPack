@@ -366,6 +366,7 @@
 <skill id="4621" levels="12" name="NPC AE - 80% HP Drain">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -383,6 +384,7 @@
 <skill id="4622" levels="12" name="NPC AE - 80% HP Drain - Magic">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -400,6 +402,7 @@
 <skill id="4623" levels="12" name="NPC AE - 80% HP Drain - Slow">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
   <table name="#mpConsume"> 22 34 48 64 83 102 119 127 133 138 140 143 </table>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -493,6 +496,7 @@
 <skill id="4629" levels="12" name="NPC MR - HP Drain">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -966,6 +970,7 @@
 <skill id="4653" levels="12" name="NPC Corpse Life Drain">
   <table name="#drain"> 131 201 271 351 451 551 651 691 731 751 771 781 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_CORPSE"/>
@@ -1028,6 +1033,7 @@
 <skill id="4657" levels="12" name="Hold">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
   <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1046,6 +1052,7 @@
 <skill id="4658" levels="12" name="Hold">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
   <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1064,6 +1071,7 @@
 <skill id="4659" levels="12" name="Hold">
   <table name="#power"> 9 13 19 26 34 43 51 55 58 61 63 65 </table>
   <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1082,6 +1090,7 @@
 <skill id="4660" levels="12" name="Sleep">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
   <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1098,6 +1107,7 @@
 <skill id="4661" levels="12" name="Sleep">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
   <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1116,6 +1126,7 @@
 <skill id="4662" levels="12" name="Sleep">
   <table name="#power"> 9 13 19 26 34 43 51 55 58 61 63 65 </table>
   <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1146,6 +1157,7 @@
 <skill id="4664" levels="12" name="NPC 100% HP Drain">
   <table name="#power"> 12 18 25 35 46 57 68 73 78 81 84 86 </table>
   <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1163,6 +1175,7 @@
 <skill id="4665" levels="12" name="NPC 100% HP Drain - Magic">
   <table name="#power"> 12 18 25 35 46 57 68 73 78 81 84 86 </table>
   <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1180,6 +1193,7 @@
 <skill id="4666" levels="12" name="NPC 100% HP Drain - Slow">
   <table name="#power"> 6 9 13 18 23 29 34 37 39 41 42 43 </table>
   <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1197,6 +1211,7 @@
 <skill id="4667" levels="12" name="NPC Strong 100% HP Drain">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
   <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1214,6 +1229,7 @@
 <skill id="4668" levels="12" name="NPC Strong 100% HP Drain - Magic">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
   <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1231,6 +1247,7 @@
 <skill id="4669" levels="12" name="NPC Strong 100% HP Drain - Slow">
   <table name="#power"> 9 13 19 26 34 43 51 55 58 61 63 65 </table>
   <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1448,7 +1465,7 @@
   <set name="coolTime" val="2000"/>
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="MDAM"/>
-  <set name="element" val="2"/>
+  <set name="element" val="2"/> <!-- Fire -->
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
@@ -1466,7 +1483,7 @@
   <set name="coolTime" val="2000"/>
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="MDAM"/>
-  <set name="element" val="2"/>
+  <set name="element" val="2"/> <!-- Fire -->
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -1483,6 +1500,7 @@
   <set name="skillRadius" val="1000"/>
   <set name="coolTime" val="1000"/>
   <set name="hitTime" val="3000" />
+  <set name="element" val="2"/> <!-- Fire -->
   <set name="skillType" val="PDAM" />
   <set name="operateType" val="OP_ACTIVE" />
   <set name="castRange" val="-1" />
@@ -1498,6 +1516,7 @@
   <set name="target" val="TARGET_AURA" />
   <set name="skillRadius" val="500"/>
   <set name="hitTime" val="0" />
+  <set name="element" val="2"/> <!-- Fire -->
   <set name="skillType" val="MDAM" />
   <set name="operateType" val="OP_ACTIVE" />
   <set name="castRange" val="-1" />
@@ -1512,6 +1531,7 @@
   <set name="power" val="0.0" />
   <set name="target" val="TARGET_AURA" />
   <set name="hitTime" val="3000" />
+  <set name="element" val="2"/> <!-- Fire -->
   <set name="skillType" val="PDAM" />
   <set name="operateType" val="OP_ACTIVE" />
   <set name="castRange" val="-1" />
@@ -1565,6 +1585,7 @@
   <set name="skillRadius" val="300"/>
   <set name="coolTime" val="2000"/>
   <set name="hitTime" val="8000" />
+  <set name="element" val="2"/> <!-- Fire -->
   <set name="skillType" val="MDAM" />
   <set name="operateType" val="OP_ACTIVE" />
   <set name="castRange" val="-1" />

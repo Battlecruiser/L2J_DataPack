@@ -40,6 +40,7 @@
    7  8  8  9 10 10 11 12 12 13
   14 14 15 16 16 17 18 18 19 20
   </table>
+  <set name="element" val="4"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="0.0"/>
@@ -1060,6 +1061,7 @@
   </for>
 </skill>
 <skill id="341" levels="1" name="Touch of Life">
+  <set name="element" val="5"/> <!-- Holy -->
   <set name="hpConsume" val="1216"/>
   <set name="power" val="50"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1636,6 +1638,7 @@
   </for>
 </skill>
 <skill id="367" levels="1" name="Dance of Medusa">
+  <set name="element" val="4"/>
   <set name="magicLvl" val="77"/>
   <set name="mpConsume" val="53"/>
   <set name="weaponsAllowed" val="512"/>

@@ -853,6 +853,7 @@
    7  8  8  9 10 10 11 12 12 13
   14 14 15 16 16 17 18 18 19 20
   </table>
+  <set name="element" val="4"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="0.0"/>
@@ -1795,7 +1796,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="2"/>
+  <set name="element" val="2"/> <!-- Fire -->
   <set name="ignoreShld" val="true"/>
   <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>
@@ -2077,7 +2078,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="6"/>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="reuseDelay" val="15000"/>
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="DRAIN"/>

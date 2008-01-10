@@ -446,6 +446,7 @@
   Description(s):
       Consecutive strikes inflict a great amount of fire damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
 -->
+  <set name="element" val="2"/> <!-- Fire -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -502,6 +503,7 @@
   Description(s):
       Consecutive strikes inflict a great amount of dark damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
 -->
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -999,6 +1001,7 @@
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
 -->
+  <set name="element" val="2"/> <!-- Fire -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
