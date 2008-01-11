@@ -300,7 +300,7 @@ class Quest (JQuest) :
 
 
   def onTalk (self,npc,player):
-    htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
+    htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
@@ -332,9 +332,11 @@ class Quest (JQuest) :
         st.exitQuest(1)
       return htmltext
     elif player.getClan() and player.getClan().getLevel() >= 5:        # player has level 5 clan already
-      return "<html><body>This quest has already been State.COMPLETED.</body></html>"
+      return "<html><body>This quest has already been completed.</body></html>"
+
     elif id == State.COMPLETED:                                  # player has proof, and has finished quest as leader
-      return "<html><body>This quest has already been State.COMPLETED.</body></html>"
+      return "<html><body>This quest has already been completed.</body></html>"
+
     else:
       ######## Leader Area ######
       if isLeader:

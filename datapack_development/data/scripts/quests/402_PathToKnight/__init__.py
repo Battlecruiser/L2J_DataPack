@@ -13,7 +13,7 @@ SWORD_OF_RITUAL,COIN_OF_LORDS1,COIN_OF_LORDS2,COIN_OF_LORDS3,COIN_OF_LORDS4,COIN
 BUGBEAR_NECKLACE,EINHASAD_CHURCH_MARK1,EINHASAD_CRUCIFIX,GLUDIO_GUARDS_MARK2,POISON_SPIDER_LEG1,EINHASAD_CHURCH_MARK2,LIZARDMAN_TOTEM,\
 GLUDIO_GUARDS_MARK3,GIANT_SPIDER_HUSK,EINHASAD_CHURCH_MARK3,HORRIBLE_SKULL = range(1161,1180)
 
-default = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>" 
+default = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>" 
 
 DROPLIST={
    20775:[GLUDIO_GUARDS_MARK1,BUGBEAR_NECKLACE,10,100],
@@ -122,7 +122,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
+   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -136,7 +136,8 @@ class Quest (JQuest) :
    church_mark1,church_mark2,church_mark3=st.getQuestItemsCount(EINHASAD_CHURCH_MARK1),st.getQuestItemsCount(EINHASAD_CHURCH_MARK2),st.getQuestItemsCount(EINHASAD_CHURCH_MARK3)
    cond = st.getInt("cond")
    if id == State.COMPLETED:
-      htmltext="<html><body>This quest has already been State.COMPLETED.</body></html>"
+      htmltext="<html><body>This quest has already been completed.</body></html>"
+
    elif npcId == 30417 :
       if cond==0 :
          htmltext = "30417-01.htm"

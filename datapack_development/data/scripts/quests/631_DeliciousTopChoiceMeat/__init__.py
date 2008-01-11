@@ -47,7 +47,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if st :
         npcId = npc.getNpcId()
-        htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
+        htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
         id = st.getState()
         cond = st.getInt("cond")
         if cond == 0 :

@@ -21,7 +21,7 @@ MSTONE,K_HORN,CH_SKULL=range(5887,5890)
 REWARDS = [5348,5350,5352]
  
 #Messages
-default   = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
+default   = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
  
 #NPCs
 MANAKIA = 30515

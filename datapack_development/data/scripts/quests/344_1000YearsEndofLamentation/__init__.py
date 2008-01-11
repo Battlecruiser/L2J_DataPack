@@ -23,7 +23,7 @@ ORVEN = 30857
 KAIEN = 30623
 GARVARENTZ = 30704
 
-default = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
+default = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
 
 def rewards(st,npcId):
     state=False
@@ -126,7 +126,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onTalk (self,npc,player):
-     htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
+     htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
      st = player.getQuestState(qn)
      if not st : return htmltext
 

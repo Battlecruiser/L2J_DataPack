@@ -39,7 +39,7 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player):
    st = player.getQuestState(qn)
-   htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>" 
+   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>" 
    if not st: return htmltext
 
    npcId = npc.getNpcId()
@@ -63,7 +63,7 @@ class Quest (JQuest) :
        htmltext = "<html><body>Quest for characters level 2 and above.</body></html>" 
        st.exitQuest(1) 
    elif npcId == DARIN and cond == 0 and onlyone == 1 : 
-     htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+     htmltext = "<html><body>This quest has already been completed.</body></html>"
    elif id == State.STARTED :
        if npcId == ROXXY and cond and onlyone == 0: 
          if ItemsCount_RK == 0 and ItemsCount_DL : 
