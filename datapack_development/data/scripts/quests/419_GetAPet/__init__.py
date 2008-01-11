@@ -15,7 +15,7 @@ REQUIRED_SPIDER_LEGS = 50
 #Quest items
 ANIMAL_LOVERS_LIST1,ANIMAL_SLAYER_LIST1,ANIMAL_SLAYER_LIST2,ANIMAL_SLAYER_LIST3,\
 ANIMAL_SLAYER_LIST4,ANIMAL_SLAYER_LIST5,SPIDER_LEG1,SPIDER_LEG2,SPIDER_LEG3,    \
-SPIDER_LEG4,SPIDER_LEG5 = range(3417,3428)
+SPIDER_LEG4,SPIDER_LEG5,ANIMAL_SLAYER_LIST6,SPIDER_LEG6 = range(3417,3428)+range(10164,10166)
 #Chance of drop in %
 SPIDER_LEG_DROP = 100
 #mobs
@@ -38,6 +38,8 @@ SPIDER_O3 = 20478 # Kasha Blade Spider
 #5 dwarves
 SPIDER_D1 = 20403 # Hunter Tarantula
 SPIDER_D2 = 20508 # Plunder Tarantula
+#6 kamael
+SPIDER_K1 = 22244 # Crimson Spider
 
 #NPCs
 PET_MANAGER_MARTIN = 30731
@@ -56,6 +58,7 @@ def getCount_proof(st) :
   if race == 2: proofs = st.getQuestItemsCount(SPIDER_LEG3)
   if race == 3: proofs = st.getQuestItemsCount(SPIDER_LEG4)
   if race == 4: proofs = st.getQuestItemsCount(SPIDER_LEG5)
+  if race == 5: proofs = st.getQuestItemsCount(SPIDER_LEG6)
   return proofs
 
 def check_questions(st) :
@@ -84,7 +87,7 @@ class Quest (JQuest):
 
   def __init__(self,id,name,descr):
     JQuest.__init__(self,id,name,descr)
-    self.questItemIds = range(3417,3428)
+    self.questItemIds = range(3417,3428)+range(10164,10166)
 
   def onEvent (self,event,st):
     id = st.getState()
@@ -112,9 +115,9 @@ class Quest (JQuest):
         elif race == 4:
            st.giveItems(ANIMAL_SLAYER_LIST5,1)
            htmltext = "419_slay_4.htm"
-        elif race == 5:
-          htmltext = "<html><body>We are sorry, but this quest is not yet available for Kamaels</body></html>"
-          st.exitQuest(1)
+        if race == 5:
+           st.giveItems(ANIMAL_SLAYER_LIST6,1)
+           htmltext = "419_slay_5.htm"
         else :
           htmltext = "Error: unknown race..."
           st.exitQuest(1)
@@ -177,7 +180,7 @@ class Quest (JQuest):
             return "419_pending_slay.htm"
          else :
             st.set("progress","SLAYED")
-            st.clearQuestDrops()
+#            st.clearQuestDrops()
             st.set("progress","0")
             race = player.getRace().ordinal()
             if race == 0:
@@ -192,9 +195,12 @@ class Quest (JQuest):
             elif race == 3:
                 st.takeItems(SPIDER_LEG4,REQUIRED_SPIDER_LEGS)
                 st.takeItems(ANIMAL_SLAYER_LIST4,1)
-            else:
+            elif race == 4:
                 st.takeItems(SPIDER_LEG5,REQUIRED_SPIDER_LEGS)
                 st.takeItems(ANIMAL_SLAYER_LIST5,1)
+            elif race == 5:
+                st.takeItems(SPIDER_LEG6,REQUIRED_SPIDER_LEGS)
+                st.takeItems(ANIMAL_SLAYER_LIST6,1)
             return "Slayed.htm"
       if id == State.STARTED and st.get("progress")=="SLAYED" :
         if st.getInt("progress") == 7 :
@@ -237,6 +243,9 @@ class Quest (JQuest):
          if race == 4 :
             npcs = [ SPIDER_D1, SPIDER_D2 ]
             item = SPIDER_LEG5
+         if race == 5 :
+            npcs = [ SPIDER_K1 ]
+            item = SPIDER_LEG6
          if npcId in npcs :
             chance = SPIDER_LEG_DROP * Config.RATE_DROP_QUEST
             numItems, chance = divmod(chance,100)
@@ -259,7 +268,7 @@ QUEST       = Quest(419, qn, "Wolf Collar")
 QUEST.addStartNpc(PET_MANAGER_MARTIN)
 
 # Quest mob initialization
-for mob in [SPIDER_H1,SPIDER_H2,SPIDER_H3,SPIDER_LE1,SPIDER_LE2,SPIDER_LE3,SPIDER_DE1,SPIDER_DE2,SPIDER_DE3,SPIDER_O1,SPIDER_O2,SPIDER_O3,SPIDER_D1,SPIDER_D2]:
+for mob in [SPIDER_H1,SPIDER_H2,SPIDER_H3,SPIDER_LE1,SPIDER_LE2,SPIDER_LE3,SPIDER_DE1,SPIDER_DE2,SPIDER_DE3,SPIDER_O1,SPIDER_O2,SPIDER_O3,SPIDER_D1,SPIDER_D2,SPIDER_K1]:
     QUEST.addKillId(mob)
 
 # Quest NPC initialization
