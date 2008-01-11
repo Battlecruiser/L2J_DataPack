@@ -11,6 +11,7 @@
 </skill>
 <skill id="7001" levels="1" name="Dispel Buff">
   <!-- TODO -->
+  <set name="save" val="3"/>
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="POISON"/>
@@ -24,6 +25,7 @@
 </skill>
 <skill id="7002" levels="1" name="Dispel Debuff">
   <!-- TODO -->
+  <set name="save" val="3"/>
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="POISON"/>
@@ -92,7 +94,6 @@
 </skill>
 <skill id="7007" levels="4" name="Greater Seal of Flame">
   <!-- TODO -->
-  <set name="element" val="2"/> <!-- Fire -->
   <set name="mpConsume" val="153"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -216,7 +217,6 @@
   Description(s):
       none
 -->
-  <set name="element" val="2"/> <!-- Fire -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -231,7 +231,6 @@
   Description(s):
       none
 -->
-  <set name="element" val="3"/> <!-- Water -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -326,7 +325,7 @@
 <skill id="7041" levels="1" name="Master's Blessing - Focus">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Increases critical attack rate temporarily. Effect 3.
 -->
@@ -335,7 +334,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -351,7 +350,7 @@
 <skill id="7042" levels="1" name="Master's Blessing - Death Whisper">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Increases critical attack rate temporarily. Effect 3.
 -->
@@ -360,7 +359,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -376,7 +375,7 @@
 <skill id="7043" levels="1" name="Master's Blessing - Haste">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Increases Atk. Spd. temporarily. Effect 2.
 -->
@@ -385,7 +384,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -401,7 +400,7 @@
 <skill id="7044" levels="1" name="Master's Blessing - Guidance">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Increases Accuracy temporarily. Effect 3.
 -->
@@ -410,7 +409,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -426,7 +425,7 @@
 <skill id="7045" levels="1" name="Master's Blessing - Blessed Body">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Increases maximum HP temporarily. Effect 6.
 -->
@@ -435,7 +434,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -451,7 +450,7 @@
 <skill id="7046" levels="1" name="Master's Blessing - Blessed Soul">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Increases maximum MP temporarily. Effect 6.
 -->
@@ -460,7 +459,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -476,7 +475,7 @@
 <skill id="7047" levels="1" name="Master's Blessing - Agility">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Increases Evasion temporarily. Effect 3.
 -->
@@ -485,7 +484,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -501,7 +500,7 @@
 <skill id="7048" levels="1" name="Master's Blessing - Acumen">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Increases Casting Spd. temporarily. Effect 3.
 -->
@@ -510,7 +509,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -526,7 +525,7 @@
 <skill id="7049" levels="1" name="Master's Blessing - Decrease Weight">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Reduces current weight. Effect 3.
 -->
@@ -535,7 +534,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -551,7 +550,7 @@
 <skill id="7050" levels="1" name="Master's Blessing - Might">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Increases P. Atk. temporarily. Effect 3.
 -->
@@ -560,7 +559,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -576,7 +575,7 @@
 <skill id="7051" levels="1" name="Master's Blessing - Shield">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Increases P. Def. temporarily. Effect 3.
 -->
@@ -585,7 +584,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -601,7 +600,7 @@
 <skill id="7052" levels="1" name="Master's Blessing - Magic Barrier">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Increases M. Def. temporarily. Effect 3.
 -->
@@ -610,7 +609,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -626,7 +625,7 @@
 <skill id="7053" levels="1" name="Master's Blessing - Vampiric Rage">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Temporarily increases the amount of HP absorbed from damage done to a target. Excludes damage from skills or ranged attacks. Effect 4.
 -->
@@ -635,7 +634,7 @@
   <set name="power" val="0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -651,7 +650,7 @@
 <skill id="7054" levels="1" name="Master's Blessing - Empower">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Increases M. Atk. temporarily. Effect 3.
 -->
@@ -660,7 +659,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -676,7 +675,7 @@
 <skill id="7055" levels="1" name="Master's Blessing - Wind Walk">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Increases Speed temporarily. Effect 2.
 -->
@@ -685,7 +684,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -701,7 +700,7 @@
 <skill id="7056" levels="1" name="Master's Blessing - Berserker Spirit">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Temporarily reduces P. Def., M. Def. and Evasion, and increases P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed. Effect 2.
 -->
@@ -717,7 +716,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -740,7 +739,7 @@
 <skill id="7057" levels="1" name="Master's Blessing - Greater Might">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Temporarily increases the target's P. Atk. Effect 3.
 -->
@@ -748,7 +747,7 @@
   <set name="mpConsume" val="2"/>
   <set name="power" val="0.0"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -764,14 +763,14 @@
 <skill id="7058" levels="1" name="Master's Blessing - Greater Shield">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side.  Temporarily increases the target's P. Def. Effect 3.
 -->
   <table name="#rate"> 1.15 </table>
   <set name="mpConsume" val="2"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -787,7 +786,7 @@
 <skill id="7059" levels="1" name="Master's Blessing - Wild Magic">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side.  Temporarily increases the critical attack rate for magic attacks. Effect 2.
 -->
@@ -796,7 +795,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -812,7 +811,7 @@
 <skill id="7060" levels="1" name="Master's Blessing - Clarity">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. Temporarily decreases the target's MP consumption for skills. Effect 3.
 -->
@@ -820,7 +819,7 @@
   <table name="#mpConsume"> 2 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -836,7 +835,7 @@
 <skill id="7061" levels="1" name="Master's Blessing - Prophecy of Water">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. The spirit of an ancient wizard temporarily possesses the target.
 -->
@@ -844,7 +843,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="120000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -866,7 +865,7 @@
 <skill id="7062" levels="1" name="Master's Blessing - Prophecy of Fire">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. The spirit of an ancient warrior temporarily possesses the target.
 -->
@@ -874,7 +873,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="120000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -897,7 +896,7 @@
 <skill id="7063" levels="1" name="Master's Blessing - Prophecy of Wind">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. The spirit of an ancient assassin temporarily possesses the target.
 -->
@@ -905,7 +904,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="120000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -935,7 +934,7 @@
 <skill id="7064" levels="1" name="Master's Blessing - Chant of Victory">
 <!--
   Needs to be verified. Edit by Shaka 19/09/2007
-
+ 
   Description(s):
       A GM is always by your side. The spirit of an ancient hero temporarily possesses the target.
 -->
@@ -943,7 +942,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="1200000"/>
-  <set name="hitTime" val="2500"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1151,4 +1150,4 @@
   <for>
   </for>
 </skill>
-</list>
+</list> 
