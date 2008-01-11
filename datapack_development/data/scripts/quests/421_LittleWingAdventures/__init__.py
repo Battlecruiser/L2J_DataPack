@@ -16,7 +16,7 @@ MIN_PLAYER_LEVEL = 45
 MAX_DISTANCE = 100
 
 #Messages
-default = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
+default = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
 event_1 = "<html><body>Sage Cronos:<br>Then go and see <font color=\"LEVEL\">Fairy Mimyu</font>, she will help you</body></html>"
 error_1 = "<html><body>You're suppossed to own a hatchling and have it summoned to complete this quest.</body></html>"
 error_2 = "<html><body>Hey! What happened with the other hatchling you had? This one is different.</body></html>"

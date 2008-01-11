@@ -190,7 +190,7 @@ class Quest (JQuest) :
       return htmltext
 
    def onTalk (self,npc,player):
-      htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
+      htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
       st = player.getQuestState(qn)
       if not st : return htmltext
 
@@ -198,7 +198,7 @@ class Quest (JQuest) :
       id = st.getState()
       if npcId != NPC[1] and id != State.STARTED : return htmltext
       
-      htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>" 
+      htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>" 
       id = st.getState()
       npcId = npc.getNpcId()
       Lara, Galatea, Almors, Camoniell, Belthus, Basilla, Celestiel, Brynthea = NPC
@@ -215,7 +215,8 @@ class Quest (JQuest) :
             htmltext = "30634-01.htm"
             st.exitQuest(1)
       elif id == State.COMPLETED:                     # quest already done, not repeatable
-         htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+         htmltext = "<html><body>This quest has already been completed.</body></html>"
+
       elif id == State.STARTED:
          step = st.getInt("step")             # stats as short vars if the player has state <Started>
          LaraPart = st.getInt("Lara_Part")

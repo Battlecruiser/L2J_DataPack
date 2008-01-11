@@ -41,7 +41,7 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     if not st : return htmltext    
     npcId=npc.getNpcId()
-    htmltext="<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>" 
+    htmltext="<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>" 
     id = st.getState()
     if id == State.CREATED :
       if st.getPlayer().getLevel() >= 75 :
@@ -59,7 +59,7 @@ class Quest (JQuest) :
             htmltext = "2.htm"
     elif id == State.COMPLETED:
       st.exitQuest(0)
-      htmltext = "<html><body>This quest have already been State.COMPLETED.</body></html>"
+      htmltext = "<html><body>This quest have already been completed.</body></html>"
     return htmltext    
 
 QUEST=Quest(110,qn,"To The Primeval Isle")

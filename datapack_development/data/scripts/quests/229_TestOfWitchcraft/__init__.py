@@ -185,7 +185,7 @@ class Quest (JQuest) :
 
 
   def onTalk (self,npc,player):
-    htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
+    htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
     
     st = player.getQuestState(qn)
     if not st : return htmltext
@@ -213,7 +213,8 @@ class Quest (JQuest) :
       return htmltext
     # already done
     elif id == State.COMPLETED:
-      return "<html><body>This quest has already been State.COMPLETED.</body></html>"
+      return "<html><body>This quest has already been completed.</body></html>"
+
     # in progress, player is working on the quest
     else:
       step = st.getInt("step")        # var init for easier working with it

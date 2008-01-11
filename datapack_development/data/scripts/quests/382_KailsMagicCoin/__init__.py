@@ -8,7 +8,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "382_KailsMagicCoin"
 
 #Messages
-default = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
+default = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
 #Quest items
 ROYAL_MEMBERSHIP = 5898
 #NPCs

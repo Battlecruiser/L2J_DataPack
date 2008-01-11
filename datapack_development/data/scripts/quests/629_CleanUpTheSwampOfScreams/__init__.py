@@ -27,7 +27,7 @@ CHANCE={
     21517:560
 }
 
-default="<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
+default="<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
 
 class Quest (JQuest) :
 
