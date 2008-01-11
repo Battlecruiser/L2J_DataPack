@@ -43,7 +43,7 @@ class Quest (JQuest) :
      #gladiator, darkAvenger, hawkeye,  sagitarius, phoenix knight, duelist
      elif pcId in [2, 6, 9, 92, 90, 88 ]:
        htmltext = "30026-09.htm"
-     st.setState(State.State.STARTED)
+     st.setState(State.STARTED)
    # All other Races and classes must be out
    else :
      st.exitQuest(1)
