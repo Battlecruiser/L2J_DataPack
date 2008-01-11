@@ -21,6 +21,8 @@ NPCS_MALE1=[32139,32196,32199]
 NPCS_MALE2=[32146,32205,32209,32213,32217,32221,32225,32229,32233]
 NPCS_FEMALE1=[32140,32193,32202]
 NPCS_FEMALE2=[32145,32206,32210,32214,32218,32222,32226,32230,32234]
+SHADOW_WEAPON_COUPON_DGRADE = 8869
+SHADOW_WEAPON_COUPON_CGRADE = 8870
 
 #Filenames are made with the lowest npcId from the NPCs list. Some scripts
 #contain generic dialogs for every npc to use, some others keep separate
@@ -32,10 +34,10 @@ preffix="32139"
 #ok_ni: level ok, but you don't have quest item
 #ok_i: level ok, you got quest item, class change takes place
 CLASSES = {
-    "DR":[125,123,5,20,"16","17","18","19",[GWAINS_RECOMMENTADION]],#m_kamael -> m_trooper
-    "WA":[126,124,5,20,"20","21","22","23",[STEELRAZOR_EVALUATION]], #f_kamael -> f_warder
-    "BE":[127,125,5,40,"24","25","26","27",[ORKURUS_RECOMMENDATION]], #m_trooper -> m_berserker
-    "AR":[130,126,5,40,"28","29","30","31",[KAMAEL_INQUISITOR_MARK]], #f_warder -> f_arbalester
+    "DR":[125,123,5,20,"16","17","18","19",[GWAINS_RECOMMENTADION],SHADOW_WEAPON_COUPON_DGRADE],#m_kamael -> m_trooper
+    "WA":[126,124,5,20,"20","21","22","23",[STEELRAZOR_EVALUATION],SHADOW_WEAPON_COUPON_DGRADE], #f_kamael -> f_warder
+    "BE":[127,125,5,40,"24","25","26","27",[ORKURUS_RECOMMENDATION],SHADOW_WEAPON_COUPON_CGRADE], #m_trooper -> m_berserker
+    "AR":[130,126,5,40,"28","29","30","31",[KAMAEL_INQUISITOR_MARK],SHADOW_WEAPON_COUPON_CGRADE], #f_warder -> f_arbalester
     }
 #Messages
 default = "No Quest"
@@ -66,7 +68,7 @@ class Quest (JQuest) :
    if not event in CLASSES.keys() :
      return event
    else :
-     newclass,req_class,req_race,req_level,low_ni,low_i,ok_ni,ok_i,req_item=CLASSES[event]
+     newclass,req_class,req_race,req_level,low_ni,low_i,ok_ni,ok_i,req_item,reward=CLASSES[event]
      if race == req_race and classid == req_class :
         item = True
         for i in req_item :
@@ -82,6 +84,7 @@ class Quest (JQuest) :
            else :
               suffix = ok_i
               change(st,player,newclass,req_item)
+              st.giveItems(reward,15)
      st.exitQuest(1)
      htmltext = preffix+"-"+suffix+".htm"
    return htmltext
