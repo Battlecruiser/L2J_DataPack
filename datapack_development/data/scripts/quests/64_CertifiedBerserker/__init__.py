@@ -153,7 +153,7 @@ class Quest (JQuest) :
                 else:
                     st.playSound("ItemSound.quest_itemget")
         elif npcId == Scavenger :
-            if not st.getQuestItemsCount(Plate) and st.getRandom(20) == 1 and cond == 2 :
+            if not st.getQuestItemsCount(Plate) and st.getRandom(20) == 1 and cond == 5 :
                 st.giveItems(Plate,1)
                 st.playSound("ItemSound.quest_middle")
                 st.set("cond","6")
