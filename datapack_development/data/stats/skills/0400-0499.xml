@@ -1142,7 +1142,7 @@
   <set name="skillType" val="CHARGE_EFFECT"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="isMagic" val="true"/>
+  <set name="isMagic" val="false"/>
   <cond msg="An equipped dual-sword weapon is required to use this skill.">
     <using kind="Dual Sword"/>
   </cond>
