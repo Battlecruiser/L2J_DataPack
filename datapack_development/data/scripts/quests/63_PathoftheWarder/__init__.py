@@ -63,8 +63,6 @@ class Quest (JQuest) :
             st.giveItems(Soul_E,1)
             st.set("cond","11")
             st.playSound("ItemSound.quest_middle")
-        elif event == "Despawn Tak" :
-            st.set("Tak","0")
         return htmltext
 
     def onTalk (self,npc,player):
@@ -84,7 +82,6 @@ class Quest (JQuest) :
                 htmltext = "32195-00.htm"
                 st.exitQuest(1)
             elif id == State.CREATED :
-                st.set("Tak","0")
                 htmltext = "32195-01.htm"
             elif cond == 1 :
                 htmltext = "32195-03.htm"
@@ -189,17 +186,14 @@ class Quest (JQuest) :
                 else:
                     st.playSound("ItemSound.quest_itemget")
         elif npcId == Lizard :
-            if not st.getQuestItemsCount(Soul_C) and not st.getInt("Tak") and st.getRandom(10) < 2 and cond == 11 :
+            if not st.getQuestItemsCount(Soul_C) and st.getRandom(10) < 2 and cond == 11 :
                 npc = st.addSpawn(Tak,180000)
-                st.set("Tak","1")
-                st.startQuestTimer("Despawn Tak",180000)
         elif npcId == Tak :
             if not st.getQuestItemsCount(Soul_C) and cond == 11 :
                 st.playSound("ItemSound.quest_middle")
                 st.takeItems(Soul_E,-1)
                 st.giveItems(Soul_C,1)
                 st.set("cond","12")
-                st.set("Tak","0")
         return
 
 QUEST       = Quest(63,qn,"Path of the Warder")
