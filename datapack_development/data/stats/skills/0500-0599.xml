@@ -17,12 +17,29 @@
   </for>
 </skill>
 <skill id="502" levels="5" name="Life to Soul">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<!--
+Need to verified. Done by akira35. Tweaked by Xantusq
+
+description(s) :
+     Cannibalizes your own life to increase your soul.
+-->
+
+<table name="#hpConsume"> 193 237 279 311 328 </table>
+<table name="#charges"> 1 2 3 4 5 </table>
+<set name="hpConsume" val="#hpConsume"/>
+<set name="target" val="TARGET_NONE"/>
+<set name="target" val="TARGET_SELF"/>
+<set name="reuseDelay" val="38000"/>
+<set name="hitTime" val="1200"/>
+<set name="skillType" val="NOTDONE"/>
+<set name="skillType" val="CHARGESOUL"/>
+<set name="operateType" val="OP_PASSIVE"/>
+<set name="operateType" val="OP_ACTIVE"/>
+<set name="castRange" val="-1"/>
+<set name="effectRange" val="-1"/>
+<set name="num_souls" val="#charges"/>
+<for>
+</for>
 </skill>
 <skill id="503" levels="3" name="Scorn">
   <set name="target" val="TARGET_NONE"/>
