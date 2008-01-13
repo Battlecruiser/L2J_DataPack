@@ -146,9 +146,11 @@ class Quest (JQuest) :
 
 QUEST      = Quest(1103, qn, "Teleports")
 
-for i in TELEPORTERS + range(31494,31508)+range(31095,31112)+range(31114,31125):
+for i in TELEPORTERS :
     QUEST.addStartNpc(i)
     QUEST.addTalkId(i)
-
+for k in range(31494,31508)+range(31095,31112)+range(31114,31125):
+    QUEST.addStartNpc(k)
+    QUEST.addTalkId(k)
 for j in TEMPLE_PRIEST :
     QUEST.addTalkId(j)
