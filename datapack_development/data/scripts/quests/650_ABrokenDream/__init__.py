@@ -48,7 +48,7 @@ class Quest (JQuest) :
                 st.exitQuest(1)
                 htmltext="100.htm"
             elif Ocean:
-                if Ocean.getState().getName() == 'State.COMPLETED':
+                if Ocean.getState() == 'State.COMPLETED':
                     htmltext="200.htm"
                 else :
                 	htmltext = "600.htm"#TODO: This is custom, need to get official text from retail
