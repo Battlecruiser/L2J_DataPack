@@ -245,6 +245,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+   <!-- SA: Focus -->
+   <add val='86' order='0x40' stat='rCrit'/>
   </for>
 </item>
 
@@ -280,6 +282,8 @@
    <set val='350' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+        <!-- SA: Critical Damage -->
+   <add val='174' order='0x40' stat='cAtk'/>
   </for>
 </item>
 
@@ -292,6 +296,8 @@
    <set val='350' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Focus -->
+   <add val='86' order='0x40' stat='rCrit'/>
   </for>
 </item>
 
@@ -326,6 +332,8 @@
    <set val='303' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Guidance -->
+   <add val='5' order='0x40' stat='accCombat'/>
   </for>
 </item>
 
@@ -337,6 +345,8 @@
    <set val='303' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Evasion -->
+   <add val='2' order='0x40' stat='rEvas'/>
   </for>
 </item>
 
@@ -348,6 +358,8 @@
    <set val='303' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Quick Recovery -->
+   <mul val='0.83' order='0x30' stat='atkReuse'/>
   </for>
 </item>
 
@@ -370,6 +382,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Guidance -->
+   <add val='6' order='0x40' stat='accCombat'/>
   </for>
 </item>
 
@@ -381,6 +395,12 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Back Blow -->
+   <add order='0x40' stat='rCrit' val='56'>
+     <and>
+       <player behind='True'/>
+     </and>
+   </add>
   </for>
 </item>
 
@@ -392,6 +412,12 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Rsk. Evasion -->
+   <add order='0x40' stat='rEvas' val='7'>
+     <and>
+       <player hp='60'/>
+     </and>
+   </add>
   </for>
 </item>
 
@@ -414,6 +440,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Focus -->
+   <add val='82' order='0x40' stat='rCrit'/>
   </for>
 </item>
 
@@ -425,6 +453,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Critical Damage -->
+   <add val='194' order='0x40' stat='cAtk'/>
   </for>
 </item>
 
@@ -436,6 +466,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Haste -->
+   <mul val='1.07' order='0x30' stat='pAtkSpd'/>
   </for>
 </item>
 
@@ -458,6 +490,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Critical Damage -->
+   <add val='194' order='0x40' stat='cAtk'/>
   </for>
 </item>
 
@@ -469,6 +503,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- Critical Poison -->
+   <skill onCrit='1' id='1168' lvl='4' chance='15'/>
   </for>
 </item>
 
@@ -480,6 +516,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+   <!-- SA: Haste -->
+   <mul val='1.07' order='0x30' stat='pAtkSpd'/>
   </for>
 </item>
 
@@ -502,6 +540,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Focus -->
+   <add val='82' order='0x40' stat='rCrit'/>
   </for>
 </item>
 
@@ -513,6 +553,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- Critical Drain --> 
+   <skill onCrit='1' id='3022' lvl='2'/>
   </for>
 </item>
 
@@ -524,6 +566,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- Critical Poison -->    
+   <skill onCrit='1' id='1168' lvl='4' chance='15'/>
   </for>
 </item>
 
@@ -546,6 +590,8 @@
    <set val='303' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Guidance -->
+   <add val='5' order='0x40' stat='accCombat'/>
   </for>
 </item>
 
@@ -557,6 +603,12 @@
    <set val='303' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!--SA: Miser--> 
+   <set val='7' order='0x08' stat='soulShotCount'> 
+      <and>
+         <game chance="30"/> 
+      </and> 
+   </set>
   </for>
 </item>
 
@@ -568,6 +620,8 @@
    <set val='303' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Quick Recovery -->
+   <mul val='0.8' order='0x30' stat='atkReuse'/>
   </for>
 </item>
 
@@ -590,6 +644,8 @@
    <set val='303' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Evasion -->
+   <add val='2' order='0x40' stat='rEvas'/>
   </for>
 </item>
 
@@ -601,6 +657,12 @@
    <set val='303' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!--SA: Miser--> 
+   <set val='7' order='0x08' stat='soulShotCount'> 
+      <and>
+         <game chance="30"/> 
+      </and> 
+   </set>
   </for>
 </item>
 
@@ -612,6 +674,12 @@
    <set val='303' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Cheap Shot -->
+   <set val='2' order='0x08' stat='MpConsume'> 
+      <and>
+         <game skill="false" chance="12"/> 
+      </and> 
+   </set>
   </for>
 </item>
 
@@ -634,6 +702,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Guidance -->
+   <add val='5' order='0x40' stat='accCombat'/>
   </for>
 </item>
 
@@ -645,6 +715,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Focus -->
+   <add val='77' order='0x40' stat='rCrit'/>
   </for>
 </item>
 
@@ -656,6 +728,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Critical Damage -->
+   <add val='213' order='0x40' stat='cAtk'/>
   </for>
 </item>
 
@@ -678,6 +752,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Focus -->
+   <add val='77' order='0x40' stat='rCrit'/>
   </for>
 </item>
 
@@ -689,6 +765,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Health -->
+   <mul val='1.25' order='0x30' stat='maxHp'/>
   </for>
 </item>
 
@@ -700,6 +778,12 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Rsk. Haste -->
+   <mul order='0x30' stat='pAtkSpd' val='1.12'>
+     <and>
+       <player hp='60'/>
+     </and>
+   </mul>
   </for>
 </item>
 
@@ -722,6 +806,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Focus -->
+   <add val='77' order='0x40' stat='rCrit'/>
   </for>
 </item>
 
@@ -733,6 +819,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Critical Damage -->
+   <add val='213' order='0x40' stat='cAtk'/>
   </for>
 </item>
 
@@ -744,6 +832,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Haste -->
+   <mul val='1.07' order='0x30' stat='pAtkSpd'/>
   </for>
 </item>
 
@@ -766,6 +856,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Health -->
+   <mul val='1.25' order='0x30' stat='maxHp'/>
   </for>
 </item>
 
@@ -777,6 +869,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Focus -->
+   <add val='77' order='0x40' stat='rCrit'/>
   </for>
 </item>
 
@@ -810,6 +904,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Guidance -->
+   <add val='5' order='0x40' stat='accCombat'/>
   </for>
 </item>
 
@@ -821,6 +917,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- Critical Drain -->
+   <skill onCrit='1' id='3022' lvl='2'/>
   </for>
 </item>
 
@@ -832,6 +930,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Health -->
+   <mul val='1.25' order='0x30' stat='maxHp'/>
   </for>
 </item>
 
@@ -847,7 +947,7 @@
   </for>
 </item>
 
-<item id='9285' name="Immortal Edge - Guidance">
+<item id='9285' name="Immortal Edge - Focus">
   <for>
    <set val='151' order='0x08' stat='pAtk'/>
    <set val='76' order='0x08' stat='mAtk'/>
@@ -856,10 +956,12 @@
    <set val='350' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Focus -->
+   <add val='77' order='0x40' stat='rCrit'/>
   </for>
 </item>
 
-<item id='9286' name="Immortal Edge - Crt. Drain">
+<item id='9286' name="Immortal Edge - Health">
   <for>
    <set val='151' order='0x08' stat='pAtk'/>
    <set val='76' order='0x08' stat='mAtk'/>
@@ -868,10 +970,12 @@
    <set val='350' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Health -->
+   <mul val='1.25' order='0x30' stat='maxHp'/>
   </for>
 </item>
 
-<item id='9287' name="Immortal Edge - Health">
+<item id='9287' name="Immortal Edge - Crt. Drain">
   <for>
    <set val='151' order='0x08' stat='pAtk'/>
    <set val='76' order='0x08' stat='mAtk'/>
@@ -880,6 +984,8 @@
    <set val='350' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- Critical Drain -->
+   <skill onCrit='1' id='3022' lvl='1'/>
   </for>
 </item>
 
@@ -894,7 +1000,7 @@
   </for>
 </item>
 
-<item id='9289' name="Tathlum - Focus">
+<item id='9289' name="Tathlum - Guidance">
   <for>
    <set val='176' order='0x08' stat='pAtk'/>
    <set val='76' order='0x08' stat='mAtk'/>
@@ -902,10 +1008,12 @@
    <set val='303' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Guidance -->
+   <add val='4' order='0x40' stat='accCombat'/>
   </for>
 </item>
 
-<item id='9290' name="Tathlum - Health">
+<item id='9290' name="Tathlum - Evasion">
   <for>
    <set val='176' order='0x08' stat='pAtk'/>
    <set val='76' order='0x08' stat='mAtk'/>
@@ -913,10 +1021,12 @@
    <set val='303' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+        <!-- SA: Evasion -->
+   <add val='2' order='0x40' stat='rEvas'/>
   </for>
 </item>
 
-<item id='9291' name="Tathlum - Critical Drain">
+<item id='9291' name="Tathlum - Miser">
   <for>
    <set val='176' order='0x08' stat='pAtk'/>
    <set val='76' order='0x08' stat='mAtk'/>
@@ -924,6 +1034,12 @@
    <set val='303' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+		<!--SA: Miser--> 
+   <set val='8' order='0x08' stat='soulShotCount'> 
+      <and>
+         <game chance="30"/> 
+      </and> 
+   </set>
   </for>
 </item>
 
@@ -946,6 +1062,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Focus -->
+   <add val='73' order='0x40' stat='rCrit'/>
   </for>
 </item>
 
@@ -957,6 +1075,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Critical Damage -->
+    <add val='231' order='0x40' stat='cAtk'/>
   </for>
 </item>
 
@@ -968,6 +1088,8 @@
    <set val='406' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Haste -->
+   <mul val='1.07' order='0x30' stat='pAtkSpd'/>
   </for>
 </item>
 
@@ -992,6 +1114,8 @@
    <set val='350' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Focus -->
+   <add val='73' order='0x40' stat='rCrit'/>
   </for>
 </item>
 
@@ -1004,6 +1128,8 @@
    <set val='350' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Critical Damage -->
+   <add val='270' order='0x40' stat='cAtk'/>
   </for>
 </item>
 
@@ -1016,6 +1142,8 @@
    <set val='350' order='0x08' stat='pAtkSpd'/>
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
+       <!-- SA: Haste -->
+   <mul val='1.07' order='0x30' stat='pAtkSpd'/>
   </for>
 </item>
 </list>
