@@ -800,7 +800,7 @@ INSERT INTO `armor` VALUES
 (6385,'Major Arcana Boots','feet','true','none',1110,'leather','s',0,-1,55,0,0,3580000,179,'true','true','true','true',0,0),
 (6386,'Major Arcana Circlet','head','true','none',550,'bone','s',0,-1,83,0,0,5370000,268,'true','true','true','true',0,0),
 (6394,'Red Party Mask','face','false','none',10,'wood','none',0,-1,0,0,0,500000,0,'true','true','true','true',0,0),
-(6408,'Formal Wear','fullarmor','false','magic',1000,'cloth','none',0,-1,0,0,0,5000000,0,'true','true','true','true',0,0),
+(6408,'Formal Wear','fullarmor','false','none',1000,'cloth','none',0,-1,0,0,0,5000000,0,'true','true','true','true',0,0),
 (6656,'Earring of Antharas','rear,lear','true','none',150,'gold','s',0,-1,0,71,31,3700000,185,'true','true','true','true',3558,1),
 (6657,'Necklace of Valakas','neck','true','none',150,'gold','s',0,-1,0,95,42,4940000,247,'true','true','true','true',3557,1),
 (6658,'Ring of Baium','rfinger,lfinger','true','none',150,'gold','s',0,-1,0,48,21,1730000,86,'true','true','true','true',3561,1),
