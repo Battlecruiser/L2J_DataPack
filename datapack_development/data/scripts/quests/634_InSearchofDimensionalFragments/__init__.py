@@ -51,7 +51,6 @@ class Quest (JQuest) :
                 numItems = 0
             if numItems > 0 :    
                 st.giveItems(DIMENSION_FRAGMENT_ID,numItems)
-                st.playSound("ItemSound.quest_itemget")
     return
 
 QUEST       = Quest(634, qn, "In Search of Dimensional Fragments")
