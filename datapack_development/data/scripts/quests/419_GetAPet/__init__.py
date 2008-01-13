@@ -115,7 +115,7 @@ class Quest (JQuest):
         elif race == 4:
            st.giveItems(ANIMAL_SLAYER_LIST5,1)
            htmltext = "419_slay_4.htm"
-        if race == 5:
+        elif race == 5:
            st.giveItems(ANIMAL_SLAYER_LIST6,1)
            htmltext = "419_slay_5.htm"
         else :
