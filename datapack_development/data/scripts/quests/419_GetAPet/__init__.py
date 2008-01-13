@@ -97,7 +97,7 @@ class Quest (JQuest):
         return "419_confirm.htm"
       elif event == "agree" :
         st.setState(State.STARTED)
-        st.set("progress","STARTED")
+        st.set("step","STARTED")
         st.set("cond","1")
         race = st.getPlayer().getRace().ordinal()
         if race == 0:
@@ -126,7 +126,7 @@ class Quest (JQuest):
       elif event == "disagree" :
         st.exitQuest(1)
         return "419_cancelled.htm"
-    elif id == State.STARTED and st.get("progress")=="SLAYED" :
+    elif id == State.STARTED and st.get("step")=="SLAYED" :
       if event == "talk"  :
         st.giveItems(ANIMAL_LOVERS_LIST1,1)
         return "419_talk.htm"
@@ -141,11 +141,11 @@ class Quest (JQuest):
       if event == "talk4" :
         st.set("progress", str(st.getInt("progress") | 4))
         return "419_metty_2.htm"
-    elif id == State.STARTED and st.get("progress")=="TALKED" :
+    elif id == State.STARTED and st.get("step")=="TALKED" :
       if event == "tryme" :
         return check_questions(st) 
       elif event == "wrong" :
-        st.set("progress","SLAYED")
+        st.set("step","SLAYED")
         st.set("progress","0")
         st.unset("quiz")
         st.unset("answers")
@@ -164,7 +164,7 @@ class Quest (JQuest):
     npcId = npc.getNpcId()
     id = st.getState()
     if npcId != PET_MANAGER_MARTIN and id == State.STARTED:
-      if st.get("progress")!="SLAYED" : return htmltext
+      if st.get("step")!="SLAYED" : return htmltext
 
     if id == State.COMPLETED: st.setState(State.CREATED)
     if npcId == PET_MANAGER_MARTIN :
@@ -173,13 +173,13 @@ class Quest (JQuest):
             st.exitQuest(1)
             return "419_low_level.htm"
          return "Start.htm"
-      if id == State.STARTED and st.get("progress")=="STARTED" :
+      if id == State.STARTED and st.get("step")=="STARTED" :
          if getCount_proof(st) == 0 :
             return "419_no_slay.htm"  
          elif getCount_proof(st) < REQUIRED_SPIDER_LEGS :
             return "419_pending_slay.htm"
          else :
-            st.set("progress","SLAYED")
+            st.set("step","SLAYED")
 #            st.clearQuestDrops()
             st.set("progress","0")
             race = player.getRace().ordinal()
@@ -202,15 +202,15 @@ class Quest (JQuest):
                 st.takeItems(SPIDER_LEG6,REQUIRED_SPIDER_LEGS)
                 st.takeItems(ANIMAL_SLAYER_LIST6,1)
             return "Slayed.htm"
-      if id == State.STARTED and st.get("progress")=="SLAYED" :
+      if id == State.STARTED and st.get("step")=="SLAYED" :
         if st.getInt("progress") == 7 :
            st.takeItems(ANIMAL_LOVERS_LIST1,1)
-           st.set("progress","TALKED")
+           st.set("step","TALKED")
            st.set("quiz","1 2 3 4 5 6 7 8 9 10 11 12 13 14")
            st.set("answers","0")
            return "Talked.htm"
         return "419_pending_talk.htm"
-    elif id == State.STARTED and st.get("progress")=="SLAYED":
+    elif id == State.STARTED and st.get("step")=="SLAYED":
       if npcId == GK_BELLA :
          return "419_bella_1.htm"
       elif npcId == MC_ELLIE :
