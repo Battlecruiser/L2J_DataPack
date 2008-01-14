@@ -145,7 +145,7 @@ class Quest (JQuest) :
               st.set("cond","0")
               st.set("onlyone","1")
               st.set("id","0")
-              st.setState(State.COMPLETED)
+              st.exitQuest(False)
               st.playSound("ItemSound.quest_finish")
               st.takeItems(TERYS_REPORT_ID,1)
               st.giveItems(MARK_OF_SEEKER_ID,1)

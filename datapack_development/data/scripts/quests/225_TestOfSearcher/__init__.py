@@ -117,7 +117,7 @@ class Quest (JQuest) :
          st.addExpAndSp(37831,18750)
          htmltext = "30690-08.htm"
          st.set("cond","0")
-         st.setState(State.COMPLETED)
+         st.exitQuest(False)
          st.playSound("ItemSound.quest_finish")
          st.takeItems(ALANKELLS_RECOMMEND,1)
          st.giveItems(MARK_OF_SEARCHER,1)

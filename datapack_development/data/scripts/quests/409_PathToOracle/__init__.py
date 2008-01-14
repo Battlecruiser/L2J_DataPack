@@ -93,7 +93,7 @@ class Quest (JQuest) :
             st.takeItems(CRYSTAL_MEDALLION,1)
             st.giveItems(LEAF_OF_ORACLE,1)
             st.set("cond","0")
-            st.setState(State.COMPLETED)
+            st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
           else:
             htmltext = "30293-07.htm"

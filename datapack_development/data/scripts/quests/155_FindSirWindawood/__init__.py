@@ -49,7 +49,7 @@ class Quest (JQuest) :
       st.takeItems(OFFICIAL_LETTER_ID,-1)
       st.giveItems(HASTE_POTION_ID,int(Config.RATE_QUESTS_REWARD))
       st.unset("cond")
-      st.setState(State.COMPLETED)
+      st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
       htmltext = "30311-01.htm"
    return htmltext

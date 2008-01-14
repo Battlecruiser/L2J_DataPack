@@ -127,7 +127,7 @@ class Quest (JQuest) :
             st.giveItems(item,1)
          st.unset("cond")
          st.unset("settype")
-         st.setState(State.COMPLETED) 
+         st.exitQuest(False) 
          st.playSound("ItemSound.quest_finish")
    elif player.getApprentice() :
      cm_apprentice = player.getClan().getClanMember(player.getApprentice())

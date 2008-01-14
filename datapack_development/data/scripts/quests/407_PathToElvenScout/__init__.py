@@ -118,7 +118,7 @@ class Quest (JQuest) :
         st.takeItems(HONORARY_GUARD,1)
         st.giveItems(REORIA_RECOMMENDATION,1)
         st.set("cond","0")
-        st.setState(State.COMPLETED)
+        st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
    return htmltext
 

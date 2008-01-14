@@ -46,7 +46,7 @@ class Quest (JQuest) :
    if event == "30565-08.htm":
      return "30565-08.htm"
 
-   st.setState(State.COMPLETED)
+   st.exitQuest(False)
    st.exitQuest(1)
    return htmltext
 
@@ -65,12 +65,12 @@ class Quest (JQuest) :
        return htmltext
      if ClassId in [ClassId.orcRaider, ClassId.orcMonk, ClassId.orcShaman]:
        htmltext = "30565-09.htm"
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.exitQuest(1)
        return htmltext
      if ClassId in [ClassId.destroyer, ClassId.tyrant, ClassId.overlord, ClassId.warcryer]:
        htmltext = "30565-10.htm"
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.exitQuest(1)
        return htmltext
      if ClassId in [ClassId.orcMage]:
@@ -80,7 +80,7 @@ class Quest (JQuest) :
 
    # All other Races must be out
    if npcId == KAKAI_LORD_OF_FLAME and Race in [Race.Dwarf, Race.DarkElf, Race.Elf, Race.Human, Race.Kamael]:
-     st.setState(State.COMPLETED)
+     st.exitQuest(False)
      st.exitQuest(1)
      return "30565-11.htm"
 

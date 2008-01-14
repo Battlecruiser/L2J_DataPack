@@ -37,13 +37,13 @@ class Quest (JQuest) :
        st.takeItems(COLLETTE_LETTER,1)
        st.giveItems(ADENA,3000)
        st.unset("cond")
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.playSound("ItemSound.quest_finish")
      elif event == "30210-02.htm" and cond == 2 and st.getQuestItemsCount(NORMANS_LETTER) :
        st.takeItems(NORMANS_LETTER,1)
        st.giveItems(ADENA,20000)
        st.unset("cond")
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.playSound("ItemSound.quest_finish")
     return htmltext
 

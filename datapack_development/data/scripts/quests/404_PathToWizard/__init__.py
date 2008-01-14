@@ -204,7 +204,7 @@ class Quest (JQuest) :
         st.takeItems(WATER_NECKLACE,st.getQuestItemsCount(WATER_NECKLACE))
         st.takeItems(EARTH_RING,st.getQuestItemsCount(EARTH_RING))
         st.set("cond","0")
-        st.setState(State.COMPLETED)
+        st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
         if st.getQuestItemsCount(BEAD_OF_SEASON) == 0 :
           st.giveItems(BEAD_OF_SEASON,1)

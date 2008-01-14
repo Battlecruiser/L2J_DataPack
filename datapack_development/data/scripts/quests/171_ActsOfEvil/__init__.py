@@ -99,7 +99,7 @@ class Quest (JQuest) :
              htmltext = "30381-08.htm"
              st.giveItems(ADENA,90000)
              st.playSound("ItemSound.quest_finish")
-             st.setState(State.COMPLETED)
+             st.exitQuest(False)
      elif id == State.STARTED :
          if npcId==ARODIN :
              if cond==1 :

@@ -82,7 +82,7 @@ class Quest (JQuest) :
      st.giveItems(NECKLACE,1) 
      st.set("cond","0") 
      st.set("onlyone","1") 
-     st.setState(State.COMPLETED) 
+     st.exitQuest(False) 
      st.playSound("ItemSound.quest_finish")
    elif id == State.STARTED :  
        if npcId == SHARI and cond == 1 and st.getQuestItemsCount(BOLTERS_LIST) : 

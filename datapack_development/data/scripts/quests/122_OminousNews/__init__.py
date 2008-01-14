@@ -31,7 +31,7 @@ class Quest (JQuest) :
          st.giveItems(57,1695)
          st.unset("cond")
          st.unset("ok")
-         st.setState(State.COMPLETED)
+         st.exitQuest(False)
          st.playSound("ItemSound.quest_finish")
        else :
          htmltext=default

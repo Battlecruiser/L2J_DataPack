@@ -78,7 +78,7 @@ class Quest (JQuest) :
           st.giveItems(MASK_OF_MEDIUM,1)
           st.addExpAndSp(3200,2600)
           st.set("cond","0")
-          st.setState(State.COMPLETED)
+          st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
     elif event == "30593_1" :
           htmltext = "30593-02.htm"

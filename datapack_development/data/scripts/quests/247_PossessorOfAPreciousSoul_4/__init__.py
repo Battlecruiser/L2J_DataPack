@@ -53,7 +53,7 @@ class Quest (JQuest) :
        st.getPlayer().setNoble(True)
        st.giveItems(NOBLESS_TIARA,1)
        st.playSound("ItemSound.quest_finish")
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
    return htmltext
 
  def onTalk (self,npc,player):

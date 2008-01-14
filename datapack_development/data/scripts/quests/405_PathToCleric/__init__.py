@@ -76,7 +76,7 @@ class Quest (JQuest) :
         st.takeItems(LETTER_OF_ORDER2,1)
         st.giveItems(MARK_OF_FAITH,1)
         st.set("cond","0")
-        st.setState(State.COMPLETED)
+        st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
    elif npcId == 30022 and st.getInt("cond") and st.getQuestItemsCount(LETTER_OF_ORDER1)==1 :
         if st.getQuestItemsCount(BOOK_OF_VIVI) == 1 and st.getQuestItemsCount(BOOK_OF_SIMLON)>0 and st.getQuestItemsCount(BOOK_OF_PRAGA) == 1 :

@@ -65,7 +65,7 @@ class Quest (JQuest) :
          st.takeItems(MOTHERTREE_FRUIT,1)
          st.addExpAndSp(1000,0)
          st.unset("cond")
-         st.setState(State.COMPLETED)
+         st.exitQuest(False)
          st.playSound("ItemSound.quest_finish")
        elif npcId == 30371 and st.getQuestItemsCount(MOTHERTREE_FRUIT) :
          htmltext = "30371-02.htm"

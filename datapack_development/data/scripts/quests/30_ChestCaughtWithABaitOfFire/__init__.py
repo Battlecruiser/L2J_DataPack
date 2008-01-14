@@ -40,7 +40,7 @@ class Quest (JQuest) :
       st.giveItems(PROTECTION_NECKLACE, 1)
       st.takeItems(RUKAL_MUSICAL,-1)
       st.unset("cond")
-      st.setState(State.COMPLETED)
+      st.exitQuest(False)
     return htmltext
 
   def onTalk(self, npc, player):

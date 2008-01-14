@@ -211,7 +211,7 @@ class Quest (JQuest) :
       st.takeItems(ARKENIAS_LETTER_ID,1)
       st.takeItems(PALUS_CHARM_ID,1)
       st.set("cond","0")
-      st.setState(State.COMPLETED)
+      st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
    elif npcId == 30419 and st.getInt("cond")==1 and st.getQuestItemsCount(PALUS_CHARM_ID) and st.getQuestItemsCount(THIFIELS_LETTER_ID) :

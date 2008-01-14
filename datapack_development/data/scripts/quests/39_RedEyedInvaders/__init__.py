@@ -85,7 +85,7 @@ class Quest (JQuest) :
        st.giveItems(FISHING_SHOT_NG,500)
        st.unset("cond")
        st.playSound("ItemSound.quest_finish")
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
      else :
        htmltext = "You don't have required items"
    return htmltext

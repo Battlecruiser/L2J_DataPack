@@ -82,7 +82,7 @@ class Quest (JQuest) :
       htmltext = "30109-05.htm"
       st.takeItems(LETTER_OF_DUSTIN,1)
       st.giveItems(MARK_OF_DUTY,1)
-      st.setState(State.COMPLETED)
+      st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
       st.set("cond","0")

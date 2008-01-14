@@ -89,7 +89,7 @@ class Quest (JQuest) :
             st.takeItems(GARMIEL_BOOK,1)
             st.giveItems(ORB_OF_ABYSS,1)
             st.set("cond","0")
-            st.setState(State.COMPLETED)
+            st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
    elif npcId == 30377 and st.getInt("cond") :
         if st.getQuestItemsCount(SIDRAS_LETTER1) == 1 :

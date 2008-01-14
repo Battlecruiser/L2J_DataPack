@@ -86,7 +86,7 @@ class Quest (JQuest) :
             st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))   # Echo crystals
         htmltext = "30017-05.htm" 
         st.set("cond","0") 
-        st.setState(State.COMPLETED) 
+        st.exitQuest(False) 
         st.playSound("ItemSound.quest_finish") 
         st.set("onlyone","1")       
      elif npcId == 30045 and st.getInt("cond") : 

@@ -61,7 +61,7 @@ class Quest (JQuest) :
       htmltext="9b.htm"
       st.addExpAndSp(63591,0)
       st.playSound("ItemSound.quest_finish")
-      st.setState(State.COMPLETED)
+      st.exitQuest(False)
     return htmltext
 
   def onTalk(self, npc, player):

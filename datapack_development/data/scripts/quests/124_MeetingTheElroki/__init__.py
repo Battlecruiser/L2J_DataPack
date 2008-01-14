@@ -89,7 +89,7 @@ class Quest (JQuest) :
             htmltext = "32115-05.htm"
             st.takeItems(M_EGG,1)
             st.giveItems(57,71318)
-            st.setState(State.COMPLETED)
+            st.exitQuest(False)
             st.set("cond","0")
             st.playSound("ItemSound.quest_finish")
      elif npcId == KARAKAWEI :

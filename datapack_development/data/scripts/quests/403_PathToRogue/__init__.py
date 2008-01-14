@@ -100,7 +100,7 @@ class Quest (JQuest) :
           for i in STOLEN_ITEM.keys() :
             st.takeItems(STOLEN_ITEM[i],-1)
           st.set("cond","0")
-          st.setState(State.COMPLETED)
+          st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
         elif st.getQuestItemsCount(HORSESHOE_OF_LIGHT) == 0 and st.getQuestItemsCount(BEZIQUES_LETTER)>0 :
           htmltext = "30379-07.htm"

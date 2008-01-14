@@ -61,7 +61,7 @@ class Quest (JQuest) :
         st.giveItems(CALCULATOR,1)
         st.takeItems(CALCULATOR_Q,1)
         st.playSound("ItemSound.quest_middle")
-        st.setState(State.COMPLETED)
+        st.exitQuest(False)
         st.set("cond","0")
         st.exitQuest(1)
         htmltext = str(BRUNON)+"-05.htm"
@@ -69,7 +69,7 @@ class Quest (JQuest) :
         st.giveItems(ADENA,1000)
         st.takeItems(CALCULATOR_Q,1)
         st.playSound("ItemSound.quest_middle")
-        st.setState(State.COMPLETED)
+        st.exitQuest(False)
         st.set("cond","0")
         st.exitQuest(1)
         htmltext = str(BRUNON)+"-06.htm"

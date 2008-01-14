@@ -118,7 +118,7 @@ class Quest (JQuest) :
           htmltext = "30666-07.htm"
           st.set("cond","0")
           st.set("onlyone","1")
-          st.setState(State.COMPLETED)
+          st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
           st.takeItems(KATARIS_LETTER,1)
           st.takeItems(KAKANS_LETTER,1)

@@ -83,7 +83,7 @@ class Quest (JQuest) :
      else :
         st.addExpAndSp(105527,0)
         st.unset("cond")
-        st.setState(State.COMPLETED)
+        st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
         htmltext = "31517-03.htm"
    elif id == State.STARTED :    

@@ -78,7 +78,7 @@ class Quest (JQuest) :
             st.takeItems(MAIDEN_DOLL_ID,-1)
             st.addExpAndSp(100,0)
             st.set("cond","0")
-            st.setState(State.COMPLETED)
+            st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
             st.set("onlyone","1")
    return htmltext

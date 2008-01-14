@@ -46,7 +46,7 @@ class Quest (JQuest) :
      st.giveItems(SCROLL_OF_ESCAPE_GIRAN,1) 
      st.giveItems(MARK_OF_TRAVELER, 1) 
      st.unset("cond") 
-     st.setState(State.COMPLETED) 
+     st.exitQuest(False) 
      st.playSound("ItemSound.quest_finish") 
    return htmltext 
 

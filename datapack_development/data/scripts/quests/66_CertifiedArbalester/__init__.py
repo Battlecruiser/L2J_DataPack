@@ -144,7 +144,7 @@ class Quest (JQuest) :
                 htmltext = "32220-20.htm"
                 st.takeItems(Research,-1)
                 st.giveItems(Mark,1)
-                st.setState(State.COMPLETED)
+                st.exitQuest(False)
                 st.playSound("ItemSound.quest_finish")
                 st.addExpAndSp(108974,12357)
                 st.unset("cond")

@@ -40,7 +40,7 @@ class Quest (JQuest) :
       st.giveItems(BLACK_PEARL_RING, 1)
       st.takeItems(STRANGE_BLUESPRINT,-1)
       st.unset("cond")
-      st.setState(State.COMPLETED)
+      st.exitQuest(False)
     return htmltext
 
   def onTalk(self, npc, player):

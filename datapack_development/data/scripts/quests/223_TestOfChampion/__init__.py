@@ -152,7 +152,7 @@ class Quest (JQuest) :
       st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
       st.takeItems(MOUENS_LETTER,1)
       st.set("cond","0")
-      st.setState(State.COMPLETED)
+      st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
    elif npcId == 30624 and st.getInt("step") in [10,11,12,13] :
       htmltext = "30624-16.htm"

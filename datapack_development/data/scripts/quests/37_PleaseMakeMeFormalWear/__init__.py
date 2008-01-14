@@ -56,7 +56,7 @@ class Quest (JQuest) :
        if st.getQuestItemsCount(DRESS_SHOES_BOX) :
          st.takeItems(DRESS_SHOES_BOX,1)
          st.giveItems(FORMAL_WEAR,1)
-         st.setState(State.COMPLETED)
+         st.exitQuest(False)
          st.unset("cond")
          st.playSound("ItemSound.quest_finish")
        else :

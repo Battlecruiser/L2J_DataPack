@@ -31,7 +31,7 @@ class Quest (JQuest) :
      if cond == 1 and st.getQuestItemsCount(LETTER) == 1 :
        st.takeItems(LETTER,1)
        st.giveItems(57,113228)
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.set("cond","0")
        st.playSound("ItemSound.quest_finish")
      else :
