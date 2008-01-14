@@ -423,10 +423,16 @@ description(s) :
   </for>
 </skill>
 <skill id="538" levels="1" name="Final Form">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="70"/>
+  <set name="hpConsume" val="200"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1300"/>
+  <set name="reuseDelay" val="3000000"/>
+  <set name="transformId" val="251"/>
   <set name="castRange" val="-1"/>
+  <set name="soulConsumeCount" val="20"/>
   <for>
   </for>
 </skill>
