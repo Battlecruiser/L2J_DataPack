@@ -115,7 +115,7 @@ class Quest (JQuest) :
       htmltext = "30648-10.htm"
       st.giveItems(MARK_OF_PILGRIM,1)
       st.takeItems(BOOK_OF_SAGE,1)
-      st.setState(State.COMPLETED)
+      st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
       st.unset("cond")
    elif npcId == 30571 and cond==1 and st.getQuestItemsCount(VOUCHER_OF_TRIAL) :

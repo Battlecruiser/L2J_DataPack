@@ -88,7 +88,7 @@ class Quest (JQuest) :
         elif cond == 6 :
             st.takeItems(KLUTO_BOX,-1)
             st.set("cond","0")
-            st.setState(State.COMPLETED)
+            st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
             if st.getQuestItemsCount(ELVEN_KNIGHT_BROOCH) == 0 :
               st.giveItems(ELVEN_KNIGHT_BROOCH,1)

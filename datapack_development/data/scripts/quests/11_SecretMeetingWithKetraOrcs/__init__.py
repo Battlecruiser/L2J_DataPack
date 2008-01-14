@@ -39,7 +39,7 @@ class Quest (JQuest) :
          st.addExpAndSp(22787,0) #Despite what stratics may say, this is the correct reward for this quest.
          st.set("cond","0")
          st.set("onlyone","1")
-         st.setState(State.COMPLETED)
+         st.exitQuest(False)
          st.playSound("ItemSound.quest_finish")
      return htmltext
 

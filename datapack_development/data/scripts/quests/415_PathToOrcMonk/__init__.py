@@ -142,7 +142,7 @@ class Quest (JQuest) :
         st.giveItems(KHAVATARI_TOTEM,1)
         st.set("cond","0")
         st.set("onlyone","1")
-        st.setState(State.COMPLETED)
+        st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
    elif npcId == 30591 and st.getInt("cond") and st.getQuestItemsCount(FIG) :
         htmltext = "30591-01.htm"

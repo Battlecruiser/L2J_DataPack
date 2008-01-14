@@ -50,7 +50,7 @@ class Quest (JQuest) :
           st.set("id","158")
           st.takeItems(CLAY_TABLET_ID,st.getQuestItemsCount(CLAY_TABLET_ID))
           st.set("cond","0")
-          st.setState(State.COMPLETED)
+          st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
           st.set("onlyone","1")
           st.giveItems(ENCHANT_ARMOR_D,1)

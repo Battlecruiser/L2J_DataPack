@@ -21,7 +21,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_finish")
       st.addExpAndSp(10000,0)
       st.unset("cond")
-      st.setState(State.COMPLETED)
+      st.exitQuest(False)
     return htmltext
 
   def onTalk(self, npc, player):

@@ -68,7 +68,7 @@ class Quest (JQuest) :
             st.takeItems(MARK_OF_TRAVELER_ID,-1)
             htmltext = "30097-12.htm"
             st.unset("cond")
-            st.setState(State.COMPLETED)
+            st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
         return htmltext
 

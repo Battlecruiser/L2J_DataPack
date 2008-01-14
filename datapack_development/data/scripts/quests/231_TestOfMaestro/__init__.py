@@ -123,7 +123,7 @@ class Quest (JQuest) :
        st.takeItems(RECOMMENDATION_OF_FILAUR,1)
        st.takeItems(RECOMMENDATION_OF_ARIN,1)
        st.unset("progress")
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.playSound("ItemSound.quest_finish")
    elif npcId == 30533:
      if progress in [1,11,16] and not st.getQuestItemsCount(RECOMMENDATION_OF_BALANKI):

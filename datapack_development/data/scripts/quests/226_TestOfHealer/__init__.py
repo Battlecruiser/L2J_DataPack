@@ -67,7 +67,7 @@ class Quest (JQuest) :
           st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
           st.takeItems(GOLDEN_STATUE,1)
           st.set("cond","0")
-          st.setState(State.COMPLETED)
+          st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
           st.set("onlyone","1")
     elif event == "30428_1" :
@@ -135,7 +135,7 @@ class Quest (JQuest) :
       st.addExpAndSp(32000,4100)
       st.giveItems(MARK_OF_HEALER,1)
       st.set("cond","0")
-      st.setState(State.COMPLETED)
+      st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
      elif st.getInt("cond")==15 and st.getQuestItemsCount(GOLDEN_STATUE) :

@@ -64,7 +64,7 @@ class Quest (JQuest) :
             htmltext = "30103-09a.htm"
             st.set("cond","0")
             st.set("onlyone","1")
-            st.setState(State.COMPLETED)
+            st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
             st.addExpAndSp(32000,3900)
             st.takeItems(JOURNEYMAN_RING_ID,st.getQuestItemsCount(JOURNEYMAN_RING_ID))
@@ -77,7 +77,7 @@ class Quest (JQuest) :
             htmltext = "30103-09b.htm"
             st.set("cond","0")
             st.set("onlyone","1")
-            st.setState(State.COMPLETED)
+            st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
             st.takeItems(JOURNEYMAN_RING_ID,st.getQuestItemsCount(JOURNEYMAN_RING_ID))
             st.takeItems(ALLTRANS_INSTRUCTIONS_ID,1)

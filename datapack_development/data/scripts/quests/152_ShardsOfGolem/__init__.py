@@ -63,7 +63,7 @@ class Quest (JQuest) :
         st.takeItems(TOOL_BOX_ID,-1)
         st.takeItems(HARRYS_RECEIPT2_ID,-1)
         st.unset("cond")
-        st.setState(State.COMPLETED)
+        st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
         st.giveItems(WOODEN_BP_ID,1)
         st.addExpAndSp(5000,0)

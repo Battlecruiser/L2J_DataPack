@@ -152,7 +152,7 @@ class Quest (JQuest) :
       htmltext = "30646-07.htm"
       st.takeItems(BROKEN_KEY,1)
       st.giveItems(MARK_OF_CHALLENGER,1)
-      st.setState(State.COMPLETED)
+      st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
       st.set("cond","0")
    elif npcId == 30535 and cond == 7 :

@@ -137,7 +137,7 @@ class Quest (JQuest) :
        st.addExpAndSp(263043,0)
        st.set("cond","0")
        st.playSound("ItemSound.quest_finish")
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
    return htmltext
 
  def onTalk (self,npc,player):

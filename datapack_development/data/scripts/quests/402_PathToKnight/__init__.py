@@ -103,7 +103,7 @@ class Quest (JQuest) :
           st.takeItems(MARK_OF_ESQUIRE,-1)
           st.giveItems(SWORD_OF_RITUAL,1)
           st.set("cond","0")
-          st.setState(State.COMPLETED)
+          st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
         else:
           htmltext=default
@@ -114,7 +114,7 @@ class Quest (JQuest) :
           st.takeItems(MARK_OF_ESQUIRE,-1)
           st.giveItems(SWORD_OF_RITUAL,1)
           st.set("cond","0")
-          st.setState(State.COMPLETED)
+          st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
         else:
           htmltext=default
@@ -155,7 +155,7 @@ class Quest (JQuest) :
            st.takeItems(MARK_OF_ESQUIRE,-1)
            st.giveItems(SWORD_OF_RITUAL,1)
            st.set("cond","0")
-           st.setState(State.COMPLETED)
+           st.exitQuest(False)
            st.playSound("ItemSound.quest_finish")
    elif npcId == 30332 and cond==1 and squire :
        if not guards_mark1 and not coin1 :

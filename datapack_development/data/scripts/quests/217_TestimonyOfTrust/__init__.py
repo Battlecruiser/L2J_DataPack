@@ -257,7 +257,7 @@ class Quest (JQuest) :
            st.giveItems(MARK_OF_TRUST_ID,1)
            st.unset("cond")
            st.unset("id")
-           st.setState(State.COMPLETED)
+           st.exitQuest(False)
            st.playSound("ItemSound.quest_finish")
    return htmltext
 

@@ -95,7 +95,7 @@ class Quest (JQuest) :
                 st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))   # Echo crystals
             st.takeItems(STAR_DIAMOND_ID,-1) 
             st.set("cond","0") 
-            st.setState(State.COMPLETED) 
+            st.exitQuest(False) 
             st.playSound("ItemSound.quest_finish") 
    elif id == State.STARTED : 
        if npcId == 30516 and st.getInt("cond")==1 and st.getQuestItemsCount(GOUPHS_CONTRACT_ID) and st.getQuestItemsCount(REEPS_CONTRACT_ID)==0 : 

@@ -64,17 +64,17 @@ class Quest (JQuest) :
        st.setState(State.STARTED)
        return "30358-02.htm"
      if ClassId in [ClassId.darkWizard, ClassId.shillienOracle, ClassId.palusKnight, ClassId.assassin]:
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.exitQuest(1)
        return "30358-12.htm"
      else:
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.exitQuest(1)
        return "30358-13.htm"
 
    # All other Races must be out
    if npcId == TETRARCH_THIFIELL and Race in [Race.Dwarf, Race.Human, Race.Elf, Race.Orc, Race.Kamael]:
-     st.setState(State.COMPLETED)
+     st.exitQuest(False)
      st.exitQuest(1)
      return "30358-11.htm"
 

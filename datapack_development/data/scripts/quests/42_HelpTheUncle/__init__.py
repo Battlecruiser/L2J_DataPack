@@ -46,7 +46,7 @@ class Quest (JQuest) :
       htmltext="30828-07.htm"
       st.giveItems(PET_TICKET,1)
       st.unset("cond")
-      st.setState(State.COMPLETED)
+      st.exitQuest(False)
       st.exitQuest(0)
     return htmltext
 

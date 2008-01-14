@@ -182,7 +182,7 @@ class Quest (JQuest) :
       st.addExpAndSp(54726,20250)
       st.unset("step")
       st.set("cond","0")
-      st.setState(State.COMPLETED)
+      st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
    elif npcId == 30653 and step==2 and st.getQuestItemsCount(LETTER_OF_HAMIL1) :

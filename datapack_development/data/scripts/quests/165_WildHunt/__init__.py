@@ -57,7 +57,7 @@ class Quest (JQuest) :
             st.giveItems(LESSER_HEALING_POTION_ID,int(5*Config.RATE_QUESTS_REWARD))
             st.addExpAndSp(1000,0)
             st.set("cond","0")
-            st.setState(State.COMPLETED)
+            st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
             st.set("onlyone","1")
    return htmltext

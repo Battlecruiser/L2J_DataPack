@@ -92,7 +92,7 @@ class Quest (JQuest) :
          elif st.getInt("onlyone") == 0:
              st.giveItems(1835,1000)
          st.unset("cond")
-         st.setState(State.COMPLETED)
+         st.exitQuest(False)
          st.playSound("ItemSound.quest_finish")
        elif npcId == 30133 and id == State.STARTED :
          htmltext = "30133-04.htm"

@@ -168,7 +168,7 @@ class Quest (JQuest) :
           htmltext = "30460-07.htm"
           st.set("cond","0")
           st.set("onlyone","1")
-          st.setState(State.COMPLETED)
+          st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
    elif npcId == 30154 and st.getInt("cond")==1 and st.getQuestItemsCount(CARDIENS_LETTER_ID)==1 :
         htmltext = "30154-01.htm"

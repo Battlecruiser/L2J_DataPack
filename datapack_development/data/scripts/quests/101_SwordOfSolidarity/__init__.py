@@ -36,7 +36,7 @@ class Quest (JQuest) :
         st.takeItems(BROKEN_SWORD_HANDLE_ID,-1)
         st.giveItems(SWORD_OF_SOLIDARITY_ID,1)
         st.set("cond","0")
-        st.setState(State.COMPLETED)
+        st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
         st.set("onlyone","1")        
     return htmltext

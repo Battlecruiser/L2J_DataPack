@@ -47,7 +47,7 @@ class Quest (JQuest) :
      st.addExpAndSp(130000,0)
      st.giveItems(57,40000)
      st.playSound("ItemSound.quest_finish")
-     st.setState(State.COMPLETED)
+     st.exitQuest(False)
    elif event != "31663-0a.htm":
      htmltext = default
    return htmltext

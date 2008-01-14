@@ -130,7 +130,7 @@ class Quest (JQuest) :
             htmltext = "30623-18.htm"
             st.unset("step")
             st.set("cond","0")
-            st.setState(State.COMPLETED)
+            st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
         else :
           htmltext = "30623-17.htm"

@@ -51,7 +51,7 @@ class Quest (JQuest) :
         st.takeItems(FEVER_MEDICINE,1)
         htmltext = "30050-06.htm"
         st.unset("cond")
-        st.setState(State.COMPLETED)
+        st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
    elif npcId == 30032 :
       if cond == 2 or sac :

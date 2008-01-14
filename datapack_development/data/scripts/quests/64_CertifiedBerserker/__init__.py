@@ -55,7 +55,7 @@ class Quest (JQuest) :
             st.set("cond","14")
         if event == "32207-05.htm" :
             st.takeItems(Tenain_Rec,-1)
-            st.setState(State.COMPLETED)
+            st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
             st.giveItems(Orkurus_Rec,1)
             st.addExpAndSp(73590,8344)

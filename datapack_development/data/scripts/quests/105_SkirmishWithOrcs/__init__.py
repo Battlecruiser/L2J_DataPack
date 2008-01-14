@@ -121,7 +121,7 @@ class Quest (JQuest) :
             st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))     # Lesser Healing Potions 
             for item in range(4412,4417) : 
                 st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))   # Echo crystals 
-            st.setState(State.COMPLETED) 
+            st.exitQuest(False) 
             st.playSound("ItemSound.quest_finish") 
             st.set("onlyone","1") 
             st.set("cond","0") 

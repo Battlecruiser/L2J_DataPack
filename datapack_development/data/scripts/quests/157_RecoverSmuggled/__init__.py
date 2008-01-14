@@ -46,7 +46,7 @@ class Quest (JQuest) :
    elif cond :
      if st.getQuestItemsCount(ADAMANTITE_ORE)>=20 :
         st.takeItems(ADAMANTITE_ORE,-1)
-        st.setState(State.COMPLETED)
+        st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
         st.giveItems(BUCKLER,1)
         htmltext = "30005-07.htm"

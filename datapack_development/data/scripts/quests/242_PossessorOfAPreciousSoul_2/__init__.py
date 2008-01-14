@@ -182,7 +182,7 @@ class Quest (JQuest) :
        st.set("cornerstones","0")
        st.giveItems(CARADINE_LETTER,1)
        st.playSound("ItemSound.quest_finish")
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
    return htmltext
 
  def onKill(self,npc,player,isPet):

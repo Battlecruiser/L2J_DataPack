@@ -120,7 +120,7 @@ class Quest (JQuest) :
       elif npcId == 30284 and st.getInt("cond")==6 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==1 :
            st.takeItems(ALBERRYUS_LIST_ID,1)
            st.set("cond","0")
-           st.setState(State.COMPLETED)
+           st.exitQuest(False)
            st.playSound("ItemSound.quest_finish")
            htmltext = "30284-06.htm"
            st.set("onlyone","1")

@@ -80,7 +80,7 @@ class Quest (JQuest) :
           st.takeItems(SECRET_BOX2,1)
           st.giveItems(PASS_FINAL,1)
           st.set("cond","0")
-          st.setState(State.COMPLETED)
+          st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
         else :
           htmltext = "30317-08.htm"
@@ -94,7 +94,7 @@ class Quest (JQuest) :
           st.takeItems(SECRET_BOX2,1)
           st.giveItems(PASS_FINAL,1)
           st.set("cond","0")
-          st.setState(State.COMPLETED)
+          st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
         else :
           htmltext = "30317-08.htm"

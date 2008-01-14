@@ -196,7 +196,7 @@ class Quest (JQuest) :
            htmltext = "0-05.htm"
    elif event == "0-2" :
        if player.getLevel() >= 76 :
-           st.setState(State.COMPLETED)
+           st.exitQuest(False)
            st.set("cond","0")
            htmltext = "0-07.htm"
            st.takeItems(self.Items[10],-1)
@@ -501,7 +501,7 @@ class Quest (JQuest) :
                   if player.getLevel() >= 76 :
                       htmltext = "0-09.htm"
                       if not self.getClassId(player) in range(131,135) : #in Kamael quests, npc wants to chat for a bit before changing class
-                          st.setState(State.COMPLETED)
+                          st.exitQuest(False)
                           st.set("cond","0")
                           st.addExpAndSp(2299404,0)
                           st.giveItems(57,5000000)

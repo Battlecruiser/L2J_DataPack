@@ -52,7 +52,7 @@ class Quest (JQuest) :
      htmltext = "30577-04.htm"
    elif st.getQuestItemsCount(KASHA_WOLF_FANG) >= 50 :
      st.set("cond","0")
-     st.setState(State.COMPLETED)
+     st.exitQuest(False)
      st.playSound("ItemSound.quest_finish")
      st.takeItems(KASHA_WOLF_FANG,-1)
      if st.getRandom(100) <= 13 :

@@ -231,7 +231,7 @@ class Quest (JQuest) :
                   st.addExpAndSp(148409,30000)
                   for var in STATS:
                      st.unset(var)
-                  st.setState(State.COMPLETED)
+                  st.exitQuest(False)
                   st.playSound("ItemSound.quest_finish")
                   st.giveItems(MARK_OF_SUMMONER,1)
                   st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)

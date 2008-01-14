@@ -94,7 +94,7 @@ class Quest (JQuest) :
            st.giveItems(57,14700)
            htmltext = "30385-13.htm"
            st.set("cond","0")
-           st.setState(State.COMPLETED)
+           st.exitQuest(False)
            st.playSound("ItemSound.quest_finish")
        elif npcId == ADONIUS :
          if cond == 2 :

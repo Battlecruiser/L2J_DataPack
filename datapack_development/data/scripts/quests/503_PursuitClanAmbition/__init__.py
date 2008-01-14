@@ -181,7 +181,7 @@ def exit503(completed,st):
       st.addExpAndSp(0,250000)
       for var in STATS:
         st.unset(var)
-      st.setState(State.COMPLETED)
+      st.exitQuest(False)
     else:
       st.exitQuest(1)
     st.takeItems(Scepter_Judgement,-1)

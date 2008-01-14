@@ -36,7 +36,7 @@ class Quest (JQuest) :
      st.takeItems(ESSENCE_OF_WIND,-1)
      st.playSound("ItemSound.quest_finish")
      st.unset("cond")
-     st.setState(State.COMPLETED)
+     st.exitQuest(False)
    return htmltext
 
  def onTalk (Self,npc,player):

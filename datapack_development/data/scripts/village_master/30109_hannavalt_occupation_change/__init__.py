@@ -343,7 +343,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_fanfare_2")
             htmltext = "30109-75.htm"
           
-   st.setState(State.COMPLETED)
+   st.exitQuest(False)
    st.exitQuest(1)
    return htmltext
 
@@ -373,29 +373,29 @@ class Quest (JQuest) :
        st.setState(State.STARTED)
        return "30109-29.htm"
      elif ClassId in [ClassId.elvenFighter, ClassId.fighter]:
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.exitQuest(1)
        return "30109-76.htm"     
      elif ClassId in [ClassId.templeKnight, ClassId.plainsWalker, ClassId.swordSinger, ClassId.silverRanger]:
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.exitQuest(1)
        return "30109-77.htm"
      elif ClassId in [ClassId.warlord, ClassId.paladin, ClassId.treasureHunter]:
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.exitQuest(1)
        return "30109-77.htm"
      elif ClassId in [ClassId.gladiator, ClassId.darkAvenger, ClassId.hawkeye]:
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.exitQuest(1)
        return "30109-77.htm"
      else:
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.exitQuest(1)
        return "30109-78.htm"
 
    # All other Races must be out
    else:
-     st.setState(State.COMPLETED)
+     st.exitQuest(False)
      st.exitQuest(1)
      return "30109-78.htm"
 

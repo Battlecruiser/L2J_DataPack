@@ -287,7 +287,7 @@ class Quest (JQuest) :
             st.giveItems(MARK_OF_SCHOLAR_ID,1)
             st.set("cond","0")
             st.set("onlyone","1")
-            st.setState(State.COMPLETED)
+            st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
    elif npcId == 30070 and cond == 1 :
         htmltext = "30070-01.htm"

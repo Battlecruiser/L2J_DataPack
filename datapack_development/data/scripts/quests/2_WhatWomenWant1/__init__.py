@@ -48,7 +48,7 @@ class Quest (JQuest) :
      st.takeItems(ARUJIENS_LETTER3,-1) 
      st.giveItems(113,1) 
      st.set("cond","0") 
-     st.setState(State.COMPLETED) 
+     st.exitQuest(False) 
      st.playSound("ItemSound.quest_finish") 
    return htmltext 
 
@@ -91,7 +91,7 @@ class Quest (JQuest) :
        st.takeItems(GREENIS_LETTER,-1) 
        st.giveItems(113,1)
        st.set("cond","0") 
-       st.setState(State.COMPLETED) 
+       st.exitQuest(False) 
        st.playSound("ItemSound.quest_finish")
    elif id == State.STARTED :    
        if npcId == MIRABEL and cond == 1 : 

@@ -63,7 +63,7 @@ class Quest (JQuest) :
        item,adena=REWARDS[st.getRandom(len(REWARDS))]
        st.giveItems(item,1)
        st.giveItems(57,adena)
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
     return htmltext
 
 

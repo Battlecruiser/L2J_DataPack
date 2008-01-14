@@ -136,7 +136,7 @@ class Quest (JQuest) :
       htmltext = "30649-03.htm"
       for var in STATS:
         st.unset(var)
-      st.setState(State.COMPLETED)
+      st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
     return htmltext
 

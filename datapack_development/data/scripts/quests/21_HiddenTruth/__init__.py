@@ -40,7 +40,7 @@ class Quest (JQuest) :
             st.unset("AGRIPEL")
             st.unset("DOMINIC")
             st.unset("BENEDICT")
-            st.setState(State.COMPLETED)
+            st.exitQuest(False)
             st.takeItems(7140,-1)
             if st.getQuestItemsCount(7141) == 0 :
                 st.giveItems(7141,1)

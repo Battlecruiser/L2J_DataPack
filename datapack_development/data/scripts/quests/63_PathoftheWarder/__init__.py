@@ -138,7 +138,7 @@ class Quest (JQuest) :
                 st.giveItems(Eval,1)
                 st.playSound("ItemSound.quest_finish")
                 st.addExpAndSp(3200,5934)
-                st.setState(State.COMPLETED)
+                st.exitQuest(False)
                 st.unset("cond")
         elif npcId == Bathis :
             if cond == 5 :

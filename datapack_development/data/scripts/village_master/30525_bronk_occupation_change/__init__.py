@@ -34,7 +34,7 @@ class Quest (JQuest) :
    if event == "30525-04.htm":
      return "30525-04.htm"
 
-   st.setState(State.COMPLETED)
+   st.exitQuest(False)
    st.exitQuest(1)
    return htmltext
 
@@ -53,23 +53,23 @@ class Quest (JQuest) :
        return htmltext
      if ClassId in [ClassId.artisan]:
        htmltext = "30525-05.htm"
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.exitQuest(1)
        return htmltext
      if ClassId in [ClassId.warsmith]:
        htmltext = "30525-06.htm"
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.exitQuest(1)
        return htmltext
      if ClassId in [ClassId.scavenger, ClassId.bountyHunter]:
        htmltext = "30525-07.htm"
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.exitQuest(1)
        return htmltext
 
    # All other Races must be out
    if npcId == HEAD_BLACKSMITH_BRONK and Race in [Race.Orc, Race.Darkelf, Race.Elf, Race.Human, Race.Kamael]:
-     st.setState(State.COMPLETED)
+     st.exitQuest(False)
      st.exitQuest(1)
      return "30525-07.htm"
 

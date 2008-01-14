@@ -53,7 +53,7 @@ class Quest (JQuest) :
        for item in NPC_GIFTS.values():
            st.takeItems(item,-1)
        st.unset("cond")
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.playSound("ItemSound.quest_finish")
    elif npcId in NPC_GIFTS.keys() and cond == 1 and id == State.STARTED:
      item=NPC_GIFTS[npcId]

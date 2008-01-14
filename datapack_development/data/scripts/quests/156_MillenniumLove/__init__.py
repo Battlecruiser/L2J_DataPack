@@ -36,7 +36,7 @@ class Quest (JQuest) :
     elif event == "156_2" :
        st.takeItems(RYLITHS_LETTER_ID,-1)
        st.unset("cond")
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.playSound("ItemSound.quest_finish")
        st.giveItems(5250,1)
        st.addExpAndSp(3000,0)
@@ -62,7 +62,7 @@ class Quest (JQuest) :
         elif st.getQuestItemsCount(THEONS_DIARY_ID) :
            st.takeItems(THEONS_DIARY_ID,-1)
            st.unset("cond")
-           st.setState(State.COMPLETED)
+           st.exitQuest(False)
            st.playSound("ItemSound.quest_finish")
            st.addExpAndSp(3000,0)
            st.giveItems(5250,1)

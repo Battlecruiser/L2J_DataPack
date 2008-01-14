@@ -130,7 +130,7 @@ class Quest (JQuest) :
           st.unset(var)
         for var in STATS[1]:
           st.unset(var)
-        st.setState(State.COMPLETED)
+        st.exitQuest(False)
       elif event == "30649_1" :
         htmltext = "30649-02.htm"
       elif event == "30649_2" :

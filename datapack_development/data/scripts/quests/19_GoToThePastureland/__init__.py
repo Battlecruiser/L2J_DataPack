@@ -30,7 +30,7 @@ class Quest (JQuest) :
      st.takeItems(BEAST_MEAT,1)
      st.giveItems(57,30000)
      st.unset("cond")
-     st.setState(State.COMPLETED)
+     st.exitQuest(False)
      st.playSound("ItemSound.quest_finish")
    return htmltext
 

@@ -66,7 +66,7 @@ class Quest (JQuest) :
        st.takeItems(RELIC_BOX,1)
        st.giveItems(CARADINE_LETTER_LAST,1)
        st.playSound("ItemSound.quest_finish")
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
    return htmltext
 
  def onTalk (self,npc,player):

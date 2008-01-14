@@ -34,7 +34,7 @@ class Quest (JQuest) :
    if event == "30520-04.htm":
      return "30520-04.htm"
 
-   st.setState(State.COMPLETED)
+   st.exitQuest(False)
    st.exitQuest(1)
    return htmltext
 
@@ -53,18 +53,18 @@ class Quest (JQuest) :
        return htmltext
      if ClassId in [ClassId.scavenger, ClassId.artisan]:
        htmltext = "30520-05.htm"
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.exitQuest(1)
        return htmltext
      if ClassId in [ClassId.bountyHunter, ClassId.warsmith]:
        htmltext = "30520-06.htm"
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.exitQuest(1)
        return htmltext
 
    # All other Races must be out
    if npcId == WAREHOUSE_CHIEF_REED and Race in [Race.Orc, Race.DarkElf, Race.Elf, Race.Human, Race.Kamael]:
-     st.setState(State.COMPLETED)
+     st.exitQuest(False)
      st.exitQuest(1)
      return "30520-07.htm"
 

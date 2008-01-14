@@ -108,7 +108,7 @@ class Quest (JQuest) :
           st.giveItems(MEDALLION_OF_WARRIOR,1)
           htmltext = "30010-13.htm"
           st.set("cond","0")
-          st.setState(State.COMPLETED)
+          st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
    return htmltext
 

@@ -124,7 +124,7 @@ class Quest (JQuest) :
       htmltext = "30630-22.htm"
       for var in STATS:
         st.unset(var)
-      st.setState(State.COMPLETED)
+      st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
     # Alexandrias Events
     elif event == "30098_1" :

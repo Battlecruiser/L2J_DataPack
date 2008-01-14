@@ -29,7 +29,7 @@ class Quest (JQuest) :
        st.giveItems(57,68500)
        st.takeItems(GEM,-1)
        st.playSound("ItemSound.quest_finish")
-       st.setState(State.COMPLETED)
+       st.exitQuest(False)
        st.set("onlyone","1")
    return htmltext 
 

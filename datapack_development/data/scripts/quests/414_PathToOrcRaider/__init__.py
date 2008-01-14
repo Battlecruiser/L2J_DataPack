@@ -96,7 +96,7 @@ class Quest (JQuest) :
      st.takeItems(BETRAYER_UMBAR_REPORT,-1) 
      st.giveItems(MARK_OF_RAIDER,1) 
      st.unset("cond") 
-     st.setState(State.COMPLETED) 
+     st.exitQuest(False) 
      st.playSound("ItemSound.quest_finish") 
    return htmltext
 

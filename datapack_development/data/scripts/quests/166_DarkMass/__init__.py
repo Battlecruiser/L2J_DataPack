@@ -63,7 +63,7 @@ class Quest (JQuest) :
             st.giveItems(ADENA_ID,500)
             st.addExpAndSp(500,0)
             st.set("cond","0")
-            st.setState(State.COMPLETED)
+            st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
    elif id == State.STARTED: 
        if npcId == 30135 :

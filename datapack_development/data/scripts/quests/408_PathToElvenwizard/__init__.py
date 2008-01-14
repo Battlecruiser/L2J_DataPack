@@ -160,7 +160,7 @@ class Quest (JQuest) :
         st.takeItems(NOBILITY_AMETHYST,st.getQuestItemsCount(NOBILITY_AMETHYST))
         st.takeItems(FERTILITY_PERIDOT,st.getQuestItemsCount(FERTILITY_PERIDOT))
         st.set("cond","0")
-        st.setState(State.COMPLETED)
+        st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
         if st.getQuestItemsCount(ETERNITY_DIAMOND) == 0 :
           st.giveItems(ETERNITY_DIAMOND,1)

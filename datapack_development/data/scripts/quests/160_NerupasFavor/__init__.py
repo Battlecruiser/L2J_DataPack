@@ -93,7 +93,7 @@ class Quest (JQuest) :
           st.giveItems(LESSER_HEALING_POTION,int(Config.RATE_QUESTS_REWARD))
           st.addExpAndSp(1000,0)
           st.unset("cond")
-          st.setState(State.COMPLETED)
+          st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
           htmltext = "30370-06.htm"
    return htmltext
