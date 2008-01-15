@@ -57,16 +57,14 @@
   </for>
 </skill>
 <skill id="5204" levels="1" name="Production-First Gigantic Pig Combination">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      none
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Needs more work -->
+  <!-- Only pre-implementation -->
+  <set name="target" val="TARGET_SELF"/> <!-- Needs to be checked -->
+  <set name="skillType" val="BUFF"/>
+  <set name="hitTime" val="5800"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -312,16 +310,14 @@
   </for>
 </skill>
 <skill id="5218" levels="1" name="Production: Event Teleport">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      none
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Needs more work -->
+  <!-- Only pre-implementation -->
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="hitTime" val="4000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
   </for>
 </skill>
