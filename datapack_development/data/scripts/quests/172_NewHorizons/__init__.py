@@ -19,7 +19,8 @@ MARK_OF_TRAVELER       = 7570
  
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr) 
+ def __init__(self,id,name,descr): 
+     JQuest.__init__(self,id,name,descr) 
      self.questItemIds = [MARK_OF_TRAVELER]
 
  def onEvent (self,event,st) :
