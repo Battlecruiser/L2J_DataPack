@@ -20,7 +20,8 @@ GROCERY_STORE_MANIFEST = 9793
 
 class Quest (JQuest) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr):
+     JQuest.__init__(self,id,name,descr)
      self.questItemIds = [WAREHOUSE_MANIFEST, GROCERY_STORE_MANIFEST]
  
  def onEvent (self,event,st) :
