@@ -652,33 +652,45 @@
   </for>
 </skill>
 <skill id="4239" levels="1" name="Antharas Regeneration">
-  <!-- NOT USED IN C4 -->
+  <!-- Done by DJ MELERIX -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="1800" val="0"> 
+       <mul order="0x30" stat="regHp" val="0.40"/>
+    </effect>
   </for>
 </skill>
 <skill id="4240" levels="1" name="Antharas Regeneration">
-  <!-- NOT USED IN C4 -->
+  <!-- Done by DJ MELERIX -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="1800" val="0"> 
+       <mul order="0x30" stat="regHp" val="0.70"/>
+    </effect>
   </for>
 </skill>
 <skill id="4241" levels="1" name="Antharas Regeneration">
-  <!-- NOT USED IN C4 -->
+  <!-- Done by DJ MELERIX -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="1800" val="0"> 
+       <mul order="0x30" stat="regHp" val="1.0"/>
+    </effect>
   </for>
 </skill>
 <skill id="4242" levels="1" name="Zaken Regeneration">
