@@ -227,8 +227,8 @@ INSERT INTO `raidboss_spawnlist` VALUES
 (25496,1,88300,258000,-10200,0,43200,129600,0,402319,3718), -- Fafurion's Envoy Pingolpin (52)
 (25498,1,126624,174448,-3056,0,43200,129600,0,288415,3718), -- Fafurion's Henchman Istary (45)
 -- (25501,1,48693,-106508,-1247,0,43200,129600,0,127782,9999), -- Boss Akata (30) -- stats to be done
--- (25504,1,122771,-141022,-1016,0,43200,129600,0,206753,9999), -- Nellis' Vengeful Spirit (39) -- stats & proper coords to be done
--- (25506,1,127856,-160639,-1080,0,43200,129600,0,184670,9999), -- Rayito The Looter (37) -- stats & proper coords to be done
+-- (25504,1,122771,-141022,-1016,0,43200,129600,0,206753,9999), -- Nellis' Vengeful Spirit (39) -- stats to be done
+-- (25506,1,127856,-160639,-1080,0,43200,129600,0,184670,9999), -- Rayito The Looter (37) -- stats to be done
 -- (25509,1,74000,-102000,900,0,43200,129600,0,418874,9999), -- Dark Shaman Varangka (53) -- stats & proper coords to be done
 -- (25512,1,96524,-111070,-3335,0,43200,129600,0,804638,9999), -- Gigantic Chaos Golem (52) -- stats to be done
 (25514,1,79635,-55434,-6135,0,43200,129600,0,714778,3718), -- Queen Shyeed (80)
