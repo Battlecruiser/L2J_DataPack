@@ -429,7 +429,7 @@ description(s) :
   <set name="skillType" val="TRANSFORM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="3000000"/>
+  <set name="reuseDelay" val="3600000"/>
   <set name="transformId" val="251"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -454,146 +454,254 @@ description(s) :
   </for>
 </skill>
 <skill id="541" levels="1" name="Transform Grail Apostle">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="201"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="542" levels="1" name="Transform Grail Apostle">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="201"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="543" levels="1" name="Transform Grail Apostle">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="201"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="544" levels="1" name="Transform Unicorn">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="204"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="545" levels="1" name="Transform Unicorn">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="204"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="546" levels="1" name="Transform Unicorn">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="204"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="547" levels="1" name="Transform Lilim Knight">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="207"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="548" levels="1" name="Transform Lilim Knight">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="207"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="549" levels="1" name="Transform Lilim Knight">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="207"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="550" levels="1" name="Transform Golem Guardian">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="210"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="551" levels="1" name="Transform Golem Guardian">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="210"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="552" levels="1" name="Transform Golem Guardian">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="210"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="553" levels="1" name="Transform Inferno Drake">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="213"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="554" levels="1" name="Transform Inferno Drake">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="213"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="555" levels="1" name="Transform Inferno Drake">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="213"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="556" levels="1" name="Transform Dragon Bomber">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="216"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="557" levels="1" name="Transform Dragon Bomber">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="216"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="558" levels="1" name="Transform Dragon Bomber">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="transformId" val="216"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -614,19 +722,39 @@ description(s) :
   </for>
 </skill>
 <skill id="561" levels="4" name="Bless of Angel">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume"> 68 70 74 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="1000"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="hitTime" val="2500"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <mul order="0x30" stat="pAtk" val="1.12"/>
+    </effect>
   </for>
 </skill>
 <skill id="562" levels="4" name="Wind of Angel">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume"> 68 70 74 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="1000"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="hitTime" val="2500"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <add order="0x40" stat="rEvas" val="3"/>
+    </effect>
   </for>
 </skill>
 <skill id="563" levels="4" name="Horn of Doom">
@@ -783,11 +911,18 @@ description(s) :
   </for>
 </skill>
 <skill id="583" levels="4" name="Assimilation">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume"> 68 70 74 78 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="2000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="reuseDelay" val="60000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="SilentMove" abnormal="stealth" time="120" val="0">
+    </effect>
   </for>
 </skill>
 <skill id="584" levels="1" name="Power Claw">
