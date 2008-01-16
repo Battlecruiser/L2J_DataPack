@@ -7182,7 +7182,7 @@ INSERT INTO `etcitem` VALUES
 (9851,'Standard Caravan Certificate','false','none',0,'normal','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (9852,'Premium Caravan Certificate','false','none',0,'normal','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (9853,'Mark of Friendship and Trust','false','none',0,'normal','wood','none',-1,0,NULL,'true','true','true','true','',''),
-(9881,'Diploma','false','none',0,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
+(9881,'Diploma','false','quest',0,'stackable','paper','none',-1,0,NULL,'false','false','true','false','',''),
 (9882,'Black Hair Wolf Necklace','false','none',20,'normal','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (9897,'Scroll of Transformation - Pig','false','none',120,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (9898,'SP Scroll: Highest Grade','false','none',120,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
