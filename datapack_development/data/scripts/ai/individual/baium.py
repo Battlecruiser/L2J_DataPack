@@ -142,6 +142,7 @@ class baium (JQuest):
     self.lastAttackVsBaiumTime = System.currentTimeMillis()
     
   def onKill(self,npc,player,isPet):
+    self.cancelQuestTimer("baium_despawn", npc, None)    
     objId=npc.getObjectId()
     npc.broadcastPacket(PlaySound(1, "BS02_D", 1, objId, npc.getX(), npc.getY(), npc.getZ()))
     # spawn the "Teleportation Cubic" for 15 minutes (to allow players to exit the lair)
