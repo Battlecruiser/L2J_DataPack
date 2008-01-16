@@ -32,7 +32,7 @@
       Lvl 1-3 - Active: Temporarily decreases the re-use time for song/dance skills.
 -->
   <table name="#mpConsume"> 27 31 34 </table>
-  <table name="#mReuseRate"> 0.9 0.8 0.7 </table>
+  <table name="#pReuseRate"> 0.9 0.8 0.7 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -44,7 +44,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-      <mul order="0x30" stat="mReuse" val="#mReuseRate"/>
+      <mul order="0x30" stat="pReuse" val="#pReuseRate"/> <!-- add core support to songs/dances -->
     </effect>
   </for>
 </skill>
@@ -56,7 +56,7 @@
       Lvl 1-3 - Active: Temporarily decreases the re-use times for all skills.
 -->
   <table name="#mpConsume"> 27 31 34 </table>
-  <table name="#mReuseRate"> 0.9 0.8 0.7 </table>
+  <table name="#reuseRate"> 0.9 0.8 0.7 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -68,7 +68,8 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-      <mul order="0x30" stat="mReuse" val="#mReuseRate"/>
+      <mul order="0x30" stat="mReuse" val="#reuseRate"/>
+      <mul order="0x30" stat="pReuse" val="#reuseRate"/>
     </effect>
   </for>
 </skill>
