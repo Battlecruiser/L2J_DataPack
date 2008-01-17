@@ -1847,17 +1847,40 @@
 </skill>
 <skill id="492" levels="25" name="Spread Wing">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-     Use your wing to attack hostile enemies behind you. Consumes 1 Soul. Over-hit is possible. Power 722-1827.
+  Description:
+  Use your wing to attack hostile enemies behind you. Consumes 1 Soul. Over-hit is possible. Power 
+  722.  
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+ <table name="#mpConsume_Init">
+   17 17 17 17 18 18 19 19 20 20
+   20 20 21 21 22 22 22 23 23 23
+   24 24 24 25 25
+ </table>
+ <table name="#mpConsume">
+   38 38 39 41 41 43 43 44 45 46
+   48 48 48 49 50 51 52 52 54 55
+   55 56 57 57 58
+ </table>
+ <set name="mpInitialConsume" val="#mpConsume_Init"/>
+ <set name="mpConsume" val="#mpConsume"/>
+ <table name="#power">
+   722 758 796 835 875 916 959 1002 1046 1091
+   1136 1183 1230 1278 1327 1376 1425 1475 1525 1576
+   1626 1677 1727 1777 1827
+ </table>
+ <set name="power" val="#power"/>
+ <set name="hitTime" val="1080"/>
+ <set name="overHit" val="true"/>
+ <set name="operateType" val="OP_ACTIVE"/>
+ <set name="target" val="TARGET_BEHIND_AURA"/>
+ <set name="skillRadius" val="80"/>
+ <set name="skillType" val="PDAM"/>
+ <set name="castRange" val="-1"/>
+ <set name="effectRange" val="-1"/>
+ <set name="reuseDelay" val="36000"/>
+ <set name="soulConsumeCount" val="1"/>
+ <for>
+ </for>
 </skill>
 <skill id="493" levels="28" name="Storm Assault">
 <!--
