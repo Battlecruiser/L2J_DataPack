@@ -35,7 +35,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
-     self.questItemIds = [GOLDEN_HAIR, ORB_OF_BINDING, SORCERY_INGREDIENT, CARADINE_LETTER]
+     self.questItemIds = [GOLDEN_HAIR, ORB_OF_BINDING, SORCERY_INGREDIENT]
 
  def onEvent (self,event,st) :
    htmltext = event
