@@ -46,35 +46,29 @@ class Quest (JQuest) :
        st.takeItems(VIRGILS_LETTER,1)
        st.set("cond","1")
        st.playSound("ItemSound.quest_accept")
-   if event == "31743-2.htm" :
-     return htmltext
-   if event == "31743-3.htm" :
-     return htmltext
-   if event == "31743-4.htm" :
-     return htmltext
-   if event == "31743-5.htm" :
+   elif event == "31743-5.htm" :
      if cond == 1 :
        st.set("cond","2")
        st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
-   if event == "31744-2.htm" :
+   elif event == "31744-2.htm" :
      if cond == 2 :
        st.set("cond","3")
        st.playSound("ItemSound.quest_middle")
-   if event == "31751-2.htm" :
+   elif event == "31751-2.htm" :
      if cond == 3 :
        st.set("cond","4")
        st.playSound("ItemSound.quest_middle")
-   if event == "30759-2.htm" :
+   elif event == "30759-2.htm" :
      if cond == 6 :
        st.set("cond","7")
        st.playSound("ItemSound.quest_middle")
-   if event == "30738-2.htm" :
+   elif event == "30738-2.htm" :
      if cond == 7 :
        st.set("cond","8")
        st.giveItems(SORCERY_INGREDIENT,1)
        st.playSound("ItemSound.quest_middle")
-   if event == "30759-5.htm" :
+   elif event == "30759-5.htm" :
      if cond == 8 :
        st.set("cond","9")
        st.set("awaitsDrops","1")
@@ -84,105 +78,112 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+   htmltext = "<html><body>You are either not carrying out your quest or don't meet the criteria.</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
-
    npcId = npc.getNpcId()
    id = st.getState()
    if npcId != VIRGIL and id != State.STARTED : return htmltext
-
-   chance = st.getRandom(100)
    cornerstones = st.getInt("cornerstones")
    if id == State.CREATED :
      st.set("cond","0")
      st.set("cornerstones","0")
    cond = st.getInt("cond")
    if player.isSubClassActive() :
-     if npcId == VIRGIL and cond == 0 and st.getQuestItemsCount(VIRGILS_LETTER) == 1 :
-       if id == State.COMPLETED :
-         htmltext = "<html><body>This quest has already been completed.</body></html>"
-
-       elif player.getLevel() < 60 : 
-         htmltext = "31742-2.htm"
-         st.exitQuest(1)
-       elif player.getLevel() >= 60 :
-         htmltext = "31742-1.htm"
-     if npcId == VIRGIL and cond == 1 :
-       htmltext = "31742-4.htm"
-     if npcId == KASSANDRA and cond == 1 :
-       htmltext = "31743-1.htm"
-     if npcId == KASSANDRA and cond == 2 :
-       htmltext = "31743-6.htm"
-     if npcId == OGMAR and cond == 2 :
-       htmltext = "31744-1.htm"
-     if npcId == OGMAR and cond == 3 :
-       htmltext = "31744-3.htm"
-     if npcId == MYSTERIOUS_KNIGHT and cond == 3 :
-       htmltext = "31751-1.htm"
-     if npcId == MYSTERIOUS_KNIGHT and cond == 4 :
-       htmltext = "31751-3.htm"
-     if npcId == ANGEL_CORPSE and cond == 4 :
-       npc.reduceCurrentHp(10000,npc) 
-       if CHANCE_FOR_HAIR < chance :
-         htmltext = "31752-2.htm"
-       else :
-         st.set("cond","5")
-         st.giveItems(GOLDEN_HAIR,1)
-         st.playSound("ItemSound.quest_middle")
-         htmltext = "31752-1.htm"
-     if npcId == ANGEL_CORPSE and cond == 5 :
-       htmltext = "31752-2.htm"
-     if npcId == MYSTERIOUS_KNIGHT and cond == 5 and st.getQuestItemsCount(GOLDEN_HAIR) == 1 :
-       htmltext = "31751-4.htm"
-       st.set("cond","6")
-       st.playSound("ItemSound.quest_middle")
-     if npcId == MYSTERIOUS_KNIGHT and cond == 6 :
-       htmltext = "31751-5.htm"
-     if npcId == KALIS and cond == 6 :
-       htmltext = "30759-1.htm"
-     if npcId == KALIS and cond == 7 :
-       htmltext = "30759-3.htm"
-     if npcId == MATILD and cond == 7 :
-       htmltext = "30738-1.htm"
-     if npcId == MATILD and cond == 8 :
-       htmltext = "30738-3.htm"
-     if npcId == KALIS and cond == 8 and st.getQuestItemsCount(SORCERY_INGREDIENT) == 1 :
-       htmltext = "30759-4.htm"
-     if npcId == KALIS and cond == 9 :
-       htmltext = "30759-6.htm"
-     if npcId == FALLEN_UNICORN and cond == 9 :
-       htmltext = "31746-1.htm"
-     if npcId == CORNERSTONE and cond == 9 and st.getQuestItemsCount(ORB_OF_BINDING) == 0 :
-       htmltext = "31748-1.htm"
-     if npcId == CORNERSTONE and cond == 9 and st.getQuestItemsCount(ORB_OF_BINDING) >= 1 :
-       htmltext = "31748-2.htm"
-       st.takeItems(ORB_OF_BINDING,1)
-       npc.reduceCurrentHp(10000,npc)
-       st.set("cornerstones",str(cornerstones+1))
-       st.playSound("ItemSound.quest_middle")
-       if cornerstones == 3 :
-         st.set("cond","10")
-         st.playSound("ItemSound.quest_middle")
-     if npcId == FALLEN_UNICORN and cond == 10 :
-       htmltext = "31746-2.htm"
-       npc.reduceCurrentHp(10000,npc)
-       st.addSpawn(PURE_UNICORN,npc,False)
-     if npcId == PURE_UNICORN and cond == 10 :
-       st.set("cond","11")
-       st.playSound("ItemSound.quest_middle")
-       htmltext = "31747-1.htm"
-     if npcId == PURE_UNICORN and cond == 11 :
-       htmltext = "31747-2.htm"
-     if npcId == KASSANDRA and cond == 11 :
-       htmltext = "31743-7.htm"
-     if npcId == VIRGIL and cond == 11 :
-       htmltext = "31742-6.htm"
-       st.set("cond","0")
-       st.set("cornerstones","0")
-       st.giveItems(CARADINE_LETTER,1)
-       st.playSound("ItemSound.quest_finish")
-       st.exitQuest(False)
+     if npcId == VIRGIL :
+         if cond == 0 and st.getQuestItemsCount(VIRGILS_LETTER) == 1 :
+            if id == State.COMPLETED :
+                htmltext = "<html><body>This quest has already been State.COMPLETED.</body></html>"
+            elif player.getLevel() < 60 : 
+                htmltext = "31742-2.htm"
+                st.exitQuest(1)
+            elif player.getLevel() >= 60 :
+                htmltext = "31742-1.htm"
+         elif cond == 1 :
+             htmltext = "31742-4.htm"
+         elif cond == 11 :
+             htmltext = "31742-6.htm"
+             st.set("cond","0")
+             st.set("cornerstones","0")
+             st.giveItems(CARADINE_LETTER,1)
+             st.playSound("ItemSound.quest_finish")
+             st.exitQuest(False)
+     elif npcId == KASSANDRA :
+         if cond == 1 :
+             htmltext = "31743-1.htm"
+         elif cond == 2 :
+             htmltext = "31743-6.htm"
+         elif cond == 11 :
+             htmltext = "31743-7.htm"
+     elif npcId == OGMAR :
+         if cond == 2 :
+             htmltext = "31744-1.htm"
+         elif cond == 3 :
+             htmltext = "31744-3.htm"
+     elif npcId == MYSTERIOUS_KNIGHT :
+         if cond == 3 :
+             htmltext = "31751-1.htm"
+         elif cond == 4 :
+             htmltext = "31751-3.htm"
+         elif cond == 5 and st.getQuestItemsCount(GOLDEN_HAIR) == 1 :
+             htmltext = "31751-4.htm"
+             st.set("cond","6")
+             st.playSound("ItemSound.quest_middle")
+         elif cond == 6 :
+             htmltext = "31751-5.htm"
+     elif npcId == ANGEL_CORPSE :
+         if cond == 4 :
+           npc.reduceCurrentHp(10000,npc)
+           chance = st.getRandom(100)
+           if CHANCE_FOR_HAIR < chance :
+             htmltext = "31752-2.htm"
+           else :
+             st.set("cond","5")
+             st.giveItems(GOLDEN_HAIR,1)
+             st.playSound("ItemSound.quest_middle")
+             htmltext = "31752-1.htm"
+         elif cond == 5 :
+             htmltext = "31752-2.htm"
+     elif npcId == KALIS :
+         if cond == 6 :
+             htmltext = "30759-1.htm"
+         elif cond == 7 :
+             htmltext = "30759-3.htm"
+         elif cond == 8 and st.getQuestItemsCount(SORCERY_INGREDIENT) == 1 :
+             htmltext = "30759-4.htm"
+         elif cond == 9 :
+             htmltext = "30759-6.htm"
+     elif npcId == MATILD :
+         if cond == 7 :
+             htmltext = "30738-1.htm"
+         elif cond == 8 :
+             htmltext = "30738-3.htm"
+     elif npcId == FALLEN_UNICORN :
+         if cond == 9 :
+             htmltext = "31746-1.htm"
+         elif cond == 10 :
+             htmltext = "31746-2.htm"
+             npc.reduceCurrentHp(10000,npc)
+             st.addSpawn(PURE_UNICORN,npc,False)
+     elif npcId == CORNERSTONE :
+         if cond == 9 and st.getQuestItemsCount(ORB_OF_BINDING) == 0 :
+             htmltext = "31748-1.htm"
+         elif cond == 9 and st.getQuestItemsCount(ORB_OF_BINDING) >= 1 :
+             htmltext = "31748-2.htm"
+             st.takeItems(ORB_OF_BINDING,1)
+             npc.reduceCurrentHp(10000,npc)
+             st.set("cornerstones",str(cornerstones+1))
+             st.playSound("ItemSound.quest_middle")
+             if cornerstones == 3 :
+                 st.set("cond","10")
+                 st.playSound("ItemSound.quest_middle")
+     elif npcId == PURE_UNICORN :
+         if cond == 10 :
+             st.set("cond","11")
+             st.playSound("ItemSound.quest_middle")
+             htmltext = "31747-1.htm"
+         elif cond == 11 :
+             htmltext = "31747-2.htm"
    return htmltext
 
  def onKill(self,npc,player,isPet):
