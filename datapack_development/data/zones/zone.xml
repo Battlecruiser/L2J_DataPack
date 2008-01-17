@@ -609,6 +609,36 @@
 		<stat name='spawnZ' val='-545'/>
 	</zone>
 
+<!-- Boss Zones -->
+     <zone id='12006' type='BossZone' shape='Cuboid' minZ='-8220' maxZ='-4870'>
+	    <stat name='name' val='LairofAntharas'/>
+		<stat name='InvadeTime' val='60000'/>
+     </zone>
+     <zone id='12007' type='BossZone' shape='NPoly' minZ='9967' maxZ='16301'>
+	    <stat name='name' val='LairofBaium'/>
+		<stat name='InvadeTime' val='60000'/>
+     </zone>
+     <zone id='12008' type='BossZone' shape='Cuboid' minZ='-1735' maxZ='16301'>
+	    <stat name='name' val='LairofValakas'/>
+		<stat name='InvadeTime' val='60000'/>
+     </zone>
+     <zone id='12009' type='BossZone' shape='Cuboid' minZ='-5600' maxZ='-3895'>
+	    <stat name='name' val='LairofLilith'/>
+		<stat name='InvadeTime' val='60000'/>
+     </zone>
+     <zone id='12010' type='BossZone' shape='Cuboid' minZ='-5600' maxZ='-3895'>
+	    <stat name='name' val='LairofAnakim'/>
+		<stat name='InvadeTime' val='60000'/>
+     </zone>
+     <zone id='12011' type='BossZone' shape='Cuboid' minZ='-3775' maxZ='-2690'>
+	    <stat name='name' val='LairofZaken'/>
+		<stat name='InvadeTime' val='60000'/>
+     </zone>
+     <zone id='12014' type='BossZone' shape='Cuboid' minZ='-10730' maxZ='-10290'>
+	    <stat name='name' val='AltarofSacrifice'/>
+		<stat name='InvadeTime' val='60000'/>
+     </zone>
+
 
 <!-- Fishing zones -->
 	<zone id='11400' type='FishingZone' shape='NPoly' minZ='-3991' maxZ='-3759'>
