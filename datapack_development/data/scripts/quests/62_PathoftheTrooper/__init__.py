@@ -1,4 +1,5 @@
 # Made by Emperorc
+# Update 17-01-08 by t0rm3nt0r
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -21,7 +22,7 @@ Head,Leg,Heart,Shubain_Rec,Gwain_Rec = range(9749,9754)
 class Quest (JQuest) :
     def __init__(self,id,name,descr):
         JQuest.__init__(self,id,name,descr)
-        self.questItemIds = range(9749,9754)
+        self.questItemIds = range(9749,9753)
 
     def onEvent (self,event,st) :
         htmltext = event
@@ -41,11 +42,13 @@ class Quest (JQuest) :
         id = st.getState()
         cond = st.getInt("cond")
         if id == State.COMPLETED :
-            htmltext = "<html><body>This quest has already been completed.</body></html>"
-
+            htmltext = "32197-07.htm"
         elif npcId == Gwain :
-            if player.getClassId().getId() != 123 or player.getLevel() < 19:
-                htmltext = "32197-00.htm"
+            if player.getLevel() < 19 :
+                htmltext = "32197-00a.htm"
+                st.exitQuest(1)
+            elif player.getClassId().getId() != 123 :
+                htmltext = "32197-00b.htm"
                 st.exitQuest(1)
             elif id == State.CREATED :
                 htmltext = "32197-01.htm"
@@ -64,7 +67,6 @@ class Quest (JQuest) :
                     st.addExpAndSp(3200,4736)
                     st.exitQuest(False)
                     st.playSound("ItemSound.quest_finish")
-                    st.unset("cond")
                     htmltext = "32197-06.htm"
         elif npcId == Shubain :
             if cond == 1 :
@@ -95,21 +97,21 @@ class Quest (JQuest) :
         npcId = npc.getNpcId()
         cond = st.getInt("cond")
         if npcId == Warrior :
-            if st.getQuestItemsCount(Head) < 5 and st.getRandom(10) < 4 and cond == 2 :
+            if st.getQuestItemsCount(Head) < 5 and cond == 2 :
                 st.giveItems(Head,1)
                 if st.getQuestItemsCount(Head) == 5 :
                     st.playSound("ItemSound.quest_middle")
                 else:
                     st.playSound("ItemSound.quest_itemget")
         elif npcId == Spider :
-            if st.getQuestItemsCount(Leg) < 10 and st.getRandom(10) < 6 and cond == 3 :
+            if st.getQuestItemsCount(Leg) < 10 and cond == 3 :
                 st.giveItems(Leg,1)
                 if st.getQuestItemsCount(Leg) == 10 :
                     st.playSound("ItemSound.quest_middle")
                 else:
                     st.playSound("ItemSound.quest_itemget")
         elif npcId == Tumran :
-            if not st.getQuestItemsCount(Heart) and st.getRandom(10) < 3 and cond == 5 :
+            if not st.getQuestItemsCount(Heart) and cond == 5 :
                 st.giveItems(Heart,1)
                 st.playSound("ItemSound.quest_middle")
         return
