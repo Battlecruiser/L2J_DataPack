@@ -37,12 +37,28 @@ description(s) :
   </for>
 </skill>
 <skill id="503" levels="3" name="Scorn">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<!--
+  Description:
+  Provokes enemies in front of you. Consumes 1 Soul. Power 1630.  
+-->
+ <table name="#mpConsume_Init"> 7 9 11 </table>
+ <table name="#mpConsume"> 16 22 25 </table>
+ <table name="#skillRadius"> 80 160 240 </table>
+ <set name="mpInitialConsume" val="#mpConsume_Init"/>
+ <set name="mpConsume" val="#mpConsume"/>
+ <table name="#power"> 1630 2089 2384 </table>
+ <set name="power" val="#power"/>
+ <set name="hitTime" val="1080"/>
+ <set name="operateType" val="OP_ACTIVE"/>
+ <set name="target" val="TARGET_FRONT_AREA"/>
+ <set name="skillRadius" val="#skillRadius"/>
+ <set name="skillType" val="AGGDAMAGE"/>
+ <set name="castRange" val="40"/>
+ <set name="effectRange" val="56"/>
+ <set name="reuseDelay" val="10000"/>
+ <set name="soulConsumeCount" val="1"/>
+ <for>
+ </for>
 </skill>
 <skill id="504" levels="37" name="Triple Thrust">
 <!--
