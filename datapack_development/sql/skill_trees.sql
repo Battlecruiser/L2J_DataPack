@@ -60,7 +60,7 @@ CREATE TABLE skill_trees (
 -- 131=Doombringer       | 132=Male Soul Hound    | 133=Female Soul Hound    | 134=Trickster
 -- 135=Female Inspector  | 136=Male Inspector
 
-INSERT INTO skill_trees VALUES 
+INSERT INTO skill_trees VALUES
 (0,3,1,'Power Strike',50,5),
 (0,3,2,'Power Strike',50,5),
 (0,3,3,'Power Strike',50,5),
@@ -1049,9 +1049,7 @@ INSERT INTO skill_trees VALUES
 (4,217,8,'Sword Blunt Mastery',19000,36),
 (4,232,13,'Heavy Armor Mastery',13000,36),
 (4,232,14,'Heavy Armor Mastery',13000,36),
-(4,232,15,'Heavy Armor Mastery',13000,36);
-
-INSERT INTO skill_trees VALUES 
+(4,232,15,'Heavy Armor Mastery',13000,36),
 (5,18,1,'Aura of Hate',12000,40),
 (5,18,2,'Aura of Hate',12000,40),
 (5,18,3,'Aura of Hate',12000,40),
@@ -2202,10 +2200,8 @@ INSERT INTO skill_trees VALUES
 (8,411,3,'Stealth',2000000,74),
 (8,412,10,'Sand Bomb',2000000,74),
 (8,419,4,'Summon Treasure Key',2000000,74),
-(8,470,1,'Detect Trap',1730000,74),
-(8,471,1,'Defuse Trap',1730000,74);
-
-INSERT INTO skill_trees VALUES 
+(8,623,1,'Find Trap',1730000,74),
+(8,624,1,'Remove Trap',1730000,74),
 (9,19,1,'Double Shot',16000,40),
 (9,19,2,'Double Shot',16000,40),
 (9,19,3,'Double Shot',16000,40),
@@ -3422,9 +3418,7 @@ INSERT INTO skill_trees VALUES
 (13,1334,7,'Summon Cursed Man',820000,74),
 (13,1381,5,'Mass Fear',820000,74),
 (13,1382,5,'Mass Gloom',820000,74),
-(13,1387,3,'Summon Cursed Bones',820000,74);
-
-INSERT INTO skill_trees VALUES 
+(13,1387,3,'Summon Cursed Bones',820000,74),
 (14,10,1,'Summon Storm Cubic',32000,40),
 (14,146,13,'Anti Magic',11000,40),
 (14,146,14,'Anti Magic',11000,40),
@@ -4687,9 +4681,7 @@ INSERT INTO skill_trees VALUES
 (17,1392,3,'Holy Resistance',1530000,74),
 (17,1393,3,'Unholy Resistance',1530000,74),
 (17,1395,10,'Erase',1530000,74),
-(17,1398,10,'Mana Burn',1530000,74);
-
-INSERT INTO skill_trees VALUES
+(17,1398,10,'Mana Burn',1530000,74),
 (18,3,1,'Power Strike',50,5),
 (18,3,2,'Power Strike',50,5),
 (18,3,3,'Power Strike',50,5),
@@ -5524,9 +5516,7 @@ INSERT INTO skill_trees VALUES
 (22,209,8,'Dagger Mastery',13000,36),
 (22,233,9,'Light Armor Mastery',13000,36),
 (22,233,10,'Light Armor Mastery',13000,36),
-(22,312,5,'Vicious Stance',26000,36);
-
-INSERT INTO skill_trees VALUES
+(22,312,5,'Vicious Stance',26000,36),
 (23,15,16,'Charm',9000,40),
 (23,15,17,'Charm',9000,40),
 (23,15,18,'Charm',9000,40),
@@ -5863,8 +5853,8 @@ INSERT INTO skill_trees VALUES
 (23,410,3,'Mortal Strike',1860000,74),
 (23,412,10,'Sand Bomb',1860000,74),
 (23,419,4,'Summon Treasure Key',1860000,74),
-(23,470,1,'Detect Trap',1630000,74),
-(23,471,1,'Defuse Trap',1630000,74),
+(23,623,1,'Find Trap',1630000,74),
+(23,624,1,'Remove Trap',1630000,74),
 (24,15,16,'Charm',12000,40),
 (24,15,17,'Charm',12000,40),
 (24,15,18,'Charm',12000,40),
@@ -6763,9 +6753,7 @@ INSERT INTO skill_trees VALUES
 (27,1275,14,'Aura Bolt',1000000,74),
 (27,1295,9,'Aqua Splash',1000000,74),
 (27,1297,6,'Clear Mind',1000000,74),
-(27,1417,5,'Aura Flash',1000000,74);
-
-INSERT INTO skill_trees VALUES
+(27,1417,5,'Aura Flash',1000000,74),
 (28,67,1,'Summon Life Cubic',30000,40),
 (28,146,13,'Anti Magic',10000,40),
 (28,146,14,'Anti Magic',10000,40),
@@ -8220,9 +8208,7 @@ INSERT INTO skill_trees VALUES
 (33,322,6,'Shield Fortress',1300000,74),
 (33,401,10,'Judgment',1300000,74),
 (33,402,10,'Arrest',1300000,74),
-(33,450,10,'Banish Seraph',1300000,74);
-
-INSERT INTO skill_trees VALUES
+(33,450,10,'Banish Seraph',1300000,74),
 (34,2,5,'Confusion',43000,40),
 (34,70,17,'Drain Health',14000,40),
 (34,70,18,'Drain Health',14000,40),
@@ -9003,8 +8989,8 @@ INSERT INTO skill_trees VALUES
 (36,410,3,'Mortal Strike',1370000,74),
 (36,412,10,'Sand Bomb',1370000,74),
 (36,419,4,'Summon Treasure Key',1370000,74),
-(36,470,1,'Detect Trap',1180000,74),
-(36,471,1,'Defuse Trap',1180000,74),
+(36,623,1,'Find Trap',1180000,74),
+(36,624,1,'Remove Trap',1180000,74),
 (37,2,5,'Confusion',33000,40),
 (37,19,1,'Double Shot',11000,40),
 (37,19,2,'Double Shot',11000,40),
@@ -9362,9 +9348,7 @@ INSERT INTO skill_trees VALUES
 (37,314,16,'Fatal Counter',760000,74),
 (37,414,8,'Dead Eye',1530000,74),
 (37,415,3,'Spirit of Sagittarius',1530000,74),
-(37,417,5,'Pain of Sagittarius',1530000,74);
-
-INSERT INTO skill_trees VALUES
+(37,417,5,'Pain of Sagittarius',1530000,74),
 (38,118,1,'Magician\'s Movement',0,1),
 (38,163,1,'Spellcraft',0,1),
 (38,214,1,'Mana Recovery',0,1),
@@ -10740,9 +10724,7 @@ INSERT INTO skill_trees VALUES
 (43,1219,29,'Greater Group Heal',820000,74),
 (43,1392,3,'Holy Resistance',1640000,74),
 (43,1395,10,'Erase',1640000,74),
-(43,1398,10,'Mana Burn',1640000,74);
-
-INSERT INTO skill_trees VALUES
+(43,1398,10,'Mana Burn',1640000,74),
 (44,134,1,'Toughness',0,1),
 (44,3,1,'Power Strike',60,5),
 (44,3,2,'Power Strike',60,5),
@@ -11643,9 +11625,7 @@ INSERT INTO skill_trees VALUES
 (48,420,3,'Zealot',2000000,74),
 (48,423,3,'Infernal Form',2000000,74),
 (48,424,3,'War Frenzy',2000000,74),
-(48,425,1,'Hawk Spirit Totem',2000000,74);
-
-INSERT INTO skill_trees VALUES
+(48,425,1,'Hawk Spirit Totem',2000000,74),
 (49,118,1,'Magician\'s Movement',0,1),
 (49,134,1,'Toughness',0,1),
 (49,163,1,'Spellcraft',0,1),
@@ -12692,9 +12672,7 @@ INSERT INTO skill_trees VALUES
 (54,245,14,'Wild Sweep',11000,36),
 (54,245,15,'Wild Sweep',11000,36),
 (54,254,4,'Spoil',35000,36),
-(54,302,2,'Spoil Festival',35000,36);
-
-INSERT INTO skill_trees VALUES
+(54,302,2,'Spoil Festival',35000,36),
 (55,36,1,'Whirlwind',14000,40),
 (55,36,2,'Whirlwind',14000,40),
 (55,36,3,'Whirlwind',14000,40),
@@ -13696,9 +13674,7 @@ INSERT INTO skill_trees VALUES
 (118,347,1,'Earthquake',16000000,78),
 (118,430,1,'Master of Combat',16000000,78),
 (118,440,1,'Braveheart',16000000,78),
-(118,457,1,'Symbol of Honor',150000000,80);
-
-INSERT INTO skill_trees VALUES
+(118,457,1,'Symbol of Honor',150000000,80),
 (123,462,1,'Guilted Body',0,1),
 (123,141,1,'Weapon Mastery',160,5),
 (123,142,1,'Armor Mastery',160,5),
@@ -13981,9 +13957,9 @@ INSERT INTO skill_trees VALUES
 (126,487,14,'Penetrate Shot',6900,36),
 (126,487,15,'Penetrate Shot',6900,36),
 (126,514,2,'Fire Trap',20700,36),
-(126,101,1,'Stunning Shot',6900,36),
-(126,101,2,'Stunning Shot',6900,36),
-(126,101,3,'Stunning Shot',6900,36),
+(126,627,1,'Soul Shock',6900,36),
+(126,627,2,'Soul Shock',6900,36),
+(126,627,3,'Soul Shock',6900,36),
 (126,1433,9,'Abyssal Blaze',10400,36),
 (126,1433,10,'Abyssal Blaze',10400,36),
 (126,1434,4,'Dark Explosion',20700,36),
@@ -14689,9 +14665,7 @@ INSERT INTO skill_trees VALUES
 (128,1438,9,'Annihilation Circle',1860000,74),
 (128,1439,5,'Curse of Divinity',1860000,74),
 (128,1442,3,'Protection from Darkness',1860000,74),
-(128,1445,18,'Surrender to the Unholy',1860000,74);
-
-INSERT INTO skill_trees VALUES
+(128,1445,18,'Surrender to the Unholy',1860000,74),
 (129,465,14,'Light Armor Mastery',14000,40),
 (129,465,15,'Light Armor Mastery',14000,40),
 (129,465,16,'Light Armor Mastery',14000,40),
