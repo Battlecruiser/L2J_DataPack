@@ -382,8 +382,10 @@
   </for>
 </skill>
 <skill id="4028" levels="3" name="NPC Might">
-  <table name="#Tab-pAtk"> 1.08 1.12 1.15 </table>
+  <table name="#magicLvl"> 20 40 70 </table>
   <table name="#mpConsume"> 10 18 33 </table>
+  <table name="#pAtk"> 1.08 1.12 1.15 </table>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -395,14 +397,16 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-pAtk" stackType="pAtk">
-      <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#pAtk" stackType="pAtk">
+      <mul order="0x30" stat="pAtk" val="#pAtk"/>
     </effect>
   </for>
 </skill>
 <skill id="4029" levels="3" name="NPC Shield">
-  <table name="#Tab-pDef"> 1.08 1.12 1.15 </table>
+  <table name="#magicLvl"> 20 40 70 </table>
   <table name="#mpConsume"> 10 18 33 </table>
+  <table name="#pDef"> 1.08 1.12 1.15 </table>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -414,15 +418,19 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-pDef" stackType="pDef">
-      <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#pDef" stackType="pDef">
+      <mul order="0x30" stat="pDef" val="#pDef"/>
     </effect>
   </for>
 </skill>
 <skill id="4030" levels="3" name="NPC Clan Might">
   <!-- SHOULD BUFF FACTION MOBS -->
-  <table name="#Tab-pAtk"> 1.08 1.12 1.15 </table>
-  <table name="#mpConsume"> 10 18 33 </table>
+  <table name="#magicLvl"> 20 40 70 </table>
+  <table name="#mpInitialConsume"> 2 4 7 </table>
+  <table name="#mpConsume"> 8 14 26 </table>
+  <table name="#pAtk"> 1.08 1.12 1.15 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -435,15 +443,19 @@
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="100"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtk" stackType="pAtk">
-      <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#pAtk" stackType="pAtk">
+      <mul order="0x30" stat="pAtk" val="#pAtk"/>
     </effect>
   </for>
 </skill>
 <skill id="4031" levels="3" name="NPC Clan Aegis">
   <!-- SHOULD BUFF FACTION MOBS -->
-  <table name="#Tab-pDef"> 1.08 1.12 1.15 </table>
-  <table name="#mpConsume"> 10 18 33 </table>
+  <table name="#magicLvl"> 20 40 70 </table>
+  <table name="#mpInitialConsume"> 2 4 7 </table>
+  <table name="#mpConsume"> 8 14 26 </table>
+  <table name="#pDef"> 1.08 1.12 1.15 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -456,8 +468,8 @@
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="100"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pDef" stackType="pDef">
-      <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#pDef" stackType="pDef">
+      <mul order="0x30" stat="pDef" val="#pDef"/>
     </effect>
   </for>
 </skill>
@@ -751,8 +763,11 @@
 </skill>
 <skill id="4048" levels="3" name="NPC Dash">
   <!-- Done by dc -->
-  <table name="#Tab-runSpd"> 1.5 1.8 2 </table>
-  <set name="mpConsume" val="12"/>
+  <table name="#magicLvl"> 10 10 10 </table>
+  <table name="#mpConsume"> 12 12 12 </table>
+  <table name="#runSpd"> 1.50 1.80 2.0 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -760,8 +775,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect name="Buff" time="20" count="1" val="0">
-      <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
+    <effect count="1" name="Buff" time="20" val="0" stackOrder="#runSpd" stackType="runSpd">
+      <mul order="0x30" stat="runSpd" val="#runSpd"/>
     </effect>
   </for>
 </skill>
@@ -1154,8 +1169,12 @@
 </skill>
 <skill id="4074" levels="2" name="NPC Haste">
   <!-- Done by dc -->
-  <table name="#Tab-pAtkSpd"> 1.15 1.33 </table>
-  <table name="#mpConsume"> 14 33 </table>
+  <table name="#magicLvl"> 30 70 </table>
+  <table name="#mpInitialConsume"> 3 7 </table>
+  <table name="#mpConsume"> 11 26 </table>
+  <table name="#pAtkSpd"> 1.15 1.33 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1168,8 +1187,8 @@
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="100"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtkSpd" stackType="pAtkSpeedUp">
-      <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#pAtkSpd" stackType="pAtkSpeedUp">
+      <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
     </effect>
   </for>
 </skill>
@@ -1407,17 +1426,18 @@
 </skill>
 <skill id="4089" levels="1" name="NPC Bear Spirit Totem">
   <!-- Done by dc -->
+  <set name="magicLvl" val="40"/>
   <set name="mpConsume" val="18"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="1500"/>
-  <set name="skillType" val="DEBUFF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect name="Buff" time="600" count="1" val="0">
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="possession">
       <mul order="0x30" stat="runSpd" val="0.85"/>
       <mul order="0x30" stat="pAtk" val="1.15"/>
     </effect>
@@ -1425,6 +1445,7 @@
 </skill>
 <skill id="4090" levels="1" name="NPC Wolf Spirit Totem">
   <!-- Done by dc -->
+  <set name="magicLvl" val="40"/>
   <set name="mpConsume" val="18"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1435,32 +1456,35 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect name="Buff" time="600" count="1" val="0">
-      <mul order="0x30" stat="runSpd" val="1.4"/>
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1.40" stackType="possession">
+      <mul order="0x30" stat="runSpd" val="1.40"/>
     </effect>
   </for>
 </skill>
 <skill id="4091" levels="1" name="NPC Ogre Spirit Totem">
+  <set name="magicLvl" val="40"/>
   <set name="mpConsume" val="18"/>
-  <set name="power" val="14.0"/>
+  <set name="power" val="14"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="1500"/>
-  <set name="skillType" val="BUFF"/>
+  <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect name="Buff" time="600" count="1" val="0">
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="possession">
       <mul order="0x30" stat="runSpd" val="0.85"/>
-      <mul order="0x30" stat="mDef" val="1.1"/>
-      <mul order="0x30" stat="pDef" val="1.1"/>
+      <mul order="0x30" stat="pAtk" val="1.15"/>
+      <mul order="0x30" stat="pDef" val="1.10"/>
+      <mul order="0x30" stat="maxHp" val="1.14"/>
       <sub order="0x40" stat="rEvas" val="10"/>
     </effect>
   </for>
 </skill>
 <skill id="4092" levels="1" name="NPC Puma Spirit Totem">
   <!-- Done by dc -->
+  <set name="magicLvl" val="40"/>
   <set name="mpConsume" val="18"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1471,10 +1495,10 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect name="Buff" time="600" count="1" val="0">
-      <mul order="0x30" stat="pDef" val="0.8"/>
-      <mul order="0x30" stat="pAtkSpd" val="1.3"/>
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="possession">
+      <mul order="0x30" stat="pAtkSpd" val="1.30"/>
       <add order="0x40" stat="rEvas" val="4"/>
+      <mul order="0x30" stat="pDef" val="0.80"/>
     </effect>
   </for>
 </skill>
@@ -1522,9 +1546,11 @@
 </skill>
 <skill id="4096" levels="3" name="NPC Hawkeye">
   <!-- Done by dc -->
-  <table name="#Tab-accCombat"> 6 8 10 </table>
-  <table name="#Tab-pDef"> 0.9 0.9 0.9 </table>
+  <table name="#magicLvl"> 20 40 70 </table>
   <table name="#mpConsume"> 10 18 33 </table>
+  <table name="#accCombat"> 6 8 10 </table>
+  <table name="#pDef"> 0.90 0.90 0.90 </table>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1536,9 +1562,9 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
   <for>
-    <effect name="Buff" time="300" count="1" val="0" stackOrder="#Tab-accCombat" stackType="HawkEye">
-      <add order="0x40" stat="accCombat" val="#Tab-accCombat"/>
-      <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="#accCombat" stackType="HawkEye">
+      <add order="0x40" stat="accCombat" val="#accCombat"/>
+      <mul order="0x30" stat="pDef" val="#pDef"/>
     </effect>
   </for>
 </skill>
@@ -1582,15 +1608,22 @@
 </skill>
 <skill id="4099" levels="2" name="NPC Berserk">
   <!-- Done by dc -->
-  <table name="#Tab-pAtk"> 1.05 1.08 </table>
-  <table name="#Tab-mAtk"> 1.1 1.16 </table>
-  <table name="#Tab-pDef"> 1.12 1.15 </table>
-  <table name="#Tab-pAtkSpd"> 1.05 1.08 </table>
-  <table name="#mpConsume"> 18 33 </table>
+  <table name="#magicLvl"> 40 70 </table>
+  <table name="#mpInitialConsume"> 4 7 </table>
+  <table name="#mpConsume"> 14 26 </table>
+  <table name="#pAtk"> 1.05 1.08 </table>
+  <table name="#pAtkSpd"> 1.05 1.08 </table>
+  <table name="#mAtk"> 1.10 1.16 </table>
+  <table name="#mAtkSpd"> 1.05 1.08 </table>
+  <table name="#runSpd"> 5 8 </table>
+  <table name="#pDef"> 0.95 0.92 </table>
+  <table name="#mDef"> 0.90 0.84 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="reuseDelay" val="80000"/>
+  <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -1600,11 +1633,13 @@
   <set name="aggroPoints" val="100"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="berserk">
-      <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
-      <mul order="0x30" stat="mAtk" val="#Tab-mAtk"/>
-      <div order="0x30" stat="pDef" val="#Tab-pDef"/>
-      <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
-      <mul order="0x30" stat="mAtkSpd" val="#Tab-pAtkSpd"/>
+      <mul order="0x30" stat="pAtk" val="#pAtk"/>
+      <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+      <mul order="0x30" stat="mAtk" val="#mAtk"/>
+      <mul order="0x30" stat="mAtkSpd" val="#pAtkSpd"/>
+      <add order="0x40" stat="runSpd" val="#runspd"/>
+      <mul order="0x30" stat="pDef" val="#pDef"/>
+      <mul order="0x30" stat="mDef" val="#mDef"/>
     </effect>
   </for>
 </skill>
