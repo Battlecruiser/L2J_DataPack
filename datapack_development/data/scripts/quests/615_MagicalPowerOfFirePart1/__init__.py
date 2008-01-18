@@ -77,6 +77,7 @@ class Quest (JQuest) :
         AutoChat(npc,"I'll be waiting for your return")
         npc.reduceCurrentHp(9999999,npc)
         st.set("spawned","0")
+        return
    return htmltext
 
  def onTalk (self, npc, player):
