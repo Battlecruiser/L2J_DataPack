@@ -90,7 +90,7 @@ class Quest (JQuest) :
              htmltext = "31740-1.htm"
          elif cond == 1 :
              htmltext = "31740-5.htm"
-     elif OSSIAN:
+     elif npcId == OSSIAN:
          if cond == 1 :
              htmltext = "31741-1.htm"
          elif cond == 2 :
