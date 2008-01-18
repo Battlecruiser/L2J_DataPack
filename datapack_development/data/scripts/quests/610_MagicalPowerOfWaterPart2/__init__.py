@@ -100,6 +100,7 @@ class Quest (JQuest) :
        FindTemplate(Alter).setBusy(False)
        st.exitQuest(1)
        AutoChat(npc,"May the gods forever condemn you! Udan Mardui, your power weakens!") #this is only a temp message until we find out what it actually is! string = 61051
+       return
    return htmltext
 
  def onTalk (self, npc, player):

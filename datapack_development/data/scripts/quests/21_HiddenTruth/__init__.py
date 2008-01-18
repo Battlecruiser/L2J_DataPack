@@ -32,8 +32,6 @@ class Quest (JQuest) :
             st.setState(State.STARTED)
             st.playSound("ItemSound.quest_accept") 
             st.set("cond","1")
-        elif event == "timer" :
-            htmltext = "31328-05.htm"
         elif event == "31328-05.htm":
             st.set("cond","0")
             st.set("onlyone","1")
@@ -45,11 +43,7 @@ class Quest (JQuest) :
             if st.getQuestItemsCount(7141) == 0 :
                 st.giveItems(7141,1)
             st.playSound("ItemSound.quest_finish")
-            st.startQuestTimer("timer",1)
-            htmltext = "Congratulations! You are State.COMPLETED this quest!"     + \
-                       " \n The Quest \"Tragedy In Von Hellmann Forest\""   + \
-                       " become available.\n Show Cross of Einhasad to High"+ \
-                       " Priest Tifaren."
+            htmltext = "31328-05.htm"
         elif event == "31523-03.htm" :
             st.playSound("SkillSound5.horror_02")
             st.playSound("ItemSound.quest_middle")
@@ -73,9 +67,8 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_middle")
         elif event == "despawn" :
             npc.deleteMe()
-            htmltext = None
+            return
         elif event.isdigit() :
-            htmltext = None
             loc = int(event)
             x,y,z,heading=ROUTES[loc]
             if event == "1" :
@@ -92,6 +85,7 @@ class Quest (JQuest) :
                 self.startQuestTimer("5",5000,npc,player)
             elif event == "5" :
                 npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, L2CharPosition(x,y,z,heading))
+            return
         return htmltext
 
  def onTalk (self,npc,player):
@@ -114,7 +108,7 @@ class Quest (JQuest) :
            htmltext = "31522-03.htm"
            st.exitQuest(1)
        else:
-         htmltext = "This quest have already been State.COMPLETED."
+         htmltext = "This quest has already been completed."
      elif cond == 1:
        htmltext = "31522-05.htm"       
    elif npcId == 31523 :
