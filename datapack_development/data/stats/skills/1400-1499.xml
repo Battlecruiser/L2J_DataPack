@@ -927,15 +927,32 @@
   </for>
 </skill>
 <skill id="1444" levels="1" name="Pride of Kamael">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="power" val="0.0"/>
+  <set name="mpConsume" val="44"/>
+  <set name="magicLvl" val="49"/>
+  <set name="soulConsumeCount" val="3"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_PARTY_OTHER"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
+  <cond msg="Incorrect target."><!-- Need retail msg -->
+    <target class_id_restriction="123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136"/>
+  </cond>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0"><!-- Need retail duration -->
+      <mul order="0x30" stat="mAtk" val="1.05"><!-- Need retail values -->
+        <and>
+          <using kind="Ancient,Crossbow,Rapier"/>
+        </and>
+      </mul>
+      <mul order="0x30" stat="pAtk" val="1.05"><!-- Need retail values -->
+        <and>
+          <using kind="Ancient,Crossbow,Rapier"/>
+        </and>
+      </mul>
+     <!-- Bonus for "Mortal Blow Chance" ? -->
+    </effect>
   </for>
 </skill>
 <skill id="1445" levels="18" name="Surrender to the Unholy">
