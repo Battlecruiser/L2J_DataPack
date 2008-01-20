@@ -40,7 +40,7 @@ class Quest (JQuest) :
         if event == "32201-02.htm" :
             st.set("cond","1")
             st.setState(State.STARTED)
-            st.giveItems(Diamond,64)
+            #st.giveItems(Diamond,64)
         elif event == "32201-03.htm" :
             st.set("cond","2")
         elif event == "30464-05.htm" :
