@@ -85,7 +85,6 @@ class Quest (JQuest) :
    if npcId == 30421 and st.getInt("cond")==0 :
       if st.getQuestItemsCount(JEWEL_OF_DARKNESS) == 0 :
         htmltext = "30421-01.htm"
-        st.set("cond","0")
         return htmltext
       else:
         htmltext = "30421-04.htm"
