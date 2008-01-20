@@ -10,14 +10,14 @@
 </tr>
 </table><br>
 <table width=240><tr>
-<td>QuickBox:</td><td><edit var="menu_command" width=120 height=15></td>
+<td>QuickBox:</td><td><edit var="qbox" width=120 height=15></td>
 <td><button value="Help" action="bypass -h admin_help help/server_menu.htm" width=45 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 </tr></table><br>
 <table width=260><tr>
-<td><button value="Reload" action="bypass -h admin_reload $menu_command" width=60 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Reload" action="bypass -h admin_reload $qbox" width=60 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 <td><button value="Reload HTM" action="bypass -h admin_cache_htm_rebuild" width=60 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Reload File" action="bypass -h admin_cache_reload_file $menu_command" width=60 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Skill Test" action="bypass -h admin_skill_test $menu_command" width=60 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Reload File" action="bypass -h admin_cache_reload_file $qbox" width=60 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Skill Test" action="bypass -h admin_skill_test $qbox" width=60 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 </tr><tr>
 <td><button value="Reload CW" action="bypass -h admin_cw_reload" width=60 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 <td><button value="Reload Zone" action="bypass -h admin_zone_reload" width=60 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
@@ -44,7 +44,7 @@ Development:
 <table width=240><tr>
 <td><button value="Fight Calc" action="bypass -h admin_fight_calculator_show" width=80 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 <td><button value="Packet Forge" action="bypass -h admin_forge" width=80 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="System Message" action="bypass -h admin_msg $menu_command" width=80 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="System Message" action="bypass -h admin_msg $qbox" width=80 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 <td></td>
 </tr>
 </table>
