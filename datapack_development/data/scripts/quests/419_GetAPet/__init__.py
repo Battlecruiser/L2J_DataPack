@@ -79,7 +79,7 @@ def check_questions(st) :
     st.giveItems(WOLF_COLLAR,1)
     st.exitQuest(1)
     st.playSound("ItemSound.quest_finish")
-    htmltext="State.COMPLETED.htm"
+    htmltext="Completed.htm"
   return htmltext
   
 # Main Quest Code
