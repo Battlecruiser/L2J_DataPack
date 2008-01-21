@@ -1440,8 +1440,8 @@
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
-      <mul stat="mReuse" order="0x30" val="3"/>
-      <mul stat="pReuse" order="0x30" val="3"/>
+      <mul stat="mReuse" order="0x30" val="3.0"/>
+      <mul stat="pReuse" order="0x30" val="3.0"/>
     </effect>
   </for>
 </skill>
