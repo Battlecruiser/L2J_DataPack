@@ -180,6 +180,12 @@ echo "Deleting loginserver tables for new content."
 $MYL < login_install.sql &> /dev/null
 }
 
+loginupgrade(){
+echo "Installling new loginserver content."
+$MYL < ../sql/accounts.sql &> /dev/null
+$MYL < ../sql/gameservers.sql &> /dev/null
+}
+
 gsbackup(){
 while :
   do
