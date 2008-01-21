@@ -107,9 +107,11 @@ Description(s):
   <for>
     <mul val='0.85' order='0x30' stat='sleepVuln'/>
     <mul val='0.75' order='0x30' stat='poisonVuln'/>
+    <!-- Missing Poison Attack Success Rate: 25% -->
     <mul val='0.5' order='0x30' stat='bleedVuln'/>
     <mul val='0.85' order='0x30' stat='paralyzeVuln'/>
     <mul val='0.85' order='0x30' stat='stunVuln'/>
+    <!-- Missing Sleep/Paralysis/Shock Attack Success Rate: 15% -->
     <mul val='0.85' order='0x30' stat='darkVuln'/>
     <add val='5' order='0x40' stat='reflectDam'/>
     <mul val='0.90' order='0x30' stat='mReuse'/>
