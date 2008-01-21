@@ -1385,13 +1385,10 @@
 </skill>
 <skill id="465" levels="50" name="Light Armor Mastery">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases P. Def. when wearing light armor.
 -->
   <table name="#pDef"> 4.2 5.3 6.5 7.7 9 9.9 10.8 12.7 13.7 14.8 16.9 18 19.1 21.5 22.7 24 25.3 26.6 27.9 29.3 30.7 32.1 33.6 35 36.5 38.1 39.6 41.2 42.8 44.5 46.1 47.8 49.5 51.3 53.0 54.8 56.6 58.4 60.2 62.1 64.0 65.8 67.7 69.7 71.6 73.5 75.5 77.4 79.4 81.3 </table>
-  <table name="#rEvas"> 3 3 5 5 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1673,29 +1670,41 @@
 <skill id="480" levels="1" name="Dark Blade">
 <!--
   Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Grants the ability to do dark damage. Consumes 1 Soul.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="soulConsumeCount" val="1"/>
   <for>
+     <!-- require core support
+     <mul order="0x30" stat="darkPower" val="1.1"/>
+     -->
   </for>
+
 </skill>
 <skill id="481" levels="2" name="Dark Armor">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Increases resistance to dark attacks. Consumes 1 Soul.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#darkVuln"> 0.93 0.9 </table>
+  <table name="#mpConsume"> 7 9 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="soulConsumeCount" val="1"/>
   <for>
+     <mul order="0x30" stat="darkVuln" val="#darkVuln"/>
   </for>
 </skill>
 <skill id="482" levels="2" name="Furious Soul">
