@@ -568,11 +568,9 @@
 <skill id="239" levels="6" name="Expertise S80">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <!-- cannot be learned, given -->
-  <set name="canLearn" val=""/>
   <for>
   </for>
 </skill>

@@ -367,19 +367,50 @@ description(s) :
   </for>
 </skill>
 <skill id="529" levels="1" name="Song of Elemental">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by theREALizzy, check for retail values. -->
+  <set name="mpConsume" val="54"/>
+  <set name="nextDanceCost" val="30"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="1000"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="hitTime" val="2500"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isDance" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="523"/>
   <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <mul stat="fireVuln" val="0.7" order="0x30"/>
+      <mul stat="waterVuln" val="0.7" order="0x30"/>
+      <mul stat="earthVuln" val="0.7" order="0x30"/>
+      <mul stat="windVuln" val="0.7" order="0x30"/>
+    </effect>
   </for>
 </skill>
 <skill id="530" levels="1" name="Dance of Alignment">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Check of retail values. -->
+  <set name="weaponsAllowed" val="512"/>
+  <set name="mpConsume" val="60"/>
+  <set name="nextDanceCost" val="30"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="1000"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="hitTime" val="2500"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isDance" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="523"/>
   <for>
+    <effect name="Buff" time="120" count="1" val="0">
+      <mul stat="darkVuln" val="0.7" order="0x30"/>
+      <mul stat="holyVuln" val="0.7" order="0x30"/>
+    </effect>
   </for>
 </skill>
 <skill id="531" levels="1" name="Critical Wound">
@@ -399,19 +430,46 @@ description(s) :
   </for>
 </skill>
 <skill id="533" levels="1" name="Counter Rapid Shot">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="weaponsAllowed" val="32"/>
+  <set name="mpConsume" val="36"/>
+  <set name="mpInitialConsume" val="7"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="hitTime" val="2000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="549"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0">
+      <mul order="0x30" stat="pAtkSpd" val="1.12">
+        <using kind="Bow"/>
+      </mul>
+    </effect>
+   <!-- need core support for chance! -->
   </for>
 </skill>
 <skill id="534" levels="1" name="Counter Dash">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by theREALizzy, check for retail values. -->
+  <set name="mpConsume" val="36"/>
+  <set name="mpInitialConsume" val="7"/>
+  <set name="weaponsAllowed" val="32"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="22" stackType="SpeedUp">
+      <add order="0x40" stat="runSpd" val="22"/>
+      <using kind="Bow"/>
+    </effect>
+  <!-- need core support for chance! -->
   </for>
 </skill>
 <skill id="535" levels="1" name="Counter Mind">
