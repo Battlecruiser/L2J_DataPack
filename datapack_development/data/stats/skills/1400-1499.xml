@@ -607,16 +607,18 @@
   </for>
 </skill>
 <skill id="1429" levels="1" name="Gate Chant">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Summons a party member. Consumes 4 Summon Crystals.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="15000"/>
+  <set name="isMagic" val="true"/>
+  <set name="itemConsumeCount" val="4"/>
+  <set name="itemConsumeId" val="7193"/> <!-- Needs check, because can be 8615 -->
+  <set name="mpConsume" val="284"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="SUMMON_FRIEND"/> <!-- Only for pre-implementation, the skill don't consume crystal of the summoned player, needs core support -->
+  <set name="target" val="TARGET_PARTY_MEMBER"/>
   <for>
   </for>
 </skill>
