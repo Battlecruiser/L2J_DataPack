@@ -1942,7 +1942,7 @@
     </effect>
   </for>
 </skill>
-<skill id="92" levels="52" name="Shield Stun" enchantLevels1="30" enchantLevels2="30" >
+<skill id="92" levels="52" name="Shield Stun" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" enchantLevels5="30">
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1954,6 +1954,7 @@
   <table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#mpConsume"> 11 11 11 12 12 13 14 15 15 16 16 17 18 18 19 20 21 22 22 22 23 24 24 25 26 26 27 28 28 28 29 30 31 31 32 33 33 34 34 35 35 36 37 37 38 39 39 40 40 41 41 42</table>
   <table name="#ench1Reuse"> 11000 11000 11000 10000 10000 10000 10000 9000 9000 9000 9000 8000 8000 8000 8000 7000 7000 7000 6000 6000 6000 6000 5000 5000 5000 5000 4000 4000 4000 4000 </table>
+  <table name="#Vuln">1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20 1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.30</table>
   <set name="weaponsAllowed" val="2"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1974,6 +1975,24 @@
        <using kind="Shield"/>
     </effect>
   </for>
+  <enchant3for>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun">
+       <mul stat="fireVuln" val="#Vuln" order="0x30"/>
+       <using kind="Shield"/>
+    </effect>
+  </enchant3for>
+  <enchant4for>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun">
+       <mul stat="waterVuln" val="#Vuln" order="0x30"/>
+       <using kind="Shield"/>
+    </effect>
+  </enchant4for>
+  <enchant5for>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun">
+       <mul stat="windVuln" val="#Vuln" order="0x30"/>
+       <using kind="Shield"/>
+    </effect>
+  </enchant5for>
 </skill>
 <skill id="94" levels="2" name="Rage">
   <!-- Done by dc -->
