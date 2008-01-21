@@ -1586,7 +1586,7 @@
   <set name="aggroPoints" val="669"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <!-- Need core support for <mul order="0x30" stat="pReuse" val="0.7"/> -->
+      <mul order="0x30" stat="pReuse" val="0.7"/>
       <mul order="0x30" stat="MpConsumeRate" val="0.8"/>
     </effect>
   </for>

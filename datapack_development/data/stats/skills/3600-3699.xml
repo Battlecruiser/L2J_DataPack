@@ -113,7 +113,7 @@ Description(s):
     <mul val='0.85' order='0x30' stat='darkVuln'/>
     <add val='5' order='0x40' stat='reflectDam'/>
     <mul val='0.90' order='0x30' stat='mReuse'/>
-    <!-- Need core support for <mul val='0.90' order='0x30' stat='pReuse'/> -->
+    <mul val='0.90' order='0x30' stat='pReuse'/>
   </for>
 </skill>
 <skill id="3605" levels="1" name="Clan Oath Heavy Armor Set">
