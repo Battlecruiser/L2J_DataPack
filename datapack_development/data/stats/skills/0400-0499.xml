@@ -1599,32 +1599,84 @@
 </skill>
 <skill id="476" levels="15" name="Dark Strike">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
+  Done by theREALizzy - need to check values:
       Summon soul power for a lethal strike. Consumes 1 Soul. A sword, blunt, or ancient sword weapon must be equipped to use this skill. Over-hit is possible. Power 90-326.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#power"> 
+  90 110 130 140 150 
+  160 190 200 225 250 
+  260 275 290 310 326 </table> 
+  <table name="#mpConsume"> 
+  20 21 22 23 24
+  25 26 27 28 29
+  30 31 32 33 34 </table> 
+  <table name="#magicLvl"> 
+  20 21 22 24 25 
+  26 28 29 30 32 
+  33 34 36 37 38 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="power" val="#power"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="weaponsAllowed" val="32788"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="13000"/>
+  <set name="hitTime" val="1500"/>
+  <set name="coolTime" val="720" />
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="soulConsumeCount" val="1"/>
   <for>
   </for>
 </skill>
 <skill id="477" levels="37" name="Dark Smash">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Summon power for a lethal strike. Consumes 1 Soul. An ancient sword weapon has to be equipped to use this skill. Over-hit is possible. Power 615-3044.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+<!-- Done by theREALizzy - Need retail accuracy check. -->
+  <table name="#power"> 
+  615 730 855 989 1020 
+  1056 1175 1190 1250 1350 
+  1460 1575 1690 1710 1844
+  1915 2030 2155 2289 2220 
+  2356 2375 2490 2450 2550 
+  2560 2675 2690 2710 2744 
+  2756 2875 2890 2920 2950 
+  3000 3044
+  </table> 
+  <table name="#mpConsume"> 
+  60 60 60 62 62
+  63 63 63 65 65
+  68 72 72 76 76 
+  78 81 81 85 89
+  95 96 96 99 100
+  103 104 108 110 115
+  116 117 120 123 125
+  128 130</table>  
+  <table name="#magicLvl"> 
+  20 21 22 24 25 
+  26 28 29 30 32 
+  33 34 36 37 38 
+  39 40 41 42 43
+  44 45 46 47 48
+  49 50 51 52 53
+  54 55 56 57 58
+  59 60</table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="power" val="#power"/>  
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="weaponsAllowed" val="32768"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="13000"/>
+  <set name="hitTime" val="1500"/>
+  <set name="coolTime" val="720" />
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="soulConsumeCount" val="1"/>
   <for>
   </for>
 </skill>
+
 <skill id="478" levels="15" name="Double Thrust">
 <!--
   Description(s):
@@ -1770,17 +1822,20 @@
   </for>
 </skill>
 <skill id="486" levels="2" name="Increase Range">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-     Increases crossbow range.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <table name="#range"> 75 125 </table>
+  <set name="weaponsAllowed" val="65536"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="pAtkRange" val="#range">
+      <and>       
+        <using kind="Crossbow"/>
+      </and>
+    </add>
   </for>
 </skill>
 <skill id="487" levels="15" name="Penetrate Shot">
@@ -1824,18 +1879,26 @@
   </for>
 </skill>
 <skill id="490" levels="2" name="Fast Shot">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-     Temporarily increases your crossbow attack speed. Consumes 1 Soul. Effect 1-2.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+<!-- Missing Enchant Values, and needs retail accuracy check -->
+  <table name="#atkspd"> 75 125 </table>
+  <table name="#mpConsume"> 14 25 </table>
+  <set name="weaponsAllowed" val="65536"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="hitTime" val="2500"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="soulConsumeCount" val="1"/>
   <for>
-  </for>
+    <add order="0x40" stat="pAtkRange" val="#atkspd">
+      <and>       
+        <using kind="Crossbow"/>
+      </and>
+    </add>
+  </for> 
 </skill>
 <skill id="491" levels="1" name="Not In Use">
 <!--
