@@ -21,15 +21,15 @@ public class Zariche extends L2Transformation
     public void onTransform()
     {
         // Set charachter name to transformed name
-	this.getPlayer().getAppearance().getVisibleName();
-	this.getPlayer().getAppearance().getVisibleTitle();
+    	this.getPlayer().getAppearance().setVisibleName("Zariche");
+    	this.getPlayer().getAppearance().setVisibleTitle("");
     }
     
     public void onUntransform()
     {
 	// set character back to true name.
-	this.getPlayer().getAppearance().getVisibleName();
-	this.getPlayer().getAppearance().getVisibleTitle();
+    	this.getPlayer().getAppearance().setVisibleName(null);
+    	this.getPlayer().getAppearance().setVisibleTitle(null);
     }
     
     public static void main(String[] args)
