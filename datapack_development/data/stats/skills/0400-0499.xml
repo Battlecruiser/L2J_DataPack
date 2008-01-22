@@ -818,21 +818,17 @@
   </for>
 </skill>
 <skill id="437" levels="1" name="Song of Silence">
-<!--
-  Needs to be verified.
-
-  Description(s):
-      Sing the Song of Silence to temporarily disable all enemy physical and magical skills.
--->
   <set name="magicLvl" val="79"/>
   <set name="mpConsume" val="54"/>
   <set name="skillRadius" val="150"/>
   <set name="target" val="TARGET_AURA"/>
-  <set name="skillType" val="MUTE"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/> <!-- Needs check, can be 35 -->
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="hitTime" val="2500"/>
+  <set name="coolTime" val="167" />
   <set name="reuseDelay" val="480000"/>
   <for>
     <effect count="1" name="Mute" time="120" val="0"/>

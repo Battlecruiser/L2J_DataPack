@@ -1135,15 +1135,21 @@
   </for>
 </skill>
 <skill id="1454" levels="1" name="Diamond Dust">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Needs MAJOR retail accuracy check -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
+  <set name="isMagic" val="true"/>
+  <set name="mpConsume" val="109"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_AURA"/>
   <for>
+    <effect count="1" name="Buff" time="30" val="0" stackOrder="0.7" stackType="RunSpeedDown">
+      <mul order="0x30" stat="runSpd" val="0.7"/>
+    </effect>
   </for>
 </skill>
 <skill id="1455" levels="1" name="Throne of Ice">
