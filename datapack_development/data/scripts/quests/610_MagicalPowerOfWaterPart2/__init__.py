@@ -2,21 +2,16 @@
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
-from net.sf.l2j.gameserver.model.actor.instance import L2NpcInstance
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver.datatables import SpawnTable
 from net.sf.l2j.gameserver.serverpackets import CreatureSay
-from java.util import Iterator
-from net.sf.l2j.gameserver.datatables import NpcTable
-from net.sf.l2j.gameserver.model import L2Spawn
-from net.sf.l2j.gameserver.model.actor.instance import L2MonsterInstance
+from net.sf.l2j.util import Rnd
 
 qn = "610_MagicalPowerOfWaterPart2"
 
 #NPC
 Asefa = 31372
 Alter = 31560
-
 
 #MOBS
 Ketra_Orcs = [ 21324, 21325, 21327, 21328, 21329, 21331, 21332, 21334, 21335, \
@@ -29,9 +24,10 @@ Ice_Heart = 7239
 
 def FindTemplate (npcId) :
     for spawn in SpawnTable.getInstance().getSpawnTable().values():
-        if spawn.getNpcid() == npcId:
-            npcinstance=spawn.getLastSpawn()
-            break
+        if spawn :
+            if spawn.getNpcid() == npcId:
+                npcinstance=spawn.getLastSpawn()
+                break
     return npcinstance
 
 def AutoChat(npc,text) :
@@ -48,6 +44,11 @@ class Quest (JQuest) :
      self.questItemIds = [Ice_Heart]
 
  def onAdvEvent (self, event, npc, player) :
+   if event == "Soul of Water Ashutar has despawned" :
+       npc.reduceCurrentHp(9999999,npc)
+       FindTemplate(Alter).setBusy(False)
+       AutoChat(npc,"May the gods forever condemn you! Udan Mardui, your power weakens!") #this is only a temp message until we find out what it actually is! string = 61051
+       return
    st = player.getQuestState(qn)
    if not st: return
    cond = st.getInt("cond")
@@ -80,27 +81,19 @@ class Quest (JQuest) :
            st.exitQuest(1)
        else :
            htmltext = "31372-09.htm"
-
    elif event == "31560-02.htm" :
-       if Green_Totem :
-           htmletext = "31560-02.htm"   #TODO add lights from above
+       if st.getQuestItemsCount(Green_Totem) == 0 :
+           htmltext = "31560-04.htm"
+       elif npc.isBusy() :
+           htmltext = "31560-03.htm"
+       else:
            spawnedNpc = st.addSpawn(Ashutar,104825,-36926,-1136)
            st.takeItems(Totem2,1)
            st.set("id","2")
            npc.setBusy(True)
            st.set("cond","2")
-           st.startQuestTimer("Soul of Water Ashutar has despawned",1200000, spawnedNpc)
+           self.startQuestTimer("Soul of Water Ashutar has despawned",1200000,spawnedNpc,None)
            AutoChat(spawnedNpc,"Hey! I'll kick your arse!")#this is only a temp message until we find out what it actually is! string = 61050
-       else :
-           htmltext = "31560-04.htm"
-   elif event == "Soul of Water Ashutar has despawned" :
-       npc.reduceCurrentHp(9999999,npc)
-       st.unset("id")
-       st.unset("cond")
-       FindTemplate(Alter).setBusy(False)
-       st.exitQuest(1)
-       AutoChat(npc,"May the gods forever condemn you! Udan Mardui, your power weakens!") #this is only a temp message until we find out what it actually is! string = 61051
-       return
    return htmltext
 
  def onTalk (self, npc, player):
@@ -123,48 +116,53 @@ class Quest (JQuest) :
             else :
                 htmltext = "31372-07.htm"
     elif npcId == Alter :
-       if npc.isBusy() :
-           htmltext = "31560-03.htm"
-       else :
         if id == 1 :
             htmltext = "31560-01.htm"
-        elif id == 2 or id == 3 :
+        elif id == 2 :
+            if npc.isBusy() :
+                htmltext = "31560-03.htm"
+            else :
+                htmltext = "31560-02.htm"
+                spawnedNpc = st.addSpawn(Ashutar,104825,-36926,-1136)
+                npc.setBusy(True)
+                self.startQuestTimer("Soul of Water Ashutar has despawned",1200000,spawnedNpc,None)
+                AutoChat(spawnedNpc,"Hey! I'll kick your arse!")#this is only a temp message until we find out what it actually is! string = 61050
+        elif id == 3 :
             htmltext = "31560-05.htm"
     return htmltext
 
  def onKill(self,npc,player,isPet):
-   npcId = npc.getNpcId()
-   if npcId == Ashutar :
-      FindTemplate(Alter).setBusy(False)
-      party = player.getParty()
-      if party :
-         for partyMember in party.getPartyMembers().toArray() :
-             pst = partyMember.getQuestState(qn)
-             if pst :
-                if pst.getInt("cond") >= 1 :
-                    if pst.getInt("cond") == 1 :
-                        st.takeItems(Totem2,1)
-                    if pst.getQuestItemsCount(Ice_Heart) < 1 :
-                       pst.giveItems(Ice_Heart,1)
-                       pst.playSound("ItemSound.quest_middle")
-                       pst.set("cond","3")
-                       pst.set("id","3")
-                    if pst.getQuestTimer("Soul of Water Ashutar has despawned") :
-                       pst.getQuestTimer("Soul of Water Ashutar has despawned").cancel()
-      else :
-         pst = player.getQuestState(qn)
-         if pst :
-            if pst.getInt("cond") >= 1 :
-                if pst.getInt("cond") == 1 :
+    npcId = npc.getNpcId()
+    if npcId == Ashutar :
+        FindTemplate(Alter).setBusy(False)
+        self.getQuestTimer("Soul of Water Ashutar has despawned",npc,None).cancel()
+        party = player.getParty()
+        if party :
+            PartyQuestMembers = []
+            for player1 in party.getPartyMembers().toArray() :
+                st1 = player1.getQuestState(qn)
+                if st1 :
+                    if st1.getState() == State.STARTED and (st1.getInt("cond") == 1 or st1.getInt("cond") == 2) :
+                        PartyQuestMembers.append(st1)
+            if len(PartyQuestMembers) == 0 : return
+            st = PartyQuestMembers[Rnd.get(len(PartyQuestMembers))]
+            if st.getQuestItemsCount(Totem2) > 0 :
+                st.takeItems(Totem2,1)
+            st.giveItems(Ice_Heart,1) 
+            st.set("cond","3")
+            st.set("id","3")
+            st.playSound("ItemSound.quest_middle")
+        else :
+            st = player.getQuestState(qn)
+            if not st : return
+            if st.getState() == State.STARTED and (st.getInt("cond") == 1 or st.getInt("cond") == 2) :
+                if st.getQuestItemsCount(Totem2) > 0 :
                     st.takeItems(Totem2,1)
-                if pst.getQuestItemsCount(Ice_Heart) < 1 :
-                   pst.giveItems(Ice_Heart,1)
-                   pst.playSound("ItemSound.quest_middle")
-                   pst.set("cond","3")
-                   pst.set("id","3")
-                if pst.getQuestTimer("Soul of Water Ashutar has despawned") :
-                   pst.getQuestTimer("Soul of Water Ashutar has despawned").cancel()
-   elif npcId in Ketra_Orcs :
+                st.giveItems(Ice_Heart,1) 
+                st.set("cond","3")
+                st.set("id","3")
+                st.playSound("ItemSound.quest_middle")
+    elif npcId in Ketra_Orcs :
       st = player.getQuestState(qn)
       if st :
          if st.getQuestItemsCount(Ice_Heart) :
@@ -172,9 +170,9 @@ class Quest (JQuest) :
          st.unset("cond")
          st.unset("id")
          st.exitQuest(1)
-   return
+    return
 
-QUEST       = Quest(610,qn,"Magical Power of Water - Part 2")
+QUEST = Quest(610,qn,"Magical Power of Water - Part 2")
 
 QUEST.addStartNpc(Asefa)
 
