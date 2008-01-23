@@ -88,9 +88,10 @@ class Quest (JQuest) :
 
  def FindTemplate (self, npcId) :
     for spawn in SpawnTable.getInstance().getSpawnTable().values():
-        if spawn.getNpcid() == npcId:
-            npcinstance = spawn.getLastSpawn()
-            break
+        if spawn :
+            if spawn.getNpcid() == npcId:
+                npcinstance = spawn.getLastSpawn()
+                break
     return npcinstance
 
  def AutoChat(self, npc,text) :
