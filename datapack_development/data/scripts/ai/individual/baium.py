@@ -88,7 +88,7 @@ class baium (JQuest):
         self.isBaiumLocked = True
         # start monitoring baium's inactivity
         self.lastAttackVsBaiumTime = System.currentTimeMillis()
-        self.startQuestTimer("baium_despawn", 60000, npc, None)
+        self.startQuestTimer("baium_despawn", 60000, npc, None, True)
         # TODO: the person who woke baium up should be knocked across the room, onto a wall, and
         # lose massive amounts of HP.
     # despawn the live baium after 30 minutes of inactivity  
@@ -100,10 +100,7 @@ class baium (JQuest):
         self.isBaiumAwake = False       # mark that Baium is not awake any more 
         self.isBaiumLocked = False      # unlock the entrance
         self.playersInside = []
-      else :
-        # if baium's inactivity is still younger than 30 minutes, just re-add the timer
         self.cancelQuestTimer("baium_despawn", npc, None)
-        self.startQuestTimer("baium_despawn", 60000, npc, None)
     return
 
   def onTalk (self,npc,player):
