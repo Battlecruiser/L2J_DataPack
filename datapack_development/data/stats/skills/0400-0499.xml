@@ -1729,9 +1729,11 @@
   <set name="effectRange" val="-1"/>
   <set name="soulConsumeCount" val="1"/>
   <for>
-     <!-- require core support
-     <mul order="0x30" stat="darkPower" val="1.1"/>
-     -->
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="0">
+       <!-- require core support
+       <mul order="0x30" stat="darkPower" val="1.1"/>
+       -->
+    </effect>
   </for>
 
 </skill>
@@ -1749,7 +1751,9 @@
   <set name="effectRange" val="-1"/>
   <set name="soulConsumeCount" val="1"/>
   <for>
-     <mul order="0x30" stat="darkVuln" val="#darkVuln"/>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="0">
+       <mul order="0x30" stat="darkVuln" val="#darkVuln"/>
+    </effect>
   </for>
 </skill>
 <skill id="482" levels="2" name="Furious Soul">
