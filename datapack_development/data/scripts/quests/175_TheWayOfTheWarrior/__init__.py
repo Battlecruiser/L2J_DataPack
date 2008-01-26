@@ -32,6 +32,7 @@ class Quest (JQuest) :
  
  def onEvent (self,event,st) :
      htmltext = event
+     player = st.getPlayer()
      if event == "32138-04.htm" :
        st.set("cond","1")
        st.setState(State.STARTED)
