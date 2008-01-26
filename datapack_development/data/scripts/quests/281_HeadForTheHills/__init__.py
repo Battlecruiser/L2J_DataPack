@@ -28,6 +28,7 @@ class Quest (JQuest) :
   
  def onEvent (self,event,st) :
      htmltext = event
+     player = st.getPlayer()
      hills = st.getQuestItemsCount(HILLS)
      onlyone = st.getInt("onlyone")
      if event == "32173-03.htm" :
