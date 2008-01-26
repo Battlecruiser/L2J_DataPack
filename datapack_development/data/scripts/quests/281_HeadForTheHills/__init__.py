@@ -35,7 +35,7 @@ class Quest (JQuest) :
        st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
      elif event == "32173-06.htm" :
-       if player.getLevel() < 34 and player.isNewbie() and not onlyone : #Need check newbie player level from retail
+       if player.getLevel() < 25 and player.isNewbie() and not onlyone :
          if hills > 20 : 
            st.giveItems(57,hills*23+400)
          else :
@@ -53,7 +53,7 @@ class Quest (JQuest) :
        if hills < 50 :
          htmltext = "32173-07a.htm"
        else:
-         if player.getLevel() < 34 and player.isNewbie() and not onlyone : #Need check newbie player level from retail
+         if player.getLevel() < 25 and player.isNewbie() and not onlyone :
            st.giveItems(SOULSHOT_FOR_BEGINNERS,6000)
            st.giveItems(REWARD,1)
            st.takeItems(HILLS,50)
