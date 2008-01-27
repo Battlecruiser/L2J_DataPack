@@ -77,6 +77,7 @@ def check_questions(st) :
     return htmltext
   elif answers == 10 :
     st.giveItems(WOLF_COLLAR,1)
+    st.takeItems(ANIMAL_LOVERS_LIST1,-1)
     st.exitQuest(1)
     st.playSound("ItemSound.quest_finish")
     htmltext="Completed.htm"
@@ -127,7 +128,28 @@ class Quest (JQuest):
         st.exitQuest(1)
         return "419_cancelled.htm"
     elif id == State.STARTED and st.get("step")=="SLAYED" :
-      if event == "talk"  :
+      if event == "talk" :
+        st.set("step","SLAYED")
+        st.set("progress","0")
+        race = player.getRace().ordinal()
+        if race == 0:
+            st.takeItems(SPIDER_LEG1,REQUIRED_SPIDER_LEGS)
+            st.takeItems(ANIMAL_SLAYER_LIST1,1)
+        elif race == 1:
+            st.takeItems(SPIDER_LEG2,REQUIRED_SPIDER_LEGS)
+            st.takeItems(ANIMAL_SLAYER_LIST2,1)
+        elif race == 2:
+            st.takeItems(SPIDER_LEG3,REQUIRED_SPIDER_LEGS)
+            st.takeItems(ANIMAL_SLAYER_LIST3,1)
+        elif race == 3:
+            st.takeItems(SPIDER_LEG4,REQUIRED_SPIDER_LEGS)
+            st.takeItems(ANIMAL_SLAYER_LIST4,1)
+        elif race == 4:
+            st.takeItems(SPIDER_LEG5,REQUIRED_SPIDER_LEGS)
+            st.takeItems(ANIMAL_SLAYER_LIST5,1)
+        elif race == 5:
+            st.takeItems(SPIDER_LEG6,REQUIRED_SPIDER_LEGS)
+            st.takeItems(ANIMAL_SLAYER_LIST6,1)
         st.giveItems(ANIMAL_LOVERS_LIST1,1)
         return "419_talk.htm"
       if event == "talk1" :
@@ -141,15 +163,16 @@ class Quest (JQuest):
       if event == "talk4" :
         st.set("progress", str(st.getInt("progress") | 4))
         return "419_metty_2.htm"
-    elif id == State.STARTED and st.get("step")=="TALKED" :
+    elif id == State.STARTED and st.getInt("progress") == 7:
       if event == "tryme" :
+        st.set("quiz","1 2 3 4 5 6 7 8 9 10 11 12 13 14")
+        st.set("answers","0")
         return check_questions(st) 
       elif event == "wrong" :
         st.set("step","SLAYED")
         st.set("progress","0")
         st.unset("quiz")
         st.unset("answers")
-        st.giveItems(ANIMAL_LOVERS_LIST1,1)
         return "419_failed.htm"
       elif event == "right" :
         st.set("answers",str(st.getInt("answers") + 1))
@@ -179,35 +202,9 @@ class Quest (JQuest):
          elif getCount_proof(st) < REQUIRED_SPIDER_LEGS :
             return "419_pending_slay.htm"
          else :
-            st.set("step","SLAYED")
-#            st.clearQuestDrops()
-            st.set("progress","0")
-            race = player.getRace().ordinal()
-            if race == 0:
-                st.takeItems(SPIDER_LEG1,REQUIRED_SPIDER_LEGS)
-                st.takeItems(ANIMAL_SLAYER_LIST1,1)
-            elif race == 1:
-                st.takeItems(SPIDER_LEG2,REQUIRED_SPIDER_LEGS)
-                st.takeItems(ANIMAL_SLAYER_LIST2,1)
-            elif race == 2:
-                st.takeItems(SPIDER_LEG3,REQUIRED_SPIDER_LEGS)
-                st.takeItems(ANIMAL_SLAYER_LIST3,1)
-            elif race == 3:
-                st.takeItems(SPIDER_LEG4,REQUIRED_SPIDER_LEGS)
-                st.takeItems(ANIMAL_SLAYER_LIST4,1)
-            elif race == 4:
-                st.takeItems(SPIDER_LEG5,REQUIRED_SPIDER_LEGS)
-                st.takeItems(ANIMAL_SLAYER_LIST5,1)
-            elif race == 5:
-                st.takeItems(SPIDER_LEG6,REQUIRED_SPIDER_LEGS)
-                st.takeItems(ANIMAL_SLAYER_LIST6,1)
             return "Slayed.htm"
       if id == State.STARTED and st.get("step")=="SLAYED" :
         if st.getInt("progress") == 7 :
-           st.takeItems(ANIMAL_LOVERS_LIST1,1)
-           st.set("step","TALKED")
-           st.set("quiz","1 2 3 4 5 6 7 8 9 10 11 12 13 14")
-           st.set("answers","0")
            return "Talked.htm"
         return "419_pending_talk.htm"
     elif id == State.STARTED and st.get("step")=="SLAYED":
