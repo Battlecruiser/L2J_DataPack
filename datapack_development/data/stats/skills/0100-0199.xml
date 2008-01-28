@@ -1186,7 +1186,7 @@
   </for>
 </skill>
 <skill id="195" levels="2" name="Boost Breath">
-  <table name="#breath"> 180 300 </table>
+  <table name="#breath"> 2 4 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1194,7 +1194,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <add order="0x40" stat="breath" val="#breath"/>
+    <mul order="0x40" stat="breath" val="#breath"/>
   </for>
 </skill>
 <skill id="196" levels="1" name="Holy Blade">
