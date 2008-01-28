@@ -1384,16 +1384,19 @@
   </for>
 </skill>
 <skill id="1471" levels="1" name="Death Beam">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<!-- Needs retail accuracy check -->
+ <set name="mpConsume" val="73"/>
+ <set name="power" val="138"/>
+ <set name="hitTime" val="1500"/>
+ <set name="operateType" val="OP_ACTIVE"/>
+ <set name="target" val="TARGET_FRONT_AREA"/>
+ <set name="skillRadius" val="310"/>
+ <set name="skillType" val="PDAM"/>
+ <set name="castRange" val="40"/>
+ <set name="effectRange" val="56"/>
+ <set name="reuseDelay" val="10000"/>
+ <for>
+ </for>
 </skill>
 <skill id="1472" levels="1" name="Soul Sucking">
 <!--

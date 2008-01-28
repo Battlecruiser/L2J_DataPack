@@ -558,18 +558,30 @@ description(s) :
   </for>
 </skill>
 <skill id="539" levels="1" name="Nail Attack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="79"/>
+  <set name="power" val="2583"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="overHit" val="true"/>
+  <set name="reuseDelay" val="13000"/>
+  <set name="hitTime" val="1080"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="540" levels="1" name="Wing Assault">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpConsume" val="79"/>
+  <set name="power" val="1"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="600"/>
+  <set name="overHit" val="true"/>
+  <set name="reuseDelay" val="13000"/>
+  <set name="hitTime" val="800"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -942,19 +954,36 @@ description(s) :
   </for>
 </skill>
 <skill id="572" levels="4" name="Double Slasher">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume"> 68 70 74 78 </table>
+  <table name="#power"> 938 1055 1176 1300 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="reuseDelay" val="15000"/>
+  <set name="hitTime" val="1900"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <for>
   </for>
 </skill>
 <skill id="573" levels="4" name="Earthquake">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume"> 68 70 74 78 </table>
+  <table name="#power"> 625 703 784 867 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="250"/>
+  <set name="coolTime" val="2500"/>
+  <set name="hitTime" val="3000"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="baseCritRate" val="15"/>
   <for>
+    <effect count="1" name="Stun" time="5" val="0"/>
   </for>
 </skill>
 <skill id="574" levels="4" name="Bomb Installation">
@@ -966,10 +995,19 @@ description(s) :
   </for>
 </skill>
 <skill id="575" levels="4" name="Steel Cutter">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume"> 68 70 74 78 </table>
+  <table name="#power"> 1250  1406 1568 1733 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="reuseDelay" val="13000"/>
+  <set name="hitTime" val="1080"/>
+  <set name="coolTime" val="720" />
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
   <for>
   </for>
 </skill>
@@ -1015,19 +1053,42 @@ description(s) :
   </for>
 </skill>
 <skill id="581" levels="4" name="Sand Cloud">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+<!-- Needs retail accuracy check -->
+  <table name="#mpConsume"> 68 70 74 78 </table>
+  <table name="#accCombat"> 13 15 17 19 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="300"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="hitTime" val="3000"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="360"/>
   <for>
+    <effect name="Buff" time="15" count="1" val="0" stackOrder="#accCombat" stackType="accuracyDown">
+      <sub order="0x40" stat="accCombat" val="#accCombat"/>
+    </effect>
   </for>
 </skill>
 <skill id="582" levels="4" name="Scope Bleed">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+<!-- Needs retail accuracy check -->
+  <table name="#mpConsume"> 68 70 74 78 </table>
+  <table name="#power"> 875 984 1098 1213 </table>
+  <table name="#effect"> 6 6 7 7 </table>
+  <table name="#bleeddmg"> 102 123 155 198 </table>
+  <set name="power" val="#power"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_FRONT_AREA"/>
+  <set name="skillRadius" val="240"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="hitTime" val="1080"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="900"/>
   <for>
+ 	<effect count="#effect" name="DamOverTime" time="3" val="#bleeddmg" abnormal="bleeding"/>
   </for>
 </skill>
 <skill id="583" levels="4" name="Assimilation">
@@ -1046,34 +1107,74 @@ description(s) :
   </for>
 </skill>
 <skill id="584" levels="1" name="Power Claw">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpConsume" val="61"/>
+  <set name="power" val="1008"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="overHit" val="true"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="reuseDelay" val="13000"/>
+  <set name="hitTime" val="1080"/>
+  <set name="coolTime" val="720" />
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
   <for>
   </for>
 </skill>
 <skill id="585" levels="1" name="Fast Moving">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#spd">66</table>
+  <set name="mpConsume" val="61"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="reuseDelay" val="90000"/>
+  <set name="hitTime" val="1000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="438"/>
   <for>
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="#spd" stackType="SpeedUpS">
+      <add order="0x40" stat="runSpd" val="66"/>
+    </effect>
   </for>
 </skill>
 <skill id="586" levels="2" name="Rolling Attack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume"> 54 58</table>
+  <table name="#power"> 864 984</table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="150"/>
+  <set name="overHit" val="true"/>
+  <set name="reuseDelay" val="17000"/>
+  <set name="ignoreShld" val="true"/>
+  <set name="hitTime" val="2500"/>
+  <set name="coolTime" val="733" />
+  <set name="skillType" val="PDAM"/>
+  <set name="effectRange" val="-1"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <for>
-  </for>
+ </for>
 </skill>
 <skill id="587" levels="2" name="Dig Attack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume"> 54 58</table>
+  <table name="#power"> 1008 1406</table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="overHit" val="true"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="reuseDelay" val="13000"/>
+  <set name="hitTime" val="1000"/>
+  <set name="coolTime" val="720" />
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
   <for>
   </for>
 </skill>

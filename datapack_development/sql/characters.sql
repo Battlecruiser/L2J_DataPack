@@ -30,6 +30,7 @@ CREATE TABLE IF NOT EXISTS characters (
   race decimal(11,0) default NULL,
   classid decimal(11,0) default NULL,
   base_class int(2) NOT NULL default '0',
+  transform_id decimal int(8) NOT NULL default '0',
   deletetime decimal(20,0) default NULL,
   cancraft decimal(11,0) default NULL,
   title varchar(16) default NULL,
