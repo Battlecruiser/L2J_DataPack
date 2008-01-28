@@ -22,7 +22,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
-     self.questItemIds = range(1262, 1271)
+     self.questItemIds = range(1262,1270)
 
  def onEvent (self,event,st) :
     htmltext = event
