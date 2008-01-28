@@ -164,17 +164,17 @@ INSERT INTO teleport VALUES
 ('TOI - 14th Floor Outside Door',214,112714,14111,10077,800000,0),
 ('TOI - 14th Floor Inside On Roof',215,113098,14532,10077,900000,0),
 
-('Cat Heretics Entrance',250,-53174,-250275,-7911,0,0), -- Interlude (undersea)
+('Cat Heretics Entrance',250,-53174,-250275,-7911,0,0),-- Interlude (undersea)
 ('Cat Heretics Exit',251,42514,143917,-5385,0,0),
 ('Cat Branded Entrance',252,46217,170290,-4983,0,0),
 ('Cat Branded Exit',253,45770,170299,-4985,0,0),
-('Cat Apostate Entrance',254,-20230,-250780,-8168,0,0), -- Interlude (undersea)
+('Cat Apostate Entrance',254,-20230,-250780,-8168,0,0),-- Interlude (undersea)
 ('Cat Apostate Exit',255,77225,78362,-5119,0,0),
 ('Cat Witch Entrance',256,140404,79678,-5431,0,0),
 ('Cat Witch Exit',257,139965,79678,-5433,0,0),
 ('Cat DarkOmen Entrance',258,-19500,13508,-4905,0,0),
 ('Cat DarkOmen Exit',259,-19931,13502,-4905,0,0),
-('Cat ForbiddenPath Entrance',260,12521,-248481,-9585,0,0), -- Interlude (undersea)
+('Cat ForbiddenPath Entrance',260,12521,-248481,-9585,0,0),-- Interlude (undersea)
 ('Cat ForbiddenPath Exit',261,113429,84540,-6545,0,0),
 ('Necro Sacrifice Entrance',262,-41570,209785,-5089,0,0),
 ('Necro Sacrifice Exit',263,-41567,209292,-5091,0,0),
@@ -262,7 +262,7 @@ INSERT INTO teleport VALUES
 ('Aden(hall) -> in)',416,148580,4578,-408,0,0),
 ('Aden(hall) -> outofcastle)',417,147582,8753,-496,0,0),
 ('Lair Of Valakas',420,208884,-113705,-256,0,0),
-('Disciples Necropolis -> Anakim/Lilith',450,184397,-11957,-5493,0,0),
+('Disciples Necropolis -> Anakim/Lilith',450,185061,-9612,-5492,0,0),
 ('Anakim/Lilith -> Disciples Necropolis',451,183225,-11911,-4897,0,0),
 ('TI -> Dark Elven Village',1005,9745,15606,-4574,24000,0),
 ('TI -> Dwarven Village',1006,115113,-178212,-901,46000,0),
@@ -399,23 +399,23 @@ INSERT INTO teleport VALUES
 ('Soul Isle Harbor -> Town of Aden',1137,146331,25762,-2018,22000,0),
 ('Soul Isle Harbor -> The Town of Gludio',1138,-117251,46771,360,4300,0),
 
-('Pagan Temple - > exit', 11999, -16307, -36591, -10725, 0, 0),
-('Pagan Chapel - > exit', 11998, -16359, -43803, -10725, 0, 0);
+('Pagan Temple - > exit',11999,-16307,-36591,-10725,0,0),
+('Pagan Chapel - > exit',11998,-16359,-43803,-10725,0,0);
 
 INSERT INTO teleport VALUES
 ('Clan Hall -> Execution Grounds',502,51055,141959,-2869,500,0),
--- ('Clan Hall -> Fortress of Resistance',503,51055,141959,-2869,500,0), -- dunno coords !
+-- ('Clan Hall -> Fortress of Resistance',503,51055,141959,-2869,500,0),-- dunno coords !
 ('Clan Hall -> Cruma Marshlands',504,5106,126916,-3664,500,0),
 ('Clan Hall -> Cruma Tower Entrance',505,17192,114178,-3439,500,0),
- -- ('Clan Hall -> Mandragora Farm',506,17192,114178,-3439,500,0), -- dunno coords !
+ -- ('Clan Hall -> Mandragora Farm',506,17192,114178,-3439,500,0),-- dunno coords !
 ('Clan Hall -> Town of Dion',507,15670,142983,-2705,500,0),
 ('Clan Hall -> Floran Village',508,17838,170274,-3508,500,0),
  -- 509
 ('Clan Hall -> Tanor Canyon',510,58316,163851,-2816,500,0),
 ('Clan Hall -> Bee Hive',511,20505,189036,-3344,500,0),
- -- ('Clan Hall -> Dion Hills',512,20505,189036,-3344,500,0), -- dunno coords !
-('Clan Hall -> Floran Agricultural Area',513,26810,172787,-3376,500,0), -- needs confirming
-('Clan Hall -> Plains of Dion',514,9980,173167,-3734,500,0), -- needs confirming
+ -- ('Clan Hall -> Dion Hills',512,20505,189036,-3344,500,0),-- dunno coords !
+('Clan Hall -> Floran Agricultural Area',513,26810,172787,-3376,500,0),-- needs confirming
+('Clan Hall -> Plains of Dion',514,9980,173167,-3734,500,0),-- needs confirming
  -- 515
  -- 516
 ('Clan Hall -> Hardin\'s Academy',517,105918,109759,-3207,500,0),
@@ -430,31 +430,31 @@ INSERT INTO teleport VALUES
 ('Clan Hall -> Giran Arena',526,73890,142656,-3778,500,0),
  -- 527
 ('Clan Hall -> Breka\'s Stronghold',528,79798,130624,-3677,500,0),
-('Clan Hall -> Gorgon Flower Garden',529,113553,134813,-3640,500,0),  -- needs confirming
+('Clan Hall -> Gorgon Flower Garden',529,113553,134813,-3640,500,0), -- needs confirming
  -- -----------------
 ('Clan Hall -> Ivory Tower',581,85348,16142,-3699,500,0),
 ('Clan Hall -> Town of Oren',582,82956,53162,-1495,500,0),
  -- 583
 ('Clan Hall -> Plains of Lizardmen',584,87252,85514,-3056,500,0),
 ('Clan Hall -> Skyshadow Meadow',585,82764,61145,-3502,500,0),
- -- ('Clan Hall -> Shilen\'s Garden',586,82764,61145,-3502,500,0),  -- dunno coords !
- -- ('Clan Hall -> Black Rock Hill',587,82764,61145,-3502,500,0),  -- dunno coords !
+ -- ('Clan Hall -> Shilen\'s Garden',586,82764,61145,-3502,500,0), -- dunno coords !
+ -- ('Clan Hall -> Black Rock Hill',587,82764,61145,-3502,500,0), -- dunno coords !
 ('Clan Hall -> Spider Nest',588,-56532,78321,-2960,500,0),
-('Clan Hall -> Timak Outpost',589,67097,68815,-3648,500,0), -- needs confirming
- -- ('Clan Hall -> Ivory Tower Crater',590,-56532,78321,-2960,500,0), -- dunno coords !
-('Clan Hall -> Forest of Evil',591,93218,16969,-3904,500,0), -- needs confirming
+('Clan Hall -> Timak Outpost',589,67097,68815,-3648,500,0),-- needs confirming
+ -- ('Clan Hall -> Ivory Tower Crater',590,-56532,78321,-2960,500,0),-- dunno coords !
+('Clan Hall -> Forest of Evil',591,93218,16969,-3904,500,0),-- needs confirming
 ('Clan Hall -> Outlaw Forest',592,85995,-2433,-3528,500,0),
- -- ('Clan Hall -> Misty Mountains',593,85995,-2433,-3528,500,0), -- dunno coords !
- -- ('Clan Hall -> Starlight Waterfall',594,85995,-2433,-3528,500,0), -- dunno coords !
- -- ('Clan Hall -> Undine Waterfall',595,85995,-2433,-3528,500,0), -- dunno coords !
- -- ('Clan Hall -> The Gods\' Falls',596,85995,-2433,-3528,500,0),  -- dunno coords !
+ -- ('Clan Hall -> Misty Mountains',593,85995,-2433,-3528,500,0),-- dunno coords !
+ -- ('Clan Hall -> Starlight Waterfall',594,85995,-2433,-3528,500,0),-- dunno coords !
+ -- ('Clan Hall -> Undine Waterfall',595,85995,-2433,-3528,500,0),-- dunno coords !
+ -- ('Clan Hall -> The Gods\' Falls',596,85995,-2433,-3528,500,0), -- dunno coords !
  -- 597
 ('Clan Hall -> Tower of Insolence',598,121685,15749,-3852,500,0),
 ('Clan Hall -> The Blazing Swamp',599,146828,-12859,-4455,500,0),
  -- 600
 ('Clan Hall -> The Forbidden Gateway',601,185395,20359,-3270,500,0),
 ('Clan Hall -> The Giants Cave',602,174528,52683,-4369,500,0),
-('Clan Hall -> Northern Pathway of Enchanted Valley',603,104426,33746,-3800,500,0), -- need also southern?
+('Clan Hall -> Northern Pathway of Enchanted Valley',603,104426,33746,-3800,500,0),-- need also southern?
 ('Clan Hall -> The Cemetery',604,172136,20325,-3326,500,0),
 ('Clan Hall -> The Forest of Mirrors',605,150477,85907,-2753,500,0),
 ('Clan Hall -> Anghel Waterfall',606,165584,85997,-2338,500,0),
@@ -462,15 +462,15 @@ INSERT INTO teleport VALUES
 ('Clan Hall -> Hunters Village',608,117110,76883,-2695,500,0),
 ('Clan Hall -> Border Outpost(Aden Side)',609,109699,-7908,-2902,500,0),
 ('Clan Hall -> Coliseum',610,150086,46733,-3412,500,0),
--- ('Clan Hall -> Narsell Lake',611,150086,46733,-3412,500,0), -- dunno coords !
+-- ('Clan Hall -> Narsell Lake',611,150086,46733,-3412,500,0),-- dunno coords !
  -- 612 
 ('Clan Hall -> Ancient Battleground',613,127739,-6998,-3869,500,0),
 ('Clan Hall -> Forsaken Plains',614,167285,37109,-4008,500,0),
 ('Clan Hall -> Silent Valley',615,177318,48447,-3835,500,0),
-('Clan Hall -> Hunters Valley',616,114306,86573,-3112,500,0), -- needs confirming
-('Clan Hall -> Plains of Glory',617,135756,19557,-3424,500,0), -- needs confirming
-('Clan Hall -> Fields of Massacre',618,179718,-7843,-3517,500,0), -- needs confirming
-('Clan Hall -> War-Torn Plains',619,156898,11217,-4032,500,0), -- needs confirming
+('Clan Hall -> Hunters Valley',616,114306,86573,-3112,500,0),-- needs confirming
+('Clan Hall -> Plains of Glory',617,135756,19557,-3424,500,0),-- needs confirming
+('Clan Hall -> Fields of Massacre',618,179718,-7843,-3517,500,0),-- needs confirming
+('Clan Hall -> War-Torn Plains',619,156898,11217,-4032,500,0),-- needs confirming
 ('Clan Hall -> Border Outpost(Unknown Side)',620,114172,-18034,-1875,500,0),
 ('Clan Hall -> Rune Castle Town - Shopping Area',621,43835,-47749,-796,0,0),
 ('Clan Hall -> Rune Castle Town - Temple',622,38303,-48044,897,0,0),
@@ -531,11 +531,11 @@ INSERT INTO teleport VALUES
 ('Silent Valley - 1000 adena',9020,181737,46469,-4352,1000,0),
 ('Plains of Glory - 1000 adena',9021,135756,19557,-3424,1000,0),
 ('War-Torn Plains - 1000 adena',9022,156898,11217,-4032,1000,0),
-('Tower of Insolence, 3rd Floor - 1000 adena',9023,110848,16154,-2120,1000,0),
-('Tower of Insolence, 5th Floor - 1000 adena',9024,118404,15988,832,1000,0),
-('Tower of Insolence, 7th Floor - 1000 adena',9025,115064,12181,2960,1000,0),
-('Tower of Insolence, 10th Floor - 1000 adena',9026,118525,16455,5984,1000,0),
-('Tower of Insolence, 13th Floor - 1000 adena',9027,115384,16820,9000,1000,0),
+('Tower of Insolence,3rd Floor - 1000 adena',9023,110848,16154,-2120,1000,0),
+('Tower of Insolence,5th Floor - 1000 adena',9024,118404,15988,832,1000,0),
+('Tower of Insolence,7th Floor - 1000 adena',9025,115064,12181,2960,1000,0),
+('Tower of Insolence,10th Floor - 1000 adena',9026,118525,16455,5984,1000,0),
+('Tower of Insolence,13th Floor - 1000 adena',9027,115384,16820,9000,1000,0),
 ('Hunters Valley - 1000 adena',9028,114306,86573,-3112,1000,0),
 ('Angel Waterfall - 1000 adena',9029,166182,91560,-3168,1000,0),
 ('Forest of Mirrors - 1000 adena',9030,166080,75574,-2992,1000,0),
@@ -545,8 +545,8 @@ INSERT INTO teleport VALUES
 ('Antharas Lair 1 - 1000 adena',9041,147071,120156,-4520,1000,0),
 ('Antharas Lair 2 - 1000 adena',9042,151689,112615,-5520,1000,0),
 ('Dragon Valley - 1000 adena',9043,116425,109898,-3424,1000,0),
-('Antharas Lair, Heart of Warding - 1000 adena',9044,154396,121235,-3808,1000,0),
-('Dragon Valley, Traders Post - 1000 adena',9045,122824,110836,-3720,1000,0),
+('Antharas Lair,Heart of Warding - 1000 adena',9044,154396,121235,-3808,1000,0),
+('Dragon Valley,Traders Post - 1000 adena',9045,122824,110836,-3720,1000,0),
 ('Private Hardin\'s Academy - 1000 adena',9046,105918,109759,-3192,1000,0),
 ('Forest of the Dead - 1000 adena',9050,54425,-41692,-3072,1000,0),
 ('Valley of Saints - 1000 adena',9051,84092,-80084,-3504,1000,0),
@@ -562,14 +562,14 @@ INSERT INTO teleport VALUES
 ('Wall of Argos - 1000 adena',9066,183140,-53307,-1896,1000,0),
 ('Four Sepulchers - 1000 adena',9067,178127,-84435,-7216,1000,0),
 ('Imperial Tomb - 1000 adena',9068,186699,-75915,-2824,1000,0),
-('Forge of the Gods, entrance - 1000 adena',9069,169018,-116303,-2432,1000,0),
-('Forge of the Gods, entrance - 1000 adena',9070,169018,-116303,-2432,1000,0),
-('Forge of the Gods, lower level - 1000 adena',9071,179887,-111241,-5824,1000,0),
+('Forge of the Gods,entrance - 1000 adena',9069,169018,-116303,-2432,1000,0),
+('Forge of the Gods,entrance - 1000 adena',9070,169018,-116303,-2432,1000,0),
+('Forge of the Gods,lower level - 1000 adena',9071,179887,-111241,-5824,1000,0),
 ('Execution Grounds - 1000 adena',9080,50568,152408,-2656,1000,0),
 ('Floran Agricultural Area - 1000 adena',9081,26810,172787,-3376,1000,0),
 ('Cruma Marshlands - 1000 adena',9082,5941,125455,-3640,1000,0),
-('Cruma Tower, 1st Floor - 1000 adena',9083,17718,117315,-12064,1000,0),
-('Cruma Tower, 2nd Floor - 1000 adena',9084,17728,110325,-9312,1000,0),
+('Cruma Tower,1st Floor - 1000 adena',9083,17718,117315,-12064,1000,0),
+('Cruma Tower,2nd Floor - 1000 adena',9084,17728,110325,-9312,1000,0),
 ('Frost Lake - 1000 adena',9090,107577,-122392,-3632,1000,0),
 ('Crypts of Disgrace - 1000 adena',9091,44221,-114232,-2784,1000,0),
 ('Sky Wagon Relic - 1000 adena',9092,121618,-141554,-1496,1000,0),
@@ -587,11 +587,11 @@ INSERT INTO teleport VALUES
 ('Fields of Silence - 1000 adena',9120,69748,186111,-2872,1000,0),
 ('Field of Whispers - 1000 adena',9121,97786,209303,-3040,1000,0),
 ('Alligator Island - 1000 adena',9122,113708,178387,-3232,1000,0),
-('Garden of Eva, entrance - 1000 adena',9123,82693,242220,-6712,1000,0),
-('Garden of Eva, 2nd level - 1000 adena',9124,79248,247390,-8816,1000,0),
-('Garden of Eva, 3rd level - 1000 adena',9125,77868,250400,-9328,1000,0),
-('Garden of Eva, 4th level - 1000 adena',9126,78721,253309,-9840,1000,0),
-('Garden of Eva, 5th level - 1000 adena',9127,82951,252354,-10592,1000,0),
+('Garden of Eva,entrance - 1000 adena',9123,82693,242220,-6712,1000,0),
+('Garden of Eva,2nd level - 1000 adena',9124,79248,247390,-8816,1000,0),
+('Garden of Eva,3rd level - 1000 adena',9125,77868,250400,-9328,1000,0),
+('Garden of Eva,4th level - 1000 adena',9126,78721,253309,-9840,1000,0),
+('Garden of Eva,5th level - 1000 adena',9127,82951,252354,-10592,1000,0),
 -- Noble Gate Pass
 ('Gludin Arena - 1 Noble Gate Pass',9900,-87328,142266,-3640,1,1),
 ('Coliseum - 1 Noble Gate Pass',9901,146440,46723,-3432,1,1),
@@ -601,11 +601,11 @@ INSERT INTO teleport VALUES
 ('Silent Valley - 1 Noble Gate Pass',9920,181737,46469,-4352,1,1),
 ('Plains of Glory - 1 Noble Gate Pass',9921,135756,19557,-3424,1,1),
 ('War-Torn Plains - 1 Noble Gate Pass',9922,156898,11217,-4032,1,1),
-('Tower of Insolence, 3rd Floor - 1 Noble Gate Pass',9923,110848,16154,-2120,1,1),
-('Tower of Insolence, 5th Floor - 1 Noble Gate Pass',9924,118404,15988,832,1,1),
-('Tower of Insolence, 7th Floor - 1 Noble Gate Pass',9925,115064,12181,2960,1,1),
-('Tower of Insolence, 10th Floor - 1 Noble Gate Pass',9926,118525,16455,5984,1,1),
-('Tower of Insolence, 13th Floor - 1 Noble Gate Pass',9927,115384,16820,9000,1,1),
+('Tower of Insolence,3rd Floor - 1 Noble Gate Pass',9923,110848,16154,-2120,1,1),
+('Tower of Insolence,5th Floor - 1 Noble Gate Pass',9924,118404,15988,832,1,1),
+('Tower of Insolence,7th Floor - 1 Noble Gate Pass',9925,115064,12181,2960,1,1),
+('Tower of Insolence,10th Floor - 1 Noble Gate Pass',9926,118525,16455,5984,1,1),
+('Tower of Insolence,13th Floor - 1 Noble Gate Pass',9927,115384,16820,9000,1,1),
 ('Hunters Valley - 1 Noble Gate Pass',9928,114306,86573,-3112,1,1),
 ('Angel Waterfall - 1 Noble Gate Pass',9929,166182,91560,-3168,1,1),
 ('Forest of Mirrors - 1 Noble Gate Pass',9930,166080,75574,-2992,1,1),
@@ -615,8 +615,8 @@ INSERT INTO teleport VALUES
 ('Antharas Lair 1 - 1 Noble Gate Pass',9941,147071,120156,-4520,1,1),
 ('Antharas Lair 2 - 1 Noble Gate Pass',9942,151689,112615,-5520,1,1),
 ('Dragon Valley - 1 Noble Gate Pass',9943,116425,109898,-3424,1,1),
-('Antharas Lair, Heart of Warding - 1 Noble Gate Pass',9944,154396,121235,-3808,1,1),
-('Dragon Valley, Traders Post - 1 Noble Gate Pass',9945,122824,110836,-3720,1,1),
+('Antharas Lair,Heart of Warding - 1 Noble Gate Pass',9944,154396,121235,-3808,1,1),
+('Dragon Valley,Traders Post - 1 Noble Gate Pass',9945,122824,110836,-3720,1,1),
 ('Private Hardin\'s Academy - 1 Noble Gate Pass',9946,105918,109759,-3192,1,1),
 ('Forest of the Dead - 1 Noble Gate Pass',9950,54425,-41692,-3072,1,1),
 ('Valley of Saints - 1 Noble Gate Pass',9951,84092,-80084,-3504,1,1),
@@ -631,13 +631,13 @@ INSERT INTO teleport VALUES
 ('Wall of Argos - 1 Noble Gate Pass',9965,183140,-53307,-1896,1,1),
 ('Four Sepulchers - 1 Noble Gate Pass',9967,178127,-84435,-7216,1,1),
 ('Imperial Tomb - 1 Noble Gate Pass',9968,186699,-75915,-2824,1,1),
-('Forge of the Gods, entrance - 1 Noble Gate Pass',9970,169018,-116303,-2432,1,1),
-('Forge of the Gods, lower level - 1 Noble Gate Pass',9971,179887,-111241,-5824,1,1),
+('Forge of the Gods,entrance - 1 Noble Gate Pass',9970,169018,-116303,-2432,1,1),
+('Forge of the Gods,lower level - 1 Noble Gate Pass',9971,179887,-111241,-5824,1,1),
 ('Execution Grounds - 1 Noble Gate Pass',9980,50568,152408,-2656,1,1),
 ('Floran Agricultural Area - 1 Noble Gate Pass',9981,26810,172787,-3376,1,1),
 ('Cruma Marshlands - 1 Noble Gate Pass',9982,5941,125455,-3640,1,1),
-('Cruma Tower, 1st Floor - 1 Noble Gate Pass',9983,17718,117315,-12064,1,1),
-('Cruma Tower, 2nd Floor - 1 Noble Gate Pass',9984,17728,110325,-9312,1,1),
+('Cruma Tower,1st Floor - 1 Noble Gate Pass',9983,17718,117315,-12064,1,1),
+('Cruma Tower,2nd Floor - 1 Noble Gate Pass',9984,17728,110325,-9312,1,1),
 ('Frost Lake - 1 Noble Gate Pass',9990,107577,-122392,-3632,1,1),
 ('Crypts of Disgrace - 1 Noble Gate Pass',9991,44221,-114232,-2784,1,1),
 ('Sky Wagon Relic - 1 Noble Gate Pass',9992,121618,-141554,-1496,1,1),
@@ -655,11 +655,11 @@ INSERT INTO teleport VALUES
 ('Field of Silence - 1 Noble Gate Pass',10020,69748,186111,-2872,1,1),
 ('Field of Whispers - 1 Noble Gate Pass',10021,97786,209303,-3040,1,1),
 ('Alligator Island - 1 Noble Gate Pass',10022,113708,178387,-3232,1,1),
-('Garden of Eva, entrance - 1 Noble Gate Pass',10023,82693,242220,-6712,1,1),
-('Garden of Eva, 2nd ring - 1 Noble Gate Pass',10024,79248,247390,-8816,1,1),
-('Garden of Eva, 3rd ring - 1 Noble Gate Pass',10025,77868,250400,-9328,1,1),
-('Garden of Eva, 4th ring - 1 Noble Gate Pass',10026,78721,253309,-9840,1,1),
-('Garden of Eva, 5th level - 1 Noble Gate Pass',10027,82951,252354,-10592,1,1),
+('Garden of Eva,entrance - 1 Noble Gate Pass',10023,82693,242220,-6712,1,1),
+('Garden of Eva,2nd ring - 1 Noble Gate Pass',10024,79248,247390,-8816,1,1),
+('Garden of Eva,3rd ring - 1 Noble Gate Pass',10025,77868,250400,-9328,1,1),
+('Garden of Eva,4th ring - 1 Noble Gate Pass',10026,78721,253309,-9840,1,1),
+('Garden of Eva,5th level - 1 Noble Gate Pass',10027,82951,252354,-10592,1,1),
 ('Ketra teleport - Goddard Castle Town',10028,147978,-55408,-2728,4900,0),
 ('Ketra teleport - Rune Castle Town',10029,43849,-47877,-792,22000,0),
 ('Ketra teleport - Aden Castle Town',10030,146705,25840,-2000,21000,0),
@@ -721,10 +721,10 @@ INSERT INTO teleport VALUES
 ('Clan Hall -> North of Goddard Castle Town',12047,147731,-58930,-2976,0,0),
 ('Clan Hall -> East of Goddard Castle Town',12048,150561,-57489,-2976,0,0),
 ('Clan Hall -> West of Goddard Castle Town',12049,144866,-57464,-2976,0,0),
-('Gludio -> Kamael Village',             12050, -117251, 46771, 360, 12000, 0),
-('Dark Elf Village -> Kamael Village', 12051, -117251, 46771, 360, 13000, 0),
-('Orc Village -> Kamael Village',        12052, -117251, 46771, 360, 17000, 0),
-('Elven Village -> Kamael Village',      12053, -117251, 46771, 360, 16000, 0),
-('Town of Aden -> Kamael Village',       12054, -117251, 46771, 360, 26000, 0),
-('Talking Village -> Kamael Village',    12055, -117251, 46771, 360, 20000, 0),
-('Dwarven Village -> Kamael Village',    12056, -117251, 46771, 360, 32000, 0);
+('Gludio -> Kamael Village',12050,-117251,46771,360,12000,0),
+('Dark Elf Village -> Kamael Village',12051,-117251,46771,360,13000,0),
+('Orc Village -> Kamael Village',12052,-117251,46771,360,17000,0),
+('Elven Village -> Kamael Village',12053,-117251,46771,360,16000,0),
+('Town of Aden -> Kamael Village',12054,-117251,46771,360,26000,0),
+('Talking Village -> Kamael Village',12055,-117251,46771,360,20000,0),
+('Dwarven Village -> Kamael Village',   12056,-117251,46771,360,32000,0);
