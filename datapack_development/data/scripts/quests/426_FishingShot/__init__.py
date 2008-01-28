@@ -55,6 +55,11 @@ MOBSspecial = {
     20829:[115,6],20859:[890,8],21066:[5,5],21068:[565,11],21071:[400,12]
 }
 
+KAMAELmobs = { #Chances are custom for now, any retail reports are welcome.
+	22231:160,22233:160,22234:160,22235:160,22237:160,22238:160,22241:160,22244:160,22247:160,
+	22250:160,22252:160
+}
+
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
@@ -96,6 +101,8 @@ class Quest (JQuest) :
    chance = 0
    if npcId in MOBS1.keys() :
        chance = MOBS1[npcId]
+   if npcId in KAMAELmobs.keys() :
+       chance = KAMAELmobs[npcId]
    elif npcId in MOBS2.keys() :
        chance = MOBS2[npcId]
        drop = 1
@@ -119,11 +126,13 @@ class Quest (JQuest) :
 
 QUEST       = Quest(426,qn,"Quest for Fishing Shot")
 
-for npc in range(31562,31580)+[31616,31696,31697]:
+for npc in range(31562,31580)+[31616,31696,31697,32348,31989] :
     QUEST.addStartNpc(npc)
     QUEST.addTalkId(npc)
 
 for mob in MOBS1.keys():
+    QUEST.addKillId(mob)
+for mob in KAMAELmobs.keys():
     QUEST.addKillId(mob)
 for mob in MOBS2.keys():
     QUEST.addKillId(mob)
