@@ -12,7 +12,7 @@ qn = "420_LittleWings"
 REQUIRED_EGGS = 20
 
 #Drop rates in %
-BACK_DROP = 30
+BACK_DROP = 40
 EGG_DROP  = 50
 
 #Quest items
@@ -410,10 +410,16 @@ class Quest (JQuest):
              return "420_byron_8.htm"
     elif npcId == FR_MYMYU :
        if id == State.STARTED and cond < 5 :
-          if ( progress in [5,12] ) and st.getQuestItemsCount(FRY_STN) == 1 :
-             return "420_mymyu_1.htm"
-          elif ( progress in [6,13] ) and st.getQuestItemsCount(FRY_STN_DLX) == 1 :
-             return "420_mymyu_3.htm"
+          if ( progress in [5,12] ) :
+             if st.getQuestItemsCount(FRY_STN) == 1 :
+                return "420_mymyu_1.htm"
+             else :
+                return "420_mymyu_5.htm"
+          elif ( progress in [6,13] ) :
+             if st.getQuestItemsCount(FRY_STN_DLX) == 1 :
+                return "420_mymyu_3.htm"
+             else :
+                return "420_mymyu_5.htm"
        elif id == State.STARTED and cond >= 5:
           if progress < 14 and st.getQuestItemsCount(JUICE) == 1  :
              return "420_mymyu_7.htm"
@@ -530,7 +536,8 @@ class Quest (JQuest):
                   st.playSound("ItemSound.quest_middle")
                else:
                   st.playSound("ItemSound.quest_itemget")   
-               st.giveItems(eggs,numItems)                 
+               st.giveItems(eggs,numItems)
+               npc.broadcastPacket(CreatureSay(npc.getObjectId(),0,npc.getName(),"If the eggs get taken, we're dead!"))
   #fairy stone destruction    
     elif id == State.STARTED and cond < 5 and st.getQuestItemsCount(FRY_STN_DLX) == 1 :
       if npcId in range(20589,20600)+[20719]:
