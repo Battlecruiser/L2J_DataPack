@@ -4030,7 +4030,8 @@ INSERT INTO `npc` (`id`,`idTemplate`,`name`,`serverSideName`,`title`,`serverSide
 	(27319,27319,'Black Leopard',0,'Quest Monster',0,'Monster.onyx_beast',20.00,23.00,18,'male','L2Monster',40,400000,9999,13.43,3.09,40,43,30,21,20,10,440000,40000,9000,5000,6000,6000,300,500,333,0,0,0,88,132,NULL,0,0,0,'LAST_HIT'),
 	(27320,27320,'Timora Orc',0,'Quest Monster',0,'Monster.batur_orc',20.00,23.00,20,'male','L2Monster',40,400000,9999,13.43,3.09,40,43,30,21,20,10,440000,40000,9000,5000,6000,6000,300,500,333,0,0,0,88,132,NULL,0,0,0,'LAST_HIT'),
 	(27321,27321,'Bruin Lizardman',0,'Quest Monster',0,'Monster.virud_lizardman',20.00,23.00,20,'male','L2Monster',80,541,213,13.43,3.09,40,43,30,21,20,10,0,0,52,100,82,72,300,0,333,291,0,0,88,132,NULL,0,0,0,'LAST_HIT'),
-	(27322,27322,'Picot Araneid',0,'Quest Monster',0,'Monster.giant_spider_50_bi',20.00,23.00,27,'male','L2Monster',80,813,245,13.43,3.09,40,43,30,21,20,10,0,0,64,114,94,82,300,0,333,0,0,0,88,132,NULL,0,0,0,'LAST_HIT');
+	(27322,27322,'Picot Araneid',0,'Quest Monster',0,'Monster.giant_spider_50_bi',20.00,23.00,27,'male','L2Monster',80,813,245,13.43,3.09,40,43,30,21,20,10,0,0,64,114,94,82,300,0,333,0,0,0,88,132,NULL,0,0,0,'LAST_HIT'),
+	(27323,27323,'Divine Emissary',0,'Quest Monster',0,'LineageMonster.angel',8.00,22.00,40,'male','L2Monster',40,1527,531,7.11,1.84,40,43,30,21,20,10,0,0,273,201,131,164,278,0,333,0,0,0,29,154,NULL,0,0,0,'LAST_HIT');
 
 INSERT INTO `npc` (`id`,`idTemplate`,`name`,`serverSideName`,`title`,`serverSideTitle`,`class`,`collision_radius`,`collision_height`,`level`,`sex`,`type`,`attackrange`,`hp`,`mp`,`hpreg`,`mpreg`,`str`,`con`,`dex`,`int`,`wit`,`men`,`exp`,`sp`,`patk`,`pdef`,`matk`,`mdef`,`atkspd`,`aggro`,`matkspd`,`rhand`,`lhand`,`armor`,`walkspd`,`runspd`,`faction_id`,`faction_range`,`isUndead`,`absorb_level`,`absorb_type`) VALUES
 	(29001,29001,'Queen Ant',0,'',0,'Monster.queen_ant',45.00,53.00,40,'female','L2Boss',40,229898,667,495.04,2.14,60,57,73,76,70,80,2179535,140740,329,1615,77,655,278,0,3819,0,0,0,129,372,'queen_ant_clan',1000,0,0,'LAST_HIT'),
@@ -6648,7 +6649,7 @@ UPDATE `npc` SET `runspd` = '25', `walkspd` = '25' WHERE `id` = '31365';
 UPDATE `npc` SET `runspd` = '50', `walkspd` = '50' WHERE `id` = '32070';
 UPDATE `npc` SET `collision_height` = '17.00', `runspd` = '12', `walkspd` = '12' WHERE `id` = '32072';
 
--- Kamael update
+-- Kamael update - require corrections
 insert into `npc`(`id`,`idTemplate`,`name`,`serverSideName`,`title`,`serverSideTitle`,`class`,`collision_radius`,`collision_height`,`level`,`sex`,`type`,`attackrange`,`hp`,`mp`,`hpreg`,`mpreg`,`str`,`con`,`dex`,`int`,`wit`,`men`,`exp`,`sp`,`patk`,`pdef`,`matk`,`mdef`,`atkspd`,`aggro`,`matkspd`,`rhand`,`lhand`,`walkspd`,`runspd`,`faction_id`,`faction_range`,`isUndead`,`absorb_level`,`absorb_type`) values 
 ('13036',0,'Alchemist\'s Chest',0,'',0,'LineageMonster.mimic_even','8.50','8.50','1','male','L2Npc',40,'2444.00','2444.00',0.00,0.00,'40','43','30','21','35','25','0','0','500','500','500','500','253','0','253','0','0','80','120',NULL,'0',0,'0','LAST_HIT'),
 ('22257',0,'Island Guardian',0,'',0,'LineageMonster.light_worm_250p','40.00','47.00','1','male','L2Monster',40,'2444.00','2444.00',0.00,0.00,'10','10','10','10','10','10','0','0','500','500','500','500','253','0','253','0','0','80','120','','0',0,'0','LAST_HIT'),
@@ -7047,7 +7048,6 @@ insert into `npc`(`id`,`idTemplate`,`name`,`serverSideName`,`title`,`serverSideT
 ('18487',0,'',0,'',0,'LineageNPC.clear_npc','15.50','22.50','1','male','L2Npc',40,'2444.00','2444.00',0.00,0.00,'10','10','10','10','10','10','0','0','500','500','500','500','253','0','253','0','0','80','120','','0',0,'0','LAST_HIT'),
 ('18488',0,'',0,'',0,'LineageNPC.clear_npc','15.50','22.50','1','male','L2Npc',40,'2444.00','2444.00',0.00,0.00,'10','10','10','10','10','10','0','0','500','500','500','500','253','0','253','0','0','80','120','','0',0,'0','LAST_HIT'),
 ('18489',0,'',0,'',0,'LineageNPC.clear_npc','15.50','22.50','1','male','L2Npc',40,'2444.00','2444.00',0.00,0.00,'10','10','10','10','10','10','0','0','500','500','500','500','253','0','253','0','0','80','120','','0',0,'0','LAST_HIT'),
-('27323',0,'Divine Emissary',0,'Quest Monster',0,'LineageMonster.angel','8.00','22.00','1','male','L2Monster',40,'2444.00','2444.00',0.00,0.00,'10','10','10','10','10','10','0','0','500','500','500','500','253','0','253','0','0','80','120','','0',0,'0','LAST_HIT'),
 ('27324',0,'Vision Guard Eranus',0,'Quest Monster',0,'LineageMonster2.apostle_warrior','8.00','22.00','1','male','L2Monster',40,'2444.00','2444.00',0.00,0.00,'10','10','10','10','10','10','0','0','500','500','500','500','253','0','253','0','0','80','120','','0',0,'0','LAST_HIT'),
 ('27325',0,'Archon of Halisha',0,'Quest Monster',0,'LineageMonster2.ahrimanes','14.00','58.00','1','male','L2Monster',40,'2444.00','2444.00',0.00,0.00,'10','10','10','10','10','10','0','0','500','500','500','500','253','0','253','0','0','80','120','','0',0,'0','LAST_HIT'),
 ('27326',0,'Archangel Kanriel',0,'Quest Monster',0,'LineageMonster.archangel_050p','13.00','37.50','1','male','L2Monster',40,'2444.00','2444.00',0.00,0.00,'10','10','10','10','10','10','0','0','500','500','500','500','253','0','253','0','0','80','120','','0',0,'0','LAST_HIT'),
