@@ -405,11 +405,22 @@ description(s) :
   </for>
 </skill>
 <skill id="528" levels="1" name="Shield of Faith">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="1000"/>
+  <set name="mpConsume" val="43"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="reuseDelay" val="1800000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_PARTY"/>
   <for>
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="1" stackType="pDefSpec">
+      <add order="0x40" stat="pDef" val="3600"/>
+      <add order="0x40" stat="mDef" val="2700"/>
+    </effect>
+    <!-- Needs Core Support: absorbs most of the damage they (Party Members) will receive for the duration of the spell -->
   </for>
 </skill>
 <skill id="529" levels="1" name="Song of Elemental">
