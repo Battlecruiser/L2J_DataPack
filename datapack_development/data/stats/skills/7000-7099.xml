@@ -115,6 +115,7 @@
 </skill>
 <skill id="7029" levels="4" name="Super Haste">
   <table name="#Tab-runSpd"> 1.5 2 3 4 </table>
+  <table name="#Tab-pReuse"> 1 2 4 30 </table>
   <table name="#Tab-mReuse"> 1 2 4 30 </table>
   <table name="#Tab-mAtkSpd"> 1.5 1.8 3 4 </table>
   <table name="#Tab-pAtkSpd"> 1.2 1.5 2 3 </table>
@@ -127,6 +128,7 @@
   <for>
     <effect name="Buff" time="144000" count="1" val="0">
       <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
+      <div order="0x30" stat="pReuse" val="#Tab-pReuse"/>
       <div order="0x30" stat="mReuse" val="#Tab-mReuse"/>
       <mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
