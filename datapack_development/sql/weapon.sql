@@ -1046,7 +1046,7 @@ INSERT INTO `weapon` VALUES
 (7721,'Poleaxe - Wide Blow','lrhand','true',2010,3,3,'bronze','c',139,10,'pole',8,-3.00000,0,0,0,325,0,76,-1,4300000,1720,'true','true','true','true',0,0,0,0,0,0,0,0,0,0,0),
 (7722,'Sword of Valhalla - Acumen','rhand','true',900,1,1,'oriharukon','b',140,10,'sword',8,0.00000,0,0,0,379,0,122,-1,8680000,1157,'true','true','true','true',3047,1,0,0,0,0,0,0,0,0,0),
 (7723,'Sword of Valhalla - Magic Weakness','rhand','true',900,1,1,'oriharukon','b',140,10,'sword',8,0.00000,0,0,0,379,0,122,-1,8680000,1157,'true','true','true','true',0,0,0,0,1164,6,7,0,0,0,0),
-(7724,'Sword of Valhalla - Magic Regeneration','rhand','true',900,1,1,'oriharukon','b',140,10,'sword',8,0.00000,0,0,0,379,0,122,-1,8680000,1157,'true','true','true','true',0,0,0,0,0,0,0,0,0,0,0),
+(7724,'Sword of Valhalla - Magic Regeneration','rhand','true',900,1,1,'oriharukon','b',140,10,'sword',8,0.00000,0,0,0,379,0,122,-1,8680000,1157,'true','true','true','true',0,0,0,0,1044,3,30,0,0,0,0),
 (7810,'Soulfire Dirk - Mana Up','rhand','true',750,2,2,'fine_steel','c',86,5,'dagger',12,-3.00000,0,0,0,433,0,91,-1,2870000,1148,'true','true','true','true',3014,1,0,0,0,0,0,0,0,0,0),
 (7811,'Soulfire Dirk - Magic Hold','rhand','true',750,2,2,'fine_steel','c',86,5,'dagger',12,-3.00000,0,0,0,433,0,91,-1,2870000,1148,'true','true','true','true',0,0,0,0,0,0,0,0,0,0,0),
 (7812,'Soulfire Dirk - Magic Silence','rhand','true',750,2,2,'fine_steel','c',86,5,'dagger',12,-3.00000,0,0,0,433,0,91,-1,2870000,1148,'true','true','true','true',0,0,0,0,0,0,0,0,0,0,0),
