@@ -65,7 +65,7 @@ class Quest (JQuest) :
      if st.getState() == State.STARTED :
        npcId = npc.getNpcId()
        chance = st.getRandom(100)
-       if (npcId in MOBS) and (chance < 35) : #Retail statistic info. 64 mob's - 22 claw
+       if (npcId == SPIDER) and (chance < 35) : #Retail statistic info. 64 mob's - 22 claw
          st.giveItems(CLAW,1)
          st.playSound("ItemSound.quest_itemget")
      return
