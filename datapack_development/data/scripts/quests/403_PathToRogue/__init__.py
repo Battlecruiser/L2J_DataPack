@@ -9,6 +9,8 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "403_PathToRogue"
 
 BEZIQUES_LETTER = 1180
+NETIS_BOW = 1181
+NETIS_DAGGER = 1182
 SPATOIS_BONES = 1183
 HORSESHOE_OF_LIGHT = 1184
 WANTED_BILL = 1185
@@ -17,8 +19,6 @@ STOLEN_TOMES = 1187
 STOLEN_RING = 1188
 STOLEN_NECKLACE = 1189
 BEZIQUES_RECOMMENDATION = 1190
-NETIS_BOW = 1181
-NETIS_DAGGER = 1182
 
 DROP_CHANCE = { 20035:2, 20042:3, 20045:2, 20051:2, 20054:8, 20060:8 }
 
@@ -41,7 +41,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
    JQuest.__init__(self,id,name,descr)
-   self.questItemIds = [SPATOIS_BONES, NETIS_BOW, NETIS_DAGGER, WANTED_BILL, HORSESHOE_OF_LIGHT, BEZIQUES_LETTER, STOLEN_JEWELRY, STOLEN_TOMES, STOLEN_RING, STOLEN_NECKLACE]
+   self.questItemIds = range(1180,1190)
 
  def onEvent (self,event,st) :
     htmltext = event

@@ -24,8 +24,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
-     self.questItemIds = [LEMONIELLS_COVENANT, LETTER_OF_ORDER2, BOOK_OF_PRAGA, BOOK_OF_VIVI, BOOK_OF_SIMLON, LETTER_OF_ORDER1, NECKLACE_OF_MOTHER,
-                PENDANT_OF_MOTHER, CERTIFICATE_OF_GALLINT, BOOK_OF_LEMONIELL]
+     self.questItemIds = range(1191,1201)
 
  def onEvent (self,event,st) :
     htmltext = event

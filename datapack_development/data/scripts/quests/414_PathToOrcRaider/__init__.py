@@ -31,7 +31,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
-     self.questItemIds = range(1578, 1592)
+     self.questItemIds = [GREEN_BLOOD, GOBLIN_DWELLING_MAP, KURUKA_RATMAN_TOOTH, BETRAYER_UMBAR_REPORT, HEAD_OF_BETRAYER]
 
  def onEvent (self,event,st) :
    htmltext = event 

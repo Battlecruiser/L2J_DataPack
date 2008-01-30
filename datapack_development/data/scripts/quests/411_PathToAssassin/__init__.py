@@ -20,7 +20,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
-     self.questItemIds = [ARKENIA_RECOMMEND, SHILENS_TEARS, SHILENS_CALL, ONYX_BEASTS_MOLAR, LEIKANS_NOTE, ARKENIAS_LETTER]
+     self.questItemIds = range(1245,1252)
 
  def onEvent (self,event,st) :
     htmltext = event

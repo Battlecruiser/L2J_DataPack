@@ -26,8 +26,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
-     self.questItemIds = [KEY_OF_FLAME, MAP_OF_LUSTER, WIND_FEATHER, BROKEN_BRONZE_MIRROR, SPARKLE_PEBBLE, RAMAS_DIARY, RED_SOIL, RUST_GOLD_COIN,
-                FLAME_EARING, WIND_BANGEL, WATER_NECKLACE, EARTH_RING]
+     self.questItemIds = range(1280, 1292)
 
  def onEvent (self,event,st) :
     htmltext = event
