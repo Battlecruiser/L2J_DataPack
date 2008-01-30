@@ -39,7 +39,7 @@ LIVE_BAIUM = 29020
 #       chance that you'll wake him and not be able to finish your quest? Doubtful.
 #       [ this powerful attack vs the player who wakes him up is NOT yet implemented here]
 #   * once someone starts attacking Baium no one else can port into the chamber where he is.
-#       Unlike with the otehr raid bosses, you can just show up at any time as long as you are there
+#       Unlike with the other raid bosses, you can just show up at any time as long as you are there
 #       when they die. Not true with Baium. Once he gets attacked, the port to Baium closes. byebye,
 #       see you in 5 days.  If nobody attacks baium for 30 minutes, he auto-despawns and unlocks the 
 #       vortex
@@ -85,7 +85,7 @@ class baium (JQuest):
         npc.broadcastPacket(SocialAction(npc.getObjectId(),1))
         npc.broadcastPacket(Earthquake(npc.getX(), npc.getY(), npc.getZ(),40,5))
         # once Baium is awaken, no more people may enter until he dies, the server reboots, or 
-        # 30 pass with no attacks made against Baium.
+        # 30 minutes pass with no attacks made against Baium.
         self.isBaiumLocked = True
         # start monitoring baium's inactivity
         self.lastAttackVsBaiumTime = System.currentTimeMillis()
