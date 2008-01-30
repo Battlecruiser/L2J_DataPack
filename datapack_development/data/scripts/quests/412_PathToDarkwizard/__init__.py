@@ -8,8 +8,8 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "412_PathToDarkwizard"
 
-SEEDS_OF_DESPAIR = 1254
 SEEDS_OF_ANGER = 1253
+SEEDS_OF_DESPAIR = 1254
 SEEDS_OF_HORROR = 1255
 SEEDS_OF_LUNACY = 1256
 FAMILYS_ASHES = 1257
@@ -24,7 +24,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
-     self.questItemIds = range(1254, 1280)
+     self.questItemIds = range(1254, 1258)+[KNEE_BONE, HEART_OF_LUNACY]+range(1277,1280)
 
  def onEvent (self,event,st) :
     htmltext = event
