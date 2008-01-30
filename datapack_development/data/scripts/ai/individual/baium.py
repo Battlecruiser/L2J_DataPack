@@ -2,13 +2,14 @@
 # by Fulminus
 
 import sys
+from net.sf.l2j.gameserver.ai import CtrlIntention
+from net.sf.l2j.gameserver.instancemanager import BossZoneManager
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver.serverpackets import SocialAction
 from net.sf.l2j.gameserver.serverpackets import Earthquake
 from net.sf.l2j.gameserver.serverpackets import PlaySound
-from net.sf.l2j.gameserver.ai import CtrlIntention
 from net.sf.l2j.util import Rnd
 from java.lang import System
 
@@ -125,6 +126,11 @@ class baium (JQuest):
           htmltext = '<html><body>Angelic Vortex:<br>You may not enter while flying a wyvern</body></html>'
         if player.getQuestState("baium").getQuestItemsCount(4295) : # bloody fabric
           player.getQuestState("baium").takeItems(4295,1)
+          baiumZone = BossZoneManager.getInstance().getZone(113100,14500,10077)
+          # allow entry for the player for the next 30 secs (more than enough time for the TP to happen)
+          # Note: this just means 30secs to get in, no limits on how long it takes before we get out.
+          if baiumZone :
+            baiumZone.allowPlayerEntry(player,30)
           player.teleToLocation(113100,14500,10077)
           if not self.isBaiumAwake :
             self.playersInside.append(player)
