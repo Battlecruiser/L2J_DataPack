@@ -87,7 +87,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
    JQuest.__init__(self,id,name,descr)
-   self.questItemIds = range(2864,2867)+range(2868,2879)+range(3293,3307)+[3028]
+   self.questItemIds = range(2864,2867)+range(2868,2879)+range(3294,3307)+[3028]
 
  def onEvent (self,event,st) :
     htmltext = event
