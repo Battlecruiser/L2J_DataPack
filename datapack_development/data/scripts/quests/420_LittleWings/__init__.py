@@ -5,6 +5,7 @@ from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.serverpackets import CreatureSay
 
 qn = "420_LittleWings"
 
