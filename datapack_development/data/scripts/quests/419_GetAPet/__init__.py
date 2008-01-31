@@ -129,7 +129,6 @@ class Quest (JQuest):
         return "419_cancelled.htm"
     elif id == State.STARTED and st.get("step")=="SLAYED" :
       if event == "talk" :
-        st.set("step","SLAYED")
         st.set("progress","0")
         race = player.getRace().ordinal()
         if race == 0:
@@ -202,6 +201,7 @@ class Quest (JQuest):
          elif getCount_proof(st) < REQUIRED_SPIDER_LEGS :
             return "419_pending_slay.htm"
          else :
+            st.set("step","SLAYED")
             return "Slayed.htm"
       if id == State.STARTED and st.get("step")=="SLAYED" :
         if st.getInt("progress") == 7 :
