@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+<!-- Skill names, and ID's must be completed. I will do them later
+     But if someone else wants to take a shot please be my guest :)
+     Ahmed -->
+<skill id="5491" levels="1" name="Decrease Bow/Crossbow Attack Speed">
+<!-- pAtkSpd decrease value needs to be checked for retail accuracy -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <for>
+    <mul order="0x30" stat="pAtkSpd" val="0.7">
+      <and>
+        <using kind="Bow,Crossbow"/>
+      </and>
+    </mul>
+  </for>
+</skill>
+</list>
