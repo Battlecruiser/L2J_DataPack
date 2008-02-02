@@ -130,7 +130,7 @@ class Quest (JQuest):
     elif id == State.STARTED and st.get("step")=="SLAYED" :
       if event == "talk" :
         st.set("progress","0")
-        race = player.getRace().ordinal()
+        race = st.getPlayer().getRace().ordinal()
         if race == 0:
             st.takeItems(SPIDER_LEG1,REQUIRED_SPIDER_LEGS)
             st.takeItems(ANIMAL_SLAYER_LIST1,1)
