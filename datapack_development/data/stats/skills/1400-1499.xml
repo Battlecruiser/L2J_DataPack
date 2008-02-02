@@ -1081,7 +1081,7 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <cond msg="Target does not have an active Fire Vortex skill."><!-- Need retail msg if there is one. -->
-    <target active_skill_id="1339"/>
+    <target active_effect_id="1339"/>
   </cond>
   <for>
    <effect count="5" name="ManaDamOverTime" time="2" val="40" stackOrder="1" stackType="multiple_debuff">
@@ -1131,7 +1131,7 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <cond msg="Target does not have an active Ice Vortex skill."><!-- Need retail msg if there is one. -->
-    <target active_skill_id="1340"/>
+    <target active_effect_id="1340"/>
   </cond>
   <for>
      <effect count="5" name="ManaDamOverTime" time="2" val="40" stackOrder="1" stackType="multiple_debuff">
@@ -1200,7 +1200,7 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <cond msg="Target does not have an active Wind Vortex skill."><!-- Need retail msg if there is one. -->
-    <target active_skill_id="1341"/>
+    <target active_effect_id="1341"/>
   </cond>
   <for>
      <effect count="5" name="ManaDamOverTime" time="2" val="40" stackOrder="1" stackType="multiple_debuff">
