@@ -72,7 +72,7 @@ class Quest (JQuest) :
       elif st.getPlayer().getClassId().getId() == classId2 :
         if gift2:
            st.giveItems(gift2,count2)
-      st.unset("cond")
+      st.unset("step")
       st.set("onlyone","1")
       st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
@@ -101,7 +101,7 @@ class Quest (JQuest) :
    if not st : return htmltext
    npcId = npc.getNpcId()
    id = st.getState()
-   cond=st.getInt("cond")
+   step=st.getInt("step")
    onlyone=st.getInt("onlyone")
    level=player.getLevel()
    isMage = player.getClassId().isMage()
@@ -113,21 +113,21 @@ class Quest (JQuest) :
     if player.getRace().ordinal() == raceId :
       htmltext=htmlfiles[0]
       if npcTyp==1:
-       if cond==0 :
+       if step==0 :
         if isMage :
-         st.set("cond","1")
+         st.set("step","1")
          st.setState(State.STARTED)
          st.playSound("ItemSound.quest_tutorial")
         else:
          htmltext="30530-01.htm"
-         st.set("cond","1")
+         st.set("step","1")
          st.setState(State.STARTED)
          st.playSound("ItemSound.quest_tutorial")
-       elif cond==1 and st.getQuestItemsCount(item)==0 :
+       elif step==1 and st.getQuestItemsCount(item)==0 :
          if st.getQuestItemsCount(BLUE_GEM) :
            st.takeItems(BLUE_GEM,st.getQuestItemsCount(BLUE_GEM))
            st.giveItems(item,1)
-           st.set("cond","2")
+           st.set("step","2")
            st.playSound("ItemSound.quest_middle")
            if isMage :
              st.giveItems(SPIRITSHOT_NOVICE,100)
@@ -146,14 +146,14 @@ class Quest (JQuest) :
               htmltext = "30575-02.htm"
            else:
              htmltext = "30530-02.htm"
-       elif cond==2 :
+       elif step==2 :
         htmltext = htmlfiles[3]
       elif npcTyp == 0 :
-        if cond==1 :
+        if step==1 :
           htmltext = htmlfiles[0]
-        elif cond==2 :
+        elif step==2 :
           htmltext = htmlfiles[1]
-        elif cond==3 :
+        elif step==3 :
           htmltext = htmlfiles[2] 
    else:
        htmltext = "<html><body>You are too experienced now.</body></html>"
@@ -163,7 +163,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return
    if st.getState() != State.STARTED : return 
-   if st.getInt("cond")==1 and st.getRandom(100) < 25 and st.getQuestItemsCount(BLUE_GEM) == 0 :
+   if st.getInt("step")==1 and st.getRandom(100) < 25 and st.getQuestItemsCount(BLUE_GEM) == 0 :
       st.giveItems(BLUE_GEM,1)
       st.playSound("ItemSound.quest_itemget")
       st.playSound("ItemSound.quest_tutorial")
