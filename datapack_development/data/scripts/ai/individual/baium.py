@@ -129,11 +129,9 @@ class baium (JQuest):
           player.getQuestState("baium").takeItems(4295,1)
           # allow entry for the player for the next 30 secs (more than enough time for the TP to happen)
           # Note: this just means 30secs to get in, no limits on how long it takes before we get out.
-          if self.baiumZone :
-            self.baiumZone.allowPlayerEntry(player,30)
-          else :
+          if not self.baiumZone :
             self.baiumZone = BossZoneManager.getInstance().getZone(113100,14500,10077)
-            self.baiumZone.allowPlayerEntry(player,30)
+          self.baiumZone.allowPlayerEntry(player,30)
           player.teleToLocation(113100,14500,10077)
           if not self.isBaiumAwake :
             self.playersInside.append(player)
