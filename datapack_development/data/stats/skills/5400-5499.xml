@@ -12,7 +12,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul order="0x30" stat="pAtkSpd" val="0.7">
+    <mul order="0x30" stat="pAtkSpd" val="0.5">
       <and>
         <using kind="Bow,Crossbow"/>
       </and>
