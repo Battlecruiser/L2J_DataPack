@@ -130,7 +130,7 @@ class Quest (JQuest) :
                 htmltext = "32213-05.htm"
             elif cond == 17 and st.getQuestItemsCount(Recommend) == 1 :
                 htmltext = "32213-06.htm"
-                st.sendPacket(SocialAction(player.getObjectId(),3))
+                player.sendPacket(SocialAction(player.getObjectId(),3))
                 st.takeItems(Recommend,-1)
                 st.giveItems(certificate,1)
                 st.exitQuest(False)
