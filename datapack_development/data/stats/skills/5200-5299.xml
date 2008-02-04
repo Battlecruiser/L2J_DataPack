@@ -771,11 +771,22 @@
   </for>
 </skill>
 <skill id="5272" levels="6" name="Decoy Provocation">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume"> 50 51 53 54 55 57</table>
+  <table name="#magicLvl"> 38 39 40 41 42 43</table>
+  <table name="#power"> 1078.0 1107.0 1136.0 1166.0 1195.0 1224.0</table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="200"/>
+  <set name="reuseDelay" val="1500"/>
+  <set name="hitTime" val="1200"/>
+  <set name="skillType" val="AGGDAMAGE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="TargetMe" time="1" val="0"/>
   </for>
 </skill>
 <skill id="5273" levels="9" name="NPC(party) - Physical Single Close Range Attack">
