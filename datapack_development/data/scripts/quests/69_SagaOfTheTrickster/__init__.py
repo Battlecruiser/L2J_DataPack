@@ -20,9 +20,9 @@ class Quest (JQuest) :
      self.qn = qn
      self.classid = 134
      self.prevclass = 0x82
-     self.X = [160987,124355,124376]
-     self.Y = [-70194,82155,82127]
-     self.Z = [-2655,-2803,-2796]
+     self.X = [164014,124355,124376]
+     self.Y = [-74733,82155,82127]
+     self.Z = [-3093,-2803,-2796]
      self.Text = ["PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
                   "... Oh ... good! So it was ... let's begin!","I do not have the patience ..! I have been a giant force ...! Cough chatter ah ah ah!",
                   "Paying homage to those who disrupt the orderly will be PLAYERNAME's death!","Now, my soul freed from the shackles of the millennium, Halixia, to the back side I come ...",
