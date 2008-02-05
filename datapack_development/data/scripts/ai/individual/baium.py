@@ -106,7 +106,7 @@ class baium (JQuest):
           self.playersInside = []
           self.cancelQuestTimer("baium_despawn", npc, None)
         else :
-          # just in case the zone reference has been lost (somehow...), find it back
+          # just in case the zone reference has been lost (somehow...), restore the reference
           if not self.baiumZone :
             self.baiumZone = BossZoneManager.getInstance().getZone(113100,14500,10077)
           # if Baium is not inside his zone (i.e. he has been pulled outside), teleport him back in.
