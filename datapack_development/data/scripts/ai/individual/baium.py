@@ -93,16 +93,25 @@ class baium (JQuest):
         self.startQuestTimer("baium_despawn", 60000, npc, None, True)
         # TODO: the person who woke baium up should be knocked across the room, onto a wall, and
         # lose massive amounts of HP.
-    # despawn the live baium after 30 minutes of inactivity  
+    # despawn the live baium after 30 minutes of inactivity
+    # also check if the players are cheating, having pulled Baium outside his zone...
     elif event == "baium_despawn" and npc:
-      if (npc.getNpcId() == LIVE_BAIUM) and (self.lastAttackVsBaiumTime + 1800000 < System.currentTimeMillis()) :
-        npc.deleteMe()   # despawn the live-baium
-        self.addSpawn(STONE_BAIUM,115213,16623,10080,41740,False,0)  # spawn stone-baium
-        self.deleteGlobalQuestVar("unlockDatetime")  # make sure that all locks are deleted from the DB
-        self.isBaiumAwake = False       # mark that Baium is not awake any more 
-        self.isBaiumLocked = False      # unlock the entrance
-        self.playersInside = []
-        self.cancelQuestTimer("baium_despawn", npc, None)
+      if (npc.getNpcId() == LIVE_BAIUM) :
+        if (self.lastAttackVsBaiumTime + 1800000 < System.currentTimeMillis()) :
+          npc.deleteMe()   # despawn the live-baium
+          self.addSpawn(STONE_BAIUM,115213,16623,10080,41740,False,0)  # spawn stone-baium
+          self.deleteGlobalQuestVar("unlockDatetime")  # make sure that all locks are deleted from the DB
+          self.isBaiumAwake = False       # mark that Baium is not awake any more 
+          self.isBaiumLocked = False      # unlock the entrance
+          self.playersInside = []
+          self.cancelQuestTimer("baium_despawn", npc, None)
+        else :
+          # just in case the zone reference has been lost (somehow...), find it back
+          if not self.baiumZone :
+            self.baiumZone = BossZoneManager.getInstance().getZone(113100,14500,10077)
+          # if Baium is not inside his zone (i.e. he has been pulled outside), teleport him back in.
+          if not self.baiumZone.isInsideZone(npc) :
+            npc.teleToLocation(115213,16623,10080)
     return
 
   def onTalk (self,npc,player):
