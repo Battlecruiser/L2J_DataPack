@@ -631,22 +631,32 @@
   </for>
 </skill>
 <skill id="1430" levels="5" name="Invocation">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - Meditate to increase MP regeneration.  Your body is immobilized and your P. Def. decreased while meditating. The effect is cancelled if you are attacked.
-      Lvl 2 - Meditate to increase MP regeneration.  Your body is immobilized and your P. Def. decreased while meditating. The effect is cancelled if you are attacked.
-      Lvl 3 - Meditate to increase MP regeneration.  Your body is immobilized and your P. Def. decreased while meditating. The effect is cancelled if you are attacked.
-      Lvl 4 - Meditate to increase MP regeneration.  Your body is immobilized and your P. Def. decreased while meditating. The effect is cancelled if you are attacked.
-      Lvl 5 - Meditate to increase MP regeneration.  Your body is immobilized and your P. Def. decreased while meditating. The effect is cancelled if you are attacked.
--->
+<!--  <table name="#pDef"> 0.8 </table>
+  <table name="#mhot"> 30 35 40 15 50 </table>
+  <table name="#mpConsume"> 27 28 30 33 34 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="1000"/>
+  <set name="reuseDelay" val="1200000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="25000"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <for>
+  	<effect count="4" name="ManaHealOverTime" time="3" val="#mhot" stackOrder="1.5" stackType="MpRecover"/>
+    <effect count="1" name="ImmobileUntilAttacked" time="25" val="0" stackOrder="#regMp" stackType="RegMPUp">
+	  <mul order="0x30" stat="pDef" val="#pDef"/>
+    </effect>
+  </for> -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
+</skill>
 </skill>
 <skill id="1431" levels="6" name="Fallen Arrow">
 <!--

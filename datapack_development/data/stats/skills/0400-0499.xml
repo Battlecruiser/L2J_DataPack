@@ -904,13 +904,14 @@
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Meditate to increase HP/MP regeneration.  Your body is immobilized and your P. Def. decreased while meditating. The effect is cancelled if you are attacked. Level 3 Focused Force charge required.
+  <set name="num_charges" val="3"/>
+  <set name="charge_skill_id" val="50"/>
 -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-<!-- needs core support for effect stopping when attacked -->
   </for>
 </skill>
 <skill id="442" levels="1" name="Sonic Barrier">

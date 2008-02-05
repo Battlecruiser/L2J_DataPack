@@ -32,7 +32,7 @@ public class DragonBomber extends L2Transformation
 		// Disable all character skills.
 		for (L2Skill sk : this.getPlayer().getAllSkills())
 		{
-			if (sk != null)
+			if (sk != null && !sk.isPassive())
 				this.getPlayer().removeSkill(sk, false);
 		}
 		if (this.getPlayer().transformId() > 0 && !this.getPlayer().isCursedWeaponEquipped())
@@ -76,7 +76,7 @@ public class DragonBomber extends L2Transformation
 		// Enable all character skills
 		for (L2Skill sk : this.getPlayer().getAllSkills())
 		{
-			if (sk != null)
+			if (sk != null && !sk.isPassive())
 				this.getPlayer().addSkill(sk, false);
 		}
 		// Only remove transformation skills. Keeps transformation id for restoration after CW is no longer equipped.
