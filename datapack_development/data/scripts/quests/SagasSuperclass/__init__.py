@@ -179,7 +179,7 @@ class Quest (JQuest) :
  def onAdvEvent (self,event,npc, player) :
    st = player.getQuestState(self.qn)
    if not st: return
-   htmltext = ""  # simple initialization...if none of the events match, return nothing.  
+   htmltext = event
    cond = st.getInt("cond")
    id = st.getInt("id")
    player = st.getPlayer()
