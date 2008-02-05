@@ -243,7 +243,7 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
   <for>
-   <effect count="1" name="ImobileBuff" time="30" val="0">
+   <effect count="1" name="ImmobileBuff" time="30" val="0">
       <mul order="0x30" stat="mDef" val="5.0"/>
       <mul order="0x30" stat="pDef" val="5.0"/>
       <mul order="0x30" stat="pAtkSpd" val="0.3"/>

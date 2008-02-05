@@ -292,21 +292,21 @@
   <set name="aggroPoints" val="#aggro"/>
   <enchant2 name="reuseDelay" val="#ench2reuseDelay"/>
   <for>
-    <effect count="1" name="ImobileBuff" time="30" val="0" stackOrder="1" stackType="pDefSpec">
+    <effect count="1" name="ImmobileBuff" time="30" val="0" stackOrder="1" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="#pDef"/>
       <add order="0x40" stat="mDef" val="#mDef"/>
       <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="ImobileBuff" time="#ench1time" val="0" stackOrder="1" stackType="pDefSpec">
+    <effect count="1" name="ImmobileBuff" time="#ench1time" val="0" stackOrder="1" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="#ench1pDef"/>
       <add order="0x40" stat="mDef" val="#ench1mDef"/>
       <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
     </effect>
   </enchant1for>
   <enchant2for>
-    <effect count="1" name="ImobileBuff" time="30" val="0" stackOrder="1" stackType="pDefSpec">
+    <effect count="1" name="ImmobileBuff" time="30" val="0" stackOrder="1" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="#ench1pDef"/>
       <add order="0x40" stat="mDef" val="#ench1mDef"/>
       <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
