@@ -368,3 +368,81 @@ INSERT INTO `skill_spellbooks` VALUES
 (448,8909), -- Blueprint: Summon Swoop Cannon
 (1418,8945), -- Spellbook: Celestial Shield
 (1430,8946); -- Spellbook: Invocation
+
+--
+-- Commented out until Drop and Shop values are completed.
+--
+-- INSERT INTO `skill_spellbooks` VALUES 
+-- (1433,10032), -- Battle Manual: Abyssal Blaze
+-- (1438,10047), -- Battle Manual: Annihilation Circle
+-- (518,10062), -- Battle Manual: Binding Trap
+-- (495,10098), -- Battle Manual: Blade Rush
+-- (509,10086), -- Battle Manual: Bleeding Shot
+-- (1448,10050), -- Battle Manual: Blink
+-- (1473,10070), -- Battle Manual: Change Weapon
+-- (506,10044), -- Battle Manual: Checkmate
+-- (498,10039), -- Battle Manual: Contagion
+-- (1452,10099), -- Spellbook: Count of Fire
+-- (499,10079), -- Battle Manual: Courage
+-- (497,10038), -- Battle Manual: Crushing Pain
+-- (1439,10048), -- Battle Manual: Curse of Divinity
+-- (1434,10033), -- Battle Manual: Dark Explosion
+-- (1437,10046), -- Battle Manual: Dark Flame
+-- (477,10030), -- Battle Manual: Dark Smash
+-- (476,10029), -- Battle Manual: Dark Strike
+-- (1443,10083), -- Battle Manual: Dark Weapon
+-- (1435,10078), -- Battle Manual: Death Mark
+-- (525,10066), -- Battle Manual: Decoy
+-- (471,10028), -- Battle Manual: Defuse Trap
+-- (470,10027), -- Battle Manual: Detect Trap
+-- (1454,10100), -- Spellbook: Diamond Dust
+-- (485,10076), -- Battle Manual: Disarm
+-- (1459,10103), -- Spellbook: Divine Power
+-- (478,10031), -- Battle Manual: Double Thrust
+-- (526,10068), -- Battle Manual: Enuma Elish
+-- (1431,10025), -- Battle Manual: Fallen Arrow
+-- (468,10026), -- Battle Manual: Fallen Attack
+-- (490,10077), -- Battle Manual: Fast Shot
+-- (538,10091), -- Battle Manual: Final Form
+-- (514,10058), -- Battle Manual: Fire Trap
+-- (1451,10107), -- Spellbook: Fire Vortex Buster
+-- (517,10061), -- Battle Manual: Flash Trap
+-- (482,10074), -- Battle Manual: Furious Soul
+-- (1453,10108), -- Spellbook: Ice Vortex Crusher
+-- (523,10089), -- Battle Manual: Imbue Dark Seed
+-- (1432,10072), -- Battle Manual: Increase Power
+-- (1469,10069), -- Battle Manual: Leopold
+-- (502,10040), -- Battle Manual: Life to Soul
+-- (1460,10104), -- Spellbook: Mana Gain
+-- (487,10180), -- Battle Manual: Penetrate Shot
+-- (515,10059), -- Battle Manual: Poison Trap
+-- (1470,10090), -- Battle Manual: Prahnah
+-- (1444,10084), -- Battle Manual: Pride of Kamael
+-- (519,10063), -- Battle Manual: Quiver of Bolts - Grade A
+-- (620,10071), -- Battle Manual: Quiver of Bolts - Grade B
+-- (520,10064), -- Battle Manual: Quiver of Bolts - Grade S
+-- (469,10073), -- Battle Manual: Rapid Attack
+-- (522,10088), -- Battle Manual: Real Target
+-- (508,10053), -- Battle Manual: Rising Shot
+-- (484,10094), -- Battle Manual: Rush
+-- (503,10041), -- Battle Manual: Scorn
+-- (1446,10092), -- Battle Manual: Shadow Bind
+-- (521,10087), -- Battle Manual: Sharpshooting
+-- (489,10034), -- Battle Manual: Shift Target
+-- (505,10043), -- Battle Manual: Shining Edge
+-- (494,10097), -- Battle Manual: Shoulder Charge
+-- (496,10037), -- Battle Manual: Slashing Blade
+-- (516,10060), -- Battle Manual: Slow Trap
+-- (1436,10045), -- Battle Manual: Soul of Pain
+-- (1441,10081), -- Battle Manual: Soul to Empower
+-- (492,10036), -- Battle Manual: Spread Wing
+-- (1440,10049), -- Battle Manual: Steal Divinity
+-- (493,10095), -- Battle Manual: Storm Assault
+-- (483,10075), -- Battle Manual: Sword Shield
+-- (511,10055), -- Battle Manual: Temptation
+-- (1455,10101), -- Spellbook: Throne of Ice
+-- (1458,10102), -- Spellbook: Throne of Wind
+-- (504,10042), -- Battle Manual: Triple Thrust
+-- (501,10080), -- Battle Manual: Violent Temper
+-- (1447,10093), -- Battle Manual: Voice Bind
+-- (1456,10109); -- Spellbook: Wind Vortex Slug
