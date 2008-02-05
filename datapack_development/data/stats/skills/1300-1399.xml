@@ -832,7 +832,7 @@
   <table name="#npcIds"> 14619 14620 14621 14622 14623 14624 14625 14626 14627 14628 14629 14630 14631 14632 </table>
   <table name="#expPenalty"> 0.05 0.05 0.03 0.03 0.03 0.03 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 </table>
   <set name="npcId" val="#npcIds"/>
-  <set name="expPenalty" val="expPenalty"/>
+  <set name="expPenalty" val="#expPenalty"/>
   <set name="isCubic" val="false"/>
   <for>
   </for>
