@@ -588,8 +588,9 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 14295 14300 14296 14301 14297 14302 14298 14303 14299 14304 14305 14306 14307 14308 14309 14310 14311 14312 </table>
+  <table name="#expPenalty"> 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.29 0.28 0.27 0.26 0.25 0.24 0.23 0.22 0.21 0.2 0.18 </table>
   <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="0.3" />
+  <set name="expPenalty" val="#expPenalty" />
   <set name="isCubic" val="false" />
   <for>
   </for>
@@ -2435,8 +2436,9 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 14207 14208 14209 14210 14211 14212 14213 14214 14215 14216 14217 14218 14219 14220 </table>
+  <table name="#expPenalty"> 0.1 0.1 0.1 0.1 0.1 0.1 0.05 0.05 0.05 0.05 0.0 0.0 0.0 0.0 </table>
   <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="0.1" />
+  <set name="expPenalty" val="expPenalty" />
   <set name="isCubic" val="false" />
 </skill>
 <skill id="1277" levels="14" name="Summon Merrow the Unicorn">
@@ -2466,8 +2468,9 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 14391 14392 14393 14394 14395 14396 14397 14398 14399 14400 14401 14402 14403 14404 </table>
+  <table name="#expPenalty"> 0.1 0.1 0.1 0.1 0.1 0.1 0.05 0.05 0.05 0.05 0.0 0.0 0.0 0.0 </table>
   <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="0.1" />
+  <set name="expPenalty" val="expPenalty" />
   <set name="isCubic" val="false" />
   <for>
   </for>
@@ -2498,8 +2501,9 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 14575 14576 14577 14578 14579 14580 14581 14582 14583 14584 14585 14586 14587 14588 </table>
-  <set name="npcId" val="#npcIds"/>
-  <set name="expPenalty" val="0.1"/>
+  <table name="#expPenalty"> 0.1 0.1 0.1 0.1 0.1 0.1 0.05 0.05 0.05 0.05 0.0 0.0 0.0 0.0 </table> 
+  <set name="npcId" val="#npcIds" /> 
+  <set name="expPenalty" val="#expPenalty" />
   <set name="isCubic" val="false"/>
   <for>
   </for>

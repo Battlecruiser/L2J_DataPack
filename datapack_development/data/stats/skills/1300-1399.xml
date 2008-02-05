@@ -762,8 +762,9 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 14251 14252 14253 14254 14255 14256 14257 14258 14259 14260 14261 14262 14263 14264 </table>
+  <table name="#expPenalty"> 0.05 0.05 0.03 0.03 0.03 0.03 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 </table>
   <set name="npcId" val="#npcIds"/>
-  <set name="expPenalty" val="0.05"/>
+  <set name="expPenalty" val="#expPenalty"/>
   <set name="isCubic" val="false"/>
   <for>
   </for>
@@ -795,8 +796,9 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 14435 14436 14437 14438 14439 14440 14441 14442 14443 14444 14445 14446 14447 14448 </table>
+  <table name="#expPenalty"> 0.05 0.05 0.03 0.03 0.03 0.03 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 </table>
   <set name="npcId" val="#npcIds"/>
-  <set name="expPenalty" val="0.05"/>
+  <set name="expPenalty" val="#expPenalty"/>
   <set name="isCubic" val="false"/>
   <for>
   </for>
@@ -828,8 +830,9 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 14619 14620 14621 14622 14623 14624 14625 14626 14627 14628 14629 14630 14631 14632 </table>
+  <table name="#expPenalty"> 0.05 0.05 0.03 0.03 0.03 0.03 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 </table>
   <set name="npcId" val="#npcIds"/>
-  <set name="expPenalty" val="0.05"/>
+  <set name="expPenalty" val="expPenalty"/>
   <set name="isCubic" val="false"/>
   <for>
   </for>
