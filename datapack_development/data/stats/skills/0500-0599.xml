@@ -595,7 +595,6 @@ description(s) :
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="540" levels="1" name="Wing Assault">
@@ -611,7 +610,6 @@ description(s) :
   <set name="castRange" val="600"/>
   <set name="effectRange" val="-1"/>
   <for>
-  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="541" levels="1" name="Transform Grail Apostle">
