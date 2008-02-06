@@ -74,7 +74,6 @@ class Quest (JQuest) :
            st.giveItems(gift2,count2)
       st.unset("step")
       st.set("onlyone","1")
-      st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
     return htmltext
 
@@ -84,7 +83,6 @@ class Quest (JQuest) :
      id = st.getState()
      onlyone=st.getInt("onlyone")
      if id == State.COMPLETED and onlyone == 1:
-       st.set("onlyone","2")
        if player.getClassId().isMage() :
          st.giveItems(SPIRITSHOT_NOVICE,100)
        else:
@@ -92,8 +90,8 @@ class Quest (JQuest) :
        st.giveItems(TOKEN,12)
        if st.getRandom(2):
          st.giveItems(SCROLL,2)
+       st.exitQuest(False)
    return
-
 
  def onTalk (self,npc,player):
    htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
@@ -170,8 +168,6 @@ class Quest (JQuest) :
    return
 
 QUEST       = Quest(999,qn,"Interlude Tutorial")
-
-
 
 for startNpc in [30008,30009,30017,30019,30129,30131,30573,30575,30370,30528,30530,30400,30401,30402,30403,30404]:
   QUEST.addStartNpc(startNpc)
