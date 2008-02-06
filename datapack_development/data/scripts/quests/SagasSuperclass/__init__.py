@@ -179,11 +179,13 @@ class Quest (JQuest) :
  def onAdvEvent (self,event,npc, player) :
    st = player.getQuestState(self.qn)
    if not st: return
-   htmltext = event
+   htmltext = ""  # simple initialization...if none of the events match, return nothing.  
    cond = st.getInt("cond")
    id = st.getInt("id")
    player = st.getPlayer()
-   if event == "accept" :
+   if event in ["0-011.htm", "0-012.htm", "0-013.htm", "0-014.htm", "0-015.htm"]:
+       htmltext = event
+   elif event == "accept" :
        st.set("cond","1")
        st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
