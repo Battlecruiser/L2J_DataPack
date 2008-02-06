@@ -74,6 +74,7 @@ class Quest (JQuest) :
            st.giveItems(gift2,count2)
       st.unset("step")
       st.set("onlyone","1")
+      st.setState(State.COMPLETED)
       st.playSound("ItemSound.quest_finish")
     return htmltext
 
