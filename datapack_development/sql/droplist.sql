@@ -2524,6 +2524,7 @@ INSERT INTO `droplist` VALUES
 (20235,3076,1,1,2,7168), -- Spellbook: Prominence
 (20235,3077,1,1,2,7168), -- Spellbook: Blazing Skin
 (20235,3081,1,1,2,7168), -- Spellbook: Aura Flare
+(20235,10188,1,1,2,4132), -- Battle Manual: Thin Skin
 (20236,1908,1,1,-1,95118), -- Moonstone Earring Wire
 (20236,2219,1,1,-1,62388), -- Recipe: Crimson Boots
 (20236,3021,1,1,-1,3500), -- Recipe: Dwarven War Hammer
@@ -4935,6 +4936,9 @@ INSERT INTO `droplist` VALUES
 (20555,4203,1,1,2,8187), -- Spellbook: Life Leech
 (20555,4204,1,1,2,8187), -- Amulet: Pa\'agrio\'s Tact
 (20555,4206,1,1,2,8188), -- Spellbook: Transfer Pain
+(20555,10185,1,1,2,3817), -- Battle Manual: Destroy Instinct
+(20555,10040,1,1,2,4255), -- Battle Manual: Life To Soul
+(20555,10034,1,1,2,3817), -- Battle Manual: Shift Target
 (20556,1874,1,1,-1,53220), -- Oriharukon Ore
 (20556,1957,1,1,-1,89096), -- Assault Boots Part
 (20556,2305,1,1,-1,3486), -- Recipe: Crystal Staff
@@ -5086,6 +5090,7 @@ INSERT INTO `droplist` VALUES
 (20564,3051,1,1,2,5112), -- Spellbook: Spirit Barrier
 (20564,3430,1,1,2,5112), -- Spellbook: Greater Battle Heal
 (20564,4201,1,1,2,5112), -- Spellbook: Resist Shock
+(20564,10086,1,1,2,4464), -- Battle Manual: Bleeding Shot
 (20565,1865,1,1,-1,940260), -- Varnish
 (20565,3954,1,1,-1,3134), -- Recipe: Blessed Spiritshot C
 (20565,4470,1,1,-1,5373), -- Dye of Strength <Str+1 Dex-1>
@@ -5096,6 +5101,7 @@ INSERT INTO `droplist` VALUES
 (20565,3056,1,1,2,7378), -- Spellbook: Summon Dark Panther
 (20565,3058,1,1,2,7378), -- Spellbook: Summon Corrupted Man
 (20565,3431,1,1,2,7378), -- Spellbook: Greater Group Heal
+(20565,10186,1,1,2,5208), -- Battle Manual: Restoration
 (20566,1905,1,1,-1,95916), -- Omen Beast\'s Eye Earring Gemstone
 (20566,2995,1,1,-1,78255), -- Recipe: Reinforced Mithril Gloves
 (20566,3000,1,1,-1,63206), -- Recipe: Dwarven Chain Shield
@@ -5110,6 +5116,7 @@ INSERT INTO `droplist` VALUES
 (20566,3062,1,1,2,7737), -- Spellbook: Curse Fear
 (20566,3064,1,1,2,7737), -- Spellbook: Silence
 (20566,3432,1,1,2,7737), -- Spellbook: Remedy
+(20566,10182,1,1,2,5917), -- Battle Manual: Ultimate Escape
 (20567,2061,1,1,-1,8442), -- Big Hammer Head
 (20567,2165,1,1,-1,41845), -- Recipe: Necklace of Protection
 (20567,3004,1,1,-1,67836), -- Recipe: Rind Leather Gloves
@@ -5403,6 +5410,7 @@ INSERT INTO `droplist` VALUES
 (20583,3103,1,1,2,8187), -- Amulet: Pa\'agrio\'s Wisdom
 (20583,3104,1,1,2,8187), -- Amulet: Pa\'agrio\'s Glory
 (20583,3105,1,1,2,8188), -- Amulet: Seal of Winter
+(20583,10062,1,1,2,6250), -- Battle Manual: Binding Trap
 (20584,1805,1,1,-1,3432), -- Recipe: Soulshot: C-Grade
 (20584,2211,1,1,-1,23082), -- Recipe: Plated Leather Armor
 (20584,2988,1,1,-1,43437), -- Recipe: Tempered Mithril Gaiters
@@ -5412,6 +5420,7 @@ INSERT INTO `droplist` VALUES
 (20584,3110,1,1,2,10770), -- Amulet: Seal of Scourge
 (20584,3113,1,1,2,10770), -- Amulet: Pa\'agrio\'s Protection
 (20584,3114,1,1,2,10770), -- Amulet: Steal Essence
+(20584,10088,1,1,2,8621), -- Battle Manual: Real Target
 (20585,1905,1,1,-1,98755), -- Omen Beast\'s Eye Earring Gemstone
 (20585,2204,1,1,-1,20103), -- Recipe: Chain Mail Shirt
 (20585,2308,1,1,-1,4433), -- Recipe: Cursed Dagger
@@ -5429,6 +5438,8 @@ INSERT INTO `droplist` VALUES
 (20585,3107,1,1,2,8828), -- Amulet: Seal of Gloom
 (20585,3115,1,1,2,10621), -- Amulet: Freezing Flame
 (20585,3117,1,1,2,10621), -- Amulet: Chant of Evasion
+(20585,10066,1,1,2,4739), -- Battle Manual: Decoy
+(20585,10041,1,1,2,3968), -- Battle Manual: Scorn
 (20586,1884,1,1,-1,599116), -- Cord
 (20586,2314,1,1,-1,4251), -- Recipe: Body Slasher
 (20586,3954,1,1,-1,3245), -- Recipe: Blessed Spiritshot C
@@ -5464,6 +5475,7 @@ INSERT INTO `droplist` VALUES
 (20587,3106,1,1,2,6287), -- Amulet: Seal of Flame
 (20587,3109,1,1,2,6287), -- Amulet: Seal of Silence
 (20587,6397,1,1,2,7512), -- Amulet: Chant of Vampire
+(20587,10037,1,1,2,5435), -- Battle Manual: Slashing Blade
 (20588,1959,1,1,-1,48799), -- Chain Mail Shirt Material
 (20588,2324,1,1,-1,6312), -- Recipe: Elven Bow of Nobility
 (20588,57,487,990,0,700000), -- Adena
@@ -5473,6 +5485,9 @@ INSERT INTO `droplist` VALUES
 (20588,2060,1,1,1,1134), -- Stormbringer Blade
 (20588,3111,1,1,2,12409), -- Amulet: Seal of Suspension
 (20588,3116,1,1,2,12409), -- Amulet: Chant of Fury
+(20588,10187,1,1,2,8197), -- Battle Manual: Oblivion
+(20588,10053,1,1,2,5376), -- Battle Manual: Rising Shot
+(20588,10081,1,1,2,8196), -- Battle Manual: Soul To Empower
 (20589,1908,1,1,-1,170964), -- Moonstone Earring Wire
 (20589,1961,1,1,-1,57772), -- Mithril Shirt Fabric
 (20589,1962,1,1,-1,57772), -- Karmian Tunic Pattern
@@ -5485,6 +5500,7 @@ INSERT INTO `droplist` VALUES
 (20589,3085,1,1,2,13332), -- Spellbook: Hydro Blast
 (20589,3086,1,1,2,13332), -- Spellbook: Frost Bolt
 (20589,3088,1,1,2,13332), -- Spellbook: Freezing Skin
+(20589,10046,1,1,2,8475), -- Battle Manual: Dark Flame
 (20590,2068,1,1,-1,13465), -- Stick of Faith Shaft
 (20590,2163,1,1,-1,95320), -- Recipe: Earring of Protection
 (20590,2935,1,1,-1,99323), -- Tempered Mithril Gaiters Fragment
@@ -5497,6 +5513,8 @@ INSERT INTO `droplist` VALUES
 (20590,3092,1,1,2,13797), -- Spellbook: Servitor Physical Shield
 (20590,3094,1,1,2,13797), -- Spellbook: Invigor
 (20590,3098,1,1,2,13797), -- Spellbook: Return
+(20590,10083,1,1,2,6410), -- Battle Manual: Dark Weapon
+(20590,10189,1,1,2,7407), -- Battle Manual: Protection Instinct
 (20591,951,1,1,-1,3983), -- Scroll: Enchant Weapon (Grade C)
 (20591,1911,1,1,-1,162953), -- Earring of Protection Gemstone
 (20591,2947,1,1,-1,156493), -- Dwarven Chain Shield Fragment
@@ -5521,6 +5539,7 @@ INSERT INTO `droplist` VALUES
 (20592,3052,1,1,2,14429), -- Spellbook: Hamstring
 (20592,3057,1,1,2,13867), -- Spellbook: Summon Reanimated Man 
 (20592,6396,1,1,2,11606), -- Amulet: Chant of Eagle
+(20592,10043,1,1,2,10753), -- Battle Manual: Shining Edge
 (20593,1912,1,1,-1,348570), -- Ring of Protection Gemstone
 (20593,2083,1,1,-1,21493), -- Stiletto Edge
 (20593,2341,1,1,-1,7523), -- Recipe: Sage\'s Staff
@@ -5538,6 +5557,8 @@ INSERT INTO `droplist` VALUES
 (20593,3065,1,1,2,12409), -- Spellbook: Death Spike
 (20593,3069,1,1,2,12409), -- Spellbook: Repose
 (20593,6398,1,1,2,10386), -- Spellbook: Body of Avatar
+(20593,10059,1,1,2,8403), -- Battle Manual: Poison Trap
+(20593,10184,1,1,2,8130), -- Battle Manual: Restoration Impact
 (20593,6668,1,1,2,85312), -- Deluxe Chest Key - Grade 4
 (20594,1871,1,5,-1,737538), -- Charcoal
 (20594,1895,1,1,-1,632176), -- Metallic Fiber
@@ -5551,6 +5572,7 @@ INSERT INTO `droplist` VALUES
 (20594,3080,1,1,2,11884), -- Spellbook: Sleeping Cloud
 (20594,3084,1,1,2,11884), -- Spellbook: Freezing Shackle
 (20594,3087,1,1,2,11884), -- Spellbook: Ice Dagger
+(20594,10036,1,1,2,8065), -- Battle Manual: Spread Wing
 (20595,1894,1,1,-1,80892), -- Crafted Leather
 (20595,2096,1,1,-1,12564), -- Sword of Whispering Death Blade
 (20595,2354,1,1,-1,3761), -- Recipe: Deadman\'s Staff
@@ -5563,6 +5585,8 @@ INSERT INTO `droplist` VALUES
 (20595,3093,1,1,2,12382), -- Spellbook: Servitor Haste
 (20595,3095,1,1,2,12382), -- Spellbook: Magic Barrier
 (20595,3096,1,1,2,12382), -- Spellbook: Bless the Body
+(20595,10092,1,1,2,5348), -- Battle Manual: Shadow Bind
+(20595,10055,1,1,2,6711), -- Battle Manual: Temptation
 (20596,1539,1,1,-1,543597), -- Greater Healing Potion
 (20596,1875,1,1,-1,163079), -- Stone of Purity
 (20596,4609,1,1,-1,5436), -- Greater Dye of Mental Strength <Men+3 Int-3>
@@ -5587,6 +5611,9 @@ INSERT INTO `droplist` VALUES
 (20596,3044,1,1,2,11901), -- Spellbook: Horror
 (20596,3097,1,1,2,13138), -- Spellbook: Bless the Soul
 (20596,3099,1,1,2,13138), -- Spellbook: Haste
+(20596,10044,1,1,2,5556), -- Battle Manual: Checkmate
+(20596,10071,1,1,2,4630), -- Battle Manual: Quiver Of Bolts - Grade B
+(20596,10190,1,1,2,5319), -- Battle Manual: Vampiric Impulse
 (20597,1918,1,1,-1,176400), -- Nassen\'s Earring Gemstone
 (20597,2113,1,1,-1,19724), -- Scorpion Blade
 (20597,3034,1,1,-1,8146), -- Recipe: Spiritshot B
@@ -5636,6 +5663,8 @@ INSERT INTO `droplist` VALUES
 (20599,3055,1,1,2,10705), -- Spellbook: Lightening Strike
 (20599,3066,1,1,2,13381), -- Spellbook: Curse Death Link
 (20599,3083,1,1,2,13381), -- Spellbook: Frost Wall
+(20599,10191,1,1,2,6849), -- Battle Manual: Magic Impulse
+(20599,10060,1,1,2,7752), -- Battle Manual: Slow Trap
 (20600,1825,1,1,-1,63980), -- Recipe: Oriharukon
 (20600,1873,1,1,-1,358285), -- Silver Nugget
 (20600,1945,1,1,-1,71145), -- Mithril Stocking Design
@@ -5716,6 +5745,7 @@ INSERT INTO `droplist` VALUES
 (20604,4205,1,1,2,8850), -- Amulet: Pa\'agrio\'s Rage
 (20604,4207,1,1,2,10648), -- Spellbook: Mana Regeneration
 (20604,4208,1,1,2,8850), -- Spellbook: Curse Gloom
+(20604,10045,1,1,2,7092), -- Battle Manual: Soul Of Pain
 (20605,1867,1,3,-1,653559), -- Animal Skin
 (20605,1908,1,1,-1,92835), -- Moonstone Earring Wire
 (20605,2059,1,1,-1,7282), -- Flamberge Blade
@@ -6466,6 +6496,8 @@ INSERT INTO `droplist` VALUES
 (20651,5013,1,1,2,7460), -- Spellbook: Elemental Assault
 (20651,5014,1,1,2,7460), -- Spellbook: Elemental Symphony 
 (20651,5015,1,1,2,7460), -- Spellbook: Elemental Storm
+(20651,10050,1,1,2,3484), -- Battle Manual: Blink
+(20651,10093,1,1,2,2786), -- Battle Manual: Voice Bind
 (20652,4042,1,1,-1,48043), -- Enria
 (20652,4043,1,1,-1,96085), -- Asofe
 (20652,4129,1,1,-1,31197), -- Recipe: Earrings of Black Ore
@@ -6662,6 +6694,7 @@ INSERT INTO `droplist` VALUES
 (20663,3940,1,1,2,7022), -- Blueprint: Summon Siege Golem
 (20663,3941,1,1,2,7327), -- Spellbook: Mass Resurrection
 (20663,3942,1,1,2,7327), -- Spellbook: Party Return
+(20663,10080,1,1,2,7092), -- Battle Manual: Violent Temper
 (20664,1865,1,3,-1,600678), -- Varnish
 (20664,1867,1,3,-1,800904), -- Animal Skin
 (20664,2098,1,1,-1,6435), -- Nirvana Axe Blade
@@ -6815,6 +6848,8 @@ INSERT INTO `droplist` VALUES
 (20671,4042,1,1,2,1565), -- Enria
 (20671,4043,1,1,2,3130), -- Asofe
 (20671,8890,1,1,2,2358), -- Spellbook: Summon Attractive Cubic
+(20671,10057,1,1,2,2950), -- Battle Manual: Create Dark Seed
+(20671,10089,1,1,2,3289), -- Battle Manual: Imbue Dark Seed
 (20671,4973,1,1,2,1017), -- Recipe: Earring of Black Ore (70%)
 (20671,5276,1,1,2,126), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
 (20672,4052,1,1,-1,68521), -- Earring of Black Ore Piece
@@ -7793,6 +7828,8 @@ INSERT INTO `droplist` VALUES
 (20792,2037,1,1,1,706), -- Heavy Bone Club Head
 (20792,7641,1,1,2,21777), -- Spellbook - Summon Queen of Cat
 (20792,7642,1,1,2,21777), -- Spellbook - Summon Unicorn Seraphim
+(20792,10030,1,1,2,10309), -- Battle Manual: Dark Smash
+(20792,10042,1,1,2,10526), -- Battle Manual: Triple Thrust
 (20793,1877,1,1,-1,58846), -- Adamantite Nugget
 (20793,1881,1,1,-1,196153), -- Coarse Bone Powder
 (20793,2037,1,1,-1,14892), -- Heavy Bone Club Head
@@ -7881,6 +7918,8 @@ INSERT INTO `droplist` VALUES
 (20798,4913,1,1,2,13955), -- Spellbook: Word of Fear
 (20798,4914,1,1,2,13955), -- Spellbook: Serenade of Eva
 (20798,4926,1,1,2,13955), -- Amulet: Soul Guard
+(20798,10183,1,1,2,8130), -- Battle Manual: Create Special Bolt
+(20798,10095,1,1,2,8547), -- Battle Manual: Storm Assault
 (20799,2065,1,1,-1,13270), -- Skull Graver Head
 (20799,2164,1,1,-1,132064), -- Recipe: Ring of Protection
 (20799,2317,1,1,-1,5982), -- Recipe: Bec de Corbin
@@ -8119,6 +8158,9 @@ INSERT INTO `droplist` VALUES
 (20813,4087,1,1,1,3717), -- Stockings of Doom Pattern
 (20813,8945,1,1,2,6536), -- Spellbook: Celestial Shield
 (20813,4927,1,1,2,4184), -- Amulet: Chant of Revenge
+(20813,10048,1,1,2,8264), -- Battle Manual: Curse Of Divinity
+(20813,10054,1,1,2,6410), -- Battle Manual: Deadly Roulette
+(20813,10063,1,1,2,5495), -- Battle Manual: Quiver Of Bolts - Grade A
 (20814,948,1,1,-1,12387), -- Scroll: Enchant Armor (Grade B)
 (20814,4053,1,1,-1,212371), -- Ring of Black Ore Gemstone
 (20814,5230,1,1,-1,6606), -- Recipe: Mithril Arrow (100%)
@@ -8929,6 +8971,7 @@ INSERT INTO `droplist` VALUES
 (20933,4922,1,1,2,5420), -- Spellbook: Summon Binding Cubic
 (20933,4923,1,1,2,5420), -- Spellbook: Summon Aqua Cubic
 (20933,4924,1,1,2,5420), -- Spellbook: Summon Spark Cubic
+(20933,10052,1,1,2,5025), -- Battle Manual: Twin Shot
 (20934,1868,1,1,-1,545126), -- Thread
 (20934,1938,1,1,-1,18324), -- Mithril Banded Mail Material
 (20934,2028,1,1,-1,3238), -- Shilen Knife Edge
@@ -9181,6 +9224,8 @@ INSERT INTO `droplist` VALUES
 (20950,4932,1,1,2,3197), -- Spellbook: Inferno
 (20950,4933,1,1,2,3197), -- Spellbook: Blizzard
 (20950,4934,1,1,2,3197), -- Spellbook: Demon Wind
+(20950,10192,1,1,2,4082), -- Battle Manual: Enervation
+(20950,10087,1,1,2,3401), -- Battle Manual: Sharpshooting
 (20951,1806,1,1,-1,1655), -- Recipe: Soulshot: B-Grade
 (20951,1918,1,1,-1,35828), -- Nassen\'s Earring Gemstone
 (20951,1920,1,1,-1,28307), -- Necklace of Binding Chain
@@ -9565,6 +9610,8 @@ INSERT INTO `droplist` VALUES
 (20974,8909,1,1,1,2386), -- Blueprint: Summon Swoop Cannon
 (20974,4041,1,1,2,551), -- Mold Hardener
 (20974,5276,1,1,2,224), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
+(20974,10065,1,1,2,7813), -- Battle Manual: Cure Dark Seed
+(20974,10196,1,1,2,6536), -- Battle Manual: Soul Harmony
 (20975,4053,1,1,-1,150882), -- Ring of Black Ore Gemstone
 (20975,4078,1,1,-1,51418), -- Blue Wolf Breastplate Part
 (20975,5230,1,1,-1,4693), -- Recipe: Mithril Arrow (100%)
@@ -10072,6 +10119,7 @@ INSERT INTO `droplist` VALUES
 (21004,4068,1,1,1,1549), -- Avadon Leather Armor Lining
 (21004,4911,1,1,2,5067), -- Spellbook: Curse Disease
 (21004,4925,1,1,2,5067), -- Amulet: Pa\'agrio\'s Haste
+(21004,10047,1,1,2,3247), -- Battle Manual: Annihilation Circle
 (21004,6669,1,1,2,39767), -- Deluxe Chest Key - Grade 5
 (21005,947,1,1,-1,762), -- Scroll: Enchant Weapon (Grade B)
 (21005,1880,1,1,-1,190431), -- Steel
@@ -10326,6 +10374,7 @@ INSERT INTO `droplist` VALUES
 (21020,4167,1,1,2,2100), -- Recipe: Blue Wolf Boots
 (21020,4915,1,1,2,5003), -- Blueprint: Summon Wild Hog Cannon
 (21020,4921,1,1,2,5003), -- Blueprint: Summon Big Boom
+(21020,10082,1,1,2,5000), -- Battle Manual: Darkness Protection
 (21021,947,1,1,-1,844), -- Scroll: Enchant Weapon (Grade B)
 (21021,4040,1,1,-1,42217), -- Mold Lubricant
 (21021,4613,1,1,-1,2912), -- Greater Dye of Strength <Str+4 Con-4>
@@ -10353,6 +10402,7 @@ INSERT INTO `droplist` VALUES
 (21022,4928,1,1,2,5882), -- Spellbook: Seed of Fire
 (21022,4929,1,1,2,5882), -- Spellbook: Seed of Water
 (21022,4930,1,1,2,5882), -- Spellbook: Seed of Wind
+(21022,10038,1,1,2,4608), -- Battle Manual: Crushing Pain
 (21023,1866,1,1,-1,245597), -- Suede
 (21023,2019,1,1,-1,7922), -- Trident Edge
 (21023,2263,1,1,-1,5720), -- Recipe: Dwarven Trident
@@ -10485,6 +10535,7 @@ INSERT INTO `droplist` VALUES
 (21038,2947,1,1,1,10087), -- Dwarven Chain Shield Fragment
 (21038,4918,1,1,2,17651), -- Spellbook: Summon Kai the Cat
 (21038,4919,1,1,2,17651), -- Spellbook: Summon Unicorn Merrow
+(21038,10084,1,1,2,11236), -- Battle Manual: Pride Of Kamael
 (21038,4920,1,1,2,17651), -- Spellbook: Summon Soulless
 (21039,1805,1,1,-1,6613), -- Recipe: Soulshot: C-Grade
 (21039,1871,1,5,-1,661279), -- Charcoal
@@ -11731,6 +11782,7 @@ INSERT INTO `droplist` VALUES
 (21146,2037,1,1,1,1187), -- Heavy Bone Club Head
 (21146,7643,1,1,2,36639), -- Spellbook - Summon Nightshade
 (21146,7644,1,1,2,36639), -- Spellbook - Summon Cursed Man
+(21146,10097,1,1,2,23256), -- Battle Manual: Shoulder Charge
 (21147,1805,1,1,-1,9195), -- Recipe: Soulshot: C-Grade
 (21147,1905,1,1,-1,268330), -- Omen Beast\'s Eye Earring Gemstone
 (21147,1906,1,1,-1,379166), -- Mithril Ring Wire
@@ -12346,6 +12398,7 @@ INSERT INTO `droplist` VALUES
 (21184,7645,1,1,2,17920), -- Spellbook - Balance Life
 (21184,7672,1,1,2,17920), -- Amulet - Chant of Spirit
 (21184,7673,1,1,2,17920), -- Amulet - Chant of Victory
+(21184,10064,1,1,2,15625), -- Battle Manual: Quiver Of Bolts - Grade S
 (21184,6361,700,1400,3,700000), -- Green Seal Stone
 (21184,6362,14,27,4,700000), -- Red Seal Stone
 (21185,1875,1,1,-1,629418), -- Stone of Purity
@@ -12834,6 +12887,7 @@ INSERT INTO `droplist` VALUES
 (21219,1970,1,1,1,15466), -- Robe of Seal Fabric
 (21219,5812,1,1,2,25650), -- Spellbook: Servitor Empowerment
 (21219,5813,1,1,2,43284), -- Spellbook: Servitor Cure
+(21219,10204,1,1,2,19608), -- Battle Manual: Soul Gathering
 (21221,1867,1,11,-1,854850), -- Animal Skin
 (21221,1872,1,11,-1,854850), -- Animal Bone
 (21221,4605,1,1,-1,8548), -- Greater Dye of Dexterity <Dex+3 Str-3>
@@ -12909,6 +12963,8 @@ INSERT INTO `droplist` VALUES
 (21225,4083,1,1,1,4654), -- Leather Armor of Doom Design
 (21225,6350,1,1,2,18940), -- Amulet: Pa\'agrio\'s Honor 
 (21225,6352,1,1,2,18940), -- Spellbook: Prayer
+(21225,10039,1,1,2,9009), -- Battle Manual: Contagion
+(21225,10195,1,1,2,8065), -- Battle Manual: Mental Impoverish
 (21226,4052,1,1,-1,230702), -- Earring of Black Ore Piece
 (21226,4054,1,1,-1,128347), -- Necklace of Black Ore Beads
 (21226,5230,1,1,-1,8688), -- Recipe: Mithril Arrow (100%)
@@ -12933,6 +12989,7 @@ INSERT INTO `droplist` VALUES
 (21227,4044,1,1,2,11471), -- Thons
 (21227,5230,1,1,2,459), -- Recipe: Mithril Arrow (100%)
 (21227,5549,1,1,2,34414), -- Metallic Thread
+(21227,10193,1,1,2,9174), -- Battle Manual: Weak Constitution
 (21228,1807,1,1,-1,9504), -- Recipe: Soulshot: A-Grade
 (21228,3035,1,1,-1,9504), -- Recipe: Spiritshot A
 (21228,5478,1,1,-1,59940), -- Sealed Dark Crystal Leather Armor Pattern
@@ -13206,6 +13263,7 @@ INSERT INTO `droplist` VALUES
 (21249,5811,1,1,2,14266), -- Spellbook: Mass Slow
 (21249,5814,1,1,2,14266), -- Spellbook: Servitor Blessing
 (21249,5815,1,1,2,14267), -- Spellbook: Wild Magic
+(21249,10194,1,1,2,10870), -- Battle Manual: Spite
 (21250,4052,1,1,-1,230702), -- Earring of Black Ore Piece
 (21250,4053,1,1,-1,279304), -- Ring of Black Ore Gemstone
 (21250,5230,1,1,-1,8688), -- Recipe: Mithril Arrow (100%)
@@ -21657,6 +21715,8 @@ INSERT INTO `droplist` VALUES
 (22080,57,511,1703,0,700000), -- Adena
 (22080,8394,1,1,2,11905), -- Spellbook: Trance
 (22080,8380,1,1,2,11628), -- Spellbook: Betray
+(22080,10061,1,1,2,4739), -- Battle Manual: Flash Trap
+(22080,10049,1,1,2,3257), -- Battle Manual: Steal Divinity
 (22080,2917,1,1,1,6849), -- Ring of Binding Gemstone
 (22080,1918,1,1,1,5291), -- Nassen\'s Earring Gemstone
 (22080,1920,1,1,1,4115), -- Necklace of Binding Chain
@@ -21689,6 +21749,7 @@ INSERT INTO `droplist` VALUES
 (22082,57,557,1134,0,700000), -- Adena
 (22082,8395,1,1,2,8000), -- Spellbook: Erase
 (22082,8396,1,1,2,7299), -- Spellbook: Magical Backfire
+(22082,10098,1,1,2,5556), -- Battle Manual: Blade Rush
 (22082,2966,1,1,1,6172), -- Full Plate Shield Fragment
 (22082,2959,1,1,1,3921), -- Full Plate Helmet Design
 (22082,2497,1,1,1,83), -- Full Plate Shield
@@ -23124,6 +23185,49 @@ INSERT INTO `droplist` VALUES
 (22246,44,1,1,1,316), -- Leather Helmet
 (22246,1865,1,2,-1,253000), -- Varnish
 (22246,734,1,1,-1,43053), -- Haste Potion
+(22261,57,1696,3473,0,700000), -- Adena
+(22261,1871,1,1,1,125000), -- Charcoal
+(22261,1866,1,1,1,76923), -- Suede
+(22261,1885,1,1,1,10638), -- High Grade Suede
+(22261,5220,1,1,1,5405), -- Metal Hardener
+(22261,5534,1,1,1,1274), -- Soul Bow Stave
+(22261,4041,1,1,1,1035), -- Mold Hardener
+(22261,10104,1,1,2,955), -- Spellbook: Mana Gain
+(22261,10069,1,1,2,876), -- Battle Manual: Leopold
+(22261,10068,1,1,2,796), -- Battle Manual: Enuma Elish
+(22261,10102,1,1,2,796), -- Spellbook: Throne Of Wind
+(22261,10103,1,1,2,716), -- Spellbook: Divine Power
+(22261,1885,1,2,-1,741379), -- High Grade Suede
+(22261,5503,1,1,-1,178161), -- Sealed Majestic Boots Lining
+(22261,4041,1,1,-1,80460), -- Mold Hardener
+(22262,57,1717,3516,0,700000), -- Adena
+(22262,1864,1,1,1,333333), -- Stem
+(22262,1869,1,1,1,142857), -- Iron Ore
+(22262,1880,1,1,1,13889), -- Steel
+(22262,4043,1,1,1,5025), -- Asofe
+(22262,5550,1,1,1,1623), -- Durable Metal Plate
+(22262,8349,1,1,1,850), -- Doom Crusher Head
+(22262,5533,1,1,1,541), -- Elysian Head
+(22262,5544,1,1,1,464), -- Branch Of The Mother Tree Head
+(22262,8342,1,1,1,309), -- Flaming Dragon Skull Piece
+(22262,10106,1,1,2,1082), -- Amulet: Seal Of Blockade
+(22262,10090,1,1,2,1082), -- Battle Manual: Prahnah
+(22262,10107,1,1,2,618), -- Spellbook: Fire Vortex Buster
+(22262,10105,1,1,2,541), -- Amulet: Chant Of Protection
+(22262,5514,1,1,-1,900000), -- Sealed Gauntlets Of Nightmare Design
+(22262,5162,1,1,-1,66667), -- Recipe: Spiritshot (S) Compressed Package (100%)
+(22262,5167,1,1,-1,33333), -- Recipe: Blessed Spiritshot (S) Compressed Package (100%)
+(22263,57,1978,4052,0,700000), -- Adena
+(22263,4040,1,1,1,5208), -- Mold Lubricant
+(22263,1876,1,1,1,2309), -- Dragon Grinder Edge
+(22263,9628,1,1,1,1825), -- Leonard
+(22263,9630,1,1,1,1182), -- Orichalcum
+(22263,10109,1,1,2,1825), -- Spellbook: Wind Vortex Slug
+(22263,10108,1,1,2,1397), -- Spellbook: Ice Vortex Crusher
+(22263,10091,1,1,2,1342), -- Battle Manual: Final Form
+(22263,1895,1,3,-1,818181), -- Metallic Fiber
+(22263,5515,1,1,-1,66986), -- Sealed Majestic Gauntlets Design
+(22263,4040,1,1,-1,114833), -- Mold Lubricant
 (22288,57,6113,9156,0,700000), -- Adena
 (22288,1868,9,9,2,133000), -- Thread
 (22288,1873,3,6,2,250000), -- Silver Nugget
