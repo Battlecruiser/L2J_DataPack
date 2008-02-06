@@ -14,6 +14,7 @@ GWAINS_RECOMMENTADION = 9753
 ORKURUS_RECOMMENDATION = 9760
 STEELRAZOR_EVALUATION = 9772
 KAMAEL_INQUISITOR_MARK = 9782
+SOUL_BREAKER_CERTIFICATE = 9806
 #MAYNARD,KHADAVA,GERSHWIN,VALPOR,HOLST,CASCA,BROME,ZENYA,AETONIC,BARTA,
 #MIYA,VITUS,LIANE,EDDY,FERDINAND,TAINE,RUPAUL,MELDINA,HAGEL,CECI,
 #PIECHE,ZOLDART,NIZER,YENICHE
@@ -38,6 +39,8 @@ CLASSES = {
     "WA":[126,124,5,20,"20","21","22","23",[STEELRAZOR_EVALUATION],SHADOW_WEAPON_COUPON_DGRADE], #f_kamael -> f_warder
     "BE":[127,125,5,40,"24","25","26","27",[ORKURUS_RECOMMENDATION],SHADOW_WEAPON_COUPON_CGRADE], #m_trooper -> m_berserker
     "AR":[130,126,5,40,"28","29","30","31",[KAMAEL_INQUISITOR_MARK],SHADOW_WEAPON_COUPON_CGRADE], #f_warder -> f_arbalester
+    "SBF":[129,125,5,40,"40","41","42","43",[SOUL_BREAKER_CERTIFICATE],SHADOW_WEAPON_COUPON_CGRADE], #f_warder -> f_soulbreaker
+    "SBM":[128,126,5,40,"40","41","42","43",[SOUL_BREAKER_CERTIFICATE],SHADOW_WEAPON_COUPON_CGRADE], #m_trooper -> m_soulbreaker
     }
 #Messages
 default = "No Quest"
@@ -121,7 +124,7 @@ class Quest (JQuest) :
             return htmltext+"-34.htm"
       elif npcId in NPCS_FEMALE2 :
          if id == 126 :    # f_warder
-            return htmltext+"-13.htm"
+            return htmltext+"-35.htm"
          else :
             return htmltext+"-34.htm"
    else :
