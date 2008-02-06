@@ -563,7 +563,7 @@ description(s) :
   <set name="mpConsume" val="70"/>
   <set name="hpConsume" val="200"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
@@ -572,6 +572,7 @@ description(s) :
   <set name="effectRange" val="-1"/>
   <set name="soulConsumeCount" val="20"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
     <mul order="0x30" stat="maxHp" val="1.22"/> <!-- Max Hp +22% -->
     <mul order="0x30" stat="maxCp" val="1.22"/> <!-- Max Cp +22% -->
     <mul order="0x30" stat="maxMp" val="0.80"/> <!-- Max Mp -20% -->
@@ -580,6 +581,7 @@ description(s) :
     <add order="0x40" stat="INT" val="1"/> <!-- INT +1 -->
     <sub order="0x40" stat="DEX" val="2"/> <!-- DEX -2 -->
     <sub order="0x40" stat="MEN" val="2"/> <!-- MEN -2 -->
+	</effect>
   </for>
 </skill>
 <skill id="539" levels="1" name="Nail Attack">
@@ -593,6 +595,7 @@ description(s) :
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="540" levels="1" name="Wing Assault">
@@ -608,12 +611,13 @@ description(s) :
   <set name="castRange" val="600"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="541" levels="1" name="Transform Grail Apostle">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -622,12 +626,13 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="542" levels="1" name="Transform Grail Apostle">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -636,12 +641,13 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="543" levels="1" name="Transform Grail Apostle">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -650,12 +656,13 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="544" levels="1" name="Transform Unicorn">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -664,12 +671,13 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="545" levels="1" name="Transform Unicorn">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -678,12 +686,13 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="546" levels="1" name="Transform Unicorn">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -692,12 +701,13 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="547" levels="1" name="Transform Lilim Knight">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -706,12 +716,13 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="548" levels="1" name="Transform Lilim Knight">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -720,12 +731,13 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="549" levels="1" name="Transform Lilim Knight">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -734,12 +746,13 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="550" levels="1" name="Transform Golem Guardian">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -748,12 +761,13 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="551" levels="1" name="Transform Golem Guardian">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -762,12 +776,13 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="552" levels="1" name="Transform Golem Guardian">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -776,12 +791,13 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="553" levels="1" name="Transform Inferno Drake">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -790,12 +806,13 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="554" levels="1" name="Transform Inferno Drake">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -804,12 +821,13 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="555" levels="1" name="Transform Inferno Drake">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -818,12 +836,13 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="556" levels="1" name="Transform Dragon Bomber">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -832,12 +851,13 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="557" levels="1" name="Transform Dragon Bomber">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -846,12 +866,13 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="558" levels="1" name="Transform Dragon Bomber">
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
@@ -860,6 +881,7 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+  <effect count="1" name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
   </for>
 </skill>
 <skill id="559" levels="3" name="Spear">
