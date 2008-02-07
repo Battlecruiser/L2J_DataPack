@@ -122,7 +122,6 @@
   <set name="lethal2" val="#lethal2"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="isMagic" val="true"/>
   <for>
     <effect count="5" name="Fear" time="6" val="0"/>
   </for>
@@ -413,7 +412,6 @@
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="MANAHEAL"/>
-  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -823,16 +821,19 @@
 <skill id="437" levels="1" name="Song of Silence">
   <set name="magicLvl" val="79"/>
   <set name="mpConsume" val="54"/>
+  <set name="nextDanceCost" val="30"/>
   <set name="skillRadius" val="150"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/> <!-- Needs check, can be 35 -->
+  <set name="power" val="0.0"/>
+  <set name="isDance" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="hitTime" val="2500"/>
   <set name="coolTime" val="167" />
   <set name="reuseDelay" val="480000"/>
+  <set name="aggroPoints" val="523"/>
   <for>
     <effect count="1" name="Mute" time="120" val="0"/>
     <effect count="1" name="PsychicalMute" time="120" val="0"/>
@@ -890,7 +891,6 @@
   <set name="reuseDelay" val="600000"/>
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="COMBATPOINTHEAL"/>
-  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="20000"/>
   <set name="castRange" val="-1"/>
@@ -1197,7 +1197,6 @@
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="120000"/> <!-- guessed -->
   <set name="skillType" val="NEGATE"/>
-  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
@@ -1602,13 +1601,13 @@
       Summon soul power for a lethal strike. Consumes 1 Soul. A sword, blunt, or ancient sword weapon must be equipped to use this skill. Over-hit is possible. Power 90-326.
 -->
   <table name="#power"> 
-  90 110 130 140 150 
-  160 190 200 225 250 
-  260 275 290 310 326 </table> 
+  90 97 105 123 132 
+  143 165 177 191 219 
+  235 251 287 306 326 </table> 
   <table name="#mpConsume"> 
-  20 21 22 23 24
-  25 26 27 28 29
-  30 31 32 33 34 </table> 
+  17 18 18 19 20
+  20 22 23 24 25
+  25 26 28 29 30 </table> 
   <table name="#magicLvl"> 
   20 21 22 24 25 
   26 28 29 30 32 
@@ -1632,24 +1631,24 @@
 <skill id="477" levels="37" name="Dark Smash">
 <!-- Done by theREALizzy - Need retail accuracy check. -->
   <table name="#power"> 
-  615 730 855 989 1020 
-  1056 1175 1190 1250 1350 
-  1460 1575 1690 1710 1844
-  1915 2030 2155 2289 2220 
-  2356 2375 2490 2450 2550 
-  2560 2675 2690 2710 2744 
-  2756 2875 2890 2920 2950 
-  3000 3044
+  615 654 694 737 781 
+  827 875 924 976 1030 
+  1085 1143 1202 1264 1327
+  1392 1459 1527 1597 1669 
+  1743 1817 1894 1971 2050 
+  2130 2211 2293 2375 2459 
+  2542 2626 2710 2794 2878 
+  2961 3044
   </table> 
   <table name="#mpConsume"> 
-  60 60 60 62 62
-  63 63 63 65 65
-  68 72 72 76 76 
-  78 81 81 85 89
-  95 96 96 99 100
-  103 104 108 110 115
-  116 117 120 123 125
-  128 130</table>  
+  32 33 34 34 35
+  36 37 38 40 41
+  42 43 44 44 45 
+  46 48 49 50 51
+  52 53 54 54 55
+  56 57 58 59 60
+  61 62 63 64 65
+  66 67</table>  
   <table name="#magicLvl"> 
   20 21 22 24 25 
   26 28 29 30 32 
