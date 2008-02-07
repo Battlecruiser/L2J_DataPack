@@ -99,6 +99,7 @@ class Quest (JQuest) :
          st.giveItems(SOULSHOT_NOVICE,200)
        st.giveItems(TOKEN,12)
        st.giveItems(SCROLL,5)
+       st.set("onlyone","2")
        st.exitQuest(False)
    return
 
