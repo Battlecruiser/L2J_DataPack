@@ -69,11 +69,14 @@ class Quest (JQuest) :
    if id == State.CREATED :
      st.set("cond","0")
    if npcId == HIERARCH and st.getInt("cond") == 0 :
-     if player.getLevel() >= 62 :
+     st2 = player.getQuestState("17_LightAndDarkness")
+     if st2 :
+       if st2.getState() == 'State.COMPLETED' :
+         htmltext = "<html><body>Quest Light and Darkness need to be finished first.</body></html>"
+     elif player.getLevel() >= 62 :
        htmltext = "31517-0.htm"
-     if id == State.COMPLETED :
+     elif id == State.COMPLETED :
        htmltext = "<html><body>This quest has already been completed.</body></html>"
-
      else:
        return htmltext
        st.exitQuest(1)

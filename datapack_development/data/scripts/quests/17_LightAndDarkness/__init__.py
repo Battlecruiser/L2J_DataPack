@@ -69,7 +69,11 @@ class Quest (JQuest) :
    id = st.getState()
    if id == State.COMPLETED :
       htmltext = "<html><body>This quest has already been completed.</body></html>"
-
+   if id == State.CREATED :
+      st2 = player.getQuestState("15_SweetWhisper")
+      if st2 :
+         if st2.getState() == 'State.COMPLETED' :
+            htmltext = "<html><body>Quest Sweet Whisper need to be finished first.</body></html>"
    elif npcId == HIERARCH :
      if cond == 0 :
         htmltext = "31517-00.htm"
