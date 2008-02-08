@@ -103,7 +103,7 @@ INSERT INTO teleport VALUES
 ('Heine -> The Town of Dion',65,15670,142983,-2705,12000,0),
 ('Heine -> Field of Silence',66,82684,183551,-3597,2500,0),
 ('Heine -> Field of Whispers',67,91186,217104,-3649,2300,0),
-('Heine -> Entrance to Alligator Islands',68,126450,174774,-3079,2100,0),
+('Heine -> Entrance to Alligator Islands',68,115583,192261,-3488,2100,0),
 ('Giran -> Dragon Valley',69,73024,118485,-3688,1800,0),
 ('Giran -> Heine',70,111409,219364,-3545,7600,0),
 ('Monster Derby Track',75,12661,181687,-3560,0,0),
