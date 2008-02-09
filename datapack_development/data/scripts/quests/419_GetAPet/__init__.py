@@ -127,6 +127,20 @@ class Quest (JQuest):
       elif event == "disagree" :
         st.exitQuest(1)
         return "419_cancelled.htm"
+    elif id == State.STARTED and st.getInt("progress") == 7:
+      if event == "tryme" :
+        st.set("quiz","1 2 3 4 5 6 7 8 9 10 11 12 13 14")
+        st.set("answers","0")
+        return check_questions(st) 
+      elif event == "wrong" :
+        st.set("step","SLAYED")
+        st.set("progress","0")
+        st.unset("quiz")
+        st.unset("answers")
+        return "419_failed.htm"
+      elif event == "right" :
+        st.set("answers",str(st.getInt("answers") + 1))
+        return check_questions(st)
     elif id == State.STARTED and st.get("step")=="SLAYED" :
       if event == "talk" :
         st.set("progress","0")
@@ -162,20 +176,6 @@ class Quest (JQuest):
       if event == "talk4" :
         st.set("progress", str(st.getInt("progress") | 4))
         return "419_metty_2.htm"
-    elif id == State.STARTED and st.getInt("progress") == 7:
-      if event == "tryme" :
-        st.set("quiz","1 2 3 4 5 6 7 8 9 10 11 12 13 14")
-        st.set("answers","0")
-        return check_questions(st) 
-      elif event == "wrong" :
-        st.set("step","SLAYED")
-        st.set("progress","0")
-        st.unset("quiz")
-        st.unset("answers")
-        return "419_failed.htm"
-      elif event == "right" :
-        st.set("answers",str(st.getInt("answers") + 1))
-        return check_questions(st)
     return
 
   def onTalk (self,npc,player):
