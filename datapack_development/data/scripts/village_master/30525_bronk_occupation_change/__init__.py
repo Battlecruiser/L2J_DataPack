@@ -68,7 +68,7 @@ class Quest (JQuest) :
        return htmltext
 
    # All other Races must be out
-   if npcId == HEAD_BLACKSMITH_BRONK and Race in [Race.Orc, Race.Darkelf, Race.Elf, Race.Human, Race.Kamael]:
+   if npcId == HEAD_BLACKSMITH_BRONK and Race in [Race.Orc, Race.DarkElf, Race.Elf, Race.Human, Race.Kamael]:
      st.exitQuest(False)
      st.exitQuest(1)
      return "30525-07.htm"
