@@ -6211,7 +6211,7 @@ INSERT INTO `etcitem` VALUES
 (8083,'Scout\'s Memo','false','quest',0,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
 (8084,'Crystal of Purity','false','none',0,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
 (8085,'Fang of Stakato','false','none',0,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
-(8086,'Box Containing the Fire of Holy Spirit','false','none',0,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
+(8086,'Box Containing the Fire of Holy Spirit','false','quest',0,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
 (8087,'Cursed Doll','false','none',0,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
 (8088,'Orc Grave Goods','false','none',0,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
 (8089,'Cursed Grave Goods','false','none',0,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
