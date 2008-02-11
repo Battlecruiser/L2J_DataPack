@@ -259,9 +259,11 @@
   <set name="lvlDepend" val="1"/>
   <set name="hitTime" val="1500"/>
   <set name="soulConsumeCount" val="1"/>
-  <set name="negateStats" val="FEAR"/>
-  <set name="negatePower" val="2.0"/>
+  <set name="effectRange" val="200"/>
+  <set name="effectType" val="FEAR"/>
+  <set name="effectPower" val="15"/>
   <for>
+    <effect count="5" name="Fear" time="6" val="0"/>
   </for>
 </skill>
 <skill id="628" levels="1" name="Warp">
