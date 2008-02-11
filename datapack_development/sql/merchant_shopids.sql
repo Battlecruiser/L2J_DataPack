@@ -516,8 +516,16 @@ INSERT INTO merchant_shopids VALUES (300511,'gm');
 INSERT INTO merchant_shopids VALUES (300510,'gm');
 INSERT INTO merchant_shopids VALUES (300410,'gm');
 INSERT INTO merchant_shopids VALUES (300542,'gm');
-INSERT INTO merchant_shopids VALUES (71031, 'gm');
-INSERT INTO merchant_shopids VALUES (71032, 'gm');
+INSERT INTO merchant_shopids VALUES (71031,'gm');
+INSERT INTO merchant_shopids VALUES (71032,'gm');
+INSERT INTO merchant_shopids VALUES (9151,'gm');
+INSERT INTO merchant_shopids VALUES (9152,'gm');
+INSERT INTO merchant_shopids VALUES (9153,'gm');
+INSERT INTO merchant_shopids VALUES (9154,'gm');
+INSERT INTO merchant_shopids VALUES (9155,'gm');
+INSERT INTO merchant_shopids VALUES (9156,'gm');
+INSERT INTO merchant_shopids VALUES (9157,'gm');
+INSERT INTO merchant_shopids VALUES (9158,'gm');
 --
 -- Castle 
 --
