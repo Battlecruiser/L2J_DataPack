@@ -148,6 +148,21 @@ class Quest (JQuest) :
       raceId,htmlfiles,npcTyp,item = TALKS[npcId]
    if (level >= 10 or onlyone) and npcTyp == 1:
        htmltext = "30575-05.htm"
+   elif npcId in [30600, 30601, 30602, 30598, 30599, 32135]:
+     id = st.getState()
+     reward=qs.getInt("reward")
+     if reward == 0:
+       if player.getClassId().isMage() :
+         st.playTutorialVoice("tutorial_voice_027")
+         st.giveItems(SPIRITSHOT_NOVICE,100)
+       else:
+         st.playTutorialVoice("tutorial_voice_026")
+         st.giveItems(SOULSHOT_NOVICE,200)
+       st.giveItems(TOKEN,12)
+       st.giveItems(SCROLL,2)
+       qs.set("reward","1")
+       st.exitQuest(False)
+     return
    elif onlyone == 0 and level < 10 :
     if player.getRace().ordinal() == raceId :
       htmltext=htmlfiles[0]
@@ -198,21 +213,6 @@ class Quest (JQuest) :
           htmltext = htmlfiles[1]
         elif step==3 :
           htmltext = htmlfiles[2] 
-   elif npcId in [30600, 30601, 30602, 30598, 30599, 32135]:
-     id = st.getState()
-     reward=qs.getInt("reward")
-     if reward == 0:
-       if player.getClassId().isMage() :
-         st.playTutorialVoice("tutorial_voice_027")
-         st.giveItems(SPIRITSHOT_NOVICE,100)
-       else:
-         st.playTutorialVoice("tutorial_voice_026")
-         st.giveItems(SOULSHOT_NOVICE,200)
-       st.giveItems(TOKEN,12)
-       st.giveItems(SCROLL,2)
-       qs.set("reward","1")
-       st.exitQuest(False)
-     return
    else:
        htmltext = "<html><body>You are too experienced now.</body></html>"
    return htmltext
