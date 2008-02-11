@@ -1,19 +1,47 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="500" levels="2" name="True Berserker">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+ <!-- Needs retail value checks -->
+  <table name="#pAtk"> 1.08 1.12 </table>
+  <table name="#pAtkSpd"> 1.08 1.12 </table>
+  <table name="#accCombat"> 1 3 </table>
+  <table name="#pDef"> 0.92 0.89 </table>
+  <table name="#rEvas"> 3 4 </table>
+  <table name="#dmg"> 18 21 </table>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="soulConsumeCount" val="1"/>
   <for>
+  	<effect count="10" name="ManaDamOverTime" time="3" val="#dmg">
+  		<mul order="0x30" stat="pAtk" val="#pAtk"/>
+  		<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+  		<add order="0x40" stat="accCombat" val="#accCombat"/>
+  		<mul order="0x30" stat="pDef" val="#pDef"/>
+  		<sub order="0x40" stat="rEvas" val="#rEvas"/>
+  	</effect>
   </for>
 </skill>
 <skill id="501" levels="12" name="Violent Temper">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+ <!-- Needs retail value checks -->
+  <table name="#mpConsume"> 22 24 25 27 28 29 30 31 32 33 34 34 </table>
+  <table name="#mAtkSpd"> 0.98 0.96 0.94 0.92 0.90 0.88 0.86 0.84 0.82 0.80 0.78 0.76 </table>
+  <table name="#pDef"> 0.98 0.96 0.94 0.92 0.90 0.88 0.86 0.84 0.82 0.80 0.78 0.76 </table>
+  <set name="power" val="0.0"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1800"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="soulConsumeCount" val="1"/>
   <for>
+  	<effect count="10" name="Buff" time="15" val="0">
+  		<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
+  		<mul order="0x30" stat="pDef" val="#pDef"/>
+  	</effect>
   </for>
 </skill>
 <skill id="502" levels="5" name="Life to Soul">
