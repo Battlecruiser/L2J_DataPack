@@ -1761,24 +1761,30 @@
   </for>
 </skill>
 <skill id="482" levels="2" name="Furious Soul">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Communicates with absorbed soul to increase critical rate and critical damage. Evasion/Defense power is decreased while the effect lasts. Consumes 2 soul.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+ <!-- Needs retail value checks -->
+  <table name="#rCrit"> 65 80 </table>
+  <table name="#cAtk"> 457 513 </table>
+  <table name="#pDef"> 0.87 0.81 </table>
+  <table name="#rEvas"> 3 4 </table>
+  <table name="#mpConsume"> 11 25 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="2000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="soulConsumeCount" val="2"/>
   <for>
+  	<effect count="1" name="Buff" time="120" val="0">
+  		<add order="0x40" stat="rCrit" val="#rCrit"/>
+  		<add order="0x40" stat="cAtk" val="#cAtk"/>
+  		<mul order="0x30" stat="pDef" val="#pDef"/>
+  		<sub order="0x40" stat="rEvas" val="#rEvas"/>
+  	</effect>
   </for>
 </skill>
 <skill id="483" levels="2" name="Sword Shield">
-<!--
-  Description(s):
-      Greatly increases own P. Def instantly. Greatly decreases own speed while duration of effect lasts. Consumes 2 soul.
--->
+ <!-- Needs retail value checks -->
   <table name="#runSpd"> 0.8 0.7 </table>
   <table name="#pDef"> 1.2 1.3 </table>
   <table name="#mpConsume"> 16 24 </table>
