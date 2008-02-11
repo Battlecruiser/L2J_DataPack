@@ -239,10 +239,28 @@
   </for>
 </skill>
 <skill id="627" levels="40" name="Soul Shock">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+<!--
+  Description(s):
+      Fires a close-range shot that causes your target to panic. An equipped bow or crossbow is required to use this skill. Overhit available. Consumes 1 Soul.
+-->
+  <table name="#mpConsume">51 53 55 56 58 60 60 62 64 66 68 70 71 73 75 77 78 80 82 84 86 87 89 91 93 95 96 98 99 101 103 105 106 108 110 111 113 114 116 117</table>
+  <table name="#power">344 367 391 443 471 500 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192</table>
+  <table name="#magicLvl"> 40 41 42 43 44 44 45 46 47 48 49 50 51 51 52 53 54 55 56 57 58 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76</table>
+  <set name="weaponsAllowed" val="65568"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="overHit" val="true"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="200"/>
+  <set name="effectRange" val="600"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="hitTime" val="1500"/>
+  <set name="soulConsumeCount" val="1"/>
+  <set name="negateStats" val="FEAR"/>
+  <set name="negatePower" val="2.0"/>
   <for>
   </for>
 </skill>
