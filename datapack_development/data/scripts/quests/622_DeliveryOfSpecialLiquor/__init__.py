@@ -111,11 +111,11 @@ class Quest (JQuest) :
           st.giveItems(ADENA,18800)
           st.giveItems(HASTE_POTION,int(Config.RATE_QUESTS_REWARD))
         elif random < 880 :
-          st.giveItems(6849,1+ALT_RP100)
+          st.giveItems(6849+ALT_RP100,1)
         elif random < 960 :
-          st.giveItems(6847,1+ALT_RP100)
+          st.giveItems(6847+ALT_RP100,1)
         elif random < 1000 :
-          st.giveItems(6851,1+ALT_RP100)
+          st.giveItems(6851+ALT_RP100,1)
         st.playSound("ItemSound.quest_finish")
         st.exitQuest(1)
      else:
