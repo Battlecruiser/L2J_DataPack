@@ -152,18 +152,20 @@ class Quest (JQuest) :
                     st.playTutorialVoice("tutorial_voice_007")
                     st.set("ucMemo","1")
                     st.set("Ex","-5")
-            elif event_id == 30 :
+            elif event_id == 2144337408 :
                 if playerLevel < 6 and st.getInt("Die") == 0:
                     st.playTutorialVoice("tutorial_voice_016")
                     st.playSound("ItemSound.quest_tutorial")
                     st.set("Die","1")
                     st.showQuestionMark(8)
             elif event_id == 45 :
-                if playerLevel < 6 and st.getInt("HP") == 0:
+                if playerLevel < 6 :
+                   if st.getInt("HP") == 0:
                     st.playTutorialVoice("tutorial_voice_017")
                     st.playSound("ItemSound.quest_tutorial")
                     st.set("HP","1")
                     st.showQuestionMark(10)
+                   st.onTutorialClientEvent(2144337408)
             elif event_id == 57 :
                 if playerLevel < 6 and st.getInt("Adena") == 0:
                     st.playTutorialVoice("tutorial_voice_012")
