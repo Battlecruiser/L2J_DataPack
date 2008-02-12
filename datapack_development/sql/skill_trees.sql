@@ -7,7 +7,7 @@ CREATE TABLE skill_trees (
   sp int(10) unsigned NOT NULL default '0',
   min_level int(10) unsigned NOT NULL default '0',
   PRIMARY KEY  (class_id,skill_id,level)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 -- GLOSSARY FOR CLASS ID'S (Created by Mr_Pleb_Mgoo),Updated by DJ MELERIX
 

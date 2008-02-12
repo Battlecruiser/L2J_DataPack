@@ -15,7 +15,7 @@ CREATE TABLE henna (
   stat_DEX decimal(11,0) default NULL,
   stat_WIT decimal(11,0) default NULL,
   PRIMARY KEY  (symbol_id)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 --
 -- Dumping data for table `henna`

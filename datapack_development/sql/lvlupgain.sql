@@ -16,7 +16,7 @@ CREATE TABLE `lvlupgain` (
   `defaultmpmod` decimal(4,2) NOT NULL default '0.00',
   `class_lvl` int(3) NOT NULL default '0',
   PRIMARY KEY  (`classid`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 -- 
 -- Dumping data for table `lvlupgain`
