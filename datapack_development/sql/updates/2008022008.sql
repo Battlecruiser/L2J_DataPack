@@ -1,5 +1,4 @@
-create table tmp_friends
-(char_id int, friend_id int);
+create table tmp_friends(char_id int, friend_id int);
 
 insert into tmp_friends
 (char_id, friend_id)
