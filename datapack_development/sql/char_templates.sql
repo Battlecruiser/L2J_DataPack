@@ -42,7 +42,7 @@ CREATE TABLE `char_templates` (
   `items4` int(4) NOT NULL default '0',
   `items5` int(10) NOT NULL default '0',
   PRIMARY KEY  (`ClassId`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 -- 
 -- Dumping data for table `char_templates`

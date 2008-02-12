@@ -15,7 +15,7 @@ CREATE TABLE armorsets (
  shield_skill_id decimal(11,0) NOT NULL default '0',
  enchant6skill decimal(11,0) NOT NULL default '0',
  PRIMARY KEY (id,chest)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 --                 NO GRADE              -------------
 -- ######################## id chest  legs head gloves feet    skill  shield sh_skill enchant6
