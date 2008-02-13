@@ -609,8 +609,7 @@
     <cond>
       <using kind="Shield"/>
     </cond>
-    <mul order="0x30" stat="sDef" val="1.2"/>
-    <mul order="0x30" stat="pDef" val="1.1"/>
+	<set stat="shieldDefAngle" val="360" order="0x10"/>
   </for>
 </skill>
 <skill id="317" levels="5" name="Focus Attack">
@@ -642,6 +641,7 @@
     </effect>
   </for>
 </skill>
+
 <skill id="318" levels="1" name="Aegis Stance" enchantLevels1="30" >
   <table name="#ench1sDef">
   0.61 0.62 0.62 0.63 0.64 0.64 0.65 0.66 0.66 0.67
@@ -658,12 +658,14 @@
     <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="9">
       <mul order="0x30" stat="sDef" val="0.6"/>
       <mul order="0x30" stat="pDef" val="1.35"/>
+      <set stat="shieldDefAngle" val="360" order="0x10"/>
     </effect>
   </for>
   <enchant1for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="9">
       <mul order="0x30" stat="sDef" val="#ench1sDef"/>
       <mul order="0x30" stat="pDef" val="1.35"/>
+      <set stat="shieldDefAngle" val="360" order="0x10"/>
     </effect>
   </enchant1for>
 </skill>
