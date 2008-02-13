@@ -163,7 +163,6 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (879,28400,7,15),
 (880,42800,7,16),
 (881,62300,7,17),
-(5900,10000,7,18),
 (908,11900,8,0),
 (909,21300,8,1),
 (910,35900,8,2),
@@ -18178,3 +18177,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (9480,0,9158,51),
 (9481,0,9158,52);
 -- CT1 GM Shop End
+
+-- Quest 381: Sandra's Album
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,time) VALUES 
+(5900,10000,7,18,1,3);

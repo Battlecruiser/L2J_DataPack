@@ -19,7 +19,7 @@ QTEXMTWO = {
     123: ["tutorial_voice_001k","tutorial_kamael_male001.htm"],
     124: ["tutorial_voice_001j","tutorial_kamael_female001.htm"]
     }
-# table for Client Event Enamble (8) [html, x, y, z]
+# table for Client Event Enable (8) [html, x, y, z]
 CEEa = {
     0  : ["tutorial_human_fighter007.htm",-71424,258336,-3109],
     10 : ["tutorial_human_mage007.htm",-91036,248044,-3568],
