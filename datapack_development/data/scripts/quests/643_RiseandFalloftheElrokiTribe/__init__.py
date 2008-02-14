@@ -32,7 +32,7 @@ class Quest (JQuest) :
     elif event == "32117-03.htm" :
        if count >= 300 :
           st.takeItems(BONES_OF_A_PLAINS_DINOSAUR,300)
-          st.giveItems(REWARDS[st.getRandom(len(REWARDS))],5)
+          st.giveItems(REWARDS[st.getRandom(len(REWARDS))],int(5*Config.RATE_QUESTS_REWARD))
        else :
           htmltext = "32117-04.htm"
     elif event == "Quit" :
@@ -81,7 +81,7 @@ class Quest (JQuest) :
              if st.getRandom(100) < chance : 
                 numItems += 1
              if numItems :
-                if count + numItems >= 300 :
+                if int(count + numItems)/300 > int(count)/300 :
                    st.playSound("ItemSound.quest_middle")
                 else :
                    st.playSound("ItemSound.quest_itemget")
