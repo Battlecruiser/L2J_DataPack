@@ -77,7 +77,7 @@ class Quest (JQuest) :
              if st.getRandom(100) < chance : 
                 numItems += 1
              if numItems :
-                if count + numItems >= 100 :
+                if int(count + numItems)/100 > int(count)/100 :
                    st.playSound("ItemSound.quest_middle")
                 else :
                    st.playSound("ItemSound.quest_itemget")

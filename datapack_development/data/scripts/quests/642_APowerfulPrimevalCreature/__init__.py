@@ -98,7 +98,7 @@ class Quest (JQuest) :
              if st.getRandom(100) < chance : 
                 numItems += 1
              if numItems :
-                if count + numItems >= 150 and itemId == DINOSAUR_TISSUE :
+                if int(count + numItems)/150 > int(count)/150 and itemId == DINOSAUR_TISSUE :
                    st.playSound("ItemSound.quest_middle")
                 else :
                    st.playSound("ItemSound.quest_itemget")
