@@ -731,43 +731,98 @@
   </for>
 </skill>
 <skill id="5267" levels="9" name="Trap Explosion">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Needs retail value corrections, By Darki699 -->
+  <table name="#magicLvl"> 28 36 44 48 52 56 60 68 74 </table> <!-- Guessing levels 3-9 -->
+  <table name="#power"> 50.0 54.0 60.0 78.0 84.0 92.0 120.0 130.0 140.0 </table> <!-- Guessing -->
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="500"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="600"/>
   <for>
   </for>
 </skill>
 <skill id="5268" levels="6" name="Poison">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Needs retail value corrections, By Darki699 -->
+  <table name="#dmg"> 54 72 93 114 132 144 </table>
+  <table name="#magicLvl"> 49 55 60 64 68 72 </table>
+  <table name="#power"> 4.0 5.0 6.0 7.0 8.0 9.0 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="#power"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="200"/>
+  <set name="hitTime" val="300"/>
+  <set name="skillType" val="POISON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison"/>
   </for>
 </skill>
 <skill id="5269" levels="6" name="Slow Trap">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- By Darki699 -->
+  <table name="#magicLvl"> 52 58 62 66 70 74 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="80"/>
+  <set name="lvlDepend" val="2"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="200"/>
+  <set name="reuseDelay" val="7000"/>
+  <set name="hitTime" val="300"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="30" val="0">
+      <mul order="0x30" stat="runSpd" val="0.75"/>
+      <mul order="0x30" stat="pAtkSpd" val="0.75"/>
+      <mul order="0x30" stat="mAtkSpd" val="0.75"/>
+      <mul order="0x30" stat="mReuse" val="1.15"/>
+      <mul order="0x30" stat="pReuse" val="1.15"/>
+    </effect>
   </for>
 </skill>
-<skill id="5270" levels="6" name="Flash Trap">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+<skill id="5270" levels="5" name="Flash Trap">
+  <!-- By Darki699 -->
+  <table name="#magicLvl"> 55 60 64 68 72 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="80"/>
+  <set name="lvlDepend" val="2"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="300"/>
+  <set name="skillType" val="STUN"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="600"/>
   <for>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
+    <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </for>
 </skill>
 <skill id="5271" levels="8" name="Hold">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- By Darki699 -->
+  <table name="#magicLvl"> 40 46 52 58 62 66 70 74 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="40"/>
+  <set name="lvlDepend" val="2"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="200"/>
+  <set name="hitTime" val="300"/>
+  <set name="skillType" val="ROOT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="600"/>
   <for>
+    <effect count="1" name="Root" time="30" val="0" stackOrder="1" stackType="Root"/>
   </for>
 </skill>
 <skill id="5272" levels="6" name="Decoy Provocation">

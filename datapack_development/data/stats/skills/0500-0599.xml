@@ -259,44 +259,93 @@ description(s) :
   </for>
 </skill>
 <skill id="514" levels="9" name="Fire Trap">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Needs retail value corrections -->
+  <table name="#triggerlvl"> 1 2 3 4 5 6 7 8 9 </table>
+  <set name="mpConsume" val="50"/>
+  <set name="hitTime" val="3000"/>
+  <set name="summonTotalLifeTime" val="30000"/>
+  <set name="reuseDelay" val="120000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="SUMMON_TRAP"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="effectRange" val="-1"/>
+  <set name="skillRadius" val="350"/>
+  <set name="triggerSkillId" val="5267"/>
+  <set name="triggerSkillLvl" val="#triggerlvl"/>
+  <set name="trapNpcId"  val="13037"/>
+  <set name="soulConsumeCount" val="2"/>
 </skill>
 <skill id="515" levels="6" name="Poison Trap">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Needs retail value corrections -->
+  <table name="#triggerlvl"> 1 2 3 4 5 6 </table>
+  <set name="mpConsume" val="50"/>
+  <set name="hitTime" val="3000"/>
+  <set name="summonTotalLifeTime" val="30000"/>
+  <set name="reuseDelay" val="120000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="SUMMON_TRAP"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="effectRange" val="-1"/>
+  <set name="skillRadius" val="350"/>
+  <set name="triggerSkillId" val="5268"/>
+  <set name="triggerSkillLvl" val="#triggerlvl"/>
+  <set name="trapNpcId"  val="13037"/>
+  <set name="soulConsumeCount" val="2"/>
 </skill>
 <skill id="516" levels="6" name="Slow Trap">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Needs retail value corrections -->
+  <table name="#triggerlvl"> 1 2 3 4 5 6 </table>
+  <set name="mpConsume" val="50"/>
+  <set name="hitTime" val="3000"/>
+  <set name="summonTotalLifeTime" val="30000"/>
+  <set name="reuseDelay" val="120000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="SUMMON_TRAP"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="effectRange" val="-1"/>
+  <set name="skillRadius" val="350"/>
+  <set name="triggerSkillId" val="5269"/>
+  <set name="triggerSkillLvl" val="#triggerlvl"/>
+  <set name="trapNpcId"  val="13037"/>
+  <set name="soulConsumeCount" val="2"/>
 </skill>
 <skill id="517" levels="5" name="Flash Trap">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Needs retail value corrections -->
+  <table name="#triggerlvl"> 1 2 3 4 5 </table>
+  <set name="mpConsume" val="50"/>
+  <set name="hitTime" val="3000"/>
+  <set name="summonTotalLifeTime" val="30000"/>
+  <set name="reuseDelay" val="120000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="SUMMON_TRAP"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="effectRange" val="-1"/>
+  <set name="skillRadius" val="350"/>
+  <set name="triggerSkillId" val="5270"/>
+  <set name="triggerSkillLvl" val="#triggerlvl"/>
+  <set name="trapNpcId"  val="13037"/>
+  <set name="soulConsumeCount" val="2"/>
 </skill>
 <skill id="518" levels="8" name="Binding Trap">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Needs retail value corrections -->
+  <table name="#triggerlvl"> 1 2 3 4 5 6 7 8 </table>
+  <set name="mpConsume" val="50"/>
+  <set name="hitTime" val="1500"/>
+  <set name="summonTotalLifeTime" val="30000"/>
+  <set name="reuseDelay" val="120000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="SUMMON_TRAP"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="effectRange" val="-1"/>
+  <set name="skillRadius" val="350"/>
+  <set name="triggerSkillId" val="5271"/>
+  <set name="triggerSkillLvl" val="#triggerlvl"/>
+  <set name="trapNpcId"  val="13037"/>
 </skill>
 <skill id="519" levels="1" name="Quiver of Bolts: A-Grade"> 
   <set name="mpConsume" val="366"/> 
