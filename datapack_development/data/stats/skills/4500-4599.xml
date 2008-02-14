@@ -522,56 +522,99 @@ Might spell can remove the curse.-->
   </for>
 </skill>
 <skill id="4551" levels="10" name="Hot Springs Rheumatism">
-<!-- TODO 
-Infected with Hot Springs Rheumatism. Temporarily, 
-the success rate of critical attack is increased and P. Def. 
-is decreased. Effect 1-10-->
-  <set name="mpConsume" val="69"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <table name="#pDef"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.85 </table>
+  <table name="#rCrit"> 3 5 8 10 5 0 0 0 0 0 </table>
+  <set name="mpInitialConsume" val="14"/>
+  <set name="mpConsume" val="55"/>
+  <set name="power" val="0.0"/>
+  <set name="magicLvl" val="75"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="reuseDelay" val="0"/>
+  <set name="hitTime" val="0"/>
+  <set name="coolTime" val="0"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="aggroPoints" val="-100"/>
   <for>
+   <effect count="1" name="Buff" time="3600" val="0" abnormal="poison"> <!-- needs core support for abnormal = spa_disease_a -->
+     <mul order="0x30" stat="pDef" val="#pDef"/>
+     <add order="0x40" stat="rCrit" val="#rCrit"/>
+   </effect>
   </for>
 </skill>
 <skill id="4552" levels="10" name="Hot Springs Cholera">
-<!-- TODO 
-Infected with Hot Springs Cholera. Temporarily, 
-Accuracy is increased and Evasion is decreased. Effect 1-10-->
-  <set name="mpConsume" val="69"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <table name="#rEvas"> 0 3 3 3 5 5 5 8 8 10 </table>
+  <table name="#accCombat"> 3 6 8 10 6 0 0 0 0 0 </table>
+  <set name="mpInitialConsume" val="14"/>
+  <set name="mpConsume" val="55"/>
+  <set name="power" val="0.0"/>
+  <set name="magicLvl" val="75"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="reuseDelay" val="0"/>
+  <set name="hitTime" val="0"/>
+  <set name="coolTime" val="0"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="aggroPoints" val="-100"/>
   <for>
+   <effect count="1" name="Buff" time="3600" val="0" abnormal="poison"> <!-- needs core support for abnormal = spa_disease_b -->
+     <sub order="0x40" stat="rEvas" val="#rEvas"/>
+     <add order="0x40" stat="accCombat" val="#accCombat"/>
+   </effect>
   </for>
 </skill>
 <skill id="4553" levels="10" name="Hot Springs Flu">
-<!-- TODO 
-Infected with Hot Springs Flu. Temporarily, Atk. Spd. 
-is increased and P. Atk. is decreased. Effect 1-10-->
-  <set name="mpConsume" val="69"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <table name="#pAtkSpd"> 1.04 1.08 1.12 1.16 1.08 1 1 1 1 1 </table>
+  <table name="#pAtk"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.85 </table>
+  <set name="mpInitialConsume" val="14"/>
+  <set name="mpConsume" val="55"/>
+  <set name="power" val="0.0"/>
+  <set name="magicLvl" val="75"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="reuseDelay" val="0"/>
+  <set name="hitTime" val="0"/>
+  <set name="coolTime" val="0"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="aggroPoints" val="-100"/>
   <for>
+   <effect count="1" name="Buff" time="3600" val="0" abnormal="poison"> <!-- needs core support for abnormal = spa_disease_c -->
+     <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+     <mul order="0x30" stat="pAtk" val="#pAtk"/>
+   </effect>
   </for>
 </skill>
 <skill id="4554" levels="10" name="Hot Springs Malaria">
-<!-- TODO 
-Infected with Hot Springs Malaria. Temporarily, Casting Spd. 
-is increased and MP consumption is decreased. Effect 1-10-->
-  <set name="mpConsume" val="69"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <table name="#mAtkSpd"> 1.04 1.08 1.12 1.16 1.08 1 1 1 1 1 </table>
+  <table name="#MpConsumeRate"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.84 </table>
+  <set name="mpInitialConsume" val="14"/>
+  <set name="mpConsume" val="55"/>
+  <set name="power" val="0.0"/>
+  <set name="magicLvl" val="75"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="reuseDelay" val="0"/>
+  <set name="hitTime" val="0"/>
+  <set name="coolTime" val="0"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="aggroPoints" val="-100"/>
   <for>
+   <effect count="1" name="Buff" time="3600" val="0" abnormal="poison"> <!-- needs core support for abnormal = spa_disease_d -->
+     <mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
+     <mul order="0x30" stat="MpConsumeRate" val="#MpConsumeRate"/>
+   </effect>
   </for>
 </skill>
 <skill id="4555" levels="1" name="NPC Resist Mutant">
@@ -617,12 +660,20 @@ is increased and MP consumption is decreased. Effect 1-10-->
   </for>
 </skill>
 <skill id="4559" levels="1" name="Hot Springs Illusion">
-<!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="mpConsume" val="0"/>
+  <set name="power" val="0.0"/>
+  <set name="magicLvl" val="75"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="reuseDelay" val="0"/>
+  <set name="hitTime" val="0"/>
+  <set name="coolTime" val="0"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="aggroPoints" val="0"/>
   <for>
+    <effect count="1" name="Buff" time="600" val="0" abnormal="bighead"/>
   </for>
 </skill>
 <skill id="4560" levels="12" name="NPC Fire Burn">
