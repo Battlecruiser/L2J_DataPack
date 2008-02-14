@@ -29,14 +29,14 @@ def render_list(mode,item) :
           html += "<tr><td width=35 height=45><img src=icon."+HERO_ITEMS[i][0]+" width=32 height=32 align=left></td><td valign=top><a action=\"bypass -h Quest 7000_HeroItems "+str(i)+"\"><font color=\"FFFFFF\">"+HERO_ITEMS[i][1]+"</font></a></td></tr>"
     else :
        html += "<tr><td align=left><font color=\"LEVEL\">Item Information</font></td><td align=right>\
-<button value=Back action=\"bypass -h Quest 7000_HeroItems buy\" width=40 height=15 back=sek.cbui94 fore=sek.cbui92>\
+<button value=Back action=\"bypass -h Quest 7000_HeroItems buy\" width=40 height=15 back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>\
 </td><td width=5><br></td></tr></table><table border=0 bgcolor=\"000000\" width=500 height=160><tr><td valign=top>\
 <table border=0><tr><td valign=top width=35><img src=icon."+HERO_ITEMS[item][0]+" width=32 height=32 align=left></td>\
 <td valign=top width=400><table border=0 width=100%><tr><td><font color=\"FFFFFF\">"+HERO_ITEMS[item][1]+"</font></td>\
 </tr></table></td></tr></table><br><font color=\"LEVEL\">Item info:</font>\
 <table border=0 bgcolor=\"000000\" width=290 height=220><tr><td valign=top><font color=\"B09878\">"+HERO_ITEMS[item][2]+"</font>\
 </td></tr><tr><td><br>Type:"+HERO_ITEMS[item][4]+"<br><br>Patk/Matk: "+HERO_ITEMS[item][3]+"<br><br>\
-<table border=0 width=300><tr><td align=center><button value=Obtain action=\"bypass -h Quest 7000_HeroItems _"+str(item)+"\" width=60 height=15 back=sek.cbui94 fore=sek.cbui92></td></tr></table></td></tr></table></td></tr>"
+<table border=0 width=300><tr><td align=center><button value=Obtain action=\"bypass -h Quest 7000_HeroItems _"+str(item)+"\" width=60 height=15 back=L2UI_ct1.button_df fore=L2UI_ct1.button_df></td></tr></table></td></tr></table></td></tr>"
     html += "</table></body></html>"
     return html
 
