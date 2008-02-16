@@ -66,11 +66,13 @@ class Quest (JQuest) :
     elif event == "30669_2" :
           htmltext = "30669-03.htm"
           st.addSpawn(27131,-9382,-89852,-2333)
+          st.set("cond","12")
     elif event == "30669_3" :
           htmltext = "30669-05.htm"
     elif event == "30670_1" :
           htmltext = "30670-03.htm"
           st.addSpawn(27132,126019,-179983,-1781)
+          st.set("cond","15")
     elif event == "30670_2" :
           htmltext = "30670-02.htm"
     return htmltext
@@ -111,7 +113,7 @@ class Quest (JQuest) :
         st.set("cond","11")
         st.takeItems(OLMAHUMS_MONEY,1)
         st.giveItems(GREETINGS,3)
-   elif npcId == 30666 and st.getInt("cond")==18 and st.getQuestItemsCount(KATARIS_LETTER)>0 and st.getQuestItemsCount(KAKANS_LETTER)>0 and st.getQuestItemsCount(NYAKURIS_LETTER)>0 and st.getQuestItemsCount(RAMUSS_LETTER)>0 :
+   elif npcId == 30666 and st.getInt("cond")==20 and st.getQuestItemsCount(KATARIS_LETTER)>0 and st.getQuestItemsCount(KAKANS_LETTER)>0 and st.getQuestItemsCount(NYAKURIS_LETTER)>0 and st.getQuestItemsCount(RAMUSS_LETTER)>0 :
           st.giveItems(MARK_OF_REFORMER,1)
           st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
           st.addExpAndSp(164032,17500)
@@ -144,26 +146,28 @@ class Quest (JQuest) :
         st.giveItems(OLMAHUMS_MONEY,1)
    elif npcId == 30669 and st.getInt("cond")==11 and st.getQuestItemsCount(GREETINGS)>0 :
         htmltext = "30669-01.htm"
-   elif npcId == 30669 and st.getInt("cond")==12 :
+   elif npcId == 30669 and st.getInt("cond")==13 :
         htmltext = "30669-04.htm"
-        st.set("cond","13")
+        st.set("cond","14")
         st.giveItems(KAKANS_LETTER,1)
         st.takeItems(GREETINGS,1)
-   elif npcId == 30670 and st.getInt("cond")==13 and st.getQuestItemsCount(GREETINGS)>0 :
-        htmltext = "30670-01.htm"
    elif npcId == 30670 and st.getInt("cond")==14 and st.getQuestItemsCount(GREETINGS)>0 :
+        htmltext = "30670-01.htm"
+   elif npcId == 30670 and st.getInt("cond")==16 and st.getQuestItemsCount(GREETINGS)>0 :
         htmltext = "30670-04.htm"
-        st.set("cond","15")
+        st.set("cond","17")
         st.giveItems(NYAKURIS_LETTER,1)
         st.takeItems(GREETINGS,1)
-   elif npcId == 30667 and st.getInt("cond")==15 and st.getQuestItemsCount(GREETINGS)>0 :
+   elif npcId == 30667 and st.getInt("cond")==17 and st.getQuestItemsCount(GREETINGS)>0 :
         htmltext = "30667-01.htm"
-        st.set("cond","16")
+        st.set("cond","18")
         st.giveItems(UNDEAD_LIST,1)
         st.takeItems(GREETINGS,1)
-   elif npcId == 30667 and st.getQuestItemsCount(BONE_FRAGMENT4)>0 and st.getQuestItemsCount(BONE_FRAGMENT5)>0 and st.getQuestItemsCount(BONE_FRAGMENT6)>0 and st.getQuestItemsCount(BONE_FRAGMENT7)>0 and st.getQuestItemsCount(BONE_FRAGMENT8)>0 :
+   elif npcId == 30667 and st.getInt("cond")==18 :
+        htmltext = "30667-02.htm"
+   elif npcId == 30667 and st.getInt("cond")==19 :
         htmltext = "30667-03.htm"
-        st.set("cond","18")
+        st.set("cond","20")
         st.takeItems(BONE_FRAGMENT4,1)
         st.takeItems(BONE_FRAGMENT5,1)
         st.takeItems(BONE_FRAGMENT6,1)
@@ -171,8 +175,6 @@ class Quest (JQuest) :
         st.takeItems(BONE_FRAGMENT8,1)
         st.giveItems(RAMUSS_LETTER,1)
         st.takeItems(UNDEAD_LIST,1)
-   elif npcId == 30667 and st.getInt("cond")==16 :
-        htmltext = "30667-02.htm"
    return htmltext
 
  def onKill(self,npc,player,isPet):
@@ -201,31 +203,47 @@ class Quest (JQuest) :
       st.set("cond","9")
       st.giveItems(LETTER_OF_BETRAYER,1)
    elif npcId == 27131 :
-    if st.getInt("cond") == 11 :
-      st.set("cond","12")
+    if st.getInt("cond") == 12 :
+      st.set("cond","13")
    elif npcId == 27132 :
-    if st.getInt("cond") == 13 :
-      st.set("cond","14")
+    if st.getInt("cond") == 15 :
+      st.set("cond","16")
    elif npcId == 20404 :
-    if st.getInt("cond") == 16 and st.getQuestItemsCount(BONE_FRAGMENT4) == 0 :
+    if st.getInt("cond") == 18 and st.getQuestItemsCount(BONE_FRAGMENT4) == 0 :
       st.giveItems(BONE_FRAGMENT4,1)
       st.playSound("ItemSound.quest_itemget")
+      if st.getQuestItemsCount(BONE_FRAGMENT4)>0 and st.getQuestItemsCount(BONE_FRAGMENT5)>0 and st.getQuestItemsCount(BONE_FRAGMENT6)>0 and st.getQuestItemsCount(BONE_FRAGMENT7)>0 and st.getQuestItemsCount(BONE_FRAGMENT8)>0 :
+        st.playSound("ItemSound.quest_middle")
+        st.set("cond","19")
    elif npcId == 20104 :
-    if st.getInt("cond") == 16 and st.getQuestItemsCount(BONE_FRAGMENT5) == 0 :
+    if st.getInt("cond") == 18 and st.getQuestItemsCount(BONE_FRAGMENT5) == 0 :
       st.giveItems(BONE_FRAGMENT5,1)
       st.playSound("ItemSound.quest_itemget")
+      if st.getQuestItemsCount(BONE_FRAGMENT4)>0 and st.getQuestItemsCount(BONE_FRAGMENT5)>0 and st.getQuestItemsCount(BONE_FRAGMENT6)>0 and st.getQuestItemsCount(BONE_FRAGMENT7)>0 and st.getQuestItemsCount(BONE_FRAGMENT8)>0 :
+        st.playSound("ItemSound.quest_middle")
+        st.set("cond","19")
    elif npcId == 20102 :
-    if st.getInt("cond") == 16 and st.getQuestItemsCount(BONE_FRAGMENT6) == 0 :
+    if st.getInt("cond") == 18 and st.getQuestItemsCount(BONE_FRAGMENT6) == 0 :
       st.giveItems(BONE_FRAGMENT6,1)
       st.playSound("ItemSound.quest_itemget")
+      if st.getQuestItemsCount(BONE_FRAGMENT4)>0 and st.getQuestItemsCount(BONE_FRAGMENT5)>0 and st.getQuestItemsCount(BONE_FRAGMENT6)>0 and st.getQuestItemsCount(BONE_FRAGMENT7)>0 and st.getQuestItemsCount(BONE_FRAGMENT8)>0 :
+        st.playSound("ItemSound.quest_middle")
+        st.set("cond","19")
    elif npcId == 20022 :
-    if st.getInt("cond") == 16 and st.getQuestItemsCount(BONE_FRAGMENT7) == 0 :
+    if st.getInt("cond") == 18 and st.getQuestItemsCount(BONE_FRAGMENT7) == 0 :
       st.giveItems(BONE_FRAGMENT7,1)
       st.playSound("ItemSound.quest_itemget")
+      if st.getQuestItemsCount(BONE_FRAGMENT4)>0 and st.getQuestItemsCount(BONE_FRAGMENT5)>0 and st.getQuestItemsCount(BONE_FRAGMENT6)>0 and st.getQuestItemsCount(BONE_FRAGMENT7)>0 and st.getQuestItemsCount(BONE_FRAGMENT8)>0 :
+        st.playSound("ItemSound.quest_middle")
+        st.set("cond","19")
    elif npcId == 20100 :
-    if st.getInt("cond") == 16 and st.getQuestItemsCount(BONE_FRAGMENT8) == 0 :
+    if st.getInt("cond") == 18 and st.getQuestItemsCount(BONE_FRAGMENT8) == 0 :
       st.giveItems(BONE_FRAGMENT8,1)
       st.playSound("ItemSound.quest_itemget")
+      if st.getQuestItemsCount(BONE_FRAGMENT4)>0 and st.getQuestItemsCount(BONE_FRAGMENT5)>0 and st.getQuestItemsCount(BONE_FRAGMENT6)>0 and st.getQuestItemsCount(BONE_FRAGMENT7)>0 and st.getQuestItemsCount(BONE_FRAGMENT8)>0 :
+        st.playSound("ItemSound.quest_middle")
+        st.set("cond","19")
+
    return
 
 QUEST       = Quest(227,qn,"Test Of Reformer")
