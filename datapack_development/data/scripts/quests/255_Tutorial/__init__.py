@@ -19,7 +19,7 @@ QTEXMTWO = {
     123: ["tutorial_voice_001k","tutorial_kamael_male001.htm"],
     124: ["tutorial_voice_001j","tutorial_kamael_female001.htm"]
     }
-# table for Client Event Enable (8) [html, x, y, z]
+# table for Client Event Enable (2138046216) [html, x, y, z]
 CEEa = {
     0  : ["tutorial_human_fighter007.htm",-71424,258336,-3109],
     10 : ["tutorial_human_mage007.htm",-91036,248044,-3568],
@@ -32,6 +32,95 @@ CEEa = {
     53 : ["tutorial_dwarven_fighter007.htm",108567,-173994,-406],
     123: ["tutorial_kamael007.htm",-125872,38016,1251],
     124: ["tutorial_kamael007.htm",-125872,38016,1251]
+    }
+# table for Question Mark Clicked (9 & 11) learning skills [html, x, y, z]
+QMCa = {
+    0  : ["tutorial_fighter017.htm",-83165,242711,-3720],
+    10 : ["tutorial_mage017.htm",-85247,244718,-3720],
+    18 : ["tutorial_fighter017.htm",45610,52206,-2792],
+    25 : ["tutorial_mage017.htm",45610,52206,-2792],
+    31 : ["tutorial_fighter017.htm",10344,14445,-4242],
+    38 : ["tutorial_mage017.htm",10344,14445,-4242],
+    44 : ["tutorial_fighter017.htm",-46324,-114384,-200],
+    49 : ["tutorial_fighter017.htm",-46305,-112763,-200],
+    53 : ["tutorial_fighter017.htm",115447,-182672,-1440],
+    123: ["tutorial_fighter017.htm",-118132,42788,723],
+    124: ["tutorial_fighter017.htm",-118132,42788,723]
+    }
+# table for Question Mark Clicked (24) newbie lvl [html]
+QMCb = {
+    0  : ["tutorial_human009.htm"],
+    10 : ["tutorial_human009.htm"],
+    18 : ["tutorial_elf009.htm"],
+    25 : ["tutorial_elf009.htm"],
+    31 : ["tutorial_delf009.htm"],
+    38 : ["tutorial_delf009.htm"],
+    44 : ["tutorial_orc009.htm"],
+    49 : ["tutorial_orc009.htm"],
+    53 : ["tutorial_dwarven009.htm"],
+    123: ["tutorial_kamael009.htm"],
+    124: ["tutorial_kamael009.htm"]
+    }
+# table for Question Mark Clicked (35) 1st class transfer [html]
+QMCc = {
+    0  : ["tutorial_21.htm"],
+    10 : ["tutorial_21a.htm"],
+    18 : ["tutorial_21b.htm"],
+    25 : ["tutorial_21c.htm"],
+    31 : ["tutorial_21g.htm"],
+    38 : ["tutorial_21h.htm"],
+    44 : ["tutorial_21d.htm"],
+    49 : ["tutorial_21e.htm"],
+    53 : ["tutorial_21f.htm"],
+    }
+# table for Tutorial Close Link (26) 2nd class transfer [html]
+TCLa = {
+    1  : ["tutorial_22w.htm"],
+    4  : ["tutorial_22.htm"],
+    7  : ["tutorial_22b.htm"],
+    11 : ["tutorial_22c.htm"],
+    15 : ["tutorial_22d.htm"],
+    19 : ["tutorial_22e.htm"],
+    22 : ["tutorial_22f.htm"],
+    26 : ["tutorial_22g.htm"],
+    29 : ["tutorial_22h.htm"],
+    32 : ["tutorial_22n.htm"],
+    35 : ["tutorial_22o.htm"],
+    39 : ["tutorial_22p.htm"],
+    42 : ["tutorial_22q.htm"],
+    45 : ["tutorial_22i.htm"],
+    47 : ["tutorial_22j.htm"],
+    50 : ["tutorial_22k.htm"],
+    54 : ["tutorial_22l.htm"],
+    56 : ["tutorial_22m.htm"]
+    }
+# table for Tutorial Close Link (23) 2nd class transfer [html]
+TCLb = {
+    4  : ["tutorial_22aa.htm"],
+    7  : ["tutorial_22ba.htm"],
+    11 : ["tutorial_22ca.htm"],
+    15 : ["tutorial_22da.htm"],
+    19 : ["tutorial_22ea.htm"],
+    22 : ["tutorial_22fa.htm"],
+    26 : ["tutorial_22ga.htm"],
+    32 : ["tutorial_22na.htm"],
+    35 : ["tutorial_22oa.htm"],
+    39 : ["tutorial_22pa.htm"],
+    50 : ["tutorial_22ka.htm"],
+    }
+# table for Tutorial Close Link (24) 2nd class transfer [html]
+TCLc = {
+    4  : ["tutorial_22ab.htm"],
+    7  : ["tutorial_22bb.htm"],
+    11 : ["tutorial_22cb.htm"],
+    15 : ["tutorial_22db.htm"],
+    19 : ["tutorial_22eb.htm"],
+    22 : ["tutorial_22fb.htm"],
+    26 : ["tutorial_22gb.htm"],
+    32 : ["tutorial_22nb.htm"],
+    35 : ["tutorial_22ob.htm"],
+    39 : ["tutorial_22pb.htm"],
+    50 : ["tutorial_22kb.htm"],
     }
 class Quest (JQuest) :
  
@@ -106,14 +195,14 @@ class Quest (JQuest) :
             elif event_id == 2 :
                 st.playTutorialVoice("tutorial_voice_003")
                 htmltext = "tutorial_02.htm"
-                st.onTutorialClientEvent(1)
+                st.onTutorialClientEvent(2138046209)
                 st.set("Ex","-5")
             elif event_id == 3 :
                 htmltext = "tutorial_03.htm"
-                st.onTutorialClientEvent(2)
+                st.onTutorialClientEvent(2138046210)
             elif event_id == 5 :
                 htmltext = "tutorial_05.htm"
-                st.onTutorialClientEvent(8)
+                st.onTutorialClientEvent(2138046216)
             elif event_id == 7 :
                 htmltext = "tutorial_100.htm"
                 st.onTutorialClientEvent(0)
@@ -125,25 +214,39 @@ class Quest (JQuest) :
                 st.onTutorialClientEvent(0)
             elif event_id == 12 :
                 st.closeTutorialHtml()
- 
+            elif event_id == 23 :
+                classId = int(st.getPlayer().getClassId().getId())
+                htmltext = TCLb[classId]
+            elif event_id == 24 :
+                classId = int(st.getPlayer().getClassId().getId())
+                htmltext = TCLc[classId]
+            elif event_id == 25 :
+                htmltext = "tutorial_22cc.htm"
+            elif event_id == 26 :
+                classId = int(st.getPlayer().getClassId().getId())
+                htmltext = TCLa[classId]
+            elif event_id == 27 :
+                htmltext = "tutorial_29.htm"
+            elif event_id == 28 :
+                htmltext = "tutorial_28.htm"
         # CLIENT EVENT ENABLE [N] #
  
         elif string == "CE" :
             event_id = int(event[2:])
             playerLevel = player.getLevel()
-            if event_id == 1 :
+            if event_id == 2138046209 :
                 if playerLevel < 6 :
                     st.playTutorialVoice("tutorial_voice_004")
                     htmltext = "tutorial_03.htm"
                     st.playSound("ItemSound.quest_tutorial")
-                    st.onTutorialClientEvent(2)
-            elif event_id == 2 :
+                    st.onTutorialClientEvent(2138046210)
+            elif event_id == 2138046210 :
                 if playerLevel < 6 :
                     st.playTutorialVoice("tutorial_voice_005")
                     htmltext = "tutorial_05.htm"
                     st.playSound("ItemSound.quest_tutorial")
-                    st.onTutorialClientEvent(8)
-            elif event_id == 8 :
+                    st.onTutorialClientEvent(2138046216)
+            elif event_id == 2138046216 :
                 if playerLevel < 6 :
                     classId = int(st.getPlayer().getClassId().getId())
                     htmltext, x, y, z = CEEa[classId]
@@ -152,35 +255,61 @@ class Quest (JQuest) :
                     st.playTutorialVoice("tutorial_voice_007")
                     st.set("ucMemo","1")
                     st.set("Ex","-5")
-            elif event_id == 2144337408 :
+            elif event_id == 30 :
                 if playerLevel < 6 and st.getInt("Die") == 0:
                     st.playTutorialVoice("tutorial_voice_016")
                     st.playSound("ItemSound.quest_tutorial")
                     st.set("Die","1")
                     st.showQuestionMark(8)
+                    st.onTutorialClientEvent(0)
+            elif event_id == 2144337408 :
+                if playerLevel < 6 and st.getInt("sit") == 0:
+                    st.playTutorialVoice("tutorial_voice_018")
+                    st.playSound("ItemSound.quest_tutorial")
+                    st.set("sit","1")
+                    st.onTutorialClientEvent(0)
+                    htmltext = "tutorial_21z.htm"
             elif event_id == 40 :
                 if playerLevel == 5 :
-                   if st.getInt("lvl") < 5:
-                     if player.getClassId().isMage() :
-                      #st.playTutorialVoice("tutorial_voice_???")
-                      st.showQuestionMark(30)
-                     else :
-                      #st.playTutorialVoice("tutorial_voice_???")
-                      st.showQuestionMark(31)
+                   if st.getInt("lvl") < 5 :
+                    if not player.getClassId().isMage() or classId == 49:
+                     st.playTutorialVoice("tutorial_voice_014")
+                     st.showQuestionMark(9)
                      st.playSound("ItemSound.quest_tutorial")
                      st.set("lvl","5")
-                elif playerLevel == 7 and player.getClassId().isMage() :
+                elif playerLevel == 6 and st.getInt("lvl") < 6:
+                   st.playTutorialVoice("tutorial_voice_020")
+                   st.playSound("ItemSound.quest_tutorial")
+                   st.showQuestionMark(24)
+                   st.set("lvl","6")
+                elif playerLevel == 7 and player.getClassId().isMage() and classId != 49:
                    if st.getInt("lvl") < 7:
-                      #st.playTutorialVoice("tutorial_voice_???")
+                      st.playTutorialVoice("tutorial_voice_019")
                       st.playSound("ItemSound.quest_tutorial")
                       st.set("lvl","7")
-                      st.showQuestionMark(32)
+                      st.showQuestionMark(11)
                 elif playerLevel == 15 :
                    if st.getInt("lvl") < 15:
                       #st.playTutorialVoice("tutorial_voice_???")
                       st.playSound("ItemSound.quest_tutorial")
                       st.set("lvl","15")
                       st.showQuestionMark(33)
+                elif playerLevel == 19 :
+                   if st.getInt("lvl") < 19:
+                      race = st.getPlayer().getRace().ordinal()
+                      if race != 5 and player.getClassId().level() == 0 :
+                         #st.playTutorialVoice("tutorial_voice_???")
+                         st.playSound("ItemSound.quest_tutorial")
+                         st.set("lvl","19")
+                         st.showQuestionMark(35)
+                elif playerLevel == 35 :
+                   if st.getInt("lvl") < 35:
+                      race = st.getPlayer().getRace().ordinal()
+                      if race != 5 and player.getClassId().level() == 1 :
+                         #st.playTutorialVoice("tutorial_voice_???")
+                         st.playSound("ItemSound.quest_tutorial")
+                         st.set("lvl","35")
+                         st.showQuestionMark(34)
             elif event_id == 45 :
                 if playerLevel < 6 :
                    if st.getInt("HP") == 0:
@@ -188,7 +317,7 @@ class Quest (JQuest) :
                     st.playSound("ItemSound.quest_tutorial")
                     st.set("HP","1")
                     st.showQuestionMark(10)
-                   st.onTutorialClientEvent(2144337408)
+                    st.onTutorialClientEvent(2144337408)
             elif event_id == 57 :
                 if playerLevel < 6 and st.getInt("Adena") == 0:
                     st.playTutorialVoice("tutorial_voice_012")
@@ -225,27 +354,37 @@ class Quest (JQuest) :
                 htmltext = "tutorial_15.htm"
                 st.set("ucMemo","3")
             elif MarkId == 8 :
-                htmltext = "tutorial_21.htm"
+                htmltext = "tutorial_18.htm"
+            elif MarkId == 9 :
+                classId = int(st.getPlayer().getClassId().getId())
+                htmltext, x, y, z = QMCa[classId]
+                st.addRadar(x,y,z)
             elif MarkId == 10 :
-                htmltext = "tutorial_22.htm"
+                htmltext = "tutorial_19.htm"
+            elif MarkId == 11 :
+                classId = int(st.getPlayer().getClassId().getId())
+                htmltext, x, y, z = QMCa[classId]
+                st.addRadar(x,y,z)
             elif MarkId == 12 :
                 htmltext = "tutorial_15.htm"
                 st.set("ucMemo","4")
             elif MarkId == 23 :
-                htmltext = "tutorial_23.htm"
+                htmltext = "tutorial_24.htm"
+            elif MarkId == 24 :
+                classId = int(st.getPlayer().getClassId().getId())
+                htmltext = QMCb[classId]
             elif MarkId == 26 :
                 if st.getPlayer().getClassId().isMage() and classId != 49 :
                     htmltext = "tutorial_newbie004b.htm"
                 else :
                     htmltext = "tutorial_newbie004a.htm"
-            elif MarkId == 30 :
-                htmltext = "tutorial_mage017.htm"
-            elif MarkId == 31 :
-                htmltext = "tutorial_fighter017.htm"
-            elif MarkId == 32 :
-                htmltext = "tutorial_mage020.htm"
             elif MarkId == 33 :
                 htmltext = "tutorial_27.htm"
+            elif MarkId == 34 :
+                htmltext = "tutorial_28.htm"
+            elif MarkId == 35 :
+                classId = int(st.getPlayer().getClassId().getId())
+                htmltext = QMCc[classId]
         if htmltext == "": return
         st.showTutorialHTML(htmltext)
         return
