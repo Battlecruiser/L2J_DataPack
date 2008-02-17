@@ -71,7 +71,7 @@ QMCc = {
     38 : ["tutorial_21h.htm"],
     44 : ["tutorial_21d.htm"],
     49 : ["tutorial_21e.htm"],
-    53 : ["tutorial_21f.htm"],
+    53 : ["tutorial_21f.htm"]
     }
 # table for Tutorial Close Link (26) 2nd class transfer [html]
 TCLa = {
@@ -106,7 +106,7 @@ TCLb = {
     32 : ["tutorial_22na.htm"],
     35 : ["tutorial_22oa.htm"],
     39 : ["tutorial_22pa.htm"],
-    50 : ["tutorial_22ka.htm"],
+    50 : ["tutorial_22ka.htm"]
     }
 # table for Tutorial Close Link (24) 2nd class transfer [html]
 TCLc = {
@@ -120,7 +120,7 @@ TCLc = {
     32 : ["tutorial_22nb.htm"],
     35 : ["tutorial_22ob.htm"],
     39 : ["tutorial_22pb.htm"],
-    50 : ["tutorial_22kb.htm"],
+    50 : ["tutorial_22kb.htm"]
     }
 class Quest (JQuest) :
  
@@ -270,20 +270,20 @@ class Quest (JQuest) :
                     st.onTutorialClientEvent(0)
                     htmltext = "tutorial_21z.htm"
             elif event_id == 40 :
-                if playerLevel == 5 :
+                if playerLevel == 5 and player.getClassId().level() == 0:
                    if st.getInt("lvl") < 5 :
                     if not player.getClassId().isMage() or classId == 49:
                      st.playTutorialVoice("tutorial_voice_014")
                      st.showQuestionMark(9)
                      st.playSound("ItemSound.quest_tutorial")
                      st.set("lvl","5")
-                elif playerLevel == 6 and st.getInt("lvl") < 6:
+                elif playerLevel == 6 and st.getInt("lvl") < 6 and player.getClassId().level() == 0:
                    st.playTutorialVoice("tutorial_voice_020")
                    st.playSound("ItemSound.quest_tutorial")
                    st.showQuestionMark(24)
                    st.set("lvl","6")
                 elif playerLevel == 7 and player.getClassId().isMage() and classId != 49:
-                   if st.getInt("lvl") < 7:
+                   if st.getInt("lvl") < 7 and player.getClassId().level() == 0:
                       st.playTutorialVoice("tutorial_voice_019")
                       st.playSound("ItemSound.quest_tutorial")
                       st.set("lvl","7")
@@ -298,18 +298,22 @@ class Quest (JQuest) :
                    if st.getInt("lvl") < 19:
                       race = st.getPlayer().getRace().ordinal()
                       if race != 5 and player.getClassId().level() == 0 :
-                         #st.playTutorialVoice("tutorial_voice_???")
-                         st.playSound("ItemSound.quest_tutorial")
-                         st.set("lvl","19")
-                         st.showQuestionMark(35)
+                         classId = int(st.getPlayer().getClassId().getId())
+                         if classId in [0,10,18,25,31,38,44,49,52]:
+                           #st.playTutorialVoice("tutorial_voice_???")
+                           st.playSound("ItemSound.quest_tutorial")
+                           st.set("lvl","19")
+                           st.showQuestionMark(35)
                 elif playerLevel == 35 :
                    if st.getInt("lvl") < 35:
                       race = st.getPlayer().getRace().ordinal()
                       if race != 5 and player.getClassId().level() == 1 :
-                         #st.playTutorialVoice("tutorial_voice_???")
-                         st.playSound("ItemSound.quest_tutorial")
-                         st.set("lvl","35")
-                         st.showQuestionMark(34)
+                         classId = int(st.getPlayer().getClassId().getId())
+                         if classId in [1,4,7,11,15,19,22,26,29,32,35,39,42,45,47,50,54,56]:
+                           #st.playTutorialVoice("tutorial_voice_???")
+                           st.playSound("ItemSound.quest_tutorial")
+                           st.set("lvl","35")
+                           st.showQuestionMark(34)
             elif event_id == 45 :
                 if playerLevel < 6 :
                    if st.getInt("HP") == 0:
