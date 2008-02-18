@@ -290,7 +290,7 @@
 </skill>
 <skill id="412" levels="10" name="Sand Bomb">
   <table name="#mpConsume"> 25 27 28 29 30 31 32 33 34 34</table>
-  <table name="#Tab-accCombat"> 1 2 3 4 5 6 7 8 9 10 </table>
+  <table name="#accCombat"> 6 6 6 6 6 9 9 9 9 12 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="80"/>
   <set name="target" val="TARGET_AURA"/>
@@ -302,8 +302,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="#Tab-accCombat" stackType="accuracyDown">
-      <sub order="0x40" stat="accCombat" val="#Tab-accCombat"/>
+    <effect count="1" name="Buff" time="30" val="0" stackOrder="#accCombat" stackType="accuracyDown">
+      <sub order="0x40" stat="accCombat" val="#accCombat"/>
     </effect>
   </for>
 </skill>
