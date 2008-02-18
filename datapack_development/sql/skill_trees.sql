@@ -13932,7 +13932,7 @@ INSERT INTO skill_trees VALUES
 (126,487,11,'Penetrate Shot',4800,32),
 (126,487,12,'Penetrate Shot',4800,32),
 (126,490,1,'Fast Shot',14300,32),
-(126,484,1,'Rush',14300,32),
+(126,628,1,'warp',14300,32),
 (126,1433,7,'Abyssal Blaze',7200,32),
 (126,1433,8,'Abyssal Blaze',7200,32),
 (126,1434,3,'Dark Explosion',14300,32),
