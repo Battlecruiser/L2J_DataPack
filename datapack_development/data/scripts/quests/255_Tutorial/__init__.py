@@ -399,6 +399,8 @@ class Quest (JQuest) :
             elif MarkId == 12 :
                 htmltext = "tutorial_15.htm"
                 st.set("ucMemo","4")
+            elif MarkId == 17 :
+                htmltext = "tutorial_30.htm"
             elif MarkId == 23 :
                 htmltext = "tutorial_24.htm"
             elif MarkId == 24 :
