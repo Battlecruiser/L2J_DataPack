@@ -10,18 +10,18 @@
   <table name="#dmg"> 18 21 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <set name="soulConsumeCount" val="1"/>
   <for>
-  	<effect count="10" name="ManaDamOverTime" time="3" val="#dmg">
-  		<mul order="0x30" stat="pAtk" val="#pAtk"/>
-  		<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
-  		<add order="0x40" stat="accCombat" val="#accCombat"/>
-  		<mul order="0x30" stat="pDef" val="#pDef"/>
-  		<sub order="0x40" stat="rEvas" val="#rEvas"/>
-  	</effect>
+    <effect count="10" name="ManaDamOverTime" time="3" val="#dmg">
+      <mul order="0x30" stat="pAtk" val="#pAtk"/>
+      <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+      <add order="0x40" stat="accCombat" val="#accCombat"/>
+      <mul order="0x30" stat="pDef" val="#pDef"/>
+      <sub order="0x40" stat="rEvas" val="#rEvas"/>
+    </effect>
   </for>
 </skill>
 <skill id="501" levels="12" name="Violent Temper">
