@@ -272,7 +272,7 @@ class Quest (JQuest) :
             elif event_id == 40 :
                 if playerLevel == 5 and player.getClassId().level() == 0:
                    if st.getInt("lvl") < 5 :
-                    if not player.getClassId().isMage() or classId == 49:
+                    if not player.getClassId().isMage() or int(st.getPlayer().getClassId().getId()) == 49:
                      st.playTutorialVoice("tutorial_voice_014")
                      st.showQuestionMark(9)
                      st.playSound("ItemSound.quest_tutorial")
@@ -282,7 +282,7 @@ class Quest (JQuest) :
                    st.playSound("ItemSound.quest_tutorial")
                    st.showQuestionMark(24)
                    st.set("lvl","6")
-                elif playerLevel == 7 and player.getClassId().isMage() and classId != 49:
+                elif playerLevel == 7 and player.getClassId().isMage() and int(st.getPlayer().getClassId().getId()) != 49:
                    if st.getInt("lvl") < 7 and player.getClassId().level() == 0:
                       st.playTutorialVoice("tutorial_voice_019")
                       st.playSound("ItemSound.quest_tutorial")
