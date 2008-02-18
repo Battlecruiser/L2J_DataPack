@@ -212,7 +212,9 @@ class Quest (JQuest) :
         elif step==2 :
           htmltext = htmlfiles[1]
         elif step==3 :
-          htmltext = htmlfiles[2] 
+          htmltext = htmlfiles[2]
+   elif st.getState() == State.COMPLETED and npcTyp == 0:
+     htmltext str(npc.getNpcId())+"-04.htm"
    else:
        htmltext = "<html><body>You are too experienced now.</body></html>"
    return htmltext
