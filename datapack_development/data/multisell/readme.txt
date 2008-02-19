@@ -77,6 +77,7 @@ of this directory a little bit.
 
 317325001.xml -> Adventure Guildsman: Use Life Crystal Schuttgart
 317325002.xml -> Adventure Guildsman: Adventurer's Box
+317325003.xml -> Adventure Guildsman: Exchange Life Crystals
 318055002.xml -> Adventure Guildsman: Use Life Crystal Giran
 318145003.xml -> Adventure Guildsman: Use Life Crystal Oren
 318275004.xml -> Adventure Guildsman: Use Life Crystal Aden
