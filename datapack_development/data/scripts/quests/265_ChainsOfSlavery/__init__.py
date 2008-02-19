@@ -8,6 +8,14 @@ qn = "265_ChainsOfSlavery"
 
 IMP_SHACKLES = 1368
 ADENA = 57
+#Newbie/one time rewards section
+#Any quest should rely on a unique bit, but
+#it could be shared among quest that were mutually
+#exclusive or race restricted.
+#Bit #1 isn't used for backwards compatibility.
+NEWBIE_REWARD = 4
+SPIRITSHOT_FOR_BEGINNERS = 5790
+SOULSHOT_FOR_BEGINNERS = 5789
 
 class Quest (JQuest) :
 
@@ -54,6 +62,17 @@ class Quest (JQuest) :
        else :
           st.giveItems(ADENA,13*count)
        st.takeItems(IMP_SHACKLES,-1)
+       # check the player state against this quest newbie rewarding mark.
+       newbie = player.getNewbie()
+       if newbie | NEWBIE_REWARD != newbie :
+          player.setNewbie(newbie|NEWBIE_REWARD)
+          st.showQuestionMark(26)
+          if player.getClassId().isMage() :
+             st.playTutorialVoice("tutorial_voice_027")
+             st.giveItems(SPIRITSHOT_FOR_BEGINNERS,3000)
+          else :
+             st.playTutorialVoice("tutorial_voice_026")
+             st.giveItems(SOULSHOT_FOR_BEGINNERS,6000)
        htmltext = "30357-05.htm"
      else:
        htmltext = "30357-04.htm"

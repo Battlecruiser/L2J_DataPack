@@ -20,7 +20,14 @@ CRYSTAL_LOVE = 4413
 CRYSTAL_SOLITUDE = 4414 
 CRYSTAL_FEAST = 4415 
 CRYSTAL_CELEBRATION = 4416 
-SOULSHOT_NO_GRADE_FOR_BEGINNERS_ID = 5789 
+#Newbie/one time rewards section
+#Any quest should rely on a unique bit, but
+#it could be shared among quest that were mutually
+#exclusive or race restricted.
+#Bit #1 isn't used for backwards compatibility.
+NEWBIE_REWARD = 2
+SPIRITSHOT_NO_GRADE_FOR_BEGINNERS = 5790 
+SOULSHOT_NO_GRADE_FOR_BEGINNERS = 5789
 
 class Quest (JQuest) : 
 
@@ -111,8 +118,14 @@ class Quest (JQuest) :
             st.giveItems(CRYSTAL_SOLITUDE,int(10*Config.RATE_QUESTS_REWARD)) 
             st.giveItems(CRYSTAL_FEAST,int(10*Config.RATE_QUESTS_REWARD)) 
             st.giveItems(CRYSTAL_CELEBRATION,int(10*Config.RATE_QUESTS_REWARD))
-            if player.getLevel() < 25 and st.getInt("onlyone") == 0 and player.isNewbie():
-                st.giveItems(SOULSHOT_NO_GRADE_FOR_BEGINNERS_ID,7000) 
+            # check the player state against this quest newbie rewarding mark.
+            newbie = player.getNewbie()
+            if newbie | NEWBIE_REWARD != newbie :
+               player.setNewbie(newbie|NEWBIE_REWARD)
+               if player.getClassId().isMage() :
+                  st.giveItems(SPIRITSHOT_NO_GRADE_FOR_BEGINNERS,3000)
+               else :
+                  st.giveItems(SOULSHOT_NO_GRADE_FOR_BEGINNERS,7000)
             st.set("cond","0") 
             st.exitQuest(False) 
             st.playSound("ItemSound.quest_finish") 

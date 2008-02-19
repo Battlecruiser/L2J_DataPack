@@ -9,6 +9,14 @@ qn = "260_HuntForOrcs1"
 ORC_AMULET = 1114
 ORC_NECKLACE = 1115
 ADENA = 57
+#Newbie/one time rewards section
+#Any quest should rely on a unique bit, but
+#it could be shared among quest that were mutually
+#exclusive or race restricted.
+#Bit #1 isn't used for backwards compatibility.
+NEWBIE_REWARD = 4
+SPIRITSHOT_FOR_BEGINNERS = 5790
+SOULSHOT_FOR_BEGINNERS = 5789
 
 class Quest (JQuest) :
 
@@ -56,6 +64,17 @@ class Quest (JQuest) :
        st.giveItems(ADENA,amulet*5+necklace*15)
        st.takeItems(ORC_AMULET,-1)
        st.takeItems(ORC_NECKLACE,-1)
+       # check the player state against this quest newbie rewarding mark.
+       newbie = player.getNewbie()
+       if newbie | NEWBIE_REWARD != newbie :
+          player.setNewbie(newbie|NEWBIE_REWARD)
+          st.showQuestionMark(26)
+          if player.getClassId().isMage() :
+             st.playTutorialVoice("tutorial_voice_027")
+             st.giveItems(SPIRITSHOT_FOR_BEGINNERS,3000)
+          else :
+             st.playTutorialVoice("tutorial_voice_026")
+             st.giveItems(SOULSHOT_FOR_BEGINNERS,6000)
    return htmltext
 
  def onKill(self,npc,player,isPet):

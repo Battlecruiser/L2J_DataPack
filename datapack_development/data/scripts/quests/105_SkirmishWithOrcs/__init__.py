@@ -7,29 +7,37 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "105_SkirmishWithOrcs" 
 
-KENDNELLS_ORDER1_ID = 1836 
-KENDNELLS_ORDER2_ID = 1837 
-KENDNELLS_ORDER3_ID = 1838 
-KENDNELLS_ORDER4_ID = 1839 
-KENDNELLS_ORDER5_ID = 1840 
-KENDNELLS_ORDER6_ID = 1841 
-KENDNELLS_ORDER7_ID = 1842 
-KENDNELLS_ORDER8_ID = 1843 
-KABOO_CHIEF_TORC1_ID = 1844 
-KABOO_CHIEF_TORC2_ID = 1845 
-RED_SUNSET_SWORD_ID = 981 
-RED_SUNSET_STAFF_ID = 754 
-SPIRITSHOT_NO_GRADE_FOR_BEGINNERS_ID = 5790 
-SPIRITSHOT_NO_GRADE_ID = 2509 
-SOULSHOT_NO_GRADE_FOR_BEGINNERS_ID = 5789
-SOULSHOT_NO_GRADE_ID = 1835
+KENDNELLS_ORDER1 = 1836 
+KENDNELLS_ORDER2 = 1837 
+KENDNELLS_ORDER3 = 1838 
+KENDNELLS_ORDER4 = 1839 
+KENDNELLS_ORDER5 = 1840 
+KENDNELLS_ORDER6 = 1841 
+KENDNELLS_ORDER7 = 1842 
+KENDNELLS_ORDER8 = 1843 
+KABOO_CHIEF_TORC1 = 1844 
+KABOO_CHIEF_TORC2 = 1845 
+RED_SUNSET_SWORD = 981 
+RED_SUNSET_STAFF = 754
+
+#Newbie/one time rewards section
+#Any quest should rely on a unique bit, but
+#it could be shared among quest that were mutually
+#exclusive or race restricted.
+#Bit #1 isn't used for backwards compatibility.
+NEWBIE_REWARD = 2
+SPIRITSHOT_NO_GRADE_FOR_BEGINNERS = 5790 
+SPIRITSHOT_NO_GRADE = 2509 
+SOULSHOT_NO_GRADE_FOR_BEGINNERS = 5789
+SOULSHOT_NO_GRADE = 1835
+
 
 
 class Quest (JQuest) : 
 
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
-     self.questItemIds = [KENDNELLS_ORDER1_ID, KENDNELLS_ORDER2_ID, KENDNELLS_ORDER3_ID, KENDNELLS_ORDER4_ID, KENDNELLS_ORDER5_ID, KENDNELLS_ORDER6_ID, KENDNELLS_ORDER7_ID, KENDNELLS_ORDER8_ID]
+     self.questItemIds = [KENDNELLS_ORDER1, KENDNELLS_ORDER2, KENDNELLS_ORDER3, KENDNELLS_ORDER4, KENDNELLS_ORDER5, KENDNELLS_ORDER6, KENDNELLS_ORDER7, KENDNELLS_ORDER8]
 
  def onEvent (self,event,st) : 
     htmltext = event 
@@ -39,16 +47,16 @@ class Quest (JQuest) :
       st.setState(State.STARTED) 
       st.playSound("ItemSound.quest_accept") 
       htmltext = "30218-03.htm" 
-      if st.getQuestItemsCount(KENDNELLS_ORDER1_ID)+st.getQuestItemsCount(KENDNELLS_ORDER2_ID)+st.getQuestItemsCount(KENDNELLS_ORDER3_ID)+st.getQuestItemsCount(KENDNELLS_ORDER4_ID) == 0 : 
+      if st.getQuestItemsCount(KENDNELLS_ORDER1)+st.getQuestItemsCount(KENDNELLS_ORDER2)+st.getQuestItemsCount(KENDNELLS_ORDER3)+st.getQuestItemsCount(KENDNELLS_ORDER4) == 0 : 
         n = st.getRandom(100) 
         if n < 25 : 
-          st.giveItems(KENDNELLS_ORDER1_ID,1) 
+          st.giveItems(KENDNELLS_ORDER1,1) 
         elif n < 50 : 
-          st.giveItems(KENDNELLS_ORDER2_ID,1) 
+          st.giveItems(KENDNELLS_ORDER2,1) 
         elif n < 75 : 
-          st.giveItems(KENDNELLS_ORDER3_ID,1) 
+          st.giveItems(KENDNELLS_ORDER3,1) 
         else: 
-          st.giveItems(KENDNELLS_ORDER4_ID,1) 
+          st.giveItems(KENDNELLS_ORDER4,1) 
     return htmltext 
 
 
@@ -73,51 +81,58 @@ class Quest (JQuest) :
    elif npcId == 30218 and st.getInt("cond")==0 and st.getInt("onlyone")==1 : 
       htmltext = "<html><body>This quest has already been completed.</body></html>" 
    elif npcId == 30218 and st.getInt("cond") : 
-      if st.getQuestItemsCount(KABOO_CHIEF_TORC1_ID) : 
+      if st.getQuestItemsCount(KABOO_CHIEF_TORC1) : 
         htmltext = "30218-06.htm" 
-        if st.getQuestItemsCount(KENDNELLS_ORDER1_ID) : 
-          st.takeItems(KENDNELLS_ORDER1_ID,1) 
-        if st.getQuestItemsCount(KENDNELLS_ORDER2_ID) : 
-          st.takeItems(KENDNELLS_ORDER2_ID,1) 
-        if st.getQuestItemsCount(KENDNELLS_ORDER3_ID) : 
-          st.takeItems(KENDNELLS_ORDER3_ID,1) 
-        if st.getQuestItemsCount(KENDNELLS_ORDER4_ID) : 
-          st.takeItems(KENDNELLS_ORDER4_ID,1) 
-        st.takeItems(KABOO_CHIEF_TORC1_ID,1) 
+        if st.getQuestItemsCount(KENDNELLS_ORDER1) : 
+          st.takeItems(KENDNELLS_ORDER1,1) 
+        if st.getQuestItemsCount(KENDNELLS_ORDER2) : 
+          st.takeItems(KENDNELLS_ORDER2,1) 
+        if st.getQuestItemsCount(KENDNELLS_ORDER3) : 
+          st.takeItems(KENDNELLS_ORDER3,1) 
+        if st.getQuestItemsCount(KENDNELLS_ORDER4) : 
+          st.takeItems(KENDNELLS_ORDER4,1) 
+        st.takeItems(KABOO_CHIEF_TORC1,1) 
         n = st.getRandom(100) 
         if n < 25 : 
-          st.giveItems(KENDNELLS_ORDER5_ID,1) 
+          st.giveItems(KENDNELLS_ORDER5,1) 
         elif n < 50 : 
-          st.giveItems(KENDNELLS_ORDER6_ID,1) 
+          st.giveItems(KENDNELLS_ORDER6,1) 
         elif n < 75 : 
-          st.giveItems(KENDNELLS_ORDER7_ID,1) 
+          st.giveItems(KENDNELLS_ORDER7,1) 
         else: 
-          st.giveItems(KENDNELLS_ORDER8_ID,1) 
-      elif st.getQuestItemsCount(KENDNELLS_ORDER1_ID) or st.getQuestItemsCount(KENDNELLS_ORDER2_ID) or st.getQuestItemsCount(KENDNELLS_ORDER3_ID) or st.getQuestItemsCount(KENDNELLS_ORDER4_ID) : 
+          st.giveItems(KENDNELLS_ORDER8,1) 
+      elif st.getQuestItemsCount(KENDNELLS_ORDER1) or st.getQuestItemsCount(KENDNELLS_ORDER2) or st.getQuestItemsCount(KENDNELLS_ORDER3) or st.getQuestItemsCount(KENDNELLS_ORDER4) : 
         htmltext = "30218-05.htm" 
-      elif st.getQuestItemsCount(KABOO_CHIEF_TORC2_ID) : 
+      elif st.getQuestItemsCount(KABOO_CHIEF_TORC2) : 
         if st.getInt("id") != 105 :
             st.set("id","105") 
             htmltext = "30218-08.htm" 
-            if st.getQuestItemsCount(KENDNELLS_ORDER5_ID) :
-                st.takeItems(KENDNELLS_ORDER5_ID,1)
-            if st.getQuestItemsCount(KENDNELLS_ORDER6_ID) : 
-                st.takeItems(KENDNELLS_ORDER6_ID,1) 
-            if st.getQuestItemsCount(KENDNELLS_ORDER7_ID) : 
-                st.takeItems(KENDNELLS_ORDER7_ID,1) 
-            if st.getQuestItemsCount(KENDNELLS_ORDER8_ID) : 
-                st.takeItems(KENDNELLS_ORDER8_ID,1) 
-            st.takeItems(KABOO_CHIEF_TORC2_ID,1) 
-            if player.getClassId().isMage() and st.getInt("onlyone") == 0:
-                st.giveItems(RED_SUNSET_STAFF_ID,1)
-                st.giveItems(SPIRITSHOT_NO_GRADE_ID,500)
-                if player.getLevel() < 25 and player.isNewbie():
-                    st.giveItems(SPIRITSHOT_NO_GRADE_FOR_BEGINNERS_ID,3000)
-            elif st.getInt("onlyone") == 0 : 
-                st.giveItems(RED_SUNSET_SWORD_ID,1)
-                st.giveItems(SOULSHOT_NO_GRADE_ID,1000)
-                if player.getLevel() < 25 and player.isNewbie():
-                    st.giveItems(SOULSHOT_NO_GRADE_FOR_BEGINNERS_ID,7000)
+            if st.getQuestItemsCount(KENDNELLS_ORDER5) :
+                st.takeItems(KENDNELLS_ORDER5,1)
+            if st.getQuestItemsCount(KENDNELLS_ORDER6) : 
+                st.takeItems(KENDNELLS_ORDER6,1) 
+            if st.getQuestItemsCount(KENDNELLS_ORDER7) : 
+                st.takeItems(KENDNELLS_ORDER7,1) 
+            if st.getQuestItemsCount(KENDNELLS_ORDER8) : 
+                st.takeItems(KENDNELLS_ORDER8,1) 
+            st.takeItems(KABOO_CHIEF_TORC2,1)
+            newbie = player.getNewbie()
+            mage = player.getClassId().isMage()
+            if mage :
+               st.giveItems(RED_SUNSET_STAFF,1)
+               st.giveItems(SPIRITSHOT_NO_GRADE,500)
+            else : 
+               st.giveItems(RED_SUNSET_SWORD,1)
+               st.giveItems(SOULSHOT_NO_GRADE,1000)
+            if newbie | NEWBIE_REWARD != newbie :
+               player.setNewbie(newbie|NEWBIE_REWARD)
+               if mage :
+                  st.playTutorialVoice("tutorial_voice_027")
+                  st.giveItems(SPIRITSHOT_NO_GRADE_FOR_BEGINNERS,3000)
+               else :
+                  st.playTutorialVoice("tutorial_voice_026")
+                  st.giveItems(SOULSHOT_NO_GRADE_FOR_BEGINNERS,7000)
+               st.playSound("ItemSound.quest_tutorial")
             st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))     # Lesser Healing Potions 
             for item in range(4412,4417) : 
                 st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))   # Echo crystals 
@@ -125,7 +140,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_finish") 
             st.set("onlyone","1") 
             st.set("cond","0") 
-      elif st.getQuestItemsCount(KENDNELLS_ORDER5_ID) or st.getQuestItemsCount(KENDNELLS_ORDER6_ID) or st.getQuestItemsCount(KENDNELLS_ORDER7_ID) or st.getQuestItemsCount(KENDNELLS_ORDER8_ID) : 
+      elif st.getQuestItemsCount(KENDNELLS_ORDER5) or st.getQuestItemsCount(KENDNELLS_ORDER6) or st.getQuestItemsCount(KENDNELLS_ORDER7) or st.getQuestItemsCount(KENDNELLS_ORDER8) : 
         htmltext = "30218-07.htm" 
    return htmltext 
 
@@ -137,50 +152,50 @@ class Quest (JQuest) :
    if npcId == 27059 : 
     st.set("id","0") 
     if st.getInt("cond") == 1 : 
-     if st.getQuestItemsCount(KENDNELLS_ORDER1_ID) and st.getQuestItemsCount(KABOO_CHIEF_TORC1_ID) == 0 : 
-      st.giveItems(KABOO_CHIEF_TORC1_ID,1) 
+     if st.getQuestItemsCount(KENDNELLS_ORDER1) and st.getQuestItemsCount(KABOO_CHIEF_TORC1) == 0 : 
+      st.giveItems(KABOO_CHIEF_TORC1,1) 
       st.playSound("ItemSound.quest_middle") 
    elif npcId == 27060 : 
     st.set("id","0") 
     if st.getInt("cond") == 1 : 
-     if st.getQuestItemsCount(KENDNELLS_ORDER2_ID) and st.getQuestItemsCount(KABOO_CHIEF_TORC1_ID) == 0 : 
-      st.giveItems(KABOO_CHIEF_TORC1_ID,1) 
+     if st.getQuestItemsCount(KENDNELLS_ORDER2) and st.getQuestItemsCount(KABOO_CHIEF_TORC1) == 0 : 
+      st.giveItems(KABOO_CHIEF_TORC1,1) 
       st.playSound("ItemSound.quest_middle") 
    elif npcId == 27061 : 
     st.set("id","0") 
     if st.getInt("cond") == 1 : 
-     if st.getQuestItemsCount(KENDNELLS_ORDER3_ID) and st.getQuestItemsCount(KABOO_CHIEF_TORC1_ID) == 0 : 
-      st.giveItems(KABOO_CHIEF_TORC1_ID,1) 
+     if st.getQuestItemsCount(KENDNELLS_ORDER3) and st.getQuestItemsCount(KABOO_CHIEF_TORC1) == 0 : 
+      st.giveItems(KABOO_CHIEF_TORC1,1) 
       st.playSound("ItemSound.quest_middle") 
    elif npcId == 27062 : 
     st.set("id","0") 
     if st.getInt("cond") == 1 : 
-     if st.getQuestItemsCount(KENDNELLS_ORDER4_ID) and st.getQuestItemsCount(KABOO_CHIEF_TORC1_ID) == 0 : 
-      st.giveItems(KABOO_CHIEF_TORC1_ID,1) 
+     if st.getQuestItemsCount(KENDNELLS_ORDER4) and st.getQuestItemsCount(KABOO_CHIEF_TORC1) == 0 : 
+      st.giveItems(KABOO_CHIEF_TORC1,1) 
       st.playSound("ItemSound.quest_middle") 
    elif npcId == 27064 : 
     st.set("id","0") 
     if st.getInt("cond") == 1 : 
-     if st.getQuestItemsCount(KENDNELLS_ORDER5_ID) and st.getQuestItemsCount(KABOO_CHIEF_TORC2_ID) == 0 : 
-      st.giveItems(KABOO_CHIEF_TORC2_ID,1) 
+     if st.getQuestItemsCount(KENDNELLS_ORDER5) and st.getQuestItemsCount(KABOO_CHIEF_TORC2) == 0 : 
+      st.giveItems(KABOO_CHIEF_TORC2,1) 
       st.playSound("ItemSound.quest_middle") 
    elif npcId == 27065 : 
     st.set("id","0") 
     if st.getInt("cond") == 1 : 
-     if st.getQuestItemsCount(KENDNELLS_ORDER6_ID) and st.getQuestItemsCount(KABOO_CHIEF_TORC2_ID) == 0 : 
-      st.giveItems(KABOO_CHIEF_TORC2_ID,1) 
+     if st.getQuestItemsCount(KENDNELLS_ORDER6) and st.getQuestItemsCount(KABOO_CHIEF_TORC2) == 0 : 
+      st.giveItems(KABOO_CHIEF_TORC2,1) 
       st.playSound("ItemSound.quest_middle") 
    elif npcId == 27067 : 
     st.set("id","0") 
     if st.getInt("cond") == 1 : 
-     if st.getQuestItemsCount(KENDNELLS_ORDER7_ID) and st.getQuestItemsCount(KABOO_CHIEF_TORC2_ID) == 0 : 
-      st.giveItems(KABOO_CHIEF_TORC2_ID,1) 
+     if st.getQuestItemsCount(KENDNELLS_ORDER7) and st.getQuestItemsCount(KABOO_CHIEF_TORC2) == 0 : 
+      st.giveItems(KABOO_CHIEF_TORC2,1) 
       st.playSound("ItemSound.quest_middle") 
    elif npcId == 27068 : 
     st.set("id","0") 
     if st.getInt("cond") == 1 : 
-     if st.getQuestItemsCount(KENDNELLS_ORDER8_ID) and st.getQuestItemsCount(KABOO_CHIEF_TORC2_ID) == 0 : 
-      st.giveItems(KABOO_CHIEF_TORC2_ID,1) 
+     if st.getQuestItemsCount(KENDNELLS_ORDER8) and st.getQuestItemsCount(KABOO_CHIEF_TORC2) == 0 : 
+      st.giveItems(KABOO_CHIEF_TORC2,1) 
       st.playSound("ItemSound.quest_middle") 
    return 
 

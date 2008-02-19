@@ -11,6 +11,24 @@ TORN_MAP_FRAGMENT = 1489
 HIDDEN_VEIN_MAP = 1490
 ADENA = 57
 
+#Newbie/one time rewards section
+#Any quest should rely on a unique bit, but
+#it could be shared among quest that were mutually
+#exclusive or race restricted.
+#Bit #1 isn't used for backwards compatibility.
+NEWBIE_REWARD = 4
+SOULSHOT_FOR_BEGINNERS = 5789
+
+def newbie_rewards(st) :
+  # check the player state against this quest newbie rewarding mark.
+  player=st.getPlayer()
+  newbie = player.getNewbie()
+  if newbie | NEWBIE_REWARD != newbie :
+     player.setNewbie(newbie|NEWBIE_REWARD)
+     st.giveItems(SOULSHOT_NO_GRADE_FOR_BEGINNERS,6000)
+     st.playTutorialVoice("tutorial_voice_026")
+  
+
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
@@ -61,15 +79,18 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(HIDDEN_VEIN_MAP)==0 :
            htmltext = "30535-04.htm"
          else :
+           newbie_rewards(st)
            htmltext = "30535-08.htm"
            st.giveItems(ADENA,st.getQuestItemsCount(HIDDEN_VEIN_MAP)*1000)
            st.takeItems(HIDDEN_VEIN_MAP,-1)
        else :
          if st.getQuestItemsCount(HIDDEN_VEIN_MAP)==0 :
+           newbie_rewards(st)
            htmltext = "30535-05.htm"
            st.giveItems(ADENA,st.getQuestItemsCount(CHRYSOLITE_ORE)*10)
            st.takeItems(CHRYSOLITE_ORE,-1)
          else :
+           newbie_rewards(st)
            htmltext = "30535-09.htm"
            st.giveItems(ADENA,st.getQuestItemsCount(CHRYSOLITE_ORE)*10+st.getQuestItemsCount(HIDDEN_VEIN_MAP)*1000)
            st.takeItems(HIDDEN_VEIN_MAP,-1)

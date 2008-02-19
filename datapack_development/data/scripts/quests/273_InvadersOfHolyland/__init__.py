@@ -9,6 +9,13 @@ qn = "273_InvadersOfHolyland"
 BLACK_SOULSTONE = 1475
 RED_SOULSTONE = 1476
 ADENA = 57
+#Newbie/one time rewards section
+#Any quest should rely on a unique bit, but
+#it could be shared among quest that were mutually
+#exclusive or race restricted.
+#Bit #1 isn't used for backwards compatibility.
+NEWBIE_REWARD = 4
+SOULSHOT_FOR_BEGINNERS = 5789
 
 class Quest (JQuest) :
 
@@ -71,6 +78,14 @@ class Quest (JQuest) :
         st.takeItems(RED_SOULSTONE,red)
         st.giveItems(ADENA,amount)
         st.playSound("ItemSound.quest_finish")
+     if red+black != 0 :
+        # check the player state against this quest newbie rewarding mark.
+       newbie = player.getNewbie()
+       if newbie | NEWBIE_REWARD != newbie :
+          player.setNewbie(newbie|NEWBIE_REWARD)
+          st.showQuestionMark(26)
+          st.playTutorialVoice("tutorial_voice_026")
+          st.giveItems(SOULSHOT_FOR_BEGINNERS,6000)
    return htmltext
 
  def onKill(self,npc,player,isPet):

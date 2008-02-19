@@ -11,6 +11,14 @@ ORC_AMULET = 752
 ORC_NECKLACE = 1085
 WEREWOLF_FANG = 1086
 ADENA = 57
+#Newbie/one time rewards section
+#Any quest should rely on a unique bit, but
+#it could be shared among quest that were mutually
+#exclusive or race restricted.
+#Bit #1 isn't used for backwards compatibility.
+NEWBIE_REWARD = 4
+SPIRITSHOT_FOR_BEGINNERS = 5790
+SOULSHOT_FOR_BEGINNERS = 5789
 
 class Quest (JQuest) :
 
@@ -53,6 +61,17 @@ class Quest (JQuest) :
      if orc_a==orc_n==wer_f==0 :
        htmltext = "30039-04.htm"
      else :
+       # check the player state against this quest newbie rewarding mark.
+       newbie = player.getNewbie()
+       if newbie | NEWBIE_REWARD != newbie :
+          player.setNewbie(newbie|NEWBIE_REWARD)
+          st.showQuestionMark(26)
+          if player.getClassId().isMage() :
+             st.playTutorialVoice("tutorial_voice_027")
+             st.giveItems(SPIRITSHOT_FOR_BEGINNERS,3000)
+          else :
+             st.playTutorialVoice("tutorial_voice_026")
+             st.giveItems(SOULSHOT_FOR_BEGINNERS,6000)
        st.giveItems(ADENA,5*orc_a+15*orc_n+10*wer_f)
        st.takeItems(ORC_AMULET,-1)
        st.takeItems(ORC_NECKLACE,-1)
