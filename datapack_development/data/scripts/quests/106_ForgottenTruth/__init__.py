@@ -13,6 +13,14 @@ ANCIENT_CLAY_TABLET, KARTAS_TRANSLATION, ELDRITCH_DAGGER  \
 = range(984,990)
 
 ORC = 27070
+#Newbie/one time rewards section
+#Any quest should rely on a unique bit, but
+#it could be shared among quest that were mutually
+#exclusive or race restricted.
+#Bit #1 isn't used for backwards compatibility.
+NEWBIE_REWARD = 2
+SPIRITSHOT_FOR_BEGINNERS = 5790
+SOULSHOT_FOR_BEGINNERS = 5789
 
 class Quest (JQuest) :
 
@@ -85,12 +93,17 @@ class Quest (JQuest) :
          for item in range(4412,4417) :
                st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))
          st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))
-         if player.getClassId().isMage() and st.getInt("onlyone") == 0:
-             st.giveItems(2509,500)
-             if player.getLevel() < 25 and player.isNewbie():
-                 st.giveItems(5790,3000)
-         elif st.getInt("onlyone") == 0:
-             st.giveItems(1835,1000)
+         if player.getClassId().isMage() :
+            st.giveItems(2509,500)
+         else :
+            st.giveItems(1835,1000)
+         # check the player state against this quest newbie rewarding mark.
+         newbie = player.getNewbie()
+         if newbie | NEWBIE_REWARD != newbie :
+            player.setNewbie(newbie|NEWBIE_REWARD)
+            if player.getClassId().isMage() :
+               st.giveItems(SPIRITSHOT_FOR_BEGINNERS,3000)
+               st.playTutorialVoice("tutorial_voice_027")
          st.unset("cond")
          st.exitQuest(False)
          st.playSound("ItemSound.quest_finish")

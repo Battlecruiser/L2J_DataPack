@@ -7,20 +7,25 @@ from net.sf.l2j import Config
 
 qn = "104_SpiritOfMirrors" 
 
-GALLINS_OAK_WAND_ID = 748 
-WAND_SPIRITBOUND1_ID = 1135 
-WAND_SPIRITBOUND2_ID = 1136 
-WAND_SPIRITBOUND3_ID = 1137 
-WAND_OF_ADEPT_ID = 747 
-SPIRITSHOT_NO_GRADE_FOR_BEGINNERS_ID = 5790 
+GALLINS_OAK_WAND = 748 
+WAND_SPIRITBOUND1 = 1135 
+WAND_SPIRITBOUND2 = 1136 
+WAND_SPIRITBOUND3 = 1137 
+WAND_OF_ADEPT = 747
+#Newbie/one time rewards section
+#Any quest should rely on a unique bit, but
+#it could be shared among quest that were mutually
+#exclusive or race restricted.
+#Bit #1 isn't used for backwards compatibility.
+NEWBIE_REWARD = 2
+SPIRITSHOT_NO_GRADE_FOR_BEGINNERS = 5790 
 SPIRITSHOT_NO_GRADE = 2509 
-SOULSHOT_NO_GRADE_FOR_BEGINNERS_ID = 5789
 SOULSHOT_NO_GRADE = 1835
 
 DROPLIST = { 
-27003: (WAND_SPIRITBOUND1_ID), 
-27004: (WAND_SPIRITBOUND2_ID), 
-27005: (WAND_SPIRITBOUND3_ID) 
+27003: (WAND_SPIRITBOUND1), 
+27004: (WAND_SPIRITBOUND2), 
+27005: (WAND_SPIRITBOUND3) 
 } 
 
 # Helper function - If player have all quest items returns 1, otherwise 0 
@@ -35,7 +40,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
    JQuest.__init__(self,id,name,descr)
-   self.questItemIds = [GALLINS_OAK_WAND_ID, WAND_SPIRITBOUND1_ID, WAND_SPIRITBOUND2_ID, WAND_SPIRITBOUND3_ID]
+   self.questItemIds = [GALLINS_OAK_WAND, WAND_SPIRITBOUND1, WAND_SPIRITBOUND2, WAND_SPIRITBOUND3]
 
  def onEvent (self,event,st) : 
     htmltext = event 
@@ -43,9 +48,9 @@ class Quest (JQuest) :
       st.set("cond","1") 
       st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept") 
-      st.giveItems(GALLINS_OAK_WAND_ID,1) 
-      st.giveItems(GALLINS_OAK_WAND_ID,1) 
-      st.giveItems(GALLINS_OAK_WAND_ID,1) 
+      st.giveItems(GALLINS_OAK_WAND,1) 
+      st.giveItems(GALLINS_OAK_WAND,1) 
+      st.giveItems(GALLINS_OAK_WAND,1) 
     return htmltext 
 
  def onTalk (self,npc,player): 
@@ -59,7 +64,8 @@ class Quest (JQuest) :
      st.set("onlyone","0") 
    if npcId == 30017 and st.getInt("cond")==0 and st.getInt("onlyone")==0 : 
      if player.getRace().ordinal() != 0 : 
-        htmltext = "30017-00.htm" 
+        htmltext = "30017-00.htm"
+        st.exitQuest(1)
      elif player.getLevel() >= 10 : 
         htmltext = "30017-02.htm" 
         return htmltext 
@@ -69,19 +75,24 @@ class Quest (JQuest) :
    elif npcId == 30017 and st.getInt("cond")==0 and st.getInt("onlyone")==1 : 
       htmltext = "<html><body>This quest has already been completed</body></html>" 
    elif id == State.STARTED : 
-     if npcId == 30017 and st.getInt("cond") and st.getQuestItemsCount(GALLINS_OAK_WAND_ID)>=1 and not HaveAllQuestItems(st) : 
+     if npcId == 30017 and st.getInt("cond") and st.getQuestItemsCount(GALLINS_OAK_WAND)>=1 and not HaveAllQuestItems(st) : 
         htmltext = "30017-04.htm" 
      elif npcId == 30017 and st.getInt("cond")==3 and HaveAllQuestItems(st) : 
         for mobId in DROPLIST.keys() :
             st.takeItems(DROPLIST[mobId],-1)
-        if player.getClassId().isMage() and st.getInt("onlyone") == 0:
+        if player.getClassId().isMage() :
           st.giveItems(SPIRITSHOT_NO_GRADE,500)
-          if player.getLevel() < 25 and player.isNewbie(): 
-            st.giveItems(SPIRITSHOT_NO_GRADE_FOR_BEGINNERS_ID,3000)
-        elif st.getInt("onlyone") == 0:
+        else :
           st.giveItems(SOULSHOT_NO_GRADE,1000)
+        # check the player state against this quest newbie rewarding mark.
+        newbie = player.getNewbie()
+        if newbie | NEWBIE_REWARD != newbie :
+           player.setNewbie(newbie|NEWBIE_REWARD)
+           if player.getClassId().isMage() :
+              st.giveItems(SPIRITSHOT_NO_GRADE_FOR_BEGINNERS,3000)
+              st.playTutorialVoice("tutorial_voice_027")
         st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))     # Lesser Healing Potions
-        st.giveItems(WAND_OF_ADEPT_ID,1)
+        st.giveItems(WAND_OF_ADEPT,1)
         for item in range(4412,4417) :
             st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))   # Echo crystals
         htmltext = "30017-05.htm" 
@@ -105,8 +116,8 @@ class Quest (JQuest) :
    if not st: return 
    if st.getState() != State.STARTED : return 
    npcId = npc.getNpcId() 
-   if st.getInt("cond") >= 1 and st.getItemEquipped(9) == GALLINS_OAK_WAND_ID and not st.getQuestItemsCount(DROPLIST[npcId]) : # (7) means weapon slot 
-     st.takeItems(GALLINS_OAK_WAND_ID,1) 
+   if st.getInt("cond") >= 1 and st.getItemEquipped(9) == GALLINS_OAK_WAND and not st.getQuestItemsCount(DROPLIST[npcId]) : # (7) means weapon slot 
+     st.takeItems(GALLINS_OAK_WAND,1) 
      st.giveItems(DROPLIST[npcId],1) 
      if HaveAllQuestItems(st) : 
        st.set("cond","3") 

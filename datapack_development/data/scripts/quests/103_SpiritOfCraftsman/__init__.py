@@ -17,6 +17,12 @@ PRESERVE_OIL_ID = 972
 ZOMBIE_HEAD_ID = 973
 STEELBENDERS_HEAD_ID = 974
 BLOODSABER_ID = 975
+#Newbie/one time rewards section
+#Any quest should rely on a unique bit, but
+#it could be shared among quest that were mutually
+#exclusive or race restricted.
+#Bit #1 isn't used for backwards compatibility.
+NEWBIE_REWARD = 8
 
 class Quest (JQuest) :
 
@@ -101,6 +107,13 @@ class Quest (JQuest) :
             st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
             st.set("onlyone","1")
+            # check the player state against this quest newbie rewarding mark.
+            newbie = player.getNewbie()
+            if newbie | NEWBIE_REWARD != newbie :
+               player.setNewbie(newbie|NEWBIE_REWARD)
+               if not player.getClassId().isMage() :
+                  st.giveItems(SOULSHOT_NO_GRADE_FOR_BEGINNERS,7000)
+                  st.playTutorialVoice("tutorial_voice_026")
    return htmltext
 
  def onKill(self,npc,player,isPet):
