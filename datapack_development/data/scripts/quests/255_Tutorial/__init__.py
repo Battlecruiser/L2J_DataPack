@@ -390,7 +390,7 @@ class Quest (JQuest) :
                 if classId in QMCc.keys():
                    htmltext = QMCc[classId]
         if htmltext == "": return
-        st.showTutorialHTML(htmltext)
+        st.showTutorialHTML(str(htmltext))
         return
  
 QUEST = Quest(255,qn,"Tutorial")
