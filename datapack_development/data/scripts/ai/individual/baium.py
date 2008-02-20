@@ -59,8 +59,6 @@ class baium (JQuest):
     self.baiumZone = GrandBossManager.getInstance().getZone(113100,14500,10077)
     self.baiumInfo = GrandBossManager.getInstance().getStatsSet(LIVE_BAIUM)
     status = GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM)
-
-    print "baium status  : ", status
     if status == DEAD :    
       # load the unlock date and time for baium from DB
       temp = long(self.baiumInfo.getLong("respawn_time")) - System.currentTimeMillis()
@@ -97,7 +95,6 @@ class baium (JQuest):
       self.addSpawn(STONE_BAIUM,115213,16623,10080,41740,False,0)
     elif event == "baium_wakeup" and npc:
       if npc.getNpcId() == LIVE_BAIUM :
-        print GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM)
         npc.broadcastPacket(SocialAction(npc.getObjectId(),1))
         npc.broadcastPacket(Earthquake(npc.getX(), npc.getY(), npc.getZ(),40,5))
         # start monitoring baium's inactivity
