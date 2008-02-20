@@ -44,6 +44,8 @@ DROP TABLE IF EXISTS fish;
 DROP TABLE IF EXISTS fishing_skill_trees;
 DROP TABLE IF EXISTS forums;
 DROP TABLE IF EXISTS global_tasks;
+DROP TABLE IF EXISTS grandboss_data;
+DROP TABLE IF EXISTS grandboss_list;
 DROP TABLE IF EXISTS helper_buff_list;
 DROP TABLE IF EXISTS henna;
 DROP TABLE IF EXISTS henna_trees;

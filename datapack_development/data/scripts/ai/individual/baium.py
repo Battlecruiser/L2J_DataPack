@@ -3,7 +3,7 @@
 
 import sys
 from net.sf.l2j.gameserver.ai import CtrlIntention
-from net.sf.l2j.gameserver.instancemanager import BossZoneManager
+from net.sf.l2j.gameserver.instancemanager import GrandBossManager
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -55,38 +55,49 @@ class baium (JQuest):
   def init_LoadGlobalData(self) :
     # initialize
     self.baiumState = ASLEEP
-    self.playersInside = []
     self.lastAttackVsBaiumTime = 0
-    self.baiumZone = BossZoneManager.getInstance().getZone(113100,14500,10077)
+    self.baiumZone = GrandBossManager.getInstance().getZone(113100,14500,10077)
+    self.baiumInfo = GrandBossManager.getInstance().getStatsSet(LIVE_BAIUM)
+    status = GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM)
 
-    # load the unlock date and time for baium from DB
-    temp = self.loadGlobalQuestVar("unlockDatetime")
-    # if baium is locked until a certain time, mark it so and start the unlock timer
-    if temp == "" :
-      self.addSpawn(STONE_BAIUM,115213,16623,10080,41740,False,0)
-    else :
-      # the unlock time has not yet expired.  Mark Baium as currently locked (dead).  Setup a timer
-      # to fire at the correct time (calculate the time between now and the unlock time,
-      # setup a timer to fire after that many msec)
-      temp = long(temp) - System.currentTimeMillis()
+    print "baium status  : ", status
+    if status == DEAD :    
+      # load the unlock date and time for baium from DB
+      temp = long(self.baiumInfo.getLong("respawn_time")) - System.currentTimeMillis()
       if temp > 0 :
+        # the unlock time has not yet expired.  Mark Baium as currently locked (dead).  Setup a timer
+        # to fire at the correct time (calculate the time between now and the unlock time,
+        # setup a timer to fire after that many msec)
         self.baiumState = DEAD
         self.startQuestTimer("baium_unlock", temp, None, None)
       else :
         # the time has already expired while the server was offline.  Delete the saved time and
         # immediately spawn the stone-baium.  Also the state need not be changed from ASLEEP
-        self.deleteGlobalQuestVar("unlockDatetime")
         self.addSpawn(STONE_BAIUM,115213,16623,10080,41740,False,0)
+    elif status == AWAKE :
+      self.baiumState = AWAKE
+      loc_x = self.baiumInfo.getInteger("loc_x")
+      loc_y = self.baiumInfo.getInteger("loc_y")
+      loc_z = self.baiumInfo.getInteger("loc_z")
+      heading = self.baiumInfo.getInteger("heading")
+      hp = self.baiumInfo.getInteger("currentHP")
+      mp = self.baiumInfo.getInteger("currentMP")
+      baium = self.addSpawn(LIVE_BAIUM,loc_x,loc_y,loc_z,heading,False,0)
+      baium.setCurrentHpMp(hp,mp)
+      baium.broadcastPacket(SocialAction(baium.getObjectId(),2))
+      self.startQuestTimer("baium_wakeup",15000, baium, None)
+    else :
+      self.addSpawn(STONE_BAIUM,115213,16623,10080,41740,False,0)
     return
 
   def onAdvEvent (self,event,npc,player):
-    objId=0
     if event == "baium_unlock" :
       self.baiumState = ASLEEP
-      self.deleteGlobalQuestVar("unlockDatetime")
+      GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM,ASLEEP)
       self.addSpawn(STONE_BAIUM,115213,16623,10080,41740,False,0)
     elif event == "baium_wakeup" and npc:
       if npc.getNpcId() == LIVE_BAIUM :
+        print GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM)
         npc.broadcastPacket(SocialAction(npc.getObjectId(),1))
         npc.broadcastPacket(Earthquake(npc.getX(), npc.getY(), npc.getZ(),40,5))
         # start monitoring baium's inactivity
@@ -97,18 +108,18 @@ class baium (JQuest):
     # despawn the live baium after 30 minutes of inactivity
     # also check if the players are cheating, having pulled Baium outside his zone...
     elif event == "baium_despawn" and npc:
-      if (npc.getNpcId() == LIVE_BAIUM) :
+      if npc.getNpcId() == LIVE_BAIUM :
+        # just in case the zone reference has been lost (somehow...), restore the reference
+        if not self.baiumZone :
+          self.baiumZone = GrandBossManager.getInstance().getZone(113100,14500,10077)
         if (self.lastAttackVsBaiumTime + 1800000 < System.currentTimeMillis()) :
           npc.deleteMe()   # despawn the live-baium
           self.addSpawn(STONE_BAIUM,115213,16623,10080,41740,False,0)  # spawn stone-baium
-          self.deleteGlobalQuestVar("unlockDatetime")  # make sure that all locks are deleted from the DB
-          self.baiumState = ASLEEP    # mark that Baium is not awake any more 
-          self.playersInside = []
+          self.baiumState = ASLEEP    # mark that Baium is not awake any more
+          GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM,ASLEEP)
+          self.baiumZone.oustAllPlayers()
           self.cancelQuestTimer("baium_despawn", npc, None)
         else :
-          # just in case the zone reference has been lost (somehow...), restore the reference
-          if not self.baiumZone :
-            self.baiumZone = BossZoneManager.getInstance().getZone(113100,14500,10077)
           # if Baium is not inside his zone (i.e. he has been pulled outside), teleport him back in.
           if not self.baiumZone.isInsideZone(npc) :
             npc.teleToLocation(115213,16623,10080)
@@ -117,17 +128,18 @@ class baium (JQuest):
   def onTalk (self,npc,player):
     npcId = npc.getNpcId()
     htmltext = ""
+    if not self.baiumZone :
+      self.baiumZone = GrandBossManager.getInstance().getZone(113100,14500,10077)
     if npcId == STONE_BAIUM and self.baiumState == ASLEEP:
-      if player in self.playersInside :
+      if self.baiumZone.isPlayerAllowed(player) :
         # once Baium is awaken, no more people may enter until he dies, the server reboots, or 
         # 30 minutes pass with no attacks made against Baium.
         self.baiumState = AWAKE
-
+        GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM,AWAKE)
         npc.deleteMe()
         baium = self.addSpawn(LIVE_BAIUM,npc)
         baium.broadcastPacket(SocialAction(baium.getObjectId(),2))
         self.startQuestTimer("baium_wakeup",15000, baium, None)
-        self.playersInside = []
       else:
         htmltext = "Conditions are not right to wake up Baium"
     elif npcId == ANGELIC_VORTEX :
@@ -135,15 +147,12 @@ class baium (JQuest):
         if player.isFlying() :
           print "Player "+player.getName()+" attempted to enter Baium's layer while flying!"
           htmltext = '<html><body>Angelic Vortex:<br>You may not enter while flying a wyvern</body></html>'
-        if player.getQuestState("baium").getQuestItemsCount(4295) : # bloody fabric
+        elif player.getQuestState("baium").getQuestItemsCount(4295) : # bloody fabric
           player.getQuestState("baium").takeItems(4295,1)
           # allow entry for the player for the next 30 secs (more than enough time for the TP to happen)
           # Note: this just means 30secs to get in, no limits on how long it takes before we get out.
-          if not self.baiumZone :
-            self.baiumZone = BossZoneManager.getInstance().getZone(113100,14500,10077)
           self.baiumZone.allowPlayerEntry(player,30)
           player.teleToLocation(113100,14500,10077)
-          self.playersInside.append(player)
         else :
           htmltext = '<html><body>Angelic Vortex:<br>You do not have enough items</body></html>'
       else :
@@ -156,18 +165,16 @@ class baium (JQuest):
     
   def onKill(self,npc,player,isPet):
     self.cancelQuestTimer("baium_despawn", npc, None)    
-    objId=npc.getObjectId()
-    npc.broadcastPacket(PlaySound(1, "BS02_D", 1, objId, npc.getX(), npc.getY(), npc.getZ()))
+    npc.broadcastPacket(PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()))
     # spawn the "Teleportation Cubic" for 15 minutes (to allow players to exit the lair)
-    self.addSpawn(29055,115203,16620,10078,0,False,900000)
-    
+    self.addSpawn(29055,115203,16620,10078,0,False,900000) ##should we teleport everyone out if the cubic despawns??
     # "lock" baium for 5 days and 1 to 8 hours [i.e. 432,000,000 +  1*3,600,000 + random-less-than(8*3,600,000) millisecs]
-    respawnTime = 435600000 + Rnd.get(8*3600000)
+    respawnTime = (121 + Rnd.get(8)) * 3600000
     self.baiumState = DEAD
+    GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM,DEAD)
     self.startQuestTimer("baium_unlock", respawnTime, None, None)
     # also save the respawn time so that the info is maintained past reboots
-    self.saveGlobalQuestVar("unlockDatetime", str(System.currentTimeMillis() + respawnTime))
-    
+    GrandBossManager.getInstance().setStatsSet(npc.getNpcId(),self.baiumInfo.set("respawn_time",(System.currentTimeMillis() + respawnTime)))
 
 # Quest class and state definition
 QUEST       = baium(-1, "baium", "ai")
