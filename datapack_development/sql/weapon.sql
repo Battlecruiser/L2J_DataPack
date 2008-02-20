@@ -1575,7 +1575,7 @@ INSERT INTO `weapon` VALUES
 (9813,'Orc Officer','lrhand','true',2150,1,1,'wood','none',213,0,'dual',8,0.00000,0,0,0,325,0,91,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,0,0),
 (9819,'Combat flag','lhand','true',500,1,1,'wood','none',0,0,'none',0,0.00000,0,0,0,325,0,0,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,0,0),
 (9840,'Shadow Item: Chevalier Rapier','rhand','false',473,2,2,'wood','d',111,0,'rapier',10,-1.00000,0,0,0,406,0,68,300,0,0,'false','false','true','false',0,0,0,0,0,0,0,0,0,0,0),
-(9841,'Shadow Item: Riter Schlager','lrhand','false',667,2,2,'wood','d',132,0,'ancient',6,2.00000,0,0,0,350,0,68,300,0,0,'false','false','true','false',0,0,0,0,0,0,0,0,0,0,0),
+(9841,'Shadow Item: Riter Schlager','lrhand','false',667,2,2,'wood','c',132,0,'ancient',6,2.00000,0,0,0,350,0,68,300,0,0,'false','false','true','false',0,0,0,0,0,0,0,0,0,0,0),
 (9842,'Shadow Item: Ballista','lrhand','false',590,2,2,'wood','d',155,0,'crossbow',10,-1.00000,0,0,0,303,9,68,300,0,0,'false','false','true','false',0,0,0,0,0,0,0,0,0,0,0),
 (9843,'Shadow Item: Blinzlasher','rhand','false',467,3,3,'wood','c',126,0,'rapier',10,-1.00000,0,0,0,406,0,76,300,0,0,'false','false','true','false',0,0,0,0,0,0,0,0,0,0,0),
 (9844,'Shadow Item: Immortal Edge','lrhand','false',660,3,3,'wood','c',151,0,'ancient',6,2.00000,0,0,0,350,0,76,300,0,0,'false','false','true','false',0,0,0,0,0,0,0,0,0,0,0),
