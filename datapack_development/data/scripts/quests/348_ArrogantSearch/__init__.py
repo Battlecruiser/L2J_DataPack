@@ -6,7 +6,6 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.serverpackets import RadarControl
 #Quest info
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 348,"ArrogantSearch","An Arrogant Search"
 qn = "348_ArrogantSearch"
@@ -187,11 +186,11 @@ class Quest (JQuest) :
             if st.getQuestItemsCount(ARK_OWNERS[npcId][0])==1:
                 st.takeItems(ARK_OWNERS[npcId][0],1)
                 htmltext = ARK_OWNERS[npcId][2]
-                player.sendPacket(RadarControl(0,1,ARK_OWNERS[npcId][5][0],ARK_OWNERS[npcId][5][1],ARK_OWNERS[npcId][5][2]))
+                st.addRadar(ARK_OWNERS[npcId][5][0],ARK_OWNERS[npcId][5][1],ARK_OWNERS[npcId][5][2])
             # do not have letter and do not have the item
             elif st.getQuestItemsCount(ARK_OWNERS[npcId][1]) < 1:
                 htmltext = ARK_OWNERS[npcId][3]
-                player.sendPacket(RadarControl(0,1,ARK_OWNERS[npcId][5][0],ARK_OWNERS[npcId][5][1],ARK_OWNERS[npcId][5][2]))
+                st.addRadar(ARK_OWNERS[npcId][5][0],ARK_OWNERS[npcId][5][1],ARK_OWNERS[npcId][5][2])
             else:   #have the item (done)
                 htmltext = ARK_OWNERS[npcId][4]
         elif npcId in ARKS.keys():
