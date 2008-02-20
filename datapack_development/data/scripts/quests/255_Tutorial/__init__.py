@@ -128,6 +128,7 @@ class Quest (JQuest) :
  
     def onAdvEvent(self,event,npc,player):
         st = player.getQuestState(qn)
+        classId = int(st.getPlayer().getClassId().getId())
         string = event[0:2]
         htmltext = ""
         # USER CONNECTED #
@@ -165,7 +166,6 @@ class Quest (JQuest) :
         elif string == "QT" :
             Ex = st.getInt("Ex")
             if Ex == -2 :
-               classId = int(st.getPlayer().getClassId().getId())
                if classId in QTEXMTWO.keys():
                   voice, htmltext = QTEXMTWO[classId]
                   st.playTutorialVoice(voice)
@@ -173,8 +173,6 @@ class Quest (JQuest) :
                      st.giveItems(5588,1)
                   st.startQuestTimer("QT",30000)
                   st.set("Ex","-3")
-               else :
-                  print "Incorrect class ID: "+str(classId)+" for table QTEXMTWO, please report me at http://www.l2jdp.com/trac/timeline/"
             elif Ex == -3 :
                 st.playTutorialVoice("tutorial_voice_002")
                 st.set("Ex","0")
@@ -218,25 +216,16 @@ class Quest (JQuest) :
             elif event_id == 12 :
                 st.closeTutorialHtml()
             elif event_id == 23 :
-                classId = int(st.getPlayer().getClassId().getId())
                 if classId in TCLb.keys():
                    htmltext = TCLb[classId]
-                else :
-                   print "Incorrect class ID: "+str(classId)+" for table TCLb, please report me at http://www.l2jdp.com/trac/timeline/"
             elif event_id == 24 :
-                classId = int(st.getPlayer().getClassId().getId())
                 if classId in TCLc.keys():
                    htmltext = TCLc[classId]
-                else :
-                   print "Incorrect class ID: "+str(classId)+" for table TCLc, please report me at http://www.l2jdp.com/trac/timeline/"
             elif event_id == 25 :
                 htmltext = "tutorial_22cc.htm"
             elif event_id == 26 :
-                classId = int(st.getPlayer().getClassId().getId())
                 if classId in TCLa.keys():
                    htmltext = TCLa[classId]
-                else :
-                   print "Incorrect class ID: "+str(classId)+" for table TCLa, please report me at http://www.l2jdp.com/trac/timeline/"
             elif event_id == 27 :
                 htmltext = "tutorial_29.htm"
             elif event_id == 28 :
@@ -260,7 +249,6 @@ class Quest (JQuest) :
                     st.onTutorialClientEvent(2138046216)
             elif event_id == 2138046216 :
                 if playerLevel < 6 :
-                    classId = int(st.getPlayer().getClassId().getId())
                     if classId in CEEa.keys():
                        htmltext, x, y, z = CEEa[classId]
                        st.playSound("ItemSound.quest_tutorial")
@@ -268,8 +256,6 @@ class Quest (JQuest) :
                        st.playTutorialVoice("tutorial_voice_007")
                        st.set("ucMemo","1")
                        st.set("Ex","-5")
-                    else :
-                       print "Incorrect class ID: "+str(classId)+" for table CEEa, please report me at http://www.l2jdp.com/trac/timeline/"
             elif event_id == 30 :
                 if playerLevel < 6 and st.getInt("Die") == 0:
                     st.playTutorialVoice("tutorial_voice_016")
@@ -287,7 +273,7 @@ class Quest (JQuest) :
             elif event_id == 40 :
                 if playerLevel == 5 and player.getClassId().level() == 0:
                    if st.getInt("lvl") < 5 :
-                    if not player.getClassId().isMage() or int(st.getPlayer().getClassId().getId()) == 49:
+                    if not player.getClassId().isMage() or classId == 49:
                      st.playTutorialVoice("tutorial_voice_014")
                      st.showQuestionMark(9)
                      st.playSound("ItemSound.quest_tutorial")
@@ -297,7 +283,7 @@ class Quest (JQuest) :
                    st.playSound("ItemSound.quest_tutorial")
                    st.showQuestionMark(24)
                    st.set("lvl","6")
-                elif playerLevel == 7 and player.getClassId().isMage() and int(st.getPlayer().getClassId().getId()) != 49:
+                elif playerLevel == 7 and player.getClassId().isMage() and classId != 49:
                    if st.getInt("lvl") < 7 and player.getClassId().level() == 0:
                       st.playTutorialVoice("tutorial_voice_019")
                       st.playSound("ItemSound.quest_tutorial")
@@ -313,7 +299,6 @@ class Quest (JQuest) :
                    if st.getInt("lvl") < 19:
                       race = st.getPlayer().getRace().ordinal()
                       if race != 5 and player.getClassId().level() == 0 :
-                         classId = int(st.getPlayer().getClassId().getId())
                          if classId in [0,10,18,25,31,38,44,49,52]:
                            #st.playTutorialVoice("tutorial_voice_???")
                            st.playSound("ItemSound.quest_tutorial")
@@ -323,7 +308,6 @@ class Quest (JQuest) :
                    if st.getInt("lvl") < 35:
                       race = st.getPlayer().getRace().ordinal()
                       if race != 5 and player.getClassId().level() == 1 :
-                         classId = int(st.getPlayer().getClassId().getId())
                          if classId in [1,4,7,11,15,19,22,26,29,32,35,39,42,45,47,50,54,56]:
                            #st.playTutorialVoice("tutorial_voice_???")
                            st.playSound("ItemSound.quest_tutorial")
@@ -354,26 +338,19 @@ class Quest (JQuest) :
         # QUESTION MARK CLICKED [N] #
  
         elif string == "QM" :
-            classId = int(st.getPlayer().getClassId().getId())
             MarkId = int(event[2:])
             if MarkId == 1 :
                 st.playTutorialVoice("tutorial_voice_007")
                 st.set("Ex","-5")
-                classId = int(st.getPlayer().getClassId().getId())
                 if classId in CEEa.keys():
                    htmltext, x, y, z = CEEa[classId]
                    st.addRadar(x,y,z)
-                else :
-                   print "Incorrect class ID: "+str(classId)+" for table CEEa, please report me at http://www.l2jdp.com/trac/timeline/"
             elif MarkId == 3 :
                 htmltext = "tutorial_09.htm"
             elif MarkId == 5 :
-                classId = int(st.getPlayer().getClassId().getId())
                 if classId in CEEa.keys():
                    htmltext, x, y, z = CEEa[classId]
                    st.addRadar(x,y,z)
-                else :
-                   print "Incorrect class ID: "+str(classId)+" for table CEEa, please report me at http://www.l2jdp.com/trac/timeline/"
                 htmltext = "tutorial_11.htm"
             elif MarkId == 7 :
                 htmltext = "tutorial_15.htm"
@@ -381,21 +358,15 @@ class Quest (JQuest) :
             elif MarkId == 8 :
                 htmltext = "tutorial_18.htm"
             elif MarkId == 9 :
-                classId = int(st.getPlayer().getClassId().getId())
                 if classId in QMCa.keys():
                    htmltext, x, y, z = QMCa[classId]
                    st.addRadar(x,y,z)
-                else :
-                   print "Incorrect class ID: "+str(classId)+" for table QMCa, please report me at http://www.l2jdp.com/trac/timeline/"
             elif MarkId == 10 :
                 htmltext = "tutorial_19.htm"
             elif MarkId == 11 :
-                classId = int(st.getPlayer().getClassId().getId())
                 if classId in QMCa.keys():
                    htmltext, x, y, z = QMCa[classId]
                    st.addRadar(x,y,z)
-                else :
-                   print "Incorrect class ID: "+str(classId)+" for table QMCa, please report me at http://www.l2jdp.com/trac/timeline/"
             elif MarkId == 12 :
                 htmltext = "tutorial_15.htm"
                 st.set("ucMemo","4")
@@ -404,11 +375,8 @@ class Quest (JQuest) :
             elif MarkId == 23 :
                 htmltext = "tutorial_24.htm"
             elif MarkId == 24 :
-                classId = int(st.getPlayer().getClassId().getId())
                 if classId in QMCb.keys():
                    htmltext = QMCb[classId]
-                else :
-                   print "Incorrect class ID: "+str(classId)+" for table QMCb, please report me at http://www.l2jdp.com/trac/timeline/"
             elif MarkId == 26 :
                 if st.getPlayer().getClassId().isMage() and classId != 49 :
                     htmltext = "tutorial_newbie004b.htm"
@@ -419,11 +387,8 @@ class Quest (JQuest) :
             elif MarkId == 34 :
                 htmltext = "tutorial_28.htm"
             elif MarkId == 35 :
-                classId = int(st.getPlayer().getClassId().getId())
                 if classId in QMCc.keys():
                    htmltext = QMCc[classId]
-                else :
-                   print "Incorrect class ID: "+str(classId)+" for table QMCc, please report me at http://www.l2jdp.com/trac/timeline/"
         if htmltext == "": return
         st.showTutorialHTML(htmltext)
         return
