@@ -16,7 +16,6 @@ from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver.serverpackets      import PledgeShowInfoUpdate
-from net.sf.l2j.gameserver.serverpackets      import RadarControl
 from net.sf.l2j.gameserver.serverpackets      import SystemMessage
 
 qn="508_TheClansReputation"
@@ -84,8 +83,7 @@ class Quest (JQuest) :
       htmltext="30868-"+event+".htm"
       x,y,z=RADAR[int(event)]
       if x+y+z:
-        player.sendPacket(RadarControl(2, 2, x, y, z))
-        player.sendPacket(RadarControl(0, 1, x, y, z))
+        st.addRadar(x, y, z)
       st.playSound("ItemSound.quest_accept")
   elif event == "30868-7.htm" :
     st.playSound("ItemSound.quest_finish")

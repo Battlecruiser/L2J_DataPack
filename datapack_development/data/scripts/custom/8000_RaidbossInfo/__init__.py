@@ -4,7 +4,6 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.serverpackets import RadarControl
 
 qn = "8000_RaidbossInfo"
 
@@ -226,7 +225,6 @@ RADAR={
 29065:[26528,-8244,-2007]     #Sailren (lvl87)
 }
 
-
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -240,8 +238,7 @@ class Quest (JQuest) :
      rbid = int(event)
      if rbid in RADAR.keys():
        x,y,z=RADAR[rbid]
-       player.sendPacket(RadarControl(2, 2, x, y, z))
-       player.sendPacket(RadarControl(0, 1, x, y, z))
+       st.addRadar(x,y,z)
      st.exitQuest(1)
    return htmltext
 
