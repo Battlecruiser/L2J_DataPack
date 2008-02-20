@@ -991,7 +991,6 @@ INSERT INTO `armor` VALUES
 (9081,'Shadow Item: Dark Crystal Breastplate','chest','false','heavy',2567,'crystal','a',0,600,171,0,0,0,0,'false','false','true','false',0,0),
 (9082,'Shadow Item: Dark Crystal Gaiters','legs','false','heavy',1107,'crystal','a',0,600,107,0,0,0,0,'false','false','true','false',0,0),
 (9083,'Shadow Item: Dark Crystal Helmet','head','false','none',190,'crystal','a',0,600,69,0,0,0,0,'false','false','true','false',0,0),
-(9084,'Shadow Item: Dark Crystal Helmet','head','true','none',570,'crystal','a',0,90,69,0,0,1740000,139,'true','true','true','true',0,0),
 (9085,'Shadow Item: Dark Crystal Gloves','gloves','false','none',193,'leather','a',0,600,46,0,0,0,0,'false','false','true','false',0,0),
 (9086,'Shadow Item: Dark Crystal Boots','feet','false','none',370,'crystal','a',0,600,46,0,0,0,0,'false','false','true','false',0,0),
 (9087,'Shadow Item: Dark Crystal Leather Armor','chest','false','light',1433,'leather','a',0,600,128,0,0,0,0,'false','false','true','false',0,0),
