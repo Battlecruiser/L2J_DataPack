@@ -23,6 +23,7 @@ BLOODSABER_ID = 975
 #exclusive or race restricted.
 #Bit #1 isn't used for backwards compatibility.
 NEWBIE_REWARD = 8
+SOULSHOT_FOR_BEGINNERS = 5789
 
 class Quest (JQuest) :
 
@@ -112,7 +113,7 @@ class Quest (JQuest) :
             if newbie | NEWBIE_REWARD != newbie :
                player.setNewbie(newbie|NEWBIE_REWARD)
                if not player.getClassId().isMage() :
-                  st.giveItems(SOULSHOT_NO_GRADE_FOR_BEGINNERS,7000)
+                  st.giveItems(SOULSHOT_FOR_BEGINNERS,7000)
                   st.playTutorialVoice("tutorial_voice_026")
    return htmltext
 

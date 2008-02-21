@@ -25,7 +25,7 @@ def newbie_rewards(st) :
   newbie = player.getNewbie()
   if newbie | NEWBIE_REWARD != newbie :
      player.setNewbie(newbie|NEWBIE_REWARD)
-     st.giveItems(SOULSHOT_NO_GRADE_FOR_BEGINNERS,6000)
+     st.giveItems(SOULSHOT_FOR_BEGINNERS,6000)
      st.playTutorialVoice("tutorial_voice_026")
   
 
