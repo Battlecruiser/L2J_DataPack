@@ -1441,7 +1441,7 @@
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="20"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="120000"/>
   <set name="hitTime" val="3000"/>
@@ -2151,7 +2151,7 @@
 <skill id="98" levels="5" name="Sword Symphony">
   <table name="#mpConsume"> 120 133 142 152 160 </table>
   <table name="#magicLvl"> 55 60 64 68 72 </table>
-  <table name="#power"> 229.0 284.0 321.0 382.0 432.0 </table>
+  <table name="#power"> 229 284 332 382 432 </table> <!-- This has been increased on Kamael. Needs update -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -2165,9 +2165,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="effectType" val="FEAR"/>
-  <set name="effectPower" val="15"/>
+  <set name="effectPower" val="20"/> <!-- This has been increased on Kamael, possibly to 40 -->
   <for>
-    <effect count="5" name="Fear" time="6" val="0"/>
+    <effect count="5" name="Fear" time="3" val="0"/>
   </for>
 </skill>
 <skill id="99" levels="2" name="Rapid Shot" enchantLevels1="30" enchantLevels2="30" >
