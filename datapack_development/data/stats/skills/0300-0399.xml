@@ -745,11 +745,8 @@
   <set name="effectRange" val="400"/>
   <for>
     <effect self="1" count="1" name="Buff" time="15" val="0" stackOrder="40" stackType="SpeedUpS">
-      <!-- 0x10 appears to be the correct order -->
-      <add order="0x10" stat="rCrit" val="45">
-        <using kind="Dagger" skill="0321"/>
-      </add>
       <add order="0x30" stat="runSpd" val="40"/>
+    <!-- Needs core support for "causes the enemy to show his/her back" -->
     </effect>
   </for>
 </skill>
