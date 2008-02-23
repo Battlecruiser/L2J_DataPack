@@ -49,78 +49,78 @@ QMCa = {
     }
 # table for Question Mark Clicked (24) newbie lvl [html]
 QMCb = {
-    0  : ["tutorial_human009.htm"],
-    10 : ["tutorial_human009.htm"],
-    18 : ["tutorial_elf009.htm"],
-    25 : ["tutorial_elf009.htm"],
-    31 : ["tutorial_delf009.htm"],
-    38 : ["tutorial_delf009.htm"],
-    44 : ["tutorial_orc009.htm"],
-    49 : ["tutorial_orc009.htm"],
-    53 : ["tutorial_dwarven009.htm"],
-    123: ["tutorial_kamael009.htm"],
-    124: ["tutorial_kamael009.htm"]
+    0  : "tutorial_human009.htm",
+    10 : "tutorial_human009.htm",
+    18 : "tutorial_elf009.htm",
+    25 : "tutorial_elf009.htm",
+    31 : "tutorial_delf009.htm",
+    38 : "tutorial_delf009.htm",
+    44 : "tutorial_orc009.htm",
+    49 : "tutorial_orc009.htm",
+    53 : "tutorial_dwarven009.htm",
+    123: "tutorial_kamael009.htm",
+    124: "tutorial_kamael009.htm"
     }
 # table for Question Mark Clicked (35) 1st class transfer [html]
 QMCc = {
-    0  : ["tutorial_21.htm"],
-    10 : ["tutorial_21a.htm"],
-    18 : ["tutorial_21b.htm"],
-    25 : ["tutorial_21c.htm"],
-    31 : ["tutorial_21g.htm"],
-    38 : ["tutorial_21h.htm"],
-    44 : ["tutorial_21d.htm"],
-    49 : ["tutorial_21e.htm"],
-    53 : ["tutorial_21f.htm"]
+    0  : "tutorial_21.htm",
+    10 : "tutorial_21a.htm",
+    18 : "tutorial_21b.htm",
+    25 : "tutorial_21c.htm",
+    31 : "tutorial_21g.htm",
+    38 : "tutorial_21h.htm",
+    44 : "tutorial_21d.htm",
+    49 : "tutorial_21e.htm",
+    53 : "tutorial_21f.htm"
     }
 # table for Tutorial Close Link (26) 2nd class transfer [html]
 TCLa = {
-    1  : ["tutorial_22w.htm"],
-    4  : ["tutorial_22.htm"],
-    7  : ["tutorial_22b.htm"],
-    11 : ["tutorial_22c.htm"],
-    15 : ["tutorial_22d.htm"],
-    19 : ["tutorial_22e.htm"],
-    22 : ["tutorial_22f.htm"],
-    26 : ["tutorial_22g.htm"],
-    29 : ["tutorial_22h.htm"],
-    32 : ["tutorial_22n.htm"],
-    35 : ["tutorial_22o.htm"],
-    39 : ["tutorial_22p.htm"],
-    42 : ["tutorial_22q.htm"],
-    45 : ["tutorial_22i.htm"],
-    47 : ["tutorial_22j.htm"],
-    50 : ["tutorial_22k.htm"],
-    54 : ["tutorial_22l.htm"],
-    56 : ["tutorial_22m.htm"]
+    1  : "tutorial_22w.htm",
+    4  : "tutorial_22.htm",
+    7  : "tutorial_22b.htm",
+    11 : "tutorial_22c.htm",
+    15 : "tutorial_22d.htm",
+    19 : "tutorial_22e.htm",
+    22 : "tutorial_22f.htm",
+    26 : "tutorial_22g.htm",
+    29 : "tutorial_22h.htm",
+    32 : "tutorial_22n.htm",
+    35 : "tutorial_22o.htm",
+    39 : "tutorial_22p.htm",
+    42 : "tutorial_22q.htm",
+    45 : "tutorial_22i.htm",
+    47 : "tutorial_22j.htm",
+    50 : "tutorial_22k.htm",
+    54 : "tutorial_22l.htm",
+    56 : "tutorial_22m.htm"
     }
 # table for Tutorial Close Link (23) 2nd class transfer [html]
 TCLb = {
-    4  : ["tutorial_22aa.htm"],
-    7  : ["tutorial_22ba.htm"],
-    11 : ["tutorial_22ca.htm"],
-    15 : ["tutorial_22da.htm"],
-    19 : ["tutorial_22ea.htm"],
-    22 : ["tutorial_22fa.htm"],
-    26 : ["tutorial_22ga.htm"],
-    32 : ["tutorial_22na.htm"],
-    35 : ["tutorial_22oa.htm"],
-    39 : ["tutorial_22pa.htm"],
-    50 : ["tutorial_22ka.htm"]
+    4  : "tutorial_22aa.htm",
+    7  : "tutorial_22ba.htm",
+    11 : "tutorial_22ca.htm",
+    15 : "tutorial_22da.htm",
+    19 : "tutorial_22ea.htm",
+    22 : "tutorial_22fa.htm",
+    26 : "tutorial_22ga.htm",
+    32 : "tutorial_22na.htm",
+    35 : "tutorial_22oa.htm",
+    39 : "tutorial_22pa.htm",
+    50 : "tutorial_22ka.htm"
     }
 # table for Tutorial Close Link (24) 2nd class transfer [html]
 TCLc = {
-    4  : ["tutorial_22ab.htm"],
-    7  : ["tutorial_22bb.htm"],
-    11 : ["tutorial_22cb.htm"],
-    15 : ["tutorial_22db.htm"],
-    19 : ["tutorial_22eb.htm"],
-    22 : ["tutorial_22fb.htm"],
-    26 : ["tutorial_22gb.htm"],
-    32 : ["tutorial_22nb.htm"],
-    35 : ["tutorial_22ob.htm"],
-    39 : ["tutorial_22pb.htm"],
-    50 : ["tutorial_22kb.htm"]
+    4  : "tutorial_22ab.htm",
+    7  : "tutorial_22bb.htm",
+    11 : "tutorial_22cb.htm",
+    15 : "tutorial_22db.htm",
+    19 : "tutorial_22eb.htm",
+    22 : "tutorial_22fb.htm",
+    26 : "tutorial_22gb.htm",
+    32 : "tutorial_22nb.htm",
+    35 : "tutorial_22ob.htm",
+    39 : "tutorial_22pb.htm",
+    50 : "tutorial_22kb.htm"
     }
 class Quest (JQuest) :
  
