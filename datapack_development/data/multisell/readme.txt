@@ -88,6 +88,8 @@ of this directory a little bit.
 317885009.xml -> Adventure Guildsman: Use Life Crystal Gludin
 317925010.xml -> Adventure Guildsman: Use Life Crystal Gludio
 317975011.xml -> Adventure Guildsman: Use Life Crystal Dion
+320825001.xml -> Adventure Guildsman: Use Life Crystal for A weapons
+320825002.xml -> Adventure Guildsman: Use Life Crystal for A armors
 
 350980001.xml -> Manor Products: Gludio
 350980002.xml -> Manor Products: Dion
