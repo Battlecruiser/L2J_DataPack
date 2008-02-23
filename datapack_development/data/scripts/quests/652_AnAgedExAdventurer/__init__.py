@@ -4,8 +4,6 @@ from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.model.actor.instance import L2NpcInstance
-from net.sf.l2j.gameserver.datatables import SpawnTable
 
 qn = "652_AnAgedExAdventurer"
 #Npc
@@ -60,7 +58,6 @@ class Quest (JQuest) :
    return htmltext
 
 QUEST       = Quest(652,qn,"AnAgedExAdventurer")
-
 
 QUEST.addStartNpc(TANTAN)
 

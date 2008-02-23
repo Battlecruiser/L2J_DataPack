@@ -3,7 +3,6 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.serverpackets import MagicSkillUse
 
 qn = "653_WildMaiden"
 #Npc
@@ -28,14 +27,10 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_accept")
         st.takeItems(SOE,1)
         htmltext = "32013-03.htm"
-        npc.broadcastPacket(MagicSkillUse(npc,npc,2013,1,20000,0))
-        st.startQuestTimer("suki_timer",20000,npc)
+        npc.deleteMe()
     elif event == "32013-04a.htm" :
         st.exitQuest(1)
         st.playSound("ItemSound.quest_giveup")
-    elif event == "suki_timer":
-        npc.deleteMe()
-        htmltext=None
     return htmltext
 
  def onTalk (self,npc,player):
@@ -58,9 +53,7 @@ class Quest (JQuest) :
        st.exitQuest(1)
    return htmltext
 
-
 QUEST       = Quest(653,qn,"Wild Maiden")
-
 
 QUEST.addStartNpc(SUKI)
 
