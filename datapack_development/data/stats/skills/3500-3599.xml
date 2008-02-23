@@ -1336,6 +1336,7 @@
 </skill>
 <skill id="3578" levels="1" name="Special Ability: Infinity Blade">
   <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAPON_SA"/>
@@ -1360,19 +1361,21 @@
   Description(s):
       Temporarily decreases P. Def. Effect 3
 -->
+  <set name="magicLvl" val="80"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="0.77" stackType="pDefDown">
       <mul order="0x30" stat="pDef" val="0.77"/>
     </effect>
   </for>
 </skill>
 <skill id="3580" levels="1" name="Special Ability: Infinity Axe">
   <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAPON_SA"/>
@@ -1396,17 +1399,19 @@
   Description(s):
       none
 -->
+  <set name="magicLvl" val="80"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="5" name="ConfuseMob" time="6" val="0"/>
+    <effect count="5" name="ConfuseMob" time="4" val="0"/>
   </for>
 </skill>
 <skill id="3582" levels="1" name="Special Ability: Infinity Cleaver">
   <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAPON_SA"/>
@@ -1427,6 +1432,7 @@
 </skill>
 <skill id="3583" levels="1" name="Special Ability: Infinity Crusher">
   <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAPON_SA"/>
@@ -1451,6 +1457,7 @@
   Description(s):
       Instantly throws enemy into a state of shock, Immobilizing them.
 -->
+  <set name="magicLvl" val="80"/>
   <set name="castRange" val="-1"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="WEAPON_SA"/>
@@ -1464,6 +1471,7 @@
 </skill>
 <skill id="3585" levels="1" name="Special Ability: Infinity Wing">
   <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAPON_SA"/>
@@ -1489,6 +1497,7 @@
   Description(s):
       Temporarily blocks opponent's ability to use physical skills.
 -->
+  <set name="magicLvl" val="80"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1500,6 +1509,7 @@
 </skill>
 <skill id="3587" levels="1" name="Special Ability: Infinity Fang">
   <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAPON_SA"/>
@@ -1525,6 +1535,7 @@
   Description(s):
       Instantly throws enemy into a state of shock, Immobilizing them.
 -->
+  <set name="magicLvl" val="80"/>
   <set name="castRange" val="-1"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="WEAPON_SA"/>
@@ -1538,6 +1549,7 @@
 </skill>
 <skill id="3589" levels="1" name="Special Ability: Infinity Stinger">
   <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAPON_SA"/>
@@ -1567,6 +1579,7 @@
   Description(s):
       Temporarily blocks the use of magic skills.
 -->
+  <set name="magicLvl" val="80"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1578,6 +1591,7 @@
 </skill>
 <skill id="3591" levels="1" name="Special Ability: Infinity Spear">
   <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAPON_SA"/>
@@ -1604,6 +1618,7 @@
   Description(s):
       none
 -->
+  <set name="magicLvl" val="80"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1613,6 +1628,7 @@
 </skill>
 <skill id="3593" levels="1" name="Special Ability: Infinity Bow">
   <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAPON_SA"/>
@@ -1634,19 +1650,21 @@
   Description(s):
       Temporarily reduces target's Speed. Effect 3.
 -->
+  <set name="magicLvl" val="80"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0">
+    <effect count="1" name="Buff" time="120" val="0">
       <mul order="0x30" stat="runSpd" val="0.5"/>
     </effect>
   </for>
 </skill>
 <skill id="3595" levels="1" name="Special Ability: Infinity Scepter">
   <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAPON_SA"/>
@@ -1673,6 +1691,7 @@
   Description(s):
       none
 -->
+  <set name="magicLvl" val="80"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1683,6 +1702,7 @@
 </skill>
 <skill id="3597" levels="1" name="Special Ability: Infinity Rod">
   <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAPON_SA"/>
@@ -1707,6 +1727,7 @@
   Description(s):
       none
 -->
+  <set name="magicLvl" val="80"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
