@@ -492,7 +492,7 @@
   <!-- Baium Skills -->
   <set name="magicLvl" val="75"/>
   <set name="lvlDepend" val="1"/>
-  <set name="power" val="500.0"/>
+  <set name="power" val="500.0"/> <!-- Needs to be cheked -->
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="coolTime" val="1000"/>
@@ -508,7 +508,7 @@
   <!-- Baium Skills -->
   <set name="magicLvl" val="75"/>
   <set name="lvlDepend" val="1"/>
-  <set name="power" val="14000.0"/>
+  <set name="power" val="14000"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="600"/>
   <set name="coolTime" val="1700"/>
@@ -524,7 +524,7 @@
   <!-- Baium Skills -->
   <set name="magicLvl" val="75"/>
   <set name="lvlDepend" val="1"/>
-  <set name="power" val="4000.0"/>
+  <set name="power" val="4000"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="250"/>
   <set name="coolTime" val="2500"/>
@@ -541,7 +541,7 @@
   <!-- Baium Skills -->
   <set name="magicLvl" val="75"/>
   <set name="lvlDepend" val="1"/>
-  <set name="power" val="367.0"/>
+  <set name="power" val="367"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="300"/>
   <set name="coolTime" val="4000"/>
@@ -557,6 +557,7 @@
   <!-- Baium Skills -->
   <set name="magicLvl" val="75"/>
   <set name="lvlDepend" val="1"/>
+  <set name="power" val="10"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="150"/>
   <set name="coolTime" val="1400"/>
@@ -584,12 +585,15 @@
   </for>
 </skill>
 <skill id="4133" levels="1" name="Angel Heal">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="75"/>
+  <set name="power" val="1000"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2000"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="HEAL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1000"/>
   <set name="aggroPoints" val="100"/>
   <for>
   </for>
@@ -605,12 +609,15 @@
   </for>
 </skill>
 <skill id="4135" levels="1" name="Baium Heal">
-  <set name="power" val="0.0"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="75"/>
+  <set name="power" val="1000000"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="100"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="HEAL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
   <for>
   </for>
