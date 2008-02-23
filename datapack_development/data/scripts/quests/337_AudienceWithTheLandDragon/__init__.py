@@ -53,7 +53,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
-     self.questItemIds = range((3852,3865)+[3890]
+     self.questItemIds = range(3852,3865)+[3890]
 
  def onAdvEvent (self,event,npc,player):
      if player :
