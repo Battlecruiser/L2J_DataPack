@@ -200,7 +200,7 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <skill onCrit='1' id='3581' lvl='1' chance='5'/> <!-- chance of Curse Discord effect on a critical hit -->
+    <skill onCrit='1' id='3581' lvl='1' chance='20'/> <!-- chance of Curse Discord effect on a critical hit -->
   </for>
 </item>
 <item id='6614' name="infinity_rod">
@@ -212,6 +212,7 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <!-- Needs core support for: 3% chance to full heal target's HP when "good" magic is cast -->
   </for>
 </item>
 <item id='6615' name="infinity_crusher">
@@ -235,6 +236,7 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <!-- Needs core support for: 3% chance to full heal target's HP when "good" magic is cast -->
   </for>
 </item>
 <item id='6617' name="infinity_stinger">
@@ -295,6 +297,7 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
+    <skill onCrit='1' id='3592' lvl='1' chance='10'/> <!-- 10% chance to cancel each buff from target on a critical hit (for comparison, Cancel is 25% but Cancel also relies on M.Atk. vs. M.Def. while this weapon does not) -->
   </for>
 </item>
 <item id='6678' name="sealed_imperial_crusader_shield">
