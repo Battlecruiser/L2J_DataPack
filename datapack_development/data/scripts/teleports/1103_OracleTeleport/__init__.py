@@ -101,6 +101,7 @@ class Quest (JQuest) :
  def onTalk (Self, npc, player):
     st = player.getQuestState(qn)
     if not st: return
+    htmltext = None
     npcId = npc.getNpcId()
     ##################
     # Dawn Locations #
