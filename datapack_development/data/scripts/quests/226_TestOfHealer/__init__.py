@@ -42,6 +42,7 @@ TATOMA = 27134
 LETO_LEADER = 27123
 LETO_ASSASSIN = 27124
 LETO_SNIPER = 27125
+LETO_WIZARD = 27126
 LETO_LORD = 27127
 
 #this handles all dropdata, npcId:[condition,maxcount,item,next condition]
