@@ -30,11 +30,17 @@ COLLECTION = {
 }
 #name:[boots,gloves,helm],
 REWARD={
-"DarkCryst":[5368,5392,5426],
-"Tallum":   [5370,5394,5428],
-"Nightmare":[5380,5404,5430],
-"Majestic": [5382,5406,5432],
+"DarkCryst":[5525,5508,5496],
+"Tallum":   [5526,5509,5497],
+"Nightmare":[5527,5514,5502],
+"Majestic": [5528,5515,5503],
+"Wald_DarkCryst":[5368,5392,5426,5525,5508,5496], # Walderal includes recipes
+"Wald_Tallum":   [5370,5394,5428,5526,5509,5497], # Walderal includes recipes
+"Wald_Nightmare":[5380,5404,5430,5527,5514,5502], # Walderal includes recipes
+"Wald_Majestic": [5382,5406,5432,5528,5515,5503], # Walderal includes recipes
 }
+#Recipes for 100% option
+RECIPES=[5368,5392,5426,5370,5394,5428,5380,5404,5430,5382,5406,5432]
 #NPCs Area
 WALDERAL,DESMOND,CLAUDIA,PATRIN,HOLLY=30844,30855,31001,30929,30839
 #Npc: ("Needed Collectibles","Reward recipes")
@@ -75,15 +81,14 @@ def check_n_take(st,collection) :
 
 def give_reward(st,reward) :
     luck = st.getRandom(REWARD_RATE[-1])
-    prize = []   # dirty iterated copy to avoid reference problems after lists' element deletion
-    for h in range(len(REWARD[reward])):
-        prize.append(REWARD[reward][h])
+    prize = REWARD[reward]
     if ALT_RP_100 != 0 :
        for i in range(len(prize)) :
-           prize[i]+=1
-    if luck < REWARD_RATE[0] :            # best reward: 3 recipes
-       for j in range(len(prize)) :
-           st.giveItems(prize[j],1)
+           if prize[i] in RECIPES:        # dont want to change keys materials, just recipes
+             prize[i]+=1
+    if luck < REWARD_RATE[0] :            # best reward: all items from collection
+       for j in prize :
+           st.giveItems(j,1)
     elif luck < REWARD_RATE[1] :          # worst reward: 4000a
        st.giveItems(57,4000) 
     elif luck < REWARD_RATE[2] :          # quite nice : 2 recipes
@@ -92,7 +97,7 @@ def give_reward(st,reward) :
           st.giveItems(prize[l],1)
           del prize[l]
     else :                                # ordinary reward: 1 recipe
-       st.giveItems(prize[st.getRandom(3)],1)
+       st.giveItems(prize[st.getRandom(len(prize))],1)
 
 
 class Quest (JQuest) :
