@@ -570,18 +570,18 @@ Description(s):
       Lvl 1 - Active: Momentarily increases resistance to shock attacks.
       Lvl 2 - Active: Momentarily gives complete resistance to shock attacks.
 -->
-  <table name="#vuln"> 0.85 0.8 </table>
-  <table name="#stack"> 15 20 </table>
+  <table name="#vuln"> 0.5 0.0 </table>
+  <table name="#stack"> 50 100 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="reuseDelay" val="6000"/>
+  <set name="reuseDelay" val="1800000"/>
   <set name="hitTime" val="0"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/> 
   <for>
-     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#stack" stackType="ShockVuln">
+     <effect count="1" name="Buff" time="10" val="0" stackOrder="#stack" stackType="ShockVuln">
       <mul order="0x30" stat="stunVuln" val="#vuln"/>
     </effect>
   </for>
