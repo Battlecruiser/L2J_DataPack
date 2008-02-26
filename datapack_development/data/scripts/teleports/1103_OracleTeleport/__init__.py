@@ -118,7 +118,7 @@ class Quest (JQuest) :
        st.set("id",str(TELEPORTERS[npcId]))
        st.playSound("ItemSound.quest_accept")
        st.getPlayer().teleToLocation(-81261,86531,-5157)
-    elif npcId in range(31494,31508) +range(31095,31112)+range(31114,31125):
+    elif npcId in range(31494,31508) +range(31095,31111)+range(31114,31125):
        if player.getLevel() < 20 :
           st.exitQuest(1)
           htmltext="1.htm"
@@ -130,7 +130,7 @@ class Quest (JQuest) :
        else :
           st.setState(State.CREATED)
           htmltext="4.htm"
-    elif npcId in range(31095,31112)+range(31114,31125):
+    elif npcId in range(31095,31111)+range(31114,31125):
        if player.getLevel() < 20 :
           st.exitQuest(1)
           htmltext="ziggurats not supported yet"
@@ -142,14 +142,14 @@ class Quest (JQuest) :
        else :
           #st.setState(State.CREATED)
           htmltext="ziggurats not supported yet"
-    return
+    return htmltext
 
 QUEST      = Quest(1103, qn, "Teleports")
 
 for i in TELEPORTERS :
     QUEST.addStartNpc(i)
     QUEST.addTalkId(i)
-for k in range(31494,31508)+range(31095,31112)+range(31114,31125):
+for k in range(31494,31508)+range(31095,31111)+range(31114,31125):
     QUEST.addStartNpc(k)
     QUEST.addTalkId(k)
 for j in TEMPLE_PRIEST :
