@@ -14,7 +14,7 @@ class Quest (JQuest) :
      # first initialize the quest.  The superclass defines variables, instantiates States, etc
      JQuest.__init__(self,id,name,descr)
      # Next, override necessary variables:
-     self.NPC = [32138, 31627, 32223, 32227, 32236, 31646, 31647, 31650, 31654, 31655, 31656, 32223]
+     self.NPC = [32138, 31627, 32223, 32227, 32236, 31646, 31647, 31650, 31654, 31655, 31656, 32227]
      self.Items = [7080, 9721, 7081, 9740, 9722, 9725, 9728, 9731, 9734, 9737, 9717, 0]
      self.Mob = [27324, 27325, 27326]
      self.qn = qn
