@@ -1360,17 +1360,19 @@
   <set name="element" val="2"/> <!-- Fire -->
   <set name="magicLvl" val="60"/>
   <set name="lvlDepend" val="1"/>
-  <set name="power" val="379.0"/>
+  <set name="power" val="379"/>
   <set name="mpConsume" val="400"/>
   <set name="target" val="TARGET_AREA"/>
-  <set name="skillRadius" val="300"/>
+  <set name="skillRadius" val="200"/>
   <set name="hitTime" val="3600"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="6000"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
-  <cond msg="You can only use Wyvern Breath when flying"><player flying="true"/></cond>
+  <cond msg="You can only use Wyvern Breath when flying">
+    <player flying="true"/>
+  </cond>
   <for>
   </for>
 </skill>
