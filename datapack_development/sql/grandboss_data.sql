@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS grandboss_data (
   PRIMARY KEY(`boss_id`)
 );
 
-INSERT INTO `grandboss_data` VALUES 
+INSERT IGNORE INTO `grandboss_data` VALUES 
 
 (29019, 185708,114298,-8221,32768, 0, 13090000, 22197, 0),	-- Antharas
 (29020, 115213,16623,10080,41740, 0, 790857, 3347, 0);	-- Baium
