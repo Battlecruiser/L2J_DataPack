@@ -144,7 +144,7 @@ class Quest (JQuest) :
 
 QUEST      = Quest(1103, qn, "Teleports")
 
-for i in TELEPORTERS + range(31494,31508)+range(31095,31111)+range(31114,31125) :
+for i in TELEPORTERS.keys() :#+ range(31095,31111) + range(31114,31125) : #ziggurats not supported yet
     QUEST.addStartNpc(i)
     QUEST.addTalkId(i)
 for j in TEMPLE_PRIEST :
