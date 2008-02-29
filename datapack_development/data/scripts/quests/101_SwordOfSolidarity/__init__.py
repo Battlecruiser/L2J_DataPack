@@ -47,6 +47,7 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_finish")
         st.set("onlyone","1")
         # check the player state against this quest newbie rewarding mark.
+        player = st.getPlayer()
         newbie = player.getNewbie()
         if newbie | NEWBIE_REWARD != newbie :
            player.setNewbie(newbie|NEWBIE_REWARD)
