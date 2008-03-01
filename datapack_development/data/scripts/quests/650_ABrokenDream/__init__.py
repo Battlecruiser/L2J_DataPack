@@ -45,17 +45,23 @@ class Quest (JQuest) :
         if id == State.CREATED :
             Ocean = player.getQuestState("117_OceanOfDistantStar")
             if st.getPlayer().getLevel() < 39:
-                st.exitQuest(1)
                 htmltext="100.htm"
+                st.exitQuest(1)
             elif Ocean:
                 if Ocean.getState() == 'State.COMPLETED':
                     htmltext="200.htm"
+
                 else :
-                	htmltext = "600.htm"#TODO: This is custom, need to get official text from retail
+                    htmltext = "600.htm"
+                    st.exitQuest(1)
             else :
-            	htmltext = "600.htm" #TODO: This is custom, need to get official text from retail
+            	htmltext = "600.htm"
+                st.exitQuest(1)
         elif id == State.STARTED :
-            htmltext = "400.htm"
+            if st.getQuestItemsCount(DREAM_FRAGMENT_ID):
+               htmltext = "2a.htm"
+            else :
+               htmltext = "400.htm"
    return htmltext
 
  def onKill(self,npc,player,isPet):

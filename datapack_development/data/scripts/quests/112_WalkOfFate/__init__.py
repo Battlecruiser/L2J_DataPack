@@ -29,6 +29,10 @@ class Quest (JQuest) :
         st.giveItems(EnchantD,1)
         st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
+    elif event == "30572-02.htm"
+        st.playSound("ItemSound.quest_accept")
+        st.setState(State.STARTED)
+        st.set("cond","1")
     return htmltext
 
  def onTalk (self,npc,player):        
@@ -41,19 +45,16 @@ class Quest (JQuest) :
     if state == State.COMPLETED :
         htmltext = "<html><body>This quest has already been completed.</body></html>"
     elif state == State.CREATED :
-        if player.getLevel() >= 20 and player.getLevel() <= 36 and npcId == Livina :
-            htmltext = "30572-01.htm" # quest start
-            st.playSound("ItemSound.quest_accept")
-            st.setState(State.STARTED)
-            st.set("cond","1")
-        else:
-            htmltext = "30572-00.htm"
-            st.exitQuest(1)
-            st.playSound("ItemSound.quest_giveup")
+        if npcId == Livina :
+            if player.getLevel() >= 20 :
+               htmltext = "30572-01.htm"
+            else:
+               htmltext = "30572-00.htm"
+               st.exitQuest(1)
     elif state == State.STARTED :
         if npcId == Livina :
-            htmltext = "<html><body>Seer Livina:<br>Go talk to Karuda!</body></html>"#this is custom, need official html Contrib
-        if npcId == Karuda :
+            htmltext = "30572-03.htm"
+        elif npcId == Karuda :
             htmltext = "32017-01.htm"
     return htmltext
 
