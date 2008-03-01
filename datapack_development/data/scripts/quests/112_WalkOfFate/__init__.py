@@ -29,7 +29,7 @@ class Quest (JQuest) :
         st.giveItems(EnchantD,1)
         st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
-    elif event == "30572-02.htm"
+    elif event == "30572-02.htm" :
         st.playSound("ItemSound.quest_accept")
         st.setState(State.STARTED)
         st.set("cond","1")
