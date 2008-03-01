@@ -18,10 +18,14 @@ class Quest (JQuest) :
   def onEvent(self, event, st):
     htmltext = event
     if event == "32041-2.htm" :
-      st.playSound("ItemSound.quest_finish")
-      st.addExpAndSp(10000,0)
-      st.unset("cond")
-      st.exitQuest(False)
+       st.playSound("ItemSound.quest_finish")
+       st.addExpAndSp(10000,0)
+       st.unset("cond")
+       st.exitQuest(False)
+    elif event == "31961-1.htm" :
+       st.set("cond","1")
+       st.setState(State.STARTED)
+       st.playSound("ItemSound.quest_accept")
     return htmltext
 
   def onTalk(self, npc, player):
@@ -34,24 +38,20 @@ class Quest (JQuest) :
     if id == State.COMPLETED:
        htmltext = "<html><body>This quest has already been completed.</body></html>"
     elif id == State.CREATED and npcId == NEWYEAR :
-      if player.getLevel() >= 46 :
-        htmltext = "31961-1.htm"
-        st.set("cond","1")
-        st.setState(State.STARTED)
-        st.playSound("ItemSound.quest_accept")
-      else:
-        htmltext = "31961-1a.htm"
-        st.exitQuest(1)
+       if player.getLevel() >= 46 :
+          htmltext = "31961-1.htm"
+       else:
+          htmltext = "31961-1a.htm"
+          st.exitQuest(1)
     elif id == State.STARTED:
-      if npcId == YUMI :
-        if cond == 1 :
+       if npcId == YUMI :
+         if cond == 1 :
             htmltext = "32041-1.htm"
-      else :
-        htmltext = "31961-2.htm"
+       else :
+         htmltext = "31961-2.htm"
     return htmltext    
 
 QUEST=Quest(121,qn,"Pavel The Giants")
-
 
 QUEST.addStartNpc(NEWYEAR)
 QUEST.addTalkId (NEWYEAR)
