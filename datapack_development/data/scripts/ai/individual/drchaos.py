@@ -56,7 +56,7 @@ class Quest (JQuest) :
           self.startQuestTimer("6",1000,golem,player)
           player.sendPacket(PlaySound(1,"Rm03_A",0,0,0,0,0))
     elif event == "6" :
-       npc.broadcastPacket(SpecialCamera(golem.getObjectId(),30,-200,20,6000,8000))
+       npc.broadcastPacket(SpecialCamera(npc.getObjectId(),30,-200,20,6000,8000))
     return
 
   def onFirstTalk (self,npc,player):
