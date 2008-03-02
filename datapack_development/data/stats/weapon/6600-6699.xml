@@ -212,7 +212,7 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- Needs core support for: 3% chance to full heal target's HP when "good" magic is cast -->
+    <skill onCast='1' id='3598' lvl='1' chance='3'/> <!-- 3% chance to full heal target's HP when "good" magic is cast -->
   </for>
 </item>
 <item id='6615' name="infinity_crusher">
@@ -236,7 +236,7 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- Needs core support for: 3% chance to full heal target's HP when "good" magic is cast -->
+    <skill onCast='1' id='3596' lvl='1' chance='3'/> <!-- 3% chance to full heal target's HP when "good" magic is cast -->
   </for>
 </item>
 <item id='6617' name="infinity_stinger">
