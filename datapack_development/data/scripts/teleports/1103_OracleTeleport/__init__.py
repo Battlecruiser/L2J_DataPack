@@ -1,8 +1,8 @@
 # Originally Created by Ham Wong on 2007.03.07
 # updated by Kerberos on 2008.01.13
 # fixed by Emperorc on 2008.02.28
-import sys
 
+import sys
 from net.sf.l2j.gameserver.model.quest          import State
 from net.sf.l2j.gameserver.model.quest          import QuestState
 from net.sf.l2j.gameserver.model.quest.jython   import QuestJython as JQuest
@@ -11,7 +11,8 @@ qn = "1103_OracleTeleport"
 
 TOWN_DAWN = [31078,31079,31080,31081,31082,31083,31084,31692,31694,31997,31168]
 TOWN_DUSK = [31085,31086,31087,31088,31089,31090,31091,31693,31695,31998,31169]
-TEMPLE_PRIEST = [31127,31128,31129,31130,31131,31137,31138,31139,31140,31141] + range(31488,31494)
+TEMPLE_PRIEST = range(31127,31132) + range(31137,31142)
+RIFT_GUARDS = range(31488,31494)
 
 TELEPORTERS = {
 # Dawn
@@ -67,30 +68,30 @@ RETURN_LOCS = [[-80555,150337,-3040],[-13953,121404,-2984],[16354,142820,-2696],
               [45256,123906,-5411],[46192,170290,-4981],[111273,174015,-5437],[-20604,-250789,-8165], \
               [-21726, 77385,-5171],[140405, 79679,-5427],[-52366, 79097,-4741],[118311,132797,-4829], \
               [172185,-17602,-4901],[ 83000,209213,-5439],[-19500, 13508,-4901],[113865, 84543,-6541]]
+
 class Quest (JQuest) :
 
  def __init__(self, id, name, descr): JQuest.__init__(self, id, name, descr)
 
- def onEvent (self,event,st) : 
+ def onAdvEvent (self,event,npc,player):
+    st = player.getQuestState(qn)
+    if not st: return
     htmltext = event
-    count=st.getInt("count")
     if event == "Return":
+       npcId = npc.getNpcId()
        if npcId in TEMPLE_PRIEST and st.getState() == State.STARTED :
           x,y,z = RETURN_LOCS[st.getInt("id")]
-          st.getPlayer().teleToLocation(x,y,z)
+          player.teleToLocation(x,y,z)
           st.exitQuest(1)
        return
-    elif event == "Dimensional":
-       htmltext = "oracle.htm"
-       st.getPlayer().teleToLocation(-114755,-179466,-6752)
     elif event == "5.htm" :
         npcId = npc.getNpcId()
-        if count:
+        id = st.getInt("id")
+        if id:
             htmltext="5a.htm"
-        st.set("count",str(count+1))
         st.set("id",str(TELEPORTERS[npcId]))
         st.setState(State.STARTED)
-        st.getPlayer().teleToLocation(-114790,-180576,-6781)
+        player.teleToLocation(-114790,-180576,-6781)
     elif event == "6.htm" :
        st.exitQuest(1)
     return htmltext
@@ -116,6 +117,13 @@ class Quest (JQuest) :
        st.set("id",str(TELEPORTERS[npcId]))
        st.playSound("ItemSound.quest_accept")
        st.getPlayer().teleToLocation(-81261,86531,-5157)
+    elif npcId in RIFT_GUARDS :
+        x,y,z = RETURN_LOCS[st.getInt("id")]
+        player.teleToLocation(x,y,z)
+        st.exitQuest(1)
+    elif npcId in TEMPLE_PRIEST :
+        htmltext = "oracle.htm"
+        player.teleToLocation(-114755,-179466,-6752)
     elif npcId in range(31494,31508):# +range(31095,31111)+range(31114,31125):
        if player.getLevel() < 20 :
           st.exitQuest(1)
@@ -126,7 +134,7 @@ class Quest (JQuest) :
        elif not st.getQuestItemsCount(7079) :
           htmltext="3.htm"
        else :
-          st.setState(State.CREATED)
+          st.setState(State.STARTED)
           htmltext="4.htm"
     elif npcId in range(31095,31111)+range(31114,31125):
        if player.getLevel() < 20 :
@@ -144,8 +152,6 @@ class Quest (JQuest) :
 
 QUEST      = Quest(1103, qn, "Teleports")
 
-for i in TELEPORTERS.keys() :#+ range(31095,31111) + range(31114,31125) : #ziggurats not supported yet
+for i in TELEPORTERS.keys() + RIFT_GUARDS + TEMPLE_PRIEST:#+ range(31095,31111) + range(31114,31125) : #ziggurats not supported yet
     QUEST.addStartNpc(i)
     QUEST.addTalkId(i)
-for j in TEMPLE_PRIEST :
-    QUEST.addTalkId(j)
