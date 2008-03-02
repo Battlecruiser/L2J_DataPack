@@ -51,13 +51,12 @@ class Quest (JQuest) :
        player.teleToLocation(94832,-112624,-3304)
        npc.teleToLocation(-113091,-243942,-15536)
        if self.isGolemSpawned == 0 :
-          self.addSpawn(25512,94640,-112496,-3336,0,False,0)
+          golem = self.addSpawn(25512,94640,-112496,-3336,0,False,0)
           self.isGolemSpawned == 1
-          self.startQuestTimer("6",1000,npc,player)
+          self.startQuestTimer("6",1000,golem,player)
           player.sendPacket(PlaySound(1,"Rm03_A",0,0,0,0,0))
     elif event == "6" :
-       golem = self.FindTemplate(Chaos_Golem)
-       golem.broadcastPacket(SpecialCamera(golem.getObjectId(),30,-200,20,6000,8000))
+       npc.broadcastPacket(SpecialCamera(golem.getObjectId(),30,-200,20,6000,8000))
     return
 
   def onFirstTalk (self,npc,player):
