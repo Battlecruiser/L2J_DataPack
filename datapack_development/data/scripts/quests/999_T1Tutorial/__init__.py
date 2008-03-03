@@ -136,6 +136,7 @@ class Quest (JQuest) :
       st = self.newQuestState(player)
    qs = st.getPlayer().getQuestState(qnTutorial)
    if not qs : return
+   htmltext = ""
    Ex = qs.getInt("Ex")
    npcId = npc.getNpcId()
    id = st.getState()
