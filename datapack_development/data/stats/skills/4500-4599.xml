@@ -154,15 +154,20 @@ one's level by 9 or more. This curse cannot be undone. -->
   </for>
 </skill>
 <skill id="4516" levels="1" name="Orfen Heal">
-<!-- TODO -->
-  <set name="mpConsume" val="80"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="hitTime" val="2000"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="600"/>
+  <!-- Done by DJ MELERIX -->
   <set name="aggroPoints" val="100"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="hitTime" val="2000"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="99"/>
+  <set name="mpInitialConsume" val="16"/>
+  <set name="mpConsume" val="64"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="5600"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillType" val="HEAL"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
   </for>
 </skill>
