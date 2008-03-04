@@ -1355,15 +1355,11 @@
   </for>
 </skill>
 <skill id="3579" levels="1" name="Decrease P. Def.">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Temporarily decreases P. Def. Effect 3
--->
+<!-- Infinity Blade Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1393,20 +1389,15 @@
   </for>
 </skill>
 <skill id="3581" levels="1" name="Discord">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      none
--->
+<!-- Infinity Axe Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="CONFUSION"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="5" name="ConfuseMob" time="4" val="0"/>
+    <effect count="5" name="Confusion" time="4" val="0"/>
   </for>
 </skill>
 <skill id="3582" levels="1" name="Special Ability: Infinity Cleaver">
@@ -1451,16 +1442,12 @@
   </for>
 </skill>
 <skill id="3584" levels="1" name="Shock">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Instantly throws enemy into a state of shock, Immobilizing them.
--->
+<!-- Infinity Crusher Skill -->
   <set name="magicLvl" val="80"/>
+  <set name="power" val="0.0"/>
   <set name="castRange" val="-1"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="STUN"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1491,15 +1478,11 @@
   </for>
 </skill>
 <skill id="3586" levels="1" name="Physical Skill Restraint">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Temporarily blocks opponent's ability to use physical skills.
--->
+<!-- Infinity Wing Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1529,16 +1512,12 @@
   </for>
 </skill>
 <skill id="3588" levels="1" name="Shock">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Instantly throws enemy into a state of shock, Immobilizing them.
--->
+<!-- Infinity Fang Skill -->
   <set name="magicLvl" val="80"/>
+  <set name="power" val="0.0"/>
   <set name="castRange" val="-1"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="STUN"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1573,15 +1552,11 @@
   </for>
 </skill>
 <skill id="3590" levels="1" name="Silence">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Temporarily blocks the use of magic skills.
--->
+<!-- Infinity Stinger Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="MUTE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1612,17 +1587,16 @@
   </for>
 </skill>
 <skill id="3592" levels="1" name="Dispell">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      none
--->
+<!-- Infinity Spear Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="CANCEL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="negateStats" val="BUFF"/>
+  <set name="negatePower" val="8.0"/>
   <for>
   </for>
 </skill>
@@ -1644,15 +1618,11 @@
   </for>
 </skill>
 <skill id="3594" levels="1" name="Slow">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Temporarily reduces target's Speed. Effect 3.
--->
+<!-- Infinity Bow Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1681,12 +1651,12 @@
     <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="MpConsumeRate" val="0.96"/> <!-- Magic MP Cost -4% -->
     <sub order="0x40" stat="cancel" val="106"/> <!-- Chance of Magic Cancelation -106 -->
-    <!-- Missing 3% chance to full heal target's HP when "good" magic is cast -->
   </for>
 </skill>
 <skill id="3596" levels="1" name="Full Recover">
+  <!-- Infinity Scepter Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="target" val="TARGET_SELF"/> <!-- Needs to be Checked -->
+  <set name="target" val="TARGET_SELF"/>
   <set name="power" val="100"/>
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1713,12 +1683,12 @@
     <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
-    <!-- Missing 3% chance to full heal target's HP when "good" magic is cast -->
   </for>
 </skill>
 <skill id="3598" levels="1" name="Full Recover">
+  <!-- Infinity Rod Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="target" val="TARGET_SELF"/> <!-- Needs to be Checked -->
+  <set name="target" val="TARGET_SELF"/>
   <set name="power" val="100"/>
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
