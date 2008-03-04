@@ -1438,7 +1438,6 @@
   </for>
 </skill>
 <skill id="1359" levels="1" name="Block Wind Walk">
-  <!-- needs to remove speed buffs on target -->
   <set name="mpInitialConsume" val="14"/>
   <set name="mpConsume" val="56"/>
   <set name="magicLvl" val="77"/>
@@ -1453,7 +1452,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="99" stackType="RunSpeedDown">
+    <effect count="1" name="Buff" time="30" val="0" stackOrder="99" stackType="SpeedUp"> <!-- SpeedUp here is for remove speed buffs on target -->
       <mul order="0x30" stat="runSpd" val="0.9"/>
     </effect>
   </for>
@@ -1481,7 +1480,6 @@
   </for>
 </skill>
 <skill id="1361" levels="1" name="Mass Block Wind Walk">
-  <!-- needs to remove speed buffs in target aura -->
   <set name="mpInitialConsume" val="22"/>
   <set name="mpConsume" val="85"/>
   <set name="magicLvl" val="78"/>
@@ -1497,7 +1495,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="99" stackType="RunSpeedDown">
+    <effect count="1" name="Buff" time="30" val="0" stackOrder="99" stackType="SpeedUp"> <!-- SpeedUp here is for remove speed buffs on target -->
       <mul order="0x30" stat="runSpd" val="0.9"/>
     </effect>
   </for>
