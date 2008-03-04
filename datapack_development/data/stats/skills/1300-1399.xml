@@ -1524,16 +1524,17 @@
   </for>
 </skill>
 <skill id="1363" levels="1" name="Chant of Victory">
+  <set name="magicLvl" val="78"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="40"/>
   <set name="mpInitialConsume" val="57"/>
   <set name="mpConsume" val="284"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="20"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="1200000"/>
   <set name="hitTime" val="2500"/>
-  <set name="skillType" val="BUFF"/>
+  <set name="skillType" val="HEAL_PERCENT"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
