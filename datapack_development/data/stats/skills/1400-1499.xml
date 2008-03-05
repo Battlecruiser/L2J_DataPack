@@ -785,16 +785,39 @@
     <effect count="45" name="DamOverTime" time="1" val="#dmg"/>
   </for>
 </skill>
-<skill id="1436" levels="30" name="Soul of Pain">
+<skill id="1436" levels="30" name="Soul of Pain" enchantLevels1="30" enchantLevels2="30">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Unleash a soul to attack an enemy. Has a chance to remove the enemy's target. Consumes 1 Soul. Power 50-108.
+      Enchant1 + Power. Enchant2 +Cost.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
+  <table name="#ench1Power"> 111 112 112 112 113 113 113 114 114 115 115 115 116 116 116 117 117 117 118 118 119 119 119 120 120 120 121 121 121 122 </table>
+  <table name="#ench2MpConsume"> 69 68 67 65 64 63 62 60 60 59 58 57 55 54 53 52 50 49 48 48 47 45 44 43 42 40 39 38 37 37 </table>
+  <table name="#mpConsume">28 29 30 30 33 33 35 35 38 38 40 40 43 43 44 45 45 47 48 48 49 49 50 52 52 53 53 54 54 55</table>
+  <table name="#power">50 52 55 57 60 61 65 66 70 72 75 77 80 82 84 85 87 88 90 92 94 96 97 99 100 102 104 105 107 108</table>
+  <table name="#magicLvl">38 40 42 43 45 46 48 49 51 52 54 55 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="element" val="6" /><!-- Dark -->
+  <set name="reuseDelay" val="15000"/>
+  <set name="hitTime" val="1200"/>
+  <set name="coolTime" val="300" />
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="700"/>
+  <set name="effectRange" val="1100"/>
+  <set name="soulConsumeCount" val="1"/>
+  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
+    <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </for>
 </skill>
 <skill id="1437" levels="26" name="Dark Flame">
