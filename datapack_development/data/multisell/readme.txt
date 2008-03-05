@@ -91,6 +91,11 @@ of this directory a little bit.
 320825001.xml -> Adventure Guildsman: Use Life Crystal for A weapons
 320825002.xml -> Adventure Guildsman: Use Life Crystal for A armors
 
+317606001.xml -> Adventurers' Guide Miss Queen: Give Newbie Coupon
+317606002.xml -> Adventurers' Guide Miss Queen: Return Newbie Coupon
+317606003.xml -> Adventurers' Guide Miss Queen: Give Traveler Coupon
+317606004.xml -> Adventurers' Guide Miss Queen: Return Traveler Coupon
+
 350980001.xml -> Manor Products: Gludio
 350980002.xml -> Manor Products: Dion
 350980003.xml -> Manor Products: Giran
