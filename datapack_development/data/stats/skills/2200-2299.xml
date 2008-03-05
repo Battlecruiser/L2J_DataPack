@@ -520,10 +520,17 @@
   </for>
 </skill>
 <skill id="2260" levels="1" name="Key of Riddles">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="CREATE_ITEM"/>
+  <set name="hitTime" val="500"/>
+  <set name="reuseDelay" val="0"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="itemConsumeId" val="8058" />
+  <set name="itemConsumeCount" val="1"/>
+  <set name="create_item_id" val="8059"/>
+  <set name="create_item_count" val="1"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
