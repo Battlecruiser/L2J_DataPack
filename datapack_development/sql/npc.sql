@@ -8341,3 +8341,4 @@ update npc set AI = 'mage' where name like 'court sorce%';
 update npc set AI = 'mage' where id = 21796;
 update npc set AI = 'balanced' where type like '%boss%';
 update npc n, weapon w set n.AI = 'archer' where n.rhand = w.item_id and w.weaponType =  'bow';
+update npc n, weapon w set n.AI = 'archer' where n.rhand = w.item_id and w.weaponType = 'crossbow';
