@@ -13,7 +13,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-   <effect count="1" name="Stun" time="9" val="0">
+   <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun">
     <mul order="0x30" stat="pDef" val="#pDef"/>
    </effect>
   </for>
