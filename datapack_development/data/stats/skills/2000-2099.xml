@@ -125,7 +125,7 @@
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0" stackOrder="20" stackType="SpeedUp">
+    <effect name="Buff" time="1200" count="1" val="0" stackOrder="20" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="20"/>
     </effect>
   </for>
@@ -367,6 +367,7 @@
   </for>
 </skill>
 <skill id="2033" levels="1" name="Item - Beast Soul Shot">
+  <!-- This skill is not for runSpd -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -376,7 +377,7 @@
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0" stackOrder="33" stackType="SpeedUp">
+    <effect name="Buff" time="1200" count="1" val="0">
       <add order="0x40" stat="runSpd" val="33"/>
     </effect>
   </for>
@@ -392,7 +393,7 @@
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0" stackOrder="33" stackType="SpeedUp">
+    <effect name="Buff" time="1200" count="1" val="0" stackOrder="33" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="33"/>
     </effect>
   </for>
@@ -695,7 +696,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect name="Buff" time="3600" count="1" val="0" stackOrder="33" stackType="SpeedUp">
+    <effect name="Buff" time="3600" count="1" val="0" stackOrder="33" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="33"/>
     </effect>
   </for>

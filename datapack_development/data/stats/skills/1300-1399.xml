@@ -1452,7 +1452,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="99" stackType="SpeedUp"> <!-- SpeedUp here is for remove speed buffs on target -->
+    <effect count="1" name="Buff" time="30" val="0" stackOrder="99" stackType="speed_up"> <!-- speed_up here is for remove speed buffs on target -->
       <mul order="0x30" stat="runSpd" val="0.9"/>
     </effect>
   </for>
@@ -1495,7 +1495,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="99" stackType="SpeedUp"> <!-- SpeedUp here is for remove speed buffs on target -->
+    <effect count="1" name="Buff" time="30" val="0" stackOrder="99" stackType="speed_up"> <!-- SpeedUp here is for remove speed buffs on target -->
       <mul order="0x30" stat="runSpd" val="0.9"/>
     </effect>
   </for>
