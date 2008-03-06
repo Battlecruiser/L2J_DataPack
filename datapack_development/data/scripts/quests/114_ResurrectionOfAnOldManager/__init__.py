@@ -367,7 +367,7 @@ class Quest (JQuest) :
 QUEST = Quest(114,qn,"Resurrection Of An Old Manager")
 
 QUEST.addStartNpc(Yumi)
-
+QUEST.addFirstTalkId(Stones)
 QUEST.addTalkId(Yumi)
 QUEST.addTalkId(Wendy)
 QUEST.addTalkId(Box)
