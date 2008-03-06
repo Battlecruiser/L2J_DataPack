@@ -1264,7 +1264,7 @@ description(s) :
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="438"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0" stackOrder="#spd" stackType="SpeedUpS">
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="#spd" stackType="speed_up_special">
       <add order="0x40" stat="runSpd" val="66"/>
     </effect>
   </for>
