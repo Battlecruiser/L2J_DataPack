@@ -197,7 +197,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect name="Buff" time="3600" count="1" val="0" stackOrder="1.33" stackType="pAtkSpeedUp">
+    <effect name="Buff" time="3600" count="1" val="0" stackOrder="1.33" stackType="attack_time_down">
       <mul order="0x30" stat="pAtkSpd" val="1.33"/>
     </effect>
   </for>
