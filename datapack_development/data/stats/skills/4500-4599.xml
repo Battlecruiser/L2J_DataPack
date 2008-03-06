@@ -921,6 +921,7 @@ Might spell can remove the curse.-->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="power" val="0.0"/>
+  <set name="skillRadius" val="900"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="8000"/>
@@ -1064,6 +1065,7 @@ target cannot move temporarily. Effect 3. -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="reuseDelay" val="8000"/>  
+  <set name="skillRadius" val="900"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1111,17 +1113,40 @@ Temporarily decreases Accuracy.  Effect 3. -->
   </for>
 </skill>
 <skill id="4588" levels="2" name="NPC Clan Buff - Berserk Haste">
-<!-- TODO -->
-  <table name="#mpConsume"> 40 98 </table>
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 30 70 </table>
+  <table name="#mpInitialConsume"> 8 20 </table>
+  <table name="#mpConsume"> 32 78 </table>
+  <table name="#pAtk"> 1.05 1.08 </table>
+  <table name="#pAtkSpd"> 1.20 1.44 </table>
+  <table name="#mAtk"> 1.10 1.16 </table>
+  <table name="#mAtkSpd"> 1.05 1.08 </table>
+  <table name="#runSpd"> 5 8 </table>
+  <table name="#pDef"> 0.95 0.92 </table>
+  <table name="#mDef"> 0.90 0.84 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_CLAN"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillRadius" val="900"/>
+  <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
   <for>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="multi_buff">
+      <mul order="0x30" stat="pAtk" val="#pAtk"/>
+      <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+      <mul order="0x30" stat="mAtk" val="#mAtk"/>
+      <mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
+      <add order="0x40" stat="runSpd" val="#runSpd"/>
+      <mul order="0x30" stat="pDef" val="#pDef"/>
+      <mul order="0x30" stat="mDef" val="#mDef"/>
+    </effect>
   </for>
 </skill>
 <skill id="4589" levels="12" name="Decrease Speed">
@@ -1203,17 +1228,30 @@ Temporarily decreases Accuracy.  Effect 3. -->
   </for>
 </skill>
 <skill id="4595" levels="3" name="NPC Clan Buff - Acumen Shield">
-<!-- TODO -->
-  <table name="#mpConsume"> 29 53 98 </table>
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 20 40 70 </table>
+  <table name="#mpInitialConsume"> 6 11 20 </table>
+  <table name="#mpConsume"> 23 42 78 </table>
+  <table name="#mAtkSpd"> 1.15 1.23 1.30 </table>
+  <table name="#pDef"> 1.08 1.12 1.15 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_CLAN"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillRadius" val="900"/>
+  <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
   <for>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="multi_buff">
+      <mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
+      <mul order="0x30" stat="pDef" val="#pDef"/>
+    </effect>
   </for>
 </skill>
 <skill id="4596" levels="12" name="Bleed">
