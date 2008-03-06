@@ -911,17 +911,28 @@ Might spell can remove the curse.-->
   </for>
 </skill>
 <skill id="4575" levels="2" name="NPC Clan Buff - Haste">
-<!-- TODO -->
-  <table name="#mpConsume"> 20 49 </table>
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 30 70 </table>
+  <table name="#mpInitialConsume"> 4 10 </table>
+  <table name="#mpConsume"> 16 39 </table>
+  <table name="#pAtkSpd"> 1.15 1.33 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_CLAN"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="reuseDelay" val="8000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
   <for>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="attack_time_down">
+      <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+    </effect>
   </for>
 </skill>
 <skill id="4576" levels="3" name="NPC Clan Buff - Damage Shield">
@@ -1024,7 +1035,7 @@ Might spell can remove the curse.-->
 </skill>
 <skill id="4584" levels="12" name="Reducing P. Def Shock">
 <!-- TODO
-Instantly decreases P. Def. and gets shocked so that one's 
+Instantly decreases P. Def. and gets shocked so that one's
 target cannot move temporarily. Effect 3. -->
   <table name="#mpConsume"> 25 41 57 77 100 123 143 153 161 166 170 172 </table>
   <set name="mpConsume" val="#mpConsume"/>
