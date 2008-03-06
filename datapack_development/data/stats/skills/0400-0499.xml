@@ -1482,7 +1482,7 @@
   <set name="effectRange" val="-1"/>
   <set name="soulConsumeCount" val="1"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.15" stackType="pAtkSpeedUp">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.15" stackType="attack_time_down">
       <mul order="0x30" stat="pAtkSpd" val="1.15"/>
     </effect>
   </for>
