@@ -269,7 +269,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect name="Buff" time="3600" count="1" val="0" stackOrder="33" stackType="SpeedUp">
+    <effect name="Buff" time="3600" count="1" val="0" stackOrder="33" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="33"/>
     </effect>
   </for>

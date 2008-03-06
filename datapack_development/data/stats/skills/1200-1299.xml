@@ -80,12 +80,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-runSpd" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="33" stackType="SpeedUp">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="33" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="33"/>
     </effect>
   </enchant1for>
@@ -2620,12 +2620,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-runSpd" stackType="SpeedUp">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-runSpd" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="33" stackType="SpeedUp">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="33" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="33"/>
     </effect>
   </enchant1for>

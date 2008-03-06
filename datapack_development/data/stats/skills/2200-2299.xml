@@ -788,7 +788,7 @@
   <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="32" stackType="SpeedUp">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="32" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="33"/>
     </effect>
   </for>

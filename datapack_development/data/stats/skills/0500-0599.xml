@@ -605,7 +605,7 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="22" stackType="SpeedUp">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="22" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="22"/>
       <using kind="Bow"/>
     </effect>
