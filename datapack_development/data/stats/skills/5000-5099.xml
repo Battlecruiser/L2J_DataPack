@@ -1081,15 +1081,23 @@
 </skill>
 <skill id="5073" levels="12" name="Quest Trap -  Power Shot">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       none
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 110.0 116.0 122.0 126.0 129.0 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="mpConsume" val="0"/>
+  <set name="power" val="#power"/>
+  <set name="element" val="1"/> <!-- Wind -->
+  <set name="reuseDelay" val="0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="1500"/>
+  <set name="effectRange" val="1500"/>
   <for>
   </for>
 </skill>
