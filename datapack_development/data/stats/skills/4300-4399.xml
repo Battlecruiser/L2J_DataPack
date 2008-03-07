@@ -235,7 +235,7 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
   <for>
-    <effect count="1" name="Buff" time="60" val="0" stackOrder="#Tab-pAtk" stackType="pAtk">
+    <effect count="1" name="Buff" time="60" val="0" stackOrder="#Tab-pAtk" stackType="pa_up">
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
     </effect>
   </for>
@@ -487,7 +487,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.55" stackType="mAtk">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.55" stackType="ma_up">
       <mul order="0x30" stat="mAtk" val="1.55"/>
     </effect>
   </for>
@@ -693,7 +693,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pAtk">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pa_up">
       <mul order="0x30" stat="pAtk" val="#rate"/>
     </effect>
   </for>
@@ -910,7 +910,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtk" stackType="mAtk">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtk" stackType="ma_up">
       <mul order="0x30" stat="mAtk" val="#Tab-mAtk"/>
     </effect>
   </for>
@@ -1423,7 +1423,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0" stackOrder="#pAtk" stackType="pAtk">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="#pAtk" stackType="pa_up">
       <mul order="0x30" stat="pAtk" val="#pAtk"/>
     </effect>
   </for>
