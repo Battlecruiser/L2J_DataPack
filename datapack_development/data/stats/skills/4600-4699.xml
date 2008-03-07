@@ -459,7 +459,7 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
   <for>
-    <effect count="1" name="Buff" time="5" val="0" stackOrder="#Tab-pDef" stackType="pDef">
+    <effect count="1" name="Buff" time="5" val="0" stackOrder="#Tab-pDef" stackType="pd_up">
      <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
     </effect>
   </for>
@@ -899,7 +899,7 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
   <for>
-    <effect count="1" name="Buff" time="5" val="0" stackOrder="#pDef" stackType="pDef">
+    <effect count="1" name="Buff" time="5" val="0" stackOrder="#pDef" stackType="pd_up">
      <mul order="0x30" stat="pDef" val="#pDef"/>
     </effect>
   </for>
