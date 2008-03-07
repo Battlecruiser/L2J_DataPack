@@ -1649,3 +1649,6 @@ INSERT INTO `weapon` VALUES
 (10253,'Dynasty Crusher','rhand','true',1740,1,1,'steel','s80',307,0,'blunt',4,4.00000,0,0,0,379,0,140,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,0,0),
 (10277,'Monster Only (Behamah Pole)','rhand','true',2140,0,0,'steel','none',24,0,'sword',8,-3.00000,0,0,0,325,0,17,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,0,0),
 (10278,'Monster Only (Behamah Dual)','rhand','true',2530,0,0,'steel','none',73,0,'sword',8,0.00000,0,0,0,325,0,37,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,0,0);
+
+update npc n, weapon w set n.AI = 'archer' where n.rhand = w.item_id and w.weaponType =  'bow';
+update npc n, weapon w set n.AI = 'archer' where n.rhand = w.item_id and w.weaponType = 'crossbow';
