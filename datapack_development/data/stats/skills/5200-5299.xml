@@ -153,7 +153,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0" stackOrder="4" stackType="pDef">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="4" stackType="pd_up">
       <mul order="0x30" stat="pDef" val="1.15"/>
     </effect>
   </for>

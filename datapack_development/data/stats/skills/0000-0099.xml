@@ -1938,7 +1938,7 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pDef">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pd_up">
       <mul order="0x30" stat="pDef" val="#rate"/>
     </effect>
   </for>
