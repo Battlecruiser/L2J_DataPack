@@ -727,4 +727,6 @@ INSERT INTO teleport VALUES
 ('Elven Village -> Kamael Village',12053,-117251,46771,360,16000,0),
 ('Town of Aden -> Kamael Village',12054,-117251,46771,360,26000,0),
 ('Talking Village -> Kamael Village',12055,-117251,46771,360,20000,0),
-('Dwarven Village -> Kamael Village',   12056,-117251,46771,360,32000,0);
+('Dwarven Village -> Kamael Village',12056,-117251,46771,360,32000,0),
+('Soul Harbor -> Nornil\'s Garden',12057,-119534,87176,-12593,0,0),
+('Nornil\'s Garden -> Soul Harbor',12058,-73494,53507,-3680,0,0);
