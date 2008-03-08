@@ -417,16 +417,21 @@ Guidance spell can remove the curse.-->
   </for>
 </skill>
 <skill id="4540" levels="1" name="Curse of Weakness">
-<!-- TODO 
-Temporarily decreases P.Def and Speed significantly. 
-Shield spell can remove the curse.-->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <set name="hitTime" val="4000"/>
-  <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
-  <set name="castRange" val="-1"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="pd_up">
+      <mul order="0x30" stat="pDef" val="0.50"/>
+      <mul order="0x30" stat="runSpd" val="0.50"/>
+    </effect>
   </for>
 </skill>
 <skill id="4541" levels="1" name="Curse of Nihil">
