@@ -128,7 +128,6 @@ class Quest (JQuest) :
         st.giveItems(SCROLL_ENCHANT_WEAPON_A,1)
         st.setState(State.COMPLETED)
         htmltext = "32237_15.htm"
-    elif event == 
     elif event == "Despawn_Katenar" :
         self.katenar = 0
         return
