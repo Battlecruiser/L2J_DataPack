@@ -39,7 +39,7 @@ class Quest (JQuest) :
        htmltext = "<html><body>This quest has already been completed.</body></html>"
     elif id == State.CREATED and npcId == NEWYEAR :
        if player.getLevel() >= 46 :
-          htmltext = "31961-1.htm"
+          htmltext = "31961-0.htm"
        else:
           htmltext = "31961-1a.htm"
           st.exitQuest(1)
