@@ -329,12 +329,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-accCombat" stackType="accuracyUp">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-accCombat" stackType="hit_up">
       <add order="0x40" stat="accCombat" val="#Tab-accCombat"/>
    </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="4" stackType="accuracyUp">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="4" stackType="hit_up">
       <add order="0x40" stat="accCombat" val="4"/>
    </effect>
   </enchant1for>
