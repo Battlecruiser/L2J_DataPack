@@ -19,6 +19,7 @@ U_SUMMON,S_SUMMON,ESSENCE = range(7192,7195)
 REWARDS = range(4595,4601) 
 
 def FindTemplate (npcId) :
+    npcinstance = 0
     for spawn in SpawnTable.getInstance().getSpawnTable().values():
         if spawn :
             if spawn.getNpcid() == npcId:

@@ -87,6 +87,7 @@ class Quest (JQuest) :
     target.broadcastPacket(MagicSkillUse(npc,npc,skillId,level,6000,1))
 
  def FindTemplate (self, npcId) :
+    npcinstance = 0
     for spawn in SpawnTable.getInstance().getSpawnTable().values():
         if spawn :
             if spawn.getNpcid() == npcId:
