@@ -946,7 +946,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-accCombat" stackType="accuracyUp">
+    <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-accCombat" stackType="hit_up">
       <add order="0x40" stat="accCombat" val="#Tab-accCombat"/>
     </effect>
   </for>
