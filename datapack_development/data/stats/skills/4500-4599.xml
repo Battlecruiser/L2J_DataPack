@@ -332,88 +332,123 @@ chances and the success rate of dagger skills. -->
   </for>
 </skill>
 <skill id="4533" levels="1" name="Dance of Resistance">
-<!-- TODO 
-Temporarily decreases Speed and Accuracy significantly. 
-Dance of Inspiration can remove the curse.-->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="hitTime" val="1500"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
+  <set name="hitTime" val="1500"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="dance_of_inspiration">
+      <mul order="0x30" stat="runSpd" val="0.50"/>
+      <sub order="0x40" stat="accCombat" val="40"/>
+    </effect>
   </for>
 </skill>
 <skill id="4534" levels="1" name="Dance of Nihil">
-<!-- TODO 
-Temporarily decreases Atk.Speed and Evasion significantly. 
-Dance of Fury can remove the curse.-->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <set name="hitTime" val="1500"/>
+  <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="dance_of_fury">
+      <mul order="0x30" stat="pAtkSpd" val="0.70"/>
+      <sub order="0x40" stat="rEvas" val="40"/>
+    </effect>
   </for>
 </skill>
 <skill id="4535" levels="1" name="Dance of Weakness">
-<!-- TODO 
-Temporarily decreases P.Def and P.Atk significantly. 
-Dance of Vampire can remove the curse.-->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <set name="hitTime" val="1500"/>
+  <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="dance_of_vampire">
+      <mul order="0x30" stat="pDef" val="0.5"/>
+      <mul order="0x30" stat="pAtk" val="0.5"/>
+    </effect>
   </for>
 </skill>
 <skill id="4536" levels="1" name="Song of Seduce">
-<!-- TODO 
-Temporarily decreases Speed and Accuracy significantly. 
-Song of Wind can remove the curse.-->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <set name="hitTime" val="1500"/>
+  <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="song_of_wind">
+      <mul order="0x30" stat="runSpd" val="0.50"/>
+      <sub order="0x40" stat="accCombat" val="40"/>
+    </effect>
   </for>
 </skill>
 <skill id="4537" levels="1" name="Song of Sweet Whisper">
-<!-- TODO 
-Temporarily decreases Atk.Speed and Evasion significantly. 
-Song of Water can remove the curse.-->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <set name="hitTime" val="1500"/>
+  <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="song_of_water">
+      <mul order="0x30" stat="pAtkSpd" val="0.70"/>
+      <sub order="0x40" stat="rEvas" val="40"/>
+    </effect>
   </for>
 </skill>
 <skill id="4538" levels="1" name="Song of Temptation">
-<!-- TODO 
-Temporarily decreases P.Def and P.Atk significantly. 
-Song of Vengeance can remove the curse.-->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <set name="hitTime" val="1500"/>
+  <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="song_of_vengeance">
+      <mul order="0x30" stat="pDef" val="0.5"/>
+      <mul order="0x30" stat="pAtk" val="0.5"/>
+    </effect>
   </for>
 </skill>
 <skill id="4539" levels="1" name="Curse of Vague">
-<!-- TODO 
-Temporarily decreases Speed and Accuracy significantly.  
-Guidance spell can remove the curse.-->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <set name="hitTime" val="4000"/>
   <set name="isMagic" val="true"/>
-  <set name="castRange" val="400"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="hit_up">
+      <mul order="0x30" stat="runSpd" val="0.50"/>
+      <sub order="0x40" stat="accCombat" val="40"/>
+    </effect>
   </for>
 </skill>
 <skill id="4540" levels="1" name="Curse of Weakness">
@@ -435,16 +470,22 @@ Guidance spell can remove the curse.-->
   </for>
 </skill>
 <skill id="4541" levels="1" name="Curse of Nihil">
-<!-- TODO 
-Temporarily decreases P.Atk, M.Atk and Atk.Speed significantly. 
-Might spell can remove the curse.-->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <set name="hitTime" val="4000"/>
-  <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
-  <set name="castRange" val="-1"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="pa_up">
+      <mul order="0x30" stat="pAtk" val="0.5"/>
+      <mul order="0x30" stat="pAtkSpd" val="0.50"/>
+      <mul order="0x30" stat="mAtk" val="0.5"/>
+    </effect>
   </for>
 </skill>
 <skill id="4542" levels="1" name="Quest - Henchman 90% Sleep Shock Weakness">

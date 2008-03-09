@@ -1265,12 +1265,12 @@
   <enchant2 name="aggroPoints" val="655"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
-    <effect name="Buff" time="120" count="1" val="0">
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="song_of_water">
       <add order="0x40" stat="rEvas" val="3"/>
     </effect>
   </for>
   <enchant1for>
-    <effect name="Buff" time="#ench1time" count="1" val="0">
+    <effect name="Buff" time="#ench1time" count="1" val="0" stackOrder="1" stackType="song_of_water">
       <add order="0x40" stat="rEvas" val="3"/>
     </effect>
   </enchant1for>
@@ -1344,12 +1344,12 @@
   <enchant2 name="aggroPoints" val="655"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
-    <effect name="Buff" time="120" count="1" val="0">
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="song_of_wind">
       <add order="0x40" stat="runSpd" val="20"/>
     </effect>
   </for>
   <enchant1for>
-    <effect name="Buff" time="#ench1time" count="1" val="0">
+    <effect name="Buff" time="#ench1time" count="1" val="0" stackOrder="1" stackType="song_of_wind">
       <add order="0x40" stat="runSpd" val="20"/>
     </effect>
   </enchant1for>
@@ -1510,12 +1510,12 @@
   <enchant2 name="aggroPoints" val="655"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
-    <effect name="Buff" time="120" count="1" val="0">
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="dance_of_inspiration">
       <add order="0x40" stat="accCombat" val="4"/>
     </effect>
   </for>
   <enchant1for>
-    <effect name="Buff" time="#ench1time" count="1" val="0">
+    <effect name="Buff" time="#ench1time" count="1" val="0" stackOrder="1" stackType="dance_of_inspiration">
       <add order="0x40" stat="accCombat" val="4"/>
     </effect>
   </enchant1for>
@@ -1636,12 +1636,12 @@
   <enchant2 name="aggroPoints" val="655"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
-    <effect name="Buff" time="120" count="1" val="0">
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="dance_of_fury">
       <mul order="0x30" stat="pAtkSpd" val="1.15"/>
     </effect>
   </for>
   <enchant1for>
-    <effect name="Buff" time="#ench1time" count="1" val="0">
+    <effect name="Buff" time="#ench1time" count="1" val="0" stackOrder="1" stackType="dance_of_fury">
       <mul order="0x30" stat="pAtkSpd" val="1.15"/>
     </effect>
   </enchant1for>
