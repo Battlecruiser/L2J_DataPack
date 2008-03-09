@@ -23,20 +23,22 @@ class Quest (JQuest) :
     self.isGolemSpawned = 0
 
   def FindTemplate (self, npcId) :
+    npcinstance = 0
     for spawn in SpawnTable.getInstance().getSpawnTable().values():
         if spawn :
             if spawn.getNpcid() == npcId:
                 npcinstance = spawn.getLastSpawn()
                 break
-        else :
-            return
     return npcinstance
 
   def onAdvEvent (self,event,npc, player) :
     if event == "1" :
        machine_instance = self.FindTemplate(Strange_Machine)
-       npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, machine_instance)
-       machine_instance.broadcastPacket(SpecialCamera(machine_instance.getObjectId(),1,-200,15,10000,20000))
+       if machine_instance :
+         npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, machine_instance)
+         machine_instance.broadcastPacket(SpecialCamera(machine_instance.getObjectId(),1,-200,15,10000,20000))
+       else :
+         print "Dr Chaos AI: problem finding Strange Machine (npcid = "+Strange_Machine+"). Error: not spawned!"
        self.startQuestTimer("2",2000,npc,player)
        self.startQuestTimer("3",10000,npc,player)
     elif event == "2" :

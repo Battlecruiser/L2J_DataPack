@@ -23,6 +23,7 @@ Totem2 = 7243
 Fire_Heart = 7244
 
 def FindTemplate (npcId) :
+    npcinstance = 0
     for spawn in SpawnTable.getInstance().getSpawnTable().values():
         if spawn :
             if spawn.getNpcid() == npcId:

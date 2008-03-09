@@ -21,6 +21,7 @@ MEAT = 7210
 REWARDS = range (4589,4595)
 
 def FindTemplate (npcId) :
+    npcinstance = 0
     for spawn in SpawnTable.getInstance().getSpawnTable().values():
         if spawn :
             if spawn.getNpcid() == npcId:
