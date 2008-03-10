@@ -203,6 +203,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="3018" levels="6" name="Special Ability: Back Blow">
@@ -1118,7 +1119,7 @@
     <game chance="16"/>
   </cond>
   <for>
-    <effect count="1" name="Stun" time="9" val="0"/>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="3071" levels="2" name="Special Ability: Rsk. Focus">
