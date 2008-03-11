@@ -223,12 +223,21 @@
   </for>
 </skill>
 <skill id="625" levels="1" name="Soul Gathering">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<!--
+  Description(s):
+      Gather nearby souls. The maximum number of souls can be absorbed at once. Consumes 10 Spirit Ores.
+-->
+  <set name="hpConsume" val="200"/>
+  <set name="hitTime" val="1500"/>
+  <set name="itemConsumeId" val="3031"/>
+  <set name="itemConsumeCount" val="10"/>
+  <set name="reuseDelay" val="1800000"/> <!-- TODO: must not be affected by casting/attack speed -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="CHARGESOUL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="1"/>
+  <set name="effectRange" val="1"/>
+  <set name="num_souls" val="35"/>
 </skill>
 <skill id="626" levels="4" name="Critical Sense">
   <set name="target" val="TARGET_NONE"/>
