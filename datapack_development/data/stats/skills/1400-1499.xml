@@ -1011,8 +1011,12 @@
   <for>
     <effect count="1" name="Buff" time="180" val="0">
       <mul order="0x30" stat="mAtk" val="1.1"/><!-- Need retail values -->
-      <mul order="0x30" stat="pAtk" val="1.1"/><!-- Need retail values -->
-     <!-- Bonus for "Mortal Blow Chance" ? -->
+      <mul order="0x30" stat="pAtk" val="1.1"><!-- Need retail values -->
+         <using kind="Ancient,Crossbow,Rapier"/>
+      </mul>
+      <add order="0x60" stat="blowRate" val="46"><!-- Need retail values -->
+         <using kind="Ancient,Crossbow,Rapier"/>
+      </add>
     </effect>
   </for>
 </skill>
