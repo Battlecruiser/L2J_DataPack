@@ -126,7 +126,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect name="Buff" time="144000" count="1" val="0" stackOrder="1" stackType="attack_time_down">
+    <effect name="Buff" time="144000" count="1" val="0" stackOrder="99" stackType="attack_time_down">
       <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
       <div order="0x30" stat="pReuse" val="#Tab-pReuse"/>
       <div order="0x30" stat="mReuse" val="#Tab-mReuse"/>
