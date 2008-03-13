@@ -478,6 +478,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="14400" val="0" stackOrder="1" stackType="hp_regen_up"/>
   </for>
 </skill>
 <skill id="4228" levels="12" name="Double Dagger Attack">
@@ -701,6 +702,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="10" val="0" stackOrder="1" stackType="hp_regen_up"/>
   </for>
 </skill>
 <skill id="4243" levels="1" name="Venomous Poison">
