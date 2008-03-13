@@ -209,7 +209,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.20" stackType="HPregen">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.20" stackType="hp_regen_up">
       <mul order="0x30" stat="regHp" val="1.20"/>
     </effect>
   </for>
