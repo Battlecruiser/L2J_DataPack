@@ -135,7 +135,7 @@ class Quest (JQuest) :
    id = st.getState()
    if npcId == 30981 : #Black Judge
        if id == State.CREATED :
-           if player.getPkKills() >= 1:
+           if player.getPkKills() >= 1 and player.getLevel() < 80:
                htmltext = "30981-02.htm"
            else:
                htmltext = "30981-01.htm"
