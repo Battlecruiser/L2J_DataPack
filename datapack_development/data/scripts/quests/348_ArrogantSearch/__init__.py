@@ -368,7 +368,7 @@ class Quest (JQuest) :
      elif npcId in ATTACK_DROPS_25.keys() :
          cond = ATTACK_DROPS_25[npcId][0]
          chance =  ATTACK_DROPS_25[npcId][3]
-         if st.getInt("cond") == cond and st.getRandom(1000) < ATTACK_DROPS_25[npcId][3] st.getQuestItemsCount(ATTACK_DROPS_25[npcId][4]) > 0 :  # Attack drops are low chance
+         if st.getInt("cond") == cond and st.getRandom(1000) < ATTACK_DROPS_25[npcId][3] and st.getQuestItemsCount(ATTACK_DROPS_25[npcId][4]) > 0 :  # Attack drops are low chance
              st.giveItems(ATTACK_DROPS_25[npcId][1],ATTACK_DROPS_25[npcId][2])
              st.playSound("ItemSound.quest_itemget")
              st.takeItems(ATTACK_DROPS_25[npcId][4],1)
