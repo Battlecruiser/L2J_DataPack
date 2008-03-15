@@ -6,7 +6,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.serverpackets import RadarControl
+
 #Quest info
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 348,"ArrogantSearch","An Arrogant Search"
 qn = "348_ArrogantSearch"
@@ -415,11 +415,7 @@ QUEST.addStartNpc(HANELLIN)
 QUEST.addTalkId(HANELLIN)
 QUEST.addTalkId(ARK_GUARDIANS_CORPSE)
 
-for i in ARK_OWNERS.keys() :
-    QUEST.addTalkId(i)
-for i in ARKS.keys() :
-    QUEST.addTalkId(i)
-for i in BLOODY_OWNERS.keys() :
+for i in ARK_OWNERS.keys() + ARKS.keys() + BLOODY_OWNERS.keys() :
     QUEST.addTalkId(i)
 
 for i in DROPS.keys():
