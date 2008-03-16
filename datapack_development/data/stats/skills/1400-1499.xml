@@ -656,7 +656,7 @@
   <set name="effectRange" val="-1"/>
   <set name="cancelEffect" val="1430"/>
   <for>
-    <effect count="10" name="ManaHealOverTime" time="3" val="#mhot"/>
+    <effect count="10" name="ManaHealOverTime" time="3" noicon="1" val="#mhot"/>
     <effect count="1" name="ImmobileUntilAttacked" time="30" val="0">
       <mul order="0x30" stat="pDef" val="#pDef"/>
     </effect>
