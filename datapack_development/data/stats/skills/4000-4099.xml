@@ -186,7 +186,8 @@
   </for>
 </skill>
 <skill id="4013" levels="1" name="Resistance To Fire, Vulnerable To Water">
-  <!-- NOT USED IN C4 -->
+  <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="1"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
@@ -194,10 +195,13 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="fireVuln" val="0.50"/>
+    <mul order="0x30" stat="waterVuln" val="1.15"/>
   </for>
 </skill>
 <skill id="4014" levels="1" name="Resistance To Water, Vulnerable To Fire">
-  <!-- NOT USED IN C4 -->
+  <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="1"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
@@ -205,10 +209,13 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="waterVuln" val="0.50"/>
+    <mul order="0x30" stat="fireVuln" val="1.15"/>
   </for>
 </skill>
 <skill id="4015" levels="1" name="Resistance To Wind, Vulnerable To Earth">
-  <!-- NOT USED IN C4 -->
+  <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="1"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
@@ -216,10 +223,13 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="windVuln" val="0.50"/>
+    <mul order="0x30" stat="earthVuln" val="1.15"/>
   </for>
 </skill>
 <skill id="4016" levels="1" name="Resistance To Earth, Vulnerable To Wind">
-  <!-- NOT USED IN C4 -->
+  <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="1"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
@@ -227,6 +237,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="earthVuln" val="0.50"/>
+    <mul order="0x30" stat="windVuln" val="1.15"/>
   </for>
 </skill>
 <skill id="4017" levels="1" name="Queen Ant Brandish">
@@ -241,8 +253,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-<for>
-</for>
+  <for>
+  </for>
 </skill>
 <skill id="4018" levels="1" name="Decrease Speed">
   <!-- Queen Ant Skills -->
