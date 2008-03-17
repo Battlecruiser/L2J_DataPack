@@ -43,7 +43,8 @@
   </for>
 </skill>
 <skill id="4003" levels="1" name="Golem Body">
-  <!-- NOT USED IN C4 -->
+  <!-- Done by DJ MELERIx -->
+  <set name="magicLvl" val="1"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
@@ -51,6 +52,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="bowWpnVuln" val="0.20"/>
+    <mul order="0x30" stat="daggerWpnVuln" val="0.70"/>
+    <mul order="0x30" stat="bluntWpnVuln" val="1.10"/>
   </for>
 </skill>
 <skill id="4004" levels="1" name="Fragile Skull">
