@@ -27572,19 +27572,15 @@ INSERT INTO `droplist` VALUES
 (21793,8742,1,1,200,2155), -- Messenger Invader Elite Soldier
 (22145,8742,1,1,200,946), -- Ritual Sacrifice
 (22155,8742,1,1,200,942), -- Triol's High Priest
-(21373,8742,1,1,200,882), -- Varka's Prophet
 (21411,8742,1,1,200,862), -- Guardian Scarab
 (22135,8742,1,1,200,632), -- Beholder of Light
 (21430,8742,1,1,200,592), -- Arimanes
-(21336,8742,1,1,200,555), -- Ketra Orc White Captain
 (21434,8742,1,1,200,537), -- Seer of Blood
 (21794,8742,1,1,200,509), -- Messenger Invader Elite Soldier
 (21367,8742,1,1,200,486), -- Grazing Elder Antelope
 (21420,8742,1,1,200,486), -- Ashuras
 (21310,8742,1,1,200,465), -- Disciples of Authority
-(21355,8742,1,1,200,426), -- Varka Silenos Shaman
 (21790,8742,1,1,200,406), -- Messenger Invader Elite Soldier
-(21364,8742,1,1,200,388), -- Varka Silenos Seer
 (22139,8742,1,1,200,371), -- Old Aristocrat's Soldier
 (21186,8742,1,1,200,326), -- Lilim Court Knight
 (22140,8742,1,1,200,326), -- Zombie Worker
@@ -27602,7 +27598,6 @@ INSERT INTO `droplist` VALUES
 (21207,8742,1,1,200,231), -- Nephilim Commander
 (21776,8742,1,1,200,229), -- Messenger Invader Archer
 (21789,8742,1,1,200,200), -- Messenger Invader Elite Soldier
-(21357,8742,1,1,200,195), -- Varka Silenos Priest
 (21795,8742,1,1,200,171), -- Messenger Invader Elite Soldier
 (21426,8742,1,1,200,168), -- Abraxion
 (22126,8742,1,1,200,165), -- Silent Seeker
@@ -27611,18 +27606,80 @@ INSERT INTO `droplist` VALUES
 (21428,8742,1,1,200,157), -- Hasturan
 (21424,8742,1,1,200,157), -- Ashkenas
 (21436,8742,1,1,200,139), -- Leader of Offering
-(21351,8742,1,1,200,138), -- Varka Silenos Footman
 (21163,8742,1,1,200,137), -- Lesser Ancient Shaman
 (21165,8742,1,1,200,133), -- Lesser Ancient Warrior
 (21377,8742,1,1,200,133), -- Scarlet Stakato Soldier
 (21378,8742,1,1,200,127), -- Scarlet Stakato Noble
 (22144,8742,1,1,200,119), -- Resurrected Temple Knight
 (21352,8742,1,1,200,112), -- Grazing Antelope
-(21360,8742,1,1,200,103), -- Varka Silenos Medium
 (21425,8742,1,1,200,93), -- Ashkenas
-(21350,8742,1,1,200,81), -- Varka Silenos Recruit
 (21206,8742,1,1,200,79), -- Nephilim Cardinal
 (22123,8742,1,1,200,53), -- Monastic Crusader
 (21164,8742,1,1,200,49), -- Guardian Spirit of Ancient Holy Ground
 (21427,8742,1,1,200,34), -- Abraxion
 (22142,8742,1,1,200,21); -- Triol's Layperson
+--  Life Stone: level 76 (by Sandro - IL and T1 values) 
+(21325,8732,1,1,200,297), -- Ketra's War Hound 
+(21327,8732,1,1,200,410), -- Ketra Orc Raider 
+(21328,8732,1,1,200,383), -- Ketra Orc Scout 
+(21329,8732,1,1,200,248), -- Ketra Orc Shaman 
+(21331,8732,1,1,200,129), -- Ketra Orc Warrior 
+(21332,8732,1,1,200,133), -- Ketra Orc Lieutenant 
+(21334,8732,1,1,200,373), -- Ketra Orc Medium 
+(21335,8732,1,1,200,234), -- Ketra Orc Elite Soldier 
+(21336,8732,1,1,200,377), -- Ketra Orc White Captain 
+(21339,8732,1,1,200,181), -- Ketra Orc General 
+(21343,8732,1,1,200,1490), -- Ketra Commander 
+(21344,8732,1,1,200,246), -- Ketra Elite Guard 
+(21345,8732,1,1,200,408), -- Ketra's Head Shaman 
+(21346,8732,1,1,200,102), -- Ketra's Head Guard 
+(21347,8732,1,1,200,489), -- Ketra Prophet 
+(21350,8732,1,1,200,257), -- Varka Silenos Recruit 
+(21351,8732,1,1,200,231), -- Varka Silenos Footman 
+(21353,8732,1,1,200,112), -- Varka Silenos Scout 
+(21354,8732,1,1,200,187), -- Varka Silenos Hunter 
+(21355,8732,1,1,200,91), -- Varka Silenos Shaman 
+(21357,8732,1,1,200,180), -- Varka Silenos Priest 
+(21358,8732,1,1,200,216), -- Varka Silenos Warrior 
+(21360,8732,1,1,200,181), -- Varka Silenos Medium 
+(21361,8732,1,1,200,585), -- Varka Silenos Magus 
+(21362,8732,1,1,200,441), -- Varka Silenos Officer 
+(21364,8732,1,1,200,450), -- Varka Silenos Seer 
+(21365,8732,1,1,200,426), -- Varka Silenos Great Magus 
+(21366,8732,1,1,200,456), -- Varka Silenos General 
+(21368,8732,1,1,200,302), -- Varka Silenos Great Seer 
+(21369,8732,1,1,200,340), -- Varka's Commander 
+(21370,8732,1,1,200,341), -- Varka's Elite Guard 
+(21371,8732,1,1,200,138), -- Varka's Head Magus 
+(21372,8732,1,1,200,103), -- Varka's Head Guard 
+(21373,8732,1,1,200,711), -- Varka's Prophet 
+--  Mid-Grade Life Stone: level 76 
+(21325,8742,1,1,200,148), -- Ketra's War Hound 
+(21327,8742,1,1,200,205), -- Ketra Orc Raider 
+(21328,8742,1,1,200,383), -- Ketra Orc Scout 
+(21331,8742,1,1,200,65), -- Ketra Orc Warrior 
+(21334,8742,1,1,200,373), -- Ketra Orc Medium 
+(21335,8742,1,1,200,234), -- Ketra Orc Elite Soldier 
+(21339,8742,1,1,200,181), -- Ketra Orc General 
+(21342,8742,1,1,200,172), -- Ketra Orc Grand Seer 
+(21345,8742,1,1,200,204), -- Ketra's Head Shaman 
+(21346,8742,1,1,200,102), -- Ketra's Head Guard 
+(21350,8742,1,1,200,86), -- Varka Silenos Recruit 
+(21351,8742,1,1,200,90), -- Varka Silenos Footman 
+(21353,8742,1,1,200,56), -- Varka Silenos Scout 
+(21354,8742,1,1,200,94), -- Varka Silenos Hunter 
+(21355,8742,1,1,200,228), -- Varka Silenos Shaman 
+(21357,8742,1,1,200,90), -- Varka Silenos Priest 
+(21358,8742,1,1,200,98), -- Varka Silenos Warrior 
+(21360,8742,1,1,200,90), -- Varka Silenos Medium 
+(21361,8742,1,1,200,167), -- Varka Silenos Magus 
+(21362,8742,1,1,200,63), -- Varka Silenos Officer 
+(21364,8742,1,1,200,225), -- Varka Silenos Seer 
+(21365,8742,1,1,200,71), -- Varka Silenos Great Magus 
+(21366,8742,1,1,200,152), -- Varka Silenos General 
+(21368,8742,1,1,200,60), -- Varka Silenos Great Seer 
+(21369,8742,1,1,200,30), -- Varka's Commander 
+(21370,8742,1,1,200,62), -- Varka's Elite Guard 
+(21371,8742,1,1,200,69), -- Varka's Head Magus 
+(21372,8742,1,1,200,69), -- Varka's Head Guard 
+(21373,8742,1,1,200,178); -- Varka's Prophet
