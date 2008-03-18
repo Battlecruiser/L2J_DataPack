@@ -27619,6 +27619,7 @@ INSERT INTO `droplist` VALUES
 (21427,8742,1,1,200,34), -- Abraxion
 (22142,8742,1,1,200,21); -- Triol's Layperson
 --  Life Stone: level 76 (by Sandro - IL and T1 values) 
+INSERT INTO `droplist` VALUES 
 (21325,8732,1,1,200,297), -- Ketra's War Hound 
 (21327,8732,1,1,200,410), -- Ketra Orc Raider 
 (21328,8732,1,1,200,383), -- Ketra Orc Scout 
