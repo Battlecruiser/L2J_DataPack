@@ -97,7 +97,7 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="70"/>
   <for>
-    <effect name="Buff" time="30" count="1" val="0" stackOrder="0.5" stackType="RunSpeedDown">
+    <effect name="Debuff" time="30" count="1" val="0" stackOrder="0.5" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="0.5"/>
     </effect>
   </for>
@@ -115,7 +115,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect name="Buff" time="120" count="1" val="0" stackOrder="0.77" stackType="pAtkSpdDown">
+    <effect name="Debuff" time="120" count="1" val="0" stackOrder="0.77" stackType="pAtkSpdDown">
       <mul order="0x30" stat="pAtkSpd" val="0.77"/>
     </effect>
   </for>
@@ -782,7 +782,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0">
+    <effect count="1" name="Debuff" time="30" val="0">
       <mul order="0x30" stat="runSpd" val="0.75"/>
       <mul order="0x30" stat="pAtkSpd" val="0.75"/>
       <mul order="0x30" stat="mAtkSpd" val="0.75"/>

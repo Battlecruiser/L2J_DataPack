@@ -920,7 +920,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
+    <effect count="1" name="Debuff" time="120" val="0">
       <mul order="0x30" stat="runSpd" val="0.9"/>
       <sub order="0x40" stat="rEvas" val="6"/>
       <mul order="0x30" stat="pDef" val="0.7"/>
@@ -1431,7 +1431,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="10" stackType="pd_up"> <!-- pd_up is here for remove pDef buffs on target -->
+    <effect count="1" name="Debuff" time="120" val="0" stackOrder="10" stackType="pd_up"> <!-- pd_up is here for remove pDef buffs on target -->
       <mul order="0x30" stat="pDef" val="0.9"/>
     </effect>
   </for>
@@ -1451,7 +1451,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="99" stackType="speed_up"> <!-- speed_up here is for remove speed buffs on target -->
+    <effect count="1" name="Debuff" time="30" val="0" stackOrder="99" stackType="speed_up"> <!-- speed_up here is for remove speed buffs on target -->
       <mul order="0x30" stat="runSpd" val="0.9"/>
     </effect>
   </for>
@@ -1472,7 +1472,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="10" stackType="pd_up"> <!-- pd_up is here for remove pDef buffs in target aura -->
+    <effect count="1" name="Debuff" time="120" val="0" stackOrder="10" stackType="pd_up"> <!-- pd_up is here for remove pDef buffs in target aura -->
       <mul order="0x30" stat="pDef" val="0.9"/>
     </effect>
   </for>
@@ -1493,7 +1493,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="99" stackType="speed_up"> <!-- SpeedUp here is for remove speed buffs on target -->
+    <effect count="1" name="Debuff" time="30" val="0" stackOrder="99" stackType="speed_up"> <!-- SpeedUp here is for remove speed buffs on target -->
       <mul order="0x30" stat="runSpd" val="0.9"/>
     </effect>
   </for>
@@ -1609,7 +1609,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
+    <effect count="1" name="Debuff" time="120" val="0">
       <mul stat="pAtk" order="0x30" val="0.9"/>
       <mul stat="runSpd" order="0x30" val="0.8"/>
       <mul stat="mDef" order="0x30" val="0.7"/>
@@ -1637,7 +1637,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect name="Buff" time="120" count="1" val="0">
+    <effect name="Debuff" time="120" count="1" val="0">
       <mul stat="gainHp" val="0.5" order="0x30"/>
     </effect>
   </for>
@@ -1756,7 +1756,7 @@
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0">
+    <effect count="1" name="Debuff" time="30" val="0">
       <mul order="0x30" stat="mDef" val="0.5"/>
       <mul order="0x30" stat="pDef" val="0.5"/>
       <sub order="0x40" stat="rEvas" val="16"/>
@@ -1863,7 +1863,7 @@
   <set name="effectRange" val="1400"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0" stackOrder="1" stackType="matkdebuff">
+    <effect count="1" name="Debuff" time="15" val="0" stackOrder="1" stackType="matkdebuff">
       <div order="0x30" stat="mDef" val="#mDef"/>
     </effect>
   </for>
@@ -1887,7 +1887,7 @@
   <set name="effectRange" val="1400"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
+    <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
       <mul order="0x30" stat="fireVuln" val="#fireVuln"/>
     </effect>
   </for>
@@ -1911,7 +1911,7 @@
   <set name="effectRange" val="1400"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
+    <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
       <mul order="0x30" stat="waterVuln" val="#waterVuln"/>
     </effect>
   </for>
@@ -1935,7 +1935,7 @@
   <set name="effectRange" val="1400"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
+    <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
       <mul order="0x30" stat="windVuln" val="#windVuln"/>
     </effect>
   </for>
@@ -1959,7 +1959,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0">
+    <effect count="1" name="Debuff" time="30" val="0">
       <div order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
     </effect>
   </for>
@@ -2167,7 +2167,7 @@
   <set name="effectRange" val="1100"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0">
+    <effect count="1" name="Debuff" time="30" val="0">
       <mul order="0x30" stat="MpConsumeRate" val="#mpConsumeRate"/>
     </effect>
   </for>

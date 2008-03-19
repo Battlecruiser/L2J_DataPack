@@ -998,7 +998,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Debuff" time="1200" val="0">
       <sub order="0x40" stat="accCombat" val="10"/>
       <mul order="0x30" stat="sleepVuln" val="1.5"/>
       <mul order="0x30" stat="rootVuln" val="1.5"/>
@@ -1017,7 +1017,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Debuff" time="1200" val="0">
       <mul order="0x30" stat="mAtkSpd" val="0.70"/>
       <mul order="0x40" stat="sleepVuln" val="1.5"/>
       <mul order="0x40" stat="rootVuln" val="1.5"/>
@@ -1035,7 +1035,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="10" stackType="accuracyDown">
+    <effect count="1" name="Debuff" time="1200" val="0" stackOrder="10" stackType="accuracyDown">
       <sub order="0x40" stat="accCombat" val="10"/>
     </effect>
   </for>

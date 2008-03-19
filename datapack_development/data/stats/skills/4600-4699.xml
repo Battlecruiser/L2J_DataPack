@@ -52,7 +52,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-   <effect count="1" name="Buff" time="#time" val="0" stackOrder="#pAtk" stackType="pDefDown">
+   <effect count="1" name="Debuff" time="#time" val="0" stackOrder="#pAtk" stackType="pDefDown">
     <mul order="0x30" stat="pAtk" val="#pAtk"/>
    </effect>
   </for>
@@ -72,7 +72,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-   <effect count="1" name="Buff" time="#time" val="0" stackOrder="#pAtk" stackType="pDefDown">
+   <effect count="1" name="Debuff" time="#time" val="0" stackOrder="#pAtk" stackType="pDefDown">
     <mul order="0x30" stat="pAtk" val="#pAtk"/>
    </effect>
   </for>
@@ -92,7 +92,7 @@
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="1100"/>
   <for>
-   <effect count="1" name="Buff" time="#time" val="0" stackOrder="#pAtk" stackType="pDefDown">
+   <effect count="1" name="Debuff" time="#time" val="0" stackOrder="#pAtk" stackType="pDefDown">
     <mul order="0x30" stat="pAtk" val="#pAtk"/>
    </effect>
   </for>
@@ -824,7 +824,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="#runSpd" stackType="RunSpeedDown">
+    <effect count="1" name="Debuff" time="30" val="0" stackOrder="#runSpd" stackType="RunSpeedDown">
      <mul order="0x30" stat="runSpd" val="#runSpd"/>
     </effect>
   </for>
@@ -1642,7 +1642,7 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
   <for>
-    <effect count="5" name="Buff" time="15" val="0"> 
+    <effect count="5" name="Debuff" time="15" val="0"> 
        <mul order="0x30" stat="pAtk" val="0.55"/>
        <sub order="0x40" stat="accCombat" val="4"/>
        <sub order="0x40" stat="rEvas" val="4"/>
@@ -1662,7 +1662,7 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
   <for>
-    <effect count="5" name="Buff" time="15" val="0"> 
+    <effect count="5" name="Debuff" time="15" val="0"> 
        <mul order="0x30" stat="pAtk" val="0.20"/>
     </effect>
   </for>
@@ -1676,7 +1676,7 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
   <for>
-    <effect count="5" name="Buff" time="15" val="0"> 
+    <effect count="5" name="Debuff" time="15" val="0"> 
        <mul order="0x30" stat="pDef" val="0.20"/>
        <mul order="0x30" stat="mDef" val="0.20"/>
     </effect>
