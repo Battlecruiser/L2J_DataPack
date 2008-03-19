@@ -65,7 +65,7 @@ class Quest (JQuest) :
     silver = st.getQuestItemsCount(Silver_Ice)
     black = st.getQuestItemsCount(Black_Ice)
     if npcId == Rafforty :
-       if state == State.CREATED :
+       if st.getState() == State.CREATED :
           if st.getPlayer().getLevel() >= 53 :
              htmltext = "32020-01.htm"
           else :
@@ -87,7 +87,7 @@ class Quest (JQuest) :
           else:
              htmltext = "32020-04a.htm"
     elif npcId == Ice_Shelf :
-       if state == State.CREATED :
+       if st.getState() == State.CREATED :
           htmltext = "32023-00.htm"
        else:
           if silver > 0 :
