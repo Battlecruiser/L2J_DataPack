@@ -114,7 +114,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0" stackOrder="0.77" stackType="pAtkSpdDown">
+    <effect count="1" name="Debuff" time="15" val="0" stackOrder="0.77" stackType="pAtkSpdDown">
       <mul order="0x30" stat="pAtkSpd" val="0.77"/>
     </effect>
   </for>
@@ -910,7 +910,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
+    <effect count="1" name="Debuff" time="30" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>
@@ -972,7 +972,7 @@
   <enchant2 name="power" val="50"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0" stackOrder="#Tab-pAtk" stackType="pAtkDown">
+    <effect count="1" name="Debuff" time="15" val="0" stackOrder="#Tab-pAtk" stackType="pAtkDown">
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
     </effect>
   </for>
@@ -1409,7 +1409,7 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="60"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="0.7" stackType="RunSpeedDown">
+    <effect count="1" name="Debuff" time="30" val="0" stackOrder="0.7" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="0.7"/>
     </effect>
   </for>

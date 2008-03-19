@@ -1045,7 +1045,7 @@
   <set name="effectRange" val="1400"/>
   <set name="soulConsumeCount" val="2"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0" stackOrder="2" stackType="surrender">
+    <effect count="1" name="Debuff" time="15" val="0" stackOrder="2" stackType="surrender">
       <mul order="0x30" stat="darkVuln" val="#Tab-darkVuln"/>
     </effect>
   </for>
@@ -1218,7 +1218,7 @@
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_AURA"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="0.7" stackType="RunSpeedDown">
+    <effect count="1" name="Debuff" time="30" val="0" stackOrder="0.7" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="0.7"/>
     </effect>
   </for>

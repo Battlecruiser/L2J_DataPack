@@ -56,7 +56,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="2" stackType="surrender">
+    <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
       <mul order="0x30" stat="fireVuln" val="#Tab-fireVuln"/>
     </effect>
   </for>
@@ -189,7 +189,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect name="Buff" time="120" count="1" val="0">
+    <effect name="Debuff" time="120" count="1" val="0">
       <sub order="0x40" stat="accCombat" val="19"/>
       <sub order="0x40" stat="rEvas" val="19"/>
       <div order="0x30" stat="mAtk" val="1.15"/>
@@ -377,7 +377,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect name="Buff" time="120" count="1" val="0" stackOrder="#Tab-accCombat" stackType="accuracyDown">
+    <effect name="Debuff" time="120" count="1" val="0" stackOrder="#Tab-accCombat" stackType="accuracyDown">
       <sub order="0x40" stat="accCombat" val="#Tab-accCombat"/>
     </effect>
   </for>
@@ -877,7 +877,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="0.7" stackType="RunSpeedDown">
+    <effect count="1" name="Debuff" time="30" val="0" stackOrder="0.7" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="0.7"/>
     </effect>
   </for>
@@ -1518,7 +1518,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
+    <effect count="1" name="Debuff" time="30" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>
@@ -1699,7 +1699,7 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="60"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="0.7" stackType="RunSpeedDown">
+    <effect count="1" name="Debuff" time="30" val="0" stackOrder="0.7" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="0.7"/>
     </effect>
   </for>

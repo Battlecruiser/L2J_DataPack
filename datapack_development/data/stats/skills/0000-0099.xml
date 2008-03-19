@@ -2078,7 +2078,7 @@
   <using kind="Fist, Dual Fist"/>
   </cond>
   <for>
-    <effect name="Buff" time="30" count="1" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
+    <effect name="Debuff" time="30" count="1" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>
@@ -2143,7 +2143,7 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
-    <effect name="Buff" time="60" count="1" val="0" stackOrder="0.77" stackType="pAtkDown">
+    <effect name="Debuff" time="60" count="1" val="0" stackOrder="0.77" stackType="pAtkDown">
       <mul order="0x30" stat="pAtk" val="0.77"/>
     </effect>
   </for>

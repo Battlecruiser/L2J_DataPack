@@ -828,7 +828,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pvpPhysDmg">
+    <effect count="1" name="Debuff" time="1200" val="0" stackOrder="#rate" stackType="pvpPhysDmg">
       <mul order="0x30" stat="pvpPhysDmg" val="#rate"/>
     </effect>
   </for>
@@ -1116,7 +1116,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect name="Buff" time="60" count="1" val="0">
+    <effect name="Debuff" time="60" count="1" val="0">
       <sub order="0x40" stat="aggression" val="#aggr"/>
     </effect>
   </for>
@@ -2146,7 +2146,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
+    <effect count="1" name="Debuff" time="30" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>

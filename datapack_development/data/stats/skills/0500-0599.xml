@@ -38,7 +38,7 @@
   <set name="castRange" val="600"/>
   <set name="soulConsumeCount" val="1"/>
   <for>
-  	<effect count="10" name="Buff" time="15" val="0">
+  	<effect count="10" name="Debuff" time="15" val="0">
   		<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
   		<mul order="0x30" stat="pDef" val="#pDef"/>
   	</effect>
@@ -453,7 +453,7 @@ description(s) :
   <set name="reuseDelay" val="8000"/>
   <set name="soulConsumeCount" val="1"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0">
+    <effect count="1" name="Debuff" time="15" val="0">
       <mul order="0x30" stat="bowWpnVuln" val="1.3"/> <!-- Needs to be checked -->
       <mul order="0x30" stat="crossbowWpnVuln" val="1.3"/> <!-- Needs to be checked -->
     </effect>
@@ -1211,7 +1211,7 @@ description(s) :
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="360"/>
   <for>
-    <effect name="Buff" time="15" count="1" val="0" stackOrder="#accCombat" stackType="accuracyDown">
+    <effect name="Debuff" time="15" count="1" val="0" stackOrder="#accCombat" stackType="accuracyDown">
       <sub order="0x40" stat="accCombat" val="#accCombat"/>
     </effect>
   </for>

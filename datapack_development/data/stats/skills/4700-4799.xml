@@ -127,7 +127,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-     <effect count="1" name="Buff" time="30" val="0" stackOrder="100" stackType="CurseShade">
+     <effect count="1" name="Debuff" time="30" val="0" stackOrder="100" stackType="CurseShade">
         <mul order="0x30" stat="mDef" val="#Tab-mDef"/>
         <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
      </effect>
@@ -150,7 +150,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-     <effect count="1" name="Buff" time="30" val="0" stackOrder="100" stackType="CurseShade">
+     <effect count="1" name="Debuff" time="30" val="0" stackOrder="100" stackType="CurseShade">
         <mul order="0x30" stat="mDef" val="#Tab-mDef"/>
         <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
      </effect>
