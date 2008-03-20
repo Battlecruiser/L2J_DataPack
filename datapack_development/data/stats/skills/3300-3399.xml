@@ -653,14 +653,17 @@
   </for> 
 </skill> 
 <skill id="3361" levels="1" name="Release Agathion - Fortress"> 
-  <set name="power" val="0.0"/> 
-  <set name="target" val="TARGET_NONE"/> 
-  <set name="skillType" val="NOTDONE"/> 
-  <set name="operateType" val="OP_PASSIVE"/> 
-  <set name="castRange" val="-1"/> 
-  <set name="effectRange" val="-1"/> 
-  <for> 
-  </for> 
+  <set name="target" val="TARGET_SELF"/>
+  <set name="mpConsume" val="0"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="reuseDelay" val="0"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="16029" />
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <for>
+  </for>
 </skill> 
 <skill id="3362" levels="1" name="Traits Strengthen Necklace"> 
   <set name="power" val="0.0"/> 
