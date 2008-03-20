@@ -184,43 +184,49 @@
 </skill>
 <skill id="5413" levels="1" name="Performing Agathion - Beast Farm">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
     See a summoned Agathion perform tricks.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="mpConsume" val="0"/>
+  <set name="skillType" val="UNLOCK"/> <!-- havent found any matching skilltype, this one working fine :) -->
+  <set name="hitTime" val="3000"/>
+  <set name="reuseDelay" val="0"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="5414" levels="1" name="Performing Agathion - Rainbow Clan Hall">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
     See a summoned Agathion perform tricks.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="mpConsume" val="0"/>
+  <set name="skillType" val="UNLOCK"/> <!-- havent found any matching skilltype, this one working fine :) -->
+  <set name="hitTime" val="3000"/>
+  <set name="reuseDelay" val="0"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="5415" levels="1" name="Performing Agathion - Castle">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
     See a summoned Agathion perform tricks.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="mpConsume" val="0"/>
+  <set name="skillType" val="UNLOCK"/> <!-- havent found any matching skilltype, this one working fine :) -->
+  <set name="hitTime" val="3000"/>
+  <set name="reuseDelay" val="0"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -800,15 +806,17 @@
 </skill>
 <skill id="5458" levels="1" name="Performing Agathion - Fortress">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
     See a summoned Agathion perform tricks.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="mpConsume" val="0"/>
+  <set name="skillType" val="UNLOCK"/> <!-- havent found any matching skilltype, this one working fine :) -->
+  <set name="hitTime" val="3000"/>
+  <set name="reuseDelay" val="0"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
