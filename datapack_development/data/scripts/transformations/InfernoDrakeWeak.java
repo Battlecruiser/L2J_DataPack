@@ -15,12 +15,12 @@ import net.sf.l2j.gameserver.model.L2Transformation;
  * @author durgus
  *
  */
-public class GolemGuardian extends L2Transformation
+public class InfernoDrakeWeak extends L2Transformation
 {
-	public GolemGuardian()
+	public InfernoDrakeWeak()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(210, 3600, 8.0, 22.0);
+		super(215, 3600, 8.0, 22.0);
 	}
 
 	public void onTransform()
@@ -45,14 +45,14 @@ public class GolemGuardian extends L2Transformation
 
 	public void transformedSkills()
 	{
-		// Double Slasher
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(572, 1), false);
-		// Earthquake
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(573, 1), false);
-		// Bomb Installation
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(574, 1), false);
-		// Steel Cutter
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(575, 1), false);
+        // Paw Strike
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(576, 2), false);
+		// Fire Breath
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(577, 2), false);
+		// Blaze Quake
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(578, 2), false);
+		// Fire Armor
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(579, 2), false);
 		// Transfrom Dispel
 		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
@@ -83,14 +83,14 @@ public class GolemGuardian extends L2Transformation
 
 	public void removeSkills()
 	{
-		// Double Slasher
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(572, 1), false);
-		// Earthquake
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(573, 1), false);
-		// Bomb Installation
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(574, 1), false);
-		// Steel Cutter
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(575, 1), false);
+        // Paw Strike
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(576, 2), false);
+		// Fire Breath
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(577, 2), false);
+		// Blaze Quake
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(578, 2), false);
+		// Fire Armor
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(579, 2), false);
 		// Transfrom Dispel
 		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
@@ -101,6 +101,6 @@ public class GolemGuardian extends L2Transformation
 
 	public static void main(String[] args)
 	{
-		TransformationManager.getInstance().registerTransformation(new GolemGuardian());
+		TransformationManager.getInstance().registerTransformation(new InfernoDrakeWeak());
 	}
 }
