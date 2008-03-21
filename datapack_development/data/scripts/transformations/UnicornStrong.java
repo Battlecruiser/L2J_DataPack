@@ -15,12 +15,12 @@ import net.sf.l2j.gameserver.model.L2Transformation;
  * @author durgus
  *
  */
-public class DoomWraith extends L2Transformation
+public class UnicornStrong extends L2Transformation
 {
-	public DoomWraith()
+	public UnicornStrong()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(2, 3600, 8.0, 22.0);
+		super(204, 3600, 8.0, 22.0);
 	}
 
 	public void onTransform()
@@ -45,14 +45,14 @@ public class DoomWraith extends L2Transformation
 
 	public void transformedSkills()
 	{
-		// Rolling Attack
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(586, 2), false);
-		// Curse of Darkness
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(588, 2), false);
-		// Dig Attack
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(587, 2), false);
-		// Darkness Energy Drain"
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(589, 2), false);
+		// Horn of Doom
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(563, 4), false);
+		// Gravity Control
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(564, 4), false);
+		// Horn Assault
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(565, 4), false);
+		// Light of Heal
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(567, 4), false);
 		// Transfrom Dispel
 		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
@@ -83,14 +83,14 @@ public class DoomWraith extends L2Transformation
 
 	public void removeSkills()
 	{
-		// Rolling Attack
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(586, 2), false);
-		// Curse of Darkness
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(588, 2), false);
-		// Dig Attack
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(587, 2), false);
-		// Darkness Energy Drain"
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(589, 2), false);
+		// Horn of Doom
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(563, 4), false);
+		// Gravity Control
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(564, 4), false);
+		// Horn Assault
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(565, 4), false);
+		// Light of Heal
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(567, 4), false);
 		// Transfrom Dispel
 		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
@@ -101,6 +101,6 @@ public class DoomWraith extends L2Transformation
 
 	public static void main(String[] args)
 	{
-		TransformationManager.getInstance().registerTransformation(new DoomWraith());
+		TransformationManager.getInstance().registerTransformation(new UnicornStrong());
 	}
 }

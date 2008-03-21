@@ -15,12 +15,12 @@ import net.sf.l2j.gameserver.model.L2Transformation;
  * @author durgus
  *
  */
-public class GrailApostle extends L2Transformation
+public class GolemGuardianNormal extends L2Transformation
 {
-	public GrailApostle()
+	public GolemGuardianNormal()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(201, 3600, 8.0, 22.0);
+		super(211, 3600, 8.0, 22.0);
 	}
 
 	public void onTransform()
@@ -45,14 +45,14 @@ public class GrailApostle extends L2Transformation
 
 	public void transformedSkills()
 	{
-		// Spear
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(559, 1), false);
-		// Power Slash
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(560, 1), false);
-		// Bless of Angel
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(561, 1), false);
-		// Wind of Angel
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(562, 1), false);
+		// Double Slasher
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(572, 3), false);
+		// Earthquake
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(573, 3), false);
+		// Bomb Installation
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(574, 3), false);
+		// Steel Cutter
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(575, 3), false);
 		// Transfrom Dispel
 		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
@@ -83,14 +83,14 @@ public class GrailApostle extends L2Transformation
 
 	public void removeSkills()
 	{
-		// Spear
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(559, 1), false);
-		// Power Slash
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(560, 1), false);
-		// Bless of Angel
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(561, 1), false);
-		// Wind of Angel
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(562, 1), false);
+		// Double Slasher
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(572, 3), false);
+		// Earthquake
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(573, 3), false);
+		// Bomb Installation
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(574, 3), false);
+		// Steel Cutter
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(575, 3), false);
 		// Transfrom Dispel
 		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
@@ -101,6 +101,6 @@ public class GrailApostle extends L2Transformation
 
 	public static void main(String[] args)
 	{
-		TransformationManager.getInstance().registerTransformation(new GrailApostle());
+		TransformationManager.getInstance().registerTransformation(new GolemGuardianNormal());
 	}
 }

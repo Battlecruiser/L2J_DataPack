@@ -15,12 +15,12 @@ import net.sf.l2j.gameserver.model.L2Transformation;
  * @author durgus
  *
  */
-public class DragonBomber extends L2Transformation
+public class GrailApostleWeak extends L2Transformation
 {
-	public DragonBomber()
+	public GrailApostleWeak()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(216, 3600, 8.0, 22.0);
+		super(203, 3600, 8.0, 22.0);
 	}
 
 	public void onTransform()
@@ -45,14 +45,14 @@ public class DragonBomber extends L2Transformation
 
 	public void transformedSkills()
 	{
-		// Death Blow
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(580, 1), false);
-		// Sand Cloud
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(581, 1), false);
-		// Scope Bleed
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(582, 1), false);
-		// Assimilation
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(583, 1), false);
+		// Spear
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(559, 2), false);
+		// Power Slash
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(560, 2), false);
+		// Bless of Angel
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(561, 2), false);
+		// Wind of Angel
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(562, 2), false);
 		// Transfrom Dispel
 		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
@@ -83,14 +83,14 @@ public class DragonBomber extends L2Transformation
 
 	public void removeSkills()
 	{
-		// Death Blow
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(580, 1), false);
-		// Sand Cloud
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(581, 1), false);
-		// Scope Bleed
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(582, 1), false);
-		// Assimilation
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(583, 1), false);
+		// Spear
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(559, 2), false);
+		// Power Slash
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(560, 2), false);
+		// Bless of Angel
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(561, 2), false);
+		// Wind of Angel
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(562, 2), false);
 		// Transfrom Dispel
 		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
@@ -101,6 +101,6 @@ public class DragonBomber extends L2Transformation
 
 	public static void main(String[] args)
 	{
-		TransformationManager.getInstance().registerTransformation(new DragonBomber());
+		TransformationManager.getInstance().registerTransformation(new GrailApostleWeak());
 	}
 }

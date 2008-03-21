@@ -15,12 +15,12 @@ import net.sf.l2j.gameserver.model.L2Transformation;
  * @author durgus
  *
  */
-public class Unicorn extends L2Transformation
+public class GrailApostleNormal extends L2Transformation
 {
-	public Unicorn()
+	public GrailApostleNormal()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(204, 3600, 8.0, 22.0);
+		super(202, 3600, 8.0, 22.0);
 	}
 
 	public void onTransform()
@@ -45,14 +45,14 @@ public class Unicorn extends L2Transformation
 
 	public void transformedSkills()
 	{
-		// Horn of Doom
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(563, 1), false);
-		// Gravity Control
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(564, 1), false);
-		// Horn Assault
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(565, 1), false);
-		// Light of Heal
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(567, 1), false);
+		// Spear
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(559, 3), false);
+		// Power Slash
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(560, 3), false);
+		// Bless of Angel
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(561, 3), false);
+		// Wind of Angel
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(562, 3), false);
 		// Transfrom Dispel
 		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
@@ -83,14 +83,14 @@ public class Unicorn extends L2Transformation
 
 	public void removeSkills()
 	{
-		// Horn of Doom
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(563, 1), false);
-		// Gravity Control
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(564, 1), false);
-		// Horn Assault
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(565, 1), false);
-		// Light of Heal
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(567, 1), false);
+		// Spear
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(559, 3), false);
+		// Power Slash
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(560, 3), false);
+		// Bless of Angel
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(561, 3), false);
+		// Wind of Angel
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(562, 3), false);
 		// Transfrom Dispel
 		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
@@ -101,6 +101,6 @@ public class Unicorn extends L2Transformation
 
 	public static void main(String[] args)
 	{
-		TransformationManager.getInstance().registerTransformation(new Unicorn());
+		TransformationManager.getInstance().registerTransformation(new GrailApostleNormal());
 	}
 }
