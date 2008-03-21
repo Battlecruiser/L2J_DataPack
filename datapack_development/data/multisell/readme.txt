@@ -12,7 +12,7 @@ of this directory a little bit.
 382.xml  -> Quest 382: Head Blacksmith Vergara
 426.xml  -> Quest 426: Fishing Shots
 500.xml  -> Seven Signs - Purchase consumable items
-618.xml  -> Quest 648: An Ice Merchants Dream
+648.xml  -> Quest 648: An Ice Merchants Dream
 
 999.xml  -> Upgrade hatchling to strider equipment
 1000.xml -> Upgrade pet equipment
