@@ -65,8 +65,8 @@ class Quest (JQuest) :
     silver = st.getQuestItemsCount(Silver_Ice)
     black = st.getQuestItemsCount(Black_Ice)
     if npcId == Rafforty :
-       if st.getState() == State.CREATED :
-          if st.getPlayer().getLevel() >= 53 :
+       if id == State.CREATED :
+          if player.getLevel() >= 53 :
              htmltext = "32020-01.htm"
           else :
              htmltext = "32020-00.htm"
@@ -74,15 +74,12 @@ class Quest (JQuest) :
        elif cond == 1:
           if silver or black :
              st2 = player.getQuestState("115_TheOtherSideOfTruth")
+             htmltext = "32020-05.htm"
              if st2 :
                 if st2.getState().getName() == 'Completed' :
                    htmltext = "32020-10.htm"
                    st.playSound("ItemSound.quest_middle")
                    st.set("cond","2")
-                else :
-                   htmltext = "32020-05.htm"
-             else :
-                htmltext = "32020-05.htm"
           else:
              htmltext = "32020-04.htm"
        elif cond == 2:
@@ -91,7 +88,7 @@ class Quest (JQuest) :
           else:
              htmltext = "32020-04a.htm"
     elif npcId == Ice_Shelf :
-       if st.getState() == State.CREATED :
+       if id == State.CREATED :
           htmltext = "32023-00.htm"
        else:
           if silver > 0 :
@@ -101,33 +98,26 @@ class Quest (JQuest) :
     return htmltext
 
  def onKill(self,npc,player,isPet):
-    partyMember1 = self.getRandomPartyMember(player, "1")
-    partyMember2 = self.getRandomPartyMember(player, "2")
-    partyMember = partyMember1
-    if not partyMember1 and not partyMember2 : return
-    elif not partyMember1 :
-       partyMember =  partyMember2
-    elif not partyMember2 :
-       partyMember =  partyMember1
-    else :
-       if partyMember.getQuestState(qn).getRandom(2) :
-          partyMember = partyMember2
-    st = partyMember.getQuestState(qn)  
-    chance = int((npc.getNpcId() - 22050)*Config.RATE_DROP_QUEST)
-    numItems, chance = divmod(chance,100)
-    random = st.getRandom(100)
-    cond=st.getInt("cond")
-    if random <= chance:
-       numItems += 1
-    if int(numItems) != 0 :    
-       st.giveItems(Silver_Ice,int(numItems))
-       st.playSound("ItemSound.quest_itemget")
+    partyMember = self.getRandomPartyMemberState(player, State.STARTED)
+    if not partyMember : return
+    st = partyMember.getQuestState(qn)
+    if st :
+        chance = int((npc.getNpcId() - 22050)*Config.RATE_DROP_QUEST)
+        numItems, chance = divmod(chance,100)
+        random = st.getRandom(100)
+        if random <= chance:
+           numItems += 1
+        if int(numItems) != 0 :
+           st.giveItems(Silver_Ice,int(numItems))
+           st.playSound("ItemSound.quest_itemget")
     #solo part
     st = player.getQuestState(qn)
-    if cond == 2:
-       if random <=10:
-          st.giveItems(Hemocyte,1)
-          st.playSound("ItemSound.quest_itemget")
+    if st:
+        cond=st.getInt("cond")
+        random = st.getRandom(100)
+        if cond == 2 and random <=10:
+            st.giveItems(Hemocyte,1)
+            st.playSound("ItemSound.quest_itemget")
     return  
 
 QUEST = Quest(648,qn,"An Ice Merchant's Dream")
@@ -136,5 +126,6 @@ QUEST.addStartNpc(Rafforty)
 QUEST.addStartNpc(Ice_Shelf)
 QUEST.addTalkId(Rafforty) 
 QUEST.addTalkId(Ice_Shelf)
+
 for m in MOBS:
    QUEST.addKillId(m)
