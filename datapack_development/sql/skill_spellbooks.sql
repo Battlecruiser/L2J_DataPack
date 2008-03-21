@@ -399,6 +399,7 @@ INSERT INTO `skill_spellbooks` VALUES
 (1459,10103), -- Spellbook: Divine Power
 (478,10031), -- Battle Manual: Double Thrust
 (526,10068), -- Battle Manual: Enuma Elish
+(1475,10181), -- Battle Manual: Erase Mark
 (1431,10025), -- Battle Manual: Fallen Arrow
 (468,10026), -- Battle Manual: Fallen Attack
 (490,10077), -- Battle Manual: Fast Shot
@@ -437,6 +438,7 @@ INSERT INTO `skill_spellbooks` VALUES
 (492,10036), -- Battle Manual: Spread Wing
 (1440,10049), -- Battle Manual: Steal Divinity
 (493,10095), -- Battle Manual: Storm Assault
+(1445,10085), -- Battle Manual: Surrender To Unholy
 (483,10075), -- Battle Manual: Sword Shield
 (511,10055), -- Battle Manual: Temptation
 (1455,10101), -- Spellbook: Throne of Ice
