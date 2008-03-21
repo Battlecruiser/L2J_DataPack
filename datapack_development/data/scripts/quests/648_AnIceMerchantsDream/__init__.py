@@ -73,11 +73,15 @@ class Quest (JQuest) :
              st.exitQuest(1)
        elif cond == 1:
           if silver or black :
-             if player.getQuestState("115_TheOtherSideOfTruth").getState() == State.COMPLETED :
-                htmltext = "32020-10.htm"
-                st.playSound("ItemSound.quest_middle")
-                st.set("cond","2")
-             else:
+             st2 = player.getQuestState("115_TheOtherSideOfTruth")
+             if st2 :
+                if st2.getState().getName() == 'Completed' :
+                   htmltext = "32020-10.htm"
+                   st.playSound("ItemSound.quest_middle")
+                   st.set("cond","2")
+                else :
+                   htmltext = "32020-05.htm"
+             else :
                 htmltext = "32020-05.htm"
           else:
              htmltext = "32020-04.htm"
