@@ -83,7 +83,7 @@ class Quest (JQuest) :
        else :
            htmltext = "31372-09.htm"
    elif event == "31560-02.htm" :
-       if st.getQuestItemsCount(Green_Totem) == 0 :
+       if Green_Totem == 0 :
            htmltext = "31560-04.htm"
        elif npc.isBusy() :
            htmltext = "31560-03.htm"
