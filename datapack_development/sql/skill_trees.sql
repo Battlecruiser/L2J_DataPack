@@ -15843,4 +15843,12 @@ INSERT INTO skill_trees VALUES
 (53,1405,1,'Divine Inspiration',0,52),
 (53,1405,2,'Divine Inspiration',0,61),
 (53,1405,3,'Divine Inspiration',0,76),
-(53,1405,4,'Divine Inspiration',0,76);
+(53,1405,4,'Divine Inspiration',0,76),
+(123,1405,1,'Divine Inspiration',0,52),
+(123,1405,2,'Divine Inspiration',0,61),
+(123,1405,3,'Divine Inspiration',0,76),
+(123,1405,4,'Divine Inspiration',0,76),
+(124,1405,1,'Divine Inspiration',0,52),
+(124,1405,2,'Divine Inspiration',0,61),
+(124,1405,3,'Divine Inspiration',0,76),
+(124,1405,4,'Divine Inspiration',0,76);
