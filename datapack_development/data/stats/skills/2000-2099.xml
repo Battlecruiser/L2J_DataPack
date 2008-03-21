@@ -876,12 +876,18 @@
   </for>
 </skill>
 <skill id="2076" levels="1" name="Bless of Eva">
-  <set name="power" val="1.0"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
   <for>
+    <effect count="1" name="Buff" time="400" val="0" stackOrder="5.0" stackType="max_breath_up">
+      <mul order="0x30" stat="breath" val="5.0"/>
+    </effect>
   </for>
 </skill>
 <skill id="2077" levels="1" name="Potion of Revenge">
