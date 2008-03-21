@@ -1281,7 +1281,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
-    <effect count="1" name="BigHead" time="300" val="0" abnormal="bighead"/>
+    <effect count="1" name="BigHead" time="300" val="0" abnormal="bighead" stackOrder="300" stackType="big_head"/>
   </for>
 </skill>
 <skill id="4383" levels="1" name="NPC Hate Stone">
