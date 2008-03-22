@@ -469,5 +469,5 @@ INSERT INTO `skill_spellbooks` VALUES
 (501,10080), -- Battle Manual: Violent Temper
 (1447,10093), -- Battle Manual: Voice Bind
 (628,10275), -- Battle Manual: Warp
-(1482,10193); -- Battle Manual: Weak Constitution
+(1482,10193), -- Battle Manual: Weak Constitution
 (1456,10109); -- Spellbook: Wind Vortex Slug
