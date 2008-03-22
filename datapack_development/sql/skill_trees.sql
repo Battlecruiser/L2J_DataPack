@@ -15806,7 +15806,7 @@ INSERT INTO skill_trees VALUES
 (49,1322,1,'Common Craft',0,1),
 (53,1322,1,'Common Craft',0,1),
 
--- Divine Inspiration (by Amon & Scarlet)
+-- Divine Inspiration (Done by Amon & Scarlet)
 
 (0,1405,1,'Divine Inspiration',0,52),
 (0,1405,2,'Divine Inspiration',0,61),
@@ -15820,10 +15820,10 @@ INSERT INTO skill_trees VALUES
 (18,1405,2,'Divine Inspiration',0,61),
 (18,1405,3,'Divine Inspiration',0,76),
 (18,1405,4,'Divine Inspiration',0,76),
-(26,1405,1,'Divine Inspiration',0,52),
-(26,1405,2,'Divine Inspiration',0,61),
-(26,1405,3,'Divine Inspiration',0,76),
-(26,1405,4,'Divine Inspiration',0,76),
+(25,1405,1,'Divine Inspiration',0,52),
+(25,1405,2,'Divine Inspiration',0,61),
+(25,1405,3,'Divine Inspiration',0,76),
+(25,1405,4,'Divine Inspiration',0,76),
 (31,1405,1,'Divine Inspiration',0,52),
 (31,1405,2,'Divine Inspiration',0,61),
 (31,1405,3,'Divine Inspiration',0,76),
