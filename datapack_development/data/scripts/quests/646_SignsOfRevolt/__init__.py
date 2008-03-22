@@ -31,20 +31,16 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
    htmltext = event
    if event == "32016-03.htm" :
-      if st.getPlayer().getLevel() < 40 :
-         htmltext = "32017-02.htm"
-         st.exitQuest(1)
-      else :
-         st.set("cond","1")
-         st.setState(State.STARTED)
-         st.playSound("ItemSound.quest_accept")
+       st.set("cond","1")
+       st.setState(State.STARTED)
+       st.playSound("ItemSound.quest_accept")
    elif event in REWARDS.keys() :
        item, amount = REWARDS[event]
        st.takeItems(CURSED_DOLL,-1)
        st.giveItems(item, amount)
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(1)
-       return
+       htmltext = "32016-07.htm"
    return htmltext
 
  def onTalk (self,npc,player):
@@ -54,6 +50,10 @@ class Quest (JQuest) :
      id = st.getState()
      cond = st.getInt("cond")
      if id == State.CREATED :
+      if player.getLevel() < 40 :
+         htmltext = "32017-02.htm"
+         st.exitQuest(1)
+      else :
          htmltext = "32016-01.htm"
      elif cond == 1 :
          htmltext = "32016-04.htm"
@@ -65,7 +65,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill (self,npc,player,isPet):
-   partyMember = self.getRandomPartyMember(player,"1")
+   partyMember = self.getRandomPartyMember(player,State.STARTED)
    if not partyMember: return
    st = partyMember.getQuestState(qn)
    if st :
