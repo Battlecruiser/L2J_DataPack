@@ -39,7 +39,7 @@ class Quest (JQuest) :
        reward = r1 + r2
        st.giveItems(57,reward)
        st.takeItems(Silver_Ice,silver)
-       st.takeItems(black_Ice,black)
+       st.takeItems(Black_Ice,black)
     elif event == "32020-09.htm" :
        st.exitQuest(1)
        st.playSound("ItemSound.quest_finish")
