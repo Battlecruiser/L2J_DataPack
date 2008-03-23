@@ -475,9 +475,9 @@
   <cond msg="Proper SpellForces required.">
     <player spell_force="3"/>
   </cond>
-   <for>
-	<effect self="1" count="9" name="SignetMDam" time="2" val="0">
-    </effect>
+  <for>
+    <effect self="1" count="9" name="SignetMDam" time="2" val="0"/>
+  </for>
 </skill>
 <skill id="1420" levels="1" name="Cyclone">
 <!--
@@ -508,8 +508,7 @@
     <player spell_force="3"/>
   </cond>
   <for>
-	<effect self="1" count="9" name="SignetMDam" time="2" val="0">
-    </effect>
+    <effect self="1" count="9" name="SignetMDam" time="2" val="0"/>
   </for>
 </skill>
 <skill id="1421" levels="1" name="Raging Waves">
@@ -540,9 +539,9 @@
   <cond msg="Proper SpellForces required.">
     <player spell_force="3"/>
   </cond>
-   <for>
-	<effect self="1" count="9" name="SignetMDam" time="2" val="0">
-    </effect>
+  <for>
+    <effect self="1" count="9" name="SignetMDam" time="2" val="0"/>
+  </for>
 </skill>
 <skill id="1422" levels="1" name="Day of Doom">
 <!--
@@ -586,9 +585,8 @@
   <cond msg="Proper SpellForces required.">
     <player spell_force="3"/>
   </cond>
-   <for>
-	<effect self="1" count="9" name="SignetMDam" time="2" val="0">
-    </effect>
+  <for>
+    <effect self="1" count="9" name="SignetMDam" time="2" val="0"/>
   </for>
 </skill>
 <skill id="1424" levels="1" name="Anti-Summoning Field">
@@ -617,10 +615,9 @@
   <set name="mpConsume" val="70"/>
   <cond msg="Proper SpellForces required.">
     <player spell_force="2"/>
- </cond>
-   <for>
-	<effect count="6" name="SignetAntiSummon" time="5" val="0">
-    </effect>
+  </cond>
+  <for>
+    <effect count="6" name="SignetAntiSummon" time="5" val="0"/>
   </for>
 </skill>
 <skill id="1425" levels="1" name="Purification Field">
