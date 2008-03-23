@@ -551,7 +551,7 @@
   <set name="aggroPoints" val="#aggro"/>
   <enchant1 name="reuseDelay" val="#ench1Reuse"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="#Tab-maxHp" stackType="MaxHPUp">
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="#Tab-maxHp" stackType="max_hp_up">
       <mul order="0x30" stat="maxHp" val="#Tab-maxHp"/>
     </effect>
   </for>

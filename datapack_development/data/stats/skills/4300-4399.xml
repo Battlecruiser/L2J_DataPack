@@ -368,7 +368,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.35" stackType="MaxHPUp">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.35" stackType="max_hp_up">
       <mul order="0x30" stat="maxHp" val="1.35"/>
     </effect>
   </for>
@@ -733,7 +733,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxHp" stackType="MaxHPUp">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxHp" stackType="max_hp_up">
       <mul order="0x30" stat="maxHp" val="#Tab-maxHp"/>
     </effect>
   </for>
@@ -1449,7 +1449,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0" stackOrder="#Tab-maxHp" stackType="MaxHPUp">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="#Tab-maxHp" stackType="max_hp_up">
       <mul order="0x30" stat="maxHp" val="#Tab-maxHp"/>
     </effect>
   </for>

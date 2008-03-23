@@ -425,12 +425,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#hp" stackType="MaxHPUp">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#hp" stackType="max_hp_up">
       <mul order="0x30" stat="maxHp" val="#hp"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1.35" stackType="MaxHPUp">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1.35" stackType="max_hp_up">
       <mul order="0x30" stat="maxHp" val="1.35"/>
     </effect>
   </enchant1for>
