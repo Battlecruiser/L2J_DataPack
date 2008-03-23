@@ -579,6 +579,10 @@
   </for>
 </skill>
 <skill id="426" levels="1" name="Battle Force">
+<!--
+  Description(s):
+      Transfers your strength to a party member. The effect can be cancelled if you incur damage.
+-->
   <set name="mpInitialConsume" val="12"/>
   <set name="magicLvl" val="77"/>
   <set name="forceId" val="5104"/>
@@ -589,10 +593,16 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="1400"/>
   <set name="reuseDelay" val="30000"/>
+  <set name="isMagic" val="true"/>
+  <set name="power" val="0.0"/>
   <for>
   </for>
 </skill>
 <skill id="427" levels="1" name="Spell Force">
+<!--
+  Description(s):
+      Transfers your strength to a party member. The effect can be cancelled if you incur damage.
+-->
   <set name="mpInitialConsume" val="12"/>
   <set name="magicLvl" val="77"/>
   <set name="forceId" val="5105"/>
@@ -603,6 +613,8 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="1400"/>
   <set name="reuseDelay" val="30000"/>
+  <set name="isMagic" val="true"/>
+  <set name="power" val="0.0"/>
   <for>
   </for>
 </skill>
@@ -1207,107 +1219,212 @@
 </skill>
 <skill id="454" levels="1" name="Symbol of Defense">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Generates a signet that maximizes the defense abilities of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="SIGNET"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="5000"/>
+  <set name="reuseDelay" val="1800000"/>
   <set name="castRange" val="-1"/>
+  <set name="skillRadius" val="180"/>
+  <set name="magicLvl" val="80"/>
+  <set name="effectNpcId" val="13018"/>
+  <set name="effectId" val="5123"/>
+  <set name="isMagic" val="true"/>
+  <set name="power" val="200"/>
+  <set name="itemConsumeId" val="8875"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="mpInitialConsume" val="36"/>
+  <set name="mpConsume" val="36"/>
+  <cond msg="Proper BattleForces required.">
+    <player battle_force="2"/>
+  </cond>
   <for>
-<!-- needs core support -->
+	<effect count="24" name="Signet" time="5" val="0">
+    </effect>
   </for>
 </skill>
 <skill id="455" levels="1" name="Symbol of Noise">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Generates a signet that cancels the singing or dancing abilities of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="target" val="TARGET_GROUND"/>
+  <set name="skillType" val="SIGNET"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="5000"/>
+  <set name="reuseDelay" val="1800000"/>
+  <set name="castRange" val="900"/>
+  <set name="skillRadius" val="180"/>
+  <set name="magicLvl" val="80"/>
+  <set name="effectNpcId" val="13025"/>
+  <set name="offensive" val="True"/>
+  <set name="effectId" val="5124"/>
+  <set name="element" val="2"/>
+  <set name="isMagic" val="true"/>
+  <set name="power" val="200"/>
+  <set name="itemConsumeId" val="8876"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="mpInitialConsume" val="36"/>
+  <set name="mpConsume" val="36"/>
+  <cond msg="Proper BattleForces required.">
+    <player battle_force="2"/>
+  </cond>
   <for>
-<!-- needs core support -->
+	<effect count="6" name="SignetNoise" time="5" val="0">
+    </effect>
   </for>
 </skill>
+
 <skill id="456" levels="1" name="Symbol of Resistance">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Generates a signet that maximizes resistance to abnormal states of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="SIGNET"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="5000"/>
+  <set name="reuseDelay" val="1800000"/>
   <set name="castRange" val="-1"/>
+  <set name="skillRadius" val="180"/>
+  <set name="magicLvl" val="80"/>
+  <set name="effectNpcId" val="13018"/>
+  <set name="effectId" val="5125"/>
+  <set name="isMagic" val="true"/>
+  <set name="power" val="200"/>
+  <set name="itemConsumeId" val="8875"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="mpInitialConsume" val="36"/>
+  <set name="mpConsume" val="36"/>
+  <cond msg="Proper BattleForces required.">
+    <player battle_force="2"/>
+  </cond>
   <for>
-<!-- needs core support -->
+	<effect count="24" name="Signet" time="5" val="0">
+    </effect>
   </for>
 </skill>
+
 <skill id="457" levels="1" name="Symbol of Honor">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Generates a signet that maximizes the HP/CP recovery rate of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="SIGNET"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="5000"/>
+  <set name="reuseDelay" val="1800000"/>
   <set name="castRange" val="-1"/>
+  <set name="skillRadius" val="180"/>
+  <set name="magicLvl" val="80"/>
+  <set name="effectNpcId" val="13018"/>
+  <set name="effectId" val="5126"/>
+  <set name="isMagic" val="true"/>
+  <set name="power" val="200"/>
+  <set name="itemConsumeId" val="8875"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="mpInitialConsume" val="36"/>
+  <set name="mpConsume" val="36"/>
+  <cond msg="Proper BattleForces required.">
+    <player battle_force="2"/>
+  </cond>
   <for>
-<!-- needs core support -->
+	<effect count="24" name="Signet" time="5" val="0">
+    </effect>
   </for>
 </skill>
+
 <skill id="458" levels="1" name="Symbol of Energy">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Generates a signet that increases P. Atk. and force for those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="SIGNET"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="5000"/>
+  <set name="reuseDelay" val="1800000"/>
   <set name="castRange" val="-1"/>
+  <set name="skillRadius" val="180"/>
+  <set name="magicLvl" val="80"/>
+  <set name="effectNpcId" val="13018"/>
+  <set name="effectId" val="5127"/>
+  <set name="isMagic" val="true"/>
+  <set name="power" val="200"/>
+  <set name="itemConsumeId" val="8875"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="mpInitialConsume" val="36"/>
+  <set name="mpConsume" val="36"/>
+  <cond msg="Proper BattleForces required.">
+    <player battle_force="2"/>
+  </cond>
   <for>
-<!-- needs core support -->
+	<effect count="24" name="Signet" time="5" val="0">
+    </effect>
   </for>
 </skill>
+
 <skill id="459" levels="1" name="Symbol of the Sniper">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Generates a signet that maximizes the archery skill of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="SIGNET"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="5000"/>
+  <set name="reuseDelay" val="1800000"/>
   <set name="castRange" val="-1"/>
+  <set name="skillRadius" val="180"/>
+  <set name="magicLvl" val="80"/>
+  <set name="effectNpcId" val="13018"/>
+  <set name="effectId" val="5128"/>
+  <set name="isMagic" val="true"/>
+  <set name="power" val="200"/>
+  <set name="itemConsumeId" val="8875"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="mpInitialConsume" val="36"/>
+  <set name="mpConsume" val="36"/>
+  <cond msg="Proper BattleForces required.">
+    <player battle_force="2"/>
+  </cond>
   <for>
-<!-- needs core support -->
+	<effect count="24" name="Signet" time="5" val="0">
+    </effect>
   </for>
 </skill>
+
 <skill id="460" levels="1" name="Symbol of the Assassin">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Generates a signet that maximizes your dodging ability and increases the chance of inflicting a deadly attack for those near to you. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="SIGNET"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="5000"/>
+  <set name="reuseDelay" val="1800000"/>
   <set name="castRange" val="-1"/>
+  <set name="skillRadius" val="180"/>
+  <set name="magicLvl" val="80"/>
+  <set name="effectNpcId" val="13018"/>
+  <set name="effectId" val="5129"/>
+  <set name="isMagic" val="true"/>
+  <set name="power" val="200"/>
+  <set name="itemConsumeId" val="8875"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="mpInitialConsume" val="36"/>
+  <set name="mpConsume" val="36"/>
+  <cond msg="Proper BattleForces required.">
+    <player battle_force="2"/>
+  </cond>
   <for>
-<!-- needs core support -->
+	<effect count="24" name="Signet" time="5" val="0">
+    </effect>
   </for>
 </skill>
 <skill id="461" levels="2" name="Break Duress">

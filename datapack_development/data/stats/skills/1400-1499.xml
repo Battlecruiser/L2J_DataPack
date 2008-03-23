@@ -454,12 +454,30 @@
   Description(s):
       Consecutive strikes inflict a great amount of fire damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="target" val="TARGET_GROUND"/>
+  <set name="skillType" val="SIGNET_CASTTIME"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="16000"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="castRange" val="900"/>
+  <set name="skillRadius" val="180"/>
+  <set name="magicLvl" val="80"/>
+  <set name="effectNpcId" val="13025"/>
+  <set name="offensive" val="True"/>
+  <set name="effectId" val="5130"/>
+  <set name="element" val="2"/>
+  <set name="isMagic" val="true"/>
+  <set name="power" val="200"/>
+  <set name="itemConsumeId" val="8876"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="mpInitialConsume" val="36"/>
+  <set name="mpConsume" val="36"/>
+  <cond msg="Proper SpellForces required.">
+    <player spell_force="3"/>
+  </cond>
+   <for>
+	<effect self="1" count="9" name="SignetMDam" time="2" val="0">
+    </effect>
 </skill>
 <skill id="1420" levels="1" name="Cyclone">
 <!--
@@ -468,11 +486,30 @@
   Description(s):
       Consecutive strikes inflict a great amount of wind damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="target" val="TARGET_GROUND"/>
+  <set name="skillType" val="SIGNET_CASTTIME"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="16000"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="castRange" val="900"/>
+  <set name="skillRadius" val="180"/>
+  <set name="magicLvl" val="80"/>
+  <set name="offensive" val="True"/>
+  <set name="element" val="1"/>
+  <set name="effectNpcId" val="13025"/>
+  <set name="effectId" val="5132"/>
+  <set name="isMagic" val="true"/>
+  <set name="power" val="200"/>
+  <set name="itemConsumeId" val="8876"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="mpInitialConsume" val="36"/>
+  <set name="mpConsume" val="36"/>
+  <cond msg="Proper SpellForces required.">
+    <player spell_force="3"/>
+  </cond>
   <for>
+	<effect self="1" count="9" name="SignetMDam" time="2" val="0">
+    </effect>
   </for>
 </skill>
 <skill id="1421" levels="1" name="Raging Waves">
@@ -482,12 +519,30 @@
   Description(s):
       Consecutive strikes inflict a great amount of water damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="target" val="TARGET_GROUND"/>
+  <set name="skillType" val="SIGNET_CASTTIME"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="16000"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="castRange" val="900"/>
+  <set name="skillRadius" val="180"/>
+  <set name="magicLvl" val="80"/>
+  <set name="effectNpcId" val="13025"/>
+  <set name="offensive" val="True"/>
+  <set name="effectId" val="5131"/>
+  <set name="element" val="3"/>
+  <set name="isMagic" val="true"/>
+  <set name="power" val="200"/>
+  <set name="itemConsumeId" val="8876"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="mpInitialConsume" val="36"/>
+  <set name="mpConsume" val="36"/>
+  <cond msg="Proper SpellForces required.">
+    <player spell_force="3"/>
+  </cond>
+   <for>
+	<effect self="1" count="9" name="SignetMDam" time="2" val="0">
+    </effect>
 </skill>
 <skill id="1422" levels="1" name="Day of Doom">
 <!--
@@ -510,11 +565,30 @@
   Description(s):
       Consecutive strikes inflict a great amount of dark damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
+  <set name="target" val="TARGET_GROUND"/>
+  <set name="skillType" val="SIGNET_CASTTIME"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="16000"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="castRange" val="900"/>
+  <set name="skillRadius" val="180"/>
+  <set name="magicLvl" val="80"/>
+  <set name="effectNpcId" val="13025"/>
+  <set name="offensive" val="True"/>
+  <set name="effectId" val="5133"/>
+  <set name="element" val="6"/>
+  <set name="isMagic" val="true"/>
+  <set name="power" val="200"/>
+  <set name="itemConsumeId" val="8876"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="mpInitialConsume" val="36"/>
+  <set name="mpConsume" val="36"/>
+  <cond msg="Proper SpellForces required.">
+    <player spell_force="3"/>
+  </cond>
+   <for>
+	<effect self="1" count="9" name="SignetMDam" time="2" val="0">
+    </effect>
   </for>
 </skill>
 <skill id="1424" levels="1" name="Anti-Summoning Field">
@@ -524,11 +598,29 @@
   Description(s):
       Generates a signet that sends a servitor to another dimension at regular intervals. Applies to all servitors in the affected area. Level 2 or higher Spell Force required. Consumes 1 Magic Symbol.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
+  <set name="target" val="TARGET_GROUND"/>
+  <set name="skillType" val="SIGNET"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="5000"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="castRange" val="900"/>
+  <set name="skillRadius" val="180"/>
+  <set name="magicLvl" val="80"/>
+  <set name="effectNpcId" val="13020"/>
+  <set name="effectId" val="5134"/>
+  <set name="offensive" val="True"/>
+  <set name="isMagic" val="true"/>
+  <set name="power" val="200"/>
+  <set name="itemConsumeId" val="8876"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="mpInitialConsume" val="70"/>
+  <set name="mpConsume" val="70"/>
+  <cond msg="Proper SpellForces required.">
+    <player spell_force="2"/>
+ </cond>
+   <for>
+	<effect count="6" name="SignetAntiSummon" time="5" val="0">
+    </effect>
   </for>
 </skill>
 <skill id="1425" levels="1" name="Purification Field">
