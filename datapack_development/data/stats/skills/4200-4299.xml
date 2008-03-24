@@ -294,11 +294,14 @@
   </for>
 </skill>
 <skill id="4215" levels="1" name="Raid Curse">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="MUTE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1500"/>
+  <set name="effectRange" val="2000"/>
   <for>
+    <effect count="1" name="Mute" time="3600" val="0"/>
+    <effect count="1" name="PsychicalMute" time="3600" val="0" noicon="1"/>
   </for>
 </skill>
 <skill id="4216" levels="1" name="Scatter Enemy">
