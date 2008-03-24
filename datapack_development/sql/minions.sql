@@ -442,7 +442,10 @@ INSERT INTO `minions` VALUES
 (25517,25518,2,2),
 (25517,25519,3,4),
 (25524,25525,2,2),
-(25524,25526,2,2);
+(25524,25526,2,2),
+(29056,29057,2,2),
+(29056,29058,2,2);
+
 
 -- Primeval Isle temp mob groups.
 INSERT INTO `minions` VALUES
