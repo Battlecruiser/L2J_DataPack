@@ -135,9 +135,10 @@ class Quest (JQuest) :
                  htmltext = "31556-1.htm" #Buffer: buffs list
    return htmltext
 
- #todo: Currently this quest is solo, it needs to be party
  def onKill(self,npc,player,isPet):
-   st = player.getQuestState(qn)
+   partyMember = self.getRandomPartyMemberState(player, State.STARTED)
+   if not partyMember : return
+   st = partyMember.getQuestState(qn)
    if st :
         if st.getState() == State.STARTED :
             npcId = npc.getNpcId()

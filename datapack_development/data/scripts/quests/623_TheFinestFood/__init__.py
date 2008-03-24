@@ -1,6 +1,7 @@
 # The Finest Food - v0.1 by disKret & DrLecter
 import sys
 from net.sf.l2j import Config
+from net.sf.l2j.util import Rnd
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -80,20 +81,26 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet):
-   # todo: with the current code, a player who has State.COMPLETED up to 2 out of 3
-   # item collections may consume the party drop (i.e. become the selected
-   # player in the random, but get nothing because it was the wrong mob)
-   # this ought to be corrected later...
-   partyMember = self.getRandomPartyMember(player,"1")
-   if not partyMember: return
-   st = partyMember.getQuestState(qn)
-   if st :
+   partyMember1 = self.getRandomPartyMember(player,"1")
+   partyMember2 = self.getRandomPartyMemberState(player, State.COMPLETED)
+   if not partyMember1 and not partyMember2 : return
+   partyMember = partyMember1
+   item,chance = DROPLIST[npc.getNpcId()]
+   dropchance = Rnd.get(100)
+   if dropchance  < chance:
+    # player who has State.COMPLETED up to 2 out of 3 item collections may consume the party drop
+    if partyMember2 :
+      if Rnd.get(100) <= 66:
+         return
+      else :
+         partyMember = partyMember1
+    st = partyMember.getQuestState(qn)
+    if st :
       if st.getState() == State.STARTED :
-         item,chance = DROPLIST[npc.getNpcId()]
          count = st.getQuestItemsCount(item)
          if st.getInt("cond") == 1 and count < 100 :
             numItems, chance = divmod(chance*Config.RATE_DROP_QUEST,100)
-            if st.getRandom(100) < chance :
+            if dropchance  < chance:
                numItems += 1
             if count + numItems >= 100 :
               numItems = 100 - count
