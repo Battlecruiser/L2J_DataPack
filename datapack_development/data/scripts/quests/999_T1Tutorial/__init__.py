@@ -216,8 +216,6 @@ class Quest (JQuest) :
           htmltext = htmlfiles[2]
    elif st.getState() == State.COMPLETED and npcTyp == 0:
      htmltext = str(npc.getNpcId())+"-04.htm"
-   else:
-       htmltext = "<html><body>You are too experienced now.</body></html>"
    return htmltext
 
  def onKill(self,npc,player,isPet):
