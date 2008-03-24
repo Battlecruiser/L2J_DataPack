@@ -75,7 +75,6 @@ class Quest (JQuest) :
            htmltext = "31559-02.htm"
    elif event == "Eye of Udan has despawned" :
         AutoChat(npc,"I'll be waiting for your return")
-        npc.reduceCurrentHp(9999999,npc)
         st.set("spawned","0")
         return
    return htmltext
@@ -142,10 +141,10 @@ class Quest (JQuest) :
                     st.set("aggro","1")
                     st.set("cond","1")
                     st.set("id","4")
-                    spawnedNpc = st.addSpawn(Eye,xx,yy,zz)
+                    spawnedNpc = st.addSpawn(Eye,xx,yy,zz,10000)
                     st.set("spawned","1")
                     st.set("npcid",str(npc.getObjectId()))
-                    AutoChat(spawnedNpc,"You cannot escape Udan's eyes!")#this is only a temp message until we find out what it actually is! string = 61503
+                    AutoChat(spawnedNpc,"You cannot escape Udan's eyes!")
                     st.startQuestTimer("Eye of Udan has despawned",10000,spawnedNpc)
                     if Red_Totem :
                         st.takeItems(Totem,-1)
