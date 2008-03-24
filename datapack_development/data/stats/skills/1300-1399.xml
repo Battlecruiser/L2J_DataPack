@@ -892,7 +892,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-   <effect count="1" name="SilenceMagicPhysical" time="30" val="0"/>
+   <effect count="1" name="SilenceMagicPhysical" time="30" val="0" stackOrder="30" stackType="silence_all"/>
   </for>
 </skill>
 <skill id="1337" levels="1" name="Curse of Abyss">

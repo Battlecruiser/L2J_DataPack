@@ -235,7 +235,7 @@
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="1500"/>
   <for>
-    <effect count="1" name="Paralyze" time="120" val="0"/>
+    <effect count="1" name="Petrification" time="120" val="0" stackOrder="120" stackType="turn_stone"/>
   </for>
 </skill>
 <skill id="4112" levels="1" name="Ordinary Attack">
