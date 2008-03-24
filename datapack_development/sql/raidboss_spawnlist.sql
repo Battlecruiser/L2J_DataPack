@@ -242,8 +242,8 @@ INSERT INTO `raidboss_spawnlist` VALUES
 -- Following mobs need their type checked, corrected & determined whether they actually belong in here
 --
 -- (29054,1,11882,-49216,-3008,0,43200,129600,0,1352750,1494), -- Benom (75) (spawn 1hr before siege in rune start)
--- (29056,1,102800,-126000,-2500,0,43200,129600,0,350000,9999), -- Ice Fairy Sirra (60) -- stats to be done (Spawn by Quest)
--- (29060,1,106000,-128000,-3000,0,43200,129600,0,350000,9999), -- Captain Of The Ice Queen's Royal Guard (59) -- stats to be done
+-- (29056,1,102779,-125920,-2840,0,0,0,2400,350000,9999), -- Ice Fairy Sirra (60) (Spawn by Quest)
+-- (29060,1,105546,-127892,-2768,0,0,0,2400,350000,9999), -- Captain Of The Ice Queen's Royal Guard (59) (Spawn by Quest)
 -- (29062,1,-16382,-53450,-10432,0,43200,129600,0,400000,9999), -- High Priestess Van Halter (87) -- stats to be done (Spawn by Quest)
 -- (29065,1,26528,-8244,-20,0,43200,129600,0,400000,9999), -- Sailren (87) -- stats to be done (Spawn by Quest)
 -- (29095,1,000000,000000,000000,0,43200,129600,0,400000,9999); -- Gordon (87) -- walking arround Goddard
