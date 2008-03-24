@@ -997,14 +997,19 @@ chances and the success rate of dagger skills. -->
   </for>
 </skill>
 <skill id="4578" levels="1" name="Petrification">
-<!-- TODO -->
-  <set name="mpConsume" val="73"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="80"/>
+  <set name="mpInitialConsume" val="15"/>
+  <set name="mpConsume" val="58"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="PARALYZE"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
+    <effect count="1" name="Petrification" time="20" val="0" stackOrder="20" stackType="turn_stone"/>
   </for>
 </skill>
 <skill id="4579" levels="12" name="Bleed">

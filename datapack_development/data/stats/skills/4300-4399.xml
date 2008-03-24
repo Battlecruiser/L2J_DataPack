@@ -1275,12 +1275,17 @@
   </for>
 </skill>
 <skill id="4383" levels="1" name="NPC Hate Stone">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="80"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillType" val="PARALYZE"/>
+  <set name="target" val="TARGET_AURA"/>
   <for>
+    <effect count="1" name="Petrification" time="10" val="0" stackOrder="10" stackType="turn_stone"/>
   </for>
 </skill>
 <skill id="4384" levels="1" name="Scapegoat's Grace">

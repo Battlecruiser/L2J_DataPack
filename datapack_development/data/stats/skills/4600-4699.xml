@@ -295,15 +295,20 @@
   </for>
 </skill>
 <skill id="4616" levels="1" name="Fake Petrification">
-<!-- TODO -->
-  <set name="mpConsume" val="73"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by DJ MELERIX -->
   <set name="aggroPoints" val="100"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="80"/>
+  <set name="mpInitialConsume" val="15"/>
+  <set name="mpConsume" val="58"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="PARALYZE"/>
+  <set name="target" val="TARGET_SELF"/>
   <for>
+    <effect count="1" name="Petrification" time="360" val="0" stackOrder="360" stackType="turn_stone"/>
   </for>
 </skill>
 <skill id="4617" levels="1" name="Dispel Petrification">
