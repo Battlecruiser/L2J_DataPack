@@ -150,21 +150,8 @@ class Quest (JQuest) :
            st.playSound("ItemSound.quest_middle")
      # In addition, drops go to one party member among those who are either in
      # progress PART1 or in PART2
-     partyMember1 = self.getRandomPartyMember(player, "progress", "PART1")
-     partyMember2 = self.getRandomPartyMember(player, "progress", "PART2")
-     partyMember = partyMember1  # initialize
-     # if there exist no party members for either state, do nothing
-     if not partyMember1 and not partyMember2 : return
-     # if there exist only party members for PART2, use the one we got from PART2
-     elif not partyMember1 :
-         partyMember =  partyMember2
-     # if there exist only party members for PART1, use the one we got from PART1
-     elif not partyMember2 :
-         partyMember =  partyMember1
-     # if there exist party members from both states, choose one randomly
-     else :
-         if partyMember.getQuestState(qn).getRandom(2) :
-             partyMember = partyMember2
+     partyMember = self.getRandomPartyMemberState(player, State.STARTED)
+     if not partyMember : return
      st = partyMember.getQuestState(qn)  
      numItems, chance = divmod(DROP_RATE,MAX)
      if st.getRandom(MAX) < chance :
