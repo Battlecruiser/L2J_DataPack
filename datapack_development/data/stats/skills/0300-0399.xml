@@ -1639,7 +1639,7 @@
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="120000"/>
   <for>
-    <effect count="1" name="Petrification" time="30" val="0"/>
+    <effect count="1" name="Petrification" time="30" val="0" stackOrder="30" stackType="turn_stone"/>
   </for>
 </skill>
 <skill id="368" levels="1" name="Vengeance">
