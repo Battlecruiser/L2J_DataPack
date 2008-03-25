@@ -337,7 +337,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-rCrit" stackType="rCrit">
       <mul order="0x30" stat="rCrit" val="#Tab-rCrit"/>
@@ -357,7 +356,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-cAtk" stackType="cAtk">
       <mul order="0x30" stat="cAtk" val="#Tab-cAtk"/>
@@ -377,7 +375,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-pAtkSpd" stackType="attack_time_down">
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
@@ -397,7 +394,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect name="Buff" time="300" count="1" val="0" stackOrder="#Tab-accCombat" stackType="hit_up">
       <add order="0x40" stat="accCombat" val="#Tab-accCombat"/>
@@ -417,7 +413,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-maxHp" stackType="max_hp_up">
       <mul order="0x30" stat="maxHp" val="#Tab-maxHp"/>
@@ -437,7 +432,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-maxMp" stackType="MPregen">
       <mul order="0x30" stat="maxMp" val="#Tab-maxMp"/>
@@ -457,7 +451,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-rEvas" stackType="rEvas">
       <add order="0x40" stat="rEvas" val="#Tab-rEvas"/>
@@ -477,7 +470,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-mAtkSpd" stackType="mAtkSpeedUp">
       <mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
@@ -497,7 +489,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="#Weight" stackType="Weight">
       <add order="0x40" stat="maxLoad" val="#Weight"/>
@@ -517,7 +508,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="#rate" stackType="pa_up">
       <mul order="0x30" stat="pAtk" val="#rate"/>
@@ -537,7 +527,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="#rate" stackType="pd_up">
       <mul order="0x30" stat="pDef" val="#rate"/>
@@ -557,7 +546,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-mDef" stackType="MagicDefUp">
       <mul order="0x30" stat="mDef" val="#Tab-mDef"/>
@@ -577,7 +565,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect name="Buff" time="300" count="1" val="0" stackOrder="#Tab-absorbDam" stackType="vampRage">
       <add order="0x40" stat="absorbDam" val="#Tab-absorbDam"/>
@@ -597,7 +584,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-mAtk" stackType="ma_up">
       <mul order="0x30" stat="mAtk" val="#Tab-mAtk"/>
@@ -617,7 +603,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-runSpd" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
@@ -644,7 +629,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="berserk">
       <mul order="0x30" stat="mAtk" val="#Tab-mAtk"/>
@@ -671,7 +655,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="0" stackType="Great">
       <mul order="0x30" stat="pAtk" val="#pAtk"/>
@@ -691,7 +674,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="0" stackType="Great">
       <mul order="0x30" stat="pDef" val="#rate"/>
@@ -711,7 +693,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect name="Buff" time="300" count="1" val="0">
       <mul order="0x30" stat="mCritRate" val="#mCrit"/>
@@ -732,7 +713,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="#mpConsume" stackType="MPrate">
       <mul order="0x30" stat="MpConsumeRate" val="#MpConsumeRate"/>
@@ -751,7 +731,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
       <mul order="0x30" stat="mAtk" val="1.20"/>
@@ -776,7 +755,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
       <mul order="0x30" stat="pAtk" val="1.10"/>
@@ -802,7 +780,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
       <add order="0x40" stat="absorbDam" val="5"/>
@@ -835,7 +812,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
-  <set name="aggroPoints" val="0"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
       <mul order="0x30" stat="pAtk" val="1.1"/>
