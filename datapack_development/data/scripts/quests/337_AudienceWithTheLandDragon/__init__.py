@@ -87,16 +87,16 @@ class Quest (JQuest) :
              st.exitQuest(1)
          return htmltext
      elif event == "Jewel1_Timer1" :
-         npc.decayMe()
+         npc.reduceCurrentHp(9999999,npc)
          self.cancelQuestTimer("Jewel1_Timer2",npc,None)
      elif event == "Jewel1_Timer2" :
-         npc.decayMe()
+         npc.reduceCurrentHp(9999999,npc)
          self.cancelQuestTimer("Jewel1_Timer1",npc,None)
      elif event == "Jewel2_Timer1" :
-         npc.decayMe()
+         npc.reduceCurrentHp(9999999,npc)
          self.cancelQuestTimer("Jewel2_Timer2",npc,None)
      elif event == "Jewel2_Timer2" :
-         npc.decayMe()
+         npc.reduceCurrentHp(9999999,npc)
          self.cancelQuestTimer("Jewel2_Timer1",npc,None)
      return
 
@@ -266,7 +266,7 @@ class Quest (JQuest) :
                  st.playSound("ItemSound.quest_itemget")
                  self.startQuestTimer("Jewel1_Timer2",240000,npc,None)
          if nowHp < maxHp*0.1 :
-             npc.decayMe()
+             npc.reduceCurrentHp(9999999,npc)
              self.cancelQuestTimer("Jewel1_Timer1",npc,None)
              self.cancelQuestTimer("Jewel1_Timer2",npc,None)
      if npcId == ABYSS_JEWEL2 :
@@ -282,7 +282,7 @@ class Quest (JQuest) :
                  st.playSound("ItemSound.quest_itemget")
                  self.startQuestTimer("Jewel2_Timer2",240000,npc,None)
          if nowHp < maxHp*0.1 :
-             npc.decayMe()
+             npc.reduceCurrentHp(9999999,npc)
              self.cancelQuestTimer("Jewel2_Timer1",npc,None)
              self.cancelQuestTimer("Jewel2_Timer2",npc,None)
      if npcId == ABYSS_JEWEL3 :
