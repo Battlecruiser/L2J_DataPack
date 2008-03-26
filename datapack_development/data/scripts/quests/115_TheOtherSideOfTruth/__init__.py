@@ -5,6 +5,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.serverpackets import CreatureSay
 
 qn = "115_TheOtherSideOfTruth"
 
@@ -139,7 +140,7 @@ class Quest (JQuest) :
           htmltext = "32020-20.htm"
        elif cond == 12:
           htmltext = "32020-18.htm"
-          st.exitQuest(false)
+          st.exitQuest(0)
           st.playSound("ItemSound.quest_finish")
           st.giveItems(57,60044)
     elif npcId == Misa :
