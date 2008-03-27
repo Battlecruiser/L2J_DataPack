@@ -526,6 +526,9 @@ INSERT INTO merchant_shopids VALUES (9155,'gm');
 INSERT INTO merchant_shopids VALUES (9156,'gm');
 INSERT INTO merchant_shopids VALUES (9157,'gm');
 INSERT INTO merchant_shopids VALUES (9158,'gm');
+INSERT INTO merchant_shopids VALUES (9159,'gm');
+INSERT INTO merchant_shopids VALUES (9160,'gm');
+INSERT INTO merchant_shopids VALUES (9161,'gm');
 --
 -- Castle 
 --
