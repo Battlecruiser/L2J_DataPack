@@ -27019,7 +27019,7 @@ INSERT INTO `droplist` VALUES
 
 -- Ancient Book - Divine Inspiration (Manuscript)
 (29019,8620,12,29,102,1000000), -- Antharas (79)
-(29025,8620,5,15,102,800000), -- Baium (80)
+(29020,8620,5,15,102,800000), -- Baium (75)
 (29028,8620,12,19,102,1000000), -- Valakas (85)
 (29047,8620,5,25,102,1000000); -- Scarlet Van Halisha (90)
 
