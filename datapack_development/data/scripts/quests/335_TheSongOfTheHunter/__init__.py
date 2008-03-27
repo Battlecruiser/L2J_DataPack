@@ -388,7 +388,7 @@ class Quest (JQuest) :
             st.takeItems(3698,-1)
             st.takeItems(3697,-1)
             st.takeItems(3471,-1)
-        elif event.isalnum() :
+        elif event.isdigit() :
             event = int(event)
             st.giveItems(event,1)
             st.set("hasTask","1")
@@ -500,7 +500,8 @@ class Quest (JQuest) :
                     htmltext = "06"
                 else :
                     htmltext = "10"
-        htmltext = str(npcId) + "-" + htmltext + ".htm"
+        if htmltext.isdigit() :
+            htmltext = str(npcId) + "-" + htmltext + ".htm"
         return htmltext
 
     def onKill(self,npc,player,isPet):
@@ -626,3 +627,4 @@ for npc in Level_1.keys() + Level_2.keys() + Tor_requests_1.keys() + Tor_request
     if npc not in npcs :
         QUEST.addKillId(npc)
         npcs.append(npc)
+del npcs
