@@ -42,13 +42,15 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet):
-    partyMember = self.getRandomPartyMemberState(player, State.STARTED) 
-    st = player.getQuestState(qn)
+    partyMember = self.getRandomPartyMemberState(player, State.STARTED)
+    if not partyMember : return
+    st = partyMember.getQuestState(qn)
     if st :
         if st.getState() == State.STARTED :
-            numItems = int((npc.getLevel() * 0.15 +1.6)*Config.RATE_DROP_QUEST)
-            if st.getRandom(100)>=10 :
-                numItems = 0
+            itemMultiplier,chance = divmod(15*Config.RATE_DROP_QUEST,1000)
+            if st.getRandom(1000) < chance :
+                itemMultiplier += 1
+            numItems = int(itemMultiplier * (npc.getLevel() * 0.15 +1.6))
             if numItems > 0 :    
                 st.giveItems(DIMENSION_FRAGMENT_ID,numItems)
     return
