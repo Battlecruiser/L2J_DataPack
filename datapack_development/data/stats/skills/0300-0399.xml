@@ -654,14 +654,12 @@
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="9">
       <mul order="0x30" stat="sDef" val="0.6"/>
-      <mul order="0x30" stat="pDef" val="1.35"/>
       <set stat="shieldDefAngle" val="360" order="0x10"/>
     </effect>
   </for>
   <enchant1for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="9">
       <mul order="0x30" stat="sDef" val="#ench1sDef"/>
-      <mul order="0x30" stat="pDef" val="1.35"/>
       <set stat="shieldDefAngle" val="360" order="0x10"/>
     </effect>
   </enchant1for>
