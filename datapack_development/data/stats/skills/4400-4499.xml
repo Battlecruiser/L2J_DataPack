@@ -1603,16 +1603,12 @@
   </for>
 </skill>
 <skill id="4494" levels="1" name="Raid Boss">
-<!--
-  1: If the level of the person who made the greatest contribution is 
-  higher than the level of the raid monster by 3 or more levels, 
-  then the probability of dropping an item or adena will decrease. 
-  If the level difference is nine or more levels, then, the monster 
-  will not drop any item or adena.-->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- This Skill Is Only For Description In The Client -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
