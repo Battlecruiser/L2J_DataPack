@@ -48,11 +48,13 @@ class Quest (JQuest) :
             st.playSound("SkillSound5.horror_02")
             st.playSound("ItemSound.quest_middle")
             st.set("cond","2")
-            st.addSpawn(31524,51432,-54570,-3136,1800000)
+            ghost = st.addSpawn(31524,51432,-54570,-3136,1800000)
+            ghost.broadcastPacket(CreatureSay(ghost.getObjectId(),0,ghost.getName(),"Who awoke me?"))
         elif event == "31524-06.htm" :
             st.set("cond","3")
             st.playSound("ItemSound.quest_middle")
             ghost = self.addSpawn(31525,npc)
+            ghost.broadcastPacket(CreatureSay(ghost.getObjectId(),0,ghost.getName(),"My master has instructed me to be your guide, "+ player.getName()))
             self.startQuestTimer("1",1,ghost,player)
             self.startQuestTimer("despawn",1800000,ghost,player)
         elif event == "31526-03.htm" :
