@@ -689,50 +689,77 @@
   </for>
 </skill>
 <skill id="4041" levels="2" name="Cruma Blaze">
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 45 50 </table>
+  <table name="#mpInitialConsume"> 8 9 </table>
+  <table name="#mpConsume"> 32 36 </table>
+  <table name="#power"> 60 68 </table>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <set name="element" val="2"/> <!-- Fire -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="4000"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="#power"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
   </for>
 </skill>
 <skill id="4042" levels="1" name="Nurka Blaze">
-  <set name="magicLvl" val="45"/>
-  <set name="lvlDepend" val="1"/>
-  <set name="mpConsume" val="40"/>
-  <set name="power" val="60.0"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="2"/> <!-- Fire -->
-  <set name="hitTime" val="4000"/>
-  <set name="skillType" val="MDAM"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="element" val="2"/> <!-- Fire -->
+  <set name="hitTime" val="4000"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="45"/>
+  <set name="mpInitialConsume" val="8"/>
+  <set name="mpConsume" val="32"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="60"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
   </for>
 </skill>
 <skill id="4043" levels="1" name="Partisan Flame">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
+  <set name="element" val="2"/> <!-- Fire -->
   <set name="hitTime" val="4000"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="45"/>
+  <set name="mpInitialConsume" val="12"/>
+  <set name="mpConsume" val="48"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="30"/>
+  <set name="reuseDelay" val="15000"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="target" val="TARGET_AREA"/>
   <for>
   </for>
 </skill>
 <skill id="4044" levels="1" name="Partisan Heal">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="5000"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by DJ MELERIX -->
   <set name="aggroPoints" val="100"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="hitTime" val="5000"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="45"/>
+  <set name="mpInitialConsume" val="14"/>
+  <set name="mpConsume" val="56"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="427"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="skillType" val="HEAL"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
   </for>
 </skill>
