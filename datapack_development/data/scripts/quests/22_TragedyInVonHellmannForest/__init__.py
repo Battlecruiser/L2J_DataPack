@@ -77,7 +77,7 @@ class Quest (JQuest) :
                st.takeItems(SKULL,-1)
                priest = st.addSpawn(GHOST_PRIEST,38354,-49777,-1128)
                st.startQuestTimer("Despawn Ghost Priest",120000,priest)
-               AutoChat(priest,player.getName()+", you have awoken me...")
+               AutoChat(priest,"Did you call me, "+player.getName()+"?")
                self.priest = player.getName()
        elif st.getInt("id") == 4 and st.getQuestItemsCount(CROSS) > 0 :
            if self.tifaren == 1 :
@@ -88,7 +88,7 @@ class Quest (JQuest) :
                st.takeItems(SKULL,-1)
                priest = st.addSpawn(GHOST_PRIEST,38354,-49777,-1128)
                st.startQuestTimer("Despawn Ghost Priest",120000,priest)
-               AutoChat(priest,player.getName()+", you have awoken me...")
+               AutoChat(priest,"Did you call me, "+player.getName()+"?")
                self.priest = player.getName()
    elif event == "31528-05.htm" :
        st.playSound("AmbSound.d_horror_03")
@@ -132,6 +132,7 @@ class Quest (JQuest) :
        st.set("id","14")
        st.set("cond","16")
    elif event == "Despawn Ghost Priest" :
+       AutoChat(npc,"I'm confused! Maybe it's time to go back.")
        npc.reduceCurrentHp(9999999,npc)
        self.tifaren = 0
        if st.getQuestTimer("Despawn Ghost Priest 2") :
@@ -274,7 +275,7 @@ class Quest (JQuest) :
        if npcId == SOUL_OF_WELL :
            if id == 10 and st.getQuestItemsCount(JEWEL1) > 0 :
                st.set("id","11")
-           elif id == 11 and st.getQuestItemsCount(JEWEL1) > 0 :
+           elif id == 11 and st.getQuestItemsCount(JEWEL1) > 0 and st.getRandom(100) < 5:
                st.takeItems(JEWEL1,-1)
                st.giveItems(JEWEL2,1)
                st.playSound("ItemSound.quest_itemget")
