@@ -126,7 +126,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(426,qn,"Quest for Fishing Shot")
 
-for npc in range(31562,31580)+[31616,31696,31697,32348,31989] :
+for npc in range(31562,31580)+[31616,31696,31697,32348,31989,32007,32348] :
     QUEST.addStartNpc(npc)
     QUEST.addTalkId(npc)
 
