@@ -8,7 +8,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "622_DeliveryOfSpecialLiquor"
 
 #NPC
-LIETTA - 31267
+LIETTA = 31267
 JEREMY = 31521
 PULIN = 31543
 NAFF = 31544
