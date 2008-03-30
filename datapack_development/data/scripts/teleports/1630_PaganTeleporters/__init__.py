@@ -3,44 +3,62 @@
 # v1.1 Done by BiTi
 
 import sys
+from net.sf.l2j.gameserver.datatables import DoorTable
 from net.sf.l2j.gameserver.model.actor.instance import L2PcInstance
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "1630_PaganTeleporters"
-NPCS=[32034,32036,32039,32040]
+NPCS=[32034,32035,32036,32037,32039,32040]
 
 # Main Quest Code
 class Quest (JQuest):
 
   def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
+  def onEvent (self,event,st) :
+    if event == "Close_Door1" :
+       DoorTable.getInstance().getDoor(19160001).closeMe()
+    elif event == "Close_Door2" :
+       DoorTable.getInstance().getDoor(19160010).openMe()
+       DoorTable.getInstance().getDoor(19160010).openMe()
+    return
+
   def onTalk (self,npc,player):
     st = player.getQuestState(qn)
     npcId = npc.getNpcId()
-    htmltext = "You have been teleported."
-    if player.getLevel() < 73 :
-       htmltext = "<html><body>Teleport available only for characters with Pagans Mark and level 73 or above.</body></html>"
-    elif npcId == 32034 and st.getQuestItemsCount(8064) :
-          st.takeItems(8064,1)
+    htmltext = ""
+    if npcId == 32034 :
+          if st.getQuestItemsCount(8064) :
+             st.takeItems(8064,1) # TODO: this part must happen when u walk through doors >.<
+             st.giveItems(8065,1)
+          elif st.getQuestItemsCount(8065) :
+             break
+          else:
+             return "<html><body>The Temple Gatekeeper:<br>You have nothing that would cover the holes.<br>(You must have a Visitor's Mark, a Faded Visitor's Mark, or a Pagan's Mark in order to open this door.)</body></html>"
           htmltext = "FadedMark.htm"
-          st.giveItems(8065,1)
-          player.teleToLocation(-16324,-37147,-10724)
-    elif npcId in [32034,32036]:
+          DoorTable.getInstance().getDoor(19160001).openMe()
+          self.startQuestTimer("Close_Door1",10000,none,none)
+    elif npcId == 32035:
+          DoorTable.getInstance().getDoor(19160001).openMe()
+          self.startQuestTimer("Close_Door1",10000,none,none)
+          htmltext = "FadedMark.htm"
+    elif npcId == 32036:
        if not st.getQuestItemsCount(8067) :
-          htmltext = '<html><body>Teleport available only for characters with Pagans Mark and level 73 or above.</body></html>'
+          htmltext = "<html><body>The Temple Gatekeeper:<br>Show your Mark or be gone from my sight!<br>Only those who possess the Pagan's Mark may pass through this gate!</body></html>"
        else:
-          if npcId == 32034 :
-             player.teleToLocation(-16324,-37147,-10724)
-          else :
-             player.teleToLocation(-16324,-44638,-10724)
-    elif npcId == 32040 and st.getQuestItemsCount(8065) :
-       player.teleToLocation(36640,-51218,718)
-    elif not st.getQuestItemsCount(8064)+st.getQuestItemsCount(8067) :
-       htmltext = '<html>Teleport available only for characters with Pagans Mark or Visitors Mark and level 73 or above.</body></html>'
+          htmltext = "<html><body>The Temple Gatekeeper:<br>On seeing the Pagan's Mark, the statue's probing eyes go blank.<br>With the quiet whir of an engine, the gate swings open...</body></html>"
+          self.startQuestTimer("Close_Door2",10000,none,none)
+          DoorTable.getInstance().getDoor(19160010).openMe()
+          DoorTable.getInstance().getDoor(19160010).openMe()
+    elif npcId == 32037:
+          DoorTable.getInstance().getDoor(19160010).openMe()
+          DoorTable.getInstance().getDoor(19160010).openMe()
+          self.startQuestTimer("Close_Door2",10000,none,none)
+          htmltext = "FadedMark.htm"
     else :
        if npcId == 32039 :
-          player.teleToLocation(-12241,-35884,-10856)
+          player.teleToLocation(-12766,-35840,-10856)
        elif npcId == 32040 :
           player.teleToLocation(36640,-51218,718)
     st.exitQuest(1)

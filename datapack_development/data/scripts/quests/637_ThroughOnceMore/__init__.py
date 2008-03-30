@@ -9,11 +9,11 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "637_ThroughOnceMore"
 
 #Drop rate
-DROP_CHANCE=40
+DROP_CHANCE=90
 #Npc
 FLAURON = 32010
 #Items
-FADEDMARK,NECROHEART,MARK = 8065,8066,8067
+VISITOR_MARK,FADEDMARK,NECROHEART,MARK = 8064,8065,8066,8067
 
 class Quest (JQuest) :
 
@@ -24,7 +24,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if htmltext == "32010-04.htm" :
+    if htmltext == "32010-03.htm" :
        st.set("cond","1")
        st.setState(State.STARTED)
        st.takeItems(FADEDMARK,1)
@@ -40,6 +40,9 @@ class Quest (JQuest) :
      if id == State.CREATED :
         if player.getLevel()>72 and st.getQuestItemsCount(FADEDMARK) :
            htmltext = "32010-02.htm"
+        elif player.getLevel()>72 and st.getQuestItemsCount(VISITOR_MARK) :
+           htmltext = "32010-01a.htm"
+           st.exitQuest(1)
         else:
            htmltext = "32010-01.htm"
            st.exitQuest(1)
