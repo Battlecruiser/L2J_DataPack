@@ -166,7 +166,6 @@ class Quest (JQuest) :
 
 QUEST     = Quest(23,qn,"Lidia's Heart")
 
-QUEST.setInitialState(CREATED)
 QUEST.addStartNpc(Innocentin)
 
 QUEST.addTalkId(Innocentin)

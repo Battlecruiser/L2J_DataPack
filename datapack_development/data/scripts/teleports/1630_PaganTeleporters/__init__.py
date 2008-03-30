@@ -29,13 +29,11 @@ class Quest (JQuest):
     npcId = npc.getNpcId()
     htmltext = ""
     if npcId == 32034 :
+          if not st.getQuestItemsCount()in [8064,8065,8067]:
+             return "<html><body>The Temple Gatekeeper:<br>You have nothing that would cover the holes.<br>(You must have a Visitor's Mark, a Faded Visitor's Mark, or a Pagan's Mark in order to open this door.)</body></html>"
           if st.getQuestItemsCount(8064) :
              st.takeItems(8064,1) # TODO: this part must happen when u walk through doors >.<
              st.giveItems(8065,1)
-          elif st.getQuestItemsCount(8065) :
-             break
-          else:
-             return "<html><body>The Temple Gatekeeper:<br>You have nothing that would cover the holes.<br>(You must have a Visitor's Mark, a Faded Visitor's Mark, or a Pagan's Mark in order to open this door.)</body></html>"
           htmltext = "FadedMark.htm"
           DoorTable.getInstance().getDoor(19160001).openMe()
           self.startQuestTimer("Close_Door1",10000,none,none)
