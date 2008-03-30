@@ -76,7 +76,7 @@ class Quest (JQuest) :
              st2 = player.getQuestState("115_TheOtherSideOfTruth")
              htmltext = "32020-05.htm"
              if st2 :
-                if st2.getState().getName() == 'Completed' :
+                if st2.getState() == 'State.COMPLETED' :
                    htmltext = "32020-10.htm"
                    st.playSound("ItemSound.quest_middle")
                    st.set("cond","2")
