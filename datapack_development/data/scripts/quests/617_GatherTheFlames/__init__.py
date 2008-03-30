@@ -12,6 +12,7 @@ qn = "617_GatherTheFlames"
 
 TORCH = 7264
 
+HILDA = 31271
 VULCAN = 31539
 ROONEY = 32049
 
@@ -43,6 +44,10 @@ class Quest (JQuest) :
        else :
          htmltext = "31539-02.htm"
          st.exitQuest(1)
+     elif event == "31231-03.htm" :
+       st.set("cond","1")
+       st.setState(State.STARTED)
+       st.playSound("ItemSound.quest_accept")
      elif event == "31539-05.htm" and torches >= 1000 :
        htmltext = "31539-07.htm"
        st.takeItems(TORCH,1000)
@@ -84,6 +89,15 @@ class Quest (JQuest) :
          htmltext = "31539-05.htm"
        else :
          htmltext = "31539-04.htm"
+     elif npcId == HILDA :
+       if id == State.CREATED :
+         if player.getLevel() < 74 :
+            st.exitQuest(1)
+            htmltext = "31231-01.htm"
+         else :
+            htmltext = "31231-02.htm"
+       else:
+         htmltext = "31231-04.htm"
      elif npcId == ROONEY and id == State.STARTED :
        if torches >= 1200 :
           htmltext = "32049-01.htm"
@@ -113,6 +127,7 @@ class Quest (JQuest) :
 QUEST       = Quest(617, qn, "Gather The Flames")
 
 QUEST.addStartNpc(VULCAN)
+QUEST.addStartNpc(HILDA)
 
 QUEST.addTalkId(VULCAN)
 QUEST.addTalkId(ROONEY)
