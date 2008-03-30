@@ -1530,7 +1530,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="possession">
+    <effect count="1" name="Grow" time="600" val="0" stackOrder="1" stackType="possession">
       <mul order="0x30" stat="runSpd" val="0.85"/>
       <mul order="0x30" stat="pAtk" val="1.15"/>
       <mul order="0x30" stat="pDef" val="1.10"/>
