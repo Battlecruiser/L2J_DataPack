@@ -7,6 +7,7 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver.model import L2CharPosition
+from net.sf.l2j.gameserver.serverpackets import CreatureSay
 
 qn = "21_HiddenTruth"
 
@@ -46,7 +47,6 @@ class Quest (JQuest) :
             htmltext = "31328-05.htm"
         elif event == "31523-03.htm" :
             st.playSound("SkillSound5.horror_02")
-            st.playSound("ItemSound.quest_middle")
             st.set("cond","2")
             ghost = st.addSpawn(31524,51432,-54570,-3136,1800000)
             ghost.broadcastPacket(CreatureSay(ghost.getObjectId(),0,ghost.getName(),"Who awoke me?"))

@@ -8,6 +8,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "622_DeliveryOfSpecialLiquor"
 
 #NPC
+LIETTA - 31267
 JEREMY = 31521
 PULIN = 31543
 NAFF = 31544
@@ -48,7 +49,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_accept")
      else:
        htmltext=default
-   if event == "31547-1.htm" :
+   elif event == "31547-1.htm" :
      if st.getQuestItemsCount(SPECIAL_DRINK):
        if cond==1:
          st.takeItems(SPECIAL_DRINK,1)
@@ -59,7 +60,7 @@ class Quest (JQuest) :
      else:
        htmltext="LMFAO!"
        st.exitQuest(1)
-   if event == "31546-1.htm" :
+   elif event == "31546-1.htm" :
      if st.getQuestItemsCount(SPECIAL_DRINK):
        if cond==2:
          st.takeItems(SPECIAL_DRINK,1)
@@ -70,7 +71,7 @@ class Quest (JQuest) :
      else:
        htmltext="LMFAO!"
        st.exitQuest(1)
-   if event == "31545-1.htm" :
+   elif event == "31545-1.htm" :
      if st.getQuestItemsCount(SPECIAL_DRINK):
        if cond==3:
          st.takeItems(SPECIAL_DRINK,1)
@@ -81,7 +82,7 @@ class Quest (JQuest) :
      else:
        htmltext="LMFAO!"
        st.exitQuest(1)
-   if event == "31544-1.htm" :
+   elif event == "31544-1.htm" :
      if st.getQuestItemsCount(SPECIAL_DRINK):
        if cond==4:
          st.takeItems(SPECIAL_DRINK,1)
@@ -92,7 +93,7 @@ class Quest (JQuest) :
      else:
        htmltext="LMFAO!"
        st.exitQuest(1)
-   if event == "31543-1.htm" :
+   elif event == "31543-1.htm" :
      if st.getQuestItemsCount(SPECIAL_DRINK):
        if cond==5:
          st.takeItems(SPECIAL_DRINK,1)
@@ -103,7 +104,9 @@ class Quest (JQuest) :
      else:
        htmltext="LMFAO!"
        st.exitQuest(1)
-   if event == "31521-3.htm" :
+   elif event == "31521-3.htm" :
+     st.set("cond","7")
+   elif event == "31267-2.htm" :
      if st.getQuestItemsCount(FEE_OF_DRINK) == 5:
         st.takeItems(FEE_OF_DRINK,5)
         random = st.getRandom(1000)
@@ -149,13 +152,15 @@ class Quest (JQuest) :
                  htmltext = "31543-0.htm"
            elif npcId == 31521 and cond == 6 and st.getQuestItemsCount(FEE_OF_DRINK) == 5 :
                  htmltext = "31521-2.htm"
+           elif npcId == 31521 and cond == 7 and st.getQuestItemsCount(FEE_OF_DRINK) == 5 :
+                 htmltext = "31521-4.htm"
+           elif npcId == 31267 and cond == 7 and st.getQuestItemsCount(FEE_OF_DRINK) == 5 :
+                 htmltext = "31267-1.htm"
    return htmltext
 
 QUEST       = Quest(622,qn,"Delivery of special liquor")
 
 QUEST.addStartNpc(31521)
 
-QUEST.addTalkId(31521)
-
-for i in range(31543,31548):
+for i in range(31543,31548)+[31267,31521]:
     QUEST.addTalkId(i)
