@@ -6182,7 +6182,7 @@ INSERT INTO `etcitem` VALUES
 (8054,'Hot Spring Letter W','false','none',0,'stackable','steel','none',-1,0,0,'false','false','true','false','C5Item','none'),
 (8055,'Hot Spring Letter Y','false','none',0,'stackable','steel','none',-1,0,0,'false','false','true','false','C5Item','none'),
 (8056,'Key of Splendor Room','false','quest',0,'stackable','steel','none',-1,0,0,'true','true','true','true','C5Item','none'),
-(8057,'Silver Hemocyte','false','none',0,'stackable','steel','none',-1,0,0,'true','true','true','true','C5Item','none'),
+(8057,'Silver Hemocyte','false','quest',0,'stackable','steel','none',-1,0,0,'true','true','true','true','C5Item','none'),
 (8058,'Lockup Research Report','false','quest',0,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
 (8059,'Research Report','false','quest',0,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
 (8060,'Key of Enigma','false','quest',0,'stackable','paper','none',-1,0,0,'true','true','true','true','C5Item','none'),
