@@ -1132,7 +1132,7 @@ target cannot move temporarily. Effect 3. -->
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="multi_buff">
+    <effect count="1" name="Grow" time="120" val="0" stackOrder="1" stackType="multi_buff">
       <mul order="0x30" stat="pAtk" val="#pAtk"/>
       <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
       <mul order="0x30" stat="mAtk" val="#mAtk"/>
