@@ -92,7 +92,7 @@ class Quest (JQuest) :
             if state == State.CREATED :
                 st2 = st.getPlayer().getQuestState("22_TragedyInVonHellmannForest")
                 if st2 :
-                    if st2.getState() == State.COMPLETED :
+                    if st2.getState() == State.COMPLETED and player.getLevel() >= 64:
                         htmltext = "31328-01.htm" # previous quest finished, call 31328-02.htm
                     else:
                         htmltext = "31328-00.htm" # requirements not met
