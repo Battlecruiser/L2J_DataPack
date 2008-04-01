@@ -139,11 +139,23 @@ description(s) :
   </for>
 </skill>
 <skill id="506" levels="4" name="Checkmate">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="baseCritRate" val="15"/>
+  <table name="#mpConsume">40 47 52 57</table>
+  <table name="#power">2388 3408 4275 5180</table>
+  <set name="weaponsAllowed" val="131072"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="ignoreShld" val="true"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="200"/>
+  <set name="soulConsumeCount" val="2"/>
+  <cond msg="Checkmate cannot be used due to unsuitable terms.">
+    <target active_effect_id="5264"/>
+  </cond>
   <for>
   </for>
 </skill>
