@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `etcitem` (
 
 INSERT INTO `etcitem` VALUES 
 (17,'Wooden Arrow','false','arrow',6,'stackable','wood','none',-1,2,0,'true','true','true','true','wooden_arrow','arrow'),
-(57,'Adena','false','none',0,'asset','gold','none',-1,1,0,'true','true','true','true','adena','none'),
+(57,'Adena','false','none',0,'asset','gold','none',-1,1,0,'false','true','true','true','adena','none'),
 (65,'Red Potion','false','potion',80,'stackable','liquid','none',-1,40,0,'true','true','true','true','red_potion','potion'),
 (686,'Chair','false','none',100,'normal','wood','none',-1,1000,0,'true','true','true','true','chair_item','none'),
 (687,'Darin\'s Letter','false','quest',0,'normal','paper','none',-1,0,0,'false','false','true','false','darings_letter','none'),
