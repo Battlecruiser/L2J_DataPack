@@ -853,25 +853,25 @@
   </for>
 </skill>
 <skill id="1435" levels="10" name="Death Mark">
-  <table name="#dmg"> 14 21 30 40 51 61 68 68 75 75 </table>
   <table name="#mpConsume"> 12 14 18 22 24 28 29 32 33 35 </table>
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 </table>
   <table name="#soulConsumeCount"> 1 1 2 2 2 2 2 2 2 2 </table>
+  <table name="#EffectLvl"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="6"/> <!-- Dark -->
   <set name="lvlDepend" val="3"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="1200"/>
-  <set name="skillType" val="DOT"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="effectId" val="5264"/>
+  <set name="effectLvl" val="#EffectLvl"/>
   <set name="soulConsumeCount" val="#soulConsumeCount"/>
   <for>
-    <effect count="45" name="DamOverTime" time="1" val="#dmg"/>
   </for>
 </skill>
 <skill id="1436" levels="30" name="Soul of Pain" enchantLevels1="30" enchantLevels2="30">
@@ -1538,7 +1538,8 @@
   <set name="mpConsume" val="105"/>
   <set name="power" val="224"/>
   <set name="magicLvl" val="78"/>
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="300000"/>
   <set name="hitTime" val="4000"/>
   <set name="isMagic" val="true"/>
@@ -1645,12 +1646,9 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="NEGATE"/>
   <set name="isMagic" val="true"/>
-  <set name="cancelEffect" val="1435"/>
+  <set name="cancelEffect" val="5264"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
-  <cond msg="Target is not marked with a Death Mark">
-    <target active_effect_id="1435"/>
-  </cond>
    <for>
    </for>
  </skill>
