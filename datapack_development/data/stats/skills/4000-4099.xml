@@ -964,51 +964,61 @@
 <skill id="4057" levels="1" name="Insect Weak Point">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAKNESS"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pDef-insects" val="1.15"/>
   </for>
 </skill>
 <skill id="4058" levels="1" name="Plant Weak Point">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAKNESS"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pDef-animals" val="1.15"/>
   </for>
 </skill>
 <skill id="4059" levels="1" name="Animal Weak Point">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAKNESS"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pDef-plants" val="1.15"/>
   </for>
 </skill>
 <skill id="4060" levels="1" name="Beast Weak Point">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAKNESS"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pDef-monsters" val="1.15"/>
   </for>
 </skill>
 <skill id="4061" levels="1" name="Dragon Weak Point">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAKNESS"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pDef-dragons" val="1.15"/>
   </for>
 </skill>
 <skill id="4062" levels="1" name="Orfen">
