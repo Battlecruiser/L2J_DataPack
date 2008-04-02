@@ -722,13 +722,19 @@
   </for>
 </skill>
 <skill id="4245" levels="1" name="Mimic of Wrath">
-  <!-- NOT USED IN C4 -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
   <for>
+    <effect name="Buff" time="1800" count="1" val="0" stackOrder="1" stackType="public_slot">
+      <mul order="0x30" stat="pAtkSpd" val="1.42"/>
+      <mul order="0x30" stat="pDef" val="1.76"/>
+      <mul order="0x30" stat="mDef" val="1.76"/>
+    </effect>
   </for>
 </skill>
 <skill id="4246" levels="1" name="Strong in 'nan' activity magic DOT">

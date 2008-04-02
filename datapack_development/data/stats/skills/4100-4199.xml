@@ -482,13 +482,18 @@
   </for>
 </skill>
 <skill id="4126" levels="1" name="Reduction in recovery time">
-  <!-- NOT USED IN C4 -->
+  <!-- Done by DJ MELERIX -->
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="magicLvl" val="40"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAKNESS"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
+    <effect name="Buff" time="10" count="1" val="0" stackOrder="1" stackType="public_slot">
+      <mul order="0x30" stat="pReuse" val="0.01"/>
+    </effect>
   </for>
 </skill>
 <skill id="4127" levels="1" name="Baium: General Attack">
