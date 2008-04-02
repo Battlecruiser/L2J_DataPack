@@ -594,12 +594,19 @@
   </for>
 </skill>
 <skill id="2347" levels="1" name="Enuma Elish Key">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<!-- Needs retail accuracy check -->
+ <set name="mpConsume" val="73"/>
+ <set name="power" val="138"/>
+ <set name="hitTime" val="1500"/>
+ <set name="operateType" val="OP_ACTIVE"/>
+ <set name="target" val="TARGET_FRONT_AREA"/>
+ <set name="skillRadius" val="310"/>
+ <set name="skillType" val="PDAM"/>
+ <set name="castRange" val="40"/>
+ <set name="effectRange" val="56"/>
+ <set name="reuseDelay" val="10000"/>
+ <for>
+ </for>
 </skill>
 <skill id="2348" levels="1" name="Prahnah Key">
   <set name="target" val="TARGET_NONE"/>

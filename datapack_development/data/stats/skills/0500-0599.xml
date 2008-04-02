@@ -501,12 +501,20 @@ description(s) :
   </for>
 </skill>
 <skill id="526" levels="1" name="Enuma Elish">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+<!-- Needs retail accuracy check -->
+ <set name="mpConsume" val="73"/>
+ <set name="power" val="138"/>
+ <set name="hitTime" val="1080"/>
+ <set name="operateType" val="OP_ACTIVE"/>
+ <set name="target" val="TARGET_FRONT_AREA"/>
+ <set name="skillRadius" val="310"/>
+ <set name="skillType" val="PDAM"/>
+ <set name="castRange" val="40"/>
+ <set name="effectRange" val="56"/>
+ <set name="reuseDelay" val="10000"/>
+ <set name="soulConsumeCount" val="7"/>
+ <for>
+ </for>
 </skill>
 <skill id="527" levels="1" name="Iron Shield">
   <set name="target" val="TARGET_NONE"/>
