@@ -45,6 +45,7 @@ class antharas(JQuest) :
                 antharas = self.addSpawn(ANTHARAS,185708,114298,-8221,32768,False,0)
                 GrandBossManager.getInstance().setBossStatus(ANTHARAS,DORMANT)
                 antharas.broadcastPacket(Earthquake(185708,114298,-8221,20,10))
+                GrandBossManager.getInstance().addBoss(antharas) 
         else :
             loc_x = info.getInteger("loc_x")
             loc_y = info.getInteger("loc_y")
@@ -53,6 +54,7 @@ class antharas(JQuest) :
             hp = info.getInteger("currentHP")
             mp = info.getInteger("currentMP")
             antharas = self.addSpawn(ANTHARAS,loc_x,loc_y,loc_z,heading,False,0)
+            GrandBossManager.getInstance().addBoss(antharas)
             antharas.setCurrentHpMp(hp,mp)
             if status == WAITING :
                 # Start timer to lock entry after 30 minutes
