@@ -263,11 +263,22 @@
   </for>
 </skill>
 <skill id="2231" levels="1" name="Amulet: Protection of Valakas">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="itemConsumeId" val="6652"/>
+  <set name="magicLvl" val="75"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="reuseDelay" val="1000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
   <for>
+    <effect name="Buff" time="1200" count="1" val="0" stackOrder="1" stackType="valakas_item">
+      <!-- <mul order="0x30" stat="valakasVuln" val="0.89"/> REQUIRE CORE SUPPORT -->
+    </effect>
   </for>
 </skill>
 <skill id="2232" levels="1" name="Amulet: Slay Valakas">
