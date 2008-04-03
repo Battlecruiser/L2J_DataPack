@@ -1446,15 +1446,21 @@
   </for>
 </skill>
 <skill id="1462" levels="1" name="Seal of Blockade">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpInitialConsume" val="9"/>
+  <set name="power" val="95.0"/>
+  <set name="skillRadius" val="225"/>
+  <set name="mpConsume" val="100"/>
+  <set name="isMagic" val="true"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="magicLvl" val="79"/>
+  <set name="skillType" val="MUTE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="hitTime" val="6000"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="PhysicalAttackMute" time="120" val="0"/>
   </for>
 </skill>
 <skill id="1463" levels="1" name="Fire Weapon">
