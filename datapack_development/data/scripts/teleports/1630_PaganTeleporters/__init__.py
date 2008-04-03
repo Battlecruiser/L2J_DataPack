@@ -36,23 +36,23 @@ class Quest (JQuest):
          st.giveItems(8065,1)
       htmltext = "FadedMark.htm"
       DoorTable.getInstance().getDoor(19160001).openMe()
-      self.startQuestTimer("Close_Door1",10000,none,none)
+      self.startQuestTimer("Close_Door1",10000,None,None)
     elif npcId == 32035:
       DoorTable.getInstance().getDoor(19160001).openMe()
-      self.startQuestTimer("Close_Door1",10000,none,none)
+      self.startQuestTimer("Close_Door1",10000,None,None)
       htmltext = "FadedMark.htm"
     elif npcId == 32036:
       if not st.getQuestItemsCount(8067) :
         htmltext = "<html><body>The Temple Gatekeeper:<br>Show your Mark or be gone from my sight!<br>Only those who possess the Pagan's Mark may pass through this gate!</body></html>"
       else:
         htmltext = "<html><body>The Temple Gatekeeper:<br>On seeing the Pagan's Mark, the statue's probing eyes go blank.<br>With the quiet whir of an engine, the gate swings open...</body></html>"
-        self.startQuestTimer("Close_Door2",10000,none,none)
+        self.startQuestTimer("Close_Door2",10000,None,None)
         DoorTable.getInstance().getDoor(19160010).openMe()
         DoorTable.getInstance().getDoor(19160010).openMe()
     elif npcId == 32037:
       DoorTable.getInstance().getDoor(19160010).openMe()
       DoorTable.getInstance().getDoor(19160010).openMe()
-      self.startQuestTimer("Close_Door2",10000,none,none)
+      self.startQuestTimer("Close_Door2",10000,None,None)
       htmltext = "FadedMark.htm"
     else :
       if npcId == 32039 :
