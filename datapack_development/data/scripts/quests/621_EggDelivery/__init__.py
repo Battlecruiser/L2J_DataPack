@@ -129,7 +129,7 @@ class Quest (JQuest) :
        st.set("cond","0")
      cond = st.getInt("cond")
      if npcId == 31521 and cond == 0 :
-       if player.getLevel() >= 68 and player.getLevel() <= 73 :
+       if player.getLevel() >= 68 :
          htmltext = "31521-0.htm"
        else :
          st.exitQuest(1)
