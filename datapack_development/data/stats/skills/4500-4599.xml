@@ -769,44 +769,66 @@ chances and the success rate of dagger skills. -->
   </for>
 </skill>
 <skill id="4562" levels="12" name="NPC Solar Flare">
-<!-- TODO -->
-  <table name="#mpConsume"> 15 24 33 44 57 69 82 87 90 94 97 98 </table>
-  <set name="element" val="5"/> <!-- Holy -->
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="hitTime" val="5000"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+  <table name="#mpInitialConsume"> 3 5 7 9 12 14 17 18 18 19 20 20 </table>
+  <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
+  <table name="#power"> 22 33 47 65 85 107 127 137 145 152 157 161 </table>
   <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
+  <set name="element" val="5"/> <!-- Holy -->
+  <set name="hitTime" val="5000"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="#power"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
   </for>
 </skill>
 <skill id="4563" levels="12" name="NPC Solar Flare - Magic">
-<!-- TODO -->
-  <table name="#mpConsume"> 15 24 33 44 57 69 82 87 90 94 97 98 </table>
-  <set name="element" val="5"/> <!-- Holy -->
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="hitTime" val="5000"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+  <table name="#mpInitialConsume"> 3 5 7 9 12 14 17 18 18 19 20 20 </table>
+  <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
+  <table name="#power"> 22 33 47 65 85 107 127 137 145 152 157 161 </table>
   <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
+  <set name="element" val="5"/> <!-- Holy -->
+  <set name="hitTime" val="5000"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="#power"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
   </for>
 </skill>
 <skill id="4564" levels="12" name="NPC Solar Flare - Slow">
-<!-- TODO -->
-  <set name="element" val="5"/> <!-- Holy -->
-  <table name="#mpConsume"> 15 24 33 44 57 69 82 87 90 94 97 98 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+  <table name="#mpInitialConsume"> 3 5 7 9 12 14 17 18 18 19 20 20 </table>
+  <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
+  <table name="#power"> 11 17 24 33 43 54 64 69 73 76 79 81 </table>
   <set name="castRange" val="1000"/>
+  <set name="effectRange" val="1500"/>
+  <set name="element" val="5"/> <!-- Holy -->
+  <set name="hitTime" val="2500"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="#power"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
   </for>
 </skill>
@@ -865,44 +887,69 @@ chances and the success rate of dagger skills. -->
   </for>
 </skill>
 <skill id="4568" levels="12" name="NPC AE Solar Flare">
-<!-- TODO -->
-  <table name="#mpConsume"> 22 37 49 67 84 104 122 129 135 140 144 145 </table>
-  <set name="element" val="5"/> <!-- Holy -->
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="hitTime" val="5000"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+  <table name="#mpInitialConsume"> 5 8 10 14 17 21 25 26 27 28 29 29 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+  <table name="#power"> 11 17 24 33 43 54 64 69 73 76 79 81 </table>
   <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
+  <set name="element" val="5"/> <!-- Holy -->
+  <set name="hitTime" val="5000"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="#power"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="target" val="TARGET_AREA"/>
   <for>
   </for>
 </skill>
 <skill id="4569" levels="12" name="NPC AE Solar Flare - Magic">
-<!-- TODO -->
-  <table name="#mpConsume"> 22 37 49 67 84 104 122 129 135 140 144 145 </table>
-  <set name="element" val="5"/> <!-- Holy -->
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="hitTime" val="5000"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+  <table name="#mpInitialConsume"> 5 8 10 14 17 21 25 26 27 28 29 29 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+  <table name="#power"> 11 17 24 33 43 54 64 69 73 76 79 81 </table>
   <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
+  <set name="element" val="5"/> <!-- Holy -->
+  <set name="hitTime" val="5000"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="#power"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="target" val="TARGET_AREA"/>
   <for>
   </for>
 </skill>
 <skill id="4570" levels="12" name="NPC AE Solar Flare - Slow">
-<!-- TODO -->
-  <table name="#mpConsume"> 22 37 49 67 84 104 122 129 135 140 144 145 </table>
-  <set name="element" val="5"/> <!-- Holy -->
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+  <table name="#mpInitialConsume"> 5 8 10 14 17 21 25 26 27 28 29 29 </table>
+  <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+  <table name="#power"> 6 9 12 17 22 27 32 35 37 38 40 41 </table>
   <set name="castRange" val="1000"/>
+  <set name="effectRange" val="1500"/>
+  <set name="element" val="5"/> <!-- Holy -->
+  <set name="hitTime" val="2500"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="#power"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="target" val="TARGET_AREA"/>
   <for>
   </for>
 </skill>
