@@ -1347,7 +1347,8 @@
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
-  <cond msg="Target does not have an active Wind Vortex skill."><!-- Need retail msg if there is one. -->
+  <set name="cancelEffect" val="1341"/>
+  <cond msg="Invalid target.">
     <target active_effect_id="1341"/>
   </cond>
   <for>
@@ -1360,21 +1361,19 @@
   </for>
 </skill>
 <skill id="1457" levels="1" name="Empowering Echo">
-<!-- Retail Accuracy check needed -->
-  <table name="#Tab-mAtk"> 1.55 </table>
   <set name="mpConsume" val="145"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="reuseDelay" val="100"/>
+  <set name="reuseDelay" val="32000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="400"/>
-  <set name="effectRange" val="900"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0">
-      <mul order="0x30" stat="mAtk" val="#Tab-mAtk"/>
-      <mul order="0x30" stat="MpConsumeRate" val="2"/>
+    <effect count="1" name="Buff" time="120" val="0">
+      <mul order="0x30" stat="mAtk" val="1.25"/>
+      <mul order="0x30" stat="MpConsumeRate" val="1.20"/>
     </effect>
   </for>
 </skill>
