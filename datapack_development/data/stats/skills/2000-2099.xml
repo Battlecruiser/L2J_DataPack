@@ -27,41 +27,32 @@
   </for>
 </skill>
 <skill id="2003" levels="1" name="Squash Seed">
+  <!-- Summer Squash Event Skill (http://www.lineage2.com/archive/2006/11/fall_harvest.html) -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="1500"/>
-  <set name="skillType" val="MPHOT"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
-  <set name="buffDuration" val="20000"/>
-  <set name="isPotion" val="true"/>
   <for>
-    <effect count="4" name="ManaHealOverTime" time="5" val="1.5" stackOrder="1.5" stackType="MpRecover"/> 
   </for>
 </skill>
 <skill id="2004" levels="1" name="Large Squash Seed">
+  <!-- Summer Squash Event Skill (http://www.lineage2.com/archive/2006/11/fall_harvest.html) -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="MPHOT"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
-  <set name="buffDuration" val="40000"/>
-  <set name="isPotion" val="true"/>
   <for>
-    <effect count="4" name="ManaHealOverTime" time="10" val="1.5" stackOrder="1.5" stackType="MpRecover"/>
   </for>
 </skill>
 <skill id="2005" levels="1" name="Pollen">
-  <set name="power" val="200.0"/>
+  <!-- Summer Squash Event Skill (http://www.lineage2.com/archive/2006/11/fall_harvest.html) -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="MANAHEAL"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
-  <set name="buffDuration" val="15000"/>
-  <set name="isPotion" val="true"/>
   <for>
   </for>
 </skill>
