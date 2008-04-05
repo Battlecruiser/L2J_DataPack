@@ -13,7 +13,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 qn="501_ProofOfClanAlliance"
 
 # debug facility, turn this to 0 to disable
-DEBUG=1
+DEBUG = 1
 
 # Quest Npcs
 SIR_KRISTOF_RODEMAI  = 30756
@@ -80,8 +80,7 @@ class Quest (JQuest) :
  def __init__(self,id,name,descr) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [HERB_OF_VANOR, HERB_OF_HARIT, HERB_OF_OEL_MAHUM, SYMBOL_OF_LOYALTY, ANTIDOTE_RECIPE, VOUCHER_OF_FAITH, POTION_OF_RECOVERY, ANTIDOTE_RECIPE]
-     self.athrea = 0
-     self.chests = 0
+     self.athrea = self.chests = 0
 
  def onAdvEvent (self,event,npc,player) :
    if event == "chest_timer" :
@@ -127,7 +126,10 @@ class Quest (JQuest) :
            npc.callSkill(skill, [player])
        elif event == "poison_timer" :
            st.exitQuest(1)
-           if DEBUG : debug = "Times Up! Quest failed!"
+           if DEBUG :
+               debug = "Times Up! Quest failed!"
+               print debug
+               return debug
            return
    elif event == "30757-05.htm" :
        if player.isClanLeader() : return "Only Clan Members can sacrifice themselves!"
@@ -149,7 +151,10 @@ class Quest (JQuest) :
            deadlist = leaderst.get("dead_list").split()
            deadlist.append(player.getName())
            leaderst.set("dead_list"," ".join(deadlist))
-       elif DEBUG : debug = "player " + player.getName() + " didn't die!"
+       elif DEBUG :
+           debug = "player " + player.getName() + " didn't die!"
+           print debug
+           return debug
        return
    elif event == "30758-03.htm" :
        if not self.athrea :
@@ -194,7 +199,6 @@ class Quest (JQuest) :
                        htmltext = "03"
                    else :
                        htmltext = "04"
-               elif DEBUG : debug = "Clan: " + str(clan) + " has improper level: " + str(level)
            else :
                htmltext = "05"
        elif id == State.STARTED :
@@ -295,11 +299,7 @@ class Quest (JQuest) :
 
  def onKill(self,npc,player,isPet) :
      leaderst = leader(player)
-     if not leaderst :
-         if DEBUG :
-             print "onKill can't find leader info!"
-             return "Can't find leader info!"
-         return
+     if not leaderst : return
      if not leaderst.getState() == State.STARTED :
          if DEBUG :
              print "onKill says leader needs to start quest"
