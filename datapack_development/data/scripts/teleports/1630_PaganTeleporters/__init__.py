@@ -20,8 +20,8 @@ class Quest (JQuest):
     if event == "Close_Door1" :
        DoorTable.getInstance().getDoor(19160001).closeMe()
     elif event == "Close_Door2" :
-       DoorTable.getInstance().getDoor(19160010).openMe()
-       DoorTable.getInstance().getDoor(19160010).openMe()
+       DoorTable.getInstance().getDoor(19160010).closeMe()
+       DoorTable.getInstance().getDoor(19160011).closeMe()
     return
 
   def onTalk (self,npc,player):
@@ -48,10 +48,10 @@ class Quest (JQuest):
         htmltext = "<html><body>The Temple Gatekeeper:<br>On seeing the Pagan's Mark, the statue's probing eyes go blank.<br>With the quiet whir of an engine, the gate swings open...</body></html>"
         self.startQuestTimer("Close_Door2",10000,None,None)
         DoorTable.getInstance().getDoor(19160010).openMe()
-        DoorTable.getInstance().getDoor(19160010).openMe()
+        DoorTable.getInstance().getDoor(19160011).openMe()
     elif npcId == 32037:
       DoorTable.getInstance().getDoor(19160010).openMe()
-      DoorTable.getInstance().getDoor(19160010).openMe()
+      DoorTable.getInstance().getDoor(19160011).openMe()
       self.startQuestTimer("Close_Door2",10000,None,None)
       htmltext = "FadedMark.htm"
     else :
