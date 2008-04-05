@@ -4,11 +4,11 @@
 ##                                        ##
 ## DON'T USE NOTEPAD TO CHANGE THIS FILE  ##
 ## INSTEAD USE SOME DECENT TEXT EDITOR.   ##
-## NEWLINE CHARACTERS DIFFER BETWEEN DOS  ##
-## AND UNIX.                              ##
+## NEWLINE CHARACTERS DIFFER BETWEEN DOS/ ##
+## WINDOWS AND UNIX.                      ##
 ##                                        ##
-## USING NOTEPAD TO SAVE THIS FILE LEAVE  ##
-## IT IN A BROKEN STATE!!!                ##
+## USING NOTEPAD TO SAVE THIS FILE WILL   ##
+## LEAVE IT IN A BROKEN STATE!!!          ##
 ############################################
 ## Writen by DrLecter                     ##
 ## License: GNU GPL                       ##
@@ -67,7 +67,7 @@ read LSPASS
 stty echo
 echo ""
 if [ -z "$LSPASS" ]; then
-  echo "Hum.. i'll let it be but don't be stupid and avoid empty passwords"
+  echo "Hum.. I'll let it be but don't be stupid and avoid empty passwords"
 elif [ "$LSUSER" == "$LSPASS" ]; then
   echo "You're not too brilliant choosing passwords huh?"
 fi
@@ -93,7 +93,7 @@ read GSPASS
 stty echo
 echo ""
 if [ -z "$GSPASS" ]; then
-  echo "Hum.. i'll let it be but don't be stupid and avoid empty passwords"
+  echo "Hum.. I'll let it be but don't be stupid and avoid empty passwords"
 elif [ "$GSUSER" == "$GSPASS" ]; then
   echo "You're not too brilliant choosing passwords huh?"
 fi
@@ -107,9 +107,9 @@ else
 CONF="database_installer.rc"
 fi
 echo ""
-echo "With these data i can generate a configuration file which can be read"
+echo "With these data I can generate a configuration file which can be read"
 echo "on future updates. WARNING: this file will contain clear text passwords!"
-echo -ne "Shall i generate config file $CONF? (Y/n):"
+echo -ne "Shall I generate config file $CONF? (Y/n):"
 read SAVE
 if [ "$SAVE" == "y" -o "$SAVE" == "Y" -o "$SAVE" == "" ];then 
 cat <<EOF>$CONF
@@ -161,8 +161,8 @@ echo "# information. Read questions carefully     #"
 echo "# before you reply.                         #"
 echo "#############################################"
 echo ""
-#echo "Choose upgrade (u) if you already have an 'accounts' table but no"
-#echo "'gameserver' table (ie. your server is a pre LS/GS split version.)"
+echo "Choose full (f) if you don't have and 'accounts' table or would"
+echo "prefer to erase the existing accounts information."
 echo "Choose skip (s) to skip loginserver DB installation and go to"
 echo "gameserver DB installation/upgrade."
 echo -ne "LOGINSERVER DB install type: (f) full, (s) skip or (q) quit? "
@@ -235,9 +235,9 @@ echo "WARNING: A full install (f) will destroy all existing character data."
 echo -ne "GAMESERVER DB install type: (f) full install, (u) upgrade, (s) skip or (q) quit? "
 read INSTALLTYPE
 case "$INSTALLTYPE" in
-	"f"|"F") fullinstall; upgradeinstall I; experimental;;
-	"u"|"U") upgradeinstall U; experimental;;
-	"s"|"S") experimental;;
+	"f"|"F") fullinstall; upgradeinstall I; custom;;
+	"u"|"U") upgradeinstall U; custom;;
+	"s"|"S") custom;;
 	"q"|"Q") finish;;
 	*) asktype;;
 esac
@@ -318,7 +318,6 @@ $MYG < ../sql/merchant_lease.sql &> /dev/null
 $MYG < ../sql/merchant_shopids.sql &> /dev/null
 $MYG < ../sql/merchants.sql &> /dev/null
 $MYG < ../sql/minions.sql &> /dev/null
-$MYG < ../sql/mods_wedding.sql &> /dev/null
 $MYG < ../sql/npc.sql &> /dev/null
 $MYG < ../sql/olympiad_nobles.sql&> /dev/null
 $MYG < ../sql/pets.sql &> /dev/null
@@ -346,30 +345,29 @@ $MYG < ../sql/zone_vertices.sql &> /dev/null
 newbie_helper
 }
 
-experimental(){
+custom(){
 echo ""
-#echo ""
-#echo "WARNING: legacy spawnlist contains more mobs and lesser chests, but many z values are wrong and doesnt match retail in many areas."
-#echo -ne "Install experimental gameserver DB tables: (y) yes or (n) no or (q) quit?"
-#read ASKXP
-#case "$ASKXP" in
-#	"y"|"Y") expinstall;;
-#	"n"|"N") finish;;
-#	"q"|"Q") finish;;
-#	*) experimental;;
-#esac
-#finish
+echo ""
+echo -ne "Install custom gameserver DB tables: (y) yes or (n) no or (q) quit?"
+read ASKCS
+case "$ASKCS" in
+	"y"|"Y") cstinstall;;
+	"n"|"N") finish;;
+	"q"|"Q") finish;;
+	*) custom;;
+esac
+finish
 }
 
-expinstall(){
+cstinstall(){
 while :
   do
    echo ""
-   echo -ne "Do you want to make another backup of GSDB before applying experimental? (y/N): "
+   echo -ne "Do you want to make another backup of GSDB before applying custom contents? (y/N): "
    read LSB
    if [ "$LSB" == "Y" -o "$LSB" == "y" ]; then
      echo "Making a backup of the default gameserver tables."
-     $MYSQLDUMPPATH --add-drop-table -h $GSDBHOST -u $GSUSER --password=$GSPASS $GSDB > experimental_backup.sql 2> /dev/null
+     $MYSQLDUMPPATH --add-drop-table -h $GSDBHOST -u $GSUSER --password=$GSPASS $GSDB > custom_backup.sql 2> /dev/null
      if [ $? -ne 0 ];then
      echo ""
      echo "There was a problem accesing your GS database, server down?."
@@ -380,10 +378,20 @@ while :
      break
    fi
   done 
-echo "Installing experimental content."
-#$MYG < ../sql/experimental/npc.sql &> /dev/null
-#$MYG < ../sql/experimental/npcskills.sql &> /dev/null
-$MYG < ../sql/experimental/spawnlist.sql &> /dev/null
+echo "Installing custom content."
+for custom in $(ls ../sql/custom/*.sql);do 
+$MYG < $custom &> /dev/null
+done
+# L2J mods that needed extra tables to work properly, should be 
+# listed here. To do so copy & paste the following 6 lines and
+# change them properly:
+# MOD: Wedding.
+  echo -ne "Install "Wedding Mod" tables? (y/N): "
+  read modprompt
+  if [ "$modprompt" == "Y" -o "$LSB" == "y" ]; then
+		$MYG < ../sql/mods_wedding.sql &> /dev/null
+	fi
+
 finish
 }
 

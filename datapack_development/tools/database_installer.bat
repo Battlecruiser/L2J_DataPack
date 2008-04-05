@@ -471,14 +471,14 @@ echo (u)pgrade: I'll do my best to preserve all of your character
 echo    data.
 echo.
 echo (s)kip: We'll get into the last set of questions (cummulative
-echo    updates, experimental stuff...)
+echo    updates, custom stuff...)
 echo.
 echo (q)uit
 echo.
 set /p installtype= Choose (default upgrade):
 if /i %installtype%==f goto fullinstall
 if /i %installtype%==u goto upgradeinstall
-if /i %installtype%==s goto experimental
+if /i %installtype%==s goto custom
 if /i %installtype%==q goto end
 goto asktype
 
@@ -578,7 +578,6 @@ merchant_lease.sql
 merchant_shopids.sql
 merchants.sql
 minions.sql
-mods_wedding.sql
 npc.sql
 npcskills.sql
 olympiad_nobles.sql
@@ -606,7 +605,7 @@ zone_vertices.sql
 ) do call :dump %%i
 echo done...
 echo.
-goto experimental
+goto custom
 
 :dump
 set cmdline=
@@ -683,19 +682,61 @@ set logging=0
 set output=NUL
 goto :eof
 
-:experimental
-REM echo.
-:askexp
-REM set expprompt=x
-REM set /p expprompt=Install experimental gameserver DB tables: (y) yes or (n) no or (q) quit? 
-REM if /i %expprompt%==y goto expinstall
-REM if /i %expprompt%==n goto newbie_helper
-REM if /i %expprompt%==q goto end
-REM goto end
-:expinstall
-REM echo Installing new content.
-REM %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < ../sql/experimental/npc.sql
+:custom
+echo.
+set cstprompt=n
+set /p cstprompt=Install custom gameserver DB tables: (y) yes or (N) no or (q) quit? 
+if /i %cstprompt%==y goto cstinstall
+if /i %cstprompt%==n goto newbie_helper
+if /i %cstprompt%==q goto end
 goto newbie_helper
+:cstinstall
+echo Installing custom content.
+cd ..\sql\custom\
+echo @echo off> temp.bat
+if exist errors.txt del errors.txt
+for %%i in (*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> custom_errors.txt >> temp.bat
+call temp.bat> nul
+del temp.bat
+move custom_errors.txt %workdir%
+title L2JDP installer - Game Server database setup - custom tables processing complete
+cls
+echo Database structure for custom additions finished, i'm leaving a
+echo 'custom_errors.txt' file for your consideration.
+echo.
+echo Remember that in order to get these additions actually working 
+echo you need to edit your configuration files. 
+echo.
+pause
+cd %workdir%
+title L2JDP installer - Game Server database setup - L2J Mods
+cls
+echo L2J provides a basic infraestructure for some non-retail features
+echo (aka L2J mods) to get enabled with a minimum of changes.
+echo.
+echo Some of these mods would require extra tables in order to work
+echo and those tables could be created now if you wanted to.
+echo.
+cd ..\sql\mods\
+REM L2J mods that needed extra tables to work properly, should be 
+REM listed here. To do so copy & paste the following 4 lines and
+REM change them properly:
+REM MOD: Wedding.
+set modprompt=n
+set /p modprompt=Install "Wedding Mod" tables: (y) yes or (N) no? 
+if /i %modprompt%==y "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < mods_wedding.sql 2>>NUL
+
+title L2JDP installer - Game Server database setup - L2J Mods setup complete
+cls
+echo Database structure for L2J mods finished.
+echo.
+echo Remember that in order to get these additions actually working 
+echo you need to edit your configuration files. 
+echo.
+pause
+cd %workdir%
+goto newbie_helper
+
 
 :newbie_helper
 call :colors 17
@@ -819,7 +860,7 @@ call :colors 17
 title L2JDP installer - Script execution finished
 cls
 echo.
-echo L2JDP database_installer version 0.2.1a
+echo L2JDP database_installer version 0.2.2
 echo (C) 2007-2008 L2J Datapack Team
 echo database_installer comes with ABSOLUTELY NO WARRANTY;
 echo This is free software, and you are welcome to redistribute it
