@@ -389,7 +389,7 @@ done
   echo -ne "Install "Wedding Mod" tables? (y/N): "
   read modprompt
   if [ "$modprompt" == "Y" -o "$LSB" == "y" ]; then
-		$MYG < ../sql/mods_wedding.sql &> /dev/null
+		$MYG < ../sql//mods/mods_wedding.sql &> /dev/null
 	fi
 
 finish
