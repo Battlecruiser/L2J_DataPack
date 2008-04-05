@@ -404,18 +404,18 @@ INSERT INTO teleport VALUES
 
 INSERT INTO teleport VALUES
 ('Clan Hall -> Execution Grounds',502,51055,141959,-2869,500,0),
--- ('Clan Hall -> Fortress of Resistance',503,51055,141959,-2869,500,0),-- dunno coords !
+('Clan Hall -> Fortress of Resistance',503,47382,111278,-104,500,0),
 ('Clan Hall -> Cruma Marshlands',504,5106,126916,-3664,500,0),
 ('Clan Hall -> Cruma Tower Entrance',505,17192,114178,-3439,500,0),
  -- ('Clan Hall -> Mandragora Farm',506,17192,114178,-3439,500,0),-- dunno coords !
 ('Clan Hall -> Town of Dion',507,15670,142983,-2705,500,0),
-('Clan Hall -> Floran Village',508,17838,170274,-3508,500,0),
+('Clan Hall -> Floran Village',508,17430,170103,-3496,500,0),
  -- 509
-('Clan Hall -> Tanor Canyon',510,58316,163851,-2816,500,0),
+('Clan Hall -> Tanor Canyon',510,60374,164301,-2856,500,0),
 ('Clan Hall -> Bee Hive',511,20505,189036,-3344,500,0),
  -- ('Clan Hall -> Dion Hills',512,20505,189036,-3344,500,0),-- dunno coords !
 ('Clan Hall -> Floran Agricultural Area',513,26810,172787,-3376,500,0),-- needs confirming
-('Clan Hall -> Plains of Dion',514,9980,173167,-3734,500,0),-- needs confirming
+('Clan Hall -> Plains of Dion',514,630,179184,-3720,500,0),-- needs confirming
  -- 515
  -- 516
 ('Clan Hall -> Hardin\'s Academy',517,105918,109759,-3207,500,0),
@@ -449,12 +449,12 @@ INSERT INTO teleport VALUES
  -- ('Clan Hall -> Undine Waterfall',595,85995,-2433,-3528,500,0),-- dunno coords !
  -- ('Clan Hall -> The Gods\' Falls',596,85995,-2433,-3528,500,0), -- dunno coords !
  -- 597
-('Clan Hall -> Tower of Insolence',598,121685,15749,-3852,500,0),
+('Clan Hall -> Tower of Insolence',598,114649,11115,-5120,500,0),
 ('Clan Hall -> The Blazing Swamp',599,146828,-12859,-4455,500,0),
  -- 600
 ('Clan Hall -> The Forbidden Gateway',601,185395,20359,-3270,500,0),
 ('Clan Hall -> The Giants Cave',602,174528,52683,-4369,500,0),
-('Clan Hall -> Northern Pathway of Enchanted Valley',603,104426,33746,-3800,500,0),-- need also southern?
+('Clan Hall -> Northern Pathway of Enchanted Valley',603,104426,33746,-3800,500,0),
 ('Clan Hall -> The Cemetery',604,172136,20325,-3326,500,0),
 ('Clan Hall -> The Forest of Mirrors',605,150477,85907,-2753,500,0),
 ('Clan Hall -> Anghel Waterfall',606,165584,85997,-2338,500,0),
@@ -464,12 +464,12 @@ INSERT INTO teleport VALUES
 ('Clan Hall -> Coliseum',610,150086,46733,-3412,500,0),
 -- ('Clan Hall -> Narsell Lake',611,150086,46733,-3412,500,0),-- dunno coords !
  -- 612 
-('Clan Hall -> Ancient Battleground',613,127739,-6998,-3869,500,0),
-('Clan Hall -> Forsaken Plains',614,167285,37109,-4008,500,0),
+('Clan Hall -> Ancient Battleground',613,106517,-2871,-3416,500,0),
+('Clan Hall -> Forsaken Plains',614,168217,37990,-4072,500,0),
 ('Clan Hall -> Silent Valley',615,177318,48447,-3835,500,0),
 ('Clan Hall -> Hunters Valley',616,114306,86573,-3112,500,0),-- needs confirming
 ('Clan Hall -> Plains of Glory',617,135756,19557,-3424,500,0),-- needs confirming
-('Clan Hall -> Fields of Massacre',618,179718,-7843,-3517,500,0),-- needs confirming
+('Clan Hall -> Fields of Massacre',618,181726,-7524,-3464,500,0),
 ('Clan Hall -> War-Torn Plains',619,156898,11217,-4032,500,0),-- needs confirming
 ('Clan Hall -> Border Outpost(Unknown Side)',620,114172,-18034,-1875,500,0),
 ('Clan Hall -> Rune Castle Town - Shopping Area',621,43835,-47749,-796,0,0),
@@ -518,7 +518,8 @@ INSERT INTO teleport VALUES
 ('Clan Hall -> Ant Cave South Entrance',664,-16019,193365,-4488,500,0),
 ('Clan Hall -> Ant Cave East Entrance',665,-10875,175962,-4152,500,0),
 ('Clan Hall -> Ant Cave West Entrance',666,-25899,172857,-4186,500,0),
-('Clan Hall -> Altar of Rites',667,-44311,78617,-3744,500,0);
+('Clan Hall -> Altar of Rites',667,-44311,78617,-3744,500,0),
+('Clan Hall -> Windmill Hill',668,-68628,162336,-3592,500,0);
 
 -- Noblesse Teleport
 INSERT INTO teleport VALUES
@@ -677,16 +678,16 @@ INSERT INTO teleport VALUES
 ('Clan Hall -> East Town of Aden',12002,142593,26344,-2425,0,0),
 ('Clan Hall -> South Town of Aden',12003,147503,32299,-2501,0,0),
 ('Clan Hall -> West Town of Aden',12004,147465,20737,-2130,0,0),
-('Clan Hall -> Southern Pathway of Enchanted Valley',12005,124904,61992,-3973,500,0),
-('Clan Hall -> East of Blazing Swamp',12006,159676,-13544,-2832,500,0),
+('Clan Hall -> Southern Pathway of Enchanted Valley',12005,124904,61992,-3920,500,0),
+('Clan Hall -> Blazing Swamp',12006,155310,-16339,-3320,500,0),
 ('Clan Hall -> Plains of Glory',12007,133164,14036,-3888,500,0),
 ('Clan Hall -> Plains of Fierce Battle',12008,153757,8905,-4024,500,0),
-('Clan Hall -> Path to Forest of Wirrors',12009,134310,71976,-3298,500,0),
-('Clan Hall -> The Front of Anghel Waterfall',12010,163341,91374,-3320,500,0),
-('Clan Hall -> Disciples Necropolis',12011,168779,-18790,-3184,500,0),
+('Clan Hall -> Path to Forest of Wirrors',12009,142065,81300,-3000,500,0),
+('Clan Hall -> Anghel Waterfall',12010,166182,91560,-3168,500,0),
+('Clan Hall -> West Area of Devastated Castle',12011,168779,-18790,-3184,500,0),
 ('Clan Hall -> North Path to The Cementery',12012,175191,4082,-2863,500,0),
-('Clan Hall ->South Path to The Cementery',12013,175432,30299,-3773,500,0),
-('Clan Hall -> West Path to The Cementery',12014,166502,20284,-3328,500,0),
+('Clan Hall -> South Path to The Cementery',12013,175432,30299,-3773,500,0),
+('Clan Hall -> Seal of Shilen',12014,184742,19745,-3168,500,0),
 ('Clan Hall -> Center of Giran Castle Town',12015,81749,149171,-3464,0,0),
 ('Clan Hall -> North of Giran Castle Town',12016,81525,143821,-3528,0,0),
 ('Clan Hall -> East of Giran Castle Town',12017,88342,147329,-3400,0,0),

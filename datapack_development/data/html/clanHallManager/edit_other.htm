@@ -1,13 +1,19 @@
-<html><body>%npcname%:<br>
-[Clan Hall Facilities Managment]<br><br>
-Function Teleport <font color="55FFFF">Level %tele%</font> (<font color="LEVEL">%telePrice%</font>Adena/1 Day)<br>
-Period	 Withdraw the fee for the next time at %teleDate%<br>
-Change	 [<a action="bypass -h npc_%objectId%_manage other tele 0">Deactivate</a>][<a action="bypass -h npc_%objectId%_manage other tele 1">Level 1</a>][<a action="bypass -h npc_%objectId%_manage other tele 2">Level 2</a>][<a action="bypass -h npc_%objectId%_manage other tele 3">Level 3</a>]<br><br>
-Function Support Magic <font color="55FFFF">Level %support%</font> (<font color="LEVEL">%supportPrice%</font>Adena/1 Day)<br>
-Period	 Withdraw the fee for the next time at %supportDate%<br>
-Change	 [<a action="bypass -h npc_%objectId%_manage other support 0">Deactivate</a>][<a action="bypass -h npc_%objectId%_manage other support 1">Level 1</a>][<a action="bypass -h npc_%objectId%_manage other support 2">Level 2</a>][<a action="bypass -h npc_%objectId%_manage other support 3">Level 3</a>]<br><br>
-Function Item Production <font color="55FFFF">Level %item%</font> (<font color="LEVEL">%itemPrice%</font>Adena/1 Day)<br>
-Period	 Withdraw the fee for the next time at %itemDate%<br>
-Change	 [<a action="bypass -h npc_%objectId%_manage other item 0">Deactivate</a>][<a action="bypass -h npc_%objectId%_manage other item 1">Level 1</a>][<a action="bypass -h npc_%objectId%_manage other item 2">Level 2</a>][<a action="bypass -h npc_%objectId%_manage other item 3">Level 3</a>]<br><br>
-<button value="To List" action="bypass -h npc_%objectId%_manage" width=75 height=21 back="L2UI_ch3.Btn1_normalOn" fore="L2UI_ch3.Btn1_normal">
-</body></html>
+<html><body><br>
+<font color="LEVEL">[Manage Clan Hall]</font> <br>
+<table width=100% cellspacing=2 cellpadding=0><tr>
+<td width=45><font color="999999">Facility</font></td>
+<td width=230><font color="LEVEL">Teleport</font> <font color="00FFFF">%tele%</font></td></tr>
+<tr><td><font color="999999">Period  </font></td><td>%tele_period%</td></tr>
+<tr><td><font color="999999">Change  </font><br></td><td>%change_tele%<br></td></tr>
+<tr><td><font color="999999">Facility</font></td>
+<td><font color="LEVEL">Support Magic</font> <font color="00FFFF">%support%</font></td></tr>
+<tr><td><font color="999999">Period</font></td><td>%support_period%</td></tr>
+<tr><td><font color="999999">Change</font><br></td><td>%change_support%<br></td></tr>
+<tr><td><font color="999999">Facility</font></td>
+<td><font color="LEVEL">Item Creation</font> <font color="00FFFF">%item%</font> </td></tr>
+<tr><td><font color="999999">Period</font></td><td>%item_period%</td></tr><tr>
+<td><font color="999999">Change</font><br></td><td>%change_item%<br></td></tr>
+</table><br>
+<button action="bypass -h npc_%objectId%_manage" value="Back" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+</body>
+</html>
