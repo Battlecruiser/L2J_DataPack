@@ -1,9 +1,10 @@
-<html><body>%npcname%:<br>
-This warehouse is for clan members only.<br><br>
-All rents and fees for using the facilities are withdrawn here, so you must pay special attention to the balance of adena.<br><br>
-<CENTER>
-<button value="Deposit" action="bypass -h npc_%objectId%_manage_vault deposit" width=75 height=21 back="L2UI_ch3.Btn1_normalOn" fore="L2UI_ch3.Btn1_normal"><br>
-<button value="Withdraw" action="bypass -h npc_%objectId%_manage_vault withdraw" width=75 height=21 back="L2UI_ch3.Btn1_normalOn" fore="L2UI_ch3.Btn1_normal"><br>
-<button value="Initial Screen" action="bypass -h npc_%objectId%_functions back" width=75 height=21 back="L2UI_ch3.Btn1_normalOn" fore="L2UI_ch3.Btn1_normal"><br>
+<html><body>
+This warehouse may only be used by clan members.<br>
+Please be mindful of your Adena balance remaining, as both the rental fee and usage fee for this clan hall will automatically withdrawn from this account.<br>
+The current Clan Hall Rental Fee is <font color="LEVEL">%rent% Adena</font>, and the scheduled withdrawal time for the Clan Hall Rental Fee is <font color="LEVEL">%date%</font>.<br>
+<CENTER><br>
+<button value="Deposit" action="bypass -h npc_%objectId%_manage_vault deposit" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br>
+<button value="Withdraw" action="bypass -h npc_%objectId%_manage_vault withdraw" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br>
+<button value="Initial Screen" action="bypass -h npc_%objectId%_list_back" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br>
 </CENTER>
 </body></html>
