@@ -854,14 +854,14 @@
 </skill>
 <skill id="1435" levels="10" name="Death Mark">
   <table name="#mpConsume"> 12 14 18 22 24 28 29 32 33 35 </table>
-  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 </table>
+  <table name="#power"> 35 40 45 50 55 60 65 70 75 80  </table>
   <table name="#soulConsumeCount"> 1 1 2 2 2 2 2 2 2 2 </table>
   <table name="#EffectLvl"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="lvlDepend" val="3"/>
-  <set name="reuseDelay" val="8000"/>
+  <set name="reuseDelay" val="30000"/>
   <set name="hitTime" val="1200"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
@@ -869,7 +869,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="effectId" val="5264"/>
-  <set name="effectLvl" val="#EffectLvl"/>
+  <set name="effectLevel" val="#EffectLvl"/>
   <set name="soulConsumeCount" val="#soulConsumeCount"/>
   <for>
   </for>
