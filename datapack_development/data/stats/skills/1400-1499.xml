@@ -1439,8 +1439,8 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="624"/>
   <for>
-     <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="critVuln">
-      <mul order="0x30" stat="critVuln" val="0.25"/>
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="critVuln">
+      <mul order="0x30" stat="critVuln" val="0.80"/>
     </effect>
   </for>
 </skill>
