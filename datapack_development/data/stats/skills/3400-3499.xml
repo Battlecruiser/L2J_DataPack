@@ -97,19 +97,36 @@
   </for>
 </skill>
 <skill id="3412" levels="1" name="Dynasty Breast Plate">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x40" stat="CON" val="1"/> <!-- CON -1 -->
+    <add order="0x40" stat="STR" val="1"/> <!-- STR +1 -->
+    <mul order="0x30" stat="pDef" val="1.046"/> <!-- P. Def +4.6% -->
+    <add order="0x40" stat="maxHp" val="418"/> <!-- MaxHP +418 -->
+    <mul order="0x30" stat="darkVuln" val="0.94"/> <!-- Darkness Resistance +6 -->
   </for>
 </skill>
 <skill id="3413" levels="1" name="Dynasty Leather Armor">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x40" stat="CON" val="1"/> <!-- CON -1 -->
+    <add order="0x40" stat="DEX" val="1"/> <!-- DEX +1 -->
+    <add order="0x40" stat="accCombat" val="1.72"/> <!-- Accuracy +1.72 -->
+    <add order="0x40" stat="rEvas" val="1.72"/> <!-- Evacion +1.72 -->
+    <add order="0x40" stat="maxHp" val="418"/> <!-- MaxHP +418 -->
+    <mul order="0x30" stat="darkVuln" val="0.94"/> <!-- Darkness Resistance +6 -->
   </for>
 </skill>
 <skill id="3414" levels="1" name="Dynasty Leather Armor">
@@ -129,11 +146,19 @@
   </for>
 </skill>
 <skill id="3416" levels="1" name="Dynasty Tunic">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x40" stat="INT" val="1"/> <!-- INT -1 -->
+    <add order="0x40" stat="MEN" val="1"/> <!-- MEN +1 -->
+    <mul order="0x30" stat="mAtkSpd" val="1.12"/> <!-- Casting Spd +12% -->
+    <add order="0x40" stat="maxMp" val="257"/> <!-- Maximum MP +257 -->
+    <mul order="0x30" stat="darkVuln" val="0.94"/> <!-- Darkness Resistance +6 -->
   </for>
 </skill>
 <skill id="3417" levels="1" name="Equipped with Shield">
