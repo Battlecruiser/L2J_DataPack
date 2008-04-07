@@ -1,0 +1,29 @@
+None of these tables will have any effect on your server if you have them disabled from the configurations, so that means nothing is loaded from them, and you can have these tables absent from your database, it won't have any negative effect.
+
+Basically almost all server admins do some kind of changes to their L2J database, and when they want to update their database they always have to worry about conflicting ID's, and issues where they could lose some data they made, i.e  the datapack team perform updates on spawns, npcs, droplists etc.
+
+To overcome this issue, you can put your custom data inside these tables. The L2JDP team won't be changing them too often. These files will just define table structures, so unless we needed to add/remove columns or change column types we won't change them.
+
+Explanation of the table purposes:
+
+custom_armor -> If you modified the stats of an armor you can put the armor here and delete it from the original armor table and safely have it loaded and never touched by l2j.
+
+custom_armorsets -> same as above description.
+
+custom_droplist -> same as above description.
+
+custom_etcitem -> same as above description.
+
+custom_merchant_buylists -> same as above description.
+
+custom_merchant_shopids -> same as above description.
+
+custom_notspawned -> When 'DeleteGmSpawnOnCustom' is set to True, this will make it so when a GM deletes an NPC in game, it does not actually get deleted from the spawnlist, it gets its ID put into a list of ID's that are NOT loaded with the rest of the spawns, this way you can prevent loss of spawn data by simply making it "not load that id", to load it again, simply go in this table and remove the id from the list. Id's with "isCustom = 0", are spawns from the spawnlist table, and Id's with "isCustom = 1", are spawns from the custom_spawnlist table.
+
+custom_npc -> If you added a custom npc or modified stats of an existing one, you can put the npc here and delete it from the original npc table and safely have it loaded and never touched by l2j. In cases where you created your own npc and Id, you simply don't have to worry about deleting the ID unless if there is an ID in the NPC table that is using that ID.
+
+custom_spawnlist -> here it is the same as above, but you do not need to worry about having the same id in the spawnlist table and the custom_spawnlist table
+
+custom_teleport -> same as custom_npc
+
+custom_weapon -> same as custom_armor 
