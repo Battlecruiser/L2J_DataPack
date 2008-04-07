@@ -180,16 +180,15 @@
   <for> 
   </for> 
 </skill> 
-<skill id="3318" levels="1" name="Flag Display"> 
+<skill id="3318" levels="1" name="Flag Display">
+  <set name="mpInitialConsume" val="50"/> 
+  <set name="mpConsume" val="0"/> 
   <set name="power" val="0.0"/> 
-  <set name="target" val="TARGET_NONE"/> 
-  <set name="skillType" val="NOTDONE"/> 
-  <set name="operateType" val="OP_PASSIVE"/> 
-  <set name="castRange" val="-1"/> 
-  <set name="effectRange" val="-1"/> 
-  <for> 
-  </for> 
-</skill> 
+  <set name="target" val="TARGET_FLAGPOLE"/> 
+  <set name="hitTime" val="180000"/> 
+  <set name="skillType" val="TAKEFORT"/>
+  <set name="operateType" val="OP_ACTIVE"/> 
+</skill>
 <skill id="3319" levels="1" name="Divine Protection of Ring"> 
   <set name="power" val="0.0"/> 
   <set name="target" val="TARGET_NONE"/> 
@@ -622,16 +621,17 @@
        <add val="321" order="0x10" stat="maxMp"/>
   </for>
 </skill> 
-<skill id="3358" levels="1" name="Flag Equip"> 
-  <set name="power" val="0.0"/> 
-  <set name="target" val="TARGET_NONE"/> 
-  <set name="skillType" val="NOTDONE"/> 
-  <set name="operateType" val="OP_PASSIVE"/> 
-  <set name="castRange" val="-1"/> 
-  <set name="effectRange" val="-1"/> 
-  <for> 
-  </for> 
-</skill> 
+<skill id="3358" levels="1" name="Flag Equip">
+  <set name="power" val="0.0"/>  
+  <set name="target" val="TARGET_SELF"/>  
+  <set name="skillType" val="BUFF"/>  
+  <set name="operateType" val="OP_PASSIVE"/>  
+  <set name="castRange" val="-1"/>  
+  <set name="effectRange" val="-1"/>  
+  <for>  
+       <mul order="0x30" stat="runSpd" val="0.5"/> 
+  </for>  
+</skill>
 <skill id="3359" levels="1" name="Transform Native"> 
   <set name="power" val="0.0"/> 
   <set name="target" val="TARGET_NONE"/> 

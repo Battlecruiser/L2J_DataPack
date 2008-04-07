@@ -40463,3 +40463,7 @@ INSERT INTO spawnlist VALUES
 (54953,'Miss_Queen',1,31765,-84336,242156,-3730,0,0,24500,60,0,'0'),
 (54954,'Miss_Queen',1,31766,-82032,150160,-3127,0,0,16500,60,0,'0'),
 (54955,'Priest Kanis',1,32264,143478,191013,-3720,0,0,8087,60,0,0);
+
+-- Fortress Suspicious Merchants
+INSERT INTO spawnlist VALUES
+(124659,'Dragon_Spine_Fortress',1,36142,12196,93188,-3421,0,0,50504,60,0,'0');
