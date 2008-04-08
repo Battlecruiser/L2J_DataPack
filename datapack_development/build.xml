@@ -71,6 +71,7 @@
       <sync todir="${build.dist.sql}">
          <fileset dir="${basedir}/sql">
             <include name="*.*"/>
+            <include name="experimental/*.*"/>
             <include name="custom/*.*"/>
             <include name="maintenance/*.*"/>
             <include name="mods/*.*"/>
