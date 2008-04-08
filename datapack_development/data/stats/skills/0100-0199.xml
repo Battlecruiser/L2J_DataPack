@@ -344,13 +344,13 @@
   <for>
     <effect count="1" name="Buff" time="30" val="0" stackOrder="#Tab-rEvas" stackType="rEvasSpec">
       <add order="0x40" stat="rEvas" val="#Tab-rEvas"/>
-      <mul order="0x40" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
+      <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
     </effect>
   </for>
   <enchant1for>
     <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="25" stackType="rEvasSpec">
       <add order="0x40" stat="rEvas" val="25"/>
-      <mul order="0x40" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
+      <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
     </effect>
   </enchant1for>
 </skill>

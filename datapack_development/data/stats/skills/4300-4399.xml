@@ -1009,9 +1009,9 @@
   <for>
     <effect count="1" name="Debuff" time="1200" val="0">
       <mul order="0x30" stat="mAtkSpd" val="0.70"/>
-      <mul order="0x40" stat="sleepVuln" val="1.5"/>
-      <mul order="0x40" stat="rootVuln" val="1.5"/>
-      <mul order="0x40" stat="stunVuln" val="1.5"/>
+      <mul order="0x30" stat="sleepVuln" val="1.5"/>
+      <mul order="0x30" stat="rootVuln" val="1.5"/>
+      <mul order="0x30" stat="stunVuln" val="1.5"/>
     </effect>
   </for>
 </skill>
