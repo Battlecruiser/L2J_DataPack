@@ -740,7 +740,7 @@
   <set name="effectRange" val="400"/>
   <for>
     <effect self="1" count="1" name="Buff" time="15" val="0" stackOrder="40" stackType="speed_up_special">
-      <add order="0x30" stat="runSpd" val="40"/>
+      <add order="0x40" stat="runSpd" val="40"/>
     <!-- Needs core support for "causes the enemy to show his/her back" -->
     </effect>
   </for>
