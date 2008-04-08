@@ -898,7 +898,7 @@
     <add val='4' order='0x40' stat='absorbDam'/>
     <mul val='0.8' order='0x30' stat='stunVuln'/>
     <!-- Missing Shock/Abnormal Mental State Attack Success Rate: 20% -->
-    <mul val='0.8' order='0x40' stat='derangementVuln'/>
+    <mul val='0.8' order='0x30' stat='derangementVuln'/>
   </for>
 </skill>
 <skill id="3560" levels="1" name="Earring of Orfen">
@@ -909,7 +909,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='0.8' order='0x40' stat='bleedVuln'/>
+    <mul val='0.8' order='0x30' stat='bleedVuln'/>
     <!-- Missing Bleed Attack Success Rate: 20% -->
     <mul val='1.06' order='0x30' stat='gainHp'/>
   </for>
