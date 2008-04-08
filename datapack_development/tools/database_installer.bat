@@ -560,7 +560,7 @@ fish.sql
 fishing_skill_trees.sql
 fort_door.sql
 fort_doorupgrade.sql
-fort_siege_guard.sql
+fort_siege_guards.sql
 fort.sql
 fortsiege_clans.sql
 forums.sql
