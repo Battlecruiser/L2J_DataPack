@@ -298,12 +298,12 @@ $MYG < ../sql/enchant_skill_trees.sql &> /dev/null
 $MYG < ../sql/etcitem.sql &> /dev/null
 $MYG < ../sql/fish.sql &> /dev/null
 $MYG < ../sql/fishing_skill_trees.sql &> /dev/null
+$MYG < ../sql/forums.sql &> /dev/null
 $MYG < ../sql/fort_door.sql &> /dev/null
 $MYG < ../sql/fort_doorupgrade.sql &> /dev/null
 $MYG < ../sql/fort_siege_guards.sql &> /dev/null
 $MYG < ../sql/fort.sql &> /dev/null
 $MYG < ../sql/fortsiege_clans.sql &> /dev/null
-$MYG < ../sql/forums.sql &> /dev/null
 $MYG < ../sql/games.sql &> /dev/null
 $MYG < ../sql/global_tasks.sql &> /dev/null
 $MYG < ../sql/grandboss_data.sql &> /dev/null
@@ -394,7 +394,7 @@ done
   echo -ne "Install "Wedding Mod" tables? (y/N): "
   read modprompt
   if [ "$modprompt" == "Y" -o "$LSB" == "y" ]; then
-		$MYG < ../sql/mods/mods_wedding.sql &> /dev/null
+		$MYG < ../sql/mods_wedding.sql &> /dev/null
 	fi
 
 finish
@@ -432,7 +432,6 @@ while :
    fi
   done 
 }
-
 
 clear
 load_config $1
