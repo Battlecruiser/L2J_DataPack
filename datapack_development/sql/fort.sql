@@ -1,7 +1,7 @@
 -- ----------------------------
 -- Table structure for fort
 -- ----------------------------
-CREATE TABLE `fort` (
+CREATE TABLE IF NOT EXISTS `fort` (
   `id` int(11) NOT NULL default '0',
   `name` varchar(25) NOT NULL,
   `siegeDate` decimal(20,0) NOT NULL default '0',
