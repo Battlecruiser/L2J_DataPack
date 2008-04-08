@@ -450,7 +450,7 @@
   <set name="effectRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxHp" stackType="max_hp_up">
-      <add order="0x30" stat="maxHp" val="#Tab-maxHp"/>
+      <add order="0x40" stat="maxHp" val="#Tab-maxHp"/>
     </effect>
   </for>
 </skill>
@@ -667,7 +667,7 @@
   <set name="effectRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxMp" stackType="MPregen">
-      <add order="0x30" stat="maxCp" val="#Tab-maxMp"/>
+      <add order="0x40" stat="maxCp" val="#Tab-maxMp"/>
     </effect>
   </for>
 </skill>

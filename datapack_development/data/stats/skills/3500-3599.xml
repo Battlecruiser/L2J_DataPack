@@ -34,7 +34,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul order="0x40" stat="poisonVuln" val="0.8"/> <!-- Poison Resistance +20% -->
+    <mul order="0x30" stat="poisonVuln" val="0.8"/> <!-- Poison Resistance +20% -->
   </for>
 </skill>
 <skill id="3503" levels="1" name="Reinforced Leather Set">
@@ -512,8 +512,8 @@
   <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="pAtk" val="1.04"/> <!-- P. Atk. +4% -->
-    <mul order="0x40" stat="sleepVuln" val="0.3"/> <!-- Sleep Resistance +70% -->
-    <mul order="0x40" stat="rootVuln" val="0.3"/> <!-- Hold Resistance +70% -->
+    <mul order="0x30" stat="sleepVuln" val="0.3"/> <!-- Sleep Resistance +70% -->
+    <mul order="0x30" stat="rootVuln" val="0.3"/> <!-- Hold Resistance +70% -->
     <add order="0x40" stat="CON" val="2"/> <!-- CON +2 -->
     <sub order="0x40" stat="DEX" val="2"/> <!-- DEX -2 -->
   </for>
@@ -786,8 +786,8 @@
   <for>
     <mul order="0x30" stat="pDef" val="1.08"/> <!-- P Def. +8% -->
     <add order="0x40" stat="maxHp" val="445"/> <!-- Maximum HP +445 -->
-    <mul order="0x40" stat="sleepVuln" val="0.3"/> <!-- Sleep Probability -70% -->
-    <mul order="0x40" stat="rootVuln" val="0.3"/> <!-- Hold Probability -70% -->
+    <mul order="0x30" stat="sleepVuln" val="0.3"/> <!-- Sleep Probability -70% -->
+    <mul order="0x30" stat="rootVuln" val="0.3"/> <!-- Hold Probability -70% -->
     <sub order="0x40" stat="DEX" val="2"/> <!-- DEX -2 -->
     <add order="0x40" stat="STR" val="2"/> <!-- STR +2 -->
   </for>
