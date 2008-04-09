@@ -129,8 +129,8 @@ In addition, you can register quest items with this quest.  All registered items
 player's inventory, as soon as the quest is aborted or completed.  Many quests reward items that are not
 meant to be deleted upon quest completion, even if the items appear in the quest inventory (example: star of destiny).
 Such items should NOT be registered as questItems.  To register items with a quest, simply use:
-	QUEST.registerItem(itemId)
-	for example:  QUEST.registerItem(1234) 
+	self.questItemIds = [itemId]
+	for example:  self.questItemIds = [1234]
 
 QuestState:
 A QuestState is not part of the quest definition itself, but it contains the information that tracks the 
@@ -148,7 +148,7 @@ can be discovered using:
 	partyMember = self.getRandomPartyMemberState(player,STATE)
 	st = partyMember.getQuestState("12345_questname")
 For example, instead of "variable" and "value" in the first sample, one may use "cond" and "1".  Instead of STATE in 
-the second sample, one may use STARTED
+the second sample, one may use State.STARTED
 While a QuestState can be discovered from a player, it can also access the player instance back when needed, using
 	st.getPlayer()
 All other public methods of implementation of QuestState are accessible from jython.  Similarly, objects
@@ -158,20 +158,15 @@ reachable from st can be further used in order to reach deeper.  For example, on
 	little demonstation of how one may reach deeper into a chain of objects that are accessible.  In this
 	case, from the QuestState, we get the player whose QuestState this is, then get that player's clan,
 	the clan's leader, the leader's actual player instance, and from there, we find the leader's summonned pet!)
-	
 
 STATE:
-States are used to track segments of the quest.  Each state has its own list of quest items that may be found.  
-Upon completion or aborting of a quest, or upon changing from one state to another, STATES take care of cleaning up
-the excess quest items from a player's inventory.  To define a state, one must use:
-	STATEVARIABLE     = State('StateName', QUEST)
+States are used to track segments of the quest.
+To define a state, one must use:
+	st.setState(STATEVARIABLE)
 for example:
-	STARTED     = State('Started', QUEST)
-The CREATED state is mandatory!  All quests must have it.  It is defined as:
-	CREATED     = State('Start', QUEST)	
-The COMPLETED state is mandatory for non-repeatable quests.  It is defined as:
-	COMPLETED     = State('Completed', QUEST)
-Other states can be created arbitarily.  Commonly used states are "Starting","Started","Progress" or 
-states like "PartXXXX" (Part1, Part2, etc)
-NOTE: We are currently working on deprecating STATES or at least changing the way they work, as they are rather useless...
-
+	st.setState(State.STARTED)
+The CREATED state is mandatory!  All quests have it bz default, if u don't change it later. Can be defined as:
+	st.setState(State.CREATED)
+The COMPLETED state is mandatory for non-repeatable quests or quests that have some hidden stuffs after completing.  It is defined as:
+	st.setState(State.COMPLETED)
+Other states no longer working..
