@@ -18,7 +18,7 @@ l2jserver project (www.l2jserver.com) for full details and available functions. 
 may read forward in this documentation.
 
 
-AVAILABLE FUNCTIONS:
+AVAILABLE TRIGGER FUNCTIONS:
 There exist a set of functions that are predefined for quests and are triggered from various actions.
 These functions, their triggers, and the parameters passed into the script are defined below:
 
@@ -115,6 +115,111 @@ These functions, their triggers, and the parameters passed into the script are d
 		Registers an NPC for onKill events.  The players do NOT need to be registered for the quest in order
 		to trigger a response to this NPC getting killed.
 		The parameter "npcId" contains the id of the template for this NPC.
+		
+10) OVERRIDABLE QUEST FUNCTIONS:
+	There exist a few functions which are automatically called by the core (and optionally manually called within
+	your script) which meant to be overriden by your quest script for special needs.   
+	a) saveGlobalData()
+		Optional function.  If a quest (or ai) needs to keep track of variables that are persistant beyond a reboot
+		but are not tied to any particular character (for example, count how many players have finished a quest in 
+		order to do some special action when the count reaches 1000), then you can override this function and add
+		code for saving your special variabls.  This function will automatically be called when the server is shutting
+		down as well as when you attempt to reload the quest using GM commands.  The actual functions used to save
+		those variables are described in section 11, below.  
+	b) init_LoadGlobalData()
+		Optional function.  If a quest has saved global data, you will also need to implement a way to load the data
+		back.  Here, you can define everything from which variables to look for and load to the structure in which
+		you wish to store the data (for example, you may want to format things as an array, or a dictionary, or some 
+		other structure).  The actual functions used to load those variables are described in section 11, below.  
+
+10) OTHER QUEST FUNCTIONS:
+	In addition to the trigger functions (which are called automatically by the core when certain actions take place)
+	there also exist a variety of functions that belong to the Quest class and can be accessed within each script.
+	To call those functions one needs to prefix the call with "self." and provide the appropriate parameters.  For
+	example, if the Quest class had a function named "foo" and it expected an integer parameter, you could call this
+	function from anywhere within the "class Quest" segment of your script, using the code
+	self.foo(5)
+
+	The full listing of available functions can be seen in the class net.sf.l2j.gameserver.model.quest.Quest, which 
+	is located at net/sf/l2j/gameserver/model/quest/Quest.java from the l2jserver project.  However, a few of the
+	more common functions are summarized here:
+	a) startQuestTimer(name, time, npc, player, repeating)
+		Starts a timer.  The timer will call onAdvEvent(name, npc, player) each time that it fires.
+		The parameter name is a string which serves as the name of the timer (or "event").
+			time refers to the number of milliseconds that the timer will wait before it fires.
+		npc is the actual instance of an NPC or Mob assosiated with the timer.  If this timer is not tied to 
+			any particular instance, you should pass None as the parameter.
+		player is the actual instance of a player assosiated with the timer.  If this timer is not tied to 
+			any particular instance, you should pass None as the parameter.
+		repeating is a boolean (True or False) variable.  If this is False, the timer will only fire once.  If 
+			this is True, the timer will keep firing at equal periods (equal to the "time" parameter) for ever, 
+			unless you explicitely cancel the timer, reboot the server, or reload the quest (assuming that your
+			script doesn't automatically start the timer again when it loads).
+	b) getQuestTimer(name, npc, player)
+		Allows you to grab an instance of the timer.  This is primarily used behind the scenes (from core) and
+		you would rarely really need it, but I am describing as it is somewhat important in understanding timers.
+		The parameter name refers to the name with which a timer was added.  It is the first and most important
+			key in identifying the timer.  Two timers with different name are always considered unrelated to each
+			other.  If the name is the same, the timers are further identified by the npc and player associated.
+		npc is the second key for identifying timers.  A null (None) npc acts as a wildcard!  That is, if you call 
+			this function with a null npc parameter, it will consider as matches any timers with the correct 
+			name and player, regardless of which NPC was used.  On the other hand, if you use a non-null npc, this
+			function will consider as matches any timers with the same name, npc, and player as well as timers
+			with the same name and player but null NPC.
+		player is the last key for identifying timers.  A null (None) player acts as a wildcard!  That is, if you call 
+			this function with a null player parameter, it will consider as matches any timers with the correct 
+			name and npc, regardless of which player was used.  On the other hand, if you use a non-null player, this
+			function will consider as matches any timers with the same name, npc, and player as well as timers
+			with the same name and npc but null player.   
+		Naturally, if both player and npc are null, matches are identified based solely on the name.
+	c) cancelQuestTimer(name, npc, player)
+		Cancels a timer.  See getQuestTimer for details on how this call will match and discover which timer to 
+		cancel.  If multiple timers match the parameters, only the first timer that the code discovers will be cancelled.
+	d) saveGlobalQuestVar(var, value)
+		This permanently (until explicit deletion) saves a variable that is global for this quest.  Here, global 
+		refers to the fact that it is not tied to any particular player!  It does not mean global for all quest. 
+		var is a string denoting the variable name.
+		value is a string denoting the value of the variable "var".
+		For storing complex structures, your script must provide code which properly breaks down the data into 
+		var/value pairs and saves it in a way that can be read back.
+	e) loadGlobalQuestVar(var)
+		This loads a permanently saved variable that is global for all players within this quest.  It then 
+		returns the result as a string.  It returns an empty string if the specified variable does not exist 
+		for this quest.
+		var is the name of the variable you wish to load
+	f) deleteGlobalQuestVar(var)
+		Deletes a global quest variable for this quest (same definition of "global" as in #d).
+		var is the name of the variable you wish to delete
+	g) deleteAllGlobalQuestVars()
+		Deletes ALL global quest variables for this quest (same definition of "global" as in #d).
+	h) getRandomPartyMember(player)
+		Returns a random player who is in the same party as the referenced parameter.  If the referenced
+		parameter is a player who is not in a party, it returns the player reference itself automatically.
+		If the reference is null, it returns null.
+		player is a reference to a player instance.
+	i) getRandomPartyMember(player, var, value)
+		Similar to #h but only returns a result among those players who have the specified var and value pair 
+		among their QuestState variables (see QuestState description below).  If no party member matches these 
+		conditions, a null (None) is returned.
+		The reference player may also be among the possible results if it also matches the conditions.
+		Similarly to #h, if the reference player is not in a party, then only the var/value pairs are checked.
+		In that case, if the player matches the conditions, the same player is returned, else null is returned. 
+		player: The reference player whose party will be checked
+		var: The variable name necessary for a match.  If this is null (None), then a completely random
+			party member is returned regardless of the value (same as in #h).
+		value: the required value of the "var" before a party member is considered for the random poll.  
+		Example usage:
+		self.getRandomPartyMemberState(player, "cond","5")
+		This will return a random party member among those members who have cond=5.
+	j) getRandomPartyMemberState(player, state)
+		Similar to #h but only returns a result among those players whose QuestState has a state matching the 
+		passed "state" variable (see QuestState description below).  If no party member matches the state 
+		condition a null (None) is returned.
+		If the reference player is not in a party, either the reference is return if it matches the state 
+		condition, or a null (None) is returned if the reference player doesn't match the state condition.   
+		For example, 
+		self.getRandomPartyMemberState(player, State.COMPLETED)
+		will return a random party member among those members who have completed the quest.
 
 Quest:
 After writing your script, in order to initialize your quest and register it with the game server, near the 
@@ -128,9 +233,14 @@ In that case, you may register your quest using:
 In addition, you can register quest items with this quest.  All registered items will be DELETED from the
 player's inventory, as soon as the quest is aborted or completed.  Many quests reward items that are not
 meant to be deleted upon quest completion, even if the items appear in the quest inventory (example: star of destiny).
-Such items should NOT be registered as questItems.  To register items with a quest, simply use:
-	self.questItemIds = [itemId]
-	for example:  self.questItemIds = [1234]
+Such items should NOT be registered as questItems.  To register items with a quest, you need to modify the __init__ 
+function of the quest.  For a simple quest with no registrations, the __init__ function will look something like :
+ def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+For a quest with registered items, this should be:
+ def __init__(self,id,name,descr): 
+    JQuest.__init__(self,id,name,descr)
+    self.questItemIds = [1234,5678] 
+In this example, the items with id 1234 and 5678 are registered.
 
 QuestState:
 A QuestState is not part of the quest definition itself, but it contains the information that tracks the 
@@ -158,15 +268,16 @@ reachable from st can be further used in order to reach deeper.  For example, on
 	little demonstation of how one may reach deeper into a chain of objects that are accessible.  In this
 	case, from the QuestState, we get the player whose QuestState this is, then get that player's clan,
 	the clan's leader, the leader's actual player instance, and from there, we find the leader's summonned pet!)
-
-STATE:
-States are used to track segments of the quest.
-To define a state, one must use:
-	st.setState(STATEVARIABLE)
-for example:
-	st.setState(State.STARTED)
-The CREATED state is mandatory!  All quests have it bz default, if u don't change it later. Can be defined as:
-	st.setState(State.CREATED)
-The COMPLETED state is mandatory for non-repeatable quests or quests that have some hidden stuffs after completing.  It is defined as:
-	st.setState(State.COMPLETED)
-Other states no longer working..
+	
+State:
+States are used to track segments of the quest for players.  States are not a property of any particular quest and 
+States Types cannot be added or removed dynamically.  They are a mere enumeration used universally by all quests.  
+Each QuestState carries a State value which can be compared to the available (global) state types in order to check
+the progress that the given character has with regards to the given QuestState (see QuestState info above).
+The available state types are:
+CREATED
+STARTED
+COMPLETED
+For example, given an instance of a QuestState (st) for a given player doing some quest, one can check if the
+player has completed the quest by doing the comparison:
+st.getState() == State.COMPLETED
