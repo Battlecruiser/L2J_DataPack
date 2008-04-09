@@ -145,7 +145,7 @@ class Quest (JQuest) :
                     st.set("spawned","1")
                     st.set("npcid",str(npc.getObjectId()))
                     AutoChat(spawnedNpc,"You cannot escape Udan's eyes!")
-                    st.startQuestTimer("Eye of Udan has despawned",10000,spawnedNpc)
+                    st.startQuestTimer("Eye of Udan has despawned",9500,spawnedNpc)
                     if Red_Totem :
                         st.takeItems(Totem,-1)
     return
