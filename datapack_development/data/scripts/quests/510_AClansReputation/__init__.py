@@ -62,7 +62,7 @@ class Quest (JQuest) :
            st.takeItems(Claw,-1)
            reward = int(CLAN_POINTS_REWARD * count)
            clan.setReputationScore(clan.getReputationScore()+reward,True)
-           player.sendPacket(SystemMessage(1777).addNumber(CLAN_POINTS_REWARD))
+           player.sendPacket(SystemMessage(1777).addNumber(reward))
            clan.broadcastToOnlineMembers(PledgeShowInfoUpdate(clan))
   return htmltext
 
