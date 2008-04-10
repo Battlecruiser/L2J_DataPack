@@ -19,7 +19,7 @@ QTEXMTWO = {
     123: ["tutorial_voice_001k","tutorial_kamael_male001.htm"],
     124: ["tutorial_voice_001j","tutorial_kamael_female001.htm"]
     }
-# table for Client Event Enable (2138046216) [html, x, y, z]
+# table for Client Event Enable (8) [html, x, y, z]
 CEEa = {
     0  : ["tutorial_human_fighter007.htm",-71424,258336,-3109],
     10 : ["tutorial_human_mage007.htm",-91036,248044,-3568],
@@ -183,6 +183,7 @@ class Quest (JQuest) :
         # TUTORIAL CLOSE [N] #
  
         elif string == "TE" :
+          if event[2:].isdigit() :
             event_id = int(event[2:])
             if event_id == 0 :
                 st.closeTutorialHtml()
@@ -196,14 +197,14 @@ class Quest (JQuest) :
             elif event_id == 2 :
                 st.playTutorialVoice("tutorial_voice_003")
                 htmltext = "tutorial_02.htm"
-                st.onTutorialClientEvent(2138046209)
+                st.onTutorialClientEvent(1)
                 st.set("Ex","-5")
             elif event_id == 3 :
                 htmltext = "tutorial_03.htm"
-                st.onTutorialClientEvent(2138046210)
+                st.onTutorialClientEvent(2)
             elif event_id == 5 :
                 htmltext = "tutorial_05.htm"
-                st.onTutorialClientEvent(2138046216)
+                st.onTutorialClientEvent(8)
             elif event_id == 7 :
                 htmltext = "tutorial_100.htm"
                 st.onTutorialClientEvent(0)
@@ -233,21 +234,22 @@ class Quest (JQuest) :
         # CLIENT EVENT ENABLE [N] #
  
         elif string == "CE" :
+          if event[2:].isdigit() :
             event_id = int(event[2:])
             playerLevel = player.getLevel()
-            if event_id == 2138046209 :
+            if event_id == 1 :
                 if playerLevel < 6 :
                     st.playTutorialVoice("tutorial_voice_004")
                     htmltext = "tutorial_03.htm"
                     st.playSound("ItemSound.quest_tutorial")
-                    st.onTutorialClientEvent(2138046210)
-            elif event_id == 2138046210 :
+                    st.onTutorialClientEvent(2)
+            elif event_id == 2 :
                 if playerLevel < 6 :
                     st.playTutorialVoice("tutorial_voice_005")
                     htmltext = "tutorial_05.htm"
                     st.playSound("ItemSound.quest_tutorial")
-                    st.onTutorialClientEvent(2138046216)
-            elif event_id == 2138046216 :
+                    st.onTutorialClientEvent(8)
+            elif event_id == 8 :
                 if playerLevel < 6 :
                     if classId in CEEa.keys():
                        htmltext, x, y, z = CEEa[classId]
@@ -263,7 +265,7 @@ class Quest (JQuest) :
                     st.set("Die","1")
                     st.showQuestionMark(8)
                     st.onTutorialClientEvent(0)
-            elif event_id == 2144337408 :
+            elif event_id == 2144337408 : #TODO: retail id isnt matching, test one by one to find proper one X_x
                 if playerLevel < 6 and st.getInt("sit") == 0:
                     st.playTutorialVoice("tutorial_voice_018")
                     st.playSound("ItemSound.quest_tutorial")
@@ -338,6 +340,7 @@ class Quest (JQuest) :
         # QUESTION MARK CLICKED [N] #
  
         elif string == "QM" :
+          if event[2:].isdigit() :
             MarkId = int(event[2:])
             if MarkId == 1 :
                 st.playTutorialVoice("tutorial_voice_007")
