@@ -717,17 +717,11 @@
 </skill>
 <skill id="1430" levels="5" name="Invocation">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
-      Lvl 1 - Meditate to increase MP regeneration.  Your body is immobilized and your P. Def. decreased while meditating. The effect is cancelled if you are attacked.
-      Lvl 2 - Meditate to increase MP regeneration.  Your body is immobilized and your P. Def. decreased while meditating. The effect is cancelled if you are attacked.
-      Lvl 3 - Meditate to increase MP regeneration.  Your body is immobilized and your P. Def. decreased while meditating. The effect is cancelled if you are attacked.
-      Lvl 4 - Meditate to increase MP regeneration.  Your body is immobilized and your P. Def. decreased while meditating. The effect is cancelled if you are attacked.
-      Lvl 5 - Meditate to increase MP regeneration.  Your body is immobilized and your P. Def. decreased while meditating. The effect is cancelled if you are attacked.
+      Meditate to increase MP regeneration.  Your body is immobilized and your P. Def. decreased while meditating. The effect is cancelled if you are attacked.
 -->
   <table name="#pDef"> 0.8 0.8 0.8 0.8 0.8 </table>
-  <table name="#mhot"> 90 110 130 150 170 </table>
+  <table name="#mhot"> 90 100 115 125 140 </table>
   <table name="#mpConsume"> 27 28 30 33 34 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
