@@ -18,7 +18,7 @@ ELVEN_KNIGHT_BROOCH     = 1204
 REORIA_RECOMMENDATION   = 1217
 #Reward Item
 SHADOW_WEAPON_COUPON_DGRADE = 8869
-#PABRIS,RAINS,RAMOS
+#PABRIS,RAINS,RAMOS,ALDENIA
 NPCS=[30066,30288,30373,32154]
 #event:[newclass,req_class,req_race,low_ni,low_i,ok_ni,ok_i,req_item]
 #low_ni : level too low, and you dont have quest item

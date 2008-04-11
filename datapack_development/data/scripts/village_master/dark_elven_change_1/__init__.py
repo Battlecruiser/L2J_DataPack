@@ -17,7 +17,7 @@ JEWEL_OF_DARKNESS = 1261
 ORB_OF_ABYSS      = 1270
 #Reward Item
 SHADOW_WEAPON_COUPON_DGRADE = 8869
-#XENOS,TOBIAS,TRONIX
+#XENOS,TOBIAS,TRONIX,DEVON
 NPCS=[30290,30297,30462,32160]
 #event:[newclass,req_class,req_race,low_ni,low_i,ok_ni,ok_i,req_item]
 #low_ni : level too low, and you don't have quest item
