@@ -16,7 +16,7 @@ KHAVATARI_TOTEM  = 1615
 MASK_OF_MEDIUM   = 1631
 #Reward Item
 SHADOW_WEAPON_COUPON_DGRADE = 8869
-#OSBORN,DRIKUS,CASTOR
+#OSBORN,DRIKUS,CASTOR,TOOK
 NPCS=[30500,30505,30508,32150]
 #event:[newclass,req_class,req_race,low_ni,low_i,ok_ni,ok_i,req_item]
 #low_ni : level too low, and you don't have quest item
