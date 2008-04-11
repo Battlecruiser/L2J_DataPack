@@ -12,24 +12,24 @@ CREATE TABLE skill_trees (
 -- GLOSSARY FOR CLASS ID'S (Created by Mr_Pleb_Mgoo),Updated by DJ MELERIX
 
 -- HUMANS
--- 0=Human Fighter       | 1=Human Warrior    | 2=Gladiator        | 3=Warlord          | 4=Human Knight
+-- 0=Human Fighter       | 1=Warrior          | 2=Gladiator        | 3=Warlord          | 4=Human Knight
 -- 5=Paladin             | 6=Dark Avenger     | 7=Rogue            | 8=Treasure Hunter  | 9=Hawkeye
--- 10=Human Mage         | 11=Human Wizard    | 12=Sorcerer/ss     | 13=Necromancer     | 14=Warlock
+-- 10=Human Mystic       | 11=Wizard          | 12=Sorcerer/ss     | 13=Necromancer     | 14=Warlock
 -- 15=Cleric             | 16=Bishop          | 17=Prophet
 
 -- ELVES
 -- 18=Elven Fighter      | 19=Elven Knight    | 20=Temple Knight   | 21=Swordsinger     | 22=Elven Scout
--- 23=Plainswalker       | 24=Silver Ranger   | 25=Elven Mage      | 26=Elven Wizard    | 27=Spellsinger
+-- 23=Plainswalker       | 24=Silver Ranger   | 25=Elven Mystic    | 26=Elven Wizard    | 27=Spellsinger
 -- 28=Elemental Summoner | 29=Elven Oracle    | 30=Elven Elder
 
 -- DARK ELVES
--- 31=Dark Elven Fighter | 32=Palus Knight    | 33=Shillien Knight | 34=Bladedancer     | 35=Assassin
--- 36=Abyss Walker       | 37=Phantom Ranger  | 38=Dark Elven Mage | 39=Dark Wizard     | 40=Spellhowler
+-- 31=Dark Fighter       | 32=Palus Knight    | 33=Shillien Knight | 34=Bladedancer     | 35=Assassin
+-- 36=Abyss Walker       | 37=Phantom Ranger  | 38=Dark Mystic     | 39=Dark Wizard     | 40=Spellhowler
 -- 41=Phantom Summoner   | 42=Shillien Oracle | 43=Shillien Elder
 
 -- ORCS
 -- 44=Orc Fighter        | 45=Orc Raider      | 46=Destroyer       | 47=Monk            | 48=Tyrant
--- 49=Orc Mage           | 50=Orc Shaman      | 51=Overlord        | 52=Warcryer
+-- 49=Orc Mystic         | 50=Orc Shaman      | 51=Overlord        | 52=Warcryer
 
 -- DWARVES
 -- 53=Dwarven Fighter    | 54=Scavenger       | 55=Bounty Hunter   | 56=Artisan         | 57=Warsmith
