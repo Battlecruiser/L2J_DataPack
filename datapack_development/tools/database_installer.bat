@@ -604,6 +604,7 @@ skill_trees.sql
 spawnlist.sql
 teleport.sql
 topic.sql
+transform_skill_trees.sql;
 walker_routes.sql
 weapon.sql
 zone_vertices.sql

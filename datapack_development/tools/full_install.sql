@@ -86,6 +86,7 @@ DROP TABLE IF EXISTS skill_trees;
 DROP TABLE IF EXISTS spawnlist;
 DROP TABLE IF EXISTS teleport;
 DROP TABLE IF EXISTS topic;
+DROP TABLE IF EXISTS transform_skill_trees;
 DROP TABLE IF EXISTS walker_routes;
 DROP TABLE IF EXISTS weapon;
 DROP TABLE IF EXISTS zone_vertices;
