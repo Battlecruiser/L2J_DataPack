@@ -107,7 +107,7 @@ class Quest (JQuest) :
             self.isKatenarSpawned = 0
             st.giveItems(Document,1)
             return "32242-01.htm"
-        return ""
+        return "none"
 
     def onTalk (self,npc,player):
         htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
