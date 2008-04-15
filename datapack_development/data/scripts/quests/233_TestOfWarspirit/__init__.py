@@ -2,7 +2,6 @@
 # rewritten by Rolarga, Version 0.3
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://forum.l2jdp.com for more details
-
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -51,7 +50,6 @@ SHADOW_WEAPON_COUPON_CGRADE = 8870
 NPC=[30030,30436,30507,30510,30515,30630,30649,30682]
 
 STATS=["cond","step","Orim","Racoy","Perkiron","Manakia","Manakia_Queen"]
-
 
 #npcId=[[accepted values for this part],variable for the current part from the mob,maxcount,chance in %, items to give(one per kill max)]
 DROPLIST={
@@ -139,8 +137,6 @@ class Quest (JQuest) :
       st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
     return htmltext
-
-
 
   def onTalk (self,npc,player):
     htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
@@ -321,28 +317,33 @@ class Quest (JQuest) :
     random=st.getRandom(100)
 #    return the current value of the var
     isValue = st.getInt(var)
-    if st.getInt(var) in value and random<chance:
+    if isValue in value and random < chance:
       # special part for Noble Ants
       if npcId in [20089,20090]:
-        if random>70:
-          list=0
-        elif random>40:
-          list=1
-        elif random>10 and st.getQuestItemsCount(KIRUNAS_SKULL)==0:
-          list=2
-        else:
+        if not (st.getQuestItemsCount(KIRUNAS_THIGH_BONE) and st.getQuestItemsCount(KIRUNAS_ARM_BONE)) :
+          list = 0
+          chance = 70
+        elif not (st.getQuestItemsCount(KIRUNAS_SPINE) and st.getQuestItemsCount(KIRUNAS_RIB_BONE)) :
+          list = 1
+          chance = 40
+        elif not st.getQuestItemsCount(KIRUNAS_SKULL) :
+          list = 2
+          chance = 10
+        else :
+          return
+        if random > chance :
           return
         for item in itemList[list]:
           count = st.getQuestItemsCount(item)
+          if count >= maxcount : continue
           st.giveItems(item,1)
-          if int(st.get(var)) < 9:
+          if st.getInt(var) < 9:
             st.set(var,str(isValue+1))
-          if st.getQuestItemsCount(KIRUNAS_SKULL) and int(st.get(var))>6:
+          if st.getQuestItemsCount(KIRUNAS_SKULL) and st.getInt(var)==9:
             st.set(var,"10")
             st.playSound("ItemdSound.quest_middle")
-            return
-          st.playSound("ItemSound.quest_itemget")
-        return
+          else :
+            st.playSound("ItemSound.quest_itemget")
       # Drop part for any other mobs
       else:    
         for item in itemList:
@@ -358,8 +359,7 @@ class Quest (JQuest) :
               st.set(var,str(isValue+1))
             else:
               st.playSound("ItemSound.quest_itemget")
-            return
-
+    return
 
 QUEST     = Quest(233,qn,"Test Of Warspirit")
 
