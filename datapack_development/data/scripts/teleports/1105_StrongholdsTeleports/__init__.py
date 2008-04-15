@@ -13,7 +13,7 @@ class Quest (JQuest) :
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onFirstTalk (self,npc,player):
-    htmltext = ""
+    htmltext = None
     st = player.getQuestState(qn)
     if not st :
         st = self.newQuestState(player)
