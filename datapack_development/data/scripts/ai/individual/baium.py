@@ -121,7 +121,7 @@ class baium (JQuest):
 
   def onTalk (self,npc,player):
     npcId = npc.getNpcId()
-    htmltext = ""
+    htmltext = "none"
     if not self.baiumZone :
       self.baiumZone = GrandBossManager.getInstance().getZone(113100,14500,10077)
     if npcId == STONE_BAIUM and GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM) == ASLEEP:
@@ -139,7 +139,7 @@ class baium (JQuest):
     elif npcId == ANGELIC_VORTEX :
       if GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM) == ASLEEP :
         if player.isFlying() :
-          print "Player "+player.getName()+" attempted to enter Baium's layer while flying!"
+          print "Player "+player.getName()+" attempted to enter Baium's lair while flying!"
           htmltext = '<html><body>Angelic Vortex:<br>You may not enter while flying a wyvern</body></html>'
         elif player.getQuestState("baium").getQuestItemsCount(4295) : # bloody fabric
           player.getQuestState("baium").takeItems(4295,1)

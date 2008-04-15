@@ -114,7 +114,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    npcId = npc.getNpcId()
    if npcId == AVANTGARDE :
-     htmltext = ""
+     htmltext = None
      if not st : return htmltext
      if st.getState() == State.COMPLETED :
           htmltext = "32323-00.htm"

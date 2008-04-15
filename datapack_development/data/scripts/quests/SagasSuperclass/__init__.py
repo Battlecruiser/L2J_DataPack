@@ -180,7 +180,7 @@ class Quest (JQuest) :
  def onAdvEvent (self,event,npc, player) :
    st = player.getQuestState(self.qn)
    if not st: return
-   htmltext = ""  # simple initialization...if none of the events match, return nothing.  
+   htmltext = None  # simple initialization...if none of the events match, return nothing.  
    cond = st.getInt("cond")
    id = st.getInt("id")
    player = st.getPlayer()
@@ -521,7 +521,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onFirstTalk (self,npc,player):
-    htmltext = ""
+    htmltext = "none"
     st = player.getQuestState(self.qn)
     npcId = npc.getNpcId()
     if st :
