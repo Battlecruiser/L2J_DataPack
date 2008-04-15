@@ -17,7 +17,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
-     self.questItemIds = [SPINNERET]
+     self.questItemIds = [SPINNERET,SPIDERSILK]
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -78,32 +78,15 @@ class Quest (JQuest) :
          htmltext = "30165-2.htm"
        elif npcId == 30088 and cond == 6 :
           htmltext = "30088-4.htm"
-       else : htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>" 
    return htmltext
 
  def onKill(self,npc,player,isPet):
-   # get 1 party member among those with cond between 1 and 4
-   partyMember = 0
-   j = 0
-   for i in range(1,5) :  # i between 1 and 4 inclusive
-       partyMember = self.getRandomPartyMember(player,str(i))
-       if partyMember :
-           j = i
-           break
+   partyMember = self.getRandomPartyMember(player,"4")
    if not partyMember : return
-   
-   # if at least 1 cond exists with a party member, check if there also exist in a different cond as well
-   for i in range(j+1,5) :
-       partyMember2 = self.getRandomPartyMember(player,str(i))
-       # if a party member is found in another cond, randomly choose between
-       # the new one and the previous one
-       if partyMember2 :
-           if Rnd.get(2) : partyMember = partyMember2
-           
    st = partyMember.getQuestState(qn)
    if not st : return 
    if st.getState() != State.STARTED : return
-   
+
    count = st.getQuestItemsCount(SPINNERET)
    if count < 10 :
      st.giveItems(SPINNERET,1)
@@ -114,7 +97,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(34,qn,"In Search of Clothes")
+QUEST = Quest(34,qn,"In Search of Clothes")
 
 QUEST.addStartNpc(30088)
 QUEST.addTalkId(30088)
@@ -122,3 +105,4 @@ QUEST.addTalkId(30088)
 QUEST.addTalkId(30165)
 QUEST.addTalkId(30294)
 QUEST.addKillId(20560)
+QUEST.addKillId(20561)
