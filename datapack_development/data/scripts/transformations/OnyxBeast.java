@@ -59,12 +59,6 @@ public class OnyxBeast extends L2Transformation
 
 	public void onUntransform()
 	{
-		// Enable all character skills
-		for (L2Skill sk : this.getPlayer().getAllSkills())
-		{
-			if (sk != null && !sk.isPassive())
-				this.getPlayer().addSkill(sk, false);
-		}
 		// Only remove transformation skills. Keeps transformation id for restoration after CW is no longer equipped.
 		if (this.getPlayer().isCursedWeaponEquipped())
 		{
