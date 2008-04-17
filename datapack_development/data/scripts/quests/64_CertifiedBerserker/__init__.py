@@ -11,7 +11,7 @@ Orkurus = 32207
 Tenain = 32215
 Gort = 32252
 Entien = 32200
-Harkilgamed = 32236
+Harkilgamed = 32253
 
 #Mobs
 Brekas = range(20267,20272)
