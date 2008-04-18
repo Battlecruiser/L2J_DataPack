@@ -1200,22 +1200,17 @@
   </for>
 </skill>
 <skill id="453" levels="1" name="Escape Shackle">
-<!--
-  Needs to be finished.
-
-  Description(s):
-      Allows you to escape from a captured state.
--->
+  <!-- Needs to be verified -->
   <set name="mpConsume" val="60"/>
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_ONE"/> <!-- Should be TARGET_SELF ? -->
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="120000"/> <!-- guessed -->
   <set name="skillType" val="NEGATE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="600"/>
-  <set name="effectRange" val="1100"/>
-  <set name="negateStats" val="ROOT PARALYZE"/>
-  <set name="negatePower" val="3.0"/> <!-- guessed -->
+  <set name="castRange" val="600"/> <!-- Should be -1 possibly incorrect data in client ? -->
+  <set name="effectRange" val="1100"/> <!-- Should be -1 possibly incorrect data in client ? -->
+  <set name="negateStats" val="ROOT"/>
+  <set name="negatePower" val="8.0"/>
 </skill>
 <skill id="454" levels="1" name="Symbol of Defense">
 <!--
