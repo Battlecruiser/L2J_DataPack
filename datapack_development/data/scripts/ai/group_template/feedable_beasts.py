@@ -199,7 +199,10 @@ class feedable_beasts(JQuest) :
             nextNpc.addDamageHate(player,0,99999)
             nextNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
 
-    def onSkillUse (self,npc,player,skill,isPet):
+    def onSkillSee (self,npc,player,skill,targets,isPet):
+        # this behavior is only run when the target of skill is the passed npc (chest)
+        # i.e. when the player is attempting to open the chest using a skill
+        if not npc in targets: return
         # gather some values on local variables
         npcId = npc.getNpcId()
         skillId = skill.getId()
