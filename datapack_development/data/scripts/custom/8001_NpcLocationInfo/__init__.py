@@ -75,9 +75,9 @@ RADAR={
 30358:[10775,14190,-4167], #Tetrarch Thifiell
 30359:[11235,14078,-4167], #Tetrarch Kaitar
 30141:[11012,14128,-4167], #Tetrarch Talloth
-30139:[11012,14128,-4167], #Warehouse Keeper Dorankus
-30140:[11012,14128,-4167], #Warehouse Keeper Erviante
-30350:[11012,14128,-4167], #Warehouse Freightman Carlon
+30139:[13380,17430,-4544], #Warehouse Keeper Dorankus 
+30140:[13464,17751,-4544], #Warehouse Keeper Erviante 
+30350:[13763,17501,-4544], #Warehouse Freightman Carlon
 30421:[-44225,79721,-3577],#Varika
 30419:[-44015,79683,-3577],#Arkenia
 30130:[25856,10832,-3649], #Abyssal Celebrant Undrias
