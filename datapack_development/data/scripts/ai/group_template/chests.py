@@ -35,7 +35,7 @@ class chests(JQuest) :
                        21821,21822]
 
         for i in self.chests :
-            self.addSkillUseId(i)
+            self.addSkillSeeId(i)
             self.addAttackId(i)
 
     def onSkillSee (self,npc,player,skill,targets,isPet):

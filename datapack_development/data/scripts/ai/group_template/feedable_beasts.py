@@ -94,7 +94,7 @@ class feedable_beasts(JQuest) :
         self.feedInfo = {} # : feedInfo[objectId of mob] = objectId of player feeding it
 
         for i in self.feedableBeasts :
-            self.addSkillUseId(i)
+            self.addSkillSeeeId(i)
             self.addKillId(i)
 
     def onAdvEvent(self,event,npc,player) :
