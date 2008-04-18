@@ -199,7 +199,7 @@ class feedable_beasts(JQuest) :
             nextNpc.addDamageHate(player,0,99999)
             nextNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
 
-    def onSkillUse (self,npc,player,skill):
+    def onSkillUse (self,npc,player,skill,isPet):
         # gather some values on local variables
         npcId = npc.getNpcId()
         skillId = skill.getId()

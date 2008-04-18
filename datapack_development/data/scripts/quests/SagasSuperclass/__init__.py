@@ -521,7 +521,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onFirstTalk (self,npc,player):
-    htmltext = "none"
+    htmltext = ""
     st = player.getQuestState(self.qn)
     npcId = npc.getNpcId()
     if st :

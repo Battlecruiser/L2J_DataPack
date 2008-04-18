@@ -38,7 +38,7 @@ class chests(JQuest) :
             self.addSkillUseId(i)
             self.addAttackId(i)
 
-    def onSkillUse (self,npc,player,skill):
+    def onSkillUse (self,npc,player,skill,isPet):
         npcId = npc.getNpcId()
         skillId = skill.getId()
         skillLevel= skill.getLevel()

@@ -66,7 +66,7 @@ class Quest (JQuest) :
     if npcId == Doctor_Chaos :
        npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, L2CharPosition(96323,-110914,-3328,0))
        self.startQuestTimer("1",3000,npc,player)
-    return "none"
+    return ""
 
 QUEST      = Quest(-1,"Doctor Chaos","ai")
 QUEST.addFirstTalkId(32033)
