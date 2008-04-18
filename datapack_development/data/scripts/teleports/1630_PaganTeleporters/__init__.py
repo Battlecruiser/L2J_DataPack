@@ -30,7 +30,7 @@ class Quest (JQuest):
        player.teleToLocation(-12766,-35840,-10856)
     elif npcId == 32040 :
        player.teleToLocation(36640,-51218,718)
-    return "none"
+    return ""
 
   def onTalk (self,npc,player):
     st = player.getQuestState(qn)
