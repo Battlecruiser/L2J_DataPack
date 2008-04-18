@@ -21,6 +21,8 @@ class Quest (JQuest) :
        htmltext = str(npc.getNpcId()) + ".htm"
     else:
        htmltext = str(npc.getNpcId()) + "-no.htm"
+    if htmltext == None:
+       npc.showChatWindow(player)
     return htmltext
 
 QUEST       = Quest(1105, qn, "Teleports")

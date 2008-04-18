@@ -198,7 +198,9 @@ class Quest (JQuest) :
 
  def onFirstTalk (self,npc,player): #atm custom, on retail it is when you walk to npcs radius
     st = player.getQuestState(qn)
-    if not st : return
+    if not st : 
+       npc.showChatWindow(player)
+       return
     npcId = npc.getNpcId()
     cond = st.getInt("cond")
     if npcId == Stones and cond == 17:
@@ -207,7 +209,8 @@ class Quest (JQuest) :
        st.giveItems(Detector2,1)
        st.set("cond","18")
        player.sendPacket(ExShowScreenMessage("The radio signal detector is responding. # A suspicious pile of stones catches your eye.",4500))
-    return
+    npc.showChatWindow(player)
+    return ""
 
  def onTalk (self,npc,player):
     htmltext = "<html><head><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"

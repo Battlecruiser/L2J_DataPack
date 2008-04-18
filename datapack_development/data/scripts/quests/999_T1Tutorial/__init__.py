@@ -135,7 +135,9 @@ class Quest (JQuest) :
    if not st :
       st = self.newQuestState(player)
    qs = st.getPlayer().getQuestState(qnTutorial)
-   if not qs : return
+   if not qs : 
+      npc.showChatWindow(player)
+      return
    htmltext = ""
    Ex = qs.getInt("Ex")
    npcId = npc.getNpcId()
@@ -163,6 +165,7 @@ class Quest (JQuest) :
        st.giveItems(SCROLL,2)
        qs.set("reward","1")
        st.exitQuest(False)
+     npc.showChatWindow(player)
      return
    elif onlyone == 0 and level < 10 :
     if player.getRace().ordinal() == raceId :
@@ -216,6 +219,8 @@ class Quest (JQuest) :
           htmltext = htmlfiles[2]
    elif st.getState() == State.COMPLETED and npcTyp == 0:
      htmltext = str(npc.getNpcId())+"-04.htm"
+   if htmltext == None or htmltext == "":
+     npc.showChatWindow(player)
    return htmltext
 
  def onKill(self,npc,player,isPet):

@@ -118,6 +118,8 @@ class Quest (JQuest) :
      if not st : return htmltext
      if st.getState() == State.COMPLETED :
           htmltext = "32323-00.htm"
+   if htmltext == None:
+     npc.showChatWindow(player)
    return htmltext
 
  def onKill(self,npc,player,isPet):
