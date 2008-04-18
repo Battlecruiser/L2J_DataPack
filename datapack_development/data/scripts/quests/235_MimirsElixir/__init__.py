@@ -69,7 +69,7 @@ class Quest (JQuest) :
             elif st.getInt("cond")==0 :
                 htmltext = "30166-02.htm"    # Successful start: Bring me Pure silver from Reagents quest
         elif id == State.COMPLETED :
-            htmltext = "<html><body>You have already State.COMPLETED this quest.</body></html>"
+            htmltext = "<html><body>You have already completed this quest.</body></html>"
         # was asked to get pure silver but has not done so yet.  Repeat: get pure silver
         elif cond==1 and not st.getQuestItemsCount(PURE_SILVER) :
             htmltext = "30166-03.htm"    # Bring me Pure silver from Reagents quest
