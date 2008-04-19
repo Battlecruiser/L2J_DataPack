@@ -136,7 +136,7 @@ class Quest (JQuest) :
     npcId = npc.getNpcId()
     if npcId == Nastron :
         FindTemplate(Alter).setBusy(False)
-        self.getQuestTimer("Soul of Fire Nastron has despawned",npc,None).cancel()
+        self.cancelQuestTimer("Soul of Fire Nastron has despawned",npc,None)
         party = player.getParty()
         if party :
             PartyQuestMembers = []

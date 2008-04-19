@@ -136,7 +136,7 @@ class Quest (JQuest) :
     npcId = npc.getNpcId()
     if npcId == Ashutar :
         FindTemplate(Alter).setBusy(False)
-        self.getQuestTimer("Soul of Water Ashutar has despawned",npc,None).cancel()
+        self.cancelQuestTimer("Soul of Water Ashutar has despawned",npc,None)
         party = player.getParty()
         if party :
             PartyQuestMembers = []

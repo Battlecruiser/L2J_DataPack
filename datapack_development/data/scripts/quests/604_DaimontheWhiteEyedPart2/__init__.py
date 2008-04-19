@@ -125,7 +125,7 @@ class Quest (JQuest) :
      npcId = npc.getNpcId() 
      if npcId == DAIMON :
         FindTemplate(ALTAR).setBusy(False) 
-        self.getQuestTimer("Daimon the White-Eyed has despawned",npc,None).cancel()
+        self.cancelQuestTimer("Daimon the White-Eyed has despawned",npc,None)
         party = player.getParty()
         if party :
             PartyQuestMembers = []

@@ -125,7 +125,7 @@ class Quest (JQuest) :
     npcId = npc.getNpcId()
     if npcId == BUMPALUMP :
         FindTemplate(TABLE).setBusy(False)
-        self.getQuestTimer("Icicle Emperor Bumbalump has despawned",npc,None).cancel()
+        self.cancelQuestTimerr("Icicle Emperor Bumbalump has despawned",npc,None)
         party = player.getParty()
         if party :
             PartyQuestMembers = []
