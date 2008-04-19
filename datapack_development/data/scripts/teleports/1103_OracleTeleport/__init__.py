@@ -67,7 +67,7 @@ RETURN_LOCS = [[-80555,150337,-3040],[-13953,121404,-2984],[16354,142820,-2696],
               [45256,123906,-5411],[46192,170290,-4981],[111273,174015,-5437],[-20604,-250789,-8165], \
               [-21726, 77385,-5171],[140405, 79679,-5427],[-52366, 79097,-4741],[118311,132797,-4829], \
               [172185,-17602,-4901],[ 83000,209213,-5439],[-19500, 13508,-4901],[113865, 84543,-6541]]
-              
+
 class Quest (JQuest) :
 
  def __init__(self, id, name, descr): JQuest.__init__(self, id, name, descr)
@@ -78,13 +78,22 @@ class Quest (JQuest) :
        st = self.newQuestState(player)
     npcId = npc.getNpcId()
     htmltext = event
-    count=st.getInt("count")
     if event == "Return":
        if npcId in TEMPLE_PRIEST and st.getState() == State.STARTED :
           x,y,z = RETURN_LOCS[st.getInt("id")]
           player.teleToLocation(x,y,z)
           st.exitQuest(1)
        return
+    elif event == "Festival":
+       id = st.getInt("id")
+       if id in TOWN_DAWN:
+          player.teleToLocation(-80157,111344,-4901)
+          return
+       elif id in TOWN_DUSK:
+          player.teleToLocation(-81261,86531,-5157)
+          return
+       else :
+          htmltext = "oracle1.htm"
     elif event == "Dimensional":
        htmltext = "oracle.htm"
        player.teleToLocation(-114755,-179466,-6752)
