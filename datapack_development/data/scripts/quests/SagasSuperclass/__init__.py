@@ -569,7 +569,7 @@ class Quest (JQuest) :
                     self.AutoChat(npc,self.Text[17].replace('PLAYERNAME',player.getName()))
                     npc.reduceCurrentHp(9999999,npc)
                     self.DeleteSpawn(st,st.getInt("Mob_3"))
-                    if st.getQuestTimer("Mob_3 has despawne") :
+                    if st.getQuestTimer("Mob_3 has despawned") :
                        st.getQuestTimer("Mob_3 has despawned").cancel()
                     st.set("Tab","1")
    return
