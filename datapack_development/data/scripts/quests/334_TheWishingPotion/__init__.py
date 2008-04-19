@@ -348,7 +348,7 @@ class Quest (JQuest) :
      elif npcId == GREAT_DEMON_KING:
        try :
          if st.getQuestTimer("greatdemon_timer1") :
-         st.getQuestTimer("greatdemon_timer1").cancel()
+            st.getQuestTimer("greatdemon_timer1").cancel()
          st.giveItems(ADENA,1412965)
          st.playSound("ItemSound.quest_itemget")
        except: pass
