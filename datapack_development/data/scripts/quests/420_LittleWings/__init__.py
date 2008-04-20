@@ -321,16 +321,16 @@ class Quest (JQuest):
              elif whom == 5 : eggs = SH_EGG
              if st.getQuestItemsCount(eggs) and progress in [19,20] :
               st.takeItems(eggs,1)
-              st.set("cond","8")
               if progress == 19 :
                  st.giveItems(3500+st.getRandom(3),1)
                  st.exitQuest(True)
                  st.playSound("ItemSound.quest_finish")
                  return "420_mymyu_15.htm"
               elif progress == 20 :
+                 st.set("progress","22")
                  return "420_mymyu_11.htm"
          elif event == "give_dust" :
-             if st.getQuestItemsCount(FRY_DUST):
+            if st.getQuestItemsCount(FRY_DUST):
               st.takeItems(FRY_DUST,1)
               luck = st.getRandom(2)
               if luck == 0 :
@@ -346,6 +346,11 @@ class Quest (JQuest):
               st.exitQuest(True)
               st.playSound("ItemSound.quest_finish")
               return htmltext
+            else:
+              st.giveItems(3500+st.getRandom(3),1)
+              st.exitQuest(True)
+              st.playSound("ItemSound.quest_finish")
+              return "420_mymyu_12.htm"
          elif event == "no_dust" :
               st.giveItems(3500+st.getRandom(3),1)
               st.exitQuest(True)
@@ -424,6 +429,8 @@ class Quest (JQuest):
        elif id == State.STARTED and cond >= 5:
           if progress < 14 and st.getQuestItemsCount(JUICE) == 1  :
              return "420_mymyu_7.htm"
+          elif progress == 22 :
+             return "420_mymyu_11.htm"
           elif progress > 13 :
              return check_eggs(st,"mymyu",progress)
     elif npcId == DK_EXARION :
