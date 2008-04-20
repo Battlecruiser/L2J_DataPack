@@ -584,6 +584,7 @@ merchant_shopids.sql
 merchants.sql
 minions.sql
 npc.sql
+npc_buffer.sql
 npcskills.sql
 olympiad_nobles.sql
 pets.sql

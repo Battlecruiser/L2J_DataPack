@@ -8141,4 +8141,5 @@ INSERT INTO `npc` VALUES
 
 INSERT INTO `npc` VALUES
 (50007, 31324, "Andromeda", 1, "Wedding Manager", 1, "NPC.a_casino_FDarkElf", 8, 23, 70, "female", "L2WeddingManager", 40, 3862, 1493, 11.85, 2.78, 40, 43, 30, 21, 20, 10, 0, 0, 1314, 470, 780, 382, 278, 0, 333, 316, 0, 0, 55, 132, "NULL", 0, 1, 0, "LAST_HIT", 0, 0, 0, "fighter"),
-(70010, 31606, "Catrina", 1, "TvT Event Manager", 1, "Monster2.queen_of_cat", 8, 15, 70, "female", "L2TvTEventNpc", 40, 3862, 1493, 11.85, 2.78, 40, 43, 30, 21, 20, 10, 0, 0, 1314, 470, 780, 382, 278, 0, 333, 0, 0, 0, 28, 132, "NULL", 0, 0, 0, "LAST_HIT", 0, 0, 0, "fighter");
+(70010, 31606, "Catrina", 1, "TvT Event Manager", 1, "Monster2.queen_of_cat", 8, 15, 70, "female", "L2TvTEventNpc", 40, 3862, 1493, 11.85, 2.78, 40, 43, 30, 21, 20, 10, 0, 0, 1314, 470, 780, 382, 278, 0, 333, 0, 0, 0, 28, 132, "NULL", 0, 0, 0, "LAST_HIT", 0, 0, 0, "fighter"),
+(1000003, 32226, "Shiela", 1, "NPC Buffer", 1, "Monster2.baby_tiger", 13.00, 22.50, 70, "male", "L2NpcBuffer", 40, 751', 331, 2.37, 1.53, 80, 80, 80, 80, 80, 80, 0, 0, 88, 119, 37, 112, 282, 0, 5000, 0, 0, 0, 30, 132, "NULL", 0, 0, 0, "LAST_HIT", 0, 0, 0, "fighter");
