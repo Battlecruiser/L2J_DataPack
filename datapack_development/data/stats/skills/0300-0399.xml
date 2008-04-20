@@ -1185,9 +1185,7 @@
   <set name="hitTime" val="1800"/>
   <set name="baseCritRate" val="15"/>
   <for>
-    <effect count="1" name="RemoveTarget" time="1" val="0">
-      <add order="0x40" stat="rCrit" val="20"/>
-    </effect>
+    <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </for>
 </skill>
 <skill id="348" levels="1" name="Spoil Crush">

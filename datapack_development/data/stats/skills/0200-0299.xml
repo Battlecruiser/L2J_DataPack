@@ -229,9 +229,6 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <cond msg="Dual Fist required.">
-    <using kind="Fist, Dual Fist"/>
-  </cond>
   <for>
     <!-- retail value: 13HP/sec; stat update every 2 units (1 1/3 sec) -->
     <effect count="0x7fffffff" name="DamOverTime" time="1" val="13">
