@@ -198,7 +198,8 @@ description(s) :
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="150"/>
   <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="30000"/>
@@ -207,7 +208,7 @@ description(s) :
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
-  <set name="effectRange" val="900"/>
+  <set name="effectRange" val="900"/> <!-- Should be 1000 ? -->
   <set name="soulConsumeCount" val="3"/>
   <for>
   </for>
