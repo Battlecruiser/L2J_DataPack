@@ -295,10 +295,7 @@
 </skill>
 <skill id="1413" levels="1" name="Magnus' Chant">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Allows the Ancient Soul of Magnus to temporarily possess a party member. Consumes 40 Spirit Ores.
+  Allows the Ancient Soul of Magnus to temporarily possess a party member. Consumes 40 Spirit Ores.
 -->
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="40"/>
@@ -328,10 +325,7 @@
 </skill>
 <skill id="1414" levels="1" name="Victories of Pa'agrio">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Allows the Ancient Hero's Soul to temporarily possesses an alliance member. Consumes 40 Spirit Ores.
+  Allows the Ancient Hero's Soul to temporarily possesses an alliance member. Consumes 40 Spirit Ores.
 -->
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="40"/>
@@ -393,10 +387,7 @@
 </skill>
 <skill id="1416" levels="1" name="Pa'agrio's Fist">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Increases an alliance member's maximum CP and fully restores it. Consumes 20 Spirit Ores.
+  Increases an alliance member's maximum CP and fully restores it. Consumes 20 Spirit Ores.
 -->
   <set name="mpInitialConsume" val="57"/> <!-- Guessing -->
   <set name="mpConsume" val="284"/>
@@ -461,10 +452,7 @@
 </skill>
 <skill id="1419" levels="1" name="Volcano">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Consecutive strikes inflict a great amount of fire damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
+  Consecutive strikes inflict a great amount of fire damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
 -->
   <set name="target" val="TARGET_GROUND"/>
   <set name="skillType" val="SIGNET_CASTTIME"/>
@@ -493,10 +481,7 @@
 </skill>
 <skill id="1420" levels="1" name="Cyclone">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Consecutive strikes inflict a great amount of wind damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
+  Consecutive strikes inflict a great amount of wind damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
 -->
   <set name="target" val="TARGET_GROUND"/>
   <set name="skillType" val="SIGNET_CASTTIME"/>
@@ -525,10 +510,7 @@
 </skill>
 <skill id="1421" levels="1" name="Raging Waves">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Consecutive strikes inflict a great amount of water damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
+  Consecutive strikes inflict a great amount of water damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
 -->
   <set name="target" val="TARGET_GROUND"/>
   <set name="skillType" val="SIGNET_CASTTIME"/>
@@ -571,10 +553,7 @@
 </skill>
 <skill id="1423" levels="1" name="Gehenna">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Consecutive strikes inflict a great amount of dark damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
+  Consecutive strikes inflict a great amount of dark damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
 -->
   <set name="target" val="TARGET_GROUND"/>
   <set name="skillType" val="SIGNET_CASTTIME"/>
@@ -603,10 +582,7 @@
 </skill>
 <skill id="1424" levels="1" name="Anti-Summoning Field">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Generates a signet that sends a servitor to another dimension at regular intervals. Applies to all servitors in the affected area. Level 2 or higher Spell Force required. Consumes 1 Magic Symbol.
+  enerates a signet that sends a servitor to another dimension at regular intervals. Applies to all servitors in the affected area. Level 2 or higher Spell Force required. Consumes 1 Magic Symbol.
 -->
   <set name="target" val="TARGET_GROUND"/>
   <set name="skillType" val="SIGNET"/>
