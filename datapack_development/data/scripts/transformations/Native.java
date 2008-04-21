@@ -55,16 +55,8 @@ public class Native extends L2Transformation
 
 	public void onUntransform()
 	{
-		// Only remove transformation skills. Keeps transformation id for restoration after CW is no longer equipped.
-		if (this.getPlayer().isCursedWeaponEquipped())
-		{
-			removeSkills();
-			return;
-		}
-		// Remove transformation skills
+		// remove transformation skills
 		removeSkills();
-		// Update Transformation ID
-		this.getPlayer().transformUpdateInfo();
 	}
 
 	public void removeSkills()
