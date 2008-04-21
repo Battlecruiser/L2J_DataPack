@@ -1394,7 +1394,7 @@
   </cond>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.60" stackType="gainMp">
-      <add order="0x40" stat="gainMp" val="1.60"/>
+      <mul order="0x30" stat="gainMp" val="1.60"/>
     </effect>
   </for>
 </skill>
