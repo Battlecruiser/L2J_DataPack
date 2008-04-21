@@ -387,9 +387,6 @@
 </skill>
 <skill id="3123" levels="10" name="Item Skill: Heal">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Immediately recovers your HP. Power 308.
       Lvl 2 - Active: Immediately recovers your HP. Power 337.
       Lvl 3 - Active: Immediately recovers your HP. Power 365.
@@ -420,9 +417,6 @@
 </skill>
 <skill id="3124" levels="10" name="Item Skill: Blessed Body">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Increases the maximum HP by 30 temporarily.
       Lvl 2 - Active: Increases the maximum HP by 60 temporarily.
       Lvl 3 - Active: Increases the maximum HP by 90 temporarily.
@@ -456,10 +450,7 @@
 </skill>
 <skill id="3125" levels="10" name="Item Skill: Battle Roar">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases the maximum HP temporarily and restores HP by the increased amount.
+  Lvl 1-10 - Active: Increases the maximum HP temporarily and restores HP by the increased amount.
 -->
   <table name="#mpConsume"> 13 18 22 27 30 33 40 50 60 70 </table>
   <table name="#Tab-maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 1.40 1.45 1.50 1.55</table>
@@ -481,10 +472,7 @@
 </skill>
 <skill id="3126" levels="10" name="Item Skill: Prayer">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases the effectiveness of HP recovery magic temporarily.
+  Lvl 1-10 - Active: Increases the effectiveness of HP recovery magic temporarily.
 -->
   <table name="#mpConsume_Init"> 49 52 55 60 70 80 90 100 110 120 </table>
   <table name="#mpConsume"> 195 207 217 227 237 248 257 268 278 288 </table>
@@ -508,9 +496,6 @@
 </skill>
 <skill id="3127" levels="10" name="Item Skill: Recharge">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Regenerates MP. Power 41.
       Lvl 2 - Active: Regenerates MP. Power 44.
       Lvl 3 - Active: Regenerates MP. Power 47.
@@ -541,9 +526,6 @@
 </skill>
 <skill id="3128" levels="10" name="Item Skill: Blessed Soul">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Increases the maximum MP by 20 temporarily.
       Lvl 2 - Active: Increases the maximum MP by 40 temporarily.
       Lvl 3 - Active: Increases the maximum MP by 60 temporarily.
@@ -577,10 +559,7 @@
 </skill>
 <skill id="3129" levels="10" name="Item Skill: Mana Gain">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases the recharge recover rate of MP.
+  Lvl 1-10 - Active: Increases the recharge recover rate of MP.
 -->
   <table name="#mpConsume_Init"> 8 9 10 11 12 13 14 15 16 17 </table>
   <table name="#mpConsume"> 31 35 38 41 46 52 58 65 70 75 </table>
@@ -604,9 +583,6 @@
 </skill>
 <skill id="3130" levels="10" name="Item Skill: Ritual">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Regenerates CP. Power 264.
       Lvl 2 - Active: Regenerates CP. Power 289.
       Lvl 3 - Active: Regenerates CP. Power 313.
@@ -637,9 +613,6 @@
 </skill>
 <skill id="3131" levels="10" name="Item Skill: Cheer">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Increases the maximum CP by 30 temporarily.
       Lvl 2 - Active: Increases the maximum CP by 60 temporarily.
       Lvl 3 - Active: Increases the maximum CP by 90 temporarily.
@@ -673,10 +646,7 @@
 </skill>
 <skill id="3132" levels="10" name="Item Skill: Might">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases P. Atk. temporarily.
+  Lvl 1-10 - Active: Increases P. Atk. temporarily.
 -->
   <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
   <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
@@ -700,10 +670,7 @@
 </skill>
 <skill id="3133" levels="10" name="Item Skill: Empower">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases M. Atk. temporarily.
+  Lvl 1-10 - Active: Increases M. Atk. temporarily.
 -->
   <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
   <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
@@ -727,10 +694,7 @@
 </skill>
 <skill id="3134" levels="10" name="Item Skill: Duel Might">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases PVP P. Atk. temporarily.
+  Lvl 1-10 - Active: Increases PVP P. Atk. temporarily.
 -->
   <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
   <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
@@ -754,10 +718,7 @@
 </skill>
 <skill id="3135" levels="10" name="Item Skill: Shield">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases P. Def. temporarily.
+  Lvl 1-10 - Active: Increases P. Def. temporarily.
 -->
   <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
   <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
@@ -781,10 +742,7 @@
 </skill>
 <skill id="3136" levels="10" name="Item Skill: Magic Barrier">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases M. Def. temporarily.
+  Lvl 1-10 - Active: Increases M. Def. temporarily.
 -->
   <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
   <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
@@ -808,10 +766,7 @@
 </skill>
 <skill id="3137" levels="10" name="Item Skill: Duel Weakness">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Decreases the opponent's PVP P. Atk. temporarily.
+  Lvl 1-10 - Active: Decreases the opponent's PVP P. Atk. temporarily.
 -->
   <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
   <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
@@ -835,10 +790,7 @@
 </skill>
 <skill id="3138" levels="10" name="Item Skill: Heal Empower">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases the power of HP recovery magic temporarily.
+  Lvl 1-10 - Active: Increases the power of HP recovery magic temporarily.
 -->
   <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
   <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
@@ -862,10 +814,7 @@
 </skill>
 <skill id="3139" levels="10" name="Item Skill: Agility">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases Dodge temporarily.
+  Lvl 1-10 - Active: Increases Dodge temporarily.
 -->
   <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
   <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
@@ -889,10 +838,7 @@
 </skill>
 <skill id="3140" levels="10" name="Item Skill: Guidance">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases Accuracy temporarily.
+  Lvl 1-10 - Active: Increases Accuracy temporarily.
 -->
   <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
   <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
@@ -916,10 +862,7 @@
 </skill>
 <skill id="3141" levels="10" name="Item Skill: Focus">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases the chance of a critical attack temporarily.
+  Lvl 1-10 - Active: Increases the chance of a critical attack temporarily.
 -->
   <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
   <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
@@ -943,10 +886,7 @@
 </skill>
 <skill id="3142" levels="10" name="Item Skill: Wild Magic">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases the critical attack rate of magic attacks temporarily.
+  Lvl 1-10 - Active: Increases the critical attack rate of magic attacks temporarily.
 -->
   <table name="#mpConsume_Init"> 2 4 7 10 13 15 18 20 24 28 </table>
   <table name="#mpConsume"> 8 16 28 36 48 59 67 75 88 99 </table>
@@ -1054,9 +994,6 @@
 </skill>
 <skill id="3149" levels="10" name="Item Skill: Aggression">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Increases the target's urge to attack. Power 438.
       Lvl 2 - Active: Increases the target's urge to attack. Power 467.
       Lvl 3 - Active: Increases the target's urge to attack. Power 495.
@@ -1087,9 +1024,6 @@
 </skill>
 <skill id="3150" levels="10" name="Item Skill: Charm">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Decreases a target's urge to attack. Power 219.
       Lvl 2 - Active: Decreases a target's urge to attack. Power 234.
       Lvl 3 - Active: Decreases a target's urge to attack. Power 248.
@@ -1151,9 +1085,6 @@
 </skill>
 <skill id="3153" levels="10" name="Item Skill: Vampiric Touch">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Absorbs HP. Power 49.
       Lvl 2 - Active: Absorbs HP. Power 53.
       Lvl 3 - Active: Absorbs HP. Power 57.
@@ -1186,9 +1117,6 @@
 </skill>
 <skill id="3154" levels="10" name="Item Skill: Mana Burn">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Burns up the enemy's MP. Power 68.
       Lvl 2 - Active: Burns up the enemy's MP. Power 73.
       Lvl 3 - Active: Burns up the enemy's MP. Power 79.
@@ -1283,10 +1211,7 @@
 </skill>
 <skill id="3159" levels="3" name="Item Skill: Stealth">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-3 - Active: Temporarily blocks a monster's pre-emptive attack. Fighting ability significantly decreases while in effect.
+  Lvl 1-3 - Active: Temporarily blocks a monster's pre-emptive attack. Fighting ability significantly decreases while in effect.
 -->
 <table name="#mpConsume"> 27 31 34 </table>
   <table name="#pAtk"> 1.2 1.3 1.4 </table>
@@ -1314,9 +1239,6 @@
 </skill>
 <skill id="3160" levels="9" name="Item Skill: Resurrection">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Resurrects a corpse.
       Lvl 2 - Active: Resurrects a corpse. Restores about 20% of additional Exp.
       Lvl 3 - Active: Resurrects a corpse. Restores about 30% of additional Exp.
@@ -1402,9 +1324,6 @@
 </skill>
 <skill id="3165" levels="10" name="Item Skill: Prominence">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Detonates a fireball by compressing the air around the caster. Power 61.
       Lvl 2 - Active: Detonates a fireball by compressing the air around the caster. Power 66.
       Lvl 3 - Active: Detonates a fireball by compressing the air around the caster. Power 72.
@@ -1436,9 +1355,6 @@
 </skill>
 <skill id="3167" levels="10" name="Item Skill: Hydro Blast">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Unleashes a spray of highly pressurized water. Power 61.
       Lvl 2 - Active: Unleashes a spray of highly pressurized water. Power 66.
       Lvl 3 - Active: Unleashes a spray of highly pressurized water. Power 72.
@@ -1470,9 +1386,6 @@
 </skill>
 <skill id="3168" levels="10" name="Item Skill: Hurricane">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Creates a whirlwind of destruction. Power 61.
       Lvl 2 - Active: Creates a whirlwind of destruction. Power 66.
       Lvl 3 - Active: Creates a whirlwind of destruction. Power 72.
@@ -1504,9 +1417,6 @@
 </skill>
 <skill id="3169" levels="10" name="Item Skill: Stone">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Attacks the target with a stone boulder. Power 61.
       Lvl 2 - Active: Attacks the target with a stone boulder. Power 66.
       Lvl 3 - Active: Attacks the target with a stone boulder. Power 72.
@@ -1537,9 +1447,6 @@
 </skill>
 <skill id="3170" levels="10" name="Item Skill: Solar Flare">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Unleashes a sacred attack. Power 61.
       Lvl 2 - Active: Unleashes a sacred attack. Power 66.
       Lvl 3 - Active: Unleashes a sacred attack. Power 72.
@@ -1571,9 +1478,6 @@
 </skill>
 <skill id="3171" levels="10" name="Item Skill: Shadow Flare">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Unleashes a dark attack. Power 61.
       Lvl 2 - Active: Unleashes a dark attack. Power 66.
       Lvl 3 - Active: Unleashes a dark attack. Power 72.
@@ -1605,9 +1509,6 @@
 </skill>
 <skill id="3172" levels="10" name="Item Skill: Aura Flare">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Unleashes an elementally challenged attack. Power 61.
       Lvl 2 - Active: Unleashes an elementally challenged attack. Power 66.
       Lvl 3 - Active: Unleashes an elementally challenged attack. Power 72.
@@ -1638,9 +1539,6 @@
 </skill>
 <skill id="3173" levels="10" name="Item Skill: Prominence">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Unleashes a flaming attack against the enemies near a target. Power 31.
       Lvl 2 - Active: Unleashes a flaming attack against the enemies near a target. Power 33.
       Lvl 3 - Active: Unleashes a flaming attack against the enemies near a target. Power 36.
@@ -1673,9 +1571,6 @@
 </skill>
 <skill id="3174" levels="10" name="Item Skill: Hydro Blast">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Unleashes a powerful liquidy attack against the enemies near a target. Power 31.
       Lvl 2 - Active: Unleashes a powerful liquidy attack against the enemies near a target. Power 33.
       Lvl 3 - Active: Unleashes a powerful liquidy attack against the enemies near a target. Power 36.
@@ -1708,9 +1603,6 @@
 </skill>
 <skill id="3175" levels="10" name="Item Skill: Hurricane">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Unleashes a powerful gusting attack against the enemies near a target. Power 31.
       Lvl 2 - Active: Unleashes a powerful gusting attack against the enemies near a target. Power 33.
       Lvl 3 - Active: Unleashes a powerful gusting attack against the enemies near a target. Power 36.
@@ -1743,9 +1635,6 @@
 </skill>
 <skill id="3176" levels="10" name="Item Skill: Stone">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Attacks the enemies near a target with a stone boulder. Power 31.
       Lvl 2 - Active: Attacks the enemies near a target with a stone boulder. Power 33.
       Lvl 3 - Active: Attacks the enemies near a target with a stone boulder. Power 36.
@@ -1777,9 +1666,6 @@
 </skill>
 <skill id="3177" levels="10" name="Item Skill: Solar Flare">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Unleashes a sacred attack against the enemies near a target. Power 31.
       Lvl 2 - Active: Unleashes a sacred attack against the enemies near a target. Power 33.
       Lvl 3 - Active: Unleashes a sacred attack against the enemies near a target. Power 36.
@@ -1812,9 +1698,6 @@
 </skill>
 <skill id="3178" levels="10" name="Item Skill: Shadow Flare">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Unleashes a dark attack against the enemies near a target. Power 31.
       Lvl 2 - Active: Unleashes a dark attack against the enemies near a target. Power 33.
       Lvl 3 - Active: Unleashes a dark attack against the enemies near a target. Power 36.
@@ -1847,9 +1730,6 @@
 </skill>
 <skill id="3179" levels="10" name="Item Skill: Aura Flare">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Unleashes an elementally challenged attack against the enemies near a target. Power 31.
       Lvl 2 - Active: Unleashes an elementally challenged attack against the enemies near a target. Power 33.
       Lvl 3 - Active: Unleashes an elementally challenged attack against the enemies near a target. Power 36.
@@ -1881,9 +1761,6 @@
 </skill>
 <skill id="3180" levels="10" name="Item Skill: Prominence">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Unleashes a flaming attack against nearby enemies. Power 31.
       Lvl 2 - Active: Unleashes a flaming attack against nearby enemies. Power 33.
       Lvl 3 - Active: Unleashes a flaming attack against nearby enemies. Power 36.
@@ -1916,9 +1793,6 @@
 </skill>
 <skill id="3181" levels="10" name="Item Skill: Hydro Blast">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Unleashes a powerful liquidy attack against nearby enemies. Power 31.
       Lvl 2 - Active: Unleashes a powerful liquidy attack against nearby enemies. Power 33.
       Lvl 3 - Active: Unleashes a powerful liquidy attack against nearby enemies. Power 36.
@@ -1951,9 +1825,6 @@
 </skill>
 <skill id="3182" levels="10" name="Item Skill: Hurricane">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Unleashes a powerful gusting attack against nearby enemies. Power 31.
       Lvl 2 - Active: Unleashes a powerful gusting attack against nearby enemies. Power 33.
       Lvl 3 - Active: Unleashes a powerful gusting attack against nearby enemies. Power 36.
@@ -1986,9 +1857,6 @@
 </skill>
 <skill id="3183" levels="10" name="Item Skill: Stone">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Unleashes an earthen attack against nearby enemies. Power 31.
       Lvl 2 - Active: Unleashes an earthen attack against nearby enemies. Power 33.
       Lvl 3 - Active: Unleashes an earthen attack against nearby enemies. Power 36.
@@ -2020,9 +1888,6 @@
 </skill>
 <skill id="3184" levels="10" name="Item Skill: Solar Flare">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Unleashes a sacred attack against nearby enemies. Power 31.
       Lvl 2 - Active: Unleashes a sacred attack against nearby enemies. Power 33.
       Lvl 3 - Active: Unleashes a sacred attack against nearby enemies. Power 36.
@@ -2055,9 +1920,6 @@
 </skill>
 <skill id="3185" levels="10" name="Item Skill: Shadow Flare">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Unleashes a dark attack against nearby enemies. Power 31.
       Lvl 2 - Active: Unleashes a dark attack against nearby enemies. Power 33.
       Lvl 3 - Active: Unleashes a dark attack against nearby enemies. Power 36.
@@ -2090,9 +1952,6 @@
 </skill>
 <skill id="3186" levels="10" name="Item Skill: Aura Flare">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Active: Unleashes an elementally challenged attack against nearby enemies. Power 31.
       Lvl 2 - Active: Unleashes an elementally challenged attack against nearby enemies. Power 33.
       Lvl 3 - Active: Unleashes an elementally challenged attack against nearby enemies. Power 36.
@@ -2124,10 +1983,7 @@
 </skill>
 <skill id="3187" levels="10" name="Item Skill: Slow">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Temporarily decreases a target's speed.
+  Lvl 1-10 - Active: Temporarily decreases a target's speed.
 -->
   <table name="#mpConsume_Init"> 6 7 8 9 10 11 11 11 12 12 </table>
   <table name="#mpConsume"> 24 28 31 35 38 41 43 44 46 48 </table>
@@ -2297,10 +2153,7 @@
 </skill>
 <skill id="3197" levels="10" name="Item Skill: Silence">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Temporarily blocks the target's magic skills.
+  Lvl 1-10 - Active: Temporarily blocks the target's magic skills.
 -->
   <table name="#mpConsume_Init"> 7 8 9 10 11 11 11 12 12 13 </table>
   <table name="#mpConsume"> 28 31 35 38 41 43 44 46 48 49 </table>
@@ -2338,10 +2191,7 @@
 </skill>
 <skill id="3199" levels="3" name="Item Skill: Skill Refresh">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-3 - Active: Temporarily decreases the re-use time for physical skills.
+  Lvl 1-3 - Active: Temporarily decreases the re-use time for physical skills.
 -->
   <table name="#mpConsume"> 27 31 34 </table>
   <table name="#pReuseRate"> 0.9 0.8 0.7 </table> <!-- Needs check -->

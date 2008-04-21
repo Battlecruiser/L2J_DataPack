@@ -634,12 +634,6 @@
   </for>
 </skill>
 <skill id="429" levels="1" name="Knighthood">
-<!--
-  Needs to be finished.
-
-  Description(s):
-      Increases P. Def. when wearing heavy armor. Shield defense is increased.
--->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -853,12 +847,6 @@
   </for>
 </skill>
 <skill id="438" levels="1" name="Soul of the Phoenix">
-<!--
-  Needs to be finished.
-
-  Description(s):
-      Revives target from death and restores them to full health, retaining all buff/debuff effects except for Noblesse Blessing and Lucky Charm. Consumes 1 Blood of the Phoenix.
--->
   <set name="magicLvl" val="79"/>
   <set name="mpConsume" val="250"/>
   <set name="itemConsumeId" val="8873"/>
@@ -1099,9 +1087,6 @@
 </skill>
 <skill id="450" levels="10" name="Banish Seraph">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 5 Soul Ores.
       Lvl 2 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 6 Soul Ores.
       Lvl 3 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 7 Soul Ores.
@@ -1167,9 +1152,6 @@
 </skill>
 <skill id="452" levels="5" name="Shock Stomp">
 <!--
-  Needs to be finished.
-
-  Description(s):
       Lvl 1 - Temporarily shocks nearby enemies, canceling their targets. Usable when equipped with a spear.
       Lvl 2 - Temporarily shocks nearby enemies, canceling their targets. Usable when equipped with a spear.
       Lvl 3 - Temporarily shocks nearby enemies, canceling their targets. Usable when equipped with a spear.
