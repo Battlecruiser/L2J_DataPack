@@ -13,7 +13,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 qn="501_ProofOfClanAlliance"
 
 # debug facility, turn this to 0 to disable
-DEBUG = 1
+DEBUG = 0
 
 # Quest Npcs
 SIR_KRISTOF_RODEMAI  = 30756
