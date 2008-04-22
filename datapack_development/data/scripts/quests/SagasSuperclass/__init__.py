@@ -69,18 +69,20 @@ class Quest (JQuest) :
      self.Y = [0, 1, 2]
      self.Z = [0, 1, 2]
      self.Text = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
-     self.Spawn_List = []
+     self.Spawn_List = {}
 
  # this function is called by subclasses in order to add their own NPCs
  def registerNPCs(self) :
      self.addStartNpc(self.NPC[0])
      self.addAttackId(self.Mob[2])
+     self.addAttackId(self.Mob[1])
+     self.addSkillSeeId(self.Mob[1])
      self.addFirstTalkId(self.NPC[4])
      for npc in self.NPC :
          self.addTalkId(npc)
      for mobid in self.Mob :
          self.addKillId(mobid)
-         self.questItemIds = self.Items
+     self.questItemIds = self.Items
 
  def Cast(self, npc,target,skillId,level):
     target.broadcastPacket(MagicSkillUse(target,target,skillId,level,6000,1))
@@ -104,23 +106,30 @@ class Quest (JQuest) :
 
  def AddSpawn(self, st,mob) :
     name = st.getPlayer().getName()
-    self.Spawn_List.append([mob.getObjectId(),name,mob])
+    self.Spawn_List[mob.getObjectId()] = [name,mob]
     return
 
- def FindSpawn (self, player, npcObjectId) :
-    for mobId, playerName, mob in self.Spawn_List:
-        if mobId == npcObjectId and playerName == player.getName():
-            return mob
+ def FindSpawn (self, player, mobObjectId) :
+    playerName,mob = self.Spawn_List[mobObjectId]
+    if playerName == player.getName():
+        return mob
     return None
 
- def DeleteSpawn(self, st,mobid) :
+ def DeleteSpawn(self, st,mobObjectId) :
     name = st.getPlayer().getName()
-    for npcId,playerName,mob in self.Spawn_List:
-        if (mobid,name) ==  (npcId,playerName):
-            self.Spawn_List.remove([mobid,name,mob])
-            mob.decayMe()
-            return
+    playerName,mob = self.Spawn_List[mobObjectId]
+    if name ==  playerName :
+        self.Spawn_List.pop(mobObjectId)
+        mob.decayMe()
     return
+
+ def findRightState(self, player,mob) :
+     mobObjectId = mob.getObjectId()
+     st1 = None
+     playerName,mob = self.Spawn_List[mobObjectId]
+     st1 = L2World.getInstance().getPlayer(playerName)
+     if st1 : st1 = st1.getQuestState(self.qn)
+     return st1
 
  def giveHallishaMark(self, st2) :
      if st2.getInt("spawned") == 0 :
@@ -141,22 +150,6 @@ class Quest (JQuest) :
         else :
             st2.giveItems(self.Items[3],1)
      return
-
- def findRightState(self, player,mob) :
-     mobid = mob.getObjectId()
-     name = player.getName()
-     st1 = None
-     if [mobid,name] in self.Spawn_List :
-         st1 = L2World.getInstance().getPlayer(name)
-     else :
-         for entry in self.Spawn_List :
-             if entry[0] == mobid :
-                 name = entry[1]
-                 st1 = L2World.getInstance().getPlayer(name)
-                 break
-     if st1 :
-         return st1.getQuestState(self.qn)
-     return st1
 
  def findQuest(self,player) :
     st = 0
@@ -270,13 +263,13 @@ class Quest (JQuest) :
        st.takeItems(self.Items[4],1)
        self.Cast(self.FindTemplate(self.NPC[5]),player,4546,1)
        st.playSound("ItemSound.quest_middle")
-       htmltext =  "5-02.htm"
+       htmltext = "5-02.htm"
    elif event == "6-1" :
        st.set("cond","8")
        st.takeItems(self.Items[5],1)
        self.Cast(self.FindTemplate(self.NPC[6]),player,4546,1)
        st.playSound("ItemSound.quest_middle")
-       htmltext =  "6-03.htm"
+       htmltext = "6-03.htm"
    elif event == "7-1" :
        if st.getInt("spawned") == 1 :
            htmltext = "7-03.htm"
@@ -555,24 +548,44 @@ class Quest (JQuest) :
     return htmltext
 
  def onAttack (self, npc, player, damage, isPet):
-   st = player.getQuestState(self.qn)
-   if st :
-    if st.getInt("cond") == 17 :
-        if npc.getNpcId() == self.Mob[2] :
-            st2 = self.findRightState(player,npc)
-            if st == st2 :
-                st.set("Quest0",str(st.getInt("Quest0")+1))
-                if st.getInt("Quest0") == 1 :
-                    self.AutoChat(npc,self.Text[16].replace('PLAYERNAME',player.getName()))
-                if st.getInt("Quest0") > 15 :
-                    st.set("Quest0","1")
-                    self.AutoChat(npc,self.Text[17].replace('PLAYERNAME',player.getName()))
-                    npc.reduceCurrentHp(9999999,npc)
-                    self.DeleteSpawn(st,st.getInt("Mob_3"))
-                    if st.getQuestTimer("Mob_3 has despawned") :
-                       st.getQuestTimer("Mob_3 has despawned").cancel()
-                    st.set("Tab","1")
-   return
+    st2 = self.findRightState(player,npc)
+    if not st2 : return
+    cond = st2.getInt("cond")
+    st = player.getQuestState(self.qn)
+    npcId = npc.getNpcId()
+    if npcId == self.Mob[2] and st == st2 and cond == 17 :
+        st.set("Quest0",str(st.getInt("Quest0")+1))
+        if st.getInt("Quest0") == 1 :
+            self.AutoChat(npc,self.Text[16].replace('PLAYERNAME',player.getName()))
+        if st.getInt("Quest0") > 15 :
+            st.set("Quest0","1")
+            self.AutoChat(npc,self.Text[17].replace('PLAYERNAME',player.getName()))
+            npc.reduceCurrentHp(9999999,npc)
+            self.DeleteSpawn(st,st.getInt("Mob_3"))
+            if st.getQuestTimer("Mob_3 has despawned") :
+               st.getQuestTimer("Mob_3 has despawned").cancel()
+            st.set("Tab","1")
+    elif npcId == self.Mob[1] and cond == 15 :
+        if st != st2 or (st == st2 and player.isInParty()) :
+            self.AutoChat(npc,self.Text[5].replace('PLAYERNAME',player.getName()))
+            if st2.getQuestTimer("Archon Hellisha has despawned") :
+               st2.getQuestTimer("Archon Hellisha has despawned").cancel()
+            self.DeleteSpawn(st2,st2.getInt("Archon"))
+            st2.set("spawned","0")
+    return
+
+ def onSkillSee (self,npc,player,skill,targets,isPet) :
+     name = self.Spawn_List[npc.getObjectId()][0]
+     if player.getName() != name :
+         quest_player = L2World.getInstance().getPlayer(name)
+         if (quest_player in targets) or (npc in targets) :
+             st2 = self.findRightState(player,npc)
+             if not st2 : return
+             self.AutoChat(npc,self.Text[5].replace('PLAYERNAME',player.getName()))
+             if st2.getQuestTimer("Archon Hellisha has despawned") :
+                st2.getQuestTimer("Archon Hellisha has despawned").cancel()
+             self.DeleteSpawn(st2,st2.getInt("Archon"))
+             st2.set("spawned","0")
 
  def onKill(self,npc,player,isPet):
     npcId = npc.getNpcId()
@@ -615,37 +628,34 @@ class Quest (JQuest) :
                         st1.giveItems(st1.getQuest().Items[5],1)
                         st1.set("cond","7")
     elif st :
+        st2 = self.findRightState(player,npc)
+        if not st2 : return
         cond = st.getInt("cond")
         if npcId == self.Mob[0] and cond == 8 :
-            st2 = self.findRightState(player,npc)
-            if st2 :
-                if not player.isInParty():
-                    if st == st2 :
-                        self.AutoChat(npc,self.Text[12].replace('PLAYERNAME',player.getName()))
-                        st.giveItems(self.Items[6],1)
-                        st.set("cond","9")
-                        st.playSound("ItemSound.quest_middle")
-                if st2.getQuestTimer("Mob_1 has despawned") :
-                   st2.getQuestTimer("Mob_1 has despawned").cancel()
-                self.DeleteSpawn(st2,st2.getInt("Mob_1"))
-                st2.set("spawned","0")
-        elif npcId == self.Mob[1] :
-            if cond == 15 :
-                st2 = self.findRightState(player,npc)
-                if st2 :
-                    if not player.isInParty():
-                        if st == st2 :
-                            self.AutoChat(npc,self.Text[4].replace('PLAYERNAME',player.getName()))
-                            st.giveItems(self.Items[8],1)
-                            st.takeItems(self.Items[3],-1)
-                            st.set("cond","16")
-                            st.playSound("ItemSound.quest_middle")
-                        else :
-                            self.AutoChat(npc,self.Text[5].replace('PLAYERNAME',player.getName()))
-                    if st2.getQuestTimer("Archon Hellisha has despawned") :
-                       st2.getQuestTimer("Archon Hellisha has despawned").cancel()
-                    self.DeleteSpawn(st2,st2.getInt("Archon"))
-                    st2.set("spawned","0")
+            if not player.isInParty():
+                if st == st2 :
+                    self.AutoChat(npc,self.Text[12].replace('PLAYERNAME',player.getName()))
+                    st.giveItems(self.Items[6],1)
+                    st.set("cond","9")
+                    st.playSound("ItemSound.quest_middle")
+            if st2.getQuestTimer("Mob_1 has despawned") :
+               st2.getQuestTimer("Mob_1 has despawned").cancel()
+            self.DeleteSpawn(st2,st2.getInt("Mob_1"))
+            st2.set("spawned","0")
+        elif npcId == self.Mob[1] and cond == 15 :
+            if not player.isInParty():
+                if st == st2 :
+                    self.AutoChat(npc,self.Text[4].replace('PLAYERNAME',player.getName()))
+                    st.giveItems(self.Items[8],1)
+                    st.takeItems(self.Items[3],-1)
+                    st.set("cond","16")
+                    st.playSound("ItemSound.quest_middle")
+                else :
+                    self.AutoChat(npc,self.Text[5].replace('PLAYERNAME',player.getName()))
+            if st2.getQuestTimer("Archon Hellisha has despawned") :
+               st2.getQuestTimer("Archon Hellisha has despawned").cancel()
+            self.DeleteSpawn(st2,st2.getInt("Archon"))
+            st2.set("spawned","0")
     else :
         if npcId == self.Mob[0] :
             st = self.findRightState(player,npc)
