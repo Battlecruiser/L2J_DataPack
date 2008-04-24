@@ -4367,7 +4367,7 @@ INSERT INTO `etcitem` VALUES
 (5961,'Kail\'s Silver Basilisk','false','none',0,'stackable','liquid','none',-1,1000,0,'true','true','true','true','q_kails_silver_basilisk','none'),
 (5962,'Kail\'s Gold Golem','false','none',0,'stackable','liquid','none',-1,1000,0,'true','true','true','true','q_kails_gold_golem','none'),
 (5963,'Kail\'s Blood Dragon','false','none',0,'stackable','liquid','none',-1,1000,0,'true','true','true','true','q_kails_blood_dragon','none'),
-(5964,'Warehouse Keeper\'s Medal','false','none',0,'stackable','liquid','none',-1,100,0,'true','true','true','true','q_irongate_medal','none'),
+(5964,'Warehouse Keeper\'s Medal','false','quest',0,'stackable','liquid','none',-1,100,0,'true','true','true','true','q_irongate_medal','none'),
 (5965,'Blank Scroll','false','none',0,'stackable','liquid','none',-1,500,0,'true','true','true','true','q_blank_scrl','none'),
 (5966,'Ancient Red Papyrus','false','none',0,'stackable','liquid','none',-1,400,0,'true','true','true','true','ancient_papyrus1','none'),
 (5967,'Ancient Blue Papyrus','false','none',0,'stackable','liquid','none',-1,400,0,'true','true','true','true','ancient_papyrus2','none'),
