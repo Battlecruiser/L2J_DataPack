@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
-<skill id="4600" levels="12" name="Reducing P. Def Shock">
+<skill id="4600" levels="12" name="Reducing P. Def Stun">
   <table name="#mpConsume"> 25 41 57 77 100 123 143 153 161 166 170 172 </table>
   <table name="#pDef"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -804,8 +804,8 @@
   <for>
   </for>
 </skill>
-<skill id="4642" levels="3" name="NPC Fast Spell Casting">
-  <table name="#mAtkSpd"> 1.05 1.07 1.09 </table>
+<skill id="4642" levels="9" name="NPC Fast Spell Casting">
+  <table name="#mAtkSpd"> 1.05 1.07 1.09 1.11 1.13 1.15 1.17 1.19 1.21</table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -1268,7 +1268,7 @@
   <for>
   </for>
 </skill>
-<skill id="4670" levels="12" name="Short Shock">
+<skill id="4670" levels="12" name="Short Stun">
   <table name="#mpConsume"> 11 18 25 34 44 54 63 68 71 74 75 76 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -1543,7 +1543,7 @@
   <for>
   </for>
 </skill>
-<skill id="4688" levels="1" name="Valakas Shock">
+<skill id="4688" levels="1" name="Valakas Stun">
   <!-- Valakas Skills -->
   <set name="magicLvl" val="75"/>
   <set name="power" val="21423"/>

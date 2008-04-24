@@ -313,7 +313,7 @@
 -->
   <set name="power" val="100.0"/>
   <set name="target" val="TARGET_CORPSE_PLAYER"/>
-  <set name="hitTime" val="15000"/>
+  <set name="hitTime" val="3000"/>
   <set name="skillType" val="RESURRECT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
@@ -545,7 +545,7 @@
     </effect>
   </for>
 </skill>
-<skill id="2341" levels="1" name="Native Brew">
+<skill id="2341" levels="1" name="Caravan's Secret Medicine">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -777,7 +777,7 @@
   <for>
   </for>
 </skill>
-<skill id="2370" levels="1" name="Transform Sealbook - Pig">
+<skill id="2370" levels="1" name="Scroll of Transformation - Pig">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>

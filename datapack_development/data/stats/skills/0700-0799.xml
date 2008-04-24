@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
-<skill id="3400" levels="1" name="Traits Strengthen Earring">
+<skill id="700" levels="1" name="Divine Healer Group Heal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -8,7 +8,7 @@
   <for>
   </for>
 </skill>
-<skill id="3401" levels="1" name="Dynasty Resistance Necklace">
+<skill id="701" levels="1" name="Divine Healer Resurrection">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -16,7 +16,7 @@
   <for>
   </for>
 </skill>
-<skill id="3402" levels="1" name="Dynasty Resistance Ring">
+<skill id="702" levels="1" name="Divine Healer Clans">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -24,7 +24,7 @@
   <for>
   </for>
 </skill>
-<skill id="3403" levels="1" name="Dynasty Resistance Earring">
+<skill id="703" levels="1" name="Sacrifice Healer">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -32,7 +32,7 @@
   <for>
   </for>
 </skill>
-<skill id="3404" levels="1" name="Mystery Effect">
+<skill id="704" levels="1" name="Divine Enchanter Water Spirit">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -40,7 +40,7 @@
   <for>
   </for>
 </skill>
-<skill id="3405" levels="1" name="Large Firecracker Effect">
+<skill id="705" levels="1" name="Divine Enchanter Fire Spirit">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -48,7 +48,7 @@
   <for>
   </for>
 </skill>
-<skill id="3406" levels="1" name="Weight Decrease Ring">
+<skill id="706" levels="1" name="Divine Enchanter Wind Spirit">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -56,7 +56,7 @@
   <for>
   </for>
 </skill>
-<skill id="3407" levels="1" name="Stealth Ring">
+<skill id="707" levels="1" name="Divine Enchanter Hero Spirit">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -64,7 +64,7 @@
   <for>
   </for>
 </skill>
-<skill id="3408" levels="1" name="Blessed Ring of Escape">
+<skill id="708" levels="1" name="Divine Enchanter Mass Binding">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -72,7 +72,7 @@
   <for>
   </for>
 </skill>
-<skill id="3409" levels="1" name="Blessed Ring of Resurrection">
+<skill id="709" levels="1" name="Sacrifice Enchanter">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -80,7 +80,7 @@
   <for>
   </for>
 </skill>
-<skill id="3410" levels="1" name="Blue Talisman of Reflection">
+<skill id="710" levels="1" name="Divine Summoner Summon Divine Beast">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -88,7 +88,7 @@
   <for>
   </for>
 </skill>
-<skill id="3411" levels="1" name="Special Ability: Focus">
+<skill id="711" levels="1" name="Divine Summoner Transfer Pain">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -96,40 +96,23 @@
   <for>
   </for>
 </skill>
-<skill id="3412" levels="1" name="Dynasty Breast Plate">
-  <!-- Done by DJ MELERIX -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
+<skill id="712" levels="1" name="Divine Summoner Final Servitor">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x40" stat="CON" val="1"/> <!-- CON -1 -->
-    <add order="0x40" stat="STR" val="1"/> <!-- STR +1 -->
-    <mul order="0x30" stat="pDef" val="1.046"/> <!-- P. Def +4.6% -->
-    <add order="0x40" stat="maxHp" val="418"/> <!-- MaxHP +418 -->
-    <mul order="0x30" stat="darkVuln" val="0.94"/> <!-- Darkness Resistance +6 -->
   </for>
 </skill>
-<skill id="3413" levels="1" name="Dynasty Leather Armor">
-  <!-- Done by DJ MELERIX -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
+<skill id="713" levels="1" name="Divine Summoner Servitor Hill">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x40" stat="CON" val="1"/> <!-- CON -1 -->
-    <add order="0x40" stat="DEX" val="1"/> <!-- DEX +1 -->
-    <add order="0x40" stat="accCombat" val="1.72"/> <!-- Accuracy +1.72 -->
-    <add order="0x40" stat="rEvas" val="1.72"/> <!-- Evacion +1.72 -->
-    <add order="0x40" stat="maxHp" val="418"/> <!-- MaxHP +418 -->
-    <mul order="0x30" stat="darkVuln" val="0.94"/> <!-- Darkness Resistance +6 -->
   </for>
 </skill>
-<skill id="3414" levels="1" name="Dynasty Leather Armor">
+<skill id="714" levels="1" name="Sacrifice Summoner">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -137,7 +120,7 @@
   <for>
   </for>
 </skill>
-<skill id="3415" levels="1" name="Dynasty Leather Armor">
+<skill id="715" levels="4" name="Zaken Energy Drain">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -145,35 +128,23 @@
   <for>
   </for>
 </skill>
-<skill id="3416" levels="1" name="Dynasty Tunic">
-  <!-- Done by DJ MELERIX -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
+<skill id="716" levels="4" name="Zaken Hold">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x40" stat="INT" val="1"/> <!-- INT -1 -->
-    <add order="0x40" stat="MEN" val="1"/> <!-- MEN +1 -->
-    <mul order="0x30" stat="mAtkSpd" val="1.12"/> <!-- Casting Spd +12% -->
-    <add order="0x40" stat="maxMp" val="257"/> <!-- Maximum MP +257 -->
-    <mul order="0x30" stat="darkVuln" val="0.94"/> <!-- Darkness Resistance +6 -->
   </for>
 </skill>
-<skill id="3417" levels="1" name="Equipped with Shield">
-  <!-- Dynasty Shield Skill -->
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/> 
-  <set name="skillType" val="BUFF"/> 
-  <set name="operateType" val="OP_PASSIVE"/> 
-  <set name="castRange" val="-1"/> 
-  <set name="effectRange" val="-1"/> 
-  <for> 
-    <mul order="0x30" stat="sDef" val="1.25"/> <!-- Needs to be checked -->
-  </for> 
+<skill id="717" levels="4" name="Zaken Concentrated Attack">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
 </skill>
-<skill id="3418" levels="1" name="Active Skill: Transform Pig">
+<skill id="718" levels="4" name="Zaken Dancing Sword">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -181,7 +152,7 @@
   <for>
   </for>
 </skill>
-<skill id="3419" levels="1" name="Magic Immunity">
+<skill id="719" levels="1" name="Zaken Vampiric Rage">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -189,7 +160,7 @@
   <for>
   </for>
 </skill>
-<skill id="3420" levels="1" name="Dynasty Leather Armor">
+<skill id="720" levels="2" name="Anakim Holy Light Burst">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -197,7 +168,7 @@
   <for>
   </for>
 </skill>
-<skill id="3421" levels="1" name="Wolf Mount">
+<skill id="721" levels="2" name="Anakim Energy Attack">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -205,7 +176,7 @@
   <for>
   </for>
 </skill>
-<skill id="3422" levels="1" name="Wolf Dismount">
+<skill id="722" levels="2" name="Anakim Holy Beam">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -213,7 +184,7 @@
   <for>
   </for>
 </skill>
-<skill id="3423" levels="1" name="Little Angel Agathion - Summon (or Release)">
+<skill id="723" levels="1" name="Anakim Sunshine">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -221,7 +192,7 @@
   <for>
   </for>
 </skill>
-<skill id="3424" levels="1" name="Little Devil Agathion - Summon (or Release)">
+<skill id="724" levels="1" name="Anakim Clans">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -229,7 +200,7 @@
   <for>
   </for>
 </skill>
-<skill id="3425" levels="1" name="Rudolph Agathion - Summon (or Release)">
+<skill id="725" levels="2" name="Venom Power Smash">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -237,7 +208,7 @@
   <for>
   </for>
 </skill>
-<skill id="3426" levels="1" name="Maximum Ability">
+<skill id="726" levels="2" name="Venom Sonic Storm">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -245,7 +216,7 @@
   <for>
   </for>
 </skill>
-<skill id="3427" levels="1" name="Special Ability: Infinity Rapier">
+<skill id="727" levels="1" name="Venom Disillusion">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -253,7 +224,7 @@
   <for>
   </for>
 </skill>
-<skill id="3428" levels="1" name="Red Talisman - Explosion">
+<skill id="728" levels="1" name="Gordon Beast Attack">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -261,7 +232,7 @@
   <for>
   </for>
 </skill>
-<skill id="3429" levels="1" name="Blue Talisman - Vital power">
+<skill id="729" levels="1" name="Gordon Sword Stab">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -269,7 +240,7 @@
   <for>
   </for>
 </skill>
-<skill id="3430" levels="1" name="White Talisman - Darkness">
+<skill id="730" levels="1" name="Gordon Press">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -277,7 +248,7 @@
   <for>
   </for>
 </skill>
-<skill id="3431" levels="1" name="White Talisman - Storm">
+<skill id="731" levels="1" name="Ranku Dark Explosion">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -285,7 +256,7 @@
   <for>
   </for>
 </skill>
-<skill id="3432" levels="1" name="White Talisman - Water">
+<skill id="732" levels="1" name="Ranku Stun Attack">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -293,7 +264,7 @@
   <for>
   </for>
 </skill>
-<skill id="3433" levels="1" name="White Talisman - Fire">
+<skill id="733" levels="1" name="Kechi Double Cutter">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -301,7 +272,7 @@
   <for>
   </for>
 </skill>
-<skill id="3434" levels="1" name="White Talisman - Earth">
+<skill id="734" levels="1" name="Kechi Air Blade">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -309,7 +280,7 @@
   <for>
   </for>
 </skill>
-<skill id="3435" levels="1" name="White Talisman - Light">
+<skill id="735" levels="1" name="Devil Spinning Weapon">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -317,7 +288,7 @@
   <for>
   </for>
 </skill>
-<skill id="3436" levels="1" name="Blue Talisman - Self destruction">
+<skill id="736" levels="1" name="Devil Seed">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -325,7 +296,7 @@
   <for>
   </for>
 </skill>
-<skill id="3437" levels="1" name="Red Talisman - Magic Explosive power">
+<skill id="737" levels="1" name="Devil Ultimate Defense">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -333,7 +304,7 @@
   <for>
   </for>
 </skill>
-<skill id="3438" levels="1" name="Blue Talisman - Great Healing">
+<skill id="738" levels="3" name="Heretic Heal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -341,7 +312,7 @@
   <for>
   </for>
 </skill>
-<skill id="3439" levels="1" name="Silk Shirt">
+<skill id="739" levels="3" name="Heretic Battle Heal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -349,7 +320,7 @@
   <for>
   </for>
 </skill>
-<skill id="3440" levels="1" name="Silk Shirt">
+<skill id="740" levels="3" name="Heretic Resurrection">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -357,7 +328,7 @@
   <for>
   </for>
 </skill>
-<skill id="3441" levels="1" name="Silk Shirt">
+<skill id="741" levels="3" name="Heretic Heal Side Effect">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -365,7 +336,7 @@
   <for>
   </for>
 </skill>
-<skill id="3442" levels="1" name="Silk Shirt">
+<skill id="742" levels="3" name="Vale Master Bursting Flame">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -373,7 +344,7 @@
   <for>
   </for>
 </skill>
-<skill id="3443" levels="1" name="Silk Shirt">
+<skill id="743" levels="3" name="Vale Master Dark Explosion">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -381,7 +352,7 @@
   <for>
   </for>
 </skill>
-<skill id="3444" levels="1" name="Silk Shirt">
+<skill id="744" levels="3" name="Vale Master Dark Flare">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -389,7 +360,7 @@
   <for>
   </for>
 </skill>
-<skill id="3445" levels="1" name="Thin Leather Shirt">
+<skill id="745" levels="3" name="Vale Master Dark Cure">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -397,7 +368,7 @@
   <for>
   </for>
 </skill>
-<skill id="3446" levels="1" name="Thin Leather Shirt">
+<skill id="746" levels="3" name="Saber Tooth Tiger Bite">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -405,7 +376,7 @@
   <for>
   </for>
 </skill>
-<skill id="3447" levels="1" name="Thin Leather Shirt">
+<skill id="747" levels="3" name="Saber Tooth Tiger Fear">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -413,7 +384,7 @@
   <for>
   </for>
 </skill>
-<skill id="3448" levels="1" name="Thin Leather Shirt">
+<skill id="748" levels="1" name="Saber Tooth Tiger Sprint">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -421,7 +392,7 @@
   <for>
   </for>
 </skill>
-<skill id="3449" levels="1" name="Thin Leather Shirt">
+<skill id="749" levels="3" name="Oel Mahum Stun Attack">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -429,7 +400,7 @@
   <for>
   </for>
 </skill>
-<skill id="3450" levels="1" name="Thin Leather Shirt">
+<skill id="750" levels="1" name="Oel Mahum Ultimate Defense">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -437,7 +408,7 @@
   <for>
   </for>
 </skill>
-<skill id="3451" levels="1" name="Scale Shirt">
+<skill id="751" levels="3" name="Oel Mahum Arm Flourish">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -445,7 +416,7 @@
   <for>
   </for>
 </skill>
-<skill id="3452" levels="1" name="Scale Shirt">
+<skill id="752" levels="3" name="Doll Blader Sting">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -453,7 +424,7 @@
   <for>
   </for>
 </skill>
-<skill id="3453" levels="1" name="Scale Shirt">
+<skill id="753" levels="3" name="Doll Blader Throwing Knife">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -461,7 +432,7 @@
   <for>
   </for>
 </skill>
-<skill id="3454" levels="1" name="Scale Shirt">
+<skill id="754" levels="1" name="Doll Blader Clairvoyance">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -469,7 +440,7 @@
   <for>
   </for>
 </skill>
-<skill id="3455" levels="1" name="Scale Shirt">
+<skill id="755" levels="1" name="Protection of Rune">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -477,7 +448,7 @@
   <for>
   </for>
 </skill>
-<skill id="3456" levels="1" name="Scale Shirt">
+<skill id="756" levels="1" name="Protection of Elemental">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -485,7 +456,7 @@
   <for>
   </for>
 </skill>
-<skill id="3457" levels="1" name="Mithril Shirt">
+<skill id="757" levels="1" name="Protection of Alignment">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -493,7 +464,7 @@
   <for>
   </for>
 </skill>
-<skill id="3458" levels="1" name="Mithril Shirt">
+<skill id="758" levels="1" name="Fighter's Will">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -501,7 +472,7 @@
   <for>
   </for>
 </skill>
-<skill id="3459" levels="1" name="Mithril Shirt">
+<skill id="759" levels="1" name="Archer's Will">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -509,7 +480,7 @@
   <for>
   </for>
 </skill>
-<skill id="3460" levels="1" name="Mithril Shirt">
+<skill id="760" levels="1" name="Anti Magic Armor">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -517,7 +488,7 @@
   <for>
   </for>
 </skill>
-<skill id="3461" levels="1" name="Mithril Shirt">
+<skill id="761" levels="1" name="Seed of Revenge">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -525,7 +496,7 @@
   <for>
   </for>
 </skill>
-<skill id="3462" levels="1" name="Mithril Shirt">
+<skill id="762" levels="1" name="Insane Crusher">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -533,7 +504,7 @@
   <for>
   </for>
 </skill>
-<skill id="3463" levels="1" name="Striped Silk Shirt">
+<skill id="763" levels="1" name="Hell Scream">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -541,7 +512,7 @@
   <for>
   </for>
 </skill>
-<skill id="3464" levels="1" name="Striped Silk Shirt">
+<skill id="764" levels="1" name="Song of Wind Storm">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -549,7 +520,7 @@
   <for>
   </for>
 </skill>
-<skill id="3465" levels="1" name="Striped Silk Shirt">
+<skill id="765" levels="1" name="Dance of Blade Storm">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -557,7 +528,7 @@
   <for>
   </for>
 </skill>
-<skill id="3466" levels="1" name="Striped Silk Shirt">
+<skill id="766" levels="1" name="Sixth Sense">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -565,7 +536,7 @@
   <for>
   </for>
 </skill>
-<skill id="3467" levels="1" name="Striped Silk Shirt">
+<skill id="767" levels="1" name="Expose Weak Point">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -573,7 +544,7 @@
   <for>
   </for>
 </skill>
-<skill id="3468" levels="1" name="Striped Silk Shirt">
+<skill id="768" levels="1" name="Exciting Adventure">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -581,7 +552,7 @@
   <for>
   </for>
 </skill>
-<skill id="3469" levels="1" name="Thin Stripe Leather Shirt">
+<skill id="769" levels="1" name="Wind Riding">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -589,7 +560,7 @@
   <for>
   </for>
 </skill>
-<skill id="3470" levels="1" name="Thin Stripe Leather Shirt">
+<skill id="770" levels="1" name="Ghost Walking">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -597,7 +568,7 @@
   <for>
   </for>
 </skill>
-<skill id="3471" levels="1" name="Thin Stripe Leather Shirt">
+<skill id="771" levels="1" name="Flame Hawk">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -605,7 +576,7 @@
   <for>
   </for>
 </skill>
-<skill id="3472" levels="1" name="Thin Stripe Leather Shirt">
+<skill id="772" levels="1" name="Arrow Rain">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -613,7 +584,7 @@
   <for>
   </for>
 </skill>
-<skill id="3473" levels="1" name="Thin Stripe Leather Shirt">
+<skill id="773" levels="1" name="Ghost Piercing">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -621,7 +592,7 @@
   <for>
   </for>
 </skill>
-<skill id="3474" levels="1" name="Thin Stripe Leather Shirt">
+<skill id="774" levels="1" name="Dread Pool">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -629,7 +600,7 @@
   <for>
   </for>
 </skill>
-<skill id="3475" levels="1" name="Striped Scale Shirt">
+<skill id="775" levels="1" name="Weapon Blockade">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -637,7 +608,7 @@
   <for>
   </for>
 </skill>
-<skill id="3476" levels="1" name="Striped Scale Shirt">
+<skill id="776" levels="1" name="Force of Destruction">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -645,7 +616,7 @@
   <for>
   </for>
 </skill>
-<skill id="3477" levels="1" name="Striped Scale Shirt">
+<skill id="777" levels="1" name="Demolition Impact">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -653,7 +624,7 @@
   <for>
   </for>
 </skill>
-<skill id="3478" levels="1" name="Striped Scale Shirt">
+<skill id="778" levels="1" name="Golem Armor">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -661,7 +632,7 @@
   <for>
   </for>
 </skill>
-<skill id="3479" levels="1" name="Striped Scale Shirt">
+<skill id="779" levels="1" name="Summon Smart Cubic">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -669,7 +640,7 @@
   <for>
   </for>
 </skill>
-<skill id="3480" levels="1" name="Striped Scale Shirt">
+<skill id="780" levels="1" name="Summon Smart Cubic">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -677,7 +648,7 @@
   <for>
   </for>
 </skill>
-<skill id="3481" levels="1" name="Striped Mithril Shirt">
+<skill id="781" levels="1" name="Summon Smart Cubic">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -685,7 +656,7 @@
   <for>
   </for>
 </skill>
-<skill id="3482" levels="1" name="Striped Mithril Shirt">
+<skill id="782" levels="1" name="Summon Smart Cubic">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -693,7 +664,7 @@
   <for>
   </for>
 </skill>
-<skill id="3483" levels="1" name="Striped Mithril Shirt">
+<skill id="783" levels="1" name="Summon Smart Cubic">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -701,7 +672,7 @@
   <for>
   </for>
 </skill>
-<skill id="3484" levels="1" name="Striped Mithril Shirt">
+<skill id="784" levels="1" name="Spirit of Phoenix">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -709,7 +680,7 @@
   <for>
   </for>
 </skill>
-<skill id="3485" levels="1" name="Striped Mithril Shirt">
+<skill id="785" levels="1" name="Flame Icon">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -717,7 +688,7 @@
   <for>
   </for>
 </skill>
-<skill id="3486" levels="1" name="Striped Mithril Shirt">
+<skill id="786" levels="1" name="Eva's Will">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -725,7 +696,7 @@
   <for>
   </for>
 </skill>
-<skill id="3487" levels="1" name="Blue Talisman of Power">
+<skill id="787" levels="1" name="Touch of Eva">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -733,7 +704,7 @@
   <for>
   </for>
 </skill>
-<skill id="3488" levels="1" name="Blue Talisman of Protection">
+<skill id="788" levels="1" name="Pain of Shilen">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -741,7 +712,7 @@
   <for>
   </for>
 </skill>
-<skill id="3489" levels="1" name="Yellow Talisman of Arcane Power">
+<skill id="789" levels="1" name="Touch of Shilen">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -749,7 +720,7 @@
   <for>
   </for>
 </skill>
-<skill id="3490" levels="1" name="Yellow Talisman of Defense">
+<skill id="790" levels="1" name="Wild Shot">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -757,7 +728,7 @@
   <for>
   </for>
 </skill>
-<skill id="3491" levels="1" name="Yellow Talisman of Evasion">
+<skill id="791" levels="1" name="Lightning Shock">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -765,7 +736,7 @@
   <for>
   </for>
 </skill>
-<skill id="3492" levels="1" name="Yellow Talisman of Speed">
+<skill id="792" levels="1" name="Betrayal Mark">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -773,7 +744,7 @@
   <for>
   </for>
 </skill>
-<skill id="3493" levels="1" name="Yellow Talisman of Regeneration">
+<skill id="793" levels="1" name="Rush Impact">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -781,7 +752,7 @@
   <for>
   </for>
 </skill>
-<skill id="3494" levels="1" name="Yellow Talisman of CP Regeneration">
+<skill id="794" levels="1" name="Mass Disarm">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -789,7 +760,7 @@
   <for>
   </for>
 </skill>
-<skill id="3495" levels="1" name="Yellow Talisman of Healing">
+<skill id="795" levels="1" name="Divine Knight Brandish">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -797,7 +768,7 @@
   <for>
   </for>
 </skill>
-<skill id="3496" levels="1" name="Red Talisman of Recovery">
+<skill id="796" levels="1" name="Divine Knight Explosion Attack">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -805,7 +776,7 @@
   <for>
   </for>
 </skill>
-<skill id="3497" levels="1" name="Yellow Talisman of MP Regeneration">
+<skill id="797" levels="1" name="Divine Rogue Piercing Attack">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -813,7 +784,7 @@
   <for>
   </for>
 </skill>
-<skill id="3498" levels="1" name="Special Ability Light">
+<skill id="798" levels="1" name="Divine Warrior Assault Attack">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -821,7 +792,7 @@
   <for>
   </for>
 </skill>
-<skill id="3499" levels="1" name="Transform Dispel">
+<skill id="799" levels="3" name="Master Ability - Defense">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>

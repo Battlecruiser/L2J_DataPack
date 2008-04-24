@@ -512,7 +512,7 @@
   <for>
   </for>
 </skill>
-<skill id="2046" levels="1" name="Wolves' Necklace">
+<skill id="2046" levels="1" name="Wolf's Necklace">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="5000"/>
@@ -547,7 +547,7 @@
 <skill id="2049" levels="1" name="Blessed Scroll of Resurrection">
   <set name="power" val="100.0"/>
   <set name="target" val="TARGET_CORPSE_PLAYER"/>
-  <set name="hitTime" val="15000"/>
+  <set name="hitTime" val="3000"/>
   <set name="skillType" val="RESURRECT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
@@ -724,18 +724,10 @@
   <for>
   </for>
 </skill>
-<skill id="2062" levels="1" name="none">
-  <!-- WARNING - this "L2Day - Blessed Scroll of Resurrection" no longer exists... it's effect will soon be deprecated -->
-  <!-- Actual statements for "none"
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  -->
+<skill id="2062" levels="1" name="Blessed Scroll of Resurrection">
   <set name="power" val="100.0"/>
   <set name="target" val="TARGET_CORPSE_PLAYER"/>
-  <set name="hitTime" val="15000"/>
+  <set name="hitTime" val="3000"/>
   <set name="skillType" val="RESURRECT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>

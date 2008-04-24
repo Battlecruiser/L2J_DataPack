@@ -1129,7 +1129,7 @@
     </effect>
   </for>
 </skill>
-<skill id="1446" levels="1" name="Shadow Bind">
+<skill id="1446" levels="11" name="Shadow Bind">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
@@ -1141,7 +1141,7 @@
   <for>
   </for>
 </skill>
-<skill id="1447" levels="1" name="Voice Bind">
+<skill id="1447" levels="11" name="Voice Bind">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
@@ -1809,6 +1809,94 @@
   <cond msg="Target does not have an active Restoration skill."><!-- Need retail msg if there is one. -->
     <target active_effect_id="1487"/>
   </cond>
+  <for>
+  </for>
+</skill>
+<skill id="1489" levels="1" name="Summoner Ability - Resist Attribute">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="1490" levels="1" name="Healer Ability - Heal">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="1491" levels="1" name="Summoner Ability - Spirit">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="1492" levels="1" name="Flame Armor">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="1493" levels="1" name="Frost Armor">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="1494" levels="1" name="Hurricane Armor">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="1495" levels="1" name="Vampiric Mist">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="1496" levels="1" name="Servitor Barrier">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="1497" levels="1" name="Excessive Loyalty">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="1498" levels="1" name="Mutual Response">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
+  </for>
+</skill>
+<skill id="1499" levels="1" name="Improve Combat">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>

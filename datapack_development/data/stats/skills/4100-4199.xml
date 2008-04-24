@@ -122,7 +122,7 @@
   <for>
   </for>
 </skill>
-<skill id="4106" levels="1" name="Antharas Shock">
+<skill id="4106" levels="1" name="Antharas Stun">
   <!-- Antharas Skills -->
   <set name="magicLvl" val="70"/>
   <set name="power" val="11000"/>
@@ -139,7 +139,7 @@
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
-<skill id="4107" levels="1" name="Antharas Shock">
+<skill id="4107" levels="1" name="Antharas Stun">
   <!-- Antharas Skills -->
   <set name="magicLvl" val="70"/>
   <set name="lvlDepend" val="1"/>
@@ -561,7 +561,7 @@
   <for>
   </for>
 </skill>
-<skill id="4131" levels="1" name="Shock">
+<skill id="4131" levels="1" name="Stun">
   <!-- Baium Skills -->
   <set name="magicLvl" val="75"/>
   <set name="lvlDepend" val="1"/>
@@ -1071,9 +1071,9 @@
     </effect>
   </for>
 </skill>
-<skill id="4164" levels="9" name="Paralysis">
+<skill id="4164" levels="18" name="Paralysis">
   <!-- Cubic skill -->
-  <table name="#magicLvl"> 40 44 48 52 56 60 64 68 72 </table>
+  <table name="#magicLvl"> 40 44 48 52 56 60 64 68 72 73 74 75 76 77 78 79 80 81</table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="power" val="15"/>
@@ -1087,10 +1087,10 @@
     <effect count="1" name="Paralyze" time="120" val="0"/>
   </for>
 </skill>
-<skill id="4165" levels="9" name="Icy Air">
+<skill id="4165" levels="17" name="Icy Air">
   <!-- Cubic skill -->
-  <table name="#power"> 77 77 77 94 94 108 108 118 118 </table>
-  <table name="#magicLvl"> 40 44 48 52 56 62 66 70 74 </table>
+  <table name="#power"> 77 77 77 94 94 108 108 118 118 120 122 128 132 135 140 145 150 </table>
+  <table name="#magicLvl"> 40 44 48 52 56 62 66 70 74 75 76 77 78 79 80 81 82</table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="power" val="#power"/>
@@ -1105,9 +1105,9 @@
     <effect count="15" name="DamOverTime" time="1" val="#power"/>
   </for>
 </skill>
-<skill id="4166" levels="9" name="Shock">
+<skill id="4166" levels="18" name="Stuns">
   <!-- Cubic skill -->
-  <table name="#magicLvl"> 40 44 48 52 56 60 64 68 72 </table>
+  <table name="#magicLvl"> 40 44 48 52 56 60 64 68 72 74 75 76 77 78 79 80 81 82</table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="power" val="80"/>
@@ -1155,7 +1155,7 @@
   <for>
   </for>
 </skill>
-<skill id="4169" levels="12" name="Shock">
+<skill id="4169" levels="12" name="Stun">
   <table name="#power"> 61.0 163.0 447.0 1169.0 2942.0 5686.0 8732.0 10131.0 11622.0 13182.0 14784.0 16398.0 </table>
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -1209,7 +1209,7 @@
   <for>
   </for>
 </skill>
-<skill id="4172" levels="12" name="Shock">
+<skill id="4172" levels="12" name="Stun">
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1364,7 +1364,7 @@
   <for>
   </for>
 </skill>
-<skill id="4180" levels="12" name="Shock">
+<skill id="4180" levels="12" name="Stun">
   <table name="#power"> 61.0 163.0 447.0 1169.0 2942.0 5686.0 8732.0 10131.0 11622.0 13182.0 14784.0 16398.0 </table>
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
