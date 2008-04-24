@@ -836,9 +836,9 @@
     </effect>
   </for>
 </skill>
-<skill id="4049" levels="8" name="Cubic Drain">
-  <table name="#power"> 26.0 31.0 36.0 41.0 45.0 48.0 51.0 54.0 </table>
-  <table name="#magicLvl"> 40 46 52 58 62 66 70 74 </table>
+<skill id="4049" levels="16" name="Cubic Drain">
+  <table name="#power"> 26.0 31.0 36.0 41.0 45.0 48.0 51.0 54.0 57.0 61.0 64.0 67.0 71.0 74.0 77.0 81.0</table>
+  <table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85</table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="power" val="#power"/>
@@ -851,9 +851,9 @@
   <for>
   </for>
 </skill>
-<skill id="4050" levels="7" name="Cubic DD">
-  <table name="#power"> 29.0 33.0 39.0 43.0 46.0 50.0 53.0 </table>
-  <table name="#magicLvl"> 43 49 55 60 64 68 72 </table>
+<skill id="4050" levels="16" name="Cubic DD">
+  <table name="#power"> 29.0 33.0 39.0 43.0 46.0 50.0 53.0 56.0 59.0 62.0 65.0 68.0 71.0 74.0 77.0 80.0</table>
+  <table name="#magicLvl"> 43 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85</table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="power" val="#power"/>
@@ -867,9 +867,9 @@
   <for>
   </for>
 </skill>
-<skill id="4051" levels="7" name="Cubic Heal">
-  <table name="#power"> 201.0 241.0 281.0 314.0 339.0 361.0 382.0 </table>
-  <table name="#magicLvl"> 43 49 55 60 64 68 72 </table>
+<skill id="4051" levels="16" name="Cubic Heal">
+  <table name="#power"> 201.0 241.0 281.0 314.0 339.0 361.0 382.0 400.0 420.0 440.0 460.0 480.0 500.0 520.0 540.0 560.0</table>
+  <table name="#magicLvl"> 43 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85</table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="power" val="#power"/>
@@ -882,10 +882,10 @@
   <for>
   </for>
 </skill>
-<skill id="4052" levels="6" name="Poison">
+<skill id="4052" levels="15" name="Poison">
   <!-- Cubic skill -->
-  <table name="#dmg"> 93 114 132 132 132 144 </table>
-  <table name="#magicLvl"> 49 55 60 64 68 72 </table>
+  <table name="#dmg"> 93 114 132 132 132 144 144 144 156 156 156 162 162 171 171</table>
+  <table name="#magicLvl"> 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85</table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="power" val="70"/>
@@ -900,8 +900,8 @@
     <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison"/>
   </for>
 </skill>
-<skill id="4053" levels="8" name="Decrease P.Atk">
-  <table name="#magicLvl"> 40 46 52 58 62 66 70 74 </table>
+<skill id="4053" levels="16" name="Decrease P.Atk">
+  <table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85</table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="2"/>
   <set name="power" val="80"/>
@@ -917,8 +917,8 @@
     </effect>
   </for>
 </skill>
-<skill id="4054" levels="8" name="Decrease P. Def">
-  <table name="#magicLvl"> 40 46 52 58 62 66 70 74 </table>
+<skill id="4054" levels="16" name="Decrease P. Def">
+  <table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85</table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="2"/>
   <set name="power" val="80"/>
@@ -934,8 +934,8 @@
     </effect>
   </for>
 </skill>
-<skill id="4055" levels="8" name="Decrease Atk.Speed">
-  <table name="#magicLvl"> 40 46 52 58 62 66 70 74 </table>
+<skill id="4055" levels="16" name="Decrease Atk.Speed">
+  <table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85</table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="2"/>
   <set name="power" val="80"/>

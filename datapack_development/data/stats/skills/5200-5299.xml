@@ -14,7 +14,7 @@
   <for>
   </for>
 </skill>
-<skill id="5201" levels="2" name="Pet Concentration">
+<skill id="5201" levels="6" name="Pet Concentration">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
@@ -28,7 +28,7 @@
   <for>
   </for>
 </skill>
-<skill id="5202" levels="12" name="NPC Ranged Stun">
+<skill id="5202" levels="12" name="Stun">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
@@ -42,7 +42,7 @@
   <for>
   </for>
 </skill>
-<skill id="5203" levels="12" name="NPC Ranged Fear">
+<skill id="5203" levels="12" name="Fear">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
@@ -120,7 +120,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5208" levels="1" name="Golden Pig Wind Walk">
+<skill id="5208" levels="1" name="Event Wind walk">
 <!--
   Description(s):
       Temporarily increases Speed. Effect 2.
@@ -139,7 +139,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5209" levels="1" name="Golden Pig Shield">
+<skill id="5209" levels="1" name="Event Shield">
 <!--
   Description(s):
       Temporarily increases P. Def. Effect 3.
@@ -158,7 +158,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5210" levels="1" name="Golden Pig Blessed Body">
+<skill id="5210" levels="1" name="Event Bless the body">
 <!--
   Description(s):
       Temporarily increases maximum HP. Effect 6.
@@ -177,7 +177,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5211" levels="1" name="Golden Pig Vampiric Rage">
+<skill id="5211" levels="1" name="Event Vampiric rage">
 <!--
   Description(s):
       Uses damage inflicted upon an enemy to temporarily restore HP. Excludes damage inflicted by skill or remote attack. Effect 4.
@@ -195,7 +195,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5212" levels="1" name="Golden Pig Regeneration">
+<skill id="5212" levels="1" name="Event Regeneration">
 <!--
   Description(s):
       Temporarily increases ability to restore HP. Effect 3.
@@ -214,7 +214,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5213" levels="1" name="Golden Pig Haste">
+<skill id="5213" levels="1" name="Event Haste">
 <!--
   Description(s):
       Temporarily increases Atk. Spd. Effect 1.
@@ -233,7 +233,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5214" levels="1" name="Golden Pig Blessed Soul">
+<skill id="5214" levels="1" name="Event Bless the soul">
 <!--
   Description(s):
       Temporarily increases maximum MP. Effect 6.
@@ -252,7 +252,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5215" levels="1" name="Golden Pig Acumen">
+<skill id="5215" levels="1" name="Event Acumen">
 <!--
   Description(s):
       Temporarily increases Casting Spd. Effect 3.
@@ -271,7 +271,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5216" levels="1" name="Golden Pig Concentration">
+<skill id="5216" levels="1" name="Event Concentration">
 <!--
   Description(s):
       Temporarily decreases the probability of magic being canceled due to damage taken. Effect 1.
@@ -290,7 +290,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5217" levels="1" name="Golden Pig Empower">
+<skill id="5217" levels="1" name="Event Empower">
 <!--
   Description(s):
       Temporarily increases M. Atk. Effect 1.
@@ -321,7 +321,7 @@
   <for>
   </for>
 </skill>
-<skill id="5219" levels="1" name="Huge Pig Stun">
+<skill id="5219" levels="1" name="Stun of giant mutated animal">
 <!--
   Description(s):
       Curse of the Huge Pig: Target is temporarily stunned and immoblized.
@@ -342,7 +342,7 @@
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
-<skill id="5220" levels="1" name="Huge Pig Fear">
+<skill id="5220" levels="1" name="Fear of giant mutated animal">
 <!--
   Description(s):
       Curse of the Huge Pig: Target is temporarily overcome with fear, causing it to flee mindlessly.
@@ -433,7 +433,7 @@
   <for>
   </for>
 </skill>
-<skill id="5230" levels="1" name="Shock">
+<skill id="5230" levels="1" name="Stun">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -441,7 +441,7 @@
   <for>
   </for>
 </skill>
-<skill id="5231" levels="1" name="Shock">
+<skill id="5231" levels="1" name="Stun">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -449,7 +449,7 @@
   <for>
   </for>
 </skill>
-<skill id="5232" levels="1" name="Shock">
+<skill id="5232" levels="1" name="Stun">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -513,7 +513,7 @@
   <for>
   </for>
 </skill>
-<skill id="5240" levels="1" name="Shock">
+<skill id="5240" levels="1" name="Stun">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -521,7 +521,7 @@
   <for>
   </for>
 </skill>
-<skill id="5241" levels="1" name="Shock">
+<skill id="5241" levels="1" name="Stun">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -593,7 +593,7 @@
   <for>
   </for>
 </skill>
-<skill id="5250" levels="1" name="Shock">
+<skill id="5250" levels="1" name="Stun">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
