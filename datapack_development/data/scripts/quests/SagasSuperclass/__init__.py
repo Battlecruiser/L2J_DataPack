@@ -4,7 +4,6 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.serverpackets import CreatureSay
-from net.sf.l2j.gameserver.datatables import SpawnTable
 from net.sf.l2j.gameserver.ai import CtrlIntention
 from net.sf.l2j.gameserver.serverpackets import MagicSkillUse
 from net.sf.l2j.gameserver.model import L2World
@@ -88,15 +87,6 @@ class Quest (JQuest) :
     target.broadcastPacket(MagicSkillUse(target,target,skillId,level,6000,1))
     target.broadcastPacket(MagicSkillUse(npc,npc,skillId,level,6000,1))
 
- def FindTemplate (self, npcId) :
-    npcinstance = 0
-    for spawn in SpawnTable.getInstance().getSpawnTable().values():
-        if spawn :
-            if spawn.getNpcid() == npcId:
-                npcinstance = spawn.getLastSpawn()
-                break
-    return npcinstance
-
  def AutoChat(self, npc,text) :
     chars = npc.getKnownList().getKnownPlayers().values().toArray()
     if chars != None:
@@ -170,7 +160,7 @@ class Quest (JQuest) :
  def getPrevClass(self,player) :
      return self.prevclass
 
- def onAdvEvent (self,event,npc, player) :
+ def onAdvEvent (self,event,npc,player) :
    st = player.getQuestState(self.qn)
    if not st: return
    htmltext = None  # simple initialization...if none of the events match, return nothing.  
@@ -205,7 +195,7 @@ class Quest (JQuest) :
            if not player.isSubClassActive() and player.getBaseClass() == self.getPrevClass(player) :
                player.setBaseClass(Class)
            player.broadcastUserInfo()
-           self.Cast(self.FindTemplate(self.NPC[0]),player,4339,1)
+           self.Cast(npc,player,4339,1)
        else :
            st.takeItems(self.Items[10],-1)
            st.playSound("ItemSound.quest_middle")
@@ -261,13 +251,13 @@ class Quest (JQuest) :
    elif event == "5-1" :
        st.set("cond","6")
        st.takeItems(self.Items[4],1)
-       self.Cast(self.FindTemplate(self.NPC[5]),player,4546,1)
+       self.Cast(npc,player,4546,1)
        st.playSound("ItemSound.quest_middle")
        htmltext = "5-02.htm"
    elif event == "6-1" :
        st.set("cond","8")
        st.takeItems(self.Items[5],1)
-       self.Cast(self.FindTemplate(self.NPC[6]),player,4546,1)
+       self.Cast(npc,player,4546,1)
        st.playSound("ItemSound.quest_middle")
        htmltext = "6-03.htm"
    elif event == "7-1" :
@@ -286,19 +276,19 @@ class Quest (JQuest) :
    elif event == "7-2" :
        st.set("cond","10")
        st.takeItems(self.Items[6],1)
-       self.Cast(self.FindTemplate(self.NPC[7]),player,4546,1)
+       self.Cast(npc,player,4546,1)
        st.playSound("ItemSound.quest_middle")
        htmltext = "7-06.htm"
    elif event == "8-1" :
        st.set("cond","14")
        st.takeItems(self.Items[7],1)
-       self.Cast(self.FindTemplate(self.NPC[8]),player,4546,1)
+       self.Cast(npc,player,4546,1)
        st.playSound("ItemSound.quest_middle")
        htmltext = "8-02.htm"
    elif event == "9-1" :
        st.set("cond","17")
        st.takeItems(self.Items[8],1)
-       self.Cast(self.FindTemplate(self.NPC[9]),player,4546,1)
+       self.Cast(npc,player,4546,1)
        st.playSound("ItemSound.quest_middle")
        htmltext = "9-03.htm"
    elif event == "10-1" :
@@ -323,7 +313,7 @@ class Quest (JQuest) :
    elif event == "10-2" :
        st.set("cond","19")
        st.takeItems(self.Items[9],1)
-       self.Cast(self.FindTemplate(self.NPC[10]),player,4546,1)
+       self.Cast(npc,player,4546,1)
        st.playSound("ItemSound.quest_middle")
        htmltext = "10-06.htm"
    elif event == "11-9" :
@@ -508,7 +498,7 @@ class Quest (JQuest) :
                           if not player.isSubClassActive() and player.getBaseClass() == self.getPrevClass(player) :
                               player.setBaseClass(Class)
                           player.broadcastUserInfo()
-                          self.Cast(self.FindTemplate(self.NPC[0]),player,4339,1)
+                          self.Cast(npc,player,4339,1)
                   else :
                       htmltext = "0-010.htm"
     return htmltext
