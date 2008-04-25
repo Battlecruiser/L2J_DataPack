@@ -204,42 +204,89 @@
   </for>
 </skill>
 <skill id="720" levels="2" name="Anakim Holy Light Burst">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#power">3189 3590</table>
+  <table name="#mpConsume">69 72</table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="element" val="5"/> <!-- Holy -->
+  <set name="skillType" val="PDAM"/>
+  <set name="hitTime" val="1080"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="150"/>
   <for>
   </for>
 </skill>
 <skill id="721" levels="2" name="Anakim Energy Attack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume">69 72</table>
+  <table name="#magicLvl"> 80 82</table>
+  <table name="#power">186 197</table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="150"/>
+  <set name="element" val="5"/> <!-- Holy -->
+  <set name="reuseDelay" val="6000"/>
+  <set name="hitTime" val="3000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="700"/>
+  <set name="effectRange" val="1500"/>
   <for>
   </for>
 </skill>
 <skill id="722" levels="2" name="Anakim Holy Beam">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume">69 72</table>
+  <table name="#magicLvl">80 82</table>
+  <table name="#power">186 197</table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="150"/>
+  <set name="element" val="5"/> <!-- Holy -->
+  <set name="reuseDelay" val="10000"/>
+  <set name="hitTime" val="3000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="700"/>
+  <set name="effectRange" val="1500"/>
   <for>
   </for>
 </skill>
 <skill id="723" levels="1" name="Anakim Sunshine">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="25"/>
+  <set name="power" val="1340"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="1000"/>
+  <set name="reuseDelay" val="12000"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillType" val="HEAL"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="624"/>
   <for>
   </for>
 </skill>
 <skill id="724" levels="1" name="Anakim Clans">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="25"/>
+  <set name="power" val="100"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="32000"/>
+  <set name="skillType" val="NOTDONE"/> <-- require core support for: cancel all ur debuffs -->
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="624"/>
   <for>
   </for>
 </skill>
