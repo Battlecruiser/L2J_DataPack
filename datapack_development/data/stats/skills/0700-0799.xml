@@ -132,7 +132,6 @@
   <set name="reuseDelay" val="25000"/>
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="DRAIN"/>
-  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
@@ -232,7 +231,6 @@
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="MDAM"/>
-  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1500"/>
@@ -252,7 +250,6 @@
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="MDAM"/>
-  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1500"/>
@@ -291,67 +288,129 @@
   </for>
 </skill>
 <skill id="725" levels="2" name="Venom Power Smash">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#power">2626 2957</table>
+  <set name="mpConsume" val="88"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="hitTime" val="830"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="150"/>
   <for>
   </for>
 </skill>
 <skill id="726" levels="2" name="Venom Sonic Storm">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#power">2626 2957</table>
+  <set name="mpConsume" val="88"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="150"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="hitTime" val="1900"/>
+  <set name="reuseDelay" val="18000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="500"/>
+  <set name="effectRange" val="1000"/>
   <for>
   </for>
 </skill>
 <skill id="727" levels="1" name="Venom Disillusion">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="35"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="hitTime" val="4000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.08" stackType="pa_up">
+      <mul order="0x30" stat="pAtk" val="1.08"/>
+    </effect>
   </for>
 </skill>
 <skill id="728" levels="1" name="Gordon Beast Attack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#power">2957</table>
+  <set name="mpConsume" val="88"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="hitTime" val="830"/>
+  <set name="reuseDelay" val="18000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="150"/>
   <for>
   </for>
 </skill>
 <skill id="729" levels="1" name="Gordon Sword Stab">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#power">2957</table>
+  <set name="mpConsume" val="88"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="150"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="hitTime" val="1900"/>
+  <set name="reuseDelay" val="18000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="500"/>
+  <set name="effectRange" val="1000"/>
   <for>
   </for>
 </skill>
 <skill id="730" levels="1" name="Gordon Press">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="150"/>
+  <set name="mpConsume" val="109"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <effect name="Debuff" time="30" count="1" val="0">
+      <mul order="0x30" stat="runSpd" val="0.77"/>
+      <mul order="0x30" stat="pAtkSpd" val="0.77"/>
+      <mul order="0x30" stat="mAtkSpd" val="0.77"/>
+    </effect>
   </for>
 </skill>
 <skill id="731" levels="1" name="Ranku Dark Explosion">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpConsume" val="112"/>
+  <set name="power" val="162"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="reuseDelay" val="45000"/>
+  <set name="hitTime" val="3300"/>
+  <set name="element" val="6"/> <!-- Dark -->
+  <set name="skillType" val="MDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1800"/>
   <for>
   </for>
 </skill>
 <skill id="732" levels="1" name="Ranku Stun Attack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpConsume" val="20"/>
+  <set name="power" val="1"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="overHit" val="true"/>
+  <set name="reuseDelay" val="13000"/>
+  <set name="hitTime" val="1080"/>
+  <set name="coolTime" val="720" />
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="50"/>
   <for>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="733" levels="1" name="Kechi Double Cutter">
