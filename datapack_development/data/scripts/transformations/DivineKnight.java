@@ -20,7 +20,7 @@ public class DivineKnight extends L2Transformation
 	public DivineKnight()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(252, 3600, 8.0, 22.0);
+		super(252, 3600, 33.0, 30.0);
 	}
 
 	public void onTransform()
