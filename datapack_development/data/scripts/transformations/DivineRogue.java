@@ -1,4 +1,4 @@
-package net.sf.l2j.gameserver.instancemanager;
+package transformations;
 
 import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.instancemanager.TransformationManager;
