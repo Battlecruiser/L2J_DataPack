@@ -20,7 +20,7 @@ public class ValeMaster extends L2Transformation
 	public ValeMaster()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(4, 3600, 8.0, 22.0);
+		super(4, 3600, 12.0, 40.0);
 	}
 
 	public void onTransform()

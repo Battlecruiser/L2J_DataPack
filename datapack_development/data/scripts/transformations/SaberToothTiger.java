@@ -20,7 +20,7 @@ public class SaberToothTiger extends L2Transformation
 	public SaberToothTiger()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(5, 3600, 8.0, 22.0);
+		super(5, 3600, 34.0, 28.0);
 	}
 
 	public void onTransform()
