@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?> 
+<list> 
+<item id='10527' name="Dynasty Staff - Mana Up"> 
+  <for> 
+   <set val='307' order='0x08' stat='pAtk'/> 
+   <set val='140' order='0x08' stat='mAtk'/> 
+   <set val='4' order='0x08' stat='rCrit'/> 
+   <set val='379' order='0x08' stat='pAtkSpd'/> 
+   <enchant val='0' order='0x0C' stat='pAtk'/> 
+   <enchant val='0' order='0x0C' stat='mAtk'/> 
+   <!-- SA: Mana UP --> 
+   <mul val='1.3' order='0x30' stat='maxMp'/> 
+      <!-- Enhances damage to target during PvP --> 
+   <mul val='1.05' order='0x30' stat='pvpPhysDmg'/> 
+   <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/> 
+  </for> 
+</item> 
+<item id='10528' name="Dynasty Staff - Conversion"> 
+  <for> 
+   <set val='307' order='0x08' stat='pAtk'/> 
+   <set val='140' order='0x08' stat='mAtk'/> 
+   <set val='4' order='0x08' stat='rCrit'/> 
+   <set val='379' order='0x08' stat='pAtkSpd'/> 
+   <enchant val='0' order='0x0C' stat='pAtk'/> 
+   <enchant val='0' order='0x0C' stat='mAtk'/> 
+   <!-- SA: Conversion --> 
+   <mul val='0.6' order='0x30' stat='maxHp'/> 
+   <mul val='1.6' order='0x30' stat='maxMp'/> 
+   <!-- Enhances damage to target during PvP --> 
+   <mul val='1.05' order='0x30' stat='pvpPhysDmg'/> 
+   <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/> 
+  </for> 
+</item> 
+<item id='10529' name="Dynasty Staff - Acumen"> 
+  <for> 
+   <set val='307' order='0x08' stat='pAtk'/> 
+   <set val='140' order='0x08' stat='mAtk'/> 
+   <set val='4' order='0x08' stat='rCrit'/> 
+   <set val='379' order='0x08' stat='pAtkSpd'/> 
+   <enchant val='0' order='0x0C' stat='pAtk'/> 
+   <enchant val='0' order='0x0C' stat='mAtk'/> 
+   <!-- SA: Acumen Not shure about this. Uncomment if i'm right --> 
+   <mul val='1.15' order='0x30' stat='mAtkSpd'/> 
+   <!-- Enhances damage to target during PvP --> 
+   <mul val='1.05' order='0x30' stat='pvpPhysDmg'/> 
+   <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/> 
+  </for> 
+</item> 
+<item id='10530' name="Dynasty Crusher - Anger"> 
+  <for> 
+   <set val='307' order='0x08' stat='pAtk'/> 
+   <set val='140' order='0x08' stat='mAtk'/> 
+   <set val='4' order='0x08' stat='rCrit'/> 
+   <set val='379' order='0x08' stat='pAtkSpd'/> 
+   <enchant val='0' order='0x0C' stat='pAtk'/> 
+   <enchant val='0' order='0x0C' stat='mAtk'/> 
+   <!-- SA: Anger --> 
+   <add val='78' order='0x40' stat='pAtk'/> 
+    <mul val='0.85' order='0x30' stat='maxHp'/> 
+   <!-- Enhances damage to target during PvP --> 
+   <mul val='1.05' order='0x30' stat='pvpPhysDmg'/> 
+   <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/> 
+  </for> 
+</item> 
+<item id='10531' name="Dynasty Crusher - Health"> 
+  <for> 
+   <set val='307' order='0x08' stat='pAtk'/> 
+   <set val='140' order='0x08' stat='mAtk'/> 
+   <set val='4' order='0x08' stat='rCrit'/> 
+   <set val='379' order='0x08' stat='pAtkSpd'/> 
+   <enchant val='0' order='0x0C' stat='pAtk'/> 
+   <enchant val='0' order='0x0C' stat='mAtk'/> 
+      <!-- SA: Health --> 
+   <mul val='1.25' order='0x30' stat='maxHp'/> 
+      <!-- Enhances damage to target during PvP --> 
+   <mul val='1.05' order='0x30' stat='pvpPhysDmg'/> 
+   <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/> 
+  </for> 
+</item> 
+<item id='10532' name="Dynasty Crusher - Rsk. Focus"> 
+  <for> 
+   <set val='307' order='0x08' stat='pAtk'/> 
+   <set val='140' order='0x08' stat='mAtk'/> 
+   <set val='4' order='0x08' stat='rCrit'/> 
+   <set val='379' order='0x08' stat='pAtkSpd'/> 
+   <enchant val='0' order='0x0C' stat='pAtk'/> 
+   <enchant val='0' order='0x0C' stat='mAtk'/> 
+   <!-- SA: Rsk. Focus --> 
+   <add order='0x40' stat='rEvas' val='164'/> 
+   <mul val='0.60' order='0x30' stat='maxHp'/> 
+   <!--   SA: Rsk. Focus Old one 
+   <add order='0x40' stat='rEvas' val='164'> 
+      <and>        
+         <player hp='60'/> 
+      </and> 
+   </add> --> 
+      <!-- Enhances damage to target during PvP --> 
+   <mul val='1.05' order='0x30' stat='pvpPhysDmg'/> 
+   <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/> 
+  </for> 
+</item> 
+</list>
