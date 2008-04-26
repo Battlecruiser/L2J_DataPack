@@ -41394,6 +41394,20 @@ INSERT INTO spawnlist VALUES
 (null,'Isle_of_Prayer',1,22264,151763,149992,-3320,0,0,35759,60,0,0),
 (null,'Isle_of_Prayer',1,22263,152325,150566,-3448,0,0,0,60,0,0);
 
+-- Caste Artefacts
+INSERT INTO spawnlist VALUES
+(null,'GludioArtefact1',1,35063,-18120,107984,-2483,0,0,16384,60,0,0),
+(null,'GiranArtefact1',1,35147,117939,145090,-2550,0,0,32768,60,0,0),
+(null,'DionArtefact1',1,35105,22081,161771,-2677,0,0,49017,60,0,0),
+(null,'OrenArtefact1',1,35189,84014,37184,-2277,0,0,16384,60,0,0),
+(null,'AdenArtefact1',1,35233,147465,1537,-373,0,0,16384,60,0,0),
+(null,'InnadrilArtefact1',1,35279,116031,250555,-798,0,0,49200,60,0,0),
+(null,'GoddardArtefact1',1,35322,146601,-50441,-1505,0,0,32768,60,0,0),
+(null,'GoddardArtefact2',1,35323,148353,-50457,-1505,0,0,0,60,0,0),
+(null,'RuneArtefact1',1,35469,9126,-49161,1094,0,0,64270,60,0,0),
+(null,'SchuttgartArtefact1',1,35515,76668,-154520,226,0,0,0,60,0,0),
+(null,'SchuttgartArtefact2',1,35514,78446,-154524,227,0,0,0,60,0,0);
+
 -- temp spawns
 INSERT INTO spawnlist VALUES 
 (null,'TEMP Divine Emissary',1,27323,96199,76801,-3574,0,0,275,60,0,0),
@@ -41401,7 +41415,7 @@ INSERT INTO spawnlist VALUES
 (null,'TEMP Divine Emissary',1,27323,96199,77001,-3574,0,0,275,60,0,0),
 (null,'TEMP Divine Emissary',1,27323,95999,76801,-3574,0,0,275,60,0,0),
 (null,'TEMP Divine Emissary',1,27323,96399,76801,-3574,0,0,275,60,0,0);
-INSERT INTO spawnlist VALUES 
+INSERT INTO spawnlist VALUES
 (null,'TEMP Baar Dre Vanul',1,21118,8635,-121667,-1734,0,0,57960,60,0,0),
 (null,'TEMP Baar Dre Vanul',1,21118,8491,-121455,-1721,0,0,29473,60,0,0),
 (null,'TEMP Baar Dre Vanul',1,21118,9081,-121787,-1668,0,0,56206,60,0,0),
