@@ -1638,7 +1638,7 @@ INSERT INTO `weapon` VALUES
 (10217,'Icarus Spirit','rhand','true',1520,1,1,'steel','s80',0,15,'sword',10,0.00000,0,0,0,325,0,0,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,0,0),
 (10218,'Icarus Heavy Arms','lrhand','true',1740,1,1,'steel','s80',0,15,'bigsword',10,0.00000,0,0,0,325,0,0,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,0,0),
 (10219,'Icarus Trident','lrhand','true',2010,1,1,'steel','s80',0,15,'pole',10,0.00000,0,0,0,325,0,0,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,0,0),
-(10220,'Icarus Hammer','rhand','true',17400,1,1,'steel','s80',0,15,'blunt',10,0.00000,0,0,0,325,0,0,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,0,0),
+(10220,'Icarus Hammer','rhand','true',1740,1,1,'steel','s80',0,15,'blunt',10,0.00000,0,0,0,325,0,0,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,0,0),
 (10221,'Icarus Hand','lrhand','true',1550,1,1,'steel','s80',0,15,'dualfist',10,0.00000,0,0,0,325,0,0,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,0,0),
 (10222,'Icarus Hall','rhand','true',1080,1,1,'steel','s80',0,15,'blunt',10,0.00000,0,0,0,325,0,0,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,0,0),
 (10223,'Icarus Spitter','lrhand','true',1520,1,1,'steel','s80',0,15,'bow',10,0.00000,0,0,0,325,0,0,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,0,0),
