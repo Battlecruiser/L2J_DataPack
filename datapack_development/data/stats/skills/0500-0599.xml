@@ -657,6 +657,7 @@ description(s) :
   </for>
 </skill>
 <skill id="536" levels="1" name="Over the Body">
+  <!-- Needs Core Support "In order to use the skill, your CP must be above 80%. When the skill is used, all of your CP are consumed." -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
