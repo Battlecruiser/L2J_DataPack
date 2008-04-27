@@ -1432,11 +1432,11 @@
   <set name="skillType" val="MUTE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="reuseDelay" val="30000"/>
+  <set name="reuseDelay" val="120000"/>
   <set name="hitTime" val="6000"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="PhysicalAttackMute" time="120" val="0"/>
+    <effect count="1" name="PhysicalAttackMute" time="10" val="0"/>
   </for>
 </skill>
 <skill id="1463" levels="1" name="Fire Weapon">
