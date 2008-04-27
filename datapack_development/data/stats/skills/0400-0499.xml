@@ -1730,36 +1730,14 @@
   <for>
   </for>
 </skill>
-<skill id="477" levels="37" name="Dark Smash">
+<skill id="477" levels="37" name="Dark Smash" enchantLevels1="30" enchantLevels2="30" >
 <!-- Done by theREALizzy - Need retail accuracy check. -->
-  <table name="#power"> 
-  615 654 694 737 781 
-  827 875 924 976 1030 
-  1085 1143 1202 1264 1327
-  1392 1459 1527 1597 1669 
-  1743 1817 1894 1971 2050 
-  2130 2211 2293 2375 2459 
-  2542 2626 2710 2794 2878 
-  2961 3044
-  </table> 
-  <table name="#mpConsume"> 
-  32 33 34 34 35
-  36 37 38 40 41
-  42 43 44 44 45 
-  46 48 49 50 51
-  52 53 54 54 55
-  56 57 58 59 60
-  61 62 63 64 65
-  66 67</table>  
-  <table name="#magicLvl"> 
-  20 21 22 24 25 
-  26 28 29 30 32 
-  33 34 36 37 38 
-  39 40 41 42 43
-  44 45 46 47 48
-  49 50 51 52 53
-  54 55 56 57 58
-  59 60</table>
+  <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
+  <table name="#ench1Power"> 3230 3252 3274 3296 3318 3340 3362 3384 3405 3427 3449 3471 3493 3515 3537 3559 3581 3603 3625 3647 3669 3691 3713 3735 3757 3779 3801 3823 3845 3867 </table>
+  <table name="#ench2MpConsume"> 67 66 65 65 64 63 63 62 61 61 60 59 58 58 57 56 56 55 54 54 53 52 51 51 50 49 49 48 47 47</table>
+  <table name="#power"> 615 654 694 737 781 827 875 924 976 1030 1085 1143 1202 1264 1327 1392 1459 1527 1597 1669 1743 1817 1894 1971 2050 2130 2211 2293 2375 2459 2542 2626 2710 2794 2878 2961 3044</table>
+  <table name="#mpConsume"> 32 33 34 34 35 36 37 38 40 41 42 43 44 44 45 46 48 49 50 51 52 53 54 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>  
+  <table name="#magicLvl">  20 21 22 24 25  26 28 29 30 32  33 34 36 37 38  39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60</table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="power" val="#power"/>  
@@ -1774,10 +1752,13 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="soulConsumeCount" val="1"/>
+  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
   </for>
 </skill>
-
 <skill id="478" levels="15" name="Double Thrust">
 <!--
   Description(s):
@@ -2059,48 +2040,46 @@
   <for>
   </for>
 </skill>
-<skill id="492" levels="25" name="Spread Wing">
+<skill id="492" levels="25" name="Spread Wing" enchantLevels1="30" enchantLevels2="30" >
 <!--
   Description:
   Use your wing to attack hostile enemies behind you. Consumes 1 Soul. Over-hit is possible. Power 
   722.  
 -->
- <table name="#mpConsume_Init">
-   17 17 17 17 18 18 19 19 20 20
-   20 20 21 21 22 22 22 23 23 23
-   24 24 24 25 25
- </table>
- <table name="#mpConsume">
-   38 38 39 41 41 43 43 44 45 46
-   48 48 48 49 50 51 52 52 54 55
-   55 56 57 57 58
- </table>
- <set name="mpInitialConsume" val="#mpConsume_Init"/>
- <set name="mpConsume" val="#mpConsume"/>
- <table name="#power">
-   722 758 796 835 875 916 959 1002 1046 1091
-   1136 1183 1230 1278 1327 1376 1425 1475 1525 1576
-   1626 1677 1727 1777 1827
- </table>
- <set name="power" val="#power"/>
- <set name="hitTime" val="1080"/>
- <set name="overHit" val="true"/>
- <set name="operateType" val="OP_ACTIVE"/>
- <set name="target" val="TARGET_BEHIND_AURA"/>
- <set name="skillRadius" val="80"/>
- <set name="skillType" val="PDAM"/>
- <set name="castRange" val="-1"/>
- <set name="effectRange" val="-1"/>
- <set name="reuseDelay" val="36000"/>
- <set name="soulConsumeCount" val="1"/>
- <for>
- </for>
+  <table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
+  <table name="#ench1Power">1938 1951 1964 1978 1991 2004 2017 2030 2043 2057 2070 2083 2096 2109 2123 2136 2149 2162 2175 2189 2202 2215 2228 2241 2255 2268 2281 2294 2307 2320</table>
+  <table name="#ench2MpConsume">82 81 80 79 79 78 77 76 75 75 74 73 72 71 71 70 69 68 67 67 66 65 64 63 63 62 61 60 59 59</table>
+  <table name="#mpConsume_Init">17 17 17 17 18 18 19 19 20 20 20 20 21 21 22 22 22 23 23 23 24 24 24 25 25</table>
+  <table name="#mpConsume">38 38 39 41 41 43 43 44 45 46 48 48 48 49 50 51 52 52 54 55 55 56 57 57 58</table>
+  <table name="#power">722 758 796 835 875 916 959 1002 1046 1091 1136 1183 1230 1278 1327 1376 1425 1475 1525 1576 1626 1677 1727 1777 1827</table>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="hitTime" val="1080"/>
+  <set name="overHit" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="target" val="TARGET_BEHIND_AURA"/>
+  <set name="skillRadius" val="80"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="reuseDelay" val="36000"/>
+  <set name="soulConsumeCount" val="1"/>
+  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
+  <for>
+  </for>
 </skill>
-<skill id="493" levels="28" name="Storm Assault">
+<skill id="493" levels="28" name="Storm Assault" enchantLevels1="30" enchantLevels2="30" >
 <!--
   Description(s):
      Charges like a storm to attack nearby enemies. Consumes 3 soul.  An equipped ancient sword weapon is required to use this skill. Power 618-1827.
 -->
+  <table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
+  <table name="#ench1Power">1938 1951 1964 1978 1991 2004 2017 2030 2043 2057 2070 2083 2096 2109 2123 2136 2149 2162 2175 2189 2202 2215 2228 2241 2255 2268 2281 2294 2307 2320</table>
+  <table name="#ench2MpConsume">82 81 80 79 79 78 77 76 75 75 74 73 72 71 71 70 69 68 67 67 66 65 64 63 63 62 61 60 59 59</table>
   <table name="#mpConsume"> 51 52 54 55 55 56 58 59 61 62 63 65 66 68 68 69 70 72 73 74 75 77 78 79 80 81 82 83</table>
   <table name="#power"> 618 651 686 722 758 796 835 875 916 959 1002 1046 1091 1136 1183 1230 1278 1327 1376 1425 1475 1525 1576 1626 1677 1727 1777 1827</table>
   <table name="#magicLvl"> 46 47 48 49 50 51 52 53 54 55 56 57 58 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75</table>
@@ -2121,6 +2100,10 @@
   <set name="effectRange" val="900"/>
   <set name="soulConsumeCount" val="3"/>
   <set name="flyType" val="CHARGE"/>
+  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
   </for>
 </skill>
