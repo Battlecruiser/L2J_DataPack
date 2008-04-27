@@ -2,7 +2,6 @@
 # Quest: More Than Meets The Eye
 import sys
 from net.sf.l2j import Config
-from net.sf.l2j.gameserver.model import L2Multisell
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -25,7 +24,13 @@ ADENA=57
 TRANSFORM_BOOK=9648
 
 # mobId:[itemId,chance1,chance2]
-DROPLIST = {20636:[ECTOPLASM,45,0],20637:[ECTOPLASM,50,5],20638:[ECTOPLASM,55,10],20639:[ECTOPLASM,60,120],20215:[MORDEO_CRYSTAL,100,0]}
+DROPLIST = {
+    20636:[ECTOPLASM,45,0],
+    20637:[ECTOPLASM,50,5],
+    20638:[ECTOPLASM,55,10],
+    20639:[ECTOPLASM,60,120],
+    20215:[MORDEO_CRYSTAL,100,0]
+    }
 # itemId:[max,cond]
 DROPCONFIG = {ECTOPLASM:[35,"4"],MORDEO_CRYSTAL:[5,"8"]}
 
@@ -113,14 +118,11 @@ class Quest (JQuest) :
  def onFirstTalk (self,npc,player):
    st = player.getQuestState(qn)
    npcId = npc.getNpcId()
-   if npcId == AVANTGARDE :
-     htmltext = None
-     if not st : return htmltext
+   if npcId == AVANTGARDE and st:
      if st.getState() == State.COMPLETED :
-          htmltext = "32323-00.htm"
-   if htmltext == None:
-     npc.showChatWindow(player)
-   return htmltext
+          return "32323-00.htm"
+   npc.showChatWindow(player)
+   return None
 
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
